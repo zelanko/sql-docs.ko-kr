@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256178"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026604"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   XML 네임스페이스 접두어 `xml`은 네임스페이스 URI `'http://www.w3.org/XML/1998/namespace'` 이외의 네임스페이스로 무시할 수 없으며 이 URI에는 다른 접두어를 할당할 수 없습니다.  
   
 -   XML 네임스페이스 접두어 `xsi`는 쿼리에서 ELEMENTS XSINIL 지시어를 사용하고 있는 경우 다시 선언할 수 없습니다.  
-  
+
+-   xsi 표준 네임스페이스를 사용하기 위해 'http://www.w3.org/2001/XMLSchema-instance'를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
+
 -   URI 문자열 값은 현재 데이터베이스 데이터 정렬 코드 페이지에 따라 인코딩되며 내부적으로 유니코드로 변환됩니다.  
   
 -   XML 네임스페이스 URI는 **xs:anyURI**에 사용되는 XSD 공백 축소 규칙에 따라 공백이 축소됩니다. 또한 XML 네임스페이스 URI 값에 대해서는 유효화 또는 비유효화가 수행되지 않습니다.  
-  
+
 -   XML 네임스페이스 URI는 유효하지 않은 XML 1.0 문자에 대해 검사되며 U+0007 같은 유효하지 않은 문자가 있을 경우 오류가 발생합니다.  
   
 -   XML 네임스페이스 URI는 모든 공백이 축소된 후 길이가 0인 문자열이 될 수 없으며 길이가 0일 경우 "유효하지 않은 빈 네임스페이스 URI" 오류가 발생합니다.  

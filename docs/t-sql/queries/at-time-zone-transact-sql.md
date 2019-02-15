@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072237"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807453"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  *inputdate*를 대상 표준 시간대의 해당 *datetimeoffset* 값으로 변환합니다. *inputdate*가 오프셋 정보 없이 제공되는 경우 함수는 *inputdate* 값이 대상 표준 시간대에서 제공되는 것으로 가정하고 표준 시간대의 오프셋을 적용합니다. *inputdate*가 *datetimeoffset* 값으로 제공되는 경우 해당 **AT TIME ZONE** 절은 표준 시간대 변환 규칙을 사용하여 대상 표준 시간대로 변환합니다.  
+  *inputdate*를 대상 표준 시간대의 해당 *datetimeoffset* 값으로 변환합니다. 오프셋 정보 없이 *inputdate*가 제공되면 이 함수는 *inputdate*가 대상 표준 시간대에서 있다고 가정하여 표준 시간대의 오프셋을 적용합니다. *inputdate*가 *datetimeoffset* 값으로 제공되는 경우 **AT TIME ZONE** 절은 표준 시간대 변환 규칙을 사용하여 대상 표준 시간대로 변환합니다.  
   
  **AT TIME ZONE** 구현은 표준 시간대 전반에 **datetime** 값을 변환하기 위해 Windows 메커니즘을 따릅니다.  
   
@@ -43,10 +43,10 @@ inputdate AT TIME ZONE timezone
  **smalldatetime**, **datetime**, **datetime2**, 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다.  
   
  *timezone*  
- 대상 표준 시간대의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 Windows 레지스트리에 저장된 표준 시간대를 따릅니다. 컴퓨터에 설치되는 모든 표준 시간대는 다음 레지스트리 하이브(**KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**)에 저장됩니다. 설치된 표준 시간대의 목록은 [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 보기를 통해 공개됩니다.  
+ 대상 표준 시간대의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 Windows 레지스트리에 저장된 표준 시간대를 따릅니다. 컴퓨터에 설치된 표준 시간대는 다음 레지스트리 하이브에 저장됩니다. **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. 설치된 표준 시간대의 목록은 [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) 보기를 통해 공개됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **datetimeoffset**의 데이터 형식 반환  
+ **datetimeoffset**의 데이터 형식을 반환합니다.  
   
 ## <a name="return-value"></a>반환 값  
  대상 표준 시간대의 **datetimeoffset** 값입니다.  
@@ -54,7 +54,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="remarks"></a>Remarks  
  **AT TIME ZONE**은 DST 변경에서 영향을 받는 간격에 해당하는 **smalldatetime**, **datetime** 및 **datetime2** 데이터 형식의 입력 값을 변환하기 위한 특정 규칙을 적용합니다.  
   
--   클록을 앞당겨 설정한 경우 클록 조정 기간에 따라 기간이 달라지는 로컬 시간에 간격이 있게 됩니다(일반적으로 1시간이지만 표준 시간대에 따라 30분에서 45분이 될 수도 있습니다). 이 경우 이 간격에 속하는 시간대의 지점은 DST 변경 *후*에 오프셋으로 변환됩니다.  
+-   시간이 미리 설정되어 있으면 현지 시간에는 시간 조정 기간과 동일한 간격이 있습니다. 이 기간은 일반적으로 1시간이지만 표준 시간대에 따라 30분 또는 45분이 될 수 있습니다. 이 간격에 있는 시간대의 지점은 DST 변경 *후*에 오프셋으로 변환됩니다.  
   
     ```  
     /*  
@@ -147,7 +147,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>3. 로컬 표준 시간대를 사용한 쿼리 임시 테이블  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. 로컬 표준 시간대를 사용한 쿼리 임시 테이블  
  다음 예제에서는 temporal 테이블에서 데이터를 선택합니다.  
   
 ```  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a>참고 항목  
  [날짜 및 시간 형식](../../t-sql/data-types/date-and-time-types.md)   
  [날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

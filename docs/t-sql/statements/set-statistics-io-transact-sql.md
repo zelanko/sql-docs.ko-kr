@@ -26,17 +26,17 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20099478d1d2dd047b1f17fe963c8fc45b1418fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670283"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760126"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시되도록 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 표시되도록 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,16 +48,16 @@ SET STATISTICS IO { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- STATISTICS IO 옵션을 ON으로 설정하면 통계 정보가 표시됩니다. OFF로 설정하면 통계 정보가 표시되지 않습니다.  
+ STATISTICS IO ON이면 통계 정보가 표시되고 OFF이면 정보가 표시되지 않습니다.   
   
- 이 옵션을 ON으로 설정한 후에는 이 옵션을 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 통계 정보를 반환합니다.  
+ 이 옵션을 ON으로 설정한 후에는 이 옵션을 OFF로 설정할 때까지 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 통계 정보를 반환합니다.  
   
  다음 표에서는 출력 항목을 나열하고 설명합니다.  
   
 |출력 항목|의미|  
 |-----------------|-------------|  
 |**테이블**|테이블 이름입니다.|  
-|**검색 수**|출력에 대한 최종 데이터 집합을 생성하도록 모든 값을 검색하기 위해 어느 방향으로든 리프 수준에 도달한 후 시작된 검색/찾기 횟수입니다.<br /><br /> 사용된 인덱스가 고유 인덱스이거나 기본 키의 클러스터형 인덱스이고 값을 하나만 찾는 중인 경우 검색 수가 0입니다. 예를 들면 `WHERE Primary_Key_Column = <value>`입니다.<br /><br /> 기본 키 열이 아닌 키 열에 정의된 고유하지 않은 클러스터형 인덱스를 사용하여 하나의 값을 검색하는 경우에는 검색 수가 1입니다. 이 작업은 검색 중인 키 값의 중복 값을 확인하기 위해 수행됩니다. 예를 들면 `WHERE Clustered_Index_Key_Column = <value>`입니다.<br /><br /> 인덱스 키를 사용하는 키를 찾은 후 리프 수준에서 왼쪽 또는 오른쪽 방향으로 시작된 서로 다른 검색/찾기 횟수가 N인 경우 검색 수가 N이 됩니다.|  
+|**검색 수**|출력에 대한 최종 데이터 세트를 구성하도록 모든 값을 검색하기 위해 어느 방향으로든 리프 수준에 도달한 후 시작된 찾기 또는 검색의 횟수입니다.<br /><br /> 사용된 인덱스가 고유 인덱스이거나 기본 키의 클러스터형 인덱스이고 값을 하나만 찾는 중인 경우 검색 수가 0입니다. `WHERE Primary_Key_Column = <value>`)을 입력합니다.<br /><br /> 기본 키 열이 아닌 키 열에 정의된 고유하지 않은 클러스터형 인덱스를 사용하여 하나의 값을 검색하는 경우에는 검색 수가 1입니다. 이 프로세스는 검색 중인 키 값의 중복 값을 확인하기 위해 수행됩니다. `WHERE Clustered_Index_Key_Column = <value>`)을 입력합니다.<br /><br /> 인덱스 키를 사용하는 키를 찾은 후 리프 수준에서 왼쪽 또는 오른쪽 방향으로 시작된 서로 다른 찾기 또는 검색 횟수가 N인 경우 검색 수가 N이 됩니다.|  
 |**논리적 읽기 수**|데이터 캐시에서 읽은 페이지 수입니다.|  
 |**물리적 읽기 수**|디스크에서 읽은 페이지 수입니다.|  
 |**미리 읽기 수**|쿼리에 대해 캐시에 넣어진 페이지 수입니다.|  
@@ -71,7 +71,7 @@ SET STATISTICS IO { ON | OFF }
 >  Transact-SQL 문이 LOB 열을 검색할 때 일부 LOB 검색 작업에 대해서는 LOB 트리를 여러 번 이동해야 할 수 있습니다. 이 경우 SET STATISTICS IO에서 예상 논리적 읽기 수보다 많이 보고할 수 있습니다.  
   
 ## <a name="permissions"></a>Permissions  
- SET STATISTICS IO 옵션을 사용하려면 사용자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한이 필요하지 않습니다.  
+ SET STATISTICS IO 옵션을 사용하려면 사용자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한은 필요하지 않습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 문을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 및 물리적 읽기 수를 보여 줍니다.  

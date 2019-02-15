@@ -53,12 +53,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6456a8ad03e4f0cb86c5299f1d817775688c1330
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0a4fd0f249d65708c316a7cb5ada0b582bebf8d
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535589"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760086"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 스칼라 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,9 +75,9 @@ ms.locfileid: "52535589"
   
 |함수|설명|  
 |--------------|-----------------|  
-|BIT_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> 문자열 데이터 형식에서는 적용되지 않습니다. 따라서 암시적으로 string_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
+|BIT_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(비트)를 반환합니다.<br /><br /> String_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|string_exp2와 string_exp1의 연결 결과인 문자열을 반환합니다. 결과 문자열은 DBMS에 종속됩니다. 예를 들어 string_exp1로 표시되는 열이 NULL 값을 포함할 경우 DB2는 NULL을 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 NULL이 아닌 문자열을 반환합니다.|  
-|OCTET_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(바이트)를 반환합니다. 결과는 비트 수를 8로 나눈 값보다 큰 수 중 가장 작은 정수입니다.<br /><br /> 문자열 데이터 형식에서는 적용되지 않습니다. 따라서 암시적으로 string_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
+|OCTET_LENGTH( string_exp ) (ODBC 3.0)|문자열 식의 길이(바이트)를 반환합니다. 결과는 비트 수를 8로 나눈 값보다 큰 수 중 가장 작은 정수입니다.<br /><br /> String_exp를 문자열로 변환하지 않고 지정된 데이터 형식의 내부 크기를 반환합니다.|  
   
 ### <a name="numeric-function"></a>숫자 함수  
   
@@ -93,13 +93,13 @@ ms.locfileid: "52535589"
 |CURDATE( ) (ODBC 3.0)|현재 날짜를 반환합니다.|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|현재 현지 시간을 반환합니다. time-precision 인수는 반환된 값의 초 전체 자릿수를 결정합니다.|  
 |CURTIME() (ODBC 3.0)|현재 현지 시간을 반환합니다.|  
-|DAYNAME( date_exp ) (ODBC 2.0)|date_exp의 날짜 부분에서 데이터 원본에 따른 요일 이름을 포함한 문자열을 반환합니다(예: 영어를 사용하는 데이터 원본의 경우 Sunday에서 Saturday까지 또는 Sun.에서 Sat.까지. 독일어를 사용하는 데이터 원본의 경우 Sonntag에서 Samstag까지).|  
-|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp의 월 필드를 기준으로 해당 월의 일을 1에서 31 사이의 정수 값으로 반환합니다.|  
-|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 요일을 1에서 7 사이의 정수 값으로 반환합니다. 이 경우 1은 일요일을 나타냅니다.|  
+|DAYNAME( date_exp ) (ODBC 2.0)|date_exp의 날짜 부분에 대한 요일의 데이터 원본별 이름을 포함하는 문자열을 반환합니다. 예를 들어 이름은 일요일부터 토요일이나 일요일까지입니다. Sunday에서 영어를 사용하는 데이터 원본의 경우 이름은 독일어를 사용하는 데이터 원본의 Samstag를 통한 Sonntag입니다.|
+|DAYOFMONTH( date_exp ) (ODBC 1.0)|date_exp의 월 필드를 기준으로 해당 월을 정수로 반환합니다. 반환 값은 1-31 범위에 있습니다.|  
+|DAYOFWEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 주를 정수로 반환합니다. 반환 값은 1-7 범위에 있으며, 여기서 1은 일요일을 나타냅니다.|  
 |HOUR( time_exp ) (ODBC 1.0)|time_exp의 시간 필드를 기준으로 해당 시간을 0에서 23 사이의 정수 값으로 반환합니다.|  
 |MINUTE( time_exp ) (ODBC 1.0)|time_exp의 분 필드를 기준으로 해당 분을 0에서 59 사이의 정수 값으로 반환합니다.|  
 |SECOND( time_exp ) (ODBC 1.0)|time_exp의 초 필드를 기준으로 해당 초를 0에서 59 사이의 정수 값으로 반환합니다.|  
-|MONTHNAME( date_exp ) (ODBC 2.0)|date_exp의 월 부분에서 데이터 원본에 따른 특정 월 이름을 포함한 문자열을 반환합니다(예: 영어를 사용하는 데이터 원본의 경우 January에서 December까지 또는 Jan.에서 Dec.까지. 독일어를 사용하는 데이터 원본의 경우 Januar에서 Dezember까지).|  
+|MONTHNAME( date_exp ) (ODBC 2.0)|date_exp의 월 부분에 대한 월 데이터 원본별 이름을 포함하는 문자열을 반환합니다. 예를 들어, 영어를 사용하는 데이터 원본의 이름은 1월에서 12월 사이 또는 1월부터 12월까지입니다. 이름은 독일어를 사용하는 데이터 원본의 Dezember를 통한 Januar입니다.|  
 |QUARTER( date_exp ) (ODBC 1.0)|date_exp의 분기를 1에서 4 사이의 정수 값으로 반환합니다. 이 경우 1은 1월 1일에서 3월 31일까지를 나타냅니다.|  
 |WEEK( date_exp ) (ODBC 1.0)|date_exp의 주 필드를 기준으로 해당 연도의 주를 1에서 53 사이의 정수 값으로 반환합니다.|  
   
@@ -138,7 +138,7 @@ SELECT dbo.ODBCudf('Returns the length.');
   
 ```  
   
-### <a name="c-using-an-odbc-functions-in-select-statements"></a>3. SELECT 문에서 ODBC 함수 사용  
+### <a name="c-using-an-odbc-functions-in-select-statements"></a>C. SELECT 문에서 ODBC 함수 사용  
  다음 SELECT 문에서는 ODBC 함수를 사용합니다.  
   
 ```  
@@ -180,7 +180,7 @@ SELECT {fn WEEK( @date_exp )};
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>4. 저장 프로시저에서 ODBC 함수 사용  
+### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. 저장 프로시저에서 ODBC 함수 사용  
  다음 예에서는 저장 프로시저에 ODBC 함수를 사용합니다.  
   
 ```  
@@ -192,7 +192,7 @@ AS
 SELECT {fn BIT_LENGTH( @string_exp )};  
 ```  
   
-### <a name="e-using-an-odbc-function-in-a-user-defined-function"></a>5. 사용자 정의 함수에서 ODBC 함수 사용  
+### <a name="e-using-an-odbc-function-in-a-user-defined-function"></a>E. 사용자 정의 함수에서 ODBC 함수 사용  
  다음 예에서는 사용자 정의 함수에 ODBC 함수를 사용합니다.  
   
 ```  
@@ -213,7 +213,7 @@ SELECT dbo.ODBCudf('Returns the length in bits.');
   
 ```  
   
-### <a name="f-using-an-odbc-functions-in-select-statements"></a>6. SELECT 문에서 ODBC 함수 사용  
+### <a name="f-using-an-odbc-functions-in-select-statements"></a>F. SELECT 문에서 ODBC 함수 사용  
  다음 SELECT 문에서는 ODBC 함수를 사용합니다.  
   
 ```  
@@ -252,7 +252,3 @@ SELECT {fn WEEK( @date_exp )};
 ## <a name="see-also"></a>참고 항목  
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
-  
-
-
-

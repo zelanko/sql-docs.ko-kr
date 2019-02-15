@@ -19,15 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60d8938b8fd74a5a62ac9b122c897dc0008d4f9f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036904"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290741"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구 찾기 및 시작 방법(SSRS)
   이 자습서에서는 보고서 서버를 구성하고 보고서 서버 내용 및 작업을 관리하며 보고서를 만들어 게시하는 데 사용되는 도구를 소개합니다. 이 자습서를 통해 새 사용자는 각 도구를 찾고 여는 방법을 이해할 수 있습니다. 이미 이 도구에 익숙한 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 사용하는 데 중요한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. 다른 자습서에 대 한 자세한 내용은 참조 하세요. [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  

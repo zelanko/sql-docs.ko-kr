@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 358b1779ebc24f17035cb50eda77c7249456ff9a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617085"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010724"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
 
@@ -35,7 +35,7 @@ ms.locfileid: "52617085"
   
  참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 열 이름에서 "(M)"으로 식별됩니다. 예를 들어 **AddressLine**은 **Melissa Data – Address Data**의 필수 스키마 열이고 **CompanyName**은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
   
- 이 토픽에서는 복합 도메인 **Address Verification** 아래에 **Address Line**, **City**, **State** 및 **Zip**의 4개 도메인을 만들고, 도메인을 **Melissa Data – Address Check** 참조 데이터 서비스에 연결한 다음, 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑할 것입니다.  
+ 이 항목에서는 **Address Line**, **City**, **State** 및 **Zip**과 복합 도메인 내의 **Address Verification**에서는 복합 도메인을 **Melissa Data - Address Check** 참조 데이터 서비스에 연결한 다음, 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
@@ -49,13 +49,13 @@ ms.locfileid: "52617085"
   
 ##  <a name="Map"></a> Melissa Data의 참조 데이터에 도메인 매핑  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **기술 자료 관리**에서 **새 기술 자료**를 클릭합니다.  
   
 3.  **새 기술 자료** 화면에서 새 기술 자료의 이름을 입력하고 **도메인 관리** 작업을 클릭한 후 **만들기**를 클릭합니다.  
   
-4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 4개의 도메인 **Address Line**, **City**, **State**및 **Zip**을 만듭니다.  
+4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 4개 도메인 **Address Line**, **City**, **State** 및 **Zip**를 만듭니다.  
   
 5.  **복합 도메인 만들기** 아이콘을 클릭하여 복합 도메인을 만듭니다. **복합 도메인 만들기** 대화 상자에서 **복합 도메인 이름** 입력란에 **Address Verification** 을 입력하고 3단계에서 만든 모든 도메인을 복합 도메인에 포함합니다. **확인**을 클릭합니다.  
   

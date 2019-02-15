@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: d15ecb6a7ef4c9db9ce10fd2fd51882c68883aaa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617273"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024674"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
 
@@ -66,7 +66,7 @@ ms.locfileid: "52617273"
   
 ##  <a name="Create"></a> 용어 기반 관계 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52617273"
   
 6.  **변경 사항 적용** 을 클릭하여 도메인에 용어 기반 관계를 적용합니다.  
   
-7.  **마침** 을 클릭하여 [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 용어 기반 관계를 만든 후  
  용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  

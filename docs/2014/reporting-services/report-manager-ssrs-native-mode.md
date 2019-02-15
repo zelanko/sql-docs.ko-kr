@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036574"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289019"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
   보고서 관리자는 HTTP 연결을 통해 원격 위치의 단일 보고서 서버 인스턴스를 관리하는 데 사용되는 웹 기반 보고서 액세스 및 관리 도구입니다. 또한 보고서 관리자를 보고서 뷰어로 사용하고 탐색 기능도 활용할 수 있습니다. 항목 내용  

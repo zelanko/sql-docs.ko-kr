@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.matching.f1
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 93ad673f1566d1045705c390b0b0064859ba18fd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617953"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015434"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 
@@ -45,10 +45,10 @@ ms.locfileid: "52617953"
 ####  <a name="Permissions"></a> Permissions  
  일치 프로젝트를 실행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="StartingaMatchingProject"></a> 1단계: 일치 프로젝트 시작  
+##  <a name="StartingaMatchingProject"></a> 첫 번째 단계: 일치 프로젝트 시작  
  DQS 클라이언트 애플리케이션에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 데이터 품질 프로젝트** 를 클릭하여 새 데이터 품질 프로젝트에서 일치를 수행합니다. 데이터 품질 프로젝트에 대한 이름과 설명을 입력하고 **기술 자료 사용**에서 일치에 사용할 기술 자료를 선택합니다. 작업에 대해 **일치** 를 클릭합니다. **다음** 을 클릭하여 매핑 단계로 이동합니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52617953"
   
  Survivorship은 선택 사항입니다. Survivorship을 실행하지 않고 결과를 내보낼 수 있습니다. 이 경우 DQS에서는 일치 분석에서 지정된 피벗 레코드를 사용합니다. 클러스터에 있는 둘 이상 레코드가 Survivorship 규칙을 준수하는 경우에는 Survivorship 프로세스에서 충돌하는 레코드 중 레코드 ID가 가장 낮은 레코드를 존속 레코드로 선택합니다. 다른 Survivorship 규칙을 사용하여 존속 레코드를 다른 파일 또는 테이블로 내보낼 수 있습니다.  
   
-1.  **내보내기** 페이지의 **대상 유형**: **SQL Server**, **CSV 파일**또는 **Excel 파일**에서 일치 데이터를 내보낼 대상을 선택합니다.  
+1.  **내보내기** 페이지의 **대상 유형**: **SQL Server**, **CSV 파일** 또는 **Excel 파일**에서 일치 데이터를 내보낼 대상을 선택합니다.  
   
     > [!IMPORTANT]  
     >  64비트 버전의 Excel을 사용 중인 경우 일치하는 데이터를 Excel 파일로 내보낼 수 없습니다. SQL Server 데이터베이스 또는 .csv 파일로만 내보낼 수 있습니다.  
@@ -195,7 +195,7 @@ ms.locfileid: "52617953"
   
 -   **도메인**: 필드에 매핑된 도메인의 이름  
   
--   **새 항목**: 새로 발견된 일치 레코드 수와 해당 백분율  
+-   **새로 만들기**: 새로 발견된 일치 레코드 수와 해당 백분율  
   
 -   **고유**: 필드의 고유 레코드 수와 해당 백분율  
   

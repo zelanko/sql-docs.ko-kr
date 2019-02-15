@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013214"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
@@ -40,7 +40,7 @@ ms.locfileid: "52617439"
 ##  <a name="CDCorrection"></a> 선언적 도메인 간 규칙을 사용하여 데이터 수정  
  복합 도메인의 도메인 간 규칙을 사용하여 복합 도메인의 개별 도메인 간 관계를 나타내는 규칙을 만들 수 있습니다. 도메인 간 규칙은 복합 도메인과 관련된 원본 데이터에 대해 정리 작업을 실행할 때 고려됩니다. 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**은 도메인 간 규칙의 유효성에 대해 알려줄 뿐만 아니라 데이터 정리 작업 시 데이터를 수정합니다.  
   
- 다음 예제를 살펴보세요. 3개의 개별 도메인 ProductName, CompanyName 및 ProductVersion이 있는 복합 도메인 Product가 있습니다. 다음과 같은 선언적 도메인 간 규칙을 만드세요.  
+ 다음 예제를 살펴보세요. 3개의 개별 도메인이 있는 복합 도메인 Product가 있습니다. ProductName, CompanyName 및 ProductVersion이 있는 복합 도메인 Product가 있습니다. 다음과 같은 선언적 도메인 간 규칙을 만드세요.  
   
  도메인 'CompanyName' 값에 *Microsoft*가 포함되고 도메인 'ProductName' 값이 *Office*와 동일하고 'ProductVersion' 값이 *2010*과 동일하면 도메인 'ProductName' 값은 *Microsoft Office 2010*과 동일합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52617439"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 규칙 '*\<<Cross-Domain Rule Name>*’에 의해 수정됨 메시지가 표시됩니다. 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
+ 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 다음 메시지가 표시됩니다. 규칙 '*\<도메인 간 규칙 이름>*'에 의해 수정되었습니다 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
   
 > [!NOTE]  
 >  선언적 도메인 간 규칙은 참조 데이터 서비스에 연결된 복합 도메인에 대해 작동하지 않습니다.  

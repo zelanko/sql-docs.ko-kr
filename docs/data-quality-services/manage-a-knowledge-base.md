@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66a1ad8c326dc6fe221777136edcb01a9b9aa1af
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028086"
 ---
 # <a name="manage-a-knowledge-base"></a>기술 자료 관리
 
@@ -36,7 +36,7 @@ ms.locfileid: "52617493"
   
 ##  <a name="Manage"></a> 기술 자료 관리  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기**를 클릭합니다.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "52617493"
   
     1.  **열기**: **작업 선택** 창에서 선택한 작업의 기술 자료를 열려면 클릭합니다.  
   
-    2.  **잠금 해제**: 도메인 관리, 기술 자료 검색 및 일치 정책 작업 단계 중 하나에서 기술 자료로 작업 중이었다가 닫은 사용자만 기술 자료의 잠금을 해제할 수 있습니다. 기술 자료를 언로드할 경우 다른 사람이 열어서 작업할 수 있습니다. 기술 자료가 작업 상태가 아닌 경우 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
+    2.  **잠금 해제**: 도메인 관리, 기술 자료 검색 및 일치 정책 작업 단계 중 하나에서 기술 자료를 작업 중이었다가 닫은 사용자만 기술 자료의 잠금을 해제할 수 있습니다. 기술 자료를 언로드할 경우 다른 사람이 열어서 작업할 수 있습니다. 기술 자료가 작업 상태가 아닌 경우 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
   
-    3.  **작업 삭제**: 테이블의 상태 필드 항목에 기술 자료가 작업 중인 상태로 표시되는 경우 클릭합니다. 기술 자료가 작업 상태가 아닌 경우, 기술 자료가 잠긴 경우에는 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
+    3.  **작업 취소**: 테이블의 상태 필드 항목에 기술 자료가 작업 중인 상태로 표시된 경우 클릭합니다. 기술 자료가 작업 상태가 아닌 경우, 기술 자료가 잠긴 경우에는 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
   
     4.  **이름 바꾸기**: 마우스 오른쪽 단추로 클릭한 기술 자료에서 테이블의 기술 자료 필드를 편집 가능한 상태로 만들려면 클릭합니다. 이름을 변경한 다음 해당 기술 자료를 클릭하고 필드의 다른 기술 자료를 클릭하여 이름 변경을 적용합니다.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "52617493"
   
         1.  **원본 기술 자료**: 이 데이터베이스가 기반으로 하는 기술 자료입니다. 이 구성 요소는 선택 사항입니다.  
   
-        2.  **상태**: 마지막으로 닫힌 시간을 기준으로 기술 자료가 **작업 중** 이고 특정 기술 자료 관리 작업 상태인지를 나타냅니다. 상태는 기술 자료가 기술 자료 관리 세션에서 열렸지만 특정 작업 상태가 아닌 **작업 중**상태이거나 기술 자료가 기술 자료 관리 세션에서 열렸고 특정 작업 상태인 **작업 중** 상태에 해당 기술 자료 관리 작업이 함께 표시될 수 있습니다.  
+        2.  **상태**: 마지막으로 닫힌 시간을 기준으로 기술 자료가 **작업 중**이고 특정 기술 자료 관리 작업 상태인지를 나타냅니다. 상태는 기술 자료가 기술 자료 관리 세션에서 열렸지만 특정 작업 상태가 아닌 **작업 중**상태이거나 기술 자료가 기술 자료 관리 세션에서 열렸고 특정 작업 상태인 **작업 중** 상태에 해당 기술 자료 관리 작업이 함께 표시될 수 있습니다.  
   
-        3.  **잠금 여부**: 기술 자료가 잠겨 있으면 **True** 이고 그렇지 않으면 **False** 입니다.  
+        3.  **잠김**: 기술 자료가 잠긴 경우 **True**, 그렇지 않은 경우 **False**  
   
-        4.  **게시되지 않은 내용 포함**: 기술 자료에 게시를 통해 저장되지 않은 콘텐츠가 포함되어 있으면 True이고 그렇지 않으면 False입니다.  
+        4.  **게시되지 않은 내용 포함**: 기술 자료에 게시를 통해 저장되지 않은 콘텐츠가 포함된 경우 True, 그렇지 않은 경우 False  
   
         5.  **잠근 사람**: 기술 자료를 닫은 후 잠근 사용자의 이름  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52617493"
   
         8.  **만든 날짜**: 생성된 날짜  
   
-##  <a name="FollowUp"></a> 후속 작업: 기술 자료 관리 후에 수행하는 단계  
+##  <a name="FollowUp"></a> 후속 작업: 기술 자료 관리 후  
  기술 자료 관리 후 다음 단계는 기술 자료에 대해 수행한 작업에 따라 달라집니다.  
   
 -   기술 자료를 연 경우 선택한 작업이 계속됩니다.  

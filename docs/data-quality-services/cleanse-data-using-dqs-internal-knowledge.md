@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011542"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
 
@@ -60,9 +60,9 @@ ms.locfileid: "52617653"
 ##  <a name="Mapping"></a> 매핑 단계  
  매핑 단계에서는 정리할 원본 데이터에 대한 연결을 지정하고 원본 데이터의 열을 선택한 기술 자료의 적절한 도메인에 매핑합니다.  
   
-1.  정리 데이터 품질 마법사의 **맵** 페이지에서 정리할 원본 데이터, 즉 **SQL Server** 또는 **Excel 파일**을 선택합니다.  
+1.  정리 데이터 품질 마법사의 **맵** 페이지에서 정리할 원본 데이터를 선택합니다. **SQL Server** 또는 **Excel 파일**:  
   
-    1.  **SQL Server**: 원본 데이터를 이 데이터베이스에 복사한 경우 **DQS_STAGING_DATA** 를 원본 데이터베이스로 선택한 다음 원본 데이터가 포함된 적절한 테이블/뷰를 선택합니다. 그렇지 않은 경우 원본 데이터베이스와 해당 테이블/뷰를 선택합니다. 원본 데이터베이스는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 데이터베이스 **드롭다운 목록에서 제공할** 와 동일한 SQL Server 인스턴스에 있어야 합니다.  
+    1.  **SQL Server**: 원본 데이터를 이 데이터베이스에 복사한 경우 **DQS_STAGING_DATA**를 원본 데이터베이스로 선택한 다음, 원본 데이터가 포함된 적절한 테이블/뷰를 선택합니다. 그렇지 않은 경우 원본 데이터베이스와 해당 테이블/뷰를 선택합니다. 원본 데이터베이스는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 데이터베이스 **드롭다운 목록에서 제공할** 와 동일한 SQL Server 인스턴스에 있어야 합니다.  
   
     2.  **Excel 파일**: **찾아보기**를 클릭하고 정리할 데이터가 포함된 Excel 파일을 선택합니다. Excel 파일을 선택하려면 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 컴퓨터에 Microsoft Excel이 설치되어 있어야 합니다. 그렇지 않으면 **찾아보기** 단추를 사용할 수 없으며 이 텍스트 상자 아래에 Microsoft Excel이 설치되어 있지 않다는 알림이 표시됩니다. 또한 Excel 파일의 첫 행에 머리글 데이터가 들어 있는 경우 **첫 번째 행을 헤더로 사용하세요** 확인란을 선택된 그대로 둡니다.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "52617653"
   
 -   **자동 수정 임계값**: 신뢰도 수준이 이 임계값보다 높은 모든 값이 DQS에 의해 자동으로 수정됩니다. 그러나 데이터 관리자가 대화식 정리 중에 변경 내용을 재정의할 수 있습니다. **구성** 화면의 **일반 설정** 탭에서 자동 수정 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
--   **자동 제안 임계값**: 신뢰도 수준이 이 임계값보다 높지만 자동 수정 임계값보다는 낮은 모든 값이 대체 값으로 제안됩니다. 변경 작업은 데이터 관리자가 승인하는 경우에만 수행됩니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   **자동 제안 임계값**:  신뢰도 수준이 이 임계값보다 높지만 자동 수정 임계값보다는 낮은 모든 값이 대체 값으로 제안됩니다. 변경 작업은 데이터 관리자가 승인하는 경우에만 수행됩니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
--   **기타**: 자동 제안 임계값보다 낮은 모든 값이 DQS에 의해 변경되지 않고 유지됩니다.  
+-   **기타**:  자동 제안 임계값보다 낮은 모든 값이 DQS에 의해 변경되지 않고 유지됩니다.  
   
  값은 신뢰도 수준에 따라 다음 5개의 탭에 표시됩니다.  
   
@@ -142,16 +142,16 @@ ms.locfileid: "52617653"
 ##  <a name="Export"></a> 내보내기 단계  
  내보내기 단계에서는 정리한 데이터를 내보낼 매개 변수를 지정합니다. 즉, 내보낼 항목과 내보낼 위치를 지정할 수 있습니다.  
   
-1.  정리 데이터 품질 마법사의 **내보내기** 페이지에서 정리한 데이터를 내보낼 대상 유형( **SQL Server**, **CSV 파일**또는 **Excel 파일**)을 선택합니다.  
+1.  정리 데이터 품질 마법사의 **내보내기** 페이지에서 정리한 데이터를 내보낼 대상 유형을 선택합니다. **SQL Server**, **CSV 파일** 또는 **Excel 파일**.  
   
     > [!IMPORTANT]  
     >  64비트 버전의 Excel을 사용 중인 경우 정리한 데이터를 Excel 파일로 내보낼 수 없습니다. SQL Server 데이터베이스 또는 .csv 파일로만 내보낼 수 있습니다.  
   
-    1.  **SQL Server**: 여기에서 데이터를 내보내려면 **DQS_STAGING_DATA** 를 대상 데이터베이스로 선택한 다음 내보낸 데이터를 저장하기 위해 만들 테이블 이름을 지정합니다. 그렇지 않고 데이터를 다른 데이터베이스로 내보내려면 해당 데이터베이스로 선택한 다음 내보낸 데이터를 저장하기 위해 만들 테이블 이름을 지정합니다. 대상 데이터베이스는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 데이터베이스 **드롭다운 목록에서 제공할** 와 동일한 SQL Server 인스턴스에 있어야 합니다.  
+    1.  **SQL Server**: 여기에서 데이터를 내보내려면 **DQS_STAGING_DATA**를 대상 데이터베이스로 선택한 다음, 내보낸 데이터를 저장하기 위해 만들 테이블 이름을 지정합니다. 그렇지 않고 데이터를 다른 데이터베이스로 내보내려면 해당 데이터베이스로 선택한 다음 내보낸 데이터를 저장하기 위해 만들 테이블 이름을 지정합니다. 대상 데이터베이스는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 데이터베이스 **드롭다운 목록에서 제공할** 와 동일한 SQL Server 인스턴스에 있어야 합니다.  
   
-    2.  **CSV 파일**: **찾아보기**를 클릭한 다음 정리한 데이터를 내보낼 .csv 파일의 이름과 위치를 지정합니다. 정리한 데이터를 내보낼 전체 경로와 함께 .csv 파일의 파일 이름을 입력할 수도 있습니다. 예를 들어 "c:\ExportedData.csv"를 입력합니다. 이 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 컴퓨터에 저장됩니다.  
+    2.  **CSV 파일**: **찾아보기**를 클릭하고 정리한 데이터를 내보낼 .csv 파일의 이름과 위치를 지정합니다. 정리한 데이터를 내보낼 전체 경로와 함께 .csv 파일의 파일 이름을 입력할 수도 있습니다. 예를 들어 "c:\ExportedData.csv"를 입력합니다. 이 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 컴퓨터에 저장됩니다.  
   
-    3.  **Excel 파일**: **찾아보기**를 클릭한 다음 정리한 데이터를 내보낼 Excel 파일의 이름과 위치를 지정합니다. 정리한 데이터를 내보낼 전체 경로와 함께 Excel 파일의 파일 이름을 입력할 수도 있습니다. 예를 들어 "c:\ExportedData.xlsx"를 입력합니다. 이 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 컴퓨터에 저장됩니다.  
+    3.  **Excel 파일**: **찾아보기**를 클릭하고 정리한 데이터를 내보낼 Excel 파일의 이름과 위치를 지정합니다. 정리한 데이터를 내보낼 전체 경로와 함께 Excel 파일의 파일 이름을 입력할 수도 있습니다. 예를 들어 "c:\ExportedData.xlsx"를 입력합니다. 이 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 컴퓨터에 저장됩니다.  
   
 2.  **출력 표준화** 확인란을 선택하여 도메인에 대해 선택한 출력 형식에 따라 출력을 표준화합니다. 예를 들어, 문자열 값을 대문자로 변경하거나 단어의 첫 글자를 대문자로 지정합니다. 도메인의 출력 형식을 지정하는 방법은 **도메인 속성 설정** 에서 [출력 형식](../data-quality-services/set-domain-properties.md)목록을 참조하세요.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "52617653"
   
     -   **데이터만**: 정리한 데이터만 내보내려면 이 라디오 단추를 클릭합니다.  
   
-    -   **데이터 및 정리 정보**: 각 도메인에 대해 다음 데이터를 내보내려면 이 라디오 단추를 클릭합니다.  
+    -   **데이터 및 정리 정보**: 각 도메인에 대해 다음 데이터를 내보내려면 이 라디오 버튼을 클릭합니다.  
   
         -   **\<Domain>_Source**: 도메인의 원래 값입니다.  
   

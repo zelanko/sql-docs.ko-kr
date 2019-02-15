@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b9bb2a1744b7fdc8b734ab3435ef53e0710d8c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
+ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411520"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55771349"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,15 +28,15 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 ## <a name="prerequisites"></a>사전 요구 사항  
 시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
-- [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
+- [지원되는 버전 및 에디션 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용 중인 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
   
-- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 버전 업그레이드에 대한 검토와 사용자 환경에 설치된 기타 구성 요소를 바탕으로 적절한 업그레이드 방법 및 단계를 선택합니다.  
+- [데이터베이스 엔진 업그레이드 방법 선택](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 올바른 순서로 업그레이드하려면 지원되는 버전 및 에디션 업그레이드에 대한 검토 및 환경에 설치된 기타 구성 요소를 기반으로 적합한 업그레이드 방법 및 단계를 선택합니다.  
   
 - [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
-- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
+- [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치를 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화하기 위해 업그레이드 프로세스를 시작하기 전에 각 노드에 설치하십시오.  
 
-- [AG 데이터베이스에 변경 데이터 캡처 또는 복제가 사용되고 있는지 확인](#special-steps-for-change-data-capture-or-replication): AG의 데이터베이스에 CDC(변경 데이터 캡처)가 활성화된 경우 이러한 [지침](#special-steps-for-change-data-capture-or-replication)을 완수하세요.
+- [변경 데이터 캡처 또는 복제가 AG 데이터베이스에 사용되는지 확인](#special-steps-for-change-data-capture-or-replication): CDC(변경 데이터 캡처)를 위해 AG의 데이터베이스가 활성화되어 있는 경우, 다음 [지침](#special-steps-for-change-data-capture-or-replication)을 완료합니다.
 
 >[!NOTE]  
 >준비가 된 복제본을 업그레이드하는 롤링 업그레이드 외부에서는 동일한 AG의 SQL Server 인스턴스 혼합 버전이 지원되지 않습니다. 더 높은 버전의 SQL Server 인스턴스를 기존 AG에 새 복제본으로 추가할 수 없습니다. 예를 들어 SQL Server 2017 복제본은 기존 SQL Server 2016 AG에 추가할 수 없습니다. AG를 사용하여 SQL Server 인스턴스의 새 버전으로 마이그레이션하기 위해 지원되는 유일한 방법은 SQL Server 2016 Enterprise Edition 이상에 포함된 분산 AG입니다.
@@ -67,6 +67,11 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
 -   다른 보조 복제본 노드를 업그레이드하기 전에 주 복제본 인스턴스를 업그레이드해서는 안 됩니다. 업그레이드된 주 복제본은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스가 아직 같은 버전으로 업그레이드되지 않은 보조 복제본에 로그를 더 이상 전달할 수 없습니다. 보조 복제본으로 데이터 이동이 일시 중지된 경우 해당 복제본에 대한 자동 장애 조치(failover)를 수행할 수 없고 가용성 데이터베이스의 데이터가 손실될 수 있습니다.  
   
 -   AG를 장애 조치(failover)하기 전에 장애 조치(failover) 대상의 동기화 상태가 SYNCHRONIZED인지 확인하세요.  
+
+  > [!WARNING]
+  > 이전 버전의 SQL Server가 설치된 서버에 새 인스턴스 또는 새 버전의 SQL Server를 설치하면 실수로 **이전 버전의 SQL Server에서 호스트되는 모든 가용성 그룹에 대한 가동 중단을 일으킬 수 있습니다.** 이는 SQL Server의 인스턴스나 버전을 설치하는 동안 SQL Server 고가용성 모듈(RHS.EXE)이 업그레이드되기 때문입니다. 이로 인해 서버의 주 역할에서 기존 가용성 그룹이 일시적으로 중단됩니다. 따라서 가용성 그룹이 있는 SQL Server의 이전 버전을 이미 호스팅하고 있는 시스템에 최신 버전의 SQL Server를 설치하는 경우 다음 중 하나를 수행하는 것이 좋습니다.
+  > - 유지 관리 기간 동안 새 버전의 SQL Server를 설치합니다. 
+  > - 가용성 그룹을 보조 복제본으로 장애 조치(failover)하므로 새 SQL Server 인스턴스를 설치하는 동안 기본 그룹이 아닙니다. 
   
 ## <a name="rolling-upgrade-process"></a>롤링 업그레이드 프로세스  
  실제로 정확한 프로세스는 AG의 배포 토폴로지 및 각 복제본의 커밋 모드와 같은 요소에 따라 달라집니다. 가장 간단한 시나리오는 다음 단계가 포함된 가장 간단한 형식의 다단계 프로세스로 롤링 업그레이드를 수행하는 것입니다.  

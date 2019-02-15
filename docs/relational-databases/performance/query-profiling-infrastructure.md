@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 39f3d82d65eb0dd05b8459742febd67d2bc56790
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732030"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889984"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,12 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1에는 오버헤드를 최소화하도록 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 위의 *적용 대상*에 언급된 버전의 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 간단한 프로파일링을 전역적으로 사용할 수도 있습니다. 새 DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)은 진행 중인 요청에 대한 쿼리 실행 계획을 반환하기 위해 도입되었습니다.
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터는 간단한 프로파일링이 전역적으로 사용되지 않으면 새 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 인수 **QUERY_PLAN_PROFILE**을 사용하여 쿼리 수준에서, 모든 세션에 간단한 프로파일링을 사용하도록 설정할 수 있습니다. 이 새 힌트를 포함하는 쿼리가 완료되면 *query_post_execution_showplan* 확장 이벤트와 마찬가지로 실제 실행 계획 XML을 제공하는 새 ***query_plan_profile*** 확장 이벤트도 출력됩니다. 이 확장 이벤트를 사용하는 샘플 세션을 아래 예제처럼 구성할 수 있습니다.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11부터는 간단한 프로파일링이 전역적으로 사용되지 않으면 새 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint) 인수 **QUERY_PLAN_PROFILE**을 사용하여 쿼리 수준에서, 모든 세션에 간단한 프로파일링을 사용하도록 설정할 수 있습니다. 이 새 힌트를 포함하는 쿼리가 완료되면 *query_post_execution_showplan* 확장 이벤트와 마찬가지로 실제 실행 계획 XML을 제공하는 새 ***query_plan_profile*** 확장 이벤트도 출력됩니다. 
+
+> [!NOTE]
+> *query_plan_profile* 확장 이벤트는 쿼리 힌트를 사용하지 않더라도 간단한 프로파일링을 활용합니다. 
+
+*query_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_Plan] ON SERVER

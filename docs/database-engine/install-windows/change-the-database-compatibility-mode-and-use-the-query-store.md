@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405228"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807403"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>데이터베이스 호환성 수준 변경 및 쿼리 저장소 사용
 
@@ -47,10 +47,12 @@ ms.locfileid: "52405228"
 쿼리 프로세서를 코드의 최신 버전으로 업그레이드하는 권장되는 워크플로는 [쿼리 저장소 사용 시나리오의 최신 SQL Server 섹션으로 업그레이드하는 동안 성능 안정성 유지](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)에서 문서화됩니다.  
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 쿼리 튜닝 도우미를 사용하여 권장 워크플로를 통해 사용자를 안내할 수 있습니다. 자세한 내용은 [쿼리 튜닝 도우미를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)를 참조하세요.
  
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[ALTER DATABASE &#40;Transact-SQL&#41; 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[ALTER DATABASE &#40;Transact-SQL&#41; 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[쿼리 튜닝 도우미를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

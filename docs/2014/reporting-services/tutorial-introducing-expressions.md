@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5dce14880b54d33eee438bf6a7e9e6a2c88f108c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022297"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295121"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
   식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  

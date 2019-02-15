@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: dfc154bfb253542e5bdd633504f71e9987caa625
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00246af5bd0b577d7f1c7aebf4711d58a9828865
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617153"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028444"
 ---
 # <a name="grant-dqs-roles-to-users"></a>사용자에게 DQS 역할 부여
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617153"
   
 5.  사용자 유효성을 확인한 후에 왼쪽 창에서 **사용자 매핑** 페이지를 클릭합니다.  
   
-6.  오른쪽 창에서 **DQS_MAIN** 데이터베이스에 대해 **매핑** 열 아래의 확인란을 선택한 후 사용자에게 필요한 액세스 수준에 따라 **데이터베이스 역할 멤버 자격: DQS_MAIN**창에서 **dqs_administrator**, **dqs_kb_editor** 또는 **dqs_kb_operator** 확인란을 선택합니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS 보안](../../data-quality-services/dqs-security.md)을 참조하십시오.  
+6.  오른쪽 창에서 **DQS_MAIN** 데이터베이스의 **Map** 열 아래의 확인란을 선택한 다음, 사용자에게 필요한 액세스 수준에 따라 **dqs_administrator**, **dqs_kb_editor** 또는 **dqs_kb_operator**(**데이터베이스 역할 멤버 자격: DQS_MAIN** 창) 확인란을 선택합니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS 보안](../../data-quality-services/dqs-security.md)을 참조하십시오.  
   
 7.  **로그인 – 새로 만들기** 대화 상자에서 **확인**을 클릭하여 변경 내용을 적용합니다.  
   

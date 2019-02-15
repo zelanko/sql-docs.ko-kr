@@ -20,19 +20,19 @@ ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 773d575a65edaca18d76ba3e2109fe81bb20f88f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819481"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079379"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 함수는 비대칭 키를 사용하여 데이터를 암호화합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,13 +78,13 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 최대 크기가 8,000바이트인 **varbinary**입니다.  
   
 ## <a name="remarks"></a>Remarks  
-비대칭 키를 사용하는 암호화 및 암호 해독 작업은 상당한 리소스를 소비하므로 대칭 키 암호화 및 해독 작업과 비교하여 매우 비싼 편입니다. 개발자는 큰 데이터 세트(예: 데이터베이스 테이블에 저장된 사용자 데이터 세트)에서 비대칭 키 암호화 및 암호 해독 작업을 피하는 것이 좋습니다. 대신 개발자는 먼저 강력한 대칭 키로 해당 데이터를 암호화한 다음, 비대칭 키로 해당 대칭 키를 암호화는 것이 좋습니다.  
+비대칭 키를 사용하는 암호화 및 암호 해독 작업은 상당한 리소스를 소비하므로 대칭 키 암호화 및 해독 작업과 비교하여 비용이 많이 듭니다. 개발자는 큰 데이터 세트(예: 데이터베이스 테이블에 저장된 사용자 데이터 세트)에서 비대칭 키 암호화 및 암호 해독 작업을 피하는 것이 좋습니다. 대신 개발자는 먼저 강력한 대칭 키로 해당 데이터를 암호화한 다음, 비대칭 키로 해당 대칭 키를 암호화는 것이 좋습니다.  
   
 알고리즘에 따라 입력이 특정 바이트 수를 초과할 경우 `ENCRYPTBYASYMKEY`는 **NULL**을 반환합니다. 특정 제한은 다음과 같습니다.
 
 + 512비트 RSA 키는 최대 53바이트를 암호화할 수 있습니다.
-+ 1024비트 RSA 키는 최대 117바이트를 암호화할 수 있습니다.
-+ 2048비트 RSA 키는 최대 245바이트를 암호화할 수 있습니다.
++ 1024비트 키는 최대 117바이트를 암호화할 수 있습니다.
++ 2048비트 키는 최대 245바이트를 암호화할 수 있습니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증서와 비대칭 키는 모두 RSA 키에 대한 래퍼로 사용됩니다.  
   
@@ -102,5 +102,4 @@ GO
  [DECRYPTBYASYMKEY&#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

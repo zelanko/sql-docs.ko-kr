@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027174"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
 
@@ -38,7 +38,7 @@ ms.locfileid: "52617793"
   
 ##  <a name="Open"></a> Open a knowledge base  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기**를 클릭합니다.  
   
@@ -83,18 +83,18 @@ ms.locfileid: "52617793"
   
 -   **\<Empty>**: 도메인 관리 작업에서 **게시**를 클릭하고 **예 – 기술 자료를 게시하고 종료합니다**를 클릭하여 기술 자료를 게시한 경우 상태 필드가 비어 있습니다.  
   
--   **작업 중**: 도메인 관리 작업에서 **게시** 를 클릭하고 **아니요 – 기술 자료에 대한 작업을 저장하고 종료합니다**를 클릭하여 기술 자료에 대한 작업 내용이 저장되었습니다.  
+-   **작업 중**: 도메인 관리 작업에서 **게시**를 클릭하고 **아니요 - 기술 자료에 대한 작업을 저장하고 종료합니다**를 클릭하여 기술 자료에 대한 작업 내용이 저장되었습니다.  
   
 -   **도메인 관리**: 기술 자료의 도메인에 대한 데이터가 입력되었지만 기술 자료가 게시되지 않았고 작업 내용이 도메인 관리 작업에 남아 있습니다. 기술 자료 검색 작업을 사용할 수 없습니다. 이 현상은 **도메인 관리** 화면에서 **닫기** 를 클릭할 때 발생합니다.  
   
 -   **검색 - 매핑**: 기술 자료가 **기술 자료 관리: 매핑** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 도메인 관리 및 일치 작업을 사용할 수 없습니다.  
   
--   **검색 - 검색**: 기술 자료가 **기술 자료 관리: 분석** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 도메인 관리 작업을 사용할 수 없습니다.  
+-   **검색 - 검색**: 기술 자료가 **기술 자료 관리: 분석 페이지**에서 닫혔습니다. 기술 자료가 잠겨 있으며 도메인 관리 작업을 사용할 수 없습니다.  
   
--   **검색 - 값 관리**: 기술 자료가 **기술 자료 관리: 도메인 용어 관리** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 도메인 관리 작업을 사용할 수 없습니다.  
+-   **검색 – 값 관리**: 기술 자료가 **기술 자료 관리: 도메인 용어 관리** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 도메인 관리 작업을 사용할 수 없습니다.  
   
--   **일치 정책 – 일치 정책**: 기술 자료가 **일치 정책 – 일치 정책** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 기술 자료 검색 및 도메인 관리 작업을 사용할 수 없습니다.  
+-   **일치 정책 - 일치 정책**: 기술 자료가 **일치 정책 – 일치 정책** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 기술 자료 검색 및 도메인 관리 작업을 사용할 수 없습니다.  
   
--   **일치 정책 – 일치 결과**: 기술 자료가 **일치 정책 – 일치 결과** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 기술 자료 검색 및 도메인 관리 작업을 사용할 수 없습니다.  
+-   **일치 정책 - 일치 결과**: 기술 자료가 **일치 정책 - 일치 결과** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 기술 자료 검색 및 도메인 관리 작업을 사용할 수 없습니다.  
   
   

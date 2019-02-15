@@ -1,7 +1,7 @@
 ---
 title: time(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 6/7/2017
+ms.date: 06/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff303fd066e1a12ccbd33e1479648001fe5a389b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762591"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079459"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47762591"
 |구문|**time** [ (*소수 자릿수 초*) ]|  
 |사용법|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
 |*소수 자릿수 초*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica의 경우 0에서 3 사이의 정수를 지정할 수 있습니다.<br /><br /> 기본 소수 자릿수는 7(100ns)입니다.|  
-|기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
+|기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 [하위 클라이언트에 대한 이전 버전과의 호환성](#BackwardCompatibilityforDownlevelClients) 섹션을 참조하세요.|  
 |범위|00:00:00.0000000부터 23:59:59.9999999까지(Informatica의 경우 00:00:00.000부터 23:59:59.999까지)|  
 |요소 범위|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 0에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n\*은 0에서 9999999 사이에 속하는 0부터 7자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica의 경우 n\*은 0 ~ 3자릿수로, 0부터 999까지입니다.|  
 |문자 길이|최소 8자리(hh:mm:ss)부터 최대 16자리(hh:mm:ss.nnnnnnn)까지. Informatica의 경우 최댓값은 12(hh:mm:ss.nnn)입니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "47762591"
 |스토리지 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 5바이트(고정)가 기본값입니다. Informatica의 경우 기본값은 초 소수 부분 자릿수 기본값 1ms를 기준으로 4바이트(고정)입니다.|  
 |정확도|100나노초(Informatica의 경우 1밀리초)|  
 |기본값|00:00:00<br /><br /> 이 값은 **date**에서 **datetime2** 또는 **datetimeoffset**으로의 암시적 변환을 위해 추가되는 날짜 부분에 사용됩니다.|  
-|사용자 정의 초 소수 부분 자릿수|사용자 계정 컨트롤|  
+|사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|아니오|  
 |일광 절약 시간제 인식|아니오|  
   
@@ -121,8 +121,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
 --(1 row(s) affected)  
 ```  
   
- 변환이  
-                    **date**으로 실행되는 경우는 변환이 실패하고 "피연산자 유형 충돌: 날짜가 시간과 호환되지 않습니다."라는 오류 메시지 206이 나타납니다.  
+ 변환이 **date**에서 일어나는 경우 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.  
   
  **datetime**으로 변환되는 경우 시, 분, 초 값이 복사되고 날짜 구성 요소가 '1900-01-01'로 설정됩니다. **time(n)** 값에 대한 초 소수 부분 자릿수의 전체 자릿수가 세 자리보다 크면 **datetime** 결과가 잘립니다. 다음 코드에서는 `time(4)` 값을 `datetime` 값으로 변환한 결과를 보여 줍니다.  
   
@@ -258,7 +257,7 @@ SELECT
 |ISO 8601|'01:01:01.1234567'|01:01:01.1234567|ISO 8601을 따르려면 AM 또는 PM 대신 24시간 형식을 사용하세요.|  
 |ISO 8601|'01:01:01.1234567 +01:01'|01:01:01.1234567|TZD(Time Zone Difference)는 선택 사항이며 입력할 수 있지만 저장되지 않습니다.|  
   
-### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>3. 각 date 및 time 날짜 형식의 열에 시간 문자열 리터럴 삽입  
+### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 각 date 및 time 날짜 형식의 열에 시간 문자열 리터럴 삽입  
  다음 표에서 첫 번째 열은 두 번째 열의 날짜 또는 시간 데이터 형식의 데이터베이스 테이블 열에 삽입될 시간 문자열 리터럴을 보여 줍니다. 세 번째 열은 데이터베이스 테이블 열에 저장될 값을 보여 줍니다.  
   
 |삽입되는 문자열 리터럴|열 데이터 형식|열에 저장되는 값|설명|  

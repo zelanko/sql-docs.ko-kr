@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025874"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293741"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>공유 데이터 원본 만들기, 삭제 및 수정(보고서 관리자)
   공유 데이터 원본은 데이터 원본에 대한 연결 속성을 지정합니다. 많은 보고서, 모델 또는 데이터 기반 구독에서 사용되는 데이터 원본이 있는 경우 여러 위치에서 같은 연결 정보를 유지 관리해야 하는 오버헤드를 없애기 위해 공유 데이터 원본을 만드십시오.  

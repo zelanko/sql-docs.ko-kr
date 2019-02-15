@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95ce70bf8535db07eef8d45faa1d61eab2a43697
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026044"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292441"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Lookup 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  

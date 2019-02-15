@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05501a3d084921f52088a76d7e1a69390cd48998
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
+ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405803"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742103"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 
@@ -153,6 +153,13 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   - SameSubnetThreshold \<= CrossSubnetThreshold 
 
   - SameSubnetDelay \<= CrossSubnetDelay 
+  
+ | 시간 제한 설정 | 용도 | 사이 | 용도 | IsAlive 및 LooksAlive | 원인 | 결과 
+ | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
+ | 임대 시간 제한 </br> **기본값: 20000** | splitbrain 방지 | 기본 클러스터 </br> (HADR) | [Windows 이벤트 개체](/windows/desktop/Sync/event-objects)| 둘 다에 사용됨 | OS 중단, 가상 메모리 부족, 덤프 생성, CPU 고정, WSFC 다운(쿼럼 손실) | AG 리소스 오프라인-온라인, 장애 조치(failover) |  
+ | 세션 제한 시간 </br> **기본값: 10000** | 주 및 보조 복제본 간의 커뮤니케이션 문제 통보 | 보조 대 주 </br> (HADR) | [TCP 소켓(DBM 엔드포인트를 통해 전송된 메시지)](/windows/desktop/WinSock/windows-sockets-start-page-2) | 둘 다 사용되지 않음 | 네트워크 통신, </br> 보조 문제 - 다운, OS 중단, 리소스 경합 | 보조 - DISCONNECTED | 
+ |HealthCheck 제한 시간  </br> **기본값: 30000** | 주 복제본의 상태를 확인하는 동안 제한 시간 표시 | 기본 클러스터 </br> (FCI 및 HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | 둘 다에 사용됨 | 오류 조건 충족, OS 중지, 가상 메모리 부족, 작업 집합 트림, 덤프 생성, WSFC(쿼럼 손실), 스케줄러 문제(지연된 스케줄러)| AG 리소스 오프라인-온라인 또는 장애 조치(failover), FCI 다시 시작/장애 조치(failover) |  
+  | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>참고 항목    
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030484"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290441"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
   보고서 작성기는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. 보고서 작성기에서 보고서를 미리 보거나 다른 사람이 보고서를 실행할 수 있도록 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에 게시할 수 있습니다.  

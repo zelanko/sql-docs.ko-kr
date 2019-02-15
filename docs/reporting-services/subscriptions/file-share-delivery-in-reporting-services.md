@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc81cc930f901f162ff58dfe6a5615d557878cf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778121"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889994"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 있어야 하는 계정은 구독에 구성되어 있는 자격 증명일 수도 있고 보고서 서버용으로 구성된 **파일 공유 계정** 일 수도 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 필요한 계정은 구독에 구성된 자격 증명이거나 보고서 서버용으로 구성된 **파일 공유 계정**일 수 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
   
  파일 공유에 보고서를 배포하려면 표준 구독 또는 데이터 기반 구독을 정의합니다. 데이터 기반 구독에서 파일 공유 배달을 사용하는 방법을 알아보려면 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요. 또한 원격 파일 공유 구독을 실행하는 계정의 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 컴퓨터에 로컬로 로그온할 수 있는 권한이 필요합니다.  
   
@@ -70,16 +70,16 @@ ms.locfileid: "47778121"
   
  **파일 이름:** 기본 파일 이름은 원본 보고서 이름을 따르지만 구독에서 사용자 지정 이름을 제공할 수 있습니다. 확장명은 옵션이지만 사용자가 지정하면 보고서 서버가 렌더링 형식에 해당하는 확장명을 만듭니다.  
   
- **덮어쓰기:** 덮어쓰기 옵션을 지정해 각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용할지 아니면 새 파일을 만들지를 선택할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
+ **덮어쓰기:** 각각의 보고서 배달에 대해 동일한 파일 이름을 다시 사용하거나 새 파일을 만들려면 덮어쓰기 옵션을 지정할 수 있습니다. 파일을 덮어쓰려면 동일한 파일 이름 및 확장명을 사용해야 합니다.  
   
  배달마다 고유한 파일을 만들기 위한 또 다른 방법은 파일 이름에 타임스탬프를 포함하는 것입니다. 이렇게 하려면 파일 이름에 **@timestamp** 변수를 추가하세요(예: *CompanySales@timestamp*). 이 방법을 사용하면 파일 이름 정의가 고유하게 되므로 덮어쓰는 일이 생기지 않습니다.  
   
- 다음 이미지에는 파일 공유 배달에 대해 구성된 구독의 파일 설정 예가 나와 있습니다.  
+ 다음 이미지는 파일 공유 전달을 위해 구성된 구독에 대한 설정의 예제입니다.  
   
  ![파일 공유 구독](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "파일 공유 구독")  
   
 ## <a name="see-also"></a>참고 항목  
  [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [구독 설정 및 파일 공유 계정&#40;Configuration Manager&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
+ [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   
   

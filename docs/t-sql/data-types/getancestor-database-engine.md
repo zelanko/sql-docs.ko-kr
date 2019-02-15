@@ -1,7 +1,7 @@
 ---
 title: GetAncestor(데이터베이스 엔진) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: b96a986f-d5e4-4034-8013-de7974594ee9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89442e4d787c66ed76e6c2db3ff9539a14156782
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bd3974aee87cc3a9f0549d51988d8b0e8886a1c6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026224"
 ---
 # <a name="getancestor-database-engine"></a>GetAncestor(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ WHERE OrgNode.GetAncestor(1) = @CurrentEmployee ;
 ```  
   
 ### <a name="b-returning-the-grandchildren-of-a-parent"></a>2. 부모의 손자 반환  
-`GetAncestor(2)`는 계층에서 현재 노드보다 두 수준 낮은 직원을 반환합니다. 이러한 항목은 현재 노드의 손자입니다. 다음 예에서는 `GetAncestor(2)`를 사용합니다.
+`GetAncestor(2)`는 계층에서 현재 노드보다 두 수준 낮은 직원을 반환합니다. 이러한 직원은 현재 노드의 손자입니다. 다음 예에서는 `GetAncestor(2)`를 사용합니다.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -86,7 +86,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;  
 ```  
   
-### <a name="c-returning-the-current-row"></a>3. 현재 행 반환  
+### <a name="c-returning-the-current-row"></a>C. 현재 행 반환  
 `GetAncestor(0)`를 사용하여 현재 노드를 반환하려면 다음 코드를 실행합니다.
   
 ```sql
@@ -99,7 +99,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode.GetAncestor(0) = @CurrentEmployee ;  
 ```  
   
-### <a name="d-returning-a-hierarchy-level-if-a-table-is-not-present"></a>4. 테이블이 없는 경우 계층 수준 반환  
+### <a name="d-returning-a-hierarchy-level-if-a-table-isnt-present"></a>D. 테이블이 없는 경우 계층 수준 반환  
 `GetAncestor`는 테이블이 없는 경우에도 계층에서 선택한 수준을 반환합니다. 예를 들어 다음 코드는 현재 직원을 지정하고 테이블에 대한 참조 없이 현재 직원의 상위 항목 `hierarchyid`를 반환합니다.
   
 ```sql
@@ -110,7 +110,7 @@ SELECT @TargetEmployee = @CurrentEmployee.GetAncestor(2) ;
 SELECT @TargetEmployee.ToString(), @TargetEmployee ;  
 ```  
   
-### <a name="e-calling-a-common-language-runtime-method"></a>5. 공용 언어 런타임 메서드 호출  
+### <a name="e-calling-a-common-language-runtime-method"></a>E. 공용 언어 런타임 메서드 호출  
 다음 코드 조각은 `GetAncestor()` 메서드를 호출합니다.
   
 ```sql
@@ -122,5 +122,4 @@ this.GetAncestor(1)
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

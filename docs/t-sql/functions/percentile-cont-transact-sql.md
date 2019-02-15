@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f7e82e8577269a206e0172f170a66e1b1250c5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60a53ba6c75c962e6dba1418b846521689143776
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674867"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807503"
 ---
 # <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ PERCENTILE_CONT ( numeric_literal )
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ]**)**  
- 정렬할 숫자 값 목록을 지정하고 백분위수를 계산합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확한 숫자 형식(**int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney**, **money**) 또는 적절한 숫자 형식(**float**, **real**)이어야 합니다. 다른 데이터 형식은 허용되지 않습니다. 기본 정렬 순서는 오름차순입니다.  
+ 정렬할 숫자 값 목록을 지정하고 백분위수를 계산합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
   
  OVER **(** \<partition_by_clause> **)**  
  FROM 절이 생성한 결과 집합을 백분위수 함수가 적용되는 파티션으로 나눕니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. OVER 구문의 \<ORDER BY 절> 및 \<rows 또는 range 절>은 PERCENTILE_CONT 함수에 지정할 수 없습니다.  
@@ -66,7 +66,7 @@ PERCENTILE_CONT ( numeric_literal )
 ## <a name="examples"></a>예  
   
 ### <a name="a-basic-syntax-example"></a>1. 기본 구문 예제  
- 다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. 이는 PERCENTILE_CONT는 데이터 집합에 있는지 여부에 관계없이 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 집합에서 실제 값을 반환하기 때문입니다.  
+ 다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,7 +98,7 @@ Human Resources        17.427850    16.5865
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-basic-syntax-example"></a>2. 기본 구문 예제  
- 다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. 이는 PERCENTILE_CONT는 데이터 집합에 있는지 여부에 관계없이 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 집합에서 실제 값을 반환하기 때문입니다.  
+ 다음 예에서는 PERCENTILE_CONT 및 PERCENTILE_DISC를 사용하여 각 부서에서 직원 급여의 중앙값을 찾습니다. 이러한 함수는 같은 값을 반환하지 않을 수 있습니다. PERCENTILE_CONT는 데이터 세트에 있거나 없을 수 있는 적절한 값을 보간하는 반면, PERCENTILE_DISC는 항상 해당 세트에서 실제 값을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -126,6 +126,4 @@ Shipping and Receiving 9.250000      9.0000
 ## <a name="see-also"></a>참고 항목  
  [PERCENTILE_DISC&#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)  
   
-  
-
-
+ 

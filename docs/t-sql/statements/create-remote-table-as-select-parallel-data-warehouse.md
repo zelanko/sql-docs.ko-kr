@@ -2,8 +2,8 @@
 title: CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: ''
-ms.prod_service: pdw
+ms.prod: sql
+ms.service: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0f8e3992c7097167c82caf6350f571787fd71373
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc410f1a3c232eaed8f5f64603c95581361476c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024684"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -68,7 +68,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  원격 서버 컴퓨터의 이름 또는 원격 서버의 IPv4 주소입니다. IPv6 주소는 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 인스턴스를 **Computer_Name\Instance_Name** 또는 **IP_address\Instance_Name** 형식으로 지정할 수 있습니다. 서버는 원격이어야 하되 (local)로 지정할 수 없습니다.  
   
  TCP *port* 번호  
- 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예: **ServerA, 1450** 또는 **10.192.14.27,1435**  
+ 연결에 사용되는 TCP 포트 번호입니다. 기본 포트 1433에서 수신 대기하지 않는 SQL Server의 인스턴스에 대한 TCP 포트 번호를 0에서 65535 사이로 지정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. **ServerA,1450** 또는 **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP 주소를 사용하여 원격 서버에 연결하는 것이 좋습니다. 네트워크 구성에 따라 컴퓨터 이름을 사용하여 연결할 때는 비 어플라이언스 DNS 서버를 사용하여 올바른 서버에 대한 이름을 확인하는 추가 단계가 필요할 수 있습니다. IP 주소를 사용하여 연결하는 경우에는 이 단계가 필요하지 않습니다. 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]의 “DNS 전달자를 사용하여 비 어플라이언스 DNS 이름 확인(분석 플랫폼 시스템)”을 참조하세요.  
@@ -152,7 +152,7 @@ SELECT * FROM sys.dm_pdw_dms_workers
 WHERE type = 'PARALLEL_COPY_READER';  
 ```  
   
-### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>3. CREATE REMOTE TABLE로 쿼리 조인 힌트 사용  
+### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. CREATE REMOTE TABLE로 쿼리 조인 힌트 사용  
  이 쿼리는 CREATE REMOTE TABLE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여 줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
 ```  

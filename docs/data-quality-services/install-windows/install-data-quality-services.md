@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617943"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024724"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -26,8 +26,8 @@ ms.locfileid: "52617943"
   
 |DQS 구성 요소|설명|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 은(는) [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
-|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 응용 프로그램으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]는 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
+|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 애플리케이션으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
   
 > [!IMPORTANT]  
 >  위의 두 가지 DQS 구성 요소 외에도 다음을 수행할 수 있습니다.  

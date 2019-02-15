@@ -3,7 +3,7 @@ title: SQL Server 2012 서비스 팩 릴리스 정보 | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503268"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017064"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,14 +129,14 @@ ms.locfileid: "52503268"
 이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 [이 KB 문서](https://support.microsoft.com/kb/2674319)를 참조하세요.   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>동일한 IP 주소를 사용하는 경우 SQL Server 장애 조치(Failover) 클러스터 인스턴스의 다시 설치가 실패함  
-**문제:** SQL Server 장애 조치(Failover) 클러스터 인스턴스를 설치하는 동안 잘못된 IP 주소를 지정하는 경우 설치에 실패합니다. 실패한 인스턴스를 제거한 후 올바른 IP 주소와 동일한 인스턴스 이름을 사용하여 SQL Server 장애 조치(Failover) 클러스터 인스턴스를 다시 설치하려고 하면 설치에 실패합니다. 이 오류는 이전 설치로 인해 중복된 리소스 그룹이 남겨졌기 때문에 발생합니다.  
+**문제점:** SQL Server 장애 조치(Failover) 클러스터 인스턴스를 설치하는 동안 잘못된 IP 주소를 지정하는 경우 설치에 실패합니다. 실패한 인스턴스를 제거한 후 올바른 IP 주소와 동일한 인스턴스 이름을 사용하여 SQL Server 장애 조치(Failover) 클러스터 인스턴스를 다시 설치하려고 하면 설치에 실패합니다. 이 오류는 이전 설치로 인해 중복된 리소스 그룹이 남겨졌기 때문에 발생합니다.  
   
-**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제합니다. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하십시오. 
+**해결 방법:** 이 문제를 해결하려면 설치하는 동안 다른 인스턴스 이름을 사용하거나 다시 설치하기 전에 리소스 그룹을 수동으로 삭제하세요. 자세한 내용은 [SQL  Server  장애 조치(failover)  클러스터에서 노드 추가 또는 제거](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하십시오. 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 및 PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>PowerPivot 구성 도구로 PowerPivot 갤러리가 만들어지지 않음  
-**문제:** PowerPivot 구성 도구는 팀 사이트를 프로비전하므로 PowerPivot 갤러리가 만들어지지 않습니다.  
+**문제점:** PowerPivot 구성 도구는 팀 사이트를 프로비전하므로 PowerPivot 갤러리가 만들어지지 않습니다.  
   
 **해결 방법:** 새 앱(라이브러리)을 만듭니다.  
   
@@ -147,14 +147,14 @@ ms.locfileid: "52503268"
 3.  **PowerPivot  갤러리**를 클릭합니다.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013에서 PowerPivot for Excel을 사용하려면 Excel과 함께 설치된 추가 기능을 사용해야 합니다.  
-**문제:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드할 수 있는 PowerPivot 추가 기능으로는 두 가지 버전이 잇는데, 하나는 SQL Server 2008 R2에서 제공되고 다른 하나는 SQL Server 2012에서 제공됩니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
+**문제점:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드로 제공되는 두 가지 버전의 PowerPivot이 있습니다. 하나는 SQL Server 2008 R2와 함께 제공되는 버전이고 다른 하나는 SQL Server 2012와 함께 제공되는 버전입니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
   
-**해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용하도록 설정해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능**을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동**을 클릭합니다. **COM 추가 기능**에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인**을 클릭합니다.  
+**해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능**을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동**을 클릭합니다. **COM 추가 기능**에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인**을 클릭합니다.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Reporting Services를 설치하기 전에 SharePoint Server 2013 설치 및 구성  
-**문제:** SSRS(SQL Server Reporting Services)를 설치하기 **전에** 다음 요구 사항을 완료해야 합니다.  
+**문제점:** SSRS(SQL Server Reporting Services)를 설치하기 **전**에 다음 요구 사항을 완료해야 합니다.  
   
 1.  SharePoint  2013  제품 준비 도구를 실행합니다.  
   
@@ -162,12 +162,12 @@ ms.locfileid: "52503268"
   
 3.  SharePoint  2013  제품 구성 마법사를 실행하거나 해당 구성 단계를 완료하여 SharePoint  팜을 구성합니다.  
   
-**해결 방법:**  SharePoint 팜을 구성하기 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치한 경우 필요한 해결 방법은 설치된 다른 구성 요소에 따라 달라집니다.  
+**해결 방법:**  SharePoint 팜을 구성하기 전에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치한 경우 필요한 해결 방법은 설치된 다른 구성 요소에 따라 다릅니다.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013의 Power View에 Microsoft.AnalysisServices.SPClient.dll이 필요함  
-**문제:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 필수 구성 요소인 **Microsoft.AnalysisServices.SPClient.dll**을 설치하지 않습니다. SharePoint 모드에서 SharePoint Server 2013 미리 보기 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 설치하지만 SharePoint 2013용 PowerPivot 설치 관리자 패키지인 **spPowerPivot.msi**를 다운로드 및 설치하지 않는 경우, 파워 뷰가 작동하지 않고 파워 뷰에서 다음 증상이 나타납니다.  
+**문제:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 필수 구성 요소인 **Microsoft.AnalysisServices.SPClient.dll**을 설치하지 않습니다. SharePoint 모드에서 SharePoint Server 2013 미리 보기 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하지만 SharePoint 2013용 PowerPivot 설치 관리자 패키지인 **spPowerPivot.msi** 를 다운로드 및 설치하지 않는 경우, 파워 뷰가 작동하지 않고 파워 뷰에서 다음 증상이 나타납니다.  
   
-**증상:** 파워 뷰 보고서를 만들려고 하면 다음과 유사한 오류 메시지가 표시됩니다.  
+**증상:** Power View 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
 -   "데이터 원본에 대한 연결을 설정할 수 없습니다..."  
   
@@ -178,16 +178,16 @@ ms.locfileid: "52503268"
 **해결 방법:** SharePoint Server 2013에서 SharePoint 2013용 PowerPivot 설치 관리자 패키지(**spPowerPivot.msi**)를 설치합니다. 설치 관리자 패키지는 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩의 일부로 사용할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 다운로드 센터의 [SQL  Server  2012  SP1  기능 팩](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 기능 팩을 다운로드할 수 있습니다.  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>예약된 데이터 새로 고침 후 PowerPivot 통합 문서의 파워 뷰 시트가 삭제됨  
-**문제**: SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침** 을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
+**문제점**: SharePoint용 PowerPivot 추가 기능에서 파워 뷰가 있는 통합 문서에 **예약된 데이터 새로 고침**을 사용하면 파워 뷰 시트가 모두 삭제됩니다.  
   
-**해결 방법**: 파워 뷰 통합 문서에 **Scheduled Data Refresh** 을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
+**해결 방법**: 파워 뷰 통합 문서에 **예약된 데이터 새로 고침**을 사용하려면 데이터 모델인 PowerPivot 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 연결되는 Power  View  시트 및 Excel  시트로 별도의 통합 문서를 만듭니다. 데이터 모델이 있는 PowerPivot  통합 문서에 대해서만 데이터 새로 고침 예약을 수행해야 합니다.  
   
 ### <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS를 잘못된 버전의 SQL Server 2012에서 사용할 수 있음  
-**문제:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 릴리스에서 DQS(Data Quality Services) 기능은 Enterprise, Business Intelligence 및 Developer 버전 이외의 SQL Server 버전에서 사용할 수 있습니다. SQL  Server  2012  SP1을 설치하면 DQS는 Enterprise,  Business  Intelligence  및 Developer  버전을 제외한 모든 버전에서 사용할 수 있습니다.  
+**문제점:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM 릴리스에서 DQS(Data Quality Services) 기능은 Enterprise, Business Intelligence 및 Developer 버전 이외의 SQL Server 버전에서 사용할 수 있습니다. SQL  Server  2012  SP1을 설치하면 DQS는 Enterprise,  Business  Intelligence  및 Developer  버전을 제외한 모든 버전에서 사용할 수 있습니다.  
   
-**해결 방법**: 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 응용 프로그램에서 이 기능에 대한 종속성을 제거합니다.  
+**해결 방법**: 지원되지 않는 버전에서 DQS를 사용하는 경우에는 지원되는 버전으로 업그레이드하거나 애플리케이션에서 이 기능에 대한 종속성을 제거합니다.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -197,9 +197,9 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service 및 Designer for Oracle by Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>CDC Service 및 Designer 업그레이드  
-**문제:** SQL Server 2012 SP1 설치 시 Change Data Capture Designer for Oracle 및 Change Data Capture Service for Oracle by Attunity가 컴퓨터에 설치되는 경우 SP1을 설치해도 이러한 구성 요소가 업그레이드되지 않습니다.  
+**문제점:** SQL Server 2012 SP1 설치 시 Change Data Capture Designer for Oracle 및 Change Data Capture Service for Oracle by Attunity가 컴퓨터에 설치되는 경우 SP1을 설치해도 이러한 구성 요소가 업그레이드되지 않습니다.  
   
-**해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면 다음을 수행합니다.  
+**해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면  
   
 1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
   

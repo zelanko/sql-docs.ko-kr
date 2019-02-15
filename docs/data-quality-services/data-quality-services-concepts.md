@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617120"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033445"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
 
@@ -89,7 +89,7 @@ ms.locfileid: "52617120"
   
  **DQS 보안**  
   
- SQL Server 보안 메커니즘 내의 역할을 사용하여 DQS 보안을 설정할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램에서 사용자의 액세스 수준은 dqs_administrator, dqs_kb_editor 및 dqs_kb_operator라는 세 가지 DQS 역할에 의해 결정됩니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 사용하여 사용자에게 역할을 부여할 수는 없습니다. 이 작업은 SQL Server Management Studio를 사용하여 수행됩니다. 자세한 내용은 [DQS Security](../data-quality-services/dqs-security.md)을 참조하세요.  
+ SQL Server 보안 메커니즘 내의 역할을 사용하여 DQS 보안을 설정할 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 사용자의 액세스 수준은 dqs_administrator, dqs_kb_editor 및 dqs_kb_operator라는 세 가지 DQS 역할에 의해 결정됩니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 사용하여 사용자에게 역할을 부여할 수는 없습니다. 이 작업은 SQL Server Management Studio를 사용하여 수행됩니다. 자세한 내용은 [DQS Security](../data-quality-services/dqs-security.md)을 참조하세요.  
   
  DQS 관리에 대한 자세한 내용은 [DQS Administration](../data-quality-services/dqs-administration.md)를 참조하세요.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbc9e37e328e917b02177d99846806c883d74944
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617223"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030004"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 
@@ -44,7 +44,7 @@ ms.locfileid: "52617223"
   
 3.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인 속성 설정 후  
+##  <a name="FollowUp"></a> 후속 작업: 도메인 속성을 설정한 후  
  도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Properties"></a> 도메인 속성  
@@ -53,7 +53,7 @@ ms.locfileid: "52617223"
  도메인이 생성된 후 도메인 이름 또는 설명을 변경할 수 있습니다. 도메인 이름은 기술 자료에 대해 고유해야 합니다. 설명은 최대 256자까지 지정할 수 있습니다.  
   
 ###  <a name="Type"></a> 데이터 형식  
- 도메인을 만들 때 도메인의 값에 대해 **문자열** (기본값), **날짜**, **정수**또는 **10진수**데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+ 도메인을 만들 때 도메인의 값에 대해 **문자열**(기본값), **날짜**, **정수** 또는 **10진수** 데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 ###  <a name="Leading"></a> 선행 값 사용  
  동의어 값 대신 동의어 그룹의 선행 값이 출력되도록 지정하려면 이 확인란을 선택합니다. 각 동의어 값이 올바른 형식 또는 수정된 형식으로 출력되고 동의어 그룹의 선행 값으로 바뀌지 않도록 지정하려면 **선행 값 사용** 을 선택 취소합니다.  

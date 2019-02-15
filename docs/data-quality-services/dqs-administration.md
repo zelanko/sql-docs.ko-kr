@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617863"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033144"
 ---
 # <a name="dqs-administration"></a>dqs 관리
 
@@ -53,7 +53,7 @@ ms.locfileid: "52617863"
 ### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
--   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure 마켓플레이스 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
+-   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure Marketplace 또는 직접 참조 데이터 서비스 공급자. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
   
 -   **일반 설정**: 데이터 정리 및 데이터 일치에 대한 임계값을 지정하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 프로파일링을 위한 알림을 사용하도록 설정할지 여부를 지정합니다. 이러한 임계값은 데이터 품질 프로젝트에서 컴퓨터 기반 정리 및 일치 활동 중에 DQS에서 사용됩니다.  
   

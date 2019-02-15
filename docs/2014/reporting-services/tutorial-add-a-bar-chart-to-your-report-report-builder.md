@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041424"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295991"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
   가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  

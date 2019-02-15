@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ee52cac510d4166666d9f93fbb31da2bcde4fef
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616643"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015244"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드
 
@@ -31,7 +31,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  DQS 데이터베이스 스키마를 업그레이드해도 DQS 데이터베이스의 기존 데이터(기술 자료, 데이터 품질 프로젝트, DQS_STAGING_DATA 데이터베이스의 내보낸 결과)에 영향을 주지 않습니다. 그러나 스키마 업그레이드 중에 데이터 손실을 방지하기 위해 DQS 데이터베이스 스키마를 업그레이드하기 전에 DQS 데이터베이스를 백업해야 합니다. DQS 데이터베이스 백업에 대한 자세한 내용은 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)을 참조하십시오.  
   
 > [!NOTE]  
->  대부분의 경우 SQL Server를 업데이트하려면 DQS 데이터베이스 스키마로 업그레이드해야 합니다. DQS 데이터베이스 스키마로 업그레이드해야 하는 SQL Server 업데이트에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)의 1.A 단계를 참조하세요.  
+>  대부분의 경우 SQL Server를 업데이트하려면 DQS 데이터베이스 스키마로 업그레이드해야 합니다. DQS 데이터베이스 스키마로 업그레이드해야 하는 SQL Server 업데이트에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)의 1.A 단계에서 차트를 참조하세요.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   

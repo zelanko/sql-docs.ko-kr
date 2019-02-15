@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209302"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832085"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 보조 데이터베이스 준비
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ ms.locfileid: "53209302"
         GO  
         ```  
   
-5.  전체 백업을 복원한 후 주 데이터베이스에서 로그 백업을 만들어야 합니다. 예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 로그를 *E:\MyDB1_log.bak*라는 백업 파일에 백업합니다.  
+5.  전체 백업을 복원한 후 주 데이터베이스에서 로그 백업을 만들어야 합니다. 예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 로그를 *E:\MyDB1_log.trn*이라는 백업 파일에 백업합니다.  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  데이터베이스를 보조 복제본에 조인하려면 필수 로그 백업과 모든 후속 로그 백업을 적용해야 합니다.  
   
-     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 *C:\MyDB1.bak*에서 첫 번째 로그를 복원합니다.  
+     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 *C:\MyDB1.trn*에서 첫 번째 로그를 복원합니다.  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  데이터베이스에서 보조 복제본을 조인하기 전에 추가 로그 백업이 수행되면 해당 로그 백업도 RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 서버 인스턴스에 순서대로 복원해야 합니다.  
   
-     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 *E:\MyDB1_log.bak*에서 두 개의 로그를 추가로 복원합니다.  
+     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 *E:\MyDB1_log.trn*에서 두 개의 로그를 추가로 복원합니다.  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

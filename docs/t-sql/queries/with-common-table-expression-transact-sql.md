@@ -28,12 +28,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 396797a115821543a1330cedfbe10ebf63769aeb
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 26f1b65876d9d6c6e25cc4df27a588fe17cf9d0c
+ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299370"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55889954"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "54299370"
 > [!div class="nextstepaction"]
 > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
-CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. CTE는 단순 쿼리에서 파생되며 SELECT, INSERT, UPDATE 또는 DELETE 문 하나의 실행 범위 내에서 정의됩니다. 이 절은 정의하는 SELECT 문의 일부로 CREATE VIEW 문 내에서도 사용할 수 있습니다. 공통 테이블 식은 자신에 대한 참조를 포함할 수 있으며 이를 재귀 공통 테이블 식이라 합니다.  
+CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 이는 단순 쿼리에서 파생되며 단일 SELECT, INSERT, UPDATE, DELETE 또는 MERGE 문 실행 범위 내에서 정의됩니다. 이 절은 정의하는 SELECT 문의 일부로 CREATE VIEW 문 내에서도 사용할 수 있습니다. 공통 테이블 식은 자신에 대한 참조를 포함할 수 있으며 이를 재귀 공통 테이블 식이라 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -219,7 +219,7 @@ FROM Sales_CTE;
 GO  
 ```  
   
-### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>3. 단일 쿼리에서 여러 CTE 정의 사용  
+### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. 단일 쿼리에서 여러 CTE 정의 사용  
  다음 예에서는 단일 쿼리에서 둘 이상의 CTE를 정의하는 방법을 보여 줍니다. CTE 쿼리 정의를 구분하기 위해 쉼표가 사용되었습니다. 통화 형식에서 통화량을 표시하는 데 사용되는 FORMAT 함수는 SQL Server 2012 이상에서 사용할 수 있습니다.  
   
 ```  

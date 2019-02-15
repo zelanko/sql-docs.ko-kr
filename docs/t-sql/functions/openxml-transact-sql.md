@@ -17,15 +17,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], XML documents
 - XML [SQL Server], rowset views
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9aa7006233437922fc15ac4fe811cbde75dff59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011794"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|XML_ATTRIBUTES 또는 XML_ELEMENTS와 결합(논리적 OR 연산을 수행)할 수 있습니다. 검색 상황에서 이 플래그는 소비된 데이터를 오버플로 속성인 **\@mp:xmltext**로 복사할 수 없음을 나타냅니다.|  
   
  _SchemaDeclaration_  
- _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...] 형식의 스키마 정의입니다.  
+ 다음 형식의 스키마 정의입니다. _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  행 집합의 열 이름입니다.  
@@ -209,7 +209,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 10283      LILAS       1996-08-16 00:00:00.000   72      3  
 ```  
   
-### <a name="c-obtaining-results-in-an-edge-table-format"></a>3. edge 테이블 형식으로 결과 얻기  
+### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. edge 테이블 형식으로 결과 얻기  
  다음 예의 예제 XML 문서는 `<Customers>`, `<Orders>`, `<Order_0020_Details>` 요소로 구성됩니다. 먼저 문서 핸들을 얻기 위해 **sp_xml_preparedocument**를 호출합니다. 이 문서 핸들은 `OPENXML`에 전달됩니다.  
   
  `OPENXML` 문에서 *rowpattern*(`/ROOT/Customers`)은 처리할 `<Customers>` 노드를 식별합니다. WITH 절이 제공되지 않았으므로 `OPENXML`에서 **edge** 테이블 형식의 행 집합을 반환합니다.  

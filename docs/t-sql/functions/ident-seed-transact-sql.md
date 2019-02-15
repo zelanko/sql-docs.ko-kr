@@ -20,19 +20,19 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336a961a07b7d1f1ce9be2e1abc751f1cbc787eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711981"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079309"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  테이블이나 뷰에서 ID 열을 만드는 동안 지정된 원래 초기값(**numeric**(**@@** MAXPRECISION,0)으로 반환됨)을 반환합니다. DBCC CHECKIDENT를 사용하여 현재 ID 열 값을 변경해도 이 함수에서 반환되는 값은 변경되지 않습니다.  
+  테이블이나 뷰에 ID 열을 만들 때 지정된 원래 초기값(**numeric**(**@@** MAXPRECISION,0)으로 반환됨)을 반환합니다. DBCC CHECKIDENT를 사용하여 현재 ID 열 값을 변경해도 이 함수에서 반환되는 값은 변경되지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,9 +49,9 @@ IDENT_SEED ( 'table_or_view' )
  **numeric**  
   
 ## <a name="exceptions"></a>예외  
- 오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
+ 오류가 발생하거나 호출자에게 개체를 볼 수 있는 권한이 없으면 NULL을 반환합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_SEED와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하거나 권한이 부여된 보안 개체의 메타데이터만 볼 수 있습니다. 이 보안은 사용자가 개체에 대한 사용 권한이 없으면 IDENT_SEED와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있음을 의미합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>2. 여러 테이블에서 초기값 반환  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 초기값이 있는 ID 열을 포함하는 테이블을 반환합니다.  
+ 다음 예제에서는 초기값이 있는 ID 열을 포함하는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,5 +99,4 @@ dbo                AWBuildVersion                         1
  [IDENT_INCR&#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   
  [DBCC CHECKIDENT&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
  [sys.identity_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
-  
   

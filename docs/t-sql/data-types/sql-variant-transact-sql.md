@@ -1,7 +1,7 @@
 ---
 title: sql_variant(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 9/12/2017
+ms.date: 09/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 004562a308419d2be70afd13defa617c26c0b0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785897"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013504"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 **sql_variant** 비교에는 다음 규칙이 적용됩니다.
 -   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 서로 다른 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 높은 데이터 형식 패밀리의 값이 두 값 중 더 큰 것으로 간주됩니다.  
 -   서로 다른 기본 데이터 형식의 **sql_variant** 값을 비교할 때 기본 데이터 형식이 동일한 데이터 형식 패밀리에 있으면 계층 구조 차트에서 더 낮은 기본 데이터 형식의 값이 암시적으로 다른 데이터 형식으로 변환된 다음, 비교됩니다.  
--   **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식의 **sql_variant** 값을 비교하는 경우 해당 데이터 정렬은 먼저 LCID, LCID 버전, 비교 플래그 및 정렬 ID와 같은 기준에 따라 비교됩니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
+-   **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식의 **sql_variant** 값을 비교하는 경우 해당 데이터 정렬은 먼저 LCID, LCID 버전, 비교 플래그 및 정렬 ID를 기준으로 먼저 비교됩니다. 이러한 조건은 각각 정수 값으로, 그리고 나열된 순서대로 비교됩니다. 이러한 모든 조건이 같다면 실제 문자열 값은 데이터 정렬에 따라 비교됩니다.  
   
 ## <a name="converting-sqlvariant-data"></a>sql_variant 데이터 변환  
 **sql_variant** 데이터 형식을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 개체의 데이터 형식을 **sql_variant** 형식으로 암시적으로 변환할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 **sql_variant** 데이터에서 다른 데이터 형식의 개체로의 암시 적 변환을 지원하지 않습니다.

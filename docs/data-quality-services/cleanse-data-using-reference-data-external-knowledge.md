@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036024"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617193"
     > [!NOTE]  
     >  참조 데이터 서비스에서 기술 자료를 사용하여 데이터를 정리하는 동안 도메인을 참조 데이터 서비스에 매핑하는 도중 지정한 임계값이 적용되며 **구성** 섹션의 **일반 설정** 탭에서 지정한 임계값은 적용되지 않습니다. 참조 데이터 정리의 임계값 지정에 대한 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)의 9단계를 참조하십시오.  
   
--   도메인 값은 **제안**, **새로 만들기**, **잘못 됨**, **수정됨**및 **수정**으로 분류됩니다.  
+-   도메인 값은 **제안**, **새로 만들기**, **잘못됨**, **수정됨** 및 **수정**으로 분류됩니다.  
   
 -   추가 데이터가 원본에 연결되고 정보를 정리된 데이터와 함께 내보내기에 사용할 수 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52617193"
   
 1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택합니다. [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)을 참조하세요.  
   
-2.  **맵** 페이지에서 **Address Line**, **City**, **State**및 **Zip**도메인을 원본 데이터의 알맞은 열에 매핑합니다. **다음**을 클릭합니다.  
+2.  **맵** 페이지에서 다음 4개의 도메인을 원본 데이터의 적절한 열에 매핑합니다. **Address Line**, **City**, **State** 및 **Zip**. **다음**을 클릭합니다.  
   
     > [!NOTE]  
     >  **Address Verification** 복합 도메인에 있는 도메인 4개를 모두 매핑하면 이제 개별 도메인 수준이 아닌 복합 도메인 수준에서 데이터 정리가 수행됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52617193"
     > [!NOTE]  
     >  **정리** 페이지에 다음 두 가지 방법으로 참조 데이터 서비스에 연결된 도메인에 대한 정보가 표시됩니다.  
     >   
-    >  -   **시작** 단추 아래에 다음 메시지가 표시됩니다. "Domains \<Domain1>, \<Domain2>,… \<DomainN> 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다." 이 예에서는 다음 메시지가 표시됩니다. “Address Verification 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다.”  
+    >  -   **시작** 단추 아래에 메시지가 표시됩니다. "도메인 \<Domain1>, \<Domain2>,... \<DomainN> 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다." 이 예제에서는 "Address Verification 도메인이 참조 데이터 서비스 공급자를 사용하여 정리됩니다."라는 메시지가 표시됩니다.  
     > -   참조 데이터 서비스 공급자에 연결된 도메인의 **프로파일러** 영역에 아이콘, ![도메인이 RDS에 연결됨](../data-quality-services/media/dqs-rdsindicator.JPG "도메인이 RDS에 연결됨")이 표시됩니다. 이 예에서는 **Address Verification** 복합 도메인에 대해 아이콘이 표시됩니다.  
   
 4.  **결과 관리 및 보기** 페이지에서 도메인 값을 검토합니다. 참조 데이터 서비스는 도메인이 참조 데이터 서비스에 매핑되는 동안 **제안된 후보** 상자에 지정된 최대 제안 수에 따라 둘 이상의 제안을 값에 대해 표시할 수 있습니다(사용 가능한 경우). 예를 들어, 다음 미국 주소에는 두 가지 제안이 표시됩니다.  
