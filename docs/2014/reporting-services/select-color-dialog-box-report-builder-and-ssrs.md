@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 882f7ba5aed75aec20d656c5ca49da66625ec6e6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031454"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293111"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>색 선택 대화 상자(보고서 작성기 및 SSRS)
   **색 선택** 대화 상자를 사용하여 데이터 영역이나 입력란 내의 단일 셀 또는 여러 셀의 배경에 대한 색 옵션을 지정하거나 차트의 색 옵션을 지정할 수 있습니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d2afca6-ab7a-4695-b9c9-bc2bdaa4060e
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 23f2ba56ca8800de3bf0707977c4aaa96f388a43
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b69759d68d58358ddf5b847e113c89f05e396027
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014784"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285321"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>이미지, 입력란, 사각형, 선 F1 도움말
   이 섹션의 항목에서는 보고서 디자이너의 대화 상자에서 이미지, 입력란, 사각형 및 선에 설정할 수 있는 옵션에 대해 설명합니다.  

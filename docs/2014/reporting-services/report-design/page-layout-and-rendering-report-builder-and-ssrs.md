@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043274"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294431"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
   보고서를 작성할 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더러의 동작을 이해하여 렌더링된 보고서가 페이지 레이아웃 및 페이지 나누기를 비롯하여 원하는 식으로 표시되도록 해야 합니다. 렌더링된 보고서가 사용자나 조직이 흔히 사용하는 용지 크기에 맞게 표시되도록 설정해야 할 수도 있습니다.  

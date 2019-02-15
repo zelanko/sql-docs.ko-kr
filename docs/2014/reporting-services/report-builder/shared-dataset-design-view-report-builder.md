@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014444"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292590"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   공유 데이터 집합 창에서 다른 사용자와 공유할 수 있는 데이터 집합 쿼리를 만들 수 있습니다. 이 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너에서 쿼리를 만들 수 있습니다.  

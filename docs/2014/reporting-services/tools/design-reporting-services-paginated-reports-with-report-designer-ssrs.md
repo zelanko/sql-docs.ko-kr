@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037814"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292061"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>보고서 디자이너로 보고서 디자인(SSRS)
   보고서 디자이너를 사용하여 완전한 기능을 갖춘 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 보고 솔루션을 만들 수 있습니다. 보고서 디자이너에서 제공하는 그래픽 인터페이스를 통해 데이터 원본과 데이터 세트 및 쿼리, 보고서의 데이터 영역과 필드의 레이아웃 위치, 매개 변수와 같은 대화형 기능, 함께 작동하는 보고서 세트를 정의할 수 있습니다.  

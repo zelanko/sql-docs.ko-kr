@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024144"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293882"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>표시기(보고서 작성기 및 SSRS)
   표시기는 단일 데이터 값의 상태를 한 눈에 볼 수 있도록 제공하는 최소 계기입니다. 표시기 및 해당 상태를 나타내는 아이콘은 단순하며 작은 크기로 설정해도 효율적으로 해당 내용을 표시합니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 097c8c02ae9b42531bbb072e0195c99e220cb50a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020454"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288419"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 지정된 범위에서 계산되는 Null이 아닌 모든 숫자 값의 분산을 반환합니다.  

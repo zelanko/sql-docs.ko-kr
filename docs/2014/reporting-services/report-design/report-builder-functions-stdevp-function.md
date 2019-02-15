@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cbcc0b3f-7b6d-4dd7-accb-cb375be8d852
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec98ca344a86b2224f5e9a34c28ebe9ff8b488a6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040774"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289181"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>StDevP 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 모든 숫자 값의 모집단 표준 편차를 반환합니다.  

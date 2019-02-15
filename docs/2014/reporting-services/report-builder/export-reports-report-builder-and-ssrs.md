@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022854"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291911"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
   보고서를 실행한 후 Excel이나 PDF 같은 다른 형식으로 보고서를 내보내거나 보고서에서 사용할 수 있는 Atom 규격 데이터 피드를 나열하는 Atom 서비스 문서를 생성하여 보고서를 내보낼 수 있습니다.  

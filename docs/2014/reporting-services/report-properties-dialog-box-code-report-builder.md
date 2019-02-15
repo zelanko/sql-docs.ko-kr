@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10081"
 ms.assetid: 24a479e4-3084-4442-8692-889895f111ad
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a2b67336419aca8dc1fc59910f6c273f7be891f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5a5d2460e4a7aca8c413858df00c4d6c4d08859e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017114"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297831"
 ---
 # <a name="report-properties-dialog-box-code-report-builder"></a>보고서 속성 대화 상자, 코드(보고서 작성기)
   **보고서 속성** 대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  

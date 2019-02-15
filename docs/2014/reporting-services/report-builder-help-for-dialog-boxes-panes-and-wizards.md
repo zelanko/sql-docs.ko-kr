@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Help, dialog boxes
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7be737e0c8534b936d08aaf8f37fc320f831b509
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e01b814bad72c5ff8a481fd361b2409b9adbda99
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034194"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293431"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말
   이 섹션에는 다양한 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대한 도움말이 포함되어 있습니다. F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 도움말을 열 수도 있습니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 87a6aae22985b462c65e229ffe607a33748ddad5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3abc7ec29f6f032d9590664d7a63995941d67a10
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291091"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 셀 병합(보고서 작성기 및 SSRS)
   데이터 영역의 셀을 병합하여 셀을 결합하거나 데이터 영역 모양을 개선하거나 열 그룹 및 행 그룹에 대한 확장 레이블을 제공할 수 있습니다.  

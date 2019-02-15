@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029514"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296321"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Aggregate 함수(보고서 작성기 및 SSRS)
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosedeployment.f1
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 29f6d24ee2c0e109537c2f3c2d6b39e51e6069fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c19e4461da1da968a0ea3115da8cc4ac22e3764a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033644"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291001"
 ---
 # <a name="choose-the-deployment-location"></a>배포 위치 선택
   보고서 마법사의 배포 위치 선택 페이지를 사용하여 보고서 서버 프로젝트의 배포 서버 및 배포 폴더를 설정할 수 있습니다.  

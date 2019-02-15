@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa5b18503831fea7c2ea0e9836e8a76cfa940c2e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038484"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294311"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
   차트에 시각적 효과를 주려면 차트 바깥쪽 둘레에 테두리 프레임을 사용해 보십시오. **차트 속성** 대화 상자를 사용하거나 속성 창을 사용하여 테두리 프레임을 선택할 수 있습니다. 차트 테두리 프레임은 다른 데이터 영역에 적용할 수 없습니다.  

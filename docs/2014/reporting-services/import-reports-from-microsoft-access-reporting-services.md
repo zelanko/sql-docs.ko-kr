@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 84f74f51879a777ea0b9874f1b124806c109e02f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7458de1c7424bf3c5b856c263e5180e33e207f76
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022194"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286351"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Microsoft Access에서 보고서 가져오기(Reporting Services)
   보고서 디자이너에서 보고서를 가져올 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 데이터베이스 또는 프로젝트입니다. 단, 보고서 디자이너가 설치되어 있는 컴퓨터에 Access 2002 이상이 설치되어 있어야 합니다.  

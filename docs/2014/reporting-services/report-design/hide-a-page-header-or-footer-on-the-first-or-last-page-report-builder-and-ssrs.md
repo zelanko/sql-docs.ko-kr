@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8edecad910dc28a3fdd777e68723d4d63917bef7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040784"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293501"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에 각각 표시되는 페이지 머리글과 페이지 바닥글을 포함할 수 있습니다. 머리글 또는 바닥글을 추가한 후에는 보고서의 첫 페이지 및 마지막 페이지에서 선택적으로 머리글과 바닥글을 숨길 수도 있습니다.  

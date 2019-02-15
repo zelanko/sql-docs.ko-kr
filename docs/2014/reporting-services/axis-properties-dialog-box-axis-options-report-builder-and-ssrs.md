@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030654"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286502"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>축 속성 대화 상자, 축 옵션(보고서 작성기 및 SSRS)
   선택 **축 옵션** 에 **가로** 또는 **VerticalAxis 속성** 대화 상자 차트의 지정 된 축 모양을 정의할 수 있습니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 기본적으로 차트의 x축에 모든 레이블이 표시되었습니다. 그러나 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008에서는 보다 깔끔한 차트 이미지를 제공하고 레이블이 겹치는 것을 방지하기 위해 레이블이 표시되지 않습니다. 자세한 내용은 [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  

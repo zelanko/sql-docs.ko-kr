@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e743eac09bc3a39899c6cc6a86674b428f369717
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: feaf57f433b0f21b4bf4bb6600e22010e68d9fef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041234"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296133"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>공유 데이터 원본 속성 대화 상자, 일반
   **공유 데이터 원본 속성** 대화 상자를 사용하여 보고서의 공유 데이터 원본에 대한 연결 정보를 표시하고 수정할 수 있습니다.  

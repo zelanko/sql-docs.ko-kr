@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a3abfb7cbecbf496c7c2083d5d75b1833069d12c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efcf8685dcee6b85572747f01fd939831047a64e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029414"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294671"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
   다음 팁을 사용하면 보고서를 디자인하는 데 도움이 됩니다.  

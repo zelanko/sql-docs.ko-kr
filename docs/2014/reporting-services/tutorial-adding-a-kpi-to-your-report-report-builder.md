@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037664"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296451"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
   KPI(핵심 성과 지표)는 비즈니스에 중요한 의미가 있는 측정 가능한 값입니다. 이 자습서에서는 KPI를 보고서에 포함하는 방법을 배웁니다. 이 시나리오에서 제품 하위 범주별 판매 요약이 KPI입니다. KPI의 현재 상태는 색, 계기 및 표시기를 사용하여 표시됩니다.  

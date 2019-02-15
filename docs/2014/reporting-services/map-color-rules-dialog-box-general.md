@@ -11,15 +11,15 @@ f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c21f95a8ace66b502de7128711acc1d840c4147
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018255"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289671"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>지도 색 규칙 대화 상자, 일반
   **색 규칙 속성** 대화 상자에서 **일반** 을 선택하여 이 계층의 지도 요소에 대한 색 옵션을 정의할 수 있습니다. 지도 요소에는 다각형, 선 및 점이 포함됩니다. 공간 데이터 기반의 지도 요소와 데이터 세트 필드 또는 공간 데이터 원본 필드의 분석 데이터 간 관계를 만든 경우 색 규칙을 적용할 수 있습니다.  

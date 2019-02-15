@@ -11,15 +11,15 @@ f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d1dcf20ef0a282d28ce8c50c5935100b48fb57e6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fe4abae7db246a9d18388b1d479b6cc9d8048e5e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029424"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296871"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>보고서 속성 대화 상자, 페이지 설정
   선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  

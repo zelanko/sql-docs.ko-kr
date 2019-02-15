@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8d76eb115628cc4b63d9eb37494e3fa45e2f7fc2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 58de4bd8c12bf4ac9551260ac3ba27b5888dce90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013784"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288521"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>보고서 파트 문제 해결(보고서 작성기 및 SSRS)
   다음은 보고서 파트로 작업할 때 도움이 되는 정보입니다  

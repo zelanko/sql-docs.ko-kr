@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 35bd68e494bc3cc7cc1a44c2cdfe168b45a0857d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040534"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297881"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>입력란 속성 대화 상자, 맞춤(보고서 작성기 및 SSRS)
   **입력란 속성** 대화 상자의 **맞춤** 을 선택하여 선택한 셀 또는 데이터 영역 내 값의 위치를 지정할 수 있습니다.  

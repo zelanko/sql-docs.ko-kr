@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9991e6f0301a69026bf037e31e5df95917228e0e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026074"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293441"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c42d509f3ef228b08555c26f5fdfc6ddd62a0c8d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 625c73aea6a306aaab84ea47842edfd6ebdd0588
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297221"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>보고서 속성 대화 상자, 페이지 설정(보고서 작성기)
   선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  

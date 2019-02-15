@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1b5ead3e2ab16eea905af3312779631ae6344ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5c6076a672c0f86b290f77e35d750550d0a7c2a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026780"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294421"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
   이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  

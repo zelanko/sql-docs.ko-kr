@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 92872f29600bc380025e76933ef8a1aab2879e51
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042834"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285881"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>ReportItems 컬렉션 참조(보고서 작성기 및 SSRS)
   `ReportItems` 기본 제공 컬렉션은 데이터 영역의 행 또는 보고서 디자인 화면의 입력란과 같은 보고서 항목의 입력란 집합입니다. `ReportItems` 컬렉션에는 페이지 머리글, 페이지 바닥글 또는 보고서 본문의 현재 범위에 있는 입력란이 포함됩니다. 이 컬렉션은 보고서 처리기 및 보고서 렌더러에 의해 런타임에 결정됩니다. 현재 범위는 사용자가 보고서 페이지를 볼 때 보고서 처리기가 보고서 데이터 및 보고서 항목 레이아웃 요소를 연속적으로 조합함에 따라 변경됩니다. `ReportItems` 기본 제공 컬렉션을 사용하여 각 페이지의 첫 번째 및 마지막 항목을 표시하는 사전 스타일의 페이지 머리글을 만들 수 있습니다.  

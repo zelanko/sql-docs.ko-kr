@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dedf1cedbfc0d829ae9e1c3b10a2f4699e35cb6b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029655"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291431"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>계열에 도구 설명 표시(보고서 작성기 및 SSRS)
   차트에 있는 계열의 각 데이터 요소에 도구 설명을 추가하여 사용자가 렌더링된 보고서에서 데이터 요소 위로 마우스를 이동할 때 그룹 이름, 데이터 요소 값 또는 계열 합계에 대한 백분율 같은 데이터 요소에 대한 정보를 표시할 수 있습니다.  

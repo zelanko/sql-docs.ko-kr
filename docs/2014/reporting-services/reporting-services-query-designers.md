@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 45273aa1bce0e0caec60ce415762f0c52fe67a98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010814"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285631"
 ---
 # <a name="reporting-services-query-designers"></a>Reporting Services 쿼리 디자이너
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서의 각 데이터 원본 유형에 대 한 쿼리를 빌드할 수 있도록 그래픽 및 텍스트 기반 쿼리 디자이너를 제공 합니다.  

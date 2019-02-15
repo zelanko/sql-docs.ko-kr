@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1ff14dfa-d56b-449f-bef1-cc217f3c14b7
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: eb397f8ab7e953c81d37e354506ef3435fccba2f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80a20d6458732150404ac5b6927a12e1fe159054
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022574"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298311"
 ---
 # <a name="report-sections-dialog-box"></a>보고서 섹션 대화 상자
   보고서 디자이너는 보고서에 하나만 언어 RDL (Report Definition) 포함 되어 있는지 확인 하는 보고서를 열면  **\<구역 >** 요소입니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  

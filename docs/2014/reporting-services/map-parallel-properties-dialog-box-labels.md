@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f82b38efac61ca6cdddb10c13e584c0c8f79a346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8f274d544162b7fa9f5cf8321c246477311cbbf2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018105"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297992"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>지도 위도선 속성 대화 상자, 레이블
   사용 된 **MapParallel 속성** 지도 뷰포트의 가로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 위도선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  

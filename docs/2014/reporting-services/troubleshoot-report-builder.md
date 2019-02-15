@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017694"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297171"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
   보고서 작성기는 다양한 종류의 데이터 원본을 기반으로 보고서를 작성하고, 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 데 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 제작 도구입니다. 일부로 또는 웹 브라우저에서 보고서 작성기에서 만든 보고서를 볼 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 응용 프로그램 또는 SharePoint 사이트입니다.  

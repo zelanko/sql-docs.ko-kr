@@ -11,15 +11,15 @@ f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 9c52690de427ad741a340b5696b246694326ece1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e2ec66ffa7f8f5894d5ec09e217f343e34cd7d98
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037714"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287881"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>자리 표시자 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **자리 표시자 속성** 대화 상자를 사용하여 입력란 내 자리 표시자의 값, 도구 설명 및 태그 옵션을 변경할 수 있습니다.  

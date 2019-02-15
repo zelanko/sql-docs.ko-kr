@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d73b3c3-a068-4868-a2be-0cd261b6e92b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 25524aa5c7f7223f07e019ae7b8c7d6f1e3d9f7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1929ed08c53d0ec1b979c26ba3a885d9623b4486
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027944"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285711"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>이미지를 계기의 포인터로 지정(보고서 작성기 및 SSRS)
   계기에는 포인터의 모양을 사용자 지정하는 데 사용할 수 있는 세 가지 기본 제공 스타일이 들어 있습니다. 방사형 계기의 경우 기본 제공 스타일은 니들, 표식 및 막대이고, 선형 계기의 경우 기본 제공 스타일은 표식, 막대 및 온도계입니다. 고유한 포인터가 필요한 경우 모든 기능을 갖춘 포인터로 사용할 수 있는 이미지를 만들어 지정할 수 있습니다.  

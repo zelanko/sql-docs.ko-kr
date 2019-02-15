@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3a62e345-d67f-4387-a7ca-e5c4728a7b16
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776d52c5e34bb44942fc4dedfee83164f3121166
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a063c20ce3fdb98cc86232bbe1492e7e0c603408
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022104"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296028"
 ---
 # <a name="chart-dialog-boxes-report-builder-and-ssrs"></a>차트 대화 상자(보고서 작성기 및 SSRS)
   이 섹션에는 일부 차트 대화 상자에 대한 도움말이 포함되어 있습니다. F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 도움말을 열 수도 있습니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1f81429c6abc8ba1c3cb0936c5107cbf2d49bf11
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287301"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 생성(보고서 작성기 및 SSRS)
   부모와 자식 간의 관계가 데이터 집합의 필드는 표현 하는 재귀 데이터를 표시 하려면 자식 필드를 기준으로 데이터 영역 그룹 식을 설정 하 고 부모 필드를 기반으로 Parent 속성을 설정할 수입니다.  

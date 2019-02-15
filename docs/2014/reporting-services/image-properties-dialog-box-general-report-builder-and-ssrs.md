@@ -11,15 +11,15 @@ f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cbbe4fe5917419bc07cef81629c7b2e38b7cff15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b229d54be6a785d145f33d36c7ce8bcc6d28af6f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019641"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292941"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **이미지 속성** 대화 상자에서 **일반** 을 선택하여 그림을 추가하고, 이미지의 기본 이름을 변경하고, 도구 설명 텍스트를 추가할 수 있습니다.  

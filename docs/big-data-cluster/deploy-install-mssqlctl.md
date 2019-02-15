@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/15/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 54fef15869eb86c3694adfb793ed028e22aadf4d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087612"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287121"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 
@@ -23,7 +23,7 @@ ms.locfileid: "55087612"
 **mssqlctl** 하면 클러스터 관리자가 부트스트랩 REST Api를 통해 빅 데이터 클러스터를 관리 하는 Python으로 작성 된 명령줄 유틸리티입니다. 필요한 최소 Python 버전 v3.5 됩니다. 또한 있어야 `pip` 다운로드 및 설치 하는 데 사용 되는 **mssqlctl** 도구입니다. 아래 지침에 따라 Windows 및 Ubuntu에 대 한 예제를 제공합니다. 다른 플랫폼에서 Python을 설치 하는 것에 대 한 참조를 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)합니다.
 
 > [!IMPORTANT]
-> 이전 버전을 설치한 경우 **mssqlctl**, 클러스터를 삭제 해야 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+> 빅 데이터 클러스터의 최신 버전을 설치 하는 경우 데이터를 백업 하 고 이전 클러스터를 삭제 해야 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
 
 ## <a id="windows"></a> Windows mssqlctl 설치
 

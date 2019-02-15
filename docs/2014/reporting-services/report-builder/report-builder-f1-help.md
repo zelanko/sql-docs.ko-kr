@@ -14,15 +14,15 @@ helpviewer_keywords:
 - dialog boxes
 - Help, dialog boxes
 - user interface, dialog boxes
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d58568873ebb3a96676bc17f2b5ef46a9ca68234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c58aa549ab0fb1ce196eae5d8566e144f1adaca
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043034"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293531"
 ---
 # <a name="report-builder-f1-help"></a>보고서 작성기 F1 도움말
   이 섹션에서는 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대 한 도움말을 포함합니다. 또한 대화 상자에서 도움말 단추를 클릭 하거나 F1 키를 누르거나 도움말을 열 수 있습니다.  

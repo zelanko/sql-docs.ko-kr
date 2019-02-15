@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 590b8f44e1d3ba064176bf8944c4011fbf52ab53
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042854"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297971"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
   드릴스루 보고서, 하위 보고서 및 이미지 파일과 같이 보고서 서버에 저장되어 있고 보고서 정의 파일 외부에 있는 항목을 참조하기 위해 보고서 항목 속성에 경로를 지정할 수 있습니다.  

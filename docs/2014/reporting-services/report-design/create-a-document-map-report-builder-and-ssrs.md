@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e898f33545364b5ad44d4c0cbf281555638ab2e2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026514"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286227"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
   문서 구조는 렌더링된 보고서의 보고서 항목에 대한 탐색 링크 집합을 제공합니다. 문서 구조가 포함된 보고서를 열면 보고서 옆에 별도의 창이 나타납니다. 사용자는 문서 구조의 링크를 클릭하여 해당 항목을 표시하는 보고서 페이지로 이동할 수 있습니다. 보고서 섹션 및 그룹은 링크 계층에 정렬되어 있습니다. 이 문서 구조에서 항목을 클릭하면 보고서가 새로 고쳐진 다음 항목에 해당하는 보고서 영역을 표시합니다.  
