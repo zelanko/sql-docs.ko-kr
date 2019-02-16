@@ -1,8 +1,8 @@
 ---
 title: 확장 이벤트 로그의 진단 정보 액세스 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -10,18 +10,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 196f8d762763fa6fd0062db23be9e4d955826e05
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ebfe5028a9c2441e7fa760e7ca05ba2a4f845c0c
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677919"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319374"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 응용 프로그램 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]부터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 데이터 액세스 추적([데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805))은 연결 링 버퍼에서 연결 실패에 대한 진단 정보를 쉽게 얻을 수 있고 확장 이벤트 로그에서 애플리케이션 성능 정보를 쉽게 얻을 수 있도록 업데이트되었습니다.  
   
  확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49)를 참조하십시오.  
   
