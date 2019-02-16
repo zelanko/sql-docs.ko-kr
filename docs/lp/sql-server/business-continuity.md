@@ -5,14 +5,18 @@ title: SQL Server 비즈니스 연속성
 description: 상황에 관계없이 고가용성, 재해 복구에 대해 다른 SQL Server 기능을 탐색하여 비즈니스를 계속 실행합니다.
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: bcf57c58e706a8f25a1cd2f2ace671480352f5a2
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079369"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319094"
 ---
 <div id="main" class="v2">
     <div class="container">

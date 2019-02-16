@@ -5,14 +5,18 @@ title: Microsoft Azure 설명서
 description: Microsoft Azure cloud service를 사용하여 강력한 애플리케이션을 빌드하고 관리하는 방법을 알아봅니다. 설명서, 예제 코드, 자습서 등을 가져옵니다.
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 8a4fb39ae8b2d6b65701d6bb7ad863c8b0351283
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 73d8181f8e8d04d23dc5adce5a6279c6c4e884be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079319"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319444"
 ---
 <div id="main" class="v2">
     <div class="container">

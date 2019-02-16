@@ -5,14 +5,18 @@ title: SQL Server 보안
 description: SQL Server를 보호하는 기능을 탐색합니다.
 ms.topic: hub-page
 ms.prod: sql
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: a8e0f1a1c9e09992ec92813903fd563d48fe7fa4
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079279"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319124"
 ---
 <div id="main" class="v2">
     <div class="container">
