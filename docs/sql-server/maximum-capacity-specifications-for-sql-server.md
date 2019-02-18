@@ -1,6 +1,6 @@
 ---
 title: SQL Server의 최대 용량 사양 | Microsoft 문서
-ms.date: 11/6/2017
+ms.date: 11/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d189ed1e434380f409fdec0fee799801934019a
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383613"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319404"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "49383613"
   
  [SQL Server 유틸리티 개체](#Utility)  
   
- [SQL Server 데이터 계층 응용 프로그램 개체](#DAC)  
+ [SQL Server 데이터 계층 애플리케이션 개체](#DAC)  
   
  [SQL Server 복제 개체](#Replication)  
   
@@ -53,8 +53,8 @@ ms.locfileid: "49383613"
 |메모리 최적화 테이블의 인덱스 키당 바이트 수||비클러스터형 인덱스의 경우 2500바이트 모든 인덱스가 행에 맞기만 하면 해시 인덱스에 대한 제한은 없습니다.|메모리 최적화 테이블의 비클러스터형 인덱스에는 선언된 최대 크기가 2500바이트를 초과하는 키 열을 포함할 수 없습니다. 키 열의 실제 데이터가 선언된 최대 크기보다 짧은지 여부는 관련이 없습니다.<br /><br /> 해시 인덱스 키에 대한 하드 크기 제한은 없습니다.<br /><br /> 메모리 최적화 테이블의 인덱스는 기본적으로 모든 열을 처리하기 때문에 포괄 열의 개념이 없습니다.<br /><br /> 메모리 최적화 테이블의 경우 행 크기가 8060바이트인 경우에도 일부 가변 길이 열이 물리적으로 8060바이트 외부에 저장될 수 있습니다. 그러나 테이블의 모든 인덱스에 대한 모든 키 열과 테이블의 추가 고정 길이 열의 선언된 최대 크기는 8060바이트에 맞아야 합니다.|  
 |외래 키당 바이트 수||900||  
 |기본 키당 바이트 수||900||  
-|행당 바이트 수||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어넣을 수 있는 행 오버플로 저장소를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "8KB를 초과하는 행 오버플로 데이터" 항목을 참조하십시오.|  
-|메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 최적화 테이블이 행 외부 저장소를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
+|행당 바이트 수||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어 넣을 수 있는 행 오버플로 스토리지를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "8KB를 초과하는 행 오버플로 데이터" 항목을 참조하십시오.|  
+|메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 최적화 테이블이 행 외부 스토리지를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
 |저장 프로시저의 원본 텍스트의 바이트 수||일괄 처리 크기 또는 250MB 미만||  
 |**varchar(max)**, **varbinary(max)**, **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
 |**ntext** 또는 **nvarchar(max)** 열당 문자 수||2^30-1||  
@@ -121,10 +121,10 @@ ms.locfileid: "49383613"
   
  * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
-##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
+##  <a name="DAC"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 애플리케이션 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 애플리케이션)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |DAC당 데이터베이스 수||1|  
 |DAC당 개체 수*||데이터베이스의 개체 수 또는 사용 가능한 메모리로 제한|  

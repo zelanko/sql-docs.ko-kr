@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087912"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319384"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ SQL 편집기:
     
 SMO:
 
-- 기본 제약 조건이 있는 열을 추가하고 테이블에 이미 데이터가 있는 경우 Table.Alter()가 실패하는 문제를 해결했습니다. 자세한 내용은 [데이터가 있는 테이블에 열을 추가할 때 인라인 기본 제약 조건을 생성하는 SQL Server SMO](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)를 참조하세요.
+- 기본 제약 조건이 있는 열을 추가하고 테이블에 이미 데이터가 있는 경우 Table.Alter()가 실패하는 문제를 해결했습니다. 자세한 내용은 [sql server smo generating inline default constraint when adding a column to a table containing data](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)(데이터가 있는 테이블에 열을 추가할 때 인라인 기본 제약 조건을 생성하는 SQL Server SMO)를 참조하세요.
     
 항상 암호화:
 
