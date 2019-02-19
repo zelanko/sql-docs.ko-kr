@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 887104ff6667844071e44e1933592e8238b124dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd662580a2d9dc98beb3f416bdb3003a9b4c016a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674721"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296221"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
 데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "47674721"
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
-[보고서 데이터 집합&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
+[보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
   
 

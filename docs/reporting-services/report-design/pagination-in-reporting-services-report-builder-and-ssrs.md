@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 34a916a39a152b1f62315df9db4028652fce3f97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e24d370b5f50c7b8689cab544c72f9cb245f484
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020499"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298233"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services의 페이지 매김(보고서 작성기 및 SSRS)
   페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램에 따라 다릅니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다.  

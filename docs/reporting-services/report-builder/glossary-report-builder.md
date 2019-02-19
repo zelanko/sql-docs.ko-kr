@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bddefafa610718710a6b8a41d267ceb8e3b5515d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: faf7a9e3279d8a2a5606d21c359d6a4a2697cbeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541803"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296480"
 ---
 # <a name="glossary-report-builder"></a>용어 설명(보고서 작성기)
   
   
 |용어|정의|  
 |----------|----------------|  
-|.NET Framework|차세대 애플리케이션 및 웹 서비스를 개발, 배포 및 실행할 수 있도록 하는 필수적인 Windows 구성 요소입니다. .NET Framework는 인터넷으로 확장 가능한 애플리케이션의 배포 및 운영 문제를 해결할 수 있는 민첩성과 기존 IT 투자를 차세대 애플리케이션 및 서비스와 통합할 수 있는 생산성이 뛰어난 표준 기반 다국어 환경을 제공합니다. .NET Framework는 세 가지 주요 부분, 즉 공용 언어 런타임, 통합된 클래스 라이브러리의 계층적 집합 및 ASP의 구성 요소 버전인 ASP.NET으로 구성됩니다. ASP.NET, 공용 언어 런타임(common language runtime), .NET Framework 클래스 라이브러리(.NET Framework class library)를 참조하십시오.|  
+|.NET Framework|차세대 애플리케이션 및 웹 서비스를 개발, 배포 및 실행할 수 있도록 하는 필수적인 Windows 구성 요소입니다. .NET Framework는 인터넷으로 확장 가능한 애플리케이션의 배포 및 운영 문제를 해결할 수 있는 민첩성과 기존 IT 투자를 차세대 애플리케이션 및 서비스와 통합할 수 있는 생산성이 뛰어난 표준 기반 다국어 환경을 제공합니다. .NET Framework는 세 가지 주요 부분, 즉 공용 언어 런타임, 통합된 클래스 라이브러리의 계층적 집합 및 ASP의 구성 요소 버전인 ASP.NET으로 구성됩니다. 참고 항목: ASP.NET, 공용 언어 런타임, .NET Framework 클래스 라이브러리|  
 |ActiveX Data Objects|데이터 원본에 대한 액세스를 제공하는 구성 요소 개체 모델 개체입니다. 이 API는 Visual Basic, Visual Basic for Applications, Active Server Pages 및 Microsoft Internet Explorer Visual Basic Scripting 등의 프로그래밍 언어와 OLE DB 사이의 계층을 제공합니다.|  
 |임시 보고서(ad hoc report)|보고서 작성기 1.0으로 만들며 보고서 모델에 액세스하는 .rdl 보고서입니다.|  
 |도구 영역(adornment)|창의 가장자리에 연결되는 도구 모음 또는 눈금자와 같은 제어 또는 상태 영역입니다.|  
@@ -182,7 +182,7 @@ ms.locfileid: "52541803"
 |항목 수준 역할 할당(item-level role assignment)|보고서 서버 폴더의 항목에 적용되는 보안 정책입니다.|  
 |항목 수준 역할 정의(item-level role definition)|보고서 서버 폴더 네임스페이스의 항목에 대한 액세스 또는 상호 작용을 제어하는 데 사용되는 역할을 정의하는 보안 템플릿입니다.|  
 |핵심 성과 지표(key performance indicator)|(KPI) 시간 경과에 따라 측정되는 중요 비즈니스 변수(예: 시장 점유율)를 반영하는 정량화 가능한 표준화된 메트릭입니다.|  
-|키워드(keyword)|데이터베이스 개체 정의, 조작 또는 액세스와 같은 특정 기능을 수행하는 SQL Server의 예약어입니다. 예를 들면 SELECT, FROM 및 AND가 있습니다.|  
+|키워드(keyword)|데이터베이스 개체 정의, 조작 또는 액세스와 같은 특정 기능을 수행하는 SQL Server의 예약어입니다. 예를 들어 다음과 같이 사용할 수 있습니다. SELECT, FROM 및 AND가 있습니다.|  
 |KPI|다음 용어 참조: 핵심 성과 지표(key performance indicator)|  
 |레이블 필드(label field)|해당 키 필드의 레이블을 나타내는 보고서 데이터 세트 필드입니다. 매개 변수와 데이터 영역은 값 대신 키 필드의 레이블을 표시할 수 있습니다.|  
 |latency|한 서버에서 데이터 변경이 완료된 시점과 다른 서버에서 해당 변경 내용이 반영된 시점 간에 지연된 시간을 말합니다.|  
@@ -261,7 +261,7 @@ ms.locfileid: "52541803"
 |protocol|컴퓨터에서 정보를 교환할 수 있도록 하는 표준 형식 및 프로시저 집합입니다.|  
 |공급자|1. OLE DB 공급자입니다. 2. 데이터베이스에 액세스할 수 있게 해주는 in-process DLL(동적 연결 라이브러리)입니다.|  
 |쿼리 매개 변수(query parameter)|Transact-SQL 쿼리와 같은 데이터 세트 쿼리에 지정된 매개 변수입니다.|  
-|RDL|다음 용어 참조: Report Definition Language|  
+|RDL|다음 용어 참조: RDL(Report Definition Language)|  
 |레코드(record)|하나의 단위로 취급되는 관련된 정보 필드(열) 그룹입니다. 레코드는 일반적으로 관계형 데이터베이스에서 행으로 지칭됩니다.|  
 |사각형(rectangle)|여러 보고서 항목의 컨테이너 또는 보고서의 그래픽 요소로 사용할 수 있는 보고서 항목입니다.|  
 |재귀 계층(recursive hierarchy)|1. 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 한 계층 구조에 포함하는 단일 보고서 데이터 집합의 데이터의 계층입니다. 2. Master Data Services에서는 재귀 관계를 포함하는 파생 계층입니다. 재귀 관계는 엔터티에 엔터티 자체를 기반으로 하는 도메인 기반 특성이 있는 경우에 존재합니다.|  
@@ -334,7 +334,7 @@ ms.locfileid: "52541803"
 |정렬 순서(sort order)|비교 연산에서 문자가 평가되는 방식과 문자 정렬 시퀀스를 정의하는 데이터 정렬의 규칙 집합입니다.|  
 |공간 데이터(spatial data)|평면 또는 곡면에서 개체의 위치를 지정하는 데이터입니다. 공간 데이터는 점, 선 또는 다각형이 될 수 있습니다.|  
 |공간 데이터 형식(spatial data types)|기하 도형(평면) 또는 지리(측지) 정보를 나타내는 데이터를 지정합니다.|  
-|SQL|다른 용어 참조: SQL(구조적 쿼리 언어)|  
+|SQL|다음 용어 참조: SQL(구조적 쿼리 언어)(Structured Query Language)|  
 |SQL 쿼리(SQL query)|SELECT, INSERT, UPDATE, DELETE 또는 CREATE TABLE과 같은 SQL 문을 말합니다.|  
 |SQL Server 인증(SQL Server Authentication)|SQL Server 로그인 및 암호를 지정하여 SQL Server 인스턴스에 대한 연결 시도의 유효성을 검사하는 메커니즘입니다.|  
 |SQL Server 로그인(SQL Server login)|SQL Server에 저장된 계정으로, 사용자가 SQL Server에 연결하도록 허용합니다.|  

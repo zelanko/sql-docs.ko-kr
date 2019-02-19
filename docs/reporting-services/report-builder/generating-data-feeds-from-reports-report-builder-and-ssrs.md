@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 47524fbb884c7aa8e253b822fe224f8c247836d4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94cfb8ec1aeb1d9c4333ef5c2bdded97f47d15b2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257138"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298341"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
 

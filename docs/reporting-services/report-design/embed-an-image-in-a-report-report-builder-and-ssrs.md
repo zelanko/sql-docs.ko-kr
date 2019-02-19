@@ -9,14 +9,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.embeddedimages.f1
 - "10060"
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d5949cac74f857b6a696faa51c58e614176824a5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bef601ab368ed40d9d08cf3f8c12c85949369149
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021937"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290262"
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>보고서에 이미지 포함(보고서 작성기 및 SSRS)
   보고서에 포함 이미지를 포함할 수 있습니다. 이미지를 포함하면 보고서에서 항상 이미지를 사용할 수 있지만 보고서 정의 즉, 보고서를 정의하는 파일의 크기도 늘어납니다. 보고서에 포함된 이미지는 보고서 데이터 창에 나열됩니다.  

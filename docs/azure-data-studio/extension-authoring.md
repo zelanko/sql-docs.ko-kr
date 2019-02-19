@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030524"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407523"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능을 확장 합니다.
 
@@ -35,11 +35,11 @@ Azure Data Studio를 확장 하려는 경우 사용자 고유의 확장 만들�
 
 확장을 개발 하려면 설치 하 고 프로그램 $PATH에서 사용할 수 있는 Node.js 필요 합니다. Node.js npm, 확장 생성기를 설치 하는 데 사용할 Node.js 패키지 관리자를 포함 합니다.
 
-새 확장 프로그램을 시작 하려면 Azure 데이터 Studio 확장 생성기를 사용할 수 있습니다. Yeoman [확장 생성기](https://www.npmjs.com/package/generator-sqlops) 매우 쉽게 단순 확장 프로젝트를 만들 수 있도록 합니다. 생성기를 시작 하려면 명령 프롬프트에서 다음을 입력 합니다.
+새 확장 프로그램을 시작 하려면 Azure 데이터 Studio 확장 생성기를 사용할 수 있습니다. Yeoman [확장 생성기](https://www.npmjs.com/package/generator-azuredatastudio) 매우 쉽게 단순 확장 프로젝트를 만들 수 있도록 합니다. 생성기를 시작 하려면 명령 프롬프트에서 다음을 입력 합니다.
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **확장성 참조**

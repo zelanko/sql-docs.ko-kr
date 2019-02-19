@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4ebed5355fdbbd4185301fa87e4c525a89b3171
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d718dec9ee17f64177ae5749b862f9edff616f15
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504039"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293772"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>계기의 포인터 서식 지정(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 계기 포인터는 계기의 현재 값을 나타냅니다.   

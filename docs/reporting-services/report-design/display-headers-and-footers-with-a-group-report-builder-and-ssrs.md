@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4236e660b04617aa91469052af09ae5e943e0f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b96f5e57f35f6cb150ea4837bb5bedd81d8dfad1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681741"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291039"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
   그룹 머리글 또는 바닥글 같은 정적 행을 테이블릭스 데이터 영역의 그룹과 연결된 동적 행과 함께 렌더링할지 여부를 제어할 수 있습니다.  

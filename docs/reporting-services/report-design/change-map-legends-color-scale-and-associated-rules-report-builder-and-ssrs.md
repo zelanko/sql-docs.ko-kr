@@ -29,14 +29,14 @@ f1_keywords:
 - "10540"
 - "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c4b71175eb95acf68f1f7a6d0eb2a2e23f609006
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7aeaf47c587577ccdc6b78403a003a7c1c1c4a91
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134284"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293551"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 지도에는 지도 범례, 색 눈금 및 거리 눈금이 포함될 수 있습니다. 이러한 지도 부분은 지도에서 데이터 시각화를 해석하는 데 도움이 됩니다.  

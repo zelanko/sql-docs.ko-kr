@@ -8,19 +8,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fc8b13d548aab60dd22cfc3adf6b1730445113cd
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5b32e5131e460c359e6b16c3ae3ece058184e77
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100314"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294681"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식 단추(**fx**)를 표시하는 대화 상자 또는 **\<Expression...>** 을 표시하는 드롭다운 목록에서 속성 식을 설정할 수 있습니다.  
   
- 식은 간단하거나 복잡할 수 있습니다. *단순 식* 에는 단일 데이터 집합 필드, 매개 변수 또는 기본 제공 필드에 대한 참조가 포함됩니다. 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출이 포함될 수 있습니다. 예를 들어 복잡한 식에는 Sales 필드에 적용되는 Sum 함수가 포함될 수 있습니다.  
+ 식은 간단하거나 복잡할 수 있습니다. *단순 식*에는 단일 데이터 세트 필드, 매개 변수 또는 기본 제공 필드에 대한 참조가 포함됩니다. 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출이 포함될 수 있습니다. 예를 들어 복잡한 식에는 Sales 필드에 적용되는 Sum 함수가 포함될 수 있습니다.  
   
  식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성됩니다. 식은 등호(=)로 시작하고 뒤에 데이터 세트 필드 및 매개 변수, 상수, 함수 및 연산자와 같은 기본 제공 컬렉션에 대한 참조의 조합이 표시됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50100314"
 |그룹 필터에 대한 특정 값만 포함합니다.|테이블릭스 그룹의 필터 수식입니다. **테이블릭스 그룹 속성 대화 상자, 필터**를 사용합니다.|`[Category]`<br /><br /> `=`<br /><br /> `Clothing`|  
 |데이터 세트에서 두 개 이상의 필드에 대한 특정 값을 제외합니다.|테이블릭스의 그룹에 대한 필터 수식입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|`=[Color]`<br /><br /> `<>`<br /><br /> `Red`<br /><br /> `=[Color]`<br /><br /> `<>`<br /><br /> `Blue`|  
 |테이블의 기존 필드를 기반으로 정렬 순서를 지정합니다.|테이블릭스의 정렬 식입니다. **테이블릭스 속성 대화 상자, 정렬**을 사용합니다.|`[SizeSortOrder]`|  
-|쿼리 매개 변수를 보고서 매개 변수에 연결합니다.|데이터 세트의 매개 변수 컬렉션입니다. **데이터 집합 속성 대화 상자, 매개 변수**를 사용합니다.|`[@Category]`<br /><br /> `[@Category]`|  
+|쿼리 매개 변수를 보고서 매개 변수에 연결합니다.|데이터 세트의 매개 변수 컬렉션입니다. **데이터 세트 속성 대화 상자, 매개 변수**를 사용합니다.|`[@Category]`<br /><br /> `[@Category]`|  
 |주 보고서의 매개 변수를 하위 보고서로 전달합니다.|하위 보고서의 매개 변수 컬렉션입니다. **하위 보고서 속성 대화 상자, 매개 변수**를 사용합니다.|`[@Category]`<br /><br /> `[@Category]`|  
   
 ##  <a name="Complex"></a> 복잡한 식 사용  

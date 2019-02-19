@@ -11,12 +11,12 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 manager: craigg
-ms.openlocfilehash: 0a4e877a91cad978bb62747bd50e40adaa69ef1c
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030607"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407583"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>자습서: Azure Data Studio 확장 만들기
 
@@ -37,16 +37,15 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 
 - [Node.js](https://nodejs.org) 설치 되 고 사용 가능한 프로그램 `$PATH`합니다. 포함 하는 Node.js [npm](https://www.npmjs.com/), 확장 생성기를 설치 하는 데 사용 되는 Node.js 패키지 관리자입니다.
 - [Visual Studio Code](https://code.visualstudio.com) 확장을 디버그 합니다.
-- Azure 데이터 스튜디오 [확장을 디버그](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug)합니다.
-- 확인 `sqlops` 가 경로에 있습니다. Windows에 대 한 선택 했는지 확인 합니다 `Add to Path` setup.exe에 대 한 옵션입니다. Mac 또는 Linux를 실행 합니다 *설치 경로에 'sqlops' 명령을* 옵션입니다.
-- SQL Operations Studio 디버그 확장 (선택 사항)입니다. 이 패키지 및 Azure Data Studio에 설치 하지 않고도 확장 프로그램을 테스트할 수 있습니다.
+- Azure 데이터 스튜디오 [확장을 디버그](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (선택 사항). 이 패키지 및 Azure Data Studio에 설치 하지 않고도 확장 프로그램을 테스트할 수 있습니다.
+- 확인 `azuredatastudio` 가 경로에 있습니다. Windows에 대 한 선택 했는지 확인 합니다 `Add to Path` setup.exe에 대 한 옵션입니다. Mac 또는 Linux를 실행 합니다 *설치 경로에 'azuredatastudio' 명령을* 옵션입니다.
 
 
 ## <a name="install-the-extension-generator"></a>확장 프로그램 생성기 설치
 
 확장을 만드는 프로세스를 간소화 하기 빌드한를 [확장 생성기](https://code.visualstudio.com/docs/extensions/yocode) Yeoman을 사용 합니다. 을 설치 하려면 명령 프롬프트에서 다음을 실행 합니다.
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
 ## <a name="create-your-extension"></a>확장 프로그램을 만들려면
 
@@ -54,20 +53,20 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 
 1. 다음 명령 사용 하 여 확장 생성기를 시작 합니다.
 
-   `yo sqlops`
+   `yo azuredatastudio`
 
 2. 선택할 **새 키맵** 확장 프로그램 유형 목록에서:
 
    ![확장 생성기](./media/tutorial-create-extension/extension-generator.png)
 
-3. 확장 이름을 입력 하는 단계에 따라 (이 자습서에서는 사용 하 여 **ssmskeymap**), 설명을 추가 하 고 있습니다.
+3. 확장 이름을 입력 하는 단계에 따라 (이 자습서에서는 사용 하 여 **ssmskeymap2**), 설명을 추가 하 고 있습니다.
 
 새 폴더를 만듭니다 이전 단계를 완료 합니다. Open Visual Studio Code에서 폴더를 만들 준비가 사용자 고유의 키 바인딩 확장!
 
 
 ### <a name="add-a-keyboard-shortcut"></a>바로 가기 키를 추가 합니다.
 
-**1 단계: 대체 하는 바로 가기를 찾을합니다**
+**1단계: 대체 하는 바로 가기를 찾을합니다**
 
 이제 사용할 준비가 되셨나요 확장 했으므로 일부 SSMS 키보드 바로 가기 (또는 키 바인딩) Azure Data Studio에 추가 합니다. 사용한 [Andy Mallon 치트 시트](https://am2.co/2018/02/updated-cheat-sheet/) 및 RedGate의 키보드 바로 가기 목록 아이디어를 얻으세요.
 
@@ -83,7 +82,7 @@ Azure Data Studio Visual Studio Code와 같은 프레임 워크에 기본 제공
 
 ![바로 가기 키](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![keybindings.json 확장](./media/tutorial-create-extension/keybindings-json.png)
+![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
 
 
 **2단계: 확장에 바로 가기 추가**

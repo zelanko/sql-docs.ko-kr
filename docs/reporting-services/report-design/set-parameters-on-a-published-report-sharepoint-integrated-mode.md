@@ -9,14 +9,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - report parameters [Reporting Services]
 ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 80544535b3a45fa11be346b1b35714148f2bd434
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 76801b634d9f8de77e8ee4d7817c4f1ccc595e2e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624491"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298591"
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>게시된 보고서에 매개 변수 설정 - SharePoint 통합 모드
   매개 변수가 있는 보고서는 보고서 실행 시 데이터를 필터링하는 데 사용되는 입력 값을 받아들이는 보고서입니다. 매개 변수는 보고서를 만들 때 정의됩니다. 보고서 매개 변수는 보고서 정의에 정의된 방식에 따라 단일 값, 다중 값 또는 동적 값을 받아들일 수 있습니다. 여기서 동적 값은 이전 선택 사항에 따라 변경되는 값입니다. 예를 들어 제품 범주를 선택하면 다음 선택 사항은 해당 범주에 속한 특정 제품이 될 수 있습니다. 매개 변수에는 기본값을 지정할 수 있으며 이 값을 사용하여 자동으로 보고서의 필터링된 버전을 실행하거나 해당 값을 다른 값으로 바꿀 수 있습니다.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: a7b355fa-312b-4074-bc9b-776269d4fb51
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cf9afd8c4aa916d87929a8e7d73347cc33456252
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bad5837441bf272e600e0c7f8ca85252be53a618
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812737"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295881"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
   

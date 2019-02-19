@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c113ab0ca99b2f63830782326fa4f61744682a1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bac5664c4fe6e0999f6766c817dd277f0360180d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678411"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298451"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)
   사각형과 선을 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 시각 효과를 만들 수 있습니다. 이러한 보고서 항목에 대한 디스플레이 속성은 홈 탭의 테두리 섹션에서 설정할 수 있으며 다른 속성은 속성 창에서 설정할 수 있습니다. 사각형에는 배경색, 이미지, 도구 설명 또는 책갈피와 같은 기능을 추가할 수 있습니다.  

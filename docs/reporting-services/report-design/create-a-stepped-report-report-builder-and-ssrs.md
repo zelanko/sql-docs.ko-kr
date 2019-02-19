@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 12b769f09f89f0d844b090c9ad8fc00863e9ab81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8176db14311914a3935d86fdf83cc88e5428630f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831469"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295581"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
 단계별 보고서는 아래 예제와 같이 동일한 열의 부모 그룹 아래에 들여 쓴 정보 행 또는 자식 그룹을 표시하는 페이지가 매겨진  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 한 유형입니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "47831469"
   
     2.  **테이블릭스 그룹** 대화 상자에서 이름을 입력합니다.  
   
-    3.  **그룹 식**에서 식을 입력하거나 그룹화할 데이터 집합 필드를 선택합니다. 식을 만들려면 식 단추(**fx**)를 클릭하여 **식** 대화 상자를 엽니다.  
+    3.  **그룹 식**에서 식을 입력하거나 그룹화할 데이터 세트 필드를 선택합니다. 식을 만들려면 식 단추(**fx**)를 클릭하여 **식** 대화 상자를 엽니다.  
   
     4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

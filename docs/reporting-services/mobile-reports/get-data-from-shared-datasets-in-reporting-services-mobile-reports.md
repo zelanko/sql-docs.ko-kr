@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1437d9394a372ba9a0aa3510db8f903f9b737e16
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813936"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298191"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에서 공유 데이터 세트의 데이터 가져오기
-SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 집합 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
+SQL Server 모바일 보고서 게시자는 [Excel 파일의 데이터 로드](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)할 수 있을 뿐 아니라 거의 모든 원본의 데이터에 액세스할 수 있습니다. 데이터에 액세스하려면 Reporting Services 웹 포털에 구성되어 있는 공유 데이터 원본이 필요합니다. [공유 데이터 원본 만들기](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [공유 데이터 세트 만들기](../../reporting-services/report-data/manage-shared-datasets.md)에 대한 자세한 내용을 확인해 보세요.  
   
 Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 세트를 구성한 후에는 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에서 만든 모바일 보고서에서 해당 데이터 원본과 데이터 세트를 사용할 수 있습니다.   
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 에서 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]서버에 연결하고 나면 모바일 보고서를 공유 데이터 집합에 쉽게 연결할 수 있습니다.   
+[!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)]에서 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]서버에 연결하고 나면 모바일 보고서를 공유 데이터 세트에 쉽게 연결할 수 있습니다.   
   
 1. **데이터** 탭에서 **데이터 추가**를 선택합니다.  
   
@@ -35,7 +35,7 @@ Reporting Services 서버에서 공유 데이터 원본과 공유 데이터 세�
     ![SSMRP_ConnectToServer](../../reporting-services/mobile-reports/media/ssmrp-connecttoserver.png)  
       
   
-4. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 서버를 선택하면 폴더에서 사용 가능한 데이터 집합을 확인할 수 있습니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]로 데이터를 가져올 데이터 집합을 선택합니다.  
+4. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 서버를 선택하면 폴더에서 사용 가능한 데이터 세트를 확인할 수 있습니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]로 데이터를 가져올 데이터 세트를 선택합니다.  
   
    ![SS_MRP_ServerData](../../reporting-services/mobile-reports/media/ss-mrp-serverdata.png)  
   

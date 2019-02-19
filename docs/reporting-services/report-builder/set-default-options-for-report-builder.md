@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ee6b34ed594948bd796f589c7ded4b4259062a3d
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860086"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295981"
 ---
 # <a name="set-default-options-for-report-builder"></a>보고서 작성기에 대한 기본 옵션 설정
   보고서 작성기에서 다양한 유용한 기본값을 설정하여 보고서 작성을 쉽고 빠르게 할 수 있습니다.  예를 들어 기본 보고서 서버를 설정하거나 변경할 수 있는 경우 보고서 작성기는 별도로 지정하지 않는 한 보고서를 동일한 보고서 서버에 자동으로 저장합니다.  

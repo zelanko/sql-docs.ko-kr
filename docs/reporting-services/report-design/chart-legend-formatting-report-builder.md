@@ -23,14 +23,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 94cff6197fc4648b465881624976cbce0a03e55d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73655089cb46213ccd50c8cf78adb29df06eed6b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502687"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290201"
 ---
 # <a name="chart-legend---formatting-report-builder"></a>차트 범례 - 서식 지정(보고서 작성기)
   차트 범례에는 차트의 각 범주에 대한 설명이 포함됩니다. 범례는 항상 하나 이상의 범례 항목을 포함합니다. 각 범례 항목은 다음 그림에 표시된 대로 계열을 나타내는 색 지정된 상자 및 계열을 설명하는 텍스트 문자열로 구성되어 있습니다.  

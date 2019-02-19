@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b1d0877c14b3ce34c69e667c074fd0c95dcb250d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031402"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292911"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 브라우저, Reporting Services 웹 포털 또는 내보낸 보고서를 보는 데 사용되는 애플리케이션에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
   
- 보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 PDF, 이미지 및 인쇄 하드 페이지 나누기 렌더러로 렌더링되는 보고서에만 적용됩니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서를 인쇄할 때 사용할 용지 크기를 지정할 수 있습니다. 용지 크기에 따라 보고서의 페이지 수와 각 페이지에 맞는 보고서 데이터가 결정됩니다. 용지 크기는 PDF, 이미지 및 인쇄 하드 페이지 나누기 렌더러로 렌더링되는 보고서에만 영향을 줍니다. 용지 크기 설정 작업은 다른 렌더러에 영향을 주지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
  Reporting Services 웹 포털의 보고서 뷰어 도구 모음 또는 보고서 작성기의 미리 보기에서 보고서를 하드 페이지 나누기 렌더러로 내보내거나 인쇄 단추를 클릭하여 보고서의 복사본을 인쇄할 수 있습니다. 용지 크기 또는 다른 페이지 설정 속성을 지정해야 할 수 있습니다. 용지 크기를 비롯한 페이지 설정 속성을 변경하려면 **보고서 속성** 대화 상자를 사용합니다.  
   

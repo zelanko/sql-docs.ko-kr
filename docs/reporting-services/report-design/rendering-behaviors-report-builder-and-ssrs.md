@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1bf8670aea01d074856188d1d0ab9836e83e3421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 575849e92c223731314109bfbfb5c6b64af7d09d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729012"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291887"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>렌더링 동작(보고서 작성기 및 SSRS)
   보고서를 렌더링하는 경우 선택한 렌더러에 따라 보고서 본문 및 해당 내용에 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  

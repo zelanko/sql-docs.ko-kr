@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b1e2cf655389529c6211ad2ed29ba2e9a309dcfa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 577043b3994b5acdee3cd71c76040ec9de7c3481
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542468"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296671"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 만들기(보고서 작성기 및 SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 집합의 데이터를 구성합니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 재귀 계층 구조 그룹은 조직 계층의 관리자와 직원 관계에 대한 보고 구조와 같이 여러 계층 수준을 포함하는 단일 보고서 데이터 세트의 데이터를 구성합니다.  
   
  테이블의 데이터를 재귀 계층 구조 그룹으로 구성하기 전에 모든 계층 데이터를 포함하는 단일 데이터 세트가 있어야 합니다. 이 데이터 세트에는 그룹화할 항목과 항목을 그룹화할 기준에 대한 개별 필드가 포함되어 있습니다. 예를 들어 관리자에 속한 직원을 재귀적으로 그룹화할 데이터 세트에 이름, 직원 이름, 직원 ID 및 관리자 ID가 들어 있을 수 있습니다.  
   

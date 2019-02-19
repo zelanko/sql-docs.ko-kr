@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fabed689d832cc71bcfe14a7f017d91b33244d84
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 21f18b5e8a0e8b06ba96bed7f92fda0c13ae8ac2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394067"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296331"
 ---
 # <a name="managing-report-parts"></a>보고서 파트 관리
   보고서 파트는 여러 사용자가 다시 사용하고 페이지가 매겨진 보고서 및 여러 보고서에서 다시 사용할 수 있습니다. 사용자는 서버에서 보고서 파트를 검색하여 보고서에 추가할 수 있습니다.  또한 사용자에게 서버의 보고서 파트에 대한 업데이트를 알리고 보고서 파트의 새 버전을 다시 게시할 수 있습니다. 이러한 보고서 제작 동작은 Reporting Services 보안 권한에 의해 제어되고 이의 영향을 받습니다.  이 항목에서는 서버에 게시된 보고서 파트 속성 및 동작을 검토합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "52394067"
  보고서 파트를 관리하려면 기본 모드로 보고서 서버의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용하거나 SharePoint 통합 모드로 보고서 서버의 애플리케이션 페이지를 사용합니다.  
   
 ### <a name="server-side-interaction-and-search"></a>서버 쪽 상호 작용 및 검색  
- 보고서 파트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버에 게시할 수 있습니다. 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 작성기와 같은 보고서 제작 응용 프로그램의 보고서 파트 갤러리 기능을 사용하여 보고서 파트를 찾고 이를 보고서에 추가할 수 있습니다. 사용자가 보고서 파트를 검색할 경우 서버가 설치된 모드와 상관없이 보고서 서버 카탈로그에서 검색이 수행됩니다.  
+ 보고서 파트는 기본 모드 또는 SharePoint 통합 모드에서 보고서 서버에 게시할 수 있습니다. 사용자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 작성기와 같은 보고서 제작 애플리케이션의 보고서 파트 갤러리 기능을 사용하여 보고서 파트를 찾고 이를 보고서에 추가할 수 있습니다. 사용자가 보고서 파트를 검색할 경우 서버가 설치된 모드와 상관없이 보고서 서버 카탈로그에서 검색이 수행됩니다.  
   
  보고서 작성기와 같은 보고서 제작 애플리케이션에서 SharePoint 통합 모드의 보고서 서버로 보고서 파트를 게시하면 보고서 서버 카탈로그도 업데이트되므로 갤러리 검색에도 새 보고서 파트나 업데이트 보고서 파트가 정확히 반영됩니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52394067"
  그러나 하위 폴더는 예외입니다. 검색 시 항상 하위 폴더를 검색하므로 보고서 파트를 하위 폴더로 수동으로 이동해도 보고서 갤러리에서 검색 시 해당 보고서 파트를 찾을 수 있으며, 보고서 파트 갤러리에서 검색할 때도 해당 보고서 파트를 찾을 수 있습니다.  
   
 ### <a name="report-server-catalog-properties"></a>보고서 서버 카탈로그 속성  
- 다음 표에서는 기존 보고서 서버 카탈로그 필드를 보고서 파트에 연결하는 방법과 보고서 파트의 카탈로그에 추가되는 새 필드에 연결하는 방법에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 라이브러리와 보고서 작성기 등의 보고서 제작 응용 프로그램에서 사용할 수 있습니다.  
+ 다음 표에서는 기존 보고서 서버 카탈로그 필드를 보고서 파트에 연결하는 방법과 보고서 파트의 카탈로그에 추가되는 새 필드에 연결하는 방법에 대해 설명합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 라이브러리와 보고서 작성기 등의 보고서 제작 애플리케이션에서 사용할 수 있습니다.  
   
  별표(*)는 이번 릴리스에 새로 추가된 것임을 나타냅니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52394067"
 -   보고서 파트는 기존 "리소스" 항목 유형과 동일한 사용 권한 정책을 사용합니다. 보안 상속 관점에서 폴더 내의 기존 리소스 항목과 보고서 파트는 차이가 없습니다. 보고서 파트는 같은 폴더에 있는 이미지와 동일한 사용 권한 정책을 상속합니다. 구별해야 하는 경우에는 원하는 보고서 파트에 대해 항목 수준 보안을 구성할 수 있습니다. 또는 올바른 사용 권한이 구성된 별도의 폴더에 보고서 파트를 넣을 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  

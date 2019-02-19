@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: fa58344c4543c04bd6c16647fd524252539937c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb679941710f145d5a35aeaecc60996eaf69c607
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785301"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296891"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>선 추가 및 수정(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 섹션을 분리할 그래픽 요소가 필요한 경우에는 보고서에 선을 추가할 수 있습니다. 색이나 스타일과 같은 선 속성을 편집하여 선의 모양을 사용자 지정할 수 있습니다. 예를 들어 보고서에 회사 지정 색을 넣기를 원할 수 있습니다.    

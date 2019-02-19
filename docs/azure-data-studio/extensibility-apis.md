@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029757"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407613"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 Api
 
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 모든 활성 개체 탐색기 연결 노드를 가져옵니다.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 지정된 된 메타 데이터와 일치 하는 모든 개체 탐색기 노드를 찾습니다. 합니다 `schema`, `database`, 및 `parentObjectNames` 인수 여야 합니다 `undefined` 있지 않은 경우 해당 합니다. `parentObjectNames` 가장 낮은 수준에서 원하는 개체 관리 되는 개체 탐색기에서 위에서 데이터베이스가 아닌 부모 개체의 목록이입니다. 예를 들어 "column1"는 테이블 "schema1.table1" 및 데이터베이스 "database1"에 속하는 열에 대 한 연결 ID를 사용 하 여 검색 하는 경우 `connectionId`, 호출 `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`합니다. 참조를 [SQL Operations Studio 기본적으로 지 원하는 형식의 목록을](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) 이 API 호출에 대 한 합니다.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 지정된 된 메타 데이터와 일치 하는 모든 개체 탐색기 노드를 찾습니다. 합니다 `schema`, `database`, 및 `parentObjectNames` 인수 여야 합니다 `undefined` 있지 않은 경우 해당 합니다. `parentObjectNames` 가장 낮은 수준에서 원하는 개체 관리 되는 개체 탐색기에서 위에서 데이터베이스가 아닌 부모 개체의 목록이입니다. 예를 들어 "column1"는 테이블 "schema1.table1" 및 데이터베이스 "database1"에 속하는 열에 대 한 연결 ID를 사용 하 여 검색 하는 경우 `connectionId`, 호출 `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`합니다. 참조를 [기본적으로 지 원하는 Azure Data Studio 형식의 목록](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) 이 API 호출에 대 한 합니다.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` 노드 아래에 있는 연결의 id

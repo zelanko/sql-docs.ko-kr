@@ -18,14 +18,14 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2937ca969b7a277710b8040481d61c68a12e096f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7c4722d276321a8839d7d569c084a8b4e4253280
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206222"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291831"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>자습서: Reporting Services 도구 찾기 및 시작 방법(SSRS)
 

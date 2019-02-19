@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4a5339c18b724531609fe27f237157f1ae86116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 319e00685255e77c7afe17fc932467268e020873
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617137"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294361"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>보고서 인쇄(SharePoint 모드의 Reporting Services)
   SharePoint 모드에서 실행되는 보고서 서버의 경우 다음 세 가지 방법으로 SharePoint 웹 애플리케이션에서 보고서를 인쇄할 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "47617137"
   
 -   **브라우저** 브라우저의 인쇄 기능은 단일 페이지에 맞는 HTML 보고서에 대해 가장 잘 작동합니다. 일반적으로 브라우저에서 인쇄하는 페이지에는 웹 페이지의 모든 시각적 요소뿐만 아니라 페이지나 웹 사이트를 식별하는 머리글 및 바닥글 정보가 포함됩니다. 브라우저에서 인쇄하면 현재 창의 내용만 인쇄됩니다. 보고서가 길 경우 브라우저에서는 보고서의 일부(일반적으로 첫 페이지)만 인쇄합니다.  
   
--   **대상 응용 프로그램** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 응용 프로그램의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 애플리케이션 형식이 적합합니다. 보고서를 데스크톱 애플리케이션으로 내보낼 경우 해당 애플리케이션이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기** 를 선택합니다.  
+-   **대상 애플리케이션** 보고서를 내보내 Microsoft Office Excel 또는 Adobe Acrobat Reader와 같은 대상 애플리케이션의 인쇄 기능을 사용할 수 있습니다. 여러 페이지로 구성된 보고서를 인쇄할 경우 TIFF 또는 PDF와 같은 일부 애플리케이션 형식이 적합합니다. 보고서를 데스크톱 애플리케이션으로 내보낼 경우 해당 애플리케이션이 제공하는 모든 특수 인쇄 기능을 사용할 수 있습니다. 보고서를 내보내려면 보고서를 열 때 보고서 도구 모음에 나타나는 **동작** 메뉴에서 **내보내기** 를 선택합니다.  
   
 > [!NOTE]  
 >  보고서를 인쇄하려면 보고서를 볼 권한이 있어야 합니다.  

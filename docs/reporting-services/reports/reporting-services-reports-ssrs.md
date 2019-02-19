@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 14540871ad8be2c59bc8eb899ccb30b06f0278f5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 37a2fa01004fb3550422b44f48d83e1c79dc587b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030332"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291361"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 보고서(SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서는 보고서 데이터 및 보고서 레이아웃 요소가 포함된 XML 기반 보고서 정의입니다. 보고서 정의는 .rdl 확장자로 클라이언트 파일 시스템에 저장됩니다. 페이지가 매겨진 보고서를 게시한 후에는 보고서 서버 또는 SharePoint 사이트에 저장된 보고서 항목이 됩니다. 페이지가 매겨진 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 서버 기반 보고 플랫폼의 일부입니다. [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)도 가능합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "50030332"
   
     -   **데이터 원본을 확인합니다.** 각 데이터 원본에 하나씩 보고서 데이터 원본을 정의합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
-    -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 세트를 정의합니다. 각 데이터 세트에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+    -   **각 원본에서 사용할 데이터를 선택합니다.** 각 데이터 원본에 대해 보고서 데이터 세트를 정의합니다. 각 데이터 세트에는 사용할 데이터를 지정하는 쿼리가 포함되어 있습니다. 보고서 매개 변수가 있는 경우 각 매개 변수에 사용 가능한 값 목록을 채울 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [보고서 매개 변수&amp;#40;보고서 작성기 및 보고서 디자이너&amp;#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
     -   **데이터 시각화를 선택합니다.** 각 데이터 세트에 대해 데이터를 표시하는 데 사용할 데이터 영역을 선택합니다. 테이블, 차트, 계기 및 지도 목록에서 선택할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -130,14 +130,14 @@ ms.locfileid: "50030332"
   
 -   **인쇄.**  보고서 구독자는 보고서가 표시된 방식에 따라 보고서 또는 보고서 페이지를 인쇄할 수 있습니다. 자세한 내용은 [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   **웹 또는 Windows Form 응용 프로그램.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 애플리케이션 또는 Windows Form 애플리케이션을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](https://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
+-   **웹 또는 Windows Form 애플리케이션.**  Visual Studio를 사용하여 보고서 뷰어 컨트롤을 호스팅하는 ASP.NET AJAX 애플리케이션 또는 Windows Form 애플리케이션을 개발할 수 있습니다. 이 컨트롤은 보고서 서버에 게시된 보고서를 가리킬 수 있습니다. 자세한 내용은 [Microsoft 보고서](https://go.microsoft.com/fwlink/?LinkID=205399)를 참조하세요.  
   
 ## <a name="manage-reports"></a>보고서 관리  
  게시된 보고서를 관리하는 방법은 다음과 같습니다.  
   
 -   **데이터 원본** .  공유 및 포함된 데이터 원본은 보고서 정의와 독립적으로 관리됩니다.  
   
--   **데이터 집합.**  공유 데이터 세트는 보고서 정의와 독립적으로 관리됩니다.  
+-   **데이터 세트.**  공유 데이터 세트는 보고서 정의와 독립적으로 관리됩니다.  
   
 -   **매개 변수.**  매개 변수는 보고서 정의와 독립적으로 관리됩니다. 보고서 서버에서 매개 변수를 변경한 후에는 보고서 제작 클라이언트에서 서버에 적용된 변경 내용 위에 게시할 수 없습니다.  
   

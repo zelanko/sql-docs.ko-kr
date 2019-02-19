@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 91a54778-8929-41f9-bb4c-826cec636be4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 74de748df3d51495582085d9887d75e9828b1427
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39a09934ba8ec087149a7cd8e35ed57b44bfdfbb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671761"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294491"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 입력란, 선 또는 이미지와 같은 비컨테이너 항목만 새 보고서 항목으로 대체할 수 있습니다. 예를 들어 테이블을 입력란으로 끌어 테이블로 입력란을 대체할 수 있습니다.  

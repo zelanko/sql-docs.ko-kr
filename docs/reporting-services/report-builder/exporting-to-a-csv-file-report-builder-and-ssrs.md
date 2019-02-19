@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 697934ebe182f82e4f9c668439afb6ecf2bc5631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702601"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297610"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 페이지가 매겨진 보고서의 데이터를 결합하여 읽기 쉽고 많은 애플리케이션과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "47702601"
 |항목|렌더링 동작|  
 |----------|------------------------|  
 |입력란|입력란의 내용을 렌더링합니다. 기본 모드에서는 항목의 서식 속성에 따라 항목의 서식이 지정됩니다. 규격 모드에서는 서식이 디바이스 정보 설정에 의해 변경될 수 있습니다. CSV 렌더링 모드에 대한 자세한 정보는 다음을 참조하십시오.|  
-|테이블|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
+|Table|테이블을 확장하고 최하위 수준에서 각 행과 열에 대한 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다. 드릴스루 보고서는 지원되지 않습니다.|  
 |행렬|행렬을 확장하고 최하위 수준에서 각 행과 열에 행과 열을 만들어 렌더링합니다. 부분합 행과 열에는 열 머리글이나 행 머리글이 없습니다.|  
 |목록|목록의 각 정보 행이나 인스턴스에 대해 레코드를 렌더링합니다.|  
 |하위 보고서|내용의 각 인스턴스에 대해 부모 항목이 반복됩니다.|  
@@ -137,7 +137,7 @@ ms.locfileid: "47702601"
 -   책갈피  
   
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드, 구분 기호로 사용할 문자, 텍스트 한정자 기본 문자열로 사용할 문자 등 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)을 참조하세요.  
   
   

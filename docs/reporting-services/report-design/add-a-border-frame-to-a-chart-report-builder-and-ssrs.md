@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bc9275d45e9d72dd1cfdffdd8cc8b6b3d09022ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 029998941421d9ebe31f69e058d6acc14060ff80
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847121"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295595"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
   차트에 시각적 효과를 주려면 차트 바깥쪽 둘레에 테두리 프레임을 사용해 보십시오. **차트 속성** 대화 상자를 사용하거나 속성 창을 사용하여 테두리 프레임을 선택할 수 있습니다. 차트 테두리 프레임은 다른 데이터 영역에 적용할 수 없습니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "47847121"
 ## <a name="see-also"></a>참고 항목  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   

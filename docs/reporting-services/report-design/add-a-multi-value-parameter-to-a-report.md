@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b6492cc78c9cbdc23f8deed9b1a577341637c300
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ba4b779d3cba79c3bed3574f5ab5d53eec6bffeb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402085"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293561"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
   사용자가 매개 변수에 둘 이상의 값을 선택할 수 있는 보고서에 매개 변수를 추가할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "52402085"
   
 2.  보고서 데이터 세트를 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 속성**을 클릭합니다.  
   
-3.  **쿼리** 상자에서 쿼리 텍스트를 편집하거나 쿼리 디자이너를 사용하여 필터를 추가하여 변수를 데이터 집합에 추가합니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
+3.  **쿼리** 상자에서 쿼리 텍스트를 편집하거나 쿼리 디자이너를 사용하여 필터를 추가하여 변수를 데이터 세트에 추가합니다. 자세한 내용은 [관계형 쿼리 디자이너에서 쿼리 빌드&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)를 참조하세요.  
   
     ```  
     WHERE  
@@ -42,7 +42,7 @@ ms.locfileid: "52402085"
   
     포함된 데이터 세트나 공유 데이터 세트에 대한 데이터 세트 매개 변수는 쿼리 변수에 대해 자동으로 만들어집니다. 데이터 세트 매개 변수에 대해 보고서 매개 변수가 자동으로 만들어집니다.  
   
-4.  **보고서 데이터** 창에서 **매개 변수** 노드를 확장하고 데이터 집합 매개 변수에 대해 자동으로 생성된 보고서 매개 변수를 마우스 오른쪽 단추로 클릭한 다음 **매개 변수 속성**을 클릭합니다.  
+4.  **보고서 데이터** 창에서 **매개 변수** 노드를 확장하고 데이터 세트 매개 변수에 대해 자동으로 생성된 보고서 매개 변수를 마우스 오른쪽 단추로 클릭한 다음, **매개 변수 속성**을 클릭합니다.  
   
 5.  **일반** 탭에서 **다중 값 허용** 을 선택하여 매개 변수에 둘 이상의 값을 선택할 수 있도록 합니다.  
   

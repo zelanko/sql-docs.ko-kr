@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a2bdb0362cc02e884032006f9960858a2f02bbe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ed135c7a574413d4fd950d1236fedef4ac743132
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623432"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298431"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 표시기는 단일 데이터 값의 상태를 한눈에 볼 수 있는 최소 계기입니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  

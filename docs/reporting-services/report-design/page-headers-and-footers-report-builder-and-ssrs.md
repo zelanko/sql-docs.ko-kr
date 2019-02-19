@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759801"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298641"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 세트와 데이터 세트를 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 세트 필드 참조가 포함됩니다.  
@@ -55,9 +55,9 @@ ms.locfileid: "47759801"
   
 |식에서의 지원 여부|ReportItems 집계|데이터 세트 집계(범위는 데이터 세트의 이름이어야 함)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|보고서 본문에 있는 입력란|사용자 계정 컨트롤|아니오|  
-|&PageNumber|사용자 계정 컨트롤|아니오|  
-|&TotalPages|사용자 계정 컨트롤|아니오|  
+|보고서 본문에 있는 입력란|예|아니오|  
+|&PageNumber|예|아니오|  
+|&TotalPages|예|아니오|  
 |집계 함수|예 예:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|예 예:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |페이지에 있는 항목의 필드 컬렉션|간접적임. 예:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|예 예:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |데이터 바인딩된 이미지|간접적임. 예: `=ReportItems!TXT_Photo.Value`|예 예:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

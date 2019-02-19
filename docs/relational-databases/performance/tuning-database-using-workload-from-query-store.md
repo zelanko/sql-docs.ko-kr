@@ -12,12 +12,12 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 439967d45e74b0069d3064af64393151f9efc735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376605"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331503"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,6 @@ DTA GUI에서 이 기능을 사용하려면 **일반** 창에서 **쿼리 저장
 
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 엔진 튜닝 관리자](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[자습서: 데이터베이스 엔진 튜닝 관리자](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[자습서: 데이터베이스 엔진 튜닝 관리자](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [쿼리 저장소에서 데이터를 수집하는 방법](../../relational-databases/performance/how-query-store-collects-data.md)     
 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)

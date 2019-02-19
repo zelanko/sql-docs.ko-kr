@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.serieslabelproperties.borders.f1
 - sql13.rtp.rptdesigner.seriesproperties.borders.f1
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a71fb335b1042fb4e7ea4949756e8454cace656c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f8ed7e5a9b29f0ae9ae6d601db6466a2be02eed
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848021"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297990"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
   Reporting Services는 차트에 여러 개의 기본 제공 색상표를 제공하며, 사용자가 사용자 지정 색상표를 정의할 수도 있습니다. 기본적으로 차트는 기본 제공 **Pacific** 색상표를 사용하여 각 계열을 채웁니다. 이 색은 범례에도 나타납니다. 차트에 여러 개의 계열이 추가될 때는 색상표에서 색을 정의한 순서대로 차트가 계열에 색을 할당합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "47848021"
   
 ## <a name="see-also"></a>참고 항목  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트에 3D 가장자리, 볼록 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)  
   
