@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8ffbc6d38d8d63ea783c5b24534b4d1a34a16a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 410529d8691474e3b10d8e1907282d91bbe6a68b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761014"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285551"
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>차트 범례 - 항목 텍스트 변경(보고서 작성기)
   차트의 값 영역에 필드를 배치하면 해당 필드의 이름이 들어 있는 범례 항목이 자동으로 생성됩니다. 모든 범례 항목은 차트의 개별 계열에 연결됩니다. 단, 셰이프 차트의 경우에는 범례가 개별 계열 대신 개별 데이터 요소에 연결됩니다.  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 40b055260c82e1237f21ae55fffff800f23c5014
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff7bc69b5d2277d8ee0c87978c27c531a794daec
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711914"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292031"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다양한 용어를 사용하여 사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 페이지가 매겨진 보고서를 설명합니다.  

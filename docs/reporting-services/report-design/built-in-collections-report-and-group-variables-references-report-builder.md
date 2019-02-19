@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a68f9d4f0eea662b143b6a37dd5d2e5d5faeb846
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673171"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286121"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션 - 보고서 및 그룹 변수 참조(보고서 작성기)
   보고서의 식에서 두 번 이상 사용되는 복잡한 계산이 있는 경우 변수를 만들어 사용할 수 있습니다. 보고서 변수 또는 그룹 변수를 만들 수 있습니다. 변수 이름은 보고서에서 고유해야 합니다.  

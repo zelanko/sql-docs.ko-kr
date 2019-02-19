@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e0e9cb87260aa04deaa2e91e928f17b2a94261a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 988d9436e6a5f3bda53126bebc2cc1aed5fe6806
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418134"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287461"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF 파일로 내보내기(보고서 작성기 및 SSRS)
   PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 페이지 매김 처리한 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 11.0 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "52418134"
 >  PDF 파일은 PNG 포함 이미지를 지원하지 않습니다.  
   
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [PDF Device Information Settings](../../reporting-services/pdf-device-information-settings.md)을 참조하세요.  
   
   

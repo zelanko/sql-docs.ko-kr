@@ -8,14 +8,14 @@ description: 텍스트 상자를 사용하여 데이터 세트의 필드에서 �
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8279a0ea362cd6b85045f3ffe3d7ce0caf1ab013
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214854"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289481"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 세트의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  

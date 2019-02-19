@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 075d2253f8662786952e0057042dd04351296aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a90f81948f7977d0ad2461ac794371cc57eb5d10
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632741"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287563"
 ---
 # <a name="report-builder-functions---first-function"></a>보고서 작성기 함수 - First 함수
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  
@@ -51,7 +51,7 @@ First(expression, scope)
   
 -   중첩 집계의*Scope* 는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 *Scope*는 데이터 세트의 이름일 수 없습니다.  
   
 -   *Expression* 에는 **First**, **Last**, **Previous**또는 **RunningValue** 함수가 포함되지 않아야 합니다.  
   

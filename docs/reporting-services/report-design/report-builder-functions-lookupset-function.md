@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c4ceb9cd36d27a5c9fe29e0d446a56baf6698489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eef80b349ed067d589759afbdfa98a7c1221726e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689541"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285932"
 ---
 # <a name="report-builder-functions---lookupset-function"></a>보고서 작성기 함수 - LookupSet 함수
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
@@ -30,22 +30,22 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>매개 변수  
  *source_expression*  
- (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`).  
+ (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`)을 입력합니다.  
   
  *destination_expression*  
  (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!CustomerID.Value`)을 입력합니다.  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!PhoneNumber.Value`).  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!PhoneNumber.Value`)을 입력합니다.  
   
- *데이터 집합(dataset)*  
+ *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "ContactInformation"입니다.  
   
 ## <a name="return"></a>반환 값  
  **VariantArray**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **LookupSet** 를 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 **LookupSet**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
+ **LookupSet**을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 **LookupSet**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
   
  **LookupSet** 은 다음을 수행합니다.  
   
@@ -57,7 +57,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   결과 식 값의 집합을 반환합니다.  
   
- 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 집합에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)를 사용합니다. 값 집합에 대한 **Lookup**을 호출하려면 [Multilookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)를 사용합니다.  
+ 일 대 일 관계의 이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름에 대한 단일 값을 검색하려면 [Lookup 함수&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/report-builder-functions-lookup-function.md)을 사용합니다. 값 집합에 대한 **Lookup**을 호출하려면 [Multilookup 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)를 사용합니다.  
   
  다음과 같은 제한 사항이 있습니다.  
   

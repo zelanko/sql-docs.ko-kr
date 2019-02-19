@@ -9,14 +9,14 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0d51d20ae6e3ce9ff780de03a105be31a1466e74
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17718148e369e53d9b33867975ca4d3b9af1a13f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712674"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292211"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  

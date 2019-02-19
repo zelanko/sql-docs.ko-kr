@@ -6,24 +6,24 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1be128dd301e5f545d1e008c8710c6e738063595
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020468"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287951"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   보고서에서 데이터 세트는 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 공유 데이터 세트는 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 다른 사용자와 공유할 데이터 세트를 만들 수 있습니다. 공유 데이터 세트 디자인 창에서 공유 데이터 원본을 선택하고, 공유 데이터 세트에 대한 속성을 지정하고, 쿼리 디자이너를 통해 쿼리를 만듭니다.  
   
  ![rs_SharedDatasetDesignMode](../../reporting-services/report-builder/media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- 보고서에서 데이터 작업에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
+ 보고서에서 데이터 작업에 대한 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 ##  <a name="Ribbon"></a> 리본  
- 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 세트, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
+ 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 집합, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
   
 ### <a name="connection"></a>연결  
  연결 그룹의 **선택** 단추를 사용하여 보고서에서 공유 데이터 원본을 선택하거나 보고서 서버에서 공유 데이터 원본을 찾습니다.  
@@ -33,8 +33,8 @@ ms.locfileid: "50020468"
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
-### <a name="dataset"></a>데이터 세트  
- **옵션 설정** 단추를 사용하여 공유 데이터 집합 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
+### <a name="dataset"></a>Dataset  
+ **옵션 설정** 단추를 사용하여 공유 데이터 세트 속성을 설정할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
   
 -   필드. 필드 컬렉션에 필드를 추가하거나 편집할 수 있습니다.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "50020468"
   
  공유 데이터 세트가 보고서에 추가되면 보고서 작성자가 데이터 정렬, 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 부분합 옵션을 재정의할 수 있습니다. 또한 데이터 세트 필터를 추가로 만들어 보고서에서 데이터를 제한할 수도 있습니다.  
   
- 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
- 캐시 새로 고침 계획에 대한 자세한 내용은 [공유 데이터 집합 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)를 참조하세요.  
+ 캐시 새로 고침 계획에 대한 자세한 내용은 [공유 데이터 세트 캐시&amp;#40;SSRS&amp;#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)을 참조하세요.  
   
 ### <a name="query-designer"></a>쿼리 디자이너  
  쿼리 디자이너 도구 모음을 사용하면 데이터 연결에서 검색할 데이터를 지정하는 쿼리를 작성할 수 있습니다. 표시되는 도구 모음은 데이터 연결의 데이터 원본 유형과 연결된 쿼리 디자이너에 따라 다릅니다.  
@@ -85,12 +85,12 @@ ms.locfileid: "50020468"
  자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)을 참조하세요.  
   
   
-##  <a name="Save"></a> 공유 데이터 집합 저장  
+##  <a name="Save"></a> 공유 데이터 세트 저장  
  작성한 쿼리를 저장하려면 **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭합니다. 보고서 서버에서 해당 폴더로 이동하고 공유 데이터 세트 정의를 저장합니다. 공유 데이터 세트는 보고서 서버에 저장할 때까지 다른 사용자가 사용할 수 없습니다.  
   
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   

@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3777d43e44819b8c9882a381b5814a69ac116fbb
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25e3f58f4c104f6d21d72731fa95cc3f807605da
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031912"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291392"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>보고서 디자이너로 Reporting Services 페이지가 매겨진 보고서 디자인(SSRS)
 
@@ -46,12 +46,12 @@ ms.locfileid: "50031912"
   
  자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
    
-##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 집합  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 보고 솔루션용 공유 데이터 집합을 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 집합을 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
+##  <a name="bkmk_SharedDatasets"></a> 공유 데이터 세트  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]를 사용하여 보고 솔루션용 공유 데이터 세트를 정의하고 배포합니다. **OverwriteDatasets** 및 **TargetDatasetFolder** 속성을 사용하면 공유 데이터 세트를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  
   
- 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 집합을 열 수 없습니다. 해당 기능의 경우 공유 데이터 집합 모드에서 [보고서 작성기 제작 환경&#40;SSRS&#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
+ 보고서 디자이너의 보고서 데이터 창 및 솔루션 탐색기에서 보고서에 사용될 공유 데이터 세트를 정의할 수 있습니다. 자세한 내용은 [Report Data Pane](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)을 참조하세요. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서는 보고서 서버 또는 SharePoint 사이트에서 직접 게시된 데이터 세트를 열 수 없습니다. 해당 기능의 경우 공유 데이터 세트 모드에서 [보고서 작성기 제작 환경&amp;#40;SSRS&amp;#41;](../../reporting-services/tools/report-builder-authoring-environment-ssrs.md)을 사용합니다.  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 클라이언트 도구입니다. 쿼리 디자이너를 사용하여 쿼리 결과를 만들고 로컬에서 미리 보기로 테스트할 수 있습니다. 배포 후 기반이 되는 공유 데이터 원분 및 보고서와는 별도로 공유 데이터 세트를 관리할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [쿼리 디자인 도구&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/query-design-tools-ssrs.md) 및 [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)를 참조하세요.  
   
 ##  <a name="bkmk_Reports"></a> 페이지를 매긴 보고서  
 페이지 매김 처리한 보고서는 보고서 프로젝트에 저장된 파일입니다. 보고서는 독립 실행형 보고서, 하위 보고서 또는 주 보고서의 드릴스루 동작 대상으로 사용할 수 없습니다. **TargetReportFolder** 및 기타 속성을 사용하면 보고서를 프로젝트의 다른 항목과 별도로 배포할 수 있습니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)을 참조하세요.  

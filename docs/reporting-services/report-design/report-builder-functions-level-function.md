@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9dfd17acaa01bd415c5fde547bb714f62936d09e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 239eb6d79be700a37a35f36270aea4e1839a69aa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833881"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290311"
 ---
 # <a name="report-builder-functions---level-function"></a>보고서 작성기 함수 - Level 함수
   재귀 계층의 현재 수준을 반환합니다.  
@@ -33,7 +33,7 @@ Level(scope)
  (**문자열**) 선택 사항입니다. 집계 함수를 적용할 보고서 항목을 포함하는 데이터 세트, 그룹 또는 데이터 영역의 이름입니다. *scope* 를 지정하지 않은 경우 현재 범위가 사용됩니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **Integer**를 반환합니다. *scope* 가 데이터 집합 또는 데이터 영역을 지정하거나 비재귀 그룹화( **Parent** 요소 없는 그룹화)를 지정하면 **Level** 은 0을 반환합니다. *scope* 를 생략하면 현재 범위의 수준이 반환됩니다.  
+ **Integer**를 반환합니다. *scope* 가 데이터 세트 또는 데이터 영역을 지정하거나 비재귀 그룹화( **Parent** 요소 없는 그룹화)를 지정하면 **Level**은 0을 반환합니다. *scope* 를 생략하면 현재 범위의 수준이 반환됩니다.  
   
 ## <a name="remarks"></a>Remarks  
  **Level** 함수에서 반환되는 값은 0에서 시작합니다. 즉, 계층의 첫 수준은 0입니다.  

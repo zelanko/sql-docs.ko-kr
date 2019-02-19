@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9a398224ce57aa31e11e2956a7caf40ee73499a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6a94d9dbd666a7aa5db62f886f48de10447407fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631081"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297051"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 원형 차트 레이블 지정은 몇 개의 데이터 조각에만 레이블을 표시하도록 최적화되어 있습니다. 원형 차트에 조각이 너무 많을 경우 레이블이 겹쳐서 표시될 수 있습니다. 한 가지 해결 방법은 원형 차트 외부에 레이블을 표시하여 이름이 긴 데이터 레이블에 대한 공간을 더 확보하는 것입니다. 그래도 여전히 레이블이 겹칠 경우 3D를 설정하여 더 많은 공간을 만들 수 있습니다. 이렇게 하면 원형 차트의 지름이 줄어 차트 주위에 더 많은 공간이 확보됩니다.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: eaad062a7055d0577a9be62ecb55d963e245e2ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 906c1202d7c2362009bef00bbfa9f728e022cf8b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807521"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287532"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS)
   여러 그룹이 정의되어 있는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 차트와 달리 계기는 하나의 값만 표시합니다. 보고서 작성기 및 보고서 디자이너에서 사용자가 계기에 표시하려고 하는 한 값의 컨텍스트 또는 상대적 중요도를 확인하므로 사용자가 눈금의 최소값 및 최대값을 정의해야 합니다.   

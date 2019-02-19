@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 92156defdf08b3828fde898c7043a941bbd7326b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cb351a5627dd525dd1eeb7bbeb9b7a9be821bc0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394016"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297481"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>합계, 집계 및 기본 제공 컬렉션의 식 범위
   식을 작성할 때 여러 컨텍스트에서 *범위* 라는 용어를 자주 볼 수 있습니다. 범위는 식 계산에 사용하는 데이터, 렌더링된 페이지의 입력란 집합, 그리고 토글을 기반으로 표시하거나 숨길 수 있는 보고서 항목 집합을 지정할 수 있습니다. *범위* 라는 용어는 식 계산, 집계 함수 구문, 조건부 표시 유형 및 이러한 영역과 관련된 오류 메시지에서 볼 수 있습니다. 다음 설명을 참조하면 적용되는 *범위* 의 각 의미를 구분할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52394016"
 ##  <a name="DataScope"></a> 데이터 범위 및 데이터 계층 이해  
  데이터 범위는 보고서 데이터 집합을 지정하며 기본 제약 관계가 지정된 자연 계층을 포함합니다. 계층에서 순위가 높은 범위가 낮은 범위를 포함합니다. 다음 데이터 범위 목록에서는 계층을 데이터가 많은 순서대로 설명합니다.  
   
--   **데이터 집합 필터를 적용한 후의 데이터 집합** 보고서 본문의 보고서 항목 또는 데이터 영역에 연결된 보고서 데이터 집합을 지정합니다. 집계에 사용되는 데이터는 데이터 세트 필터 식을 적용한 후 보고서 데이터 세트에서 가져옵니다. 공유 데이터 세트의 경우에는 공유 데이터 세트 정의의 필터와 보고서의 공유 데이터 세트 인스턴스 필터가 모두 해당됩니다.  
+-   **데이터 세트 필터를 적용한 후의 데이터 세트** 보고서 본문의 보고서 항목 또는 데이터 영역에 연결된 보고서 데이터 세트를 지정합니다. 집계에 사용되는 데이터는 데이터 세트 필터 식을 적용한 후 보고서 데이터 세트에서 가져옵니다. 공유 데이터 세트의 경우에는 공유 데이터 세트 정의의 필터와 보고서의 공유 데이터 세트 인스턴스 필터가 모두 해당됩니다.  
   
 -   **데이터 영역** 데이터 영역 필터와 정렬 식을 적용한 후의 데이터 영역에 있는 데이터를 지정합니다. 그룹 필터는 데이터 영역의 집계를 계산할 때 사용되지 않습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "52394016"
   
 -   **기본 범위** 보고서 프로세서가 식을 계산할 때 계산 범위에 있는 데이터입니다. 기본 범위는 셀이나 데이터 요소가 속하는 가장 안쪽 그룹 집합입니다. 테이블릭스 데이터 영역의 경우 이 집합에는 행 및 열 그룹이 포함될 수 있으며 차트 데이터 영역의 경우에는 범주 및 계열 그룹이 포함될 수 있습니다.  
   
--   **명명된 범위** 식의 범위에 있는 데이터 집합, 데이터 영역 또는 데이터 영역 그룹의 이름입니다. 집계 계산의 경우 포함하는 범위를 지정할 수 있습니다. 단일 식에서 행 그룹과 열 그룹 모두에 대해 명명된 범위를 지정할 수는 없습니다. 또한 집계의 집계를 위한 식이 아니면 포함되는 범위는 지정할 수 없습니다.  
+-   **명명된 범위** 식의 범위에 있는 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 이름입니다. 집계 계산의 경우 포함하는 범위를 지정할 수 있습니다. 단일 식에서 행 그룹과 열 그룹 모두에 대해 명명된 범위를 지정할 수는 없습니다. 또한 집계의 집계를 위한 식이 아니면 포함되는 범위는 지정할 수 없습니다.  
   
      다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 세트 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [첫 번째 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
   

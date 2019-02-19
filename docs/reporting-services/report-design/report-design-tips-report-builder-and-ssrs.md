@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2a68a953609b8f76b4ea441d3d35fbf04a72af7a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0151fd3fa25a52e8868c17c892878bcc6b04b0e1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711244"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284943"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>보고서 디자인 팁(보고서 작성기 및 SSRS)
   다음 팁을 사용하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서를 디자인하는 데 도움이 됩니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "52711244"
   
  보고서를 디자인할 때 고려해야 할 사항에 대한 자세한 내용은 [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)을 참조하세요.  
   
-##  <a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 집합의 명명 규칙  
+##  <a name="NamingConventions"></a> 보고서, 데이터 원본 및 데이터 세트의 명명 규칙  
   
 -   데이터 원본 및 데이터 원본을 문서화하는 데이터 세트에 대한 명명 규칙을 사용합니다.  
   
     1.  **데이터 원본** 보안상의 이유로 실제 서버 또는 데이터베이스를 사용하지 않으려는 경우 사용자에게 데이터 원본이 무엇인지 나타내는 별칭을 사용합니다.  
   
-    2.  **데이터 집합** 기반이 되는 데이터 원본을 나타내는 이름을 사용합니다.  
+    2.  **데이터 세트.** 기반이 되는 데이터 원본을 나타내는 이름을 사용합니다.  
   
     3.  **데이터 영역** 데이터 영역 유형 및 데이터 영역에 표시되는 데이터의 유형을 나타냅니다. 데이터 영역 이름은 다음 시나리오에서 유용합니다.  
   

@@ -8,14 +8,14 @@ description: Word 렌더링 확장 프로그램은 페이지가 매겨진 보고
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e8bae0c0ef770acf460840abcc0989f8cdf4324e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202422"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296601"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
 

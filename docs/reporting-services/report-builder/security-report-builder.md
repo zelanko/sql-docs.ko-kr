@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ce603b38e1e210944cc27b7d25c9ee5df3c3c027
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bd51af5b1fe70d73d37f1bbefb07ada68d56cd4a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030102"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290811"
 ---
 # <a name="security-report-builder"></a>보안 (보고서 작성기)
-  보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
+  보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 애플리케이션입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
   
  보고서 작성기에서는 보고서, 공유 데이터 세트 및 다시 사용 가능한 보고서 파트를 작성할 수 있습니다. 보고서 서버 또는 SharePoint 사이트에서 보고서를 편집하고 공유 데이터 원본, 공유 데이터 세트 및 공유 보고서 파트를 추가할 수 있습니다.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "50030102"
   
 -   **보고서를 게시하는 보고서 서버 또는 SharePoint 사이트** 이 기능은 보고서 서버 관리자 또는 SharePoint 사이트 관리자가 관리합니다.  
   
--   **게시된 보고서 및 보고서 관련 항목** 보고서 관련 항목에는 포함된 데이터 원본 및 공유 데이터 원본과 자격 증명, 공유 데이터 집합, 매개 변수, 보고서 파트 및 보고서 모델이 포함됩니다. 이러한 항목에 적용되는 보안 기능은 보고서 작성자가 관리합니다. 보고서 서버 관리자 또는 SharePoint 사이트 관리자는 항목을 게시하거나 공유할 수 있는 권한을 보고서 작성자에게 부여해야 합니다.  
+-   **게시된 보고서 및 보고서 관련 항목** 보고서 관련 항목에는 포함된 데이터 원본 및 공유 데이터 원본과 자격 증명, 공유 데이터 세트, 매개 변수, 보고서 파트 및 보고서 모델이 포함됩니다. 이러한 항목에 적용되는 보안 기능은 보고서 작성자가 관리합니다. 보고서 서버 관리자 또는 SharePoint 사이트 관리자는 항목을 게시하거나 공유할 수 있는 권한을 보고서 작성자에게 부여해야 합니다.  
   
 -   **보고서에 사용되는 외부 데이터 원본** 이 기능은 외부 데이터 원본 소유자가 관리합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "50030102"
   
 -   [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
--   [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
+-   [공유 데이터 세트 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   
 ### <a name="update-notifications-for-report-parts"></a>보고서 파트에 대한 업데이트 알림  
  보고서 파트는 다른 사용자가 공유할 수 있도록 보고서 서버에 게시됩니다. 기본적으로 보고서 파트를 게시할 위치를 지정해야 합니다.  

@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 057b2805c611957babd3b2b6e4237dce7a1d8d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e4bee88917f0bb4e512002549b17469004cd2880
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632051"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286512"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 데이터 추가(보고서 작성기 및 SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 보고서 데이터 집합의 데이터를 테이블 또는 행렬에 표시하려면 각 데이터 셀에서 표시할 데이터 집합 필드의 이름을 지정합니다. 세부 데이터 또는 그룹화된 데이터를 표시할 수 있습니다. 테이블 또는 행렬에 그룹을 추가하면 그룹 값 및 그룹 데이터를 위한 행과 열이 자동으로 추가됩니다. 그런 다음 데이터의 부분합과 합계를 추가할 수 있습니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 보고서 데이터 세트의 데이터를 테이블 또는 행렬에 표시하려면 각 데이터 셀에서 표시할 데이터 세트 필드의 이름을 지정합니다. 세부 데이터 또는 그룹화된 데이터를 표시할 수 있습니다. 테이블 또는 행렬에 그룹을 추가하면 그룹 값 및 그룹 데이터를 위한 행과 열이 자동으로 추가됩니다. 그런 다음 데이터의 부분합과 합계를 추가할 수 있습니다.  
   
  데이터 영역의 모든 데이터는 하나 이상의 그룹에 속합니다. 세부 데이터는 세부 정보 그룹의 멤버입니다. 세부 정보 및 그룹화된 데이터에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "47632051"
  그룹 또는 데이터 영역의 레이블을 추가하려면 레이블을 지정할 그룹 외부에 행 또는 열을 추가합니다. 레이블 행 및 열은 합계 표시를 위해 추가하는 행 및 열과 비슷합니다. 자세한 내용은 [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 또는 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>다른 보고서의 기존 테이블릭스 데이터 영역 추가  
- 다른 보고서에서 데이터 영역을 복사하여 새 보고서나 기존 보고서에 붙여넣을 수 있습니다. 데이터 영역을 붙여 넣은 후 데이터 영역에서 사용하는 데이터 세트가 정의되어 있고 데이터 세트 필드의 이름 및 데이터 형식이 원래 보고서의 해당 이름 및 데이터 형식과 동일한지 확인해야 합니다. 한 보고서에서 다른 보고서로 데이터 세트를 복사할 수 없지만 보고서에서 공유 데이터 원본을 사용하는 경우 다른 보고서의 데이터 세트를 신속하게 복제할 수 있습니다. 또한 데이터 세트의 데이터를 검색하는 쿼리의 쿼리 텍스트를 가져올 수 있으므로 보고서의 쿼리를 간단하게 복제할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 다른 보고서에서 데이터 영역을 복사하여 새 보고서나 기존 보고서에 붙여넣을 수 있습니다. 데이터 영역을 붙여 넣은 후 데이터 영역에서 사용하는 데이터 세트가 정의되어 있고 데이터 세트 필드의 이름 및 데이터 형식이 원래 보고서의 해당 이름 및 데이터 형식과 동일한지 확인해야 합니다. 한 보고서에서 다른 보고서로 데이터 세트를 복사할 수 없지만 보고서에서 공유 데이터 원본을 사용하는 경우 다른 보고서의 데이터 세트를 신속하게 복제할 수 있습니다. 또한 데이터 세트의 데이터를 검색하는 쿼리의 쿼리 텍스트를 가져올 수 있으므로 보고서의 쿼리를 간단하게 복제할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
  [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   

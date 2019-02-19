@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 30bd631a-f774-48e7-a13a-b6c2eb54d9bb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 06d9181358ddd8a3e9709787f6fe254ed913ea08
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54b48b4b204a5bc5d68ecdbb76dd706f6f6e5431
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50032112"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292041"
 ---
 # <a name="add-html-into-a-report-report-builder-and-ssrs"></a>보고서에 HTML 추가(보고서 작성기 및 SSRS)
   자리 표시자를 사용하여 데이터 세트의 필드에서 보고서에 사용할 HTML을 가져올 수 있습니다. 기본적으로 자리 표시자는 일반 텍스트를 나타내므로 자리 표시자 태그 형식을 HTML로 변경해야 합니다. 자세한 내용은 [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)를 참조하세요.  
@@ -25,7 +25,7 @@ ms.locfileid: "50032112"
   
 1.  **삽입** 탭에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   
-     **데이터 집합 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 세트나 공유 데이터 세트를 사용할 수 있습니다. 자세한 내용은 [데이터 집합 속성 대화 상자, 쿼리&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 집합 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)를 참조하세요.  
+     **데이터 세트 속성** 대화 상자가 열립니다. 보고서에 포함된 데이터 세트나 공유 데이터 세트를 사용할 수 있습니다. 자세한 내용은 [데이터 세트 속성 대화 상자, 쿼리&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md) 또는 [데이터 세트 속성 대화 상자, 쿼리](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)를 참조하세요.  
   
 2.  **삽입** 탭에서 **입력란**을 클릭합니다. 목록을 클릭한 다음 끌어 원하는 크기의 상자를 만듭니다.  
   

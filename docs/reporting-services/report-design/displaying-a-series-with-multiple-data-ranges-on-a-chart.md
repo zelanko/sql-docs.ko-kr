@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 567a22114f04644b2a20d8d2653f859c10ae5534
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5fe2d1cb95045135c07f76744d5160f04ed039cf
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029312"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284911"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>차트에 데이터 범위가 여러 개 있는 계열 표시
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029312"
   
 -   **배율 구분선 사용**. 데이터가 두 개 이상의 데이터 범위 집합을 형성하는 경우 배율 구분선을 사용하여 범위 간격을 제거합니다. 배율 구분선은 계열에서 높은 값과 낮은 값 사이가 구분되도록 그리기 영역에 표시하는 줄무늬입니다.  
   
--   **불필요한 값 필터링**. 차트에 표시할 중요한 데이터 범위를 가리는 데이터 요소가 있는 경우 보고서 필터를 사용하여 원하지 않는 데이터 요소를 제거합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 차트에 필터를 추가하는 방법에 대한 자세한 내용은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
+-   **불필요한 값 필터링**. 차트에 표시할 중요한 데이터 범위를 가리는 데이터 요소가 있는 경우 보고서 필터를 사용하여 원하지 않는 데이터 요소를 제거합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 차트에 필터를 추가하는 방법에 대한 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 -   **여러 계열 비교를 위해 각 데이터 범위를 개별 계열로 그리기**. 데이터 범위가 두 개 이상인 경우 데이터 범위를 개별 계열로 구분하십시오. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   

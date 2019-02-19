@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d78d5bd802b1c194cb4b1cf09a81a1eecc9f54df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413699"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289471"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
 페이지 레이아웃, 페이지 나누기 및 페이지 크기를 비롯하여 원하는 방식으로 보고서를 작성해야 하므로 페이지를 매긴 보고서에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더링 확장을 읽어보세요. 
@@ -31,7 +31,7 @@ ms.locfileid: "52413699"
 
 다른 보고서 항목은 단일 항목에 연결되고 단일 항목을 표시합니다. 
 * **이미지** 보고서 항목은 그림에 연결됩니다. 
-* **입력란** 보고서 항목에는 제목과 같은 단순 텍스트 또는 기본 제공 필드, 보고서 매개 변수 또는 데이터 집합 필드에 대한 참조를 포함할 수 있는 식이 포함될 수 있습니다. 
+* **입력란** 보고서 항목에는 제목과 같은 단순 텍스트 또는 기본 제공 필드, 보고서 매개 변수 또는 데이터 세트 필드에 대한 참조를 포함할 수 있는 식이 포함될 수 있습니다. 
 * **선** 및 **사각형** 보고서 항목은 보고서 페이지에 단순 그래픽 요소를 제공합니다. **사각형** 은 다른 보고서 항목의 컨테이너가 될 수도 있습니다. 
 
 보고서에는 하위 보고서가 포함될 수도 있습니다.  

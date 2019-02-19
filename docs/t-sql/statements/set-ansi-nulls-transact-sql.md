@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 798a31bacecc45a22510a121847e9e20423d4b3d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: aef2847aa8e6aed4504359bcc3bd5e0c21c3d8c7
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143393"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265260"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -161,7 +161,7 @@ GO
 이제 ANSI_NULLS를 OFF로 설정하고 테스트합니다.  
 
 ```sql
-PRINT 'Testing SET ANSI_NULLS OFF';  
+PRINT 'Testing ANSI_NULLS OFF';  
 SET ANSI_NULLS OFF;  
 GO  
 DECLARE @varname int;  

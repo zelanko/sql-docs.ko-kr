@@ -4,15 +4,15 @@ ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b33173a3a37ba9b4a8e71ee33661b85e60e759c0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: d02280799725420f2d9df3845034fe4deb91bea2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711266"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285521"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services의 제품 키를 찾는 방법
 

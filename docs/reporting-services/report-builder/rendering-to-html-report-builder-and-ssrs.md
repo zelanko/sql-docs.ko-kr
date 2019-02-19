@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d184a787becf3e82df7f9051eb8ad576ec1efa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 672633023578e309ca3e40fe48b9a5bcc2286b86
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644281"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296511"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 페이지를 매긴 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "47644281"
  ReportViewer Web Forms 컨트롤을 통해 추가 검색 및 찾기 기능이 제공됩니다.  
   
   
-##  <a name="DeviceInfo"></a> 장치 정보 설정  
+##  <a name="DeviceInfo"></a> 디바이스 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드를 비롯한 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [HTML Device Information Settings](../../reporting-services/html-device-information-settings.md)을 참조하세요.  
   
   

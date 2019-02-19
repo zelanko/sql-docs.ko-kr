@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b4bebbcb2efb5dc8ef9bc056cb0bb62b3ee08fee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0fc0d438272b892fc411bf1887cf1adb18dcf7f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679132"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291851"
 ---
 # <a name="report-builder-functions---lookup-function"></a>보고서 작성기 함수 - Lookup 함수
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 첫 번째 값을 반환합니다.  
@@ -33,19 +33,19 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  (**Variant**) 현재 범위에서 평가되고, 조회할 키 또는 이름을 지정하는 식입니다. `=Fields!ProdID.Value`)을 입력합니다.  
   
  *destination_expression*  
- (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`).  
+ (**Variant**) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ProductID.Value`)을 입력합니다.  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!ProductName.Value`).  
+ (**Variant**) *source_expression* = *destination_expression*인 데이터 세트의 행에 대해 평가되고, 검색할 값을 지정하는 식입니다. `=Fields!ProductName.Value`)을 입력합니다.  
   
- *데이터 집합(dataset)*  
+ *데이터 세트*  
  보고서의 데이터 세트 이름을 지정하는 상수입니다. 예를 들면 "Products"입니다.  
   
 ## <a name="return"></a>반환 값  
  **Variant**를 반환하거나, 일치하는 항목이 없으면 **Nothing** 을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- **Lookup** 을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 **Lookup**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
+ **Lookup**을 사용하여 일 대 일 관계의 이름/값 쌍에 대한 지정된 데이터 세트에서 값을 검색할 수 있습니다. 예를 들어 테이블에 있는 ID 필드의 경우 **Lookup**을 사용하여 데이터 영역에 바인딩되지 않은 데이터 세트에서 해당하는 이름 필드를 검색할 수 있습니다.  
   
  **Lookup** 은 다음을 수행합니다.  
   

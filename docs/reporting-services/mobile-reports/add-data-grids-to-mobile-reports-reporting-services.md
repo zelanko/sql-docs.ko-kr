@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 39b22e5d32d835281e6194e996ab7e27b2c3519d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661901"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292291"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>모바일 보고서에 데이터 표 추가 | Reporting Services
 경우에 따라 가장 적합한 시각화는 데이터 자체입니다. *에 데이터를 표시하기 위해 다음 세 가지*데이터 표 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]또는 테이블에 대해 알아봅니다.
@@ -30,7 +30,7 @@ ms.locfileid: "47661901"
 
 1. **레이아웃** 탭에서 디자인 눈금으로 단순 데이터 표를 끌어서 원하는 크기로 만듭니다.
 
-2. [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
+2. [Excel 또는 공유 데이터 세트의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
 
 3. **데이터** 탭을 선택하고 **데이터 속성** 창의 **그리드 뷰에 대한 데이터** 아래에서 데이터 테이블을 선택합니다.
 

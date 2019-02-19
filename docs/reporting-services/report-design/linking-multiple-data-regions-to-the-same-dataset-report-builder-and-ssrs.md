@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d425b49397710a8e7b7f400fe24430a5f40208b9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df5f041fb48fce0eec938e09f1718157631e67bb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021067"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296651"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>동일한 데이터 세트에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
 

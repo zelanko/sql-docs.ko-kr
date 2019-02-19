@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e9a9a199-40e3-4381-b250-1b99fb83aa62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4e12b16ecf8df3452d327152638b794c58e2ec67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2ccdfd03ab901d866f70a849adf44e18f0a0a44e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853401"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291981"
 ---
 # <a name="retain-date-formatting-for-analysis-services-in-mobile-reports"></a>모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
 보고서 작성기의 공유 데이터 세트에 측정값을 추가하므로 [!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 데이터 원본의 날짜가 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-short.md)]의 데이터 형식을 유지합니다.
 
-[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 쿼리에 대한 기본 반환 형식은 문자열입니다.  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 작성기에 대한 데이터 집합을 만들 때 문자열 형식이 적용되고 서버에 저장됩니다. 
+[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 쿼리에 대한 기본 반환 형식은 문자열입니다.  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 작성기에 대한 데이터 세트를 만들 때 문자열 형식이 적용되고 서버에 저장됩니다. 
 
 그러나 JSON 테이블 렌더러가 데이터 세트를 처리할 때 열의 값을 문자열로 읽고 문자열을 렌더링합니다.  [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 에서 테이블을 가져올 때도 문자열만 보입니다.
 

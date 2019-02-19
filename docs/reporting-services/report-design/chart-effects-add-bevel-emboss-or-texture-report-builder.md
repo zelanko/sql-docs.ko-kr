@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 737cfc80-b39e-497c-817b-b46693deb58f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9318aaa40ae8dc8dc2689ff511afc95752b0b50c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53c9e31720d331218e95edaa2081e5219f0bc674
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703791"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287311"
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>차트 효과 - 3D 가장자리, 볼록 또는 질감(보고서 작성기)
   특정 차트 종류를 사용할 때 그리기 효과를 지정하여 차트의 시각적 효과를 높일 수 있습니다. 이러한 그리기 효과는 차트의 계열에만 적용됩니다. 다른 차트 요소에는 그리기 효과가 아무런 영향을 주지 않습니다.  

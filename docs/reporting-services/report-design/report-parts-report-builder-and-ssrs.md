@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: adedbb3c4e173a1b27c0f1d911f847c5e69fe956
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c536d94d9bbec76cb4b1887f46890680c26a116
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542225"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291291"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 페이지를 매긴 보고서 항목으로, 다른 페이지를 매긴 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "52542225"
 ### <a name="what-comes-with-a-report-part"></a>보고서 파트와 함께 추가되는 내용  
  보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 개체는 데이터 세트, 즉 쿼리와 데이터 원본에 대한 연결에 따라 달라집니다. 또한 매개 변수도 하나 이상 있을 수 있습니다. 보고서 파트가 사용하는 모든 항목을 파트의 *종속성*이라고 하며, 이러한 모든 항목 또는 항목에 대한 포인터는 보고서 파트를 보고서에 추가할 때 함께 포함됩니다. 데이터 세트 및 매개 변수는 보고서의 보고서 데이터 창에 나열됩니다.  
   
- 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 포함된 데이터 집합 및 공유 데이터 집합에 대한 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)를 참조하세요.  
+ 보고서 파트의 데이터 세트는 보고서 파트에 포함되어 있을 수도 있고 보고서 파트가 가리키는 별도의 공유 데이터 세트일 수도 있습니다. 보고서 파트에 포함된 데이터 집합은 수정할 수 있습니다. 공유 데이터 세트의 경우에는 별도의 개체이므로 해당 권한이 필요합니다. 포함된 데이터 세트 및 공유 데이터 세트에 대한 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 ### <a name="resolving-naming-conflicts"></a>이름 지정 충돌 해결  
  보고서 파트를 추가할 때 보고서 작성기는 이름 충돌을 해결합니다. 예를 들어 보고서에 이미 Chart1이 있는데 Chart1 보고서 파트를 또 추가하면 보고서 작성기가 자동으로 새 보고서 파트 이름을 Chart2로 바꿉니다. 보고서에 이미 Dataset1이 있는데 역시 이름이 Dataset1인 다른 데이터 세트를 참조하는 보고서 파트를 추가하는 경우에는 보고서 작성기가 새 데이터 세트 이름을 Dataset2로 바꾸고 참조를 업데이트합니다.  
@@ -139,7 +139,7 @@ ms.locfileid: "52542225"
  [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
+ [보고서 작성기의 보고서 파트 및 데이터 세트](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
   

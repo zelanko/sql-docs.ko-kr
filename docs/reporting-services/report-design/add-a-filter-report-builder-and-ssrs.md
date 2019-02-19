@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d187de9f11995762599bf8c7b95eb1813c811e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfc6115dbda5bbdeeac2ca629c5e7adb4d4a1fd8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517402"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296201"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>필터 추가(보고서 작성기 및 SSRS)
   계산 또는 표시 내용에 특정 값을 포함하거나 제외하려는 경우 데이터 세트, 데이터 영역 또는 그룹에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "52517402"
   
  차트에서 데이터 요소를 필터링하려면 범주 그룹이나 계열 그룹에 대해 필터를 설정하면 됩니다. 기본적으로 차트에서는 기본 제공 함수 Sum을 사용하여 동일한 그룹에 속하는 값을 계열의 개별 데이터 요소로 집계합니다. 계열의 집계 함수를 변경할 경우에는 필터 식의 집계 함수를 변경해야 합니다.  
   
- 포함된 데이터 집합 및 공유 데이터 집합 필터링에 대한 자세한 내용은 [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+ 포함된 데이터 세트 및 공유 데이터 세트 필터링에 대한 자세한 내용은 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -125,7 +125,7 @@ ms.locfileid: "52517402"
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

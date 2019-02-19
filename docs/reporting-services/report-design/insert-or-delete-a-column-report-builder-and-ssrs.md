@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: dffdb905e32114b8415a6d8ffd43144f8b1adc82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c00aa822bee05e34a02957c8de2b091db1846316
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799261"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291181"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>열 삽입 또는 삭제(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 테이블릭스 데이터 영역에서 열을 추가하거나 삭제할 수 있습니다. 테이블릭스 데이터 영역은 테이블, 행렬 또는 목록일 수 있습니다. 차트 및 계기 데이터 영역에는 다음 절차가 적용되지 않습니다.  

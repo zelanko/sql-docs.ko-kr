@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver의 기능 종속성 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b9d9fea0f211809fd65b65459d50daa7a85db88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: 26402f5b15fa7dd8e24b13f3adc41836ff275228
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736954"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154688"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver의 기능 종속성
 
@@ -26,10 +26,10 @@ ms.locfileid: "55736954"
 
 ## <a name="compile-time"></a>컴파일 시간
 
- - `com.microsoft.azure:azure-keyvault`: 항상 암호화 Azure Key Vault 기능 (선택 사항)에 대 한 azure Key Vault Provider
- - `com.microsoft.azure:azure-keyvault-webkey`: 항상 암호화 Azure Key Vault 기능 (선택 사항)에 대 한 azure Key Vault Provider
- - `com.microsoft.azure:adal4j`: Azure Active Directory 인증 기능 및 (선택 사항) Azure Key Vault 기능에 대 한 Java 용 azure Active Directory 라이브러리
- - `com.microsoft.rest:client-runtime`: Azure Active Directory 인증 기능 및 (선택 사항) Azure Key Vault 기능에 대 한 Java 용 azure Active Directory 라이브러리
+ - `com.microsoft.azure:azure-keyvault` : 항상 암호화 Azure Key Vault 기능 (선택 사항) azure Key Vault Provider
+ - `com.microsoft.azure:azure-keyvault-webkey` : 항상 암호화 Azure Key Vault 기능 (선택 사항) azure Key Vault Provider
+ - `com.microsoft.azure:adal4j` : Azure Active Directory 인증 기능 및 (선택 사항) Azure Key Vault 기능에 대 한 Java 용 azure Active Directory 라이브러리
+ - `com.microsoft.rest:client-runtime` : Azure Active Directory 인증 기능 및 (선택 사항) Azure Key Vault 기능에 대 한 Java 용 azure Active Directory 라이브러리
 - `org.osgi:org.osgi.core`: OSGi 프레임 워크 지원 위한 OSGi 핵심 라이브러리입니다.
 - `org.osgi:org.osgi.compendium`: OSGi 프레임 워크 지원 위한 OSGi 개론 라이브러리입니다.
 
@@ -43,7 +43,7 @@ ms.locfileid: "55736954"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -66,7 +66,7 @@ ms.locfileid: "55736954"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.0.jre11</version>
+    <version>7.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -99,11 +99,11 @@ ms.locfileid: "55736954"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault 공급자를 사용 합니다.
 
-- JDBC 드라이버 버전 7.2.0-종속성 버전: -Azure-keyvault (버전 1.2.0), Azure Keyvault Webkey (버전 1.2.0) Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC 드라이버 버전 7.0.0-종속성 버전: -Azure-keyvault (버전 1.0.0) Adal4j (버전 1.6.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC 드라이버 버전 6.4.0-종속성 버전: -Azure-keyvault (버전 1.0.0) Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 드라이버 버전 6.2.2-종속성 버전: -Azure-keyvault (버전 1.0.0) Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- JDBC 드라이버 버전 6.0.0-종속성 버전: -Azure-keyvault (버전 0.9.7) Adal4j (버전 1.3.0) 및 해당 종속성 ( [샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- JDBC 드라이버 버전 7.2.1-종속성 버전: Azure-keyvault (버전 1.2.0), Azure Keyvault Webkey (버전 1.2.0) Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC 드라이버 버전 7.0.0-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.6.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC 드라이버 버전 6.4.0-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC 드라이버 버전 6.2.2-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- JDBC 드라이버 버전 6.0.0-종속성 버전: Azure-keyvault (버전 0.9.7), Adal4j (버전 1.3.0) 및 해당 종속성 ( [샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > 6.2.2 및 6.4.0 드라이버 버전을 사용 하 여 azure-keyvault-java 종속성 버전 1.0.0으로 업데이트 되었습니다. 그러나 새 버전 (0.9.7) 이전 버전과 호환 되지 및 드라이버의 기존 구현을 중단 합니다. 드라이버에서 새 구현을 Azure 키 자격 증명 모음 공급자를 사용 하는 클라이언트 프로그램에서 중단 하는 API를 변경 해야 합니다.
@@ -112,7 +112,7 @@ ms.locfileid: "55736954"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Azure Active Directory 인증 사용
 
-- JDBC 드라이버 버전 7.2.0-종속성 버전: Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성
+- JDBC 드라이버 버전 7.2.1-종속성 버전: Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성
 - JDBC 드라이버 버전 7.0.0-종속성 버전: Adal4j (버전 1.6.0) 및 해당 종속성
 - JDBC 드라이버 버전 6.4.0-종속성 버전: Adal4j (버전 1.4.0) 및 해당 종속성
 - JDBC 드라이버 버전 6.2.2-종속성 버전: Adal4j (버전 1.4.0) 및 해당 종속성

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f3eafaec96e27d6e78521b0c4ef7580af103a12e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d3e1eca43d386a11955eac7974baaf4a1d7282a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792251"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292586"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>행렬 및 차트에 같은 데이터 표시(보고서 작성기)
   행렬 및 차트에 같은 데이터를 표시하려면 두 데이터 영역에서 같은 데이터 세트를 지정하는 속성을 설정해야 하고 필터, 그룹, 정렬 및 데이터에 대한 동일한 식도 지정해야 합니다.  
@@ -22,7 +22,7 @@ ms.locfileid: "47792251"
   
  행렬 열 그룹 값을 차트에 대한 범례로 사용하려면 차트의 계열 데이터에 대한 색을 지정한 다음 같은 색을 그룹 값을 표시하는 행렬 셀의 입력란 배경색으로 사용해야 합니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)을 참조하세요.  
   
- 보고서에 그룹 정의에 대한 그룹 값이 너무 많은 경우 런타임에 보고서가 복잡하게 표시될 수 있습니다. 값을 필터링하고 그룹을 결합하거나 차트에서 그룹을 결합하는 임계값을 조정해야 할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ 보고서에 그룹 정의에 대한 그룹 값이 너무 많은 경우 런타임에 보고서가 복잡하게 표시될 수 있습니다. 값을 필터링하고 그룹을 결합하거나 차트에서 그룹을 결합하는 임계값을 조정해야 할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결하기 &amp;#40;보고서 작성기 및 SSRS#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -69,7 +69,7 @@ ms.locfileid: "47792251"
   
 15. **추가**를 클릭합니다. 새로운 행이 정렬 식 표에 나타납니다.  
   
-16. **정렬 기준**의 드롭다운 목록에서 9단계에서 그룹화할 대상으로 선택했던 데이터 집합 필드를 선택합니다.  
+16. **정렬 기준**의 드롭다운 목록에서 9단계에서 그룹화할 대상으로 선택했던 데이터 세트 필드를 선택합니다.  
   
 17. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -87,15 +87,15 @@ ms.locfileid: "47792251"
   
 22. **추가**를 클릭합니다. 새로운 행이 정렬 식 표에 나타납니다.  
   
-23. **정렬 기준**의 드롭다운 목록에서 16단계에서 그룹화할 대상으로 선택했던 데이터 집합 필드를 선택합니다.  
+23. **정렬 기준**의 드롭다운 목록에서 16단계에서 그룹화할 대상으로 선택했던 데이터 세트 필드를 선택합니다.  
   
 24. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 25. 결과를 미리 봅니다. 행렬 행 및 열 그룹에 차트 계열 및 범주 그룹과 같은 데이터가 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   

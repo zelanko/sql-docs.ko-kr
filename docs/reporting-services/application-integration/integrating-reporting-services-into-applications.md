@@ -8,12 +8,12 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 900ec3c13cae856dea769d6a761cf502557a4d22
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: bce7e59a66701e519a4f2bc5706bfbec5f88eba2
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028982"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331473"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>애플리케이션에 Reporting Services 통합
 
@@ -24,7 +24,7 @@ ms.locfileid: "50028982"
 > [!NOTE]
 > SQL Server 2017 Reporting Services부터 솔루션을 개발하는 데 REST API 액세스를 사용할 수 있습니다. SOAP API 액세스는 더 이상 사용되지 않습니다. 자세한 내용은 [Reporting Services에 대한 REST API를 사용하여 개발](../developer/rest-api.md)을 참조하세요.
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 데는 보고서 서버 웹 서비스([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API라고도 함), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]용 보고서 뷰어 컨트롤, URL 액세스의 세 가지 옵션이 있습니다. 각 옵션에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하기 위한 서로 다른 방법을 제공합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 데는 보고서 서버 웹 서비스([!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SOAP API라고도 함), [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]용 보고서 뷰어 컨트롤, URL 액세스의 세 가지 옵션이 있습니다. 각 옵션에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 응용 프로그램에 통합하기 위한 서로 다른 방법을 제공합니다.
   
 ## <a name="report-server-web-service"></a>보고서 서버 웹 서비스
 
@@ -32,7 +32,7 @@ ms.locfileid: "50028982"
   
 ## <a name="report-viewer-controls-for-visual-studio"></a>Visual Studio용 보고서 뷰어 컨트롤
 
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 사용 가능한 보고서 뷰어 컨트롤은 보고서 보기를 응용 프로그램에 통합하는 데 사용합니다. 컨트롤에는 Windows Forms 기반 응용 프로그램용과 Web Forms 응용 프로그램용 두 가지가 있습니다. 각 컨트롤은 보고서 서버에 배포된 보고서를 보기 위한 기능뿐만 아니라 보고서 서버가 설치되지 않은 환경에 있는 보고서를 렌더링하는 기능도 제공합니다.  
+ [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 사용 가능한 보고서 뷰어 컨트롤은 보고서 보기를 애플리케이션에 통합하는 데 사용합니다. 컨트롤에는 Windows Forms 기반 응용 프로그램용과 Web Forms 응용 프로그램용 두 가지가 있습니다. 각 컨트롤은 보고서 서버에 배포된 보고서를 보기 위한 기능뿐만 아니라 보고서 서버가 설치되지 않은 환경에 있는 보고서를 렌더링하는 기능도 제공합니다.  
   
 ## <a name="url-access"></a>URL 액세스  
  URL 액세스는 보고서 뷰어 컨트롤을 사용하지 않을 경우 보고서 보기를 애플리케이션에 통합하기 위한 또 다른 옵션입니다. 그 외에도 URL 액세스는 전자 메일을 통해 사용자에게 보고서에 대한 링크를 보내는 데도 유용합니다.  

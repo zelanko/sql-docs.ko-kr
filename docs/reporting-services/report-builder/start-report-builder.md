@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 0159f5193d2d492696e399989ad18580ed142155
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c7373c11f34848f771faf064a9e0db10cccaa9d4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711774"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285451"
 ---
 # <a name="start-report-builder"></a>보고서 작성기 시작
 

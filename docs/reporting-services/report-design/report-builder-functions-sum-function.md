@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2b45a024-398d-43b8-9948-b8b23fb674c9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab034a9421e45b7e7d1359691725914d7649d690
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 690422b46505a22f9d15f59449be08162ec2e85a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028812"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292235"
 ---
 # <a name="report-builder-functions---sum-function"></a>보고서 작성기 함수 - Sum 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 합계를 반환합니다.  
@@ -50,7 +50,7 @@ Sum(expression, scope, recursive)
   
 -   중첩 집계의*Scope* 는 외부 집계의 범위와 동일하거나 외부 집계의 범위에 포함되어야 합니다. 식에 있는 모든 고유 범위의 경우 한 범위는 다른 모든 범위에 대한 자식 관계에 있어야 합니다.  
   
--   중첩 집계의*Scope* 는 데이터 집합의 이름일 수 없습니다.  
+-   중첩 집계의 *Scope*는 데이터 세트의 이름일 수 없습니다.  
   
 -   *Expression* 에는 **First**, **Last**, **Previous**또는 **RunningValue** 함수가 포함되지 않아야 합니다.  
   

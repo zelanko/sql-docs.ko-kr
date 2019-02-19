@@ -36,14 +36,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.minorgridlineproperties.visibility.f1
 - sql13.rtp.rptdesigner.seriesproperties.visibility.f1
 ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8904fb5fc75ee169c8b442b89f87de6e62394b87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53a4c9dd5969e853754c0dbe56eb2878e0a140aa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727921"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292931"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>드릴다운 동작(보고서 작성기 및 SSRS)
 입력란에 더하기 및 빼기 아이콘을 제공하면 사용자가 항목을 대화식으로 숨기거나 표시할 수 있습니다. 이를 *드릴다운* 동작이라고 합니다. 테이블 또는 행렬에 대해서는 정적 행과 열 또는 그룹과 연결된 행과 열을 표시하거나 숨길 수 있습니다.  

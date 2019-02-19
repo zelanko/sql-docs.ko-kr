@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6beb41ffbf94f803887f5e72bfe7e527c7f6c8b2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 14bf75b9dcb5be2a1853751874053c9075781619
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029882"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285902"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)
   웹 기반 환경에서 사용자가 보고서와 상호 작용할 수 있도록 해주는 다양한 기능을 추가할 수 있습니다. 사용자는 보고서 값의 정렬 순서를 변경할 수 있고, 보고서의 항목을 표시하거나 숨길 수 있으며, 다른 보고서나 웹 페이지로 이동하는 링크를 클릭할 수 있습니다. 또한 목차나 문서 구조를 추가할 수 있습니다. 보고서 사용자는 목차나 문서 구조의 항목을 클릭하여 보고서 내의 영역으로 이동할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "50029882"
 > [!NOTE]  
 >  데이터 세트 필드에 바인딩된 링크는 악의적 의도를 가진 사용자가 임의로 변경할 수도 있습니다. 자세한 내용은 msdn.microsoft.com의 [온라인 설명서](../../reporting-services/security/secure-reports-and-resources.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][보고서 및 리소스 보안](https://go.microsoft.com/fwlink/?LinkId=154888) 을 참조하세요.  
   
- 정렬, 필터 및 표시 유형에 대한 매개 변수 참조를 포함하는 식을 디자인하면 사용자가 보고서 표시 및 콘텐츠를 제어하는 것이 가능합니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
+ 정렬, 필터 및 표시 유형에 대한 매개 변수 참조를 포함하는 식을 디자인하면 사용자가 보고서 표시 및 콘텐츠를 제어하는 것이 가능합니다. 자세한 내용은 [보고서 매개 변수&amp;#40;보고서 작성기 및 보고서 디자이너&amp;#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md), [데이터 필터링, 그룹화 및 정렬&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

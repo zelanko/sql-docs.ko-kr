@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7733d3d68e0c4888d865f34ecae243e803636526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 255332399739b84a3f52446d97e6cf553c5c198b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612831"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286081"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>보고서 페이지에서 테이블릭스 데이터 영역 표시 제어
 보고서를 볼 때 나타나는 방식을 변경하려면 테이블, 행렬 또는 목록 데이터 영역에 대해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 설정할 수 있는 속성을 참조하세요.  
@@ -36,7 +36,7 @@ ms.locfileid: "47612831"
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>페이지에서 테이블릭스 데이터 영역 위치 및 확장 제어  
  다음 기능을 사용하여 테이블릭스 데이터 영역이 렌더링된 보고서에 표시되는 방법을 제어할 수 있습니다.  
   
--   **다른 보고서 항목을 기준으로 테이블릭스 데이터 영역의 위치 제어**. 테이블릭스 데이터 영역은 보고서 디자인 화면에서 다른 보고서 항목의 위, 옆 또는 아래에 배치될 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 런타임에 피어 보고서 항목을 필요에 따라 이동하면서 연결된 데이터 집합에서 검색된 데이터에 맞게 테이블릭스 데이터 영역을 확장합니다. 다른 보고서 항목 옆에 테이블릭스를 고정시키려면 보고서 항목을 피어로 만들고 상대적 위치를 조정합니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
+-   **다른 보고서 항목을 기준으로 테이블릭스 데이터 영역의 위치 제어**. 테이블릭스 데이터 영역은 보고서 디자인 화면에서 다른 보고서 항목의 위, 옆 또는 아래에 배치될 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 런타임에 피어 보고서 항목을 필요에 따라 이동하면서 연결된 데이터 세트에서 검색된 데이터에 맞게 테이블릭스 데이터 영역을 확장합니다. 다른 보고서 항목 옆에 테이블릭스를 고정시키려면 보고서 항목을 피어로 만들고 상대적 위치를 조정합니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
 -   **확장 방향 변경**. 페이지에서 테이블릭스 데이터 영역을 LTR(왼쪽에서 오른쪽) 또는 RTL(오른쪽에서 왼쪽)로 확장할지 여부를 제어하려면 속성 창을 통해 액세스할 수 있는 Direction 속성을 사용합니다. 자세한 내용은 [데이터 영역 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47612831"
  보고서를 다른 형식으로 내보내는 경우 페이지에서 테이블릭스 데이터 영역이 렌더링되는 방식에 미치는 영향은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [페이지 나누기, 머리글, 열 및 행 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   

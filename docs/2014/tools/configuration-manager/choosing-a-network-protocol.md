@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -24,12 +23,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068573"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407553"
 ---
 # <a name="choosing-a-network-protocol"></a>네트워크 프로토콜 선택
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시에 여러 프로토콜에 대 한 요청을 처리할 수 있습니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42f53c59b6e18ee998feed08e3656de866310f70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3bd4bf8f1bca89cf219d9985e58ca9bb2350d686
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681771"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288661"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 표시하기 위한 데이터 준비(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역에는 데이터 세트의 데이터가 표시됩니다. 데이터 세트에 대해 검색된 모든 데이터를 보거나 필터를 만들어 일부 데이터만 볼 수 있습니다. 또한 조건 식을 추가하여 null 값을 채우거나 데이터 세트에 대한 쿼리를 수정하여 기존 열에 대한 정렬 순서를 정의하는 열을 포함할 수도 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47681771"
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에서 데이터를 검색하기 전에 null을 제거하는 방법에 대한 자세한 내용은 [NULL 및 UNKNOWN(Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)을 참조하세요.  
   
 ## <a name="handling-null-field-names"></a>Null 필드 이름 처리  
- 식에서 Null 값을 테스트하는 것은 쿼리 결과 집합에 필드 자체가 있는 한 문제가 되지 않습니다. 사용자 지정 코드에서는 런타임에 데이터 원본으로부터 반환된 컬렉션 필드에 Null 필드가 나타나는지 여부를 테스트할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
+ 식에서 Null 값을 테스트하는 것은 쿼리 결과 집합에 필드 자체가 있는 한 문제가 되지 않습니다. 사용자 지정 코드에서는 런타임에 데이터 원본으로부터 반환된 컬렉션 필드에 Null 필드가 나타나는지 여부를 테스트할 수 있습니다. 자세한 내용은 [데이터 세트 필드 컬렉션 참조&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
 ## <a name="adding-a-sort-order-column"></a>정렬 순서 열 추가  
  기본적으로 데이터 세트 필드의 값을 사전순으로 정렬할 수 있습니다. 다른 순서로 정렬하려면 데이터 세트에 데이터 영역에서의 정렬 순서를 정의하는 새 열을 추가합니다. 예를 들어 `[Color]` 필드에 대해 정렬을 수행하고 흰색과 검정색 항목을 먼저 정렬하려면 다음 쿼리처럼 `[ColorSortOrder]`열을 추가합니다.  
@@ -53,7 +53,7 @@ FROM Production.Product p
  이 정렬 순서에 따라 테이블 데이터 영역을 정렬하려면 세부 정보 그룹의 정렬 식을 `=Fields!ColorSortOrder.Value`로 설정합니다. 자세한 내용은 [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   

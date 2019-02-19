@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: be9b19dc11917de04b00592d1dbfdb22b54cd742
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cba12c0524f3f6955a720f54322d220209c36b55
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790881"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294151"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
   페이지 머리글 또는 바닥글에 정적 텍스트, 이미지, 선, 사각형 및 테두리를 추가할 수 있습니다. 머리글 또는 바닥글에 변수나 계산된 데이터를 포함하려면 입력란에 식 및 데이터 바인딩된 이미지를 배치합니다.  

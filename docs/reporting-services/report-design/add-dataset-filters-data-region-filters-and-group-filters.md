@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9435b891652c00391cd934cf739ba76ff20f4a82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d6d397d3c2f841bb98d49cfdf42d525f0d9b4fc2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779421"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286051"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 세트를 사용하는 경우와 같이 데이터 세트 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  
   
  필터를 사용하여 보고서에서 표시 및 처리되는 데이터를 제어할 수 있습니다. 데이터 세트, 데이터 영역, 그룹 또는 이러한 항목의 조합에 대해 필터를 지정할 수 있습니다.  
   
- 자세한 내용은 [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
+ 자세한 내용은 [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md) 및 [필터 수식 예&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -35,13 +35,13 @@ ms.locfileid: "47779421"
   
  다음 목록에서는 여러 보고서 항목에 필터를 설정할 때의 결과를 비교합니다.  
   
--   **데이터 집합** 단일 데이터 집합에 바인딩되는 하나 이상의 데이터 영역을 동일한 방식으로 필터링하려는 경우 데이터 집합에 필터를 설정합니다. 예를 들어 매출 데이터를 표시하는 테이블과 동일한 데이터를 표시하는 차트 모두에 바인딩되는 데이터 세트에 필터를 설정합니다.  
+-   **데이터 세트** 단일 데이터 세트에 바인딩되는 하나 이상의 데이터 영역을 동일한 방식으로 필터링하려는 경우 데이터 세트에 필터를 설정합니다. 예를 들어 매출 데이터를 표시하는 테이블과 동일한 데이터를 표시하는 차트 모두에 바인딩되는 데이터 세트에 필터를 설정합니다.  
   
--   **데이터 영역** 단일 데이터 집합에 바인딩되는 하나 이상의 데이터 영역에서 데이터 집합의 다른 보기를 제공하도록 하려는 경우 데이터 영역에 필터를 설정합니다. 예를 들어 한 테이블 데이터 영역에 필터를 설정하여 매출 상위 10개의 대리점을 표시하고, 다른 테이블 데이터 영역에 필터를 설정하여 매출 하위 10개의 대리점을 동일한 보고서에 표시할 수 있습니다.  
+-   **데이터 영역** 단일 데이터 세트에 바인딩되는 하나 이상의 데이터 영역에서 데이터 세트의 다른 보기를 제공하도록 하려는 경우 데이터 영역에 필터를 설정합니다. 예를 들어 한 테이블 데이터 영역에 필터를 설정하여 매출 상위 10개의 대리점을 표시하고, 다른 테이블 데이터 영역에 필터를 설정하여 매출 하위 10개의 대리점을 동일한 보고서에 표시할 수 있습니다.  
   
 -   **테이블릭스 데이터 영역의 행 또는 열 그룹** 그룹 식에 대해 특정 값을 포함하거나 제외하여 테이블, 행렬 또는 목록에 표시되는 그룹 값을 제어하려는 경우 그룹에 필터를 설정합니다.  
   
--   **테이블릭스 데이터 영역의 세부 정보 그룹** 데이터 영역에 대한 여러 개의 세부 정보 그룹이 있고 각 세부 정보 그룹에 해당 데이터 집합의 다른 데이터를 표시하려는 경우에는 세부 정보 그룹에 필터를 설정합니다.  
+-   **테이블릭스 데이터 영역의 세부 정보 그룹** 데이터 영역에 대한 여러 개의 세부 정보 그룹이 있고 각 세부 정보 그룹에 해당 데이터 세트의 다른 데이터를 표시하려는 경우에는 세부 정보 그룹에 필터를 설정합니다.  
   
 -   **차트 데이터 영역의 계열 또는 범주 그룹** 그룹 식에 대해 특정 값을 포함하거나 제외하여 차트에 표시되는 값을 제어하려는 경우 계열 또는 범주 그룹에 필터를 설정합니다.  
   

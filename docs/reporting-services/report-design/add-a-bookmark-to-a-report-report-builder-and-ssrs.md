@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 73268c03ef80b13a28d8011f9b6860abcfac79e2
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 776dfbba57afe73e019a9c1c671e8f2bae63165b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030372"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285491"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>보고서에 책갈피 추가(보고서 작성기 및 SSRS)
   사용자 지정된 목차를 제공하거나 보고서의 사용자 지정된 내부 탐색 링크를 제공하려는 경우 보고서에 책갈피 또는 책갈피 링크를 추가합니다. 일반적으로 각 테이블 또는 차트나 테이블 또는 행렬에 표시된 고유한 그룹 값 등 사용자를 안내하려는 보고서 위치에 책갈피를 추가합니다. 사용자 고유의 문자열을 만들어 책갈피로 사용하거나 그룹의 경우 책갈피를 그룹 식으로 설정할 수 있습니다.  

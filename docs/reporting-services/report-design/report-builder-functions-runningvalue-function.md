@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 6bee2f15-0e69-49c8-9689-b04544063b1d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 221fde16d239fa304c6f8dccbd90720d24b4b36d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1828388fd3079a6a59e840143c2db25d55f4072a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021517"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291311"
 ---
 # <a name="report-builder-functions---runningvalue-function"></a>보고서 작성기 함수 - RunningValue 함수
   식으로 지정되어 정해진 범위에서 계산되는 Null이 아닌 모든 숫자 값의 실행 집계를 반환합니다.  
@@ -36,7 +36,7 @@ RunningValue(expression, function, scope)
  (**Enum**) 식에 적용할 집계 함수의 이름입니다(예: **Sum**). 이 함수는 **RunningValue**, **RowNumber**또는 **Aggregate**일 수 없습니다.  
   
  *범위*  
- **String**) 집계를 계산할 컨텍스트를 지정하는 데이터 집합, 데이터 영역, 그룹의 이름인 문자열 상수 또는 Null(**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing** 은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 집합입니다.  
+ (**String**) 집계를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름인 문자열 상수 또는 null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  반환 형식은 *function* 매개 변수에 지정된 집계 함수에 의해 결정됩니다.  

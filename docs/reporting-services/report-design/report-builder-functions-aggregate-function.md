@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ea1a6e2a0cca043fc7465a3dd7408ec24ab98286
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24aba85806b6f13fac47371fc98d952afd0e177b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202592"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287521"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>보고서 작성기 함수 - 집계 함수
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  

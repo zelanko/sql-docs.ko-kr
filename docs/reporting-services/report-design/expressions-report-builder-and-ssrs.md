@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9790f320fe6f6ebe61eff665de625f9c9cfe77d2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205022"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285991"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 에서 페이지를 매긴 보고서 전체에서 광범위하게 사용됩니다. 

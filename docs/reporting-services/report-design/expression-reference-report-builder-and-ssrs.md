@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662243a595790efdc4ad29aeff266e097b370dde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 137699f1e533d2c91498674fa08c93b2987c319a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832741"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286391"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>식 참조(보고서 작성기 및 SSRS)
   보고서 식은 기본 제공 함수 및 기본 제공 컬렉션에 대한 다양한 참조를 지원합니다. 식에 올바른 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 구문이 있어야만 보고서를 게시하거나 처리할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "47832741"
   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [데이터 세트 필드 컬렉션 참조&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
  [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc62408e329f0ea6e75e96a6da272237f3a0ac7b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774401"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288481"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Prepare data for Reporting Services mobile reports
   
@@ -33,7 +33,7 @@ ms.locfileid: "47774401"
   
 대부분의 경우 날짜 및 시간 기반 데이터 세트가 하나 이상의 날짜/시간 간격(예: 시간별, 일별, 월별, 분기별 및 연간)으로 설명됩니다. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서는 다양한 세분성의 여러 테이블을 조합하고 이를 단일 모바일 보고서에 표시할 수 있습니다. 그러나 최종 모바일 보고서에 사용자에게 표시할 날짜/시간 필터 옵션을 결정할 때 도움이 될 수 있도록 원래 데이터 세트에서 관련 간격을 염두에 두어야 합니다.  
 
-[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 다차원 및 테이블 형식 모델의 날짜 필드는 공유 데이터 집합에서 날짜 서식이 손실될 수 있습니다. 서식을 유지하는 솔루션은 [모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 를 참조하세요.
+[!INCLUDE[ssASnoversion_md](../../includes/ssasnoversion-md.md)] 다차원 및 테이블 형식 모델의 날짜 필드는 공유 데이터 세트에서 날짜 서식이 손실될 수 있습니다. 서식을 유지하는 솔루션은 [모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 를 참조하세요.
   
 ## <a name="preparing-filter-data"></a>필터 데이터 준비 ##  
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서 날짜/시간 필드 및 키 필드 모두를 기반으로 데이터를 필터링할 수 있습니다. 키 필드는 숫자일 수 있지만 대부분의 경우 ID 또는 문자열 값입니다. 선택 목록 등 탐색기 요소와 함께 사용할 필터 필드를 준비하려면 필터 키가 데이터 테이블에서 단일 열이어야 합니다. 이런 방식으로 필터 열의 값에 따라 테이블 행을 그룹화할 수 있습니다. 서로 다른 필터 키 또는 필터 조건을 포함하는 여러 열에 대해 모바일 보고서에서 여러 필터 탐색기를 계층적 또는 개별적으로 함께 사용할 수 있습니다.  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664063"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288391"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>이미지, 입력란, 사각형 및 선(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 테이블, 행렬 및 차트 같은 데이터 영역 외에도 이미지, 입력란 및 사각형과 같은 다른 보고서 항목을 사용하여 시각적 효과를 추가하거나 핵심 정보를 강조 표시하거나 관련 정보를 제공할 수 있습니다. 또한 보고서 항목의 서식을 변경할 수도 있습니다. 예를 들어 테두리 또는 패딩을 추가하거나 초기 표시 유형 또는 방향을 변경하거나 항목의 정확한 크기와 위치를 지정할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47664063"
  테이블 또는 행렬의 각 셀에는 독립 실행형 입력란과 같은 방법으로 서식을 지정할 수 있는 입력란이 포함되어 있습니다.  
   
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- **선**은 가로, 세로 또는 대각선 방향으로 표시됩니다. 선은 시작점과 끝점으로 정의되며 다양한 스타일을 적용할 수 있습니다(예: 두께 및 색). 또한 선에는 연결된 데이터가 없습니다.  
+ **선** 은 가로, 세로 또는 대각선 방향으로 표시됩니다. 선은 시작점과 끝점으로 정의되며 다양한 스타일을 적용할 수 있습니다(예: 두께 및 색). 또한 선에는 연결된 데이터가 없습니다.  
   
  **사각형** 은 다른 보고서 항목의 컨테이너로 사용하거나 그래픽 요소로 사용할 수 있습니다. 그래픽 요소로 사용하는 경우 직사각형은 선과 같은 속성을 가집니다. 컨테이너로 사용할 경우 사각형은 안에 포함된 모든 보고서 항목에 대한 부모 컨테이너 역할을 합니다. 부모 컨테이너에 보고서 항목을 배치하면 각 보고서 페이지에 보고서 항목이 표시되는 방법을 제어하는 데 도움이 됩니다.  
   

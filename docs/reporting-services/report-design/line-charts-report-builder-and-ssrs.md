@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 048d08d2be7df68a93898651e59e2ea81fd57a9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 18e11aeb1b588a11b441fd1a47778f50aae786f0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744723"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287361"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>꺾은선형 차트(보고서 작성기 및 SSRS)
   꺾은선형 차트에서 계열은 단일 선으로 연결된 일련의 점으로 표시됩니다. 꺾은선형 차트는 연속적인 일정 기간 동안 발생하는 많은 양의 데이터를 표시하는 데 사용됩니다. 꺾은선형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
