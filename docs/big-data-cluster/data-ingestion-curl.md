@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2d1f3139023f326bc230e6269478b6dbfe522361
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c2172b9dda1f6f15b90e0f9a65f0abc179256918
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241974"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425768"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용
 
@@ -35,7 +35,7 @@ kubectl get service service-security-lb -n <cluster name> -o json | jq -r .statu
 
 이제는 WebHDFS를 다음과 같이 액세스 하기 위한 URL을 생성할 수 있습니다.
 
-`https://<service-security-lb service external IP address>:30433/gateway/default/webhdfs/v1/`
+`https://<service-security-lb service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 

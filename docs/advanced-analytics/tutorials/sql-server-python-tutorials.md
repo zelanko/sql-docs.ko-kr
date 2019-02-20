@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046463"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425788"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "54046463"
 
 | 링크 | Description |
 |------|-------------|
-| [빠른 시작: SQL Server에서 "hello world" Python 스크립트](quickstart-r-run-using-tsql.md) | T-sql로 Python을 호출 하는 방법의 기본 사항을 알아봅니다. |
+| [빠른 시작: SQL Server에서 "hello world" Python 스크립트](quickstart-python-run-using-t-sql.md) | T-sql로 Python을 호출 하는 방법의 기본 사항을 알아봅니다. |
 | [빠른 시작: 만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여](quickstart-python-train-score-in-tsql.md) | 입력 및 저장된 프로시저 실행을 제공 하는 저장된 프로시저에서 Python 코드를 포함 하는 방법을 설명 합니다. |
 | [자습서: Revoscalepy를 사용 하 여 모델 만들기](use-python-revoscalepy-to-create-model.md) | SQL Server 계산 컨텍스트를 사용 하 여 원격 Python 터미널에서 코드를 실행 하는 방법에 설명 합니다. Python 도구 및 환경을 사용 하 여 어느 정도 알고 있어야 합니다. 사용 하 여 모델을 만드는 제공 되는 샘플 코드 **rxLinMod**에서 새 **revoscalepy** 라이브러리입니다. |
 | [자습서: SQL 개발자를 위한 데이터베이스 내 Python 분석에 알아봅니다](sqldev-in-database-python-for-sql-developers.md) | 이 종단 간 연습 T-SQL 저장 프로시저를 사용 하 여 완전 한 Python 솔루션 구축 과정을 보여 줍니다. 모든 Python 코드가 포함 됩니다.|
