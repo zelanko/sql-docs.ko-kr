@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420228"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265400"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |관리|예|아니오|아니오|아니오|아니오|  
 |분할된 테이블 병렬 처리|예|아니오|아니오|아니오|아니오|
 |여러 Filestream 컨테이너|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
-|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니오|
+|NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니요 <sup>4</sup>|아니오|아니오|아니오|
 |Buffer Pool Extension|예|예|아니오|아니오|아니오|
 |IO 리소스 관리|예|아니오|아니오|아니오|아니오|  
 |지연된 내구성|예|예|예|예|예|
@@ -188,6 +188,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 <sup>2</sup> [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 적용됩니다. 
 
 <sup>3</sup> 이 기능은 LocalDB 설치 옵션에 포함되지 않습니다.
+
+<sup>4</sup> Standard Edition 및 SQL Server + CAL 기반 라이선스는 SQL Server Standard가 사용할 수 있는 프로세서의 수를 제한 할 수 있지만, SQL Server Standard는 NUMA를 인식합니다. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |기능|Enterprise|Standard|Web|Express|Express with Advanced Services|  
