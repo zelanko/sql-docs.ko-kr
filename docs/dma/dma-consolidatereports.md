@@ -2,7 +2,7 @@
 title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
 description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 02/20/20198
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: d26de5c86485e6e7a2c6a11b8528c55c8ce92229
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300090"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464779"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -37,15 +37,15 @@ ms.locfileid: "54300090"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
     - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출 합니다.
-    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)합니다.
-    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip)합니다.
+    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip)합니다.
+    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip)합니다.
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell 모듈을 로드합니다.
 PowerShell 모듈 디렉터리에 저장 하는 PowerShell 모듈을 사용 하기 전에 명시적으로 로드 하는 데 필요 없이 모듈 호출 할 수 있습니다.
 
 모듈을 로드 하려면 다음 단계를 수행 합니다.
 1. C:\Program Files\WindowsPowerShell\Modules 이동한 다음 라는 폴더를 만듭니다 **DataMigrationAssistant**합니다.
-2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), 사용자가 만든 폴더에 저장 합니다.
+2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), 사용자가 만든 폴더에 저장 합니다.
 
       ![PowerShell 모듈](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -97,13 +97,13 @@ Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만�
 
 DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description
+|매개 변수  |Description |
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
 |**serverName** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
 |**databaseName** | 인벤토리 테이블을 호스팅하는 데이터베이스입니다. |
 |**AssessmentName** | DMA 평가의 이름입니다. |
-|**TargetPlatform** | 수행 하려는 평가 대상 형식입니다.  가능한 값은 **AzureSQLDatabase**, **SQLServer2012**를 **SQLServer2014**하십시오 **SQLServer2016**,  **SQLServerLinux2017**, 및 **SQLServerWindows2017**합니다. |
+|**TargetPlatform** | 수행 하려는 평가 대상 형식입니다.  가능한 값은 **AzureSQLDatabase**, **SQLServer2012**를 **SQLServer2014**하십시오 **SQLServer2016**,  **SQLServerLinux2017**하십시오 **SQLServerWindows2017**, 및 **ManagedSqlServer**합니다. |
 |**AuthenticationMethod** | 평가 하려는 SQL Server 대상에 연결 하기 위한 인증 방법입니다. 가능한 값은 **이렇게 하면 SQLAuth** 하 고 **WindowsAuth**합니다. |
 |**OutputLocation** | JSON을 저장 하는 평가 출력 파일 디렉터리입니다. 평가 중인 데이터베이스 수 및 데이터베이스 내에서 개체의 수에 따라 평가 시간이 아주 오래 걸릴 수 있습니다. 파일은 모든 평가 완료 후에 기록 됩니다. |
 
@@ -119,9 +119,9 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 
 DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description
+|매개 변수  |Description |
 |---------|---------|
-|**processTo**  | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
+|**processTo** | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
 |**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
 |**CreateDMAReporting** | JSON 파일을 처리 하는 것에 대 한 만들기 준비 데이터베이스입니다.  이미 지정한 데이터베이스가 하나에이 매개 변수를 설정 하는 경우 개체 만든 가져오기 하지 마세요.  이 매개 변수는 삭제 된 단일 개체를 다시 만드는 데 유용 합니다. |
 |**CreateDataWarehouse** | Power BI 보고서에서 사용할 데이터 웨어하우스를 만듭니다. |
@@ -161,22 +161,43 @@ dmaProcessor에 평가 파일 처리 완료 후 보고서 데이터 표에 DMARe
 
    보고서에서 데이터를 새로 고쳐 짐 후 합니다 **DMAWarehouse** 다음과 유사한 보고서를 사용 하 여 표시 하는 데이터베이스입니다.
 
-   ![DMAWarehouse 보고서 보기](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report.png)
+   ![DMAWarehouse 보고서 보기](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > 예상 했던 데이터에 표시 되지 않는 경우에 활성 책갈피를 변경해 보세요.  자세한 내용은 기능 섹션을 참조 하세요.
+   > 예상 했던 데이터에 표시 되지 않는 경우에 활성 책갈피를 변경해 보세요.  자세한 내용은 참조는 다음 섹션에서 세부 정보입니다.
 
 ## <a name="working-with-dma-reports"></a>DMA 보고서 사용
-DMA 보고서를 사용 하려면 슬라이서를 기준으로 필터링 하려면 사용 합니다.
+DMA 보고서로 작업 하려면 기준으로 필터링 하려면 책갈피 및 슬라이서를 사용 합니다.
+- 평가 형식 (Azure SQL DB, Azure SQL MI SQL 온-프레미스) 
 - 인스턴스 이름
 - 데이터베이스 이름
 - 팀 이름
 
-또한 보고 컨텍스트 사이 전환 하려면 책갈피를 사용할 수 있습니다.
-- 클라우드 평가
+책갈피 및 필터 블레이드에 액세스 하려면 주 보고서 페이지의 필터 책갈피를 선택 합니다.
+
+![DMA 보고서 책갈피 및 필터](../dma/media//dma-consolidatereports/dma-report-bookmarks-filters.png)
+
+이 통해 다음 블레이드:
+
+![DMA 보고서 보기 블레이드](../dma/media//dma-consolidatereports/dma-report-views-blade.png)
+
+보고 컨텍스트 사이 전환 하려면 책갈피를 사용할 수 있습니다.
+- Azure SQL DB 클라우드 평가
+- Azure SQL MI 클라우드 평가
 - 온-프레미스 평가
 
-  ![DMA 보고서 책갈피](../dma/media//dma-consolidatereports/dma-report-bookmarks.png)
+  ![DMA 보고서 뷰 책갈피](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+
+필터 블레이드, CTRL + 클릭 뒤로 단추를 숨기려면 합니다.
+
+![DMA 보고서 뷰 뒤로 단추](../dma/media//dma-consolidatereports/dma-report-bookmarks-back.png)
+
+필터를 다음 중 하나에 현재 적용 되는지 여부를 표시 하도록 보고서 페이지의 왼쪽 아래에 메시지가 같습니다.
+* FactAssessment-InstanceName
+* FactAssessment-DatabaseName
+* dimDBOwner-DBOwner
+
+![필터가 적용 된 프롬프트](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 
 > [!NOTE]
 > Azure SQL Database 평가만 수행 하면 클라우드 보고서만 채워집니다. 반대로, 온-프레미스 평가만 수행 하면 온-프레미스 보고서만 채워집니다. 그러나 Azure와 온-프레미스 평가 수행 하 고 다음 두 평가 웨어하우스에 로드 전환할 수 있습니다 클라우드 보고서와 CTRL-클릭 하 여 온-프레미스 보고서 간에 연결 된 아이콘.

@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7769edd1718881a01fe0f40ae2b7dc0e8b8ec78a
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159768"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464729"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
@@ -45,7 +45,7 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름   | Y
 |`/AssessmentDatabases`     | 연결 문자열의 공백으로 구분 된 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자 구분 합니다. | Y
-|`/AssessmentTargetPlatform`     | 평가 지원 되는 값에 대 한 대상 플랫폼: SqlServer2012, SqlServer2014, SqlServer2016, 및 AzureSqlDatabaseV12 합니다. 기본값은 SqlServer2016   | N
+|`/AssessmentTargetPlatform`     | 평가 지원 되는 값에 대 한 대상 플랫폼: AzureSqlDatabase ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 및 SqlServerWindows2017 합니다. 기본값은 SqlServerWindows2017   | N
 |`/AssessmentEvaluateFeatureParity`  | 기능 패리티 규칙을 실행  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 호환성 규칙을 실행  | Y <br> AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations 이어서 필요 합니다.
 |`/AssessmentEvaluateRecommendations`     | 기능 권장 사항 실행        | Y <br> (AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendationsis 필요)
