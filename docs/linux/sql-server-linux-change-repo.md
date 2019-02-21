@@ -10,19 +10,19 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 2cc95a36a83307667b3f3678ccd19f7712dc54b3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230990"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444238"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-이 문서에서는 Linux의 SQL Server 2017 및 SQL Server 2019 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다. 현재 선택 항목은 맨 **있었습니다 RHEL (Red)** 합니다.
+이 문서에서는 Linux의 SQL Server 2017 및 SQL Server 2019 설치 및 업그레이드에 대 한 올바른 저장소를 구성 하는 방법을 설명 합니다. 현재 선택 항목은 맨 **RHEL (Red Hat)** 합니다.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
