@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대한 FAQ(질문과 대답) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb77bd5ac3ccc2e12dd7fbf9aff956981b25bce3
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: fb6212f5088a94788c366bb8d1fc61938610ea0f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737054"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154869"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -40,8 +40,8 @@ Microsoft JDBC Driver 7.2 JDBC 4.2 및 4.3 (부분적) 사양 지원 하 고 다
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.0.jre11.jar | JDBC 4.3 (부분) 및 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 (부분) 및 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
  Microsoft JDBC Driver 7.0 JDBC 4.2 및 4.3 (부분적) 사양 지원 하 고 다음과 같이 설치 패키지에 두 개의 JAR 클래스 라이브러리가 포함:
 
