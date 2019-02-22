@@ -2,7 +2,7 @@
 title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
 description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464779"
+ms.locfileid: "56590348"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -186,7 +186,7 @@ DMA 보고서로 작업 하려면 기준으로 필터링 하려면 책갈피 및
 - Azure SQL MI 클라우드 평가
 - 온-프레미스 평가
 
-  ![DMA 보고서 뷰 책갈피](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![DMA 보고서 뷰 책갈피](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 필터 블레이드, CTRL + 클릭 뒤로 단추를 숨기려면 합니다.
 

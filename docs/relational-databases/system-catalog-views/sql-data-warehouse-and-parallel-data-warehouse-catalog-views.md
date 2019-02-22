@@ -12,12 +12,12 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 0fb5a56491dd45fafd05418fe5ee814ae0f686fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: db01843c9ef67a7246544b5ce73fafab7655ac8b
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022584"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590373"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,8 +30,6 @@ ms.locfileid: "56022584"
  다음 카탈로그 뷰는 둘 다 적용할 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
  [sys.pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
-  
- [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
  [sys.pdw_distributions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)  
   
@@ -64,7 +62,9 @@ ms.locfileid: "56022584"
  [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
   
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
- 다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:  
+ 다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:
+
+ [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
  [sys.pdw_diag_event_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-diag-event-properties-transact-sql.md)  
   

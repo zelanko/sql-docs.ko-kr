@@ -18,15 +18,15 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe5cac5ad9dbff5d19fddcd67204f640f1c16b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658891"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590248"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   데이터베이스의 이름을 변경합니다.  
   
@@ -43,10 +43,10 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=**] **'***old_name***'**  
+ [ **@dbname=**] **'***old_name***'**  
  데이터베이스의 현재 이름입니다. *old_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@newname=**] **'***new_name***'**  
+ [ **@newname=**] **'***new_name***'**  
  데이터베이스의 새 이름입니다. *new_name* 식별자에 대 한 규칙을 따라야 합니다. *new_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

@@ -13,15 +13,15 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7ffa7e044b5771bcf1181ee3aa0e22dfbdd8e555
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4a3b450427aa8369b1e76c91265a8c663df0243
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020634"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590376"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   계산 노드에서 각 물리적 데이터베이스에 대 한 행을 포함 합니다. 데이터베이스에 대 한 자세한 정보를 가져오려면 실제 데이터베이스 정보를 집계 합니다. 정보를 결합, 조인 합니다 `sys.pdw_nodes_pdw_physical_databases` 에 `sys.pdw_database_mappings` 및 `sys.databases` 테이블.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "56020634"
 |physical_name|**sysname**|셸/계산 노드에서 데이터베이스에 대 한 물리적 이름입니다. 이 값은 physical_name 열에 있는 값으로 동일한 합니다 [sys.pdw_database_mappings &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) 뷰.|  
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 id입니다.|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
   
 ### <a name="a-returning"></a>1. 반환  
  다음 쿼리 각 계산 노드에서 마스터 및 해당 데이터베이스 이름에서 이름 및 각 데이터베이스의 ID를 반환합니다.  
