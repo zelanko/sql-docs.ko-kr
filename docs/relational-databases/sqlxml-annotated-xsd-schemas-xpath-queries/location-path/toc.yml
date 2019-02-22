@@ -1,8 +1,0 @@
-- name: 위치 경로 지정(SQLXML 4.0)
-  href: specifying-a-location-path-sqlxml-4-0.md
-- name: 위치 경로에 노드 테스트 지정(SQLXML 4.0)
-  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-- name: 축 지정(SQLXML 4.0)
-  href: specifying-an-axis-sqlxml-4-0.md
-- name: 위치 경로에서 선택 조건자 지정(SQLXML 4.0)
-  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md

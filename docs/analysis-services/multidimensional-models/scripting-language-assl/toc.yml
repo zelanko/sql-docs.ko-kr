@@ -1,8 +1,0 @@
-- name: ASSL 개체 및 개체 특징
-  href: assl-objects-and-object-characteristics.md
-- name: 스크립트 언어 ASSL XMLA
-  href: ../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-- name: ASSL XML 표기 규칙
-  href: assl-xml-conventions.md
-- name: ASSL(Analysis Services Scripting Language)을 사용하여 개발
-  href: developing-with-analysis-services-scripting-language-assl.md

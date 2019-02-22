@@ -1,8 +1,0 @@
-- name: 사용자 지정 연결 관리자 개발
-  href: developing-a-custom-connection-manager.md
-- name: 사용자 지정 연결 관리자 만들기
-  href: creating-a-custom-connection-manager.md
-- name: 사용자 지정 연결 관리자 코딩
-  href: coding-a-custom-connection-manager.md
-- name: 사용자 지정 연결 관리자의 사용자 인터페이스 개발
-  href: developing-a-user-interface-for-a-custom-connection-manager.md

@@ -1,6 +1,0 @@
-- name: CLR 통합 코드 액세스 보안
-  href: clr-integration-code-access-security.md
-- name: 보안 호스트 보호 특성 +
-  href: ../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
-- name: CLR 통합 보안
-  href: clr-integration-security.md

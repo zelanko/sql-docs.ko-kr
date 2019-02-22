@@ -1,8 +1,0 @@
-- name: 커서 프로그래밍 정보(ODBC)
-  href: cursor-programming-details-odbc.md
-- name: 빠른 정방향 전용 커서(ODBC)
-  href: fast-forward-only-cursors-odbc.md
-- name: 암시적 커서 변환(ODBC)
-  href: implicit-cursor-conversions-odbc.md
-- name: ODBC 커서로 자동 인출 사용
-  href: using-autofetch-with-odbc-cursors.md

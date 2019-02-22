@@ -1,8 +1,0 @@
-- name: '템플릿, XSL 및 스키마 캐싱(SQLXML 4.0)'
-  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
-- name: 스키마 캐싱(SQLXML 4.0)
-  href: schema-caching-sqlxml-4-0.md
-- name: 템플릿 캐싱(SQLXML 4.0)
-  href: template-caching-sqlxml-4-0.md
-- name: XSL 캐싱(SQLXML 4.0)
-  href: xsl-caching-sqlxml-4-0.md

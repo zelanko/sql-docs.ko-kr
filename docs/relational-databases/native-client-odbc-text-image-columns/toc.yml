@@ -1,8 +1,0 @@
-- name: text 및 image 열 관리
-  href: managing-text-and-image-columns.md
-- name: 바인딩된 Text 및 Image 열과 바인딩되지 않은 Text 및 Image 열
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: '실행 시 데이터 및 text, ntext 또는 image 열'
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: 기록되는 수정 및 기록되지 않는 수정
-  href: logged-vs-unlogged-modifications.md

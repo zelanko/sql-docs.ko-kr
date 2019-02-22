@@ -1,8 +1,0 @@
-- name: 개요
-  href: event-notifications.md
-- name: 구현
-  href: implement-event-notifications.md
-- name: 대화 상자 보안 구성
-  href: configure-dialog-security-for-event-notifications.md
-- name: 정보 가져오기
-  href: get-information-about-event-notifications.md

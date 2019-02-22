@@ -1,8 +1,0 @@
-- name: 저장 프로시저 실행
-  href: running-stored-procedures.md
-- name: 저장 프로시저 호출 일괄 처리
-  href: batching-stored-procedure-calls.md
-- name: 저장 프로시저 호출
-  href: calling-a-stored-procedure.md
-- name: 저장 프로시저 결과 처리
-  href: processing-stored-procedure-results.md

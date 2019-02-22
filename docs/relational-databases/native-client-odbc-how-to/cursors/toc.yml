@@ -1,8 +1,0 @@
-- name: 커서 사용 방법 도움말 항목(ODBC)
-  href: using-cursors-how-to-topics-odbc.md
-- name: 행 집합 인출 및 업데이트(ODBC)
-  href: fetch-and-update-rowsets-odbc.md
-- name: 커서 사용(ODBC)
-  href: use-cursors-odbc.md
-- name: 행 집합 바인딩 사용(ODBC)
-  href: use-rowset-binding-odbc.md

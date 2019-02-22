@@ -1,8 +1,0 @@
-- name: 의
-  href: transactions.md
-- name: 격리 수준(OLE DB)
-  href: isolation-levels-ole-db.md
-- name: 분산 트랜잭션 지원
-  href: supporting-distributed-transactions.md
-- name: 로컬 트랜잭션 지원
-  href: supporting-local-transactions.md
