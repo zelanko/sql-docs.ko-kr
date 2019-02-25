@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5f9392d0ba5b07a489caffdd2e496051e842b1c8
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MTE75
+ms.openlocfilehash: 6b9ea2618f51eb167f63232b79c61d9ecdc0e746
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984064"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331613"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -147,7 +147,7 @@ sudo apt-get install unixodbc-dev
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox msodbcsql17 mssql-tools
+brew install msodbcsql17 mssql-tools
 ```
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server 
@@ -370,7 +370,7 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-이러한 각 패키지 가짐 자체 종속성이 있으며, 되었거나 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조 하세요. [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)하십시오 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
+이러한 각 패키지 가짐 자체 종속성이 있으며, 되었거나 시스템에 없을 수도 있습니다. 이 문제에 대 한 일반 솔루션을 배포의 패키지 관리자 설명서를 참조 하세요. [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)를 [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian), 및 [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 것도 일반적인 모든 종속 패키지를 수동으로 다운로드 및 설치 컴퓨터에 함께 배치 하 고 차례로 각 패키지를 수동으로 설치를 완료 합니다 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 패키지 있습니다.
 
