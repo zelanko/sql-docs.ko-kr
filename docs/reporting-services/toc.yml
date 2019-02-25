@@ -1,259 +1,1940 @@
 items:
+- name: SQL Server 루트 목차 +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: SSRS(SQL Server Reporting Services)란?
-  href: create-deploy-and-manage-mobile-and-paginated-reports.md
+  href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: 개요
   items:
   - name: Reporting Services의 새로운 기능
-    href: what-s-new-in-sql-server-reporting-services-ssrs.md
+    href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
   - name: 변경 로그
-    href: change-log-sql-server-reporting-services.md
+    href: ../reporting-services/change-log-sql-server-reporting-services.md
   - name: Reporting Services 개념(SSRS)
-    href: reporting-services-concepts-ssrs.md
+    href: ../reporting-services/reporting-services-concepts-ssrs.md
   - name: Reporting Services 기능 및 태스크
-    href: reporting-services-features-and-tasks-ssrs.md
+    href: ../reporting-services/reporting-services-features-and-tasks-ssrs.md
   - name: Backward Compatibility
-    href: reporting-services-backward-compatibility.md
+    href: ../reporting-services/reporting-services-backward-compatibility.md
     items:
     - name: 사용되지 않는 기능
-      href: deprecated-features-in-sql-server-reporting-services-ssrs.md
+      href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
     - name: SQL Server 2016의 SSRS에서 지원되지 않는 기능
-      href: discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
+      href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
     - name: SQL Server 2016의 SSRS에서 주요 변경 내용
-      href: breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
+      href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
     - name: SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
-      href: behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
+      href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: 계획
   items:
   - name: 분석 및 보고용 BI 도구 선택
-    href: choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
+    href: ../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md
   - name: Reporting Services 및 파워 뷰용 브라우저 지원
-    href: browser-support-for-reporting-services-and-power-view.md
+    href: ../reporting-services/browser-support-for-reporting-services-and-power-view.md
   - name: 보고서 디자인 및 보고서 배포 계획
-    href: plan-for-report-design-and-report-deployment-reporting-services.md
+    href: ../reporting-services/plan-for-report-design-and-report-deployment-reporting-services.md
   - name: SQL Server 버전의 Reporting Services 기능
-    href: reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
-- name: Install
+    href: ../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md
+- name: Reporting Services 2017 설치
   href: ../reporting-services/install-windows/install-reporting-services.md
+  items:
+  - name: Reporting Services 2017에 대한 제품 키 찾기
+    href: ../reporting-services/install-windows/find-reporting-services-product-key-ssrs.md
+- name: 기본 모드에서 Reporting Services 2016 설치
+  href: ../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+  items:
+  - name: Reporting Services의 파일만 설치 수행
+    href: ../reporting-services/install-windows/files-only-installation-reporting-services.md
+  - name: Reporting Services와 인터넷 정보 서비스 함께 설치(SSRS 기본 모드)
+    href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+  - name: SQL Server 장애 조치(failover) 클러스터에서 보고서 서버 데이터베이스 호스팅
+    href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+  - name: Reporting Services 구성 관리자(기본 모드)
+    href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    items:
+    - name: 보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
+      href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+    - name: 보고서 서버 URL 구성(SSRS 구성 관리자)
+      href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+      items:
+      - name: URL 예약 및 등록 정보(SSRS 구성 관리자)
+        href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+      - name: URL 구성(SSRS 구성 관리자)
+        href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+      - name: URL 예약 구문(SSRS 구성 관리자)
+        href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+      - name: 구성 파일의 URL(SSRS 구성 관리자)
+        href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+      - name: 다중 인스턴스 보고서 서버 배포를 위한 URL 예약(SSRS 구성 관리자)
+        href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+    - name: 데이터베이스 만들기
+      href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+    - name: 기본 모드 데이터베이스 만들기
+      href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+    - name: 보고서 서버 데이터베이스 연결 구성
+      href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+    - name: 전자 메일 설정 - Reporting Services 기본 모드(구성 관리자)
+      href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+    - name: 무인 실행 계정 구성(SSRS 구성 관리자)
+      href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+    - name: SSRS 암호화 키 - 암호화 키 관리
+      href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+      items:
+      - name: SSRS 암호화 키 - 보고서 서버 시작
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+      - name: SSRS 암호화 키 - 암호화된 보고서 서버 데이터 저장
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+      - name: SSRS 암호화 키 - 백업 및 복원
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+      - name: SSRS 암호화 키 - 삭제 및 다시 만들기
+        href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+      - name: SSRS 암호화 키 - 확장 배포를 위해 추가 및 제거
+        href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+    - name: 구독 설정 및 파일 공유 계정(구성 관리자)
+      href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+    - name: 기본 모드 보고서 서버 확장 배포 구성(SSRS 구성 관리자)
+      href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+    - name: Power BI 통합
+      href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+- name: SharePoint 모드에서 Reporting Services 2016 설치
+  href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+  items:
+  - name: 지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합(SQL Server 2016)
+    href: ../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+  - name: SharePoint용 SSRS 추가 기능 검색 위치
+    href: ../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+  - name: SharePoint 모드에서 첫 번째 보고서 서버 설치
+    href: ../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md
+  - name: SharePoint용 Reporting Services 추가 기능 설치 또는 제거
+    href: ../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+  - name: 팜에 추가 보고서 서버 추가(SSRS 확장)
+    href: ../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+  - name: 팜에 추가 Reporting Services 웹 프런트 엔드 추가
+    href: ../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+  - name: Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
+    href: ../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+  - name: SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전
+    href: ../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+  - name: c2WTS(Windows 토큰 서비스에 대한 클레임) 및 SSRS
+    href: ../reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md
+- name: 명령 프롬프트에 Reporting Services 설치
+  href: ../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+- name: Install Report Builder
+  href: ../reporting-services/install-windows/install-report-builder.md
+- name: 보고서 작성기 제거
+  href: ../reporting-services/install-windows/uninstall-report-builder.md
+- name: Reporting Services 설치 확인
+  href: ../reporting-services/install-windows/verify-a-reporting-services-installation.md
+- name: Reporting Services 설치 문제 해결
+  href: ../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+- name: Upgrade and Migrate Reporting Services
+  href: ../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+  items:
+  - name: Reporting Services 설치 마이그레이션(기본 모드)
+    href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+  - name: Reporting Services 설치 마이그레이션(SharePoint 모드)
+    href: ../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+  - name: 기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
+    href: ../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+  - name: 보고서 서버 데이터베이스 업그레이드
+    href: ../reporting-services/install-windows/upgrade-a-report-server-database.md
+  - name: Upgrade Reports
+    href: ../reporting-services/install-windows/upgrade-reports.md
+  - name: Reporting Services 백업 및 복원 작업
+    href: ../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
 - name: 웹 포털
-  href: web-portal-ssrs-native-mode.md
+  href: ../reporting-services/web-portal-ssrs-native-mode.md
   items:
   - name: 웹 포털 브랜딩
-    href: branding-the-web-portal.md
+    href: ../reporting-services/branding-the-web-portal.md
   - name: 공유 데이터 세트 작업
-    href: work-with-shared-datasets-web-portal.md
+    href: ../reporting-services/work-with-shared-datasets-web-portal.md
   - name: 페이지를 매긴 보고서 작업
-    href: working-with-paginated-reports-web-portal.md
+    href: ../reporting-services/working-with-paginated-reports-web-portal.md
   - name: 스냅숏 작업
-    href: working-with-snapshots-web-portal.md
+    href: ../reporting-services/working-with-snapshots-web-portal.md
   - name: 구독 작업
-    href: working-with-subscriptions-web-portal.md
+    href: ../reporting-services/working-with-subscriptions-web-portal.md
   - name: KPI 작업
-    href: working-with-kpis-in-reporting-services.md
+    href: ../reporting-services/working-with-kpis-in-reporting-services.md
   - name: Power BI 통합을 위한 내 설정
-    href: my-settings-for-power-bi-integration-web-portal.md
-- name: 보고서 서버
+    href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
+- name: 개요
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
-- name: 보고서 서버(SharePoint)
+- name: 보고서 서버 구성 및 관리(SSRS 기본 모드)
+  href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
+  items:
+  - name: 보고서 서버 구성
+    href: ../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md
+  - name: 웹 포털 구성
+    href: ../reporting-services/report-server/configure-web-portal.md
+  - name: Reporting Services 기본 모드 보고서 서버 관리
+    href: ../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md
+    items:
+    - name: 보고서 서버에 액세스할 수 있도록 방화벽 구성
+      href: ../reporting-services/report-server/configure-a-firewall-for-report-server-access.md
+    - name: 로컬 관리에 대해 기본 모드 보고서 서버 구성(SSRS)
+      href: ../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md
+    - name: 원격 관리를 위한 보고서 서버 구성
+      href: ../reporting-services/report-server/configure-a-report-server-for-remote-administration.md
+    - name: 네트워크 부하 분산 클러스터에서 보고서 서버 구성
+      href: ../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md
+    - name: 원격 오류 활성화(Reporting Services)
+      href: ../reporting-services/report-server/enable-remote-errors-reporting-services.md
+    - name: 보고서 서버의 SPN(서비스 사용자 이름) 등록
+      href: ../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md
+    - name: Reporting Services 기능 설정 또는 해제
+      href: ../reporting-services/report-server/turn-reporting-services-features-on-or-off.md
+    - name: Power BI Mobile에 액세스할 수 있도록 보고서 서버 활성화
+      href: ../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md
+- name: 보고서 서버 콘텐츠 관리(SSRS 기본 모드)
+  href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
+  items:
+  - name: 폴더 만들기, 삭제 또는 수정(웹 포털)
+    href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
+  - name: 폴더 만들기, 삭제 또는 수정
+    href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+  - name: 항목 이동 또는 삭제
+    href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
+  - name: 폴더에 파일 업로드
+    href: ../reporting-services/report-server/upload-files-to-a-folder.md
+  - name: 리소스 업데이트
+    href: ../reporting-services/report-server/update-a-resource-report-manager.md
+- name: 보고서 서버 서비스 시작 및 중지
+  href: ../reporting-services/report-server/start-and-stop-the-report-server-service.md
+- name: 보고서 서버 애플리케이션의 애플리케이션 도메인
+  href: ../reporting-services/report-server/application-domains-for-report-server-applications.md
+- name: Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제
+  href: ../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md
+- name: 내 보고서 설정 및 해제
+  href: ../reporting-services/report-server/enable-and-disable-my-reports.md
+- name: 보고서 서버 컴퓨터 이름 바꾸기
+  href: ../reporting-services/report-server/rename-a-report-server-computer.md
+- name: 보고서 서버 데이터베이스(SSRS 기본 모드)
+  href: ../reporting-services/report-server/report-server-database-ssrs-native-mode.md
+  items:
+  - name: 보고서 서버 데이터베이스 관리(SSRS 기본 모드)
+    href: ../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md
+  - name: 다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
+    href: ../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
+- name: 구성 파일
+  href: ../reporting-services/report-server/reporting-services-configuration-files.md
+  items:
+  - name: RsReportServer.config Configuration File
+    href: ../reporting-services/report-server/rsreportserver-config-configuration-file.md
+  - name: ReportingServicesService 구성 파일
+    href: ../reporting-services/report-server/reportingservicesservice-configuration-file.md
+  - name: RSReportDesigner 구성 파일
+    href: ../reporting-services/report-server/rsreportdesigner-configuration-file.md
+  - name: Reporting Services 구성 파일 수정(RSreportserver.config)
+    href: ../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md
+- name: Reporting Services 로그 파일 및 소스
+  href: ../reporting-services/report-server/reporting-services-log-files-and-sources.md
+  items:
+  - name: 보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
+    href: ../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md
+  - name: SharePoint ULS 로그
+    href: ../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md
+  - name: 보고서 서버 서비스 추적 로그
+    href: ../reporting-services/report-server/report-server-service-trace-log.md
+  - name: 보고서 서버 HTTP 로그
+    href: ../reporting-services/report-server/report-server-http-log.md
+  - name: Windows 애플리케이션 로그
+    href: ../reporting-services/report-server/windows-application-log.md
+  - name: 보고서 실행 확인
+    href: ../reporting-services/report-server/verifying-a-report-run.md
+- name: 성능, 스냅숏, 캐시(Reporting Services)
+  href: ../reporting-services/report-server/performance-snapshots-caching-reporting-services.md
+  items:
+  - name: 보고서 서버 성능 모니터링
+    href: ../reporting-services/report-server/monitoring-report-server-performance.md
+    items:
+    - name: MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터(기본 모드)
+      href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
+    - name: MSRS 2011 웹 서비스 SharePoint 모드 및 MSRS 2011 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터(SharePoint 모드)
+      href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
+    - name: ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터
+      href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
+  - name: 보고서 처리 속성 설정
+    href: ../reporting-services/report-server/set-report-processing-properties.md
+  - name: 보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성
+    href: ../reporting-services/report-server/configure-available-memory-for-report-server-applications.md
+  - name: 보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
+    href: ../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
+  - name: 큰 보고서 처리
+    href: ../reporting-services/report-server/process-large-reports.md
+  - name: 보고서 및 스냅숏 크기 제한
+    href: ../reporting-services/report-server/report-and-snapshot-size-limits.md
+  - name: 보고서 캐시(SSRS)
+    href: ../reporting-services/report-server/caching-reports-ssrs.md
+  - name: 공유 데이터 세트 캐시
+    href: ../reporting-services/report-server/cache-shared-datasets-ssrs.md
+  - name: 캐시 사전 로드
+    href: ../reporting-services/report-server/preload-the-cache-report-manager.md
+  - name: 공유 데이터 세트 캐시
+    href: ../reporting-services/report-server/cache-a-shared-dataset.md
+  - name: 보고서 캐시(보고서 관리자)
+    href: ../reporting-services/report-server/cache-a-report-report-manager.md
+  - name: 보고서 기록에서 스냅숏 만들기, 수정 및 삭제
+    href: ../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md
+  - name: 보고서 기록에 스냅숏 추가
+    href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
+  - name: 보고서 기록 만들기
+    href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
+- name: 개요
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
+- name: 보고서 서버(SharePoint)
+  href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
+  items:
+  - name: SharePoint 서비스 및 서비스 애플리케이션
+    href: ../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md
+    items:
+    - name: Reporting Services SharePoint 서비스 애플리케이션 관리
+      href: ../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md
+    - name: Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원
+      href: ../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md
+  - name: Reporting Services SharePoint 모드용 PowerShell cmdlet
+    href: ../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+  - name: 구성 및 관리(SharePoint 모드)
+    href: ../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md
+    items:
+    - name: 사이트 모음 기능 - Reporting Services
+      href: ../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md
+    - name: 사이트 모음 기능 - 보고서 서버 및 파워 뷰
+      href: ../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md
+    - name: 사이트 설정 및 기능 - Reporting Services
+      href: ../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md
+    - name: 사이트 설정 및 기능 - SharePoint에서 서버 파일 동기화
+      href: ../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md
+    - name: SharePoint 라이브러리에 Reporting Services 콘텐츠 형식 추가
+      href: ../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: 보고서 뷰어의 로컬 모드와 연결된 모드
+      href: ../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md
+    - name: SharePoint 라이브러리에 문서 업로드
+      href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: 처리 옵션 설정
+      href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+  - name: SharePoint 사이트의 보고서 뷰어 웹 파트
+    href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+    items:
+    - name: 보고서 뷰어 웹 파트 배포
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: 웹 페이지에 보고서 뷰어 웹 파트 추가
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: 필터 또는 문서 웹 파트 연결
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: 보고서 뷰어 웹 파트 사용자 지정
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: 보고서 뷰어 웹 파트의 SharePoint 사이트 설정
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
+- name: 고가용성
+  href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
+- name: RDL 샌드박스 사용 및 사용 안 함
+  href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
+- name: 주체 대체 이름을 사용하도록 Reporting Services 구성
+  href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Power BI에 고정
-  href: pin-reporting-services-items-to-power-bi-dashboards.md
-- name: 보고서 작성기
+  href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
+- name: 개요
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
-- name: 보고서 디자인
+- name: 보고서 작성기 시작
+  href: ../reporting-services/report-builder/start-report-builder.md
+  items:
+  - name: 보고서 작성기에 대한 기본 옵션 설정
+    href: ../reporting-services/report-builder/set-default-options-for-report-builder.md
+- name: '자습서: 오프라인에서 빠른 차트 보고서 만들기'
+  href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
+- name: 보고서 디자인 뷰
+  href: ../reporting-services/report-builder/report-design-view-report-builder.md
+  items:
+  - name: 보고서 작성기에서 보고서 미리 보기
+    href: ../reporting-services/report-builder/previewing-reports-in-report-builder.md
+- name: 공유 데이터 세트 디자인 뷰
+  href: ../reporting-services/report-builder/shared-dataset-design-view-report-builder.md
+- name: 바로 가기 키
+  href: ../reporting-services/report-builder/keyboard-shortcuts-report-builder.md
+- name: 보고서 찾기, 보기 및 관리
+  href: ../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+  - name: 웹 포털에서 보고서 찾기 및 보기
+    href: ../reporting-services/report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: 브라우저를 사용하여 보고서 찾기 및 보기
+    href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: CRI 변환 대화 상자
+    href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
+- name: 항목 숨기기(보고서 작성기 및 SSRS)
+  href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
+- name: Export Reports
+  href: ../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md
+  items:
+  - name: 보고서 렌더링 확장 프로그램의 대화형 기능
+    href: ../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md
+  - name: CSV 파일로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Microsoft Excel로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Microsoft Word로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: HTML로 렌더링
+    href: ../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md
+  - name: 이미지 파일로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: PDF 파일로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: XML로 내보내기
+    href: ../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md
+  - name: 보고서에서 데이터 피드 만들기
+    href: ../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: 보고서에서 데이터 피드 생성
+    href: ../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Work Around the Excel 2003 Row Limitation
+    href: ../reporting-services/report-builder/work-around-the-excel-2003-row-limitation.md
+- name: 보고서 인쇄
+  href: ../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md
+  items:
+  - name: 인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄
+    href: ../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: 다른 애플리케이션에서 보고서 인쇄
+    href: ../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: 보고서 인쇄
+    href: ../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md
+  - name: 보고서 인쇄(SharePoint 모드의 Reporting Services)
+    href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
+- name: 보고서 저장
+  href: ../reporting-services/report-builder/saving-reports-report-builder.md
+  items:
+  - name: 보고서 서버에 보고서 저장
+    href: ../reporting-services/report-builder/save-reports-to-a-report-server-report-builder.md
+  - name: SharePoint 라이브러리에 보고서 저장
+    href: ../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md
+- name: 보안
+  href: ../reporting-services/report-builder/security-report-builder.md
+- name: 용어 설명(보고서 작성기)
+  href: ../reporting-services/report-builder/glossary-report-builder.md
+- name: 보고서 계획
   href: ../reporting-services/report-design/planning-a-report-report-builder.md
-- name: 보고서 작업
+- name: 보고서 디자인 팁
+  href: ../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md
+- name: 보고서 제작 개념
+  href: ../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md
+  items:
+  - name: 보고서, 보고서 파트 및 보고서 정의
+    href: ../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md
+  - name: 데이터 영역 및 지도
+    href: ../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md
+  - name: 보고서 매개 변수 개념
+    href: ../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md
+- name: 테이블, 행렬 및 목록
+  href: ../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md
+  items:
+  - name: 테이블
+    href: ../reporting-services/report-design/tables-report-builder-and-ssrs.md
+  - name: 행렬 만들기
+    href: ../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md
+  - name: 목록을 사용하여 송장 및 양식 만들기
+    href: ../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md
+  - name: 테이블릭스 데이터 영역
+    href: ../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md
+    items:
+    - name: 테이블릭스 데이터 영역
+      href: ../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md
+    - name: 테이블릭스 데이터 영역 셀, 행 및 열
+      href: ../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md
+  - name: 테이블릭스 데이터 영역에 표시하기 위한 데이터 준비
+    href: ../reporting-services/report-design/preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: 테이블릭스 데이터 영역에 데이터 추가
+    href: ../reporting-services/report-design/adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: 테이블릭스 데이터 영역의 유연성 살펴보기
+    href: ../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md
+  - name: 보고서 페이지에서 테이블릭스 데이터 영역 표시 제어
+    href: ../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md
+  - name: 행 및 열 머리글 제어
+    href: ../reporting-services/report-design/controlling-row-and-column-headings-report-builder-and-ssrs.md
+  - name: 그룹 이해
+    href: ../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md
+  - name: 재귀 계층 구조 그룹 생성
+    href: ../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md
+  - name: 세부 정보 그룹 추가
+    href: ../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md
+  - name: 그룹 또는 테이블릭스 데이터 영역에 합계 추가
+    href: ../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md
+  - name: 셀 내 항목 변경
+    href: ../reporting-services/report-design/change-an-item-within-a-cell-report-builder-and-ssrs.md
+  - name: 행 높이 또는 열 너비 변경
+    href: ../reporting-services/report-design/change-row-height-or-column-width-report-builder-and-ssrs.md
+  - name: 열 삽입 또는 삭제
+    href: ../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md
+  - name: 행 삽입 또는 삭제
+    href: ../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md
+  - name: 데이터 영역의 셀 병합
+    href: ../reporting-services/report-design/merge-cells-in-a-data-region-report-builder-and-ssrs.md
+  - name: 재귀 계층 구조 그룹 만들기
+    href: ../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md
+  - name: 데이터 영역에서 그룹 추가 또는 삭제
+    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md
+  - name: 그룹과 함께 머리글 및 바닥글 표시
+    href: ../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md
+  - name: 단계별 보고서 만들기
+    href: ../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md
+  - name: 테이블, 행렬 또는 목록 추가, 이동 또는 삭제
+    href: ../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md
+- name: 보고서 파트
+  href: ../reporting-services/report-design/report-parts-report-builder-and-ssrs.md
+  items:
+  - name: 보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md
+  - name: 보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md
+- name: 차트
+  href: ../reporting-services/report-design/charts-report-builder-and-ssrs.md
+  items:
+  - name: 보고서에 차트 추가(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md
+  - name: 차트 종류(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/chart-types-report-builder-and-ssrs.md
+    items:
+    - name: 차트 종류 변경(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/change-a-chart-type-report-builder-and-ssrs.md
+    - name: 영역형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/area-charts-report-builder-and-ssrs.md
+    - name: 가로 막대형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md
+    - name: 세로 막대형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/column-charts-report-builder-and-ssrs.md
+    - name: 꺾은선형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/line-charts-report-builder-and-ssrs.md
+    - name: 원형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md
+    - name: 극좌표형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md
+    - name: 범위형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/range-charts-report-builder-and-ssrs.md
+    - name: 분산형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/scatter-charts-report-builder-and-ssrs.md
+    - name: 셰이프 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md
+    - name: 주식형 차트(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/stock-charts-report-builder-and-ssrs.md
+    - name: Reporting Services의 트리 맵 및 선버스트 차트
+      href: ../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md
+  - name: 차트 서식 지정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: 차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: 여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md
+      - name: 색상표를 사용하여 차트에 대한 색 정의(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md
+      - name: 줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md
+    - name: 차트의 축 레이블 서식 지정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: 축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md
+      - name: 차트의 레이블 위치 지정(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md
+      - name: 축 간격 지정(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md
+      - name: 차트에서 여백 추가 또는 제거(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md
+      - name: 로그 눈금 간격 지정(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md
+    - name: 차트 범례 - 서식 지정
+      href: ../reporting-services/report-design/chart-legend-formatting-report-builder.md
+    - name: 차트 범례 - 항목 숨기기
+      href: ../reporting-services/report-design/chart-legend-hide-items-report-builder.md
+    - name: 차트 범례 - 항목 텍스트 변경
+      href: ../reporting-services/report-design/chart-legend-change-item-text-report-builder.md
+    - name: 차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md
+      items:
+      - name: 계열에 도구 설명 표시(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md
+      - name: 원형 차트 외부에 데이터 요소 레이블 표시(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md
+      - name: 원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
+        href: ../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md
+    - name: 차트 효과 - 3D, 3D 가장자리 및 기타
+      href: ../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md
+    - name: 차트 효과 - 3D 효과 추가
+      href: ../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md
+    - name: 차트 효과 - 3D 가장자리, 볼록 또는 질감 추가
+      href: ../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md
+    - name: 차트에 테두리 프레임 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-border-frame-to-a-chart-report-builder-and-ssrs.md
+    - name: 원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs.md
+  - name: 차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md
+    items:
+    - name: 차트에 빈 요소 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md
+  - name: 차트에 데이터 범위가 여러 개 있는 계열 표시(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md
+    items:
+    - name: 차트에 배율 구분선 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-scale-breaks-to-a-chart-report-builder-and-ssrs.md
+  - name: 차트의 여러 계열(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md
+    items:
+    - name: 계열에 대한 차트 영역 지정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/specify-a-chart-area-for-a-series-report-builder-and-ssrs.md
+    - name: 보조 축에 데이터 표시(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md
+  - name: 동일한 데이터 세트에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md
+    items:
+    - name: 행렬 및 차트에 같은 데이터 표시
+      href: ../reporting-services/report-design/display-the-same-data-on-a-matrix-and-a-chart-report-builder.md
+  - name: 차트에서 그룹 추가 또는 삭제(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md
+  - name: 차트에 이동 평균 추가(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md
+  - name: 원형 차트에서 작은 조각 수집(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md
+  - name: 차트 문제 해결(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md
+- name: 스파크라인 및 데이터 막대
+  href: ../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md
+  items:
+  - name: 스파크라인 및 데이터 막대 추가(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-sparklines-and-data-bars-report-builder-and-ssrs.md
+  - name: 테이블 또는 행렬에서 차트의 데이터 정렬(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md
+- name: 계기
+  href: ../reporting-services/report-design/gauges-report-builder-and-ssrs.md
+  items:
+  - name: 계기의 눈금 서식 지정
+    href: ../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md
+  - name: 계기의 포인터 서식 지정
+    href: ../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md
+  - name: 계기에서 범위 서식 지정
+    href: ../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md
+  - name: 보고서에 계기 추가
+    href: ../reporting-services/report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md
+  - name: 계기의 최소값 또는 최대값 설정
+    href: ../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md
+- name: 표시기
+  href: ../reporting-services/report-design/indicators-report-builder-and-ssrs.md
+  items:
+  - name: 표시기 추가 또는 삭제
+    href: ../reporting-services/report-design/add-or-delete-an-indicator-report-builder-and-ssrs.md
+  - name: 표시기 아이콘 및 표시기 집합 변경
+    href: ../reporting-services/report-design/change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md
+  - name: 단위 설정 및 구성
+    href: ../reporting-services/report-design/set-and-configure-measurement-units-report-builder-and-ssrs.md
+  - name: 동기화 범위 설정
+    href: ../reporting-services/report-design/set-synchronization-scope-report-builder-and-ssrs.md
+  - name: 식을 사용하여 표시기 크기 지정
+    href: ../reporting-services/report-design/specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md
+  - name: 계기 창에 표시기 및 계기 포함
+    href: ../reporting-services/report-design/include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md
+- name: 맵
+  href: ../reporting-services/report-design/maps-report-builder-and-ssrs.md
+  items:
+  - name: 지도 보고서 계획
+    href: ../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md
+  - name: 지도 마법사 및 지도 계층 마법사
+    href: ../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md
+  - name: 지도 또는 지도 계층의 데이터 및 표시 사용자 지정
+    href: ../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: 규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경
+    href: ../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md
+  - name: 지도 또는 지도 계층 추가, 변경 또는 삭제
+    href: ../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md
+  - name: 지도 범례, 색 눈금 및 관련 규칙 변경
+    href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
+  - name: 지도에 사용자 지정 위치 추가
+    href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
+  - name: '보고서 문제 해결: 지도 보고서'
+    href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
+- name: 이미지, 입력란, 사각형 및 선
+  href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
+  items:
+  - name: 입력란(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md
+    items:
+    - name: 입력란 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md
+    - name: 입력란 방향 설정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md
+    - name: 입력란을 늘리거나 줄이도록 허용(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md
+  - name: 사각형 및 선(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md
+    items:
+    - name: 사각형 또는 컨테이너 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md
+    - name: 선 추가 및 수정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md
+    - name: 보고서에 테두리 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md
+  - name: 이미지(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/images-report-builder-and-ssrs.md
+    items:
+    - name: 외부 이미지 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md
+    - name: 보고서에 이미지 포함(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md
+    - name: 배경 이미지 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-background-image-report-builder-and-ssrs.md
+    - name: 데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md
+- name: 보고서 항목 서식 지정
+  href: ../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md
+  items:
+  - name: 텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md
+    items:
+    - name: 입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md
+  - name: 보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md
+    items:
+    - name: 보고서에 HTML 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md
+  - name: 숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md
+  - name: 선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md
+  - name: 보고서 또는 입력란에 대한 로캘 설정
+    href: ../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md
+- name: 보고서 매개 변수
+  href: ../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md
+  items:
+  - name: 보고서 매개 변수 추가, 변경 또는 삭제
+    href: ../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md
+  - name: 보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제
+    href: ../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md
+  - name: 보고서 매개 변수의 기본값 추가, 변경 또는 삭제
+    href: ../reporting-services/report-design/add-change-or-delete-default-values-for-a-report-parameter.md
+  - name: 보고서 매개 변수의 순서 변경
+    href: ../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md
+  - name: 보고서에 연계 매개 변수 추가
+    href: ../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md
+  - name: 보고서에 다중 값 매개 변수 추가
+    href: ../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md
+  - name: 게시된 보고서에 매개 변수 설정
+    href: ../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md
+  - name: 보고서에 매개 변수 창 사용자 지정
+    href: ../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md
+- name: 데이터 필터링, 그룹화 및 정렬
+  href: ../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md
+  items:
+  - name: 그룹 식 예
+    href: ../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md
+  - name: 필터 수식 예
+    href: ../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md
+  - name: 데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가
+    href: ../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md
+  - name: 필터 추가
+    href: ../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md
+  - name: 데이터 영역의 데이터 정렬
+    href: ../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md
+  - name: 일반적으로 사용되는 필터
+    href: ../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md
+  - name: 그룹화 창
+    href: ../reporting-services/report-design/grouping-pane-report-builder.md
+- name: 드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역
+  href: ../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md
+  items:
+  - name: 드릴스루 보고서(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md
+    items:
+    - name: 보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md
+  - name: 하위 보고서(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/subreports-report-builder-and-ssrs.md
+    items:
+    - name: 하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md
+  - name: 드릴다운 동작(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md
+    items:
+    - name: 항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md
+  - name: 중첩된 데이터 영역(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md
+  - name: 외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md
+- name: 식
+  href: ../reporting-services/report-design/expressions-report-builder-and-ssrs.md
+  items:
+  - name: 식 추가
+    href: ../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md
+  - name: 식 예
+    href: ../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md
+  - name: 보고서에 사용되는 식
+    href: ../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md
+  - name: 합계, 집계 및 기본 제공 컬렉션의 식 범위
+    href: ../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md
+  - name: 보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조
+    href: ../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md
+    items:
+    - name: 보고서에 어셈블리 참조 추가
+      href: ../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md
+    - name: 보고서에 코드 추가
+      href: ../reporting-services/report-design/add-code-to-a-report-ssrs.md
+  - name: 식 참조
+    href: ../reporting-services/report-design/expression-reference-report-builder-and-ssrs.md
+    items:
+    - name: 보고서 작성기 함수 - 집계 함수 참조
+      href: ../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md
+      items:
+      - name: 보고서 작성기 함수 - 집계 함수
+        href: ../reporting-services/report-design/report-builder-functions-aggregate-function.md
+      - name: 보고서 작성기 함수 - Avg 함수
+        href: ../reporting-services/report-design/report-builder-functions-avg-function.md
+      - name: 보고서 작성기 함수 - Count 함수
+        href: ../reporting-services/report-design/report-builder-functions-count-function.md
+      - name: 보고서 작성기 함수 - CountDistinct 함수
+        href: ../reporting-services/report-design/report-builder-functions-countdistinct-function.md
+      - name: 보고서 작성기 함수 - CountRows 함수
+        href: ../reporting-services/report-design/report-builder-functions-countrows-function.md
+      - name: 보고서 작성기 함수 - First 함수
+        href: ../reporting-services/report-design/report-builder-functions-first-function.md
+      - name: 보고서 작성기 함수 - InScope 함수
+        href: ../reporting-services/report-design/report-builder-functions-inscope-function.md
+      - name: 보고서 작성기 함수 - Last 함수
+        href: ../reporting-services/report-design/report-builder-functions-last-function.md
+      - name: 보고서 작성기 함수 - Level 함수
+        href: ../reporting-services/report-design/report-builder-functions-level-function.md
+      - name: 보고서 작성기 함수 - Lookup 함수
+        href: ../reporting-services/report-design/report-builder-functions-lookup-function.md
+      - name: 보고서 작성기 함수 - LookupSet 함수
+        href: ../reporting-services/report-design/report-builder-functions-lookupset-function.md
+      - name: 보고서 작성기 함수 - Max 함수
+        href: ../reporting-services/report-design/report-builder-functions-max-function.md
+      - name: 보고서 작성기 함수 - Min 함수
+        href: ../reporting-services/report-design/report-builder-functions-min-function.md
+      - name: 보고서 작성기 함수 - Multilookup 함수
+        href: ../reporting-services/report-design/report-builder-functions-multilookup-function.md
+      - name: 보고서 작성기 함수 - Previous 함수
+        href: ../reporting-services/report-design/report-builder-functions-previous-function.md
+      - name: 보고서 작성기 함수 - RowNumber 함수
+        href: ../reporting-services/report-design/report-builder-functions-rownumber-function.md
+      - name: 보고서 작성기 함수 - RunningValue 함수
+        href: ../reporting-services/report-design/report-builder-functions-runningvalue-function.md
+      - name: 보고서 작성기 함수 - StDev 함수
+        href: ../reporting-services/report-design/report-builder-functions-stdev-function.md
+      - name: 보고서 작성기 함수 - StDevP 함수
+        href: ../reporting-services/report-design/report-builder-functions-stdevp-function.md
+      - name: 보고서 작성기 함수 - Sum 함수
+        href: ../reporting-services/report-design/report-builder-functions-sum-function.md
+      - name: 보고서 작성기 함수 - Union 함수
+        href: ../reporting-services/report-design/report-builder-functions-union-function.md
+      - name: 보고서 작성기 함수 - Var 함수
+        href: ../reporting-services/report-design/report-builder-functions-var-function.md
+      - name: 보고서 작성기 함수 - VarP 함수
+        href: ../reporting-services/report-design/report-builder-functions-varp-function.md
+    - name: 식의 데이터 형식
+      href: ../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md
+    - name: 식의 상수
+      href: ../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md
+    - name: 식의 연산자
+      href: ../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md
+    - name: 식의 기본 제공 컬렉션
+      href: ../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md
+      items:
+      - name: 기본 제공 컬렉션 - Globals 및 Users 참조
+        href: ../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md
+      - name: 기본 제공 컬렉션 - 매개 변수 컬렉션 참조
+        href: ../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md
+      - name: 기본 제공 컬렉션 - 데이터 세트 필드 컬렉션 참조
+        href: ../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md
+      - name: 기본 제공 컬렉션 - DataSources 및 DataSets 참조
+        href: ../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md
+      - name: 기본 제공 컬렉션 - 보고서 및 그룹 변수 참조
+        href: ../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md
+      - name: 기본 제공 컬렉션 - ReportItems 컬렉션 참조
+        href: ../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md
+    - name: 보고서 모델 쿼리의 수식
+      href: ../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md
+- name: 대화형 정렬, 문서 구조 및 링크
+  href: ../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md
+  items:
+  - name: 대화형 정렬(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md
+    items:
+    - name: 테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
+      href: ../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md
+  - name: URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md
+  - name: 보고서에 책갈피 추가(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md
+  - name: 문서 구조 만들기(보고서 작성기 및 SSRS)
+    href: ../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md
+- name: 페이지 레이아웃 및 렌더링
+  href: ../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md
+  items:
+  - name: 렌더링 동작
+    href: ../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md
+    items:
+    - name: 데이터 영역 렌더링
+      href: ../reporting-services/report-design/rendering-data-regions-report-builder-and-ssrs.md
+    - name: 보고서 항목 렌더링
+      href: ../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md
+    - name: 데이터 렌더링
+      href: ../reporting-services/report-design/rendering-data-report-builder-and-ssrs.md
+  - name: Reporting Services의 페이지 매김
+    href: ../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md
+  - name: 페이지 머리글 및 바닥글
+    href: ../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md
+  - name: 페이지 나누기, 머리글, 열 및 행 제어
+    href: ../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md
+  - name: 페이지 나누기 추가
+    href: ../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md
+  - name: 여러 페이지에 행 및 열 머리글 표시
+    href: ../reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md
+  - name: 페이지 머리글/바닥글 추가 또는 제거
+    href: ../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md
+  - name: 보고서를 스크롤할 때 머리글 계속 표시
+    href: ../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md
+  - name: 페이지 번호 또는 기타 보고서 속성 표시
+    href: ../reporting-services/report-design/display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md
+  - name: 첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기
+    href: ../reporting-services/report-design/hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md
+- name: 보고서 디자이너의 보고서 파트
+  href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
+- name: 보고서 파트 관리
+  href: ../reporting-services/report-design/managing-report-parts.md
+- name: 개요
   href: ../reporting-services/reports/reporting-services-reports-ssrs.md
-- name: 보고서 데이터
+- name: 데이터 원본 및 보고서 게시
+  href: ../reporting-services/reports/publishing-data-sources-and-reports.md
+  items:
+  - name: 보고서 미리 보기
+    href: ../reporting-services/reports/previewing-reports.md
+  - name: 보고서 서버에 보고서 게시
+    href: ../reporting-services/reports/publishing-reports-to-a-report-server.md
+  - name: SharePoint 라이브러리에 보고서 게시
+    href: ../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md
+  - name: SharePoint 라이브러리에 공유 데이터 원본 게시
+    href: ../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md
+- name: RDL(Report Definition Language)
+  href: ../reporting-services/reports/report-definition-language-ssrs.md
+- name: 보고서 정의 스키마 버전 찾기
+  href: ../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md
+- name: 보고서에서 텍스트, 숫자 또는 날짜 찾기
+  href: ../reporting-services/reports/find-text-numbers-or-dates-in-a-report.md
+- name: 보고서 실행 속성 구성
+  href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
+- name: 보고서 기록 제한
+  href: ../reporting-services/reports/limit-report-history-report-manager.md
+- name: 보고서 열기 및 닫기
+  href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
+- name: 파일 또는 보고서 업로드
+  href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
+- name: 링크된 보고서 만들기
+  href: ../reporting-services/reports/create-a-linked-report.md
+- name: 클릭 광고 보고서(SSRS)
+  href: ../reporting-services/reports/clickthrough-reports-ssrs.md
+- name: SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
+  href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
+- name: 개요
   href: ../reporting-services/report-data/report-data-ssrs.md
-- name: 모바일 보고서
+- name: Reporting Services에서 지원하는 데이터 원본
+  href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
+- name: 데이터 연결, 데이터 원본 및 연결 문자열(보고서 작성기 및 SSRS)
+  href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
+- name: 데이터 연결 추가 및 확인
+  href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
+- name: 공유 데이터 원본 만들기, 수정 및 삭제
+  href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
+- name: 포함된 데이터 원본 만들기 및 수정
+  href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
+- name: 데이터 원본 변환
+  href: ../reporting-services/report-data/convert-data-sources-report-builder-and-ssrs.md
+- name: 외부 데이터 원본의 데이터 추가
+  href: ../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md
+  items:
+  - name: SQL Server 연결 형식
+    href: ../reporting-services/report-data/sql-server-connection-type-ssrs.md
+  - name: MDX용 Analysis Services 연결 형식
+    href: ../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md
+    items:
+    - name: Analysis Services 데이터베이스에 대한 확장 필드 속성
+      href: ../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md
+  - name: 파워 피벗 연결 형식
+    href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
+  - name: SharePoint 목록 연결 형식
+    href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
+  - name: SQL Azure 연결 형식
+    href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
+  - name: OLE DB 연결 형식
+    href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
+  - name: SQL Server 병렬 데이터 웨어하우스 연결 형식
+    href: ../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md
+  - name: Teradata 연결 형식
+    href: ../reporting-services/report-data/teradata-connection-type-ssrs.md
+  - name: Oracle 연결 형식
+    href: ../reporting-services/report-data/oracle-connection-type-ssrs.md
+  - name: SAP NetWeaver BI 연결 형식
+    href: ../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md
+  - name: Hyperion Essbase 연결 형식
+    href: ../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md
+  - name: ODBC 연결 형식
+    href: ../reporting-services/report-data/odbc-connection-type-ssrs.md
+  - name: XML 연결 형식
+    href: ../reporting-services/report-data/xml-connection-type-ssrs.md
+    items:
+    - name: XML 보고서 데이터를 위한 XML 쿼리 구문
+      href: ../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md
+    - name: XML 보고서 데이터를 위한 요소 경로 구문
+      href: ../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md
+  - name: 보고서 모델 연결
+    href: ../reporting-services/report-data/report-model-connection-ssrs.md
+  - name: DMX용 Analysis Services 연결 형식
+    href: ../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md
+    items:
+    - name: 데이터 마이닝 모델에서 데이터 검색(DMX)
+      href: ../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md
+  - name: 데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자
+    href: ../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md
+    items:
+    - name: 표준 .NET Framework 데이터 공급자 등록
+      href: ../reporting-services/report-data/register-a-standard-net-framework-data-provider-ssrs.md
+- name: 보고서 데이터 원본 관리
+  href: ../reporting-services/report-data/manage-report-data-sources.md
+- name: 보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정
+  href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+- name: Reporting Services 데이터 원본에 자격 증명 저장
+  href: ../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md
+- name: SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
+  href: ../reporting-services/report-data/update-credentials-in-report-data-sources-from-a-sharepoint-site.md
+- name: 사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정
+  href: ../reporting-services/report-data/specify-connections-for-custom-data-processing-extensions.md
+- name: 보고서 또는 모델을 공유 데이터 원본에 바인딩
+  href: ../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md
+- name: 보고서의 데이터 원본 속성 구성
+  href: ../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md
+- name: 보고서에 Office 데이터 연결(.odc) 사용
+  href: ../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md
+- name: 보고서 데이터 창
+  href: ../reporting-services/report-data/report-data-pane.md
+- name: 보고서 데이터 세트
+  href: ../reporting-services/report-data/report-datasets-ssrs.md
+  items:
+  - name: 쿼리 디자인 도구
+    href: ../reporting-services/report-data/query-design-tools-ssrs.md
+    items:
+    - name: 관계형 쿼리 디자이너에서 쿼리 작성
+      href: ../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md
+    - name: 보고서 매개 변수와 쿼리 매개 변수 연결
+      href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
+    - name: Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
+      href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
+    - name: 쿼리 매개 변수 정의 대화 상자
+      href: ../reporting-services/report-data/define-query-parameters-dialog-box.md
+    - name: Analysis Services DMX 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
+    - name: Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md
+    - name: 그래픽 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/graphical-query-designer-user-interface.md
+    - name: 관계형 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md
+    - name: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md
+    - name: 보고서 모델 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/report-model-query-designer-user-interface.md
+    - name: SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md
+    - name: SharePoint 목록 쿼리 디자이너
+      href: ../reporting-services/report-data/sharepoint-list-query-designer-report-builder.md
+    - name: 텍스트 기반 쿼리 디자이너 사용자 인터페이스
+      href: ../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md
+  - name: 포함된 데이터 세트 및 공유 데이터 세트
+    href: ../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md
+  - name: 공유 데이터 세트 또는 포함된 데이터 세트 만들기
+    href: ../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md
+  - name: 보고서 작성기의 보고서 파트 및 데이터 세트
+    href: ../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md
+  - name: 공유 데이터 세트 관리
+    href: ../reporting-services/report-data/manage-shared-datasets.md
+  - name: 보고서 데이터 창에서 필드 추가, 편집, 새로 고침
+    href: ../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md
+  - name: 데이터 세트에 필터 추가
+    href: ../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md
+  - name: 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시
+    href: ../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md
+  - name: 데이터 영역에 대한 데이터 없음 메시지 설정
+    href: ../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md
+  - name: 데이터 세트 필드 컬렉션
+    href: ../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md
+  - name: 데이터 세트 속성 대화 상자, 옵션
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md
+  - name: 데이터 세트 속성 대화 상자, 매개 변수
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-parameters.md
+  - name: 데이터 세트 속성 대화 상자, 쿼리
+    href: ../reporting-services/report-data/dataset-properties-dialog-box-query-report-builder.md
+  - name: 보고서 포함된 데이터 세트 및 공유 데이터 세트
+    href: ../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
+- name: SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기
   href: ../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md
-- name: 보안 및 보호
+- name: 'SQL Server 모바일 보고서: 종단 간 연습'
+  href: ../reporting-services/mobile-reports/sql-server-mobile-reports-end-to-end-walk-through.md
+- name: Reporting Services 모바일 보고서 만들기
+  href: ../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md
+- name: Design first or data first when creating in Reporting Services mobile reports
+  href: ../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
+- name: Data for Reporting Services mobile reports
+  href: ../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md
+  items:
+  - name: 시뮬레이션 데이터 사용
+    href: ../reporting-services/mobile-reports/work-with-simulated-data-in-reporting-services-mobile-reports.md
+  - name: 공유 데이터 세트에서 데이터 가져오기
+    href: ../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
+  - name: Prepare data for Reporting Services mobile reports
+    href: ../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md
+  - name: Reporting Services 모바일 보고서에 대한 Excel 데이터 준비
+    href: ../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md
+  - name: 모바일 보고서에서 Analysis Services에 대한 날짜 형식 지정 유지
+    href: ../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md
+- name: 모바일 보고서에 매개 변수 추가
+  href: ../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md
+  items:
+  - name: 특정 쿼리 문자열 매개 변수가 있는 모바일 보고서 열기
+    href: ../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
+- name: 모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
+  href: ../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
+- name: 드릴스루를 사용하여 탭으로 구성된 모바일 보고서 만들기 | Reporting Services 모바일 보고서
+  href: ../reporting-services/mobile-reports/create-a-tabbed-mobile-report-by-using-drillthrough.md
+- name: 모바일 보고서에 탐색기 추가
+  href: ../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md
+- name: 모바일 보고서에 시각화 추가
+  href: ../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md
+  items:
+  - name: 모바일 보고서에서 열 또는 행을 기준으로 데이터 그룹화
+    href: ../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
+- name: 모바일 보고서에 데이터 표(테이블) 추가
+  href: ../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md
+- name: 모바일 보고서에 계기 추가 | Reporting Services
+  href: ../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md
+- name: 휴대폰 또는 태블릿용 모바일 보고서 레이아웃
+  href: ../reporting-services/mobile-reports/lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
+- name: Reporting Services 모바일 보고서의 지도
+  href: ../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md
+  items:
+  - name: Reporting Services 모바일 보고서의 사용자 지정 맵
+    href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
+  - name: Reporting Services 모바일 보고서의 사용자 지정 지도 추가
+    href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
+- name: 개요
   href: ../reporting-services/security/reporting-services-security-and-protection.md
-- name: 구독 및 배달
+- name: Reporting Services 인증에 대한 확장된 보호
+  href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
+- name: 보고서 서버 인증
+  href: ../reporting-services/security/authentication-with-the-report-server.md
+  items:
+  - name: 보고서 서버의 Windows 인증 구성
+    href: ../reporting-services/security/configure-windows-authentication-on-the-report-server.md
+  - name: 보고서 서버에서 기본 인증 구성
+    href: ../reporting-services/security/configure-basic-authentication-on-the-report-server.md
+  - name: 보고서 서버에서 사용자 지정 또는 폼 인증 구성
+    href: ../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md
+  - name: 웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성
+    href: ../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: 역할 및 권한
+  href: ../reporting-services/security/roles-and-permissions-reporting-services.md
+  items:
+  - name: 보고서 서버에 데이터베이스 액세스 권한 부여
+    href: ../reporting-services/security/grant-user-access-to-a-report-server.md
+  - name: 기본 모드 보고서 서버에 대한 사용 권한 부여
+    href: ../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md
+    items:
+    - name: 보안 개체 항목
+      href: ../reporting-services/security/securable-items.md
+    - name: 태스크 및 권한
+      href: ../reporting-services/security/tasks-and-permissions.md
+    - name: 작업 및 사용 권한 - 항목 수준의 작업
+      href: ../reporting-services/security/tasks-and-permissions-item-level-tasks.md
+    - name: 작업 및 사용 권한 - 시스템 수준의 작업
+      href: ../reporting-services/security/tasks-and-permissions-system-level-tasks.md
+    - name: 역할 할당 생성 및 관리
+      href: ../reporting-services/security/create-and-manage-role-assignments.md
+    - name: 보안 폴더
+      href: ../reporting-services/security/secure-folders.md
+    - name: 보고서 및 리소스 보안
+      href: ../reporting-services/security/secure-reports-and-resources.md
+    - name: 공유 데이터 원본 항목 보안 설정
+      href: ../reporting-services/security/secure-shared-data-source-items.md
+    - name: 공유 데이터 세트 항목 보안
+      href: ../reporting-services/security/secure-shared-dataset-items.md
+    - name: 내 보고서 보안 설정
+      href: ../reporting-services/security/secure-my-reports.md
+    - name: RSExecRole 만들기
+      href: ../reporting-services/security/create-the-rsexecrole.md
+    - name: 역할 정의
+      href: ../reporting-services/security/role-definitions.md
+    - name: 역할 정의 - 만들기, 삭제 또는 수정
+      href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
+    - name: 역할 정의 - 미리 정의된 역할
+      href: ../reporting-services/security/role-definitions-predefined-roles.md
+    - name: 역할 할당
+      href: ../reporting-services/security/role-assignments.md
+    - name: 역할 할당 - 수정 또는 삭제
+      href: ../reporting-services/security/role-assignments-modify-or-delete.md
+  - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
+    href: ../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+    items:
+    - name: 보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용
+      href: ../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+    - name: Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
+      href: ../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+    - name: 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
+      href: ../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md
+    - name: SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정
+      href: ../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+    - name: SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정
+      href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: 기본 모드 보고서 서버에서 SSL 연결 구성
+  href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
+- name: 개요
   href: ../reporting-services/subscriptions/schedules.md
-- name: 도구 +
+- name: 일정 만들기, 수정 및 삭제
+  href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
+- name: 공유 일정 일시 중지 및 다시 시작
+  href: ../reporting-services/subscriptions/pause-and-resume-shared-schedules.md
+- name: 보고서 서버에서 표준 시간대 및 시계 설정 변경
+  href: ../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md
+- name: 실행 중인 프로세스 관리
+  href: ../reporting-services/subscriptions/manage-a-running-process.md
+- name: 구독 및 배달
+  href: ../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md
+  items:
+  - name: Reporting Services의 전자 메일 배달
+    href: ../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md
+  - name: SharePoint 모드 보고서 서버 구독 만들기 및 관리
+    href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md
+    items:
+    - name: Reporting Services의 SharePoint 라이브러리 배달
+      href: ../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md
+  - name: 기본 모드 보고서 서버 구독 만들기 및 관리
+    href: ../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md
+    items:
+    - name: 내 구독 사용(기본 모드 보고서 서버)
+      href: ../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md
+  - name: Reporting Services의 파일 공유 배달
+    href: ../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md
+  - name: 보고서 및 구독 처리 해제 또는 일시 중지
+    href: ../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md
+  - name: 데이터 기반 구독
+    href: ../reporting-services/subscriptions/data-driven-subscriptions.md
+    items:
+    - name: 데이터 기반 구독 만들기, 수정 및 삭제
+      href: ../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md
+    - name: 구독자 데이터에 외부 데이터 원본 사용
+      href: ../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md
+  - name: Reporting Services 구독 모니터링
+    href: ../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md
+  - name: 기본 Reporting Services 배달 확장 프로그램 변경
+    href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
+  - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
+    href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
+- name: 개요
   href: ../reporting-services/tools/reporting-services-tools.md
+- name: SQL Server Data Tools의 Reporting Services
+  href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+  - name: 보고서 디자이너로 보고서 디자인
+    href: ../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+    items:
+    - name: 보고서 프로젝트에 새 보고서 또는 기존 보고서 추가
+      href: ../reporting-services/tools/add-a-new-or-existing-report-to-a-report-project-ssrs.md
+  - name: SQL Server Data Tools의 배포 및 버전 지원
+    href: ../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+  - name: SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
+    href: ../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md
+  - name: 배포 속성 설정
+    href: ../reporting-services/tools/set-deployment-properties-reporting-services.md
+  - name: 보고서 디자이너에서 보고서 데이터 창 도킹
+    href: ../reporting-services/tools/dock-the-report-data-pane-in-report-designer-ssrs.md
+  - name: 보고서 디자이너 F1 도움말
+    href: ../reporting-services/tools/report-designer-f1-help.md
+    items:
+    - name: 문서 개요
+      href: ../reporting-services/tools/document-outline.md
+    - name: 디자인 뷰
+      href: ../reporting-services/tools/design-view.md
+    - name: 미리 보기 뷰
+      href: ../reporting-services/tools/preview-view.md
+    - name: 그룹화 창
+      href: ../reporting-services/tools/grouping-pane.md
+    - name: 프로젝트 속성 페이지 대화 상자
+      href: ../reporting-services/tools/project-property-pages-dialog-box.md
+    - name: Reporting Services 로그인 대화 상자(SSRS)
+      href: ../reporting-services/tools/reporting-services-login-dialog-box-ssrs.md
+- name: SQL Server Management Studio의 Reporting Services
+  href: ../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+  - name: 보고서 서버 속성 설정
+    href: ../reporting-services/tools/set-report-server-properties-management-studio.md
+  - name: Management Studio에서 보고서 서버에 연결
+    href: ../reporting-services/tools/connect-to-a-report-server-in-management-studio.md
+  - name: 항목 삭제
+    href: ../reporting-services/tools/delete-an-item-management-studio.md
+  - name: Management Studio의 보고서 서버 F1 도움말
+    href: ../reporting-services/tools/report-server-in-management-studio-f1-help.md
+    items:
+    - name: 보고서 서버 작업 취소
+      href: ../reporting-services/tools/cancel-report-server-jobs-management-studio.md
+    - name: 카탈로그 항목 삭제
+      href: ../reporting-services/tools/delete-catalog-items-management-studio.md
+    - name: 작업 속성
+      href: ../reporting-services/tools/job-properties-management-studio.md
+    - name: 새 공유 일정
+      href: ../reporting-services/tools/new-shared-schedule-management-studio.md
+    - name: 새 시스템 역할
+      href: ../reporting-services/tools/new-system-role-management-studio.md
+    - name: 새 사용자 역할
+      href: ../reporting-services/tools/new-user-role-management-studio.md
+    - name: 일정 속성(일반 페이지)
+      href: ../reporting-services/tools/schedule-properties-general-page.md
+    - name: 일정 속성(보고서 페이지)
+      href: ../reporting-services/tools/schedule-properties-reports-page.md
+    - name: 서버 속성(일반 페이지)
+      href: ../reporting-services/tools/report-server-properties-general-page.md
+    - name: 서버 속성(실행 페이지)
+      href: ../reporting-services/tools/server-properties-execution-page.md
+    - name: 서버 속성(기록 페이지)
+      href: ../reporting-services/tools/server-properties-history-page.md
+    - name: 서버 속성(로깅 페이지)
+      href: ../reporting-services/tools/server-properties-logging-page.md
+    - name: 서버 속성(보안 페이지)
+      href: ../reporting-services/tools/server-properties-security-page-reporting-services.md
+    - name: 서버 속성(고급 페이지)
+      href: ../reporting-services/tools/server-properties-advanced-page-reporting-services.md
+    - name: 시스템 역할 속성
+      href: ../reporting-services/tools/system-role-properties-management-studio.md
+    - name: 사용자 역할 속성
+      href: ../reporting-services/tools/user-role-properties-management-studio.md
+- name: 보고서 작성기 제작 환경
+  href: ../reporting-services/tools/report-builder-authoring-environment-ssrs.md
+- name: Reporting Services를 사용한 스크립팅 및 PowerShell
+  href: ../reporting-services/tools/scripting-and-powershell-with-reporting-services.md
+  items:
+  - name: rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
+    href: ../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md
+    items:
+    - name: Reporting Services 스크립트 파일 형식 지정
+      href: ../reporting-services/tools/format-a-reporting-services-script-file.md
+    - name: Reporting Services 스크립트 파일 실행
+      href: ../reporting-services/tools/run-a-reporting-services-script-file.md
+  - name: 배포 및 관리 태스크 스크립팅
+    href: ../reporting-services/tools/script-deployment-and-administrative-tasks.md
+  - name: 보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
+    href: ../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+  - name: Reporting Services WMI 공급자 액세스
+    href: ../reporting-services/tools/access-the-reporting-services-wmi-provider.md
+- name: 보고서 서버 명령 프롬프트 유틸리티
+  href: ../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md
+  items:
+  - name: rskeymgmt 유틸리티
+    href: ../reporting-services/tools/rskeymgmt-utility-ssrs.md
+  - name: rsconfig 유틸리티
+    href: ../reporting-services/tools/rsconfig-utility-ssrs.md
+  - name: RS.exe 유틸리티(SSRS)
+    href: ../reporting-services/tools/rs-exe-utility-ssrs.md
+- name: '자습서: Reporting Services 도구 찾기 및 시작 방법'
+  href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: 데이터 경고(SharePoint)
-  href: reporting-services-data-alerts.md
+  href: ../reporting-services/reporting-services-data-alerts.md
   items:
   - name: 데이터 경고 디자이너
-    href: data-alert-designer.md
+    href: ../reporting-services/data-alert-designer.md
   - name: SharePoint 사용자용 데이터 경고 관리자
-    href: data-alert-manager-for-sharepoint-users.md
+    href: ../reporting-services/data-alert-manager-for-sharepoint-users.md
   - name: 경고 담당자를 위한 데이터 경고 관리자입니다.
-    href: data-alert-manager-for-alerting-administrators.md
+    href: ../reporting-services/data-alert-manager-for-alerting-administrators.md
   - name: 데이터 경고 메시지
-    href: data-alert-messages.md
+    href: ../reporting-services/data-alert-messages.md
   - name: 데이터 경고 디자이너에서 데이터 경고 만들기
-    href: create-a-data-alert-in-data-alert-designer.md
+    href: ../reporting-services/create-a-data-alert-in-data-alert-designer.md
   - name: 경고 디자이너에서 데이터 경고 편집
-    href: edit-a-data-alert-in-alert-designer.md
+    href: ../reporting-services/edit-a-data-alert-in-alert-designer.md
   - name: 데이터 경고 관리자에서 SharePoint 사이트의 모든 데이터 경고 관리
-    href: manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
+    href: ../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md
   - name: 데이터 경고 관리자에서 내 데이터 경고 관리
-    href: manage-my-data-alerts-in-data-alert-manager.md
+    href: ../reporting-services/manage-my-data-alerts-in-data-alert-manager.md
   - name: 사용자 및 경고 담당자에게 권한 부여
-    href: grant-permissions-to-users-and-alerting-administrators.md
+    href: ../reporting-services/grant-permissions-to-users-and-alerting-administrators.md
 - name: 확장 프로그램
-  href: extensions-ssrs.md
+  href: ../reporting-services/extensions-ssrs.md
   items:
   - name: RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
-    href: customize-rendering-extension-parameters-in-rsreportserver-config.md
+    href: ../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md
 - name: URL 액세스
-  href: url-access-ssrs.md
+  href: ../reporting-services/url-access-ssrs.md
   items:
   - name: URL 액세스를 사용하여 보고서 서버 항목 액세스
-    href: access-report-server-items-using-url-access.md
+    href: ../reporting-services/access-report-server-items-using-url-access.md
   - name: URL에 보고서 매개 변수 전달
-    href: pass-a-report-parameter-within-a-url.md
+    href: ../reporting-services/pass-a-report-parameter-within-a-url.md
   - name: URL 액세스 매개 변수 참조
-    href: url-access-parameter-reference.md
+    href: ../reporting-services/url-access-parameter-reference.md
   - name: URL에 보고서 매개 변수 언어 설정
-    href: set-the-language-for-report-parameters-in-a-url.md
+    href: ../reporting-services/set-the-language-for-report-parameters-in-a-url.md
   - name: URL에 디바이스 정보 설정 지정
-    href: specify-device-information-settings-in-a-url.md
+    href: ../reporting-services/specify-device-information-settings-in-a-url.md
   - name: URL 액세스를 사용하여 보고서 내보내기
-    href: export-a-report-using-url-access.md
+    href: ../reporting-services/export-a-report-using-url-access.md
   - name: URL 액세스를 사용하여 보고서 검색
-    href: search-a-report-using-url-access.md
+    href: ../reporting-services/search-a-report-using-url-access.md
   - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
-    href: render-a-report-history-snapshot-using-url-access.md
-- name: WMI 공급자
+    href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
+- name: 개요
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
-- name: 문제 해결 +
+- name: MSReportServer_Instance 클래스
+  href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
+  items:
+  - name: MSReportServer_Instance 멤버
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md
+  - name: MSReportServer_Instance 속성
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties.md
+    items:
+    - name: MSReportServer_Instance 속성 - EditionID
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md
+    - name: MSReportServer_Instance 속성 - EditionName
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md
+    - name: MSReportServer_Instance 속성 - InstanceID
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instanceid.md
+    - name: MSReportServer_Instance 속성 - InstanceName
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-instancename.md
+    - name: MSReportServer_Instance 속성 - IsSharePointIntegrated
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-issharepointintegrated.md
+    - name: MSReportServer_Instance 속성 - Version
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-version.md
+  - name: MSReportServer_Instance 메서드
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods.md
+    items:
+    - name: MSReportServer_Instance 메서드 - GetReportServerUrls
+      href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md
+- name: MSReportServer_ConfigurationSetting 클래스
+  href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md
+  items:
+  - name: MSReportServer_ConfigurationSetting 멤버
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md
+  - name: MSReportServer_ConfigurationSetting 속성
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-properties.md
+    items:
+    - name: ConfigurationSetting 속성 - ConnectionPoolSize
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md
+    - name: ConfigurationSetting 속성 - DatabaseLogonAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md
+    - name: ConfigurationSetting 속성 - DatabaseLogonTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontimeout.md
+    - name: ConfigurationSetting 속성 - DatabaseLogonType
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md
+    - name: ConfigurationSetting 속성 - DatabaseName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasename.md
+    - name: ConfigurationSetting 속성 - DatabaseQueryTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databasequerytimeout.md
+    - name: ConfigurationSetting 속성 - DatabaseServerName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaseservername.md
+    - name: ConfigurationSetting 속성 - InstallationID
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-installationid.md
+    - name: ConfigurationSetting 속성 - InstanceName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-instancename.md
+    - name: ConfigurationSetting 속성 - IsInitialized
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-isinitialized.md
+    - name: ConfigurationSetting 속성 - IsSharePointIntegrated
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-issharepointintegrated.md
+    - name: ConfigurationSetting 속성 - IsWebServiceEnabled
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswebserviceenabled.md
+    - name: ConfigurationSetting 속성 - IsWindowsServiceEnabled
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-iswindowsserviceenabled.md
+    - name: ConfigurationSetting 속성 - MachineAccountIdentity
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-machineaccountidentity.md
+    - name: ConfigurationSetting 속성 - PathName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-pathname.md
+    - name: ConfigurationSetting 속성 - SecureConnectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-secureconnectionlevel.md
+    - name: ConfigurationSetting 속성 - SenderEmailAddress
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-senderemailaddress.md
+    - name: ConfigurationSetting 속성 - SendUsingSMTPServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-sendusingsmtpserver.md
+    - name: ConfigurationSetting 속성 - SMTPServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-smtpserver.md
+    - name: ConfigurationSetting 속성 - UnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-unattendedexecutionaccount.md
+    - name: ConfigurationSetting 속성 - Version
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-version.md
+    - name: ConfigurationSetting 속성 - VirtualDirectoryReportManager
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportmanager.md
+    - name: ConfigurationSetting 속성 - VirtualDirectoryReportServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-virtualdirectoryreportserver.md
+    - name: ConfigurationSetting 속성 - WindowsServiceIdentityActual
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-property-windowsserviceidentityactual.md
+    - name: ConfigurationSetting 속성 - WindowsServiceIdentityConfigured
+      href: ../reporting-services/wmi-provider-library-reference/windowsserviceidentityconfigured-property.md
+    - name: ConfigurationSetting 속성 - RSWindowsExtendedProtectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionlevel-property.md
+    - name: ConfigurationSetting 속성 - RSWindowsExtendedProtectionScenario
+      href: ../reporting-services/wmi-provider-library-reference/rswindowsextendedprotectionscenario-property.md
+  - name: MSReportServer_ConfigurationSetting 메서드
+    href: ../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-methods.md
+    items:
+    - name: ConfigurationSetting Method - BackupEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md
+    - name: ConfigurationSetting 메서드 - CreateSSLCertificateBinding
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md
+    - name: ConfigurationSetting 메서드 - DeleteEncryptedInformation
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptedinformation.md
+    - name: ConfigurationSetting 메서드 - DeleteEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md
+    - name: ConfigurationSetting 메서드 - GenerateDatabaseCreationScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md
+    - name: ConfigurationSetting 메서드 - GenerateDatabaseRightsScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md
+    - name: ConfigurationSetting 메서드 - GenerateDatabaseUpgradeScript
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md
+    - name: ConfigurationSetting 메서드 - GetAdminSiteUrl
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getadminsiteurl.md
+    - name: ConfigurationSetting 메서드 - GetDatabaseVersionDisplayName
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-getdatabaseversiondisplayname.md
+    - name: ConfigurationSetting 메서드 - InitializeReportServer
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-initializereportserver.md
+    - name: ConfigurationSetting 메서드 - ListInstalledSharePointVersions
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listinstalledsharepointversions.md
+    - name: ConfigurationSetting 메서드 - ListIPAddresses
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listipaddresses.md
+    - name: ConfigurationSetting 메서드 - ListReportServersInDatabase
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreportserversindatabase.md
+    - name: ConfigurationSetting 메서드 - ListReservedURLs
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listreservedurls.md
+    - name: ConfigurationSetting 메서드 - ListSSLCertificateBindings
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificatebindings.md
+    - name: ConfigurationSetting 메서드 - ListSSLCertificates
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-listsslcertificates.md
+    - name: ConfigurationSetting 메서드 - ReencryptSecureInformation
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reencryptsecureinformation.md
+    - name: ConfigurationSetting 메서드 - RemoveSSLCertificateBinding
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removesslcertificatebinding.md
+    - name: ConfigurationSetting 메서드 - RemoveUnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeunattendedexecutionaccount.md
+    - name: ConfigurationSetting 메서드 - RemoveURL
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-removeurl.md
+    - name: ConfigurationSetting 메서드 - ReserveURL
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-reserveurl.md
+    - name: ConfigurationSetting 메서드 - RestoreEncryptionKey
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-restoreencryptionkey.md
+    - name: ConfigurationSetting 메서드 - SetDatabaseConnection
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaseconnection.md
+    - name: ConfigurationSetting 메서드 - SetDatabaseLogonTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabaselogontimeout.md
+    - name: ConfigurationSetting 메서드 - SetDatabaseQueryTimeout
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setdatabasequerytimeout.md
+    - name: ConfigurationSetting 메서드 - SetEmailConfiguration
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setemailconfiguration.md
+    - name: ConfigurationSetting 메서드 - SetSecureConnectionLevel
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md
+    - name: ConfigurationSetting 메서드 - SetServiceState
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setservicestate.md
+    - name: ConfigurationSetting 메서드 - SetUnattendedExecutionAccount
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setunattendedexecutionaccount.md
+    - name: ConfigurationSetting 메서드 - SetVirtualDirectory
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md
+    - name: ConfigurationSetting 메서드 - SetWindowsServiceIdentity
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
+    - name: ConfigurationSetting 메서드 - SetExtendedProtectionSettings
+      href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
+- name: 개요
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
+- name: 오류 및 이벤트 참조
+  href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
+  items:
+  - name: Reporting Services 오류의 원인 및 해결 방법
+    href: ../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md
+    items:
+    - name: rsAccessedDenied - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md
+    - name: rsInternalError - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md
+    - name: rsModelGenerationError - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rsmodelgenerationerror-reporting-services-error.md
+    - name: rsProcessingError - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rsprocessingerror-reporting-services-error.md
+    - name: rsServerConfigurationError - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rsserverconfigurationerror-reporting-services-error.md
+    - name: rrRenderingError - Reporting Services 오류
+      href: ../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md
+    - name: Report Server Windows Service (MSSQLServer) 107
+      href: ../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md
+- name: Reporting Services 보고서 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md
+- name: Reporting Services 구독 및 배달 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md
+- name: Reporting Services의 보고서 디자인 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md
+- name: Reporting Services 보고서에서 데이터 검색 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md
+- name: Reporting Services 보고서의 처리 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md
+- name: Reporting Services 보고서 렌더링 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-reporting-services-report-rendering-issues.md
+- name: 기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md
+- name: Reporting Services의 서버 및 데이터베이스 연결 문제 해결
+  href: ../reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services.md
 - name: Developer
   items:
   - name: REST API
-    href: developer/rest-api.md
-  - name: REST API 샘플
+    href: ../reporting-services/developer/rest-api.md
+  - name: REST API 샘플 +
     href: https://github.com/Microsoft/Reporting-Services
-  - name: 애플리케이션 통합
+  - name: 애플리케이션에 Reporting Services 통합
     href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
+  - name: 보고서 뷰어 컨트롤을 사용하여 통합
+    items:
+    - name: 시작
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-get-started.md
+    - name: 보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md
+    - name: WebForms 보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
+      href: ../reporting-services/application-integration/using-the-webforms-reportviewer-control.md
+    - name: WinForms 보고서 뷰어 컨트롤을 사용하여 Reporting Services 통합
+      href: ../reporting-services/application-integration/using-the-winforms-reportviewer-control.md
+    - name: 보고서 뷰어 컨트롤 데이터 컬렉션
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md
+    - name: 보고서 뷰어 고객 지원팀
+      href: ../reporting-services/application-integration/reportviewer-controls-support.md
+    - name: 보고서 뷰어 컨트롤 변경 로그
+      href: ../reporting-services/application-integration/changelog.md
+  - name: Reporting Services 직접 통합
+    items:
+    - name: URL 액세스와 SOAP 중 선택
+      href: ../reporting-services/application-integration/choosing-between-url-access-and-soap.md
+    - name: SOAP을 사용하여 Reporting Services 통합
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap.md
+    - name: SOAP를 사용하여 Reporting Services 통합 - 웹 애플리케이션
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md
+    - name: SOAP를 사용하여 Reporting Services 통합 - Windows 애플리케이션
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md
+    - name: URL 액세스를 사용하여 Reporting Services 통합
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access.md
+    - name: URL 액세스를 사용하여 Reporting Services 통합 - 웹 애플리케이션
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access-web-application.md
+    - name: URL 액세스를 사용하여 Reporting Services 통합 - Windows 애플리케이션
+      href: ../reporting-services/application-integration/integrating-reporting-services-using-url-access-windows-application.md
   - name: 보고서 서버 웹 서비스
     href: ../reporting-services/report-server-web-service/report-server-web-service.md
-  - name: 확장 프로그램
+  - name: SOAP API 액세스
+    href: ../reporting-services/report-server-web-service/accessing-the-soap-api.md
+  - name: The Role of SOAP in Reporting Services
+    href: ../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md
+  - name: 보고서 서버 웹 서비스 메서드
+    href: ../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md
+  - name: 권한 부여 메서드
+    href: ../reporting-services/report-server-web-service/methods/authorization-methods.md
+  - name: 데이터 원본 및 연결 메서드
+    href: ../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md
+  - name: 링크된 보고서 메서드
+    href: ../reporting-services/report-server-web-service/methods/linked-reports-methods.md
+  - name: 모델 메서드 - 보고서 서버 웹 서비스
+    href: ../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md
+  - name: 렌더링 및 실행 메서드
+    href: ../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md
+  - name: 보고서 기록 메서드
+    href: ../reporting-services/report-server-web-service/methods/report-history-methods.md
+  - name: 보고서 매개 변수 메서드
+    href: ../reporting-services/report-server-web-service/methods/report-parameters-methods.md
+  - name: 보고서 서버 네임스페이스 관리 메서드
+    href: ../reporting-services/report-server-web-service/methods/report-server-namespace-management-methods.md
+  - name: 보고서 서버 웹 서비스 엔드포인트
+    href: ../reporting-services/report-server-web-service/methods/report-server-web-service-endpoints.md
+  - name: 일정 예약 메서드
+    href: ../reporting-services/report-server-web-service/methods/scheduling-methods.md
+  - name: 구독 및 배달 메서드
+    href: ../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md
+  - name: 웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
+    href: ../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md
+  - name: Reporting Services의 예외 처리 소개
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md
+  - name: Reporting Services의 예외 처리
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/handling-exceptions-in-reporting-services.md
+  - name: Reporting Services 예외 처리를 위한 최상의 방법
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/best-practices-for-reporting-services-exception-handling.md
+  - name: 예외를 발생하지 않는 경고 및 사례 처리
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md
+  - name: 잘못된 요청 방지
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md
+  - name: Detail 속성을 사용하여 특정 오류 처리
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md
+  - name: Try 및 Catch 블록 사용
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md
+  - name: Reporting Services SoapException 클래스
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md
+  - name: Detail 속성
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/detail-property.md
+  - name: HelpLink 요소
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/helplink-element.md
+  - name: SoapException 오류 테이블
+    href: ../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md
+  - name: Reporting Services SOAP 헤더 사용
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md
+  - name: 일괄 처리 메서드
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/batching-methods.md
+  - name: 실행 상태 식별
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md
+  - name: GetProperties 메서드에 대한 항목 네임스페이스 설정
+    href: ../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md
+  - name: 웹 서비스 메서드 호출
+    href: ../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md
+  - name: 웹 서비스 프록시 만들기
+    href: ../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md
+  - name: 선택적 웹 서비스 개체에 대한 값 생략
+    href: ../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md
+  - name: 디바이스 정보 설정을 렌더링 확장 프로그램에 전달
+    href: ../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md
+  - name: Reporting Services 배달 확장 프로그램 설정
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-delivery-extension-settings.md
+  - name: Reporting Services 속성 - 보고서 서버 항목 속성
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-item-properties.md
+  - name: Reporting Services 속성 - 보고서 서버 시스템 속성
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md
+  - name: Reporting Services 속성
+    href: ../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md
+  - name: 웹 서비스의 URL 속성 설정
+    href: ../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md
+  - name: 웹 서비스 메서드 인수 제공
+    href: ../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md
+  - name: 보안 웹 서비스 메서드 사용
+    href: ../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md
+  - name: 사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
+    href: ../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md
+  - name: 웹 서비스 인증
+    href: ../reporting-services/report-server-web-service/net-framework/web-service-authentication.md
+  - name: Reporting Services 확장 프로그램 라이브러리
     href: ../reporting-services/extensions/reporting-services-extension-library.md
-  - name: 사용자 지정 보고서 항목
+  - name: 데이터 처리 확장 프로그램 라이브러리 만들기
+    href: ../reporting-services/extensions/data-processing/creating-a-data-processing-extension-library.md
+  - name: 데이터 처리 확장 프로그램 개요
+    href: ../reporting-services/extensions/data-processing/data-processing-extensions-overview.md
+  - name: 데이터 처리 확장 프로그램 코드 디버깅
+    href: ../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md
+  - name: 보고서 서버에 데이터 처리 확장 프로그램 배포
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-a-report-server.md
+  - name: 보고서 디자이너에 데이터 처리 확장 프로그램 배포
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension-to-report-designer.md
+  - name: 데이터 처리 확장 프로그램 배포
+    href: ../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md
+  - name: 데이터 처리 확장 프로그램에 대한 Command 클래스 구현
+    href: ../reporting-services/extensions/data-processing/implementing-a-command-class-for-a-data-processing-extension.md
+  - name: 데이터 처리 확장 프로그램에 대한 Connection 클래스 구현
+    href: ../reporting-services/extensions/data-processing/implementing-a-connection-class-for-a-data-processing-extension.md
+  - name: 데이터 처리 확장 프로그램 구현
+    href: ../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md
+  - name: 데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
+    href: ../reporting-services/extensions/data-processing/implementing-a-datareader-class-for-a-data-processing-extension.md
+  - name: 데이터 처리 확장 프로그램 구현 준비
+    href: ../reporting-services/extensions/data-processing/preparing-to-implement-a-data-processing-extension.md
+  - name: Reporting Services에서 외부 데이터 집합 사용
+    href: ../reporting-services/extensions/data-processing/using-an-external-dataset-with-reporting-services.md
+  - name: 배달 확장 프로그램 라이브러리 만들기
+    href: ../reporting-services/extensions/delivery-extension/creating-a-delivery-extension-library.md
+  - name: 배달 확장 프로그램 코드 디버깅
+    href: ../reporting-services/extensions/delivery-extension/debugging-delivery-extension-code.md
+  - name: 배달 확장 프로그램 개요
+    href: ../reporting-services/extensions/delivery-extension/delivery-extensions-overview.md
+  - name: 배달 확장 프로그램 배포
+    href: ../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md
+  - name: 배달 확장 프로그램 구현
+    href: ../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md
+  - name: 배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
+    href: ../reporting-services/extensions/delivery-extension/implementing-the-ideliveryextension-interface-for-a-delivery-extension.md
+  - name: 배달 확장 프로그램 구현 준비
+    href: ../reporting-services/extensions/delivery-extension/preparing-to-implement-a-delivery-extension.md
+  - name: 배달 확장 프로그램 제거
+    href: ../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md
+  - name: 배달 확장 프로그램에 대해 Notification 클래스 사용
+    href: ../reporting-services/extensions/delivery-extension/using-a-notification-class-for-a-delivery-extension.md
+  - name: 배달 확장 프로그램에 대해 RenderedOutputFile 클래스 사용
+    href: ../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md
+  - name: 배달 확장 프로그램에 대해 Report 클래스 사용
+    href: ../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md
+  - name: 배달 확장 프로그램에 대해 Setting 클래스 사용
+    href: ../reporting-services/extensions/delivery-extension/using-the-setting-class-for-a-delivery-extension.md
+  - name: 렌더링 확장 프로그램 배포
+    href: ../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
+  - name: 렌더링 확장 프로그램 구현
+    href: ../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md
+  - name: IRenderingExtension 인터페이스 구현
+    href: ../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md
+  - name: 렌더링 확장 프로그램 제거
+    href: ../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md
+  - name: 렌더링 확장 프로그램 개요
+    href: ../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md
+  - name: Reporting Services의 인증
+    href: ../reporting-services/extensions/security-extension/authentication-in-reporting-services.md
+  - name: Reporting Services의 권한 부여
+    href: ../reporting-services/extensions/security-extension/authorization-in-reporting-services.md
+  - name: 사용자 지정 보안 확장 프로그램 설치 방법
+    href: ../reporting-services/extensions/security-extension/how-to-install-custom-security-extensions.md
+  - name: 보안 확장 프로그램 구현
+    href: ../reporting-services/extensions/security-extension/implementing-a-security-extension.md
+  - name: 보안 확장 프로그램 개요
+    href: ../reporting-services/extensions/security-extension/security-extensions-overview.md
+  - name: Reporting Services의 코드 액세스 보안
+    href: ../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md
+  - name: 안전한 개발(Reporting Services)
+    href: ../reporting-services/extensions/secure-development/secure-development-reporting-services.md
+  - name: 보안 정책 이해
+    href: ../reporting-services/extensions/secure-development/understanding-security-policies.md
+  - name: Reporting Services 보안 정책 파일 사용
+    href: ../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md
+  - name: Reporting Services 확장 프로그램
+    href: ../reporting-services/extensions/reporting-services-extensions.md
+  - name: 확장 프로그램에 대한 보안 고려 사항
+    href: ../reporting-services/extensions/security-considerations-for-extensions.md
+  - name: 사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기
     href: ../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md
-  - name: 사용자 지정 어셈블리
+  - name: 사용자 지정 보고서 항목 런타임 구성 요소 만들기
+    href: ../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md
+  - name: 사용자 지정 보고서 항목 아키텍처
+    href: ../reporting-services/custom-report-items/custom-report-item-architecture.md
+  - name: 사용자 지정 보고서 항목 클래스 라이브러리
+    href: ../reporting-services/custom-report-items/custom-report-item-class-libraries.md
+  - name: 사용자 지정 보고서 항목 구현 요구 사항
+    href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
+  - name: 사용자 지정 보고서 항목
+    href: ../reporting-services/custom-report-items/custom-report-items.md
+  - name: '방법: 사용자 지정 보고서 항목 배포'
+    href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
+  - name: 식을 통해 사용자 지정 어셈블리 액세스
     href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
+  - name: 사용자 지정 어셈블리에서 권한 어설션
+    href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
+  - name: 사용자 지정 어셈블리 배포
+    href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
+  - name: '방법: 사용자 지정 어셈블리 디버깅'
+    href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
+  - name: 사용자 지정 어셈블리 개체 초기화
+    href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md
+  - name: RDL 파일에서 어셈블리 참조
+    href: ../reporting-services/custom-assemblies/referencing-assemblies-in-an-rdl-file.md
+  - name: 보고서에서 사용자 지정 어셈블리 사용
+    href: ../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md
+  - name: 강력한 이름의 사용자 지정 어셈블리 사용
+    href: ../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md
 - name: 기술 참조
-  href: technical-reference-ssrs.md
+  href: ../reporting-services/technical-reference-ssrs.md
   items:
   - name: 기능 참조
-    href: feature-reference-reporting-services.md
+    href: ../reporting-services/feature-reference-reporting-services.md
   - name: 렌더링 확장 프로그램에 대한 디바이스 정보 설정
-    href: device-information-settings-for-rendering-extensions-reporting-services.md
+    href: ../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md
     items:
     - name: ATOM 디바이스 정보 설정
-      href: atom-device-information-settings.md
+      href: ../reporting-services/atom-device-information-settings.md
     - name: CSV 디바이스 정보 설정
-      href: csv-device-information-settings.md
+      href: ../reporting-services/csv-device-information-settings.md
     - name: Excel 디바이스 정보 설정
-      href: excel-device-information-settings.md
+      href: ../reporting-services/excel-device-information-settings.md
     - name: HTML 디바이스 정보 설정
-      href: html-device-information-settings.md
+      href: ../reporting-services/html-device-information-settings.md
     - name: 이미지 디바이스 정보 설정
-      href: image-device-information-settings.md
+      href: ../reporting-services/image-device-information-settings.md
     - name: MHTML 디바이스 정보 설정
-      href: mhtml-device-information-settings.md
+      href: ../reporting-services/mhtml-device-information-settings.md
     - name: PDF 디바이스 정보 설정
-      href: pdf-device-information-settings.md
+      href: ../reporting-services/pdf-device-information-settings.md
     - name: PPTX 디바이스 정보 설정
-      href: pptx-device-information-settings.md
+      href: ../reporting-services/pptx-device-information-settings.md
     - name: XML 디바이스 정보 설정
-      href: xml-device-information-settings.md
+      href: ../reporting-services/xml-device-information-settings.md
     - name: Word 디바이스 정보 설정
-      href: word-device-information-settings.md
+      href: ../reporting-services/word-device-information-settings.md
     - name: RGDI 디바이스 정보 설정
-      href: rgdi-device-information-settings.md
+      href: ../reporting-services/rgdi-device-information-settings.md
   - name: HTML 뷰어 및 보고서 도구 모음
-    href: html-viewer-and-the-report-toolbar.md
+    href: ../reporting-services/html-viewer-and-the-report-toolbar.md
 - name: 자습서
-  href: reporting-services-tutorials-ssrs.md
+  href: ../reporting-services/reporting-services-tutorials-ssrs.md
   items:
   - name: 기본 테이블 보고서 만들기(SSRS 자습서)
-    href: create-a-basic-table-report-ssrs-tutorial.md
+    href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
     items:
     - name: '1단원: 보고서 서버 프로젝트 만들기'
-      href: lesson-1-creating-a-report-server-project-reporting-services.md
+      href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
     - name: '2단원: 연결 정보 지정'
-      href: lesson-2-specifying-connection-information-reporting-services.md
-    - name: '3단원: 테이블 보고서에 대한 데이터 세트 정의'
-      href: lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
+      href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
+    - name: '3단원: 테이블 보고서에 대한 데이터 집합 정의'
+      href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
     - name: '4단원: 보고서에 테이블 추가'
-      href: lesson-4-adding-a-table-to-the-report-reporting-services.md
-    - name: 'Lesson 5: Formatting a Report'
-      href: lesson-5-formatting-a-report-reporting-services.md
-    - name: 'Lesson 6: Adding Grouping and Totals'
-      href: lesson-6-adding-grouping-and-totals-reporting-services.md
+      href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
+    - name: '5단원: 보고서 서식 지정'
+      href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
+    - name: '6단원: 그룹화 및 합계 추가'
+      href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
   - name: 데이터 기반 구독 만들기(SSRS 자습서)
-    href: create-a-data-driven-subscription-ssrs-tutorial.md
+    href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
     items:
-    - name: '1단원: 샘플 구독자 데이터베이스 만들기'
-      href: lesson-1-creating-a-sample-subscriber-database.md
-    - name: 'Lesson 2: Modifying the Report Data Source Properties'
-      href: lesson-2-modifying-the-report-data-source-properties.md
-    - name: 'Lesson 3: Defining a Data-Driven Subscription'
-      href: lesson-3-defining-a-data-driven-subscription.md
+    - name: '1단원: 예제 구독자 데이터베이스 만들기'
+      href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
+    - name: '2단원: 보고서 데이터 원본 속성 수정'
+      href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
+    - name: '3단원: 데이터 기반 구독 정의'
+      href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
   - name: ReportViewer를 사용하여 매개 변수가 있는 드릴스루(RDLC) 보고서 만들기(SSRS 자습서)
-    href: create-drillthrough-rdlc-report-with-parameters-reportviewer.md
+    href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
     items:
     - name: '1단원: 새 웹 사이트 만들기'
-      href: lesson-1-create-a-new-web-site.md
+      href: ../reporting-services/lesson-1-create-a-new-web-site.md
     - name: '2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-      href: lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
+      href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
     - name: '3단원: 보고서 마법사를 사용하여 부모 보고서 디자인'
-      href: lesson-3-design-the-parent-report-using-the-report-wizard.md
+      href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
     - name: '4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의'
-      href: lesson-4-define-a-data-connection-and-data-table-for-child-report.md
+      href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
     - name: '5단원: 보고서 마법사를 사용하여 자식 보고서 디자인'
-      href: lesson-5-design-the-child-report-using-the-report-wizard.md
-    - name: '6단원: 애플리케이션에 ReportViewer 컨트롤 추가'
-      href: lesson-6-add-a-reportviewer-control-to-the-application.md
+      href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
+    - name: '6단원: 응용 프로그램에 ReportViewer 컨트롤 추가'
+      href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
     - name: '7단원: 부모 보고서에 드릴스루 동작 추가'
-      href: lesson-7-add-drillthrough-action-on-parent-report.md
+      href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
     - name: '8단원: 데이터 필터 만들기'
-      href: lesson-8-create-a-data-filter.md
-    - name: 'Lesson 9: Build and Run the Application'
-      href: lesson-9-build-and-run-the-application.md
+      href: ../reporting-services/lesson-8-create-a-data-filter.md
+    - name: '9단원: 응용 프로그램 빌드 및 실행'
+      href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: 보고서 작성기 자습서
-    href: report-builder-tutorials.md
+    href: ../reporting-services/report-builder-tutorials.md
     items:
     - name: 자습서의 사전 요구 사항
-      href: prerequisites-for-tutorials-report-builder.md
+      href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
     - name: 데이터에 연결하는 다른 방법(보고서 작성기)
-      href: alternative-ways-to-get-a-data-connection-report-builder.md
+      href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
     - name: '자습서: 기본 테이블 보고서 만들기'
-      href: tutorial-creating-a-basic-table-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
     - name: '자습서: 행렬 보고서 만들기'
-      href: tutorial-creating-a-matrix-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
     - name: '자습서: 자유 형식 보고서 만들기'
-      href: tutorial-creating-a-free-form-report-report-builder.md
+      href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
     - name: '자습서: 텍스트 서식 지정(보고서 작성기)'
-      href: tutorial-format-text-report-builder.md
+      href: ../reporting-services/tutorial-format-text-report-builder.md
     - name: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)'
-      href: tutorial-add-a-column-chart-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
     - name: '자습서: 보고서에 원형 차트 추가(보고서 작성기)'
-      href: tutorial-add-a-pie-chart-to-your-report-report-builder.md
-    - name: '자습서: 보고서에 막대형 차트 추가(보고서 작성기)'
-      href: tutorial-add-a-bar-chart-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
+    - name: '자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)'
+      href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
     - name: '자습서: 보고서에 스파크라인 추가(보고서 작성기)'
-      href: tutorial-add-a-sparkline-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
     - name: '자습서: 보고서에 KPI 추가'
-      href: tutorial-adding-a-kpi-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
     - name: '자습서: 지도 보고서'
-      href: tutorial-map-report-report-builder.md
+      href: ../reporting-services/tutorial-map-report-report-builder.md
     - name: '자습서: 보고서에 매개 변수 추가(보고서 작성기)'
-      href: tutorial-add-a-parameter-to-your-report-report-builder.md
+      href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
     - name: '자습서: 드릴스루 보고서 및 주 보고서 만들기'
-      href: tutorial-creating-drillthrough-and-main-reports-report-builder.md
+      href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: '자습서: 식 소개'
-      href: tutorial-introducing-expressions.md
-ms.openlocfilehash: bf39fd7ed94dff4fb4efbbc80f25b954438c5494
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+      href: ../reporting-services/tutorial-introducing-expressions.md
+ms.openlocfilehash: 87e4b66b79941be4940bd5c3e4904a01d0e9be92
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350587"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676201"

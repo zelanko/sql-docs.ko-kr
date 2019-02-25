@@ -1,233 +1,235 @@
 items:
+- name: SQL Server 루트 목차 +
+  href: /sql/sql-server/sql-server-technical-documentation
 - name: APS의 새로운 기능
-  href: whats-new-analytics-platform-system.md
+  href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
   - name: APS CU7.3
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.3
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3
   - name: APS CU7.2
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.2
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.2
   - name: APS CU7.1
-    href: whats-new-analytics-platform-system.md#h2-aps-cu7.1
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.1
   - name: APS AU7
-    href: whats-new-analytics-platform-system.md#h2-aps-au7
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7
   - name: APS 2016
-    href: whats-new-analytics-platform-system.md#h2-aps-au6
+    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6
 - name: Architecture
   items:
   - name: 병렬 데이터 웨어하우스 개요
-    href: parallel-data-warehouse-overview.md
+    href: ../analytics-platform-system/parallel-data-warehouse-overview.md
   - name: 하드웨어 구성 요소
-    href: hardware-components.md
+    href: ../analytics-platform-system/hardware-components.md
   - name: 하드웨어 구성
-    href: hardware-configurations.md
+    href: ../analytics-platform-system/hardware-configurations.md
   - name: 처리 및 스토리지 용량
-    href: processing-and-storage-capacity-planning.md
+    href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
   - name: 고가용성
-    href: high-availability.md
+    href: ../analytics-platform-system/high-availability.md
 - name: 하드웨어 백업 및 로드
   items:
   - name: 개요
-    href: backup-and-loading-hardware.md
+    href: ../analytics-platform-system/backup-and-loading-hardware.md
   - name: 로드 서버 획득 및 구성
-    href: acquire-and-configure-loading-server.md
+    href: ../analytics-platform-system/acquire-and-configure-loading-server.md
   - name: 로드 서버 용량 계획 워크시트
-    href: loading-server-capacity-planning-worksheet.md
+    href: ../analytics-platform-system/loading-server-capacity-planning-worksheet.md
   - name: 백업 서버 획득 및 구성
-    href: acquire-and-configure-backup-server.md
+    href: ../analytics-platform-system/acquire-and-configure-backup-server.md
   - name: 백업 서버 용량 계획 워크시트
-    href: backup-capacity-planning-worksheet.md
+    href: ../analytics-platform-system/backup-capacity-planning-worksheet.md
   - name: InfiniBand 네트워크 어댑터 구성
-    href: configure-infiniband-network-adapters.md
+    href: ../analytics-platform-system/configure-infiniband-network-adapters.md
 - name: 쿼리
   items:
   - name: 자동 통계 구성
-    href: configure-auto-statistics.md
+    href: ../analytics-platform-system/configure-auto-statistics.md
   - name: 활성 쿼리 모니터링
-    href: monitoring-active-queries.md
+    href: ../analytics-platform-system/monitoring-active-queries.md
   - name: 일반 하위 식 제거
-    href: common-sub-expression-elimination.md
+    href: ../analytics-platform-system/common-sub-expression-elimination.md
 - name: 로드
   items:
   - name: 개요
-    href: load-overview.md
+    href: ../analytics-platform-system/load-overview.md
   - name: 준비 데이터베이스 만들기
-    href: staging-database.md
+    href: ../analytics-platform-system/staging-database.md
   - name: Integration Services를 사용하여 로드
-    href: load-with-ssis.md
+    href: ../analytics-platform-system/load-with-ssis.md
   - name: PDW 대상 어댑터를 사용하는 Integration Services 스크립트 작업 만들기
-    href: create-ssis-script-task-using-pdw-destination-adapter.md
+    href: ../analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md
   - name: dwloader의 데이터 형식 변환 규칙
-    href: dwloader-data-type-conversion-rules.md
+    href: ../analytics-platform-system/dwloader-data-type-conversion-rules.md
   - name: INSERT를 사용하여 데이터 로드
-    href: load-with-insert.md
+    href: ../analytics-platform-system/load-with-insert.md
   - name: dwloader 명령줄 로드 도구
-    href: dwloader.md
+    href: ../analytics-platform-system/dwloader.md
   - name: 로드 모니터링
-    href: monitor-loads.md
+    href: ../analytics-platform-system/monitor-loads.md
 - name: 데이터베이스 관리
   items:
   - name: Backup 및 Restore 메서드
     items:
     - name: 개요
-      href: backup-and-restore-overview.md
+      href: ../analytics-platform-system/backup-and-restore-overview.md
     - name: TDE로 보호되는 데이터베이스 복원
-      href: restore-database-protected-by-tde.md
+      href: ../analytics-platform-system/restore-database-protected-by-tde.md
   - name: PDW 사용 권한
-    href: pdw-permissions.md
+    href: ../analytics-platform-system/pdw-permissions.md
     items:
     - name: 사용 권한 부여
-      href: grant-permissions.md
+      href: ../analytics-platform-system/grant-permissions.md
   - name: 오류 메시지
-    href: error-messages.md
+    href: ../analytics-platform-system/error-messages.md
   - name: 잠금 동작
-    href: locking-behavior.md
+    href: ../analytics-platform-system/locking-behavior.md
   - name: 원격 테이블 복사
-    href: remote-table-copy.md
+    href: ../analytics-platform-system/remote-table-copy.md
     items:
     - name: InfiniBand를 사용하여 원격 테이블 복사본을 받도록 외부 Windows 시스템 구성
-      href: configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+      href: ../analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
     - name: 원격 테이블 복사본을 받도록 외부 SMP SQL Server 구성
-      href: configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+      href: ../analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
     - name: 원격 테이블 복사본에 대해 SQL Server PDW 구성
-      href: configure-sql-server-pdw-for-remote-table-copies.md
+      href: ../analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md
   - name: 시스템 데이터베이스
-    href: system-databases.md
+    href: ../analytics-platform-system/system-databases.md
     items:
     - name: 예약된 데이터베이스 이름
-      href: reserved-database-names.md
+      href: ../analytics-platform-system/reserved-database-names.md
     - name: tempdb 데이터베이스
-      href: tempdb-database.md
+      href: ../analytics-platform-system/tempdb-database.md
     - name: master 데이터베이스(master database)
-      href: master-database.md
+      href: ../analytics-platform-system/master-database.md
   - name: 사용자 세션
-    href: user-sessions.md
+    href: ../analytics-platform-system/user-sessions.md
   - name: 워크로드 관리
-    href: workload-management.md
+    href: ../analytics-platform-system/workload-management.md
     items:
     - name: 워크로드 관리 작업
-      href: workload-management-tasks.md
+      href: ../analytics-platform-system/workload-management-tasks.md
 - name: 보안
   items:
   - name: Transparent Data Encryption
-    href: transparent-data-encryption.md
+    href: ../analytics-platform-system/transparent-data-encryption.md
   - name: 인증서 프로비전
-    href: provision-certificate.md
+    href: ../analytics-platform-system/provision-certificate.md
 - name: 어플라이언스 관리 작업
-  href: appliance-management-tasks.md
+  href: ../analytics-platform-system/appliance-management-tasks.md
   items:
   - name: 어플라이언스 설치 및 구성 개요
-    href: appliance-installation-and-configuration-overview.md
+    href: ../analytics-platform-system/appliance-installation-and-configuration-overview.md
     items:
     - name: IHV에서 가져올 정보
-      href: information-to-obtain-from-your-ihv.md
+      href: ../analytics-platform-system/information-to-obtain-from-your-ihv.md
     - name: 하드웨어 설치
-      href: hardware-installation.md
+      href: ../analytics-platform-system/hardware-installation.md
   - name: 어플라이언스 노드에 연결
-    href: connect-to-appliance-nodes.md
+    href: ../analytics-platform-system/connect-to-appliance-nodes.md
   - name: 바이러스 백신 소프트웨어
-    href: antivirus-software.md
+    href: ../analytics-platform-system/antivirus-software.md
   - name: 어플라이언스 구성
-    href: appliance-configuration.md
+    href: ../analytics-platform-system/appliance-configuration.md
     items:
     - name: PDW 및 어플라이언스 패브릭 물리적 구성 요소
-      href: pdw-and-appliance-fabric-physical-components.md
+      href: ../analytics-platform-system/pdw-and-appliance-fabric-physical-components.md
     - name: Configuration Manager 시작
-      href: launch-the-configuration-manager.md
+      href: ../analytics-platform-system/launch-the-configuration-manager.md
     - name: 어플라이언스 토폴로지
-      href: appliance-topology.md
+      href: ../analytics-platform-system/appliance-topology.md
     - name: 암호 재설정
-      href: password-reset.md
+      href: ../analytics-platform-system/password-reset.md
     - name: 어플라이언스 표준 시간대 구성
-      href: appliance-time-zone-configuration.md
+      href: ../analytics-platform-system/appliance-time-zone-configuration.md
     - name: 어플라이언스 네트워크 구성
-      href: appliance-network-configuration.md
+      href: ../analytics-platform-system/appliance-network-configuration.md
     - name: PDW 토폴로지
-      href: pdw-topology.md
+      href: ../analytics-platform-system/pdw-topology.md
     - name: PDW 인증서 프로비전
-      href: pdw-certificate-provisioning.md
+      href: ../analytics-platform-system/pdw-certificate-provisioning.md
     - name: PDW 기능 스위치
-      href: appliance-feature-switch.md
+      href: ../analytics-platform-system/appliance-feature-switch.md
     - name: PDW 방화벽 구성
-      href: pdw-firewall-configuration.md
+      href: ../analytics-platform-system/pdw-firewall-configuration.md
     - name: PDW 서비스 상태
-      href: pdw-services-status.md
+      href: ../analytics-platform-system/pdw-services-status.md
     - name: 즉시 파일 초기화 구성
-      href: instant-file-initialization-configuration.md
+      href: ../analytics-platform-system/instant-file-initialization-configuration.md
     - name: master 데이터베이스 복원
-      href: restore-the-master-database.md
+      href: ../analytics-platform-system/restore-the-master-database.md
     - name: DSRM(Directory Services Restore Mode)의 AD 노드에 로그온하는 관리자 암호 설정
-      href: set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+      href: ../analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
     - name: Windows Server Update Services 구성
-      href: configure-windows-server-update-services-wsus.md
+      href: ../analytics-platform-system/configure-windows-server-update-services-wsus.md
     - name: 외부 데이터에 대한 PolyBase 연결 구성
-      href: configure-polybase-connectivity-to-external-data.md
+      href: ../analytics-platform-system/configure-polybase-connectivity-to-external-data.md
       items:
       - name: Hadoop에 연결
-        href: polybase-configure-hadoop.md
+        href: ../analytics-platform-system/polybase-configure-hadoop.md
       - name: Hadoop 보안 구성
-        href: polybase-configure-hadoop-security.md
+        href: ../analytics-platform-system/polybase-configure-hadoop-security.md
       - name: Azure Blob Storage
-        href: polybase-configure-azure-blob-storage.md
+        href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
     - name: APS에서 TLS 1.2 구성
-      href: configure-tls12-aps.md
+      href: ../analytics-platform-system/configure-tls12-aps.md
     - name: DNS 전달자를 사용하여 비 어플라이언스 DNS 이름 확인
-      href: use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+      href: ../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
     - name: APS 도메인 관리자 만들기
-      href: create-an-aps-domain-administrator-aps.md
+      href: ../analytics-platform-system/create-an-aps-domain-administrator-aps.md
     - name: Microsoft에 원격 분석 피드백 보내기
-      href: send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+      href: ../analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md
   - name: 소프트웨어 서비스
-    href: software-servicing.md
+    href: ../analytics-platform-system/software-servicing.md
     items:
     - name: Microsoft 업데이트 다운로드 및 적용
-      href: download-and-apply-microsoft-updates.md
+      href: ../analytics-platform-system/download-and-apply-microsoft-updates.md
     - name: Microsoft Update 제거
-      href: uninstall-microsoft-updates.md
+      href: ../analytics-platform-system/uninstall-microsoft-updates.md
     - name: Analytics Platform System 핫픽스 적용
-      href: apply-analytics-platform-system-hotfixes.md
+      href: ../analytics-platform-system/apply-analytics-platform-system-hotfixes.md
     - name: Analytics Platform System 핫픽스 제거
-      href: uninstall-analytics-platform-system-hotfixes.md
+      href: ../analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md
   - name: APS 어플라이언스 켜기 또는 끄기
-    href: power-the-aps-appliance-on-or-off.md
+    href: ../analytics-platform-system/power-the-aps-appliance-on-or-off.md
   - name: 어플라이언스 모니터링
-    href: appliance-monitoring.md
+    href: ../analytics-platform-system/appliance-monitoring.md
     items:
     - name: 관리 콘솔을 사용하여 어플라이언스 모니터링
-      href: monitor-the-appliance-by-using-the-admin-console.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md
     - name: 시스템 보기를 사용하여 어플라이언스 모니터링
-      href: monitor-the-appliance-by-using-system-views.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-views.md
     - name: System Center Operations Manager를 사용하여 어플라이언스 모니터링
-      href: monitor-the-appliance-by-using-system-center-operations-manager.md
+      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md
       items:
       - name: SCOM 관리 팩 설치
-        href: install-the-scom-management-packs.md
+        href: ../analytics-platform-system/install-the-scom-management-packs.md
       - name: PDW용 SCOM 관리 팩 가져오기
-        href: import-the-scom-management-pack-for-pdw.md
+        href: ../analytics-platform-system/import-the-scom-management-pack-for-pdw.md
       - name: Analytics Platform System을 모니터링하도록 SCOM 구성
-        href: configure-scom-to-monitor-analytics-platform-system.md
+        href: ../analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md
     - name: 어플라이언스 성능 상태 모니터링
-      href: monitor-appliance-health-state.md
+      href: ../analytics-platform-system/monitor-appliance-health-state.md
     - name: 어플라이언스 경고 추적
-      href: track-appliance-alerts.md
+      href: ../analytics-platform-system/track-appliance-alerts.md
     - name: 용량 사용률 보기
-      href: view-capacity-utilization.md
+      href: ../analytics-platform-system/view-capacity-utilization.md
     - name: 폴링 주기 확인
-      href: determine-polling-frequency.md
+      href: ../analytics-platform-system/determine-polling-frequency.md
     - name: 오류가 발생한 클러스터 노드 확인
-      href: determine-which-cluster-node-failed.md
+      href: ../analytics-platform-system/determine-which-cluster-node-failed.md
     - name: 관리 콘솔 경고의 이해
-      href: understanding-admin-console-alerts.md
+      href: ../analytics-platform-system/understanding-admin-console-alerts.md
 - name: 참조
   items:
   - name: T-SQL 언어 요소
-    href: tsql-language-elements.md
+    href: ../analytics-platform-system/tsql-language-elements.md
   - name: T-SQL 문
-    href: tsql-statements.md
+    href: ../analytics-platform-system/tsql-statements.md
   - name: T-SQL 시스템 보기
-    href: tsql-system-views.md
-ms.openlocfilehash: d1aef2cdc187c2bcf8c53a8e675b1f1c11cad1d6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+    href: ../analytics-platform-system/tsql-system-views.md
+ms.openlocfilehash: 8b437c93b4fee98c1ad29b9ab10c6c97f633fceb
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626304"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676031"
