@@ -1,7 +1,7 @@
 ---
 title: 상수(Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409530"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744453"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,6 +68,11 @@ PDO::SQLSRV_ATTR_DIRECT_QUERY 특성을 사용하여 직접 쿼리 실행 또는
 ### <a name="handling-numeric-fetches"></a>인출 숫자 처리
 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint, float 및 real) 숫자 SQL 유형이 있는 열에서 숫자 인출 처리를 사용할 수 있습니다. SQL 부동 reals 부동 소수점 수로 표시 되는 동안 ints로 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 결과 정수 열에서 true로 설정 된 경우 표시 됩니다. 이 특성을 사용 하 여 설정할 수 있습니다 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)합니다. 
 
+PDO::SQLSRV_ATTR_FORMAT_DECIMALS 및 PDO::SQLSRV_ATTR_DECIMAL_PLACES 특성을 사용 하 여 기본 10 진수 서식 지정 동작을 수정할 수 있습니다. 이러한 특성의 동작 SQLSRV 쪽에서 해당 옵션에 동일 (**FormatDecimals** 하 고 **DecimalPlaces**) 점을 제외 하 고는 서식 지정에 대 한 출력 매개 변수를 사용할 수 없습니다. 이러한 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 또는 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 모든 문 특성은 재정의 연결 특성입니다. 자세한 내용은 참조 하세요. [10 진수 문자열 서식 지정 및 Money 값 (PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)합니다.
+
+### <a name="handling-date-and-time-fetches"></a>날짜 및 시간 값 처리
+
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검색할 것인지 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체입니다. False 두면 기본 동작 문자열로 반환 하는 것입니다. 이 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 하거나 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 문 특성은 재정의 연결 특성입니다. 자세한 내용은 [방법: 검색 날짜 및 시간 형식을 사용 하 여 PHP DateTime 개체 PDO_SQLSRV 드라이버](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)합니다.
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 드라이버 상수  
 다음 섹션에서는 SQLSRV 드라이버에서 사용되는 상수를 나열합니다.  
@@ -139,8 +144,8 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV_PHPTYPE_INT|정수|  
 |SQLSRV_PHPTYPE_DATETIME|DATETIME|  
 |SQLSRV_PHPTYPE_FLOAT|float|  
-|SQLSRV_PHPTYPE_STREAM ($인코딩<sup>1</sup>)|STREAM|  
-|SQLSRV_PHPTYPE_STRING ($인코딩<sup>1</sup>)|String|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** 및 **SQLSRV_PHPTYPE_STRING**은 스트림 인코딩을 지정하는 매개 변수를 수락합니다. 다음 표에는 허용 가능한 매개 변수인 SQLSRV 상수 및 해당 인코딩에 대한 설명이 있습니다.  
   
@@ -169,7 +174,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|10 진수<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
@@ -177,7 +182,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|숫자<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  

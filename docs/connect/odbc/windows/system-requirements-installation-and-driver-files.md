@@ -11,19 +11,19 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600963"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464769"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>시스템 요구 사항, 설치 및 드라이버 파일
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]및 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 대한 연결을 지원합니다.  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 및 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 대한 연결을 지원합니다.  
   
-Windows 기반 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 버전이 하나 이상 있는 컴퓨터에도 설치할 수 있습니다.  
+Windows 기반 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 하나 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 버전이 있는 컴퓨터에도 설치할 수 있습니다.  
   
 ODBC Driver 13 및 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], 위의 외에도 SQL Server 2016을 지원 합니다. 
 
@@ -48,7 +48,7 @@ ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
 실행 하면 드라이버가 설치 된 `msodbcsql.msi` 다음 링크 중 하나에서:
 
-- [Windows 기반 Microsoft SQL Server용 ODBC 드라이버 17 다운로드](https://www.microsoft.com/download/details.aspx?id=56567)
+- [Windows 기반 Microsoft ODBC Driver 17 for SQL Server 다운로드](https://www.microsoft.com/download/details.aspx?id=56567)
 - [Windows 기반 Microsoft SQL Server용 ODBC 드라이버 13.1 다운로드](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Windows 기반 Microsoft SQL Server용 ODBC Driver 13 다운로드](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Windows 기반 Microsoft SQL Server용 ODBC Driver 11을 다운로드합니다](https://www.microsoft.com/download/details.aspx?id=36434). 
@@ -97,12 +97,12 @@ BCP 함수를 사용하는 애플리케이션은 애플리케이션을 컴파일
  
 |구성 요소|설명|  
 |---------------|-----------------|  
-|msodbcsql17.dll 또는 <br> msodbcsql13.dll or <br> msodbcsql11.dll|드라이버 기능이 모두 포함된 DLL(동적 연결 라이브러리) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|  
-|msodbcdiag17.dll 또는 <br> msodbcdiag13.dll 또는 <br> msodbcdiag11.dll|드라이버의 진단 (추적) 인터페이스를 포함 하는 동적 연결 라이브러리 (DLL) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|
-|msodbcsqlr17.rll 또는 <br> msodbcsqlr13.rll or <br> msodbcsqlr11.rll|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 %SYSTEMROOT%\System32\1033에서 설치 됩니다.| 
+|msodbcsql17.dll or <br> msodbcsql13.dll or <br> msodbcsql11.dll|드라이버 기능이 모두 포함된 DLL(동적 연결 라이브러리) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|  
+|msodbcdiag17.dll or <br> msodbcdiag13.dll 또는 <br> msodbcdiag11.dll|드라이버의 진단 (추적) 인터페이스를 포함 하는 동적 연결 라이브러리 (DLL) 파일입니다. 이 파일은 %SYSTEMROOT%\System32에서 설치 됩니다.|
+|msodbcsqlr17.rll or <br> msodbcsqlr13.rll or <br> msodbcsqlr11.rll|드라이버 라이브러리에 대한 해당 리소스 파일입니다. 이 파일은 %SYSTEMROOT%\System32\1033에서 설치 됩니다.| 
 |s13ch_msodbcsql.chm or <br> s11ch_msodbcsql.chm |드라이버용 데이터 원본을 만드는 방법을 문서화하는 데이터 원본 마법사 도움말 파일입니다. 이 파일은 %SYSTEMROOT%\System32\1033 systemroot%\system32\1033에 설치 <br /> <br /> **참고:** ODBC 드라이버 17에 대 한 chm 파일이 없습니다. |  
 |msodbcsql.h|드라이버를 사용하는 데 필요한 새 정의를 모두 포함하는 헤더 파일입니다.<br /><br /> **참고:**  동일한 프로그램에서 msodbcsql.h 및 odbcss.h를 참조할 수 없습니다.<br /><br /> ODBC Driver 17 또는 13용 msodbcsql.h는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK에 설치됩니다. <br /> ODBC 드라이버 11용 msodbcsql.h는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK에 설치됩니다.| 
-|msodbcsql17.lib 또는 <br> msodbcsql13.lib or <br> msodbcsql11.lib|드라이버의 일부인 **bcp** 유틸리티 함수를 호출하는 데 필요한 라이브러리 파일입니다.<br /><br /> **참고:**  프로그램에서 이 라이브러리 파일을 참조하는 경우 시스템 경로 및 해당 응용 프로그램을 사용하는 시스템 경로에 있는지 확인합니다.<br /><br /> msodbcsql17.lib 또는 msodbcsql13.lib는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK에 설치됩니다.<br /> msodbcsql11.lib는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK에 설치됩니다.|
+|msodbcsql17.lib or <br> msodbcsql13.lib or <br> msodbcsql11.lib|드라이버의 일부인 **bcp** 유틸리티 함수를 호출하는 데 필요한 라이브러리 파일입니다.<br /><br /> **참고:**  프로그램에서 이 라이브러리 파일을 참조하는 경우 시스템 경로 및 해당 애플리케이션을 사용하는 시스템 경로에 있는지 확인합니다.<br /><br /> msodbcsql17.lib 또는 msodbcsql13.lib는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK에 설치됩니다.<br /> msodbcsql11.lib는 %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK에 설치됩니다.|
 
   
 ## <a name="see-also"></a>참고 항목  

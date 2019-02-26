@@ -1,17 +1,17 @@
 ---
 title: 릴리스 정보(SQL Server용 OLE DB 드라이버)| Microsoft Docs
-ms.date: 07/03/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36dc1b7325265da6231b75e9f4db46854b0b219f
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789121"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744363"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버에 대한 릴리스 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -19,6 +19,13 @@ ms.locfileid: "47789121"
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
 이 페이지에서는 SQL Server 용 Microsoft OLE DB 드라이버의 각 버전에 추가 된 기능에 대해 설명 합니다.
+
+## <a name="whats-new-in-version-1821"></a>버전 4.0의 새로운 기능
+
+**추가 기능은 다음과 같습니다.**
+
+* 서버 인코딩 u t F-8을 지원 합니다. 자세한 내용은 참조 하십시오: [OLE DB 드라이버에서 SQL Server에 대 한 u t F-8 지원](features/utf-8-support-in-oledb-driver-for-sql-server.md)합니다.
+* Azure Active Directory 인증 자세한 내용은 [Azure Active Directory란?](features/using-azure-active-directory.md)을 참조하세요.
 
 ## <a name="whats-new-in-version-1810"></a>버전 18.1.0의 새로운 기능
 

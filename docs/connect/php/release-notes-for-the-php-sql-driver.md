@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624061"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744353"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 릴리스 정보
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 이 페이지의 각 버전에 추가 된 기능에 대해 설명 합니다 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다.  
+
+## <a name="whats-new-in-version-56"></a>버전 4.0의 새로운 기능
+
+- PHP 7.0 지원
+- 모든 플랫폼에서 Microsoft ODBC Driver 17.3 용 지원
+- MacOS Mojave 지원 (ODBC 드라이버 17.3 필요 이상)
+- Ubuntu 18.10 및 Suse Linux 15에 대 한 지원 (둘 다 필요 ODBC 드라이버 17.3 이상)
+- PHP 7.0 지원 하지 않으므로
+- Linux Ubuntu 17.10 및 El Capitan macOS에 대 한 지원을 삭제
+- Azure AD 액세스 토큰에 대 한 지원 (Linux 및 macOS에서 ODBC 드라이버 17.2 + 및 필요 unixODBC 2.3.6+)
+- 관리 Id를 사용 하 여 Azure 리소스 (ODBC 드라이버 17.3 + 필요)에 대 한 Azure AD 사용 하 여 인증에 대 한 지원
+- 새 인출 기능:
+  - Datetime 개체로 반환할 pdo_sqlsrv에 대 한 새 PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 플래그
+  - Sqlsrv에 대 한 문 수준 ReturnDatesAsStrings 옵션 추가
+  - 인출한 결과에 10 진수 값의 서식을 지정 하는 것에 대 한 두 드라이버에 대 한 연결 및 문 수준에서 새 옵션
+- 사용자가 원본에서 빌드를 선택 하는 경우 드라이버의 정적 컴파일 지원
+- 메타 데이터 인출에서 캐싱 유니코드 문자열 변환 속도를 성능 향상된
 
 ## <a name="whats-new-in-version-53"></a>버전 5.3의 새로운 기능
 

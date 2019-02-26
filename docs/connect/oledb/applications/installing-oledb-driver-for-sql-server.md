@@ -2,7 +2,7 @@
 title: SQL Server용 OLE DB 드라이버 설치 | Microsoft Docs
 description: 설치 하 고 SQL Server 용 OLE DB 드라이버를 제거 합니다.
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602223"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744383"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ OLE DB Driver for SQL Server 파일 (msoledbsql.dll, msoledbsqlr.rll)에 설치 
 > [!NOTE]  
 > SQL Server 용 OLE DB 드라이버에 대 한 모든 적절 한 레지스트리 설정은 설치 프로세스의 일부로 설정 됩니다.  
 
-OLE DB Driver for SQL Server 헤더 및 라이브러리 파일 (msoledbsql.h 및 msoledbsql.lib)에 설치 된 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`합니다. 또한 msoledbsql.msi 설치의 동일한 파일에 x64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`합니다.  
+OLE DB Driver for SQL Server 헤더 및 라이브러리 파일 (msoledbsql.h 및 msoledbsql.lib)에 설치 된 `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`합니다. 또한 msoledbsql.msi 설치의 동일한 파일에 x64 `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`합니다.  
 
 Msoledbsql.msi 통해 SQL Server 용 OLE DB 드라이버를 배포할 수 있습니다. 응용 프로그램을 배포 하는 경우 SQL Server 용 OLE DB 드라이버를 설치 해야 합니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 [Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 제작](https://go.microsoft.com/fwlink/?LinkId=115667) 및 [사용자 지정 필수 구성 요소 추가](https://go.microsoft.com/fwlink/?LinkId=115668)를 참조하십시오.  
   
@@ -64,4 +64,4 @@ APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsof
 APPGUID 옵션을 관리자 권한 명령 프롬프트에서 설치 관리자를 실행 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목  
- [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
+ [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   
