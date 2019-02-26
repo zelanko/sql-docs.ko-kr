@@ -18,18 +18,15 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade898319fec8fc662ac6858d2165f9d11d2f30a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0eae7da31570855ac60552aa95a8f1f3d7864cd0
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299320"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801537"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 지정된 구분 기호 문자에 따라 문자열을 부분 문자열의 행으로 분할하는 테이블 반환 함수입니다.
 
@@ -130,7 +127,7 @@ FROM Product
   >[!NOTE]
   > 출력 순서는 입력 문자열의 하위 문자열 순서와 일치하지 _않을 수_ 있으므로 순서가 달라질 수 있습니다.
   
-### <a name="c-aggregation-by-values"></a>3. 값 기준 정렬  
+### <a name="c-aggregation-by-values"></a>C. 값 기준 정렬  
 사용자는 각 태그별 제품의 수를 표시하고 제품 수 기준으로 정렬한 보고서를 생성하여 제품 수가 2 초과인 태그만 필터링해야 합니다.  
   
 ```sql  

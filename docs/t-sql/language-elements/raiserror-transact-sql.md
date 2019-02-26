@@ -30,18 +30,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0875e5013e2a5f12468d99414ff94252ac66453a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300300"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802429"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   오류 메시지를 생성하고 세션에 대한 오류 처리를 시작합니다. RAISERROR는 sys.messages 카탈로그 뷰에 저장된 사용자 정의 메시지를 참조하거나 동적으로 메시지를 작성할 수 있습니다. 메시지는 호출하는 애플리케이션 또는 연결된 TRY...CATCH 구문의 CATCH 블록에 서버 오류 메시지로 반환됩니다. 새 애플리케이션에서는 [THROW](../../t-sql/language-elements/throw-transact-sql.md)를 대신 사용해야 합니다.  
   
@@ -270,7 +267,7 @@ sp_dropmessage @msgnum = 50005;
 GO  
 ```  
   
-### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>3. 지역 변수를 사용한 메시지 텍스트 제공  
+### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>C. 지역 변수를 사용한 메시지 텍스트 제공  
  다음 코드 예제에서는 지역 변수를 사용하여 `RAISERROR` 문에 메시지 텍스트를 제공하는 방법을 보여 줍니다.  
   
 ```  

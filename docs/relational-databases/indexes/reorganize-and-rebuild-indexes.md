@@ -32,18 +32,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71d792b7978f7523f7aefe97bd7a5c0a3c69db2a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300430"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802607"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 수정합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 애플리케이션이 응답을 늦출 수 있습니다(특히 검사 작업).  
   

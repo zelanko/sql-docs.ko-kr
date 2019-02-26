@@ -30,18 +30,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 17a73ac1df6510adb9d43f7f638d39527e84b05b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298930"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801497"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] Visual C# 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 언어의 예외 처리와 유사한 방식으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 오류 처리를 구현합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 그룹을 TRY 블록으로 묶을 수 있으며 TRY 블록 내에서 오류가 발생하는 경우 CATCH 블록으로 묶은 또 다른 문의 그룹으로 제어가 전달됩니다.  
   
@@ -259,7 +257,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>3. XACT_STATE에서 TRY...CATCH 사용  
+### <a name="c-using-trycatch-with-xactstate"></a>C. XACT_STATE에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내부에서 발생하는 오류를 `TRY...CATCH` 구문을 사용하여 처리하는 방법을 보여 줍니다. 트랜잭션을 커밋해야 하는지 또는 롤백해야 하는지는 `XACT_STATE` 함수가 결정합니다. 이 예에서 `SET XACT_ABORT`는 `ON`입니다. 이렇게 하면 제약 조건 위반 오류가 발생할 경우 트랜잭션을 커밋할 수 없습니다.  
   
 ```sql  

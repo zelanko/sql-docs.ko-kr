@@ -25,18 +25,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dea4c451c82a17e29a6d47028a35e3e61bd27ec
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a8fd56f8043a24766490dbb8550046c693eef496
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298970"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801257"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 문자, 이진, 텍스트 또는 이미지 식의 일부를 반환합니다.  
   
@@ -183,7 +180,7 @@ ORDER BY pr.pub_id ASC;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-substring-with-a-character-string"></a>3. 문자열과 SUBSTRING 사용  
+### <a name="c-using-substring-with-a-character-string"></a>C. 문자열과 SUBSTRING 사용  
  다음 예에서는 문자열의 일부를 반환하는 방법을 보여 줍니다. 이 쿼리는 `dbo.DimEmployee` 테이블에서 첫 번째 열에 이름을 반환하고 두 번째 열에 머리글자를 반환합니다.  
   
 ```  

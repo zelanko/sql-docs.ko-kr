@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5737166a8613cbf20df5b6c48a720c4d366a64
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7dbd603e92911d073cac24f8504d72d2742822d6
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299682"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802319"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 조건 목록을 평가하고 가능한 여러 결과 식 중 하나를 반환합니다.  
   
@@ -182,7 +179,7 @@ GO
   
 ```  
   
-### <a name="c-using-case-in-an-order-by-clause"></a>3. ORDER BY 절에 CASE 사용  
+### <a name="c-using-case-in-an-order-by-clause"></a>C. ORDER BY 절에 CASE 사용  
  다음 예에서는 ORDER BY 절에 CASE 식을 사용하여 지정된 열 값에 따라 행의 정렬 순서를 결정합니다. 첫 번째 예에서는 `SalariedFlag` 테이블의 `HumanResources.Employee` 열의 값이 계산됩니다. `SalariedFlag`가 1로 설정된 직원은 `BusinessEntityID` 순서에 따라 내림차순으로 반환됩니다. `SalariedFlag`가 0으로 설정된 직원은 `BusinessEntityID` 순서에 따라 오름차순으로 반환됩니다. 두 번째 예에서 결과 집합은 `TerritoryName` 열이 'United States'와 동일하면 `CountryRegionName` 열을 기준으로 정렬되고 그 외 다른 행에는 `CountryRegionName` 열을 기준으로 정렬됩니다.  
   
 ```  

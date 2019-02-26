@@ -18,18 +18,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec7126848048350120592a325f5a5f593b38a7f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028514"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802240"
 ---
 # <a name="data-types-transact-sql"></a>Data types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 각 열, 지역 변수, 식 및 매개 변수는 관련된 데이터 형식을 가집니다. 데이터 형식은 개체가 보유할 수 있는 정수 데이터, 문자 데이터, 통화 데이터, 날짜 및 시간 데이터, 이진 문자열 등의 데이터 형식을 지정하는 특성입니다.
   

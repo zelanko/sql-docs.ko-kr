@@ -14,19 +14,16 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d70a08ac868aa28a38f3e32a9fb32024bc345193
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300470"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802757"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 문제 해결 기술의 전체 목록입니다. 이러한 단계는 이미 시도한 가장 가능성이 높은 문제 순서가 아닙니다. 가장 기본적인 문제에서 좀 더 복잡한 문제 순서로 표시됩니다. 이러한 단계에서는 TCP/IP 프로토콜을 사용하여 다른 컴퓨터에서 SQL Server에 연결한다고 가정하며, 이것이 가장 일반적인 상황입니다. Windows 10을 실행하는 클라이언트 애플리케이션과 SQL Server 둘 다를 포함하는 SQL Server 2016용으로 작성되었지만 약간만 수정하면 다른 버전의 SQL Server와 다른 운영 체제에도 일반적으로 적용됩니다.
 

@@ -22,18 +22,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe135d53fafa22df7d967f495a7bcfd87dbb2f7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299980"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801867"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   DECLARE 문을 사용하여 일괄 처리나 프로시저의 본문에 변수를 선언하고 SET 또는 SELECT 문을 사용하여 값을 할당합니다. 이 문을 사용하여 커서 변수를 선언하고 다른 커서 관련 문과 함께 사용할 수 있습니다. 선언의 일부로 값을 지정하지 않으면 선언 후 모든 변수가 NULL로 초기화됩니다.  
   
@@ -244,7 +241,7 @@ FROM Sales.vSalesPerson
 WHERE TerritoryGroup = @Group and SalesYTD >= @Sales;  
 ```  
   
-### <a name="c-declaring-a-variable-of-type-table"></a>3. 테이블 형식의 변수 선언  
+### <a name="c-declaring-a-variable-of-type-table"></a>C. 테이블 형식의 변수 선언  
  다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `Employee` 테이블의 `ModifiedDate` 열 값과 다릅니다. 그 이유는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문입니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
   
 ```  

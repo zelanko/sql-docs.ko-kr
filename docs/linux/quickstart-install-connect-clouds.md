@@ -11,18 +11,14 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 77e818109424b5f0d9dea3b495da4e927c506366
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54373ea101820a29e04501ea6848a4a85a2c893a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299240"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801157"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server를 실행 합니다.
-
-  > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 이 빠른 시작에서는 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server SLES () 또는 사용자가 선택한 클라우드에 Ubuntu에서 SQL Server를 설치 합니다. 로 이동 [Azure portal에서 Linux SQL Server 가상 컴퓨터를 프로 비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json) Azure에서 Linux 기반 SQL Server를 실행 합니다.

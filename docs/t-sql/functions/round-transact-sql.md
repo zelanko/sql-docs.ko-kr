@@ -20,18 +20,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002b2036c1d0c78d67b3278cd3932338ba4f4c9d
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b03097182a06515fd820bef96ea4eb1747eaf329
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299640"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802047"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 특정 길이나 전체 자릿수로 반올림한 숫자 값을 반환합니다.  
   
@@ -114,7 +111,7 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 123.45    100.00
 ```
   
-### <a name="c-using-round-to-truncate"></a>3. ROUND를 사용하여 자르기  
+### <a name="c-using-round-to-truncate"></a>C. ROUND를 사용하여 자르기  
  다음 예에서는 두 개의 `SELECT` 문을 사용하여 반올림과 자르기 간의 차이를 보여 줍니다. 첫 번째 문은 결과를 반올림하고 두 번째 문은 결과를 자릅니다.  
   
 ```  

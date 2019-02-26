@@ -27,18 +27,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6ad81ca6278b0bf712f1a143c3d683103720c97
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: efd8b2914fde70211a15aaa856f34fbaab2d6259
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299049"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801287"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 함수는 지정된 *number* 값(부호 있는 정수로)를 입력 *date* 값의 지정된 *datepart*에 추가한 다음, 해당 수정 값을 반환합니다.
   
@@ -257,7 +254,7 @@ SELECT DATEADD(second,59,@datetime2);     --2007-01-01 01:02:00.1111111
 SELECT DATEADD(millisecond,1,@datetime2); --2007-01-01 01:01:01.1121111  
 ```  
   
-### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>3. 식을 숫자 및 날짜 매개 변수에 대한 인수로 사용  
+### <a name="c-using-expressions-as-arguments-for-the-number-and-date-parameters"></a>C. 식을 숫자 및 날짜 매개 변수에 대한 인수로 사용  
 이러한 예제에서는 여러 유형의 식을 *number* 및 *date* 매개 변수에 대한 인수로 사용합니다. 예제는 AdventureWorks 데이터베이스를 사용합니다.
   
 #### <a name="specifying-a-column-as-date"></a>열을 날짜로 지정  

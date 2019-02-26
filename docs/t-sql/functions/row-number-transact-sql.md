@@ -22,18 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 270b303b90b00977335dd62dc5a3729410df03a2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299190"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56800987"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 결과 집합의 출력 번호를 지정합니다. 보다 구체적으로는, 결과 집합 파티션 내의 행 일련 번호를 반환합니다. 각 파티션의 첫 번째 행은 1로 시작합니다. 
   
@@ -169,7 +166,7 @@ Row FirstName    LastName               SalesYTD
 14  Pamela       Ansman-Wolfe           1352577.13  
 ```  
   
-### <a name="c-returning-a-subset-of-rows"></a>3. 행의 하위 집합 반환  
+### <a name="c-returning-a-subset-of-rows"></a>C. 행의 하위 집합 반환  
  다음 예에서는 `SalesOrderHeader` 테이블에서 `OrderDate`를 기준으로 모든 행의 행 번호를 계산한 후 `50`에서 `60`까지의 행만 반환합니다.  
   
 ```sql  

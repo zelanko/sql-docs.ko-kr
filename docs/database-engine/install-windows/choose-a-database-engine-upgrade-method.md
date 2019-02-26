@@ -11,19 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bd388ede86a397fa83bf98deb017e294cb280752
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300160"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802270"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
-  
 가동 중지와 위험을 최소화하기 위해 이전 릴리스의 SQL Server에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 업그레이드하려는 경우 고려해야 할 몇 가지 방식이 있습니다. 전체 업그레이드를 실행하거나 새 설치로 마이그레이션하거나 롤링 업그레이드를 실행할 수 있습니다. 아래 다이어그램에 따라 적절한 방식을 선택할 수 있습니다. 다이어그램의 각 방식은 아래에서도 설명합니다. 다이어그램의 어느 지점에서 결정해야 하는지 알아보려면 [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)를 참조하십시오.  
   
  ![데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "데이터베이스 엔진 업그레이드 방법에 대한 의사 결정 트리")  

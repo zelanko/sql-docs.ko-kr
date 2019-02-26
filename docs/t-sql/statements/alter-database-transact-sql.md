@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d274e0d43f476d2e00b64dc4ea2188c79ae082
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: a9a1d940d7229910c899104a19e3a710eb7eae92
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832145"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590498"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -48,16 +48,14 @@ ms.locfileid: "55832145"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
-
-## <a name="overview"></a>개요
+## <a name="overview-sql-server"></a>개요: SQL Server
 
 SQL Server에서 이 문은 데이터베이스 또는 데이터베이스와 연관된 파일 및 파일 그룹을 수정합니다. 데이터베이스의 파일 및 파일 그룹 추가 또는 제거, 데이터베이스 또는 데이터베이스 내 파일 및 파일 그룹 특성 변경, 데이터베이스 데이터 정렬 변경 및 데이터베이스 옵션 설정을 수행합니다. 데이터베이스 스냅숏은 수정할 수 없습니다. 복제와 연관된 데이터베이스 옵션을 수정하려면 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 사용하세요.  
 
@@ -285,16 +283,14 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL Database 단일 데이터베이스/탄력적 풀
-
-## <a name="overview"></a>개요
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>개요: Azure SQL Database 단일 데이터베이스/탄력적 풀
 
 Azure SQL Database에서 이 문을 사용하여 단일 데이터베이스/탄력적 풀에서 데이터베이스를 수정합니다. 이 문을 사용하여 데이터베이스 이름을 변경하고, 데이터베이스의 버전 및 서비스 목표를 변경하고, 데이터베이스를 탄력적 풀에 연결하거나 탄력적 풀에서 제거하고, 데이터베이스 옵션을 설정하고, 데이터베이스를 지역 복제 관계의 보조로 추가 또는 제거하고, 데이터베이스 호환성 수준을 설정합니다.
 
@@ -693,16 +689,14 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
-
-## <a name="overview"></a>개요
+## <a name="overview-azure-sql-database-managed-instance"></a>개요: Azure SQL Database 관리되는 인스턴스
 
 Azure SQL Database 관리되는 인스턴스에서 이 문을 사용하여 데이터베이스 옵션을 설정합니다.
 
@@ -722,8 +716,10 @@ ALTER DATABASE
 ```  
 -- Azure SQL Database Syntax  
 ALTER DATABASE { database_name | CURRENT }  
-{  
-    <file_and_filegroup_options>  
+{
+    MODIFY NAME = new_database_name   
+  | COLLATE collation_name    
+  | <file_and_filegroup_options>  
   | SET <option_spec> [ ,...n ]  
   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }   
 }  
@@ -816,16 +812,14 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|  
+||||||
 
 &nbsp;
 
-## <a name="azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스
-
-## <a name="overview"></a>개요
+## <a name="overview-azure-sql-data-warehouse"></a>개요: Azure SQL 데이터 웨어하우스
 
 데이터베이스의 이름, 최대 크기 또는 서비스 목표를 수정합니다.
 
@@ -938,16 +932,14 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]  
-> ||||||  
-> |---|---|---|---|---|  
-> |[SQL Server](alter-database-transact-sql.md?view=sql-server-2016)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_** &nbsp;|  
+||||||  
+|---|---|---|---|---|  
+|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* 병렬<br />데이터 웨어하우스 \*_** &nbsp;|  
+||||||
 
 &nbsp;
 
-## <a name="parallel-data-warehouse"></a>병렬 데이터 웨어하우스
-
-## <a name="overview"></a>개요
+## <a name="overview-parallel-data-warehouse"></a>개요: 병렬 데이터 웨어하우스
 
 복제된 테이블, 분산된 테이블 및 트랜잭션 로그인 병렬 데이터 웨어하우스의 최대 데이터베이스 크기 옵션을 수정합니다. 이 문을 사용하여 크기의 축소나 확대에 따라 데이터베이스에 대한 디스크 공간 할당을 관리합니다. 이 아티클은 병렬 데이터 웨어하우스에서 데이터베이스 옵션 설정과 관련된 구문을 설명합니다.
 

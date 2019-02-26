@@ -21,18 +21,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 3d6e241d73040a30fcca5de3114110089259ab8b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298450"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801727"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE(IF...ELSE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하기 위한 조건을 설정합니다. *Boolean_expression*이 TRUE로 평가되면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문(*sql_statement*) 다음의 *Boolean_expression*가 실행됩니다. 선택적인 ELSE 키워드는 *Boolean_expression*이 FALSE 또는 NULL로 평가될 때 실행되는 대체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
   
@@ -88,7 +85,7 @@ ELSE PRINT 'There are 5 or less Touring-3000 bicycles.' ;
 GO  
 ```  
   
-### <a name="c-using-a-statement-block"></a>3. 문 블록 사용  
+### <a name="c-using-a-statement-block"></a>C. 문 블록 사용  
  다음 예에서는 부울 식의 일부로 쿼리를 실행한 후 부울 식의 결과를 기반으로 약간 다른 문 블록을 실행합니다. 각 문 블록은 `BEGIN`으로 시작하여 `END`로 끝납니다.  
   
 ```  

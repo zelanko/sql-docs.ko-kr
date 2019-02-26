@@ -22,18 +22,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20122b1beaca348ccf405064143ef43af4e400b
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 88f57c22df5b6a621b5133f56f79a16ede550d77
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299590"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802290"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 함수는 두 번째 문자 식 내에서 하나의 문자 식을 찾고, 있는 경우 첫 번째 식의 시작 위치를 반환합니다.
   
@@ -115,7 +112,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="c-searching-for-a-nonexistent-expression"></a>3. 존재하지 않는 식 검색  
+### <a name="c-searching-for-a-nonexistent-expression"></a>C. 존재하지 않는 식 검색  
 다음 예제에서는 CHARINDEX가 *expressionToSearch* 내에서 *expressionToFind*를 찾지 못했을 때의 결과 집합을 보여 줍니다.
   
 ```sql

@@ -16,17 +16,15 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed4bb739f6ca74e5e0744af1ed40b37196995213
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 8db11de67db871df75605099191a2ae0e34be0b9
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299060"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801337"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
 
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 항목에서 설명하는 방법 중 하나를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작하여 지원되는 데이터 원본에서 데이터를 가져오거나 내보낼 수 있습니다.
 

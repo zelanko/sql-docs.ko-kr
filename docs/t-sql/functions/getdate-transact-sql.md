@@ -31,18 +31,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a80ecfd82a50f7c69645901733ad74234f0dfd9d
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 835e7134675ca68bc9feebe9dc6dd05ac71a0f6b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298580"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803248"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 운영 체제에서 파생됩니다.  
 
@@ -124,7 +121,7 @@ GETDATE()              2007-05-03
 GETUTCDATE()           2007-05-04
 ``` 
   
-### <a name="c-getting-the-current-system-time"></a>3. 현재 시스템의 시간 가져오기  
+### <a name="c-getting-the-current-system-time"></a>C. 현재 시스템의 시간 가져오기  
   
 ```  
 SELECT CONVERT (time, SYSDATETIME())  

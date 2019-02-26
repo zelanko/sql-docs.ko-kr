@@ -31,18 +31,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 326b2dd3eed9db3f6ca71cc276fc68314092c181
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299230"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802250"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   명시적 로컬 트랜잭션의 시작 위치를 표시합니다. 명시적 트랜잭션은 BEGIN TRANSACTION 문으로 시작되어 COMMIT 또는 ROLLBACK 문으로 끝납니다.  
 
@@ -175,7 +172,7 @@ ROLLBACK;
 
 ```
 
-### <a name="c-naming-a-transaction"></a>3. 트랜잭션 이름 지정 
+### <a name="c-naming-a-transaction"></a>C. 트랜잭션 이름 지정 
 **적용 대상:** SQL Server(2008부터), Azure SQL Database
 
 다음 예에서는 트랜잭션의 이름을 지정하는 방법을 보여 줍니다.  

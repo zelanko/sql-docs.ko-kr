@@ -25,18 +25,15 @@ ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af3a010f835223a875da7df5028ac1406798c479
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300107"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801637"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   스크롤 동작, 커서가 작동하는 결과 집합을 구축하는 데 사용되는 쿼리 등 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 특성을 정의합니다. `DECLARE CURSOR`는 ISO 표준 기반의 구문과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장 세트를 사용하는 구문을 모두 허용합니다.  
   

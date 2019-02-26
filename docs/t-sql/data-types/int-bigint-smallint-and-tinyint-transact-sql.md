@@ -29,18 +29,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 805cb2e6f3b7d9138e2bdd14518632c82251242c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319354"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802577"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint 및 tinyint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다. 데이터베이스의 공간을 절약하려면 가능한 모든 값을 안정적으로 포함할 수 있는 가장 작은 데이터 유형을 사용합니다. 예를 들어, tinyint는 255세 이상 사는 사람은 아무도 없기 때문에 사람의 나이에 충분합니다. 그러나 tinyint는 건물 수명이 255년 이상 될 수 있기 때문에 건물 수명에는 충분하지 않습니다.
   

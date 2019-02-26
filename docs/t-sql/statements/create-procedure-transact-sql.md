@@ -47,18 +47,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3d18ca29e09509c6e9d15e4064efc1efdd9960
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300490"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801898"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CLR(공용 언어 런타임) 저장 프로시저를 만듭니다. 저장 프로시저는 다음과 같은 점에서 다른 프로그래밍 언어의 프로시저와 유사합니다.  
   
@@ -543,7 +540,7 @@ SELECT TOP(10) CustomerID, AccountNumber FROM Sales.Customer;
 GO  
 ```  
   
-#### <a name="c-creating-a-clr-stored-procedure"></a>3. CLR 저장 프로시저 만들기  
+#### <a name="c-creating-a-clr-stored-procedure"></a>C. CLR 저장 프로시저 만들기  
  다음 예에서는 `HandlingLOBUsingCLR`어셈블리에 있는 `LargeObjectBinary` 클래스의 `GetPhotoFromDB` 메서드를 참조하는 `GetPhotoFromDB` 프로시저를 만듭니다. 프로시저를 만들기 전에 `HandlingLOBUsingCLR` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)](*assembly_bits*에서 생성된 어셈블리를 사용하는 경우)  

@@ -35,18 +35,16 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 10cb5b9b4e5083781f65766d97a810a1e5a7323b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300260"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801557"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 단어 또는 구와 정확히 일치하거나 비슷하게 일치하는 단어를 검색하거나 서로 근접한 단어를 검색하거나 가중치 검색을 수행합니다. CONTAINS는 문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색을 수행하기 위해 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문의 [WHERE 절](../../t-sql/queries/where-transact-sql.md)에 사용되는 조건자입니다.  
   
@@ -399,7 +397,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>3. \<prefix_term>에 CONTAINS 사용  
+### <a name="c-using-contains-with-prefixterm"></a>C. \<prefix_term>에 CONTAINS 사용  
  다음 예에서는 `Name` 열에 접두사 chain으로 시작하는 단어가 하나 이상인 모든 제품 이름을 반환합니다.  
   
 ```sql  

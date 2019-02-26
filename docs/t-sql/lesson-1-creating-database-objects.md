@@ -11,18 +11,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7887e63dbe7879a17433dce0bd35c346c860097e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 874bedd5e6f8eec03941fa3d3fc957351166500b
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299290"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801147"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>1단원: 데이터베이스 개체 만들기 및 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 단원에서는 데이터베이스를 만들고 데이터베이스에서 테이블을 만든 다음 테이블의 데이터에 액세스 및 변경하는 방법에 대해 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  
   

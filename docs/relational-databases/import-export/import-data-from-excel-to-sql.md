@@ -11,18 +11,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77acf33ae4cdc4626f5467f136d8fb96b5ba96ed
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: cafc8346cbdd03c99f68ec879601689a7bf90781
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299553"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802220"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 Excel 파일에서 SQL Server 또는 Azure SQL Database로 데이터를 가져오는 여러 가지 방법이 있습니다. 일부 방법을 사용하면 한 단계만 거쳐 Excel 파일에서 직접 데이터를 가져올 수 있습니다. 다른 방법을 사용하려면 가져오기 전에 Excel 데이터를 텍스트로 내보내야 합니다. 이 문서에서는 자주 사용하는 방법을 요약하고 자세한 정보의 링크를 제공합니다.
 

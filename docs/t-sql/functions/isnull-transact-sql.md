@@ -23,18 +23,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72dc95bb6cd7c636a590f659ba9f645730ce98e7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 95c6ddb7dd0f3fa688b7309fa12a1b6d8588eba1
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300281"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803048"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 NULL을 지정된 대체 값으로 바꿉니다.  
   
@@ -118,7 +115,7 @@ GO
 
  `(16 row(s) affected)`  
   
-### <a name="c-testing-for-null-in-a-where-clause"></a>3. WHERE 절에서 NULL 테스트  
+### <a name="c-testing-for-null-in-a-where-clause"></a>C. WHERE 절에서 NULL 테스트  
  NULL 값을 찾는 데 ISNULL을 사용하지 마세요. 대신 IS NULL을 사용합니다. 다음 예에서는 무게 열에 `NULL`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
   
 ```  

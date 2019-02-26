@@ -18,18 +18,15 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64341fd261cb1c1e419b925049cf86403a64ab3e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e3ea6f1d57c9f6afef91d9d66a5db001302aabb6
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299601"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803118"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정된 형식 및 선택적 culture로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
@@ -146,7 +143,7 @@ DateTime Result  Custom Number Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-format-with-numeric-types"></a>3. 숫자 유형이 있는 FORMAT  
+### <a name="c-format-with-numeric-types"></a>C. 숫자 유형이 있는 FORMAT  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 **Sales.CurrencyRate** 테이블에서 5개의 행을 반환합니다. **EndOfDateRate** 열은 테이블에 **money** 유형으로 저장됩니다. 이 예에서는 서식이 지정되지 않은 상태로 열이 반환된 다음 .NET 숫자 형식, 일반 형식 및 통화 형식 유형 중 하나로 서식이 지정됩니다. 이러한 형식과 다른 숫자 형식에 대한 자세한 내용은 [표준 숫자 형식 문자열](https://msdn.microsoft.com/library/dwhawy9k.aspx)을 참조하세요.  
   
 ```sql  

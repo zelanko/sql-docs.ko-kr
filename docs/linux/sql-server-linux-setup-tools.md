@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 80bff9787e750e39a0747be831b1fc902d6923a8
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 20b383929910bf24ef9dc89950f15815afdef3bd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270176"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801757"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 및 bcp을 Linux의 SQL Server 명령줄 도구 설치
 
@@ -190,9 +190,9 @@ Mac El Capitan 및 Sierra에 대 한 도구를 설치 하려면 다음 명령을
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install --no-sandbox mssql-tools
+brew install mssql-tools
 #for silent install: 
-#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
+#HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
 ## <a id="docker"></a> Docker
@@ -214,7 +214,7 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
 
 이러한 패키지에 따라 달라 집니다 **msodbcsql**를 먼저 설치 해야 합니다. 합니다 **msodbcsql** 패키지 있습니다 종속성 중 하나에서 **unixODBC-개발자** (RPM) 또는 **unixodbc-dev** (Debian). 위치를 **msodbcsql** 패키지는 다음 표에 나열 됩니다.
 
-| msodbcsql 패키지 | 버전 | 다운로드 |
+| msodbcsql package | 버전 | 다운로드 |
 |-----|-----|-----|
 | Red Hat RPM msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql RPM 패키지](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | SLES RPM msodbcsql 패키지 | 13.1.6.0-1 | [msodbcsql RPM 패키지](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -225,7 +225,7 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
 
 1. **Linux 컴퓨터에 다운로드 한 패키지를 이동**합니다. Linux 컴퓨터에 패키지를 이동 하는 한 가지 방법은 된 다른 컴퓨터를 사용 하 여 패키지를 다운로드 하는 경우는 **scp** 명령입니다.
 
-1. **설치를 및 패키지**: 설치 합니다 **mssql 도구** 하 고 **msodbc** 패키지 합니다. 종속성 오류가 발생 하는 경우 다음 단계까지 무시 됩니다.
+1. **설치 된 패키지 및**: 설치를 **mssql 도구** 하 고 **msodbc** 패키지 있습니다. 종속성 오류가 발생 하는 경우 다음 단계까지 무시 됩니다.
 
     | 플랫폼 | 패키지 설치 명령 |
     |-----|-----|
@@ -233,7 +233,7 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
     | SLES | `sudo zypper install msodbcsql-13.1.6.0-1.x86_64.rpm`<br/>`sudo zypper install mssql-tools-14.0.5.0-1.x86_64.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_13.1.6.0-1_amd64.deb`<br/>`sudo dpkg -i mssql-tools_14.0.5.0-1_amd64.deb` |
 
-1. **누락 된 종속성 해결**:이 시점에서 종속성 누락 된 해야 할 수 있습니다. 그렇지 않은 경우이 단계를 건너뛸 수 있습니다. 일부 경우에서 찾습니다 하 고 이러한 종속성을 설치할 수동으로 해야 합니다.
+1. **누락 된 종속성 해결**: 이 시점에서 종속성 누락 있을 수 있습니다. 그렇지 않은 경우이 단계를 건너뛸 수 있습니다. 일부 경우에서 찾습니다 하 고 이러한 종속성을 설치할 수동으로 해야 합니다.
 
     RPM 패키지의 경우 다음 명령 사용 하 여 필요한 종속성을 검사할 수 있습니다.
 
@@ -262,7 +262,7 @@ SQL Server 명령줄 도구는 Docker 이미지에 포함 됩니다. 대화형 �
 
 사용 하는 방법의 예로 **sqlcmd** SQL Server에 연결한 데이터베이스 만들기, 다음 빠른 시작 중 하나를 참조 합니다.
 
-- [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)

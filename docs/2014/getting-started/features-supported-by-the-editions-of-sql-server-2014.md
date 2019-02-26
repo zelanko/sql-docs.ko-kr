@@ -17,17 +17,15 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23ba1fdda2ce951834c221cdd58d39a034a5b3ff
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300590"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802657"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
 
-  > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
 
   이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다. 
 
@@ -372,7 +370,7 @@ ms.locfileid: "54300590"
 |사용 보고|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |상태 모니터링 규칙|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |PowerPivot 갤러리|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
-|PowerPivot 데이터 새로 고침|사용자 계정 컨트롤|예||||||  
+|PowerPivot 데이터 새로 고침|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |PowerPivot 데이터 피드|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
 ###  <a name="DataMining"></a> Data Mining  

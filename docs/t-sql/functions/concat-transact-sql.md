@@ -19,18 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a1c1624965ad311bb7df039957da8fd25a3321c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 1e679c1c9090f189881ad9de3b1615d6ecfa5b72
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299020"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801277"
 ---
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 함수는 둘 이상의 문자열 값을 종단 간 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. (연결 중 구분 값을 추가하려면 [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)를 참조하세요.)
   

@@ -1,7 +1,7 @@
 ---
 title: '빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017"
+ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,18 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21d42cb015227b06021878e37b4c1b94bd96a446
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: c0988c2cf4d133305676241763aa90f1db68b86c
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300400"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802957"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   
 이 문서는 Microsoft SQL Server 및 Azure SQL 데이터베이스의 메모리 내 OLTP 성능 기능의 기본 사항을 급히 알아보려는 개발자를 위해 작성되었습니다.  

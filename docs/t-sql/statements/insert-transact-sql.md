@@ -33,18 +33,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91c98dc07b746d070874ea27fb41793379b17f8
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300530"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802369"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 새 행을 하나 이상 추가합니다. 예제를 보려면 [예제](#InsertExamples)를 참조하세요.  
   
@@ -448,7 +446,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
     , (N'Y3', N'Cubic Yards', '20080923');  
 ```  
   
-#### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>3. 테이블 열과 순서가 다른 데이터 삽입  
+#### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. 테이블 열과 순서가 다른 데이터 삽입  
  다음 예에서는 열 목록을 사용하여 각 열에 삽입되는 값을 명시적으로 지정합니다. [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.UnitMeasure` 테이블의 열 순서는 `UnitMeasureCode`, `Name`, `ModifiedDate`이지만 *column_list*에는 열이 이 순서대로 나열되어 있지 않습니다.  
   
 ```sql

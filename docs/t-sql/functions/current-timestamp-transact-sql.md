@@ -32,18 +32,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf523ed04740005d2e901f95f510dc29599696a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: aab9add326791f192b79690ade6c827e46ca7280
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299570"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802230"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 이 함수는 현재 데이터베이스 시스템 타임스탬프를 데이터베이스 표준 시간대 오프셋 없이 **datetime** 값으로 반환합니다. `CURRENT_TIMESTAMP`는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 운영 체제에서 이 값을 끌어냅니다.
   
@@ -115,7 +112,7 @@ GETUTCDATE()       2007-05-04
 */  
 ```  
   
-### <a name="c-get-the-current-system-time"></a>3. 현재 시스템의 시간 가져오기  
+### <a name="c-get-the-current-system-time"></a>C. 현재 시스템의 시간 가져오기  
   
 ```sql
 SELECT CONVERT (time, SYSDATETIME())  

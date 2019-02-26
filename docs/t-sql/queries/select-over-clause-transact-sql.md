@@ -26,18 +26,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53de562bb59b279f511e73a66ad308eff029b26e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: f04a60e28b96c97890ab34157df50bd1dfc39891
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299430"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803328"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
   관련 창 함수를 적용하기 전에 행 집합의 분할과 순서를 결정합니다. 즉, OVER 절은 쿼리 결과 집합 내의 창 또는 사용자 지정 행 집합을 정의합니다. 그런 다음 창 함수가 창의 각 행에 대한 값을 계산합니다. OVER 절에 함수를 사용하여 이동 평균, 누적 집계, 누계 또는 그룹 결과당 상위 N개 결과 등의 집계된 값을 계산할 수 있습니다.  
   
@@ -319,7 +316,7 @@ SalesOrderID ProductID   OrderQty Total       Percent by ProductID
  (20 row(s) affected)  
 ```  
   
-### <a name="c-producing-a-moving-average-and-cumulative-total"></a>3. 이동 평균 및 누적 합계 생성  
+### <a name="c-producing-a-moving-average-and-cumulative-total"></a>C. 이동 평균 및 누적 합계 생성  
  다음 예에서는 OVER 절과 함께 AVG 및 SUM 함수를 사용하여 `Sales.SalesPerson` 테이블에 있는 각 지역에 대해 연간 매출의 이동 평균 및 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, AVG 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 평균 매출이 계산된 다음 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
   
 ```sql  
