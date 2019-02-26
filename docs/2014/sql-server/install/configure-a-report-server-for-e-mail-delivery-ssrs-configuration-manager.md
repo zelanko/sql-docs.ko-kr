@@ -23,17 +23,14 @@ ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17e210356aadaa17394abf0b68bf9303461943d2
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300340"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802449"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
-
-  > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
 
 
    [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 전자 메일을 통해 보고서를 배포할 수 있는 전자 메일 배달 확장 프로그램이 있습니다.  전자 메일 구독을 정의하는 방법에 따라 배달은 알림, 링크, 첨부 파일 또는 포함된 보고서로 구성될 수 있습니다. 전자 메일 배달 확장 프로그램은 기존 메일 서버 기술을 사용합니다. 메일 서버는 SMTP 서버 또는 전달자여야 합니다. 보고서 서버는 운영 체제에서 제공하는 CDO(Collaboration Data Objects) 라이브러리(cdosys.dll)를 통해 SMTP 서버에 연결합니다.  
@@ -111,7 +108,7 @@ ms.locfileid: "54300340"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션을 하려면:  구성 옵션   
+##  <a name="bkmk_setting_TO_field"></a> 설정에 대 한 구성 옵션을 하려면: 구성 옵션   
  **개인 구독 관리** 태스크에 의해 부여된 권한에 따라 만들어진 사용자 정의 구독에는 도메인 사용자 계정에 따라 사전 설정된 사용자 이름이 들어 있습니다. 사용자가 구독을 생성할 때 구독을 생성하는 사람의 도메인 사용자 계정이 **받는 사람:** 필드의 수신자 이름으로 자동으로 삽입됩니다.  
   
  도메인 사용자 계정과는 다른 전자 메일 계정을 사용하는 SMTP 서버 또는 전달자를 사용하는 경우 SMTP 서버가 보고서를 해당 사용자에게 배달할 수 없습니다.  
@@ -122,7 +119,7 @@ ms.locfileid: "54300340"
   
 2.  `SendEmailToUserAlias`를 `False`로 설정합니다.  
   
-3.   `DefaultHostName` 을 DNS(Domain Name System) 이름이나 SMTP 서버 또는 전달자의 IP 주소로 설정합니다.  
+3.  `DefaultHostName` 을 DNS(Domain Name System) 이름이나 SMTP 서버 또는 전달자의 IP 주소로 설정합니다.  
   
 4.  파일을 저장합니다.  
   
@@ -217,7 +214,7 @@ ms.locfileid: "54300340"
   
 8.  텍스트 편집기에서 **RSReportServer.config** 파일을 엽니다.  
   
-9.  `<UrlRoot>` 가 보고서 서버 URL 주소로 설정되어 있는지 확인합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
+9. `<UrlRoot>` 가 보고서 서버 URL 주소로 설정되어 있는지 확인합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   
 10.  배달 섹션에서 `<ReportServerEmail>.`을 찾습니다.   
   
