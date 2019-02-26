@@ -28,18 +28,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fbbf5a3ad4c3d6a667ae2622e5bf09ea5f39c911
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300109"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802379"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL 문서 내용 테이블에 대 한 의견을 공유 하세요!](https://aka.ms/sqldocsurvey)
 
 > SQL Server 2014 및 하위 [sqlcmd 유틸리티](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
 > )합니다.
@@ -66,7 +63,7 @@ ms.locfileid: "54300109"
 
 릴리스 번호: 15.0 <br>
 빌드 번호: 15.0.1000.34<br>
-릴리스 날짜 2018 년 10 월 18 일
+릴리스 날짜: 2018 년 10 월 18 일
 
 새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
@@ -80,7 +77,7 @@ SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1000
 > [!NOTE]
 > 버전 13.1 이상이 상시 암호화를 지원 해야 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
 
-기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다. [![Cloud Shell을 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
+기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다: [ ![Cloud Shell 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
 
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
@@ -215,7 +212,7 @@ sqlcmd
 
    대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.
 
-   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 다음은 이전 섹션에 사용 된 동일한 예제입니다. *Azure Active Directory 사용자 이름 및 암호:*  
+   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
 
    대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다.
 
@@ -248,10 +245,10 @@ sqlcmd
 **-j** 화면에 원시 오류 메시지를 출력합니다.
   
  **-K** _application_intent_  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
 **-M** _multisubnet_failover_  
- SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조 복제본: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
+ SQL Server 가용성 그룹 또는 SQL Server 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)에 대한 자세한 내용은 [가용성 그룹의 생성 및 구성 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) 및 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요. 
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -840,7 +837,7 @@ sqlcmd 프롬프트 유형:
 
 `GO`
 
-Enter 키를 누르면 다음 정보 메시지가 출력됩니다. "데이터베이스 컨텍스트가 'AdventureWorks2012'(으)로 변경되었습니다."  
+Enter 키를 누르면 "데이터베이스 컨텍스트가 'AdventureWorks2012'로 변경되었습니다." 정보 메시지가 출력됩니다.  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 쿼리의 출력 형식  
  먼저**sqlcmd** 는 SELECT 목록에서 지정한 열 이름이 포함된 열 머리글을 출력합니다. 열 이름은 SQLCMDCOLSEP 문자로 구분됩니다. 기본적으로 구분 문자는 공백입니다. 열 이름이 열 너비보다 짧은 경우 출력은 다음 열까지 공백으로 채워집니다.  

@@ -1,6 +1,6 @@
 ---
 title: Linux 및 macOS Microsoft Drivers for PHP for SQL Server에 대 한 설치 자습서 | Microsoft Docs
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,38 +9,37 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: af05ede442133465e7f268665bac4cd11a17f653
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a31b17b8fbe2130b84b27be08d1a6218d697f9f2
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604603"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744633"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 및 macOS Microsoft Drivers for PHP for SQL Server에 대 한 설치 자습서
-다음 지침을 정리 된 환경을 가정 및 Ubuntu 16.04, 17.10 및 18.04, RedHat 7, Debian 8 및 9, Suse 12, 및 macOS 10.11의 SQL Server에 대 한 PHP에 대 한 PHP 7.x, Microsoft ODBC driver, Apache, 및 Microsoft 드라이버를 설치 하는 방법을 보여 줍니다. 10.12 및 10.13 합니다. 이러한 지침은 PECL를 사용 하 여 드라이버를 설치 하는 것이 좋습니다 하지만에서 미리 작성 된 이진 파일을 다운로드할 수도 있습니다는 [&#40;microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지 및 의지침에따라설치[ Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)합니다. 에 대 한 확장 로드 및 php.ini에 확장을 추가할 것 수행 되는 이유는 설명은 섹션을 참조 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)합니다.
+다음 지침을 정리 된 환경을 가정 및 PHP 7.x, Microsoft ODBC driver, Apache, 및 Microsoft Drivers for PHP for SQL Server ubuntu 16.04, 18.04, 및 18.10, 7, RedHat Debian 8 및 9를 설치 하는 방법을 보여 줍니다 Suse 12 및 15 및 macOS 10.12 10.13, 및 10.14 합니다. 이러한 지침은 PECL를 사용 하 여 드라이버를 설치 하는 것이 좋습니다 하지만에서 미리 작성 된 이진 파일을 다운로드할 수도 있습니다는 [&#40;microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지 및 의지침에따라설치[ Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)합니다. 에 대 한 확장 로드 및 php.ini에 확장을 추가할 것 수행 되는 이유는 설명은 섹션을 참조 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)합니다.
 
-기본적으로 이러한 지침 설치 PHP 7.2 7.1 PHP 7.0을 설치 하려면 각 섹션의 시작 부분에 대 한 정보를 참조 하십시오.
+이러한 지침은 기본적으로 PHP 7.3를 설치합니다. 참고 일부 지원 되는 Linux 배포판 기본 PHP 7.0 또는 이전 버전에서는 SQL Server-용 PHP 드라이버에 대 한 지원 되지 않는 대신 PHP 7.1 또는 7.2를 설치 하려면 각 섹션의 시작 부분에 정보를 참조 하십시오.
 
 ## <a name="contents-of-this-page"></a>이 페이지의 내용:
 
-- [Ubuntu 16.04, 17.10을 및 18.04 드라이버 설치](#installing-the-drivers-on-ubuntu-1604-1710-and-1804)
+- [Ubuntu 16.04, 18.04, 및 18.10 드라이버 설치](#installing-the-drivers-on-ubuntu-1604-1804-and-1810)
 - [Red Hat 7에 드라이버를 설치합니다.](#installing-the-drivers-on-red-hat-7)
 - [Debian 8 및 9 드라이버 설치](#installing-the-drivers-on-debian-8-and-9)
-- [Suse 12 드라이버 설치](#installing-the-drivers-on-suse-12)
-- [MacOS High Sierra El Capitan 고 Sierra에서 드라이버를 설치합니다.](#installing-the-drivers-on-macos-el-capitan-sierra-and-high-sierra)
+- [Suse 12 및 15에 드라이버를 설치합니다.](#installing-the-drivers-on-suse-12-and-15)
+- [MacOS Sierra, High Sierra 및 Mojave 드라이버 설치](#installing-the-drivers-on-macos-sierra-high-sierra-and-mojave)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1710-and-1804"></a>Ubuntu 16.04를 17.10 및 18.04 드라이버 설치
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1810"></a>Ubuntu 16.04, 18.04, 및 18.10 드라이버 설치
 
 > [!NOTE]
-> PHP 7.0 또는 7.1을 설치 하려면 7.2 7.0 또는 다음 명령에서 7.1로 대체 합니다.
-> Ubuntu 18.04 PHP 7.0 또는 7.1 필요 하지 않으면 ondrej 리포지토리를 추가 단계 필요 하지 않습니다. 그러나 Ubuntu 18.04 PHP 7.0 또는 7.1 설치 ondrej 리포지토리에서 패키지 전환 Ubuntu 18.04 설치 하는 자료와 충돌할 수 있는 종속성과 함께 작동 하지 않습니다.
+> 설치 PHP 7.1 또는 7.2, 7.1 또는 7.2 다음 명령에서 사용 하 여 7.3을 대체 합니다.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 ```
 sudo su
 add-apt-repository ppa:ondrej/php -y
 apt-get update
-apt-get install php7.2 php7.2-dev php7.2-xml -y --allow-unauthenticated
+apt-get install php7.3 php7.3-dev php7.3-xml -y --allow-unauthenticated
 ```
 ### <a name="step-2-install-prerequisites"></a>2단계. 필수 구성 요소 설치
 다음 지침에 따라 Ubuntu 용 ODBC 드라이버를 설치 합니다 [Linux 및 macOS 설치 페이지](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
@@ -60,9 +59,9 @@ sudo su
 apt-get install libapache2-mod-php7.2 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.2
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
+a2enmod php7.3
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>5단계. Apache를 다시 시작 하 고 테스트 샘플 스크립트
@@ -74,7 +73,7 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-red-hat-7"></a>Red Hat 7에 드라이버를 설치합니다.
 
 > [!NOTE]
-> PHP 7.0 또는 7.1을 설치 하려면 다음 명령에서 각각 remi php71 remi php70와 remi php72를 대체 합니다.
+> PHP 7.1 또는 7.2를 설치 하려면 다음 명령에서 각각 remi php72 remi php71와 remi php73를 대체 합니다.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 
@@ -84,14 +83,15 @@ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
 subscription-manager repos --enable=rhel-7-server-optional-rpms
-yum-config-manager --enable remi-php72
+yum install yum-utils
+yum-config-manager --enable remi-php73
 yum update
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ```
 ### <a name="step-2-install-prerequisites"></a>2단계. 필수 구성 요소 설치
 다음 지침에 따라 Red Hat 7에 대 한 ODBC 드라이버를 설치 합니다 [Linux 및 macOS 설치 페이지](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
 
-PECL PHP 7.2를 사용 하 여를 사용 하 여 PHP 드라이버 컴파일 기본값 보다 더 최신 GCC를 필요 합니다.
+PECL PHP 7.2 또는 7.3을 사용 하 여 PHP 드라이버 컴파일 기본값 보다 더 최신 GCC를 필요 합니다.
 ```
 sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
 sudo yum install devtoolset-7
@@ -109,8 +109,8 @@ exit
 PECL 문제 GCC로 업그레이드 하는 경우에 드라이버의 최신 버전의 올바른 설치를 하지 못할 수 있습니다. 설치, 패키지를 다운로드 및 컴파일할 수동으로 (pdo_sqlsrv에 대 한 유사한 단계):
 ```
 pecl download sqlsrv
-tar xvzf sqlsrv-5.3.0.tgz
-cd sqlsrv-5.3.0/
+tar xvzf sqlsrv-5.6.0.tgz
+cd sqlsrv-5.6.0/
 phpize
 ./configure --with-php-config=/usr/bin/php-config
 make
@@ -118,7 +118,7 @@ sudo make install
 ```
 또는에서 미리 작성 된 이진 파일을 다운로드할 수 있습니다 합니다 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/releases), 또는 Remi 리포지토리에서 설치:
 ```
-sudo yum install php-sqlsrv php-pdo_sqlsrv
+sudo yum install php-sqlsrv
 ```
 ### <a name="step-4-install-apache"></a>4단계. Apache 설치
 ```
@@ -137,7 +137,7 @@ sudo apachectl restart
 ## <a name="installing-the-drivers-on-debian-8-and-9"></a>Debian 8 및 9 드라이버 설치
 
 > [!NOTE]
-> PHP 7.0 또는 7.1을 설치 하려면 다음 명령에서 7.2 7.0 또는 7.1을 사용 하 여 대체 합니다.
+> PHP 7.1 또는 7.2를 설치 하려면 다음 명령에서 7.3을 7.1 또는 7.2 바꿉니다.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 ```
@@ -146,7 +146,7 @@ apt-get install curl apt-transport-https
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/php.list
 apt-get update
-apt-get install -y php7.2 php7.2-dev php7.2-xml
+apt-get install -y php7.3 php7.3-dev php7.3-xml
 ```
 ### <a name="step-2-install-prerequisites"></a>2단계. 필수 구성 요소 설치
 다음 지침에 따라 Debian 용 ODBC 드라이버를 설치 합니다 [Linux 및 macOS 설치 페이지](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다. 
@@ -170,12 +170,12 @@ exit
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>4단계. Apache를 설치 하 고 드라이버 로드를 구성 합니다.
 ```
 sudo su
-apt-get install libapache2-mod-php7.2 apache2
+apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
-a2enmod php7.2
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.2/apache2/conf.d/20-sqlsrv.ini
+a2enmod php7.3
+echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
+echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>5단계. Apache를 다시 시작 하 고 테스트 샘플 스크립트
 ```
@@ -183,23 +183,29 @@ sudo service apache2 restart
 ```
 설치를 테스트 하려면를 참조 하세요 [설치 테스트에](#testing-your-installation) 이 문서의 끝입니다.
 
-## <a name="installing-the-drivers-on-suse-12"></a>Suse 12 드라이버 설치
+## <a name="installing-the-drivers-on-suse-12-and-15"></a>Suse 12 및 15에 드라이버를 설치합니다.
 
 > [!NOTE]
-> PHP 7.0을 설치 하려면 skip 아래 명령을 suse 12의 기본 PHP를은 리포지토리-7.0을 추가 합니다.
-> PHP 7.1을 설치 하려면 다음 URL을 사용 하 여 아래 리포지토리 URL을 바꿉니다. `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/SLE_12/devel:languages:php:php71.repo`
+> 다음 지침에서는 대체 <SuseVersion> Suse-의 버전을 사용 하 여 Suse Enterprise Linux 15를 사용 하는 경우 됩니다 SLE_15 또는 SLE_15_SP1, 및 다른 버전에 대 한 유사 합니다. -Suse Linux의 모든 버전을 참조 하세요 PHP의 일부 버전을 사용할 수 `http://download.opensuse.org/repositories/devel:/languages:/php` Suse 버전 버전이 기본 PHP를 사용할 수를 확인 하려면 또는 `http://download.opensuse.org/repositories/devel:/languages:/php:/` 다른 버전의 PHP는를 참조 하는 Suse 버전에 사용할 수 있습니다.
+
+> [!NOTE]
+> PHP 7.3 패키지 Suse 12에 대 한 제공 되지 않습니다. 다음 URL로 PHP 7.1을 설치 하려면 아래 리포지토리 URL을 바꿉니다: `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`합니다.
+> 다음 URL로 PHP 7.2를 설치 하려면 아래 리포지토리 URL을 바꿉니다: `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`합니다.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 ```
 sudo su
-zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/SLE_12/devel:languages:php.repo
+zypper -n ar -f https://download.opensuse.org/repositories/devel:languages:php/<SuseVersion>/devel:languages:php.repo
 zypper --gpg-auto-import-keys refresh
-zypper -n install php7 php7-pear php7-devel
+zypper -n install php7 php7-pear php7-devel php7-openssl
 ```
 ### <a name="step-2-install-prerequisites"></a>2단계. 필수 구성 요소 설치
-다음 지침에 따라 Suse 12에 대 한 ODBC 드라이버를 설치 합니다 [Linux 및 macOS 설치 페이지](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
+다음 지침에 따라 Suse에 대 한 ODBC 드라이버를 설치 합니다 [Linux 및 macOS 설치 페이지](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
 
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>3단계. Microsoft SQL Server 용 PHP 드라이버 설치
+> [!NOTE]
+> 오류 메시지가 표시 되 면 `Connection to 'pecl.php.net:443' failed: Unable to find the socket transport "ssl"`에서 /usr/bin/pecl pecl 스크립트 편집 및 제거는 `-n` 마지막 줄에서 전환 합니다. 이 스위치는 OpenSSL 확장 로드 못하게 하는 PHP를 호출할 때 ini 파일을 로드할 PECL을 방지 합니다.
+
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -223,7 +229,7 @@ sudo systemctl restart apache2
 ```
 설치를 테스트 하려면를 참조 하세요 [설치 테스트에](#testing-your-installation) 이 문서의 끝입니다.
 
-## <a name="installing-the-drivers-on-macos-el-capitan-sierra-and-high-sierra"></a>MacOS High Sierra El Capitan 고 Sierra에서 드라이버를 설치합니다.
+## <a name="installing-the-drivers-on-macos-sierra-high-sierra-and-mojave"></a>MacOS Sierra, High Sierra 및 Mojave 드라이버 설치
 
 수 없는 것을 하는 경우 아래와 같이 brew를 설치 합니다.
 ```
@@ -231,18 +237,18 @@ sudo systemctl restart apache2
 ```
 
 > [!NOTE]
-> PHP 7.0 또는 7.1을 설치 하려면 교체 php@7.2 사용 하 여 php@7.0 또는 php@7.1 다음 명령에서 각각.
+> PHP 7.1 또는 7.2를 설치 하려면 교체 php@7.3 사용 하 여 php@7.1 또는 php@7.2 다음 명령에서 각각.
 
 ### <a name="step-1-install-php"></a>1단계. PHP 설치
 
 ```
 brew tap
 brew tap homebrew/core
-brew install php@7.2
+brew install php@7.3
 ```
 PHP 실행 경로-이제 수 `php -v` 에 올바른 버전의 PHP가 실행 중인지 확인 합니다. PHP가 경로에 올바른 버전이 아닌, 하는 경우 다음을 실행 합니다.
 ```
-brew link --force --overwrite php@7.2
+brew link --force --overwrite php@7.3
 ```
 
 ### <a name="step-2-install-prerequisites"></a>2단계. 필수 구성 요소 설치

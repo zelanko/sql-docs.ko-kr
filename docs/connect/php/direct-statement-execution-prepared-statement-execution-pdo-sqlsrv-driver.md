@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658751"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676111"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ ms.locfileid: "47658751"
   
 쿼리는 쿼리를 이전에 설정 된 컨텍스트가 필요를 True로 설정 된 pdo:: SQLSRV_ATTR_DIRECT_QUERY 사용 하 여 쿼리를 실행 합니다. 예를 들어 쿼리에서 임시 테이블을 사용 하는 경우 pdo:: SQLSRV_ATTR_DIRECT_QUERY True로 설정 되어야 합니다.  
   
-다음 샘플에서는 이전 문에서 상황에 맞는 필요한 경우 할 경우 pdo:: SQLSRV_ATTR_DIRECT_QUERY을 True로 설정 합니다.  이 샘플에만 사용할 수 있는 프로그램의 후속 문의 쿼리를 직접 실행 하면 임시 테이블을 사용 합니다.  
+다음 샘플에서는 이전 문에서 상황에 맞는 필요한 경우 할 경우 pdo:: SQLSRV_ATTR_DIRECT_QUERY을 True로 설정 합니다. 이 샘플에만 사용할 수 있는 프로그램의 후속 문의 쿼리를 직접 실행 하면 임시 테이블을 사용 합니다.  
   
+> [!NOTE]
+> 쿼리 저장된 프로시저를 호출 하 고이 저장 프로시저를 사용 하 여 임시 테이블을 사용할 경우 [pdo:: exec](../../connect/php/pdo-exec.md) 대신 합니다.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

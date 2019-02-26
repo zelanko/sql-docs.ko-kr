@@ -11,17 +11,15 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7577dc8b26ade71f88ba6762bd90768d6b9276df
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 27ff741558f45b775a517fbab960163dfe20bbf8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154608"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802479"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 다운로드
 
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>JDBC 드라이버를 사용 하 여 Maven Central과
 JDBC 드라이버는 다음 코드를 사용 하 여 POM.xml 파일에 종속성으로 추가 하 여 Maven 프로젝트에 추가할 수 있습니다.

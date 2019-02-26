@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 로드 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606203"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744613"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 로드
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ ms.locfileid: "51606203"
 사용 중인 플랫폼에 대 한 미리 작성 된 드라이버를 다운로드할 수 있습니다 합니다 [&#40;microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지. 각 설치 패키지는 스레드 및 스레드 비 variant의 SQLSRV 및 PDO_SQLSRV 드라이버 파일을 포함합니다. Windows에서 32 비트 및 64 비트 변형에서 사용할 수 있습니다. 참조 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md) 각 패키지에 포함 된 드라이버 파일의 목록에 대 한 합니다. 드라이버 파일에는 PHP 버전, 아키텍처 및 PHP 환경의 threadedness 일치 해야 합니다.
 
 Linux 및 macOS에서 드라이버 또는 설치할 수 있는 PECL를 사용 하 여 [설치 자습서](../../connect/php/installation-tutorial-linux-mac.md)합니다.
+
+PHP를 빌드할 때 또는 사용 하 여 원본에서 드라이버를 빌드할 수도 있습니다 `phpize`합니다. 원본에서 드라이버를 빌드 하려는 경우 옵션을 구축 하는 정적으로 PHP에 추가 하 여 공유로 extensions를 작성 하는 대신 `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (Linux 및 macOS)에서 또는 `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (on Windows)에 `./configure` 명령 PHP를 빌드합니다. PHP에 대 한 자세한 내용은 빌드 시스템 및 `phpize`를 참조 합니다 [PHP 설명서](http://php.net/manual/install.php)합니다.
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>확장 디렉터리로 드라이버 파일 이동  
 PHP 런타임을 찾을 수 있는 디렉터리에 드라이버 파일이 있어야 합니다. 기본 PHP 확장 디렉터리-실행 하는 기본 디렉터리 찾기에 드라이버 파일을 저장 하는 것이 쉽습니다 `php -i | sls extension_dir` Windows에서 또는 `php -i | grep extension_dir` Linux/macOS에서. 기본 확장 디렉터리를 사용 하지 않는 경우 PHP 구성 파일 (php.ini)에서 디렉터리를 지정를 사용 하 여 **extension_dir** 옵션입니다. 예를 들어, Windows, 드라이버 파일에 저장 하는 경우에 프로그램 `c:\php\ext` 디렉터리 php.ini에 다음 줄을 추가 합니다.
