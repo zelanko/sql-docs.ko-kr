@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7736d62feeba99a4af0efc08c55364e1f043a651
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419790"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852908"
 ---
 # <a name="impersonation"></a>가장 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -85,7 +85,6 @@ ms.locfileid: "54419790"
   
 ## <a name="see-also"></a>참고자료  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
- [데이터 원본](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
   

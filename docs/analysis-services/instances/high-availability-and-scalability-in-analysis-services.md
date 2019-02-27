@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439505"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852928"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  이 문서에서는 Analysis Services 데이터베이스를 항상 사용 가능하고 확장 가능하도록 만드는 가장 일반적으로 사용되는 기술을 설명합니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
+  이 문서에서는 고가용성 및 확장성 있는 Analysis Services 데이터베이스를 만들기 위한 가장 일반적으로 사용 되는 기술을 설명 합니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
   
  그러나 반대의 경우는 그렇지 않을 때도 있습니다. 업무에 중요하지만 적절한 규모의 쿼리 워크로드에 대해 엄격한 서비스 수준 계약이 존재하는 경우에는 확장 없이 고가용성이 단독 목표일 수 있습니다.  
   

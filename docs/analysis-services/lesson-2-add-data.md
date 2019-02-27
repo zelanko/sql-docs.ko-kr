@@ -9,24 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 22ee688f6ef1036c63cd3bf878ccf2fce869115f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b135362a9f64ac8e1bd0f696f88b8aa92d8af283
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401638"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852938"
 ---
 # <a name="lesson-2-add-data"></a>2단원: 데이터 추가
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 SSDT 테이블 가져오기 마법사를 사용 하 여 AdventureWorksDW SQL 샘플 데이터베이스에 연결, 데이터 선택, 미리 보기 및 데이터를 필터링 및 다음 데이터를 모델 작업 영역으로 가져와야 하 됩니다.  
   
-테이블 가져오기 마법사를 사용하여 Access, SQL, Oracle, Sybase, Informix, DB2, Teradata 등 다양한 관계형 원본에서 데이터를 가져올 수 있습니다. 이러한 각 관계형 원본에서 데이터를 가져오는 단계는 아래에 설명된 과정과 매우 비슷합니다. 데이터 저장된 프로시저를 사용 하 여 선택할 수 있습니다. 데이터 및 다양 한 유형의 데이터 원본에서 가져올 수 가져오기에 대 한 자세한 내용은 참조 하세요 [데이터 원본](../analysis-services/tabular-models/data-sources-ssas-tabular.md)합니다.  
+테이블 가져오기 마법사를 사용하여 Access, SQL, Oracle, Sybase, Informix, DB2, Teradata 등 다양한 관계형 원본에서 데이터를 가져올 수 있습니다. 이러한 각 관계형 원본에서 데이터를 가져오는 단계는 아래에 설명된 과정과 매우 비슷합니다. 데이터 저장된 프로시저를 사용 하 여 선택할 수 있습니다. 데이터 및 다양 한 유형의 데이터 원본에서 가져올 수 가져오기에 대 한 자세한 내용은 참조 하세요 [데이터 원본](../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)합니다.  
   
 이 단원에 소요되는 예상 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)합니다.  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](../analysis-services/lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="create-a-connection"></a>연결 만들기  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52401638"
   
     이 데이터 원본에 연결을 설정 하는 과정을 안내 하는 테이블 가져오기 마법사를 시작 합니다. 테이블 형식 모델 탐색기가 보이지 않으면 두 번 클릭 **Model.bim** 에 **솔루션 탐색기** 를 모델 디자이너에서 엽니다. 
     
-    ![으로-테이블 형식-단원 2 종단간-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
+    ![as-tabular-lesson2-tme](../analysis-services/media/as-tabular-lesson2-tme.png) 
 
     참고: 1400 호환성 수준의 모델을 만들려는 경우 테이블 가져오기 마법사는 대신 새 데이터 가져오기 환경을 볼 수 있습니다. 대화 상자는 아래 단계에서 약간 다르게 표시 됩니다 있지만 계속 진행할 수 있습니다. 
   
@@ -48,7 +48,7 @@ ms.locfileid: "52401638"
   
 5.  에 **데이터베이스 이름** 필드를 선택한 **AdventureWorksDW**를 클릭 하 고 **다음**합니다.  
   
-    ![-테이블 형식-단원 2 종단간-tiw-이름](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
+    ![as-tabular-lesson2-tiw-name](../analysis-services/media/as-tabular-lesson2-tiw-name.png)
   
 6.  **가장 정보** 페이지에서 데이터를 가져와 처리할 때 Analysis Services가 데이터 원본에 연결하는 데 사용할 자격 증명을 지정해야 합니다. **특정 Windows 사용자 이름 및 암호** 가 선택되어 있는지 확인하고 **사용자 이름** 및 **암호**에 Windows 로그온 자격 증명을 입력한 후 **다음**을 클릭합니다.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "52401638"
   
 1.  행을 선택 합니다 **DimCustomer** 테이블을 마우스 클릭 **미리 보기 및 필터**합니다. DimCustomer 원본 테이블의 모든 열이 표시된 상태로 **선택한 테이블 미리 보기** 창이 열립니다.  
   
-2.  다음 열의 맨 위에 있는 확인란의 선택을 취소합니다. **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**하십시오 **FrenchOccupation**합니다. 
+2.  다음 열의 맨 위에 있는 확인란의 선택을 취소합니다. **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**. 
 
-    ![으로-테이블 형식-단원 2 종단간-tiw-일반](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
+    ![as-tabular-lesson2-tiw-clear](../analysis-services/media/as-tabular-lesson2-tiw-clear.png)
   
     이러한 열의 값은 인터넷 매출 분석과 관련이 없으므로 가져올 필요가 없습니다. 불필요 한 열을 제거 하 게 모델 작고 효율적입니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52401638"
   
     라는 단어가 **적용 된 필터** 에 표시 됩니다는 **필터 세부 정보** 열에는 **DimCustomer** 행의 텍스트 설명을 보면 해당 링크를 클릭 합니다 방금 적용 한 필터입니다.  
     
-    ![으로-테이블 형식-단원 2 종단간-적용 된-필터](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
+    ![as-tabular-lesson2-applied-filters](../analysis-services/media/as-tabular-lesson2-applied-filters.png)
     
   
 4.  나머지 각 테이블에서 다음 열에 대한 확인란의 선택을 취소하여 테이블을 필터링합니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "52401638"
   
     데이터를 가져오는 동안 인출된 행의 수가 마법사에 표시됩니다. 데이터를 모두 가져오면 성공을 나타내는 메시지가 표시됩니다.  
     
-    ![으로 테이블 형식-단원 2 종단간-성공](../analysis-services/media/as-tabular-lesson2-success.png) 
+    ![as-tabular-lesson2-success](../analysis-services/media/as-tabular-lesson2-success.png) 
   
     > [!TIP]  
     > 가져온 테이블 간에 자동으로 생성된 관계를 보려면 **데이터 준비** 행에서 **자세히**를 클릭합니다. 
@@ -164,7 +164,7 @@ ms.locfileid: "52401638"
 -   Click **파일** > **모두 저장**을 참조하세요.  
   
 ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [3 단원: 날짜 테이블로 표시](../analysis-services/lesson-3-mark-as-date-table.md)합니다.
+다음 단원으로 이동 합니다. [3단원: 날짜 테이블로 표시](../analysis-services/lesson-3-mark-as-date-table.md)합니다.
 
   
   
