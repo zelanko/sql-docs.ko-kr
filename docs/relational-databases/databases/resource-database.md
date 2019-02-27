@@ -51,7 +51,7 @@ SELECT SERVERPROPERTY('ResourceVersion');
 GO  
 ```  
   
- Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다****.**  
+ Resource **데이터베이스가 마지막으로 업데이트된** **시기를 확인하려면 다음 문을 사용합니다**.  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  
