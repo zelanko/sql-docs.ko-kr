@@ -2,7 +2,7 @@
 title: (OracleToSQL) Oracle 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,44 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bc54f3046ec3163e3d480dd6feae906368fa4c12
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406000"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955964"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>(OracleToSQL) Oracle 용 SSMA의 새로운 기능
-이 문서에서는 Oracle 각 릴리스의 변경 내용에 대 한 SSMA를 나열 합니다.  
+이 문서에서는 Oracle 각 릴리스의 변경 내용에 대 한 SQL Server Migration Assistant (SSMA)를 나열 합니다.
+
+## <a name="ssma-v80"></a>SSMA v8.0
+Oracle 용 SSMA v8.0 릴리스의 품질 및 변환 메트릭을 개선 하기 위한 대상된 수정 사항을 제공 하려면 향상 되었습니다. 이 릴리스에 또한 다음과 같은 새로운 기능을 제공합니다.
+
+* 에 대 한 지원 **Azure SQL Database Managed Instance** 대상으로 합니다. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
+
+  ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
+
+    > [!NOTE]
+    > 확장 팩 Oracle 용 SSMA Azure SQL Database 관리 되는 인스턴스에서 원격 설치를 허용 하도록 업데이트 되었습니다.
+    >
+    > ![확장 팩 Oracle 용 SSMA](../media/ssma-oracle-ext-pack.png)
+
+    Azure SQL Database Managed Instance를 대상으로 할 때 테스터 및 서버 쪽 데이터 마이그레이션 등의 일부 기능은 지원 되지 않습니다. 자세히 알아보세요 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/)합니다.
+
+*   변환 후 **수정 advisor**합니다. 자세한 내용을 알아보세요 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)합니다.
+
+* 임시 데이터베이스/스키마 선택 합니다.
+
+    원본에 연결할 때 사용자가 데이터베이스/스키마 관심 이제 선택할 수 있습니다. 마이그레이션하려는 스키마만 선택 하면 초기 연결 중 시간이 절약 되 고 전반적인 SSMA 성능을 개선 합니다.
+
+    ![SSMA 필터 개체](../media/ssma-filter-objects.png)
+
+* 관리 되는 공식 NET 드라이버를 사용 하 여 Oracle에 연결할 수 있습니다. OCI 드라이버를 더 이상 사용 하 여 SQL Server Migration Assistant for Oracle에 대 한 필수 구성 요소.
+
+* VARCHAR로 ROWID 및 UROWID를 기본적으로 매핑할 수 있습니다. 'uniqueidentifier' 명시적 ROWID 열에 대 한 데이터 마이그레이션에 맞게 변경 합니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 Oracle 용 SSMA의 v7.10 릴리스에는 다음 변경 내용이 포함 됩니다.
@@ -39,7 +68,7 @@ Oracle 용 SSMA의 v7.9 릴리스에는 다음 변경 내용이 포함 됩니다
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
-## <a name="ssma-v78"></a>SSMA v 7.8
+## <a name="ssma-v78"></a>SSMA v7.8
 Oracle 용 SSMA의 v 7.8 릴리스는 다음 변경 내용을 포함 되어 있습니다.
 -   에 대 한 지원이 추가 되었습니다.
     - IN 절에 대 한 행 식입니다.

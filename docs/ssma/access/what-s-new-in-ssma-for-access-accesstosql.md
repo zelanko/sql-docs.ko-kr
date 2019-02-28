@@ -2,7 +2,7 @@
 title: Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,34 @@ ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93b708511bb0c17211e42f7c436da521ced12713
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40d5daaaef68d4355a95fb6cef2c55628cdf4008
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413720"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955924"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL)의 새로운 기능
-이 문서에서는 SSMA 각 릴리스에 대 한 액세스 변경 내용을 나열 합니다.  
+이 문서는 각 릴리스에 대 한 액세스 변경에 대 한 SQL Server Migration Assistant (SSMA)를 나열합니다.  
+
+## <a name="ssma-v80"></a>SSMA v8.0
+품질 및 변환 메트릭을 개선 하기 위한 대상된 수정 사항을 제공 하려면 SSMA for Access v8.0 릴리스의 향상 되었습니다. 이 릴리스에 또한 다음과 같은 새로운 기능을 제공합니다.
+
+* 에 대 한 지원 **Azure SQL Database Managed Instance** 대상으로 합니다. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
+
+  ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
+
+*   변환 후 **수정 advisor**합니다. 자세한 내용을 알아보세요 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)합니다.
+
+* 임시 데이터베이스/스키마 선택 합니다.
+
+    원본에 연결할 때 사용자가 데이터베이스/스키마 관심 이제 선택할 수 있습니다. 마이그레이션하려는 스키마만 선택 하면 초기 연결 중 시간이 절약 되 고 전반적인 SSMA 성능을 개선 합니다.
+
+    ![SSMA 필터 개체](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
+
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 SSMA for Access v7.10 릴리스의 추가 보안 및 글로벌 요구 사항 변화에에서 맞게 개인 정보 보호를 제공 하도록 설계 하는 대상된 수정 사항을 사용 하 여 향상 되었습니다.
@@ -35,7 +54,7 @@ SSMA for Access v7.9 릴리스는 다음 변경 내용을 포함 되어 있습�
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
-## <a name="ssma-v78"></a>SSMA v 7.8
+## <a name="ssma-v78"></a>SSMA v7.8
 SSMA for Access v 7.8 릴리스는 다음 변경 내용을 포함 되어 있습니다.
 - 프로젝트 설정에서 강조 표시 된 변경 형식 매핑입니다.
 - 사용자가 원격 분석을 사용 하지 않도록 설정 하는 기능을 제공 합니다.

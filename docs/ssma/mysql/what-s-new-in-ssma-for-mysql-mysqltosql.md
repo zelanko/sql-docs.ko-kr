@@ -2,7 +2,7 @@
 title: (MySQLToSql) MySQL 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 09/22/2018
+ms.date: 02/27/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,15 +10,33 @@ ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b927d9116424f1b471dc675189548e3c6a459569
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 16bd63c55eb46bf5e98698eb117efa15afaafc06
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531765"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955764"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
-이 문서에서는 SSMA MySQL 각 릴리스의 변경 내용 나열 합니다. 
+이 문서에서는 MySQL 각 릴리스의 변경 내용에 대 한 SQL Server Migration Assistant (SSMA)를 나열 합니다.
+
+## <a name="ssma-v80"></a>SSMA v8.0
+MySQL 용 SSMA의 v8.0 릴리스에서 품질 및 변환 메트릭을 개선 하기 위한 대상된 수정 사항을 제공 하려면 향상 되었습니다. 이 릴리스에 또한 다음과 같은 새로운 기능을 제공합니다.
+
+* 에 대 한 지원 **Azure SQL Database Managed Instance** 대상으로 합니다. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
+
+    ![SQL DB MI 프로젝트](../media/ssma-newproject-sqldbmi.png)
+
+*   변환 후 **수정 advisor**합니다. 자세한 내용을 알아보세요 [여기](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/)합니다.
+
+*   임시 데이터베이스/스키마 선택 합니다.
+
+    원본에 연결할 때 사용자가 데이터베이스/스키마 관심 이제 선택할 수 있습니다. 마이그레이션하려는 스키마만 선택 하면 초기 연결 중 시간이 절약 되 고 전반적인 SSMA 성능을 개선 합니다.
+
+    ![SSMA 필터 개체](../media/ssma-filter-objects.png)
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v710"></a>SSMA v7.10
 MySQL 용 SSMA의 v7.10 릴리스에서 다음 변경 내용을 포함 되어 있습니다.
@@ -39,7 +57,7 @@ MySQL 용 SSMA의 v7.9 릴리스에서 다음 변경 내용을 포함 되어 있
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
-## <a name="ssma-v78"></a>SSMA v 7.8
+## <a name="ssma-v78"></a>SSMA v7.8
 MySQL 용 SSMA의 v 7.8 릴리스에서 다음 변경 내용을 포함 되어 있습니다.
 - 프로젝트 설정에서 강조 표시 된 변경 형식 매핑입니다.
 - 사용자가 원격 분석을 사용 하지 않도록 설정 하는 기능을 제공 합니다.
@@ -57,7 +75,7 @@ MySQL 용 SSMA의 v7.7 릴리스에서 다음 변경 내용을 포함 되어 있
 > SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v76"></a>SSMA v7.6
-MySQL 용 SSMA의 v7.6 릴리스에서 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기로 제공 되며 프로덕션 마이그레이션에 사용할 수 없습니다.
+MySQL 용 SSMA의 v7.6 릴리스에서 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기로 제공 않으며 프로덕션 마이그레이션에 사용할 수 없습니다.
 
 > [!IMPORTANT]
 > SSMA v7.4 및 이후 버전에서는 사용 하 여.Net 4.5.2는 설치 필수 이며 도구의 32 비트 버전은 지원 되지 않습니다.

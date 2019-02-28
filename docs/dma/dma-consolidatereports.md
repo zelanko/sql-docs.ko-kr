@@ -2,7 +2,7 @@
 title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
 description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 02/23/2019
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801377"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956034"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -37,15 +37,15 @@ ms.locfileid: "56801377"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
     - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출 합니다.
-    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip)합니다.
-    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip)합니다.
+    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip)합니다.
+    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip)합니다.
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell 모듈을 로드합니다.
 PowerShell 모듈 디렉터리에 저장 하는 PowerShell 모듈을 사용 하기 전에 명시적으로 로드 하는 데 필요 없이 모듈 호출 할 수 있습니다.
 
 모듈을 로드 하려면 다음 단계를 수행 합니다.
 1. C:\Program Files\WindowsPowerShell\Modules 이동한 다음 라는 폴더를 만듭니다 **DataMigrationAssistant**합니다.
-2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), 사용자가 만든 폴더에 저장 합니다.
+2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip), 사용자가 만든 폴더에 저장 합니다.
 
       ![PowerShell 모듈](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
