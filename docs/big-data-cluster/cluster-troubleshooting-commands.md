@@ -5,17 +5,17 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242005"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017909"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Kubectl 명령을 모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 모든 pod의 상태를 보여 줍니다.
 
-사용 된 `-n` 매개 변수를 특정 네임 스페이스를 지정 합니다. 빅 데이터 클러스터 pod 클러스터 부트스트랩 시 만들어진 새 네임 스페이스에서 만든 SQL Server에 지정 된 클러스터 이름에 기반을 `mssqlctl create cluster <cluster_name>` 명령입니다.
+사용 된 `-n` 매개 변수를 특정 네임 스페이스를 지정 합니다. 빅 데이터 클러스터 pod 클러스터 부트스트랩 시 만들어진 새 네임 스페이스에서 만든 SQL Server에 지정 된 클러스터 이름에 기반을 `mssqlctl cluster create --name <cluster_name>` 명령입니다.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>서비스의 상태를 가져옵니다.
 
-빅 데이터 클러스터 서비스에 대 한 세부 정보를 가져오려면 다음 명령을 실행 합니다. 해당 서비스 및 포트와 연결 된 Ip 및 이러한 세부 정보에 해당 형식이 포함 됩니다. SQL Server 빅 데이터 클러스터 서비스에 지정 된 클러스터 이름을 기반으로 하는 클러스터 부트스트랩 시에 만들어진 새 네임 스페이스에 만들어졌는지 확인 합니다 `mssqlctl create cluster <cluster_name>` 명령입니다.
+빅 데이터 클러스터 서비스에 대 한 세부 정보를 가져오려면 다음 명령을 실행 합니다. 해당 서비스 및 포트와 연결 된 Ip 및 이러한 세부 정보에 해당 형식이 포함 됩니다. SQL Server 빅 데이터 클러스터 서비스에 지정 된 클러스터 이름을 기반으로 하는 클러스터 부트스트랩 시에 만들어진 새 네임 스페이스에 만들어졌는지 확인 합니다 `mssqlctl cluster create --name <cluster_name>` 명령입니다.
 
 ```bash
 kubectl get svc -n <namespace_name>

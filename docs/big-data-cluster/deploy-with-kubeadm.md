@@ -5,17 +5,17 @@ description: 여러 Ubuntu 16.04의 Kubernetes 또는 SQL Server 2019 빅 데이
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 78d2024f09e78645d8fa1c35279b296e3cda53d7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 56eb95042199298be2728c475d26cb52bea993e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241594"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017989"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 여러 컴퓨터에서 Kubernetes 구성
 
@@ -26,9 +26,11 @@ ms.locfileid: "54241594"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 여러 Linux 물리적 컴퓨터 또는 클러스터에 대해 사용 하도록 가상 컴퓨터
-- 권장된 구성: Cpu가 8 개, 32GB 메모리 및 최소 100GB의 각 컴퓨터에 대 한 저장소
-- 3 개 이상의 컴퓨터가 클러스터의
+- 최소 3 Linux 물리적 컴퓨터 또는 가상 컴퓨터
+- 컴퓨터당 권장된 구성:
+   - 8 개의 Cpu
+   - 32GB의 메모리가
+   - 100GB의 저장소
 
 ## <a name="prepare-the-machines"></a>컴퓨터 준비
 
@@ -146,4 +148,4 @@ kubectl get nodes
 
 이 문서의 단계를 여러 Ubuntu 컴퓨터에서 Kubernetes 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
-[SQL Server 2019 CTP 2.2 Kubernetes에 배포](deployment-guidance.md#deploy)
+[Kubernetes에서 SQL Server 배포](deployment-guidance.md#deploy)

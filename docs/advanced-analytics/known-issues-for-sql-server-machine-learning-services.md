@@ -2,17 +2,17 @@
 title: R 언어 및 Python 통합-SQL Server Machine Learning Services의 알려진된 문제
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645531"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018069"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ R 설치 파일의 올바른 버전을 포함 하는 제공 서비스 릴리스�
 
 이 문제는 릴리스 버전에서 해결 됩니다. 또한 R 구성 요소에는이 제한이 적용 되지 않습니다.
 
-**적용 대상:** Python 사용 하 여 SQL Server 2017
+**적용 대상:** SQL Server 2017 with Python
 
 ### <a name="bkmk_sqlbindr"></a> 에 연결할 때 이전 버전 SQL Server R Services의 클라이언트에서 사용 하 여 호환 되지 않는 버전 경고 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -204,7 +204,7 @@ Enterprise Edition에서 리소스 풀을 사용하여 외부 스크립트 프�
 
 리소스 제한에서 발생 하는 경우 현재 기본값을 확인 합니다. 20% 충분 하지 않습니다, 경우에 대 한 설명서를 참조 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 값을 변경 하는 방법에 있습니다.
 
-**적용 대상:** SQL Server 2016 R Services Enterprise Edition
+**적용 대상:** SQL Server 2016 R Services, Enterprise Edition
 
 ## <a name="r-script-execution-issues"></a>R 스크립트 실행 문제
 
@@ -216,7 +216,7 @@ R 솔루션에 영향을 주는 기타 알려진된 문제에 대 한 참조를 
 
 와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부는 `Program Files` 폴더, ACCESS_DENIED 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 하는 경고입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
-> *`normalizePath(path.expand(path), winslash, mustWork)` : 경로 [2] = "~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
 
 이유는 R 함수 경로 읽기를 시도 하 고 실패 built-in users 그룹 **SQLRUserGroup**, 읽기 액세스 하지 못합니다. 경고 발생 하는 현재 R 스크립트 실행을 차단 하지 않습니다 하지만 사용자가 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이 될 수 있습니다.
 

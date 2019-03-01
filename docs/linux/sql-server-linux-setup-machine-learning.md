@@ -1,21 +1,21 @@
 ---
 title: SQL Server Machine Learning 서비스 (R, Python, Java) linux 설치 | Microsoft Docs
-description: 이 문서에서는 Red Hat 및 Ubuntu에서 SQL Server Machine Learning Services (R, Python, Java)를 설치 하는 방법을 설명 합니다.
+description: Red Hat 및 Ubuntu에서 SQL Server Machine Learning Services (R, Python, Java)를 설치 하는 방법에 알아봅니다.
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7e140a4eeb8fe6481b52be378c6ad9569160e9e3
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: b27c2f897f3a96003eefe879aba4f1d5dba7512d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397662"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018059"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 Machine Learning 서비스 (R, Python, Java) linux 설치
 
@@ -27,7 +27,7 @@ ms.locfileid: "54397662"
 
 ## <a name="uninstall-previous-ctp"></a>이전 CTP를 제거 합니다.
 
-패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP 2.0 또는 2.1 CTP 2.2 이상을 설치 하기 전에 모든 이전 패키지를 제거 하려면 제거 하는 것이 좋습니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
+패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP를 제거 하는 것이 좋습니다 2.x CTP 2.3을 설치 하기 전에 모든 이전 패키지를 제거 합니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
 
 ### <a name="1-confirm-package-installation"></a>1. 패키지 설치를 확인 합니다.
 
@@ -61,7 +61,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-22-install"></a>3. CTP 2.2 설치 계속
+### <a name="3-proceed-with-ctp-23-install"></a>3. CTP 2.3 설치 계속
 
 이 문서의 지침을 사용 하 여 운영 체제에 대 한 가장 높은 패키지 수준에서 설치 합니다.
 
@@ -298,42 +298,50 @@ sudo zypper install mssql-server-extensibility-java
 
 1. SQL Server 서비스를 실행 하는 데 mssql 사용자 계정을 추가 합니다. 이전에 설치를 실행 하지 않은 경우 이것이 필요 합니다.
 
-  ```bash
-  sudo /opt/mssql/bin/mssql-conf setup
-  ```
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf setup
+   ```
 
 2. 오픈 소스 R 및 Python에 대 한 사용권 계약에 동의 합니다. 이 작업을 수행 하는 방법은 여러 가지가 있습니다. 이전에 SQL Server 라이선스를 수락 하 고 추가 하는 R 또는 Python 확장 이제, 다음 명령은 다음과 같습니다. 해당 약관에 동의
 
-  ```bash
-  # Run as SUDO or root
-  # Use set + EULA 
-    sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
-  ```
+   ```bash
+   # Run as SUDO or root
+   # Use set + EULA 
+   sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
+   ```
 
-  대체 하는 워크플로 라이선스 계약 하는 SQL Server 데이터베이스 엔진, 아직 수락 하지 않은 경우 설치 검색 mssql mlservices 패키지 EULA 동의 하 라는 메시지가 표시 되 면 `mssql-conf setup` 실행 됩니다. EULA 매개 변수에 대 한 자세한 내용은 참조 하세요. [mssql-conf 도구를 사용 하 여 SQL Server 구성](sql-server-linux-configure-mssql-conf.md#mlservices-eula)합니다.
+   대체 하는 워크플로 라이선스 계약 하는 SQL Server 데이터베이스 엔진, 아직 수락 하지 않은 경우 설치 검색 mssql mlservices 패키지 EULA 동의 하 라는 메시지가 표시 되 면 `mssql-conf setup` 실행 됩니다. EULA 매개 변수에 대 한 자세한 내용은 참조 하세요. [mssql-conf 도구를 사용 하 여 SQL Server 구성](sql-server-linux-configure-mssql-conf.md#mlservices-eula)합니다.
 
-3. R에 대 한 기능, 설정 하는 통합 된 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서.
+3. 아웃 바운드 네트워크 액세스가 사용 하도록 설정 합니다. 아웃 바운드 네트워크 액세스가 기본적으로 비활성화 됩니다. 아웃 바운드 요청을 사용 하도록 설정 하려면 "outboundnetworkaccess" mssql-conf 도구를 사용 하는 부울 속성을 설정 합니다. 자세한 내용은 [mssql conf를 사용 하 여 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)합니다.
 
-  + 라는 파일을 만들거나 편집 **.bash_profile** 사용자 홈 디렉터리에서 줄을 추가 `export MKL_CBWR="AUTO"` 파일입니다.
+   ```bash
+   # Run as SUDO or root
+   # Enable outbound requests over the network
+   sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+   ```
 
-  + 이 파일을 입력 하 여 실행 `source .bash_profile` bash 명령 프롬프트에서.
+4. R에 대 한 기능, 설정 하는 통합 된 **MKL_CBWR** 환경 변수를 [일관 된 출력을 확인](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) Intel 라이브러리 MKL (Math Kernel) 계산에서.
 
-4. SQL Server 실행 패드 서비스와 데이터베이스 엔진 인스턴스를 다시 시작 합니다. 
+   + 라는 파일을 만들거나 편집 **.bash_profile** 사용자 홈 디렉터리에서 줄을 추가 `export MKL_CBWR="AUTO"` 파일입니다.
 
-  ```bash
-  systemctl restart mssql-launchpadd
+   + 이 파일을 입력 하 여 실행 `source .bash_profile` bash 명령 프롬프트에서.
 
-  systemctl restart mssql-server.service
-  ```
+5. SQL Server 실행 패드 서비스와 INI 파일에서 업데이트 된 값을 읽는 데이터베이스 엔진 인스턴스를 다시 시작 합니다. 다시 시작 메시지를 알려는 확장성 관련 설정 수정 될 때마다 합니다.  
 
-5. Azure Data Studio 또는 SQL Server Management Studio (Windows만 해당)와 같은 다른 도구를 사용 하 여 외부 스크립트 실행 활성화 Transact SQL을 실행 하는 합니다. 
+   ```bash
+   systemctl restart mssql-launchpadd
 
-  ```bash
-  EXEC sp_configure 'external scripts enabled', 1 
-  RECONFIGURE WITH OVERRIDE 
-  ```
+   systemctl restart mssql-server.service
+   ```
 
-6. 실행 패드 서비스를 다시 시작 합니다.
+6. Azure Data Studio 또는 SQL Server Management Studio (Windows만 해당)와 같은 다른 도구를 사용 하 여 외부 스크립트 실행 활성화 Transact SQL을 실행 하는 합니다. 
+
+   ```bash
+   EXEC sp_configure 'external scripts enabled', 1 
+   RECONFIGURE WITH OVERRIDE 
+   ```
+
+7. 실행 패드 서비스를 다시 시작 합니다.
 
 ## <a name="verify-installation"></a>설치 확인
 

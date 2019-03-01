@@ -2,17 +2,17 @@
 title: Machine learning-SQL Server Machine Learning 서비스에 대 한 데이터 수집 문제 해결
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644992"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017939"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning 위한 데이터 수집 문제 해결
 
@@ -90,7 +90,7 @@ R 버전 및 RevoScaleR 버전을 가져오려면 R 명령 프롬프트를 또�
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-R 콘솔을 시작할 때 버전 정보를 표시합니다. 예를 들어, 다음 버전 SQL Server 2017 CTP 2.0에 대 한 기본 구성을 나타냅니다.
+R 콘솔을 시작할 때 버전 정보를 표시합니다. 예를 들어, 다음 버전 SQL Server 2017에 대 한 기본 구성을 나타냅니다.
 
     *Microsoft R Open 3.3.3*
 

@@ -5,16 +5,16 @@ description: SQL Server 마스터 인스턴스와 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231040"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017709"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
 
@@ -79,17 +79,9 @@ Azure Data Studio 2019 년 2 월 릴리스의 SQL Server 마스터 인스턴스�
 대부분의 경우에서 SQL Server 마스터 인스턴스에 연결할에 액세스할 수는 HDFS 및 Spark 에서도 통해 합니다 **Data Services** 노드. 그러나 전용된 연결을 여전히 만들 수는 **HDFS/Spark 게이트웨이** 필요한 경우. 다음 단계에서는 Azure Data Studio를 사용 하 여 연결 하는 방법에 설명 합니다.
 
 1. 명령줄에서 다음 명령 중 하나를 사용 하 여 HDFS/Spark 게이트웨이의 IP 주소를 찾습니다.
-   
-   **AKS 배포:**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **비-AKS 배포**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. Azure Data Studio 눌러 **F1** > **새 연결**합니다.

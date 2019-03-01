@@ -5,17 +5,17 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d1e028781735b257b82f839571da5400c36c1e10
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7d5a81479e798d3d97547eb67b17e62444cd2941
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241954"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017579"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 계산 풀이란?
 
@@ -26,7 +26,7 @@ ms.locfileid: "54241954"
 계산 풀 이루어져 있습니다. 하나 또는 더 많은 Kubernetes에서 실행 되는 pod를 계산 합니다. 자동된 생성 및 관리 이러한 pod에서 조정 되는 [SQL Server 마스터 인스턴스](concept-master-instance.md). 각 pod에는 SQL Server 데이터베이스 엔진의 인스턴스 및 기본 서비스 집합이 포함 되어 있습니다.
 
 > [!NOTE]
-> CTP 2.2는 클러스터당 단일 계산 풀만 지원합니다.
+> CTP 2.3 클러스터당 단일 계산 풀을 지원합니다.
 
 ## <a name="scale-out-groups"></a>확장 그룹
 

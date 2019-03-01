@@ -5,17 +5,17 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 47fb255ea18fdf48765a1a40b1e05e06cdf7ee1e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241744"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017959"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -26,11 +26,11 @@ ms.locfileid: "54241744"
 SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. (풀) 어떤 용도로 사용 하는 저장소 클래스를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 pod에 대 한 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다.
 
 > [!NOTE]
-> CTP 2.2에만 한 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
+> CTP 2.3에만 용 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 ## <a name="deployment-settings"></a>배포 설정
 
-배포 하는 동안 영구 저장소를 사용 하려면 구성 합니다 **USE_PERSISTENT_VOLUME** 하 고 **STORAGE_CLASS_NAME** 실행 하기 전에 환경 변수 `mssqlctl create cluster` 명령입니다. **USE_PERSISTENT_VOLUME** 로 설정 된 `true` 기본적으로 합니다. 기본값을 무시 하 고 설정할 수 있습니다 `false` 및 SQL Server 빅 데이터 클러스터 emptyDir 탑재를 사용 하는 예제의 경우. 
+배포 하는 동안 영구 저장소를 사용 하려면 구성 합니다 **USE_PERSISTENT_VOLUME** 하 고 **STORAGE_CLASS_NAME** 실행 하기 전에 환경 변수 `mssqlctl cluster create` 명령입니다. **USE_PERSISTENT_VOLUME** 로 설정 된 `true` 기본적으로 합니다. 기본값을 무시 하 고 설정할 수 있습니다 `false` 및 SQL Server 빅 데이터 클러스터 emptyDir 탑재를 사용 하는 예제의 경우. 
 
 > [!WARNING]
 > 영구 저장소 없이 실행 된 테스트 환경에서 작업할 수 있지만 작동 하지 않는 클러스터 될 수 있습니다. Pod 다시 시작 하면 시 클러스터 메타 데이터 및/또는 사용자 데이터가 손실 됩니다 영구적으로 합니다.
@@ -68,7 +68,7 @@ Minikube에서 영구적 볼륨을 사용 하 여 설정 하 여 무시할 수 �
 설정 해야 하므로, 온-프레미스 클러스터 물론 모든 기본 제공 저장소 클래스를 사용 하 여 제공 되지 않습니다 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)/[프로 비 저 너를](https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/) 미리 사용 하 여 해당 SQL Server 빅 데이터 클러스터 배포 시 저장소 클래스입니다.
 
 ## <a name="customize-storage-size-for-each-pool"></a>각 풀에 대 한 저장소 크기를 사용자 지정
-기본적으로 각 클러스터에 프로 비전 된 pod에 대 한 프로 비전 된 영구적 볼륨의 크기는 6GB 됩니다. 이 환경 변수를 설정 하 여 구성할 수는 `STORAGE_SIZE` 다른 값으로. 예를 들어, 아래 10GB로 실행 하기 전에 값을 설정 하는 명령을 실행할 수 있습니다는 `mssqlctl create cluster command`합니다.
+기본적으로 각 클러스터에 프로 비전 된 pod에 대 한 프로 비전 된 영구적 볼륨의 크기는 6GB 됩니다. 이 환경 변수를 설정 하 여 구성할 수는 `STORAGE_SIZE` 다른 값으로. 예를 들어, 아래 10GB로 실행 하기 전에 값을 설정 하는 명령을 실행할 수 있습니다는 `mssqlctl cluster create --name command`합니다.
 
 ```bash
 export STORAGE_SIZE=10Gi
@@ -88,7 +88,7 @@ SQL Server 빅 데이터 클러스터에 대 한 영구 저장소를 설정 하�
 |---|---|---|
 | **USE_PERSISTENT_VOLUME** | true | `true` Kubernetes 영구적 볼륨을 사용 하려면 pod 저장소에 대 한 클레임입니다. `false` pod 저장소에 대 한 임시 호스트 저장소를 사용 하 합니다. |
 | **STORAGE_CLASS_NAME** | 기본 | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true` 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다. |
-| **STORAGE_SIZE** | 6 gi | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true`,이 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |
+| **STORAGE_SIZE** | 6Gi | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true`,이 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |
 | **DATA_POOL_USE_PERSISTENT_VOLUME** | USE_PERSISTENT_VOLUME | `true` Kubernetes 영구적 볼륨을 사용 하는 데이터 풀에서 pod에 대 한 클레임입니다. `false` 데이터 풀 pod에 대 한 임시 호스트 저장소를 사용 합니다. |
 | **DATA_POOL_STORAGE_CLASS_NAME** | STORAGE_CLASS_NAME | 데이터 풀 pod와 연결 된 영구적 볼륨에 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다.|
 | **DATA_POOL_STORAGE_SIZE** | STORAGE_SIZE |데이터 풀의 각 pod에 대 한 영구적 볼륨 크기를 나타냅니다. |

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615983"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007556"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP에서 TLS 1.2를 구성 합니다.
 
-TLS 1.2만 사용 하도록 AP를 보호 하려면 모든 실제 및 가상 호스트에서 다른 프로토콜을 명시적으로 사용 하지 않도록 설정 해야 합니다. 레지스트리 설정을 변경 해야 하는 프로토콜을 사용 하지 않도록 설정 합니다.
+TLS 1.2만 사용 하도록 AP를 보호 하려면 모든 실제 및 가상 호스트에서 다른 프로토콜을 명시적으로 사용 하지 않도록 설정 해야 합니다. 레지스트리 설정을 변경 해야 하는 프로토콜을 사용 하지 않도록 설정 합니다. 가상 및 실제 호스트를 다시 부팅을 해야 하는 레지스트리를 변경 합니다.
 
 > [!WARNING]
 > 이 섹션, 방법 또는 태스크에는 레지스트리를 수정하는 방법을 알려 주는 단계가 포함되어 있습니다. 그러나 잘못는 데이터가 손실 될 수 있습니다 및 운영 체제의 다시 설치 해야 레지스트리를 수정 하면 심각한 문제가 발생할 수 있습니다. 좋습니다 다시 레지스트리를 수정 하기 전에 합니다. 그런 다음 문제가 발생하면 레지스트리를 복원할 수 있습니다. 백업 하 고 레지스트리를 복원 하는 방법에 대 한 자세한 내용은 Microsoft 기술 자료 문서를 보려면 다음 문서 번호를 클릭 합니다.<br>

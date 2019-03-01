@@ -3,18 +3,18 @@ title: Java 샘플 및 SQL Server 2019-SQL Server Machine Learning Services에 �
 description: SQL Server 데이터를 사용 하 여 Java 언어 확장을 사용 하는 단계를 알아보려면 SQL Server 2019에서 Java 샘플 코드를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069063"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018039"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 샘플 연습
 
@@ -26,7 +26,7 @@ ms.locfileid: "54069063"
 
 + SQL Server Management Studio 또는 T-SQL을 실행 하기 위한 다른 도구입니다.
 
-+ Java SE 개발 키트 (JDK), Windows에서 1.10 또는 Linux에서 JDK 1.8입니다.
++ JDK (Java SE Development Kit) 8에서 Windows 또는 Linux입니다.
 
 명령줄 컴파일에서 사용 하 여 **javac** 이 자습서에 충분 합니다. 
 
@@ -209,7 +209,7 @@ Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나
 
 스크립트 실행 프로세스 id가 코드에 액세스 하는 경우에 성공 합니다. 
 
-### <a name="on-linux"></a>Linux에서
+### <a name="on-linux"></a>On Linux
 
 하도록 클래스 경로에 대 한 읽기/실행 권한을 부여 합니다 **mssql_satellite** 사용자입니다.
 
@@ -232,7 +232,7 @@ Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7-호출 *getNgrams()*
+## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
 
 SQL Server에서 코드를 호출 하려면 Java 메서드를 지정 **getNgrams()** sp_execute_external_script "script" 매개 변수에서입니다. 이 메서드 호출 "패키지" 라는 클래스 파일을 패키지에 속하는 **Ngram.java**합니다.
 
@@ -240,7 +240,7 @@ SQL Server에서 코드를 호출 하려면 Java 메서드를 지정 **getNgrams
 
 + Linux에서 SQL Server Management Studio 또는 TRANSACT-SQL을 실행 하는 데 사용 되는 다른 도구에서 다음 코드를 실행 합니다. 
 
-+ Windows를 변경 **@myClassPath** N'C:\myJavaCode를\' (가정 \pkg의 부모 폴더) SQL Server Management Studio 또는 다른 도구에서 쿼리를 실행 하기 전에 합니다.
++ Windows를 변경 @myClassPath N'C:\myJavaCode를\' (가정 \pkg의 부모 폴더) SQL Server Management Studio 또는 다른 도구에서 쿼리를 실행 하기 전에 합니다.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

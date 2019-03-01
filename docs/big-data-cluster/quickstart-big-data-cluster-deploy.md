@@ -5,17 +5,17 @@ description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/17/2018
+ms.date: 02/28/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231070"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017879"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -108,7 +108,7 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -151,16 +151,16 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
 
 ### <a name="use-the-cluster-administration-portal"></a>클러스터 관리 포털 사용
 
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
+컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `endpoint-service-proxy` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
 
-IP 주소를 가져올 수는 **lb-프록시 서비스-** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
+IP 주소를 가져올 수는 **끝점 서비스 프록시** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
 
 ```bash
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.2에서 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문입니다. 또한 CTP 2.2에 나타나지 않음 마스터 SQL Server 인스턴스의 상태입니다.
+> CTP 2.3에 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다. 또한 CTP 2.3에 나타나지 않음 마스터 SQL Server 인스턴스의 상태입니다.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 

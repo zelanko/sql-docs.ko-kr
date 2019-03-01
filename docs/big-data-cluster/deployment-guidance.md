@@ -5,17 +5,17 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087862"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018009"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -84,10 +84,10 @@ kubectl config view
 
 | 환경 변수 | 필수 | 기본값 | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | 사용자 계정 컨트롤 | 해당 사항 없음 | SQL Server 사용권 계약 (예: ' Y')에 동의 합니다.  |
+| **ACCEPT_EULA** | 사용자 계정 컨트롤 | 해당 사항 없음 | SQL Server 사용권 계약 (예: 'Yes')에 동의 합니다.  |
 | **CLUSTER_NAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 빅 데이터 클러스터에 sql Server를 배포 하려면 Kubernetes 네임 스페이스의 이름입니다. |
 | **CLUSTER_PLATFORM** | 사용자 계정 컨트롤 | 해당 사항 없음 | Kubernetes 클러스터가 배포 된 플랫폼입니다. 일 수 있습니다 `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. Ctp 2.2 반환만 허용 되는 1입니다. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. Ctp 2.3 반환만 허용 되는 1입니다. |
 | **CLUSTER_DATA_POOL_REPLICAS** | 아니요 | 2 | 풀 구축 하는 복제본에서 데이터의 수입니다. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 아니요 | 2 | 저장소 풀 복제본의 수입니다. |
 | **DOCKER_REGISTRY** | 사용자 계정 컨트롤 | TBD | 클러스터를 배포 하는 데 사용 되는 이미지가 저장 된 개인 레지스트리입니다. |
@@ -189,7 +189,7 @@ Kubernetes 저장소 클래스를 사전 프로 비전 하 고 사용 하 여 �
 클러스터 만들기 API Kubernetes 네임 스페이스를 초기화 하 고 네임 스페이스에 모든 응용 프로그램 pod를 배포에 사용 됩니다. Kubernetes 클러스터에서 SQL Server 빅 데이터 클러스터를 배포 하려면 다음 명령을 실행 합니다.
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 클러스터 부트스트랩 하는 동안 클라이언트 명령 창에는 배포 상태를 출력 합니다. 배포 과정에서 컨트롤러 pod에 대 한 기다리고 있는 일련의 메시지를 표시 됩니다.
@@ -202,7 +202,7 @@ mssqlctl create cluster <your-cluster-name>
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ mssqlctl create cluster <your-cluster-name>
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> SQL Server 마스터 인스턴스와 SQL Server 빅 데이터 클러스터 IP 주소 가져오기
+## <a id="masterip"></a> 빅 데이터 클러스터 끝점 가져오기
 
-배포 스크립트를 성공적으로 완료 된 후에 아래 설명 된 단계를 사용 하 여 SQL Server 마스터 인스턴스의 IP 주소를 얻을 수 있습니다. 이 IP 주소와 포트 번호 31433를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 됩니다 (예:  **\<ip 주소\>31433,**). 마찬가지로, SQL Server의 빅 데이터에 대 한 클러스터 IP입니다. 모든 클러스터 끝점은 클러스터 관리 포털에서 서비스 끝점 탭에 나와 있습니다. 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `service-proxy-lb` (예: **https://\<ip 주소\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다.
+배포 스크립트를 성공적으로 완료 된 후에 아래 설명 된 단계를 사용 하 여 SQL Server 마스터 인스턴스의 IP 주소를 얻을 수 있습니다. 이 IP 주소와 포트 번호 31433를 사용 하 여 SQL Server 마스터 인스턴스에 연결할 됩니다 (예:  **\<ip-address-of-endpoint-master-pool\>31433,**). 마찬가지로, 빅 데이터 클러스터 (Spark HDFS/게이트웨이) IP와 연결 된 SQL Server를 연결할 수 있습니다 합니다 **끝점 보안** 서비스입니다.
 
-### <a name="aks"></a>AKS
-
-AKS를 사용 하는 경우 Azure는 Azure 부하 분산 장치 서비스를 제공 합니다. 다음 명령을 실행 합니다.
+Kubectl 명령을 빅 데이터 클러스터에 대 한 공용 끝점을 검색합니다.
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-검색할 합니다 **EXTERNAL-IP** 서비스에 할당 되는 값입니다. 그런 다음 포트 31433에서 IP 주소를 사용 하 여 SQL Server 마스터 인스턴스에 연결 (예:  **\<ip 주소\>31433,**) 및 SQL Server에 대 한 외부 IP를 사용 하는 빅 데이터 클러스터 끝점에 `service-security-lb` 서비스입니다. 
+검색할 합니다 **EXTERNAL-IP** 각 서비스에 할당 되는 값입니다.
+
+모든 클러스터 끝점에 설명 되어는 **서비스 끝점** 클러스터 관리 포털을 탭 합니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `endpoint-service-proxy` (예: **https://\<ip-address-of-endpoint-service-proxy\>: 30777/포털**). 값은 관리 포털 액세스에 대 한 자격 증명 `CONTROLLER_USERNAME` 고 `CONTROLLER_PASSWORD` 위에 제공 된 환경 변수입니다. 또한 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수 있습니다.
+
+연결 하는 방법에 대 한 자세한 내용은 참조 하세요. [Azure Data Studio를 사용 하 여 빅 데이터 클러스터를 SQL Server에 연결](connect-to-big-data-cluster.md)합니다.
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ kubectl get svc -n <your-cluster-name>
 1. 사용 하 여 이전 클러스터를 삭제 합니다 `mssqlctl delete cluster` 명령입니다.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > 버전을 사용 하 여 **mssqlctl** 일치 하는 클러스터입니다. 최신 버전을 사용 하 여 이전 클러스터를 삭제 하지 마세요 **mssqlctl**합니다.
 
 1. 이전 버전을 모두 제거 **mssqlctl**합니다.
 
@@ -270,13 +275,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux:**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ kubectl get svc -n <your-cluster-name>
    | 서비스 | Description |
    |---|---|
    | **endpoint-master-pool** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
-   | **service-security-lb**<br/>**service-security-nodeport** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
+   | **endpoint-controller** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
+   | **endpoint-service-proxy** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
+   | **endpoint-security** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
 
-   > [!NOTE]
-   > 서비스 이름은 Kubernetes 환경에 따라 달라질 수 있습니다. 서비스 이름을 사용 하 여 종료 Azure Kubernetes Service (AKS)를 배포할 때는 **-lb**합니다. 서비스 이름은 끝나야 minikube 및 kubeadm 배포용 **-nodeport**합니다.
-
-1. 사용 하 여는 [클러스터 관리 포털](cluster-admin-portal.md) 에서 배포를 모니터링 하는 **배포** 탭 합니다. 기다릴 필요가 합니다 **lb-프록시 서비스-** 서비스를 배포의 시작 부분에 사용할 수 없게 되므로이 포털에 액세스 하기 전에 시작 합니다.
+1. 사용 하 여는 [클러스터 관리 포털](cluster-admin-portal.md) 에서 배포를 모니터링 하는 **배포** 탭 합니다. 기다릴 필요가 합니다 **끝점 서비스 프록시** 서비스를 배포의 시작 부분에 사용할 수 없게 되므로이 포털에 액세스 하기 전에 시작 합니다.
 
 > [!TIP]
 > 클러스터 문제 해결에 대 한 자세한 내용은 참조 하세요. [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결에 대 한 Kubectl 명령을](cluster-troubleshooting-commands.md)합니다.

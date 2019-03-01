@@ -3,20 +3,20 @@ title: 새로운&#39;새로 만들기-s SQL Server Machine Learning 서비스
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/18/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a3450b308918e51b370865db4ad2bedeb8e004c
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 43f1f5fb9ace80da357ecca9e4abd715bd4a6048
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397622"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018049"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능 
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -29,6 +29,11 @@ ms.locfileid: "54397622"
 
 | 릴리스 | 기능 업데이트 |
 |---------|----------------|
+| CTP 2.3 | 지원 되는 새 [Java 데이터 형식](java/java-sql-datatypes.md)합니다. |
+| | Windows에만 해당에서 Java 코드에서 액세스할 수 있습니다는 외부 라이브러리를 사용 하는 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문. 동등한 기능 예정 된 CTP에는 Linux에서 제공 됩니다. 자세히 알아보기 [SQL Server에서 Java를 호출 하는 방법을](java/howto-call-java-from-sql.md)합니다. |
+| | Windows에만 해당에서 Python 코드에서 액세스할 수 있습니다는 외부 라이브러리를 사용 하는 [CREATE EXTERNAL LIBRARY (TRANSACT-SQL)](../t-sql/statements/create-external-library-transact-sql.md) 문. 동등한 기능 예정 된 CTP에는 Linux에서 제공 됩니다. |
+| CTP 2.2 | 변경 내용이 없습니다. |
+| CTP 2.1 | 변경 내용이 없습니다. |
 | CTP 2.0 | R 및 Python machine learning 위해 Linux 플랫폼 지원 합니다. 시작 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다. |
 |   | [Java 언어 확장](java/extension-java.md) Windows와 Linux 모두에서 새로운 SQL Server 2019 미리 보기로 제공에서 됩니다. 사용 권한을 할당 하 고 경로 설정 하 여 컴파일된 Java 코드 SQL Server에 사용할 수 있습니다. SQL Server 액세스를 사용 하 여 클라이언트 앱 수 데이터를 사용 하 고 호출 하 여 코드를 실행할 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), SQL Server에서 R 및 Python 통합에 사용 되는 동일한 절차입니다. | 
 |  | 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 쉽게 분할 된 데이터에서 여러 모델을 생성할 수 있도록 하는 두 개의 새 매개 변수를 소개 합니다. 이 자습서에서 자세히 알아보세요 [R에서 모델 파티션 만들기](tutorials/r-tutorial-create-models-per-partition.md)합니다. |
@@ -100,7 +105,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 ## <a name="linux-support-roadmap"></a>Linux 지원 로드맵
 
-SQL Server 2019 CTP 2.0 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R, Python 및 Java에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
+SQL Server 2019 CTP 2.3 기계 학습 데이터베이스 엔진 인스턴스를 사용 하 여 패키지를 설치할 때 R, Python 및 Java에 대 한 Linux 지원을 추가 합니다. 자세한 내용은 [설치할 SQL Server Machine Learning Services linux](../linux/sql-server-linux-setup-machine-learning.md)합니다.
 
 Linux에서 SQL Server 2017는 R 또는 Python 통합 없지만 사용할 수 있습니다 [네이티브 점수 매기기](sql-native-scoring.md) Linux에서 해당 기능을 T-SQL을 통해 사용할 수 있으므로 [PREDICT](../t-sql/queries/predict-transact-sql.md), Linux에서 실행 되는 합니다. 네이티브 점수 매기기를 호출 하거나 심지어는 R 런타임 요구 하지 않고 미리 학습 된 모델에서 점수 매기기 고성능 수 있습니다.
 

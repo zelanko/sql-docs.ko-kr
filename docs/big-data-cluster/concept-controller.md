@@ -5,17 +5,17 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241284"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017869"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 컨트롤러 란?
 
@@ -29,15 +29,15 @@ ms.locfileid: "54241284"
 - 클러스터의 상태를 관찰 하려면 모니터링 도구를 노출 합니다.
 - 검색 하 고 예기치 않은 문제를 복구 하는 문제 해결 도구를 노출 합니다.
 - 클러스터 보안 관리: 보안 클러스터 끝점을 확인, 사용자 및 역할 관리, 클러스터 간 통신에 대 한 자격 증명 구성
-- 업그레이드의 워크플로 관리 하므로 안전 하 게 구현 됩니다 (CTP 2.2에서 사용할 수 없음)
-- (CTP 2.2에서 사용할 수 없음) 클러스터의 상태 저장 서비스에 대 한 고가용성 및 DR 관리
+- 업그레이드의 워크플로 관리 하므로 안전 하 게 구현 됩니다 (CTP 2.3에서 사용할 수 없음)
+- (CTP 2.3에서 사용할 수 없음) 클러스터의 상태 저장 서비스에 대 한 고가용성 및 DR 관리
 
 ## <a name="deploying-the-controller-service"></a>컨트롤러 서비스를 배포합니다.
 
 컨트롤러를 배포 하 고 고객이 있는 빅 데이터 클러스터를 구축 하려는 동일한 Kubernetes 네임 스페이스에서 호스트 합니다. 이 서비스 관리자가 설치 하는 Kubernetes 클러스터 부트스트랩 mssqlctl 명령줄 유틸리티를 사용 하는 동안:
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 Buildout 워크플로 Kubernetes 기반으로 레이아웃에 설명 된 모든 구성 요소를 포함 하는 모든 기능을 갖춘 SQL Server 빅 데이터 클러스터를 [개요](big-data-cluster-overview.md) 문서. 먼저 부트스트랩 워크플로에서 컨트롤러 서비스를 만들고 컨트롤러 서비스를 설치 및 구성의 마스터, 계산, 데이터 및 저장소 풀의 서비스 파트의 나머지 부분을 조정 합니다이 배포 되 면 합니다.

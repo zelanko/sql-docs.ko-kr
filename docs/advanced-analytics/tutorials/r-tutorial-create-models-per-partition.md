@@ -4,18 +4,18 @@ description: 모델을 학습, SQL Server machine learning의 파티션 기반 �
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/02/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4c60a50f5a0f1c1831a4831d1f93ddf7d81a11d9
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596464"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017899"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 �
 
 + SQL Server 2019 미리 보기 데이터베이스 엔진 인스턴스, Machine Learning Services 및 R 통합 합니다.
 
-실행 하 여 버전을 확인 **`SELECT @@Version`** 쿼리 도구에서 T-SQL 쿼리로 합니다. 출력 해야 "Microsoft SQL Server (CTP 2.0)-2019 15.0.x"입니다.
+실행 하 여 버전을 확인 **`SELECT @@Version`** 쿼리 도구에서 T-SQL 쿼리로 합니다. 출력 해야 "Microsoft SQL Server (CTP 2.3)-2019 15.0.x"입니다.
 
 데이터베이스 엔진 인스턴스를 사용 하 여 현재 설치 된 모든 R 패키지의 잘못 된 목록을 반환 하 여 R 패키지의 가용성을 확인:
 

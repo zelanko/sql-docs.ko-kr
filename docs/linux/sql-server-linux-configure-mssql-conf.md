@@ -4,18 +4,18 @@ description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 10/31/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 94d5aa81e6d9da31593f03b867a1f25b5ecc85b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401898"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018079"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
@@ -74,6 +74,7 @@ ms.locfileid: "52401898"
 | [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 한계를 설정 합니다. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC 문제 해결 및 구성 합니다. |
 | [MLServices Eula](#mlservices-eula) | Mlservices 패키지에 대 한 R 및 Python Eula를 수락 합니다. SQL Server 2019 에서만 적용 됩니다.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |에 대 한 아웃 바운드 네트워크 액세스를 사용 하도록 설정 [mlservices](sql-server-linux-setup-machine-learning.md) R, Python 및 Java 확장 합니다.|
 | [TCP 포트](#tcpport) | SQL Server 연결을 수신 하는 위치는 포트를 변경 합니다. |
 | [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
 | [추적 플래그](#traceflags) | 사용 하려는 서비스는 추적 플래그를 설정 합니다. |
@@ -544,10 +545,10 @@ sudo /opt/mssql/bin/mssql-conf setup
 sudo /opt/mssql/bin/mssql-conf setup accept-eula-ml
 
 # Alternative valid syntax
-# Add R or Python to an existing installation
+# Adds the EULA section to the INI and sets acceptulam to yes
 sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 
-# Rescind EULA acceptance
+# Rescind EULA acceptance and removes the setting
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
@@ -558,7 +559,34 @@ EULA 동의 직접 추가할 수도 있습니다는 [mssql.conf 파일](#mssql-c
 accepteula = Y
 accepteulaml = Y
 ```
+:::moniker-end
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
+## <a id="mlservices-outbound-access"></a> 아웃 바운드 네트워크 액세스 사용
+
+R, Python 및 Java 확장에 대 한 아웃 바운드 네트워크 액세스는 [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) 기능은 기본적으로 비활성화 됩니다. 아웃 바운드 요청 설정 "outboundnetworkaccess" mssql 구성이 사용 하는 부울 속성입니다.
+
+속성을 설정한 후 INI 파일에서 업데이트 된 값을 읽는 SQL Server 실행 패드 서비스를 다시 시작 합니다. 다시 시작 메시지를 알려는 확장성 관련 설정 수정 될 때마다 합니다.
+
+```bash
+# Adds the extensibility section and property.
+# Sets "outboundnetworkaccess" to true.
+# This setting is required if you want to access data or operations off the server.
+sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
+
+# Turns off network access but preserves the setting
+/opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 0
+
+# Removes the setting and rescinds network access
+sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
+```
+
+"Outboundnetworkaccess"에 직접 추가할 수도 있습니다는 [mssql.conf 파일](#mssql-conf-format):
+
+```ini
+[extensibility]
+outboundnetworkaccess = 1
+```
 :::moniker-end
 
 ## <a id="tcpport"></a> TCP 포트를 변경 합니다.
@@ -653,7 +681,7 @@ sudo cat /var/opt/mssql/mssql.conf
 이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하는 참고 합니다. 다음 섹션에서는 샘플을 제공 **mssql.conf** 파일입니다.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf 형식
+## <a id="mssql-conf-format"></a> mssql.conf format
 
 다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대 한 예제를 제공 합니다. 이 형식을 사용 하 여 수동으로 변경 하는 **mssql.conf** 필요에 따라 파일입니다. 파일을 수동으로 변경한 수행 하는 경우 변경 내용을 적용 하기 전에 SQL Server를 다시 시작 해야 있습니다. 사용 하 여 **mssql.conf** 파일 Docker를 사용 하 여 Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 먼저 전체를 추가 **mssql.conf** 호스트 디렉터리에 파일을 다음 컨테이너를 실행 합니다. 이러한 예제가 [의견](sql-server-linux-customer-feedback.md)합니다.
 

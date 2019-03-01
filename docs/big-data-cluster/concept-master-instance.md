@@ -5,17 +5,17 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 778645079d2585bd86fc01c5d5e1130c564b0de5
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 67109dc6af3c03960435116c79e9f92ae79f595c
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242014"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017799"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 마스터 인스턴스란 무엇 인가요?
 
@@ -29,7 +29,7 @@ SQL Server 마스터 인스턴스는 클러스터 외부에서 액세스할 수 
 
 ## <a name="scale-out-query-management"></a>스케일 아웃 쿼리 관리
 
-SQL Server 마스터 인스턴스 노드를 SQL Server 인스턴스 간에 쿼리를 분산 하는 데 사용 되는 스케일 아웃 쿼리 엔진을 포함 합니다 [풀 계산](concept-compute-pool.md)합니다. 또한 스케일 아웃 쿼리 엔진 추가 구성 없이 클러스터의 모든 Hive 테이블에 대 한 transact-sql 액세스를 제공합니다. (Hive 테이블이 지원 되지 않음 CTP 2.2)
+SQL Server 마스터 인스턴스 노드를 SQL Server 인스턴스 간에 쿼리를 분산 하는 데 사용 되는 스케일 아웃 쿼리 엔진을 포함 합니다 [풀 계산](concept-compute-pool.md)합니다. 또한 스케일 아웃 쿼리 엔진 추가 구성 없이 클러스터의 모든 Hive 테이블에 대 한 transact-sql 액세스를 제공합니다. (Hive 지원 CTP 2.3에 없는 테이블)
 
 ## <a name="metadata-and-user-databases"></a>메타 데이터와 사용자 데이터베이스
 

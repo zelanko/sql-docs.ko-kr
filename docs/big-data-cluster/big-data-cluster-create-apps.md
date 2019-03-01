@@ -1,85 +1,110 @@
 ---
-title: 앱을 배포 하는 방법
+title: Mssqlctl를 사용 하 여 응용 프로그램 배포
 titleSuffix: SQL Server 2019 big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f37267083e0e56dd6e3c0e06c1d80ed79c0d9969
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241934"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017829"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
 이 문서에서는 배포 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 내에서 응용 프로그램으로 R 및 Python 스크립트를 관리 하는 방법을 설명 합니다.
+ 
+## <a name="whats-new-and-improved"></a>새로운 기능 및 향상 
 
-R 및 Python 응용 프로그램 배포 및 관리 합니다 **mssqlctl-pre** CTP 2.2에 포함 된 명령줄 유틸리티입니다. 이 문서에서는 명령줄에서 앱으로 이러한 R 및 Python 스크립트를 배포 하는 방법의 예제를 제공 합니다.
+- 클러스터 및 앱을 관리 하는 단일 명령줄 유틸리티입니다.
+- 사양 파일을 통해 세분화 된 제어 기능을 제공 하는 동안 앱 배포를 간소화 합니다.
+- SSIS 및 MLeap (CTP 2.3)에 새로 추가 응용 프로그램 형식 호스팅을 지원합니다
+- [VS Code 확장](app-deployment-extension.md) 응용 프로그램 배포를 관리 하려면
+
+응용 프로그램 배포 및 관리를 사용 하 여 `mssqlctl` 명령줄 유틸리티입니다. 이 문서에서는 명령줄에서 앱을 배포 하는 방법의 예제를 제공 합니다. 참조 Visual Studio Code에서이 사용 하는 방법을 알아보려면 [VS Code 확장](app-deployment-extension.md)합니다.
+
+다음과 같은 유형의 앱 지원 됩니다.
+- R 및 Python 앱 (함수, 모델 및 앱)
+- MLeap 처리
+- SSIS(SQL Server Integration Services)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-구성 된 SQL Server 2019 빅 데이터 클러스터가 있어야 합니다. 자세한 내용은 [빅 데이터에서 kubernetes 클러스터는 SQL Server를 배포 하는 방법을](deployment-guidance.md)합니다. 
-
-## <a name="installation"></a>설치
-
-합니다 **mssqlctl-pre** 명령줄 유틸리티는 미리 보기에 Python 및 R 응용 프로그램 배포 기능 제공 됩니다. 유틸리티를 설치 하려면 다음 명령을 사용 합니다.
-
-```cmd
-pip install -r https://private-repo.microsoft.com/python/ctp-2.2/mssqlctlpre/mssqlctlpre.txt --trusted-host https://private-repo.microsoft.com
-```
+- [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)
+- [mssqlctl 명령줄 유틸리티](deploy-install-mssqlctl.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-CTP 2.2의 있습니다 수 만들기, 삭제, 나열 및 R 또는 Python 응용 프로그램을 실행 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl-pre**합니다.
+SQL Server 2019 (미리 보기) CTP 2.3 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
 
-| Command | Description |
-|---|---|
-| `mssqlctl-pre login` | SQL Server 빅 데이터 클러스터에 로그인 |
-| `mssqlctl-pre app create` | 앱 만들기 |
-| `mssqlctl-pre app list` | 배포 된 앱 목록 |
-| `mssqlctl-pre app delete` | 앱 삭제 |
-| `mssqlctl-pre app run` | 실행 중인 앱 목록 |
+|Command |Description |
+|:---|:---|
+|`mssqlctl login` | SQL Server 빅 데이터 클러스터에 로그인 |
+|`mssqlctl app create` | 응용 프로그램을 만듭니다. |
+|`mssqlctl app delete` | 응용 프로그램을 삭제 합니다. |
+|`mssqlctl app describe` | 응용 프로그램에 설명 합니다. |
+|`mssqlctl app init` | Kickstart 새 응용 프로그램 구조입니다. |
+|`mssqlctl app list` | 응용 프로그램을 나열 합니다. |
+|`mssqlctl app run` | 응용 프로그램을 실행 합니다. |
+|`mssqlctl app update`| 응용 프로그램을 업데이트 합니다. |
 
 사용 하 여 도움말을 볼 수는 `--help` 다음 예제와 같이 매개 변수:
 
 ```bash
-mssqlctl-pre app create --help
+mssqlctl app create --help
 ```
 
 다음 섹션에서는 이러한 명령을 자세히 설명합니다.
 
 ## <a name="log-in"></a>로그인
 
-R 및 Python 응용 프로그램을 구성 하기 전에 먼저 사용 하 여 빅 데이터 클러스터에 SQL Server에 로그인 합니다 `mssqlctl-pre login` 명령입니다. 외부 IP 주소를 지정 합니다 `service-proxy-lb` 또는 `service-proxy-nodeport` 서비스 (예를 들어: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
-
-IP 주소를 가져올 수는 **서비스-프록시-lb** 하거나 **nodeport-프록시 서비스-** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
-
-```bash 
-kubectl get svc service-proxy-lb -n <name of your cluster>
-```
+배포 하거나 응용 프로그램과 상호 작용 하기 전에 먼저 로그인을 사용 하 여 빅 데이터 클러스터 SQL Server는 `mssqlctl login` 명령입니다. 외부 IP 주소를 지정 합니다 `endpoint-service-proxy` 서비스 (예: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
 
 ```bash
-mssqlctl-pre login -e https://<ip-address-of-service-proxy-lb>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+```
+
+## <a name="aks"></a>AKS
+
+AKS를 사용 하는 경우의 IP 주소를 가져오려면 다음 명령을 실행 하 여 `endpoint-service-proxy` bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
+
+
+```bash
+kubectl get svc endpoint-service-proxy -n <name of your cluster>
+```
+
+
+## <a name="kubeadm-or-minikube"></a>Kubeadm 하거나 Minikube
+
+클러스터에 대 한 로그인에 IP 주소를 가져오려면 Kubeadm 또는 다음 명령을 실행 하는 Minikube를 사용 중인 경우
+
+```bash
+kubectl get node --selector='node-role.kubernetes.io/master' 
 ```
 
 ## <a name="create-an-app"></a>앱 만들기
 
-Python 또는 R 코드 파일을 전달 하면 응용 프로그램을 만들려면 **mssqlctl-pre** 사용 하 여는 `app create` 명령입니다. 이러한 파일에서 앱을 만들려는 컴퓨터에 로컬로 상주 합니다.
+사용할 응용 프로그램을 만들려면 `mssqlctl` 사용 하 여는 `app create` 명령입니다. 이러한 파일에서 앱을 만들려는 컴퓨터에 로컬로 상주 합니다.
 
 빅 데이터 클러스터에 새 앱을 만들려면 다음 구문을 사용 합니다.
 
 ```bash
-mssqlctl-pre app create -n <app_name> -v <version_number> -r <runtime> -i <path_to_code_init> -c <path_to_code> --inputs <input_params> --outputs <output_params> 
+mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
 ```
 
 다음 명령은이 명령은 같습니다는 항목의 예를 보여줍니다.
+
+이라는 파일이 있다고 가정 `spec.yaml` 내에서 `addpy` 폴더입니다. `addpy` 폴더에는 `add.py` 및 `spec.yaml` 는 `spec.yaml` 은 사양 파일에 대 한는 `add.py` 앱.
+
+
+`add.py` 다음 python 앱을 만듭니다. 
 
 ```py
 #add.py
@@ -88,37 +113,56 @@ def add(x,y):
         return result;
 result=add(x,y)
 ```
-이 사용 하려면 위 코드 줄으로 로컬 디렉터리에 저장 `add.py` 아래 명령을 실행 하 고
+
+다음 스크립트는 샘플에 대 한 내용의 `spec.yaml`:
+
+```yaml
+#spec.yaml
+name: add-app #name of your python script
+version: v1  #version of the app 
+runtime: Python #the languge this app uses (R or Python)
+src: ./add.py #full path to the loction of the app
+entrypoint: add #the function that will be called upon execution
+replicas: 1  #number of replicas needed
+poolsize: 1  #the pool size that you need your app to scale
+inputs:  #input parameters that the app expects and the type
+  x: int
+  y: int
+output: #output parameter the app expects and the type
+  result: int
+```
+
+이 사용 하려면 위 코드 줄을 디렉터리에 두 개의 파일 복사 `addpy` 으로 `add.py` 및 `spec.yaml` 아래 명령을 실행 합니다.
 
 ```bash
-mssqlctl-pre app create --name add-app --version v1 --runtime Python --code ./add.py  --inputs x=int,y=int --outputs result=int 
+mssqlctl app create --spec ./addpy
 ```
 
 명령 목록을 사용 하 여 앱이 배포를 확인할 수 있습니다.
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
-배포 불완전 한 경우는 "state" 표시 "만들기" 나타나야 합니다. 
+배포 불완전 한 경우 표시 되어야 합니다 `state` 표시 `WaitingforCreate` 다음 예제와 같이: 
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Creating",
+    `state`: "WaitingforCreate",
     "version": "v1"
   }
 ]
 ```
 
-"상태"를 참조 해야 성공적으로 배포 된 후 "준비" 상태로 변경 합니다.
+배포에 성공한 후 표시 되어야 합니다 `state` 변경 `Ready` 상태:
 
 ```
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -131,19 +175,19 @@ mssqlctl-pre app list
 다음 명령은 빅 데이터 클러스터에 사용 가능한 모든 응용 프로그램을 나열합니다.
 
 ```bash
-mssqlctl-pre app list
+mssqlctl app list
 ```
 
-이름 및 버전을 지정 하면 해당 특정 앱 및 (만드는 중 또는 준비) 상태를 나열 됩니다.
+이름 및 버전을 지정 하면 해당 특정 앱 및 (만드는 중 또는 준비) 상태를 나열 합니다.
 
 ```bash
-mssqlctl-pre app list --name <app_name> --version <app_version>
+mssqlctl app list --name <app_name> --version <app_version>
 ```
 
 다음 예제에서는이 명령을 보여 줍니다.
 
 ```bash
-mssqlctl-pre app list --name add-app --version v1
+mssqlctl app list --name add-app --version v1
 ```
 
 다음 예제와 유사한 출력이 표시 됩니다.
@@ -152,7 +196,7 @@ mssqlctl-pre app list --name add-app --version v1
 [
   {
     "name": "add-app",
-    "state": "Ready",
+    `state`: `Ready`,
     "version": "v1"
   }
 ]
@@ -160,16 +204,16 @@ mssqlctl-pre app list --name add-app --version v1
 
 ## <a name="run-an-app"></a>앱 실행
 
-"준비" 상태의 앱 인 경우에 지정 된 입력된 매개 변수를 사용 하 여 실행 하 여 사용할 수 있습니다. 앱을 실행 하려면 다음 구문을 사용 합니다.
+앱의 경우는 `Ready` 상태 지정된 하는 입력된 매개 변수를 사용 하 여 실행 하 여 사용할 수 있습니다. 앱을 실행 하려면 다음 구문을 사용 합니다.
 
 ```bash
-mssqlctl-pre app run --name <app_name> --version <app_version> --inputs <inputs_params>
+mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
 다음 예제 명령은 실행된 명령을 보여 줍니다.
 
 ```bash
-mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
+mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
 실행에 성공 하면 앱을 만들 때 지정 된 출력이 표시 됩니다. 다음은 예제입니다.
@@ -187,16 +231,69 @@ mssqlctl-pre app run --name add-app --version v1 --inputs x=1,y=2
 }
 ```
 
+## <a name="create-an-app-skeleton"></a>앱 구조를 만들려면
+
+Init 명령에는 앱을 배포 하는 데 필요한 관련 아티팩트를 사용 하 여 스 캐 폴드를 제공 합니다. 아래 예제에서는 다음 명령을 실행 하면 hello를 만듭니다.
+
+```
+mssqlctl app init --name hello --version v1 --template python
+```
+
+Hello 라는 이름의 폴더를 만듭니다.  Cd를 삽입 하면의 디렉터리 폴더에 생성된 된 파일을 검사 합니다. spec.yaml 이름, 버전 및 소스 코드와 같은 앱을 정의합니다. 이름, 버전, 입력 및 출력을 변경 하려면 사양은 편집할 수 있습니다.
+
+다음은 폴더에 표시 되는 init 명령의 샘플 출력
+
+```
+hello.py
+README.md
+run-spec.yaml
+spec.yaml
+
+```
+
+## <a name="describe-an-app"></a>앱 설명
+
+Describe 명령을 클러스터의 끝점을 포함 하 여 앱에 대 한 자세한 정보를 제공 합니다. 일반적으로 swagger 클라이언트 및 웹 서비스를 사용 하 여 RESTful 방식으로 앱과 상호 작용 하는 앱을 빌드하는 앱 개발자가 사용 됩니다.
+
+```
+{
+  "input_param_defs": [
+    {
+      "name": "x",
+      "type": "int"
+    },
+    {
+      "name": "y",
+      "type": "int"
+    }
+  ],
+  "links": {
+    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+  },
+  "name": "add-app",
+  "output_param_defs": [
+    {
+      "name": "result",
+      "type": "int"
+    }
+  ],
+  `state`: `Ready`,
+  "version": "v1"
+}
+
+```
+
 ## <a name="delete-an-app"></a>앱 삭제
 
 빅 데이터 클러스터에서 앱을 삭제 하려면 다음 구문을 사용 합니다.
 
 ```bash
-mssqlctl-pre app delete --name add-app --version v1
+mssqlctl app delete --name add-app --version v1
 ```
 
 ## <a name="next-steps"></a>다음 단계
 
-추가 샘플에서 확인할 수 있습니다 [ https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)합니다. 
+추가 샘플에서 확인할 수 있습니다 [응용 프로그램 배포 샘플](https://aka.ms/sql-app-deploy)합니다.
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.
