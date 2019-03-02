@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 21e28b73019ac02c5269f1c7e1a76529f8181315
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: 3f3c66aa7ac4931c29d02525980dd3827c6d0322
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306200"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227185"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Linux에서 SQL Server 2019 미리 보기에 대 한 릴리스 정보
 
@@ -48,7 +48,8 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 
 | 릴리스               | 버전       | 릴리스 날짜 |
 |-----------------------|---------------|--------------|
-| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018 년 12 월 11   |
+| [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
+| [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
 | [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
 
@@ -63,6 +64,26 @@ SQL Server를 대상으로 하는 대부분의 기존 클라이언트 도구는 
 - [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 - [Linux에서 SQL Server 2019 미리 보기 Machine Learning Services R 및 Python 지원 설치](sql-server-linux-setup-machine-learning.md)
 - [SQL Server 에이전트를 사용 하도록 설정](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CTP23"></a> CTP 2.3 (2019 년 3 월)
+
+다음 섹션에서는 패키지 위치를 제공 하 고 릴리스의 알려진된 문제는 CTP 2.3에 대 한 키를 누릅니다. 새 기능에 대 한 자세한 내용은 SQL Server 2019에 Linux에 대 한 자세한 참조를 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)합니다.
+
+### <a name="package-details"></a>패키지 세부 정보
+
+수동 또는 오프 라인 패키지 설치의 경우 다음 표의 정보를 사용 하 여 Debian 및 RPM 패키지를 다운로드할 수 있습니다.
+
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 15.0.1300.359-1 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
+| SLES RPM 패키지 | 15.0.1300.359-1 | [mssql server 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1300.359-1.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1300.359-1.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1300.359-1.x86_64.rpm)</br>[확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1300.359-1.x86_64.rpm)</br>[Java 확장성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1300.359-1.x86_64.rpm)|
+| Ubuntu 16.04 Debian 패키지 | 15.0.1300.359-1 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1300.359-1_amd64.deb)</br>[높은 가용성의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1300.359-1_amd64.deb)</br>[전체 텍스트 검색의 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1300.359-1_amd64.deb)</br>[확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1300.359-1_amd64.deb)</br>[Java 확장성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1300.359-1_amd64.deb)|
+
+### <a name="known-issues"></a>알려진 문제
+
+#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
+
+현재, MSDTC 트랜잭션을 인증 되지 않은 것에 필요 합니다. 예를 들어, Linux의 SQL Server를 Windows에서 SQL Server에서 연결 된 서버를 사용 하거나 Windows 클라이언트 응용 프로그램을 Linux의 SQL Server에 대 한 분산된 트랜잭션을 시작 하는 데 Windows server/client MSDTC 경우 "No 옵션을 사용 하는 데 필요한 인증 필요 "입니다.
 
 ## <a id="CTP22"></a> CTP 2.2 (2018 년 12 월)
 
@@ -104,7 +125,7 @@ CTP 2.2의 알려진된 문제 릴리스 및 다음 섹션에서는 패키지 �
 
 현재, MSDTC 트랜잭션을 인증 되지 않은 것에 필요 합니다. 예를 들어, Linux의 SQL Server를 Windows에서 SQL Server에서 연결 된 서버를 사용 하거나 Windows 클라이언트 응용 프로그램을 Linux의 SQL Server에 대 한 분산된 트랜잭션을 시작 하는 데 Windows server/client MSDTC 경우 "No 옵션을 사용 하는 데 필요한 인증 필요 "입니다.
 
-## <a id="CTP20"></a> CTP 2.0 (2018 년 9 월)
+## <a id="CTP20"></a> CTP 2.0 (9 월 2018)
 
 다음 섹션에서는 패키지 위치를 제공 하 고 릴리스의 알려진된 문제는 CTP 2.0에 대 한 키를 누릅니다. 새 기능에 대 한 자세한 내용은 SQL Server 2019에 Linux에 대 한 자세한 참조를 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)합니다.
 

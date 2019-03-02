@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 87e4d1ed1bdb1ce78e2f45fcb49019175fcdfefd
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 25e762b48edb777d701a1482315150623c8c0484
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269696"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227345"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux의 환경 변수를 사용 하 여 SQL Server 설정 구성
 
@@ -49,7 +49,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어가 있습니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 최대 메모리 (MB) SQL Server에서 사용할 수 있는 설정입니다. 기본적으로 총 실제 메모리의 80%는 것입니다. |
@@ -73,7 +73,7 @@ Linux에서 SQL Server 2019 미리 보기를 구성 하려면 몇 가지 다른 
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예: ' Y')로 설정 하면 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 사용자 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어가 있습니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 최대 메모리 (MB) SQL Server에서 사용할 수 있는 설정입니다. 기본적으로 총 실제 메모리의 80%는 것입니다. |
@@ -138,13 +138,13 @@ docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<Your
 Linux/macOS에서 Docker를 실행 하는 경우 작은따옴표를 사용 하 여 다음 구문을 사용 합니다.
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID='Developer' -e MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>' -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 Windows에서 Docker를 실행 하는 경우 큰따옴표를 사용 하 여 다음 구문을 사용 합니다.
 
 ```bash
-docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
+docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
 ```
 
 ::: moniker-end

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069839"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227315"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -52,9 +52,9 @@ ms.locfileid: "54069839"
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [GDR2 CU9까지 포함](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU9까지 포함](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
@@ -358,7 +358,7 @@ sudo systemctl start mssql-server
 | &nbsp; | Filetable에서 FILESTREAM |
 | &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
 | &nbsp; | Buffer Pool Extension |
-| **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, 큐 판독기, SSIS, SSAS, SSRS |
+| **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | , |
 | &nbsp; | 로그 판독기 에이전트 |
 | &nbsp; | CDC(변경 데이터 캡처) |
@@ -382,8 +382,6 @@ sudo systemctl start mssql-server
 GA (일반 공급) 릴리스를 사용 하 여 알려진된 문제를 설명 하는 다음 섹션에서는 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] linux.
 
 #### <a name="general"></a>일반
-
-- GA로 업그레이드 릴리스의 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 이상 CTP 2.1 에서만에서 지원 됩니다. 
 
 - 호스트 이름의 길이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작거나 설치 요구 사항 15 자 여야 합니다. 
 

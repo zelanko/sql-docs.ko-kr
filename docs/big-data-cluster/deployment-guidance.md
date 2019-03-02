@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018009"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227205"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -94,20 +94,22 @@ kubectl config view
 | **DOCKER_REPOSITORY** | 사용자 계정 컨트롤 | TBD | 이미지가 저장 된 위의 레지스트리 내 개인 저장소.  것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_USERNAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 개인 저장소에 저장 됩니다 하는 경우 컨테이너 이미지에 액세스 하려면 사용자 이름입니다. 것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 위의 개인 리포지토리에 액세스 하기 위한 암호입니다. 것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다.|
-| **DOCKER_EMAIL** | 사용자 계정 컨트롤 | 해당 사항 없음 | 위의 개인 리포지토리와 연결 된 전자 메일입니다. 것 필요한 것은 제어 된 체크 인된 비공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_IMAGE_TAG** | 아니요 | 최신 | 이미지 태그를 지정 하는 데 사용 되는 레이블. |
 | **DOCKER_IMAGE_POLICY** | 아니요 | Always | 이미지 끌어오기를 항상 강제로 적용 합니다.  |
-| **DOCKER_PRIVATE_REGISTRY** | 사용자 계정 컨트롤 | 1 | 제어 된 체크 인된 공개 미리 보기 기간에 대 한이 값을 1로 설정 해야 합니다. |
+| **DOCKER_PRIVATE_REGISTRY** | 사용자 계정 컨트롤 | 해당 사항 없음 | 제어 된 체크 인된 공개 미리 보기 기간에 대 한이 값을 "1"로 설정 해야 합니다. |
 | **CONTROLLER_USERNAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 클러스터 관리자의 사용자 이름입니다. |
 | **CONTROLLER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 클러스터 관리자의 암호입니다. |
 | **KNOX_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | Knox 사용자에 대 한 암호입니다. |
 | **MSSQL_SA_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 마스터 SQL 인스턴스 SA 사용자의 암호입니다. |
 | **USE_PERSISTENT_VOLUME** | 아니요 | true | `true` Kubernetes 영구적 볼륨을 사용 하려면 pod 저장소에 대 한 클레임입니다.  `false` pod 저장소에 대 한 임시 호스트 저장소를 사용 하 합니다. 참조 된 [데이터 지 속성](concept-data-persistence.md) 을 참조 하십시오. 빅 데이터 클러스터 minikube를 SQL Server 및 USE_PERSISTENT_VOLUME를 배포 하는 경우 = true를 설정 해야 값 `STORAGE_CLASS_NAME=standard`합니다. |
 | **STORAGE_CLASS_NAME** | 아니요 | 기본 | 하는 경우 `USE_PERSISTENT_VOLUME` 는 `true` 사용할 Kubernetes 저장소 클래스의 이름을 나타냅니다. 참조 된 [데이터 지 속성](concept-data-persistence.md) 을 참조 하십시오. SQL Server minikube의 빅 데이터 클러스터를 배포 하는 경우 기본 저장소 클래스 이름이 다릅니다 및 설정 하 여 재정의 해야 `STORAGE_CLASS_NAME=standard`합니다. |
+| **CONTROLLER_PORT** | 아니요 | 30080 | 컨트롤러 서비스를 공용 네트워크에서 수신 하는 TCP/IP 포트입니다. |
 | **MASTER_SQL_PORT** | 아니요 | 31433 | 마스터 SQL 인스턴스는 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
 | **KNOX_PORT** | 아니요 | 30443 | Apache Knox 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
+| **PROXY_PORT** | 아니요 | 30777 | 공용 네트워크에서 프록시 서비스가 수신 대기 하는 TCP/IP 포트입니다. 이 포털을 계산 하는 데 포트 URL입니다. |
 | **GRAFANA_PORT** | 아니요 | 30888 | 응용 프로그램 모니터링 Grafana 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
 | **KIBANA_PORT** | 아니요 | 30999 | Kibana 로그 검색 응용 프로그램은 공용 네트워크에서 수신 대기 하는 TCP/IP 포트입니다. |
+
 
 > [!IMPORTANT]
 >1. 제한 된 비공개 미리 보기 기간에 대 한 개인 Docker 레지스트리에 대 한 자격 증명은 시 제공 해야 할 심사 하 [EAP 등록](https://aka.ms/eapsignup)합니다.
@@ -125,7 +127,7 @@ Windows 또는 Linux 클라이언트를 사용 하는 여부에 따라 다른 �
 창 (PowerShell이 아님), CMD를 사용 하 여 다음 환경 변수를 구성 합니다. 값 주위에 따옴표를 사용 하지 마세요.
 
 ```cmd
-SET ACCEPT_EULA=Y
+SET ACCEPT_EULA=yes
 SET CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
@@ -137,7 +139,6 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_EMAIL=<your Docker email, use the username provided by Microsoft>
 SET DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -146,7 +147,7 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 다음 환경 변수를 초기화 합니다. Bash에서 각 값 주위에 따옴표를 사용할 수 있습니다.
 
 ```bash
-export ACCEPT_EULA=Y
+export ACCEPT_EULA=yes
 export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
@@ -158,7 +159,6 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
-export DOCKER_EMAIL="<your Docker email, use the username provided by Microsoft>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 
@@ -271,17 +271,17 @@ kubectl get svc -n <your-cluster-name>
    > 새 버전을 설치 하지 해야 **mssqlctl** 이전 버전을 먼저 제거 하지 않고 있습니다.
 
 1. 최신 버전의 설치 **mssqlctl**합니다. 
-   
+
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
    **Linux:**
-   
+
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

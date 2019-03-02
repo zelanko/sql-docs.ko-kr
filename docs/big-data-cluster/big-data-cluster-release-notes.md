@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017949"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227215"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -41,6 +41,7 @@ ms.locfileid: "57017949"
 - [SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 VS Code 확장](app-deployment-extension.md)합니다.
 - 새 매개 변수 순서는 **mssqlctl** 도구입니다.
 - [Sparklyr을 사용 하 여 SQL Server 2019 빅 데이터 클러스터에](sparklyr-from-RStudio.md)입니다.
+- 외부 HDFS 호환 저장소를 사용 하 여 빅 데이터 클러스터에 탑재 [HDFS 계층화](hdfs-tiering.md)합니다.
 - 에 대 한 새로운 통합 된 연결 환경 합니다 [SQL Server 마스터 인스턴스와 HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md)합니다.
 - 사용 하 여 클러스터를 삭제 **mssqlctl 클러스터 삭제** 이제 빅 데이터 클러스터에 포함 된 네임 스페이스에 있는 개체만 삭제 되지만 네임 스페이스입니다. 이전에이 명령은 전체 네임 스페이스를 삭제 합니다.
 - 끝점 이름이 변경 되었으며이 릴리스에서 통합 합니다.
@@ -74,14 +75,6 @@ ms.locfileid: "57017949"
 
 - 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
 
-#### <a name="cluster-administration-portal"></a>클러스터 관리 포털
-
-클러스터 관리 포털에서 마스터 SQL Server 인스턴스에 대 한 끝점을 표시 하지 않습니다. 마스터 인스턴스에 대 한 IP 주소 및 포트를 찾으려면 다음 사용 **kubectl** 명령:
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>외부 테이블
 
 - 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - 저장소 풀 외부 테이블을 쿼리 하는 경우 오류가 발생할 수 있습니다는 동시에 기본 파일은 HDFS에 복사 되는 경우.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
 
 #### <a name="spark-and-notebooks"></a>Spark 및 notebook
 

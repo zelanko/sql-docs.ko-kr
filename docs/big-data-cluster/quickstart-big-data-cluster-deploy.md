@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28048a7d29089511eb0037bac47c3efdd543a6f2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017879"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227116"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -85,7 +85,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    | **컨트롤러 사용자** | 컨트롤러 사용자의 사용자 이름 (기본값: **관리자**). |
 
    > [!IMPORTANT]
-   > 기본값 **Standard_L4s** 모든 Azure 지역에서 인해 컴퓨터 크기를 사용할 수 있습니다. 다른 컴퓨터 크기 선택 않으면, 클러스터의 노드에서 연결할 수 있는 디스크의 총 21 보다 크거나 같은 경우 인지 확인 합니다. 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터 21 영구적 볼륨 클레임을 필요합니다. 예를 들어, 합니다 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 48 디스크를 연결할 수는 3 개의 노드가 의미 하므로 컴퓨터 크기 16 개의 연결 된 디스크를 지원 합니다.
+   > 기본값 **Standard_L4s** 모든 Azure 지역에서 인해 컴퓨터 크기를 사용할 수 있습니다. 다른 컴퓨터 크기 선택 않으면, 클러스터의 노드에서 연결할 수 있는 디스크의 총 24 보다 크거나 같은 경우 인지 확인 합니다. 클러스터의 각 영구적 볼륨 클레임에는 연결된 된 디스크에 필요합니다. 현재 빅 데이터 클러스터는 24 영구적 볼륨 클레임을 필요합니다. 예를 들어, 합니다 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) 48 디스크를 연결할 수는 3 개의 노드가 의미 하므로 컴퓨터 크기 16 개의 연결 된 디스크를 지원 합니다.
 
    > [!NOTE]
    > `sa` 계정은 설치 중에 생성 되는 SQL Server 마스터 인스턴스에서 시스템 관리자입니다. 배포를 만든 후 합니다 `MSSQL_SA_PASSWORD` 실행 하 여 환경 변수를 검색할 수 `echo $MSSQL_SA_PASSWORD` 마스터 인스턴스 컨테이너에 있습니다. 보안상의 이유로 변경에 `sa` 마스터 인스턴스 배포 후에 암호입니다. 자세한 내용은 [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.3에 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다. 또한 CTP 2.3에 나타나지 않음 마스터 SQL Server 인스턴스의 상태입니다.
+> CTP 2.3에 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 
