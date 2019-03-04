@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907cd0278119351c9bfabf2c2c64e514a7840c7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531540"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294451"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ ms.locfileid: "52531540"
 > [!NOTE]  
 >  필터링된 비클러스터형 columnstore 인덱스는 디스크 기반 테이블에서만 지원됩니다. 메모리 최적화 테이블에서는 지원되지 않습니다.  
   
-### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예제 A: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
+### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>예 1: btree 인덱스에서 핫 데이터에 액세스하고, columnstore 인덱스에서 웜 데이터에 액세스  
  이 예제에서는 필터링된 조건(accountkey > 0)을 사용하여 columnstore 인덱스에 포함할 행을 설정합니다. 자주 변경되는 “핫” 데이터는 btree 인덱스에서 액세스하고 보다 안정적인 “웜” 데이터는 columnstore 인덱스에서 액세스하도록 필터링된 조건 및 후속 쿼리를 디자인하는 것이 목적입니다.  
   
  ![웜 및 핫 데이터에 대한 결합된 인덱스](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Combined indexes for warm and hot data")  
@@ -168,7 +168,7 @@ Group By customername
   
  ![쿼리 계획](../../relational-databases/indexes/media/query-plan-columnstore.png "Query plan")  
   
-  [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+ [필터링된 비클러스터형 columnstore 인덱스](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>성능 팁 2: 분석을 Always On 읽기 가능한 보조로 오프로드  
  필터링된 columnstore 인덱스를 사용하여 columnstore 인덱스 유지 관리를 최소화할 수 있지만 분석 쿼리에는 여전히 운영 워크로드 성능에 영향을 주는 많은 컴퓨팅 리소스(CPU, IO, 메모리)가 필요할 수 있습니다. 업무에 중요한 워크로드에는 대부분 Always On 구성을 사용하는 것이 좋습니다. 이 구성에서는 분석 실행을 읽기 가능한 보조로 오프로드하여 그 영향을 제거할 수 있습니다.  
@@ -196,14 +196,14 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
-  [압축 지연](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
+ [압축 지연](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)에 대한 자세한 내용은 블로그를 참조하세요.  
   
  권장 모범 사례는 다음과 같습니다.  
   
 -   **삽입/쿼리 워크로드:** 워크로드가 주로 데이터를 삽입하고 쿼리하는 경우 기본 COMPRESSION_DELAY(0)가 권장되는 옵션입니다. 100만 개의 행이 단일 델타 행 그룹에 삽입되면 새로 삽입된 행이 압축됩니다.  
     이러한 워크로드의 예로는 (a) 기존 DW 워크로드 (b) 웹 애플리케이션에서 클릭 패턴을 분석해야 하는 경우의 클릭 스트림 분석 등이 있습니다.  
   
--   **OLTP 워크로드:** 워크로드가 DMV에 집중된 경우(즉, 주로 업데이트, 삭제 및 삽입 수행) DMV sys를 검사하면 columnstore 인덱스 조각화를 볼 수 있습니다. dm_db_column_store_row_group_physical_stats. 최근에 압축된 행 그룹에서 삭제된 것으로 표시된 행 수가 10%를 초과하는 경우 COMPRESSION_DELAY 옵션을 사용하여 행이 압축에 적합하게 될 때 시간 지연을 추가할 수 있습니다. 예를 들어 워크로드에 대해 새로 삽입된 행이 60분 동안 '핫' 상태로 유지되는 경우(즉, 여러 번 업데이트되는 경우) COMPRESSION_DELAY가 60이 되도록 선택해야 합니다.  
+-   **OLTP 워크로드:** 워크로드가 DML에 집중된 경우(즉, 주로 업데이트, 삭제 및 삽입 수행) DMV sys를 검사하면 columnstore 인덱스 조각화를 볼 수 있습니다. dm_db_column_store_row_group_physical_stats. 최근에 압축된 행 그룹에서 삭제된 것으로 표시된 행 수가 10%를 초과하는 경우 COMPRESSION_DELAY 옵션을 사용하여 행이 압축에 적합하게 될 때 시간 지연을 추가할 수 있습니다. 예를 들어 워크로드에 대해 새로 삽입된 행이 60분 동안 '핫' 상태로 유지되는 경우(즉, 여러 번 업데이트되는 경우) COMPRESSION_DELAY가 60이 되도록 선택해야 합니다.  
   
  대부분의 고객은 아무 작업도 수행하지 않아도 됩니다. COMPRESSION_DELAY 옵션의 기본값이 적용됩니다.  
 고급 사용자의 경우 아래 쿼리를 실행하여 지난 7일 동안 삭제된 행의 비율(%)을 수집하는 것이 좋습니다.  

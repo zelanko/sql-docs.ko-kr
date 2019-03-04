@@ -27,19 +27,16 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 34ab5673d0e74de637f0de22153b9f90cd6a407d
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407653"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802887"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 데이터 파일을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 지정한 형식으로 데이터베이스 테이블이나 뷰로 가져옵니다.  
 

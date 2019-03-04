@@ -25,18 +25,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84d93cc811e48d6de6b2f06ac8c30f2f10b7219d
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 0455bd8f5655a25aa55978dcfaa2dc3c3c14fabd
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265329"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802078"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 `PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식의 한 열에 포함된 여러 고유 값을 출력에서 여러 열로 변환하여 테이블 반환 식을 회전하고 최종 출력에서 남은 열 값 중 원하는 값에 대해 필요에 따라 집계를 실행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 작업을 수행합니다.  
   

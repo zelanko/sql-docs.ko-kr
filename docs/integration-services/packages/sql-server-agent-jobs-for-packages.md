@@ -16,12 +16,12 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a2468c9c129c1c2e06101d7d7d1ec44c712f9bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d46d2a2fb807174b4302aeb8996d1801768c6179
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400706"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231140"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 실행을 자동화하고 예약할 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템에 저장된 패키지를 예약할 수 있습니다.  
@@ -60,14 +60,14 @@ ms.locfileid: "52400706"
   
  자세한 내용은 [SQL Server 에이전트를 사용하여 패키지 예약](#schedule)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN Library의 비디오 홈 페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행하는 방법을 보여 주는 비디오는 MSDN 라이브러리의 비디오 홈페이지에서 [방법: SQL Server 에이전트를 사용하여 패키지 실행 자동화(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141771)를 참조하세요.  
   
 ##  <a name="trouble"></a> 문제 해결  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 커맨드 라인에서 패키지가 성공적으로 실행되더라도 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에이전트 작업 단계를 시작하지 못할 수 있습니다. 이 문제에 대한 몇 가지 일반적인 이유와 권장 솔루션이 있습니다. 자세한 내용은 다음 리소스를 참조하십시오.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 - [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)  
   
--   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772)  
+-   MSDN Library의 비디오 - [문제 해결: SQL Server 에이전트를 사용하여 패키지 실행(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=141772).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 패키지를 시작한 후에 패키지 실행이 실패하거나 패키지가 성공적으로 실행되더라도 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결하려면 다음 도구를 사용합니다.  
   
@@ -120,11 +120,18 @@ ms.locfileid: "52400706"
   
 7.  **다음 계정으로 실행** 목록에서 **SQL Server 에이전트 서비스 계정** 을 선택하거나 작업 단계에 사용될 자격 증명이 있는 프록시 계정을 선택합니다. 프록시 계정을 만드는 방법은 [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조하십시오.  
   
-     **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참고하십시오.  
+     **SQL Server 에이전트 서비스 계정** 대신 프록시 계정을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 패키지를 실행할 때 발생할 수 있는 일반적인 문제를 해결할 수 있습니다. 이들 문제에 대한 자세한 정보는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서 [SQL Server 에이전트 작업 단계에서 SSIS 패키지를 호출할 때 SSIS 패키지가 실행되지 않는다](https://support.microsoft.com/kb/918760)를 참고하십시오. 
+     
+  7.1 프록시를 사용하여 작업을 성공적으로 실행하려면 다음 보안 항목을 배치해야 합니다.
+
+      프록시에서 사용되는 자격 증명 로그인, SQL Server 에이전트를 실행하는 계정 및 SQL Server 서비스를 실행하는 계정에는 다음 권한이 필요합니다. 로컬 보안 정책 특성: %SYSTEMROOT%\Temp에 대한 프로세스 수준 토큰 제어 바꾸기 
+
+보안 항목을 넣지 못하면 작업이 실패하고 다음과 비슷한 오류 메시지가 나타납니다. 작업이 실패했습니다.  클라이언트에 필수 권한이 없습니다.
+     
   
-    > **참고:** 프록시 계정에 사용하는 자격 증명의 암호가 변경되면 자격 증명 암호를 업데이트해야 합니다. 그렇지 않으면 작업 단계가 실패합니다.  
+    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
   
-     SQL Server 에이전트 서비스 계정을 구성하는 방법에 대한 자세한 내용은 [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472)을 참조하세요.  
+     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
   
 8.  **패키지 원본** 목록 상자에서 패키지의 원본을 클릭하고 작업 단계의 옵션을 구성합니다.  
   
@@ -134,23 +141,23 @@ ms.locfileid: "52400706"
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
-    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.|  
+    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.|  
     |**파일 시스템**|컴퓨터의 임의 폴더에 저장된 패키지입니다.|  
   
      **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  
   
-    > **중요:** 패키지가 암호로 보호된 경우 **새 작업 단계** 대화 상자의 **일반** 페이지에 있는 탭( **패키지** 탭 제외)을 클릭하면 표시되는 **패키지 암호** 대화 상자에 암호를 입력해야 합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 패키지 실행에 실패합니다.  
+    > **중요:** 패키지가 암호로 보호된 경우 **새 작업 단계** 대화 상자의 **일반** 페이지에 있는 ( **패키지** 탭을 제외한) 탭을 클릭하면 표시되는 **패키지 암호** 대화 상자에 암호를 입력해야 합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 패키지 실행에 실패합니다.  
   
      **패키지 원본**: SSIS 카탈로그  
   
-    |탭|Options|  
+    |탭|옵션|  
     |---------|-------------|  
     |**패키지**|**Server**<br /><br /> SSISDB 카탈로그를 호스팅하는 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.<br /><br /> **SSIS 카탈로그** 가 패키지 원본이면 Microsoft Windows 사용자 계정을 사용하여 서버에 로그온할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용할 수 없습니다.|  
     ||**패키지**<br /><br /> 줄임표 단추를 클릭하고 패키지를 선택합니다.<br /><br /> **개체 탐색기** 에서 **Integration Services 카탈로그**노드의 하위 폴더에 있는 패키지를 선택합니다.|  
     |**매개 변수**<br /><br /> **구성** 탭에 위치합니다.|**Integration Services 프로젝트 변환 마법사** 를 사용하면 매개 변수로 패키지 구성을 바꿀 수 있습니다.<br /><br /> **매개 변수** 탭은 패키지를 디자인할 때 추가한 매개 변수를 표시합니다. 이때 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하는 것도 방법이 될 수 있습니다. 탭은 패키지 배포 모델에서 프로젝트 배포 모델로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 변환할 때 패키지에 추가된 매개 변수도 표시합니다. 패키지에 포함된 매개 변수의 새 값을 입력합니다. 리터럴 값을 입력하거나 이미 매개 변수에 매핑한 서버 환경 변수에 포함된 값을 사용할 수 있습니다.<br /><br /> 리터럴 값을 입력하려면 매개 변수 옆에 있는 줄임표 단추를 클릭합니다. **실행할 리터럴 값 편집** 대화 상자가 나타납니다.<br /><br /> 환경 변수를 사용하려면 **환경** 을 클릭한 다음 사용하려는 변수를 포함하는 환경을 선택합니다.<br /><br /> **\*\* 중요 \*\*** 여러 환경에 포함된 변수에 여러 매개 변수 및/또는 연결 관리자 속성을 매핑하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 오류 메시지를 표시합니다. 지정된 실행의 경우 패키지는 단일 서버 환경에 포함된 값만으로 실행할 수 있습니다.<br /><br /> 서버 환경을 만들고 매개 변수에 변수를 매핑하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.|  
     |**연결 관리자**<br /><br /> **구성** 탭에 위치합니다.|연결 관리자 속성의 값을 변경합니다. 예를 들어 서버 이름을 변경할 수 있습니다. 연결 관리자 속성에 대한 매개 변수가 SSIS 서버에 자동으로 생성됩니다. 속성 값을 변경하려면 리터럴 값을 입력하거나 이미 연결 관리자 속성에 매핑한 서버 환경 변수에 포함된 값을 사용할 수 있습니다.<br /><br /> 리터럴 값을 입력하려면 매개 변수 옆에 있는 줄임표 단추를 클릭합니다. **실행할 리터럴 값 편집** 대화 상자가 나타납니다.<br /><br /> 환경 변수를 사용하려면 **환경** 을 클릭한 다음 사용하려는 변수를 포함하는 환경을 선택합니다.<br /><br /> **\*\* 중요 \*\*** 여러 환경에 포함된 변수에 여러 매개 변수 및/또는 연결 관리자 속성을 매핑하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 오류 메시지를 표시합니다. 지정된 실행의 경우 패키지는 단일 서버 환경에 포함된 값만으로 실행할 수 있습니다.<br /><br /> 서버 환경을 만들고 연결 관리자 속성에 변수를 매핑하는 방법에 대한 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.|  
     |**고급**<br /><br /> **구성** 탭에 위치합니다.|패키지 실행에 대해 다음과 같은 추가 설정을 구성합니다.|  
-    ||**속성 재정의**:<br /><br /> 패키지 속성에 대한 새 값을 입력하고, 속성 경로를 지정하고, 속성 값이 중요한지 여부를 나타내려면 **추가** 를 클릭합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 중요한 데이터를 암호화합니다. 속성에 대한 설정을 편집하거나 제거하려면 **속성** 재정의 상자의 행을 클릭한 다음 **편집** 이나 **제거**를 클릭합니다. 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.<br /><br /> <br /><br /> 참고: **속성 재정의** 옵션은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 이전 릴리스에서 업그레이드된 구성을 포함하는 패키지용입니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 를 사용하여 만들고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지는 구성 대신 매개 변수를 사용합니다.|  
+    ||**속성 재정의**:<br /><br /> 패키지 속성에 대한 새 값을 입력하고, 속성 경로를 지정하고, 속성 값이 중요한지 여부를 나타내려면 **추가** 를 클릭합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 중요한 데이터를 암호화합니다. 속성에 대한 설정을 편집하거나 제거하려면 **속성** 재정의 상자의 행을 클릭한 다음 **편집** 이나 **제거**를 클릭합니다. 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.<br /><br /> <br /><br /> 참고: **속성 재정의** 옵션은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 이전 릴리스에서 업그레이드된 구성을 포함하는 패키지를 위한 것입니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 를 사용하여 만들고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지는 구성 대신 매개 변수를 사용합니다.|  
     ||**로깅 수준**<br /><br /> 패키지 실행에 대해 다음 로깅 수준 중 하나를 선택합니다. **성능** 또는 **자세한 정보** 로깅 수준을 선택하면 패키지 실행 성능에 영향을 줄 수 있습니다.<br /><br /> **없음**:<br />                          로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.<br /><br /> **기본**:<br />                          사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 로깅 수준의 기본값입니다.<br /><br /> **성능**:<br />                          성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **자세한 정보**:<br />                          사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 선택한 로깅 수준은 SSISDB 보기 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 보고서에 표시될 정보를 결정합니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.|  
     ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 파일을 저장합니다.|  
     ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
@@ -159,7 +166,7 @@ ms.locfileid: "52400706"
   
      패키지에 설정하는 대부분의 옵션이 SQL Server, SSIS 패키지 저장소 또는 파일 시스템에 저장되며 **dtexec** 명령 프롬프트 유틸리티의 명령줄 옵션에 해당합니다. 유틸리티와 명령줄 옵션에 대한 자세한 내용은 [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)를 참조하세요.  
   
-    |탭|Options|  
+    |탭|옵션|  
     |---------|-------------|  
     |**패키지**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지의 탭 옵션입니다.|**Server**<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 데이터베이스 서버 인스턴스의 이름을 입력하거나 선택합니다.|  
     ||**Windows 인증 사용**<br /><br /> Microsoft Windows 사용자 계정으로 서버에 로그온하려면 이 옵션을 선택합니다.|  

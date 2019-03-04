@@ -2,7 +2,7 @@
 title: BufferWithTolerance(지리 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sqll
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -18,12 +18,12 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01eccfab960c7ed6ac2d207c7768f2ea7ae24696
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 9d82d7a24c032be93ebdd4d9cef1239f3d1b511b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154678"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662717"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

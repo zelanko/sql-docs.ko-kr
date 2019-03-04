@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 18b8bd5627207f13e5f6b1b9781ae5988f5a9d2c
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231080"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464789"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
     ( 
       { column_name <data_type>  [ <column_options> ] } [ ,...n ]   
     )  
-    [ WITH [ <table_option> [ ,...n ] ) ]  
+    [ WITH ( <table_option> [ ,...n ] ) ]  
 [;]  
    
 <column_options> ::=
