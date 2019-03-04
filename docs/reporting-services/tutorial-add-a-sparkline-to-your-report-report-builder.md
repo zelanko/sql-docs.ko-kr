@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711145"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298611"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
 
@@ -32,15 +32,15 @@ ms.locfileid: "52711145"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기** > **다음**을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기** > **다음**을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
     > [!NOTE]  
     > 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
@@ -154,7 +154,7 @@ ms.locfileid: "52711145"
   
 14. 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 3개와 행 3개가 있습니다.  
   
-    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 한 개의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 한 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+    그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **Product**라는 하나의 행 그룹이 표시됩니다. 열 그룹 창에는 **SalesDate**라는 하나의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

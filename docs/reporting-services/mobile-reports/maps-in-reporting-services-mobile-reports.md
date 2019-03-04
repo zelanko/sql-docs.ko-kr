@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810993"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294781"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서의 지도
 지도는 지리 데이터를 시각화하는 유용한 방법입니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 은(는) 다양한 유형의 지도 시각화를 제공하며, 대륙 및 많은 국가의 지도를 기본으로 제공합니다. [사용자 지정 지도를 업로드하여 사용](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)할 수도 있습니다.   
@@ -58,14 +58,14 @@ SQL Server 모바일 보고서는 다양한 상황에 유용한 세 가지 다�
   
 2. **데이터 추가**를 선택한 후 **로컬 Excel** 또는 **SSRS 서버**중 하나를 선택합니다.  
   
-   > **팁**: 데이터는 [모바일 보고서에 적합한 형식](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)이어야 합니다.  
+   > **팁**: [데이터는 모바일 보고서에 적합한 형식](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)이어야 합니다.  
   
 3. 원하는 워크시트를 선택하고 **가져오기**를 선택합니다.  
    [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]에 데이터가 표시됩니다.  
   
 4. **데이터** 뷰 > **데이터 속성** 패널 > **Keys**(키)의 왼쪽 상자에서 지도 데이터를 포함하는 테이블을 선택하고 오른쪽 상자에서 지도의 영역과 일치하는 키 필드를 선택합니다.  
   
-5. **값** 아래 왼쪽 상자에 동일한 테이블이 있습니다. 지도에 값을 표시할 숫자 필드를 선택합니다.   
+5. **값**아래 왼쪽 상자에 동일한 테이블이 있습니다. 지도에 값을 표시할 숫자 필드를 선택합니다.   
   
 6. 범위 중지 열 지도의 경우 **Targets** (대상) 상자의 왼쪽 상자에 같은 테이블이 있습니다. 오른쪽 상자에서 대상으로 사용할 값의 숫자 필드를 선택합니다.   
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791755"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291421"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
 이 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 자습서에서는 필터링된 보고서 출력을 생성하고 파일 공유에 저장하기 위해 데이터 기반 구독을 만드는 간단한 예제를 단계별로 안내하여 데이터 기반 구독의 개념을 설명합니다. 
@@ -29,24 +29,25 @@ ms.locfileid: "52791755"
 + 다양한 형식(예: .xlsx 및 .pdf)의 보고서 생성을 자동화합니다.  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
- 이 자습서는 다음 3개의 단원으로 이루어져 있습니다.  
- 단원 | 주석
- ------- | --------------
- [1단원: 샘플 구독자 데이터베이스 만들기](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 이 단원에서는 필터링 및 출력 파일 형식에 사용할 주문 번호 정보 등의 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블을 만듭니다.
-[2단원: 보고서 데이터 원본 속성 구성](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |이 단원에서는 보고서가 일정에 따라 무인 모드로 실행되도록 보고서 데이터 원본을 구성합니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 세트를 수정합니다. 이 매개 변수는 주문 번호에 따라 보고서 데이터를 필터링하는 데 사용됩니다.
- [3단원: 데이터 기반 구독 정의](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 이 단원에서는 데이터 기반 구독을 만듭니다. 데이터 기반 구독 마법사의 각 페이지를 안내합니다.
+이 자습서는 다음 3개의 단원으로 이루어져 있습니다.  
 
- 다음 다이어그램은 자습서의 기본 워크플로를 보여 줍니다.
+| 단원 | 주석 |
+| ------ | -------- |
+| [1단원: 샘플 구독자 데이터베이스 만들기](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | 이 단원에서는 필터링 및 출력 파일 형식에 사용할 주문 번호 정보 등의 구독자 정보가 있는 로컬 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 테이블을 만듭니다. |
+| [2단원: 보고서 데이터 원본 속성 구성](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | 이 단원에서는 보고서가 일정에 따라 무인 모드로 실행되도록 보고서 데이터 원본을 구성합니다. 무인 처리를 위해서는 저장된 자격 증명이 필요합니다. 또한 구독자 데이터로 공급되는 매개 변수를 포함하도록 보고서 데이터 세트를 수정합니다. 이 매개 변수는 주문 번호에 따라 보고서 데이터를 필터링하는 데 사용됩니다. |
+| [3단원: 데이터 기반 구독 정의](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | 이 단원에서는 데이터 기반 구독을 만듭니다. 데이터 기반 구독 마법사의 각 페이지를 안내합니다. |
 
-단계  |설명 
----------|---------
-(1)     |  구독 구성에는 원본 보고서, 일정 및 구독자 데이터베이스에 대한 필드 매핑이 표시됩니다.        
-(2)     | OrderInfo 테이블에는 필터링에 사용할 4개의 주문 번호(파일당 1개씩)가 포함되어 있습니다. 또한 테이블에는 생성된 보고서의 파일 형식이 있습니다.
-(3)     | Adventureworks 데이터베이스의 정보가 필터링되어 보고서에 반환됩니다. 
-(4)     | Orderinfo 테이블에 지정된 파일 형식으로 보고서가 생성됩니다.
+다음 다이어그램은 자습서의 기본 워크플로를 보여 줍니다.
 
- 
- 
+| 단계    | 설명 |
+| --------|------------ |
+| (1)     | 구독 구성에는 원본 보고서, 일정 및 구독자 데이터베이스에 대한 필드 매핑이 표시됩니다. |
+| (2)     | OrderInfo 테이블에는 필터링에 사용할 4개의 주문 번호(파일당 1개씩)가 포함되어 있습니다. 또한 테이블에는 생성된 보고서의 파일 형식이 있습니다. |
+| (3)     | Adventureworks 데이터베이스의 정보가 필터링되어 보고서에 반환됩니다. |
+| (4)     | Orderinfo 테이블에 지정된 파일 형식으로 보고서가 생성됩니다. |
+
+
+
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## <a name="requirements"></a>요구 사항  

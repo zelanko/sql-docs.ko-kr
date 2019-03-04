@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d44a8e0a-10cf-4502-9391-09743ffc9bad
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b8449916f31f8f4c5acec783d289d70c10fe738
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d1c11541a449299f1dce55e720c7d882b3a70089
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621191"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294481"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   보고서 매개 변수를 사용하면 보고서 데이터를 선택하고, 관련된 보고서를 서로 연결하고, 다양하게 보고서를 표현할 수 있습니다. 기본값 및 사용 가능한 값 목록을 제공할 수 있으며 사용자는 선택 항목을 변경할 수 있습니다.  
   
  보고서를 게시한 후에는 보고서 서버에서 보고서 매개 변수의 기본값, 사용 가능한 값 및 기타 속성을 변경할 수 있습니다. 링크된 보고서를 만들어 여러 기본 매개 변수 값 집합을 제공할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
- 이 문서에서는 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지를 매긴 보고서 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에 보고서 매개 변수를 추가하는 방법에 대해 설명합니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 모바일 보고서에 보고서 매개 변수를 추가할 수도 있습니다. 자세한 내용은 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 을 참조하세요.  
+ 이 문서는 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 의 페이지를 매긴 보고서 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에 보고서 매개 변수를 추가하는 방법에 대해 설명합니다. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 모바일 보고서에 보고서 매개 변수를 추가할 수도 있습니다. 자세한 내용은 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,7 +64,7 @@ ms.locfileid: "47621191"
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [보고서에 다중 값 매개 변수 추가](../../reporting-services/report-design/add-a-multi-value-parameter-to-a-report.md)  
   

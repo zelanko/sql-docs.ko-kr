@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs
 description: SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207316"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319264"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 데이터베이스의 적응 쿼리 처리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 쿼리 성능을 향상시키는 데 사용할 수 있는 다음과 같은 적응 쿼리 처리 기능을 소개합니다.
 - 일괄 처리 모드 메모리 부여 피드백
+- 행 모드 메모리 부여 피드백(데이터베이스 호환성 수준 150 미만 공개 미리 보기)
 - 일괄 처리 모드 적응 조인
 - 인터리브 실행
 
@@ -36,8 +37,6 @@ ms.locfileid: "53207316"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리 처리 및 실행 모드에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.
 
 쿼리 최적화 프로그램에서 선택된 계획이 여러 가지 이유로 적합하지 않은 경우도 있습니다. 예를 들어 쿼리 계획을 통해 이동하는 예상 행 수가 잘못되었을 수 있습니다. 예상 비용은 실행에 이용하도록 선택되는 계획을 결정하는 데 도움이 됩니다. 카디널리티 예상치가 잘못된 경우 원래 추정이 부실해도 원래 계획이 사용됩니다.
-
-![적응 쿼리 처리 기능](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>적응 쿼리 처리를 사용하도록 설정하는 방법
 데이터베이스에 대해 호환성 수준 140을 사용하도록 설정하여 워크로드가 적응 쿼리 처리에 자동으로 적합하도록 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="see-also"></a>참고 항목
+[SQL 데이터베이스의 지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)   
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

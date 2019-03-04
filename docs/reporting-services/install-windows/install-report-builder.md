@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 552a6883f1d17b54e5163368bdce6d426907e0ba
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396836"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298481"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]는 사용자나 관리자가 컴퓨터에 설치하는 독립 실행형 앱입니다. 이 응용 프로그램은 Microsoft 다운로드 센터, [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 설치할 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52396836"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>명령줄에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 
 
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR 및 REPORTSERVERURL을 사용할 수 있습니다. RBINSTALLDIR은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 서버에 보고서를 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR과 REPORTSERVERURL입니다. RBINSTALLDIR은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 에서 서버에 보고서를 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
   
  사용자 인터페이스의 상호 작용이 필요 없는 완전 자동 설치를 수행하려면 **/quiet** 옵션을 지정합니다. 기본적으로 quiet 옵션 플래그를 사용하면 설치 오류가 표시되지 않습니다. 따라서 quite 옵션을 사용할 때는 로깅을 지정하는 **/l** 옵션을 함께 사용하는 것이 좋습니다.   
   
@@ -85,7 +85,7 @@ ms.locfileid: "52396836"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치 시에만 적용 가능한 두 가지 옵션은 BINSTALLDIR 및 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
+     [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 설치에만 해당하는 두 가지 옵션은 RBINSTALLDIR과 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

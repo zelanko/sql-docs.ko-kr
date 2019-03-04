@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 91138ef8-ddb4-4ac5-a1e4-fa4cf1c58dcc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b6131f6bce9cb6d1c87a4a75215a906b6d097c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9931244c938723665dffa24ac83b812cc3e4d237
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765231"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289661"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 데이터 모델은 간단 합니다. 데이터는 데이터 세트의 컬렉션으로 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]로 가져옵니다. 데이터 세트 간의 형식 관계는 필요하지 않습니다. 데이터 세트 간의 조회는 키 값이 일치하는 한 작동합니다. 날짜/시간 집계는 모바일 보고서 런타임을 통해 처리되며 데이터 세트 간에 날짜/시간 데이터 세분성이 달라도 데이터 세트 간의 집계 일치 여부를 확인합니다.   
@@ -22,7 +22,7 @@ ms.locfileid: "47765231"
   
 * **로컬 Excel 파일**: Excel 문서를 선택하고 가져올 워크시트를 선택합니다. 가져온 데이터는 모바일 보고서 정의 내에 저장됩니다. 원본 Excel 파일에서 데이터를 새로 고치려면 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **데이터** 탭 오른쪽 위에 있는 **데이터 새로 고침** 명령을 사용합니다. [SSRS 모바일 보고서용으로 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)에 대해 자세히 확인해 보세요.  
   
-* **SQL Server 모바일 보고서 게시자 공유 데이터 집합**: 서버에 게시된 데이터 집합 목록을 검색하여 모바일 보고서에 추가할 데이터 집합을 선택합니다. 서버 데이터를 기반으로 하는 모바일 보고서는 항상 원본 서버 데이터 세트에 연결된 상태로 유지되며 서버 데이터의 최신 상태를 반영합니다. [지원되는 데이터 원본 목록](../report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.   
+* **SQL Server 모바일 보고서 게시자 공유 데이터 세트**: 서버에 게시된 데이터 세트 목록을 검색하여 모바일 보고서에 추가할 데이터 세트를 선택합니다. 서버 데이터를 기반으로 하는 모바일 보고서는 항상 원본 서버 데이터 세트에 연결된 상태로 유지되며 서버 데이터의 최신 상태를 반영합니다. [지원되는 데이터 원본 목록](../report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.   
   
   자세한 내용은 [모바일 보고서 게시자의 공유 데이터 세트에서 데이터 가져오기](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)를 참조하세요.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47765231"
 ### <a name="see-also"></a>관련 항목:  
 -  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-- [Get data from shared datasets](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
+- [공유 데이터 세트에서 데이터 가져오기](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md)
 - [모바일 보고서에서 Analysis Services 데이터에 대한 날짜 형식 지정 유지](../../reporting-services/mobile-reports/retain-date-formatting-for-analysis-services-in-mobile-reports.md) 
   
   

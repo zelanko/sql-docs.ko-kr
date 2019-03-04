@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4899a8727ff16212372593ba774d10113a532b05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfbfcb3b37fe9f2ab9b12beff61d60fd0e509892
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783481"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291643"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>중첩된 데이터 영역(보고서 작성기 및 SSRS)
   일반적으로 데이터 요약을 간결하게 표시하거나 데이터를 테이블이나 행렬 이외에 시각적인 방식으로도 표시하려는 경우 차트와 같은 한 데이터 영역을 행렬과 같은 다른 데이터 영역에 중첩할 수 있습니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "47783481"
   
  아래에서는 다음 테이블릭스 영역의 셀에 대한 범위를 설명합니다.  
   
--   **테이블릭스 모퉁이** 해당 범위는 데이터 집합 및 외부 테이블릭스에 필터와 정렬 식이 적용된 후 테이블릭스 데이터 영역에 연결된 데이터 영역의 데이터입니다.  
+-   **테이블릭스 모퉁이** 해당 범위는 데이터 세트 및 외부 테이블릭스에 필터와 정렬 식이 적용된 후 테이블릭스 데이터 영역에 연결된 데이터 영역의 데이터입니다.  
   
--   **테이블릭스 열 그룹** 데이터 집합, 외부 테이블릭스 및 열 그룹에 필터 및 정렬 식이 적용된 후 가장 안쪽 열 그룹의 데이터입니다.  
+-   **테이블릭스 열 그룹** 데이터 세트, 외부 테이블릭스 및 열 그룹에 필터 및 정렬 식이 적용된 후 가장 안쪽 열 그룹의 데이터입니다.  
   
--   **테이블릭스 행 그룹** 데이터 집합, 외부 테이블릭스 및 행 그룹에 필터 및 정렬 식이 적용된 후 가장 안쪽 행 그룹의 데이터입니다.  
+-   **테이블릭스 행 그룹** 데이터 세트, 외부 테이블릭스 및 행 그룹에 필터 및 정렬 식이 적용된 후 가장 안쪽 행 그룹의 데이터입니다.  
   
--   **테이블릭스 본문** 데이터 집합, 외부 테이블릭스 및 행과 열 그룹에 필터 및 정렬 식이 적용된 후 행 그룹과 열 그룹의 교차로 표현되는 가장 안쪽 그룹의 데이터입니다.  
+-   **테이블릭스 본문** 데이터 세트, 외부 테이블릭스 및 행과 열 그룹에 필터 및 정렬 식이 적용된 후 행 그룹과 열 그룹의 교차로 표현되는 가장 안쪽 그룹의 데이터입니다.  
   
  자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   

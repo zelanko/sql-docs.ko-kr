@@ -1,7 +1,7 @@
 ---
 title: 클러스터형 및 비클러스터형 인덱스 소개 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299270"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265220"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299270"
  다른 유형의 특수 목적 인덱스에 대한 자세한 내용은 [Indexes](../../relational-databases/indexes/indexes.md) 를 참조하십시오.  
   
 ## <a name="indexes-and-constraints"></a>인덱스 및 제약 조건  
- 테이블 열에 PRIMARY KEY 및 UNIQUE 제약 조건을 정의하면 인덱스가 자동으로 생성됩니다. 예를 들어 테이블을 만들고 특정 열을 기본 키로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 자동으로 해당 열에 대한 인덱스와 PRIMARY KEY 제약 조건이 생성됩니다. 자세한 내용은 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) 및 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)를 참조하세요.  
+
+테이블 열에 PRIMARY KEY 및 UNIQUE 제약 조건을 정의하면 인덱스가 자동으로 생성됩니다. 예를 들어 사용자가 UNIQUE 제약 조건이 있는 테이블을 만들면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 자동으로 비클러스터형 인덱스를 만듭니다. PRIMARY KEY를 구성하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 자동으로 클러스터형 인덱스를 만듭니다(클러스터형 인덱스가 없는 경우). 기존 테이블에 PRIMARY KEY 제약 조건을 적용하려 하거나 해당 테이블에 클러스터형 인덱스가 이미 있으면 SQL Server는 비클러스터형 인덱스를 사용하여 기본 키를 적용합니다.
+
+자세한 내용은 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) 및 [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md)를 참조하세요.  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>쿼리 최적화 프로그램의 인덱스 사용 방법  
  인덱스를 잘 디자인하면 디스크 I/O 작업과 시스템 리소스 사용을 줄일 수 있으므로 쿼리 성능이 향상됩니다. 인덱스는 SELECT, UPDATE, DELETE 또는 MERGE 문을 포함하는 다양한 쿼리에 유용합니다. `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 예로 들어 보겠습니다. 이 쿼리가 실행될 때 쿼리 최적화 프로그램은 데이터 검색에 사용할 수 있는 각 방법을 평가하고 가장 효율적인 방법을 선택합니다. 이때 테이블 검색이 선택될 수 있습니다. 가능한 경우 하나 이상의 인덱스 검색이 선택될 수도 있습니다.  

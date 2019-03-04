@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532109"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154748"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52532109"
 > [!NOTE]  
 >  유지 관리 정리 태스크에서는 지정된 디렉터리의 하위 폴더에 있는 파일을 자동으로 삭제하지 않습니다. 이 기능은 유지 관리 정리 태스크를 사용하여 파일을 삭제하는 악의적 공격의 가능성을 줄여 줍니다. 첫 번째 수준의 하위 폴더를 삭제하려는 경우 **첫 번째 수준의 하위 폴더 포함**을 선택해야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **연결**  
  현재 연결을 표시합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52532109"
  삭제할 파일이 있는 폴더의 경로와 이름입니다.  
   
  **파일 확장명**  
- 삭제할 파일의 파일 확장명을 제공합니다.  
+ 삭제할 파일의 파일 확장명을 제공합니다. 확장명 앞뒤에 다른 문자를 포함하지 마세요. 예를 들어 BAK 또는 TRN을 포함하지 마세요. 
   
  **첫 번째 수준의 하위 폴더 포함**  
  **폴더** 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  

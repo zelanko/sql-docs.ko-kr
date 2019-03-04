@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814106"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295551"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -40,11 +40,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 3.  샘플 데이터의 다음 필드를 추가합니다.  
   
-    * **값:** LineTotal
+    * **값**: LineTotal
     * **범주 그룹**(다음 순서로):
         1. CategoryName
         2. SubcategoryName
-    * **계열 그룹:** TerritoryName  
+    * **계열 그룹**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -85,12 +85,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
 3.  샘플 데이터의 다음 필드를 추가합니다.  
 
-    * **값:** LineTotal
+    * **값**: LineTotal
     * **범주 그룹**(다음 순서로):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **계열 그룹:** TerritoryName  
+    * **계열 그룹**: TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -135,11 +135,11 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
      데이터 원본을 만드는 방법에 대한 자세한 내용은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)를 참조하세요.  
   
-3.  **데이터 집합 만들기**  
+3.  **데이터 세트를 만듭니다**.  
   
-    1. **보고서 데이터**에서 **데이터 집합**을 마우스 오른쪽 단추로 클릭하고 **데이터 집합 추가**를 선택합니다.  
+    1. **보고서 데이터**에서 **데이터 세트**를 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 선택합니다.  
   
-    2. **내 보고서에 포함된 데이터 집합 사용**을 선택합니다.  
+    2. **내 보고서에 포함된 데이터 세트 사용**을 선택합니다.  
   
     3. 만든 데이터 원본을 선택합니다.  
   
@@ -170,14 +170,14 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 트리 
   
     5. **확인**을 선택합니다.  
   
-     데이터 집합을 만드는 방법에 대한 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+     데이터 세트를 만드는 방법에 대한 자세한 내용은 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
   
 ## <a name="see-also"></a>관련 항목:  
-* [공유 데이터 집합 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
+* [공유 데이터 세트 디자인 뷰&amp;#40;보고서 작성기&amp;#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
-* [자습서: Power BI의 트리 맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [트리 맵: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [자습서: Power BI의 트리맵](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [트리맵: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

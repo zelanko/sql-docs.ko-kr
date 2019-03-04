@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712714"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298651"
 ---
 # <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
@@ -27,7 +27,7 @@ ms.locfileid: "52712714"
 이 자습서에서는 뉴욕 주의 군에 있는 상점 위치를 표시하는 지도 보고서를 작성합니다.  
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 이 자습서에 소요되는 예상 시간: 30분  
   
@@ -43,9 +43,9 @@ ms.locfileid: "52712714"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52712714"
   
 3.  **공간 데이터의 원본 선택** 페이지에서 **SQL Server 공간 쿼리**를 선택하고 **다음**을 클릭합니다.  
   
-4.  **SQL Server 공간 데이터가 있는 데이터 집합을 선택하십시오.** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 집합 추가** > **다음**을 클릭합니다.  
+4.  **SQL Server 공간 데이터가 있는 데이터 세트 선택** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 세트 추가** > **다음**을 클릭합니다.  
   
 5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버로 이동한 후 데이터 원본을 선택합니다.  
 
@@ -191,7 +191,7 @@ ms.locfileid: "52712714"
   
 13. 지도 시각화 선택 페이지에서 데이터에 따라 크기가 달라지는 표식을 표시하는 **거품형 지도** 를 지도 유형으로 클릭합니다. **다음**을 클릭합니다.  
   
-14. **분석 데이터 집합 선택** 페이지에서 DataSet1을 클릭한 후 **다음**을 클릭합니다. 이 데이터 세트에는 새 점 계층에 표시될 분석 데이터와 공간 데이터가 모두 들어 있습니다.   
+14. **분석 데이터 세트 선택** 페이지에서 DataSet1을 클릭하고 **다음**을 클릭합니다. 이 데이터 세트에는 새 점 계층에 표시될 분석 데이터와 공간 데이터가 모두 들어 있습니다.   
   
 16. **색 테마 및 데이터 시각화 선택** 페이지에서 **거품 크기를 사용하여 데이터 시각화**를 선택합니다.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "52712714"
   
 3.  **공간 데이터의 원본 선택** 페이지에서 **SQL Server 공간 쿼리** 를 선택하고 **다음**을 클릭합니다.  
   
-4.  **SQL Server 공간 데이터가 있는 데이터 집합을 선택하십시오.** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 집합 추가** 를 클릭하고 **다음**을 클릭합니다.  
+4.  **SQL Server 공간 데이터가 있는 데이터 세트 선택** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 세트 추가**를 클릭하고 **다음**을 클릭합니다.  
   
 5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.** 에서 첫 번째 절차에서 사용한 데이터 원본을 선택합니다.  
   
@@ -335,13 +335,13 @@ ms.locfileid: "52712714"
   
 3.  PolygonLayer1 옆의 화살표를 클릭하고 **계층 데이터**를 클릭합니다. **지도 다각형 계층 속성** 대화 상자가 열립니다.  
   
-4.  **분석 데이터** 탭의 **분석 데이터 집합**에서 DataSet1을 선택합니다. 이 데이터 세트는 군에 대한 공간 데이터 쿼리를 만들 때 마법사에서 만들어진 것입니다.  
+4.  **분석 데이터** 탭의 **분석 데이터 세트**에서 DataSet1을 선택합니다. 이 데이터 세트는 군에 대한 공간 데이터 쿼리를 만들 때 마법사에서 만들어진 것입니다.  
   
 6.  **일치시킬 필드**에서 **추가**를 클릭합니다. 새 행이 추가됩니다.  
   
-7.  **공간 데이터 집합 필드**에서 COUNTYNAME을 클릭합니다.  
+7.  **공간 데이터 세트 필드**에서 COUNTYNAME을 클릭합니다.  
   
-8.  **분석 데이터 집합 필드**에서 [County]를 클릭합니다.  
+8.  **분석 데이터 세트 필드**에서 [County]를 클릭합니다.  
 
     ![report-builder-map-county-colors](../reporting-services/media/report-builder-map-county-colors.png)
   

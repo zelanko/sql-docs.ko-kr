@@ -9,14 +9,14 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ed0e02b12080389b12d0dabc9028de33e9cdb4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2ee94edec262fb9ddef64d64e90958e77cdf228
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021227"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296961"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)를 참조하세요.  

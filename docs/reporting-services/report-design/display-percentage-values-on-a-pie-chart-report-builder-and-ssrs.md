@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: eb905fc1-5235-4773-a27e-b07be9318be5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 721899b9a6f8dd8eff70b269ebae7867d6c3d587
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bbc386708543b82fd79c012a40ab94f8001f5815
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790431"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289821"
 ---
 # <a name="display-percentage-values-on-a-pie-chart-report-builder-and-ssrs"></a>원형 차트에서 백분율 값 표시(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서에서 기본적으로 범례는 범주를 표시합니다. 범례 또는 원형 조각 자체에서 백분율할 수 있습니다.   

@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770923"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290991"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ID 열이 있는 테이블이나 뷰에서 ID 열을 만드는 동안 지정한 증가값(**숫자**(**@@** MAXPRECISION,0)로 반환됨)을 반환합니다.  
+  테이블이나 뷰의 ID 열을 만들 때 지정된 증분 값(**numeric**(**@@** MAXPRECISION,0)으로)을 반환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,15 +43,15 @@ IDENT_INCR ( 'table_or_view' )
   
 ## <a name="arguments"></a>인수  
  **'** *table_or_view* **'**  
- 올바른 ID 증가값을 확인할 테이블 또는 뷰를 지정하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수, 변수, 함수 또는 열 이름일 수 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
+ 올바른 ID 증가값을 확인할 테이블 또는 뷰를 지정하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *table_or_view*는 따옴표로 묶은 문자열 상수이거나 변수, 함수 또는 열 이름일 수도 있습니다. *table_or_view*는 **char**, **nchar**, **varchar** 또는 **nvarchar**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **numeric**  
   
 ## <a name="exceptions"></a>예외  
- 오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
+ 오류가 발생하거나 호출자에게 개체 보기 권한이 없으면 NULL을 반환합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_INCR과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하거나 권한을 가진 보안 개체의 메타데이터만 볼 수 있습니다. 사용자 개체 권한이 없으면 IDENT_INCR과 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환할 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
@@ -66,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>2. 여러 테이블에서 증가값 반환  
- 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 증가값이 있는 ID 열을 포함하는 테이블을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 증분 값이 있는 ID 열을 포함하는 테이블을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  

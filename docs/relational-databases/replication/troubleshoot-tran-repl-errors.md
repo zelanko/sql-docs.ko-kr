@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675902"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154888"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅숏 에이전트가 스냅숏을 만들어 스냅숏 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅숏을 구독자에게 적용합니다. 
@@ -45,7 +45,7 @@ ms.locfileid: "51675902"
 1. 복제 모니터를 사용하여 복제가 오류를 발생시키는 시점(에이전트)를 식별합니다.
    - **게시자에서 배포자로 연결** 섹션에서 오류가 발생하는 경우 문제는 로그 판독기 에이전트에 있습니다. 
    - **배포자에서 구독자로 연결** 섹션에서 오류가 발생하는 경우 문제는 배포 에이전트에 있습니다.  
-2. 오류의 세부 정보를 식별하려면 작업 활동 모니터에서 해당 에이전트의 작업 기록을 조사합니다. 작업 기록이 충분한 세부 정보를 보여주지 않는 경우 해당 특정 에이전트에서 [자세한 정보 로깅을 사용](#enable-verbose-logging)할 수 있습니다.
+2. 오류의 세부 정보를 식별하려면 작업 활동 모니터에서 해당 에이전트의 작업 기록을 조사합니다. 작업 기록이 충분한 세부 정보를 보여주지 않는 경우 해당 특정 에이전트에서 [자세한 정보 로깅을 사용](#enable-verbose-logging-on-any-agent)할 수 있습니다.
 3. 오류에 대한 해결책을 결정하려고 합니다.
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "51675902"
 
     ![바로 가기 메뉴에서 "복제 모니터 시작" 명령](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    복제 모니터가 열립니다: ![복제 모니터](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    복제 모니터가 열립니다. ![복제 모니터](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. 빨간색 X는 게시가 동기화되지 않음을 나타냅니다. 왼쪽에서 **내 게시자**를 확장한 다음, 관련 게시자 서버를 확장합니다.  
   

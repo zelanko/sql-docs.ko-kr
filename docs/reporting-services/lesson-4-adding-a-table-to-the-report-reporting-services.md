@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772641"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287241"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
 데이터 세트가 정의되면 보고서 디자인을 시작할 수 있습니다. 데이터 영역, 입력란, 이미지 및 보고서에 포함하려는 항목을 디자인 화면에 끌어다 놓는 방법으로 보고서 레이아웃을 만듭니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47772641"
      ![ssrs_ssdt_addtable](../reporting-services/media/ssrs-ssdt-addtable.png) 
   
   또한 디자인 화면에서 보고서에 테이블을 추가할 수 있습니다.  디자인 화면을 마우스 오른쪽 단추로 클릭하고 **삽입** , **테이블**을 차례로 클릭합니다.
-2.  **보고서 데이터** 창에서 **AdventureWorksDataset** 데이터 집합을 확장하여 필드를 표시합니다.  
+2.  **보고서 데이터** 창에서 **AdventureWorksDataset** 데이터 세트를 확장하여 필드를 표시합니다.  
   
 3.  *보고서 데이터* 창에서 **Date** 필드를 테이블의 첫 번째 열로 끕니다.  
   
@@ -68,4 +68,4 @@ ms.locfileid: "47772641"
   
 ## <a name="see-also"></a>참고 항목  
 [테이블&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  
-[데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+[데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

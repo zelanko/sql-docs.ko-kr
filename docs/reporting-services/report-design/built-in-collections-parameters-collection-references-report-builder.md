@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d33b9fc81957a84c222c486199e9f806ff6eb3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d88a76bcba0350b39fed6b4e41d3b5ae80b2738f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799301"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290141"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>기본 제공 컬렉션 - 매개 변수 컬렉션 참조(보고서 작성기)
   보고서 매개 변수는 식에서 참조할 수 있는 기본 제공 컬렉션 중 하나입니다. 식에 매개 변수를 포함하면 사용자의 선택에 따라 보고서 데이터와 모양을 사용자 지정할 수 있습니다. 식은 (*Fx*) 또는 \<**Expression**> 옵션을 제공하는 모든 보고서 항목 속성 또는 입력란 속성에 사용할 수 있습니다. 식은 보고서의 내용과 모양을 다른 방법으로 제어하는 데도 사용됩니다. 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
@@ -37,7 +37,7 @@ ms.locfileid: "47799301"
 |`=CStr(Parameters!`  *\<ParameterName>* `.Value)`|매개 변수 값을 문자열로 반환합니다.|  
 |`=Fields(Parameters!` *\<ParameterName>* `.Value).Value`|매개 변수와 동일한 이름을 갖고 있는 필드에 대해 값을 반환합니다.|  
   
- 필터에서 매개 변수를 사용하는 방법은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
+ 필터에서 매개 변수를 사용하는 방법은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
 ##  <a name="Multi"></a> 식에서 다중값 매개 변수 사용  
  다음 표에서는 식에서 임의 데이터 형식의 다중값 매개 변수에 대한 참조를 포함할 때 사용할 구문의 예를 보여 줍니다.  

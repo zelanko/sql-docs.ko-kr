@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 3415084fcc93098f77ea367217b74ae2df7729f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 026338642a4fe5be4480a1b83b93a809437ecfa3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393225"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289611"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
@@ -62,7 +62,7 @@ ms.locfileid: "52393225"
   
 간단한 식과 복잡한 식, 식을 사용할 수 있는 위치 및 식에 포함할 수 있는 참조 유형에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)를 참조하세요. 집계 계산을 위해 식이 계산되는 컨텍스트에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
-이 항목의 식 예에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 배우려면 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)를 참조하십시오.  
+이 항목의 식 예제에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 알아보려면 [자습서: 식 소개](../../reporting-services/tutorial-introducing-expressions.md)를 참조하세요.  
 
   
 ## <a name="functions"></a>함수  

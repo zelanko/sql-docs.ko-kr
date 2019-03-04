@@ -22,22 +22,22 @@ ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27af02d973c048ca5be4dd5c28010b3bcde65314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815191"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154708"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  기본값 개체를 만듭니다. 열이나 별칭 데이터 형식에 기본값을 바인딩하면 삽입 시 값을 명시적으로 제공하지 않을 경우 개체가 바인딩된 열(별칭 데이터 형식의 경우 모든 열)에 값이 삽입되도록 지정됩니다.  
+기본값 개체를 만듭니다. 열이나 별칭 데이터 형식에 기본값을 바인딩하면 삽입 시 값을 명시적으로 제공하지 않을 경우 개체가 바인딩된 열(별칭 데이터 형식의 경우 모든 열)에 값이 삽입되도록 지정됩니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 ALTER TABLE 또는 CREATE TABLE의 DEFAULT 키워드를 사용하여 만든 기본 정의를 사용하십시오.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -48,17 +48,17 @@ AS constant_expression [ ; ]
 ```  
   
 ## <a name="arguments"></a>인수  
- *schema_name*  
+*schema_name*  
  기본값이 속한 스키마의 이름입니다.  
   
- *default_name*  
+*default_name*  
  기본값의 이름입니다. 기본값 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 기본 소유자 이름을 지정하는 것은 선택 사항입니다.  
   
- *constant_expression*  
- 상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표(**'**)로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
+*constant_expression*  
+상수 값만 포함하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 열 이름이나 다른 데이터베이스 개체의 이름을 포함할 수 없습니다. 별칭 데이터 형식을 포함한 식을 제외하고 모든 종류의 상수, 기본 제공 함수 및 수치 연산 식을 사용할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다. 문자와 날짜 상수는 작은따옴표(**'**)로 묶어야 하지만 통화, 정수 및 부동 소수점 상수에는 따옴표가 필요 없습니다. 이진 데이터는 0x로 시작해야 하고 통화 데이터는 달러 기호($)로 시작해야 합니다. 기본값은 열 데이터 형식과 호환이 가능해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 기본값 이름은 현재 데이터베이스에서만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들었으면 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
+ 현재 데이터베이스에서는 기본 이름만 만들 수 있습니다. 기본값 이름은 데이터베이스에서 스키마별로 고유해야 합니다. 기본값을 만들 경우 **sp_bindefault**를 사용하여 값을 열이나 별칭 데이터 형식에 바인딩합니다.  
   
  기본값이 바인딩될 열과 호환되지 않으면 기본값을 삽입하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다. 예를 들어 N/A는 **numeric** 열의 기본값으로 사용할 수 없습니다.  
   
@@ -66,7 +66,7 @@ AS constant_expression [ ; ]
   
  CREATE DEFAULT 문을 한 일괄 처리에서 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 결합할 수 없습니다.  
   
- 같은 이름을 가진 기본값을 새로 만들려면 먼저 기존 기본값을 삭제해야 하며 기본값을 삭제하려면 먼저 **sp_unbindefault**를 실행하여 기본값을 바인딩 해제해야 합니다.  
+ 같은 이름을 가진 기본값을 새로 만들려면 먼저 기존 기본값을 삭제해야 합니다. 도한 기본값을 삭제하려면 먼저 **sp_unbindefault**를 실행하여 기본값을 바인딩 해제해야 합니다.  
   
  열에 기본값 및 연관된 규칙이 모두 있을 경우에는 해당 기본값이 규칙을 위반해서는 안 됩니다. 규칙을 위반하는 기본값은 삽입할 수 없으며 이러한 기본값을 삽입하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류 메시지가 나타납니다.  
   
@@ -86,7 +86,7 @@ AS constant_expression [ ; ]
  기본값의 이름을 바꾸려면 **sp_rename**을 사용합니다. 기본값에 대한 보고서를 보려면 **sp_help**를 사용합니다.  
   
 ## <a name="permissions"></a>Permissions  
- CREATE DEFAULT를 실행하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  
+ CREATE DEFAULT를 사용하려면 최소한 현재 데이터베이스에서 CREATE DEFAULT 권한과 기본값이 생성된 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -100,7 +100,10 @@ CREATE DEFAULT phonedflt AS 'unknown';
 ```  
   
 ### <a name="b-binding-a-default"></a>2. 기본값 바인딩  
- 다음 예에서는 예 1에서 만든 기본값을 바인딩합니다. `Phone` 테이블의 `Contact` 열에 항목이 지정되어 있지 않을 때만 기본값이 적용됩니다. 항목을 생략하는 것은 INSERT 문에 명시적으로 NULL을 지정하는 것과는 다릅니다.  
+ 다음 예에서는 예 1에서 만든 기본값을 바인딩합니다. `Phone` 테이블의 `Contact` 열에 항목이 지정되어 있지 않을 때만 기본값이 적용됩니다. 
+ 
+ > [!Note] 
+ >  항목을 생략하는 것은 INSERT 문에 명시적으로 NULL을 지정하는 것과는 다릅니다.  
   
  `phonedflt`라는 기본값은 없으므로 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실패하게 됩니다. 이 예는 설명을 돕기 위해 제공된 것입니다.  
   

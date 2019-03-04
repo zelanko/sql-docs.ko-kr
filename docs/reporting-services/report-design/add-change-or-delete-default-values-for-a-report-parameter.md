@@ -10,14 +10,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.reportparameters.defaultvalues.f1
 - "10072"
 ms.assetid: 6a87e069-b3a9-47b6-bcec-afcdd8aff65f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ac4a86eb45f5c9a0715b6b9e018490b15c4e42c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a53bc057873f8c6905c37f281793c7d00c54a547
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841911"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293411"
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>보고서 매개 변수의 기본값 추가, 변경 또는 삭제
   보고서 매개 변수를 만든 후에는 기본값 목록을 제공할 수 있습니다. 모든 매개 변수에 유효한 기본값이 있는 경우 보고서를 처음으로 보거나 미리 볼 때 해당 보고서가 자동으로 실행됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47841911"
   
          다중값 매개 변수의 경우 제공할 값 개수만큼 이 단계를 반복합니다. 이 목록에 표시되는 항목의 순서에 따라 드롭다운 목록에 표시되는 항목의 순서가 결정됩니다. 목록에서 항목의 순서를 변경하려면 **값** 입력란을 클릭하여 항목을 선택한 다음 위쪽 및 아래쪽 화살표 단추를 사용하여 항목을 목록의 위 또는 아래로 이동합니다.  
   
-    -   값을 검색하는 기존 데이터 세트의 이름을 제공하려면 **쿼리에서 값 가져오기**를 클릭합니다. **데이터 집합**에서 데이터 집합의 이름을 선택합니다.  
+    -   값을 검색하는 기존 데이터 세트의 이름을 제공하려면 **쿼리에서 값 가져오기**를 클릭합니다. **데이터 세트**에서 데이터 세트의 이름을 선택합니다.  
   
          **값 필드**에서 매개 변수 값을 제공하는 필드의 이름을 선택합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "47841911"
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   

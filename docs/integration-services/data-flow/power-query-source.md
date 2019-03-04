@@ -1,12 +1,15 @@
 ---
 title: 파워 쿼리 원본 | Microsoft Docs
 description: SQL Server Integration Services 데이터 흐름에서 파워 쿼리 원본을 구성하는 방법 알아보기
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570706"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319314"
 ---
 # <a name="power-query-source-preview"></a>파워 쿼리 원본(미리 보기)
 
@@ -68,9 +71,6 @@ SSDT에서 파워 쿼리 원본을 사용하여 데이터 흐름을 디자인할
 
 **Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**와 같은 일부 원본을 사용하려면 [파워 쿼리 필수 구성 요소](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) 문서에서 가져올 수 있는 ADO.NET 드라이버를 추가로 설치해야 합니다. 사용자 지정 설정 인터페이스를 사용하여 Azure-SSIS IR에 해당 드라이버를 설치할 수 있습니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서를 참조하세요.
 
-> [!NOTE]
-> **Oracle** 데이터 원본의 경우 Oracle ADO.NET 드라이버는 현재 Azure-SSIS IR에 설치할 수 없으므로, 대신 Oracle ODBC 드라이버를 설치하고 현재는 **ODBC** 데이터 원본을 사용하여 Oracle에 연결합니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서의 **ORACLE STANDARD ODBC** 예제를 참조하세요.
-
 **데이터 원본 경로**의 경우 인증 정보 없이 연결 문자열을 형성하는 데이터 원본별 속성을 입력할 수 있습니다. 예를 들어 **SQL** 데이터 원본의 경로는 `<Server>;<Database>`로 형성됩니다. **편집** 단추를 선택하여 경로를 형성하는 데이터 원본별 속성에 값을 할당할 수 있습니다.
 
 ![PQ 원본 연결 관리자 편집기 경로](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ SSDT에서 파워 쿼리 원본을 사용하여 데이터 흐름을 디자인할
 마지막으로 **인증 종류**의 경우 드롭다운 메뉴에서 **익명**/**Windows 인증**/**사용자 이름 암호**/**키**를 선택하고, 적절한 액세스 자격 증명을 입력하고, **연결 테스트** 단추를 선택하여 파워 쿼리 원본이 제대로 구성되었는지 확인할 수 있습니다.
 
 ![PQ 원본 연결 관리자 편집기 인증](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>현재 제한 사항
+
+-   Oracle ADO.NET 드라이버를 Azure-SSIS IR에 설치할 수 없어 현재는 **Oracle** 데이터 원본을 사용할 수 없으므로, 대신 Oracle ODBC 드라이버를 설치하고 현재는 **ODBC** 데이터 원본을 사용하여 Oracle에 연결합니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서의 **ORACLE STANDARD ODBC** 예제를 참조하세요.
+
+-   사용자 지정 설정으로 AZURE-SSIS IR에서 **웹** 데이터 원본을 사용할 수 없으므로, 지금은 사용자 지정 설정 없이 AZURE-SSIS IR에서 해당 데이터 원본을 사용하세요.
 
 ## <a name="next-steps"></a>다음 단계
 ADF 파이프라인의 첫 번째 클래스 작업으로 Azure-SSIS IR에서 SSIS 패키지를 실행하는 방법에 대해 알아봅니다. [SSIS 패키지 작업 실행 런타임](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) 문서를 참조하세요.

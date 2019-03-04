@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504559"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288551"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>모바일 보고서에 계기 추가 | Reporting Services
 계기는 모바일 보고서에서 가장 기본적이고 가장 널리 사용되는 시각화 개체입니다. 데이터 세트의 단일 값을 표시합니다. 값만 표시하거나 목표와 비교하여 값을 표시합니다.
@@ -34,7 +34,7 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
 
 1. **레이아웃** 탭에서 디자인 눈금으로 계기를 끌어서 원하는 크기로 만듭니다.
 
-2. [Excel 또는 공유 데이터 집합의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
+2. [Excel 또는 공유 데이터 세트의 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)를 가져옵니다.
 
 3. **데이터** 탭을 선택하고 **데이터 속성** 창의 **주 값** 에서 데이터 테이블과 숫자 필드를 선택합니다.
 
@@ -58,7 +58,7 @@ SQL Server 모바일 보고서 게시자의 모든 계기에는 하나 이상의
   
 계기 요소를 데이터 필드에 연결하는 데이터 속성과 더불어 많은 기능 및 시각적 속성을 사용자 지정할 수도 있습니다. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>값 방향(값이 높을수록 좋음 또는 값이 낮을수록 좋음) 설정
+### <a name="set-value-direction-high-or-low-is-better"></a>값 방향 설정: 값이 높을수록 좋음 또는 값이 낮을수록 좋음
 * 계기를 선택한 다음 **시각적 속성** 창의 **레이아웃** 탭에서 **값 방향** 을 **값이 높을수록 좋음** 또는 **값이 낮을수록 좋음**으로 설정합니다. 
 
 **값이 높을수록 좋음** 에서는 양수 값을 녹색으로 지정하여 바람직한 방향으로 변경된 사항을 나타낼지, 낮은 값을 빨간색으로 지정하여 바람직하지 않은 방향으로 변경된 사항을 나타낼지 결정합니다. 

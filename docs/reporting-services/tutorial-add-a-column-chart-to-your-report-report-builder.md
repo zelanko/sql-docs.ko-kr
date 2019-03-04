@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711488"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290661"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는, 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
@@ -28,9 +28,9 @@ ms.locfileid: "52711488"
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-이 자습서에 소요되는 예상 시간: 15분  
+이 자습서에 소요되는 예상 시간: 15분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -45,15 +45,15 @@ ms.locfileid: "52711488"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택**페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택 페이지**에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e1e9c58b88e7edd48fe3a1390f56e313572adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3de7c69169198302535eb7ff5dc855faa4f44974
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418814"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319114"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 데이터 쿼리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ FOR SYSTEM_TIME AS OF '2015-09-01 T10:00:00.7230011' ;
 처음 두 개의 하위 절은 지정된 기간과 겹치는(즉, 지정된 기간 전에 시작되고 그 후에 종료되는) 행 버전을 반환하는 반면, CONTAINED IN은 지정된 기간 범위 내에 존재하는 것들만 반환합니다.  
   
 > [!IMPORTANT]  
->  비현재 행 버전만을 검색하는 경우 **CONTAINED IN** 을 사용하는 것이 좋습니다. 이것은 기록 테이블에서만 작동하고 최고의 쿼리 성능을 냅니다. 아무런 제한 없이 현재 데이터와 기록 데이터를 쿼리해야 하는 경우 **ALL** 을(를) 사용합니다.  
+>  비현재 행 버전만을 검색하는 경우 기록 테이블에서 직접 쿼리하는 것이 좋습니다. 이렇게 하면 최고의 쿼리 성능을 낼 수 있습니다. 아무런 제한 없이 현재 데이터와 기록 데이터를 쿼리해야 하는 경우 **ALL** 을(를) 사용합니다.  
   
 ```  
 /* Query using BETWEEN...AND sub-clause*/  

@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420404"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230980"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,8 @@ ms.locfileid: "52420404"
     |CPU 수|32비트 컴퓨터|64비트 컴퓨터|  
     |------------|------------|------------| 
     |\<4개 이하 프로세서|256|512|
-    |\> 4개의 프로세서|256 + ((논리 CPU 수 - 4) * 8)|512 + ((논리 CPU 수 - 4) * 16)| 
+    |\> 4개 프로세서 및 \< 64개 프로세서|256 + ((논리 CPU 수 - 4) * 8)|512 + ((논리 CPU 수 - 4) * 16)|
+    |\> 64개 프로세서|256 + ((논리 CPU 수 - 4) * 32)|512 + ((논리 CPU 수 - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32비트 운영 체제에 더 이상 설치할 수 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 이전 버전을 실행하는 고객을 돕기 위해 32비트 컴퓨터 값을 나열합니다.   32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1024로 설정하는 것이 좋습니다.  

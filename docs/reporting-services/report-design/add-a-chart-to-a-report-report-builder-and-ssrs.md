@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 550459c3b261a42aa1b5be0ad37cd1681f566a02
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 53e52f403c6ed76db265a05879a9ebea15aca30d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030782"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298351"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 표현하려는 데이터의 형식에 적합한 차트 종류를 선택하는 것이 중요합니다. 선택한 차트 종류에 따라 데이터를 차트 형태로 만들었을 때 해당 데이터를 얼마나 잘 해석할 수 있는지가 결정됩니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
@@ -40,7 +40,7 @@ ms.locfileid: "50030782"
   
 ## <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
+1.  보고서를 만들고 데이터 세트를 정의합니다. 자세한 내용은 [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   

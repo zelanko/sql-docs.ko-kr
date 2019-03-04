@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711662"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289646"
 ---
 # <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
 
@@ -25,20 +25,20 @@ ms.locfileid: "52711662"
   
 한 단계에서는 고의적으로 작업을 잘못 수행하므로 해당 작업이 잘못인 이유를 확인할 수 있습니다. 그런 다음 이를 올바르게 수정하여 원하는 결과를 얻을 수 있습니다.  
     
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
-## <a name="CreateReport"></a>빈 보고서와 함께 데이터 원본 및 데이터 집합 만들기  
+## <a name="CreateReport"></a>빈 보고서와 함께 데이터 원본 및 데이터 세트 만들기  
   
 ### <a name="to-create-a-blank-report"></a>빈 보고서를 만들려면  
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
  
 2.  **시작** 대화 상자의 왼쪽 창에서 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "52711662"
 
     **보고서 데이터** 창이 표시되지 않는 경우 **보기** 탭에서 **보고서 데이터**를 선택합니다.
   
-2.   **이름** 상자에 **TextDataSource**를 입력합니다.  
+2.  **이름** 상자에 다음을 입력합니다. **TextDataSource**  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
 4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. `Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
+    > `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 세트를 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52711662"
   
 2.  데이터 원본이 **TextDataSource**인지 확인합니다.  
   
-3.   **이름** 상자에 **TextDataset**를 입력합니다.  
+3.  **이름** 상자에 다음을 입력합니다. **TextDataset.**  
   
 4.  **텍스트** 쿼리 유형이 선택되어 있는지 확인한 다음 **쿼리 디자이너**를 클릭합니다.  
   

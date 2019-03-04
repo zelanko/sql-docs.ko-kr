@@ -18,19 +18,19 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14609b70d5984be8166e17a5388297fead4db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800092"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265230"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  내부 영역과 외부 영역이 서로 바뀐 **geography** 인스턴스를 반환합니다.  
+내부 영역과 외부 영역이 서로 바뀐 **geography** 인스턴스를 반환합니다.  
   
- 이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
+이 **geography** 데이터 형식 메서드는 **FullGlobe** 인스턴스 또는 반구보다 큰 공간 인스턴스를 지원합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,18 +40,18 @@ ms.locfileid: "47800092"
 ```  
   
 ## <a name="arguments"></a>인수  
- *geography*  
- `ReorientObject()`를 호출할 다른 **geography** 인스턴스입니다.  
+_geography_  
+`ReorientObject()`를 호출할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-value"></a>반환 값  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
   
- CLR 반환 형식: **SqlGeography**  
+CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 **GeometryCollection**에 있는 모든 **Polygons**의 링 방향을 변경하지만 지정된 컬렉션에서 **Points** 또는 **Linestrings**을 제거하거나 변경하지는 않습니다.  
+이 메서드는 **GeometryCollection**에 있는 모든 **Polygons**의 링 방향을 변경하지만 지정된 컬렉션에서 **Points** 또는 **LineStrings**를 제거하거나 변경하지는 않습니다.  
   
- **GeometryCollection**이 이 메서드에 전달된 경우 컬렉션에 포함된 각 인스턴스의 방향이 다시 지정되지만 컬렉션 전체의 방향은 변경되지 않습니다.  
+**GeometryCollection**을 이 메서드에 전달하면 그 결과로 컬렉션에 포함된 각 인스턴스의 방향이 다시 지정되지만 전체 컬렉션의 방향은 다시 지정되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -62,6 +62,5 @@ SELECT @R.ReorientObject().STAsText();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+[지리 인스턴스의 확장 메서드](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

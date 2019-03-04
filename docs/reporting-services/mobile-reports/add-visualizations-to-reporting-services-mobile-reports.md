@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703341"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298421"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 시각화 추가
 차트는 데이터 시각화의 필수적인 부분입니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에서 여러 시나리오를 처리할 수 있는 차트에 대해 알아보세요. 
@@ -60,7 +60,7 @@ ms.locfileid: "47703341"
 
 2. 기본적으로 누적 가로 막대형 차트입니다. 차트 종류는 **계열 시각화**에서 변경할 수 있습니다.
 
-3. 차트에 필요한 데이터가 보고서에 아직 없는 경우 **데이터** 탭 > **데이터 추가**를 [Excel 또는 공유 데이터 집합에서 데이터 가져오기](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)로 선택합니다.
+3. 차트에 필요한 데이터가 보고서에 아직 없는 경우 **데이터** 탭 &gt; **데이터 추가**를 [Excel 또는 공유 데이터 세트에서 데이터 가져오기](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)로 선택합니다.
 
 3. **데이터 속성** 창에서 **주 계열** 은 **SimulatedTable**입니다. 상자에서 화살표를 선택한 다음 > 해당 테이블을 선택합니다.
 
@@ -143,7 +143,7 @@ ms.locfileid: "47703341"
 
      * **크기** 에서 타일 크기에 대한 숫자 필드를 선택합니다.
      * **색** 에서 타일 색에 대한 숫자 필드를 선택합니다. 
-     * [옵션] **사용자 지정 중앙값**: 시각화 형식이 HeatMapWithCustomCenterValue인 경우 **사용자 지정 중앙값** 만 사용할 수 있습니다.
+     * [선택 사항] **사용자 지정 중앙값**: 시각화 형식이 HeatMapWithCustomCenterValue인 경우 **사용자 지정 중앙값**만 사용할 수 있습니다.
      
          중앙값은 상자의 색을 결정합니다. 중앙값에 비해 메트릭이 좋을수록 더 녹색이 됩니다. 메트릭이 나쁠수록 더 빨간색이 됩니다.
      

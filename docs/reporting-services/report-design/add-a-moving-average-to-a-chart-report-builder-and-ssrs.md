@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c2c2da7e3ff889d56c96d5dcd68b1f11e150cc92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7131bbd8f325deea3ef34c0f7e45bebfb7f3688a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594595"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298389"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>차트에 이동 평균 추가(보고서 작성기 및 SSRS)
 이동 평균은 정의된 기간 동안 계산되는 계열 데이터의 평균입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 이동 평균은 차트에서 중요한 추세를 파악하기 위해 표시될 수 있습니다.  

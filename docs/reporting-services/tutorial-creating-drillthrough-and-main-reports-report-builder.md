@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526178"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286931"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
 이 자습서에서는 두 종류의 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 알아봅니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 
@@ -42,9 +42,9 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -55,7 +55,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
   
-1.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+1.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 선택한 후, **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
 2.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
@@ -149,7 +149,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
     > [!NOTE]  
     > 매개 변수에는 제품 범주의 이름이 포함됩니다. 주 보고서에서 제품 범주 이름을 클릭하면 해당 이름이 이 매개 변수를 사용하여 드릴스루 보고서로 전달됩니다.  
   
-### <a name="DSkip"></a>데이터 집합을 만들려면  
+### <a name="DSkip"></a>데이터 세트를 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -267,7 +267,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 5.  **값** 목록의 오른쪽에 있는 **(fx)** 단추를 클릭합니다.  
   
-6.  **식** 대화 상자의 범주 창에서 **데이터 집합**을 클릭한 다음 **값** 목록에서 `First(Product_Category_Name)`를 두 번 클릭합니다.  
+6.  **식** 대화 상자의 범주 창에서 **데이터 세트**를 클릭한 다음, **값** 목록에서 `First(Product_Category_Name)`를 두 번 클릭합니다.  
   
     **식** 입력란에 다음 식이 포함됩니다.  
   
@@ -342,9 +342,9 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
  
 2.  **시작** 대화 상자에서 **새 보고서** 가 선택되어 있는지 확인한 다음 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
@@ -353,7 +353,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
   
-1.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다.  
+1.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 선택한 후, **다음**을 클릭합니다.  
   
 2.  **새로 만들기**를 클릭합니다.  
   
@@ -469,7 +469,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 8.  **이름** 상자에  **Net Sales**를 입력한 다음 **확인**을 클릭합니다. 계산 멤버 창에 **Net Sales** 계산 멤버가 나열됩니다.  
   
-### <a name="MSkip"></a>데이터 집합을 만들려면  
+### <a name="MSkip"></a>데이터 세트를 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -511,7 +511,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
   
 1.  **레이아웃 선택** 페이지의 **옵션**에서 **부분합 및 총합계 표시** 가 선택되어 있는지 확인합니다.  
   
-    마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹이며, 두 번째 행은 열 제목을 포함하며, 세 번째 행은 제품 범주 데이터(`[Sum(Net_ QTY)]` 및 `[Sum(Net_Sales)]`)를 포함하며, 네 번째 행은 합계를 포함합니다.  
+    마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹이며, 두 번째 행은 열 머리글을 포함하며, 세 번째 행은 제품 범주 데이터(`[Sum(Net_ QTY)]` 및 `[Sum(Net_Sales)]`)를 포함하며, 네 번째 행은 합계를 포함합니다.  
   
 2.  **다음**을 클릭합니다.  
   

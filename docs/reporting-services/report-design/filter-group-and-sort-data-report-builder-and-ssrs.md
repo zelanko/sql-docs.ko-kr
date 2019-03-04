@@ -15,21 +15,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 74f047ddc136ae1b117f533d45391ef8b2048441
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bd86e9376e8520205702460e6f3e7834b5fe7424
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031132"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289291"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 세트를 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 세트 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
   
 -   **필터 식** 필터 식은 지정된 비교 기준을 기반으로 데이터의 포함 또는 제외를 테스트합니다. 데이터를 데이터 연결에서 검색한 후에 필터가 보고서의 데이터에 적용됩니다. 필터 조합을 보고서 서버의 공유 데이터 세트 정의, 보고서의 공유 데이터 세트 인스턴스 또는 포함된 데이터 세트, 테이블 또는 차트와 같은 데이터 영역, 테이블의 행 그룹 또는 차트의 범주 그룹 같은 데이터 영역 그룹 등의 항목에 추가할 수 있습니다.  
   
--   **그룹 식** 그룹 식은 데이터 집합 필드 또는 기타 값을 기반으로 데이터를 구성합니다. 그룹 식은 보고서 레이아웃을 만들 때 자동으로 만들어집니다. 보고서 처리기에서는 필터가 데이터에 적용된 후 보고서 데이터와 데이터 영역이 결합될 때 그룹 식을 평가합니다. 그룹 식을 만든 후 사용자 지정할 수 있습니다.  
+-   **그룹 식** 그룹 식은 데이터 세트 필드 또는 기타 값을 기반으로 데이터를 구성합니다. 그룹 식은 보고서 레이아웃을 만들 때 자동으로 만들어집니다. 보고서 처리기에서는 필터가 데이터에 적용된 후 보고서 데이터와 데이터 영역이 결합될 때 그룹 식을 평가합니다. 그룹 식을 만든 후 사용자 지정할 수 있습니다.  
   
 -   **정렬 식** 정렬 식은 데이터가 데이터 영역에 표시되는 순서를 제어합니다. 정렬 식은 보고서 레이아웃을 만들 때 자동으로 만들어집니다. 기본적으로 그룹의 정렬 식은 그룹 식과 같은 값으로 설정됩니다. 정렬 식을 만든 후 사용자 지정할 수 있습니다.  
   
@@ -55,9 +55,9 @@ ms.locfileid: "50031132"
 ##  <a name="Filtering"></a> 보고서 데이터 필터링  
  필터는 데이터 연결에서 검색된 보고서 데이터를 제어하는 데 사용되는 보고서의 일부입니다. 필터는 데이터를 외부 데이터 원본에서 검색하기 전에 필터링하기 위해 데이터 세트 쿼리를 변경할 수 없는 경우에 사용합니다.  
   
- 가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 세트 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 가능한 경우 보고서에 표시하기 위해 필요한 데이터만 반환하는 데이터 세트 쿼리를 작성합니다. 검색 및 처리해야 하는 데이터의 양을 줄이면 보고서 성능을 향상시키는 데 도움이 됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
- 외부 데이터 원본에서 데이터를 검색한 후 데이터 세트, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
+ 외부 데이터 원본에서 데이터를 검색한 후 데이터 세트, 데이터 영역 및 데이터 영역 그룹(세부 그룹 포함)에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 세트에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다. 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
  각 필터에 *필터 수식*을 지정합니다. 필터 수식은 필터링할 데이터를 지정하는 데이터 세트 필드나 식, 연산자 및 비교할 값을 포함합니다. 필터 조건과 일치하는 데이터 값만 항목을 처리할 때 포함됩니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "50031132"
  자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ### <a name="groups-and-scope-in-data-regions"></a>데이터 영역의 그룹 및 범위  
- 동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+ 동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
  테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
@@ -189,7 +189,7 @@ FROM Production.Product
   
  [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)  
   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> 관련 단원  
  [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
@@ -202,7 +202,7 @@ FROM Production.Product
   
  [차트에 데이터 범위가 여러 개 있는 계열 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   

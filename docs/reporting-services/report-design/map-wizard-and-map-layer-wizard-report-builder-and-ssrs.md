@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813776"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294942"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 지도 마법사 및 지도 계층 마법사는 지도를 만들거나 지도 계층을 추가하거나 기존 계층의 지도 계층 옵션을 변경하는 태스크를 자동화합니다.  
@@ -76,11 +76,11 @@ ms.locfileid: "51813776"
   
     -   지도 시각화 선택: 점  
   
-4.  데이터 원본에 대한 연결 선택 지도 시각화 선택: 점 데이터 원본 연결을 선택하거나 지도에 표시할 분석 데이터가 포함된 외부 데이터 원본에 대한 연결을 만듭니다.  
+4.  데이터 원본에 대한 연결 선택 지도 시각화 선택: 점. 데이터 원본 연결을 선택하거나 지도에 표시할 분석 데이터가 포함된 외부 데이터 원본에 대한 연결을 만듭니다.  
   
 5.  쿼리를 디자인합니다. 분석 데이터를 지정하는 쿼리를 작성합니다.  
   
-6.  [분석 데이터 집합 선택](#AnalyticalData). 분석 데이터의 데이터 원본을 지정합니다.  
+6.  [분석 데이터 세트를 선택합니다](#AnalyticalData). 분석 데이터의 데이터 원본을 지정합니다.  
   
     -   [공간 데이터와 분석 데이터의 차이는?](#Diff)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813776"
   
  지도 또는 지도 계층을 추가하고 보고서를 미리 본 후 마법사에서 설정하는 지도 및 지도 계층 옵션을 변경할 수 있습니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
- 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
+ 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 맵을 추가하는 방법에 대한 단계별 지침은 [자습서: 맵 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
   
 ##  <a name="SpatialDataSource"></a> 공간 데이터의 원본 선택  
  이 페이지에서는 공간 데이터 원본과 포함할 공간 데이터를 지정합니다. 공간 데이터는 지도 갤러리, ESRI 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전 데이터베이스의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 데이터를 지정하는 데이터 세트 쿼리에서 제공될 수 있습니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "51813776"
  ESRI 셰이프 파일은 웹에서 이용할 수 있습니다. 자세한 내용은 [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814)을 참조하십시오.  
   
 ###  <a name="SqlServerSpatial"></a> SQL Server 공간 쿼리란?  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 집합 쿼리입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 세트 쿼리입니다.  
   
 > [!NOTE]  
 >  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
@@ -185,7 +185,7 @@ ms.locfileid: "51813776"
   
  타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](https://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](https://go.microsoft.com/fwlink/?LinkId=151371)를 클릭합니다.  
   
- 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
+ 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)을 참조하세요.  
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "51813776"
   
  자세한 내용은 [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
   
-##  <a name="AnalyticalData"></a> 분석 데이터 집합 선택  
+##  <a name="AnalyticalData"></a> 분석 데이터 세트 선택  
  이 페이지에서는 이 지도 계층에 표시할 분석 데이터를 가져올 위치를 지정합니다.  
   
  지도 배경에 대해 보고서 데이터나 분석 데이터를 표시하려면 데이터 위치와 데이터와 공간 데이터의 관계를 지정해야 합니다. 데이터는 기존 보고서 데이터 세트나 쿼리를 작성하는 새 데이터 세트에서 제공될 수 있습니다. 기존 분석 데이터는 공간 데이터를 포함하는 ESRI 셰이프 파일에 포함될 수도 있습니다.  
@@ -248,7 +248,7 @@ ms.locfileid: "51813776"
  보고서 처리기는 사용자가 설정하는 규칙을 적용하고 범례에 표시할 항목의 목록을 자동으로 결정합니다. 기본적으로 모든 계층에 대한 모든 규칙의 결과가 첫 번째 범례에 표시됩니다. 마법사를 완료한 후 이를 조정할 수 있습니다. 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

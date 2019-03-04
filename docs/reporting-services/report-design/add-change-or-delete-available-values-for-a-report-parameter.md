@@ -10,14 +10,14 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: f1efe1e5e10905cb04b2449ba0497af2b43f7aef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5f9b418aadd50e109ef0e4763a83b28948f391f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804201"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298541"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제
   보고서 매개 변수를 만든 다음에는 사용자에게 표시할 사용 가능한 값 목록을 지정할 수 있습니다. 사용 가능한 값 목록은 사용자가 매개 변수에 적합한 값만 선택할 수 있도록 제한합니다.  
@@ -46,12 +46,12 @@ ms.locfileid: "47804201"
   
          제공할 값 개수만큼 이 단계를 반복합니다. 이 목록에 표시되는 항목의 순서에 따라 드롭다운 목록에 표시되는 항목의 순서가 결정됩니다. 목록에서 항목의 순서를 변경하려면 **값** 또는 **레이블** 입력란을 클릭하여 항목을 선택한 다음 위쪽 및 아래쪽 화살표 단추를 사용하여 항목을 목록의 위나 아래로 이동합니다.  
   
-    -   **쿼리에서 값 가져오기** 를 클릭하여 이 매개 변수에 대한 값과 필요에 따라 이름을 검색하는 기존 데이터 집합의 이름을 제공합니다.  
+    -   **쿼리에서 값 가져오기**를 클릭하여 이 매개 변수에 대한 값과 필요에 따라 이름을 검색하는 기존 데이터 세트의 이름을 제공합니다.  
   
         > [!IMPORTANT]  
         >  동일한 데이터 세트에 보고서 매개 변수에 대한 해당 쿼리 매개 변수가 있는 경우 보고서를 실행하려고 하면 보고서에서 오류 메시지를 표시합니다. 다른 데이터 세트를 사용하여 값을 검색하면 이 오류를 해결할 수 있습니다.  
   
-         **데이터 집합**에서 데이터 집합의 이름을 선택합니다.  
+         **데이터 세트**에서 데이터 세트의 이름을 선택합니다.  
   
          **값 필드**에서 매개 변수 값을 제공하는 필드의 이름을 선택합니다.  
   

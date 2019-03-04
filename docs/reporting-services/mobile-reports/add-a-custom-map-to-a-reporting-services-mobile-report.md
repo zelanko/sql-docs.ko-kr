@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646961"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291261"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services 모바일 보고서의 사용자 지정 지도 추가
 사용자 지정 지도에는 다음과 같은 두 개의 파일이 필요합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "47646961"
   
 ## <a name="load-a-custom-map"></a>사용자 지정 지도 로드  
   
-1. **레이아웃** 탭에서 지도 유형을 **그라데이션 열 지도**, **범위 중지 열 지도**또는 **거품형 지도**중에서 선택하고 디자인 화면으로 끌어서 원하는 크기로 만듭니다.  
+1. **레이아웃** 탭에서 맵 유형을 **그라데이션 열 지도**, **범위 중지 열 지도**또는 **거품형 지도** 중에서 선택하고 디자인 화면으로 끌어서 원하는 크기로 만듭니다.  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   

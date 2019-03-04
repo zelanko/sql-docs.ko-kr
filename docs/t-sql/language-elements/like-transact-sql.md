@@ -32,12 +32,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7d8bfaf8e2b07bd34843893a67a823e6841b6d6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299990"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331553"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,9 +45,9 @@ ms.locfileid: "54299990"
   > [!div class="nextstepaction"]
   > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
-  특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다. 문자열 데이터 형식의 인수가 하나라도 있을 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 가능한 한 이를 문자열 데이터 형식으로 변환합니다.  
+  특정 문자열이 지정된 패턴과 일치하는지를 확인합니다. 패턴은 일반 문자와 와일드카드 문자를 포함할 수 있습니다. 패턴 일치에서 일반 문자는 문자열에 지정된 문자와 정확하게 일치해야 합니다. 그러나 와일드카드 문자는 문자열에서 어느 한 부분만 일치하면 됩니다. LIKE 연산자에 와일드카드 문자를 사용할 경우 = 및 != 문자열 비교 연산자를 사용하는 것보다 훨씬 융통성이 있습니다. 문자열 데이터 형식의 인수가 하나라도 있을 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 가능할 경우 이를 문자열 데이터 형식으로 변환합니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ match_expression [ NOT ] LIKE pattern
 |[^]|지정된 범위([^a-f]) 또는 집합([^abcdef])에 없는 단일 문자|WHERE au_lname LIKE 'de[^l]%'은 de로 시작하고 이어지는 문자가 l이 아닌 저자의 성을 모두 찾습니다.|  
   
  *escape_character*  
- 와일드카드 문자 앞에 입력하여 와일드카드가 일반 문자로 해석되도록 하는 문자입니다. *escape_character*는 기본값이 없는 문자 식이며 하나의 문자만을 반환해야 합니다.  
+ 와일드카드 문자 앞에 입력하여 와일드카드가 일반 문자로 해석됨을 나타내는 문자입니다. *escape_character*는 기본값이 없는 문자 식이며 하나의 문자만을 반환해야 합니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  
@@ -87,9 +87,9 @@ match_expression [ NOT ] LIKE pattern
  LIKE는 *match_expression*이 지정된 *pattern*과 일치하면 TRUE를 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- LIKE를 사용하여 문자열 비교를 수행할 때는 패턴 문자열의 모든 문자가 의미를 가지며 여기에는 선행 및 후행 공백 역시 포함됩니다. 쿼리에서 비교의 결과로 'abc '(abc 다음에 단일 공백이 옴) 문자열이 있는 행을 모두 반환해야 하면 그 열의 값이 abc인 행(공백 없는 abc)은 반환되지 않습니다. 그러나 패턴과 일치되는 식에 있는 후행 공백은 무시됩니다. 쿼리에서 비교의 결과로 'abc'(공백 없는 abc) 문자열이 있는 행을 모두 반환해야 하면 abc로 시작하고 후행 공백이 0개 이상인 행이 모두 반환됩니다.  
+ LIKE를 사용하여 문자열 비교를 수행할 때는 패턴 문자열의 모든 문자가 의미를 가지며 중요한 문자에는 모든 선행 및 후행 공백이 포함됩니다. 쿼리에서 비교의 결과로 'abc '(abc 다음에 단일 공백이 옴) 문자열이 있는 행을 모두 반환해야 하면 그 열의 값이 abc인 행(공백 없는 abc)은 반환되지 않습니다. 그러나 패턴과 일치되는 식에 있는 후행 공백은 무시됩니다. 쿼리에서 비교의 결과로 'abc'(공백 없는 abc) 문자열이 있는 행을 모두 반환해야 하면 abc로 시작하고 후행 공백이 0개 이상인 행이 모두 반환됩니다.  
   
- **char** 및 **varchar** 데이터를 포함하는 패턴을 사용하는 문자열 비교에서는 데이터의 저장 방식으로 인해 LIKE 비교가 성공하지 못할 수도 있습니다. 각 데이터 형식의 저장 방식과 LIKE 비교가 실패할 수 있는 상황을 이해하는 것이 중요합니다. 다음 예에서는 로컬 **char** 변수를 저장 프로시저에 전달한 다음, 패턴 일치를 사용하여 지정된 문자 집합으로 시작하는 성을 가진 모든 직원을 찾는 방법을 보여 줍니다.  
+ **char** 및 **varchar** 데이터를 포함하는 패턴을 사용하는 문자열 비교에서는 각 데이터 형식에 대한 데이터의 저장 방식으로 인해 LIKE 비교가 성공하지 못할 수도 있습니다. 다음 예에서는 로컬 **char** 변수를 저장 프로시저에 전달한 다음, 패턴 일치를 사용하여 지정된 문자 집합으로 시작하는 성을 가진 모든 직원을 찾는 방법을 보여 줍니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -133,7 +133,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
  ``` 
  
 ## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks are not significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
   
@@ -179,7 +179,7 @@ GO
   
  동적 관리 뷰가 아닌 모든 개체를 보려면 `NOT LIKE 'dm%'`를 사용하세요. 총 32개의 개체가 있고 LIKE로 패턴과 일치하는 이름을 13개 찾는다면 NOT LIKE는 LIKE 패턴과 일치하지 않는 19개의 개체를 찾습니다.  
   
- `LIKE '[^d][^m]%'`와 같은 패턴으로는 항상 동일한 이름을 찾지 못할 수 있습니다. 이 패턴에서는 19개의 이름이 아니라 첫 번째 문자가 `d`이거나 두 번째 문자가 `m`인 이름을 제외하고 동적 관리 뷰 이름도 아닌 14개의 이름을 찾게 됩니다. 이것은 부정적인 와일드카드 문자가 있는 일치 문자열은 하나의 와일드카드씩 단계별로 평가되기 때문입니다. 평가 중에 일치되지 않는 항목은 제거됩니다.  
+ `LIKE '[^d][^m]%'`와 같은 패턴으로는 항상 동일한 이름을 찾지 못할 수 있습니다. 이 패턴에서는 19개의 이름이 아니라 첫 번째 문자가 `d`이거나 두 번째 문자가 `m`인 이름을 제외하고 동적 관리 뷰 이름도 아닌 14개의 이름을 찾게 됩니다. 이 동작은 부정적인 와일드카드 문자가 있는 일치 문자열은 하나의 와일드카드씩 단계별로 평가되기 때문입니다. 평가 중에 일치되지 않는 항목은 제거됩니다.  
   
 ## <a name="using-wildcard-characters-as-literals"></a>와일드카드 문자를 리터럴로 사용  
  와일드카드 패턴 일치 문자를 리터럴 문자로 사용할 수 있습니다. 와일드카드 문자를 리터럴 문자로 사용하려면 와일드카드 문자를 대괄호로 묶으세요. 다음 표에서는 LIKE 키워드와 [ ] 와일드카드 문자를 사용하는 여러 가지 예를 보여 줍니다.  
@@ -198,7 +198,7 @@ GO
 ## <a name="pattern-matching-with-the-escape-clause"></a>ESCAPE 절을 사용한 패턴 일치  
  하나 이상의 특수 와일드카드 문자를 포함하는 문자열을 검색할 수 있습니다. 예를 들어 customers 데이터베이스의 discounts 테이블은 백분율 기호(%)를 포함하는 할인 값을 저장할 수 있습니다. 백분율 기호를 와일드카드 문자가 아닌 일반 문자로 취급하여 검색하려면 ESCAPE 키워드와 이스케이프 문자를 제공해야 합니다. 예를 들어 예제 데이터베이스에는 30%라는 텍스트를 포함하는 comment 열이 있습니다. comment 열의 어느 위치든 30%라는 문자열이 있는 모든 행을 검색하려면 `WHERE comment LIKE '%30!%%' ESCAPE '!'`와 같은 WHERE 절을 지정합니다. ESCAPE 및 이스케이프 문자를 지정하지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 30이라는 문자열이 있는 모든 행을 반환합니다.  
   
- LIKE 패턴에서 이스케이프 문자 뒤에 문자가 없는 경우 해당 패턴은 유효하지 않으며 LIKE는 FALSE를 반환합니다. 이스케이프 문자 뒤에 오는 문자가 와일드카드 문자가 아닌 경우 이스케이프 문자는 무시되고 이스케이프 다음에 오는 문자는 패턴 내의 일반 문자로 처리됩니다. 양쪽 대괄호([ ])로 묶여 있는 백분율 기호(%), 밑줄(_) 및 왼쪽 대괄호([) 와일드카드 문자가 여기에 포함됩니다. 또한 양쪽 대괄호 문자([ ]) 안에서 이스케이프 문자를 사용할 수 있으며 캐럿(^), 하이픈(-) 및 오른쪽 대괄호(])를 이스케이프 처리할 수 있습니다.  
+ LIKE 패턴에서 이스케이프 문자 뒤에 문자가 없는 경우 해당 패턴은 유효하지 않으며 LIKE는 FALSE를 반환합니다. 이스케이프 문자 뒤에 오는 문자가 와일드카드 문자가 아닌 경우 이스케이프 문자는 무시되고 다음에 오는 문자는 패턴 내의 일반 문자로 처리됩니다. 이 문자에는 양쪽 대괄호([ ])로 묶여 있는 백분율 기호(%), 밑줄(_) 및 왼쪽 대괄호([) 와일드카드 문자가 여기에 포함됩니다. 이스케이프 문자는 캐럿(^), 하이픈(-) 및 오른쪽 대괄호(])를 이스케이프 처리하는 것을 포함하여 양쪽 대괄호 문자([ ]) 안에서 사용할 수 있습니다.  
   
  0x0000(**char(0)**)은 Windows 데이터 정렬에서 정의되지 않은 문자이며 LIKE에 포함할 수 없습니다.  
   
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>F. NOT LIKE와 % 와일드카드 문자 사용  
- 다음 예에서는 `DimEmployee` 테이블에서 `612`로 시작하지 않는 모든 전화번호를 찾습니다.  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
+ 다음 예에서는 `DimEmployee` 테이블에서 `612`로 시작하지 않는 모든 전화 번호를 찾습니다.  의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -345,7 +345,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the--wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
- 다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 지역 코드가 전화 번호의 첫 부분이며 추가 문자는 열 값 다음에 존재하므로 % 와일드 카드 문자는 검색 패턴의 마지막에도 포함됩니다.  
+ 다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -362,4 +362,3 @@ ORDER by LastName;
  [기본 제공 함수s&#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE&#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
- 

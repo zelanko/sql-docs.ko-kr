@@ -9,17 +9,17 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c9d7125e0575a5df51baa0594aee39e366b015ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cbce55f34f123c2e615b5ace6c1a1b77b3a494e0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608311"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287481"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 집합의 명명된 데이터 집합입니다. 기본적으로 그룹은 보고서 데이터 세트의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 세트의 서로 다른 뷰를 지정합니다.  
+  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 세트의 명명된 데이터 세트입니다. 기본적으로 그룹은 보고서 데이터 세트의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 세트의 서로 다른 뷰를 지정합니다.  
   
  그룹의 개념을 시각적으로 이해하려면 테이블릭스 데이터 영역의 미리 보기를 보여 주는 다음 그림을 참조하십시오. 이 그림에서 행 그룹은 제품 종류별로 데이터 세트를 범주화하고 열 그룹은 지리적 지역과 연도별로 데이터 세트를 범주화합니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47608311"
  그룹에는 이름 및 지정한 그룹 식 집합이 포함되어 있습니다. 그룹 식 세트는 단일 데이터 세트 필드에 대한 참조이거나 여러 식의 조합일 수 있습니다. 그룹에 여러 식이 있으면 런타임에 그룹 식이 결합되어 그룹의 데이터에 적용됩니다. 예를 들어 날짜 필드를 사용하여 데이터 영역에 있는 데이터를 구성하는 그룹이 있는 경우 런타임에 데이터가 날짜별로 구성된 다음, 각 날짜에 대해 기타 데이터 세트 값이 합계와 함께 표시됩니다.  
   
 ## <a name="when-do-i-create-groups"></a>그룹을 만드는 경우  
- 대부분의 경우 데이터 영역을 디자인할 때 보고서 작성기 및 보고서 디자이너에서 그룹이 자동으로 만들어집니다. 테이블, 행렬 또는 목록의 경우 필드를 그룹화 창으로 끌어 오면 그룹이 만들어집니다. 차트의 경우 필드를 차트 끌어 놓기 영역으로 끌어 오면 그룹이 만들어집니다. 계기의 경우 계기 속성 대화 상자를 사용해야 합니다. 테이블, 행렬 또는 목록의 경우 그룹을 수동으로 만들 수도 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요. 보고서를 만들 때 그룹을 추가하는 방법의 예는 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 또는 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
+ 대부분의 경우 데이터 영역을 디자인할 때 보고서 작성기 및 보고서 디자이너에서 그룹이 자동으로 만들어집니다. 테이블, 행렬 또는 목록의 경우 필드를 그룹화 창으로 끌어 오면 그룹이 만들어집니다. 차트의 경우 필드를 차트 끌어 놓기 영역으로 끌어 오면 그룹이 만들어집니다. 계기의 경우 계기 속성 대화 상자를 사용해야 합니다. 테이블, 행렬 또는 목록의 경우 그룹을 수동으로 만들 수도 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요. 보고서를 만들 때 그룹을 추가하는 방법에 대한 예는 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) 또는 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
   
 ## <a name="how-can-i-modify-a-group"></a>그룹 수정 방법  
  그룹을 만든 후에는 필터/정렬 식, 페이지 나누기 및 범위 관련 데이터를 보관할 그룹 변수와 같은 데이터 영역 관련 속성을 설정할 수 있습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "47608311"
 ### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>테이블릭스 데이터 영역의 그룹: 세부 정보, 행 및 열 그룹  
  이 항목에서 설명한 것처럼 테이블릭스 데이터 영역을 사용하면 데이터를 행 또는 열 단위 그룹으로 구성할 수 있습니다. 그러나 테이블릭스 데이터 영역에는 행 및 열 그룹 이외에도 다양한 그룹이 제공됩니다. 테이블릭스 데이터 영역에는 다음과 같은 유형의 그룹이 있을 수 있습니다.  
   
--   **세부 정보 그룹** 세부 정보 그룹은 보고서 작성기 또는 보고서 디자이너가 데이터 집합 및 데이터 영역 필터를 적용한 후 보고서 데이터 집합의 모든 데이터로 구성됩니다. 따라서 세부 정보 그룹은 그룹 식이 없는 유일한 그룹입니다.  
+-   **세부 정보 그룹** 세부 정보 그룹은 보고서 작성기 또는 보고서 디자이너가 데이터 세트 및 데이터 영역 필터를 적용한 후 보고서 데이터 세트의 모든 데이터로 구성됩니다. 따라서 세부 정보 그룹은 그룹 식이 없는 유일한 그룹입니다.  
   
      기본적으로 세부 정보 그룹은 쿼리 디자이너에서 데이터 세트 쿼리를 실행할 때 표시할 데이터를 지정합니다. 예를 들어 판매 주문 테이블의 모든 열을 검색하는 쿼리를 사용하는 경우 이 세부 정보 그룹의 데이터는 테이블의 모든 열에 대한 각 행의 모든 값을 포함합니다. 이 세부 정보 그룹의 데이터는 이전에 만들었던 모든 계산된 데이터 세트 필드에 대한 값도 포함합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47608311"
   
      데이터 영역에 대한 그룹을 만들 때 보고서 작성기 및 보고서 디자이너는 데이터 영역에 행 또는 열을 자동으로 추가하고 이러한 행 또는 열을 사용하여 그룹 데이터를 표시합니다.  
   
--   **재귀 계층 구조 그룹** 재귀 계층 구조 그룹은 여러 계층 수준을 포함하는 단일 보고서 데이터 집합으로부터 데이터를 구성합니다. 예를 들어 재귀 계층 구조 그룹은 [Employee]에 보고하는 [Employee]와 같은 조직 계층을 표시할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이러한 종류의 보고서 데이터에 대한 그룹을 만들 수 있는 그룹 속성과 기본 제공 함수를 제공합니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
+-   **재귀 계층 구조 그룹** 재귀 계층 구조 그룹은 여러 계층 수준을 포함하는 단일 보고서 데이터 세트로부터 데이터를 구성합니다. 예를 들어 재귀 계층 구조 그룹은 [Employee]에 보고하는 [Employee]와 같은 조직 계층을 표시할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이러한 종류의 보고서 데이터에 대한 그룹을 만들 수 있는 그룹 속성과 기본 제공 함수를 제공합니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
   
  다음 목록에는 각 데이터 영역에 대한 그룹의 작업 방법이 요약되어 있습니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47608311"
   
  그룹을 추가한 후에는 데이터 영역의 행 및 열 핸들이 그룹 멤버 자격에 따라 변경됩니다. 그룹을 삭제한 후에는 그룹 정의만 삭제하거나 그룹과 그룹에 연결된 모든 행 및 열을 삭제할 수 있습니다. 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
- 정보 또는 그룹 데이터의 계산에 표시하거나 사용할 데이터를 제한하려면 그룹에서 필터를 설정합니다. 자세한 내용은 [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)를 참조하세요.  
+ 정보 또는 그룹 데이터의 계산에 표시하거나 사용할 데이터를 제한하려면 그룹에서 필터를 설정합니다. 자세한 내용은 [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)을 참조하세요.  
   
  기본적으로 그룹을 만들 때 그룹의 정렬 식은 그룹 식과 같은 식입니다. 정렬 순서를 변경하려면 정렬 식을 변경합니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)를 참조하세요.  
   

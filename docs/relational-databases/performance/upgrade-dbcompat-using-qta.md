@@ -1,7 +1,7 @@
 ---
 title: 쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317803"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295671"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "54317803"
 
 이 업그레이드에 대한 제어는 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)이 도입된 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]를 통해 더 개선되었으며, 위에 나온 권장되는 워크플로의 마지막 단계를 자동화할 수 있습니다.
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 새로운 [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)의 *SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성 유지* 섹션에 설명된 대로 새로운 **QTA(쿼리 튜닝 길잡이)** 기능은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장되는 워크플로를 안내합니다. 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18부터 새로운 [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)의 *SQL Server의 최신 버전으로 업그레이드하는 동안 성능 안정성 유지* 섹션에 설명된 대로 새로운 **QTA(쿼리 튜닝 길잡이)** 기능은 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 업그레이드하는 동안 성능 안정성을 유지하기 위해 사용자에게 권장되는 워크플로를 안내합니다. 그러나 QTA는 권장 워크플로의 마지막 단계에 나와 있는 대로 이전에 알려진 좋은 계획으로 롤백되지 않습니다. 대신에, QTA는 [쿼리 저장소 **회귀된 쿼리** ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) 보기에 있는 회귀를 추적하고 새롭고 더 나은 계획을 생성할 수 있도록 적용 가능한 최적화 모델 변형의 가능한 순열을 반복합니다.
 
 > [!IMPORTANT]
 > QTA는 사용자 워크로드를 생성하지 않습니다. 애플리케이션에서 사용되지 않는 환경에서 QTA를 실행하는 경우 대상 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 다른 방법으로 대표 테스트 워크로드를 계속 실행할 수 있는지 확인합니다. 

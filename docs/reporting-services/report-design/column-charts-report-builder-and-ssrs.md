@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5e9f5a56eed71745cdabef1e528d9fdab6e71170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ddc125d91802441f0788f4beaca0369d40b5c01
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709001"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285961"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>세로 막대형 차트(보고서 작성기 및 SSRS)
   세로 막대형 차트에서 계열은 범주별로 그룹화된 일련의 세로 막대로 표시됩니다. 세로 막대형 차트는 기간에 따라 변경되는 데이터를 표시하거나 항목 간 차이를 설명하는 데 유용하게 사용할 수 있습니다. 일반 세로 막대형 차트는 가로 막대 집합으로 계열을 표시하는 가로 막대형 차트 및 시작점과 끝점이 다양한 세로 막대 집합으로 계열을 표시하는 범위형 세로 막대 차트와 밀접하게 연관되어 있습니다. 자세한 내용은 [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) 및 [범위형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md)를 참조하세요.  

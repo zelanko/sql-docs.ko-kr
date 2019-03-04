@@ -15,17 +15,17 @@ ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5b2028b4cd7e59e207f0045e00ef8f3e9a346b24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026614"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154768"
 ---
 # <a name="query-method-xml-data-type"></a>query() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **xml** 데이터 형식의 인스턴스에 대해 XQuery를 지정합니다. 결과는 **xml** 형식이 됩니다. 이 메서드는 형식화되지 않은 XML의 인스턴스를 반환합니다.  
+**xml** 데이터 형식의 인스턴스에 대해 XQuery를 지정합니다. 결과는 **xml** 형식이 됩니다. 이 메서드는 형식화되지 않은 XML의 인스턴스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,16 +35,16 @@ query ('XQuery')
 ```  
   
 ## <a name="arguments"></a>인수  
- XQuery  
- 문자열인 XQuery 식으로 XML 인스턴스에서 요소, 특성 같은 XML 노드를 쿼리합니다.  
+XQuery  
+문자열인 XQuery 식으로 XML 인스턴스에서 요소, 특성 같은 XML 노드를 쿼리합니다.  
   
 ## <a name="examples"></a>예  
- 이 섹션에서는 **xml** 데이터 형식의 query() 메서드를 사용하는 예를 보여 줍니다.  
+이 섹션에서는 **xml** 데이터 형식의 query() 메서드를 사용하는 예를 보여 줍니다.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>1. xml 형식 변수에 대해 query() 메서드 사용  
- 다음 예에서는 **xml** 형식의 **@myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
+다음 예에서는 **xml** 형식의 **@myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
   
- 쿼리에서는 <`ProductDescription`> 요소의 <`Features`> 자식 요소를 검색합니다.  
+쿼리에서는 <`ProductDescription`> 요소의 <`Features`> 자식 요소를 검색합니다.  
   
 ```  
 declare @myDoc xml  
@@ -59,7 +59,7 @@ set @myDoc = '<Root>
 SELECT @myDoc.query('/Root/ProductDescription/Features')  
 ```  
   
- 다음은 결과입니다.  
+다음 출력에는 다음 결과가 표시됩니다.  
   
 ```  
 <Features>  
@@ -69,7 +69,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>2. XML 형식 열에 대해 query() 메서드 사용  
- 다음 예에서는 **query()** 메서드를 사용하여 **AdventureWorks** 데이터베이스에서 **xml** 형식의 **CatalogDescription** 열에 XQuery를 지정합니다.  
+다음 예에서는 **query()** 메서드를 사용하여 **AdventureWorks** 데이터베이스에서 **xml** 형식의 **CatalogDescription** 열에 XQuery를 지정합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -83,15 +83,15 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
      /PD:ProductDescription/PD:Features/wm:Warranty ') = 1  
 ```  
   
- 이전 쿼리에서 다음을 유의하세요.  
+이전 쿼리에서 다음 항목을 유의하세요.  
   
--   CatalogDescription 열은 형식화된 **xml** 열입니다. 즉, 이 열에 연결된 스키마 컬렉션이 있다는 의미입니다. [XQuery 프롤로그](../../xquery/modules-and-prologs-xquery-prolog.md)에서는 **namespace** 키워드를 사용하여 나중에 쿼리 본문에 사용될 접두사를 정의합니다.  
+-   CatalogDescription 열은 형식화된 **xml** 열입니다. 즉, 이 열에 연결된 스키마 컬렉션이 있다는 의미입니다. [XQuery 프롤로그](../../xquery/modules-and-prologs-xquery-prolog.md)에서는 **namespace** 키워드가 나중에 쿼리 본문에 사용될 접두사를 정의합니다.  
   
 -   **query()** 메서드는 **ProductModelID** 특성이 있는 XML <`Product`> 요소를 생성하는데, 이 경우 **ProductModelID** 특성 값을 데이터베이스에서 검색합니다. XML 생성에 대한 자세한 내용은 [XML 생성&#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)을 참조하세요.  
   
--   WHERE 절의 [exist() 메서드(XML 데이터 형식)](../../t-sql/xml/exist-method-xml-data-type.md)를 사용하여 XML에서 <`Warranty`> 요소를 포함하는 행만 찾습니다. 다시 **namespace** 키워드를 사용하여 두 개의 네임스페이스 접두사를 정의합니다.  
+-   WHERE 절의 [exist() 메서드(XML 데이터 형식)](../../t-sql/xml/exist-method-xml-data-type.md)는 XML에서 <`Warranty`> 요소를 포함하는 행만 찾습니다. 다시 **namespace** 키워드는 두 개의 네임스페이스 접두사를 정의합니다.  
   
- 다음은 결과의 일부입니다.  
+다음 출력에는 다음 일부 결과가 표시됩니다.  
   
 ```  
 <Product ProductModelID="19"/>   
@@ -99,7 +99,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
 ...  
 ```  
   
- query() 메서드와 exist() 메서드는 모두 PD 접두사를 선언합니다. 이 경우 WITH XMLNAMESPACES를 사용하여 접두사를 먼저 정의하고 쿼리에서 이를 사용할 수 있습니다.  
+query() 메서드와 exist() 메서드는 모두 PD 접두사를 선언합니다. 이 경우 WITH XMLNAMESPACES를 사용하여 접두사를 먼저 정의하고 쿼리에서 이를 사용할 수 있습니다.  
   
 ```  
 WITH XMLNAMESPACES 

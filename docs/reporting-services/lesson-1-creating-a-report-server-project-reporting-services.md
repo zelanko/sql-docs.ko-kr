@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383658"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292351"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
 
@@ -67,7 +67,7 @@ ms.locfileid: "49383658"
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     보고서 디자이너는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 실행되는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]구성 요소로, 두 개의 뷰, 즉 **디자인** 및 **미리 보기**뷰가 있습니다. 뷰를 변경하려면 각 탭을 클릭해야 합니다.  
+     보고서 디자이너는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 실행되는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]구성 요소로, 두 개의 뷰, 즉 **디자인** 및 **미리 보기** 뷰가 있습니다. 뷰를 변경하려면 각 탭을 클릭해야 합니다.  
   
     **보고서 데이터** 창에서 데이터를 정의합니다. **디자인** 뷰에서는 보고서 레이아웃을 정의합니다. 보고서를 실행하고 **미리 보기** 뷰에서 보고서의 모양을 볼 수 있습니다.  
   

@@ -23,14 +23,14 @@ f1_keywords:
 - "10527"
 - sql13.rtp.rptdesigner.shared.layervisibility.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b84b6a3d89e1112bd7026909b7ff9bb6bae14902
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ddcfeaa62662fecef5e1b201bb81c2ce547c011
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029832"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293070"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "50029832"
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선**또는 **다각형**중에서 추가할 계층의 유형을 클릭합니다.  
+2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선** 또는 **다각형** 중에서 추가할 계층의 유형을 클릭합니다.  
   
     > [!NOTE]  
     >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서에서 마법사를 시작하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "50029832"
   
     1.  **분석 데이터**를 클릭합니다.  
   
-    2.  **분석 데이터 집합**에서 분석 데이터와 공간 데이터 간의 관계를 만드는 일치 필드와 분석 데이터가 포함된 데이터 집합의 이름을 클릭합니다.  
+    2.  **분석 데이터 세트**에서 분석 데이터와 공간 데이터 간의 관계를 만드는 일치 필드와 분석 데이터가 포함된 데이터 세트의 이름을 클릭합니다.  
   
     3.  **추가**를 클릭합니다.  
   
@@ -150,17 +150,17 @@ ms.locfileid: "50029832"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="DatasetField"></a> 보고서 데이터 집합 필드를 공간 데이터의 원본으로 지정하려면  
+##  <a name="DatasetField"></a> 보고서 데이터 세트 필드를 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
 2.  계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터**를 클릭합니다.  
   
-3.  **다음의 공간 데이터 사용**에서 **데이터 집합의 공간 필드**를 선택합니다.  
+3.  **다음의 공간 데이터 사용**에서 **데이터 세트의 공간 필드**를 선택합니다.  
   
-4.  **데이터 집합 이름**에서 원하는 공간 데이터가 포함된 보고서의 데이터 집합 이름을 클릭합니다.  
+4.  **데이터 세트 이름**에서 원하는 공간 데이터가 포함된 보고서의 데이터 세트 이름을 클릭합니다.  
   
-5.  **공간 필드 이름**에서 공간 데이터가 포함된 데이터 집합의 필드 이름을 클릭합니다.  
+5.  **공간 필드 이름**에서 공간 데이터가 포함된 데이터 세트의 필드 이름을 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -250,6 +250,6 @@ ms.locfileid: "50029832"
   
 ## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

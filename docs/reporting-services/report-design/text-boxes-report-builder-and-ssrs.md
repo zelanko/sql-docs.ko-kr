@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ccfc1e3c3c455a191d6a4a76c6e44a8df0289aee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815481"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294659"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>입력란(보고서 작성기 및 SSRS)
   일반적으로 입력란은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint 같이 화면상에서 텍스트가 들어 있는 독립 실행형 상자로 인식되는 경우가 많습니다. [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에도 이와 같은 입력란이 있으며, 여기에는 제목, 설명 및 레이블이나 식 기반의 동적 텍스트와 같은 정적 텍스트를 표시할 수 있습니다. 그러나 테이블 또는 행렬(테이블릭스 데이터 영역)의 모든 셀에는 보고서의 독립 실행형 입력란과 같은 방법으로 서식을 지정할 수 있는 입력란도 포함되어 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "47815481"
   
  방향은 입력란에 대해 설정되며 입력란의 모든 텍스트에 적용됩니다. 입력란의 일부에 대해 다른 방향을 지정할 수는 없습니다.  
   
- 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)의 텍스트 회전 섹션 및 [입력란 방향 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)을 참조하세요.  
+ 시작하려면 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)의 텍스트 회전 섹션 및 [텍스트 상자 방향 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [입력란 추가, 이동 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

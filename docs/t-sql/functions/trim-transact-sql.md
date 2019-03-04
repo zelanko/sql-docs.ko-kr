@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a7854b2419b3644c2f3c76cd96cccc06bfae2902
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 54cc66f79a8be279543fa57d987d2a8ecbac1190
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299620"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331573"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ string
 양쪽에서 공백 문자 `char(32)` 또는 기타 지정되지 않은 문자가 제거되는 문자열 인수 형식의 문자 식을 반환합니다. 입력 문자열이 `NULL`인 경우 `NULL`을 반환합니다.
 
 ## <a name="remarks"></a>Remarks   
-기본적으로 `TRIM` 함수는 양쪽에서 공백 문자 `char(32)`를 제거합니다. `LTRIM(RTRIM(@string))`와 같습니다. 지정된 문자가 포함된 `TRIM ` 함수의 동작은 시작 또는 끝의 문자가 빈 문자열로 대체되는 `REPLACE` 함수의 동작과 동일합니다.
+기본적으로 `TRIM` 함수는 양쪽에서 공백 문자 `char(32)`를 제거합니다. 이 동작은 `LTRIM(RTRIM(@string))`과 동일합니다. 지정된 문자가 포함된 `TRIM ` 함수의 동작은 시작 또는 끝의 문자가 빈 문자열로 대체되는 `REPLACE` 함수의 동작과 동일합니다.
 
 
 ## <a name="examples"></a>예
@@ -84,4 +84,5 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
  [RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT&#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
- [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+

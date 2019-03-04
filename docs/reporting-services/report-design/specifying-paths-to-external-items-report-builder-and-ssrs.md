@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ac18d2a20d6f7f791b14b3e174ce87bef694cd19
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce654cc4724a71be36e49be71bdaf64994812567
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812189"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293482"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
   드릴스루 보고서, 하위 보고서 및 이미지 파일과 같이 보고서 서버에 저장되어 있고 보고서 정의 파일 외부에 있는 항목을 참조하기 위해 보고서 항목 속성에 경로를 지정할 수 있습니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "51812189"
   
 -   **항목에 대한 전체 경로.**  
   
-    -   **보고서 서버에서:** 경로는 홈 폴더인 **/** 부터 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
+    -   **보고서 서버:** 경로는 홈 폴더인 **/** 에서 시작합니다. 예를 들면 /Reports/AllSubreports/Subreport1과 같은 형태입니다.  
   
-    -   **SharePoint 사이트에서:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="https://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
+    -   **SharePoint 사이트:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="https://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

@@ -25,25 +25,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8781f155f96fa9e80270eaf6f75f2438eae4549
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 84d93cc811e48d6de6b2f06ac8c30f2f10b7219d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299480"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265329"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT 및 UNPIVOT 사용
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
+> [!div class="nextstepaction"]
+> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
-  `PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식의 한 열에 포함된 여러 고유 값을 출력에서 여러 열로 변환하여 테이블 반환 식을 회전하고 최종 출력에서 남은 열 값 중 원하는 값에 대해 필요에 따라 집계를 수행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 연산을 수행합니다.  
+`PIVOT` 및 `UNPIVOT` 관계 연산자를 사용하여 테이블 반환 식을 다른 테이블로 변경할 수 있습니다. `PIVOT`은 식의 한 열에 포함된 여러 고유 값을 출력에서 여러 열로 변환하여 테이블 반환 식을 회전하고 최종 출력에서 남은 열 값 중 원하는 값에 대해 필요에 따라 집계를 실행합니다. `UNPIVOT`은 테이블 반환 식의 열을 열 값으로 회전하여 PIVOT과 반대되는 작업을 수행합니다.  
   
- `PIVOT`에 대한 구문은 복잡한 일련의 `SELECT...CASE` 문에서 지정할 수 있는 구문과 달리 단순하고 읽기 쉬운 구문을 제공합니다. `PIVOT` 구문에 대한 자세한 내용은 [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
+`PIVOT`에 대한 구문은 복잡한 일련의 `SELECT...CASE` 문에서 지정할 수 있는 구문과 달리 단순하고 읽기 쉬운 구문을 제공합니다. `PIVOT` 구문에 대한 자세한 내용은 [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
- 다음 구문은 `PIVOT` 연산자의 사용 방법을 요약합니다.  
+다음 구문은 `PIVOT` 연산자의 사용 방법을 요약합니다.  
   
 ```  
 SELECT <non-pivoted column>,  
@@ -70,7 +70,7 @@ FOR
 
   
 ## <a name="basic-pivot-example"></a>기본 PIVOT 예  
- 다음 코드 예제에서는 4개의 행이 있는 2열 테이블을 생성합니다.  
+다음 코드 예제에서는 4개의 행이 있는 2열 테이블을 생성합니다.  
   
 ```sql
 USE AdventureWorks2014 ;  
@@ -81,20 +81,20 @@ GROUP BY DaysToManufacture;
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
- DaysToManufacture AverageCost
- ----------------- -----------
- 0                 5.0885
- 1                 223.88
- 2                 359.1082
- 4                 949.4105
- ```
+```
+DaysToManufacture AverageCost
+----------------- -----------
+0                 5.0885
+1                 223.88
+2                 359.1082
+4                 949.4105
+```
   
- 3일 `DaysToManufacture`에 대해 정의된 제품은 없습니다.  
+3일 `DaysToManufacture`에 대해 정의된 제품은 없습니다.  
   
- 다음 코드는 같은 결과를 표시하지만 `DaysToManufacture` 값이 열 제목이 되도록 피벗됩니다. 또한 결과가 `[3]`이라도 `NULL`일에 대한 열을 제공합니다.  
+다음 코드는 같은 결과를 표시하지만 `DaysToManufacture` 값이 열 제목이 되도록 피벗됩니다. 또한 결과가 `[3]`이라도 `NULL`일에 대한 열을 제공합니다.  
   
 ```sql
 -- Pivot table with one row and five columns  
@@ -111,7 +111,7 @@ FOR DaysToManufacture IN ([0], [1], [2], [3], [4])
   
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Cost_Sorted_By_Production_Days 0           1           2           3           4         
@@ -120,7 +120,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ```
   
 ## <a name="complex-pivot-example"></a>복잡한 PIVOT 예  
- 일반적으로 교차 집계 보고서를 생성하여 데이터를 요약하려는 경우 `PIVOT`을 사용하면 유용합니다. 예를 들어 `PurchaseOrderHeader` 예제 데이터베이스의 `AdventureWorks2014` 테이블을 쿼리하여 특정 직원의 구매 주문 수를 파악하려고 합니다. 다음 쿼리에서는 이 보고서를 공급업체별로 제공합니다.  
+일반적으로 교차 집계 보고서를 생성하여 데이터 요약을 제공하려는 경우 `PIVOT`을 사용하면 유용합니다. 예를 들어 `PurchaseOrderHeader` 예제 데이터베이스의 `AdventureWorks2014` 테이블을 쿼리하여 특정 직원의 구매 주문 수를 파악하려고 합니다. 다음 쿼리에서는 이 보고서를 공급업체별로 제공합니다.  
   
 ```sql
 USE AdventureWorks2014;  
@@ -138,7 +138,7 @@ FOR EmployeeID IN
 ORDER BY pvt.VendorID;  
 ```  
   
- 다음은 결과 집합의 일부입니다.  
+다음은 결과 집합의 일부입니다.  
   
 ```
 VendorID    Emp1        Emp2        Emp3        Emp4        Emp5  
@@ -150,19 +150,19 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
 1500        3           4           4           5           4
 ```
   
- 이 하위 SELECT 문에서 반환하는 결과는 `EmployeeID` 열에서 피벗됩니다.  
+이 하위 SELECT 문에서 반환하는 결과는 `EmployeeID` 열에서 피벗됩니다.  
   
 ```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
   
- 이는 `EmployeeID` 열에서 반환하는 각 고유 값이 최종 결과 집합의 필드가 됨을 의미합니다. 이에 따라 피벗 절에 지정된 각 `EmployeeID` 번호에 대해 열이 제공되며 여기서는 직원 `164`, `198`, `223`, `231` 및 `233`에 대해 열이 하나씩 제공됩니다. `PurchaseOrderID` 열은 최종 출력에 반환되는 열(그룹화 열)을 그룹화하는 기준 값 열로 사용됩니다. 이 경우 그룹화 열은 `COUNT` 함수로 집계됩니다. `PurchaseOrderID` 열에 표시되는 Null 값이 각 직원에 대한 `COUNT` 계산 시 사용되지 않았다는 경고 메시지가 나타납니다.  
+`EmployeeID` 열에서 반환하는 고유 값이 최종 결과 집합의 필드가 됩니다. 이와 같이 피벗 절에 지정된 각 `EmployeeID` 번호에 대해 열이 제공되며 여기서는 직원 `164`, `198`, `223`, `231` 및 `233`에 대해 열이 하나씩 제공됩니다. `PurchaseOrderID` 열은 최종 출력에 반환되는 열(그룹화 열)을 그룹화하는 기준 값 열로 사용됩니다. 이 경우 그룹화 열은 `COUNT` 함수로 집계됩니다. `PurchaseOrderID` 열에 표시되는 Null 값이 각 직원에 대한 `COUNT` 계산 시 사용되지 않았다는 경고 메시지가 나타납니다.  
   
 > [!IMPORTANT]  
 >  집계 함수에 `PIVOT`을 사용하면 집계 계산 시 값 열의 모든 NULL 값이 사용되지 않습니다.  
   
- `UNPIVOT`은 열을 행으로 회전하여 `PIVOT`과 거의 반대되는 연산을 수행합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이는 추가로 두 열을 식별해야 함을 의미합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 포함될 열을 `Orders`라고 합니다. 이 두 열은 각각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의에서 *pivot_column*과 *value_column*에 해당합니다. 쿼리는 다음과 같습니다.  
+`UNPIVOT`은 열을 행으로 회전하여 `PIVOT`과 거의 반대되는 작업을 수행합니다. 위의 예에서 생성된 테이블이 데이터베이스에 `pvt`로 저장되어 있는 상태에서 `Emp1`, `Emp2`, `Emp3`, `Emp4` 및 `Emp5` 열 식별자를 특정 공급업체에 해당하는 행 값으로 회전하려고 한다고 가정합니다. 이와 같이 두 개의 추가 열을 식별 해야 합니다. 회전하는 열 값(`Emp1`, `Emp2`,...)이 포함될 열을 `Employee`라고 하며 회전할 열 아래의 현재 값이 존재하는 열을 `Orders`라고 합니다. 이 두 열은 각각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의에서 *pivot_column*과 *value_column*에 해당합니다. 쿼리는 다음과 같습니다.  
   
 ```sql
 -- Create the table and insert values as portrayed in the previous example.  
@@ -187,7 +187,7 @@ UNPIVOT
 GO  
 ```  
   
- 다음은 결과 집합의 일부입니다.  
+다음은 결과 집합의 일부입니다.  
   
 ```
 VendorID    Employee    Orders
@@ -205,12 +205,11 @@ VendorID    Employee    Orders
 ...
 ```
   
- `UNPIVOT`이 `PIVOT`의 정반대는 아닙니다. `PIVOT`은 집계를 수행하고 출력에서 가능한 여러 행을 단일 행으로 병합합니다. 행이 병합되었기 때문에 `UNPIVOT`은 원래 테이블 반환 식 결과를 다시 생성하지 않습니다. 또한 `UNPIVOT` 입력의 NULL 값은 출력에 나타나지 않지만 `PIVOT` 연산 전 입력에 원래 NULL 값이 있을 수 있습니다.  
+`UNPIVOT`이 `PIVOT`의 정반대는 아닙니다. `PIVOT`은 집계를 수행하고 출력에서 가능한 여러 행을 단일 행으로 병합합니다. 행이 병합되었기 때문에 `UNPIVOT`은 원래 테이블 반환 식 결과를 다시 생성하지 않습니다. 또한 `UNPIVOT` 입력에 있는 Null 값이 출력에 나타나지 않습니다. 값이 나타나지 않으면 이는 `PIVOT` 작업 전에 입력에 원래 Null 값이 있었을 수 있음을 나타냅니다.  
   
- [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Sales.vSalesPersonSalesByFiscalYears` 뷰는 `PIVOT`을 사용하여 각 영업 사원의 총 매출액을 회계 연도별로 반환합니다. 뷰를 스크립팅하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기**에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 **뷰** 폴더에서 뷰를 찾습니다. 뷰 이름을 마우스 오른쪽 단추로 클릭한 다음, **뷰 스크립팅**을 선택합니다.  
+[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Sales.vSalesPersonSalesByFiscalYears` 뷰는 `PIVOT`을 사용하여 각 영업 사원의 총 매출액을 회계 연도별로 반환합니다. 뷰를 스크립팅하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **개체 탐색기**에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 **뷰** 폴더에서 뷰를 찾습니다. 뷰 이름을 마우스 오른쪽 단추로 클릭한 다음, **뷰 스크립팅**을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
- [CASE(Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
-  
+[FROM(Transact-SQL)](../../t-sql/queries/from-transact-sql.md)   
+[CASE(Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)  
   

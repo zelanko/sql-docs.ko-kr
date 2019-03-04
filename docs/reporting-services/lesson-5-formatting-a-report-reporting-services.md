@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8b04fa0c468c9e18264809f69ea42797ba83b452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c5a41b39b5c22c05ac4b13a9e57606110b60a2b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842631"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291111"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: 보고서 서식 지정(Reporting Services)
 이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  
   
 ## <a name="bkmk_format_date"></a>날짜 서식 지정  

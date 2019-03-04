@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813966"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295911"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Work with simulated data in Reporting Services mobile reports
 디자인 화면에 갤러리 요소를 추가하면 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 에서 해당 요소에 대해 시뮬레이션 데이터를 즉시 생성합니다. 이 데이터는 모바일 보고서를 만들 때 다양하고 유용한 목적으로 활용할 수 있습니다.   
@@ -26,7 +26,7 @@ ms.locfileid: "51813966"
   
 시뮬레이션 데이터는 특정 모바일 보고서 디자인의 데이터 요구 사항을 정확히 나타내는 템플릿을 제공합니다.   
   
--  데이터 뷰의 오른쪽 상단에 있는 **모든 데이터 내보내기**를 클릭합니다.   
+-  데이터 뷰의 오른쪽 상단에 있는 **모든 데이터 내보내기** 를 클릭합니다.   
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 는 시뮬레이션 데이터가 포함된 Excel 문서를 생성하여 실제 데이터로 빠르게 대체하고 즉시 내보낼 수 있습니다.   
   
@@ -38,7 +38,7 @@ ms.locfileid: "51813966"
   
 모든 컨트롤이 실제 데이터에 연결되면 더 이상 사용하지 않는 시뮬레이션 테이블은 모바일 보고서에서 자동으로 제거됩니다. 디자인 화면에서 요소가 참조하고 있는 시뮬레이션 테이블은 제거할 수 없습니다.  
   
->**참고**: 시뮬레이션 데이터는 모바일 보고서와 함께 serialize되지 않고 런타임에 즉시 생성되므로 전체 모바일 보고서의 크기에 추가되지 않습니다.  
+>**참고**: 시뮬레이션 데이터는 모바일 보고서와 함께 직렬화되지 않고 런타임에 즉시 생성되므로 전체 모바일 보고서의 크기에 추가되지 않습니다.  
   
 ### <a name="see-also"></a>관련 항목:  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

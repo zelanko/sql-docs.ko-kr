@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 34f72ecac1c06752748490d60ed8d9444975f0cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3b332d8470c9a7502a168863a48b08c4d3f24e47
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689841"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285361"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 계기 범위가 계기에서 값의 중요한 하위 섹션을 나타내는 계기 눈금의 영역입니다. 계기 범위를 사용하여 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타낼 수 있습니다. 범위는 시작 값과 끝 값으로 정의됩니다.  

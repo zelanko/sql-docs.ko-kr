@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8d64ad789bd1061541528ad6ff5e07797b6f9a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f6d7b6081950e06af35852a2c9eeef1ca0827845
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759451"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288001"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]에서 테이블을 사용하여 정보 데이터나 그룹화된 데이터 또는 두 데이터의 조합을 페이지가 매겨진 보고서에 표시할 수 있습니다.   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712554"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297401"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
 
@@ -39,7 +39,7 @@ SQL Server Reporting Services는 고객이 보고서를 만들고, 게시하고,
 SQL Server Reporting Services는 업데이트된 제품군을 제공합니다.
 
 * **"기존의" 페이지를 매긴 보고서**는 최신 상태로 전환되므로 보고서를 만드는 업데이트된 도구 및 새 기능을 사용하여 현대적인 모양의 보고서를 만들 수 있습니다.
-* **새 모바일 보고서** 보고서를 보유하는 다양한 장치 및 다양한 방식에 맞게 조정되는 반응형 레이아웃을 사용합니다.
+* **새 모바일 보고서** 보고서를 보유하는 다양한 디바이스 및 다양한 방식에 맞게 조정되는 반응형 레이아웃을 사용합니다.
 * **최신 웹 포털** 모든 최신 브라우저에서 볼 수 있습니다. 새 포털에서 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 KPI를 구성하고 표시할 수 있습니다. 포털에서 Excel 통합 문서를 저장할 수도 있습니다.
 
 각각에 대한 자세한 내용은 계속 읽어보세요.
@@ -63,7 +63,7 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 * 모든 기본 스타일 및 색상표를 업데이트하여 기본적으로 최소화된 새로운 현대적 스타일로 보고서를 만들 수 있습니다.
 * 매개 변수 창을 업데이트하여 원하는 방식대로 매개 변수를 정렬할 수 있습니다.
 * PowerPoint 같은 새로운 형식으로 내보낼 수 있습니다. PowerPoint의 Reporting Services 시각화는 스크린샷이 아니라 라이브이고 편집 가능합니다.
-* 하이브리드 Power BI/Reporting Services 환경을 만들 수 있습니다. Power BI에서 온-프레미스 Reporting Services 보고서를 다시 만들지 않고 해당 보고서의 시각적 개체를 Power BI 대시보드에 고정할 수 있습니다. 그런 다음 Power BI 대시보드의 한 곳에서 모든 항목을 모니터링할 수 있습니다.
+* 하이브리드 Power BI/Reporting Services 환경을 만들 수 있습니다.  Power BI에서 온-프레미스 Reporting Services 보고서를 다시 만들지 않고 해당 보고서의 시각적 개체를 Power BI 대시보드에 고정할 수 있습니다. 그런 다음 Power BI 대시보드의 한 곳에서 모든 항목을 모니터링할 수 있습니다.
 
 ## <a name="mobile-reports"></a>모바일 보고서
 
@@ -83,7 +83,7 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 고유한 사용자 지정 브랜딩을 웹 포털에 적용할 수 있습니다. 또한 웹 포털에서 바로 KPI를 만들 수 있습니다. KPI는 보고서를 열지 않고도 주요 비즈니스 메트릭을 한번에 브라우저에 표시할 수 있습니다. 
 
-새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Microsoft Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
+새 웹 포털은 보고서 관리자를 완전히 다시 작성한 것입니다. 이제 이 웹 포털은 Edge, Internet Explorer 10 및 11, Chrome, Firefox, Safari, 모든 주요 브라우저 등 최신 브라우저가 최적화된 단일 페이지의 표준 기반 HTML5 앱입니다.
 
 웹 포털의 콘텐츠는 Reporting Services 모바일 및 페이지를 매긴 보고서 및 KPI, Excel 통합 문서, 공유 데이터 세트 및 보고서의 문서 블록으로 사용할 공유 데이터 원본 등 종류별로 구성됩니다. 여기, 기존 폴더 계층 구조에서 안전하게 저장하고 관리할 수 있습니다. 즐겨찾기에 태그를 지정할 수 있으며, 해당 역할이 있는 경우 콘텐츠를 관리할 수 있습니다.
 
@@ -99,7 +99,7 @@ SharePoint 통합 모드의 Reporting Services에 보고서를 게시합니다. 
 
 ## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능을 활용하면 사용자 지정 응용 프로그램에서 데이터 및 보고서 처리 기능을 통합하거나 확장하는 API를 통해 보고 기능을 확장하고 사용자 지정할 수 있습니다.
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능을 활용하면 사용자 지정 애플리케이션에서 데이터 및 보고서 처리 기능을 통합하거나 확장하는 API를 통해 보고 기능을 확장하고 사용자 지정할 수 있습니다.
 
 [Reporting Services 개발자 설명서](../reporting-services/reporting-services-developer-documentation.md)를 참조하세요. 
 

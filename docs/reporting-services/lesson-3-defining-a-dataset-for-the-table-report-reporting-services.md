@@ -6,27 +6,27 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bec3fb7737cd8621952dc71cbad80c0af5159151
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516976"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292929"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services)
-데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
+데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 세트*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
   
 보고서 디자이너의 쿼리 디자이너를 사용하여 데이터 세트를 디자인할 수 있습니다. 이 자습서에서는 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스에서 판매 주문 정보를 검색하는 쿼리를 만듭니다.  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>보고서 데이터에 대한 Transact-SQL 쿼리를 정의하려면  
   
-1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트...** 를 클릭합니다. **데이터 집합 속성** 대화 상자가 열립니다.  
+1.  **보고서 데이터** 창에서 **새로 만들기**를 클릭한 다음, **데이터 세트...** 를 클릭합니다. **데이터 세트 속성** 대화 상자가 열립니다.  
   
 2.  **이름** 상자에 **AdventureWorksDataset**을 입력합니다.  
   
-3.  **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
+3.  **내 보고서에 포함된 데이터 세트 사용**을 클릭합니다.  
   
 4.  이전 단원 [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]에서 만든 데이터 원본을 선택합니다.   
 5. **쿼리 유형** 으로 **텍스트**를 선택합니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "52516976"
   
 8.  **확인** 을 클릭하여 쿼리 디자이너를 종료합니다.  
   
-9.  **확인** 을 클릭하여 **데이터 집합 속성** 대화 상자를 종료합니다.  
+9.  **확인**을 클릭하여 **데이터 세트 속성** 대화 상자를 종료합니다.  
   
-    **AdventureWorksDataset** 데이터 집합 및 필드가 보고서 데이터 창에 나타납니다.  
+    **AdventureWorksDataset** 데이터 세트 및 필드가 보고서 데이터 창에 나타납니다.  
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>다음 태스크  

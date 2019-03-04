@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 158e149e79ead95e31cc4e04b598a51effabc38a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2692701cc1aeda7ce4870c9f09a2ef502fce4d0f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816581"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288022"
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>행렬 만들기(보고서 작성기 및 SSRS)
   행렬을 사용하여 그룹화된 데이터 및 요약 정보를 표시할 수 있습니다. 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 행렬은 크로스탭 및 피벗 테이블과 비슷한 기능을 제공합니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면서 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀의 값으로는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 행 및 열의 서식을 지정하여 강조하려는 데이터를 강조 표시할 수 있습니다. 또한 처음에 정보 데이터를 숨기는 드릴다운 토글을 포함할 수도 있습니다. 사용자는 필요한 경우 이 토글을 클릭하여 내용을 자세히 또는 간략히 볼 수 있습니다.  

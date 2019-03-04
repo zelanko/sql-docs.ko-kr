@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712354"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298388"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>자습서: 기본 테이블 보고서 만들기(보고서 작성기)
 이 자습서에서는 예제 판매 데이터를 기반으로 기본 테이블 보고서를 만드는 방법을 배웁니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "52712354"
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-이 자습서에 소요되는 예상 시간: 20분  
+이 자습서에 소요되는 예상 시간: 20분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -33,9 +33,9 @@ ms.locfileid: "52712354"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52712354"
   
 ### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
   
-1.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
+1.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 선택한 후, **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
 2.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   

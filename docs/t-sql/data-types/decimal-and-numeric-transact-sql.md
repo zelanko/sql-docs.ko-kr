@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 029e026134f29f2aba56fd37566f384b8d35ccf5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5238c7dba330074f9802fa30b631edba09d3b552
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015499"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231050"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 및 numeric(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "56015499"
 고정 전체 자릿수 및 소수 자릿수 값입니다. 최대 전체 자릿수를 사용하는 경우 유효한 값은 - 10^38 + 1부터 10^38 - 1까지입니다. 국제 표준화 기구에서 정한 **decimal**의 동의어는 **dec** 및 **dec(**_p_, _s_**)** 입니다. **numeric**은 **decimal**과 기능적으로 동일합니다.
   
 p(전체 자릿수)  
-소수점 왼쪽과 오른쪽에 저장할 최대 전체 자릿수입니다. 전체 자릿수 값은 1에서 최대 전체 자릿수인 38 사이여야 합니다. 기본 전체 자릿수는 18입니다.
+저장할 최대 총 10진 숫자 수입니다. 이 수에는 소수점 왼쪽과 오른쪽이 둘 다 포함됩니다. 전체 자릿수 값은 1에서 최대 전체 자릿수인 38 사이여야 합니다. 기본 전체 자릿수는 18입니다.
   
 > [!NOTE]  
 >  Informatica는 지정된 전체 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 *s* (소수 자릿수)  
-소수점 오른쪽에 저장할 소수 자릿수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 합니다. 소수 자릿수는 전체 자릿수를 지정한 경우에만 지정할 수 있습니다. 기본 소수 자릿수는 0입니다. 따라서 0 <= *s* \<= *p*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.
+소수점 오른쪽에 저장되는 10진 숫자 수입니다. *p*에서 이 숫자를 빼서 소수점 왼쪽의 최대 자릿수가 결정됩니다. 소수 자릿수 값은 0에서 *p* 사이여야 하고 전체 자릿수가 지정된 경우에만 지정합니다. 기본 소수 자릿수는 0이므로, 0 <= *s* \<= *p*입니다. 전체 자릿수에 따라 최대 저장소 크기가 달라집니다.
   
 |전체 자릿수|스토리지 크기(바이트)|  
 |---|---|
@@ -63,18 +63,18 @@ p(전체 자릿수)
 >  Informatica(SQL Server PDW Informatica Connector를 통해 연결)는 지정된 최대 자릿수 및 소수 자릿수와 상관없이 16 유효 자릿수만 지원합니다.  
   
 ## <a name="converting-decimal-and-numeric-data"></a>decimal 및 numeric 데이터 변환
-**decimal** 및 **numeric** 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 자릿수와 소수 자릿수의 각 특정 조합을 다른 데이터 형식으로 간주합니다. 예를 들어 **decimal(5,5)** 및 **decimal(5,0)** 은 다른 데이터 형식으로 간주됩니다.
+**decimal** 및 **numeric** 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 전체 자릿수와 소수 자릿수의 각 조합을 다른 데이터 형식으로 간주합니다. 예를 들어 **decimal(5,5)** 및 **decimal(5,0)** 은 다른 데이터 형식으로 간주됩니다.
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 소수점이 있는 상수는 필요한 최소 전체 자릿수 및 소수 자릿수를 사용하여 **numeric** 데이터 값으로 자동 변환됩니다. 예를 들어 상수 12.345는 전체 자릿수가 5이고 소수 자릿수가 3인 **numeric** 값으로 변환됩니다.
   
 **decimal** 또는 **numeric**에서 **float** 또는 **real**로 변환할 경우 전체 자릿수가 일부 손실될 수 있습니다. **int**, **smallint**, **tinyint**, **float**, **real**, **money** 또는 **smallmoney**에서 **decimal** 또는 **numeric**으로 변환할 경우 오버플로가 발생할 수 있습니다.
   
-기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 숫자를 전체 자릿수 및 소수 자릿수가 낮은 **decimal** 또는 **numeric** 값으로 변환할 때 반올림을 사용합니다. 그러나 SET ARITHABORT 옵션이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오버플로가 발생할 때 오류를 일으킵니다. 전체 자릿수 및 소수 자릿수의 손실만으로는 오류가 발생하지 않습니다.
+기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 숫자를 전체 자릿수 및 소수 자릿수가 낮은 **decimal** 또는 **numeric** 값으로 변환할 때 반올림을 사용합니다. 반대로, SET ARITHABORT 옵션이 ON이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오버플로가 발생할 때 오류를 일으킵니다. 전체 자릿수 및 소수 자릿수의 손실만으로는 오류가 발생하지 않습니다.
   
 float 또는 real 값을 decimal 또는 numeric으로 변환하는 경우 10진수 값은 17자리를 넘을 수 없습니다. 5E-18보다 작은 모든 float 값은 항상 0으로 변환됩니다.
   
 ## <a name="examples"></a>예  
-다음 예에서는 **decimal** 및 **numeric** 데이터 형식을 사용하여 테이블을 만듭니다.  값이 각 열에 삽입되고 SELECT 문을 사용해서 결과가 반환됩니다.
+다음 예에서는 **decimal** 및 **numeric** 데이터 형식을 사용하여 테이블을 만듭니다.  값은 각 열에 삽입됩니다. 결과는 SELECT 문을 사용하여 반환됩니다.
   
 ```sql
 CREATE TABLE dbo.MyTable  
@@ -110,5 +110,4 @@ MyDecimalColumn                         MyNumericColumn
 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)
-  
   

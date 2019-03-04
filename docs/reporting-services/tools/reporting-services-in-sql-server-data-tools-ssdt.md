@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292331"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
 
@@ -54,9 +54,9 @@ ms.locfileid: "52403008"
   
 -   **데이터 원본** 데이터 원본은 데이터 원본의 이름 및 이 원본에 대한 연결을 나타냅니다.  
   
--   **데이터 집합** 각 데이터 집합은 데이터 원본에서 검색할 데이터를 지정하는 쿼리를 포함합니다. 데이터 세트를 확장하여 데이터 세트 쿼리로 지정된 필드 컬렉션을 볼 수 있습니다.  
+-   **데이터 세트** 각 데이터 세트는 데이터 원본에서 검색할 데이터를 지정하는 쿼리를 포함합니다. 데이터 세트를 확장하여 데이터 세트 쿼리로 지정된 필드 컬렉션을 볼 수 있습니다.  
   
-     다차원 데이터 세트에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 세트가 자동으로 만들어집니다.  기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)를 참조하세요.  
+     다차원 데이터 세트에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 세트가 자동으로 만들어집니다.  기본적으로 이러한 데이터 세트는 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 세트 표시&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)을 참조하세요.  
   
 -   **보고서 매개 변수** 보고서 매개 변수 목록입니다. 매개 변수는 데이터 세트 쿼리에 쿼리 매개 변수가 포함되면 수동이나 자동으로 만들어질 수 있습니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "52403008"
   
 -   **매개 변수가 있는 보고서 미리 보기** 보고서를 미리 보면 모든 보고서 매개 변수에 유효한 기본값이 있는 경우 해당 보고서가 자동으로 처리됩니다. 하나 이상의 보고서 매개 변수에 유효한 기본값이 없는 경우에는 할당되지 않은 각 매개 변수의 값을 선택한 다음 보고서 도구 모음에서 **보고서 보기**를 클릭해야 합니다.  
   
--   **로컬 데이터 캐시 이해** 보고서를 미리 보면 보고서 처리기는 현재 매개 변수 기본값을 사용하여 보고서에 있는 데이터 집합에 대한 모든 쿼리를 실행하고 결과를 로컬 데이터 캐시 파일(.rdl.data)로 저장합니다. 보고서 데이터 세트 쿼리 또는 보고서 매개 변수를 변경하지 않을 경우 이 데이터를 다시 검색하는 오버헤드를 발생시키지 않고 계속해서 보고서를 디자인할 수 있습니다.  
+-   **로컬 데이터 캐시 이해** 보고서를 미리 보면 보고서 처리기는 현재 매개 변수 기본값을 사용하여 보고서에 있는 데이터 세트에 대한 모든 쿼리를 실행하고 결과를 로컬 데이터 캐시 파일(.rdl.data)로 저장합니다. 보고서 데이터 세트 쿼리 또는 보고서 매개 변수를 변경하지 않을 경우 이 데이터를 다시 검색하는 오버헤드를 발생시키지 않고 계속해서 보고서를 디자인할 수 있습니다.  
   
 -   **구성 관리자 및 디버깅을 사용하여 보고서 미리 보기** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 프로젝트 속성으로 보고서 배포 및 디버깅 방법을 정의합니다. 이러한 속성은 프로젝트에 있는 모든 보고서 및 공유 데이터 원본에 적용됩니다. 프로젝트 속성을 설정하려면 **프로젝트** 메뉴에서 **속성**을 클릭합니다. 이러한 속성을 사용하여 보고서를 테스트하고 보고서 서버에 게시할 수 있습니다.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "52403008"
   
 -   **보고서 속성**   **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
   
--   **뷰** 보고서 디자이너의 디자인 탭과 미리 보기 탭 간에 전환합니다.  
+-   **뷰** 보고서 디자이너의 [디자인] 탭과 [미리 보기] 탭 간에 전환합니다.  
   
 -   **페이지 머리글** 보고서에서 페이지 머리글을 추가하거나 삭제합니다. 페이지 머리글을 삭제하면 페이지 머리글의 모든 항목이 삭제됩니다.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "52403008"
   
 -   **도구 모음**   **보고서 테두리** 및 **보고서 서식**을 비롯한 보고서 디자이너 기능을 지원하는 도구 모음을 표시하려면 이 옵션을 사용합니다. 자세한 내용은 [보고서 디자이너 도구 모음](#bkmk_ReportDesignerToolbars)을 참조하십시오.  
   
--   **보고서 데이터** 보고서 매개 변수, 데이터 원본, 데이터 집합, 이미지를 추가할 수 있는 보고서 데이터 창을 표시하려면 이 옵션을 사용합니다.  
+-   **보고서 데이터** 보고서 매개 변수, 데이터 원본, 데이터 세트, 이미지를 추가할 수 있는 보고서 데이터 창을 표시하려면 이 옵션을 사용합니다.  
   
 ###  <a name="ProjectMenu"></a> 프로젝트 메뉴  
  **프로젝트** 메뉴를 사용하여 프로젝트에 있는 공유 데이터 원본 및 보고서를 관리할 수 있습니다. 프로젝트에서 항목을 추가하거나 제거하면 솔루션 탐색기에서 프로젝트 항목의 계층 표시가 자동으로 업데이트됩니다.  
@@ -209,7 +209,7 @@ ms.locfileid: "52403008"
   
 -   **기존 항목 추가** 프로젝트에 기존 공유 데이터 원본 또는 기존 보고서를 추가합니다.  
   
--   **보고서 가져오기** Microsoft Access와 같은 다른 응용 프로그램에서 보고서를 가져옵니다.  
+-   **보고서 가져오기** Microsoft Access와 같은 다른 애플리케이션에서 보고서를 가져옵니다.  
   
 -   **프로젝트에서 제외** 프로젝트에서 항목을 제외합니다. 이 옵션을 사용해도 파일 시스템에서 해당 항목이 삭제되지는 않습니다.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "52403008"
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 응용 프로그램을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 애플리케이션을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
   
 -   OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder 및 TargetServerURL의 프로젝트 속성  
   

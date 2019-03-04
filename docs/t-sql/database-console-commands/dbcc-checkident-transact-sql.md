@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: de18602606fb380bc8b87eb7dcb18b84febf658e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636281"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154871"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT(*table_name*, NORESEED)|현재 ID 값을 다시 설정하지 않습니다. DBCC CHECKIDENT는 ID 열의 현재 ID 값과 현재 최대값을 반환합니다. 두 값이 같지 않으면 ID 값을 다시 설정하여 잠재적 오류를 방지하고 값이 간격 없이 순서대로 지정되도록 해야 합니다.|  
 |DBCC CHECKIDENT(*table_name*)<br /><br /> 로 구분하거나 여러<br /><br /> DBCC CHECKIDENT( *table_name*, RESEED )|테이블의 현재 ID 값이 ID 열에 저장된 최대 ID 값보다 작을 경우 ID 열의 최대값을 사용하여 다시 설정됩니다. 뒷부분에 나오는 '예외' 섹션을 참조하십시오.|  
-|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다.<br /><br /> 행이 테이블에 있는 경우에 다음 행에 *new_reseed_value* 값이 삽입됩니다. 버전 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 이전 버전에서 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다.<br /><br /> 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> - ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> - PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
+|DBCC CHECKIDENT(*table_name*, RESEED, *new_reseed_value*)|현재 ID 값이 *new_reseed_value*로 설정됩니다. 테이블이 생성된 후 삽입된 행이 없거나 TRUNCATE TABLE 문을 사용하여 모든 행을 제거한 경우에는 DBCC CHECKIDENT를 실행한 후에 처음 삽입되는 행이 *new_reseed_value*를 ID로 사용하게 됩니다.<br /><br /> 행이 테이블에 있는 경우에 다음 행에 *new_reseed_value* 값 + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값이 삽입됩니다. 버전 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 이전 버전에서 삽입된 다음 행은 *new_reseed_value* + [현재 증분](../../t-sql/functions/ident-incr-transact-sql.md) 값을 사용합니다.<br /><br /> 테이블이 비어 있지 않은 경우 ID 값을 ID 열의 최대값보다 작은 숫자로 설정하면 다음 조건 중 하나가 발생할 수 있습니다.<br /><br /> - ID 열에 PRIMARY KEY 또는 UNIQUE 제약 조건이 있으면 생성된 ID 값이 기존값과 충돌하므로 나중에 테이블에 삽입 작업을 수행할 때 오류 메세지 2627이 생성됩니다.<br /><br /> - PRIMARY KEY 또는 UNIQUE 제약 조건이 없으면 나중에 삽입 작업을 수행할 때 중복 ID 값이 생성됩니다.|  
   
 ## <a name="exceptions"></a>예외  
  다음 표에서는 DBCC CHECKIDENT가 자동으로 현재 ID 값을 다시 설정하지 않는 조건을 보여 주고 해당 값을 다시 설정하는 방법을 제공합니다.  
@@ -135,7 +135,7 @@ GO
   
 ```  
   
-### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>3. 현재 ID 값을 새로운 값으로 설정  
+### <a name="c-forcing-the-current-identity-value-to-a-new-value"></a>C. 현재 ID 값을 새로운 값으로 설정  
  다음 예에서는 `AddressTypeID` 테이블에 있는 `AddressType` 열의 현재 ID 값을 10으로 강제 설정합니다. 이 테이블에는 기존 행이 있으므로 다음에 삽입되는 행은 열에 대해 정의된 현재 새 증분 값에 1을 더한 11을 값으로 사용합니다.  
   
 ```  
@@ -145,7 +145,7 @@ DBCC CHECKIDENT ('Person.AddressType', RESEED, 10);
 GO  
   
 ```  
-### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>4. 빈 테이블에 ID 값 다시 설정
+### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 빈 테이블에 ID 값 다시 설정
  다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLog` 테이블의 `ErrorLogID` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
   
 ```  

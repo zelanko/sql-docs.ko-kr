@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030672"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284592"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -28,11 +28,11 @@ ms.locfileid: "50030672"
   
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
-|String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
-|Boolean|기본값: 부울|  
+|String|기본값: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|기본값: Boolean|  
 |정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|기본값: 날짜/시간<br /><br /> DateTimeOffset|  
-|부동|기본값: Double<br /><br /> Single, Decimal|  
+|DateTime|기본값: DateTime<br /><br /> DateTimeOffset|  
+|float|기본값: Double<br /><br /> Single, Decimal|  
 |이진|기본값: Byte[]|  
 |Variant|Byte[]를 제외한 위의 모든 항목|  
 |VariantArray|Variant의 배열|  
@@ -72,7 +72,7 @@ ms.locfileid: "50030672"
 >  DateTime 데이터 형식인 보고서 매개 변수는 밀리초를 지원하지 않습니다. 밀리초가 포함된 값을 기반으로 하는 매개 변수를 만들 수 있지만 사용 가능한 값 드롭다운 목록에서 밀리초가 포함된 날짜 또는 시간 값이 들어 있는 값을 선택할 수는 없습니다.  
   
 ## <a name="writing-expressions-that-convert-data-types-or-extract-parts-of-data"></a>데이터 형식을 변환하거나 데이터의 일부를 추출하는 식 작성  
- 연결 연산자(&)를 사용하여 텍스트와 데이터 집합 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 세트 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
+ 연결 연산자(&amp;)를 사용하여 텍스트와 데이터 세트 필드를 조합하는 경우 CLR(공용 언어 런타임)에서는 일반적으로 기본 형식을 제공합니다. 데이터 세트 필드 또는 매개 변수를 특정 데이터 형식으로 명시적으로 변환해야 하는 경우에는 CLR 메서드 또는 Visual Basic 런타임 라이브러리 함수를 사용하여 데이터를 변환해야 합니다.  
   
  다음 표에서는 데이터 형식의 변환 예를 보여 줍니다.  
   
@@ -114,13 +114,13 @@ ms.locfileid: "50030672"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM` (2007년 7월 6일 오후 4:07)입니다.  
+         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 **DateTime** 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
   
  문자열을 **DateTime** 데이터 형식으로 변환하는 방법은 MSDN의 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 Culture의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704)및 [Choosing Between DateTime, DateTimeOffset및 TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조하세요.  
   
 -   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 세트에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수로 날짜 및 시간 값을 독립적으로 추출하여 별도의 열을 만들도록 보고서 데이터 집합 쿼리를 변경합니다. 다음 예제에서는 **DatePart** 함수를 사용하여 연도에 대한 열과 분으로 변환된 UTC 표준 시간대에 대한 열을 추가하는 방법을 보여 줍니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수로 날짜 및 시간 값을 독립적으로 추출하여 별도의 열을 만들도록 보고서 데이터 세트 쿼리를 변경합니다. 다음 예제에서는 **DatePart** 함수를 사용하여 연도에 대한 열과 분으로 변환된 UTC 표준 시간대에 대한 열을 추가하는 방법을 보여 줍니다.  
   
      `SELECT`  
   

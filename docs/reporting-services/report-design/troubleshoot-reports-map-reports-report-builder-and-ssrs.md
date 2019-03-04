@@ -1,21 +1,21 @@
 ---
-title: '보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS) | Microsoft Docs'
+title: '보고서 문제 해결: 맵 보고서(보고서 작성기 및 SSRS) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7688e1c082c250933054a9c510c8f8ecf7be3423
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100394"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297285"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
     
    ## <a name="need-more-help"></a>도움이 더 필요하세요?  

@@ -6,19 +6,19 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789931"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285511"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션 - 데이터 세트 필드 컬렉션 참조(보고서 작성기)
   보고서의 각 데이터 세트에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 세트 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 세트를 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  
   
- 식의 단순 필드 참조가 디자인 화면에 단순 식으로 표시됩니다. 예를 들어 보고서 데이터 창의 `Sales` 필드를 디자인 화면의 테이블 셀로 끌어 오면 `[Sales]` 가 표시됩니다. 이는 Value 입력란 속성에 설정된 `=Fields!Sales.Value` 기본 식을 나타냅니다. 보고서를 실행하면 보고서 처리기에서 이 식을 계산하고 테이블 셀의 입력란에 있는 데이터 원본의 실제 데이터를 표시합니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) 및 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
+ 식의 단순 필드 참조가 디자인 화면에 단순 식으로 표시됩니다. 예를 들어 보고서 데이터 창의 `Sales` 필드를 디자인 화면의 테이블 셀로 끌어 오면 `[Sales]` 가 표시됩니다. 이는 Value 입력란 속성에 설정된 `=Fields!Sales.Value` 기본 식을 나타냅니다. 보고서를 실행하면 보고서 처리기에서 이 식을 계산하고 테이블 셀의 입력란에 있는 데이터 원본의 실제 데이터를 표시합니다. 자세한 내용은 [식&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md) 및 [데이터 세트 필드 컬렉션&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -90,6 +90,6 @@ End Function
   
 ## <a name="see-also"></a>참고 항목  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
+ [보고서 데이터 세트&amp;#40;SSRS&amp;#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

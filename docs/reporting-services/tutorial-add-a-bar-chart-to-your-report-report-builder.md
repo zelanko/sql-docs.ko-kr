@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712444"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296167"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
-이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
+이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
 
 가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "52712444"
   
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 집합을 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 집합을 만들고 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
-이 자습서에 소요되는 예상 시간: 15분  
+이 자습서에 소요되는 예상 시간: 15분.  
   
 ## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
@@ -49,13 +49,13 @@ ms.locfileid: "52712444"
   
      ![보고서 작성기 시작](../reporting-services/media/rb-getstarted.png "보고서 작성기 시작")  
   
-     **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 집합** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다. 
+     **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 세트** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다. 
       
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52712444"
   
 2.  **가로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
-    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014의 4개 필드가 있습니다.  
+    **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2015 및 SalesYear2014 필드가 있습니다.  
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52712444"
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  차트 맨 위의 **차트 제목** 단어를 선택하고 **Sales for 2014 and 2015**를 입력합니다.  
+2.  차트 맨 위의 **차트 제목** 단어를 선택한 다음, **Sales for 2014 and 2015**를 입력합니다.  
   
 3.  속성 창에서 제목이 선택된 상태로 **색** 을 **검정** 으로, **FontSize** 를 **12pt**로 설정합니다. 
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 209e4ad60eb364a0cbc1ac873dd04af62fa986e3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a597a7cf808028127e6c04d991e20bf7b83bc51
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030842"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292321"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
   연계 매개 변수를 사용하면 대량의 보고서 데이터를 관리할 수 있습니다. 한 매개 변수의 값 목록이 다른 매개 변수에서 선택한 값에 따라 달라지는 관련 매개 변수 집합을 정의할 수 있습니다. 예를 들어 첫 번째 매개 변수가 제품 범주 목록을 나타내는 독립적인 매개 변수이고 사용자가 범주를 선택하면 두 번째 매개 변수가 첫 번째 매개 변수의 값에 종속됩니다. 즉, 두 번째 매개 변수의 값이 선택된 범위 내 하위 범주의 목록으로 업데이트됩니다. 사용자가 보고서를 볼 때 범주 및 하위 범주 매개 변수 모두에 대한 값으로 보고서 데이터가 필터링됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "50030842"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 데이터 원본의 이름을 선택하거나 **새로 만들기** 를 클릭하여 데이터 원본을 새로 만듭니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "50030842"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 이름이 1단계에서 선택한 데이터 원본의 이름인지 확인합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "50030842"
   
 4.  **쿼리에서 값 가져오기**를 클릭합니다. 세 개의 필드가 나타납니다.  
   
-5.  **데이터 집합**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 집합의 이름을 클릭합니다.  
+5.  **데이터 세트**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 세트의 이름을 클릭합니다.  
   
 6.  **값** 필드에서 매개 변수 값을 제공하는 필드의 이름을 클릭합니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "50030842"
   
 1.  보고서 데이터 창에서 데이터 원본을 마우스 오른쪽 단추로 클릭한 다음, **데이터 세트 추가**를 클릭합니다.  
   
-2.  **이름**에 데이터 집합의 이름을 입력합니다.  
+2.  **이름**에 데이터 세트의 이름을 입력합니다.  
   
 3.  **데이터 원본**에서 이름이 1단계에서 선택한 데이터 원본의 이름인지 확인합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "50030842"
   
 4.  **쿼리에서 값 가져오기**를 클릭합니다.  
   
-5.  **데이터 집합**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 집합의 이름을 클릭합니다.  
+5.  **데이터 세트**의 드롭다운 목록에서, 이전 절차에서 만든 데이터 세트의 이름을 클릭합니다.  
   
 6.  **값** 필드에서 매개 변수 값을 제공하는 필드의 이름을 클릭합니다.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "50030842"
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [보고서 포함된 데이터 세트 및 공유 데이터 세트&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

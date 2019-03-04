@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: bfb9b14f518b20cd318cd6a532ca96787bfbfe31
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711362"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286071"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
 
-  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
+  이 자습서에서는 마법사를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 페이지가 매겨진 보고서로 원형 차트를 만듭니다. 그런 다음 백분율을 추가하고 원형 차트를 약간 수정합니다. 
   
 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 결과는 동일하며 이 그림의 원형 차트와 같은 원형 차트가 만들어집니다.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "52711362"
   
      ![보고서 작성기 시작](../../reporting-services/media/rb-getstarted.png "보고서 작성기 시작")  
   
-     **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 집합** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다.  
+     **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 세트** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭한 다음 **만들기**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -144,13 +144,13 @@ ms.locfileid: "52711362"
      **시작** 대화 상자가 나타납니다.  
   
     > [!NOTE]  
-    >  **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 집합** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다.  
+    >  **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 세트** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭한 다음 **만들기**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   

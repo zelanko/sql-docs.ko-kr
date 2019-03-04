@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710734"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293642"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>자습서: 보고서에 원형 차트 추가(보고서 작성기)
 이 자습서에서는 페이지가 매겨진 Reporting Services 보고서에 원형 차트를 만듭니다. 백분율을 추가하고 작은 조각을 한 조각으로 결합합니다.
@@ -27,7 +27,7 @@ ms.locfileid: "52710734"
 원형 차트에 데이터 요소가 너무 많으면 데이터 요소 레이블이 복잡해져서 가독성이 떨어질 수 있습니다. 이 경우 여러 개의 작은 조각을 하나의 큰 조각으로 결합하는 것이 좋습니다. 데이터를 몇 개의 데이터 요소로 집계하면 원형 차트를 더 쉽게 읽을 수 있습니다.  
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 추가하고 데이터 집합을 추가하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 추가하고 데이터 집합을 추가하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 이 자습서에 소요되는 예상 시간: 10분  
   
@@ -40,15 +40,15 @@ ms.locfileid: "52710734"
   
 1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 열립니다.  
   
-    **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
+    **새 보고서 또는 데이터 세트** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 &gt; **새로 만들기**를 클릭합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 세트 선택** 페이지에서 **데이터 세트 만들기**를 클릭한 후, **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   

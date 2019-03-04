@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607695"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298551"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)
   수식은 보고서 모델을 데이터 원본으로 사용하는 보고서의 값에 대해 수행되는 계산입니다. 보고서 모델 데이터 원본의 쿼리를 정의할 때 보고서 모델 쿼리 디자이너의 **수식 정의 대화 상자** 에서 수식을 정의합니다. 수식에는 함수, 연산자, 상수 그리고 필드나 엔터티에 대한 참조가 포함될 수 있습니다. 수식을 사용하면 숫자 데이터 및 텍스트 데이터를 결합, 집계, 필터링 및 계산할 수 있습니다. 수식을 만들어 새 필드로 저장하거나 기존 필드의 수식을 수정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "47607695"
  **텍스트 연결 연산자.** 앰퍼샌드(&)를 사용하여 하나 이상의 텍스트 문자열을 결합 또는 연결하여 단일 텍스트로 만들 수 있습니다.  
   
 ##  <a name="Constants"></a> 상수  
- 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기에서는 **True**, **False**, 및 **Empty**같은 상수를 사용합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
+ 상수는 계산되지 않는 값이므로 변경되지 않습니다. 보고서 작성기에서는 **True**, **False** 및 **Empty**라는 상수를 사용합니다. 부울 필드를 평가할 때 이러한 상수를 사용합니다. 예를 들어 IsDiscontinued라는 필드가 있다고 가정합니다. 이 필드에 대해 유일하게 유효한 값은 True, False 또는 Empty(" ")입니다.  
   
 ##  <a name="Functions"></a> 함수  
  함수는 특정한 순서로 지정된 *인수*라고 하는 특정한 값을 사용하여 계산을 수행하는 미리 정의된 수식입니다. 인수는 리터럴 값 또는 필드이거나 둘을 결합한 것일 수 있습니다. 수식에 필드를 사용하는 경우 필드 이름은 필드의 각 인스턴스를 나타냅니다. 인수가 리터럴 값인 경우 특정 문자를 사용하여 그 인수가 리터럴 값임을 나타내야 할 수 있습니다.  

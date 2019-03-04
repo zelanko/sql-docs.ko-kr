@@ -16,14 +16,14 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2197d120799041cb679453b6b6a1c3dc2070e7d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef017892d128fc1287c13fbfe893ba7973dab729
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287701"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
 차트 데이터 영역을 사용하는 방법에 대해 읽고 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 읽는 사용자가 한 눈에 집계된 많은 양의 데이터를 이해할 수 있도록 합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "52507607"
 ### <a name="adding-series-grouping-to-a-chart"></a>차트에 계열 그룹화 추가  
  계열 그룹 영역에 필드를 추가한 경우 계열 수는 해당 필드에 포함된 데이터에 따라 달라집니다. 이전 예제에서 계열 그룹 영역에 Year 필드를 추가한다고 가정해 보겠습니다. Year 필드의 값 수에 따라 차트에 나타날 계열 수가 결정됩니다. Year 필드에 2004년, 2005년 및 2006년이 포함된 경우 차트에는 값 영역의 모든 필드에 대해 세 개의 계열이 표시됩니다.  
   
-##  <a name="DatasetConsiderations"></a> 차트를 만들기 전의 데이터 집합 고려 사항  
+##  <a name="DatasetConsiderations"></a> 차트를 만들기 전의 데이터 세트 고려 사항  
  차트는 데이터에 대한 요약 보기를 제공합니다. 그러나 데이터 세트가 큰 경우에는 차트의 정보가 가려지거나 알아볼 수 없게 표시될 수 있습니다. 누락된 또는 Null 데이터 요소, 차트 종류에 맞지 않는 데이터 형식, 차트와 테이블을 조합하는 등의 고급 애플리케이션은 모두 차트의 가독성에 영향을 미칠 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 디자인하기 전에 신중하게 데이터를 준비하고 이해해야 합니다.  
   
  보고서에 포함할 수 있는 차트의 수에는 제한이 없습니다. 차트는 행렬 또는 테이블 등의 다른 데이터 영역과 마찬가지로 단일 데이터 세트에 바인딩됩니다. 여러 데이터 세트를 같은 차트에 표시하려면 차트에 데이터를 추가하기 전에 SQL 쿼리에서 JOIN 또는 UNION 문을 사용하는 추가 데이터 세트를 만듭니다. JOIN 및 UNION 문에 대한 자세한 내용은 온라인 설명서나 다른 SQL 참조를 참조하십시오.  
@@ -123,7 +123,7 @@ ms.locfileid: "52507607"
  [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  차트 종류 결합, 보조 축 사용, 여러 차트 종류 지정, 여러 차트 영역 사용 등 동일한 차트에 여러 계열을 표시하는 방법을 다양하게 소개합니다.  
   
- [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  동일한 보고서 데이터 세트의 여러 데이터 보기를 제공합니다.  
   
  [차트에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  

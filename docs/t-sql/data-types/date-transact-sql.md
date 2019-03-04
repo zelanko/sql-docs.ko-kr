@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018155"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287183"
 ---
 # <a name="date-transact-sql"></a>date(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "56018155"
 |구문|**date**|  
 |사용법|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1(Column1 **date**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|YYYY-MM-DD<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
-|범위|0001-01-01부터 9999-12-31까지(Informatica의 경우 1582-10-15부터 9999-12-31)<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지(Informatica의 경우 CE 1582년 10월 15일부터 CE 9999년 12월 31일까지)|  
+|범위|0001-01-01부터 9999-12-31까지(Informatica의 경우 1582-10-15부터 9999-12-31)<br /><br /> CE(서기) 1년 1월 1일부터 CE 9999년 12월 31일까지(Informatica의 경우 CE 1582년 10월 15일부터 CE 9999년 12월 31일까지)|  
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다. Informatica의 경우, YYYY는 1582에서 9999까지의 범위로 제한됩니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 특정 월의 일을 나타냅니다.|  
 |문자 길이|10자리|  
 |전체 자릿수, 소수 자릿수|10, 0|  
@@ -64,11 +64,11 @@ ms.locfileid: "56018155"
   
 |알파벳|설명|  
 |------------------|-----------------|  
-|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy]yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon**은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
+|mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon**은 현재 언어에서 지정된 월의 전체 이름 또는 약어를 나타냅니다. 쉼표는 선택 사항이며 대문자는 무시됩니다.<br /><br /> 모호성을 피하려면 4자리 연도를 사용하세요.<br /><br /> 일이 생략된 경우 해당 월의 첫째 날이 사용됩니다.|  
   
 |ISO 8601|설명|  
 |--------------|----------------|  
-|YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 표준과 같습니다. 이는 유일하게 국제 표준으로 정의된 형식입니다.|  
+|YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 표준과 같습니다. 이 형식은 유일하게 국제 표준으로 정의된 형식입니다.|  
   
 |구분되지 않음|설명|  
 |-----------------|-----------------|  
@@ -80,7 +80,7 @@ ms.locfileid: "56018155"
   
 |W3C XML 형식|설명|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|XML/SOAP을 사용할 경우 지원됩니다.<br /><br /> TZD는 표준 시간대 지정자(Z나 +hh:mm 또는 -hh:mm)입니다.<br /><br /> - hh:mm은 표준 시간대 오프셋을 나타냅니다. hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br />- MM은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.<br />- +(더하기) 또는 -(빼기)는 표준 시간대 오프셋의 필수 기호입니다. 이는 현지 시간을 가져오기 위해 UTC(Coordinated Universal Time)에서 표준 시간대 오프셋을 더했는지 또는 뺐는지를 나타냅니다. 올바른 표준 시간대 오프셋 범위는 -14:00에서 +14:00 사이입니다.|  
+|yyyy-mm-ddTZD|XML/SOAP을 사용할 경우 지원됩니다.<br /><br /> TZD는 표준 시간대 지정자(Z나 +hh:mm 또는 -hh:mm)입니다.<br /><br /> - hh:mm은 표준 시간대 오프셋을 나타냅니다. hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br />- MM은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.<br />- +(더하기) 또는 -(빼기)는 표준 시간대 오프셋의 필수 기호입니다. 이 기호는 현지 시간을 가져오기 위해 UTC(협정 세계시)에서 표준 시간대 오프셋을 더했는지 또는 뺐는지를 나타냅니다. 올바른 표준 시간대 오프셋 범위는 -14:00에서 +14:00 사이입니다.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI 및 ISO 8601 호환성  
 **날짜**는 일반 달력에 대한 ANSI SQL 표준 정의를 준수합니다. "NOTE 85 - Datetime 데이터 형식을 사용하면 일반 달력 형식의 날짜를 0001–01–01 CE에서 9999-12-31 CE 사이에 속하는 날짜 범위에 저장할 수 있습니다."를 따릅니다.
@@ -104,7 +104,8 @@ ms.locfileid: "56018155"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 날짜 및 시간 데이터 형식을 변환할 때 날짜나 시간으로 인식되지 않는 값은 모두 무시됩니다. 날짜 및 시간 데이터에 CAST 및 CONVERT 함수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>date을 다른 날짜 및 시간 형식으로 변환
-이 섹션에서는 **date** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
+
+이 섹션에서는 **date** 데이터 형식을 다른 날짜 및 시간 데이터 형식으로 변환할 때 어떤 일이 발생하는지를 설명합니다.
   
 변환이 **time(n)** 에서 일어나는 경우 이 변환이 실패하고, "피연산자 유형 충돌: date는 time과 호환되지 않습니다"라는 오류 메시지 206이 발생합니다.
   
@@ -124,7 +125,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-변환이 **smalldatetime**에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **날짜** 값이 **smalldatetime** 값의 범위 밖에 있으면, "date 데이터 형식을 smalldatetime 데이터 형식으로 변환하는 중 값 범위를 벗어났습니다"라는 오류 메시지 242가 발생하고 **smalldatetime** 값이 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
+변환이 **smalldatetime**에서 일어나는 경우 **date** 값이 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 범위 안에 있으면 날짜 구성 요소가 복사되고 시간 구성 요소는 00:00:00.000으로 설정됩니다. **날짜** 값이 **smalldatetime** 값의 범위 밖에 있으면, “data 데이터 형식을 smalldatetime 데이터 형식으로 변환하는 중 값 범위를 벗어났습니다.”라는 오류 메시지 242가 발생하고 **smalldatetime** 값이 NULL로 설정됩니다. 다음 코드에서는 `date` 값을 `smalldatetime` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -173,11 +174,11 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>문자열 리터럴을 date로 변환
-문자열에 포함된 모든 부분의 형식이 올바른 경우 문자열 리터럴에서 날짜/시간 유형으로 변환할 수 있습니다. 그렇지 않으면 런타임 오류가 발생합니다. 날짜/시간 유형에서 문자열 리터럴로의 암시적 변환 또는 명시적 변환에 스타일을 지정하지 않은 경우 현재 세션의 기본 형식이 지정됩니다. 다음 표에서는 문자열 리터럴을 **date** 데이터 형식으로 변환하는 규칙을 보여 줍니다.
+문자열에 포함된 모든 부분의 형식이 유효한 경우 문자열 리터럴에서 날짜/시간 유형으로 변환할 수 있습니다. 그렇지 않으면 런타임 오류가 발생합니다. 날짜 및 시간 형식에서 문자열 리터럴로의 암시적 변환 또는 명시적 변환에 스타일을 지정하지 않은 경우 현재 세션의 기본 형식이 지정됩니다. 다음 표에서는 문자열 리터럴을 **date** 데이터 형식으로 변환하는 규칙을 보여 줍니다.
   
 |입력 문자열 리터럴|**date**|  
 |---|---|
-|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **date** 형식으로 할당하면 변환 규칙으로 정의된 대로 **datetime**과 이러한 형식 간에 암시적 변환이 발생합니다.|  
+|ODBC DATE|ODBC 문자열 리터럴은 **datetime** 데이터 형식으로 매핑됩니다. ODBC DATETIME 리터럴에서 **date** 형식으로 할당하면 **datetime**과 변환 규칙이 정의하는 형식 간에 암시적 변환이 발생합니다.|  
 |ODBC TIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |ODBC DATETIME|이전 ODBC DATE 규칙을 참조하세요.|  
 |DATE만|중요하지 않음|  
