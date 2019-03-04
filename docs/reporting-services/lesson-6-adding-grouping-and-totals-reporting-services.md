@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813676"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290081"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
   
   
@@ -110,7 +110,7 @@ ms.locfileid: "51813676"
   
 1.  선택 단계에서는 웹 포털에서 보고서를 볼 수 있도록 기본 모드 보고서 서버에 완료된 보고서를 게시합니다.  
   
-2.   **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
+2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...** 을 클릭합니다.  
   
 3.  **TargetServerURL** 에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
     - `http:/<servername>/reportserver`  
@@ -119,21 +119,21 @@ ms.locfileid: "51813676"
   
   
 4. TargetReportFolder는 프로젝트 이름인 tutorial이며,  다음 단계에서 보고서를 배포할 폴더의 이름입니다.  
-5.  **확인**을 클릭합니다.  
+5. **확인**을 클릭합니다.  
   
 6.  **빌드** 메뉴를 클릭한 다음 **자습서 배포**를 클릭합니다.  
   
     출력 창에 다음과 비슷한 메시지가 표시되면 배포가 성공한 것입니다.  
   
-    > ------ 빌드 시작: 자습서, 구성: 디버그 ------  
+    > ------ 빌드 시작: 프로젝트: 자습서, 구성: 디버그 ------  
     > 'Sales Orders.rdl'을 건너뜁니다. 최신 항목입니다.  
     > 빌드 완료 -- 0개 오류, 0개 경고  
-    > ------ 배포 시작: 자습서, 구성: 디버그 ------  
+    > --- 배포 시작: 프로젝트: 자습서, 구성: 디버그 ------  
     > https://[서버 이름]/reportserver에 배포하는 중  
     > '/tutorial/Sales Orders' 보고서를 배포하는 중  
     > 배포 완료 -- 0개 오류, 0개 경고  
     > ========== 빌드: 1개 성공 또는 최신, 0개 실패, 0개 건너뜀 ==========  
-    > ========== 배포: 1개 성공, 0개 실패, 0개 건너뜀 ==========  
+    > ========== 배포: 1개 성공, 0개 실패, 0개 생략 ==========  
   
     다음과 비슷한 오류 메시지가 표시되면 보고서 서버에 대한 권한이 있는지 확인하고 관리자 권한으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 시작했는지 확인합니다.  
   
