@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00bea67666845ea43226b4bfe48b6dd5ab3f3741
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 1b92bc15079fcc85212ea3d1b51be64a3348a4b1
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305371"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -29,13 +29,14 @@ ms.locfileid: "56590458"
 | **IQP 기능** | **Azure SQL Database에서 지원** | **SQL Server에서 지원** |
 | --- | --- | --- |
 | [적응 조인(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|
+| [대략적인 Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 예. 공개 미리 보기| 예. SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
+| [Rowstore의 일괄 처리 모드](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
 | [인터리브 실행](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#interleaved-execution-for-multi-statement-table-valued-functions) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|
 | [메모리 부여 피드백(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|
 | [메모리 부여 피드백(행 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/adaptive-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
-| [대략적인 Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 예. 공개 미리 보기| 예. SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
-| [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
-| [Rowstore의 일괄 처리 모드](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
 | [스칼라 UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 아니요. 하지만 향후 업데이트에 대해 계획됨 | 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.1부터, 공개 미리 보기|
+| [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|
+
 
 
 ## <a name="adaptive-query-processing"></a>적응 쿼리 처리
