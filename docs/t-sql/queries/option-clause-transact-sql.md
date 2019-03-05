@@ -18,16 +18,16 @@ helpviewer_keywords:
 - clauses [SQL Server], OPTION
 - OPTION clause
 ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29496ec8f2bdb4258dfc92570f33c32fb3a8d60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 771eaedd3c5bc723422c9fd82a1c979e331eabf0
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708671"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334349"
 ---
 # <a name="option-clause-transact-sql"></a>OPTION 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ SELECT * FROM FactResellerSales
   OPTION ( LABEL = 'q17' );  
 ```  
   
-### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>3. OPTION 절에서 쿼리 힌트를 사용하는 SELECT 문  
+### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. OPTION 절에서 쿼리 힌트를 사용하는 SELECT 문  
  다음 예제에서는 OPTION 절에서 HASH JOIN 쿼리 힌트를 사용하는 SELECT 문을 보여 줍니다.  
   
 ```  
@@ -108,7 +108,7 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>4. OPTION 절에서 레이블 및 여러 쿼리 힌트를 사용하는 SELECT 문  
+### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. OPTION 절에서 레이블 및 여러 쿼리 힌트를 사용하는 SELECT 문  
  다음 예제는 레이블 및 여러 쿼리 힌트를 포함하는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문입니다. 쿼리가 계산 노드에서 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결정하는 가장 적합한 전략에 따라 해시 조인 또는 병합 조인을 적용합니다.  
   
 ```  
@@ -120,7 +120,7 @@ ON (a.CustomerKey = b.CustomerKey)
 OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);  
 ```  
   
-### <a name="e-using-a-query-hint-when-querying-a-view"></a>5. 뷰를 쿼리할 때 쿼리 힌트 사용  
+### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. 뷰를 쿼리할 때 쿼리 힌트 사용  
  다음 예제에서는 CustomerView라는 뷰를 만든 다음, 뷰 및 테이블을 참조하는 쿼리에서 HASH JOIN 쿼리 힌트를 사용합니다.  
   
 ```  
@@ -139,7 +139,7 @@ DROP VIEW CustomerView;
   
 ```  
   
-### <a name="f-query-with-a-subselect-and-a-query-hint"></a>6. 하위 select 및 쿼리 힌트가 있는 쿼리  
+### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. 하위 select 및 쿼리 힌트가 있는 쿼리  
  다음 예제에서는 하위 select 및 쿼리 힌트 모두를 포함하는 쿼리를 보여 줍니다. 쿼리 힌트는 전역적으로 적용됩니다. 쿼리 힌트는 하위 select 문에 추가되도록 허용되지 않습니다.  
   
 ```  
@@ -155,7 +155,7 @@ ON ( a.CustomerKey = b.CustomerKey )) AS t
 OPTION (HASH JOIN);  
 ```  
   
-### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>7. 쿼리의 순서와 일치하도록 조인 순서 강제 적용  
+### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. 쿼리의 순서와 일치하도록 조인 순서 강제 적용  
  다음 예제에서는 FORCE ORDER 힌트를 사용하여 쿼리에서 지정된 조인 순서를 사용하도록 쿼리 계획을 강제로 적용합니다. 모든 쿼리가 아닌 일부 쿼리에서 성능을 향상시킵니다.  
   
 ```  
@@ -176,7 +176,7 @@ OPTION ( FORCE ORDER )
 ;  
 ```  
   
-### <a name="h-using-externalpushdown"></a>8. EXTERNALPUSHDOWN 사용  
+### <a name="h-using-externalpushdown"></a>H. EXTERNALPUSHDOWN 사용  
  다음 예제에서는 외부 Hadoop 테이블의 MapReduce 작업에 WHERE 절의 푸시다운을 강제로 적용합니다.  
   
 ```  

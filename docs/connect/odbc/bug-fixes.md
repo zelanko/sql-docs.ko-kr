@@ -13,16 +13,22 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3c0b2b86bee4cccd9e8074529362b7e9c8ff6b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725771"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956054"
 ---
 # <a name="list-of-bugs-fixed"></a>수정 된 버그 목록
 
 이 페이지부터 각 릴리스에서 수정 된 버그 목록이 들어 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.3 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 고정된 TCP 보내기 알림 이벤트 핸들 메모리 누수
+- Msodbcsql.h 헤더 파일에 열거형 _SQL_FILESTREAM_DESIRED_ACCESS 고정된 재정의 월호
+- 고정된 누락 ACCESS_TOKEN 및 인증 관련 msodbcsql.h 헤더 파일에서 Linux에 대 한 정의
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>버그 수정 된 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에 대 한 ODBC 드라이버 17.2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

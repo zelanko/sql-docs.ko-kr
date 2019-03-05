@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305361"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -71,6 +71,9 @@ SQL Server를 평가 하기 위해 PowerShell 스크립트를 실행 하기 전�
 - SQL Server 테이블
 
 ### <a name="if-using-a-csv-file"></a>CSV 파일을 사용 하는 경우
+> [!IMPORTANT]
+> 인벤토리 파일을 쉼표로 구분 된 (CSV) 파일로 저장 되는 것을 확인 합니다.
+
 데이터의 두 개의 열이 있는 csv 파일을 사용 하 여 데이터를 확인 **인스턴스 이름** 하 고 **데이터베이스 이름**, 열 머리글 행 없는 하 고 합니다.
  
  ![csv 파일 내용](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -153,10 +156,7 @@ dmaProcessor에 평가 파일 처리 완료 후 보고서 데이터 표에 DMARe
 
 1. Power BI Desktop에서 DMA 보고서 Power BI 템플릿을 엽니다.
 2. 가리키는 서버 세부 정보를 입력 하 **DMAWarehouse** 데이터베이스를 선택한 후 **부하**합니다.
-
-    > [!IMPORTANT]
-    > 값을 그대로 사용 하려면 Enter를 누르지 마십시오.
-
+   
       ![DMA 보고서 Power BI 템플릿 로드](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    보고서에서 데이터를 새로 고쳐 짐 후 합니다 **DMAWarehouse** 다음과 유사한 보고서를 사용 하 여 표시 하는 데이터베이스입니다.

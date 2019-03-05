@@ -24,15 +24,15 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: douglaslMS
-ms.author: douglasl
+author: juliemsft
+ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ba84c4df4af4c4bba82fb63a668ec2b57cf39c3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cd77a10ee161cd118b168ce2a9aaacf1bb0cc8d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744561"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334640"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ CHECKPOINT [ checkpoint_duration ]
  CHECKPOINT 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에게 부여되며, 양도할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [recovery interval 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   
  [SHUTDOWN&#40;Transact-SQL&#41;](../../t-sql/language-elements/shutdown-transact-sql.md)  

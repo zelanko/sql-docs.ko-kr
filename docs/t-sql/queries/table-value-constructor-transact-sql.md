@@ -15,15 +15,15 @@ helpviewer_keywords:
 - row constructor [SQL Server]
 - table value constructor [SQL Server]
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dddd2ea5c0abb9cf2aaa1258bbbb5cff14e6ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 03ae3b2808fbca63c92ee689218c6e76cb0c0ffd
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519156"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334480"
 ---
 # <a name="table-value-constructor-transact-sql"></a>테이블 값 생성자(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ SELECT * FROM Sales.MySalesReason;
   
 ```  
   
-### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>3. FROM 절에 여러 값을 파생 테이블로 지정  
+### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. FROM 절에 여러 값을 파생 테이블로 지정  
  다음 예에서는 테이블 값 생성자를 사용하여 SELECT 문의 FROM 절에 여러 값을 지정합니다.  
   
 ```  
@@ -156,7 +156,7 @@ ON a.Name = b.Name;
   
 ```  
   
-### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>4. MERGE 문에 여러 값을 파생 원본 테이블로 지정  
+### <a name="d-specifying-multiple-values-as-a-derived-source-table-in-a-merge-statement"></a>D. MERGE 문에 여러 값을 파생 원본 테이블로 지정  
  다음 예에서는 MERGE를 사용하여 행을 업데이트하거나 삽입하는 방식으로 `SalesReason` 테이블을 수정합니다. 원본 테이블의 `NewName` 값이 대상 테이블 `Name`의 `SalesReason` 열에 있는 값과 일치하는 경우 대상 테이블에서 `ReasonType` 열이 업데이트됩니다. `NewName` 값이 일치하지 않으면 원본 행이 대상 테이블에 삽입됩니다. 원본 테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 값 생성자를 사용하여 원본 테이블의 여러 행을 지정하는 파생 테이블입니다.  
   
 ```  

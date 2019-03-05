@@ -27,12 +27,12 @@ ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a9d14601c7fad616d4d5e2d5420adcea458b11fb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1125233ca0843764d53bbbcb3709046a80bfb662
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206252"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955834"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ DBCC CHECKTABLE
     ]     
 )    
     [ WITH     
-        { ALL_ERRORMSGS ]    
+        { [ ALL_ERRORMSGS ]    
           [ , EXTENDED_LOGICAL_CHECKS ]     
           [ , NO_INFOMSGS ]    
           [ , TABLOCK ]     
@@ -238,7 +238,7 @@ DBCC CHECKTABLE ('HumanResources.Employee') WITH PHYSICAL_ONLY;
 GO    
 ```    
     
-### <a name="c-checking-a-specific-index"></a>3. 특정 인덱스 검사    
+### <a name="c-checking-a-specific-index"></a>C. 특정 인덱스 검사    
  다음 예에서는 `sys.indexes`에 액세스하여 얻은 특정 인덱스를 검사합니다.    
     
 ```sql    

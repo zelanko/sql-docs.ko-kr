@@ -34,15 +34,15 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306270"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334780"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -456,7 +456,7 @@ GO
   
 ```  
   
-### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>3. FORCESCAN 힌트를 사용하여 Index Scan 연산 지정  
+### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>C. FORCESCAN 힌트를 사용하여 Index Scan 연산 지정  
  다음 예에서는 FORCESCAN 힌트를 사용하여 쿼리 최적화 프로그램이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesOrderDetail` 테이블에서 검색 작업을 수행하도록 지정합니다.  
   
 ```sql  

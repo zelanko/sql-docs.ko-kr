@@ -22,16 +22,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417364"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334690"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -191,7 +191,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
-### <a name="c-using-distinct-with-select"></a>3. SELECT에 DISTINCT 사용  
+### <a name="c-using-distinct-with-select"></a>C. SELECT에 DISTINCT 사용  
  다음 예제에서는 `DISTINCT`를 사용하여 `DimEmployee` 테이블의 모든 고유한 이름 목록을 생성합니다.  
   
 ```sql  
@@ -200,7 +200,7 @@ FROM DimEmployee
 ORDER BY Title;  
 ```  
   
-### <a name="d-using-group-by"></a>4. GROUP BY 사용  
+### <a name="d-using-group-by"></a>D. GROUP BY 사용  
  다음 예제에서는 일별 총 판매액을 모두 찾습니다.  
   
 ```sql  
@@ -212,7 +212,7 @@ ORDER BY OrderDateKey;
   
  `GROUP BY` 절을 사용했으므로 각 날짜에 대해 모든 판매의 합계를 포함하는 한 행만 반환됩니다.  
   
-### <a name="e-using-group-by-with-multiple-groups"></a>5. GROUP BY에 여러 그룹 사용  
+### <a name="e-using-group-by-with-multiple-groups"></a>E. GROUP BY에 여러 그룹 사용  
  다음 예제에서는 주문일과 프로모션 키별로 그룹화된 일별 총 인터넷 판매 합계와 평균 금액을 찾습니다.  
   
 ```sql  
@@ -223,7 +223,7 @@ GROUP BY OrderDateKey, PromotionKey
 ORDER BY OrderDateKey;   
 ```  
   
-### <a name="f-using-group-by-and-where"></a>6. GROUP BY 및 WHERE 사용  
+### <a name="f-using-group-by-and-where"></a>F. GROUP BY 및 WHERE 사용  
  다음 예에서는 가격이 주문일이 2002년 8월 1일 이후인 행만 검색한 후 그 결과를 그룹화합니다.  
   
 ```sql  
@@ -234,7 +234,7 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
-### <a name="g-using-group-by-with-an-expression"></a>7. GROUP BY에 식 사용  
+### <a name="g-using-group-by-with-an-expression"></a>G. GROUP BY에 식 사용  
  다음 예에서는 식으로 그룹화를 수행합니다. 식에 집계 함수가 없는 경우 식으로 그룹화를 수행할 수 있습니다.  
   
 ```sql  
@@ -243,7 +243,7 @@ FROM FactInternetSales
 GROUP BY (OrderDateKey * 10);  
 ```  
   
-### <a name="h-using-group-by-with-order-by"></a>8. GROUP BY 및 ORDER BY 사용  
+### <a name="h-using-group-by-with-order-by"></a>H. GROUP BY 및 ORDER BY 사용  
  다음 예제에서는 일별 판매 합계와 일별 주문을 찾습니다.  
   
 ```sql  

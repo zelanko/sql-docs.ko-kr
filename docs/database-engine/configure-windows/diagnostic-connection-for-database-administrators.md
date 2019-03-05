@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 관리자를 위한 진단 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/16/2015
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,15 +21,15 @@ ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c51655426d892c4d6e233bc72b7388d200bbce8a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7cdcffb40c1c0e15a1be56a4484edade6b5f1463
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589398"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955984"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버에 대한 표준 연결이 불가능할 때 관리자에게 특별 진단 연결을 제공합니다. 이 진단 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 표준 연결 요청에 응답하지 않은 경우에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 액세스하여 진단 쿼리를 실행하고 문제를 해결할 수 있습니다.  
   
  DAC(관리자 전용 연결)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 암호화 및 다른 보안 기능을 지원합니다. DAC는 사용자 컨텍스트를 다른 관리자로 변경하는 작업만 허용합니다.  

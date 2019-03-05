@@ -28,15 +28,15 @@ helpviewer_keywords:
 - computed sums
 - WHERE clause, SELECT statement
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 212a13b10fcc43eb8113da3b418bdf57c53ae19a
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906093"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334430"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT 예(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,12 +65,12 @@ ms.locfileid: "48906093"
   
  [!code-sql[Select#SelectExamples5](../../t-sql/queries/codesnippet/tsql/select-examples-transact_5.sql)]  
   
-## <a name="c-using-distinct-with-select"></a>3. SELECT에 DISTINCT 사용  
+## <a name="c-using-distinct-with-select"></a>C. SELECT에 DISTINCT 사용  
  다음 예에서는 `DISTINCT`를 사용하여 중복된 제목을 검색하지 않도록 합니다.  
   
  [!code-sql[Select#SelectExamples6](../../t-sql/queries/codesnippet/tsql/select-examples-transact_6.sql)]  
   
-## <a name="d-creating-tables-with-select-into"></a>4. SELECT INTO로 테이블 만들기  
+## <a name="d-creating-tables-with-select-into"></a>D. SELECT INTO로 테이블 만들기  
  다음 첫 번째 예에서는 `#Bicycles`에 `tempdb`라는 임시 테이블을 만듭니다.  
   
  [!code-sql[Select#SelectExamples7](../../t-sql/queries/codesnippet/tsql/select-examples-transact_7.sql)]  
@@ -79,7 +79,7 @@ ms.locfileid: "48906093"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>5. 상관 하위 쿼리 사용  
+## <a name="e-using-correlated-subqueries"></a>E. 상관 하위 쿼리 사용  
  다음 예에서는 기능상 동일한 쿼리를 보여 주고 `EXISTS` 키워드와 `IN` 키워드를 사용할 때의 차이점에 대해 설명합니다. 두 예는 모두 제품 모델이 긴 팔 로고 셔츠이고 `ProductModelID`와 `Product` 테이블 간에 `ProductModel`가 일치하는 각 제품 이름의 인스턴스 하나를 검색하는 유효한 하위 쿼리입니다.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
@@ -98,19 +98,19 @@ ms.locfileid: "48906093"
   
  [!code-sql[Select#SelectExamples12](../../t-sql/queries/codesnippet/tsql/select-examples-transact_12.sql)]  
   
-## <a name="f-using-group-by"></a>6. GROUP BY 사용  
+## <a name="f-using-group-by"></a>F. GROUP BY 사용  
  다음 예에서는 데이터베이스에서 각 판매 주문의 합계를 구합니다.  
   
  [!code-sql[Select#SelectExamples13](../../t-sql/queries/codesnippet/tsql/select-examples-transact_13.sql)]  
   
  `GROUP BY` 절을 사용했으므로 각 판매 주문에 대해 모든 판매의 합계를 포함하는 한 행만 반환됩니다.  
   
-## <a name="g-using-group-by-with-multiple-groups"></a>7. GROUP BY에 여러 그룹 사용  
+## <a name="g-using-group-by-with-multiple-groups"></a>G. GROUP BY에 여러 그룹 사용  
  다음 예에서는 제품 ID 및 특별 행사 ID별로 그룹화된 평균 가격과 연간 판매액의 합계를 구합니다.  
   
  [!code-sql[Select#SelectExamples14](../../t-sql/queries/codesnippet/tsql/select-examples-transact_14.sql)]  
   
-## <a name="h-using-group-by-and-where"></a>8. GROUP BY 및 WHERE 사용  
+## <a name="h-using-group-by-and-where"></a>H. GROUP BY 및 WHERE 사용  
  다음 예에서는 가격이 `$1000`보다 큰 행만 검색한 후 그 결과를 그룹화합니다.  
   
  [!code-sql[Select#SelectExamples15](../../t-sql/queries/codesnippet/tsql/select-examples-transact_15.sql)]  
@@ -120,7 +120,7 @@ ms.locfileid: "48906093"
   
  [!code-sql[Select#SelectExamples16](../../t-sql/queries/codesnippet/tsql/select-examples-transact_16.sql)]  
   
-## <a name="j-using-group-by-with-order-by"></a>10. GROUP BY 및 ORDER BY 사용  
+## <a name="j-using-group-by-with-order-by"></a>J. GROUP BY 및 ORDER BY 사용  
  다음 예에서는 각 제품 유형의 평균 가격을 찾아 그 결과를 평균 가격에 따라 정렬합니다.  
   
  [!code-sql[Select#SelectExamples18](../../t-sql/queries/codesnippet/tsql/select-examples-transact_17.sql)]  

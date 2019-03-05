@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dcfe7869767bc9178f9241c3ffa82d166685d7ac
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669682"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334710"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "51669682"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_performance_counters**합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_name**|**nchar(128)**|이 카운터가 속한 범주입니다.|  
 |**counter_name**|**nchar(128)**|카운터의 이름입니다. 이것이에서 카운터의 목록에서 선택 항목의 이름을 카운터에 대 한 자세한 정보를 가져오려면 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)합니다. |  
 |**instance_name**|**nchar(128)**|카운터의 특정 항목 이름입니다. 대개 데이터베이스 이름이 포함됩니다.|  
-|**cntr_value**|**bigint**|카운터의 현재 값입니다.<br /><br /> **참고:** 초당 카운터에 대 한이 값은 누적 합니다. 따라서 특정한 시간 간격으로 값을 샘플링하여 비율 값을 계산해야 합니다. 임의의 연속된 두 샘플 값 간의 차이는 사용된 시간 간격에 대한 비율과 동일합니다.|  
-|**cntr_type**|**int**|Windows 성능 아키텍처가 정의한 카운터의 유형입니다. 참조 [WMI 성능 카운터 형식](https://msdn2.microsoft.com/library/aa394569.aspx) 성능 카운터 형식에 대 한 자세한 내용은 Windows Server 설명서 또는 MSDN에서.|  
+|**cntr_value**|**bigint**|카운터의 현재 값입니다.<br /><br /> **참고:** 초당 카운터의 경우 이 값은 누적됩니다. 따라서 특정한 시간 간격으로 값을 샘플링하여 비율 값을 계산해야 합니다. 임의의 연속된 두 샘플 값 간의 차이는 사용된 시간 간격에 대한 비율과 동일합니다.|  
+|**cntr_type**|**int**|Windows 성능 아키텍처가 정의한 카운터의 유형입니다. 참조 [WMI 성능 카운터 형식](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) Docs에 성능 카운터 형식에 대 한 자세한 내용은 Windows Server 설명서.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="remarks"></a>Remarks  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server], WHERE clause
 - WHERE clause
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf298a651ce2568f3cbc3036d5a73317ec096e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d43fc27fc3536f296f49f40bb6233e961c4b9f12
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836501"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334420"
 ---
 # <a name="where-transact-sql"></a>WHERE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ FROM DimEmployee
 WHERE LastName LIKE ('%Smi%');  
 ```  
   
-### <a name="c-finding-rows-by-using-a-comparison-operator"></a>3. 비교 연산자를 사용하여 행 찾기  
+### <a name="c-finding-rows-by-using-a-comparison-operator"></a>C. 비교 연산자를 사용하여 행 찾기  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -79,7 +79,7 @@ FROM DimEmployee
 WHERE EmployeeKey  <= 500;  
 ```  
   
-### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>4. 세 가지 조건 중 하나를 충족하는 행 찾기  
+### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. 세 가지 조건 중 하나를 충족하는 행 찾기  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -89,7 +89,7 @@ FROM DimEmployee
 WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;  
 ```  
   
-### <a name="e-finding-rows-that-must-meet-several-conditions"></a>5. 여러 조건을 모두 충족하는 행 찾기  
+### <a name="e-finding-rows-that-must-meet-several-conditions"></a>E. 여러 조건을 모두 충족하는 행 찾기  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -99,7 +99,7 @@ FROM DimEmployee
 WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';  
 ```  
   
-### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>6. 값 목록에 있는 행 찾기  
+### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>F. 값 목록에 있는 행 찾기  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -109,7 +109,7 @@ FROM DimEmployee
 WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');  
 ```  
   
-### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>7. 두 값 사이의 값을 가진 행 찾기  
+### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>G. 두 값 사이의 값을 가진 행 찾기  
   
 ```  
 -- Uses AdventureWorksDW  

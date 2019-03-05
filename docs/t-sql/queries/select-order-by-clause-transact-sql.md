@@ -36,16 +36,16 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980279"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334720"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -235,7 +235,7 @@ ORDER BY ListPrice;
   
 ```  
   
-#### <a name="c-specifying-an-alias-as-the-sort-column"></a>3. 별칭을 정렬 열로 지정  
+#### <a name="c-specifying-an-alias-as-the-sort-column"></a>C. 별칭을 정렬 열로 지정  
  다음 예에서는 열 별칭 `SchemaName`을 정렬 순서 열로 지정합니다.  
   
 ```sql
@@ -286,7 +286,7 @@ ORDER BY Name ASC ;
   
 ```  
   
-#### <a name="c-specifying-both-ascending-and-descending-order"></a>3. 오름차순과 내림차순 둘 다 지정  
+#### <a name="c-specifying-both-ascending-and-descending-order"></a>C. 오름차순과 내림차순 둘 다 지정  
  다음 예에서는 두 열을 기준으로 결과 집합을 정렬합니다. 쿼리 결과 집합은 먼저 `FirstName` 열을 기준으로 오름차순으로 정렬된 다음 `LastName` 열을 기준으로 내림차순으로 정렬됩니다.  
   
 ```sql
@@ -408,7 +408,7 @@ ORDER BY DepartmentID ASC
   
 ```  
   
-#### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>3. 식을 사용하여 OFFSET 및 FETCH 값 지정  
+#### <a name="c-specifying-expressions-for-offset-and-fetch-values"></a>C. 식을 사용하여 OFFSET 및 FETCH 값 지정  
  다음 예에서는 `@StartingRowNumber - 1` 식을 사용하여 OFFSET 값을 지정하고, `@EndingRowNumber - @StartingRowNumber + 1` 식을 사용하여 FETCH 값을 지정합니다. 또한 OPTIMIZE FOR 쿼리 힌트를 지정합니다. 이 힌트는 쿼리가 컴파일되고 최적화될 때 지역 변수에 대해 특정 값을 제공하는 데 사용될 수 있습니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ```sql

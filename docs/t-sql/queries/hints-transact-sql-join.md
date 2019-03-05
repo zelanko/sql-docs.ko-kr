@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 270aaf41f6cb081f3c57156c10e3b448540a6731
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621351"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334460"
 ---
 # <a name="hints-transact-sql---join"></a>힌트 (Transact-SQL) - 조인
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-### <a name="c-using-merge"></a>3. MERGE 사용  
+### <a name="c-using-merge"></a>C. MERGE 사용  
  다음 예에서는 쿼리의 `JOIN` 연산이 `MERGE` 조인에 의해 수행되도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
   
 ```  

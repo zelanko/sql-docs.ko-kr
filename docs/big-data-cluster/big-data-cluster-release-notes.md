@@ -5,17 +5,17 @@ description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227215"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334750"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -39,7 +39,7 @@ ms.locfileid: "57227215"
 - [IntelliJ에서 SQL Server 빅 데이터 클러스터에 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md)합니다.
 - [응용 프로그램 배포 및 클러스터 관리에 대 한 일반 CLI](big-data-cluster-create-apps.md)합니다.
 - [SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 VS Code 확장](app-deployment-extension.md)합니다.
-- 새 매개 변수 순서는 **mssqlctl** 도구입니다.
+- [변경 된 **mssqlctl** 명령 사용법을 도구](#mssqlctlctp23)합니다.
 - [Sparklyr을 사용 하 여 SQL Server 2019 빅 데이터 클러스터에](sparklyr-from-RStudio.md)입니다.
 - 외부 HDFS 호환 저장소를 사용 하 여 빅 데이터 클러스터에 탑재 [HDFS 계층화](hdfs-tiering.md)합니다.
 - 에 대 한 새로운 통합 된 연결 환경 합니다 [SQL Server 마스터 인스턴스와 HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md)합니다.
@@ -74,6 +74,18 @@ ms.locfileid: "57227215"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- 합니다 **mssqlctl** 도구 동사-명사 명령의 순서 명사-동사 순서를 변경 합니다. 예를 들어 `mssqlctl create cluster` 이제 `mssqlctl cluster create`합니다.
+
+- 합니다 `--name` 매개 변수는 이제 사용 하 여 클러스터를 만들 때 필요한 `mssqlctl cluster create`합니다.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- 빅 데이터 클러스터의 최신 버전으로 업그레이드 하는 방법에 대 한 중요 한 정보에 대 한 및 **mssqlctl**를 참조 하십시오 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
 
 #### <a name="external-tables"></a>외부 테이블
 
