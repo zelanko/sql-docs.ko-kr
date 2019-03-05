@@ -1,7 +1,8 @@
 items:
 - name: 시작
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 개요
+  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: 새로운 기능
     items:
@@ -15,6 +16,8 @@ items:
       href: ../sql-server/what-s-new-in-sql-server-2016.md
     - name: SQL Server 2016의 데이터베이스 엔진
       href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: 데이터베이스 엔진
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: SQL Server 2017 버전 및 기능
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: SQL Server 2016 버전 및 기능
@@ -32,7 +35,7 @@ items:
   - name: SQL Server 2019
     href: ../sql-server/sql-server-ver15-release-notes.md
   - name: SQL Server 2017
-    href: ../sql-server/sql-server-2017-release-notes.md
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: SQL Server 2016
     href: ../sql-server/sql-server-2016-release-notes.md
   - name: SQL Server 2014
@@ -44,14 +47,16 @@ items:
   - name: SQL Server 2008 R2 SP2
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: 비즈니스 연속성
+  href: redirectfrom-business-continuity-10.md
   items:
   - name: 개요
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: 백업 및 복원
+    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: 개요
       href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-    - name: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
+    - name: Azure Blob Storage를 사용하여 백업 및 복원
       href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
       - name: Microsoft Azure 구독에 연결
@@ -59,9 +64,9 @@ items:
       - name: URL에 대한 SQL Server 백업
         href: ../relational-databases/backup-restore/sql-server-backup-to-url.md
         items:
-        - name: PowerShell을 사용하여 Microsoft Azure Blob Storage 서비스에 여러 데이터베이스 백업
+        - name: PowerShell을 사용하여 Azure Blob Storage 서비스에 백업
           href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
+        - name: URL로 백업 모범 사례 및 문제 해결
           href: ../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
         - name: 활성 임대가 있는 백업 Blob 파일 삭제
           href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -92,14 +97,14 @@ items:
       items:
       - name: 복원 시퀀스 계획 및 수행(전체 복구 모델)
         href: ../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md
-      - name: 중단된 복원 작업 다시 시작(Transact-SQL)
+      - name: 중단된 복원 작업 다시 시작(T-SQL)
         href: ../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md
     - name: 백업 압축
       href: ../relational-databases/backup-restore/backup-compression-sql-server.md
       items:
       - name: 백업 압축 구성
         href: ../relational-databases/backup-restore/configure-backup-compression-sql-server.md
-      - name: 리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
+      - name: Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한(T-SQL)
         href: ../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
     - name: 백업 암호화
       href: ../relational-databases/backup-restore/backup-encryption.md
@@ -181,7 +186,7 @@ items:
     - name: 미러된 백업 미디어 세트(SQL Server)
       href: ../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md
       items:
-      - name: 미러된 미디어 세트에 백업(TRANSACT-SQL)
+      - name: 미러된 미디어 세트에 백업(T-SQL)
         href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
     - name: 백업 기록 및 헤더 정보(SQL Server)
       href: ../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md
@@ -198,7 +203,7 @@ items:
     - name: 전체 데이터베이스 복원(단순 복구 모델)
       href: ../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md
       items:
-      - name: 단순 복구 모델에서 데이터베이스 백업 복원(Transact-SQL)
+      - name: 단순 복구 모델에서 데이터베이스 백업 복원(T-SQL)
         href: ../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
       - name: Restore a Database Backup Using SSMS
         href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -220,7 +225,7 @@ items:
     - name: 전체 데이터베이스 복원(전체 복구 모델)
       href: ../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md
       items:
-      - name: 전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원(Transact-SQL)
+      - name: 전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원(T-SQL)
         href: ../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md
     - name: 파일 복원(단순 복구 모델)
       href: ../relational-databases/backup-restore/file-restores-simple-recovery-model.md
@@ -281,12 +286,12 @@ items:
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
       - name: '예: 일부 파일 그룹만 증분 복원(단순 복구 모델)'
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
-    - name: 데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
+    - name: 데이터를 복원하지 않고 데이터베이스 복구(T-SQL)
       href: ../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md
     - name: 시스템 데이터베이스 백업 및 복원
       href: ../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
       items:
-      - name: master 데이터베이스 복원(Transact-SQL)
+      - name: master 데이터베이스 복원(T-SQL)
         href: ../relational-databases/backup-restore/restore-the-master-database-transact-sql.md
     - name: '백업 및 복원: 상호 운용성 및 공존성'
       href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
@@ -301,6 +306,8 @@ items:
         href: ../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: 필수 조건, 제한 사항 및 권장 사항
         href: ../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
+      - name: 상호 운용성
+        href: ../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
     - name: 빠른 시작
       items:
       - name: 시작
@@ -312,7 +319,7 @@ items:
           href: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
         - name: 대화 상자
           href: ../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
         - name: PowerShell
           href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
@@ -343,6 +350,8 @@ items:
           href: ../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md
         - name: 읽기 전용 라우팅 구성
           href: ../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 수신기 만들기
+          href: ../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md
         - name: 수신기 제거
           href: ../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md
         - name: 보조 데이터베이스 조인
@@ -371,7 +380,7 @@ items:
       - name: 모니터링
         href: ../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
         items:
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md
         - name: SQL Server Management Studio
           href: ../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md
@@ -445,6 +454,8 @@ items:
           href: ../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: 읽기 확장 전용
           href: ../database-engine/availability-groups/windows/read-scale-availability-groups.md
+        - name: 연결 리디렉션 읽기/쓰기
+          href: ../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
       - name: 관리
         items:
         - name: 보조 복제본에 백업
@@ -507,7 +518,7 @@ items:
       items:
       - name: PowerShell Cmdlet
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-      - name: Transact-SQL
+      - name: T-SQL
         href: ../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md
       - name: 대화 상자 및 마법사
         items:
@@ -716,9 +727,9 @@ items:
           - name: 데이터베이스 미러링 세션 구성
             href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
             items:
-            - name: '예: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)'
+            - name: '예: Windows 인증을 사용하여 데이터베이스 미러링 설정(T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-            - name: '예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)'
+            - name: '예: 인증서를 사용하여 데이터베이스 미러링 설정(T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
           - name: 미러된 인스턴스 업그레이드
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -867,6 +878,7 @@ items:
       - name: SQL Server 2016로의 로그 전달 업그레이드
         href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: 데이터베이스 디자인
+  href: ../toc/redirectfrom-database-design.md
   items:
   - name: 계층적 데이터
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -882,7 +894,7 @@ items:
       href: ../relational-databases/collations/set-or-change-the-column-collation.md
     - name: 데이터 정렬 정보 보기
       href: ../relational-databases/collations/view-collation-information.md
-    - name: 국가별 Transact-SQL 문 작성
+    - name: 국가별 T-SQL 문 작성
       href: ../relational-databases/collations/write-international-transact-sql-statements.md
     - name: 세션 언어 설정
       href: ../relational-databases/collations/set-a-session-language.md
@@ -949,9 +961,9 @@ items:
     - name: 데이터베이스 분리 및 연결
       href: ../relational-databases/databases/database-detach-and-attach-sql-server.md
       items:
-      - name: 분리 및 연결을 사용하여 데이터베이스 이동(Transact-SQL)
+      - name: 분리 및 연결을 사용하여 데이터베이스 이동(T-SQL)
         href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
-      - name: 분리 및 연결을 사용하여 데이터베이스 업그레이드(Transact-SQL)
+      - name: 분리 및 연결을 사용하여 데이터베이스 업그레이드(T-SQL)
         href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
       - name: 데이터베이스 분리
         href: ../relational-databases/databases/detach-a-database.md
@@ -1027,15 +1039,15 @@ items:
     - name: 데이터베이스 스냅숏
       href: ../relational-databases/databases/database-snapshots-sql-server.md
       items:
-      - name: 데이터베이스 스냅숏 스파스 파일의 크기 보기(Transact-SQL)
+      - name: 데이터베이스 스냅숏 스파스 파일의 크기 보기(T-SQL)
         href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-      - name: 데이터베이스 스냅숏 만들기(Transact-SQL)
+      - name: 데이터베이스 스냅숏 만들기(T-SQL)
         href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
       - name: 데이터베이스 스냅숏 보기(SQL Server)
         href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
       - name: 데이터베이스를 데이터베이스 스냅숏으로 되돌리기
         href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-      - name: 데이터베이스 스냅숏 삭제(Transact-SQL)
+      - name: 데이터베이스 스냅숏 삭제(T-SQL)
         href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
     - name: 데이터베이스 즉시 파일 초기화
       href: ../relational-databases/databases/database-instant-file-initialization.md
@@ -1059,7 +1071,7 @@ items:
         href: ../relational-databases/blob/create-a-filestream-enabled-database.md
       - name: FILESTREAM 데이터 저장용 테이블 만들기
         href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-      - name: Transact-SQL을 사용하여 FILESTREAM 데이터 액세스
+      - name: T-SQL을 사용하여 FILESTREAM 데이터 액세스
         href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
       - name: FILESTREAM 데이터용 클라이언트 애플리케이션 만들기
         href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
@@ -1089,7 +1101,7 @@ items:
         href: ../relational-databases/blob/load-files-into-filetables.md
       - name: FileTable에서 디렉터리 및 경로 작업
         href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-      - name: Transact-SQL을 사용하여 FileTable에 액세스
+      - name: T-SQL을 사용하여 FileTable 액세스
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: 파일 입/출력 API를 사용하여 FileTable 액세스
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
@@ -1272,7 +1284,7 @@ items:
       href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
     - name: 종속성 보기
       href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: Transact-SQL의 OLE 자동화 개체
+    - name: T-SQL의 OLE 자동화 개체
       href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
       - name: OLE Automation 반환 코드 및 오류 정보
@@ -1742,9 +1754,10 @@ items:
       - name: OPENXML에서 value() 및 nodes() 사용
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 개발
+  href: redirectfrom-development-10.md
   items:
-  - name: SQL Server와 상호 작용하는 프로그래밍 +
-    href: ../connect/homepage-sql-connection-programming.md
+  - name: SQL Server와 상호 작용하는 프로그래밍 ++
+    href: ../connect/index.md
   - name: 데이터 계층 애플리케이션
     items:
     - name: 개요
@@ -2090,6 +2103,8 @@ items:
         href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
       - name: SQL Server Express LocalDB 헤더 및 버전 정보
         href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+      - name: LocalDB API 샘플
+        href: ../relational-databases/sql-server-express-localdb-reference.md
       - name: LocalDB 함수
         items:
         - name: LocalDBCreateInstance
@@ -3124,6 +3139,12 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
       - name: XML 스키마 사용
         href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+  - name: Visual Studio 네이티브 도우미
+    items:
+    - name: SqlToolsVSNativeHelpers
+      href: ../relational-databases/sqltoolsvsnativehelpers.md
+    - name: FrameWindowVisible
+      href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: SQLXML
     items:
     - name: SQLXML 예 실행을 위한 요구 사항
@@ -3797,8 +3818,10 @@ items:
   - name: 트랜잭션 잠금 및 행 버전 관리 지침
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: 설치
+  href: redirectfrom-installation-10.md
   items:
   - name: 릴리스 정보
+    href: redirectfrom-release-notes-10.md
     items:
     - name: 이전 버전과의 호환성
       href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -3814,6 +3837,8 @@ items:
       href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: 계획
     items:
+    - name: 참조
+      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: SQL Server 설치의 새로운 기능
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
@@ -3832,6 +3857,8 @@ items:
     items:
     - name: 개요
       href: ../database-engine/install-windows/install-sql-server.md
+    - name: 참조
+      href: ../database-engine/install-windows/installation-for-sql-server.md
     - name: 설치 마법사 도움말
       href: ../sql-server/install/instance-configuration.md
     - name: SQL Server 데이터베이스 엔진 설치
@@ -3878,6 +3905,8 @@ items:
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: SQL Server 업그레이드
     items:
+    - name: 참조
+      href: ../database-engine/install-windows/upgrade-sql-server.md
     - name: 지원되는 버전 업그레이드 - SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: 지원되는 버전 업그레이드 - SQL Server 2016
@@ -3993,7 +4022,7 @@ items:
         href: ../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md
       - name: ft notify bandwidth 서버 구성 옵션
         href: ../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md
-      - name: PolyBase 연결 구성(Transact-SQL)
+      - name: PolyBase 연결 구성(T-SQL)
         href: ../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
       - name: in-doubt xact resolution 서버 구성 옵션
         href: ../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md
@@ -4209,6 +4238,8 @@ items:
       href: ../database-engine/configure-windows/buffer-pool-extension.md
   - name: SQL Server 제거
     items:
+    - name: 개요
+      href: ../sql-server/install/uninstall-sql-server.md
     - name: SQL Server의 기존 인스턴스 제거(설치)
       href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
     - name: Data Quality 서버 개체 제거
@@ -4221,8 +4252,8 @@ items:
       href: ../sql-server/install/uninstall-reporting-services.md
 - name: 데이터 로드 및 마이그레이션
   items:
-  - name: SQL Server Integration Services +
-    href: ../integration-services/sql-server-integration-services.md
+  - name: SSIS(SQL Server Integration Services) ++
+    href: ../integration-services/index.md
   - name: 복제
     items:
     - name: 개요
@@ -4244,6 +4275,8 @@ items:
         items:
         - name: 배포 및 게시 정보 스크립트
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
+        - name: 스크립트 복제
+          href: ../relational-databases/replication/scripting-replication.md
         - name: 복제된 테이블 비교
           href: ../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md
         - name: 미리 정의된 경고 구성(SSMS)
@@ -4284,9 +4317,13 @@ items:
       - name: 모니터
         href: ../relational-databases/replication/monitor/monitoring-replication.md
         items:
+        - name: 복제 에이전트 모니터링
+          href: ../relational-databases/replication/monitor/monitor-replication-agents.md
         - name: 복제 모니터
           href: ../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
           items:
+          - name: 복제 모니터 시작
+            href: ../relational-databases/replication/monitor/start-the-replication-monitor.md
           - name: 사용 권한 관리
             href: ../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
           - name: 게시자 추가 또는 제거
@@ -4351,6 +4388,12 @@ items:
             href: ../relational-databases/replication/publish/create-a-publication.md
           - name: 속성 보기 및 수정
             href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
+          - name: 스냅숏 속성 구성
+            href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
+          - name: 게시 유지 관리
+            href: ../relational-databases/replication/publish/maintain-publications.md
+          - name: FTP를 통해 스냅숏 배달
+            href: ../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
           - name: 게시 삭제
             href: ../relational-databases/replication/publish/delete-a-publication.md
           - name: 구독 만료 기간 설정
@@ -4367,8 +4410,6 @@ items:
             href: ../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md
           - name: 매개 변수가 있는 행 필터 최적화
             href: ../relational-databases/replication/publish/optimize-parameterized-row-filters.md
-          - name: 문서 추가 또는 삭제
-            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: 게시 및 문서 속성 변경
             href: ../relational-databases/replication/publish/change-publication-and-article-properties.md
         - name: 문서 관리
@@ -4377,8 +4418,12 @@ items:
             href: ../relational-databases/replication/publish/define-an-article.md
           - name: 문서 형식 지정
             href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
+          - name: 문서 추가 또는 삭제
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: 속성 보기 및 수정
             href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
+          - name: 기존 게시에 대한 아티클 추가 및 삭제
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
           - name: 문서 삭제
             href: ../relational-databases/replication/publish/delete-an-article.md
         - name: 구독 관리
@@ -4392,6 +4437,12 @@ items:
             href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
           - name: 밀어넣기 구독 속성 보기 및 수정
             href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+          - name: 구독 다시 초기화
+            href: ../relational-databases/replication/reinitialize-a-subscription.md
+          - name: 끌어오기 구독 동기화
+            href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+          - name: 밀어넣기 구독 동기화
+            href: ../relational-databases/replication/synchronize-a-push-subscription.md
           - name: 끌어오기 구독 삭제
             href: ../relational-databases/replication/delete-a-pull-subscription.md
           - name: 밀어넣기 구독 삭제
@@ -4409,6 +4460,8 @@ items:
           - name: 구독 초기화
             href: ../relational-databases/replication/initialize-a-subscription.md
             items:
+            - name: 수동으로 초기화
+              href: ../relational-databases/replication/initialize-a-subscription-manually.md
             - name: 초기 스냅숏 만들기 및 적용
               href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
             - name: 스냅숏 옵션 수정
@@ -4464,12 +4517,18 @@ items:
         items:
         - name: 데이터를 변경하기 위한 전파 방법 구성
           href: ../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: 복제된 명령 보기
+          href: ../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md
         - name: 구독 업데이트 사용
           href: ../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md
         - name: 업데이트 가능한 구독 만들기
           href: ../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md
         - name: SP의 실행 게시
           href: ../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: 백업에서 초기화 허용
+          href: ../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md
+        - name: 백업에서 초기화
+          href: ../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md
         - name: 데이터 충돌 보기
           href: ../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
         - name: 트랜잭션 복제 관련 오류 찾기
@@ -4496,6 +4555,8 @@ items:
           href: ../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md
         - name: 문서 간에 자동으로 조인 필터 생성
           href: ../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
+        - name: 논리적 레코드 관계 정의
+          href: ../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
         - name: 웹 동기화 구성
           href: ../relational-databases/replication/configure-web-synchronization.md
         - name: 웹 동기화를 위한 IIS 구성
@@ -4518,6 +4579,8 @@ items:
           href: ../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md
         - name: 게시된 데이터 필터링
           href: ../relational-databases/replication/merge/filter-published-data-for-merge-replication.md
+        - name: 충돌 정보 보기
+          href: ../relational-databases/replication/view-conflict-information-for-merge-publications.md
         - name: 충돌 해결
           items:
           - name: 해결 프로그램 선택
@@ -4602,8 +4665,10 @@ items:
         - name: 웹 동기화를 위한 토폴로지
           href: ../relational-databases/replication/topologies-for-web-synchronization.md
       - name: 복제 에이전트
-        href: ../relational-databases/replication/agents/replication-agents-overview.md
+        href: ../relational-databases/replication/agents/replication-agent-administration.md
         items:
+        - name: 개요
+          href: ../relational-databases/replication/agents/replication-agents-overview.md
         - name: 배포 에이전트
           href: ../relational-databases/replication/agents/replication-distribution-agent.md
         - name: 로그 판독기 에이전트
@@ -4614,6 +4679,8 @@ items:
           href: ../relational-databases/replication/agents/replication-queue-reader-agent.md
         - name: 스냅숏 에이전트
           href: ../relational-databases/replication/agents/replication-snapshot-agent.md
+        - name: 에이전트 프로필
+          href: ../relational-databases/replication/agents/replication-agent-profiles.md
       - name: 개발자 개념
         href: ../relational-databases/replication/concepts/replication-developer-documentation.md
         items:
@@ -4648,6 +4715,8 @@ items:
           - name: Oracle
             href: ../relational-databases/replication/non-sql/oracle-publishing-overview.md
             items:
+            - name: 고려 사항 및 제한 사항
+              href: ../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: 용어집
               href: ../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
             - name: 관리 고려 사항
@@ -4682,6 +4751,8 @@ items:
         href: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: 참조
       items:
+      - name: 복제 언어
+        href: ../relational-databases/replication/replication-language-reference.md
       - name: 복제 개체의 속성
         items:
         - name: 배포자 속성
@@ -4701,11 +4772,21 @@ items:
           href: ../relational-databases/replication/article-properties-article.md
         - name: 구독 속성
           href: ../relational-databases/replication/subscription-properties-subscriber.md
+        - name: 필터 설정
+          href: ../relational-databases/replication/filter-settings.md
+        - name: 로그 판독기 에이전트
+          href: ../relational-databases/replication/log-reader-agent.md
+        - name: 스냅숏 에이전트
+          href: ../relational-databases/replication/snapshot-agent.md
+        - name: 큐 판독기 에이전트
+          href: ../relational-databases/replication/queue-reader-agent.md
       - name: 도구 참조
         items:
         - name: 복제 모니터
           href: ../relational-databases/replication/replication-monitor.md
           items:
+          - name: 기본 페이지
+            href: ../relational-databases/replication/replication-monitor-main-page.md
           - name: 게시자 추가
             href: ../relational-databases/replication/add-publisher.md
           - name: 배포자 설정
@@ -4716,25 +4797,30 @@ items:
             href: ../relational-databases/replication/publisher-settings.md
           - name: 게시자 정보
             href: ../relational-databases/replication/publisher-information-publications.md
+          - name: 게시자 에이전트
+            href: ../relational-databases/replication/publisher-information-agents.md
+          - name: 열 정렬
+            href: ../relational-databases/replication/sort-columns.md
+        - name: 게시 정보
+          items:
+          - name: 트랜잭션 복제
             items:
-            - name: 트랜잭션 복제
-              items:
-              - name: 구독 조사 목록
-                href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-              - name: 구독
-                href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-              - name: 경고
-                href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
-              - name: 에이전트
-                href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
-              - name: 추적 프로그램 토큰
-                href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
-              - name: 배포되지 않은 명령
-                href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
-              - name: 게시자에서 배포자로의 연결 기록
-                href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
-              - name: 배포자에서 구독자로의 연결 기록
-                href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: 구독 조사 목록
+              href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
+            - name: 구독
+              href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
+            - name: 경고
+              href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
+            - name: 에이전트
+              href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
+            - name: 추적 프로그램 토큰
+              href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
+            - name: 배포되지 않은 명령
+              href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
+            - name: 게시자에서 배포자로의 연결 기록
+              href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
+            - name: 배포자에서 구독자로의 연결 기록
+              href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
             - name: 병합 복제
               items:
               - name: 구독 조사 목록
@@ -5122,7 +5208,8 @@ items:
   - name: 대량 복사 유틸리티(BCP)
     href: ../tools/bcp-utility.md
   - name: Azure Migration Services +
-    href: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+    displayName: DMS, Data Migration Service
+    href: /azure/dms/dms-overview
   - name: 스트레치 데이터베이스
     items:
     - name: 개요
@@ -6378,11 +6465,11 @@ items:
           href: ../relational-databases/data-collection/view-or-change-collection-set-schedules-sql-server-management-studio.md
         - name: 컬렉션 집합 보고서 보기(SQL Server Management Studio)
           href: ../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md
-        - name: 데이터 컬렉션 매개 변수 구성(Transact-SQL)
+        - name: 데이터 컬렉션 매개 변수 구성(T-SQL)
           href: ../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md
-        - name: 일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기(Transact-SQL)
+        - name: 일반 T-SQL 쿼리 수집기 형식을 사용하는 사용자 지정 컬렉션 집합 만들기(T-SQL)
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
-        - name: 컬렉션 집합에 컬렉션 항목 추가(Transact-SQL)
+        - name: 컬렉션 집합에 컬렉션 항목 추가(T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
       - name: 시스템 데이터 컬렉션 집합 보고서
         href: ../relational-databases/data-collection/system-data-collection-set-reports.md
@@ -6437,7 +6524,7 @@ items:
       items:
       - name: 개요
         href: ../relational-databases/sql-trace/sql-trace.md
-      - name: TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
+      - name: T-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
         href: ../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
       - name: 저장 프로시저를 사용하여 수동 추적 만들기
         href: ../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
@@ -6445,17 +6532,17 @@ items:
         href: ../relational-databases/sql-trace/save-trace-results-to-a-file.md
       - name: 추적 데이터에 대한 액세스 향상
         href: ../relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: 추적 만들기(Transact-SQL)
+      - name: 추적 만들기(T-SQL)
         href: ../relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: 추적 필터 설정(Transact-SQL)
+      - name: 추적 필터 설정(T-SQL)
         href: ../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: 기존 추적 수정(Transact-SQL)
+      - name: 기존 추적 수정(T-SQL)
         href: ../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: 저장된 추적 보기(Transact-SQL)
+      - name: 저장된 추적 보기(T-SQL)
         href: ../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: 필터 정보 보기(Transact-SQL)
+      - name: 필터 정보 보기(T-SQL)
         href: ../relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: 추적 삭제(Transact-SQL)
+      - name: 추적 삭제(T-SQL)
         href: ../relational-databases/sql-trace/delete-a-trace-transact-sql.md
       - name: SQL 추적 최적화
         href: ../relational-databases/sql-trace/optimize-sql-trace.md
@@ -6682,7 +6769,7 @@ items:
       items:
       - name: 개요
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-      - name: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술의 인벤토리
+      - name: 더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술의 인벤토리
         href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
       - name: 개요 및 사용 시나리오
         href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
@@ -6798,18 +6885,18 @@ items:
           href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: 메모리 내 OLTP 데이터베이스에 대한 고가용성 지원
           href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-        - name: 메모리 내 OLTP에 대한 Transact-SQL 지원
+        - name: 메모리 내 OLTP에 대한 T-SQL 지원
           href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
           - name: 메모리 내 OLTP에 지원되는 데이터 형식
             href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-          - name: 해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
+          - name: 해석된 T-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
             href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
           - name: 고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
             href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
           - name: 고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 DDL
             href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-          - name: 메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
+          - name: 메모리 내 OLTP에서 지원되지 않는 T-SQL 구문
             href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
       - name: 메모리 내 OLTP로 마이그레이션
         href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
@@ -6975,14 +7062,15 @@ items:
       href: ../relational-databases/synonyms/create-synonyms.md
 - name: 보고 및 분석
   items:
-  - name: 고급 분석 및 Machine learning +
+  - name: 고급 분석 및 기계 학습 ++
     href: ../advanced-analytics/index.md
-  - name: 분석 플랫폼 시스템 +
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md
-  - name: SSAS(SQL Server Analysis Services) +
-    href: ../analysis-services/analysis-services.md
-  - name: SSRS(SQL Server Reporting Services) +
-    href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+  - name: 분석 플랫폼 시스템 ++
+    displayName: APS, PDW, Parallel Data Warehouse
+    href: ../analytics-platform-system/index.md
+  - name: SSAS(SQL Server Analysis Services) ++
+    href: ../analysis-services/index.md
+  - name: SSRS(SQL Server Reporting Services) ++
+    href: ../reporting-services/index.md
   - name: 빅 데이터 클러스터
     items:
     - name: 개요
@@ -7048,25 +7136,33 @@ items:
       - name: 데이터 가상화
         items:
         - name: 관계형 데이터 가상화
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization.md
         - name: CSV 데이터 가상화
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: HDFS 계층화
+          href: ../big-data-cluster/hdfs-tiering.md
       - name: 데이터 수집
         items:
         - name: curl을 사용하여 데이터 로드
           href: ../big-data-cluster/data-ingestion-curl.md
         - name: 데이터베이스 복원
           href: ../big-data-cluster/data-ingestion-restore-database.md
+      - name: 앱 배포
+        items:
+        - name: mssqlctl 사용
+          href: ../big-data-cluster/big-data-cluster-create-apps.md
+        - name: VS Code 사용
+          href: ../big-data-cluster/app-deployment-extension.md
       - name: 빅 데이터/기계 학습
         items:
         - name: PROSE Code Accelerator를 사용한 데이터 랭글링
           href: ../big-data-cluster/use-prose-for-big-data-automation.md
-        - name: 앱 배포
-          href: ../big-data-cluster/big-data-cluster-create-apps.md
         - name: Spark로 기계 학습 모델 교육 및 만들기
           href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
         - name: Spark/Mleap를 사용하여 ML 모델 내보내기
           href: ../big-data-cluster/export-model-with-spark-mleap.md
+        - name: RStudio의 Sparklyr 사용
+          href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: SQL Server 빅 데이터 클러스터 관리
         items:
         - name: 빅 데이터 클러스터에 연결
@@ -7083,14 +7179,12 @@ items:
           href: ../big-data-cluster/notebooks-how-to-manage.md
       - name: Spark 작업
         items:
-        - name: Spark 작업 제출
+        - name: Azure Data Studio에서 Spark 작업 제출
           href: ../big-data-cluster/spark-submit-job.md
+        - name: IntelliJ에서 Spark 작업 제출
+          href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
         - name: 확장 Spark 기록 서버 사용
           href: ../big-data-cluster/spark-history-server.md
-    - name: 리소스
-      items:
-      - name: 빅 데이터 클러스터 액세스 권한 요청
-        href: https://aka.ms/eapsignup
   - name: Master  Data  Services
     items:
     - name: 소개
@@ -7658,7 +7752,7 @@ items:
           href: ../relational-databases/polybase/polybase-faq.md
     - name: 참조
       items:
-      - name: Transact-SQL 참조
+      - name: T-SQL 참조
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
     - name: 리소스
       items:
@@ -7667,7 +7761,7 @@ items:
       - name: 스택 오버플로 +
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: MSDN 포럼 +
-        href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
+        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
       - name: 사용자 의견 보내기 +
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit +
@@ -7757,11 +7851,11 @@ items:
         - name: 암호화를 사용하여 SQL Server 커넥터
           href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
         - name: 사용자 고유 키 가져오기 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
         - name: TDE BYOK 키 순환 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
         - name: TDE 보호기 제거 +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
         - name: Azure Key Vault를 사용한 EKM
           href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
       - name: 감사
@@ -7837,10 +7931,10 @@ items:
         - name: 투명한 데이터 암호화
           href: ../relational-databases/security/encryption/transparent-data-encryption.md
         - name: Azure SQL Database를 사용한 TDE +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql
+          href: /azure/sql-database/transparent-data-encryption-azure-sql
           items:
           - name: 사용자 고유 키 가져오기 +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
         - name: 암호화 키
           href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
           items:
@@ -8257,7 +8351,7 @@ items:
       href: ../ssms/scripting/sqlcmd-use-the-utility.md
     - name: 데이터베이스 엔진에 연결
       href: ../ssms/scripting/sqlcmd-connect-to-the-database-engine.md
-    - name: Transact-SQL 스크립트 파일 실행
+    - name: T-SQL 스크립트 파일 실행
       href: ../ssms/scripting/sqlcmd-run-transact-sql-script-files.md
     - name: 스크립팅 변수와 함께 사용
       href: ../ssms/scripting/sqlcmd-use-with-scripting-variables.md
@@ -8308,7 +8402,7 @@ items:
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: Data Tools 작업 창
         href: ../ssdt/data-tools-operations-window.md
-      - name: Transact-SQL 편집기 옵션
+      - name: T-SQL 편집기 옵션
         href: ../ssdt/transact-sql-editor-options.md
       - name: '방법: 새 데이터베이스 프로젝트 만들기'
         href: ../ssdt/how-to-create-a-new-database-project.md
@@ -8363,9 +8457,9 @@ items:
         href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
       - name: '방법: 데이터 차이 보기'
         href: ../ssdt/how-to-view-data-differences.md
-      - name: Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행
+      - name: T-SQL 편집기를 사용하여 스크립트 편집 및 실행
         href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-      - name: '방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가'
+      - name: '방법: T-SQL 스크립트에 개요 및 코드 조각 추가'
         href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
       - name: '방법: 스크립트 간 이동'
         href: ../ssdt/how-to-navigate-between-scripts.md
@@ -8398,7 +8492,7 @@ items:
           href: ../ssdt/sql-server-unit-test-files.md
         - name: SQL Server 단위 테스트에서 테스트 조건 사용
           href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
-        - name: SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
+        - name: SQL Server 단위 테스트에서 T-SQL 어설션 사용
           href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
         - name: '방법: SQL Server 데이터베이스 단위 테스트용 테스트 프로젝트 만들기'
           href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
@@ -8601,7 +8695,7 @@ items:
           href: ../ssms/agent/create-a-sql-server-agent-master-job.md
         - name: SQL Server 에이전트 프록시 만들기
           href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-        - name: Create a Transact-SQL Job Step
+        - name: T-SQL 작업 단계 만들기
           href: ../ssms/agent/create-a-transact-sql-job-step.md
         - name: 사용자 정의 이벤트 만들기
           href: ../ssms/agent/create-a-user-defined-event.md
@@ -8627,7 +8721,7 @@ items:
           href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
         - name: 경고에 대한 응답 정의(SSMS)
           href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-        - name: Define Transact-SQL Job Step Options
+        - name: T-SQL 작업 단계 옵션 정의
           href: ../ssms/agent/define-transact-sql-job-step-options.md
         - name: 작업 범주 삭제
           href: ../ssms/agent/delete-a-job-category.md
@@ -8887,29 +8981,29 @@ items:
           href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
         - name: IntelliSense 문제 해결(SSMS)
           href: ../ssms/scripting/troubleshooting-intellisense.md
-        - name: IntelliSense에서 지원되는 Transact-SQL 구문
+        - name: IntelliSense에서 지원되는 T-SQL 구문
           href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-      - name: Transact-SQL 코드 조각
+      - name: T-SQL 코드 조각
         href: ../ssms/scripting/transact-sql-code-snippets.md
         items:
-        - name: Transact-SQL 코드 조각 삽입
+        - name: T-SQL 코드 조각 삽입
           href: ../ssms/scripting/insert-transact-sql-snippets.md
-        - name: 코드 감싸기 Transact-SQL 조각 삽입
+        - name: 코드 감싸기 T-SQL 조각 삽입
           href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-        - name: Transact-SQL 코드 조각 완성
+        - name: T-SQL 코드 조각 완성
           href: ../ssms/scripting/complete-transact-sql-snippets.md
-        - name: Transact-SQL 코드 조각 추가
+        - name: T-SQL 코드 조각 추가
           href: ../ssms/scripting/add-transact-sql-snippets.md
-      - name: Transact-SQL 디버거
+      - name: T-SQL 디버거
         href: ../ssms/scripting/transact-sql-debugger.md
         items:
-        - name: TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
+        - name: T-SQL 디버거를 실행하기 전에 방화벽 규칙 구성
           href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-        - name: Transact-SQL 디버거 실행
+        - name: T-SQL 디버거 실행
           href: ../ssms/scripting/run-the-transact-sql-debugger.md
-        - name: Transact-SQL 코드 단계별 실행
+        - name: T-SQL 코드 단계별 실행
           href: ../ssms/scripting/step-through-transact-sql-code.md
-        - name: Transact-SQL 중단점
+        - name: T-SQL 중단점
           href: ../ssms/scripting/transact-sql-breakpoints.md
           items:
           - name: 중단점 설정/해제
@@ -8926,26 +9020,26 @@ items:
             href: ../ssms/scripting/specify-a-breakpoint-action.md
           - name: 중단점 위치 편집
             href: ../ssms/scripting/edit-a-breakpoint-location.md
-        - name: Transact-SQL 디버거 - 정보
+        - name: T-SQL 디버거 - 정보
           href: ../ssms/scripting/transact-sql-debugger-information.md
           items:
-          - name: Transact-SQL 디버거 - 오류 목록 창
+          - name: T-SQL 디버거 - 오류 목록 창
             href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-          - name: Transact-SQL 디버거 - 중단점 창
+          - name: T-SQL 디버거 - 중단점 창
             href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-          - name: Transact-SQL 디버거 - 호출 스택 창
+          - name: T-SQL 디버거 - 호출 스택 창
             href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-          - name: Transact-SQL 디버거 - 지역 창
+          - name: T-SQL 디버거 - 지역 창
             href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-          - name: Transact-SQL 디버거 - 스레드 창
+          - name: T-SQL 디버거 - 스레드 창
             href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-          - name: Transact-SQL 디버거 - 명령 창
+          - name: T-SQL 디버거 - 명령 창
             href: ../ssms/scripting/transact-sql-debugger-command-window.md
-          - name: Transact-SQL 디버거 - 출력 창
+          - name: T-SQL 디버거 - 출력 창
             href: ../ssms/scripting/transact-sql-debugger-output-window.md
-          - name: Transact-SQL 디버거 - 조사식 창
+          - name: T-SQL 디버거 - 조사식 창
             href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-          - name: Transact-SQL 디버거 - 간략한 조사식 대화 상자
+          - name: T-SQL 디버거 - 간략한 조사식 대화 상자
             href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
         - name: 상태 표시줄(데이터베이스 엔진 쿼리 편집기)
           href: ../ssms/scripting/status-bar-database-engine-query-editor.md
@@ -9634,7 +9728,7 @@ items:
     - name: 추적 만들기
       href: ../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md
       items:
-      - name: 추적 실행을 위한 Transact-SQL 스크립트 만들기
+      - name: 추적 실행을 위한 T-SQL 스크립트 만들기
         href: ../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
     - name: 추적 시작
       href: ../tools/sql-server-profiler/start-a-trace.md
@@ -9718,7 +9812,7 @@ items:
         href: ../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md
       - name: 커서까지 재생
         href: ../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
-      - name: Transact-SQL 스크립트 재생
+      - name: T-SQL 스크립트 재생
         href: ../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
       - name: SQL Server Profiler 대화 상자
         href: ../tools/sql-server-profiler/sql-server-profiler-f1-help.md
@@ -9989,7 +10083,7 @@ items:
     - name: 스택 오버플로 +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN 포럼 +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: 사용자 의견 보내기 +
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit +
@@ -9997,11 +10091,11 @@ items:
 - name: Azure의 SQL
   items:
   - name: Azure SQL Database +
-    href: https://docs.microsoft.com/en-us/azure/sql-database/
+    href: /azure/sql-database/
   - name: Azure SQL Data Warehouse +
-    href: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
   - name: Azure VM의 SQL Server +
-    href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 리소스
   items:
   - name: 블로그
@@ -10017,17 +10111,19 @@ items:
   - name: 배우기
     items:
     - name: Microsoft Virtual Academy +
-      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+      href: https://mva.microsoft.com/product-training/sql-server
     - name: Channel 9의 SQL +
       href: https://channel9.msdn.com/Search
   - name: 피드백 및 도움말
     items:
     - name: 도움말 보기
       href: ../sql-server/sql-server-get-help.md
-    - name: SQL 문서에 대한 피드백 제공
+    - name: SQL 문서에 대한 피드백 +
       href: https://aka.ms/sqldocsfeedback
-    - name: SQL Server(UserVoice)에 대한 피드백 제공
+    - name: SQL Server에 대한 피드백(UserVoice) +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: SQL 문서 설문 조사 +
+      href: https://aka.ms/sqldocsurvey
     - name: SQL 설명서에 참여하세요!
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10035,7 +10131,7 @@ items:
     - name: 스택 오버플로 +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: MSDN 포럼 +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit +
       href: https://www.reddit.com/r/SQLServer
   - name: 파트너
@@ -10051,7 +10147,51 @@ items:
   - name: 도움말 뷰어에서의 로컬 콘텐츠
     href: ../sql-server/sql-server-help-installation.md
 - name: 참조
+  href: ../toc/redirectfrom-reference-10.md
   items:
+  - name: SQL 문서 포함 파일
+    href: ../sql-server/applies-to-includes.md
+  - name: 보관된 콘텐츠(SQL 2005 - 2012) +
+    displayName: 2005, 2008, 2008 r2, 2012
+    href: https://docs.microsoft.com/previous-versions/sql/
+  - name: 데이터베이스 샘플
+    href: ../toc/redirectfrom-database-samples.md
+    items:
+    - name: 샘플 개요
+      href: ../samples/sql-samples-where-are.md
+    - name: 모든 Github 샘플 +
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
+    - name: AdventureWorks
+      items:
+      - name: 설치 및 구성
+        href: ../samples/adventureworks-install-configure.md
+    - name: Wide World Importers
+      href: ../toc/redirectfrom-wide-world-importers.md
+      items:
+      - name: 개요
+        href: ../samples/wide-world-importers-what-is.md
+      - name: OLTP
+        href: ../toc/redirectfrom-oltp-10.md
+        items:
+        - name: 데이터베이스 카탈로그
+          href: ../samples/wide-world-importers-oltp-database-catalog.md
+        - name: 설치 및 구성
+          href: ../samples/wide-world-importers-oltp-install-configure.md
+        - name: SQL Server 기능
+          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
+      - name: 데이터 웨어하우스
+        href: ../toc/redirectfrom-data-warehouse-10.md
+        items:
+        - name: 데이터베이스 카탈로그
+          href: ../samples/wide-world-importers-dw-database-catalog.md
+        - name: 설치 및 구성
+          href: ../samples/wide-world-importers-dw-install-configure.md
+        - name: SQL Server 기능
+          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
+      - name: 데이터 생성
+        href: ../samples/wide-world-importers-generate-data.md
+      - name: ETL 워크플로
+        href: ../samples/wide-world-importers-perform-etl.md
   - name: 오류 및 이벤트
     items:
     - name: 개요
@@ -11015,35 +11155,6 @@ items:
       - name: SP:StmtStarting 이벤트 클래스
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Transactions 이벤트 범주
-      href: ../relational-databases/event-classes/transactions-event-category.md
-      items:
-      - name: DTCTransaction 이벤트 클래스
-        href: ../relational-databases/event-classes/dtctransaction-event-class.md
-      - name: SQLTransaction 이벤트 클래스
-        href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: 'TM: Begin Tran Completed 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: 'TM: Begin Tran Starting 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: 'TM: Commit Tran Completed 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: 'TM: Commit Tran Starting 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: 'TM: Promote Tran Completed 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: 'TM: Promote Tran Starting 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: 'TM: Rollback Tran Completed 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: 'TM: Rollback Tran Starting 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: 'TM: Save Tran Completed 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: 'TM: Save Tran Starting 이벤트 클래스'
-        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
-      - name: TransactionLog 이벤트 클래스
-        href: ../relational-databases/event-classes/transactionlog-event-class.md
-    - name: TSQL 이벤트 범주
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL 이벤트 클래스
@@ -11194,7 +11305,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md
       - name: sys.assembly_references
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
-      - name: sys.trusted_assemblies(Transact-SQL)
+      - name: sys.trusted_assemblies(T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
     - name: 데이터 수집기
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
@@ -11254,7 +11365,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: ../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options(Transact-SQL)
+      - name: sys.database_automatic_tuning_options(T-SQL)
         href: ../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.master_files
         href: ../relational-databases/system-catalog-views/sys-master-files-transact-sql.md
@@ -14535,35 +14646,37 @@ items:
     items:
     - name: 개요
       href: ../relational-databases/system-views/replication-views-transact-sql.md
-    - name: IHextendedArticleView(Transact-SQL)
+    - name: IHextendedArticleView(T-SQL)
       href: ../relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView(Transact-SQL)
+    - name: IHextendedSubscriptionView(T-SQL)
       href: ../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns(Transact-SQL)
+    - name: IHsyscolumns(T-SQL)
       href: ../relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings(Transact-SQL)
+    - name: MSdatatype_mappings(T-SQL)
       href: ../relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status(Transact-SQL)
+    - name: MSdistribution_status(T-SQL)
       href: ../relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns(시스템 뷰)(Transact-SQL)
+    - name: sysarticlecolumns(시스템 보기)(T-SQL)
       href: ../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles(시스템 뷰)(Transact-SQL)
+    - name: sysarticles(시스템 보기)(T-SQL)
       href: ../relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings(Transact-SQL)
+    - name: sysdatatypemappings(T-SQL)
       href: ../relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview(Transact-SQL)
+    - name: sysextendedarticlesview(T-SQL)
       href: ../relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview(Transact-SQL)
+    - name: sysmergeextendedarticlesview(T-SQL)
       href: ../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview(Transact-SQL)
+    - name: sysmergepartitioninfoview(T-SQL)
       href: ../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications(시스템 뷰)(Transact-SQL)
+    - name: syspublications(시스템 보기)(T-SQL)
       href: ../relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions(시스템 뷰)(Transact-SQL)
+    - name: syssubscriptions(시스템 보기)(T-SQL)
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas(Transact-SQL)
+    - name: systranschemas(T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL(T-SQL)
+    displayName: tsql
+    href: ../toc/redirectfrom-transact-sql-t-sql.md
     items:
     - name: 개요
       href: ../t-sql/language-reference.md
@@ -15059,85 +15172,87 @@ items:
         href: ../t-sql/xml/binding-relational-data-inside-xml-data.md
       - name: xml 데이터 형식 메서드를 사용하기 위한 지침
         href: ../t-sql/xml/guidelines-for-using-xml-data-type-methods.md
-    - name: 개요
+    - name: DBCC 개요
+      displayName: database console commands
       href: ../t-sql/database-console-commands/database-console-commands.md
-    - name: DBCC 정보
-      href: ../t-sql/database-console-commands/dbcc-transact-sql.md
-    - name: DBCC CHECKALLOC
-      href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
-    - name: DBCC CHECKCATALOG
-      href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
-    - name: DBCC CHECKCONSTRAINTS
-      href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
-    - name: DBCC CHECKDB
-      href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
-    - name: DBCC CHECKFILEGROUP
-      href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
-    - name: DBCC CHECKIDENT
-      href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
-    - name: DBCC CHECKTABLE
-      href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
-    - name: DBCC CLEANTABLE
-      href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
-    - name: DBCC CLONEDATABASE
-      href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
-    - name: DBCC DBREINDEX
-      href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
-    - name: DBCC dllname(FREE)
-      href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
-    - name: DBCC DROPCLEANBUFFERS
-      href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
-    - name: DBCC FLUSHAUTHCACHE
-      href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
-    - name: DBCC FREEPROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
-    - name: DBCC FREESESSIONCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
-    - name: DBCC FREESYSTEMCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
-    - name: DBCC HELP
-      href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
-    - name: DBCC INDEXDEFRAG
-      href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
-    - name: DBCC INPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
-    - name: DBCC OPENTRAN
-      href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
-    - name: DBCC OUTPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
-    - name: DBCC PDW_SHOWEXECUTIONPLAN
-      href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
-    - name: DBCC PDW_SHOWPARTITIONSTATS
-      href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
-    - name: DBCC PDW_SHOWSPACEUSED
-      href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
-    - name: DBCC PROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
-    - name: DBCC SHOW_STATISTICS
-      href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
-    - name: DBCC SHOWCONTIG
-      href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
-    - name: DBCC SHRINKDATABASE
-      href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
-    - name: DBCC SHRINKFILE
-      href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
-    - name: DBCC SHRINKLOG
-      href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
-    - name: DBCC SQLPERF
-      href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
-    - name: DBCC TRACEOFF
-      href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
-    - name: DBCC TRACEON - 추적 플래그
-      href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
-    - name: DBCC TRACEON
-      href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
-    - name: DBCC TRACESTATUS
-      href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
-    - name: DBCC UPDATEUSAGE
-      href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
-    - name: DBCC USEROPTIONS
-      href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-    - name: 개요
+      items:
+      - name: DBCC 정보
+        href: ../t-sql/database-console-commands/dbcc-transact-sql.md
+      - name: DBCC CHECKALLOC
+        href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
+      - name: DBCC CHECKCATALOG
+        href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
+      - name: DBCC CHECKCONSTRAINTS
+        href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
+      - name: DBCC CHECKDB
+        href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
+      - name: DBCC CHECKFILEGROUP
+        href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
+      - name: DBCC CHECKIDENT
+        href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
+      - name: DBCC CHECKTABLE
+        href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
+      - name: DBCC CLEANTABLE
+        href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
+      - name: DBCC CLONEDATABASE
+        href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
+      - name: DBCC DBREINDEX
+        href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
+      - name: DBCC dllname(FREE)
+        href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
+      - name: DBCC DROPCLEANBUFFERS
+        href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC FLUSHAUTHCACHE
+        href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
+      - name: DBCC FREEPROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
+      - name: DBCC FREESESSIONCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
+      - name: DBCC FREESYSTEMCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
+      - name: DBCC HELP
+        href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
+      - name: DBCC INDEXDEFRAG
+        href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
+      - name: DBCC INPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
+      - name: DBCC OPENTRAN
+        href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
+      - name: DBCC OUTPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
+      - name: DBCC PDW_SHOWEXECUTIONPLAN
+        href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWPARTITIONSTATS
+        href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
+      - name: DBCC PDW_SHOWSPACEUSED
+        href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
+      - name: DBCC PROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
+      - name: DBCC SHOW_STATISTICS
+        href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
+      - name: DBCC SHOWCONTIG
+        href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHRINKDATABASE
+        href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
+      - name: DBCC SHRINKFILE
+        href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
+      - name: DBCC SHRINKLOG
+        href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
+      - name: DBCC SQLPERF
+        href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
+      - name: DBCC TRACEOFF
+        href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
+      - name: DBCC TRACEON - 추적 플래그
+        href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
+      - name: DBCC TRACEON
+        href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
+      - name: DBCC TRACESTATUS
+        href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
+      - name: DBCC UPDATEUSAGE
+        href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
+      - name: DBCC USEROPTIONS
+        href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
+    - name: T-SQL 함수 개요
       href: ../t-sql/functions/functions.md
     - name: 집계
       href: ../t-sql/functions/aggregate-functions-transact-sql.md
@@ -16805,7 +16920,7 @@ items:
       href: ../t-sql/statements/truncate-table-transact-sql.md
     - name: UPDATE STATISTICS
       href: ../t-sql/statements/update-statistics-transact-sql.md
-    - name: '자습서: Transact-SQL 문 쓰기'
+    - name: '자습서: T-SQL 문 작성'
       href: ../t-sql/tutorial-writing-transact-sql-statements.md
       items:
       - name: '1단원: 데이터베이스 개체 만들기 및 쿼리'
@@ -16814,40 +16929,6 @@ items:
         href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
       - name: '3단원: 데이터베이스 개체 삭제'
         href: ../t-sql/lesson-3-deleting-database-objects.md
-  - name: 데이터베이스 샘플
-    items:
-    - name: 샘플 개요
-      href: ../samples/sql-samples-where-are.md
-    - name: 모든 Github 샘플 +
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
-    - name: AdventureWorks
-      items:
-      - name: 설치 및 구성
-        href: ../samples/adventureworks-install-configure.md
-    - name: Wide World Importers
-      items:
-      - name: 개요
-        href: ../samples/wide-world-importers-what-is.md
-      - name: OLTP
-        items:
-        - name: 데이터베이스 카탈로그
-          href: ../samples/wide-world-importers-oltp-database-catalog.md
-        - name: 설치 및 구성
-          href: ../samples/wide-world-importers-oltp-install-configure.md
-        - name: SQL Server 기능
-          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: 데이터 웨어하우스
-        items:
-        - name: 데이터베이스 카탈로그
-          href: ../samples/wide-world-importers-dw-database-catalog.md
-        - name: 설치 및 구성
-          href: ../samples/wide-world-importers-dw-install-configure.md
-        - name: SQL Server 기능
-          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
-      - name: 데이터 생성
-        href: ../samples/wide-world-importers-generate-data.md
-      - name: ETL 워크플로
-        href: ../samples/wide-world-importers-perform-etl.md
   - name: xQuery
     items:
     - name: 개요
@@ -17004,9 +17085,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 2eebc67fe856d02dc1d525b2f56ed68a697fca40
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: bb0c24429ffaf6609be6e34dbcfcb87f9a849d87
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676321"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227395"

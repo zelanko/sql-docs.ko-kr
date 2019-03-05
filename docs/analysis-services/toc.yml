@@ -1,6 +1,6 @@
 items:
-- name: SQL Server 루트 목차 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server 루트 목차 ++
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: SQL Server Analysis Services 정보
   href: ../analysis-services/analysis-services.md
 - name: 개요
@@ -34,6 +34,8 @@ items:
       href: ../analysis-services/globalization-tips-and-best-practices-analysis-services.md
 - name: 자습서
   items:
+  - name: Analysis Services 자습서 개요
+    href: ../analysis-services/analysis-services-tutorials-ssas.md
   - name: 테이블 형식 모델링(1400 호환성 수준)
     href: ../analysis-services/tutorial-tabular-1400/as-adventure-works-tutorial.md
     items:
@@ -1328,6 +1330,8 @@ items:
     items:
     - name: SQL Server Analysis Services 서버 관리 개요
       href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: 고가용성 및 확장성
+      href: ../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md
     - name: 서버 속성
       items:
       - name: 서버 속성 개요
@@ -1381,6 +1385,16 @@ items:
       href: ../analysis-services/instances/clear-the-analysis-services-caches.md
     - name: DBCC(데이터베이스 일관성 검사기)
       href: ../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md
+    - name: SSMS의 Analysis Services 스크립트 프로젝트
+      href: ../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md
+    - name: SSMS에서 Analysis Services 스크립트 만들기
+      href: ../analysis-services/instances/create-analysis-services-scripts-in-management-studio.md
+    - name: SQL Server 에이전트를 사용하여 관리 작업 예약
+      href: ../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md
+    - name: SSMS에서 Analysis Services 템플릿 사용
+      href: ../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md
+    - name: SSIS를 사용하여 Analysis Services 관리 작업 자동화
+      href: ../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md
   - name: 연결
     items:
     - name: 서버에 연결 개요
@@ -1421,10 +1435,15 @@ items:
       items:
       - name: 호환성 수준 1103 이하에 대한 테이블 형식 모델 프로그래밍
         href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
-      - name: CSDL(개념 스키마 정의 언어) +
-        href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-      - name: IMDEmbeddedData 인터페이스
-        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
+      - name: 비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md
+        items:
+        - name: 보고서 디자인의 CSDLBI 특성
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
+        - name: CSDLBI 개념
+          href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
+        - name: CSDL(개념 스키마 정의 언어) 참조 +
+          href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
       - name: 표시
         items:
         - name: 연결 표현(테이블 형식)
@@ -1451,58 +1470,70 @@ items:
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/tables-representation-tabular.md
         - name: 1050~1103 수준에서 테이블 형식 개체 모델 이해
           href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
+      - name: IMDEmbeddedData 인터페이스
+        href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/imdembeddeddata-interface.md
   - name: 다차원 모델
     items:
     - name: 다차원 모델 프로그래밍
       href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
     - name: AMO(Analysis Management Objects)
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: ASSL 개체 및 개체 특징
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-    - name: 데이터베이스 백업, 복원 및 동기화(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: 명령 취소(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: 개체 만들기 및 변경(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: 개체 정의 및 식별(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: 집계 디자인(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: Analysis Services에서 XMLA를 사용하여 개발
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    - name: 오류 및 경고 처리(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: 멤버 삽입, 업데이트 및 삭제(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: 데이터베이스 잠금 및 잠금 해제(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: 캐시 관리(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: 연결 및 세션 관리(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: 트랜잭션 관리(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: 파티션 병합(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: 추적 모니터링(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-    - name: 일괄 작업 수행(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: 개체 처리(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: 셀 업데이트(XMLA)
-      href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: ASSL XML 표기 규칙
-      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: ASSL(Analysis Services Scripting Language)을 사용하여 개발
       href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+      items:
+      - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) 참조 +
+        href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+      - name: ASSL 개체 및 개체 특징
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+      - name: 데이터베이스 백업, 복원 및 동기화(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+      - name: 명령 취소(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+      - name: 개체 만들기 및 변경(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+      - name: 개체 정의 및 식별(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+      - name: 집계 디자인(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+      - name: Analysis Services에서 XMLA를 사용하여 개발
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      - name: 오류 및 경고 처리(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+      - name: 멤버 삽입, 업데이트 및 삭제(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+      - name: 데이터베이스 잠금 및 잠금 해제(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+      - name: 캐시 관리(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+      - name: 연결 및 세션 관리(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+      - name: 트랜잭션 관리(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+      - name: 파티션 병합(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+      - name: 추적 모니터링(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+      - name: 일괄 작업 수행(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+      - name: 개체 처리(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+      - name: 셀 업데이트(XMLA)
+        href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+      - name: ASSL XML 표기 규칙
+        href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
     - name: XMLA(XML for Analysis) +
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET +
-      href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services 스크립팅 언어(XMLA용 ASSL) +
-      href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+    - name: ADOMD.NET 서버 프로그래밍
+      href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
+      items:
+      - name: ADOMD.NET Server 기능
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-functionality.md
+      - name: ADOMD.NET 서버 개체 아키텍처
+        href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture.md
+      - name: 사용자 정의 함수 및 저장 프로시저
+        href: ../analysis-services/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures.md
+      - name: ADOMD.NET 참조 +
+        href: /bi-reference/adomd/developing-with-adomd-net
     - name: 데이터베이스 개체(Analysis Services - 다차원 데이터)
       href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
     - name: 의 차원 디자이너에 있는 차원 구조 뷰의
@@ -2453,9 +2484,9 @@ items:
     href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
   - name: 추적 이벤트 +
     href: /bi-reference/trace-events/analysis-services-trace-events
-ms.openlocfilehash: a9359b578b321f76e62483f2ed08887dc73d18c8
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 9d0f4813ece4aeadb0e33733b8fed21d096650c6
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676221"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852978"
