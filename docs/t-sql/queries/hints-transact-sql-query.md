@@ -1,8 +1,8 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 1f156c897d4205e87ce3ee8be3a339fbc2b5bf10
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265380"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662917"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ ROBUST PLAN
    이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138에 해당합니다.
 *  'DISABLE_PARAMETER_SNIFFING'      
    쿼리 최적화 프로그램이 하나 이상의 매개 변수가 있는 쿼리를 컴파일할 때 평균 데이터 분산을 사용하도록 지시합니다. 이 지시를 통해 쿼리 계획에서는 쿼리를 컴파일할 때 처음 사용된 매개 변수 값이 사용되지 않습니다. 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 또는 PARAMETER_SNIFFING=OFF를 설정하는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)에 해당합니다.
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  행 모드 메모리 부여 피드백을 비활성화합니다. 자세한 내용은 [행 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)을 참조하세요.
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  스칼라 UDF 인라인을 비활성화합니다. 자세한 내용은 [스칼라 UDF 인라인 처리](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)를 참조하세요.
+* 'DISALLOW_BATCH_MODE'    
+  일괄 처리 모드 실행을 사용하지 않도록 설정합니다. 자세한 내용은 [실행 모드](../../relational-databases/query-processing-architecture-guide.md#execution-modes)를 참조하세요.
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    카디널리티 추정이 필요한 모든 선행 인덱스 열에 대해 자동으로 생성된 빠른 통계(히스토그램 수정)를 사용합니다. 카디널리티 추정에 사용되는 히스토그램은 이 열의 실제 최댓값 또는 최솟값을 반영하기 위해 쿼리 컴파일 시점에 조정됩니다. 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139에 해당합니다. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     

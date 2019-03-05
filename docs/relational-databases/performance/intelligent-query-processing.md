@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 지능형 쿼리 처리 | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 지능형 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 02/14/2019
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc47ad30edc0eb4092aa1f92fef703c95cb34593
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 00bea67666845ea43226b4bfe48b6dd5ab3f3741
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291661"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590458"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -101,6 +101,8 @@ Azure SQL Database에서 테이블 변수 지연 컴파일의 공개 미리 보�
 
 > [!NOTE]
 > rowstore의 일괄 처리 모드는 공개 미리 보기 기능입니다.  
+
+rowstore의 일괄 처리 모드는 columnstore 인덱스를 요구하지 않고도 분석 워크로드에 대한 일괄 처리 모드를 실행할 수 있습니다.  이 기능은 디스크 힙 및 B-트리 인덱스에 대한 일괄 처리 모드 실행 및 비트맵 필터를 지원합니다. rowstore의 일괄 처리 모드는 기존의 모든 일괄 처리 모드 지원 연산자를 지원할 수 있습니다.
 
 ### <a name="background"></a>배경
 
