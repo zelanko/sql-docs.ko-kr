@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6d96aabb002cafa5ea8d6b3043b39d89a0a86a15
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
-ms.translationtype: HT
+ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801547"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955994"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "56801547"
 새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 
-**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
  
 BCP 버전 실행을 확인 하려면 `bcp /v` 명령 및 해당 15.0.1000.34 확인 또는 이상을 사용 중입니다.
 

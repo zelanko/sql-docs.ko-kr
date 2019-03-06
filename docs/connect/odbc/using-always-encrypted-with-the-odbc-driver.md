@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
-ms.translationtype: HT
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662857"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956064"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -538,7 +538,7 @@ ODBC 드라이버를 사용할 수는 있지만 [비동기 작업](../../relatio
 SQL Server 용 ODBC 드라이버 17 암호화 전에 SQLGetData 사용 하 여 파트의 문자 및 이진 열을 검색할 수 없습니다. SQLGetData 한 번만 호출 전체 열의 데이터를 포함 하도록 충분 한 길이의 버퍼를 사용 하 여 만들 수 있습니다.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>SQLPutData 사용 하 여 파트의 데이터 전송
-SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를 보낼 수 없습니다. 전체 데이터를 포함 하는 버퍼를 사용 하 여 SQLPutData 한 번만 호출을 만들 수 있습니다. 암호화 된 열에 long 데이터를 삽입, 입력된 데이터 파일을 사용 하 여 다음 섹션에 설명 된 대량 복사 API를 사용 합니다.
+SQL Server 용 ODBC 드라이버 17.3, 전에 SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를 보낼 수 없습니다. 전체 데이터를 포함 하는 버퍼를 사용 하 여 SQLPutData 한 번만 호출을 만들 수 있습니다. 암호화 된 열에 long 데이터를 삽입, 입력된 데이터 파일을 사용 하 여 다음 섹션에 설명 된 대량 복사 API를 사용 합니다.
 
 ### <a name="encrypted-money-and-smallmoney"></a>암호화 된 money 및 smallmoney
 암호화 **money** 하거나 **smallmoney** 매개 변수에서 열을 대상으로 지정할 수 없습니다, ODBC 데이터 형식 피연산자 유형 충돌 오류가 발생 하는 해당 형식에 매핑되는 특정 이상 있기 때문입니다.
