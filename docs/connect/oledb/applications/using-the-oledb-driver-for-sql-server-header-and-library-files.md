@@ -1,5 +1,5 @@
 ---
-title: SQL Server 헤더 및 라이브러리 파일용 OLE DB 드라이버 사용 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버 헤더 및 라이브러리 파일 사용 | Microsoft Docs
 description: SQL Server 헤더 및 라이브러리 파일용 OLE DB 드라이버 사용
 ms.custom: ''
 ms.date: 02/12/2019

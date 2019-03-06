@@ -21,10 +21,10 @@ ms.locfileid: "56013004"
 
 **[최신 버전 다운로드](sqlpackage-download.md)**
 
-## <a name="sqlpackage-181"></a>sqlpackage 18.0
+## <a name="sqlpackage-181"></a>sqlpackage 18.1
 
-릴리스 날짜: 2018년 2월 15일  
-빌드 
+릴리스 날짜: 2019년 2월 1일  
+빌드: 15.0.4316.1 
 
 릴리스는 다음 기능 및 수정 합니다.
 

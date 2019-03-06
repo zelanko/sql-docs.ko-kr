@@ -269,7 +269,7 @@ Microsoft Driver for SQL Server 용 PHP 5.3.0 Windows 인증서 저장소 공급
 
 라는 Windows 인증서 저장소에 대 한 기본 제공 열 마스터 키 저장소 공급자를 포함 하는 Windows의 SQL Server 용 ODBC 드라이버 `MSSQL_CERTIFICATE_STORE`합니다. (이 공급자는 macOS 또는 Linux에서 사용할 수 있습니다.) 이 공급자를 사용 하 여 CMK 클라이언트 컴퓨터에 로컬로 저장 되어 이며 응용 프로그램에서 추가 구성 없이 드라이버와 함께 사용 하는 데 필요한 합니다. 그러나 응용 프로그램 저장소에 인증서 및 개인 키에 액세스할 수 있어야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
-### <a name="using-azure-key-vault"></a>Azure Key Vault를 사용한 EKM
+### <a name="using-azure-key-vault"></a>Azure Key Vault 사용
 
 Azure Key Vault 암호화 키, 암호 및 Azure를 사용 하 여 다른 암호를 저장 하는 방법을 제공 하 고 Always Encrypted에 대 한 키를 저장 하기 위해 사용할 수 있습니다. ODBC Driver for SQL Server (버전 17 이상)는 Azure Key Vault에 대 한 기본 마스터 키 저장소 공급자를 포함합니다. Azure Key Vault 구성을 처리 하는 다음과 같은 연결 옵션: `KeyStoreAuthentication`, `KeyStorePrincipalId`, 및 `KeyStoreSecret`합니다. 
  -   `KeyStoreAuthentication` 두 개의 가능한 문자열 값 중 하나를 수행 합니다. `KeyVaultPassword` 및 `KeyVaultClientSecret`합니다. 이러한 값은 다른 두 키워드를 사용 하 여 어떤 종류의 인증 자격 증명 되는 제어 합니다.

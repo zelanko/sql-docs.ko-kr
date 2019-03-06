@@ -2,7 +2,7 @@
 title: SQL Server용 Microsoft OLE DB 드라이버 | Microsoft Docs
 description: SQL Server용 Microsoft OLE DB 드라이버
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687871"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744573"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>SQL Server용 Microsoft OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,26 +68,26 @@ OLE DB가 [다시 사용](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/
 [SQL Server용 OLE DB 드라이버를 사용해야 하는 경우](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  SQL Server용 OLE DB 드라이버를 Microsoft 데이터 액세스 기술과 연동하는 방법, Windows DAC 및 ADO.NET과 비교되는 특징을 설명하고, 사용할 데이터 액세스 기술을 결정하는 데 도움이 되는 팁을 제공합니다.  
   
- [SQL Server 기능용 OLE DB 드라이버](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [SQL Server용 OLE DB 드라이버 기능](../oledb/features/oledb-driver-for-sql-server-features.md )  
  SQL Server 용 OLE DB 드라이버에서 지 원하는 기능을 설명 합니다.  
   
- [SQL Server용 OLE DB 드라이버로 응용 프로그램 빌드](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버로 애플리케이션 빌드](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  SQL Server용 OLE DB 드라이버가 Windows DAC와 다른 점, 사용되는 구성 요소, ADO와 연동하는 방법 등 개발에 대한 개요를 제공합니다.  
   
  또한이 섹션에서는 SQL Server 설치 및 배포에 포함 된 OLE DB Driver for SQL Server 라이브러리를 재배포 하는 방법에 대 한 OLE DB 드라이버를 설명 합니다.  
   
- [SQL Server용 OLE DB 드라이버의 시스템 요구 사항](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버 시스템 요구 사항](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  SQL Server 용 OLE DB 드라이버를 사용 하는 데 필요한 시스템 리소스에 설명 합니다.  
   
- [SQL Server 프로그래밍용 OLE DB 드라이버](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
+ [SQL Server용 OLE DB 드라이버 프로그래밍](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
  SQL Server 용 OLE DB 드라이버를 사용 하는 방법에 대 한 정보를 제공 합니다.  
   
- [SQL Server 정보에 대한 더 많은 OLE DB 드라이버 찾기](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [더 많은 SQL Server용 OLE DB 드라이버 정보 찾기](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  받기 및 외부 리소스에 대 한 링크를 포함 하 여 SQL Server 용 OLE DB 드라이버에 대 한 추가 리소스를 제공 합니다.  
   
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server 2005 Native Client에서 애플리케이션 업데이트](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
  [OLE DB 방법 도움말 항목](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

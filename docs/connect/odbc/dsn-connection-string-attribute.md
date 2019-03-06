@@ -1,7 +1,7 @@
 ---
 title: DSN 및 연결 문자열 키워드에 대 한 ODBC 드라이버-SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306240"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662877"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
 
@@ -23,7 +23,7 @@ ms.locfileid: "53306240"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>DSN/연결 문자열 키워드 및 연결 특성 지원
 
-다음 표에서 사용할 수 있는 키워드 및 각 플랫폼 (l: 특성 Linux ; M: Mac ; W: Windows: 키워드 또는 자세한 세부 정보에 대 한 특성을 클릭 합니다.
+다음 표에서 사용할 수 있는 키워드 및 각 플랫폼 (l: Linux;에 대 한 특성 M: Mac 용 W: Windows)입니다. 키워드 또는 자세한 세부 정보에 대 한 특성을 클릭 합니다.
 
 | DSN/연결 문자열 키워드 | 연결 특성 | 플랫폼 |
 |-|-|-|
@@ -105,7 +105,7 @@ ms.locfileid: "53306240"
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | LMW |
@@ -156,6 +156,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정 합니다. 참조 
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory 통합 인증|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory 암호 인증|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory 대화형 인증|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory 관리 서비스 Id 인증 합니다. 사용자 할당 id에 대해 UID 사용자 id의 개체 ID로 설정 됩니다. |
 | |SQL_AU_RESET|설정 되지 않은 합니다. 모든 DSN 또는 연결 문자열 설정을 재정의합니다.|
 
 > [!NOTE]
@@ -214,4 +215,21 @@ Always Encrypted에 대 한 키 저장소 공급자 라이브러리가 로드 �
 |-|-|
 | char * | 키 저장소 공급자 라이브러리에 대 한 경로 |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+XA 트랜잭션을 사용 하 여는 XA 호환 TP (Transaction Processor)를 사용 하려면 응용 프로그램 호출 해야 **SQLSetConnectAttr** 설정 된 SQL_COPT_SS_ENLIST_IN_XA에 대 한 포인터와는 `XACALLPARAM` 개체입니다. 이 옵션은 Windows, Linux (17.3 이상) 및 Mac. 지원
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ XA 트랜잭션만 ODBC 연결에 연결 하려면 TRUE 또는 FALSE 설정 된 SQL_COPT_SS_ENLIST_IN_XA를 사용 하 여 포인터 대신 호출 하면 제공 **SQLSetConnectAttr**합니다. Windows 에서만 유효 하 고 클라이언트 응용 프로그램을 통해 XA 작업을 지정 하려면 사용할 수 없습니다. 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|값|설명|플랫폼|  
+|-----------|-----------------|-----------------|  
+|XACALLPARAM 개체 *|`XACALLPARAM` 개체에 대한 포인터입니다.|Windows, Linux 및 Mac|
+|TRUE|XA 트랜잭션을 ODBC 연결과 연결합니다. 관련된 모든 데이터베이스 작업은 XA 트랜잭션의 보호 아래 수행됩니다.|Windows|  
+|FALSE|ODBC 연결을 사용 하 여 트랜잭션을 연결을 끊습니다.|Windows|
+
+ 참조 [XA 트랜잭션을 사용 하 여](../../connect/odbc/use-xa-with-dtc.md) XA 트랜잭션에 대 한 자세한 내용은 합니다.

@@ -2,7 +2,7 @@
 title: SQL Server 기능에 대 한 OLE DB 드라이버 | Microsoft Docs
 description: SQL Server 기능용 OLE DB 드라이버
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840911"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744463"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 기능용 OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840911"
   
  [비동기 작업 수행](../../oledb/features/performing-asynchronous-operations.md)  
  SQL Server용 OLE DB 드라이버가 비동기 작업을 지원하는 방법을 설명합니다. 비동기 작업은 호출 스레드를 차단하지 않고 즉시 반환할 수 있는 기능입니다.  
-  
+
+[Azure Active Directory 사용](using-azure-active-directory.md)  
+새 인증 방법을 OLE DB 드라이버 18.2.1에에서 도입 된 기본 설정이 더 안전 하 고 페더레이션된 id를 사용 하 여 Azure SQL Database의 인스턴스에 연결할 수 있도록 허용 하는 설명 합니다.
+
  [MARS&#40;Multiple Active Result Sets&#41; 사용](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  OLE DB Driver for SQL Server에서 여러 활성 결과 집합 (MARS)를 지 원하는 방법에 대해 설명 합니다. MARS를 사용하면 단일 데이터베이스 연결을 통해 여러 결과 집합을 실행 및 검색할 수 있습니다.  
   
@@ -86,9 +89,12 @@ ms.locfileid: "47840911"
   
  [SQL Server용 OLE DB 드라이버에서 UTF-16 지원](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공하는 경우, 종결 문자 이전에 버퍼에 작성된 **wchar** 문자가 서로게이트 쌍의 상위 서로게이트 코드 포인트인 경우 및 다음 **wchar** 문자가 하위 서로게이트 코드 포인트인 경우 SQL Server용 OLE DB 드라이버에서 상위 서로게이트 코드 포인트를 버퍼에 추가하지 않습니다.  
+ 
+ [SQL Server용 OLE DB 드라이버에서 UTF-8 지원](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ U t F-8 server 인코딩과 구성 예방 조치 u t F-8로 인코딩된 데이터로 작업 하는 경우 사용자가 수행할에 대 한 지원을 설명 합니다.
   
  [SQL Server용 OLE DB 드라이버의 고가용성, 재해 복구 지원](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 응용 프로그램을 구성할 수 있는 방법을 설명합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 애플리케이션을 구성할 수 있는 방법을 설명합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  SQL Server용 OLE DB 드라이버의 향상된 기능과, 링 버퍼 및 XEvents 로그의 진단 정보에 액세스하는 데 사용되는 데이터 추적 기능에 대해 설명합니다.  

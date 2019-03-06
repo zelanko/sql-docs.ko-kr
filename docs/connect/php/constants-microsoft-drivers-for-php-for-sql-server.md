@@ -70,7 +70,7 @@ PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint,
 
 PDO::SQLSRV_ATTR_FORMAT_DECIMALS 및 PDO::SQLSRV_ATTR_DECIMAL_PLACES 특성을 사용 하 여 기본 10 진수 서식 지정 동작을 수정할 수 있습니다. 이러한 특성의 동작 SQLSRV 쪽에서 해당 옵션에 동일 (**FormatDecimals** 하 고 **DecimalPlaces**) 점을 제외 하 고는 서식 지정에 대 한 출력 매개 변수를 사용할 수 없습니다. 이러한 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 또는 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 모든 문 특성은 재정의 연결 특성입니다. 자세한 내용은 참조 하세요. [10 진수 문자열 서식 지정 및 Money 값 (PDO_SQLSRV 드라이버)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)합니다.
 
-### <a name="handling-date-and-time-fetches"></a>날짜 및 시간 값 처리
+### <a name="handling-date-and-time-fetches"></a>날짜 및 시간 페치 처리
 
 PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검색할 것인지 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체입니다. False 두면 기본 동작 문자열로 반환 하는 것입니다. 이 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 하거나 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 문 특성은 재정의 연결 특성입니다. 자세한 내용은 [방법: 검색 날짜 및 시간 형식을 사용 하 여 PHP DateTime 개체 PDO_SQLSRV 드라이버](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)합니다.
 

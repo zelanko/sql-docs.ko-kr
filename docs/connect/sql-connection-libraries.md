@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600373"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007576"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 데이터베이스에 대 한 연결 모듈
 
 이 문서에서는 연결 모듈에 대 한 다운로드 링크를 제공 하거나 *드라이버* 클라이언트 프로그램 상호 작용에 사용할 수 있는 [Microsoft SQL Server](../relational-databases/database-features.md), 및 클라우드에서 해당 쌍을 사용 하 여 [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)합니다. 드라이버는 다음 운영 체제에서 실행 되는 프로그래밍 언어의 다양 한 사용할 수 있습니다.
 
-- Linux(Ubuntu)
+- Linux
 - MacOS
 - Windows
 
@@ -49,7 +49,7 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 
 | 언어 | SQL driver 다운로드 |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[Linux Ubuntu 용.NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 용.NET core](https://www.microsoft.com/net/core#macos)<br />[Windows에 대 한.NET core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br /><br />[Linux-Ubuntu용.NET core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 용.NET core](https://www.microsoft.com/net/core#macos)<br />[Windows에 대 한.NET core](https://www.microsoft.com/net/core) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 드라이버를 설치 지침](./node-js/step-1-configure-development-environment-for-node-js-development.md) |

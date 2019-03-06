@@ -10,25 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 12f45cd1014a312eec7854685d8c7fe2e64b9714
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d67b8bba1449cce473baa5313762c4933a72e250
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662757"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955864"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13.1의 새로운 기능
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 새로운 기능
 
 **지원 되는 새 배포**: 15 SuSE, Ubuntu 18.10 macOS 10.14
 
 **추가 기능**:
 
-- Azure Active Directory 관리 서비스 Id (시스템 및 사용자 할당) 인증 모드
-- 스트리밍 AE 입력된 매개 변수
-- XA DTC
+- Azure Active Directory 관리 서비스 Id (시스템 및 사용자 할당)에 대 한 자세한 내용은 인증 모드 [를 사용 하 여 Azure Active Directory와 ODBC 드라이버](../using-azure-active-directory.md)
+- 자세한 내용은 Always Encrypted 열에 대 한 입력된 매개 변수를 스트림 하는 기능 [Always Encrypted를 사용 하는 경우 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 분산 트랜잭션, 자세한 내용은 [XA 트랜잭션 사용](../use-xa-with-dtc.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
 

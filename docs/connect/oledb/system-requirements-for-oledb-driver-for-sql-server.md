@@ -1,8 +1,8 @@
 ---
-title: SQL Server용 OLE DB 드라이버의 시스템 요구 사항 | Microsoft Docs
+title: SQL Server용 OLE DB 드라이버 시스템 요구 사항 | Microsoft Docs
 description: SQL Server용 OLE DB 드라이버의 시스템 요구 사항
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: a2ff38f4322209c7ed6eb46a5ba97f360ca3650b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6462901ba1e3e73ca8c0a4ca448d8bc689bd8868
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821031"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744433"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버의 시스템 요구 사항
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,16 @@ ms.locfileid: "47821031"
 >  이 소프트웨어를 설치하기 전에 관리자 권한으로 로그온했는지 확인하십시오.  
 
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- SQL Server에 대 한 OLE DB 드라이버를 지 원하는 운영 체제 목록은 참조 하세요 [OLE DB Driver for SQL Server에 대 한 지원 정책을](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)합니다.  
+ SQL Server에 대 한 OLE DB 드라이버를 지 원하는 운영 체제 목록은 참조 하세요 [SQL Server 용 OLE DB 드라이버에 대 한 지원 정책](../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)합니다.  
+
+ ## <a name="azure-active-directory-authentication-requirements"></a>Azure Active Directory 인증 요구 사항  
+ OLE DB 드라이버를 사용 하 여 Azure Active Directory 인증 메서드를 사용 하는 경우에 있는지 확인 합니다 [SQL Server 용 Active Directory 인증 라이브러리](https://go.microsoft.com/fwlink/?LinkID=513072) 설치가 완료 된 후입니다. ADAL는 다른 인증 방법 또는 OLE DB 작업에 필요 하지 않습니다.
+자세한 내용은 [Azure Active Directory 사용](features/using-azure-active-directory.md)을 참조하세요.
 
 ## <a name="sql-server-requirements"></a>SQL Server 요구 사항  
  SQL Server 용 OLE DB 드라이버를 사용 하 여 데이터에 액세스 하도록 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 인스턴스에 있어야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다.  
 
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]은 모든 버전의 MDAC, Windows Data Access Components 및 모든 버전의 SQL Server용 OLE DB 드라이버에서 연결을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 이전 클라이언트 버전이 연결되어 있으면 클라이언트에서 인식되지 않는 서버 데이터 형식이 클라이언트 버전과 호환되는 형식으로 매핑됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 클라이언트 버전별 데이터 형식 호환성을 참조하십시오.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]은 모든 버전의 MDAC, Windows Data Access Components 및 모든 버전의 SQL Server용 OLE DB 드라이버에서 연결을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 이전 클라이언트 버전이 연결되어 있으면 클라이언트에서 인식되지 않는 서버 데이터 형식이 클라이언트 버전과 호환되는 형식으로 매핑됩니다. 자세한 내용은 [클라이언트 버전별 데이터 형식 호환성](#data-type-compatibility-for-client-versions)을 참조하세요.  
 
 ## <a name="cross-language-requirements"></a>언어 간 상호 운용성 요구 사항  
  OLE DB Driver for SQL Server의 영어 버전은 지원 되는 운영 체제의 모든 지역화 된 버전에서 지원 됩니다. OLE DB Driver for SQL Server의 지역화 된 버전의 지역화 된 OLE DB 드라이버로 SQL Server 버전에 대 한 동일한 언어로 지역화 된 운영 체제에서 지원 됩니다. 각 언어 버전의 SQL Server용 OLE DB 드라이버는 언어 설정이 일치하는 경우 영어 버전의 지원 운영 체제에서도 지원됩니다.  
@@ -68,17 +72,17 @@ ms.locfileid: "47821031"
 
 |데이터 형식|SQL Server Native Client <br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SQL Server용 OLE DB 드라이버|Windows Data Access Components, MDAC 및<br /><br /> OLE DB 드라이버 응용 프로그램의 SQL Server OLE DB DataTypeCompatibility 사용 하 여 = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT(\<= 8Kb)|udt|udt|udt|Varbinary|  
+|CLR UDT (\<8kb =)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|varchar|텍스트 모드|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
+|CLR UDT (> 8kb)|varbinary|udt|udt|image|  
 |날짜|varchar|날짜|날짜|Varchar|  
 |Datetime2|varchar|Datetime2|Datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |Time|varchar|Time|Time|Varchar|  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)   
  [SQL Server용 OLE DB 드라이버 설치](../oledb/applications/installing-oledb-driver-for-sql-server.md)  

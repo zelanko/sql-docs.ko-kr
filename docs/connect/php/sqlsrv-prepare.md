@@ -63,14 +63,14 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |-----------|---------------|  
     |*&$value*|PHP 변수에 대한 리터럴 값 또는 참조입니다.|  
     |*$direction*[선택 사항]|매개 변수 방향을 나타내기 위해 사용되는 다음 **SQLSRV_PARAM_\*** 상수 중 하나입니다. **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. 기본값은 **SQLSRV_PARAM_IN**입니다.<br /><br />PHP 상수에 대한 자세한 내용은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)를 참조하세요.|  
-    |*$phpType*[OPTIONAL]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
-    |*$sqlType*[OPTIONAL]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
+    |*$phpType*[선택 사항]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
+    |*$sqlType*[선택 사항]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
   
 *$options* [선택 사항]: 쿼리 속성을 설정하는 결합형 배열입니다. 다음 표는 지원되는 키와 해당 값을 나열합니다.  
   
 |Key|지원되는 값|설명|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|양의 정수|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 128KB입니다. 자세한 내용은 [Cursor Type and Selecting Rows 지정](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)합니다.|
+|ClientBufferMaxKBSize|양의 정수|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB입니다. 자세한 내용은 [Cursor Type and Selecting Rows 지정](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)합니다.|
 |DecimalPlaces|0에서 4 (포함) 사이의 정수|소수 자릿수의 서식을 지정할 때 인출 money 값을 지정 합니다.<br /><br />음의 정수 또는 값을 4 보다 큰 무시 됩니다.<br /><br />이 옵션은 인 경우에 FormatDecimals **true**합니다.|
 |FormatDecimals|**true** 또는 **false**<br /><br />기본 값은 **false**입니다.|앞에 오는 0을 해당 하는 경우 10 진수 문자열을 사용 하면 추가 여부를 지정 합니다 `DecimalPlaces` money 형식 서식 지정에 대 한 옵션입니다.<br /><br />자세한 내용은 [10 진수 문자열 서식 지정 및 Money 값 (SQLSRV 드라이버)](../../connect/php/formatting-decimals-sqlsrv-driver.md)합니다.|
 |QueryTimeout|양의 정수|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과를 무한정 기다립니다.|  

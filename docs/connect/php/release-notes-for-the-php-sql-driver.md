@@ -25,9 +25,9 @@ ms.locfileid: "56744353"
 
 이 페이지의 각 버전에 추가 된 기능에 대해 설명 합니다 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다.  
 
-## <a name="whats-new-in-version-56"></a>버전 4.0의 새로운 기능
+## <a name="whats-new-in-version-56"></a>버전 5.6의 새로운 기능
 
-- PHP 7.0 지원
+- PHP 7.3 지원
 - 모든 플랫폼에서 Microsoft ODBC Driver 17.3 용 지원
 - MacOS Mojave 지원 (ODBC 드라이버 17.3 필요 이상)
 - Ubuntu 18.10 및 Suse Linux 15에 대 한 지원 (둘 다 필요 ODBC 드라이버 17.3 이상)

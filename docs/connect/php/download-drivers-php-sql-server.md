@@ -25,7 +25,7 @@ ms.locfileid: "56744373"
 
 다음 버전의 Windows에서 php 드라이버 다운로드에 사용할 수 있습니다.
 
-- [Microsoft Drivers 3.1 for PHP for SQL Server:](https://www.microsoft.com/download/details.aspx?id=57916)
+- [Microsoft Drivers 5.6 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=56729)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=55642)
@@ -35,7 +35,7 @@ ms.locfileid: "56744373"
 
 Php 드라이버 다운로드 쉽게 되 고 PECL를 사용 하 여 Linux 및 macOS에 설치 합니다. 참조 된 [Linux 및 macOS 설치 자습서](installation-tutorial-linux-mac.md) 세부 정보에 대 한 합니다. Linux 및 macOS에서 PHP 용 드라이버를 수동으로 설치 해야 할 경우 다음 버전은 다운로드할 수 있습니다.
 
-- [Microsoft Drivers 3.1 for PHP for SQL Server:](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
+- [Microsoft Drivers 5.6 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
 - [Microsoft Drivers 5.2 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
 - [Microsoft Drivers 4.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)

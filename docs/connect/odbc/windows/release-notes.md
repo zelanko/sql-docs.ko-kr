@@ -1,5 +1,5 @@
 ---
-title: 릴리스 정보 (ODBC Driver for SQL Server) | Microsoft Docs
+title: 릴리스 정보(SQL Server용 ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
@@ -11,17 +11,28 @@ ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cb599d59a374fc09dbc0009f0288296cc1df9d9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc1321ac161923499d57ab69374b8ed603d272e0
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702072"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955774"
 ---
 # <a name="release-notes"></a>릴리스 정보
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
   Windows 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보입니다.  
+
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ODBC 드라이버 17.3[!INCLUDE[msCoName](../../../includes/msconame_md.md)]의 새로운 기능
+
+**추가 기능**:
+
+- Azure Active Directory 관리 서비스 Id (시스템 및 사용자 할당)에 대 한 자세한 내용은 인증 모드 [를 사용 하 여 Azure Active Directory와 ODBC 드라이버](../using-azure-active-directory.md)
+- 자세한 내용은 Always Encrypted 열에 대 한 입력된 매개 변수를 스트림 하는 기능 [Always Encrypted를 사용 하는 경우 ODBC 드라이버의 제한 사항](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA 분산 트랜잭션, 자세한 내용은 [XA 트랜잭션 사용](../use-xa-with-dtc.md)
+
+[버그 수정](../bug-fixes.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Windows 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2의 새로운 기능
 

@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MTE75
+ms.openlocfilehash: 1ba94395acad1aec8717c570cc4b6e30ed7a12a4
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044950"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662857"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "55044950"
 ### <a name="applicable-to"></a>적용 가능 대상
 
 - ODBC Driver 13.1 for SQL Server
-- SQL Server 용 ODBC 드라이버 17
+- ODBC Driver 17 for SQL Server
 
 ### <a name="introduction"></a>소개
 
@@ -286,7 +286,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>쿼리 매개 변수에 대한 메타데이터를 검색하기 위한 왕복 제어
 
-연결에 대한 상시 암호화가 설정된 경우 기본적으로 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장된 프로시저 매개 변수를 암호화 해야 하 고 그렇다면 알아 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 애플리케이션에 대한 높은 수준의 투명도를 보장합니다. 애플리케이션(및 애플리케이션 개발자)에서는 암호화된 열을 대상으로 하는 값이 매개 변수로 드라이버에 전달되는 한, 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
+연결에 대한 상시 암호화가 설정된 경우 기본적으로 드라이버는 각 매개 변수화된 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md)을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. 이 저장된 프로시저 매개 변수를 암호화 해야 하 고 그렇다면 알아 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 응용 프로그램에 대 한 투명도 수준의: 응용 프로그램 (및 응용 프로그램 개발자)에 암호화 된 열을 대상으로 하는 값이 전달 되는 있다면 어떤 쿼리가 암호화 된 열 액세스 알아야 할 필요 하지 않습니다 매개 변수에서 드라이버입니다.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>문 별 동작을 상시 암호화
 
@@ -369,6 +369,8 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 
 - 클라이언트 I d/비밀-이 메서드를 사용 하 여 자격 증명은 응용 프로그램 클라이언트 ID 및 응용 프로그램 비밀입니다.
 
+- 관리 서비스 Id-이 메서드를 사용 하 여 자격 증명이 시스템 할당 id 또는 사용자 할당 id입니다. 사용자 할당 id에 대해 UID 사용자 id의 개체 ID로 설정 됩니다.
+
 열 암호화에 대 한 AKV에 저장 된 Cmk를 사용 하는 드라이버를 허용 하려면 다음 연결 문자열 전용 키워드를 사용 합니다.
 
 |자격 증명 유형| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
@@ -386,7 +388,7 @@ Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 �
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**사용자 이름/암호**
+**사용자 이름/암호**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -551,7 +553,7 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 
 - Varbinary (max) 형식 (예: 위의 검색) 암호 텍스트를 삽입, 설정 하는 `BCPMODIFYENCRYPTED` true 옵션 및 BCP IN 작업을 수행 합니다. 결과 데이터를 해독할 수에 대 한 순서 대로 있는지 확인 대상 열의 CEK 암호화 텍스트를 원래 가져온 것과 동일 합니다.
 
-사용 하는 경우는 **bcp** 유틸리티. 컨트롤에는 `ColumnEncryption` 설정,-D 옵션을 사용 하 고 원하는 값이 포함 된 DSN을 지정 합니다. 암호 텍스트를 삽입 하려면 다음을 확인 합니다 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 사용자의 설정이 사용 됩니다.
+사용 하는 경우는 **bcp** 유틸리티: 컨트롤에는 `ColumnEncryption` 설정,-D 옵션을 사용 하 고 원하는 값이 포함 된 DSN을 지정 합니다. 암호 텍스트를 삽입 하려면 다음을 확인 합니다 `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` 사용자의 설정이 사용 됩니다.
 
 다음 표에서 요약이 작업 중 암호화 된 열에서 작동 하는 경우:
 
@@ -577,7 +579,8 @@ SQLPutData 사용 하 여 파트의 삽입 또는 비교에 대 한 데이터를
 |`ColumnEncryption`|허용 되는 값은 `Enabled` / `Disabled`합니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다. <br><br>기본값은 `Disabled`입니다.|  
 |`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`,`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword`, 유효한 Azure Active Directory 사용자 계정 이름으로이 값을 설정 합니다. <br>때 `KeyStoreAuthetication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID 설정 |
-|`KeyStoreSecret` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword` 이 값을 해당 사용자 이름의 암호를 설정 합니다. <br>때 `KeyStoreAuthentication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID와 연결 된 응용 프로그램 암호 설정|
+|`KeyStoreSecret` | 때 `KeyStoreAuthentication`  =  `KeyVaultPassword` 이 값을 해당 사용자 이름의 암호를 설정 합니다. <br>때 `KeyStoreAuthentication`  =  `KeyVaultClientSecret` 이 값을 유효한 Azure Active Directory 응용 프로그램 클라이언트 ID와 연결 된 응용 프로그램 암호 설정 |
+
 
 ### <a name="connection-attributes"></a>연결 특성
 

@@ -106,7 +106,7 @@ SQLDriverConnect 연결을 완료 하는 데 필요한 정보가 요청 될 때 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
 8. AAD 관리 서비스 Id 인증 연결을 설정 하려면 인증에 대 한 사용자 할당 또는 시스템 할당 id를 사용 합니다. 사용자 할당 id에 대해 UID 사용자 id의 개체 ID로 설정 됩니다.<br>
-시스템 할당 ID 사용<br>
+시스템 할당 ID의 경우<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 개체 ID 사용 하 여 사용자 할당 id myObjectId, 같음에 대 한<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`

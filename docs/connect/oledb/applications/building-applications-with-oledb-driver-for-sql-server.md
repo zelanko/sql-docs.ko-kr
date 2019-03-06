@@ -2,7 +2,7 @@
 title: SQL Server용 OLE DB 드라이버로 애플리케이션 빌드 | Microsoft Docs
 description: SQL Server용 OLE DB 드라이버로 애플리케이션 빌드
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8be648639f3b345f6d6eb16c6f51c58064d9270a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691793"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744413"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버로 애플리케이션 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,19 +40,19 @@ ms.locfileid: "47691793"
  [SQL Server용 OLE DB 드라이버에서 연결 문자열 키워드 사용](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
  SQL Server용 OLE DB 드라이버를 통해 데이터베이스에 연결할 때 사용할 수 있는 다양한 연결 문자열 유형에 대해 설명합니다.  
 
- [SQL Server 헤더 및 라이브러리 파일용 OLE DB 드라이버 사용](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
+ [SQL Server용 OLE DB 드라이버 헤더 및 라이브러리 파일 사용](../../oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md)  
  SQL Server 헤더 및 라이브러리 파일을 응용 프로그램 내에서 OLE DB 드라이버를 사용 하는 방법에 설명 합니다.  
 
- [MDAC에서 SQL Server용 OLE DB 드라이버로 응용 프로그램 업데이트](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
+ [MDAC에서 SQL Server용 OLE DB 드라이버로 애플리케이션 업데이트](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)  
  MDAC에서 SQL Server에 대 한 OLE DB 드라이버를 업그레이드할 때 고려해 야 하는 문제와 OLE DB Driver for SQL Server와 MDAC의 차이점을 설명 합니다.  
 
- [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [SQL Server 2005 Native Client에서 애플리케이션 업데이트](../../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  업그레이드할 경우 고려해 야 하는 문제에 설명 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] OLE DB driver for SQL Server Native Client입니다.  
 
  [SQL Server용 OLE DB 드라이버에서 ADO 사용](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)  
  ADO OLE DB Driver for SQL Server을 사용 하 여 액세스를 사용 하는 방법을 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능입니다.  
 
- [SQL Server용 OLE DB 드라이버에 대한 지원 정책](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
+ [SQL Server용 OLE DB 드라이버 지원 정책](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  SQL Server에 대 한 여러 버전의 OLE DB 드라이버를 사용 하 여 사용할 수 다양 한 데이터 액세스 구성 요소에 설명 합니다.  
 
 ## <a name="see-also"></a>참고 항목  
