@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4671d92d73335c0b2383b1f43fae1488f1ac0ad6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6148233259bd985aad2348359132cfa5cad93370
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305331"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 
 ## <a name="arguments"></a>인수   
 구분 기호  
-모든 문자 형식(`char`', `nchar`', `nvarchar` 또는 `varchar`)의 식입니다.
+모든 문자 형식(`char`, `nchar`, `nvarchar` 또는 `varchar`)의 식입니다.
 
 argument1, argument2, argument*N*  
 모든 형식의 식입니다.
@@ -96,7 +96,7 @@ Address
 1 Microsoft Way,Redmond,WA,98052
 ```
 
-### <a name="c--generating-csv-file-from-table"></a>3.  테이블에서 CSV 파일 생성
+### <a name="c--generating-csv-file-from-table"></a>C.  테이블에서 CSV 파일 생성
 이 예제에서는 `,` 쉼표를 구분 기호로 사용하고, 결과 집합의 열로 구분된 값 형식으로 `char(13)` 캐리지 반환 문자를 추가합니다.
 
 ```sql

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,48 +15,93 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - CREATE EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd47fd06404dad6e6896d377e95de677a08c5ae3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205163"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017889"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
-R 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임(현재 R만 해당) 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
+R, Python 또는 Java 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
 
-SQL Server 2017 이상에서는 R 언어 및 Windows 플랫폼만 지원됩니다. Python 및 Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
+> [!NOTE]
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.3에서 지원됩니다. Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
 
-## <a name="syntax"></a>구문
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019용 구문
 
 ```text
 CREATE EXTERNAL LIBRARY library_name  
-    [ AUTHORIZATION owner_name ]  
-FROM <file_spec> [,...2]  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = <language> )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
+}  
+
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>SQL Server 2017용 구문
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
 WITH ( LANGUAGE = 'R' )  
 [ ; ]  
 
 <file_spec> ::=  
 {  
-(CONTENT = { <client_library_specifier> | <library_bits> }  
-[, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> }  
+    [, PLATFORM = WINDOWS ])  
 }  
 
-<client_library_specifier> :: =  
-  '[\\computer_name\]share_name\[path\]manifest_file_name'  
-| '[local_path\]manifest_file_name'  
-| '<relative_path_in_external_data_source>'  
+<client_library_specifier> :: = 
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'  
+    | '[local_path\]manifest_file_name'  
+    | '<relative_path_in_external_data_source>'  
+} 
 
 <library_bits> :: =  
-{ varbinary_literal | varbinary_expression }  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>인수
 
@@ -64,7 +109,7 @@ WITH ( LANGUAGE = 'R' )
 
 라이브러리는 사용자로 범위 지정된 데이터베이스에 추가됩니다. 라이브러리 이름은 특정 사용자 또는 소유자의 컨텍스트 내에서 고유해야 합니다. 예를 들어 두 사용자 **RUser1** 및 **RUser2**는 모두 R 라이브러리 `ggplot2`를 개별적으로 업로드할 수도 있고 따로 업로드할 수도 있습니다. 그러나 **RUser1**이 새 버전의 `ggplot2`를 업로드하려는 경우 두 번째 인스턴스는 이름을 다르게 지정하거나 기존 라이브러리를 대체해야 합니다. 
 
-라이브러리 이름은 임의로 할당될 수 없으며, R에서 R 라이브러리를 로드하는 데 필요한 이름과 같아야 합니다.
+라이브러리 이름은 임의로 할당될 수 없으며, 라이브러리 이름은 외부 스크립트에서 라이브러리를 로드하는 데 필요한 이름과 같아야 합니다.
 
 **owner_name**
 
@@ -72,7 +117,7 @@ WITH ( LANGUAGE = 'R' )
 
 데이터베이스 소유자가 소유한 라이브러리는 데이터베이스 및 런타임에 대해 전역인 것으로 간주합니다. 다시 말해서 데이터베이스 소유자는 많은 사용자가 공유하는 라이브러리 또는 패키지의 공통 집합을 포함하는 라이브러리를 만들 수 있습니다. 외부 라이브러리가 `dbo` 사용자 이외의 사용자가 만든 경우, 외부 라이브러리는 해당 사용자 전용입니다.
 
-사용자 **RUser1**이 R 스크립트를 실행하는 경우 `libPath`의 값은 여러 경로를 포함할 수 있습니다. 첫 번째 경로는 언제나 데이터베이스 소유자가 만든 공유 라이브러리에 대한 경로입니다. `libPath`의 두 번째 부분은 **RUser1**에 의해 개별적으로 업로드된 패키지를 포함하는 경로를 지정합니다.
+사용자 **RUser1**이 외부 스크립트를 실행하는 경우 `libPath`의 값은 여러 경로를 포함할 수 있습니다. 첫 번째 경로는 언제나 데이터베이스 소유자가 만든 공유 라이브러리에 대한 경로입니다. `libPath`의 두 번째 부분은 **RUser1**에 의해 개별적으로 업로드된 패키지를 포함하는 경로를 지정합니다.
 
 **file_spec**
 
@@ -94,9 +139,19 @@ WITH ( LANGUAGE = 'R' )
 
 현재 Windows 플랫폼만 지원됩니다.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+패키지의 언어를 지정합니다. 값은 `R`, `Python` 또는 `Java`일 수 있습니다.
+::: moniker-end
+
 ## <a name="remarks"></a>Remarks
 
 R 언어의 경우 파일을 사용할 때 패키지를 Windows용 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다. 현재 Windows 플랫폼만 지원됩니다. 
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관 파일 형태로 준비되어야 합니다. 패키지가 이미 .zip 파일이면 새 .zip 파일에 포함되어야 합니다. 패키지를 .whl 또는 .zip 파일로 직접 업로드하는 것은 현재 지원되지 않습니다.
+::: moniker-end
 
 `CREATE EXTERNAL LIBRARY` 문은 라이브러리 비트를 데이터베이스에 업로드합니다. 라이브러리는 사용자가 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 외부 스크립트를 실행하고 패키지 또는 라이브러리를 호출할 때 설치됩니다.
 
@@ -126,6 +181,10 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으로 대체하여 작동합니다.
+::: moniker-end
 
 ### <a name="b-installing-packages-with-dependencies"></a>2. 종속성이 있는 패키지 설치
 
@@ -173,17 +232,24 @@ EXEC sp_execute_external_script
     @script=N'
     # load the desired package packageA
     library(packageA)
-    print(packageVersion("packageA"))
     '
     ```
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>3. 바이트 스트림에서 라이브러리 만들기
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으로 대체하여 작동합니다.
+::: moniker-end
+
+### <a name="c-create-a-library-from-a-byte-stream"></a>C. 바이트 스트림에서 라이브러리 만들기
 
 패키지 파일을 서버의 위치에 저장하는 기능이 없는 경우 패키지 콘텐츠를 변수에 전달할 수 있습니다. 다음 예제에서는 비트를 16진수 리터럴로 전달하여 라이브러리를 만듭니다.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+SQL Server 2019의 Python 언어의 경우, 이 예제는 **'R'** 을 **'Python'** 으로 대체하여 작동합니다.
+::: moniker-end
 
 > [!NOTE]
 > 이 코드 샘플은 구문만 보여줍니다. `CONTENT =`의 이진 값은 읽기 쉽도록 잘렸으며, 작업 중인 라이브러리를 생성하지 않습니다. 이진 변수의 실제 콘텐츠는 훨씬 더 깁니다.
@@ -193,6 +259,28 @@ CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE =
 `ALTER EXTERNAL LIBRARY` DDL 문을 사용하여 새 라이브러리 콘텐츠를 추가하거나 기존 라이브러리 콘텐츠를 수정할 수 있습니다. 기존 라이브러리를 수정하려면 별도의 `ALTER ANY EXTERNAL LIBRARY` 권한이 필요합니다.
 
 자세한 내용은 [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md)를 참조하세요.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+### <a name="e-add-a-java-jar-file-to-a-database"></a>E. 데이터베이스에 Java.jar 파일 추가  
+
+다음 예제에서는 `customJar`이라는 외부 jar 파일을 데이터베이스에 추가합니다.
+
+```sql
+CREATE EXTERNAL LIBRARY customJar
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\customJar.jar') 
+WITH (LANGUAGE = 'Java');
+```
+
+라이브러리가 성공적으로 인스턴스에 업로드된 후 사용자는 `sp_execute_external_script` 프로시저를 실행하여 라이브러리를 설치합니다.
+
+```sql
+EXEC sp_execute_external_script
+    @language = N'Java'
+    , @script = N'customJar.MyCLass.myMethod'
+    , @input_data_1 = N'SELECT * FROM dbo.MyTable'
+WITH RESULT SETS ((column1 int))
+```
+::: moniker-end
 
 ## <a name="see-also"></a>관련 항목:
 

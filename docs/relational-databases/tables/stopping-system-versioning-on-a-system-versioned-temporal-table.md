@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37fe6d7b3dfe92e2cdf53e7a7b26ab363a567510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9ebd016ba06c24d742c099f346076111bd98751b
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409169"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334520"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블에서 시스템 버전 관리 중지
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52409169"
 -   기록 테이블(일반 테이블)  
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
-  
--   **SYSTEM_VERSIONING = OFF** 를 설정하거나 **SYSTEM_TIME** 기간을 삭제할 때 데이터 손실은 발생하지 않습니다.  
+-   기록 테이블은 **SYSTEM_VERSIONING = OFF** 기간 동안 업데이트를 **중단**합니다.
+-   **SYSTEM_VERSIONING = OFF**를 설정하거나 **SYSTEM_TIME** 기간을 삭제할 때 **임시 테이블**에서 데이터 손실이 발생하지 않습니다.
   
 -   **SYSTEM_VERSIONING = OFF** 로 설정하고 **SYSTEM_TIME** 기간을 제거/삭제하지 않으면 시스템은 모든 삽입 및 업데이트 작업에 대해 기간 열을 계속 업데이트합니다. 현재 테이블에서 수행하는 삭제 작업은 영구적인 작업입니다.  
   
@@ -64,7 +64,10 @@ DROP PERIOD FOR SYSTEM_TIME;
   
 -   기록 테이블로 **SWITCH IN** 분할  
   
- 이 예에서는 특정 유지 관리 작업을 수행할 수 있도록 SYSTEM_VERSIONING을 임시로 중지합니다. 테이블 유지 관리를 위한 필수 구성 요소로 버전 관리를 임시로 중지하는 경우에는 데이터 일관성을 유지할 수 있도록 트랜잭션 내에서 중지를 수행하는 것이 좋습니다.  
+ 이 예에서는 특정 유지 관리 작업을 수행할 수 있도록 SYSTEM_VERSIONING을 임시로 중지합니다. 테이블 유지 관리를 위한 필수 구성 요소로 버전 관리를 임시로 중지하는 경우에는 데이터 일관성을 유지할 수 있도록 트랜잭션 내에서 중지를 수행하는 것이 좋습니다.
+ 
+> [!NOTE]  
+>  시스템 버전 관리를 다시 켤 때 HISTORY_TABLE 인수를 지정하는 것을 잊지마세요.  이렇게 하지 않으면 새 기록 테이블이 만들어지고 현재의 테이블과 연결됩니다.  원래 기록 테이블은 여전히 일반 테이블로 존재하지만 현재 테이블과 연결되지는 않습니다.  
   
 ```  
 BEGIN TRAN   

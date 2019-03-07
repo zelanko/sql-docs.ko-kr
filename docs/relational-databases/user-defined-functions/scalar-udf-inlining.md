@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 스칼라 UDF 인라인 처리 | Microsoft Docs
 description: 스칼라 UDF 인라인 처리 기능은 SQL Server(2018 이상) 및 Azure SQL Database에서 스칼라 UDF를 호출하는 쿼리의 성능 향상을 위한 것입니다.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222109"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017929"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -37,9 +37,9 @@ Transact-SQL로 구현되며 단일 데이터 값을 반환하는 사용자 정�
 
 스칼라 UDF의 성능이 저하되는 이유는 일반적으로 다음과 같습니다.
 
-- **반복적인 호출:** UDF가 튜플 정규화마다 한 번씩 반복적인 방식으로 호출됩니다. 이렇게 하면 함수 호출로 인해 반복적인 컨텍스트 전환에 따른 추가 비용이 발생합니다. 특히 해당 정의에서 SQL 쿼리를 실행하는 UDF에는 심각한 영향이 있습니다.
+- **반복 호출:** UDF가 튜플 정규화마다 한 번씩 반복적인 방식으로 호출됩니다. 이렇게 하면 함수 호출로 인해 반복적인 컨텍스트 전환에 따른 추가 비용이 발생합니다. 특히 해당 정의에서 SQL 쿼리를 실행하는 UDF에는 심각한 영향이 있습니다.
 - **비용 부족:** 최적화 중에는 관계형 연산자에만 비용을 지불하고 스칼라 연산자는 지불하지 않습니다. 스칼라 UDF 도입 이전에는 보통 다른 스칼라 연산자가 더 저렴했고 비용이 필요하지 않았습니다. 스칼라 작업에 소규모 CPU 비용만 추가되면 충분했습니다. 실제 비용이 큰데 적게 표시되는 시나리오가 있습니다.
-- **실행 해석:** UDF는 문 단위로 실행되는 문 일괄 처리로 평가됩니다. 각 문 자체가 컴파일되며 컴파일된 계획은 캐시됩니다. 이 캐싱 전략에서는 다시 컴파일하지 않고 각각의 문이 격리 실행되므로 시간을 상당 수준 절약할 수 있습니다. 교차 문 최적화는 수행되지 않습니다.
+- **실행 해석:** UDF는 명령문 단위로 실행되는 명령문 일괄 처리로 평가됩니다. 각 문 자체가 컴파일되며 컴파일된 계획은 캐시됩니다. 이 캐싱 전략에서는 다시 컴파일하지 않고 각각의 문이 격리 실행되므로 시간을 상당 수준 절약할 수 있습니다. 교차 문 최적화는 수행되지 않습니다.
 - **직렬 실행:** SQL Server에서는 UDF를 호출하는 쿼리 내부 병렬 처리가 허용되지 않습니다. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>스칼라 UDF의 자동 인라인 처리
@@ -141,16 +141,17 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 다음 조건을 모두 만족하는 스칼라 T-SQL UDF를 인라인 처리할 수 있습니다.
 
 - UDF는 다음 구문을 사용하여 작성됩니다.
-    - `DECLARE``SET`: 변수 선언 및 할당
-    - `SELECT`: 단일/다중 변수 할당이 있는 SQL 쿼리<sup>1</sup>
-    - `IF`/`ELSE`: 임의 수준의 중첩이 있는 분기
-    - `RETURN`: 단일 또는 여러 반환 문
-    - `UDF`: 중첩/재귀 함수 호출<sup>2</sup>
-    - 기타: 관계형 연산(예: `EXISTS`, `ISNULL`)
+    - `DECLARE`, `SET`: 변수 선언 및 할당.
+    - `SELECT`: 단일/다중 변수 할당이 있는 SQL 쿼리<sup>1</sup>.
+    - `IF`/`ELSE`: 임의 수준의 중첩이 있는 분기.
+    - `RETURN`: 단일 또는 여러 return 문.
+    - `UDF`: 중첩/재귀 함수 호출<sup>2</sup>.
+    - 기타: 관계형 연산(예: `EXISTS`, `ISNULL`).
 - UDF는 시간 종속적이거나(예: `GETDATE()`) 부작용이 있는<sup>3</sup>(예: `NEWSEQUENTIALID()`) 내장 함수를 호출하지 않습니다.
 - UDF는 `EXECUTE AS CALLER` 절을 사용합니다(`EXECUTE AS` 절을 지정하지 않은 경우 기본 동작).
 - UDF는 테이블 변수나 테이블 값 매개 변수를 참조하지 않습니다.
 - 스칼라 UDF를 호출하는 쿼리는 `GROUP BY` 절에서 스칼라 UDF 호출을 참조하지 않습니다.
+- `DISTINCT` 절을 사용한 선택 목록에서 스칼라 UDF를 호출하는 쿼리는 `ORDER BY` 절에서 스칼라 UDF 호출을 참조하지 않습니다.
 - UDF는 원시적으로 컴파일됩니다(호환성 지원).
 - UDF는 계산된 열 또는 제약 조건 확인 정의에서 사용되지 않습니다.
 - UDF는 사용자 정의 형식을 참조하지 않습니다.

@@ -10,12 +10,12 @@ ms.author: mathoma
 manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f2e8a96d6f9a6270cec06aaa47f33b3b830f4e5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419748"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334660"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server에 버전 관리 및 적용 대상 파일이 포함되어 있는 경우
 
@@ -140,3 +140,5 @@ SQL 콘텐츠 작성자는 제품 이름과 SQL Server의 버전을 자주 포�
 ## <a name="next-steps"></a>다음 단계
 
 이러한 포함 파일을 사용하는 방법에 대한 자세한 내용은 [Applies-to includes](sql-server-docs-contribute.md#applies-to-includes)를 참조하세요.
+
+이는 테스트입니다.

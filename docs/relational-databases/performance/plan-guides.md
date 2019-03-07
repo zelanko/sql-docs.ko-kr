@@ -20,12 +20,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 2e7ce811b66da3bb0ee271ea18c2aead1b53495c
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1197c9b58b1bb6830aa7d1eb4811d5b82c4e7182
+ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143483"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56893453"
 ---
 # <a name="plan-guides"></a>계획 지침
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,25 @@ sp_create_plan_guide
 @params = NULL,   
 @hints = N'OPTION (MAXDOP 1)';  
 ```  
-  
+또 다른 예에서는 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)을 사용하여 제출된 다음 SQL 문을 고려합니다.
+
+```sql  
+exec sp_executesql N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id', N'@so_id int', @so_id = 43662;  
+```  
+ 이 쿼리를 실행할 때마다 고유한 계획을 만들려면 다음 계획 지침을 만들고 `@hints` 매개 변수의 `OPTION (RECOMPILE)` 쿼리 힌트를 사용합니다. 
+
+```sql  
+exec sp_create_plan_guide   
+@name = N'PlanGuide1_SalesOrders',   
+@stmt = N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id',
+@type = N'SQL',  
+@module_or_batch = NULL,   
+@params = N'@so_id int',   
+@hints = N'OPTION (recompile)';
+```
+
 > [!IMPORTANT]  
 >  `@module_or_batch` 문의 `@params` 및 `sp_create_plan guide` 인수에 대해 제공되는 값은 실제 쿼리에서 전송되는 해당 텍스트와 일치해야 합니다. 자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) 문의 [SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)에서 실제 쿼리의 텍스트를 직접 변경할 수 없거나 직접 변경하지 않으려는 경우 계획 지침에 따라 쿼리 성능을 최적화할 수 있습니다.  
   

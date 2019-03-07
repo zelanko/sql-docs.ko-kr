@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659372"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007596"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659372"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델을 **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은 [ALTER DATABASE(Transact-SQL) 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. SQL Server 데이터베이스가 업그레이드되면 해당 데이터베이스에 대한 호환성 수준이 보존되거나(가능한 경우) 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 지원되는 최소 수준으로 변경됩니다. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659372"
 ## <a name="automatic"></a>자동  
  **자동 닫기**  
  마지막 사용자가 끝낸 후 데이터베이스가 완전히 종료되고 리소스가 해제되는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 마지막 사용자가 로그오프한 후 데이터베이스가 완전히 종료되고 해당 리소스가 해제됩니다.  
-  
+
  **증분 통계 자동 작성**  
  파티션당 통계를 만들 때 증분 옵션을 사용할지 여부를 지정합니다. 증분 통계에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659372"
  **False**로 설정하면 오래된 통계에 대해 자동 업데이트를 시작하는 쿼리가 업데이트된 통계를 쿼리 최적화 계획에 사용할 수 있을 때까지 기다립니다.  
   
  이때 **통계 자동 업데이트** 도 **True** 로 설정해야 이 옵션을 **True**로 설정했을 때 효과가 있습니다.  
+
+## <a name="azure"></a>Azure
+Azure SQL Database에 연결되면 이 섹션에는 SLO(서비스 수준 목표)를 제어하는 설정이 있습니다. 새 데이터베이스의 기본 SLO는 표준 S2입니다.
+
+  **현재 서비스 수준 목표** 사용할 특정 SLO입니다. 유효한 값은 선택한 버전으로 제한됩니다. 원하는 SLO 값이 목록에 없으면 값을 입력할 수 있습니다.
+
+  **Edition** 사용할 Azure SQL Database 버전입니다(예: Basic 또는 Premium). 필요한 버전 값이 목록에 없으면 값을 입력할 수 있습니다. 이 값은 Azure REST API에 사용된 값과 일치해야 합니다.
+  
+  **Max Size** 데이터베이스의 최대 크기입니다. 원하는 크기 값이 목록에 없으면 값을 입력할 수 있습니다. 지정된 버전과 SLO의 기본 크기는 비워둡니다.
   
 ## <a name="containment"></a>Containment  
  포함된 데이터베이스의 경우 일반적으로 서버 수준에서 구성하는 일부 설정을 데이터베이스 수준에서 구성할 수 있습니다.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659372"
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
+ 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
 **스냅숏 격리 허용**  
@@ -188,8 +197,8 @@ ms.locfileid: "51659372"
   
  이 속성을 설정하려면 ALTER DATABASE 문을 사용합니다.  
   
- **VarDecimal 저장소 형식 사용**  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 이 옵션은 읽기 전용입니다. **True**인 경우 이 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 데이터베이스의 테이블 중 VarDecimal 스토리지 형식을 사용하는 테이블이 있으면 이 형식을 해제할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 모든 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 사용합니다.  
+ **VarDecimal 스토리지 형식 사용**  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 이 옵션은 읽기 전용입니다. **True**인 경우 이 데이터베이스에 VarDecimal 스토리지 형식을 사용할 수 있습니다. 데이터베이스의 테이블 중 VarDecimal 스토리지 형식을 사용하는 테이블이 있으면 이 형식을 해제할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 모든 데이터베이스에 VarDecimal 스토리지 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 사용합니다.  
   
 ## <a name="recovery"></a>복구  
  **페이지 확인**  
@@ -236,6 +245,6 @@ Service Broker를 활성화 또는 비활성화합니다.
 
 
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

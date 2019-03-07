@@ -1,7 +1,7 @@
 ---
 title: GROUP BY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509049"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227195"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +91,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -275,7 +276,7 @@ GROUP BY ALL:
 - FILESTREAM 특성이 있는 열에서 실패합니다.
   
 ### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-적용 대상: Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스
+적용 대상: Azure SQL Data Warehouse 및 병렬 Data Warehouse
 
 DISTRIBUTED_AGG 쿼리 힌트는 집계를 수행하기 전에 MPP(Massively Parallel Processing) 시스템에서 특정 열에 테이블을 다시 배포하도록 합니다. GROUP BY 절에 있는 하나의 열만 DISTRIBUTED_AGG 쿼리 힌트를 가질 수 있습니다. 쿼리가 완료되면 다시 배포된 테이블이 삭제됩니다. 원래 테이블은 변경되지 않습니다.  
 
@@ -344,7 +345,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 |기능|SQL Server Integration Services|SQL Server 호환성 수준 100 이상|SQL Server 2008 이상(호환성 수준 90).|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 집계|WITH CUBE 또는 WITH ROLLUP에 대해 지원되지 않습니다.|WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE 또는 ROLLUP에 대해 지원됩니다.|호환성 수준 100과 같습니다.|  
-|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(**_arg1_**,**_...argN_**)** 또는 **dbo.rollup(**_arg1_**,**..._argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (**_arg1_**,**...argN **)** 또는 **dbo.rollup(** arg1 **,**_...argN_**)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> "'cube'&#124;'rollup' 키워드 근처의 구문이 잘못되었습니다."라는 오류 메시지가 반환됩니다.<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (**_arg1_**,**_...argN_) 또는 **dbo.rollup(**_arg1_**,**_...argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(**_arg1_**,**_...argN_**)** 또는 **dbo.rollup(**_arg1_**,**..._argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (**_arg1_**,**...argN **)** 또는 **dbo.rollup(** arg1 **,**_...argN_**)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 이 경우 오류 메시지가 반환됩니다. "키워드 'cube'&#124;'rollup' 근처의 구문이 잘못되었습니다."<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (**_arg1_**,**_...argN_) 또는 **dbo.rollup(**_arg1_**,**_...argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|지원되지 않음|지원됨|지원됨|  
 |CUBE|지원되지 않음|지원됨|지원되지 않음|  
 |ROLLUP|지원되지 않음|지원됨|지원되지 않음|  
@@ -380,7 +381,7 @@ GROUP BY a.City
 ORDER BY a.City;  
 ```  
   
-### <a name="c-use-a-group-by-clause-with-an-expression"></a>3. 식이 포함된 GROUP BY 절 사용  
+### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. 식이 포함된 GROUP BY 절 사용  
  다음 예에서는 `DATEPART` 함수를 사용하여 각 연도별 총 판매액을 검색합니다. `SELECT` 목록과 `GROUP BY` 절 모두에 같은 식이 있어야 합니다.  
   
 ```sql  
@@ -391,7 +392,7 @@ GROUP BY DATEPART(yyyy,OrderDate)
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>4. HAVING 절이 포함된 GROUP BY 절 사용  
+### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. HAVING 절이 포함된 GROUP BY 절 사용  
  다음 예에서는 `HAVING` 절을 사용하여 `GROUP BY` 절에 생성된 그룹 중 결과 집합에 포함되어야 하는 그룹을 지정합니다.  
   
 ```sql  
@@ -403,9 +404,9 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>예제: SQL Data Warehouse 및 병렬 데이터 웨어하우스  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>예: SQL Data Warehouse 및 병렬 데이터 웨어하우스  
   
-### <a name="e-basic-use-of-the-group-by-clause"></a>5. GROUP BY 절의 기본적인 사용  
+### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 절의 기본적인 사용  
  다음 예제에서는 일별 총 판매액을 모두 찾습니다. 일일 판매의 합계가 모두 포함된 하나의 행이 반환됩니다.  
   
 ```sql  
@@ -415,7 +416,7 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>6. DISTRIBUTED_AGG 힌트의 기본적인 사용  
+### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. DISTRIBUTED_AGG 힌트의 기본적인 사용  
  다음 예제에서는 집계를 수행하기 전에 DISTRIBUTED_AGG 쿼리 힌트를 사용하여 어플라이언스가 `CustomerKey` 열에 있는 테이블의 순서를 섞도록 합니다.  
   
 ```sql  
@@ -427,7 +428,7 @@ GROUP BY CustomerKey WITH (DISTRIBUTED_AGG)
 ORDER BY CustomerKey DESC;  
 ```  
   
-### <a name="g-syntax-variations-for-group-by"></a>7. GROUP BY 구문 변형  
+### <a name="g-syntax-variations-for-group-by"></a>G. GROUP BY 구문 변형  
  선택 목록에 집계가 없는 경우 선택 목록의 각 열이 GROUP BY 목록에 포함되어야 합니다. 선택 목록의 계산 열은 GROUP BY 목록에 나열될 수 있지만 필수는 아닙니다. 다음은 구문상 유효한 SELECT 문의 예제입니다.  
   
 ```sql  
@@ -440,7 +441,7 @@ SELECT SalesAmount, SalesAmount*1.10 SalesTax FROM FactInternetSales GROUP BY Sa
 SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10;  
 ```  
   
-### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>8. 여러 GROUP BY 식이 포함된 GROUP BY 사용  
+### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. 여러 GROUP BY 식이 포함된 GROUP BY 사용  
  다음 예제에서는 여러 `GROUP BY` 조건을 사용하여 결과를 그룹화합니다. 각 `OrderDateKey` 그룹 내에서 `DueDateKey`로 구분할 수 있는 하위 그룹이 있는 경우 결과 집합에 대한 새 그룹화가 정의됩니다.  
   
 ```sql  

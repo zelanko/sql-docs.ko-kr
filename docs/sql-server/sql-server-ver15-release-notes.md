@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 9e717104c2bc75bd056aa513566e12db6bd5c2b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 1afd1c7c1c3c142745e667662f51027218598e2f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802389"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017729"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "56802389"
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
 
-## <a name="ctp-22-december-2018"></a>CTP 2.2(2018년 12월)
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
+## <a name="ctp-23"></a>CTP 2.3
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2는 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 2.2 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 2.3 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
 
 제한되는 지원은 다음 위치 중 하나에서 확인할 수 있습니다.
 
@@ -49,7 +49,7 @@ ms.locfileid: "56802389"
 
 - 또는 [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)를 사용하여 트윗
 
-### <a name="documentation-ctp-22"></a>설명서(CTP 2.2)
+### <a name="documentation-ctp-23"></a>설명서(CTP 2.3)
 
 - **문제 및 고객에게 미치는 영향**: SQL Server 2019(15.x)의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 설명서 세트에 포함되어 있습니다. SQL Server 2019(15.x)와 관련된 문서의 내용은 **적용 대상**에서 설명합니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "56802389"
 
 - **문제 및 고객에게 미치는 영향**: SQL Server 2019(15.x) 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
-### <a name="hardware-and-software-requirements"></a>하드웨어 및 소프트웨어 요구 사항
+### <a name="hardware-and-software-requirements-ctp-23"></a>하드웨어 및 소프트웨어 요구 사항(CTP 2.3)
 
 - **문제 및 고객에게 미치는 영향**: 하드웨어 및 소프트웨어 요구 사항은 계속 검토 중이며 제품 릴리스에 포함할 최종 내용이 아닙니다.
 
@@ -71,21 +71,11 @@ ms.locfileid: "56802389"
 
 ### <a name="updated-compiler"></a>컴파일러 업데이트
 
-- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. CTP 2.2 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](http://aka.ms/sqlfeedback)에게 보고해주세요.
+- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. CTP 2.3 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](http://aka.ms/sqlfeedback)에게 보고해주세요.
 
 - **해결 방법**: 해당 사항 없음
 
-- **적용 대상**: SQL Server 2019 CTP 2.2, CTP 2.1
-
-### <a name="sql-server-integration-services-ssis-page-deployment-after-switching-db-to-single-user-mode-and-then-switching-back"></a>DB를 단일 사용자 모드로 전환한 후 다시 전환하여 SSIS(SQL Server Integration Services) 페이지 배포
-
-- **문제 및 고객에게 미치는 영향**: SSISDB가 단일 사용자 모드에서 다시 다중 사용자 모드로 전환된 후에 패키지를 배포할 때 다음 오류가 보고될 수 있습니다.
-
-  `Cannot continue the execution because the session is in the kill state.`
-
-- **해결 방법**: SQL Server 인스턴스를 중지했다가 다시 시작하고 SSISDB를 다시 다중 사용자 모드로 전환합니다.
-
-- **적용 대상**: SQL Server 2019 미리 보기 CTP 2.2, CTP 2.1
+- **적용 대상**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
 
 ### <a name="utf-8-collations"></a>UTF-8 데이터 정렬
 
@@ -100,7 +90,7 @@ ms.locfileid: "56802389"
  
 - **해결 방법**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP에 대한 해결 방법은 없습니다.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, CTP 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### <a name="sql-graph"></a>SQL 그래프
 
@@ -108,7 +98,7 @@ ms.locfileid: "56802389"
 
 - **해결 방법**: [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 또는 SQLCMD를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 작성하고 서버에 대해 실행하면 됩니다. 에지 제약 조건을 만들거나, 새로운 병합 DML 구문을 포함하거나, 그래프 개체에 대한 파생 테이블/뷰를 만드는 데이터베이스 개체를 내보내거나 가져올 수 없습니다. 사용자는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 사용하여 해당 데이터베이스에서 이러한 개체를 수동으로 만들어야 합니다. 
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 
@@ -116,42 +106,23 @@ ms.locfileid: "56802389"
 
 - **해결 방법**: 리치 계산을 사용하도록 설정하려면 `DBCC traceon(127,-1)`을 실행합니다. 자세한 내용은 [리치 계산 사용](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.2, CTP 2.1, 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, 2.2, CTP 2.1, 2.0.
 
-## <a name="ctp-21-october-2018"></a>CTP 2.1(2018년 10월)
+### <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1은 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 이전 공개 릴리스입니다.
+- **문제 및 고객에게 미치는 영향**: 시스템 테이블 반환 함수 [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)는 `dependency` 열의 임의 값을 반환합니다.
 
-### <a name="udf-inlining"></a>UDF 인라인 처리
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
-- **문제 및 고객에게 미치는 영향**: 사용자 정의 함수에 대해 중첩된 인라인 호출을 실행했을 때 보안을 올바르게 확인하지 않는 비정상 상황 시나리오가 있습니다.
-  
-- **해결 방법**: 이러한 UDF의 경우 `INLINE = OFF` 설정을 사용하여 UDF 인라인 처리를 사용하지 않도록 설정합니다.
+### <a name="sql-server-analysis-services-ssas"></a>SSAS(SQL Server Analysis Services)
 
-- **적용 대상**: SQL Server 2019 CTP 2.1
+- **문제 및 고객에게 미치는 영향**: 동적 보안이 적용된 테이블 형식 모델의 경우, 일부 환경에서는 사용자가 동일한 역할에 속하는 다른 사용자의 데이터를 볼 수 있습니다.
 
-### <a name="sql-server-integration-service---fuzzy-lookup-transformation"></a>SQL Server Integration Service - 유사 항목 조회 변환
+  **시나리오**: 모델에는 2개 이상의 역할이 있습니다. 역할 중 하나에 `USERNAME` 또는 `USERPRINCIPALNAME`을 포함하는 동적 보안 식이 없습니다. 동적 행 수준 보안이 있는 두 번째 역할은 `USERNAME` 또는 `USERPRINCIPLENAME`이 포함된 식을 사용하여 사용자 A와 사용자 B에 대해 정의됩니다. 사용자 A와 사용자 B는 데이터를 연결하고 쿼리할 수 있지만, 사용자 B는 특정 환경에서 사용자 A에 대해서만 보호된 데이터를 볼 수 있습니다.
 
-- **문제/고객에게 미치는 영향**: 유사 항목 조회 변환은 인덱스를 다시 사용하도록 설정된 경우 다음 오류를 표시하며 실패합니다.
+- **해결 방법**: 모델에 더미 측정값을 추가합니다. 예를 들면 `[DummyMeasure] := UserName()`입니다. 이렇게 하면 행 수준 보안 식에 대해 동적 식을 계산할 수 있습니다.
 
-  `The specified delimiters do not match the delimiters used to build the pre-existing match index "...". This error occurs when the delimiters used to tokenize fields do not match. This can have unknown effects on the matching behavior or results.`
-
-- **해결 방법**: 해당 사항 없음
-
-- **자세한 정보**: 해당 사항 없음  
-
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP2.1
-
-### <a name="lightweight-query-profiling-infrastructure"></a>간단한 쿼리 프로파일링 인프라
-
-- **문제 및 고객에게 미치는 영향**: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = ON` 명령을 실행하면 구문 오류가 반환됩니다. 이 명령 실행에 의존하는 모든 시나리오는 실패합니다.
-
-  > [!NOTE]
-  > 현재 간단한 쿼리 프로파일링 인프라(LWP)를 개별 데이터베이스 수준에서 제어할 수 없으며 기본적으로 모든 데이터베이스에 대해 사용 가능 상태로 유지됩니다. LWP에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)을 참조하세요.
-
-- **해결 방법**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP에 대한 해결 방법은 없습니다.
-
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.1 및 CTP 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

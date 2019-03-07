@@ -1,7 +1,7 @@
 ---
 title: table_constraint(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327395"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227155"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327395"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327395"
   
  FOREIGN KEY 제약 조건 및 CHECK 제약 조건에 대해 지정할 수 있습니다. 제약 조건에 대해 이 절을 지정하면 복제 에이전트가 삽입, 업데이트 또는 삭제 작업을 수행할 때 해당 제약 조건이 강제로 적용되지 않습니다.  
 
- CONNECTION은 에지 제약 조건이 부여된 노드 테이블 쌍의 연결을 허용하도록 지정합니다.  
+ CONNECTION은 에지 제약 조건이 부여된 노드 테이블 쌍의 연결을 허용하도록 지정합니다. ON DELETE는 이 에지 테이블의 에지를 통해 연결된 노드가 삭제될 때 에지 테이블의 행에 어떤 일이 발생하는 지 지정합니다. 
  
  DEFAULT  
  열에 대한 기본값을 지정합니다. DEFAULT 정의를 사용하여 기존 데이터 행에 새 열의 값을 제공할 수 있습니다. **timestamp** 데이터 형식, IDENTITY 속성, 기존 DEFAULT 정의 또는 바인딩된 기본값을 가진 열에는 DEFAULT 정의를 추가할 수 없습니다. 기존 기본값이 있는 열은 새 기본값을 추가하기 전에 기존 기본값을 삭제해야 합니다. 사용자 정의 형식 열에 대해 기본값을 지정할 경우 *constant_expression*에서 해당 사용자 정의 형식으로 암시적으로 변환할 수 있어야 합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 호환성을 유지하기 위해 DEFAULT에 제약 조건 이름을 할당할 수 있습니다.  

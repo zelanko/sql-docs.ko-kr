@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2da642b1b380e45ffdde2ac48bd37764a12b2dd
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a1bb91e4b5429e6b101d6cdb0ffa73c9953ab198
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980429"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955744"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 *r*에서 값의 `CUME_DIST`는 행 *r*에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_에서 값의 `CUME_DIST`는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -43,9 +43,9 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>인수  
-OVER **(** [ *partition_by_clause* ] *order_by_clause*)  
+OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
-*partition_by_clause*는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. *partition_by_clause* 인수를 지정하지 않는 경우 `CUME_DIST`는 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. *order_by_clause*는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 *order_by_clause*가 포함됩니다. `CUME_DIST`는 OVER 구문의 \<행 또는 범위 절>을 허용하지 않습니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
+_partition\_by\_clause_는 FROM 절 결과 집합을 함수가 적용되는 파티션으로 나눕니다. _partition\_by\_clause_ 인수를 지정하지 않는 경우 `CUME_DIST`는 모든 쿼리 결과 집합 행을 단일 그룹으로 처리합니다. _order\_by\_clause_는 작업이 발생하는 논리적 순서를 결정합니다. `CUME_DIST`에는 _order\_by\_clause_가 필요합니다. `CUME_DIST`는 OVER 구문의 \<행 또는 범위 절>을 허용하지 않습니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
 **float(53)**
@@ -53,10 +53,10 @@ OVER **(** [ *partition_by_clause* ] *order_by_clause*)
 ## <a name="remarks"></a>Remarks  
 `CUME_DIST`는 0을 초과하거나 1 이하인 값의 범위를 반환합니다. 동일한 값은 항상 동일한 누적 분포 값으로 계산되어야 합니다. `CUME_DIST`는 기본적으로 NULL 값을 포함하고 가능한 가장 낮은 값으로 취급합니다.
   
-`CUME_DIST`는 비결정적입니다. 자세한 내용은 [결정적 및 비결정 함수](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하세요.
+`CUME_DIST`는 비결정적입니다. 자세한 내용은 [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)을 참조하세요.
   
 ## <a name="examples"></a>예  
-이 예제에서는 `CUME_DIST` 함수를 사용하여 지정한 부서 내 각 직원의 연봉을 백분율로 계산합니다. `CUME_DIST`는 동일한 부서에서 현재 직원보다 연봉이 적거나 같은 직원의 백분율을 나타내는 값을 반환합니다. `PERCENT_RANK` 함수는 부서 내 직원의 연봉을 백분율 순위로 계산합니다. 부서별로 결과 집합 행을 분할하기 위해 예제에서는 *partition_by_clause* 값을 지정합니다. OVER 절의 ORDER BY 절은 각 파티션의 행을 논리적으로 정렬합니다. SELECT 문의 ORDER BY 절은 결과 집합의 표시 순서를 결정합니다.
+이 예제에서는 `CUME_DIST` 함수를 사용하여 지정한 부서 내 각 직원의 연봉을 백분율로 계산합니다. `CUME_DIST`는 동일한 부서에서 현재 직원보다 연봉이 적거나 같은 직원의 백분율을 나타내는 값을 반환합니다. `PERCENT_RANK` 함수는 부서 내 직원의 연봉을 백분율 순위로 계산합니다. 부서별로 결과 집합 행을 분할하기 위해 예제에서는 _partition\_by\_clause_ 값을 지정합니다. OVER 절의 ORDER BY 절은 각 파티션의 행을 논리적으로 정렬합니다. SELECT 문의 ORDER BY 절은 결과 집합의 표시 순서를 결정합니다.
   
 ```sql
 USE AdventureWorks2012;  

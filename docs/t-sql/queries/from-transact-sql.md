@@ -31,16 +31,16 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408810"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334790"
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -256,7 +256,7 @@ FROM { <table_source> [ ,...n ] }
  난수를 생성하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 상수 식입니다. *repeat_seed*는 **bigint**입니다. *repeat_seed*를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 임의로 값을 할당합니다. 테이블에 변경내용이 적용되지 않은 경우 특정 *repeat_seed* 값에 대한 샘플링 결과는 항상 동일합니다. *repeat_seed* 식은 0보다 큰 정수로 계산되어야 합니다.  
   
 ### <a name="tablesample-clause"></a>Tablesample 절
-**적용 대상:** SQL Data Warehouse
+**적용 대상:** SQL 데이터 웨어하우스
 
  테이블의 데이터 샘플이 반환되도록 지정합니다. 샘플은 근사치일 수 있습니다. 이 절은 SELECT 또는 UPDATE 문에서 기본 테이블 또는 조인된 테이블에 사용될 수 있습니다. 뷰를 대상으로 TABLESAMPLE을 지정할 수는 없습니다. 
 
@@ -482,7 +482,7 @@ SELECT COUNT(*)
 FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;  
 ```  
   
-### <a name="c-using-the-sql-92-cross-join-syntax"></a>3. SQL-92 CROSS JOIN 구문 사용  
+### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. SQL-92 CROSS JOIN 구문 사용  
  다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Employee` 및 `Department` 두 테이블의 교차곱을 반환합니다. `BusinessEntityID` 행과 모든 `Department` 이름 행의 가능한 모든 조합 목록이 반환됩니다.  
   
 ```sql    
@@ -492,7 +492,7 @@ CROSS JOIN HumanResources.Department AS d
 ORDER BY e.BusinessEntityID, d.Name ;  
 ```  
   
-### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>4. SQL-92 FULL OUTER JOIN 구문 사용  
+### <a name="d-using-the-sql-92-full-outer-join-syntax"></a>D. SQL-92 FULL OUTER JOIN 구문 사용  
  다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesOrderDetail` 테이블의 제품 이름 및 해당되는 모든 판매 주문을 반환합니다. 또한 `Product` 테이블에 나열되어 있는 제품이 없는 모든 판매 주문, 그리고 `Product` 테이블에 나열된 것 이외의 주문된 모든 제품을 반환합니다.  
   
 ```sql  
@@ -504,7 +504,7 @@ ON p.ProductID = sod.ProductID
 ORDER BY p.Name ;  
 ```  
   
-### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>5. SQL-92 LEFT OUTER JOIN 구문 사용  
+### <a name="e-using-the-sql-92-left-outer-join-syntax"></a>E. SQL-92 LEFT OUTER JOIN 구문 사용  
  다음 예에서는 `ProductID`로 두 테이블을 조인하고 왼쪽 테이블에서 일치하지 않는 행도 함께 반환합니다. `Product` 테이블은 `SalesOrderDetail` 열에서 각 `ProductID` 테이블과 일치합니다. 모든 제품은 주문 여부에 관계없이 결과 집합에 나타납니다.  
   
 ```sql    
@@ -515,7 +515,7 @@ ON p.ProductID = sod.ProductID
 ORDER BY p.Name ;  
 ```  
   
-### <a name="f-using-the-sql-92-inner-join-syntax"></a>6. SQL-92 INNER JOIN 구문 사용  
+### <a name="f-using-the-sql-92-inner-join-syntax"></a>F. SQL-92 INNER JOIN 구문 사용  
  다음 예에서는 모든 제품 이름과 판매 주문 ID를 반환합니다.  
   
 ```sql    
@@ -528,7 +528,7 @@ ON p.ProductID = sod.ProductID
 ORDER BY p.Name ;  
 ```  
   
-### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>7. SQL-92 RIGHT OUTER JOIN 구문 사용  
+### <a name="g-using-the-sql-92-right-outer-join-syntax"></a>G. SQL-92 RIGHT OUTER JOIN 구문 사용  
  다음 예에서는 `TerritoryID`로 두 테이블을 조인하고 오른쪽 테이블에서 일치하지 않는 행도 함께 반환합니다. `SalesTerritory` 테이블은 `SalesPerson` 열에서 각 `TerritoryID` 테이블과 일치합니다. 판매 직원에게 담당 구역이 할당되었는지 여부에 관계없이 모든 판매 직원이 결과 집합에 표시됩니다.  
   
 ```sql    
@@ -538,7 +538,7 @@ RIGHT OUTER JOIN Sales.SalesPerson AS sp
 ON st.TerritoryID = sp.TerritoryID ;  
 ```  
   
-### <a name="h-using-hash-and-merge-join-hints"></a>8. HASH 및 MERGE 조인 힌트 사용  
+### <a name="h-using-hash-and-merge-join-hints"></a>H. HASH 및 MERGE 조인 힌트 사용  
  다음 예에서는 `Product`, `ProductVendor` 및 `Vendor` 테이블 간의 3개 테이블 조인을 수행하여 제품 및 제품 공급업체 목록을 생성합니다. 쿼리 최적화 프로그램은 MERGE 조인을 사용하여 `Product`와 `ProductVendor`(`p`와 `pv`)를 조인합니다. 그런 다음 `Product`와 `ProductVendor`(`p`와 `pv`)의 MERGE 조인이 `Vendor` 테이블에 HASH 조인되어 (`p`와 `pv`) 및 `v`를 생성합니다.  
   
 > [!IMPORTANT]  
@@ -570,7 +570,7 @@ ON p.BusinessEntityID = d.BusinessEntityID
 ORDER BY p.LastName, p.FirstName;  
 ```  
   
-### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>10. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
+### <a name="j-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>J. TABLESAMPLE을 사용하여 테이블의 행 샘플 데이터 읽기  
  다음 예에서는 `TABLESAMPLE` 절에 `FROM`을 사용하여 `10` 테이블에 있는 모든 행 중 대략 `Customer` 퍼센트를 반환합니다.  
   
 ```sql    

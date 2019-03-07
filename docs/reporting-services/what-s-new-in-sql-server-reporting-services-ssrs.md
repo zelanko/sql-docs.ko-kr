@@ -1,18 +1,18 @@
 ---
 title: Reporting Services(SSRS)의 새로운 기능 | Microsoft Docs
-ms.date: 12/11/2018
+author: markingmyname
+ms.author: maghan
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dbeb2a4c15327025077081abf3e166416a2fbea3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.date: 02/28/2019
+ms.openlocfilehash: c2635c764871bb8ff5d97c4c300d5585520db976
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295231"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018029"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -31,7 +31,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Reporting Services 미리 보기
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.2에서는 Reporting Services를 사용할 수 없습니다. 현재 버전, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)를 설치하세요.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.3에서는 Reporting Services를 사용할 수 없습니다. 현재 버전, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)를 설치하세요.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

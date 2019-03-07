@@ -28,15 +28,15 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334740"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,10 +134,10 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다(예: INSERTED **.**_column\_name_).  
+ 명시적 열 참조입니다. 수정할 테이블에 대한 모든 참조는 INSERTED **.**_column\_name_.  
   
  $action  
- MERGE 문에만 사용할 수 있습니다. 해당 행에서 수행된 작업에 따라 각 행에 대해 'INSERT', 'UPDATE' 또는 'DELETE' 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다.  
+ MERGE 문에만 사용할 수 있습니다. 각 행에 대해 세 개의 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다. 이 열은 해당 행에서 수행한 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
  OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
@@ -353,7 +353,7 @@ GO
   
 ```  
   
-### <a name="c-using-output-into-with-an-update-statement"></a>3. UPDATE 문과 함께 OUTPUT INTO 사용  
+### <a name="c-using-output-into-with-an-update-statement"></a>C. UPDATE 문과 함께 OUTPUT INTO 사용  
  다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `VacationHours`의 값과 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다.  
@@ -388,7 +388,7 @@ GO
   
 ```  
   
-### <a name="d-using-output-into-to-return-an-expression"></a>4. OUTPUT INTO를 사용하여 식 반환  
+### <a name="d-using-output-into-to-return-an-expression"></a>D. OUTPUT INTO를 사용하여 식 반환  
  예 3을 기반으로 만들어진 다음 예에서는 업데이트된 `OUTPUT` 값과 업데이트가 적용되기 이전의 `VacationHours` 값 간의 차이를 나타내는 식을 `VacationHours` 절에 정의합니다. 이 식의 값은 `@MyTableVar``table` 열의 `VacationHoursDifference` 변수에 반환됩니다.  
   
 ```  
@@ -422,7 +422,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>5. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
+### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예제에서는 지정된 `ProductID` 및 `ScrapReasonID`가 있는 모든 작업 순서에 대해 `WorkOrder` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
   
 ```  
@@ -456,7 +456,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>6. DELETE 문에 from_table_name과 함께 OUTPUT INTO 사용  
+### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. DELETE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT` 절은 삭제되는 테이블인 `deleted.ProductID` 및 `deleted.ProductPhotoID`의 열과 더불어 `Product` 테이블의 열을 반환합니다. 이 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다.  
   
 ```  
@@ -487,7 +487,7 @@ GO
   
 ```  
   
-### <a name="g-using-output-into-with-a-large-object-data-type"></a>7. 큰 개체 데이터 형식과 함께 OUTPUT INTO 사용  
+### <a name="g-using-output-into-with-a-large-object-data-type"></a>G. 큰 개체 데이터 형식과 함께 OUTPUT INTO 사용  
  다음 예에서는 `DocumentSummary` 절을 사용해 `nvarchar(max)` 테이블의 `Production.Document` 열인 `.WRITE`의 부분 값을 업데이트합니다. 대체 단어, 기존 데이터에서 대체할 단어의 시작 위치(오프셋), 그리고 대체할 문자 수(길이)를 지정함으로써 `components`가 `features`로 대체됩니다. 이 예제에서는 `OUTPUT` 절을 사용해 `DocumentSummary` 열의 이전 및 이후 이미지를 `@MyTableVar``table` 변수에 반환합니다. `DocumentSummary` 열의 이전 및 이후 이미지 전체가 반환됩니다.  
   
 ```  
@@ -510,7 +510,7 @@ GO
   
 ```  
   
-### <a name="h-using-output-in-an-instead-of-trigger"></a>8. INSTEAD OF 트리거에서 OUTPUT 사용  
+### <a name="h-using-output-in-an-instead-of-trigger"></a>H. INSTEAD OF 트리거에서 OUTPUT 사용  
  다음 예에서는 트리거에 `OUTPUT` 절을 사용하여 트리거 작업 결과를 반환합니다. 먼저 `ScrapReason` 테이블에서 뷰를 만들고 해당 뷰에서 사용자가 기본 테이블의 `INSTEAD OF INSERT` 열만 수정할 수 있게 하는 `Name` 트리거를 정의합니다. `ScrapReasonID` 열은 기본 테이블의 `IDENTITY` 열이기 때문에 트리거는 사용자가 제공한 값을 무시합니다. 대신 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 자동으로 올바른 값을 생성합니다. 또한 사용자가 제공한 `ModifiedDate` 값 역시 무시되고 현재 날짜로 설정됩니다. `OUTPUT` 절은 `ScrapReason` 테이블에 실제로 삽입된 값을 반환합니다.  
   
 ```  
@@ -597,7 +597,7 @@ GO
   
 ```  
   
-### <a name="j-using-output-and-output-into-in-a-single-statement"></a>10. 단일 문에서 OUTPUT 및 OUTPUT INTO 사용  
+### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. 단일 문에서 OUTPUT 및 OUTPUT INTO 사용  
  다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 절은 삭제되는 테이블(`deleted.ProductID` 및 `deleted.ProductPhotoID`)의 열과 `Product` 테이블의 열을 `@MyTableVar``table` 변수에 반환합니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 응용 프로그램에 반환합니다.  
   
 ```  

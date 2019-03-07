@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509010"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334540"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
  *filegroup*    
  새 테이블을 만들 파일 그룹의 이름을 지정합니다. 지정한 파일 그룹이 데이터베이스에 있어야 합니다. 그렇지 않으면 SQL Server 엔진에서 오류를 throw합니다.   
  
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ## <a name="data-types"></a>데이터 형식  
  FILESTREAM 특성은 새 테이블로 전송되지 않습니다. FILESTREAM BLOB은 **varbinary(max)** BLOB으로 복사되어 새 테이블에 저장됩니다. FILESTREAM 특성이 없으면 **varbinary(max)** 데이터 형식이 2GB로 제한됩니다. FILESTREAM BLOB이 이 값을 초과하면 오류 7119가 발생하고 해당 문이 중지됩니다.  
@@ -82,6 +82,9 @@ SELECT...INTO는 기본 파일 그룹에 새 테이블을 만들고 쿼리의 �
 -   ID 열을 원격 데이터 원본에서 가져옵니다.  
   
 위의 조건 중 만족하는 것이 있으면 열은 IDENTITY 속성을 상속하지 않고 NOT NULL로 만들어집니다. 새 테이블에 ID 열이 필요한데 그러한 열을 사용할 수 없는 경우 또는 원본 ID 열과 다른 초기값이나 증가값이 필요할 경우에는 IDENTITY 함수를 사용하여 선택 목록에 열을 정의합니다. 아래에 있는 예 섹션에서 "IDENTITY 함수를 사용하여 ID 열 만들기"를 참조하세요.  
+
+## <a name="remarks"></a>Remarks  
+`SELECT...INTO` 문은 두 부분으로 작동합니다. 새 테이블이 생성된 다음, 행을 삽입합니다.  이는 삽입이 실패하면 모두 롤백되지만 새(빈) 테이블은 남아 있음을 의미합니다.  전체 작업이 전반적으로 성공 또는 실패하는 데 필요한 경우 [명시적 트랜잭션](../language-elements/begin-transaction-transact-sql.md)을 사용합니다.
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  테이블 변수나 테이블 반환 매개 변수를 새 테이블로 지정할 수는 없습니다.  
@@ -139,7 +142,7 @@ ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;
 GO  
 ```  
   
-### <a name="c-creating-an-identity-column-using-the-identity-function"></a>3. IDENTITY 함수를 사용하여 ID 열 만들기  
+### <a name="c-creating-an-identity-column-using-the-identity-function"></a>C. IDENTITY 함수를 사용하여 ID 열 만들기  
  다음 예제에서는 IDENTITY 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 새 `Person.USAddress` 테이블에 ID 열을 만듭니다. 이렇게 하는 이유는 테이블을 정의하는 SELECT 문에 조인이 포함되어 있기 때문입니다. 조인이 포함되어 있으면 IDENTITY 속성이 새 테이블에 전송되지 않습니다. IDENTITY 함수에 지정된 초기값과 증가값은 원본 테이블 `AddressID`의 `Person.Address` 열에 있는 해당 값과 다릅니다.  
   
 ```sql  
@@ -166,7 +169,7 @@ FROM sys.identity_columns
 WHERE name = 'AddressID';  
 ```  
   
-### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>4. 원격 데이터 원본에서 열을 지정하여 테이블 만들기  
+### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. 원격 데이터 원본에서 열을 지정하여 테이블 만들기  
  다음 예에서는 원격 데이터 원본의 로컬 서버에 새 테이블을 만드는 세 가지 방법을 보여 줍니다. 먼저 원격 데이터 원본과의 링크를 만듭니다. 그런 다음 첫 번째 SELECT...INTO 문의 FROM 절과 두 번째 SELECT...INTO 문의 OPENQUERY 함수에 연결된 서버 이름 `MyLinkServer,`를 지정합니다. 세 번째 SELECT...INTO 문에서는 연결된 서버 이름을 사용하는 대신 OPENDATASOURCE 함수를 사용하여 원격 데이터 원본을 직접 지정합니다.  
   
  **적용 대상:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -209,8 +212,8 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with-polybase"></a>5. PolyBase를 사용하여 만든 외부 테이블에서 가져오기  
- Hadoop 또는 Azure Storage의 데이터를 영구적으로 스토리지하기 위해 SQL Server로 가져옵니다. `SELECT INTO`를 사용하여 SQL Server의 영구 저장소에 대한 외부 테이블에서 참조하는 데이터를 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase를 사용하여 만든 외부 테이블에서 가져오기  
+ Hadoop 또는 Azure Storage의 데이터를 영구적으로 스토리지하기 위해 SQL Server로 가져옵니다. `SELECT INTO`를 사용하여 SQL Server의 영구 스토리지에 대한 외부 테이블에서 참조하는 데이터를 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
   
  **적용 대상:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 참조하세요.  
   
@@ -226,10 +229,10 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
 ORDER BY YearlyIncome;  
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>6. 다른 테이블의 복사본으로 새 테이블 만들기 및 지정된 파일 그룹에 로드
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 다른 테이블의 복사본으로 새 테이블 만들기 및 지정된 파일 그룹에 로드
 다음 예제에서는 새 테이블을 다른 테이블의 복사본으로 만들고, 이를 사용자의 기본 파일 그룹과 다른 지정된 파일 그룹에 로드하는 방법을 보여 줍니다.
 
- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+ **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

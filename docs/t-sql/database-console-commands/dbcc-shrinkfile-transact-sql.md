@@ -30,17 +30,17 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ebb817cc2d9359a04e2661a17ab4ce99a55165ba
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286481"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955914"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-현재 데이터베이스의 지정된 데이터 또는 로그 파일 크기를 축소합니다. 동일 파일 그룹의 파일 간에 데이터를 이동하는 데 사용할 수 있습니다. 이렇게 하면 파일이 비워지고 해당 데이터베이스를 제거할 수 있습니다. 최소 파일 크기를 새 값으로 다시 설정하여 파일을 만들 때 해당 크기보다 작게 축소할 수 있습니다.
+현재 데이터베이스의 지정된 데이터 또는 로그 파일 크기를 축소합니다. 파일을 비우고 데이터베이스 제거를 허용하는 동일한 파일 그룹의 파일 간에 데이터를 이동하는 데 사용할 수 있습니다. 최소 파일 크기를 새 값으로 다시 설정하여 파일을 만들 때 해당 크기보다 작게 축소할 수 있습니다.
   
 ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

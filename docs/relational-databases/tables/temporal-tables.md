@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403648"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017919"
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016에는 시스템 버전 temporal 테이블에 대한 지원이 데이터베이스 기능으로 도입되었습니다. 이 기능은 현재 시점에 적절한 데이터에 대한 정보만 제공하는 것이 아니라 임의 시점에 테이블에 저장된 데이터에 대한 정보를 제공하는 것을 기본적으로 지원합니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.  
+  SQL Server 2016에서는 현재 시점에서 정확한 데이터만이 아니라 임의 시점에서 테이블에 저장된 데이터에 대한 정보를 제공하기 위해 기본적으로 지원을 제공하는 데이터베이스 기능으로 임시 테이블(시스템 버전 임시 테이블이라고도 함)에 대한 지원을 도입했습니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.  
   
  **빠른 시작**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403648"
   
     -   [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Adventure Works 예제 데이터베이스 다운로드:** 임시 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502)를 다운로드하고 'Temporal' 폴더의 지침을 따르세요.  
+    -   **Adventure Works 샘플 데이터베이스 다운로드:** 임시 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502)를 다운로드하고 'Temporal' 폴더의 지침을 따르세요.  
   
 -   **구문:**  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTS:** **INSERT**에서는 시스템에서 시스템 클록을 기준으로 **SysStartTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정하고, **SysEndTime** 열의 값을 최대값 9999-12-31에 할당합니다. 그러면 행이 열린 것으로 표시됩니다.  
+ **INSERTS:** **INSERT**에서 시스템은 시스템 클록을 기준으로 **SysStartTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정하고, **SysEndTime** 열의 값을 최댓값 9999-12-31에 할당합니다. 그러면 행이 열린 것으로 표시됩니다.  
   
- **UPDATES:** **UPDATE**에서는 시스템에서 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 새 값으로 업데이트되고 시스템에서 시스템 클록을 기준으로 **SysStartTime** 열의 값을 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 현재 테이블에서 **SysEndTime** 열에 대해 업데이트된 행의 값은 최대값 9999-12-31로 그대로 유지됩니다.  
+ **UPDATES:** **UPDATE**에서 시스템은 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 새 값으로 업데이트되고 시스템에서 시스템 클록을 기준으로 **SysStartTime** 열의 값을 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 현재 테이블에서 **SysEndTime** 열에 대해 업데이트된 행의 값은 최대값 9999-12-31로 그대로 유지됩니다.  
   
- **DELETES:** **DELETE**에서는 시스템에서 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 이전 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 제거됩니다. 현재 테이블의 쿼리는 이 행을 반환하지 않습니다. 기록 데이터를 처리하는 쿼리만 행이 닫힌 데이터를 반환합니다.  
+ **DELETES:** **DELETE**에서 시스템은 기록 테이블에 있는 행의 이전 값을 저장하고, 시스템 클록을 기준으로 **SysEndTime** 열의 값을 현재 트랜잭션의 시작 시간(UTC 표준 시간대)으로 설정합니다. 그러면 행이 닫힌 것으로 표시되고 이전 행이 유효 상태로 유지된 기간이 기록됩니다. 현재 테이블에서는 행이 제거됩니다. 현재 테이블의 쿼리는 이 행을 반환하지 않습니다. 기록 데이터를 처리하는 쿼리만 행이 닫힌 데이터를 반환합니다.  
   
- **MERGE:** **MERGE**에서는 작업이 **MERGE**문에 동작으로 지정된 항목에 따라 정확히 최대 세 개의 문( **INSERT**, **UPDATE**및/또는 **DELETE** )이 실행된 것처럼 동작합니다.  
+ **MERGE:** **MERGE**에서는 작업이 **MERGE** 문에 동작으로 지정된 항목에 따라 정확히 최대 세 개의 명령문(**INSERT**, **UPDATE** 및/또는 **DELETE**)이 실행된 것처럼 동작합니다.  
   
 > [!IMPORTANT]  
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
