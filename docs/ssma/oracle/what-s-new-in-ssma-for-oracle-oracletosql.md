@@ -2,7 +2,7 @@
 title: (OracleToSQL) Oracle 용 SSMA의 새로운 기능 | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -10,18 +10,27 @@ ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6523c3d3b7f6a1a0e75ca8641e3bf96520f889af
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 1d28ddc0ca3338c9f3a5f8e9e912efa90f6cbcfa
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955964"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527106"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>(OracleToSQL) Oracle 용 SSMA의 새로운 기능
 이 문서에서는 Oracle 각 릴리스의 변경 내용에 대 한 SQL Server Migration Assistant (SSMA)를 나열 합니다.
 
+## <a name="ssma-v81"></a>SSMA v8.1
+Oracle 용 SSMA v8.1 릴리스의 품질 및 변환 메트릭을 향상 하도록 설계 된 대상된 수정 사항을 향상 되었습니다.
+
+> [!NOTE]
+> 자동 업데이트를 사용 하 여 알려진된 문제 v8.1를 SSMA v8.0에서 업데이트 오류가 발생할 수 있습니다. 이 오류가 발생 하면 새 버전을 다운로드 하 고 수동으로 설치 하세요.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
+
 ## <a name="ssma-v80"></a>SSMA v8.0
-Oracle 용 SSMA v8.0 릴리스의 품질 및 변환 메트릭을 개선 하기 위한 대상된 수정 사항을 제공 하려면 향상 되었습니다. 이 릴리스에 또한 다음과 같은 새로운 기능을 제공합니다.
+Oracle 용 SSMA v8.0 릴리스의 품질 및 변환 메트릭을 개선 하기 위한 대상된 수정 사항을 사용 하 여 향상 되었습니다. 이 릴리스에 또한 다음과 같은 새로운 기능을 제공합니다.
 
 * 에 대 한 지원 **Azure SQL Database Managed Instance** 대상으로 합니다. 이제 Azure SQL Database Managed Instance를 대상으로 하는 새 프로젝트를 만들 수 있습니다.
 
@@ -46,16 +55,10 @@ Oracle 용 SSMA v8.0 릴리스의 품질 및 변환 메트릭을 개선 하기 �
 
 * VARCHAR로 ROWID 및 UROWID를 기본적으로 매핑할 수 있습니다. 'uniqueidentifier' 명시적 ROWID 열에 대 한 데이터 마이그레이션에 맞게 변경 합니다.
 
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
-
 ## <a name="ssma-v710"></a>SSMA v7.10
 Oracle 용 SSMA의 v7.10 릴리스에는 다음 변경 내용이 포함 됩니다.
 - 대상된 수정 사항을 추가 보안 및 글로벌 요구 사항 변화에에서 맞게 개인 정보 보호를 제공 하도록 설계 되었습니다.
 - 계층적 쿼리와 관련 된 변환 향상 되었습니다.
-
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
 
 ## <a name="ssma-v79"></a>SSMA v7.9
 Oracle 용 SSMA의 v7.9 릴리스에는 다음 변경 내용이 포함 됩니다.
@@ -65,20 +68,14 @@ Oracle 용 SSMA의 v7.9 릴리스에는 다음 변경 내용이 포함 됩니다
 - 마이그레이션에 대 한 지원 SQL Server Integration Services (SSIS)를 사용 하 여 데이터입니다. 스키마를 변환한 후 마우스 오른쪽 단추 클릭 상황에 맞는 메뉴 옵션을 사용 하 여 SSIS 패키지를 만들 수는 있습니다.
 - 정규화 된 서버 이름을 지정 하려면 SSMA에서 Azure SQL Database 연결 대화 상자도 변경 되었습니다. SSMA의 이전 버전에서는 Azure SQL Database 접두사 프로젝트 설정 내에서 명시적으로 언급 해야 했습니다.
 
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
-
 ## <a name="ssma-v78"></a>SSMA v7.8
 Oracle 용 SSMA의 v 7.8 릴리스는 다음 변경 내용을 포함 되어 있습니다.
--   에 대 한 지원이 추가 되었습니다.
+-   에 대 한 지원:
     - IN 절에 대 한 행 식입니다.
     - 암시적 캐스트입니다.
     - Azure SQL Database에 대 한 변환 UID입니다.
-- 프로젝트 설정에서 강조 표시 된 변경 형식 매핑입니다.
-- 사용자가 원격 분석을 사용 하지 않도록 설정 하는 기능을 제공 합니다.
-
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
+- 프로젝트 설정에서 강조 표시 하는 형식 매핑을 변경 합니다.
+- 원격 분석을 사용 하지 않도록 설정 하는 작업을 할 수 있습니다.
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 Oracle 용 SSMA의 v7.7 릴리스에는 다음 변경 내용이 포함 됩니다.
@@ -87,22 +84,13 @@ Oracle 용 SSMA의 v7.7 릴리스에는 다음 변경 내용이 포함 됩니다
 - SQL Server 2017 지원은 이제 공식 Oracle 확장 팩도 Linux 지원 (새 원격 설치 옵션)입니다. 확장 팩 기능은 제한 된 테스터의 Linux에 설치 하면 및 서버 쪽 데이터 마이그레이션 기능이 지원 되지 않습니다.
 - Oracle 용 SSMA를 사용 하면 일반 테이블로 구체화 된 뷰를 마이그레이션할 수 있습니다 (에서 설정을 구성할 수 있습니다 **프로젝트 설정** -> **동기화**  ->  **구체화 된 뷰에 대 한 백업 테이블 검색**).
 
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는.Net 4.5.2는 설치 필수입니다.
-
 ## <a name="ssma-v76"></a>SSMA v7.6
 Oracle 용 SSMA v7.6 릴리스의 품질 및 변환 메트릭을 개선 하는 대상된 수정 사항을 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기로 제공 않으며 프로덕션 마이그레이션에 사용할 수 없습니다.
-
-> [!IMPORTANT]
-> SSMA v7.4 및 이후 버전에서는 사용 하 여.Net 4.5.2는 설치 필수 이며 도구의 32 비트 버전은 지원 되지 않습니다.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 Oracle 용 SSMA의 v7.5 릴리스에는 다음 변경 내용이 포함 됩니다.
 - 장애가 있는 사용자에 큰 액세스 가능성을 보장 하기 위해 여러 향상 된 기능을 사용 하 여 향상 되었습니다.
 - 향상 된 데이터 마이그레이션 중에 고객 피드백에 따라 날짜 및 float 데이터 형식의 처리와 같은 대상된 수정 사항 사용 하 여 품질 및 변환 메트릭을 개선 하기 위해 업데이트 합니다.
-
-> [!IMPORTANT]
-> .NET 4.5.2 v7.5 SSMA를 설치 하기 위한 필수 조건입니다. 또한 v7.4 부터는 32 비트 버전의 SSMA이 이제 중단 됩니다.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Oracle 용 SSMA의 v7.4 릴리스에는 다음 변경 내용이 포함 됩니다.
@@ -132,7 +120,8 @@ Oracle 용 SSMA의 v7.3 릴리스에는 다음 변경 내용이 포함 됩니다
 - SSMA 확장성 프레임 워크는 다음 항목을 통해 노출 합니다.
   - SQL Server Data Tools (SSDT) 프로젝트에 기능을 내보냅니다.
     -   이제 SSDT 프로젝트 SSMA에서 스키마 스크립트를 내보낼 수 있습니다. 추가 스키마 변경을 수행 하 여 데이터베이스를 배포 하는 스키마 스크립트를 사용할 수 있습니다.
-![SSDT 프로젝트 명령으로 저장](../media/export-schema-scripts_red.png)
+
+        ![SSDT 프로젝트 명령으로 저장](../media/export-schema-scripts_red.png)
   - SSMA 사용자 지정 변환을 수행 하는 데 사용할 수 있는 라이브러리입니다.
     - 이제 사용자 지정 구문 변환 및 SSMA 이전에 처리 되지 않은 변환을 처리할 수 있는 코드를 생성할 수 있습니다.
       - 이 블로그 게시물에서는 사용자 지정 변환기를 생성 하는 방법에 사용할 [확장 SQL Server Migration Assistant의 변환 기능](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/)합니다.
@@ -222,9 +211,7 @@ Oracle 용 SSMA의 2014 년 4 월 릴리스는 다음 변경 내용이 포함 �
 -   IE 10에서 보이지 않는 보고서 페이지에 대 한 수정 된 버그입니다.  
   
 ## <a name="january-2012"></a>2012 년 1 월  
-Oracle 용 SSMA의 2012 년 1 월 릴리스는 다음 변경 내용이 포함 되어 있습니다.  
-  
--   NULL이 기본값으로 RowType과 RecordType 입력된 매개 변수에 대 한 지원이 추가 되었습니다.  
+RowType에 대 한 지원을 추가 하는 Oracle 용 SSMA의 2012 년 1 월 릴리스 및 RecordType 입력된 매개 변수 기본값으로 NULL로 설정 합니다.  
   
 ## <a name="july-2011"></a>2011 년 7 월  
 Oracle 용 SSMA의 2011 년 7 월 릴리스는 다음 변경 내용이 포함 되어 있습니다.  

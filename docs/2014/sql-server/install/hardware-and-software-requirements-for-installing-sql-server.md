@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 253f517c41c7d703c9d8fad3355cc93d682ed010
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a9ed1c397dbdd30535dd58f17ff3d12f3b84941d
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366245"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527156"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
 
@@ -101,7 +101,7 @@ ms.locfileid: "53366245"
 |---------------|-----------------|  
 |.NET Framework|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], 복제 또는 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]를 선택할 경우 .NET 3.5 SP1은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 요구 사항이지만 더 이상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램으로 설치되지 않습니다. <br />-설치를 실행 하며.NET 3.5 SP1이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용 해야 다운로드를 계속 하기 전에.NET 3.5 SP1을 설치 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다. (.NET 3.5를 설치에서 SP1 [Microsoft.NET Framework 3.5 서비스 팩 1](https://www.microsoft.com/download/details.aspx?id=22).) 오류 메시지에 포함된 다운로드 센터 링크를 통해 .NET 3.5 SP1을 다운로드하거나 Windows 업데이트에서 다운로드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 동안 중단을 방지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 실행하기 전에 .NET 3.5 SP1을 다운로드하여 설치할 수 있습니다.<br />-설치 된 컴퓨터에서 실행 하는 경우 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8](../../includes/win8-md.md)]를 설치 하기 전에.NET Framework 3.5 SP1을 활성화 해야 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.<br />-인터넷 액세스가 없는 경우 다운로드 하 고 위에서 설명한 구성 요소 중 하나를 설치 하려면 설치 프로그램을 실행 하기 전에.NET Framework 3.5 SP1을 설치 해야 합니다. 획득에서.NET Framework 3.5를 사용 하도록 설정 하는 방법에 대 한 권장 사항 및 지침 대 한 자세한 내용은 [!INCLUDE[win8](../../includes/win8-md.md)] 하 고 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 참조 하세요 [Microsoft.NET Framework 3.5 배포 고려 사항](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).<br /><br /> .NET 4.0은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 요구 사항입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기능 설치 단계 동안 .NET 4.0을 설치합니다.<br />-설치 하는 경우는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우 인터넷 연결 컴퓨터에서 사용할 수 있는지 확인 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미디어에는 .NET Framework 4가 포함되어 있지 않기 때문에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 프로그램에서 .NET Framework 4를 다운로드하여 설치합니다.<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] Server Core 모드에.NET 4.0을 설치 하지 않습니다 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]합니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]의 Server Core 설치에 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]를 설치하려면 먼저 .NET 4.0을 설치해야 합니다.|  
 |Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 Windows PowerShell 2.0을 설치하거나 사용하도록 설정하지 않습니다. 그러나 Windows PowerShell 2.0은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 설치를 위한 필수 구성 요소입니다. 설치 프로그램에서 Windows PowerShell 2.0이 없는 것으로 보고하는 경우 [Windows 관리 프레임워크](https://go.microsoft.com/fwlink/?LinkId=186214) 페이지에 나오는 지침에 따라 Windows PowerShell 2.0을 설치하거나 사용하도록 설정할 수 있습니다.|  
-|네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 다음 네트워크 프로토콜을 지원합니다. 공유 메모리, 명명된 파이프, TCP/IP 및 VIA.<br /><br /> 참고: VIA 프로토콜은 장애 조치 클러스터에서 지원 되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다. VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)를 참조하십시오.|  
+|네트워크 소프트웨어|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 대해 지원되는 운영 체제에는 기본 제공 네트워크 소프트웨어가 포함되어 있습니다. 독립 실행형 설치의 명명된 인스턴스 및 기본 인스턴스는 다음 네트워크 프로토콜을 지원합니다. 공유 메모리, 명명된 파이프, TCP/IP 및 VIA.<br /><br /> 참고: VIA 프로토콜은 장애 조치(failover) 클러스터에서 지원되지 않습니다. SQL Server 인스턴스와 동일한 장애 조치(failover) 클러스터 노드에서 실행 중인 클라이언트 또는 애플리케이션은 공유 메모리 프로토콜을 사용하여 로컬 파이프 주소를 통해 SQL Server에 연결할 수 있습니다. 그러나 이러한 연결은 클러스터에서 인식되지 않으며 인스턴스 장애 조치(failover) 이후에 실패합니다. 따라서 이 연결은 권장되지 않으며 아주 특별한 경우에만 사용해야 합니다. VIA 프로토콜은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 네트워크 프로토콜 및 네트워크 라이브러리에 대한 자세한 내용은 [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)를 참조하십시오.|  
 |가상화|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 다음 운영 체제의 Hyper-V 역할에서 실행되는 가상 컴퓨터 환경에서 지원됩니다.<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard, Enterprise 및 Datacenter Edition<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard, Enterprise 및 Datacenter edition입니다.<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 및 Standard edition입니다.<br /><br /> 각 가상 컴퓨터(자식 파티션)에는 부모 파티션에 필요한 리소스 외에 해당 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에 필요한 프로세서 리소스, 메모리 및 디스크 리소스를 충분히 제공해야 합니다. 요구 사항은이 항목의 뒷부분에 나열 됩니다.\*<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1의 Hyper-V 역할 내에서 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32비트/64비트 또는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64비트 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64비트 버전을 실행하는 가상 컴퓨터에 최대 4개의 가상 프로세서를 할당할 수 있습니다.<br /><br /> Hyper-v 역할 내에서 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32비트/64비트를 실행하는 가상 컴퓨터에는 최대 8개의 가상 프로세서를 할당할 수 있습니다.<br />[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64비트 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64비트 버전을 실행하는 가상 컴퓨터에 최대 64개의 가상 프로세서를 할당할 수 있습니다.<br /><br /> 다양 한 버전의 계산 용량 제한에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 및 가상화 된 환경에서 서로 어떻게 내용과 [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). Hyper-V 역할에 대한 자세한 내용은 [Windows Server 2008 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=182820)를 참조하십시오.<br /><br /> **\*\* 중요 \* \***  게스트 장애 조치 클러스터링에서 지원 됩니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. 게스트 장애 조치(Failover) 클러스터링이 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 및 운영 체제와 가상화 지원에 대한 자세한 내용은 [하드웨어 가상 환경에서 실행되는 Microsoft SQL Server 제품에 대한 지원 정책](https://go.microsoft.com/fwlink/?LinkId=151676)을 참조하십시오.|  
 |하드 디스크|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 최소 6GB의 사용 가능한 하드 디스크 공간이 필요합니다.<br /><br /> 디스크 공간 요구 사항은 설치하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 따라 다릅니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace) 을 참조하십시오. 데이터 파일에 대해 지원되는 스토리지 유형에 대한 자세한 내용은 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)을 참조하십시오.|  
 |드라이브|디스크에서 설치하려면 경우에 따라 DVD 드라이브가 필요합니다.|  
@@ -130,28 +130,25 @@ ms.locfileid: "53366245"
 -   지원되는 64비트 운영 체제에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64비트 버전이 설치된 경우 관리 도구는 WOW64에서 지원됩니다. 지원되는 운영 체제에 대한 자세한 내용을 보려면 아래 섹션에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전을 선택하십시오.  
   
  **Server Core 지원**  
-  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 이제 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 및 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2의 Server Core 설치에서 지원됩니다. 다음 Windows Server 버전의 Server Core 모드에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 설치할 수 있습니다.  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64비트  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64비트  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64비트  
-  
--   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64비트  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64비트  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Enterprise 64비트  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64비트  
-  
--   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64비트  
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019의 Server Core 설치에서 이제 지원 됩니다. 
+
+설치 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server Core 모드의 Windows Server 다음 버전에서 지원 됩니다.
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
+   | &nbsp; | &nbsp; |
   
  설치 하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Server core에서 참조 [Server Core에 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)합니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원 되는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 64 비트 x64 Standard edition 에서도 지원 됩니다 [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64 비트 x64입니다.  
+   >[!NOTE]
+   > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64비트 x64 Standard 버전에서 지원되는 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 버전은 [!INCLUDE[sbs_2](../../includes/sbs-2-md.md)] 64비트 x64에서도 지원됩니다.  
   
  **운영 체제 지원:**  
   

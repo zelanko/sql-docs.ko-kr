@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334750"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556235"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -98,6 +98,10 @@ ms.locfileid: "57334750"
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
 
 - 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
+
+#### <a name="application-deployment"></a>응용 프로그램 개발
+
+- R, Python 또는 MLeap 응용 프로그램에서 RESTful API를 호출할 때 호출에에서 시간 초과 5 분입니다.
 
 #### <a name="spark-and-notebooks"></a>Spark 및 notebook
 
