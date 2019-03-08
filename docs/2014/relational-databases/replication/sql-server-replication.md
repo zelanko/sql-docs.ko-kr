@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126073"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578323"
 ---
 # <a name="sql-server-replication"></a>SQL  Server  복제
   복제는 한 데이터베이스에서 다른 데이터베이스로 데이터와 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126073"
   
 
 ## <a name="whats-new"></a>새로운 기능 
-- SQL Server 2017에 SQL Server 복제로 중요 한 새로운 기능을 도입 하지 않았습니다. 
-- SQL Server 2016에 SQL Server 복제로 중요 한 새로운 기능을 도입 하지 않았습니다. 
+- SQL Server 2017은 중요한 새로운 기능을 SQL Server 복제에 도입하지 않았습니다. 
+- SQL Server 2016은 중요한 새로운 기능을 SQL Server 복제에 도입하지 않았습니다. 
 
-이전 버전과 호환성 내용은 [복제 이전 버전과 호환성](replication-backward-compatibility.md) 
+이전 버전과의 호환성 정보는 [복제의 이전 버전과의 호환성](replication-backward-compatibility.md)을 참조하세요. 
 
 
  ## <a name="replication-security"></a>복제 보안
@@ -46,7 +46,7 @@ ms.locfileid: "54126073"
 -   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
 -   [게시 및 배포 해제](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>게시 및 아티클 
+## <a name="publications-and-articles"></a>게시 및 문서 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [아티클 정의](publish/define-an-article.md)   
@@ -126,13 +126,13 @@ ms.locfileid: "54126073"
 -   [피어 투 피어 토폴로지 관리](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [복제 토폴로지 정지](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Oracle 게시자에 대 한 트랜잭션 집합 작업 구성](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [복제 스크립트 업그레이드 ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [복제 스크립트 업그레이드](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>모니터
   
 -   [비관리자의 복제 모니터 사용 허용](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [프로그래밍 방식으로 복제 모니터링](monitor/programmatically-monitor-replication.md)    
--   [복제 된 명령 및 배포 데이터베이스의 기타 정보 보기 ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [병합 게시에 대 한 충돌 정보 보기 ](view-conflict-information-for-merge-publications.md) 
+-   [복제 된 명령 및 배포 데이터베이스의 기타 정보 보기](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [병합 게시에 대 한 충돌 정보 보기](view-conflict-information-for-merge-publications.md) 
 -   [트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

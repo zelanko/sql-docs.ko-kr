@@ -18,18 +18,18 @@ ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 29868763c34944b0a33953e7a56c3d365afcd4d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363925"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579593"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>가용성 복제본에 백업 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 보조 복제본에 백업을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  보조 복제본에 백업 소개를 참조 하세요. [ 활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  보조 복제본에 백업에 대한 소개는 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53363925"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 이 항목의에서 뒷부분에 있습니다.  
+    >  자동화된 백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
   
 6.  **복제본 백업 우선 순위** 표를 사용하여 가용성 복제본의 백업 우선 순위를 변경할 수 있습니다. 이 표는 가용성 그룹에 대한 복제본을 호스팅하는 각 서버 인스턴스의 현재 백업 우선 순위를 표시합니다. 표 열은 다음과 같습니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "53363925"
      백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
     > [!IMPORTANT]  
-    >  `AutomatedBackupPreference`는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후](#FollowUp) 이 항목의에서 뒷부분에 있습니다.  
+    >  `AutomatedBackupPreference`는 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자동화된 백업 기본 설정은 임시 백업에는 영향을 미치지 않습니다. 자세한 내용은 이 항목 뒷부분에 있는 [후속 작업: 보조 복제본에 백업을 구성한 후의 작업](#FollowUp)을 참조하세요.  
   
      예를 들어 다음 명령은 가용성 그룹 `MyAg`의 `AutomatedBackupPreference` 속성을 `SecondaryOnly`로 설정합니다. 주 복제본에서는 이 가용성 그룹의 데이터베이스 자동 백업이 절대 발생하지 않으며 대신 백업 우선 순위 설정 값이 가장 높은 보조 복제본으로 백업이 리디렉션됩니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53363925"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> 후속편: 보조 복제본에 백업을 구성한 후의 작업  
+##  <a name="FollowUp"></a> 후속 작업: 보조 복제본에 백업을 구성한 후의 작업  
  지정된 가용성 그룹에 대해 자동화된 백업 기본 설정을 고려하도록 하려면 백업 우선 순위가 0보다 큰(>0) 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 데이터베이스에 대한 백업 작업을 스크립팅해야 합니다. 현재 복제본이 기본 백업 복제본인지 여부를 확인하려면 백업 스크립트에서 [sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 함수를 사용합니다. 현재 서버 인스턴스가 호스팅하는 가용성 복제본이 백업에 대한 선호 복제본인 경우 이 함수가 1을 반환합니다. 그렇지 않으면 함수가 0을 반환합니다. 각 가용성 복제본에서 이 함수를 쿼리하는 간단한 스크립트를 실행하여 지정된 백업 작업을 실행할 복제본을 확인할 수 있습니다. 예를 들어 백업 작업 스크립트의 일반적인 코드 조각은 다음과 같습니다.  
   
 ```  
@@ -199,8 +199,8 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+ [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

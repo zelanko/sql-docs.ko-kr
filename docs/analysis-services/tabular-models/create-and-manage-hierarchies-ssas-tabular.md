@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e9e5fc942aa7b03cd4cb9a15d8b474a12f12a8d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 5e785fe0e4a5f0030beceff7b9393932a29eaa52
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072600"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579554"
 ---
 # <a name="create-and-manage-hierarchies"></a>계층 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "53072600"
 -   또는 부모 계층 수준을 클릭하고 Delete 키를 누릅니다. 이 경우 모든 자식 수준도 제거됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 디자이너 ](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
+ [테이블 형식 모델 디자이너](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [계층 구조](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)  
   

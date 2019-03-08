@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852888"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579073"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>SQL Server Analysis Services 서버 관리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +47,12 @@ Azure Analysis Services에 대 한 참조 [Azure Analysis Services 관리](https
  수행해야 하는 대부분의 관리 태스크는 대개 모드별로 다릅니다. Analysis Services 시스템 관리자는 동일한 절차와 스크립트를 사용하여 인스턴스의 설치 방법에 상관없이 네트워크에서 모든 Analysis Services 인스턴스를 관리할 수 있습니다.  
   
 > [!NOTE]  
->  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 예외입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포 서버 관리는 항상 SharePoint 팜 컨텍스트 내에서 이루어집니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 다른 서버 모드와 달리 항상 단일 인스턴스이고 SharePoint 중앙 관리 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 통해 관리됩니다. SQL Server Management Studio 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 SharePoint용 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 연결할 수 있지만 이는 바람직한 방법이 아닙니다. SharePoint 팜에는 서버 상태를 동기화하고 서버 가용성을 감독하는 인프라가 포함되어 있습니다. 다른 도구를 사용하면 이 작업에 방해가 될 수 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 관리를 참조 하세요 [&#40;sharepoint 용 파워 피벗 ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)합니다.  
+>  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 예외입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포 서버 관리는 항상 SharePoint 팜 컨텍스트 내에서 이루어집니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 다른 서버 모드와 달리 항상 단일 인스턴스이고 SharePoint 중앙 관리 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 통해 관리됩니다. SQL Server Management Studio 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 SharePoint용 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 연결할 수 있지만 이는 바람직한 방법이 아닙니다. SharePoint 팜에는 서버 상태를 동기화하고 서버 가용성을 감독하는 인프라가 포함되어 있습니다. 다른 도구를 사용하면 이 작업에 방해가 될 수 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 관리를 참조 하세요 [&#40;sharepoint 용 파워 피벗](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)합니다.  
   
   
   
 ## <a name="see-also"></a>참고자료  
- [테이블 형식 및 다차원 솔루션 비교 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [테이블 형식 및 다차원 솔루션 비교](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

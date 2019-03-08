@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242024"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578113"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>학습 및 Spark를 사용 하 여 기계 학습 모델 만들기
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>4 단계-학습 및 테스트 집합으로 분할
 
-행의 75%를 사용 하 여 나머지 25% 모델을 평가 하 고 모델을 학습 합니다. 또한 학습을 유지 하 고 HDFS 저장소에 데이터 집합을 테스트 합니다. 단계는 필요 하 긴 하지만 보여 주기 위해 표시 된 저장 및 ORC 형식으로 로드 합니다. 예를 들어, 다른 형식으로 `Parquet `사용할 수도 있습니다.
+행의 75%를 사용 하 여 나머지 25% 모델을 평가 하 고 모델을 학습 합니다. 또한 학습을 유지 하 고 HDFS 저장소에 데이터 집합을 테스트 합니다. 단계는 필요 하 긴 하지만 보여 주기 위해 표시 된 저장 및 ORC 형식으로 로드 합니다. 예를 들어, 다른 형식으로 `Parquet` 사용할 수도 있습니다.
 
 이 단계를 참조 해야 AdultCensusIncomeTrain 이름과 AdultCensusIncomeTest를 사용 하 여 만든 두 개의 디렉터리 게시
 

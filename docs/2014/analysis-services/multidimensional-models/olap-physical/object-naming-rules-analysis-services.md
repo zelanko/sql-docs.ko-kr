@@ -14,12 +14,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511318"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578416"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
   이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  
@@ -71,10 +71,10 @@ ms.locfileid: "52511318"
 |Object|유효하지 않은 문자|  
 |------------|------------------------|  
 |`Server`|서버 개체 이름을 지정할 대 Windows 서버 명명 규칙을 따르십시오. 자세한 내용은 [명명 규칙(Windows)](/windows/desktop/DNS/naming-conventions) 을 참조하십시오.|  
-|`DataSource`|: / \ * &#124; ? "() {} <>|  
-|`Level` 또는 `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` 또는 `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<, >|  
-|기타 모든 개체|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`|`: / \ * | ? " () [] {} <>`|  
+|`Level` 또는 `Attribute`|```. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >```|  
+|`Dimension` 또는 `Hierarchy`|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>```|  
+|기타 모든 개체|```. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >```|  
   
  **예외: 예약 문자가 허용 되는 경우**  
   

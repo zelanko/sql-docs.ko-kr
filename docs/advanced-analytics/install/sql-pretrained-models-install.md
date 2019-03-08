@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fdfb322699045a46630b7aaed4b4811f20be945f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645442"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579083"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 + R:에 대 한 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 모델 파일 이름 아래에 나열 됩니다.
 
@@ -100,7 +100,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ### <a name="r-verification-steps"></a>R 확인 단계
 
-1. 시작 **RGUI 합니다. EXE** C:\Program Files\Microsoft SQL Server\MSSQL14에서. MSSQLSERVER\R_SERVICES\bin\x64 합니다.
+1. Start **RGUI.EXE** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
 
 2. 명령 프롬프트에서 다음 R 스크립트에 붙여 넣습니다.
 
@@ -200,7 +200,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 각 네트워크의 구성 된 다음 참조 구현을 기반으로 합니다.
 
-+ ResNet 18
++ ResNet-18
 + ResNet-50
 + ResNet-101
 + AlexNet
@@ -214,7 +214,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 ## <a name="see-also"></a>참고자료
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning 서비스](sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
 + [SQL Server 인스턴스에 R 및 Python 구성 요소를 업그레이드 합니다.](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 + [R에 대 한 MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 용 microsoftml 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

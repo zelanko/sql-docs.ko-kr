@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410779"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579433"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -83,7 +83,7 @@ SSDT를 설치할 때 몇 가지 새 메뉴 항목이 Visual Studio 환경에 �
 
 
 ## <a name="additional-resources"></a>추가 리소스
-다양 한 유형의 테이블 형식 모델 프로젝트에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 프로젝트](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)합니다. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너 ](../analysis-services/tabular-models/tabular-model-designer-ssas.md)합니다.  
+다양 한 유형의 테이블 형식 모델 프로젝트에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 프로젝트](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)합니다. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너](../analysis-services/tabular-models/tabular-model-designer-ssas.md)합니다.  
   
 
 ## <a name="whats-next"></a>다음 단계

@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543589"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579043"
 ---
 # <a name="high-availability-solutions-sql-server"></a>고가용성 솔루션(SQL Server)
   이 항목에서는 서버나 데이터베이스의 가용성을 개선하는 여러 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고가용성 솔루션을 소개합니다. 고가용성 솔루션은 하드웨어 또는 소프트웨어 오류의 영향을 차단하고 애플리케이션의 가용성을 유지하여 사용자가 인지하는 작동 중단을 최소화합니다.  
@@ -36,10 +36,10 @@ ms.locfileid: "52543589"
  AlwaysOn 장애 조치(failover) 클러스터 인스턴스  
  일부로 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치 클러스터 인스턴스 수준은 서버 인스턴스에 대 한 중복성을 통해 로컬 고가용성을 제공 하는 Windows Server 장애 조치 클러스터링 (WSFC) 기능을 활용 하 여  *장애 조치 클러스터 인스턴스의* (FCI). FCI는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드 및 다중 서브넷 간에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스입니다. 네트워크에서 FCI는 단일 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스처럼 보이지만 현재 노드를 사용할 수 없을 경우 FCI가 하나의 WSFC 노드에서 다른 노드로 장애 조치(failover) 기능을 제공합니다.  
   
- 자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
+ 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 은 하나 이상의 사용자 데이터베이스에 대한 가용성을 최대화할 수 있도록 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에 도입된 엔터프라이즈 수준의 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 있어야 합니다. 자세한 내용은 [ AlwaysOn 가용성 그룹 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)합니다.  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 은 하나 이상의 사용자 데이터베이스에 대한 가용성을 최대화할 수 있도록 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에 도입된 엔터프라이즈 수준의 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 있어야 합니다. 자세한 내용은 [AlwaysOn 가용성 그룹 (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)합니다.  
   
 > [!NOTE]  
 >  FCI는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 활용하여 데이터베이스 수준에서 원격 재해 복구 기능을 제공할 수 있습니다. 자세한 내용은 [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "52543589"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [데이터베이스 미러링: 상호 운용성 및 공존 성 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [데이터베이스 미러링: 상호 운용성 및 공존성&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [SQL Server 2014에서 사용되지 않는 데이터베이스 엔진 기능](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

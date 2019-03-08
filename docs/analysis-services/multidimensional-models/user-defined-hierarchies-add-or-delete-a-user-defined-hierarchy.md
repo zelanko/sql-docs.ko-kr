@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 36763d7c466ccc1b3f41fda5d361a85322e0b308
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534305"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578715"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>사용자 정의 계층 구조 - 사용자 정의 계층 구조 추가 또는 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   **의 차원 디자이너에 있는** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭의 차원에서 사용자 정의 계층을 추가하거나 제거할 수 있습니다.  
   
- 사용자 정의 계층을 추가하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 계층이 인스턴스화되고 해당 차원이 처리되어야만 사용자가 계층을 사용할 수 있습니다. 자세한 내용은 [다차원 Model 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 하 고 [다차원 모델 처리 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ 사용자 정의 계층을 추가하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 계층이 인스턴스화되고 해당 차원이 처리되어야만 사용자가 계층을 사용할 수 있습니다. 자세한 내용은 [다차원 Model 데이터베이스](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) 하 고 [다차원 모델 처리 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>차원에 사용자 정의 계층을 추가하려면  
   

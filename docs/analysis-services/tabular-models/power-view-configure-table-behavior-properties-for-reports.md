@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ba6b9184dba10ecdd9f466304dd114247ee4ac27
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072549"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579613"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>파워 뷰-보고서에 대 한 테이블 동작 속성 구성
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53072549"
   
 -   행렬 보고서에서 원치 않는 부분합 제거. 필드 수준의 기본 그룹화는 각 필드에 대한 부분합을 만듭니다. 행 수준에서 단일 부분합만 계산하려면 행 식별자를 설정합니다.  
   
- 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 [날짜 테이블 대화 상자로 표시 ](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)합니다.  
+ 날짜 테이블로 표시된 테이블에 대해서는 행 식별자를 설정할 수 없습니다. 날짜 테이블의 경우 테이블을 표시하면 행 식별자가 지정됩니다. 자세한 내용은 [날짜 테이블 대화 상자로 표시](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)합니다.  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>고유한 행 유지 속성 설정  
  이 속성을 사용하면 각 행을 구별하여 ID 정보(예: 직원 이름, 제품 코드 등)를 전달하는 열을 지정할 수 있습니다. 두 고객의 이름이 같은 경우처럼 여러 행이 동일하게 나타나는 경우 이 속성에 대해 지정한 열이 보고서 테이블에서 반복됩니다.  

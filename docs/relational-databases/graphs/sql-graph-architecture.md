@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044549"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579353"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Edge 테이블에 암시적 열
 
 |태스크   |관련된 문서  |참고
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` 가 이제 AS 노드 또는 지 AS 테이블 만들기를 지원 하도록 확장 됩니다. 참고 하는 edge 테이블 되거나 사용자 정의 특성이 없을 수 있습니다.  |
+|CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` 가 이제 AS 노드 또는 지 AS 테이블 만들기를 지원 하도록 확장 됩니다. 참고 하는 edge 테이블 되거나 사용자 정의 특성이 없을 수 있습니다.  |
 |ALTER TABLE    |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|노드 및에 지 테이블이 관계형 테이블을 사용 하 여 동일한 방식으로 변경할 수는 `ALTER TABLE`합니다. 사용자를 추가 하거나 사용자 정의 열, 인덱스 또는 제약 조건을 수정할 수 있습니다. 그러나 같은 내부 그래프 열 변경 `$node_id` 또는 `$edge_id`, 오류가 발생 합니다.  |
 |CREATE  INDEX   |[CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |의사 (pseudo) 열과 노드와 지 테이블의 사용자 정의 열에 인덱스를 만들 수 있습니다. 클러스터형 및 비클러스터형 columnstore 인덱스를 포함 하 여 모든 인덱스 유형에 지원 됩니다.  |
 |에 지 제약 조건 만들기    |[에 지 제약 조건은 &#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |사용자 이제에 지 제약 조건은 특정 의미 체계를 적용할 edge 테이블을 만들 수 있습니다 및 데이터 무결성 유지 관리할 수도  |

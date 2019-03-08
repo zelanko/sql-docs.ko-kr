@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134093"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579323"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134093"
   
 ### <a name="considerations"></a>고려 사항  
   
--   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
+-   배포 데이터베이스는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 또는 데이터베이스 미러링과 함께 사용할 수 없습니다. 복제 구성이 배포자가 구성되는 SQL Server 인스턴스에 연결되므로 배포 데이터베이스를 미러링하거나 복제할 수 없습니다. 배포자에 대해 고가용성을 제공하려면 SQL Server 장애 조치(Failover) 클러스터를 사용합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   보조 데이터베이스에 대한 구독자 장애 조치(Failover)는 지원되지만 상대적으로 복잡한 수동 절차입니다. 절차는 미러링된 구독자 데이터베이스를 장애 조치하는 데 사용되는 방법과 동일합니다. 가용성 그룹에 참여하려면 구독자가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상을 실행해야 합니다.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134093"
  [복제 구독자 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 가용성 그룹: 상호 운용성 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [AlwaysOn 가용성 그룹: 상호 운용성 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [SQL Server 복제](../../../relational-databases/replication/sql-server-replication.md)   

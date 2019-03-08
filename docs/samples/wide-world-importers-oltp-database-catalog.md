@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617630"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579583"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -202,7 +202,7 @@ WideWorldImporters 소수의 스키마를 사용 하므로 데이터베이스 �
 |Configuration_ApplyAuditing|감사를 추가합니다. Standard edition 데이터베이스에 대 한 적용 되는 서버 감사 추가 데이터베이스 감사는 enterprise edition 용 추가 됩니다.|
 |Configuration_ApplyColumnstoreIndexing|Columnstore 인덱싱에 적용 됩니다 `Sales.OrderLines` 고 `Sales.InvoiceLines` 및 적절 하 게 되는 다시 인덱싱합니다.|
 |Configuration_ApplyFullTextIndexing|전체 텍스트 인덱스에 적용 됩니다 `Application.People`, `Sales.Customers`를 `Purchasing.Suppliers`, 및 `Warehouse.StockItems`합니다. 대체 `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`합니다 `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` 전체 텍스트 인덱싱을 사용 하는 교체 절차를 사용 하 여 합니다.|
-|Configuration_ApplyPartitioning|테이블 분할을 적용 `Sales.CustomerTransactions and `에 맞게 Purchasing.SupplierTransactions' 및 인덱스를 다시 정렬 합니다.|
+|Configuration_ApplyPartitioning|테이블 분할을 적용 `Sales.CustomerTransactions` 및 `Purchasing.SupplierTransactions`에 맞게 인덱스를 다시 정렬 하 고 있습니다.|
 |Configuration_ApplyRowLevelSecurity|매출액으로 고객을 필터링 할 행 수준 보안 적용 territory에 관련 된 역할입니다.|
 |Configuration_ConfigureForEnterpriseEdition|Columnstore 인덱싱, 전체 텍스트, 메모리, polybase 및 분할에 적용 됩니다.|
 |Configuration_EnableInMemory|(Azure에서 작동 하지 않음) 하는 경우 메모리 최적화 파일 그룹을 추가, 대체 `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` 에 메모리에 해당 하는 마이그레이션 데이터를 다시 만듭니다 합니다 `Website.OrderIDList`를 `Website.OrderList`를 `Website.OrderLineList`, `Website.SensorDataList` 형식과 테이블 해당 하는 메모리 액세스에 최적화 된, 삭제 및 다시 만드는 절차 `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, 및 `Website.RecordColdRoomTemperatures` 이러한 테이블 형식을 사용 하 합니다.|

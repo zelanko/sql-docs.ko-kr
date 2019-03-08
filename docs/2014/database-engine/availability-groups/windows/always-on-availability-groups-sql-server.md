@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356251"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578753"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On 가용성 그룹(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 도입된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 엔터프라이즈 사용자 데이터베이스 집합의 가용성을 극대화합니다. *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 가용성 그룹은 읽기/쓰기 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 필요한 경우 보조 데이터베이스에 대해 읽기 전용 액세스를 설정하거나 일부 백업 작업에 사용되도록 설정할 수 있습니다.  
@@ -43,15 +43,15 @@ ms.locfileid: "53356251"
   
     -   *동기-커밋 모드*. 이 가용성 모드는 트랜잭션 대기 시간이 증가하더라도 성능에 비해 고가용성 및 데이터 보호를 강조합니다. 가용성 그룹 하나는 현재 주 복제본을 포함하여 최대 3개의 동기-커밋 가용성 복제본을 지원할 수 있습니다.  
   
-     자세한 내용은 참조 하세요. [ 가용성 모드가 있습니다. Always On 가용성 그룹입니다. ](availability-modes-always-on-availability-groups.md).  
+     자세한 내용은 참조 하세요. [가용성 모드가 있습니다. Always On 가용성 그룹입니다. ](availability-modes-always-on-availability-groups.md).  
   
 -   여러 형태의 가용성 그룹 장애 조치 지원: 자동 장애 조치(Failover), 계획된 수동 장애 조치(Failover)(간단히 "수동 장애 조치(Failover)"라고 함), 강제 수동 장애 조치(Failover)(간단히 "강제 장애 조치(Failover)"라고 함) 등 자세한 내용은 참조 하세요. [장애 조치 및 장애 조치 모드가 있습니다. Always On 가용성 그룹입니다. ](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   다음과 같은 활성 보조 기능 중 하나 또는 둘 모두를 지원하도록 가용성 복제본을 구성할 수 있습니다.  
   
-    -   읽기 전용 연결 액세스. 복제본이 보조 복제본으로 실행되는 경우 복제본에 읽기 전용으로 연결하여 해당 데이터베이스에 액세스하고 데이터베이스를 읽을 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본입니다. Always On 가용성 그룹](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   읽기 전용 연결 액세스. 복제본이 보조 복제본으로 실행되는 경우 복제본에 읽기 전용으로 연결하여 해당 데이터베이스에 액세스하고 데이터베이스를 읽을 수 있습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본입니다. Always On 가용성 그룹](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   복제본이 보조 복제본으로 실행되는 경우 해당 데이터베이스에서 백업 작업 수행. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      활성 보조 기능을 사용하면 IT 효율성을 향상시키고 보다 효율적인 보조 하드웨어 리소스 활용을 통해 비용을 절감할 수 있습니다. 또한 읽기 전용 애플리케이션 및 백업 작업을 보조 복제본으로 오프로드하면 주 복제본의 성능이 향상될 수 있습니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "53356251"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  제한 사항 및 사용 하 여 다른 기능을 사용 하는 것에 대 한 제한 사항에 대 한 자세한 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하세요 [Always On 가용성 그룹: 상호 운용성; SQL Server; ](always-on-availability-groups-interoperability-sql-server.md).  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]과 함께 다른 기능을 사용할 경우의 제한 사항에 대한 자세한 내용은 [Always On 가용성 그룹: 상호 운용성; SQL Server; ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> 관련 작업  
   
@@ -157,9 +157,9 @@ ms.locfileid: "53356251"
   
 -   **비디오:**  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" Always On 시리즈, 1 부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 1부: 차세대 고가용성 솔루션 소개](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server 코드 이름된 "Denali" Always On 시리즈, 2 부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server 코드 이름 "Denali" Always On 시리즈, 2부: AlwaysOn을 사용 하 여 중요 업무용 고가용성 솔루션 빌드](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **백서:**  
   

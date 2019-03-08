@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537359"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572776"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>배포 스크립트 파일-처리 옵션 지정
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537359"
   
 -   **처리 방법** 이 설정은 배포 후 배포된 개체가 처리되는지 여부와 수행할 처리 유형을 제어합니다. 3가지 처리 옵션은 다음과 같습니다.  
   
-    -   기본 처리(기본값)  
+    -   기본 처리 (기본값)는 데이터베이스 개체의 처리 상태를 검색 하 고 완전히 처리 된 상태로 처리 되지 않거나 부분적으로 처리 된 개체를 전달 하는 데 필요한 처리를 수행 합니다.
   
-    -   전체 처리  
+    -   전체 처리는 개체 및 포함 된 모든 개체를 처리 합니다. 이미 처리된 개체에 대해 전체 처리를 실행하면 Analysis Services에서는 개체의 모든 데이터를 삭제한 다음 개체를 처리합니다. 
   
-    -   없음  
-  
+    -   없음 처리 됩니다 것을 의미 합니다.
+
+
 -   **쓰기 저장(writeback) 테이블 옵션** 쓰기 저장(writeback)이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 설정된 경우 이 설정은 쓰기 저장(writeback)의 처리 방법을 정의합니다. 3가지 쓰기 저장(writeback) 테이블 옵션은 다음과 같습니다.  
   
     -   기본적으로 쓰기 저장(writeback) 테이블이 있는 경우 이 테이블이 사용됩니다. 쓰기 저장(Writeback) 테이블이 없는 경우 새 쓰기 저장 테이블이 생성됩니다.  
@@ -63,7 +64,7 @@ ms.locfileid: "52537359"
   
 -   수정 된 \< *프로젝트 이름*> 텍스트 편집기를 사용 하 여.deploymentoptions 파일입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [설치 대상 지정](../../analysis-services/multidimensional-models/deployment-script-files-specifying-the-installation-target.md)   
  [파티션 및 역할 배포 옵션 지정](../../analysis-services/multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md)   
  [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  

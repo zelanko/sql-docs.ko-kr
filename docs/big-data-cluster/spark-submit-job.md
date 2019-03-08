@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241589"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578243"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
 
@@ -25,7 +25,7 @@ ms.locfileid: "54241589"
 - [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 확장**
-   - **Kubectl**
+   - **kubectl**
 
 - [Azure Data Studio 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md)합니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "54241589"
 
 + 클릭 **새 Spark 작업** 대시보드에서 Spark 작업 제출 대화 상자를 엽니다.
 
-    ![대시보드를 클릭 하 여 메뉴를 제출 ](./media/submit-spark-job/new-spark-job.png)
+    ![대시보드를 클릭 하 여 메뉴를 제출](./media/submit-spark-job/new-spark-job.png)
  
 + 개체 탐색기에서 클러스터를 마우스 오른쪽 단추로 클릭 하 고 선택 **Spark 작업 제출** 상황에 맞는 메뉴입니다. Spark 작업 제출 대화 상자가 열립니다.  
  

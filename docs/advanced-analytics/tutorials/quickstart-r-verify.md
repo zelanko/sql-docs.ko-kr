@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2bd9e43232b77bc77611b0c4cd5285b69c9a6261
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046921"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579693"
 ---
-# <a name="quickstart-verify-r-exists-in-sql-server"></a>빠른 시작: SQL Server에 R 있는지 확인 
+# <a name="quickstart-verify-r-exists-in-sql-server"></a>빠른 시작: SQL Server에 R이 있는지 확인 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server에 있는 SQL Server 데이터에 대 한 데이터 과학 분석에 대 한 R 언어 지원이 포함 됩니다. R 스크립트와 같은 오픈 소스 R 함수, 타사 R 라이브러리 또는 기본 제공 Microsoft R 라이브러리의 구성할 수 있습니다 [RevoScaleR](../r/revoscaler-overview.md) 규모에서 예측 분석에 대 한 합니다.
@@ -103,4 +103,4 @@ Microsoft은 SQL Server 인스턴스에서 Machine Learning 서비스를 사용 
 인스턴스에 R을 사용 하 여 사용할 준비가 되었는지 확인 했으므로 자세히 보기 기본 R 상호 작용을 수행 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: SQL Server에서 R 스크립트의 "hello world" ](quickstart-r-run-using-tsql.md)
+> [빠른 시작: SQL Server에서 R 스크립트의 "hello world"](quickstart-r-run-using-tsql.md)

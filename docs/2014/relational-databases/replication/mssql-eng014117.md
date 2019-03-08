@@ -12,12 +12,12 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec41205836a2e367d6fb270e532a505979a3e178
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b29b1df0ed0d86cff33461bdd298c0634505af00
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758185"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579253"
 ---
 # <a name="mssqleng014117"></a>MSSQL_ENG014117
     
@@ -63,7 +63,7 @@ ms.locfileid: "52758185"
   
      [sp_addserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
-     클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)합니다.  
+     클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
  배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs**에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
   

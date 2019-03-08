@@ -21,12 +21,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 71bd15f01cc69371765c4af17fb184ce28481f65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129283"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579373"
 ---
 # <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
   이 항목에서 설명하는 지침을 따르면 애플리케이션 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "54129283"
   
     -   병합 복제의 경우 비즈니스 논리 처리기를 사용하는 것이 보다 효율적일 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
-     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 지정할 속성](../publish/specify-merge-replication-properties.md)합니다.  
+     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 속성 지정](../publish/specify-merge-replication-properties.md)을 참조하세요.  
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54129283"
   
      많은 양의 변경 내용을 구독자로 보내야 할 경우 이를 새 스냅숏과 함께 다시 초기화하면 복제를 사용하여 개별 변경 내용을 이동하는 것보다 빠르게 보낼 수 있습니다. 자세한 내용은 [구독 다시 초기화](../reinitialize-subscriptions.md)를 참조하세요.  
   
-     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [ 정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="snapshot-considerations"></a>스냅숏 고려 사항  
   

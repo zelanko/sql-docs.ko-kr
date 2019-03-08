@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a4fdd31cddaba1c46cc14ae6dbdeeb6ad92449da
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017939"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579133"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning 위한 데이터 수집 문제 해결
 
@@ -121,7 +121,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Machine Learning 서비스를 실행 하지 않는 경우 pythonlauncher.config 파일을 확인 하 여 설치 된 Python 버전을 확인할 수 있습니다. 확인 속성을 실수로 변경 하지 않으면 있도록 파일의 복사본을 열어야 하는 것이 좋습니다.
 
-1. SQL server 2017만: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. SQL server 2017만: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
 2. 에 대 한 값을 얻으려면 **PYTHONHOME**합니다.
 3. 현재 작업 디렉터리의 값을 가져옵니다.
 
@@ -209,7 +209,7 @@ SQL Server 외부 스크립트 언어 런타임에 대 한 별도 로그를 생�
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
 > 정확한 폴더 이름을 인스턴스 이름에 따라 다릅니다. 구성에 따라 폴더는 다른 드라이브에 있을 수 있습니다.

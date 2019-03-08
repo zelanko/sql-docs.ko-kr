@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0932c9ebcd2d516a5bfb0e6ea5608501e4f514a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146099"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578103"
 ---
 # <a name="analysis-services-developer-documentation"></a>Analysis Services 개발자 설명서
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,5 +72,5 @@ Analysis Services는 코드를 통해 솔루션을 사용자 지정 하는 여�
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) 문서 관리 기능 및는 범용에 사용 된 cmdlets **Invoke-ascmd** 스크립트 또는 쿼리 입력으로 허용 하는 cmdlet입니다.
 
 ## <a name="see-also"></a>관련 항목
-[기술 참조 ](../analysis-services/powershell/technical-reference-ssas.md) 
- [쿼리 및 식 언어 참조 &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[기술 참조](../analysis-services/powershell/technical-reference-ssas.md)
+[쿼리 및 식 언어 참조 &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/gg492188.aspx)

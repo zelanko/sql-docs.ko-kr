@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b0ef5d33757d9f8c4e3aed53d3867bfd5b1297b2
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513763"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577933"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>빠른 시작: SQL Server에 Python이 있는지 확인 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -146,4 +146,4 @@ Microsoft는 다양 한 SQL Server 인스턴스에서 Machine Learning 서비스
 인스턴스 Python과 함께 사용할 준비가 되었는지 확인 했으므로 자세히 보기 기본 Python 상호 작용을 수행 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: SQL Server에서 "hello world" Python 스크립트 ](quickstart-python-run-using-t-sql.md)
+> [빠른 시작: SQL Server에서 "hello world" Python 스크립트](quickstart-python-run-using-t-sql.md)

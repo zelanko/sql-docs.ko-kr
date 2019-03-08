@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 103d0a724fa3abeae61441f64dd763424e9454e8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415610"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579633"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -200,8 +200,8 @@ ms.locfileid: "52415610"
   
 -   일부 전체 텍스트 언어는 의미 체계 인덱싱을 지원하지 않습니다. 지원되는 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+## <a name="see-also"></a>관련 항목  
+ [다차원 모델 솔루션](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

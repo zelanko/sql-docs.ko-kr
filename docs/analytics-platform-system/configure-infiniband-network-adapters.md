@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518269"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579403"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System에 대 한 InfiniBand 네트워크 어댑터를 구성 합니다.
 병렬 데이터 웨어하우스 (PDW)에서 제어 노드에 연결 하려면 클라이언트 비 어플라이언스 서버의 InfiniBand 네트워크 어댑터를 구성 하는 방법을 설명 합니다. 자동으로 활성 InfiniBand 네트워크 로드, 백업 및 다른 프로세스에 연결할 수 있도록 기본 연결을 고가용성을 위해 다음이 지침을 따르세요.  
@@ -182,5 +182,5 @@ SQLCTL01를 사용 하 여 DNS 분석 플랫폼 시스템 제어 노드에 클�
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>관련 항목  
-[로드 서버 획득 및 구성 ](acquire-and-configure-loading-server.md)  
+[로드 서버 획득 및 구성](acquire-and-configure-loading-server.md)  
   

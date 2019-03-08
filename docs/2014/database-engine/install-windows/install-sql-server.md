@@ -13,15 +13,15 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f631209a655b11062ffd17fa9f83f3e355011cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b9fb6be3970ea12ce3252e70f7773f1687dbe83
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356691"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578356"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 설치
-## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express 다운로드 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express 다운로드](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **준 [Scott hanselman이](http://www.hanselman.com/) 한곳에서 설치 관리자 패키지 링크를 모두 수집 하기 위한!**
   
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. 다양 한에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치할 수 있는 구성 요소 및 설치 프로세스를 참조 하세요 [SQL Server 2014 설치](installation-for-sql-server.md)합니다.  

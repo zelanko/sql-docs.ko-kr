@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044400"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579183"
 ---
 # <a name="backup-and-restore"></a>Backup 및 Restore 메서드
 
@@ -132,7 +132,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
   
 |백업 및 복원 태스크|Description|  
 |---------------------------|---------------|  
-|백업 서버로 서버를 준비 합니다.|[백업 서버 획득 및 구성 ](acquire-and-configure-backup-server.md)|  
+|백업 서버로 서버를 준비 합니다.|[백업 서버 획득 및 구성](acquire-and-configure-backup-server.md)|  
 |데이터베이스를 백업 합니다.|[데이터베이스 백업](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |데이터베이스를 복원 합니다.|[데이터베이스 복원](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

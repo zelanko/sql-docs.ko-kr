@@ -19,19 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397562"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578674"
 ---
 # <a name="books-online-for-sql-server-2014"></a>SQL Server 2014용 온라인 설명서
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]®용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 온라인 설명서를 시작합니다. 온라인 설명서에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하여 데이터 관리 및 비즈니스 인텔리전스 작업을 수행하는 방법을 설명하는 태스크 설명과 참조 설명서가 들어 있습니다.  
   
  **사용해보기:**  
- ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다. 
+ ![Azure 가상 머신 소형](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있나요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보](https://support.microsoft.com/en-us/kb/3058865)합니다. 
   
 ## <a name="sql-server-technologies"></a>SQL Server 기술  
 

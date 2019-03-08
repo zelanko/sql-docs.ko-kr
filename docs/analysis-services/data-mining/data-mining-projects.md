@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506926"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579383"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,9 +213,9 @@ ms.locfileid: "52506926"
 |각 마이닝 모델 뷰어 관련 정보에 대한 링크를 제공합니다.|[데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |리프트 차트, 수익 차트 또는 분류표를 만들거나 마이닝 구조를 테스트하는 방법에 대해 설명합니다.|[테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |처리 옵션 및 사용 권한에 대해 설명합니다.|[데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 Model 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services에 대한 자세한 정보를 제공합니다.|[다차원 Model 데이터베이스](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)   
  [SQL Server 데이터 도구 & #40;를 사용 하 여 다차원 모델 만들기 SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [작업 영역 데이터베이스](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  

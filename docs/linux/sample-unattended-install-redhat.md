@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
-ms.openlocfilehash: bb42309e2ea2958e5e96cb42909e7fdcf27812b3
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: 28fe32859ddec126d763447911db6a11f343f97a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760046"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578985"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux에 대 한 SQL Server 설치 스크립트를 무인된
 
@@ -172,7 +172,7 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>스크립트 이해
 
-Bash 스크립트는 먼저 몇 가지 변수를 설정 됩니다.  이 샘플에서는 같은 스크립팅 변수 또는 환경 변수 수 있습니다.  변수의 ``` MSSQL_SA_PASSWORD ``` 됩니다 **필요한** 스크립트에 대해 만든 사용자 지정 변수는 다른 SQL Server 설치 합니다.  샘플 스크립트는 다음 단계를 수행합니다.
+Bash 스크립트는 먼저 몇 가지 변수를 설정 됩니다.  이 샘플에서는 같은 스크립팅 변수 또는 환경 변수 수 있습니다.  변수의 `MSSQL_SA_PASSWORD` 됩니다 **필요한** 스크립트에 대해 만든 사용자 지정 변수는 다른 SQL Server 설치 합니다.  샘플 스크립트는 다음 단계를 수행합니다.
 
 1. 공용 Microsoft GPG 키를 가져옵니다.
 

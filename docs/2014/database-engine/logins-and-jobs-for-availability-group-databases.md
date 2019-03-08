@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361496"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579223"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리(SQL Server)
   AlwaysOn 가용성 그룹의 모든 주 데이터베이스와 해당 보조 데이터베이스에서 동일한 사용자 로그인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 집합을 정기적으로 유지 관리해야 합니다. 로그인과 작업은 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 모든 인스턴스에서 재현되어야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "53361496"
   
      가용성 그룹의 가용성 복제본을 호스팅하는 서버 인스턴스는 다른 테이프 드라이브 문자 등으로 다르게 구성될 수 있습니다. 각 가용성 복제본에 대한 작업 시 이러한 모든 차이점을 감안해야 합니다.  
   
-     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 참조 하세요. [ 활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+     백업 작업은 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 함수를 사용하여 가용성 그룹 백업 기본 설정에 따라 로컬 복제본이 기본 백업 복제본인지 여부를 확인합니다. [유지 관리 계획 마법사](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 만든 백업 작업은 이 함수를 사용합니다. 다른 백업 작업의 경우 백업 작업이 기본 복제본에서만 실행되도록 이 함수를 백업 작업의 조건으로 사용하는 것이 좋습니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 -   **로그인**  
   

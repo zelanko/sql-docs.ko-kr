@@ -16,15 +16,15 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 48bfd8ddc0a7e68bc2747543f5e079f24041c20a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: e5a7e72b429789477a9ae1245be30b18965560ee
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018168"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578543"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 설치
- ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ SQL Server 2014 Express 다운로드 ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[SQL Server 2014 Express 다운로드](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **준 [Scott hanselman이](http://www.hanselman.com/) 한곳에서 설치 관리자 패키지 링크를 모두 수집 하기 위한!**
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 설치하는 하나의 기능 트리를 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "51018168"
  
  **사용해보기:**  
   
--   Azure 계정이 있으세요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보 ](https://support.microsoft.com/en-us/kb/3058865)합니다.  
+-   Azure 계정이 있으세요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. SQL Server 2014 (SP1)에 대 한 자세한 내용은 참조 하세요. [SQL Server 2014 서비스 팩 1 릴리스 정보](https://support.microsoft.com/en-us/kb/3058865)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사와 명령 프롬프트 중 어느 쪽을 사용하는지에 관계없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치에는 다음 단계가 포함됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "51018168"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
  [SQL Server 2014 BI 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능(Microsoft BI 플랫폼에 속함)에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능(Microsoft BI 플랫폼에 속함)에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 애플리케이션이 포함됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
  [설치 방법 도움말 항목](../../sql-server/install/installation-how-to-topics.md)  

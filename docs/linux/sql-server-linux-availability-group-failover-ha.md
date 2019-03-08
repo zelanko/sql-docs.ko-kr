@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665832"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579463"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux에서 always On 가용성 그룹 장애 조치
 
@@ -38,7 +38,7 @@ ms.locfileid: "51665832"
 
 수동 장애 조치 두 단계에서입니다.
 
-   먼저[ AG 리소스를 이동 하는 조치를 수동으로 장애](#manualMove) 새 노드에 대 한 리소스를 소유 하는 클러스터 노드에서 합니다.
+   먼저 [AG 리소스를 이동 하는 조치를 수동으로 장애](#manualMove) 새 노드에 대 한 리소스를 소유 하는 클러스터 노드에서 합니다.
 
    클러스터에는 AG 리소스가 장애 조치 및 위치 제약 조건을 추가 합니다. 이 제약 조건은 새 노드에서 실행 하는 리소스를 구성 합니다. 성공적으로 장애 조치 이후에 하기 위해이 제약 조건을 제거 합니다.
 
@@ -103,7 +103,7 @@ ms.locfileid: "51665832"
 >[!NOTE]
 >자동 장애 조치(failover)는 위치 제약 조건을 추가하지 않으므로 정리가 필요하지 않습니다. 
 
-자세한 내용은 다음을 참조하세요.
+추가 정보
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)(Red Hat - 클러스터 리소스 관리)
 - [Pacemaker-수동으로 리소스 이동](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-pcs/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES 관리 가이드-리소스](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

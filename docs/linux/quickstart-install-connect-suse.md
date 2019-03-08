@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160561"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579473"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>빠른 시작: SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -44,7 +44,7 @@ SLES v12 SP2 컴퓨터 있어야 **2GB 이상의** 메모리입니다. 파일 �
 
 SUSE Linux Enterprise Server 자신의 컴퓨터에 설치 하려면로 이동 [ https://www.suse.com/products/server ](https://www.suse.com/products/server)합니다. 또한 Azure에서 SLES 가상 머신을 만들 수 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image SLES` 를 사용합니다.
 
-CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 다음 단계를 수행 하기 전에 이전 리포지토리를 먼저 제거 해야 합니다. 자세한 내용은 [SQL Server 2017 및 2019에 대해 Linux 구성 리포지토리 ](sql-server-linux-change-repo.md)합니다.
+CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 다음 단계를 수행 하기 전에 이전 리포지토리를 먼저 제거 해야 합니다. 자세한 내용은 [SQL Server 2017 및 2019에 대해 Linux 구성 리포지토리](sql-server-linux-change-repo.md)합니다.
 
 > [!NOTE]
 > 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다. 

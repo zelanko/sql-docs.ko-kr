@@ -14,12 +14,12 @@ ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 421aac2c58755b192eff51a85d668b03a2fc8a8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823877"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579303"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>SQL Server 장애 조치(Failover) 클러스터 업그레이드
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 모든 장애 조치(Failover) 클러스터 노드에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 장애 조치(Failover) 클러스터의 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 개별적으로 업그레이드할 수 있도록 지원합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "52823877"
   
     -   장애 조치(Failover) 클러스터 노드를 독립 실행형 인스턴스로 다운그레이드할 수 없습니다.  
   
--   자세한 내용은 [ AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server)](always-on-failover-cluster-instances-sql-server.md)합니다.  
+-   자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 ## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드  
  비 다중 서브넷을 직접 업그레이드할 수 없습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치 클러스터입니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)를 참조하세요.  

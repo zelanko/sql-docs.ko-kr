@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401026"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579003"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services는 다차원 및 데이터 마이닝 (기본값) 이면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 및 테이블 형식에 대 한 합니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
   
- 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 하세요. [비교 테이블 형식 및 다차원 솔루션 ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
+ 서버 모드에 따라 만들어서 배포하는 솔루션 유형이 결정됩니다. 서버 소프트웨어를 설치하지 않은 경우 서버가 설치된 모드를 확인하려면 이 항목의 정보를 사용할 수 있습니다. 특정 모드의 기능 가용성에 대 한 자세한 내용은 참조 하세요. [비교 테이블 형식 및 다차원 솔루션](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)합니다.  
   
  설치한 서버 모드를 사용하지 않으려면 소프트웨어를 제거한 후 다시 설치하여 원하는 모드를 선택해야 합니다. 또는 여러 인스턴스에서 서로 다른 모드를 실행하도록 동일한 컴퓨터에 Analysis Services의 다른 인스턴스를 설치할 수 있습니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52401026"
  [SharePoint 2010용 파워 피벗 설치](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [테이블 형식 모델 솔루션](../../analysis-services/tabular-models/tabular-models-ssas.md)   
- [다차원 모델 솔루션 ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [다차원 모델 솔루션](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

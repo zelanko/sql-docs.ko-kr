@@ -20,12 +20,12 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38a5c58f7376fa44438dff5d6ef9e94f0c2809c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519299"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579653"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법에 대해 설명합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. SYNCHRONIZED 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 계획된 수동 장애 조치(데이터가 손실되지 않음)를 수행합니다. UNSYNCHRONIZED 또는 NOT SYNCHRONIZING 상태의 보조 복제본으로 장애 조치하는 경우 마법사는 *강제 장애 조치*(데이터가 손실될 수 있음)로 강제 수동 장애 조치를 수행합니다. 두 형태의 수동 장애 조치는 현재 연결되어 있는 보조 복제본을 주 역할로 전환합니다. 계획된 수동 장애 조치는 이전의 주 복제본을 보조 역할로 전환합니다. 강제 장애 조치가 끝난 후 이전의 주 복제본은 온라인 상태가 되면 보조 역할로 전환됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "52519299"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  첫 번째 계획된 수동 장애 조치를 시작하기 전에 [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
- 첫 번째 강제 장애 조치를 시작하기 전에 강제 장애 조치 후 필수 태스크"섹션 [가용성 그룹의 강제 수동 장애 조치를 수행 합니다. &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)합니다.  
+ 첫 번째 강제 장애 조치를 시작하기 전에 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52519299"
   
      자세한 내용은 [결과 페이지&#40;AlwaysOn 가용성 그룹 마법사&#41;](results-page-always-on-availability-group-wizards.md)를 참조하세요.  
   
-11. 강제 장애 조치 작업이 끝나면 "강제 장애 조치 후 섹션에는 [가용성 그룹의 강제 수동 장애 조치를 수행 합니다. &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)합니다.  
+11. 강제 장애 조치 작업이 끝나면 [가용성 그룹의 강제 수동 장애 조치(failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)의 강제 장애 조치(failover) 후의 필수 작업" 세션을 참조하세요.  
   
 ## <a name="help-for-pages-that-are-exclusive-to-this-wizard"></a>이 마법사에만 있는 페이지에 대한 도움말  
  이 섹션에서는 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]에만 있는 페이지에 대해 설명합니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "52519299"
 |**동기 커밋**|동기-커밋 모드에서는 동기-커밋 주 복제본이 트랜잭션을 커밋하기 전에 동기-커밋 보조 복제본이 로그 확정을 완료했음을 확인할 때까지 기다립니다. 동기-커밋 모드에서는 지정된 보조 데이터베이스가 주 데이터베이스와 동기화되고 나면 커밋된 트랜잭션이 완전히 보호됩니다.|  
 |**비동기 커밋**|비동기-커밋 모드에서는 주 복제본이 비동기-커밋 보조 복제본이 로그를 확정할 때까지 기다리지 않고 트랜잭션을 커밋합니다. 비동기-커밋 모드에서는 보조 데이터베이스의 트랜잭션 대기 시간이 최소화되지만 보조 데이터베이스가 주 데이터베이스보다 뒤쳐질 수 있어 일부 데이터가 손실될 수 있습니다.|  
   
- 자세한 내용은 [ 가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다.  
+ 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다.  
   
  **장애 조치(Failover) 모드**  
  서버 인스턴스의 장애 조치(failover) 모드를 표시하며 다음 중 하나입니다.  
@@ -199,9 +199,9 @@ ms.locfileid: "52519299"
  **취소**  
  마법사를 취소하려면 클릭합니다. **복제본에 연결** 페이지에서 마법사를 취소하면 동작이 수행되지 않고 마법사가 종료됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [ 가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)   
+ [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)   
  [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [가용성 그룹의 계획된 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)   
  [가용성 그룹의 강제 수동 장애 조치(Failover) 수행&#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)   
