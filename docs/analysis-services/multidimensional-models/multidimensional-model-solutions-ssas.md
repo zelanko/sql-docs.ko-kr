@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ee905cf07984692f027e9a6104ce6de186b3183b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: be39464331b6e925e9b04369d59473ef8ae69887
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022080"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578877"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>다차원 모델 솔루션(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34022080"
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체를 디자인하는 방법에 대한 지침을 제공합니다.  
   
- [다차원 모델 데이터베이스 ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 Model 데이터베이스](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 정의하는 방법에 대해 설명합니다.  
   
  [지원되는 데이터 원본&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
@@ -37,10 +37,10 @@ ms.locfileid: "34022080"
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 개체를 디자인하는 방법에 대해 설명합니다.  
   
- [스키마 생성 마법사 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
  기존 관계형 스키마 없이 다차원 데이터베이스 개체를 디자인하는 방법에 대해 설명합니다.  
   
  [Analysis Services 개인 설정 확장 프로그램](../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 개인 설정 확장 프로그램을 디자인하는 방법에 대해 설명합니다.  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 개인 설정 확장 프로그램을 디자인하는 방법에 대해 설명합니다.  
   
   

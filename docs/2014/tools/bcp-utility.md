@@ -27,12 +27,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad056a757a25b8bc1c358fd37d9073370d9ed279
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133843"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579763"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
   합니다 **bcp** 의 인스턴스 간에 데이터를 대량 복사 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자가 지정한 형식의 데이터 파일. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "54133843"
   
 -   **형식** 지정 된 옵션에 따라 서식 파일을 만듭니다 (**-n**, `-c`를 `-w`, 또는 **-N**)과 테이블 또는 뷰 구분 기호입니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
   
- *소유자*  
+ *owner*  
  테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner*를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 작업이 취소됩니다.  
   
  **"** _query_ **"**  
@@ -218,7 +218,7 @@ ms.locfileid: "54133843"
  작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다. 자세한 내용은 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
  **-K** _application_intent_  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 참조 하세요. [ 활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. **ReadOnly**값만 사용할 수 있습니다. **-K**를 지정하지 않으면 bcp 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  **-L** _last_row_  
  테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다. 이 매개 변수가 0 보다 크고 (>) 값이 필요 하지만 미만 (\<) 또는 등호 (=) 마지막 행의 수입니다. 이 매개 변수를 지정하지 않을 경우 기본값은 파일의 마지막 행입니다.  

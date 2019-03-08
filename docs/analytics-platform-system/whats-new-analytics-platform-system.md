@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652592"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579415"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 Microsoft Analytics Platform System (APS)에 대 한 최신 어플라이언스 업데이트의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -120,7 +120,7 @@ AP AU7 만들고 기본적으로 통계를 자동으로 업데이트 합니다. 
 ### <a name="t-sql"></a>T-SQL
 선택 @var 이제 지원 됩니다. 자세한 내용은 참조 하세요. [지역 변수를 선택 합니다.](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-해시 및 ORDER GROUP 쿼리 힌트는 이제 지원 됩니다. 자세한 내용은 참조 하세요. [Hints(Transact-SQL)-쿼리 ](/sql/t-sql/queries/hints-transact-sql-query)
+해시 및 ORDER GROUP 쿼리 힌트는 이제 지원 됩니다. 자세한 내용은 참조 하세요. [Hints(Transact-SQL)-쿼리](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>기능 스위치
 AP AU7 소개에서 기능 스위치 [Configuration Manager](launch-the-configuration-manager.md)합니다. AutoStatsEnabled DmsProcessStopMessageTimeoutInSeconds와 이제 관리자가 변경 될 수 있는 구성 가능한 옵션입니다.

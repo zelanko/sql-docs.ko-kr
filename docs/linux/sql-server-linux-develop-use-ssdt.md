@@ -11,10 +11,10 @@ ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
 ms.openlocfilehash: 874fd8948d4098e9003fb2c54e1feb8b5cbbe4e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
+ms.lasthandoff: 03/07/2019
 ms.locfileid: "52750365"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux의 SQL Server에 대 한 데이터베이스를 만들려면
@@ -114,5 +114,5 @@ SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 �
 [다운로드 하 여 Visual Studio를 설치 합니다.]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [SSDT MSDN 문서]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[자습서: TRANSACT-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
+[자습서: Transact-SQL 문 작성]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx

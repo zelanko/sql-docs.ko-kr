@@ -11,12 +11,12 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295121"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579603"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
   식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "56295121"
 >  이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>새 테이블 보고서를 만들려면  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295121"
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
-2.  클릭 **바탕 화면`, `My Documents**, 또는 **컴퓨터로**, 다음 보고서를 저장 하려는 폴더로 이동 하 고 합니다.  
+2.  **바탕 화면**, **내 문서**또는 **내 컴퓨터**를 클릭한 다음 보고서를 저장할 폴더를 찾습니다.  
   
 3.  **이름**에서 기본 이름을 **Sales Comparison Summary**로 바꿉니다.  
   
