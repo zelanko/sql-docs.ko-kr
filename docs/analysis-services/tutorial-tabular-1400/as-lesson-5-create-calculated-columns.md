@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 5: 계산된 열 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063862"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685560"
 ---
 # <a name="create-calculated-columns"></a>계산 열 만들기
 
@@ -26,11 +27,11 @@ ms.locfileid: "43063862"
 
 이 단원에서는 먼저 데이터 분석 식 (DAX)를 사용할 이기도 합니다. DAX는 테이블 형식 모델에 대 한 고도로 사용자 지정 가능한 수식 식을 만들기 위한 특별 한 언어입니다. 이 자습서에서는 DAX를 사용 하 여 계산된 열, 측정값 및 역할 필터를 만듭니다. 자세한 내용은 참조 하세요 [테이블 형식 모델에서 DAX](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)합니다. 
   
-이 단원에 소요되는 예상 시간: **15분**  
+이 단원에 소요되는 예상 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [4 단원: 관계 만들기](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)합니다. 
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [4단원: 관계를 만들](../tutorial-tabular-1400/as-lesson-4-create-relationships.md)합니다. 
   
 ## <a name="create-calculated-columns"></a>계산 열 만들기  
   
@@ -46,7 +47,7 @@ ms.locfileid: "43063862"
   
     **계산 열 1** 이라는 새 열이 **Calendar Quarter** 열의 왼쪽에 삽입됩니다.  
   
-4.  테이블 위의 수식 입력줄에 다음 DAX 수식을 입력 합니다: 자동 완성을 통해 열 및 테이블의 정규화 된 이름을 입력 하 고 사용할 수 있는 함수를 나열 합니다.  
+4.  테이블 위의 수식 입력줄에 다음 DAX 수식을 입력 합니다. 자동 완성 기능을 사용하면 정규화된 열 및 테이블 이름을 입력하고 사용 가능한 함수를 나열할 수 있습니다.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -130,7 +131,7 @@ ProductCategoryName 계산 된 열은 DimProductCategory 테이블에서 English
   
 ## <a name="whats-next"></a>다음 단계
 
-[6 단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.
+[6단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.
   
   
   

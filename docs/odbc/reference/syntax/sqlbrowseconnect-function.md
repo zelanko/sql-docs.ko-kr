@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -20,12 +21,12 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 96d46f8aaf2ab051255c1f75bcd2c4547c922cdc
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211713"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683613"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  

@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 4: 관계 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394527"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685625"
 ---
 # <a name="create-relationships"></a>관계 만들기
 
@@ -26,7 +27,7 @@ ms.locfileid: "52394527"
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [3 단원: 날짜 테이블로 표시](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)합니다. 
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [3단원: 날짜 테이블로 표시](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)합니다. 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>기존 관계를 검토하고 새 관계 추가  
 
@@ -102,7 +103,7 @@ ms.locfileid: "52394527"
   
 ## <a name="whats-next"></a>다음 단계
 
-[5 단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.
+[5단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.
   
   
   

@@ -7,12 +7,12 @@ ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 06ce1d325caa0835381fd6f9ecd5428d2bbb6f66
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018479"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683623"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ에서 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
 
@@ -21,14 +21,14 @@ SQL Server 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나�
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - SQL Server 빅 데이터 클러스터입니다.
-- Oracle Java Development 키트입니다. 설치할 수는 [Oracle 웹 사이트](https://aka.ms/azure-jdks)합니다.
+- Oracle Java Development 키트입니다. 설치할 수는 [Oracle 웹 사이트](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)합니다.
 - IntelliJ IDEA. 설치할 수는 [JetBrains 웹 사이트](https://www.jetbrains.com/idea/download/)합니다.
 - 확장 IntelliJ 용 azure 도구 키트입니다. 설치 지침은 [IntelliJ 용 Azure 도구 키트 설치](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation)합니다.
 
 ## <a name="link-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터 링크
 1. IntelliJ IDEA 도구를 엽니다.
 
-2. 자체 서명 된 인증서를 사용 하는 경우에서 SSL 인증서 유효성 검사를 해제 하십시오 **도구** 메뉴에서 **Azure**에 **Spark 클러스터 SSL 인증서의 유효성을 검사**, 한 다음 **사용 안 함**합니다.
+2. 자체 서명 된 인증서를 사용 하는 경우 SSL 인증서 유효성 검사를 사용 하지 않도록 설정 **도구** 메뉴에서 **Azure**에 **Spark 클러스터 SSL 인증서의 유효성을 검사**, 다음  **사용 하지 않도록 설정**합니다.
 
     ![SQL Server 빅 데이터 클러스터에 연결-SSL을 사용 하지 않도록 설정](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
@@ -66,7 +66,7 @@ SQL Server 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나�
 
    ![Scala 플러그 인 설치 대화 상자](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. 에 **새 프로젝트** 창에서 다음을 수행 합니다.  
+5. 에 **새 프로젝트** 창에서 다음 단계를 수행 합니다.  
 
     ![Spark SDK 선택](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
@@ -78,7 +78,7 @@ SQL Server 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나�
 
 6. **마침**을 선택합니다.
 
-7. Spark 프로젝트가 자동으로를 아티팩트를 만듭니다. 아티팩트를 보려면 다음을 수행 합니다.
+7. Spark 프로젝트가 자동으로를 아티팩트를 만듭니다. 아티팩트를 보려면 다음 단계를 수행 합니다.
 
    a. 에 **파일** 메뉴에서 **프로젝트 구조**합니다.
 
@@ -120,6 +120,75 @@ SQL Server 빅 데이터 클러스터 링크 후 응용 프로그램을 제출�
 2. 클릭 **SparkJobRun** 프로젝트는 선택한 클러스터에 제출 합니다. 합니다 **클러스터에서 Spark 작업을 원격** 탭 맨 아래에서 작업 실행 진행률을 표시 합니다. 빨간색 단추를 클릭 하 여 응용 프로그램을 중지할 수 있습니다.  
 
     ![링크 빅 데이터 클러스터 실행](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+
+## <a name="spark-console"></a>Spark 콘솔
+로컬 Console(Scala) Spark를 실행 하거나 Spark Livy 대화형 세션 Console(Scala)를 실행할 수 있습니다.
+
+### <a name="spark-local-consolescala"></a>로컬 Console(Scala) spark
+WINUTILS 충족 확인 합니다. EXE 필수 구성 요소입니다.
+
+1. 메뉴 모음에서로 이동 **실행할** > **구성 편집...** .
+
+2. **실행/디버그 구성** 창의 왼쪽된 창에서 이동할 **SQL Server 빅 데이터 클러스터에서 Apache Spark** > **[Spark SQL에서] myApp**합니다.
+
+3. 주 창에서 선택 합니다 **로컬로 실행** 탭 합니다.
+
+4. 다음 값을 제공 하 고 선택한 **확인**:
+
+    |속성 |값 |
+    |----|----|
+    |작업 기본 클래스|기본값은 선택한 파일에서 주 클래스입니다. 줄임표를 선택 하 여 클래스를 변경할 수 있습니다 (**...** ) 하 고 다른 클래스를 선택 합니다.|
+    |환경 변수|HADOOP_HOME에 대 한 값이 올바른지 확인 합니다.|
+    |WINUTILS.exe 위치|경로가 올바른지 확인 합니다.|
+
+    ![로컬 콘솔 설정 구성](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+
+5. 프로젝트에서로 이동 **myApp** > **src** > **주** > **scala**  >  **myApp**합니다.  
+
+6. 메뉴 모음에서로 이동 **도구가** > **Spark 콘솔** > **Spark 로컬 실행 Console(Scala)** 합니다.
+
+7. 다음 두 개의 대화 상자가 자동으로 하려는 경우 종속성을 해결 하기 표시 될 수 있습니다. 만약 그렇다면 선택 **자동 수정**합니다.
+
+    ![Spark 자동 Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+
+    ![Spark 자동 Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+
+8. 콘솔을 아래 그림과 유사 합니다. 콘솔 창 입력에서 `sc.appName`, ctrl + Enter를 누릅니다.  결과 나타납니다. 빨간색 단추를 클릭 하 여 로컬 콘솔을 종료할 수 있습니다.
+
+    ![로컬 콘솔 결과](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+
+
+### <a name="spark-livy-interactive-session-consolescala"></a>Livy 대화형 세션 Console(Scala) spark
+Spark Livy 대화형 세션 Console(Scala) IntelliJ 2018.2 2018.3에만 지원 됩니다.
+
+1. 메뉴 모음에서로 이동 **실행할** > **구성 편집...** .
+
+2. **실행/디버그 구성** 창의 왼쪽된 창에서 이동할 **SQL Server 빅 데이터 클러스터에서 Apache Spark** > **[Spark SQL에서] myApp**합니다.
+
+3. 주 창에서 선택 합니다 **클러스터에서 원격으로 실행** 탭 합니다.
+
+4. 다음 값을 제공 하 고 선택한 **확인**:
+
+    |속성 |값 |
+    |----|----|
+    |Spark 클러스터 (Linux 전용)|응용 프로그램을 실행 하려는 SQL Server에 대 한 빅 데이터 클러스터를 선택 합니다.|
+    |주 클래스 이름|기본값은 선택한 파일에서 주 클래스입니다. 줄임표를 선택 하 여 클래스를 변경할 수 있습니다 (**...** ) 하 고 다른 클래스를 선택 합니다.|
+
+    ![대화형 콘솔 설정 구성](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+
+5. 프로젝트에서로 이동 **myApp** > **src** > **주** > **scala**  >  **myApp**합니다.  
+
+6. 메뉴 모음에서로 이동 **도구가** > **Spark 콘솔** > **실행 Spark Livy 대화형 세션 Console(Scala)** 합니다.
+
+7. 콘솔을 아래 그림과 유사 합니다. 콘솔 창 입력에서 `sc.appName`, ctrl + Enter를 누릅니다.  결과 나타납니다. 빨간색 단추를 클릭 하 여 로컬 콘솔을 종료할 수 있습니다.
+
+    ![대화형 콘솔 결과](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+
+### <a name="send-selection-to-spark-console"></a>선택 영역을 Spark 콘솔 보내기
+
+편의 위해 Livy 대화형 세션 Console(Scala) 로컬 콘솔에 일부 코드를 전송 하 여 스크립트 결과 볼 수 있습니다. Scala 파일에 일부 코드를 강조 표시 한 다음 마우스 오른쪽 단추로 클릭 수 **Spark 콘솔 선택 보낼**합니다. 선택한 코드를 콘솔에 전송 되 고 수행할 수 있습니다. 콘솔의 코드 결과 표시 됩니다. 기존 콘솔은 오류를 확인 합니다.  
+
+   ![선택 영역을 Spark 콘솔 보내기](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>다음 단계
 SQL Server 빅 데이터 클러스터 및 관련된 시나리오에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란](big-data-cluster-overview.md)?

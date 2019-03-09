@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 13: 배포 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bad6f58800e6a023fe5014462fbe6bbaf76bfe8e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090435"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685310"
 ---
 # <a name="deploy"></a>배포
 
@@ -22,11 +23,11 @@ ms.locfileid: "43090435"
 
 이 단원에서는 배포 속성 구성 배포 하는 서버 및 모델에 대 한 이름을 지정 합니다. 다음 서버에 모델을 배포 합니다. 모델을 배포한 후에 보고 클라이언트 응용 프로그램을 사용 하 여 사용자를 연결할 수 합니다. 자세한 내용은 참조 하세요 [Azure Analysis Services에 배포](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) 하 고 [테이블 형식 모델 솔루션 배포](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)합니다.  
   
-이 단원에 소요되는 예상 시간: **5분**  
+이 단원에 소요되는 예상 시간: **5 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [단원 12: Excel에서 분석](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [12 단원: Excel에서 분석](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)합니다.  
 
 > [!IMPORTANT]  
 > Azure Analysis Services에 배포 하는 경우이 있어야 합니다 [관리자 권한](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) 는 serever에 있습니다.  

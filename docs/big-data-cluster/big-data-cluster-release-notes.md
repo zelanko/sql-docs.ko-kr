@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 9dfb6706f27006ccb876615316533bc8e15b3101
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556235"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683633"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -74,6 +74,32 @@ ms.locfileid: "57556235"
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
+
+#### <a name="kubeadm-deployments"></a>kubeadm 배포
+
+Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 클러스터 관리 포털에 빅 데이터 클러스터에 연결 하는 데 필요한 끝점을 올바르게 표시 되지 않습니다. 이 문제가 발생 하는 경우 서비스 끝점 IP 주소를 검색 하려면 다음 해결을 사용 합니다.
+
+- 클러스터 내에서 연결 하는 경우 끝점에 연결 하려는 서비스 IP에 대 한 Kubernetes를 쿼리 합니다. 다음 예를 들어 **kubectl** 명령은 마스터 SQL Server 인스턴스의 IP 주소를 표시 합니다.
+
+   ```bash
+   kubectl get service endpoint-master-pool -n <clusterName> -o=custom-columns="IP:.spec.clusterIP,PORT:.spec.ports[*].nodePort"
+   ```
+
+- 클러스터 외부에서 연결 하는 경우 다음 단계를 사용 하 여 연결 하려면:
+
+   1. SQL Server 마스터 인스턴스를 실행 중인 노드의 IP 주소를 가져옵니다: `kubectl get pod mssql-master-pool-0 -o jsonpath="Name: {.metadata.name} Status: {.status.hostIP}" -n <clusterName>`합니다.
+
+   1. 이 IP 주소를 사용 하는 SQL Server 마스터 인스턴스에 연결 합니다.
+
+   1. 쿼리는 **cluster_endpoint_table** 다른 외부 끝점에 대 한 master 데이터베이스에 있습니다.
+
+      연결 제한 시간 실패 하면이 경우 각 노드의 방화벽을 사용 합니다. 이 경우 Kubernetes 클러스터 관리자에 게 문의 하 고 외부적으로 노출 되는 노드 IP에 대 한 요청 해야 합니다. 노드 수 있습니다. 그런 다음 클러스터에서 실행 되는 다양 한 서비스에 연결 하는 IP 및 해당 포트를 사용할 수 있습니다. 예를 들어, 관리자를 실행 하 여이 IP를 찾을 수 있습니다.
+
+      ```
+      [root@m12hn01 config]# kubectl cluster-info
+      Kubernetes master is running at https://172.50.253.99:6443
+      KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+      ```
 
 #### <a id="mssqlctlctp23"></a> mssqlctl
 

@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services 자습서 추가 단원: 세부 정보 행 | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services 자습서 추가 단원: 행에 자세히 설명 | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28c5124508cedca026d262e34257bf48518580fb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078656"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685247"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>추가 단원 - 세부 정보 행
 
@@ -22,9 +23,9 @@ ms.locfileid: "43078656"
 
 이 추가 단원에서는 DAX 편집기를 사용 하 여 사용자 지정 세부 정보 행 식을 정의 합니다. 세부 정보 행 식을 측정값의 집계 된 결과 대 한 자세한 내용은 최종 사용자에 게 제공 측정값을 속성입니다. 
   
-이 단원에 소요되는 예상 시간: **10분**  
+이 단원에 소요되는 예상 시간: **10 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
 이 추가 단원 문서는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 작업을 수행 하기 전에 완료 해야 이전의 단원을 모두 완료 된 Adventure Works Internet Sales 샘플 모델 프로젝트가 또는 합니다.  
   

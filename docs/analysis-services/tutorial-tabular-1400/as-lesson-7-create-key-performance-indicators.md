@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 7: 핵심 성과 지표 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e0cd1cfa0c468f28b5cadfc9757671f18206d2cd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 348a012b5915c6b02f04481673fc33128001ff73
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685410"
 ---
 # <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기
 
@@ -22,11 +23,11 @@ ms.locfileid: "43087568"
 
 이 단원에서는 핵심 성과 지표 (Kpi) 만들 수 있습니다. Kpi는 정의 되는 값의 성능을 측정 하는 데 사용 되는 *자료* 측정값을에 대해를 *대상* 측정값 또는 절대값으로 정의 된 값입니다. 비즈니스 전문가는 보고 클라이언트 애플리케이션에서 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 이해하기 쉬운 요약 정보를 얻거나 추세를 확인할 수 있습니다. 자세한 내용은를 참조 하세요. [Kpi](../tabular-models/kpis-ssas-tabular.md)
   
-이 단원에 소요되는 예상 시간: **15분**  
+이 단원에 소요되는 예상 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [6 단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.   
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [6단원: 측정값 만들기](../tutorial-tabular-1400/as-lesson-6-create-measures.md)합니다.   
   
 ## <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기  
   
@@ -81,6 +82,6 @@ ms.locfileid: "43087568"
   
 ## <a name="whats-next"></a>다음 단계
 
-[8 단원: 큐브 뷰 만들기](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)합니다.
+[8단원: 큐브 뷰 만들기](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)합니다.
   
   

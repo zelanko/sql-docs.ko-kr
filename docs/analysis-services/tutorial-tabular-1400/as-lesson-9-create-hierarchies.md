@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 9: 계층 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071816"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685420"
 ---
 # <a name="create-hierarchies"></a>계층 만들기
 
@@ -24,11 +25,11 @@ ms.locfileid: "43071816"
   
 모델 디자이너를 사용 하 여 계층을 만들려면 *다이어그램 보기*합니다. 계층 만들기 및 관리 데이터 뷰에서 지원 되지 않습니다.  
   
-이 단원에 소요되는 예상 시간: **20분**  
+이 단원에 소요되는 예상 시간: **20 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [8 단원: 큐브 뷰 만들기](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [8단원: 큐브 뷰 만들기](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md)합니다.  
   
 ## <a name="create-hierarchies"></a>계층 만들기  
   
@@ -78,6 +79,6 @@ ms.locfileid: "43071816"
   
  ## <a name="whats-next"></a>다음 단계
 
-[단원 10: 파티션 만들기](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다. 
+[10 단원: 파티션을 만들](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다. 
   
   

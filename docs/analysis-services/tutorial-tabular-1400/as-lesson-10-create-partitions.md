@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 10: 파티션을 만들 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401146"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685700"
 ---
 # <a name="create-partitions"></a>파티션 만들기
 

@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 1: 새 테이블 형식 모델 프로젝트 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417234"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685220"
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 

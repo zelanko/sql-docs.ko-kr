@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 6: 측정값 만들기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093966"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685650"
 ---
 # <a name="create-measures"></a>측정값 만들기
 
@@ -28,11 +29,11 @@ ms.locfileid: "43093966"
   
 이 단원에서는 입력 하 여 둘 다 DAX 수식을 수식 입력줄 및 자동 합계 기능을 사용 하 여 측정값을 만듭니다.  
   
-이 단원에 소요되는 예상 시간: **30분**  
+이 단원에 소요되는 예상 시간: **30 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [5 단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [5단원: 계산된 열 만들기](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  
   
@@ -88,7 +89,7 @@ ms.locfileid: "43093966"
 
     |Column|측정값 이름|자동 합계(∑)|수식|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|개수|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|합계|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|합계|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|합계|=SUM([TotalProductCost])|  
@@ -127,6 +128,6 @@ FactInternetSales 테이블에 대해 만든 측정값은 판매와 비용, 이�
   
 ## <a name="whats-next"></a>다음 단계
 
-[7 단원: 핵심 성과 지표 만들기](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)합니다.  
+[7단원: 핵심 성과 지표 만들기](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md)합니다.  
 
   

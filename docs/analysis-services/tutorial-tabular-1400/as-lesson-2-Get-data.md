@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 2: 데이터 가져오기 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062214"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685320"
 ---
 # <a name="get-data"></a>데이터 가져오기
 
@@ -27,11 +28,11 @@ ms.locfileid: "43062214"
 > [!NOTE]
 > 이 자습서의 작업 및 이미지를 온-프레미스 서버에서 AdventureWorksDW2014 데이터베이스에 연결을 표시 합니다. 경우에 따라 Azure SQL Data Warehouse에 AdventureWorksDW 데이터베이스를 다른 개체 표시 될 수 있습니다. 그러나 이러한는 근본적으로 동일 합니다.
   
-이 단원에 소요되는 예상 시간: **10분**  
+이 단원에 소요되는 예상 시간: **10 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [1 단원: 새 테이블 형식 모델 프로젝트를 만들](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="create-a-connection"></a>연결 만들기  
   
@@ -56,7 +57,7 @@ ms.locfileid: "43062214"
   
 5.  탐색 창에서 선택 합니다 **AdventureWorksDW** 데이터베이스를 선택한 다음 클릭 **확인**합니다. 이 데이터베이스에 연결을 만듭니다. 
   
-6.  탐색 창에서 다음 테이블에 대 한 확인란을 선택 합니다. **DimCustomer**, **DimDate**를 **DimGeography**, **DimProduct**,  **DimProductCategory**하십시오 **DimProductSubcategory**, 및 **FactInternetSales**합니다.  
+6.  탐색 창에서 다음 테이블에 대 한 확인란을 선택 합니다. **DimCustomer**, **DimDate**합니다 **DimGeography**를 **DimProduct**를 **DimProductCategory**,  **DimProductSubcategory**, 및 **FactInternetSales**합니다.  
 
     ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
@@ -159,7 +160,7 @@ AdventureWorksDW 예제 데이터베이스의 테이블에는 모델에 포함�
   
 ## <a name="whats-next"></a>다음 단계
 
-[3 단원: 날짜 테이블로 표시](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)합니다.
+[3단원: 날짜 테이블로 표시](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)합니다.
 
   
   

@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services 자습서 단원 12: Excel에서 분석 | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084456"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685431"
 ---
 # <a name="analyze-in-excel"></a>도구 모음
 
@@ -24,11 +25,11 @@ ms.locfileid: "43084456"
   
 이 단원을 완료 하려면 Visual Studio와 동일한 컴퓨터에 Excel이 설치 되어 있어야 합니다.
   
-이 단원에 소요되는 예상 시간: **5분**  
+이 단원에 소요되는 예상 시간: **5 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [단원 11: 역할 만들기](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [11 단원: 역할을 만들](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다.  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>기본 큐브 뷰 및 Internet Sales 큐브 뷰를 사용하여 검색  
 
@@ -50,7 +51,7 @@ ms.locfileid: "43084456"
   
 1.  클릭 합니다 **모델** 메뉴를 클릭 한 다음 **Excel에서 분석**합니다.  
   
-2.  **Excel에서 분석** 대화 상자에서 **현재 Windows 사용자** 가 선택된 채로 두고 **큐브 뷰** 드롭다운 목록 상자에서 **Internet Sales**를 선택한 다음 **확인**을 클릭합니다. 
+2.  **Excel에서 분석** 대화 상자에서 **현재 Windows 사용자**가 선택된 채로 두고 **큐브 뷰** 드롭다운 목록 상자에서 **Internet Sales**를 선택한 다음 **확인**을 클릭합니다. 
     
     ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     
@@ -76,7 +77,7 @@ ms.locfileid: "43084456"
   
 ## <a name="whats-next"></a>다음 단계
 
-다음 단원으로 이동 합니다. [13 단원: 배포](../tutorial-tabular-1400/as-lesson-13-deploy.md)합니다.
+다음 단원으로 이동 합니다. [단원 13: 배포](../tutorial-tabular-1400/as-lesson-13-deploy.md)합니다.
 
   
   
