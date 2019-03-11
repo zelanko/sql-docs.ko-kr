@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 657118f6b10b32d85f9020f01d95bf12eecb4498
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: aedefdb9234279a3be93bcfb4705e227e0badebd
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701141"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590398"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "51701141"
   
 2.  선택한 열을 관련 테이블로 끌어 옵니다.  
   
-3.  **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열**대화 상자가 나타납니다.  
+3.  백그라운드에 **외래 키 관계** 대화 상자가 나타나고 포그라운드에 **테이블 및 열** 대화 상자가 나타납니다.  
   
-4.  **관계 이름** 에는 FK_*localtable*_*foreigntable*형식으로 시스템에서 제공한 이름이 표시됩니다. 이 값은 변경할 수 있습니다.  
+4.  **관계 이름**에는 FK_*localtable*\_*foreigntable* 형식으로 시스템에서 제공된 이름이 표시됩니다. 이 값은 변경할 수 있습니다.  
   
 5.  **기본 키 테이블** 이 정확한 테이블을 지정하는지 확인합니다.  
   

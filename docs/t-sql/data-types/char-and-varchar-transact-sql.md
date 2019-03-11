@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299390"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801407"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 고정 길이(**char**) 또는 가변 길이(**varchar**)인 문자 데이터 형식입니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 문자 인코딩을 사용합니다. UTF-8이 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 해당 데이터 정렬의 코드 페이지에서 지원하는 문자의 하위 집합만 저장합니다.
   
@@ -46,7 +43,7 @@ ms.locfileid: "54299390"
 **varchar** [ ( *n* | **max** ) ] 가변 길이의 문자열 데이터입니다. *n*은 바이트로 문자열 길이를 정의하며 1에서 8,000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트 +2바이트이고 저장할 수 있는 문자 수도 *n*입니다. 멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트 +2바이트이지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
 
 ## <a name="remarks"></a>Remarks  
-데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 및 CONVERT 함수를 사용할 경우 *n*을 지정하지 않으면 기본 길이는 30입니다.
+데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이는 1입니다. CAST 및 CONVERT 함수를 사용할 경우 *n*을 지정하지 않으면 기본 길이는 30입니다.
   
 **char** 또는 **varchar**를 사용하는 개체에는 COLLATE 절을 사용하여 특정 데이터 정렬을 할당하지 않는 한 데이터베이스의 기본 데이터 정렬이 할당됩니다. 데이터 정렬은 문자 데이터를 저장하는 데 사용되는 코드 페이지를 제어합니다.
 
@@ -77,7 +74,7 @@ CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 
 > [!NOTE]  
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 마찬가지로 코드 페이지 변환 중 데이터 손실은 보고되지 않습니다.  
   
-근사 **numeric** 데이터 형식으로 변환되는 문자 식에는 선택적 지수 표기(소문자 e 또는 대문자 E 다음에 옵션인 더하기(+) 또는 빼기(-) 기호가 온 다음 숫자가 옴)가 포함될 수 있습니다.
+근사 **numeric** 데이터 형식으로 변환되는 문자 식에는 선택적 지수 표기법이 포함될 수 있습니다. 이 표기법은 소문자 e 또는 대문자 E 다음에 선택적 더하기(+) 또는 빼기(-) 기호가 온 다음 숫자가 옵니다.
   
 정확한 **numeric** 데이터 형식으로 변환되는 문자 식은 숫자, 소수점 및 옵션인 더하기(+) 또는 빼기(-) 기호로 구성되어야 합니다. 선행 공백은 무시됩니다. 123,456.00에서 천 단위 구분 기호와 같은 쉼표 구분 기호는 문자열에서 사용할 수 없습니다.
   
@@ -108,7 +105,7 @@ SELECT CONVERT(char, @myVariable);
 SELECT DATALENGTH(CONVERT(char, @myVariable)) AS 'VarcharDefaultLength';  
 ```  
   
-### <a name="c-converting-data-for-display-purposes"></a>3. 표시를 위해 데이터 변환  
+### <a name="c-converting-data-for-display-purposes"></a>C. 표시를 위해 데이터 변환  
 다음 예에서는 두 개의 열을 문자 형식으로 변환한 후 해당 형식에 적용되는 스타일을 표시된 데이터에 적용합니다. **money** 형식이 문자 데이터로 변환되고 스타일 1이 적용됩니다. 스타일 1은 소수점 앞 세 자리마다 쉼표를 사용하고 소수점 뒤 두 자리까지 값을 표시합니다. **datetime** 형식이 문자 데이터로 변환되고 스타일 3이 적용됩니다. 스타일 3은 데이터를 dd/mm/yy 형식으로 표시합니다. WHERE 절에서 **money** 형식은 문자열 비교 연산을 수행하기 위해 문자 형식으로 캐스팅됩니다.
   
 ```sql

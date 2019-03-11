@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031004"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802260"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "56031004"
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>smalldatetime을 다른 날짜 및 시간 형식으로 변환
 이 섹션에서는 **smalldatetime** 데이터 형식이 다른 날짜 및 시간 데이터 형식으로 변환될 때 어떤 일이 발생하는지를 설명합니다.
   
-**date**로 변환되는 경우 년, 월 및 일이 복사됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
+**date**로 변환하는 경우 년, 월, 일이 복사됩니다. 다음 코드에서는 `smalldatetime` 값을 `date` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -114,7 +114,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-**datetimeoffset(n)** 으로 변환되는 경우 **smalldatetime** 값이 **datetimeoffset(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
+**datetimeoffset(n)** 으로 변환하는 경우 **smalldatetime** 값이 **datetimeoffset(n)** 값으로 복사됩니다. 소수 자릿수 초는 0으로 설정되고 표준 시간대 오프셋은 +00:0으로 설정됩니다. 다음 코드에서는 `smalldatetime` 값을 `datetimeoffset(4)` 값으로 변환한 결과를 보여 줍니다.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>관련 항목:
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

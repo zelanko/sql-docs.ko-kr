@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991826"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590408"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53991826"
   
 2.  새 주 데이터베이스(이전에는 미러 데이터베이스)에 대한 캡처 작업 및 정리 작업을 만듭니다. 작업을 만들려면 [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) 저장 프로시저를 사용합니다.  
   
- 정리 또는 캡처 작업의 현재 구성을 보려면 새 주 서버 인스턴스에서 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 저장 프로시저를 사용합니다. 지정된 데이터베이스에 대해 캡처 작업의 이름은 cdc.*database_name*_capture로 지정되고 정리 작업의 이름은 cdc.*database_name*_cleanup으로 지정됩니다. 여기서 *database_name* 은 데이터베이스의 이름입니다.  
+ 정리 또는 캡처 작업의 현재 구성을 보려면 새 주 서버 인스턴스에서 [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) 저장 프로시저를 사용합니다. 지정된 데이터베이스에 대해 캡처 작업의 이름은 cdc.*database\_name*\_capture로 지정되고 정리 작업의 이름은 cdc.*database\_name*\_cleanup으로 지정됩니다. 여기서 *database_name*은 데이터베이스의 이름입니다.  
   
  작업의 구성을 변경하려면 [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) 저장 프로시저를 사용합니다.  
   

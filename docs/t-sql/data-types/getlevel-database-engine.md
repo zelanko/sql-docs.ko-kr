@@ -18,12 +18,12 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f7c5e2cf81cd4b90a2667cb51e4110a8313802a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527c08a55fca49f2545c0757091f67442b3a495f
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014755"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676021"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ SqlInt16 GetLevel ( )
 ## <a name="remarks"></a>Remarks  
 하나 이상의 노드 수준을 확인하거나 지정된 수준의 멤버로 노드를 필터링하는 데 사용됩니다. 계층의 루트는 수준 0입니다.
   
-GetLevel은 너비 우선 검색 인덱스에 매우 유용합니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
+GetLevel은 너비 우선 검색 인덱스에 유용합니다. 자세한 내용은 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)를 참조하세요.
   
 ## <a name="examples"></a>예  
   
@@ -94,5 +94,4 @@ this.GetLevel()
 [hierarchyid 데이터 형식 메서드 참조](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [계층적 데이터&#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid&#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
-  
   

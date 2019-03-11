@@ -23,18 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297c6aa82ff318d7e00ee022a5f9b25ad309358
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012124"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801577"
 ---
 # <a name="datetime-transact-sql"></a>datetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 목차에 대한 피드백을 공유하세요!](https://aka.ms/sqldocsurvey)
 
 소수 자릿수 초가 있는 24시간제 기준의 시간과 결합된 날짜를 정의합니다.
   
@@ -56,7 +53,7 @@ ms.locfileid: "56012124"
 |스토리지 크기|8바이트|  
 |정확도|.000, .003 또는 .007초 단위로 반올림됩니다.|  
 |기본값|1900-01-01 00:00:00|  
-|달력|일반 달력(전체 연도 범위를 포함하지는 않음)|  
+|달력|일반 달력(전체 연도 범위를 포함함)|  
 |사용자 정의 초 소수 부분 자릿수|아니오|  
 |표준 시간대 오프셋 인식 및 유지|아니오|  
 |일광 절약 시간제 인식|아니오|  
@@ -66,7 +63,7 @@ ms.locfileid: "56012124"
   
 |숫자|설명|  
 |---|---|
-|날짜 형식:<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 시간 형식:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|지정된 숫자 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 5/20/97은 1997년 5월 20일을 나타냅니다. 숫자 날짜 형식을 사용할 경우에는 문자열에 슬래시 기호(/), 하이픈(-) 또는 마침표(.)를 구분 기호로 사용하여 년, 월, 일을 지정합니다. 이 문자열은 다음과 같은 형식이어야 합니다.<br /><br /> *number separator number separator number [time] [time]*<br /><br /> <br /><br /> 언어를 **us_english**로 설정하면 기본 날짜 순서는 mdy(월, 일, 년)입니다. [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 순서를 변경할 수 있습니다.<br /><br /> SET DATEFORMAT 설정에 따라 날짜 값의 해석 방법이 결정됩니다. 순서가 설정과 다르면 값이 범위를 벗어나므로 날짜로 해석되지 않거나 잘못 해석됩니다. 예를 들어 12/10/08은 DATEFORMAT 설정에 따라 6가지 날짜 중 하나로 해석될 수 있습니다. 네 부분으로 된 연도는 년으로 해석됩니다.|  
+|날짜 형식:<br /><br /> [0]4/15/[19]96 -- (mdy)<br /><br /> [0]4-15-[19]96 -- (mdy)<br /><br /> [0]4.15.[19]96 -- (mdy)<br /><br /> [0]4/[19]96/15 -- (myd)<br /><br /> 15/[0]4/[19]96 -- (dmy)<br /><br /> 15/[19]96/[0]4 -- (dym)<br /><br /> [19]96/15/[0]4 -- (ydm)<br /><br /> [19]96/[0]4/15 -- (ymd)<br /><br /> 시간 형식:<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 4 PM|지정된 숫자 월을 사용하여 날짜 데이터를 지정할 수 있습니다. 예를 들어 5/20/97은 1997년 5월 20일을 나타냅니다. 숫자 날짜 형식을 사용할 경우에는 문자열에 슬래시 기호(/), 하이픈(-) 또는 마침표(.)를 구분 기호로 사용하여 년, 월, 일을 지정합니다. 이 문자열은 다음과 같은 형식이어야 합니다.<br /><br /> *number separator number separator number [time] [time]*<br /><br /> <br /><br /> 언어를 **us_english**로 설정하면 기본 날짜 순서는 mdy(월, 일, 년)입니다. [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) 문을 사용하여 날짜 순서를 변경할 수 있습니다.<br /><br /> SET DATEFORMAT 설정에 따라 날짜 값의 해석 방법이 결정됩니다. 순서가 설정과 다르면 값이 날짜로 해석되지 않습니다. 순서가 잘못된 날짜는 범위를 벗어나는 것으로 또는 잘못된 값을 포함하는 것으로 잘못 해설될 수 있습니다. 예를 들어 12/10/08은 DATEFORMAT 설정에 따라 6가지 날짜 중 하나로 해석될 수 있습니다. 네 부분으로 된 연도는 년으로 해석됩니다.|  
   
 |알파벳|설명|  
 |---|---|
@@ -74,7 +71,7 @@ ms.locfileid: "56012124"
   
 |ISO 8601|설명|  
 |---|---|
-|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|예:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> ISO 8601 형식을 사용하려면 각 요소를 이 형식으로 지정해야 합니다. 여기에는 형식에 표시되는 **T**, 콜론(:), 마침표(.)도 포함됩니다.<br /><br /> 대괄호는 초의 소수 구성 요소가 선택 사항임을 나타냅니다. 시간 구성 요소는 24시간 형식으로 지정됩니다.<br /><br /> T는 **datetime** 값의 시간 시작 부분을 나타냅니다.<br /><br /> ISO 8601 형식을 사용할 때의 이점은 이 형식이 명확한 사양을 가진 국제 표준이라는 점입니다. 또한 이 형식은 SET DATEFORMAT 또는 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 설정에 영향을 받지 않습니다.|  
+|YYYY-MM-DDThh:mm:ss[.mmm]<br /><br /> YYYYMMDD[ hh:mm:ss[.mmm]]|예:<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> ISO 8601 형식을 사용하려면 형식에 표시되는 **T**, 콜론(:) 및 마침표(.)를 포함하는 형식으로 각 요소를 지정해야 합니다.<br /><br /> 대괄호는 초의 소수 구성 요소가 선택 사항임을 나타냅니다. 시간 구성 요소는 24시간 형식으로 지정됩니다.<br /><br /> T는 **datetime** 값의 시간 시작 부분을 나타냅니다.<br /><br /> ISO 8601 형식을 사용할 때의 이점은 이 형식이 명확한 사양을 가진 국제 표준이라는 점입니다. 또한 이 형식은 SET DATEFORMAT 또는 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 설정에 영향을 받지 않습니다.|  
   
 |구분되지 않음|설명|  
 |---|---|

@@ -12,19 +12,19 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4417dcd94c3dd24e22805f713901c5ddfbf6b727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 50f6d68034ce6575c765b80c6fb1a658baba6d0a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035024"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802967"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스에 있는 테이블의 각 파티션에 대한 크기와 행 수를 표시합니다.
   
-![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -42,16 +42,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 **VIEW SERVER STATE** 권한이 필요합니다.
   
 ## <a name="result-sets"></a>결과 집합  
-이는 DBCC PDW_SHOWPARTITIONSTATS 명령에 대한 결과입니다.
+이 집합은 DBCC PDW_SHOWPARTITIONSTATS 명령에 대한 결과입니다.
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|파티션 번호입니다.|  
 |used_page_count|BIGINT|데이터에 사용되는 페이지 수입니다.|  
-|reserved_page_count|BIGINT|파티션에 할당된 페이지 수입니다.|  
+|reserved_page_count|BIGINT|파티션에 사용하도록 예약된 페이지의 수입니다.|  
 |row_count|BIGINT|파티션의 행 수입니다.|  
 |pdw_node_id|ssNoversion|데이터에 대한 노드를 계산합니다.|  
-|distribution_id|ssNoversion|데이터의 배포 ID입니다.|  
+|distribution_id|ssNoversion|데이터의 배포 식별자입니다.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>1. DBCC PDW_SHOWPARTITIONSTATS 기본 구문 예제  
@@ -65,4 +65,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ## <a name="see-also"></a>관련 항목:
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED&#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
-  
+ 

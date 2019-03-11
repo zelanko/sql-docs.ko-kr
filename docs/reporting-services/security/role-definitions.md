@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849471"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444228"
 ---
 # <a name="role-definitions"></a>역할 정의
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할**정의*는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 태스크 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할 정의*는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 작업 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>역할을 사용하여 보고서 서버에 대한 액세스 권한 부여  
  역할은 역할 할당에 사용되는 경우에만 적용됩니다. 역할에서 보안을 제공하는 방법은 [역할 할당](../../reporting-services/security/role-assignments.md)을 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "47849471"
  자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)을 참조하세요.  
   
 ## <a name="creating-a-role-definition"></a>역할 정의 만들기  
- 역할을 만들려면 Management Studio를 사용하여 이름과 역할에 포함할 태스크를 지정합니다. 항목 태스크와 시스템 태스크에 대해서는 별개의 역할 정의를 만들어야 합니다. 역할은 항목 수준 작업 또는 시스템 수준 태스크를 포함할 수 있지만 둘 다 포함할 수는 없습니다. 역할 정의를 만들려면 이름을 입력하고 정의에 사용할 태스크 집합을 선택합니다. 역할 정의를 만들려면 해당 권한이 있어야 합니다. "개별 항목의 보안 설정" 태스크는 이러한 권한을 제공합니다. 기본적으로 미리 정의된 **내용 관리자** 역할이 할당된 관리자 및 사용자는 이 태스크를 수행할 수 있습니다.  
+ 역할을 만들려면 Management Studio를 사용하여 이름과 역할에 포함할 태스크를 지정합니다. 항목 및 시스템 작업에 대해서는 개별 역할 정의를 만들어야 합니다. 역할은 항목 수준 작업 또는 시스템 수준 태스크를 포함할 수 있지만 둘 다 포함할 수는 없습니다. 역할 정의를 만들려면 이름을 입력하고 정의에 사용할 태스크 집합을 선택합니다. 역할 정의를 만들려면 해당 권한이 있어야 합니다. "개별 항목의 보안 설정" 태스크는 이러한 권한을 제공합니다. 기본적으로 미리 정의된 **내용 관리자** 역할이 할당된 관리자 및 사용자는 이 태스크를 수행할 수 있습니다.  
   
  역할에는 고유 이름이 있어야 합니다. 역할 정의가 유효하려면 태스크를 하나 이상 포함해야 합니다. 자세한 내용은 [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요.  
   

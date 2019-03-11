@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017074"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662777"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary 및 varbinary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "56017074"
 고정 길이 또는 가변 길이의 이진 데이터 형식입니다.
   
 ## <a name="arguments"></a>인수  
-**binary** [(*n*)] 길이가 *n*바이트인 고정 길이의 이진 데이터입니다. 여기서 *n*은 1부터 8,000까지의 값입니다. 스토리지 크기는 *n* 바이트입니다.
+**binary** [(_n_)] 길이가 _n_바이트인 고정 길이의 이진 데이터입니다. 여기서 _n_은 1부터 8,000까지의 값입니다. 스토리지 크기는 _n_ 바이트입니다.
   
-**varbinary** [(*n* | **max**)] 가변 길이 이진 데이터입니다. *n*은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
+**varbinary** [(_n_ | **max**)] 가변 길이 이진 데이터입니다. _n_은 1부터 8000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트임을 나타냅니다. 저장소 크기는 입력된 실제 데이터 길이에 2바이트를 더한 값입니다. 입력된 데이터의 길이가 0바이트일 수 있습니다. **varbinary**의 ANSI SQL 동의어는 **binary varying**입니다.
   
 ## <a name="remarks"></a>Remarks  
-데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.
+데이터 정의나 변수 선언문에서 _n_을 지정하지 않은 경우 기본 길이는 1입니다. CAST 함수에 _n_을 지정하지 않은 경우 기본 길이는 30입니다.
 
 | 데이터 형식 | 사용 시기... |
 | --- | --- |
@@ -50,11 +50,23 @@ ms.locfileid: "56017074"
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>binary 및 varbinary 데이터 변환
-데이터가 문자열 데이터 형식(**char**, **varchar**, **nchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext**, 또는 **image**)에서 길이가 다른 **binary** 또는 **varbinary** 데이터 형식으로 변환될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 오른쪽의 데이터를 패딩하거나 자릅니다. 다른 데이터 형식을 **binary** 또는 **varbinary**로 변환하면 데이터의 왼쪽이 패딩되거나 잘립니다. 패딩은 16진수 0을 사용하여 수행됩니다.
+문자열 데이터 형식에서 길이가 다른 **binary** 또는 **varbinary** 데이터 형식으로 데이터를 변환하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 오른쪽의 데이터를 패딩하거나 자릅니다. 문자열 데이터 형식은 다음과 같습니다.
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+다른 데이터 형식을 **binary** 또는 **varbinary**로 변환하면 데이터의 왼쪽이 패딩되거나 잘립니다. 패딩은 16진수 0을 사용하여 수행됩니다.
   
-데이터를 **binary** 및 **varbinary** 데이터 형식으로 변환하는 것은 **binary** 데이터가 데이터를 이동하는 가장 쉬운 방법인 경우에 유용합니다. 두 변환이 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행된 경우 형식의 값을 아주 큰 이진 값으로 변환한 다음 다시 이전 형식으로 변환하면 항상 같은 값을 갖게 됩니다. 값의 이진 표현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전을 변경합니다.
+데이터를 **binary** 및 **varbinary** 데이터 형식으로 변환하는 것은 **binary** 데이터가 데이터를 이동하는 가장 쉬운 방법인 경우에 유용합니다. 특정 시점에 값 형식을 충분히 큰 크기의 이진 값으로 변환한 후 다시 이전 형식으로 변환할 수 있습니다. 두 변환이 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 수행된 경우 이 변환에서는 항상 같은 값이 생성됩니다. 값의 이진 표현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전을 변경합니다.
   
-**int**, **smallint** 및 **tinyint**를 **binary** 또는 **varbinary**로 변환할 수 있지만, **binary** 값을 다시 정수 값으로 변환하는 경우 잘림이 발생하면 이 값은 원래 정수 값과 달라집니다. 예를 들어 다음 SELECT 문은 정수 값 `123456`이 일반적으로 이진 `0x0001e240`으로 저장됨을 보여 줍니다.
+**int**, **smallint** 및 **tinyint**를 **binary** 또는 **varbinary**로 변환할 수 있습니다. **binary** 값을 다시 정수 값으로 변환하는 경우 잘림이 발생하면 이 값이 원래 정수 값과 달라집니다. 예를 들어 다음 SELECT 문은 정수 값 `123456`이 이진 `0x0001e240`으로 저장됨을 보여 줍니다.
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  

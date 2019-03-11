@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76db4e710c2bd3d6eac25383a1db66a3720280ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014507"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590369"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ CAST ( $157.27 AS VARCHAR(10) )
 |**datetime**, **smalldatetime**|**Date**|  
 |NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
   
-단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열은 **Byte(*길이*** 0에서 1**까지)** 의 범위를 갖습니다. 여기서 *길이*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **binary**, **varbinary** 또는 **이미지** 값에서 바이트 수를 말합니다.
+단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열에는 **Byte(**_length_ 0에서 1까지 **)** 의 범위가 포함됩니다. 여기서 *length*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
   
 이들은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환한 것입니다.
   

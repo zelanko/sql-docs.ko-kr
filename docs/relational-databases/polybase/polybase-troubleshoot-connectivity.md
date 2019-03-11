@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: eaa93142b7a00f581d90dcb0a7be4a94a4ae6477
-ms.sourcegitcommit: ee76381cfb1c16e0a063315c9c7005f10e98cfe6
+ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072858"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803158"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -68,7 +68,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 
 예를 들어 SQL Server 2016의 기본값은 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`입니다.
 
- **core-site.xml**을 업데이트하고 아래 세 가지 속성을 추가합니다. 환경에 따라 값을 설정합니다.
+**core-site.xml**을 업데이트하고 아래 세 가지 속성을 추가합니다. 환경에 따라 값을 설정합니다.
 
 ```xml
 <property>

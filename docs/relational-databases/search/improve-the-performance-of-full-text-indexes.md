@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532546"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590438"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ ms.locfileid: "52532546"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 크롤링 로그 파일 이름의 변수 부분은 다음과 같습니다.
--   <**DatabaseID**> - 데이터베이스의 ID입니다. <**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
--   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. <**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   \<**DatabaseID**> - 데이터베이스의 ID입니다. <**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
 -   <**n**> - 동일한 전체 텍스트 카탈로그의 탐색 로그가 하나 이상 있음을 나타내는 정수입니다.  
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "52532546"
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예제: fdhost.exe에 필요한 예상 메모리  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예: fdhost.exe에 필요한 예상 메모리  
   
  이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 예측합니다. 탐색 범위 수는 `8`입니다.  
   

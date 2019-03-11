@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, 스크립트, 스크�
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711231"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662827"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>자습서: SQL Server Management Studio에서 개체 스크립팅
 이 자습서에서는 SSMS(SQL Server Management Studio) 내에서 발견되는 다양한 개체에 대한 T-SQL(Transact-SQL) 스크립트를 생성하는 방법을 설명합니다. 이 자습서에서는 다음 개체를 스크립팅하는 방법의 예제를 찾을 수 있습니다.
@@ -47,7 +47,7 @@ ms.locfileid: "47711231"
 - [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 - [AdventureWorks2016 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases)를 다운로드합니다.
 
-SSMS에서 데이터베이스를 복원하기 위한 지침은 여기: [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)에 있습니다. 
+SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)을 참조하세요. 
 
 
 ## <a name="script-queries-from-the-gui"></a>GUI에서 쿼리 스크립팅

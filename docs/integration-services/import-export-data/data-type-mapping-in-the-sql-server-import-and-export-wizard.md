@@ -11,20 +11,20 @@ ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 4d7f668c35cf65caa48fda0e58c7d8b73a682385
+ms.sourcegitcommit: 5861b7b0cd9bf6d43cefad5d0356f5821bd17d4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256848"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56411932"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서는 새로운 대상 테이블 및 파일에서 열의 이름, 데이터 형식 및 데이터 형식 속성을 설정할 수 있지만 열 값에 대한 사용자 지정 변환을 지정할 수는 없습니다. 결과적으로, 원본-대상 간의 기본 제공 데이터 형식 매핑이 중요합니다.  
   
 ##  <a name="wizardMapping"></a> 마법사가 원본과 대상 간에 데이터 형식을 매핑하는 방법
 마법사에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 설치한 매핑 파일을 사용하여 데이터베이스 시스템 또는 버전 간에 데이터 형식을 매핑합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Oracle 데이터 형식으로 매핑할 수 있습니다. 기본적으로 XML 형식의 매핑 파일은 다음 폴더에 설치됩니다.
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\**(64비트)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\**(32비트).  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\**(64비트)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\**(32비트).  
   
  기존 매핑 파일을 편집하거나 새 매핑 파일을 폴더에 추가할 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫았다가 다시 열어야 새 파일 또는 변경된 파일이 인식됩니다.  
  

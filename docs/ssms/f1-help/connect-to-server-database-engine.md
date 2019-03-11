@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202812"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828133"
 ---
 # <a name="connect-to-server-database-engine"></a>서버에 연결(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53202812"
   
 > [!NOTE]  
 > [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)]의 활성 사용자 인스턴스에 연결하려면 `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`와 같이 파이프 이름을 지정하는 명명된 파이프 프로토콜을 사용하여 연결합니다. 자세한 내용은 [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] 설명서를 참조하세요.  
-  
+> [!NOTE]  
+> 일반적으로 연결은 "MRU(가장 최근에 사용됨)" 기록에서 보관됩니다. MRU에서 항목을 제거하려면 **서버 이름** 콤보 상자를 클릭하고, 제거할 서버 이름을 선택한 다음, **DEL** 키를 누르면 됩니다.  
+   
 **인증**  
 SSMS의 현재 버전은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]의 인스턴스에 연결할 때 다섯 가지 인증 모드를 제공합니다. 인증 대화 상자가 다음 목록과 일치하지 않으면 [SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)에서 최신 버전의 SSMS를 다운로드합니다.  
 

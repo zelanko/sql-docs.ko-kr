@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991876"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590488"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991876"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>변경 데이터 캡처 및 캡처 인스턴스 이해  
  데이터베이스 내에 있는 개별 테이블에 대한 변경 내용을 추적하려면 먼저 해당 데이터베이스에 변경 데이터 캡처를 사용하도록 명시적으로 설정해야 합니다. 이 작업은 저장 프로시저 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)를 사용하여 수행합니다. 데이터베이스에 변경 데이터 캡처를 사용하도록 설정하면 저장 프로시저 [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)을 사용하여 원본 테이블을 추적된 테이블로 식별할 수 있습니다. 테이블에 변경 데이터 캡처를 사용하도록 설정하면 관련 캡처 인스턴스가 만들어져 원본 테이블에서의 변경 데이터 배포가 지원됩니다. 캡처 인스턴스는 변경 테이블과 최대 두 개의 쿼리 함수로 구성됩니다. 캡처 인스턴스의 구성 세부 정보를 설명하는 메타데이터는 변경 데이터 캡처 메타데이터 테이블인 **cdc.change_tables**, **cdc.index_columns**및 **cdc.captured_columns**에 보존됩니다. 이 정보는 저장 프로시저 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)를 사용하여 검색할 수 있습니다.  
   
- 캡처 인스턴스와 관련된 모든 개체는 변경 데이터 캡처를 사용하도록 설정된 데이터베이스의 변경 데이터 캡처 스키마에 만들어집니다. 캡처 인스턴스 이름은 올바른 개체 이름이어야 하며 데이터베이스 캡처 인스턴스 전체에서 고유해야 합니다. 기본적으로 이름은 원본 테이블의 \<*스키마 이름*_*테이블 이름*>입니다. 관련 변경 테이블의 이름은 캡처 인스턴스 이름에 **_CT** 를 추가하여 지정됩니다. 모든 변경 내용을 쿼리하는 데 사용되는 함수의 이름은 캡처 인스턴스 이름 앞에 **fn_cdc_get_all_changes_** 를 추가하여 지정됩니다. 캡처 인스턴스가 **순 변경**을 지원하도록 구성된 경우 **net_changes** 쿼리 함수도 만들어지며 해당 이름은 캡처 인스턴스 이름 앞에 **fn_cdc_get_net_changes\_** 를 추가하여 지정됩니다.  
+ 캡처 인스턴스와 관련된 모든 개체는 변경 데이터 캡처를 사용하도록 설정된 데이터베이스의 변경 데이터 캡처 스키마에 만들어집니다. 캡처 인스턴스 이름은 올바른 개체 이름이어야 하며 데이터베이스 캡처 인스턴스 전체에서 고유해야 합니다. 기본적으로 이름은 원본 테이블의 \<*schema name*\_*table name*>입니다. 관련 변경 테이블의 이름은 캡처 인스턴스 이름에 **_CT** 를 추가하여 지정됩니다. 모든 변경 내용을 쿼리하는 데 사용되는 함수의 이름은 캡처 인스턴스 이름 앞에 **fn_cdc_get_all_changes_** 를 추가하여 지정됩니다. 캡처 인스턴스가 **순 변경**을 지원하도록 구성된 경우 **net_changes** 쿼리 함수도 만들어지며 해당 이름은 캡처 인스턴스 이름 앞에 **fn_cdc_get_net_changes\_** 를 추가하여 지정됩니다.  
   
 ## <a name="change-table"></a>변경 테이블  
  변경 데이터 캡처 변경 테이블의 처음 5개 열은 메타데이터 열입니다. 이러한 열은 기록된 변경 내용과 관련된 추가 정보를 제공합니다. 나머지 열은 원본 테이블에서 이름 및 유형(일반적으로 사용됨)으로 식별된 캡처된 열을 반영합니다. 이러한 열은 원본 테이블에서 수집된 캡처된 열을 보유합니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "53991876"
  
 ## <a name="working-with-database-and-table-collation-differences"></a>데이터베이스 및 테이블 데이터 정렬 차이 처리
 
-데이터베이스와, 변경 데이터 캡처에 대해 구성된 테이블 열 간의 데이터 정렬이 다른 상황을 인지하는 것이 중요합니다. CDC에서는 중간 저장소를 사용하여 측면 테이블을 채웁니다. 테이블에 데이터베이스 데이터 정렬과는 다른 데이터 정렬이 있는 CHAR 또는 VARCHAR가 있고 이러한 열이 비 ASCII 문자(예: 더블바이트 DBCS 문자)를 저장할 경우, CDC는 변경된 데이터를 기본 테이블의 데이터에 일관되게 유지하지 못할 수 있습니다. 이것은 중간 저장소 변수가 연결된 데이터 정렬을 가질 수 없기 때문에 발생합니다.
+데이터베이스와, 변경 데이터 캡처에 대해 구성된 테이블 열 간의 데이터 정렬이 다른 상황을 인지하는 것이 중요합니다. CDC에서는 중간 스토리지를 사용하여 측면 테이블을 채웁니다. 테이블에 데이터베이스 데이터 정렬과는 다른 데이터 정렬이 있는 CHAR 또는 VARCHAR가 있고 이러한 열이 비 ASCII 문자(예: 더블바이트 DBCS 문자)를 저장할 경우, CDC는 변경된 데이터를 기본 테이블의 데이터에 일관되게 유지하지 못할 수 있습니다. 이것은 중간 스토리지 변수가 연결된 데이터 정렬을 가질 수 없기 때문에 발생합니다.
 
 기본 테이블과 변경 캡처 데이터 간의 일관성을 유지하기 위해 다음 방법 중 하나를 고려합니다.
 

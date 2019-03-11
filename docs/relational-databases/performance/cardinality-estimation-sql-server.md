@@ -1,7 +1,7 @@
 ---
 title: 카디널리티 추정(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328856"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828023"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL 시스템에 대한 최상의 CE(카디널리티 추정) 구성을 평가 및 선택하는 방법을 보여 줍니다. 대부분의 시스템에서는 가장 정확한 최신 CE를 활용합니다. CE는 쿼리에서 반환될 행 수를 예측합니다. 카디널리티 예측은 쿼리 최적화 프로그램에서 최적의 쿼리 계획을 생성하는 데 사용됩니다. 보다 정확한 추정을 통해 쿼리 최적화 프로그램은 일반적으로 최적의 쿼리 계획을 생성하는 작업을 더 잘 수행할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 쿼리 최적화 프로그램입니다. 즉, 가장 낮은 예상 처리 비용으로 실행할 수 있는 쿼리 계획을 선택합니다. 쿼리 최적화 프로그램에서는 다음 두 가지 주요 요소를 기반으로 쿼리 계획 실행 비용을 결정합니다.
+
+- 쿼리 계획의 각 수준에서 처리되는 총 행 수(계획의 카디널리티라고 함)
+- 쿼리에 사용된 연산자가 지정하는 알고리즘의 비용 모델
+
+첫 번째 요소인 카디널리티는 두 번째 요소인 비용 모델의 입력 매개 변수로 사용됩니다. 따라서 카디널리티를 향상시키면 예상 비용이 줄어들어 실행 계획이 빨라집니다.
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CE(카디널리티 추정)는 수동 또는 자동으로 인덱스나 통계를 만들 때 생성되는 히스토그램에서 주로 파생됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 제약 조건 정보와 논리적 쿼리 다시 작성을 통해 카디널리티를 결정하는 경우도 있습니다.
+
+다음 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 카디널리티를 정확하게 계산할 수 없습니다. 따라서 비용 계산이 부정확하여 최적이 아닌 쿼리 계획이 생성될 수 있습니다. 쿼리에서 이러한 구조를 피하면 쿼리 성능이 향상될 수 있습니다. 대체 쿼리 구문이나 기타 방법을 사용할 수도 있으며 이 문서의 아래 부분에 관련 내용이 나와 있습니다.
+
+- 같은 테이블의 여러 열 간에 비교 연산자를 사용하는 조건자가 있는 쿼리
+- 연산자를 사용하는 조건자가 있고 다음 중 하나에 해당되는 쿼리
+  - 연산자 어느 쪽에도 관련 열에 대한 통계가 없습니다.
+  - 통계의 값 분포가 균일하지 않지만 쿼리가 매우 선택적인 값 집합을 찾습니다. 연산자가 등호(=)가 아닐 때 특히 이 경우에 해당할 수 있습니다.
+  - 조건자가 같지 않음(!=) 비교 연산자나 `NOT` 논리 연산자를 사용합니다.
+- SQL Server 기본 제공 함수 또는 인수가 상수 값이 아닌 사용자 정의 스칼라 반환 함수를 사용하는 쿼리
+- 산술 또는 문자열 연결 연산자를 통해 열을 조인하는 쿼리
+- 쿼리가 컴파일되고 최적화될 때 알 수 없는 값을 가진 변수를 비교하는 쿼리
+
+이 문서에서는 시스템에 대한 최상의 CE 구성을 평가 및 선택하는 방법을 보여 줍니다. 대부분의 시스템에서는 가장 정확한 최신 CE를 활용합니다. CE는 쿼리에서 반환될 행 수를 예측합니다. 카디널리티 예측은 쿼리 최적화 프로그램에서 최적의 쿼리 계획을 생성하는 데 사용됩니다. 보다 정확한 추정을 통해 쿼리 최적화 프로그램은 일반적으로 최적의 쿼리 계획을 생성하는 작업을 더 잘 수행할 수 있습니다.  
   
 애플리케이션 시스템에서 새 CE로 인해 중요 쿼리의 계획이 더 느린 계획으로 변경될 수 있습니다. 이러한 쿼리는 다음 중 하나일 수 있습니다.  
   

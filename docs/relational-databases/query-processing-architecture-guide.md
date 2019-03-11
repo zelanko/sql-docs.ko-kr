@@ -1,7 +1,7 @@
 ---
 title: 쿼리 처리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,17 +16,17 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591887"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802409"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 저장소 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 스토리지 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
 ## <a name="execution-modes"></a>실행 모드
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 두 가지 고유한 처리 모드를 사용하여 SQL 문을 처리할 수 있습니다.
@@ -42,7 +42,7 @@ ms.locfileid: "53591887"
 ### <a name="batch-mode-execution"></a>일괄 처리 모드 실행  
 *일괄 처리 모드 실행*은 여러 행을 함께 처리하는 쿼리 처리 방법입니다(따라서 용어 일괄처리). 일괄 처리 내에서 각 열은 메모리의 별도 영역에 벡터로 저장되므로 일괄 처리 모드는 벡터 기반 처리입니다. 또한 일괄 처리 모드 처리는 다중 코어 CPU에 최적화된 알고리즘 및 최신 하드웨어에 있는 증가된 메모리 처리량을 사용합니다.      
 
-배치 모드 실행은 columnstore 저장소 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 실행에서 사용하는 [교환 연산자](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)를 제거합니다. 그 결과로 병렬 처리가 더 나아졌고 성능이 더 빨라졌습니다.    
+배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 실행에서 사용하는 [교환 연산자](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)를 제거합니다. 그 결과로 병렬 처리가 더 나아졌고 성능이 더 빨라졌습니다.    
 
 쿼리가 일괄 처리 모드에서 실행되고 columnstore 인덱스의 데이터에 액세스할 경우 실행 트리 연산자 및 자식 연산자는 열 세그먼트에서 함께 여러 행을 읽습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 SELECT 문, 조인 조건자 또는 필터 조건자에 의해 참조된 것처럼 결과에 필요한 열만 읽습니다.    
 columnstore 인덱스에 대한 자세한 내용은 [Columnstore 인덱스 아키텍처](../relational-databases/sql-server-index-design-guide.md#columnstore_index)를 참조하세요.  
@@ -54,7 +54,6 @@ columnstore 인덱스에 대한 자세한 내용은 [Columnstore 인덱스 아�
 단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
 
 ### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
-
 문에 논리 연산자가 두 개 이상 사용되면 `NOT`이 가장 먼저 평가되고 다음으로 `AND`, `OR`의 순서로 평가됩니다. 산술 및 비트 연산자는 논리 연산자보다 먼저 처리됩니다. 자세한 내용은 [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)를 참조하세요.
 
 다음 예제에서 `AND`가 `OR`보다 우선하므로 제품 모델 21에는 색상 조건이 적용되지만 제품 모델 20에는 적용되지 않습니다.
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>SELECT 문 최적화
-
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
 다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다.
@@ -126,27 +124,105 @@ GO
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 프로그래머나 데이터베이스 관리자의 입력을 요청하지 않고 데이터베이스 서버가 데이터베이스의 조건 변화에 맞춰 동적으로 조정될 수 있게 하므로 중요합니다. 이를 통해 프로그래머는 쿼리의 최종 결과를 설명하는 데 주안점을 둘 수 있습니다. 프로그래머는 문이 실행될 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 데이터베이스의 상태에 맞게 효율적인 실행 계획을 세운다는 것을 신뢰할 수 있습니다.
 
 ### <a name="processing-a-select-statement"></a>SELECT 문 처리
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 단일 SELECT 문을 처리하는 데 사용하는 기본 단계는 다음과 같습니다. 
 
 1. 파서는 `SELECT` 문을 검색하고 그 결과를 키워드, 식, 연산자 및 식별자와 같은 논리 단위로 분류합니다.
 2. 시퀀스 트리라고도 하는 쿼리 트리가 작성되어 결과 집합에서 필요로 하는 서식으로 원본 데이터를 변환하는 데 필요한 논리 단계를 정의합니다.
 3. 쿼리 최적화 프로그램은 원본 테이블에 액세스할 수 있는 여러 다른 방법을 분석합니다. 그런 후 리소스 사용을 줄이는 동시에 결과를 가장 빨리 반환하는 일련의 단계를 선택합니다. 쿼리 트리는 이러한 일련의 단계가 기록되도록 업데이트됩니다. 최적화된 최종 쿼리 트리 버전은 실행 계획이라고 합니다.
-4. 관계형 엔진이 실행 계획을 실행하기 시작합니다. 기본 테이블의 데이터를 필요로 하는 단계가 처리될 때 관계형 엔진은 저장소 엔진이 관계형 엔진에서 요청된 행 집합의 데이터를 무시하도록 요청합니다.
-5. 관계형 엔진은 저장소 엔진에서 반환된 데이터를 결과 집합에 대해 정의된 서식으로 처리하고 클라이언트에 결과 집합을 반환합니다.
+4. 관계형 엔진이 실행 계획을 실행하기 시작합니다. 기본 테이블의 데이터를 필요로 하는 단계가 처리될 때 관계형 엔진은 스토리지 엔진이 관계형 엔진에서 요청된 행 집합의 데이터를 무시하도록 요청합니다.
+5. 관계형 엔진은 스토리지 엔진에서 반환된 데이터를 결과 집합에 대해 정의된 서식으로 처리하고 클라이언트에 결과 집합을 반환합니다.
+
+### <a name="ConstantFolding"></a> 상수 폴딩 및 식 평가 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 일부 상수 식을 초기에 평가하여 쿼리 성능을 향상시킵니다. 이를 상수 폴딩이라고 합니다. 상수는 [!INCLUDE[tsql](../includes/tsql-md.md)] 리터럴(예: 3, 'ABC', '2005-12-31', 1.0e3 또는 0x12345678)입니다.
+
+#### <a name="foldable-expressions"></a>폴딩 가능 식
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 다음 유형의 식에 상수 폴딩을 사용합니다.
+- 상수만 포함된 산술 식(예: 1+1, 5/3*2)
+- 상수만 포함된 논리 식(1=1 and 1>2 AND 3>4)
+- `CAST` 및 `CONVERT`를 비롯하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 폴딩 가능한 것으로 간주하는 기본 제공 함수. 일반적으로 입력으로만 사용되고, SET 옵션, 언어 설정, 데이터베이스 옵션 및 암호화 키와 같은 다른 컨텍스트 정보를 제공하지 않는 내장 함수가 폴딩 가능한 함수입니다. 비결정적 함수는 폴딩 가능하지 않습니다. 몇 가지 예외를 제외하고 결정적 기본 제공 함수는 폴딩 가능 함수입니다.
+
+> [!NOTE] 
+> 큰 개체 유형의 경우에는 예외입니다. 폴딩 프로세스의 출력 유형이 큰 개체 유형(text, image, nvarchar(max), varchar(max) 또는 varbinary(max))이면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 식을 폴딩하지 않습니다.
+
+#### <a name="nonfoldable-expressions"></a>폴딩 가능하지 않은 식
+다른 모든 식 유형은 폴딩할 수 없습니다. 특히 다음 식 유형은 폴딩할 수 없습니다.
+- 비상수 식(예: 열 값에 따라 결과가 달라지는 식)
+- 지역 변수 또는 매개 변수에 따라 결과가 달라지는 식(예: @x)
+- 비결정적 함수
+- 사용자 정의 함수([!INCLUDE[tsql](../includes/tsql-md.md)] 및 CLR)
+- 언어 설정에 따라 결과가 달라지는 식
+- SET 옵션에 따라 결과가 달라지는 식
+- 서버 구성 옵션에 따라 결과가 달라지는 식
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>폴딩 가능 식 및 폴딩 가능하지 않은 식의 예
+다음 쿼리를 살펴보십시오.
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+이 쿼리에 대해 `PARAMETERIZATION` 데이터베이스 옵션이 `FORCED`로 설정되어 있지 않으면 `117.00 + 1000.00` 식이 평가된 다음, 쿼리를 컴파일하기 전에 평가 결과인 `1117.00`으로 바뀝니다. 이러한 상수 폴딩의 이점은 다음과 같습니다.
+- 런타임에 식을 반복해서 평가할 필요가 없습니다.
+- 식 평가 후 쿼리 최적화 프로그램에서 식 값을 사용하여 쿼리의 `TotalDue > 117.00 + 1000.00` 부분에 대한 결과 집합의 크기를 추정합니다.
+
+반면 `dbo.f`가 스칼라 사용자 정의 함수인 경우에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용자 정의 함수가 포함된 식을 계산하지 않으므로 `dbo.f(100)` 식이 폴딩되지 않습니다. 사용자 정의 함수가 결정적 함수인 경우에도 마찬가지입니다. 매개 변수화에 대한 자세한 내용은 이 문서의 뒷부분에서 [강제 매개 변수화](#ForcedParam)를 참조하세요.
+
+#### <a name="ExpressionEval"></a>식 평가 
+뿐만 아니라 상수 폴딩 가능 식이 아니지만 해당 인수를 컴파일 시간에 알 수 없는 일부 식은 최적화 중 최적화 프로그램의 구성 요소인 결과 집합 크기(카디널리티) 평가자에 의해 평가됩니다. 이때 인수가 매개 변수인지 또는 상수인지 여부는 고려하지 않습니다.
+
+특히 기본 제공 함수 `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` 및 `CONVERT`와 특수 연산자는 해당 입력을 모두 알 수 있는 경우 컴파일 시간에 평가됩니다. 다음 연산자도 해당 입력을 모두 알 수 있는 경우 컴파일 시간에 평가됩니다.
+- 산술 연산자: +, -, \*, /, 단항 -
+- 논리 연산자: `AND`, `OR`, `NOT`
+- 비교 연산자: <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
+
+이외에 다른 함수나 연산자는 카디널리티 예측 중에 쿼리 최적화 프로그램에서 평가되지 않습니다.
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>컴파일 시간 식 평가의 예
+다음과 같은 저장 프로시저를 고려할 수 있습니다.
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+프로시저의 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램은 `OrderDate > @d+1` 조건에 대한 결과 집합의 예상 카디널리티를 평가하려고 합니다. `@d+1`가 매개 변수이므로 `@d` 식은 상수 폴딩 가능 식이 아닙니다. 그러나 최적화할 때 매개 변수 값이 알려집니다. 따라서 쿼리 최적화 프로그램은 결과 집합의 크기를 정확하게 예측하여 적절한 쿼리 계획을 선택할 수 있습니다.
+
+이제 앞의 예와 유사한 다음 예를 살펴보십시오. 지역 변수로 `@d2` 대신 `@d+1`가 사용되고, 식이 쿼리 내에서가 아니라 SET 문에서 실행된다는 점만 다릅니다.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 *MyProc2*의 `SELECT` 문을 최적화할 때 `@d2` 값이 알려지지 않습니다. 따라서 쿼리 최적화 프로그램에서는 `OrderDate > @d2`의 선택도에 대해 기본 추정값(이 예의 경우 30%)을 사용합니다.
 
 ### <a name="processing-other-statements"></a>다른 문 처리
-
-`SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 SELECT 문을 포함할 수 있습니다.
+`SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 `SELECT` 문을 포함할 수 있습니다.
 
 `CREATE PROCEDURE` 또는 `ALTER TABLE`과 같은 DDL(데이터 정의 언어) 문조차 결과적으로 시스템 카탈로그 테이블에서, 때로는(예: `ALTER TABLE ADD COLUMN`) 데이터 테이블에 대해 일련의 관계형 연산으로 해석됩니다.
 
 ### <a name="worktables"></a>작업 테이블
-
 관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 tempdb에 작성되며, 더 이상 필요하지 않으면 자동으로 삭제됩니다.
 
 ### <a name="view-resolution"></a>뷰 확인
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서에서는 인덱싱된 뷰와 인덱싱되지 않은 뷰가 다르게 처리됩니다. 
 
 * 인덱싱된 뷰의 행은 테이블과 동일한 형식으로 데이터베이스에 저장됩니다. 쿼리 프로세서에서 쿼리 계획에 인덱싱된 뷰를 사용하기로 결정하면 인덱싱된 뷰는 기본 테이블과 동일한 방법으로 처리됩니다.
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 실행 계획 기능을 통해 관계형 엔진이 두 `SELECT` 문에 대해 동일한 실행 계획을 세우는 것을 알 수 있습니다.
 
 ### <a name="using-hints-with-views"></a>뷰에 힌트 사용
-
 쿼리의 뷰에 힌트를 넣으면 뷰가 확장되어 기본 테이블에 액세스할 때 발견되는 다른 힌트와 서로 충돌할 수 있습니다. 이러한 경우 쿼리에서 오류를 반환합니다. 예를 들어 다음과 같이 뷰 정의에 테이블 힌트가 포함되어 있습니다.
 
 ```sql
@@ -455,7 +530,7 @@ WHERE ProductSubcategoryID = 4;
 
 매개 변수를 사용하여 SQL 문에서 상수를 분리하면 관계형 엔진이 중복된 계획을 인식하는 데 도움이 됩니다. 다음 방법으로 매개 변수를 사용할 수 있습니다. 
 
-* Transact-SQL에서는 `sp_executesql`을 사용합니다. 
+* [!INCLUDE[tsql](../includes/tsql-md.md)]에서 `sp_executesql`을 사용합니다. 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ WHERE ProductSubcategoryID = 4;
      @MyIntParm
    ```
 
-   SQL 문을 동적으로 생성하는 Transact-SQL 스크립트, 저장 프로시저 또는 트리거에 대해서는 이 방법을 사용하는 것이 좋습니다. 
+   SQL 문을 동적으로 생성하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트, 저장 프로시저 또는 트리거에 대해서는 이 메서드를 사용하는 것이 좋습니다. 
 
 * ADO, OLE DB 및 ODBC는 매개 변수 표식을 사용합니다. 매개 변수 표식은 SQL 문의 상수를 대신하는 물음표(?)로 프로그램 변수에 바인딩됩니다. 예를 들어 ODBC 애플리케이션에서는 다음을 수행합니다. 
 
@@ -855,7 +930,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 저장소 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 스토리지 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 스토리지 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 관계형 엔진은 OLE DB API(애플리케이션 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 

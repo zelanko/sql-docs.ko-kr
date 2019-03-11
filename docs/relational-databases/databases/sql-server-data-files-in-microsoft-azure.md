@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 87bc14e323d14ddbf64daae6fb441e2977a3af14
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675702"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744493"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "51675702"
   
  이 항목에서는 SQL Server 데이터 파일을 Microsoft Azure 스토리지 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
   
- 이 새 기능을 사용하는 방법을 실제로 실습하려면 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
+ 이 새 기능 사용 방법에 대한 실제 실습은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure에서 SQL Server 데이터 파일을 사용하는 이유는 무엇인가요? 
   
--   **쉽고 빠른 마이그레이션 이점:** 이 기능은 응용 프로그램 변경 없이 온-프레미스 내 컴퓨터 간에 또는 온-프레미스와 클라우드 환경 간에 데이터베이스를 한 번에 하나씩 이동하여 마이그레이션 프로세스를 간소화합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 저장소에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 데이터를 다른 위치로 이동하는 대신 이 새로운 향상된 기능을 사용하여 많은 데이터베이스를 Microsoft Azure BLOB으로 저장한 다음 Transact-SQL 스크립트를 실행하여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
+-   **쉽고 빠른 마이그레이션 이점:** 이 기능은 응용 프로그램 변경 없이 온-프레미스 내 컴퓨터 간에 또는 온-프레미스와 클라우드 환경 간에 데이터베이스를 한 번에 하나씩 이동하여 마이그레이션 프로세스를 간소화합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 스토리지에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 데이터를 다른 위치로 이동하는 대신 이 새로운 향상된 기능을 사용하여 많은 데이터베이스를 Microsoft Azure BLOB으로 저장한 다음 Transact-SQL 스크립트를 실행하여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
   
--   **비용 및 무제한 저장소 이점:** 이 기능을 사용하면 온-프레미스 컴퓨터 리소스를 활용하면서 Microsoft Azure에서 무제한 오프사이트 저장소를 사용할 수 있습니다. Microsoft Azure를 저장소 위치로 사용하면 하드웨어 관리 오버헤드 없이 애플리케이션 논리에만 쉽게 집중할 수 있습니다. 온-프레미스에서 계산 노드가 손실되더라도 데이터를 이동하지 않고 새 계산 노드를 설정할 수 있습니다.  
+-   **비용 및 무제한 스토리지 이점:** 이 기능을 사용하면 온-프레미스 컴퓨팅 리소스를 활용하는 동시에 Microsoft Azure에서 무제한 오프사이트 스토리지를 사용할 수 있습니다. Microsoft Azure를 스토리지 위치로 사용하면 하드웨어 관리 오버헤드 없이 애플리케이션 논리에만 쉽게 집중할 수 있습니다. 온-프레미스에서 계산 노드가 손실되더라도 데이터를 이동하지 않고 새 계산 노드를 설정할 수 있습니다.  
   
 -   **고가용성 및 재해 복구 이점:** Microsoft Azure의 SQL Server 데이터 파일 기능을 사용하면 고가용성 및 재해 복구 솔루션을 간소화할 수 있습니다. 예를 들어 Microsoft Azure의 가상 머신 또는 SQL Server 인스턴스가 충돌할 경우 Microsoft Azure BLOB에 대한 링크를 다시 설정하여 새 SQL Server 인스턴스에 데이터베이스를 다시 만들 수 있습니다.  
   
 -   **보안 이점:** 이 새로운 향상된 기능을 사용하여 계산 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 계산 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure 스토리지에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
--   **스냅숏 백업:**  이 기능은 Azure 스냅숏을 사용하여 Azure Blob 저장소 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+-   **스냅숏 백업:**  이 기능은 Azure 스냅숏을 사용하여 Azure Blob Storage 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ## <a name="concepts-and-requirements"></a>개념 및 요구 사항  
   
@@ -93,14 +93,14 @@ ON
 ### <a name="installation-prerequisites"></a>설치 필수 구성 요소  
  Azure에 SQL Server 데이터 파일을 저장할 경우 설치를 위한 필수 조건은 다음과 같습니다.  
   
--   **SQL Server 온-프레미스:** SQL Server 2016 이후에는 이 기능이 포함됩니다. SQL Server의 최신 버전을 다운로드하는 방법을 알아보려면 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.  
+-   **SQL Server 온-프레미스:** SQL Server 2016 이상에는 이 기능이 포함됩니다. SQL Server의 최신 버전을 다운로드하는 방법을 알아보려면 [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)를 참조하세요.  
   
--   Azure 가상 머신에서 실행 중인 SQL Server: [Azure 가상 머신에 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)를 설치하는 경우 SQL Server 2016을 설치하거나 기존 인스턴스를 업데이트하세요. 이와 마찬가지로 SQL Server 2016 플랫폼 이미지를 사용하여 Azure에서 새 가상 머신을 만들 수도 있습니다.
+-   Azure 가상 머신에서 실행 중인 SQL Server: [Azure Virtual Machine에 SQL Server](https://azuremarketplace.microsoft.com/marketplace/apps?search=sql%20server&page=1)를 설치하는 경우 SQL Server 2016을 설치하거나 기존 인스턴스를 업데이트합니다. 이와 마찬가지로 SQL Server 2016 플랫폼 이미지를 사용하여 Azure에서 새 가상 머신을 만들 수도 있습니다.
 
   
 ###  <a name="bkmk_Limitations"></a> 제한 사항  
   
--   이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없습니다. Azure Storage 통합 로컬 데이터베이스에 **Filestream** 데이터를 저장할 수 있지만 Azure Storage를 사용하여 컴퓨터 간에 Filestream 데이터를 이동할 수는 없습니다. **FileStream** 데이터의 경우 컴퓨터 간에 Filestream과 연관된 파일(.mdf, .ldf)을 이동하는 데 기존 기술을 계속 사용하는 것이 좋습니다.  
+-   이 기능의 현재 릴리스에서는 Azure Storage에 **FileStream** 데이터를 저장할 수 없습니다. Azure Storage에 저장된 데이터 파일도 포함하는 데이터베이스에 **FileStream**을 저장할 수 있지만, 모든 FileStream 데이터 파일은 로컬 스토리지에 저장해야 합니다.  FileStream 데이터는 로컬 스토리지에 있어야 하므로 Azure Storage를 통해 머신 간에 이동할 없습니다. 따라서 여러 머신 간에 FileStream와 연결된 데이터를 이동하는 데는 [기존 기술](../../relational-databases/blob/move-a-filestream-enabled-database.md)을 사용하는 것이 좋습니다.  
   
 -   현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 오류 **코드 5120 물리적 파일 "%.\*ls"를 열 수 없습니다. 운영 체제 오류 %d: "%ls"**.  
   
@@ -128,9 +128,9 @@ ON
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md)라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
- SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 저장소 컨테이너의 URL 경로를 입력합니다(예: > https://teststorageaccnt.blob.core.windows.net/testcontainer/).
+ SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 스토리지 컨테이너의 URL 경로를 입력합니다(예: &gt; https://teststorageaccnt.blob.core.windows.net/testcontainer/).
  
- 여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
+ 여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   
 ### <a name="sql-server-management-objects-smo-support"></a>SMO(SQL Server 관리 개체) 지원  
  Azure의 SQL Server 데이터 파일 기능을 사용할 경우 모든 SMO(SQL Server 관리 개체)가 지원됩니다. SMO 개체에 파일 경로가 필요한 경우 로컬 파일 경로 대신 BLOB URL 형식을 사용합니다(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`). SMO(SQL Server 관리 개체)에 대한 자세한 내용은 SQL Server 온라인 설명서의 [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조하세요.  
@@ -151,10 +151,10 @@ ON
     해결 방법: Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 -   *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않습니다.*   
-     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)에서 2단원에 제공된 지침을 검토하세요.  
+     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)의 2단원에 나오는 지침을 검토하세요.  
   
 -   *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*   
-    해결 방법: **Identity** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-3-database-backup-to-url.md)에서 3단원에 제공된 지침을 검토하세요.  
+    해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-3-database-backup-to-url.md)에서 참조하세요.  
   
  **임대 BLOB 오류:**  
   
@@ -163,10 +163,10 @@ ON
  **데이터베이스 오류**  
   
 1.  *데이터베이스를 만들 때 발생하는 오류*   
-    해결 방법: [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-4-restore-database-to-virtual-machine-from-url.md)에서 4단원에 제공된 지침을 검토하세요.  
+    해결 방법: 4단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-4-restore-database-to-virtual-machine-from-url.md)에서 참조하세요.  
   
 2.  *Alter 문을 실행할 때 발생하는 오류*   
-    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 7단원에 제공된 지침을 검토하세요.  
+    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. 7단원에 나오는 지침인 [: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   
 3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*   
     해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 오류 *코드 5120 물리적 파일 "%.\*ls"를 열 수 없습니다. 운영 체제 오류 %d: "%ls"*.  

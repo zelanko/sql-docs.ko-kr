@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b4a2ef2ec0367bdae858578f07cc062fd5cf50d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799411"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801457"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  성공적인 암시적 트랜잭션이나 명시적 트랜잭션의 끝을 표시합니다. @@TRANCOUNT가 1이면 COMMIT TRANSACTION은 트랜잭션 시작 이후에 수행된 모든 데이터 수정 내용을 영구적인 데이터베이스 부분으로 만들고, 트랜잭션에서 보유한 리소스를 해제하고, @@TRANCOUNT를 0으로 감소시킵니다. @@TRANCOUNT가 1보다 크면 COMMIT TRANSACTION은 @@TRANCOUNT를 1씩 감소시키고 트랜잭션은 활성 상태로 유지됩니다.  
+  성공적인 암시적 트랜잭션이나 명시적 트랜잭션의 끝을 표시합니다. @@TRANCOUNT가 1이면 COMMIT TRANSACTION은 트랜잭션 시작 이후에 모든 데이터 수정 내용을 영구적인 데이터베이스 부분으로 만들고, 트랜잭션의 리소스를 해제하고, @@TRANCOUNT를 0으로 감소시킵니다. @@TRANCOUNT가 1보다 크면 COMMIT TRANSACTION은 @@TRANCOUNT를 1씩 감소시키고 트랜잭션은 활성 상태로 유지됩니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -65,7 +65,7 @@ COMMIT [ TRAN | TRANSACTION ]
  *transaction_name*  
  **적용 대상:** SQL Server 및 Azure SQL Database
  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 무시됩니다. *transaction_name*은 이전의 BEGIN TRANSACTION에서 할당된 트랜잭션 이름을 지정합니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자를 초과할 수 없습니다. *transaction_name*은 프로그래머에게 COMMIT TRANSACTION과 연결되어 있는 중첩된 BEGIN TRANSACTION을 표시하여 가독성을 높일 수 있습니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 무시됩니다. *transaction_name*은 이전의 BEGIN TRANSACTION에서 할당된 트랜잭션 이름을 지정합니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자를 초과할 수 없습니다. *transaction_name*은 프로그래머에게 COMMIT TRANSACTION과 연결되어 있는 중첩된 BEGIN TRANSACTION을 표시합니다.  
   
  *@tran_name_variable*  
  **적용 대상:** SQL Server 및 Azure SQL Database  
@@ -75,7 +75,7 @@ COMMIT [ TRAN | TRANSACTION ]
  DELAYED_DURABILITY  
  **적용 대상:** SQL Server 및 Azure SQL Database   
 
- 이 트랜잭션이 지연된 영속성으로 커밋되도록 요청하는 옵션입니다. 데이터베이스가 `DELAYED_DURABILITY = DISABLED` 또는 `DELAYED_DURABILITY = FORCED`를 사용하여 변경된 경우 요청이 무시됩니다. 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md) 항목을 참조하세요.  
+ 이 트랜잭션이 지연된 영속성으로 커밋되도록 요청하는 옵션입니다. 데이터베이스가 `DELAYED_DURABILITY = DISABLED` 또는 `DELAYED_DURABILITY = FORCED`를 사용하여 변경된 경우 요청이 무시됩니다. 자세한 내용은 [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래머는 트랜잭션에서 참조되는 모든 데이터가 논리적으로 정확할 때만 COMMIT TRANSACTION을 실행해야 합니다.  
@@ -110,7 +110,7 @@ COMMIT TRANSACTION;
 ### <a name="b-committing-a-nested-transaction"></a>2. 중첩된 트랜잭션 커밋  
 **적용 대상:** SQL Server 및 Azure SQL Database    
 
-다음 예에서는 테이블을 만들고 3단계로 중첩된 트랜잭션을 생성한 다음 중첩된 트랜잭션을 커밋합니다. 각 `COMMIT TRANSACTION` 문에는 *transaction_name* 매개 변수가 있지만, `COMMIT TRANSACTION` 및 `BEGIN TRANSACTION` 문 사이에는 아무 관계가 없습니다. *transaction_name* 매개 변수는 프로그래머가 적절한 수의 커밋이 `@@TRANCOUNT`에서 0까지 감소하여 외부 트랜잭션을 커밋하도록 코딩되었는지 확인하는 데 도움이 되는 간단한 가독성 보조 기능입니다. 
+다음 예에서는 테이블을 만들고 3단계로 중첩된 트랜잭션을 생성한 다음 중첩된 트랜잭션을 커밋합니다. 각 `COMMIT TRANSACTION` 문에는 *transaction_name* 매개 변수가 있지만, `COMMIT TRANSACTION` 및 `BEGIN TRANSACTION` 문 사이에는 아무 관계가 없습니다. *transaction_name* 매개 변수는 프로그래머가 올바른 수의 커밋이 `@@TRANCOUNT`에서 0까지 감소하여 외부 트랜잭션을 커밋하도록 코딩되었는지 확인하는 데 도움이 됩니다. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  
@@ -172,5 +172,4 @@ PRINT N'Transaction count after COMMIT OuterTran = '
  [ROLLBACK WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-work-transact-sql.md)   
  [SAVE TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/save-transaction-transact-sql.md)   
  [@@TRANCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

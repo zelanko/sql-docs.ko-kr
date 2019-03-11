@@ -14,19 +14,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e95c6459b5ad7c495307b0facbfa965aa44531d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660461"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801047"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  다음 위치에서 PolyBase 외부 테이블을 제거합니다. 이때 외부 데이터는 삭제되지 않습니다.  
+  데이터베이스에서 PolyBase 외부 테이블을 제거하지만, 외부 데이터는 삭제하지 않습니다.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![문서 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "문서 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,7 +45,7 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
 -   테이블이 속한 스키마에 대한 **ALTER** 권한이 필요합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 외부 테이블을 삭제하면 모든 테이블 관련 메타데이터가 제거됩니다. 이때 외부 데이터는 삭제되지 않습니다.  
+ 외부 테이블을 삭제하면 모든 테이블 관련 메타데이터가 제거됩니다. 외부 데이터는 삭제되지 않습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -64,7 +64,7 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
-### <a name="c-dropping-a-table-from-another-database"></a>3. 다른 데이터베이스에서 테이블 삭제  
+### <a name="c-dropping-a-table-from-another-database"></a>C. 다른 데이터베이스에서 테이블 삭제  
  다음 예에서는 `EasternDivision` 데이터베이스에서 `SalesPerson` 테이블을 삭제합니다.  
   
 ```  
@@ -74,5 +74,3 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ## <a name="see-also"></a>참고 항목  
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
-  
-

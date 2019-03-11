@@ -5,18 +5,18 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661331"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662687"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>자습서: SQL Server Management Studio 구성 요소 및 구성
 이 자습서에서는 SSMS(SQL Server Management Studio)의 다양한 창 구성 요소 및 작업 영역에 대한 몇 가지 기본 구성 옵션을 설명합니다. 이 아티클에서는 다음과 같은 방법을 알아봅니다. 
@@ -42,10 +42,10 @@ ms.locfileid: "47661331"
 
     ![보기 메뉴](media/ssms-configuration/viewmenu.png)
 
-- **개체 탐색기**(F8): 개체 탐색기는 서버에 있는 모든 데이터베이스 개체의 트리 뷰입니다. 이 보기에는 SQL Server 데이터베이스 엔진, SQL Server Analysis Services, SQL Server Reporting Services 및 SQL Server Integration Services의 데이터베이스가 포함됩니다. 개체 탐색기에는 연결된 모든 서버에 대한 정보가 포함되어 있습니다. 
+- **개체 탐색기**(F8): 개체 탐색기는 서버에 있는 모든 데이터베이스 개체의 트리 뷰로, 이 보기에는 SQL Server 데이터베이스 엔진, SQL Server Analysis Services, SQL Server Reporting Services 및 SQL Server Integration Services의 데이터베이스가 포함됩니다. 개체 탐색기에는 연결된 모든 서버에 대한 정보가 포함되어 있습니다. 
     
     ![개체 탐색기](media/ssms-configuration/objectexplorer.png)
-- **쿼리 창**(Ctrl + N): **새 쿼리**를 선택한 후에 이 창에 Transact-SQL(T-SQL) 쿼리를 입력합니다. 쿼리 결과도 여기에 나타납니다.
+- **쿼리 창**(Ctrl+N): **새 쿼리**를 선택한 후에 이 창에 Transact-SQL(T-SQL) 쿼리를 입력합니다. 쿼리 결과도 여기에 나타납니다.
     
     ![새 쿼리 창](media/ssms-configuration/newquery.png)
 
@@ -53,7 +53,7 @@ ms.locfileid: "47661331"
 
     ![속성](media/ssms-configuration/properties.png)
 
-- **템플릿 브라우저**(Ctrl+Alt+T): 템플릿 브라우저에는 다양한 미리 작성된 T-SQL 템플릿이 있습니다. 이러한 템플릿을 사용하여 데이터베이스 만들기 또는 백업과 같은 다양한 기능을 수행할 수 있습니다. 
+- **템플릿 탐색기**(Ctrl+Alt+T): 템플릿 탐색기에는 다양한 미리 작성된 T-SQL 템플릿이 있습니다. 이러한 템플릿을 사용하여 데이터베이스 만들기 또는 백업과 같은 다양한 기능을 수행할 수 있습니다. 
 
     ![템플릿 탐색기](media/ssms-configuration/templates.png)
 
