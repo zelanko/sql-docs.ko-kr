@@ -1,5 +1,5 @@
 ---
-title: '[ ](와일드카드 - 일치하는 문자)(Transact-SQL) | Microsoft Docs'
+title: '[ ] (와일드카드 - 일치하는 문자) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/06/2016
 ms.prod: sql
@@ -22,21 +22,21 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847461"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425818"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \](와일드카드 - 일치하는 문자)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  지정된 범위 또는 대괄호 `[ ]` 사이에 지정한 집합에 포함되는 하나의 문자와 일치됩니다. 와일드카드 문자는 `LIKE` 및 `PATINDEX` 등의 패턴 일치를 포함하는 문자열 비교에 사용할 수 있습니다.  
+지정된 범위 또는 대괄호 `[ ]` 사이에 지정한 집합에 포함되는 하나의 문자와 일치됩니다. 와일드카드 문자는 `LIKE` 및 `PATINDEX` 등의 패턴 일치를 포함하는 문자열 비교에 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
 ### <a name="a-simple-example"></a>A: 간단한 예   
-다음 예제에서는 `m` 문자로 시작하는 이름을 반환합니다. `[n-z]`는 두 번째 문자가 `n`부터 `z` 사이여야 함을 지정합니다. 백분율 와일드카드 `%`는 3 문자로 시작하는 모든 문자 또는 문자 없음을 허용합니다. `model` 및 `msdb` 데이터베이스는 이 기준을 충족합니다. `master` 데이터베이스는 충족하지 않으며 결과 집합에서 제외됩니다.
+다음 예에서는 `m` 문자로 시작하는 이름을 반환합니다. `[n-z]`는 두 번째 문자가 `n`부터 `z` 사이여야 함을 지정합니다. 백분율 와일드카드 `%`는 3 문자로 시작하는 모든 문자 또는 문자 없음을 허용합니다. `model` 및 `msdb` 데이터베이스는 이 기준을 충족합니다. `master` 데이터베이스는 기준을 충족하지 않으며 결과 집합에서 제외됩니다.
  
 ```sql
 SELECT name FROM sys.databases
