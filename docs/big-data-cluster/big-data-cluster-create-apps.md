@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017829"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756638"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
 이 문서에서는 배포 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 내에서 응용 프로그램으로 R 및 Python 스크립트를 관리 하는 방법을 설명 합니다.
- 
-## <a name="whats-new-and-improved"></a>새로운 기능 및 향상 
+
+## <a name="whats-new-and-improved"></a>새로운 기능 및 향상
 
 - 클러스터 및 앱을 관리 하는 단일 명령줄 유틸리티입니다.
 - 사양 파일을 통해 세분화 된 제어 기능을 제공 하는 동안 앱 배포를 간소화 합니다.
@@ -80,13 +80,12 @@ AKS를 사용 하는 경우의 IP 주소를 가져오려면 다음 명령을 실
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 하거나 Minikube
 
 클러스터에 대 한 로그인에 IP 주소를 가져오려면 Kubeadm 또는 다음 명령을 실행 하는 Minikube를 사용 중인 경우
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>앱 만들기
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 다음 명령은이 명령은 같습니다는 항목의 예를 보여줍니다.
 
-이라는 파일이 있다고 가정 `spec.yaml` 내에서 `addpy` 폴더입니다. `addpy` 폴더에는 `add.py` 및 `spec.yaml` 는 `spec.yaml` 은 사양 파일에 대 한는 `add.py` 앱.
+이라는 파일이 있다고 가정 `spec.yaml` 내에서 `addpy` 폴더입니다.
+`addpy` 폴더에는 `add.py` 및 `spec.yaml` 는 `spec.yaml` 은 사양 파일에 대 한는 `add.py` 앱.
 
 
-`add.py` 다음 python 앱을 만듭니다. 
+`add.py` 다음 python 앱을 만듭니다.
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ result=add(x,y)
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ mssqlctl app create --spec ./addpy
 mssqlctl app list
 ```
 
-배포 불완전 한 경우 표시 되어야 합니다 `state` 표시 `WaitingforCreate` 다음 예제와 같이: 
+배포 불완전 한 경우 표시 되어야 합니다 `state` 표시 `WaitingforCreate` 다음 예제와 같이:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ mssqlctl app list
 
 배포에 성공한 후 표시 되어야 합니다 `state` 변경 `Ready` 상태:
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 다음 예제와 유사한 출력이 표시 됩니다.
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 실행에 성공 하면 앱을 만들 때 지정 된 출력이 표시 됩니다. 다음은 예제입니다.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -233,13 +233,13 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 ## <a name="create-an-app-skeleton"></a>앱 구조를 만들려면
 
-Init 명령에는 앱을 배포 하는 데 필요한 관련 아티팩트를 사용 하 여 스 캐 폴드를 제공 합니다. 아래 예제에서는 다음 명령을 실행 하면 hello를 만듭니다.
+Init 명령은 스 캐 폴드를 관련 아티팩트를 사용 하 여 앱 배포에 필요한를 제공 합니다. 아래 예제에서는 다음 명령을 실행 하면 hello를 만듭니다.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Hello 라는 이름의 폴더를 만듭니다.  Cd를 삽입 하면의 디렉터리 폴더에 생성된 된 파일을 검사 합니다. spec.yaml 이름, 버전 및 소스 코드와 같은 앱을 정의합니다. 이름, 버전, 입력 및 출력을 변경 하려면 사양은 편집할 수 있습니다.
+Hello 라는 이름의 폴더를 만듭니다.  있습니다 `cd` 디렉터리로 폴더에 생성된 된 파일을 검사 합니다. spec.yaml 이름, 버전 및 소스 코드와 같은 앱을 정의합니다. 이름, 버전, 입력 및 출력을 변경 하려면 사양은 편집할 수 있습니다.
 
 다음은 폴더에 표시 되는 init 명령의 샘플 출력
 
@@ -255,7 +255,7 @@ spec.yaml
 
 Describe 명령을 클러스터의 끝점을 포함 하 여 앱에 대 한 자세한 정보를 제공 합니다. 일반적으로 swagger 클라이언트 및 웹 서비스를 사용 하 여 RESTful 방식으로 앱과 상호 작용 하는 앱을 빌드하는 앱 개발자가 사용 됩니다.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ Describe 명령을 클러스터의 끝점을 포함 하 여 앱에 대 한 자�
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>앱 삭제

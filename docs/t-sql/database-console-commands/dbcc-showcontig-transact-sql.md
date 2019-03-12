@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213852"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685790"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +151,7 @@ DBCC SHOWCONTIG는 **ntext**, **text** 및 **image** 데이터 형식에 데이�
   
 또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 -   지정된 테이블이나 인덱스가 분할되는 경우 DBCC SHOWCONTIG는 지정된 테이블이나 인덱스의 첫 번째 파티션만 표시합니다.  
--   DBCC SHOWCONTIG는 행 오버플로 저장소 정보와 **nvarchar(max)**, **varchar(max)**, **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
+-   DBCC SHOWCONTIG는 행 오버플로 스토리지 정보와 **nvarchar(max)**, **varchar(max)**, **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
 -   공간 인덱스는 DBCC SHOWCONTIG에서 지원되지 않습니다.  
   
 모든 새로운 기능은 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰에서 완전히 지원됩니다.
@@ -215,7 +215,7 @@ DBCC SHOWCONTIG (@id, @indid);
 GO  
 ```  
   
-### <a name="c-displaying-an-abbreviated-result-set-for-a-table"></a>3. 테이블에 대한 생략된 결과 집합 표시  
+### <a name="c-displaying-an-abbreviated-result-set-for-a-table"></a>C. 테이블에 대한 생략된 결과 집합 표시  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Product`테이블에 대해 생략된 결과 집합을 반환합니다.
   
 ```sql  

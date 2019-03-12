@@ -21,15 +21,15 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525340"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685670"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ DBCC CHECKCONSTRAINTS ('Production.CK_ProductCostHistory_EndDate');
 GO  
 ```  
   
-### <a name="c-checking-all-enabled-and-disabled-constraints-on-all-tables"></a>3. 모든 테이블에서 설정 및 해제된 모든 제약 조건 검사  
+### <a name="c-checking-all-enabled-and-disabled-constraints-on-all-tables"></a>C. 모든 테이블에서 설정 및 해제된 모든 제약 조건 검사  
  다음은 현재 데이터베이스의 모든 테이블에 설정 및 해제된 모든 제약 조건의 무결성을 검사하는 예입니다.  
   
 ```sql  

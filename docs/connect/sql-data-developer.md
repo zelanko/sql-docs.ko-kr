@@ -11,12 +11,12 @@ ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e598a2b383e0580a3be7eccc460c36ec863ffb0
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 42c28c1852c5d9c2e931973413a7671ed77b9e6a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616684"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578293"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 모바일 장치 및 데스크톱 웹 서버, 엔터프라이즈 서버 및 클라우드 전반에서 데이터 중심 솔루션을 만드는 데 사용 하 여 Microsoft SQL 데이터 플랫폼입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "52616684"
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): 작성 하 고 TRANSACT-SQL 코드를 SQL Server의 전체 서버 인스턴스를 관리할 필요 없이 테스트할 개발 하는 동안 LocalDB를 사용 합니다.
 
 ## <a name="sql-data-tools"></a>SQL Data tools
-* [SQL Server Data Tools ](../ssdt/download-sql-server-data-tools-ssdt.md) : 빌드 관계형 데이터베이스, Azure SQL database, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services를 사용 하 여 SSDT를 보고 합니다.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : 빌드 관계형 데이터베이스, Azure SQL database, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services를 사용 하 여 SSDT를 보고 합니다.
 * [SQL Server 관리 도구](../ssms/download-sql-server-management-studio-ssms.md): 사용 하 여 SSMS 구성, 모니터링 및 SQL Server의 인스턴스를 관리 합니다.
 
 ## <a name="sql-data-access"></a>SQL 데이터 액세스

@@ -11,12 +11,12 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ab667a25583a8415d44cbc40f1116cac2fb254c3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326624"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527086"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,33 +50,33 @@ ms.locfileid: "54326624"
   
 4.  **SAS(공유 액세스 서명) 생성:** 컨테이너에 액세스하려면 SAS를 만들어야 합니다. 이 작업은 몇 가지 도구, 코드 및 Azure PowerShell에서 수행할 수 있습니다. 다음 `New-AzureStorageContainerSASToken` 명령은 1년 후에 만료되는 `backupcontainer` Blob 컨테이너에 대한 SAS 토큰을 만듭니다.  
   
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-    ```  
-    Azure에서 다음 명령을 사용합니다.
-       ```powershell
-    Connect-AzAccount
-    Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-    $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-    New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-   ```  
+  ```powershell  
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
+  ```  
+
+Azure에서 다음 명령을 사용합니다.
+  ```powershell
+  Connect-AzAccount
+  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
+  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
+  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
+  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
+  ```  
   
-     이 명령의 출력에는 컨테이너와 SAS 토큰에 대한 URL이 포함됩니다. 다음은 이에 대한 예입니다.  
+이 명령의 출력에는 컨테이너와 SAS 토큰에 대한 URL이 포함됩니다. 다음은 이에 대한 예입니다.  
   
-    ```  
-    https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl  
-    ```  
+  `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-     위 예의 물음표 위치에서 SAS 토큰과 컨테이너 URL을 분리합니다(물음표는 포함하지 않음). 예를 들어 위의 출력은 다음과 같은 두 값이 됩니다.  
+위 예의 물음표 위치에서 SAS 토큰과 컨테이너 URL을 분리합니다(물음표는 포함하지 않음). 예를 들어 위의 출력은 다음과 같은 두 값이 됩니다.  
   
-    |||  
-    |-|-|  
-    |**컨테이너 URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-    |**SAS 토큰:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||  
+|-|-|  
+|**컨테이너 URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**SAS 토큰:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|||
   
-     SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
+SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
   
 #### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>사용 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
   
@@ -137,7 +137,7 @@ ms.locfileid: "54326624"
   
 8.  **상태 모니터링:**  이전에 구성한 전자 메일 알림을 통해 모니터링하거나 기록된 이벤트를 능동적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -161,7 +161,7 @@ ms.locfileid: "54326624"
   
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
@@ -169,7 +169,7 @@ ms.locfileid: "54326624"
   
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -179,12 +179,9 @@ ms.locfileid: "54326624"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
-    ```  
+    ```
   
  이 섹션에서는 데이터베이스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 처음 구성하는 단계에 대해 설명합니다. 동일한 시스템 저장 프로시저를 사용하여 기존 구성을 수정하고 새 값을 제공할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
-  
-  

@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256378"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579103"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 
 ```
 수정된 서식 파일에 이제 다음 내용이 반영됩니다.
-* `myRemap.bcp` 의 첫 번째 데이터 필드가 다음 첫 번째 열에 매핑됨: ` myRemap.. PersonID`
+* `myRemap.bcp` 의 첫 번째 데이터 필드가 다음 첫 번째 열에 매핑됨: `myRemap.. PersonID`
 * `myRemap.bcp` 의 두 번째 데이터 필드가 다음 세 번째 열에 매핑됨: `myRemap.. LastName`
 * `myRemap.bcp` 의 세 번째 데이터 필드가 다음 두 번째 열에 매핑됨: `myRemap.. FirstName`
-* `myRemap.bcp` 의 네 번째 데이터 필드가 다음 네 번째 열에 매핑됨: ` myRemap.. Gender`
+* `myRemap.bcp` 의 네 번째 데이터 필드가 다음 네 번째 열에 매핑됨: `myRemap.. Gender`
 
 ### XML 서식 파일 만들기 <a name="xml_format_file"></a>  
 자세한 내용은 [XML 서식 파일(SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myRemap.xml`의 스키마를 기반으로 XML 서식 파일 `myRemap`을 생성합니다.  또한 한정자 `c` 는 문자 데이터를 지정하고, `t,` 는 쉼표를 필드 종결자로 지정하며, `T` 는 통합 보안을 사용하여 신뢰할 수 있는 연결을 지정합니다.  `x` 한정자는 XML 기반 서식 파일을 생성하는 데 사용해야 합니다.  명령 프롬프트에서 다음 명령을 입력합니다.

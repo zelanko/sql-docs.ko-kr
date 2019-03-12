@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6148233259bd985aad2348359132cfa5cad93370
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5a42860eeab0c406ace2c2d2715e375e76220f44
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305331"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578823"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -64,7 +64,7 @@ argument1, argument2, argument*N*
 ## <a name="examples"></a>예   
 
 ### <a name="a--concatenating-values-with-separator"></a>1.  구분 기호를 사용하여 값 연결
-이 예제에서는 `- `로 값을 구분하여 sys.databases 테이블의 세 열을 연결합니다.   
+이 예제에서는 `-`로 값을 구분하여 sys.databases 테이블의 세 열을 연결합니다.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

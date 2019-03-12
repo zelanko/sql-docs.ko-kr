@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246742"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578333"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -77,7 +77,7 @@ SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수�
 ### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 로깅에 사용되는 연결 문자열 업데이트.
 다음 매개 변수 값을 사용하여 저장 프로시저 `[catalog].[update_logdb_info]`를 호출합니다.
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 

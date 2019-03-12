@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d3f9c16399b47af10a882e61c9f04278479748cb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256788"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579013"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>서식 파일을 사용하여 데이터 필드 건너뛰기(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 
 수정된 서식 파일에 이제 다음 내용이 반영됩니다.
 * 4개의 데이터 필드
-* `myTestSkipField.bcp` 의 첫 번째 데이터 필드가 다음 첫 번째 열에 매핑됨: ` myTestSkipField.. PersonID`
+* `myTestSkipField.bcp` 의 첫 번째 데이터 필드가 다음 첫 번째 열에 매핑됨: `myTestSkipField.. PersonID`
 * `myTestSkipField.bcp` 의 두 번째 데이터 필드가 어떤 열에도 매핑되지 않음
 * `myTestSkipField.bcp` 의 세 번째 데이터 필드가 다음 두 번째 열에 매핑됨: `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` 의 네 번째 데이터 필드가 다음 세 번째 열에 매핑됨: `myTestSkipField.. LastName`

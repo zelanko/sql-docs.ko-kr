@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305361"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756718"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -103,6 +103,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 |매개 변수  |Description |
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
+|**csvPath** | CSV 인벤토리 파일 경로입니다.  사용 되는 경우에만 **getServerListFrom** 로 설정 된 **CSV**합니다. |
 |**serverName** | SQL Server 인스턴스 이름을 사용 하는 경우 인벤토리 **SqlServer** 에 **getServerListFrom** 매개 변수입니다. |
 |**databaseName** | 인벤토리 테이블을 호스팅하는 데이터베이스입니다. |
 |**AssessmentName** | DMA 평가의 이름입니다. |

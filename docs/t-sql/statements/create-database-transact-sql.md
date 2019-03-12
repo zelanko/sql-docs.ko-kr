@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bcbd86b04acf394bc9909369968f552e08a0c22
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 81464ed0bdb3246b805a0c44f17baa9fdeaf59e5
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828223"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683693"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1258,7 +1258,7 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 
 - 서버 수준 보안 주체 로그인
 - 로컬 Azure SQL Server에 대한 Azure AD 관리자
-- 로그인은 `dbmanager` 데이터베이스 역할의 멤버입니다.
+- 로그인은 `dbcreator` 데이터베이스 역할의 멤버입니다.
 
 ## <a name="examples"></a>예
 

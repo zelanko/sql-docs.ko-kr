@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c046b2c2288264062f9f837c7a2bd3b74de83c35
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425868"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572826"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +79,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 *udt_name*  
 CLR(공용 언어 런타임) 사용자 정의 형식의 이름입니다.  
   
-{ **.** | **::** }  
+`{ . | :: }`  
 CLR 사용자 정의 형식의 메서드를 지정합니다. 비정적 인스턴스 메서드의 경우 마침표(**.**)를 사용합니다. 정적 메서드의 경우 두 개의 콜론(**::**)을 사용합니다. CLR 사용자 정의 형식의 메서드, 속성 또는 필드를 호출하려면 해당 형식에 대해 EXECUTE 권한이 있어야 합니다.  
   
 _method_name_ **(** _argument_ [ **,**... *n* ] **)**  
@@ -91,7 +91,7 @@ _method_name_ **(** _argument_ [ **,**... *n* ] **)**
 *mutator_method*  
 개체 상태를 변경할 수 있는 어셈블리의 메서드입니다. SQLMethodAttribute.IsMutator가 이 메서드에 적용됩니다.  
   
-{ **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+`{ += | -= | *= | /= | %= | &= | ^= | |= }`  
 복합 할당 연산자:  
   
  +=              더하기 및 할당  
@@ -166,7 +166,7 @@ DISTINCT, UNION, GROUP BY 또는 HAVING을 사용하거나 *select_list*에 집�
 READ ONLY  
 이 커서를 통해 업데이트할 수 없습니다. UPDATE 또는 DELETE 문의 WHERE CURRENT OF 절에서는 이 커서를 참조할 수 없습니다. 이 옵션은 업데이트할 커서의 기본 기능을 무시합니다. 이 키워드는 READ와 ONLY 사이에 밑줄 대신 공백이 있어 앞의 READ_ONLY와는 다른 키워드입니다.  
   
-UPDATE [OF *column_name*[ **,**... *n* ] ]  
+`UPDATE [OF column_name[ ,... n ] ]`  
 커서 내에서 업데이트할 수 있는 열을 정의합니다. OF *column_name* [**,**...*n*]이 제공되면 나열된 열만 수정할 수 있습니다. 커서가 READ_ONLY로 정의되어 있지 않은 경우 목록을 제공하지 않으면 모든 열을 업데이트할 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  

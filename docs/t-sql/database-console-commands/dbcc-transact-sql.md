@@ -34,15 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731351"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685720"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,12 +101,12 @@ DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베�
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|이 단계 동안 데이터베이스의 개체에 대한 논리적 일관성과 물리적 일관성을 검사합니다.|데이터베이스 페이지 수준에서 보고된 진행률입니다.<br /><br /> 진행률 보고 값은 1000개의 데이터베이스 페이지가 검사될 때마다 업데이트됩니다.|  
 |DBCC TABLE REPAIR|REPAIR_FAST, REPAIR_REBUILD 또는 REPAIR_ALLOW_DATA_LOSS가 지정되어 있고 복구해야 하는 개체 오류가 있는 경우 이 단계 동안 데이터베이스 복구가 수행됩니다.|개별 복구 수준에서 보고된 진행률입니다.<br /><br /> 완료된 각 복구에 대해 카운터가 업데이트됩니다.|  
-|DBCC ALLOC CHECK|이 단계 동안 데이터베이스의 할당 구조를 검사합니다.<br /><br /> 참고: DBCC CHECKALLOC도 동일한 검사를 수행합니다.|진행률이 보고되지 않습니다.|  
+|DBCC ALLOC CHECK|이 단계 동안 데이터베이스의 할당 구조를 검사합니다.<br /><br /> 참고: DBCC CHECKALLOC은 동일한 검사를 수행합니다.|진행률이 보고되지 않습니다.|  
 |DBCC ALLOC REPAIR|REPAIR_FAST, REPAIR_REBUILD 또는 REPAIR_ALLOW_DATA_LOSS가 지정되어 있고 복구해야 하는 할당 오류가 있는 경우 이 단계 동안 데이터베이스 복구가 수행됩니다.|진행률이 보고되지 않습니다.|  
 |DBCC SYS CHECK|이 단계 동안 데이터베이스 시스템 테이블을 검사합니다.|데이터베이스 페이지 수준에서 보고된 진행률입니다.<br /><br /> 진행률 보고 값은 검사되는 1000개의 데이터베이스 페이지마다 업데이트됩니다.|  
 |DBCC SYS REPAIR|REPAIR_FAST, REPAIR_REBUILD 또는 REPAIR_ALLOW_DATA_LOSS가 지정되어 있고 복구해야 하는 시스템 테이블 오류가 있는 경우 이 단계 동안 데이터베이스 복구가 수행됩니다.|개별 복구 수준에서 보고된 진행률입니다.<br /><br /> 완료된 각 복구에 대해 카운터가 업데이트됩니다.|  
-|DBCC SSB CHECK|이 단계 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 개체를 검사합니다.<br /><br /> 참고: DBCC CHECKTABLE이 실행되는 경우 이 단계가 실행되지 않습니다.|진행률이 보고되지 않습니다.|  
-|DBCC CHECKCATALOG|이 단계 동안 데이터베이스 카탈로그의 일관성을 검사합니다.<br /><br /> 참고: DBCC CHECKTABLE이 실행되는 경우 이 단계가 실행되지 않습니다.|진행률이 보고되지 않습니다.|  
+|DBCC SSB CHECK|이 단계 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 개체를 검사합니다.<br /><br /> 참고: DBCC CHECKTABLE이 실행될 때는 이 단계가 실행되지 않습니다.|진행률이 보고되지 않습니다.|  
+|DBCC CHECKCATALOG|이 단계 동안 데이터베이스 카탈로그의 일관성을 검사합니다.<br /><br /> 참고: DBCC CHECKTABLE이 실행될 때는 이 단계가 실행되지 않습니다.|진행률이 보고되지 않습니다.|  
 |DBCC IVIEW CHECK|이 단계 동안 데이터베이스에 있는 인덱싱된 뷰에 대한 논리적 일관성을 검사합니다.|검사 중인 개별 데이터베이스 뷰의 수준에서 보고된 진행률입니다.|  
   
 ## <a name="informational-statements"></a>알림 문  
@@ -144,6 +144,6 @@ DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베�
 |[DBCC dllname(FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
   

@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 19543e33782d2d175f5ddfbc065f6016cbed3fcc
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029582"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556245"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
@@ -20,11 +20,11 @@ ms.locfileid: "50029582"
 
 **구성 관리자의** Power BI 통합 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지는 보고서 서버 사용자가 지원되는 보고서 항목을 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있도록 보고서 서버를 원하는 Azure AD(Active Directory) 관리되는 테넌트에 등록하는 데 사용됩니다. 고정할 수 있는 지원되는 항목의 목록은 [Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.
 
-##  <a name="bkmk_requirements"></a> Power BI 통합에 대한 요구 사항
+## <a name="bkmk_requirements"></a> Power BI 통합에 대한 요구 사항
 
 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 서비스로 이동할 수 있는 활성 인터넷 연결 외에 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]통합을 완료하기 위한 다음 요구 사항이 있습니다.
 
-- **Azure Active Directory:** 조직에서 Azure 서비스 및 웹 응용 프로그램에 대한 디렉터리 및 ID 관리를 제공하는 Azure Active Directory를 사용해야 합니다. 자세한 내용은 [Azure Active Directory란?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)을 참조하세요.
+- **Azure Active Directory:** 조직에서 Azure 서비스 및 웹 애플리케이션에 대한 디렉터리 및 ID 관리를 제공하는 Azure Active Directory를 사용해야 합니다. 자세한 내용은 [Azure Active Directory란?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)을 참조하세요.
 
 - **관리되는 테넌트:** 보고서 항목을 고정할 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드는 Azure AD 관리되는 테넌트에 속해야 합니다.  관리되는 테넌트는 Office 365 및 Microsoft Intune과 같은 Azure 서비스를 처음으로 구독할 때 자동으로 만들어집니다.   바이럴 테넌트는 현재 지원되지 않습니다.  자세한 내용은 [Azure AD 디렉터리란?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)에서 "Azure AD 테넌트란" 및 "Azure AD 디렉터리를 가져오는 방법" 섹션을 참조하세요.
 
@@ -44,7 +44,7 @@ ms.locfileid: "50029582"
 
     notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
 
-##  <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
+## <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 다음 단계를 완료합니다. 자세한 내용은 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.
 
@@ -61,7 +61,7 @@ ms.locfileid: "50029582"
 
 5. 향후 참조를 위해 저장할 수 있도록 **결과** 창에서 **복사** 단추를 선택하여 Windows 클립보드에 등록 정보를 복사합니다.
 
-##  <a name="bkmk_unregister"></a> Power BI 등록 취소
+## <a name="bkmk_unregister"></a> Power BI 등록 취소
 
 **등록 취소:** Azure Active Directory에서 보고서 서버의 등록을 취소하면 다음과 같은 상황이 발생합니다.
 
@@ -79,7 +79,7 @@ ms.locfileid: "50029582"
 
 보고서 서버의 구성이 변경된 경우 **등록 업데이트** 를 사용합니다. 예를 들어 사용자가 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]로 이동하는 데 사용하는 URL을 추가하거나 제거하려는 경우가 여기에 해당합니다.
 
-- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL**을 선택합니다.
+-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL**을 선택합니다.
 
      **고급**을 선택합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "50029582"
 
 1. 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 보고서를 미리 보고 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서 항목을 고정하려고 처음 클릭합니다.
 
-2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
+2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다.  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
 
 3. 사용자 보안 토큰이 보고서 서버에 반환됩니다.
 
@@ -145,12 +145,16 @@ ms.locfileid: "50029582"
 
 ![ssRS-subscription-to-powerbi-flow](../../reporting-services/install-windows/media/ssrs-subscription-to-powerbi-flow.png)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
+
+## <a name="considerations-and-limitations"></a>고려 사항 및 제한 사항
+
+* 바 이럴 및 정부 테 넌 트 지원 되지 않습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 [Power BI 통합을 위한 내 설정](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
-[Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)   
+[Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744493"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579513"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "56744493"
   
  이 항목에서는 SQL Server 데이터 파일을 Microsoft Azure 스토리지 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
   
- 이 새 기능 사용 방법에 대한 실제 실습은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
+ 이 새 기능 사용 방법에 대한 실제 실습은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 참조하세요.  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure에서 SQL Server 데이터 파일을 사용하는 이유는 무엇인가요? 
   
@@ -151,7 +151,7 @@ ON
     해결 방법: Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 -   *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않습니다.*   
-     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)의 2단원에 나오는 지침을 검토하세요.  
+     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)에서 참조하세요.  
   
 -   *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*   
     해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](../lesson-3-database-backup-to-url.md)에서 참조하세요.  

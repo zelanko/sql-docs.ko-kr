@@ -31,15 +31,15 @@ helpviewer_keywords:
 - row count accuracy [SQL Server]
 - page count accuracy [SQL Server]
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 68e7743681c6023c86d0298eef022ef178eeb411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c880ac0db330ce03f45d469cffd717970d0b2d5e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611871"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685480"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012) WITH NO_INFOMSGS;
 GO  
 ```  
   
-### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>3. Employee 테이블의 페이지나 행 개수 또는 두 가지를 모두 업데이트  
+### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Employee 테이블의 페이지나 행 개수 또는 두 가지를 모두 업데이트  
 다음 예제에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Employee` 테이블에 대해 업데이트된 페이지 또는 행 수 정보를 보고합니다.
   
 ```sql
@@ -121,7 +121,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');
 GO  
 ```  
   
-### <a name="d-updating-page-or-row-counts-or-both-for-a-specific-index-in-a-table"></a>4. 테이블에 있는 특정 인덱스에 대한 페이지나 행 개수 또는 두 가지를 모두 업데이트  
+### <a name="d-updating-page-or-row-counts-or-both-for-a-specific-index-in-a-table"></a>D. 테이블에 있는 특정 인덱스에 대한 페이지나 행 개수 또는 두 가지를 모두 업데이트  
  다음 예에서는 인덱스 이름으로 `IX_Employee_ManagerID`를 지정합니다.  
   
 ```sql

@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 953fcb26527f709abd9679da3a3f061976d3ef74
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334800"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556151"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -269,13 +269,13 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. 이 힌트 이름은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이하 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins)을 참조하세요.
+   일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)을 참조하세요.
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.   
+   일괄 처리 모드 메모리 부여 피드백을 사용하지 않습니다. 자세한 내용은 [일괄 처리 모드 메모리 부여 피드백](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)을 참조합니다.   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
   테이블 변수 지연 컴파일을 사용하지 않도록 설정합니다. 자세한 내용은 [테이블 변수 지연 컴파일](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)을 참조하세요.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   다중 문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않도록 설정합니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)을 참조하세요.
+   다중 문 테이블 반환 함수에 대한 인터리브 실행을 사용하지 않도록 설정합니다. 자세한 내용은 [다중 명령문 테이블 반환 함수에 대한 인터리브 실행](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)을 참조하세요.
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    쿼리 프로세서가 쿼리 계획을 생성할 때 최적화된 중첩 루프 조인을 위해 정렬 연산(일괄 처리 정렬)을 사용하지 않도록 지시합니다 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340에 해당합니다.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,7 +290,7 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    쿼리 최적화 프로그램이 하나 이상의 매개 변수가 있는 쿼리를 컴파일할 때 평균 데이터 분산을 사용하도록 지시합니다. 이 지시를 통해 쿼리 계획에서는 쿼리를 컴파일할 때 처음 사용된 매개 변수 값이 사용되지 않습니다. 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 또는 PARAMETER_SNIFFING=OFF를 설정하는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)에 해당합니다.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  행 모드 메모리 부여 피드백을 비활성화합니다. 자세한 내용은 [행 모드 메모리 부여 피드백](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback)을 참조하세요.
+  행 모드 메모리 부여 피드백을 비활성화합니다. 자세한 내용은 [행 모드 메모리 부여 피드백](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)을 참조하세요.
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
   스칼라 UDF 인라인을 비활성화합니다. 자세한 내용은 [스칼라 UDF 인라인 처리](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)를 참조하세요.
 * 'DISALLOW_BATCH_MODE'    

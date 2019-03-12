@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720321"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736768"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED`는 왼쪽에서 오른쪽으로 정렬된 하나 이상의 바이트를 반환합니다. 각 바이트의 가장 오른쪽 비트는 최하위 비트입니다. 가장 왼쪽의 바이트에 있는 가장 오른쪽 비트는 테이블의 첫 번째 테이블 열을 나타내며, 왼쪽의 다음 비트는 두 번째 열을 나타내는 방식 등으로 이어집니다. `COLUMNS_UPDATED`는 트리거를 만든 테이블에 8개를 초과하는 열이 있는 경우 가장 왼쪽에 있는 최하위 바이트를 사용하여 여러 바이트를 반환합니다. 명시적 값 또는 암시적(NULL) 값이 삽입된 열이 있으므로 `COLUMNS_UPDATED`는 INSERT 작업의 모든 열에 대해 TRUE를 반환합니다.
   
-특정 열에 대한 업데이트 또는 삽입을 테스트하려면 비트 연산자 및 테스트된 열의 정수 비트 마스크가 있는 구문을 따릅니다. 예를 들어 **t1** 테이블에 **C1**, **C2**, **C3**, **C4** 및 **C5** 열이 포함되어 있다고 가정합니다. **C2**, **C3** 및 **C4** 열이 모두 성공적으로 업데이트되었는지(**t1** 테이블에 UPDATE 트리거가 있음) 확인하려면 **& 14**가 포함된 구문을 따릅니다. **C2** 열만이 업데이트되었는지 테스트하려면 **& 2**를 지정합니다. 실제 예제는 [예제 A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 및 [예제 B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns)를 참조하세요.
+특정 열에 대한 업데이트 또는 삽입을 테스트하려면 비트 연산자 및 테스트된 열의 정수 비트 마스크가 있는 구문을 따릅니다. 예를 들어 **t1** 테이블에 **C1**, **C2**, **C3**, **C4** 및 **C5** 열이 포함되어 있다고 가정합니다. **C2**, **C3** 및 **C4** 열이 모두 성공적으로 업데이트되었는지(**t1** 테이블에 UPDATE 트리거가 있음) 확인하려면 **& 14**가 포함된 구문을 따릅니다. **C2** 열만이 업데이트되었는지 테스트하려면 **& 2**를 지정합니다. 실제 예제는 [예제 A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) 및 [예제 B](#b-using-columns_updated-to-test-more-than-eight-columns)를 참조하세요.
   
 `COLUMNS_UPDATED`는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내 어디서든 사용합니다.
   

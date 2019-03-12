@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1e13fd0eacc1bb9584b59ac309724516e83e9698
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828163"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683703"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -728,49 +728,41 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
--- Azure SQL Database Syntax ALTER DATABASE { database_name | CURRENT } {     <file_and_filegroup_options>   | SET <option_spec> [ ,...n ]   | SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } } [;]
-
-<file_and_filegroup_options>::=   <add_or_modify_files>::=   <filespec>::=   <add_or_modify_filegroups>::=   <filegroup_updatability_option>::=
-
-<option_spec> ::= {     <auto_option>   | <change_tracking_option>   | <cursor_option>   | <db_encryption_option>   | <db_update_option>   | <db_user_access_option>   | <delayed_durability_option>   | <parameterization_option>   | <query_store_options>   | <snapshot_option>   | <sql_option>   | <target_recovery_time_option>   | <temporal_history_retention> }
-
-```
-
-## Arguments
+## <a name="arguments"></a>인수
 
 *database_name*
 
-Is the name of the database to be modified.
+수정할 데이터베이스의 이름입니다.
 
 CURRENT
 
-Designates that the current database in use should be altered.
+현재 사용 중인 데이터베이스를 변경하도록 지정합니다.
 
-## Remarks
+## <a name="remarks"></a>Remarks
 
-To remove a database, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-To decrease the size of a database, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+데이터베이스를 제거하려면 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 사용합니다.
+데이터베이스의 크기를 줄이려면 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 사용합니다.
 
-The ALTER DATABASE statement must run in autocommit mode (the default transaction management mode) and is not allowed in an explicit or implicit transaction.
+ALTER DATABASE 문은 자동 커밋 모드(기본 트랜잭션 관리 모드)에서 실행되어야 하며 명시적 또는 암시적 트랜잭션에서는 허용되지 않습니다.
 
-Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. For each cleared cachestore in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations". This message is logged every five minutes as long as the cache is flushed within that time interval.
+계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
-The procedure cache is also flushed in the following scenario: You run several queries against a database that has default options. Then, the database is dropped.
+프로시저 캐시는 다음 시나리오에도 플러시됩니다. 기본 옵션이 있는 데이터베이스에 대해 여러 가지 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.
 
-## Viewing Database Information
+## <a name="viewing-database-information"></a>데이터베이스 정보 보기
 
-You can use catalog views, system functions, and system stored procedures to return information about databases, files, and filegroups.
+카탈로그 뷰, 시스템 함수 및 시스템 저장 프로시저를 사용하여 데이터베이스, 파일 및 파일 그룹에 대한 정보를 반환할 수 있습니다.
 
-## Permissions
+## <a name="permissions"></a>Permissions
 
-Only the server-level principal login (created by the provisioning process) or members of the `dbmanager` database role can alter a database.
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인 또는 `dbcreator` 데이터베이스 역할의 구성원만 데이터베이스를 변경할 수 있습니다.
 
 > [!IMPORTANT]
-> The owner of the database cannot alter the database unless they are a member of the `dbmanager` role.
+> 데이터베이스의 소유자가 `dbcreator` 역할의 구성원인 경우 데이터베이스를 변경할 수 있습니다.
 
-## Examples
+## <a name="examples"></a>예
 
-The following examples show you how to set automatic tuning and how to add a file in a managed instance.
+다음 예제에서는 자동 튜닝을 설정하는 방법 및 관리되는 인스턴스에서 파일을 추가하는 방법을 보여줍니다.
 
 ```sql
 ALTER DATABASE WideWorldImporters
