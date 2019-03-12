@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a00de2fba9416b4ec64dd218fe830ad7cb4212c5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662807"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955844"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>인수  
 ( 'ALL' [,_pool\_name_ ] )  
 ALL은 지원되는 모든 캐시를 지정합니다.  
-_pool\_name_은 Resource Governor 풀 캐시를 지정합니다. 이 풀과 연결된 항목만 삭제할 수 있습니다.  
+_pool\_name_은 Resource Governor 풀 캐시를 지정합니다. 이 풀과 연결된 항목만 해제됩니다.  
   
 MARK_IN_USE_FOR_REMOVAL  
-현재 사용 중인 항목을 더 이상 사용하지 않게 되면 각 캐시에서 비동기적으로 삭제합니다. DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL이 실행된 후 캐시에 만들어진 새 항목은 영향을 받지 않습니다.  
+현재 사용 중인 항목을 더 이상 사용하지 않게 되면 각 캐시에서 비동기적으로 해제합니다. DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL이 실행된 후 캐시에 만들어진 새 항목은 영향을 받지 않습니다.  
   
 NO_INFOMSGS  
 모든 정보 메시지를 표시하지 않습니다.  

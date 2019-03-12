@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: 확장 Spark 기록 서버 사용
         href: ../big-data-cluster/spark-history-server.md
+  - name: 참조
+    items:
+    - name: mssqlctl 참조
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: 앱 배포
+        items:
+        - name: mssqlctl 앱
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: mssqlctl 앱 템플릿
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: 클러스터
+        items:
+        - name: mssqlctl 클러스터
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: mssqlctl 클러스터 구성
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: mssqlctl 클러스터 디버그
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: 스토리지
+        items:
+        - name: mssqlctl 스토리지
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: mssqlctl 스토리지 탑재
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: 비즈니스 연속성
   href: redirectfrom-business-continuity-10.md
   items:
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: 튜닝
     items:
-    - name: 적응 쿼리 처리
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: 자동 튜닝
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: 카디널리티 추정
@@ -7988,7 +8012,7 @@ items:
     - name: Install
       href: ../azure-data-studio/download.md
     - name: 릴리스 정보
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: 빠른 시작
       items:
       - name: SQL Server 연결 및 쿼리
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401975"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579793"
