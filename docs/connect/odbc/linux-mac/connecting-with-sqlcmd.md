@@ -13,12 +13,12 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21021402a10494306a3b667c5f7b83977dc7d205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512544"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579263"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -46,7 +46,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C 서버 인증서를 신뢰합니다.  
 
-- -d *database_name* 문제를 `USE ` *database_name* 시작 하면 문을 `sqlcmd`합니다.  
+- -d *database_name* 문제를 `USE` *database_name* 시작 하면 문을 `sqlcmd`합니다.  
 
 - -D `sqlcmd` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
   
@@ -64,7 +64,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -k 제어 문자를 제거하거나 바꿉니다.  
   
-- **-K**_응용 프로그램\_의도_  
+- **-K**_application\_intent_  
 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 `sqlcmd`가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 - -m *error_level* stdout에 보낼 오류 메시지를 제어합니다.  
   
-- **-M**_다중\_장애 조치_  
+- **-M**_multisubnet\_failover_  
 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
   
 > [!NOTE]  
@@ -210,7 +210,7 @@ Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **데이터베이스 =**_데이터베이스\_이름_  
+-   **Database=**_database\_name_  
   
 -   **드라이버 ODBC Driver 11 for SQL Server =** 또는 **드라이버 기반 ODBC Driver 13 for SQL Server =**
   

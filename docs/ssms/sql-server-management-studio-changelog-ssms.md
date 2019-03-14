@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334840"
+ms.locfileid: "57401935"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "57334840"
   - 작아진 다운로드 크기
     - 번들의 현재 크기는 SSMS 17.x의 절반보다 작습니다(최대 400MB). 크기는 결국 IS 구성 요소가 SSMS에 다시 추가되면 조금씩 커지지만, 이전만큼 크지는 않아야 합니다.
   - SSMS는 새 VS 2017 격리 셸을 기반으로 합니다.
-    - 이는 최신 셸(VS 2107 15.6.4를 선택함)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
+    - 이는 최신 셸(VS 2017 15.6.4를 선택함)을 의미합니다. 이 새로운 셸은 SSMS와 Visual Studio 모두에 발생한 모든 접근성 수정 사항의 잠금을 해제합니다.
   - SSMS 접근성 개선 사항
     - 모든 도구(SSMS, DTA 및 프로파일러)에서 접근성 문제를 해결하기 위한 많은 작업이 수행되었습니다.
   - SSMS는 사용자 지정 폴더에 설치할 수 있습니다.

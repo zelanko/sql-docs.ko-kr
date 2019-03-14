@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 46249b24fcc46980023a8a7b65890af1374ca4b4
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154748"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736753"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "56154748"
  삭제할 파일이 있는 폴더의 경로와 이름입니다.  
   
  **파일 확장명**  
- 삭제할 파일의 파일 확장명을 제공합니다. 확장명 앞뒤에 다른 문자를 포함하지 마세요. 예를 들어 BAK 또는 TRN을 포함하지 마세요. 
+ 삭제할 파일의 파일 확장명을 제공합니다. 확장명 앞뒤에 다른 문자를 포함하지 마세요(예: BAK 또는 TRN 사용). 
   
  **첫 번째 수준의 하위 폴더 포함**  
  **폴더** 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  

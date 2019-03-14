@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020424"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401795"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ UNION, EXCEPT 또는 INTERSECT를 사용하여 데이터 형식은 같지만 길
 -   두 식은 모두 **10진수**입니다.  
 -   한 식이 **10진수**이고 다른 식이 **10진수**보다 선행 규칙이 낮은 데이터 형식일 경우  
   
-피연산자 식은 전체 자릿수 p1과 소수 자릿수 s1을 가진 식 e1, 전체 자릿수 p2와 소수 자릿수 s2를 가진 식 e2로 표시합니다. **10진수**가 아닌 모든 식의 전체 자릿수와 소수 자릿수는 해당 식의 데이터 형식입니다.
+피연산자 식은 전체 자릿수 p1과 소수 자릿수 s1을 가진 식 e1, 전체 자릿수 p2와 소수 자릿수 s2를 가진 식 e2로 표시합니다. **10진수**가 아닌 모든 식의 전체 자릿수와 소수 자릿수는 해당 식의 데이터 형식에 대해 정의된 전체 자릿수와 소수 자릿수입니다. 함수 max(a,b)는 "a" 또는 "b"의 더 큰 값을 사용합니다. 마찬가지로 min(a,b)은 "a" 또는 "b"의 더 작은 값을 사용합니다.
   
 |연산|결과 전체 자릿수|결과 소수 자릿수 *|  
 |---|---|---|

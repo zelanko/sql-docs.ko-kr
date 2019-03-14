@@ -25,12 +25,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 91cc75f835320b6cf15c20cbb7d72101dc2868df
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327784"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556165"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ WITH CREDENTIAL = AlterEgo;
 GO  
 ```  
   
-### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>3. Azure Key Vault를 사용하는 EKM에 대한 자격 증명 만들기  
+### <a name="c-creating-a-credential-for-ekm-using-the-azure-key-vault"></a>C. Azure Key Vault를 사용하는 EKM에 대한 자격 증명 만들기  
  다음 예제에서는 **Microsoft Azure Key Vault용 SQL Server 커넥터**를 사용하여 Azure Key Vault에 액세스할 때 사용하기 위하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커넥터를 사용하는 완전한 예에 대해서는 [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
 > [!IMPORTANT]  
@@ -150,6 +150,8 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
   
 > [!IMPORTANT]  
 >  **CREDENTIAL NAME** 인수는 이름이 컨테이너 경로와 일치하고 https로 시작하고 후행 슬래시를 포함하지 않을 것을 요구합니다. **IDENTITY** 인수는 이름, *공유 액세스 서명*을 요구합니다. **SECRET** 인수는 공유 액세스 서명 토큰을 요구합니다.  
+>
+>  **공유 액세스 서명 비밀** 앞에 **?** 이 없어야 합니다.
   
 ```  
 USE master  

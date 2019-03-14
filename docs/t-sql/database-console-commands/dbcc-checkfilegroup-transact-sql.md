@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f40aa64f4406c8847870f26cf25d3a059bcbc6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3c4afaa25ad5f9b722e47541d546e040f7ebbac1
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698221"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685840"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY를 지정하면 DBCC CHECKFILEGROUP이 FILESTREAM 데이터에 대한 모든 검사를 건너뜁니다.  
   
  MAXDOP  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  명령문에 대한 **sp_configure**의 **최대 병렬 처리 수준** 구성 옵션을 재정의합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
   
@@ -216,7 +216,7 @@ DBCC CHECKFILEGROUP (1, NOINDEX);
 GO  
 ```  
   
-### <a name="c-checking-the-primary-filegroup-with-options"></a>3. 옵션을 사용하여 PRIMARY 파일 그룹 검사  
+### <a name="c-checking-the-primary-filegroup-with-options"></a>C. 옵션을 사용하여 PRIMARY 파일 그룹 검사  
 다음 예에서는 `master` 옵션을 지정하여 `ESTIMATEONLY` 데이터베이스의 PRIMARY 파일 그룹을 검사합니다.
   
 ```sql  

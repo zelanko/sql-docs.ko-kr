@@ -1,7 +1,7 @@
 ---
 title: Windows 데이터 정렬 이름(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827993"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572846"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56827993"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정합니다. 기본 데이터 정렬 규칙에는 다음 사항이 포함됩니다.
 
-- 사전 정렬을 지정한 경우 적용되는 정렬 규칙. 정렬 규칙은 알파벳이나 언어를 기준으로 적용됩니다.
-- 비유니코드 문자 데이터를 저장하는 데 사용하는 코드 페이지
+- 사전 정렬을 지정한 경우 적용되는 정렬 및 비교 규칙입니다. 정렬 규칙은 알파벳이나 언어를 기준으로 적용됩니다.
+- **varchar** 데이터를 저장하는 데 사용되는 코드 페이지입니다.
 
 예는 다음과 같습니다.
 
-- Latin1_General 또는 프랑스어: 둘 다 코드 페이지 1252를 사용합니다.
+- Latin1\_General 또는 프랑스어: 둘 다 코드 페이지 1252를 사용합니다.
 - 터키어: 코드 페이지 1254를 사용합니다.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI**는 대/소문자를 구분하지 않도록 지정하고 **CS**는 대/소문자를 구분하도록 지정합니다.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI**는 악센트를 구분하지 않도록 지정하고 **AS**는 악센트를 구분하도록 지정합니다.
 
-*KanatypeSensitive*
+*KanatypeSensitive*  
 **Omitted**는 일본어 가나를 구분하지 않도록 지정하고 **KS**는 일본어 가나를 구분하도록 지정합니다.
 
-*WidthSensitivity*
+*WidthSensitivity*  
 **Omitted**는 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
 
-**BIN** 이전 버전과 호환되는 이진 정렬 순서를 사용하도록 지정합니다.
+*VariationSelectorSensitivity*  
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** 코드 포인트 비교 의미 체계를 사용하는 이진 정렬 순서를 지정합니다.
+**생략**은 변형 선택기 구분 안 함을 지정하며, **VSS**는 변형 선택기 구분을 지정합니다.
+
+**BIN**  
+이전 버전과 호환되는 이진 정렬 순서를 사용하도록 지정합니다.
+
+**BIN2**  
+코드 포인트 비교 기능을 사용하는 이진 정렬 순서를 지정합니다.
 
 ## <a name="remarks"></a>Remarks
 
- 데이터 정렬 버전에 따라 일부 코드 포인트가 정의되지 않을 수 있습니다. 예를 들어 다음을 비교해 보세요.
+데이터 정렬 버전에 따라 일부 코드 포인트에는 정렬 가중치 및/또는 대문자/소문자 매핑이 정의되지 않을 수 있습니다. 예를 들어 동일한 문자가 지정되지만 동일한 데이터 정렬의 다른 버전에서 `LOWER`의 출력을 비교합니다.
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-데이터 정렬이 Latin1_General_CI_AS인 경우 이 코드 포인트가 이 데이터 정렬에서 정의되어 있지 않으므로 첫 번째 줄은 대문자를 반환합니다.
+첫 번째 명령문은 이전 데이터 정렬에서 이 문자의 대문자와 소문자 형식 모두를 표시합니다(데이터 정렬은 유니코드 데이터로 작업할 때 가용성에 영향을 주지 않음). 그러나 두 번째 명령문은 이 코드 포인트에 해당 데이터 정렬에서 정의된 소문자 매핑이 없기 때문에 데이터 정렬이 Latin1\_General\_CI\_AS인 경우 대문자가 반환됨을 보여줍니다.
 
 일부 언어에서 작동하는 경우 이전 데이터 정렬을 사용하지 않는 것이 중요할 수 있습니다. 예를 들어 텔레구어의 경우 이 값은 True입니다.
 
@@ -95,24 +107,24 @@ GO
 
 다음은 Windows 데이터 정렬 이름의 몇 가지 예입니다.
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  라틴어1 일반 용어 사전 정렬 규칙, 코드 페이지 1252를 사용하는 데이터 정렬입니다. 대/소문자는 구분하지 않고 악센트를 구분합니다. 라틴어1 일반 용어 사전 정렬 규칙을 사용하고 코드 페이지 1252에 매핑되는 데이터 정렬입니다. 데이터 정렬이 Windows 데이터 정렬일 경우 데이터 정렬의 버전 번호(_90 또는 _100)를 보여 줍니다. 대/소문자는 구분하지 않고(CI) 악센트를 구분합니다(AS).
+  라틴어1 일반 용어 사전 정렬 규칙을 사용하고 코드 페이지 1252에 매핑되는 데이터 정렬입니다. 버전 \_100 데이터 정렬이며, 대/소문자는 구분하지 않고(CI) 악센트를 구분합니다(AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  에스토니아어 사전 정렬 규칙, 코드 페이지 1257을 사용하는 데이터 정렬입니다. 대/소문자를 구분하며 악센트를 구분합니다.
+  데이터 정렬은 에스토니아어 사전 정렬 규칙을 사용하고 코드 페이지 1257에 매핑됩니다. 버전 \_80 데이터 정렬(이름에 버전 번호가 없음이 함축됨)이며, 대/소문자 구분(CS) 및 악센트 구분(AS)입니다.
 
-- **Latin1_General_BIN**
+- **일본어\_Bushu\_Kakusu\_140\_BIN2**
 
-  코드 페이지 1252 및 이진 정렬 규칙을 사용하는 데이터 정렬입니다. 라틴어1 일반 용어 사전 정렬 규칙은 무시됩니다.
+  데이터 정렬은 이진 코드 포인트 정렬 규칙을 사용하여 코드 페이지 932에 매핑됩니다. 버전 \_140 데이터 정렬이며, 일본어 Bushu Kakusu 사전 정렬 규칙은 무시됩니다.
 
 ## <a name="windows-collations"></a>Windows 데이터 정렬
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 지원하는 Windows 데이터 정렬을 나열하려면 다음 쿼리를 실행합니다.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 모든 Windows 데이터 정렬을 보여 줍니다.

@@ -11,19 +11,19 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: b9a699ba1764af5728f7731626dc94400dc4d246
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419818"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578813"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services(SSIS) 규모 확장 작업자
 
 Scale Out 작업자는 Scale Out 작업자 서비스를 실행하여 Scale Out 마스터에서 실행 작업을 끌어옵니다. 그런 다음 작업자가 `ISServerExec.exe`를 사용하여 로컬에서 패키지를 실행합니다.
 
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out 작업자 서비스 구성
-Scale Out 작업자 서비스는 ` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 파일을 사용하여 구성합니다. 구성 파일을 업데이트한 후에는 서비스를 다시 시작해야 합니다.
+Scale Out 작업자 서비스는 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` 파일을 사용하여 구성합니다. 구성 파일을 업데이트한 후에는 서비스를 다시 시작해야 합니다.
 
 |Configuration  |설명  |기본값|
 |---------|---------|---------|
@@ -36,16 +36,16 @@ Scale Out 작업자 서비스는 ` \<drive\>:\Program Files\Microsoft SQL Server
 |StoreName|해당 작업자 인증서가 있는 저장소 이름입니다.|My|
 |AgentHeartbeatInterval|규모 확장 작업자 하트비트의 간격입니다.|00:01:00|
 |TaskHeartbeatInterval|규모 확장 작업자의 작업 상태 보고 간격입니다.|00:00:10|
-|HeartbeatErrorTollerance|마지막으로 성공한 작업 하트비트의 이 기간 이후 하트비트의 오류 응답이 수신되면 작업이 종료됩니다.|00:10:00|
+|HeartbeatErrorTolerance|마지막으로 성공한 작업 하트비트의 이 기간 이후 하트비트의 오류 응답이 수신되면 작업이 종료됩니다.|00:10:00|
 |TaskRequestMaxCPU|규모 확장 작업자가 작업을 요청할 수 있는 CPU의 상한입니다.|70.0|
 |TaskRequestMinMemory|규모 확장 작업자가 작업을 요청할 수 있는 메모리의 하한(MB)입니다.|100.0|
 |MaxTaskCount|규모 확장 작업자가 보유할 수 있는 최대 작업 수입니다.|10|
-|LeaseInternval|규모 확장 작업자가 보유하고 있는 작업의 임대 간격입니다.|00:01:00|
+|LeaseInterval|규모 확장 작업자가 보유하고 있는 작업의 임대 간격입니다.|00:01:00|
 |TasksRootFolder|작업 로그의 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음|
 |TaskLogLevel|규모 확장 작업자의 작업 로그 수준입니다. (자세한 정보 표시 0x01, 정보 0x02, 경고 0x04, 오류 0x08, 진행률 0x10, CriticalError 0x20, 감사 0x40)|126(정보, 경고, 오류, 진행률, CriticalError, 감사)|
 |TaskLogSegment|작업 로그 파일의 시간 범위입니다.|00:00:00|
 |TaskLogEnabled|작업 로그를 사용할 수 있는지 여부를 지정합니다.|true|
-|ExecutionLogCacheFolder|패키지 실행 로그 캐시에 사용되는 폴더입니다. 값이 비어 있는 경우 ` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음|
+|ExecutionLogCacheFolder|패키지 실행 로그 캐시에 사용되는 폴더입니다. 값이 비어 있는 경우 `\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` 폴더 경로가 사용됩니다. [account]는 규모 확장 작업자 서비스를 실행하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.|비어 있음|
 |ExecutionLogMaxBufferLogCount|메모리에 있는 하나의 실행 로그 버퍼에서 캐시된 최대 실행 로그 수입니다.|10000|
 |ExecutionLogMaxInMemoryBufferCount|실행 로그에 대한 메모리의 최대 실행 로그 버퍼 수입니다.|10|
 |ExecutionLogRetryCount|실행 로깅이 실패할 경우 다시 시도 횟수입니다.|3|

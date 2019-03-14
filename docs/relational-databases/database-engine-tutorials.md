@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45966a43686992f2b8f5f735cc6b9fef566a800d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e7e3f28304a61d79736a0c51450dc57d0a1ef97d
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669332"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579623"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51669332"
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
 이 자습서에는 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스의 개체를 만들고 관리하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 문을 작성하는 기본적인 방법에 대해 설명합니다.  
   
-[자습서: 데이터베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
+[자습서: 데이테베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
 이 자습서에서는 쿼리를 처리하는 방법을 검사한 다음 쿼리 성능 향상을 위한 권장 사항을 검토하는 방법을 소개합니다.  
   
 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "51669332"
 [자습서: 인증서로 저장 프로시저 서명](../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md)  
 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 생성한 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  
   
-[Tutorial: Ownership Chains and Context Switching](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
+[자습서: 소유권 체인 및 컨텍스트 전환](../relational-databases/tutorial-ownership-chains-and-context-switching.md)  
 이 자습서에서는 시나리오를 통해 소유권 체인 및 사용자 컨텍스트 전환과 관련된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 보안 개념을 설명합니다.  
   
 [자습서: 정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "51669332"
 [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 스토리지 서비스로 복원하는 방법에 대해 설명합니다.  
   
-[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  

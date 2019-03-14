@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 즉시 파일 초기화 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
+ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204922"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57683603"
 ---
 # <a name="database-file-initialization"></a>데이터베이스 파일 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +52,17 @@ ms.locfileid: "53204922"
   
 계정에 `Perform volume maintenance tasks` 권한을 부여하려면  
   
-1.  백업 파일을 생성할 컴퓨터에서 **로컬 보안 정책** 애플리케이션(`secpol.msc`)을 엽니다.  
+1.  데이터 파일을 생성할 컴퓨터에서 **로컬 보안 정책** 애플리케이션(`secpol.msc`)을 엽니다.  
   
 2.  왼쪽 창에서 **로컬 정책**을 확장한 다음 **사용자 권한 할당**을 클릭합니다.  
   
 3.  오른쪽 창에서 **볼륨 유지 관리 작업 수행**을 두 번 클릭합니다.  
   
-4.  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
+4.  **사용자 또는 그룹 추가**를 클릭하고 SQL Server 서비스를 실행하는 계정을 추가합니다.  
   
 5.  **적용**을 클릭한 다음 모든 **로컬 보안 정책** 대화 상자를 닫습니다.  
+
+1. SQL Server 서비스를 다시 시작합니다.
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 설치하는 동안 이 권한을 서비스 계정에 부여할 수 있습니다. [명령 프롬프트 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 사용하는 경우 /SQLSVCINSTANTFILEINIT 인수를 추가하거나 [설치 마법사](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)의 *SQL Server 데이터베이스 엔진 서비스에 볼륨 유지 관리 작업 권한 부여* 확인란을 선택합니다.
@@ -71,15 +73,11 @@ ms.locfileid: "53204922"
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME*이 부여되면 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 다음과 유사한 정보 메시지가 기록됩니다. 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 계정에 *SE_MANAGE_VOLUME_NAME*이 부여되지 **않으면** 시작 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 다음과 유사한 정보 메시지가 기록됩니다. 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4부터, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
@@ -88,7 +86,7 @@ Database Instant File Initialization: disabled. For security and performance con
 
 또 다른 고려 사항은 파일이 IFI를 사용하여 증가하는 경우입니다. SQL Server 관리자는 잠재적으로 원시 페이지 콘텐츠에 엑세스하고 이전에 삭제된 내용을 확인할 수 있습니다.
 
-데이터베이스 파일을 저장 영역 네트워크에서 호스트하는 경우 저장 영역 네트워크는 항상 미리 초기화된 새 페이지를 표시하고 운영 체제에서 페이지를 다시 초기화하는 경우 불필요한 오버헤드가 발생할 수 있습니다.
+데이터베이스 파일을 스토리지 영역 네트워크에서 호스트하는 경우 저장 영역 네트워크는 항상 미리 초기화된 새 페이지를 표시하고 운영 체제에서 페이지를 다시 초기화하는 경우 불필요한 오버헤드가 발생할 수 있습니다.
  
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보안 물리적 환경에 설치되어 있는 경우 인스턴스 파일 초기화를 사용할 때 성능 이점이 보안 위험을 능가하므로 이렇게 하는 것이 좋습니다.

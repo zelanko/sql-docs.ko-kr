@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356023"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579393"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 이 문은 조인으로 변환할 수 없습니다. 이와 유사한 같지 않음 조인은 다른 의미를 갖습니다. 이 조인은 완성된 자전거 이외의 하위 범주에 있는 제품 이름을 찾습니다.      
 
 ### <a name="upsert"></a> UPDATE, DELETE 및 INSERT 문의 하위 쿼리
-`UPDATE`, `DELETE`, `INSERT` 및 `SELECT ` DML(데이터 조작 언어) 문에 하위 쿼리가 중첩될 수 있습니다.    
+`UPDATE`, `DELETE`, `INSERT` 및 `SELECT` DML(데이터 조작 언어) 문에 하위 쿼리가 중첩될 수 있습니다.    
 
 다음 예에서는 *Production.Product* 테이블의 *ListPrice* 열 값을 두 배로 만듭니다. `WHERE` 절의 하위 쿼리는 *Product* 테이블에서 업데이트되는 행을 *BusinessEntity* 1540이 제공하는 행으로만 제한하여 *Purchasing.ProductVendor* 테이블을 참조합니다.
 

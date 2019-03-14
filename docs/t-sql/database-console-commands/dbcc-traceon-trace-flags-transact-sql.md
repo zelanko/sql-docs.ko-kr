@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652602"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736838"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -136,7 +136,7 @@ ms.locfileid: "55652602"
 |**9347**|정렬 연산자에 대해 일괄 처리 모드를 사용하지 않도록 설정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 많은 분석 쿼리에 대한 성능을 향상시키는 새 일괄 처리 모드 정렬 연산자를 소개합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3172787)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**9349**|상위 N개 정렬 연산자에 대해 일괄 처리 모드를 사용하지 않도록 설정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 많은 분석 쿼리에 대한 성능을 향상시키는 새 일괄 처리 모드 주요 정렬 연산자를 소개합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**9389**|일괄 처리 모드 연산자에 대해 동적 추가 메모리 부여를 사용하도록 설정합니다. 쿼리에서 필요한 모든 메모리를 가져오지 못하면 데이터를 tempdb에 유출하여 추가 I/O가 발생하고 쿼리 성능에 잠재적으로 영향을 미칩니다. 동적 메모리 부여 추적 플래그를 사용하는 경우, 일괄 처리 모드 연산자에서 추가 메모리를 요청하고, 사용할 수 있는 추가 메모리가 있으면 tempdb로 누출되지 않도록 방지할 수 있습니다. 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query)의 *쿼리당 최소 메모리 효과* 섹션을 참조합니다.<br /><br />**범위**: 전역 또는 세션| 
-|**9398**|[적응형 조인](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) 연산자를 사용하면 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 소개한 대로 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 후까지 지연할 수 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4099126)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 및 쿼리|
+|**9398**|[적응형 조인](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins) 연산자를 사용하면 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 소개한 대로 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 후까지 지연할 수 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4099126)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 및 쿼리|
 |**9453**|일괄 처리 모드 실행을 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4016902)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 및 쿼리|
 |**9471**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델에서 단일 테이블 필터에 대한 최소 선택성을 사용하여 계획을 생성하도록 합니다.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 70에 적용되지 않습니다. 대신 4137 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리| 
 |**9476**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지의 버전에 있는 쿼리 최적화 프로그램 카디널리티 추정 모델에서 기본 포함(Base Containment) 가정 대신 단순 포함(Simple Containment) 가정을 사용하여 계획을 생성하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3189675)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리| 
@@ -167,7 +167,7 @@ ms.locfileid: "55652602"
      예를 들어 2528 추적 플래그를 전역으로 사용하도록 설정하려면 [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)에 -1 인수를 사용합니다(예: `DBCC TRACEON (2528, -1)`). 서버를 다시 시작할 때 DBCC TRACEON을 사용하여 전역 추적 플래그를 사용하면 효과가 손실됩니다. 전역 추적 플래그를 해제하려면 [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)에 -1 인수를 사용합니다.  
 -   시작 시 **-T** 시작 옵션을 사용하여 추적 플래그가 설정되도록 지정합니다.  
      **-T** 시작 옵션을 사용하면 추적 플래그를 전역으로 사용하도록 설정됩니다. 시작 옵션을 사용하여 세션 수준 추적 플래그를 설정할 수는 없습니다. 이렇게 하면 서버를 다시 시작한 후에도 추적 플래그가 활성 상태로 유지됩니다. 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.
--   쿼리 수준에서는 QUERYTRACEON [쿼리 힌트](https://support.microsoft.com/kb/2801413)를 사용하여 설정합니다.
+-   쿼리 수준에서는 QUERYTRACEON [쿼리 힌트](https://support.microsoft.com/kb/2801413)를 사용하여 설정합니다. QUERYTRACEON 옵션은 위의 표에 설명된 쿼리 최적화 프로그램 추적 플래그에 대해서만 지원됩니다.
   
 `DBCC TRACESTATUS` 명령을 사용하여 현재 활성 중인 추적 플래그를 확인할 수 있습니다.
   

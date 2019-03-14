@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605691"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756678"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>1-4단원 - 패키지 구성 추가
 이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
@@ -32,6 +32,8 @@ ms.locfileid: "47605691"
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 DataTransferConfig.dtsConfig 및 LoadXMLData.dtsConfig가 DataTransfer 및 LoadXMLData 패키지의 종속 파일임을 인식하고 구성 파일을 자동으로 포함합니다.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>DataTransfer 패키지에 대한 간접 구성을 만들려면  
+
+프로젝트의 현재 배포 모델을 확인하고, 필요한 경우 **패키지 배포 모델**로 설정합니다. **프로젝트 메뉴**에서 **패키지 배포 모델로 변환**을 클릭합니다.
   
 1.  솔루션 탐색기에서 DataTransfer.dtsx를 두 번 클릭합니다.  
   

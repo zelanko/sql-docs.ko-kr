@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e7b0f75274504ce035d46e0277fc939ef74adda
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 093a70a8e9651271aa2a8df4641f6f1e568fc2a7
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334670"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756738"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -135,6 +135,25 @@ ms.locfileid: "57334670"
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용)  
+
+**Server Core 지원:**
+
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 현재 Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 및 Windows Server 2019의 Server Core 설치에서 지원됩니다. 
+
+Server Core 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하는 것은 다음 버전의 Windows Server에서 지원됩니다.
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2 데이터 센터|
+| Windows Server 2012 Standard | Windows Server 2012 데이터 센터 |
+| Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 데이터 센터 |
+| Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 웹|
+   | &nbsp; | &nbsp; |
+
+Server Core에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하는 방법에 대한 자세한 내용은 [Server Core에 SQL Server 설치](../../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조하세요.  
+
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32비트 클라이언트 운영 체제에서 지원되는 기능  
  Windows 클라이언트 운영 체제, 예를 들어 Windows 10 및 Windows 8.1은 32비트 또는 64비트 아키텍처로 사용할 수 있습니다.   모든 SQL Server 기능은 64비트 클라이언트 운영 체제에서 지원됩니다. 지원되는 32비트 클라이언트 운영 체제에서 Microsoft는 다음과 같은 기능을 지원합니다.  

@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d7b15318ccf171b8812449948ef0a04d17cfbd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a0b6a519ba8c1fe48538af0f5d29c4c2f015a8aa
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401815"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,14 +48,16 @@ ms.locfileid: "56039044"
 |요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정된 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 특정 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시간을 나타냅니다.<br /><br /> Mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0 ~ 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica에서는 n > 3일 경우 초 소수 부분이 잘립니다.|  
 |문자 길이|최소 19자리(YYYY-MM-DD hh:mm:ss )부터 최대 27자리(YYYY-MM-DD hh:mm:ss.0000000)까지|  
 |전체 자릿수, 소수 자릿수|0 ~ 7자리, 정확도 100ns. 기본 전체 자릿수는 7자리입니다.|  
-|스토리지 크기|전체 자릿수가 3 미만인 경우 6바이트, 3 및 4인 경우 7바이트, 기타 모든 전체 자릿수의 경우 8바이트가 필요합니다.|  
+|스토리지 크기|전체 자릿수가 3보다 작은 경우 6바이트입니다.<br/>전체 자릿수가 3 또는 4인 경우 7바이트입니다.<br/>기타 모든 전체 자릿수는 8바이트가 필요합니다.<sup>1</sup>|  
 |정확도|100나노초|  
 |기본값|1900-01-01 00:00:00|  
 |달력|일반 달력|  
 |사용자 정의 초 소수 부분 자릿수|예|  
 |표준 시간대 오프셋 인식 및 유지|아니오|  
 |일광 절약 시간제 인식|아니오|  
-  
+
+<sup>1</sup> **datetime2** 값의 첫 번째 바이트는 값의 전체 자릿수를 저장합니다. 즉, **datetime2** 값에 필요한 실제 스토리지는 위의 표에 표시된 스토리지 크기에 전체 자릿수를 저장할 추가 1바이트를 더한 것입니다.  이렇게 하면 **datetime2** 값의 최대 크기는 9바이트가 됩니다. 1바이트는 최대 전체 자릿수의 데이터 스토리지에 대한 8바이트를 더한 자릿수를 저장합니다.
+
 데이터 형식 메타데이터에 대한 자세한 내용은 [sys.systypes&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) 또는 [TYPEPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)를 참조하십시오. 일부 날짜 및 시간 데이터 형식의 경우 전체 자릿수와 소수 자릿수는 변할 수 있습니다. 열의 전체 자릿수와 소수 자릿수를 얻으려면 [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH&#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) 또는 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)를 참조하십시오.
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2에 대해 지원되는 문자열 리터럴 형식

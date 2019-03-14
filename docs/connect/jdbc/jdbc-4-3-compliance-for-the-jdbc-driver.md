@@ -11,12 +11,12 @@ ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f38b700f998babd9af54c3bf8a27409a4d2b6ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc2fbb2b217880b255d522149dabd38701a8c0e4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623941"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579063"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.3 준수
 
@@ -31,5 +31,5 @@ Microsoft JDBC 드라이버 7.0 SQL Server 릴리스를 사용 하 여 드라이
 
 |새 API|설명|중요한 구현|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|이 연결에서 요청을 작업 하는 독립적인 단위를 시작 하는 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)을 참조하세요.|공용 API 메서드를 통해 수정할 수 있는 연결 필드의 값을 저장: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`를 `sendTimeAsDatetime`를 `statementPoolingCacheSize`, `disableStatementPooling`를 `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall `, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert `.|
+|void java.sql.connection.beginRequest()|이 연결에서 요청을 작업 하는 독립적인 단위를 시작 하는 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)을 참조하세요.|공용 API 메서드를 통해 수정할 수 있는 연결 필드의 값을 저장: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`를 `sendTimeAsDatetime`를 `statementPoolingCacheSize`, `disableStatementPooling`를 `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
 |void java.sql.connection.endRequest()|작업에서 독립적인 단위는 요청이 완료 되었음을 드라이버에 대 한 힌트입니다. 자세한 내용은 [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)을 참조하세요.|작업 단위 중에 생성 되는 문을 닫히고 열려 있는 모든 트랜잭션을 롤백합니다. 메서드는 또한 위에 나열 된 연결 필드에 변경 내용이 되돌립니다.|

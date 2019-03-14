@@ -11,12 +11,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2d0f3ffdb4c8c026ce12f2f347cbeae0548ede7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12716c1250d60cd59b9b8786c8f88dae7982473a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672782"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578523"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "51672782"
   
  Windows Azure Blob 스토리지 서비스를 사용하는 SQL Server 백업 및 복원 작업에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+-   [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
 -   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "51672782"
   
 ## <a name="handling-large-files"></a>큰 파일 처리  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 저장소 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. Azure [스토리지에 대한 SLA](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 에서는 Blob에 대해 고려 가능한 최대 처리 시간을 제공합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 스토리지 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. Azure [스토리지에 대한 SLA](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) 에서는 Blob에 대해 고려 가능한 최대 처리 시간을 제공합니다.  
   
 -   특히 큰 파일을 백업할 때 [백업 관리](##managing-backups) 섹션에서 권장하는 대로 `WITH COMPRESSION` 옵션을 사용해야 합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "51672782"
   
  **인증 오류:**  
   
--   `WITH CREDENTIAL`은 Windows Azure Blob 저장소 서비스로 백업하거나 복원하는 데 필요한 새로운 옵션입니다. 자격 증명과 관련하여 다음과 같은 오류가 발생할 수 있습니다.  
+-   `WITH CREDENTIAL`은 Windows Azure Blob 스토리지 서비스로 백업하거나 복원하는 데 필요한 새로운 옵션입니다. 자격 증명과 관련하여 다음과 같은 오류가 발생할 수 있습니다.  
   
      **BACKUP** 또는 **RESTORE** 명령에 지정된 자격 증명이 없습니다. 이 문제를 방지하려면 백업 문에 자격 증명이 없는 경우 자격 증명을 만드는 T-SQL 문을 포함합니다. 다음은 사용 가능한 예입니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "51672782"
   
         이 오류를 해결하려면 **BLOCKSIZE = 65536**을 지정하여 **RESTORE** 문을 다시 실행하세요.  
   
--   Blob에 활성 임대가 있어 백업 중 오류가 발생합니다. 실패한 백업 작업으로 인해 Blob에 활성 임대가 있을 수 있습니다.  
+-   blob에 활성 임대가 있어 백업 중 오류가 발생합니다. 실패한 백업 작업으로 인해 blob에 활성 임대가 있을 수 있습니다.  
   
      백업 문을 다시 시도하는 경우 다음과 같은 오류가 발생하여 백업 작업이 실패할 수 있습니다.  
   
@@ -152,7 +152,7 @@ BackupIoRequest::ReportIoError: write failure on backup device https://storageac
   
 추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
-`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.)` 
   
  **기본 프록시 설정이 선택되지 않음:**  
   

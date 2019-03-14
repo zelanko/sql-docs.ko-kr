@@ -11,19 +11,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017064"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579643"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 이 토픽은 네 가지 SQL Server 2012 서비스 팩의 통합 릴리스 정보를 포함합니다. 각 서비스 팩은 이전 서비스 팩에 누적됩니다.
 
 서비스 팩은 설치 미디어로 제공되지 않고 온라인으로만 사용할 수 있으며 다음과 같이 다운로드할 수 있습니다.
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -246,7 +246,7 @@ MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/l
 - [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/help/321185)
 - [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [How to identify your SQL Server version and edition ](https://support.microsoft.com/help/321185)(SQL Server 버전 및 에디션 확인 방법) 
+- [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/help/321185) 
 - [SQL  Server  버전 및 에디션 확인 방법](https://support.microsoft.com/kb/321185)  
 - [SQL Server 2014 버전에서 지원하는 기능](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 

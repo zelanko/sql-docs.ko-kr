@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802409"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579733"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1192,7 +1192,7 @@ GO
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)   
+ [지능형 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md)   
  [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [실행 계획](../relational-databases/performance/execution-plans.md)    
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

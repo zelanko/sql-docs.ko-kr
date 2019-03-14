@@ -1,5 +1,5 @@
 ---
-title: '1단원: Off By Default 정책 만들기 및 적용 | Microsoft 문서'
+title: '1단원: Off By Default 정책 만들기 및 적용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158625"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579538"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>1단원: Off By Default 정책 만들기 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "52158625"
   
 6.  오류가 발생할 경우 **대상 정보** 영역의 **메시지** 열에서 추가 정보를 볼 수 있습니다. **메시지** 열에서 **보기** 를 클릭하여 검사한 각 패싯 속성에 대한 검사 결과를 포함하는 보고서를 볼 수 있습니다. 
 
-    ![정책 평가 결과 보기 ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![정책 평가 결과 보기](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  정책 설명이 페이지 아래쪽에 표시되고 **추가 도움말** 섹션에서 정책에 대해 구성한 하이퍼링크를 표시합니다. 메시지 하이퍼링크를 클릭하여 정책을 만들 때 지정한 웹 페이지를 엽니다.   
 

@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa6df6038d13ffae258a2b71baaaa9b3415ebbc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695811"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572836"
 ---
 # <a name="lead-transact-sql"></a>LEAD(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -49,7 +49,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  현재 행 뒤에 있는 행의 수로, 그 수만큼 뒤에 있는 행에서 값을 가져옵니다. 이 인수를 지정하지 않으면 기본값은 1입니다. *offset*은 열, 하위 쿼리 또는 양의 정수로 계산되거나 암시적으로 **bigint**로 변환될 수 있는 기타 식일 수 있습니다. *offset*은 음수 또는 분석 함수일 수 없습니다.  
   
  *default*  
- *offset*의 *scalar_expression*이 NULL일 경우 반환할 값입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *default*는 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수일 수는 없습니다. *default*는 *scalar_expression*과 호환되는 형식이어야 합니다.  
+ *오프셋*이 파티션의 범위를 벗어날 때 반환할 값입니다. 기본값이 지정되어 있지 않으면 NULL이 반환됩니다. *default*는 열, 하위 쿼리 또는 기타 식일 수 있지만 분석 함수일 수는 없습니다. *default*는 *scalar_expression*과 호환되는 형식이어야 합니다.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause*는 FROM 절이 생성한 결과 집합을 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 함수를 적용하기 전에 데이터의 순서를 결정합니다. *partition_by_clause*가 지정되면 각 파티션 내의 데이터 순서를 결정합니다. *order_by_clause*가 필요합니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
@@ -112,7 +112,7 @@ Northwest                280              1352577.1325          0.00
   
 ```  
   
-### <a name="c-specifying-arbitrary-expressions"></a>3. 임의의 식 지정  
+### <a name="c-specifying-arbitrary-expressions"></a>C. 임의의 식 지정  
  다음 예에서는 LEAD 함수 구문에서 다양한 임의의 식을 지정하는 방법을 보여 줍니다.  
   
 ```sql  

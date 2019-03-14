@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421320"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579683"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -223,31 +223,31 @@ DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
 
 DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 도입된 [적응 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부인 기능입니다.
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부인 기능입니다.
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다(행 모드는 SQL Server 2019 및 Azure SQL Database에서 지원됨).
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다(행 모드는 SQL Server 2019 및 Azure SQL Database에서 지원됨).
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
 
 **적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다.
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
 
 BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
 
 **적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 SQL Server 2017에서 제공된 [적응형 쿼리 처리](../../relational-databases/performance/adaptive-query-processing.md)의 일부 기능입니다.
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 SQL Server 2017에서 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
 
 BATCH_MODE_ON_ROWSTORE = { ON | OFF}
 

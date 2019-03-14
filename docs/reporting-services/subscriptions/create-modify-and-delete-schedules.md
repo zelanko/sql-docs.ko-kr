@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679791"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578143"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
   이 항목에서는 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 공유 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  기본 모드에 대한 공유 일정을 관리하려면 웹 포털의 일정 페이지나 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 공유 일정 폴더를 사용합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 위한 관리 페이지를 사용합니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "47679791"
 2.  **사이트 설정**을 클릭합니다.  
 3.  Reporting Services 섹션에서 **공유 일정 관리**를 클릭합니다.  
 4.  **일정 추가** 를 클릭하여 일정 속성 페이지를 엽니다.  
-5.  일정에 대한 설명이 포함된 이름을 입력합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 작업에 사용되는 응용 프로그램 페이지에서 이 이름은 사이트 전반에서 일정 정의 페이지의 드롭다운 목록에 나타납니다. 읽기 어려운 긴 이름은 사용하지 말고 이름 시작 부분에 가장 중요한 정보를 포함하는 명명 규칙을 따르세요.  
+5.  일정에 대한 설명이 포함된 이름을 입력합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 작업에 사용되는 애플리케이션 페이지에서 이 이름은 사이트 전반에서 일정 정의 페이지의 드롭다운 목록에 나타납니다. 읽기 어려운 긴 이름은 사용하지 말고 이름 시작 부분에 가장 중요한 정보를 포함하는 명명 규칙을 따르세요.  
 6.  빈도를 선택합니다. 선택하는 빈도에 따라 해당 빈도를 지원하기 위해 페이지에 나타나는 일정 옵션이 변경될 수 있습니다. 예를 들어 **월**을 선택하면 각 월의 이름이 페이지에 나타납니다.  
 7.  일정을 정의합니다. 일부 일정 조합은 단일 일정으로 지원되지 않습니다.  
 8.  시작 날짜와 종료 날짜를 설정합니다.  

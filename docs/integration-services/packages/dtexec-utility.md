@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591427"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401885"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
@@ -38,6 +38,8 @@ ms.locfileid: "53591427"
 -   [구문 규칙](#syntaxRules)  
   
 -   [xp_cmdshell에서 dtexec 사용](#cmdshell)  
+
+-   [Bash에서 dtexec 사용](#bash)
   
 -   [구문](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **중요!!** [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본적으로 새 설치에 대해 **xp_cmdshell** 옵션을 사용할 수 없습니다. 이 옵션은 **sp_configure** 시스템 저장 프로시저를 실행하여 사용할 수 있습니다. 자세한 내용은 [xp_cmdshell 서버 구성 옵션](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)을 참조하세요.  
-  
+
+##  <a name="bash"></a> Bash에서 dtexec 사용
+
+**Bash** 셸은 Linux용으로 널리 사용되는 셸입니다. Windows에서도 사용할 수 있습니다. Bash 프롬프트에서 dtexec를 실행할 수 있습니다. 세미콜론(`;`)은 Bash의 명령 구분 기호 연산자입니다. 제공된 항목의 이름과 값을 구분하기 위해 세미콜론을 사용하기 때문에 `/Conn[ection]`, `/Par[arameter]` 또는 '`/Set` 옵션을 사용하여 패키지를 전달할 때 특히 중요합니다. 다음 예제에서는 Bash를 사용하여 값을 패키지에 전달할 때 세미콜론과 다른 항목을 적절하게 이스케이프하는 방법을 보여줍니다.
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> 구문  
   
 ```  

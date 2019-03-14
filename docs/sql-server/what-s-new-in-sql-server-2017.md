@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406450"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579363"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION의 **IDENTITY_CACHE** 옵션을 사용하면 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)된 후 ID 열의 값이 차이 나지 않도록 할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요. (CTP 2.0)
-- 애플리케이션 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
+- 애플리케이션 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL 데이터베이스의 지능형 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
 - **자동 데이터베이스 튜닝**은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고 솔루션을 추천하며 식별된 문제를 자동으로 해결할 수 있습니다. [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md)(자동 튜닝)을 참조하세요. (CTP 2.0)
 - 다 대 다 관계를 모델링하기 위한 새 **그래프 데이터베이스 기능** 에 노드 및 에지 테이블을 만들기 위한 새 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리를 위한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)(SQL Server 2017에서 그래프 처리)을 참조하세요. (CTP 2.0)
 - CLR 어셈블리의 보안을 향상하기 위해 `clr strict security`라는 sp_configure 옵션이 기본적으로 사용하도록 설정됩니다. [CLR strict security](../database-engine/configure-windows/clr-strict-security.md)(CLR 엄격한 보안)를 참조하세요. (CTP 2.0)
@@ -75,7 +75,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - SQL Server 2012, SQL Server 2014 및 SQL Server 2016에서 SQL Server 2017 Master Data Services로 업그레이드할 때의 환경 및 성능이 개선되었습니다. 
 - 이제 웹 애플리케이션의 **탐색기** 페이지에서 엔터티, 컬렉션 및 계층 구조의 정렬된 목록을 볼 수 있습니다.
 - 스테이징 저장 프로시저를 사용하여 수백만 개의 레코드를 스테이징하기 위한 성능이 향상되었습니다.
-- 모델 사용 권한을 할당하기 위해 **그룹 관리** 페이지에서 **엔터티** 폴더를 확장할 때의 성능이 향상되었습니다. **그룹 관리** 페이지는 웹 응용 프로그램의 **보안** 섹션에 있습니다. 성능 향상에 대한 자세한 내용은 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)를 참조하세요. 사용 권한 할당에 대한 자세한 내용은 [모델 개체 사용 권한 할당(Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)를 참조하세요.
+- 모델 사용 권한을 할당하기 위해 **그룹 관리** 페이지에서 **엔터티** 폴더를 확장할 때의 성능이 향상되었습니다. **그룹 관리** 페이지는 웹 애플리케이션의 **보안** 섹션에 있습니다. 성능 향상에 대한 자세한 내용은 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)를 참조하세요. 사용 권한 할당에 대한 자세한 내용은 [모델 개체 사용 권한 할당(Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)를 참조하세요.
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services(SSAS) 
 SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여러 향상된 기능을 새로 제공합니다. 이러한 개체는 다음과 같습니다.
