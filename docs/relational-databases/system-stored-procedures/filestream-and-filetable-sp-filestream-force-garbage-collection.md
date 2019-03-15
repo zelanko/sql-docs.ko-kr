@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39fc70d04635008cf00a9c8e02ef0bae97af1cbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540305"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973682"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_filestream_force_garbage_collection
 ```  
   
 ## <a name="arguments"></a>인수  
- **@dbname** = _database_name_**'**  
- 가비지 수집기를 실행할 데이터베이스 이름을 표시합니다.  
+ **@dbname** = *database_name* 가비지 수집기를 실행할 데이터베이스의 이름을 표시 합니다.  
   
 > [!NOTE]  
 >  *dbname* 됩니다 **sysname**합니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  

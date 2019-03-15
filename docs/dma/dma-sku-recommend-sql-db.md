@@ -2,7 +2,7 @@
 title: (Data Migration Assistant) 온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인 | Microsoft Docs
 description: 온-프레미스 데이터베이스에 대 한 Azure SQL 데이터베이스 SKU 오른쪽을 확인 하려면 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226500"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973829"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인
 
@@ -75,22 +75,22 @@ Database Migration Assistant v4.0 다운로드 이상을 설치 합니다. 이�
 
 다음 인수를 사용 하 여는 dmacmd.exe를 실행 합니다.
 
-- **/Action = SkuRecommendation**: SKU 평가 실행 하려면이 인수를 입력 합니다.
-- **/ SkuRecommendationInputDataFilePath**: 이전 섹션에서 수집 된 카운터 파일 경로입니다.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: TSV 형식으로 결과 출력을 쓸 경로입니다.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: JSON 형식으로 결과 출력을 쓸 경로입니다.
-- **/ SkuRecommendationHtmlResultsFilePath**: HTML 형식으로 결과 출력을 쓸 경로입니다.
+- **/Action=SkuRecommendation**: SKU 평가 실행 하려면이 인수를 입력 합니다.
+- **/SkuRecommendationInputDataFilePath**: 이전 섹션에서 수집 된 카운터 파일 경로입니다.
+- **/SkuRecommendationTsvOutputResultsFilePath**: TSV 형식으로 결과 출력을 쓸 경로입니다.
+- **/SkuRecommendationJsonOutputResultsFilePath**: JSON 형식으로 결과 출력을 쓸 경로입니다.
+- **/SkuRecommendationHtmlResultsFilePath**: HTML 형식으로 결과 출력을 쓸 경로입니다.
 
 또한 다음 인수 중 하나를 선택 해야 합니다.
 - 가격 새로 고침을 방지
-    - **/ SkuRecommendationPreventPriceRefresh**: 발생 가격 새로 고침을 방지합니다. 오프 라인 모드에서 실행 하는 경우 사용 합니다.
+    - **/SkuRecommendationPreventPriceRefresh**: 발생 가격 새로 고침을 방지합니다. 오프 라인 모드에서 실행 하는 경우 사용 합니다.
 - 최신 가격 가져오기 
-    - **/ SkuRecommendationCurrencyCode**: (예: 가격을 표시 하는 통화 "USD")입니다.
-    - **/ SkuRecommendationOfferName**: 제품 이름 (예: "-0003 MS-AZR"). 자세한 내용은 참조는 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지입니다.
-    - **/ SkuRecommendationRegionName**: 지역 이름 (예: "미국 서 부")입니다.
-    - **/ SkuRecommendationSubscriptionId**: 구독 ID입니다.
-    - **/ AzureAuthenticationTenantId**: Authentication 테 넌 트가 있습니다.
-    - **/ AzureAuthenticationClientId**: 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다.
+    - **/SkuRecommendationCurrencyCode**: (예: 가격을 표시 하는 통화 "USD")입니다.
+    - **/SkuRecommendationOfferName**: 제품 이름 (예: "MS-AZR-0003P"). 자세한 내용은 참조는 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지입니다.
+    - **/SkuRecommendationRegionName**: 지역 이름 (예: "미국 서 부")입니다.
+    - **/SkuRecommendationSubscriptionId**: 구독 ID입니다.
+    - **/AzureAuthenticationTenantId**: Authentication 테 넌 트가 있습니다.
+    - **/AzureAuthenticationClientId**: 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다.
     - 다음 인증 옵션 중 하나입니다.
         - 대화형
             - **AzureAuthenticationInteractiveAuthentication**: 인증 팝업 창에 대 한 true로 설정 합니다.

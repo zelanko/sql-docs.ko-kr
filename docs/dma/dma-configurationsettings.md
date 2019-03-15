@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)에 대 한 설정 구성 | Microsoft Docs
 description: 구성 파일의 값을 업데이트 하 여 Data Migration Assistant에 대 한 설정을 구성 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: ceca358e47a2cabbe01e64498d61603717a0d370
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 206a0fe9ae945267483cf7ee2ccec08eda2696c2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419254"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973952"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
@@ -91,7 +91,7 @@ Data Migration Assistant 마이그레이션합니다 동시에 여러 데이터�
 
 - databaseLockTimeout
 
-   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (기본값 = 5000)
+   이 매개 변수는 [잠금을 설정\_제한 시간 초과\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) 에서 *밀리초*합니다. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 

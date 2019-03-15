@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590427"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973922"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@ProcName =** ] **'**_프로시저_**'**  
+ [ **@ProcName =** ] **'**_procedure_**'**  
  옵션을 설정할 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [  **@OptionName =** ] **'**_옵션_**'**  
+ [ **@OptionName =** ] **'**_option_**'**  
  설정할 옵션의 이름입니다. 에 대 한 값만 *옵션* 됩니다 **시작**합니다.  
   
- [  **@OptionValue =** ] **'**_값_**'**  
+ [ **@OptionValue =** ] **'**_value_**'**  
  옵션을 설정할 것인지 여부입니다 (**true** 또는 **온**) 또는 해제 (**false** 또는 **해제**). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -64,15 +64,16 @@ sp_procoption [ @ProcName = ] 'procedure'
  다음 예에서는 프로시저의 자동 실행을 설정합니다.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  다음 예에서는 저장 프로시저가 자동으로 실행되지 않도록 설정합니다.  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   

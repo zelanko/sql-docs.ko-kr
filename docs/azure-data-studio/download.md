@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801349"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973133"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -38,11 +38,12 @@ ms.locfileid: "56801349"
 
 ## <a name="get-azure-data-studio-for-windows"></a>Windows에 대한 Azure Data Studio 가져오기
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 릴리스에는 표준 Windows 설치 관리자 경험 및 .zip을 포함합니다.
+이 릴리스의 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 표준 Windows 설치 관리자 환경 및.zip 파일을 포함 합니다.
+
+합니다 *사용자 설치 관리자* 이 필요 하지 않으므로 관리자 권한으로 설치 및 업그레이드를 간소화 하는 것이 좋습니다. 사용자 설치 관리자를 관리자 권한 사용자 로컬 AppData (LOCALAPPDATA) 폴더 위치는 필요가 없습니다. 사용자 설치 관리자는 또한 원활 하 게 백그라운드 업데이트 환경을 제공 합니다. 자세한 내용은 [Windows에 대 한 사용자 설정](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)합니다.
+
 
 **사용자 설치 관리자** (권장)
-
-사용자 설치 관리자가 필요 하지 않으므로 관리자 권한으로 설치 및 업그레이드를 간소화 하는 것이 좋습니다.
 
 1. 다운로드 및 실행 합니다 [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *사용자* Windows 용 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2072725)합니다.
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.

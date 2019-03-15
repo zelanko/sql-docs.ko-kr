@@ -3,17 +3,17 @@ title: R 언어와 SQL Server Machine Learning-인터넷 액세스 없이 Python
 description: 오프 라인 상태 이거나 연결이 끊긴 Machine Learning R 및 Python 설치 격리 된 SQL Server 인스턴스에서 네트워크 방화벽으로 보호 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596994"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976323"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server 기계 학습의 R 및 Python 인터넷 액세스 없이 컴퓨터를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ ms.locfileid: "53596994"
 
 데이터베이스 내 분석 데이터베이스 엔진 인스턴스 및 SQL Server의 버전에 따라 R 및 Python 통합에 대 한 추가 구성 요소 구성 됩니다. 
 
-+ SQL Server 2017에는 R 및 Python 포함 됩니다. 
-+ SQL Server 2016은 R 전용입니다. 
++ SQL Server 2017에 R 및 Python 포함 됩니다. 
++ SQL Server 2016은 R 전용입니다.
 
 격리 된 서버에서 기계 학습 및 R/Python 언어별 기능 CAB 파일을 통해 추가 됩니다. 
 
@@ -42,8 +42,8 @@ ms.locfileid: "53596994"
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python 열기     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
 ###  <a name="2---get-sql-server-2017-installation-media"></a>2-SQL Server 2017 설치 미디어 가져오기
 
@@ -55,7 +55,7 @@ Microsoft Python 서버    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 오프 라인 설치
 
-SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 전용 CAB 파일에 대 한 제품 패키지 및 Microsoft의 오픈 소스 R 배포 각각. 이러한 버전 중 하나를 설치 하 여 시작 합니다. RTM에서 SP 1, SP 2입니다. 기본 설치 위치에 있으면 다음 단계로 누적 업데이트를 적용할 수 있습니다.
+SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 전용 CAB 파일에 대 한 제품 패키지 및 Microsoft의 오픈 소스 R 배포 각각. 이러한 버전 중 하나를 설치 하 여 시작 합니다. RTM, SP 1, SP 2. 기본 설치 위치에 있으면 다음 단계로 누적 업데이트를 적용할 수 있습니다.
 
 인터넷 연결 컴퓨터에서 SQL Server 2016에서 데이터베이스 내 분석을 설치 하려면 설치 프로그램에서 사용 되는 CAB 파일을 다운로드 합니다. 
 
@@ -75,7 +75,9 @@ SQL Server 2016 데이터베이스 내 분석은 두 가지를 사용 하 여 R 
 
 ## <a name="transfer-files"></a>파일 전송
 
-대상 컴퓨터에 SQL Server 설치 미디어 (.iso 또는.cab) 및 데이터베이스 내 분석 CAB 파일을 복사 합니다. 대상 컴퓨터의 동일한 폴더에 CAB 파일 및 미디어 파일 설치와 같은 배치 **다운로드** 또는 설치 사용자의 %temp * 폴더입니다.
+대상 컴퓨터에 SQL Server 설치 미디어 (.iso 또는.cab) 및 데이터베이스 내 분석 CAB 파일을 복사 합니다. 설치 사용자의 %TEMP * 폴더와 같은 대상 컴퓨터에서 동일한 폴더에 CAB 파일 및 설치 미디어 파일을 배치 합니다.
+
+% TEMP % 폴더 Python CAB 파일에 필요 합니다. R에 대 한 % TEMP %를 사용할 수도 있고 CAB 경로로 myrcachedirectory 매개 변수를 설정 합니다. 키를 누릅니다.
 
 다음 스크린샷은 SQL Server 2017 CAB 및 ISO 파일을 보여 줍니다. SQL Server 2016 다운로드 다르게: 2016에 대 한 설치 미디어 및 파일 수를 줄입니다 (Python 없음)에 해당 하는 파일의 이름은입니다.
 

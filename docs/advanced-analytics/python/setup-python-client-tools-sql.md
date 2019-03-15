@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579563"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976313"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Python 통합은 Python 옵션을 포함 하는 경우 SQL Server 2017 이상부
 설치 유효성 검사를 사용할 수 있습니다 기본 제공 Jupyter Notebook이이 문서에 설명 된 대로 또는 [라이브러리를 링크](#install-ide) PyCharm 또는 일반적으로 사용 하는 모든 다른 IDE.
 
 > [!Tip]
-> 이러한 실습 비디오 데모를 참조 하세요 [실행할 R 및 Python Jupyter Notebook에서 SQL Server에서 원격으로](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)입니다.
+> 이러한 실습 비디오 데모를 참조 하세요 [실행할 R 및 Python Jupyter Notebook에서 SQL Server에서 원격으로](https://youtu.be/D5erljpJDjE)입니다.
 
 > [!Note]
 > 클라이언트 라이브러리 설치 하는 대신 사용 하는 [독립 실행형 서버](../install/sql-machine-learning-standalone-windows-install.md) 심층 시나리오 작업에 대 한 일부 고객은 선호 하는 풍부한 클라이언트로 합니다. 독립 실행형 서버는 SQL Server에서 완전히 분리 되지만 동일한 Python 라이브러리를 있기 때문에 사용할 수 있습니다 클라이언트로 SQL Server 데이터베이스 내 분석에 대 한 합니다. 가져오기 및 다른 데이터 플랫폼에서 데이터를 모델링 하는 기능을 포함 하 여 비 SQL 관련 작업에 사용할 수 있습니다. 독립 실행형 서버를 설치한 경우에이 위치에서 Python 실행 파일을 찾을 수 있습니다: `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`합니다. 설치 유효성을 검사 하 [Jupyter notebook을 엽니다](#python-tools) 는 Python.exe를 사용 하 여 해당 위치에서 명령을 실행 합니다.

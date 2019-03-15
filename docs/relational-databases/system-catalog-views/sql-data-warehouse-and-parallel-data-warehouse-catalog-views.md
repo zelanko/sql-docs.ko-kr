@@ -3,7 +3,7 @@ title: SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰 
 ms.custom: ''
 ms.date: 03/15/2017
 ms.service: sql-data-warehouse
-ms.reviewer: ''
+ms.reviewer: jrasnick
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,17 +12,17 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: db01843c9ef67a7246544b5ce73fafab7655ac8b
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 053eb234dee34d95e0fc3372a4626b8dee02a4ab
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590373"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973562"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  이 항목에서는 나열 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰.  
+ 이 항목에서는 나열 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰.  
   
  모든 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 하 고 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰를 사용 하 여 시작 **sys.pdw**합니다.  
   
@@ -59,8 +59,12 @@ ms.locfileid: "56590373"
   
  [sys.pdw_table_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
- [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)  
-  
+ [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
+
+[sys.workload_management_workload_classifier_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (미리 보기)
+
+[sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (미리 보기)
+ 
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
  다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:
 

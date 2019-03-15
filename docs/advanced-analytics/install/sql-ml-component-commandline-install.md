@@ -3,17 +3,17 @@ title: R 및 Python 구성 요소-SQL Server Machine Learning의 명령 프롬�
 description: R 언어 및 Python 통합 SQL Server 데이터베이스 엔진 인스턴스를 추가할 SQL Server 명령줄 설치를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645529"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976353"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>SQL Server machine learning 명령줄에서 R 및 Python 구성 요소 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -48,16 +48,16 @@ ms.locfileid: "53645529"
 
 | 인수 | Description |
 |-----------|-------------|
-| / 기능 AdvancedAnalytics = | 데이터베이스의 버전을 설치합니다. SQL Server 2017 Machine Learning Services (In-database) 또는 SQL Server 2016 R Services (In-database).  |
-| / 기능 SQL_INST_MR = | SQL Server 2017만 적용 됩니다. AdvancedAnalytics를이 쌍으로 연결 합니다. Microsoft R Open 및 전용 R 패키지를 포함 하 여 (데이터베이스 내) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 해당 릴리스에 대 한 매개 변수가 있습니다.|
-| / 기능 SQL_INST_MPY = | SQL Server 2017만 적용 됩니다. AdvancedAnalytics를이 쌍으로 연결 합니다. Anaconda 및 전용 Python 패키지를 포함 하 여 (In-database) Python 기능을 설치 합니다. |
-| / 기능 = SQL_SHARED_MR | 독립 실행형 버전에 대 한 R 기능을 설치합니다. SQL Server 2017 Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R Server (독립 실행형). 독립 실행형 서버는 "공유 기능" 데이터베이스 엔진 인스턴스에 바인딩되지 않습니다.|
-| / 기능 SQL_SHARED_MPY = | SQL Server 2017만 적용 됩니다. 독립 실행형 버전의 Python 기능을 설치합니다. SQL Server 2017 Machine Learning Server (독립 실행형). 독립 실행형 서버는 "공유 기능" 데이터베이스 엔진 인스턴스에 바인딩되지 않습니다.|
+| /FEATURES = AdvancedAnalytics | 데이터베이스의 버전을 설치합니다. SQL Server 2017 Machine Learning Services (In-database) 또는 SQL Server 2016 R Services (In-database).  |
+| /FEATURES = SQL_INST_MR | SQL Server 2017만 적용 됩니다. AdvancedAnalytics를이 쌍으로 연결 합니다. Microsoft R Open 및 전용 R 패키지를 포함 하 여 (데이터베이스 내) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 해당 릴리스에 대 한 매개 변수가 있습니다.|
+| /FEATURES = SQL_INST_MPY | SQL Server 2017만 적용 됩니다. AdvancedAnalytics를이 쌍으로 연결 합니다. Anaconda 및 전용 Python 패키지를 포함 하 여 (In-database) Python 기능을 설치 합니다. |
+| /FEATURES = SQL_SHARED_MR | 독립 실행형 버전에 대 한 R 기능을 설치합니다. SQL Server 2017 Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R Server (독립 실행형). 독립 실행형 서버는 "공유 기능" 데이터베이스 엔진 인스턴스에 바인딩되지 않습니다.|
+| /FEATURES = SQL_SHARED_MPY | SQL Server 2017만 적용 됩니다. 독립 실행형 버전의 Python 기능을 설치합니다. SQL Server 2017 Machine Learning Server (독립 실행형). 독립 실행형 서버는 "공유 기능" 데이터베이스 엔진 인스턴스에 바인딩되지 않습니다.|
 | /IACCEPTROPENLICENSETERMS  | 오픈 소스 R 구성 요소를 사용 하 여에 대 한 사용 약관에 동의한 것을 나타냅니다. |
 | /IACCEPTPYTHONLICENSETERMS | Python 구성 요소를 사용 하 여에 대 한 사용 약관에 동의한 것을 나타냅니다. |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server를 사용 하 여에 대 한 사용 약관에 동의한 것을 나타냅니다.|
 | /MRCACHEDIRECTORY | 오프 라인 설치에 대 한 R 구성 요소 CAB 파일이 포함 된 폴더를 설정 합니다. |
-| / MPYCACHEDIRECTORY | 오프 라인 설치에 대 한 Python 구성 요소 CAB 파일이 포함 된 폴더를 설정 합니다. |
+| / MPYCACHEDIRECTORY | 나중에 사용하도록 예약되어 있습니다. % TEMP %를 사용 하 여 인터넷에 연결 되지 않은 컴퓨터에서 설치에 대 한 Python 구성 요소 CAB 파일을 저장 합니다. |
 
 
 ## <a name="indb"></a> 데이터베이스 인스턴스 설치
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> 자동 설치
 
-자동 설치를.cab 파일 위치에 대 한 검사를 하지 않습니다. 이 따라서가에 대 한.cab 파일 압축을 풀 수를 저장할 위치를 지정 해야 합니다. 이 대 한 임시 디렉터리를 수 있습니다.
+자동 설치를.cab 파일 위치에 대 한 검사를 하지 않습니다. 이 따라서가에 대 한.cab 파일 압축을 풀 수를 저장할 위치를 지정 해야 합니다. Python에 대 한 CAB 파일을 %TEMP * 있어야 합니다. R에 대 한 폴더를 설정할 수 있습니다 경로 사용 하 여이 대 한 임시 디렉터리를 수 있습니다.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> 독립 실행형 서버 설치

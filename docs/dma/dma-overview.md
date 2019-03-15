@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)의 개요 | Microsoft Docs
 description: 다른 SQL Server 또는 Azure 데이터베이스에 SQL Server 데이터베이스를 마이그레이션하기 위해 Data Migration Assistant를 사용 하는 방법 알아보기
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 7ea185bd40dc9477b00b91069fa0ce8d93986aa5
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 0bb91177a204f93bd141d57b90420678dcd0b722
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321619"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973792"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 Data Migration Assistant (DMA)를 사용 하면 새 버전의 SQL Server 또는 Azure SQL Database에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드 합니다. DMA는 성능 및 안정성 향상 대상 환경에 대 한 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
@@ -48,7 +48,7 @@ DMA를 설치 하려면 최신 버전의 도구를 다운로드 합니다 [Micro
 
   - 성능
   - 보안
-  - Storage
+  - 스토리지
 
 - 최신 SQL Server 호스트 인스턴스가 온-프레미스 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure 가상 컴퓨터 (VM)에서 온-프레미스 SQL Server 인스턴스를 마이그레이션하십시오. VPN 또는 기타 기술을 사용 하 여 Azure VM은 액세스할 수 있습니다. 마이그레이션 워크플로 사용 하면 다음 구성 요소를 마이그레이션할 수 있습니다.
 
@@ -59,13 +59,13 @@ DMA를 설치 하려면 최신 버전의 도구를 다운로드 합니다 [Micro
 
 - 성공적인 마이그레이션 후 응용 프로그램 수 대상 SQL Server 데이터베이스에 원활 하 게 연결 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 평가 실행 하려면 SQL Server의 멤버일 필요가 **sysadmin** 역할입니다.
 
 ## <a name="supported-source-and-target-versions"></a>지원 되는 원본 및 대상 버전
 DMA는 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 하 고 대부분의 SQL Server 버전에 대 한 업그레이드에 사용 해야 합니다. 지원 되는 원본 및 대상 버전이 됩니다.
 
-**원본**
+**Sources**
 - SQL Server 2005
 - SQL Server 2008
 - SQL Server 2008 R2
@@ -82,7 +82,7 @@ DMA는 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 �
 - Azure SQL 데이터베이스
 - Azure SQL Database Managed Instance
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고자료
 [SQL Server 마이그레이션 평가](../dma/dma-assesssqlonprem.md)     
 [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)     
 [Data Migration Assistant를 사용 하 여 마이그레이션할 온-프레미스 SQL Server](../dma/dma-migrateonpremsql.md)     

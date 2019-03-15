@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server)에 대 한 모범 사례 | Microsoft Docs
 description: Data Migration Assistant를 사용 하 여 SQL Server 데이터베이스 마이그레이션에 대 한 모범 사례를 알아봅니다.
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643831"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973672"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant를 실행 하기 위한 모범 사례
 이 문서에서는 설치, 평가 및 마이그레이션에 대 한 몇 가지 모범 사례 정보를 제공 합니다.
@@ -41,4 +41,4 @@ ms.locfileid: "49643831"
 
 - 원본 및 대상 서버에 연결할 때 연결을 암호화 하는 사용 하도록 설정 합니다. SSL을 사용 하 여 암호화 Data Migration Assistant 및 SQL 로그인을 마이그레이션하는 경우에 특히 도움이 되는 SQL Server 인스턴스 간에 네트워크를 통해 전송 되는 데이터의 보안을 강화 합니다. SSL 암호화 사용 되지 않는 경우 공격자가 네트워크를 손상 시킬 마이그레이션되는 SQL 로그인 차단할 수 있습니다 하거나에 즉석 공격자가 수정 합니다.
 
-    그러나 모든 액세스가 보안 인트라넷 구성과 관련된 경우 암호화가 필요하지 않을 수도 있습니다. 암호화를 사용 하도록 설정 하면 이기 암호화 및 패킷 암호 해독 하는 데 필요한 추가적인 오버 헤드 때문에 성능이 느려집니다. 자세한 내용은 참조 하십시오 [SQL Server 연결 암호화](https://go.microsoft.com/fwlink/?linkid=832513)합니다.
+    그러나 모든 액세스가 보안 인트라넷 구성과 관련된 경우 암호화가 필요하지 않을 수도 있습니다. 암호화를 사용 하도록 설정 하면 이기 암호화 및 패킷 암호 해독 하는 데 필요한 추가적인 오버 헤드 때문에 성능이 느려집니다. 자세한 내용은 참조 하십시오 [SQL Server 연결 암호화](https://go.microsoft.com/fwlink/?linkid=832513)합니다.

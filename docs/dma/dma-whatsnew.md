@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant (SQL Server)의 새로운 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 60145b2433d7b9d2b6cda4453e2d91599b865a86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ac3f4b2ab00b7a2c792788d6e778857c7d563f66
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973212"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 이 문서는 각 릴리스에 추가의 도우미 DMA (Data Migration)를 나열합니다.
@@ -47,7 +47,7 @@ DMA v4.0 릴리스의 데이터베이스를 호스팅하는 컴퓨터에서 수�
 
 추가 세부 정보에 대 한 문서를 참조 [온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인](dma-sku-recommend-sql-db.md)합니다.
 
-## <a name="dma-v36"></a>DMA v3.6의 경우
+## <a name="dma-v36"></a>DMA v3.6
 DMA v3.6 릴리스의에서는 가장 일반적인 마이그레이션 블 로커의 영향을 받는 스키마 개체에 대 한 "자동 수정"을 소개 합니다.
 
 이 릴리스에서 다음 마이그레이션 차단에 대 한 자동 복구를 제공 하 고 동작 문제를 변경 합니다.

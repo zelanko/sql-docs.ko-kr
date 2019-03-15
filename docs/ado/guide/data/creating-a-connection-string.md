@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611395"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972772"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
 연결 문자열 (즉, 매개 변수) 인수/값 쌍의 세미콜론으로 구분 된 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -42,9 +42,9 @@ ms.locfileid: "47611395"
   
  다른 인수에서 명명 된 공급자에 전달 되는 *공급자* ADO에서 처리 하지 않고 인수입니다.  
   
- HelloData 응용 프로그램 [HelloData: 간단한 ADO 응용 프로그램](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 다음 연결 문자열을 사용 합니다.  
+ HelloData 응용 프로그램 [HelloData: 간단한 ADO 응용 프로그램을](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 다음 연결 문자열을 사용 합니다.  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  OLE DB Provider for SQL Server 설명서를 따라 대체할 수 "Server"를 *데이터 원본* 매개 변수 및 "데이터베이스"에 대 한 합니다 *Initial Catalog* 매개 변수입니다. 따라서 다음 연결 문자열은 위와 동일한 결과가 발생 합니다.  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

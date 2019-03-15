@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734961"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973502"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합 검색
 기존에 결과 수신 하는 대신 **레코드 집합** 개체, ADO 스트림으로 대신 쿼리 결과 검색할 수 있습니다. ADO **Stream** 개체 (또는 COM을 지 원하는 다른 개체 **IStream** ASP 같은 인터페이스 **요청** 고 **응답** 개체 ) 이러한 결과 포함 하기 위해 사용할 수 있습니다. XML 형식으로 결과 검색 하는 데이 기능에 대 한 하나의 사용이 됩니다. SQL Server를 사용 하 여 예를 들어, XML 결과 반환할 수 있습니다 SQL SELECT 쿼리를 사용 하 여 FOR XML 절을 사용 하 여 XPath 쿼리를 사용 하 여 등 여러 가지 방법으로.  
@@ -30,7 +30,7 @@ ms.locfileid: "47734961"
 ## <a name="for-xml-query-example"></a>XML 쿼리 예  
  다음 예에서는 VBScript에서 Northwind 데이터베이스에 기록 됩니다.  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +145,7 @@ ms.locfileid: "47734961"
   
 ### <a name="for-xml-syntax"></a>XML 구문에 대 한  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +153,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  SQL SELECT FOR XML 문을 예제는 다음과 같습니다.  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +161,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  XML 서식 파일 쿼리로 FOR XML 쿼리는 다음과 같이 나타납니다.  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  이 예제에서는 지정 된 ASP **응답** 개체에 대 한 합니다 **출력 Stream** 속성:  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  다음으로, 지정 **adExecuteStream** 의 매개 변수 **Execute**합니다. 이 예제에서는 XML 데이터 아일랜드를 만들려면 XML 태그에서 스트림을 래핑합니다.  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

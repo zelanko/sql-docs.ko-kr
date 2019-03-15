@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -16,17 +16,17 @@ ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ac5911b551cfaae5151c17a2699f0833fec001e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8cde8f5d9d50b37f3d89154d09d6d60ac3bc987
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798841"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972782"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale 및 Precision 속성 예제(VC++)
 이 예에서는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 속성 필드의 전체 자릿수 및 소수 자릿수를 표시 하는 ***할인*** 목차는  ***Pubs*** 데이터베이스입니다.  
   
-```  
+```cpp
 // BeginNumericScaleCpp.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  

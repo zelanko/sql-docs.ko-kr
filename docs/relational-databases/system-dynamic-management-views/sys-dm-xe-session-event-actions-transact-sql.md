@@ -20,17 +20,17 @@ ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6725ebaf9aa90e8ab3ae768ad30199a3a8b9b2aa
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: b237cfca3f64335d74b340189b5eddfa02d1e9a5
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785834"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973232"
 ---
 # <a name="sysdmxesessioneventactions-transact-sql"></a>sys.dm_xe_session_event_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  이벤트 세션 동작에 대한 정보를 반환합니다. 이벤트가 발생하면 동작이 실행됩니다. 다음 관리 뷰는 동작 실행 횟수 및 총 동작 실행 시간에 대한 통계를 집계합니다.  
+  이벤트 세션 동작에 대한 정보를 반환합니다. 이벤트가 발생하면 동작이 실행됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

@@ -2,7 +2,7 @@
 title: Data Migration Assistant (SQL Server) 명령줄에서 실행 | Microsoft Docs
 description: 마이그레이션에 대 한 SQL Server 데이터베이스를 평가 하기 위해 명령줄에서 Data Migration Assistant를 실행 하는 방법 알아보기
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464729"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974182"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
@@ -34,6 +34,7 @@ Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -45,8 +46,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름   | Y
 |`/AssessmentDatabases`     | 연결 문자열의 공백으로 구분 된 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자 구분 합니다. | Y
-|`/AssessmentTargetPlatform`     | 평가 지원 되는 값에 대 한 대상 플랫폼: AzureSqlDatabase ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 및 SqlServerWindows2017 합니다. 기본값은 SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | 기능 패리티 규칙을 실행  | N
+|`/AssessmentSourcePlatform`     | 평가 지원 되는 값에 대 한 원본 플랫폼: SqlOnPrem, RdsSqlServer. 대상 준비 상태 평가 Cassandra 소스 플랫폼으로 지원 합니다. 기본값은 SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | 평가 지원 되는 값에 대 한 대상 플랫폼: AzureSqlDatabase ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 및 SqlServerWindows2017 합니다. 대상 준비 평가 대상 플랫폼으로 CosmosDB도 지원 합니다. 기본값은 SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | 기능 패리티 규칙을 실행 합니다. 기능 패리티 평가 대상 플랫폼 AzureSqlDatabase RdsSqlServer 소스 플랫폼을 사용 하는 경우 지원 되지 않습니다.  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 호환성 규칙을 실행  | Y <br> AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations 이어서 필요 합니다.
 |`/AssessmentEvaluateRecommendations`     | 기능 권장 사항 실행        | Y <br> (AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendationsis 필요)
 |`/AssessmentOverwriteResult`     | 결과 파일 덮어쓰기    | N
@@ -146,15 +148,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**대상 플랫폼이 SQL Azure 데이터베이스에 대 한 단일 데이터베이스 평가.json 및.csv 파일로 결과 저장**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **여러 데이터베이스 대상 준비 상태 평가**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **Windows 인증을 사용 하 여 서버의 모든 데이터베이스에 대 한 대상 준비 평가**
@@ -191,6 +211,8 @@ DmaCmd.exe /Action=AssessTargetReadiness
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>
