@@ -19,40 +19,43 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956014"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080255"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  계획 핸들로 지정한 일괄 처리에 대한 XML 형식의 실행 계획을 반환합니다. 계획 핸들로 지정된 계획은 캐시되거나 현재 실행 중일 수 있습니다.  
+계획 핸들로 지정한 일괄 처리에 대한 XML 형식의 실행 계획을 반환합니다. 계획 핸들로 지정된 계획은 캐시되거나 현재 실행 중일 수 있습니다.  
   
- 실행 계획 XML 스키마는 게시 및에서 사용할 수 있습니다 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 설치된 디렉터리에서도 사용할 수 있습니다.  
+실행 계획 XML 스키마는 게시 및에서 사용할 수 있습니다 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 설치된 디렉터리에서도 사용할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-sys.dm_exec_query_plan ( plan_handle )  
+sys.dm_exec_query_plan(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>인수  
- *plan_handle*  
- 캐시되거나 현재 실행 중인 일괄 처리에 대한 쿼리 계획을 고유하게 식별합니다.  
+*plan_handle*  
+실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 및 해당 계획은 계획 캐시에 되거나 현재 실행 합니다. *plan_handle* 됩니다 **varbinary(64)** 합니다.   
+
+합니다 *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.
   
- *plan_handle* 됩니다 **varbinary(64)** 합니다. *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
- [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
- [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
-  
- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -78,7 +81,7 @@ sys.dm_exec_query_plan ( plan_handle )
  에 허용 된 중첩된 수준 수가 제한으로 인해 합니다 **xml** 데이터 형식 **sys.dm_exec_query_plan** 중첩 요소의 128 수준을 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 및 이후 버전에서는 합니다 **query_plan** 열 NULL을 반환 합니다. 사용할 수는 [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 동적 관리 함수를 텍스트 형식의 쿼리 계획의 출력을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 실행할 **sys.dm_exec_query_plan**, 사용자의 멤버 여야 합니다.는 **sysadmin** 고정 서버 역할 또는 서버에 대 한 VIEW SERVER STATE 권한이 있습니다.  
+ 실행할 **sys.dm_exec_query_plan**, 사용자의 멤버 여야 합니다.는 **sysadmin** 있거나 고정 서버 역할은 `VIEW SERVER STATE` 서버에 대 한 권한.  
   
 ## <a name="examples"></a>예  
  다음 예제에서는 사용 하는 방법을 표시 합니다 **sys.dm_exec_query_plan** 동적 관리 뷰.  
@@ -95,7 +98,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  먼저 `sp_who` 저장 프로시저를 사용하여 쿼리 또는 일괄 처리를 실행 중인 프로세스의 SPID(서버 프로세스 ID)를 검색합니다.  
   
-```  
+```sql  
 USE master;  
 GO  
 exec sp_who;  
@@ -104,7 +107,7 @@ GO
   
  `sp_who`에 의해 반환되는 결과 집합은 SPID가 `54`임을 나타냅니다. `sys.dm_exec_requests` 동적 관리 뷰에 이 SPID를 사용하여 다음 쿼리를 통해 계획 핸들을 검색할 수 있습니다.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT * FROM sys.dm_exec_requests  
@@ -114,39 +117,44 @@ GO
   
  반환 되는 테이블 **sys.dm_exec_requests** 실행 속도가 느린 쿼리나 일괄 처리에 대 한 계획 핸들 임을 나타냅니다 `0x06000100A27E7C1FA821B10600`,으로 지정할 수 있는 합니다 *plan_handle* 인수`sys.dm_exec_query_plan` 를 다음과 같이 XML 형식의 실행 계획을 검색 합니다. 실행 속도가 느린 쿼리나 일괄 처리에 대 한 XML 형식의 실행 계획에 포함 된 **query_plan** 반환한 테이블의 열 `sys.dm_exec_query_plan`.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
+SELECT * 
+FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);  
 GO  
 ```  
   
 ### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>2. 계획 캐시에서 모든 쿼리 계획 검색  
  계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_query_plan`으로 전달합니다. 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 현재 반환된 테이블의 `query_plan` 열에 있습니다.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_cached_plans AS cp 
+CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
 GO  
 ```  
   
 ### <a name="c-retrieve-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>3. 서버가 계획 캐시에서 쿼리 통계를 수집한 모든 쿼리 계획 검색  
  서버가 통계를 수집한 현재 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_query_stats` 동적 관리 뷰를 쿼리하여 캐시에서 이 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_query_stats` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_query_plan`으로 전달합니다. 서버가 통계를 수집한 현재 계획 캐시에 있는 각 계획의 XML 실행 계획 출력은 반환된 테이블의 `query_plan` 열에 있습니다.  
   
-```  
+```sql  
 USE master;  
 GO  
-SELECT * FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
+SELECT * 
+FROM sys.dm_exec_query_stats AS qs 
+CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle);  
 GO  
 ```  
   
 ### <a name="d-retrieve-information-about-the-top-five-queries-by-average-cpu-time"></a>4. 평균 CPU 시간별 상위 5개 쿼리에 대한 정보 검색  
  다음 예에서는 상위 5개 쿼리에 대한 계획과 평균 CPU 시간을 반환합니다.  
   
-```  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-Plan_handle, query_plan   
+   plan_handle, query_plan   
 FROM sys.dm_exec_query_stats AS qs  
 CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
 ORDER BY total_worker_time/execution_count DESC;  
@@ -163,4 +171,3 @@ GO
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   
   
-

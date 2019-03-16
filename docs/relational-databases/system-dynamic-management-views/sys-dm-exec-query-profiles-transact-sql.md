@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fb79f056e533f4aabacdab5e3467bedce22b696
-ms.sourcegitcommit: e0178cb14954c45575a0bab73dcc7547014d03b3
+ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860096"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58080410"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  쿼리가 실행되는 동안 실시간 쿼리 프로세스를 모니터링합니다. 예를 들어 이 DMV를 사용하여 느리게 실행되는 쿼리 부분을 결정합니다. 설명 필드에서 식별된 열을 사용하여 이 DMV를 다른 시스템 DMV와 조인합니다. 또는 타임스탬프 열을 사용하여 이 DMV를 다른 성능 카운터(예: 성능 모니터, xperf)와 조인합니다.  
+쿼리가 실행되는 동안 실시간 쿼리 프로세스를 모니터링합니다. 예를 들어 이 DMV를 사용하여 느리게 실행되는 쿼리 부분을 결정합니다. 설명 필드에서 식별된 열을 사용하여 이 DMV를 다른 시스템 DMV와 조인합니다. 또는 타임스탬프 열을 사용하여 이 DMV를 다른 성능 카운터(예: 성능 모니터, xperf)와 조인합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
  반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적이며 기존 옵션(예: 쿼리가 완료될 경우에만 출력을 만드는 SET STATISTICS XML ON)의 결과와 일치하지 않습니다.  
@@ -40,8 +40,8 @@ ms.locfileid: "52860096"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
 |request_id|**int**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
-|sql_handle|**varbinary(64)**|대상 쿼리를 식별합니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
-|plan_handle|**varbinary(64)**|대상 쿼리를 식별합니다(dm_exec_query_stats.plan_handle 참조).|  
+|sql_handle|**varbinary(64)**|일괄 처리를 고유 하 게 식별 하는 토큰 또는 쿼리가 포함 된 저장된 프로시저입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
+|plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 및 해당 계획은 계획 캐시에 되거나 현재 실행 합니다. Dm_exec_query_stats.plan_handle를 참조합니다.|  
 |physical_operator_name|**nvarchar(256)**|물리적 연산자 이름입니다.|  
 |node_id|**int**|쿼리 트리에서 연산자 노드를 식별합니다.|  
 |thread_id|**int**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  
@@ -76,30 +76,22 @@ ms.locfileid: "52860096"
 |estimated_read_row_count|**bigint**|**적용 대상:** 부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>잔여 조건자가 적용 되기 전에 운영자가 읽을 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 쿼리 계획 노드에 어떤 IO도 없는 경우 모든 IO 관련 카운터가 NULL로 설정됩니다.  
+ 쿼리 계획 노드에 모든 I/O에 없는 경우 모든 O 관련 카운터가 NULL로 설정 됩니다.  
   
- 이 DMV에서 보고한 IO 관련 카운터는 다음과 같은 두 가지 방식에서 SET STATISTICS IO에서 보고하는 것보다 더 세분화됩니다.  
+ 이 DMV에서 보고 O 관련 카운터는에서 보고 하는 것 보다 더 세부적인 `SET STATISTICS IO` 다음 두 가지 방법으로:  
   
--   SET STATISTICS IO는 모든 IO의 카운터를 지정된 테이블로 그룹화합니다. 이 DMV를 사용하면 IO를 수행하는 쿼리 계획의 개별 노드에 대한 별도의 카운터를 테이블로 가져옵니다.  
+-   `SET STATISTICS IO` 모든 I/O를 함께 지정된 된 테이블에 대 한 카운터를 그룹화합니다. 이 DMV를 사용하면 IO를 수행하는 쿼리 계획의 개별 노드에 대한 별도의 카운터를 테이블로 가져옵니다.  
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
-부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계를 사용 하 여 side-by-side-존재 합니다. 새 쿼리 실행 통계 프로 파일링 인프라는 실제 행 수와 같은 연산자 당 쿼리 실행 통계를 수집 하는 성능 오버 헤드가 크게 줄어듭니다. 전역를 사용 하거나이 기능을 사용할 수 있습니다 시작 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 자동으로 켜 집니다 query_thread_profile 확장된 이벤트를 사용할 때 또는 합니다.
+부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 인프라를 프로 파일링 하는 표준 쿼리 실행 통계 인프라를 프로 파일링 하는 간단한 쿼리 실행 통계를 사용 하 여 side-by-side-존재 합니다. 
 
->[!NOTE]
-> 경과 된 시간과 CPU 성능 영향을 줄이기 위해 간단한 쿼리 실행 통계 프로 파일링 인프라 아래에서 지원 되지 않습니다.
+`SET STATISTICS XML ON` 및 `SET STATISTICS PROFILE ON` 항상 인프라를 프로 파일링 하는 표준 쿼리 실행 통계를 사용 합니다.
 
-STATISTICS XML ON 및 인프라를 프로 파일링 하는 레거시 쿼리 실행 통계를 사용 하는 항상 SET STATISTICS PROFILE ON을 설정 합니다.
-
-Sys.dm_exec_query_profiles에서 출력을 사용 하도록 설정 하려면 다음을 수행:
-
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 및 나중에 조사 중인 쿼리와 함께 SET STATISTICS PROFILE ON 또는 SET STATISTICS XML ON을 사용 합니다. 이 프로 파일링 인프라가 사용 하도록 설정 하 고 집합 명령이 실행 된 세션에 대 한 DMV에서 결과 생성 합니다. 응용 프로그램에서 실행 되는 쿼리를 조사 하는 고 된 SET 옵션을 사용할 수 없습니다, 경우에 프로 파일링 인프라를 켜 집니다 query_post_execution_showplan 이벤트를 사용 하 여 확장 이벤트를 만들 수 있습니다. 
-
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1을 켤 수 있습니다 하거나 [추적 플래그 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 하거나 query_thread_profile 확장된 이벤트를 사용 합니다.
+출력에 사용할 수 있도록 `sys.dm_exec_query_profiles` 인프라를 프로 파일링 하는 쿼리를 사용 하도록 설정 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
 
 >[!NOTE]
 > 조사 중인 쿼리를 프로 파일링 인프라를 사용 하도록 설정 된 후 시작 해야 합니다. 쿼리가 이미 실행 중인 경우 확장 이벤트 세션을 시작 하면 결과가 나오지 않습니다 sys.dm_exec_query_profiles에서.
-
 
 ## <a name="permissions"></a>사용 권한  
 
@@ -107,14 +99,14 @@ Sys.dm_exec_query_profiles에서 출력을 사용 하도록 설정 하려면 다
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
    
 ## <a name="examples"></a>예  
- 1단계: sys.dm_exec_query_profiles로 분석할 쿼리를 실행하려는 세션에 로그인합니다. 구성 하려면 프로 파일링에 대 한 쿼리에서 SET STATISTICS PROFILE을 사용 합니다. 동일한 세션에서 쿼리를 실행합니다.  
+ 1단계: 사용 하 여 분석 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles`합니다. 프로 파일링을 위한 쿼리를 구성 하려면 `SET STATISTICS PROFILE ON`합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
-```  
+```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
 SET STATISTICS PROFILE ON;  
 GO  
 
---Or enable query profiling globally under SQL Server 2016 SP1 or above  
+--Or enable query profiling globally under SQL Server 2016 SP1 or above (not needed in SQL Server 2019)  
 DBCC TRACEON (7412, -1);  
 GO 
   
@@ -125,7 +117,7 @@ GO
   
  다음 문은 세션 54에서 현재 실행 중인 쿼리의 진행률을 요약합니다. 진행률을 요약하기 위해 이 문은 각 노드에 대한 모든 스레드의 총 출력 행 수를 계산하고 해당 노드의 추정된 출력 행 수와 비교합니다.  
   
-```  
+```sql  
 --Run this in a different session than the session in which your query is running. 
 --Note that you may need to change session id 54 below with the session id you want to monitor.
 SELECT node_id,physical_operator_name, SUM(row_count) row_count, 
