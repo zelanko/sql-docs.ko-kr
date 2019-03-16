@@ -5,23 +5,23 @@ description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241994"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072128"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
 
 부터 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server 빅 데이터 클러스터를 사용 하면 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포 합니다. 이러한 구성 요소는 읽기, 쓰기, 및 TRANSACT-SQL 또는 Spark의 빅 데이터 처리, 결합 및 대규모 빅 데이터를 사용 하 여 높은 가치의 관계형 데이터에 분석 있게 할 수 있도록 나란히 실행 됩니다.
 
-새로운 기능 및 최신 릴리스의 알려진된 문제에 대 한 자세한 내용은 참조는 [릴리스](big-data-cluster-release-notes.md)합니다.
+새로운 기능 및 최신 릴리스의 알려진된 문제에 대 한 자세한 내용은 참조는 [릴리스](release-notes-big-data-cluster.md)합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ SQL Server 빅 데이터 클러스터는 클러스터의 Linux 컨테이너에 �
 Kubernetes는 오픈 소스 컨테이너 오 케 스트레이 터를 필요에 따라 컨테이너 배포를 확장할 수 있는 경우 다음 표에서 몇 가지 중요 한 Kubernetes 용어를 정의합니다.
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
 | **Node** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
 | **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 하나 이상의 컨테이너의 논리적 그룹-및 관련 응용 프로그램을 실행 하려면 리소스가 필요 합니다. 각 pod; 노드에서 실행 됩니다. 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터를 클러스터의 노드에 pod를 자동으로 할당합니다. |
+| &nbsp; ||
 
 SQL Server 빅 데이터 클러스터에 Kubernetes는 SQL Server 빅 데이터 클러스터;의 상태 Kubernetes 빌드 및 클러스터 노드를 구성 노드에 pod를 할당 하 고 클러스터의 상태를 모니터링 합니다.
 

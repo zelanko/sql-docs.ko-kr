@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596128"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072157"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53596128"
 
 ## <a name="customer-churn"></a>고객 이탈
 
-[고객 이탈 예측 템플릿 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[고객 이탈 예측 템플릿 (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **항목:** 분석 및 고객 이탈은 경쟁 업체에 고객의 손실 해야 관리 및 차단 여기서 모든 업계에서 중요 한 예측: 뱅킹, 통신 및 소매, 등입니다. 이탈 분석의 목표는 이탈 가능성이 있는 고객을 확인한 다음 적절한 조치를 취하여 해당 고객을 보존하고 비즈니스를 유지하는 것입니다.
 
@@ -64,7 +64,7 @@ ms.locfileid: "53596128"
   
 ## <a name="predictive-maintenance"></a>예측 유지 관리
 
-[예측 유지 관리 템플릿 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[예측 유지 관리 템플릿 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **항목:** 예측 유지 관리는 이전 오류를 캡처하고 해당 정보를 사용 하 여 장치를 실패할 수 있는 시기나 위치를 예측 하 여 유지 관리 작업의 효율성을 높이기 위해 것을 목표로 합니다. 분산된 된 데이터 또는 센서를 사용 하는 응용 프로그램에 대 한 장치 노후화를 예측 하는 기능이 특히 유용 합니다. 이 메서드를 모니터링 하거나 IoT (사물 인터넷) 장치에서 오류를 예측 적용할 수도 없습니다.
 

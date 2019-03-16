@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044629"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072307"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Remarks
 이 시스템 함수는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. 기술 자료를 참조 하세요. [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-이 시스템 함수 둘 다에서 작동 **표준** 하 고 **경량** 쿼리 실행 통계 인프라를 프로 파일링 합니다.  
-  
-**표준** 인프라를 프로 파일링 통계를 사용 하 여 사용할 수 있습니다.
-  -  [SET STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  `query_post_execution_showplan` 확장된 이벤트입니다.  
-  
-**경량** 에서 사용할 수 있는 통계 인프라를 프로 파일링은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 사용 하도록 설정할 수 있습니다.
-  -  전역적으로 추적을 사용 하 여 플래그 7412입니다.
-  -  사용 하 여 [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) 확장된 이벤트입니다.
-  
-> [!NOTE]
-> 대신 표준 프로 파일링, DMV와 같은 인프라를 프로 파일링 하는 쿼리 실행 통계의 모든 소비자에 게 경량 프로 파일링 됩니다 사용 하 여 추적 플래그 7412 사용 하도록 설정 하면 [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md)합니다.
-> 그러나 표준 프로 파일링가 여전히 사용 SET STATISTICS XML *실제 계획 포함* 에서 작업 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], 및 `query_post_execution_showplan` xEvent입니다.
-
-> [!IMPORTANT]
-> Tpc-c 워크 로드 테스트와 마찬가지로, 프로 파일링 경량 통계 인프라를 사용 하도록 설정 하면 1.5 ~ 2% 오버 헤드를 추가 합니다. 반면, 표준 통계 프로 파일링 인프라는 동일한 워크 로드 시나리오를 위한 오버 헤드가 최대 90%를 추가할 수 있습니다.
+이 시스템 함수 둘 다에서 작동 **표준** 하 고 **경량** 쿼리 실행 통계 인프라를 프로 파일링 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)를 참조하세요.  
 
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  

@@ -1,6 +1,6 @@
 ---
 title: Analysis Services OLAP 속성 | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072520"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072347"
 ---
 # <a name="olap-properties"></a>OLAP 속성
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 OLAP 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
@@ -266,7 +266,10 @@ ms.locfileid: "53072520"
   
  **MaxRolapOrConditions**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
-  
+ 
+ **RowsetSerializationLimit**   
+ Azure Analysis Services에 적용 됩니다. 클라이언트에 행 집합에서 반환 된 행 수를 제한 합니다. 기본값은-1, 즉 제한이 적용 됩니다. DAX 및 MDX 쿼리에만 적용 됩니다. 광범위 한 데이터 내보내기에서 서버 리소스를 보호 하기 위해 사용할 수 있습니다. 제한을 초과 하는 서버로 전송 하는 쿼리 취소 되 고 오류가 반환 됩니다.  
+
  **UseCalculationCacheRegistry**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   

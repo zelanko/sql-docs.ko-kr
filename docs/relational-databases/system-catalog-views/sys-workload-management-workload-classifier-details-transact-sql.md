@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifier_details (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/08/2019
+ms.date: 03/13/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: e4b884f779de2bf535b58d88659efffbd7901627
-ms.sourcegitcommit: aa8bec762be29a29aed651d98ed4d868da85ba67
+ms.openlocfilehash: 421f47aee86c2e5bbdffe485ffea0cffef73bafd
+ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57975376"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57988779"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL) (미리 보기)
 
