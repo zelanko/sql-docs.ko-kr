@@ -158,7 +158,7 @@ items:
     href: ../reporting-services/working-with-kpis-in-reporting-services.md
   - name: Power BI 통합을 위한 내 설정
     href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
-- name: 개요
+- name: Reporting Services 보고서 서버 기본 모드 개요
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
 - name: 보고서 서버 구성 및 관리(SSRS 기본 모드)
   href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
@@ -280,7 +280,7 @@ items:
     href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
   - name: 보고서 기록 만들기
     href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
-- name: 개요
+- name: Reporting Services 보고서 서버 개요
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
 - name: 보고서 서버(SharePoint)
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
@@ -334,7 +334,7 @@ items:
   href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Power BI에 고정
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: 개요
+- name: SQL Server 개요의 보고서 작성기
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
 - name: 보고서 작성기 시작
   href: ../reporting-services/report-builder/start-report-builder.md
@@ -900,7 +900,7 @@ items:
   href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
 - name: 보고서 파트 관리
   href: ../reporting-services/report-design/managing-report-parts.md
-- name: 개요
+- name: Reporting Services 보고서 개요
   href: ../reporting-services/reports/reporting-services-reports-ssrs.md
 - name: 데이터 원본 및 보고서 게시
   href: ../reporting-services/reports/publishing-data-sources-and-reports.md
@@ -933,7 +933,7 @@ items:
   href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
-- name: 개요
+- name: SSRS 개요의 보고서 데이터
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Reporting Services에서 지원하는 데이터 원본
   href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
@@ -1122,7 +1122,7 @@ items:
     href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
   - name: Reporting Services 모바일 보고서의 사용자 지정 지도 추가
     href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
-- name: 개요
+- name: Reporting Services 보안 및 보호 개요
   href: ../reporting-services/security/reporting-services-security-and-protection.md
 - name: Reporting Services 인증에 대한 확장된 보호
   href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
@@ -1192,7 +1192,7 @@ items:
       href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
 - name: 기본 모드 보고서 서버에서 SSL 연결 구성
   href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
-- name: 개요
+- name: SSRS 일정 개요
   href: ../reporting-services/subscriptions/schedules.md
 - name: 일정 만들기, 수정 및 삭제
   href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
@@ -1234,7 +1234,7 @@ items:
     href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
   - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
     href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
-- name: 개요
+- name: Reporting Services 도구 개요
   href: ../reporting-services/tools/reporting-services-tools.md
 - name: SQL Server Data Tools의 Reporting Services
   href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
@@ -1338,7 +1338,7 @@ items:
     href: ../reporting-services/tools/rsconfig-utility-ssrs.md
   - name: RS.exe 유틸리티(SSRS)
     href: ../reporting-services/tools/rs-exe-utility-ssrs.md
-- name: '자습서: Reporting Services 도구 찾기 및 시작 방법'
+- name: Reporting Services 도구 찾기 및 시작 방법
   href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: 데이터 경고(SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
@@ -1385,7 +1385,31 @@ items:
     href: ../reporting-services/search-a-report-using-url-access.md
   - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
     href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
-- name: 개요
+- name: 관계형 데이터베이스
+  items:
+  - name: 로그인, 사용자 및 스키마를 관리하는 방법
+    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+  - name: 동적 데이터 마스킹
+    href: ../relational-databases/security/dynamic-data-masking.md
+  - name: SQL Server Express LocalDB 참조
+    href: ../relational-databases/sql-server-express-localdb-reference.md
+  - name: SqlToolsVSNativeHelpers
+    href: ../relational-databases/sqltoolsvsnativehelpers.md
+  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
+    href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: sp_enum_sqlagent_subsystems
+    href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
+  - name: sysmail_delete_principalprofile_sp
+    href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
+  - name: 튜닝 권장 구성
+    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
+  - name: 열거형 SQL 에이전트 하위 시스템
+    href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
+  - name: Pincipal 프로필 삭제
+    href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
+  - name: WMI 공급자 오류 0x8007052f
+    href: ../relational-databases/wmi-provider-error-0x8007052f.md
+- name: WMI 공급자 라이브러리 참조 개요
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: MSReportServer_Instance 클래스
   href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
@@ -1541,7 +1565,7 @@ items:
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
     - name: ConfigurationSetting 메서드 - SetExtendedProtectionSettings
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
-- name: 개요
+- name: Reporting Services 문제 해결
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
 - name: 오류 및 이벤트 참조
   href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
@@ -1900,7 +1924,7 @@ items:
     - name: '9단원: 응용 프로그램 빌드 및 실행'
       href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: 보고서 작성기 자습서
-    href: ../reporting-services/report-builder-tutorials.md
+    href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
     items:
     - name: 자습서의 사전 요구 사항
       href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
@@ -1932,9 +1956,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: '자습서: 식 소개'
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 07d625881bacee05f8fdf6e3034857cc91d6739a
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 0557511d395eaac697bcf609582dc69a8ee5cfd4
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401895"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974532"

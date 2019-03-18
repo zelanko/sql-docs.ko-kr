@@ -50,7 +50,7 @@ items:
       href: ../big-data-cluster/big-data-cluster-overview.md
     - name: 릴리스 정보
       href: ../big-data-cluster/big-data-cluster-release-notes.md
-  - name: Install
+  - name: 설치
     items:
     - name: 도구 설치
       items:
@@ -1219,7 +1219,7 @@ items:
     items:
     - name: 개요
       items:
-      - name: Filestream
+      - name: 파일 스트림
         href: ../relational-databases/blob/filestream-sql-server.md
       - name: Filetable
         href: ../relational-databases/blob/filetables-sql-server.md
@@ -1227,7 +1227,7 @@ items:
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: RBS(Remote Blob Store)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: Filestream
+    - name: 파일 스트림
       items:
       - name: 사용 및 구성
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -2419,7 +2419,7 @@ items:
         href: ../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
       - name: dbmslpcn.dll 공유 메모리의 ConnectionValidSharedMemory 함수
         href: ../relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
-      - name: Install
+      - name: 설치
         href: ../relational-databases/native-client/applications/installing-sql-server-native-client.md
       - name: 지원 정책
         href: ../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md
@@ -3271,7 +3271,7 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-user-defined-functions.md
       - name: 뷰
         href: ../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-views.md
-      - name: Permissions
+      - name: 사용 권한
         href: ../relational-databases/server-management-objects-smo/tasks/granting-revoking-and-denying-permissions.md
       - name: 엔드포인트
         href: ../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md
@@ -3940,6 +3940,11 @@ items:
     href: ../relational-databases/sql-server-index-design-guide.md
   - name: 페이지 및 익스텐트 아키텍처
     href: ../relational-databases/pages-and-extents-architecture-guide.md
+    items:
+    - name: 페이지 읽기
+      href: ../relational-databases/reading-pages.md
+    - name: 페이지 쓰기
+      href: ../relational-databases/writing-pages.md
   - name: 마이그레이션 후 유효성 검사 및 최적화
     href: ../relational-databases/post-migration-validation-and-optimization-guide.md
   - name: 쿼리 처리 아키텍처
@@ -3952,11 +3957,6 @@ items:
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
   - name: 메모리 관리 아키텍처
     href: ../relational-databases/memory-management-architecture-guide.md
-    items:
-    - name: 페이지 읽기
-      href: ../relational-databases/reading-pages.md
-    - name: 페이지 쓰기
-      href: ../relational-databases/writing-pages.md
 - name: 설치
   href: redirectfrom-installation-10.md
   items:
@@ -4397,6 +4397,7 @@ items:
       - name: 고급 페이지
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 데이터 마이그레이션 및 로드
+  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SSIS(SQL Server Integration Services) ++
     href: ../integration-services/index.md
@@ -5793,7 +5794,7 @@ items:
         href: ../ssma/db2/assessing-db2-schemas-for-conversion-db2tosql.md
       - name: DB2 스키마 변환
         href: ../ssma/db2/converting-db2-schemas-db2tosql.md
-      - name: SQL Server 마이그레이션 길잡이
+      - name: SQL Server Migration Assistant
         href: ../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md
       - name: 보고서 생성
         href: ../ssma/db2/generating-reports-db2tosql.md
@@ -6674,7 +6675,7 @@ items:
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
         - name: 시스템 활동 모니터링
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: Tools
+      - name: 도구
         href: ../relational-databases/extended-events/extended-events-tools.md
         items:
         - name: SSMS XEvent Profiler 사용
@@ -7203,7 +7204,7 @@ items:
         href: ../relational-databases/polybase/polybase-scale-out-groups.md
     - name: 방법 가이드
       items:
-      - name: Install
+      - name: 설치
         items:
         - name: Windows에 설치
           href: ../relational-databases/polybase/polybase-installation.md
@@ -7950,7 +7951,7 @@ items:
         href: ../relational-databases/security/choose-an-authentication-mode.md
       - name: 메타데이터 표시
         href: ../relational-databases/security/metadata-visibility-configuration.md
-      - name: Permissions
+      - name: 사용 권한
         href: ../relational-databases/security/permissions-database-engine.md
       - name: 사용 권한 계층 구조
         href: ../relational-databases/security/permissions-hierarchy-database-engine.md
@@ -7959,14 +7960,14 @@ items:
       items:
       - name: 계층
         href: ../relational-databases/security/encryption/encryption-hierarchy.md
-      - name: 투명한 데이터 암호화
+      - name: TDE(투명한 데이터 암호화)
         href: ../relational-databases/security/encryption/transparent-data-encryption.md
       - name: Azure SQL Database를 사용한 TDE +
         href: /azure/sql-database/transparent-data-encryption-azure-sql
         items:
         - name: 사용자 고유 키 가져오기 +
           href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
-      - name: 항상 암호화
+      - name: Always Encrypted
         href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
         items:
         - name: 보안 Enclave를 사용한 Always Encrypted
@@ -8003,13 +8004,13 @@ items:
       href: ../relational-databases/security/permissions-or-securables-page.md
     - name: 상시 암호화 마법사
       href: ../relational-databases/security/encryption/always-encrypted-wizard.md
-- name: Tools
+- name: 도구
   href: ../tools/overview-sql-tools.md
   items:
   - name: Azure Data Studio
     href: ../azure-data-studio/what-is.md
     items:
-    - name: Install
+    - name: 설치
       href: ../azure-data-studio/download.md
     - name: 릴리스 정보
       href: ../azure-data-studio/release-notes-azure-data-studio.md
@@ -8211,12 +8212,12 @@ items:
   - name: Distributed Replay
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
     items:
-    - name: Install
+    - name: 설치
       href: ../tools/distributed-replay/install-distributed-replay-overview.md
       items:
       - name: 요구 사항
         href: ../tools/distributed-replay/distributed-replay-requirements.md
-      - name: Install
+      - name: 설치
         href: ../tools/distributed-replay/install-distributed-replay.md
       - name: 설치 후 단계 완료
         href: ../tools/distributed-replay/complete-the-post-installation-steps.md
@@ -8415,27 +8416,19 @@ items:
       href: ../tools/ssbdiagnose/banner-element-ssbdiagnose.md
     - name: Issue 요소
       href: ../tools/ssbdiagnose/issue-element-ssbdiagnose.md
-  - name: SQL  Server  Data  Tools(SSDT)
+  - name: SSDT(SQL Server Data Tools)
     href: ../ssdt/sql-server-data-tools.md
     items:
     - name: SSDT 다운로드
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: 개요
-      items:
-      - name: SSDT에 대한 Changelog
-        href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
-      - name: 데이터 계층 애플리케이션 프레임워크 - 사용 조건
-        href: ../ssdt/data-tier-application-framework-license-terms.md
-      - name: SSDT 및 SSDT-BI의 이전 릴리스
-        href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
-      - name: Azure Active Directory 지원
-        href: ../ssdt/azure-active-directory.md
-      - name: SQL Server 도구
-        href: ../ssdt/sql-server-tools.md
-      - name: 사용 조건 - SSDT
-        href: ../ssdt/sql-server-data-tools-license-terms.md
-      - name: 사용 조건 - SSDT(VS 2017)
-        href: ../ssdt/sql-server-data-tools-license-terms-vs2017.md
+    - name: SSDT에 대한 Changelog
+      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: SSDT 및 SSDT-BI의 이전 릴리스
+      href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
+    - name: Azure Active Directory 지원
+      href: ../ssdt/azure-active-directory.md
+    - name: SQL Server 도구
+      href: ../ssdt/sql-server-tools.md
     - name: 프로젝트 기반 오프라인 데이터베이스 개발
       href: ../ssdt/project-oriented-offline-database-development.md
       items:
@@ -9775,8 +9768,6 @@ items:
           href: ../ssms/visual-db-tools/print-query-results-visual-database-tools.md
     - name: 리소스
       items:
-      - name: 사용 조건
-        href: ../ssms/sql-server-management-studio-license-terms.md
       - name: SSMS의 사용자 지원
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 익명 사용 현황 데이터
@@ -9789,7 +9780,7 @@ items:
       href: ../tools/sqlpackage-release-notes.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
-  - name: SQL Server 프로파일러
+  - name: SQL Server Profiler
     href: ../tools/sql-server-profiler/sql-server-profiler.md
     items:
     - name: SQL Server Profiler 실행
@@ -9797,7 +9788,7 @@ items:
     - name: 추적 템플릿
       href: ../tools/sql-server-profiler/sql-server-profiler-templates.md
       items:
-      - name: Permissions
+      - name: 사용 권한
         href: ../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md
       - name: 만들기
         href: ../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md
@@ -9947,7 +9938,7 @@ items:
       href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
     - name: '3단원: 데이터베이스 개체 삭제'
       href: ../t-sql/lesson-3-deleting-database-objects.md
-- name: Linux의 SQL Server
+- name: SQL Server on Linux
   href: ../linux/sql-server-linux-overview.md
   items:
   - name: 개요
@@ -10009,7 +10000,7 @@ items:
       href: ../linux/sql-server-linux-replication-tutorial-tsql.md
   - name: 개념
     items:
-    - name: Install
+    - name: 설치
       items:
       - name: SQL Server 설치
         href: ../linux/sql-server-linux-setup.md
@@ -11322,10 +11313,6 @@ items:
         href: ../powershell/encode-and-decode-sql-server-identifiers.md
       - name: SQL Server 식별자 이스케이프
         href: ../powershell/escape-sql-server-identifiers.md
-    - name: 리소스
-      items:
-      - name: SQL Server PowerShell 사용 조건
-        href: ../powershell/sql-server-powershell-license-terms.md
     - name: Cmdlet 참조
       items:
       - name: SqlServer cmdlet
@@ -11906,7 +11893,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md
       - name: sys.spatial_reference_systems
         href: ../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md
-    - name: SQL 데이터 웨어하우스
+    - name: SQL Data Warehouse
       href: ../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md
       items:
       - name: sys.pdw_column_distribution_properties
@@ -11961,6 +11948,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md
       - name: sys.pdw_table_mappings
         href: ../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md
+      - name: sys.workload-management-workload-classifier-details
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md
+      - name: sys.workload-management-workload-classifiers
+        href: ../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md
     - name: Stretch Database
       items:
       - name: sys.remote_data_archive_databases
@@ -14148,7 +14139,7 @@ items:
         href: ../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md
       - name: sp_delete_backup
         href: ../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md
-    - name: SQL 데이터 웨어하우스
+    - name: SQL Data Warehouse
       href: ../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md
       items:
       - name: sp_datatype_info_90
@@ -14322,7 +14313,7 @@ items:
         href: ../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md
       - name: sp_update_targetservergroup
         href: ../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md
-    - name: SQL Server 프로파일러
+    - name: SQL Server Profiler
       href: ../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md
       items:
       - name: sp_trace_create
@@ -16639,6 +16630,8 @@ items:
           href: ../t-sql/statements/create-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/create-view-transact-sql.md
+        - name: 워크로드 분류자
+          href: ../t-sql/statements/create-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/create-workload-group-transact-sql.md
         - name: XML INDEX
@@ -16781,11 +16774,13 @@ items:
           href: ../t-sql/statements/drop-user-transact-sql.md
         - name: VIEW
           href: ../t-sql/statements/drop-view-transact-sql.md
+        - name: 워크로드 분류자
+          href: ../t-sql/statements/drop-workload-classifier-transact-sql.md
         - name: WORKLOAD GROUP
           href: ../t-sql/statements/drop-workload-group-transact-sql.md
         - name: XML SCHEMA COLLECTION
           href: ../t-sql/statements/drop-xml-schema-collection-transact-sql.md
-      - name: Permissions
+      - name: 사용 권한
         items:
         - name: ADD SIGNATURE
           href: ../t-sql/statements/add-signature-transact-sql.md
@@ -17183,9 +17178,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d658d240d44697d6d3632142b1d4034468ffc91f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579793"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974572"

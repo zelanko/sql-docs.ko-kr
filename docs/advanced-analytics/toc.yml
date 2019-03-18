@@ -23,7 +23,7 @@ items:
     href: ../advanced-analytics/java/java-first-sample.md
   - name: Java 및 SQL 데이터 형식
     href: ../advanced-analytics/java/java-sql-datatypes.md
-- name: Install
+- name: 설치
   items:
   - name: SQL Server 2019의 차이점
     href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
@@ -228,6 +228,10 @@ items:
       href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
   - name: 배포
     items:
+    - name: 저장 프로시저를 사용하여 운영
+      href: ../advanced-analytics/r/operationalizing-your-r-code.md
+    - name: R을 사용하여 SSIS 및 SSRS 워크플로 만들기
+      href: ../advanced-analytics/r/creating-workflows-that-use-r-in-sql-server.md
     - name: SQL Server에 대한 R 코드 변환
       href: ../advanced-analytics/r/converting-r-code-for-use-in-sql-server.md
     - name: sqlrutils를 사용하여 저장 프로시저 만들기
@@ -315,23 +319,9 @@ items:
       href: ../advanced-analytics/common-issues-external-script-execution.md
     - name: R 스크립팅 오류
       href: ../advanced-analytics/r-script-execution-errors.md
-  - name: 블로그
-    items:
-    - name: SQL Server +
-      href: https://blogs.technet.microsoft.com/dataplatforminsider/
-    - name: R Server +
-      href: https://blogs.msdn.microsoft.com/microsoftrservertigerteam/
-    - name: Machine Learning +
-      href: https://blogs.technet.microsoft.com/machinelearning/
-  - name: 포럼
-    items:
-    - name: SQL Server +
-      href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
-    - name: Machine Learning Server +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home?forum=MicrosoftR
-ms.openlocfilehash: 643bd99806e6af28c115a5de087d5719adcf152f
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: e442194899dcae6fd9c30d57af763bb67791c20f
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401805"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976363"
