@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556175"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974502"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니오|
 |Buffer Pool Extension|예|예|아니오|아니오|아니오|
 |IO 리소스 관리|예|아니오|아니오|아니오|아니오|  
+|미리 읽기|예|아니오|아니오|아니오|아니오|
+|고급 검색|예|아니오|아니오|아니오|아니오|
 |지연된 내구성|예|예|예|예|예|
 |자동 튜닝|예|아니오|아니오|아니오|아니오|
 |일괄 처리 모드 적응 조인|예|아니오|아니오|아니오|아니오|
@@ -288,7 +290,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Microsoft Visual Studio 통합|예|예|예|예|예| 
 |Intellisense(Transact-SQL 및 MDX)|예|예|예|예|예| 
-|SQL  Server  Data  Tools(SSDT)|예|예|예|예|아니오|    
+|SSDT(SQL Server Data Tools)|예|예|예|예|아니오|    
 |MDX 편집, 디버그 및 디자인 도구|예|예|아니오|아니오|아니오|   
   
 ##  <a name="Programmability"></a> Programmability  
@@ -407,7 +409,3 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-이는 테스트입니다.
