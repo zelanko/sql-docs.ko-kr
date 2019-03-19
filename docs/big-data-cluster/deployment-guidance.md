@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4aba7c8bbe7af361dc118111c8502546c83dd61c
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 817ffcc1ea17a8526304b4bc9064c1becfff90f9
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227205"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161647"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -94,6 +94,7 @@ kubectl config view
 | **DOCKER_REPOSITORY** | 사용자 계정 컨트롤 | TBD | 이미지가 저장 된 위의 레지스트리 내 개인 저장소.  것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_USERNAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 개인 저장소에 저장 됩니다 하는 경우 컨테이너 이미지에 액세스 하려면 사용자 이름입니다. 것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다. |
 | **DOCKER_PASSWORD** | 사용자 계정 컨트롤 | 해당 사항 없음 | 위의 개인 리포지토리에 액세스 하기 위한 암호입니다. 것 필요한 것은 제어 된 체크 인된 공개 미리 보기 기간에 대 한 합니다.|
+| **DOCKER_EMAIL** | 사용자 계정 컨트롤 | 해당 사항 없음 | 전자 메일 주소입니다. |
 | **DOCKER_IMAGE_TAG** | 아니요 | 최신 | 이미지 태그를 지정 하는 데 사용 되는 레이블. |
 | **DOCKER_IMAGE_POLICY** | 아니요 | Always | 이미지 끌어오기를 항상 강제로 적용 합니다.  |
 | **DOCKER_PRIVATE_REGISTRY** | 사용자 계정 컨트롤 | 해당 사항 없음 | 제어 된 체크 인된 공개 미리 보기 기간에 대 한이 값을 "1"로 설정 해야 합니다. |
@@ -139,7 +140,8 @@ SET DOCKER_REGISTRY=private-repo.microsoft.com
 SET DOCKER_REPOSITORY=mssql-private-preview
 SET DOCKER_USERNAME=<your username, credentials provided by Microsoft>
 SET DOCKER_PASSWORD=<your password, credentials provided by Microsoft>
-SET DOCKER_PRIVATE_REGISTRY="1"
+SET DOCKER_EMAIL=<your email address>
+SET DOCKER_PRIVATE_REGISTRY=1
 ```
 
 ### <a name="linux"></a>Linux
@@ -147,8 +149,8 @@ SET DOCKER_PRIVATE_REGISTRY="1"
 다음 환경 변수를 초기화 합니다. Bash에서 각 값 주위에 따옴표를 사용할 수 있습니다.
 
 ```bash
-export ACCEPT_EULA=yes
-export CLUSTER_PLATFORM=<minikube or aks or kubernetes>
+export ACCEPT_EULA="yes"
+export CLUSTER_PLATFORM="<minikube or aks or kubernetes>"
 
 export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
 export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
@@ -159,6 +161,7 @@ export DOCKER_REGISTRY="private-repo.microsoft.com"
 export DOCKER_REPOSITORY="mssql-private-preview"
 export DOCKER_USERNAME="<your username, credentials provided by Microsoft>"
 export DOCKER_PASSWORD="<your password, credentials provided by Microsoft>"
+export DOCKER_EMAIL="<your email address>"
 export DOCKER_PRIVATE_REGISTRY="1"
 ```
 

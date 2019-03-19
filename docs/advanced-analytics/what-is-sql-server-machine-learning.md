@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032954"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161850"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>SQL server 2017 machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ SQL Server 2017의 Machine Learning Services는 SQL Server에서 R 및 Python �
 
 Azure SQL Database에서 [Machine Learning 서비스 (R)을 통한](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) 현재 공개 미리 보기로 제공 됩니다.
 
-Machine Learning 서비스의 핵심 가치 제안을 소수 자릿수 및 계산 및 처리, 데이터 상주를 제공 하는 기능에 대 한 고급 분석을 제공 하는 엔터프라이즈 R 및 Python 패키지의 기능에서 데이터 끌어오기를 할 필요가 없습니다 네트워크입니다.
+## <a name="bring-compute-power-to-the-data"></a>데이터에 계산 능력을 가져오기
+
+Machine Learning 서비스의 핵심 가치 제안을 소수 자릿수 및 계산 및 처리, 데이터 상주를 제공 하는 기능에 대 한 고급 분석을 제공 하는 엔터프라이즈 R 및 Python 패키지의 기능에서 데이터 끌어오기를 할 필요가 없습니다 네트워크입니다. 다음과 같은 여러 이점을 제공 합니다.
+
++ 데이터 보안. R 및 Python의 데이터 원본에 더 가깝게 실행 불필요 하거나 안전 하지 않은 데이터 이동을 방지할 수 있습니다.
++ 속도. 데이터베이스는 집합 기반 작업에 최적화됩니다. 메모리 내 테이블에 같은 데이터베이스의 최신 혁신 요약 및 번개, 집계 및 데이터 과학을 완벽 하 게 보완 됩니다.
++ 배포 및 통합 편의성입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 많은 데이터 관리 작업 및 응용 프로그램에 대 한 작업의 중앙 지점이입니다. 보고 웨어하우스 데이터베이스에 있는 데이터를 사용 하 여 기계 학습 솔루션에서 사용 하는 데이터가 일관성 있고 최신 인지 확인 합니다. 
++ 클라우드 및 온-프레미스에서 효율성입니다. R 또는 Python 세션에서 데이터를 처리 하는 대신 비롯 하 여 엔터프라이즈 데이터 파이프라인에 의존할 수 있습니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 Azure Data Factory 합니다. Power BI 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 통해 결과 또는 분석을 쉽게 보고할 수 있습니다.
+
+다양한 데이터 처리 및 분석 작업에 SQL과 R을 적절하게 조합하여 사용하면 데이터 과학자와 개발자가 모두 생산성을 높일 수 있습니다.
 
 <a name="components"></a>
 

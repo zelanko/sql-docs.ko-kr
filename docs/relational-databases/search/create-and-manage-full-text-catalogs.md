@@ -1,26 +1,25 @@
 ---
 title: 전체 텍스트 카탈로그 만들기 및 관리 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 727ad77d1e757014f723d1ca1a10b9c5502cad50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6f26a5441724e93286da0be88ae0924ad2d87970
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681261"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973842"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>전체 텍스트 카탈로그 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ GO
 ### <a name="create-a-full-text-catalog-with-management-studio"></a>Management Studio를 사용하여 전체 텍스트 카탈로그 만들기
 1.  개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 전체 텍스트 카탈로그를 만들려는 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **새 전체 텍스트 카탈로그**를 선택합니다.  
   
@@ -86,7 +85,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
 
 1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
   
 3.  다시 작성하려는 전체 텍스트 카탈로그의 이름을 마우스 오른쪽 단추로 클릭하고 **다시 작성**을 선택합니다.  
   
@@ -98,7 +97,7 @@ Transact-SQL 문 [ALTER FULLTEXT CATALOG ... REBUILD](
 
 1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 다시 작성할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **모두 다시 작성**을 선택합니다.  
   
@@ -115,7 +114,7 @@ Transact-SQL 문 [DROP FULLTEXT CATALOG](
 
 1.  SSMS의 개체 탐색기에서 서버, **데이터베이스**를 차례로 확장한 다음 제거할 전체 텍스트 카탈로그가 포함된 데이터베이스를 확장합니다.  
   
-2.  **저장소**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
+2.  **스토리지**를 확장한 다음 **전체 텍스트 카탈로그**를 확장합니다.  
   
 3.  제거할 전체 텍스트 카탈로그를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 선택합니다.  
   

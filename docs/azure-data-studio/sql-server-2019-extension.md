@@ -3,7 +3,7 @@ title: SQL Server 2019 확장 (미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 02/13/2019
+ms.date: 03/18/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,13 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231060"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161551"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -31,9 +30,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
    |플랫폼|다운로드|릴리스 날짜|버전
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|2019 년 2 월 13 일 |0.10.2
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|2019 년 2 월 13 일 |0.10.2
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|2019 년 2 월 13 일 |0.10.2
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 년 3 월 18 일 |0.11.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 년 3 월 18 일 |0.11.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 년 3 월 18 일 |0.11.0
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -44,6 +43,14 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
 
 1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
+
+## <a name="release-notes-v0110"></a>릴리스 정보 (v0.11.0)
+  * Jupyter Notebook 지원, Python3 및 Spark 커널에 대 한 지원 특히 Azure 데이터 Studio로 이동 되었습니다. 이 확장 Notebook을 사용 하기 위해 필요 하지 않습니다.
+  * 외부 데이터는 마법사의 여러 버그 수정:
+    * Oracle 형식 매핑은 SQL Server 2019 CTP 2.3에서 제공 하는 변경 내용과 일치 하도록 업데이트 되었습니다.
+    * 새 스키마 테이블 매핑 컨트롤에 입력 된 끊어져서 문제를 해결 했습니다.
+    * 여기서 테이블 매핑에 데이터베이스 노드를 확인 하는 중 발생 하지 모든 테이블 및 뷰 선택 되는 문제가 해결 되었습니다.
+
 
 ## <a name="release-notes-v0102"></a>릴리스 정보 (v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 지원

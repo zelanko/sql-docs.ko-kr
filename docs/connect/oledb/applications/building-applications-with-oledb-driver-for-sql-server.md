@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
@@ -15,13 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, building applications
 author: pmasl
 ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: a2e9b88c12a4abb25fed87c8f273a9949b85c4ee
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 8f0894b3e7f9cd0775419e44d102eee345cabf5a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744413"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57972902"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버로 애플리케이션 빌드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

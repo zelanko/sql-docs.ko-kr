@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581678"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161630"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="march-2019"></a>2019 년 3 월
+
+2019 년 3 월 18 일 &nbsp;  /  &nbsp; 버전: 1.5.1
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| 추가 [Azure Data Studio 용 PostgreSQL 확장](postgres-extension.md) | 지원 되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; 차트 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
+| 추가 SQL Notebook | 기본 제공 전자 필기장 뷰어에 대 한 SQL 커널 지원이 추가 되었습니다. <br/>&bull; &nbsp; 지원 T-SQL <br/>&bull; &nbsp; PGSQL 지원 |
+| 추가 PowerShell 확장  | 통해 제공 합니다 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) VS Code에서 발생 합니다.  |
+| 추가 SQL Server dacpac 확장  | 새 확장으로 SQL Server 가져오기 확장에서 데이터 계층 응용 프로그램 마법사를 제거합니다.  |
+| 추가 커뮤니티 확장 QueryPlan.show | 쿼리 계획을 시각화 하는 통합 지원을 추가합니다  |
+| 업데이트 된 SQL Server 2019 미리 보기 확장 | &bull; &nbsp; Jupyter Notebook 지원, 특히 Python3 및 Spark 커널에는 핵심 Azure Data Studio 도구에 옮겼습니다. <br/>&bull; &nbsp; 외부 데이터 마법사의 버그 수정  |
+| 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)합니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): 준비는 셀 전 커널 실행을 클릭 하면 심각한 오류에서 결과 Spark **해결 방법:** 모든 셀을 실행 하기 전에 커널에서 로드 될 때까지 대기
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): SQL 인증-암호에 대 한 사용자 프롬프트를 사용 하 여 SSMS에서 시작 하는 광고 **해결 방법:** 이제 Windows 인증을 사용 합니다. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): SQL 전자 필기장 기능을 설치할 수 없습니다. <br/>
+**해결 방법:** 문제 해결 단계를 따릅니다 [여기](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832)합니다. 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio 다운로드 폴더 (Mac)에서 직접 열 수 없습니다. <br />
+**해결 방법:** 응용 프로그램 압축을 푼 후 컴퓨터를 다시 시작 합니다. 조사 됩니다. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Notebook에서 다른 이름으로 저장 되는 연결 컨텍스트를 잃을 <br />
+**해결 방법:** 다음 릴리스에서 수정 될 예정입니다. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Dacpac 추출 충돌 SqlToolsService 잘못 된 버전을 사용 하는 경우 <br/>
+**해결 방법:** Azure Data Studio를 다시 시작 하 고 올바른 버전 사용 되는지 확인 합니다.
+- 새 Notebook 및 전자 필기장 열기 아이콘 손실 됩니다. <br/> 
+**해결 방법:** 레거시 연결 형식이 사용 되지 않습니다. 예상 대로 모든 작업 (새 노트북에서 Spark 작업)을 얻게 및 SQL Server 끝점에 연결 하는 것이 좋습니다. 
 
 ## <a name="february-2019"></a>2019 년 2 월
 

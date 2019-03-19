@@ -1,6 +1,5 @@
 ---
 title: sp_rxPredict | Microsoft Docs
-ms.custom: ''
 ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: addca46cd1ebf05212b0e8721d1799eefbad3bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842931"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161600"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,6 @@ R 및 Python 기계 학습 모델에서 거의 실시간으로 점수 매기기�
 
 직렬화 되 고 대상 데이터베이스 엔진 인스턴스에서 이진 형식으로 저장 되 면 R 또는 Python을 사용 하 여 모델을 만들어야, 있지만 사용할 수는 데이터베이스 엔진 인스턴스에서 R 또는 Python 통합이 설치 되지 않은 경우에 합니다. 자세한 내용은 [sp_rxPredict를 사용 하 여 실시간 점수 매기기](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)합니다.
 
-
 ## <a name="syntax"></a>구문
 
 ```
@@ -42,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>인수
 
-**모델**
+**model**
 
 지원 되는 형식에서 미리 학습 된 모델입니다. 
 
@@ -64,11 +62,9 @@ sp_rxPredict  ( @model, @input )
 
 사용자가 필요한 `EXECUTE` 데이터베이스에 대 한 권한이 있습니다.
 
-
 ### <a name="supported-algorithms"></a>지원되는 알고리즘
 
 만들기 및 모델을 학습, R 또는 Python에 대 한 지원 되는 알고리즘 중 하나를 사용 하 여 제공 [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017)를 [SQL Server 2016 R Server (독립 실행형)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [SQL Server 2017 컴퓨터 서비스 (예: R 또는 Python) 학습](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), 또는 [SQL Server 2017 Server (독립 실행형) (R 또는 Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017)합니다.
-
 
 #### <a name="r-revoscaler-models"></a>R: RevoScaleR 모델
 
@@ -113,7 +109,7 @@ sp_rxPredict  ( @model, @input )
   + [rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network)
   + [rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear)
 
-#### <a name="python-transformations-supplied-by-microsoftml"></a>Microsoftml에서 제공 하는 Python: 변환
+#### <a name="python-transformations-supplied-by-microsoftml"></a>Python: Microsoftml 제공한 변환
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)

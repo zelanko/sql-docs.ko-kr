@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 11/28/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: jrasnick
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,16 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0eae7da31570855ac60552aa95a8f1f3d7864cd0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801537"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57988799"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT(Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 지정된 구분 기호 문자에 따라 문자열을 부분 문자열의 행으로 분할하는 테이블 반환 함수입니다.
@@ -39,12 +41,13 @@ STRING_SPLIT에는 130 이상의 호환성 수준이 필요합니다. 130 미만
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
-  
-```  
+
+```sql
 STRING_SPLIT ( string , separator )  
-```  
-  
-## <a name="arguments"></a>인수  
+```
+
+## <a name="arguments"></a>인수
+
  *string*  
  모든 문자 형식(예: **nvarchar**, **varchar**, **nchar** 또는 **char**)의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
@@ -82,20 +85,22 @@ SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');
 
 ## <a name="examples"></a>예  
   
-### <a name="a-split-comma-separated-value-string"></a>1. CSV(쉼표로 구분된 값) 문자열 분할  
+### <a name="a-split-comma-separated-value-string"></a>1. CSV(쉼표로 구분된 값) 문자열 분할
+
 쉼표로 구분된 값 목록을 구문 분석하고 비어 있지 않은 토큰을 모두 반환합니다.  
-  
-```sql  
+
+```sql
 DECLARE @tags NVARCHAR(400) = 'clothing,road,,touring,bike'  
   
 SELECT value  
 FROM STRING_SPLIT(@tags, ',')  
-WHERE RTRIM(value) <> '';  
-```  
-  
+WHERE RTRIM(value) <> '';
+```
+
 구분 기호 사이에 아무 것도 없을 경우 STRING_SPLIT은 빈 문자열을 반환합니다. RTRIM(value) <> ''조건은 빈 토큰을 제거합니다.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>2. 열에서 CSV(쉼표로 구분된 값) 문자열 분할  
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>2. 열에서 CSV(쉼표로 구분된 값) 문자열 분할
+
 제품 테이블에는 다음 예제와 같이 쉼표로 구분된 태그 목록이 포함된 열이 있습니다.  
   
 |ProductId|속성|Tags|  
@@ -105,13 +110,13 @@ WHERE RTRIM(value) <> '';
 |3|HL Mountain Frame|bike,mountain|  
   
 다음 쿼리는 각 태그 목록을 변환하고 원래 행과 결합합니다.  
-  
+
 ```sql  
 SELECT ProductId, Name, value  
 FROM Product  
     CROSS APPLY STRING_SPLIT(Tags, ',');  
-```  
-  
+```
+
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 |ProductId|속성|value|  
@@ -127,9 +132,10 @@ FROM Product
   >[!NOTE]
   > 출력 순서는 입력 문자열의 하위 문자열 순서와 일치하지 _않을 수_ 있으므로 순서가 달라질 수 있습니다.
   
-### <a name="c-aggregation-by-values"></a>C. 값 기준 정렬  
+### <a name="c-aggregation-by-values"></a>C. 값 기준 정렬
+
 사용자는 각 태그별 제품의 수를 표시하고 제품 수 기준으로 정렬한 보고서를 생성하여 제품 수가 2 초과인 태그만 필터링해야 합니다.  
-  
+
 ```sql  
 SELECT value as tag, COUNT(*) AS [Number of articles]  
 FROM Product  
@@ -137,36 +143,38 @@ FROM Product
 GROUP BY value  
 HAVING COUNT(*) > 2  
 ORDER BY COUNT(*) DESC;  
-```  
-  
-### <a name="d-search-by-tag-value"></a>D. 태그 값으로 검색  
+```
+
+### <a name="d-search-by-tag-value"></a>D. 태그 값으로 검색
+
 개발자는 키워드를 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
   
 단일 태그(의복)가 포함된 제품 찾기:  
-  
-```sql  
+
+```sql
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE 'clothing' IN (SELECT value FROM STRING_SPLIT(Tags, ','));  
-```  
-  
+```
+
 지정된 태그 2개(의복 및 도로)가 포함된 제품 찾기:  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE EXISTS (SELECT *  
     FROM STRING_SPLIT(Tags, ',')  
     WHERE value IN ('clothing', 'road'));  
-```  
-  
-### <a name="e-find-rows-by-list-of-values"></a>E. 값 목록 기준으로 행 찾기  
+```
+
+### <a name="e-find-rows-by-list-of-values"></a>E. 값 목록 기준으로 행 찾기
+
 개발자는 ID 목록을 기준으로 물품을 찾는 쿼리를 만들어야 합니다. 다음과 같은 쿼리를 사용할 수 있습니다.  
-  
+
 ```sql  
 SELECT ProductId, Name, Tags  
 FROM Product  
-JOIN STRING_SPLIT('1,2,3',',')   
+JOIN STRING_SPLIT('1,2,3',',')
     ON value = ProductId;  
 ```  
 
@@ -176,15 +184,14 @@ JOIN STRING_SPLIT('1,2,3',',')
 SELECT ProductId, Name, Tags  
 FROM Product  
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
-```  
-  
-## <a name="see-also"></a>참고 항목  
-[LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)     
-[LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)     
-[RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)    
-[RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)     
-[SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)     
-[TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)     
-[문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)      
-  
-  
+```
+
+## <a name="see-also"></a>참고 항목
+
+[LEFT&#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
+[LTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />
+[RIGHT&#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)<br />
+[RTRIM&#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)<br />
+[SUBSTRING&#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)<br />
+[TRIM&#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)<br />
+[문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
