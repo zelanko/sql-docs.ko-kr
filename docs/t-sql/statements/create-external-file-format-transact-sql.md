@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d86628ead47e1862c1fa1a3aea0e0c32f17f7700
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014844"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161648"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -234,7 +234,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
  TRUE  
  텍스트 파일에서 데이터를 검색할 때 외부 테이블 정의에서 해당하는 열의 데이터 형식에 대한 기본값을 사용하여 누락된 각 값을 저장합니다. 예를 들어, 누락된 값을 다음으로 바꿉니다.  
   
--   열이 숫자 열로 정의되었으면 0
+-   열이 숫자 열로 정의되었으면 0 10진수 열은 지원되지 않으며 오류가 발생합니다.
   
 -   열이 문자열이면 빈 문자열 "" 
   
@@ -272,7 +272,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY EXTERNAL FILE FORMAT 권한이 필요합니다.
   
 ## <a name="general-remarks"></a>일반적인 주의 사항

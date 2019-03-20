@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24de325c1845c73c082a0e525cc9282bd38c40dd
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334600"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161820"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,25 +68,25 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>공통 테이블 식 만들기 및 사용 지침  
- 다음 지침은 비재귀 공통 테이블 식에 적용됩니다. 재귀 공통 테이블 식에 적용되는 지침은 다음에 나오는 "재귀 공통 테이블 식 정의 및 사용 지침"을 참조하세요.  
+다음 지침은 비재귀 공통 테이블 식에 적용됩니다. 재귀 공통 테이블 식에 적용되는 지침은 다음에 나오는 [재귀 공통 테이블 식 정의 및 사용 지침](#guidelines-for-defining-and-using-recursive-common-table-expressions)을 참조하세요.  
   
--   CTE 뒤에는 일부 또는 모든 CTE 열을 참조하는 SELECT, INSERT, UPDATE 또는 DELETE 문 하나가 있어야 합니다. 뷰의 SELECT 문 정의의 일부로 CREATE VIEW 문 내에 CTE를 지정할 수 있습니다.  
+-   CTE 뒤에는 일부 또는 모든 CTE 열을 참조하는 단일 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문이 와야 합니다. CTE는 뷰의 `SELECT` 문 정의의 일부로 `CREATE VIEW` 문에 지정할 수도 있습니다.  
   
--   비재귀 CTE 내에 여러 개의 CTE 쿼리 정의를 정의할 수 있습니다. 정의는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다.  
+-   비재귀 CTE 내에 여러 개의 CTE 쿼리 정의를 정의할 수 있습니다. 정의는 `UNION ALL`, `UNION`, `INTERSECT` 또는 `EXCEPT` 집합 연산자 중 하나에 의해 결합되어야 합니다.  
   
--   CTE는 같은 WITH 절에서 자신 및 이전에 정의한 CTE를 참조할 수 있지만 전방 참조는 허용되지 않습니다.  
+-   CTE는 같은 `WITH` 절에서 자신 및 이전에 정의한 CTE를 참조할 수 있습니다. 전방 참조는 허용되지 않습니다.  
   
 -   CTE에 둘 이상의 WITH 절을 지정할 수 없습니다. 예를 들어 *CTE_query_definition*이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 WITH 절을 포함할 수 없습니다.  
   
 -   *CTE_query_definition*에는 다음 절을 사용할 수 없습니다.  
   
-    -   ORDER BY(TOP 절을 지정하는 경우는 제외)  
+    -   `ORDER BY`(`TOP` 절을 지정하는 경우는 제외)  
   
-    -   INTO  
+    -   `INTO`  
   
-    -   쿼리 힌트가 있는 OPTION 절  
+    -   쿼리 힌트가 있는 `OPTION` 절  
   
-    -   FOR BROWSE  
+    -   `FOR BROWSE`  
   
 -   일괄 처리에 속한 문에 CTE를 사용할 때는 그 전의 문 다음에 반드시 세미콜론을 추가해야 합니다.  
   
@@ -111,19 +111,19 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   다음 항목은 재귀 멤버의 *CTE_query_definition*에서 허용되지 않습니다.  
   
-    -   SELECT DISTINCT  
+    -   `SELECT DISTINCT`  
   
-    -   GROUP BY  
+    -   `GROUP BY`  
   
-    -   PIVOT(데이터베이스 호환성 수준이 110 이상인 경우. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)을 참조합니다.)  
+    -   `PIVOT`(데이터베이스 호환성 수준이 110 이상인 경우. [SQL Server 2016 데이터베이스 엔진 기능의 주요 변경](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)을 참조합니다.)  
   
-    -   HAVING  
+    -   `HAVING`  
   
     -   스칼라 집계  
   
-    -   맨 위로 이동  
+    -   `TOP`  
   
-    -   LEFT, RIGHT, OUTER JOIN(INNER JOIN이 허용됨)  
+    -   `LEFT`, `RIGHT`, `OUTER JOIN`(`INNER JOIN`은 허용됨)  
   
     -   하위 쿼리  
   
@@ -131,30 +131,30 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
  다음 지침은 재귀 공통 테이블 식 사용 작업에 적용됩니다.  
   
--   재귀 CTE가 반환하는 모든 열은 참가하는 SELECT 문이 반환하는 열의 Null 허용 여부와는 상관없이 Null을 허용합니다.  
+-   재귀 CTE가 반환하는 모든 열은 참가하는 `SELECT` 문이 반환하는 열의 Null 허용 여부와는 상관없이 Null을 허용합니다.  
   
--   잘못 구성된 재귀적 CTE로 인해 무한 루프가 발생할 수 있습니다. 예를 들어 재귀 멤버 쿼리 정의가 부모 열과 자식 열 모두에 대해 동일한 값을 반환하면 무한 루프가 생성된 것입니다. 무한 루프를 막기 위해서는 INSERT, UPDATE, DELETE 또는 SELECT 문의 OPTION 절에서 MAXRECURSION 힌트와 0부터 32,767 사이의 값을 사용하여 특정 문에 허용되는 재귀 수준을 제한할 수 있습니다. 이 방법으로 루프를 발생시키는 코드 문제를 해결할 때까지 문의 실행을 제어할 수 있습니다. 서버 차원의 기본값은 100입니다. 0을 지정하면 제한이 적용되지 않습니다. 하나의 문에는 하나의 MAXRECURSION 값만 지정할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
+-   잘못 구성된 재귀적 CTE로 인해 무한 루프가 발생할 수 있습니다. 예를 들어 재귀 멤버 쿼리 정의가 부모 열과 자식 열 모두에 대해 동일한 값을 반환하면 무한 루프가 생성된 것입니다. 무한 루프를 방지하기 위해 `INSERT`, `UPDATE`, `DELETE` 또는 `SELECT` 문의 OPTION 절에서 `MAXRECURSION` 힌트와 0부터 32,767 사이의 값을 사용하여 특정 명령문에 허용되는 재귀 수준을 제한할 수 있습니다. 이 방법으로 루프를 발생시키는 코드 문제를 해결할 때까지 문의 실행을 제어할 수 있습니다. 서버 차원의 기본값은 100입니다. 0을 지정하면 제한이 적용되지 않습니다. 각 명령문에는 하나의 `MAXRECURSION` 값만 지정할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 -   재귀 공통 테이블 식을 포함한 뷰를 사용하여 데이터를 업데이트할 수 없습니다.  
   
 -   CTE를 사용하여 쿼리에 커서를 정의할 수 있습니다. CTE는 커서의 결과 집합을 정의하는 *select_statement* 인수입니다. 재귀 CTE에는 빠른 정방향 전용 커서 및 정적(스냅숏) 커서만 사용할 수 있습니다. 재귀 CTE에 또 다른 커서 유형을 지정하는 경우 해당 커서 유형이 정적으로 변환됩니다.  
   
--   CTE에서 원격 서버 상의 테이블을 참조할 수 있습니다. CTE의 재귀 멤버에서 원격 서버를 참조하는 경우 로컬에서 반복적으로 테이블에 액세스할 수 있도록 각 원격 테이블을 위한 스풀이 생성됩니다. CTE 쿼리인 경우 쿼리 계획에 Index Spool/Lazy Spool이 표시되며 이 스풀은 추가 WITH STACK 조건자를 가집니다. 이는 재귀를 올바르게 수행하는 한 가지 방법입니다.  
+-   CTE에서 원격 서버 상의 테이블을 참조할 수 있습니다. CTE의 재귀 멤버에서 원격 서버를 참조하는 경우 로컬에서 반복적으로 테이블에 액세스할 수 있도록 각 원격 테이블을 위한 스풀이 생성됩니다. CTE 쿼리인 경우 쿼리 계획에 Index Spool/Lazy Spool이 표시되며 추가 `WITH STACK` 조건자를 가집니다. 이는 재귀를 올바르게 수행하는 한 가지 방법입니다.  
   
--   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. ROW_NUMBER와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 세트가 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 세트에 대해서만 실행됩니다. 자세한 내용은 예제 K. 재귀 CTE에서 분석 함수 사용을 참조하세요.  
+-   CTE의 재귀 부분에 있는 분석 및 집계 함수는 현재 재귀 수준에 대한 집합에만 적용되며 CTE에 대한 집합에는 적용되지 않습니다. `ROW_NUMBER`와 같은 함수는 CTE의 재귀 부분에 전달된 전체 데이터 세트가 아니라 현재 재귀 수준에 의해 함수로 전달된 데이터 하위 세트에 대해서만 실행됩니다. 자세한 내용은 예제 K. 재귀 CTE에서 분석 함수 사용을 참조하세요.  
   
 ## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 공통 테이블 식의 기능과 제한  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 현재 CTE의 구현은 다음과 같은 기능과 제한이 있습니다.  
   
--   CTE는 **SELECT** 문에서 지정될 수 있습니다.  
+-   CTE는 `SELECT` 문에서 지정될 수 있습니다.  
   
--   CTE는 **CREATE VIEW** 문에서 지정될 수 있습니다.  
+-   CTE는 `CREATE VIEW` 문에서 지정될 수 있습니다.  
   
--   CTE는 **CREATE TABLE AS SELECT**(CTAS) 문에서 지정할 수 있습니다.  
+-   CTE는 `CREATE TABLE AS SELECT`(CTAS) 문에서 지정될 수 있습니다.  
   
--   CTE는 **CREATE REMOTE TABLE AS SELECT**(CRTAS) 문에서 지정할 수 있습니다.  
+-   CTE는 `CREATE REMOTE TABLE AS SELECT`(CRTAS) 문에서 지정될 수 있습니다.  
   
--   CTE는 **CREATE EXTERNAL TABLE AS SELECT**(CETAS) 문에서 지정할 수 있습니다.  
+-   CTE는 `CREATE EXTERNAL TABLE AS SELECT`(CETAS) 문에서 지정될 수 있습니다.  
   
 -   CTE에서 원격 테이블을 참조할 수 있습니다.  
   
@@ -162,25 +162,24 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   여러 CTE 쿼리 정의는 CTE 내에서 정의할 수 있습니다.  
   
--   CTE 다음에 단일 **SELECT** 문을 추가해야 합니다. **INSERT**, **UPDATE**, **DELETE** 및 **MERGE** 문은 지원하지 않습니다.  
+-   CTE 다음에 단일 `SELECT` 문이 있어야 합니다. `INSERT`, `UPDATE`, `DELETE` 및 `MERGE` 문은 지원되지 않습니다.  
   
 -   자체(재귀 공통 테이블 식)에 대한 참조를 포함하는 공통 테이블 식은 지원하지 않습니다.  
   
--   CTE에 둘 이상의 **WITH** 절을 지정할 수 없습니다. 예를 들어 CTE_query_definition이 하위 쿼리를 포함하는 경우 그 하위 쿼리는 또 다른 CTE를 정의하는 중첩 **WITH** 절을 포함할 수 없습니다.  
+-   CTE에 둘 이상의 `WITH` 절을 지정할 수 없습니다. 예를 들어 CTE 쿼리 정의에 하위 쿼리를 포함하는 경우, 해당 하위 쿼리는 또 다른 CTE를 정의하는 중첩 `WITH` 절을 포함할 수 없습니다.  
   
--   **ORDER BY** 절은 **TOP** 절이 지정된 경우를 제외하고는 CTE_query_definition에서 사용할 수 없습니다.  
+-   `ORDER BY` 절은 `TOP` 절이 지정된 경우를 제외하고는 CTE_query_definition에서 사용할 수 없습니다.  
   
 -   일괄 처리에 속한 문에 CTE를 사용할 때는 그 전의 문 다음에 반드시 세미콜론을 추가해야 합니다.  
   
--   CTE가 **sp_prepare**에서 준비한 문에 사용되는 경우 PDW에서 사용하는 다른 **SELECT**과 동일한 방식으로 작동합니다. 그러나 CTE가 **sp_prepare**에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 **sp_prepare**에 대해 구현되는 방식 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 **SELECT** 문이 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우 **sp_prepare**는 오류를 감지하지 않고 지나가지만 대신 오류는 **sp_execute** 동안 throw됩니다.  
+-   `sp_prepare`에서 준비한 명령문에 사용될 때 CTE는 PDW의 다른 `SELECT` 문과 같은 방식으로 작동합니다. 그러나 CTE가 `sp_prepare`에서 준비한 CETAS의 일부로서 사용되는 경우 그 동작은 바인딩이 `sp_prepare`에 대해 구현되는 방식 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 PDW 문에서 지연될 수 있습니다. CTE를 참조하는 `SELECT`가 CTE에 존재하지 않는 잘못된 열을 사용하고 있는 경우, `sp_prepare`는 오류를 탐지하지 않고 지나가지만 대신 `sp_execute` 동안 오류가 throw됩니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-simple-common-table-expression"></a>1. 간단한 공통 테이블 식 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 보여 줍니다.  
   
-```  
-  
+```sql   
 -- Define the CTE expression name and column list.  
 WITH Sales_CTE (SalesPersonID, SalesOrderID, SalesYear)  
 AS  
@@ -195,14 +194,12 @@ SELECT SalesPersonID, COUNT(SalesOrderID) AS TotalSales, SalesYear
 FROM Sales_CTE  
 GROUP BY SalesYear, SalesPersonID  
 ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
 ```  
   
 ### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>2. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
  다음 예에서는 판매 담당자의 모든 연도에 대한 평균 판매 주문 수를 보여 줍니다.  
   
-```  
+```sql  
 WITH Sales_CTE (SalesPersonID, NumberOfOrders)  
 AS  
 (  
@@ -213,14 +210,12 @@ AS
 )  
 SELECT AVG(NumberOfOrders) AS "Average Sales Per Person"  
 FROM Sales_CTE;  
-GO  
 ```  
   
 ### <a name="c-using-multiple-cte-definitions-in-a-single-query"></a>C. 단일 쿼리에서 여러 CTE 정의 사용  
  다음 예에서는 단일 쿼리에서 둘 이상의 CTE를 정의하는 방법을 보여 줍니다. CTE 쿼리 정의를 구분하기 위해 쉼표가 사용되었습니다. 통화 형식에서 통화량을 표시하는 데 사용되는 FORMAT 함수는 SQL Server 2012 이상에서 사용할 수 있습니다.  
   
-```  
-  
+```sql  
 WITH Sales_CTE (SalesPersonID, TotalSales, SalesYear)  
 AS  
 -- Define the first CTE query.  
@@ -252,29 +247,24 @@ SELECT SalesPersonID
 FROM Sales_CTE  
 JOIN Sales_Quota_CTE ON Sales_Quota_CTE.BusinessEntityID = Sales_CTE.SalesPersonID  
                     AND Sales_CTE.SalesYear = Sales_Quota_CTE.SalesQuotaYear  
-ORDER BY SalesPersonID, SalesYear;  
-GO  
-  
+ORDER BY SalesPersonID, SalesYear;    
 ```  
   
- 다음은 결과 집합의 일부입니다.  
+다음은 결과 집합의 일부입니다.  
   
 ```  
-  
 SalesPersonID SalesYear   TotalSales    SalesQuotaYear SalesQuota  Amt_Above_or_Below_Quota  
 ------------- ---------   -----------   -------------- ---------- ----------------------------------   
-  
 274           2005        $32,567.92    2005           $35,000.00  ($2,432.08)  
 274           2006        $406,620.07   2006           $455,000.00 ($48,379.93)  
 274           2007        $515,622.91   2007           $544,000.00 ($28,377.09)  
 274           2008        $281,123.55   2008           $271,000.00  $10,123.55  
-  
 ```  
   
 ### <a name="d-using-a-recursive-common-table-expression-to-display-multiple-levels-of-recursion"></a>D. 재귀 공통 테이블 식을 사용하여 여러 수준의 재귀 표시  
  다음 예에서는 관리자의 계층적 목록 및 이들에게 보고하는 직원을 보여 줍니다. `dbo.MyEmployees` 테이블을 만들고 채워 이 예를 시작합니다.  
   
-```  
+```sql  
 -- Create an Employee table.  
 CREATE TABLE dbo.MyEmployees  
 (  
@@ -299,7 +289,7 @@ INSERT INTO dbo.MyEmployees VALUES
 ,(23,  N'Mary', N'Gibson', N'Marketing Specialist', 4, 16);  
 ```  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -315,14 +305,13 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 )  
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
-ORDER BY ManagerID;  
-GO  
+ORDER BY ManagerID;   
 ```  
   
 ### <a name="e-using-a-recursive-common-table-expression-to-display-two-levels-of-recursion"></a>E. 재귀 공통 테이블 식을 사용하여 두 가지 수준의 재귀 표시  
  다음 예에서는 관리자와 그들에게 보고하는 직원을 보여 줍니다. 반환되는 수준은 2로 제한됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS   
@@ -339,14 +328,12 @@ WITH DirectReports(ManagerID, EmployeeID, Title, EmployeeLevel) AS
 SELECT ManagerID, EmployeeID, Title, EmployeeLevel   
 FROM DirectReports  
 WHERE EmployeeLevel <= 2 ;  
-GO  
-  
 ```  
   
 ### <a name="f-using-a-recursive-common-table-expression-to-display-a-hierarchical-list"></a>F. 재귀 공통 테이블 식을 사용하여 계층적 목록 표시  
  다음 예에서는 4번 예를 바탕으로 관리자 및 직원의 이름과 각각의 직함을 추가하는 방법을 보여 줍니다. 관리자와 직원의 계층을 추가로 강조하기 위해 각 수준을 들여쓰기 했습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH DirectReports(Name, Title, EmployeeID, EmployeeLevel, Sort)  
@@ -371,13 +358,12 @@ AS (SELECT CONVERT(varchar(255), e.FirstName + ' ' + e.LastName),
 SELECT EmployeeID, Name, Title, EmployeeLevel  
 FROM DirectReports   
 ORDER BY Sort;  
-GO  
 ```  
   
 ### <a name="g-using-maxrecursion-to-cancel-a-statement"></a>G. MAXRECURSION을 사용하여 문 취소  
  잘못 구성된 재귀 CTE가 무한 루프에 진입하는 것을 방지하는 데 `MAXRECURSION`을 사용할 수 있습니다. 다음 예에서는 의도적으로 무한 루프를 만들고 `MAXRECURSION` 힌트를 사용하여 재귀 수준을 2로 제한하는 방법을 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Creates an infinite loop  
@@ -396,12 +382,11 @@ WITH cte (EmployeeID, ManagerID, Title) as
 SELECT EmployeeID, ManagerID, Title  
 FROM cte  
 OPTION (MAXRECURSION 2);  
-GO  
 ```  
   
  코딩 오류를 교정한 다음에는 더 이상 MAXRECURSION이 필요하지 않습니다. 다음 예에서는 교정된 코드를 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH cte (EmployeeID, ManagerID, Title)  
@@ -417,13 +402,12 @@ AS
 )  
 SELECT EmployeeID, ManagerID, Title  
 FROM cte;  
-GO  
 ```  
   
 ### <a name="h-using-a-common-table-expression-to-selectively-step-through-a-recursive-relationship-in-a-select-statement"></a>H. 공통 테이블 식을 사용하여 SELECT 문에서 재귀적 관계를 선택적으로 단계별 진행  
  다음 예에서는 `ProductAssemblyID = 800`에 대해 자전거를 제작하는 데 필요한 부품과 구성 요소의 계층을 보여 줍니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -447,13 +431,12 @@ FROM Parts AS p
     INNER JOIN Production.Product AS pr  
     ON p.ComponentID = pr.ProductID  
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
-GO  
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>9. UPDATE 문에서 재귀 CTE 사용  
  다음 예에서는 제품 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`를 제작하는 데 사용되는 모든 부품의 `PerAssemblyQty` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WITH Parts(AssemblyID, ComponentID, PerAssemblyQty, EndDate, ComponentLevel) AS  
@@ -481,7 +464,7 @@ WHERE d.ComponentLevel = 0;
 ### <a name="j-using-multiple-anchor-and-recursive-members"></a>J. 여러 앵커 및 재귀 멤버 사용  
  다음 예에서는 지정된 인물의 모든 조상을 반환하기 위해 여러 개의 앵커 및 재귀 멤버를 사용하는 방법을 보여 줍니다. 이 예는 재귀 CTE가 반환한 가족 계보를 구성하기 위해 하나의 테이블을 만들고 값을 삽입합니다.  
   
-```  
+```sql  
 -- Genealogy table  
 IF OBJECT_ID('dbo.Person','U') IS NOT NULL DROP TABLE dbo.Person;  
 GO  
@@ -528,7 +511,7 @@ GO
 ###  <a name="bkmkUsingAnalyticalFunctionsInARecursiveCTE"></a> K. 재귀 CTE에서 분석 함수 사용  
  다음 예에서는 CTE의 재귀 부분에서 분석 또는 집계 함수를 사용할 때 발생할 수 있는 문제를 보여 줍니다.  
   
-```  
+```sql  
 DECLARE @t1 TABLE (itmID int, itmIDComp int);  
 INSERT @t1 VALUES (1,10), (2,10);   
   
@@ -566,7 +549,7 @@ FROM r
 SELECT Lvl, N FROM r;  
 ```  
   
- 다음은 쿼리의 예상 결과입니다.  
+다음은 쿼리의 예상 결과입니다.  
   
 ```  
 Lvl  N  
@@ -580,7 +563,7 @@ Lvl  N
 2    1  
 ```  
   
- 다음은 쿼리의 실제 결과입니다.  
+다음은 쿼리의 실제 결과입니다.  
   
 ```  
 Lvl  N  
@@ -601,9 +584,9 @@ Lvl  N
 ### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>12. CTAS 문 내에서 공통 테이블 식 사용하기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 테이블을 만듭니다.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO   
 CREATE TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -630,9 +613,9 @@ GO
 ### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>13. CETAS 문 내에서 공통 테이블 식 사용하기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 포함한 새 외부 테이블을 만듭니다.  
   
-```  
--- Uses AdventureWorks  
-  
+```sql  
+USE AdventureWorks2012;  
+GO    
 CREATE EXTERNAL TABLE SalesOrdersPerYear  
 WITH  
 (  
@@ -660,7 +643,7 @@ GO
 ### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>14. 문에서 쉼표로 구분하는 여러 CTE 사용하기  
  다음 예에서는 단일 명령문에 두 개의 CTE를 포함하는 방법을 보여줍니다. CTE는 중첩될 수 없습니다(재귀 제외).  
   
-```  
+```sql  
 WITH   
  CountDate (TotalCount, TableName) AS  
     (  
@@ -683,4 +666,4 @@ SELECT TableName, TotalAvg FROM CountCustomer;
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   
-  
+ 

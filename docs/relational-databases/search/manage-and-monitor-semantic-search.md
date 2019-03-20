@@ -1,25 +1,24 @@
 ---
 title: 의미 체계 검색 관리 및 모니터링 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: ab58f0d53f1fe1b9c1923f2669488687cb9f8d37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c16c6118879839b6bff189e5d72eef3470520730
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816121"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57972928"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +134,7 @@ GO
 2.  **단계 2**: 그런 다음 의미 체계 문서 유사성 인덱스가 채워집니다. 이 인덱스는 이전 단계에서 채워진 두 인덱스에 따라 달라집니다.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> 문제: 의미 체계 인덱스가 채워지지 않음  
+##  <a name="ProblemNotPopulated"></a> 문제점: 의미 체계 인덱스가 채워지지 않음  
 ### <a name="are-the-associated-full-text-indexes-populated"></a>연결된 전체 텍스트 인덱스가 채워졌습니까?  
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
   

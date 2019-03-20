@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579683"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974392"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -45,7 +45,9 @@ ms.locfileid: "57579683"
 - 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
 - ONLINE= 구문을 지원하지 않는 DDL 문에 기본적으로 온라인 옵션을 활성화 또는 비활성화합니다.
 - RESUMABLE= 구문을 지원하지 않는 DDL 문에 기본적으로 다시 시작 가능 옵션을 활성화 또는 비활성화합니다.
-- 전역 임시 테이블의 자동 삭제 기능 활성화 또는 비활성화
+- 글로벌 임시 테이블의 자동 삭제 기능을 활성화하거나 비활성화합니다. 
+- [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능을 활성화하거나 비활성화합니다.
+- [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화합니다.
 
 ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 보조용
 
 보조 데이터베이스에 대한 설정을 지정합니다(모든 보조 데이터베이스가 동일한 값을 가져야 함).
+
+CLEAR PROCEDURE_CACHE    
+
+데이터베이스에 대한 프로시저(플랜) 캐시를 지우고 기본 및 보조에서 둘 다 실행할 수 있습니다.  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 이 값은 데이터베이스가 기본에 있는 동안 보조에서만 유효하며, 모든 보조에서 이 설정에 대한 값이 기본에 대해 설정된 값이 되도록 지정합니다. 기본에 대한 구성이 변경되는 경우 보조에 있는 값은 보조 값을 명시적으로 설정할 필요 없이 적절하게 변경됩니다. PRIMARY는 보조에 대한 기본 설정입니다.
 
-CLEAR PROCEDURE_CACHE
-
-데이터베이스에 대한 프로시저(플랜) 캐시를 지우고 기본 및 보조에서 둘 다 실행할 수 있습니다.
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **적용 대상:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 > [!NOTE]
 > 이 옵션은 기본에 대해서만 설정될 수 있습니다. 자세한 내용은 [ID 열](create-table-transact-sql-identity-property.md)을 참조하세요.
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
+
+> [!NOTE]
+> 데이터베이스 호환성 수준 130 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
+
+> [!NOTE]
+> 데이터베이스 호환성 수준 130 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
+
+> [!NOTE]
+> 데이터베이스 호환성 수준 130 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 T-SQL Scalar UDF 인라인을 활성화하거나 비활성화할 수 있습니다. [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능을 인라인하는 T-SQL Scalar UDF.
+
+> [!NOTE] 
+> 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+
+엔진이 지원되는 작업의 권한을 online으로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 online으로 상승하지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ONLINE의 현재 값을 나타냅니다. 이러한 옵션은 online에 지원되는 작업에만 적용됩니다.
+
+FAIL_UNSUPPORTED
+
+이 값은 지원되는 모든 DDL 작업의 권한을 ONLINE으로 상승시킵니다. 온라인 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
+
+WHEN_SUPPORTED
+
+이 값은 ONLINE을 지원하는 작업의 권한을 상승시킵니다. 온라인을 지원하지 않는 작업은 오프라인으로 실행됩니다.
+
+> [!NOTE]
+> ONLINE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다.
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 resumable에 지원되는 작업에만 적용됩니다.
+
+FAIL_UNSUPPORTED
+
+이 값은 지원되는 모든 DDL 작업의 권한을 RESUMABLE로 상승시킵니다. 다시 시작 가능한 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
+
+WHEN_SUPPORTED
+
+이 값은 RESUMABLE을 지원하는 작업의 권한을 상승시킵니다. resumable을 지원하지 않는 작업은 다시 시작 가능하지 않은 방식으로 실행됩니다.
+
+> [!NOTE]
+> RESUMABLE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈의 성능 모니터링에 대한 자세한 내용은 [고유하게 컴파일된 저장 프로시저의 성능 모니터링](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md)을 참조하세요.
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
-엔진이 지원되는 작업의 권한을 online으로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 online으로 상승하지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ONLINE의 현재 값을 나타냅니다. 이러한 옵션은 online에 지원되는 작업에만 적용됩니다.
-
-FAIL_UNSUPPORTED
-
-이 값은 지원되는 모든 DDL 작업의 권한을 ONLINE으로 상승시킵니다. 온라인 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
-
-WHEN_SUPPORTED
-
-이 값은 ONLINE을 지원하는 작업의 권한을 상승시킵니다. 온라인을 지원하지 않는 작업은 오프라인으로 실행됩니다.
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다(행 모드는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 지원됨).
 
 > [!NOTE]
-> ONLINE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다.
+> 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**적용 대상**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](공개 미리 보기 기능으로)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
-엔진이 지원되는 작업의 권한을 resumable로 자동 상승시키도록 하는 옵션을 선택할 수 있습니다. 기본값은 OFF, 즉 명령문에 지정되지 않은 경우 작업의 권한이 resumable로 상승되지 않는 것입니다. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)는 ELEVATE_ELEVATE_RESUMABLE의 현재 값을 나타냅니다. 이러한 옵션은 resumable에 지원되는 작업에만 적용됩니다.
-
-FAIL_UNSUPPORTED
-
-이 값은 지원되는 모든 DDL 작업의 권한을 RESUMABLE로 상승시킵니다. 다시 시작 가능한 실행을 지원하지 않는 작업은 실패하고 경고를 throw합니다.
-
-WHEN_SUPPORTED
-
-이 값은 RESUMABLE을 지원하는 작업의 권한을 상승시킵니다. resumable을 지원하지 않는 작업은 다시 시작 가능하지 않은 방식으로 실행됩니다.
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 저장소의 일괄 처리 모드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 저장소의 일괄 처리 모드는 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
 
 > [!NOTE]
-> RESUMABLE 옵션이 지정된 명령문을 제출하여 기본 설정을 재정의할 수 있습니다.
+> 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 테이블 변수 지연 컴파일을 사용하거나 사용하지 않도록 설정할 수 있습니다. 테이블 변수 지연 컴파일은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
+
+> [!NOTE]
+> 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
@@ -219,47 +286,11 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스와 탄력적 풀을 사용하면 SQL Database 서버의 개별 사용자 데이터베이스에서 이 옵션을 설정할 수 있습니다.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스에서 이 옵션은 `TempDB`에 설정되며 개별 사용자 데이터베이스의 설정은 영향을 미치지 않습니다.
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 다중 명령문 테이블 값 함수에 대해 인터리브된 실행을 사용하거나 사용하지 않도록 설정할 수 있습니다. 인터리브된 실행은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 적응 쿼리 처리의 일부인 기능입니다. 자세한 내용은 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
-
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 적응형 조인은 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 도입된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부인 기능입니다.
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
-
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다(행 모드는 SQL Server 2019 및 Azure SQL Database에서 지원됨).
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 메모리 부여 피드백을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 메모리 부여 피드백은 SQL Server 2017에 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF}
-
-**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 범위에서 일괄 처리 모드 적응형 조인을 사용하거나 사용하지 않도록 설정할 수 있습니다. 일괄 처리 모드 적응형 조인은 SQL Server 2017에서 제공된 [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md)의 일부 기능입니다.
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
-
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 행 저장소의 일괄 처리 모드를 사용하거나 사용하지 않도록 설정할 수 있습니다. 행 저장소의 일괄 처리 모드는 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
-
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 테이블 변수 지연 컴파일을 사용하거나 사용하지 않도록 설정할 수 있습니다. 테이블 변수 지연 컴파일은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능입니다.
+[간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화할 수 있습니다. LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커니즘보다 쿼리 성능 데이터를 더 효율적으로 제공하며 기본적으로 활성화되어 있습니다.
 
 ## <a name="Permissions"></a> Permissions
 

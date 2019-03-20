@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997575"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973432"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997575"
 |**Log Pool Total Active Log Size**|공유 캐시 버퍼 관리자에 저장된 현재 총 활성 로그(바이트)입니다.|
 |**Log Pool Total Shared Pool Size**|공유 캐시 버퍼 관리자의 현재 총 메모리 사용량(바이트)입니다.|
 |**Log Shrinks**|이 데이터베이스의 총 로그 축소 수입니다.|  
-|**Log Truncations**|트랜잭션 로그가 축소된 횟수입니다.|  
+|**Log Truncations**|트랜잭션 로그가 잘린 횟수입니다(간단한 복구 모델에서).|  
 |**Percent Log Used**|사용 중인 로그에 있는 공백의 비율입니다.|  
 |**Repl. Pending Xacts**|복제하도록 표시되었지만 배포 데이터베이스에는 아직 배달되지 않은 게시 데이터베이스의 트랜잭션 로그에 있는 트랜잭션 수입니다.|  
 |**Repl. Trans. Rate**|게시 데이터베이스의 트랜잭션 로그에서 읽어서 배포 데이터베이스로 배달된 트랜잭션 수입니다.|  

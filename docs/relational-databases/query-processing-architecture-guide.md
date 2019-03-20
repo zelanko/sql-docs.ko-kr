@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579733"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161690"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579733"
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 스토리지 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
 
 ## <a name="execution-modes"></a>실행 모드
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 두 가지 고유한 처리 모드를 사용하여 SQL 문을 처리할 수 있습니다.
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]는 두 가지 고유한 처리 모드를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 처리할 수 있습니다.
 - 행 모드 실행
 - 일괄 처리 모드 실행
 
@@ -51,7 +51,7 @@ columnstore 인덱스에 대한 자세한 내용은 [Columnstore 인덱스 아�
 > 일괄 처리 모드 실행은 많은 양의 데이터를 읽고 집계할 경우 매우 효율적인 데이터 웨어하우징 시나리오입니다.
 
 ## <a name="sql-statement-processing"></a>SQL 문 처리
-단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 SQL 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
+단일 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 처리는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행하는 가장 기본적인 방법입니다. 이러한 기본 프로세스의 예로 뷰 또는 원격 테이블이 없는 로컬 기본 테이블만 참조하는 단일 `SELECT` 문을 처리하는 경우를 들 수 있습니다.
 
 ### <a name="logical-operator-precedence"></a>논리 연산자 선행 규칙
 문에 논리 연산자가 두 개 이상 사용되면 `NOT`이 가장 먼저 평가되고 다음으로 `AND`, `OR`의 순서로 평가됩니다. 산술 및 비트 연산자는 논리 연산자보다 먼저 처리됩니다. 자세한 내용은 [연산자 우선 순위](../t-sql/language-elements/operator-precedence-transact-sql.md)를 참조하세요.
@@ -215,22 +215,22 @@ END;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 *MyProc2*의 `SELECT` 문을 최적화할 때 `@d2` 값이 알려지지 않습니다. 따라서 쿼리 최적화 프로그램에서는 `OrderDate > @d2`의 선택도에 대해 기본 추정값(이 예의 경우 30%)을 사용합니다.
 
 ### <a name="processing-other-statements"></a>다른 문 처리
-`SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 `SELECT` 문을 포함할 수 있습니다.
+`SELECT` 문 처리를 위해 설명된 기본 단계는 `INSERT`, `UPDATE` 및 `DELETE`와 같은 다른 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 `SELECT` 문을 포함할 수 있습니다.
 
 `CREATE PROCEDURE` 또는 `ALTER TABLE`과 같은 DDL(데이터 정의 언어) 문조차 결과적으로 시스템 카탈로그 테이블에서, 때로는(예: `ALTER TABLE ADD COLUMN`) 데이터 테이블에 대해 일련의 관계형 연산으로 해석됩니다.
 
 ### <a name="worktables"></a>작업 테이블
-관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 tempdb에 작성되며, 더 이상 필요하지 않으면 자동으로 삭제됩니다.
+관계형 엔진은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 tempdb에 작성되며, 더 이상 필요하지 않으면 자동으로 삭제됩니다.
 
 ### <a name="view-resolution"></a>뷰 확인
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서에서는 인덱싱된 뷰와 인덱싱되지 않은 뷰가 다르게 처리됩니다. 
 
 * 인덱싱된 뷰의 행은 테이블과 동일한 형식으로 데이터베이스에 저장됩니다. 쿼리 프로세서에서 쿼리 계획에 인덱싱된 뷰를 사용하기로 결정하면 인덱싱된 뷰는 기본 테이블과 동일한 방법으로 처리됩니다.
-* 인덱싱되지 않은 뷰의 정의만 저장되고 뷰의 행은 저장되지 않습니다. 쿼리 최적화 프로그램은 인덱싱되지 않은 뷰를 참조하는 SQL 문에 대해 작성하는 실행 계획에 뷰 정의의 논리를 추가합니다. 
+* 인덱싱되지 않은 뷰의 정의만 저장되고 뷰의 행은 저장되지 않습니다. 쿼리 최적화 프로그램은 인덱싱되지 않은 뷰를 참조하는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 작성하는 실행 계획에 뷰 정의의 논리를 추가합니다. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 인덱싱된 뷰의 사용 시기를 결정하는 데 사용되는 논리는 테이블 인덱스의 사용 시기를 결정하는 데 사용되는 논리와 유사합니다. 인덱싱된 뷰의 데이터가 SQL 문의 전체나 일부를 포괄하고 해당 뷰의 인덱스가 저렴한 비용의 액세스 경로로 확인되면, 쿼리에서 이름별로 뷰가 참조되는지 여부와 관계없이 인덱스가 선택됩니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 인덱싱된 뷰의 사용 시기를 결정하는 데 사용되는 논리는 테이블 인덱스의 사용 시기를 결정하는 데 사용되는 논리와 유사합니다. 인덱싱된 뷰의 데이터가 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 전체나 일부를 포괄하고 해당 뷰의 인덱스가 저렴한 비용의 액세스 경로로 확인되면, 쿼리에서 이름별로 뷰가 참조되는지 여부와 관계없이 인덱스가 선택됩니다.
 
-SQL 문에서 인덱싱되지 않은 뷰를 참조할 경우 파서와 쿼리 최적화 프로그램은 SQL 문의 원본과 뷰의 원본을 모두 분석하고 단일 실행 계획을 세웁니다. SQL 문과 뷰에 대해 별도의 계획이 있는 것은 아닙니다.
+[!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 인덱싱되지 않은 뷰를 참조할 경우 파서와 쿼리 최적화 프로그램은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 원본과 뷰의 원본을 모두 분석하고 단일 실행 계획을 세웁니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 뷰에 대해 별도의 계획이 있는 것은 아닙니다.
 
 예를 들어 다음과 같은 뷰가 있습니다.
 
@@ -245,7 +245,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-이 뷰를 기반으로 두 SQL 문이 모두 기본 테이블에 대해 동일한 작업을 수행하고 동일한 결과를 생성합니다.
+이 뷰를 기반으로 두 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 모두 기본 테이블에 대해 동일한 작업을 수행하고 동일한 결과를 생성합니다.
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -371,7 +371,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 분산 쿼리를 효율적으로 사용하여 원격 멤버 테이블의 데이터에 액세스하는 지능적이고 동적인 계획을 작성합니다. 
 
 * 먼저 쿼리 프로세서는 OLE DB를 사용하여 각 멤버 테이블에서 check 제약 조건 정의를 검색합니다. 쿼리 프로세서는 이를 통해 멤버 테이블에 키 값을 분산하여 매핑할 수 있습니다.
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여 주는 맵과 비교합니다. 그런 다음 쿼리 프로세서는 분산 쿼리를 사용하여 SQL 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
+* 쿼리 프로세서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여주는 맵과 비교합니다. 그런 다음, 쿼리 프로세서는 분산 쿼리를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
 
 예를 들어 Server1(1부터 3299999까지의`CustomerID` ), Server2(3300000부터 6599999까지의`CustomerID` ) 및 Server3(6600000부터 9999999까지의`CustomerID` )에 걸쳐 customers 테이블이 분할된 시스템이 있다고 가정합니다.
 
@@ -385,7 +385,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 이 쿼리에 대한 실행 계획은 로컬 멤버 테이블에서 3200000에서 3299999까지의 `CustomerID` 키 값을 포함하는 행을 추출하고 분산 쿼리를 실행하여 Server2에서 3300000에서 3400000까지의 키 값을 포함하는 행을 검색합니다.
 
-또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서는 실행 계획이 작성되어야 할 때 키 값이 알려지지 않은 SQL 문에 대해 동적 논리를 쿼리 실행 계획으로 작성할 수 있습니다. 예를 들면 다음 저장 프로시저가 있습니다.
+또한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서는 실행 계획이 작성되어야 할 때 키 값이 알려지지 않은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 동적 논리를 쿼리 실행 계획으로 작성할 수 있습니다. 예를 들면 다음 저장 프로시저가 있습니다.
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -410,7 +410,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>저장 프로시저 및 트리거 실행
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 저장 프로시저와 트리거의 원본만 저장합니다. 저장 프로시저나 트리거가 먼저 실행될 때 원본은 실행 계획으로 컴파일됩니다. 실행 계획이 메모리에서 에이징되기 전에 저장 프로시저나 트리거가 다시 실행되는 경우 관계형 엔진은 기존 계획을 검색하고 다시 사용합니다. 계획이 메모리에서 에이징되면 새 계획이 작성됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 모든 SQL 문에 대해 수행하는 프로세스와 유사합니다. 성능 면에서 동적 SQL의 일괄 처리와 비교했을 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 저장 프로시저와 트리거의 주요 이점은 SQL 문이 항상 동일하다는 것입니다. 따라서 관계형 엔진이 기존 실행 계획과 SQL 문을 쉽게 대응시킵니다. 또한 저장 프로시저와 트리거 계획이 쉽게 다시 사용됩니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 저장 프로시저와 트리거의 원본만 저장합니다. 저장 프로시저나 트리거가 먼저 실행될 때 원본은 실행 계획으로 컴파일됩니다. 실행 계획이 메모리에서 에이징되기 전에 저장 프로시저나 트리거가 다시 실행되는 경우 관계형 엔진은 기존 계획을 검색하고 다시 사용합니다. 계획이 메모리에서 에이징되면 새 계획이 작성됩니다. 이 프로세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 수행하는 프로세스와 유사합니다. 성능 면에서 동적 [!INCLUDE[tsql](../includes/tsql-md.md)]의 일괄 처리와 비교했을 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 저장 프로시저와 트리거의 주요 이점은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 항상 동일하다는 것입니다. 따라서 관계형 엔진이 기존 실행 계획과 SQL 문을 쉽게 대응시킵니다. 또한 저장 프로시저와 트리거 계획이 쉽게 다시 사용됩니다.
 
 저장 프로시저나 트리거의 실행 계획은 저장 프로시저를 호출하거나 트리거를 실행하는 일괄 처리의 실행 계획과는 별도로 실행됩니다. 따라서 저장 프로시저와 트리거 실행 계획을 더 많이 다시 사용할 수 있습니다.
 
@@ -420,16 +420,21 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 계획은 다음으로 구성됩니다. 
 
-* 쿼리 실행 계획 대량 실행 계획은 여러 사용자가 사용하는 재진입용 읽기 전용 데이터 구조입니다. 이것을 쿼리 계획이라고 합니다. 쿼리 계획에는 사용자 컨텍스트가 저장되지 않습니다. 메모리에는 쿼리 계획의 복사본이 한 개나 두 개만 있습니다. 하나는 모든 직렬 실행용이고 다른 하나는 모든 병렬 실행용입니다. 병렬 복사본은 병렬 처리 수준에 관계없이 모든 병렬 실행에 적용됩니다. 
-* 실행 컨텍스트. 쿼리를 현재 실행하고 있는 각 사용자는 매개 변수 값 등의 해당 실행 관련 데이터를 보유하는 데이터 구조를 갖습니다. 이 데이터 구조를 실행 컨텍스트라고 합니다. 실행 컨텍스트 데이터 구조는 다시 사용됩니다. 사용자가 쿼리를 실행하는 경우 사용 중인 구조가 없으면 새 사용자를 위한 컨텍스트로 다시 초기화됩니다. 
+- **쿼리 실행 계획**     
+  대량 실행 계획은 여러 사용자가 사용하는 재진입용 읽기 전용 데이터 구조입니다. 이것을 쿼리 계획이라고 합니다. 쿼리 계획에는 사용자 컨텍스트가 저장되지 않습니다. 메모리에는 쿼리 계획의 복사본이 한 개나 두 개만 있습니다. 하나는 모든 직렬 실행용이고 다른 하나는 모든 병렬 실행용입니다. 병렬 복사본은 병렬 처리 수준에 관계없이 모든 병렬 실행에 적용됩니다. 
+- **실행 컨텍스트**     
+  쿼리를 현재 실행하고 있는 각 사용자는 매개 변수 값 등의 해당 실행 관련 데이터를 보유하는 데이터 구조를 갖습니다. 이 데이터 구조를 실행 컨텍스트라고 합니다. 실행 컨텍스트 데이터 구조는 다시 사용됩니다. 사용자가 쿼리를 실행하는 경우 사용 중인 구조가 없으면 새 사용자를 위한 컨텍스트로 다시 초기화됩니다. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 SQL 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 SQL 문에 대해 기존 실행 계획이 있는지 확인합니다. SQL 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 SQL 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 SQL 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 때 관계형 엔진은 먼저 계획 캐시를 조사하여 동일한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대해 기존 실행 계획이 있는지 확인합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 문자 그대로 문자당 캐시된 계획 및 문자 하나와 이전에 실행된 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 일치하는 경우 존재하는 것으로 규정합니다. 기존 계획을 찾으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 그것을 재사용하기 때문에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다시 컴파일하기 위한 오버헤드가 발생하지 않습니다. 기존의 실행 계획이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리에 대해 새로운 실행 계획이 생성됩니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 특정 SQL 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 SQL 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
+> [!NOTE]
+> rowstore에서 실행 중인 대량 작업 명령문이나 8KB를 넘는 문자열 리터럴이 포함된 명령문과 같은 일부 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 캐시되지 않습니다.
 
-캐시에서 사용되지 않은 기존 실행 계획과 새 SQL 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 `Person`은 아래 `SELECT` 문을 실행하는 사용자의 기본 스키마입니다. 이 예제에서는 `Person` 테이블이 실행되기 위해 정규화되어야 할 필요가 없는 반면, 두 번째 명령문은 기존 계획과 일치하지 않지만 세 번째 명령문은 일치한다는 의미입니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 특정 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에 대한 기존 실행 계획을 찾는 효율적인 알고리즘이 있습니다. 대부분의 시스템에서 이러한 검색에 사용되는 최소 리소스는 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 컴파일하는 대신 기존 계획을 다시 사용함으로써 절약되는 리소스보다도 적습니다.
+
+캐시에서 사용되지 않은 기존 실행 계획과 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 대응시키는 알고리즘을 적용하려면 모든 개체 참조가 정규화되어야 합니다. 예를 들어 `Person`은 아래 `SELECT` 문을 실행하는 사용자의 기본 스키마입니다. 이 예제에서는 `Person` 테이블이 실행되기 위해 정규화되어야 할 필요가 없는 반면, 두 번째 명령문은 기존 계획과 일치하지 않지만 세 번째 명령문은 일치한다는 의미입니다.
 
 ```sql
 SELECT * FROM Person;
@@ -499,8 +504,8 @@ GO
 
 > [!NOTE]
 > xEvent를 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서는 문 수준의 재컴파일을 보고하기 위한 동일한 목적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러 [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) 추적 이벤트를 사용할 수 있습니다.
-> 추적 이벤트 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)도 문 수준의 재컴파일을 보고하며, 재컴파일을 추적하고 디버그하는 데에도 이 추적 이벤트를 사용할 수 있습니다. SP:Recompile은 저장 프로시저와 트리거에 대해서만 생성되는 반면 SQL:StmtRecompile은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
-> SP:Recompile 및 SQL:StmtRecompile의 *EventSubClass* 열에는 다시 컴파일하는 이유를 나타내는 정수 코드가 포함됩니다. 코드에 대한 설명은 [여기](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)에 있습니다.
+> 추적 이벤트 [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)도 문 수준의 재컴파일을 보고하며, 재컴파일을 추적하고 디버그하는 데에도 이 추적 이벤트를 사용할 수 있습니다. SP:Recompile은 저장 프로시저와 트리거에 대해서만 생성되는 반면 `SQL:StmtRecompile`은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
+> `SP:Recompile` 및 `SQL:StmtRecompile`의 *EventSubClass* 열에는 다시 컴파일할 이유를 나타내는 정수 코드가 들어 있습니다. 코드에 대한 설명은 [여기](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)에 있습니다.
 
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 사항에 따라 계속하여 쿼리가 다시 컴파일됩니다.
@@ -526,9 +531,9 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-이러한 쿼리에 대한 실행 계획 간의 유일한 차이점은 `ProductSubcategoryID` 열을 비교할 때 저장되는 값이 다르다는 것입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 해당 문이 기본적으로 동일한 계획을 생성하고 그 계획을 재사용한다는 것을 인식하게 하려는 것이 목적이지만 때때로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 복잡한 SQL 문에서 이러한 사실을 감지하지 못합니다.
+이러한 쿼리에 대한 실행 계획 간의 유일한 차이점은 `ProductSubcategoryID` 열을 비교할 때 저장되는 값이 다르다는 것입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 해당 명령문이 기본적으로 동일한 계획을 생성하고 그 계획을 재사용한다는 것을 인식하게 하려는 것이 목적이지만 때때로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 복잡한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 이러한 사실을 탐지하지 못합니다.
 
-매개 변수를 사용하여 SQL 문에서 상수를 분리하면 관계형 엔진이 중복된 계획을 인식하는 데 도움이 됩니다. 다음 방법으로 매개 변수를 사용할 수 있습니다. 
+매개 변수를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 상수를 분리하면 관계형 엔진이 중복된 계획을 인식하는 데 도움이 됩니다. 다음 방법으로 매개 변수를 사용할 수 있습니다. 
 
 * [!INCLUDE[tsql](../includes/tsql-md.md)]에서 `sp_executesql`을 사용합니다. 
 
@@ -576,12 +581,12 @@ WHERE AddressID = 1 + 2;
 
 ### <a name="SimpleParam"></a> 단순 매개 변수화
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 Transact-SQL 문에 매개 변수 또는 매개 변수 표식을 사용하여 새 SQL 문을 이전에 컴파일된 기존의 실행 계획과 일치시키는 관계형 엔진의 성능을 향상시킵니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 Transact-SQL 문에 매개 변수 또는 매개 변수 표식을 사용하여 새 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 이전에 컴파일된 기존의 실행 계획과 일치시키는 관계형 엔진의 성능을 향상시킵니다.
 
 > [!WARNING] 
 > 최종 사용자가 입력한 값을 갖는 매개 변수 또는 매개 변수 표식을 사용하는 것이 데이터 액세스 API 메서드, `EXECUTE` 문 또는 `sp_executesql` 저장 프로시저 중 하나를 사용하여 실행되는 문자열에 값을 연결하는 것보다 안전합니다.
 
-매개 변수를 사용하지 않고 SQL 문이 실행되면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 내부적으로 해당 문을 매개 변수화하여 기존 실행 계획과 일치할 가능성을 높입니다. 이 프로세스를 단순 매개 변수화라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 프로세스를 자동 매개 변수화라고 했습니다.
+매개 변수를 사용하지 않고 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 실행되면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 내부적으로 해당 문을 매개 변수화하여 기존 실행 계획과 일치할 가능성을 높입니다. 이 프로세스를 단순 매개 변수화라고 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 프로세스를 자동 매개 변수화라고 했습니다.
 
 다음 문을 고려해 보십시오.
 
@@ -601,7 +606,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-복잡한 SQL 문을 처리할 때 관계형 엔진은 매개 변수화할 수 있는 식을 결정하기가 어려울 수 있습니다. 복잡한 SQL 문을 사용되지 않은 기존 실행 계획과 일치시키는 관계형 엔진의 성능을 향상하려면 sp_executesql 또는 매개 변수 표식을 사용하여 매개 변수를 명시적으로 지정합니다. 
+복잡한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 처리할 때 관계형 엔진은 매개 변수화할 수 있는 식을 결정하기가 어려울 수 있습니다. 복잡한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용되지 않은 기존 실행 계획과 일치시키는 관계형 엔진의 성능을 향상하려면 sp_executesql 또는 매개 변수 표식을 사용하여 매개 변수를 명시적으로 지정합니다. 
 
 > [!NOTE]
 > +, -, \*, / 또는 % 산술 연산자를 사용하여 암시적 또는 명시적으로 int, smallint, tinyint 또는 bigint 상수 값을 float, real, decimal 또는 numeric의 데이터 형식으로 변환할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 특정 규칙에 따라 식 결과의 형식과 전체 자릿수를 계산합니다. 그러나 이러한 규칙은 쿼리의 매개 변수화 여부에 따라 다릅니다. 따라서 쿼리에서 유사한 식을 사용해도 다른 결과가 발생하는 경우가 있습니다.
@@ -620,7 +625,7 @@ WHERE ProductSubcategoryID = 4;
 * 저장 프로시저, 트리거 또는 사용자 정의 함수의 본문 안에 있는 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 이미 이러한 루틴에 대한 쿼리 계획을 재사용하고 있습니다.
 * 클라이언트 쪽 애플리케이션에서 이미 매개 변수화된 준비된 문
 * XQuery 메서드 호출이 포함된 문. 이러한 문에서는 `WHERE` 절과 같이 해당 인수가 일반적으로 매개 변수화되는 컨텍스트에서 메서드가 나타납니다. 해당 인수가 매개 변수화되지 않는 컨텍스트에서 메서드가 나타날 경우에는 문의 나머지 부분이 매개 변수화됩니다.
-* Transact-SQL 커서(Transact-SQL cursor) 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
+* [!INCLUDE[tsql](../includes/tsql-md.md)] 커서 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
 * 사용되지 않는 쿼리 구문
 * `ANSI_PADDING` 또는 `ANSI_NULLS` 를 `OFF`로 설정한 컨텍스트에서 실행되는 모든 문.
 * 매개 변수화하기에 적합한 리터럴이 2,097개 이상 포함된 문
@@ -644,7 +649,7 @@ WHERE ProductSubcategoryID = 4;
   * 식에 `CASE` 절이 포함됩니다.  
 * 쿼리 힌트 절에 대한 인수. 여기에는 `number_of_rows` 쿼리 힌트의 `FAST` 인수, `number_of_processors` 쿼리 힌트의 `MAXDOP` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.
 
-매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
+매개 변수화는 개별 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 \@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 
 > [!NOTE]
 > 매개 변수 이름은 임의로 지정하므로 사용자나 애플리케이션에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 다음 요소는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 서비스 팩 업그레이드의 버전에 따라 달라질 수 있습니다. 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백이 여기에 포함됩니다.
@@ -678,15 +683,15 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="preparing-sql-statements"></a>SQL 문 준비
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 엔진에서는 SQL 문을 실행하기 전에 문을 준비할 수 있는 기능을 제공합니다. 애플리케이션에서 SQL 문을 여러 번 실행해야 하는 경우에는 데이터베이스 API를 사용하여 다음을 수행할 수 있습니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관계형 엔진에서는 실행하기 전에 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 준비할 수 있는 기능을 제공합니다. 애플리케이션에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 여러 번 실행해야 하는 경우에는 데이터베이스 API를 사용하여 다음을 수행할 수 있습니다. 
 
-* 문을 한 번 준비합니다. 이렇게 하면 SQL 문이 실행 계획으로 컴파일됩니다.
-* 문을 실행해야 할 때마다 미리 컴파일한 실행 계획을 실행합니다. 이렇게 하면 첫 번째 실행 이후 실행할 때마다 SQL 문을 다시 컴파일할 필요가 없습니다.   
-  문 준비 및 실행은 API 함수 및 메서드에 의해 제어됩니다. 이 기능은 Transact-SQL 언어가 아닙니다. SQL 문 실행에 대한 준비/실행 모델은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 의해 지원됩니다. 준비 요청 시 공급자 또는 드라이버가 문 준비 요청과 함께 문을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 보냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 실행 계획을 컴파일하고 해당 계획에 대한 핸들을 공급자 또는 드라이버에 반환합니다. 실행 요청 시, 공급자 또는 드라이버는 핸들과 관련된 계획의 실행 요청을 서버에 보냅니다. 
+* 문을 한 번 준비합니다. 이렇게 하면 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 실행 계획으로 컴파일됩니다.
+* 문을 실행해야 할 때마다 미리 컴파일한 실행 계획을 실행합니다. 이렇게 하면 첫 번째 실행 이후 실행할 때마다 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 다시 컴파일할 필요가 없습니다.   
+  문 준비 및 실행은 API 함수 및 메서드에 의해 제어됩니다. 이것은 [!INCLUDE[tsql](../includes/tsql-md.md)] 언어의 일부분이 아닙니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문 실행에 대한 준비/실행 모델은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 의해 지원됩니다. 준비 요청 시 공급자 또는 드라이버가 문 준비 요청과 함께 문을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 보냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 실행 계획을 컴파일하고 해당 계획에 대한 핸들을 공급자 또는 드라이버에 반환합니다. 실행 요청 시, 공급자 또는 드라이버는 핸들과 관련된 계획의 실행 요청을 서버에 보냅니다. 
 
 준비된 문은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 임시 개체를 만드는 데 사용할 수 없습니다. 준비된 문은 임시 테이블과 같은 임시 개체를 만드는 시스템 저장 프로시저를 참조할 수 없습니다. 이러한 프로시저는 직접 실행해야 합니다.
 
-준비/실행 모델을 과도하게 사용하면 성능이 저하될 수 있습니다. 문이 한 번만 실행되는 경우 직접 실행은 서버로의 네트워크 왕복을 1회만 필요로 합니다. 한 번만 실행되는 SQL 문을 준비하고 실행하면 네트워크 왕복이 추가로 필요합니다. 즉 문을 준비하는 데 한 번, 문을 실행하는 데 한 번이 필요합니다.
+준비/실행 모델을 과도하게 사용하면 성능이 저하될 수 있습니다. 문이 한 번만 실행되는 경우 직접 실행은 서버로의 네트워크 왕복을 1회만 필요로 합니다. 한 번만 실행되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 준비하고 실행하면 네트워크 왕복이 추가로 필요합니다. 즉 명령문을 준비하는 데 한 번, 명령문을 실행하는 데 한 번이 필요합니다.
 
 매개 변수 표식이 사용되는 경우 문을 준비하는 것이 좀 더 효과적입니다. 예를 들어 애플리케이션이 종종 `AdventureWorks` 샘플 데이터베이스의 제품 정보 검색 요청을 받는 경우를 생각해 봅시다. 애플리케이션에서는 두 가지 방법으로 이를 처리할 수 있습니다. 
 
@@ -709,9 +714,9 @@ WHERE ProductID = 63;
 
 두 번째 방법은 문이 네 번 이상 실행될 때 좀 더 효율적입니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 준비/실행 모델이 직접 실행에 비해 성능상의 큰 이점이 없는데 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 실행 계획을 재사용하기 때문입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 알고리즘은 현재 SQL 문을 이전에 이 SQL 문을 실행하기 위해 생성한 실행 계획과 비교할 때 효율적입니다. 애플리케이션이 매개 변수 표식을 사용하여 여러 번 SQL 문을 실행하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 해당 계획이 계획 캐시에서 에이징되지 않는 이상 두 번째 실행부터는 첫 번째 실행의 실행 계획을 재사용합니다. 준비/실행 모델은 여전히 다음과 같은 이점을 제공합니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 준비/실행 모델이 직접 실행에 비해 성능상의 큰 이점이 없는데 이는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 실행 계획을 재사용하기 때문입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 현재 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 동일한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 사전 실행을 위해 생성된 실행 계획과 일치시키기 위한 효율적인 알고리즘이 있습니다. 애플리케이션이 매개 변수 표식을 사용하여 여러 번 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 해당 계획이 계획 캐시에서 에이징되지 않는 이상 두 번째 실행부터는 첫 번째 실행의 실행 계획을 재사용합니다. 준비/실행 모델은 여전히 다음과 같은 이점을 제공합니다. 
 
-* 식별 핸들로 실행 계획을 찾는 것은 SQL 문을 기존 실행 계획과 비교하는 알고리즘보다 더 효율적입니다.
+* 식별 핸들로 실행 계획을 찾는 것이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 기존 실행 계획과 비교하는 데 사용되는 알고리즘보다 더 효율적입니다.
 * 애플리케이션이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
@@ -908,20 +913,20 @@ Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용�
 
 ## <a name="distributed-query-architecture"></a>분산 쿼리 아키텍처
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL 문에서 다른 유형의 OLE DB 데이터 원본을 참조할 수 있도록 두 가지 메서드를 지원합니다.
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 다른 유형의 OLE DB 데이터 원본을 참조하는 두 가지 메서드를 지원합니다.
 
 * 연결된 서버 이름  
-  시스템 저장 프로시저 `sp_addlinkedserver` 와 `sp_addlinkedsrvlogin` 은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. Transact-SQL 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr`이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
+  시스템 저장 프로시저 `sp_addlinkedserver` 와 `sp_addlinkedsrvlogin` 은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr`이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음 이 행 집합은 Transact-SQL 문의 테이블처럼 참조될 수 있습니다. 
+   또한 연결된 서버 이름은 OLE DB 데이터 원본에서 행 집합을 열도록 `OPENQUERY` 문에 지정될 수 있습니다. 그런 다음 이 행 집합은 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 테이블처럼 참조될 수 있습니다. 
 
 * 임의 커넥터 이름  
-  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 Transact-SQL 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
+  데이터 원본이 자주 참조되지 않는 경우 연결된 서버에 연결하는 데 필요한 정보로 `OPENROWSET` 또는 `OPENDATASOURCE` 함수가 지정됩니다. 그런 다음 행 집합은 테이블이 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 방법과 동일하게 참조될 수 있습니다. 
   
   ```sql
   SELECT *
@@ -930,19 +935,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 스토리지 엔진 간에 통신합니다. 관계형 엔진은 각 Transact-SQL 문을 기본 테이블의 스토리지 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB를 사용하여 관계형 엔진과 스토리지 엔진 간에 통신합니다. 관계형 엔진은 각 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 기본 테이블의 저장소 엔진에서 연 단순 OLE DB 행 집합에 대한 일련의 작업으로 분류합니다. 이것은 관계형 엔진도 OLE DB 데이터 원본의 단순 OLE DB 행 집합을 열 수 있음을 의미합니다.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 관계형 엔진은 OLE DB API(애플리케이션 프로그래밍 인터페이스)를 사용하여 연결된 서버에서 행 집합을 열고, 그 행을 인출하고, 트랜잭션을 관리합니다.
 
-연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 Transact-SQL 연산 집합은 OLE DB 공급자의 기능에 따라 다릅니다.
+연결된 서버로 액세스되는 각 OLE DB 데이터 원본에 대해 OLE DB 공급자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 실행 중인 서버에 있어야 합니다. 특정 OLE DB 데이터 원본에 대해 사용할 수 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 연산 집합은 OLE DB 공급자의 기능에 따라 다릅니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임의 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 SQL 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임의 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
 
 분산 쿼리를 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스가 실행 중인 Microsoft Windows 계정의 보안 컨텍스트에서 다른 데이터 원본(예: 파일, Active Directory 같은 비관계형 데이터 원본 등)에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Windows 로그인에서는 적절하게 로그인을 가장하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인에서는 그렇지 못합니다. 이렇게 하면 사용 권한이 없는 다른 데이터 원본에 대한 액세스를 분산 쿼리 사용자에게 허용할 수 있지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스가 실행 중인 계정에는 사용 권한이 없습니다. `sp_addlinkedsrvlogin` 을 사용하여 연결된 해당 서버에 액세스할 권한이 부여된 특정 로그인을 정의할 수 있습니다. 이 제어는 임의 이름에 대해 사용할 수 없으므로 임의 액세스에 대해 OLE DB 공급자를 활성화할 경우 조심해야 합니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 가능하면 조인, 제한, 투영, 정렬, 그룹화 같은 관계형 연산을 연산별로 OLE DB 데이터 원본에 푸시합니다. 기본적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 기본 테이블을 검색하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 전송한 후 자체적으로 관계형 연산을 수행하지는 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB 공급자에게 공급자에서 지원하는 SQL 문법 수준을 확인하도록 쿼리하고 이 정보에 따라 가능한 한 많은 관계형 연산을 공급자에게 푸시합니다. 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB 공급자가 OLE DB 데이터 원본에서 키 값이 배포되는 방식을 나타내는 통계를 반환하기 위한 메커니즘을 지정합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 각 SQL 문의 요구 사항에 대해 데이터 원본의 데이터의 패턴을 좀 더 잘 분석하므로 최적의 실행 계획을 생성하는 쿼리 최적화 프로그램의 기능을 향상시킬 수 있습니다. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 OLE DB 공급자가 OLE DB 데이터 원본에서 키 값이 배포되는 방식을 나타내는 통계를 반환하기 위한 메커니즘을 지정합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 각 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 요구 사항에 대해 데이터 원본의 데이터의 패턴을 좀 더 잘 분석하므로 최적의 실행 계획을 생성하는 쿼리 최적화 프로그램의 기능을 향상시킬 수 있습니다. 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스에서의 향상된 쿼리 처리
 
@@ -977,7 +982,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>쿼리 실행 계획의 분할 정보 표시
 
-분할 테이블과 인덱스에서의 쿼리 실행 계획은 Transact-SQL `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 계획 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
+분할 테이블과 인덱스에서의 쿼리 실행 계획은 [!INCLUDE[tsql](../includes/tsql-md.md)] `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio의 그래픽 실행 계획 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
 
 이러한 도구를 사용하여 다음 정보를 확인할 수 있습니다.
 

@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591647"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072211"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,26 +121,29 @@ ms.locfileid: "53591647"
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server에 최대 메모리 양 제공  
 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 프로세스 가상 주소 공간 제한까지 메모리를 구성할 수 있습니다. 자세한 내용은 [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)을 참조하세요.
-  
-## <a name="examples"></a>예  
-  
-### <a name="example-a"></a>예 1  
- 다음 예에서는 `max server memory` 옵션을 4GB로 설정합니다.  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+
+## <a name="examples"></a>예
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>예제 A. 최대 서버 메모리 옵션을 4GB로 설정합니다.
+ 다음 예제에서는 `max server memory` 옵션을 4GB로 설정합니다.  `sp_configure`에서 옵션 이름을 `max server memory (MB)`로 지정하지만, 예제에서는 `(MB)`를 생략하는 것을 보여줍니다.
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+이렇게 하면 다음과 유사한 명령문이 출력됩니다.
+
+> 구성 옵션 '최대 서버 메모리(MB)'가 2147483647에서 4096으로 변경되었습니다. RECONFIGURE 문을 실행하여 설치하십시오.
+
 ### <a name="example-b-determining-current-memory-allocation"></a>예 B. 현재 메모리 할당 확인  
  다음 쿼리는 현재 할당된 메모리에 대한 정보를 반환합니다.  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +158,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>예제 C. '최대 서버 메모리(MB)' 값 결정
+다음 쿼리는 현재 구성된 값과 SQL Server에서 사용 중인 값에 대한 정보를 반환합니다.  이 쿼리는 '고급 옵션 표시'가 true인지 여부에 관계없이 결과를 반환합니다.
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md)   

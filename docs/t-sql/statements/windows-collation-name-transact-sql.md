@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572846"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974352"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -42,8 +42,9 @@ ms.locfileid: "57572846"
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ CollationDesignator_<ComparisonStyle>
 **Omitted**는 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
 
 *VariationSelectorSensitivity*  
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
 
 **생략**은 변형 선택기 구분 안 함을 지정하며, **VSS**는 변형 선택기 구분을 지정합니다.
+
+**UTF8**  
+**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   
+
+적합한 데이터 형식에 사용할 UTF-8 인코딩을 지정합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
 **BIN**  
 이전 버전과 호환되는 이진 정렬 순서를 사용하도록 지정합니다.
@@ -83,7 +89,6 @@ CollationDesignator_<ComparisonStyle>
 코드 포인트 비교 기능을 사용하는 이진 정렬 순서를 지정합니다.
 
 ## <a name="remarks"></a>Remarks
-
 데이터 정렬 버전에 따라 일부 코드 포인트에는 정렬 가중치 및/또는 대문자/소문자 매핑이 정의되지 않을 수 있습니다. 예를 들어 동일한 문자가 지정되지만 동일한 데이터 정렬의 다른 버전에서 `LOWER`의 출력을 비교합니다.
 
 ```sql

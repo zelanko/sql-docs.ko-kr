@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bdea0473176e08c51931f1bb192462c5c45ee514
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802379"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974522"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,23 +54,23 @@ ms.locfileid: "56802379"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd 유틸리티의 최신 버전 다운로드
 
-**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x64) 다운로드(2.4MB)](https://go.microsoft.com/fwlink/?linkid=2043518)**
-<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x86) 다운로드(2.2MB)](https://go.microsoft.com/fwlink/?linkid=2043622)**
+**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
 
 **버전 정보**
 
 릴리스 번호: 15.0 <br>
-빌드 번호: 15.0.1000.34<br>
-릴리스 날짜: 2018 년 10 월 18 일
+빌드 번호: 15.0.1300.359<br>
+릴리스 날짜: 2019년 3월 13일
 
 새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
 
-**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.2](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
  
-SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1000.34 확인 버전 이상이 사용에서 합니다.
+SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1300.359 확인 버전 이상이 사용에서 합니다.
 
 
 

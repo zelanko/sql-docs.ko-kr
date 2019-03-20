@@ -1,7 +1,7 @@
 ---
 title: 페이지 및 익스텐트 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748485"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974372"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ ms.locfileid: "52748485"
 이 제한은 varchar, nvarchar, varbinary 또는 sql_variant 열이 있는 테이블에는 제한적으로 적용됩니다. 테이블에 있는 모든 고정 및 변수 열의 전체 행 크기가 8,060바이트 한계를 초과하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 하나 이상의 가변 길이 열을 가장 너비가 넓은 열부터 시작하여 ROW_OVERFLOW_DATA 할당 단위에 있는 페이지로 동적으로 옮깁니다. 
 
 삽입 또는 업데이트 작업으로 행의 전체 크기가 8060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
+
+##### <a name="row-overflow-considerations"></a>행 오버플로 고려 사항 
+
+행당 8,060바이트를 초과하는 varchar, nvarchar, varbinary, sql_variant 또는 CLR 사용자 정의 형식 열을 결합할 때는 다음 사항을 고려하세요. 
+-  업데이트 작업에 따라 레코드가 길어지는 경우 큰 레코드는 동적으로 다른 페이지로 이동합니다. 업데이트 작업에 따라 레코드가 짧아지는 경우 해당 레코드는 IN_ROW_DATA 할당 단위에 있는 원래 페이지로 다시 이동할 수도 있습니다. 행 오버플로 데이터가 포함된 큰 레코드에 대한 정렬이나 조인 같은 다른 SELECT 작업을 쿼리 및 수행하면 해당 레코드가 비동기적으로 처리되지 않고 동기적으로 처리되기 때문에 처리 시간이 느려집니다.   
+   따라서 여러 varchar, nvarchar, varbinary, sql_variant 또는 CLR 사용자 정의 형식 열이 있는 테이블을 디자인할 때는 오버플로될 가능성이 있는 행의 비율과 이 오버플로 데이터가 자주 쿼리될 가능성이 있는지 고려하십시오. 행 오버플로 데이터가 있는 다수의 행에서 쿼리가 자주 수행될 가능성이 높은 경우에는 일부 열이 다른 테이블로 이동하도록 테이블을 정규화하십시오. 그런 다음 비동기 JOIN 작업에서 이 테이블을 쿼리할 수 있습니다. 
+-  varchar, nvarchar, varbinary, sql_variant 및 CLR 사용자 정의 형식 열의 개별 열 길이에는 여전히 8,000바이트의 제한이 적용되어야 합니다. 이 열이 결합되는 경우에만 테이블의 8,060바이트의 행 제한을 초과할 수 있습니다.
+-  char 및 nchar 데이터를 비롯하여 다른 데이터 형식 열의 합계에는 8,060바이트의 행 제한이 적용되어야 합니다. 큰 개체 데이터도 8,060바이트의 행 제한에서 제외됩니다. 
+-  클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 varchar 열을 포함할 수 없습니다. varchar 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다. 할당 단위에 대한 자세한 내용은 Table and Index Organization(테이블 및 인덱스 구성)을 참조하세요.
+-  행 오버플로 데이터가 있는 열을 비클러스터형 인덱스의 키 열이나 키가 아닌 열로 포함할 수 있습니다.
+-  스파스 열을 사용하는 테이블의 레코드 크기 제한은 8,018바이트입니다. 변환된 데이터와 기존 레코드를 합한 크기가 8,018바이트를 초과하면 [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md)이 반환됩니다. 열이 스파스에서 스파스가 아닌 유형으로 변환되면 데이터베이스 엔진에서 현재 레코드 데이터의 복사본을 보관합니다. 따라서 레코드에 필요한 저장소 크기가 일시적으로 두 배가 됩니다.
+-  행 오버플로 데이터가 포함될 수 있는 테이블이나 인덱스에 대한 정보를 얻으려면 [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 함수를 사용합니다.
 
 ### <a name="extents"></a>Extents 
 
@@ -177,4 +189,6 @@ DCM 페이지와 BCM 페이지 사이의 간격은 GAM 페이지와 SGAM 페이�
 
 ## <a name="see-also"></a>참고 항목
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[힙 &#40;클러스터형 인덱스가 없는 테이블&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[힙&#40;클러스터형 인덱스가 없는 테이블&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[페이지 읽기](../relational-databases/reading-pages.md)   
+[페이지 쓰기](../relational-databases/writing-pages.md)   

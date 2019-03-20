@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579773"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974452"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -209,13 +209,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 예를 들어 `LATIN1_GENERAL_100_CI_AS_SC`에서 `LATIN1_GENERAL_100_CI_AS_SC_UTF8`로 변경합니다. UTF-8은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 제공된 보충 문자를 지원하는 Windows 데이터 정렬에서만 사용할 수 있습니다. `NCHAR` 및 `NVARCHAR`는 UTF-16 인코딩만 허용하며 변경되지 않고 유지됩니다.
 
-이 기능은 사용 중인 문자 집합에 따라 스토리지 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 Latin 문자열을 포함하는 기존 열 데이터 형식을 UTF-8 사용 데이터 정렬을 통해 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 수준이 50%로 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
+이 기능은 사용 중인 문자 집합에 따라 스토리지 비용을 크게 절감하는 효과를 제공할 수 있습니다. 예를 들어 UTF-8 사용 데이터 정렬을 통해 ASCII(Latin) 문자열이 있는 기존 열 데이터 유형을 `NCHAR(10)`에서 `CHAR(10)`으로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`에는 스토리지로 20바이트가 필요하지만 `CHAR(10)`에는 동일한 유니코드 문자열에 대해 10바이트만 필요하기 때문입니다.
 
 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
-CTP 2.1은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 설정에서 UTF-8 데이터 정렬을 기본값으로 선택하도록 지원을 추가했습니다.
+**CTP 2.1** [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설정 중 UTF-8 데이터 정렬을 기본값으로 선택하도록 지원을 추가했습니다.
 
-CTP 2.2는 SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
+**CTP 2.2** SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
+
+**CTP 2.3** BIN2 데이터 정렬(UTF8_BIN2)로 UTF-8 문자 인코딩을 사용하도록 지원을 추가했습니다.
 
 ### <a name="resumable-online-index-create-ctp-20"></a>다시 시작 가능한 온라인 인덱스 만들기(CTP 2.0)
 
@@ -383,6 +385,8 @@ CTP 2.2는 SQL Server 복제에서 UTF-8 문자 인코딩을 사용하도록 지
 LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커니즘보다 더 효율적으로 쿼리 성능 데이터를 제공합니다. 간단한 프로파일링은 이제 기본적으로 사용되도록 설정됩니다. 이 기능은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1에 도입되었습니다. 간단한 프로파일링은 표준 쿼리 프로파일링 메커니즘의 최대 75% CPU 오버헤드와 비교할 때 2% CPU 오버헤드가 예상되는 쿼리 실행 통계 수집 메커니즘을 제공합니다. 이전 버전에서 이 기능은 기본적으로 해제되었습니다. 데이터베이스 관리자는 [추적 플래그 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하여 이 기능을 사용하도록 설정할 수 있습니다. 
 
 간단한 프로파일링에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
+
+**CTP 2.3** 새 데이터베이스 범위 구성 `LIGHTWEIGHT_QUERY_PROFILING`은 경량 쿼리 프로파일링 인프라를 활성화 또는 비활성화하기 위해 도입되었습니다.
 
 ### <a id="polybase"></a>새 PolyBase 커넥터
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대 한 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,62 +11,87 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b720f2b146273fb694ad0a55b013d20bd65a6a6a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154876"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974362"
 ---
-# <a name="release-notes-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 릴리스 정보
+# <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대 한 릴리스 정보
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 7.2의 업데이트
+이 문서에서는 릴리스를 나열 합니다 _SQL Server 용 Microsoft JDBC Driver_합니다. 각 릴리스 버전에 대 한 변경 내용은 명명 되 고 설명 합니다.
 
-SQL Server 용 Microsoft JDBC Driver 7.2 JDBC API 사양 4.2 완벽 하 게 호환 됩니다. 7.2 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 7.2 패키지에서 mssql-jdbc-7.2.1.jre11.jar 파일 11 Java와 함께 사용할 해야 합니다.
+## <a name="721"></a>7.2.1
 
-> [!NOTE]  
-> 2019 년 1 월 31 일에 릴리스된 7.2 RTW JDBC 드라이버가 SQL 문 구문 분석 문제가 발견 되었습니다. 변경 내용이 롤백 되었습니다. 새 jar (버전 7.2.1)는 2019 년 2 월 11 일에 발표 된 하며 
+### <a name="compliance"></a>호환성
+
+2019년 2월 11일
+
+| 규정 준수 변경 | 세부 정보 |
+| :---------------- | :------ |
+| JDBC 드라이버 7.2에 대 한 최신 업데이트를 다운로드 합니다. | &bull; &nbsp; [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC API 사양 4.2를 사용 하 여 완벽 하 게 준수 합니다. | 7.2 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다.<br/><br/>예를 들어, 7.2 패키지에서 mssql-jdbc-7.2.1.jre11.jar 파일 11 Java와 함께 사용할 해야 합니다. |
+| JDK 1.8 외에도 JDK(Java Development Kit) 버전 11.0을 지원합니다. | SQL Server 용 Microsoft JDBC Driver 7.2 사용 하 여 개발 키트 (JDK (Java) 버전 11.0 JDK 1.8 외에도 호환 됩니다. |
+| &nbsp; | &nbsp; |
+
+> [!NOTE]
+> 2019 년 1 월 31 일에 릴리스된 JDBC 7.2 릴리스를 웹 (RTW) 드라이버의 구문 분석 하는 SQL 문 사용 하 여 문제를 찾을 수 있습니다. 변경 내용이 롤백 되었습니다. 새 jar (버전 7.2.1)는 2019 년 2 월 11 일에 발표 된 하며
 >
-> JDBC 드라이버 7.2에 대 한 최신 업데이트를 다운로드 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=2063159)하십시오 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1), 및 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). 7.2.1를 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 자세한 내용은 릴리스 정보를 볼 [7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)합니다.
+> 7.2.1를 사용 하 여 프로젝트를 업데이트 jar을 릴리스 합니다. 자세한 내용은 릴리스 정보를 볼 [7.2.1 GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1)합니다.
 
+### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory _관리 서비스 Id_ (MSI) 인증
 
-### <a name="support-for-jdk-11"></a>JDK 11 지원
+| MSI 변경 | 세부 정보 |
+| :--------- | :------ |
+| Active Directory Service Identity MSI (관리) 인증 모드를 지원합니다. | 이 인증 모드를 "Identity" 기능 사용에 대 한 지원을 사용 하 여 Azure 리소스에 적용 됩니다.<br/><br/>양쪽의 시스템 Identities MSI (관리)을 가져오려고 드라이버가 지 원하는 **accessToken** 에 대 한 보안 연결을 설정 합니다. |
+| 자세한 내용과이 인증 모드를 사용 하도록 샘플 응용 프로그램입니다. | [Azure Active Directory 인증을 사용하여 연결](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
-SQL Server 용 Microsoft JDBC Driver 7.2 사용 하 여 개발 키트 (JDK (Java) 버전 11.0 JDK 1.8 외에도 호환 됩니다.
+### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>소개 _Open 서비스 게이트웨이 Initiative_ (OSGi) 지원
 
-### <a name="support-for-active-directory-managed-service-identity-msi-authentication"></a>Active Directory Service Identity MSI (관리) 인증에 대 한 지원
+| OSGi 변경 | 세부 정보 |
+| :---------- | :------ |
+| **DataSourceFactory** 구현을 추가 합니다. | &bull; &nbsp; `org.osgi.service.jdbc.DataSourceFactory`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory` |
+| **활성기** 구현을 추가 합니다. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
+| &nbsp; | &nbsp; |
 
-SQL Server 용 Microsoft JDBC Driver 7.2는 이제 Active Directory Service Identity MSI (관리) 인증 모드를 지원합니다. 이 인증 모드를 "Identity" 기능 사용에 대 한 지원을 사용 하 여 Azure 리소스에 적용 됩니다. 양쪽의 시스템 Identities MSI (관리)을 가져오려고 드라이버가 지 원하는 **accessToken** 에 대 한 보안 연결을 설정 합니다.
+### <a name="introduces-sqlservererror-apis"></a>소개 _SQLServerError_ Api
 
-자세한 내용과이 인증 모드를 사용 하 여 샘플 응용 프로그램을 확인할 수 있습니다: [Azure Active Directory 인증을 사용 하 여 연결](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+| 오류 API 변경 | 세부 정보 |
+| :--------------- | :------ |
+| SQLServerError API를 도입 합니다. | 서버에서 생성 된 오류에 대 한 추가 세부 정보를 검색 하려면 Api getter입니다.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
+| 추가 정보 | [오류 처리](../../connect/jdbc/handling-errors.md)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
-### <a name="osgi-support"></a>OSGi 지원
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>업데이트된 _ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)_ 버전: 1.6.3
 
-SQL Server 용 Microsoft JDBC Driver 7.2 아래에 대 한 구현을 추가 하 여 드라이버에 OSGi 지원 소개 `org.osgi.service.jdbc.DataSourceFactory` 고 `org.osgi.framework.BundleActivator` :
+| ADAL4J 변경 | 세부 정보 |
+| :------------ | :------ |
+| ADAL4J에 대 한 해당 Maven 종속성 1.6.3 버전으로 업데이트 합니다. | &nbsp; |
+| 소개 _AutoRest에 대 한 Java 클라이언트 런타임_ Maven 종속성 1.6.5 버전으로 합니다. | &nbsp; |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
-- `com.microsoft.sqlserver.jdbc.osgi.SQLServerDataSourceFactory`
-- `com.microsoft.sqlserver.jdbc.osgi.Activator`
+### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>업데이트할 _Java 용 Microsoft Azure 키 자격 증명 모음 SDK_, 버전 1.2.0
 
-### <a name="sqlservererror-apis"></a>SQLServerError Api
-
-SQL Server 용 Microsoft JDBC Driver 7.2 소개 `SQLServerException.getSQLServerError()` 고 `SQLServerError` getter Api 서버에서 생성 된 오류에 대 한 추가 세부 정보를 검색 합니다. 자세한 내용은 [오류 처리](../../connect/jdbc/handling-errors.md)를 참조하세요.
-
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>업데이트된 "ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)" 버전: 1.6.3
-
-SQL Server 용 Microsoft JDBC Driver 7.2 Maven 종속성으로도 "Java 클라이언트 런타임에 대 한 AutoRest"를 소개 하는 "Microsoft Azure Active Directory 인증 라이브러리 (ADAL4J) Java에 대 한" 1.6.3, 버전에서 해당 Maven 종속성이 업데이트 (버전: 1.6.5)입니다. 종속성에 대 한 자세한 내용은 참조 하세요. [SQL Server 용 Microsoft JDBC Driver의 종속성 기능](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)합니다.
-
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>업데이트 된 "Microsoft Azure 키 자격 증명 모음 SDK에 대 한 Java" 버전: 1.2.0
-
-SQL Server 용 Microsoft JDBC Driver 7.2는 Maven에서 해당 종속성 "Microsoft Azure 키 자격 증명 모음 SDK에 대 한 Java" 버전 1.2.0으로도 "Microsoft Azure SDK에 대 한 키 자격 증명 모음 WebKey" Maven 종속성을 도입 하는 업데이트 (버전: 1.2.0). 종속성에 대 한 자세한 내용은 참조 하세요. [SQL Server 용 Microsoft JDBC Driver의 종속성 기능](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)합니다.
+| 키 자격 증명 모음 SDK 변경 | 세부 정보 |
+| :------------------- | :------ |
+| Maven 종속성 업데이트 _Java 용 Microsoft Azure 키 자격 증명 모음 SDK_ 버전 1.2.0으로 합니다. | &nbsp; |
+| _Key Vault WebKey용 Microsoft Azure SDK_를 Maven 종속성(버전 1.2.0.)을 소개합니다. | &nbsp; |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>알려진 문제
 
-SQL Server 용 Microsoft JDBC Driver 7.2를 사용 하 여 특정 매개 변수가 있는 쿼리를 사용 하 여 알려진된 문제가 있습니다. 7.2 버전 (v7.2.1) 업데이트 하는이 문제를 해결 하기 위해 곧 출시 됩니다.
+| 알려진 문제 | 세부 정보 |
+| :----------- | :------ |
+| 일부 경우에는 매개 변수가 있는 쿼리. | 이 문제를 해결 하려면 2019 년 2 월 될 v7.2.1, 7.2 버전의 업데이트 출시 됩니다. |
+| &nbsp; | &nbsp; |
 
-
-## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 7.0의 업데이트
+## <a name="70"></a>7.0
 
 SQL Server 용 Microsoft JDBC Driver 7.0 JDBC API 사양 4.2 완벽 하 게 호환 됩니다. 7.0 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 10 Java를 사용 하 여 mssql-jdbc-7.0.0.jre10.jar 파일 7.0 패키지에서 사용할 해야 합니다.
 
@@ -123,7 +148,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 SQL Server 용 Microsoft JDBC Driver 7.0 버전 1.6.0으로 "Microsoft Azure Active Directory 인증 라이브러리 (ADAL4J) Java에 대 한"에 대 한 해당 Maven 종속성을 업데이트 했습니다. 종속성에 대 한 자세한 내용은 참조 하세요. [SQL Server 용 Microsoft JDBC Driver의 종속성 기능](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)합니다.
 
-## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.4의 업데이트
+## <a name="64"></a>6.4
 
 SQL Server 용 Microsoft JDBC Driver 6.4 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.4 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어 Java 8 사용 하 여 6.4 패키지에서 mssql-jdbc-6.4.0.jre8.jar 파일을 사용 해야 합니다.
 
@@ -179,7 +204,7 @@ JDBC 드라이버는 성능 향상을 위한 준비 된 문 메타 데이터 캐
 
 JDBC 드라이버 버전 1.4.0 "Microsoft Azure Active Directory 인증 라이브러리 (ADAL4J) Java에 대 한"에 대 한 해당 Maven 종속성을 업데이트 했습니다. 종속성에 대 한 자세한 내용은 참조 하세요. [SQL Server 용 Microsoft JDBC Driver의 종속성 기능](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)합니다.
 
-## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.2의 업데이트
+## <a name="62"></a>6.2
 
 SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 6.2 패키지에 jar이 Java 버전 호환성에 따라 이름이 지정 됩니다. 예를 들어, 6.2 패키지에서 mssql-jdbc-6.2.2.jre8.jar 파일을 사용 하 여 Java 8 사용 하 여 좋습니다.
 
@@ -213,11 +238,11 @@ JDBC 드라이버는 이제 구성 가능한 시간을 지원합니다. 응용 �
 - 쿼리를 실행 하는 경우 시간 초과가 발생 하기 전에 대기할 시간 (초) 수를 제어 하는 쿼리 제한 시간입니다.
 - 소켓에서 시간 초과가 발생 하기 전에 대기할 시간을 밀리초 단위로 읽거나 허용 되도록 소켓 시간이 초과 되었습니다.
 
-## <a name="updates-in-microsoft-jdbc-driver-61-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.1의 업데이트
+## <a name="61"></a>6.1
 
 SQL Server 용 Microsoft JDBC Driver 6.1 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. 이것은 JDBC 드라이버의 초기 오픈 소스 릴리스입니다. Java 버전 호환성에 해당 하는 mssql-jdbc-6.1.0.jre8.jar 및 mssql-jdbc-6.1.0.jre7.jar 파일을 포함 합니다.
 
-## <a name="updates-in-microsoft-jdbc-driver-60-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver 6.0의 업데이트
+## <a name="60"></a>6.0
 
 SQL Server 용 Microsoft JDBC Driver 6.0 4.1 및 4.2 JDBC 사양을 완벽 하 게 호환 됩니다. Jar 6.0 패키지에는 JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 6.0 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
 
@@ -228,7 +253,7 @@ Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<u
 System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 ```
 
-### <a name="always-encrypted"></a>항상 암호화
+### <a name="always-encrypted"></a>Always Encrypted
 
 드라이버는 SQL Server 2016에서 상시 암호화 기능을 지원합니다. 이 기능은 중요 한 데이터에서 SQL Server 인스턴스를 일반 텍스트로 적는 것을 확인 합니다. 항상 암호화는 SQL Server에서 일반 텍스트 값이 아니라 암호화된 데이터만 처리하도록 애플리케이션의 데이터를 투명하게 암호화하여 작동합니다. SQL Server 인스턴스 또는 호스트 머신이 손상된 경우에도 공격자가 얻을 수 있는 것은 중요한 데이터의 암호 텍스트뿐입니다. 자세한 내용은 [Always Encrypted와 JDBC Driver 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요.
 
@@ -254,7 +279,7 @@ TVP를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서
 
 드라이버는 이제 Always On 가용성 그룹에 대 한 투명 한 연결을 지원합니다. 또한 서버 인프라의 현재 Always On 토폴로지를 신속히 검색하여 현재 활성 서버에 투명하게 연결됩니다.
 
-## <a name="updates-in-microsoft-jdbc-driver-42-for-sql-server-and-later"></a>SQL Server용 Microsoft JDBC Driver 4.2 이상의 업데이트
+## <a name="42"></a>4.2
 
 SQL Server 용 Microsoft JDBC Driver 4.2는 JDBC 사양 4.1 및 4.2와 완벽 하 게 준수 합니다. 4.2 패키지의 jar JDBC API 버전을 사용 하 여 호환성에 따라 이름이 지정 됩니다. 예를 들어, sqljdbc42.jar 4.2 패키지에서 파일이 JDBC API 4.2 규격을 준수 합니다. 마찬가지로, sqljdbc41.jar 파일 API 용 JDBC 4.1 준수 됩니다.
 
@@ -285,7 +310,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 드라이버는 새 연결 속성을 사용하여 Kerberos 연결을 유연하게 합니다. 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요.
 
-## <a name="updates-in-microsoft-jdbc-driver-41-for-sql-server-and-later"></a>SQL Server용 Microsoft JDBC Driver 4.1 이상의 업데이트
+## <a name="41"></a>4.1
 
 ### <a name="support-for-jdk-7"></a>JDK 7 지원
 

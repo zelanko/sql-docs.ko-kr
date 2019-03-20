@@ -2,7 +2,7 @@
 title: 엔터프라이즈를 평가 하 고 통합 평가 보고서 (SQL Server) | Microsoft Docs
 description: DMA를 사용 하 여 엔터프라이즈 평가 및 SQL Server를 업그레이드 또는 Azure SQL Database로 마이그레이션하기 전에 평가 보고서를 통합 하는 방법에 알아봅니다.
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 03/19/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: b2723d437a8171570436fb42f7cd9e305e3a8fea
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
+ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974292"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58198202"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -37,15 +37,15 @@ ms.locfileid: "57974292"
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
     - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출 합니다.
-    - 합니다 [DMA 보고서 Power BI 템플릿](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip)합니다.
-    - 합니다 [LoadWarehouse 스크립트](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip)합니다.
+    - 합니다 [DMA 보고서 Power BI 템플릿](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip)합니다.
+    - 합니다 [LoadWarehouse 스크립트](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip)합니다.
 
 ## <a name="loading-the-powershell-modules"></a>PowerShell 모듈을 로드합니다.
 PowerShell 모듈 디렉터리에 저장 하는 PowerShell 모듈을 사용 하기 전에 명시적으로 로드 하는 데 필요 없이 모듈 호출 할 수 있습니다.
 
 모듈을 로드 하려면 다음 단계를 수행 합니다.
 1. C:\Program Files\WindowsPowerShell\Modules 이동한 다음 라는 폴더를 만듭니다 **DataMigrationAssistant**합니다.
-2. 엽니다는 [PowerShell 모듈](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip), 사용자가 만든 폴더에 저장 합니다.
+2. 엽니다는 [PowerShell 모듈](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/3/PowerShell-Modules2.zip), 사용자가 만든 폴더에 저장 합니다.
 
       ![PowerShell 모듈](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -100,7 +100,7 @@ Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만�
 
 DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description |
+|매개 변수  |설명 |
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
 |**csvPath** | CSV 인벤토리 파일 경로입니다.  사용 되는 경우에만 **getServerListFrom** 로 설정 된 **CSV**합니다. |
@@ -123,7 +123,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 
 DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |Description |
+|매개 변수  |설명 |
 |---------|---------|
 |**processTo** | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
 |**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

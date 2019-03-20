@@ -13,18 +13,18 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a4d833d132a0b4928d021beaa4cd9fcdd695d6c6
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046583"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072317"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서에서는 [보안 Enclave를 사용한 Always Encrypted](encryption/always-encrypted-enclaves.md)를 시작하는 방법을 설명합니다. 다음이 설명됩니다.
-- 보안 Enclave를 사용한 Always Encrypted를 테스트 및 평가하기 위한 단순 환경을 만드는 방법
+- 보안 enclave를 사용한 Always Encrypted를 테스트 및 평가하기 위한 기본 환경을 만드는 방법.
 - SSMS(SQL Server Management Studio)를 사용하여 암호화된 열에 대해 데이터를 미리 암호화하고 리치 쿼리를 실행하는 방법
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -40,7 +40,7 @@ ms.locfileid: "54046583"
 - Windows 10 Enterprise 버전 1809 또는 Windows Server 2019 Datacenter
 - [SSMS(SQL Server Management Studio) 18.0 이상](../../ssms/download-sql-server-management-studio-ssms.md).
 
-또는 다른 머신에 SSMS를 설치할 수 있습니다.
+대안으로 다른 머신에 SSMS를 설치할 수 있습니다.
 
 >[!WARNING] 
 >프로덕션 환경에서는 SSMS 또는 다른 도구를 사용하여 Always Encrypted 키를 확인하거나 SQL Server 컴퓨터에서 암호화된 데이터에 대해 쿼리를 실행하면 안 됩니다. 이렇게 하면 Always Encrypted를 사용하는 목적이 감소하거나 완전히 무산될 수 있기 때문입니다.
@@ -50,7 +50,7 @@ ms.locfileid: "54046583"
 - Windows Server 2019 Standard 또는 Datacenter Edition
 - CPU 2개
 - 8GB RAM
-- 100GB 저장소
+- 100GB 스토리지
 
 >[!NOTE]
 >시작하기 전에 HGS 컴퓨터를 도메인에 가입하면 안 됩니다.
@@ -139,11 +139,11 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 이 단계에서는 SQL Server 인스턴스에서 보안 Enclave를 사용한 Always Encrypted 기능을 사용하도록 설정합니다.
 
 1. SSMS를 열고 SQL Server 인스턴스에 sysadmin으로 연결한 다음, 새 쿼리 창을 엽니다.
-2. 보안 Enclave 형식을 VBS로 구성합니다.
+2. 보안 enclave 유형을 VBS(가상화 기반 보안)로 설정합니다.
 
    ```sql
-   EXEC sys.sp_configure 'column encryption enclave type', 1
-   RECONFIGURE
+   EXEC sys.sp_configure 'column encryption enclave type', 1;
+   RECONFIGURE;
    ```
 
 3. 이전 변경 내용을 적용하려면 SQL Server 인스턴스를 다시 시작합니다. 개체 탐색기에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 다시 시작을 선택하여 SSMS에서 해당 인스턴스를 다시 시작합니다. 인스턴스가 다시 시작되면 다시 연결합니다.
@@ -152,10 +152,10 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
    ```sql
    SELECT [name], [value], [value_in_use] FROM sys.configurations
-   WHERE [name] = 'column encryption enclave type'
+   WHERE [name] = 'column encryption enclave type';
    ```
 
-    쿼리는 다음과 같은 행을 반환해야 합니다.  
+    쿼리는 다음 결과를 반환해야 합니다.  
 
     | NAME                           | value | value_in_use |
     | ------------------------------ | ----- | -------------- |
@@ -164,7 +164,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 5. 암호화된 열에 대해 리치 계산을 사용하도록 설정하려면 다음 쿼리를 실행합니다.
 
    ```sql
-   DBCC traceon(127,-1)
+   DBCC traceon(127,-1);
    ```
 
     > [!NOTE]
@@ -177,7 +177,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 2. 이름이 ContosoHR인 새 데이터베이스를 만듭니다.
 
     ```sql
-    CREATE DATABASE [ContosoHR] COLLATE Latin1_General_BIN2
+    CREATE DATABASE [ContosoHR];
     ```
 
 3. 새로 만든 데이터베이스에 연결되어 있는지 확인합니다. 이름이 Employees인 새 테이블을 만듭니다.
@@ -190,8 +190,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
         [FirstName] [nvarchar](50) NOT NULL,
         [LastName] [nvarchar](50) NOT NULL,
         [Salary] [money] NOT NULL
-    ) ON [PRIMARY]
-    GO
+    ) ON [PRIMARY];
     ```
 
 4. Employees 테이블에 몇 개의 직원 레코드를 추가합니다.
@@ -206,9 +205,8 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
             ('795-73-9838'
             , N'Catherine'
             , N'Abel'
-            , $31692)
-    GO
-
+            , $31692);
+ 
     INSERT INTO [dbo].[Employees]
             ([SSN]
             ,[FirstName]
@@ -218,8 +216,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
             ('990-00-6818'
             , N'Kim'
             , N'Abercrombie'
-            , $55415)
-    GO
+            , $55415);
     ```
 
 ## <a name="step-5-provision-enclave-enabled-keys"></a>5단계: Enclave 사용 키 프로비전
@@ -238,7 +235,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     7. **확인**을 선택합니다.
 
         ![Enclave 계산 허용](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
-
+    
 4. 새 Enclave 사용 열 암호화 키를 만듭니다.
 
     1. **Always Encrypted 키**를 마우스 오른쪽 단추로 클릭하고 **새 열 암호화 키**를 선택합니다.
@@ -254,40 +251,40 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     1. SSMS에서 새 쿼리 창을 엽니다.
     2. 새 쿼리 창의 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
     3. 연결 \> 연결 변경을 선택합니다.
-    4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동한 후 **Always Encrypted 사용**을 선택하고 Enclave 증명 URL을 지정합니다.
+    4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동하여 **Always Encrypted 사용**을 선택하고 enclave 증명 URL을 지정합니다(예: ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. **연결**을 선택합니다.
-2. SSMS에서 데이터베이스 연결에 대해 Always Encrypted가 해제된 상태로 다른 쿼리 창을 구성합니다.
+    6. 데이터베이스 컨텍스트를 ContosoHR 데이터베이스로 변경합니다.
+1. SSMS에서 데이터베이스 연결에 대해 Always Encrypted가 해제된 상태로 다른 쿼리 창을 구성합니다.
     1. SSMS에서 새 쿼리 창을 엽니다.
     2. 새 쿼리 창의 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
     3. 연결 \> 연결 변경을 선택합니다.
     4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동한 후 **Always Encrypted 사용**이 선택되어 있지 않은지 확인합니다.
     5. **연결**을 선택합니다.
-3. SSN 및 Salary 열을 암호화합니다. Always Encrypted가 설정된 쿼리 창에서 다음 문을 붙여넣고 실행합니다.
+    6. 데이터베이스 컨텍스트를 ContosoHR 데이터베이스로 변경합니다.
+1. SSN 및 Salary 열을 암호화합니다. Always Encrypted가 설정된 쿼리 창에서 아래 스크립트를 붙여넣고 실행합니다.
 
     ```sql
     ALTER TABLE [dbo].[Employees]
-    ALTER COLUMN [SSN] [char] (11)
+    ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
-
+    (ONLINE = ON);
+     
     ALTER TABLE [dbo].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
-    (ONLINE = ON)
-    GO
-    DBCC FREEPROCCACHE
-    GO
+    (ONLINE = ON);
+ 
+    ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
     ```
+    > [!NOTE]
+    > 위의 스크립트에서 데이터베이스에 대한 쿼리 계획 캐시를 지우려면 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 문을 확인합니다. 테이블을 변경한 후에는 테이블에 액세스하는 모든 일괄 처리 및 저장 프로시저에 대한 계획을 지워야 매개 변수 암호화 정보를 새로 고칠 수 있습니다. 
 
 4. SSN 및 Salary 열이 지금 암호화되었는지 확인하려면 Always Encrypted가 해제된 쿼리 창에서 아래 문을 붙여넣고 실행합니다. 쿼리 창은 SSN 및 Salary 열의 암호화된 값을 반환해야 합니다. Always Encrypted가 설정된 쿼리 창에서 동일한 쿼리를 시도하여 데이터가 암호 해독되어 있는지 확인합니다.
 
     ```sql
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [dbo].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>7단계: 암호화된 열에 대해 리치 쿼리 실행
@@ -298,13 +295,13 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     1. SSMS의 주 메뉴에서 **쿼리**를 선택합니다.
     2. **쿼리 옵션...** 을 선택합니다.
     3. **실행** > **고급**으로 이동합니다.
-    4. Always Encrypted에 대해 매개 변수화 사용을 선택하거나 선택 취소합니다.
-    5. 확인을 선택합니다.
+    4. **Always Encrypted에 대해 매개 변수화 사용**을 선택합니다.
+    5. **확인**을 선택합니다.
 2. Always Encrypted가 설정된 쿼리 창에서 다음 쿼리를 붙여넣고 실행합니다. 이 쿼리는 지정된 검색 기준에 맞는 일반 텍스트 값 및 행을 반환해야 합니다.
 
     ```sql
-    DECLARE @SSNPattern [char](11) = '%6818'
-    DECLARE @MinSalary [money] = $1000
+    DECLARE @SSNPattern [char](11) = '%6818';
+    DECLARE @MinSalary [money] = $1000;
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```

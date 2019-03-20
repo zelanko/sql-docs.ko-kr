@@ -4,21 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 502403eab1376679471b6825fb6b58333947c47f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522308"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973572"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52522308"
   
 -   전체 텍스트 인덱싱이 지원되는 데이터 형식의 열에 대한 의미 체계 인덱스를 만들 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)를 참조하세요.  
   
--   **varbinary(max)** 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 종류를 지정할 수 있습니다. 자세한 내용은 이 항목의 [방법: 인덱싱할 수 있는 문서 유형 결정](#doctypes) 을 참조하세요.  
+-   **varbinary(max)** 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 종류를 지정할 수 있습니다. 자세한 내용은 [방법: 인덱싱할 수 있는 문서 유형 결정 ](#doctypes)을 참조하세요.  
   
 -   의미 체계 인덱싱에서는 선택한 열에 대한 두 가지 유형의 인덱스, 즉 키 구 인덱스와 문서 유사성 인덱스를 만듭니다. 의미 체계 인덱싱을 사용하도록 설정할 때 둘 중 한 가지 인덱스 유형만 선택할 수는 없습니다. 그러나 이러한 두 인덱스는 독립적으로 쿼리할 수 있습니다. 자세한 내용은 [의미 체계 검색을 사용하여 문서의 키 구 찾기](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md) 및 [의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)를 참조하세요.  
   
@@ -132,7 +132,7 @@ GO
   
 -   이미 전체 텍스트 인덱싱을 사용하도록 설정된 열에 의미 체계 인덱싱을 추가하려면 **ADD STATISTICAL_SEMANTICS** 옵션을 사용합니다. 단일 **ALTER** 문에서는 하나의 열에만 의미 체계 인덱싱을 추가할 수 있습니다.  
   
- **예제: 전체 텍스트 인덱싱이 이미 있는 열에 의미 체계 인덱싱 추가**  
+ **예: 전체 텍스트 인덱싱이 이미 있는 열에 의미 체계 인덱싱 추가**  
   
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **Production.Document** 테이블에 대한 기존 전체 텍스트 인덱스를 변경합니다. 이 예에서는 전체 텍스트 인덱스가 이미 있는 **Production.Document** 테이블의 **Document** 열에 의미 체계 인덱스를 추가합니다. 또한 자동으로 다시 채워지지 않는 인덱스를 지정합니다.  
   
@@ -278,7 +278,7 @@ GO
 ##  <a name="BestPracticeFilegroup"></a> 모범 사례: 전체 텍스트 및 의미 체계 인덱스에 대한 개별 파일 그룹을 만들 때의 고려 사항  
  디스크 공간 할당이 중요한 경우 전체 텍스트 및 의미 체계 인덱스에 대한 별도의 파일 그룹을 만드는 것이 좋습니다. 의미 체계 인덱스는 전체 텍스트 인덱스와 동일한 파일 그룹에 만들어집니다. 완전히 채워진 의미 체계 인덱스에는 많은 양의 데이터가 포함될 수 있습니다.  
  
-##  <a name="IssueNoResults"></a> 문제: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
+##  <a name="IssueNoResults"></a> 문제점: 특정 열에 대해 검색할 때 결과가 반환되지 않음  
  **유니코드 언어에 대해 비유니코드 LCID가 지정되었습니까?**  
  비유니코드 열에 대해 의미 체계 인덱싱을 사용하도록 설정할 때 러시아어의 LCID 1049와 같이 유니코드 단어만 있는 언어의 LCID를 사용할 수 있습니다. 그러나 이 경우에는 이 열에 대한 의미 체계 인덱스에서 결과가 반환되지 않습니다.  
   

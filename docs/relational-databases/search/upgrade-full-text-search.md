@@ -1,10 +1,8 @@
 ---
 title: 전체 텍스트 검색 업그레이드 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +12,17 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c73ac14c951e1db5c7e7c96fc88f6d9cb1818fe
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665535"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974302"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -125,7 +124,7 @@ ms.locfileid: "51665535"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)의 **upgrade\_option** 동작을 사용합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션** 을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션**을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
 ##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그를 다음으로 복원 시 고려 사항: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스의 전체 텍스트 데이터를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로 업그레이드하는 방법 중 하나는 전체 데이터베이스 백업을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 복원하는 것입니다.  

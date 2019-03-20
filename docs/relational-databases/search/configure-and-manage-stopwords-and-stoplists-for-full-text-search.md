@@ -1,10 +1,8 @@
 ---
 title: 전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리 | Microsoft 문서
-ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658912"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973703"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "51658912"
   
 2.  **데이터베이스**를 확장한 다음 전체 텍스트 중지 목록을 만들려는 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장한 다음 **전체 텍스트 중지 목록**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **스토리지**를 확장한 다음 **전체 텍스트 중지 목록**을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  **새 전체 텍스트 중지 목록**을 선택합니다.  
   
@@ -92,13 +91,13 @@ ms.locfileid: "51658912"
   
 2.  **데이터베이스**를 확장한 다음 해당 데이터베이스를 확장합니다.  
   
-3.  **저장소**를 확장한 다음 **전체 텍스트 중지 목록**을 선택합니다.  
+3.  **스토리지**를 확장한 다음 **전체 텍스트 중지 목록**을 선택합니다.  
   
 4.  변경할 속성이 있는 중지 목록을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
 5.  [전체 텍스트 중지 목록 속성](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) 대화 상자에서 다음을 수행합니다.  
   
-    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제**또는 **중지 목록 지우기**동작 중 하나를 선택합니다.  
+    1.  **동작** 목록 상자에서 **중지 단어 추가**, **중지 단어 삭제**, **모든 중지 단어 삭제** 또는 **중지 목록 지우기** 동작 중 하나를 선택합니다.  
   
     2.  선택한 동작에 대해 **중지 단어** 입력란이 활성화되면 단일 중지 단어를 입력합니다. 이 중지 단어는 고유해야 합니다. 즉, 선택한 언어의 이 중지 목록에 이미 있는 중지 단어는 입력할 수 없습니다.  
   

@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819791"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973022"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  프로젝트의 이름입니다. *project_name*은 **nvarchar(128)** 입니다.  
   
  [ @validate_type = ] *validate_type*  
- 수행할 유효성 검사의 유형을 나타냅니다. 전체 유효성 검사를 수행하려면 `F` 문자를 사용합니다. *validate_type*은 **char(1)** 입니다.  
+ 수행할 유효성 검사의 유형을 나타냅니다. 전체 유효성 검사를 수행하려면 `F` 문자를 사용합니다. 이 매개 변수는 선택 사항이며, 기본적으로 `F` 문자가 사용됩니다. *validate_type*은 **char(1)** 입니다.  
   
  [ @validation_id = ] *validation_id*  
  유효성 검사의 고유 식별자(ID)를 반환합니다. *validation_id*는 **bigint**입니다.  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 64비트 운영 체제에서 실행할 때 32비트 런타임으로 패키지를 실행하려면 값 `1`을 사용합니다. 64비트 운영 체제에서 실행할 때 64비트 런타임으로 패키지를 실행하려면 값 `0`을 사용합니다. 이 매개 변수는 선택 사항입니다. *use32bitruntime*은 **bit**입니다.  
   
  [ @environment_scope = ] *environment_scope*  
- 유효성 검사에서 고려되는 환경 참조를 나타냅니다. 값이 `A`이면 프로젝트와 연결된 모든 환경 참조가 유효성 검사에 포함되고, 값이 `S`이면 단일 환경 참조만 포함됩니다. 또한 값이 `D`이면 아무 환경 참조도 포함되지 않습니다. 이 경우 유효성 검사를 통과하려면 각 매개 변수 값이 리터럴 기본값이어야 합니다. 이 매개 변수는 선택 사항이며, 기본적으로 `D` 문자가 사용됩니다. *environment_scope*은 **Char(1)** 입니다.  
+ 유효성 검사에서 고려되는 환경 참조를 나타냅니다. 값이 `A`이면 프로젝트와 연결된 모든 환경 참조가 유효성 검사에 포함되고, 값이 `S`이면 단일 환경 참조만 포함됩니다. 또한 값이 `D`이면 아무 환경 참조도 포함되지 않습니다. 이 경우 유효성 검사를 통과하려면 각 매개 변수 값이 리터럴 기본값이어야 합니다. 이 매개 변수는 선택 사항이며, 기본적으로 `D` 문자가 사용됩니다. *environment_scope*는 **char(1)** 입니다.  
   
  [ @reference_id = ] *reference_id*  
  환경 참조의 고유 ID입니다. 이 매개 변수는 단일 환경 참조가 유효성 검사에 포함되어 있는 경우, 즉 *environment_scope*이 `S`인 경우에만 필요합니다. *reference_id*는 **bigint**입니다.  
@@ -63,7 +63,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>결과 집합  
  유효성 검사 단계의 출력은 결과 집합의 다른 섹션으로 반환됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  

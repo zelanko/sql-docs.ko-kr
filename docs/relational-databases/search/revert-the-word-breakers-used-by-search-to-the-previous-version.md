@@ -1,23 +1,22 @@
 ---
 title: 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5714b90b0d3222c947afc3988fa88e6d478691ef
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675003"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974402"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -225,7 +224,7 @@ ms.locfileid: "51675003"
 |이전 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
  **일본어(jpn), LCID 1041**  
   
@@ -243,7 +242,7 @@ ms.locfileid: "51675003"
 |이전 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
  **러시아어(rus), LCID 1049**  
   
@@ -252,7 +251,7 @@ ms.locfileid: "51675003"
 |이전 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|현재 파일 이름|MsWb7.dll|MSWB7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 이전 파일 이름과 현재 파일 이름에 대한 언어는 모두 NaturalLanguage6.dll이 아닙니다.  
  다음 표에 나오는 언어의 경우 이전 단어 분리기 및 형태소 분석기의 파일 이름이 새 버전의 파일 이름과 다릅니다. 이전 파일 이름과 현재 파일 이름이 모두 NaturalLanguage6.dll이 아닙니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사하므로 파일을 대체할 필요는 없습니다. 하지만 레지스트리 항목 집합을 변경하여 구성 요소의 이전 버전 또는 현재 버전을 지정해야 합니다.  

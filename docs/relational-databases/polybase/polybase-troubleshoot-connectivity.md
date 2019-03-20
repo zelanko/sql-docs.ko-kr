@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803158"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976333"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -38,7 +38,7 @@ PolyBase에 기본 제공된 대화형 진단 도구를 사용하면 Kerberos �
 1. 보안 리소스(HDFS, MR2, YARN, 작업 기록 등)
 1. 키 배포 센터(Active Directory에서는 도메인 컨트롤러라고 함)
 
-Kerberos가 Hadoop 클러스터에서 구성되면 각 Hadoop 보안 리소스는 고유한  **SPN(서비스 사용자 이름)** 을 사용하여  **KDC(키 배포 센터)** 에 등록됩니다. 목표는 클라이언트가 임시 사용자 티켓인  **TGT(허용 티켓)** 를 얻어, 액세스하려는 특정 SPN에 대해 또 다른 임시 티켓인  **ST(서비스 티켓)** 를 KDC에서 요청하는 것입니다.  
+Kerberos가 Hadoop 클러스터에서 구성되면 각 Hadoop 보안 리소스는 고유한 **SPN(서비스 사용자 이름)** 을 사용하여 **KDC(키 배포 센터)** 에 등록됩니다. 목표는 클라이언트가 임시 사용자 티켓인 **TGT(허용 티켓)** 를 얻어, 액세스하려는 특정 SPN에 대해 또 다른 임시 티켓인 **ST(서비스 티켓)** 를 KDC에서 요청하는 것입니다.  
 
 PolyBase에서 Kerberos 보안 리소스에 대해 인증이 요청되면 다음과 같은 4번 왕복 핸드셰이크가 수행됩니다.
 
@@ -102,7 +102,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 | Name Node Port | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
 | Service Principal | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
 | Service Password | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
-| *원격 HDFS 파일 경로(선택 사항) * | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
+| *원격 HDFS 파일 경로(선택 사항) * | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
 
 ## <a name="example"></a>예제
 
@@ -210,11 +210,12 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 
 ## <a name="debugging-tips"></a>디버깅 팁
 
-### <a name="mit-kdc"></a>MIT KDC  
+### <a name="mit-kdc"></a>MIT KDC  
 
-관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서  **kadmin.local** > (관리자 로그인) > **listprincs** 를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로  **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 개인 키를 사용하여 암호화됩니다.  
+관리자를 포함하여 KDC에 등록된 모든 SPN은 KDC 호스트나 구성된 KDC 클라이언트에서 **kadmin.local** > (관리자 로그인) > **listprincs**를 실행하여 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 클러스터에서 사용 가능한 각 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 SPN이 하나씩 있어야 합니다. 해당 keytab 파일(암호 대체)은 기본적으로 **/etc/security/keytabs**에서 볼 수 있습니다. 이 파일은 KDC 개인 키를 사용하여 암호화됩니다.  
 
-[`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)를 사용하여 KDC에서 로컬로 관리자 자격 증명을 확인하는 것도 좋습니다. 예제 사용량은  `kinit identity@MYREALM.COM`입니다. 암호를 묻는 메시지가 표시되면 ID가 있는 것입니다.  KDC 로그는 기본적으로  **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 SQL Server 머신 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이  **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이  **TGS\_REQ** 로 표시됩니다.
+[`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)를 사용하여 KDC에서 로컬로 관리자 자격 증명을 확인하는 것도 좋습니다. 예제 사용량은 `kinit identity@MYREALM.COM`입니다. 암호를 묻는 메시지가 표시되면 ID가 있는 것입니다.  
+KDC 로그는 기본적으로 **/var/log/krb5kdc.log**에서 확인할 수 있으며, 이 로그에는 모든 티켓 요청과 요청한 클라이언트 IP가 포함되어 있습니다. 도구가 실행된 SQL Server 컴퓨터 IP에서 보낸 요청이 두 개 있어야 합니다. 먼저 인증 서버에서 보낸 TGT 요청이 **AS\_REQ**로 표시되고, 그다음에 허용 티켓 서버에서 보낸 ST 요청이 **TGS\_REQ**로 표시됩니다.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ PolyBase가 HDFS에 액세스하려고 시도하며 요청에 필요한 서비�
 
 ### <a name="active-directory"></a>Active Directory 
 
-Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit*으로 이동하여 SPN을 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 각각의 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 사용할 수 있는 SPN이 하나씩 있습니다.
+Active Directory에서는 [제어판] > [Active Directory 사용자 및 컴퓨터] > *MyRealm* > *MyOrganizationalUnit*으로 이동하여 SPN을 확인할 수 있습니다. Kerberos가 Hadoop 클러스터에서 제대로 구성되면 각각의 서비스(예: `nn`, `dn`, `rm`, `yarn`, `spnego` 등)에 사용할 수 있는 SPN이 하나씩 있습니다.
 
 ### <a name="general-debugging-tips"></a>일반 디버깅 팁
 
