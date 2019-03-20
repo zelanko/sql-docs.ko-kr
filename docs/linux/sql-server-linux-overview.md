@@ -41,7 +41,7 @@ SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 많은 유사 기
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> SQL Server 2019 미리 보기를 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)합니다.
+> SQL Server 2019 미리 보기가 공개되었습니다. Linux 용 최신 릴리스의 새로운 기능을 확인 하려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)을 참조합니다.
 ::: moniker-end
 
 ## <a name="install"></a>Install
@@ -99,7 +99,7 @@ Linux의 SQL Server에 익숙한 경우 릴리스 정보를 검토 합니다.
 그런 다음 새로운 살펴보겠습니다.
 
 - [SQL Server 2017의 새로운 기능](sql-server-linux-whats-new.md)
-- [What's new for Linux에서 SQL Server 2019 미리 보기](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [Linux용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
 
 ::: moniker-end
 
