@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227315"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290779"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 릴리스 정보
 
@@ -30,7 +30,7 @@ ms.locfileid: "57227315"
 
 | 플랫폼 | 파일 시스템 | 설치 가이드 |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3 또는 7.4 워크스테이션, 서버 및 데스크톱 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3, 7.4, 7.5 또는 7.6 Server | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-suse.md) |
 | Ubuntu 16.04LTS | XFS 또는 EXT4 | [설치 가이드](quickstart-install-connect-ubuntu.md) | 
 | Docker Engine 1.8 + Windows, Mac 또는 Linux에서 | 해당 사항 없음 | [설치 가이드](quickstart-install-connect-docker.md) | 

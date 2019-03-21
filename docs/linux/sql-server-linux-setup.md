@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675462"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280627"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 
@@ -30,7 +30,7 @@ ms.locfileid: "51675462"
 > - [Ubuntu 빠른 시작](quickstart-install-connect-ubuntu.md)
 > - [Docker 빠른 시작](quickstart-install-connect-docker.md)
 
-자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](../linux/sql-server-linux-faq.md)합니다.
+자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
 
 ## <a id="supportedplatforms"></a> 지원 되는 플랫폼
 
@@ -38,7 +38,7 @@ SQL Server 2017은 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server
 
 | 플랫폼 | 지원 되는 버전 | 가져오기
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 또는 7.4 | [RHEL 7.4 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [RHEL 7.6 가져오기](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [SLES v12 SP2 받기](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Ubuntu 16.04를 가져오기](https://www.ubuntu.com/download/server)
 | **Docker 엔진** | 1.8+ | [Docker 가져오기](https://www.docker.com/products/overview)
@@ -78,7 +78,7 @@ SQL Server 2017 Linux에 대 한 다음 시스템 요구 사항에 있습니다.
 
 명령줄에서 Linux의 SQL Server 2017을 설치할 수 있습니다. 단계별 지침은 다음 빠른 시작 중 하나를 참조 하세요.
 
-- [Red Hat Enterprise Linux 설치](quickstart-install-connect-red-hat.md)
+- [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu에 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
@@ -193,7 +193,7 @@ Linux 컴퓨터에 없으면 액세스에 사용 된 온라인 리포지토리�
     > [!NOTE]
     > (RHEL 및 SLES) RPM 패키지를 사용 하 여 설치할 수도 있습니다는 `rpm -ivh` 명령 앞의 표에서 명령을 자동으로 설치 종속성에서 사용할 수 있는 리포지토리를 승인 하는 경우.
 
-1. **누락 된 종속성 해결**:이 시점에서 종속성 누락 된 해야 할 수 있습니다. 그렇지 않은 경우이 단계를 건너뛸 수 있습니다. Ubuntu에서 해당 종속성을 포함 하는 승인 된 저장소에 액세스할 수 있는 경우 가장 쉬운 해결 방법은 사용 하는 것은 `apt-get -f install` 명령입니다. 또한이 명령은 SQL Server 설치를 완료합니다. 수동으로 종속성을 검사 하려면 다음 명령을 사용 합니다.
+1. **누락 된 종속성 해결**: 이 시점에서 종속성 누락 있을 수 있습니다. 그렇지 않은 경우이 단계를 건너뛸 수 있습니다. Ubuntu에서 해당 종속성을 포함 하는 승인 된 저장소에 액세스할 수 있는 경우 가장 쉬운 해결 방법은 사용 하는 것은 `apt-get -f install` 명령입니다. 또한이 명령은 SQL Server 설치를 완료합니다. 수동으로 종속성을 검사 하려면 다음 명령을 사용 합니다.
 
    | 플랫폼 | 종속성 목록 표시 명령 |
    |-----|-----|
@@ -225,4 +225,4 @@ SQL Server 라이선스는 Linux 및 Windows에 대해 동일 합니다. SQL Ser
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](sql-server-linux-faq.md)합니다.
+> 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](sql-server-linux-faq.md)를 참조하세요.

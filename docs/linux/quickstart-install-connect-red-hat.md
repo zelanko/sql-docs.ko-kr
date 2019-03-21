@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579244"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277312"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>빠른 시작: Red Hat에서 데이터베이스를 만들고 SQL Server 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579244"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 설치한 SQL Server 2017 또는 SQL Server 2019에 Red Hat Enterprise Linux (RHEL) 7.3 +입니다. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서는 설치한 SQL Server 2017 또는 SQL Server 2019 Red Hat Enterprise Linux (RHEL). 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ ms.locfileid: "57579244"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-**2GB 이상** 메모리를 가진 RHEL 7.3 또는 7.4 컴퓨터가 있어야 합니다.
+사용 하 여 RHEL 7.3, 7.4, 7.5 또는 7.6 컴퓨터가 있어야 **2GB 이상의** 메모리입니다.
 
 Red Hat Enterprise Linux 사용자의 컴퓨터에 설치 하려면로 이동 [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm) 를 참조하여, `az vm create` 를 호출 시 `--image RHEL` 를 사용합니다.
 
