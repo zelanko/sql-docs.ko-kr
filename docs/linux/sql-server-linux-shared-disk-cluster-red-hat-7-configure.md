@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b5ffda90f0d4b2b85ed29af65da5ea12592e4423
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979919"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306041"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
@@ -203,7 +203,7 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
 
 * [NFS 서버 및 firewalld | 스택 교환](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [NFS 볼륨을 탑재 | Linux 네트워크 관리자 가이드](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [NFS 서버 구성](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/3/html/Reference_Guide/s1-nfs-server-export.html)
+* [NFS 서버 구성 | Red Hat 고객 포털](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>공유 저장소를 가리키도록 데이터베이스 파일 디렉터리를 탑재 합니다.
 
@@ -334,8 +334,8 @@ NFS를 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 �
    - **부동 IP 리소스 이름**: 가상 IP 주소 리소스에 대 한 이름입니다.
    - **IP 주소**: SQL Server의 클러스터형된 인스턴스에 연결 하려면 클라이언트에서 사용할 IP 주소입니다. 
    - **파일 시스템 리소스 이름**: 파일 시스템 리소스의 이름입니다.
-   - **장치**: NFS 공유 경로
-   - **장치**: 공유에 탑재 되는 로컬 경로
+   - **device**: NFS 공유 경로
+   - **device**: 공유에 탑재 되는 로컬 경로
    - **fstype**: 파일 공유 형식 (예: nfs)
 
    사용자 환경에 대 한 다음 스크립트에서 값을 업데이트 합니다. 구성 및 클러스터 된 서비스를 시작 하려면 하나의 노드에서 실행 합니다.  

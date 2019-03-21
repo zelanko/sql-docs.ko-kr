@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027134"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305941"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
 
@@ -59,7 +59,7 @@ ms.locfileid: "56027134"
   
 1.  **DQS에서 참조 데이터 공급자 세부 정보 구성**: DQS에서 참조 데이터를 사용하려면 DQS에서 참조 데이터 서비스 세부 정보를 구성해야 합니다.  
   
-    1.  Marketplace를 사용하는 경우 유효한 Marketplace 계정 키를 제공하고 Marketplace의 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 데이터 범주로 이동한 후 필요한 공급자를 구독합니다.  
+    1.  Marketplace를 사용 하는 경우 유효한 Marketplace 계정 키를 제공로 이동 합니다 [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) Marketplace의 데이터 범주 하 고 필요한 공급자를 구독 합니다.  
   
     2.  다이렉트 온라인 참조 데이터 공급자를 사용하는 경우 DQS에서 다이렉트 참조 데이터 공급자 세부 정보를 추가해야 사용할 수 있습니다.  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3af3d6ba14e4a9f3e2948c910e4282e33c032d3e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214314"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305991"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "53214314"
   
 -   0x0416 또는 1046 - **포르투갈어(브라질)**.  
   
- 긴 목록을 보려면 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)(영문)를 참조하세요. 자세한 배경을 알고 싶으면 [인코딩 및 코드 페이지](http://msdn.microsoft.com/goglobal/bb688114.aspx)를 참조하세요.  
+ 긴 목록을 보려면 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)(영문)를 참조하세요. 자세한 배경을 알고 싶으면 [인코딩 및 코드 페이지](/globalization/encoding/encoding-overview)를 참조하세요.  
   
 > [!NOTE]  
 >  **Language** 속성은 시스템 메시지 표시용 언어나 사용자 인터페이스에 표시할 문자열을 결정하지 않습니다. 오류, 경고 및 메시지는 Office와 Office 365에서 지원하는 모든 언어로 지역화되어 있으며, 지원되는 로캘 중 하나를 클라이언트 연결이 지정하면 자동으로 사용됩니다.  
@@ -167,7 +167,7 @@ ms.locfileid: "53214314"
 ##  <a name="bkmk_gb18030"></a> Analysis Services에서의 GB18030 지원  
  GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. Analysis Services에는 외부 원본의 데이터를 처리할 때 데이터 변환이 이루어지지 않습니다. 데이터는 유니코드로 간단히 저장됩니다. 쿼리 시 클라이언트 운영 체제 설정에 따라 쿼리 결과에 텍스트 데이터가 반환되면 Analysis Services 클라이언트 라이브러리를 통해 GB18030 변환이 수행됩니다(특히, MSOLAP.dll OLE DB 공급자). 데이터베이스 엔진은 GB18030도 지원합니다. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  

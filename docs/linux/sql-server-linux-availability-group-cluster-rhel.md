@@ -5,18 +5,18 @@ description: Red Hat Enterprise Linux (RHEL)를 실행 하는 경우 가용성 �
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160608"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305632"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성
 
@@ -89,7 +89,7 @@ RHEL에 대 한 고가용성을 구성 하려면 항상 사용 가능한 구독�
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-자세한 내용은 [Pacemaker-The 오픈 소스, 높은 가용성 클러스터](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/)합니다. 
+자세한 내용은 [Pacemaker-The 오픈 소스, 높은 가용성 클러스터](https://clusterlabs.org/pacemaker/)합니다. 
 
 구독을 구성한 후 Pacemaker를 구성 하려면 다음 단계를 완료 합니다.
 
@@ -111,7 +111,7 @@ Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 �
 
 STONITH를 및 펜싱에 대 한 내용은 다음 문서를 참조 합니다.
 
-* [부터 pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [부터 pacemaker 클러스터](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [펜싱 및 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Pacemaker 사용 하 여 Red Hat 고가용성 추가 기능: 펜싱](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ sudo pcs property set cluster-recheck-interval=2min
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-업데이트 하는 `ag1` 리소스 속성 `failure-timeout` 에 `60s` 실행:
+업데이트 하는 `ag_cluster` 리소스 속성 `failure-timeout` 에 `60s` 실행:
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 
