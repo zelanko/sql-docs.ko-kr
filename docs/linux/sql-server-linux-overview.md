@@ -31,12 +31,12 @@ SQL Server 2019 미리 보기는 Linux에서 실행 됩니다. 많은 유사 기
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)합니다.
+> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-ver15) 놓았습니다. Linux 용 최신 릴리스의 새로운 기능을 확인 하려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux)을 참조합니다.
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-linux-ver15) 놓았습니다. Linux 용의 새로운 최신 릴리스를 확인 하려면 참조 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)합니다.
+> [SQL Server 2019 미리 보기](sql-server-linux-overview.md?view=sql-server-linux-ver15) 놓았습니다. Linux 용 최신 릴리스의 새로운 기능을 확인 하려면 [Linux 용 SQL Server 2019 미리 보기의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux)을 참조합니다.
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
