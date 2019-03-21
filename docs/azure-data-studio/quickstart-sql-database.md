@@ -20,15 +20,15 @@ ms.locfileid: "53991816"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL database에 연결하고 쿼리하기
 
-이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 서버에 연결합니다. 그리고 나서 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용하는 TutorialDB 데이터베이스를 생성하고 쿼리하기 위해서 TRANSACT-SQL (T-SQL)문을 실행합니다. 입니다.
+이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 서버에 연결합니다. 그리고 나서 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용하는 TutorialDB 데이터베이스를 생성하고 쿼리하기 위해서 TRANSACT-SQL (T-SQL)문을 실행합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작을 완료 하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], 및 Azure SQL Database 서버가 필요합니다.
+이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 및 Azure SQL Database 서버가 필요합니다.
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]설치](download.md)
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
 
-Azure SQL server가 없는 경우, 다음 Azure SQL Database 빠른 시작 중 하나를 수행합니다. 이후 단계를 위해서 정규화된 서버 이름과 로그인한 자격 증명을 기억합니다.
+Azure SQL server가 없는 경우, 다음 Azure SQL Database 빠른 시작 중 하나를 수행합니다. 이후 단계를 위해서 정규화된 서버 이름과 로그인 자격 증명을 기억합니다.
 
 - [DB 만들기-포털](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [DB 만들기-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -39,21 +39,21 @@ Azure SQL server가 없는 경우, 다음 Azure SQL Database 빠른 시작 중 �
 
 Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용합니다.
 
-1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면, **서버** 사이드바의 **연결 추가**, 또는 **새 연결** 아이콘을 선택합니다:
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **연결** 페이지가 열립니다. **연결** 페이지가 표시되지 않으면, **서버** 사이드바의 **연결 추가**, 또는 **새 연결** 아이콘을 선택합니다.
    
    ![새 연결 아이콘](media/quickstart-sql-database/new-connection-icon.png)
 
-2. 이 문서에서는 SQL 로그인을 사용 하지만 Windows 인증도 지원 합니다. Azure SQL server에 대한 서버 이름, 사용자 이름 및 암호를 사용하여 다음 필드를 입력 합니다.
+2. 이 문서에서는 SQL 로그인을 사용하지만 Windows 인증도 지원합니다. Azure SQL server에 대한 서버 이름, 사용자 이름 및 암호를 사용하여 다음 필드를 입력합니다.
 
    | 설정       | 제안된 값 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 이름** | 정규화된 서버 이름 | 같은: **servername.database.windows.net**합니다. |
    | **인증** | SQL 로그인| 이 자습서에서는 SQL 인증을 사용합니다. |
-   | **사용자 이름** | 서버 관리자 계정의 사용자 이름 | 서버를 만드는데 사용된 계정의 사용자 이름입니다. |
+   | **사용자 이름** | 서버 관리자 계정의 사용자 이름 | 서버를 만드는 데 사용된 계정의 사용자 이름입니다. |
    | **암호(SQL 로그인)** | 서버 관리자 계정의 암호 | 서버를 만드는 데 사용된 계정의 암호입니다. |
-   | **암호를 저장하시겠습니까?** | Yes 또는 No | 매번 암호를 입력하지 않으려면 **예**를 선택합니다. |
+   | **암호를 저장하시겠습니까?** | Yes 또는 No | 매번 암호를 입력하지 않으려면 **Yes**를 선택합니다. |
    | **데이터베이스 이름** | *비워 둡니다* | 여기에는 서버에만 연결합니다. |
-   | **서버 그룹** | 선택 <Default> | 사용자가 만든 특정 서버 그룹에 지정하기 위해서 이 필드를 설정할 수 있습니다. | 
+   | **서버 그룹** | 선택 <Default> | 사용자가 만든 특정 서버 그룹으로 이 필드를 설정할 수 있습니다. | 
 
    ![새 연결 아이콘](media/quickstart-sql-database/new-connection-screen.png)  
 
@@ -67,7 +67,7 @@ Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../inclu
 
 ## <a name="create-the-tutorial-database"></a>Tutorial 데이터베이스 생성하기
 
-다음 섹션에서 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용했던 TutorialDB 데이터베이스를 생성합니다.
+다음 섹션에서는 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용했던 TutorialDB 데이터베이스를 생성합니다.
 
 1. **서버** 사이드바에서 Azure SQL 서버에서 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.
 
@@ -86,11 +86,11 @@ Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../inclu
    GO
    ```
 
-1. 도구 모음에서 **실행**을 선택합니다. **메시지** 창 쿼리 진행률을 표시하는 알림이 표시됩니다.
+1. 도구 모음에서 **실행**을 선택합니다. **메시지** 창에 쿼리 진행률을 표시하는 알림이 표시됩니다.
 
 ## <a name="create-a-table"></a>테이블 생성하기
 
-쿼리 편집기가 **master** 데이터베이스에 연결되었지만, **TutorialDB** 데이터베이스에 테이블을 생성하기를 원합니다. 
+쿼리 편집기가 **master** 데이터베이스에 연결되었지만, **TutorialDB** 데이터베이스에 테이블을 생성하려고 합니다. 
 
 1. **TutorialDB** 데이터베이스에 연결합니다.
 
@@ -152,8 +152,8 @@ Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../inclu
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이후 빠른 시작 문서에서는 여기에서 만든 리소스를 기반으로 합니다. 이 문서을 계속 진행하는 경우를 이 리소스를 삭제하지 않도록 하십시오. 그렇지 않으면, Azure portal에서 더 이상 필요하지 않은 리소스를 삭제합니다. 자세한 내용은 [리소스를 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources) 참조합니다.
+이후 빠른 시작 문서에서는 여기에서 만든 리소스를 기반으로 합니다. 이 문서을 계속 진행하려는 경우를 이 리소스를 삭제하지 않도록 해야 합니다. 그렇지 않으면, Azure portal에서 더 이상 필요하지 않은 리소스를 삭제합니다. 자세한 내용은 [리소스를 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources) 참조합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure SQL database에 성공적으로 연결하고 쿼리를 실행했습니다. [코드 편집기 자습서](tutorial-sql-editor.md)를 시도해보십시오.
+Azure SQL database에 성공적으로 연결하고 쿼리를 실행했습니다. [코드 편집기 자습서](tutorial-sql-editor.md)를 시도해보세요.
