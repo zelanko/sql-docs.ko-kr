@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222254"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342840"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
 
@@ -32,7 +32,7 @@ ms.locfileid: "58222254"
 
 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 응용 프로그램을 배포한 후에 액세스 하 고 RESTful 웹 서비스를 사용 하 여 해당 응용 프로그램을 사용할 수 있습니다. 이 통해 다른 응용 프로그램 또는 서비스 (예: 모바일 앱 또는 웹 사이트)에서 해당 앱의 통합. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl** RESTful 웹 서비스 앱에 대 한 정보를 가져옵니다.
 
-|Command |설명 |
+|Command |Description |
 |:---|:---|
 |`mssqlctl app describe` | 응용 프로그램에 설명 합니다. |
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ IP 주소를 적어둡니다 (`10.1.1.3` 이 예에서) 및 포트 번호 (`3077
 
 ## <a name="generate-a-jwt-access-token"></a>JWT 액세스 토큰을 생성 합니다.
 
-배포한 경우 앱에 대 한 RESTful 웹 서비스에 액세스 하려면 브라우저에서 다음 URL을 열어: `https://[IP]:[PORT]/api/docs/swagger.json` IP 주소 및 포트 실행 검색을 사용 하 여는 `describe` 위의 명령입니다. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다.
+앱에 대 한 RESTful 웹 서비스에 액세스 하기 위해 배포한 경우 먼저 JWT 액세스 토큰을 생성할 수 있습니다. 다음 URL을 브라우저에서 엽니다. `https://[IP]:[PORT]/api/docs/swagger.json` IP 주소 및 포트 실행 검색을 사용 하 여는 `describe` 위의 명령입니다. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다.
 
 내용을 붙여 합니다 `swagger.json` 에 [Swagger 편집기](https://editor.swagger.io) 어떤 메서드를 사용할 수를 이해 하려면:
 
@@ -101,9 +101,9 @@ IP 주소를 적어둡니다 (`10.1.1.3` 이 예에서) 및 포트 번호 (`3077
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 앱 실행
 
 > [!NOTE]
-> 원하는 경우에 대 한 URL을 열 수 있습니다 합니다 `swagger` 실행 했을 때 반환 않은 `mssqlctl app describe --name addpy --version [version]` 브라우저에서 합니다. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다. 콘텐츠를 `swagger.json` 붙여넣을 수 있습니다 [Swagger 편집기](https://editor.swagger.io)합니다. 웹 서비스를 노출 하는 표시 됩니다는 `run` 메서드.
+> 원하는 경우에 대 한 URL을 열 수 있습니다는 `swagger` 실행 했을 때 반환 않은 `mssqlctl app describe --name [appname] --version [version]` 브라우저에서는 비슷해야 `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다. 콘텐츠를 `swagger.json` 붙여넣을 수 있습니다 [Swagger 편집기](https://editor.swagger.io)합니다. 웹 서비스를 노출 하는 표시 됩니다는 `run` 메서드.
 
-선호 하는 도구를 사용 하 여 호출 하는 `run` 메서드 (`https://[IP]:[PORT]/api/app/addpy/[version]/run`)를 json으로 POST 요청의 본문에 매개 변수를 전달 합니다. 이 예제에서는 사용 하 여 [Postman](https://www.getpostman.com/)합니다. 호출 하기 전에 설정 해야 합니다는 `Authorization` 에 `Bearer Token` 앞서 검색 한 토큰에 붙여넣습니다. 요청에서 헤더를 설정 합니다. 아래 스크린 샷을 참조하십시오.
+선호 하는 도구를 사용 하 여 호출 하는 `run` 메서드 (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`)를 json으로 POST 요청의 본문에 매개 변수를 전달 합니다. 이 예제에서는 사용 하 여 [Postman](https://www.getpostman.com/)합니다. 호출 하기 전에 설정 해야 합니다는 `Authorization` 에 `Bearer Token` 앞서 검색 한 토큰에 붙여넣습니다. 요청에서 헤더를 설정 합니다. 아래 스크린 샷을 참조하십시오.
 
 ![Postman 실행 헤더](media/big-data-cluster-consume-apps/postman_run_1.png)
 
