@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756638"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222064"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -253,7 +253,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>앱 설명
 
-Describe 명령을 클러스터의 끝점을 포함 하 여 앱에 대 한 자세한 정보를 제공 합니다. 일반적으로 swagger 클라이언트 및 웹 서비스를 사용 하 여 RESTful 방식으로 앱과 상호 작용 하는 앱을 빌드하는 앱 개발자가 사용 됩니다.
+Describe 명령을 클러스터의 끝점을 포함 하 여 앱에 대 한 자세한 정보를 제공 합니다. 일반적으로 swagger 클라이언트 및 웹 서비스를 사용 하 여 RESTful 방식으로 앱과 상호 작용 하는 앱을 빌드하는 앱 개발자가 사용 됩니다. 참조 [빅 데이터 클러스터에 응용 프로그램을 사용](big-data-cluster-consume-apps.md) 자세한 내용은 합니다.
 
 ```json
 {
@@ -293,6 +293,6 @@ mssqlctl app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>다음 단계
 
-추가 샘플에서 확인할 수 있습니다 [응용 프로그램 배포 샘플](https://aka.ms/sql-app-deploy)합니다.
+SQL Server에서 응용 프로그램에서 빅 데이터 클러스터에 배포 된 앱을 통합 하는 방법에 대해 [빅 데이터 클러스터에 응용 프로그램을 사용](big-data-cluster-consume-apps.md) 자세한 내용은 합니다. 추가 샘플에서 확인할 수 있습니다 [응용 프로그램 배포 샘플](https://aka.ms/sql-app-deploy)합니다.
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.

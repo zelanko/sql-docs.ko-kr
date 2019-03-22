@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018469"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222027"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법
 
@@ -105,7 +105,7 @@ VS Code는 적절 한 끝점, 사용자 이름 및 암호를 묻습니다. 앱 �
 
 ![배포 앱 단추](media/vs-extension/deploy_app_lightning.png)
 
-![Codelens 앱 배포](media/vs-extension/deploy_app_codelens.png)
+![CodeLens 앱 배포](media/vs-extension/deploy_app_codelens.png)
 
 앱 세로 막대에서 앱의 상태를 기반으로 사용할 준비가 되 면 알려 줍니다.
 
@@ -127,9 +127,11 @@ VS Code는 적절 한 끝점, 사용자 이름 및 암호를 묻습니다. 앱 �
   - swagger
   - 자세히
 
-클릭 하면 `Links`에 액세스할 수 있는지 표시 됩니다는 `swagger.json` 배포 된 앱의 따라서 쓰기에 앱을 호출 하는 고유한 클라이언트:
+클릭 하면 `Links`, 액세스할 수 있는지 표시 됩니다는 `swagger.json` 배포 된 앱의 앱을 호출 하는 고유한 클라이언트를 작성할 수 있도록 합니다.
 
 ![Swagger](media/vs-extension/swagger.png)
+
+참조 [빅 데이터 클러스터에 응용 프로그램을 사용](big-data-cluster-consume-apps.md) 자세한 내용은 합니다.
 
 ### <a name="app-run"></a>앱 실행
 
@@ -173,7 +175,7 @@ VS Code는 적절 한 끝점, 사용자 이름 및 암호를 묻습니다. 앱 �
 
 ## <a name="next-steps"></a>다음 단계
 
-추가 샘플을 참조할 수도 있습니다 [응용 프로그램 배포 샘플](https://aka.ms/sql-app-deploy) 확장을 사용 하 여 시도 합니다.
+SQL Server에서 응용 프로그램에서 빅 데이터 클러스터에 배포 된 앱을 통합 하는 방법에 대해 [빅 데이터 클러스터에 응용 프로그램을 사용](big-data-cluster-consume-apps.md) 자세한 내용은 합니다. 추가 샘플을 참조할 수도 있습니다 [응용 프로그램 배포 샘플](https://aka.ms/sql-app-deploy) 확장을 사용 하 여 시도 합니다.
 
 SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 빅 데이터 클러스터 이란?](big-data-cluster-overview.md)합니다.
 
