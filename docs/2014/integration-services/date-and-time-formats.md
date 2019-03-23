@@ -13,15 +13,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112749"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377511"
 ---
 # <a name="date-and-time-formats"></a>날짜 및 시간 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석에서는 날짜 및 시간 데이터 형식에 대해 다음과 같은 형식이 지원됩니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "48112749"
   
  빠른 구문 분석에서는 문자열이 DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 및 DT_DBTIMESTAMPOFFSET으로 출력됩니다. 잘림 형식의 날짜/시간 값은 채워집니다. 다음 표에서는 누락된 날짜 및 시간 부분에 대해 추가되는 값을 나열합니다.  
   
-|날짜/시간 부분|패딩|  
+|날짜/시간 부분|안쪽 여백|  
 |---------------------|-------------|  
 |초|00을 추가합니다.|  
 |분|00:00을 추가합니다.|  

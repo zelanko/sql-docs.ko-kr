@@ -15,15 +15,15 @@ helpviewer_keywords:
 - copying packages
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c0fd93e83df6bfc9978f828889ad409559243c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4185751f0aded344577acb6206f259debdb37642
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049793"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374122"
 ---
 # <a name="copy-project-items"></a>프로젝트 항목 복사
   이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 내 또는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 간에 개체를 복사하는 방법에 대해 설명합니다. 또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다른 유형 간에 개체를 복사할 수도 있습니다. 프로젝트 간에 복사하려면 프로젝트가 같은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 솔루션의 일부여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)를 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "48049793"
      항목은 올바른 폴더에 자동으로 복사됩니다. 패키지가 아닌 항목을 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 복사하려는 경우 항목이 **기타** 폴더로 복사됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [패키지 개체 복사](../../2014/integration-services/copy-package-objects.md)  
   
   

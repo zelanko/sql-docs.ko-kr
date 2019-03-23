@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee28bbfa3cea482f934b3491f51e0caf601f5465
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363165"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377311"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "53363165"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>관련 내용  
- 비디오에서는 [방법: 웹 서비스 태스크 (SQL Server 비디오)를 사용 하 여 웹 서비스 호출](https://go.microsoft.com/fwlink/?LinkId=259642), technet.microsoft.com 합니다.  
+ MSDN Library의 비디오 - [방법: 웹 서비스 태스크 (SQL Server 비디오)를 사용 하 여 웹 서비스 호출](https://go.microsoft.com/fwlink/?LinkId=259642), technet.microsoft.com 합니다.  
   
  curatedviews.cloudapp.net의 큐레이트 응답, [스크립트를 사용하여 SSIS의 웹 서비스 사용](https://go.microsoft.com/fwlink/?LinkId=321996)  
   

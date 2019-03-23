@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fa6ade04fac0c4a00ca344554f72d7f1b8aad30
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: aec88e77e5306736e89d353b3299bb04441f4b1c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359305"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379278"
 ---
 # <a name="expression-task"></a>식 태스크
   식 태스크는 식 작성기를 사용하여 런타임에 변수 값을 설정하는 식을 만들고 평가합니다. 태스크를 편집하면 [Expression Builder](../expressions/expression-builder.md) 가 시작됩니다.  

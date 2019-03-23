@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761293"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375351"
 ---
 # <a name="package-management-ssis-service"></a>패키지 관리(SSIS 서비스)
   패키지 관리에는 다음 태스크를 비롯한 태스크가 포함됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52761293"
 -   패키지 가져오기 및 내보내기  
   
 > [!IMPORTANT]  
->  이 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
+>  이 항목에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]는 이전 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
   
 ## <a name="package-store"></a>패키지 저장소  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 액세스를 위해 **패키지 실행** 하 고 **패키지를 저장**합니다. **실행 중인 패키지** 폴더에는 서버에서 현재 실행 중인 패키지가 나열됩니다. **저장된 패키지** 폴더에는 패키지 저장소에 저장된 패키지가 나열됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서는 이 폴더에 나열된 패키지만 관리합니다. 패키지 저장소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 구성 파일에 나열된 msdb 데이터베이스나 파일 시스템 폴더 중 하나 또는 둘 다로 구성될 수 있습니다. 이 구성 파일에는 관리할 msdb와 파일 시스템 폴더가 지정되어 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 관리하지 않는 파일 시스템의 다른 위치에 패키지가 저장되어 있을 수도 있습니다.  
