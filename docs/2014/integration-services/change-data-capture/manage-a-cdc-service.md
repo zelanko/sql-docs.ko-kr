@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4990635d9246489c3b74fa966312db4a884e5b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764165"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373832"
 ---
 # <a name="manage-a-cdc-service"></a>CDC Service 관리
   CDC Designer 콘솔을 사용하면 CDC Service 구성 콘솔로 만든 서비스를 보고 Oracle CDC Service의 모든 인스턴스를 관리할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52764165"
   
  **모든 인스턴스 중지** 를 클릭하여 서비스의 모든 인스턴스에 대한 변경 데이터 캡처를 중지합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](how-to-create-the-sql-server-change-database-instance.md)   
  [CDC Designer 콘솔에서 CDC Service를 관리하는 방법](how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Use the New Instance Wizard](use-the-new-instance-wizard.md)  

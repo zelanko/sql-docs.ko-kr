@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
-ms.translationtype: MT
+ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342840"
+ms.locfileid: "58356406"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
 
@@ -86,7 +86,7 @@ IP 주소를 적어둡니다 (`10.1.1.3` 이 예에서) 및 포트 번호 (`3077
 
 ## <a name="generate-a-jwt-access-token"></a>JWT 액세스 토큰을 생성 합니다.
 
-앱에 대 한 RESTful 웹 서비스에 액세스 하기 위해 배포한 경우 먼저 JWT 액세스 토큰을 생성할 수 있습니다. 다음 URL을 브라우저에서 엽니다. `https://[IP]:[PORT]/api/docs/swagger.json` IP 주소 및 포트 실행 검색을 사용 하 여는 `describe` 위의 명령입니다. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다.
+배포한 경우 앱에 대 한 RESTful 웹 서비스에 액세스 하려면 먼저 JWT 액세스 토큰을 생성 해야 합니다. 다음 URL을 브라우저에서 엽니다. `https://[IP]:[PORT]/api/docs/swagger.json` IP 주소 및 포트 실행 검색을 사용 하 여는 `describe` 위의 명령입니다. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다.
 
 내용을 붙여 합니다 `swagger.json` 에 [Swagger 편집기](https://editor.swagger.io) 어떤 메서드를 사용할 수를 이해 하려면:
 

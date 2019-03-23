@@ -10,22 +10,22 @@ f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 991b65c5a0b9ef78811bd1dbc543ffb9c4ad0e31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774145"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373812"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
   Azure HDInsight 연결 관리자를 SSIS 패키지를 속성에 대해 지정 된 값을 사용 하 여 Azure 구독에 연결할 수 있습니다. Azure 구독 ID 및 관리 인증서입니다.  
   
 1.  위에 나와 있는 **SSIS 연결 관리자 추가** 대화 상자에서 **Azure 구독**을 선택하고 **추가**를 클릭합니다.  다음과 같은 **Azure 구독 연결 관리자 편집기** 대화 상자가 표시됩니다.  
   
-     ![SSIS AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "SSIS AzureSubscriptionManager")  
+     ![SSIS-AzureSubscriptionManager](../media/ssis-azuresubscriptionmanager.png "SSIS-AzureSubscriptionManager")  
   
 2.  **Azure 구독 ID**에 Azure 구독을 고유하게 식별하는 Azure 구독 ID를 입력합니다.  이 값은 [Azure 관리 포털](https://manage.windowsazure.com) 의 **설정** 페이지에서 확인할 수 있습니다.  
   

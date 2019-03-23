@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.balanceddatadistributor.f1
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9314eb57dd00e8cbfc1daf4aeb5f4b1a05f4f7b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364095"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374041"
 ---
 # <a name="balanced-data-distributor-transformation"></a>분산 데이터 배포자 변환
   BDD(분산 데이터 배포자) 변환은 최신 CPU의 동시 처리 기능을 이용하며, 들어오는 행의 버퍼를 여러 스레드의 출력에 균일하게 분산합니다. BDD 구성 요소는 각 출력 경로에 별도의 스레드를 사용하여 다중 코어 또는 다중 프로세서 컴퓨터에서 SSIS 패키지의 성능을 향상시킵니다. BDD 구성 요소는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 기능 팩의 일부입니다. 다운로드 및 설치에서 [여기](https://go.microsoft.com/fwlink/p/?LinkId=391999)합니다.  
