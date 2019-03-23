@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd04a8b1b0882fe6db6385052009d72551d1d0e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79652d50bb4df2bf80ec9f072e8828db9935368f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187843"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391190"
 ---
 # <a name="save-a-package-as-a-package-template"></a>패키지 템플릿으로 패키지 저장
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새 Integration Services 패키지를 만들 때 사용자 지정 패키지를 템플릿으로 지정하고 사용하는 방법에 대해 설명합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 새 패키지를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 추가할 때 빈 패키지를 만드는 패키지 템플릿을 사용합니다. 이러한 기본 템플릿은 바꿀 수 없지만 새 템플릿을 추가할 수는 있습니다.  

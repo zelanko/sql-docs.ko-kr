@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7803ef13e85987d0866af1e455ccb3ef771d7357
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780121"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393621"
 ---
 # <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52780121"
   
  이 대화 상자에 다른 옵션은 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   

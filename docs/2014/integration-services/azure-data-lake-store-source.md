@@ -12,17 +12,17 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2037890618a4977135d6366d8d84bb84a9c67744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1a8f60cbdf2653a3d582544a487e71e62168929
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129440"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388551"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 원본
-  **Azure Data Lake Store 원본** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 Text 및 Avro입니다.
+  **Azure Data Lake Store 원본** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. 텍스트 및 Avro.
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Azure Data Lake Store 원본 구성 
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 43bda909-e48f-4243-9614-49f4eea84872
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7db265d2f7c3e2de1c13646323f2698b7b3299a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087133"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392993"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>데이터 뷰어 구성(히스토그램 탭)
   **데이터 뷰어 구성** 대화 상자의 **히스토그램** 탭을 사용하여 표시할 열을 지정할 수 있습니다. 히스토그램은 특정 숫자 열의 데이터 값을 값의 분산으로 표시합니다. 차트는 한 버퍼의 내용만 반영합니다.  

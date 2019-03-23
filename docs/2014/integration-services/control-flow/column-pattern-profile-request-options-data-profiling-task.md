@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d22be3bc8d99edd5d8b799e4121e2a591977b255
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767227"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389001"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 패턴 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 패턴 프로필은 문자열 열에서 지정된 값의 비율을 포괄하는 정규식 집합을 보고합니다. 이 프로필을 사용하면 잘못된 문자열과 같은 데이터 문제를 식별하는 데 도움이 되며 앞으로 새 값의 유효성 검사에 사용할 수 있는 정규식을 제안 받을 수 있습니다. 예를 들어 US Zip Code 열의 패턴 프로필이 \d{5}-\d{4}, \d{5} 및 \d{9} 정규식을 생성할 수 있습니다. 다른 정규식이 보이면 데이터에 유효하지 않거나 잘못된 형식의 값이 포함되어 있을 가능성이 높습니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "52767227"
   
  자세한 내용은 이 항목의 앞부분에 나오는 "태그 테이블 사용 이해"를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

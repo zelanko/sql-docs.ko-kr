@@ -14,15 +14,15 @@ helpviewer_keywords:
 - packages [Integration Services], logs
 - Integration Services packages, log providers
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a81f799308a62440b2aec53972db9c828b87e124
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25531ce8e4a405b1e52a0f1f8d81fb536087cff7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353330"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389281"
 ---
 # <a name="developing-a-custom-log-provider"></a>사용자 지정 로그 공급자 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 패키지 실행 중 발생하는 이벤트를 캡처할 수 있게 해 주는 광범위한 로깅 기능이 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 XML, 텍스트, 데이터베이스, Windows 이벤트 로그 등의 형식으로 로그를 만들고 저장하는 데 사용할 수 있는 다양한 로그 공급자가 포함되어 있습니다. 제공된 로그 공급자 및 출력 형식이 개발자의 요구 사항을 완전하게 충족시키지 못할 경우 사용자 지정 로그 공급자를 만들 수 있습니다.  

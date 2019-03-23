@@ -11,15 +11,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365061"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394141"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>검사점을 사용하여 패키지 다시 시작
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 전체 패키지를 다시 실행하지 않고 오류 발생 시점에서 실패한 패키지를 다시 시작할 수 있습니다. 패키지가 검사점을 사용하도록 구성된 경우 패키지 실행에 대한 정보는 검사점 파일에 기록됩니다. 실패한 패키지가 다시 실행될 때 검사점 파일은 오류 발생 지점에서 패키지를 다시 시작하는 데 사용됩니다. 패키지가 성공적으로 실행된 경우 검사점 파일은 삭제되고 다음에 패키지가 실행될 때 다시 만들어집니다.  

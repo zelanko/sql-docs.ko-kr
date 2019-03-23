@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59cda8289032f3d3156c49d3a450cf919981d0b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f0031b874b2477bff53f8f0855b557a3188c3719
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791175"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377720"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>SAP BW 원본 편집기(열 페이지)
   **SAP BW 원본 편집기** 의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

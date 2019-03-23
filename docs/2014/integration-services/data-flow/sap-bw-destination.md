@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff0a59ad719f2f609bd96a7a11147204c7b8a3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367515"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375218"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 대상
   SAP BW 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 대상 구성 요소입니다. 따라서 SAP BW 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 SAP Netweaver BW 버전 7 시스템으로 데이터를 로드합니다.  

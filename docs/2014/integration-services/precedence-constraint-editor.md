@@ -12,25 +12,25 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c321d7a3850cf91b996262265492b88a6773f446
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217303"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388311"
 ---
 # <a name="precedence-constraint-editor"></a>선행 제약 조건 편집기
   **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건을 구성할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **평가 작업**  
- 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
+ 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식을**를 **식 및 제약 조건**, 및 **식 또는 제약 조건**합니다.  
   
  **Value**  
- 제약 조건 값을 **성공**, **실패**또는 **완료**로 지정합니다.  
+ 제약 조건 값을 지정합니다. **성공**, **실패**, 또는 **완료**합니다.  
   
 > [!NOTE]  
 >  선행 제약 조건 줄은 **성공**인 경우 녹색으로 표시되고 **실패**인 경우 강조 표시되고 **완료**인 경우 파란색으로 표시됩니다.  
@@ -42,13 +42,13 @@ ms.locfileid: "48217303"
  식의 유효성을 검사합니다.  
   
  **논리적 AND**  
- 동일한 실행 파일의 여러 선행 제약 조건을 함께 평가하도록 지정하려면 선택합니다. 모든 제약 조건으로 계산 되어야 `True`합니다.  
+ 동일한 실행 파일의 여러 선행 제약 조건을 함께 평가하도록 지정하려면 선택합니다. 모든 제약 조건이 `True`여야 합니다.  
   
 > [!NOTE]  
 >  이 유형의 선행 제약 조건은 녹색 실선으로 표시되거나 강조 표시되거나 파란색 실선으로 표시됩니다.  
   
  **논리적 OR**  
- 동일한 실행 파일의 여러 선행 제약 조건을 함께 평가하도록 지정하려면 선택합니다. 하나 이상의 제약 조건으로 계산 되어야 `True`합니다.  
+ 동일한 실행 파일의 여러 선행 제약 조건을 함께 평가하도록 지정하려면 선택합니다. 적어도 하나의 제약 조건이 `True`여야 합니다.  
   
 > [!NOTE]  
 >  이 유형의 선행 제약 조건은 녹색 점선으로 표시되거나 강조 표시되거나 파란색 점선으로 표시됩니다.  

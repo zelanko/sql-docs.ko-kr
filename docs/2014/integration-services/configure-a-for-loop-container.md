@@ -11,15 +11,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a88ca178770bb3326202b603318be30119b2febe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b5d09e160dfa4974704ea3e4ee1b6400f983fe88
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350840"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392981"
 ---
 # <a name="configure-a-for-loop-container"></a>For 루프 컨테이너 구성
   이 절차에서는 **For 루프 편집기** 대화 상자를 사용하여 For 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  

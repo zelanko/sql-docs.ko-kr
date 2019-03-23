@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isfolderprop.general.f1
 - sql12.ssis.ssms.isfolderprop.permissions.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cbca0592074b34250d5d07003494800942affaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804565"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376001"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
   폴더에는 `SSISDB` 카탈로그의 프로젝트 및 환경이 포함됩니다. 각 폴더는 폴더 내용에 적용되는 사용 권한을 정의합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 권한에 대한 자세한 내용은 [catalog.grant_permission&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)을 참조하세요.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767458"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392261"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>3단계: 6 단원 패키지 테스트
   런타임에서 패키지는 VarFolderName 매개 변수로부터 Directory 속성 값을 가져옵니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "52767458"
 2.  패키지의 실행이 완료된 후에 디버그 메뉴에서 디버깅 중지를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [4 단계: 6 단원 패키지 배포](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
+ [4단계: 6 단원 패키지 배포](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  
   
   

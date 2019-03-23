@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366815"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393351"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
@@ -61,6 +61,6 @@ ms.locfileid: "53366815"
     >  27은 구성 요소의 ID입니다. 이 값은 데이터 흐름을 작성할 때 할당되며 패키지 값과 다를 수 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [3 단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
+ [3단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
   
   

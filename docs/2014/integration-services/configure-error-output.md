@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configureerroroutput.f1
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 279cacedf44d237de2821cb0ec7da837a43c2f06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 91e07bdf70954079e24b39bd345e33b348958ae0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162203"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376751"
 ---
 # <a name="configure-error-output"></a>오류 출력 구성
   **오류 출력 구성** 대화 상자를 사용하여 오류 출력을 지원하는 데이터 흐름 변환에 대한 오류 처리 옵션을 구성할 수 있습니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70694b2814ab23ad13e29a1348e7bfb73d884fbc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367675"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388181"
 ---
 # <a name="performance-counters"></a>성능 카운터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  
@@ -77,7 +77,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   support.microsoft.com의 지원 문서, [Windows Server 2008로 업그레이드한 후 성능 모니터에서 SSIS 성능 카운터를 더 이상 사용할 수 없다.](https://go.microsoft.com/fwlink/?LinkId=235319)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [프로젝트 및 패키지 실행](../packages/run-integration-services-ssis-packages.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.welcome.f1
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92900c365240d2d8de7e68e848ad2e30f652aa30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805065"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392931"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 시작
   **느린 변경 차원 마법사** 를 사용하여 다양한 유형의 느린 변경 차원으로 데이터를 로드하도록 구성할 수 있습니다.  

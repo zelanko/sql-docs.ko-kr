@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055640"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374966"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  
@@ -107,7 +107,7 @@ ms.locfileid: "48055640"
 ## <a name="see-also"></a>관련 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
  [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)  
   
   

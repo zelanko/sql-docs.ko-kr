@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a44d0a2833add4680636966cea805c19af32f267
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756935"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376018"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service 작업
   CDC Service 구성 콘솔을 사용하여 새 CDC Service를 만들고 CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52756935"
   
  새 Oracle CDC Service 대화 상자가 열립니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CDC Service에서 작업하는 방법](work-with-cdc-services.md)   
  [Oracle CDC Service 만들기 및 편집](create-and-edit-an-oracle-cdc-service.md)  
   

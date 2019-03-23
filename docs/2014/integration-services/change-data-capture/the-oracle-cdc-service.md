@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c63b771b7314f12c709e080aa7db581306e523
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780251"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394070"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service는 xdbcdcsvc.exe 프로그램을 실행하는 Windows 서비스입니다. 동일한 컴퓨터에서 각각 다른 Windows 서비스 이름이 있는 여러 Windows 서비스를 실행하도록 Oracle CDC Service를 구성할 수 있습니다. 일반적으로 서비스 간을 더 잘 분리하기 위해 또는 각 서비스가 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 작업해야 하는 경우에 단일 컴퓨터에서 여러 Oracle CDC Windows 서비스를 만듭니다.  

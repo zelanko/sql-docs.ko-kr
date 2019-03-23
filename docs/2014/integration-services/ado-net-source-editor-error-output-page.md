@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9440400dde3605bbd60049290bc6546eb47ea3e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d033401c87b2cd4e9fe7047ab7a19f474a3ae156
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191263"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388701"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO NET 원본 편집기(오류 출력 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -58,8 +58,8 @@ ms.locfileid: "48191263"
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO NET 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md)  
   
   

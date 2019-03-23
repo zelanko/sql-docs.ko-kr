@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 693eb9b33c753f1d87b4b5635e47de82ca7e4b59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805155"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377024"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>자습서: OData 원본 사용 [SSIS]
   이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출한 다음, 플랫 파일로 로드하는 프로세스를 안내합니다.  

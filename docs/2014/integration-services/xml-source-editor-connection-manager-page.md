@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096053"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393891"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 원본 편집기(연결 관리자 페이지)
   **XML 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 XML 데이터를 변환할 XML 파일 및 XSD를 지정할 수 있습니다.  
@@ -68,8 +68,8 @@ ms.locfileid: "48096053"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [XML 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [XML 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [XML 원본을 사용하여 데이터 추출](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

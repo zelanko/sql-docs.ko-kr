@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083465"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378072"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 식 사용
   이 절차에서는 조건부 분할 변환 또는 파생 열 변환에 식을 추가하는 방법을 설명합니다. 조건부 분할 변환에서는 데이터 행을 변환 출력으로 바꾸는 조건을 정의하는 데 식을 사용하며 파생 열 변환에서는 열에 할당된 값을 정의하는 데 식을 사용합니다.  
@@ -67,8 +67,8 @@ ms.locfileid: "48083465"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
- [조건부 분할 변환](data-flow/transformations/conditional-split-transformation.md)   
- [파생된 열 변환](data-flow/transformations/derived-column-transformation.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
  [데이터 흐름 태스크](control-flow/data-flow-task.md)   
  [데이터 흐름](data-flow/data-flow.md)  
   

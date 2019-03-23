@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b71f12c9f36f74799c47538b30a058b529fdfa6d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164893"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391711"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>스크립트 변환 편집기(입력 열 페이지)
   **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지를 사용하여 입력 열의 속성을 설정할 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "48164893"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [스크립트 구성 요소 유형 선택](../../2014/integration-services/select-script-component-type.md)   
- [스크립트 변환 편집기 &#40;입력 및 출력 페이지&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [스크립트 변환 편집기 &#40;스크립트 페이지&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [스크립트 변환 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [추가 스크립트 구성 요소 예](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

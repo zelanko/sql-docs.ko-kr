@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203973"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390474"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 원본 편집기(연결 페이지)
   **OData 원본 편집기** 대화 상자의 **연결** 페이지를 사용하여 OData 원본의 OData 연결 관리자를 선택할 수 있습니다. 또한 이 페이지에서 컬렉션 또는 리소스 경로와 쿼리 옵션을 지정하여 OData 원본에서 검색해야 하는 데이터를 나타낼 수 있습니다. OData 원본에 대한 자세한 내용은 [OData Source](data-flow/odata-source.md)을 참조하십시오.  
@@ -55,11 +55,11 @@ ms.locfileid: "48203973"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>컬렉션 또는 리소스 경로 사용 = 리소스 경로  
  **Resource path**  
- 리소스 경로를 입력합니다. 예: Employees  
+ 리소스 경로를 입력합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. Employees  
   
 ## <a name="see-also"></a>관련 항목  
- [OData 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData 연결 관리자](connection-manager/odata-connection-manager.md)  
+ [OData 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

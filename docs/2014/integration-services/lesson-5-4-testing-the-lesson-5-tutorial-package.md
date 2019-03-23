@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29154120646f74da7471f44a1630b3d99afefa4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747485"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390111"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>4단계: 5단원 자습서 패키지 테스트
   런타임에 패키지는 패키지를 만들 때 지정한 원래 디렉터리 이름을 사용하지 않고 런타임에 업데이트된 변수에서 `Directory` 속성 값을 가져옵니다. SSISTutorial.dtsConfig 파일을 사용하여 변수의 값이 채워집니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "52747485"
 2.  패키지의 실행이 완료된 후에 **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6 단원: 매개 변수를 사용 하 여 프로젝트 배포 모델을 사용 하 여](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [6단원: 매개 변수를 사용 하 여 프로젝트 배포 모델을 사용 하 여](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

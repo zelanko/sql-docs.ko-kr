@@ -10,15 +10,15 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8144f0a050afd484d77a12c13780de461587513b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bd9095a11ef304c256b6c5a60560a71866e744fd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807385"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390141"
 ---
 # <a name="add-or-change-a-property-expression"></a>속성 식 추가 또는 변경
   패키지, 태스크, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너, 이벤트 처리기, 패키지 및 프로젝트 수준의 연결 관리자 및 로그 공급자에 속성 식을 만들 수 있습니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374025"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388101"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 패키지 예약
   다음 절차에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계를 통해 패키지 실행을 자동화하여 패키지를 실행하는 단계를 제공합니다.  

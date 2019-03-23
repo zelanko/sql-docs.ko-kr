@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367216"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389691"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 실행 태스크의 매개 변수 및 반환 코드
   SQL 문과 저장 프로시저에서는 일반적으로 `input` 매개 변수, `output` 매개 변수 및 반환 코드를 사용합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 입력 매개 변수에는 `Input` 유형, 출력 매개 변수에는 `Output` 유형, 반환 코드에는 `ReturnValue` 유형을 사용합니다.  
@@ -202,7 +202,7 @@ ms.locfileid: "53367216"
   
 -   msftisprodsamples.codeplex.com의 CodePlex 예제 - [SQL 실행 매개 변수 및 결과 집합(Execute SQL Parameters and Result Sets)](https://go.microsoft.com/fwlink/?LinkId=157863)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL 실행 태스크](control-flow/execute-sql-task.md)   
  [SQL 실행 태스크의 결과 집합](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   

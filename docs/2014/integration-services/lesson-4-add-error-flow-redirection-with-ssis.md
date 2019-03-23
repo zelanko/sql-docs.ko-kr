@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f80a20d2775a7f3a2c3218f178e6f80e126a755b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358375"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391831"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>4단원: 오류 흐름 리디렉션 추가
   변환 프로세스에서 발생할 수 있는 오류를 처리하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 변환할 수 없는 데이터를 처리하는 방법을 구성 요소 단위 및 열 단위로 결정할 수 있습니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  
@@ -34,17 +34,17 @@ ms.locfileid: "53358375"
 ## <a name="tasks-in-lesson"></a>단원의 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 3 단원 패키지 복사](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [1단계: 3 단원 패키지 복사](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [2단계: 손상된 된 파일 만들기](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [3 단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
+-   [3단계: 오류 흐름 리디렉션 추가](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [4 단계: 플랫 파일 대상 추가](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [4단계: 플랫 파일 대상 추가](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [5 단계: 4 단원 자습서 패키지 테스트](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [5단계: 4 단원 자습서 패키지 테스트](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 3 단원 패키지 복사](lesson-4-1-copying-the-lesson-3-package.md)  
+ [1단계: 3 단원 패키지 복사](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

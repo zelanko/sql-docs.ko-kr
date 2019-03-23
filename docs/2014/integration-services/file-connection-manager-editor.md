@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe362603d36c1ae9115ca201838b68a936ae5077
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140283"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374831"
 ---
 # <a name="file-connection-manager-editor"></a>파일 연결 관리자 편집기
   **파일 연결 관리자 편집기** 대화 상자를 사용하여 파일이나 폴더에 연결할 때 사용할 속성을 지정할 수 있습니다.  

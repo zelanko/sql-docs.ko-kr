@@ -11,15 +11,15 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e264b2075badb4f1d6afb3f2d961eca2c69dcd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 83d8d4126ff7dbcd6e0d5b114626cd8acb1b8d20
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751515"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376063"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE(SSIS 식)
   시스템의 현재 날짜를 DT_DBTIMESTAMP 형식으로 반환합니다. GETDATE 함수는 인수가 필요 없습니다.  

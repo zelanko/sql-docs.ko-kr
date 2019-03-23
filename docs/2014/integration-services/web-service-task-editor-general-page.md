@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d349947ed06ec406dad4f928cdbbc97838aec409
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538674"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374751"
 ---
 # <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52538674"
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
   
- **관련된 항목:**  [HTTP 연결 관리자](connection-manager/http-connection-manager.md)하십시오 [HTTP 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **관련 항목:**  [HTTP 연결 관리자](connection-manager/http-connection-manager.md)하십시오 [HTTP 연결 관리자 편집기 &#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 이 파일을 찾습니다.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSIS packages, properties
 - SQL Server Integration Services packages, properties
 ms.assetid: 0d20346e-475c-412f-b3ff-7bce25242b7a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9aa4740db5d0dcc0668ec59efd99ec20f5724a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0937c9edb1ebf2acf61119f5a34f81b1c1251b28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111768"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374551"
 ---
 # <a name="set-the-properties-of-a-package"></a>패키지의 속성 설정
   이 절차에서는 **속성** 창을 사용하여 패키지 속성을 구성하는 방법을 설명합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48111768"
 5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services&#40;SSIS&#41; 패키지](../../2014/integration-services/integration-services-ssis-packages.md)   
  [패키지 속성 설정](set-package-properties.md)  
   
   

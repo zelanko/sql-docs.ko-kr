@@ -11,15 +11,15 @@ helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cffcc0e48851f3d023251d03d210fb78e3d1bd09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c45b7feb32c9e85ac571f04a1c975c49b7211aee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163363"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394541"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>SQL Server Management Studio에서 Integration Services 패키지 보기(SSIS 서비스)
     

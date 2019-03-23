@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df784ef4601cac9d6fbb574deda90cc6828c122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d538d3417e464df770415fb487ca7b2261a02317
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102937"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392171"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 대상 편집기(매핑 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48102937"
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 대상 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [ADO NET 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

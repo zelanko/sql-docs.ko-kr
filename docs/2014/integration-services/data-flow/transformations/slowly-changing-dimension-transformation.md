@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fae586ee68a75127d5085b57f5f200498967d1d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352132"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388248"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
   느린 변경 차원 변환은 데이터 웨어하우스 차원 테이블의 레코드 업데이트 및 삽입을 조정합니다. 예를 들어 이 변환을 사용하면 AdventureWorks OLTP 데이터베이스의 Production.Products 테이블의 데이터로 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 데이터베이스의 DimProduct 테이블의 레코드를 삽입 및 업데이트하는 변환 출력을 구성할 수 있습니다.  

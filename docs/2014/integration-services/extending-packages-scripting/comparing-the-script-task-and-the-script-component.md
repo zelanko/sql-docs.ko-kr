@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9813e953947e074f25be6907abaeb16327b5d726
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1ba4b259bcb39dcf6a3a52696e4f781cda84d6c7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368555"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389377"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소 비교
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너의 제어 흐름 창에서 사용할 수 있는 스크립트 태스크와 데이터 흐름 창에서 사용할 수 있는 스크립트 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 서로 매우 다른 용도로 사용됩니다. 태스크는 일반적인 용도의 제어 흐름 도구인 반면 구성 요소는 데이터 흐름에서 원본, 변환 또는 대상으로 사용됩니다. 이러한 차이에도 불구하고 스크립트 태스크와 스크립트 구성 요소는 사용하는 코딩 도구와 개발자가 사용할 수 있는 패키지의 개체에서 약간의 유사성이 있습니다. 이러한 유사점과 차이점을 이해하면 태스크와 구성 요소 모두를 보다 효율적으로 사용할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "53368555"
 |로깅|스크립트 태스크에서 사용 합니다 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> 메서드를 `Dts` 설정 된 로그 공급자에 대 한 정보를 기록 하는 개체입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> **[VB]**<br /><br /> `Dim bt(0) As Byte Dts.Log("Test Log Event", _     0, _     bt)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `byte[] bt = new byte[0]; Dts.Log("Test Log Event", 0, bt);`|스크립트 구성 요소에서는 자동으로 생성된 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 설정된 로그 공급자에 정보를 로깅합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> **[VB]**<br /><br /> `Dim bt(0) As Byte`<br /><br /> `Me.Log("Test Log Event", _`<br /><br /> `0, _`<br /><br /> `bt)`<br /><br /> <br /><br /> **[C#]**<br /><br /> `byte[] bt = new byte[0]; this.Log("Test Log Event", 0, bt);`|  
 |결과 반환|스크립트 태스크를 사용 하는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> 속성과 선택적 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> 의 속성을 `Dts` 개체 런타임에 결과 알려 줍니다.|스크립트 구성 요소는 데이터 흐름 태스크의 일부로 실행되며 이러한 속성 중 하나를 사용하여 결과를 보고하지 않습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스크립트 태스크를 사용하여 패키지 확장](task/extending-the-package-with-the-script-task.md)   
  [스크립트 구성 요소를 사용하여 데이터 흐름 확장](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [스크립트 (큐 레이트 응답)를 사용 하 여 SSIS의 웹 서비스 사용](https://go.microsoft.com/fwlink/?LinkId=321996)  

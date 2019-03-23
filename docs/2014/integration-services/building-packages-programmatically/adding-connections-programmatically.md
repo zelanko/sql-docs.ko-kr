@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e55e0c5e931ce36c68a260e09217fcaeb8d31d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1258797d76df49a2622335ee798120632706c78
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360385"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393611"
 ---
 # <a name="adding-connections-programmatically"></a>프로그래밍 방식으로 연결 추가
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 클래스는 외부 데이터 원본에 대한 실제 연결을 나타냅니다. <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 클래스는 연결의 구현 세부 사항을 런타임에서 격리합니다. 이 클래스를 사용하면 런타임에서는 일관되고 예측 가능한 방식으로 각 연결 관리자와 상호 작용할 수 있습니다. 연결 관리자에는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>과 같이 모든 연결에 공통된 스톡 속성 집합이 포함되어 있습니다. 그러나 연결 관리자를 구성하는 데는 일반적으로 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> 속성만 필요합니다. 연결 클래스에서 `Open` 또는 `Connect`와 같은 메서드를 제공하여 데이터 원본에 대한 실제 연결을 설정하는 다른 프로그래밍 패러다임과 달리 런타임 엔진에서는 패키지 실행 중 패키지의 모든 연결을 관리합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "53360385"
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 연결 관리자와 `package.Connections.Add("xxx")` 문에 사용되는 문자열을 보여 줍니다. 모든 연결 관리자의 목록은 [Integration Services&#40;SSIS&#41; 연결](../connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   
-|String|ODBC 대상 편집기|  
+|문자열|ODBC 대상 편집기|  
 |------------|------------------------|  
 |"OLEDB"|OLE DB 연결용 연결 관리자|  
 |"ODBC"|ODBC 연결용 연결 관리자|  

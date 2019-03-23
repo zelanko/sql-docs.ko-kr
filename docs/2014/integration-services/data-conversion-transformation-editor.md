@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129803"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376142"
 ---
 # <a name="data-conversion-transformation-editor"></a>데이터 변환 편집기
   **데이터 변환 편집기** 대화 상자를 사용하여 변환할 열을 선택하고, 열이 변환될 데이터 형식을 선택하고, 변환 특성을 설정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48129803"
  사용 가능한 입력 열 목록에서 변환할 열을 선택합니다. 선택 내용에 따라 위의 확인란이 달라집니다.  
   
  **출력 별칭**  
- 각 새 열의 별칭을 입력합니다. 기본값은 `Copy of` 뒤에 입력된 열 이름이; 이지만 설명이 포함 된 고유 이름을 임의로 선택할 수 있습니다.  
+ 각 새 열의 별칭을 입력합니다. 기본값은 `Copy of` 뒤에 입력 열 이름이 오는 형식이지만 설명이 포함된 고유 이름을 선택할 수 있습니다.  
   
  **데이터 형식**  
  목록에서 사용 가능한 데이터 형식을 선택합니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "48129803"
  **길이**  
  문자열 데이터의 열 길이를 설정합니다.  
   
- **정밀도**  
+ **전체 자릿수**  
  숫자 데이터의 전체 자릿수를 설정합니다.  
   
  **소수 자릿수**  

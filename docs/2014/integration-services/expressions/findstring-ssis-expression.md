@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc77f0d87be4595e672cec61b43d041f0b89a22a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782535"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390431"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
   문자 식에서 지정한 문자열 발생 위치를 반환합니다. 반환 결과는 항목의 인덱스(1부터 시작)입니다. 문자열 매개 변수는 문자 식으로 계산되고 발생 빈도 매개 변수는 정수여야 합니다. 문자열을 찾을 수 없는 경우 반환 값은 0입니다. 문자열이 발생 인수에 지정된 횟수보다 적게 발생하는 경우에도 반환 값이 0입니다.  
@@ -76,7 +76,7 @@ FINDSTRING(Name,"n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [REPLACE&#40;SSIS 식&#41;](replace-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   

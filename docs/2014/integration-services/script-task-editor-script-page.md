@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 959263ce45c5f15adab12625d8af10148d98dc22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 18be600182e3ebef6a13e19fecd7af06be2c19ec
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520708"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390121"
 ---
 # <a name="script-task-editor-script-page"></a>스크립트 태스크 편집기(스크립트 페이지)
   **스크립트 태스크 편집기** 대화 상자의 **스크립트** 페이지를 사용하여 스크립트 속성을 설정하고 스크립트에서 액세스할 수 있는 변수를 지정할 수 있습니다.  

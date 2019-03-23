@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375665"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390915"
 ---
 # <a name="selecting-input-columns-programmatically"></a>프로그래밍 방식으로 입력 열 선택
   프로그래밍 방식으로 구성 요소를 연결한 후에는 업스트림 구성 요소에서 다운스트림 구성 요소로 변환하거나 전달할 열을 선택합니다. 구성 요소의 입력 열을 선택하지 않으면 해당 구성 요소는 데이터 흐름 태스크에서 행을 받지 않습니다.  

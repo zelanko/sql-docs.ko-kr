@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9772198054595d82f648cec0cba8b6154039bae
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b72669c44e3cf95076473c207c50cbcabf54b1ee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368435"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378190"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>프로그래밍 방식으로 데이터 흐름 태스크 추가
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에는 개체 모델에서 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 네임스페이스로 표현되는 데이터 흐름 태스크라는 태스크가 포함되어 있습니다. 데이터 흐름 태스크는 패키지 실행 도중 데이터를 변환하고 이동하는 데만 사용되는 특수한 고성능 태스크입니다. 다른 태스크와 마찬가지로 데이터 흐름 태스크도 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 개체에 의해 래핑되며, 런타임 엔진의 측면에서 이 태스크는 단지 패키지의 또 다른 태스크일 뿐입니다. 그러나 데이터 흐름에는 데이터 흐름 구성 요소라는 추가 개체가 있습니다. 이러한 구성 요소는 데이터를 원본에서 대상으로 이동하게 하고 때로는 변환을 통해 이동하게 하는 구성 요소입니다. 이 구성 요소는 이동 방향과 데이터 변환 방식을 모두 정의합니다. 데이터 흐름 태스크를 구성하려면 태스크에 구성 요소를 추가한 다음 이들 구성 요소를 연결하여 데이터의 흐름을 구성하고 의도한 변환을 얻어야 합니다.  

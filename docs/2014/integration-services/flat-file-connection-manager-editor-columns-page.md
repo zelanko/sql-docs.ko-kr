@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123885"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374651"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>플랫 파일 연결 관리자 편집기(열 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **열** 페이지를 사용하여 행 및 열 정보를 지정하고 파일을 미리 볼 수 있습니다.  
@@ -117,8 +117,8 @@ ms.locfileid: "48123885"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

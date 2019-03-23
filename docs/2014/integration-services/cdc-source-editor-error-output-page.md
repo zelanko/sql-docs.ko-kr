@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a43085040e3bc1fde5f01b9ccb769695ea877341
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a5a98644dc9c8f887b72cd5cc76c1d7c38ae174
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129843"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389311"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>CDC 원본 편집기(오류 출력 페이지)
   **CDC 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48129843"
  오류 또는 잘림 데이터 행이 CDC 원본의 오류 출력으로 전달됩니다. 이 경우에는 CDC 원본 오류 처리가 사용됩니다. 자세한 내용은 [CDC Source](data-flow/cdc-source.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
+ [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

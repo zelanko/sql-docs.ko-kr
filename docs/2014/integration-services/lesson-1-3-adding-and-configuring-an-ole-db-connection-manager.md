@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c04f6fe6e414e2468277644ef74bb2dab395af33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757115"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374441"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>3단계: OLE DB 연결 관리자 추가 및 구성
   데이터 원본에 연결하기 위해 플랫 파일 연결 관리자를 추가한 후에는 OLE DB 연결 관리자를 추가하여 대상에 연결합니다. OLE DB 연결 관리자를 사용하면 패키지가 OLE DB 호환 데이터 원본에서 데이터를 추출하거나 데이터를 로드할 수 있습니다. OLE DB 연결 관리자를 사용하여 서버, 인증 방법 및 연결의 기본 데이터베이스를 지정할 수 있습니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "52757115"
 10. **확인**을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [4 단계: 패키지에 데이터 흐름 태스크 추가](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+ [4단계: 패키지에 데이터 흐름 태스크 추가](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md)  
   
   

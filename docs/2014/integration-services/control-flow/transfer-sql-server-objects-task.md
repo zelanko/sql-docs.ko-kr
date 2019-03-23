@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 163418048c50b35bd831174d6cd516d301dfa53f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761875"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394551"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 한 가지 이상 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터베이스 개체를 전송합니다. 예를 들어 이 태스크로 테이블 및 저장 프로시저를 복사할 수 있습니다. 원본으로 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 복사할 수 있는 개체 유형이 달라집니다. 예를 들어 스키마 및 사용자 정의 집계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에만 포함됩니다.  

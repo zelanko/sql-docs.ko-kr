@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23b21d05866fb4bfe4f1bd6e5b34eab3958e93ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782805"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376036"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>마법사 완료(SQL Server 가져오기 및 내보내기 마법사)
   **마법사 완료** 페이지를 사용하여 데이터를 복사하기 전에 마법사에서 선택한 내용을 확인할 수 있습니다.  

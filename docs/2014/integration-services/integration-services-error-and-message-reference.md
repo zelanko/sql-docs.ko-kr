@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372525"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394591"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -358,7 +358,7 @@ ms.locfileid: "53372525"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|개체 이름 "%1"이(가) 잘못되었습니다. 이름은 알파벳 문자로 시작해야 합니다.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|개체 이름 "%1"이(가) 잘못되었습니다. 이름은 알파벳 문자나 밑줄("_")로 시작해야 합니다.|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 영숫자나 밑줄("_")만 포함되어야 합니다.|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 / \ : ? 문자를 사용할 수 없습니다. " \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 / \ : ? 문자를 사용할 수 없습니다. " \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|기본 지속성을 사용하여 값 속성 "%1"을(를) 로드하지 못했습니다.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|연결 관리자 "%1"이(가) "%2" 유형이 아닙니다.|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1"이(가) 비어 있습니다.|  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.columns.f1
 ms.assetid: d640e9e4-86c3-4cb7-a6c2-e82624303696
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a00e3658d64723b0d1e120d95f76ccec4d5a5f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c3b66b5b2a9595deffce79ed0e23e03a65fdeaf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149573"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391541"
 ---
 # <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  
@@ -34,8 +34,8 @@ ms.locfileid: "48149573"
  각 출력 열에 고유한 이름을 지정합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [OData 원본 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [OData 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData 원본 편집기&#40;연결 페이지&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [OData 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [OData 원본](data-flow/odata-source.md)   
  [OData 연결 관리자](connection-manager/odata-connection-manager.md)  
   

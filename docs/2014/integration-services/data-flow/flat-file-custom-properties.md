@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d98592143f3f13313e5b281dc689abbe44ddbb1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749687"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392081"
 ---
 # <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -26,7 +26,7 @@ ms.locfileid: "52749687"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|파일 이름이 포함된 출력 열의 이름입니다. 이름이 지정되지 않은 경우 파일 이름이 포함된 출력 열이 생성되지 않습니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
+|FileNameColumnName|문자열|파일 이름이 포함된 출력 열의 이름입니다. 이름이 지정되지 않은 경우 파일 이름이 포함된 출력 열이 생성되지 않습니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
 |RetainNulls|Boolean|데이터 변환 파이프라인 엔진에서 데이터를 처리할 때 원본 파일의 Null 값을 Null 값으로 유지할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
   
  플랫 파일 원본의 출력에는 사용자 지정 속성이 없습니다.  
@@ -47,14 +47,14 @@ ms.locfileid: "52749687"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|헤더|String|데이터를 쓰기 전에 파일에 삽입할 텍스트 블록입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
+|헤더|문자열|데이터를 쓰기 전에 파일에 삽입할 텍스트 블록입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.|  
 |Overwrite|Boolean|이름이 같은 기존 대상 파일을 덮어쓸지, 아니면 해당 파일에 추가할지를 지정하는 값입니다. 이 속성의 기본값은 `True`입니다.|  
   
  플랫 파일 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   
  자세한 내용은 [Flat File Destination](flat-file-destination.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [공용 속성](../common-properties.md)  
   
   

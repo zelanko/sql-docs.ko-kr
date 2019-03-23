@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176843"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390081"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 대상 편집기(오류 출력 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -53,8 +53,8 @@ ms.locfileid: "48176843"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB 대상을 사용하여 데이터 로드](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

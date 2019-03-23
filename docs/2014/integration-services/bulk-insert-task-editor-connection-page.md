@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 047c5a572195520f194660753315fbe73ffe7c15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bf5d6f0a92b18cc41f74d068686c3c8c9589228a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523640"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377251"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>대량 삽입 태스크 편집기(연결 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **연결** 페이지를 사용하여 대량 삽입 태스크의 원본 및 대상과 사용할 서식을 지정할 수 있습니다.  
@@ -28,10 +28,10 @@ ms.locfileid: "52523640"
  대량 삽입 작업에 대해 알아보려면 [대량 삽입 태스크](control-flow/bulk-insert-task.md) 및 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
   
- **관련된 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  대상 테이블 또는 뷰의 이름을 입력하거나 목록에서 테이블 또는 뷰를 선택합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52523640"
   
  플랫 파일 연결 관리자를 사용하여 원본 파일에 액세스할 경우 대량 삽입 태스크에서는 플랫 파일 연결 관리자에서 지정한 서식을 사용하지 않습니다. 대신 대량 삽입 태스크에서는 서식 파일에 지정된 서식이나 태스크의 RowDelimiter 및 ColumnDelimiter 속성 값을 사용합니다.  
   
- **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)를 [플랫 파일 연결 관리자](connection-manager/flat-file-connection-manager.md)를 [플랫 파일 연결 관리자 편집기 &#40;&#41; ](general-page-of-integration-services-designers-options.md)하십시오 [플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)하십시오 [플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)를 [플랫 파일 연결 관리자](connection-manager/flat-file-connection-manager.md)를 [플랫 파일 연결 관리자 편집기 &#40;&#41; ](general-page-of-integration-services-designers-options.md)하십시오 [플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)하십시오 [플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
  **테이블 새로 고침**  
  테이블 및 뷰 목록을 새로 고칩니다.  

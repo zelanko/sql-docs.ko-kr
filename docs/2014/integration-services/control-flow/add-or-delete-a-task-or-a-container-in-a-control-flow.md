@@ -12,15 +12,15 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 711c8f17495cbb5127a08f22a174f20df58e8400
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817923"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380161"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
   제어 흐름 디자이너에서 작업 중일 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 도구 상자에는 패키지의 제어 흐름을 작성하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 태스크가 나열됩니다. 도구 상자에 대한 자세한 내용은 [SSIS Toolbox](../ssis-toolbox.md)를 참조하십시오.  

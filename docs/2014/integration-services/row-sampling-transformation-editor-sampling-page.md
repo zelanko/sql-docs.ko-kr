@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Row Sampling Transformation Editor
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cc815dd914df7f7bb3c3fa1e65b274143ddc4741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 13117cd751b093497b2faaacd42ff9558fac654d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069983"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392031"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>행 샘플링 변환 편집기(샘플링 페이지)
   **행 샘플링 변환 편집기** 대화 상자를 사용하여 입력의 일부분을 지정된 행 수를 사용하는 샘플로 분할할 수 있습니다. 이 변환으로 인해 입력이 두 개의 별도 출력으로 나뉩니다.  

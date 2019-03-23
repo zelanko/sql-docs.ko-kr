@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a1a46e47dc7c40bf3747c4be55290a02bf6d9d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770855"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377171"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
   콘솔을 설치한 컴퓨터에서 CDC Designer 콘솔에 액세스할 수 있습니다. 설치에 대한 자세한 내용은 설치를 참조하십시오.  
@@ -57,7 +57,7 @@ ms.locfileid: "52770855"
   
  고급 연결 속성 대화 상자에 대한 자세한 내용은 [Advanced Connection Properties](advanced-connection-properties.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한](sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

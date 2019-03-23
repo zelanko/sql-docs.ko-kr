@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 877d7d8e4831a785586680ce57d21975443da645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070053"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388541"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](control-flow/transfer-logins-task.md)를 참조하십시오.  
@@ -67,7 +67,7 @@ ms.locfileid: "48070053"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](control-flow/integration-services-tasks.md)   
- [로그인 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [로그인 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)   
  [강력한 암호](../relational-databases/security/strong-passwords.md)   

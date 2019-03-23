@@ -12,15 +12,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6596785f3dd6ac7f89788b7741845602e1aeea54
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817875"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375061"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
   OLE DB 명령 변환은 데이터 흐름의 각 행에 대해 SQL 문을 실행합니다. 예를 들어 데이터베이스 테이블에서 행을 삽입, 업데이트 또는 삭제하는 SQL 문을 실행할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52817875"
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너 또는 개체 모델을 사용하여 변환을 구성할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하여 변환을 구성하는 방법은  [OLE DB 명령 변환 구성](../../configure-the-ole-db-command-transformation.md)을 참조하세요. 프로그래밍 방식으로 이 변환을 구성하는 방법은 개발자 가이드를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c10dd54-67cb-4b63-9e4d-aa6ff0452ecb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e2d995b06d30157ae46669696e9f8d4095a4646
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362205"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378833"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>5단원: 패키지 배포 모델을 위한 패키지 구성 추가
   패키지 구성을 사용하면 개발 환경 외부에서 런타임 속성과 변수를 설정할 수 있습니다. 구성을 통해 쉽고 유연하게 배포할 수 있는 패키지를 개발할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음과 같은 구성 유형을 제공합니다.  
@@ -38,16 +38,16 @@ ms.locfileid: "53362205"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 4 단원 패키지 복사](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [1단계: 4 단원 패키지 복사](lesson-5-1-copying-the-lesson-4-package.md)  
   
 -   [2단계: 패키지 구성 설정 및 구성](lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
--   [3 단계: Directory 속성 구성 값 수정](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+-   [3단계: Directory 속성 구성 값 수정](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
--   [4 단계: 5 단원 자습서 패키지 테스트](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
+-   [4단계: 5 단원 자습서 패키지 테스트](lesson-5-4-testing-the-lesson-5-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
   
--   [1 단계: 4 단원 패키지 복사](lesson-5-1-copying-the-lesson-4-package.md)  
+-   [1단계: 4 단원 패키지 복사](lesson-5-1-copying-the-lesson-4-package.md)  
   
   

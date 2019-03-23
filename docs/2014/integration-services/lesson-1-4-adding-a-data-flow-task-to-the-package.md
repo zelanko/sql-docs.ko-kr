@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793945"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381191"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>4단계: 패키지에 데이터 흐름 태스크 추가
   원본 및 대상 데이터의 연결 관리자를 만든 후에는 패키지에 데이터 흐름 태스크를 추가합니다. 데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하여 데이터 이동 시 데이터를 변환, 정리 및 수정하는 기능을 제공합니다. 데이터 흐름 태스크에서 대부분의 ETL(추출, 변환 및 로드) 프로세스 작업이 발생합니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "52793945"
 4.  데이터 흐름 태스크를 마우스 오른쪽 단추로 클릭, 클릭 **속성**, 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)**.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [5 단계: 플랫 파일 원본 추가 및 구성](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [5단계: 플랫 파일 원본 추가 및 구성](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름 태스크](control-flow/data-flow-task.md)  
   
   

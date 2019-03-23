@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41ab59a7eedcfcdfb2c93217397da1b3cd81e8e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360655"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389061"
 ---
 # <a name="integration-services-transactions"></a>Integration Services 트랜잭션
   패키지는 트랜잭션을 사용하여 태스크가 원자 단위로 수행되는 데이터베이스 동작을 바인딩하며 이를 통해 데이터 무결성을 유지 관리합니다. 패키지, For Loop, Foreach Loop, Sequence 컨테이너 및 각 작업을 캡슐화하는 태스크 호스트 등의 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 컨테이너 유형은 트랜잭션을 사용하도록 구성할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 트랜잭션 구성을 위해 **NotSupported**, **지원**, 및 **필요**합니다.  

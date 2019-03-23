@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f82b6f68d7186d35fd1657cd56c4aa23fcf82b3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 546f001ac4809a4fb8c455e37bf10f975d84dce8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769055"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388271"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC 인스턴스에 테이블 추가
   테이블 선택 대화 상자를 사용하여 Oracle 원본에서 CDC 인스턴스로 다른 테이블을 추가할 수 있습니다. 선택한 테이블이 속성 편집기의 **테이블** 탭에 있는 목록에 추가됩니다.  

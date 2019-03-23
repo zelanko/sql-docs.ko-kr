@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Save Copy of Package dialog box
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c9018dcf8ae02d939f7ba3bc29d46231ef39d1f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e28fec1fb562c5ba6ed28ad615f40ada5fc2db9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545554"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379011"
 ---
 # <a name="save-copy-of-package"></a>패키지 복사본 저장
   **에서 사용할 수 있는** 패키지 복사본 저장 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 복사본을 다른 위치에 저장하고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  

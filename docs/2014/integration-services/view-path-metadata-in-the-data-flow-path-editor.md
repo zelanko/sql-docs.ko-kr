@@ -11,15 +11,15 @@ helpviewer_keywords:
 - metadata [Integration Services]
 - paths [Integration Services], metadata
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b495401e95971848a864b228368c17231bee5e4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122463"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393851"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로 메타데이터 보기
   경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로 메타데이터를 보려면 데이터 흐름에 적어도 두 개 이상의 연결된 데이터 흐름 구성 요소가 있어야 합니다. 자세한 내용은 [데이터 흐름에서 구성 요소 추가 또는 삭제](data-flow/add-or-delete-a-component-in-a-data-flow.md) 및 [데이터 흐름의 구성 요소 연결](data-flow/connect-components-in-a-data-flow.md)을 참조하세요.  

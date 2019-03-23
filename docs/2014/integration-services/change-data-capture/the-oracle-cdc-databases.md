@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e35293fb7f59475ebdcfea70c1b27d4798e3b93
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 716aea984073d557e45dc30c1972b2151173fd58
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370176"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377121"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "53370176"
  처음에는 `cdc` dbowner **고정 데이터베이스 역할의 멤버만** 스키마에 액세스할 수 있습니다. 변경 테이블 및 변경 기능에 대한 액세스는 SQL Server CDC와 동일한 보안 모델에 의해 결정됩니다. 보안 모델에 대한 자세한 내용은 [보안 모델](https://go.microsoft.com/fwlink/?LinkId=231151)을 참조하세요.  
   
 ## <a name="creating-the-cdc-database"></a>CDC 데이터베이스 만들기  
- 대부분의 경우 CDC 데이터베이스는 CDC Designer 콘솔을 사용하여 만들지만, CDC Designer 콘솔을 사용하여 생성되는 CDC 배포 스크립트를 사용하여 만들 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 필요한 경우 항목(예: 저장소, 보안 또는 가용성)에 대한 데이터베이스 설정을 변경할 수 있습니다.  
+ 대부분의 경우 CDC 데이터베이스는 CDC Designer 콘솔을 사용하여 만들지만, CDC Designer 콘솔을 사용하여 생성되는 CDC 배포 스크립트를 사용하여 만들 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자는 필요한 경우 항목(예: 스토리지, 보안 또는 가용성)에 대한 데이터베이스 설정을 변경할 수 있습니다.  
   
  CDC Designer 콘솔을 사용하여 데이터베이스 테이블 및 필요한 스크립트를 만드는 방법에 대한 자세한 내용은 [새 인스턴스 마법사 사용](use-the-new-instance-wizard.md)을 참조하세요.  
   

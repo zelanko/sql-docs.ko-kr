@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366575"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389501"
 ---
 # <a name="custom-messages-for-logging"></a>로깅할 메시지 사용자 지정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지 및 여러 태스크에 대한 로그 항목 기록을 위해 다양한 사용자 지정 이벤트 집합을 제공합니다. 이러한 항목을 사용하면 나중에 분석할 수 있도록 미리 정의된 이벤트나 사용자가 정의한 메시지를 기록하여 실행 진행률, 결과 및 문제에 대한 세부 정보를 저장할 수 있습니다. 예를 들면 대량 삽입이 시작되고 끝나는 시간을 기록하여 패키지 실행 시 성능 문제를 식별할 수 있습니다.  

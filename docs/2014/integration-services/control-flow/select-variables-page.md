@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4cd2b211755884d1b93c19d6b639880ad4bd4a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 49c5b559d675ec29ab85a68b9ac31a619e2538ea
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769355"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390773"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
   스크립트 태스크 또는 스크립트 구성 요소를 구성하는 경우 **변수 선택** 대화 상자를 사용하여 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성에 대한 값을 하나 이상 선택할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52769355"
  **형식**  
  변수의 데이터 형식을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스크립트 태스크 편집기&#40;스크립트 페이지&#41;](../script-task-editor-script-page.md)  
   
   

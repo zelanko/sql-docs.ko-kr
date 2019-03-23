@@ -13,15 +13,15 @@ helpviewer_keywords:
 - service [Integration Services], configuring
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bf81aa02bb85ca9d0941b384d6b9959e53bd7d28
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359685"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394081"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services 서비스 구성(SSIS 서비스)
     
@@ -48,7 +48,7 @@ ms.locfileid: "53359685"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 중지되면 패키지 실행도 중지됩니다.  
   
--   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 패키지 저장소에 대한 루트 폴더는 MSDB와 파일 시스템입니다.  
+-   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 패키지 스토리지에 대한 루트 폴더는 MSDB와 파일 시스템입니다.  
   
 -   서비스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리합니다.  
   

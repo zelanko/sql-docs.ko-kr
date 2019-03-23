@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d02fd2507ac4fc4774a41d5e0f813d37233f61d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35b138d6d66d8f6c0b7edc78c9dd497622cd3214
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072513"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379041"
 ---
 # <a name="send-mail-task-editor-general-page"></a>메일 보내기 태스크 편집기(일반 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메일 보내기 태스크의 이름을 지정하고 설명할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48072513"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [메일 보내기 태스크 편집기 &#40;페이지를 메일&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
+ [메일 보내기 태스크 편집기&#40;메일 페이지&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

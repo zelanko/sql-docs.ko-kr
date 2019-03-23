@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9bd9e036baa91991352d00f97fcf2c8e689bae6c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372155"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380951"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "53372155"
 ## <a name="related-content"></a>관련 내용  
  mattmasson.com의 블로그 항목 [SSIS 프로젝트의 분기 전략에 대한 고려 사항](https://go.microsoft.com/fwlink/?LinkId=245739)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [dtexec 유틸리티](dtexec-utility.md)  
   
   

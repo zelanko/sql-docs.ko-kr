@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9098fcc54fde98a8fa04579fe49154e41fa78943
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097466"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392967"
 ---
 # <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
   **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48097466"
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
+ **관련 항목:**  [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)를 [연산자 &#40;식&#41;](expressions/operators-ssis-expression.md), 및 [함수 &#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
   
  **기본 출력 이름**  
  기본 출력의 이름을 입력하거나 기본값을 사용합니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "48097466"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [조건부 분할 변환을 사용하여 데이터 집합 분할](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용하여 데이터 세트 분할](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

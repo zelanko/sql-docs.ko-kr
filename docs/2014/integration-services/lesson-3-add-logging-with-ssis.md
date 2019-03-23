@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 088afb5cdd4640aab550552d4fc15c25f3a852e1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375285"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390961"
 ---
 # <a name="lesson-3-adding-logging"></a>3단원: 로깅 추가
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 태스크 및 컨테이너 이벤트 추적을 제공하여 패키지 실행을 모니터링하고 문제를 해결할 수 있는 로깅 기능이 포함되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  
@@ -40,13 +40,13 @@ ms.locfileid: "53375285"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [1단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [2단계: 로깅 추가 및 구성](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [3 단계: 3 단원 자습서 패키지 테스트](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [3단계: 3 단원 자습서 패키지 테스트](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
+ [1단계: 2 단원 패키지 복사](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

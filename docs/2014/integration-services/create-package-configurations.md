@@ -16,15 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bf5ca4c2e27f366a6f5ded97f9a9aa5213db122
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c4bf8041fbac675653bb620d3aca7b1abba21a0a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361075"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388051"
 ---
 # <a name="create-package-configurations"></a>패키지 구성 만들기
   **패키지 구성 도우미** 대화 상자 및 패키지 구성 마법사를 사용하여 패키지 구성을 만들 수 있습니다. 이 도구에 액세스하려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 클릭합니다.  

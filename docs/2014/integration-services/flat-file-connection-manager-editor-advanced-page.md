@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ffea1dbde4e4d124fb71438d4f3a7ca8b81248d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 067bb5a2da9a93bc29e93a3844a29e1a4028c7d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225153"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380471"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>플랫 파일 연결 관리자 편집기(고급 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 Integration Services가 플랫 파일에 있는 데이터를 읽고 쓰는 방법을 지정하는 속성을 설정할 수 있습니다. 사용자는 플랫 파일에 있는 열 이름을 바꿀 수 있고 파일의 각 열에 대해 데이터 형식 및 구분 기호를 포함하는 속성을 설정할 수 있습니다.  
@@ -68,8 +68,8 @@ ms.locfileid: "48225153"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

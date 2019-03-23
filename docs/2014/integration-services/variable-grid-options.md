@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Choose Variable Columns dialog box
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36f44d123216d11034092806a4f7d616f8968d90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89828a105e04c54c1bfecda59670a273583998cb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172653"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393909"
 ---
 # <a name="variable-grid-options"></a>가변 눈금 옵션
-  **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+  **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
   
 ## <a name="options-for-filter"></a>필터 옵션  
  **시스템 변수 표시**  
@@ -34,7 +34,7 @@ ms.locfileid: "48172653"
  **모든 범위의 변수 표시**  
  패키지의 범위 내에 있는 변수와 패키지의 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수를 표시하려면 이 옵션을 선택합니다. 패키지의 범위 내에 있는 변수와 선택된 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수만 표시하려면 이 옵션의 선택을 취소합니다.  
   
- 변수 범위에 대 한 자세한 내용은 참조 하세요. [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)합니다.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
   
 ## <a name="options-for-columns"></a>열 옵션  
  **변수** 창에 표시할 열을 선택합니다.  
@@ -55,8 +55,8 @@ ms.locfileid: "48172653"
   
 ## <a name="see-also"></a>관련 항목  
  [변수 창](../../2014/integration-services/variables-window.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services &#40;SSIS&#41; 이벤트 처리기](integration-services-ssis-event-handlers.md)  
+ [Integration Services&#40;SSIS&#41; 이벤트 처리기](integration-services-ssis-event-handlers.md)  
   
   

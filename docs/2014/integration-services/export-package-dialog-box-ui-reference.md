@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91a7d5573a6d0488b48d7e4ddaf328664de7a2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e8943addabc92906bd0267d951fec5bda2113a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523675"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376711"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>패키지 내보내기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 내보내기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다른 위치로 내보내고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  

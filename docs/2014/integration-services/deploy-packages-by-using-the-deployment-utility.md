@@ -13,15 +13,15 @@ helpviewer_keywords:
 - dependencies [Integration Services]
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18b20bf82031167e8a0a5f8175e957053e97afb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d42fe629fec13c941dc358f58f797b32df7ef09
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116955"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393291"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>배포 유틸리티를 사용한 패키지 배포
   다른 컴퓨터에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 패키지를 설치하기 위해 배포 유틸리티를 빌드한 다음에는 먼저 대상 컴퓨터에 배포 폴더를 복사해야 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48116955"
  패키지 설치 마법사를 사용하여 패키지를 설치합니다. 마법사를 시작하려면 배포 폴더를 서버로 복사한 다음 배포 유틸리티 파일을 두 번 클릭합니다. 이 파일의 이름은 \<프로젝트 이름>.SSISDeploymentManifest이며 대상 컴퓨터의 배포 폴더에 있습니다.  
   
 > [!NOTE]  
->  배포하는 패키지의 버전에 따라 여러 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 함께 설치할 경우 오류가 발생할 수 있습니다. 이 오류는 .SSISDeploymentManifest 파일 이름 확장명이 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전에서 동일하기 때문에 발생할 수 있습니다. 파일을 두 번 클릭하면 가장 최근에 설치된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전의 설치 관리자가 호출되며 이 버전이 배포 유틸리티 파일과 동일한 버전이 아닐 수 있습니다. 이 문제를 해결하려면 명령줄에서 정확한 버전의 dtsinstall.exe를 실행한 후 배포 유틸리티 파일의 경로를 입력합니다.  
+>  배포하는 패키지의 버전에 따라 여러 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 함께 설치할 경우 오류가 발생할 수 있습니다. 이 오류는 .SSISDeploymentManifest 파일 이름 확장명이 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전에서 동일하기 때문에 발생할 수 있습니다. 파일을 두 번 클릭하면 가장 최근에 설치된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전의 설치 관리자가 호출되며 이 버전이 배포 유틸리티 파일과 동일한 버전이 아닐 수 있습니다. 이 문제를 해결하려면 명령줄에서 정확한 버전의 dtsinstall.exe를 실행한 후 배포 유틸리티 파일의 경로를 입력합니다.  
   
  패키지 설치 마법사는 파일 시스템 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 패키지를 설치하는 단계를 안내합니다. 다음과 같은 방법으로 설치를 구성할 수 있습니다.  
   

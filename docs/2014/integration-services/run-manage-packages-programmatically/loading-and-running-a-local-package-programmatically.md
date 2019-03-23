@@ -17,15 +17,15 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 084f2630733f4db5ba0b47035d1a93c56ba685d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361115"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374671"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
   [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 응용 프로그램, 콘솔 응용 프로그램, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 응용 프로그램에서 패키지를 실행할 수 있습니다.  

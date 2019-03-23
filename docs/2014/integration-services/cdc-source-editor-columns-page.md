@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4369ab3606310e38a4bf6927f6abfae10fdc0ffb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f1c9a636023e4dc9c5c9ffb69240921e780ed38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187883"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389931"
 ---
 # <a name="cdc-source-editor-columns-page"></a>CDC 원본 편집기(열 페이지)
   **CDC 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48187883"
  각 출력 열의 고유 이름을 입력합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다. 입력한 이름은 SSIS 디자이너에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
- [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

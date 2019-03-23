@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
 ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75c36c5e061a10ec6fc5b2af17334d134a7bd9d2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 3e1cc5bfb5388cd71ca3217bd060e3dde0428f36
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858638"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392141"
 ---
 # <a name="create-parameters"></a>Create Parameters
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트 매개 변수 및 패키지 매개 변수를 만들 수 있습니다. 다음 절차에서는 패키지/프로젝트 매개 변수를 만드는 단계별 지침을 제공합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "51858638"
     > [!WARNING]  
     >  목록에서 직접 편집하거나 **속성** 창을 사용하여 매개 변수 속성의 값을 수정할 수 있습니다. **삭제(X)** 도구 모음 단추를 사용하여 매개 변수를 삭제할 수 있습니다. 마지막 도구 모음 단추를 사용하여 **매개 변수 값 관리** 대화 상자를 열면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 실행할 때만 사용되는 매개 변수의 값을 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services &#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)  
   
   

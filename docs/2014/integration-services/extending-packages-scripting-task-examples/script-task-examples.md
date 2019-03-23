@@ -13,15 +13,15 @@ helpviewer_keywords:
 - examples [Integration Services]
 - SSIS Script task, examples
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cb5174933c946b8ec790d0fa30fb090049a4a48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362515"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390131"
 ---
 # <a name="script-task-examples"></a>스크립트 태스크 예
   스크립트 태스크는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 태스크가 충족시키지 않는 거의 모든 요구 사항을 충족시키기 위해 패키지에서 사용할 수 있는 다용도 도구입니다. 이 항목에는 사용 가능한 기능 중 몇 가지를 보여 주는 스크립트 태스크 코드 예제가 나열되어 있습니다.  

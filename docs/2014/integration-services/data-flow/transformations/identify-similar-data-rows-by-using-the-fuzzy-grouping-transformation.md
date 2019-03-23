@@ -12,15 +12,15 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37ec2899e5e6abe3ff8703f664d76b56b28c0ae3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 828d299e47ecf582918ce5524e3b6c2bc2925d90
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750155"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390101"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "52750155"
   
 20. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   
  [Integration Services 경로](../integration-services-paths.md)   

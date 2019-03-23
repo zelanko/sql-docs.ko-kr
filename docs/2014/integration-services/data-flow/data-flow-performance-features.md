@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fb7bfa7d068d8ea83fab4c98e6e8f733af7985a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361475"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392781"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07c9f020fa3da424fa4524fb634ac33b84c993d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e6921a4c54212439cd19c6bf7327f9e57b07a44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784985"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389941"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
   **파일 연결 관리자 추가** 대화 상자를 사용하여 파일 또는 폴더 그룹에 대한 연결을 정의할 수 있습니다.  

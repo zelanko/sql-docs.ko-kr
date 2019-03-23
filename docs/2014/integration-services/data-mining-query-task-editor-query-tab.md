@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193063"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377231"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>데이터 마이닝 쿼리 태스크 편집기(쿼리 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **쿼리** 탭을 사용하여 마이닝 모델을 기반으로 하는 예측 쿼리를 만들 수 있습니다. 또한 이 대화 상자에서 매개 변수 및 결과 집합을 변수에 바인딩할 수 있습니다.  
@@ -41,12 +41,12 @@ ms.locfileid: "48193063"
  **데이터 마이닝 쿼리**  
  데이터 마이닝 쿼리를 입력합니다.  
   
- **관련 항목:** [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **관련 항목:**  [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **새 쿼리 작성**  
  그래픽 도구를 사용하여 데이터 마이닝 쿼리를 만듭니다.  
   
- **관련 항목:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **관련 항목:** [데이터 마이닝 쿼리](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>매개 변수 매핑 탭 옵션  
  **매개 변수 이름**  
@@ -81,8 +81,8 @@ ms.locfileid: "48193063"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터 마이닝 쿼리 태스크 편집기 &#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [데이터 마이닝 쿼리 태스크 편집기 &#40;출력 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [데이터 마이닝 쿼리 태스크 편집기&#40;출력 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [데이터 마이닝 디자이너](../analysis-services/data-mining/data-mining-designer.md)  
   
   

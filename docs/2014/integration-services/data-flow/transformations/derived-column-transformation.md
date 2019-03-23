@@ -15,15 +15,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373895"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377670"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
   파생 열 변환은 변환 입력 열에 식을 적용하여 새로운 열 값을 만듭니다. 변환 입력의 변수, 함수, 연산자 및 열의 모든 조합이 식에 포함될 수 있습니다. 결과는 새 열로 추가하거나 기존 열에 대체 값으로 삽입할 수 있습니다. 파생 열 변환은 여러 개의 파생 열을 정의할 수 있으며 임의의 변수 또는 입력 열이 여러 개의 식에 사용될 수 있습니다.  

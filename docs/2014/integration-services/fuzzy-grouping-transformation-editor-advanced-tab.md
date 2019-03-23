@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074a3d460a04180a5cfce1406b546fb6a3a3986a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150833"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389028"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>유사 항목 그룹화 변환 편집기(고급 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 입/출력 열을 지정하고, 유사성 임계값을 설정하고, 구분 기호를 정의할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48150833"
   
 ## <a name="options"></a>변수  
  **입력 키 열 이름**  
- 각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. `_key_in` 열에 각 행을 고유 하 게 식별 하는 값입니다.  
+ 각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. `_key_in` 열에는 각 행을 고유하게 식별하는 값이 있습니다.  
   
  **출력 키 열 이름**  
  중복 행 그룹의 정식 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. `_key_out` 열은 정식 데이터 행의 `_key_in` 값에 해당합니다.  

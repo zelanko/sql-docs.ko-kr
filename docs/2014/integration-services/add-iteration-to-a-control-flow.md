@@ -15,18 +15,18 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047844"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389251"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>제어 흐름에 반복 추가
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에서 조건에 따라 반복되는 루프를 간단하게 포함시킬 수 있는 제어 흐름 요소인 For 루프 컨테이너가 포함됩니다. 자세한 내용은 [For Loop Container](control-flow/for-loop-container.md)을 참조하세요.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에서 조건에 따라 반복되는 루프를 간단하게 포함시킬 수 있는 제어 흐름 요소인 For 루프 컨테이너가 포함됩니다. 자세한 내용은 [For 루프 컨테이너](control-flow/for-loop-container.md)가 될 때까지 워크플로를 반복합니다.  
   
  For 루프 컨테이너는 루프가 반복될 때마다 조건을 평가하고 조건이 False이면 중지합니다. For 루프 컨테이너에는 루프를 초기화하고, 반복되는 제어 흐름의 실행을 중지하는 평가 조건을 지정하고, 평가 조건을 비교할 값을 업데이트하는 식에 값을 대입하는 식이 포함됩니다. 평가 조건은 필수 항목이지만 초기화 및 대입 식은 선택 항목입니다.  
   
@@ -43,22 +43,22 @@ ms.locfileid: "48047844"
   
  For 루프 컨테이너에서 사용되는 변수는 For 루프 컨테이너의 범위 또는 패키지 컨테이너 계층에서 높은 수준의 컨테이너 범위에 정의되어 있어야 합니다. 예를 들어 For 루프 컨테이너는 자체 범위에 정의된 변수와 패키지 범위에 정의된 변수를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)을 참조하세요.  
   
- [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법에는 평가, 초기화 및 대입에 사용되는 복잡한 식을 구현할 수 있는 완벽한 연산자 및 함수가 제공됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 식 문법에는 평가, 초기화 및 대입에 사용되는 복잡한 식을 구현할 수 있는 완벽한 연산자 및 함수가 제공됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.  
   
 ### <a name="to-implement-a-for-loop-container-in-a-control-flow"></a>제어 흐름에서 For 루프 컨테이너를 구현하려면  
   
 1.  패키지에 For 루프 컨테이너를 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  .  
+  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.  
   
 2.  For 루프 컨테이너에 태스크 및 컨테이너를 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  .  
+  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.  
   
 3.  선행 제약 조건을 사용하여 For 루프 컨테이너에 있는 태스크 및 컨테이너를 연결합니다. 자세한 내용은 [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)을 참조하세요.  
   
 4.  For 루프 컨테이너를 구성합니다. 자세한 내용은 [For 루프 컨테이너 구성](../../2014/integration-services/configure-a-for-loop-container.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [태스크 또는 컨테이너 제어 흐름에 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [그룹 또는 그룹 해제 구성 요소](group-or-ungroup-components.md)   
  [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [제어 흐름에 열거 추가](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

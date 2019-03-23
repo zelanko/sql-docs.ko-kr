@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea436e349a19d10eeb86a62b74f154b56b60ef7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204013"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375861"
 ---
 # <a name="message-queue-task-editor-general-page"></a>메시지 큐 태스크 편집기(일반 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메시지 큐 태스크의 이름을 지정하고 설명하며 메시지 형식을 지정하고 태스크에서 메시지를 보내거나 받을지를 나타낼 수 있습니다.  
@@ -50,8 +50,8 @@ ms.locfileid: "48204013"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [메시지 큐 태스크 편집기 &#40;페이지를 수신 합니다.&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
- [메시지 큐 태스크 편집기 &#40;보내기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [메시지 큐 태스크 편집기&#40;받기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [메시지 큐 태스크 편집기&#40;보내기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e3049839f14d25413cee64ced2340578c178d6bb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356289"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375041"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 일반적으로 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 대상 및 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC를 사용하여 ODBC 대상에 데이터를 저장합니다. 그러나 단일 패키지에서 사용할 임시 ODBC 대상을 만들 수도 있습니다. 이 임시 ODBC 대상을 만들려면 다음 예와 같이 스크립트 구성 요소를 사용합니다.  

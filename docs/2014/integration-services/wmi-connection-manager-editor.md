@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3714264bceaf4ac334df96a054e933d6814904cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121773"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378611"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI 연결 관리자 편집기
   **WMI 연결 관리자** 대화 상자를 사용하여 서버에 대한 Microsoft WMI(Windows Management Instrumentation) 연결을 지정할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48121773"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [용 WMI 공급자 구성 관리 개념](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [구성 관리용 WMI 공급자 개념](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [서버 이벤트용 WMI 공급자 개념](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

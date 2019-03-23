@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cffe029abd6774262e7aad12ad7aade07717bc80
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359285"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377961"
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서 SQL 실행 태스크의 SQL 문은 MERGE 문을 포함할 수 있습니다. 이 MERGE 문을 사용하면 하나의 문에서 여러 INSERT, UPDATE 및 DELETE 작업을 수행할 수 있습니다.  

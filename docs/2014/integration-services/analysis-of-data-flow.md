@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa33b840a985cb3053ad8868c3b6153dc53822ad
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 154778d2c3a4056e1b16743ff629e4c4a5dae0a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515825"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389681"
 ---
 # <a name="analysis-of-data-flow"></a>데이터 흐름 분석
   사용할 수는 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` 데이터베이스 뷰를 패키지의 데이터 흐름을 분석 합니다. 이 뷰는 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 이 정보를 사용하여 각 구성 요소로 보내진 행을 자세하게 파악할 수 있습니다.  
@@ -64,7 +64,7 @@ order by source_component_name desc
   
  [패키지 실행 문제 해결 도구](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름의 데이터](data-flow/data-in-data-flows.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04614b8d54815e4286a55b7501187e8ed218db0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750618"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393121"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기
   1단원 패키지의 구성을 완료했으므로 이제 패키지 레이아웃을 정리하는 것이 좋습니다. 제어 및 데이터 흐름 레이아웃 셰이프의 크기가 제멋대로이거나 셰이프가 정렬 또는 그룹화되지 않은 경우 패키지의 기능을 이해하기가 매우 어려울 수 있습니다.  
@@ -51,6 +51,6 @@ ms.locfileid: "52750618"
      주석 상자에 텍스트를 추가하지 않은 경우 상자의 바깥쪽을 클릭하면 주석 상자가 사라집니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [9 단계: 1 단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [9단계: 1 단원 자습서 패키지 테스트](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

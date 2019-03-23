@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a3b62c843508d100623549097b670487dd16641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801935"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391251"
 ---
 # <a name="functions-ssis-expression"></a>함수(SSIS 식)
   식 언어에는 식에 사용할 함수 집합이 포함되어 있습니다. 식은 단일 함수를 사용할 수도 있지만 일반적으로 연산자와 함수를 결합하여 여러 개의 함수를 사용합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "52801935"
 |[LN&#40;SSIS 식&#41;](ln-ssis-expression.md)|숫자 식의 자연 로그를 반환합니다.|  
 |[LOG&#40;SSIS 식&#41;](log-ssis-expression.md)|숫자 식의 상용 로그를 반환합니다.|  
 |[POWER&#40;SSIS 식&#41;](power-ssis-expression.md)|숫자 식의 거듭제곱을 반환합니다.|  
-|[ROUND&#40;SSIS 식&#41;](round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. .|  
+|[ROUND&#40;SSIS 식&#41;](round-ssis-expression.md)|특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.|  
 |[SIGN&#40;SSIS 식&#41;](sign-ssis-expression.md)|숫자 식의 양수(+), 음수(-) 또는 영(0) 부호를 반환합니다.|  
 |[SQUARE&#40;SSIS 식&#41;](square-ssis-expression.md)|숫자 식의 제곱을 반환합니다.|  
 |[SQRT&#40;SSIS 식&#41;](sqrt-ssis-expression.md)|숫자 식의 제곱근을 반환합니다.|  

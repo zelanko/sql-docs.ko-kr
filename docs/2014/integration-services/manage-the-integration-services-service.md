@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375131"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services 서비스 관리
     
@@ -29,13 +29,13 @@ ms.locfileid: "48193403"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]구성 요소를 설치할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스도 함께 설치됩니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 기본적으로 시작되며 서비스의 시작 유형은 자동으로 설정됩니다. 그러나 서비스를 사용하여 저장 및 실행 중인 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 패키지를 관리하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도 설치해야 합니다.  
   
 > [!NOTE]  
->  인스턴스에 연결할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 서비스를 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 즉,를 **서버에 연결** 대화 상자는 서버의 이름을 입력할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 버전의는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 실행 중인지. 그러나 서비스 구성 파일을 편집 하 고 인스턴스에 저장 된 패키지를 관리할 수 수 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 에서 합니다 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)을 참조하세요.  
+>  인스턴스에 연결할 수 없습니다는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 서비스를 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전의 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다. 즉, **서버에 연결** 대화 상자에서 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 서비스의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전만 실행 중인 서버의 이름을 입력할 수 없습니다. 그러나 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전부터는 서비스의 구성 파일을 편집할 수 있기 때문에 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]인스턴스에 저장된 패키지를 관리할 수 있습니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
   
  컴퓨터에는 하나의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스만 설치할 수 있습니다. 서비스는 특정 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 국한되지 않습니다. 서비스가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
   
  MMC(Microsoft Management Console) 스냅인인 SQL Server 구성 관리자나 SQL Server 서비스 중 하나를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 관리할 수 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 패키지를 관리하려면 먼저 서비스를 시작해야 합니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)]와 동시에 설치되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]의 명명된 인스턴스나 원격 인스턴스 또는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 여러 인스턴스에 저장된 패키지를 관리하려면 서비스의 구성 파일을 수정해야 합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)을 참조하세요.  
+ 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)]와 동시에 설치되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]의 명명된 인스턴스나 원격 인스턴스 또는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 여러 인스턴스에 저장된 패키지를 관리하려면 서비스의 구성 파일을 수정해야 합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
   
  기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 서비스를 중지할 때 패키지 실행을 중지하도록 구성되어 있습니다. 그러나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 패키지가 중지될 때까지 기다리지 않으며 일부 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스가 중지된 후에도 계속 실행될 수 있습니다.  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48193403"
 -   [Integration Services 서비스의 뷰 이벤트](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services 서비스 &#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
- [서비스 서비스를 통합 구성 &#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
+ [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)   
  [SQL Server 가져오기 및 내보내기 마법사](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [dtexec 유틸리티](packages/dtexec-utility.md)   
  [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md)  

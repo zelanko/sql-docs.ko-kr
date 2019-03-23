@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a86511f8ad46100dbf02b5d8eed617c1c893b75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787285"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388945"
 ---
 # <a name="sign-ssis-expression"></a>SIGN(SSIS 식)
   숫자 식의 양수(+1), 음수(-1) 또는 영(0) 부호를 반환합니다.  
@@ -54,7 +54,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

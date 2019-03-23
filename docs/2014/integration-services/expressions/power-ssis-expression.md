@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40b9f344ea98e6671a5f0edefb849e6f3aeb115f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d25801b7cc7f6282ebc8cf7b1ce7839159312dc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762795"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393940"
 ---
 # <a name="power-ssis-expression"></a>POWER(SSIS 식)
   숫자 식의 거듭제곱을 반환합니다. 거듭제곱 매개 변수는 정수여야 합니다.  
@@ -61,7 +61,7 @@ POWER(4,3)
 POWER(Length, @DimensionCount)   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

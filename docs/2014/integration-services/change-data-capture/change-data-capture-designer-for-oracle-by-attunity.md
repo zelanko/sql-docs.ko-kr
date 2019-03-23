@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4db1c097f53f46f027e81f7b1591eafc56c9393d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804623"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379256"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC Designer 콘솔은 Oracle CDC 인스턴스를 개발하고 유지 관리하는 데 사용됩니다. CDC Designer 콘솔은 다음 요소를 포함하는 Microsoft 관리 콘솔 스냅인입니다.  

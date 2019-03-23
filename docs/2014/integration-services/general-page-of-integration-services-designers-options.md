@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce643cbaa6cfade08b84894bdd1af9b24533392b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f27ec0c9fe8078bb11a48114a3d456793271853d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750116"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391761"
 ---
 # <a name="general-page"></a>일반 페이지
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  

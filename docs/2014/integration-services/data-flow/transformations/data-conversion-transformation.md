@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 344b9a24e78960b9eb9f4fece56924b2eb941c0f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358595"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374663"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
   데이터 변환은 입력 열의 데이터를 다른 데이터 형식으로 변환한 다음 새 출력 열에 복사합니다. 예를 들어 패키지는 여러 개의 원본에서 데이터를 추출한 다음 이 변환을 사용하여 대상 데이터 저장소에 필요한 데이터 형식으로 열을 변환할 수 있습니다. 단일 입력 열에 여러 개의 변환을 적용할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "53358595"
 ## <a name="related-content"></a>관련 내용  
  blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://go.microsoft.com/fwlink/?LinkId=220823)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [빠른 구문 분석](../../fast-parse.md)   
  [데이터 흐름](../data-flow.md)   
  [Integration Services 변환](integration-services-transformations.md)  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - running package [Integration Services], managing
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993f5cc3cba13e9a7d2c6380f719d5e7b24ca0a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac4874c47f4aae25b87a72b1a6a62ddeb3f7962c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140563"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387821"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Integration Services 서버에서 실행 중인 패키지 보기 및 중지
-  `SSISDB` 데이터베이스 사용자에 게 표시 되지 않는 내부 테이블에 실행 기록을 저장 합니다. 그러나 공용 뷰 쿼리를 통해 이 데이터베이스에서 필요한 정보를 얻을 수 있습니다. 또한 이 데이터베이스는 패키지와 관련된 일반적인 태스크를 수행하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
+  `SSISDB` 데이터베이스는 사용자에게 표시되지 않는 내부 테이블에 실행 기록을 저장합니다. 그러나 공용 뷰 쿼리를 통해 이 데이터베이스에서 필요한 정보를 얻을 수 있습니다. 또한 이 데이터베이스는 패키지와 관련된 일반적인 태스크를 수행하기 위해 호출할 수 있는 저장 프로시저를 제공합니다.  
   
- 일반적으로 서버의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 관리합니다. 그러나 데이터베이스 뷰를 쿼리하고 저장 프로시저를 직접 호출하거나 관리되는 API를 호출하는 사용자 지정 코드를 작성할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 관리 API는 뷰를 쿼리하고 저장된 프로시저를 호출 많은 태스크를 수행 합니다. 예를 들어 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 목록을 보고 필요한 경우 패키지를 중지하도록 요청할 수 있습니다.  
+ 일반적으로 서버의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 관리합니다. 그러나 데이터베이스 뷰를 쿼리하고 저장 프로시저를 직접 호출하거나 관리되는 API를 호출하는 사용자 지정 코드를 작성할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 관리되는 API는 뷰를 쿼리하고 저장 프로시저를 호출하여 많은 태스크를 수행합니다. 예를 들어 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 목록을 보고 필요한 경우 패키지를 중지하도록 요청할 수 있습니다.  
   
 ## <a name="viewing-the-list-of-running-packages"></a>실행 중인 패키지 목록 보기  
  서버에서 현재 실행 중인 패키지 목록을 **활성 작업** 대화 상자에서 볼 수 있습니다. 자세한 내용은 [Active Operations Dialog Box](../../2014/integration-services/active-operations-dialog-box.md)를 참조하세요.  
@@ -63,6 +63,6 @@ ms.locfileid: "48140563"
   
 ## <a name="see-also"></a>관련 항목  
  [프로젝트 및 패키지 실행](packages/run-integration-services-ssis-packages.md)   
- [패키지 실행 문제 해결 보고서](troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [패키지 실행 보고서 문제 해결](troubleshooting/troubleshooting-reports-for-package-execution.md)  
   
   

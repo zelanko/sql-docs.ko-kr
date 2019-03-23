@@ -11,15 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73016278ce8455a57af78229703e2330bbbd0edf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370525"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394121"
 ---
 # <a name="understanding-the-script-component-object-model"></a>스크립트 구성 요소 개체 모델 이해
   [코딩 and Debugging the Script Component]에 설명 된 대로 (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, 스크립트 구성 요소 프로젝트에 세 개의 프로젝트 항목이 있습니다.  
@@ -203,7 +203,7 @@ public override void ReleaseConnections()
   
 ![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)   
  [코딩 and Debugging the Script Component] (.. /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   

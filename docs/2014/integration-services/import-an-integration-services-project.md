@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f81996093aa6ac42eaab9c6057c9c8bb706055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203803"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394441"
 ---
 # <a name="import-an-integration-services-project"></a>Integration Services 프로젝트 가져오기
   기존 배포 파일(.ispac) 또는 Integration Services 카탈로그에 배포된 프로젝트에서 프로젝트를 만들려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **프로젝트 가져오기 마법사**를 사용합니다. 이 기능은 프로젝트의 원본이 없지만 .ispac 파일 또는 SSISDB 카탈로그에서 프로젝트를 만들려는 경우에 특히 유용합니다.  

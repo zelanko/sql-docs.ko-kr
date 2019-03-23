@@ -10,15 +10,15 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da56a8d96880ea83777388d1b5e9977ff91c7dfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 52df62d9a69d57b95c3e3f4fa9a6e75599925953
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799786"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374872"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;(보다 큼)(SSIS 식)
   비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

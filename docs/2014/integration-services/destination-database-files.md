@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb6f834ab26fb6d5cc7535d217745af92e97c2a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4911084929f3ff69657a6d5e51c557f35929b45b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135280"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379921"
 ---
 # <a name="destination-database-files"></a>대상 데이터베이스 파일
   **대상 데이터베이스 파일** 대화 상자를 사용하여 대상 서버의 데이터베이스 파일 이름 및 위치를 확인 또는 변경하거나 데이터베이스 전송 태스크에 대한 네트워크 파일 위치를 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  
@@ -45,7 +45,7 @@ ms.locfileid: "48135280"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터베이스 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [데이터베이스 전송 태스크 편집기 &#40;페이지를 데이터베이스&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [데이터베이스 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [데이터베이스 전송 태스크 편집기&#40;데이터베이스 페이지&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

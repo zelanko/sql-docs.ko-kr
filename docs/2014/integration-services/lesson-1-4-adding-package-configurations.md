@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8284f25e54cadbedd4cb14e07970af249fe4521
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364015"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388339"
 ---
 # <a name="step-4-adding-package-configurations"></a>4단계: 패키지 구성 추가
   이 태스크에서는 각 패키지에 구성을 추가합니다. 구성은 런타임 시 패키지 속성 및 패키지 개체의 값을 업데이트합니다.  
@@ -129,11 +129,11 @@ ms.locfileid: "53364015"
 12. **패키지 구성 도우미** 대화 상자에서 LoadXMLData EV Configuration이 먼저 나열된 다음 LoadXMLData Configuration이 나열되는지 확인하고 **닫기**를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [5 단계: 업데이트 된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
  [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)   
  [패키지에서 사용되는 파일 액세스](../../2014/integration-services/access-to-files-used-by-packages.md)  

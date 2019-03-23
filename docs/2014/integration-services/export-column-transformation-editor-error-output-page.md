@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e02452c5d0b5692040fd6c076c50704b348c769
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 292d872d294f81c6dac19e64af9d6a08710230b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119360"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374781"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>열 내보내기 변환 편집기(오류 출력 페이지)
   **열 내보내기 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 방법을 지정할 수 있습니다.  
@@ -51,6 +51,6 @@ ms.locfileid: "48119360"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [열 내보내기 변환 편집기 &#40;열 페이지&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
+ [열 내보내기 변환 편집기&#40;열 페이지&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   
   

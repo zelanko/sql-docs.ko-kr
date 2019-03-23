@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01cabd46c51ed09af8d5de3a173e218dedbd5ac1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773245"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390211"
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "52773245"
  **\<속성 이름>**  
  **식 작성기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Expression Builder](expression-builder.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [시스템 변수](../system-variables.md)   
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)  

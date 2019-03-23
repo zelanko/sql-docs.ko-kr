@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.Comfirm_Delete
 ms.assetid: 091def94-6c9c-4afc-92dc-4c2f4c2cafa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83de127578aea46f4ca52f9d1d5acd7c3dcdce56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6713a6b8b7b0b91fda24298a88f92b5cbd86bb09
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223782"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393081"
 ---
 # <a name="confirm-delete-page"></a>삭제 확인 페이지
   **삭제 확인** 페이지를 사용하여 특정 구성 요소를 삭제할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 확인 메시지가 표시되는지 여부를 나타낼 수 있습니다.  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0108e55f6038b234d78f3fd66d9bae243af28a9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357351"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388291"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "53357351"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [유사 항목 조회 변환](lookup-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)  
   

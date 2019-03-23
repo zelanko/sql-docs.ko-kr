@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43403bd87ba8cd836e035f14a9456b6338e0c92d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3268aa2ffcb69ccde4ae08513ff17a4c9572b10e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393281"
 ---
 # <a name="data-flow-path-editor-general-page"></a>데이터 흐름 경로 편집기(일반 페이지)
   **데이터 흐름 경로 편집기** 대화 상자를 사용하여 경로 속성을 설정하고, 열 메타데이터를 보고, 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17e9b7508317abc2ceb3b6e273c46fdea5a5abb3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781256"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392837"
 ---
 # <a name="create-new-infoobject"></a>새 InfoObject 만들기
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "52781256"
  **제거**  
  선택한 InfoObject를 **특성** 목록에서 제거합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션 데이터용 InfoCube 만들기](create-infocube-for-transaction-data.md)   
  [InfoSource 만들기](create-infosource.md)   
  [트랜잭션 데이터용 InfoSource 만들기](create-infosource-for-transaction-data.md)   

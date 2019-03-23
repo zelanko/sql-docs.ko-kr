@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069663"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379640"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>결과 집합을 SQL 실행 태스크의 변수에 매핑
   이 항목에서는 결과 집합과 SQL 실행 태스크의 변수 간 매핑을 만드는 방법에 대해 설명합니다. 결과 집합을 변수에 매핑하면 결과 집합을 패키지의 다른 요소에서 사용할 수 있습니다. 예를 들어 스크립트 태스크의 스크립트는 변수를 읽은 다음 결과 집합의 값을 사용할 수 있으며 XML 원본은 변수에 저장된 결과 집합을 사용할 수 있습니다. 부모 패키지에서 결과 집합을 생성하는 경우 결과 집합을 부모 패키지의 변수에 매핑한 다음 부모 변수 값을 저장할 자식 패키지의 부모 패키지 변수 구성을 만들어 패키지 실행 태스크로 호출하는 자식 패키지에서 결과 집합을 사용할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48069663"
 3.  **제어 흐름** 탭을 클릭합니다.  
   
 4.  패키지에 아직 SQL 실행 태스크가 포함되어 있지 않으면 패키지의 제어 흐름에 해당 작업을 추가합니다. 자세한 내용은 참조 하세요. [작업 또는 제어 흐름 컨테이너 추가 또는 삭제](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
-  .  
+  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.  
   
 5.  SQL 실행 태스크를 두 번 클릭합니다.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "48069663"
  [패키지 구성](../../2014/integration-services/package-configurations.md)   
  [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)   
  [자식 패키지에서 변수 및 매개 변수의 값을 사용 합니다.](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)  
   
   

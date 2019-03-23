@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff1883c8940e791d35dfe97c33acc1fe4f4a0e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359375"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390151"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>1단원: 프로젝트 및 기본 패키지 만들기
   이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  
@@ -80,25 +80,25 @@ ms.locfileid: "53359375"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 새 Integration Services 프로젝트 만들기](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [1단계: 새 Integration Services 프로젝트 만들기](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [2단계: 추가 하 고 플랫 파일 연결 관리자 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [2단계: 플랫 파일 연결 관리자 추가 및 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [3 단계: 추가 하 고 OLE DB 연결 관리자 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [3단계: 추가 하 고 OLE DB 연결 관리자 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [4 단계: 패키지에 데이터 흐름 태스크 추가](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [4단계: 패키지에 데이터 흐름 태스크 추가](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
--   [5 단계: 플랫 파일 원본 추가 및 구성](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+-   [5단계: 플랫 파일 원본 추가 및 구성](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [6 단계: 조회 변환 추가 및 구성](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [6단계: 조회 변환 추가 및 구성](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [7 단계: OLE DB 대상 추가 및 구성](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [7단계: OLE DB 대상 추가 및 구성](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [8 단계: 1 단원 패키지를 보다 쉽게 이해](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [8단계: 1 단원 패키지를 보다 쉽게 이해](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [9 단계: 1 단원 자습서 패키지 테스트](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [9단계: 1 단원 자습서 패키지 테스트](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 새 Integration Services 프로젝트 만들기](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [1단계: 새 Integration Services 프로젝트 만들기](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0cefe1fa46cda13a177f07ebcbf19c02efa8337
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370395"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379111"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않은 로컬 컴퓨터에서 원격 패키지를 실행하려면 패키지를 시작할 때 해당 패키지가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 원격 컴퓨터에서 실행되도록 합니다. 이렇게 하려면 로컬 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 웹 서비스 또는 원격 구성 요소를 사용하여 원격 컴퓨터에서 패키지를 시작하도록 합니다. 로컬 컴퓨터에서 직접 원격 패키지를 시작하면 패키지가 로컬 컴퓨터로 로드되어 로컬 컴퓨터에서 실행됩니다. 로컬 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않으면 패키지가 실행되지 않습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "53370395"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에서 실행되는 패키지 문제를 해결하는 방법에 대한 자세한 내용은 [SSIS 패키지는 SQL Server 에이전트 작업 단계에서 호출 될 때 실행되지 않습니다.](https://support.microsoft.com/kb/918760) Microsoft 문서를 참조하세요.  
   
-### <a name="sample-code"></a>샘플 코드  
+### <a name="sample-code"></a>예제 코드  
   
 ```vb  
 Imports System.Data  
@@ -154,7 +154,7 @@ namespace LaunchSSISPackageAgent_CS
 > [!IMPORTANT]  
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 ".", localhost 또는 로컬 서버의 서버 이름만 지원합니다. "(local)"은 사용할 수 없습니다.  
   
-### <a name="sample-code"></a>샘플 코드  
+### <a name="sample-code"></a>예제 코드  
  다음 코드 예제에서는 웹 서비스를 만들고 테스트하는 방법을 보여 줍니다.  
   
 #### <a name="creating-the-web-service"></a>웹 서비스 만들기  
@@ -420,11 +420,11 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>외부 리소스  
   
--   비디오에서는 [방법: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 SSIS 패키지 실행 자동화](https://technet.microsoft.com/sqlserver/ff686764.aspx), technet.microsoft.com  
+-   MSDN Library의 비디오 - [방법: SQL Server 에이전트 (SQL Server 비디오)를 사용 하 여 SSIS 패키지 실행 자동화](https://technet.microsoft.com/sqlserver/ff686764.aspx), technet.microsoft.com  
   
 ![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [프로그래밍 방식으로 로컬 패키지 로드 및 실행](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [로컬 패키지의 출력 로드](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

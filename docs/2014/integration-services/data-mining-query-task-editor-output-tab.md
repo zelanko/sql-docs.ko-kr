@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e87ebbf69eaaee40c42344a8334a0309300ddd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7be72475f5aa6db32b65d4a9f542cd9fe82756c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393601"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48203753"
  데이터 마이닝 쿼리 태스크에 대한 설명을 입력합니다.  
   
 ## <a name="output-tab-options"></a>출력 탭 옵션  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  목록에서 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  
@@ -52,8 +52,8 @@ ms.locfileid: "48203753"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터 마이닝 쿼리 태스크 편집기 &#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [데이터 마이닝 쿼리 태스크 편집기 &#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [데이터 마이닝 쿼리 태스크 편집기&#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [데이터 마이닝 디자이너](../analysis-services/data-mining/data-mining-designer.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190483"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391491"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>CDC 원본 편집기(연결 관리자 페이지)
   **CDC 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 CDC 원본이 변경 행을 읽어오는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스(CDC 데이터베이스)에 대한 ADO.NET 연결 관리자를 선택할 수 있습니다. CDC 데이터베이스를 선택한 후 데이터베이스에서 캡처된 테이블을 선택해야 합니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "48190483"
  **CDC 처리 모드**  
  처리 요구를 처리할 최적의 처리 모드를 선택합니다. 가능한 옵션은 아래와 같습니다.  
   
--   **모두**: **업데이트 전** 값이 없는 현재 CDC 범위의 변경 내용을 반환합니다.  
+-   **모든**: 없는 현재 CDC 범위의 변경 내용을 반환 합니다 **업데이트 전** 값입니다.  
   
--   **이전 값이 포함된 모두**: 이전 값(**업데이트 전**)을 포함한 현재 CDC 처리 범위의 변경 내용을 반환합니다. 각 업데이트 작업에 대해 두 행이 있습니다. 이 중 한 행에는 업데이트 전 값이 포함되어 있고 다른 한 행에는 업데이트 후 값이 포함되어 있습니다.  
+-   **이전 값이 포함 된 모두**: 이전 값을 포함 하 여 현재 CDC 처리 범위의 변경 내용을 반환 (**업데이트 전**). 각 업데이트 작업에 대해 두 행이 있습니다. 이 중 한 행에는 업데이트 전 값이 포함되어 있고 다른 한 행에는 업데이트 후 값이 포함되어 있습니다.  
   
--   **순 변경 내용**: 현재 CDC 처리 범위에서 수정된 원본 행당 하나의 변경 행만 반환합니다. 원본 행이 여러 번 업데이트된 경우에는 결합된 변경 내용이 생성됩니다. 예를 들어 삽입+업데이트는 단일 업데이트로 생성되고 업데이트+삭제는 단일 삭제로 생성됩니다. 순 변경 내용 처리 모드에서 작업할 경우 단일 원본 행이 두 개 이상의 출력에 나타나므로 변경 내용을 삭제, 삽입 및 업데이트 출력으로 분할하고 해당 출력을 병렬로 처리할 수 있습니다.  
+-   **Net**: 현재 CDC 처리 범위에서 수정된 원본 행당 하나의 변경 행만 반환합니다. 원본 행이 여러 번 업데이트된 경우에는 결합된 변경 내용이 생성됩니다. 예를 들어 삽입+업데이트는 단일 업데이트로 생성되고 업데이트+삭제는 단일 삭제로 생성됩니다. 순 변경 내용 처리 모드에서 작업할 경우 단일 원본 행이 두 개 이상의 출력에 나타나므로 변경 내용을 삭제, 삽입 및 업데이트 출력으로 분할하고 해당 출력을 병렬로 처리할 수 있습니다.  
   
--   **업데이트 마스크를 사용한 순 변경 내용**: 이 모드는 일반적인 순 변경 내용 모드와 비슷하지만 현재 변경 행에서 변경된 열을 나타내고 이름 패턴이 **__$\<column-name>\__Changed**인 부울 열도 추가합니다.  
+-   **업데이트 마스크를 사용한 순**: 이 모드는 일반적인 순 변경 내용 모드와 유사 하지만 이름 패턴이 인 부울 열도 추가 **__ $\<열 이름 >\__Changed** 행을 변경 하는 현재에서 변경 된 열을 나타내는입니다.  
   
 -   **병합을 사용한 순 변경 내용**: 이 모드는 일반적인 순 변경 내용 모드와 비슷하지만 삽입 및 업데이트 작업을 사용할 경우 단일 병합 작업으로 병합됩니다(UPSERT).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48190483"
  자세한 내용은 [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md)을(를) 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [CDC 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [CDC 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+ [CDC 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

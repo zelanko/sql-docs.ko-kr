@@ -13,15 +13,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359545"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394131"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
   문자열 비교는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 수행되는 여러 변환에서 중요한 부분이며, 변수의 식 및 속성 식 평가에도 사용됩니다. 예를 들어 정렬 변환에서는 데이터 세트의 값을 비교하여 데이터를 오름차순 또는 내림차순으로 정렬합니다.  

@@ -10,20 +10,20 @@ f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f114f39d76a5ec764e9bab814123a668a522dbe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756865"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391738"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 대상
-  SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원 되는 파일 형식은 다음과 같습니다. CSV 및 AVRO입니다. 놓은 다음 **Azure Blob 대상** 를 데이터 흐름 디자이너 및 편집기를 표시 하려면 두 번 클릭).  
+  SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. CSV 및 AVRO입니다. 놓은 다음 **Azure Blob 대상** 를 데이터 흐름 디자이너 및 편집기를 표시 하려면 두 번 클릭).  
   
-1.  **Azure 저장소 연결 관리자** 필드에서는 기존 Azure 저장소 연결 관리자를 지정하거나 Azure 저장소 계정을 참조하는 저장소 연결 관리자를 새로 만듭니다.  
+1.  **Azure 스토리지 연결 관리자** 필드에서는 기존 Azure 스토리지 연결 관리자를 지정하거나 Azure 스토리지 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.  
   
 2.  **Blob 컨테이너 이름** 필드에서는 원본 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.  
   

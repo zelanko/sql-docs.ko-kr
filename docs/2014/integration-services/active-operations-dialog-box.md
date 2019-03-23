@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.isoperations.executions.f1
 - sql12.ssis.ssms.isoperations.general.f1
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d20e7102df982f961aed770aedc19812c5aca949
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: efb8341b4e7124e244b5994aa2f83c664348b865
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185883"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388021"
 ---
 # <a name="active-operations-dialog-box"></a>활성 작업 대화 상자
   **활성 작업** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서 현재 실행 중인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 작업(예: 배포, 유효성 검사 및 패키지 실행)의 상태를 볼 수 있습니다. 이 데이터는 SSISDB 카탈로그에 저장됩니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "48185883"
   
  **수행 작업**  
   
-1.  [활성 작업 대화 상자를 열려면](#open_dialog)  
+1.  [활성 작업 대화 상자 열기](#open_dialog)  
   
 2.  [옵션 구성](#options)  
   
 ##  <a name="open_dialog"></a> 활성 작업 대화 상자 열기  
   
-1.  오픈 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]합니다.  
+1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]열기  
   
 2.  Microsoft SQL Server 데이터베이스 엔진 연결  
   

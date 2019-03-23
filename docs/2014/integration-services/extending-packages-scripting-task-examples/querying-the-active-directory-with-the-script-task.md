@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c60d7954d0ecd0c7201885e7128b75ddc46aa53b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368955"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392071"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지와 같은 엔터프라이즈 데이터 처리 응용 프로그램에서는 Active Directory에 저장된 직원의 직급, 직함 또는 기타 특징에 따라 데이터를 각기 다르게 처리해야 하는 경우가 종종 있습니다. Active Directory는 사용자에 대한 메타데이터뿐 아니라 컴퓨터 및 프린터와 같은 조직의 기타 자산에 대한 메타데이터도 저장하는 중앙 저장소를 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 디렉터리 서비스입니다. Microsoft .NET Framework의 `System.DirectoryServices` 네임스페이스에서는 Active Directory에 저장된 정보에 따라 데이터 처리 워크플로를 제어할 수 있도록 Active Directory 작업을 위한 클래스를 제공합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "53368955"
   
 4.  스크립트 프로젝트에서 `System.DirectoryServices` 네임스페이스에 대한 참조를 추가합니다.  
   
-5.  . 코드에서 `Imports` 문을 사용하여 `DirectoryServices` 네임스페이스를 가져옵니다.  
+5.  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 코드에서 `Imports` 문을 사용하여 `DirectoryServices` 네임스페이스를 가져옵니다.  
   
 > [!NOTE]  
 >  이 스크립트를 성공적으로 실행하려면 회사 네트워크에서 Active Directory가 사용되고 있고 이 예에서 사용하는 직원 정보가 회사에 저장되어 있어야 합니다.  
