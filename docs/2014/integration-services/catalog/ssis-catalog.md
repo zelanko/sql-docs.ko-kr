@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353980"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377486"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   합니다 `SSISDB` 카탈로그는 작업에 대 한 중심점 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) 프로젝트를 배포한는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버. 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  

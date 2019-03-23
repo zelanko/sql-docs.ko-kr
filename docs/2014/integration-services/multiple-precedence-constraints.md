@@ -13,20 +13,20 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 368d8faf917094ce1dd306cc4ffd385eb3254363
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f06a05ff275151e2488b1f3ec89c8d9cb7afb12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084863"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375591"
 ---
 # <a name="multiple-precedence-constraints"></a>여러 선행 제약 조건
   선행 제약 조건은 두 개의 태스크, 두 개의 컨테이너 또는 각 태스크와 컨테이너를 하나씩 선택하여 두 개의 실행 개체를 참조합니다. 선행 제약 조건을 선행 실행 개체 및 제약 조건이 지정된 실행 개체라고 합니다. 제약 조건이 지정된 실행 개체에는 여러 선행 제약 조건이 포함될 수 있습니다. 자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을 참조하세요.  
   
- 제약 조건을 그룹화하여 복잡한 제약 조건 시나리오를 조합하면 패키지에 복잡한 제어 흐름을 구현할 수 있습니다. 예를 들어, 다음 그림에서 태스크 D는 태스크 A에 연결 하 여는 `Success` 의해 태스크 B에 연결 된 제약 조건, 태스크 D는 `Failure` 의해 태스크 C에 연결 된 제약 조건 및 태스크 D는 `Success` 제약 조건. 태스크 D와 태스크 A 사이의 선행 제약 조건, 태스크 D와 태스크 B 사이의 선행 제약 조건 및 태스크 D와 태스크 C 사이의 선행 제약 조건은 논리적 *AND* 관계에 있습니다. 따라서 태스크 D를 실행하려면 태스크 A와 태스크 C는 성공적으로 실행되어야 하고 태스크 B는 실패해야 합니다.  
+ 제약 조건을 그룹화하여 복잡한 제약 조건 시나리오를 조합하면 패키지에 복잡한 제어 흐름을 구현할 수 있습니다. 예를 들어 다음 그림에서 태스크 D는 `Success` 제약 조건에 의해 태스크 A에 연결되며 태스크 D는 다시 `Failure` 제약 조건에 의해 태스크 B에 연결되고, 태스크 D는 `Success` 제약 조건에 의해 태스크 C에 연결됩니다. 태스크 D와 태스크 A 사이의 선행 제약 조건, 태스크 D와 태스크 B 사이의 선행 제약 조건 및 태스크 D와 태스크 C 사이의 선행 제약 조건은 논리적 *AND* 관계에 있습니다. 따라서 태스크 D를 실행하려면 태스크 A와 태스크 C는 성공적으로 실행되어야 하고 태스크 B는 실패해야 합니다.  
   
  ![선행 제약 조건으로 연결된 태스크](media/precedenceconstraints.gif "선행 제약 조건으로 연결된 태스크")  
   
