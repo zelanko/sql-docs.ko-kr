@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: fa1abd4c-e2be-427f-be53-860e49c97227
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 089b12c07b57b24d4c462605af92ed1bf7f0d417
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2eff925b3aa3278c5b662e5848d979f017936ce
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168773"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385001"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>master 저장 프로시저 전송 태스크 편집기(일반 페이지)
   **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 master 저장 프로시저 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)를 참조하십시오.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130833"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385051"
 ---
 # <a name="cache-connection-manager-editor"></a>캐시 연결 관리자 편집기
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 참조 데이터 세트를 읽고 데이터를 캐시 파일에 저장할 수 있습니다. 데이터는 항상 메모리에 저장됩니다.  
@@ -88,16 +88,16 @@ ms.locfileid: "48130833"
  열의 데이터 형식을 지정합니다.  
   
  `Length`  
- 열 데이터 형식을 지정합니다. 데이터 형식에 적용할 수를 업데이트할 수 있습니다 `Length`합니다.  
+ 열 데이터 형식을 지정합니다. 데이터 형식에 적용 가능한 경우 `Length`를 업데이트할 수 있습니다.  
   
  `Precision`  
- 특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용할 수를 업데이트할 수 있습니다 `Precision`합니다.  
+ 특정 열 데이터 형식에 대한 전체 자릿수를 지정합니다. 전체 자릿수는 숫자의 모든 자릿수이고 데이터 형식에 적용 가능한 경우 `Precision`를 업데이트할 수 있습니다.  
   
  `Scale`  
- 특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용할 수를 업데이트할 수 있습니다 `Scale`합니다.  
+ 특정 열 데이터 형식에 대한 소수 자릿수를 지정합니다. 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 데이터 형식에 적용 가능한 경우 `Scale`를 업데이트할 수 있습니다.  
   
  `Code Page`  
- 열 형식에 대한 코드 페이지를 지정합니다. 데이터 형식에 적용할 수를 업데이트할 수 있습니다 `Code Page`합니다.  
+ 열 형식에 대한 코드 페이지를 지정합니다. 데이터 형식에 적용 가능한 경우 `Code Page`를 업데이트할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [조회 변환](data-flow/transformations/lookup-transformation.md)  

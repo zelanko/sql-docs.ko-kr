@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160383"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376191"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>패키지 구성 마법사 UI 참조
   **패키지 구성 마법사** 를 사용하여 런타임에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다. 이 마법사는 **패키지 구성 도우미** 대화 상자에서 기존 구성을 수정하거나 새 구성을 추가하는 경우 실행됩니다. **패키지 구성 도우미** 대화 상자를 열려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]을 선택합니다. 자세한 내용은 [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)를 참조하세요.  
@@ -119,7 +119,7 @@ ms.locfileid: "48160383"
   
 |값|Description|  
 |-----------|-----------------|  
-|**대량 삽입 태스크 편집기**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
+|**연결**|목록에서 연결을 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다.|  
 |**구성 테이블**|기존 테이블을 선택하거나 **새로 만들기** 를 클릭하여 새 테이블을 만드는 SQL 문을 작성합니다.|  
 |**구성 필터**|기존 구성 이름을 선택하거나 새 이름을 입력합니다.<br /><br /> 같은 테이블에 여러 SQL Server 구성을 저장할 수 있으며 각 구성은 여러 구성 항목을 포함할 수 있습니다.<br /><br /> 이 사용자 정의 값은 특정 구성에 속하는 구성 항목을 식별하기 위해 테이블에 저장됩니다.|  
   

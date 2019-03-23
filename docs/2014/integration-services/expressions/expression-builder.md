@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c3daace92f033cb96428226b51294f5a372b7c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764075"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381975"
 ---
 # <a name="expression-builder"></a>식 작성기
   **식 작성기** 대화 상자를 사용하여 변수를 나열하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어에 포함된 함수, 유형 변환 및 연산자에 대한 참조를 기본적으로 제공하는 그래픽 사용자 인터페이스로 변수 값을 설정하는 식을 작성하거나 속성 식을 생성 및 편집할 수 있습니다.  

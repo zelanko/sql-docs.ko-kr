@@ -10,15 +10,15 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f644dc95d5c137c8ee1cdb5ecf8b0e2659e28e40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811195"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387401"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
   부울 식의 계산에 따라 두 식 중 하나를 반환합니다. 부울 식이 TRUE이면 첫 번째 식이 계산되고 반환 결과는 식의 결과입니다. 부울 식이 FALSE이면 두 번째 식이 계산되고 반환 결과는 식의 결과입니다.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5dbc012d6f6e14847f38d7fe4a8de2f47eb907d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d1168d12153233a3b904a36e601d9163f34e76b7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218890"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385430"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>master 저장 프로시저 전송 태스크 편집기(저장 프로시저 페이지)
   **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **저장 프로시저** 페이지를 사용하여 하나 이상의 사용자 정의 저장 프로시저를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 **master** 데이터베이스에서 다른 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 **master** 데이터베이스로 복사하기 위한 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md)를 참조하십시오.  
@@ -60,7 +60,7 @@ ms.locfileid: "48218890"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](control-flow/integration-services-tasks.md)   
- [Master 저장된 프로시저 전송 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [master 저장 프로시저 전송 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [식 페이지](expressions/expressions-page.md)   
  [SMO 연결 관리자](connection-manager/smo-connection-manager.md)  
   

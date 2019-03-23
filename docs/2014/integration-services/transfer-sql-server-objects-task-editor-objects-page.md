@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c8cfc6a1f16e03025a1560b09918518c9b2575b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a5105e162441375ab011510acb2b7fc6d25bbb4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053233"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383380"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>SQL Server 개체 전송 태스크 편집기(개체 페이지)
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **개체** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 복사할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  

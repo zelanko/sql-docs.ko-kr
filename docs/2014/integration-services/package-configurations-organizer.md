@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34789e64c2e8bc1892827b414a89975377c75cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aa795467e603ff8758e76fff6a3cc7fea48e4c87
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085973"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378641"
 ---
 # <a name="package-configurations-organizer"></a>패키지 구성 도우미
   **패키지 구성 도우미** 대화 상자를 사용하여 패키지 구성을 설정하고, 현재 패키지에 대한 구성 목록을 보고, 구성을 로드해야 하는 기본 순서를 지정할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48085973"
 > [!NOTE]  
 >  패키지 구성이 기본 순서로 로드되는 경우 **패키지 구성 도우미** 대화 상자에 표시된 목록의 맨 위에서 맨 아래까지의 구성이 로드됩니다. 그러나 런타임 시 패키지 구성이 기본 순서로 로드되지 않을 수 있습니다. 특히 부모 패키지 구성은 다른 유형의 구성보다 뒤에 로드됩니다.  
   
- 패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../2014/integration-services/package-configurations.md)를 참조하십시오.  
+ 패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../2014/integration-services/package-configurations.md)를 참조하십시오.  
   
 ## <a name="options"></a>변수  
  **패키지 구성 설정**  

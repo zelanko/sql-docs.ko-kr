@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8724345c7fc043e4e87f2026fe07d5fc1c8e80b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b482fcd6f03a3a5b20a1b1825cc9a045b891224
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202363"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379441"
 ---
 # <a name="execute-process-task-editor-general-page"></a>프로세스 실행 태스크 편집기(일반 페이지)
   **프로세스 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 프로세스 실행 태스크를 명명 및 설명할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48202363"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [프로세스 실행 태스크 편집기 &#40;페이지를 처리 합니다.&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
+ [프로세스 실행 태스크 편집기&#40;프로세스 페이지&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

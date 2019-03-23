@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfilesourceconnectionmanager.f1
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f815ee4f39198fc55ab753f1cdf65f428395a6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233b46df580c12f86c87bbcee6af73438b9c6df2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142693"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385282"
 ---
 # <a name="raw-file-source-editor-connection-manager-page"></a>원시 파일 원본 편집기(연결 관리자 페이지)
   원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다. 자세한 내용은 [Raw File Source](data-flow/raw-file-source.md)을 참조하세요.  

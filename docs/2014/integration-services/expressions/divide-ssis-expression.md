@@ -10,15 +10,15 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810195"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393307"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.  
@@ -65,7 +65,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

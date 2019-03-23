@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5aee74a2b0bd632e2efcb780a52f1b05f1949669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 611f5c14390e2d30f275f76af21db8eae6fbcb3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210942"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383192"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
   프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
@@ -100,7 +100,7 @@ ms.locfileid: "53210942"
   
      **연결된 서버 속성** 대화 상자의 **서버 옵션** 페이지에서 **RPC** 와 **RPC 내보내기** 를 **True**로 설정합니다. **RPC에 대한 분산 트랜잭션 승격 설정** 도 **False**로 설정합니다.  
   
--   개체 탐색기의 **연결된 서버** 에서 **공급자** 노드를 확장하고 공급자를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 연결된 서버에 대해 선택된 공급자에 동적 매개 변수를 사용하도록 설정합니다.  **동적 매개 변수** 옆에서 **사용**을 선택합니다.  
+-   개체 탐색기의 **연결된 서버** 에서 **공급자** 노드를 확장하고 공급자를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 연결된 서버에 대해 선택된 공급자에 동적 매개 변수를 사용하도록 설정합니다. **동적 매개 변수** 옆에서 **사용**을 선택합니다.  
   
 -   DTC(Distributed Transaction Coordinator)가 두 서버에서 모두 시작되었는지 확인합니다.  
   

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7ebb306204253cda422d8473f4236b96b04636e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790915"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379148"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
   **단일 테이블 빠른 프로필 형식** 을 사용하여 데이터 프로파일링 태스크를 구성하고 기본 설정으로 단일 테이블이나 뷰를 빠르게 프로파일링할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52790915"
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](data-profile-viewer.md)를 참조하세요.  
   
 ## <a name="options"></a>변수  
- **대량 삽입 태스크 편집기**  
+ **연결**  
  .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자를 선택합니다.  
   
  **테이블 또는 뷰**  
@@ -51,7 +51,7 @@ ms.locfileid: "52790915"
 > [!NOTE]  
 >  값 포함 프로필 형식은 **단일 테이블 빠른 프로필 형식**에서 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

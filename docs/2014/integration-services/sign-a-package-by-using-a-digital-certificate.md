@@ -12,15 +12,15 @@ helpviewer_keywords:
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350435"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378972"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>디지털 인증서를 사용하여 패키지 서명
   이 항목에서는 디지털 인증서를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 서명하는 방법을 설명합니다. 디지털 서명을 다른 설정과 함께 사용하여 잘못된 패키지를 로드하거나 실행하지 못하게 할 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "53350435"
   
      패키지에 서명했더라도 패키지를 로드하기 전에 디지털 서명을 확인하도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 구성해야 합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

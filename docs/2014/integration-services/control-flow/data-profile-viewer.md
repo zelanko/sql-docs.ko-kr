@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b05c023e8b0c54f0037af7829421f8f69f2595d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f6bcad3636178fb4aebbcdbeee29ba2542f092e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805005"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386811"
 ---
 # <a name="data-profile-viewer"></a>데이터 프로필 뷰어(Data Profile Viewer)
   데이터 프로파일링 프로세스의 다음 단계는 데이터 프로필을 보고 분석하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필을 볼 수 있습니다. 데이터 프로파일링 태스크를 설정하고 실행하는 방법은 [데이터 프로파일링 태스크 설정](data-profiling-task.md)을 참조하세요.  

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1541bc888c40916bf6ca613390685df9f816012
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815385"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385591"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 계산할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 계산할 수 있습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "52815385"
   
 -   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)   
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

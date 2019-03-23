@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 627d11fb1a4aafd63a47d8b206988287d5831578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63410531bcb0af8a254b2d2a5c6c650423cb9a1b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154933"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382191"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
@@ -54,10 +54,10 @@ ms.locfileid: "48154933"
  각 조회 열에 대한 출력의 별칭을 입력합니다. 기본값은 조회 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [조회 변환 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [조회 변환 편집기 &#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [조회 변환 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [조회 변환 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+ [조회 변환 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [조회 변환 편집기&#40;연결 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [조회 변환 편집기&#40;고급 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [유사 항목 조회 변환](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

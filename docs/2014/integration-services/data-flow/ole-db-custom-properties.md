@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebe1af2269d082826a31852ee77fbf529516e1c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 996acc5f8e9b47af683c8d8376515f7f59e63120
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818205"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374928"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -30,11 +30,11 @@ ms.locfileid: "52818205"
 |AlwaysUseDefaultCodePage|Boolean|각 열에 대해 `DefaultCodePage` 속성의 값을 사용할지, 아니면 각 열의 로캘에서 코드 페이지를 파생시킬지를 나타내는 값입니다. 이 속성의 기본값은 `False`입니다.|  
 |CommandTimeout|정수|명령이 종료되기 전의 제한 시간(초)입니다. 값 0은 제한 시간이 없음을 나타냅니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **OLE DB 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
 |DefaultCodePage|정수|데이터 원본에서 코드 페이지 정보를 사용할 수 없을 경우 사용할 코드 페이지입니다.|  
-|OpenRowset|String|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름입니다.|  
-|OpenRowsetVariable|String|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름이 포함된 변수입니다.|  
-|ParameterMapping|String|SQL 명령의 매개 변수에서 변수로의 매핑입니다.|  
-|SqlCommand|String|실행할 SQL 명령입니다.|  
-|SqlCommandVariable|String|실행할 SQL 명령이 포함된 변수입니다.|  
+|OpenRowset|문자열|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름입니다.|  
+|OpenRowsetVariable|문자열|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름이 포함된 변수입니다.|  
+|ParameterMapping|문자열|SQL 명령의 매개 변수에서 변수로의 매핑입니다.|  
+|SqlCommand|문자열|실행할 SQL 명령입니다.|  
+|SqlCommandVariable|문자열|실행할 SQL 명령이 포함된 변수입니다.|  
   
  OLE DB 원본의 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "52818205"
 |FastLoadKeepIdentity|Boolean|데이터를 로드할 때 ID 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나와 함께 사용해야 합니다. 이 속성의 기본값은 `False`입니다. 이 속성은 OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 속성 `SSPROP_FASTLOADKEEPIDENTITY`합니다.|  
 |FastLoadKeepNulls|Boolean|데이터를 로드할 때 Null 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나와 함께 사용해야 합니다. 이 속성의 기본값은 `False`입니다. 이 속성은 OLE DB [IRowsetFastLoad &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) 속성 `SSPROP_FASTLOADKEEPNULLS`합니다.|  
 |FastLoadMaxInsertCommitSize|정수|OLE DB 대상에서 빠른 로드 작업을 수행하는 동안 커밋을 시도하는 일괄 처리 크기를 지정하는 값입니다. 기본값인 **0**은 모든 행이 처리된 후의 단일 커밋 작업을 나타냅니다.|  
-|FastLoadOptions|String|빠른 로드 옵션 모음입니다. 빠른 로드 옵션에는 테이블 잠금 및 제약 조건 검사가 포함됩니다. 둘 다 또는 둘 중 하나를 지정하거나 아무 것도 지정하지 않을 수 있습니다. 이 속성은 OLE DB IRowsetFastLoad 속성인 `SSPROP_FASTLOADOPTIONS` 와 같은 문자열 옵션을 수락 `CHECK_CONSTRAINTS` 및 `TABLOCK`합니다.<br /><br /> 참고: 이 속성에 대 한 몇 가지 옵션에서 사용할 수 없는 합니다 **Excel 대상 편집기**를 사용 하 여 설정할 수 있습니다는 **고급 편집기**.|  
-|OpenRowset|String|AccessMode가 하는 경우 `OpenRowset`, OLE DB 대상에서 액세스 하는 뷰나 테이블의 이름입니다.|  
-|OpenRowsetVariable|String|AccessMode가 하는 경우 `OpenRowset from Variable`, OLE DB 대상에서 액세스 하는 뷰나 테이블의 이름이 포함 된 변수의 이름입니다.|  
-|SqlCommand|String|AccessMode가 하는 경우 `SQL Command`, OLE DB 대상을 사용 하 여 데이터의 대상 열을 지정 하는 TRANSACT-SQL 문입니다.|  
+|FastLoadOptions|문자열|빠른 로드 옵션 모음입니다. 빠른 로드 옵션에는 테이블 잠금 및 제약 조건 검사가 포함됩니다. 둘 다 또는 둘 중 하나를 지정하거나 아무 것도 지정하지 않을 수 있습니다. 이 속성은 OLE DB IRowsetFastLoad 속성인 `SSPROP_FASTLOADOPTIONS` 와 같은 문자열 옵션을 수락 `CHECK_CONSTRAINTS` 및 `TABLOCK`합니다.<br /><br /> 참고: 이 속성에 대 한 몇 가지 옵션에서 사용할 수 없는 합니다 **Excel 대상 편집기**를 사용 하 여 설정할 수 있습니다는 **고급 편집기**.|  
+|OpenRowset|문자열|AccessMode가 하는 경우 `OpenRowset`, OLE DB 대상에서 액세스 하는 뷰나 테이블의 이름입니다.|  
+|OpenRowsetVariable|문자열|AccessMode가 하는 경우 `OpenRowset from Variable`, OLE DB 대상에서 액세스 하는 뷰나 테이블의 이름이 포함 된 변수의 이름입니다.|  
+|SqlCommand|문자열|AccessMode가 하는 경우 `SQL Command`, OLE DB 대상을 사용 하 여 데이터의 대상 열을 지정 하는 TRANSACT-SQL 문입니다.|  
   
  OLE DB 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   

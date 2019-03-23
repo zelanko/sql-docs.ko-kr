@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135203"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378601"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
   데이터 흐름 태스크 컨테이너에서 사용할 수 있는 속성 식을 사용하여 데이터 흐름 개체의 특정 속성 값을 지정할 수 있습니다.  
   
  속성 식을 사용하는 방법은 [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
- 속성 식을 사용하여 배포된 패키지의 각 인스턴스 구성을 사용자 지정할 수 있습니다. 또한 속성 식을 사용하여 **dtexec** 명령 프롬프트 유틸리티로 **/set** 옵션을 사용해 패키지의 런타임 제약 조건을 지정할 수도 있습니다. 예를 들어 제한할 수 있습니다 합니다 `MaximumThreads` 정렬 변환에 사용 또는 `MaxMemoryUsage` 유사 항목 그룹화 및 유사 항목 조회 변환 합니다. 제약 받지 않을 경우 이러한 변환은 메모리에 대량의 데이터를 캐시할 수 있습니다.  
+ 속성 식을 사용하여 배포된 패키지의 각 인스턴스 구성을 사용자 지정할 수 있습니다. 또한 속성 식을 사용하여 **dtexec** 명령 프롬프트 유틸리티로 **/set** 옵션을 사용해 패키지의 런타임 제약 조건을 지정할 수도 있습니다. 예를 들어 정렬 변환에 사용된 `MaximumThreads` 또는 유사 항목 그룹화 및 유사 항목 조회 변환의 `MaxMemoryUsage`를 제약할 수 있습니다. 제약 받지 않을 경우 이러한 변환은 메모리에 대량의 데이터를 캐시할 수 있습니다.  
   
  이 항목에 나열된 데이터 흐름 개체의 속성 중 하나에 대한 속성 식을 지정하려면 디자이너의 **제어 흐름** 화면에서 데이터 흐름 태스크를 선택하거나 개별 구성 요소나 경로를 선택하지 않고 디자이너의 **데이터 흐름** 탭을 선택하여 데이터 흐름 태스크에 대한 **속성** 창을 표시합니다. **식** 속성을 선택하고 줄임표(...)를 클릭하여 **속성 식 편집기** 대화 상자를 표시합니다. **속성** 목록을 드롭다운하여 속성을 선택한 다음 **식** 입력란에 식을 입력하거나 줄임표(...)를 클릭하여 **식 작성기** 대화 상자를 표시합니다.  
   

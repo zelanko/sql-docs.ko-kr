@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8227fe1c7cfe63772ff092d9cd30b6ea8b07271a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f2eec4fbeb300ce2a43e1007245fad573f1c5a44
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545628"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387111"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>메시지 큐 태스크 편집기(받기 페이지)
   **메시지 큐 태스크 편집기** 대화 상자의 **받기** 페이지를 사용하여 메시지 큐 태스크가 MSMQ([!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing) 메시지를 받도록 구성할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "52545628"
  **ID**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
- **관련된 항목:** [패키지 선택](control-flow/select-a-package.md)  
+ **관련 항목:** [패키지 선택](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = 변수 메시지  
  **Assert**  
@@ -88,7 +88,7 @@ ms.locfileid: "52545628"
  **변수**  
  변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
- **관련된 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="filter-dynamic-options"></a>Filter 동적 옵션  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52545628"
  **ID**  
  필터를 적용하도록 선택한 경우 메시지를 받을 수 있는 패키지의 고유 식별자를 입력하거나 줄임표 단추 **(...)** 를 클릭한 다음, 패키지를 지정합니다.  
   
- **관련된 항목:** [패키지 선택](control-flow/select-a-package.md)  
+ **관련 항목:** [패키지 선택](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = 문자열 메시지  
  **Compare**  
@@ -133,9 +133,9 @@ ms.locfileid: "52545628"
  **변수**  
  받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
   
- **관련된 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [변수 추가](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [메시지 큐 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [메시지 큐 태스크 편집기&#40;보내기 페이지&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   

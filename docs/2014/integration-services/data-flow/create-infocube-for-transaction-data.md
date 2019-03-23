@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd8f60348ea511aaadb730bd252a45db70a7aed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 167e799c873d586b06300a7e9433324391968d32
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777755"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375051"
 ---
 # <a name="create-infocube-for-transaction-data"></a>트랜잭션 데이터용 InfoCube 만들기
   **트랜잭션 데이터용 InfoCube 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoCube를 만들 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "52777755"
  **Iobject - 제거**  
  InfoObject와 현재 행의 데이터 흐름 열 간의 연결을 제거합니다. 이 연결을 제거하려면 **제거**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

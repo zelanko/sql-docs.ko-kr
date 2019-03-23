@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23baf42a1ddc30ceccf5ec7c6f8b9db96e72e588
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804925"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377651"
 ---
 # <a name="create-relationships"></a>관계 만들기
   **관계 만들기** 대화 상자를 사용하여 유사 항목 조회 변환 편집기, 조회 변환 편집기 및 용어 조회 변환 편집기에서 구성한 원본 열과 조회 테이블 열 간의 매핑을 편집할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "52804925"
  **유사성 출력 별칭**  
  선택한 열에 대한 유사성 점수를 포함하는 새 출력 열의 이름을 지정합니다. 이 값을 비워 놓으면 출력 열이 생성되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../integration-services-error-and-message-reference.md)   
  [유사 항목 조회 변환 편집기&#40;열 탭&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)   
  [조회 변환 편집기&#40;열 페이지&#41;](../../lookup-transformation-editor-columns-page.md)   

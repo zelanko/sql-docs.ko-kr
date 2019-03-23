@@ -12,15 +12,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d0a6a918c2b4a41272b4c09b87d64b925fbf028
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785155"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391151"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "52785155"
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services 데이터 형식](../integration-services-data-types.md)   
  [Integration Services 변환](integration-services-transformations.md)   

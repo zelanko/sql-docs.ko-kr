@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4549800144012991b4d154eecb2f9bd67dee352
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9e4695575aba2e43435c4e26d5a47ccb2cfa39d6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364905"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387781"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>1단원: 배포 번들 작성 준비
   이 단원에서는 자습서를 지원하는 작업 폴더 및 환경 변수를 만들고 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만든 다음 여러 패키지와 지원 파일을 프로젝트에 추가하고 패키지에서 구성을 구현합니다.  
@@ -31,18 +31,18 @@ ms.locfileid: "53364905"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 만들기 작업 폴더 및 환경 변수](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [1단계: 만들기 작업 폴더 및 환경 변수](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 -   [2단계: 배포 프로젝트 만들기](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [3 단계: 패키지 및 기타 파일 추가](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [3단계: 패키지 및 기타 파일 추가](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [4 단계: 패키지 구성 추가](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [4단계: 패키지 구성 추가](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
--   [5 단계: 업데이트 된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+-   [5단계: 업데이트된 패키지 테스트](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 만들기 작업 폴더 및 환경 변수](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+ [1단계: 만들기 작업 폴더 및 환경 변수](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 ![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   

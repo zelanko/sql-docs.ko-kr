@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 163df99c54ed323d1039d50c69e812cb4c1d2286
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368785"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378091"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>2단계: 배포 번들 확인
   1단원에서는 Deployment Tutorial 프로젝트를 만들고 패키지와 보조 파일을 프로젝트에 추가했습니다. 이전 태스크에서는 프로젝트를 위한 배포 유틸리티를 작성했습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "53368785"
 5.  Internet Explorer 또는 텍스트 편집기를 종료합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [3 단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md)  
+ [3단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md)  
   
 ![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   

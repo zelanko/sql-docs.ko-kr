@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Foreach Loop containers
 - containers [Integration Services], Foreach Loop
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb1e3ca9e8576bf340560c45582c9b01bd453c14
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91e098810162c0a0f75b1dccbbd48946f302c068
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529051"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384510"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Foreach 루프 컨테이너 구성
   이 절차에서는 열거자 및 컨테이너 수준의 속성 식을 비롯한 Foreach 루프 컨테이너를 구성하는 방법에 대해 설명합니다.  

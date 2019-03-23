@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 599f3af6c579a8e9a217df31386b1e799d922f98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771115"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385061"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>파티션 처리 대상 사용자 지정 속성
   파티션 처리 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -24,12 +24,12 @@ ms.locfileid: "52771115"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ASConnectionString|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결 문자열입니다.|  
+|ASConnectionString|문자열|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 연결 문자열입니다.|  
 |KeyDuplicate|Integer(열거형)|UseDefaultConfiguration이 `False`에 중복 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
 |KeyErrorAction|Integer(열거형)|UseDefaultConfiguration이 `False`, 키 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `ConvertToUnknown`(0) 및 `DiscardRecord`(1)입니다. 이 속성의 기본값은 `ConvertToUnknown`(0)입니다.|  
 |KeyErrorLimit|정수|UseDefaultConfiguration이 `False`, 허용 되는 키 오류의 상한값입니다.|  
 |KeyErrorLimitAction|Integer(열거형)|UseDefaultConfiguration이 `False`때 수행할 동작을 지정 하는 값 `KeyErrorLimit` 에 도달 합니다. 가능한 값은 `StopLogging`(1) 및 `StopProcessing`(0)입니다. 이 속성의 기본값은 `StopProcessing`(0)입니다.|  
-|KeyErrorLogFile|String|UseDefaultConfiguration이 `False`, 오류 로그 파일의 경로 및 파일 이름입니다.|  
+|KeyErrorLogFile|문자열|UseDefaultConfiguration이 `False`, 오류 로그 파일의 경로 및 파일 이름입니다.|  
 |KeyNotFound|Integer(열거형)|UseDefaultConfiguration이 `False`, 키 누락 오류를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  
 |NullKeyConvertedToUnknown|Integer(열거형)|UseDefaultConfiguration이 `False`, 알 수 없는 값으로 변환 된 null 키를 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `IgnoreError`(0)입니다.|  
 |NullKeyNotAllowed|Integer(열거형)|UseDefaultConfiguration이 `False`, 허용 되지 않는 null을 처리 하는 방법을 나타내는 값입니다. 가능한 값은 `IgnoreError`(0), `ReportAndContinue`(1) 및 `ReportAndStop`(2)입니다. 이 속성의 기본값은 `ReportAndContinue`(1)입니다.|  

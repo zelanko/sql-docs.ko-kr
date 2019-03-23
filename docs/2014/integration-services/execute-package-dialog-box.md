@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssis.ssms.ispackageexecute.f1
 - sql12.ssis.ssms.executepackage.f1
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 715bcfdda978801bac28e59246aeddc9ab76851e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f019f2a2e3df3cd32ff7e699022f83f5fc84f0eb
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418654"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376281"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   **패키지 실행** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 저장된 패키지를 실행할 수 있습니다.  

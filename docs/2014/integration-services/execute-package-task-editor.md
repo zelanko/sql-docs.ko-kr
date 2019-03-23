@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f750d134459b55e3d14772bf8b4c6db25b1ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff63c6568f0a34a43caf6765e7e01ce8022e10f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504523"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382261"
 ---
 # <a name="execute-package-task-editor"></a>패키지 실행 태스크 편집기
   패키지 실행 태스크 편집기로 패키지 실행 태스크를 구성합니다. 패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "52504523"
  **대량 삽입 태스크 편집기**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "52504523"
  **대량 삽입 태스크 편집기**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **PackageNameReadOnly**  
  패키지 이름을 표시합니다.  

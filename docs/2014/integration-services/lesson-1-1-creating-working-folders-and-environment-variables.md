@@ -1,5 +1,5 @@
 ---
-title: '1단계: 만들기 작업 폴더 및 환경 변수 | Microsoft Docs'
+title: '1단계: 작업 폴더 및 환경 변수 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa27d9c38c7c1b147432295d5ec636c8c73863c6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350924"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392131"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>1단계: 작업 폴더 및 환경 변수 만들기
   이 태스크에서는 이후의 자습서 태스크에서 사용할 작업 폴더(C:\DeploymentTutorial)와 새 시스템 환경 변수(`DataTransfer` 및 `LoadXMLData`)를 만듭니다.  

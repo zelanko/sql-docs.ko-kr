@@ -10,15 +10,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80110c29ec1c576684c4ccd67bc0c3408e6250b3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363348"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378271"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
   식 계산기는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  

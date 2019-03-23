@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144473"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385904"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  

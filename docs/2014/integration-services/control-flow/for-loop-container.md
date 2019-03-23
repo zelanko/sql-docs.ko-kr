@@ -13,15 +13,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92e1ff31c03e3de20d680544f7f432350151f33e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761805"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384721"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
   For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 `False`가 될 때까지 워크플로를 반복합니다.  

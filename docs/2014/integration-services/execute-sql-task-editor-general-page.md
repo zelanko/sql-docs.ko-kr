@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcf15af9fb5e351dd4c965d0eb6ef520b62b65b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531368"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382280"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>SQL 실행 태스크 편집기(일반 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
@@ -55,9 +55,9 @@ ms.locfileid: "52531368"
  **ConnectionType**  
  데이터 원본에 연결할 때 사용할 연결 관리자 유형을 선택합니다. 사용 가능한 연결 형식에는 **OLE DB**, **ODBC**, **ADO**, **ADO.NET** 및 **SQLMOBILE**이 있습니다.  
   
- **관련된 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](connection-manager/odbc-connection-manager.md)를 [ADO 연결 관리자](connection-manager/ado-connection-manager.md)하십시오 [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](connection-manager/odbc-connection-manager.md)를 [ADO 연결 관리자](connection-manager/ado-connection-manager.md)하십시오 [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...**>을 선택합니다.  
   
  **SQLSourceType**  
@@ -65,7 +65,7 @@ ms.locfileid: "52531368"
   
  SQL 실행 태스크에서 사용하는 연결 관리자 유형에 따라 매개 변수가 있는 SQL 문에서 특정 매개 변수 표식을 사용해야 합니다.  
   
- **관련된 항목:** 매개 변수가 있는 SQL 명령 실행 섹션 [SQL 실행 태스크](control-flow/execute-sql-task.md)  
+ **관련 항목:** 매개 변수가 있는 SQL 명령 실행 섹션 [SQL 실행 태스크](control-flow/execute-sql-task.md)  
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "52531368"
  **BypassPrepare**  
  SQL 문의 준비 여부를 나타냅니다.  `true`이면 준비를 건너뛰고 `false`이면 SQL 문을 실행하기 전에 SQL 문을 준비합니다. 이 옵션은 준비를 지원하는 OLE DB 연결에만 사용할 수 있습니다.  
   
- **관련된 항목:**  [준비된 실행](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **관련 항목:**  [준비된 실행](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **찾아보기**  
  **열기** 대화 상자를 사용하여 SQL 문이 포함된 파일을 찾습니다. 해당 내용을 **SQLStatement** 속성에 SQL 문으로 복사할 파일을 선택합니다.  
@@ -98,19 +98,19 @@ ms.locfileid: "52531368"
  **SQLStatement**  
  실행할 SQL 문을 옵션 상자에 입력하거나, 찾아보기 단추(...)를 클릭하여 **SQL 쿼리 입력** 대화 상자에 SQL 문을 입력하거나, **쿼리 작성**을 클릭하고 **쿼리 작성기** 대화 상자를 사용하여 SQL 문을 작성합니다.  
   
- **관련된 항목:** [쿼리 작성기](../../2014/integration-services/query-builder.md)  
+ **관련 항목:** [쿼리 작성기](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = 파일 연결  
  **FileConnection**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
  기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련된 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

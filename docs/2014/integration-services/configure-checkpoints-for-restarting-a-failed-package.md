@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376681"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>실패한 패키지를 다시 시작하는 검사점 구성
   검사점에 적용되는 속성을 설정하여 전체 패키지를 다시 실행하는 대신 장애 지점에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 다시 시작하도록 구성합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48123403"
         > [!IMPORTANT]  
         >  검사점 파일을 사용할 수 없으면 오류가 발생합니다.  
   
-    -   선택 `IfExists` 검사점 파일을 사용할 수 있는 경우에 패키지를 다시 시작 합니다.  
+    -   검사점 파일이 있는 경우에만 패키지를 검사점에서 다시 시작하려면 `IfExists`를 선택합니다.  
   
 8.  패키지가 다시 시작될 수 있는 태스크 및 컨테이너를 구성합니다.  
   

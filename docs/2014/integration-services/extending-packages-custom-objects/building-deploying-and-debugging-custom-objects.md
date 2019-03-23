@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 22b7d07752c6a9df5f0b100c0d16b78a86125f04
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 131f86336c2eecb4995304fc87e15a7b910833ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362855"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382391"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>사용자 지정 개체 빌드, 배포 및 디버깅
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 사용자 지정 개체에 대한 코드를 작성한 후에는 어셈블리를 빌드하여 배포하고 패키지에서 사용할 수 있도록 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 통합한 다음 테스트 및 디버깅을 수행해야 합니다.  
@@ -153,7 +153,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
   
 ![Integration Services 아이콘 (작은)](../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 사용자 지정 개체 개발](developing-custom-objects-for-integration-services.md)   
  [사용자 지정 개체 지속](persisting-custom-objects.md)   
  [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)  

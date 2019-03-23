@@ -3,7 +3,7 @@ title: 릴리스 정보
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161630"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381591"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="march-2019-hotfix"></a>3 월 2019 (핫픽스)
+
+2019 년 3 월 22 일 &nbsp;  /  &nbsp; 버전: 1.5.2 &nbsp;  /  &nbsp; 핫픽스 릴리스
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| 1.5.1 발견 된 몇 가지 문제를 해결 합니다. | 참조 [GitHub에서 핫픽스 릴리스 년 3 월](https://github.com/Microsoft/azuredatastudio/milestone/28)합니다.<br/> <br/>&bull; &nbsp; 사용자 전자 필기장 대시보드에서 "전자 필기장 열기" 작업에서 열에 닫지 못했습니다 문제 해결된 <br/>&bull; &nbsp; Notebook JSON 추가 있는 문제를 해결 함} 저장 후 <br/>&bull; &nbsp; 여기서 notebook 표 된 테마 변경에 응답 하지 문제 해결된 <br/>&bull; &nbsp; 전체 notebook 경로 탭 헤더에 표시 된 위치에 문제를 해결 합니다. 이제 파일 이름만 표시 됩니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>2019 년 3 월
 
@@ -53,7 +64,7 @@ ms.locfileid: "58161630"
 - 새 Notebook 및 전자 필기장 열기 아이콘 손실 됩니다. <br/> 
 **해결 방법:** 레거시 연결 형식이 사용 되지 않습니다. 예상 대로 모든 작업 (새 노트북에서 Spark 작업)을 얻게 및 SQL Server 끝점에 연결 하는 것이 좋습니다. 
 
-## <a name="february-2019"></a>2019 년 2 월
+## <a name="february-2019"></a>2019년 2월
 
 2019 년 2 월 13 일 &nbsp;  /  &nbsp; 버전: 1.4.5
 

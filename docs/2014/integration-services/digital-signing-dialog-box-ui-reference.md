@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Digital Signing dialog box
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0125281c3438f12e8dd7b27ec3d9bff89790d85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218043"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387391"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>디지털 서명 대화 상자 UI 참조
   **디지털 서명** 대화 상자를 사용하여 패키지를 디지털 서명으로 서명하거나 서명을 제거할 수 있습니다. **디지털 서명** 대화 상자는 **의** SSIS **메뉴에 있는** 디지털 서명 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]옵션에서 사용할 수 있습니다.  
@@ -35,6 +35,6 @@ ms.locfileid: "48218043"
  디지털 서명을 제거하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보안 개요 &#40;Integration Services&#41;](security/security-overview-integration-services.md)  
+ [보안 개요&#40;Integration Services&#41;](security/security-overview-integration-services.md)  
   
   

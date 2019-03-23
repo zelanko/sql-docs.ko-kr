@@ -12,15 +12,15 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa0258cbfee135b35ad401a3ed9c40fe9bab444e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764415"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381671"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
   이 섹션에서는 여러 개의 연산자와 함수가 결합된 고급 식의 예를 제공합니다. 선행 제약 조건이나 조건부 분할 변환에 사용된 식은 부울로 계산되어야 합니다. 그러나 속성 식, 변수, 파생 열 변환 또는 For 루프 컨테이너에 사용된 식에는 이 제한이 적용되지 않습니다.  

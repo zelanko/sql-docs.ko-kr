@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9b405ee057e843f734310dbf134465d03575efc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364025"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384281"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
   전체 캐시 모드와 캐시 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서 조회 변환이 실행되기 전에 참조 데이터 세트가 캐시에 로드됩니다.  

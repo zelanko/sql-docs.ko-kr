@@ -10,15 +10,15 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 895b314751601e24d8e7e56ec21d0fb0609046b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771155"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386421"
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
   숫자 식의 상용 로그를 반환합니다.  
@@ -61,7 +61,7 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [EXP&#40;SSIS 식&#41;](exp-ssis-expression.md)   
  [LN&#40;SSIS 식&#41;](ln-ssis-expression.md)   
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  

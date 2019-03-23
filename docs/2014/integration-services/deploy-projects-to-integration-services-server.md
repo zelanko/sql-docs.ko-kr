@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408180"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386631"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에서는 환경을 사용하여 패키지를 관리하고, 패키지를 실행하고, 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52408180"
   
 1.  아직 없는 경우 SSISDB 카탈로그를 만듭니다. 자세한 내용은 [SSIS 카탈로그 만들기](catalog/ssis-catalog.md)를 참조하세요.  
   
-2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 [프로젝트를 프로젝트 배포 모델로 변환 하려면](#convert)  
+2.  **Integration Services 프로젝트 변환 마법사** 를 실행하여 프로젝트를 프로젝트 배포 모델로 변환합니다. 자세한 내용은 [프로젝트 배포 모델로 프로젝트를 변환하려면](#convert)  
   
     -   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]에서 프로젝트를 만든 경우 기본적으로 해당 프로젝트는 프로젝트 배포 모델을 사용합니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408180"
   
      패키지 업그레이드에 대한 자세한 내용은 [Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages.md) 및 [SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)를 참조하세요.  
   
-3.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 [Integration Services 서버에 프로젝트를 배포 하려면](#deploy)합니다.  
+3.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포합니다. 자세한 내용은 [Integration Services 서버에 프로젝트를 배포하려면](#deploy) 지침을 참조하세요.  
   
 4.  (선택 사항) 배포한 프로젝트에 대한 환경을 만듭니다. 자세한 내용은 [서버 환경 만들기 및 매핑](../../2014/integration-services/create-and-map-a-server-environment.md)을 참조하세요.  
   

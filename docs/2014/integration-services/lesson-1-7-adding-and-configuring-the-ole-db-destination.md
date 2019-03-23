@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6136d3e8e574d476b8ebabcfb78ed10284ead334
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750575"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393091"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>7단계: OLE DB 대상 추가 및 구성
   이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  
@@ -53,9 +53,9 @@ ms.locfileid: "52750575"
 14. 속성 창에 있는지를 확인 합니다 `LocaleID` 속성이로 설정 되어 **영어 (미국)** 및`DefaultCodePage` 속성이로 설정 되어 **1252**합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [8 단계: 1 단원 패키지를 보다 쉽게 이해](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+ [8단계: 1 단원 패키지를 보다 쉽게 이해](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE DB 대상](data-flow/ole-db-destination.md)  
   
   

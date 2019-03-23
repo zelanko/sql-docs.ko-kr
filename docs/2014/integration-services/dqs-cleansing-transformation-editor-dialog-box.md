@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c6367e846f3b542101db5c4328cd99e1a16f0416
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978419"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385571"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 정리 변환 편집기 대화 상자
   **DQS 정리 변환 편집기** 대화 상자를 통해 DQS(Data Quality Services)를 사용하여 데이터를 수정할 수 있습니다. 자세한 내용은 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)을(를) 참조하세요.  
@@ -49,7 +49,7 @@ ms.locfileid: "53978419"
  목록에서 기존 DQS 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
  **새로 만들기**  
- **DQS 정리 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  [DQS 정리 연결 관리자 대화 상자에서 옵션 설정](#manager)을 참조하세요.  
+ **DQS 정리 연결 관리자** 대화 상자를 사용하여 새 연결 관리자를 만듭니다. [DQS 정리 연결 관리자 대화 상자에서 옵션 설정](#manager)을 참조하세요.  
   
  **데이터 품질 기술 자료**  
  연결된 데이터 원본에 대한 기존 DQS 기술 자료를 선택합니다. DQS 기술 자료에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오.  

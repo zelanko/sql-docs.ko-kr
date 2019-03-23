@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106413"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386241"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 원본 편집기(오류 출력 페이지)
   **Excel 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -53,8 +53,8 @@ ms.locfileid: "48106413"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Excel 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Excel 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Excel 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Excel 연결 관리자](connection-manager/excel-connection-manager.md)   
  [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](control-flow/foreach-loop-container.md)  
   

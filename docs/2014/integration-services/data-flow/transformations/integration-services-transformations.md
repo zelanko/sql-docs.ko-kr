@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76157486751a08d17cf46de312f63e6e41dc3cb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785235"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382666"
 ---
 # <a name="integration-services-transformations"></a>Integration Services 변환
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 패키지의 데이터 흐름에서 데이터를 집계, 병합, 배포 및 수정하는 구성 요소입니다. 변환은 조회 작업을 수행하고 예제 데이터 세트를 생성할 수도 있습니다. 이 섹션에서는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에 포함되는 변환과 이러한 변환의 작동 방식에 대해 설명합니다.  

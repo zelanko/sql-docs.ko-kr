@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355377"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384961"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>6단원: 프로젝트 배포 모델에 매개 변수 사용
   SQL Server 2012에는 Integration Services 서버에 프로젝트를 배포할 수 있는 새로운 배포 모델이 도입되었습니다. Integration Services 서버에서는 패키지를 관리 및 실행하고 패키지에 대한 런타임 값을 구성할 수 있습니다.  
@@ -32,15 +32,15 @@ ms.locfileid: "53355377"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
-1.  [1 단계: 5 단원 패키지 복사](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [1단계: 5 단원 패키지 복사](lesson-6-1-copying-the-lesson-5-package.md)  
   
 2.  [2단계: 프로젝트를 프로젝트 배포 모델로 변환](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [3 단계: 6 단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [3단계: 6 단원 패키지 테스트](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [4 단계: 6 단원 패키지 배포](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [4단계: 6 단원 패키지 배포](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 5 단원 패키지 복사](lesson-6-1-copying-the-lesson-5-package.md)  
+ [1단계: 5 단원 패키지 복사](lesson-6-1-copying-the-lesson-5-package.md)  
   
   

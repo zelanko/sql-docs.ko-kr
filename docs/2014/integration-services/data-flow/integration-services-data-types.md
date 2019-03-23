@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fc0a802cc3d266cc96d8deaaeeda39056508062
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377843"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382069"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "53377843"
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. .|  
+|DT_IMAGE|2의 최대 크기를 사용 하 여 이진값<sup>31</sup>-1 (2147483647) 바이트입니다. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다.|  
 |DT_NTEXT|최대 길이가 2 사용 하 여 유니코드 문자열<sup>30</sup> -1 (1073741823) 자인 합니다.|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 문자열 2의 최대 길이가<sup>31</sup>-1 (2147483647) 자입니다.|  
   
@@ -235,7 +235,7 @@ ms.locfileid: "53377843"
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
+|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|Single||real|real|  
@@ -255,7 +255,7 @@ ms.locfileid: "53377843"
 ## <a name="related-content"></a>관련 내용  
  blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://go.microsoft.com/fwlink/?LinkId=220823)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름의 데이터](data-in-data-flows.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059933"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382719"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>데이터 흐름에 데이터 뷰어 추가
   이 항목에서는 데이터 흐름에 데이터 뷰어를 추가 및 구성하는 방법에 대해 설명합니다. 데이터 뷰어는 두 데이터 흐름 구성 요소 간에 이동하는 데이터를 표시합니다. 예를 들어 데이터 뷰어는 데이터 흐름 변환으로 데이터가 수정되기 전의 데이터 원본에서 추출한 데이터를 표시할 수 있습니다.  

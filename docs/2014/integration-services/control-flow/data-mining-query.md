@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95ce2aa24b844c77406b5286eac31b75cdb6fd35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771135"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380461"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
   디자인 창에는 데이터 마이닝 예측 쿼리를 작성할 때 사용할 수 있는 데이터 마이닝 예측 쿼리 작성기가 포함되어 있습니다. 입력 테이블을 기반으로 하는 예측 쿼리를 디자인하거나 단일 예측 쿼리를 디자인할 수 있습니다. 쿼리를 실행하고 결과를 보려면 결과 뷰로 전환합니다. 쿼리 뷰에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 쿼리를 표시합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "52771135"
  **조건/인수**  
  열에 적용되는 조건 또는 사용자 식을 지정합니다. 마이닝 모델과 입력 열이 포함된 테이블에서 셀로 열을 끌 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리 인터페이스](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - referencing Web services
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cb99bd25a6eb46d9060f9feba2f2f7d75b3b83a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354288"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377731"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>스크립팅 솔루션에서 다른 어셈블리 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스 라이브러리에서는 스크립트 개발자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 사용자 지정 기능을 구현하는 데 사용할 수 있는 강력한 도구 집합을 제공합니다. 스크립트 태스크와 스크립트 구성 요소에서는 관리되는 사용자 지정 어셈블리도 사용할 수 있습니다.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172983"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384491"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기(연결 관리자 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48172983"
 |옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련된 정보:** [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 데이터 원본에서 데이터를 검색합니다.|  
 |변수를 사용한 SQL 명령|변수에 SQL 쿼리 텍스트를 지정합니다.|  
   
@@ -98,9 +98,9 @@ ms.locfileid: "48172983"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [OLE DB 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [OLE DB 원본을 사용 하 여 데이터 추출](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [OLE DB 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [OLE DB 원본을 사용하여 데이터 추출](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md)  
   
   

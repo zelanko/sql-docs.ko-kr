@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83175d463c8b6fa54e88d17945def36a76b6fcfe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800035"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384301"
 ---
 # <a name="month-ssis-expression"></a>MONTH(SSIS 식)
   날짜의 월 부분을 나타내는 정수를 반환합니다.  
@@ -66,7 +66,7 @@ MONTH(ModifiedDate)
 MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DATEADD&#40;SSIS 식&#41;](dateadd-ssis-expression.md)   
  [DATEDIFF&#40;SSIS 식&#41;](datediff-ssis-expression.md)   
  [DATEPART&#40;SSIS 식&#41;](datepart-ssis-expression.md)   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - objects [Integration Services]
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 851235286553c0720708688fa4828595c3470d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5a557fd57062bc6af301decffada45ffd5d38933
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156613"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375821"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>패키지 탐색기에서 패키지 개체 보기
   이 절차에서는 패키지 탐색기를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 내의 개체를 보는 방법에 대해 설명합니다.  

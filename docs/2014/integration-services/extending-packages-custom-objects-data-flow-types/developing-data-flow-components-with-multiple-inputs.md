@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 334d197e9b251225b3ebe7df4445e47f42131075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771255"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384341"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>여러 입력을 지원하는 데이터 흐름 구성 요소 개발
   여러 입력을 지원하는 데이터 흐름 구성 요소는 여러 입력에서 데이터가 생성되는 속도가 균일하지 않을 경우 과도한 메모리를 사용할 수 있습니다. 둘 이상의 입력을 지원하는 사용자 지정 데이터 흐름 구성 요소를 개발한 경우 Microsoft.SqlServer.Dts.Pipeline 네임스페이스의 다음 멤버를 사용하여 이로 인한 메모리 가중을 관리할 수 있습니다.  

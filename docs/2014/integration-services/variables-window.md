@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b8541b0e590fe0fa6de9d577e69b7068fb2843d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206206"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393001"
 ---
 # <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  

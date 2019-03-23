@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 009a2eda2bf0690ee9657a156a02eb4659a3224d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793565"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381931"
 ---
 # <a name="token--ssis-expression"></a>TOKEN(SSIS 식)
   문자열에서 토큰을 구분하는 지정된 구분 기호와 반환할 토큰을 나타내는 토큰 번호를 기반으로 문자열에서 토큰(부분 문자열)을 반환합니다.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 397ba8b585b595878d4323e7a3523721c74b8163
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083553"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392061"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>다중 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 페이지를 사용하여 첫 번째로 선택한 원본 파일의 내용을 정의할 때 해당 내용을 열로 구분해서 볼 수 있습니다.  
@@ -42,8 +42,8 @@ ms.locfileid: "48083553"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   

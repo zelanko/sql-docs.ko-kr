@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53dca3cc167299a9a1a4b30820d1ad8104756929
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8e4e798100c4cf972949dc91dd7aeb5648a28275
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369755"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376782"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>WMI 데이터 판독기 태스크 편집기(WMI 옵션 페이지)
   **WMI 데이터 판독기 태스크 편집기** 대화 상자의 **WMI 옵션** 페이지를 사용하여 WQL(WMI Query Language) 쿼리의 원본 및 쿼리 결과의 대상을 지정할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "53369755"
  **WMIConnectionName**  
  목록에서 WMI 연결 관리자를 선택하거나 \<**새 WMI 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [WMI 연결 관리자](connection-manager/wmi-connection-manager.md), [WMI 연결 관리자 편집기](../../2014/integration-services/wmi-connection-manager-editor.md)  
+ **관련 항목:** [WMI 연결 관리자](connection-manager/wmi-connection-manager.md), [WMI 연결 관리자 편집기](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  태스크에서 실행하는 WQL 쿼리의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -66,13 +66,13 @@ ms.locfileid: "53369755"
  **WQLQuerySource**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = 변수  
  **WQLQuerySource**  
  목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련된 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ## <a name="destinationtype-dynamic-options"></a>DestinationType 동적 옵션  
   
@@ -80,13 +80,13 @@ ms.locfileid: "53369755"
  **대상**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련된 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = 변수  
  **대상**  
  목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련된 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377625"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381381"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
@@ -98,11 +98,11 @@ ms.locfileid: "53377625"
 |`Diagnostic`|동시에 실행될 수 있는 실행 파일 수처럼 패키지 실행에 영향을 주는 시스템 구성에 대한 정보를 제공합니다.|  
   
 ## <a name="configuration-of-packages"></a>패키지 구성  
- 의 **속성** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ **의** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 이러한 속성을 설정하는 방법은 [패키지 속성 설정](set-package-properties.md)을 참조하세요.  
   
- 이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>을 참조하세요.  
+ 이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.Package>를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 개체 모델 외에도 두 개의 패키지 작성용 그래픽 도구인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 디자이너와 [!INCLUDE[ssIS](../includes/ssis-md.md)] 가져오기 및 내보내기 마법사가 포함되어 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  

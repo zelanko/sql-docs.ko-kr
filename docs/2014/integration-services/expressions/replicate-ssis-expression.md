@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75b36d18c508ebeb9b11cecfc35d55761e9affcc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777055"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381219"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
   지정한 횟수만큼 복제된 문자 식을 반환합니다. *times* 인수는 정수여야 합니다.  
@@ -72,7 +72,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)  
   
   

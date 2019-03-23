@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1af35445cdbc6d4b5d24e8109af96e60f81af92f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0783f096db469c27a7f820f1a4594673ffe7e48f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052863"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378871"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>HTTP 연결 관리자 편집기(프록시 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **프록시** 탭을 사용하여 프록시 서버를 사용하도록 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  
@@ -60,6 +60,6 @@ ms.locfileid: "48052863"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 연결 관리자 편집기 &#40;Server 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

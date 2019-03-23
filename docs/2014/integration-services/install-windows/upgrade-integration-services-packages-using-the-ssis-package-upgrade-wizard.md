@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a902bb06c0aa624e3fa40c166210d6e13d9b2772
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807145"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384831"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만들어진 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 형식으로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 과정을 돕는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 제공합니다. 원래 패키지를 백업하도록 마법사를 구성할 수 있으므로 업그레이드에 문제가 있을 경우 원래 패키지를 계속 사용할 수 있습니다.  

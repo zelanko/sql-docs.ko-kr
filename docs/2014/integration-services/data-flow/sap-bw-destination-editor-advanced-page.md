@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73cd576233301131191f1b0de77fbec1567edc5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5396a6a94e1d5c4bfde39153081f3c4137a2c922
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773097"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387277"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 대상 편집기(고급 페이지)
   **SAP BW 대상 편집기**의 **고급** 페이지를 사용하여 패키지 크기 및 제한 시간 정보와 같은 고급 설정을 지정할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52773097"
  **InfoPackage 시작 안 함(대기만)**  
  대상이 InfoPackage를 트리거하지 않고 SAP Netweaver BW 시스템에서 데이터 로드를 시작했다는 알림을 받을 때까지 대기하도록 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 대상 편집기&#40;매핑 페이지&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](sap-bw-destination-editor-error-output-page.md)   

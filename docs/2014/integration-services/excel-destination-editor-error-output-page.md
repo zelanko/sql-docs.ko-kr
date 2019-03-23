@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125033"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387371"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Excel 대상 편집기(오류 출력 페이지)
   **Excel 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -53,8 +53,8 @@ ms.locfileid: "48125033"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Excel 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Excel 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](control-flow/foreach-loop-container.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ac3714dbbd96150aa9d670e370e8a475f6a57e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817955"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386211"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 속성 설정
   원본, 대상 및 변환을 비롯한 데이터 흐름 구성 요소 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  

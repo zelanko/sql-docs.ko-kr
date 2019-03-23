@@ -18,15 +18,15 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a84154aa1ea11ea432db46ad5b2a04c76dd6230
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372913"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381041"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
   **스크립트 태스크 편집기**에서 스크립트 태스크를 구성한 후에 스크립트 태스크 개발 환경에서 사용자 지정 코드를 작성합니다.  
@@ -247,7 +247,7 @@ To open Help, press F1.
   
 ![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md)   
  [스크립트 태스크 편집기에서 스크립트 태스크 구성](configuring-the-script-task-in-the-script-task-editor.md)  
   

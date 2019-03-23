@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 958a2990fe3bde49898451c9fefaee74b1b335f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750215"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384521"
 ---
 # <a name="request-log"></a>요청 로그
   **요청 로그** 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. SAP BW 원본의 구성 문제를 해결해야 하는 경우 이 정보가 유용할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52750215"
 |E|오류 메시지입니다.|  
 |W|경고 메시지입니다.|  
 |I|정보 메시지.|  
-|A|작업이 중단되었습니다.|  
+|변수를 잠그기 위한|작업이 중단되었습니다.|  
   
  **메시지**  
  기록된 이벤트와 관련된 메시지 텍스트를 표시합니다.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353799"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386551"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "53353799"
   
 ## <a name="related-content"></a>관련 내용  
   
--   비디오에서는 [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031), msdn.microsoft.com  
+-   MSDN Library의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031), msdn.microsoft.com  
   
 -   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   

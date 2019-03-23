@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e5599005737a852be6174448223b38318b218a51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 820fa0e277f2f1643c6d44d95f09a4d48546a4ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381861"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 처리 태스크 편집기(일반 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크를 명명 및 설명할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48186753"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 처리 태스크 편집기 &#40;Analysis Services 페이지&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Analysis Services 처리 태스크 편집기&#40;Analysis Services 페이지&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Analysis Services DDL 실행 태스크](control-flow/analysis-services-execute-ddl-task.md)  
   
   

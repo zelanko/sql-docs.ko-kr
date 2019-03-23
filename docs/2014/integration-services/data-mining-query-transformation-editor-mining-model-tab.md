@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 313c56f6f5a9b5bfd2ecf5662b5862ee7b1265c1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195343"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381091"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>데이터 마이닝 쿼리 변환 편집기(마이닝 모델 탭)
   **데이터 마이닝 쿼리 변환 편집기** 대화 상자의 **마이닝 모델** 탭을 사용하여 데이터 마이닝 구조 및 해당 마이닝 모델을 선택할 수 있습니다.  
@@ -42,6 +42,6 @@ ms.locfileid: "48195343"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [데이터 마이닝 쿼리 변환 편집기 &#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [데이터 마이닝 쿼리 변환 편집기&#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b0acde35830734d5b5cf344b36357dc766958dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112253"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386151"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>집계 변환 편집기(고급 탭)
   **집계 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 구성 요소 속성을 설정하고, 집계를 지정하고, 입력 및 출력 열의 속성을 설정할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48112253"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [집계 변환 편집기 &#40;집계 탭&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
- [집계 변환을 사용하여 데이터 집합의 값 집계](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [집계 변환 편집기&#40;집계 탭&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [집계 변환을 사용하여 데이터 세트의 값 집계](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

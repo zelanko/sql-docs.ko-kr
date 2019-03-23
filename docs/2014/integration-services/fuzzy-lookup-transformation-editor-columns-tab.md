@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: aaf45327-79e9-4760-9b4d-546ace91b5b4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 36c8feb7105af5b6f38b53be9e40f5ca28e752ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76bac38991d30c566c988beba7d806f35e107b23
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071363"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394471"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>유사 항목 조회 변환 편집기(열 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **열** 탭을 사용하여 입력 및 출력 열의 속성을 설정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48071363"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [유사 항목 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [유사 항목 조회 변환 편집기 &#40;고급 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [유사 항목 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [유사 항목 조회 변환 편집기&#40;고급 탭&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

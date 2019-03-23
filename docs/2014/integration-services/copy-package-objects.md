@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c1ebef7107ed58629502457bdc81bfe3e07f337
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9fa5ac78eec56c665f05c1624c8555042433731d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805675"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374561"
 ---
 # <a name="copy-package-objects"></a>패키지 개체 복사
   이 항목에서는 한 패키지 내에서 또는 패키지 간에 제어 흐름 항목, 데이터 흐름 항목 및 연결 관리자를 복사하는 방법에 대해 설명합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "52805675"
   
 6.  **연결 관리자** 영역을 마우스 오른쪽 단추로 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [제어 흐름](control-flow/control-flow.md)   
  [데이터 흐름](data-flow/data-flow.md)   
  [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)   

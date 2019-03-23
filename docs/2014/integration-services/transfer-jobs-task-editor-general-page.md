@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158403"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377831"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>작업 전송 태스크 편집기(일반 페이지)
   **작업 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 작업 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 작업 전송 태스크에 대한 자세한 내용은 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)을 참조하십시오.  
@@ -41,7 +41,7 @@ ms.locfileid: "48158403"
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](control-flow/integration-services-tasks.md)   
- [작업 전송 태스크 편집기 &#40;페이지 작업&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [작업 전송 태스크 편집기&#40;작업 페이지&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

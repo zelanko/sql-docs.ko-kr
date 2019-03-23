@@ -10,15 +10,15 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751535"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384877"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 병합 및 병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 입력 데이터는 물리적으로 정렬되어야 하며 출력 및 원본의 출력 열 또는 업스트림 변환에 정렬 옵션이 설정되어야 합니다. 정렬 옵션은 데이터가 정렬되었음을 나타내지만 데이터가 실제로 정렬되지 않은 경우에는 병합 또는 병합 조인 작업의 결과를 예측할 수 없습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "52751535"
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [병합 변환](merge-transformation.md)   
  [병합 조인 변환](merge-join-transformation.md)   
  [Integration Services 변환](integration-services-transformations.md)   

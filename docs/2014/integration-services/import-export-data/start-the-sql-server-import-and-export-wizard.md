@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a01ae02feae938c952096216b89858c007aee4f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351393"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384181"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 실행
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 데이터 원본 간에 데이터를 복사하고 기본 패키지를 구성하는 가장 간단한 방법을 제공합니다. 마법사에 대 한 자세한 내용은 참조 하세요. [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "53351393"
     > [!NOTE]  
     >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서는 마법사가 만든 패키지를 저장하는 옵션을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [SQL Server Data Tools에서 패키지 만들기](../create-packages-in-sql-server-data-tools.md)  
   

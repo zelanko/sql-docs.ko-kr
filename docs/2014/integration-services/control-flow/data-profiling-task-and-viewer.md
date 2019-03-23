@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f656d900051a70998ba00ed54e3e5a2fb545716a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367095"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379237"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
   데이터 프로파일링 태스크는 데이터 추출, 변환 및 로드 프로세스 내에서 데이터 프로파일링 기능을 제공합니다. 데이터 프로파일링 태스크를 사용하면 다음과 같은 이점이 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "53367095"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 및 데이터 프로파일링  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 프로세스는 다음 단계로 구성됩니다.  
   
- **1 단계: 데이터 프로 파일링 태스크 설정**  
+ **1단계: 데이터 프로 파일링 태스크 설정**  
  데이터 프로파일링 태스크는 계산하려는 프로필을 구성하기 위해 사용하는 태스크입니다. 데이터 프로파일링 태스크를 포함하는 패키지를 실행하여 프로필을 계산합니다. 이 태스크는 프로필 출력을 XML 형식으로 파일이나 패키지 변수에 저장합니다.  
   
  **자세한 내용은 다음을 참조하세요.** [데이터 프로파일링 태스크 설정](data-profiling-task.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select SMO Enumeration dialog box
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8165829254c1e67cd513852d338a5ea3489de751
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 274a56641ae4f452b8eda8bca00663b1a9e83380
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387289"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
   **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  

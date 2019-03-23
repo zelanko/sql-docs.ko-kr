@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116983"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384114"
 ---
 # <a name="query-builder"></a>쿼리 작성기
   **쿼리 작성기** 대화 상자를 사용하여 SQL 실행 태스크, OLE DB 원본 및 대상, 조회 변환에서 사용할 쿼리를 만들 수 있습니다.  

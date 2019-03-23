@@ -12,15 +12,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - error outputs [Integration Services]
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 983d83c8724db0e517175f120b20a3f2ff197487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136963"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384191"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 오류 출력 구성
   많은 데이터 흐름 구성 요소가 오류 출력을 지원하며 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 구성 요소에 따라 오류 출력을 다르게 구성할 수 있는 방법을 제공합니다. 오류 출력을 구성하는 것 외에도 오류 출력의 열을 구성할 수도 있습니다. 이 작업에는 구성 요소에서 추가한 **ErrorCode** 및 **ErrorColumn** 열의 구성이 포함됩니다.  

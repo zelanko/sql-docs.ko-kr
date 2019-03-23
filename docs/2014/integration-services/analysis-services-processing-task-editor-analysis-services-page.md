@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ead79b77838d90beddbd5317608331c3b925bbea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187633"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380901"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **Analysis Services** 페이지를 사용하여 Analysis Services 연결 관리자를 지정하고, 처리할 분석 개체를 선택하고, 처리 및 오류 처리 옵션을 설정할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48187633"
  **새로 만들기**  
  새 Analysis Services 연결 관리자를 만듭니다.  
   
- **관련 항목:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **관련 항목:** [Analysis Services 연결 관리자](connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 대화 상자 UI 참조 추가](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
  |속성|Description|  
@@ -63,7 +63,7 @@ ms.locfileid: "48187633"
  **영향 분석**  
  선택한 개체에 대한 영향 분석을 수행합니다.  
   
- **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **관련 항목:** [영향 분석 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **일괄 처리 설정 요약**  
  |속성|Description|  
@@ -77,11 +77,11 @@ ms.locfileid: "48187633"
  **설정 변경**  
  처리 옵션 및 차원 키의 오류 처리를 변경합니다.  
   
- **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **관련 항목:** [설정 변경 대화 상자 &#40;Analysis Services-다차원 데이터&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 처리 태스크 편집기 &#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services 처리 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [Analysis Services DDL 실행 태스크](control-flow/analysis-services-execute-ddl-task.md)  
   
   

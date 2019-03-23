@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecdc542e8bea3717a37c40c6addb2b35b9a5f03b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195313"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379761"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>플랫 파일 대상 편집기(매핑 페이지)
   **플랫 파일 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -42,6 +42,6 @@ ms.locfileid: "48195313"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [플랫 파일 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [플랫 파일 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353183"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385581"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services용 사용자 지정 개체 개발
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 제어 흐름 및 데이터 흐름 개체가 요구 사항을 완전히 충족하지 못하는 경우 다음을 비롯한 여러 가지 유형의 사용자 지정 개체를 직접 개발할 수 있습니다.  

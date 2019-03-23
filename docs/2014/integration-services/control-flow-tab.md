@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.controlflowwindow.f1
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9475ab98504b01a9b876ee1d5b8055fb86295123
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86e2e1793693527ee96ea4057061ade98b70884d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184463"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379592"
 ---
 # <a name="control-flow-tab"></a>제어 흐름 탭
   **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다.  

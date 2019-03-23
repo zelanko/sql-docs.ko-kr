@@ -10,15 +10,15 @@ helpviewer_keywords:
 - parsing [Integration Services]
 - data parsing [Integration Services]
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0de9927de85a161261d55de1de9ad9dcc46e4be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fd52b851d4ff35fe1fc9a3a9fed05be0b8098fa9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381995"
 ---
 # <a name="parsing-data"></a>데이터 구문 분석
   패키지의 데이터 흐름에서는 다양한 표준 및 사용자 지정 데이터 형식이 사용될 수 있는 다른 유형의 데이터 저장소 간의 데이터가 추출 및 로드됩니다. 데이터 흐름에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본은 데이터를 추출하고, 문자열 데이터를 구문 분석하고, 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하는 작업을 수행합니다. 이후의 변환에서는 데이터를 다른 데이터 형식으로 변환하기 위해 데이터를 구문 분석하거나 다른 데이터 형식이 포함된 열 복사본을 만들 수 있습니다. 구성 요소에 사용된 식에서는 인수와 피연산자를 다른 데이터 형식으로 캐스팅할 수도 있습니다. 마지막으로, 데이터가 데이터 저장소에 로드될 때 대상에서는 대상에 사용되는 데이터 형식으로 데이터를 변환하기 위해 데이터를 구문 분석할 수 있습니다. 자세한 내용은 [Integration Services Data Types](integration-services-data-types.md)을 참조하세요.  

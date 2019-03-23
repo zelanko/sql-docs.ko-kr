@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ebae86f0973da25b47c86f1be66181bc7b26ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380061"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 대상 편집기(오류 출력 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48213445"
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO NET 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

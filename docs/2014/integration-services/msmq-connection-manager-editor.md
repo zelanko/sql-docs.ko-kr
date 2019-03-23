@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42fe0f316914a83ab87deed68ff7095b66b80402
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d532433c36f3b4c18b39d16dcbbe81a3d969acfc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226553"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393072"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ 연결 관리자 편집기
   **MSMQ 연결 관리자** 대화 상자를 사용하여 MSMQ(메시지 큐)의 경로를 지정할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48226553"
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공개|\<컴퓨터 이름>\\<큐 이름\>|  
+|Public|\<컴퓨터 이름>\\<큐 이름\>|  
 |Private|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
   
  "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  

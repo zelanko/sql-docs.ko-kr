@@ -12,15 +12,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375605"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387471"
 ---
 # <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "53375605"
   
 -   블로그 항목, [Integration Services의 Excel, 3 부 중 3 부: 문제 및 대안](https://go.microsoft.com/fwlink/?LinkId=217676), dougbert.com 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Excel 원본](excel-source.md)   
  [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)   

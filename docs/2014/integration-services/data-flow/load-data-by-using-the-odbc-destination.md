@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf59655f907b048d08166e8cb7ef1e0f4bc63503
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771245"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383116"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
   이 절차에서는 ODBC 대상을 사용하여 데이터를 로드하는 방법을 보여 줍니다. ODBC 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  

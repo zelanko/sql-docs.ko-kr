@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Import Package dialog box
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1536c2fbb40fa44140cb7470db310ef633f67ede
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2631235c2ed0011aca4e734c7a61093203518636
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506791"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377941"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>패키지 가져오기 대화 상자 UI 참조
   **에서 사용 가능한** 패키지 가져오기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 가져오고 해당 패키지의 보호 수준을 설정 또는 수정할 수 있습니다.  

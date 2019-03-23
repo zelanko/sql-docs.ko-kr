@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2873a6864e3ac5d55f180bfc2555d8cb471620
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354473"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393631"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "53354473"
   
     ```  
   
-3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 참조 하세요. [방법: 데이터베이스 (SQL Server Management Studio) 백업](https://go.microsoft.com/fwlink/?LinkId=231812)합니다.  
+3.  **에서** 데이터베이스 백업 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
   
 4.  다음을 수행하여 ##MS_SSISServerCleanupJobLogin##에 대한 CREATE LOGIN 스크립트를 생성합니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)을 참조하세요.  
   

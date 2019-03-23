@@ -12,15 +12,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b76916940175e9a3b3acf7c157ffe05d2b2aebf8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351772"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385455"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
   WMI 이벤트 감시자 태스크는 WQL(WMI Query Language) 이벤트 쿼리를 사용하여 특정 이벤트를 지정하기 위해 WMI(Windows Management Instrumentation) 이벤트를 감시합니다. WMI 이벤트 감시자 태스크는 다음 용도로 사용할 수 있습니다.  

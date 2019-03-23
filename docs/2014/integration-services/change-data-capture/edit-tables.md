@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: acb954cd9193d5c6132a8d2d081250a8ecdff562
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770835"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385981"
 ---
 # <a name="edit-tables"></a>테이블 편집
   **테이블** 탭을 사용하여 Oracle 원본 데이터베이스에서 선택한 테이블과 열을 변경할 수 있습니다. 이 탭은 다음과 같은 요소로 구성되어 있습니다.  

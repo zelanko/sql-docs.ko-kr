@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce44e2709013a6d56d47ad30c90ecf5d92825503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185333"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385041"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48185333"
  점수를 용어의 빈도로 지정합니다.  
   
  **TFIDF**  
- 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다.  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))  
   
  **빈도 임계값**  
  단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  
@@ -57,8 +57,8 @@ ms.locfileid: "48185333"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [용어 추출 변환 편집기 &#40;용어 추출 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
- [용어 추출 변환 편집기 &#40;제외 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [용어 추출 변환 편집기&#40;용어 추출 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
+ [용어 추출 변환 편집기&#40;제외 탭&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [용어 조회 변환](data-flow/transformations/lookup-transformation.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b4814d45b0cb4184356f6a5059d33c556e239361
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ec24cd980cbfc71c5b9ba834f01bd17eb422400
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808955"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384451"
 ---
 # <a name="-multiply-ssis-expression"></a>*(곱하기)(SSIS 식)
   두 숫자 식을 곱합니다.  
@@ -60,7 +60,7 @@ ListPrice * .10
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연산자 우선 순위 및 계산 방향](operator-precedence-and-associativity.md)   
  [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md)  
   

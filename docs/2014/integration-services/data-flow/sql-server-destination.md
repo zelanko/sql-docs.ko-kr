@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8e1d7c41e2caf1a3e3bc03e8278c21e4fe7b79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375725"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374981"
 ---
 # <a name="sql-server-destination"></a>SQL Server 대상
   SQL Server 대상은 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 뷰로 데이터를 대량 로드합니다. 원격 서버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 액세스하는 패키지에서는 SQL Server 대상을 사용할 수 없습니다. 이러한 패키지에서는 대신 OLE DB 대상을 사용해야 합니다. 자세한 내용은 [OLE DB Destination](ole-db-destination.md)을 참조하세요.  

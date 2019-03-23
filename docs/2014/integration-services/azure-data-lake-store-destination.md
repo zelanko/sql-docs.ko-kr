@@ -12,17 +12,17 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPADLSDEST.F1
 ms.assetid: d0e86032-2a6b-48b2-898f-e94328474fde
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 980e9c4c1b903518d49ea7f3945646e1af2d8c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2f10f78f59a6ec1dd5d5119a89624295935d6ff9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125423"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382497"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 대상
-  **Azure Data Lake Store 대상** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 텍스트, Avro 및 ORC입니다. 
+  **Azure Data Lake Store 대상** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. 텍스트, Avro 및 ORC. 
   
 ## <a name="configure-the-azure-data-lake-store-destination"></a>Azure Data Lake Store 대상 구성 
 

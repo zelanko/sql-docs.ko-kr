@@ -11,15 +11,15 @@ f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793503"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374971"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
   **구성** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수, 연결 관리자, 환경 참조 등을 구성할 수 있습니다.  

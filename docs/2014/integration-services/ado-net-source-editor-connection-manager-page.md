@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052453"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380151"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>ADO NET 원본 편집기(연결 관리자 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -71,8 +71,8 @@ ms.locfileid: "48052453"
  **열기** 대화 상자를 사용하여 SQL 쿼리 텍스트가 포함된 파일을 찾을 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [ADO NET 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO NET 원본 편집기&#40;열 페이지&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [ADO NET 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md)  
   
   

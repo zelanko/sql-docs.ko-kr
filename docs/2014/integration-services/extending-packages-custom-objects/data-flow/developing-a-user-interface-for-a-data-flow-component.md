@@ -19,15 +19,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b40c30e870e7f2a945643dbaadb88e1880ad5b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362055"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376511"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
   구성 요소 개발자는 구성 요소를 편집할 때 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 표시되는 사용자 지정 사용자 인터페이스를 구성 요소에 제공할 수 있습니다. 사용자 지정 사용자 인터페이스를 구현하면 해당 구성 요소가 데이터 흐름 태스크에 추가되거나 데이터 흐름 태스크에서 삭제될 때와 해당 구성 요소에 대한 도움말이 요청될 때 이에 대한 알림을 받을 수 있습니다.  

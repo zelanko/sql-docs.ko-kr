@@ -20,15 +20,15 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1fc2e587f38f13730f8455b04d0542079158da9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354629"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389861"
 ---
 # <a name="working-with-images-with-the-script-task"></a>스크립트 태스크를 사용한 이미지 작업
   제품 또는 사용자 데이터베이스에는 텍스트 및 숫자 데이터 외에 이미지도 포함되는 경우가 많습니다. Microsoft .NET Framework의 `System.Drawing` 네임스페이스에서는 이미지 조작을 위한 클래스를 제공합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0aedda782c65cbe8d28f066b7e5e97d3e7fc87cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790775"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380937"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075604"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385531"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>사용자 정의 변수의 속성 설정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용자 정의 변수의 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
   
 -   변수 창.  
   
--   속성 창. **속성** 창에는 **변수** 창에서 사용할 수 없는 변수를 구성하기 위한 Description, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump 속성이 나열됩니다.  
+-   속성 창. 합니다 **속성** 창에서 사용할 수 없는 변수를 구성 하기 위한 속성을 나열 합니다 **변수** 창: 설명, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 속성을 업데이트할 수 없는 시스템 변수 집합도 제공합니다(RaiseChangedEvent 속성은 제외).  
@@ -53,7 +53,7 @@ ms.locfileid: "48075604"
   
  **Namespace 및 Name 속성을 설정합니다.**  
   
- 값을 `Name` 및 `Namespace` 속성은 Unicode Standard 2.0 또는 밑줄 (_)에 정의 된 대로 영문자를 사용 하 여 시작 해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
+ `Name` 및 `Namespace` 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>변수 창을 사용하여 속성 설정  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48075604"
 8.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
+ [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)   
  [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)   
  [패키지에서 사용자 정의 변수의 범위 추가, 삭제, 변경](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

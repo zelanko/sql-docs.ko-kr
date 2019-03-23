@@ -10,15 +10,15 @@ helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f04ce15704920ce8ac110946019883f153c57b05
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a8bcaeb04bdc2ff8b37860ffc434d2e188436411
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799865"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393844"
 ---
 # <a name="len-ssis-expression"></a>LEN(SSIS 식)
   문자 식에 포함된 문자의 수를 반환합니다. 문자열에 선행 및 후행 공백이 포함되어 있으면 공백도 개수에 포함됩니다. LEN은 싱글바이트 및 더블바이트 문자의 동일한 문자열에 대해 같은 값을 반환합니다.  

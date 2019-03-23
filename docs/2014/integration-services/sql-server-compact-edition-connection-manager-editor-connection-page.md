@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c99c146b1bef27195872f6166141fb4d91fdf1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a31fb2b1b4e158773e2f286ed5a3530d90c201c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178273"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385472"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 연결 관리자 편집기(연결 페이지)
   **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  
@@ -39,6 +39,6 @@ ms.locfileid: "48178273"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 연결 관리자 편집기 &#40;모든 페이지&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

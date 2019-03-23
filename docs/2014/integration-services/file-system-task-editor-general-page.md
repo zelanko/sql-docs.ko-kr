@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6778bd585d84601d35846cafca3822a81a3bb60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377281"
 ---
 # <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  
@@ -70,8 +70,8 @@ ms.locfileid: "48208753"
 |**디렉터리 내용 삭제**|디렉터리의 내용을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**파일 삭제**|파일을 삭제합니다. 이 값을 선택하면 원본에 대한 동적 옵션이 표시됩니다.|  
 |**디렉터리 이동**|디렉터리를 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.|  
-|**파일 이동**|파일을 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일을 이동할 때 없는 파일 이름을 대상으로 제공한 디렉터리 경로에 있습니다.|  
-|**파일 이름 바꾸기**|파일 이름을 바꿉니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일의 이름을 바꾸면 새 파일 이름을 포함 대상에 대해 제공한 디렉터리 경로에 있습니다.|  
+|**파일 이동**|파일을 이동합니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일을 이동할 때 대상으로 제공한 디렉터리 경로에 파일 이름이 포함되지 않도록 하십시오.|  
+|**파일 이름 바꾸기**|파일 이름을 바꿉니다. 이 값을 선택하면 원본 및 대상에 대한 동적 옵션이 표시됩니다.<br /><br /> 참고: 파일 이름을 바꿀 때 대상에 대해 제공한 디렉터리 경로에 새 파일 이름을 포함시키십시오.|  
 |**특성 설정**|파일 또는 디렉터리의 특성을 설정합니다. 이 값을 선택하면 원본 및 작업에 대한 동적 옵션이 표시됩니다.|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "48208753"
  **DestinationVariable**  
  목록에서 변수 이름을 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 동적 옵션  
   
@@ -102,13 +102,13 @@ ms.locfileid: "48208753"
  **SourceVariable**  
  목록에서 변수 이름을 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Operation 동적 옵션  
   

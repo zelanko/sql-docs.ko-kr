@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7489a23fdf7b9501b4b7bc0a41967b0407558a22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8a5fbff347c6b06d500f3baebe3dd980000f0bd2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106443"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383220"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 원본 편집기(열 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
@@ -44,8 +44,8 @@ ms.locfileid: "48106443"
  각 출력 열에 고유한 이름을 지정합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다. 제공한 이름은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [ADO NET 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO NET 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md)  
   
   

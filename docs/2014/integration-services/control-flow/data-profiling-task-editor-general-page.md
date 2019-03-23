@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805035"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385357"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "52805035"
 > [!NOTE]  
 >  또한 *\<드라이브>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](single-table-quick-profile-form-data-profiling-task.md)   
  [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](data-profiling-task-editor-profile-requests-page.md)  
   

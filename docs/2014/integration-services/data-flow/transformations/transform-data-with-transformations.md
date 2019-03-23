@@ -11,15 +11,15 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1243f3cc6e7c8d7cd3ea2078e96e0f3844a8596
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767535"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382041"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "52767535"
   
 -   [데이터 흐름 구성 요소의 속성 설정](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 흐름 태스크](../../control-flow/data-flow-task.md)   
  [데이터 흐름](../data-flow.md)   
  [경로에 구성 요소 연결](../../connect-components-with-paths.md)   

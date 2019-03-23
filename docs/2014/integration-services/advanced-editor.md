@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43cf4ea4b228226bb12be8a47befd6f55513c40d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756795"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387181"
 ---
 # <a name="advanced-editor"></a>고급 편집기
   **고급 편집기** 대화 상자를 사용하여 선택한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체의 속성을 구성할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "52756795"
   
 -   [Integration Services 변환](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc075a50f3b57cf4856dbcd2ee36c13b83d968d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773375"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378841"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>패키지 저장 및 실행(SQL Server 가져오기 및 내보내기 마법사)
   **패키지 저장 및 실행** 대화 상자를 사용하여 패키지를 즉시 실행하거나 나중에 실행하도록 저장할 수 있고, 즉시 실행하는 동시에 저장할 수도 있습니다.  

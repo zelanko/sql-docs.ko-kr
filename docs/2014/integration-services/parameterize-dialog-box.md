@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76a48abe8ab2fe8481b2944ed6b3c77258b4c855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c6391e739f4a7f2556ad75acf377a2e68db8151
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075621"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382484"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크의 속성과 연결할 수 있습니다. 태스크나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름 탭을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수화**를 클릭하여 이 대화 상자를 엽니다. 다음 목록에서는 이 대화 상자의 UI 요소에 대해 설명합니다. 매개 변수에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 매개 변수](integration-services-ssis-package-and-project-parameters.md)를 참조하세요.  

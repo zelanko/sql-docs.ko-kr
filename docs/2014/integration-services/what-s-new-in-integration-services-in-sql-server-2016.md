@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 804e528aed70a6612f35391bd4ad96ebfd03df3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6eda4eb4f01819bd569a472df01a276c5f270f31
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792015"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383106"
 ---
 # <a name="what39s-new-integration-services"></a>새로운&#39;s (Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 이전 릴리스에서 변경되지 않았습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52792015"
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서비스 팩 2에는 `ValidationDetails` 속성이 도입되었습니다. 이 새 속성은 당시에는 발표되거나 문서화되지 않았습니다. `ValidationDetails` 속성 또한 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 SQL Server 2016에서 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 2014 버전에서 지원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb9f243d05b741fcc803f29f5703c1e02a6244d3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d0660fba12f2c83cd7e97b80ac863d8d05eda18
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353699"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380181"
 ---
 # <a name="dtutil-utility"></a>Encrypt
   **dtutil** 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리합니다. 이 유틸리티는 패키지를 복사, 이동, 삭제하거나 패키지가 있는지 여부를 확인할 수 있습니다. 이러한 동작은 [!INCLUDE[ssIS](../includes/ssis-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지 저장소 및 파일 시스템 중 하나에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지에서 수행할 수 있습니다. 유틸리티가 **msdb**에 저장된 패키지에 액세스하는 경우 명령 프롬프트에 사용자 이름과 암호를 입력해야 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 사용하면 사용자 이름과 암호를 모두 입력해야 합니다. 사용자 이름이 누락된 경우 **dtutil** 은 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 로그온하려고 시도합니다. 패키지 저장소 유형은 `/SQL`, `/FILE` 및 `/DTS` 옵션으로 식별됩니다.  
@@ -112,7 +112,7 @@ dtutil /option [value] [/option [value]]...
 |/SourceP[assword] *password*|*인증을 사용하는* 인스턴스의 데이터베이스에 저장된 *패키지를 검색할 수 있도록* SQL [!INCLUDE[ssIS](../includes/ssis-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SOURCEUSER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 사용할 암호를 지정합니다. 지정 하면 오류가 발생 *SOURCEPASSWORD* 포함 되지 않은 명령줄에서를 `SOURCEUSER` 옵션입니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *server_instance*|[!INCLUDE[ssIS](../includes/ssis-md.md)]에 저장된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 패키지를 검색할 수 있도록 `SQL` 옵션에 사용할 서버 이름을 지정합니다. *SQL* , *SQL*, *SQL* *SQL*또는 *MOVE* *SQL* 옵션을 사용하여 패키지 위치를 지정해야 합니다.<br /><br /> 서버 이름에 백슬래시 및 인스턴스 이름을 추가하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름을 지정할 수 있습니다.|  
 |/SourceU[ser] *username*|*인증을 사용하는* 에 저장된 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 검색할 수 있도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SOURCESERVER [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 사용할 사용자 이름을 지정합니다. *SOURCEUSER* , *SIGN SQL*또는 *COPY SQL*옵션이 포함되지 않은 명령줄에서 *MOVE SQL* 를 지정하면 오류가 발생합니다.<br /><br /> 참고: [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SQ[L] *package_path*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지의 위치를 지정합니다. 이 옵션은 패키지가 **msdb** 데이터베이스에 저장되었음을 나타냅니다. *package_path* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지의 경로와 이름을 지정합니다. 폴더 이름은 백슬래시로 끝납니다.  다음 옵션과 같은 명령줄에서 *SQL* 옵션을 지정하면 DTEXEC_DTEXECERROR가 반환됩니다.<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL*합니다. *SQL* 옵션은 다음 옵션 중 하나와 함께 사용하거나 혼자 사용할 수 있습니다. <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> *SOURCEUSERNAME* 이 포함되지 않은 경우 패키지에 액세스하기 위해 Windows 인증이 사용됩니다. *SOURCEPASSWORD* 는 *SOURCEUSER* 가 있는 경우에만 허용됩니다. *SOURCEPASSWORD* 를 포함하지 않으면 빈 암호가 사용됩니다.<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
+|/SQ[L] *package_path*|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지의 위치를 지정합니다. 이 옵션은 패키지가 **msdb** 데이터베이스에 저장되었음을 나타냅니다. *package_path* 인수는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지의 경로와 이름을 지정합니다. 폴더 이름은 백슬래시로 끝납니다.  다음 옵션과 같은 명령줄에서 *SQL* 옵션을 지정하면 DTEXEC_DTEXECERROR가 반환됩니다.<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL*. *SQL* 옵션은 다음 옵션 중 하나와 함께 사용하거나 혼자 사용할 수 있습니다. <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> *SOURCEUSERNAME* 이 포함되지 않은 경우 패키지에 액세스하기 위해 Windows 인증이 사용됩니다. *SOURCEPASSWORD* 는 *SOURCEUSER* 가 있는 경우에만 허용됩니다. *SOURCEPASSWORD* 를 포함하지 않으면 빈 암호가 사용됩니다.<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>dtutil 종료 코드  
  **dtutil** 은 구문 오류가 있거나, 잘못된 인수가 사용되었거나, 잘못된 옵션 조합이 지정된 경우 경고를 표시하는 종료 코드를 설정합니다. 그 이외의 경우 이 유틸리티는 "작업이 완료되었습니다"라는 메시지를 표시합니다. 다음 표에는 **dtutil** 유틸리티가 종료 시 설정할 수 있는 값이 나열되어 있습니다.  

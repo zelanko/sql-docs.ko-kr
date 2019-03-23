@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33935997c2c53867555001fa93ba9973257650d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793695"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375071"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART(SSIS 식)
   날짜의 특정 부분을 나타내는 정수를 반환합니다.  

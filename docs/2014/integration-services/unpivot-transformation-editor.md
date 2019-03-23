@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b2476969d41acbff7496c14b43e0aa7089eb78e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb4a435d88ea867c2152d71afb87cdd731f452e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119331"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383876"
 ---
 # <a name="unpivot-transformation-editor"></a>피벗 해제 변환 편집기
   **피벗 해제 변환 편집기** 대화 상자를 사용하여 행에 피벗할 열을 선택하고 데이터 열 및 새 피벗 값 출력 열을 지정할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48119331"
   
  [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 피벗 키 값 열 이름은 **제품** 이며 **제품** , **탄산음료**, **우유**, **맥주**, **칩**열이 피벗 해제되는 새 **제품** 열을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [피벗 변환](data-flow/transformations/pivot-transformation.md)  
   

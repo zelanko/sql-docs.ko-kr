@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 94476576eac6c466a0667af8cf1b5e166eaec941
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f6922172a21ac41e3afe003d5f7307a5424bf13
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804620"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381601"
 ---
 # <a name="edit-the-advanced-properties"></a>고급 속성 편집
   **고급** 탭을 사용하여 CDC 인스턴스에 특별 속성을 추가할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "52804620"
   
  입력할 수 있는 속성에 대한 자세한 내용은 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)에서 사용 가능한 옵션 테이블을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC 인스턴스 속성을 편집하는 방법](how-to-edit-the-cdc-instance-properties.md)  
   

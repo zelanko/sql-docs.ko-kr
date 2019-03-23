@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2d4c308245312fa4fa80c1f320e874f89a3dec7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790975"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382011"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  

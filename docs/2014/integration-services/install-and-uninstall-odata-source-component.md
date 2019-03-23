@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86aa25f148c44343a57e0e55831663155d288830
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 34a71ed768c49436a4dba4ecf225bdd009132866
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374445"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385262"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>OData 원본 구성 요소 설치 및 제거
   이 항목에서는 컴퓨터에서 OData 원본 구성 요소를 설치하거나 제거하기 위한 지침을 제공합니다.  

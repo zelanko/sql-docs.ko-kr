@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 355b736066084ed0a30a72c2d3b30010a8277674
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b792290b4c774a9a16dfed685fff83a5a8495f0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217315"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379771"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>용어 조회 변환 편집기(용어 조회 탭)
   **용어 조회 변환 편집기** 대화 상자의 **용어 조회** 탭을 사용하여 입력 열을 참조 테이블의 조회 열로 매핑하고 각 출력 열의 별칭을 제공할 수 있습니다.  
@@ -45,8 +45,8 @@ ms.locfileid: "48217315"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [용어 조회 변환 편집기 &#40;참조 테이블 탭&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [용어 조회 변환 편집기 &#40;고급 탭&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [용어 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [용어 조회 변환 편집기&#40;고급 탭&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [용어 추출 변환](data-flow/transformations/term-extraction-transformation.md)  
   
   

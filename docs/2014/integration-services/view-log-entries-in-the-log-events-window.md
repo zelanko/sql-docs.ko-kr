@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51c08b271229e207f72b594d87e3c9f95b6770f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e3f5e41c6e20abbdcf78759c078632543217617
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172733"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385321"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>이벤트 로그 창에서 로그 항목 보기
   이 절차에서는 패키지를 실행하고 패키지에서 작성한 로그 항목을 보는 방법을 설명합니다. 로그 항목은 실시간으로 볼 수 있습니다. **이벤트 로그** 창에 기록된 로그 항목을 상세히 분석할 수 있게 복사하여 저장할 수도 있습니다.  

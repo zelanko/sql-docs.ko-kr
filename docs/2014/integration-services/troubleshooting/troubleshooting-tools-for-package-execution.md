@@ -13,15 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca170bbae969db8610e1e0ec6e61e3e68fa905f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377635"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374926"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2286ba205d6ca12f025c8ac154b77a11e1754ff2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749875"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380571"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  

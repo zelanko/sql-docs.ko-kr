@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7117115e461d0e33a3c62100a3e914128003b96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790355"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376651"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 대상 사용자 지정 속성
   DataReader 대상에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "52790355"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|DataReader|String|DataReader 대상의 클래스 이름입니다.|  
+|DataReader|문자열|DataReader 대상의 클래스 이름입니다.|  
 |FailOnTimeout|Boolean|`ReadTimeout`이 발생하는 경우의 실패 여부를 나타냅니다. 이 속성의 기본값은 **False**입니다.|  
 |ReadTimeout|정수|시간이 초과되기 전의 시간(밀리초)입니다. 이 속성의 기본값은 30000(30초)입니다.|  
   

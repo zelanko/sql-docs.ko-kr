@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d449e6245b779fd281fc9c8f047a9eb352d56846
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822767"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381060"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT(SSIS 식)
   지정된 구분 기호로 구분된 토큰을 포함하는 문자열의 토큰 수를 반환합니다.  
@@ -50,7 +50,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   변수 및 열을 이 식의 인수로 사용할 수 있습니다.  
   
 ## <a name="expression-examples"></a>식 예  
- 다음 예에서는 문자열에 토큰 3개가 있으므로 TOKENCOUNT 함수에서 3을 반환합니다. "01", "12", "2011"입니다.  
+ 다음 예에서는 문자열에 토큰 3개가 있으므로 TOKENCOUNT 함수에서 3을 반환합니다. "01", "12", "2011".  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7f97d7d1671aada299b685981e81d62010df24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788346"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384761"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
   Oracle 테이블 및 열 선택 페이지를 사용하여 변경이 캡처되는 Oracle 원본 데이터베이스에서 테이블을 선택할 수 있습니다. 이 페이지는 다음과 같은 요소로 구성되어 있습니다.  

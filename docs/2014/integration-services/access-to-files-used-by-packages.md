@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214993"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378491"
 ---
 # <a name="access-to-files-used-by-packages"></a>패키지에서 사용되는 파일 액세스
   패키지 보호 수준은 패키지 외부에 저장된 파일을 보호하지 않습니다. 이러한 파일은 다음과 같습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48214993"
  이러한 파일은 특히 중요한 정보를 포함하고 있을 경우 별도로 보호해야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 구성에 로그인 및 암호 정보와 같은 중요한 정보가 포함된 경우 구성을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장하거나 ACL(액세스 제어 목록)을 사용하여 파일이 저장된 위치나 폴더에 대한 액세스를 제한하고 특정 계정에만 액세스할 수 있도록 해야 합니다. 일반적으로 패키지를 실행하도록 허용할 계정이나 구성, 검사점 및 로그 파일의 내용에 대한 검토를 비롯하여 패키지를 관리하고 문제를 해결하는 계정에 대해 액세스 권한을 부여합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 서버 및 데이터베이스 수준에서 보호하므로 보다 안전한 저장소를 제공합니다. 구성을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형을 사용하고 파일 시스템을 저장하려면 XML 구성 유형을 사용합니다.  
+ 구성에 로그인 및 암호 정보와 같은 중요한 정보가 포함된 경우 구성을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장하거나 ACL(액세스 제어 목록)을 사용하여 파일이 저장된 위치나 폴더에 대한 액세스를 제한하고 특정 계정에만 액세스할 수 있도록 해야 합니다. 일반적으로 패키지를 실행하도록 허용할 계정이나 구성, 검사점 및 로그 파일의 내용에 대한 검토를 비롯하여 패키지를 관리하고 문제를 해결하는 계정에 대해 액세스 권한을 부여합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 서버 및 데이터베이스 수준에서 보호하므로 보다 안전한 스토리지를 제공합니다. 구성을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 유형을 사용하고 파일 시스템을 저장하려면 XML 구성 유형을 사용합니다.  
   
  자세한 내용은 [패키지 구성](../../2014/integration-services/package-configurations.md), [패키지 구성 만들기](../../2014/integration-services/create-package-configurations.md)및 [SQL Server 설치에 대한 보안 고려 사항](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
   

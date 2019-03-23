@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df3510840e06cef8a2807232102346177a1365b0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f9d36b6394aa3921a9262a8b4afc544033c7a20
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790725"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385331"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
   다음 표에서는 ODBC 대상의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
