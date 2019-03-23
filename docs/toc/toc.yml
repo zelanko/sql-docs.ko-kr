@@ -16346,7 +16346,7 @@ items:
           href: ../t-sql/queries/freetext-transact-sql.md
         - name: IS NULL
           href: ../t-sql/queries/is-null-transact-sql.md
-    - name: 명령문
+    - name: 문
       href: ../t-sql/statements/statements.md
       items:
       - name: 일반
@@ -17219,9 +17219,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 3f19b93765528f26054042199d3e33b5098d205e
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222187"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356546"
