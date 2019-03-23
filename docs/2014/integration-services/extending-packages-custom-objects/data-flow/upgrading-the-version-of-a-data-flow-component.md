@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0aee7f7a06d1188944857f2b6f157520cbc388b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 33ea6f845c323a858d1bd89318f2b8e07b734edd
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372855"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387791"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 버전 업그레이드
   이전 버전의 구성 요소를 사용하여 만든 패키지에는 더 이상 유효하지 않은 메타데이터가 들어 있을 수 있습니다. 예를 들어 최신 버전의 구성 요소에서 사용법이 수정된 사용자 지정 속성이 이러한 메타데이터에 해당합니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> 메서드를 재정의하여 이전 패키지에 이미 저장된 메타데이터를 현재 구성 요소 속성에 맞게 업데이트할 수 있습니다.  

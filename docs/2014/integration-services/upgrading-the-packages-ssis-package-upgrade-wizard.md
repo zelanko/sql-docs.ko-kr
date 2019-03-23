@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 037d9e4c6c8e3d5b720f234f15d57c7f14b081ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cc27106e3aa749f9462659190f006bcc8f5627b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084753"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388081"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>패키지 업그레이드(SSIS 패키지 업그레이드 마법사)
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  

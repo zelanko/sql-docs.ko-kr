@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fba1021e4152d5d810b54d29417864936f067800
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cf651979dcf1cf651fecb6c9f385396a7dcb801d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183373"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389011"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 대상 편집기(오류 출력 페이지)
   **ODBC 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48183373"
  오류 또는 잘림을 발생시키는 행이 ODBC 대상의 오류 출력으로 전송됩니다. 자세한 내용은 ODBC 대상을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [ODBC 대상 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

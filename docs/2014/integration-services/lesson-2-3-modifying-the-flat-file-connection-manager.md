@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16a72ca205e3c1ba972169e2114321d44a8caed8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822107"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389701"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>3단계: 플랫 파일 연결 관리자 수정
   이 태스크에서는 1단원에서 만들어 구성한 플랫 파일 연결 관리자를 수정합니다. 처음 만든 플랫 파일 연결 관리자는 파일 하나를 정적으로 로드하도록 구성되어 있습니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User:varFileName`을 허용하도록 연결 관리자의 ConnectionString 속성을 수정해야 합니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "52822107"
 8.  다시 **확인** 을 클릭하여 **PropertiesExpressionEditor** 대화 상자를 닫습니다.  
   
 ## <a name="next-lesson-task"></a>다음 단원 태스크  
- [4 단계: 2 단원 자습서 패키지 테스트](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [4단계: 2 단원 자습서 패키지 테스트](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 887fa745a0f4fab9d7faf716fd7ad26fb3be1fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158473"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389193"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services 서비스의 뷰 이벤트
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스의 이벤트는 다음 두 도구를 사용하여 볼 수 있습니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "48158473"
   
 2.  **이벤트 뷰어**를 클릭합니다.  
   
-3.  **이벤트 뷰어** 대화 상자에서 **응용 프로그램**을 클릭합니다.  
+3.  **이벤트 뷰어** 대화 상자에서 **애플리케이션**을 클릭합니다.  
   
-4.  **응용 프로그램** 스냅인의 **원본** 열 값이 **SQLISService**인 항목을 찾아 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+4.  **애플리케이션** 스냅인의 **원본** 열 값이 **SQLISService**인 항목을 찾아 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 5.  필요에 따라 위쪽 또는 아래쪽 화살표를 클릭하여 이전 또는 다음 이벤트를 표시합니다.  
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542742"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391739"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>다중 플랫 파일 연결 관리자 편집기(고급 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 플랫 파일 연결 관리자에서 연결하는 텍스트 파일에 있는 각 열의 데이터 형식 및 구분 기호와 같은 속성을 설정할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52542742"
  **유형 제안**  
  **열 유형 제안** 대화 상자를 사용하여 첫 번째로 선택한 파일에 있는 샘플 데이터를 평가하고 각 열의 데이터 형식과 길이에 대한 제안을 가져올 수 있습니다. 자세한 내용은 [열 유형 제안 대화 상자 UI 참조](connection-manager/suggest-column-types-dialog-box-ui-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)   
  [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   

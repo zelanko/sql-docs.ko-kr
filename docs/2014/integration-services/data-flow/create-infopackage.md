@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d1d40e0f62f27ffa46035ce24be809e58ea1f41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777185"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388981"
 ---
 # <a name="create-infopackage"></a>InfoPackage 만들기
   **InfoPackage 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoPackage를 만들 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "52777185"
  **저장 및 활성화**  
  새 InfoPackage를 저장하고 활성화합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Connector 1.1 for SAP BW F1 도움말](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

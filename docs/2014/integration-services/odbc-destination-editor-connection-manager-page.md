@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0c778d51d5fb8f8c0598fb8aefb747e41271c815
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc651d10df7433bdb0217414f251d16ed6abdf70
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060713"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390871"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 대상 편집기(연결 관리자 페이지)
   **ODBC 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 ODBC 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -59,6 +59,6 @@ ms.locfileid: "48060713"
 ## <a name="see-also"></a>관련 항목  
  [ODBC 대상 사용자 지정 속성](data-flow/odbc-destination-custom-properties.md)   
  [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [ODBC 대상 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

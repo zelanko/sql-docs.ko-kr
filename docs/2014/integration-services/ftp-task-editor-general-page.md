@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054203"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388741"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 태스크 편집기(일반 페이지)
   **FTP 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 통신하는 FTP 서버에 연결하는 FTP 연결 관리자를 지정할 수 있습니다. 또한 FTP 태스크를 명명 및 설명할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48054203"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP 태스크 편집기 &#40;파일 전송 페이지&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP 태스크 편집기&#40;파일 전송 페이지&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [식 페이지](expressions/expressions-page.md)  
   
   

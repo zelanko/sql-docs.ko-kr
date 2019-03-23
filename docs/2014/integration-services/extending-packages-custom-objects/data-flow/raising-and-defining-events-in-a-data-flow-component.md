@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 454d14e0ee0973b5bba7ca0357bbc890812ddbd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f3d0feff8d95a8fb0d1e7b6279e36567e06c7f81
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358605"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390821"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 이벤트 발생 및 정의
   구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 속성에 제공된 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 인터페이스에 정의된 일부 이벤트를 발생시킬 수 있습니다. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A> 컬렉션을 사용하여 사용자 지정 이벤트를 정의하고 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A> 메서드를 사용하여 실행하는 동안 해당 이벤트를 발생시킬 수도 있습니다. 이 섹션에서는 이벤트를 만들고 발생시키는 방법을 설명하고 디자인 타임에 이벤트를 발생시켜야 하는 경우에 대한 지침을 제공합니다.  
@@ -92,7 +92,7 @@ End Sub
   
 ![Integration Services 아이콘 (작은)](../../media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../integration-services-ssis-event-handlers.md)   
  [패키지에 이벤트 처리기 추가](../../add-an-event-handler-to-a-package.md)  
   

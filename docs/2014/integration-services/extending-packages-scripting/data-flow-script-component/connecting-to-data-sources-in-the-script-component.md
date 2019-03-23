@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], connecting to data sources
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4af1e5e1aedcd9916c1d4f6a13d0c4f63922b8b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375465"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390071"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>스크립트 구성 요소에서 데이터 원본에 연결
   연결 관리자는 특정 유형의 데이터 원본에 연결하는 데 필요한 정보를 캡슐화하고 저장하는 편리한 단위입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  

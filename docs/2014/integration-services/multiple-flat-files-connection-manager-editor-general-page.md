@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c7af9641ffc033c2c7173eaf74884700de7a3ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176443"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391641"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>다중 플랫 파일 연결 관리자 편집기(일반 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **일반** 페이지를 사용하여 데이터 형식이 같은 파일 그룹을 선택하고 데이터 형식을 지정할 수 있습니다. 다중 플랫 파일 연결 기능을 사용하면 패키지를 같은 형식의 텍스트 파일 그룹에 연결할 수 있습니다.  
@@ -83,8 +83,8 @@ ms.locfileid: "48176443"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [다중 플랫 파일 연결 관리자 편집기 &#40;페이지를 미리 보기&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366865"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392109"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "53366865"
   
  로그 이벤트는 대부분 여러 개의 항목을 기록하며 다양한 로그 항목의 메시지에는 복잡한 데이터가 들어 있습니다. 복잡한 메시지 내용을 보다 쉽게 이해하고 전달할 수 있도록 메시지 텍스트를 구문 분석할 수 있습니다. 로그의 위치에 따라 Transact-SQL 문이나 스크립트 구성 요소를 사용하여 복잡한 텍스트를 열이나 보다 유용한 그 밖의 형식으로 구분할 수 있습니다.  
   
- 예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185: OLE DB 원본 출력 : 1180: 정렬 : 1181: 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 `OnPipelineRowsSent` 이벤트에 의해 기록된 것입니다.  
+ 예를 들어 다음 표에서는 "행이 데이터 흐름 구성 요소에 입력으로 제공되었습니다. :  : 1185 : OLE DB 원본 출력 : 1180 : 정렬 : 1181 : 정렬 입력 : 76"이라는 메시지가 여러 개의 열로 구문 분석된 결과를 보여 줍니다. 이 메시지는 OLE DB 원본의 행이 정렬 변환으로 보내질 때 `OnPipelineRowsSent` 이벤트에 의해 기록된 것입니다.  
   
 |Column|Description|값|  
 |------------|-----------------|-----------|  

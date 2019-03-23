@@ -12,25 +12,25 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145603"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388381"
 ---
 # <a name="use-variables-in-packages"></a>패키지에서 변수 사용
   변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 추가된 유용하고 융통성 있는 기능입니다. 변수는 패키지 개체 간 및 부모 패키지와 자식 패키지 간 통신을 제공합니다. 식과 스크립트에도 변수를 사용할 수 있습니다.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>사용자 정의 변수 및 시스템 변수  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 시스템 변수를 제공 하 고 사용자 정의 변수를 지원 합니다. 새 패키지를 만들거나 패키지에 컨테이너 또는 태스크를 추가하거나 이벤트 처리기를 만들면 컨테이너를 위한 시스템 변수 집합이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 포함됩니다. 시스템 변수는 패키지, 컨테이너, 태스크 또는 이벤트 처리기에 대한 유용한 정보를 포함합니다. 예를 들어 런타임에 **MachineName** 시스템 변수는 패키지가 실행되는 컴퓨터의 이름을 포함하며 **StartTime** 은 패키지 실행이 시작된 시각을 포함합니다. 시스템 변수는 읽기 전용입니다. 자세한 내용은 [System Variables](system-variables.md)을 참조하세요.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 시스템 변수를 제공하고 사용자 정의 변수를 지원합니다. 새 패키지를 만들거나 패키지에 컨테이너 또는 태스크를 추가하거나 이벤트 처리기를 만들면 컨테이너를 위한 시스템 변수 집합이 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 포함됩니다. 시스템 변수는 패키지, 컨테이너, 태스크 또는 이벤트 처리기에 대한 유용한 정보를 포함합니다. 예를 들어 런타임에 **MachineName** 시스템 변수는 패키지가 실행되는 컴퓨터의 이름을 포함하며 **StartTime** 은 패키지 실행이 시작된 시각을 포함합니다. 시스템 변수는 읽기 전용입니다. 자세한 내용은 [System Variables](system-variables.md)을 참조하세요.  
   
  사용자 정의 변수를 만들고 이를 패키지에서 사용할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)]에서 사용자 정의 변수는 스크립트, 선행 제약 조건에 사용되는 식, For 루프 컨테이너, 파생 열 변환 및 조건부 분할 변환에 사용되는 식, 속성 값을 업데이트하는 속성 식 등의 다양한 용도에 사용됩니다.  
   
- 예를 들어 For 루프 컨테이너의 평가 조건에 사용자 정의 변수를 사용할 수 있습니다. Foreach 루프 컨테이너의 열거자 컬렉션 값을 변수로 매핑할 수 있으며 SQL 실행 태스크가 매개 변수가 있는 SQL 문을 사용하는 경우 해당 문의 매개 변수를 변수로 매핑할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
+ 예를 들어 For 루프 컨테이너의 평가 조건에 사용자 정의 변수를 사용할 수 있습니다. Foreach 루프 컨테이너의 열거자 컬렉션 값을 변수로 매핑할 수 있으며 SQL 실행 태스크가 매개 변수가 있는 SQL 문을 사용하는 경우 해당 문의 매개 변수를 변수로 매핑할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)을 참조하세요.  
   
 ## <a name="variables-usage-scenarios"></a>변수 사용 시나리오  
  변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 다양한 방법으로 사용됩니다. 패키지 개발이 본격적으로 진행되면 솔루션에서 요구하는 유연성과 관리 효율성을 구현하기 위해 사용자 정의 변수를 패키지에 추가하는 작업이 필요할 것입니다. 시나리오에서 따라서는 시스템 변수도 일반적으로 사용됩니다.  

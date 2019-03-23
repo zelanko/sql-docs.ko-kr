@@ -13,21 +13,21 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221543"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389241"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결
   선행 제약 조건은 두 실행 개체를 연결합니다. 실행 개체는 임의의 태스크, For 루프, Foreach 루프 또는 시퀀스 컨테이너일 수 있습니다. 이 절차에서는 선행 제약 조건에 대한 기본 동작을 설정하는 방법과 기본 선행 제약 조건을 사용하여 실행 개체를 연결하는 방법에 대해 설명합니다.  
   
 ## <a name="creating-default-precedence-constraints"></a>기본 선행 제약 조건 만들기  
- 처음 사용할 때 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너, 선행 제약 조건의 기본값은 `Success`합니다. 다음 단계에 따라 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.  
+ [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 처음 사용할 때 선행 제약 조건의 기본값은 `Success`입니다. 다음 단계에 따라 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>선행 제약 조건에 대한 기본값을 설정하려면  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c6f7ef38c779b07b9cbeffc2b9300360620e350
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792878"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393031"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 세 가지 고정된 데이터베이스 수준 역할을 포함 `db_ssisadmin`, **db_ssisltduser**, 및 **db_ssisoperator**, 패키지에 대 한 액세스를 제어 합니다. 에 저장 된 패키지에만 역할을 구현할 수 있습니다 합니다 `msdb` 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 패키지에 역할을 할당하십시오. 역할 할당에 저장 되는 `msdb` 데이터베이스입니다.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbee38fc49361f8a4350467a0813ffcb9c483533
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e8cddc307b53e640aa9b43a459c062b411cd64b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506464"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389231"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>차원 처리 대상 편집기(고급 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 방법을 구성할 수 있습니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "52506464"
  **찾아보기(...)**  
  오류 로그의 경로를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [차원 처리 대상 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [차원 처리 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  

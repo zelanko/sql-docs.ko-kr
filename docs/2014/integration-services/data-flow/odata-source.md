@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 331baa7fd450b1a49879f7f1be3d985425ad1267
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363455"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389581"
 ---
 # <a name="odata-source"></a>OData 원본
   SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다. 이 구성 요소는 OData v2 및 v3 프로토콜뿐만 아니라 ATOM 및 JSON 데이터 형식을 지원합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "53363455"
   
 -   [OData 원본 속성](odata-source-properties.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OData 연결 관리자](../connection-manager/odata-connection-manager.md)  
   
   

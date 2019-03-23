@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac6cb097990c33564c29dad6918c0b8cc883530d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751305"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392051"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>3단계: 3단원 자습서 패키지 테스트
   이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "52751305"
 -   에 대 한 정보의 의미 체계가 생성 되지만 합니다 `PipelineExecutionPlan` 및 `PipelineExecutionTrees` 이벤트가이 자습서의 범위를 벗어나는, 첫 번째 줄에 지정 된 정보 필드가 나열 함을 볼 수는 **세부 정보** 탭 합니다 **SSIS 로그 구성** 대화 상자. 또한 Foreach 루프가 반복될 때마다 선택한 두 이벤트 PipelineExecutionPlan과 PipelineExecutionTrees가 로그되어 있는 것을 확인할 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4 단원: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [4단원: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c68996ab5c4aa204a8aa1139253dd946e558bba
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125509"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390831"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 원본 편집기(열 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
@@ -39,9 +39,9 @@ ms.locfileid: "48125509"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [OLE DB 원본을 사용 하 여 데이터 추출](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 원본 편집기&#40;연결 관리자 페이지&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 원본 편집기&#40;오류 출력 페이지&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [OLE DB 원본을 사용하여 데이터 추출](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66f0bf42724b2806704503f0e0538d5b69ed7738
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355632"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389611"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>스크립트 태스크를 사용하여 빈 플랫 파일 검색
   플랫 파일 원본에서는 플랫 파일의 처리를 시도하기 전에 플랫 파일에 데이터 행이 들어 있는지 여부를 확인하지 않습니다. 그러나 데이터 행이 들어 있지 않은 파일을 건너뛰면 특히 수많은 플랫 파일을 반복하는 패키지 등에서 패키지 효율성을 높일 수 있습니다. 스크립트 태스크는 패키지에서 데이터 흐름의 처리를 시작하기 전에 빈 플랫 파일을 찾을 수 있습니다.  

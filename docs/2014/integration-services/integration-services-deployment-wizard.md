@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f90613d3c8e0204e2861008a5f7be0846eca64a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b091518f61944b3eb62f8abdc02f0270e086538a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535906"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389141"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 배포 마법사
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 배포 마법사는 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 SSISDB 카탈로그에 프로젝트를 배포합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52535906"
   
  **닫기**를 클릭하여 마법사를 종료합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 서버에 프로젝트 배포](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29f435c9554783bdddf9faba165a5b93ab861514
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367485"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389391"
 ---
 # <a name="creating-a-custom-connection-manager"></a>사용자 지정 연결 관리자 만들기
   사용자 지정 연결 관리자를 만들 때 수행해야 하는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만들 때의 단계와 비슷합니다.  

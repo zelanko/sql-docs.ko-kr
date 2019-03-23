@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 221fdaaeae61b3005fbbe0088ce4270fd4b6c2b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782675"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389380"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
   사용 된 **열 매핑** 변환 매개 변수를 편집할 대화 상자.  
@@ -74,7 +74,7 @@ ms.locfileid: "52782675"
  **크기**  
  열의 문자 수를 지정합니다.  
   
- **정밀도**  
+ **전체 자릿수**  
  표시된 데이터의 전체 자릿수(숫자의 자릿수)를 지정합니다.  
   
  **소수 자릿수**  
