@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2822193b536423e29f0d838ad64dda20664c7f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b86348e6e7fa8331697c4a0aa3b23a494ae54a5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200963"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374761"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>파티션 처리 대상 편집기(연결 관리자 페이지)
-  **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
+   **파티션 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
   
  파티션 처리 대상에 대한 자세한 내용은 [Partition Processing Destination](data-flow/partition-processing-destination.md)을 참조하십시오.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48200963"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [파티션 처리 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [파티션 처리 대상 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [파티션 처리 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [파티션 처리 대상 편집기&#40;고급 페이지&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

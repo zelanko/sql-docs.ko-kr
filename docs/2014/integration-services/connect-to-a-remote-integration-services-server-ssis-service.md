@@ -13,25 +13,25 @@ helpviewer_keywords:
 - Integration Services service, remote instance
 - service [Integration Services], connecting
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff4eb190c8225cf1d45f184515ccc5244a3a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d2e64744ea39296d16fbe88ad20993e8909988d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222773"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375281"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>원격 Integration Services 서버에 연결(SSIS 서비스)
     
 > [!IMPORTANT] 
 > 이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 이전 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 나 다른 관리 응용 프로그램에서 원격 서버의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하려면 응용 프로그램 사용자에게 서버에 대한 특정 권한 집합이 필요합니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 나 다른 관리 애플리케이션에서 원격 서버의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하려면 애플리케이션 사용자에게 서버에 대한 특정 권한 집합이 필요합니다.  
   
 > [!IMPORTANT] 
-> 원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)을 참조하세요.  
+> 원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
   
 ## <a name="connecting-to-integration-services-on-a-remote-server"></a>원격 서버의 Integration Services에 연결  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222773"
   
 3.  **서버 유형** 목록에서 **Integration Services** 를 선택합니다.  
   
-4.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
+4.   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48222773"
   
 3.  콘솔의 왼쪽 창에서 **구성 요소 서비스** 노드를 확장합니다. **컴퓨터** 노드를 확장하고 **내 컴퓨터**를 확장한 다음 **DCOM 구성** 노드를 클릭합니다.  
   
-4.  **DCOM 구성** 노드를 선택하고 구성할 수 있는 응용 프로그램 목록에서 SQL Server Integration Services 11.0을 선택합니다.  
+4.  **DCOM 구성** 노드를 선택하고 구성할 수 있는 애플리케이션 목록에서 SQL Server Integration Services 11.0을 선택합니다.  
   
 5.  SQL Server Integration Services 11.0을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48222773"
   
 1.  명령 프롬프트에서 **dcomcnfg.exe** 를 실행합니다.  
   
-2.  **DCOM 구성 속성** 대화 상자의 **응용 프로그램** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성**을 클릭합니다.  
+2.  **DCOM 구성 속성** 대화 상자의 **애플리케이션** 페이지에서 SQL Server Integration Services 11.0을 선택하고 **속성**을 클릭합니다.  
   
 3.  **보안** 페이지를 선택합니다.  
   

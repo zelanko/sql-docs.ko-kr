@@ -17,18 +17,18 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160650"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378881"
 ---
 # <a name="common-properties"></a>공용 속성
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델의 데이터 흐름 개체에는 구성 요소 수준, 입/출력 수준 및 입/출력 열 수준의 공통 속성과 사용자 지정 속성이 있습니다. 많은 속성은 데이터 흐름 엔진이 런타임에 할당하는 읽기 전용 값을 갖습니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델의 데이터 흐름 개체에는 구성 요소 수준, 입/출력 수준 및 입/출력 열 수준의 공통 속성과 사용자 지정 속성이 있습니다. 많은 속성은 데이터 흐름 엔진이 런타임에 할당하는 읽기 전용 값을 갖습니다.  
   
  이 항목에서는 데이터 흐름 개체의 공용 속성을 나열하고 설명합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48160650"
   
 -   [Input columns](#inputcolumns)  
   
--   [출력](#outputs)  
+-   [Outputs](#outputs)  
   
 -   [출력 열](#outputcolumns)  
   
@@ -87,17 +87,17 @@ ms.locfileid: "48160650"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|ComponentClassID|String|구성 요소의 CLSID입니다.|  
-|ContactInfo|String|구성 요소 개발자의 연락처 정보입니다.|  
-|Description|String|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
+|ComponentClassID|문자열|구성 요소의 CLSID입니다.|  
+|ContactInfo|문자열|구성 요소 개발자의 연락처 정보입니다.|  
+|Description|문자열|데이터 흐름 구성 요소에 대한 설명입니다. 이 속성의 기본값은 데이터 흐름 구성 요소의 이름입니다.|  
 |ID|정수|구성 요소의 인스턴스를 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|구성 요소를 식별합니다.|  
+|IdentificationString|문자열|구성 요소를 식별합니다.|  
 |IsDefaultLocale|Boolean|구성 요소가 속해 있는 데이터 흐름 태스크의 로캘이 구성 요소에 사용되는지 여부를 나타냅니다.|  
 |LocaleID|정수|패키지가 실행될 때 데이터 흐름 구성 요소에서 사용하는 로캘입니다. 데이터 흐름 구성 요소에는 모든 Windows 로캘을 사용할 수 있습니다.|  
-|이름|String|데이터 흐름 구성 요소의 이름입니다.|  
+|이름|문자열|데이터 흐름 구성 요소의 이름입니다.|  
 |PipelineVersion|정수|구성 요소가 내부에서 실행되도록 디자인된 데이터 흐름 태스크의 버전입니다.|  
 |UsesDispositions|Boolean|구성 요소에 오류 출력이 있는지 여부를 나타냅니다.|  
-|ValidateExternalMetadata|Boolean|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 `True`합니다.|  
+|ValidateExternalMetadata|Boolean|외부 열 메타데이터의 유효성이 검사되었는지 여부를 나타냅니다. 이 속성의 기본값은 `True`입니다.|  
 |버전|정수|구성 요소의 버전입니다.|  
   
 ##  <a name="inputs"></a> 입력된 속성  
@@ -107,16 +107,16 @@ ms.locfileid: "48160650"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|Description|String|입력에 대한 설명입니다.|  
-|ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
+|Description|문자열|입력에 대한 설명입니다.|  
+|ErrorOrTruncationOperation|문자열|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
 |HasSideEffects|Boolean|다운스트림 구성 요소에 연결 되지 않은 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타냅니다 `RunInOptimizedMode` 는 `true`합니다.|  
 |ID|정수|입력을 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|입력을 식별하는 문자열입니다.|  
+|IdentificationString|문자열|입력을 식별하는 문자열입니다.|  
 |IsSorted|Boolean|입력의 데이터가 정렬되었는지 여부를 나타냅니다.|  
-|이름|String|입력의 이름입니다.|  
+|이름|문자열|입력의 이름입니다.|  
 |SourceLocale|정수|입력 데이터의 LCID(로캘 ID)입니다.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. . 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
   
  대상 및 일부 변환은 오류 출력을 지원하지 않으므로 이러한 구성 요소의 ErrorRowDisposition 및 TruncationRowDisposition 속성은 읽기 전용입니다.  
   
@@ -128,17 +128,17 @@ ms.locfileid: "48160650"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|Description|String|입력 열에 대해 설명합니다.|  
-|ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
+|Description|문자열|입력 열에 대해 설명합니다.|  
+|ErrorOrTruncationOperation|문자열|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
 |ID|정수|입력 열을 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|입력 열을 식별하는 문자열입니다.|  
+|IdentificationString|문자열|입력 열을 식별하는 문자열입니다.|  
 |LineageID|정수|업스트림 열의 ID입니다.|  
-|이름|String|입력 열의 이름입니다.|  
+|이름|문자열|입력 열의 이름입니다.|  
 |SortKeyPosition|정수|열 정렬 여부, 정렬 순서 및 여러 열이 정렬되는 순서를 나타내는 값입니다. 값 **0** 은 열이 정렬되어 있지 않음을 나타냅니다.  자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
-|UpstreamComponentName|String|업스트림 구성 요소의 이름입니다.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
+|UpstreamComponentName|문자열|업스트림 구성 요소의 이름입니다.|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|입력 열이 구성 요소에서 사용되는 방식을 결정하는 값입니다.|  
   
  입력 열은 "데이터 형식 속성"에 설명된 데이터 형식 속성도 포함합니다.  
@@ -151,18 +151,18 @@ ms.locfileid: "48160650"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|경로에서 출력이 분리될 경우 데이터 흐름 엔진이 출력을 삭제할지 여부를 결정하는 값입니다.|  
-|Description|String|출력에 대해 설명합니다.|  
-|ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
+|Description|문자열|출력에 대해 설명합니다.|  
+|ErrorOrTruncationOperation|문자열|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
 |ExclusionGroup|정수|함께 사용할 수 없는 출력 그룹을 식별하는 값입니다.|  
 |HasSideEffects|Boolean|구성 요소가 업스트림 구성 요소에 연결되어 있지 않은 경우 및 `RunInOptimizedMode`가 `true`일 경우 데이터 흐름의 실행 계획에서 구성 요소를 제거할 수 있는지 여부를 나타내는 값입니다.|  
 |ID|정수|출력을 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|출력을 식별하는 문자열입니다.|  
+|IdentificationString|문자열|출력을 식별하는 문자열입니다.|  
 |IsErrorOut|Boolean|출력이 오류 출력인지 여부를 나타냅니다.|  
 |IsSorted|Boolean|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 `False`입니다.<br /><br /> **\*\* 중요 \* \***  의 값을 설정 합니다 `IsSorted` 속성을 `True` 해도 데이터가 정렬 되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
-|이름|String|출력의 이름입니다.|  
+|이름|문자열|출력의 이름입니다.|  
 |SynchronousInputID|정수|출력과 동시에 수행되는 입력의 ID입니다.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다.|  
   
 ###  <a name="outputcolumns"></a> 출력 열 속성  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델에서 출력은 출력 열 모음을 포함합니다. 데이터 흐름 구성 요소의 출력 열은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> 인터페이스를 구현합니다.  
@@ -172,17 +172,17 @@ ms.locfileid: "48160650"
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|정수|문자 데이터 형식을 갖는 열의 비교를 지정하는 플래그 집합입니다. 자세한 내용은 [Comparing String Data](data-flow/comparing-string-data.md)을(를) 참조하세요.|  
-|Description|String|출력 열에 대해 설명합니다.|  
-|ErrorOrTruncationOperation|String|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다. 기본값은 `Fail component`입니다.|  
+|Description|문자열|출력 열에 대해 설명합니다.|  
+|ErrorOrTruncationOperation|문자열|행을 처리할 때 발생할 수 있는 오류 또는 잘림 유형을 지정하는 선택적 문자열입니다.|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|오류 처리를 지정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다. 기본값은 `Fail component`입니다.|  
 |ExternalMetadataColumnID|정수|입력 열에 할당된 외부 메타데이터 열의 ID입니다.|  
 |ID|정수|출력 열을 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|출력 열을 식별하는 문자열입니다.|  
+|IdentificationString|문자열|출력 열을 식별하는 문자열입니다.|  
 |LineageID|정수|출력 열의 ID입니다. 다운스트림 구성 요소는 이 값을 사용하여 열을 참조합니다.|  
-|이름|String|출력 열의 이름입니다.|  
+|이름|문자열|출력 열의 이름입니다.|  
 |SortKeyPosition|정수|열 정렬 여부, 정렬 순서 및 여러 열이 정렬되는 순서를 나타내는 값입니다. 값 **0** 은 열이 정렬되어 있지 않음을 나타냅니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
 |SpecialFlags|정수|출력 열의 특수 플래그를 포함하는 값입니다.|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 값은 `Fail component`하십시오 `Ignore failure`, 및 `Redirect row`합니다. 기본값은 `Fail component`입니다.|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 `Fail component`, `Ignore failure` 및 `Redirect row`입니다. 기본값은 `Fail component`입니다.|  
   
  출력 열은 데이터 형식 속성 집합도 포함합니다.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "48160650"
   
 |속성|데이터 형식|Description|  
 |--------------|---------------|-----------------|  
-|Description|String|외부 열에 대해 설명합니다.|  
+|Description|문자열|외부 열에 대해 설명합니다.|  
 |ID|정수|열을 고유하게 식별하는 값입니다.|  
-|IdentificationString|String|열을 식별하는 문자열입니다.|  
-|이름|String|외부 열의 이름입니다.|  
+|IdentificationString|문자열|열을 식별하는 문자열입니다.|  
+|이름|문자열|외부 열의 이름입니다.|  
   
  외부 메타데이터 열은 데이터 형식 속성 집합도 포함합니다.  
   

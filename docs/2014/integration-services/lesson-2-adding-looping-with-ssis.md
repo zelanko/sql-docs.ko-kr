@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361765"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385301"
 ---
 # <a name="lesson-2-adding-looping"></a>2단원: 루핑 추가
-  [1 단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md), 단일 플랫 파일 원본에서 데이터를 추출 하 고 조회 변환을 사용 하 여 데이터를 로드 하는 패키지를 생성 합니다 **FactCurrency** 팩트 테이블의 **AdventureWorksDW2012** 샘플 데이터베이스.  
+  [1단원: 프로젝트 및 기본 패키지 만들기](lesson-1-create-a-project-and-basic-package-with-ssis.md), 단일 플랫 파일 원본에서 데이터를 추출 하 고 조회 변환을 사용 하 여 데이터를 로드 하는 패키지를 생성 합니다 **FactCurrency** 팩트 테이블의 **AdventureWorksDW2012** 샘플 데이터베이스.  
   
  그러나 ETL(추출, 변환 및 로드) 프로세스에서 플랫 파일을 하나만 사용하는 경우는 거의 없습니다. 일반적인 ETL 프로세스는 여러 플랫 파일 원본에서 데이터를 추출합니다. 여러 원본에서 데이터를 추출하려면 반복적인 제어 흐름이 필요합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 가장 기대되는 기능 중 하나는 패키지에 반복이나 루핑을 쉽게 추가할 수 있는 기능입니다.  
   
@@ -52,16 +52,16 @@ ms.locfileid: "53361765"
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1 단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [1단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [2단계: Foreach 루프 컨테이너 추가 및 구성](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [3 단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [3단계: 플랫 파일 연결 관리자 수정](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [4 단계: 2 단원 자습서 패키지 테스트](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [4단계: 2 단원 자습서 패키지 테스트](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
- [1 단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
+ [1단계: 1 단원 패키지 복사](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [For 루프 컨테이너](control-flow/for-loop-container.md)  

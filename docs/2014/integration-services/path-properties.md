@@ -13,18 +13,18 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1b69e60cc4adc85d6af9a909f3278a179ea06df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0ddc29ca163d17a812c14251c60b512828a5b3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171003"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386660"
 ---
 # <a name="path-properties"></a>경로 속성
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델의 데이터 흐름 개체에는 구성 요소 수준, 입/출력 수준 및 입/출력 열 수준의 공용 속성과 사용자 지정 속성이 있습니다. 많은 속성은 데이터 흐름 엔진이 런타임에 할당하는 읽기 전용 값을 갖습니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 개체 모델의 데이터 흐름 개체에는 구성 요소 수준, 입/출력 수준 및 입/출력 열 수준의 공용 속성과 사용자 지정 속성이 있습니다. 많은 속성은 데이터 흐름 엔진이 런타임에 할당하는 읽기 전용 값을 갖습니다.  
   
  이 항목은 데이터 흐름 개체를 연결하는 경로의 사용자 지정 속성을 나열하고 설명합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48171003"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 `AsNeeded`, `SourceName`를 `PathName`, 및 `Never`합니다. 기본값은 `AsNeeded`입니다.|  
+|PathAnnotation|Integer(열거형)|디자이너 화면에 주석을 경로와 함께 표시할지 여부를 나타내는 값입니다. 가능한 값은 `AsNeeded`, `SourceName`, `PathName` 및 `Never`입니다. 기본값은 `AsNeeded`입니다.|  
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|경로에 연결된 입력입니다.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|경로에 연결된 출력입니다.|  
   

@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1687baf77bcecedb61a3d1ecee3a9e3c9e155431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e48018f3bbc3f266a4e537f067b3fa9466dea275
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133733"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381973"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>차원 처리 대상 편집기(연결 관리자 페이지)
-  **차원 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
+   **차원 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 지정할 수 있습니다.  
   
  차원 처리 대상에 대한 자세한 내용은 [Dimension Processing Destination](data-flow/dimension-processing-destination.md)을 참조하십시오.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48133733"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [차원 처리 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [차원 처리 대상 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [차원 처리 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [차원 처리 대상 편집기&#40;고급 페이지&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

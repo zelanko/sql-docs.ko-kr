@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172503"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387021"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 로깅 사용
   이 절차에서는 패키지에 로그를 추가하는 방법, 패키지 수준 로깅을 구성하는 방법 및 로깅 구성을 XML 파일에 저장하는 방법을 설명합니다. 로그는 패키지 수준에서만 추가할 수 있지만 패키지에 포함되는 컨테이너에서 로깅을 활성화하기 위해 패키지가 로깅을 수행할 필요는 없습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48172503"
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 OLE DB 연결 관리자를 사용합니다. 자세한 내용은 [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
-    -   Windows 이벤트 로그에는 아무 것도 선택하지 마십시오. [!INCLUDE[ssIS](../includes/ssis-md.md)] 로그를 자동으로 만듭니다.  
+    -   Windows 이벤트 로그에는 아무 것도 선택하지 마십시오. [!INCLUDE[ssIS](../includes/ssis-md.md)] 에서 자동으로 로그를 만듭니다.  
   
     -   XML 파일에는 파일 연결 관리자를 사용합니다.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "48172503"
     > [!NOTE]  
     >  기본적으로 모든 정보가 로깅됩니다.  
   
-9. **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
+9.  **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 10. **확인**을 클릭합니다.  
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Integration Services &#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)   
+ [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)   
  [Integration Services&#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)  
   
   

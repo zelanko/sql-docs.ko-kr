@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73f175bc92c49423cd58bc65ce67712f916b1ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 506ed2c0f672d769d5ffb739b1f5109f7a19cf51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229423"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383986"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 대상 편집기(연결 관리자 페이지)
   **SQL 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 결과를 미리 볼 수 있습니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 대상은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 테이블이나 뷰로 데이터를 로드합니다.  
@@ -48,8 +48,8 @@ ms.locfileid: "48229423"
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 대상 편집기 &#40;매핑 페이지&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
- [SQL 대상 편집기 &#40;고급 페이지&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
+ [SQL 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 대상 편집기&#40;고급 페이지&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [SQL Server 대상을 사용하여 데이터 대량 로드](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
   

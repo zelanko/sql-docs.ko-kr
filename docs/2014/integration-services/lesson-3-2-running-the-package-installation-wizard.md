@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351803"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385541"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>2단계: 패키지 설치 마법사 실행
   이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "53351803"
   
 6.  SQL Server 인스턴스에서 Windows 인증이 지원될 경우에는 **Windows 인증 사용**을 선택하고 지원되지 않을 경우에는 **SQL Server 인증 사용** 을 선택하고 사용자 이름과 암호를 제공합니다.  
   
-7.  **암호화에 서버 저장소 사용** 확인란의 선택이 취소되었는지 확인합니다.  
+7.  **암호화에 서버 스토리지 사용** 확인란의 선택이 취소되었는지 확인합니다.  
   
 8.   **다음**을 클릭합니다.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "53351803"
     >  패키지 유효성 검사에 사용되는 임시 로그 파일이 생성됩니다. 이 파일은 패키지가 실행될 때 사용되지 않습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [3 단계: 배포 된 패키지 테스트](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [3단계: 배포 된 패키지 테스트](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ![Integration Services 아이콘 (작은)](media/dts-16.gif "Integration Services 아이콘 (작은)")**Integration Services를 사용 하 여 날짜를 알림 설정**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Integration Services 서비스&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services 서비스 관리](../../2014/integration-services/manage-the-integration-services-service.md)  
   
