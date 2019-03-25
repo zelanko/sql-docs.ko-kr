@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579363"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306051"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여
 - SSDT용 DAX 편집기 (CTP 2.0)
 - 인코딩 힌트. 대규모 메모리 내 테이블 형식 모델의 데이터 새로 고침을 최적화하기 위한 고급 기능 (CTP 1.3)
 - 테이블 형식 모델에 대한 **1400 호환성 수준** 지원 새로 만들거나 기존 테이블 형식 모델 프로젝트를 1400 호환성 수준으로 업그레이드하려면 [SSDT(SQL Server Data Tools) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939)를 다운로드 및 설치합니다. (CTP 1.1)
-- 1400 호환성 수준의 테이블 모델에 대한 최신 **데이터 가져오기** 환경 [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/)(Analysis Services 팀 블로그)를 참조하세요. (CTP 1.1)
+- 1400 호환성 수준의 테이블 모델에 대한 최신 **데이터 가져오기** 환경 [Analysis Services Team Blog](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)(Analysis Services 팀 블로그)를 참조하세요. (CTP 1.1)
 - 비정형 계층의 빈 멤버를 숨기기 위한 **멤버 숨기기** 속성 (CTP 1.1)
 - 집계 정보에 대한 **자세한 정보를 표시**하기 위한 **세부 정보 행** 최종 사용자 작업. 세부 정보 행 식을 작성하기 위한 [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) 및 **DETAILROWS** 함수 (CTP 1.1)
 - 여러 값을 지정하는 DAX **IN** 연산자 (CTP 1.1)

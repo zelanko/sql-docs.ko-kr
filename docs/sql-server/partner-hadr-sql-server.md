@@ -9,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 1849328d008a6b995d2242a1e00aa9c0040e8d05
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: ec052141483207da4f1af22e8b74d9edcccf6105
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732050"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417195"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 |![IDERA][3]|**IDERA**<br>SQL 안전 백업은 데이터베이스 백업 시간 및 백업 파일 크기를 줄이고 백업 파일 내의 데이터베이스에 대한 즉시 읽기 및 쓰기 액세스를 제공함으로써 비용을 절감하는 SQL Server용 고성능 백업 및 복구 솔루션입니다.<br><br>Microsoft SQL Server: 2005 SP1 이상, 2008, 2008 R2, 2012, 2014, 2016; 모든 버전 |[웹 사이트][idera_website]|
 |![NEC][7]|**NEC**<br>ExpressCluster는 SQL Server에 대한 하드웨어, 소프트웨어, 네트워크 및 사이트 오류를 비롯한 모든 주요 오류에 대한 포괄적이고 완벽하게 자동화된 고가용성 및 재해 복구 솔루션이며, 온-프레미스 또는 클라우드 환경의 물리적 또는 가상 머신에서 실행되는 연결된 애플리케이션입니다.<br><br>Microsoft SQL Server: 2005 이상, 모든 버전 |[웹 사이트][necec_website]<br>[데이터시트][necec_datasheet]<br>[비디오][necec_youtube]<br>[다운로드][necec_download]|
 |![Portworx][6] |**Portworx**<br>Portworx는 프로덕션 환경에서 실행되는 상태 저장 컨테이너에 대한 솔루션입니다. Portworx를 통해 사용자는 Kubernetes, Mesosphere DC/OS 및 Docker Swarm과 같은 컨테이너 스케줄러를 사용하여 어떠한 인프라에서나 모든 데이터베이스 또는 상태 저장 서비스를 관리할 수 있습니다. Portworx는 지속성, 고가용성, 데이터 자동화, 다중 데이터 저장소 및 인프라 지원, 보안 등 DevOps 팀이 프로덕션 환경에서 컨테이너화된 데이터베이스 및 기타 상태 저장 서비스를 실행할 때 직면하는 5가지 가장 일반적인 문제를 해결합니다.<br><br>Docker의 SQL Server 2017 |[웹 사이트][portworx_website]<br>[설명서][portworx_docs]<br>[비디오][portworx_youtube]|
-|![SIOS][8] |**SIOS**<br>SIOS Technology는 Windows 또는 Linux의 SQL Server에 비용 효율적인 고가용성 및 재해 복구 솔루션을 제공합니다. SIOS SANless 클러스터링은 공유 저장소 SAN의 필요성을 없애 단일 및 다중 사이트 환경의 물리적, 가상, 클라우드 및 하이브리드 클라우드 구성에서 가장 중요한 애플리케이션을 보호하는 완전한 유연성을 제공합니다.<br><br>Windows Server 장애 조치(Failover) 클러스터링 환경에 SIOS DataKeeper를 추가하여 기존 공유 저장소를 대체하는 SANless 볼륨 리소스를 만들어 Azure에서 WSFC를 쉽게 실행할 수 있습니다.<br><br>SIOS Protection Suite는 SQL Server, SAP, HANA, Oracle 등과 같은 중요한 Linux 애플리케이션을 보호하는 완전히 유연한 클러스터링 솔루션입니다.|[웹 사이트][sios_website]<br>[데이터시트][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[비디오][sios_youtube]|
+|![SIOS][8] |**SIOS**<br>SIOS Technology는 Windows 또는 Linux의 SQL Server에 비용 효율적인 고가용성 및 재해 복구 솔루션을 제공합니다. SIOS SANless 클러스터링은 공유 스토리지 SAN의 필요성을 없애 단일 및 다중 사이트 환경의 물리적, 가상, 클라우드 및 하이브리드 클라우드 구성에서 가장 중요한 애플리케이션을 보호하는 완전한 유연성을 제공합니다.<br><br>Windows Server 장애 조치(Failover) 클러스터링 환경에 SIOS DataKeeper를 추가하여 기존 공유 스토리지를 대체하는 SANless 볼륨 리소스를 만들어 Azure에서 WSFC를 쉽게 실행할 수 있습니다.<br><br>SIOS Protection Suite는 SQL Server, SAP, HANA, Oracle 등과 같은 중요한 Linux 애플리케이션을 보호하는 완전히 유연한 클러스터링 솔루션입니다.|[웹 사이트][sios_website]<br>[데이터시트][sios_datasheet]<br>[Twitter][sios_twitter]<br>[Marketplace][sios_marketplace]<br>[비디오][sios_youtube]|
 |![Veeam][1] |**Veeam**<br>Veeam Backup & Replication은 강력하고 사용이 간편하며 경제적인 백업 및 가용성 솔루션입니다. VM(가상 머신) 백업 및 복제를 단일 소프트웨어 솔루션으로 통합하여 가상화된 애플리케이션 및 데이터에 대해 신속하고 유연하며 안정적인 복구를 제공합니다. Veeam 백업 및 복제에는 VMware vSphere 및 Microsoft Hyper-V 가상 환경에 대 한 뛰어난 지원을 제공합니다.<br><br>Windows에서 SQL Server 2005 SP4 - SQL Server 2016 |[웹 사이트][veeam_website]<br>[데이터시트][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[비디오][veeam_youtube]|
 
 ## <a name="next-steps"></a>다음 단계
@@ -85,7 +85,7 @@ SQL Server 서비스에 대한 고가용성 및 재해 복구를 제공하려면
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
-[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ
 [sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->

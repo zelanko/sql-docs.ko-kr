@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143593"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305961"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>연습: SQL Server 단위 테스트 만들기 및 실행
 이 연습에서는 일부 저장 프로시저의 동작을 확인하는 SQL Server 단위 테스트를 만듭니다. SQL Server 단위 테스트는 잘못된 애플리케이션 동작을 일으킬 수 있는 코드 결함을 식별하기 위해 만듭니다. SQL Server 단위 테스트와 애플리케이션 테스트는 자동화된 테스트 집합의 일부로 실행할 수 있습니다.  
@@ -968,7 +968,7 @@ ms.locfileid: "54143593"
     특정 예외가 표시되도록 지정합니다. 선택적으로 특정 오류 번호를 지정할 수도 있습니다. 이 특성을 추가하지 않으면 단위 테스트가 실패하고 메시지가 테스트 결과 창에 표시됩니다.  
   
     > [!IMPORTANT]  
-    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345)을 참조하십시오.  
+    > 현재 Visual Studio 2012에서는 ExpectedSqlException 특성을 지원하지 않습니다. 이 문제를 해결하는 방법은 ["예상 실패" 데이터베이스 단위 테스트를 실행할 수 없음](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test)을 참조하십시오.  
   
 3.  파일 메뉴에서 SqlServerUnitTests1.cs 저장을 클릭합니다.  
   
