@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/03/2019
 ms.locfileid: "53991816"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 를 연결 하 여 Azure SQL database 쿼리
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL database에 연결하고 쿼리하기
 
 이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 서버에 연결합니다. 그리고 나서 다른 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에서 사용하는 TutorialDB 데이터베이스를 생성하고 쿼리하기 위해서 TRANSACT-SQL (T-SQL)문을 실행합니다.
 
@@ -156,4 +156,4 @@ Azure SQL Database 서버에 연결하기 위해서 [!INCLUDE[name-sos](../inclu
 
 ## <a name="next-steps"></a>다음 단계
 
-Azure SQL database 및 쿼리 실행에 성공적으로 연결한 하 고 나면 합니다 [코드 편집기 자습서](tutorial-sql-editor.md)합니다.
+Azure SQL database에 성공적으로 연결하고 쿼리를 실행했습니다. [코드 편집기 자습서](tutorial-sql-editor.md)를 시도해보세요.
