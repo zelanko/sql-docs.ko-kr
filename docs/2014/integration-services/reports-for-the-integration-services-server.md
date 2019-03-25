@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096173"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394091"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 서버를 위한 보고서
-  현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], 표준 보고서를 사용할 수 있습니다 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 모니터링 하는 데 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 배포 된 프로젝트는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
+  현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
   
  각 보고서 페이지의 위쪽에서 뒤로 아이콘을 클릭하면 확인한 이전 페이지로 이동하고, 새로 고침 아이콘을 클릭하면 페이지에 표시된 정보가 새로 고쳐지며, 인쇄 아이콘을 사용하면 현재 페이지를 인쇄할 수 있습니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48096173"
   
 |섹션|Description|  
 |-------------|-----------------|  
-|필터|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
+|Assert|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
 |실행 정보|각 패키지 실행의 시작 시간, 종료 시간 및 기간을 보여 줍니다. 패키지 실행 태스크를 사용하여 자식 패키지에 전달된 값과 같이 패키지 실행과 함께 사용된 매개 변수 값의 목록을 볼 수도 있습니다. 매개 변수 목록을 보려면 개요를 클릭합니다.|  
   
  패키지 실행 태스크를 사용하여 자식 패키지에 값을 제공하는 방법에 대한 자세한 내용은 [Execute Package Task](control-flow/execute-package-task.md)를 참조하십시오.  
