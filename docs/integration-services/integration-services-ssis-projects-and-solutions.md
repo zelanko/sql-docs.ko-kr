@@ -16,15 +16,15 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f74f80b4d20f3314184d8fba891632f2aaa1d82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 607c095af9539fb40d33e27350ab1f287183062c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703251"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272856"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services(SSIS) 프로젝트 및 솔루션
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 개발을 위해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 제공합니다.  
