@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ab6f627c096326ce5c56828777bb9baf386e81a
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: a218f2a80b755c30dcbf608197a3a306321d41f4
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356456"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417165"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58356456"
 |resource_class|**nvarchar(20)**|이 요청에 대 한 리소스 클래스입니다. 관련 참조 **concurrency_slots_used** 에 [sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  리소스 클래스에 대 한 자세한 내용은 참조 하세요. [리소스 클래스 및 워크 로드 관리](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |중요도 (SQL DW Gen2 미리 보기)|**nvarchar(32)**|요청을 설정 하는 중요도 사용 하 여 제출 되었습니다. 낮은 중요도 사용 하 여 요청 남아 대기 중인 일시 중단 된 상태에서 더 높은 중요도 요청 제출 되 면 있습니다.  높은 중요도 사용 하 여 요청 이전에 전송 된 낮은 중요도 요청 하기 전에 실행 됩니다.  중요도에 대 한 자세한 내용은 참조 하세요. [워크 로드 중요도](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)합니다.  |NULL</br>low</br>below_normal</br>보통</br>above_normal</br>high|
   
- 이 보기에 의해 유지 된 최대 행 수에 대 한 내용은의 "최소 및 최대 값"를 참조 합니다 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.   
   
 ## <a name="permissions"></a>사용 권한
 

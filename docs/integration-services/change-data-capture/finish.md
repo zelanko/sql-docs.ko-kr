@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - finish
 ms.assetid: 94a57ff1-f77f-4c04-8bf5-cdab691d3421
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a319498c831acbe88eb16ce886d8aa99e315cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76135d7b32f0d75bb23abb065d133c467dc51e5a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711101"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280706"
 ---
 # <a name="finish"></a>마침
   **마침** 페이지에서는 마법사 프로세스를 요약합니다. **마침** 를 클릭하여 마법사를 닫고 CDC 인스턴스 만들기 마법사에서 정의한 모든 테이블을 생성합니다.  

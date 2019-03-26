@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327354"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306081"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ SQL Server 버전  |재배포 가능 설치 링크
  
     1. 로컬 HSM 디바이스에 암호화 키를 로컬로 만듭니다. (이 키는 SQL Server가 지원할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
     2. Azure Key Vault에 암호화 키를 가져옵니다. 작업을 수행하는 방법은 다음 단계를 참조하세요.
-    3. Azure Key Vault에 키를 처음 사용하는 경우 먼저 Azure Key Vault 키 백업을 수행합니다. [백업-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 명령에 대해 알아 봅니다.
+    3. Azure Key Vault에 키를 처음 사용하는 경우 먼저 Azure Key Vault 키 백업을 수행합니다. [백업-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) 명령에 대해 알아 봅니다.
     4. 키에 대한 어떤 변경이 발생할 때마다(예: ACL 추가, 태그 추가, 키 특성 추가) 다른 Azure Key Vault 키 백업을 수행해야 합니다.
 
         > [!NOTE]  

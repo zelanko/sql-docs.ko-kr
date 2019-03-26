@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a02f4e9a2d27ea827f312ee47b80d93635baa29
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143243"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280027"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>1-5단원: 플랫 파일 원본 추가 및 구성
 이 태스크에서는 플랫 파일 원본을 패키지에 추가하고 구성합니다. 플랫 파일 원본은 플랫 파일 연결 관리자에서 정의한 메타데이터를 사용하는 데이터 흐름 구성 요소입니다. 이 메타데이터는 변환 프로세스를 통해 플랫 파일에서 추출할 데이터 형식과 구조를 지정합니다. 플랫 파일 원본은 플랫 파일 연결 관리자의 형식 정의를 사용하여 단일 플랫 파일에서 데이터를 추출합니다.  

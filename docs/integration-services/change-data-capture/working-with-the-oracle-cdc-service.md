@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82e08d0cdffd4d9f339b4dc1c35322d8e2dd687d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2500ac75e7b6a34803c822bb8d661ada57130bb8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607863"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274187"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "47607863"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 Oracle 데이터베이스의 이름입니다.|  
 |config_version|해당 CDC 데이터베이스 **xdbcdc_config** 테이블의 마지막 변경에 대한 타임스탬프(UTC) 또는 이 테이블의 현재 행에 대한 타임스탬프(UTC)입니다.<br /><br /> UPDATE 트리거는 이 항목에 대한 GETUTCDATE()의 값을 적용합니다. **config_version** 을 사용하여 CDC Service에서 구성 변경 또는 설정/해제를 확인해야 할 CDC 인스턴스를 식별할 수 있습니다.|  
 |cdc_service_name|이 항목은 어떤 Oracle CDC Service가 선택한 Oracle 데이터베이스를 처리할지를 결정합니다.|  
-|enabled|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC 인스턴스는 재시도할 수 없는 오류로 인해 비활성화될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
+|enabled|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC인스턴스는 재시도할 수 없는 오류로 인해 비활성화될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  이 테이블에는 호스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 CDC Service가 나열됩니다. 이 테이블은 CDC Designer 콘솔에서 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 구성된 CDC Service의 목록을 확인하는 데 사용됩니다. 이 테이블은 CDC Service에서 실행 중인 하나의 Windows 서비스에서만 지정된 Oracle CDC Service 이름이 처리되는지 확인하는 데도 사용됩니다.  

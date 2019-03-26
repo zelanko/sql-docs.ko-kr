@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393976"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282397"
 ---
 # <a name="merge-in-integration-services-packages"></a>Integration Services 패키지의 MERGE
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 현재 릴리스에서 SQL 실행 태스크의 SQL 문은 MERGE 문을 포함할 수 있습니다. 이 MERGE 문을 사용하면 하나의 문에서 여러 INSERT, UPDATE 및 DELETE 작업을 수행할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52393976"
  매주 데이터베이스는 해당 주의 가격 변동과 주 동안 추가된 새 책을 포함하는 WeeklyChanges 테이블을 생성합니다. 하나의 MERGE 문을 사용하여 WeeklyChanges 테이블의 변경 사항을 DimBook 테이블에 적용할 수 있습니다. MERGE 문은 새로 추가된 책에 대해 새 행을 삽입하고, 가격이 변경된 기존 책의 행에 대한 IsCurrent 열을 0으로 업데이트합니다. 또한 MERGE 문은 가격이 변경된 책에 대해 새 행을 삽입하고, 삽입된 새 행에 대해 IsCurrent 열의 값을 1로 설정합니다.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>새 데이터가 있는 테이블을 기존 테이블에 병합  
- 데이터베이스는 "개방형 스키마", 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. 속성 테이블에는 EntityID, PropertyID 및 Value의 3개 열이 있습니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
+ 데이터베이스는 "개방형 스키마", 즉 각 속성에 대한 이름-값 쌍을 포함하는 테이블을 사용하여 개체의 속성을 모델링합니다. Properties 테이블에는 EntityID, PropertyID 및 Value라는 3개의 열이 있습니다. 이 테이블의 새로운 버전인 NewProperties 테이블은 Properties 테이블과 동기화되어야 합니다. 이 두 테이블을 동기화하려면 하나의 MERGE 문을 사용하여 다음 작업을 수행하면 됩니다.  
   
 -   NewProperties 테이블에 없는 속성을 Properties 테이블에서 삭제합니다.  
   

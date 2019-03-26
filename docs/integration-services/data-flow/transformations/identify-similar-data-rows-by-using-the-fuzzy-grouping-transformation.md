@@ -13,15 +13,15 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d915bde7fe4722063563f5d453dfc809d3163641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1851f2f8970d05f695b90f2024f44450c437164
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748351"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283147"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
   유사 항목 그룹화 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크 하나의 원본이 이미 들어 있어야 합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47748351"
     > [!NOTE]  
     >  변환에는 임시 테이블 및 인덱스를 만들기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결이 필요합니다.  
   
-7.  **열** 탭을 클릭하고 **사용 가능한 입력 열** 목록에서 데이터 집합에서 유사 행을 식별하는 데 사용할 입력 열의 확인란을 선택합니다.  
+7.  **열** 탭을 클릭하고 **사용 가능한 입력 열** 목록에서 데이터 세트에서 유사 행을 식별하는 데 사용할 입력 열의 확인란을 선택합니다.  
   
 8.  **통과** 열의 확인란을 선택하여 변환 출력으로 통과할 입력 열을 식별합니다. 통과 열은 중복 행의 식별 과정에 포함되지 않습니다.  
   

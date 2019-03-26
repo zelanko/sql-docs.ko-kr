@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 515a7818263105664d4f33be241e0a10c7be07a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0781278539a1c01be5aec69dd86e4d0f93e65dde
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657027"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271816"
 ---
 # <a name="year-ssis-expression"></a>YEAR(SSIS 식)
   날짜의 연도 부분을 나타내는 정수를 반환합니다.  

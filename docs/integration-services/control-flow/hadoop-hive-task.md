@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c78c8b091751e1fd849c3490544acd492cd595c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906203"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282897"
 ---
 # <a name="hadoop-hive-task"></a>Hadoop 하이브 태스크
   Hadoop 하이브 태스크를 사용하여 Hadoop 클러스터에서 하이브 스크립트를 실행합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48906203"
   
  ![Hadoop 하이브 태스크 편집기](../../integration-services/control-flow/media/hadoop-hive-task.png "Hadoop 하이브 태스크 편집기")  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **Hadoop 하이브 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
 |필드|설명|  

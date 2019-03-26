@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31f08374ad46929c52305cb6558b603a03b439bd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c7e644744a53318ed1359bc0cdb47c3c896ed5ff
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143343"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274849"
 ---
 # <a name="lesson-3-3-test-the-lesson-3-tutorial-package"></a>3-3단원: 3단원 자습서 패키지 테스트
 

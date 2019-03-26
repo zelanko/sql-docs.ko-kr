@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed9dc1c64a11707d2222549d84598435b75ea4cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc444ff27f948ac452e6da05c6ba33113fb62f39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761931"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289919"
 ---
 # <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "47761931"
     > [!NOTE]  
     >  **미리 보기** 를 클릭하면 **요청 로그** 대화 상자도 열립니다. 이 대화 상자에 대한 자세한 내용은 [Request Log](../../integration-services/data-flow/request-log.md)을 참조하십시오.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **미리 보기** 대화 상자에는 SAP Netweaver BW 시스템에서 요청된 행이 표시됩니다. 표시되는 열은 원본 데이터에 정의된 열입니다.  
   
  이 대화 상자에 다른 옵션은 없습니다.  

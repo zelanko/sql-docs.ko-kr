@@ -3,22 +3,21 @@ title: 변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오�
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b46fb0abc31649dd7162e4ddb8de2db5c024080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5e0afe01fea1855dde6e174a12d6a9971e78b83
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796571"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222167"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
   복사할 기존 테이블 및 뷰를 선택하거나 제공한 쿼리를 검토한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **변환 검사를 수행하지 않고 형식 변환**이 표시될 수 있습니다. 마법사에서는 원본과 대상 간에 데이터 형식을 매핑하는 데 필요한 하나 이상의 데이터 형식 변환 및 매핑 파일을 찾을 수 없는 경우 이 페이지를 표시합니다. 이 페이지에는 누락된 항목을 파악하는 데 도움이 되는 정보가 포함됩니다.
