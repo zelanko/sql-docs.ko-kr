@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 916077a69ca54616cf8e0bb7e8d0144aeba186df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3e5cc9790eea98dbad42daa9e117e631aa842ad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686161"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280217"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT(SSIS 식)
   문자 식에서 가장 왼쪽 문자의 유니코드 코드 포인트를 반환합니다.  

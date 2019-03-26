@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1bd77fa65a3667bdc06934386b293783270bc1a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f2191132ecd09b2ebc8744927542e524af601bf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641200"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273370"
 ---
 # <a name="sap-bw-source"></a>SAP BW 원본
   SAP BW 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 원본 구성 요소입니다. 따라서 SAP BW 원본은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하고 이 데이터를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 사용할 수 있도록 합니다.  

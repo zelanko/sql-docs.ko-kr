@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7fcbe3d830374136b3414e8c9c35e9557d2f285
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811671"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290179"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
   디자인 창에는 데이터 마이닝 예측 쿼리를 작성할 때 사용할 수 있는 데이터 마이닝 예측 쿼리 작성기가 포함되어 있습니다. 입력 테이블을 기반으로 하는 예측 쿼리를 디자인하거나 단일 예측 쿼리를 디자인할 수 있습니다. 쿼리를 실행하고 결과를 보려면 결과 뷰로 전환합니다. 쿼리 뷰에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 쿼리를 표시합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  뷰 전환 단추  
  디자인 창과 쿼리 창 사이를 전환하려면 아이콘을 클릭합니다. 기본적으로 디자인 창이 열립니다.  
   

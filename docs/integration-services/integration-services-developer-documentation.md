@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 181ea0007d2a61ba3705d3d318bda3b0da62fe77
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641597"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280747"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services 개발자 설명서
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 완전히 다시 작성된 개체 모델이 포함되어 있으며 이러한 개체 모델은 패키지 확장 및 프로그래밍을 보다 쉽고 유연하고 강력하게 해 주는 다양한 기능을 갖도록 향상되었습니다. 개발자는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지의 거의 모든 측면을 확장하고 프로그래밍할 수 있습니다.  

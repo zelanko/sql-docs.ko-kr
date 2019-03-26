@@ -13,12 +13,12 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8f02049b36b030e6b2852ef2f5cac4f1eea737c9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 572b7862984fda40d3ef1fff75e25ba1c865feb8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668973"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306031"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>디스크 입/출력 하위 시스템에서 IO 지연 문제 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,4 @@ ms.locfileid: "51668973"
   
  [Microsoft 기술 자료 문서 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](https://go.microsoft.com/fwlink/?LinkId=69370)  
-  
-  
+ [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))

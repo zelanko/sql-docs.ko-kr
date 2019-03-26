@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e5ae792d2237e1c2eaafddfe78cc0314f1240bd5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b977bb313d151ef71b754e6c58725f1e3032144c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526920"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280277"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Integration Services 디자이너 옵션의 일반 페이지
   **옵션** 대화 상자에 있는 **Integration Services 디자이너** 페이지의 **일반** 페이지를 사용하여 패키지 로드, 표시 및 업그레이드 옵션을 지정할 수 있습니다.  
   
  **에서** 일반 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]페이지를 열려면 **도구** 메뉴에서 **옵션**을 클릭한 다음 **Business Intelligence 디자이너**를 확장하여 **Integration Services 디자이너**를 엽니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **패키지 로드 시 디지털 서명 확인**  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지 로드 시 디지털 서명을 확인하도록 하려면 선택합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 디지털 서명이 있는지, 유효한지 신뢰할 수 있는 원본에서 가져온 것인지 여부만 확인합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 패키지가 서명된 이후 변경되었는지 여부는 확인하지 않습니다.  
   

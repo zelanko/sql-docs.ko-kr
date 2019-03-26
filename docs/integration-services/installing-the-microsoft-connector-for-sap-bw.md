@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6329a37a23e00753dd32ec43b2ef97915f668993
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 85ece835f73fa89f876b3bad9777e436cbffa8df
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637430"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281287"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW 설치
   SQL Server 2016용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW는 SQL Server 2016 기능 팩의 구성 요소입니다. Connector for SAP BW 및 해당 설명서를 설치하려면 [SQL Server 2016 기능 팩 웹 페이지](https://go.microsoft.com/fwlink/?LinkId=746297)에서 설치 관리자를 다운로드하여 실행하세요.  

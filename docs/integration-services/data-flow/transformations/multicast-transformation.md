@@ -16,15 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab41c2219ecc43988af30ad071dbea17a5c4f63e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9ec8eb1970bc1c6ab3933c4cd2b43e810e31b91e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638144"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281457"
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
   멀티캐스트 변환은 입력을 하나 이상의 출력으로 배포합니다. 이 변환은 조건부 분할 변환과 유사합니다. 둘 다 입력을 여러 출력으로 보냅니다. 두 변환의 차이점은 멀티캐스트 변환은 모든 행을 모든 출력으로 보내고 조건부 분할은 한 행을 단일 출력으로 보낸다는 것입니다. 자세한 내용은 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)을(를) 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "51638144"
 ## <a name="multicast-transformation-editor"></a>멀티캐스트 변환 편집기
   **멀티캐스트 변환 편집기** 대화 상자를 사용하여 각 변환 출력에 대한 속성을 보고 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **출력**  
  왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ed0f4852fb347a13d3b92e10cedce29cbf2a8cf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506977"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275288"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>조회 변환 전체 캐시 모드 - OLE DB 연결 관리자
   전체 캐시 모드와 OLE DB 연결 관리자를 사용하도록 조회 변환을 구성할 수 있습니다. 전체 캐시 모드에서는 조회 변환이 실행되기 전에 참조 데이터 세트가 캐시에 로드됩니다.  

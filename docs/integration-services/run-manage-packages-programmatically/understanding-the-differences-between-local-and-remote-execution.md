@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - packages [Integration Services], troubleshooting
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a63be8a6f21ca969ccbeca9576ed3d29b2ec3277
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b0379003ace2c693ab6c6734bc9dd4331872406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843271"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290799"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>로컬 실행과 원격 실행의 차이점 이해
   패키지 개발자와 관리자는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 실행되는 위치와 관련된 제한 사항을 알고 있어야 합니다.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 516cd9e448ab24fad120a35b7a577a83a2cbbf81
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c6cb02319a3d0934c6bb6f3390b2fb8ea61810db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637970"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289969"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Attunity Oracle CDC
 Attunity Oracle CDC 다운로드는 다음 두 구성 요소를 포함합니다.

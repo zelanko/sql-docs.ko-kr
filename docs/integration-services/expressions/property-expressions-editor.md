@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7626cff9ab80ef15d6cec283efd8a50a8d038ef1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532150"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275181"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
   **속성 식 편집기** 대화 상자를 사용하여 속성 값을 업데이트하는 속성 식을 생성, 편집 또는 삭제할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **속성**  
  목록에서 개체 속성을 선택합니다.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 315ce164146e7d08096b6e927400dc3507ea74e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523017"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290349"
 ---
 # <a name="integration-services-ssis-expressions"></a>Integration Services(SSIS) 식
   식은 하나의 데이터 값을 생성하는 기호(식별자, 리터럴, 함수 및 연산자)의 조합입니다. 간단한 식으로는 단일 상수, 변수 또는 함수가 있습니다. 그러나 식이 여러 개의 연산자와 함수를 사용하고 여러 개의 열과 변수를 참조하는 경우가 더 많습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 식은 CASE 문의 조건 정의, 데이터 열의 값 만들기 및 업데이트, 변수에 값 할당, 런타임에 속성 업데이트 또는 채우기, 선행 제약 조건에 제약 조건 정의, For Loop 컨테이너에 사용되는 식 제공 등에 사용할 수 있습니다.  

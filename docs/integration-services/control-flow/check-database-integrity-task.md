@@ -17,15 +17,15 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7995aa96d83925659458dfb46d3fffb2a3ccbfb1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 40019c35b3e7b7374b0b0c2066a5ba3e5c2656e1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641000"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281917"
 ---
 # <a name="check-database-integrity-task"></a>데이터베이스 무결성 검사 태스크
   데이터 무결성 검사 태스크는 지정한 데이터베이스에서 모든 개체의 할당과 구조적 무결성을 검사합니다. 단일 데이터베이스나 여러 개의 데이터베이스를 검사할 수 있으며 데이터베이스 인덱스 검사 여부도 선택할 수 있습니다.  

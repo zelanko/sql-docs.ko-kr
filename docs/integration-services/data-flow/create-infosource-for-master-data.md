@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33069fbe92657e50ba9421ba12130f3a90d44492
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: fd51e064196d2c3c0de0a0da7d10b1a5e1c0b23b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084982"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290509"
 ---
 # <a name="create-infosource-for-master-data"></a>마스터 데이터용 InfoSource 만들기
   **마스터 데이터용 InfoSource 만들기** 대화 상자에서는 SAP Netweaver BW 시스템의 마스터 데이터에 대한 새 InfoSource를 만듭니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "49084982"
   
 5.  **InfoSource 만들기** 대화 상자에서 **마스터 데이터**를 선택한 다음 **확인**을 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **InfoObject 이름**  
  새 InfoSource의 기준으로 사용할 InfoObject 이름을 입력합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "49084982"
  **원본 시스템**  
  새 InfoSource에 연결할 원본 시스템을 선택합니다.  
   
- **응용 프로그램**  
+ **애플리케이션**  
  새 InfoSource에 연결할 애플리케이션의 이름을 입력 합니다.  
   
  **특성**  

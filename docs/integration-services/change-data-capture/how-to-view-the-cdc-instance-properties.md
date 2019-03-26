@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cdd6241b498a8d23f26a146644e2b302cddd9f5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 663131afa6741e1e8addc9809080bed1e1fda67c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765561"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290269"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 보는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 인스턴스 작업을 쉽게 관리하기 위해 만든 인스턴스에 대한 정보를 보는 방법에 대해 설명합니다.  

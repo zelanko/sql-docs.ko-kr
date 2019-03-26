@@ -12,15 +12,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - packages [Integration Services], roles
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfc826b47bdd58e11a912a320eb3e71ff389c413
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+ms.openlocfilehash: 4bcd4325e776e1b9d369f17f0f1aa456dadeb974
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864171"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282937"
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>프로그래밍 방식으로 패키지 역할 관리(SSIS 서비스)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 사용할 때 패키지에 적용할 수 있는 역할을 확인하거나 개별 패키지에 적용된 역할을 확인 또는 설정할 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.Application> 네임스페이스의 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스는 이 요구 사항을 충족하기 위한 다양한 메서드를 제공합니다.  

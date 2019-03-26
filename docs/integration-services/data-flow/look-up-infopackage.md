@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d435a4228ec53f19f56b6b4ab1621061a09d93c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08b40a56d9a6c8bc3c3fed0940cc9afdef115a05
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630641"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275051"
 ---
 # <a name="look-up-infopackage"></a>InfoPackage 조회
   **InfoPackage 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoPackage를 조회할 수 있습니다. InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  

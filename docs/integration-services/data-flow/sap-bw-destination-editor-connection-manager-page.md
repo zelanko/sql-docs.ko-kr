@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 032cce243ef7bdf9f688074915770cf29d95df15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed9d2a03f0982f90aae9c57334a4fa543d176ab4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749787"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289489"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>SAP BW 대상 편집기(연결 관리자 페이지)
   **SAP BW 대상 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 대상이 사용할 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템으로 데이터를 로드하기 위한 매개 변수도 선택합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47749787"
   
 3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  

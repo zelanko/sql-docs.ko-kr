@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8dd39c8803b5b03a3595191d58bf4bd3f6a54812
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502746"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271868"
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
   작업 전송 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 사이에서 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 작업을 전송합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "52502746"
 > [!NOTE]  
 >  대상 서버의 **sysadmin** 고정 서버 역할 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 하나의 멤버만 대상 서버에서 작업을 만들 수 있습니다. 원본 서버의 작업에 액세스하려면 사용자는 최소한 원본 서버의 **SQLAgentUserRole** 고정 데이터베이스 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 및 해당 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  작업 전송 태스크에 사용할 고유 이름을 입력합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52502746"
 > [!NOTE]  
 >  원본 서버의 작업에 액세스하려면 사용자가 적어도 서버에서 **SQLAgentUserRole** 고정 데이터베이스 역할의 멤버여야 합니다. 대상 서버에 작업을 만들려면 사용자가 **sysadmin** 고정 서버 역할의 멤버이거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 하나여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 및 해당 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **SourceConnection**  
  목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
   

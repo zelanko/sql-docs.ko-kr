@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d576dc67c517d5ce18bf8e931bc2f833338075fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2542aeb97a3cc8c2ccd57a3e3b07445b085ed369
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601101"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290029"
 ---
 # <a name="data-truncation-ssis"></a>데이터 잘림(SSIS)
   값의 데이터 형식을 변환하면 값이 잘릴 수 있습니다.  

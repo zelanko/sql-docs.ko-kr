@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9437ede8627ee8fb162995cb4e02a454d42a3a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727231"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289819"
 ---
 # <a name="manage-a-cdc-service"></a>CDC Service 관리
   CDC Designer 콘솔을 사용하면 CDC Service 구성 콘솔로 만든 서비스를 보고 Oracle CDC Service의 모든 인스턴스를 관리할 수 있습니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "47727231"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC Designer 콘솔에서 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [새 인스턴스 마법사 사용](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
