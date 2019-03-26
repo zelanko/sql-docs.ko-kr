@@ -17,18 +17,18 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84303bf8084f745a052e4057351fa29a231d6dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde008098dee9b48004b6ee036df4832d83f3ff2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824710"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282447"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
-  HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
+  HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 웹 서비스 태스크에서는 이 연결 관리자가 사용됩니다.  
   
  패키지에 HTTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 HTTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47824710"
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **서버 URL**  
  서버의 URL을 입력합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47824710"
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **프록시 사용**  
  HTTP 연결 관리자에서 프록시 서버를 통해 연결하도록 할지 여부를 지정합니다.  
   

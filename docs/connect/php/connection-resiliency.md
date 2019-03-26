@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527096"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305921"
 ---
 # <a name="idle-connection-resiliency"></a>유휴 연결 복원력
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[연결 복원 력](https://msdn.microsoft.com/library/dn632678.aspx) 는 끊어진된 유휴 연결을 다시 설정할 수를 특정 제약 조건 내에서 원칙입니다. Microsoft SQL server 연결에 실패 하면 연결 복원 력 클라이언트 자동 연결을 다시 시도를 허용 합니다. 연결 복원 력은 데이터 원본의; 속성 SQL Server 2014 이상 및 Azure SQL Database만 연결 복원 력을 지원 합니다.
+[연결 복원 력](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) 는 끊어진된 유휴 연결을 다시 설정할 수를 특정 제약 조건 내에서 원칙입니다. Microsoft SQL server 연결에 실패 하면 연결 복원 력 클라이언트 자동 연결을 다시 시도를 허용 합니다. 연결 복원 력은 데이터 원본의; 속성 SQL Server 2014 이상 및 Azure SQL Database만 연결 복원 력을 지원 합니다.
 
 연결 복원 력 연결 문자열에 추가할 수 있는 두 가지 연결 키워드를 사용 하 여 구현 됩니다. **ConnectRetryCount** 하 고 **ConnectRetryInterval**합니다.
 
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a>참고 항목
-[Windows ODBC 드라이버의 연결 복원](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Windows ODBC 드라이버의 연결 복원](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

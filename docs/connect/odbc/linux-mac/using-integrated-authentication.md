@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419074"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305891"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -65,9 +65,9 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
   
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 로그인할 때 시스템 계정을 사용하고 보안 컨텍스트를 가장하기 위한 Linux 기능은 없습니다. 그러므로 사용자를 확인하기 위해 필요한 작업이 더 이상 없습니다.
   
-시스템 계정이 아닌 사용자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 활동을 감사하려면 응용 프로그램이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**를 사용해야 합니다.  
+시스템 계정이 아닌 사용자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 활동을 감사하려면 애플리케이션이 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**를 사용해야 합니다.  
   
-애플리케이션 성능을 향상하려면 애플리케이션이 통합 인증 및 감사를 사용하는 연결 풀링을 사용하면 됩니다. 그러나 연결 풀링, 통합 인증 및 감사를 함께 사용하면 unixODBC 드라이버 관리자가 서로 다른 사용자에게 풀링 연결을 다시 사용하도록 허용하기 때문에 보안 위험이 생깁니다. 자세한 내용은 [ODBC 연결 풀링](https://www.unixodbc.org/doc/conn_pool.html)을 참조하세요.  
+애플리케이션 성능을 향상하려면 애플리케이션이 통합 인증 및 감사를 사용하는 연결 풀링을 사용하면 됩니다. 그러나 연결 풀링, 통합 인증 및 감사를 함께 사용하면 unixODBC 드라이버 관리자가 서로 다른 사용자에게 풀링 연결을 다시 사용하도록 허용하기 때문에 보안 위험이 생깁니다. 자세한 내용은 [ODBC 연결 풀링](http://www.unixodbc.org/doc/conn_pool.html)을 참조하세요.  
 
 다시 사용하기 전에 `sp_reset_connection`을 실행하여 애플리케이션이 풀링 연결을 다시 설정해야 합니다.  
 
@@ -83,7 +83,7 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
   
 -   애플리케이션 서버를 다른 데이터베이스로 인증하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]은 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   

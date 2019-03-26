@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55a224b9fec672cbb240831ba2ea850a90dbe10c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90c7ee4cff732acbd068dc50ff9f009c26dc41c1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656801"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281297"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~(비트 Not)(SSIS 식)
   정수의 비트 부정을 수행합니다. 이 연산자는 부호 있는 정수 또는 부호 없는 정수 데이터 형식에 적용할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "47656801"
  정수 데이터 형식의 유효한 식입니다. *integer*_*expression* 은 비트 연산을 위해 이진수로 변환되는 정수입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ## <a name="result-types"></a>결과 형식  
- *integer_expression*의 데이터 형식을 반환합니다.  
+  *integer_expression*의 데이터 형식을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
  없음  

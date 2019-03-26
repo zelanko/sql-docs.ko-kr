@@ -21,15 +21,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4764ae6b782ea1f7f8187a4d76ce89ea320b145f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514120"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275859"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 연결을 사용하여 다음과 같은 다양한 태스크와 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 기능을 수행하거나 구현합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "52514120"
 |FTP|FTP 서버에 연결합니다.|[FTP 연결 관리자](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|웹 서버에 연결합니다.|[HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md)|  
 |MSMQ|메시지 큐에 연결합니다.|[MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MSOLAP100| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결합니다.|[Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
 |MULTIFILE|다중 파일 또는 폴더에 연결합니다.|[다중 파일 연결 관리자](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|다중 데이터 파일 및 폴더에 연결합니다.|[다중 플랫 파일 연결 관리자](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB Provider를 사용하여 데이터 원본에 연결합니다.|[OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
@@ -165,7 +165,7 @@ ms.locfileid: "52514120"
   
      선택한 연결 관리자 유형의 사용자 지정 대화 상자가 열립니다. 사용 가능한 옵션 및 연결 관리자 유형에 대한 자세한 내용은 다음 옵션 표를 참조하십시오.  
   
-    |ODBC 대상 편집기|Options|  
+    |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
     |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -201,7 +201,7 @@ ms.locfileid: "52514120"
   
      선택한 연결 관리자 유형의 사용자 지정 대화 상자가 열립니다. 사용 가능한 옵션 및 연결 관리자 유형에 대한 자세한 내용은 다음 옵션 표를 참조하십시오.  
   
-    |ODBC 대상 편집기|Options|  
+    |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
     |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -233,7 +233,7 @@ ms.locfileid: "52514120"
   
  연결 관리자에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **연결 관리자 유형**  
  각 연결 형식에 대해 편집기를 사용하여 연결 속성을 지정하려면 연결 형식을 선택한 다음 **추가**를 클릭하거나 연결 형식을 두 번 클릭합니다.  
   
@@ -310,7 +310,7 @@ ms.locfileid: "52514120"
   
 4.  **연결 관리자** 영역에서 연결 관리자를 두 번 클릭하여 **연결 관리자** 대화 상자를 엽니다. 특정 연결 관리자 유형에 대한 설명과 각 유형에 사용할 수 있는 옵션에 대한 자세한 내용은 다음 표를 참조하십시오.  
   
-    |ODBC 대상 편집기|Options|  
+    |ODBC 대상 편집기|옵션|  
     |------------------------|-------------|  
     |[ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md)|[OLE DB 연결 관리자 구성](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)|[ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

@@ -24,22 +24,22 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 656a25127299bedc122a38aafa4534adbe181ccf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 90726ed8ff3b8180e8c65c35d055dcb985001f92
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545267"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276128"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
-  태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  
+  태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  
   
  COM을 지원하는 Visual Basic 등의 프로그래밍 언어와 C#과 같은 .NET 프로그래밍 언어를 사용하여 사용자 지정 태스크를 작성할 수도 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면과 태스크 구성을 위한 사용자 지정 편집기를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 프로그래밍 방식으로 패키지를 만들 수도 있습니다.  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너는 패키지 제어 흐름을 만들기 위한 디자인 화면과 태스크 구성을 위한 사용자 지정 편집기를 제공합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델을 프로그래밍하여 프로그래밍 방식으로 패키지를 만들 수도 있습니다.  
   
 ## <a name="types-of-tasks"></a>태스크 유형  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 다음 유형의 태스크가 포함되어 있습니다.  

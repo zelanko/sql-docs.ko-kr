@@ -11,15 +11,15 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01814908d83b302f5f79ae9ac2be713f022fdb43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622351"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275946"
 ---
 # <a name="round-ssis-expression"></a>ROUND(SSIS 식)
   특정 길이나 전체 자릿수로 반올림한 숫자 식을 반환합니다. 길이 매개 변수는 정수여야 합니다.  
@@ -39,7 +39,7 @@ ROUND(numeric_expression,length)
  정수 식입니다. *numeric_expression* 을 반올림할 전체 자릿수입니다.  
   
 ## <a name="result-types"></a>결과 형식  
- *numeric*_*expression*과 동일한 형식입니다.  
+  *numeric*_*expression*과 동일한 형식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  *length* 인수는 양의 정수이거나 0이어야 합니다.  

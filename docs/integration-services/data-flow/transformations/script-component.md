@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641180"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280647"
 ---
 # <a name="script-component"></a>스크립트 구성 요소
   스크립트 구성 요소는 스크립트를 호스팅하고 패키지에서 사용자 지정 스크립트 코드를 포함시키고 실행할 수 있도록 합니다. 패키지의 스크립트 구성 요소는 다음 용도로 사용할 수 있습니다.  
@@ -208,13 +208,13 @@ ms.locfileid: "51641180"
 |**LocaleID**|정렬과 날짜 및 시간 변환에 사용할 지역별 정보를 제공하는 로캘을 지정합니다.|  
 |**이름**|구성 요소에 대한 설명이 포함된 이름을 입력합니다.|  
 |**ValidateExternalMetadata**|스크립트 변환이 디자인 타임에서 외부 데이터 원본에 대해 열 메타데이터의 유효성을 검사할 것인지 여부를 나타냅니다. 값 **false** 는 실행 시간까지 유효성 검사를 지연합니다.|  
-|**ReadOnlyVariables**|스크립트 변환을 통해 읽기 전용으로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대/소문자를 구분합니다.|  
-|**ReadWriteVariables**|스크립트 변환을 통해 읽기/쓰기로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대/소문자를 구분합니다.|  
+|**ReadOnlyVariables**|스크립트 변환을 통해 읽기 전용으로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대소문자를 구분합니다.|  
+|**ReadWriteVariables**|스크립트 변환을 통해 읽기/쓰기로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대소문자를 구분합니다.|  
 |**ScriptLanguage**|스크립트 구성 요소에 사용될 스크립트 언어를 선택합니다.<br /><br /> 스크립트 구성 요소 및 스크립트 태스크에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용합니다.|  
 |**UserComponentTypeName**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인프라를 지원하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스 및 **Microsoft.SqlServer.TxScript** 어셈블리를 지정합니다.|  
   
  **스크립트 편집**  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

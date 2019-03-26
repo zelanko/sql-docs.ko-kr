@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222064"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434434"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -137,6 +137,9 @@ output: #output parameter the app expects and the type
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> `spec.yaml` 파일 둘 다 지정 된 `poolsize` 및 다양 한 `replicas`. 수가 `replicas` 배포 해야 하는 서비스의 복사본 수를 지정 합니다. `poolsize` 복제본 당 만들려는 풀 수를 지정 합니다. 이러한 설정을 배포 병렬로 처리할 수 있는 요청 양을 영향을 줍니다. 특정된 한 번에 요청의 최대 수는과 동일한 `replicas` 번 `poolsize`, 즉 5 개의 복제본 및 복제본 당 2 개의 풀에 있는 경우 배포에 10 개의 요청을 병렬로 처리할 수 있습니다. 그래픽 표현 아래 이미지를 참조 하세요 `replicas` 고 `poolsize`: ![Poolsize 및 복제본](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 명령 목록을 사용 하 여 앱이 배포를 확인할 수 있습니다.
 

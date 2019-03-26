@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27a9dae6ed1a05f22c2182ea3eabebd5e489db74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832931"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277002"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC Service를 관리하는 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "47832931"
   
 4.  CDC Service에 대해 다음 태스크를 수행할 수 있습니다.  
   
-    -   **새 CDC 인스턴스**만들기  
+    -    **새 CDC 인스턴스**만들기  
   
     -   선택한 CDC Service에 포함된**모든 인스턴스 시작**   
   

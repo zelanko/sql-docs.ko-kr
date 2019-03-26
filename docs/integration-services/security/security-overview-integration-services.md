@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86272ee2bd936b84c72e6cbc3fd9083d2d1c39bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 202ea098033914875e99510377dcfcd2db6d7506
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616491"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273567"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  
 
 ## <a name="threat-and-vulnerability-mitigation"></a>위협 요소 및 취약성 완화
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 다양한 보안 메커니즘이 있더라도 패키지와 패키지에서 만들고 사용하는 파일은 악의적인 목적으로 이용될 수 있습니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "47616491"
  이러한 파일은 특히 중요한 정보를 포함하고 있을 경우 별도로 보호해야 합니다.  
   
 ### <a name="configuration-files"></a>구성 파일  
- 구성에 로그인 및 암호 정보와 같은 중요한 정보가 포함된 경우 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하거나 ACL(액세스 제어 목록)을 사용하여 파일이 저장된 위치나 폴더에 대한 액세스를 제한하고 특정 계정에만 액세스할 수 있도록 해야 합니다. 일반적으로 패키지를 실행하도록 허용할 계정이나 구성, 검사점 및 로그 파일의 내용에 대한 검토를 비롯하여 패키지를 관리하고 문제를 해결하는 계정에 대해 액세스 권한을 부여합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 및 데이터베이스 수준에서 보호하므로 보다 안전한 저장소를 제공합니다. 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 유형을 사용하고 파일 시스템을 저장하려면 XML 구성 유형을 사용합니다.  
+ 구성에 로그인 및 암호 정보와 같은 중요한 정보가 포함된 경우 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하거나 ACL(액세스 제어 목록)을 사용하여 파일이 저장된 위치나 폴더에 대한 액세스를 제한하고 특정 계정에만 액세스할 수 있도록 해야 합니다. 일반적으로 패키지를 실행하도록 허용할 계정이나 구성, 검사점 및 로그 파일의 내용에 대한 검토를 비롯하여 패키지를 관리하고 문제를 해결하는 계정에 대해 액세스 권한을 부여합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서버 및 데이터베이스 수준에서 보호하므로 보다 안전한 스토리지를 제공합니다. 구성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 유형을 사용하고 파일 시스템을 저장하려면 XML 구성 유형을 사용합니다.  
   
  자세한 내용은 [패키지 구성](../../integration-services/packages/package-configurations.md), [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)및 [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  
   
