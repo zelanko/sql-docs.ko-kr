@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1961b787023e995a6d3735559d35a13607727853
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0142770f0cb097ea3d64ce6b934308fc4c3cb79c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277732"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Attunity Oracle CDC Service 시스템 아키텍처
   Oracle CDC Service는 하나 이상의 원본 Oracle 데이터베이스에서 선택한 테이블의 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 데이터베이스에 캡처합니다. 다음 다이어그램에서는 Oracle CDC Service를 구성하는 구성 요소를 보여 줍니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47829461"
   
 -   Oracle 데이터베이스: 이 플랫폼은 지원되는 버전의 Oracle 데이터베이스가 실행되는 컴퓨터일 수 있습니다. 여기에는 Windows, Linux 또는 설치된 버전의 Oracle 데이터베이스에서 지원되는 기타 운영 체제를 실행하는 컴퓨터가 포함됩니다. 단일 Oracle CDC Service가 여러 원본 Oracle 데이터베이스에서 변경 내용을 캡처할 수 있으므로 다이어그램에는 이 플랫폼이 복수로 표시됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 이 플랫폼은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 지원되는 SKU)를 실행하는 컴퓨터일 수 있습니다. Oracle CDC Service는 변경 테이블과 서비스 구성을 저장하는 하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 플랫폼은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 클러스터된 인스턴스 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Always On **기능을 사용하는** 의 미러된 인스턴스를 나타낼 수도 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 이 플랫폼은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 지원되는 SKU)를 실행하는 컴퓨터일 수 있습니다. Oracle CDC Service는 변경 테이블과 서비스 구성을 저장하는 하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 플랫폼은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 클러스터된 인스턴스 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Always On **기능을 사용하는** 의 미러된 인스턴스를 나타낼 수도 있습니다.  
   
 -   Oracle CDC Designer: 이 플랫폼은 원본 Oracle 데이터베이스와 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 액세스할 수 있는 지원되는 Windows 컴퓨터일 수 있습니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47829461"
 |Oracle CDC Service: 변경 데이터 캡처 작업이 수행되는 Windows 서비스입니다.|Oracle CDC 인스턴스: 단일 원본 Oracle 데이터베이스의 변경 데이터 캡처 작업을 처리하는 Oracle CDC Service의 하위 프로세스입니다(원본 Oracle 데이터베이스당 하나의 Oracle CDC 인스턴스가 있음).|  
 ||Oracle 로그 판독기: Oracle 클라이언트를 사용하여 Oracle 트랜잭션 로그를 읽습니다.|  
 ||Oracle 클라이언트: Oracle과 통신하는 데 사용하는 Oracle 인스턴트 클라이언트입니다. 이 항목은 Oracle CDC Service를 설치하기 전에 Oracle에서 구하여 설치해야 하는 필수 구성 요소입니다.|  
-||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 기록기: 캡처된 Oracle 테이블의 커밋된 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]변경 테이블에 기록합니다. 이 구성 요소는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 내의 캡처 상태도 유지 관리합니다.|  
+||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 기록기: 캡처된 Oracle 테이블의 커밋된 변경 내용을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 기록합니다. 이 구성 요소는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 내의 캡처 상태도 유지 관리합니다.|  
 ||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC 클라이언트: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Microsoft Native Client입니다. 이 항목은 Oracle CDC Service를 설치하기 전에 Microsoft에서 구하여 설치해야 하는 필수 구성 요소입니다.|  
 |Oracle CDC Service 구성: Windows 서비스를 만들고 해당 구성을 설정하는 Microsoft Management Console 스냅인입니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트: .NET 프레임워크 버전 4와 함께 제공되는 SQL ADO.NET 클라이언트입니다.|  
 |Oracle 데이터베이스: 테이블을 선택하기 위한 변경 사항을 캡처하는 원본 Oracle 데이터베이스입니다.|로그 마이너: Oracle 트랜잭션 로그를 읽는 Oracle 구성 요소입니다.|  

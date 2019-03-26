@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623681"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271215"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
   다음 도구 중 하나 이상을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행, 프로젝트 유효성 검사 및 기타 작업을 모니터링할 수 있습니다. 데이터 탭과 같은 일부 도구는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 프로젝트에 대해서만 사용할 수 있습니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "47623681"
   
 |섹션|설명|  
 |-------------|-----------------|  
-|필터|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
+|Assert|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
 |실행 정보|각 패키지 실행의 시작 시간, 종료 시간 및 기간을 보여 줍니다. 패키지 실행 태스크를 사용하여 자식 패키지에 전달된 값과 같이 패키지 실행과 함께 사용된 매개 변수 값의 목록을 볼 수도 있습니다. 매개 변수 목록을 보려면 개요를 클릭합니다.|  
   
  패키지 실행 태스크를 사용하여 자식 패키지에 값을 제공하는 방법에 대한 자세한 내용은 [Execute Package Task](../../integration-services/control-flow/execute-package-task.md)를 참조하십시오.  
@@ -206,4 +206,4 @@ ms.locfileid: "47623681"
 
 ## <a name="see-also"></a>참고 항목  
  [프로젝트 및 패키지 실행](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [패키지 실행 문제 해결 보고서](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [패키지 실행 보고서 문제 해결](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
