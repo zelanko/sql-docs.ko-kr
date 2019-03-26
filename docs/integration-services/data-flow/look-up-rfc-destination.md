@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 448211ee1acbfb318e8ed8f1be5161fb5a18a94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 046ec13269181eedda2d9fcfd891e7dd823db372
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617951"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282237"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
   **RFC 대상 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 RFC 대상을 조회할 수 있습니다. 사용할 수 있는 RFC 대상 목록이 표시될 때 원하는 대상을 선택하면 관련 옵션이 필요한 값으로 채워집니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "47617951"
   
      **SAP BW 원본 편집기**에서 **RFC 대상** 그룹 상자는 **실행 모드** 가 **P - 프로세스 체인 트리거** 또는 **W - 알릴 때까지 대기**인 경우에만 표시됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **대상**  
  SAP Netweaver BW 시스템에 정의된 RFC 대상의 이름을 표시합니다.  
   

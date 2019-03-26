@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpblobdltask.f1
 - sql14.dts.designer.afpblobdltask.f1
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 633422f298418f3b2fdf95aea7aca7b604bfce6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a1a8c8c23519ca6f0ceb4ab1d2a3e587f7a86f8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637531"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283167"
 ---
 # <a name="azure-blob-download-task"></a>Azure Blob 다운로드 작업
 Azure Blob 다운로드 작업을 사용하면 SSIS 패키지에서 Azure Blob Storage의 파일을 다운로드할 수 있습니다.

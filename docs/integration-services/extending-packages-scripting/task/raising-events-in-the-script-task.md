@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Events property
 - Script task [Integration Services], events
 ms.assetid: 21ea07d1-e267-4fb1-a6cc-82c95a39beae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c5c5590bb6bdeb9539fb42e4c17b8ea38c5c85f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3a20aee1b6c33a6106dd5a1154d2dfe6c7661ef7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641740"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289379"
 ---
 # <a name="raising-events-in-the-script-task"></a>스크립트 태스크에서 이벤트 발생
   이벤트를 사용하면 포함하는 패키지에 오류 및 경고와 태스크 진행률 또는 상태 같은 기타 정보를 보고할 수 있습니다. 패키지에서는 이벤트 알림을 관리하기 위한 이벤트 처리기를 제공합니다. 스크립트 태스크에서는 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 속성에서 메서드를 호출하여 이벤트를 발생시킬 수 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지 처리 이벤트에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 이벤트 처리기](../../../integration-services/integration-services-ssis-event-handlers.md)를 참조하세요.  

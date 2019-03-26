@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12401782775be3a4bb180fc49f8d3df4db06ba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cb2819982a452e365bcf13e0a949e1006f2c97
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775141"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280577"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
   **SAP BW 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 원본의 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템에서 데이터를 추출하기 위한 실행 모드와 매개 변수도 선택합니다.  

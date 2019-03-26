@@ -16,26 +16,26 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 20a7422664808911e2241eacb4f48c51f0246b2d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 33ccc6269c37f3f0b97e6f10de8d53ca58854a7c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639776"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277822"
 ---
 # <a name="unpivot-transformation"></a>피벗 해제 변환
   피벗 해제 변환은 단일 레코드의 여러 열 값을 단일 열에 동일 값이 포함된 여러 레코드로 확장하여 정규화되지 않은 데이터 세트를 정규화된 버전으로 만듭니다. 예를 들어 고객 이름이 나열된 데이터 세트에 각 고객마다 하나의 행이 있고 행의 열에 제품 및 구매 수량이 표시되어 있습니다. 피벗 해제 변환으로 데이터 집합을 정규화하면 데이터 집합에 고객이 구매한 각 제품이 서로 다른 행에 포함됩니다.  
   
  다음 다이어그램에서는 Product 열로 데이터를 피벗 해제하기 전의 데이터 집합을 보여 줍니다.  
   
- ![피벗 해제 후의 데이터 집합](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "피벗 해제 후의 데이터 집합")  
+ ![피벗 해제 후의 데이터 세트](../../../integration-services/data-flow/transformations/media/mw-dts-18.gif "피벗 해제 후의 데이터 세트")  
   
  다음 다이어그램에서는 Product 열로 데이터를 피벗 해제한 후의 데이터 집합을 보여 줍니다.  
   
- ![피벗 해제 전의 데이터 집합](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "피벗 해제 전의 데이터 집합")  
+ ![피벗 해제 전의 데이터 세트](../../../integration-services/data-flow/transformations/media/mw-dts-17.gif "피벗 해제 전의 데이터 세트")  
   
  일부 경우에는 피벗 해제된 결과에 예기치 않은 값이 있는 행이 포함될 수 있습니다. 예를 들어 다이어그램에 표시된 피벗 해제할 예제 데이터에서 Fred의 모든 Qty 열에 null 값이 있으면 출력에는 Fred에 대한 행이 다섯 개가 아니라 한 개만 포함될 수 있습니다. Qty 열에는 해당 열 데이터 형식에 따라 null이나 0이 포함됩니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "51639776"
 > [!NOTE]  
 >  이 항목에서는 [피벗 해제 변환](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 에 설명된 피벗 해제 시나리오를 사용하여 옵션 사용법을 보여 줍니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  확인란을 사용하여 행에 피벗할 열을 지정합니다.  
   

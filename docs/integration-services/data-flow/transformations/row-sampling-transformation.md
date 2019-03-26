@@ -20,15 +20,15 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60c2615cf141f145f2353df5309105b0ed535fc1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641270"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271938"
 ---
 # <a name="row-sampling-transformation"></a>행 샘플링 변환
   행 샘플링 변환은 임의로 선택된 입력 데이터 세트의 하위 세트를 얻는 데 사용합니다. 출력 샘플의 정확한 크기와 난수 생성기의 초기값을 지정할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "51641270"
 ## <a name="row-sampling-transformation-editor-sampling-page"></a>행 샘플링 변환 편집기(샘플링 페이지)
   **행 샘플링 변환 편집기** 대화 상자를 사용하여 입력의 일부분을 지정된 행 수를 사용하는 샘플로 분할할 수 있습니다. 이 변환으로 인해 입력이 두 개의 별도 출력으로 나뉩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **행 수**  
  입력에서 샘플로 사용할 행 수를 지정합니다.  
   

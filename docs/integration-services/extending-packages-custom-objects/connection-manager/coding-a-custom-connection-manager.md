@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21212d035c8f2c047d6d3bef48900d2b3c66a58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597262"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282417"
 ---
 # <a name="coding-a-custom-connection-manager"></a>사용자 지정 연결 관리자 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  

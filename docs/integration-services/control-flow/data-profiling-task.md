@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640690"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275086"
 ---
 # <a name="data-profiling-task"></a>데이터 프로파일링 태스크
   데이터 프로파일링 태스크는 사용자가 데이터 원본에 익숙해지고 데이터에서 해결해야 할 문제를 식별하는 데 도움이 되는 다양한 프로필을 계산합니다.  

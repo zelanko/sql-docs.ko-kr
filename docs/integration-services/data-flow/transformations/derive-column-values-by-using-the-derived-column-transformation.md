@@ -13,15 +13,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dafef2f6008e924bceda759404d0be23e920c3f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534620"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274248"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  

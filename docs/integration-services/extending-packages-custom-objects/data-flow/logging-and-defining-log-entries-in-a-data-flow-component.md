@@ -13,15 +13,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4bd559b5e69e8f20d7791ce0eeddb2021c1813d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59725d4638561346af3e7fbac08275e56dacb4f1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637571"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281307"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 로그 항목 로깅 및 정의
   사용자 지정 데이터 흐름 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 사용하여 기존 로그 항목에 메시지를 게시할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> 메서드나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 유사한 메서드를 사용하여 사용자에게 정보를 제공할 수도 있습니다. 그러나 이 방법을 사용할 경우 추가 이벤트를 발생시키고 처리하는 오버헤드가 발생하며 사용자가 직접 관심 있는 메시지에 대한 자세한 정보 메시지를 조사해야 합니다. 아래에서 설명하는 대로 사용자 지정 로그 항목을 사용하면 구성 요소 사용자에게 고유한 레이블이 지정된 사용자 지정 로그 정보를 제공할 수 있습니다.  

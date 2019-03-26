@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837781"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289939"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 데이터를 읽고 이를 캐시 파일에 저장할 수 있습니다. 캐시 연결 관리자가 캐시 파일을 사용하도록 구성했는지 여부에 관계없이 데이터는 항상 메모리에 저장됩니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "47837781"
 ###  <a name="generaltab"></a> 일반 탭  
  **캐시 연결 관리자 편집기** 대화 상자의 **일반** 탭을 사용하여 파일에서 캐시를 읽을지 아니면 파일에 캐시를 저장할지 여부를 나타낼 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로의 캐시 연결에 고유한 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47837781"
 ###  <a name="columnstab"></a> 열 탭  
  **캐시 연결 관리자 편집기** 대화 상자의 **열** 탭을 사용하여 캐시에 있는 각 열의 속성을 구성할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **열**  
  열 이름을 지정합니다.  
   

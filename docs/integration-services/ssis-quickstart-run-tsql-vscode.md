@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a23e0bcefc098f0e70f5515cb12253c10446f846
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+ms.openlocfilehash: 3ab178c2f5a3cd8aaeb5a341275956e6bf87dd93
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216707"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281707"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL을 사용하여 Visual Studio Code에서 SSIS 패키지 실행
 이 빠른 시작에서는 Visual Studio Code를 사용하여 SSIS 카탈로그 데이터베이스에 연결한 다음, Transact-SQL 문을 사용하여 SSIS 카탈로그에 저장된 SSIS 패키지를 실행하는 방법을 보여줍니다.

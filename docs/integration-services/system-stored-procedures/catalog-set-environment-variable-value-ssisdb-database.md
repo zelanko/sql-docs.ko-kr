@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1d493dad-9d9c-4f0a-87e2-20a2d4a35f99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9531258671762b2b9c3b100a45401357d7902679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 352577a69ba10f7eb6e2ef6e5b4e5900bf0629f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686371"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274107"
 ---
 # <a name="catalogsetenvironmentvariablevalue-ssisdb-database"></a>catalog.set_environment_variable_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ catalog.set_environment_variable_value [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   환경에 대한 READ 및 MODIFY 권한  

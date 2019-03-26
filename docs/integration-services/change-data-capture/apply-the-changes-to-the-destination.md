@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ad66356462da72c3b1fe2f9ee05fd226d00c52e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53021d9d3f2081ffb14876cd325bb8f1df8bf180
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651931"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271294"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 세 번째이자 마지막 태스크는 대상에 변경 내용을 적용하는 것입니다. 삽입을 적용할 구성 요소, 업데이트를 적용할 구성 요소 및 삭제를 적용할 구성 요소가 필요합니다.  

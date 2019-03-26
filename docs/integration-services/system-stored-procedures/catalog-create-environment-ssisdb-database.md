@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b0ff9e5c2a5874b5ff01e8da19fa6015e28b5e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2710243c72f9e245100c3fdd30a9147c89b7d4d8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778561"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274365"
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ catalog.create_environment [@folder_name =] folder_name
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   폴더에 대한 READ 및 MODIFY 권한  

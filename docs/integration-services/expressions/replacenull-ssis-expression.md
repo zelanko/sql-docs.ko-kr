@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b3d90e98fd80a1ee7e7f1f6704800401d6e76a00
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e7f931a95981ae15fe98c80770e91d370fe0a6b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201652"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290119"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL(SSIS 식)
   첫 번째 식 매개 변수의 값이 NULL이면 두 번째 식 매개 변수의 값을 반환하고, 그렇지 않으면 첫 번째 식의 값을 반환합니다.  

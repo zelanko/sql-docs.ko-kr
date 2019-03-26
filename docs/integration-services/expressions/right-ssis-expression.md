@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80f510579b9f86af61327761516427a643d3aaf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55d2dda005fb0e01cc65f374967f776e85b8fc25
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720601"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270693"
 ---
 # <a name="right-ssis-expression"></a>RIGHT(SSIS 식)
   지정한 문자 식의 오른쪽에서부터 지정한 개수의 문자를 반환합니다.  

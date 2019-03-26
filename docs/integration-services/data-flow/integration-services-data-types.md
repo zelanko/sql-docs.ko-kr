@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641760"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274419"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -226,7 +226,7 @@ ms.locfileid: "51641760"
 |DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date&#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||날짜|날짜|날짜|  
-|DT_DBTIME||||TIMESTAMP|time|Time|  
+|DT_DBTIME||||TIMESTAMP|Time|Time|  
 |DT_DBTIME2|[time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time&#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|||||  
 |DT_DBTIMESTAMP|[datetime&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime&#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime&#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2&#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
@@ -237,10 +237,10 @@ ms.locfileid: "51641760"
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|단일||real|real|  
-|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  

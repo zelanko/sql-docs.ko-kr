@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee5b1f92bd834a22401377c7e0f16e0c4812379e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 77b941d4f1460b81acf2e90185f6e1a4d9ecbde9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639240"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277522"
 ---
 # <a name="ado-net-custom-properties"></a>ADO.NET 사용자 지정 속성
   **원본 사용자 지정 속성**  

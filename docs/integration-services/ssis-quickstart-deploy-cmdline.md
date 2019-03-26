@@ -6,15 +6,15 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9646251f189a035db3de3190321a68bd34231392
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 583e6f8f5213ae8fb7f803f872813551f7fb07fc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595103"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290209"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe를 사용하여 명령 프롬프트에서 SSIS 프로젝트 배포
 이 빠른 시작에서는 Integration Services 배포 마법사인 `ISDeploymentWizard.exe`를 실행하여 명령 프롬프트에서 SSIS 프로젝트를 배포하는 방법을 보여줍니다.

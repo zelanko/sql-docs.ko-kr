@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afpdelcltask.f1
 - sql14.dts.designer.afpdelcltask.f1
 ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ade43de6f41242bbf529ea1da46d61f83e5303b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a64cf0fecb7313ebd8947a1acd3ef54ccb34636f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698973"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272349"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Azure HDInsight 클러스터 삭제 작업
 **Azure HDInsight 클러스터 삭제 작업**을 사용하면 SSIS 패키지에서 지정된 Azure 구독 및 리소스 그룹의 Azure HDInsight 클러스터를 삭제할 수 있습니다.

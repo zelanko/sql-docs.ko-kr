@@ -12,15 +12,15 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3c6167895a35781d0adf91869a4bcdc3ab4d79a5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640260"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275258"
 ---
 # <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  

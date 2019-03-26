@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.ispackageprop.general.f1
 - sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d494a687462617dbb66e3d631c30d7ae6dca4960
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e392e406ce9c17cc24f57a22cef03de2c363a21
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411980"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289056"
 ---
 # <a name="package-properties-dialog-box"></a>패키지 속성 대화 상자
   **패키지 속성** 대화 상자를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지의 속성을 볼 수 있습니다.  

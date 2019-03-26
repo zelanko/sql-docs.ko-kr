@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dd032cca2a257dd9b7695a0d33cac8a53a3c6e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76c6951b59ac5a78a63990e071fa83fe791e550d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607787"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279960"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  

@@ -18,15 +18,16 @@ ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3ea6f1d57c9f6afef91d9d66a5db001302aabb6
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: c265582eb3cad857201fdde5f3671e46e370b00a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803118"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342949"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정된 형식 및 선택적 culture로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  

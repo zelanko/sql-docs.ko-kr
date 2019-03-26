@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27acd1fcf2cd79ce7d681f9491ee77ffc7ad9d71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2fc767224bb77f3ddbb0f6f562a5d5fce2a56981
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503925"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270857"
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52503925"
   
  식을 작성하고 속성 식을 사용하는 방법은 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md) 및 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)을 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **식(...)**  
  **속성 식 편집기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Property Expressions Editor](../../integration-services/expressions/property-expressions-editor.md)를 참조하세요.  
   

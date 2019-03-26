@@ -10,15 +10,15 @@ ms.topic: reference
 f1_keywords:
 - sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b5df50add8b380d922ea26277b8b261c9c4e2c6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 314e6895b4a4888970ae09fb29851446b3d6859c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651620"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273224"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW F1 도움말
   이 섹션에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW의 세 가지 구성 요소에 대한 F1 도움말 항목이 포함되어 있습니다. 마법사 페이지와 대화 상자에서 F1 키를 누르거나 도움말을 클릭하여 사용자 인터페이스에서 이러한 항목을 볼 수도 있습니다.  

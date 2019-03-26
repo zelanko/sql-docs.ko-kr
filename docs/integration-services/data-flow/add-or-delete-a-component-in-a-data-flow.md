@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05cf197358b700730e71195df9312a2a41fe6db6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8338cb3c4e4d4d4915c1eaee5d6a118edc23ca5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847691"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282827"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>데이터 흐름에서 구성 요소 추가 또는 삭제
   데이터 흐름 구성 요소는 데이터 흐름에 있는 원본, 대상 및 변환입니다. 데이터 흐름에 구성 요소를 추가하려면 패키지의 제어 흐름에 데이터 흐름 태스크 포함되어 있어야 합니다.  

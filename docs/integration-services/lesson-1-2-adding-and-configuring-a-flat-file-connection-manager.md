@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 93a5366ca4919eac5134549ef3d254bc793c9ee2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 79540566b777ecaea55f75223404eac2292cf875
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143573"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289719"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>1-2단원: 플랫 파일 연결 관리자 추가 및 구성
 

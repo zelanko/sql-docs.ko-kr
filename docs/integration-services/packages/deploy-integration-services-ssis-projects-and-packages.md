@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a06b74d65cdc33429ce694d04753863d711c5cae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202882"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290679"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 프로젝트 배포 모델 및 레거시 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  

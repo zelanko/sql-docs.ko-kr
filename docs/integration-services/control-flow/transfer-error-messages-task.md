@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6d28d68409ccdee801c1a614add2559ae69b1ac6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518782"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282997"
 ---
 # <a name="transfer-error-messages-task"></a>오류 메시지 전송 태스크
   오류 메시지 전송 태스크에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 간에 전송합니다. 사용자 정의 메시지는 50000보다 크거나 같은 식별자를 가진 메시지입니다. 50000보다 작은 식별자를 가진 메시지는 시스템 오류 메시지이며 오류 메시지 전송 태스크를 사용하여 전송할 수 없습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "52518782"
 ## <a name="transfer-error-messages-task-editor-general-page"></a>오류 메시지 전송 태스크 편집기(일반 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 오류 메시지 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다. 오류 메시지 전송 태스크에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 간에 전송합니다.   
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  오류 메시지 전송 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52518782"
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>오류 메시지 전송 태스크 편집기(메시지 페이지)
   **오류 메시지 전송 태스크 편집기** 대화 상자의 **메시지** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 정의 오류 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **SourceConnection**  
  목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
   

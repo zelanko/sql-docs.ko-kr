@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7d6aece1a3e43fd7a732dd61864349f8f3c92520
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802270"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306251"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "56802270"
   
 -   [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  계정이 있으면 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.FreeLicenseSQLServer2016SP1DeveloperWindowsServer2016)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
+-   Azure 계정이 있으세요?  계정이 있으면 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** 로 이동하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]Developer Edition이 이미 설치되어 있는 가상 머신을 실행합니다.  
   
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.

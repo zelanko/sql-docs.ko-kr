@@ -11,15 +11,15 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df98bbe47861ca2fa03acec444a9881a7f2c6a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a5fa59f2f7ba7b3ceac4eebb9547ebd8d32b6f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765601"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274767"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.  

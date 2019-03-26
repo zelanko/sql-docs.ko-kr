@@ -18,15 +18,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8fbc95fb105a5bfcb3eebc09a728d6487ffbf4bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54f0d5afc9893c188c79658fe6301394ac17bb2b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793735"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274221"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services 역할(SSIS 서비스)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지에 대한 액세스를 보호하는 데 사용할 수 있는 특정 고정 데이터베이스 수준 역할을 제공합니다. 사용 가능한 역할은 패키지를 SSIS 카탈로그 데이터베이스(SSISDB)에 저장하는지 아니면 msdb 데이터베이스에 저장하는지에 따라 달라집니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "47793735"
   
 -   **ownersid** 열은 패키지를 만든 사용자의 고유 보안 식별자를 포함하며 패키지의 소유자를 정의합니다.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  기본적으로 패키지의 읽기 역할에는 **db_ssisadmin** 및 **db_ssisoperator** 고정 데이터베이스 수준 역할의 사용 권한과 패키지를 만든 사용자의 고유 보안 식별자가 적용되고 쓰기 역할에는 **db_ssisadmin** 역할의 사용 권한과 패키지를 만든 사용자의 고유 보안 식별자가 적용됩니다. 패키지에 대한 읽기 액세스 권한을 가지려면 **db_ssisadmin**, **db_ssisltduser**또는 **db_ssisoperator** 역할의 멤버여야 하고 쓰기 권한을 가지려면 **db_ssisadmin** 역할의 멤버여야 합니다.  
   
 ### <a name="access-to-packages"></a>패키지에 대한 액세스  
@@ -138,7 +138,7 @@ ms.locfileid: "47793735"
   
  **sysssispackages** 테이블의 **ownersid** 열은 패키지를 만든 사용자의 고유 보안 식별자를 표시합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **패키지 이름**  
  패키지의 이름을 지정합니다.  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9470fdf09376f26945aae0462813921018dcb9a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820801"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282387"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>사용자 지정 태스크에 디버깅 지원 추가
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진에서는 중단점을 사용하여 실행 중 패키지, 태스크 및 기타 유형의 컨테이너를 일시 중지할 수 있습니다. 중단점을 사용하면 응용 프로그램이나 태스크가 올바르게 실행되지 못하도록 하는 오류를 검토하고 수정할 수 있습니다. 중단점 아키텍처를 통해 클라이언트는 태스크 처리가 일시 중지된 동안 정의된 실행 지점에서 패키지에 있는 개체의 런타임 값을 평가할 수 있습니다.  

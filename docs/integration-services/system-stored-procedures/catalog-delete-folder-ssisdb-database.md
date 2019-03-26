@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae60521ebd4b3bf9d10e12d5f15a54ceb0166c04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7826759b07f590e1dd75be61db4f967cd022821
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626141"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274277"
 ---
 # <a name="catalogdeletefolder-ssisdb-database"></a>catalog.delete_folder(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ delete_folder [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할에 대한 멤버 자격  

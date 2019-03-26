@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1926dfd33d45c5481dc161eebe99a3e3cb45b544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7aad7ade17e7131b2c1d25ccb7c7bfa8c5d2a4fa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824631"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274987"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만들어진 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 형식으로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 과정을 돕는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 제공합니다. 원래 패키지를 백업하도록 마법사를 구성할 수 있으므로 업그레이드에 문제가 있을 경우 원래 패키지를 계속 사용할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "47824631"
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지 업그레이드 마법사를 실행하면 자동으로 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장됩니다.  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 저장 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 스토리지 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 또는 명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지 업그레이드 마법사를 실행하면 원래 패키지와 업그레이드된 패키지에 대해 다른 스토리지 위치를 지정할 수 있습니다. 원래 패키지를 백업하려면 원본 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되도록 지정해야 합니다. 다른 스토리지 옵션을 지정하면 마법사는 원래 패키지를 백업할 수 없게 됩니다.  
   
  마법사는 원래 패키지를 백업할 때 **SSISBackupFolder** 폴더에 원래 패키지의 복사본을 저장합니다. 마법사는 원래 패키지 및 업그레이드된 패키지가 포함된 폴더에 하위 폴더로 이 **SSISBackupFolder** 폴더를 만듭니다.  
   

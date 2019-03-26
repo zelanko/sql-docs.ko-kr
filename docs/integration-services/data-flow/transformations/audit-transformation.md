@@ -14,15 +14,15 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c9498c837f2afa6d88dd5fbc31842b9d712b64f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: aa02f74979843c43b5a495c608e3c8811f929237
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640120"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283007"
 ---
 # <a name="audit-transformation"></a>감사 변환
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 이 정보를 제공하는 시스템 변수를 포함합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "51640120"
 ## <a name="audit-transformation-editor"></a>감사 변환 편집기
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 이 정보를 제공하는 시스템 변수가 포함되어 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **출력 열 이름**  
  감사 정보를 포함할 새 출력 열의 이름을 입력합니다.  
   

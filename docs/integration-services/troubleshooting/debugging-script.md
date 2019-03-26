@@ -12,15 +12,15 @@ helpviewer_keywords:
 - debugging [Integration Services], scripts
 - scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1daf885be70e310e49ad3fa449830cfbe125b8b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4309524aa80c09b92a486cbb210656a756ed18af
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705871"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290329"
 ---
 # <a name="debugging-script"></a>스크립트 디버깅
   VSTA( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  

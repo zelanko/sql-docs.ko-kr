@@ -18,15 +18,16 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8328c6bc65d7b0f05e9ce38f908b4f3d64b25b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755211"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342940"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   텍스트의 특수 문자를 이스케이프하고 이스케이프 문자가 포함된 텍스트를 반환합니다. **STRING_ESCAPE**는 결정적 함수입니다.  
   

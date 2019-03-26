@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c345f8e1c797e864813b1b1fa0feb0a9cd028821
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37dc6d2623a2efbdf566bdc71f9a5b1c7f33724a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661481"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274687"
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ delete_environment_reference [ @reference_id = ] reference_id
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 MODIFY 권한  

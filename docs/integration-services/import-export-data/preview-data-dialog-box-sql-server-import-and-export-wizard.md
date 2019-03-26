@@ -3,22 +3,21 @@ title: 데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보�
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b48e24103956da8e972913945091e8c77ba34a96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 385ff11ddd79430f122a5390b45af77d8fba9205
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622741"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272444"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>데이터 미리 보기 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   복사할 데이터를 지정한 후 필요에 따라 **미리 보기** 를 클릭하여 **데이터 미리 보기** 대화 상자를 열 수 있습니다. 이 페이지에서는 데이터 원본의 샘플 데이터 행을 최대 200개까지 미리 볼 수 있습니다. 이를 통해 원하는 데이터를 마법사가 복사하는지 확인할 수 있습니다.

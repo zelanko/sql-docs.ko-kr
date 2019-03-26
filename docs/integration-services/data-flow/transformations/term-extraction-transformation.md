@@ -26,15 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507469"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282577"
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
   용어 추출 변환은 변환 입력 열의 텍스트에서 용어를 추출한 후 용어를 변환 출력 열에 기록합니다. 변환은 영어 텍스트에서만 작동되며 자체 영어 사전과 영어에 대한 언어적 정보가 사용됩니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "52507469"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>용어 추출 변환 편집기(용어 추출 탭)
   **용어 추출 변환 편집기** 대화 상자의 **용어 추출** 탭을 사용하여 추출할 텍스트가 포함된 텍스트 열을 지정합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  확인란을 사용하여 용어 추출에 사용할 단일 텍스트 열을 선택합니다.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "52507469"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
   **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **제외 용어 사용**  
  제외 용어를 포함하는 열을 지정하여 용어 추출 중 특정 용어를 제외할지 여부를 나타냅니다. 용어를 제외하기로 선택하는 경우 다음 원본 속성을 지정해야 합니다.  
   
@@ -224,7 +224,7 @@ ms.locfileid: "52507469"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
   **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **명사**  
  변환에서 개별 명사만 추출하도록 지정합니다.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "52507469"
  점수를 용어의 빈도로 지정합니다.  
   
  **TFIDF**  
- 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다.  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))  
   
  **빈도 임계값**  
  단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  

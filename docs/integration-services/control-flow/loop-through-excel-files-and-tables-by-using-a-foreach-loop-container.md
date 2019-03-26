@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639250"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282847"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  

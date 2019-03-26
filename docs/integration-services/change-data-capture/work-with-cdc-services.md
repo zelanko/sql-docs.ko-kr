@@ -10,20 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81ce36e13411afa9fb02258e69ff72798542f1fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eef1093a9ce223ac922ff41d5143f6f4e312eedf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788591"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275304"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service 작업
   CDC Service 구성 콘솔을 사용하여 새 CDC Service를 만들고 CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 준비할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **SQL Server 준비**  
  CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 이 옵션을 선택합니다.  
   

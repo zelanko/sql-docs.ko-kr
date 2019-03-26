@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: da5839c81489a278c3e013886ae7b1eeba6834f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793532"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278092"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **값 포함 프로필 요청** 의 옵션을 설정할 수 있습니다. 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 따라서 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인할 수 있습니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 값 포함 프로필을 사용하여 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "47793532"
 |값|설명|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
-|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
+|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "47793532"
  **RequestID**  
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **None**  
  프로필의 출력을 구체화하기 위한 임계값 설정을 선택합니다. 이 속성의 기본값은 **Specified**입니다. 자세한 내용은 이 항목의 앞부분에 나오는 "임계값 설정 이해" 섹션을 참조하십시오.  
   

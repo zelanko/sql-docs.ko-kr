@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.scdsupport.f1
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16850f331af1a5d353dd39282a485d3ef9cc8eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb87a00ded7034696f45b2855f5f931ef44eadfa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658908"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290299"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>느린 변경 차원 열(느린 변경 차원 마법사)
   **느린 변경 차원 열** 대화 상자를 사용하여 각 느린 변경 차원 열의 변경 유형을 선택할 수 있습니다.  
   
  이 마법사에 대한 자세한 내용은 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)를 참조하십시오.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **차원 열**  
  목록에서 차원 열을 선택합니다.  
   

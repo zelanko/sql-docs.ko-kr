@@ -12,15 +12,15 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25264aeca3953bb7ec4a402a705386ddfc075ca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 771dea6d044fc797c5fe8bcc4a04e61679794ecd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757411"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290069"
 ---
 # <a name="-logical-or-ssis-expression"></a>||(논리적 OR)(SSIS 식)
   논리적 OR 연산을 수행합니다. 두 조건 중 하나 또는 둘 다가 TRUE이면 식도 TRUE가 됩니다.  

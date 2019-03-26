@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2318f93e1bd8b5a11e14c17cb8b662db27b12fdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e799ce450bfca9301218fe1b2c29aaf9a49562d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728808"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270786"
 ---
 # <a name="map-columns-to-composite-domains"></a>복합 도메인에 열 매핑
   복합 도메인은 둘 이상의 단일 도메인으로 구성됩니다. 여러 개의 열을 이 도메인에 매핑하거나 구분된 값이 포함된 단일 열을 이 도메인에 매핑할 수 있습니다.  

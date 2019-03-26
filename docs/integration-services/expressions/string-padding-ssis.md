@@ -12,15 +12,15 @@ helpviewer_keywords:
 - expressions [Integration Services], string padding
 - string padding
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f41a1601ef6fe416eb1f429343bea32451f7716
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a42f92cf83e75755f079d28e1547135653cdbbd0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638381"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272527"
 ---
 # <a name="string-padding-ssis"></a>문자열 패딩(SSIS)
   식 계산기는 문자열에 선행 및 후행 공백이 포함되어 있는지 확인하지 않으며 문자열을 비교하기 전에 동일한 길이가 되도록 패딩하지도 않습니다. 식에 문자열 패딩이 필요하면 + 연산자를 사용하여 열 값과 빈 문자열을 연결할 수 있습니다. 자세한 내용은 [+&#40;연결&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/concatenate-ssis-expression.md)를 참조하세요.  

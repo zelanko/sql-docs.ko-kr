@@ -16,15 +16,15 @@ helpviewer_keywords:
 - TaskResult property
 - SSIS Script task, status information
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfc772b9809327e9b5383e81f489b5cf390f28ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5db80c310c7810123d5702b729a227ebe891527
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620561"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290839"
 ---
 # <a name="returning-results-from-the-script-task"></a>스크립트 태스크에서 결과 반환
   스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>와 선택적 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> 속성을 사용하여 스크립트 태스크가 완료된 후 워크플로의 경로를 확인하는 데 사용할 수 있는 상태 정보를 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  

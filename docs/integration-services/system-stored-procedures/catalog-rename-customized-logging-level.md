@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4f7b74e7b496cd16f73e7976a1d108b26372bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 972cc532916a135562fbd0e860ad2d003cdc9ee7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665321"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275306"
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="result-set"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   **ssis_admin** 데이터베이스 역할의 멤버 자격  

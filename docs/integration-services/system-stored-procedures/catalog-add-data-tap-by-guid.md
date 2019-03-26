@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1dbf1b9582cc49bf2881840629ecc42f38260234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bafb09fb682f241724927c73dd417283de9bddc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786221"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273096"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ## <a name="result-set"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   실행 인스턴스에 대한 MODIFY 권한  

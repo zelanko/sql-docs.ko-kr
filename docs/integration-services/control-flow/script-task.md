@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c1b29acddc7dc110d66e59f7829c822f10e23ac5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522961"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280557"
 ---
 # <a name="script-task"></a>스크립트 태스크
   스크립트 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 제공하는 기본 제공 태스크와 변환에서 사용할 수 없는 기능을 수행하는 코드를 제공합니다. 또한 여러 개의 태스크와 변환을 사용하는 대신 여러 기능을 하나의 스크립트에 결합할 수 있습니다. 스크립트 태스크는 데이터 행마다 한 번 수행하는 대신 패키지에서 한 번 또는 열거된 개체마다 한 번 수행해야 하는 작업에 사용합니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "52522961"
   
  스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  스크립트 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52522961"
   
  스크립트 태스크에 대한 자세한 내용은 [Script Task](../../integration-services/control-flow/script-task.md) 및 [스크립트 태스크 편집기에서 스크립트 태스크 구성](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)을 참조하십시오. 스크립트 태스크 프로그래밍 방법은 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)을 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **ScriptLanguage**  
  태스크에 대한 스크립트 언어를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택합니다.  
   

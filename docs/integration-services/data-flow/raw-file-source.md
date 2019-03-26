@@ -16,15 +16,15 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5a6a40ef5bee1c50ddbaf1f3424d3199e8494e3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d3117d79ebdb77031ff2572027544c51ef844dfd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637657"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289989"
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
   원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다. 따라서 원시 파일 원본은 플랫 파일 및 OLE DB 원본과 같은 다른 원본보다 빨리 데이터를 읽을 수 있습니다.  

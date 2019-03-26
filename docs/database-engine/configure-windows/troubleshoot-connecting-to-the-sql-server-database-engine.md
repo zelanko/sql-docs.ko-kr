@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802757"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306001"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
 이 시점에서 오류가 발생하면 계속하기 전에 해결해야 합니다. 문제가 될 수 있는 여러 가지 사항이 있습니다. 로그인에 연결 권한이 없을 수 있습니다. 기본 데이터베이스가 누락되었을 수도 있습니다.
 
 > [!NOTE]
->    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
+>    클라이언트에 전달되는 일부 오류 메시지는 의도적으로 문제 해결에 충분한 정보를 제공하지 않습니다. 이는 공격자에게 SQL Server에 대한 정보를 제공하지 않기 위한 보안 기능입니다. 오류에 대한 전체 정보를 보려면 SQL Server 오류 로그를 확인하세요. 여기에 세부 정보가 제공됩니다. **18456 사용자가 로그인하지 못했습니다.** 오류가 발생하는 경우 온라인 설명서 항목 [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) 에 오류 코드에 대한 추가 정보가 포함되어 있습니다. 또한 Aaron Bertrand 블로그의 [오류 18456 문제 해결](https://sqlblog.org/2011/01/14/troubleshooting-error-18456)에는 광범위한 오류 목록이 있습니다. 개체 탐색기의 관리 섹션에서 SSMS를 사용하여 오류 로그를 볼 수 있습니다(연결할 수 있는 경우). 또는 Windows 메모장 프로그램을 사용하여 오류 로그를 볼 수 있습니다. 기본 위치는 사용 중인 버전에 따라 달라지며, 설치하는 동안 변경할 수 있습니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 의 기본 위치는 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`입니다.  
 
 4.   공유 메모리를 사용하여, 연결할 수 있는 경우 TCP를 사용하여 연결을 테스트합니다. 이름 앞에 **tcp:** 를 지정하여 강제로 TCP 연결을 적용할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
 

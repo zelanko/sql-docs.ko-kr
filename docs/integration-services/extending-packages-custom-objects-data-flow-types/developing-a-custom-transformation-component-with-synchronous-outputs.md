@@ -19,15 +19,15 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e38ff05819e3ca6b8717ae4c19b554bae57861b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b2076e445d90945d02ab41ac2ec2cb6165ba08f1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542534"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290109"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
   동기 출력을 사용하는 변환 구성 요소는 업스트림 구성 요소에서 행을 받고, 이러한 행을 다운스트림 구성 요소에 전달할 때 해당 행의 열 값을 읽거나 수정합니다. 또한 업스트림 구성 요소가 제공한 열에서 파생된 추가 출력 열도 정의할 수 있지만 데이터 흐름에 행을 추가하지는 않습니다. 동기 구성 요소와 비동기 구성 요소 간의 차이점에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.  

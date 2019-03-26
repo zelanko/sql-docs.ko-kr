@@ -13,15 +13,15 @@ helpviewer_keywords:
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ffc8c50b44285279b88d73e8fd68e34b0aab3ec
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 67807b396e61c0c2085fcdeab20d44e5a0b33bb5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069059"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279147"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명과 열 이름이 없으므로 사용이 제한될 수 있습니다.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 200ac8d4c430c739bc7a886025a72cc18709faaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81208bc35b86927aa797ef7a2ee2efdf46804eda
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757387"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270339"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>UNION ALL 변환을 사용하여 데이터 병합
   UNION ALL 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 두 개의 데이터 원본이 이미 들어 있어야 합니다.  

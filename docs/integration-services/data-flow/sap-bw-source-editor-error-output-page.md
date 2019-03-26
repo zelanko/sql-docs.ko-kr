@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 26239ef4b8194fbcf6d423376d282bf981409882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0919a2ec47d6b7910a2ddc753dd0fca613c8b57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742262"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273737"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
   **SAP BW 원본 편집기** 의 **오류 출력** 페이지에서는 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47742262"
   
 3.  **SAP BW 원본 편집기**에서 **오류 출력** 을 클릭하여 편집기의 **오류 출력** 페이지를 엽니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  

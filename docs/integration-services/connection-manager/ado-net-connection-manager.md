@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6eaec2f60006bb43514a4f147e98647efb0c2499
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d5811c4ea89a177f9862f27ba75f6baaddef7208
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638470"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272378"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하면 패키지에서 .NET 공급자를 사용하여 데이터 원본에 액세스할 수 있습니다. 이 연결 관리자는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 같은 데이터 원본에 액세스하는 데 사용되며, C#과 같은 언어를 사용하여 관리 코드로 작성된 사용자 지정 태스크의 OLE DB 및 XML로 제공되는 데이터 원본에 액세스하는 데에도 사용됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "51638470"
   
  ADO.NET 연결 관리자에 대한 자세한 내용은 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **데이터 연결**  
  목록에서 기존 ADO.NET 데이터 연결을 선택합니다.  
   

@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5858171e3322cfbd694059cef813527dccb1168d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974202"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306211"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "57974202"
   
     -   **기존 검색 속성 목록에서 만들기**  
   
-     자세한 내용은 [New Search Property List](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)을 참조하세요.  
+     자세한 내용은 [New Search Property List](/sql/database-engine/new-search-property-list)을 참조하세요.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -201,7 +201,7 @@ GO
   
     2.  문서 속성을 추가하려면 **\*** 오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭하고 새 속성에 대한 값을 입력합니다.  
   
-         이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
+         이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](/sql/database-engine/search-property-list-editor)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

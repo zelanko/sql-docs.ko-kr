@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5aa23c62ecf5a171a7b440ef73a61f60d620b301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727251"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280117"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
   속성 편집기에서 Oracle 탭을 사용하여 새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 제공한 설명을 변경하고 Oracle 로그 마이닝 데이터베이스 연결 정보를 변경할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47727251"
   
 -   **Windows 인증**: 현재 Windows 도메인 자격 증명을 사용하려면 선택합니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.  
   
--   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름** 과 **암호** 를 입력해야 합니다.  
+-   **Oracle 인증**: 이 옵션을 선택하는 경우 연결 중인 Oracle 데이터베이스의 사용자에 대한 **사용자 이름**과 **암호**를 입력해야 합니다.  
   
  뷰어에서 Oracle 데이터베이스 속성을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)을 참조하십시오.  
   
