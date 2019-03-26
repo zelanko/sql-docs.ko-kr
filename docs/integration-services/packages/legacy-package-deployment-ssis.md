@@ -29,15 +29,15 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 21cdac79f4c610bf2fe6ebe483650dc1a16a24db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204732"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276758"
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  
@@ -684,7 +684,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 > [!NOTE]  
 >  유효한 패키지 경로를 입력하지 않으면 "인수 중 하나가 올바르지 않습니다"라는 오류 메시지가 나타납니다.  
   
- **암호화에 서버 저장소 사용**  
+ **암호화에 서버 스토리지 사용**  
  패키지를 보호하기 위해 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 보안 기능을 사용하려면 선택합니다.  
   
  **다음**  
