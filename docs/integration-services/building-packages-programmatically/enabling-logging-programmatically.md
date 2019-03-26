@@ -21,15 +21,15 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ac9abe2be8227d6df1fc5dbb3d14b8953aab6ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb6ae0f62967da4ecf26bd47b29187538ca95fe0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672441"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276696"
 ---
 # <a name="enabling-logging-programmatically"></a>프로그래밍 방식으로 로깅 설정
   런타임 엔진에서는 패키지의 유효성 검사 및 실행 중에 이벤트 관련 정보를 캡처하는 데 사용할 수 있는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 개체의 컬렉션을 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> 개체는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package> 및 <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> 개체를 비롯하여 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> 개체에서 사용할 수 있습니다. 개별 컨테이너나 패키지 전체에 대해 로깅 기능을 사용하도록 설정할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47672441"
   
 |공급자|설명|ConfigString 속성|  
 |--------------|-----------------|---------------------------|  
-|SQL Server 프로파일러|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러에서 캡처하고 볼 수 있는 SQL 추적을 생성합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.|구성이 필요하지 않습니다.|  
+|SQL Server Profiler|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러에서 캡처하고 볼 수 있는 SQL 추적을 생성합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.|구성이 필요하지 않습니다.|  
 |SQL Server|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 **sysssislog** 테이블에 이벤트 로그 항목을 기록합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자를 사용하려면 데이터베이스에 대한 연결과 대상 데이터베이스 이름이 지정되어 있어야 합니다.|  
 |텍스트 파일|이벤트 로그 항목을 CSV(쉼표로 구분된 값) 형식으로 ASCII 텍스트 파일에 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .log입니다.|파일 연결 관리자의 이름입니다.|  
 |Windows 이벤트 로그|로컬 컴퓨터의 응용 프로그램 로그에 있는 표준 Windows 이벤트 로그에 로깅합니다.|구성이 필요하지 않습니다.|  

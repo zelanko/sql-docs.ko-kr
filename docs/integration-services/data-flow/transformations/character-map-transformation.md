@@ -16,15 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 28b21fbe189151578b073a51050b3b7aeb95b79b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cb26cf898282273ea94b07c7d3b6c618d476a35b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640440"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272996"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "51640440"
 ## <a name="character-map-transformation-editor"></a>문자표 변환 편집기
   **문자표 변환 편집기** 대화 상자를 사용하여 열 데이터에 적용할 문자열 함수를 선택하고 매핑이 내부 변경인지, 아니면 새 열로 추가되었는지를 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  확인란을 사용하여 문자열 함수로 변환할 열을 선택할 수 있습니다. 아래 테이블에 선택 내용이 나타납니다.  
   

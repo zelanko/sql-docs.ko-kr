@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9342c312de10700e0af8224496ad526c6a930591
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: 2bf96ba0d5c6fb244f9979054be8228ce4a38d34
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880476"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272088"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>6-3단원: 6단원 패키지 테스트
 런타임에서 패키지는 **VarFolderName** 매개 변수로부터 **Directory** 속성 값을 가져옵니다.  

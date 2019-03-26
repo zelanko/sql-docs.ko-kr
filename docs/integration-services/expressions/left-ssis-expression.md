@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fa54997db4caa523ab298077ce8137045c6ee33d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e48429057fed7e328b0e6fbe46019ee9435fef
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784857"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272986"
 ---
 # <a name="left-ssis-expression"></a>LEFT(SSIS 식)
   지정한 문자 식의 왼쪽부터 지정한 개수의 문자를 반환합니다.  

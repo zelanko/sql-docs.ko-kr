@@ -3,20 +3,19 @@ title: Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기
 ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6227189db5edc1cd350c48f7e3a505a3a3c491c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671341"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221817"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Excel 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 아티클에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **Microsoft Excel** 데이터 원본에 연결하는 방법을 보여 줍니다.

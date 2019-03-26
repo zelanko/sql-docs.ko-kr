@@ -3,20 +3,19 @@ title: 가져오기 및 내보내기 마법사의 간단한 예제 시작 | Micr
 ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8440c6111152988afaa96f8b9c2415a5055819c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e62c1e9457f45ee6bac5c27235f71f459c1eeda
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696231"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222107"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>가져오기 및 내보내기 마법사의 간단한 예제 시작
 Excel 스프레드시트에서 SQL Server 데이터베이스로 데이터를 가져오는 일반적인 시나리오를 살펴봄으로써 SQL Server 가져오기 및 내보내기 마법사에서 기대할 수 있는 작업을 알아봅니다. 다른 원본과 대상을 사용하려는 경우에도 이 항목에서는 마법사를 실행하는 방법에 대해 알아야 할 사항을 대부분 보여 줍니다.

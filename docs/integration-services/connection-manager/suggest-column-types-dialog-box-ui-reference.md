@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.suggestdatatypes.f1
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af163fa99d149753a494c3432f0a229eaff92fe9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc599088afb3705c825a36e8d671a906de85c942
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595581"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271490"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>열 유형 제안 대화 상자 UI 참조
   **열 유형 제안** 대화 상자를 사용하여 파일 내용의 샘플링을 기반으로 플랫 파일 연결 관리자에 있는 열의 데이터 형식과 길이를 식별할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 사용하는 데이터 형식에 대한 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **행 수**  
  알고리즘에서 사용하는 샘플의 행 수를 입력하거나 선택합니다.  
   

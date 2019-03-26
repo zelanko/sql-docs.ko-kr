@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2fd8c020-1c77-4702-8e6b-efa6a348daab
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 158c55b3b05920a5fddbf0afb429e12b49f52682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44f3d605e9110271fc104842a58df992ede0eeb0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784822"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276018"
 ---
 # <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47784822"
 ## <a name="remarks"></a>Remarks  
  이 뷰는 카탈로그에 있는 개체의 각 버전에 대한 행을 표시합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰의 행을 보려면 다음 권한 중 하나가 있어야 합니다.  
   
 -   개체에 대한 READ 권한  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8f1a844d015238d1b8d80c6af601299f02572af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a4b51e0de9d36e68e4985e5953dd15919b5d734
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710801"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272849"
 ---
 # <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47710801"
 ## <a name="remarks"></a>Remarks  
  이 뷰는 카탈로그에 있는 각 환경 참조에 대한 행을 표시합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 뷰를 보려면 다음 권한 중 하나가 필요합니다.  
   
 -   해당 프로젝트에 대한 READ 권한  

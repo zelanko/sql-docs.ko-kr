@@ -21,15 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb2f54dde0e73733a4fd129c2d2a4d081942af52
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38745dc80686129b73d087a2977231558c3904b7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132253"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272580"
 ---
 # <a name="execute-package-utility-dtexecui"></a>패키지 실행 유틸리티(dtexecui)
   **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "54132253"
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
 ## <a name="command-files-page"></a>명령 파일 페이지  
- **패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
+ 	**패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
   
 ### <a name="options"></a>옵션  
  **Command files**  

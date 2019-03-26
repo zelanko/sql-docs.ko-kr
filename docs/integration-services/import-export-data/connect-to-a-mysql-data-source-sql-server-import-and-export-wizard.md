@@ -3,20 +3,19 @@ title: MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52c45cbc39a4f6acb7590698c31bdca2d7f175d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3772028888e7c91b9be9b6fd3f905fb57db8636b
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692111"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221947"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **MySQL** 데이터 원본에 연결하는 방법을 보여 줍니다. MySQL에 연결하는 데 사용할 수 있는 데이터 공급자는 여러 개입니다.

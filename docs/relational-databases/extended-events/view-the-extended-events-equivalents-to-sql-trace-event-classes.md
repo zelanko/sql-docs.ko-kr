@@ -1,7 +1,7 @@
 ---
 title: SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인(Transact-SQL) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,46 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537598"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417185"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   확장 이벤트를 사용하여 SQL 추적 이벤트 클래스 및 열에 해당하는 이벤트 데이터를 수집하려는 경우 SQL 추적 이벤트가 확장 이벤트의 이벤트 및 동작에 매핑되는 방식을 이해하고 있으면 유용합니다.  
   
  다음 절차에 따라 각 SQL 추적 이벤트 및 관련 열에 해당하는 확장 이벤트의 이벤트 및 동작을 확인할 수 있습니다.  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>쿼리 편집기를 사용하여 SQL 추적 이벤트에 해당하는 확장 이벤트를 보려면  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행합니다.  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- 결과를 확인할 때는 다음에 유의하십시오.  
-  
--   이벤트 클래스 열을 제외한 모든 열에서 NULL이 반환되었으면 이벤트 클래스가 SQL 추적에서 마이그레이션되지 않았음을 나타냅니다.  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>쿼리 편집기를 사용하여 SQL 추적 이벤트에 해당하는 확장 이벤트를 보려면
+
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행합니다.
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+결과를 확인할 때는 다음에 유의하십시오.  
+
+- 이벤트 클래스 열을 제외한 모든 열에서 NULL이 반환되었으면 이벤트 클래스가 SQL 추적에서 마이그레이션되지 않았음을 나타냅니다.  
   
 -   확장 이벤트 동작 열의 값만 NULL이면 다음 경우 중 하나에 해당함을 나타냅니다.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea94918ce0c09033ed716d12026151c410d7d1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88b9871a3e89ab1f21c6c37344ed26e19fc5dca7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805411"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271717"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig 작업
   Hadoop Pig 태스크를 사용하여 Hadoop 클러스터에서 Pig 스크립트를 실행합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47805411"
   
  ![Hadoop 피그 작업 편집기](../../integration-services/control-flow/media/hadoop-pig-task.png "Hadoop 피그 작업 편집기")  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **Hadoop Pig 태스크 편집기** 대화 상자에서 다음 옵션을 구성합니다.  
   
 |필드|설명|  

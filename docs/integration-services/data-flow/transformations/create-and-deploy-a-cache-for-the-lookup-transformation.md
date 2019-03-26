@@ -12,15 +12,15 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9305cba0aa7fd1057812c12288a39a9ec2c30990
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 375f733438f1a1d6b0a085f6f46f434894a37e65
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824681"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275586"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
   조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 세트는 캐시 파일에 저장됩니다.  

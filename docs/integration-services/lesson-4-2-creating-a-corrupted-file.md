@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d81ac7d0a5c7a42a2292bab7ca5beffa464d02d7
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 9805a1d1fd1c6e025ee7ddb83c7241037dbae30b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211014"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273359"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>4-2단원: 손상된 파일 만들기
 

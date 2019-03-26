@@ -3,22 +3,21 @@ title: 작업 수행(SQL Server 가져오기 및 내보내기 마법사) | Micro
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1a48018175dd7c0a92a83fdc68d6451324cd2fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05b5e0867d9bbe5ab4ea5e583db40a21aaafe76c
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738191"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221977"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
 마법사에서 선택한 항목을 검토하고 **마법사 완료** 페이지에서 **마침** 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에 **작업을 수행하는 중**이 표시됩니다. 이 페이지에는 이전 페이지에서 구성한 작업의 진행률 및 결과가 표시됩니다. 이 페이지에서는 어떤 작업도 수행할 필요가 없습니다.

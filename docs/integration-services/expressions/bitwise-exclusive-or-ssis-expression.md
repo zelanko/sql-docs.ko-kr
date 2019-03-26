@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f33998489a3912693c15a4c756fa355bbf84b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8aa8033e8af22fa518ce8b5e27dde817395f7eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271145"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^(배타적 비트 OR)(SSIS 식)
   두 정수 값의 배타적 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 0이고 다른 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 두 비트가 모두 0 또는 1이면 해당 결과 비트는 0으로 설정됩니다.  

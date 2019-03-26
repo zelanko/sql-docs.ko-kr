@@ -12,15 +12,15 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66982a30866d448343df77eb4046900cfa949594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78371637089696416b5a753f57458275d27d6aa6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737631"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274824"
 ---
 # <a name="-concatenate-ssis-expression"></a>+(연결)(SSIS 식)
   두 식을 하나의 식으로 연결합니다.  
@@ -49,7 +49,7 @@ character_expression1 + character_expression2
   
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 또 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 예를 들어 "Order date is " 문자열과 **OrderDate** 열을 연결하면 **OrderDate** 값이 암시적으로 문자열 데이터 형식으로 변환됩니다. 두 개의 숫자 값을 연결하려면 두 숫자 값을 모두 명시적으로 문자열 데이터 형식으로 캐스팅해야 합니다.  
   
- 연결은 BLOB 데이터 형식인 DT_TEXT, DT_NTEXT 또는 DT_IMAGE 중 하나만 사용할 수 있습니다.  
+ 연결은 BLOB 데이터 형식인 DT_TEXT, DT_NTEXT 또는 DT_IMAGE로 계산되어야 합니다.  
   
  두 요소 중 하나가 Null이면 결과도 Null입니다.  
   

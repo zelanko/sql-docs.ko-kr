@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.advanced.f1
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5325e3382a1f0d1977273434e15857230131220a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 627ce76e87807a54299c386afcf51486ca8f9309
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756461"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275165"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 대상 편집기(고급 페이지)
   **SAP BW 대상 편집기**의 **고급** 페이지를 사용하여 패키지 크기 및 제한 시간 정보와 같은 고급 설정을 지정할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47756461"
   
 3.  **SAP BW 대상 편집기**에서 **고급** 을 클릭하여 편집기의 **고급** 페이지를 엽니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  

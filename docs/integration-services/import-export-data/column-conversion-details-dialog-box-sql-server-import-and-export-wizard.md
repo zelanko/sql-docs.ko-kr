@@ -3,22 +3,21 @@ title: 열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de113586457c8bc13c0f6656ed78c18708534dd
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: ac4a69a7aca5a1e354e345a47e23b413fc9d3422
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221917"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   **데이터 형식 매핑 검토** 페이지의 개별 열에 대한 행을 두 번 클릭하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 **열 변환 정보** 대화 상자가 표시됩니다. 이 페이지에서 개별 열에 대한 자세한 변환 정보를 검토할 수 있습니다. 이 정보에는 다음 항목이 포함됩니다.

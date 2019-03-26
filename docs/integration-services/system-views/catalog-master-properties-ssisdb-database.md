@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85b3388be32ac33382ad34f12ec135e84313cb33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04f04b8847dbdfac12f5b78c3eabb3b493e2d895
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687449"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275238"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,5 +41,5 @@ ms.locfileid: "47687449"
 |**MASTER_SERVICE_PORT**|Scale Out 마스터 엔드포인트의 포트입니다.|
 |**SSLCERT_THUMBPRINT**|Scale Out 마스터 인증서의 지문입니다.|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 공용 데이터베이스 역할의 모든 구성원은 이 보기에 대한 읽기 권한을 갖습니다. 

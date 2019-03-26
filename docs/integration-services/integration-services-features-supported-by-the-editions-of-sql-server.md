@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35c0b050c760540988ff366f91a7884b7b5fd56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d1b99431f48d9bbf9b53bb57f1b0bcf2291a6c1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819781"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276215"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지원하는 Integration Services 기능
  이 항목은 다른 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 세부 정보를 제공합니다.  
@@ -36,11 +36,11 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
     
 ## <a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Scale Out 마스터|사용자 계정 컨트롤|||||
-|Scale Out 작업자|사용자 계정 컨트롤|예 <sup>1</sup>|TBD|TBD|TBD|
-|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM 지원 <sup>2</sup>|사용자 계정 컨트롤|사용자 계정 컨트롤||||
+|Scale Out 마스터|예|||||
+|Scale Out 작업자|예|예 <sup>1</sup>|TBD|TBD|TBD|
+|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM 지원 <sup>2</sup>|예|예||||
 
 <sup>1</sup> Scale Out에서 엔터프라이즈 전용 기능이 필요한 패키지를 실행하는 경우 SQL Server Enterprise 인스턴스에서도 Scale Out 작업자를 실행해야 합니다.
 
@@ -48,39 +48,39 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 ## <a name="IEWiz"></a> SQL Server 가져오기 및 내보내기 마법사
 
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 가져오기 및 내보내기 마법사|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤|  
+|SQL Server 가져오기 및 내보내기 마법사|예|예|예|예|예|  
 
 ## <a name="IS"></a> Integration Services  
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|기본 제공 데이터 원본 커넥터|사용자 계정 컨트롤|사용자 계정 컨트롤|||| 
-|기본 제공 태스크 및 변환|사용자 계정 컨트롤|사용자 계정 컨트롤||||  
-|ODBC 원본 및 대상 |사용자 계정 컨트롤|사용자 계정 컨트롤|||| 
-|Azure 데이터 원본 커넥터 및 태스크|사용자 계정 컨트롤|사용자 계정 컨트롤||||  
-|Hadoop/HDFS 커넥터 및 태스크|사용자 계정 컨트롤|사용자 계정 컨트롤||||  
-|기본 데이터 프로파일링 도구|사용자 계정 컨트롤|사용자 계정 컨트롤|||| 
+|기본 제공 데이터 원본 커넥터|예|예|||| 
+|기본 제공 태스크 및 변환|예|예||||  
+|ODBC 원본 및 대상 |예|예|||| 
+|Azure 데이터 원본 커넥터 및 태스크|예|예||||  
+|Hadoop/HDFS 커넥터 및 태스크|예|예||||  
+|기본 데이터 프로파일링 도구|예|예|||| 
 
 ## <a name="ISAA"></a> Integration Services - 고급 원본 및 대상  
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity에 의한 고성능 Oracle 원본 및 대상|사용자 계정 컨트롤|||||  
-|Attunity에 의한 고성능 Teradata 원본 및 대상|사용자 계정 컨트롤|||||  
-|SAP BW 원본 및 대상|사용자 계정 컨트롤|||||  
-|데이터 마이닝 모델 학습 대상|사용자 계정 컨트롤|||||  
-|차원 처리 대상|사용자 계정 컨트롤|||||  
-|파티션 처리 대상|사용자 계정 컨트롤|||||  
+|Attunity에 의한 고성능 Oracle 원본 및 대상|예|||||  
+|Attunity에 의한 고성능 Teradata 원본 및 대상|예|||||  
+|SAP BW 원본 및 대상|예|||||  
+|데이터 마이닝 모델 학습 대상|예|||||  
+|차원 처리 대상|예|||||  
+|파티션 처리 대상|예|||||  
   
 ## <a name="ISAT"></a> Integration Services - 고급 작업 및 변환  
   
-|기능|Enterprise|표준|Web|Express with Advanced Services|Express|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity의 변경 데이터 캡처 구성 요소 <sup>1</sup>|사용자 계정 컨트롤|||||  
-|데이터 마이닝 쿼리 변환|사용자 계정 컨트롤|||||  
-|유사 항목 그룹화 및 유사 항목 조회 변환|사용자 계정 컨트롤|||||  
-|용어 추출 및 용어 조회 변환|사용자 계정 컨트롤|||||  
+|Attunity의 변경 데이터 캡처 구성 요소 <sup>1</sup>|예|||||  
+|데이터 마이닝 쿼리 변환|예|||||  
+|유사 항목 그룹화 및 유사 항목 조회 변환|예|||||  
+|용어 추출 및 용어 조회 변환|예|||||  
 
 <sup>1</sup> Attunity의 변경 데이터 캡처 구성 요소에는 엔터프라이즈 버전이 필요합니다. 단, 변경 데이터 캡처 서비스 및 변경 데이터 캡처 디자이너에는 엔터프라이즈 버전이 필요하지 않습니다. SSIS가 설치되지 않은 컴퓨터에서 디자이너와 서비스를 사용할 수 있습니다.
