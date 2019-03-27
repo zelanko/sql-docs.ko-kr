@@ -6644,17 +6644,21 @@ items:
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
         - name: 컬렉션 집합에 컬렉션 항목 추가(T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
-    - name: 확장 이벤트
+    - name: 확장된 이벤트(Xevent) 개요
       href: ../relational-databases/extended-events/extended-events.md
       items:
-      - name: '빠른 시작: SQL Server의 확장 이벤트'
-        href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
-      - name: 구성
+      - name: 빠른 시작
         items:
-        - name: 이벤트 세션 관리
-          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
-        - name: 대상 데이터의 고급 보기
+        - name: '빠른 시작: SQL Server의 확장 이벤트'
+          href: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - name: 자습서
+        items:
+        - name: XEvent에서 대상 데이터의 고급 보기
           href: ../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+        - name: SQL 추적 스크립트를 세션으로 변환
+          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+      - name: 개념
+        items:
         - name: 패키지
           href: ../relational-databases/extended-events/sql-server-extended-events-packages.md
         - name: 대상
@@ -6665,29 +6669,32 @@ items:
           href: ../relational-databases/extended-events/sql-server-extended-events-engine.md
         - name: 세션
           href: ../relational-databases/extended-events/sql-server-extended-events-sessions.md
+        - name: SQL 추적 이벤트 클래스에 해당하는 이벤트
+          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+        - name: 도구
+          href: ../relational-databases/extended-events/extended-events-tools.md
+      - name: 방법 가이드
+        items:
+        - name: xEvent 세션 관리
+          href: ../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md
         - name: 세션 변경
           href: ../relational-databases/extended-events/alter-an-extended-events-session.md
         - name: 시스템 뷰에서 SELECT 및 JOIN
           href: ../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
-        - name: SQL 추적 이벤트 클래스에 해당하는 확장 이벤트
-          href: ../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md
-        - name: SQL 추적 스크립트를 세션으로 변환
-          href: ../relational-databases/extended-events/convert-an-existing-sql-trace-script-to-an-extended-events-session.md
         - name: 잠금을 보유한 쿼리 파악
           href: ../relational-databases/extended-events/determine-which-queries-are-holding-locks.md
         - name: 잠금을 보유한 개체 찾기
           href: ../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md
         - name: 시스템 활동 모니터링
           href: ../relational-databases/extended-events/monitor-system-activity-using-extended-events.md
-      - name: 도구
-        href: ../relational-databases/extended-events/extended-events-tools.md
-        items:
-        - name: SSMS XEvent Profiler 사용
+        - name: SSMS XEvent 프로파일러 사용
           href: ../relational-databases/extended-events/use-the-ssms-xe-profiler.md
         - name: system_health 세션 사용
           href: ../relational-databases/extended-events/use-the-system-health-session.md
-        - name: 확장 이벤트에 PowerShell 공급자 사용
+        - name: Xevent에 PowerShell 공급자 사용
           href: ../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md
+      - name: References
+        href: ../relational-databases/extended-events/xevents-references-system-objects.md
     - name: SQL 추적
       href: ../relational-databases/sql-trace/sql-trace.md
       items:
@@ -8433,8 +8440,8 @@ items:
     items:
     - name: SSDT 다운로드
       href: ../ssdt/download-sql-server-data-tools-ssdt.md
-    - name: SSDT에 대한 Changelog
-      href: ../ssdt/changelog-for-sql-server-data-tools-ssdt.md
+    - name: SSDT에 대한 릴리스 정보
+      href: ../ssdt/release-notes-ssdt.md
     - name: SSDT 및 SSDT-BI의 이전 릴리스
       href: ../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md
     - name: Azure Active Directory 지원
@@ -17219,9 +17226,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bde69d4b13a3ab5bf680d3816c47364b07e093a7
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356546"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417235"

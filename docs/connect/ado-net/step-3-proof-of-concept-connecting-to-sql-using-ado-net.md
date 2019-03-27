@@ -11,16 +11,16 @@ ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f38de8f15e6e14d3822254812f98364104ea603
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef78038cad742dbe2105b6999d021ec41e8a3a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603971"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342888"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명
 
-- 이전 문서:&nbsp;&nbsp;&nbsp;[2 단계: ADO.NET 개발을 위한 SQL database 만들기](step-2-create-a-sql-database-for-ado-net-development.md)  
+- 이전 문서:&nbsp;&nbsp;&nbsp;[2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기](step-2-create-a-sql-database-for-ado-net-development.md)  
 - 다음 문서:&nbsp;&nbsp;&nbsp;[4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
@@ -31,7 +31,7 @@ ms.locfileid: "47603971"
 메서드 **SqlConnection.Open** SQL database에 연결 하는 데 사용 됩니다.  
 
 
-```CSharp  
+```csharp
     // C# , ADO.NET  
     using System;
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -74,7 +74,7 @@ SqlCommand.ExecuteReader 메서드:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  
@@ -162,7 +162,7 @@ SqlCommand.ExecuteReader 메서드:
   
   
   
-```CSharp  
+```csharp
     using System;  // C# , ADO.NET  
     using DT = System.Data;            // System.Data.dll  
     using QC = System.Data.SqlClient;  // System.Data.dll  

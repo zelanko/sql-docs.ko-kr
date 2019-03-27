@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589997"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356466"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  **osql**을 사용할 때 일괄 처리 구분 기호 GO가 SQL 스크립트 파일에 나타나면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 이를 구문 오류로 처리합니다.  
   
 ## <a name="inserting-comments"></a>주석 삽입  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **을 사용하여**에 전송하는 Transact-SQL 문에 주석을 포함할 수 있습니다. 허용되는 두 가지 주석 유형은 -- 및 /*...\*/입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **을 사용하여**에 전송하는 Transact-SQL 문에 주석을 포함할 수 있습니다. 허용되는 두 가지 주석 유형은 `--` 및 `/*...*/`입니다.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>EXIT를 사용하여 osql의 결과 반환  
  SELECT 문의 결과를 **osql**의 반환 값으로 사용할 수 있습니다. 숫자일 경우 마지막 결과 행의 마지막 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  

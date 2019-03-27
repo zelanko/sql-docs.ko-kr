@@ -2405,8 +2405,6 @@ items:
       href: ../connect/jdbc/application-security.md
     - name: SSL 암호화 사용
       href: ../connect/jdbc/using-ssl-encryption.md
-    - name: FIPS 모드
-      href: ../connect/jdbc/fips-mode.md
       items:
       - name: SSL 지원 이해
         href: ../connect/jdbc/understanding-ssl-support.md
@@ -2414,6 +2412,8 @@ items:
         href: ../connect/jdbc/connecting-with-ssl-encryption.md
       - name: SSL 암호화에 대한 클라이언트 구성
         href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
+    - name: FIPS 모드
+      href: ../connect/jdbc/fips-mode.md
   - name: JDBC 드라이버로 성능 및 안정성 개선
     href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
     items:
@@ -2653,7 +2653,7 @@ items:
         href: ../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md
       - name: 프로그래밍 지침
         href: ../connect/odbc/linux-mac/programming-guidelines.md
-      - name: Tools
+      - name: 도구
         items:
         - name: bcp.exe로 연결
           href: ../connect/odbc/linux-mac/connecting-with-bcp.md
@@ -5248,7 +5248,7 @@ items:
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: 결과 집합에서 행 인출
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: Filestream
+        - name: 파일 스트림
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기
@@ -7644,9 +7644,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 용어 설명
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 235d73fea1e5e76eda65ef130568276ca92ef3fb
-ms.sourcegitcommit: 8d7442ae25acd6cb5cab2abcc5973cd60d0a6ff2
+ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461821"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478308"
