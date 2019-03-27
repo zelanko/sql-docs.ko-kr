@@ -5,17 +5,17 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
-ms.translationtype: HT
+ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477698"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493735"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -87,7 +87,7 @@ kubectl config view
 | **ACCEPT_EULA** | 사용자 계정 컨트롤 | 해당 사항 없음 | SQL Server 사용권 계약 (예: 'Yes')에 동의 합니다.  |
 | **CLUSTER_NAME** | 사용자 계정 컨트롤 | 해당 사항 없음 | 빅 데이터 클러스터에 sql Server를 배포 하려면 Kubernetes 네임 스페이스의 이름입니다. |
 | **CLUSTER_PLATFORM** | 사용자 계정 컨트롤 | 해당 사항 없음 | Kubernetes 클러스터가 배포 된 플랫폼입니다. 일 수 있습니다 `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. Ctp 2.3 반환만 허용 되는 1입니다. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | 아니요 | 1 | 빌드할 계산 풀 복제본의 수입니다. Ctp 2.4 반환만 허용 되는 1입니다. |
 | **CLUSTER_DATA_POOL_REPLICAS** | 아니요 | 2 | 풀 구축 하는 복제본에서 데이터의 수입니다. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | 아니요 | 2 | 저장소 풀 복제본의 수입니다. |
 | **DOCKER_REGISTRY** | 사용자 계정 컨트롤 | TBD | 클러스터를 배포 하는 데 사용 되는 이미지가 저장 된 개인 레지스트리입니다. |
@@ -278,13 +278,13 @@ kubectl get svc -n <your-cluster-name>
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

@@ -44,7 +44,7 @@ ms.locfileid: "52772265"
  열 값이 계산 식의 결과 값인지 여부를 나타냅니다.  
   
  **계산된 텍스트**  
- 열 텍스트 계산에 사용된 문을 나타냅니다. 자세한 내용은 [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md)을 참조하십시오.  
+ 열 텍스트 컴퓨팅에 사용된 문을 나타냅니다. 자세한 내용은 [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md)을 참조하십시오.  
   
  **ID**  
  테이블에 대한 ID 열인지 여부를 나타냅니다. 가능한 값은 **True** 및 **False**입니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52772265"
  ID 열의 초기 행 값을 나타냅니다.  
   
  **ID 증가값**  
-  **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
+ **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
   
  **기본 바인딩**  
  열에 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다. 기본값이 바인딩되지 않은 경우에 이 옵션은 공백입니다.  

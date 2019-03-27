@@ -48,7 +48,7 @@ ms.locfileid: "47756831"
  열 값이 계산 식의 결과 값인지 여부를 나타냅니다.  
   
  **계산된 텍스트**  
- 열 텍스트 계산에 사용된 문을 나타냅니다. 자세한 내용은 [Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)을 참조하십시오.  
+ 열 텍스트 컴퓨팅에 사용된 문을 나타냅니다. 자세한 내용은 [Specify Computed Columns in a Table](../../relational-databases/tables/specify-computed-columns-in-a-table.md)을 참조하십시오.  
   
  **ID**  
  테이블에 대한 ID 열인지 여부를 나타냅니다. 가능한 값은 **True** 및 **False**입니다.  
