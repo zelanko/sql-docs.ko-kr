@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072128"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477648"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
 
@@ -100,6 +100,9 @@ SQL Server 빅 데이터 클러스터에 Kubernetes는 SQL Server 빅 데이터 
 ### <a id="dataplane"></a> 데이터 평면
 
 데이터 평면 데이터 지 속성 및 캐싱에 사용 됩니다. SQL 데이터 풀 및 저장소 풀을 포함합니다.  SQL 데이터 풀에서 Linux SQL Server를 실행 하는 하나 이상의 pod 이루어져 있습니다. SQL 쿼리 또는 Spark 작업에서 데이터를 수집 하는 것이 됩니다. SQL Server 빅 데이터 클러스터 데이터 마트의 데이터 풀에 유지 됩니다. 저장소 풀의 SQL Server Linux, Spark 및 HDFS로 구성 된 저장소 풀 pod 이루어져 있습니다. SQL Server 빅 데이터 클러스터의 모든 저장소 노드에 HDFS 클러스터의 멤버입니다.
+
+> [!TIP]
+> 빅 데이터 클러스터 아키텍처 및 설치에는 대 한 심층적인 기사를 참조 하세요. [워크숍: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

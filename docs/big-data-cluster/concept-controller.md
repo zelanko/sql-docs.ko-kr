@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017869"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478058"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 컨트롤러 란?
 
@@ -67,6 +67,7 @@ Controller 서비스가 실행 되 면 클러스터 관리자를 사용 하 여 
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 개요를 참조 하세요.
+SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
 
 - [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)
+- [워크숍: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

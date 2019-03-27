@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241424"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477988"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
 
@@ -59,10 +59,10 @@ ms.locfileid: "54241424"
  + CONTROLLER_PASSWORD < controller_password > =
 
 SQL Master SA 암호: 
- + MSSQL_SA_PASSWORD < controller_sa_password > =
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 HDFS/Spark 끝점에 액세스 하기 위한 암호:
- + KNOX_PASSWORD < knox_password > =
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>클러스터 간 인증
 
@@ -81,7 +81,7 @@ Livy Spark 또는 저장소 풀에는 Spark와 같은 빅 데이터 클러스터
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 문서를 참조 합니다.
+SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
 
 - [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)
-- [빠른 시작: Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 합니다.](quickstart-big-data-cluster-deploy.md)
+- [워크숍: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

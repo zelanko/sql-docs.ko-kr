@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241524"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477928"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>저장소 풀 (SQL Server 2019 빅 데이터 클러스터) 란?
 
@@ -37,6 +37,7 @@ Linux, Spark 및 HDFS에서 SQL Server 노드 구성 저장소의 저장소 풀 
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 개요를 참조 하세요.
+SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
 
 - [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)
+- [워크숍: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
