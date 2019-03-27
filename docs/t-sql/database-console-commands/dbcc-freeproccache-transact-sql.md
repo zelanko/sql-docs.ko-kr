@@ -81,10 +81,10 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  모든 정보 메시지를 표시하지 않습니다.  
   
  COMPUTE  
- 각 계산 노드에서 쿼리 계획 캐시를 제거합니다. 이것은 기본값입니다.  
+ 각 컴퓨팅 노드에서 쿼리 계획 캐시를 제거합니다. 이것은 기본값입니다.  
   
  ALL  
- 각 계산 노드와 제어 노드에서 쿼리 계획 캐시를 제거합니다.  
+ 각 컴퓨팅 노드와 제어 노드에서 쿼리 계획 캐시를 제거합니다.  
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`를 사용하여 범위에 있는 데이터베이스의 프로시저(계획) 캐시를 지웁니다.
@@ -126,7 +126,7 @@ WITH NO_INFOMSGS 절이 지정되지 않았으면 DBCC FREEPROCCACHE이 다음 �
 여러 DBCC FREEPROCCACHE 명령을 동시에 실행할 수 있습니다.
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 계획 캐시를 지우면 들어오는 쿼리에서 이전에 캐시된 계획을 다시 사용하지 않고 새 계획을 컴파일하므로 쿼리 성능이 일시적으로 저하될 수 있습니다. 
 
-DBCC FREEPROCCACHE (COMPUTE)만 사용하면 계산 노드에서 쿼리를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 쿼리를 다시 컴파일합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서는 제어 노드에 생성된 병렬 쿼리 계획을 다시 컴파일하지 않습니다.
+DBCC FREEPROCCACHE (COMPUTE)만 사용하면 컴퓨팅 노드에서 쿼리를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해당 쿼리를 다시 컴파일합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서는 제어 노드에 생성된 병렬 쿼리 계획을 다시 컴파일하지 않습니다.
 DBCC FREEPROCCACHE는 실행 중에 취소할 수 있습니다.
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
@@ -191,7 +191,7 @@ GO
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE 기본 구문 예제  
-다음 예제에서는 계산 노드에서 기존 쿼리 계획 캐시를 모두 제거합니다. 컨텍스트가 UserDbSales로 설정되어 있지만 모든 데이터베이스에 대한 계산 노드 쿼리 계획 캐시가 제거됩니다. WITH NO_INFOMSGS 절은 정보 메시지가 결과에 표시되지 않도록 합니다.  
+다음 예제에서는 컴퓨팅 노드에서 기존 쿼리 계획 캐시를 모두 제거합니다. 컨텍스트가 UserDbSales로 설정되어 있지만 모든 데이터베이스에 대한 컴퓨팅 노드 쿼리 계획 캐시가 제거됩니다. WITH NO_INFOMSGS 절은 정보 메시지가 결과에 표시되지 않도록 합니다.  
   
 ```sql
 USE UserDbSales;  
@@ -205,7 +205,7 @@ USE UserDbSales;
 DBCC FREEPROCCACHE (COMPUTE);  
 ```  
   
-정보 메시지가 요청되고 실행이 성공하면 쿼리 결과에는 계산 노드당 한 줄씩 표시됩니다.
+정보 메시지가 요청되고 실행이 성공하면 쿼리 결과에는 컴퓨팅 노드당 한 줄씩 표시됩니다.
   
 ### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. DBCC FREEPROCCACHE 실행 권한 부여  
 다음 예제에서는 DBCC FREEPROCCACHE를 실행할 수 있는 David 로그인 권한을 제공합니다.  

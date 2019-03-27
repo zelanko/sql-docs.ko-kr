@@ -86,7 +86,7 @@ Number of valid observations: 10000
 
 ## <a name="create-a-local-summary"></a>로컬 요약 만들기
 
-1. 모든 작업을 로컬에서 수행하도록 계산 컨텍스트를 변경합니다.
+1. 모든 작업을 로컬에서 수행하도록 컴퓨팅 컨텍스트를 변경합니다.
   
     ```R
     rxSetComputeContext ("local")

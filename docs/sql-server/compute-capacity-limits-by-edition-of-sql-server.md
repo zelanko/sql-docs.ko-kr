@@ -1,5 +1,5 @@
 ---
-title: SQL Server의 버전별 계산 용량 제한 | Microsoft 문서
+title: SQL Server의 버전별 컴퓨팅 용량 제한 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: sql
@@ -21,9 +21,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/27/2018
 ms.locfileid: "52400626"
 ---
-# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 계산 용량 제한
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 버전별 계산 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 버전별 컴퓨팅 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
   
  ![계산 용량 제한에 매핑](../sql-server/media/compute-capacity-limits.gif "계산 용량 제한에 매핑")  
   
@@ -64,21 +64,21 @@ ms.locfileid: "52400626"
   
 하나 이상의 실제 프로세서가 포함된 시스템이나 여러 코어 및/또는 하이퍼 스레드가 있는 실제 프로세서가 포함된 시스템은 운영 체제에서 여러 태스크를 동시에 실행할 수 있도록 합니다. 각 실행 스레드는 논리적 프로세서로 나타납니다. 예를 들어, 컴퓨터에 하이퍼 스레딩을 사용하고 코어당 스레드 두 개인 쿼드 코어 프로세서 두 개가 있는 경우, 프로세서 2개 x 프로세서당 코어 4개 x 코어당 스레드 2개로 논리적 프로세서가 16개 있는 것입니다. 다음 사항에 주목할 필요가 있습니다.  
   
--   하이퍼 스레드 코어의 단일 스레드에서 논리적 프로세서의 계산 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어에서 논리적 프로세서의 계산 용량보다 적습니다.  
+-   하이퍼 스레드 코어의 단일 스레드에서 논리적 프로세서의 컴퓨팅 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어에서 논리적 프로세서의 컴퓨팅 용량보다 적습니다.  
   
--   하이퍼 스레드 코어에서 논리적 프로세서 두 개의 계산 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어의 계산 용량보다 큽니다.  
+-   하이퍼 스레드 코어에서 논리적 프로세서 두 개의 컴퓨팅 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어의 컴퓨팅 용량보다 큽니다.  
   
-각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 다음과 같은 두 가지 계산 용량 제한을 갖습니다.  
+각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 다음과 같은 두 가지 컴퓨팅 용량 제한을 갖습니다.  
   
 - 최대 소켓 수(또는 실제 프로세서 또는 프로세서 패키지)  
   
 - 운영 체제에서 보고한 최대 코어 수  
   
-이러한 제한은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스에 적용됩니다. 또한 단일 인스턴스에서 사용할 최대 계산 용량을 나타냅니다. 이는 인스턴스가 배포될 수 있는 서버를 제한하지 않습니다. 실제로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 인스턴스를 동일한 실제 서버에 배포하는 것은 허용된 용량 제한보다 더 많은 소켓 및/또는 코어가 있는 실제 서버의 계산 용량을 사용할 수 있는 효율적인 방법입니다.  
+이러한 제한은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스에 적용됩니다. 또한 단일 인스턴스에서 사용할 최대 컴퓨팅 용량을 나타냅니다. 이는 인스턴스가 배포될 수 있는 서버를 제한하지 않습니다. 실제로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 인스턴스를 동일한 실제 서버에 배포하는 것은 허용된 용량 제한보다 더 많은 소켓 및/또는 코어가 있는 실제 서버의 컴퓨팅 용량을 사용할 수 있는 효율적인 방법입니다.  
   
-다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전의 단일 인스턴스에 대한 계산 용량 제한을 보여 줍니다.  
+다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전의 단일 인스턴스에 대한 컴퓨팅 용량 제한을 보여 줍니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스의 최대 계산 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스의 최대 계산 용량(AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스의 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스의 최대 컴퓨팅 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: 코어 기반 라이선스\*|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |Developer|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
@@ -87,7 +87,7 @@ ms.locfileid: "52400626"
 
 \*Server + CAL(클라이언트 액세스 라이선스) 라이선싱이 있는 Enterprise Edition은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 20개의 코어로 제한됩니다. (새로운 계약에는 이 라이선싱을 사용할 수 없습니다.) 코어 기반 서버 라이선스 모델에서는 제한이 없습니다.  
   
-가상화된 환경에서 계산 용량 제한은 코어가 아닌 논리 프로세서의 수를 기반으로 합니다. 그 이유는 프로세서 아키텍처가 게스트 애플리케이션에서 볼 수 없기 때문입니다. 
+가상화된 환경에서 컴퓨팅 용량 제한은 코어가 아닌 논리 프로세서의 수를 기반으로 합니다. 그 이유는 프로세서 아키텍처가 게스트 애플리케이션에서 볼 수 없기 때문입니다. 
 
 예를 들어, 쿼드 코어 프로세서 및 코어당 하이퍼 스레드 두 개를 사용할 수 있는 기능이 있는 소켓 4개짜리 서버에는 하이퍼 스레딩을 사용하는 논리적 프로세서가 32개 포함되어 있습니다. 그러나 하이퍼 스레딩을 사용하지 않는 논리 프로세서는 16개만 포함합니다. 이러한 논리 프로세서는 서버의 가상 컴퓨터에 매핑될 수 있습니다. 해당 논리 프로세서의 가상 머신 컴퓨팅 로드는 호스트 서버의 실제 프로세서에서 실행 스레드에 매핑됩니다.  
   

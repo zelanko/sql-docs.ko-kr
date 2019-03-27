@@ -43,7 +43,7 @@ ms.locfileid: "51018568"
 >  한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다른 버전으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 버전에서 지원되는지 확인하세요.  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
+>  이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
 ## <a name="pre-upgrade-checklist"></a>업그레이드 전 검사 목록  
  이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서의 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 지원됩니다. 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 데이터베이스를 마이그레이션할 수도 있습니다. 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 같은 컴퓨터에 있는 다른 인스턴스로, 또는 다른 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 마이그레이션할 수 있습니다. 마이그레이션 옵션에는 데이터베이스 복사 마법사, 백업 및 복원 기능, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가져오기 및 내보내기 마법사, 대량 내보내기/대량 가져오기 방법의 사용이 포함됩니다.  

@@ -26,7 +26,7 @@ Analytics Platform System은 MPP(대량 병렬 처리) 데이터 웨어하우스
 
 PolyBase 기술은 관계형 PDW 데이터를 Windows Server 기반의 Hortonworks, Linux 기반의 Hortonworks, Linux 기반의 Cloudera, HDInsight의 Windows Azure Blob Storage를 포함한 여러 원본의 Hadoop 데이터와 결합합니다. 이러한 고급 데이터 통합 기능을 제공하고 비즈니스 인텔리전스 도구와 완벽하게 통합된 Analytics Platform System은 기업의 의사 결정권자가 보다 합리적이고 통찰력 있는 비즈니스 의사 결정을 내릴 수 있도록 통합된 분석 결과를 반환합니다.
 
-Analytics Platform System은 하드웨어 및 소프트웨어가 미리 설치되고 여러 워크로드를 실행하도록 미리 구성된 어플라이언스로 데이터 센터에 제공됩니다. Analytics Platform System을 구입할 때 기업의 요구 사항에 따라 PDW에 대한 Compute 노드를 구입합니다.
+Analytics Platform System은 하드웨어 및 소프트웨어가 미리 설치되고 여러 워크로드를 실행하도록 미리 구성된 어플라이언스로 데이터 센터에 제공됩니다. Analytics Platform System을 구입할 때 기업의 요구 사항에 따라 PDW에 대한 컴퓨팅 노드를 구입합니다.
 
 Analytics Platform System은 빠르고 확장 가능할 뿐 아니라 높은 이중화 및 고가용성을 제공하도록 설계되었기 때문에 비즈니스에 가장 중요한 데이터에도 믿고 사용할 수 있는 안정적인 플랫폼입니다. Analytics Platform System은 쉽게 배우고 쉽게 관리할 수 있도록 단순성 위주로 설계되었습니다. Hadoop 데이터 분석에 PDW의 PolyBase 기술을 사용하고 비즈니스 인텔리전스 도구와 완벽하게 통합하여 엔드투엔드 솔루션을 빌드하기 위한 포괄적 플랫폼으로 만듭니다.
 

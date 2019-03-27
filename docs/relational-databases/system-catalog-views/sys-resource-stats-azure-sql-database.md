@@ -43,7 +43,7 @@ ms.locfileid: "56041444"
 |database_name|**varchar**|사용자 데이터베이스의 이름입니다.|  
 |sku|**varchar**|데이터베이스의 서비스 계층입니다. 가능한 값은 다음과 같습니다.<br /><br /> Basic<br /><br /> 표준<br /><br /> Premium<br /><br />범용<br /><br />중요 비즈니스용|  
 |storage_in_megabytes|**float**|데이터베이스 데이터, 인덱스, 저장된 프로시저 및 메타 데이터를 포함 하 여 기간에 대 한 메가바이트 최대 저장소 크기입니다.|  
-|avg_cpu_percent|**numeric**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
+|avg_cpu_percent|**numeric**|서비스 계층 한도의 비율로 컴퓨팅된 평균 컴퓨팅 활용률입니다.|  
 |avg_data_io_percent|**numeric**|서비스 계층 한도를 기준으로 하는 평균 I/O 활용률입니다.|  
 |avg_log_write_percent|**numeric**|서비스 계층 한도의 비율로 계산된 평균 쓰기 리소스 활용률입니다.|  
 |max_worker_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따른 백분율로 최대 동시 작업자 (요청).<br /><br /> 최대 동시 작업자 수 15 초 샘플을 기반으로 하는 5 분 간격에 대 한 현재 계산 됩니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "56041444"
  이 데이터의 더욱 세부적인 보기를 사용 하 여 **sys.dm_db_resource_stats** 사용자 데이터베이스에서 동적 관리 뷰. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)합니다.  
 
 ## <a name="examples"></a>예  
- 다음 예에서는 지난 1주일 동안 평균적으로 계산 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
+ 다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  
   
 ```sql  
 DECLARE @s datetime;  

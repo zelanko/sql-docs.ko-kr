@@ -36,7 +36,7 @@ ms.locfileid: "52417484"
   
 2. SQL Server 인스턴스를 헤드 노드로 선택합니다. 헤드 노드는 SQL Server Enterprise를 실행하는 인스턴스에만 지정될 수 있습니다.
   
-3. 나머지 SQL Server 인스턴스를 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)을 사용하여 계산 노드로 추가합니다.
+3. 나머지 SQL Server 인스턴스를 [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)을 사용하여 컴퓨팅 노드로 추가합니다.
 
 4. [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 사용하여 그룹에서 노드를 모니터링합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "52417484"
   
 설치가 완료 된 후 두 시스템 모두가 PolyBase 그룹 헤드 노드로 작동할 수 있습니다. 이 예제에서는 PQTH4A-CMP01의 "MSSQLSERVER"를 헤드 노드로 선택합니다.
   
-## <a name="add-other-sql-server-instances-as-compute-nodes"></a>다른 SQL Server 인스턴스를 계산 노드로 추가  
+## <a name="add-other-sql-server-instances-as-compute-nodes"></a>다른 SQL Server 인스턴스를 컴퓨팅 노드로 추가  
   
 1. PQTH4A-CMP02에서 SQL Server에 연결합니다.
   
@@ -84,13 +84,13 @@ ms.locfileid: "52417484"
     EXEC sp_polybase_join_group 'PQTH4A-CMP01', 16450, 'MSSQLSERVER';
    ```  
 
-3. 계산 노드(PQTH4A-CMP02)에서 services.msc를 실행합니다.
+3. 컴퓨팅 노드(PQTH4A-CMP02)에서 services.msc를 실행합니다.
   
 4. PolyBase 엔진을 종료하고 PolyBase 데이터 이동 서비스를 다시 시작합니다.
   
-## <a name="optional-remove-a-compute-node"></a>선택 사항: 계산 노드 제거  
+## <a name="optional-remove-a-compute-node"></a>선택 사항: 컴퓨팅 노드 제거  
   
-1. 계산 노드 SQL Server(PQTH4A CMP02)에 연결합니다.
+1. 컴퓨팅 노드 SQL Server(PQTH4A CMP02)에 연결합니다.
   
 2. 저장 프로시저 sp_polybase_leave_group을 실행합니다.
   
@@ -98,7 +98,7 @@ ms.locfileid: "52417484"
     EXEC sp_polybase_leave_group;  
     ```  
   
-3. 제거 중인 계산 노드(PQTH4A-CMP02)에서 services.msc를 실행합니다.
+3. 제거 중인 컴퓨팅 노드(PQTH4A-CMP02)에서 services.msc를 실행합니다.
   
 4. PolyBase 엔진을 시작합니다. PolyBase 데이터 이동 서비스를 다시 시작합니다.
   

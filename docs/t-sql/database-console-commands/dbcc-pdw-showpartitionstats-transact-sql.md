@@ -50,7 +50,7 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 |used_page_count|BIGINT|데이터에 사용되는 페이지 수입니다.|  
 |reserved_page_count|BIGINT|파티션에 사용하도록 예약된 페이지의 수입니다.|  
 |row_count|BIGINT|파티션의 행 수입니다.|  
-|pdw_node_id|ssNoversion|데이터에 대한 노드를 계산합니다.|  
+|pdw_node_id|ssNoversion|데이터에 대한 노드를 컴퓨팅합니다.|  
 |distribution_id|ssNoversion|데이터의 배포 식별자입니다.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

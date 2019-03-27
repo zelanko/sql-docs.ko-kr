@@ -23,9 +23,9 @@ ms.locfileid: "57684959"
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-특정 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 계산 노드 또는 제어 노드에서 실행되는 쿼리에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 계획을 표시합니다. 이를 사용하여 쿼리가 계산 노드 및 제어 노드에서 실행되는 동안 쿼리 성능 문제를 해결합니다.
+특정 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 컴퓨팅 노드 또는 제어 노드에서 실행되는 쿼리에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 계획을 표시합니다. 이를 사용하여 쿼리가 컴퓨팅 노드 및 제어 노드에서 실행되는 동안 쿼리 성능 문제를 해결합니다.
   
-계산 노드에서 실행되는 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리에 대한 쿼리 성능 문제를 인식한 후에는 성능을 향상시키기 위한 여러 가지 방법이 있습니다. 계산 노드에서 쿼리 성능을 향상시키는 가능한 방법에는 여러 열 통계를 만들거나 비클러스터형 인덱스를 만들거나 쿼리 힌트를 사용하는 것이 포함됩니다.
+컴퓨팅 노드에서 실행되는 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리에 대한 쿼리 성능 문제를 인식한 후에는 성능을 향상시키기 위한 여러 가지 방법이 있습니다. 컴퓨팅 노드에서 쿼리 성능을 향상시키는 가능한 방법에는 여러 열 통계를 만들거나 비클러스터형 인덱스를 만들거나 쿼리 힌트를 사용하는 것이 포함됩니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

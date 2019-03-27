@@ -300,7 +300,7 @@ PolyBase는 데이터를 가져오기 위해서만 사용자 지정 날짜 형�
 ## <a name="performance"></a>성능
  압축 파일을 사용할 때는 항상 외부 데이터 원본과 SQL Server 간에 전송되는 데이터가 더 적다는 점과, 데이터 압축 및 압축 풀기를 위한 CPU 사용량이 증대한다는 점 사이의 상호 절충이 따릅니다.
   
- Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 계산 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 최대 데이터 Reader 프로세스 수는 노드당 20개 Reader에 해당하는 Azure SQL Data Warehouse Gen2를 제외하고 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
+ Gzip 압축 텍스트 파일은 분할할 수 없습니다. Gzip 압축 텍스트 파일의 성능을 높이기 위해 외부 데이터 원본 내에서 모두 동일한 디렉터리에 저장되는 여러 파일을 생성하는 ㄱ서이 좋습니다. 이 파일 구조를 통해 PolyBase가 여러 Reader 및 압축 풀기 프로세스를 사용하여 데이터를 더 빠르게 읽고 압축을 풀 수 있습니다. 이상적인 압축 파일의 수는 컴퓨팅 노드당 최대 데이터 Reader 프로세스 수입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 최대 데이터 Reader 프로세스 수는 노드당 20개 Reader에 해당하는 Azure SQL Data Warehouse Gen2를 제외하고 노드당 8개입니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 노드당 최대 데이터 Reader 프로세서 수는 SLO마다 다릅니다. 자세한 내용은 [Azure SQL Data Warehouse 로드 패턴 및 전략](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   

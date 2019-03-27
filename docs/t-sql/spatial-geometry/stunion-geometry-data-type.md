@@ -52,7 +52,7 @@ ms.locfileid: "47639372"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-union-of-two-polygon-instances"></a>1. 두 Polygon 인스턴스의 통합 계산  
- 다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 계산합니다.  
+ 다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geometry;  

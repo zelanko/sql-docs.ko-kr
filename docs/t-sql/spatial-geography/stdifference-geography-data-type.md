@@ -57,7 +57,7 @@ ms.locfileid: "47644611"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>1. 두 geography 인스턴스 간의 차이 계산  
- 다음 예제에서는 `STDifference()`를 사용하여 두 **geography** 인스턴스 간의 차이를 계산합니다.  
+ 다음 예제에서는 `STDifference()`를 사용하여 두 **geography** 인스턴스 간의 차이를 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geography;  

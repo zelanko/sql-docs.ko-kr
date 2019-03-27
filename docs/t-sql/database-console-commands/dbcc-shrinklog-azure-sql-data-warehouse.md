@@ -38,7 +38,7 @@ DBCC SHRINKLOG
 ## <a name="arguments"></a>인수  
 SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
 *target_size*는 DBCC SHRINKLOG 완료 후 모든 계산 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
-로그 크기는 MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 측정됩니다. 모든 계산 노드의 트랜잭션 노드에 대한 결합된 크기입니다.  
+로그 크기는 MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 측정됩니다. 모든 컴퓨팅 노드의 트랜잭션 노드에 대한 결합된 크기입니다.  
 기본적으로 DBCC SHRINKLOG는 트랜잭션 로그를 데이터베이스에 대한 메타데이터에 저장된 로그 크기로 줄입니다. 메타데이터의 로그 크기는 [CREATE DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 또는 [ALTER DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)의 LOG_SIZE 매개 변수에 따라 결정됩니다. `SIZE=DEFAULT`가 지정되거나 `SIZE` 절이 생략된 경우, DBCC SHRINKLOG는 트랜잭션 로그 크기를 기본 크기로 줄입니다.
   
 WITH NO_INFOMSGS  

@@ -108,14 +108,14 @@ ms.locfileid: "55087872"
  이 방법으로 충분하지 않을 경우에는 스레드 풀에 대해 사용자 지정 선호도를 정의하여 정밀도를 높일 수 있습니다. 너무 넓은 프로세서 범위로 분산되는 스레드 풀로 인해 성능이 저하되는 대형 다중 코어 시스템 (NUMA 또는 비 NUMA)에서 선호도 설정을 사용자 지정하는 것이 좋습니다. 논리적 프로세서가 64개 미만인 시스템에서도 **GroupAffinity** 를 설정할 수 있지만 이 경우 성능 이점이 저하되고 오히려 성능이 감소할 수도 있습니다.  
   
 > [!NOTE]  
->  **GroupAffinity** 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 시작 시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 버전 정보와 **GroupAffinity** 속성을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 관리되는 각 스레드 풀에 대한 선호도 마스크를 계산합니다. Standard Edition에서는 최대 24개의 코어를 사용할 수 있습니다. 24개를 초과하는 코어가 포함된 대형 다중 코어 시스템에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition을 설치하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 24개의 코어만 사용됩니다. 프로세서 최대값에 대한 자세한 내용은 [SQL Server에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)의 교차 상자 확장 제한을 참조하세요.  
+>  **GroupAffinity** 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 시작 시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 버전 정보와 **GroupAffinity** 속성을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 관리되는 각 스레드 풀에 대한 선호도 마스크를 컴퓨팅합니다. Standard Edition에서는 최대 24개의 코어를 사용할 수 있습니다. 24개를 초과하는 코어가 포함된 대형 다중 코어 시스템에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Standard Edition을 설치하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 24개의 코어만 사용됩니다. 프로세서 최대값에 대한 자세한 내용은 [SQL Server에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)의 교차 상자 확장 제한을 참조하세요.  
   
 ### <a name="syntax"></a>구문  
  값은 각 프로세서 그룹에 대한 16진수 값이며,  16진수는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 지정된 스레드 풀에 대해 스레드를 할당할 때 처음 사용하도록 시도하는 논리적 프로세서를 나타냅니다.  
   
  **논리적 프로세서에 대한 비트 마스크**  
   
- 단일 프로세서 그룹 내에 최대 64개의 논리적 프로세서를 포함할 수 있습니다. 비트 마스크는 스레드 풀에서 사용되는(또는 사용되지 않는) 그룹의 각 논리적 프로세서에 대해 1(또는 0)입니다. 비트 마스크를 계산한 다음에는 16진수 값을 **GroupAffinity**에 대한 값으로 계산합니다.  
+ 단일 프로세서 그룹 내에 최대 64개의 논리적 프로세서를 포함할 수 있습니다. 비트 마스크는 스레드 풀에서 사용되는(또는 사용되지 않는) 그룹의 각 논리적 프로세서에 대해 1(또는 0)입니다. 비트 마스크를 컴퓨팅한 다음에는 16진수 값을 **GroupAffinity**에 대한 값으로 컴퓨팅합니다.  
   
  **다중 프로세서 그룹**  
   

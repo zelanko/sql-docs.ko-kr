@@ -59,7 +59,7 @@ ms.locfileid: "51018588"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64비트 버전은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64비트 서버로만 업그레이드할 수 있습니다.  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 지원되는 최대 코어 수 및 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
+>  이전 버전의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise Edition에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 지원되는 최대 코어 수 및 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서의 업그레이드를 지원합니다.  
   

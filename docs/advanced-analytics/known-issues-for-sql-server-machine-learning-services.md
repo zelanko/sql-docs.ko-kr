@@ -254,9 +254,9 @@ SQL Server 2016의 초기 릴리스 빌드에서 첫 번째 k 그룹의 Cpu에 �
 
 **적용 대상:** SQL Server 2016 R Services RTM 버전
 
-### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5. SQL Server 계산 컨텍스트에서 데이터를 읽는 경우 열 형식을 변경할 수 없음
+### <a name="5-changes-to-column-types-cannot-be-performed-when-reading-data-in-a-sql-server-compute-context"></a>5. SQL Server 컴퓨팅 컨텍스트에서 데이터를 읽는 경우 열 형식을 변경할 수 없음
 
-계산 컨텍스트가 SQL Server 인스턴스로 설정된 경우 _colClasses_ 인수(또는 다른 유사한 인수)를 사용하여 R 코드에서 열의 데이터 형식을 변경할 수 없습니다.
+컴퓨팅 컨텍스트가 SQL Server 인스턴스로 설정된 경우 _colClasses_ 인수(또는 다른 유사한 인수)를 사용하여 R 코드에서 열의 데이터 형식을 변경할 수 없습니다.
 
 예를 들어 CRSDepTimeStr 열이 정수가 아닌 경우 다음 문에서 오류가 발생합니다.
 

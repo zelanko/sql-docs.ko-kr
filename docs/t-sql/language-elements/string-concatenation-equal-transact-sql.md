@@ -71,7 +71,7 @@ PRINT @v1;
  `This is the original. More text.`  
   
 ### <a name="b-order-of-evaluation-while-concatenating-using--operator"></a>2. += 연산자를 사용한 연결 시의 계산 순서
-다음 예제에서는 여러 문자열을 연결하여 하나의 긴 문자열을 만든 다음, 최종 문자열의 길이를 계산합니다. 이 예제에서는 연결 연산자 사용 시의 계산 순서 및 잘림 규칙을 보여 줍니다. 
+다음 예제에서는 여러 문자열을 연결하여 하나의 긴 문자열을 만든 다음, 최종 문자열의 길이를 컴퓨팅합니다. 이 예제에서는 연결 연산자 사용 시의 계산 순서 및 잘림 규칙을 보여 줍니다. 
 
 ```
 DECLARE @x varchar(4000) = replicate('x', 4000)

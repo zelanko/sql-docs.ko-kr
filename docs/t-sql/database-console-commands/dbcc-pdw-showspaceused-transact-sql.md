@@ -55,7 +55,7 @@ VIEW SERVER STATE 권한이 필요합니다.
 |data_space|BIGINT|데이터에 사용된 공간(KB)입니다.|  
 |index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.|  
 |unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
-|pdw_node_id|ssNoversion|데이터에 대해 사용되는 계산 노드입니다.|  
+|pdw_node_id|ssNoversion|데이터에 대해 사용되는 컴퓨팅 노드입니다.|  
   
 한 테이블에 관한 결과 집합입니다.
   
@@ -66,7 +66,7 @@ VIEW SERVER STATE 권한이 필요합니다.
 |data_space|BIGINT|데이터에 사용된 공간(KB)입니다.||  
 |index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.||  
 |unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.||  
-|pdw_node_id|ssNoversion|공간 사용량 보고에 사용되는 계산 노드입니다.||  
+|pdw_node_id|ssNoversion|공간 사용량 보고에 사용되는 컴퓨팅 노드입니다.||  
 |distribution_id|ssNoversion|공간 사용량 보고에 사용되는 배포입니다.|복제된 테이블의 경우 값이 -1입니다.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

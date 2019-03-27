@@ -143,7 +143,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 각 히스토그램 단계를 살펴보면 다음과 같습니다.
 -   굵은 선은 상한 값(RANGE_HI_KEY)과 발생한 횟수(EQ_ROWS)를 나타냅니다.  
 -   RANGE_HI_KEY 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(AVG_RANGE_ROWS)를 나타냅니다. 첫 번째 히스토그램 단계의 AVG_RANGE_ROWS는 항상 0입니다.  
--   점선은 범위 내 고유 값의 총 개수(DISTINCT_RANGE_ROWS) 및 범위 내 값의 총 개수(RANGE_ROWS)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 RANGE_ROWS 및 DISTINCT_RANGE_ROWS를 사용하여 AVG_RANGE_ROWS를 계산하며 샘플링된 값은 저장하지 않습니다.  
+-   점선은 범위 내 고유 값의 총 개수(DISTINCT_RANGE_ROWS) 및 범위 내 값의 총 개수(RANGE_ROWS)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 RANGE_ROWS 및 DISTINCT_RANGE_ROWS를 사용하여 AVG_RANGE_ROWS를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.  
   
 쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.
   
@@ -176,7 +176,7 @@ DBCC SHOW_STATISTICS에는 다음 중 하나의 테이블이나 멤버 자격에
 -   db_ddladmin 고정 데이터베이스 역할  
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 제한 사항  
-DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장된 통계를 표시합니다. Compute 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 자동 생성된 통계는 표시되지 않습니다.
+DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장된 통계를 표시합니다. 컴퓨팅 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 자동 생성된 통계는 표시되지 않습니다.
   
 DBCC SHOW_STATISTICS는 외부 테이블에 대해 지원되지 않습니다.
   

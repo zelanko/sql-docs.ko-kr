@@ -1,16 +1,17 @@
+items:
 - name: 시작(SQL Server 2014)
   href: getting-started-sql-server-2014.md
 - name: SQL Server 2014 제품 사양
   href: sql-server-2014-product-specifications.md
   items:
-    - name: Compute Capacity Limits by Edition of SQL Server
-      href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: SQL Server 2014 버전 및 구성 요소
-      href: ../sql-server/editions-and-components-of-sql-server-2016.md
-    - name: SQL Server 2014 버전에서 지원하는 기능
-      href: features-supported-by-the-editions-of-sql-server-2014.md
-    - name: SQL Server의 최대 용량 사양
-      href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
+  - name: SQL Server의 버전별 컴퓨팅 용량 제한
+    href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
+  - name: SQL Server 2014 버전 및 구성 요소
+    href: ../sql-server/editions-and-components-of-sql-server-2016.md
+  - name: SQL Server 2014 버전에서 지원하는 기능
+    href: features-supported-by-the-editions-of-sql-server-2014.md
+  - name: SQL Server의 최대 용량 사양
+    href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
 - name: SQL Server 2014의 새로운 기능
   href: ../sql-server/what-s-new-in-sql-server-2016.md
 - name: SQL Server 2014 하이브리드 클라우드 소개
@@ -20,25 +21,25 @@
 - name: 지원 받기
   href: getting-assistance-sql-server-2014.md
   items:
-    - name: SQL Server 지원 받기
-      href: getting-sql-server-assistance.md
-    - name: 기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
-      href: accessibility-for-people-with-disabilities.md
-    - name: SQL Server 2014에 대한 사용자 의견 제공
-      href: providing-feedback-for-sql-server-2014.md
+  - name: SQL Server 지원 받기
+    href: getting-sql-server-assistance.md
+  - name: 기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
+    href: accessibility-for-people-with-disabilities.md
+  - name: SQL Server 2014에 대한 사용자 의견 제공
+    href: providing-feedback-for-sql-server-2014.md
 - name: Backward Compatibility
   href: backward-compatibility.md
   items:
-    - name: 이전 SQL Server 버전과의 호환성
-      href: sql-server-backward-compatibility.md
-    - name: SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능
-      href: deprecated-sql-server-features-in-sql-server-2014.md
-    - name: SQL Server 2014에서 지원되지 않는 SQL Server 기능
-      href: discontinued-sql-server-features-in-sql-server-2014.md
-    - name: SQL Server 2014에서 SQL Server 기능의 주요 변경 내용
-      href: breaking-changes-to-sql-server-features-in-sql-server-2014.md
-    - name: SQL Server 2014에서 SQL Server 기능의 동작 변경 내용
-      href: behavior-changes-to-sql-server-features-in-sql-server-2014.md
+  - name: 이전 SQL Server 버전과의 호환성
+    href: sql-server-backward-compatibility.md
+  - name: SQL Server 2014 이후에는 사용되지 않는 SQL Server 기능
+    href: deprecated-sql-server-features-in-sql-server-2014.md
+  - name: SQL Server 2014에서 지원되지 않는 SQL Server 기능
+    href: discontinued-sql-server-features-in-sql-server-2014.md
+  - name: SQL Server 2014에서 SQL Server 기능의 주요 변경 내용
+    href: breaking-changes-to-sql-server-features-in-sql-server-2014.md
+  - name: SQL Server 2014에서 SQL Server 기능의 동작 변경 내용
+    href: behavior-changes-to-sql-server-features-in-sql-server-2014.md
 - name: SQL Server 2014 도구 및 추가 기능 구성 요소에 대한 설명서
   href: documentation-for-sql-server-2014-tools-and-add-in-components.md
 - name: SQL Server 사용 조건 정보
@@ -47,3 +48,9 @@
   href: legal-notice-for-documentation.md
 - name: Microsoft SQL Server 개인 정보 취급 방침
   href: microsoft-sql-server-privacy-statement.md
+ms.openlocfilehash: 4511aa991ea445484c57b3621c54a34e7e566a0e
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39314624"

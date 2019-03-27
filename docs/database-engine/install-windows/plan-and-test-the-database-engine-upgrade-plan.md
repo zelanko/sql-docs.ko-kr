@@ -58,7 +58,7 @@ ms.locfileid: "47748633"
 -   **버전:** 업그레이드에 적절한 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 의 버전을 결정하고 업그레이드에 유효한 업그레이드 경로를 결정합니다. 자세한 내용은 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)을 참조하십시오. 한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 버전으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 버전에서 지원되는지 확인하세요.  
   
     > [!NOTE]  
-    >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 Enterprise Edition: Core 기반 라이선스와 Enterprise Edition 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조하세요.  
+    >  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]를 업그레이드하는 경우 Enterprise Edition: Core 기반 라이선스와 Enterprise Edition 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
 -   **이전 버전과의 호환성:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 이전 버전과의 호환성 문서를 검토하여 업그레이드 중인 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 간의 동작 변화를 검토합니다. [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)을 참조하세요.  
   

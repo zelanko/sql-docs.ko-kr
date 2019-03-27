@@ -231,7 +231,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
  Hadoop 리소스 관리자 위치를 지정합니다. 지정된 경우 쿼리 최적화 프로그램은 MapReduce와 함께 Hadoop의 컴퓨팅 기능을 사용하여 PolyBase 쿼리의 데이터를 사전 처리하기 위해 비용 기반 결정을 내릴 수 있습니다. 조건자 푸시 다운이라는 이 기능은 Hadoop과 SQL 간에 전송되는 데이터 양을 크게 줄여 쿼리 성능을 향상시킬 수 있습니다.  
   
- 이 기능을 지정하지 않으면 Hadoop에 대한 푸시 계산은 PolyBase 쿼리에 대해 비활성화됩니다.  
+ 이 기능을 지정하지 않으면 Hadoop에 대한 푸시 컴퓨팅은 PolyBase 쿼리에 대해 비활성화됩니다.  
  
 포트를 지정하지 않을 경우 기본값은 ‘hadoop 연결’ 구성에 대한 현재 설정을 사용하여 결정됩니다.
 

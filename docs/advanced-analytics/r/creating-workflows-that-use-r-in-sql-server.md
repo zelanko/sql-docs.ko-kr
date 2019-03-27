@@ -42,7 +42,7 @@ Transact-SQL 및 저장 프로시저를 통해 [!INCLUDE[rsql_productname](../..
 다음은 데이터 처리를 자동화할 수 있습니다 하는 방법에 대 한 몇 가지 아이디어 및 모델링에 사용 하 여 파이프라인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + 사용 하 여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SQL database에 필요한 데이터 기능 만들기 작업
-+ 조건부 분기를 사용하여 R 작업에 대한 계산 컨텍스트 전환
++ 조건부 분기를 사용하여 R 작업에 대한 컴퓨팅 컨텍스트 전환
 + 데이터베이스에서 자신의 데이터를 생성 하는 R 작업을 실행 하 고 응용 프로그램을 사용 하 여 해당 데이터를 공유 합니다.
 + 사용 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 텍스트 변수로 저장 된 R 스크립트를 로드 및 SQL Server에서 실행
 

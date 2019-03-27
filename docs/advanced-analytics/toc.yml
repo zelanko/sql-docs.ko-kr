@@ -129,9 +129,9 @@ items:
         href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
       - name: 데이터 쿼리 및 수정
         href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-      - name: 계산 컨텍스트 정의
+      - name: 컴퓨팅 컨텍스트 정의
         href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-      - name: 계산 요약 통계
+      - name: 컴퓨팅 요약 통계
         href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
       - name: 데이터 시각화
         href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md

@@ -109,7 +109,7 @@ OPTION (HASH JOIN);
 ```  
   
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. OPTION 절에서 레이블 및 여러 쿼리 힌트를 사용하는 SELECT 문  
- 다음 예제는 레이블 및 여러 쿼리 힌트를 포함하는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문입니다. 쿼리가 계산 노드에서 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결정하는 가장 적합한 전략에 따라 해시 조인 또는 병합 조인을 적용합니다.  
+ 다음 예제는 레이블 및 여러 쿼리 힌트를 포함하는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT 문입니다. 쿼리가 컴퓨팅 노드에서 실행될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 결정하는 가장 적합한 전략에 따라 해시 조인 또는 병합 조인을 적용합니다.  
   
 ```  
 -- Uses AdventureWorks  

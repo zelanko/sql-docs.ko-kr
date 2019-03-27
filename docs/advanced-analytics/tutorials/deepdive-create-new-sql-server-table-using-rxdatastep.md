@@ -35,7 +35,7 @@ ms.locfileid: "53644732"
 
 XDF 형식은 고 차원 데이터에 대 한 개발 하는 XML 표준 및에서 사용 되는 네이티브 파일 형식 [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)합니다. 또한 행 및 열 처리와 분석을 최적화하는 R 인터페이스가 포함된 이진 파일 형식입니다.  XDF 형식을 사용하여 데이터를 이동하고 분석에 유용한 데이터의 하위 집합을 저장할 수 있습니다.
 
-1. 계산 컨텍스트를 로컬 워크스테이션으로 설정합니다. **이 단계에 대 한 DDL 권한이 필요 합니다.**
+1. 컴퓨팅 컨텍스트를 로컬 워크스테이션으로 설정합니다. **이 단계에 대 한 DDL 권한이 필요 합니다.**
 
     ```R
     rxSetComputeContext("local")

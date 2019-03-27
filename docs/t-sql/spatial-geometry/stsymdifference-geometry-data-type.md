@@ -52,7 +52,7 @@ ms.locfileid: "47621111"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-symmetric-difference-of-two-polygon-instances"></a>1. 두 Polygon 인스턴스 간의 대칭 차이 계산  
- 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 계산합니다.  
+ 다음 예에서는 `STSymDifference()`를 사용하여 두 `Polygon` 인스턴스의 대칭 차이를 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geometry;  

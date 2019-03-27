@@ -237,7 +237,7 @@ ORDER BY
 ```  
   
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>3. GROUPING_ID ()를 ROLLUP 및 CUBE와 함께 사용하여 그룹화 수준 식별  
- 다음 예제에서의 코드는 `GROUPING()`을 사용하여 `Bit Vector(base-2)` 열을 계산하는 방법을 보여 줍니다. `GROUPING_ID()`는 해당 `Integer Equivalent` 열을 계산하는 데 사용됩니다. `GROUPING_ID()` 함수의 열 순서는 `GROUPING()` 함수로 연결되는 열의 순서와 반대입니다.  
+ 다음 예제에서의 코드는 `GROUPING()`을 사용하여 `Bit Vector(base-2)` 열을 컴퓨팅하는 방법을 보여 줍니다. `GROUPING_ID()`는 해당 `Integer Equivalent` 열을 계산하는 데 사용됩니다. `GROUPING_ID()` 함수의 열 순서는 `GROUPING()` 함수로 연결되는 열의 순서와 반대입니다.  
   
  이 예제에서 `GROUPING_ID()`는 `Grouping Level` 열의 각 행에 대해 그룹화 수준을 식별하는 값을 생성합니다. 그룹화 수준이 1로 시작되는 연속된 정수 목록(0, 1, 2,...*n*)이 아닌 경우도 있습니다.  
   

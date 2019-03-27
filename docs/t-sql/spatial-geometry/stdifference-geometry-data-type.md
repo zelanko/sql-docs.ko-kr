@@ -52,7 +52,7 @@ ms.locfileid: "47796101"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-difference-between-two-polygon-instances"></a>1. 두 Polygon 인스턴스 사이의 차이 계산  
- 다음 예에서는 `STDifference()`를 사용하여 두 다각형 간의 차이를 계산합니다.  
+ 다음 예에서는 `STDifference()`를 사용하여 두 다각형 간의 차이를 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geometry;  

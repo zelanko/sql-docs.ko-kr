@@ -33,7 +33,7 @@ ms.locfileid: "52775535"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**lastrefresh**|**datetime**|모니터 데이터를 새로 고친 날짜와 시간입니다.|  
-|**computetime**|**int**|모니터 데이터를 계산하는 데 소요된 시간(초)입니다.|  
+|**computetime**|**int**|모니터 데이터를 컴퓨팅하는 데 소요된 시간(초)입니다.|  
 |**publication_id**|**int**|게시 ID입니다.|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_srvid**|**int**|게시자의 서버 ID입니다.|  

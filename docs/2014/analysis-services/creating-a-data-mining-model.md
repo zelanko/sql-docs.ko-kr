@@ -30,7 +30,7 @@ ms.locfileid: "52394466"
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
   데이터 모델링은 데이터 마이닝의 단계를 작성할 수 있는 패턴 및 추세를 적용 하 여 *알고리즘* 데이터입니다. 이러한 패턴을 사용하여 나중에 분석하거나 예측할 수 있습니다.  
   
- Office용 데이터 마이닝 추가 기능은 모델을 간단히 만들 수 있는 마법사를 통해 데이터 마이닝을 지원합니다. 이 마법사는 데이터를 분석하고 상관 관계를 식별하며 모든 변수의 통계적 의미를 계산하고 자동으로 최상의 모델을 선택합니다.  
+ Office용 데이터 마이닝 추가 기능은 모델을 간단히 만들 수 있는 마법사를 통해 데이터 마이닝을 지원합니다. 이 마법사는 데이터를 분석하고 상관 관계를 식별하며 모든 변수의 통계적 의미를 컴퓨팅하고 자동으로 최상의 모델을 선택합니다.  
   
  이 기능은 모든 비트는 데이터 마이닝 도구에서 제공 하는 만큼 강력 하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], 마법사 및 친숙 한 Excel 인터페이스의 조합을 쉽게 작성, 수정 및 데이터 마이닝을 사용 합니다.  
   

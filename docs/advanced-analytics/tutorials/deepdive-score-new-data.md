@@ -143,7 +143,7 @@ ms.locfileid: "53644982"
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. 데이터 원본 개체 sqlOutScoreDS를 사용 하 여 점수를 가져올 계산 하 여 히스토그램을 표시. 필요한 경우 계산 컨텍스트를 설정하는 코드를 추가합니다.
+4. 데이터 원본 개체 sqlOutScoreDS를 사용 하 여 점수를 가져올 계산 하 여 히스토그램을 표시. 필요한 경우 컴퓨팅 컨텍스트를 설정하는 코드를 추가합니다.
   
     ```R
     # rxSetComputeContext(sqlCompute)

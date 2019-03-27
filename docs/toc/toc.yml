@@ -96,7 +96,7 @@ items:
       href: ../big-data-cluster/concept-data-pool.md
     - name: 스토리지 풀
       href: ../big-data-cluster/concept-storage-pool.md
-    - name: 풀 계산
+    - name: 풀 컴퓨팅
       href: ../big-data-cluster/concept-compute-pool.md
     - name: 데이터 지속성
       href: ../big-data-cluster/concept-data-persistence.md

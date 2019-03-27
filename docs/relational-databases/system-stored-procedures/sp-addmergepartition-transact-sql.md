@@ -16,12 +16,12 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486faeb7d46ee32b40923cd54a018c2005c44621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5599370f892d174336411573883e2feffa27b886
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760515"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492655"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'***게시***'**  
- 파티션을 생성할 병합 게시입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 *suser_sname* 지정 된 값 *hostname* NULL 이어야 합니다.  
+`[ @publication = ] 'publication'` 파티션이 생성 되는 병합 게시가입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 *suser_sname* 지정 된 값 *hostname* NULL 이어야 합니다.  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자 함수입니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @suser_sname = ] 'suser_sname'` 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자 함수입니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@host_name**=] **'***host_name***'**  
- 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자 함수입니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @host_name = ] 'host_name'` 값을 기준으로 필터링 되어에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자 함수입니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

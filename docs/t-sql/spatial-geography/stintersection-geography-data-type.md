@@ -58,7 +58,7 @@ ms.locfileid: "47777011"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>1. Polygon 및 LineString의 교집합 계산  
- 다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 계산합니다.  
+ 다음 예에서는 `STIntersection()`을 사용하여 `Polygon`과 `LineString`의 교차점을 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geography;  

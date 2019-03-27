@@ -26,7 +26,7 @@ ms.locfileid: "52504058"
   
 8060바이트 행 크기 제한에 맞지 않는 열은 행 외부의 별도 내부 테이블에 배치됩니다. 각 행 외부 열에는 해당 내부 테이블이 있으며 단일 비클러스터형 인덱스가 있습니다. 행 외부 열에 사용되는 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요. 
  
-행 및 테이블의 크기를 계산하는 것이 유용한 특정 시나리오도 있습니다.
+행 및 테이블의 크기를 컴퓨팅하는 것이 유용한 특정 시나리오도 있습니다.
   
 -   테이블에서 사용하는 메모리의 양  
   

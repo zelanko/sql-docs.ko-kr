@@ -28,7 +28,7 @@ ms.locfileid: "48136073"
   
  사용 하는 경우 [CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE STATISTICS &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 지정 해야 `NORECOMPUTE` 자동 통계를 사용 하지 않도록 설정 메모리 최적화 테이블에 대 한 업데이트입니다. 디스크 기반 테이블에 대 한 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 테이블에 마지막 수정한 경우에 통계를 업데이트 [sp_updatestats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql). 메모리 최적화 테이블에 대 한 [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 항상 업데이트 된 통계를 생성 합니다. [sp_updatestats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql) 하는 메모리 최적화 테이블에 대 한 좋은 테이블 통계를 개별적으로 업데이트할 수 있도록 중요 한 변경 내용이 알아야 할 그렇지 않은 경우.  
   
- 데이터를 샘플링하거나 전체 검사를 수행하여 통계를 생성할 수 있습니다. 샘플링된 통계만 테이블 데이터 샘플을 사용하여 데이터 분포를 예상합니다. 전체 검사 통계는 전체 테이블을 검사하여 데이터 분포를 결정합니다. 전체 검사 통계는 일반적으로 더 정확하지만 계산하는 데 시간이 더 오래 걸립니다. 샘플링된 통계는 더 빠르게 수집할 수 있습니다.  
+ 데이터를 샘플링하거나 전체 검사를 수행하여 통계를 생성할 수 있습니다. 샘플링된 통계만 테이블 데이터 샘플을 사용하여 데이터 분포를 예상합니다. 전체 검사 통계는 전체 테이블을 검사하여 데이터 분포를 결정합니다. 전체 검사 통계는 일반적으로 더 정확하지만 컴퓨팅하는 데 시간이 더 오래 걸립니다. 샘플링된 통계는 더 빠르게 수집할 수 있습니다.  
   
  디스크 기반 테이블은 샘플링된 통계를 기본적으로 사용합니다. 메모리 액세스에 최적화된 테이블만 전체 검사 통계를 지원합니다. 사용 하는 경우 [CREATE STATISTICS &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-statistics-transact-sql) 또는 [UPDATE STATISTICS &#40;Transact SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)를 지정 해야 합니다는 `FULLSCAN` 옵션에 대 한 메모리 최적화 테이블입니다.  
   

@@ -153,7 +153,7 @@ WHERE type = 'PARALLEL_COPY_READER';
 ```  
   
 ### <a name="c-using-a-query-join-hint-with-create-remote-table"></a>C. CREATE REMOTE TABLE로 쿼리 조인 힌트 사용  
- 이 쿼리는 CREATE REMOTE TABLE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여 줍니다. 쿼리가 제어 노드에 제출된 후 계산 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
+ 이 쿼리는 CREATE REMOTE TABLE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여 줍니다. 쿼리가 제어 노드에 제출된 후 컴퓨팅 노드에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 계획을 생성할 때 해시 조인 전략을 적용합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
 ```  
 USE ssawPDW;  

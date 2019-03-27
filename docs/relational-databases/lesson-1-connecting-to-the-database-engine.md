@@ -90,7 +90,7 @@ ms.locfileid: "56801687"
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 관리자로 연결한 다음 가장 먼저 수행해야 할 태스크 중 하나는 다른 사용자가 연결할 수 있도록 권한을 부여하는 것입니다. 로그인을 만들고 이 로그인이 사용자로서 데이터베이스에 액세스할 수 있도록 권한을 부여하여 이 작업을 수행합니다. 로그인은 Windows 자격 증명을 사용하는 Windows 인증 로그인이나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 인증 정보를 저장하며 Windows 자격 증명과는 독립적인 SQL Server 인증 로그인 중 하나일 수 있습니다. 가능하면 Windows 인증을 사용하십시오.
 
 > [!TIP]
-> 대부분의 조직에는 도메인 사용자가 있고 Windows 인증을 사용합니다. 컴퓨터에서 추가 로컬 사용자를 만들어 직접 실험할 수 있습니다. 로컬 사용자는 컴퓨터에서 인증되므로 도메인은 컴퓨터 이름입니다. 예를 들어 컴퓨터 이름이 `MyComputer` 이고 `Test`라는 사용자를 만드는 경우 사용자에 대한 Windows 설명은 `Mycomputer\Test`입니다.  
+> 대부분의 조직에는 도메인 사용자가 있고 Windows 인증을 사용합니다. 컴퓨터에서 추가 로컬 사용자를 만들어 직접 실험할 수 있습니다. 로컬 사용자는 컴퓨터에서 인증되므로 도메인은 컴퓨터 이름입니다. 예를 들어 컴퓨팀 이름이 `MyComputer`이고 `Test`라는 사용자를 만드는 경우 사용자에 대한 Windows 설명은 `Mycomputer\Test`입니다.  
 
 ##### <a name="create-a-windows-authentication-login"></a>Windows 인증 로그인 만들기 
 

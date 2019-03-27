@@ -57,10 +57,10 @@ DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]
  모든 정보 메시지를 표시하지 않습니다. 정보 메시지는 항상 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서 무시됩니다.  
   
  COMPUTE  
- 각 계산 노드에서 메모리 내 데이터 캐시를 제거합니다.  
+ 각 컴퓨팅 노드에서 메모리 내 데이터 캐시를 제거합니다.  
   
  ALL  
- 각 계산 노드 및 제어 노드에서 메모리 내 데이터 캐시를 제거합니다. 값을 지정하지 않으면 이것이 기본값입니다.  
+ 각 컴퓨팅 노드 및 제어 노드에서 메모리 내 데이터 캐시를 제거합니다. 값을 지정하지 않으면 이것이 기본값입니다.  
   
 ## <a name="remarks"></a>Remarks  
 DBCC DROPCLEANBUFFERS를 사용하면 서버를 종료하고 다시 시작하지 않아도 완전히 빈 버퍼 캐시를 사용하여 쿼리를 테스트할 수 있습니다.

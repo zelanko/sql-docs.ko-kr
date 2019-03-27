@@ -50,7 +50,7 @@ ms.locfileid: "47813561"
 ## <a name="examples"></a>예  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>1. Polygon 인스턴스의 중심 계산  
- 다음 예에서는 `STCentroid()`를 사용하여 `polygon``geometry` 인스턴스의 중심을 계산합니다.  
+ 다음 예에서는 `STCentroid()`를 사용하여 `polygon``geometry` 인스턴스의 중심을 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geometry;  

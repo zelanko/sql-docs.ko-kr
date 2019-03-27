@@ -52,7 +52,7 @@ ms.locfileid: "47759671"
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stintersection-on-polygon-instances"></a>1. Polygon 인스턴스에 STIntersection() 사용  
- 다음 예에서는 `STIntersection()`을 사용하여 두 다각형의 교차점을 계산합니다.  
+ 다음 예에서는 `STIntersection()`을 사용하여 두 다각형의 교차점을 컴퓨팅합니다.  
   
 ```  
 DECLARE @g geometry;  

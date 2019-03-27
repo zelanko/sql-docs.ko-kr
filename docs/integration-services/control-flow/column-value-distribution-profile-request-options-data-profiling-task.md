@@ -92,7 +92,7 @@ ms.locfileid: "58281908"
   
 ### <a name="options"></a>옵션  
  **ValueDistributionOption**  
- 모든 열 값에 대해 분포를 계산할 것인지 여부를 지정합니다. 이 옵션의 기본값은 **FrequentValues**입니다.  
+ 모든 열 값에 대해 분포를 컴퓨팅할 것인지 여부를 지정합니다. 이 옵션의 기본값은 **FrequentValues**입니다.  
   
 |값|설명|  
 |-----------|-----------------|  

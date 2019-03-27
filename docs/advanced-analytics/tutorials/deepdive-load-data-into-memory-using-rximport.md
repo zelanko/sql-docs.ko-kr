@@ -22,13 +22,13 @@ ms.locfileid: "53645198"
 
 합니다 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 세션 메모리의 데이터 프레임 또는 XDF 파일로 디스크에 데이터 원본에서 데이터를 이동 하는 함수를 사용할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
 
-이 단계에서는 데이터를 가져오는 방법을 배웁니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용 하 여 합니다 **rxImport** 관심 있는 데이터를 로컬 파일에 저장 합니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 계산 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
+이 단계에서는 데이터를 가져오는 방법을 배웁니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용 하 여 합니다 **rxImport** 관심 있는 데이터를 로컬 파일에 저장 합니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
 ## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>로컬 메모리에 SQL Server에서 데이터 하위 집합 추출
 
 자세히 위험 개인만 검사 하려는 결정 하면 됩니다. 원본 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 크기 때문에 위험 고객에 대 한 정보를 가져오려는 합니다. 그런 다음 로컬 워크스테이션의 메모리에 데이터 프레임에 해당 데이터를 로드 합니다.
 
-1. 계산 컨텍스트를 로컬 워크스테이션으로 다시 설정합니다.
+1. 컴퓨팅 컨텍스트를 로컬 워크스테이션으로 다시 설정합니다.
 
     ```R
     rxSetComputeContext("local")

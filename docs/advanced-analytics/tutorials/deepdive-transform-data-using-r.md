@@ -53,7 +53,7 @@ ms.locfileid: "53645392"
   
     새 테이블을 이전 모든 변수를 저장할 `ccScoreOutput` 테이블과 새로 생성된 된 변수입니다.
   
-3. 계산 컨텍스트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 설정합니다.
+3. 컴퓨팅 컨텍스트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 설정합니다.
   
     ```R
     rxSetComputeContext(sqlCompute)
