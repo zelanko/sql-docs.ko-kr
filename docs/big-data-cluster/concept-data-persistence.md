@@ -5,17 +5,17 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017959"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494165"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017959"
 SQL Server 빅 데이터 클러스터 이러한 영구 볼륨을 사용 하는 방법은 사용 하 여 것 [저장소 클래스](https://kubernetes.io/docs/concepts/storage/storage-classes/)합니다. 다른 종류의 저장소에 대 한 다양 한 저장소 클래스를 만들고 빅 데이터 클러스터 배포 시에 지정할 수 있습니다. (풀) 어떤 용도로 사용 하는 저장소 클래스를 구성할 수 있습니다. SQL Server 빅 데이터 클러스터를 만듭니다 [영구적 볼륨 클레임](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) 영구적 볼륨에 필요한 각 pod에 대 한 지정 된 저장소 클래스 이름입니다. 그런 다음 pod에 해당 영구 볼륨을 탑재합니다.
 
 > [!NOTE]
-> CTP 2.3에만 용 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
+> CTP 2.4,만 `ReadWriteOnce` 전체 클러스터에 대 한 액세스 모드가 지원 됩니다.
 
 ## <a name="deployment-settings"></a>배포 설정
 

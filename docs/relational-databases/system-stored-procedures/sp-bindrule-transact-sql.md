@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128413"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493765"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rulename=**] **'**_규칙_**'**  
- CREATE RULE 문으로 작성된 규칙의 이름입니다. *규칙* 는 **nvarchar(776)**, 기본값은 없음입니다.  
+`[ @rulename = ] 'rule'` 규칙 만들기 문에 의해 작성 된 규칙의 이름이입니다. *규칙* 는 **nvarchar(776)**, 기본값은 없음입니다.  
   
- [  **@objname=**] **'**_object_name_**'**  
- 규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식에 바인딩할 규칙은입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. 하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열 상속 *규칙* 규칙 열에 직접 바인딩된 경우를 제외 합니다.  
   
@@ -60,8 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  별칭 데이터 형식을 사용하는 식에 대해 만든 규칙을 열이나 별칭 데이터 형식에 바인딩할 수 있지만 이들 규칙을 참조할 때 컴파일할 수 없습니다. 별칭 데이터 형식에 대해 만든 규칙을 사용하지 마십시오.  
   
- [  **@futureonly=** ] **'**_futureonly_flag_**'**  
- 규칙을 별칭 데이터 형식에 바인딩하는 경우에만 사용합니다. *future_only_flag* 됩니다 **varchar(15)** 이며 기본값은 NULL입니다. 이 매개 변수 설정 하면 **futureonly** 별칭 데이터 형식의 기존 열 새 규칙을 상속 하는 것을 금지 합니다. 하는 경우 *futureonly_flag* 가 null 인 경우 새 규칙을 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열에 바인딩되어 있습니다.  
+`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에 규칙을 바인딩할 때만 사용 됩니다. *future_only_flag* 됩니다 **varchar(15)** 이며 기본값은 NULL입니다. 이 매개 변수 설정 하면 **futureonly** 별칭 데이터 형식의 기존 열 새 규칙을 상속 하는 것을 금지 합니다. 하는 경우 *futureonly_flag* 가 null 인 경우 새 규칙을 현재 규칙이 없거나 별칭 데이터 형식의 기존 규칙을 사용 하는 별칭 데이터 형식의 열에 바인딩되어 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

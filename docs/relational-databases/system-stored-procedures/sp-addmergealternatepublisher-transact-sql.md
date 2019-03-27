@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129303"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491977"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,23 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication=**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
- 대체 게시자의 이름입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` 대체 게시자의 이름이입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publisher_db=**] **'**_alternate_publisher_db_**'**  
- 대체 게시자에 있는 게시 데이터베이스의 이름입니다. *alternate_publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` 대체 게시자의 게시 데이터베이스의 이름이입니다. *alternate_publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
- 대체 동기화 파트너에 있는 게시의 이름입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` 대체 동기화 파트너 게시의 이름이입니다. *alternate_synchronization_partner* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
- 대체 동기화 파트너에 대한 배포자의 이름입니다. *alternate_distributor* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alternate_distributor = ] 'alternate_distributor'` 대체 동기화 파트너에 대 한 배포자의 이름이입니다. *alternate_distributor* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@friendly_name=**] **'**_friendly_name_**'**  
- 대체 동기화 파트너를 구성하는 게시자, 게시 및 배포자의 연결을 식별하기 위한 표시 이름입니다. *friendly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @friendly_name = ] 'friendly_name'` 게시자, 게시 및 대체 동기화 파트너를 구성 하는 배포자의 연결을 식별할 수 있는 표시 이름이입니다. *friendly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@reserved=**] **'**_예약_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

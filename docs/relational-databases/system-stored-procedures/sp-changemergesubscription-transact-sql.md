@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819074"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493955"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 변경할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
+`[ @publication = ] 'publication'` 변경할 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
- [  **@subscriber=**] **'**_구독자_**'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscriber_db*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@property=**] **'**_속성_**'**  
- 지정된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 게시에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'**_값_**'**  
- 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
 |--------------|-----------|-----------------|  
@@ -72,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|구독자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 |**subscriber_login**||구독자에서의 로그인 이름입니다.|  
 |**subscriber_password**||제공된 구독자 로그인에 대한 강력한 암호입니다.|  
-|**sync_type**|**자동 번역**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
+|**sync_type**|**automatic**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 ||**없음**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
 |**use_interactive_resolver**|**true**|대화형 해결을 허용하는 모든 아티클에 대해 충돌을 대화형으로 해결할 수 있도록 합니다.|  
 ||**false**|기본 해결 프로그램이나 사용자 지정 해결 프로그램을 사용하여 충돌이 자동으로 해결됩니다.|  

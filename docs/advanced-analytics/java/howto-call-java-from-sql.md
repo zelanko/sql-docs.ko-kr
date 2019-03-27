@@ -3,18 +3,18 @@ title: SQL-SQL Server Machine Learning Services에서에서 Java를 호출 하�
 description: 이 Java 프로그래밍 언어 확장에 SQL Server 2019를 사용 하 여 SQL Server 저장 프로시저에서 Java 클래스를 호출 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017759"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493005"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 Java를 호출 하는 방법
 
@@ -26,7 +26,7 @@ SQL Server에서 Java 클래스를 호출 하는 방법은 두 가지가 있습�
 
 1. .Class 또는.jar 파일을 배치할 하 [Java classpath](#classpath)합니다. Windows 및 Linux 모두에 대해 제공 됩니다.
 
-2. .Jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에서 컴파일된 클래스를 업로드 합니다 [외부 라이브러리](#external-library) DDL. 이 옵션은 Windows CTP 2.3에만 사용할 수 있습니다. Linux 지원은 이후 CTP에서 추가 될 예정입니다.
+2. .Jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에서 컴파일된 클래스를 업로드 합니다 [외부 라이브러리](#external-library) DDL. 이 옵션은 Windows 및 Linux CTP 2.4에서 사용할 수 있습니다.
 
 > [!NOTE]
 > 일반 권장 사항,으로 개별이 아닌.class 파일과.jar 파일을 사용 합니다. Java의 일반적인 사례 이며 전반적인 환경을 더 쉽게 됩니다. 참고 항목: [클래스 파일에서 jar 파일을 만드는 방법](extension-java.md#create-jar)합니다.
@@ -93,7 +93,7 @@ JDK 실행 파일에 대 한 시스템 변수를 만든 것 처럼 코드 경로
 
 ## <a name="external-library"></a>외부 라이브러리
 
-SQL Server 2019 CTP 2.3의 Windows에서 Java 언어에 대 한 외부 라이브러리를 사용할 수 있습니다. 동일한 기능을 예정 된 CTP에는 Linux에서 제공 됩니다. 클래스를 컴파일하여.jar 파일 및.jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에 업로드할 수는 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+SQL Server 2019 CTP 2.4이 하에서는 Windows 및 Linux에서 Java 언어에 대 한 외부 라이브러리를 사용할 수 있습니다. 동일한 기능을 예정 된 CTP에는 Linux에서 제공 됩니다. 클래스를 컴파일하여.jar 파일 및.jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에 업로드할 수는 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 외부 라이브러리를 사용 하 여.jar 파일을 업로드 하는 방법의 예:
 

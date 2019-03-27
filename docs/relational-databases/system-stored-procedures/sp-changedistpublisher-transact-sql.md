@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128238"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494026"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=** ] **'**_속성_**'**  
- 지정된 게시자에 대해 변경할 속성입니다. *속성* 됩니다 **sysname** 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 게시자에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **sysname** 이며 다음이 값 중 하나일 수 있습니다.  
   
- [ **@value=** ] **'**_value_**'**  
- 지정된 속성에 대한 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 값이입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- SQL Database 관리 되는 인스턴스에 대 한 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
+`[ @storage_connection_string = ] 'storage_connection_string'` SQL Database 관리 되는 인스턴스에 대 한 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,7 +56,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |속성|값|Description|  
 |--------------|------------|-----------------|  
-|**Active**|**true**|게시자를 활성화합니다.|  
+|**active**|**true**|게시자를 활성화합니다.|  
 ||**false**|게시자를 비활성화합니다.|  
 |**distribution_db**||배포 데이터베이스의 이름입니다.|  
 |**login**||로그인 이름입니다.|  

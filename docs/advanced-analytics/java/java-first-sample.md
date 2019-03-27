@@ -3,18 +3,18 @@ title: Java 샘플 및 SQL Server 2019-SQL Server Machine Learning Services에 �
 description: SQL Server 데이터를 사용 하 여 Java 언어 확장을 사용 하는 단계를 알아보려면 SQL Server 2019에서 Java 샘플 코드를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018039"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493428"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 샘플 연습
 
@@ -205,9 +205,22 @@ Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나
 
 클래스 및 종속성.jar 파일을 패키지 하려면 sp_execute_external_script 클래스 경로 매개 변수에서.jar 파일의 전체 경로 제공 합니다. 예를 들어, jar 파일을 'ngram.jar'를 호출 하면 CLASSPATH 됩니다 ' / home/myclasspath/ngram.jar' linux.
 
-## <a name="6---set-permissions"></a>6-사용 권한 설정
+## <a name="6---create-external-library"></a>6-외부 라이브러리 만들기
 
-스크립트 실행 프로세스 id가 코드에 액세스 하는 경우에 성공 합니다. 
+외부 라이브러리를 만들어 SQL Server jar에 대 한 액세스를 자동으로 포함 됩니다 하 고 클래스 경로에 모든 특수 사용 권한을 설정할 필요가 없습니다.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-사용 권한 (6 단계를 수행한 경우에 생략)를 설정 합니다.
+
+외부 라이브러리를 사용 하는 경우에이 단계가 필요 하지 않습니다. 작업 하는 권장된 방법을 있습니다 jar에서 외부 라이브러리를 만드는 것입니다. 
+
+외부 라이브러리를 사용 하지 않으려는 경우에 필요한 사용 권한을 설정 해야 합니다. 스크립트 실행 프로세스 id가 코드에 액세스 하는 경우에 성공 합니다. 
 
 ### <a name="on-linux"></a>On Linux
 
@@ -232,7 +245,7 @@ Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 SQL Server에서 코드를 호출 하려면 Java 메서드를 지정 **getNgrams()** sp_execute_external_script "script" 매개 변수에서입니다. 이 메서드 호출 "패키지" 라는 클래스 파일을 패키지에 속하는 **Ngram.java**합니다.
 
@@ -246,8 +259,6 @@ SQL Server에서 코드를 호출 하려면 Java 메서드를 지정 **getNgrams
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ GO
 
 ### <a name="if-you-get-an-error"></a>오류가 발생 하는 경우
 
-Classpath와 관련 된 모든 문제를 배제 합니다. 
-
-+ Classpath 부모 폴더 및 모든 하위 폴더에만 "패키지" 하위 폴더 하지 구성 되어야 합니다. 패키지 하위 폴더에 있어야 하는 동안 저장된 프로시저에 지정 된 경로 값에 포함 되도록 간주 되지 않습니다 했습니다.
-
-+ "패키지" 하위 폴더에는 세 클래스 모두에 대 한 컴파일된 코드를 포함 해야 합니다.
++ 클래스를 컴파일할 때 "패키지" 하위 폴더에는 세 클래스 모두에 대 한 컴파일된 코드를 포함 해야 합니다.
 
 + 클래스 경로 길이 선언 된 값을 초과할 수 없습니다 (`DECLARE @myClassPath nvarchar(50)`). 이 경우 처음 50 개 문자를 경로 잘리고 컴파일된 코드가 로드 되지 않습니다. 수행할 수 있습니다는 `SELECT @myClassPath` 값을 확인 합니다. 50 자 충분 하지 않은 경우에 길이 늘립니다. 
 

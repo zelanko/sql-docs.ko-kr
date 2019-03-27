@@ -18,12 +18,12 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492195"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'***역할***'**  
- 새 데이터베이스 역할의 이름입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 올바른 식별자 (ID) 여야 하며 현재 데이터베이스에 이미 존재 하지 않아야 합니다.  
+`[ @rolename = ] 'role'` 새 데이터베이스 역할의 이름이입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 올바른 식별자 (ID) 여야 하며 현재 데이터베이스에 이미 존재 하지 않아야 합니다.  
   
- [  **@ownername =**] **'***소유자***'**  
- 새 데이터베이스 역할의 소유자입니다. *소유자* 되는 **sysname**, 현재 실행 중인 사용자의 기본값을 사용 하 여 합니다. *소유자* 데이터베이스 사용자 또는 현재 데이터베이스의 데이터베이스 역할 이어야 합니다.  
+`[ @ownername = ] 'owner'` 새 데이터베이스 역할의 소유자가입니다. *소유자* 되는 **sysname**, 현재 실행 중인 사용자의 기본값을 사용 하 여 합니다. *소유자* 데이터베이스 사용자 또는 현재 데이터베이스의 데이터베이스 역할 이어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

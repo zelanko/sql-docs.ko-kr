@@ -1,6 +1,6 @@
 ---
 title: sys.sensitivity_classifications (TRANSACT-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 478ab8dd464541c08252eac049a840a789615971
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: e75ebba2f48d0e2ec15ea871fe8d70a4b49e7318
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493054"
 ---
 # <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 데이터베이스의 분류 된 각 항목에 대 한 행을 반환 합니다.
 

@@ -5,17 +5,17 @@ description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494405"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
 
@@ -33,7 +33,7 @@ ms.locfileid: "54241674"
 ## <a id="prereqs"></a> 필수 구성 요소
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 확장**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
@@ -44,18 +44,18 @@ ms.locfileid: "54241674"
 
 1. Azure Data Studio, 빅 데이터 클러스터의 마스터 SQL Server 인스턴스에 연결 합니다. 자세한 내용은 [SQL Server 마스터 인스턴스에 연결할](connect-to-big-data-cluster.md#master)합니다.
 
-2. 연결을 두 번 클릭 합니다 **서버** 창 마스터 SQL Server 인스턴스에 대 한 서버 대시보드를 표시 합니다. 선택 **새 쿼리**합니다.
+1. 연결을 두 번 클릭 합니다 **서버** 창 마스터 SQL Server 인스턴스에 대 한 서버 대시보드를 표시 합니다. 선택 **새 쿼리**합니다.
 
    ![SQL Server 마스터 인스턴스 쿼리](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. 컨텍스트를 변경 하려면 다음 TRANSACT-SQL 명령을 실행 합니다 **Sales** 마스터 인스턴스에 있는 데이터베이스입니다.
+1. 컨텍스트를 변경 하려면 다음 TRANSACT-SQL 명령을 실행 합니다 **Sales** 마스터 인스턴스에 있는 데이터베이스입니다.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. HDFS에서 읽을 CSV 파일의 형식을 정의 합니다. F5 키를 눌러 문을 실행 합니다.
+1. HDFS에서 읽을 CSV 파일의 형식을 정의 합니다. F5 키를 눌러 문을 실행 합니다.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ ms.locfileid: "54241674"
    );
    ```
 
-5. 읽을 수 있는 외부 테이블 만들기는 `/clickstream_data` 저장소 풀에서. 합니다 **SqlStoragePool** 빅 데이터 클러스터의 마스터 인스턴스에서 액세스할 수 있습니다.
+1. 아직 존재 하지 않는 경우 저장소 풀에 외부 데이터 원본을 만듭니다.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. 읽을 수 있는 외부 테이블 만들기는 `/clickstream_data` 저장소 풀에서. 합니다 **SqlStoragePool** 빅 데이터 클러스터의 마스터 인스턴스에서 액세스할 수 있습니다.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

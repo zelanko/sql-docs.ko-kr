@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132864"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492835"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,50 +47,40 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 아티클을 포함하는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 속한 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'**_문서_**'**  
- 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@view_name=**] **'**_view_name_**'**  
- 게시된 아티클을 정의하는 뷰의 이름입니다. *view_name* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
+`[ @view_name = ] 'view_name'` 게시 된 아티클을 정의 하는 뷰의 이름이입니다. *view_name* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- 행 필터를 정의하는 제한(WHERE) 절입니다. 제약 조건 절을 입력할 때는 WHERE 키워드를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
+`[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 WHERE 키워드를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
   
- [  **@change_active =** ] *change_active*  
- 구독이 있는 게시에서 열을 수정할 수 있도록 허용합니다. *change_active* 되는 **int**, 기본값은 **0**합니다. 하는 경우 **0**, 열은 변경 되지 않습니다. 하는 경우 **1**, 뷰를 생성 또는 구독이 있는 활성 아티클에서 다시 만들 수 있습니다.  
+`[ @change_active = ] change_active` 구독이 있는 게시에서 열을 수정할 수 있습니다. *change_active* 되는 **int**, 기본값은 **0**합니다. 하는 경우 **0**, 열은 변경 되지 않습니다. 하는 경우 **1**, 뷰를 생성 또는 구독이 있는 활성 아티클에서 다시 만들 수 있습니다.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 아티클의 변경이 잘못 스냅숏이 무효화 될 수 있습니다 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 되지 않음으로 표시 하 고 새 스냅숏을 생성할 권한을 부여 되도록 지정 합니다.  
   
- [  **@force_reinit_subscription =]** _force_reinit_subscription_  
- 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   
  **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
- [ **@publisher**=] **'**_게시자_**'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 게시 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
- 복제를 동기화하는 데 사용된 저장 프로시저가 자동으로 다시 생성되는지 여부입니다. *refreshsynctranprocs* 됩니다 **비트**, 기본값은 1입니다.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` 복제를 동기화 하는 데 저장된 프로시저는 자동으로 다시 생성 하는 경우입니다. *refreshsynctranprocs* 됩니다 **비트**, 기본값은 1입니다.  
   
  **1** 저장된 프로시저 다시 생성 됨을 의미 합니다.  
   
  **0** 저장된 프로시저 다시 생성 됨을 의미 합니다.  
   
- [ **@internal**=] *내부*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @internal = ] internal` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

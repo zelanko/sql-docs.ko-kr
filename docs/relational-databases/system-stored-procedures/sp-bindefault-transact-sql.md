@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494255"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@defname=** ] **'***default***'**  
- CREATE DEFAULT 문으로 작성된 기본값의 이름입니다. *기본* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @defname = ] 'default'` CREATE DEFAULT 문으로 작성 되는 기본값의 이름이입니다. *기본* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [ **@objname=** ] **'***object_name***'**  
- 기본값이 바인딩될 별칭 데이터 형식 또는 테이블과 열의 이름입니다. *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. *object_name* 으로 정의할 수 없습니다 합니다 **varchar (max)** 를 **nvarchar (max)** 를 **varbinary (max)** 를 **xml**, 또는 CLR 사용자 정의 형식입니다.  
+`[ @objname = ] 'object_name'` 기본값이 바인딩될 별칭 데이터 형식 또는 테이블과 열의 이름이입니다. *object_name* 됩니다 **nvarchar(776)** 기본값은 없습니다. *object_name* 으로 정의할 수 없습니다 합니다 **varchar (max)** 를 **nvarchar (max)** 를 **varbinary (max)** 를 **xml**, 또는 CLR 사용자 정의 형식입니다.  
   
  하는 경우 *object_name* 은 한 부분으로 이루어진 이름, 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열을 상속 *기본*열에 직접 바인딩된 기본값 되지 않은 경우. 에 기본값을 바인딩할 수 없습니다는 **텍스트**를 **ntext**를 **이미지**를 **varchar (max)** 를 **nvarchar (max)**, **varbinary (max)**, **xml**하십시오 **타임 스탬프**, 또는 CLR 사용자 정의 형식 열, IDENTITY 속성이 있는 열, 계산된 열 또는 열은 DEFAULT 제약 조건이 이미 있습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분된 식별자로. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 기본값을 별칭 데이터 형식에 바인딩하는 경우에만 사용합니다. *futureonly_flag* 됩니다 **varchar(15)** 이며 기본값은 NULL입니다. 이 매개 변수로 설정 되 면 **futureonly**, 해당 데이터 형식의 기존 열에 새 기본값을 상속할 수 없습니다. 이 매개 변수는 열에 기본값을 바인딩할 때는 절대 사용되지 않습니다. 하는 경우 *futureonly_flag* 가 null 인 경우는 현재 기본값이 없거나 별칭 데이터 형식의 기존 기본값을 사용 하는 별칭 데이터 형식의 열에는 새 기본값이 바인딩됩니다.  
+`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에 기본값 바인딩 하는 경우에 사용 됩니다. *futureonly_flag* 됩니다 **varchar(15)** 이며 기본값은 NULL입니다. 이 매개 변수로 설정 되 면 **futureonly**, 해당 데이터 형식의 기존 열에 새 기본값을 상속할 수 없습니다. 이 매개 변수는 열에 기본값을 바인딩할 때는 절대 사용되지 않습니다. 하는 경우 *futureonly_flag* 가 null 인 경우는 현재 기본값이 없거나 별칭 데이터 형식의 기존 기본값을 사용 하는 별칭 데이터 형식의 열에는 새 기본값이 바인딩됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

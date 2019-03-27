@@ -19,17 +19,17 @@ ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d43074e9cdffa27e971d32278259001ae86c005f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209452"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492875"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 백업 장치를 추가합니다.  
   
@@ -48,19 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@devtype=** ] **'***device_type***'**  
- 백업 장치의 유형입니다. *device_type* 됩니다 **varchar(20)"** 이며 기본값은 없고 수 다음 값 중 하나일 수 있습니다.  
+`[ @devtype = ] 'device_type'` 백업 장치의 유형이입니다. *device_type* 됩니다 **varchar(20)"** 이며 기본값은 없고 수 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**disk**|백업 장치로서의 하드 디스크 파일입니다.|  
 |**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 장치입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
   
- [  **@logicalname =** ] **'***logical_name***'**  
- BACKUP 및 RESTORE 문에서 사용되는 백업 장치의 논리적 이름입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @logicalname = ] 'logical_name'` 백업 및 복원 문에 사용 되는 백업 장치의 논리적 이름이입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@physicalname =** ] **'***physical_name***'**  
- 백업 장치의 물리적 이름입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다 값을 NULL 일 수 없습니다.  
+`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름이입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다 값을 NULL 일 수 없습니다.  
   
  원격 네트워크 위치에서 백업 장치를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
@@ -69,11 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 장치에 액세스하거나 장치를 만들지는 않습니다.  
   
- [ **@cntrltype =** ] **'***controller_type***'**  
- 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
+`[ @cntrltype = ] 'controller_type'` 사용 되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
   
- [ **@devstatus =** ] **'***device_status***'**  
- 더 이상 사용되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
+`[ @devstatus = ] 'device_status'` 사용 되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

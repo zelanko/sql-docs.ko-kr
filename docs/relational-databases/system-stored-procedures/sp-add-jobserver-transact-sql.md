@@ -18,12 +18,12 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0177e9e96de30de5efe0f5b3425d417cadad50ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674411"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492712"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =** ] *job_id*  
- 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업의 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =** ] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@server_name =** ] **'***server***'**  
- 작업의 대상 서버 이름입니다. *서버* 됩니다 **nvarchar(30)**, (local)의 기본값을 사용 하 여 '. *서버* 일 수 있습니다 **(로컬)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
+`[ @server_name = ] 'server'` 작업 대상으로 하는 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, (local)의 기본값을 사용 하 여 '. *서버* 일 수 있습니다 **(로컬)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

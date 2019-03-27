@@ -16,12 +16,12 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86965fca878f07a93833fe04be9df702dea3050c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7d9c899f5ae956f9e434bb7374d95aaa186a2923
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204225"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493795"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@subscriber =** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**합니다. 구독자의 이름은 데이터베이스에서 고유해야 하고 이미 존재해서는 안 되며 NULL일 수 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**합니다. 구독자의 이름은 데이터베이스에서 고유해야 하고 이미 존재해서는 안 되며 NULL일 수 없습니다.  
   
- [  **@agent_type =** ] *agent_type*  
- 에이전트의 유형입니다. *agent_type* 됩니다 **smallint**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] agent_type` 에이전트의 유형이입니다. *agent_type* 됩니다 **smallint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|배포 에이전트|  
 |**1**|병합 에이전트|  
   
- [  **@frequency_type =** ] *frequency_type*  
- 배포 에이전트를 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 배포 에이전트를 예약 하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -75,11 +72,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (기본값)|자동 시작|  
 |**128**|되풀이|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 설정 된 빈도에 적용 하려면 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 **1**합니다.  
+`[ @frequency_interval = ] frequency_interval` 설정 된 빈도에 적용 하려면 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 **1**합니다.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- 배포 에이전트의 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 배포 에이전트의 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -89,11 +84,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|넷째|  
 |**16**|마지막|  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 **0**합니다.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 정의 된 기간 동안 다시 예약 하는 빈도 방법이입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -102,23 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 **5**합니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 **5**합니다.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- 하루 중에서 배포 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 배포 에이전트는 첫 번째 경우 하루 중 시간 예약 된 hhmmss입니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 **0**합니다.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- 하루 중에서 배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day*됩니다 **int**, 이며 기본값은 235959 의미 하는 오후 11시 59분: 59 235959입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 배포 에이전트가 중지 되 면 시간 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day*됩니다 **int**, 이며 기본값은 235959 의미 하는 오후 11시 59분: 59 235959입니다.  
   
- [ **@active_start_date =** ] *active_start_date*  
- 배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 됩니다 **int**, 기본값은 **0**합니다.  
+`[ @active_start_date = ] active_start_date` 가 경우 배포 에이전트는 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로 합니다. *active_start_date* 됩니다 **int**, 기본값은 **0**합니다.  
   
- [ **@active_end_date =** ] *active_end_date*  
- 배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 이며 기본값은 99991231 의미 하는 12 월 31 일에서 9999입니다.  
+`[ @active_end_date = ] active_end_date` 배포 에이전트가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 이며 기본값은 99991231 의미 하는 12 월 31 일에서 9999입니다.  
   
- [  **@publisher =** ] **'***게시자***'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

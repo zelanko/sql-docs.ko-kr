@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704601"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492523"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@alert_name=** ] **'***alert***'**  
- 이 알림에 대한 경고입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alert_name = ] 'alert'` 이 알림에 대 한 경고입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@operator_name=** ] **'***operator***'**  
- 경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @operator_name = ] 'operator'` 경고가 발생할 때 알림을 받을 운영자입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@notification_method=** ] *notification_method*  
- 운영자에게 알림을 보내는 방법입니다. *notification_method* 됩니다 **tinyint**, 기본값은 없습니다. *notification_method* 와 함께 다음이 값 중 하나 이상이 될 수는 **OR** 논리 연산자입니다.  
+`[ @notification_method = ] notification_method` 연산자 알려집니다 메서드. *notification_method* 됩니다 **tinyint**, 기본값은 없습니다. *notification_method* 와 함께 다음이 값 중 하나 이상이 될 수는 **OR** 논리 연산자입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -77,7 +74,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>예  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
-> **참고:** 이 예에서는 가정 `Test Alert` 이미 있고 `François Ajenstat` 유효한 연산자 이름입니다.  
+> **참고:** 이 예에서는 `Test Alert`가 이미 존재하고 있으며 `François Ajenstat`가 유효한 운영자 이름이라고 가정합니다.  
   
 ```  
 USE msdb ;  

@@ -18,12 +18,12 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492895"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,14 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@dbname=** ] **'***dbname***'**  
- 서버에 연결될 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @dbname = ] 'dbname'` 서버에 연결할 데이터베이스의 이름이입니다. 이름은 고유 해야 합니다. *dbname* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@physname=** ] **'***physical_name***'**  
- 경로를 포함한 데이터베이스 파일의 물리적 이름입니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다.  
+`[ @physname = ] 'physical_name'` 물리적 이름, 데이터베이스 파일의 포함 경로입니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스에 전체 텍스트 카탈로그 파일이 포함된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 연결할 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

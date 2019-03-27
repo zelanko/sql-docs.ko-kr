@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493075"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@primary_server** = ] '*primary_server*'  
- 기본 인스턴스 이름을 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성에서 합니다. *primary_server* 됩니다 **sysname** NULL 일 수 없습니다.  
+`[ @primary_server = ] 'primary_server'` 기본 인스턴스 이름을 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로그 전달 구성에서 합니다. *primary_server* 됩니다 **sysname** NULL 일 수 없습니다.  
   
- [ **@primary_database** =] '*primary_database*'  
- 주 서버의 데이터베이스 이름입니다. *primary_database* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @primary_database = ] 'primary_database'` 주 서버에서 데이터베이스의 이름이입니다. *primary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- 주 서버의 트랜잭션 로그 백업 파일이 저장되는 디렉터리입니다. *backup_source_directory* 됩니다 **nvarchar(500)** NULL 일 수 없습니다.  
+`[ @backup_source_directory = ] 'backup_source_directory'` 주 서버에서 트랜잭션 로그 백업 파일을 저장할 디렉터리입니다. *backup_source_directory* 됩니다 **nvarchar(500)** NULL 일 수 없습니다.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- 백업 파일이 복사되는 보조 서버의 디렉터리입니다. *backup_destination_directory* 됩니다 **nvarchar(500)** NULL 일 수 없습니다.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` 백업 파일이 복사 되는 보조 서버의 디렉터리입니다. *backup_destination_directory* 됩니다 **nvarchar(500)** NULL 일 수 없습니다.  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- 기록이 보존되는 기간(분)입니다. *history_retention_period* 됩니다 **int**, 기본값은 NULL입니다. 값이 지정되지 않으면 14420이 사용됩니다.  
+`[ @file_retention_period = ] 'file_retention_period'` 기록이 보존 되는 몇 분 안에 시간의 길이입니다. *history_retention_period* 됩니다 **int**, 기본값은 NULL입니다. 값이 지정되지 않으면 14420이 사용됩니다.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- 모니터 서버 연결에 사용되는 보안 모드입니다.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 모니터 서버에 연결할 때 사용할 보안 모드입니다.  
   
  1 = Windows 인증  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. *monitor_server_security_mode* 됩니다 **비트** NULL 일 수 없습니다.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- 모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
+`[ @monitor_server_login = ] 'monitor_server_login'` 모니터 서버에 액세스 하는 데 사용 하는 계정의 사용자 이름이입니다.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- 모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
+`[ @monitor_server_password = ] 'monitor_server_password'` 모니터 서버에 액세스 하는 데 사용 하는 계정의 암호가입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

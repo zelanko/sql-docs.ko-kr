@@ -16,12 +16,12 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a36f49bb392d8f29ff52bb574f1dff9c9813eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f72ed9339522d3cce0936ca2f6143fb35ce3252e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494015"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id=** ] *profile_id*  
- 프로필의 id를 **MSagent_profiles** 테이블에 **msdb** 데이터베이스입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 프로필의 id를 **MSagent_profiles** 테이블에 **msdb** 데이터베이스입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
   
  이 에이전트 유형을 확인 하려면 *profile_id* 나타내는 *profile_id* 에 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 테이블 및 참고는 *agent_type* 필드 값입니다. 값은 다음과 같습니다.  
   
@@ -53,8 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
- [  **@parameter_name=** ] **'***parameter_name***'**  
- 매개 변수의 이름입니다. *parameter_name* 됩니다 **sysname**, 기본값은 없습니다. 시스템 프로필에 이미 정의 된 매개 변수 목록을 참조 하세요 [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)합니다. 각 에이전트에 대해 유효한 매개 변수의 전체 목록은 다음 항목을 참조하십시오.  
+`[ @parameter_name = ] 'parameter_name'` 매개 변수의 이름이입니다. *parameter_name* 됩니다 **sysname**, 기본값은 없습니다. 시스템 프로필에 이미 정의 된 매개 변수 목록을 참조 하세요 [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)합니다. 각 에이전트에 대해 유효한 매개 변수의 전체 목록은 다음 항목을 참조하십시오.  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -66,8 +64,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- 매개 변수에 할당된 값입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수에 할당할 값이입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -16,12 +16,12 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133903"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492685"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@property=**] **'**_속성_**'**  
- 지정된 배포자의 속성입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 배포자에 대 한 속성이입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
- [  **@value=**] **'**_값_**'**  
- 지정된 배포자 속성에 대한 값입니다. *값* 됩니다 **varchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정된 된 배포자 속성에 대 한 값이입니다. *값* 됩니다 **varchar(255)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

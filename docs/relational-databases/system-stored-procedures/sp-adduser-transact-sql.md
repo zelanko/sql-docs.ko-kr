@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766531"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492941"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@loginame =** ] **'***login***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인의 이름입니다. *로그인* 되는 **sysname**, 기본값은 없습니다. *로그인* 기존 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 합니다.  
+`[ @loginame = ] 'login'` 이름인는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 합니다. *로그인* 되는 **sysname**, 기본값은 없습니다. *로그인* 기존 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 합니다.  
   
- [  **@name_in_db =** ] **'***사용자***'**  
- 새 데이터베이스 사용자의 이름입니다. *사용자* 되는 **sysname**, 기본값은 NULL 사용 하 여 합니다. 하는 경우 *사용자* 지정 하지 않으면 기본적으로 새 데이터베이스 사용자의 이름을 합니다 *로그인* 이름입니다. 지정 *사용자* 서버 수준 로그인 이름과 다른 데이터베이스에 새 사용자 이름을 제공 합니다.  
+`[ @name_in_db = ] 'user'` 새 데이터베이스 사용자에 대 한 이름이입니다. *사용자* 되는 **sysname**, 기본값은 NULL 사용 하 여 합니다. 하는 경우 *사용자* 지정 하지 않으면 기본적으로 새 데이터베이스 사용자의 이름을 합니다 *로그인* 이름입니다. 지정 *사용자* 서버 수준 로그인 이름과 다른 데이터베이스에 새 사용자 이름을 제공 합니다.  
   
- [  **@grpname =** ] **'***역할***'**  
- 새 사용자가 멤버로 추가되는 데이터베이스 역할입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에서 유효한 데이터베이스 역할 이어야 합니다.  
+`[ @grpname = ] 'role'` 새 사용자가 멤버인 데이터베이스 역할이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에서 유효한 데이터베이스 역할 이어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

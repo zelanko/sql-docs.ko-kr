@@ -19,12 +19,12 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811451"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494275"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 만들 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 경우는 *proxy_name* 가 NULL 이거나 빈 문자열인 경우 기본 프록시 이름 합니다 *user_name* 제공 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 만들 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 경우는 *proxy_name* 가 NULL 이거나 빈 문자열인 경우 기본 프록시 이름 합니다 *user_name* 제공 합니다.  
   
- [ **@enabled** =] *is_enabled*  
- 프록시 활성화 여부를 지정합니다. 합니다 *is_enabled* 플래그가 **tinyint**, 기본값은 1 사용 하 여 합니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다.  
+`[ @enabled = ] is_enabled` 프록시 사용 되는지 여부를 지정 합니다. 합니다 *is_enabled* 플래그가 **tinyint**, 기본값은 1 사용 하 여 합니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다.  
   
- [ **@description**= ] **'***description***'**  
- 프록시에 대한 설명입니다. 설명이 **nvarchar(512)**, 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
+`[ @description = ] 'description'` 프록시의 설명입니다. 설명이 **nvarchar(512)**, 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- 프록시에 대한 자격 증명의 이름입니다. 합니다 *credential_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
+`[ @credential_name = ] 'credential_name'` 프록시에 대 한 자격 증명의 이름입니다. 합니다 *credential_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
- [ **@credential_id** = ] *credential_id*  
- 프록시에 대한 자격 증명의 ID입니다. 합니다 *credential_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
+`[ @credential_id = ] credential_id` 프록시에 대 한 자격 증명의 id. 합니다 *credential_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
- [ **@proxy_id**=] *id* 출력  
- 프록시를 성공적으로 만든 경우 프록시에 할당되는 프록시 ID입니다.  
+`[ @proxy_id = ] id OUTPUT` 성공적으로 생성 된 프록시에 할당 하는 프록시 id.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493274"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 아티클이 있는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 문서 존재 하는 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'**_문서_**'**  
- 유효성을 검사할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 유효성을 검사할 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- 테이블의 행 개수만 반환되는지 지정합니다. *type_of_check_requested* 됩니다 **smallint**, 기본값은 **1**합니다.  
+`[ @rowcount_only = ] type_of_check_requested` 테이블의 행 개수만 반환 되는지 지정 합니다. *type_of_check_requested* 됩니다 **smallint**, 기본값은 **1**합니다.  
   
  하는 경우 **0**를 수행할 행 개수와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬.  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  하는 경우 **2**, 행 개수 및 이진 체크섬을 수행 합니다.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @full_or_fast = ] full_or_fast` 행 개수를 계산 하려면 메서드가 사용 됩니다. *full_or_fast* 됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |**Value**|**설명**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|빠른 계산을 수행 **sysindexes.rows**합니다. 사용한 행 계산은 **sysindexes** 실제 테이블의 행 계산 보다 빠릅니다. 그러나 **sysindexes** 는 느리게 업데이트 되므로 행 개수가 정확 하 게 되지 않을 수 있습니다.|  
 |**2** (기본값)|조건에 따라 계산 방법을 결정합니다. 먼저 빠른 계산 방법이 시도됩니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. 하는 경우 *expected_rowcount* 가 NULL이 저장된 프로시저 되 고 값을 가져오려면, 전체 그룹은 항상 사용 합니다.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 유효성 검사가 종료되면 배포 에이전트가 즉시 종료되어야 하는지 여부를 지정합니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 배포 에이전트가 종료 되지 않습니다. 하는 경우 **1**, 문서의 유효성을 검사 한 후 배포 에이전트를 종료 합니다.  
+`[ @shutdown_agent = ] shutdown_agent` 하는 경우 배포 에이전트가 즉시 종료 되어야 유효성 검사 완료 시를 지정 합니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 배포 에이전트가 종료 되지 않습니다. 하는 경우 **1**, 문서의 유효성을 검사 한 후 배포 에이전트를 종료 합니다.  
   
- [  **@subscription_level=**] *subscription_level*  
- 구독자 집합에 의해 유효성 검사가 선택되는지 여부를 지정합니다. *subscription_level* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 유효성 검사가 모든 구독자에 적용 됩니다. 하는 경우 **1**, 유효성 검사를 호출 하 여 지정 된 구독자 하위 집합에만 적용 됩니다 **sp_marksubscriptionvalidation** 현재 열려 있는 트랜잭션을에서.  
+`[ @subscription_level = ] subscription_level` 구독자 집합에 의해 유효성 검사 선택 여부를 지정 합니다. *subscription_level* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 유효성 검사가 모든 구독자에 적용 됩니다. 하는 경우 **1**, 유효성 검사를 호출 하 여 지정 된 구독자 하위 집합에만 적용 됩니다 **sp_marksubscriptionvalidation** 현재 열려 있는 트랜잭션을에서.  
   
- [  **@reserved=**] *예약*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_게시자_**'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 유효성 검사를 요청할 때를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

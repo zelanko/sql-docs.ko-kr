@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126843"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492815"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tsqlbatch =**] **'**_tsqlbatch_**'**  
- 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 매개 변수 정보는 것입니다. *tsqlbatch* 됩니다 **nvarchar (max)** 또는 암시적으로 변환할 **nvarchar (max)** 합니다.  
+`[ @tsqlbatch = ] 'tsqlbatch'` 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 매개 변수 정보는 것입니다. *tsqlbatch* 됩니다 **nvarchar (max)** 또는 암시적으로 변환할 **nvarchar (max)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
@@ -56,8 +55,8 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**TYPE_NAME**|**sysname**|원본으로 사용하는 DBMS에 의해 제시된 데이터 형식의 문자열 표시입니다. 이 값은 NULL입니다.|  
 |**PRECISION**|**int**|유효 자릿수입니다. 반환 값을 **정밀도** 열은 10 진수로 합니다.|  
 |**LENGTH**|**int**|데이터의 전송 크기입니다. 이 값은 NULL입니다.|  
-|**크기 조정**|**smallint**|소수점 오른쪽 자릿수입니다. 이 값은 NULL입니다.|  
-|**기 수**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
+|**SCALE**|**smallint**|소수점 오른쪽 자릿수입니다. 이 값은 NULL입니다.|  
+|**RADIX**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
 |**NULLABLE**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 매개 변수 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.<br /><br /> 이 값은 NULL입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 값입니다. 이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다. 이 열은 항상 값을 반환합니다. 이 값은 NULL입니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|합니다 **날짜/시간** 또는 ISO **간격** 하위 코드의 값 **SQL_DATA_TYPE** 이 SQL_DATETIME 또는 sql_interval 인 합니다. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 열은 NULL입니다. 이 값은 NULL입니다.|  

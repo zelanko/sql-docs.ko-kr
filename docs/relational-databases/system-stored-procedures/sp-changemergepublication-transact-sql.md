@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493271"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'***속성***'**  
- 지정된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
+`[ @property = ] 'property'` 지정 된 게시에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
   
- [  **@value=**] **'***값***'**  
- 지정한 속성의 새 값입니다. *값* 됩니다 **nvarchar(255)**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값입니다. *값* 됩니다 **nvarchar(255)**, 있습니다 수 값 중 하나에 나열 된 다음 표에 및입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
@@ -114,9 +111,9 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|스냅숏 파일에 지정 된 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정할 수 있습니다.|  
 |**snapshot_ready**|**true**|게시에 대한 스냅숏을 사용할 수 있습니다.|  
 ||**false**|게시에 대한 스냅숏을 사용할 수 없습니다.|  
-|**상태**|**Active**|게시가 활성 상태입니다.|  
-||**비활성**|게시가 비활성 상태입니다.|  
-|**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
+|**상태**|**active**|게시가 활성 상태입니다.|  
+||**inactive**|게시가 비활성 상태입니다.|  
+|**sync_mode**|**네이티브** 또는<br /><br /> **bcp native**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
 ||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
 |**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**를 올바르게 아닐 수 있습니다 스냅숏을 생성 한 후를 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
@@ -124,8 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||웹 동기화에 사용되는 인터넷 URL의 기본값입니다.|  
 |NULL(기본값)||에 대 한 지원 되는 값의 목록을 반환 *속성*합니다.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화될 수도 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 변경 게시 스냅숏을 무효화 하지 않습니다 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  변경 시 새 스냅숏을 생성해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화 해야 할 수 있습니다를 승인 합니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   
  **0** 게시를 변경 합니다. 구독이 다시 초기화는 필요 하지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   

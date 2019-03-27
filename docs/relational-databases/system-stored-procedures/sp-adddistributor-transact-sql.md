@@ -18,12 +18,12 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db37da85e4b707970436b926f6e772bd74402311
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774435"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494316"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@distributor=**] **'***배포자***'**  
- 배포자 서버 이름입니다. *배포자* 됩니다 **sysname**, 기본값은 없습니다. 이 매개 변수는 원격 배포자를 설정할 때에만 사용합니다. 배포자 속성에 대 한 항목을 추가 하 여 **msdb... MSdistributor** 테이블입니다.  
+`[ @distributor = ] 'distributor'` 배포 서버 이름이입니다. *배포자* 됩니다 **sysname**, 기본값은 없습니다. 이 매개 변수는 원격 배포자를 설정할 때에만 사용합니다. 배포자 속성에 대 한 항목을 추가 하 여 **msdb... MSdistributor** 테이블입니다.  
   
- [  **@heartbeat_interval=**] *heartbeat_interval*  
- 진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다. *heartbeat_interval* 됩니다 **int**, 기본값은 10 분입니다. 실행 중인 복제 에이전트의 상태를 확인하기 위해 이 간격으로 실행되는 SQL Server 에이전트 작업이 생성됩니다.  
+`[ @heartbeat_interval = ] heartbeat_interval` 진행률 메시지를 기록 하지 않고 에이전트를 실행할 수 있는 시간 (분) 최대 수가입니다. *heartbeat_interval* 됩니다 **int**, 기본값은 10 분입니다. 실행 중인 복제 에이전트의 상태를 확인하기 위해 이 간격으로 실행되는 SQL Server 에이전트 작업이 생성됩니다.  
   
- [  **@password=**] **'***암호***'**]  
- 암호를 **distributor_admin** 로그인 합니다. *암호* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 또는 빈 문자열인 경우 암호는 임의의 값으로 다시 설정됩니다. 암호는 첫 번째 원격 배포자가 추가될 때 구성되어야 합니다. **distributor_admin** 로그인 및 *암호* 에 사용 되는 연결 된 서버 항목에 대해 저장 되는 *배포자* RPC 연결에 대 한 로컬 연결을 포함 합니다. 하는 경우 *배포자* 로컬에 암호를 **distributor_admin** 새 값으로 설정 됩니다. 원격 배포자로 게시자를 동일한 값에 대 한 *암호* 실행 하는 경우 지정 해야 **sp_adddistributor** 게시자와 배포자 모두에서. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) 배포자 암호를 변경 데 사용할 수 있습니다.  
+`[ @password = ] 'password']` 암호를 **distributor_admin** 로그인 합니다. *암호* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 또는 빈 문자열인 경우 암호는 임의의 값으로 다시 설정됩니다. 암호는 첫 번째 원격 배포자가 추가될 때 구성되어야 합니다. **distributor_admin** 로그인 및 *암호* 에 사용 되는 연결 된 서버 항목에 대해 저장 되는 *배포자* RPC 연결에 대 한 로컬 연결을 포함 합니다. 하는 경우 *배포자* 로컬에 암호를 **distributor_admin** 새 값으로 설정 됩니다. 원격 배포자로 게시자를 동일한 값에 대 한 *암호* 실행 하는 경우 지정 해야 **sp_adddistributor** 게시자와 배포자 모두에서. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) 배포자 암호를 변경 데 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
- [  **@from_scripting=** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a355d8281acf02919f559f8ce9d4f33c923f5168
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 8aadf4969b2232ae53b98a632b9c8220a300fe4e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756628"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494125"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 
@@ -37,18 +37,21 @@ ms.locfileid: "57756628"
 1. 모든 이전 버전의 경우 **mssqlctl** 설치를 반드시 제거할 **mssqlctl** 최신 버전을 설치 하기 전에 첫 번째입니다.
 
    CTP 2.2 또는 더 낮은 버전에 해당 하는 unisntalling mssqlctl 있다면 다음을 실행 합니다.
+
    ```powershell
    pip3 uninstall mssqlctl
    ```
-   
-   CTP2.3 또는 더 높은 실행:
+
+   CTP2.3 또는 더 높은 실행 (대체 `ctp-2.3` mssqlctl 제거 하는 버전을 사용 하 여 명령에서):
+
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
+
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl 설치
@@ -72,11 +75,13 @@ Linux에서 Python 3.5를 설치 하 고 그런 다음 pip를 업그레이드 �
 1. 모든 이전 버전의 경우 **mssqlctl** 설치를 반드시 제거할 **mssqlctl** 최신 버전을 설치 하기 전에 첫 번째입니다.
 
    CTP 2.2 또는 더 낮은 버전에 해당 하는 unisntalling mssqlctl 있다면 다음을 실행 합니다.
+
    ```bash
    pip3 uninstall mssqlctl
    ```
-   
-   CTP2.3 또는 더 높은 실행:
+
+   CTP2.3 또는 더 높은 실행 (대체 `ctp-2.3` mssqlctl 제거 하는 버전을 사용 하 여 명령에서):
+
    ```bash
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
@@ -84,7 +89,7 @@ Linux에서 Python 3.5를 설치 하 고 그런 다음 pip를 업그레이드 �
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

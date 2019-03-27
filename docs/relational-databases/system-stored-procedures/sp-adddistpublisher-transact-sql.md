@@ -16,12 +16,12 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 079e2591323b60ea86f93c3cbaedc423cc85d420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c01d00362dc55deb1fa9da8df49beebdaf82b170
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492775"
 ---
 # <a name="spadddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -48,55 +48,44 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@distribution_db=**] **'**_distribution_db_**'**  
- 배포 데이터베이스의 이름입니다. *distributor_db* 됩니다 **sysname**, 기본값은 없습니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
+`[ @distribution_db = ] 'distribution_db'` 배포 데이터베이스의 이름이입니다. *distributor_db* 됩니다 **sysname**, 기본값은 없습니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
- [  **@security_mode=**] *security_mode*  
- 구현된 보안 모드입니다. 이 매개 변수는만 데 복제 에이전트가 지연된 업데이트 구독 또는 비-를 사용 하 여 게시자에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @security_mode = ] security_mode` 구현 된 보안 모드가입니다. 이 매개 변수는만 데 복제 에이전트가 지연된 업데이트 구독 또는 비-를 사용 하 여 게시자에 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0**|배포자의 복제 에이전트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 게시자에 연결합니다.|  
 |**1** (기본값)|배포자의 복제 에이전트는 Windows 인증을 사용하여 게시자에 연결합니다.|  
   
- [  **@login=**] **'**_로그인_**'**  
- 로그인입니다. 이 매개 변수는 필요한 경우 *security_mode* 됩니다 **0**합니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
+`[ @login = ] 'login'` 로그인이입니다. 이 매개 변수는 필요한 경우 *security_mode* 됩니다 **0**합니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
- [  **@password=**] **'**_암호_**'**]  
- 암호입니다. *암호* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
+`[ @password = ] 'password']` 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
   
- [  **@working_directory=**] **'**_working_directory_**'**  
- 게시용 데이터 및 스키마 파일을 저장하기 위해 사용하는 작업 디렉터리의 이름입니다. *working_directory* 됩니다 **nvarchar(255)**, 및 ReplData 폴더의이 인스턴스에 대 한 기본값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예를 들어 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`합니다. 이름은 UNC 형식으로 지정해야 합니다.  
+`[ @working_directory = ] 'working_directory'` 게시용 데이터 및 스키마 파일을 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)**, 및 ReplData 폴더의이 인스턴스에 대 한 기본값 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]예를 들어 `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`합니다. 이름은 UNC 형식으로 지정해야 합니다.  
 
  Azure SQL database를 사용 하 여 `\\<storage_account>.file.core.windows.net\<share>`입니다.
 
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- SQL Database에 필요 합니다. 저장소에서 Azure Portal에서 액세스 키를 사용 하 여 > 설정 합니다.
+`[ @storage_connection_string = ] 'storage_connection_string'` SQL Database에 필요 합니다. 저장소에서 Azure Portal에서 액세스 키를 사용 하 여 > 설정 합니다.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
- [  **@trusted=**] **'**_신뢰할 수 있는_**'**  
- 이 매개 변수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 제공됩니다. *신뢰할 수 있는* 됩니다 **nvarchar(5)** 도로 설정 **false** 오류가 발생 합니다.  
+`[ @trusted = ] 'trusted'` 이 매개 변수는 사용 되지 않으며 이전 버전과 호환성만 제공 됩니다. *신뢰할 수 있는* 됩니다 **nvarchar(5)** 도로 설정 **false** 오류가 발생 합니다.  
   
- [  **@encrypted_password=**] *encrypted_password*  
- 설정 *encrypted_password* 는 지원 되지 않습니다. 이 설정 하려고 **비트** 매개 변수를 **1** 오류가 발생 합니다.  
+`[ @encrypted_password = ] encrypted_password` 설정 *encrypted_password* 는 지원 되지 않습니다. 이 설정 하려고 **비트** 매개 변수를 **1** 오류가 발생 합니다.  
   
- [  **@thirdparty_flag =**] *thirdparty_flag*  
- 게시자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인지 여부입니다. *thirdparty_flag* 됩니다 **비트**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @thirdparty_flag = ] thirdparty_flag` 게시자 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *thirdparty_flag* 됩니다 **비트**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- 게시자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 경우 게시자 유형을 지정합니다. *publisher_type* 은 sysname 이며 다음 값 중 하나일 수 있습니다.  
+`[ @publisher_type = ] 'publisher_type'` 게시자 되지 않을 때 게시자 유형을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *publisher_type* 은 sysname 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

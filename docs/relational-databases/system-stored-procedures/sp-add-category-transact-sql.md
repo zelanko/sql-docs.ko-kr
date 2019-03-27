@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591017"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492985"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@class =** ] **'**_클래스_**'**  
- 추가할 범주의 클래스입니다. *클래스* 됩니다 **varchar(8)** 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 추가할 범주의 클래스입니다. *클래스* 됩니다 **varchar(8)** 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -52,8 +51,7 @@ sp_add_category
 |경으십시오|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
- [  **@type =** ] **'**_형식_**'**  
- 추가할 범주의 유형입니다. *형식* 됩니다 **varchar(12)**, 기본값은 **로컬**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 추가할 범주의 형식입니다. *형식* 됩니다 **varchar(12)**, 기본값은 **로컬**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -61,8 +59,7 @@ sp_add_category
 |다중 서버|다중 서버 작업 범주|  
 |없음|JOB이 아닌 다른 클래스에 대 한 범주**합니다.**|  
   
- [  **@name =** ] **'**_이름_**'**  
- 추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 추가할 범주의 이름입니다. 이름은 지정한 클래스 내에서 고유해야 합니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

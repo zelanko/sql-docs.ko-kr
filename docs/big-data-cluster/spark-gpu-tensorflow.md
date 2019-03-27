@@ -1,21 +1,21 @@
 ---
-title: GPU 지원과 TensorFlow
+title: GPU 지원 및 TensorFlow
 titleSuffix: SQL Server 2019 big data clusters
 description: GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 Azure 데이터 Studio 노트북에서 TensorFlow를 사용 합니다.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494115"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.
 
@@ -196,7 +196,7 @@ Gpu를 지 원하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)�
 로컬 컴퓨터에 적절 한 전자 필기장 파일 열기 및 PySpark3 커널을 사용 하 여 Azure 데이터 스튜디오에서 실행 합니다. CUDA TensorFlow의 이전 버전 특별히 필요한 경우가 아니라면 CUDA 9/CUDNN 7/TensorFlow 1.12.0를 선택 합니다. 빅 데이터 클러스터를 사용 하 여 notebook을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법을](notebooks-guidance.md)합니다.
 
 > [!NOTE]
-> 시스템 위치에 소프트웨어를 설치 하 여 notebook을 참고 합니다. Notebook은 현재 CTP 2.3에 대 한 루트 권한으로 실행 되기 때문에 이것이 가능 합니다.
+> 시스템 위치에 소프트웨어를 설치 하 여 notebook을 참고 합니다. Notebook은 현재 CTP 2.4의 루트 권한으로 실행 되기 때문에 이것이 가능 합니다.
 
 NVIDIA GPU 라이브러리 및 TensorFlow gpu를 설치한 후 notebook에 사용할 수 있는 GPU 장치를 나열 합니다. 그런 다음 적합 하며 MNIST 데이터 집합을 사용 하 여 필기 숫자를 인식 하도록 TensorFlow 모델을 평가 합니다. 사용 가능한 디스크 공간을 확인 한 후 다운로드 하며에서 10 CIFAR 이미지 분류 예제를 실행 [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git)합니다. 여러 Gpu 클러스터에서 CIFAR 10 예제를 실행 하 여 Azure에서 사용 가능한 GPU의 각 세대에서 제공 하는 속도 향상을 확인할 수 있습니다.
 

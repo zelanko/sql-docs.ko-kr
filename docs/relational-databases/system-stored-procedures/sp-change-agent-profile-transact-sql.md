@@ -16,12 +16,12 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc01fcc8e614235894b46813da3162064e1c28d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783275"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492241"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id=** ] *profile_id*  
- 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@property=** ] **'***속성***'**  
- 속성 이름입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @property = ] 'property'` 속성의 이름이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@value=** ] **'***value***'**  
- 속성의 새 값입니다. *값* 됩니다 **nvarchar(3000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(3000)**, 기본값은 없습니다.  
   
  이 표에서는 변경할 수 있는 프로필 속성에 대해 설명합니다.  
   
@@ -64,7 +61,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_change_agent_profile**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)   

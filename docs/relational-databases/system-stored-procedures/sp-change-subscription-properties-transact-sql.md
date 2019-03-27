@@ -16,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128223"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493065"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication=**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'**_속성_**'**  
- 변경할 속성입니다. *속성* 됩니다 **sysname**합니다.  
+`[ @property = ] 'property'` 변경할 속성이입니다. *속성* 됩니다 **sysname**합니다.  
   
- [  **@value=**] **'**_값_**'**  
- 속성의 새 값입니다. *값* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 속성의 새 값이입니다. *값* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
- [  **@publication_type =** ] *publication_type*  
- 게시의 복제 유형을 지정합니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 게시의 복제 유형을 지정합니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|게시 유형|  
 |-----------|----------------------|  
@@ -87,7 +81,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_password**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_port**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
-|**호스트 이름**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
+|**hostname**||게시자에 연결할 때 사용하는 호스트 이름입니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 암호입니다.|  
 |**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  

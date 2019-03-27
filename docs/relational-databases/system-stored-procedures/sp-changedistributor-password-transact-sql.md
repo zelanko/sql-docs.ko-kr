@@ -16,12 +16,12 @@ ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bea1a781959cb345ceae785e97766ba659cb94c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493306"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@password=**] **'**_암호_**'**  
- 새 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. 배포자가 로컬인 경우의 암호를 **distributor_admin** 시스템 로그인 변경 됩니다.  
+`[ @password = ] 'password'` 새 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. 배포자가 로컬인 경우의 암호를 **distributor_admin** 시스템 로그인 변경 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -18,12 +18,12 @@ ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69eac8b023c1db489f3407ade244dc605df23cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeb5e013eb10d79300720899ec297b54474627f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821631"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492765"
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=**] **'***name***'**  
- 만들 서버 그룹의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. *이름* 쉼표를 포함할 수 없습니다.  
+`[ @name = ] 'name'` 만들려는 서버 그룹의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. *이름* 쉼표를 포함할 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

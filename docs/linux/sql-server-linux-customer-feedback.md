@@ -4,17 +4,17 @@ description: SQL Server 고객 피드백 수집 되 고 Linux에 구성 하는 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 06/22/2018
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: fdc8ad5f7f91f4572bfde40ca7cc63f06ca9dafa
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: eb7eee9446942e2ca8252f8711af23a73c4173d9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494215"
 ---
 # <a name="customer-feedback-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 고객 의견
 

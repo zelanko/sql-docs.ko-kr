@@ -4,18 +4,18 @@ description: Red Hat 및 Ubuntu에서 SQL Server Machine Learning Services (R, P
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 833c6f2083d9532ecc4120e5f65be81a75a86d24
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f1ca66c5e376704737a092f21fd25401d20bbdbb
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579531"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493875"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>SQL Server 2019 Machine Learning 서비스 (R, Python, Java) linux 설치
 
@@ -25,9 +25,11 @@ ms.locfileid: "57579531"
 
 패키지 위치는 R, Python 및 Java 확장에 대 한 SQL Server Linux 소스 리포지토리에 있는입니다. 데이터베이스 엔진 설치에 대 한 소스 리포지토리를 이미 구성한 경우 실행할 수 있습니다 합니다 **mssql mlservices** 동일한 리포지토리 등록을 사용 하 여 설치 명령이 패키지 있습니다.
 
+Machine Learning 서비스는 Linux 컨테이너에도 지원 됩니다. Machine Learning 서비스를 사용 하 여 미리 작성된 된 컨테이너를 제공 하지 않습니다 하지만 사용 하 여 SQL Server 컨테이너에서 만들 수 있습니다 [GitHub에서 제공 하는 예제 템플릿을](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)합니다.
+
 ## <a name="uninstall-previous-ctp"></a>이전 CTP를 제거 합니다.
 
-패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP를 제거 하는 것이 좋습니다 2.x CTP 2.3을 설치 하기 전에 모든 이전 패키지를 제거 합니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
+패키지 목록에는 마지막 몇 가지 CTP 릴리스를 더 적은 패키지에서 결과 통해 변경 되었습니다. CTP를 제거 하는 것이 좋습니다 2.x CTP 2.4를 설치 하기 전에 모든 이전 패키지를 제거 합니다. 여러 버전의 side-by-side-설치는 지원 되지 않습니다.
 
 ### <a name="1-confirm-package-installation"></a>1. 패키지 설치를 확인 합니다.
 
@@ -37,7 +39,7 @@ ms.locfileid: "57579531"
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-ctp-20-or-21-packages"></a>2. CTP 2.0 또는 2.1 패키지 제거
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. 이전 CTP 2.x 패키지 제거
 
 가장 낮은 패키지 수준에서 제거 합니다. 하위 수준 패키지에 종속 된 모든 업스트림 패키지를 자동으로 제거 됩니다.
 
@@ -61,7 +63,7 @@ ls /opt/microsoft/mssql/bin
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-23-install"></a>3. CTP 2.3 설치 계속
+### <a name="3-proceed-with-ctp-24-install"></a>3. CTP 2.4 설치 계속
 
 이 문서의 지침을 사용 하 여 운영 체제에 대 한 가장 높은 패키지 수준에서 설치 합니다.
 
@@ -73,7 +75,7 @@ ls /opt/microsoft/mssql/bin
 
    + [RedHat](#RHEL)
    + [Ubuntu](#ubuntu)
-   + [SUSE](#SUSE)
+   + [SUSE](#suse)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

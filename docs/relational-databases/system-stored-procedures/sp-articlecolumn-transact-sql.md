@@ -16,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210122"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493155"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,47 +48,37 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 이 아티클을 포함하는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 이 문서를 포함 하는 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'**_문서_**'**  
- 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@column=**] **'**_열_**'**  
- 추가하거나 삭제할 열의 이름입니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 모든 열이 게시됩니다.  
+`[ @column = ] 'column'` 추가 하거나 삭제할 열의 이름이입니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 모든 열이 게시됩니다.  
   
- [  **@operation=**] **'**_작업이_**'**  
- 아티클에서 열의 추가 또는 삭제 여부를 지정합니다. *작업이* 됩니다 **nvarchar(5)**, 기본값은 add 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열 표시를 지웁니다.  
+`[ @operation = ] 'operation'` 추가 하거나 문서에서 열을 삭제할지 여부를 지정 합니다. *작업이* 됩니다 **nvarchar(5)**, 기본값은 add 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열 표시를 지웁니다.  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- 복제한 열 수와 일치하도록 즉시 업데이트 구독을 지원하는 저장 프로시저를 다시 생성할지 여부를 지정합니다. *refresh_synctran_procs* 됩니다 **비트**, 기본값은 **1**합니다. 하는 경우 **1**, 저장된 프로시저 다시 생성 됩니다.  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` 복제 된 열 개수와 일치 하도록 즉시 업데이트 구독을 지 원하는 저장된 프로시저를 다시 생성할지 여부를 지정 합니다. *refresh_synctran_procs* 됩니다 **비트**, 기본값은 **1**합니다. 하는 경우 **1**, 저장된 프로시저 다시 생성 됩니다.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- 이 저장 프로시저가 배포자에 연결되지 않고 실행되는지 여부를 표시합니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 게시 하기 위해 데이터베이스를 활성화 해야 하며 문서에서 복제 된 새 열을 반영 하도록 문서 캐시를 새로 고쳐야 합니다. 하는 경우 **1**, 아티클 열 게시 되지 않은 데이터베이스에 복구 상황 에서만에서 사용 해야 하는 문서에 대 한 삭제할 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장된 프로시저가 배포자에 연결 하지 않고 실행 하는 경우를 나타냅니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 게시 하기 위해 데이터베이스를 활성화 해야 하며 문서에서 복제 된 새 열을 반영 하도록 문서 캐시를 새로 고쳐야 합니다. 하는 경우 **1**, 아티클 열 게시 되지 않은 데이터베이스에 복구 상황 에서만에서 사용 해야 하는 문서에 대 한 삭제할 수 있습니다.  
   
- [  **@change_active =** ] *change_active*  
- 구독이 있는 게시에서 열을 수정할 수 있도록 허용합니다. *change_active* 되는 **int** 이며 기본값은 **0**합니다. 하는 경우 **0**, 열은 수정 되지 않습니다. 하는 경우 **1**, 열을 추가 하거나 구독이 있는 활성 아티클에서 삭제할 수 있습니다.  
+`[ @change_active = ] change_active` 구독이 있는 게시에서 열을 수정할 수 있습니다. *change_active* 되는 **int** 이며 기본값은 **0**합니다. 하는 경우 **0**, 열은 수정 되지 않습니다. 하는 경우 **1**, 열을 추가 하거나 구독이 있는 활성 아티클에서 삭제할 수 있습니다.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 아티클의 변경이 잘못 스냅숏이 무효화 될 수 있습니다 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 되지 않음으로 표시 하 고 새 스냅숏을 생성할 권한을 부여 되도록 지정 합니다.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [**@force_reinit_subscription =** ] *force_reinit_subscription*  
  이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다. **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
- [  **@publisher=** ] **'**_게시자_**'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 사용 하 여 사용할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@internal=** ] **'**_내부_**'**  
- 내부적으로만 사용됩니다.  
+`[ @internal = ] 'internal'` 내부 전용입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

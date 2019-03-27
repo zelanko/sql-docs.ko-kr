@@ -18,12 +18,12 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 007f0eea045c22ea2fb7ef2ed0d6db6e9262d060
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cce551e7523f78489c7cc587e9c3bd052d09cbe9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494155"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_id =**] **'**_plan_id_**'**  
- 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @plan_id = ] 'plan_id'` 유지 관리 계획의 계획 ID를 지정 합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
- [  **@db_name =**] **'**_database_name_**'**  
- 유지 관리 계획에 추가할 데이터베이스의 이름을 지정합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name*은 **sysname**입니다.  
+`[ @db_name = ] 'database_name'` 유지 관리 계획에 추가할 데이터베이스의 이름을 지정 합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

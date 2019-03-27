@@ -18,12 +18,12 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa737688a974170ece1817503b4b02de440e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604882"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494105"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,57 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@database=** ] '*데이터베이스*'  
- 로그 전달 주 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @database = ] 'database'` 로그 전달 주 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@backup_directory=** ] '*backup_directory*'  
- 주 서버의 백업 폴더에 대한 경로입니다. *backup_directory* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_directory = ] 'backup_directory'` 주 서버의 백업 폴더 경로가입니다. *backup_directory* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@backup_share=** ] '*backup_share*'  
- 주 서버의 백업 디렉터리에 대한 네트워크 경로입니다. *backup_share* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_share = ] 'backup_share'` 주 서버의 백업 디렉터리에 네트워크 경로가입니다. *backup_share* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [ **@backup_job_name=** ] '*backup_job_name*'  
- 주 서버에서 백업 폴더에 백업을 복사하는 SQL Server 에이전트 작업의 이름입니다. *backup_job_name* 됩니다 **sysname** NULL 일 수 없습니다.  
+`[ @backup_job_name = ] 'backup_job_name'` 백업 폴더에 백업을 복사 하는 주 서버에서 SQL Server 에이전트 작업의 이름이입니다. *backup_job_name* 됩니다 **sysname** NULL 일 수 없습니다.  
   
- [ **@backup_retention_period=** ] *backup_retention_period*  
- 주 서버에서 백업 디렉터리에 로그 백업 파일이 보관되는 시간(분)입니다. *backup_retention_period* 됩니다 **int**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_retention_period = ] backup_retention_period` 시간 (분) 주 서버의 백업 디렉터리에 로그 백업 파일이 보관의 길이입니다. *backup_retention_period* 됩니다 **int**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [  **@monitor_server=** ] '*monitor_server*'  
- 모니터 서버의 이름입니다. *Monitor_server* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @monitor_server = ] 'monitor_server'` 모니터 서버의 이름이입니다. *Monitor_server* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
- 모니터 서버 연결에 사용되는 보안 모드입니다.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` 모니터 서버에 연결할 때 사용할 보안 모드입니다.  
   
  1 = Windows 인증  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. *monitor_server_security_mode* 됩니다 **비트** NULL 일 수 없습니다.  
   
- [ **@monitor_server_login=** ] '*monitor_server_login*'  
- 모니터 서버에 액세스하는 데 사용되는 계정의 사용자 이름입니다.  
+`[ @monitor_server_login = ] 'monitor_server_login'` 모니터 서버에 액세스 하는 데 사용 하는 계정의 사용자 이름이입니다.  
   
- [ **@monitor_server_password=** ] '*monitor_server_password*'  
- 모니터 서버에 액세스하는 데 사용되는 계정의 암호입니다.  
+`[ @monitor_server_password = ] 'monitor_server_password'` 모니터 서버에 액세스 하는 데 사용 하는 계정의 암호가입니다.  
   
- [ **@backup_threshold=** ] *backup_threshold*  
- 시간 (분) 하기 전에 마지막 백업 후의 길이 *threshold_alert* 오류가 발생 합니다. *backup_threshold* 됩니다 **int**, 기본값은 60 분입니다.  
+`[ @backup_threshold = ] backup_threshold` 시간 (분) 하기 전에 마지막 백업 후의 길이 *threshold_alert* 오류가 발생 합니다. *backup_threshold* 됩니다 **int**, 기본값은 60 분입니다.  
   
- [ **@threshold_alert=** ] *threshold_alert*  
- 백업 임계값이 초과될 때 발생하는 경고입니다. *threshold_alert* 됩니다 **int**, 기본값은 14,420입니다.  
+`[ @threshold_alert = ] threshold_alert` 백업 임계값이 초과 하는 경우 발생 하는 경고 이며 *threshold_alert* 됩니다 **int**, 기본값은 14,420입니다.  
   
- [ **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- 경고 않을 것인지 여부를 지정 될 때 발생 *backup_threshold* 를 초과 합니다. 기본값(숫자 0)인 경우 경고를 사용하지 않으므로 경고는 발생하지 않습니다. *threshold_alert_enabled* 됩니다 **비트**합니다.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` 경고 않을 것인지 여부를 지정 될 때 발생 *backup_threshold* 를 초과 합니다. 기본값(숫자 0)인 경우 경고를 사용하지 않으므로 경고는 발생하지 않습니다. *threshold_alert_enabled* 됩니다 **비트**합니다.  
   
- [ **@history_retention_period=** ] *history_retention_period*  
- 기록이 보존되는 기간(분)입니다. *history_retention_period* 됩니다 **int**, 기본값은 NULL입니다. 값이 지정되지 않으면 14420이 사용됩니다.  
+`[ @history_retention_period = ] history_retention_period` 기록이 보존 되는 몇 분 안에 시간의 길이입니다. *history_retention_period* 됩니다 **int**, 기본값은 NULL입니다. 값이 지정되지 않으면 14420이 사용됩니다.  
   
- [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
- 주 서버의 백업 작업과 연관된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 ID입니다. *backup_job_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주 서버의 백업 작업과 연결 된 에이전트 작업 ID입니다. *backup_job_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [ **@primary_id=** ] *primary_id* OUTPUT  
- 로그 전달 구성의 주 데이터베이스의 ID입니다. *primary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @primary_id = ] primary_id OUTPUT` 로그 전달 구성에 대 한 주 데이터베이스의 ID입니다. *primary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- 로그 전달 구성을 사용할지 여부를 지정 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)합니다. 이 매개 변수는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다.  
+`[ @backup_compression = ] backup_compression_option` 로그 전달 구성을 사용할지 여부를 지정 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)합니다. 이 매개 변수는 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다.  
   
  0 = 사용 안 함. 로그 백업을 압축하지 않습니다.  
   

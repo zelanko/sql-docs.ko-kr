@@ -18,12 +18,12 @@ ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b0a6fdf71643f438201aae39010f25d2e43d15c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588837"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494355"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=** ] **'**_dbnam_ **'**  
- 서버에 연결될 데이터베이스의 이름입니다. 이름은 고유 해야 합니다. *dbname* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @dbname = ] 'dbnam_ '` 서버에 연결할 데이터베이스의 이름이입니다. 이름은 고유 해야 합니다. *dbname* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@filename1=** ] **'**_filename_n_**'**  
- 경로를 포함한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름을 시작할 **@filename1** 하 여 **@filename16**합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
+`[ @filename1 = ] 'filename_n'` 물리적 이름, 데이터베이스 파일의 포함 경로입니다. *filename_n* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름을 시작할 **@filename1** 하 여 **@filename16**합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  

@@ -16,12 +16,12 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 26026329ec092c769d545b4dbe99bd317b095bbe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0fc4df3d84e2652c8ee328d0dbe79a71c068994a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134063"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493355"
 ---
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 필터링된 데이터 스냅숏 작업이 추가될 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 필터링 된 데이터 스냅숏 작업을 추가할 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- 값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자 함수입니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다. *suser_sname* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
+`[ @suser_sname = ] 'suser_sname'` 값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자 함수입니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다. *suser_sname* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
   
- [ **@host_name**=] **'***host_name***'**  
- 값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자 함수입니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다. *host_name* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
+`[ @host_name = ] 'host_name'` 값으로 필터링 되는 구독에 대 한 필터링 된 데이터 스냅숏을 만들 때 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자 함수입니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다. *host_name* 게시를 동적으로 필터링 하려면이 함수를 사용 하지 않는 경우 NULL 이어야 합니다.  
   
- [ **@dynamic_snapshot_jobname**=] **'***dynamic_snapshot_jobname***'**  
- 만들어진 필터링된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname* 됩니다 **sysname**, 기본값은 NULL이를 사용 하 여 선택적 출력 매개 변수 및 합니다. 를 지정 하는 경우 *dynamic_snapshot_jobname* 배포자에서 고유한 작업으로 확인 되어야 합니다. 지정하지 않은 경우 작업 이름이 자동으로 생성되고 결과 집합에 반환됩니다. 생성되는 이름은 다음과 같습니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 만들어진 필터링 된 데이터 스냅숏 작업의 이름이입니다. *dynamic_snapshot_jobname* 됩니다 **sysname**, 기본값은 NULL이를 사용 하 여 선택적 출력 매개 변수 및 합니다. 를 지정 하는 경우 *dynamic_snapshot_jobname* 배포자에서 고유한 작업으로 확인 되어야 합니다. 지정하지 않은 경우 작업 이름이 자동으로 생성되고 결과 집합에 반환됩니다. 생성되는 이름은 다음과 같습니다.  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -76,11 +72,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 > [!NOTE]  
 >  동적 스냅숏 작업 이름을 생성할 때 표준 스냅숏 작업 이름을 잘라낼 수 있습니다.  
   
- [ **@dynamic_snapshot_jobid**=] **'***dynamic_snapshot_jobid***'**  
- 만들어진 필터링된 데이터 스냅숏 작업에 대한 식별자입니다. *dynamic_snapshot_jobid* 됩니다 **uniqueidentifier**, 기본값은 NULL이를 사용 하 여 선택적 출력 매개 변수 및 합니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 만들어진 필터링 된 데이터 스냅숏 작업에 대 한 식별자가입니다. *dynamic_snapshot_jobid* 됩니다 **uniqueidentifier**, 기본값은 NULL이를 사용 하 여 선택적 출력 매개 변수 및 합니다.  
   
- [  **@frequency_type=**] *frequency_type*  
- 필터링된 데이터 스냅숏 작업을 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 필터링 된 데이터 스냅숏 작업을 예약 하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -93,8 +87,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|자동 시작|  
 |**128**|되풀이|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 필터링된 데이터 스냅숏 작업을 실행할 기간(일)입니다. *frequency_interval* 됩니다 **int**, 기본값은 1 사용 하 여 값에 따라 달라 집니다 *frequency_type*합니다.  
+`[ @frequency_interval = ] frequency_interval` 필터링 된 데이터 스냅숏 작업이 실행 되는 경우 기간 (일)입니다. *frequency_interval* 됩니다 **int**, 기본값은 1 사용 하 여 값에 따라 달라 집니다 *frequency_type*합니다.  
   
 |값 *frequency_type*|에 미치는 영향 *frequency_interval*|  
 |--------------------------------|-------------------------------------|  
@@ -106,8 +99,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**64**|*frequency_interval* 사용 되지 않습니다.|  
 |**128**|*frequency_interval* 사용 되지 않습니다.|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 단위를 지정 *frequency_subday_interval*합니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 단위를 지정 *frequency_subday_interval*합니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -116,11 +108,9 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 개수 *frequency_subday* 각 작업 실행 간에 발생 하는 기간. *frequency_subday_interval* 됩니다 **int**, 기본값은 5입니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 개수 *frequency_subday* 각 작업 실행 간에 발생 하는 기간. *frequency_subday_interval* 됩니다 **int**, 기본값은 5입니다.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 각 월에 필터링된 데이터 스냅숏 작업이 발생하는 빈도입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 필터링 된 데이터 스냅숏 작업의 각 월에 발생 합니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -130,20 +120,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|넷째|  
 |**16**|마지막|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 0입니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 0입니다.  
   
- [  **@active_start_date=**] *active_start_date*  
- 필터링된 데이터 스냅숏 작업이 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_date = ] active_start_date` 가 경우 필터링 된 데이터 스냅숏 작업을 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로 합니다. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_end_date=**] *active_end_date*  
- 필터링된 데이터 스냅숏 작업이 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_date = ] active_end_date` 필터링된 된 데이터 스냅숏 작업이 중지 되 고 예약 된 날짜, YYYYMMDD 형식으로 합니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 하루 중에서 필터링된 데이터 스냅숏 작업이 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Hhmmss 시간 필터링된 된 데이터 스냅숏 작업을 먼저 예약 된 경우는입니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 하루 중에서 필터링된 데이터 스냅숏 작업이 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 필터링된 된 데이터 스냅숏 작업이 중지 시간 예약 된 hhmmss입니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
 ## <a name="result-set"></a>결과 집합  
   

@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127083"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493085"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=** ] **'**_문서_**'**  
- 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- 필터의 현재 이름입니다. *filtername* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @filtername = ] 'filtername'` 필터의 현재 이름이입니다. *filtername* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=** ] **'**_속성_**'**  
- 변경할 속성의 이름입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @property = ] 'property'` 변경할 속성의 이름이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@value=**] **'**_값_**'**  
- 지정한 속성의 새 값입니다. *값*됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
@@ -72,15 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|조인이 고유 키에 있습니다.|  
 ||**false**|조인이 고유 키에 없습니다.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 의미 병합 아티클에 대 한 변경을 유효 하지 않게 스냅숏을 무효화 하는 새 스냅숏이 필요한 기존 구독이 있는 경우 제공 되지 않음으로 표시 될 기존 스냅숏과 하 고 새 스냅숏을 생성할 권한을 합니다.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경으로 인해 구독이 다시 초기화 해야 되지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   

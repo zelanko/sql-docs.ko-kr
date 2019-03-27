@@ -6,20 +6,20 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 02/29/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 04f493109997d4b673a6a308de5c9ebee6eac7e4
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57239134"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493779"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 계층화 하는 HDFS 구성
 
-HDFS 계층화 할 수 있게 탑재 외부 HDFS 호환 파일 시스템 HDFS에 합니다. 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 계층화 HDFS 구성 하는 방법에 설명 합니다. 이때 CTP 2.3이 문서의 핵심 이기도 Azure Data Lake 저장소 Gen2, 연결할만 지원 합니다.
+HDFS 계층화 할 수 있게 탑재 외부 HDFS 호환 파일 시스템 HDFS에 합니다. 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 계층화 HDFS 구성 하는 방법에 설명 합니다. 이때 CTP 2.4는 기사의 초점 이기도 Azure Data Lake 저장소 Gen2, 연결할만 지원 합니다.
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 계층 개요
 
@@ -78,7 +78,7 @@ HDFS 계층화 할 수 있게 탑재 외부 HDFS 호환 파일 시스템 HDFS에
 1. 사용 하 여 Azure에서 원격 HDFS storage를 탑재 **mssqlctl 저장소 탑재 만들기**합니다. 다음 명령을 실행 하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --local-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -97,7 +97,7 @@ mssqlctl storage mount status
 HDFS에서 특정 경로에 탑재의 상태를 나열 하려면 다음 명령을 사용 합니다.
 
 ```bash
-mssqlctl storage mount status --local-path <mount-path-in-hdfs>
+mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> 탑재를 삭제 합니다.
@@ -105,7 +105,7 @@ mssqlctl storage mount status --local-path <mount-path-in-hdfs>
 탑재를 삭제 하려면 사용 합니다 **mssqlctl 저장소 탑재 삭제** 명령을 실행 하 고 HDFS의 탑재 경로 지정:
 
 ```bash
-mssqlctl storage mount delete --local-path <mount-path-in-hdfs>
+mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="issues"></a> 알려진된 문제 및 제한 사항

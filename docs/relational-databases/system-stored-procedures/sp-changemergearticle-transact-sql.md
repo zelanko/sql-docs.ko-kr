@@ -16,12 +16,12 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af1d0e22b4dab79ac7ac9b8d91c198c349280655
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134323"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493711"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 아티클이 있는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 문서 존재 하는 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 변경할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 변경할 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'***속성***'**  
- 지정된 아티클 및 게시에 대해 변경할 속성입니다. *속성* 됩니다 **nvarchar(30)**, 수 값 중 하나에 표시 되는 테이블입니다.  
+`[ @property = ] 'property'` 지정 된 아티클 및 게시에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)**, 수 값 중 하나에 표시 되는 테이블입니다.  
   
- [  **@value=**] **'***값***'**  
- 지정한 속성의 새 값입니다. *값* 됩니다 **nvarchar(1000)**, 수 값 중 하나에 표시 되는 테이블입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(1000)**, 수 값 중 하나에 표시 되는 테이블입니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
@@ -76,7 +72,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||아티클에 대한 설명 항목입니다.|  
 |**destination_owner**||그렇지 않은 경우 구독 데이터베이스의 개체 소유자의 이름을 **dbo**합니다.|  
 |**identity_range**||**bigint** 문서에 있는 경우 새 id 값을 지정할 때 사용할 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **auto** 또는 **auto_identity_ 범위** 로 설정 **true**합니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하세요 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
-|**identityrangemanagementoption**|**수동**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
+|**identityrangemanagementoption**|**manual**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
 ||**없음**|모든 ID 범위 관리를 사용하지 않습니다.|  
 |**logical_record_level_conflict_detection**|**true**|논리적 레코드에 변경 사항이 발생하면 충돌이 감지됩니다. 실행 하려면 **logical_record_level_conflict_resolution** 로 설정할 **true**합니다.|  
 ||**false**|기본 충돌 감지를 사용 하 여 지정 된 대로 **column_tracking**합니다.|  
@@ -136,7 +132,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|변환 된 **지리** 및 **기 하 도형** 데이터 형식에 **varbinary (max)** 중인구독자에게이러한형식의열을복제할수있도록[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|형식의 열에 인덱스를 복제 **지리** 하 고 **기 하 도형**합니다.|  
 ||NULL|시스템에서 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다.|  
-|**상태**|**Active**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
+|**상태**|**active**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 ||**unsynced**|스냅숏 에이전트가 다음에 실행될 때 테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 |**stream_blob_columns**|**true**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용합니다. 그러나 논리적 레코드와 같은 특정 병합 복제 기능은 스트림 최적화를 사용할 수 없도록 합니다. *stream_blob_columns* FILESTREAM을 사용 하는 경우 true로 설정 됩니다. 그러면 FILESTREAM 데이터 복제가 최적의 방식으로 수행되고 메모리 활용률이 낮아집니다. FILESTREAM 테이블 아티클에서 blob 스트리밍을 사용 하지 않도록, 설정 *stream_blob_columns* 를 false로 합니다.<br /><br /> **\*\* 중요 \* \***  이 메모리 최적화를 설정 하면 동기화 중에 병합 에이전트의 성능이 저하 될 수 있습니다. MB 단위의 데이터가 포함된 열을 복제할 때만 이 옵션을 사용해야 합니다.|  
 ||**false**|BLOB 열을 복제할 때 최적화를 사용하지 않습니다.|  
@@ -149,8 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|트러스트된 원본에서 제공된 것인지 판단하기 위해 사용자 지정 해결 프로그램의 디지털 서명을 확인을 하지 않습니다.|  
 |NULL(기본값)||에 대 한 지원 되는 값의 목록을 반환 *속성*합니다.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -158,8 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  변경 시 새 스냅숏의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경으로 인해 구독이 다시 초기화 해야 되지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
@@ -232,10 +226,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |아티클 유형|스키마 옵션 값|  
 |------------------|--------------------------|  
 |**func 스키마만**|**0x01** 고 **0x2000**|  
-|**인덱싱된 뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**를 **0x2000**를 **0x40000**를 **0x1000000**, 및 **0x200000**|  
+|**인덱싱된 뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, and **0x200000**|  
 |**프로시저 스키마 전용**|**0x01** 고 **0x2000**|  
 |**table**|모든 옵션|  
-|**뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**를 **0x2000**를 **0x40000**를 **0x1000000**, 및 **0x200000**|  
+|**뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, and **0x200000**|  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  

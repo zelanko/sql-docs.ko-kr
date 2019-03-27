@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732846"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494305"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 일정을 추가한 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 일정 추가 되는 작업의 작업 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =** ] **'***job_name***'**  
- 일정을 추가할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 일정 추가 되는 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@schedule_id =** ] *schedule_id*  
- 작업에 대해 설정할 일정의 ID입니다. *schedule_id*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에 대해 설정할 일정의 일정 id. *schedule_id*됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 작업에 대해 설정할 일정의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 작업에 대해 설정할 일정의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  

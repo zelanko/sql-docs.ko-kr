@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493115"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 %입니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 %입니다.  
   
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자*됩니다 **sysname**, 기본값은 %입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자*됩니다 **sysname**, 기본값은 %입니다.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db*됩니다 **sysname**, 기본값은 %입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db*됩니다 **sysname**, 기본값은 %입니다.  
   
- [  **@property=**] **'**_속성_**'**  
- 변경할 속성의 이름입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 변경할 속성의 이름이입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'**_값_**'**  
- 지정한 속성의 새 값입니다. *값*됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||기본 위치가 아니거나 기본 위치에 추가된 위치일 경우 스냅숏 폴더가 저장되는 위치입니다.|  
 |**description**||해당 병합 끌어오기 구독에 관한 설명입니다.|  
-|**배포자**||배포자의 이름입니다.|  
+|**distributor**||배포자의 이름입니다.|  
 |**distributor_login**||배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**distributor_password**||배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
 |**distributor_security_mode**|**1**|배포자에 연결할 때 Windows 인증을 사용합니다.|  
@@ -71,7 +66,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
 |**ftp_password**||이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스에 연결할 때 사용되는 사용자 암호입니다.|  
 |**ftp_port**||이전 버전과의 호환성을 위해서만 사용 가능합니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
-|**호스트 이름**||조인 필터 또는 논리적 레코드 관계의 WHERE 절에서 HOST_NAME() 함수를 사용할 때 함수에 필요한 값을 지정합니다.|  
+|**hostname**||조인 필터 또는 논리적 레코드 관계의 WHERE 절에서 HOST_NAME() 함수를 사용할 때 함수에 필요한 값을 지정합니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인 암호입니다.|  
 |**internet_security_mode**|**1**|웹 동기화를 호스팅하는 웹 서버에 연결할 때 Windows 인증을 사용합니다.|  
@@ -86,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 ||**1**|게시자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**2**|동기화 트리거는 정적을 사용 **sysservers** 원격 프로시저 호출 (RPC), 및 게시자 작업을 수행 하는 항목에 정의 되어 있어야 합니다 **sysservers** 테이블에서 원격 서버 또는 연결 된 서버입니다.|  
-|**sync_type**|**자동 번역**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
+|**sync_type**|**automatic**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 ||**없음**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
 |**use_ftp**|**true**|스냅숏을 검색하는 일반적인 프로토콜 대신 FTP를 사용합니다.|  
 ||**false**|스냅숏을 검색하는 일반적인 프로토콜을 사용합니다.|  

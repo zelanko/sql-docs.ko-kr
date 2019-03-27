@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: bcebae572cb6704051712e44fd0dcf71a2eff5ea
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494395"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
@@ -511,8 +511,8 @@ sudo systemctl restart mssql-server
 
 | mssql conf 설정 | Description |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | 분산된 트랜잭션에 대 한 보안만 rpc 호출을 구성 합니다. |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 배포에 대 한 보안만 rpc 호출을 구성 합니다. |트랜잭션
+| distributedtransaction.allowonlysecurerpccalls | 분산된 트랜잭션에 대 한 보안만 RPC 호출을 구성 합니다. |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 배포에 대 한 보안만 RPC 호출 구성 |트랜잭션
 | distributedtransaction.maxlogsize | DTC 트랜잭션 로그 파일 크기 (mb)입니다. 기본값은 64MB |
 | distributedtransaction.memorybuffersize | 추적 저장 되는 순환 버퍼 크기입니다. 이 크기 (mb) 이며 기본값은 10MB |
 | distributedtransaction.servertcpport | MSDTC rpc 서버 포트 |
@@ -664,7 +664,7 @@ TLS 설정을 사용 하 여 예제를 보려면 [Linux의 SQL Server 연결 암
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server

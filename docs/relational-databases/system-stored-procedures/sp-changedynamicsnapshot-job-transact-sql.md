@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130203"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493145"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- 변경될 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*됩니다 **sysname**, 기본값은 N '%'. 하는 경우 *dynamic_snapshot_jobid* 를 지정 하면 기본 값을 사용 해야 *dynamic_snapshot_jobname*합니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 변경 될 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*됩니다 **sysname**, 기본값은 N '%'. 하는 경우 *dynamic_snapshot_jobid* 를 지정 하면 기본 값을 사용 해야 *dynamic_snapshot_jobname*합니다.  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- 변경될 스냅숏 작업의 ID입니다. *dynamic_snapshot_jobid* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 하는 경우 *dynamic_snapshot_jobname*를 지정 하면 기본 값을 사용 해야 *dynamic_snapshot_jobid*합니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 변경 될 스냅숏 작업의 ID입니다. *dynamic_snapshot_jobid* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 하는 경우 *dynamic_snapshot_jobname*를 지정 하면 기본 값을 사용 해야 *dynamic_snapshot_jobid*합니다.  
   
- [  **@frequency_type =** ] *frequency_type*  
- 에이전트를 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 에이전트를 예약 하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|되풀이|  
 |NULL(기본값)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 에이전트가 실행되는 요일입니다. *frequency_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_interval = ] frequency_interval` 에이전트가 실행 되는 요일입니다. *frequency_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|주말|  
 |NULL(기본값)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 정의 된 기간 동안 다시 예약 하는 빈도 방법이입니다. *frequency_subday* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL(기본값)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- 병합 에이전트가 실행되는 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 병합 에이전트가 실행 되는 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|마지막|  
 |NULL(기본값)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@active_start_date =** ] *active_start_date*  
- 병합 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_date = ] active_start_date` 가 경우 병합 에이전트 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로 합니다. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@active_end_date =** ] *active_end_date*  
- 병합 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_date = ] active_end_date` 병합 에이전트가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- 하루 중에서 병합 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 병합 에이전트가 처음 하루 중 시간 예약 된 hhmmss입니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- 하루 중에서 병합 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 하루 중에서 병합 에이전트에 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@job_login=** ] **'***job_login***'**  
- 매개 변수가 있는 행 필터를 사용하여 구독에 대해 스냅숏을 생성할 때 스냅숏 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'` 가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
   
- [  **@job_password=** ] **'***job_password***'**  
- 매개 변수가 있는 행 필터를 사용하여 구독에 대해 스냅숏을 생성할 때 스냅숏 에이전트가 실행되는 Windows 계정의 암호입니다. *job_password* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_password = ] 'job_password'` 매개 변수가 있는 행 필터를 사용 하는 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트가 실행 되는 Windows 계정의 암호입니다. *job_password* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  

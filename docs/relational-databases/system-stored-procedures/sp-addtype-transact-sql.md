@@ -18,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838851"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492845"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@typename=** ] *형식*  
- 별칭 데이터 형식의 이름입니다. 별칭 데이터 형식 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md) 각 데이터베이스에서 고유 해야 합니다. *형식* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @typename = ] type` 별칭 데이터 형식의 이름이입니다. 별칭 데이터 형식 이름에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md) 각 데이터베이스에서 고유 해야 합니다. *형식* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@phystype=**] *system_data_type*  
- 실제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 별칭 데이터 형식의 기반이 되는 데이터 형식을 제공 합니다. *system_data_type* 됩니다 **sysname**기본값은 없고 수 이며 다음이 값 중 하나일 수:  
+`[ @phystype = ] system_data_type` 실제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 별칭 데이터 형식의 기반이 되는 데이터 형식을 제공 합니다. *system_data_type* 됩니다 **sysname**기본값은 없고 수 이며 다음이 값 중 하나일 수:  
   
 ||||  
 |-|-|-|  
@@ -70,11 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  소수점 왼쪽과 오른쪽에 저장할 수 있는 최대 총 십진 자릿수를 표시하는 음이 아닌 정수입니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
- *S*  
+ *s*  
  소수점 오른쪽에 저장할 수 있는 최대 십진 자릿수를 표시하는 음이 아닌 정수이며 전체 자릿수보다 작거나 같아야 합니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
- [  **@nulltype =** ] **'***null_type***'**  
- 별칭 데이터 형식의 NULL 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (** 8 **)**, 기본값은 NULL 사용 하 여 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 하 고 있습니다. 하는 경우 *null_type* 하 여 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 하는 경우 **@phystype** 는 **비트**, 및 **@nulltype** 지정 하지 않으면 기본값은 NULL입니다.  
+`[ @nulltype = ] 'null_type'` 별칭 데이터 형식의 null 값 처리 방식을 나타냅니다. *null_type* 은 **varchar (** 8 **)**, 기본값은 NULL 사용 하 여 작은따옴표 ('NULL', 'NOT NULL' 또는 'NONULL')로 묶어야 하 고 있습니다. 하는 경우 *null_type* 하 여 명시적으로 정의 되지 않은 **sp_addtype**, 현재의 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. 하는 경우 **@phystype** 는 **비트**, 및 **@nulltype** 지정 하지 않으면 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  합니다 *null_type* 매개 변수에이 데이터 형식의 기본 null 허용 여부를 정의 합니다. 테이블을 만드는 동안 별칭 데이터 형식을 사용할 때 NULL 허용 여부를 명시적으로 정의하면 정의된 NULL 허용 여부보다 우선적으로 적용됩니다. 자세한 내용은 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) 하 고 [CREATE TABLE &#40;Transact SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  

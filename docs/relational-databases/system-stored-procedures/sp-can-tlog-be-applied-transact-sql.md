@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588608"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491987"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@backup_file_name=** ] **'**_backup_file_name_**'**  
- 백업 파일의 이름입니다. *backup_file_name* 됩니다 **nvarchar (128)** 합니다.  
+`[ @backup_file_name = ] 'backup_file_name'` 백업 파일의 이름이입니다. *backup_file_name* 됩니다 **nvarchar (128)** 합니다.  
   
- [  **@database_name=** ] **'**_database_name_**'**  
- 데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
+`[ @database_name = ] 'database_name'` 데이터베이스의 이름이입니다. *database_name*은 **sysname**입니다.  
   
- [  **@result=** ] _결과_ **출력**  
- 트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *결과* 됩니다 **비트**합니다.  
+`[ @result = ] _result_ OUTPUT` 트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *결과* 됩니다 **비트**합니다.  
   
  1 = 로그를 적용할 수 있음  
   

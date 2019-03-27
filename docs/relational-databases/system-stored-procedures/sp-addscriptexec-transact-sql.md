@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130693"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492951"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@scriptfile=** ] **'**_scriptfile_**'**  
- SQL 스크립트 파일의 전체 경로입니다. *scriptfile* 됩니다 **nvarchar(4000)**, 기본값은 없습니다.  
+`[ @scriptfile = ] 'scriptfile'` SQL 스크립트 파일에 전체 경로가입니다. *scriptfile* 됩니다 **nvarchar(4000)**, 기본값은 없습니다.  
   
- [  **@skiperror=** ] **'**_skiperror_**'**  
- 스크립트가 처리되는 동안 오류가 발생하면 배포 에이전트 또는 병합 에이전트를 중지할지 여부를 나타냅니다. *SkipError* 됩니다 **비트**, 기본값은 0입니다.  
+`[ @skiperror = ] 'skiperror'` 배포 에이전트 또는 병합 에이전트가 스크립트 처리 하는 동안 오류가 발생 하는 경우 중지 해야 하는지 여부를 나타냅니다. *SkipError* 됩니다 **비트**, 기본값은 0입니다.  
   
  **0** = 중지 됩니다.  
   
  **1** = 에이전트 스크립트를 계속 하 고 오류를 무시 합니다.  
   
- [  **@publisher=** ] **'**_게시자_**'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 게시 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

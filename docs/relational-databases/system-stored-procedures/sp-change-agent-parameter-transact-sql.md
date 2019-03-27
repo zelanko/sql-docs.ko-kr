@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819120"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493465"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_id=**] *profile_id*,  
- 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @profile_id = ] profile_id,` 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@parameter_name=**] **'***parameter_name***'**  
- 매개 변수의 이름입니다. *parameter_name* 됩니다 **sysname**, 기본값은 없습니다. 시스템 프로필의 경우 변경될 수 있는 매개 변수는 에이전트의 유형에 따라 달라집니다 에이전트의 유형을 알아보려면이 알아보려면 *profile_id* 나타내는 찾습니다는 *profile_id* 열에는 **Msagent_profiles** 테이블 및 참고는 *agent_type*  값입니다.  
+`[ @parameter_name = ] 'parameter_name'` 매개 변수의 이름이입니다. *parameter_name* 됩니다 **sysname**, 기본값은 없습니다. 시스템 프로필의 경우 변경될 수 있는 매개 변수는 에이전트의 유형에 따라 달라집니다 에이전트의 유형을 알아보려면이 알아보려면 *profile_id* 나타내는 찾습니다는 *profile_id* 열에는 **Msagent_profiles** 테이블 및 참고는 *agent_type*  값입니다.  
   
 > [!NOTE]  
 >  매개 변수는에 대 한 지원 되는 경우를 지정 *agent_type*, 에이전트 프로필에 정의 되지 않은 하지만 오류가 반환 됩니다. 실행 해야 하는 에이전트 프로필 매개 변수를 추가할 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)합니다.  
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  지정된 된 프로필에 정의 된 매개 변수를 보려면 실행 **sp_help_agent_profile** 확인 합니다 *profile_name* 연관 합니다 *profile_id*. 적절 한 *profile_id*, 다음 실행 **sp_help_agent_parameters** 는 사용 하 여 *profile_id* 프로필과 연결 된 매개 변수를 보려면. 매개 변수는 실행 하 여 프로필을 추가할 수 있습니다 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)합니다.  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- 매개 변수의 새 값입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
+`[ @parameter_value = ] 'parameter_value'` 매개 변수의 새 값이입니다. *parameter_value* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -255,7 +252,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_change_agent_parameter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   

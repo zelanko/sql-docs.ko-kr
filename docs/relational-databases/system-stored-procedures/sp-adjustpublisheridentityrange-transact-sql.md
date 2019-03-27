@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822077"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492356"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 새 ID 범위가 다시 할당되는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 새 id 범위가 다시 할당 된 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@table_name=**] **'***table_name***'**  
- 새 ID 범위가 다시 할당되는 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @table_name = ] 'table_name'` 새 id 범위가 다시 할당 되는 테이블의 이름이입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@table_owner=**] **'***table_owner***'**  
- 게시자에서 테이블의 소유자입니다. *table_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *table_owner* 지정 하지 않으면 현재 사용자의 이름이 사용 됩니다.  
+`[ @table_owner = ] 'table_owner'` 게시자에서 테이블의 소유자가입니다. *table_owner* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *table_owner* 지정 하지 않으면 현재 사용자의 이름이 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537831"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494095"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] *job_id*  
- 지정한 대상 서버 또는 대상 서버 그룹에 적용할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 지정 된 대상 서버나 대상 서버 그룹에 적용할 작업의 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- 지정된 연결 대상 서버 또는 대상 서버 그룹에 적용할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 연결된 대상 서버를 지정 된 적용 또는 대상 서버 그룹에 대 한 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@target_server_groups =**] **'**_target_server_groups_**'**  
- 지정된 작업을 적용할 대상 서버 그룹의 쉼표로 구분된 목록입니다. *target_server_groups* 됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
+`[ @target_server_groups = ] 'target_server_groups'` 지정된 된 된 작업을 적용 하는 대상 서버 그룹의 쉼표로 구분 된 목록입니다. *target_server_groups* 됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
   
- [  **@target_servers=** ] **'**_target_servers_**'**  
- 지정된 작업을 적용할 대상 서버의 쉼표로 구분된 목록입니다. *target_servers*됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
+`[ @target_servers = ] 'target_servers'` 지정된 된 된 작업을 적용할 대상 서버의 쉼표로 구분 된 목록입니다. *target_servers*됩니다 **nvarchar(2048)**, 기본값은 NULL입니다.  
   
- [  **@operation=** ] **'**_작업이_**'**  
- 지정된 대상 서버 또는 대상 서버 그룹에서 지정된 작업을 적용할지 아니면 제거할지 여부를 나타냅니다. *작업이*됩니다 **varchar(7)**, 기본값은 APPLY 사용 하 여 합니다. 유효한 연산은 **적용** 하 고 **제거**합니다.  
+`[ @operation = ] 'operation'` 지정된 된 된 작업은 적용할 또는 지정 된 대상 서버나 대상 서버 그룹에서 제거 여부입니다. *작업이*됩니다 **varchar(7)**, 기본값은 APPLY 사용 하 여 합니다. 유효한 연산은 **적용** 하 고 **제거**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

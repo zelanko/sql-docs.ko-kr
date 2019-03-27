@@ -5,17 +5,17 @@ description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227116"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493556"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -160,7 +160,7 @@ kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.3에 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다.
+> CTP 2.4 나타납니다 보안 경고가 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문입니다.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 

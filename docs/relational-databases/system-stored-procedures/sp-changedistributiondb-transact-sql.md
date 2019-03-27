@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492496"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@database=**] **'**_database_**'**  
- 배포 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @database = ] 'database'` 배포 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'**_속성_**'**  
- 지정된 데이터베이스에 대해 변경할 속성입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 데이터베이스에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|최소 배포 보존 기간입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
   
- [  **@value=**] **'**_값_**'**  
- 지정한 속성의 새 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

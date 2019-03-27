@@ -5,17 +5,17 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 �
 author: TheBharath
 ms.author: bharaths
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9666192d667a5a2592ab32f346338d1b9963fa3d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477658"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492805"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -42,7 +42,7 @@ ms.locfileid: "58477658"
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (미리 보기) CTP 2.3 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
+SQL Server 2019 (미리 보기) CTP 2.4 만들기, 삭제, 설명, 초기화할 수 있습니다, 목록을 실행 하 고 응용 프로그램을 업데이트 합니다. 다음 표에서 사용할 수 있는 응용 프로그램 배포 명령을 **mssqlctl**합니다.
 
 |Command |Description |
 |:---|:---|

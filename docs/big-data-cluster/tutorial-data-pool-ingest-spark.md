@@ -5,17 +5,17 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491906"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -49,7 +49,15 @@ ms.locfileid: "57017739"
 
    ![SQL Server 마스터 인스턴스 쿼리](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. 명명 된 외부 테이블을 만듭니다 **web_clickstreams_spark_results** 데이터 풀에 있습니다. `SqlDataPool` 데이터 원본은 모든 빅 데이터 클러스터의 마스터 인스턴스를 사용할 수 있는 특수 데이터 원본 형식입니다.
+1. 아직 존재 하지 않는 경우 데이터 풀에 외부 데이터 원본을 만듭니다.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. 명명 된 외부 테이블을 만듭니다 **web_clickstreams_spark_results** 데이터 풀에 있습니다.
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ ms.locfileid: "57017739"
       );
    ```
   
-1. CTP 2.3 데이터 풀 만들기는 비동기 이며 없지만 아직 완료 될 때를 확인할 수 없습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
+1. CTP 2.4에서 데이터 풀을 만드는 비동기 되었지만 아직 완료 될 때 확인 방법이 있습니다. 계속 하기 전에 데이터 풀 생성 되도록 하려면 2 분을 기다립니다.
 
 ## <a name="start-a-spark-streaming-job"></a>Spark 스트리밍 작업 시작
 

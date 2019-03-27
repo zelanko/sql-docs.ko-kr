@@ -1,7 +1,7 @@
 ---
 title: sys.external_libraries (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2f83d703566ae5a60fd027ff7f186205a0c404
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f0c24f7a95a7146f4d67d655ec0ed5ec58a53ace
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492367"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "57017539"
 R, Python 및 Java와 같은 외부 런타임 관련 패키지 라이브러리의 관리를 지원 합니다.
 
 > [!NOTE]
-> SQL Server 2017에서는 R 언어 및 Windows 플랫폼 지원 됩니다. SQL Server 2019 CTP 2.3에서 R, Python 및 Java Windows 플랫폼에서 지원 됩니다. Linux에 대 한 지원은 이후 릴리스에 예정 되어 있습니다.
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. SQL Server 2019 CTP 2.4에서 R, Python 및 Java Windows 및 Linux 플랫폼에서 지원 됩니다.
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 

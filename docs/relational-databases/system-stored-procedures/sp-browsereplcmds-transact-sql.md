@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802385"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493845"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
- 반환할 가장 낮은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_start* 됩니다 **nchar(22)**, 기본값은 0x00000000000000000000입니다.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` 반환할 가장 낮은 값된 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 됩니다 **nchar(22)**, 기본값은 0x00000000000000000000입니다.  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
- 반환할 가장 높은 값의 정확한 시퀀스 번호를 지정합니다. *xact_seqno_end* 됩니다 **nchar(22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` 반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 됩니다 **nchar(22)**, 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
   
- [  **@originator_id =**] **'**_originator_id_**'**  
- 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @originator_id = ] 'originator_id'` 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
- 지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @publisher_database_id = ] 'publisher_database_id'` 지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@article_id =**] **'**_article_id_**'**  
- 지정 된 명령을 *article_id* 반환 됩니다. *article_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @article_id = ] 'article_id'` 지정 된 명령을 *article_id* 반환 됩니다. *article_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@command_id =**] *command_id*  
- 명령의 위치인 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 디코딩할 합니다. *command_id* 됩니다 **int**, 기본값은 NULL입니다. 지정 하는 경우 다른 모든 매개 변수 또한 지정 해야 하 고 *xact_seqno_start*같아야 *xact_seqno_end*.  
+`[ @command_id = ] command_id` 명령의 위치인 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 디코딩할 합니다. *command_id* 됩니다 **int**, 기본값은 NULL입니다. 지정 하는 경우 다른 모든 매개 변수 또한 지정 해야 하 고 *xact_seqno_start*같아야 *xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id*  
- 지정한 복제 에이전트에 해당하는 명령만 반환하도록 지정합니다. *agent_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @agent_id = ] agent_id` 특정 복제 에이전트에 대 한 명령만 반환 되도록 지정 합니다. *agent_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@compatibility_level =**] *compatibility_level*  
- 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반이 *compatibility_level* 은 **int**, 이며 기본값은 9000000입니다.  
+`[ @compatibility_level = ] compatibility_level` 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반이 *compatibility_level* 은 **int**, 이며 기본값은 9000000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -97,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할의 멤버는 **db_owner** 하거나 **replmonitor** 배포 데이터베이스의 고정된 데이터베이스 역할 실행할수있습니다**sp_browsereplcmds**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
