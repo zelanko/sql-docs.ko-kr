@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502615"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271975"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -82,14 +82,14 @@ ms.locfileid: "52502615"
 ## <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **HTTPConnection**  
  목록에서 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
   
- **관련 항목:** [HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **관련 항목:**  [HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(...)** 를 클릭하여 이 파일을 찾습니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "52502615"
 ## <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
   **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **서비스**  
  목록에서 웹 메서드를 실행하는 데 사용할 웹 서비스를 선택합니다.  
   
@@ -172,13 +172,13 @@ ms.locfileid: "52502615"
  **최근에 사용한 파일**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 변수  
  **변수**  
  목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **관련 항목:**  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>관련 내용  
- technet.microsoft.com의 비디오, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오))  
+ technet.microsoft.com의 비디오 - [방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=259642)을 참조하세요.  

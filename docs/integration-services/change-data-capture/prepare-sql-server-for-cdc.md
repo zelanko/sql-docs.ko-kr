@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cc37bf58d0e6466348edfb5f14f715b0b536c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9b0ba6e5a3ee22bb29aac7bedc0be7e5a4619d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856881"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283107"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC를 위한 SQL Server 준비
   Oracle CDC Service에서는 모든 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 MSXDBCDC 데이터베이스가 포함되어야 합니다. CDC Service 구성 콘솔에서 SQL Server 준비 작업을 사용하여 이 데이터베이스를 만듭니다. 이 작업은 이 데이터베이스의 필수 테이블, 저장 프로시저 및 기타 필수 아티팩트를 만들기 위해 실행되는 특수 스크립트를 만듭니다. 이 작업은 각 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 한 번만 수행됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47856881"
   
  CDC Service 구성 콘솔에서 **SQL Server 준비**를 클릭합니다. 이 옵션을 사용할 수 없는 경우 콘솔의 왼쪽 창에서 **로컬 CDC Service** 가 선택되어 있는지 확인합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
   
 ### <a name="server-name"></a>서버 이름  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 있는 서버의 이름을 입력합니다.  
@@ -37,18 +37,18 @@ ms.locfileid: "47856881"
   
 -   **Windows 인증**  
   
--   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 **에서 사용자의** 사용자 이름 **및** 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 입력해야 합니다.  
+-   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자의 **사용자 이름**과 **암호**를 입력해야 합니다.  
   
  Oracle CDC에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 로그인은 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있어야 합니다. MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있는 로그인(예: `sysasmin` 역할의 멤버)의 자격 증명을 입력합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
 -   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
   
 -   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
   
--   **연결 암호화**: 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
+-   **연결 암호화**: 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.  
   
 -   **고급**: 필요한 경우 모든 추가 연결 속성을 입력합니다.  
   

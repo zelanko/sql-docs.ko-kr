@@ -14,15 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f1a8773a0c58b597f5a139346919c62d41968e79
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523775"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272140"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  

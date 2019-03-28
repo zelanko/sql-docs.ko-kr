@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7500d510e08aae85b89d7ad83f97a85ed51cd88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619401"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273654"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47619401"
   
  구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 1로 설정합니다.  
+-   **오류 코드**: 1로 설정됩니다.  
   
 -   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   

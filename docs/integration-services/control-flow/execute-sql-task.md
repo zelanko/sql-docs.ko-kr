@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504071"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273911"
 ---
 # <a name="execute-sql-task"></a>SQL 실행 태스크
   SQL 실행 태스크는 패키지에서 SQL 문이나 저장 프로시저를 실행합니다. 이 태스크는 단일 SQL 문 또는 순서대로 실행되는 여러 SQL 문을 포함할 수 있습니다. SQL 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -189,7 +189,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
  **FileConnection**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = 변수  
  **SourceVariable**  
@@ -200,7 +200,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>매개 변수 매핑 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **매개 변수 매핑** 페이지를 사용하여 변수를 SQL 문의 매개 변수에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **변수 이름**  
  **추가**를 클릭하여 매개 변수 매핑을 추가했으면 **변수 추가** 대화 상자를 사용하여 목록에서 시스템 또는 사용자 정의 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 추가합니다.  
   
@@ -231,7 +231,7 @@ Transact-SQL 쿼리 언어에 대한 자세한 내용은 [Transact-SQL 참조&#4
 ## <a name="result-set-page---execute-sql-task-editor"></a>결과 집합 페이지 - SQL 실행 태스크 편집기
 **SQL 실행 태스크 편집기** 대화 상자의 **결과 집합** 페이지를 사용하여 SQL 문의 결과를 새 변수 또는 기존 변수로 매핑할 수 있습니다. 일반 페이지의 **ResultSet** 을 **없음**으로 설정한 경우에는 이 대화 상자의 옵션을 사용할 수 없습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **결과 이름**  
  **추가**를 클릭하여 결과 집합 매핑 집합을 추가한 다음 결과를 설명하는 이름을 제공합니다. 결과 집합 유형에 따라 특정 결과 이름을 사용해야 합니다.  
   

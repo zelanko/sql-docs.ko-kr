@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 864e98d7f137a4d642f11e741bfac6d27c5ed55e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd4f4adc566a3bef283c1c8e5757279df64966a3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795991"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274550"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "47795991"
   
          이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.  
   
-    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기** 를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
+    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기**를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
   
 6.  **미리 보기** 를 클릭하면 ODBC 원본에 의해 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   

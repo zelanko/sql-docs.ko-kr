@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 108b3bf1ccd37b92144bcf0aa21d60546dc68979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2aac2558a78133830d305abd587c7603e9ec9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613001"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281697"
 ---
 # <a name="edit-tables"></a>테이블 편집
   **테이블** 탭을 사용하여 Oracle 원본 데이터베이스에서 선택한 테이블과 열을 변경할 수 있습니다. 이 탭은 다음과 같은 요소로 구성되어 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47613001"
   
 -   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름 지정에 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다. 지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>.` 형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다. 이 열에서 셀을 클릭하여 **capture_instance**를 수동으로 편집할 수 있습니다.  
   
 -   **보안 역할**: 변경 데이터에 대한 액세스 권한을 얻는 데 사용되는 데이터베이스 역할의 이름입니다. 이 열에서 셀을 클릭하여 **security_role**을 수동으로 편집할 수 있습니다.  
   

@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979499"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305911"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  **EXPLAIN**이 실행되는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 문입니다. *SQL_statement*는 다음 명령 중 하나일 수 있습니다. **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **SHOWPLAN** 권한 및 *SQL_statement*를 실행할 수 있는 권한이 필요합니다. [권한: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, 병렬 Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md)를 참조하세요.  
   
 ## <a name="return-value"></a>반환 값  
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|*SQL_statement*를 에코합니다.|  
 |\<params>|이 태그는 현재 사용되지 않습니다.|  
 |\<dsql_operations>|쿼리 단계를 요약하고, 포함하며 ,쿼리에 대한 비용 정보를 포함합니다. 또한 모든 `<dsql_operation>` 블록도 포함합니다. 이 태그에는 전체 쿼리에 대한 개수 정보가 포함됩니다.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost*는 쿼리 실행에 대한 총 예상 시간(밀리초)입니다.<br /><br /> *total_number_operations*는 쿼리에 대한 총 작업 수입니다. 여러 노드에서 병렬 처리되고 실행되는 작업은 단일 작업으로 계산됩니다.|  
-|\<dsql_operation>|쿼리 계획 내에 있는 단일 작업을 설명합니다. \< dsql_operation> 태그에는 작업 유형이 특성으로 포함됩니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*은 [데이터 쿼리(SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c)에 있는 값 중 하나입니다.<br /><br /> `\<dsql_operation>` 블록의 콘텐츠는 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조하세요.|  
+|\<dsql_operation>|쿼리 계획 내에 있는 단일 작업을 설명합니다. \< dsql_operation> 태그에는 작업 유형이 특성으로 포함됩니다.<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type*은 [sys.dm_pdw_request_steps(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)에 있는 값 중 하나입니다.<br /><br /> `\<dsql_operation>` 블록의 콘텐츠는 작업 유형에 따라 다릅니다.<br /><br /> 아래 표를 참조하세요.|  
   
 |작업 유형|콘텐츠|예제|  
 |--------------------|-------------|-------------|  

@@ -1,5 +1,5 @@
 ---
-title: '? :(조건부)(SSIS 식) | Microsoft Docs'
+title: '? 으로 디코딩된 문자입니다. (조건부)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626021"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272102"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
+# <a name="--conditional-ssis-expression"></a>? 으로 디코딩된 문자입니다. (조건부)(SSIS 식)
   부울 식의 계산에 따라 두 식 중 하나를 반환합니다. 부울 식이 TRUE이면 첫 번째 식이 계산되고 반환 결과는 식의 결과입니다. 부울 식이 FALSE이면 두 번째 식이 계산되고 반환 결과는 식의 결과입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
--   **String** *expression1* 및 *expression2* 모두 문자열 데이터 형식(DT_STR 또는 DT_WSTR)이어야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
+-   **String** *expression1*과 *expression2* 모두 문자열 데이터 형식인 DT_STR 또는 DT_WSTR여야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
   
--   **Date, Time 또는 Date/Time** *expression1* 및 *expression2* 모두는 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  

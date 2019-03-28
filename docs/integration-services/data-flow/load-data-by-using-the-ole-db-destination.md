@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807381"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281237"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 대상을 사용하여 데이터 로드
   OLE DB 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "47807381"
   
 5.  OLE DB 대상을 두 번 클릭합니다.  
   
-6.  **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)을 참조하세요.  
+6.  **OLE DB 대상 편집기** 대화 상자의 **연결 관리자** 페이지에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
 7.  다음과 같은 데이터 액세스 방법을 선택합니다.  
   
     -   **테이블 또는 뷰** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택합니다.  
   
-    -   **테이블 또는 뷰 - 빠른 로드** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택한 후에 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**, **일괄 처리당 행 수**또는 **최대 삽입 커밋 크기**중에서 빠른 로드 옵션을 설정합니다.  
+    -   **테이블 또는 뷰 - 빠른 로드** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택한 후 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**, **일괄 처리당 행 수** 또는 **최대 삽입 커밋 크기** 중 적절한 빠른 로드 옵션을 설정합니다.  
   
     -   **테이블 이름 또는 뷰 이름 변수** 데이터베이스의 테이블 또는 뷰 이름이 포함된 사용자 정의 변수를 선택합니다.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686971"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278082"
 ---
 # <a name="edit-the-table-properties"></a>테이블 속성 편집
   이 대화 상자를 사용하여 변경을 캡처 중인 선택된 테이블에서 특정 열을 편집할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47686971"
   
 2.  캡처 인스턴스를 다음 중 하나로 저장합니다.  
   
-    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만, 이전 캡처 인스턴스는 삭제되지 않습니다.  
+    -   **새 캡처 인스턴스**: 이 경우 새 캡처 인스턴스는 저장되지만 이전 캡처 인스턴스는 삭제되지 않습니다.  
   
          **참고**: 캡처 인스턴스는 테이블당 두 개를 초과할 수 없습니다. 이미 두 개의 캡처 인스턴스가 있는 경우에는 이 옵션을 사용할 수 없습니다.  
   

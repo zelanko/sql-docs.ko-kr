@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531835"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290709"
 ---
 # <a name="bulk-insert-task"></a>대량 삽입 태스크
   대량 삽입 태스크는 많은 양의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 뷰에 복사할 수 있는 효율적인 방법을 제공합니다. 예를 들어 회사에서 백만 개 행으로 구성된 제품 목록을 메인프레임 시스템에 저장하지만 회사의 전자 상거래 시스템이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 웹 페이지를 채운다고 가정합니다. 또한 메인프레임의 마스터 제품 목록을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 테이블을 매일 밤 업데이트해야 합니다. 테이블을 업데이트하려면 제품 목록을 탭 구분 형식으로 저장하고 대량 삽입 태스크를 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 직접 복사합니다.  
@@ -120,11 +120,11 @@ ms.locfileid: "52531835"
   
  대량 삽입 작업에 대해 알아보려면 [대량 삽입 태스크](../../integration-services/control-flow/bulk-insert-task.md) 및 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **대량 삽입 태스크 편집기**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결을 만듭니다.  
   
- **관련 항목:** [OLE DB 연결 관리자 구성](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  대상 테이블 또는 뷰의 이름을 입력하거나 목록에서 테이블 또는 뷰를 선택합니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "52531835"
 ## <a name="bulk-insert-task-editor-general-page"></a>대량 삽입 태스크 편집기(일반 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 대량 삽입 태스크를 명명 및 설명할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  대량 삽입 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "52531835"
   
  대량 삽입 작업에 대한 자세한 내용은 [대량 삽입 태스크](../../integration-services/control-flow/bulk-insert-task.md) 및 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **CodePage**  
  데이터 파일에서 데이터의 코드 페이지를 지정합니다.  
   

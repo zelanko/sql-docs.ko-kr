@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639030"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290129"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지를 완성 및 배포한 후 실행할 때 패키지 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "51639030"
   
     3.  **행 개수 데이터 캡처** 행 개수 정보에 대한 별도의 테이블을 만듭니다. 이 테이블에서 패키지 실행의 각 인스턴스는 ExecutionID로 식별됩니다. 행 개수 변환을 사용하여 데이터 흐름의 중요 지점에서 일련의 변수에 행 개수를 저장합니다. 데이터 흐름이 끝난 후에는 나중에 분석 및 보고할 수 있도록 SQL 실행 태스크를 사용하여 일련의 값을 이 테이블의 행에 삽입합니다.  
   
-     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 "ETL 감사 및 로깅" 섹션을 참조하십시오.  
+     이 방법에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 “ETL 감사 및 로깅” 섹션을 참조하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>디버그 덤프 파일을 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.  

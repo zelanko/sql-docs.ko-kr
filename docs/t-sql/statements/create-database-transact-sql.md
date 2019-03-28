@@ -2,7 +2,7 @@
 title: CREATE DATABASE(Transact-SQL) | Microsoft Docs
 description: SQL Server, Azure SQL Database, Azure SQL Data Warehouse 및 Analytics Platform System의 데이터베이스 구문 만들기
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974552"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222147"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(T
 데이터베이스의 rowstore 데이터에 허용되는 최대 크기입니다. Rowstore 테이블, columnstore 인덱스의 deltastore 또는 클러스터형 columnstore 인덱스의 비클러스터형 인덱스에 저장된 데이터는 MAXSIZE보다 커질 수 없습니다. columnstore 형식으로 압축된 데이터는 크기 제한이 없으며 MAXSIZE에 의해 제한되지 않습니다.
 
 SERVICE_OBJECTIVE     
-성능 수준을 지정합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 서비스 목표에 대한 자세한 내용은 [성능 계층](https://azure.microsoft.com/documentation/articles/performance-tiers/)을 참조하세요.
+성능 수준을 지정합니다. SQL Data Warehouse의 서비스 목표에 대한 자세한 내용은 [DWU(데이터 웨어하우스 단위)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu)를 참조하세요.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)를 사용하여 데이터베이스 속성을 확인합니다.

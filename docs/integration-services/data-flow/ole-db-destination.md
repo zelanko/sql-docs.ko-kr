@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525323"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283087"
 ---
 # <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "52525323"
 > [!NOTE]  
 >  OLE DB 대상은 매개 변수를 지원하지 않습니다. 매개 변수가 있는 INSERT 문을 실행해야 하는 경우 OLE DB 명령 변환을 사용하십시오. 자세한 내용은 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)을 참조하세요.  
   
- OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 보장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하도록 OLE DB 연결 관리자를 구성하거나 **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델을 프로그래밍하는 경우 AccessMode 속성을 **FastLoad를 사용한 OpenRowset**또는 **변수와 FastLoad를 사용한 OpenRowset**으로 설정해야 합니다.  
+ OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 보장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 사용되도록 OLE DB 연결 관리자를 구성하거나 **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델을 프로그래밍하는 경우 AccessMode 속성을 **FastLoad를 사용한 OpenRowset**또는 **변수와 FastLoad를 사용한 OpenRowset**으로 설정해야 합니다.  
   
 > [!NOTE]  
 >  OLE DB 대상에서 데이터를 삽입할 대상 테이블을 만들기 위해 **디자이너에서** OLE DB 대상 편집기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 사용하는 경우에는 새로 만든 테이블을 수동으로 선택해야 할 수도 있습니다. DB2용 OLE DB 공급자와 같은 OLE DB 공급자에서 테이블 이름에 스키마 식별자를 자동으로 추가하는 경우에는 이렇게 테이블을 수동으로 선택해야 합니다.  
@@ -257,7 +257,7 @@ ms.locfileid: "52525323"
 ## <a name="ole-db-destination-editor-mappings-page"></a>OLE DB 대상 편집기(매핑 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "52525323"
 ## <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 대상 편집기(오류 출력 페이지)
   **OLE DB 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입/출력**  
  입력 이름을 표시합니다.  
   

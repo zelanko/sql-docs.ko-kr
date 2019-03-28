@@ -13,27 +13,27 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b97d6051c46ab7c898e953c78704c99b6370d57
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645851"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277812"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
   
- [예제 1: 행으로 구분된 레코드에 대한 구문 분석](#example1)  
+ [예제 1: 행으로 구분된 레코드의 구문 분석](#example1)  
   
  [예제 2: 부모 레코드와 자식 레코드 분할](#example2)  
   
 > [!NOTE]  
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예 1: 행으로 구분된 레코드에 대한 구문 분석  
+##  <a name="example1"></a> 예제 1: 행으로 구분된 레코드의 구문 분석  
  이 예에서는 각 데이터 열이 별도의 줄에 나타나는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 대상 테이블로 구문 분석하는 방법을 보여 줍니다.  
   
  데이터 흐름에서 변환으로 사용하도록 스크립트 구성 요소를 구성하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조하세요.  

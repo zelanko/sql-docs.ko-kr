@@ -1223,7 +1223,7 @@ items:
     items:
     - name: 개요
       items:
-      - name: 파일 스트림
+      - name: Filestream
         href: ../relational-databases/blob/filestream-sql-server.md
       - name: Filetable
         href: ../relational-databases/blob/filetables-sql-server.md
@@ -1231,7 +1231,7 @@ items:
         href: ../relational-databases/blob/compare-options-for-storing-blobs-sql-server.md
       - name: RBS(Remote Blob Store)
         href: ../relational-databases/blob/remote-blob-store-rbs-sql-server.md
-    - name: 파일 스트림
+    - name: Filestream
       items:
       - name: 사용 및 구성
         href: ../relational-databases/blob/enable-and-configure-filestream.md
@@ -6894,6 +6894,7 @@ items:
     - name: 테스트 서버 사용 시 고려 사항
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: 지능형 쿼리 처리
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: 성능 센터
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: 익명 사용 현황 데이터
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: sqlpackage 설치
       href: ../tools/sqlpackage-download.md
     - name: 릴리스 정보
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417235"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538685"

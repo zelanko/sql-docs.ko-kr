@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07ec3a12ada376275ab4be5b40078d7ffc9aa469
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639860"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272200"
 ---
 # <a name="file-system-task"></a>파일 시스템 태스크
   파일 시스템 태스크는 파일 시스템의 파일 및 디렉터리에 대해 작업을 수행합니다. 예를 들어 파일 시스템 태스크를 사용하면 패키지가 디렉터리와 파일을 만들거나 이동 또는 삭제할 수 있습니다. 파일 시스템 태스크를 사용하여 파일과 디렉터리의 특성을 설정할 수도 있습니다. 예를 들어 파일 시스템 태스크는 파일에 숨김 또는 읽기 전용 특성을 설정할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "51639860"
   
  식을 사용하여 다른 변수를 사용할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "51639860"
  **DestinationConnection**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 동적 옵션  
   

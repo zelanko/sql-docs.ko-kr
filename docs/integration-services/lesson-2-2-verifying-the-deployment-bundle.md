@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c15564e665361caef562aa9add1c28b267a8a512
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532056"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283140"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>2-2단원 - 배포 번들 확인
 1단원에서는 Deployment Tutorial 프로젝트를 만들고 패키지와 보조 파일을 프로젝트에 추가했습니다. 이전 태스크에서는 프로젝트를 위한 배포 유틸리티를 작성했습니다.  

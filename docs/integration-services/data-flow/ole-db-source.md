@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b160f1a6aa71b612c80eb21daa8d2173376cee69
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639620"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272984"
 ---
 # <a name="ole-db-source"></a>OLE DB 원본
   OLE DB 원본은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 관계형 데이터베이스에서 데이터를 추출합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에서 데이터를 추출할 수 있습니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "51639620"
 ## <a name="ole-db-source-editor-columns-page"></a>OLE DB 원본 편집기(열 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
   
@@ -202,7 +202,7 @@ ms.locfileid: "51639620"
 ## <a name="ole-db-source-editor-error-output-page"></a>OLE DB 원본 편집기(오류 출력 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

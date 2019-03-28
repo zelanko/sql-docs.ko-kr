@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6ce28ed249565e051a987ddffbb04d683f9e43
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974242"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305531"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 전용 라우팅 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,14 @@ ms.locfileid: "57974242"
 -   하나 이상의 가용성 복제본이 보조 역할로 실행될 경우 읽기 전용 액세스를 허용하도록 구성되어 있어야 합니다( [읽기 가능한 보조 복제본](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)이어야 함). 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
+
+-   SQL 로그인을 사용하는 경우에 계정이 올바르게 구성되어 있는지 확인합니다. 자세한 내용은 [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리(SQL Server)](logins-and-jobs-for-availability-group-databases.md)라는 프로세스에서 서로 바꿀 수 있습니다.
   
 ###  <a name="RORReplicaProperties"></a> 읽기 전용 라우팅을 지원하도록 구성하는 데 필요한 복제본 속성  
   
 -   읽기 전용 라우팅을 지원할 읽기 가능한 보조 복제본 각각에 대해 *읽기 전용 라우팅 URL*을 지정해야 합니다. 이 URL은 로컬 복제본이 보조 역할로 실행되는 경우에만 적용됩니다. 필요에 따라 복제본별로 읽기 전용 라우팅 URL을 지정해야 합니다. 각 읽기 전용 라우팅 URL은 읽기 전용 연결 요청을 지정된 읽기 가능한 보조 복제본으로 라우팅하는 데 사용됩니다. 일반적으로 모든 읽기 가능한 보조 복제본에는 읽기 전용 라우팅 URL이 할당됩니다.  
   
-     가용성 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법은 [Always On에 대한 read_only_routing_url 계산](https://web.archive.org/web/20170512023255/ https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
+     가용성 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법은 [Always On에 대한 read_only_routing_url 계산](https://web.archive.org/web/20170512023255/https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   주 복제본으로 사용될 때 읽기 전용 라우팅을 지원하도록 할 각 가용성 복제본에 대해 *읽기 전용 라우팅 목록*을 지정해야 합니다. 지정된 읽기 전용 라우팅 목록은 로컬 복제본이 주 역할로 실행되는 경우에만 적용됩니다. 필요에 따라 복제본별로 이 목록을 지정해야 합니다. 일반적으로 각 읽기 전용 라우팅 목록의 끝에는 로컬 복제본의 URL과 함께 모든 읽기 전용 라우팅 URL이 포함됩니다.  
   

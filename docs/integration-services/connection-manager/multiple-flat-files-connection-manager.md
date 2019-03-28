@@ -20,15 +20,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e81e43aa0eafb76b107c30b2bdd07a0a70b60fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534368"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275730"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "52534368"
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
@@ -221,7 +221,7 @@ ms.locfileid: "52534368"
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결 관리자에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "52534368"
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결에 대한 고유 이름을 지정합니다. 제공한 이름은 **디자이너의** 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   

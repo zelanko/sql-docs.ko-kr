@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639660"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273287"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "51639660"
 ## <a name="lookup-transformation-editor-general-page"></a>조회 변환 편집기(일반 페이지)
   조회 변환 편집기 대화 상자의 **일반** 페이지를 사용하여 캐시 모드와 연결 형식을 선택하고 일치하는 항목이 없는 행의 처리 방법을 지정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **전체 캐시**  
  조회 변환이 실행되기 전에 참조 데이터 세트를 생성하고 캐시에 로드합니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "51639660"
 ## <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 세트를 생성할 수도 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **조회 변환 편집기** 대화 상자의 일반 페이지에서 **전체 캐시** 및 **캐시 연결 관리자** 를 선택하는 경우 다음 옵션을 사용할 수 있습니다.  
   
  **전체 캐시**  
@@ -220,7 +220,7 @@ ms.locfileid: "51639660"
 ## <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 입력 열은 연결된 원본에서 데이터 흐름에 있는 열입니다. 입력 열과 조회 열의 데이터 형식은 동일해야 합니다.  
   
@@ -249,7 +249,7 @@ ms.locfileid: "51639660"
 ## <a name="lookup-transformation-editor-advanced-page"></a>조회 변환 편집기(고급 페이지)
   **조회 변환 편집기** 대화 상자의 **고급** 페이지를 사용하여 조회 변환의 부분 캐싱을 구성하고 SQL 문을 수정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **캐시 크기(32비트)**  
  32비트 컴퓨터의 캐시 크기(MB)를 조정합니다. 기본값은 5MB입니다.  
   

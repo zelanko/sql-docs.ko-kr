@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c485156992dbb78157af56b7d5066ee40a92e36
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58051631"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58431338"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +49,7 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 
 > [!IMPORTANT]
 > - Visual Studio 2017용 SSDT(15.9.0)를 설치하기 전에 *Analysis Services Projects* 및 *Reporting Services Projects* 확장이 이미 설치되어 있는 경우 모두 제거하고, VS 인스턴스를 모두 닫습니다.
-> - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017 버전 15.8.0 이하용 SSDT를 사용합니다. VS 2017(15.8.2)에서는 Teradata 원본/대상을 포함하는 SSIS 패키지를 디자인할 수 없습니다. 
-
+> - Teradata 원본/대상이 포함된 SSIS 패키지 디자인에 Visual Studio 2017(15.8.0)이나 그 이전 버전을 위한 SSDT를 사용하세요. 15.8.0 이후의 Visual Studio 2017용 SSDT로는 Attunity의 Teradata 원본/대상이 포함된 SSIS 패키지를 디자인할 수 없습니다.
 
 
 **버전 정보**  
@@ -59,7 +58,7 @@ AS, IS 및 RS 프로젝트 지원을 설치하려면 [SSDT 독립 실행형 설�
 빌드 번호: 14.0.16186.0  
 릴리스 날짜: 2019년 1월 28일  
 
-전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
+전체 변경 내용은 [Release notes for SQL Server Data Tools(SSDT)](release-notes-ssdt.md)(SQL Server Data Tools 릴리스 정보)를 참조하세요.
 
 Visual Studio 2017용 SSDT는 Visual Studio와 동일한 [시스템 요구 사항](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs)을 갖습니다.  
 

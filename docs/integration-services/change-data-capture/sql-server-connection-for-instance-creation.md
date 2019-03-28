@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2e0f879d566608f38a99d9fb4a316b0284213403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7053b119e899e5f17043d3db64d09a18733eae0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816836"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273853"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>인스턴스를 만들기 위한 SQL Server 연결
   Oracle CDC 인스턴스를 만드는 첫 번째 단계 중 하나는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 CDC 데이터베이스를 만드는 것입니다. 이 CDC 데이터베이스가 SQL Server CDC에 사용되며 이를 위해서는 `sysadmin` 고정 서버 역할의 멤버인 로그인이 필요합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "47816836"
   
 -   **Windows 인증**  
   
--   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 **에서 사용자의** 로그인 **및** 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 입력해야 합니다.  
+-   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자의 **로그인** 및 **암호**를 입력해야 합니다.  
   
  MSXCDCDB 데이터베이스에 대한 액세스를 허용하는 데이터베이스 역할이 로그인에 있어야 합니다. 사용 중인 모든 추가 데이터베이스에 대한 액세스 권한도 있는 것이 좋습니다. 그렇지 않으면 사용자가 해당 데이터베이스의 데이터를 볼 수 없습니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47816836"
   
 -   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
   
--   **연결 암호화**: 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.  
+-   **연결 암호화**: 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.  
   
 -   **고급**: **고급** 을 클릭하고 필요한 경우 고급 연결 속성 대화 상자에 추가 연결 속성을 입력합니다.  
   

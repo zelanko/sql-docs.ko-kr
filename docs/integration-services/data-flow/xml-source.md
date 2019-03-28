@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640460"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290629"
 ---
 # <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "51640460"
 ## <a name="xml-source-editor-columns-page"></a>XML 원본 편집기(열 페이지)
   **XML 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "51640460"
 ## <a name="xml-source-editor-error-output-page"></a>XML 원본 편집기(오류 출력 페이지)
   **XML 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

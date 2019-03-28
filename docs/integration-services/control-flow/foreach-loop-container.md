@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505935"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271321"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
   Foreach 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **Foreach** 루프 구조와 유사합니다. 패키지에서 Foreach 열거자를 사용하면 루프를 사용할 수 있습니다.  Foreach 루프 컨테이너는 지정한 열거자의 각 멤버에 대해 제어 흐름을 반복합니다.  
@@ -180,7 +180,7 @@ ms.locfileid: "52505935"
   
  Foreach 루프 컨테이너와 이를 구성하는 방법은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md) 및 [Foreach 루프 컨테이너 구성](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  Foreach 루프 컨테이너에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘과 로그에서 레이블로 사용됩니다.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "52505935"
  **식**  
  기존 속성 식 목록을 보려면 **식** 을 클릭 또는 확장합니다. 줄임표 단추 **(...)** 를 클릭하여 열거자 속성에 대한 속성 식을 추가하거나 기존 속성 식을 편집 및 평가합니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md), [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md), [식 작성기](../../integration-services/expressions/expression-builder.md)  
+ **관련 항목:**  [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md), [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md), [식 작성기](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>Enumerator 동적 옵션  
   
@@ -297,10 +297,10 @@ ms.locfileid: "52505935"
  **첫 번째 테이블의 행**  
  첫 번째 테이블의 행만 열거하려면 선택합니다.  
   
- **모든 테이블의 행(ADO.NET 데이터 집합에만 해당)**  
+ **모든 테이블의 행(ADO.NET 데이터 세트에만 해당)**  
  모든 테이블의 행을 열거하려면 선택합니다. 이 옵션은 열거할 모든 개체가 같은 ADO.NET 데이터 세트의 멤버인 경우에만 사용할 수 있습니다.  
   
- **모든 테이블(ADO.NET 데이터 집합에만 해당)**  
+ **모든 테이블(ADO.NET 데이터 세트에만 해당)**  
  테이블만 열거하려면 선택합니다.  
   
 #### <a name="enumerator--foreach-adonet-schema-rowset-enumerator"></a>Enumerator = Foreach ADO.NET 스키마 행 집합 열거자  
@@ -312,7 +312,7 @@ ms.locfileid: "52505935"
 > [!IMPORTANT]  
 >  ADO.NET 연결 관리자는 OLE DB용 .NET 공급자를 사용해야 합니다. SQL Server에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자 **대화 상자의** OleDb용 .NET 공급자 **섹션에 나열된** Native Client를 공급자로 사용하는 것이 좋습니다.  
   
- **관련 항목:** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **관련 항목:** [ADO 연결 관리자](../../integration-services/connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **스키마**  
  열거할 스키마를 선택합니다.  
@@ -351,7 +351,7 @@ ms.locfileid: "52505935"
   
  **DocumentSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **DocumentSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
@@ -381,7 +381,7 @@ ms.locfileid: "52505935"
   
  **OuterXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **OuterXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
@@ -404,7 +404,7 @@ ms.locfileid: "52505935"
   
  **InnerXPathStringSourceType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **InnerXPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
@@ -416,7 +416,7 @@ ms.locfileid: "52505935"
  **대량 삽입 태스크 편집기**  
  기존 ADO.NET 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- 관련 항목: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ 관련 항목: [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md), [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **열거**  
  열거할 SMO 개체를 지정합니다.  
@@ -458,7 +458,7 @@ ms.locfileid: "52505935"
  **Azure Storage 연결 관리자**  
  기존 Azure Storage 연결 관리자를 선택하거나 Azure Storage 계정을 참조하는 연결 관리자 하나를 새로 만듭니다.  
   
- 관련 항목: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ 관련 항목: [Azure Storage 연결 관리자](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Blob 컨테이너 이름**  
  열거할 Blob 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.
@@ -515,7 +515,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="schema-restrictions-dialog-box-adonet"></a>스키마 제한 대화 상자(ADO.NET)
 **스키마 제한** 대화 상자를 사용하여 Foreach ADO.NET 스키마 행 집합 열거자에 적용할 스키마 제한을 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **제한 사항**  
  스키마에 적용할 제약 조건을 선택합니다.  
   
@@ -530,7 +530,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 ## <a name="for-each-item-columns-dialog-box"></a>For Each Item 열 대화 상자
 **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **열**  
  열을 나열합니다.  
   
@@ -546,7 +546,7 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
  ## <a name="select-smo-enumeration-dialog-box"></a>SMO 열거 선택 대화 상자
 **SMO 열거 선택** 대화 상자를 사용하여 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 열거할 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) 개체를 지정할 수 있고 열거형을 선택할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **열거**  
  서버를 확장한 다음 SMO 개체를 선택합니다.  
   

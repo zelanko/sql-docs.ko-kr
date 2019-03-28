@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638930"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290559"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "51638930"
   
  집계 변환은 비동기적이며 따라서 행별로 데이터를 사용하고 게시하지 않습니다. 대신 전체 행 집합을 사용하고 그룹화 및 집계를 수행한 다음 결과를 게시합니다.  
   
- 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **City**및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
+ 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **City** 및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
   
  또한 집계 변환에 여러 출력을 추가하고 각 집계를 서로 다른 출력으로 지정할 수 있습니다. 예를 들어 집계 변환이 Sum 및 the Average 함수를 적용하는 경우 각 집계는 서로 다른 출력으로 지정될 수 있습니다.  
   
@@ -121,14 +121,14 @@ ms.locfileid: "51638930"
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [집계 변환을 사용하여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+-   [집계 변환을 사용하여 데이터 세트의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [집계 변환을 사용하여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [집계 변환을 사용하여 데이터 세트의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>집계 변환 편집기(집계 탭)
   **집계 변환 편집기** 대화 상자의 **집계** 탭을 사용하여 집계 및 집계 속성에 대한 열을 지정할 수 있습니다. 이때 여러 집계를 적용할 수 있습니다. 이 변환으로 인해 오류 출력이 생성되지는 않습니다.  
@@ -138,7 +138,7 @@ ms.locfileid: "51638930"
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **고급/기본**  
  여러 개의 출력에 대한 여러 집계를 구성하는 옵션을 표시하거나 숨깁니다. 기본적으로 고급 옵션은 숨겨져 있습니다.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "51638930"
 >   
 >  집계 변환에서 **키** 및 **키 배율** 은 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. **고유 키 수** 및 **고유 수 배율** 은 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   

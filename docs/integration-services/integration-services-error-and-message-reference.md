@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642410"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290889"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -164,7 +164,7 @@ ms.locfileid: "51642410"
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|해시 값이 1차원 바이트 배열이 아닙니다(오류: %1). 이 오류는 CPackage::LoadUserCertificateByHash에서 발생합니다.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|배열의 데이터에 액세스할 수 없습니다(오류: %1). 이 오류는 GetDataFromSafeArray가 호출될 때마다 발생할 수 있습니다.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 관리되는 SSIS 도우미 개체를 만들지 "%2"입니다. 이 오류는 CoCreateInstance CLSID_DTSManagedHelper가 실패할 때마다 발생할 수 있습니다.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 못했습니다.|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 "%2"입니다.|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지를 서명하지 "%2"입니다. 이 오류는 ManagedHelper.SignDocument 메서드가 실패할 때 발생합니다.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지 XML에서 XML 서명 봉투를 확인하지 "%2"입니다. 이 오류는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 XML DOM 개체에서 XML 원본을 가져오지 "%2"입니다. 이 오류는 IXMLDOMDocument::get_xml이 실패할 때 발생합니다.|  
@@ -1114,7 +1114,7 @@ ms.locfileid: "51642410"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 벗어났습니다. 소수 자릿수는 %3!d!에서 %4!d! 사이의 범위 내에 있어야 합니다. 소수 자릿수는 전체 자릿수를 초과할 수 없으며 음수가 아니어야 합니다.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|값 %1!d!이(가) 유효한 액세스 모드로 인식되지 잘못되었습니다. 길이는 양수여야 합니다.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1에 음수 값을 할당할 수 없습니다.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은 DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|"%2"에 대한 "%1" 사용자 지정 속성을 true로 설정할 수 없습니다.  열 데이터 형식은  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 또는 DT_FILETIME 중 하나여야 합니다.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1"을(를) 다시 연결할 수 없습니다. 경로를 삭제하고 새로 추가한 다음 연결하십시오.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|함수 "%1"에는 %3!d!개의 매개 변수가 아니라 %2!d!개의 매개 변수가 필요합니다. 함수 이름이 인식되었지만 매개 변수 수가 잘못되었습니다.|  
@@ -1240,11 +1240,11 @@ ms.locfileid: "51642410"
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 오류 코드 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: OLE DB 공급자를 사용할 수 없으므로 64비트 버전의 SSIS에서 Excel 연결 관리자를 지원하지 않습니다.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|캐시 파일이 손상되었거나 캐시 연결 관리자를 사용하여 파일을 만들지 않았습니다.  올바른 캐시 파일을 지정하십시오.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL 명령이 올바르게 설정되지 않았습니다. SQLCommand 속성을 확인하십시오.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|COM 오류 개체 정보를 사용할 수 있습니다.  원본: "%1" 오류 코드: 0x%2!8.8X!  설명: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|COM 오류 개체 정보를 사용할 수 있습니다.  원본: “%1” 오류 코드: 0x%2!8.8X!  설명: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|설정한 연결에 액세스할 수 없습니다.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|열 수가 잘못되었습니다.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|열 "%1"을(를) 데이터 원본에서 찾을 수 없습니다.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|"OLE DB 레코드를 사용할 수 있습니다.  원본: "%1" Hresult: 0x%2!8.8X!  설명: "%3".|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|"OLE DB 레코드를 사용할 수 있습니다.  원본: “%1” Hresult: 0x%2!8.8X!  설명: "%3".|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS 오류 코드 DTS_E_OLEDBERROR.  OLE DB 오류가 발생했습니다. 오류 코드: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|구성 요소가 이미 연결되었습니다. 연결을 시도하기 전에 구성 요소의 연결을 끊어야 합니다.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|속성 "%1"의 값이 잘못되었습니다.|  

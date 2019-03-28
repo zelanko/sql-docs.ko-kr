@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b9d56775d0754676d22717a193ea6749ae70a11f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638205"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279847"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "51638205"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 결과에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR 또는 DT_STR 데이터 형식이 있는 경우 식의 계산 결과에 대해 4000자 제한이 있었습니다. 이제 이 제한이 제거되었습니다.  
   
- 특정 연산자와 함수를 사용하는 샘플 식은 [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md) 항목에서 각 연산자와 함수에 대한 항목을 참조하세요.  
+ 특정 연산자와 함수를 사용하는 예제 식을 보려면 이 항목의 각 연산자와 함수에 대해 설명된 항목인 [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)를 참조하세요.  
   
  여러 개의 연산자 및 함수뿐만 아니라 식별자와 리터럴도 사용하는 샘플 식은 [고급 Integration Services 식의 예](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)를 참조하세요.  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6d56b9d109935db3adeafd4a3c11139109af8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640470"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280882"
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
   조건부 분할 변환은 데이터 내용에 따라 각 데이터 행을 서로 다른 출력으로 라우팅할 수 있습니다. 조건부 분할 변환의 구현은 프로그래밍 언어의 CASE 의사 결정 구조와 유사합니다. 이 변환은 식을 평가한 후 평가 결과를 기준으로 데이터 행을 지정된 출력으로 보냅니다. 기본 출력도 제공되므로 일치하는 식이 없을 경우 행을 기본 출력으로 보냅니다.  
@@ -62,12 +62,12 @@ ms.locfileid: "51640470"
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [조건부 분할 변환을 사용하여 데이터 집합 분할](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+-   [조건부 분할 변환을 사용하여 데이터 세트 분할](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [조건부 분할 변환을 사용하여 데이터 집합 분할](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용하여 데이터 세트 분할](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
 ## <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
   **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "51640470"
 > [!NOTE]  
 >  조건부 분할 변환에서는 각 입력 행을 하나의 출력에만 전송합니다. 여러 조건을 입력하는 경우 조건부 분할 변환에서는 각 행을 조건이 True가 되는 첫 번째 출력으로 전송하고 해당 행에 대한 다른 조건은 무시합니다. 여러 조건을 연속적으로 평가해야 하는 경우 조건부 분할 변환을 데이터 흐름에서 연결해야 합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **주문**  
  행을 선택하고 오른쪽의 화살표 키를 사용하여 식을 평가하는 순서를 변경합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "51640470"
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](../../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **관련 항목:**  [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](../../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **기본 출력 이름**  
  기본 출력의 이름을 입력하거나 기본값을 사용합니다.  

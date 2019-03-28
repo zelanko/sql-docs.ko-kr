@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8498ac8bbcf8a053497c24fbe8bd7c529a2c4382
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188dd47c28e0faae13e7b41ef09faca542f084bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544706"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274153"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 EXECUTE 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  
@@ -75,7 +75,7 @@ catalog.cleanup_server_log
   
      범위 또는 수준(실행 및 프로젝트) 및 삭제할 키 수를 지정할 수 있습니다. 삭제할 기본 일괄 처리 크기는 1000입니다. 수준을 2로 설정하면 연결된 프로젝트가 삭제된 경우에만 키와 인증서가 삭제됩니다.  
   
- 자세한 내용은 [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)에서 다음 기술 문서를 참조하세요.  
+ 자세한 내용은 다음 기술 자료 문서를 참조하세요. [수정: SQL Server 2012에서 SSISDB를 배포 저장소로 사용하는 경우 성능 문제](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a>예제  
  다음 예제는 cleanup_server_log 저장 프로시저를 호출합니다.  

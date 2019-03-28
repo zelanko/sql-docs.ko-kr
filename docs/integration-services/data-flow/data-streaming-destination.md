@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638610"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278973"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은**SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**(SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
@@ -47,7 +47,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 3.  SQL Server Management Studio에서 SQL 뷰를 실행하고 SSIS 패키지의 결과를 검토합니다. 이 뷰는 사용자가 만든 연결 서버를 통해 SSIS용 OLE DB 공급자에게 쿼리를 전송합니다. SSIS용 OLE DB 공급자는 쿼리에 지정된 패키지를 실행하고 탭 형식의 결과 집합을 반환합니다.  
   
 > [!IMPORTANT]  
->  자세한 단계는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
+>  자세한 단계에 대해서는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
   
 ## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Power BI 관리 센터를 사용하여 SSIS 패키지의 출력 데이터를 OData 피드로 표시  
  IT 관리자는 Power BI 관리 센터를 사용하여 온-프레미스 데이터 원본의 데이터를 사용자에게 OData 피드로 표시할 수 있습니다. Power BI 관리 센터에서는 기본적으로 SQL Server 데이터 원본만 등록할 수 있습니다. 하지만 **데이터 스트리밍 대상** 과 **SQL Server Integration Services(SSISOLEDB)용 Microsoft OLE DB 공급자** 를 사용하면 SSIS 패키지를 데이터 원본으로 등록하고 SSIS 패키지의 결과 데이터를 사용자에게 OData 피드로 표시할 수 있습니다.  
@@ -63,7 +63,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="configure-data-streaming-destination"></a>데이터 스트리밍 대상 구성
   **고급 데이터 스트리밍 대상 편집기** 대화 상자를 사용하여 데이터 스트리밍 대상을 구성합니다. 구성 요소를 두 번 클릭하거나 데이터 흐름 디자이너에서 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭하여 이 대화 상자를 엽니다.  
   
- 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성**의 3개 탭이 있습니다.  
+ 이 대화 상자에는 **구성 요소 속성**, **입력 열**, **입력 및 출력 속성**, 이렇게 3개 탭이 있습니다.  
   
 ## <a name="component-properties-tab"></a>구성 요소 속성 탭  
  이 탭에는 다음과 같은 편집 가능 필드가 있습니다.  

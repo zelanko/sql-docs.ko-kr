@@ -10,26 +10,26 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727631"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279227"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
   Oracle 테이블 및 열 선택 페이지를 사용하여 변경이 캡처되는 Oracle 원본 데이터베이스에서 테이블을 선택할 수 있습니다. 이 페이지는 다음과 같은 요소로 구성되어 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **테이블 목록**  
  테이블 목록은 다음과 같은 세 개의 열이 있습니다.  
   
 -   **Oracle 테이블 이름**: 테이블의 이름(테이블 스키마 포함)입니다.  
   
--   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름 지정에 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
+-   **캡처 인스턴스**: 인스턴스별 변경 데이터 캡처 개체의 이름을 지정하는 데 사용되는 캡처 인스턴스의 이름입니다. 캡처 인스턴스는 NULL일 수 없습니다.  
   
      지정하지 않으면 이름은 원본 스키마 이름에 원본 테이블 이름을 붙인 `<schema-name>_<table-name>`형식으로 파생됩니다. 캡처 인스턴스 이름은 100자를 초과할 수 없으며 데이터베이스 내에서 고유해야 합니다.  
   

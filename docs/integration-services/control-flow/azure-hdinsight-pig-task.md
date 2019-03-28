@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cee619bb2c7e11a1bb6609fcc6a6c1f51ebf6da7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc61b40b94942c03037f237a0fe23e0b54063af1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832911"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272424"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig 태스크
 **Azure HDInsight Pig 태스크** 를 사용하여 Azure HDInsight 클러스터에서 Pig 스크립트를 실행합니다.
@@ -34,7 +34,7 @@ ms.locfileid: "47832911"
   
 2.  **AzureStorageConnection** 필드에서는 기존 Azure Storage 연결 관리자를 선택하거나 클러스터에 연결된 Azure Storage 계정을 참조하는 Storage 연결 관리자를 새로 만듭니다. 스크립트 실행 출력 및 오류 로그를 다운로드하려는 경우에만 필요합니다.
  
-3.  **BlobContainer** 필드의 경우 클러스터와 연결된 저장소 컨테이너 이름을 지정합니다. 스크립트 실행 출력 및 오류 로그를 다운로드하려는 경우에만 필요합니다.
+3.  **BlobContainer** 필드의 경우 클러스터와 연결된 스토리지 컨테이너 이름을 지정합니다. 스크립트 실행 출력 및 오류 로그를 다운로드하려는 경우에만 필요합니다.
   
 4.  **LocalLogFolder** 필드의 경우 스크립트 실행 출력 및 오류 로그를 다운로드할 폴더를 지정합니다. 스크립트 실행 출력 및 오류 로그를 다운로드하려는 경우에만 필요합니다.   
   

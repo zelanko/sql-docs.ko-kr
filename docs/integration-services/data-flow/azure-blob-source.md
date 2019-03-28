@@ -11,24 +11,24 @@ f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c4f6794e5d491fa1b7d935e54d470734a99d10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698771"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282076"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 원본
-  SSIS 패키지는 **Azure Blob 원본** 구성 요소를 통해 Azure Blob에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 CSV 및 AVRO입니다.
+  SSIS 패키지는 **Azure Blob 원본** 구성 요소를 통해 Azure Blob에서 데이터를 읽을 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. CSV와 AVRO.
   
   Azure Blob 원본용 편집기를 표시하려면 데이터 흐름 디자이너에서 **Azure Blob 원본** 을 끌어서 놓고 두 번 클릭하여 편집기를 엽니다.  
   
  **Azure Blob 원본**은 [Azure용 SSIS(SQL Server Integration Services) 기능 팩](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)의 구성 요소입니다.  
   
-1.  **Azure 저장소 연결 관리자** 필드에서는 기존 Azure 저장소 연결 관리자를 지정하거나 Azure 저장소 계정을 참조하는 저장소 연결 관리자를 새로 만듭니다.  
+1.  **Azure 스토리지 연결 관리자** 필드에서는 기존 Azure 스토리지 연결 관리자를 지정하거나 Azure 스토리지 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.  
   
 2.  **Blob 컨테이너 이름** 필드에서는 원본 파일을 포함하는 Blob 컨테이너의 이름을 지정합니다.  
   

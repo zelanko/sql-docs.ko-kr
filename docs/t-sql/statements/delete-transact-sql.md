@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532175"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306231"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,14 +205,14 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 -   행을 삭제하기 전에 힙에 클러스터형 인덱스를 만듭니다. 행이 삭제되고 나면 클러스터형 인덱스를 삭제할 수 있습니다. 이 방법은 앞의 두 방법보다 시간이 오래 걸리며 임시 리소스를 더 많이 사용합니다.  
   
 > [!NOTE]  
->  `ALTER TABLE <table_name> REBUILD`문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
+>  `ALTER TABLE <table_name> REBUILD` 문을 사용하여 언제든지 힙에서 빈 페이지를 제거할 수 있습니다.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
  DELETE 문은 항상 전체 로깅됩니다.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  대상 테이블에 DELETE 권한이 필요합니다. 문에 WHERE 절이 포함되어 있을 경우 SELECT 권한도 필요합니다.  
   
  **sysadmin** 고정 서버 역할의 멤버, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 DELETE 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
@@ -258,7 +258,7 @@ WHERE StandardCost BETWEEN 12.00 AND 14.00
 PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));  
 ```  
   
-#### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>3. 커서를 사용하여 삭제할 행 확인  
+#### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. 커서를 사용하여 삭제할 행 확인  
  다음 예에서는 `EmployeePayHistory` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용하여 `my_cursor`. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```sql
@@ -278,7 +278,7 @@ DEALLOCATE complex_cursor;
 GO  
 ```  
   
-#### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>4. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
+#### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 한 테이블의 데이터에 대한 조인 및 하위 쿼리를 사용하여 다른 테이블의 행 삭제  
  다음 예에서는 한 테이블의 데이터를 기반으로 다른 테이블의 행을 삭제하는 두 가지 방법을 보여 줍니다. 두 예에서 모두 `SalesPerson` 테이블에 저장된 연누계 매출에 기반하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPersonQuotaHistory` 테이블에서 행을 삭제합니다. 첫 번째 `DELETE` 문은 ISO 호환 하위 쿼리 솔루션을 보여 주고 두 번째 `DELETE` 문은 두 테이블을 조인하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 확장을 보여 줍니다.  
   
 ```sql
@@ -314,7 +314,7 @@ DELETE spqh
   WHERE  sp.SalesYTD > 2500000.00;  
 ```  
   
-#### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>5. TOP를 사용하여 삭제되는 행 수 제한  
+#### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP를 사용하여 삭제되는 행 수 제한  
  DELETE 문에 TOP(*n*) 절을 사용하면 *n*개의 행을 임의로 선택하여 삭제 작업이 수행됩니다. 다음 예에서는 `20` 데이터베이스의 `PurchaseOrderDetail` 테이블에서 기한이 2006년 7월 1일 이전인 행 중 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]개의 행을 임의로 선택하여 삭제합니다.  
   
 ```sql
@@ -340,7 +340,7 @@ GO
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
-#### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>6. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
+#### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. 연결된 서버를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 원격 테이블에서 행을 삭제합니다. 먼저 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 원격 데이터 원본에 대한 링크를 만듭니다. 그런 다음, 연결된 서버 이름 `MyLinkServer`가 *server.catalog.schema.object*와 같이 네 부분으로 구성된 개체 이름의 일부로 지정됩니다.  
   
 ```sql
@@ -366,7 +366,7 @@ WHERE DepartmentID > 16;
 GO  
 ```  
   
-#### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>7. OPENQUERY 함수를 사용하여 원격 테이블에서 데이터 삭제  
+#### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. OPENQUERY 함수를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. 이 예에서는 이전 예에서 만든 연결된 서버 이름이 사용됩니다.  
   
 ```sql
@@ -376,7 +376,7 @@ WHERE DepartmentID = 18');
 GO  
 ```  
   
-#### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>8. OPENDATASOURCE 함수를 사용하여 원격 테이블에서 데이터 삭제  
+#### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. OPENDATASOURCE 함수를 사용하여 원격 테이블에서 데이터 삭제  
  다음 예에서는 [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) 행 집합 함수를 지정하여 원격 테이블에서 행을 삭제합니다. *server_name* 또는 *server_name\instance_name* 형식을 사용하여 데이터 원본에 대해 유효한 서버 이름을 지정해야 합니다.  
   
 ```sql
@@ -403,8 +403,8 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>10. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
- 다음 예에서는 `ProductProductPhoto` 문의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 절에 정의된 검색 조건에 따라 `FROM` 데이터베이스의 `DELETE` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
+#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. DELETE 문에 OUTPUT 및 <from_table_name> 사용  
+ 다음 예에서는 `DELETE` 문의 `FROM` 절에 정의된 검색 조건에 따라 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ProductProductPhoto` 테이블에서 행을 삭제합니다. `OUTPUT` 절은 삭제될 테이블의 `DELETED.ProductID`, `DELETED.ProductPhotoID`열과 `Product` 테이블의 열을 반환합니다. 이것은 `FROM` 절에서 삭제할 행을 지정하는 데 사용됩니다.  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
- 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [ OPTION(SQL Server PDW) ](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc)을 참조하십시오.  
+ 이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절(Transact-SQL)](../queries/option-clause-transact-sql.md)을 참조하세요.
   
 ```sql
 -- Uses AdventureWorks  

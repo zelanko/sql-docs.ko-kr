@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0eb8532c10069f50283e13ab997560330dfa5a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea5d30cb17920584c4d4eafdf888eeedbc014e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715371"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282947"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services(SSIS) 규모 확장
 SSIS(SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out에서는 여러 컴퓨터에 패키지 실행을 배포하여 SSIS 패키지의 고성능 실행을 제공합니다. Scale Out을 설정한 후에 SSMS(SQL Server Management Studio)에서 스케일 아웃 모드로 동시에 여러 패키지를 실행할 수 있습니다.
@@ -46,4 +46,4 @@ Scale Out을 설정한 후에 다음과 같은 작업을 수행할 수 있습니
 ## <a name="next-steps"></a>다음 단계
 -   [단일 컴퓨터에서 Integration Services(SSIS) Scale Out 시작](get-started-with-ssis-scale-out-onebox.md)
 
--   [연습: Integration Services 규모 확장 설치](walkthrough-set-up-integration-services-scale-out.md)
+-   [연습: Integration Services Scale Out 설정](walkthrough-set-up-integration-services-scale-out.md)

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.packagepublishwizard.f1
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968ae6356d2f9d9b84b8cf2d5bf6b012b000b7b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0096e6ff64267e6568abd22729f250a4c76adc03
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521229"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281867"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
   이 연습에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 SSIS 패키지를 SQL 뷰로 게시하는 자세한 단계를 제공합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52521229"
   
 5.  도구 상자에서 **데이터 흐름 디자이너** 로 **원본 구성 요소** 를 끌어 와 데이터 원본에서 데이터를 추출하도록 구성합니다.  
   
-    1.  연습을 위해 **Employee** 테이블이 포함된 **TestDB**라는 테스트 데이터베이스를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
+    1.  연습을 위해 **Employee** 테이블이 포함된  **TestDB**라는 테스트 데이터베이스를 만듭니다. **ID**, **FirstName** 및 **LastName**의 세 열이 있는 테이블을 만듭니다.  
   
     2.  **ID** 를 기본 키로 설정합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52521229"
   
          ![데이터 피드 게시 마법사 - 패키지 설정 페이지](../../integration-services/data-flow/media/dsd-feedpublishingwizard-packagesettingspage.jpg "데이터 피드 게시 마법사 - 패키지 설정 페이지")  
   
-    2.  경로 필드 옆의 **찾아보기** 를 클릭하고 SSIS 카탈로그로 이동하여 게시할 SSIS 패키지를 선택(예: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)한 다음 **확인**을 클릭합니다.  
+    2.  경로 필드 옆의 **찾아보기**를 클릭하고 SSIS 카탈로그로 이동하여 게시할 SSIS 패키지를 선택(예: **SSISDB**->**SSISPackagePublishing**->**Package.dtsx**)한 다음, **확인**을 클릭합니다.  
   
          ![데이터 피드 게시 마법사 - 패키지 찾아보기](../../integration-services/data-flow/media/dsd-feedpublishingwizard-browseforpackage.jpg "데이터 피드 게시 마법사 - 패키지 찾아보기")  
   

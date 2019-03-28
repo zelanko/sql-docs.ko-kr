@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858703"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281317"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services(SSIS) 패키지 및 프로젝트 매개 변수
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "51858703"
 ## <a name="create-parameters"></a>Create Parameters
 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트 매개 변수 및 패키지 매개 변수를 만들 수 있습니다. 다음 절차에서는 패키지/프로젝트 매개 변수를 만드는 단계별 지침을 제공합니다.  
   
-> **참고:** 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 만든 프로젝트를 프로젝트 배포 모델로 변환하는 경우 **Integration Services 프로젝트 변환 마법사**를 사용하여 구성에 따라 매개 변수를 만들 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
+> **참고:** 이전 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 를 사용하여 만든 프로젝트를 프로젝트 배포 모델로 변환하는 경우 **Integration Services 프로젝트 변환 마법사** 를 사용하여 구성에 따라 매개 변수를 만들 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 프로젝트 및 패키지 배포](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하세요.  
   
 ### <a name="create-package-parameters"></a>패키지 매개 변수 만들기  
   
@@ -164,7 +164,7 @@ ms.locfileid: "51858703"
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
 **매개 변수화** 대화 상자를 사용하여 새 매개 변수나 기존 매개 변수를 태스크의 속성과 연결할 수 있습니다. 태스크나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름 탭을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수화**를 클릭하여 이 대화 상자를 엽니다. 다음 목록에서는 이 대화 상자의 UI 요소에 대해 설명합니다. 매개 변수에 대한 자세한 내용은 [SSIS(Integration Services) 매개 변수](https://msdn.microsoft.com/library/hh213214.aspx)를 참조하세요.
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **속성**  
  매개 변수와 연결할 태스크의 속성을 선택합니다. 이 목록은 매개 변수화할 수 있는 모든 속성으로 채워집니다.  
   
@@ -214,6 +214,6 @@ ms.locfileid: "51858703"
  Transact-SQL로 서버 기본값을 설정하려면 [catalog.set_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) 저장 프로시저를 사용합니다. 현재 서버 기본값을 보려면 [catalog.object_parameters&#40;SSISDB 데이터베이스&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰를 쿼리합니다. 서버 기본값을 지우려면 [catalog.clear_object_parameter_value&#40;SSISDB 데이터베이스&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) 저장 프로시저를 사용합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- mattmasson.com의 블로그 항목, [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781).  
+ mattmasson.com의 블로그 항목 - [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781).  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b000870562295381c9c61d54327da4ae7059a0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7f67b887e2f035e1ced192a967e2f8cfe2291ff7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542986"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276451"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
   **원본 사용자 지정 속성**  

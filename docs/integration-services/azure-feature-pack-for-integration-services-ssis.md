@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 458df1921c4d5327f06528d356790ed6795ac613
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642160"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280837"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.

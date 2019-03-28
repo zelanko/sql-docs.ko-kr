@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec0f97e29154885d335f8e9073771817b710eefe
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087852"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356476"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
   
 ## <a name="Related"></a> 관련된 뷰, 함수 및 프로시저  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 을(를) 통해 또는 다음 뷰 및 프로시저를 사용하여 쿼리 저장소를 보고 관리할 수 있습니다.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 통해 또는 다음 뷰 및 프로시저를 사용하여 쿼리 저장소를 보고 관리할 수 있습니다.  
 
 ### <a name="query-store-functions"></a>쿼리 저장소 함수  
  함수를 통해 쿼리 저장소에서 작업할 수 있습니다. 

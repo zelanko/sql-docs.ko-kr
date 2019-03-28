@@ -17,15 +17,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8cda7bf1c07cbba3233a94c05d14c5620fa784ce
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535704"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280127"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -190,7 +190,7 @@ ms.locfileid: "52535704"
  **대량 삽입 태스크 편집기**  
  목록에서 OLE DB 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [OLE DB 연결 관리자 구성](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **PackageName**  
  자식 패키지의 이름을 입력하거나 줄임표(...)를 클릭한 다음, 패키지를 찾습니다.  

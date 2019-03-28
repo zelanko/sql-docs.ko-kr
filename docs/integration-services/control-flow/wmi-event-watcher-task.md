@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60ddc7dd6b9afc953017ed076fc9a57a713bc818
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dbbad401e6233478039786d24df0bd15ac21e805
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527637"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272608"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
   WMI 이벤트 감시자 태스크는 WQL(WMI Query Language) 이벤트 쿼리를 사용하여 특정 이벤트를 지정하기 위해 WMI(Windows Management Instrumentation) 이벤트를 감시합니다. WMI 이벤트 감시자 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -110,7 +110,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  WQL(WMI Query Language)에 대한 자세한 내용은 MSDN 라이브러리의 WMI(Windows Management Instrumentation) 항목인 [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(WQL을 사용하여 쿼리)을 참조하세요.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  WMI 이벤트 감시자 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -168,7 +168,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
  **WQLQuerySource**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = 변수  
  **WQLQuerySource**  

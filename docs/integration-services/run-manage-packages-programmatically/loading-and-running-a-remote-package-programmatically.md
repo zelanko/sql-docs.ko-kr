@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640031"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274669"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>프로그래밍 방식으로 원격 패키지 로드 및 실행
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않은 로컬 컴퓨터에서 원격 패키지를 실행하려면 패키지를 시작할 때 해당 패키지가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치된 원격 컴퓨터에서 실행되도록 합니다. 이렇게 하려면 로컬 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 웹 서비스 또는 원격 구성 요소를 사용하여 원격 컴퓨터에서 패키지를 시작하도록 합니다. 로컬 컴퓨터에서 직접 원격 패키지를 시작하면 패키지가 로컬 컴퓨터로 로드되어 로컬 컴퓨터에서 실행됩니다. 로컬 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되어 있지 않으면 패키지가 실행되지 않습니다.  

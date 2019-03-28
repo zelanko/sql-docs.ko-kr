@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808291"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273428"
 ---
 # <a name="odbc-destination"></a>ODBC 대상
   ODBC 대상은 ODBC 지원 데이터베이스 테이블로 데이터를 대량 로드합니다. ODBC 대상은 ODBC 연결 관리자를 사용하여 데이터 원본에 연결합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47808291"
   
 -   **일괄 처리**: 이 모드에서는 ODBC 대상이 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 삽입 메서드를 사용하려고 합니다. 대부분의 요즘 ODBC 공급자에게 이는 매개 변수가 포함된 INSERT 문을 준비한 다음 행 단위 배열 매개 변수 바인딩을 사용해야 함을 의미할 수 있습니다(배열 크기는 **BatchSize** 속성으로 제어됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
--   **행 단위**: 이 모드에서는 ODBC 대상이 매개 변수가 포함된 INSERT 문을 준비하고 **SQL 실행** 을 사용하여 한 번에 하나씩 행을 삽입합니다.  
+-   **행 단위**: 이 모드에서는 ODBC 대상이 매개 변수가 포함된 INSERT 문을 준비하고 **SQL Execute**를 사용하여 한 번에 하나씩 행을 삽입합니다.  
   
 ## <a name="error-handling"></a>오류 처리  
  ODBC 대상에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "47808291"
   
 -   **ODBC 대상 편집기**에서 **연결 관리자**를 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="connection-manager"></a>ODBC 대상 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 새로 만들기를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "47808291"
 ## <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
   **ODBC 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="available-input-columns"></a>사용 가능한 입력 열  
  사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "47808291"
   
 -   **ODBC 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  

@@ -1,7 +1,7 @@
 ---
 title: XML 스키마 컬렉션(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255718"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375291"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255718"
   
  예를 들어 다음 스키마를 고려해 보십시오.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255718"
 |**blockDefault**|아직 제공되지 않았고 값이 **blockDefault** 특성의 값으로 설정된 모든 요소 선언 및 유형 정의에 적용된 **block** 특성입니다.|  
 |**finalDefault**|아직 제공되지 않았고 값이 **finalDefault** 특성의 값으로 설정된 모든 요소 선언 및 유형 정의에 적용된 **final** 특성입니다.|  
 |**targetNamespace**|대상 네임스페이스에 속하는 구성 요소에 대한 정보는 메타데이터에 저장됩니다.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> XML 스키마 컬렉션에 대한 사용 권한  
  다음을 수행하는 데 필요한 권한이 있어야 합니다.  
@@ -176,7 +177,7 @@ ms.locfileid: "54255718"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>예: XML 스키마 컬렉션에 XML 네임스페이스 열거  
  XML 스키마 컬렉션 "myCollection"에 대해 다음 쿼리를 사용합니다.  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>예: XML 스키마 컬렉션의 내용 열거  
  다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"의 내용을 열거합니다.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  컬렉션 내의 개별 XML 스키마는 **XML_SCHEMA_NAMESPACE()** 에 대한 세 번째 인수로 대상 네임스페이스를 지정하여 **xml**데이터 형식의 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
- 다음 명령문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 <https://www.microsoft.com/books>인 XML 스키마를 출력합니다.  
+ 다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 _가짜_ 대상 네임스페이스가 https/\/www.microsoft.com/was-books인 XML 스키마를 출력합니다.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>XML 스키마 쿼리  

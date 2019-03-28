@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639900"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281967"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
@@ -116,12 +116,12 @@ ms.locfileid: "51639900"
  **데이터 마이닝 쿼리**  
  데이터 마이닝 쿼리를 입력합니다.  
   
- **관련 항목:** [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **관련 항목:**  [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **새 쿼리 작성**  
  그래픽 도구를 사용하여 데이터 마이닝 쿼리를 만듭니다.  
   
- **관련 항목:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **관련 항목:** [데이터 마이닝 쿼리](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>매개 변수 매핑 탭 옵션  
  **매개 변수 이름**  

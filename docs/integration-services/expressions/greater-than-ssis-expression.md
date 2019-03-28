@@ -11,15 +11,15 @@ helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec382096c3e1933bd125884e5a8fc8552cec29bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67f493fc040e090294afa9671123613f5acac50a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828401"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274069"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt;(보다 큼)(SSIS 식)
   비교를 수행하여 첫 번째 식이 두 번째 식보다 큰지 확인합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  
@@ -56,7 +56,7 @@ expression1 > expression2
     > [!NOTE]  
     >  문자열 비교는 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다.  
   
--   **Date, Time 또는 Date/Time** *expression1* 및 *expression2* 모두는 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  

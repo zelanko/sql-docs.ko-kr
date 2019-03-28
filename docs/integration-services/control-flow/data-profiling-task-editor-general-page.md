@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae626cfb67bbc2041a150940f2a03bb73dfb9b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764465"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290489"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "47764465"
 |**FileConnection**|파일 연결 관리자에서 지정한 위치에 있는 파일에 프로필 출력을 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 파일 연결 관리자를 지정합니다.|  
 |**변수**|프로필 출력을 패키지 변수에 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 패키지 변수를 지정합니다.|  
   
- **Destination**  
+ **대상**  
  데이터 프로필 출력을 포함할 파일 연결 관리자 또는 패키지 변수를 지정합니다.  
   
 -   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<새 파일 연결>을 선택하여 새 파일 연결 관리자를 만듭니다.  

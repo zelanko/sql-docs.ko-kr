@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 14b086c18dab363ca1c9afe7816d802d5a5262f3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072317"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417155"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -92,18 +92,19 @@ ms.locfileid: "58072317"
 >[!NOTE]
 >호스트 키 증명은 테스트 환경에서만 사용하는 것이 좋습니다. 프로덕션 환경에서는 TPM 증명을 사용해야 합니다.
 
-1. 관리자 권한으로 SQL Server 컴퓨터에 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 연 다음, 보호된 호스트 기능을 설치하고 Hyper-V(아직 설치되지 않은 경우)도 설치합니다.
+1. 관리자 권한으로 SQL Server 컴퓨터에 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 연 다음, computername 변수에 액세스하여 컴퓨터의 이름을 검색합니다.
+
+   ```powershell
+   $env:computername 
+   ```
+
+2. 보호된 호스트 기능을 설치합니다. 이렇게 하면 Hyper-V(아직 설치되지 않은 경우)도 설치됩니다.
 
    ```powershell
    Enable-WindowsOptionalFeature -Online -FeatureName HostGuardian -All
    ```
 
-2. Hyper-V 설치를 완료하라는 메시지가 표시되면 SQL Server 컴퓨터를 다시 시작합니다.
-3. 아래 변수 값을 검색하여 SQL Server 컴퓨터의 이름을 확인합니다.
-
-   ```powershell
-   $env:computername 
-   ```
+3. Hyper-V 설치를 완료하라는 메시지가 표시되면 SQL Server 컴퓨터를 다시 시작합니다.
 
 4. SQL Server 컴퓨터에 관리자 권한으로 다시 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 열고 고유한 호스트 키를 생성한 다음, 결과 공개 키를 파일로 내보냅니다.
 
@@ -112,14 +113,15 @@ ms.locfileid: "58072317"
    Get-HgsClientHostKey -Path $HOME\Desktop\hostkey.cer
    ```
 
-5. 이전 단계에서 생성한 호스트 키 파일을 HGS 머신에 복사합니다. 아래 지침에서는 파일 이름이 hostkey.cer이고 HGS 머신의 데스크톱으로 복사 중이라고 가정합니다.
+5. 이전 단계에서 생성한 호스트 키 파일을 HGS 머신에 수동으로 복사합니다. 아래 지침에서는 파일 이름이 hostkey.cer이고 HGS 머신의 데스크톱으로 복사 중이라고 가정합니다.
+
 6. HGS 컴퓨터에서 관리자 권한의 Windows PowerShell 콘솔을 열고 HGS에 SQL Server 컴퓨터의 호스트 키를 등록합니다.
 
    ```powershell
    Add-HgsAttestationHostKey -Name <your SQL Server computer name> -Path $HOME\Desktop\hostkey.cer
    ```
 
-7. SQL Server 컴퓨터의 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 증명할 위치를 SQL Server 컴퓨터에 알려 줍니다. HGS 컴퓨터의 IP 주소 또는 DNS 이름을 지정해야 합니다. 
+7. SQL Server 컴퓨터의 관리자 권한 Windows PowerShell 콘솔에서 다음 명령을 실행하여 증명할 위치를 SQL Server 컴퓨터에 알려 줍니다. 두 주소 위치 모두에서 HGS 컴퓨터의 IP 주소 또는 DNS 이름을 지정해야 합니다. 
 
    ```powershell
    # use http, and not https
@@ -183,6 +185,9 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 3. 새로 만든 데이터베이스에 연결되어 있는지 확인합니다. 이름이 Employees인 새 테이블을 만듭니다.
 
     ```sql
+    USE [ContosoHR];
+    GO
+    
     CREATE TABLE [dbo].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
@@ -305,6 +310,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     SELECT * FROM [dbo].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
+3. Always Encrypted를 사용하도록 설정되지 않은 쿼리 창에서 동일한 쿼리를 다시 시도하고 발생하는 오류를 확인합니다.
 
 ## <a name="next-steps"></a>Next Steps
 다른 사용 사례에 대한 내용은 [보안 Enclave를 사용한 Always Encrypted 구성](encryption/configure-always-encrypted-enclaves.md)을 참조하세요. 다음을 수행해 볼 수도 있습니다.

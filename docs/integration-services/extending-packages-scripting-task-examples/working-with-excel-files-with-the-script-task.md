@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e39c96672016f19ecc6506d48266da70e0edf1b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529590"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274875"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>스크립트 태스크를 사용한 Excel 파일 작업
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 파일 형식으로 스프레드시트에 저장된 데이터를 작업하기 위한 Excel 연결 관리자, Excel 원본 및 Excel 대상을 제공합니다. 이 항목에서는 스크립트 태스크를 사용하여 사용 가능한 Excel 데이터베이스(통합 문서 파일) 및 테이블(워크시트 및 명명된 범위)에 대한 정보를 가져오는 기술을 설명합니다.

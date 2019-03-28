@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512897"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281877"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services(SSIS) 변수
   변수에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지와 해당 컨테이너, 태스크 및 이벤트 처리기에서 런타임에 사용할 수 있는 값이 저장됩니다. 스크립트 태스크와 스크립트 구성 요소의 스크립트에서도 변수가 사용될 수 있습니다. 태스크 및 컨테이너의 순서를 워크플로에 지정하는 선행 제약 조건에서는 해당 제약 조건 정의에 식이 포함된 경우에 변수가 사용될 수 있습니다.  
@@ -192,7 +192,7 @@ ms.locfileid: "52512897"
 ### <a name="add-variable-dialog-box"></a>변수 추가 대화 상자
 **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **컨테이너**  
  목록에서 컨테이너를 선택합니다. 컨테이너는 변수의 범위를 정의합니다. 컨테이너는 패키지 또는 패키지의 실행 파일일 수 있습니다.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "52512897"
   
 -   변수 창.  
   
--   속성 창. **속성** 창에는 **변수** 창에서 사용할 수 없는 변수를 구성하기 위한 Description, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump 속성이 나열됩니다.  
+-   속성 창. **속성** 창에는 **변수** 창에서 사용할 수 없는 변수를 구성하기 위한 속성인 Description, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump가 나열됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 속성을 업데이트할 수 없는 시스템 변수 집합도 제공합니다(RaiseChangedEvent 속성은 제외).  

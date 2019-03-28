@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733661"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283065"
 ---
 # <a name="precedence-constraints"></a>선행 제약 조건
   선행 제약 조건은 패키지에 있는 실행 개체, 컨테이너 및 태스크를 제어 흐름으로 연결하고 실행 개체의 실행 여부를 결정하는 조건을 지정합니다. 실행 개체는 For 루프, Foreach 루프 또는 시퀀스 컨테이너나 태스크 또는 이벤트 처리기일 수 있습니다. 또한 이벤트 처리기에서는 해당 실행 개체를 제어 흐름으로 연결하기 위해 선행 제약 조건이 사용됩니다.  
@@ -109,12 +109,12 @@ ms.locfileid: "47733661"
 ## <a name="precedence-constraint-editor"></a>선행 제약 조건 편집기
 **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건을 구성할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **평가 작업**  
- 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
+ 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
  **Value**  
- 제약 조건 값을 **성공**, **실패**또는 **완료**로 지정합니다.  
+ 제약 조건 값을 지정합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  선행 제약 조건 줄은 **성공**인 경우 녹색으로 표시되고 **실패**인 경우 강조 표시되고 **완료**인 경우 파란색으로 표시됩니다.  
@@ -237,7 +237,7 @@ ms.locfileid: "47733661"
 ### <a name="logicaland-property"></a>LogicalAnd 속성  
  태스크 또는 컨테이너에 여러 제약 조건이 있는 경우 **LogicalAnd** 속성은 선행 제약 조건이 그 자체로만 평가되는지 또는 다른 제약 조건과 함께 평가되는지 여부를 지정합니다.  
   
- **LogicalAnd** 속성은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 속성 창에서 **선행 제약 조건 편집기**를 사용하여 설정할 수 있습니다.  
+ **LogicalAnd** 속성은 **디자이너 또는** 에서 제공하는 속성 창에서 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 선행 제약 조건 편집기 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 설정할 수 있습니다.  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>선행 제약 조건에 대한 기본값 설정  
 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 처음 사용할 때 선행 제약 조건의 기본값은 **Success**입니다. 다음 단계에 따라 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 구성하고 선행 제약 조건에 대해 다른 기본값을 사용하십시오.

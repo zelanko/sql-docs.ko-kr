@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528599"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288779"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>1-3단원 - 패키지 및 기타 파일 추가
 이 태스크에서는 기존 패키지, 개별 패키지를 지원하는 보조 파일 및 추가 정보를 이전 태스크에서 만든 Deployment Tutorial 프로젝트에 추가합니다. 예를 들어 패키지에 대한 데이터가 포함된 XML 데이터 파일과 프로젝트의 모든 패키지에 대한 추가 정보를 제공하는 텍스트 파일을 추가합니다.  

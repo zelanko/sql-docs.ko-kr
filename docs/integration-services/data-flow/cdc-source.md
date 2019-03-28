@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642244"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290539"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -135,7 +135,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **연결 관리자**를 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **ADO.NET 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. CDC에 사용할 수 있고 선택한 변경 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결해야 합니다.  
   
@@ -157,7 +157,7 @@ use <cdc-enabled-database-name>
   
 -   **이전 값이 포함된 모두**: 이전 값(**업데이트 전**)을 포함한 현재 CDC 처리 범위의 변경 내용을 반환합니다. 각 업데이트 작업에 대해 두 행이 있습니다. 이 중 한 행에는 업데이트 전 값이 포함되어 있고 다른 한 행에는 업데이트 후 값이 포함되어 있습니다.  
   
--   **순 변경 내용**: 현재 CDC 처리 범위에서 수정된 원본 행당 하나의 변경 행만 반환합니다. 원본 행이 여러 번 업데이트된 경우에는 결합된 변경 내용이 생성됩니다. 예를 들어 삽입+업데이트는 단일 업데이트로 생성되고 업데이트+삭제는 단일 삭제로 생성됩니다. 순 변경 내용 처리 모드에서 작업할 경우 단일 원본 행이 두 개 이상의 출력에 나타나므로 변경 내용을 삭제, 삽입 및 업데이트 출력으로 분할하고 해당 출력을 병렬로 처리할 수 있습니다.  
+-   **Net**: 현재 CDC 처리 범위에서 수정된 원본 행당 하나의 변경 행만 반환합니다. 원본 행이 여러 번 업데이트된 경우에는 결합된 변경 내용이 생성됩니다. 예를 들어 삽입+업데이트는 단일 업데이트로 생성되고 업데이트+삭제는 단일 삭제로 생성됩니다. 순 변경 내용 처리 모드에서 작업할 경우 단일 원본 행이 두 개 이상의 출력에 나타나므로 변경 내용을 삭제, 삽입 및 업데이트 출력으로 분할하고 해당 출력을 병렬로 처리할 수 있습니다.  
   
 -   **업데이트 마스크를 사용한 순 변경 내용**: 이 모드는 일반적인 순 변경 내용 모드와 비슷하지만 현재 변경 행에서 변경된 열을 나타내고 이름 패턴이 **__$\<column-name>\__Changed**인 부울 열도 추가합니다.  
   
@@ -188,7 +188,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **열**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 외부 열의 목록입니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다. 원본에서 사용할 열을 선택합니다. 선택한 열이 선택 순서대로 **외부 열** 목록에 추가됩니다.  
   
@@ -210,7 +210,7 @@ use <cdc-enabled-database-name>
   
 3.  **CDC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

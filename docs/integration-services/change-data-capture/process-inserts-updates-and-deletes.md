@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 485618b3e013d1abff0c52d2625357c2ed9951ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31dd335814a54e44b7db90c26a13b4417734a384
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722541"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289649"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>삽입, 업데이트 및 삭제 처리
   변경 데이터를 증분 로드하는 Integration Services 패키지의 데이터 흐름에서 두 번째 태스크는 삽입, 업데이트 및 삭제를 구분하는 것입니다. 그런 다음 적절한 명령을 사용하여 대상에 해당 작업을 적용할 수 있습니다.  
@@ -72,6 +72,6 @@ select
   
 ## <a name="see-also"></a>참고 항목  
  [조건부 분할 변환](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [조건부 분할 변환을 사용하여 데이터 집합 분할](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용하여 데이터 세트 분할](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

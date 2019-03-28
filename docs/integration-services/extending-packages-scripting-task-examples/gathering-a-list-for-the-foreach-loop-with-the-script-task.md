@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640050"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270776"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>스크립트 태스크를 사용하여 ForEach 루프에 사용할 목록 수집
   Foreach from Variable 열거자는 변수에서 해당 열거자에 전달된 목록의 항목을 열거하고 각 항목에 대해 동일한 태스크를 수행합니다. 스크립트 태스크에서 사용자 지정 코드를 사용하여 이러한 용도로 사용할 목록을 채울 수 있습니다. 이 열거자에 대한 자세한 내용은 [Foreach 루프 컨테이너](../../integration-services/control-flow/foreach-loop-container.md)를 참조하세요.  
@@ -33,7 +33,7 @@ ms.locfileid: "51640050"
  다음 예에서는 **System.IO** 네임스페이스에서 메서드를 사용하여 컴퓨터에서 만든 날짜 또는 수정한 날짜가 사용자가 변수에 지정한 일 수를 경과하지 않았거나 경과한 Excel 통합 문서의 목록을 수집합니다. 이 예에서는 C 드라이브의 디렉터리에서 확장명이 .xls인 파일을 재귀적으로 검색하고 각 파일을 마지막으로 수정한 날짜를 검사하여 목록에 포함할 파일인지 확인합니다. 그런 다음 조건에 맞는 파일을 **ArrayList**에 추가하고 이 **ArrayList**를 Foreach 루프 컨테이너에서 나중에 사용할 수 있도록 변수에 저장합니다. Foreach 루프 컨테이너는 Foreach from Variable 열거자를 사용하도록 구성됩니다.  
   
 > [!NOTE]  
->  Foreach from Variable 열거자와 함께 사용하는 변수는 **개체** 형식이어야 합니다. 변수에 배치하는 개체는 **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** 또는 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** 인터페이스 중 하나를 구현해야 합니다. **배열** 또는 **ArrayList**가 주로 사용됩니다. **ArrayList**를 사용하려면 **System.Collections** 네임스페이스에 대한 참조 및 **Imports** 문이 필요합니다.  
+>  Foreach from Variable 열거자와 함께 사용하는 변수는 **개체** 형식이어야 합니다. 이 변수에 추가하는 개체는 **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** 또는 **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** 인터페이스 중 하나를 구현해야 합니다. **배열** 또는 **ArrayList**가 주로 사용됩니다. **ArrayList**를 사용하려면 **System.Collections** 네임스페이스에 대한 참조 및 **Imports** 문이 필요합니다.  
   
  `FileAge` 패키지 변수에 각기 다른 양수 및 음수 값을 사용하여 이 태스크를 시험해 볼 수 있습니다. 예를 들어 만든 지 5일이 지나지 않은 파일을 검색하려면 5를 입력하고, 만든 지 3일이 지난 파일을 검색하려면 -3을 입력합니다. 드라이브에 검색할 폴더가 많은 경우 이 태스크를 수행하는 데 1~2분 정도 소요될 수 있습니다.  
   

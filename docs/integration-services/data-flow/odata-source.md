@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638661"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290619"
 ---
 # <a name="odata-source"></a>OData 원본
 SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다.
@@ -102,12 +102,12 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>컬렉션 또는 리소스 경로 사용 = 리소스 경로  
  **Resource path**  
- 리소스 경로를 입력합니다. 예: Employees  
+ 리소스 경로를 입력합니다. 예를 들어 다음과 같이 사용할 수 있습니다. Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>OData 원본 편집기(열 페이지)
   **OData 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력에 포함될 외부(원본) 열을 선택하고 출력 열에 매핑할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **사용 가능한 외부 열**  
  데이터 원본에서 사용 가능한 원본 열의 목록을 표시합니다. 목록의 확인란을 사용하여 페이지의 아래쪽에 있는 테이블에 열을 추가하거나 제거할 수 있습니다. 선택한 열이 출력에 추가됩니다.  
   
@@ -120,7 +120,7 @@ OData 원본은 단순 데이터 형식 int, byte[], bool, byte, DateTime, DateT
 ## <a name="odata-source-editor-error-output-page"></a>OData 원본 편집기(오류 출력 페이지)
   **OData 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   

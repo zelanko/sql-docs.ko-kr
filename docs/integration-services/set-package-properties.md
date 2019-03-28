@@ -23,15 +23,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525259"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277382"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d842af4f5e9245836e595c02a8adebfeaae3dba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6b03494d1c74313eb6e0698e96062869b9e08cfa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639330"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270988"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
   파생 열 변환은 변환 입력 열에 식을 적용하여 새로운 열 값을 만듭니다. 변환 입력의 변수, 함수, 연산자 및 열의 모든 조합이 식에 포함될 수 있습니다. 결과는 새 열로 추가하거나 기존 열에 대체 값으로 삽입할 수 있습니다. 파생 열 변환은 여러 개의 파생 열을 정의할 수 있으며 임의의 변수 또는 입력 열이 여러 개의 식에 사용될 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "51639330"
 ## <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **변수 및 열**  
  사용 가능한 변수 및 열 목록에서 아래 창의 기존 테이블 행이나 목록 아래쪽의 새 행으로 변수 또는 열을 끌어 변수 또는 입력 열을 사용하는 식을 작성합니다.  
   

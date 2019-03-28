@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677661"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280897"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>2-1단원 - 배포 유틸리티 작성
 이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  

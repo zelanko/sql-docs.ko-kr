@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb7cf5fed46000c77634ad0c5461b926d6c361dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c89571f4f1447574e50ceb1ad7c487badbc551d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524507"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277952"
 ---
 # <a name="ole-db-custom-properties"></a>OLE DB 사용자 지정 속성
   **원본 사용자 지정 속성**  

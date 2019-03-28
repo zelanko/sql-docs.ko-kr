@@ -15,12 +15,12 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74e855fbb1972abcbc9e5707ee17d334f33632c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533025"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 차등 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "48104883"
   
 #### <a name="to-create-a-differential-database-backup"></a>차등 데이터베이스 백업을 만들려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48104883"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 `MyAdvWorks` 데이터베이스에 대한 전체 및 차등 데이터베이스 백업을 만듭니다.  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ba5c332b775d379a1b27db5435c29bb84851c80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634341"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276684"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 인스턴스
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 캡처된 변경 내용을 처리하기 위해 Oracle CDC Service에서 만든 프로세스입니다. Oracle CDC 인스턴스는 **cdc.xdbcdc_config** 테이블에서 구성을 검색하고 **cdc.xdbcdc_state** 테이블에서 상태를 유지 관리합니다. 이러한 테이블은 Oracle CDC 인스턴스를 정의하는 CDC 데이터베이스의 일부입니다. xdbcdc 데이터베이스 및 테이블에 대한 자세한 내용은 [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)를 참조하십시오.  
@@ -29,7 +29,7 @@ ms.locfileid: "47634341"
   
 -   **Oracle에서 변경 내용 캡처**: Oracle CDC 인스턴스는 Oracle LogMiner 기능을 사용하여 Oracle에서 변경 내용을 풀링하여 트랜잭션 커밋에 따라 정렬한 다음 트랜잭션 시간을 변경하여 CDC 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 테이블에 기록합니다.  
   
--   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에 의해 관리됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
+-   **서비스 종료 처리**: Oracle CDC 인스턴스의 수명 주기는 Oracle CDC Service에 의해 관리 됩니다. Oracle CDC 인스턴스는 종료하도록 요청되면 다음 태스크를 수행합니다.  
   
     -   Oracle 트랜잭션 로그 읽기를 중지합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "47634341"
   
 -   **구성 변경 처리**: Oracle CDC 인스턴스는 **cdc.xdbcdc_config** 테이블에서 새 버전을 검색하거나 CDC Service를 통해 구성 변경에 대한 알림을 받습니다. 대부분의 변경(예: 캡처 인스턴스 추가 또는 제거)은 Oracle CDC 인스턴스를 다시 시작할 필요가 없습니다. 일부 변경(예: Oracle 연결 문자열 또는 액세스 자격 증명 변경)은 CDC 인스턴스를 다시 시작해야 합니다.  
   
--   **복원 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
+-   **복구 처리**: Oracle CDC 인스턴스가 시작되면 내부 상태가 **xdbcdc_state** 및 **xdbcdc_staged_transactions** 테이블에서 복원됩니다. 상태가 복원되면 CDC 인스턴스가 평소와 같이 진행됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [오류 처리](../../integration-services/change-data-capture/error-handling.md)  

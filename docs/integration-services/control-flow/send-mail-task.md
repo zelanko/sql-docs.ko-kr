@@ -18,15 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528451"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271476"
 ---
 # <a name="send-mail-task"></a>메일 보내기 태스크
   메일 보내기 태스크는 전자 메일 메시지를 보냅니다. 메일 보내기 태스크를 사용하면 패키지 워크플로의 태스크 성공 여부에 관계없이 패키지가 메시지를 보낼 수 있거나 런타임 시 패키지에서 발생한 이벤트에 응답하여 메시지를 보낼 수 있습니다. 예를 들어 이 태스크는 데이터베이스 백업 태스크의 성공 또는 실패에 대해 데이터베이스 관리자에게 알릴 수 있습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "52528451"
 ## <a name="send-mail-task-editor-general-page"></a>메일 보내기 태스크 편집기(일반 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **일반 페이지** 를 사용하여 메일 보내기 태스크의 이름을 지정하고 설명할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  메일 보내기 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52528451"
 ## <a name="send-mail-task-editor-mail-page"></a>메일 보내기 태스크 편집기(메일 페이지)
   **메일 보내기 태스크 편집기** 대화 상자의 **메일** 페이지를 사용하여 받는 사람, 메시지 유형 및 메시지 우선 순위를 지정할 수 있습니다. 또한 메시지에 파일을 첨부할 수 있습니다. 메시지 텍스트는 사용자가 제공한 문자열, 텍스트가 포함된 파일에 대한 파일 연결 또는 텍스트가 포함된 변수 이름일 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **SMTPConnection**  
  목록에서 SMTP 연결 관리자를 선택하거나 **\<새 연결...>** 을 클릭하여 새 연결 관리자를 만듭니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "52528451"
  **MessageSource**  
  목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
- **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = 변수  
  **MessageSource**  

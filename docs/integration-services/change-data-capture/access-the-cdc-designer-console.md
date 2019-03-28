@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - accMsDes
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f933b61b59666bb960fa79725a063fa2165fb9ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f100526ed890b3c180d0d0e948da81081c0171ab
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768181"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277802"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
   콘솔을 설치한 컴퓨터에서 CDC Designer 콘솔에 액세스할 수 있습니다. 설치에 대한 자세한 내용은 설치를 참조하십시오.  
@@ -37,11 +37,11 @@ ms.locfileid: "47768181"
   
 -   **Windows 인증**  
   
--   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 **에서 사용자의** 로그인 **및** 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 입력해야 합니다.  
+-   **SQL Server 인증**: 이 옵션을 선택하는 경우 연결 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자의 **로그인** 및 **암호**를 입력해야 합니다.  
   
  MSXCDCDB 데이터베이스에 대한 액세스를 허용하는 데이터베이스 역할이 로그인에 있어야 합니다. 사용 중인 모든 추가 데이터베이스에 대한 액세스 권한도 있는 것이 좋습니다. 그렇지 않으면 사용자가 해당 데이터베이스의 데이터를 볼 수 없습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
  **연결 제한 시간**  
@@ -51,7 +51,7 @@ ms.locfileid: "47768181"
  제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
   
  **연결 암호화**  
- 암호화된 연결을 사용하는 대상 **인스턴스와 Oracle CDC Service 사이의 통신을 위해** 연결 암호화 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.**고급**: 필요한 경우 **고급** 을 클릭하고 고급 연결 속성 대화 상자에 추가 연결 속성을 입력합니다.  
+ 암호화된 연결을 사용하는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 Oracle CDC Service 사이의 통신을 위해 **연결 암호화**를 선택합니다.**고급**: **고급** 을 클릭하고 필요한 경우 고급 연결 속성 대화 상자에 추가 연결 속성을 입력합니다.  
   
  **고급**  
  **고급** 을 클릭하고 필요한 경우 고급 연결 속성 대화 상자에 추가 연결 속성을 입력합니다.  

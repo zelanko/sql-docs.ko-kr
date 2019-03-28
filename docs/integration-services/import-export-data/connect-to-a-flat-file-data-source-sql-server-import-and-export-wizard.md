@@ -3,20 +3,19 @@ title: 플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내�
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393717"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222137"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 이 항목에서는 SQL Server 가져오기 및 내보내기 마법사의 **데이터 원본 선택** 또는 **대상 선택** 페이지에서 **플랫 파일**(텍스트 파일) 데이터 원본에 연결하는 방법을 보여 줍니다. 플랫 파일의 경우, 마법사의 이 두 페이지는 다양한 옵션 집합을 제시하므로 이 항목에서는 플랫 파일 원본과 플랫 파일 대상을 별도로 설명합니다.
@@ -212,7 +211,7 @@ ms.locfileid: "52393717"
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다.|
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다.<br/>자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|
 |**OutputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 이 값은 문자 수입니다. 데이터 흐름 태스크에서 이 값은 플랫 파일 원본의 출력 열 너비를 설정하는 데 사용됩니다. 개체 모델에서 이 속성의 이름은 MaximumWidth입니다.|  
-|**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자로 묶였는지 여부를 나타냅니다.<br /><br /> True: 플랫 파일의 텍스트 데이터가 한정됩니다. False: 플랫 파일의 텍스트 데이터가 한정되지 않습니다.|  
+|**TextQualified**|텍스트 데이터가 인용 문자 등의 텍스트 한정자로 묶였는지 여부를 나타냅니다.<br /><br /> True: 플랫 파일의 텍스트 데이터가 한정됩니다. False: 플랫 파일의 텍스트 데이터가 한정되지 않았습니다.|  
   
 **새로 만들기**  
  **새로 만들기**를 클릭하여 새 열을 추가합니다. 기본적으로 **새로 만들기** 단추는 목록 끝에 새 열을 추가합니다. 이 단추에는 드롭다운 목록에서 사용할 수 있는 다음 옵션도 있습니다.  

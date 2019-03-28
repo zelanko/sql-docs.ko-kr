@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694512"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289839"
 ---
 # <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "47694512"
   
 -   **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="connection-manager"></a>ODBC 원본 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "47694512"
   
 3.  **ODBC 원본 편집기**에서 **열**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="available-external-columns"></a>사용 가능한 외부 열  
  데이터 원본에서 사용 가능한 외부 열의 목록입니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다. 원본에서 사용할 열을 선택합니다. 선택한 열이 선택 순서대로 **외부 열** 목록에 추가됩니다.  
@@ -157,7 +157,7 @@ ms.locfileid: "47694512"
   
 -   **ODBC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
   
 #### <a name="inputoutput"></a>입/출력  
  데이터 원본의 이름을 표시합니다.  

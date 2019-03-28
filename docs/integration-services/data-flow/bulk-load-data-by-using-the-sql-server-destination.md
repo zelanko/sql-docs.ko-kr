@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669501"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274360"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 대상을 사용하여 데이터 대량 로드
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47669501"
   
 5.  대상을 두 번 클릭합니다.  
   
-6.  **SQL Server 대상 편집기**의 **연결 관리자** 페이지에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)을 참조하세요.  
+6.  **SQL Server 대상 편집기**의 **연결 관리자** 페이지에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
 7.  데이터를 로드할 테이블 또는 뷰를 지정하려면 다음 중 하나를 수행하십시오.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47669501"
     > [!NOTE]  
     >  대상은 같은 이름의 열로 자동으로 매핑됩니다.  
   
-9. **고급** 을 클릭하고 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**및 **트리거 실행**과 같은 대량 로드 옵션을 설정합니다.  
+9. **고급**을 클릭하고 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건** 및 **트리거 실행**과 같은 대량 로드 옵션을 설정합니다.  
   
      선택적으로 삽입할 첫 번째와 마지막 입력 행, 삽입 작업이 중지되기 전에 발생할 수 있는 최대 오류 개수 및 삽입이 정렬될 열을 지정합니다.  
   

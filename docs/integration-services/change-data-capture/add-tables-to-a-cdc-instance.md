@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d437fe81da2d8aefdba67f7a8501202ce79459c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694641"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273659"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC 인스턴스에 테이블 추가
   테이블 선택 대화 상자를 사용하여 Oracle 원본에서 CDC 인스턴스로 다른 테이블을 추가할 수 있습니다. 선택한 테이블이 속성 편집기의 **테이블** 탭에 있는 목록에 추가됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47694641"
 > [!NOTE]  
 >  이러한 필드 중 하나 또는 모두에 조건을 입력할 수 있습니다.  
   
--   **처음 1,000개의 일치하는 테이블 표시**: 기본적으로 이 확인란은 선택되어 있습니다. 이 옵션은 처음 1000개의 일치하는 테이블로 표시를 제한합니다. 이 확인란을 선택하지 않으면 조건과 일치하는 모든 테이블이 표시됩니다. 따라서 많은 테이블이 있는 경우 목록을 표시하는 데 많은 시간이 걸릴 수 있습니다.  
+-   **처음 1000개의 일치하는 테이블 표시**: 기본적으로 이 확인란은 선택되어 있습니다. 이 옵션은 처음 1000개의 일치하는 테이블로 표시를 제한합니다. 이 확인란을 선택하지 않으면 조건과 일치하는 모든 테이블이 표시됩니다. 따라서 많은 테이블이 있는 경우 목록을 표시하는 데 많은 시간이 걸릴 수 있습니다.  
   
  **CDC 인스턴스에 포함할 테이블을 선택하려면**  
  포함할 테이블 옆의 확인란을 클릭한 다음 **추가**를 클릭합니다. 테이블이 새 인스턴스 마법사의 **테이블 및 열 선택** 페이지에 있는 목록에 추가됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "47694641"
   
 ## <a name="see-also"></a>참고 항목  
  [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [CDC 인스턴스 관리 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [변경 내용을 캡처할 Oracle 테이블 선택](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

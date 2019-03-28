@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411990"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275499"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411990"
  디스크에 대한 페이징이 발생하는 수준까지 버퍼 크기를 늘리지 마십시오. 디스크에 대한 페이징은 최적화되지 않은 버퍼 크기 이상으로 성능을 저하시킵니다. 페이징의 발생 여부를 확인하려면 MMC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console)의 성능 스냅인에서 "Buffers spooled" 성능 카운터를 모니터링합니다.  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>패키지에 대해 병렬 실행 구성  
- 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 **MaxConcurrentExecutables** 와 **EngineThreads**라는 두 속성을 사용합니다.  
+ 병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 **MaxConcurrentExecutables**와 **EngineThreads**라는 두 속성을 사용합니다.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 속성  
  **MaxConcurrentExecutables** 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411990"
   
  일반적으로 느린 변경 차원 변환에서 가장 느린 구성 요소는 한 번에 하나의 행에 대해 UPDATE를 수행하는 OLE DB 명령 변환입니다. 따라서 느린 변경 차원 변환의 성능을 향상시키는 가장 효과적인 방법은 OLE DB 명령 변환을 바꾸는 것입니다. 업데이트할 모든 행을 준비 테이블에 저장하는 대상 구성 요소로 이러한 변환을 바꿀 수 있습니다. 그런 다음 모든 행에 대해 동시에 단일 집합 기반 Transact-SQL UPDATE를 수행하는 SQL 실행 태스크를 추가할 수 있습니다.  
   
- 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 "고유 차원 시나리오" 섹션을 참조하십시오.  
+ 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 “고유 차원 시나리오” 섹션을 참조하세요.  
   
 ### <a name="destinations"></a>대상  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411990"
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   technet.microsoft.com의 기술 문서 [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
+-   technet.microsoft.com의 기술 문서 - [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
+-   technet.microsoft.com의 기술 문서 - [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   
