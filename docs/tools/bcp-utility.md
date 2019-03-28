@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955994"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538655"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -492,7 +492,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 |SQLNCHAR 또는 SQLNVARCHAR|데이터를 유니코드로 보냅니다. 이는 서식 파일을 지정하지 않고 **-w** 스위치를 지정하는 것과 효과가 동일합니다.|  
 |SQLBINARY 또는 SQLVARYBIN|데이터를 변환하지 않고 보냅니다.|  
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
  **bcp out** 작업을 수행하려면 원본 테이블에 대한 SELECT 권한이 있어야 합니다.  
   
@@ -552,7 +552,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 
 다음 스크립트에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 

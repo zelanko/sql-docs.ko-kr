@@ -39,15 +39,15 @@ helpviewer_keywords:
 - Copy Column transformation custom properties [Integration Services]
 - Character Map transformation custom properties [Integration Services]
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69dda6d5c0fbe7f8b66bf453b5f240588ad878ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7b9f8b3c7a4a4b6b2abf8cd0711ac0e6cec259c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507715"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277452"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델에 있는 대부분의 데이터 흐름 개체에 공통된 속성 이외에 많은 데이터 흐름 개체에는 해당 개체와 관련된 사용자 지정 속성이 있습니다. 이러한 사용자 지정 속성은 런타임에만 사용할 수 있으며 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 관리 프로그래밍 참조 설명서에서 설명하지 않습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52507715"
 |[파생 열](#derived)|[피벗](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>사용자 지정 속성이 없는 변환  
- [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md)및 [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)변환은 구성 요소, 입력 또는 출력 수준의 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
+ 구성 요소, 입력 또는 출력 수준에서 [병합 변환](../../../integration-services/data-flow/transformations/merge-transformation.md), [멀티캐스트 변환](../../../integration-services/data-flow/transformations/multicast-transformation.md) 및 [Union All 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md) 변환은 사용자 지정 속성을 포함하지 않습니다. 이러한 변환은 모든 데이터 흐름 구성 요소에 공통된 속성만 사용합니다.  
   
 ##  <a name="aggregate"></a> 집계 변환 사용자 지정 속성  
  집계 변환에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "52507715"
   
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|FastParse|Boolean|열이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 이 속성의 기본값은 **False**입니다. 자세한 내용은 [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다.<br /><br /> 참고: 이 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |SourceInputColumnLineageId|정수|출력 열의 원본인 입력 열의 **LineageID** 입니다.|  
   
  데이터 변환의 입력, 입력 열 및 출력에는 사용자 지정 속성이 없습니다.  
@@ -262,8 +262,8 @@ ms.locfileid: "52507715"
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|변환에서 사용하는 토큰 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;), 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
-|Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
-|MaxMemoryUsage|정수|변환에서 사용할 최대 메모리 양입니다. 이 속성의 기본값은 동적 메모리 사용을 가능하게 하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|MaxMemoryUsage|정수|변환에서 사용할 최대 메모리 양입니다. 이 속성의 기본값은 동적 메모리 사용을 가능하게 하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |MinSimilarity|Double|중복을 식별하기 위해 변환에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 나타납니다.  이 속성의 기본값은 0.8입니다.|  
   
  다음 표에서는 유사 항목 그룹화 변환 입력 열의 사용자 지정 속성을 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -297,11 +297,11 @@ ms.locfileid: "52507715"
 |CopyReferenceTable|Boolean|유사 항목 조회 인덱스 생성 및 후속 조회를 위해 참조 테이블의 복사본을 만들지 여부를 지정합니다. 이 속성의 기본값은 **True**입니다.|  
 |Delimiters|String|변환에서 열 값을 토큰화하는 데 사용하는 구분 기호입니다. 기본 구분 기호에는 공백( ), 쉼표(,), 마침표(.), 세미콜론(;), 콜론(:), 하이픈(-), 큰따옴표("), 작은따옴표('), 앰퍼샌드(&), 슬래시 기호(/), 백슬래시(\\), @ 기호, 느낌표(!), 물음표(?), 여는 괄호((), 닫는 괄호()), 보다 작음(\<), 보다 큼(>), 여는 대괄호([), 닫는 대괄호(]), 여는 중괄호({), 닫는 중괄호(}), 파이프(&#124;) 문자가 포함됩니다. 숫자 기호(#), 별표(*), 캐럿(^) 및 백분율(%) 문자가 포함됩니다.|  
 |DropExistingMatchIndex|Boolean|MatchIndexOptions가 ReuseExistingIndex로 설정되지 않은 경우 MatchIndexName에 지정된 일치 인덱스가 삭제되는지 여부를 지정하는 값입니다. 이 속성의 기본값은 **True**입니다.|  
-|Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
+|Exhaustive|Boolean|각 입력 레코드를 다른 모든 입력 레코드와 비교할지 여부를 지정하는 값입니다. 값 **True** 는 대개 디버깅용으로 사용됩니다. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |MatchIndexName|String|일치 인덱스의 이름입니다. 일치 인덱스는 변환에서 만들어 사용 인덱스를 저장하는 테이블입니다. 일치 인덱스가 다시 사용되는 경우 MatchIndexName에서 다시 사용할 인덱스를 지정합니다. MatchIndexName은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
 |MatchIndexOptions|Integer(열거형)|변환에서 일치 인덱스를 관리하는 방법을 지정하는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **ReuseExistingIndex** (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서는 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수는 있습니다.|  
-|MaxOutputMatchesPerInput|정수|변환에서 각 입력 행에 대해 반환할 수 있는 최대 일치 항목 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 참고: 100보다 큰 값은 **고급 편집기**를 사용해야 지정할 수 있습니다.|  
+|MaxMemoryUsage|정수|조회 테이블의 최대 캐시 크기입니다. 이 속성의 기본값은 캐시 크기에 제한이 없음을 의미하는 **0**입니다.<br /><br /> 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.<br /><br /> 참고: 이 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|MaxOutputMatchesPerInput|정수|변환에서 각 입력 행에 대해 반환할 수 있는 최대 일치 항목 수입니다. 이 속성의 기본값은 **1**입니다.<br /><br /> 참고: 100보다 큰 값은 **고급 편집기**를 사용해야만 지정할 수 있습니다.|  
 |MinSimilarity|정수|변환이 구성 요소 수준에서 사용하는 유사성 임계값으로, 0에서 1 사이의 값으로 지정됩니다. 임계값보다 큰 행만 일치하는 것으로 간주됩니다.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|조회 테이블의 이름입니다. 이 이름은 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이름이어야 합니다. 예를 들어 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.|  
@@ -524,7 +524,7 @@ ms.locfileid: "52507715"
   
 |속성|데이터 형식|설명|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer(열거형)|열의 업데이트 유형입니다. 값으로는 **변경 특성** (2), **고정 특성** (4), **기록 특성** (3), **키** (1) 및 **기타** (0)가 있습니다.|  
+|ColumnType|Integer(열거형)|열의 업데이트 유형입니다. 값은 다음과 같습니다. **변경 특성**(2), **고정 특성**(4), **기록 특성**(3), **키**(1) 및 **기타**(0).|  
   
  느린 변경 차원 변환의 입력, 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
   
@@ -570,7 +570,7 @@ ms.locfileid: "52507715"
 |NeedRefenceData|Boolean|변환에서 참조 테이블에 저장된 제외 용어 목록을 사용할지 여부를 지정하는 값입니다. 이 속성의 기본값은 **False**입니다.|  
 |OutTermColumn|String|제외 용어가 포함된 열의 이름입니다.|  
 |OutTermTable|String|제외 용어가 있는 열이 포함된 테이블의 이름입니다.|  
-|ScoreType|정수|용어와 연결할 점수 유형을 지정하는 값입니다. 유효한 값으로는 빈도를 나타내는 0과 TFIDF 점수를 나타내는 1이 있습니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) \* log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다. 이 속성의 기본값은 **0**입니다.|  
+|ScoreType|정수|용어와 연결할 점수 유형을 지정하는 값입니다. 유효한 값으로는 빈도를 나타내는 0과 TFIDF 점수를 나타내는 1이 있습니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로 다음과 같이 정의됩니다. 용어 T의 TFIDF = (T의 빈도) \* log((입력의 행 수)/(T를 포함하는 행 수)). 이 속성의 기본값은 **0**입니다.|  
 |WordOrPhrase|정수|용어 유형을 지정하는 값입니다. 유효한 값으로는 단어만 나타내는 0, 명사구만 나타내는 1 및 단어와 명사구를 모두 나타내는 2가 있습니다. 이 속성의 기본값은 **0**입니다.|  
   
  용어 추출 변환의 입력, 입력 열, 출력 및 출력 열에는 사용자 지정 속성이 없습니다.  
@@ -621,7 +621,7 @@ ms.locfileid: "52507715"
   
 |속성 이름|데이터 형식|설명|  
 |-------------------|---------------|-----------------|  
-|PivotKey|Boolean|입력 열의 **PivotKeyValue** 속성에 있는 값을 이 출력 열에 쓸지 여부를 나타냅니다.<br /><br />  [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
+|PivotKey|Boolean|입력 열의 **PivotKeyValue** 속성에 있는 값을 이 출력 열에 쓸지 여부를 나타냅니다.<br /><br /> [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md)에 설명된 피벗 해제 시나리오에서 Pivot Value 열 이름은 **Product** 이며 Ham, Coke, Milk, Beer 및 Chips 열이 피벗 해제되는 새 **Product** 열을 지정합니다.|  
   
  피벗 해제 변환의 입력 및 출력에는 사용자 지정 속성이 없습니다.  
   

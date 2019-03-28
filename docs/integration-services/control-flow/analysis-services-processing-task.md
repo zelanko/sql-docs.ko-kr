@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641780"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271056"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 테이블 형식 모델, 큐브, 차원 및 마이닝 모델과 같은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "51641780"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 처리 태스크 편집기(일반 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크를 명명 및 설명할 수 있습니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **이름**  
  Analysis Services 처리 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
   
@@ -106,14 +106,14 @@ ms.locfileid: "51641780"
   
 4.  테이블 형식 모델에서는 일괄 설정이 무시됩니다.  
   
-### <a name="options"></a>Options  
+### <a name="options"></a>옵션  
  **Analysis Services 연결 관리자**  
  목록에서 기존 Analysis Services 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  
  새 Analysis Services 연결 관리자를 만듭니다.  
   
- **관련 항목:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **관련 항목:** [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
  |속성|설명|  

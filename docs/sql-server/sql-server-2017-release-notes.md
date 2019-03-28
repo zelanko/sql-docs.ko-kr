@@ -1,28 +1,28 @@
 ---
 title: SQL Server 2017 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/31/2017
+ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: d414f256e0eb06bfe3925b0e8e1a61b4799c3c7c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703771"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290259"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 이 문서에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
-- [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
+- [Linux 릴리스 노트의 SQL Server](../linux/sql-server-linux-release-notes.md)
 - 최신 CU(누적 업데이트) 릴리스에 대한 자세한 내용: [SQL Server 2017 누적 업데이트](https://aka.ms/sql2017cu)
 
 **SQL Server를 사용해 보세요.**
@@ -56,18 +56,18 @@ ms.locfileid: "51703771"
   - Amazon Redshift
   - IBM Netezza
   - Impala
-- **해결 방법:** 없습니다.   
+- **해결 방법:** 없음   
 
 - **문제 및 고객에게 미치는 영향:** 큐브 뷰를 포함하는 1400 호환성 수준의 직접 쿼리 모델은 메타데이터 쿼리 또는 검색에 실패할 수 있습니다.
 - **해결 방법:** 큐브 뷰를 제거하고 다시 배포합니다.
 
-### <a name="tools"></a>Tools
-- **문제 및 고객에게 미치는 영향:** *DReplay*를 실행할 때 다음 메시지와 함께 실패합니다. "DReplay 오류 예기치 않은 오류가 발생했습니다".
-- **해결 방법:** 없습니다.
+### <a name="tools"></a>도구
+- **문제 및 고객에게 미치는 영향:** *DReplay* 실행이 실패하고 다음 메시지가 표시됩니다. "오류 DReplay 예기치 않은 오류가 발생했습니다!"
+- **해결 방법:** 없음
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 릴리스 후보(RC2 - 2017년 8월)
-이 릴리스와 관련된 Windows의 SQL Server에 대한 릴리스 정보가 없습니다. [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)를 참조하세요.
+이 릴리스와 관련된 Windows의 SQL Server에 대한 릴리스 정보가 없습니다. [Linux 릴리스 노트의 SQL Server](../linux/sql-server-linux-release-notes.md)를 참조하세요.
 
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
@@ -76,7 +76,7 @@ ms.locfileid: "51703771"
 - **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
 - **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
 
-- **문제 및 고객 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “*@runincluster*은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
+- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “*@runincluster*은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
 - **해결 방법:** SSMS 버전 17.2가 나올 때까지:
   1. 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성합니다.
   2. 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경합니다.
@@ -85,26 +85,26 @@ ms.locfileid: "51703771"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1(2017년 5월)
 ### <a name="documentation-ctp-21"></a>설명서(CTP 2.1)
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 에 대한 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함됩니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]에 대한 오프라인 콘텐츠는 제공되지 않습니다.
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** SQL Server Reporting Services와 Power BI 보고서 서버가 둘 다 동일한 컴퓨터에 있는 경우 이 중 하나를 제거하면 보고서 서버 구성 관리자를 사용하여 나머지 보고서 서버에 연결할 수 없습니다.
+- **문제 및 고객에게 미치는 영향:** SQL Server Reporting Services와 Power BI Report Server가 둘 다 동일한 컴퓨터에 있는 경우 이 중 하나를 제거하면 보고서 서버 Configuration Manager를 사용하여 나머지 보고서 서버에 연결할 수 없습니다.
 - **해결 방법** 이 문제를 해결하려면 서버 중 하나를 제거한 후 다음 작업을 수행해야 합니다.
 
     1. 관리자 모드로 명령 프롬프트를 시작합니다.
     2. 나머지 보고서 서버가 설치된 디렉터리로 이동합니다.
 
-        *기본 Power BI 보고서 서버의 기본 위치: C:\Program Files\Microsoft Power BI 보고서 서버*
+        ‘Power BI Report Server 기본 위치: C:\Program Files\Microsoft Power BI Report Server’
 
-        *SQL Server Reporting Services의 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services*
+        ‘SQL Server Reporting Services 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services’
 
     3. 그런 다음 남아 있는 기능에 따라 *SSRS* 또는 *PBIRS* 폴더로 이동합니다.
     4. WMI 폴더로 이동합니다.
     5. 다음 명령을 실행합니다.
 
-        ```
+        ```console
         regsvr32 /i ReportingServicesWMIProvider.dll
         ```
 
@@ -116,11 +116,11 @@ ms.locfileid: "51703771"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** 2016 버전의 *TSqlLanguageService.msi*가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 *Microsoft.SqlServer.Management.SqlParser.dll* 및 *Microsoft.SqlServer.Management.SystemMetadataProvider.dll*이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 애플리케이션의 작동이 중단되고 *오류: 파일이나 어셈블리 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
+- **문제 및 고객에게 미치는 영향:** 2016 버전의 ‘TSqlLanguageService.msi’가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 ‘Microsoft.SqlServer.Management.SqlParser.dll’ 및 ‘Microsoft.SqlServer.Management.SystemMetadataProvider.dll’이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 애플리케이션에서는 작동이 중지되고 *오류 : 파일 또는 어셈블리 ‘Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91’ 또는 해당 종속성 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
 
-   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 *컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.* 라는 메시지가 표시됩니다.
+   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 ‘컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.’라는 메시지가 표시됩니다.
 
-- **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 응용 프로그램을 수정하려면 다음 단계를 수행합니다.
+- **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 애플리케이션을 수정하려면 다음 단계를 수행합니다.
 
    1. **프로그램 추가/제거**로 이동합니다.
    2. *Microsoft SQL Server 2019 T-SQL 언어 서비스 CTP2.1*을 찾아 마우스 오른쪽 단추로 클릭한 다음, **제거**를 선택합니다.
@@ -131,8 +131,8 @@ ms.locfileid: "51703771"
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0(2017년 4월)
 ### <a name="documentation-ctp-20"></a>설명서(CTP 2.0)
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 에 대한 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함됩니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
-- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]에 대한 오프라인 콘텐츠는 제공되지 않습니다.
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 설명서 집합에 포함되어 있습니다.  [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]와 관련된 문서의 내용은 **적용 대상**에서 설명합니다. 
+- **문제 및 고객에게 미치는 영향:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
 ### <a name="always-on-availability-groups"></a>Always On 가용성 그룹
 
@@ -144,12 +144,14 @@ ms.locfileid: "51703771"
 
 - **해결 방법** 새 주 복제본을 호스트하는 SQL Server 인스턴스에 연결하고 구성에서 잘못된 보조 복제본을 제거합니다.
 
-   `ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName`
+   ```sql
+   ALTER AVAILABILITY GROUP agName REMOVE REPLICA ON NODE instanceName;
+   ```
 
    보조 복제본을 호스트하는 SQL Server의 인스턴스가 복구됩니다.
 
 ## <a name="more-information"></a>자세한 정보
-- [SQL Server Reporting Services 릴리스 정보](../reporting-services/reporting-services-release-notes.md)관련 제한 사항 및 문제에 대해 설명합니다.
+- [SQL Server Reporting Services 릴리스 정보](../reporting-services/release-notes-reporting-services.md)관련 제한 사항 및 문제에 대해 설명합니다.
 - [Machine Learning Services에 대한 알려진 문제](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
 

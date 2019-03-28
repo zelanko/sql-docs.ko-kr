@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527141"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290289"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>3-2단원 - 패키지 설치 마법사 실행
 이 태스크에서는 패키지 설치 마법사를 실행하여 Deployment Tutorial 프로젝트의 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 배포합니다. 패키지만 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 sysssispackages 테이블에 설치할 수 있고 배포 번들에 포함된 지원 파일은 파일 시스템에 배포됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52527141"
   
 6.  SQL Server 인스턴스에서 Windows 인증이 지원될 경우에는 **Windows 인증 사용**을 선택하고 지원되지 않을 경우에는 **SQL Server 인증 사용** 을 선택하고 사용자 이름과 암호를 제공합니다.  
   
-7.  **암호화에 서버 저장소 사용** 확인란의 선택이 취소되었는지 확인합니다.  
+7.  **암호화에 서버 스토리지 사용** 확인란의 선택이 취소되었는지 확인합니다.  
   
 8.  **다음**을 클릭합니다.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "52527141"
   
     대상 컴퓨터의 환경 변수 값이 개발 컴퓨터의 환경 변수 값과 다르므로 패키지 유효성 검사 페이지에 여러 경고가 표시됩니다. 다음 4개의 경고를 예상해야 합니다.  
   
-    -   구성 파일 "C:\DeploymentTutorial\DataTransferConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   
-    -   구성 파일 "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
+    -   구성 파일: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig"가 유효하지 않습니다. 구성 파일 이름을 확인하십시오.  
   
     -   패키지에 대한 구성 항목을 적어도 하나 이상 로드하지 못했습니다. 구성 항목과 이전 경고를 검사하여 실패한 구성에 대한 설명을 확인하십시오.  
   

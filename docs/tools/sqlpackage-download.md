@@ -2,7 +2,7 @@
 title: 다운로드 및 설치 sqlpackage | Microsoft Docs
 description: 다운로드 하 여 Windows, macOS 또는 Linux에 대 한 sqlpackage 설치
 ms.custom: tools|sos
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737144"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527215"
 ---
 # <a name="download-and-install-sqlpackage"></a>다운로드 및 설치 sqlpackage
 
@@ -29,7 +29,7 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행 됩니다.
 |macOS.NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2069126)|2019년 2월 1일 | 18.1 |15.0.4316.1|
 |.NET Core Linux (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2069122)|2019년 2월 1일 | 18.1 |15.0.4316.1|
 
-최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
+최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](release-notes-sqlpackage.md)합니다.
 
 ## <a name="get-sqlpackage-for-windows"></a>Windows에 대 한 sqlpackage 가져오기
 

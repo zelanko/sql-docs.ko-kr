@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542889"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277512"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52542889"
 |로그 공급자|ProgID|ClassID|위치|  
 |------------------|------------|-------------|--------------|  
 |텍스트 파일|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|텍스트 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
-|SQL Server 프로파일러|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
+|SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 사용하는 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
 |SQL Server|DTS.LogProviderSQLServer|{94150B25-6AEB-4C0D-996D-D37D1C4FDEDA}|로그 항목이 포함된 sysssislog 테이블이 들어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 로그 공급자가 사용하는 OLE DB 연결 관리자가 지정합니다.|  
 |Windows 이벤트 로그|DTS.LogProviderEventLog|{071CC8EB-C343-4CFF-8D58-564B92FCA3CF}|Windows 이벤트 뷰어의 애플리케이션 로그에는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 애플리케이션 정보가 들어 있습니다.|  
 |XML 파일|DTS.LogProviderXMLFile|{440945A4-2A22-4F19-B577-EAF5FDDC5F7A}|XML 파일의 경로는 로그 공급자가 사용하는 파일 연결 관리자가 지정합니다.|  
@@ -253,7 +253,7 @@ ms.locfileid: "52542889"
     > [!NOTE]  
     >  기본적으로 모든 정보가 로깅됩니다.  
   
-9.  **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
+9. **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 10. **확인**을 클릭합니다.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "52542889"
 ###  <a name="container"></a> 컨테이너 창의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **컨테이너** 창을 사용하여 패키지 및 해당 컨테이너에 대해 로깅을 활성화할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **SSIS 로그 구성**  
  패키지 및 해당 컨테이너에 대해 로깅을 활성화하려면 계층 뷰의 확인란을 선택합니다.  
   
@@ -295,7 +295,7 @@ ms.locfileid: "52542889"
 ###  <a name="provider"></a> 공급자 및 로그 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **공급자 및 로그** 탭을 사용하여 런타임 이벤트를 캡처하기 위한 로그를 생성 및 구성할 수 있습니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **공급자 유형**  
  목록에서 로그 공급자 유형을 선택합니다.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "52542889"
  **Configuration**  
  목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
- 관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ 관련 항목: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md), [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Delete**  
  로그 공급자를 선택한 다음 **삭제**를 클릭합니다.  
@@ -319,7 +319,7 @@ ms.locfileid: "52542889"
 ###  <a name="detail"></a> 자세히 탭의 옵션 구성  
  **SSIS 로그 구성** 대화 상자의 **자세히** 탭을 사용하여 로깅에 사용할 이벤트와 로깅할 세부 정보를 지정할 수 있습니다. 선택한 정보는 패키지의 모든 로그 공급자에 적용됩니다. 예를 들어 일부 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 쓰고 다른 정보는 텍스트 파일에 쓰는 것은 불가능합니다.  
   
-#### <a name="options"></a>Options  
+#### <a name="options"></a>옵션  
  **이벤트**  
  로깅할 이벤트를 설정 또는 해제합니다.  
   

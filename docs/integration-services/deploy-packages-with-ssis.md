@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739611"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277282"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    
@@ -77,7 +77,7 @@ ms.locfileid: "47739611"
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요. SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. SSIS를 설치하려면 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
     
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 권한과 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 SSIS 패키지를 실행할 권한이 있어야 합니다.    
     

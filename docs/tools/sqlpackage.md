@@ -2,27 +2,27 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033609"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527595"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe**는 다음 데이터베이스 개발 작업을 자동화하는 명령줄 유틸리티입니다.  
   
-- [추출](#help-for-the-extract-action): 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅숏(.dacpac) 파일을 만듭니다.  
+- [Extract](#help-for-the-extract-action): 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅숏(.dacpac) 파일을 만듭니다.  
   
-- [게시](#publish-parameters-properties-and-sqlcmd-variables): 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다. 데이터베이스가 서버에 존재하지 않을 경우 게시 작업을 통해 생성됩니다. 그렇지 않은 경우 기존 데이터베이스 업데이트 됩니다.  
+- [Publish](#publish-parameters-properties-and-sqlcmd-variables): 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다. 데이터베이스가 서버에 존재하지 않을 경우 게시 작업을 통해 생성됩니다. 그렇지 않은 경우 기존 데이터베이스 업데이트 됩니다.  
   
 - [Export](#export-parameters-and-properties): 데이터베이스 스키마 및 사용자 데이터를 비롯한 라이브 데이터베이스를 SQL Server 또는 Azure SQL Database에서 BACPAC 패키지(.bacpac 파일)로 내보냅니다.  
   
@@ -30,13 +30,13 @@ ms.locfileid: "56033609"
   
 - [DeployReport](#deployreport-parameters-and-properties): 게시 작업으로 변경된 사항의 XML 보고서를 만듭니다.  
   
-- [DriftReport](#driftreport-parameters): 등록된 데이터베이스가 마지막으로 등록된 후에 변경된 사항의 XML 보고서를 만듭니다.  
+- [DriftReport](#driftreport-parameters): 마지막으로 등록된 후에 등록된 데이터베이스에 변경된 사항의 XML 보고서를 만듭니다.  
   
-- [스크립트](#script-parameters-and-properties): 대상의 스키마가 원본의 스키마와 일치하도록 업데이트하는 Transact-SQL 증분 업데이트 스크립트를 만듭니다.  
+- [Script](#script-parameters-and-properties): 대상의 스키마가 원본의 스키마와 일치하도록 업데이트하는 Transact-SQL 증분 업데이트 스크립트를 만듭니다.  
   
 **SqlPackage.exe** 명령줄을 사용하면 작업별 매개 변수 및 속성과 함께 이러한 작업을 지정할 수 있습니다.  
 
-**[최신 버전 다운로드](sqlpackage-download.md)**. 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](sqlpackage-release-notes.md)합니다.
+**[최신 버전 다운로드](sqlpackage-download.md)**. 최신 릴리스에 대 한 자세한 내용은 참조는 [릴리스](release-notes-sqlpackage.md)합니다.
   
 ## <a name="command-line-syntax"></a>명령줄 구문
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417919"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281437"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
   SSIS(SQL Server Integration Services) 패키지는 Hadoop 연결 관리자를 통해 속성에 대해 지정된 값을 사용하여 Hadoop 클러스터에 연결할 수 있습니다.  
@@ -96,7 +96,7 @@ SSIS 컴퓨터에서 다음을 수행합니다.
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"> </a>옵션 2: Windows 도메인과 Kerberos 영역 간의 상호 신뢰 사용
+### <a name="kerberos-mutual-trust"></a>옵션 2: Windows 도메인과 Kerberos 영역 간의 상호 신뢰 사용
 
 #### <a name="requirements"></a>요구 사항:
 -   게이트웨이 컴퓨터가 Windows 도메인을 조인해야 합니다.
