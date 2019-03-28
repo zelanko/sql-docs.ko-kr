@@ -10,23 +10,23 @@ ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e77025a5cc8e410c1bdbb36b0946dd3134c9ca1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155509"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525845"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
-  포함 된 테이블의 예를 살펴봅니다 `SQL_VARIANT` 열:  
+  `SQL_VARIANT` 열이 있는 테이블의 예를 살펴봅니다.  
   
-```tsql  
+```sql  
 CREATE TABLE [dbo].[T1]([Key] [sql_variant] NOT NULL)  
 ```  
   
  키 열은 `BIGINT` 또는 `NVARCHAR(300)`만 가능합니다. 이러한 테이블은 다음과 같이 모델링할 수 있습니다.  
   
-```tsql  
+```sql  
 -- original disk-based table  
 CREATE TABLE [dbo].[T1_disk]([Key] int not null primary key,  
        [Value] [sql_variant])  
@@ -66,7 +66,7 @@ from dbo.T1_inmem
   
  이제 T1에서 커서를 열어 T1에서 [T1_HK]로 데이터를 로드할 수 있습니다.  
   
-```tsql  
+```sql  
 DECLARE T1_rows_cursor CURSOR FOR    
 select *  
 FROM dbo.T1  
@@ -114,7 +114,7 @@ DEALLOCATE T1_rows_cursor
   
  다음과 같이 데이터를 `SQL_VARIANT`로 다시 변환할 수 있습니다.  
   
-```tsql  
+```sql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
                        else convert(sql_variant, [Key_nv])   
                        end  

@@ -12,12 +12,12 @@ ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60be94308520f93c76f28ef5e0d1bbbf474dfdbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991757d1bfeae8ecc0dec3a69d82c3dcab6415b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531655"
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
     
@@ -38,7 +38,7 @@ ms.locfileid: "48063741"
 ## <a name="user-action"></a>사용자 동작  
  Windows 그룹의 로그인은 사용하지 않도록 설정할 수 없습니다. Windows 그룹에 부여된 액세스 권한을 임시로 제거하려면 Windows 그룹의 로그인에 대한 CONNECT 권한을 취소합니다. 그래도 Windows 사용자는 자신의 개별 로그인이나 다른 Windows 그룹을 통해 액세스할 수 있습니다. 다음 예에서는 WESTCOAST 도메인의 Accounting 그룹에 대한 연결 권한을 취소합니다.  
   
-```tsql  
+```sql  
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   

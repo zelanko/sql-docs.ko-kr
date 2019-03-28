@@ -20,12 +20,12 @@ ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7b5f3392f3dbb21c2aeeed3fc5e34d5cf1c0e63b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229463"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535844"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>논리적 백업 디바이스의 속성 및 내용 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 논리적 백업 디바이스의 속성과 내용을 보는 방법에 대해 설명합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "48229463"
   
 3.  [RESTORE LABELONLY](/sql/t-sql/statements/restore-statements-labelonly-transact-sql) 문을 사용합니다. 이 예에서는 `AdvWrks2008R2Backup` 논리적 백업 디바이스에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE LABELONLY  
    FROM AdvWrks2008R2Backup ;  

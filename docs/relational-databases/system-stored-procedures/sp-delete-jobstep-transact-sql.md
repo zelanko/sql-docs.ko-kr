@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628542"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527825"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 단계를 제거할 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 단계를 제거할 작업의 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name=** ] **'***job_name***'**  
- 단계를 제거할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 단계를 제거할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 중 하나 *job_id* 하거나 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
+> **참고:** 어느 *job_id* 하거나 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
   
- [ **@step_id=** ] *step_id*  
- 제거할 단계의 ID입니다. *step_id*됩니다 **int**, 기본값은 없습니다.  
+`[ @step_id = ] step_id` 제거할 단계의 id. *step_id*됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

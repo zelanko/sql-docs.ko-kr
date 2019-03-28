@@ -16,12 +16,12 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a39fe7efd35094330b6885094145b5340bd7f2b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808285"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527475"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자의 정보를 반환 하는 합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자의 정보를 반환 하는 합니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자 데이터베이스에서 정보를 반환 하는 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 **%**, 모든 게시자 데이터베이스에서 정보를 반환 하는 합니다.  
   
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 모든 게시의 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 모든 게시의 정보를 반환 하는 합니다.  
   
- [  **@publication_type=**] *publication_type*  
- 게시의 유형이입니다. *publication_type* 됩니다 **int**, 기본값은 NULL입니다. 제공 된 경우 *publication_type* 다음 값 중 하나 여야 합니다.  
+`[ @publication_type = ] publication_type` 게시의 유형이입니다. *publication_type* 됩니다 **int**, 기본값은 NULL입니다. 제공 된 경우 *publication_type* 다음 값 중 하나 여야 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -65,15 +61,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**publication_type**|**int**|게시 유형입니다.<br /><br /> **0** = 트랜잭션<br /><br /> **1** = 스냅숏<br /><br /> **2** = 병합|  
 |**publisher_login**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**publisher_password**|**nvarchar(524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용하는 암호입니다(암호화됨).|  
-|**publisher_security_mode**|**int**|게시자에서 사용하는 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
-|**배포자**|**sysname**|배포자의 이름입니다.|  
+|**publisher_security_mode**|**int**|게시자에서 사용하는 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
+|**distributor**|**sysname**|배포자의 이름입니다.|  
 |**distributor_login**|**sysname**|배포자 로그인입니다.|  
 |**distributor_password**|**nvarchar(524)**|배포자 암호입니다(암호화됨).|  
-|**distributor_security_mode**|**int**|배포자에서 사용하는 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**distributor_security_mode**|**int**|배포자에서 사용하는 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
 |**ftp_address**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다. 배포자용 FTP(파일 전송 프로토콜) 서비스의 네트워크 주소입니다.|  
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다. FTP 서비스에 연결하는 데 필요한 사용자 이름입니다.|  
@@ -93,7 +89,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar(524)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인 암호입니다.|  
 |**internet_security_mode**|**int**|여기서 값에는 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 되는 인증 모드 **1** Windows 인증 및 값 의미 **0** 기본 인증을 의미 합니다.|  
 |**internet_timeout**|**int**|웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
-|**호스트 이름**|**nvarchar(128)**|WHERE 절 매개 변수가 있는 행 필터에서 HOST_NAME() 함수를 사용할 때 이 함수에 필요한 값을 지정합니다.|  
+|**hostname**|**nvarchar(128)**|WHERE 절 매개 변수가 있는 행 필터에서 HOST_NAME() 함수를 사용할 때 이 함수에 필요한 값을 지정합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

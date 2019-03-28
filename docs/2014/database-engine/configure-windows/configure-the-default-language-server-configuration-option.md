@@ -12,12 +12,12 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e22c0edc9c88871c4dee79ba927eb39ea9eab41
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536495"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 기본 언어 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **기본 언어** 옵션을 사용하면 새로 만드는 모든 로그인의 기본 언어를 지정할 수 있습니다. 기본 언어를 설정하려면 원하는 언어의 **langid** 값을 지정합니다. **sys.syslanguages** 호환성 뷰를 쿼리하여 **langid** 값을 얻을 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52641334"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `default language` 옵션을 프랑스어(`2`)로 구성하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'default language', 2 ;  
@@ -82,7 +82,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 기본 언어 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 기본 언어 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -18,12 +18,12 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 102e9122b93938b8e16d2e8714eed8d1372d21ad
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526765"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,32 +62,23 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] *job_id*  
- 단계가 속한 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @job_id = ] job_id` 단계가 속한 작업의 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- 단계가 속한 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @job_name = ] 'job_name'` 단계가 속한 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@step_id =**] *step_id*  
- 수정할 작업 단계의 ID입니다. 이 번호는 변경할 수 없습니다. *step_id*됩니다 **int**, 기본값은 없습니다.  
+`[ @step_id = ] step_id` 수정할 작업 단계의 id. 이 번호는 변경할 수 없습니다. *step_id*됩니다 **int**, 기본값은 없습니다.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- 단계의 새 이름입니다. *step_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 단계의 새 이름이입니다. *step_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subsystem =**] **'**_하위 시스템_**'**  
- Microsoft SQL Server 에이전트에서 실행 하는 데 하위 시스템 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
+`[ @subsystem = ] 'subsystem'` Microsoft SQL Server 에이전트에서 실행 하는 데 하위 시스템 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
   
- [  **@command =**] **'**_명령은_**'**  
- 통해 실행할 명령 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)**, 기본값은 NULL입니다.  
+`[ @command = ] 'command'` 통해 실행할 명령 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)**, 기본값은 NULL입니다.  
   
- [  **@additional_parameters =**] **'**_매개 변수_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@cmdexec_success_code =**] *success_code*  
- 반환 된 값을 **CmdExec** 나타내는 하위 시스템 명령 *명령* 성공적으로 실행 합니다. *success_code* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @cmdexec_success_code = ] success_code` 반환 된 값을 **CmdExec** 나타내는 하위 시스템 명령 *명령* 성공적으로 실행 합니다. *success_code* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@on_success_action =**] *success_action*  
- 단계가 성공 하는 경우 수행할 동작입니다. *success_action* 됩니다 **tinyint**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @on_success_action = ] success_action` 단계가 성공 하는 경우 수행할 동작입니다. *success_action* 됩니다 **tinyint**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|설명(동작)|  
 |-----------|----------------------------|  
@@ -96,11 +87,9 @@ sp_update_jobstep
 |**3**|다음 단계로 이동|  
 |**4**|단계로 이동 *success_step_id 합니다.*|  
   
- [ **@on_success_step_id =**] *success_step_id*  
- 단계가 성공 하는 경우에 실행할이 작업 단계의 id 번호 및 *success_action* 됩니다 **4**합니다. *success_step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @on_success_step_id = ] success_step_id` 단계가 성공 하는 경우에 실행할이 작업 단계의 id 번호 및 *success_action* 됩니다 **4**합니다. *success_step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@on_fail_action =**] *fail_action*  
- 단계가 실패할 경우 수행할 동작입니다. *fail_action* 됩니다 **tinyint**, 기본값은 NULL 사용 하 여 다음이 값 중 하나일 수 있습니다.  
+`[ @on_fail_action = ] fail_action` 단계가 실패 하는 경우 수행할 동작입니다. *fail_action* 됩니다 **tinyint**, 기본값은 NULL 사용 하 여 다음이 값 중 하나일 수 있습니다.  
   
 |값|설명(동작)|  
 |-----------|----------------------------|  
@@ -109,36 +98,27 @@ sp_update_jobstep
 |**3**|다음 단계로 이동|  
 |**4**|단계로 이동 *fail_step_id * * 합니다.*|  
   
- [ **@on_fail_step_id =**] *fail_step_id*  
- 단계가 실패 하는 경우에 실행할이 작업 단계의 id 번호 및 *fail_action* 됩니다 **4**합니다. *fail_step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @on_fail_step_id = ] fail_step_id` 단계가 실패 하는 경우에 실행할이 작업 단계의 id 번호 및 *fail_action* 됩니다 **4**합니다. *fail_step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@server =**] **'**_server_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
   
- [  **@database_name =**] **'**_database_**'**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 실행할 데이터베이스의 이름입니다. *데이터베이스*됩니다 **sysname**합니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
+`[ @database_name = ] 'database'` 실행할 데이터베이스의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *데이터베이스*됩니다 **sysname**합니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
- [  **@database_user_name =**] **'**_사용자_**'**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 실행할 때 사용할 사용자 계정의 이름입니다. *사용자*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @database_user_name = ] 'user'` 실행할 때 사용할 사용자 계정의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *사용자*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@retry_attempts =**] *retry_attempts*  
- 이 단계가 실패할 경우에 재시도하는 횟수입니다. *retry_attempts*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @retry_attempts = ] retry_attempts` 다시 시도 횟수는이 단계가 실패 하면를 사용 하려고 합니다. *retry_attempts*됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@retry_interval =**] *retry_interval*  
- 재시도 간격(분)입니다. *retry_interval* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @retry_interval = ] retry_interval` 재시도 간격 (분) 시간의 양입니다. *retry_interval* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@os_run_priority =**] *run_priority*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@output_file_name =**] **'**_file_name_**'**  
- 이 단계의 출력이 저장되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)**, 기본값은 NULL입니다. 이 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CmdExec 하위 시스템에서 실행되는 명령과 함께 사용하는 경우에만 유효합니다.  
+`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)**, 기본값은 NULL입니다. 이 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CmdExec 하위 시스템에서 실행되는 명령과 함께 사용하는 경우에만 유효합니다.  
   
  Output_file_name을 다시 NULL로 설정 하려면 설정 해야 합니다 *output_file_name* 빈 문자열 (' ') 수 있지만 빈 문자의 문자열로 사용할 수 없습니다 또는 **CHAR(32)** 함수. 예를 들어 다음과 같이 이 인수를 빈 문자열로 설정합니다.  
   
  **@output_file_name = ' '**  
   
- [ **@flags =**] *flags*  
- 동작을 제어하는 옵션입니다. *플래그* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @flags = ] flags` 동작을 제어 하는 옵션입니다. *플래그* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -148,11 +128,9 @@ sp_update_jobstep
 |**8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
 |**16**|테이블에 로그를 씁니다(기존 기록에 추가).|  
   
- [ **@proxy_id**= ] *proxy_id*  
- 작업 단계가 실행되는 프록시의 ID입니다. *proxy_id* 형식인 **int**, 기본값은 NULL입니다. 없으면 *proxy_id* 지정 된 없습니다 *proxy_name* 지정 된 경우 및 no *user_name* 지정 된 경우 작업 단계에 대 한 서비스 계정으로 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다.  
+`[ @proxy_id = ] proxy_id` 작업 단계가 실행 되는 프록시의 ID. *proxy_id* 형식인 **int**, 기본값은 NULL입니다. 없으면 *proxy_id* 지정 된 없습니다 *proxy_name* 지정 된 경우 및 no *user_name* 지정 된 경우 작업 단계에 대 한 서비스 계정으로 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다.  
   
- [ **@proxy_name**=] **'**_proxy_name_**'**  
- 작업 단계가 실행되는 프록시의 이름입니다. *proxy_name* 형식인 **sysname**, 기본값은 NULL입니다. 없으면 *proxy_id* 지정 된 없습니다 *proxy_name* 지정 된 경우 및 no *user_name* 지정 된 경우 작업 단계에 대 한 서비스 계정으로 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다.  
+`[ @proxy_name = ] 'proxy_name'` 작업 단계가 실행 되는 프록시의 이름입니다. *proxy_name* 형식인 **sysname**, 기본값은 NULL입니다. 없으면 *proxy_id* 지정 된 없습니다 *proxy_name* 지정 된 경우 및 no *user_name* 지정 된 경우 작업 단계에 대 한 서비스 계정으로 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

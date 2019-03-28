@@ -16,12 +16,12 @@ ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60b0cca44cae7e71e538fe87d5912a044209d06d
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641384"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531625"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication 서버 구성 옵션
   **포함된 데이터베이스 인증** 옵션을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용하도록 설정할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52641384"
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  

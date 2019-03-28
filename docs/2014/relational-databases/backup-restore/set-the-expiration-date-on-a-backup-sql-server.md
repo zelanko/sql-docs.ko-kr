@@ -14,12 +14,12 @@ ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cccf999eba70242cc259b7063654c56e82b28fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075643"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533805"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>백업의 만료 날짜 설정(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업에 대한 만료 날짜를 설정하는 방법에 대해 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "48075643"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문에서 EXPIREDATE 또는 RETAINDAYS 옵션을 지정하여 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 이 백업을 덮어 쓸 수 있는 시간을 확인합니다. 두 옵션 모두 지정하지 않으면 [미디어 보존](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) 서버 구성 설정에 따라 만료 날짜가 결정됩니다. 이 예에서는 `EXPIREDATE` 옵션을 사용하여 만료 날짜를 2015년 6월 30일(`6/30/2015`)로 지정합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  

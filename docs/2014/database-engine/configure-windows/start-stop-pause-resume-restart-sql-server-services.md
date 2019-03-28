@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b70ae7a69ce316b98c892c4dbf4059bfbc97ca4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530486"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
   이 항목에서는 시작, 중지, 일시 중지, 재개 또는 다시 시작 하는 방법을 설명 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], **net** 명령 프롬프트에서 명령을 [!INCLUDE[tsql](../../includes/tsql-md.md)], 또는 PowerShell입니다.  
@@ -254,13 +254,13 @@ ms.locfileid: "53360905"
   
 -   현재 실행 중인 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 저장 프로시저가 완료될 때까지 기다린 다음 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 중지하려면 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN;   
     ```  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 즉시 중지하려면 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SHUTDOWN WITH NOWAIT;   
     ```  
   

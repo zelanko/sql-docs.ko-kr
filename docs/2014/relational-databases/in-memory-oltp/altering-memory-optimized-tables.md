@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136485"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533045"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
   메모리 최적화 테이블에 대한 ALTER 작업 수행은 지원되지 않습니다. 여기에는 bucket_count 변경, 인덱스 추가 또는 제거, 열 추가 또는 제거 등의 작업이 포함됩니다. 이 항목에서는 메모리 최적화 테이블을 업데이트하는 방법에 대한 지침을 제공합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48136485"
   
      다음 쿼리를 사용하여 테이블을 참조하는 스키마 바운드 개체를 찾을 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     declare @t nvarchar(255) = N'<table name>'  
   
     select r.referencing_schema_name, r.referencing_entity_name  
@@ -43,7 +43,7 @@ ms.locfileid: "48136485"
   
      다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저의 사용 권한을 스크립팅할 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     declare @sp nvarchar(255) = N'<procedure name>'  
     declare @permissions nvarchar(max) = N''  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48136485"
   
 4.  테이블의 복사본을 생성하고 원래 테이블에서 테이블의 복사본으로 데이터를 복사합니다. 다음을 사용 하 여 복사본을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>합니다.  
   
-    ```tsql  
+    ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48136485"
   
  원하는 스키마 변경을 반영하도록 4단계에 대한 스크립트를 업데이트해야 합니다. 테이블 열을 변경한 경우 필요에 따라 5단계(임시 테이블에서 데이터 복사)와 6단계(저장 프로시저 다시 만들기)에 대한 스크립트를 업데이트해야 합니다.  
   
-```tsql  
+```sql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
 # --------  
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
@@ -224,9 +224,9 @@ write-host ""
   
  다음 PowerShell 스크립트는 이전 예제에서 스크립팅된 스키마 변경 내용을 실행합니다. 이 스크립트는 테이블을 인수로 사용하고, 해당 테이블 및 연결된 저장 프로시저에 대해 생성된 스키마 변경 스크립트를 실행합니다.  
   
- 사용법: execute_schema_change.ps1 *server_name * * db_name`schema_name`table_name*  
+ Usage: execute_schema_change.ps1 *server_name**db_name`schema_name`table_name*  
   
-```tsql  
+```sql  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   

@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527205"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id** = ] *profile_id*  
- 나열할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 나열할 프로필의 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 나열할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 나열할 프로필의 프로필 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
- [ **@account_id** = ] *account_id*  
- 나열할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
+`[ @account_id = ] account_id` 목록에 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
   
- [ **@account_name** =] **'***account_name***'**  
- 나열할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
+`[ @account_name = ] 'account_name'` 나열할 계정의 이름이입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 때 *account_id* 하 고 *account_name* 이 모두 null 인, 프로필의 모든 계정을 나열 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -17,12 +17,12 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09bbecf0e0cc308449adde0a462e1641d240b1bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe58874e0046a53a33d0580c4477ac89f6cd6e18
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063313"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537593"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>백업 세트의 데이터와 로그 파일 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업 집합의 데이터 및 로그 파일을 보는 방법에 대해 설명합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "48063313"
   
 3.  [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) 문을 사용합니다. 이 예에서는`FILE=2`백업 디바이스의 두 번째 백업 세트( `AdventureWorksBackups` )에 대한 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  

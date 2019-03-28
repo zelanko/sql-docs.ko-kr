@@ -14,12 +14,12 @@ ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2e2d2f89b12274694bde8c4f9743416fa2ba253
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641094"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526175"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>query wait 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 대기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. 정렬이나 해시처럼 메모리를 많이 사용하는 쿼리를 실행하면 실행에 필요한 충분한 메모리가 확보될 때까지 쿼리가 대기됩니다. **쿼리 대기** 옵션은 리소스에 대한 쿼리의 최대 대기 제한 시간을 초 단위(0 - 2147483647)로 지정합니다. 이 옵션의 기본값은 -1입니다. 즉, 제한 시간이 예상 쿼리 비용의 25배로 계산됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "52641094"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `query wait` 옵션 값을 `7500` 초로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -90,7 +90,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 쿼리 대기 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 쿼리 대기 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

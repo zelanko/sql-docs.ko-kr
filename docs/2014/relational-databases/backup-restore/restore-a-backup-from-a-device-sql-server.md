@@ -15,12 +15,12 @@ ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52ff2085413e3bdcf082012dd5e616b0816a99a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e272dde5ca7a3c0ff7246d42131f1e70331689
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530865"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>디바이스에서 백업 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 디바이스에서 백업을 복원하는 방법에 대해 설명합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48200033"
   
 3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문에서 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' ;  
   

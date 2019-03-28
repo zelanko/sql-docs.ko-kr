@@ -16,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526205"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'***게시***'**  
- 상태를 확인할 피어 투 피어 토폴로지의 게시 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 상태를 확인 하는 피어 투 피어 토폴로지에서 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@description**= ] **'***description***'**  
- 개별 상태 요청을 식별하는 데 사용할 수 있는 사용자 정의 정보입니다. *설명* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 개별 상태 요청을 식별 하는 데 사용할 수 있는 사용자 정의 정보입니다. *설명* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
   
- [ **@request_id** =] *request_id*  
- 새 요청의 ID를 반환합니다. *request_id* 됩니다 **int** 이며 출력 매개 변수입니다. 실행 하는 경우이 값을 사용할 수 있습니다 [sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 상태 요청에 대 한 모든 응답을 볼 수 있습니다.  
+`[ @request_id = ] request_id` 새 요청의 ID를 반환합니다. *request_id* 됩니다 **int** 이며 출력 매개 변수입니다. 실행 하는 경우이 값을 사용할 수 있습니다 [sp_helppeerresponses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) 상태 요청에 대 한 모든 응답을 볼 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

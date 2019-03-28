@@ -16,12 +16,12 @@ ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5e64f320b5540eb5ff7a4b3ebeb75d42abb3d61b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0ae32391bd2f10525b89015272d11bcdb6468298
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537104"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Define a Logical Backup Device for a Disk File (SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 디스크 파일에 대한 논리적 백업 디바이스를 정의하는 방법에 대해 설명합니다. 논리적 디바이스는 특정 물리적 백업 디바이스(디스크 파일 또는 테이프 드라이브)를 가리키는 사용자 정의 이름입니다.  물리적 디바이스의 초기화는 나중에 백업 디바이스에 백업이 기록될 때 수행됩니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "48197373"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) 를 사용하여 디스크 파일의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `mydiskdump` `c:\dump\dump1.bak`라는 디스크 백업 장치를 추가합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak' ;  

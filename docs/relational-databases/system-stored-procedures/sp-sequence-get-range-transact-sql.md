@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700731"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527945"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@sequence_name** =] **N**'*시퀀스*'  
- 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 됩니다 **nvarchar(776)** 합니다.  
+`[ @sequence_name = ] N'sequence'` 시퀀스 개체의 이름입니다. 스키마는 선택 사항입니다. *sequence_name* 됩니다 **nvarchar(776)** 합니다.  
   
- [ **@range_size** =] *range_size*  
- 시퀀스에서 인출할 값의 수입니다. **@range_size** 됩니다 **bigint**합니다.  
+`[ @range_size = ] range_size` 시퀀스에서 인출할 값의 수입니다. **@range_size** 됩니다 **bigint**합니다.  
   
- [ **@range_first_value** =] *range_first_value*  
- 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 첫 번째(최소 또는 최대) 값을 반환합니다. **@range_first_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
+`[ @range_first_value = ] range_first_value` 출력 매개 변수는 요청한 범위를 계산 하는 데 사용 된 시퀀스 개체의 첫 번째 (최소 또는 최대) 값을 반환 합니다. **@range_first_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
   
- [ **@range_last_value** =] *range_last_value*  
- 선택적 출력 매개 변수는 요청한 범위의 마지막 값을 반환합니다. **@range_last_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
+`[ @range_last_value = ] range_last_value` 선택적 출력 매개 변수는 요청한 범위의 마지막 값을 반환 합니다. **@range_last_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
   
- [ **@range_cycle_count** =] range_cycle_count  
- 선택적 출력 매개 변수는 시퀀스 개체가 요청한 범위를 반환하기 위해 순환한 횟수를 반환합니다. **@range_cycle_count** 됩니다 **int**합니다.  
+`[ @range_cycle_count = ] range_cycle_count` 선택적 출력 매개 변수는 요청한 범위를 반환 하기 위해 시퀀스 개체 순환 횟수를 반환 합니다. **@range_cycle_count** 됩니다 **int**합니다.  
   
- [ **@sequence_increment** =] *sequence_increment*  
- 선택적 출력 매개 변수는 요청한 범위를 계산하는 데 사용된 시퀀스 개체의 증분을 반환합니다. **@sequence_increment** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
+`[ @sequence_increment = ] sequence_increment` 선택적 출력 매개 변수는 요청한 범위를 계산 하는 데 사용 된 시퀀스 개체의 증가값을 반환 합니다. **@sequence_increment** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
   
- [ **@sequence_min_value** =] *sequence_min_value*  
- 선택적 출력 매개 변수는 시퀀스 개체의 최소값을 반환합니다. **@sequence_min_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
+`[ @sequence_min_value = ] sequence_min_value` 선택적 출력 매개 변수는 시퀀스 개체의 최소값을 반환합니다. **@sequence_min_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
   
- [ **@sequence_max_value** =] *sequence_max_value*  
- 선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환합니다. **@sequence_max_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
+`[ @sequence_max_value = ] sequence_max_value` 선택적 출력 매개 변수는 시퀀스 개체의 최대값을 반환합니다. **@sequence_max_value** 됩니다 **sql_variant** 요청에 사용 된 시퀀스 개체와 동일한 기본 형식을 사용 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

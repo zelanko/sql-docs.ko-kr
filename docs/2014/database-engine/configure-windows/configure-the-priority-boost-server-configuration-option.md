@@ -12,12 +12,12 @@ ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 547003b601fc0bc4d6f68a0f4a59b9f54ccaaa56
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641284"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531215"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>priority boost 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 우선 순위 높임 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다.  **우선 순위 높임** 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 같은 컴퓨터에 있는 다른 프로세스보다 더 높은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 또는 Windows 2008 R2 일정 우선 순위에서 실행될 것인지 여부를 지정할 수 있습니다. 이 옵션을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 2008 또는 Windows Server 2008 R2 스케줄러에서 우선 순위 13으로 실행됩니다. 기본값인 0으로 설정하면 우선 순위 7이 사용됩니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "52641284"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `priority boost` 옵션의 값을 `1`(으)로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -90,7 +90,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 우선 순위 높임 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 우선 순위 높임 옵션을 구성한 후  
  설정을 적용하려면 서버를 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

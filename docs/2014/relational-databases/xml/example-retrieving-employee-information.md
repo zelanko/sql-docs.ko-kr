@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5262c3697964cf82969669012afd8fb29a0b8e8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d24f945eeb64975c71e416ed1e53d04fd5ffff9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812225"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526985"
 ---
 # <a name="example-retrieving-employee-information"></a>예: 직원 정보 검색
   이 예에서는 각 직원에 대한 직원 ID와 직원 이름을 검색합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 employeeID는 Employee 테이블의 BusinessEntityID 열로부터 가져올 수 있습니다. 직원 이름은 Person 테이블로부터 가져올 수 있습니다. BusinessEntityID 열을 사용하면 테이블을 조인할 수 있습니다.  
@@ -129,7 +129,7 @@ FOR XML EXPLICIT;
   
  이러한 프로세스는 행 집합의 남은 열에 대해 반복됩니다. FOR XML EXPLICIT에서 행 집합을 순서대로 처리하고 원하는 XML을 생성하기 위해서는 범용 테이블의 행을 정렬하는 것이 중요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [FOR XML에서 EXPLICIT 모드 사용](use-explicit-mode-with-for-xml.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086385"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533035"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
   [FOR XML을 사용하는 XML 생성](../xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
@@ -147,23 +147,23 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>섹션 내용  
  다음 예에서는 EXPLICIT 모드를 사용하는 방법을 보여 줍니다.  
   
--   [예제: 직원 정보 검색](../xml/example-retrieving-employee-information.md)  
+-   [예: 직원 정보 검색](../xml/example-retrieving-employee-information.md)  
   
--   [예제: ELEMENT 지시어 지정](../xml/example-specifying-the-element-directive.md)  
+-   [예: ELEMENT 지시어 지정](../xml/example-specifying-the-element-directive.md)  
   
--   [예제: ELEMENTXSINIL 지시어 지정](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [예: ELEMENTXSINIL 지시어 지정](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [예: EXPLICIT 모드를 사용하여 형제 생성](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [예: EXPLICIT 모드를 사용 하 여 형제 생성](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [예제: ID 및 IDREF 지시어 지정](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [예: ID 및 IDREF 지시어 지정](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [예제: ID 및 IDREFS 지시어 지정](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [예: ID 및 IDREFS 지시어 지정](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [예제: HIDE 지시어 지정](../xml/example-specifying-the-hide-directive.md)  
+-   [예: HIDE 지시어 지정](../xml/example-specifying-the-hide-directive.md)  
   
--   [예제: ELEMENT 지시어 및 엔터티 인코딩 지정](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [예: ELEMENT 지시어 및 엔터티 인코딩 지정](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [예제: CDATA 지시어 지정](../xml/example-specifying-the-cdata-directive.md)  
+-   [예: CDATA 지시어 지정](../xml/example-specifying-the-cdata-directive.md)  
   
 -   [예: XMLTEXT 지시어 지정](../xml/example-specifying-the-xmltext-directive.md)  
   

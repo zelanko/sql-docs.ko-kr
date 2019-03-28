@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2bdc89008b9752bcd2bb20b78eb209d9e766ed9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ab75a58c9e6181a06849e67f7a63417a2b58e89
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725891"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525995"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_id =** ] *plan_id*  
- 지워지는 쿼리 계획의 id가입니다. *plan_id* 되는 **bigint**, 기본값은 없습니다.  
+`[ @plan_id = ] plan_id` 지워지는 쿼리 계획의 id가입니다. *plan_id* 되는 **bigint**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

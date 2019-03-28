@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168663"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526075"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@class =**] **'**_클래스_**'**  
- 범주의 클래스입니다. *클래스* 은 **varchar(8)** 해야 없고 기본적으로 사용 하 여 이러한 값 중 하나가 있어야 합니다.  
+`[ @class = ] 'class'` 범주의 클래스입니다. *클래스* 은 **varchar(8)** 해야 없고 기본적으로 사용 하 여 이러한 값 중 하나가 있어야 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**JOB**|작업 범주를 제거합니다.|  
-|**경으십시오**|경고 범주를 제거합니다.|  
-|**연산자**|연산자 범주를 제거합니다.|  
+|**ALERT**|경고 범주를 제거합니다.|  
+|**OPERATOR**|연산자 범주를 제거합니다.|  
   
- [  **@name =**] **'**_이름_**'**  
- 제거할 범주의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 제거할 범주의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

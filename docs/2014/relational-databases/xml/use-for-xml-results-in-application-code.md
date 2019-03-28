@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532837"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  

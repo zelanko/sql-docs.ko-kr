@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049103"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529295"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
   CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 애플리케이션의 기능 수정을 유지할 때 중요할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049103"
 ## <a name="table-definition-for-the-workarounds"></a>해결 방법에 대한 테이블 정의  
  메모리 최적화 테이블로 변환하기 전에 [Sales].[SalesOrderDetail]의 정의는 다음과 같습니다.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  rowguid는 [!INCLUDE[hek_2](../includes/hek-2-md.md)]에서 지원되지 않으므로 더 이상 ROWGUIDCOL이 아닙니다. 열이 제거되었습니다. 또한 LineTotal은 계산된 열이고 이 문서에서 다루지 않으므로 제거되었습니다.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Insert, Update 또는 Delete 작업 후 제약 조건 검사  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Insert, Update 또는 Delete 작업 전 제약 조건 적용  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

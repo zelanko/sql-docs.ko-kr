@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538590"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528303"
 ---
 # <a name="cross-container-transactions"></a>크로스 컨테이너 트랜잭션
   크로스 컨테이너 트랜잭션은 메모리 최적화 테이블에서 고유하게 컴파일된 저장 프로시저 또는 작업에 대한 호출을 포함하는 암시적이거나 명시적인 사용자 트랜잭션입니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52538590"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>개별 작업의 격리 수준 지정  
  트랜잭션의 문 집합에 대해 다른 격리 수준을 설정하려면 `SET TRANSACTION ISOLATION LEVEL`을 사용할 수 있습니다. 트랜잭션의 다음 예제는 기본적으로 직렬화 격리 수준을 사용합니다. t3, t2 및 t1의 삽입 및 선택 작업은 반복 가능 읽기 격리에서 실행됩니다.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  트랜잭션 기본값과 다른 개별 읽기 작업에 대한 격리 수준을 설정하려면 테이블 힌트(예: 직렬화 가능)를 사용할 수 있습니다. 행을 업데이트하거나 삭제하려면 항상 먼저 행을 읽어야 하므로 모든 선택 작업은 읽기 작업에 해당하고 모든 업데이트 및 삭제 작업은 읽기 작업에 해당합니다. 쓰기는 항상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 격리되므로 삽입 작업에는 격리 수준이 없습니다. 다음 예제에서 트랜잭션의 기본 격리 수준은 커밋된 읽기이지만 테이블 t1은 직렬화 가능에서 액세스되고 t2는 스냅숏 격리에서 액세스됩니다.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  다음과 같은 트랜잭션이 있다고 합시다.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  트랜잭션의 메모리 최적화 측면 두 수준 중 하나에 도달할 수 있습니다: condition1이 true 이면이 직렬화에 도달 하지만 false 인 경우 스냅숏 격리만 메모리 최적화 측면이 도달 합니다.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -185,7 +185,7 @@ commit
   
  명시적 또는 암시적 크로스 컨테이너 읽기 전용 트랜잭션은 REPEATABLE READ 또는 SERIALIZABLE 격리 상태에서 트랜잭션이 메모리 최적화 테이블에 액세스하는 경우 커밋할 때 유효성 검사를 수행합니다. 충돌 검색, 유효성 검사 섹션을 참조 하는 유효성 검사에 대 한 세부 정보 및 커밋 종속성 확인에 대 한 [Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메모리 최적화 테이블의 트랜잭션 이해](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [메모리 최적화 테이블을 사용 하 여 트랜잭션 격리 수준에 대 한 지침](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  

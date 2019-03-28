@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510017"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527795"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 격리 수준에 대한 지침
   대부분의 경우 트랜잭션 격리 수준을 지정해야 합니다. 메모리 최적화 테이블에 대한 트랜잭션 격리는 디스크 기반 테이블과 다릅니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510017"
   
  다음 자동 커밋 트랜잭션 예에서는 임시 일괄 처리의 일부로 메모리 최적화 테이블 Customers와 일반 테이블 [Order History] 간의 조인을 보여 줍니다.  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  다음 명시적 또는 암시적 트랜잭션 예에서는 이번에는 명시적 사용자 트랜잭션에서 수행된다는 점만 다르고 위와 동일한 조인을 보여 줍니다. 테이블 힌트 WITH (SNAPSHOT)에 표시된 대로 메모리 최적화 테이블 Customers는 스냅숏 격리에서 액세스되고 일반 테이블 [Order History]는 커밋된 읽기 격리에서 액세스됩니다.  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  폴링 논리는 스냅숏 격리를 사용하여 t1 테이블에 액세스하므로 트랜잭션 범위 밖에 있어야 합니다. 트랜잭션 범위 내에서 폴링 논리를 사용하면 장기 실행 트랜잭션이 만들어지는데, 이는 좋은 방법이 아닙니다.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

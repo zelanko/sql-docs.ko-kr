@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168763"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527505"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@oldest_date=** ] **'**_오래\_날짜_**'**  
- 백업 및 복원 기록 테이블에서 보유하고 있는 가장 오래된 날짜입니다. *oldest_date* 됩니다 **datetime**, 기본값은 없습니다.  
+`[ @oldest_date = ] 'oldest\_date'` 백업 및 복원 기록 테이블에서 오래 유지 됩니다. *oldest_date* 됩니다 **datetime**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

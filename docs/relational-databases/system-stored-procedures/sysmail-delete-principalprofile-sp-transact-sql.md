@@ -18,12 +18,12 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673181"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527785"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@principal_id** = ] *principal_id*  
- 데이터베이스 사용자 또는 역할의 id를 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
+`[ @principal_id = ] principal_id` 데이터베이스 사용자 또는 역할의 id를 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
+`[ @principal_name = ] 'principal_name'` 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 삭제할 연결에 대 한 데이터베이스입니다. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 공개 프로필을 개인 프로필로 되도록 보안 주체 ID를 제공 **0** 주체 이름이 나 **'public'** 합니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
   
- [ **@profile_id** = ] *profile_id*  
- 삭제할 연결에 대한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 삭제할 연결에 대 한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 삭제할 연결에 대한 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 삭제할 연결에 대 한 프로필의 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094369"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527955"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
   인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 데이터에 효율적으로 액세스하는 데 사용됩니다. 올바른 인덱스를 지정하면 쿼리 성능을 크게 개선할 수 있습니다. 예를 들어, 다음 쿼리를 살펴보세요.  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      가비지 컬렉션은 테이블의 모든 인덱스를 사용하는 경우 가장 잘 작동합니다. 드물게 사용되는 인덱스는 오래된 행 버전의 경우 가비지 컬렉션 시스템이 최적의 성능을 발휘하지 못하게 할 수 있습니다.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 최적화 인덱스를 만드는: 코드 샘플  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 액세스에 최적화된 인덱스 만들기: 코드 예제  
  열 수준 해시 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  테이블 수준 해시 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  열 수준 기본 키 해시 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  테이블 수준 기본 키 해시 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  열 수준 비클러스터형 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  테이블 수준 비클러스터형 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  열 수준 기본 키 비클러스터형 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  테이블 수준 기본 키 비클러스터형 인덱스:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  열이 정의된 후 정의된 다중 열 인덱스:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

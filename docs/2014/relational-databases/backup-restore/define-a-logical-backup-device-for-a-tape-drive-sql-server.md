@@ -16,12 +16,12 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 959de8a29f1523527a12672d3ea872d7fad408c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14a96a44967c41b185d3196c9d6577f67547e77a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096013"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537415"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>테이프 드라이브에 대한 논리적 백업 디바이스 정의(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이프 드라이브에 대한 논리적 백업 디바이스를 정의하는 방법에 대해 설명합니다. 논리적 디바이스는 특정 물리적 백업 디바이스(디스크 파일 또는 테이프 드라이브)를 가리키는 사용자 정의 이름입니다.  물리적 디바이스의 초기화는 나중에 백업 디바이스에 백업이 기록될 때 수행됩니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48096013"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) 를 사용하여 테이프의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `tapedump1`라는 물리적 이름으로 `\\.\tape0`이라는 테이프 백업 디바이스를 추가합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;  

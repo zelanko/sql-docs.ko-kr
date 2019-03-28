@@ -17,12 +17,12 @@ ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc0520f7c28804e5534b4334e8f440e263c4f2eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527915"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>새 위치로 파일 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 파일을 새 위치에 복원하는 방법에 대해 설명합니다.  
@@ -88,8 +88,8 @@ ms.locfileid: "48128853"
     |-----------------|------------|  
     |**복원**|확인란이 선택되어 있으면 백업 세트가 복원됩니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그**또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
+    |**파일 유형**|백업의 데이터 형식인 **데이터**하십시오 **로그**, 또는 **Filestream 데이터**입니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
+    |**형식**|수행된 백업 유형입니다. **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 데이터베이스 엔진 인스턴스의 이름입니다.|  
     |**논리적 파일 이름**|파일의 논리적 이름입니다.|  
     |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
@@ -105,7 +105,7 @@ ms.locfileid: "48128853"
     |열 머리글|값|  
     |-----------------|------------|  
     |**원래 파일 이름**|원본 백업 파일의 전체 경로입니다.|  
-    |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그**또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
+    |**파일 유형**|백업의 데이터 형식인 **데이터**하십시오 **로그**, 또는 **Filestream 데이터**입니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
     |**다음으로 복원**|복원할 데이터베이스 파일의 전체 경로입니다. 새 복원 파일을 지정하려면 입력란을 클릭하고 제안된 경로와 파일 이름을 편집합니다. **다음으로 복원** 열에서 경로 또는 파일 이름을 변경하는 것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 MOVE 옵션을 사용하는 것과 같습니다.|  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
@@ -139,7 +139,7 @@ ms.locfileid: "48128853"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 원래 드라이브 C에 있었던 `MyNwind` 데이터베이스의 두 파일을 드라이브 D의 새 위치로 복원합니다. 두 트랜잭션 로그도 적용되어 데이터베이스를 현재 시간으로 복원합니다. `RESTORE FILELISTONLY` 문은 복원할 데이터베이스에 있는 파일의 수와 논리적/물리적 이름을 확인하는 데 사용합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

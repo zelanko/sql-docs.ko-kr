@@ -18,12 +18,12 @@ ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d978bce696db7ff5ec2f19c773681409559ccb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6011c1684301402edbe6ca96614901be6a8fe3da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837282"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531555"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@policy_category=** ] **'***policy_category***'**  
- 삭제할 정책 범주 구독의 이름입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
+`[ @policy_category = ] 'policy_category'` 삭제 하려는 정책 범주 구독의 이름이입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
  값을 얻으려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   

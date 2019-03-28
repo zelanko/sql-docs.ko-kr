@@ -18,12 +18,12 @@ ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3337c62cc90eb349158a804ee86eb995255936d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528215"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
- 상태를 지울 개체 탐색기의 노드를 나타냅니다. *target_tree_root_with_id* 됩니다 **nvarchar(400)**, 기본값은 NULL입니다.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` 상태를 지우려는 개체 탐색기에서 노드를 나타냅니다. *target_tree_root_with_id* 됩니다 **nvarchar(400)**, 기본값은 NULL입니다.  
   
  msdb.dbo.syspolicy_system_health_state 시스템 뷰의 target_query_expression_with_id 열에 있는 값을 지정할 수 있습니다.  
   
@@ -57,7 +56,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 개체 탐색기의 지정한 노드에 대한 상태를 삭제합니다.  

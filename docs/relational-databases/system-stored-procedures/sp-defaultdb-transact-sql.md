@@ -18,12 +18,12 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9703b4310870105d3a0961c430699449da7ff3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532985"
 ---
 # <a name="spdefaultdb-transact-sql"></a>sp_defaultdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame=**] **'***로그인***'**  
- 로그인 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
+`[ @loginame = ] 'login'` 로그인 이름이입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 기존 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이나 Windows 사용자 또는 그룹. Windows 사용자 또는 그룹에 대한 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 없으면 자동으로 추가됩니다.  
   
- [  **@defdb=**] **'***데이터베이스***'**  
- 새 기본 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다. *데이터베이스* 이미 존재 해야 합니다.  
+`[ @defdb = ] 'database'` 새 기본 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다. *데이터베이스* 이미 존재 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

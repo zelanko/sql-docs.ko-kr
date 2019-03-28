@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527925"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@remoteserver =** ] **'**_remoteserver_**'**  
- 제거할 원격 로그인에 매핑된 원격 서버의 이름입니다. *remoteserver* 됩니다 **sysname**, 기본값은 없습니다. *remoteserver* 이미 존재 해야 합니다.  
+`[ @remoteserver = ] 'remoteserver'` 제거할 원격 로그인에 매핑된 원격 서버의 이름이입니다. *remoteserver* 됩니다 **sysname**, 기본값은 없습니다. *remoteserver* 이미 존재 해야 합니다.  
   
- [  **@loginame =** ] **'**_로그인_**'**  
- 원격 서버와 연결된 로컬 서버의 선택적 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정 하는 경우 이미 존재 해야 합니다.  
+`[ @loginame = ] 'login'` 원격 서버와 연결 된 로컬 서버의 선택적 로그인 이름이입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정 하는 경우 이미 존재 해야 합니다.  
   
- [  **@remotename =** ] **'**_remote_name_**'**  
- 매핑되는 원격 로그인의 선택적 이름 *로그인* 원격 서버에서 로그인 할 때입니다. *remote_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @remotename = ] 'remote_name'` 매핑되는 원격 로그인의 선택적 이름 *로그인* 원격 서버에서 로그인 할 때입니다. *remote_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -91,7 +88,7 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

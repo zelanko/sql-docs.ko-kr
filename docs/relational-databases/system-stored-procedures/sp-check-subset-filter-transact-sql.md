@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791715"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527455"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@filtered_table**=] **'***filtered_table***'**  
- 필터링된 테이블의 이름입니다. *filtered_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
+`[ @filtered_table = ] 'filtered_table'` 필터링된 된 테이블의 이름이입니다. *filtered_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- 테스트할 필터 절입니다. *subset_filterclause* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @subset_filterclause = ] 'subset_filterclause'` 가 필터 절을 테스트할 수 있습니다. *subset_filterclause* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- 필터 절이 매개 변수가 있는 행 필터인지 여부입니다. *has_dynamic_filters* 됩니다 **비트**, 기본값은 NULL 사용 하 여 출력 매개 변수 및 합니다. 값을 반환 **1** 경우 필터 절이 매개 변수가 있는 행 필터입니다.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` 필터 절 매개 변수가 있는 행 필터를 경우입니다. *has_dynamic_filters* 됩니다 **비트**, 기본값은 NULL 사용 하 여 출력 매개 변수 및 합니다. 값을 반환 **1** 경우 필터 절이 매개 변수가 있는 행 필터입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

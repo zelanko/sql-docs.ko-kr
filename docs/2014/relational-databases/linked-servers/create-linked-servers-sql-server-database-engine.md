@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766615"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527848"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 연결된 서버를 만들고 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터에 액세스하는 방법을 보여 줍니다. 연결된 서버를 만들면 여러 원본의 데이터로 작업할 수 있습니다. 연결된 서버는 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스일 필요는 없지만 이것이 일반적인 시나리오입니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "52766615"
   
 1.  쿼리 편집기에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명된 `SRVR002\ACCTG`인스턴스에 연결합니다.  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766615"
   
 2.  다음 코드를 실행하여 연결된 서버에서 연결된 서버를 사용하는 로그인의 도메인 자격 증명을 사용하도록 구성합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766615"
   
     ```  
   
-##  <a name="FollowUp"></a> 후속편: 연결된 서버를 만든 후 수행할 단계  
+##  <a name="FollowUp"></a> 후속 작업: 연결된 서버를 만든 후 수행할 단계  
   
 #### <a name="to-test-the-linked-server"></a>연결된 서버 테스트  
   
 -   다음 코드를 실행하여 연결된 서버에 대한 연결을 테스트합니다. 이 예에서는 연결된 서버의 데이터베이스 이름을 반환합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766615"
   
 -   네 부분으로 이루어진 이름을 사용하여 연결된 서버의 개체를 참조합니다. 다음 코드를 실행하면 로컬 서버의 모든 로그인 및 연결된 서버에서 이와 일치하는 로그인의 목록이 반환됩니다.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -246,7 +246,7 @@ ms.locfileid: "52766615"
   
      연결된 서버에 대해 NULL이 반환되면 로그인이 연결된 서버에 없음을 의미합니다. 이러한 로그인은 연결된 서버가 다른 보안 컨텍스트를 통과시키거나 연결된 서버가 익명 연결을 허용하도록 구성되어야 연결된 서버를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결된 서버&#40;데이터베이스 엔진&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

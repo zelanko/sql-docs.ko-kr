@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527521"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142723"
   
  XML 인덱스를 만들 수 없습니다는 `xml` 뷰에서 열에 입력을 **테이블** 반환된 변수 `xml` 유형 열을 또는 `xml` 변수를 입력 합니다.  
   
--   변경 하는 `xml` 유형 열을 형식화 되지 않은 XML에서 형식화 된 또는 그 반대의 경우 ALTER TABLE ALTER COLUMN 옵션을 사용 하면 열에 XML 인덱스가 있어야 합니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
+-   ALTER TABLE ALTER COLUMN 옵션을 사용하여 `xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경하거나 그 반대로 변경하려면 열에 XML 인덱스가 있으면 안 됩니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
   
 -   ARITHABORT 옵션은 XML 인덱스를 만들 때 ON으로 설정되어야 합니다. XML 데이터 형식 메서드를 사용하여 XML 열의 값을 쿼리, 삽입, 삭제 또는 업데이트하려면 같은 옵션을 연결에 설정해야 합니다. 그렇지 않으면 XML 데이터 형식 메서드가 실패합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142723"
   
  1년 미만의 값이 있는 XML 스키마 유형 **xs:date** 또는 **xs:dateTime** 이나 그 하위 유형의 값을 포함하는 XML 데이터 형식 열에 기본 XML 인덱스를 만들거나 다시 만들 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 인덱스 만들기에 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 이러한 값이 허용되었으므로 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 생성된 데이터베이스에 인덱스를 만들 경우 이러한 문제가 발생할 수 있습니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
-### <a name="example-creating-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기  
+### <a name="example-creating-a-primary-xml-index"></a>예: 기본 XML 인덱스 만들기  
  대부분의 예에서는 형식화되지 않은 XML 열이 포함된 테이블 T(pk INT PRIMARY KEY, xCol XML)가 사용됩니다. 이러한 예는 직관적인 방식에 따라 형식화된 XML로 확장될 수 있습니다. 간단한 설명을 위해 쿼리는 다음에 표시된 것과 같이 XML 데이터 인스턴스에 대해 기술됩니다.  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 열에 반환된 값은 NULL, PATH, VALUE 또는 PROPERTY가 될 수 있습니다. 기본 XML 인덱스의 경우 반환된 값은 NULL입니다.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>예제: 보조 XML 인덱스 만들기  
+### <a name="example-creating-secondary-xml-indexes"></a>예: 보조 XML 인덱스 만들기  
  다음 예에서는 보조 XML 인덱스가 만들어지는 방법을 설명합니다. 또한 만들어진 XML 인덱스에 대한 정보도 보여 줍니다.  
   
 ```  

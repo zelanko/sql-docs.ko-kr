@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601131"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527935"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@data_type=** ] *data_type*  
- 지정된 데이터 형식의 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 됩니다 **int**, 기본값은 0입니다.  
+`[ @data_type = ] data_type` 지정된 된 데이터 형식에 대 한 코드입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 됩니다 **int**, 기본값은 0입니다.  
   
- [ **@ODBCVer=** ] *odbc_version*  
- 사용하고 있는 ODBC의 버전입니다. *odbc_version* 됩니다 **tinyint**, 기본값은 2입니다.  
+`[ @ODBCVer = ] odbc_version` 사용 되는 ODBC의 버전이입니다. *odbc_version* 됩니다 **tinyint**, 기본값은 2입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  

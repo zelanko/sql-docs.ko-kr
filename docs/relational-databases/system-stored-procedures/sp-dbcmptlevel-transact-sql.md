@@ -18,12 +18,12 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841793"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527431"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=** ] *이름*  
- 호환성 수준을 변경할 데이터베이스의 이름입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @dbname = ] name` 호환성 수준이 변경 되는 데이터베이스의 이름이입니다. 데이터베이스 이름은 식별자에 대한 규칙을 따라야 합니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@new_cmptlevel=** ] *버전*  
- 데이터베이스가 호환되도록 설정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다. *버전* 됩니다 **tinyint**, 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
+`[ @new_cmptlevel = ] version` 버전이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 데이터베이스가 호환 수 있습니다. *버전* 됩니다 **tinyint**, 기본값은 NULL입니다. 값은 다음 중 하나여야 합니다.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

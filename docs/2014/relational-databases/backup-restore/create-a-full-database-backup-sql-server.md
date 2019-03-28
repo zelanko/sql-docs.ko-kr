@@ -15,12 +15,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5f432950cadf2b30b84dc00fd900737bfe21f81b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530755"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -227,7 +227,7 @@ ms.locfileid: "54124893"
 #### <a name="a-backing-up-to-a-disk-device"></a>1. 디스크 디바이스에 백업  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -241,7 +241,7 @@ GO
 #### <a name="b-backing-up-to-a-tape-device"></a>2. 테이프 디바이스에 백업  
  다음 예에서는 이전 백업에 백업을 추가하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스 전체를 테이프에 백업합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -254,7 +254,7 @@ GO
 #### <a name="c-backing-up-to-a-logical-tape-device"></a>3. 논리적 테이프 디바이스에 백업  
  다음 예에서는 테이프 드라이브에 대한 논리적 백업 디바이스를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스 전체를 이 디바이스에 백업합니다.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  

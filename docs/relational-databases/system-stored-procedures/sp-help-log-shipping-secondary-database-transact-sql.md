@@ -18,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce38780d40347f237f3a09a6dea5376fb1cf47d9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527035"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@secondary_database =** ] '*secondary_database*'  
- 보조 데이터베이스의 이름입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름이입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@secondary_id =** ] '*secondary_id*'  
- 로그 전달 구성의 보조 서버의 ID입니다. *secondary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @secondary_id = ] 'secondary_id'` 로그 전달 구성의 보조 서버에 대 한 ID입니다. *secondary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

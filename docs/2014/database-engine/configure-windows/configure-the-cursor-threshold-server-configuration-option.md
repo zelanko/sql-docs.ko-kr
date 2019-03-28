@@ -12,12 +12,12 @@ ms.assetid: 189f2067-c6c4-48bd-9bd9-65f6b2021c12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e99a0faa53739f588d0240b8425617af112ae04b
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: a710ef8474ea0ce67d0b549febb3a9dd40aa36e0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640014"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527875"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>cursor threshold 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 커서 임계값 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **커서 임계값** 옵션은 커서 키 집합이 비동기적으로 생성되는 커서 집합의 행 수를 지정합니다. 커서에서 결과 집합에 대해 키 집합을 생성할 때 쿼리 최적화 프로그램은 해당 결과 집합으로 반환될 행 개수를 계산합니다. 쿼리 최적화 프로그램의 계산 결과, 반환된 행 개수가 이 임계값보다 크면 커서가 계속 채워지는 동안 사용자가 커서에서 행을 인출할 수 있도록 커서가 비동기적으로 생성됩니다. 그렇지 않으면 커서가 동기적으로 생성되어 모든 행이 반환될 때까지 쿼리가 기다립니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "52640014"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 통해 `cursor threshold` 옵션을 `0` 으로 설정하여 커서 키 집합이 비동기적으로 생성되도록 만드는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1 ;  
@@ -95,10 +95,10 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 커서 임계값 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 커서 임계값 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [@@CURSOR_ROWS&#40;Transact-SQL&#41;](/sql/t-sql/functions/cursor-rows-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

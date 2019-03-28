@@ -16,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527335"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +51,15 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |값|Description|  
 |-----------|-----------------|  
 |**병합 게시**|병합 게시용으로 데이터베이스를 사용할 수 있습니다.|  
-|**게시**|다른 유형의 게시용으로 데이터베이스를 사용할 수 있습니다.|  
-|**구독**|데이터베이스는 구독 데이터베이스입니다.|  
+|**publish**|다른 유형의 게시용으로 데이터베이스를 사용할 수 있습니다.|  
+|**subscribe**|데이터베이스는 구독 데이터베이스입니다.|  
 |**백업을 사용 하 여 동기화**|통합 백업용으로 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대해 통합 백업 사용 &#40;복제 TRANSACT-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)합니다.|  
   
- [  **@value=**] **'***값***'**  
- 지정된 복제 데이터베이스 옵션의 설정 또는 해제 여부를 나타냅니다. *값* 은 **sysname**, 수 및 **true** 하거나 **false**합니다. 이 값이 **false** 하 고 *optname* 됩니다 **병합 게시**, 병합 게시 데이터베이스에 대 한 구독도 삭제 됩니다.  
+`[ @value = ] 'value'` 지정 된 복제 데이터베이스 옵션을 사용할지 여부입니다. *값* 은 **sysname**, 수 및 **true** 하거나 **false**합니다. 이 값이 **false** 하 고 *optname* 됩니다 **병합 게시**, 병합 게시 데이터베이스에 대 한 구독도 삭제 됩니다.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- 이 저장 프로시저가 배포자에 연결되지 않고 실행되는지 여부를 표시합니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**은 배포자에 연결 되어 있고 게시 데이터베이스의 새 상태를 업데이트 합니다. 값 **1** 지정할 수만 배포자 액세스할 수 없는 경우와 **sp_replicationdboption** 게시를 사용 하지 않도록 설정 하는 데 사용 되는 합니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장된 프로시저는 배포자에 연결 하지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**은 배포자에 연결 되어 있고 게시 데이터베이스의 새 상태를 업데이트 합니다. 값 **1** 지정할 수만 배포자 액세스할 수 없는 경우와 **sp_replicationdboption** 게시를 사용 하지 않도록 설정 하는 데 사용 되는 합니다.  
   
- [  **@from_scripting=**] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -77,7 +74,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_replicationdboption**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   

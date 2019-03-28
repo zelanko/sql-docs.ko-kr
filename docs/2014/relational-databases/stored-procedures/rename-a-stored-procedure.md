@@ -13,12 +13,12 @@ ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6cc6f8ca0c5bb6657cd26350267f557edd014be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092433"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536285"
 ---
 # <a name="rename-a-stored-procedure"></a>저장 프로시저 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저의 이름을 바꾸는 방법에 대해 설명합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "48092433"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저를 삭제하고 새 이름으로 다시 만들어 프로시저의 이름을 바꾸는 방법을 보여 줍니다. 첫 번째 예에서는 `'HumanResources.uspGetAllEmployeesTest`저장 프로시저를 만듭니다. 두 번째 예에서는 `HumanResources.uspEveryEmployeeTest`저장 프로시저의 이름을 바꿉니다.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  

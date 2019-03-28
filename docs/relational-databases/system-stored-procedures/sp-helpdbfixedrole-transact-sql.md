@@ -18,12 +18,12 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527965"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'***역할***'**  
- 고정 데이터베이스 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할* 는 목록 및 모든 고정된 데이터베이스 역할의 설명 되 고, 그렇지 않으면 지정 하면 해당 역할에 대 한 정보만 반환 됩니다.  
+`[ @rolename = ] 'role'` 고정된 데이터베이스 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할* 는 목록 및 모든 고정된 데이터베이스 역할의 설명 되 고, 그렇지 않으면 지정 하면 해당 역할에 대 한 정보만 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

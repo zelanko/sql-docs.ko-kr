@@ -14,12 +14,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b72f07b6cd2e223cb0556bd1fb32d03206122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214813"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536150"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>백업 또는 복원 중 백업 체크섬 설정 또는 해제(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스를 백업하거나 복원할 때 백업 체크섬을 설정 또는 해제하는 방법에 대해 설명합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48214813"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 체크섬이 수행되도록 지정합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -84,7 +84,7 @@ GO
   
 3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문에서 백업 체크섬을 설정하려면 WITH CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업의 기본 동작입니다. 백업 체크섬을 해제하려면 WITH NO_CHECKSUM 옵션을 지정합니다. 이 동작은 압축된 백업을 제외한 경우의 기본 동작입니다. 다음 예제는 백업 체크섬이 수행되도록 지정합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

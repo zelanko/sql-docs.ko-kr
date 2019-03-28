@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818085"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528145"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,14 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] *job_id*  
- 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  특정 작업을 하거나 보려는 *job_id* 하거나 *job_name* 지정 해야 합니다.  둘 다 생략 *job_id* 하 고 *job_name* 모든 작업에 대 한 정보를 반환 합니다.
   
- [ **@job_aspect =**] **'***job_aspect***'**  
- 표시할 작업 특성입니다. *job_aspect* 됩니다 **varchar(9)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @job_aspect = ] 'job_aspect'` 표시할 작업 특성입니다. *job_aspect* 됩니다 **varchar(9)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -73,23 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|작업 단계 정보입니다.|  
 |**대상**|대상 정보입니다.|  
   
- [ **@job_type =**] **'***job_type***'**  
- 보고서에 포함할 작업 유형입니다. *job_type* 됩니다 **varchar(12)**, 기본값은 NULL입니다. *job_type* 될 수 있습니다 **로컬** 하거나 **MULTI-SERVER**합니다.  
+`[ @job_type = ] 'job_type'` 보고서에 포함할 작업의 형식입니다. *job_type* 됩니다 **varchar(12)**, 기본값은 NULL입니다. *job_type* 될 수 있습니다 **로컬** 하거나 **MULTI-SERVER**합니다.  
   
- [ **@owner_login_name =**] **'***login_name***'**  
- 작업 소유자의 로그인 이름입니다. *login_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @owner_login_name = ] 'login_name'` 작업 소유자의 로그인 이름입니다. *login_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@subsystem =**] **'***subsystem***'**  
- 하위 시스템의 이름입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
+`[ @subsystem = ] 'subsystem'` 하위 시스템의 이름입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
   
- [ **@category_name =**] **'***category***'**  
- 범주의 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @category_name = ] 'category'` 범주의 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@enabled =**] *enabled*  
- 사용하는 작업 또는 사용하지 않는 작업에 대해 정보를 표시할지 여부를 나타내는 번호입니다. *사용 하도록 설정* 됩니다 **tinyint**, 기본값은 NULL입니다. **1** 사용된 하는 작업을 나타내는 및 **0** 사용 안 함된 작업을 나타냅니다.  
+`[ @enabled = ] enabled` 작업 또는 사용 안 함 작업을 사용 하는 대 한 정보를 표시할지 여부를 나타내는 번호입니다. *사용 하도록 설정* 됩니다 **tinyint**, 기본값은 NULL입니다. **1** 사용된 하는 작업을 나타내는 및 **0** 사용 안 함된 작업을 나타냅니다.  
   
- [ **@execution_status =**] *status*  
- 작업의 실행 상태입니다. *상태* 됩니다 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @execution_status = ] status` 작업에 대 한 실행 상태입니다. *상태* 됩니다 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|일시 중지 상태입니다.|  
 |**7**|동작을 완전히 수행하였습니다.|  
   
- [ **@date_comparator =**] **'***date_comparison***'**  
- 비교에 사용할 비교 연산자 *date_created* 하 고 *date_modified*합니다. *date_comparison* 됩니다 **char(1)**, = 될 수 있습니다 \<, 또는 >.  
+`[ @date_comparator = ] 'date_comparison'` 비교에 사용할 비교 연산자 *date_created* 하 고 *date_modified*합니다. *date_comparison* 됩니다 **char(1)**, = 될 수 있습니다 \<, 또는 >.  
   
- [ **@date_created =**] *date_created*  
- 작업을 만든 날짜입니다. *date_created*됩니다 **datetime**, 기본값은 NULL입니다.  
+`[ @date_created = ] date_created` 작업이 만들어진 날짜입니다. *date_created*됩니다 **datetime**, 기본값은 NULL입니다.  
   
- [ **@date_last_modified =**] *date_modified*  
- 작업을 마지막으로 수정한 날짜입니다. *date_modified* 됩니다 **datetime**, 기본값은 NULL입니다.  
+`[ @date_last_modified = ] date_modified` 작업을 마지막으로 수정한 날짜입니다. *date_modified* 됩니다 **datetime**, 기본값은 NULL입니다.  
   
- [ **@description =**] **'***description_pattern***'**  
- 작업에 대한 설명입니다. *description_pattern* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. *description_pattern* 패턴 일치를 위해 SQL Server 와일드 카드 문자를 포함할 수 있습니다.  
+`[ @description = ] 'description_pattern'` 작업의 설명입니다. *description_pattern* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다. *description_pattern* 패턴 일치를 위해 SQL Server 와일드 카드 문자를 포함할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -128,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
 |**category**|**sysname**|작업 범주입니다.|  
-|**소유자**|**sysname**|작업 소유자입니다.|  
+|**owner**|**sysname**|작업 소유자입니다.|  
 |**notify_level_eventlog**|**int**|**비트 마스크** 나타내는 어떤 상황에서 Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업을 완료할 때마다 =|  
 |**notify_level_email**|**int**|**비트 마스크** 어떤 상황에서 알림 전자 메일을 보내야 나타내는 작업을 완료 하는 경우. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
 |**notify_level_netsend**|**int**|**비트 마스크** 어떤 상황에서 네트워크 메시지를 보내야 나타내는 작업을 완료 하는 경우. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
@@ -191,7 +178,7 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_id**|**int**|모든 작업에서 고유한 일정의 ID입니다.|  
 |**schedule_name**|**sysname**|해당 작업에 대해서만 고유한 일정의 이름입니다.|  
 |**enabled**|**int**|일정이 활성 상태 인지 여부 (**1**) 여부 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 표시하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**정수**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -279,7 +266,7 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

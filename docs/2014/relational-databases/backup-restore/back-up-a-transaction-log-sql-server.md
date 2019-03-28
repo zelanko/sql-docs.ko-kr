@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12500b5e327be1de7f201af4c3040b1368c63c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154283"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535305"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "48154283"
   
  이 예에서는 이전에 만든 명명된 백업 디바이스 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 에 `MyAdvWorks_FullRM_log1`데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
    TO MyAdvWorks_FullRM_log1;  
 GO  

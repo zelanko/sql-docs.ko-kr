@@ -13,12 +13,12 @@ ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db4477f347e0eff1a7a8d75aaf21c1a34d8130dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782495"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528175"
 ---
 # <a name="start-or-stop-a-collection-set"></a>컬렉션 집합 시작 또는 중지
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 컬렉션 집합을 시작 또는 중지하는 방법에 대해 설명합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "52782495"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql) 를 사용하여 ID가 `1`인 컬렉션 집합을 시작합니다.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
@@ -104,7 +104,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](/sql/relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql) 를 사용하여 ID가 `1`인 컬렉션 집합을 중지합니다.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  

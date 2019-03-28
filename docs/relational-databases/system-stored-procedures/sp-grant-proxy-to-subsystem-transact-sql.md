@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528135"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@proxy_id =** ] *id*  
- 액세스 권한을 부여할 프록시의 프록시 ID입니다. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @proxy_id = ] id` 에 대 한 액세스 권한을 부여할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@proxy_name =** ] **'***proxy_name***'**  
- 액세스 권한을 부여하려는 프록시 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @proxy_name = ] 'proxy_name'` 에 대 한 액세스 권한을 부여할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@subsystem_id =** ] *id*  
- 액세스 권한을 부여할 하위 시스템의 ID입니다. 합니다 *subsystem_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_id = ] id` 에 대 한 액세스를 부여할 하위 시스템의 id. 합니다 *subsystem_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -64,8 +61,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
   
- [ **@subsystem_name =** ] **'***subsystem_name***'**  
- 액세스 권한을 부여할 하위 시스템의 이름입니다. 합니다 **subsystem_name** 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 에 대 한 액세스를 부여할 하위 시스템의 이름입니다. 합니다 **subsystem_name** 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  

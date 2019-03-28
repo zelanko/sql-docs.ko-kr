@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527536"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'**_게시자_**'**  
- 원격 서버 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 구독이 전혀 게시자 삭제 됩니다.  
+`[ @publisher = ] 'publisher'` 원격 서버 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 구독이 전혀 게시자 삭제 됩니다.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. **모든** 은 모든 게시자 데이터베이스를 의미 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. **모든** 은 모든 게시자 데이터베이스를 의미 합니다.  
   
- [  **@publication=** ] **'**_게시_**'**  
- 게시 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 모든 게시에 대 한 구독이 삭제 됩니다.  
+`[ @publication = ] 'publication'` 게시 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 모든 게시에 대 한 구독이 삭제 됩니다.  
   
- [  **@reserved=** ] *예약*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

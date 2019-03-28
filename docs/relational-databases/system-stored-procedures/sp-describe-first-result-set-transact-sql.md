@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400636"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528165"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,16 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@tsql = ] 'Transact-SQL_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (***n***)** 하거나 **nvarchar (max)** 합니다.  
   
- [  **\@params =** ] **N'***매개 변수***'**  
- \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게 됩니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@params = ] N'parameters'` \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리는 sp_executesql과 비슷하게 됩니다. 매개 변수 수 있습니다 **nvarchar (n)** 하거나 **nvarchar (max)** 합니다.  
   
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수에서 정의 되어야 합니다 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문의 일괄 처리에 매개 변수가 없습니다 \@params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- 추가 키 열과 원본 테이블 정보를 반환할지 여부를 지정합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
+`[ \@browse_information_mode = ] tinyint` 추가 키 열과 원본 테이블 정보를 반환 하는 경우 지정 합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
   
 -   0으로 설정되면 정보가 반환되지 않습니다.  
   
@@ -404,6 +401,6 @@ N'
   
 ## <a name="see-also"></a>관련 항목  
  [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
  

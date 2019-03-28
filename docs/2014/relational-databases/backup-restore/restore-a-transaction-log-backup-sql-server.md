@@ -19,12 +19,12 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac8f9e32aac94d7e565b9166102702ba4b747a88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189263"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535035"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 트랜잭션 로그 백업을 복원하는 방법에 대해 설명합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "48189263"
     |------------|-----------|  
     |**복원**|선택된 확인란은 복원될 백업 세트를 나타냅니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 \<비어 있음>(트랜잭션 로그의 경우)이 될 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**하십시오 **파일**, 또는 \<빈 > (트랜잭션 로그의 경우)에 대 한 합니다.|  
     |**데이터베이스 백업**|백업 작업과 연관된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
@@ -237,14 +237,14 @@ ms.locfileid: "48189263"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  기본적으로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스는 단순 복구 모델을 사용합니다. 다음 예에서는 전체 복구 모델을 사용하도록 데이터베이스를 다음과 같이 변경해야 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>1. 단일 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 디바이스에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 디바이스에 상주하는 첫 번째 트랜잭션 로그 백업을 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -262,7 +262,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>2. 여러 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 디바이스에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 디바이스에 상주하는 처음 3개의 트랜잭션 로그 백업을 하나씩 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

@@ -18,12 +18,12 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb4dad948b38fa4c490263a9dcc08ae98f88bdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfc973f476bfb2f855b42f2b2e4d4486ba631c2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526255"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@secondary_server =** ] '*secondary_server*'  
- 보조 서버의 이름입니다. *secondary_server* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @secondary_server = ] 'secondary_server'` 보조 서버의 이름이입니다. *secondary_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@secondary_database =** ] '*secondary_database*'  
- 보조 데이터베이스의 이름입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @secondary_database = ] 'secondary_database'` 보조 데이터베이스의 이름이입니다. *secondary_database* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

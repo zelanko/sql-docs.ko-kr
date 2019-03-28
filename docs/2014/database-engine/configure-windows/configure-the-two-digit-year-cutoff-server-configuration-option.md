@@ -13,12 +13,12 @@ ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da1bf028421855ee08584abae78bd66f75058e6e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641454"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527225"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 두 자리 연도 구분 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **두 자리 연도 구분** 옵션은 두 자리 연도를 네 자리 연도로 해석할 구분 연도를 1753부터 9999까지의 정수 중에서 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 시간 범위는 1950-2049입니다. 즉, 구분 연도가 2049년임을 나타냅니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 두 자리 숫자 49를 2049년으로, 두 자리 숫자 50을 1950년으로, 두 자리 숫자 99를 1999년으로 해석합니다. 이전 버전과의 호환성을 위해 기본값 설정을 그대로 두세요.  
@@ -72,7 +72,7 @@ ms.locfileid: "52641454"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `two digit year cutoff` 옵션의 값을 `2030`(으)로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -88,10 +88,10 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 두 자리 연도 구분 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 두 자리 연도 구분 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)  

@@ -16,12 +16,12 @@ ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf771f02ec63260dcda1f8b7fa633f9fb6bf9a07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817775"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58525775"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@source_object=**] **'***source_object***'**  
- 원본 개체의 이름입니다. *source_object*됩니다 **nvarchar(386)**, 기본값은 없습니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object*됩니다 **nvarchar(386)**, 기본값은 없습니다.  
   
- [  **@rowguid=**] **'***rowguid***'**  
- 행 식별자입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
+`[ @rowguid = ] 'rowguid'` 행 식별자가입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +53,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_mergedummyupdate**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

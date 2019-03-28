@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594363"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527195"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594363"
   테이블을 전체 텍스트 인덱싱에 표시하거나 표시하지 않습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md)하십시오 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), 및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 를 사용하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@tabname=**] **'***qualified_table_name***'**  
- 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
+`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
   
- [  **@action=**] **'***동작***'**  
- 수행할 동작입니다. *작업* 됩니다 **nvarchar (50)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작이입니다. *작업* 됩니다 **nvarchar (50)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|테이블에 대한 전체 텍스트 인덱스의 증분 채우기를 시작합니다.|  
 |**중지**|전체 또는 증분 채우기를 중단합니다.|  
   
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- 에 대 한 유효 하 고 기존 전체 텍스트 카탈로그 이름이 **만들** 작업. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @ftcat = ] 'fulltext_catalog_name'` 에 대 한 유효 하 고 기존 전체 텍스트 카탈로그 이름이 **만들** 작업. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@keyname=**] **'***unique_index_name***'**  
- 에 유효한 단일 키 열, 고유한 null이 아닌 인덱스가 *qualified_table_name* 에 **만들기** 작업 합니다. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *unique_index_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @keyname = ] 'unique_index_name'` 에 유효한 단일 키 열, 고유한 null이 아닌 인덱스가 *qualified_table_name* 에 **만들기** 작업 합니다. 다른 모든 동작에 대해서는 이 매개 변수가 반드시 NULL이어야 합니다. *unique_index_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  테이블이 다시 활성화되고 인덱스가 다시 채워지지 않은 경우, 신규가 아닌 남아 있는 모든 전체 텍스트를 사용할 수 있는 열에 대해 쿼리할 때 여전히 이전 인덱스를 사용할 수 있습니다. 삭제된 열에서 가져온 데이터는 모든 전체 텍스트 열 검색을 지정하는 쿼리에서 짝을 찾습니다.  
   
- 테이블 후 정의 된 전체 텍스트 인덱싱에 대해 전체 텍스트 고유 키 열 데이터 형식에서 다른 위치로 해당 열의 데이터 형식을 변경 하거나 전체를 다시 채우지 않고 다른 하나의 열에서 전체 텍스트 고유 키를 변경 하 여 전환 후속 쿼리 및 오류 메시지를 반환 하는 동안 발생 한 오류가 발생할 수 있습니다: "형식으로 변환 *data_type* 전체 텍스트 검색 키 값에 대 한 실패 *key_value*." 이 방지 하려면 사용 하 여이 테이블에 대 한 전체 텍스트 정의 삭제 합니다 **drop** 의 동작 **sp_fulltext_table** 를 사용 하 여 재정의 **sp_fulltext_table** 및 **sp_fulltext_column**합니다.  
+ 테이블이 전체 텍스트 인덱싱에 대해 정의된 이후, 전체를 다시 채우지 않고 해당 열의 데이터 형식을 변경하거나 한 열에서 다른 열로 전체 텍스트 고유 키 열을 변경하여 한 데이터 형식에서 다른 데이터 형식으로 전체 텍스트 고유 키 열을 변경하는 경우, 후속 쿼리 동안 실패가 발생하며, 다음과 같은 오류 메시지가 반환됩니다. "형식으로 변환 *data_type* 전체 텍스트 검색 키 값에 대 한 실패 *key_value*." 이 방지 하려면 사용 하 여이 테이블에 대 한 전체 텍스트 정의 삭제 합니다 **drop** 의 동작 **sp_fulltext_table** 를 사용 하 여 재정의 **sp_fulltext_table** 및 **sp_fulltext_column**합니다.  
   
  전체 텍스트 키 열은 900바이트 이하로 정의되어야 합니다. 키 열의 크기는 성능 향상을 위해 가능한 작은 것이 좋습니다.  
   

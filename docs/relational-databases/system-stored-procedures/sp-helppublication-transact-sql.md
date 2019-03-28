@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205212"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532975"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
- 보려는 게시의 이름입니다. *게시* 은 sysname 이며 기본값은 **%**, 모든 게시에 대 한 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 보려는 게시의 이름이입니다. *게시* 은 sysname 이며 기본값은 **%**, 모든 게시에 대 한 정보를 반환 하는 합니다.  
   
- [  **@found =** ] **'***발견***'** 출력  
- 행을 반환하는지 여부를 나타내는 플래그입니다. *찾을*됩니다 **int** 이며 기본값은 출력 매개 변수를 **23456**합니다. **1** 은 게시를 찾았음을 나타냅니다. **0** 게시를 찾지 못했음을 나타냅니다.  
+`[ @found = ] 'found' OUTPUT` 가 반환 하는 행을 나타내는 플래그입니다. *찾을*됩니다 **int** 이며 기본값은 출력 매개 변수를 **23456**합니다. **1** 은 게시를 찾았음을 나타냅니다. **0** 게시를 찾지 못했음을 나타냅니다.  
   
- [ **@publisher** = ] **'***publisher***'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 는 sysname 이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 는 sysname 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에서 게시 정보를 요청 하는 경우 지정 하지 않아야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

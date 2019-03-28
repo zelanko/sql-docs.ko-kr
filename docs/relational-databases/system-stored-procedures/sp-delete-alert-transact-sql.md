@@ -18,12 +18,12 @@ ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e912c8d849ec30554e4213979e626d1710f9a9df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a72db6e0579afb27aac281dade5f21fd1ab1b099
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718931"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532945"
 ---
 # <a name="spdeletealert-transact-sql"></a>sp_delete_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=** ] **'***name***'**  
- 경고의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 경고의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527805"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 LOB 열 구현
   메모리 최적화 테이블에 행 외부 또는 큰 개체 (LOB) 저장소 없는 (SQL Server 2016 이상-참조가이 제한이 제거 되었습니다 [메모리 내 OLTP에 대 한 데이터 형식 지원](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), 및 행 크기 제한인 8060 바이트입니다. 다음 두 가지 방법으로 큰 이진 또는 문자열 값을 저장할 수 있습니다.  
@@ -80,7 +80,7 @@ go</code></pre>
   
  그 대신 LOB 열에 대한 디스크 기반 테이블을 정의할 수 있습니다. 디스크 기반 테이블에는 메모리 최적화 테이블의 각 행에 해당하는 행이 있으며 해당 행에 대한 모든 LOB 값도 있습니다. 다음 예제에서는 직원에 대한 데이터를 메모리 최적화 테이블에 저장하고, 각 직원의 사진은 디스크 기반 테이블에 저장합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

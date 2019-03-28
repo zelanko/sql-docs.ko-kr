@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591627"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527465"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@principal_id=** ] *principal_id*  
- 데이터베이스 사용자 또는 역할의 id를 **msdb** 나열할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
+`[ @principal_id = ] principal_id` 데이터베이스 사용자 또는 역할의 id를 **msdb** 나열할 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
   
- [  **@principal_name=** ] **'**_principal_name_**'**  
- 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 나열할 연결에 대 한 데이터베이스. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
+`[ @principal_name = ] 'principal_name'` 데이터베이스 사용자 또는 역할의 이름인 합니다 **msdb** 나열할 연결에 대 한 데이터베이스. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
   
- [ **@profile_id=** ] *profile_id*  
- 나열할 연결에 대한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
+`[ @profile_id = ] profile_id` 나열할 연결에 대 한 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- 나열할 연결에 대한 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
+`[ @profile_name = ] 'profile_name'` 나열할 연결에 대 한 프로필의 이름이입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

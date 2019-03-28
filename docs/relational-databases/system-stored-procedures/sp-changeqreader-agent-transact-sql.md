@@ -16,12 +16,12 @@ ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21da0ca61d2d9075fe7c962156443fd85f3ebefd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 994ec0ee8fa6cd5424f808d884eb3355ffdc22ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135136"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526125"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_login**=] **'**_job_login_**'**  
- 에이전트 실행에 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'` 에 대 한 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
   
- [ **@job_password**=] **'**_job_password_**'**  
- 에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@frompublisher=** ] *frompublisher*  
- 프로시저가 게시자에서 실행되고 있는지 여부를 나타냅니다. *frompublisher* 는 bit 이며 기본값은 **0**합니다. 값이 **1** 프로시저가 게시 데이터베이스의 게시자에서 실행 될 것임을 의미 합니다.  
+`[ @frompublisher = ] frompublisher` 프로시저를 실행 하는 경우 게시자입니다. *frompublisher* 는 bit 이며 기본값은 **0**합니다. 값이 **1** 프로시저가 게시 데이터베이스의 게시자에서 실행 될 것임을 의미 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

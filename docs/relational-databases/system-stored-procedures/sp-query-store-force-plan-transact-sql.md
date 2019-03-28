@@ -22,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bc2b11f8f724be2f53777db3d87be99bbdbf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0130fb0c01f69b5bb7c7f6de73e7aad2054a67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652091"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531695"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact SQL)
+# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   특정 쿼리에 대해 특정 계획을 강제로 적용 하는 데 사용 하도록 설정 합니다.  
@@ -46,11 +46,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@query_id =** ] *query_id*  
- 쿼리의 id가입니다. *query_id* 되는 **bigint**, 기본값은 없습니다.  
+`[ @query_id = ] query_id` 쿼리의 id가입니다. *query_id* 되는 **bigint**, 기본값은 없습니다.  
   
- [  **@plan_id =** ] *plan_id*  
- 강제 실행 해야 하는 쿼리 계획의 id가입니다. *plan_id* 되는 **bigint**, 기본값은 없습니다.  
+`[ @plan_id = ] plan_id` 강제 실행 해야 하는 쿼리 계획의 id가입니다. *plan_id* 되는 **bigint**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

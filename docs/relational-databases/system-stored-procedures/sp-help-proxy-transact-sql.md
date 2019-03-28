@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527695"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@proxy_id** = ] *id*  
- 정보를 나열할 프록시의 프록시 ID입니다. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_id = ] id` 정보를 나열할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 정보를 나열할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_name = ] 'proxy_name'` 정보를 나열할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- 프록시를 나열할 하위 시스템의 이름입니다. 합니다 *subsystem_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 때 *subsystem_name* 를 지정 하면 *이름* 도 지정 해야 합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 프록시를 나열할 하위 시스템의 이름입니다. 합니다 *subsystem_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 때 *subsystem_name* 를 지정 하면 *이름* 도 지정 해야 합니다.  
   
  다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
@@ -69,8 +66,7 @@ sp_help_proxy
 |Dts|SSIS 패키지 실행|  
 |PowerShell|PowerShell 스크립트|  
   
- [ **@name** =] '*이름*'  
- 프록시를 나열할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. 이름은 **nvarchar(256)**, 기본값은 NULL입니다. 때 *이름을* 를 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
+`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프록시를 나열할에 로그인 합니다. 이름은 **nvarchar(256)**, 기본값은 NULL입니다. 때 *이름을* 를 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

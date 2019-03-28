@@ -16,12 +16,12 @@ ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 52cab6d00ad25bdc16a4acf14109ff5c74a4bcca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134203"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531305"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 차등 데이터베이스 백업을 복원하는 방법에 대해 설명합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "48134203"
   
 #### <a name="to-restore-a-differential-database-backup"></a>차등 데이터베이스 백업을 복원하려면  
   
-1.  NORECOVERY 절을 지정하고 RESTORE DATABASE 문을 실행하여 차등 데이터베이스 백업에 앞서 전체 데이터베이스 백업을 복원합니다. 자세한 내용은 [방법: 전체 백업 복원](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)을 참조하세요.  
+1.  NORECOVERY 절을 지정하고 RESTORE DATABASE 문을 실행하여 차등 데이터베이스 백업에 앞서 전체 데이터베이스 백업을 복원합니다. 자세한 내용은 [방법: 전체 백업을 복원](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)합니다.  
   
 2.  RESTORE DATABASE 문을 실행하여 차등 데이터베이스 백업을 복원합니다. 이때 다음을 지정합니다.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48134203"
 #### <a name="a-restoring-a-differential-database-backup"></a>1. 차등 데이터베이스 백업 복원  
  다음은 `MyAdvWorks` 데이터베이스의 데이터베이스 및 차등 데이터베이스 백업을 복원하는 예입니다.  
   
-```tsql  
+```sql  
 -- Assume the database is lost, and restore full database,   
 -- specifying the original full database backup and NORECOVERY,   
 -- which allows subsequent restore operations to proceed.  
@@ -174,7 +174,7 @@ GO
 #### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>2. 데이터베이스, 차등 데이터베이스, 트랜잭션 로그 백업 복원  
  다음은 `MyAdvWorks` 데이터베이스의 데이터베이스, 차등 데이터베이스 및 트랜잭션 로그 백업을 복원하는 예입니다.  
   
-```tsql  
+```sql  
 -- Assume the database is lost at this point. Now restore the full   
 -- database. Specify the original full database backup and NORECOVERY.  
 -- NORECOVERY allows subsequent restore operations to proceed.  

@@ -18,12 +18,12 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1db15a2f8c8e1d7616065ff88aa40b08f92127a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806781"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530276"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name_in_db =** ] **'***name***'**  
- 제거할 데이터베이스 사용자 이름입니다. *이름을* 되는 **sysname** 기본값은 없습니다. *이름* 서버 로그인, Windows 로그인 또는 Windows 그룹의 이름이 될 수 있으며 현재 데이터베이스에 존재 해야 합니다. Windows 로그인 또는 Windows 그룹을 지정하는 경우 데이터베이스를 식별할 이름을 지정합니다.  
+`[ @name_in_db = ] 'name'` 제거할 데이터베이스 사용자의 이름이입니다. *이름을* 되는 **sysname** 기본값은 없습니다. *이름* 서버 로그인, Windows 로그인 또는 Windows 그룹의 이름이 될 수 있으며 현재 데이터베이스에 존재 해야 합니다. Windows 로그인 또는 Windows 그룹을 지정하는 경우 데이터베이스를 식별할 이름을 지정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

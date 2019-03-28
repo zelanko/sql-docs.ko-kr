@@ -16,12 +16,12 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205932"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527055"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =**] **'***게시***'**  
- 아티클을 포함하는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클이 속한 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 열이 반환되는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 열이 반환 되는 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher**=] **'***게시자***'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 하 여 요청한 아티클이 게시 되는 경우 지정 하지 않아야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
@@ -61,7 +58,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**열 id**|**int**|열의 식별자입니다.|  
 |**column**|**sysname**|열의 이름입니다.|  
-|**게시**|**bit**|열이 게시되는지 여부입니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
+|**published**|**bit**|열이 게시되는지 여부입니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**게시자 유형**|**sysname**|게시자에 있는 열의 데이터 형식입니다.|  
 |**구독자 유형**|**sysname**|구독자에 있는 열의 데이터 형식입니다.|  
   
@@ -73,7 +70,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할을 합니다 **db_owner** 고정된 데이터베이스 역할 또는 현재 게시에 대 한 게시 액세스 목록에서 실행할 수 있습니다 **sp_helparticlecolumns**.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [열 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

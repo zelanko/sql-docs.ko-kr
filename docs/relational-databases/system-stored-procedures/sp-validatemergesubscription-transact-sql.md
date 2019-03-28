@@ -16,12 +16,12 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8ddf4c57901682cb099dc0e92c09b763651e32f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8a5463d23cca4f1fb9da549bb53706e8485ae439
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527835"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'***게시***'**  
+ [**@publication=**] **'***publication***'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber=** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@level=** ] *수준*  
- 수행할 유효성 검사의 유형입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
+`[ @level = ] level` 수행할 유효성 검사의 유형이입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
 |수준 값|Description|  
 |-----------------|-----------------|  

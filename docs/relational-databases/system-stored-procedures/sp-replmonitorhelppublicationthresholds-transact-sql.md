@@ -16,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747655"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526933"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,24 +42,20 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher**=] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- 게시된 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication**=] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication_type**=] *publication_type*  
- 게시의 유형입니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @publication_type = ] publication_type` 경우 게시 유형입니다. *publication_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
 |**1**|스냅숏 게시|  
 |**2**|병합 게시|  
-|NULL(기본값)|복제에서 게시 유형을 확인하려고 합니다.|  
+|NULL(기본값)|복제가 게시 유형을 확인하려고 합니다.|  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -80,7 +76,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **db_owner** 또는 **replmonitor** 고정된 데이터베이스 역할의 배포 데이터베이스를 실행할 수 있습니다 **sp_replmonitorhelppublicationthresholds**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [프로그래밍 방식으로 복제 모니터링](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

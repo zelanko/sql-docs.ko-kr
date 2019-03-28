@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756541"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531675"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@language=** ] **'***언어***'**  
- 정보를 표시할 대체 언어의 이름입니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다. 경우 *언어* 를 지정 하면 지정된 된 언어에 대 한 정보가 반환 됩니다. 언어를 지정 하지 않으면 모든 언어에 대 한 정보는 **sys.syslanguages** 호환성 보기로 반환 됩니다.  
+`[ @language = ] 'language'` 정보를 표시할 대체 언어의 이름이입니다. *언어* 됩니다 **sysname**, 기본값은 NULL입니다. 경우 *언어* 를 지정 하면 지정된 된 언어에 대 한 정보가 반환 됩니다. 언어를 지정 하지 않으면 모든 언어에 대 한 정보는 **sys.syslanguages** 호환성 보기로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -54,11 +53,11 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|언어 ID입니다.|  
 |**dateformat**|**nchar(3)**|날짜의 형식입니다.|  
-|**datefirst**|**tinyint**|첫 번째 요일: 1은 월요일, 화요일, 7은 일요일까지 2입니다.|  
-|**업그레이드**|**int**|이 언어에 대한 최신 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.|  
+|**datefirst**|**tinyint**|일주일의 첫 번째 요일입니다. 1은 월요일, 2는 화요일 순으로 하여 7은 일요일입니다.|  
+|**upgrade**|**int**|이 언어에 대한 최신 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다.|  
 |**name**|**sysname**|언어 이름입니다.|  
 |**alias**|**sysname**|언어의 대체 이름입니다.|  
-|**개월**|**nvarchar(372)**|월 이름입니다.|  
+|**months**|**nvarchar(372)**|월 이름입니다.|  
 |**shortmonths**|**nvarchar(132)**|월의 짧은 이름입니다.|  
 |**days**|**nvarchar(217)**|요일 이름입니다.|  
 |**lcid**|**int**|언어의 Windows 로캘 ID입니다.|  
