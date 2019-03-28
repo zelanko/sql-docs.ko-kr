@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078502"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529125"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48078502"
   
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   
-## <a name="example-applying-xsl-transformation"></a>예제: XSL 변환 적용  
+## <a name="example-applying-xsl-transformation"></a>예: XSL 변환 적용  
  CLR 함수는 것이 좋습니다 **transformxml ()** 받아들이는 `xml` 데이터 형식 인스턴스와 XSL 변환 파일에 저장, XML 데이터에 변환을 적용 하 고 다음 변환된 된 XML 결과에 반환 합니다. 다음은 C#으로 작성된 기초 함수입니다.  
   
 ```  

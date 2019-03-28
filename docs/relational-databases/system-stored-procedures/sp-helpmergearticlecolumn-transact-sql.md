@@ -16,12 +16,12 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4829928bbf1f8e13483de69a749e748bd9dd095
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2221762934011c2268a40d0162bde7e62dbcf256
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779065"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528225"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>p_helpmergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 게시의 이름이입니다. *발행물* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *발행물* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 문서에서 정보를 검색 하는 뷰나 테이블의 이름이입니다. *아티클* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 문서에서 정보를 검색 하는 뷰나 테이블의 이름이입니다. *아티클* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -51,7 +49,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|열을 식별합니다.|  
 |**column_name**|**sysname**|테이블 또는 뷰의 열 이름입니다.|  
-|**게시**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 열이 게시를 지정 합니다.<br /><br /> **0** 게시 되지 않습니다 지정 합니다.|  
+|**published**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 열이 게시를 지정 합니다.<br /><br /> **0** 게시 되지 않습니다 지정 합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

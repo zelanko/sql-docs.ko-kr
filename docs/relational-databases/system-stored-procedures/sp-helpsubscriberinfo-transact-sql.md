@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526375"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@subscriber =** ] **'**_구독자_**'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 **%**, 모든 정보를 반환 하는 합니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 **%**, 모든 정보를 반환 하는 합니다.  
   
- [  **@publisher =** ] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 현재 서버의 이름입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 현재 서버의 이름입니다.  
   
 > [!NOTE]  
 >  *게시자* 지정할 수 없습니다, Oracle 게시자는 경우에만 합니다.  
@@ -60,25 +58,25 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**commit_batch_size**|**int**|지원되지 않습니다.|  
 |**status_batch_size**|**int**|지원되지 않습니다.|  
 |**flush_frequency**|**int**|지원되지 않습니다.|  
-|**frequency_type**|**int**|배포 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
+|**frequency_type**|**int**|배포 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = Recurring|  
 |**frequency_interval**|**int**|값 설정 된 빈도에 적용 *frequency_type*합니다.|  
-|**frequency_relative_interval**|**int**|배포 에이전트의 날짜를 사용 하는 경우 *frequency_type* 로 설정 된 **32** (매월 상대적):<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
+|**frequency_relative_interval**|**int**|배포 에이전트의 날짜를 사용 하는 경우 *frequency_type* 로 설정 된 **32** (매월 상대적):<br /><br /> **1** = 첫 번째<br /><br /> **2** = Second<br /><br /> **4** = Third<br /><br /> **8** = Fourth<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor**|**int**|사용 하는 되풀이 비율 *frequency_type*합니다.|  
-|**frequency_subday**|**int**|정의된 기간 동안 일정을 변경하는 빈도입니다.<br /><br /> **1** = 1<br /><br /> **2** = 초<br /><br /> **4** = 분<br /><br /> **8** = 시간|  
+|**frequency_subday**|**int**|정의된 기간 동안 일정을 변경하는 빈도입니다.<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = 분<br /><br /> **8** = Hour|  
 |**frequency_subday_interval**|**int**|에 대 한 간격 *frequency_subday*합니다.|  
 |**active_start_time_of_day**|**int**|배포 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
 |**active_end_time_of_day**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
 |**active_start_date**|**int**|배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
 |**active_end_date**|**int**|배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다.|  
 |**retryattempt**|**int**|지원되지 않습니다.|  
-|**retrydelay는**|**int**|지원되지 않습니다.|  
+|**retrydelay**|**int**|지원되지 않습니다.|  
 |**description**|**nvarchar(255)**|구독자에 관한 텍스트 설명입니다.|  
-|**security_mode**|**int**|구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증|  
-|**frequency_type2**|**int**|병합 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
+|**security_mode**|**int**|구현된 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증|  
+|**frequency_type2**|**int**|병합 에이전트가 실행되는 빈도입니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = Recurring|  
 |**frequency_interval2**|**int**|값 설정 된 빈도에 적용 *frequency_type*합니다.|  
-|**frequency_relative_interval2**|**int**|병합 에이전트의 날짜를 사용 하는 경우 *frequency_type* 32 (매월 상대)로 설정 됩니다.<br /><br /> **1** = 첫 번째<br /><br /> **2** = 초<br /><br /> **4** = 세 번째<br /><br /> **8** = 네 번째<br /><br /> **16** = 마지막|  
+|**frequency_relative_interval2**|**int**|병합 에이전트의 날짜를 사용 하는 경우 *frequency_type* 32 (매월 상대)로 설정 됩니다.<br /><br /> **1** = 첫 번째<br /><br /> **2** = Second<br /><br /> **4** = Third<br /><br /> **8** = Fourth<br /><br /> **16** = Last|  
 |**frequency_recurrence_factor2**|**int**|사용 하는 되풀이 비율 *frequency_type * * 합니다.*|  
-|**frequency_subday2**|**int**|정의된 기간 동안 일정을 변경하는 빈도입니다.<br /><br /> **1** = 1<br /><br /> **2** = 초<br /><br /> **4** = 분<br /><br /> **8** = 시간|  
+|**frequency_subday2**|**int**|정의된 기간 동안 일정을 변경하는 빈도입니다.<br /><br /> **1** = Once<br /><br /> **2** = Second<br /><br /> **4** = 분<br /><br /> **8** = Hour|  
 |**frequency_subday_interval2**|**int**|에 대 한 간격 *frequency_subday*합니다.|  
 |**active_start_time_of_day2**|**int**|병합 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
 |**active_end_time_of_day2**|**int**|병합 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다.|  
@@ -94,7 +92,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할을 합니다 **db_owner** 고정된 데이터베이스 역할 또는 게시에 대 한 게시 액세스 목록에서 실행할 수 있습니다 **sp_helpsubscriberinfo**.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

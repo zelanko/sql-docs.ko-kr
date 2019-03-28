@@ -16,12 +16,12 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0965c656c5c6b0cef690bb3fbaa7bbc2a7965104
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b9f9c6c8c39355ec2c381c7fa4efa340da3addf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747695"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528665"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@dbname=**] **'***dbname***'**  
- 데이터베이스의 이름입니다. *dbname* 은 기본값은 NULL을 가진 **sysname**입니다. NULL인 경우 현재 데이터베이스를 사용합니다.  
+`[ @dbname = ] 'dbname'` 데이터베이스의 이름이입니다. *dbname* 은 기본값은 NULL을 가진 **sysname**입니다. NULL인 경우 현재 데이터베이스를 사용합니다.  
   
- [ **@type** =] *형식*  
- 데이터베이스 개체를 제거할 복제의 유형입니다. *형식* 됩니다 **nvarchar(5)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] type` 개체 제거 되는 데이터베이스에 대 한 복제의 유형이입니다. *형식* 됩니다 **nvarchar(5)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |||  
 |-|-|  
 |**tran**|트랜잭션 복제 게시 개체를 제거합니다.|  
-|**병합**|병합 복제 게시 개체를 제거합니다.|  
+|**merge**|병합 복제 게시 개체를 제거합니다.|  
 |**둘 다** (기본값)|모든 복제 게시 개체를 제거합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

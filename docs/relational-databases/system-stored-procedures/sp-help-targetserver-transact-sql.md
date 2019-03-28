@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529695"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server_name=** ] **'***server_name***'**  
- 정보를 반환하는 대상이 되는 서버의 이름입니다. *server_name* 은 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server_name = ] 'server_name'` 정보를 반환 하는 서버의 이름입니다. *server_name* 은 **nvarchar(30)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

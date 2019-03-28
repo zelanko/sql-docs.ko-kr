@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511590"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>4단원: 저장된 프로시저에 포함 된 R을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -194,4 +194,4 @@ GO
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[3 단원: 학습 및 T-SQL을 사용 하 여 R 모델을 저장 합니다.](sqldev-train-and-save-a-model-using-t-sql.md)
+[3단원: 학습 및 T-SQL을 사용 하 여 R 모델을 저장 합니다.](sqldev-train-and-save-a-model-using-t-sql.md)

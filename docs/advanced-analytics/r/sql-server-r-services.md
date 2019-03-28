@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596514"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510530"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,16 +54,16 @@ SQL Server 2016은 R만 있습니다. 다음 표에 SQL Server 2016의 기능을
 
 설치 프로그램을 시작한 하 여 즐겨 찾는 개발 도구, 바이너리 연결할 첫 번째 스크립트를 작성 합니다.
 
-**1 단계:** 소프트웨어 설치 및 구성 합니다. 
+**1단계:** 소프트웨어 설치 및 구성 합니다. 
 
 + [SQL Server 2016 R Services (In-database) 설치](../install/sql-r-services-windows-install.md)
 
-**2 단계:** 다음이 자습서 중 하나를 사용 하 여 실습 경험을 얻을 수 있습니다.
+**2단계:** 다음이 자습서 중 하나를 사용 하 여 실습 경험을 얻을 수 있습니다.
 
 + [자습서: R을 사용 하 여 데이터베이스 내 분석에 알아봅니다.](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [자습서: R 사용 하 여 종단 간 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**3 단계:** 원하는 R 패키지를 추가 하 고 Microsoft에서 제공 하는 패키지와 함께 사용
+**3단계:** 원하는 R 패키지를 추가 하 고 Microsoft에서 제공 하는 패키지와 함께 사용
 
 + [SQL Server에 대 한 R 패키지 관리](install-additional-r-packages-on-sql-server.md)
 

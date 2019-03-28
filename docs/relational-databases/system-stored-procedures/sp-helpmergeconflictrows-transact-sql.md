@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589167"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528795"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 경우는 **MSmerge_conflict_Customers** 테이블에 대 한 충돌 행의 **WA** 및 **CA** 게시에 게시 이름을 **CA**  와 관련 된 충돌을 검색 합니다 **CA** 게시 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 경우는 **MSmerge_conflict_Customers** 테이블에 대 한 충돌 행의 **WA** 및 **CA** 게시에 게시 이름을 **CA**  와 관련 된 충돌을 검색 합니다 **CA** 게시 합니다.  
   
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- 충돌 테이블의 이름입니다. *conflict_table* 됩니다 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블 이름으로 형식 이름을 사용 하 여 **MSmerge_conflict\__게시\_문서_** 를 사용 하 여 게시 된 각 아티클당 한 테이블입니다.  
+`[ @conflict_table = ] 'conflict_table'` 충돌 테이블의 이름이입니다. *conflict_table* 됩니다 **sysname**, 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블 이름으로 형식 이름을 사용 하 여 **MSmerge_conflict\__게시\_문서_** 를 사용 하 여 게시 된 각 아티클당 한 테이블입니다.  
   
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- 결과 집합에 논리 레코드 충돌 정보가 포함되는지 여부를 나타냅니다. *logical_record_conflicts* 됩니다 **int**을 기본값인 0 사용 하 여 합니다. **1** 논리 레코드 충돌 정보가 반환 됩니다.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` 논리적 레코드 충돌에 대 한 정보는 결과 집합에 포함 되는지 여부를 나타냅니다. *logical_record_conflicts* 됩니다 **int**을 기본값인 0 사용 하 여 합니다. **1** 논리 레코드 충돌 정보가 반환 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_helpmergeconflictrows** 결과 기본 테이블 구조 및 이러한 추가 열으로 구성 된 집합을 반환 합니다.  

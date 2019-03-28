@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc038f94fc24b8c0f795efc18c62acc1656877a7
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432316"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510300"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새로운 Python 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +80,7 @@ SQL Server에서 사용 하는 기본 Python 라이브러리 위치를 찾습니
 
   전체 경로 **스크립트** 기본 설치에서 폴더는 다음과 같습니다.
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Python 확장을 사용 하 여 Visual Studio 2017 또는 Visual Studio 2015를 사용 하는, 하는 경우 실행할 수 있습니다 `pip install` 에서 합니다 **Python 환경** 창입니다. 클릭 **패키지**, 텍스트 상자에 이름 또는 설치 패키지의 위치를 제공 합니다. 입력 필요가 `pip install`;이를 자동으로 채워집니다. 
 
@@ -109,7 +109,7 @@ Successfully installed cntk-2.1
 
 설치가 완료 되 면 다음 단계에 설명 된 대로 패키지를 사용 하 여 바로 시작할 수 있습니다.
 
-CNTK를 사용 하 여 딥 러닝의 예로, 이러한 자습서를 참조 하세요. [CNTK Python API](https://cntk.ai/pythondocs/tutorials.html)
+CNTK를 사용 하 여 딥 러닝의 예로, 이러한 자습서를 참조 하세요. [Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
 
 스크립트에 패키지에서 함수를 사용 하려면 표준 삽입 `import <package_name>` 스크립트의 초기 줄에서 문:
 
@@ -125,7 +125,7 @@ cntk._version_
 
 Python 명령줄을 사용 하는 경우 중 하나를 사용할 수 있습니다 **Pip** 또는 **conda** SQL Server 설치 프로그램에서 추가 Anaconda Python 환경에 포함 된 패키지 관리자입니다.
 
-1. C:\Program Files\Microsoft SQL Server\MSSQL14로 이동 합니다. MSSQLSERVER\PYTHON_SERVICES\Scripts
+1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 1. 마우스 오른쪽 단추로 클릭 **conda.exe** > **관리자 권한으로 실행**를 입력 하 고 `conda list` 현재 환경에 설치 된 패키지 목록을 반환 합니다.
 

@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813321"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526615"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@maxtrans** =] *maxtrans*  
- 정보를 반환할 트랜잭션의 수입니다. *maxtrans* 은 **int**, 기본값은 **1**에 복제 보류 중인 트랜잭션의 최대 수를 지정 하는 **sp_replshowcmds** 정보를 반환합니다.  
+`[ @maxtrans = ] maxtrans` 정보를 반환할 트랜잭션의 수가입니다. *maxtrans* 은 **int**, 기본값은 **1**에 복제 보류 중인 트랜잭션의 최대 수를 지정 하는 **sp_replshowcmds** 정보를 반환합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  **sp_replshowcmds** 가 실행 되는 게시 데이터베이스에 대 한 정보를 반환 하는 진단 프로시저입니다.  

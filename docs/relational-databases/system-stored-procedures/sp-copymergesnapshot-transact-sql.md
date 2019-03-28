@@ -16,12 +16,12 @@ ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f308f86de68c672a64f78da0a6b1bd54cde82a2b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526245"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 해당 스냅숏 내용을 복사하려는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 해당 스냅숏 내용을 복사 하려는 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- 게시 스냅숏의 내용을 복사할 대상 폴더의 이름입니다. *destination_folder*됩니다 **nvarchar(255)**, 기본값은 없습니다. 합니다 *destination_folder* 다른 서버, 네트워크 드라이브 또는 이동식 미디어 (예: Cd-rom 또는 이동식 디스크)와 같은 대체 위치가 될 수 있습니다.  
+`[ @destination_folder = ] 'destination_folder'` 게시 스냅숏의 내용을 복사할 폴더의 이름이입니다. *destination_folder*됩니다 **nvarchar(255)**, 기본값은 없습니다. 합니다 *destination_folder* 다른 서버, 네트워크 드라이브 또는 이동식 미디어 (예: Cd-rom 또는 이동식 디스크)와 같은 대체 위치가 될 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

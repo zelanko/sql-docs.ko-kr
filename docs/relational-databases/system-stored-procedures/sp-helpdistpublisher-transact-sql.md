@@ -16,12 +16,12 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85a6eaf76497b1fa763047a255cdb7784316541e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526475"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'***게시자***'**  
- 속성이 반환되는 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 **%** 합니다.  
+`[ @publisher = ] 'publisher'` 속성 반환 되는 게시자가입니다. *게시자* 됩니다 **sysname**, 기본값은 **%** 합니다.  
   
- [  **@check_user=** ] *check_user*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -51,10 +49,10 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|게시자의 이름입니다.|  
 |**distribution_db**|**sysname**|지정된 게시자에 대한 배포 데이터베이스입니다.|  
-|**security_mode**|**int**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**security_mode**|**int**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
 |**login**|**sysname**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 로그인 이름입니다.|  
 |**password**|**nvarchar(524)**|간단히 암호화된 형식으로 반환되는 암호입니다. 암호는 NULL에 대 한 사용자 이외의 **sysadmin**합니다.|  
-|**Active**|**bit**|원격 게시자가 배포자로 로컬 서버를 사용하는지 여부를 지정합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
+|**active**|**bit**|원격 게시자가 배포자로 로컬 서버를 사용하는지 여부를 지정합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**working_directory**|**nvarchar(255)**|작업 디렉터리의 이름입니다.|  
 |**신뢰할 수 있는**|**bit**|게시자가 배포자에 연결할 때 암호가 필요한지 여부입니다. 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는이 항상 반환 하 고 **0**, 즉, 암호가 필요 합니다.|  
 |**thirdparty_flag**|**bit**|게시를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 타사 응용 프로그램에 사용할 수 있는지 여부를 지정합니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], oracle 또는 Oracle Gateway 게시자입니다.<br /><br /> **1** = 게시자에 통합할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 타사 응용 프로그램을 사용 합니다.|  

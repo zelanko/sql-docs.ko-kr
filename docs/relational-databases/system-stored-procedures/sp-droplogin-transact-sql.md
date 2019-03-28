@@ -18,12 +18,12 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05adcc690b1fdb869f8de4d306e989e74d831cf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adaa563fa7142375d357e50d86ad0e33a8ea62e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527255"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@loginame =** ] **'***login***'**  
- 제거할 로그인입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+`[ @loginame = ] 'login'` 제거할 로그인이입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 에 이미 있어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

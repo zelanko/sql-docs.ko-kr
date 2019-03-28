@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6bcf721158aec7c7aaddd36d0965349582e155bd
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 7ccc3ad494658fc7a8f9c67472aecb1c4cddb7da
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596874"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512240"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53596874"
 
 |기능 | Description |
 |------|-------------|
-|[ExecuteStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL 저장 프로시저를 실행 합니다.|
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| SQL 저장 프로시저를 실행 합니다.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| 저장된 프로시저에 입력된 매개 변수의 목록을 가져옵니다.| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| R 데이터 프레임에서 사용할 데이터의 원본을 SQL Server에 정의합니다. 입력 데이터를 저장할 data.frame의 이름 및 데이터 또는 기본값을 가져오는 쿼리를 지정합니다. 간단한 SELECT 쿼리만 지원됩니다. | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| T-SQL 스크립트에 포함될 단일 입력 매개 변수를 정의합니다. 매개 변수와 해당 R 데이터 형식의 이름을 제공해야 합니다.| 
@@ -52,7 +52,7 @@ ms.locfileid: "53596874"
 |[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | 데이터베이스를 사용 하 여 저장된 프로시저를 등록 합니다.|
 |[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| 쿼리 저장된 프로시저의 입력된 데이터 매개 변수에 할당 합니다.| 
 |[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| 저장된 프로시저의 입력 매개 변수 값을 할당 합니다.| 
-|[저장 프로시저](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 저장된 프로시저 개체입니다.|
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| 저장된 프로시저 개체입니다.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Sqlrutils를 사용 하는 방법

@@ -12,12 +12,12 @@ ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bb735093eb7b2e41e1822facca6c03ace45a911
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789705"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526515"
 ---
 # <a name="contained-database-collations"></a>포함된 데이터베이스 데이터 정렬
   여러 가지 속성이 대/소문자 구분, 악센트 구분 및 사용되는 기본 언어를 비롯한 텍스트 데이터의 같음 의미 체계 및 정렬 순서에 영향을 줍니다. 이러한 사항은 데이터에 대한 데이터 정렬 선택을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 전달됩니다. 데이터 정렬에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)을 참조하세요.  
@@ -32,13 +32,13 @@ ms.locfileid: "52789705"
 ### <a name="example-1"></a>예제 1  
  예를 들어 베이징에서 작업하는 경우 중국어 데이터 정렬을 사용할 것입니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  이제 열을 만들면 이 열의 기본 데이터 정렬은 중국어 데이터 정렬이 되지만 원하는 경우 다른 데이터 정렬을 선택할 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -51,7 +51,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -63,7 +63,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>예제 2  
  예를 들어 **Latin1_General** 데이터 정렬을 사용하는 인스턴스에서 위의 중국어 데이터베이스가 사용되는 경우를 가정합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -87,7 +87,7 @@ JOIN #T2
   
  임시 테이블에 대해 명시적으로 데이터 정렬을 수행하여 이 문제를 해결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DATABASE_DEFAULT` 절에 제공되는 `COLLATE` 키워드를 사용하면 편리합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -137,7 +137,7 @@ END;
   
  앞에서 설명된 임시 테이블 예를 보면 이 데이터 정렬 동작 때문에 대부분의 임시 테이블 사용 시 명시적으로 `COLLATE` 절을 사용할 필요가 없음을 알 수 있습니다. 포함된 데이터베이스에서 데이터베이스와 인스턴스 데이터 정렬이 다른 경우에도 이제 이 코드는 오류 없이 실행됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

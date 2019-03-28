@@ -18,12 +18,12 @@ ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ff44121317827976f65db8ebb49bc2eda37d42bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b223f8429d010382e444dd2e57a6fa7735200151
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779891"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526095"
 ---
 # <a name="spsyspolicyaddpolicycategory-transact-sql"></a>sp_syspolicy_add_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=** ] **'***name***'**  
- 정책 범주의 이름입니다. *이름을* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. *이름* NULL 또는 빈 문자열일 수 없습니다.  
+`[ @name = ] 'name'` 정책 범주의 이름이입니다. *이름을* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. *이름* NULL 또는 빈 문자열일 수 없습니다.  
   
- [  **@mandate_database_subscriptions =** ] *mandate_database_subscriptions*  
- 정책 범주에 대해 데이터베이스 구독이 위임되는지 여부를 결정합니다. *mandate_database_subscriptions* 되는 **비트** 값 이며 기본값은 1 (사용).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` 정책 범주에 대해 데이터베이스 구독이 위임 되는지 여부를 결정 합니다. *mandate_database_subscriptions* 되는 **비트** 값 이며 기본값은 1 (사용).  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- 정책 범주의 식별자입니다. *policy_category_id* 됩니다 **int**, 이며 OUTPUT으로 반환 됩니다.  
+`[ @policy_category_id = ] policy_category_id` 정책 범주의 식별자가입니다. *policy_category_id* 됩니다 **int**, 이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +58,7 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 범주 구독이 위임되지 않는 정책 범주를 만듭니다. 즉, 범주의 정책에 참여하거나 참여하지 않도록 개별 데이터베이스를 구성할 수 있습니다.  

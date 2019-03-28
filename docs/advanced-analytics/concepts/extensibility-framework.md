@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4e48d51e45cdc9f1cd56f22228d95370b8f75711
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432746"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510630"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ SQL Server와 R 및 Python으로 개발 하는 동안 이동 데이터 과학 �
 | 신뢰할 수 있는 시작 관리자 | 확장명 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
 | R 언어에 대 한 RLauncher.dll | [R 확장](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Python 3.5에 대 한 Pythonlauncher.dll | [Python 확장](extension-python.md) | SQL Server 2017 |
+| Pythonlauncher.dll for Python 3.5 | [Python 확장](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 자체 사용자 계정으로 실행됩니다. 실행 패드를 실행 하는 계정을 변경 하면 경우에 관련 파일에 변경 내용이 기록 되도록 되도록 SQL Server 구성 관리자를 사용 하 여 수행 해야 합니다.
 

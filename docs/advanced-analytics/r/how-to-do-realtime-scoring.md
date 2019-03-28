@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 576a8b161c87270b0dcc40494cf0121a7b644fc4
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432506"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510090"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53432506"
 | 방법           | 인터페이스         | 라이브러리 요구 사항 | 처리 속도 |
 |-----------------------|-------------------|----------------------|----------------------|
 | 확장성 프레임워크 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
-| [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR의 경우 MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
+| [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
 | [네이티브 점수 매기기 c + + 확장](../sql-native-scoring.md) | [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
 
 처리 속도 출력의 물질 하지 차별화 기능입니다. 동일한 기능 및 입력을 가정 하지 점수가 매겨진된 출력 해야 사용 하는 방법에 따라 다릅니다.
@@ -36,7 +36,7 @@ ms.locfileid: "53432506"
 
 CLR 및 c + + 확장의 중요 한 이유는 자체 데이터베이스 엔진에 근접 합니다. 데이터베이스 엔진의 기본 언어는 c + +, 더 적은 종속성을 사용 하 여 실행 하는 c + +로 작성 된 확장을 의미 합니다. 반면 CLR 확장.NET Core에 따라 달라 집니다. 
 
-예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux의 Azure입니다. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
+예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux, Azure. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
 
 ## <a name="scoring-overview"></a>점수 매기기 개요
 

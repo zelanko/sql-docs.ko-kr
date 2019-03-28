@@ -15,23 +15,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
-- Availability Groups [SQL Server], WSFC clusters
+- Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511390"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  모든 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 가용성 그룹에 가입 된 서버 인스턴스를 호스팅하는 Windows Server 장애 조치 클러스터링 (WSFC) 노드의 이름을 반환 하는 가용성 복제본을 호스팅하는 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
+  모든 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Always On 가용성 그룹에 가입 된 서버 인스턴스를 호스팅하는 Windows Server 장애 조치 클러스터 (WSFC) 노드의 이름을 반환 하는 가용성 복제본을 호스팅하는 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
   
 -   이 동적 관리 뷰는 동일한 WSFC 노드에서 호스팅되는 여러 가용성 복제본이 포함된 가용성 그룹을 검색하는 데 유용합니다. 이러한 구성은 가용성 그룹이 잘못 구성된 경우 FCI 장애 조치(failover) 이후 발생 가능한 지원되지 않는 구성입니다. 자세한 내용은 [장애 조치(failover) 클러스터링 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "52535745"
    
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**ag_resource_id**|**nvarchar(256)**|가용성 그룹의 고유 ID를 WSFC 클러스터의 리소스로 나타낸 것입니다.|  
+|**ag_resource_id**|**nvarchar(256)**|WSFC에서 리소스로 가용성 그룹의 고유 ID입니다.|  
 |**instance_name**|**nvarchar(256)**|이름-*server*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스.|  
-|**node_name**|**nvarchar(256)**|WSFC 클러스터 노드의 이름입니다.|  
+|**node_name**|**nvarchar(256)**|WSFC 노드의 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

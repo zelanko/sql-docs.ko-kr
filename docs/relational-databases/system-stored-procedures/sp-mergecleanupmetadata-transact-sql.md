@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210962"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529005"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 은 **sysname**, 기본값은 **%** 를 정리 하는 모든 게시에 대 한 메타 데이터입니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 은 **sysname**, 기본값은 **%** 를 정리 하는 모든 게시에 대 한 메타 데이터입니다. 명시적으로 지정된 경우에는 반드시 게시가 이미 존재하고 있어야 합니다.  
   
- [  **@reinitialize_subscriber =** ] **'***구독자***'**  
- 구독자를 다시 초기화할지 여부를 지정합니다. *구독자* 됩니다 **nvarchar(5)**, 수 **TRUE** 또는 **FALSE**, 기본값은 **TRUE**합니다. 하는 경우 **TRUE**, 구독을 다시 초기화 하도록 표시 됩니다. 하는 경우 **FALSE**, 구독 다시 초기화 되도록 표시 되지 않습니다.  
+`[ @reinitialize_subscriber = ] 'subscriber'` 구독자를 다시 초기화할 지 여부를 지정 합니다. *구독자* 됩니다 **nvarchar(5)**, 수 **TRUE** 또는 **FALSE**, 기본값은 **TRUE**합니다. 하는 경우 **TRUE**, 구독을 다시 초기화 하도록 표시 됩니다. 하는 경우 **FALSE**, 구독 다시 초기화 되도록 표시 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

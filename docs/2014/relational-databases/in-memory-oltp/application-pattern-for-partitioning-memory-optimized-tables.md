@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123913"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526565"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로이 것 데이터가 저장 되는 시나리오에 따라는 `datetime` 키입니다.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 `datetime` 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
   
  분할된 테이블과 메모리 최적화 테이블을 공통 스키마로 유지하여 분할된 테이블을 메모리 최적화 테이블로 에뮬레이트할 수 있습니다. 현재 데이터는 메모리 최적화 테이블에 삽입되고 업데이트되는 반면, 자주 액세스하지 않는 데이터는 기존의 분할된 테이블에 유지됩니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48123913"
   
  이 예제의 첫 번째 부분에서는 데이터베이스와 필요한 개체를 만듭니다. 예제의 두 번째 부분에서는 메모리 최적화 테이블에서 분할된 테이블로 데이터를 이동하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

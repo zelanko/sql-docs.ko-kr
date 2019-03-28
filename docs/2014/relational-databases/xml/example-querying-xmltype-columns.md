@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0457f9eddad9130e5b486cd09e754c2059a586a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373855"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526785"
 ---
 # <a name="example-querying-xmltype-columns"></a>예: XMLType 열 쿼리
   다음 쿼리에는 `xml` 유형의 열이 포함됩니다. 이 쿼리는 `xml` 유형의 `Instructions` 열로부터 첫 번째 위치에서 제품 모델 ID, 이름 및 제조 단계를 검색합니다.  

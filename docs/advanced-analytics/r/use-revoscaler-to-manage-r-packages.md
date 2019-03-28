@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 64f930a72dbb7f8c6aff8338f22dd3e9b7cc7bbe
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 7eed38e54b0c4e77af8f7b3ede0af2d98b9c58b2
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645362"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510790"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -114,7 +114,7 @@ print(sqlPackagePaths)
 
 **결과**
 
-"C: / Program Files/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/라이브러리/RevoScaleR "
+"C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library/RevoScaleR"
 
 > [!TIP]
 > SQL 콘솔 출력을 참조 하는 옵션을 설정한 경우 앞에 오는 함수에서 상태 메시지를 발생할 수 있습니다는 `print` 문입니다. 코드 테스트를 마친 후 설정 `consoleOutput` 메시지를 제거 하기 위해 계산 컨텍스트 생성자에 FALSE로 합니다.

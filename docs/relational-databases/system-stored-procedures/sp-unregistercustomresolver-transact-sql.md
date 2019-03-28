@@ -16,12 +16,12 @@ ms.assetid: 08bd20c8-c6be-4be2-be9f-2b5e1d7bee43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46de29c32442bb2c7672eb7043d10c185327963b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a212ef8d5f19d2c73512deae188627062d663c5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527095"
 ---
 # <a name="spunregistercustomresolver-transact-sql"></a>sp_unregistercustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정합니다. *article_resolver* 됩니다 **nvarchar(255)**, 기본값은 없습니다. 제거될 비즈니스 논리가 COM 구성 요소인 경우 이 매개 변수는 해당 구성 요소의 이름입니다. 비즈니스 논리가 .NET Framework 어셈블리인 경우 이 매개 변수는 해당 어셈블리의 이름입니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 됩니다 **nvarchar(255)**, 기본값은 없습니다. 제거될 비즈니스 논리가 COM 구성 요소인 경우 이 매개 변수는 해당 구성 요소의 이름입니다. 비즈니스 논리가 .NET Framework 어셈블리인 경우 이 매개 변수는 해당 어셈블리의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -52,7 +51,7 @@ sp_unregistercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_unregistercustomresolver**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_lookupcustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   
  [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,19 +1,19 @@
 ---
 title: Python 및 R 자습서-SQL Server Machine Learning에 대 한 Iris 데모 데이터 집합
-Description: Create a database containing the Iris dataset and a table for storing models. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+Description: Iris 데이터 집합 및 모델을 저장 하는 것에 대 한 테이블을 포함 하는 데이터베이스를 만듭니다. 이 데이터 집합은 SQL Server 저장 프로시저에서 R 언어 또는 Python 코드를 래핑하는 방법을 보여 주는 연습에 사용 됩니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ce0469b5625af3f38047233737f3afbd209e11b9
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046573"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510100"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server에서 Python 및 R 자습서 아이리스 데이터 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

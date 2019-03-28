@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/29/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7dc2e286e6eb80fe1eef3e8b86ed1002a6344cfb
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431756"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510220"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN을 사용 하 여 로컬 R 패키지 리포지토리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

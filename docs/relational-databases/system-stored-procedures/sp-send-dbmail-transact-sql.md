@@ -19,12 +19,12 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b5d9c48c073d3a8208b9c8be1e73c5aa68e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075786"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528306"
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,32 +64,23 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_name=** ] **'***profile_name***'**  
- 메시지를 보내는 프로필의 이름입니다. *profile_name* 형식의 **sysname**, 기본값은 NULL입니다. 합니다 *profile_name* 기존 데이터베이스 메일 프로필의 이름 이어야 합니다. 없는 경우 *profile_name* 를 지정 하면 **sp_send_dbmail** 현재 사용자에 대 한 기본 개인 프로필을 사용 합니다. 사용자는 기본 개인 프로필이 없는 경우 **sp_send_dbmail** 의 기본 공개 프로필을 사용 합니다 **msdb** 데이터베이스입니다. 사용자 기본 개인 프로필이 없고 데이터베이스에 대 한 기본 공개 프로필이 있으면 **@profile_name** 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 메시지를 보내는 프로필의 이름이입니다. *profile_name* 형식의 **sysname**, 기본값은 NULL입니다. 합니다 *profile_name* 기존 데이터베이스 메일 프로필의 이름 이어야 합니다. 없는 경우 *profile_name* 를 지정 하면 **sp_send_dbmail** 현재 사용자에 대 한 기본 개인 프로필을 사용 합니다. 사용자는 기본 개인 프로필이 없는 경우 **sp_send_dbmail** 의 기본 공개 프로필을 사용 합니다 **msdb** 데이터베이스입니다. 사용자 기본 개인 프로필이 없고 데이터베이스에 대 한 기본 공개 프로필이 있으면 **@profile_name** 지정 해야 합니다.  
   
- [  **@recipients=** ] **'***수신자***'**  
- 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @recipients = ] 'recipients'` 메시지를 보낼 전자 메일 주소의 세미콜론으로 구분 된 목록이입니다. 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
- [ **@copy_recipients=** ] **'***copy_recipients***'**  
- 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 복사 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @copy_recipients = ] 'copy_recipients'` 메시지를 탄소 복사할 세미콜론으로 구분 된 목록을 전자 메일 주소 이며 복사 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
- [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- 숨은 참조로 메시지를 받을 전자 메일 주소 목록으로, 각 주소는 세미콜론으로 구분되어 있습니다. 숨은 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` 세미콜론으로 구분 된 목록을 전자 메일 주소를 숨은 참조에 포함할 메시지를 됩니다. 숨은 받는 사람 목록에 유형임 **varchar (max)** 합니다. 이 매개 변수는 선택 사항 중 하나 이상이 **@recipients**를 **@copy_recipients**, 또는 **@blind_copy_recipients** 지정 해야 합니다 또는 **sp_ send_dbmail** 오류를 반환 합니다.  
   
- [ **@from_address=** ] **'***from_address***'**  
- 전자 메일 메시지의 '보낸 사람 주소' 값입니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
+`[ @from_address = ] 'from_address'` 값은 '보낸 사람 전자 메일 메시지의 주소'. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
   
- [ **@reply_to=** ] **'***reply_to***'**  
- 전자 메일 메시지의 '회신 주소' 값입니다. 전자 메일 주소만 유효한 값으로 허용됩니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
+`[ @reply_to = ] 'reply_to'` '회신 주소' 전자 메일 메시지의 값이입니다. 전자 메일 주소만 유효한 값으로 허용됩니다. 이것은 메일 프로필의 설정을 재정의하는 데 사용되는 선택적 매개 변수입니다. 이 매개 변수는 형식 **varchar (max)** 합니다. SMTP 보안 설정에 따라 재정의 허용 여부가 결정됩니다. 매개 변수를 지정하지 않으면 기본값은 NULL입니다.  
   
- [ **@subject=** ] **'***subject***'**  
- 전자 메일 메시지의 제목입니다. 형식의 제목은 **nvarchar(255)** 합니다. 제목을 지정하지 않으면 기본값은 'SQL Server Message'입니다.  
+`[ @subject = ] 'subject'` 전자 메일 메시지의 제목입니다. 형식의 제목은 **nvarchar(255)** 합니다. 제목을 지정하지 않으면 기본값은 'SQL Server Message'입니다.  
   
- [  **@body=** ] **'***본문***'**  
- 전자 메일 메시지의 본문입니다. 메시지 본문 형식입니다 **nvarchar (max)**, 기본값은 NULL입니다.  
+`[ @body = ] 'body'` 전자 메일 메시지의 본문이입니다. 메시지 본문 형식입니다 **nvarchar (max)**, 기본값은 NULL입니다.  
   
- [  **@body_format=** ] **'***body_format***'**  
- 메시지 본문의 형식입니다. 매개 변수는 형식 **varchar(20)"**, 기본값은 NULL입니다. 이 매개 변수를 지정할 경우 나가는 메시지의 헤더가 보내져 메시지 본문이 지정된 형식임을 나타냅니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+`[ @body_format = ] 'body_format'` 메시지 본문의 형식이입니다. 매개 변수는 형식 **varchar(20)"**, 기본값은 NULL입니다. 이 매개 변수를 지정할 경우 나가는 메시지의 헤더가 보내져 메시지 본문이 지정된 형식임을 나타냅니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   TEXT  
   
@@ -97,8 +88,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  기본값은 TEXT입니다.  
   
- [  **@importance=** ] **'***중요도***'**  
- 메시지의 중요도입니다. 이 매개 변수는 형식 **varchar(6)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+`[ @importance = ] 'importance'` 메시지의 중요도가입니다. 이 매개 변수는 형식 **varchar(6)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   낮음  
   
@@ -108,8 +98,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  기본값은 Normal입니다.  
   
- [  **@sensitivity=** ] **'***민감도***'**  
- 메시지의 기밀성입니다. 이 매개 변수는 형식 **varchar(12)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
+`[ @sensitivity = ] 'sensitivity'` 메시지의 중요도가입니다. 이 매개 변수는 형식 **varchar(12)** 합니다. 매개 변수에 포함할 수 있는 값은 다음과 같습니다.  
   
 -   보통  
   
@@ -121,61 +110,48 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  기본값은 Normal입니다.  
   
- [  **@file_attachments=** ] **'***file_attachments***'**  
- 전자 메일 메시지에 첨부되는 파일 이름 목록으로, 각 파일 이름은 세미콜론으로 구분되어 있습니다. 목록의 파일은 절대 경로로 지정해야 합니다. 첨부 파일 목록에 유형임 **nvarchar (max)** 합니다. 기본적으로 데이터베이스 메일의 첨부 파일은 파일당 1MB로 제한됩니다.  
+`[ @file_attachments = ] 'file_attachments'` 전자 메일 메시지에 첨부할 파일 이름의 세미콜론으로 구분 된 목록이입니다. 목록의 파일은 절대 경로로 지정해야 합니다. 첨부 파일 목록에 유형임 **nvarchar (max)** 합니다. 기본적으로 데이터베이스 메일의 첨부 파일은 파일당 1MB로 제한됩니다.  
   
- [  **@query=** ] **'***쿼리***'**  
- 실행할 쿼리입니다. 쿼리 결과를 파일로 첨부할 수도 있고 전자 메일 메시지의 본문에 포함할 수도 있습니다. 쿼리는 유형이 **nvarchar (max)**, 유효한 포함 될 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 쿼리는 별도 세션에서 스크립트 호출 하므로 지역 변수에서 실행 됩니다 **sp_send_dbmail** 를 쿼리에 사용할 수 없습니다.  
+`[ @query = ] 'query'` 쿼리가 실행 됩니다. 쿼리 결과를 파일로 첨부할 수도 있고 전자 메일 메시지의 본문에 포함할 수도 있습니다. 쿼리는 유형이 **nvarchar (max)**, 유효한 포함 될 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 쿼리는 별도 세션에서 스크립트 호출 하므로 지역 변수에서 실행 됩니다 **sp_send_dbmail** 를 쿼리에 사용할 수 없습니다.  
   
- [ **@execute_query_database=** ] **'***execute_query_database***'**  
- 저장 프로시저가 쿼리를 실행하는 데이터베이스 컨텍스트입니다. 이 매개 변수는 형식 **sysname**, 현재 데이터베이스의 기본값입니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
+`[ @execute_query_database = ] 'execute_query_database'` 데이터베이스 컨텍스트가 저장된 프로시저는 쿼리를 실행 합니다. 이 매개 변수는 형식 **sysname**, 현재 데이터베이스의 기본값입니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
- [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
- 쿼리의 결과 집합이 첨부 파일로 반환되는지 여부를 지정합니다. *attach_query_result_as_file* 유형임 **비트**, 기본값은 0 사용 하 여 합니다.  
+`[ @attach_query_result_as_file = ] attach_query_result_as_file` 쿼리의 결과 집합이 첨부 파일로 반환 되는지 여부를 지정 합니다. *attach_query_result_as_file* 유형임 **비트**, 기본값은 0 사용 하 여 합니다.  
   
  쿼리 결과의 내용을 후 전자 메일 메시지의 본문에 포함 된 값이 0 이면 합니다 **@body** 매개 변수입니다. 값이 1이면 결과가 첨부 파일로 반환됩니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
- [  **@query_attachment_filename=** ] *query_attachment_filename*  
- 쿼리 결과 집합 첨부 파일에 사용할 파일 이름을 지정합니다. *query_attachment_filename* 유형의 **nvarchar(255)**, 기본값은 NULL입니다. 이 매개 변수는 무시 하면 *attach_query_result* 은 0입니다. 때 *attach_query_result* 은 1이 고이 매개 변수는 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.  
+`[ @query_attachment_filename = ] query_attachment_filename` 첨부 된 쿼리 결과 집합에 사용할 파일 이름을 지정 합니다. *query_attachment_filename* 유형의 **nvarchar(255)**, 기본값은 NULL입니다. 이 매개 변수는 무시 하면 *attach_query_result* 은 0입니다. 때 *attach_query_result* 은 1이 고이 매개 변수는 NULL 이면 데이터베이스 메일에서 임의로 파일 이름을 만듭니다.  
   
- [ **@query_result_header=** ] *query_result_header*  
- 쿼리 결과에 열 머리글을 포함할 것인지 여부를 지정합니다. Query_result_header 값은 형식의 **비트**합니다. 값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다. 이 매개 변수의 기본값은 **1**합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
+`[ @query_result_header = ] query_result_header` 쿼리 결과 열 머리글을 포함 하는지 여부를 지정 합니다. Query_result_header 값은 형식의 **비트**합니다. 값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다. 이 매개 변수의 기본값은 **1**합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
  
    >[!NOTE]
    > 설정할 때 다음 오류가 발생할 수 있습니다 @query_result_header 0과 설정을 @query_no_truncate 1:
-   > <br> Msg 22050, Level 16, 상태 1, 줄 12:-2147024809 오류 번호를 사용 하 여 sqlcmd 라이브러리를 초기화 하지 못했습니다.
+   > <br> 메시지 22050, 수준 16, 상태 1, 12 번 줄: 오류 번호-2147024809 sqlcmd 라이브러리를 초기화 하지 못했습니다.
   
- [ **@query_result_width** = ] *query_result_width*  
- 쿼리 결과에 서식을 지정할 때 사용하는 문자 줄 너비입니다. *query_result_width* 유형의 **int**, 기본값은 256입니다. 10과 32767 사이의 값을 지정해야 합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
+`[ @query_result_width = ] query_result_width` 쿼리 결과 서식 지정에 사용 하는 문자에서, 줄 너비가입니다. *query_result_width* 유형의 **int**, 기본값은 256입니다. 10과 32767 사이의 값을 지정해야 합니다. 이 매개 변수는 해당 하는 경우 **@query** 지정 됩니다.  
   
- [ **@query_result_separator=** ] **'***query_result_separator***'**  
- 쿼리 출력에서 열을 구분하는 데 사용되는 문자입니다. 구분 기호 형식입니다 **char(1)** 합니다. 기본값은 ' '(공백)입니다.  
+`[ @query_result_separator = ] 'query_result_separator'` 쿼리 출력에서 열을 구분 문자가 사용 됩니다. 구분 기호 형식입니다 **char(1)** 합니다. 기본값은 ' '(공백)입니다.  
   
- [ **@exclude_query_output=** ] *exclude_query_output*  
- 쿼리 실행 출력을 전자 메일 메시지로 반환할지 여부를 지정합니다. **exclude_query_output** 는 bit 이며 기본값은 0입니다. 경우이 매개 변수는 0, 실행 합니다 **sp_send_dbmail** 콘솔에서 쿼리 실행의 결과로 반환 되는 메시지를 인쇄 하는 저장된 프로시저입니다. 이 매개 변수는 1, 실행 하는 경우는 **sp_send_dbmail** 저장된 프로시저에 인쇄 되지 않습니다 쿼리 실행 메시지가 콘솔.  
+`[ @exclude_query_output = ] exclude_query_output` 전자 메일 메시지에서 쿼리 실행의 출력을 반환할 것인지를 지정 합니다. **exclude_query_output** 는 bit 이며 기본값은 0입니다. 경우이 매개 변수는 0, 실행 합니다 **sp_send_dbmail** 콘솔에서 쿼리 실행의 결과로 반환 되는 메시지를 인쇄 하는 저장된 프로시저입니다. 이 매개 변수는 1, 실행 하는 경우는 **sp_send_dbmail** 저장된 프로시저에 인쇄 되지 않습니다 쿼리 실행 메시지가 콘솔.  
   
- [ **@append_query_error=** ] *append_query_error*  
- 에 지정 된 쿼리에서 오류가 반환 될 때 전자 메일을 보낼지 여부를 지정 합니다 **@query** 인수입니다. **append_query_error** 됩니다 **비트**, 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일에서 전자 메일 메시지의 본문에 쿼리 오류 메시지를 포함하여 전자 메일 메시지를 보냅니다. 데이터베이스 메일이 매개이 변수가 0 인 경우 전자 메일 메시지를 보내지 않습니다 하 고 **sp_send_dbmail** 실패를 나타내는 반환 코드 1 사용 하 여 종료 합니다.  
+`[ @append_query_error = ] append_query_error` 에 지정 된 쿼리에서 오류가 반환 될 때 전자 메일을 보낼지 여부를 지정 합니다 **@query** 인수입니다. **append_query_error** 됩니다 **비트**, 기본값은 0입니다. 이 매개 변수가 1이면 데이터베이스 메일에서 전자 메일 메시지의 본문에 쿼리 오류 메시지를 포함하여 전자 메일 메시지를 보냅니다. 데이터베이스 메일이 매개이 변수가 0 인 경우 전자 메일 메시지를 보내지 않습니다 하 고 **sp_send_dbmail** 실패를 나타내는 반환 코드 1 사용 하 여 종료 합니다.  
   
- [ **@query_no_truncate=** ] *query_no_truncate*  
- 큰 가변 길이 데이터 형식의 잘림을 방지 하는 옵션을 사용 하 여 쿼리를 실행할지 여부를 지정 합니다 (**varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)** 를 **xml**를 **텍스트**를 **ntext**를 **이미지**, 및 사용자 정의 데이터 형식). 설정된 경우 쿼리 결과에 열 머리글이 포함되지 않습니다. 합니다 *query_no_truncate* 형식의 값이 **비트**합니다. 값이 0이거나 지정되지 않은 경우에는 쿼리의 열이 256자로 잘립니다. 값이 1이면 쿼리의 열이 잘리지 않습니다. 이 매개 변수의 기본값은 0입니다.  
+`[ @query_no_truncate = ] query_no_truncate` 큰 가변 길이 데이터 형식의 잘림을 방지 하는 옵션을 사용 하 여 쿼리를 실행할지 여부를 지정 합니다 (**varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)** 를 **xml**를 **텍스트**를 **ntext**를 **이미지**, 및 사용자 정의 데이터 형식). 설정된 경우 쿼리 결과에 열 머리글이 포함되지 않습니다. 합니다 *query_no_truncate* 형식의 값이 **비트**합니다. 값이 0이거나 지정되지 않은 경우에는 쿼리의 열이 256자로 잘립니다. 값이 1이면 쿼리의 열이 잘리지 않습니다. 이 매개 변수의 기본값은 0입니다.  
   
 > [!NOTE]  
 >  많은 양의 데이터를 사용할 때의 @**query_no_truncate** 옵션 추가 리소스를 사용 하 고 서버 성능이 느려질 수 있습니다.  
   
- [ **@query_result_no_padding** ] *@query_result_no_padding*  
- 형식은 bit이고, 기본값은 0입니다. 1로 설정 하면 쿼리 결과이 패딩 되지 않은 파일 크기를 줄일 수 있습니다. 설정 하는 경우 @query_result_no_padding 1로 설정 합니다 @query_result_width 매개 변수를 합니다 @query_result_no_padding 매개 변수를 덮어씁니다를 @query_result_width 매개 변수.  
+`[ @query_result_no_padding ] @query_result_no_padding` Bit 형식입니다. 기본값은 0입니다. 1로 설정 하면 쿼리 결과이 패딩 되지 않은 파일 크기를 줄일 수 있습니다. 설정 하는 경우 @query_result_no_padding 1로 설정 합니다 @query_result_width 매개 변수를 합니다 @query_result_no_padding 매개 변수를 덮어씁니다를 @query_result_width 매개 변수.  
   
  이 경우 오류는 발생하지 않습니다.  
  
   >[!NOTE]
   > 설정할 때 다음 오류가 발생할 수 있습니다 @query_result_no_padding 1 및 매개 변수를 제공 합니다. @query_no_truncate:
-  > <br> Msg 22050, Level 16, 상태 1, 0 번 줄: 때문에 쿼리를 실행 하지 못했습니다 합니다 @query_result_no_append 고 @query_no_truncate 옵션은 상호 배타적입니다. 
+  > <br> Msg 22050, 수준 16, 상태 1, 0 번 줄: 때문에 쿼리를 실행 하지 못했습니다 합니다 @query_result_no_append 고 @query_no_truncate 옵션은 상호 배타적입니다. 
   
  설정 하는 경우는 @query_result_no_padding 1로 설정 합니다 @query_no_truncate 매개 변수를 오류가 발생 합니다.  
   
- [  **@mailitem_id=** ] *mailitem_id* [출력]  
- 선택적 출력 매개 변수를 반환 합니다 *mailitem_id* 메시지입니다. 합니다 *mailitem_id* 유형의 **int**합니다.  
+`[ @mailitem_id = ] mailitem_id [ OUTPUT ]` 선택적 출력 매개 변수를 반환 합니다 *mailitem_id* 메시지입니다. 합니다 *mailitem_id* 유형의 **int**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  반환 코드 0은 성공을 의미합니다. 다른 값은 실패를 의미합니다. 실패 한 문에 대 한 오류 코드에 저장 되는 @@ERROR 변수입니다.  

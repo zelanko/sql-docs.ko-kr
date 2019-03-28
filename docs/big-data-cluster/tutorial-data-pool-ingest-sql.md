@@ -1,7 +1,7 @@
 ---
 title: SQL Server 데이터 풀에 데이터를 수집 합니다.
 titleSuffix: SQL Server 2019 big data clusters
-description: 이 자습서에는 sp_data_pool_table_insert_data 저장 프로시저를 사용 하 여 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
+description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493815"
+ms.locfileid: "58509940"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -56,7 +56,15 @@ ms.locfileid: "58493815"
    GO
    ```
 
-1. 명명 된 외부 테이블을 만듭니다 **web_clickstream_clicks_data_pool** 데이터 풀에 있습니다. `SqlDataPool` 데이터 원본은 모든 빅 데이터 클러스터의 마스터 인스턴스를 사용할 수 있는 특수 데이터 원본 형식입니다.
+1. 아직 존재 하지 않는 경우 데이터 풀에 외부 데이터 원본을 만듭니다.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. 명명 된 외부 테이블을 만듭니다 **web_clickstream_clicks_data_pool** 데이터 풀에 있습니다.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -75,21 +83,35 @@ ms.locfileid: "58493815"
 
 다음 단계를 이전 단계에서 만든 외부 테이블을 사용 하 여 데이터 풀에 샘플 웹 클릭 동향 데이터를 수집 합니다.
 
-1. 변수 데이터 풀에 데이터를 삽입 하려면 사용 하려는 쿼리를 정의 합니다. 사용 하 여는 **모델... sp_data_pool_table_insert_data** 저장 프로시저를 쿼리에서 결과 데이터 풀 삽입할 (합니다 **web_clickstream_clicks_data_pool** 외부 테이블).
+1. 변수 데이터 풀에 데이터를 삽입 하려면 사용 하려는 쿼리를 정의 합니다. CTP 2.3에 대 한 또는 이전 버전의 **모델... sp_data_pool_table_insert_data** 저장된 프로시저가 필요 합니다. CTP 2.4 이상 버전에서는 사용할 수는 `INSERT INTO` 쿼리에서 결과 데이터 풀 삽입 문을 (합니다 **web_clickstream_clicks_data_pool** 외부 테이블).
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
-   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
-   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
-   GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
+   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+   BEGIN
+      INSERT INTO web_clickstream_clicks_data_pool
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+        FROM sales.dbo.web_clickstreams_hdfs_parquet
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                              AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;
+   END
 
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+   BEGIN
+      DECLARE @db_name SYSNAME = 'Sales'
+      DECLARE @schema_name SYSNAME = 'dbo'
+      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
+      DECLARE @query NVARCHAR(MAX) = '
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+      FROM sales.dbo.web_clickstreams
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+         AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;'
+
+      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   END
    ```
 
 1. 두 개의 SELECT 쿼리를 사용 하 여 삽입된 된 데이터를 검사 합니다.

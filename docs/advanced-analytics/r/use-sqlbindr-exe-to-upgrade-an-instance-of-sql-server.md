@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645452"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512040"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,9 +51,9 @@ SQL Server 2016 R Services 고객에 대 한 바인딩을 제공 업데이트 �
 
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
-구성 요소 |초기 릴리스 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1의 경우](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
+구성 요소 |초기 릴리스 | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
-R 통해 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2 버전   |3.3.3 R   | R 3.4.1  | 3.4.3 R |
+R 통해 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [미리 학습 된 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
@@ -61,11 +61,11 @@ R 통해 Microsoft R Open (MRO) | R 3.2.2     | R 3.3.2 버전   |3.3.3 R   | R 
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
-[**SQL Server 2017 Machine Learning 서비스**](../install/sql-machine-learning-services-windows-install.md)
+[**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
 구성 요소 |초기 릴리스 | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-R 통해 Microsoft R Open (MRO) | 3.3.3 R | 3.4.3 R | | | |
+R 통해 Microsoft R Open (MRO) | R 3.3.3 | R 3.4.3 | | | |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
@@ -226,9 +226,9 @@ Microsoft Machine Learning Server를 실행 한 후 SqlBindR.exe 라는 명령�
 
 R 및 Python 구성 요소, SQL Server 설치 프로그램에서 설정의 초기 설치에 바인딩된 인스턴스를 복원할 수 있습니다. SQL Server 서비스를 다시 되돌리기 세 부분이 있습니다.
 
-+ [1 단계: Microsoft Machine Learning Server에서에서 바인딩 해제](#step-1-unbind)
++ [1단계: Microsoft Machine Learning Server에서에서 바인딩 해제](#step-1-unbind)
 + [2단계: 인스턴스를 원래 상태로 복원](#step-2-restore)
-+ [3 단계: 설치에 추가 하는 모든 패키지 다시 설치](#step-3-reinstall-packages)
++ [3단계: 설치에 추가 하는 모든 패키지 다시 설치](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 

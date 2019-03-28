@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812995"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526505"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다. 값을 지정 **모든** 모든 게시에 대 한 구독을 제거 하려면  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다. 값을 지정 **모든** 모든 게시에 대 한 구독을 제거 하려면  
   
- [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db*됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 필수적 요소입니다.  
   
- [  **@reserved=**] **'***예약 된***'**  
- 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
+`[ @reserved = ] 'reserved'` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

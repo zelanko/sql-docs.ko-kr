@@ -3,19 +3,19 @@ title: 새로운 기능-SQL Server Machine Learning Services | Microsoft Docs
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
 ms.date: 03/27/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be7ecb1f4a1a42c4018e6a549a7ad2ea76b04ef5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494135"
+ms.locfileid: "58509830"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 

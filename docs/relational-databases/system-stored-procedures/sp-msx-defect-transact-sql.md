@@ -18,12 +18,12 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e523bc26b8469f3ee7306f3e6fd2902ef727bb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528535"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@forced_defection =**] *forced_defection*  
- 마스터 SQLServerAgent가 영구적으로 복구할 수 없을 정도로 손상 손실 경우 강제 것인지 여부를 지정 **msdb** 데이터베이스에 없거나 **msdb** 데이터베이스 백업 합니다. *forced_defection*은 **비트**, 기본값은 **0**를 강제로 제거할 수 없음을 발생 않아야 함을 나타냅니다. 값이 **1** 지정 하면 강제 제거 합니다.  
+`[ @forced_defection = ] forced_defection` 마스터 SQLServerAgent가 영구적으로 복구할 수 없을 정도로 손상 손실 경우 강제 것인지 여부를 지정 **msdb** 데이터베이스에 없거나 **msdb** 데이터베이스 백업 합니다. *forced_defection*은 **비트**, 기본값은 **0**를 강제로 제거할 수 없음을 발생 않아야 함을 나타냅니다. 값이 **1** 지정 하면 강제 제거 합니다.  
   
  실행 하 여 강제로 적용 한 후 **sp_msx_defect**의 멤버는 **sysadmin** 마스터 SQLServerAgent에서 고정된 서버 역할 제거를 완료 하려면 다음 명령을 실행 해야 합니다:  
   

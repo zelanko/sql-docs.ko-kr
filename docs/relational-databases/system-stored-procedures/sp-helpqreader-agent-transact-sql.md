@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779655"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529345"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@frompublisher=** ] *frompublisher*  
- 저장 프로시저가 게시자에서 호출되는지 또는 배포자에서 호출되는지 여부를 지정합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 은 저장된 프로시저가 게시자에서 호출 됨 및 **0** 저장된 프로시저가 배포자에서 호출 되는 것을 의미 합니다.  
+`[ @frompublisher = ] frompublisher` 저장된 프로시저는 게시자 또는 배포자에서 호출 되는지 여부를 지정 합니다. *frompublisher* 는 bit 이며 기본값은 0입니다. **1** 은 저장된 프로시저가 게시자에서 호출 됨 및 **0** 저장된 프로시저가 배포자에서 호출 되는 것을 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

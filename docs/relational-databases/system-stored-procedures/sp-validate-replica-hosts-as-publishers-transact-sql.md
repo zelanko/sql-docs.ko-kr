@@ -16,12 +16,12 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cdbfcad1bb03e88d335c8acddc1ff7eb8c75b2eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791585"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528425"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_validate_replica_hosts_as_publishers
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@original_publisher** =] **'***original_publisher***'**  
- 원래 데이터베이스를 게시한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. *original_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'` 인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 데이터베이스를 게시 합니다. *original_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시할 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- 리디렉션 대상입니다 때 **sp_redirect_publisher** 를 원래 게시자/게시 된 데이터베이스 쌍에 대 한 호출 되었습니다. *redirected_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @redirected_publisher = ] 'redirected_publisher'` 리디렉션 대상입니다 때 **sp_redirect_publisher** 를 원래 게시자/게시 된 데이터베이스 쌍에 대 한 호출 되었습니다. *redirected_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

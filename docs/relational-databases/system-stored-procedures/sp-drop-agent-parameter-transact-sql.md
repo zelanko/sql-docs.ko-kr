@@ -16,12 +16,12 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd8c367f3fecd0c9951b577fdcdf31cf77ac589e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7abf2a3c2e9eebcd21a60beb72e650ad534cc80d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821947"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528617"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_id=**] *profile_id*  
- 매개 변수를 삭제할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @profile_id = ] profile_id` 매개 변수는 삭제 될 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@parameter_name=**] **'***parameter_name***'**  
- 삭제할 매개 변수의 이름입니다. *parameter_name* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
+`[ @parameter_name = ] 'parameter_name'` 삭제할 매개 변수의 이름이입니다. *parameter_name* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 **%**, 지정된 된 프로필에 대 한 모든 매개 변수가 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

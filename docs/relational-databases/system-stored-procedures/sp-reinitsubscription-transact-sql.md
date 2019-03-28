@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207340"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528785"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다.  
   
- [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다. 즉시 업데이트 게시의 경우 *문서* 있어야 **모든**고, 그렇지 않으면 저장된 프로시저가 게시를 건너뛰고 오류를 보고 합니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다. 즉시 업데이트 게시의 경우 *문서* 있어야 **모든**고, 그렇지 않으면 저장된 프로시저가 게시를 건너뛰고 오류를 보고 합니다.  
   
- [  **@subscriber=**] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- 대상 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다.  
+`[ @destination_db = ] 'destination_db'` 대상 데이터베이스의 이름이입니다. *destination_db* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다.  
   
- [  **@for_schema_change=**] **'***for_schema_change***'**  
- 게시 데이터베이스에서 스키마가 변경되어 그 결과로 다시 초기화가 발생하는지 여부를 표시합니다. *for_schema_change* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **0**,으로 하 고의 아티클 일부가 아닌 전체 게시가 다시 초기화 하는 즉시 업데이트를 허용 하는 게시에 대 한 활성 구독이 다시 활성화 됩니다. 이는 스키마가 변경되어 다시 초기화가 시작됨을 의미합니다. 하는 경우 **1**, 스냅숏 에이전트가 실행 될 때까지 활성 구독이 다시 활성화 되지 않습니다.  
+`[ @for_schema_change = ] 'for_schema_change'` 게시 데이터베이스에서 스키마 변경의 결과로 다시 초기화가 발생 하는지 여부를 나타냅니다. *for_schema_change* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **0**,으로 하 고의 아티클 일부가 아닌 전체 게시가 다시 초기화 하는 즉시 업데이트를 허용 하는 게시에 대 한 활성 구독이 다시 활성화 됩니다. 이는 스키마가 변경되어 다시 초기화가 시작됨을 의미합니다. 하는 경우 **1**, 스냅숏 에이전트가 실행 될 때까지 활성 구독이 다시 활성화 되지 않습니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 대해 사용할 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- 배포자가 없거나 오프라인 상태인 경우에도 다시 초기화할 수 있도록 합니다. *ignore_distributor_failure* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **0**, 배포자가 없거나 오프 라인 상태인 경우 다시 초기화가 실패 합니다.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` 배포자가 없거나 오프 라인 상태인 경우에 다시 초기화할 수 있도록 합니다. *ignore_distributor_failure* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **0**, 배포자가 없거나 오프 라인 상태인 경우 다시 초기화가 실패 합니다.  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- 기존 게시 스냅숏을 무효화합니다. *invalidate_snapshot* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **1**, 게시에 대 한 새 스냅숏이 생성 됩니다.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` 기존 게시 스냅숏을 무효화합니다. *invalidate_snapshot* 됩니다 **비트**, 기본값은 0입니다. 하는 경우 **1**, 게시에 대 한 새 스냅숏이 생성 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

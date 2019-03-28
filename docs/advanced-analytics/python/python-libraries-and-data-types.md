@@ -5,22 +5,22 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 9578f81146f0dab42e7a607b9e8ab410313958d4
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 6a7cb7e8f93489bb52c1457fbf25bf7206026914
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431983"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509650"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server Machine Learning Services의 Python 통합 기능은에서 실행 되는 Python 솔루션에 대 한 지원 되지 않는 데이터 형식 및 Python과 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 데이터 형식 변환의 목록을 검토 합니다.
 
-## <a name="python-version"></a>Python 버전
+## <a name="python-version"></a>Python Version
 
 SQL Server 2017 Anaconda 4.2 배포 및 Python 3.6입니다.
 

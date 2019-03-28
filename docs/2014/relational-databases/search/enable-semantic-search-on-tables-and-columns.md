@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529585"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
   문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52528387"
   
 -   전체 텍스트 인덱싱이 지원되는 데이터 형식의 열에 대한 의미 체계 인덱스를 만들 수 있습니다. 자세한 내용은 [전체 텍스트 인덱스 만들기 및 관리](create-and-manage-full-text-indexes.md)를 참조하세요.  
   
--   `varbinary(max)` 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 형식을 지정할 수 있습니다. 자세한 내용은 참조 하세요. [방법: 문서 형식을 인덱싱할 수 있는 확인](#doctypes) 이 항목의 합니다.  
+-   `varbinary(max)` 열에 대해 전체 텍스트 인덱싱이 지원되는 문서 형식을 지정할 수 있습니다. 자세한 내용은 [방법: 인덱싱할 수 있는 문서 유형 결정 ](#doctypes)을 참조하세요.  
   
 -   의미 체계 인덱싱에서는 선택한 열에 대한 두 가지 유형의 인덱스, 즉 키 구 인덱스와 문서 유사성 인덱스를 만듭니다. 의미 체계 인덱싱을 사용하도록 설정할 때 둘 중 한 가지 인덱스 유형만 선택할 수는 없습니다. 그러나 이러한 두 인덱스는 독립적으로 쿼리할 수 있습니다. 자세한 내용은 [의미 체계 검색을 사용하여 문서의 키 구 찾기](find-key-phrases-in-documents-with-semantic-search.md) 및 [의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기](find-similar-and-related-documents-with-semantic-search.md)를 참조하세요.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52528387"
   
  다음 예에서는 기본 전체 텍스트 카탈로그 **ft**를 만들고, AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에 있는 **JobCandidateID** 열에 대해 고유 인덱스를 만듭니다. 이 고유 인덱스는 전체 텍스트 인덱스에 대한 키 열로 필요합니다. 그런 다음 **Resume** 열에 대한 전체 텍스트 인덱스와 의미 체계 인덱스를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **예제 2: 나중된에 인덱스 채우기가 있는 여러 열에 전체 텍스트 및 의미 체계 인덱스 만들기**  
+ **예제 2: 여러 열에 대한 전체 텍스트 및 의미 체계 인덱스 만들고 나중에 인덱스 채우기 수행**  
   
  다음 예에서는 AdventureWorks2012 예제 데이터베이스에 전체 텍스트 카탈로그인 **documents_catalog**를 만듭니다. 그런 다음 이 새 카탈로그를 사용하는 전체 텍스트 인덱스를 만듭니다. 전체 텍스트 인덱스는 **Production.Document**테이블의 **Title**, **DocumentSummary** 및 **Document** 열에 만들어지는 반면 의미 체계 인덱스는 **Document** 열에만 만들어집니다. 이 전체 텍스트 인덱스는 새로 만든 전체 텍스트 카탈로그와 기존 고유 키 인덱스 **PK_Document_DocumentID**를 사용합니다. 권장한 대로 이 인덱스 키는 정수 열 **DocumentID**에 만들어집니다. 이 예에서는 열의 데이터 언어인 영어의 LCID 1033을 지정합니다.  
   
  또한 이 예에서는 채우기 작업을 수행하지 않고 변경 내용 추적이 해제되도록 지정합니다. 나중에 사용률이 낮은 시간에 **ALTER FULLTEXT INDEX** 문을 사용하여 새 인덱스에 대해 전체 채우기를 시작하고 변경 내용 자동 추적을 사용하도록 설정합니다.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  다음과 같이 나중에 사용률이 낮은 시간에 인덱스가 채워집니다.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -133,7 +133,7 @@ GO
   
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **Production.Document** 테이블에 대한 기존 전체 텍스트 인덱스를 변경합니다. 이 예에서는 전체 텍스트 인덱스가 이미 있는 **Production.Document** 테이블의 **Document** 열에 의미 체계 인덱스를 추가합니다. 또한 자동으로 다시 채워지지 않는 인덱스를 지정합니다.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **TRANSACT-SQL을 사용 하 여 의미 체계 인덱스 삭제**  
  -   열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN***column_name***DROP** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  반환 값이 1이면 데이터베이스에 대해 전체 텍스트 검색과 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      반환 값이 1이면 열에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      **statistical_semantics** 열의 값이 1이면 지정된 열에 전체 텍스트 인덱싱과 의미 체계 인덱싱이 사용하도록 설정되어 있음을 나타냅니다.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  카탈로그 뷰 [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

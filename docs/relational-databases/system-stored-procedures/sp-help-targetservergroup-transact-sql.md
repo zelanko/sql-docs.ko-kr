@@ -18,12 +18,12 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c2b16617a4676e50a105affd5a885c8627b3120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784726"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528865"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>인수  
- [ **@name=** ] **'***name***'**  
- 정보를 반환할 대상 서버 그룹의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 정보를 반환 하는 대상 서버 그룹의 이름이입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

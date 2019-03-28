@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528255"
 ---
 # <a name="manage-change-tracking-sql-server"></a>변경 내용 추적 관리(SQL Server)
   이 항목에서는 변경 내용 추적을 관리하는 방법에 대해 설명합니다. 또한 보안을 구성하는 방법과 변경 내용 추적을 사용할 때 스토리지 및 성능에 미치는 영향을 확인하는 방법에 대해서도 설명합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808805"
   
  다른 내부 테이블을 사용할 때와 같이 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 저장 프로시저를 사용하여 변경 내용 추적 테이블에 사용되는 공간을 결정할 수 있습니다. 내부 테이블의 이름은 다음 예와 같이 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) 카탈로그 뷰를 사용하여 가져올 수 있습니다.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

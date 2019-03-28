@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641544"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528675"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스의 속성을 보거나 변경하는 방법에 대해 설명합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "52641544"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [문에](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 기본 제공 함수를 사용하여 현재 서버에 대한 정보를 반환합니다. 이 시나리오는 한 Windows 기반 서버에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치되어 있고 클라이언트가 현재 연결에서 사용되는 인스턴스에 대한 또 다른 연결을 열어야 하는 경우에 유용합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -92,7 +92,7 @@ ms.locfileid: "52641544"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) 카탈로그 뷰를 쿼리하여 현재 서버의 이름(`name`)과 ID(`server_id`) 및 연결된 서버에 연결하기 위한 OLE DB 공급자의 이름(`provider`)을 반환합니다.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -126,7 +126,7 @@ ms.locfileid: "52641544"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 서버 속성을 변경하는 방법을 보여 줍니다. 이 예에서는 `fill factor` 옵션의 값을 `100`으로 변경합니다. 변경 내용을 적용하려면 서버를 다시 시작해야 합니다.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -154,10 +154,10 @@ GO
   
 4.  **SQL Server(\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 서버 속성을 변경한 후  
+##  <a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
  일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [SET 문&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

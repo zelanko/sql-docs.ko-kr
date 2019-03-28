@@ -18,12 +18,12 @@ ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528859"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,17 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@class =**] **'***class***'**  
- 업데이트할 범주의 클래스입니다. *클래스*됩니다 **varchar(8)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 업데이트할 범주의 클래스입니다. *클래스*됩니다 **varchar(8)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**경으십시오**|경고 범주를 업데이트합니다.|  
+|**ALERT**|경고 범주를 업데이트합니다.|  
 |**JOB**|작업 범주를 업데이트합니다.|  
-|**연산자**|연산자 범주를 업데이트합니다.|  
+|**OPERATOR**|연산자 범주를 업데이트합니다.|  
   
- [ **@name =**] **'***old_name***'**  
- 범주의 현재 이름입니다. *old_name*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'old_name'` 범주의 현재 이름입니다. *old_name*됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@new_name =**] **'***new_name***'**  
- 범주의 새 이름입니다. *new_name*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @new_name = ] 'new_name'` 범주의 새 이름입니다. *new_name*됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -15,12 +15,12 @@ ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b71a548dabd286437db73224195622ef576bd28b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748945"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528467"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성 보기 또는 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 속성을 보거나 변경하는 방법에 대해 설명합니다. 데이터베이스 속성을 변경하면 수정 사항이 즉시 반영됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "52748945"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 시스템 함수를 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 AUTO_SHRINK 데이터베이스 옵션 상태를 반환합니다. 반환 값이 1이면 해당 옵션이 ON으로 설정되어 있고 반환 값이 0이면 해당 옵션이 OFF로 설정되어 있음을 의미합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
@@ -86,7 +86,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 카탈로그 뷰를 쿼리하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 여러 속성을 확인합니다. 이 예에서는 데이터베이스 ID 번호(`database_id`), 데이터베이스가 읽기 전용인지 읽기/쓰기인지 여부(`is_read_only`), 데이터베이스의 데이터 정렬(`collation_name`) 및 데이터베이스 호환성 수준(`compatibility_level`)을 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT database_id, is_read_only, collation_name, compatibility_level  

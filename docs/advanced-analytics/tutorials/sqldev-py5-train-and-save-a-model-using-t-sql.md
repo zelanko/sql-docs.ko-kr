@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a0991f43ed7446cc9b86325d4f536a0787b8dcc1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645181"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511250"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,12 +116,12 @@ ms.locfileid: "53645181"
 
     데이터를 처리 하 고 모델을 맞추는 분 정도 걸릴 수 있습니다. Python의 파이프 되는 메시지 **stdout** 스트림은 표시 되는 **메시지** 기간 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
-    *외부 스크립트의 STDOUT 메시지:*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. 테이블을 엽니다 *nyc\_taxi_models*합니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -180,12 +180,12 @@ ms.locfileid: "53645181"
 
     데이터를 처리하고 모델에 맞추는 데 다소 시간이 걸릴 수 있습니다. Python의 파이프 되는 메시지 **stdout** 스트림은 표시 되는 **메시지** 기간 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
-    *외부 스크립트의 STDOUT 메시지:*
-  *C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
+    *STDOUT message(s) from external script:*
+  *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. *nyc_taxi_models*테이블을 엽니다. _모델_열에 직렬화된 모델을 포함하는 하나의 새 행이 추가된 것을 확인할 수 있습니다.
 
-    *revoscalepy_model* *0x8003637265766F7363616c...*
+    *revoscalepy_model* *0x8003637265766F7363616c....*
 
 다음 단계에서 사용 하 여 학습된 된 모델 예측을 만듭니다.
 

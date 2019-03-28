@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78405d434ee32270363821077ca436702cb7c797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161253"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526355"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
   W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  

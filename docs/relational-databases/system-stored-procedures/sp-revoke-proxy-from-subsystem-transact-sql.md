@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527236"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@proxy_id** = ] *id*  
- 액세스 권한을 해제할 프록시의 ID입니다. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @proxy_id = ] id` 액세스 권한을 해제할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
- 액세스 권한을 해제할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @proxy_name = ] 'proxy_name'` 액세스 권한을 해제할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *proxy_id* 하거나 *proxy_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@subsystem_id** = ] *id*  
- 액세스 권한을 해제할 하위 시스템의 ID입니다. 합니다 *subsystem_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_id = ] id` 액세스 권한을 해제할 하위 시스템의 id. 합니다 *subsystem_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -67,8 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
   
- [ **@subsystem_name**= ] **'***subsystem_name***'**  
- 액세스 권한을 해제할 하위 시스템의 이름입니다. 합니다 *subsystem_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
+`[ @subsystem_name = ] 'subsystem_name'` 액세스 권한을 해제할 하위 시스템의 이름입니다. 합니다 *subsystem_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *subsystem_id* 하거나 *subsystem_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  

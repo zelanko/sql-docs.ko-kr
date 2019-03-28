@@ -19,12 +19,12 @@ ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1fe6c63c090ae0200626fb0782b6d36fc9525f18
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cdce1c0fc6f36bb0d58e93abba29ecab9d2dcd54
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788416"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526345"
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 데이터베이스의 목록 보기
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스에서 데이터베이스 목록을 보는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52788416"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 데이터베이스 목록을 반환합니다. 목록에는 데이터베이스 이름, 데이터베이스 ID 및 데이터베이스를 만든 날짜가 포함됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, database_id, create_date  

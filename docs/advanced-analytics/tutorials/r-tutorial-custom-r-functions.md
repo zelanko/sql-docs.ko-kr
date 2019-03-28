@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 90790c2b96843ea1821b8b4ed05052a7611cdf74
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596444"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509910"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>RxExec를 사용 하 여 SQL Server에서 사용자 지정 R 함수 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -113,7 +113,7 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
   
 작업 스크립트를 설정 했으므로 사용 하는 방법을 확인해 보겠습니다 **rxExec** 여 이길 확률을 확인할 수 있는 시뮬레이션을 만드는 여러 번 해당 함수를 실행 합니다.
 
-## <a name="pass-rolldice-in-rxexec"></a>RxExec rollDice() 전달
+## <a name="pass-rolldice-in-rxexec"></a>Pass rollDice() in rxExec
 
 원격 SQL Server의 컨텍스트에서 임의 함수를 실행 하려면 호출을 **rxExec** 함수입니다.
 

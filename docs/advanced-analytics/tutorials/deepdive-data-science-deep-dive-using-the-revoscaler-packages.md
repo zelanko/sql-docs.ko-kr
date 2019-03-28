@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596624"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511730"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: RevoScaleR R 함수를 사용 하 여 SQL Server 데이터를 사용 하 여
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53596624"
 동일한 컴퓨터에 클라이언트 및 서버를 배치 해야 할 경우에 두 번째 집합이 "원격" 클라이언트에서 R 스크립트를 보내기 위한 Microsoft R 라이브러리를 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리를 사용 하지 마세요. 특히 하나의 컴퓨터를 사용 하는 경우 수행 해야 합니다 **RevoScaleR** 클라이언트 및 서버 작업을 지원 하기 위해 이러한 위치 중에서 라이브러리를 합니다.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14 합니다. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 클라이언트 구성에 대 한 지침을 참조 하세요 [R 개발에 대 한 데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)합니다.
 
@@ -70,4 +70,4 @@ ms.locfileid: "53596624"
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [1 단원: 데이터베이스 및 사용 권한 만들기](deepdive-work-with-sql-server-data-using-r.md)
+> [1단원: 데이터베이스 및 사용 권한 만들기](deepdive-work-with-sql-server-data-using-r.md)

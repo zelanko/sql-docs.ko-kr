@@ -14,12 +14,12 @@ ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88cc979d7888a5844731c63ec96898572d31acc8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641488"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528365"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **user options** 옵션은 모든 사용자에 대한 전역 기본값을 지정합니다. 기본 쿼리 처리 옵션 목록은 사용자의 작업 세션 기간에 대해 설정됩니다. **user options** 옵션을 사용하면 서버의 기본 설정이 적합하지 않은 경우 SET 옵션의 기본값을 변경할 수 있습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "52641488"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 통해 ANSI_WARNINGS 서버 옵션에 대한 설정을 변경하기 위해 `user options` 으로 설정하여 제한 시간을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  
@@ -105,7 +105,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 후속편: user options 구성 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: user options 구성 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

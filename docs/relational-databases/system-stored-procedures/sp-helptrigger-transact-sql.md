@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828981"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528595"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tabname=** ] **'***테이블***'**  
- 트리거 정보를 반환할 현재 데이터베이스의 테이블 이름입니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @tabname = ] 'table'` 트리거 정보를 반환할 현재 데이터베이스에서 테이블의 이름이입니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [ **@triggertype=** ] **'***type***'**  
- 정보를 반환할 DML 트리거의 유형입니다. *형식* 됩니다 **char(6)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @triggertype = ] 'type'` 정보를 반환할 DML 트리거의 유형이입니다. *형식* 됩니다 **char(6)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

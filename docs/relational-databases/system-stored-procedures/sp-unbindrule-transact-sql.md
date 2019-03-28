@@ -18,12 +18,12 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35db2f08be985359de4723cdb9aa393ad608232
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624166"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527285"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@objname=** ] **'***object_name***'**  
- 바인딩이 해제된 규칙이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
+`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식이 있는 규칙은 바인딩된 이름이입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 별칭 데이터 형식에서 규칙의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 해당 데이터 형식의 기존 열에 지정 된 규칙을 손실 되지 않습니다.  
+`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에서 규칙 바인딩 해제 하는 경우에 사용 됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 해당 데이터 형식의 기존 열에 지정 된 규칙을 손실 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

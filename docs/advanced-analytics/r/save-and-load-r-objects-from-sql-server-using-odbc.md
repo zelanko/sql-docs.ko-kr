@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c7b874adc53d217c341a5dce689c7c5b4eb70bfe
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 1ed82ffe497af6393371486440e618c162406a01
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53431956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513049"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>저장 하 고 ODBC를 사용 하 여 SQL Server에서 R 개체 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

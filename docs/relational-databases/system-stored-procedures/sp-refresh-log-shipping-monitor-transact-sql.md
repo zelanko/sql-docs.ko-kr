@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851561"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528979"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@agent_id=** ] **'***agent_id***'**  
- 백업의 경우 주 ID, 복사나 복원의 경우 보조 ID입니다. *agent_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @agent_id = ] 'agent_id'` 백업에 대 한 주 ID 또는 복사 또는 복원에 대 한 보조 ID입니다. *agent_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
   
- [ **@agent_type=** ] **'***agent_type***'**  
- 로그 전달 작업의 유형입니다.  
+`[ @agent_type = ] 'agent_type'` 로그 전달 작업의 형식입니다.  
   
  0 = 백업  
   
@@ -58,15 +56,13 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* 됩니다 **tinyint** NULL 일 수 없습니다.  
   
- [  **@database=** ] **'***데이터베이스***'**  
- 백업 에이전트나 복원 에이전트가 기록하는 데 사용하는 주 데이터베이스 또는 보조 데이터베이스입니다.  
+`[ @database = ] 'database'` 기본 또는 보조 데이터베이스 백업이 나 복원 에이전트가 기록 하는 데 사용 합니다.  
   
- [ **@mode** ] *n*  
- 모니터 데이터를 새로 고칠 것인지 또는 지울 것인지 지정합니다. 데이터 형식이 *m* tinyint 이며 지원 되는 값:  
+`[ @mode ] n` 모니터 데이터 새로 고침 또는 지울 것인지 지정 합니다. 데이터 형식이 *m* tinyint 이며 지원 되는 값:  
   
  1 = 새로 고침(기본값)  
   
- 2 = 삭제  
+ 2 = delete  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

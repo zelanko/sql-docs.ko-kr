@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745271"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526945"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'** *역할* **'**  
- 현재 데이터베이스에 있는 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 지정 하지 않으면 현재 데이터베이스에서 하나 이상의 멤버를 포함 하는 모든 역할이 반환 됩니다.  
+`[ @rolename = ] ' role '` 현재 데이터베이스에서 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 지정 하지 않으면 현재 데이터베이스에서 하나 이상의 멤버를 포함 하는 모든 역할이 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

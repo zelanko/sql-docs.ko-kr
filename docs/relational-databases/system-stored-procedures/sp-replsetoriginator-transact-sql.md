@@ -16,12 +16,12 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ded79b417b868cc82cb1a59e34d72c3a5bf9f045
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f72558a573e0cee0ab7fb2ab9b762246964a884
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748205"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526185"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@server_name=**] **'***server_name***'**  
- 트랜잭션이 적용되는 서버의 이름입니다. *originating_server* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @server_name = ] 'server_name'` 트랜잭션이 적용 되는 서버의 이름이입니다. *originating_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@database_name=**] **'***database_name***'**  
- 트랜잭션이 적용되는 데이터베이스의 이름입니다. *originating_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @database_name = ] 'database_name'` 트랜잭션이 적용 되는 데이터베이스의 이름이입니다. *originating_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

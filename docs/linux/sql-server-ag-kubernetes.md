@@ -11,16 +11,16 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d4c460b272650874fd3b8b4d390879abf5a8fcc3
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 4b3d01538df675149a3cc7f555774c8d27bf4e14
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160581"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511070"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 always On 가용성 그룹
 
-SQL Server 2019 Kubernetes에서 컨테이너에 대 한 가용성 그룹을 지원합니다. 가용성 그룹에 대 한 SQL Server를 배포 [Kubernetes 연산자](https://coreos.com/blog/introducing-operators.html) Kubernetes 클러스터에 있습니다. 연산자에는 패키지를 배포 하 고 클러스터에서 가용성 그룹을 관리할 수 있습니다.
+SQL Server 2019 Kubernetes 클러스터에서 컨테이너에 대 한 가용성 그룹을 지원합니다. 가용성 그룹에 대 한 SQL Server를 배포 [Kubernetes 연산자](https://coreos.com/blog/introducing-operators.html) Kubernetes 클러스터에 있습니다. 연산자에는 패키지를 배포 하 고 클러스터에서 가용성 그룹을 관리할 수 있습니다.
 
 ![Kubernetes 컨테이너에서 AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
@@ -67,9 +67,9 @@ Kubernetes에서 가용성 그룹을 배포 합니다.
 
 StatfulSet 포함 되어 있습니다.
 
-* mssql server 컨테이너
+* mssql-server container
 
-* mssql-ha-감독자 컨테이너
+* mssql-ha-supervisor container
 
 연산자, HA 감독자 및 SQL Server에 대 한 코드를 호출 하는 Docker 이미지에 패키지 됩니다 `mcr.microsoft.com/mssql/ha`합니다. 이 이미지는 다음 이진 파일이 포함 되어 있습니다.
 

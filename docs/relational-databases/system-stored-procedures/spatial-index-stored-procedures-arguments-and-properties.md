@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666602"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528815"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666602"
 -   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>인수  
- [  **@tabname =**] **'***tabname***'**  
- 공간 인덱스가 지정된 테이블의 정규화된 이름 또는 정규화되지 않은 이름입니다.  
+`[ @tabname = ] 'tabname'` 공간 인덱스에 지정 된 테이블의 정규화 되거나 정규화 되지 않은 이름이입니다.  
   
  따옴표는 정규화된 테이블이 지정된 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *tabname* 됩니다 **nvarchar**(776) 이며 기본값은 없습니다.  
   
- [  **@indexname =** ] **'***indexname***'**  
- 지정된 공간 인덱스의 이름입니다. *indexname* 됩니다 **sysname** 기본값은 없습니다.  
+`[ @indexname = ] 'indexname'` 지정 된 공간 인덱스의 이름이입니다. *indexname* 됩니다 **sysname** 기본값은 없습니다.  
   
- [  **@verboseoutput =** ] **'***verboseoutput***'**  
- 반환되는 속성 이름과 값의 범위입니다.  
+`[ @verboseoutput = ] 'verboseoutput'` 속성 이름 및 반환할 값의 범위가입니다.  
   
  0 = 핵심 속성  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666602"
   
  *verboseoutput* 됩니다 **tinyint** 기본값은 없습니다.  
   
- [  **@query_sample =** ] **'***query_sample***'**  
- 인덱스의 유용성을 테스트하는 데 사용할 수 있는 대표 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 됩니다 **기 하 도형** 기본값은 없습니다.  
+`[ @query_sample = ] 'query_sample'` 인덱스의 유용성 테스트를 사용할 수 있는 대표 쿼리 샘플입니다. 대표 개체 또는 쿼리 창일 수 있습니다. *query_sample* 됩니다 **기 하 도형** 기본값은 없습니다.  
   
- [  **@xml_output =** ] **'***xml_output***'**  
- XML 조각으로 결과 집합을 반환하는 출력 매개 변수입니다. *xml_output* 됩니다 **xml** 기본값은 없습니다.  
+`[ @xml_output = ] 'xml_output'` 결과 반환 하는 출력 매개 변수는 XML 조각에 설정 됩니다. *xml_output* 됩니다 **xml** 기본값은 없습니다.  
   
 ## <a name="properties"></a>속성  
  설정할 **@verboseoutput** 0 아래 표에 표시 된 것과 같이 핵심 속성을 반환 합니다. **@verboseoutput** > 0에서 공간 인덱스의 모든 속성을 반환 합니다.  

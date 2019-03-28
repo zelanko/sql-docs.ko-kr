@@ -18,12 +18,12 @@ ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d45252f16703cb52a3e78c1b236dd9d4cbfbde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846401"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526275"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_name=** ] **'***profilename***'**  
- 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 됩니다 **nvarchar (128)** 합니다. 하는 경우 *profilename* 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
+`[ @profile_name = ] 'profilename'` 메시지를 보내는 데 사용할 데이터베이스 메일 프로필의 이름입니다. *profilename* 됩니다 **nvarchar (128)** 합니다. 하는 경우 *profilename* 지정 하지 않으면 기본 데이터베이스 메일 프로필이 사용 됩니다.  
   
- [ **@id=** ] *id*  
- 메시지를 받을 운영자의 식별자입니다. *id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
+`[ @id = ] id` 메시지를 받을 운영자의 식별자입니다. *id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
   
- [ **@name=** ] **'***name***'**  
- 메시지를 받을 운영자의 이름입니다. *이름* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
+`[ @name = ] 'name'` 메시지를 보낼 운영자의 이름입니다. *이름* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 중 하나 *id* 하거나 *이름* 지정 해야 합니다.  
   
-> **참고:** 메시지를 받으려면 연산자에 대 한 전자 메일 주소를 정의 해야 합니다.  
+> **참고:** 메시지를 보내기 전에 운영자의 전자 메일 주소가 정의되어야 합니다.  
   
- [ **@subject=** ] **'***subject***'**  
- 전자 메일 메시지의 제목입니다. *주체* 됩니다 **nvarchar(256)** 기본값은 없습니다.  
+`[ @subject = ] 'subject'` 전자 메일 메시지의 제목입니다. *주체* 됩니다 **nvarchar(256)** 기본값은 없습니다.  
   
- [  **@body=** ] **'***메시지***'**  
- 전자 메일 메시지의 본문입니다. *메시지* 됩니다 **nvarchar (max)** 기본값은 없습니다.  
+`[ @body = ] 'message'` 전자 메일 메시지의 본문입니다. *메시지* 됩니다 **nvarchar (max)** 기본값은 없습니다.  
   
- [  **@file_attachments=** ] **'***첨부***'**  
- 전자 메일 메시지에 첨부할 파일의 이름입니다. *첨부 파일* 됩니다 **nvarchar(512)**, 기본값은 없습니다.  
+`[ @file_attachments = ] 'attachment'` 전자 메일 메시지에 첨부할 파일의 이름입니다. *첨부 파일* 됩니다 **nvarchar(512)**, 기본값은 없습니다.  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
- 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 됩니다 **nvarchar (128)** 합니다. 없으면 *mail_host_database* 를 지정 합니다 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
+`[ @mail_database = ] 'mail_host_database'` 메일 호스트 데이터베이스의 이름을 지정합니다. *mail_host_database* 됩니다 **nvarchar (128)** 합니다. 없으면 *mail_host_database* 를 지정 합니다 **msdb** 데이터베이스는 기본적으로 사용 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

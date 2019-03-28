@@ -18,12 +18,12 @@ ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 189861d10e308b79862f2485413aabf37a1b6aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716341"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526585"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@msx_server_name =**] **'***msx_server***'**  
- 다중 서버 관리(마스터) 서버의 이름입니다. *msx_server* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @msx_server_name = ] 'msx_server'` 다중 서버 관리 (마스터) 서버의 이름입니다. *msx_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@location =**] **'***위치***'**  
- 추가할 대상 서버의 위치입니다. *위치* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+`[ @location = ] 'location'` 추가할 대상 서버의 위치입니다. *위치* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

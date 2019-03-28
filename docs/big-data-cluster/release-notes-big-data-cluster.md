@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494185"
+ms.locfileid: "58510340"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -29,7 +29,7 @@ ms.locfileid: "58494185"
 
 ### <a name="whats-new"></a>What's New
 
-| 새 기능/업데이트 | 설명 |
+| 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 | GPU에 대 한 지침 딥 러닝 Spark에서 TensorFlow를 사용 하 여 실행에 대 한 지원. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.](spark-gpu-tensorflow.md) |
 | **SqlDataPool** 하 고 **SqlStoragePool** 데이터 원본에 더 이상 기본적으로 만들어집니다. | 필요에 따라 수동으로 이러한를 만듭니다. 참조 된 [알려진 문제](#externaltablesctp24)합니다. |
@@ -80,19 +80,44 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>클러스터 실패를 삭제 합니다.
+
+사용 하 여 클러스터를 삭제 하려고 할 때 **mssqlctl**, 다음 오류로 인해 실패 합니다.
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+새 Python Kubernetes 클라이언트 (버전 9.0.0) 변경 삭제 네임 스페이스는 API를 현재 중단 **mssqlctl**합니다. 이 새로운 Kubernetes python 클라이언트가 설치 되어 있는 경우에 발생 합니다. 직접 사용 하 여 클러스터를 삭제 하 여이 문제를 해결할 수 있습니다 **kubectl** (`kubectl delete ns <ClusterName>`)를 사용 하 여 이전 버전을 설치할 수 있습니다 또는 `sudo pip install kubernetes==8.0.1`합니다.
+
 #### <a id="externaltablesctp24"></a> 외부 테이블
 
 - 빅 데이터 클러스터 배포에서는 더 이상 합니다 **SqlDataPool** 하 고 **SqlStoragePool** 외부 데이터 원본입니다. 이러한 데이터 원본은 데이터 풀 및 저장소 풀 데이터 가상화를 지원 하도록 수동으로 만들 수 있습니다.
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
@@ -137,9 +162,9 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
 
 다음 섹션에서는 새로운 기능 및 SQL Server 2019 CTP 2.3에서 빅 데이터 클러스터에 대해 알려진된 문제를 설명합니다.
 
-### <a name="new-features"></a>새로운 기능
+### <a name="whats-new"></a>What's New
 
-| 새로운 기능 | 설명 |
+| 새로운 기능 또는 업데이트 | 설명 |
 | :---------- | :------ |
 | IntelliJ에서 빅 데이터 클러스터에서 Spark 작업을 제출 합니다. | [IntelliJ에서 SQL Server 빅 데이터 클러스터에서 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
 | 응용 프로그램 배포 및 클러스터 관리에 대 한 일반 CLI입니다. | [SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법](big-data-cluster-create-apps.md) |

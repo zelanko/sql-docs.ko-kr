@@ -18,12 +18,12 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692251"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528915"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server_name=** ] **'***server***'**  
- 사용할 수 있는 대상 서버에서 제거할 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
+`[ @server_name = ] 'server'` 사용 가능한 대상 서버를 제거할 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
- 대상 서버의 다운로드 목록을 지울 것인지 여부를 지정합니다. *clear_downloadlist* 형식인 **bit**, 기본값은 **1**합니다. 때 *clear_downloadlist* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 서버의 다운로드 목록을 지웁니다. 때 *clear_downloadlist* 됩니다 **0**, 다운로드 목록이 지워지지 않습니다.  
+`[ @clear_downloadlist = ] clear_downloadlist` 대상 서버의 다운로드 목록을 지울 것인지 지정 합니다. *clear_downloadlist* 형식인 **bit**, 기본값은 **1**합니다. 때 *clear_downloadlist* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 서버의 다운로드 목록을 지웁니다. 때 *clear_downloadlist* 됩니다 **0**, 다운로드 목록이 지워지지 않습니다.  
   
- [  **@post_defection=** ] *post_defection*  
- 제거 명령을 대상 서버에 게시할 것인지 여부를 지정합니다. *post_defection* 형식인 **비트**, 기본값은 1입니다. 때 *post_defection* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 제거 명령을 대상 서버에 게시 합니다. 때 *post_defection* 됩니다 **0**, 절차 제거 명령을 대상 서버에 게시 하지 않습니다.  
+`[ @post_defection = ] post_defection` 제거 명령을 대상 서버에 게시할 것인지 여부를 지정 합니다. *post_defection* 형식인 **비트**, 기본값은 1입니다. 때 *post_defection* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 제거 명령을 대상 서버에 게시 합니다. 때 *post_defection* 됩니다 **0**, 절차 제거 명령을 대상 서버에 게시 하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

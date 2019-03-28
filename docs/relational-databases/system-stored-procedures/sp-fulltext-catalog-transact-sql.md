@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97a1f480b360270d803c502dd40a6e1653b3935
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526445"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- 전체 텍스트 카탈로그의 이름입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 됩니다 **sysname**합니다.  
+`[ @ftcat = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름이입니다. 카탈로그 이름은 각 데이터베이스에 대해 고유해야 합니다. *fulltext_catalog_name* 됩니다 **sysname**합니다.  
   
- [  **@action=**] **'***동작***'**  
- 수행할 동작입니다. *동작* 됩니다 **varchar(20)"**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작이입니다. *동작* 됩니다 **varchar(20)"**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 > [!NOTE]  
 >  필요에 따라 전체 텍스트 카탈로그를 만들고 삭제하고 수정할 수 있습니다. 그러나 동시에 여러 카탈로그에서 스키마를 변경하지 마십시오. 사용 하 여 이러한 작업을 수행할 수 있습니다 합니다 **sp_fulltext_table** 저장 프로시저는 것이 좋습니다.  
@@ -64,8 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**중지**|에 대 한 인덱스 채우기를 중지 *fulltext_catalog_name*합니다. 카탈로그가 없을 경우에는 오류가 표시됩니다. 채우기가 이미 중단된 경우에는 경고가 표시되지 않습니다.|  
 |**Rebuild**|다시 작성 *fulltext_catalog_name*합니다. 카탈로그를 다시 작성하면 기존 카탈로그가 삭제되고 새 카탈로그가 해당 위치에 만들어집니다. 전체 텍스트 인덱싱 참조가 있는 모든 테이블은 새 카탈로그와 연결됩니다. 카탈로그를 다시 작성하면 데이터베이스 시스템 테이블의 전체 텍스트 메타데이터가 설정됩니다.<br /><br /> 변경 추적이 해제되어 있으면 새로 만들어진 전체 텍스트 카탈로그가 다시 채워지지도 않습니다. 이 경우 다시 채우려면 실행 **sp_fulltext_catalog** 사용 하 여는 **start_full** 하거나 **start_incremental** 작업 합니다.|  
   
- [ **@path=**] **'***root_directory***'**  
- 루트 디렉터리 (없습니다 전체 물리적 경로)에 대 한는 **만들** 작업 합니다. *root_directory* 됩니다 **nvarchar(100)** 있고 기본값은 NULL 이며이 설치 시 지정한 기본 위치를 사용 합니다. 이 Mssql 디렉터리의 Ftdata 하위 디렉터리 예를 들어, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData 합니다. 지정된 루트 디렉터리는 반드시 같은 컴퓨터의 드라이브에 있어야 하며 드라이브 문자 및 다른 문자로 구성되어야 하고 상대 경로가 될 수 없습니다. 네트워크 드라이브, 이동식 드라이브, 플로피 디스크 및 UNC 경로는 지원하지 않습니다. 전체 텍스트 카탈로그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 로컬 하드 드라이브에 만들어야 합니다.  
+`[ @path = ] 'root_directory'` 루트 디렉터리 (없습니다 전체 물리적 경로)에 대 한는 **만들** 작업 합니다. *root_directory* 됩니다 **nvarchar(100)** 있고 기본값은 NULL 이며이 설치 시 지정한 기본 위치를 사용 합니다. 이 Mssql 디렉터리의 Ftdata 하위 디렉터리 예를 들어, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData 합니다. 지정된 루트 디렉터리는 반드시 같은 컴퓨터의 드라이브에 있어야 하며 드라이브 문자 및 다른 문자로 구성되어야 하고 상대 경로가 될 수 없습니다. 네트워크 드라이브, 이동식 드라이브, 플로피 디스크 및 UNC 경로는 지원하지 않습니다. 전체 텍스트 카탈로그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 로컬 하드 드라이브에 만들어야 합니다.  
   
  **@path** 유효한 경우에 *동작* 됩니다 **만들기**합니다. 이외의 작업에 대 한 **만듭니다** (**중지**를 **다시 작성**등), **@path** 생략 하거나 NULL 이어야 합니다.  
   

@@ -13,12 +13,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b18834a7ac8c4eb45ba76001a45a7f5bbaa020c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386221"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526335"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   XML 태스크의 `ValidationDetails` 속성을 사용하도록 설정하여 XML 문서의 유효성을 검사하고 풍부한 오류 출력을 가져올 수 있습니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "58386221"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Transact-SQL 쿼리를 통해 XML 유효성 검사 출력 분석  
  XML 유효성 검사의 출력에 오류가 많이 포함되어 있으면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 출력을 로드할 수 있습니다. 그런 다음 WHERE, GROUP BY, ORDER BY, JOIN 등을 비롯한 T-SQL 언어의 모든 기능을 사용하여 오류 목록을 분석할 수 있습니다.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

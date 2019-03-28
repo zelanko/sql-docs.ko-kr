@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: ''
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a3437e5f7081aa47cb33e33546a79aca0b100309
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509700"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>실행 패드 서비스와 SQL Server의 외부 스크립트 실행을 사용 하 여 일반적인 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,9 +178,9 @@ EXEC sp_execute_external_script @language = N'R',
 
 *STDOUT message(s) from external script:*
 
-*[1] "c:\\프로그램 파일\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
+*[1] "C:\\Program Files\\Microsoft SQL Server\\MSSQL13.SQL2016\\R_SERVICES"*
 
-*[1] "c: / Program Files/Microsoft SQL Server/MSSQL13. 라이브러리 "SQL2016/R_SERVICES*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 문제를 해결 하려면 SQL Server 인스턴스 라이브러리에 패키지 다시 설치 해야 합니다.
 

@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649031"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529224"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,11 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name=** ] **'**_모듈\_이름_**'**  
- 저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 됩니다 **nvarchar**, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
+`[ @name = ] 'module\_name'` 저장된 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거 이름이입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 됩니다 **nvarchar**, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
- [ **하십시오** @**네임 스페이스** =] **'** \<클래스 > **'**  
- 지정된 모듈의 클래스입니다. 때 *module_name* 이 DDL 트리거인 경우 \<클래스 >가 필요 합니다. *\<클래스 >* 됩니다 **nvarchar**(20). 잘못된 입력:  
+`[ , @namespace = ] ' \<class> '` 지정된 된 모듈의 클래스가입니다. 때 *module_name* 이 DDL 트리거인 경우 \<클래스 >가 필요 합니다. *\<클래스 >* 됩니다 **nvarchar**(20). 잘못된 입력:  
   
 |||  
 |-|-|  

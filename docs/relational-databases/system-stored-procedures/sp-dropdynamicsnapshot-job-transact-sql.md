@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126263"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526385"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 필터링된 데이터 스냅숏 작업을 제거할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 필터링 된 데이터 스냅숏 작업을 제거할 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
- 제거할 필터링된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*은 sysname 이며 제공 된 기본값이 없는 경우 작업은 연결 된 이름 *dynamic_snapshot_jobid*합니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` 필터링 된 데이터 스냅숏 작업의 이름을 제거할 수 있습니다. *dynamic_snapshot_jobname*은 sysname 이며 제공 된 기본값이 없는 경우 작업은 연결 된 이름 *dynamic_snapshot_jobid*합니다.  
   
- [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
- 제거할 필터링된 데이터 스냅숏 작업에 대한 식별자입니다. *dynamic_snapshot_jobid*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 제거 된 필터링 된 데이터 스냅숏 작업에 대 한 식별자. *dynamic_snapshot_jobid*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  만 *dynamic_snapshot_jobid*하거나 *dynamic_snapshot_jobname* 지정할 수 있습니다. 에 대 한 값을 제공 하지 않는 경우 *dynamic_snapshot_jobid*하거나 *dynamic_snapshot_jobname*, 게시에 대 한 모든 동적 스냅숏 작업이 제거 됩니다.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 태스크를 정리하지 않고 동적 스냅숏 동작을 삭제하는 데 사용할 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 태스크를 정리하지 않고 동적 스냅숏 동작을 삭제하는 데 사용할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

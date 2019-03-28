@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645472"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510760"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대 한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -361,7 +361,7 @@ Resume-일치 하는 모델에 대 한 외부 스크립트 사용 하 여 과도
 
 + [SQL Server의 NUMA 지원 방법](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>SQL Server 최적화에 알아봅니다
 

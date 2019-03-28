@@ -18,12 +18,12 @@ ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78c6a92d11cc192e2b0643c264352adcfb30d759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715161"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526675"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +46,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_name=** ] **'***job_name***'**  
- 시작할 작업의 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 시작 작업의 이름입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@job_id=** ] *job_id*  
- 시작할 작업의 ID입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 시작 작업의 id. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@error_flag=** ] *error_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- 작업을 시작할 대상 서버입니다. *server_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. *server_name* 작업은 현재 대상으로 하는 대상 서버 중 하나 여야 합니다.  
+`[ @server_name = ] 'server_name'` 대상 서버의 작업을 시작 합니다. *server_name* 은 **nvarchar (128)**, 기본값은 NULL입니다. *server_name* 작업은 현재 대상으로 하는 대상 서버 중 하나 여야 합니다.  
   
- [ **@step_name=** ] **'***step_name***'**  
- 작업 실행을 시작할 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여  
+`[ @step_name = ] 'step_name'` 작업 실행을 시작 하는 단계의 이름입니다. 로컬 로그에만 적용됩니다. *step_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여  
   
- [ **@output_flag=** ] *output_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -101,7 +95,7 @@ GO
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce8549b95348085699694c17027c2dd393f5b1f5
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169183"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526485"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_name** =] **'**_프로필\_이름_**'**  
- 새 프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @profile_name = ] 'profile\_name'` 새 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@description** =] **'**_설명을_**'**  
- 새 프로필에 대한 선택적 설명입니다. *설명을* 됩니다 **nvarchar(256)**, 기본값은 없습니다.  
+`[ @description = ] 'description'` 새 프로필에 대 한 선택적 설명입니다. *설명을* 됩니다 **nvarchar(256)**, 기본값은 없습니다.  
   
- [ **@profile_id** =] _새\_프로필\_id_**출력**  
- 새 프로필의 ID를 반환합니다. *new_profile_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @profile_id = ] _new\_profile\_idOUTPUT` 새 프로필의 ID를 반환합니다. *new_profile_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb2671083b62034d4227f232bc062ce46138a3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526285"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@dbname=** ] **'**_database_**'**  
- 제거할 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @dbname = ] 'database'` 제거할 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@dropdev=** ] **'**_dropdev_**'**  
- 이전 버전과의 호환성을 위해서만 제공되며 현재는 무시되는 플래그입니다. *dropdev* 기본값이 **dropdev**합니다.  
+`[ @dropdev = ] 'dropdev'` 이전 버전과 호환성을 위해서만 제공 하는 플래그 이며 현재는 무시 됩니다. *dropdev* 기본값이 **dropdev**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

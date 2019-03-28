@@ -1,5 +1,5 @@
 ---
-title: '예: PATH 모드 사용 | Microsoft Docs'
+title: 예를 들면 다음과 같습니다. PATH 모드 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526666"
 ---
-# <a name="examples-using-path-mode"></a>예: PATH 모드 사용
+# <a name="examples-using-path-mode"></a>예를 들면 다음과 같습니다. PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>간단한 PATH 모드 쿼리 지정  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 다음은 결과의 일부입니다. 쿼리에서 ManuInstr을 열 이름으로 지정하므로 `query()` 메서드가 반환한 XML이 다음과 같이 <`ManuInstr`> 태그에 래핑됩니다.  
+ 다음은 결과의 일부입니다. XML 반환한 쿼리 ManuInstr을 열 이름으로 지정 합니다 `query()` 메서드 래핑됩니다를 <`ManuInstr`> 다음에 표시 된 대로 태그:  
   
  `<Root>`  
   
@@ -464,7 +464,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [FOR XML에서 PATH 모드 사용](use-path-mode-with-for-xml.md)  
   
   

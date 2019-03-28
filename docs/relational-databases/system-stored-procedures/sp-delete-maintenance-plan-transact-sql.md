@@ -18,12 +18,12 @@ ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7efdd66d1e9087e14faa33a6ca16ccde8a0a40ba
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 9952e41f51e20f2dffa037bc98b5007b111d32c9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528275"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_id =**] **'**_계획\_id_**'**  
- 삭제할 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @plan_id = ] 'plan\_id'` 삭제할 유지 관리 계획의 ID를 지정 합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

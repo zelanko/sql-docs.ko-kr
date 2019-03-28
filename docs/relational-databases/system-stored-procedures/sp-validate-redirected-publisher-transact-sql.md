@@ -16,12 +16,12 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47bf5c0ada106a11bdef72debf401de0640ff11f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818925"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527305"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ ms.locfileid: "52818925"
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@original_publisher** =] **'***original_publisher***'**  
- 원래 데이터베이스를 게시한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다. *original_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'` 인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 원래 데이터베이스를 게시 합니다. *original_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시할 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- 리디렉션 대상입니다를 지정 하는 경우 **sp_redirect_publisher** 게시자/데이터베이스 쌍에 대해 호출 되었습니다. *redirected_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @redirected_publisher = ] 'redirected_publisher'` 리디렉션 대상입니다를 지정 하는 경우 **sp_redirect_publisher** 게시자/데이터베이스 쌍에 대해 호출 되었습니다. *redirected_publisher* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -66,7 +63,7 @@ ms.locfileid: "52818925"
 ## <a name="permissions"></a>사용 권한  
  호출자 여야의 멤버는 **sysadmin** 고정 서버 역할을 **db_owner** 정의 된 게시에 대 한 게시 액세스 목록의 멤버 또는 배포 데이터베이스에 대 한 고정된 데이터베이스 역할 게시자 데이터베이스를 사용 하 여 연결 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   

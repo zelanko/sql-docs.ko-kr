@@ -12,12 +12,12 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8980d8957a711913b938018097bdcdc174456703
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cc50fea28b1dbc3407b86e3af5573f64202e8f26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132193"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526795"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48132193"
   
 11. 쿼리 편집기에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 입력합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  

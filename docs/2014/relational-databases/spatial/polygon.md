@@ -12,14 +12,14 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65ee65f4185f9045a4ac75e4c058030d2d02fed6
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6ef33d1331621b248295327a6e6fd266b8dd6242
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018888"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526885"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>다각형
   `Polygon`은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.  
   
 ## <a name="polygon-instances"></a>Polygon 인스턴스  
@@ -64,7 +64,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- `@g4` 및 `@g5`가 보여 주듯이 허용된 `Polygon` 인스턴스는 유효한 `Polygon` 인스턴스가 아닐 수 있습니다. `@g5`도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
+ `@g4` 및 `@g5`가 보여 주듯이 허용된 `Polygon` 인스턴스는 유효한 `Polygon` 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
   
  다음 예에서는 `Polygon` 인스턴스가 허용되지 않으므로 `System.FormatException`이 발생합니다.  
   
@@ -91,7 +91,7 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- 두 내부 링이 단일 점에서 접하고 서로 교차하지 않기 때문에 `@g3`이 유효합니다. 다음 예에서는 유효하지 않은 `Polygon` 인스턴스를 보여 줍니다.  
+ `@g3` 이 유효합니다. 다음 예에서는 유효하지 않은 `Polygon` 인스턴스를 보여 줍니다.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -135,7 +135,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  다음은 유효하지 않은 인스턴스를 유효한 geometry 인스턴스로 변환하는 다른 예입니다. 다음 예에서는 정확하게 서로 동일한 점 세 개를 사용하여 `Polygon` 인스턴스를 만들었습니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  

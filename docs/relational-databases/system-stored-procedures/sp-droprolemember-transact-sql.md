@@ -18,12 +18,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a279a57e014675cc86f72f79ce602bec1bebb1f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d01ad425d42c45b1e265fe25345b2d34ca8b4d7f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756681"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526115"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,11 +52,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'***역할***'**  
- 멤버를 제거할 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @rolename = ] 'role'` 멤버를 제거 하는 데 사용 되는 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@membername =** ] **'***security_account***'**  
- 역할에서 제거될 보안 계정의 이름입니다. *security_account* 됩니다 **sysname**, 기본값은 없습니다. *security_account* 데이터베이스 사용자, 다른 데이터베이스 역할, Windows 로그인 또는 Windows 그룹 일 수 있습니다. *security_account* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @membername = ] 'security_account'` 보안 계정 이름의 역할에서 제거 됩니다. *security_account* 됩니다 **sysname**, 기본값은 없습니다. *security_account* 데이터베이스 사용자, 다른 데이터베이스 역할, Windows 로그인 또는 Windows 그룹 일 수 있습니다. *security_account* 현재 데이터베이스에 존재 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

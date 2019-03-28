@@ -16,12 +16,12 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88cf393ac488f6e6f4c078b9bd346a3e6cb53204
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526215"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 게시에 대한 ID 범위만 복원됩니다.  
   
- [ **@article** =] **'***문서***'**  
- 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 **모든**합니다. 지정한 경우 해당 아티클에 대한 ID 범위만 복원됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
