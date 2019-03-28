@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07db329a7ba6cb65e5beb94d34f90d1e55582915
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bab64e8a33baae2c87e8068a1e4d23799742b55c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367785"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536275"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 보기
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 각 멤버 노드에 대한 NodeWeight 설정을 보는 방법에 대해 설명합니다. NodeWeight 설정은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 재해 복구 및 다중 서브넷 시나리오를 지원하기 위한 쿼럼 투표 동안 사용됩니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "53367785"
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예제에서는 시스템 뷰를 쿼리하여 해당 인스턴스의 클러스터에 있는 모든 노드에 대한 값을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  

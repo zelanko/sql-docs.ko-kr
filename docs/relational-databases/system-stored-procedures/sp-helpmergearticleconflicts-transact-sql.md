@@ -16,12 +16,12 @@ ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56d221f51a492de7cc85af158fa6f60f589fdf31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806445"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534035"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 병합 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 충돌이 있는 데이터베이스의 모든 문서를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 병합 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 충돌이 있는 데이터베이스의 모든 문서를 반환 하는 합니다.  
   
- [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -71,7 +68,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpmergearticleconflicts**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

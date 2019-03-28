@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100358"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532885"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 작업 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-> **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+> [!NOTE]
+> 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.
+
+`[ @schedule_name = ] 'schedule_name'` 작업에 대 한 일정 항목의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- 작업에 대한 일정 항목의 이름입니다. *schedule_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에 대 한 일정 항목의 id. *schedule_id*됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@schedule_id=** ] *schedule_id*  
- 작업에 대한 일정 항목의 ID입니다. *schedule_id*됩니다 **int**, 기본값은 NULL입니다.  
-  
- [ **@include_description=** ] *include_description*  
- 결과 집합에 일정에 대한 설명을 포함할지 여부를 지정합니다. *include_description* 됩니다 **비트**, 기본값은 **0**합니다. 때 *include_description* 됩니다 **0**는 일정 설명이 결과 집합에 포함 되지 않습니다. 때 *include_description* 됩니다 **1**에 일정 설명이 결과 집합에 포함 됩니다.  
+`[ @include_description = ] include_description` 결과 집합의 일정에 대 한 설명을 포함할지 여부를 지정 합니다. *include_description* 됩니다 **비트**, 기본값은 **0**합니다. 때 *include_description* 됩니다 **0**는 일정 설명이 결과 집합에 포함 되지 않습니다. 때 *include_description* 됩니다 **1**에 일정 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -71,7 +67,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_id**|**int**|일정 ID입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
 |**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377903"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536695"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
   메모리 최적화 테이블을 만들 때 `BUCKET_COUNT` 매개 변수 값을 지정해야 합니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377903"
 ### <a name="primary-key-and-unique-indexes"></a>기본 키 및 고유 인덱스  
  기본 키 인덱스는 고유하므로 키의 고유 값 수가 테이블에 있는 행 수에 해당합니다. 예를 들어, AdventureWorks 데이터베이스의 Sales.SalesOrderDetail 테이블에 있는 (SalesOrderID, SalesOrderDetailID)에 대한 기본 키의 경우 다음 쿼리를 실행하여 테이블의 행 수에 해당하는 고유한 기본 키 값 수를 계산합니다.  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>고유하지 않은 인덱스  
  다른 인덱스, 예를 들어 (SpecialOfferID, ProductID)에 대한 다중 열 인덱스의 경우 다음 쿼리를 발행하여 고유한 인덱스 키 값 수를 확인합니다.  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>버킷 수 문제 해결  
  메모리 최적화 테이블의 버킷 수 문제를 해결 하려면 사용 하 여 [sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) 빈 버킷와 행 체인 길이 대 한 통계를 얻을 수 있습니다. 다음 쿼리는 현재 데이터베이스의 모든 해시 인덱스에 대한 통계를 가져오는 데 사용할 수 있습니다. 데이터베이스에 큰 테이블이 있는 경우 이 쿼리를 실행하는 데 몇 분 정도 걸릴 수 있습니다.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  예를 들어, 다음 테이블 및 스크립트를 고려하여 테이블에 샘플 행을 삽입합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a24007abad9148a02da3542587967ae9dcc63f16
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022985"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535654"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- [ **@masking_mode=** ] *masking_mode*  
- 투명 한 데이터 암호화 로그 사용자 데이터 마스킹 사용 되는지 여부를 결정 합니다. *masking_mode* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @masking_mode = ] masking_mode` 투명 한 데이터 암호화 로그 사용자 데이터 마스킹 사용 되는지 여부를 결정 합니다. *masking_mode* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 -   0 = 사용 안 함, 사용자 데이터에 표시 된 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그.  
   

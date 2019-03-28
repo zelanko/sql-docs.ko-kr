@@ -18,12 +18,12 @@ ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c73ad5d550244306d2672120cfa32c9a3ed37bf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59a58e143809848640db7d92d912e3eac619d0b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755771"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533525"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@group_name=** ] **'***group_name***'**  
- 그룹의 이름입니다. *group_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @group_name = ] 'group_name'` 그룹의 이름입니다. *group_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@server_name=** ] **'***server_name***'**  
- 지정된 그룹에서 제거할 서버의 이름입니다. *server_name* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
+`[ @server_name = ] 'server_name'` 지정된 된 그룹에서 제거할 서버의 이름입니다. *server_name* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

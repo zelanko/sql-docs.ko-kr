@@ -11,12 +11,12 @@ ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355331"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534075"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>7단원: Microsoft Azure Storage에 데이터 파일 이동
   이 단원에서는 Microsoft Azure Storage로 데이터 파일을 이동하는 방법을 배웁니다(SQL Server 인스턴스로는 이동하지 않음). 이 단원을 수행하기 위해 4, 5, 6단원을 완료할 필요는 없습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "53355331"
   
 1.  먼저 원본 컴퓨터에서 테스트 데이터베이스를 만들고 일부 데이터를 추가합니다.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,7 +53,7 @@ ms.locfileid: "53355331"
   
 2.  다음 코드를 실행합니다.  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
     -- the new location of the file in Windows Azure Storage container.   
@@ -68,7 +68,7 @@ ms.locfileid: "53355331"
   
 4.  데이터베이스를 오프라인으로 설정합니다.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
@@ -81,7 +81,7 @@ ms.locfileid: "53355331"
   
 6.  데이터베이스를 온라인으로 설정합니다.  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  

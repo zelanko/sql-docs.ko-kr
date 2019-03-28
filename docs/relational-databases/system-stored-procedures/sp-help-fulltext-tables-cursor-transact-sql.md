@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87566a816638e38e9adbf4e2dd6ebfef1f741e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d43903af7a4626c7d9645e1b750696b15cc692ec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534575"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,14 +46,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@cursor_return=** ] *@cursor_variable* 출력  
- 유형의 출력 변수 **커서**합니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 유형의 출력 변수 **커서**합니다. 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
- [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- 전체 텍스트 카탈로그의 이름입니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *fulltext_catalog_name* 이 생략 되거나 NULL 이면 데이터베이스에 연결 된 모든 전체 텍스트 인덱싱된 테이블 반환 됩니다. 하는 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 이 생략 되거나 NULL이이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블 전체 텍스트 인덱스 정보가 검색 됩니다. 둘 다 *fulltext_catalog_name* 하 고 *table_name* 를 지정 하는 경우 행이 반환 됩니다 *table_name* 연관 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` 전체 텍스트 카탈로그의 이름이입니다. *fulltext_catalog_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *fulltext_catalog_name* 이 생략 되거나 NULL 이면 데이터베이스에 연결 된 모든 전체 텍스트 인덱싱된 테이블 반환 됩니다. 하는 경우 *fulltext_catalog_name* 를 지정 하지만 *table_name* 이 생략 되거나 NULL이이 카탈로그와 연결 된 모든 전체 텍스트 인덱싱된 테이블 전체 텍스트 인덱스 정보가 검색 됩니다. 둘 다 *fulltext_catalog_name* 하 고 *table_name* 를 지정 하는 경우 행이 반환 됩니다 *table_name* 연관 된 *fulltext_catalog_name*; 그렇지 않으면 오류가 발생 합니다.  
   
- [ **@table_name=**] **'***table_name***'**  
- 전체 텍스트 메타데이터를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
+`[ @table_name = ] 'table_name'` 전체 텍스트 메타 데이터를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 경우에 *table_name* 지정 된 경우와 관련 된 행만 *table_name* 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

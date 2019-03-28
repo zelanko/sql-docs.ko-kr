@@ -18,12 +18,12 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b27da09e0e57029b65c21110a93de46ed0d81a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783971"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532115"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name =** ] **'***name***'**  
- 구성할 설정의 이름입니다. *이름을* 됩니다 **sysname**고, 필요 하며, NULL 또는 빈 문자열일 수 없습니다.  
+`[ @name = ] 'name'` 구성 하려는 설정의 이름이입니다. *이름을* 됩니다 **sysname**고, 필요 하며, NULL 또는 빈 문자열일 수 없습니다.  
   
  *이름* 다음 값 중 하나일 수 있습니다.  
   
@@ -52,8 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - 정책 기반 관리에서 성공한 정책 평가를 로깅할지 여부를 지정합니다.  
   
- [  **@value =** ] *값*  
- 지정 된 값과 연결 된 값인 *이름을*입니다. *값* 됩니다 **sql_variant**, 이며 반드시 지정 해야 합니다.  
+`[ @value = ] value` 지정 된 값과 연결 된 값인 *이름을*입니다. *값* 됩니다 **sql_variant**, 이며 반드시 지정 해야 합니다.  
   
 -   에 대 한 'Enabled'를 지정 하는 경우 *이름을*, 다음 값 중 하나를 사용할 수 있습니다.  
   
@@ -81,7 +79,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 정책 기반 관리를 사용하도록 설정합니다.  

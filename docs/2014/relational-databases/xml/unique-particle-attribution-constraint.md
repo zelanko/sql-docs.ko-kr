@@ -14,15 +14,15 @@ helpviewer_keywords:
 - UPA constraint rule
 - unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e38ceb561c2b0d66cbf274e09d61fc327d8543f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372605"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538524"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
   XSD에서 복잡한 콘텐츠 모델은 UPA(Unique Particle Attribution) 제약 조건 규칙에 의해 제한됩니다. 이 규칙에서는 항목 문서의 각 요소가 해당 부모 콘텐츠 모델에 있는 정확히 하나의 `<xsd:element>` 또는 `<xsd:any>` 파티클과 분명하게 일치해야 합니다. 잠재적으로 모호한 콘텐츠 모델이 있는 유형이 포함되는 스키마는 모두 거부됩니다.  

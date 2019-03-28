@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154723"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536675"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일
   메모리 내 OLTP에서는 네이티브 컴파일이라는 개념이 도입됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 액세스하는 저장 프로시저를 고유하게 컴파일할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 기본적으로 메모리 최적화 테이블을 컴파일할 수도 있습니다. 네이티브 컴파일을 사용하면 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다 빠르게 데이터에 액세스할 수 있으며 더 효율적으로 쿼리를 실행할 수 있습니다. 테이블과 저장 프로시저의 네이티브 컴파일은 DLL을 생성합니다.  
   
- 메모리 액세스에 최적화된 테이블 형식의 네이티브 컴파일도 지원됩니다. 자세한 내용은 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)합니다.  
+ 메모리 액세스에 최적화된 테이블 형식의 네이티브 컴파일도 지원됩니다. 자세한 내용은 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)를 참조하세요.  
   
  네이티브 컴파일은 추가로 컴파일하거나 해석할 필요 없이 프로세서 명령으로 구성된 네이티브 코드로 프로그래밍 구문을 변환하는 프로세스를 말합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154723"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>메모리 내 OLTP DLL의 유지 관리  
  다음 쿼리에서는 서버의 메모리에 현재 로드된 모든 테이블 및 저장 프로시저 DLL을 보여 줍니다.  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  다음 예제 스크립트에서는 데이터베이스와 메모리 최적화 테이블을 만듭니다.  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  다음 예제 저장 프로시저에서는 이전 예제의 테이블 t1에 행을 삽입합니다.  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  

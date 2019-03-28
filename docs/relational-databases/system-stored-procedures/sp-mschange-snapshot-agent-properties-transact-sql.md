@@ -16,12 +16,12 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a4c8eb45ad7864466ccedc3de5b034325279322
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589757"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537316"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** =] **'**_게시자_**'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication =** ] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@frequency_type =** ] *frequency_type*  
- 스냅숏 에이전트가 실행되는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 스냅숏 에이전트가 실행 되는 빈도. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -79,11 +75,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|매월(frequency_interval에 상대적임)|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- 설정 된 빈도에 적용 하려면 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 없습니다.  
+`[ @frequency_interval = ] frequency_interval` 설정 된 빈도에 적용 하려면 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- 단위입니다 *freq_subday_interval*합니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 단위입니다 *freq_subday_interval*합니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -92,53 +86,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 없습니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- 스냅숏 에이전트가 실행되는 날짜입니다. *frequency_relative_interval* 됩니다 **int**, 기본값은 없습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 스냅숏 에이전트가 실행 될 날짜가입니다. *frequency_relative_interval* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 없습니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 없습니다.  
   
- [ **@active_start_date =** ] *active_start_date*  
- 스냅숏 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 됩니다 **int**, 기본값은 없습니다.  
+`[ @active_start_date = ] active_start_date` 가 경우 스냅숏 에이전트 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로 합니다. *active_start_date* 됩니다 **int**, 기본값은 없습니다.  
   
- [ **@active_end_date =** ] *active_end_date*  
- 스냅숏 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 됩니다 **int**, 기본값은 없습니다.  
+`[ @active_end_date = ] active_end_date` 날짜에서 스냅숏 에이전트가 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 하루 중 스냅숏 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 없습니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 스냅숏 에이전트가 처음 하루 중 시간 예약 된 hhmmss입니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 하루 중 스냅숏 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 없습니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 하루 중 스냅숏 에이전트에 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- 기존 작업이 사용되는 경우 기존 스냅숏 에이전트 작업의 이름입니다. *snapshot_agent_name* 됩니다 **nvarchar(100)**, 기본값은 없습니다.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` 기존 작업을 사용 하는 경우 기존 스냅숏 에이전트 작업의 이름이입니다. *snapshot_agent_name* 됩니다 **nvarchar(100)**, 기본값은 없습니다.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- 게시자에 연결할 때 에이전트가 사용하는 보안 모드입니다. *publisher_security_mode* 됩니다 **int**, 기본값은 없습니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 를 지정 해야 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` 보안 모드는 에이전트에서 게시자에 연결할 때. *publisher_security_mode* 됩니다 **int**, 기본값은 없습니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 를 지정 해야 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- 게시자에 연결할 때 사용하는 로그인입니다. *publisher_login* 됩니다 **sysname**, 기본값은 없습니다. *publisher_login* 시기를 지정 해야 합니다 *publisher_security_mode* 됩니다 **0**합니다. 하는 경우 *publisher_login* 이 NULL이 고 게시자 *_ * * security_mode* 됩니다 **1**에 지정 된 Windows 계정이 *job_login* 됩니다 게시자에 연결할 때 사용 합니다.  
+`[ @publisher_login = ] 'publisher_login'` 로그인에 게시자에 연결할 때 사용 됩니다. *publisher_login* 됩니다 **sysname**, 기본값은 없습니다. *publisher_login* 시기를 지정 해야 합니다 *publisher_security_mode* 됩니다 **0**합니다. 하는 경우 *publisher_login* 이 NULL이 고 게시자 *_ * * security_mode* 됩니다 **1**에 지정 된 Windows 계정이 *job_login* 됩니다 게시자에 연결할 때 사용 합니다.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- 게시자에 연결할 때 사용하는 암호입니다. *publisher_password* 됩니다 **nvarchar(524)**, 기본값은 없습니다.  
+`[ @publisher_password = ] 'publisher_password'` 게시자에 연결할 때 암호가 사용 됩니다. *publisher_password* 됩니다 **nvarchar(524)**, 기본값은 없습니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
- [ **@job_login**=] **'**_job_login_**'**  
- 에이전트 실행에 사용되는 Windows 계정의 로그인입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
   
- [ **@job_password**=] **'**_job_password_**'**  
- 에이전트 실행에 사용되는 Windows 계정의 암호입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
+`[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 게시자가 실행되고 있지 않을 때 게시자 유형을 지정합니다. *publisher_type* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @publisher_type = ] 'publisher_type'` 게시자 인스턴스에서 실행 중이지 않을 때 게시자 유형을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *publisher_type* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

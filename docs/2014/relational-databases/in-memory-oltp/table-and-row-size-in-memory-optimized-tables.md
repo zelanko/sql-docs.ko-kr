@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822537"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530345"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
   메모리 최적화 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 최적화 테이블에서 행은 8,060바이트를 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 알면 컴퓨터 메모리가 충분한지 이해하는 데 도움이 됩니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "52822537"
   
 |섹션|크기|주석|  
 |-------------|----------|--------------|  
-|단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 숫자 (전체 자릿수 < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precision <=18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |전체 형식 열의 오프셋 배열|가능한 값은<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
@@ -130,12 +130,12 @@ ms.locfileid: "52822537"
 |Jane|프라하|  
 |Susan|보고타|  
   
-##  <a name="bkmk_ExampleComputation"></a> 예: 테이블 및 행 크기 계산  
+##  <a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어, 지정된 bucket_count가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  
   
  다음 정의의 Orders 테이블을 살펴보십시오.  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -149,7 +149,7 @@ GO
   
  이 테이블에는 1개의 해시 인덱스와 1개의 비클러스터형 인덱스(기본 키)가 있습니다. 또한 3개의 고정 길이 열과 1개의 가변 길이 열이 포함되며, 이러한 열 중 하나는 Null 허용으로 구성됩니다(OrderDescription). Orders 테이블에 8379 행이 있고 OrderDescription 열의 값의 평균 길이가 78 문자 가정해 보겠습니다.  
   
- 테이블 크기를 결정하려면 먼저 인덱스 크기를 결정해야 합니다. 두 인덱스의 bucket_count는 10000으로 지정되었습니다. 이 숫자는 가장 가까운 2의 제곱인 16384입니다. 따라서 Orders 테이블에서 인덱스의 총 크기는 다음과 같습니다.  
+ 테이블 크기를 결정하려면 먼저 인덱스 크기를 결정해야 합니다. 두 인덱스의 bucket_count는 10000으로 지정되었습니다. 이 숫자는 가장 가까운 2의 제곱인 16384. 따라서 Orders 테이블에서 인덱스의 총 크기는 다음과 같습니다.  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -198,7 +198,7 @@ GO
   
     -   총 패딩은 24 - 22 = 2바이트입니다.  
   
--   고정 길이 전체 형식 열은 없습니다(고정 길이 전체 형식 열: 0입니다.)입니다.  
+-   고정 길이 전체 형식 열은 없습니다(고정 길이 전체 형식 열: 0.).  
   
 -   전체 형식 열의 실제 크기는 2 * 78 = 156입니다. 단일 전체 형식 열 OrderDescription의 형식은 nvarchar입니다.  
   
@@ -217,7 +217,7 @@ GO
   
  이 테이블 및 해당 인덱스에 할당되어 사용되는 실제 메모리는 다음 쿼리를 통해 얻을 수 있습니다.  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

@@ -18,12 +18,12 @@ ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4242494c94518817dd7ba161ddc16e1c47b51952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d7d0098c5548666b1d2fc77e11f82c2c3fd5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659101"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536855"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rmtsrvname=**] **'***rmtsrvname***'**  
- 로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
+`[ @rmtsrvname = ] 'rmtsrvname'` 로그인 매핑이 적용 되는 연결 된 서버의 이름이입니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 대해 정의된 로그인 매핑을 모두 반환합니다.  
   
- [  **@locallogin=**] **'***locallogin***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 됩니다 **sysname**, 기본값은 NULL입니다. NULL에 관한 모든 로그인 매핑 정의 지정 *rmtsrvname* 반환 됩니다. 그렇지 않은 경우 NULL에 대 한 매핑이 *locallogin* 하 *rmtsrvname* 이미 존재 해야 합니다. *locallogin* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
+`[ @locallogin = ] 'locallogin'` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결된 된 서버에 매핑되는 로컬 서버의 로그인 *rmtsrvname*합니다. *locallogin* 됩니다 **sysname**, 기본값은 NULL입니다. NULL에 관한 모든 로그인 매핑 정의 지정 *rmtsrvname* 반환 됩니다. 그렇지 않은 경우 NULL에 대 한 매핑이 *locallogin* 하 *rmtsrvname* 이미 존재 해야 합니다. *locallogin* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. Windows 사용자는 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

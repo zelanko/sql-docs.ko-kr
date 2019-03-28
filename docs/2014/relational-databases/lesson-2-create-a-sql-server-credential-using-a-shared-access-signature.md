@@ -11,12 +11,12 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bb40218b2547f14634c060f2c242318101d0ea7b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529865"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
   이 단원에서는 Windows Azure 스토리지 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "52524918"
   
 4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장할 SQL Server 자격 증명을 만듭니다.  
   
-    ```tsql  
+    ```sql  
   
     USE master  
     CREATE CREDENTIAL credentialname - this name should match the container path and it must start with https.   
@@ -52,7 +52,7 @@ ms.locfileid: "52524918"
   
 5.  사용할 수 있는 모든 자격 증명을 보려면 쿼리 창에서 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT * from sys.credentials  
     ```  
   
@@ -60,6 +60,6 @@ ms.locfileid: "52524918"
   
  **다음 단원:**  
   
- [4 단원: Windows Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
+ [4단원: Windows Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
   
   

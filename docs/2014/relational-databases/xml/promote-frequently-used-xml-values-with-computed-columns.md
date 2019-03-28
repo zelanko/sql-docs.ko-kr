@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd6d8cb39405e525b779678e0b203ca1246e1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065313"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533315"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  

@@ -18,12 +18,12 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4daab0b36ff21fea956c1c5b0db27588cc5acee
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: decba4eca9eb858bae8543ce5f5ed66ad723acca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533795"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_id =**] **'**_계획\_id_**'**  
- 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @plan_id = ] 'plan\_id'` 유지 관리 계획의 ID를 지정 합니다. *plan_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
- [  **@job_id =**] **'**_작업이\_id_**'**  
- 유지 관리 계획과 연관된 작업의 ID를 지정합니다. *job_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
+`[ @job_id = ] 'job\_id'` 유지 관리 계획에 연결 된 작업의 ID를 지정 합니다. *job_id* 됩니다 **uniqueidentifier**, 이며 유효한 ID 여야 합니다  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

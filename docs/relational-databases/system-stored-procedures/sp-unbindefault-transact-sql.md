@@ -18,12 +18,12 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 076e38b453320db831d2d7536d587921920c3924
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534945"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@objname=** ] **'***object_name***'**  
- 바인딩 해제될 기본값이 있는 테이블 및 열의 이름 또는 별칭 데이터 형식입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
+`[ @objname = ] 'object_name'` 기본적으로 연결 되지 않은 별칭 데이터 형식 또는 테이블 열의 이름이입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다.  
   
  별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우 같은 기본값을 가진 이 데이터 형식의 열에 대한 바인딩도 해제됩니다. 기본값을 직접 바인딩한 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 별칭 데이터 형식에서 기본값의 바인딩을 해제하는 경우에만 사용됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 데이터 형식의 기존 열에 지정된 된 기본 손실 되지 않습니다.  
+`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에서 기본값의 바인딩을 해제 하는 경우에 사용 됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 데이터 형식의 기존 열에 지정된 된 기본 손실 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

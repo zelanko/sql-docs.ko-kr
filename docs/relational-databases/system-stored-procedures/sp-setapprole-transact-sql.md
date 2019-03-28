@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168814"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533535"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>인수
 
- [  **@rolename =** ] **'***역할***'**  
- 현재 데이터베이스에 정의된 응용 프로그램 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에 정의 된 응용 프로그램 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@password =** ] **{0} 암호화 N'***암호***'}**  
- 응용 프로그램 역할을 활성화하는 데 필요한 암호입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. *암호* ODBC를 사용 하 여 난독 처리할 수 있습니다 **암호화** 함수입니다. 사용 하는 경우는 **암호화할** 함수 암호는 배치 하 여 유니코드 문자열로 변환할 수 있어야 합니다 **N** 첫 번째 따옴표 앞입니다.  
+`[ @password = ] { encrypt N'password' }` 응용 프로그램 역할을 활성화 하는 데 필요한 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. *암호* ODBC를 사용 하 여 난독 처리할 수 있습니다 **암호화** 함수입니다. 사용 하는 경우는 **암호화할** 함수 암호는 배치 하 여 유니코드 문자열로 변환할 수 있어야 합니다 **N** 첫 번째 따옴표 앞입니다.  
   
  암호화 옵션을 사용 하는 연결이 지원 되지 않습니다 **SqlClient**합니다.  
   
@@ -60,14 +58,12 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt = 'none'**  
  난독 처리가 사용되지 않도록 지정합니다. 암호는 일반 텍스트로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달됩니다. 기본값입니다.  
   
- **@encrypt'odbc' =**  
+ **@encrypt= 'odbc'**  
  ODBC가 암호를 난독 처리는 ODBC를 사용 하 여 지정 **암호화할** 암호를 보내기 전에 함수는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 이 값은 ODBC 클라이언트 또는 SQL Server용 OLE DB 공급자를 사용하는 경우에만 지정할 수 있습니다.  
   
- [  **@fCreateCookie =** ] **true** | **false**  
- 쿠키를 만들지 여부를 지정합니다. **true** 1로 암시적으로 변환 됩니다. **false** 암시적으로 0으로 변환 됩니다.  
+`[ @fCreateCookie = ] true | false` 쿠키를 만들 수 있는지 여부를 지정 합니다. **true** 1로 암시적으로 변환 됩니다. **false** 암시적으로 0으로 변환 됩니다.  
   
- [  **@cookie =** ]  **@cookie 출력**  
- 쿠키를 포함할 출력 매개 변수를 지정합니다. 경우에 쿠키는 생성 된 값 **@fCreateCookie** 은 **true**합니다. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` 쿠키를 포함 하는 출력 매개 변수를 지정 합니다. 경우에 쿠키는 생성 된 값 **@fCreateCookie** 은 **true**합니다. **varbinary(8000)**  
   
 > [!NOTE]  
 > 현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 애플리케이션은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.

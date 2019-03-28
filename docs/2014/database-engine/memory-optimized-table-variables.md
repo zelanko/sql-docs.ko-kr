@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065793"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530745"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
-  또한 (효율적인 데이터 액세스)에 대 한 메모리 최적화 테이블 및 고유 하 게 컴파일된 저장된 프로시저 (에 대 한 효율적인 쿼리 처리 및 비즈니스 논리 실행) [!INCLUDE[hek_2](../includes/hek-2-md.md)] 세 가지 개체가 도입 되었습니다: 메모리 액세스에 최적화 된 테이블 형식입니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  
+  효율적인 데이터 액세스를 위한 메모리 최적화 테이블 및 효율적인 쿼리 처리 및 비즈니스 논리 실행을 위한 고유하게 컴파일된 저장 프로시저 이외에 [!INCLUDE[hek_2](../includes/hek-2-md.md)]은 메모리 최적화 테이블 형식이라는 세 번째 개체를 도입했습니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  
   
  메모리 액세스에 최적화된 테이블 변수는 디스크 기반 테이블 변수에 비해 다음과 같은 이점을 제공합니다.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065793"
   
 -   테이블 변수를 사용하여 고유하게 컴파일된 저장 프로시저에서 커서를 시뮬레이트할 수 있으며, 이를 통해 고유하게 컴파일된 저장 프로시저에서 화면 영역 제한을 해결할 수 있습니다.  
   
- 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 각 메모리 최적화 테이블 형식에 대 한 DLL을 생성 합니다. 컴파일은 메모리 최적화 테이블 형식을 만들 때 호출되고 메모리 최적화 테이블 변수를 만드는 데 사용되는 경우에는 호출되지 않습니다. 이 DLL은 인덱스에 액세스하고 테이블 변수에서 데이터를 검색하는 함수를 포함합니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
+ 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블 형식별로 하나의 DLL을 생성합니다. 컴파일은 메모리 최적화 테이블 형식을 만들 때 호출되고 메모리 최적화 테이블 변수를 만드는 데 사용되는 경우에는 호출되지 않습니다. 이 DLL은 인덱스에 액세스하고 테이블 변수에서 데이터를 검색하는 함수를 포함합니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
   
  다음 샘플 AdventureWorks 기반 메모리 내 OLTP 샘플에서 메모리 최적화 테이블 형식을 보여 줍니다 ([SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   이 형식에 적어도 한 개의 인덱스가 있어야 합니다. 메모리 최적화 테이블과 마찬가지로 해시 및 비클러스터형 인덱스를 사용할 수 있습니다.  
   
-     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [해시 인덱스에 대 한 올바른 버킷 수를 결정](../relational-databases/indexes/indexes.md)합니다.  
+     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
   
 -   메모리 최적화 테이블에 대한 데이터 형식 및 제약 조건 제한은 메모리 최적화 테이블 형식에도 적용됩니다. 예를 들어, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기본 제약 조건은 지원되지만 CHECK 제약 조건은 지원되지 않습니다.  
   
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>테이블 반환 매개 변수  
  다음 예제 스크립트는 메모리 최적화 테이블 형식 `Sales.SalesOrderDetailType_inmem`으로 테이블 변수를 선언하고, 변수에 세 행을 삽입하고, 변수를 `Sales.usp_InsertSalesOrder_inmem`에 TVP로 전달하는 과정을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>#temp 테이블 바꾸기  
  다음 예제에서는 메모리 최적화 테이블 형식 및 테이블 변수를 저장 프로시저에 로컬인 #temp 테이블에 대한 대체 값으로 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>단일 결과 집합 만들기  
  다음 예제에서는 중간 결과를 저장하고 고유하게 컴파일된 저장 프로시저에 있는 여러 쿼리를 기반으로 단일 결과 집합을 만드는 방법을 보여 줍니다. 이 예제는 통합 `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`를 계산합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

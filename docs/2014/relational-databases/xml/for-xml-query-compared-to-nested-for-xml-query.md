@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 491c0a0084e334cabe7b0eb7648b50aed46a3abc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545568"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530582"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
   이 항목에서는 단일 수준 FOR XML 쿼리를 중첩 FOR XML 쿼리와 비교합니다. 중첩 FOR XML 쿼리를 사용할 때의 이점 중 하나는 쿼리 결과에 특성 중심 및 요소 중심의 XML을 조합하여 지정할 수 있다는 점입니다. 다음 예에서는 이러한 이점을 보여 줍니다.  

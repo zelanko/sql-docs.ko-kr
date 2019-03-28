@@ -1,5 +1,5 @@
 ---
-title: sp_who (TRANSACT-SQL) | Microsoft Docs
+title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d748f06a592283c49d85624c97f4db7afdc188e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628961"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536352"
 ---
 # <a name="spwho-transact-sql"></a>sp_who(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame =** ] **'***로그인***'** | *세션 ID* | **'ACTIVE'**  
- 결과 세트를 필터링하는 데 사용됩니다.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` 결과 집합을 필터링 하는 데 사용 됩니다.  
   
  *로그인* 됩니다 **sysname** 특정 로그인에 속하는 프로세스를 식별 하는 합니다.  
   
@@ -61,9 +60,9 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|세션 ID입니다.|  
 |**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3,... *n*} 이며 여기서 0은 항상 주 또는 부모 스레드를 하 고 {1, 2, 3,... *n*} 의미 합니다.|  
-|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **백그라운드**합니다. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
+|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **background**. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
 |**loginame**|**nchar(128)**|특정 프로세스와 연결된 로그인 이름입니다.|  
-|**호스트 이름**|**nchar(128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
+|**hostname**|**nchar(128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
 |**blk**|**char(5)**|프로세스를 차단하기 위한 세션 ID입니다(존재하는 경우). 없는 경우 이 열은 0이 됩니다.<br /><br /> 분리된 분산 트랜잭션이 지정된 세션 ID와 연결된 트랜잭션을 차단하는 경우 이 열은 분리된 트랜잭션을 차단하기 위한 값으로 '-2'를 반환합니다.|  
 |**dbname**|**nchar(128)**|프로세스가 사용하는 데이터베이스입니다.|  
 |**cmd**|**nchar(16)**|프로세스에 대해 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 명령([!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 내부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스 등)입니다.|  

@@ -13,12 +13,12 @@ ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7907a8e1187169c8c7581e3ad5f81eef2dde15b2
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640734"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536605"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>backup compression default 서버 구성 옵션 보기 또는 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 백업 압축 기본값 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다. **백업 압축 기본값** 옵션은 서버 인스턴스가 기본적으로 압축된 백업을 만드는지 여부를 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이(가) 설치되면 **백업 압축 기본값** 옵션이 해제됩니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "52640734"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) 카탈로그 뷰를 쿼리하여 `backup compression default`의 값을 결정합니다. 값이 0이면 백업 압축이 사용되지 않고, 값이 1이면 백업 압축이 사용됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT value   
@@ -104,7 +104,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 기본적으로 압축된 백업을 만들도록 서버 인스턴스를 구성하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_configure 'backup compression default', 1 ;  
@@ -115,7 +115,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 백업 압축 기본값 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 백업 압축 기본값 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

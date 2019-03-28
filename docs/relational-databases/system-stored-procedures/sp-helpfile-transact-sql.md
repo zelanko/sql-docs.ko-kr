@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536305"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@filename =** ] **'***name***'**  
- 현재 데이터베이스에 있는 파일의 논리적 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *이름을* 은 지정 하지 않으면 현재 데이터베이스의 모든 파일의 특성이 반환 됩니다.  
+`[ @filename = ] 'name'` 현재 데이터베이스에 있는 파일의 논리적 이름이입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *이름을* 은 지정 하지 않으면 현재 데이터베이스의 모든 파일의 특성이 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,7 +56,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**size**|**nvarchar(15)**|파일 크기(KB)입니다.|  
 |**maxsize**|**nvarchar(15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar(15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
-|**사용 현황**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
+|**usage**|**varchar(9)**|데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  

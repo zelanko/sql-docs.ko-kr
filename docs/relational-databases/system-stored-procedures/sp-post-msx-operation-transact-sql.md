@@ -18,12 +18,12 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832701"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536131"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@operation =**] **'***operation***'**  
- 게시된 연산의 유형입니다. *작업이*됩니다 **varchar(64)**, 기본값은 없습니다. 유효한 작업에 종속 *object_type*합니다.  
+`[ @operation = ] 'operation'` 게시 된 작업에 대 한 작업의 형식입니다. *작업이*됩니다 **varchar(64)**, 기본값은 없습니다. 유효한 작업에 종속 *object_type*합니다.  
   
 |개체 유형|연산|  
 |-----------------|---------------|  
 |**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
-|**서버**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**일정**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
+|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
- [ **@object_type =**] **'***object***'**  
- 연산을 게시할 대상이 되는 개체의 유형입니다. 올바른 유형은 **작업이**, **SERVER**, 및 **일정**합니다. *개체* 됩니다 **varchar(64)**, 기본값은 **작업**합니다.  
+`[ @object_type = ] 'object'` 연산을 게시할 개체의 형식입니다. 올바른 유형은 **작업이**, **SERVER**, 및 **일정**합니다. *개체* 됩니다 **varchar(64)**, 기본값은 **작업**합니다.  
   
- [ **@job_id =**] *job_id*  
- 연산을 적용할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다. **0x00** 모든 작업을 나타냅니다. 경우 *개체* 됩니다 **SERVER**, 한 다음 *job_id*필요 하지 않습니다.  
+`[ @job_id = ] job_id` 작업이 적용 되는 작업의 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다. **0x00** 모든 작업을 나타냅니다. 경우 *개체* 됩니다 **SERVER**, 한 다음 *job_id*필요 하지 않습니다.  
   
- [ **@specific_target_server =**] **'***target_server***'**  
- 지정한 연산을 적용할 대상이 되는 대상 서버의 이름입니다. 하는 경우 *job_id* 지정 되어 있지만 *target_server* 지정 하지 않으면 작업의 모든 작업 서버에 대해 연산이 게시 됩니다. *target_server* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @specific_target_server = ] 'target_server'` 지정된 된 작업이 적용 되는 대상 서버의 이름입니다. 하는 경우 *job_id* 지정 되어 있지만 *target_server* 지정 하지 않으면 작업의 모든 작업 서버에 대해 연산이 게시 됩니다. *target_server* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
   
- [ **@value =**] *value*  
- 폴링 간격(초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. 경우에만이 매개 변수 지정 *작업이* 됩니다 **SET-POLL**합니다.  
+`[ @value = ] value` 폴링 간격 (초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. 경우에만이 매개 변수 지정 *작업이* 됩니다 **SET-POLL**합니다.  
   
- [ **@schedule_uid=** ] *schedule_uid*  
- 연산을 적용할 일정의 고유 식별자입니다. *schedule_uid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
+`[ @schedule_uid = ] schedule_uid` 작업이 적용 되는 일정에 대 한 고유 식별자입니다. *schedule_uid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -96,7 +90,7 @@ sp_post_msx_operation
  [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
  [sp_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
  [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

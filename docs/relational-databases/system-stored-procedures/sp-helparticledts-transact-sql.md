@@ -16,12 +16,12 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 022a2c8df27afdd3a9766e447f4030cdede4af4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cac631425a43870395fa0adceb0bb041d70e1932
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813195"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530555"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =**] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 게시에 있는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 게시에서 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

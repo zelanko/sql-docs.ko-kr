@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4c2bccc6833ef6f3298cfaf112409542995b696e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530205"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 거부
   새 XML 스키마 컬렉션을 만들거나 기존 스키마 컬렉션을 사용할 권한을 거부할 수 있습니다.  

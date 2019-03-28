@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538185"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@filegroupname =** ] **'***name***'**  
- 현재 데이터베이스에 있는 파일 그룹의 논리적 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *이름을* 지정 하지 않으면 현재 데이터베이스의 모든 파일 그룹 나열 되 고 첫 번째 결과 집합만 표시 된 결과 집합 섹션에 표시 됩니다.  
+`[ @filegroupname = ] 'name'` 현재 데이터베이스에 있는 파일 그룹의 논리적 이름이입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *이름을* 지정 하지 않으면 현재 데이터베이스의 모든 파일 그룹 나열 되 고 첫 번째 결과 집합만 표시 된 결과 집합 섹션에 표시 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

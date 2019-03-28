@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589784"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536365"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,25 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_name=** ] **'**_이름_**'**  
- 카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *이름* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ @table_name = ] 'name'` 카탈로그 정보를 반환 하는 테이블 사용 됩니다. *이름* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [  **@table_owner=** ] **'**_소유자_**'**  
- 카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *소유자* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
+`[ @table_owner = ] 'owner'` 카탈로그 정보를 반환 하는 데 사용 하는 테이블의 테이블 소유자가입니다. *소유자* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 소유자를 지정하지 않았으며 현재 사용자가 지정된 이름의 테이블을 소유하고 있지 않은 경우 이 프로시저는 데이터베이스 소유자가 소유한 지정된 이름의 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
- [  **@table_qualifier=** ] **'**_한정자_**'**  
- 테이블 한정자의 이름입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'` 테이블 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ **,** [  **@table_type=** ] **"'**_형식_**'** 하십시오 **'** 형식 **'"** ]  
- 쉼표로 구분된 값 목록으로서 지정된 테이블 유형의 모든 테이블에 대한 정보를 제공합니다. 여기에 포함 됩니다 **테이블**를 **SYSTEMTABLE**, 및 **뷰**합니다. *형식* 됩니다 **varchar(100)**, 기본값은 NULL입니다.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 지정 된 테이블 형식의 모든 테이블에 대 한 정보를 제공 하는 쉼표로 구분 된 값의 목록이입니다. 여기에 포함 됩니다 **테이블**를 **SYSTEMTABLE**, 및 **뷰**합니다. *형식* 됩니다 **varchar(100)**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  각 테이블 유형은 작은따옴표로 묶고, 전체 매개 변수는 큰따옴표로 묶어야 합니다. 테이블 유형은 대문자로 표시해야 합니다. SET QUOTED_IDENTIFIER가 ON이면 모든 작은따옴표는 큰따옴표로 바꾸고 전체 매개 변수는 작은따옴표로 묶어야 합니다.  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- 밑줄(_), 백분율(%) 및 대괄호([ 또는 ]) 문자를 와일드카드 문자로 해석할지 여부를 결정합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
+`[ @fUsePattern = ] 'fUsePattern'` 밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
@@ -80,7 +75,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 테이블을 만든 데이터베이스 사용자의 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**TABLE_TYPE**|**varchar(32)**|테이블, 시스템 테이블 또는 뷰입니다.|  
-|**설명**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
+|**REMARKS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
   
 ## <a name="remarks"></a>Remarks  
  상호 운용성을 최대한 높이려면 게이트웨이 클라이언트가 SQL-92-표준 SQL 패턴 일치(% 및 _ 와일드카드 문자)만 허용해야 합니다.  
@@ -134,8 +129,8 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [sys.synonyms &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+## <a name="see-also"></a>관련 항목  
+ [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

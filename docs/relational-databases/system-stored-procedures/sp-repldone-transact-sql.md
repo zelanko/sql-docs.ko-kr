@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538235"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@xactid=**] *xactid*  
- 서버의 마지막 분산 트랜잭션의 첫 번째 레코드는 LSN (로그 시퀀스 번호)을입니다. *xactid* 됩니다 **binary(10)로 표현**, 기본값은 없습니다.  
+`[ @xactid = ] xactid` 서버의 마지막 분산 트랜잭션의 첫 번째 레코드는 LSN (로그 시퀀스 번호)을입니다. *xactid* 됩니다 **binary(10)로 표현**, 기본값은 없습니다.  
   
- [  **@xact_seqno=**] *xact_seqno*  
- 서버의 마지막 분산 트랜잭션의 마지막 레코드의 LSN입니다. *xact_seqno* 됩니다 **binary(10)로 표현**, 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno` 서버의 마지막 분산 트랜잭션의 마지막 레코드의 LSN입니다. *xact_seqno* 됩니다 **binary(10)로 표현**, 기본값은 없습니다.  
   
- [  **@numtrans=**] *numtrans*  
- 분산 트랜잭션의 수가입니다. *numtrans* 됩니다 **int**, 기본값은 없습니다.  
+`[ @numtrans = ] numtrans` 분산 트랜잭션의 수가입니다. *numtrans* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@time=**] *시간*  
- 트랜잭션의 마지막 일괄 처리를 배포하는 데 필요한 시간(밀리초)입니다. *시간* 됩니다 **int**, 기본값은 없습니다.  
+`[ @time = ] time` (밀리초)를 제공 하는 경우 필요 트랜잭션의 마지막 일괄 처리를 배포 합니다. *시간* 됩니다 **int**, 기본값은 없습니다.  
   
- [  **@reset=**] *다시 설정*  
- 다시 설정 상태입니다. *다시 설정* 됩니다 **int**, 기본값은 없습니다. 하는 경우 **1**모든 복제 된 트랜잭션 로그에 표시 된으로 분산 합니다. 하는 경우 **0**트랜잭션 로그가 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션이 없습니다 표시 된으로 분산 합니다. *다시 설정* 유효한 경우에 둘 다 *xactid* 하 고 *xact_seqno* null입니다.  
+`[ @reset = ] reset` 다시 설정 상태가입니다. *다시 설정* 됩니다 **int**, 기본값은 없습니다. 하는 경우 **1**모든 복제 된 트랜잭션 로그에 표시 된으로 분산 합니다. 하는 경우 **0**트랜잭션 로그가 첫 번째 복제 된 트랜잭션으로 다시 설정 되 고 복제 된 트랜잭션이 없습니다 표시 된으로 분산 합니다. *다시 설정* 유효한 경우에 둘 다 *xactid* 하 고 *xact_seqno* null입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

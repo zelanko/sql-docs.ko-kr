@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531815"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@login_type** =] *login_type*  
- 제공한 자격 증명의 인증 유형입니다. *login_type* 됩니다 **tinyint**, 기본값은 없습니다.  
+`[ @login_type = ] login_type` 제공된 된 자격 증명에 대 한 인증 유형이입니다. *login_type* 됩니다 **tinyint**, 기본값은 없습니다.  
   
  **1** = Windows 통합된 인증  
   
- **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
+ **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication  
   
- [ **@login** =] **'**_로그인_**'**  
- 변경할 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *로그인* 됩니다 **nvarchar(257)**, 기본값은 없습니다  
+`[ @login = ] 'login'` Windows 계정 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 되 고 로그인 합니다. *로그인* 됩니다 **nvarchar(257)**, 기본값은 없습니다  
   
- [ **@password** =] **'**_암호_**'**  
- 저장할 새 암호는 지정 된 *로그인*합니다. *암호* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @password = ] 'password'` 저장할 새 암호는 지정 된 *로그인*합니다. *암호* 됩니다 **sysname**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
   
- [ **@server** =] **'**_server_**'**  
- 저장된 암호를 변경할 서버 연결입니다. *서버* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @server = ] 'server'` 저장된 된 암호는 변경할 서버 연결이입니다. *서버* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**배포자**|배포자에 대한 모든 에이전트 연결입니다.|  
+|**distributor**|배포자에 대한 모든 에이전트 연결입니다.|  
 |**publisher**|게시자에 대한 모든 에이전트 연결입니다.|  
 |**subscriber**|구독자에 대한 모든 에이전트 연결입니다.|  
 |**%** (기본값)|복제 토폴로지의 모든 서버에 대한 모든 에이전트 연결입니다.|  

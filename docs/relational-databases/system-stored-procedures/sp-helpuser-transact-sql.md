@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535965"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name_in_db =** ] **'***security_account***'**  
- 현재 데이터베이스의 데이터베이스 사용자 또는 데이터베이스 역할 이름입니다. *security_account* 현재 데이터베이스에 존재 해야 합니다. *security_account* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *security_account* 지정 하지 않으면 **sp_helpuser** 모든 데이터베이스 보안 주체에 대 한 정보를 반환 합니다.  
+`[ @name_in_db = ] 'security_account'` 데이터베이스 사용자 또는 현재 데이터베이스의 데이터베이스 역할의 이름이입니다. *security_account* 현재 데이터베이스에 존재 해야 합니다. *security_account* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *security_account* 지정 하지 않으면 **sp_helpuser** 모든 데이터베이스 보안 주체에 대 한 정보를 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -76,7 +75,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Role_name**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**Role_id**|**smallint**|현재 데이터베이스에 있는 역할의 역할 ID입니다.|  
 |**Users_in_role**|**sysname**|현재 데이터베이스에 있는 역할의 멤버입니다.|  
-|**사용자 Id**|**smallint**|역할 멤버의 사용자 ID입니다.|  
+|**Userid**|**smallint**|역할 멤버의 사용자 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  데이터베이스 역할의 멤버 자격에 대 한 정보를 보려면 사용 하 여 [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)합니다. 서버 역할 멤버에 대 한 정보를 보려면 사용 하 여 [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)를 사용 하 여 서버 수준 보안 주체에 대 한 정보를 보려면 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)합니다.  

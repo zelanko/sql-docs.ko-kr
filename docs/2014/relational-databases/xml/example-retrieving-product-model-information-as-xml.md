@@ -1,5 +1,5 @@
 ---
-title: '예제: 제품 모델 정보를 XML로 검색 | Microsoft 문서'
+title: '예: 제품 모델 정보를 XML로 검색 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537765"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>예제: 제품 모델 정보를 XML로 검색
+# <a name="example-retrieving-product-model-information-as-xml"></a>예: 제품 모델 정보를 XML로 검색
   다음 쿼리는 제품 모델 정보를 반환합니다. `RAW` 모드는 `FOR XML` 절에서 지정됩니다.  
   
 ## <a name="example"></a>예제  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- 선택적으로 지정할 수는 `TYPE` 결과 검색 하기 위해 지시어 `xml` 형식입니다. `TYPE` 지시어는 결과의 내용을 변경하지 않습니다. 결과의 데이터 형식에만 영향을 줍니다.  
+ 선택적으로 `TYPE` 지시어를 지정하여 결과를 `xml` 유형으로 검색할 수 있습니다. `TYPE` 지시어는 결과의 내용을 변경하지 않습니다. 결과의 데이터 형식에만 영향을 줍니다.  
   
 ```  
 USE AdventureWorks2012;  

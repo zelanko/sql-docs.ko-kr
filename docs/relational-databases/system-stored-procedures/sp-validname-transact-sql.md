@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68e3cd191dc397574e739faa62f315f018bcb466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cdd1fd6120f74030875dbe1d624f3b5b162c3d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529945"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=** ] **'***name***'**  
- 이름인 합니다 [식별자](../../relational-databases/databases/database-identifiers.md) 유효성 검사를 합니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. *이름* NULL 일 수 없습니다, 빈 문자열일 수 없습니다 및 이진수 0 문자를 포함할 수 없습니다.  
+`[ @name = ] 'name'` 이름인 합니다 [식별자](../../relational-databases/databases/database-identifiers.md) 유효성 검사를 합니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. *이름* NULL 일 수 없습니다, 빈 문자열일 수 없습니다 및 이진수 0 문자를 포함할 수 없습니다.  
   
- [  **@raise_error=** ] *raise_error*  
- 오류를 발생시킬지 여부를 지정합니다. *raise_error* 됩니다 **비트**, 기본값은 1입니다. 이 값은 오류가 표시됨을 의미합니다. 0으로 설정하면 오류 메시지가 발생하지 않습니다.  
+`[ @raise_error = ] raise_error` 오류를 발생시킬지 여부를 지정 합니다. *raise_error* 됩니다 **비트**, 기본값은 1입니다. 이 값은 오류가 표시됨을 의미합니다. 0으로 설정하면 오류 메시지가 발생하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

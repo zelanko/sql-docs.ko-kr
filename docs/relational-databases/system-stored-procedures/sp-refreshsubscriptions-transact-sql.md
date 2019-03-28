@@ -16,12 +16,12 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7f489bf0ee637463fa9c7b2552563c09f3faad
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: c220f33a4192ca0757101fe7e862f31413648d8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306261"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537005"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication** = ] **'***publication***'**  
- 구독을 새로 고칠 게시입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 구독을 새로 고칠 게시가입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

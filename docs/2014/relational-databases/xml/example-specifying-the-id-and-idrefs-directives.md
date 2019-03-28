@@ -1,5 +1,5 @@
 ---
-title: '예제: ID 및 IDREFS 지시어 지정 | Microsoft 문서'
+title: '예: ID 및 IDREFS 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27c4cd38ee8995e9d60bf2f80297c1140e53f5d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8771eb523153a2a03b7e10dd58b3c1a85504f63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056273"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531255"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
-  요소 특성으로 지정할 수 있습니다는 `ID` 유형의 특성 및 `IDREFS` 특성 참조 하는 데 사용할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>예: ID 및 IDREFS 지시어 지정
+  요소 특성을 `ID` 유형의 특성으로 지정한 다음 `IDREFS` 특성을 사용하여 이 특성을 참조할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
   
  이 예에서는 `ID` 및 `IDREFS` 지시어를 사용하여 `ID` 및 `IDREFS` 유형의 특성을 만드는 방법을 보여 줍니다. ID는 정수 값일 수 없기 때문에 이 예에서는 ID 값이 변환됩니다. 즉, 다른 유형으로 캐스팅됩니다. ID 값에는 접두사가 사용됩니다.  
   

@@ -18,12 +18,12 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749452"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534675"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@dbname=** ] **'***dbname***'**  
- 이동식 미디어에서 사용하기 위해 작성되는 데이터베이스의 이름입니다. *dbname* 됩니다 **sysname**합니다.  
+`[ @dbname = ] 'dbname'` 이동식 미디어에서 사용 하기 위해 만들 데이터베이스의 이름이입니다. *dbname* 됩니다 **sysname**합니다.  
   
- [ **@syslogical=** ] **'***syslogical***'**  
- 시스템 카탈로그 테이블을 포함하는 파일의 논리적 이름입니다. *syslogical* 됩니다 **sysname**합니다.  
+`[ @syslogical = ] 'syslogical'` 시스템 카탈로그 테이블을 포함 하는 파일의 논리적 이름이입니다. *syslogical* 됩니다 **sysname**합니다.  
   
- [ **@sysphysical=** ] **'***sysphysical***'**  
- 물리적 이름입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @sysphysical = ] 'sysphysical'` 물리적 이름이입니다. 여기에는 시스템 카탈로그 테이블을 보유하고 있는 파일의 정규화된 경로가 포함됩니다. *sysphysical* 됩니다 **nvarchar(260)** 합니다.  
   
- [  **@syssize=** ] *syssize*  
- 시스템 카탈로그 테이블을 보유하고 있는 파일의 크기(MB)입니다. *syssize* 됩니다 **int**합니다. 최소 *syssize* 1입니다.  
+`[ @syssize = ] syssize` 메가바이트를 시스템 카탈로그 테이블을 보유 하는 파일의 크기가입니다. *syssize* 됩니다 **int**합니다. 최소 *syssize* 1입니다.  
   
- [ **@loglogical=** ] **'***loglogical***'**  
- 트랜잭션 로그가 있는 파일의 논리적 이름입니다. *loglogical* 됩니다 **sysname**합니다.  
+`[ @loglogical = ] 'loglogical'` 트랜잭션 로그를 포함 하는 파일의 논리적 이름이입니다. *loglogical* 됩니다 **sysname**합니다.  
   
- [  **@logphysical=** ] **'***logphysical***'**  
- 물리적 이름입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @logphysical = ] 'logphysical'` 물리적 이름이입니다. 여기에는 트랜잭션 로그가 있는 파일의 정규화된 경로가 포함됩니다. *logphysical* 됩니다 **nvarchar(260)** 합니다.  
   
- [  **@logsize=** ] *logsize*  
- 트랜잭션 로그가 있는 파일의 크기(MB)입니다. *logsize* 됩니다 **int**합니다. 최소 *logsize* 1입니다.  
+`[ @logsize = ] logsize` (메가바이트) 트랜잭션 로그를 포함 하는 파일의 크기가입니다. *logsize* 됩니다 **int**합니다. 최소 *logsize* 1입니다.  
   
- [  **@datalogical1=** ] **'***datalogical***'**  
- 데이터 테이블을 포함하는 파일의 논리적 이름입니다. *datalogical* 됩니다 **sysname**합니다.  
+`[ @datalogical1 = ] 'datalogical'` 데이터 테이블이 포함 된 파일의 논리적 이름이입니다. *datalogical* 됩니다 **sysname**합니다.  
   
  1개에서 16개까지의 데이터 파일이 있어야 합니다. 일반적으로 데이터베이스가 대형일 것으로 예상되며 여러 디스크에 배포되어야 할 때 두 개 이상의 데이터 파일이 작성됩니다.  
   
- [  **@dataphysical1=** ] **'***dataphysical***'**  
- 물리적 이름입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 됩니다 **nvarchar(260)** 합니다.  
+`[ @dataphysical1 = ] 'dataphysical'` 물리적 이름이입니다. 여기에는 데이터 테이블을 포함하는 파일의 정규화된 경로가 포함됩니다. *dataphysical* 됩니다 **nvarchar(260)** 합니다.  
   
- [  **@datasize1=** ] **'***datasize***'**  
- 데이터 테이블이 있는 파일의 크기(MB)입니다. *datasize* 됩니다 **int**합니다. 최소 *datasize* 1입니다.  
+`[ @datasize1 = ] 'datasize'` (메가바이트) 데이터 테이블을 포함 하는 파일의 크기가입니다. *datasize* 됩니다 **int**합니다. 최소 *datasize* 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

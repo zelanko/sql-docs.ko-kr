@@ -16,12 +16,12 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e5208446cc05755c6ab486356a664710c88f6dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4187dbe3ac00830919b07920a720b89818c25d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533705"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 all 이며 모든 구독이 다시 초기화 하도록 표시입니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 all 이며 모든 구독이 다시 초기화 하도록 표시입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

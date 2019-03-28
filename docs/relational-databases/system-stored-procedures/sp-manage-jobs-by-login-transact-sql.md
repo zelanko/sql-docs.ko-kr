@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742441"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530265"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@action=** ] **'***동작***'**  
- 지정된 로그인에 대해 수행할 동작입니다. *동작* 됩니다 **varchar(10)**, 기본값은 없습니다. 때 *동작*됩니다 **삭제**, **sp_manage_jobs_by_login** 소유 하는 모든 작업을 삭제 *current_owner_login_name*합니다. 때 *동작* 됩니다 **재할당**, 모든 작업에 할당 된 *new_owner_login_name*합니다.  
+`[ @action = ] 'action'` 지정된 된 로그인에 대해 수행할 동작입니다. *동작* 됩니다 **varchar(10)**, 기본값은 없습니다. 때 *동작*됩니다 **삭제**, **sp_manage_jobs_by_login** 소유 하는 모든 작업을 삭제 *current_owner_login_name*합니다. 때 *동작* 됩니다 **재할당**, 모든 작업에 할당 된 *new_owner_login_name*합니다.  
   
- [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- 현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` 현재 작업 소유자의 로그인 이름입니다. *current_owner_login_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- 새 작업 소유자의 로그인 이름입니다. 경우에만이 매개 변수를 사용 하 여 *동작* 됩니다 **재할당**합니다. *new_owner_login_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` 새 작업 소유자의 로그인 이름입니다. 경우에만이 매개 변수를 사용 하 여 *동작* 됩니다 **재할당**합니다. *new_owner_login_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

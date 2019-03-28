@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534585"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
   선택적 XML 인덱스는 일반 XML 인덱스 외에 추가로 제공되는 또 다른 유형의 XML 인덱스입니다. 선택적 XML 인덱스 기능의 목적은 다음과 같습니다  
@@ -78,7 +78,7 @@ ms.locfileid: "48206243"
   
  `/book/title` 경로 및 `/book/subjects` 경로를 통해 이 데이터를 쿼리하기만 하면 되는 경우 다음과 같은 선택적 XML 인덱스를 만들면 됩니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   base64Binary 및 hexBinary와 같은 이진 XS 유형이 있는 노드의 인덱싱  
   
--   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다.  `/a/b/c/*`, `/a//b/*`또는 `/a/b/*:c`  
+-   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다. 예를 들어 `/a/b/c/*`하십시오 `/a//b/*`, 또는 `/a/b/*:c`합니다.  
   
 -   자식, 특성 또는 하위 항목 이외의 모든 축 인덱싱. `//<step>` 은 특별한 경우로 허용됩니다.  
   

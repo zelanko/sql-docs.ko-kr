@@ -12,12 +12,12 @@ ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ede6cfa244f703143ae0ad265982c014cf5d7a8
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639984"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530550"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>locks 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] locks [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **locks** 옵션은 사용 가능한 최대 잠금 수를 설정하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 잠금에 사용하는 메모리 용량을 제한합니다. 기본 설정은 0이며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 시스템 요구 사항의 변화를 기준으로 동적으로 잠금 구조를 할당하거나 할당 취소할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "52639984"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 통해 `locks` 옵션 값을 `20000`으로 설정하여 모든 사용자가 사용할 수 있는 잠금 수를 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012 ;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -97,7 +97,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 잠금 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 잠금 옵션을 구성한 후  
  설정을 적용하려면 서버를 다시 시작해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

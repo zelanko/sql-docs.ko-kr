@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536825"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@property =** ] **'**_속성_**'**  
- 변경할 게시 속성입니다. *속성* 됩니다 **nvarchar(255)** 합니다.  
+`[ @property = ] 'property'` 변경할 게시 속성이입니다. *속성* 됩니다 **nvarchar(255)** 합니다.  
   
- [  **@value =** ] **'**_값_**'**  
- 새 속성 값입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
@@ -99,8 +96,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**publish_to_ActiveDirectory**|**true**|이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시 정보를 추가할 수 없습니다.|  
 ||**false**|Active Directory에서 게시 정보를 제거합니다.|  
 |**queue_type**|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다.<br /><br /> 참고: MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 사용이 더 이상 지원되지 않습니다. 값을 지정 **msmq** 에 대 한 *값* 오류가 발생 합니다.|  
-|**repl_freq**|**연속**|모든 로그 기반의 트랜잭션에 대한 출력을 게시합니다.|  
-||**스냅숏**|예약된 동기화 이벤트만 게시합니다.|  
+|**repl_freq**|**continuous**|모든 로그 기반의 트랜잭션에 대한 출력을 게시합니다.|  
+||**snapshot**|예약된 동기화 이벤트만 게시합니다.|  
 |**replicate_ddl**|**1**|게시자에서 실행된 DDL(데이터 정의 언어) 문이 복제됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**0**|DDL 문은 복제되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다. 피어 투 피어 복제를 사용할 때는 스키마 변경 내용의 복제를 해제할 수 없습니다.|  
 |**replicate_partition_switch**|**true**|ALTER TABLE... 게시 데이터베이스에 대해 실행 되는 스위치 문은 구독자에 복제 되어야 합니다. 이 옵션을 사용할 경우에만 *allow_partition_switch* 가 TRUE로 설정 합니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
@@ -108,30 +105,28 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**retention**||**int** 구독 작업에 대 한 시간 보존 기간을 나타내는입니다. 구독이 보존 기간 동안 활성화되지 않으면 제거됩니다.|  
 |**snapshot_in_defaultfolder**|**true**|스냅숏 파일이 기본 스냅숏 폴더에 저장됩니다. 하는 경우 *alt_snapshot_folder*옵션도 지정 된 경우에 스냅숏 파일이 기본 및 대체 위치에 저장 됩니다.|  
 ||**false**|스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다.|  
-|**상태**|**Active**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-||**비활성**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
+|**상태**|**active**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
+||**inactive**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**sync_method**|**native**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
 ||**character**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
-||**동시**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
+||**concurrent**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 ||**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용하지만 스냅숏을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅숏 복제에는 적합하지 않습니다.|  
 |**taskid**||이 속성은 더 이상 사용되지 않으며 지원되지 않습니다.|  
 |**allow_drop**|**true**|사용 하도록 설정 `DROP TABLE` 트랜잭션 복제의 일부인 문서에 대 한 DLL을 지원 합니다. 최소 지원 버전: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서비스 팩 2 이상 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 1 이상입니다. 추가 참조: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|사용 하지 않도록 설정 `DROP TABLE` 트랜잭션 복제의 일부인 문서에 대 한 DLL을 지원 합니다. 이 **기본** 이 속성의 값입니다.|
 |**NULL** (기본값)||에 대 한 지원 되는 값의 목록을 반환 *속성*합니다.|  
   
-[  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   - **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 은 아티클의 변경이 잘못 스냅숏을 무효화는 지정 합니다. 기존 구독에 새 스냅숏이 필요한 경우 이 값은 기존 스냅숏을 사용되지 않는 것으로 표시하고 새 스냅숏을 생성할 수 있는 권한을 부여합니다.   
 변경 시 새 스냅숏의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-[ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+[**@force_reinit_subscription =** ] *force_reinit_subscription*  
  이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   - **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
   
-[ **@publisher** =] **'**_게시자_**'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
   > [!NOTE]  
   >  *게시자* 해서는 안에서 아티클 속성을 변경 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

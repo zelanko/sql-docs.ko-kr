@@ -1,5 +1,5 @@
 ---
-title: '예제: CDATA 지시어 지정 | Microsoft 문서'
+title: '예: CDATA 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 050cf86e0f4a73aadb62b63ecccf46d69b78535f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531665"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>예제: CDATA 지시어 지정
+# <a name="example-specifying-the-cdata-directive"></a>예: CDATA 지시어 지정
   지시어가 **CDATA**로 설정되면 포함된 데이터가 엔터티 인코딩되지는 않지만 CDATA 섹션에 놓여집니다. **CDATA** 특성은 이름이 없어야 합니다.  
   
  다음 쿼리는 제품 모델 요약 설명을 CDATA 섹션에 포함시킵니다.  

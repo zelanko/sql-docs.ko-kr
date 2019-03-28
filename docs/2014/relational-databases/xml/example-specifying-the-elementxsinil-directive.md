@@ -1,5 +1,5 @@
 ---
-title: '예제: ELEMENTXSINIL 지시어 지정 | Microsoft 문서'
+title: '예: ELEMENTXSINIL 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 597efb8e1385bf869e4109bd6961b64e477f2fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221253"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534815"
 ---
-# <a name="example-specifying-the-elementxsinil-directive"></a>예제: ELEMENTXSINIL 지시어 지정
+# <a name="example-specifying-the-elementxsinil-directive"></a>예: ELEMENTXSINIL 지시어 지정
   요소 중심 XML을 검색하기 위해 ELEMENT 지시어를 지정할 때 열에 NULL 값이 있으면 EXPLICIT 모드에서 해당 요소가 생성되지 않습니다. `xsi:nil` 특성이 TRUE 값으로 설정된 경우 NULL 값에 대한 요소를 생성하도록 요청하기 위해 선택적으로 ELEMENTXSINIL 지시어를 지정할 수 있습니다.  
   
  다음 쿼리는 직원 주소가 포함된 XML을 생성합니다. `AddressLine2` 및 `City` 열에서 열 이름은 `ELEMENTXSINIL` 지시어를 지정합니다. 이렇게 하면 행 집합에서 `AddressLine2` 및 `City` 열에 있는 NULL 값에 대한 요소가 생성됩니다.  

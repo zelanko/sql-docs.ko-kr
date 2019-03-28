@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404284"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534685"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>6단원: 온-프레미스의 원본 컴퓨터에서 Windows Azure의 대상 컴퓨터로 데이터베이스 마이그레이션
   이 단원에서는 이미 다른 SQL Server가 있다고 가정합니다. 이 SQL Server는 다른 온-프레미스 컴퓨터나 Microsoft Azure의 가상 머신에 있을 수 있습니다. Microsoft Azure에서 SQL Server 가상 머신을 만드는 방법은 [Microsoft Azure에서 SQL Server 가상 머신 프로비전](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조하세요. Microsoft Azure에서 SQL Server 가상 머신을 프로비전한 후 다른 컴퓨터에서 SQL Server Management Studio를 통해 이 가상 머신의 SQL Server 인스턴스에 연결할 수 있는지 확인합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52404284"
   
         3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장할 SQL Server 자격 증명을 만듭니다.  
   
-            ```tsql  
+            ```sql  
   
             USE master   
             GO   
@@ -66,13 +66,13 @@ ms.locfileid: "52404284"
   
         4.  사용할 수 있는 모든 자격 증명을 보려면 쿼리 창에서 다음 문을 실행합니다.  
   
-            ```tsql  
+            ```sql  
             SELECT * from sys.credentials   
             ```  
   
         5.  대상 서버에 연결되었으면 쿼리 창을 열고 다음을 실행합니다.  
   
-            ```tsql  
+            ```sql  
   
             -- Create a master key and a server certificate   
             USE master   
@@ -94,7 +94,7 @@ ms.locfileid: "52404284"
   
     2.  FOR ATTACH 옵션을 사용하여 Microsoft Azure Storage의 기존 파일을 가리키는 데이터 및 로그 파일이 포함된 데이터베이스를 만듭니다. 쿼리 창에서 다음 문을 실행합니다.  
   
-        ```tsql  
+        ```sql  
   
         --Create a database on the destination server   
         CREATE DATABASE TestDB1onDest   
@@ -113,7 +113,7 @@ ms.locfileid: "52404284"
   
     4.  쿼리 창에서 다음 문을 실행합니다.  
   
-        ```tsql  
+        ```sql  
   
         USE TestDB1onDest   
         SELECT * FROM Table1;   
@@ -147,6 +147,6 @@ ms.locfileid: "52404284"
   
  **다음 단원:**  
   
- [7 단원: Windows Azure Storage로 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [7단원: Windows Azure Storage로 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

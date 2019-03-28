@@ -16,12 +16,12 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74b5ff58db964bff29e863eec39e76313220f556
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533095"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 삭제할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 기존의 모든 병합 게시와 연결 된 스냅숏 에이전트 작업 제거 됩니다. 특정 값을 지정 하는 경우 *게시*, 해당 게시 및 해당 관련된 스냅숏 에이전트 작업이 삭제 됩니다.  
+`[ @publication = ] 'publication'` 삭제할 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 기존의 모든 병합 게시와 연결 된 스냅숏 에이전트 작업 제거 됩니다. 특정 값을 지정 하는 경우 *게시*, 해당 게시 및 해당 관련된 스냅숏 에이전트 작업이 삭제 됩니다.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용됩니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
+`[ @ignore_distributor = ] ignore_distributor` 배포자에서 정리 태스크를 수행 하지 않고 게시를 삭제 하는 데 사용 합니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자를 다시 설치할 때도 사용됩니다.  
   
- [  **@reserved=**] *예약*  
- 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
+`[ @reserved = ] reserved` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 내부적으로만 사용됩니다.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 내부 전용입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -69,7 +65,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_dropmergepublication**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

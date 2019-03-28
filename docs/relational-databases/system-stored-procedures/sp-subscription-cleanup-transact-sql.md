@@ -16,12 +16,12 @@ ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74154300cd85e18d17c3f8c6499acb2f331bcdbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e59a60279f4efa74ef21863212f75761eee99b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759785"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537865"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 게시 데이터베이스에서 공유 에이전트 게시를 사용하는 구독이 삭제됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. NULL인 경우 게시 데이터베이스에서 공유 에이전트 게시를 사용하는 구독이 삭제됩니다.  
   
- [  **@reserved=**] **'***예약 된***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

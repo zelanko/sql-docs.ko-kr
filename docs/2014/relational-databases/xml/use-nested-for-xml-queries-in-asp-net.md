@@ -12,15 +12,15 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5a32b938e305aa2ed1d0833f4dffb62e0e280b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162563"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533215"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET에서 중첩 FOR XML 쿼리 사용
   이 예에서ASP.NET 애플리케이션은 SQL Server에서 저장 프로시저를 실행하여 브라우저에 XML을 반환합니다. 저장 프로시저는 중첩 쿼리를 사용하여 XML을 생성합니다. 유사한 SELECT 문은 [중첩 AUTO 모드 쿼리를 사용하여 형제 생성](generate-siblings-with-a-nested-auto-mode-query.md)항목에 설명되어 있습니다. 다음 예에서는 중첩 FOR XML 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 요소 중심 XML을 생성하는 한 가지 방법을 보여 줍니다.  

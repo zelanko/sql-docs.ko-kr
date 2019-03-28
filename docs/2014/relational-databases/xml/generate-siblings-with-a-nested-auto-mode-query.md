@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534475"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
   다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   이전 쿼리가 `FROM` 절에 추가되었습니다. 쿼리 결과는 테이블로 반환됩니다. 추가된 `XmlCol` 별칭에 유의하십시오.  
   
--   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. 합니다 `query()` 메서드는 `xml` 데이터 유형 XQuery를 지정 하는 합니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
+-   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. `query()` 데이터 형식의 `xml` 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](/sql/t-sql/xml/query-method-xml-data-type)를 참조하세요.  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

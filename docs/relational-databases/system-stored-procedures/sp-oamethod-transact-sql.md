@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591467"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530375"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  사용 하 여 이전에 만든 OLE 개체의 개체 토큰 **sp_OACreate**합니다.  
   
- *Methodname*  
+ *methodname*  
  호출할 OLE 개체의 메서드 이름입니다.  
   
- _returnvalue_**출력**  
+ _returnvalue_  **OUTPUT**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
  로컬 변수를 지정 하거나 단일 값을 반환 하는 메서드 *returnvalue*, 메서드를 반환 하는 로컬 변수에 값을 반환 하거나 지정 하지 마세요 *returnvalue*를 반환 하는 메서드는 단일 열 단일 행 결과 집합으로 클라이언트에 값을 반환 합니다.  
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   메서드가 배열을 출력 매개 변수로서 반환합니다.  
   
- [ _@parametername_ **=** ] *매개 변수*[ **출력** ]  
- 메서드 매개 변수입니다. 를 지정 하는 경우 *매개 변수* 적절 한 데이터 형식의 값 이어야 합니다.  
+`[ _@parametername = ] parameter[ OUTPUT ]` 메서드 매개 변수가입니다. 를 지정 하는 경우 *매개 변수* 적절 한 데이터 형식의 값 이어야 합니다.  
   
  출력 매개 변수, 반환 값을 얻을 *매개 변수* 적절 한 데이터 형식의 지역 변수 이어야 합니다 하 고 **출력** 지정 해야 합니다. 상수 매개 변수를 지정 여부나 **출력** 지정 하지 않으면 모든 반환 출력 매개 변수의 값은 무시 됩니다.  
   
@@ -94,7 +93,7 @@ sp_OAMethod objecttoken , methodname
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
-||int|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|Datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -138,7 +137,7 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [OLE Automation 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE 자동화 예제 스크립트](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

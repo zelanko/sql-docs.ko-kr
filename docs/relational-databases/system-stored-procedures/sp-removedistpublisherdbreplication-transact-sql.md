@@ -16,12 +16,12 @@ ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d57034b65559e696a9692a1c71e612c7d921661b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ef656dd25ea3d0a62baf7ca52653c22b9d895ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754645"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532851"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_Removedistpublisherdbreplication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'***게시자***'**  
- 게시자 서버의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자 서버의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname** 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname** 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -64,7 +62,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정된 서버 역할의 멤버나 배포자 합니다 **db_owner** 고정된 데이터베이스 역할의 배포 데이터베이스에서 실행할 수 있습니다 **sp_ removedistpublisherdbreplication**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

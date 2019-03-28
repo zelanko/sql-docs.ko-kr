@@ -16,12 +16,12 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df84387d42a0f4d2f5cd74ac6b821f8b01ddb06b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533342"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@database=**] **'***database_name***'**  
- 속성이 반환되는 데이터베이스 이름입니다. *database_name* 은 **sysname**, 기본값은 **%** 는 배포자와 연결 된 모든 데이터베이스에 대 한 사용자에 게 권한이 있습니다.  
+`[ @database = ] 'database_name'` 속성 반환 되는 데이터베이스 이름이입니다. *database_name* 은 **sysname**, 기본값은 **%** 는 배포자와 연결 된 모든 데이터베이스에 대 한 사용자에 게 권한이 있습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

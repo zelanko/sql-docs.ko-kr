@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201912"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538225"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@dbname =** ] **'***database_name***'**  
- 분리할 데이터베이스의 이름입니다. *database_name* 되는 **sysname** 값 이며 기본값은 NULL입니다.  
+`[ @dbname = ] 'database_name'` 분리할 데이터베이스의 이름이입니다. *database_name* 되는 **sysname** 값 이며 기본값은 NULL입니다.  
   
- [ **@skipchecks =** ] **'***skipchecks***'**  
- UPDATE STATISTICS를 건너뛰거나 실행할지를 지정합니다. *skipchecks* 되는 **nvarchar(10)** 값 이며 기본값은 NULL입니다. UPDATE STATISTICS를 건너뛰려면 지정할 **true**합니다. UPDATE STATISTICS를 명시적으로 실행 하려면 지정할 **false**합니다.  
+`[ @skipchecks = ] 'skipchecks'` 업데이트 통계 건너뛰거나 것인지 지정 합니다. *skipchecks* 되는 **nvarchar(10)** 값 이며 기본값은 NULL입니다. UPDATE STATISTICS를 건너뛰려면 지정할 **true**합니다. UPDATE STATISTICS를 명시적으로 실행 하려면 지정할 **false**합니다.  
   
  기본적으로 UPDATE STATISTICS는 테이블과 인덱스에 있는 데이터에 관한 정보를 업데이트하기 위해 수행됩니다. UPDATE STATISTICS는 읽기 전용 미디어로 이동할 데이터베이스에 수행하면 유용합니다.  
   
- [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- 분리되는 데이터베이스와 연결된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제되지 않도록 지정합니다. *KeepFulltextIndexFile* 되는 **nvarchar(10)** 이며 기본값은 값 **true**합니다. 하는 경우 *KeepFulltextIndexFile* 됩니다 **false**, 데이터베이스와 연결 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용 아니면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 분리 되는 데이터베이스에 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 중 삭제 되지 것입니다 지정 작업을 분리 합니다. *KeepFulltextIndexFile* 되는 **nvarchar(10)** 이며 기본값은 값 **true**합니다. 하는 경우 *KeepFulltextIndexFile* 됩니다 **false**, 데이터베이스와 연결 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용 아니면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
   
 > [!IMPORTANT]
 >  합니다**@keepfulltextindexfile** 매개 변수는 이후 버전의에서 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  

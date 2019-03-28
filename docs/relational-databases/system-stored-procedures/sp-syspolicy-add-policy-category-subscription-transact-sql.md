@@ -18,12 +18,12 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca1196f986da94ed17b1efb6f4284362e68b84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595341"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530255"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@target_type=** ] **'***target_type***'**  
- 범주 구독의 대상 유형입니다. *target_type* 됩니다 **sysname**고, 필요 하며, 'DATABASE'로 설정 되어야 합니다.  
+`[ @target_type = ] 'target_type'` 범주 구독의 대상 유형이입니다. *target_type* 됩니다 **sysname**고, 필요 하며, 'DATABASE'로 설정 되어야 합니다.  
   
- [  **@target_object=** ] **'***target_object***'**  
- 범주를 구독할 데이터베이스의 이름이입니다. *target_object* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
+`[ @target_object = ] 'target_object'` 범주를 구독할 데이터베이스의 이름이입니다. *target_object* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
- [  **@policy_category=** ] **'***policy_category***'**  
- 구독할 정책 범주의 이름이입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
+`[ @policy_category = ] 'policy_category'` 구독할 정책 범주의 이름이입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
  값을 얻으려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   
- [ **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- 범주 구독의 식별자입니다. *policy_category_subscription_id* 됩니다 **int**, 이며 OUTPUT으로 반환 됩니다.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` 범주 구독의 식별자가입니다. *policy_category_subscription_id* 됩니다 **int**, 이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -16,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535921"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@agent_type=**] *agent_type*  
- 에이전트의 유형입니다. *agent_type* 됩니다 **int**, 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] agent_type` 에이전트의 유형이입니다. *agent_type* 됩니다 **int**, 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -50,8 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
- [  **@profile_id=**] *profile_id*  
- 표시할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 **-1**에 있는 모든 프로필을 반환 하는 **MSagent_profiles** 테이블.  
+`[ @profile_id = ] profile_id` 표시할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 **-1**에 있는 모든 프로필을 반환 하는 **MSagent_profiles** 테이블.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -60,7 +58,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|에이전트 유형에 대해 고유합니다.|  
 |**agent_type**|**int**|**1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
-|**형식**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
+|**형식**|**int**|**0** = System<br /><br /> **1** = 사용자 지정|  
 |**description**|**varchar(3000)**|프로필에 관한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   

@@ -16,12 +16,12 @@ ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5def842b7b65523d207433680ebd017536b7f2aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130953"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529665"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
@@ -147,7 +147,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  연결 인증 방법을 확인하려면 다음 쿼리를 실행합니다.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

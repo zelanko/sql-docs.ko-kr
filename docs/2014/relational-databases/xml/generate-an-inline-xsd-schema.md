@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529335"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  

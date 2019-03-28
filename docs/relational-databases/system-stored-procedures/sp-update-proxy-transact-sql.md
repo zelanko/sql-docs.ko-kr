@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763528"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534465"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@proxy_id**= ] *id*  
- 변경할 프록시의 프록시 ID입니다. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_id = ] id` 변경할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 변경할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다.  
+`[ @proxy_name = ] 'proxy_name'` 변경할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- 프록시에 대한 새 자격 증명의 이름입니다. 합니다 *credential_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정할 수 있습니다.  
+`[ @credential_name = ] 'credential_name'` 프록시에 대 한 새 자격 증명의 이름입니다. 합니다 *credential_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정할 수 있습니다.  
   
- [ **@credential_id** = ] *credential_id*  
- 프록시에 대한 새 자격 증명의 ID입니다. 합니다 *credential_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정할 수 있습니다.  
+`[ @credential_id = ] credential_id` 프록시에 대 한 새 자격 증명의 id. 합니다 *credential_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정할 수 있습니다.  
   
- [ **@new_name**= ] **'***new_name***'**  
- 프록시의 새 이름입니다. 합니다 *new_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 프로시저 변경 프록시의 이름을 제공 하면 *new_name*합니다. 이 인수가 NULL이면 프록시의 이름은 변경되지 않은 상태로 유지됩니다.  
+`[ @new_name = ] 'new_name'` 프록시의 새 이름입니다. 합니다 *new_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 프로시저 변경 프록시의 이름을 제공 하면 *new_name*합니다. 이 인수가 NULL이면 프록시의 이름은 변경되지 않은 상태로 유지됩니다.  
   
- [ **@enabled** =] *is_enabled*  
- 프록시 설정 여부입니다. *is_enabled* 플래그가 **tinyint**, 기본값은 NULL입니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
+`[ @enabled = ] is_enabled` 프록시 사용 여부입니다. *is_enabled* 플래그가 **tinyint**, 기본값은 NULL입니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
   
- [ **@description**= ] **'***description***'**  
- 프록시에 대한 새로운 설명입니다. *설명을* 됩니다 **nvarchar(512)**, 기본값은 NULL 사용 하 여 합니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
+`[ @description = ] 'description'` 프록시의 새 설명입니다. *설명을* 됩니다 **nvarchar(512)**, 기본값은 NULL 사용 하 여 합니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

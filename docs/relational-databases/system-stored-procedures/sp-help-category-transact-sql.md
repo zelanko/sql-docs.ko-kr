@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534145"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@class=**] **'***class***'**  
- 정보를 요청한 대상 클래스입니다. *클래스* 됩니다 **varchar(8)**, 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
+`[ @class = ] 'class'` 에 대 한 정보를 요청 하는 클래스입니다. *클래스* 됩니다 **varchar(8)**, 기본값은 **작업**합니다. *클래스* 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**JOB**|작업 범주에 관한 정보를 제공합니다.|  
-|**경으십시오**|경고 범주에 관한 정보를 제공합니다.|  
-|**연산자**|운영자 범주에 관한 정보를 제공합니다.|  
+|**ALERT**|경고 범주에 관한 정보를 제공합니다.|  
+|**OPERATOR**|운영자 범주에 관한 정보를 제공합니다.|  
   
- [ **@type=** ] **'***type***'**  
- 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 정보를 요청한 대상 범주의 유형입니다. *형식* 됩니다 **varchar(12)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -61,11 +59,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |**다중-서버**|다중 서버 작업 범주입니다.|  
 |**NONE**|이외의 다른 클래스에 대 한 범주 **작업**합니다.|  
   
- [ **@name=** ] **'***name***'**  
- 정보를 요청한 대상 범주의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 정보를 요청한 대상 범주의 이름입니다. *이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@suffix=** ] *suffix*  
- 지정 여부는 **category_type** 결과 집합의 열은 ID 또는 이름. *접미사* 됩니다 **비트**, 기본값은 **0**합니다. **1** 표시 된 **category_type** 이름으로 및 **0** ID로 표시  
+`[ @suffix = ] suffix` 지정 여부는 **category_type** 결과 집합의 열은 ID 또는 이름. *접미사* 됩니다 **비트**, 기본값은 **0**합니다. **1** 표시 된 **category_type** 이름으로 및 **0** ID로 표시  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -76,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
-|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
+|**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = Local<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
  때 **@suffix** 됩니다 **1**를 **sp_help_category** 다음 결과 집합을 반환 합니다.  

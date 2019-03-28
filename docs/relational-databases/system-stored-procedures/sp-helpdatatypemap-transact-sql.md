@@ -16,12 +16,12 @@ ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210852"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529595"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@source_dbms**=] **'***source_dbms***'**  
- 데이터 형식이 매핑된 DBMS의 이름입니다. *source_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑된 DBMS의 이름이입니다. *source_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
   
- [ **@source_version**=] **'***source_version***'**  
- 원본 DBMS의 제품 버전입니다. *source_version*됩니다 **varchar(10)**, 데이터 형식 원본 DBMS에서 반환 되는 모든 버전에 대 한 매핑을 지정 하지 않으면. 결과 집합을 DBMS 원본 버전으로 필터링하도록 설정합니다.  
+`[ @source_version = ] 'source_version'` 원본 DBMS의 제품 버전이입니다. *source_version*됩니다 **varchar(10)**, 데이터 형식 원본 DBMS에서 반환 되는 모든 버전에 대 한 매핑을 지정 하지 않으면. 결과 집합을 DBMS 원본 버전으로 필터링하도록 설정합니다.  
   
- [ **@source_type**=] **'***source_type***'**  
- 원본 DBMS에 나열된 데이터 형식입니다. *source_type* 됩니다 **sysname**를 지정 하지 않으면 하는 경우 원본 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 원본 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
+`[ @source_type = ] 'source_type'` 원본 DBMS에에서 나열 된 데이터 형식입니다. *source_type* 됩니다 **sysname**를 지정 하지 않으면 하는 경우 원본 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 원본 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
- [ **@destination_dbms** =] **'***destination_dbms***'**  
- 대상 DBMS의 이름입니다. *destination_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름이입니다. *destination_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|대상은 IBM DB2 데이터베이스입니다.|  
 |**SYBASE**|대상은 Sybase 데이터베이스입니다.|  
   
- [ **@destination_version**=] **'***destination_version***'**  
- 대상 DBMS의 제품 버전입니다. *destination_version*됩니다 **varchar(10)** 를 지정 하지 않으면 하는 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
+`[ @destination_version = ] 'destination_version'` 대상 DBMS의 제품 버전이입니다. *destination_version*됩니다 **varchar(10)** 를 지정 하지 않으면 하는 경우 대상 DBMS의 모든 버전에 대 한 매핑이 반환 됩니다. 결과 집합을 DBMS 대상 버전으로 필터링하도록 설정합니다.  
   
- [ **@destination_type**=] **'***destination_type***'**  
- 대상 DBMS에 나열된 데이터 형식입니다. *destination_type*됩니다 **sysname**를 지정 하지 않으면 하는 경우 대상 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 대상 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
+`[ @destination_type = ] 'destination_type'` 대상 DBMS에에서 나열 된 데이터 형식입니다. *destination_type*됩니다 **sysname**를 지정 하지 않으면 하는 경우 대상 DBMS의에서 모든 데이터 형식에 대 한 매핑이 반환 됩니다. 결과 집합을 대상 DBMS의 데이터 형식으로 필터링하도록 설정합니다.  
   
- [ **@defaults_only**=] *defaults_only*  
- 기본 데이터 형식 매핑만 반환되는지 여부입니다. *defaults_only* 됩니다 **비트**, 기본값은 **0**합니다. **1** 의미는 기본 데이터 형식 매핑이 반환 됩니다. **0** 반환 되는 기본 및 사용자 정의 데이터 형식 매핑 의미 합니다.  
+`[ @defaults_only = ] defaults_only` 기본 데이터 형식 매핑만 반환 되는지만 됩니다. *defaults_only* 됩니다 **비트**, 기본값은 **0**합니다. **1** 의미는 기본 데이터 형식 매핑이 반환 됩니다. **0** 반환 되는 기본 및 사용자 정의 데이터 형식 매핑 의미 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

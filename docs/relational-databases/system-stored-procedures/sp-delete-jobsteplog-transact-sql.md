@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533874"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_id =**] **'**_job_id_**'**  
- 제거할 작업 단계 로그가 포함된 작업의 ID입니다. *job_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @job_id = ] 'job_id'` 제거할 작업 단계 로그가 포함 된 작업에 대 한 작업 id. *job_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@step_id =**] *step_id*  
- 작업 단계 로그를 삭제할 작업 단계의 ID입니다. 하지 않으면 작업의 모든 작업 단계 로그가 삭제 됩니다 하지 않은 경우 **@older_than** 하거나 **@larger_than** 지정 됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계 로그를 삭제할 작업 단계의 id. 하지 않으면 작업의 모든 작업 단계 로그가 삭제 됩니다 하지 않은 경우 **@older_than** 하거나 **@larger_than** 지정 됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- 작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > **참고:** 어느 *step_id* 하거나 *step_name* 지정할 수 있습니다. 하지만 둘 다 지정할 수 없습니다.  
   
- [  **@older_than =**] **'**_날짜_**'**  
- 유지할 가장 오래된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 됩니다 **datetime**, 기본값은 NULL입니다. 둘 다 **@older_than** 하 고 **@larger_than** 지정할 수 있습니다.  
+`[ @older_than = ] 'date'` 날짜 및 가장 오래 된 작업 단계 로그의 시간을 유지 하려고 합니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 됩니다 **datetime**, 기본값은 NULL입니다. 둘 다 **@older_than** 하 고 **@larger_than** 지정할 수 있습니다.  
   
- [  **@larger_than =**] **'**_size_in_bytes_**'**  
- 유지할 가장 큰 작업 단계 로그의 크기(바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. 둘 다 **@larger_than** 하 고 **@older_than** 지정할 수 있습니다.  
+`[ @larger_than = ] 'size_in_bytes'` 가장 큰 작업 단계 로그를 보관할의 바이트 크기입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. 둘 다 **@larger_than** 하 고 **@older_than** 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

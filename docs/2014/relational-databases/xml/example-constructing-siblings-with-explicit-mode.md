@@ -1,5 +1,5 @@
 ---
-title: '예제: EXPLICIT 모드를 사용하여 형제 생성 | Microsoft 문서'
+title: '예: EXPLICIT 모드를 사용 하 여 형제 생성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffc0ca60beabfb8cc535026ec4b6004103051d06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162603"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536055"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>예: EXPLICIT 모드를 사용하여 형제 생성
   판매 주문 정보를 제공하는 XML을 생성한다고 가정해 보십시오. <`SalesPerson`> 및 <`OrderDetail`> 요소는 형제입니다. 각 Order에는 <`OrderHeader`> 요소 및 <`SalesPerson`> 요소가 하나씩 있고 하나 이상의 <`OrderDetail`> 요소가 있습니다.  

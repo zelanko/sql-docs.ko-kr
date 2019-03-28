@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783036"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532735"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정합니다. *article_resolver* 됩니다 **nvarchar(255)**, 기본값은 없습니다. 제거할 비즈니스 논리가 COM 구성 요소이면 이 매개 변수는 해당 구성 요소의 이름이며 비즈니스 논리가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리이면 이 매개 변수는 어셈블리의 이름입니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록을 취소할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 됩니다 **nvarchar(255)**, 기본값은 없습니다. 제거할 비즈니스 논리가 COM 구성 요소이면 이 매개 변수는 해당 구성 요소의 이름이며 비즈니스 논리가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리이면 이 매개 변수는 어셈블리의 이름입니다.  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** 출력  
- 지정 된 사용자 지정 비즈니스 논리의 이름과 연결 된 COM 개체의 CLSID 값을 *article_resolver* 매개 변수입니다. *resolver_clsid* 됩니다 **nvarchar (50)**, 기본값은 NULL입니다.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` 지정 된 사용자 지정 비즈니스 논리의 이름과 연결 된 COM 개체의 CLSID 값을 *article_resolver* 매개 변수입니다. *resolver_clsid* 됩니다 **nvarchar (50)**, 기본값은 NULL입니다.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** 출력  
- 등록할 사용자 지정 비즈니스 논리의 유형을 지정합니다. *is_dotnet_assembly* 됩니다 **비트**, 기본값은 0입니다. **1** 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다 **0** 은 COM 구성 요소임을 나타냅니다.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` 등록 되는 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 됩니다 **비트**, 기본값은 0입니다. **1** 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다 **0** 은 COM 구성 요소임을 나타냅니다.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** 출력  
- 비즈니스 논리 처리기를 구현하는 어셈블리의 이름입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름이입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** 출력  
- 비즈니스 논리 처리기를 구현하도록 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>을 재정의하는 클래스의 이름입니다. *dotnet_class_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` 재정의 하는 클래스의 이름인 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 비즈니스 논리 처리기를 구현 합니다. *dotnet_class_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다. 저장 프로시저가 게시자에서 호출되지 않을 경우 이 매개 변수를 사용하십시오. 지정하지 않으면 로컬 서버가 게시자인 것으로 가정합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다. 저장 프로시저가 게시자에서 호출되지 않을 경우 이 매개 변수를 사용하십시오. 지정하지 않으면 로컬 서버가 게시자인 것으로 가정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

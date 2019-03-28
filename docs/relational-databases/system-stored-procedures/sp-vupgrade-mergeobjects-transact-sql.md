@@ -16,12 +16,12 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97b527ef6d3b0363874d770e950106a7127c5483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 293c00f0112dd35de9a546d8c34f237a8561ec40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819255"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532165"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@login=**] **'***로그인***'**  
- 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
+`[ @login = ] 'login'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인이입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
   
- [  **@password=**] **'***암호***'**  
- 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *암호* 됩니다 **sysname**, 기본값은 **'** (빈 문자열)입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
+`[ @password = ] 'password'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 **'** (빈 문자열)입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
   
- [  **@security_mode=**] **'***security_mode***'**  
- 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 됩니다 **비트** 이며 기본값은 **1**합니다. 하는 경우 **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용 합니다. 하는 경우 **1**, Windows 인증을 사용 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드가입니다. *security_mode* 됩니다 **비트** 이며 기본값은 **1**합니다. 하는 경우 **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용 합니다. 하는 경우 **1**, Windows 인증을 사용 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

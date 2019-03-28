@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ffde1cb7b803c82896b894aa05cb0679459297c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530931"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
   변경 내용 추적을 사용하는 애플리케이션은 추적된 변경 내용을 가져와서 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트할 수 있어야 합니다. 이 항목에서는 이러한 태스크를 수행하는 방법과 장애 조치(Failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "52811525"
   
  다음 예에서는 초기 동기화 버전 및 초기 데이터 집합을 가져오는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
     -- Obtain the current synchronization version. This will be used next time that changes are obtained.  
     SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52811525"
 ### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
  테이블에 대해 변경된 행과 해당 변경 내용에 대한 정보를 가져오려면 CHANGETABLE(CHANGES...)을 사용합니다. 예를 들어 다음 쿼리에서는 `SalesLT.Product` 테이블에 대한 변경 내용을 가져옵니다.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, CT.SYS_CHANGE_OPERATION,  
     CT.SYS_CHANGE_COLUMNS, CT.SYS_CHANGE_CONTEXT  
@@ -86,7 +86,7 @@ FROM
   
  일반적으로 클라이언트는 행에 대한 기본 키만 가져오는 대신 해당 행에 대한 최신 데이터를 가져오려고 합니다. 따라서 애플리케이션은 CHANGETABLE(CHANGES ...)의 결과를 사용자 테이블의 데이터와 조인합니다. 예를 들어 다음 쿼리에서는 `SalesLT.Product` 테이블과 조인하여 `Name` 및 `ListPrice` 열에 대한 값을 가져옵니다. 여기에서는 `OUTER JOIN`이 사용되었습니다. 이는 사용자 테이블에서 삭제된 행에 대해 변경 내용 정보가 반환되도록 하는 데 필요합니다.  
   
-```tsql  
+```sql  
 SELECT  
     CT.ProductID, P.Name, P.ListPrice,  
     CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
@@ -101,13 +101,13 @@ ON
   
  다음 변경 내용 열거에서 사용할 버전을 가져오려면 아래 예와 같이 CHANGE_TRACKING_CURRENT_VERSION()을 사용합니다.  
   
-```tsql  
+```sql  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION()  
 ```  
   
  변경 내용을 가져올 때 애플리케이션은 다음 예와 같이 CHANGETABLE(CHANGES...) 및 CHANGE_TRACKING_CURRENT_VERSION()을 모두 사용해야 합니다.  
   
-```tsql  
+```sql  
 -- Obtain the current synchronization version. This will be used the next time CHANGETABLE(CHANGES...) is called.  
 SET @synchronization_version = CHANGE_TRACKING_CURRENT_VERSION();  
   
@@ -134,7 +134,7 @@ ON
   
  다음 예에서는 각 테이블에 대한 `last_synchronization_version` 값의 유효성을 확인하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Check individual table.  
 IF (@last_synchronization_version < CHANGE_TRACKING_MIN_VALID_VERSION(  
                                    OBJECT_ID('SalesLT.Product')))  
@@ -146,7 +146,7 @@ END
   
  다음 예와 같이 데이터베이스의 모든 테이블에 대해 `last_synchronization_version` 값의 유효성을 검사할 수 있습니다.  
   
-```tsql  
+```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
   SELECT COUNT(*) FROM sys.change_tracking_tables  
@@ -166,7 +166,7 @@ END
   
  다음 예에서는 `CT_ThumbnailPhoto` 열이 변경되지 않은 경우 해당 열이 `NULL` 이 됩니다. 또한 이 열은 `NULL` 로 변경되었으므로 `NULL` 이 될 수 있습니다. 애플리케이션은 `CT_ThumbNailPhoto_Changed` 열을 사용하여 해당 열이 변경되었는지 여부를 확인할 수 있습니다.  
   
-```tsql  
+```sql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
     OBJECT_ID('SalesLT.Product'),'ThumbNailPhoto', 'ColumnId')  
   
@@ -244,7 +244,7 @@ ON
   
  다음 예에서는 데이터베이스에 스냅숏 격리를 사용하도록 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- The database must be configured to enable snapshot isolation.  
 ALTER DATABASE AdventureWorksLT  
     SET ALLOW_SNAPSHOT_ISOLATION ON;  
@@ -252,7 +252,7 @@ ALTER DATABASE AdventureWorksLT
   
  스냅숏 트랜잭션은 다음과 같이 사용됩니다.  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 BEGIN TRAN  
   -- Verify that version of the previous synchronization is valid.  
@@ -313,7 +313,7 @@ COMMIT TRAN
   
  다음 예에서는 별도의 쿼리 없이 CHANGETABLE(VERSION ...) 함수를 사용하여 가장 효율적인 방법으로 충돌을 확인하는 방법을 보여줍니다. 이 예에서 `CHANGETABLE(VERSION ...)` 은 `SYS_CHANGE_VERSION` 에서 지정한 행에 대한 `@product id`을 확인합니다. `CHANGETABLE(CHANGES ...)` 가 동일한 정보를 가져올 수 있지만 효율성이 떨어집니다. 행에 대한 `SYS_CHANGE_VERSION` 값이 `@last_sync_version`값보다 크면 충돌이 발생합니다. 충돌이 발생하는 경우 행이 업데이트되지 않습니다. 행에 사용할 수 있는 변경 정보가 없을 수 있으므로 `ISNULL()` 검사가 필요합니다. 변경 내용 추적을 설정한 이후 또는 변경 내용 정보를 정리한 이후 행이 업데이트되지 않은 경우 변경 내용 정보가 없습니다.  
   
-```tsql  
+```sql  
 -- Assumption: @last_sync_version has been validated.  
   
 UPDATE  
@@ -333,7 +333,7 @@ WHERE
   
  다음 코드는 업데이트된 행 개수를 검사하고 충돌에 대한 자세한 정보를 식별할 수 있습니다.  
   
-```tsql  
+```sql  
 -- If the change cannot be made, find out more information.  
 IF (@@ROWCOUNT = 0)  
 BEGIN  
@@ -359,7 +359,7 @@ END
   
  일반적으로 컨텍스트 정보는 변경 내용의 원본을 식별하는 데 사용됩니다. 변경 내용의 원본을 식별할 수 있는 경우 이 컨텍스트 정보는 데이터 저장소에서 사용되어 데이터 저장소에서 다시 동기화할 때 변경 내용을 가져오지 않도록 할 수 있습니다.  
   
-```tsql  
+```sql  
   -- Try to update the row and check for a conflict.  
   WITH CHANGE_TRACKING_CONTEXT (@source_id)  
   UPDATE  
@@ -382,7 +382,7 @@ END
 > [!IMPORTANT]  
 >  스냅숏 격리를 사용하고 스냅숏 트랜잭션 내에서 변경하는 것이 좋습니다.  
   
-```tsql  
+```sql  
 -- Prerequisite is to ensure ALLOW_SNAPSHOT_ISOLATION is ON for the database.  
   
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  

@@ -15,12 +15,12 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203683"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537385"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>오류 발생 후 백업 또는 복원 작업 계속 또는 중지 여부 지정(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 오류 발생 후 백업 또는 복원 작업을 계속할지 중지할지를 지정하는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48203683"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 백업 작업을 계속하도록 지시합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -85,7 +85,7 @@ GO
   
 3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 문에서 계속하려면 CONTINUE_AFTER ERROR 옵션을 지정하고 중지하려면 STOP_ON_ERROR 옵션을 지정합니다. 기본 동작은 오류가 발생한 후 중지하는 것입니다. 이 예에서는 오류가 발생하더라도 복원 작업을 계속하도록 지시합니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

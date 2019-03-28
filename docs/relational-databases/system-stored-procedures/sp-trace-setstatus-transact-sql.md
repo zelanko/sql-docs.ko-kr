@@ -18,12 +18,12 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702391"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534805"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@traceid=** ] *trace_id*  
- 수정할 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다. 검색에 대 한 자세한 합니다 *trace_id*를 참조 하세요 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` 수정할 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다. 검색에 대 한 자세한 합니다 *trace_id*를 참조 하세요 [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
- [  **@status=** ] *상태*  
- 추적에서 구현할 동작을 지정합니다. *상태* 됩니다 **int**, 기본값은 없습니다.  
+`[ @status = ] status` 추적에서 구현할 동작을 지정 합니다. *상태* 됩니다 **int**, 기본값은 없습니다.  
   
  다음 표에서는 지정할 수 있는 상태를 보여 줍니다.  
   
@@ -74,7 +72,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  추적을 이미 지정한 상태에 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 돌아갑니다 **0**합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 프로시저를 저장 하는 모든 SQL 추적의 매개 변수 (**sp_trace_xx**) 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
+ 모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  
   

@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168853"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535635"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 유지 관리 계획에 관한 정보를 반환합니다. 계획을 지정하지 않은 경우에는 저장 프로시저가 모든 유지 관리 계획에 관한 정보를 반환합니다.  
   
-> **참고:** 데이터베이스 유지 관리 계획을 사용 하 여이 저장된 프로시저를 사용 합니다. 이 기능은 이러한 저장 프로시저를 사용하지 않는 유지 관리 계획으로 바뀌었습니다. 이 프로시저를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드된 설치에 대한 데이터베이스 유지 관리 계획을 유지할 수 있습니다.  
+> **참고:** 이 저장 프로시저는 데이터베이스 유지 관리 계획에 사용됩니다. 이 기능은 이러한 저장 프로시저를 사용하지 않는 유지 관리 계획으로 바뀌었습니다. 이 프로시저를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업그레이드된 설치에 대한 데이터베이스 유지 관리 계획을 유지할 수 있습니다.  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,14 +45,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@plan_id =**] **'**_계획\_id_**'**  
- 유지 관리 계획의 ID를 지정합니다. *plan_id* 됩니다 **UNIQUEIDENTIFIER**합니다. 기본값은 NULL입니다.  
+`[ @plan_id = ] 'plan\_id'` 유지 관리 계획의 계획 ID를 지정 합니다. *plan_id* 됩니다 **UNIQUEIDENTIFIER**합니다. 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 경우 *plan_id* 를 지정 하면 **sp_help_maintenance_plan** 세 개의 테이블을 반환 합니다: 계획, 데이터베이스 및 작업.  
+ 하는 경우 *plan_id* 를 지정 하면 **sp_help_maintenance_plan** 세 개의 테이블을 반환 합니다. 세 가지 테이블을 반환합니다.  
   
 ### <a name="plan-table"></a>계획 테이블  
   
@@ -61,7 +60,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|유지 관리 계획 ID입니다.|  
 |**plan_name**|**sysname**|유지 관리 계획 이름입니다.|  
 |**date_created**|**datetime**|유지 관리 계획을 만든 날짜입니다.|  
-|**소유자**|**sysname**|유지 관리 계획의 소유자입니다.|  
+|**owner**|**sysname**|유지 관리 계획의 소유자입니다.|  
 |**max_history_rows**|**int**|시스템 테이블에 있는 유지 관리 계획을 기록하는 데 사용하도록 지정된 최대 행 수입니다.|  
 |**remote_history_server**|**int**|기록 보고서를 작성할 원격 서버의 이름입니다.|  
 |**max_remote_history_rows**|**int**|기록 보고서를 작성할 수 있는 원격 서버의 시스템 테이블에서 지정된 최대 행 수입니다.|  

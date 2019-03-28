@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536395"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 데이터베이스의 **suspect_pages** 테이블에서 확인할 수 있습니다.  
@@ -133,8 +133,8 @@ ms.locfileid: "48108733"
     |헤더|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>**(트랜잭션 로그의 경우)이 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 **\<blank>**(트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형입니다. **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108733"
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `B` 로 `NORECOVERY`파일의 손상된 4페이지를 복원합니다. 그런 다음 두 개의 로그 백업에 `NORECOVERY`를 적용하고 `RECOVERY`로 복원되는 비상 로그 백업을 실행합니다. 이 예에서는 온라인 복원을 수행합니다. 이 예에서 `B` 파일의 파일 ID는 `1`이고 손상된 페이지의 페이지 ID는 각각 `57`, `202`, `916`및 `1016`입니다.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

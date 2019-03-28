@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813055"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534636"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@session_id** = ] *session_id*  
- 에이전트 세션을 지정합니다. *session_id* 됩니다 **int** 기본값은 없습니다.  
+`[ @session_id = ] session_id` 에이전트 세션을 지정합니다. *session_id* 됩니다 **int** 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

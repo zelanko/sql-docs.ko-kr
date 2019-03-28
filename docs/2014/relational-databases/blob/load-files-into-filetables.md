@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507797"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536031"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52507797"
   
 -   **System.IO** 네임스페이스의 메서드를 사용하여 파일을 이동하거나 복사하는 사용자 지정 응용 프로그램을 C# 또는 Visual Basic.NET으로 작성합니다.  
   
-###  <a name="HowToMigrateFiles"></a> 예: 파일 시스템에서 FileTable로 파일 마이그레이션  
+###  <a name="HowToMigrateFiles"></a> 예제: 파일 시스템에서 FileTable로 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
  예를 들어 있다고 가정 기존 데이터베이스 테이블을 `PhotoMetadata`, 사진에 대 한 데이터가 포함 되어 있습니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 `varchar`(512) 형식의 `UNCPath` 열이 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52507797"
   
 3.  다음과 유사한 코드를 사용하여 `PhotoMetadata` 테이블의 메타데이터를 수정합니다.  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358705"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530435"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
   트랜잭션 성능 보고서 도구( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 네이티브 컴파일을 사용하도록 변환할 경우 효과적인 해석된 저장 프로시저에 대한 정보를 제공합니다. 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)를 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "53358705"
 ## <a name="code-sample"></a>코드 예제  
  다음 예에서는 해석된 저장 프로시저와 네이티브 컴파일을 사용했을 때의 해당 저장 프로시저를 보여 줍니다. 이 예에서는 c:\data라는 디렉터리를 사용합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  
@@ -96,7 +96,7 @@ exec dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2 ;
 select * from SalesOrders  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: de13b3b3ff39ac9aacdbcd7beb996a353593f609
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677161"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537135"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id** = ] *profile_id*  
- 삭제할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정할 수 있습니다.  
+`[ @profile_id = ] profile_id` 삭제할 프로필의 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정할 수 있습니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 삭제할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정할 수 있습니다.  
+`[ @profile_name = ] 'profile_name'` 삭제할 프로필의 프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정할 수 있습니다.  
   
- [ **@account_id** = ] *account_id*  
- 삭제할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정할 수 있습니다.  
+`[ @account_id = ] account_id` 삭제할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정할 수 있습니다.  
   
- [ **@account_name** =] **'***account_name***'**  
- 삭제할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정할 수 있습니다.  
+`[ @account_name = ] 'account_name'` 삭제할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

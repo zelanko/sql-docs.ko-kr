@@ -16,12 +16,12 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 466b2c0316cb5de9b38200fd643d0302c5b1ae93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203102"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534535"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,29 +57,21 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@subscriber=**] **'***구독자***'**  
- 옵션을 변경할 대상이 되는 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 옵션을 변경 하는 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@type=**] *형식*  
- 구독자 유형입니다. *형식* 됩니다 **tinyint**, 기본값은 NULL입니다. **0** 나타냅니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. **1** 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 기타 ODBC 데이터 원본 서버 구독자입니다.  
+`[ @type = ] type` 구독자 유형이입니다. *형식* 됩니다 **tinyint**, 기본값은 NULL입니다. **0** 나타냅니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다. **1** 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 기타 ODBC 데이터 원본 서버 구독자입니다.  
   
- [  **@login=**] **'***로그인***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'` 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 id입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
- [  **@password=**] **'***암호***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호입니다. *암호* 됩니다 **sysname**, 기본값은 **%** 합니다. **%** 암호 속성이 변경 사항이 없는 것을 나타냅니다.  
+`[ @password = ] 'password'` 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호입니다. *암호* 됩니다 **sysname**, 기본값은 **%** 합니다. **%** 암호 속성이 변경 사항이 없는 것을 나타냅니다.  
   
- [  **@commit_batch_size=**] *commit_batch_size*  
- 이전 버전과의 호환성을 위해서만 지원됩니다.  
+`[ @commit_batch_size = ] commit_batch_size` 이전 버전과 호환성을 위해서만 지원 합니다.  
   
- [  **@status_batch_size=**] *status_batch_size*  
- 이전 버전과의 호환성을 위해서만 지원됩니다.  
+`[ @status_batch_size = ] status_batch_size` 이전 버전과 호환성을 위해서만 지원 합니다.  
   
- [  **@flush_frequency=**] *flush_frequency*  
- 이전 버전과의 호환성을 위해서만 지원됩니다.  
+`[ @flush_frequency = ] flush_frequency` 이전 버전과 호환성을 위해서만 지원 합니다.  
   
- [  **@frequency_type=**] *frequency_type*  
- 배포 태스크를 예약하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type` 배포 태스크를 예약 하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -92,11 +84,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|자동 시작|  
 |**128**|되풀이|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 에 대 한 간격인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @frequency_interval = ] frequency_interval` 에 대 한 간격인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- 배포 태스크 날짜입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` 배포 태스크 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -106,11 +96,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**8**|넷째|  
 |**16**|마지막|  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 배포 작업 기간 동안 정의 된 되풀이 되는 얼마나 자주 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 배포 작업 기간 동안 정의 된 되풀이 되는 얼마나 자주 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 정의된 기간 동안 다시 예약하는 빈도입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday` 정의 된 기간 동안 다시 예약 하는 빈도 방법이입니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -119,34 +107,26 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 에 대 한 간격인 *frequence_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` 에 대 한 간격인 *frequence_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- 하루 중에서 배포 태스크가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` 배포 태스크가 처음 하루 중 시간 예약 됩니다, hhmmss 형식. *active_start_time_of_day* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- 하루 중에서 배포 태스크가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` 배포 태스크가 중지 되 면 시간 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day*됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_start_date=**] *active_start_date*  
- 배포 태스크가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_start_date = ] active_start_date` 배포 태스크의 경우 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로. *active_start_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@active_end_date=**] *active_end_date*  
- 배포 태스크가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @active_end_date = ] active_end_date` 배포 태스크가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date*됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@description=**] **'***설명***'**  
- 선택적인 텍스트 설명입니다. *설명* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 선택적인 텍스트 설명이입니다. *설명* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
   
- [  **@security_mode=**] *security_mode*  
- 구현된 보안 모드입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @security_mode = ] security_mode` 구현 된 보안 모드가입니다. *security_mode* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증|  
 |**1**|Windows 인증|  
   
- [ **@publisher**=] **'***게시자***'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 아티클 속성을 변경 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

@@ -18,12 +18,12 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb380be46723ce605a3021e1796a42bcb824ef36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaf967abcce0cdce2ed232446016c57138fd56d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755991"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531785"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@cursor_return =**] *@cursor_variable* OUTPUT  
- 유형의 출력 변수 **커서**합니다. 결과 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 유형의 출력 변수 **커서**합니다. 결과 커서는 읽기 전용의 스크롤할 수 있는 동적 커서입니다.  
   
- [ **@table_name =**] **'***table_name***'**  
- 전체 텍스트 인덱스 정보를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 하는 경우 *table_name* 를 생략 하면 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
+`[ @table_name = ] 'table_name'` 전체 텍스트 인덱스 정보를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 하는 경우 *table_name* 를 생략 하면 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
   
- [ **@column_name =**] **'***column_name***'**  
- 전체 텍스트 인덱스 메타데이터가 필요한 열의 이름입니다. *column_name* 됩니다 **sysname** 이며 기본값은 NULL입니다. 하는 경우 *column_name* 이 생략 되거나 NULL에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 열 정보가 반환 됩니다 *table_name*합니다. 하는 경우 *table_name* 생략 하거나 NULL 인 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
+`[ @column_name = ] 'column_name'` 전체 텍스트 인덱스 메타 데이터가 필요한 열의 이름이입니다. *column_name* 됩니다 **sysname** 이며 기본값은 NULL입니다. 하는 경우 *column_name* 이 생략 되거나 NULL에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 열 정보가 반환 됩니다 *table_name*합니다. 하는 경우 *table_name* 생략 하거나 NULL 인 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

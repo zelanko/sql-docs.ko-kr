@@ -1,5 +1,5 @@
 ---
-title: '예제: ID 및 IDREF 지시어 지정 | Microsoft 문서'
+title: '예: ID 및 IDREF 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb7daf7eb63adf5b1c0978879225f161e2e00cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211390"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532025"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>예제: ID 및 IDREF 지시어 지정
+# <a name="example-specifying-the-id-and-idref-directives"></a>예: ID 및 IDREF 지시어 지정
   이 예는 [ELEMENTXSINIL 지시어 지정](example-specifying-the-elementxsinil-directive.md) 예와 가장 비슷합니다. 쿼리가 **ID** 및 **IDREF** 지시어를 지정한다는 점만 다릅니다. 이러한 지시어는 <`OrderHeader`> 및 <`OrderDetail`> 요소에 있는 **SalesPersonID** 특성의 유형을 덮어씁니다. 이 쿼리는 문서 간 연결을 형성합니다. 덮어쓴 유형을 확인하려면 스키마가 필요합니다. 따라서 이 쿼리에서는 FOR XML 절에 스키마를 검색하기 위한 **XMLDATA** 옵션을 지정합니다.  
   
 ```  

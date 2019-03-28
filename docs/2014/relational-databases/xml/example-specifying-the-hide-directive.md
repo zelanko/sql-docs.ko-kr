@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357090"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531805"
 ---
 # <a name="example-specifying-the-hide-directive"></a>예: HIDE 지시어 지정
   이 예에서는 **HIDE** 지시어 사용 방법을 보여 줍니다. 이 지시어는 쿼리에 의해 반환된 범용 테이블의 행을 정렬하기 위한 특성은 쿼리가 반환하게 하고 최종 결과 XML 문서에는 그 특성이 포함되지 않게 하려는 경우에 유용합니다.  

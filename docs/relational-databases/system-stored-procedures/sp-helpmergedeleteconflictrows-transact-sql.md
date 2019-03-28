@@ -16,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591177"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536485"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%** 합니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- 원본 개체의 이름입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
   
- [  **@publisher=**] **'**_게시자_**'**  
- 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -59,7 +55,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|삭제 충돌의 원본 개체입니다.|  
 |**rowguid**|**uniqueidentifier**|삭제 충돌에 대한 행 식별자입니다.|  
-|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** UpdateConflict =: 충돌이 행 수준에서 검색됩니다.<br /><br /> **2** ColumnUpdateConflict =: 충돌이 열 수준에서 검색됩니다.<br /><br /> **3** UpdateDeleteWinsConflict =: 삭제가 충돌에서 승리합니다.<br /><br /> **4** UpdateWinsDeleteConflict =: 충돌에서 패한 삭제된 rowguid가 이 테이블에 기록됩니다.<br /><br /> **5** UploadInsertFailed =: 구독자에서의 삽입을 게시자에서 적용할 수 없습니다.<br /><br /> **6** DownloadInsertFailed =: 게시자에서의 삽입을 구독자에서 적용할 수 없습니다.<br /><br /> **7** UploadDeleteFailed =: 구독자에서의 삭제를 게시자에 업로드할 수 없습니다.<br /><br /> **8** DownloadDeleteFailed =: 게시자에서의 삭제를 구독자에 다운로드할 수 없습니다.<br /><br /> **9** UploadUpdateFailed =: 구독자에서의 업데이트를 게시자에서 적용할 수 없습니다.<br /><br /> **10** 수행 된 업데이트가: 게시자에서의 업데이트를 구독자에 적용할 수 없습니다.|  
+|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** UpdateConflict =: 충돌이 행 수준에서 검색됩니다.<br /><br /> **2** ColumnUpdateConflict =: 충돌이 열 수준에서 검색됩니다.<br /><br /> **3** = UpdateDeleteWinsConflict: 삭제가 충돌에서 승리합니다.<br /><br /> **4** = UpdateWinsDeleteConflict: 충돌에서 패한 삭제된 rowguid가 이 테이블에 기록됩니다.<br /><br /> **5** UploadInsertFailed =: 구독자에서의 삽입을 게시자에서 적용할 수 없습니다.<br /><br /> **6** DownloadInsertFailed =: 게시자에서의 삽입을 구독자에서 적용할 수 없습니다.<br /><br /> **7** UploadDeleteFailed =: 구독자에서의 삭제를 게시자에 업로드할 수 없습니다.<br /><br /> **8** DownloadDeleteFailed =: 게시자에서의 삭제를 구독자에 다운로드할 수 없습니다.<br /><br /> **9** UploadUpdateFailed =: 구독자에서의 업데이트를 게시자에서 적용할 수 없습니다.<br /><br /> **10** 수행 된 업데이트가: 게시자에서의 업데이트를 구독자에 적용할 수 없습니다.|  
 |**reason_code**|**정수**|상황에 맞는 오류 코드입니다.|  
 |**reason_text**|**varchar(720)**|상황에 맞는 오류 설명입니다.|  
 |**origin_datasource**|**varchar(255)**|충돌의 시작입니다.|  

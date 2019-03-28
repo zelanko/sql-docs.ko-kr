@@ -18,12 +18,12 @@ ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6b625a1992411946703afb2583109f9e74518d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0305e7bc2daa087483fce0472d32df0887271ba3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850454"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534605"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=** ] **'***name***'**  
- 이름을 바꿀 조건의 이름입니다. *이름* 됩니다 **sysname**, 경우 지정 해야 합니다 *condition_id* NULL입니다.  
+`[ @name = ] 'name'` 이름을 바꿀 조건의 이름이입니다. *이름* 됩니다 **sysname**, 경우 지정 해야 합니다 *condition_id* NULL입니다.  
   
- [ **@condition_id=** ] *condition_id*  
- 이름을 바꿀 조건의 식별자가입니다. *condition_id* 됩니다 **int**, 경우 지정 해야 합니다 *이름* NULL입니다.  
+`[ @condition_id = ] condition_id` 이름을 바꿀 조건의 식별자가입니다. *condition_id* 됩니다 **int**, 경우 지정 해야 합니다 *이름* NULL입니다.  
   
- [ **@new_name=** ] **'***new_name***'**  
- 조건의 새 이름이입니다. *new_name* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. NULL 또는 빈 문자열일 수 없습니다.  
+`[ @new_name = ] 'new_name'` 조건의 새 이름이입니다. *new_name* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. NULL 또는 빈 문자열일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 'Change Tracking Enabled'라는 조건의 이름을 바꿉니다.  

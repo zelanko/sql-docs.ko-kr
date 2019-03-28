@@ -15,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640082"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529605"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `min memory per query` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `min memory per query` 옵션의 메모리 (킬로바이트 단위)는 쿼리의 실행을 위해 할당할 최소 크기를 지정 합니다. 예를 들어 경우 `min memory per query` 설정할지 2,048KB로 쿼리는 훨씬 총 메모리를 얻을 수 이상 하도록 보장 됩니다. 기본값은 1,024KB입니다. 최소값은 512KB이고 최대값은 2,147,483,647KB(2GB)입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "52640082"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `min memory per query` 옵션 값을 `3500` KB로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -94,7 +94,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 후속편: 쿼리당 최소 메모리 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 쿼리당 최소 메모리 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

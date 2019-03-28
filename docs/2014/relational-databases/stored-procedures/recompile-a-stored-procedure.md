@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406561"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536574"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다: `WITH RECOMPILE` 프로시저 정의 또는 프로시저를 호출할 때 옵션을 `RECOMPILE` 쿼리 힌트를 사용 하 여 또는 개별 문에 `sp_recompile` 시스템 저장 프로시저. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "52406561"
   
  EXECUTE 문에서 이 옵션을 사용하는 경우 프로시저에 대한 EXECUTE 권한이 있어야 합니다. EXECUTE 문 자체에 대한 권한은 필요하지 않지만 EXECUTE 문에서 참조되는 프로시저에 대한 실행 권한이 필요합니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)을 참조하세요.  
   
- `RECOMPILE` 쿼리 힌트  
+ `RECOMPILE` Query Hint  
  이 기능은 프로시저를 만들고 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 힌트를 포함할 때 사용됩니다. 따라서 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
  `sp_recompile` 시스템 저장 프로시저  
@@ -105,7 +105,7 @@ AS
   
      그런 다음 두 번째 코드 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되고 프로시저의 쿼리 계획이 다시 컴파일됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -123,7 +123,7 @@ GO
   
      그런 다음 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 프로시저가 실행되지는 않지만 다음에 프로시저가 실행될 때 쿼리 계획이 업데이트될 수 있게 프로시저가 다시 컴파일되도록 표시됩니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  
@@ -131,7 +131,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [저장 프로시저 만들기](../stored-procedures/create-a-stored-procedure.md)   
  [저장 프로시저 수정](../stored-procedures/modify-a-stored-procedure.md)   
  [저장 프로시저 이름 바꾸기](rename-a-stored-procedure.md)   

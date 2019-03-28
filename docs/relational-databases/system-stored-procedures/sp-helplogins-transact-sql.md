@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529745"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@LoginNamePattern =** ] **'***login***'**  
- 로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정한 경우 존재 해야 합니다. 하는 경우 *로그인* 은 지정 하지 않으면 모든 로그인에 대 한 정보 반환 됩니다.  
+`[ @LoginNamePattern = ] 'login'` 로그인 이름이입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인* 지정한 경우 존재 해야 합니다. 하는 경우 *로그인* 은 지정 하지 않으면 모든 로그인에 대 한 정보 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -56,7 +55,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**DefDBName**|**sysname**|기본 데이터베이스 **LoginName** 인스턴스에 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
 |**DefLangName**|**sysname**|사용 되는 언어를 기본 **LoginName**합니다.|  
 |**하는지 여부가 결정 됩니다**|**char(5)**|Yes = **LoginName** 데이터베이스에 연결 된 사용자 이름이 있습니다.<br /><br /> 이상 = **LoginName** 는 연결 된 사용자 이름이 없습니다.|  
-|**ARemote**|**char (7)**|Yes = **LoginName** 에 연결된 된 원격 로그인 합니다.<br /><br /> 이상 = **LoginName** 연결된 된 로그인이 없습니다.|  
+|**ARemote**|**char(7)**|Yes = **LoginName** 에 연결된 된 원격 로그인 합니다.<br /><br /> 이상 = **LoginName** 연결된 된 로그인이 없습니다.|  
   
  두 번째 보고서에는 다음 표와 같이 각 로그인에 매핑된 사용자와 해당 로그인의 역할 멤버 자격에 관한 정보가 포함되어 있습니다.  
   

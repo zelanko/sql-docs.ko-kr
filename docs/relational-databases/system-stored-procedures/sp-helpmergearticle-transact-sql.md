@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779755"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533445"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 정보를 검색할 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 **%**, 현재 데이터베이스의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 정보를 검색할 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 **%**, 현재 데이터베이스의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는 합니다.  
   
- [  **@article=**] **'***문서***'**  
- 정보를 반환할 아티클의 이름입니다. *문서*됩니다 **sysname**, 기본값은 **%**, 지정된 된 게시의 모든 병합 아티클에 대 한 정보를 반환 하는 합니다.  
+`[ @article = ] 'article'` 정보를 반환할 아티클의 이름이입니다. *문서*됩니다 **sysname**, 기본값은 **%**, 지정된 된 게시의 모든 병합 아티클에 대 한 정보를 반환 하는 합니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
@@ -56,14 +54,14 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자 이름입니다.|  
 |**sync_object**|**sysname**|파티션에 대한 초기 데이터를 설정하는 데 사용하는 사용자 지정 개체의 이름입니다.|  
 |**description**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
-|**상태**|**tinyint**|아티클의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 비활성<br /><br /> **2** = 활성<br /><br /> **5** 데이터 정의 언어 (DDL) 작업 보류 중 =<br /><br /> **6** = 새로 생성 된 스냅숏으로 DDL 작업<br /><br /> 참고: 아티클을 다시 초기화 되는 경우 값의 **5** 하 고 **6** 로 변경 됩니다 **2**합니다.|  
+|**상태**|**tinyint**|아티클의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 비활성<br /><br /> **2** = active<br /><br /> **5** 데이터 정의 언어 (DDL) 작업 보류 중 =<br /><br /> **6** = 새로 생성 된 스냅숏으로 DDL 작업<br /><br /> 참고: 아티클을 다시 초기화 되는 경우 값의 **5** 하 고 **6** 로 변경 됩니다 **2**합니다.|  
 |**creation_script**|**nvarchar(255)**|구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**conflict_table**|**nvarchar(270)**|삽입 또는 업데이트 충돌을 저장하고 있는 테이블의 이름입니다.|  
 |**article_resolver**|**nvarchar(255)**|아티클에 대한 사용자 지정 해결 프로그램입니다.|  
 |**subset_filterclause**|**nvarchar(1000)**|행 필터링을 지정하는 WHERE 절입니다.|  
-|**pre_creation_command**|**tinyint**|사전 생성 방법이며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 없음<br /><br /> **1** = drop<br /><br /> **2** = 삭제<br /><br /> **3** = 자름|  
+|**pre_creation_command**|**tinyint**|사전 생성 방법이며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 없음<br /><br /> **1** = drop<br /><br /> **2** = delete<br /><br /> **3** = 자름|  
 |**schema_option**|**binary(8)**|아티클에 대한 스키마 생성 옵션의 비트맵입니다. 이 비트맵 옵션에 대 한 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 하거나 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)합니다.|  
-|**type**|**smallint**|아티클의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **10** = 테이블<br /><br /> **32** = 저장된 프로시저<br /><br /> **64** = 뷰 또는 인덱싱된 뷰<br /><br /> **128** = 사용자 정의 함수<br /><br /> **160** = 동의어 스키마 전용|  
+|**type**|**smallint**|아티클의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **10** = 테이블<br /><br /> **32** = 저장된 프로시저<br /><br /> **64** = 뷰 또는 인덱싱된 뷰<br /><br /> **128** = 사용자 정의 함수<br /><br /> **160** = synonym schema only|  
 |**column_tracking**|**int**|열 수준 추적에 대 한 설정 여기서 **1** 열 수준 추적에 임을 의미 하 고 **0** 열 수준 추적이 꺼져 있음을 의미 합니다.|  
 |**resolver_info**|**nvarchar(255)**|아티클 해결 프로그램의 이름입니다.|  
 |**vertical_partition**|**bit**|아티클에 수직으로 분할 되어; 경우 여기서 **1** 아티클을 수직으로 분할 되어 의미 하 고 **0** 없음을 의미 합니다.|  

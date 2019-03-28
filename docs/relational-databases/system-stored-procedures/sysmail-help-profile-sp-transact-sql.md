@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836461"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536455"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id** = ] *profile_id*  
- 정보를 반환할 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @profile_id = ] profile_id` 에 대 한 정보를 반환할 프로필 id입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 정보를 반환할 프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @profile_name = ] 'profile_name'` 에 대 한 정보를 반환할 프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

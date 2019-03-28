@@ -12,12 +12,12 @@ ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1274cf9a9e747412cc4fb212eee18a9d5d4a8f40
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 280d4edef062429304d5c6e1d6c65ea63fac2eee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639311"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534085"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인덱스 생성 메모리 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **인덱스 생성 메모리** 옵션은 인덱스를 만들기 위해 처음으로 할당되는 최대 메모리 양을 제어합니다. 이 옵션의 기본값은 0(자체 구성)입니다. 나중에 인덱스 생성에 메모리가 더 필요하고 해당 메모리를 사용할 수 있는 경우 서버가 이 옵션의 설정 값을 초과하여 메모리를 사용하게 됩니다. 추가 메모리를 사용할 수 없는 경우 이미 할당된 메모리를 계속 사용하여 인덱스가 생성됩니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "52639311"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `index create memory` 옵션의 값을 `4096`(으)로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  
@@ -97,7 +97,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 인덱스 생성 메모리 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 인덱스 생성 메모리 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

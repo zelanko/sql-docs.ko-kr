@@ -18,12 +18,12 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a543aa923d892e12bc3baea0e3aa9d1f9c3e7504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827681"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534395"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server =** ] **'***server***'**  
- 정보를 보고할 대상이 되는 서버입니다. 때 *server* 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` 에 대 한 정보를 보고 서버가입니다. 때 *server* 지정 하지 않으면 모든 서버에 대 한 보고서 **master.sys.servers**합니다. *서버* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@optname =** ] **'***옵션***'**  
- 서버를 설명하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
+`[ @optname = ] 'option'` 서버를 설명 하는 옵션입니다. *옵션* 됩니다 **varchar (** 35 **)**, 기본값은 NULL 이며 다음이 값 중 하나 여야 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -62,8 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**원격 데이터 정렬 사용**|로컬 서버가 아닌 원격 열의 데이터 정렬을 사용합니다.|  
   
- [  **@show_topology =** ] **'***show_topology***'**  
- 지정한 서버와 다른 서버의 관계입니다. *show_topology* 됩니다 **varchar (** 1 **)**, 기본값은 NULL입니다. 하는 경우 *show_topology* 같지 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 값과 같음 **t**에 결과 집합에 나열 된 열 외에도 **sp_helpserver** 반환 **topx** 및 **topy** 정보입니다.  
+`[ @show_topology = ] 'show_topology'` 다른 서버에 지정 된 서버의 관계가입니다. *show_topology* 됩니다 **varchar (** 1 **)**, 기본값은 NULL입니다. 하는 경우 *show_topology* 같지 **t** 아니거나 null 일 경우 **sp_helpserver** 결과 집합 섹션에 나열 된 열을 반환 합니다. 경우 *show_topology* 값과 같음 **t**에 결과 집합에 나열 된 열 외에도 **sp_helpserver** 반환 **topx** 및 **topy** 정보입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패).  
@@ -74,8 +71,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|서버 이름입니다.|  
 |**network_name**|**sysname**|서버의 네트워크 이름입니다.|  
-|**상태**|**varchar (** 70 **)**|서버 상태입니다.|  
-|**id**|**char (** 4 **)**|서버의 ID입니다.|  
+|**상태**|**varchar(** 70 **)**|서버 상태입니다.|  
+|**id**|**char(** 4 **)**|서버의 ID입니다.|  
 |**collation_name**|**sysname**|서버의 데이터 정렬입니다.|  
 |**connect_timeout**|**int**|연결된 서버에 대한 연결 시간 제한 값입니다.|  
 |**query_timeout**|**int**|연결된 서버에 대한 쿼리 시간 제한 값입니다.|  

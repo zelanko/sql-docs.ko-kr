@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740531"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530584"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] **'***job_id***'**  
- 작업 정보를 반환할 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] 'job_id'` 작업 정보를 반환 하는 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@step_id =**] *step_id*  
- 작업 단계의 ID입니다. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계의 id. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@step_name =**] **'***step_name***'**  
- 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@suffix =**] *suffix*  
- 텍스트 설명에 추가 되는지 여부를 나타내는 플래그를 **플래그** 출력의 열입니다. *접미사*됩니다 **비트**, 기본값을 사용 하 여 **0**합니다. 하는 경우 *접미사* 됩니다 **1**, 설명이 추가 됩니다.  
+`[ @suffix = ] suffix` 텍스트 설명에 추가 되는지 여부를 나타내는 플래그를 **플래그** 출력의 열입니다. *접미사*됩니다 **비트**, 기본값을 사용 하 여 **0**합니다. 하는 경우 *접미사* 됩니다 **1**, 설명이 추가 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -85,7 +80,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|재시도 간격(분)입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
 |**output_file_name**|**nvarchar(200)**|출력 기록 되어야 하는 명령 파일 ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, 및 **PowerShell** 단계에 적용).|  
-|**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
+|**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = Retry<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계를 마지막으로 실행했을 때의 기간(초)입니다.|  
 |**last_run_retries**|**int**|단계를 마지막으로 실행했을 때 명령을 재시도할 횟수입니다.|  
 |**last_run_date**|**int**|단계가 마지막으로 실행을 시작했을 때의 날짜입니다.|  

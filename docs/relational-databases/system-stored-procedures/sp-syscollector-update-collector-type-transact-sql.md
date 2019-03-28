@@ -19,12 +19,12 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9d3529d01966c7f9780183d663823d8f4033f47a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256978"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535785"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 수집기 유형의 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier**, 이며이 자동으로 만들어지고 OUTPUT으로 반환 NULL 인 경우.  
+`[ @collector_type_uid = ] 'collector_type_uid'` 수집기 형식에 대 한 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier**, 이며이 자동으로 만들어지고 OUTPUT으로 반환 NULL 인 경우.  
   
- [ **@name =** ] **'***name***'**  
- 수집기 유형의 이름입니다. *이름을* 됩니다 **sysname** 지정 해야 합니다.  
+`[ @name = ] 'name'` 수집기 유형의 이름이입니다. *이름을* 됩니다 **sysname** 지정 해야 합니다.  
   
- [ **@parameter_schema =** ] **'***parameter_schema***'**  
- 이 수집기 유형의 XML 스키마입니다. *parameter_schema* 됩니다 **xml** 이며 특정 수집기 유형에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
+`[ @parameter_schema = ] 'parameter_schema'` 이 수집기 유형에 대 한 XML 스키마가입니다. *parameter_schema* 됩니다 **xml** 이며 특정 수집기 유형에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
   
- [ **@collection_package_id =** ] *collection_package_id*  
- 컬렉션 집합에 사용되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* 됩니다 **uniqueidentifer** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *collection_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @collection_package_id = ] collection_package_id` 가리키는 고유한 로컬 식별자를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에서 사용 하는 컬렉션 패키지 있습니다. *collection_package_id* 됩니다 **uniqueidentifer** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *collection_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
- [ **@upload_package_id =** ] *upload_package_id*  
- 컬렉션 집합에 사용되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 됩니다 **uniqueidentifier** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *upload_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @upload_package_id = ] upload_package_id` 가리키는 고유한 로컬 식별자를 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에서 사용 되는 패키지를 업로드 합니다. *upload_package_id* 됩니다 **uniqueidentifier** 이며 반드시 지정 해야 합니다. 에 대 한 값을 얻을 *upload_package_id*, msdb 데이터베이스에서 dbo.syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738321"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537185"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@collector_type_uid =** ] **'***collector_type_uid***'**  
- 수집기 유형의 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier** 경우 값이 있어야 하 고 *이름* NULL입니다.  
+`[ @collector_type_uid = ] 'collector_type_uid'` 수집기 형식에 대 한 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier** 경우 값이 있어야 하 고 *이름* NULL입니다.  
   
- [ **@name =** ] **'***name***'**  
- 수집기 유형의 이름입니다. *이름* 됩니다 **sysname** 하는 경우 값이 있어야 하 고 *collector_type_uid* NULL입니다.  
+`[ @name = ] 'name'` 수집기 유형의 이름이입니다. *이름* 됩니다 **sysname** 하는 경우 값이 있어야 하 고 *collector_type_uid* NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

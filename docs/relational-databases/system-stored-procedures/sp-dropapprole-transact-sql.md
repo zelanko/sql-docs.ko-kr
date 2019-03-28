@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5cc9f79ab588a042894c199564820d06d9585bf1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130603"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533390"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_dropapprole [@rolename = ] 'role'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'**_역할_**'**  
- 제거할 응용 프로그램 역할입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @rolename = ] 'role'` 제거할 응용 프로그램 역할이입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 현재 데이터베이스에 존재 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

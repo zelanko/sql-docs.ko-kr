@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530160"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@suser_sname=** ] **'***suser_sname***'**  
- 파티션을 정의하는 데 사용하는 SUSER_SNAME 값입니다. *suser_sname* 됩니다 **sysname**, 기본값은 NULL입니다. SUSER_SNAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
+`[ @suser_sname = ] 'suser_sname'` 파티션을 정의 하는 SUSER_SNAME 값 사용 됩니다. *suser_sname* 됩니다 **sysname**, 기본값은 NULL입니다. SUSER_SNAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
   
 > [!NOTE]  
 >  때 *suser_sname* 제공 됩니다 *host_name* NULL 이어야 합니다  
   
- [  **@host_name=** ] **'***host_name***'**  
- 파티션을 정의하는 데 사용하는 HOST_NAME 값입니다. *host_name* 됩니다 **sysname**, 기본값은 NULL입니다. HOST_NAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
+`[ @host_name = ] 'host_name'` 파티션을 정의 하는 HOST_NAME 값 사용 됩니다. *host_name* 됩니다 **sysname**, 기본값은 NULL입니다. HOST_NAME이 제공된 값을 확인하는 파티션으로만 결과 집합을 제한하려면 이 매개 변수를 제공하십시오.  
   
 > [!NOTE]  
 >  때 *suser_sname* 제공 됩니다 *host_name* NULL 이어야 합니다  
@@ -59,7 +56,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**파티션**|**int**|구독자 파티션을 식별합니다.|  
+|**partition**|**int**|구독자 파티션을 식별합니다.|  
 |**host_name**|**sysname**|값으로 필터링 되에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자는 함수입니다.|  
 |**suser_sname**|**sysname**|값으로 필터링 되에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자는 함수입니다.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|구독자의 파티션에 대한 필터링된 데이터 스냅숏의 위치입니다.|  

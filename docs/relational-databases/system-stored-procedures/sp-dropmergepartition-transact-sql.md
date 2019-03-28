@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73526621bcd2925b863feb45566ed652484a6d57
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 74837390afe358d4f9a12d4f98ea9d2e4166e146
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536095"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,14 +41,11 @@ sp_dropmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**] = **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication] = 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@suser_sname**=] **'**_suser_sname_**'**  
- 값인 합니다 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @suser_sname = ] 'suser_sname'` 값인 합니다 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *suser_sname* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@host_name** =] **'**_host_name_**'**  
- 값인 합니다 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @host_name = ] 'host_name'` 값인 합니다 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수 구독자에서 파티션 정의에 사용 합니다. *host_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

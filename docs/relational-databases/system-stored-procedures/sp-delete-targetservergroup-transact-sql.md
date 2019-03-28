@@ -18,12 +18,12 @@ ms.assetid: d8dd838e-64aa-419f-9ccb-ff04908cf3e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33fc8e5f4b454cd4780948291fa84af34154bac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23eb166d4e601f9e126c8b4254a08153664ace19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535155"
 ---
 # <a name="spdeletetargetservergroup-transact-sql"></a>sp_delete_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_delete_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name=** ] **'***name***'**  
- 제거할 대상 서버의 그룹의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 제거할 대상 서버 그룹의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

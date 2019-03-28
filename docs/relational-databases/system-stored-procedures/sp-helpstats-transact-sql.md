@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3b5a2d826fbafc5bc9f5bfc265794e7898a0d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640785"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534895"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@objname=**] **'***object_name***'**  
- 통계 정보를 제공할 테이블을 지정합니다. *object_name* 됩니다 **nvarchar(520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
+`[ @objname = ] 'object_name'` 통계 정보를 제공 하는 테이블을 지정 합니다. *object_name* 됩니다 **nvarchar(520)** 이며 null 일 수 없습니다. 한 부분 또는 두 부분으로 이루어진 이름을 지정할 수 있습니다.  
   
- [  **@results=**] **'***값***'**  
- 제공할 정보의 범위를 지정합니다. 유효한 항목은 **모든** 하 고 **STATS**합니다. **모든** 모든 인덱스와도 하며 작성 된 통계가 있는 열에 대 한 통계를 나열 합니다. **통계** 인덱스와 연결 되지 않은 통계만 나열 합니다. *값* 됩니다 **nvarchar(5)** 이며 기본값은 STATS입니다.  
+`[ @results = ] 'value'` 제공할 정보의 범위를 지정 합니다. 유효한 항목은 **모든** 하 고 **STATS**합니다. **모든** 모든 인덱스와도 하며 작성 된 통계가 있는 열에 대 한 통계를 나열 합니다. **통계** 인덱스와 연결 되지 않은 통계만 나열 합니다. *값* 됩니다 **nvarchar(5)** 이며 기본값은 STATS입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 345b7324b66e10a8117e24d4a573c2011c47abda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190943"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530905"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 열에 전체 텍스트 검색 사용
   XML 값의 내용을 인덱싱하지만 XML 태그는 무시하는 전체 텍스트 인덱스를 XML 열에 만들 수 있습니다. 요소 태그는 토큰 경계로 사용됩니다. 다음 항목이 인덱싱됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48190943"
   
 2.  그런 다음 XML 열에서 XML 인덱스를 사용하는 해당 XML 값을 쿼리합니다.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>예제: 전체 텍스트 검색을 XML 쿼리와 결합  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>예: 전체 텍스트 검색과 XML 쿼리 조합  
  XML 열에 전체 텍스트 인덱스를 만든 후 다음 쿼리는 XML 값에 책 제목 중 "custom"이라는 단어가 포함되어 있는지 확인합니다.  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  또한 전체 텍스트 검색은 단어 형태소 분석을 사용하지만 XQuery **contains()** 는 리터럴 일치 검색입니다. 이러한 차이점은 다음 예에서 확인할 수 있습니다.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>예제: 형태소 분석을 사용하여 XML 값에서 전체 텍스트 검색  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>예: 형태소 분석을 사용하여 XML 값에서 전체 텍스트 검색  
  이전 예에서 수행된 XQuery **contains()** 검사는 일반적으로 제거할 수 없습니다. 다음 쿼리를 살펴보십시오.  
   
 ```  

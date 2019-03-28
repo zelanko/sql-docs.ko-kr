@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594352"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534425"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'***역할***'**  
- 현재 데이터베이스에 있는 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 은 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보 반환 됩니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에서 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 현재 데이터베이스에 존재 해야 합니다. 하는 경우 *역할* 은 지정 하지 않으면 현재 데이터베이스의 모든 역할에 대 한 정보 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727701"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534025"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@objname=** ] **'***name***'**  
- 사용자 정의 테이블이나 뷰의 정식 이름 또는 정식이 아닌 이름입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 는 **nvarchar(776)**, 기본값은 없음입니다.  
+`[ @objname = ] 'name'` 사용자 정의 테이블 또는 뷰의 정규화 되거나 정규화 되지 않은 이름이입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 는 **nvarchar(776)**, 기본값은 없음입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

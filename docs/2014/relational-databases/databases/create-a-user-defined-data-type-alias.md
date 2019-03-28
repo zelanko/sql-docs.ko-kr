@@ -15,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768825"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530215"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "52768825"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 시스템이 제공하는 `varchar` 데이터 형식을 기반으로 데이터 형식 별칭을 만듭니다. `ssn` 데이터 형식 별칭은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

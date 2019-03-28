@@ -18,12 +18,12 @@ ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 622a0eafad0c4b029c0fd9512c25defa63229fc0
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 60968c70a6b47b53ad0edb38d8245cbcc883bf26
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169363"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537925"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_name=**] **'**_테이블\_이름_**'**  
- 전체 텍스트 인덱스 정보를 요청한 대상이 되는 한 부분 또는 두 부분으로 구성된 테이블입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 하는 경우 *table_name* 를 생략 하면 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
+`[ @table_name = ] 'table\_name'` 전체 텍스트 인덱스 정보를 요청한 대상 하나 또는 두 부분 구성 테이블 이름이입니다. *table_name* 됩니다 **nvarchar(517)**, 기본값은 NULL입니다. 하는 경우 *table_name* 를 생략 하면 모든 전체 텍스트 인덱싱된 테이블에 대 한 전체 텍스트 인덱스 열 정보가 검색 됩니다.  
   
- [  **@column_name=**] **'**_열\_이름_**'**  
- 전체 텍스트 인덱스 메타데이터를 요청한 열의 이름입니다. *column_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *column_name* 이 생략 되거나 NULL에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 열 정보가 반환 됩니다 *table_name*합니다. 하는 경우 *table_name* 생략 하거나 NULL 인 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
+`[ @column_name = ] 'column\_name'` 전체 텍스트 인덱스 메타 데이터를 요청한 열의 이름이입니다. *column_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *column_name* 이 생략 되거나 NULL에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 열 정보가 반환 됩니다 *table_name*합니다. 하는 경우 *table_name* 생략 하거나 NULL 인 데이터베이스의 모든 테이블에 대 한 전체 텍스트 인덱싱된 열 마다 전체 텍스트 인덱스 열 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

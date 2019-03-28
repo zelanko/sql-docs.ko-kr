@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, BINARY BASE64 option
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 591f2c00534f00529870b4eaa3742eef886d8e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1bda0167e1e55c3ded715de96027a153ec5a65de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533765"
 ---
 # <a name="use-the-binary-base64-option"></a>BINARY BASE64 옵션 사용
   쿼리에서 BINARY BASE64 옵션을 지정하면 이진 데이터가 base64 인코딩 형식으로 반환됩니다. 기본적으로 BINARY BASE64 옵션이 지정되지 않은 경우 AUTO 모드는 이진 데이터의 URL 인코딩을 지원합니다. 즉, 이진 데이터 대신 쿼리가 실행된 데이터베이스의 가상 루트의 상대 URL에 대한 참조가 반환됩니다. 이 참조를 사용하면 후속 작업에서 SQLXML ISAPI dbobject 쿼리를 사용하여 실제 이진 데이터를 액세스할 수 있습니다. 쿼리는 이미지를 식별하기 위해 기본 키 열과 같은 정보를 충분히 제공해야 합니다.  

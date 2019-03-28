@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368125"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533975"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
   XML 인덱스를 `xml` 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  

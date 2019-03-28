@@ -16,12 +16,12 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14357c7700980a1e3cc241d2e6b300e830aa4319
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535895"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +38,23 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@optname =**] **'***option_name***'**  
- 쿼리할 복제 옵션의 이름입니다. *option_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @optname = ] 'option_name'` 쿼리할 복제 옵션의 이름이입니다. *option_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**트랜잭션**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
-|**병합**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
+|**transactional**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
+|**merge**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
 |NULL(기본값)|결합 집합이 반환되지 않습니다.|  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|복제 옵션의 이름이며 다음 중 하나입니다.<br /><br /> **트랜잭션**<br /><br /> **병합**|  
+|**optname**|**sysname**|복제 옵션의 이름이며 다음 중 하나입니다.<br /><br /> **transactional**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**수정 버전**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

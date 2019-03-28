@@ -1,5 +1,5 @@
 ---
-title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
+title: '예: XMLTEXT 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537355"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
-  사용 하 여 오버플로 열의 데이터 주소를 지정 하는 방법을 보여 주는이 예제는 `XMLTEXT` 지시문을 `SELECT` EXPLICIT 모드를 사용 하 여 문을 합니다.  
+  이 예에서는 EXPLICIT 모드를 사용하는 `SELECT` 문에서 `XMLTEXT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  
   
  `Person` 테이블을 검토해 보면 이 테이블에는 XML 문서 중 사용되지 않은 부분을 저장하는 `Overflow` 열이 있는 것을 볼 수 있습니다.  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f386c1b913efb9aa84bb96518670b96236bc5325
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067580"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530934"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>정규 형식 및 패턴 제한 사항
   XSD 패턴 패싯을 사용하면 단순 유형의 어휘 영역을 제한할 수 있습니다. 어휘 표현이 둘 이상 있는 형식에 패턴 제한을 적용한 경우 일부 값으로 인해 유효성 검사 후 예기치 않은 동작이 발생할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48067580"
   
  이 문제를 방지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 값의 정규 형식에서 패턴 제한 사항을 위반하기 때문에 다시 삽입할 수 없는 값이 포함된 XML 문서를 거부합니다. 예를 들어 "33.000"이라는 값은 "33 **.0+"라는 패턴 제한이 있는** xs:decimal\\에서 파생된 형식에 대해 유효성이 확인되지 않습니다. "33.000"은 이 패턴을 준수하지만 정규 형식인 "33"은 이 패턴을 준수하지 않습니다.  
   
- 따라서 주의 해야 기본 형식에서 파생 된 형식에 패턴 패싯을 적용할 때: `boolean`, `decimal`, `float`, `double`를 `dateTime`를 `time`를 `date`, `hexBinary` 및 `base64Binary`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 경고가 발생됩니다.  
+ 따라서 `boolean`, `decimal`, `float`, `double`, `dateTime`, `time`, `date`, `hexBinary`, 및 `base64Binary`의 기본 형식에서 파생된 형식에 패턴 패싯을 적용할 때 주의해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 경고가 발생됩니다.  
   
  부동 소수점 값을 부정확하게 직렬화할 경우 비슷한 문제가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 부동 소수점 직렬화 알고리즘으로 인해 유사한 값들이 동일한 정규 형식을 공유할 수 있습니다. 부동 소수점 값을 직렬화하고 다시 삽입하면 값이 약간 변경될 수도 있습니다. 드물지만 이로 인해 값을 다시 삽입한 경우 값이 해당 형식에 대해 **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**또는 **maxExclusive**와 같은 패싯 중 하나를 위반할 수 있습니다. 이 문제를 방지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 직렬화 및 다시 삽입할 수 없는 `xs:float` 또는 `xs:double` 에서 파생되는 형식의 값을 모두 거부합니다.  
   

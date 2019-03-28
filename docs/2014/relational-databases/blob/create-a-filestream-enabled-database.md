@@ -12,12 +12,12 @@ ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4cd07bd559c1f21eb6ea055a6c132437a63a4b71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65de151b2ea2bb59330bae0fa94c9e15d67e4a47
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533545"
 ---
 # <a name="create-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 만들기
   이 항목에서는 FILESTREAM을 지원하는 데이터베이스를 만드는 방법을 보여 줍니다. FILESTREAM이 특별한 유형의 파일 그룹을 사용하므로 데이터베이스를 만들 때 하나 이상의 파일 그룹에 대해 CONTAINS FILESTREAM 절을 지정해야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48184653"
 ## <a name="example"></a>예제  
  다음 코드 예에서는 `Archive`라는 데이터베이스를 만듭니다. 이 데이터베이스는 3개의 파일 그룹 `PRIMARY`, `Arch1`및 `FileStreamGroup1`을 포함합니다. `PRIMARY` 및 `Arch1` 은 FILESTREAM 데이터를 포함할 수 없는 일반 파일 그룹이고, `FileStreamGroup1` 은 `FILESTREAM` 파일 그룹입니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE Archive   
 ON  
 PRIMARY ( NAME = Arch1,  

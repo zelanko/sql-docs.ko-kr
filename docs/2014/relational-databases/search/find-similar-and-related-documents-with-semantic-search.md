@@ -12,19 +12,19 @@ ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb5e3618c2d4770a9c4604c772ba572b1b40b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531025"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
   통계적 의미 체계 인덱싱을 위해 구성된 열에서 유사하거나 관련된 문서 또는 텍스트 값을 찾고 유사하거나 연관된 정도에 관한 정보를 찾는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsQuerySimilar"></a> 유사 하거나 관련 된 문서 찾기  
   
-###  <a name="HowToQuerySimilar"></a> 방법: SEMANTICSIMILARITYTABLE 사용 하 여 유사 하거나 관련 된 문서 찾기  
+###  <a name="HowToQuerySimilar"></a> 어떻게: SEMANTICSIMILARITYTABLE을 사용하여 유사하거나 관련된 문서 찾기  
  특정 열에서 유사하거나 관련된 문서를 식별하려면 [semanticsimilaritytable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 함수를 쿼리합니다.  
   
  **SEMANTICSIMILARITYTABLE** 은 지정된 열의 내용이 지정된 문서와 의미상 유사한 0개 이상의 행으로 구성된 테이블을 반환합니다. SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름처럼 참조할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48170393"
 > [!IMPORTANT]  
 >  대상 열에는 전체 텍스트 및 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
-###  <a name="HowToIdentifySimilar"></a> 예: 다른 문서와 유사한 상위 문서 찾기  
+###  <a name="HowToIdentifySimilar"></a> 예제: 다른 문서와 유사한 상위 문서 찾기  
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 HumanResources.JobCandidate 테이블에서 *@CandidateID* 에 지정된 입사 지원자와 유사한 상위 10명의 입사 지원자를 검색합니다.  
   
 ```scr  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> 문서가 유사 하거나 관련 된 방법에 대 한 정보 찾기  
   
-###  <a name="HowToQuerySimilarity"></a> 방법: 문서 유사성 또는 연관성 SEMANTICSIMILARITYDETAILSTABLE을 사용 하 여 하는 방법에 대 한 정보 찾기  
+###  <a name="HowToQuerySimilarity"></a> 어떻게: SEMANTICSIMILARITYDETAILSTABLE을 사용하여 문서가 유사하거나 연관된 정도에 대한 정보 찾기  
  문서 유사성 또는 연관성을 확인하는 키 구에 대한 정보를 가져오려면 [semanticsimilaritydetailstable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 함수를 쿼리합니다.  
   
  **SEMANTICSIMILARITYDETAILSTABLE**은 의미상 유사한 내용의 두 문서(원본 문서 및 대응 문서) 간에 공통적인 키 구가 있는 0개 이상의 행으로 구성된 테이블을 반환합니다. SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름처럼 참조할 수 있습니다.  
@@ -63,10 +63,10 @@ GO
 > [!IMPORTANT]  
 >  대상 열에는 전체 텍스트 및 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
-###  <a name="HowToSimilarPhrases"></a> 예: 문서 간에 유사한 상위 키 구 찾기  
+###  <a name="HowToSimilarPhrases"></a> 예제: 문서 간에 유사한 상위 키 구 찾기  
  다음 예에서는 AdventureWorks2012 예제 데이터베이스의 **HumanResources.JobCandidate** 테이블에서 지정된 입사 지원자 간에 유사성 점수가 가장 높은 5개의 키 구를 검색합니다.  
   
-```tsql  
+```sql  
 SELECT TOP(5) KEY_TBL.keyphrase, KEY_TBL.score  
 FROM SEMANTICSIMILARITYDETAILSTABLE  
     (  

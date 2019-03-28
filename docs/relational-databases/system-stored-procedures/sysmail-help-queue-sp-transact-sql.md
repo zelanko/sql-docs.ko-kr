@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590597"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531705"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@queue_type** =] **'**_queue_type_**'**  
- 로 지정 된 유형의 전자 메일을 삭제 하는 선택적 인수를 *queue_type*합니다. *queue_type* 됩니다 **nvarchar(6)** 기본값은 없습니다. 유효한 항목은 **mail** 하 고 **상태**합니다.  
+`[ @queue_type = ] 'queue_type'` 로 지정 된 유형의 전자 메일을 삭제 하는 선택적 인수를 *queue_type*합니다. *queue_type* 됩니다 **nvarchar(6)** 기본값은 없습니다. 유효한 항목은 **mail** 하 고 **상태**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -53,8 +52,8 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**queue_type**|**nvarchar(6)**|큐의 유형입니다. 가능한 값은 **mail** 하 고 **상태**합니다.|  
 |**length**|**int**|지정된 큐의 메일 항목 수입니다.|  
 |**state**|**nvarchar(64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성), **NOTIFIED** (큐 되었습니다 notified), 및 **RECEIVES_OCCURRING** (큐는 수신).|  
-|**last_empty_rowset_time**|**날짜/시간**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
-|**last_activated_time**|**날짜/시간**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_empty_rowset_time**|**DATETIME**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
+|**last_activated_time**|**DATETIME**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
   
 ## <a name="remarks"></a>Remarks  
  데이터베이스 메일 문제를 해결할 때 사용할 **sysmail_help_queue_sp** 큐에 있는 항목 수를 확인 하려면 마지막 및 큐의 상태를 활성화 합니다.  

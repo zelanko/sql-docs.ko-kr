@@ -16,12 +16,12 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535225"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
+`[ @publisher = ] 'publisher'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 반드시 게시가 이미 존재해야 합니다.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
  구독의 장애 조치(failover) 모드입니다. *failover_mode* 됩니다 **nvarchar(10)** 이며 다음이 값 중 하나일 수 있습니다.  
@@ -57,13 +54,12 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |값|Description|  
 |-----------|-----------------|  
 |**즉시** 또는 **동기화**|구독자에서 수행된 데이터 변경 내용을 즉시 게시자로 대량 복사합니다.|  
-|**큐에 대기**|데이터 수정에 저장 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐입니다.|  
+|**queued**|데이터 수정에 저장 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐입니다.|  
   
 > [!NOTE]  
 >  MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)는 더 이상 사용되지 않으며 지원되지 않습니다.  
   
- [ **@override**=] *재정의*  
- 내부적으로만 사용됩니다.  
+`[ @override = ] override` 내부 전용입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +70,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_setreplfailovermode**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Switch Between Update Modes for an Updatable Transactional Subscription](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

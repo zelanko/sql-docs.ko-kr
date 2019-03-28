@@ -16,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535924"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,29 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@type** =] **'***형식***'**  
- 등록되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 사용자 지정 저장된 프로시저 또는 스크립트의 유형을 등록할 수 있습니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
-|**업데이트**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
+|**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거의 끝에 실행되는 스크립트입니다.|  
   
- [ **@value**=] **'***값***'**  
- 등록되는 저장 프로시저의 이름 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 이름과 정규화된 경로입니다. *값* 됩니다 **nvarchar(1024)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 저장된 프로시저 또는 이름과 정규화 된 경로 이름의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 등록 되는 스크립트 파일입니다. *값* 됩니다 **nvarchar(1024)**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  NULL을 지정 *값*매개 변수는 이전에 등록 된 스크립트를 실행 하는 것은 등록이 취소 됩니다 [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)합니다.  
   
  때 값 *형식* 됩니다 **custom_script**를의 전체 경로 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일이 합니다. 그렇지 않으면 *값* 등록 된 저장된 프로시저의 이름 이어야 합니다.  
   
- [ **@publication**=] **'***게시***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 등록되는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **NULL**합니다.  
+`[ @publication = ] 'publication'` 등록 되는 사용자 지정 저장 프로시저 또는 스크립트 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **NULL**합니다.  
   
- [ **@article**=] **'***문서***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 등록되는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **NULL**합니다.  
+`[ @article = ] 'article'` 사용자 지정 저장된 프로시저 또는 스크립트가 등록 되는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **NULL**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

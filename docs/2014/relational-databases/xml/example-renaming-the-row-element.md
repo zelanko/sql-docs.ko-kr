@@ -1,5 +1,5 @@
 ---
-title: '예제: &lt;row&gt; 요소 이름 바꾸기 | Microsoft 문서'
+title: '예: 이름 바꾸기는 &lt;행&gt; 요소 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92308ee94df30ad14b752b6cd55877dc784ab22b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532138"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>예제: &lt;row&gt; 요소 이름 바꾸기
+# <a name="example-renaming-the-ltrowgt-element"></a>예: 이름 바꾸기는 &lt;행&gt; 요소
   결과 집합의 각 행에 대해 RAW 모드는 `<row>`요소를 생성합니다. 이 쿼리에 표시된 것과 같이 RAW 모드에 선택적 인수를 지정하여 선택적으로 이 요소에 다른 이름을 지정할 수 있습니다. 이 쿼리는 행 집합의 각 행에 대해 <`ProductModel`> 요소를 반환합니다.  
   
 ## <a name="example"></a>예제  

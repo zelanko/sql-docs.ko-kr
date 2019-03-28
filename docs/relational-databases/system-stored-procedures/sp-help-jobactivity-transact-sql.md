@@ -18,12 +18,12 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763261"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538519"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] *job_id*  
- 작업 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@session_id** = ] *session_id*  
- 정보를 보고할 세션 ID입니다. *session_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @session_id = ] session_id` 정보를 보고할 세션 id입니다. *session_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

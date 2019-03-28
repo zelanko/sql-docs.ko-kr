@@ -16,12 +16,12 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1dc9bdb903b6aaa7bf3ee22c1f70a36dd7b3ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782995"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534135"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** = ] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
   
- [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 ALL을 사용 하 여 합니다.  
   
- [ **@upload_first** =] **'***upload_first***'**  
- 구독을 다시 초기화하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
+`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -70,7 +66,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_reinitmergepullsubscription**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

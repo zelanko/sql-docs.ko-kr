@@ -13,12 +13,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cc0552791f64e39ec3dc83b419d6db6884106780
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368766"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536075"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
   이 항목에서는 **또는**을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]max worker threads[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **max worker threads** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 사용할 수 있는 작업자 스레드 수를 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 운영 체제의 네이티브 스레드 서비스를 사용하여 하나 이상의 스레드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 각 네트워크를 동시에 지원하고 또 다른 스레드가 데이터베이스 검사점을 처리하고 스레드 풀이 모든 사용자를 처리하도록 합니다. **max worker threads** 의 기본값은 0입니다. 이 값을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 시작할 때 작업자 스레드 수가 자동으로 구성됩니다. 기본 설정은 대부분의 시스템에 적합합니다. 그러나 시스템 구성에 따라 **max worker threads** 를 특정 값으로 설정하면 성능이 향상되기도 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "53368766"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [Max worker threads 옵션을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [최대 작업자 스레드 수 옵션을 구성한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -127,7 +127,7 @@ WHERE s.is_user_process = 0;
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `max worker threads` 옵션을 `900`으로 구성하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -143,7 +143,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 최대 작업자 스레드 수 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 최대 작업자 스레드 수 옵션을 구성한 후  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 다시 시작할 필요 없이 변경 사항이 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

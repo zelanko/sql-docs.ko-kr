@@ -1,5 +1,5 @@
 ---
-title: sp_msx_set_account (TRANSACT-SQL) | Microsoft Docs
+title: sp_msx_set_account (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627941"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533255"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@credential_name=** ] **'***credential_name***'**  
- 마스터 서버에 로그인하는 데 사용할 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
+`[ @credential_name = ] 'credential_name'` 마스터 서버에 로그인 하는 데 자격 증명의 이름입니다. 제공된 이름은 기존 자격 증명의 이름이어야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
- [ **@credential_id=** ] *credential_id*  
- 마스터 서버에 로그인하는 데 사용할 자격 증명의 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
+`[ @credential_id = ] credential_id` 마스터 서버에 로그인 하는 데 자격 증명에 대 한 식별자입니다. 식별자는 기존 자격 증명의 식별자여야 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

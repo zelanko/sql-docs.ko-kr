@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9a24c843ed45a42fe4072b47c5642d81520a75e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214142"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533985"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>인수
 
-[  **@name =** ] **'***module_name***'**   
-저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 는 `nvarchar`, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
+`[ @name = ] 'module_name'` 저장된 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거 이름이입니다. *module_name* 는 CLR (공용 언어 런타임) 저장 프로시저 또는 CLR 함수 일 수 없습니다. *module_name* 스키마 바인딩할 수 없습니다. *module_name* 는 `nvarchar`, 기본값은 없습니다. *module_name* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-[  **@namespace =** ] **'** < 클래스 > **'**   
-지정된 모듈의 클래스입니다. 때 *module_name* 이 DDL 트리거인 경우 `<class>` 필요 합니다. `<class>`가 `nvarchar(20)`인 경우 유효한 입력은 `DATABASE_DDL_TRIGGER` 고 `SERVER_DDL_TRIGGER`입니다.    
+`[ @namespace = ] ' < class > '` 지정된 된 모듈의 클래스가입니다. 때 *module_name* 이 DDL 트리거인 경우 `<class>` 필요 합니다. `<class>`가 `nvarchar(20)`인 경우 유효한 입력은 `DATABASE_DDL_TRIGGER` 고 `SERVER_DDL_TRIGGER`입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -156,7 +154,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>관련 항목: 
+## <a name="see-also"></a>관련 항목 
 
 [상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted 마법사](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

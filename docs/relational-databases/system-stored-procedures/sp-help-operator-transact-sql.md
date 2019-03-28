@@ -18,12 +18,12 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733837"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534385"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@operator_name=** ] **'***operator_name***'**  
- 운영자 이름입니다. *operator_name* 됩니다 **sysname**합니다. 하는 경우 *operator_name* 은 지정 하지 않으면 모든 연산자에 대 한 정보 반환 됩니다.  
+`[ @operator_name = ] 'operator_name'` 연산자 이름입니다. *operator_name* 됩니다 **sysname**합니다. 하는 경우 *operator_name* 은 지정 하지 않으면 모든 연산자에 대 한 정보 반환 됩니다.  
   
- [ **@operator_id=** ] *operator_id*  
- 정보를 요청한 운영자의 ID입니다. *operator_id*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @operator_id = ] operator_id` 에 대 한 정보를 요청한 운영자의 id. *operator_id*됩니다 **int**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *operator_id* 하거나 *operator_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  

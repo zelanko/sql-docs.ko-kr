@@ -18,12 +18,12 @@ ms.assetid: ddace1cc-ff23-4b61-8efb-8ded3df438bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8d4d4f2deb5c81ff737251ea39422567b4d0a9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc78d8620bdb4f8b028bc188f115ed3f1f1d2318
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667567"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537915"
 ---
 # <a name="spsyspolicysetconfigenabled-transact-sql"></a>sp_syspolicy_set_config_enabled(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@value=** ] *값*  
- 정책 기반 관리 사용 여부를 결정합니다. *값* 됩니다 **sqlvariant**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @value = ] value` 정책 기반 관리 사용 되는지 여부를 결정 합니다. *값* 됩니다 **sqlvariant**, 이며 다음 값 중 하나일 수 있습니다.  
   
 -   0(또는 'false') = 사용 안 함  
   
@@ -57,7 +56,7 @@ sp_syspolicy_set_config_enabled [ @value = ] value
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 정책 기반 관리를 사용하도록 설정합니다.  

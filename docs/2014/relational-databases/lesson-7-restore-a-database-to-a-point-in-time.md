@@ -11,12 +11,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056663"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532565"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>8단원: Microsoft Azure Storage에 데이터베이스 복원
   이 단원에서는 로컬로 백업 파일을 만들고 Microsoft Azure Storage에 복원하는 방법을 배웁니다. 온-프레미스나 Windows Azure의 가상 컴퓨터에 데이터베이스가 있을 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48056663"
   
 2.  새로 만든 데이터베이스에 연결된 경우 쿼리 창을 열고 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +53,7 @@ ms.locfileid: "48056663"
   
 3.  다음 문을 복사하여 쿼리 창에서 실행합니다.  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

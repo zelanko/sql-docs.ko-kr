@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763083"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536785"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@maxtrans=** ] *max_trans*  
- 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 됩니다 **int** 이며 기본값은 500입니다.  
+`[ @maxtrans = ] max_trans` 각 검색 주기에서 처리할 수 있는 트랜잭션의 최대 수입니다. *max_trans* 됩니다 **int** 이며 기본값은 500입니다.  
   
- [  **@maxscans=** ] *max_scans*  
- 로그에서 모든 행을 추출하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
+`[ @maxscans = ] max_scans` 로그에서 모든 행을 추출 하기 위해 실행할 검색 주기의 최대 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
   
- [  **@continuous=** ] *연속*  
- 저장된 프로시저는 단일 검색 주기 (0)를 실행 한 후 종료 하거나 계속 실행 하 여 지정 된 시간에 대 한 일시 중지 해야 하는지 여부를 나타냅니다 *polling_interval* 종료할지 검색 주기 (1) 전에 합니다. *지속적인* 됩니다 **tinyint** 이며 기본값은 0입니다.  
+`[ @continuous = ] continuous` 저장된 프로시저는 단일 검색 주기 (0)를 실행 한 후 종료 하거나 계속 실행 하 여 지정 된 시간에 대 한 일시 중지 해야 하는지 여부를 나타냅니다 *polling_interval* 종료할지 검색 주기 (1) 전에 합니다. *지속적인* 됩니다 **tinyint** 이며 기본값은 0입니다.  
   
- [  **@pollinginterval=** ] *polling_interval*  
- 로그 검색 주기 사이의 시간(초)입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 0입니다.  
+`[ @pollinginterval = ] polling_interval` 로그 검색 주기 사이의 시간 (초) 수입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 0입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

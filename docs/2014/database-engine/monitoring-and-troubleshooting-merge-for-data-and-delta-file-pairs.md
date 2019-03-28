@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075283"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537715"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결
   메모리 내 OLTP는 병합 정책을 사용하여 인접한 데이터 및 델타 파일 쌍을 자동으로 병합합니다. 병합 작업은 해제할 수 없습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48075283"
   
  다음 쿼리를 사용하여 데이터 및 델타 파일에 대한 정보를 검색합니다.  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -41,7 +41,7 @@ order by file_type_desc, upper_bound_tsn
   
  병합되지 않은 세 개의 데이터 파일을 발견했다고 가정합니다. 첫 번째 데이터 파일의 `lower_bound_tsn` 값과 마지막 데이터 파일의 `upper_bound_tsn` 값을 사용하여 다음 명령을 실행할 수 있습니다.  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

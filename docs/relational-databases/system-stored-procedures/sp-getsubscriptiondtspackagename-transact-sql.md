@@ -16,12 +16,12 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df214182e992bf9616ddcb77a4f305ea4f47a4c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: df023ebc9e464026f3cf1ef7dbedced45ba78eca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530565"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'***게시***'**  
- 게시의 이름입니다. **'***발행물***'** 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. **'***발행물***'** 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber=**] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 는 sysname 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

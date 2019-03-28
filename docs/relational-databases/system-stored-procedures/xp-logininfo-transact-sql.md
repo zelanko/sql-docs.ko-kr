@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843831"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530025"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@acctname =** ] **'***account_name***'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 액세스할 수 있는 Windows 사용자 또는 그룹의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *account_name* 지정 하지 않으면에 로그인 권한을 부여 받은 모든 Windows 그룹 및 Windows 사용자가 명시적으로 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
+`[ @acctname = ] 'account_name'` Windows 사용자 또는 액세스 권한을 부여 하는 그룹의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *account_name* 지정 하지 않으면에 로그인 권한을 부여 받은 모든 Windows 그룹 및 Windows 사용자가 명시적으로 보고 됩니다. *account_name* 정규화 되어야 합니다. 정규화된 이름이어야 합니다.  
   
  **'모든'** | **'멤버가'**  
  계정에 대한 모든 사용 권한 경로에 관한 정보를 보고할 것인지 Windows 그룹의 멤버에 관한 정보를 보고할 것인지 지정합니다. **@option** 됩니다 **varchar(10)**, 기본값은 NULL입니다. 경우가 아니면 **모든** 지정, 첫 번째 권한 경로만 표시 됩니다.  
   
- [  **@privilege =** ] *variable_name*  
- 지정한 Windows 계정의 사용 권한 수준을 반환하는 출력 매개 변수입니다. *variable_name* 됩니다 **varchar(10)**, 'Not w'의 기본값입니다. 권한 수준을 반환 **사용자**를 **admin**, 또는 **null**합니다.  
+`[ @privilege = ] variable_name` 지정 된 Windows 계정의 권한 수준을 반환 하는 출력 매개 변수가입니다. *variable_name* 됩니다 **varchar(10)**, 'Not w'의 기본값입니다. 권한 수준을 반환 **사용자**를 **admin**, 또는 **null**합니다.  
   
  OUTPUT  
  인수를 지정 하면 *variable_name* 출력 매개 변수에서입니다.  
@@ -63,7 +61,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**계정 이름**|**sysname**|정규화된 Windows 계정 이름입니다.|  
 |**type**|**char(8)**|Windows 계정의 유형입니다. 유효한 값은 **사용자** 하거나 **그룹**합니다.|  
-|**권한**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**를 **사용자**, 또는 **null**합니다.|  
+|**privilege**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한입니다. 유효한 값은 **admin**를 **사용자**, 또는 **null**합니다.|  
 |**매핑된 로그인 이름**|**sysname**|사용자 권한이 있는 사용자 계정에 대 한 **로그인 이름에 매핑된** 따르면 매핑된 로그인 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 이름의 따른 매핑된 규칙을 사용 하 여이 계정으로 로그인 하기 전에 추가 될 때 사용 하려고 합니다.|  
 |**사용 권한 경로**|**sysname**|계정 액세스 권한을 부여한 그룹 멤버 자격입니다.|  
   

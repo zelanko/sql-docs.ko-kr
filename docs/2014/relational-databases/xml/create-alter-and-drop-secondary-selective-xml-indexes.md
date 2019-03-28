@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a792458362360a88b655ce50bc427e73dad1e0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130263"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536625"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>보조 선택적 XML 인덱스 만들기, 변경 및 삭제
   새 보조 선택적 XML 인덱스를 만들거나 기존 보조 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130263"
   
  다음 예에서는 `'pathabc'`경로에서 보조 선택적 XML 인덱스를 만듭니다. 인덱싱할 경로는 CREATE SELECTIVE XML INDEX 문을 사용하여 해당 경로를 만들 때 지정한 경로 이름으로 식별됩니다. 자세한 내용은 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql)를 참조하세요.  
   
-```tsql  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  
@@ -54,7 +54,7 @@ FOR
   
  다음 예에서는 보조 선택적 XML 인덱스를 삭제하고 다시 만들어 변경합니다.  
   
-```tsql  
+```sql  
 DROP INDEX filt_sxi_index_c  
   
 CREATE XML INDEX filt_sxi_index_c  
@@ -77,7 +77,7 @@ FOR
   
  다음 예에서는 DROP INDEX 문을 보여 줍니다.  
   
-```tsql  
+```sql  
 DROP INDEX ssxi_index  
 ON tbl  
 ```  

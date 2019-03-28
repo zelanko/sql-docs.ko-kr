@@ -16,12 +16,12 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808675"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531445"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **모든**합니다.  
   
- [  **@subscriber =** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 **모든**합니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 **모든**합니다.  
   
- [  **@subscriber_db =** ] **'***subscriber_db***'**  
- 구독자 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 **모든**합니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독자 데이터베이스의 이름이입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 **모든**합니다.  
   
- [  **@upload_first =** ] **'***upload_first***'**  
- 구독을 다시 초기화하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
+`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

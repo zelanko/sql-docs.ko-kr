@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213772"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535265"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 잠재적 오류를 감지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 진단 데이터 및 상태 정보를 캡처합니다. 이 프로시저는 반복 모드로 실행되며 주기적으로 결과를 보냅니다. 일반 연결 또는 DAC 연결에서 호출할 수 있습니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
- 저장 프로시저가 상태 정보를 보내기 위해 반복적으로 실행되는 시간 간격을 나타냅니다.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` 저장된 프로시저를 반복적으로 실행 상태 정보를 보내는 시간 간격을 나타냅니다.  
   
  *repeat_interval_in_seconds* 됩니다 **int** 기본값인 0 사용 하 여 합니다. 올바른 매개 변수 값은 0 또는 5보다 크거나 같은 값입니다. 전체 데이터를 반환하려면 저장 프로시저가 적어도 5초 간격으로 실행되어야 합니다. 반복 모드에서 실행되는 저장 프로시저의 최소값은 5초입니다.  
   
@@ -69,13 +68,13 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
--   **시스템**: 시스템 큐브 뷰에서 spinlock, 엄격한 처리 조건, 잠겨 있는 태스크, 페이지 폴트 및 CPU 사용에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **system**: 시스템 큐브 뷰에서 spinlock, 엄격한 처리 조건, 잠겨 있는 태스크, 페이지 폴트 및 CPU 사용에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **리소스**:  리소스 큐브 뷰에서 실제 및 가상 메모리, 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **resource**:  리소스 큐브 뷰에서 실제 및 가상 메모리, 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
 -   **query_processing**: 쿼리 처리 큐브 뷰에서 작업자 스레드, 태스크, 잠겨 있는 태스크, 대기 유형, CPU 사용량이 많은 세션 및 차단 태스크에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **io 하위 시스템은**: IO에 대한 데이터를 수집합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
+-   **io_subsystem**: IO에 대한 데이터를 수집합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
   
 -   **이벤트**: 오류 및 링 버퍼 예외, 메모리, 스케줄러 모니터, 버퍼 풀, spinlock에서 메모리 브로커에 대 한 링 버퍼 이벤트에 대 한 세부 정보를 포함 하 여 서버에 의해 기록 된 이벤트 데이터 및 저장된 프로시저를 통해 화면 수집 보안 및 연결 합니다. 이벤트는 항상 상태로 0을 표시합니다.  
   

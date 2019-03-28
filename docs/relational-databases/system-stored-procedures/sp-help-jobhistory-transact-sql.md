@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742201"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534435"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,59 +54,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 작업 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name=** ] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@step_id=** ] *step_id*  
- 단계 ID입니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 단계 id. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 ID입니다. *sql_message_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @sql_message_id = ] sql_message_id` 작업을 실행할 때 Microsoft SQL Server에서 반환한 오류 메시지의 id. *sql_message_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@sql_severity=** ] *sql_severity*  
- 작업을 실행할 때 Microsoft SQL Server에서 반환하는 오류 메시지의 심각도입니다. *sql_severity* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @sql_severity = ] sql_severity` 작업을 실행할 때 SQL Server에서 반환한 오류 메시지의 심각도 수준입니다. *sql_severity* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@start_run_date=** ] *start_run_date*  
- 작업이 시작된 날짜입니다. *start_run_date*됩니다 **int**, 기본값은 NULL입니다. *start_run_date* 해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
+`[ @start_run_date = ] start_run_date` 작업이 시작 된 날짜입니다. *start_run_date*됩니다 **int**, 기본값은 NULL입니다. *start_run_date* 해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
- [ **@end_run_date=** ] *end_run_date*  
- 작업이 완료된 날짜입니다. *end_run_date* 됩니다 **int**, 기본값은 NULL입니다. *end_run_date*해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
+`[ @end_run_date = ] end_run_date` 작업이 완료 된 날짜입니다. *end_run_date* 됩니다 **int**, 기본값은 NULL입니다. *end_run_date*해야 합니다. 양식에 입력 된 yyyymmdd 형식으로 여기서 YYYY는 4 자리 연도, MM은 두 자리 월, DD는 두 일입니다.  
   
- [ **@start_run_time=** ] *start_run_time*  
- 작업이 시작된 시간입니다. *start_run_time* 됩니다 **int**, 기본값은 NULL입니다. *start_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
+`[ @start_run_time = ] start_run_time` 작업이 시작 된 시간입니다. *start_run_time* 됩니다 **int**, 기본값은 NULL입니다. *start_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
- [ **@end_run_time=** ] *end_run_time*  
- 작업 실행이 완료된 시간입니다. *end_run_time* 됩니다 **int**, 기본값은 NULL입니다. *end_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
+`[ @end_run_time = ] end_run_time` 작업 실행이 완료 된 시간입니다. *end_run_time* 됩니다 **int**, 기본값은 NULL입니다. *end_run_time*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
- [ **@minimum_run_duration=** ] *minimum_run_duration*  
- 작업 완료에 필요한 최소 시간의 길이입니다. *minimum_run_duration* 됩니다 **int**, 기본값은 NULL입니다. *minimum_run_duration*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
+`[ @minimum_run_duration = ] minimum_run_duration` 최소 길이 작업의 완료에 대 한 시간입니다. *minimum_run_duration* 됩니다 **int**, 기본값은 NULL입니다. *minimum_run_duration*해야 합니다. 양식에 입력 된 HHMMSS, 여기서 HH는 하루 중 두 자리 시간, MM은이 분, 하루 중 SS는 두 자리 초입니다.  
   
- [ **@run_status=** ] *run_status*  
- 작업의 실행 상태입니다. *run_status* 됩니다 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @run_status = ] run_status` 작업의 실행 상태입니다. *run_status* 됩니다 **int**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0**|실패|  
 |**1**|성공|  
 |**2**|다시 시도(단계에만 적용됨)|  
-|**3**|취소됨|  
+|**3**|Canceled|  
 |**4**|메시지 처리 중|  
-|**5**|Unknown|  
+|**5**|알 수 없음|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- 작업 실행을 다시 시도해야 하는 최소 횟수입니다. *minimum_retries* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @minimum_retries = ] minimum_retries` 작업 실행을 다시 시도해 야 최소 횟수입니다. *minimum_retries* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@oldest_first=** ] *oldest_first*  
- 가장 오래된 작업에 대한 결과를 먼저 표시할지 여부입니다. *oldest_first* 됩니다 **int**, 기본값은 **0**, 최신 작업을 먼저 표시 하는 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
+`[ @oldest_first = ] oldest_first` 가장 오래 된 작업을 사용 하 여 결과 먼저 표시할지 여부입니다. *oldest_first* 됩니다 **int**, 기본값은 **0**, 최신 작업을 먼저 표시 하는 합니다. **1** 가장 오래 된 작업을 먼저 표시 합니다.  
   
- [ **@server=** ] **'***server***'**  
- 작업이 수행된 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` 작업이 수행 된 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
   
- [  **@mode=** ] **'***모드***'**  
- SQL Server 결과 집합의 모든 열을 출력 하는 여부는 (**전체**) 또는 열을 요약 합니다. *모드* 됩니다 **varchar(7)**, 기본값은 **요약**합니다.  
+`[ @mode = ] 'mode'` SQL Server 결과 집합의 모든 열을 출력 하는 여부는 (**전체**) 또는 열을 요약 합니다. *모드* 됩니다 **varchar(7)**, 기본값은 **요약**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

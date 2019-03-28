@@ -18,12 +18,12 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0274c825b18e1377e337b614068db7fc75c7a917
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732031"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537205"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@schedule_id=** ] *schedule_id*  
- 나열할 일정의 식별자입니다. *schedule_id* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_id = ] schedule_id` 나열할 일정의 식별자입니다. *schedule_id* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
   
- [ **@schedule_name=** ]  **'***schedule_name***'**  
- 나열할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_name = ] 'schedule_name'` 나열할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

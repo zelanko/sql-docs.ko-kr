@@ -18,12 +18,12 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724271"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538195"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@TextPtrValue=** ] *textptr_value*  
- 무효화될 행 내부 텍스트 포인터입니다. *textptr_value* 됩니다 **varbinary (** 16 **)**, 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 트랜잭션에서 모든 행 내부 텍스트 포인터를 무효화 합니다.  
+`[ @TextPtrValue = ] textptr_value` 행 내부 텍스트 포인터가 무효화 될입니다. *textptr_value* 됩니다 **varbinary (** 16 **)**, 기본값은 NULL입니다. NULL 인 경우 **sp_invalidate_textptr** 트랜잭션에서 모든 행 내부 텍스트 포인터를 무효화 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

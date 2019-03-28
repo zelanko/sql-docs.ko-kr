@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168798"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532145"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@job_type=** ] **'**_작업이\_형식_**'**  
- 추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** NULL 일 수 없습니다. 유효한 입력은 **'캡처'** 하 고 **'정리'** 합니다.  
+`[ @job_type = ] 'job\_type'` 추가할 작업 유형입니다. *job_type* 됩니다 **nvarchar(20)** NULL 일 수 없습니다. 유효한 입력은 **'캡처'** 하 고 **'정리'** 합니다.  
   
- [  **@start_job=** ] *start_job*  
- 작업이 추가된 후 바로 시작되어야 하는지 여부를 나타내는 플래그입니다. *start_job* 됩니다 **비트** 이며 기본값은 1입니다.  
+`[ @start_job = ] start_job` 추가 된 후에 즉시 작업을 시작할지 여부를 나타내는 플래그입니다. *start_job* 됩니다 **비트** 이며 기본값은 1입니다.  
   
- [ **@maxtrans** ] = *max_trans*  
- 각 검색 주기에서 처리할 최대 트랜잭션 수입니다. *max_trans* 됩니다 **int** 이며 기본값은 500입니다. 지정된 경우 값은 양의 정수여야 합니다.  
+`[ @maxtrans ] = max_trans` 각 검색 주기에서 처리할 수 있는 트랜잭션의 최대 수입니다. *max_trans* 됩니다 **int** 이며 기본값은 500입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *max_trans* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@maxscans** ] **=** _max\_검색_  
- 로그에서 모든 행을 추출하기 위해 실행할 최대 검색 주기 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
+`[ @maxscans ] = max\_scans_` 로그에서 모든 행을 추출 하기 위해 실행할 검색 주기의 최대 수입니다. *max_scans* 됩니다 **int** 이며 기본값은 10입니다.  
   
  *max_scan* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@continuous** ] **=** _연속_  
- 캡처 작업을 계속 실행(1)할지, 아니면 한 번만 실행(0)할지를 나타냅니다. *지속적인* 됩니다 **비트** 이며 기본값은 1입니다.  
+`[ @continuous ] = continuous_` 캡처 작업이 계속 실행 되는지 여부를 나타냅니다 (1), 아니면 한 번만 실행 (0). *지속적인* 됩니다 **비트** 이며 기본값은 1입니다.  
   
  때 *지속적인* = 1, 합니다 [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) 작업 로그를 검색 하 고 최대 처리 (*max_trans* \* *max_scans*) 트랜잭션입니다. 에 지정 된 초 기다립니다 *polling_interval* 다음 로그 검색을 시작 하기 전에 합니다.  
   
@@ -74,18 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *연속* 캡처 작업에 대해서만 유효 합니다.  
   
- [ **@pollinginterval** ] **=** _폴링\_간격_  
- 로그 검색 주기 사이의 시간(초)입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 5입니다.  
+`[ @pollinginterval ] = polling\_interval_` 로그 검색 주기 사이의 시간 (초) 수입니다. *polling_interval* 됩니다 **bigint** 이며 기본값은 5입니다.  
   
  *polling_interval* 는 캡처에만 사용할 경우 작업을 *연속* 1로 설정 됩니다. 지정된 경우 값은 음수가 아니어야 하고 24시간을 초과할 수 없습니다. 값 0이 지정된 경우 로그 검색 간에 대기 시간이 없습니다.  
   
- [ **@retention** ] **=** _보존_  
- 변경 테이블에 변경 데이터 행이 보관되는 시간(분)입니다. *보존* 됩니다 **bigint** 기본값은 4320 (72 시간)를 사용 하 여 합니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
+`[ @retention ] = retention_` 변경 데이터 행에 유지 되도록 하는 시간 (분) 테이블을 변경 합니다. *보존* 됩니다 **bigint** 기본값은 4320 (72 시간)를 사용 하 여 합니다. 최대값은 52494800(100년)입니다. 지정된 경우 값은 양의 정수여야 합니다.  
   
  *보존* 정리 작업에 대해서만 유효 합니다.  
   
- [  **@threshold =** ] **'**_삭제\_임계값_**'**  
- 정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 됩니다 **bigint** 이며 기본값은 5000입니다.  
+`[ @threshold = ] 'delete\_threshold'` 정리 시 단일 문을 사용 하 여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 됩니다 **bigint** 이며 기본값은 5000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

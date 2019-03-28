@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591407"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537175"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'**_게시 '_  
+ [**@publication=**] **'**_publication'_  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|빠른 계산 **sysindexes.rows**합니다. 사용한 행 계산은 [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 실제 테이블의 행 계산 보다 훨씬 빠릅니다. 그러나 때문 [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) 는 느리게 업데이트 행 개수가 정확 하지 않을 합니다.|  
 |**2** (기본값)|먼저 빠른 방법을 시도함으로써 조건부로 빠른 계산 방법을 수행합니다. 빠른 방법의 결과에 차이점이 있는 경우 전체 방법으로 전환합니다. 하는 경우 *expected_rowcount* 가 NULL이 저장된 프로시저 되 고 값을 가져오려면, 전체 그룹은 항상 사용 합니다.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 유효성 검사가 종료되면 배포 에이전트가 즉시 종료되어야 하는지 여부입니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 복제 에이전트가 종료 되지 않습니다. 하는 경우 **1**, 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 되었습니다.  
+`[ @shutdown_agent = ] shutdown_agent` 배포 에이전트가 종료 되어야 하는지 여부 즉시 유효성 검사 완료 시입니다. *shutdown_agent* 됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **0**, 복제 에이전트가 종료 되지 않습니다. 하는 경우 **1**, 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 되었습니다.  
   
- [ **@publisher** =] **'**_게시자_**'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 해서는 안에서 유효성 검사를 요청할 때를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833581"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538635"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@object_type =**] **'***object_type***'**  
- 반환할 정보 유형입니다. *object_type*됩니다 **char (9)**, 기본값은 없습니다. *object_type* 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고를 수 있습니다*를* 이거나 제공된 된 경고 이름을 담당 하는 연산자를 나열 하는 OPERATORS*합니다.*  
+`[ @object_type = ] 'object_type'` 반환할 정보의 형식입니다. *object_type*됩니다 **char (9)**, 기본값은 없습니다. *object_type* 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고를 수 있습니다*를* 이거나 제공된 된 경고 이름을 담당 하는 연산자를 나열 하는 OPERATORS*합니다.*  
   
- [ **@name =**]  **'***name***'**  
- 운영자 이름 (하는 경우 *object_type* is 연산자) 또는 경고 이름 (하는 경우 *object_type* 이 ALERTS 인). *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 운영자 이름 (하는 경우 *object_type* is 연산자) 또는 경고 이름 (하는 경우 *object_type* 이 ALERTS 인). *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@enum_type =**] **'***enum_type***'**  
- 합니다 *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*됩니다 **char(10)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
+`[ @enum_type = ] 'enum_type'` 합니다 *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*됩니다 **char(10)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -60,8 +57,7 @@ sp_help_notification
 |ALL|모든를 나열 합니다*object_types* 연관 되지 않은 포함 *이름*합니다.|  
 |TARGET|만 나열 합니다 *object_types* 제공 된 일치 *target_name*연결에 관계 없이*이름*.|  
   
- [  **@notification_method =**] *notification_method*  
- 반환할 알림 방법 열을 결정하는 숫자 값입니다. *notification_method* 됩니다 **tinyint**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @notification_method = ] notification_method` 반환할 알림 방법 열을 결정 하는 숫자 값입니다. *notification_method* 됩니다 **tinyint**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -70,8 +66,7 @@ sp_help_notification
 |**4**|NetSend:만 반환 합니다 **use_netsend** 열입니다.|  
 |**7**|All: 모든 열을 반환합니다.|  
   
- [ **@target_name =**] **'***target_name***'**  
- 검색할 경고 이름 (하는 경우 *object_type* 경고가) 또는 검색할 운영자 이름 (하는 경우 *object_type* is 연산자). *target_name* 경우에 필요 *enum_type* 대상입니다. *target_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @target_name = ] 'target_name'` 검색할 경고 이름 (하는 경우 *object_type* 경고가) 또는 검색할 운영자 이름 (하는 경우 *object_type* is 연산자). *target_name* 경우에 필요 *enum_type* 대상입니다. *target_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-valves"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

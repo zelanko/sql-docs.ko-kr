@@ -18,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706658"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533005"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@loginame=**] **'***로그인***'**  
- Windows 사용자 또는 그룹의 이름입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 모든 기존 Windows 사용자 이름 또는 형식에서 그룹이 될 수 있습니다 *컴퓨터 이름*\\*사용자나 도메인*\\*사용자*합니다.  
+`[ @loginame = ] 'login'` Windows 사용자 또는 그룹의 이름이입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 모든 기존 Windows 사용자 이름 또는 형식에서 그룹이 될 수 있습니다 *컴퓨터 이름*\\*사용자나 도메인*\\*사용자*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

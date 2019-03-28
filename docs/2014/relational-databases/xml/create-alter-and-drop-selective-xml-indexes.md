@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4bdab531db5e426b13f470b30d90eb16bfd6f93e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a95fa1c010197d0107c757198d9db7eaf8d3c42e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070187"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533755"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>선택적 XML 인덱스 만들기, 변경 및 삭제
   새 선택적 XML 인덱스를 만들거나 기존 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48070187"
   
  다음 예에서는 선택적 XML 인덱스를 만드는 구문을 보여 줍니다. 또한 이 예에서는 선택적 최적화 힌트를 사용하여 인덱싱할 경로를 설명하는 구문의 여러 변형도 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX sxi_index  
 ON Tbl(xmlcol)  
   
@@ -56,7 +56,7 @@ FOR(
   
  다음 예에서는 ALTER INDEX 문을 보여 줍니다. 이 문은 인덱스의 XQuery 부분에 `'/a/b/m'` 경로를 추가하고 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql) 항목의 예에서 만든 인덱스의 SQL 부분에서 `'/a/b/e'` 경로를 삭제합니다. 삭제할 경로는 해당 경로를 만들 때 지정한 경로 이름으로 식별됩니다.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -78,7 +78,7 @@ FOR
   
  다음 예에서는 DROP INDEX 문을 보여 줍니다.  
   
-```tsql  
+```sql  
 DROP INDEX sxi_index ON tbl  
 ```  
   

@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532585"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구(전체 복구 모델)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "48073133"
 ### <a name="examples"></a>예  
  다음 예에서는 트랜잭션 로그를 복원하여 `ListPriceUpdate`라는 표시된 트랜잭션에 나타냅니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  예를 들어 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 있는 분할된 데이터베이스를 생각해 볼 수 있습니다. 각 인스턴스에서 데이터베이스 이름은 `coyote`입니다. 먼저 모든 데이터베이스에 저장 프로시저(예: `sp_SetMark`)를 만듭니다.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  그런 다음 모든 데이터베이스에 표시를 삽입하는 트랜잭션을 포함하는 `sp_MarkAll` 저장 프로시저를 만듭니다. `sp_MarkAll` 을 실행할 수 있습니다.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

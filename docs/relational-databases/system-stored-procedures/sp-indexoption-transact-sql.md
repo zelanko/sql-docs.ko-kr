@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596421"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538575"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- 사용자 정의 테이블이나 인덱스의 정식 이름 또는 정식이 아닌 이름입니다. *table_or_index_name* 됩니다 **nvarchar(1035)**, 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` 사용자 정의 테이블이 나 인덱스의 정규화 되거나 정규화 되지 않은 이름이입니다. *table_or_index_name* 됩니다 **nvarchar(1035)**, 기본값은 없습니다. 정규화된 인덱스 또는 테이블 이름을 지정할 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 테이블 이름이 인덱스 없이 지정된 경우 지정된 옵션 값은 해당 테이블의 모든 인덱스에 대해 설정되며 테이블에 클러스터형 인덱스가 없는 경우 테이블 자체에 대해 설정됩니다.  
   
- [  **@OptionName =**] **'***option_name***'**  
- 인덱스 옵션 이름입니다. *option_name* 됩니다 **varchar(35)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
+`[ @OptionName = ] 'option_name'` 인덱스 옵션 이름이입니다. *option_name* 됩니다 **varchar(35)**, 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -60,8 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|TRUE로 설정된 경우 행 잠금을 사용하지 않습니다. FALSE인 경우 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.|  
 |**DisAllowPageLocks**|TRUE로 설정된 경우 페이지 잠금을 사용하지 않습니다. FALSE인 경우 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다.|  
   
- [  **@OptionValue =**] **'***값***'**  
- 지정 여부를 *option_name* 설정을 사용 하도록 설정 (TRUE, ON, yes 또는 1)은 사용 하지 않도록 설정 하거나 (FALSE, OFF, no 또는 0). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
+`[ @OptionValue = ] 'value'` 지정 여부를 *option_name* 설정을 사용 하도록 설정 (TRUE, ON, yes 또는 1)은 사용 하지 않도록 설정 하거나 (FALSE, OFF, no 또는 0). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0 초과(실패)  
@@ -81,7 +78,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   때 **AllowPageLocks** 옵션이 TRUE로 설정 되어 또는 **DisAllowPageLocks** 설정할지를 FALSE로 설정 힙에 적용 되 고 연결 된 비클러스터형 인덱스입니다.  
   
--   때 **AllowPageLocks** 옵션이 FALSE로 설정 하거나 **DisAllowPageLocks** 는 TRUE로 설정 된 설정이 적용 됩니다 비클러스터형 인덱스에 합니다. 즉, 비클러스터형 인덱스에서는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타적(X) 잠금이 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS,  IU  또는 IX)을 획득할 수 있습니다.  
+-   때 **AllowPageLocks** 옵션이 FALSE로 설정 하거나 **DisAllowPageLocks** 는 TRUE로 설정 된 설정이 적용 됩니다 비클러스터형 인덱스에 합니다. 즉, 비클러스터형 인덱스에서는 모든 페이지 잠금이 허용되지 않습니다. 힙에서는 페이지에 대한 공유(S), 업데이트(U) 및 배타적(X) 잠금이 허용되지 않습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 내부에서 사용하기 위해 의도 페이지 잠금(IS, IU 또는 IX)을 획득할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  

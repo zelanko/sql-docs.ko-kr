@@ -18,12 +18,12 @@ ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2705451273849e6eb3e7158c410590b6c9031c41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9993591bf1073ef5c72636571e9127496f3d3ee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733701"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535535"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name =** ] **'***name***'**  
- 이름을 바꿀 정책 범주의 이름입니다. *이름* 됩니다 **sysname**, 경우 지정 해야 합니다 *policy_category_id* NULL입니다.  
+`[ @name = ] 'name'` 이름을 바꿀 정책 범주의 이름이입니다. *이름* 됩니다 **sysname**, 경우 지정 해야 합니다 *policy_category_id* NULL입니다.  
   
- [ **@policy_category_id=** ] *policy_category_id*  
- 이름을 바꿀 정책 범주의 식별자입니다. *policy_category_id* 됩니다 **int**, 경우 지정 해야 합니다 *이름* NULL입니다.  
+`[ @policy_category_id = ] policy_category_id` 이름을 바꿀 정책 범주의 식별자가입니다. *policy_category_id* 됩니다 **int**, 경우 지정 해야 합니다 *이름* NULL입니다.  
   
- [ **@new_name=** ] **'***new_name***'**  
- 정책 범주의 새 이름이입니다. *new_name* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. NULL 또는 빈 문자열일 수 없습니다.  
+`[ @new_name = ] 'new_name'` 정책 범주의 새 이름이입니다. *new_name* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다. NULL 또는 빈 문자열일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -62,7 +59,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
  PolicyAdministratorRole 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 > [!IMPORTANT]  
->  자격 증명 승격할 수: PolicyAdministratorRole 역할의 사용자 수 서버 트리거를 만들고 인스턴스의 작업에 영향을 줄 수 있는 정책 실행을 예약 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]합니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
+>  가능한 자격 증명 승격: PolicyAdministratorRole 역할의 사용자는 서버 트리거를 만들고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 작업에 영향을 줄 수 있는 정책 실행을 예약할 수 있습니다. 예를 들어 PolicyAdministratorRole 역할의 사용자는 대부분의 개체가 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성되지 않도록 할 수 있는 정책을 만들 수 있습니다. 이렇게 자격 증명을 승격할 수 있기 때문에 PolicyAdministratorRole 역할은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성을 제어할 수 있도록 신뢰할 수 있는 사용자에게만 부여되어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 'Test Category 1'이라는 정책 범주의 이름을 'Test Category 2'로 바꿉니다.  

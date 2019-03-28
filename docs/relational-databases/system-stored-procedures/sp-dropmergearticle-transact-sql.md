@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125373"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531895"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=**] **'**_게시_**'**  
- 아티클을 삭제할 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 아티클을 삭제 하는 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'**_문서_**'**  
- 지정된 게시에서 삭제할 아티클의 이름입니다. *문서*됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 지정 된 병합 게시의 모든 기존 아티클을 제거 됩니다. 경우에 *문서* 됩니다 **모든**, 게시 여전히에서 삭제 해야 별도로 문서.  
+`[ @article = ] 'article'` 지정된 된 게시에서 삭제할 아티클의 이름이입니다. *문서*됩니다 **sysname**, 기본값은 없습니다. 하는 경우 **모든**, 지정 된 병합 게시의 모든 기존 아티클을 제거 됩니다. 경우에 *문서* 됩니다 **모든**, 게시 여전히에서 삭제 해야 별도로 문서.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- 이 저장 프로시저가 배포자에 연결되지 않고 실행되는지 여부를 표시합니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장된 프로시저는 배포자에 연결 하지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다.  
   
- [  **@reserved=**] *예약*  
- 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다.  
+`[ @reserved = ] reserved` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다.  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- 스냅숏 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏 무효화 하는 기능을 사용할지 설정 합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
  **1** 는 병합 아티클의 변경 하는 수단을 유효 하지 않게 스냅숏을 무효화 하는 경우, 값 및 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- 아티클 삭제로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 아티클 삭제로 기존 구독을 다시 초기화 해야 한다는 것을 승인 합니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 아티클의 아티클 삭제지 않습니다 하지 않는 구독을 다시 초기화 해야 합니다.  
   
  **1** 문서도 인해 기존 구독이 다시 초기화 해야 하는 삭제 하 고 구독을 다시 초기화할 수 있는 권한이 부여 의미 합니다.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 내부적으로만 사용됩니다.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 내부 전용입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

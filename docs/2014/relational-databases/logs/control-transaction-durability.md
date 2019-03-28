@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818355"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535185"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52818355"
  완전 내구성이 있는 트랜잭션은 클라이언트에 컨트롤을 반환하기 전에 디스크에 트랜잭션 로그를 기록합니다. 다음과 같은 경우 완전 내구성이 있는 트랜잭션을 사용해야 합니다.  
   
 -   시스템에서 데이터 손실을 허용할 수 없는 경우   
-    데이터 일부를 손실할 수 있는 경우에 대한 자세한 내용은 [데이터를 손실할 수는 경우](control-transaction-durability.md#bkmk_dataloss) 섹션을 참조하세요.  
+    데이터 일부를 손실할 수 있는 경우에 대한 자세한 내용은 [데이터를 손실할 수는 경우](#when-can-i-lose-data) 섹션을 참조하세요.  
   
 -   병목 현상의 원인이 트랜잭션 로그 쓰기 대기 시간이 아닌 경우  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52818355"
   
 ## <a name="how-to-control-transaction-durability"></a>트랜잭션 내구성을 제어하는 방법  
   
-###  <a name="bkmk_DbControl"></a> 데이터베이스 수준 제어  
+### <a name="database-level-control"></a>데이터베이스 수준 제어  
  DBA는 다음 문을 사용하여 사용자가 데이터베이스에서 지연된 트랜잭션 내구성을 사용할 수 있는지 여부를 제어할 수 있습니다. ALTER DATABASE를 사용하여 지연된 내구성 설정을 지정해야 합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
@@ -98,27 +98,27 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.  
   
  `ALLOWED`  
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](control-transaction-durability.md#compiledproccontrol) 및 [COMMIT 수준 제어 – Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol)을 참조하세요.  
+ 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 참조 [Atomic 블록 수준 제어-Natively Compiled Stored Procedures](#atomic-block-level-control---natively-compiled-stored-procedures) 하 고 [COMMIT 수준 제어-Transact SQL](#commit-level-control---t-sql) 자세한 내용은 합니다.  
   
  `FORCED`  
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 애플리케이션 코드를 변경하지 않으려는 경우에 유용합니다.  
   
-###  <a name="CompiledProcControl"></a> Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Atomic 블록 수준 제어-Natively Compiled Stored Procedures  
  다음 코드는 ATOMIC 블록 내로 이동합니다.  
   
-```tsql  
+```sql  
 DELAYED_DURABILITY = { OFF | ON }  
 ```  
   
  `OFF`  
- [기본값] DELAYED_DURABLITY = FORCED 데이터베이스 옵션을 적용하여 커밋이 비동기적이고 지연된 내구성을 갖는 경우를 제외하고 트랜잭션은 완전 내구성을 가집니다. 자세한 내용은 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 을 참조하세요.  
+ [기본값] DELAYED_DURABLITY = FORCED 데이터베이스 옵션을 적용하여 커밋이 비동기적이고 지연된 내구성을 갖는 경우를 제외하고 트랜잭션은 완전 내구성을 가집니다. 자세한 내용은 [Database level control](#database-level-control) 을 참조하세요.  
   
  `ON`  
- DELAYED_DURABLITY = DISABLED 데이터베이스 옵션을 적용하여 커밋이 동기적이고 완전 내구성이 있는 경우를 제외하고 트랜잭션은 지연된 내구성을 가집니다.  자세한 내용은 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 을 참조하세요.  
+ DELAYED_DURABLITY = DISABLED 데이터베이스 옵션을 적용하여 커밋이 동기적이고 완전 내구성이 있는 경우를 제외하고 트랜잭션은 지연된 내구성을 가집니다.  자세한 내용은 [Database level control](#database-level-control) 을 참조하세요.  
   
  **코드 예:**  
   
-```tsql  
+```sql  
 CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -138,19 +138,19 @@ END
 |`DELAYED_DURABILITY = OFF`|ATOMIC 블록은 새로운 완전 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|  
 |`DELAYED_DURABILITY = ON`|ATOMIC 블록은 새로운 지연된 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|  
   
-###  <a name="bkmk_T-SQLControl"></a> COMMIT 수준 제어 –[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="commit-level-control---t-sql"></a>COMMIT 수준 제어-(T-SQL)
  지연된 트랜잭션 내구성을 강제로 적용할 수 있도록 COMMIT 구문이 확장됩니다. 데이터베이스 수준에서 If DELAYED_DURABILITY가 DISABLED 또는 FORCED인 경우(위 내용 참조) 이 COMMIT 옵션은 무시됩니다.  
   
-```tsql  
+```sql  
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
   
 ```  
   
  `OFF`  
- [기본값] DELAYED_DURABLITY = FORCED 데이터베이스 옵션을 적용하여 COMMIT이 비동기적이고 지연된 내구성을 갖는 경우를 제외하고 COMMIT 트랜잭션은 완전 내구성을 가집니다. 자세한 내용은 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 을 참조하세요.  
+ [기본값] DELAYED_DURABLITY = FORCED 데이터베이스 옵션을 적용하여 COMMIT이 비동기적이고 지연된 내구성을 갖는 경우를 제외하고 COMMIT 트랜잭션은 완전 내구성을 가집니다. 자세한 내용은 [Database level control](#database-level-control) 을 참조하세요.  
   
  `ON`  
- DELAYED_DURABLITY = DISABLED 데이터베이스 옵션을 적용하여 COMMIT이 동기적이고 완전 내구성이 있는 경우를 제외하고 COMMIT 트랜잭션은 지연된 내구성을 가집니다. 자세한 내용은 [Database level control](control-transaction-durability.md#bkmk_dbcontrol) 을 참조하세요.  
+ DELAYED_DURABLITY = DISABLED 데이터베이스 옵션을 적용하여 COMMIT이 동기적이고 완전 내구성이 있는 경우를 제외하고 COMMIT 트랜잭션은 지연된 내구성을 가집니다. 자세한 내용은 [Database level control](#database-level-control) 을 참조하세요.  
   
 ### <a name="summary-of-options-and-their-interactions"></a>옵션 및 상호 작용 요약  
  이 표에서는 데이터베이스 수준 지연된 내구성 설정과 커밋 수준 설정 사이의 상호 작용을 요약합니다. 데이터베이스 수준 설정이 커밋 수준 설정보다 항상 우선합니다.  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   시스템 저장 프로시저 실행 `sp_flush_log`를 실행합니다. 이 프로시저는 모든 이전에 커밋된 지연된 내구성이 있는 트랜잭션의 로그 레코드를 디스크에 강제로 플러시합니다. 자세한 내용은 [sys.sp_flush_log&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql)를 참조하세요.  
   
-##  <a name="bkmk_OtherSQLFeatures"></a> 지연된 내구성 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>지연된 내구성 및 기타 SQL Server 설정  
  **변경 추적 및 변경 데이터 캡처**  
  변경 추적을 적용한 모든 트랜잭션은 완전 내구성을 가집니다. 변경 추적을 사용하도록 설정한 테이블에 쓰기 작업을 수행하는 경우 트랜잭션은 변경 추적 속성이 있습니다. 지연된 내구성 사용은 CDC(변경 데이터 캡처)를 사용하는 데이터베이스에 지원되지 않습니다.   
   
@@ -194,13 +194,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **로그 백업**  
  내구성이 있는 트랜잭션만 백업에 포함됩니다.  
   
-##  <a name="bkmk_DataLoss"></a> 데이터를 손실할 수는 경우  
+## <a name="when-can-i-lose-data"></a>데이터를 손실할 수 있는 경우  
  테이블에 대해 지연된 내구성을 구현하는 경우 특정 상황에서 데이터를 손실할 수 있습니다. 데이터 손실을 허용할 수 없는 경우에는 지연된 트랜잭션 내구성을 사용하지 마세요.  
   
 ### <a name="catastrophic-events"></a>재해  
  서버 크래시와 같은 재해 발생 시 디스크에 저장되지 않은 커밋된 모든 트랜잭션의 데이터를 손실하게 됩니다. 데이터베이스의 모든 테이블(내구성 있는 메모리 최적화 테이블 또는 디스크 기반 테이블)에 대해 완전 내구성이 있는 트랜잭션이 실행되거나 `sp_flush_log`가 호출될 때마다 지연된 내구성 트랜잭션이 디스크에 저장됩니다. 지연된 내구성 트랜잭션을 사용하는 경우 데이터베이스에 정기적으로 `sp_flush_log` 를 업데이트하거나 호출할 수 있는 작은 테이블을 만들어 처리되지 않은 커밋된 모든 트랜잭션을 저장할 수 있습니다. 또한 가득 찰 때마다 트랜잭션 로그가 플러시되지만 이는 예측하기 어려워 제어하는 것이 불가능합니다.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 및 다시 시작  
+### <a name="sql-server-shutdown-and-restart"></a>SQL Server 종료 및 다시 시작  
  지연된 내구성의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 예기치 않은 종료와 예상된 종료/다시 시작 간에는 차이가 없습니다. 재해와 같은 데이터 손실을 대비하여 계획을 세워야 합니다. 예정된 종료/다시 시작에서 디스크에 기록되지 않은 일부 트랜잭션이 먼저 디스크에 저장될 수 있지만 이에 대한 계획을 세우지 않아야 합니다. 예정되었든 예정되지 않았든 종료/다시 시작 시 재해와 동일하게 데이터를 손실할 것처럼 계획을 세우세요.  
   
 ## <a name="see-also"></a>관련 항목  

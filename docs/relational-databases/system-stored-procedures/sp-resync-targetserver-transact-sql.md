@@ -18,12 +18,12 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856981"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538175"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@server_name =**] **'***server***'**  
- 다시 동기화하려는 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. 하는 경우 **모든** 를 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
+`[ @server_name = ] 'server'` 다시 동기화 할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. 하는 경우 **모든** 를 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

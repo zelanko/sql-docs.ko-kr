@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537905"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
- 트리거 및 트리거가 속한 스키마의 이름입니다. 해당되는 경우 이 순서가 설정 또는 변경됩니다. [_triggerschema_**.**] *triggername* 됩니다 **sysname**합니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. *triggerschema* DDL 또는 로그온 트리거에만 지정할 수 없습니다.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` 트리거 및 스키마의 이름은 속한에 해당 하는 경우 해당 순서 설정 하거나 변경 하는 것입니다. [_triggerschema_**.**] *triggername* 됩니다 **sysname**합니다. 이름이 트리거와 일치하지 않거나 INSTEAD OF 트리거와 일치하는 경우에는 프로시저가 오류를 반환합니다. *triggerschema* DDL 또는 로그온 트리거에만 지정할 수 없습니다.  
   
- [ **@order=** ] **'**_value_**'**  
- 트리거의 새 순서 설정입니다. *값* 됩니다 **varchar(10)** 다음 값 중 하나일 수 있습니다.  
+`[ @order = ] 'value'` 트리거의 새 순서에 대 한 설정이입니다. *값* 됩니다 **varchar(10)** 다음 값 중 하나일 수 있습니다.  
   
 > [!IMPORTANT]  
 >  합니다 **첫 번째** 하 고 **마지막** 트리거는 서로 다른 트리거 여야 합니다.  
@@ -59,12 +57,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**마지막**|트리거가 마지막으로 실행됩니다.|  
 |**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
- [  **@stmttype=** ] **'**_statement_type_**'**  
- 트리거를 실행시키는 SQL 문을 지정합니다. *statement_type* 됩니다 **varchar(50)** INSERT, UPDATE, DELETE, 로그온 또는 모든 수 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 이벤트에 나열 된 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)합니다. 이벤트 그룹은 지정할 수 없습니다.  
+`[ @stmttype = ] 'statement_type'` 트리거를 발생 시키는 SQL 문을 지정 합니다. *statement_type* 됩니다 **varchar(50)** INSERT, UPDATE, DELETE, 로그온 또는 모든 수 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 이벤트에 나열 된 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)합니다. 이벤트 그룹은 지정할 수 없습니다.  
   
  트리거를 지정할 수 있습니다 합니다 **첫 번째** 또는 **마지막** 특정 문 유형의 트리거를 해당 문 유형의 트리거로 정의 된 후에 트리거. 예를 들어 트리거 **TR1** 지정할 수 있습니다 **첫 번째** 테이블에 삽입 **T1** 경우 **TR1** INSERT 트리거로 정의 됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류를 반환 **TR1**로 설정 되는 INSERT 트리거로 정의 된를 **첫 번째**, 또는 **마지막**, UPDATE 문에 대 한 트리거. 자세한 내용은 설명 섹션을 참조하세요.  
   
- **@namespace=** {0} **'DATABASE'** | **'SERVER'** | NULL}  
+ **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
  때 *triggername* 이 DDL 트리거인 경우 **@namespace** 지정 여부 *triggername* 데이터베이스 범위 또는 서버 범위를 사용 하 여 만든 합니다. 하는 경우 *triggername* 이 로그온 트리거인 경우 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 참조 하세요. [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다. 지정 하지 않으면 또는 NULL을 지정 하는 경우 *triggername* 은 DML 트리거입니다.  
   
 ||  

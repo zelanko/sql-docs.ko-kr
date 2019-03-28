@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679641"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532485"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **\@tsql =** ] **'**_TRANSACT-SQL\_batch_**'**  
- 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *Transact SQL_batch* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
   
- [  **\@params =** ] **N'**_매개 변수_**'**  
- \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
+`[ \@params = ] N'parameters'` \@params 매개 변수에 대 한 선언 문자열을 제공 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 방식으로 sp_executesql과 비슷하게 작동 합니다. *매개 변수* 될 수 있습니다 **nvarchar (**_n_**)** 하거나 **nvarchar (max)** 합니다.  
   
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열인 *Transact SQL_batch*합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. n은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. TRANSACT-SQL 문 또는 문의 일괄 처리에 매개 변수가 없는 경우 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
@@ -276,5 +274,5 @@ WHERE object_id = @id OR NAME = @name',
   
 ## <a name="see-also"></a>관련 항목  
  [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [sys.dm_exec_describe_first_result_set_for_object &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

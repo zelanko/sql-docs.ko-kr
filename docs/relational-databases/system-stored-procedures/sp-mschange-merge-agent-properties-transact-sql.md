@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769785"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535648"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** = ] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication =** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber=** ] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property =** ] **'***속성***'**  
- 변경할 게시 속성입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @property = ] 'property'` 변경할 게시 속성이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@value =** ] **'***값***'**  
- 새 속성 값입니다. *값* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다.  
   
  이 테이블에서는 변경할 수 있는 병합 에이전트 작업의 속성 및 해당 속성 값의 제한에 대해 설명합니다.  
   

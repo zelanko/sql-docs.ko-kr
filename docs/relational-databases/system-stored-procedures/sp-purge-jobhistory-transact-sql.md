@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b421d32e8c8ac3d4f56ecaf95448ecafc92c8e17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663399"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535685"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,17 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_name=** ] **'***job_name***'**  
- 기록 레코드를 삭제할 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+`[ @job_name = ] 'job_name'` 기록 레코드를 삭제 하는 작업의 이름입니다. *job_name*됩니다 **sysname**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
 > [!NOTE]  
 >  멤버는 **sysadmin** 고정 서버 역할의 멤버는 **SQLAgentOperatorRole** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_purge_jobhistory** 를지정하지않고*job_name* 하거나 *job_id*합니다. 때 **sysadmin** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다. 때 **SQLAgentOperatorRole** 사용자가 이러한 인수를 지정 하지 않으면, 지정 된 시간 내 모든 로컬 작업에 대 한 작업 기록이 삭제 됩니다 *oldest_date*합니다.  
   
- [ **@job_id=** ] *job_id*  
- 레코드를 삭제할 작업의 ID입니다. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 에 대 한 설명을 참조 하십시오 **@job_name** 방법은 **sysadmin** 하거나 **SQLAgentOperatorRole** 사용자는이 인수를 사용할 수 있습니다.  
+`[ @job_id = ] job_id` 삭제할 레코드에 대 한 작업의 작업 id. *job_id*됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다. 에 대 한 설명을 참조 하십시오 **@job_name** 방법은 **sysadmin** 하거나 **SQLAgentOperatorRole** 사용자는이 인수를 사용할 수 있습니다.  
   
- [ **@oldest_date** =] *oldest_date*  
- 기록에 보존할 가장 오래된 레코드입니다. *oldest_date* 됩니다 **datetime**, 기본값은 NULL입니다. 때 *oldest_date* 를 지정 하면 **sp_purge_jobhistory** 만 지정 된 값 보다 오래 된 레코드를 제거 합니다.  
+`[ @oldest_date = ] oldest_date` 기록에 보존할 가장 오래 된 레코드입니다. *oldest_date* 됩니다 **datetime**, 기본값은 NULL입니다. 때 *oldest_date* 를 지정 하면 **sp_purge_jobhistory** 만 지정 된 값 보다 오래 된 레코드를 제거 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

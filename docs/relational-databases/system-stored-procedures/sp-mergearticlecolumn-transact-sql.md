@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590077"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538615"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =**] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article =**] **'**_문서_**'**  
- 게시에 있는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 게시에서 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@column =**] **'**_열_**'**  
- 수직 분할을 만들 열을 식별합니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업이* 로 설정 되어 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 하 고 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 *문서*.  
+`[ @column = ] 'column'` 수직 분할을 만들 열을 식별 합니다. *열* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *열* 인 경우 NULL 일 수 없습니다 *작업이* 로 설정 되어 **drop**합니다. 아티클에서 열을 제외 하려면 실행 **sp_mergearticlecolumn** 지정 *열* 하 고 `@operation = N'drop'` 제거할 각 열에 대해 지정 된 *문서*.  
   
- [  **@operation =**] **'**_작업이_**'**  
- 복제 상태입니다. *작업이* 됩니다 **nvarchar(4)**, 기본값은 ADD 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열을 지웁니다.  
+`[ @operation = ] 'operation'` 복제 상태가입니다. *작업이* 됩니다 **nvarchar(4)**, 기본값은 ADD 사용 하 여 합니다. **추가** 복제에 대 한 열을 표시 합니다. **drop** 열을 지웁니다.  
   
- [  **@schema_replication=**] **'**_schema_replication_**'**  
- 병합 에이전트가 실행될 때 스키마 변경 내용이 전파되도록 지정합니다. *schema_replication* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ @schema_replication = ] 'schema_replication'` 병합 에이전트가 실행 될 때 스키마 변경 내용이 전파 되도록 지정 합니다. *schema_replication* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
   
 > [!NOTE]  
 >  만 **FALSE** 지원 됩니다 *schema_replication*합니다.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- 스냅숏 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 스냅숏 무효화 하는 기능을 사용할지 설정 합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다.  
   
  **1** 은 병합 아티클의 변경이을 유효 하지 않게 스냅숏을 무효화를 지정 하는 경우, 값 및 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
   
- [  **@force_reinit_subscription =]**_force_reinit_subscription_  
- 구독 다시 초기화 기능을 설정하거나 해제합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` 사용 하거나 구독을 다시 초기화 하는 기능을 사용 하지 않도록 설정 합니다. *force_reinit_subscription* 은 bit 이며 기본값은 **0**합니다.  
   
  **0** 병합 아티클에 대 한 변경 인해 구독이 다시 초기화 되지 않도록 지정 합니다.  
   
@@ -94,7 +87,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_mergearticlecolumn**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [병합 아티클 사이에서 조인 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   

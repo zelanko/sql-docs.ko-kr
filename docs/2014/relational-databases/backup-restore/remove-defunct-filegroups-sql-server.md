@@ -17,12 +17,12 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58ee1265918a96133ac0b25b9dd2ac516607b0fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a59277110d91ffd40a2db7d62fd3a01aa109dfc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536635"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>존재하지 않는 파일 그룹 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
@@ -86,9 +86,9 @@ ms.locfileid: "48187043"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. **참고:** 이 예제에서는 파일과 파일 그룹이 이미 있다고 가정합니다. 이러한 개체를 만들려면 [ALTER DATABASE 파일 및 파일 그룹 옵션](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) 항목의 예제 B를 참조하세요. 첫 번째 예에서는 `test1dat3` 절과 함께 `test1dat4` 문을 사용하여 존재하지 않는 파일 그룹에서 `ALTER DATABASE` 및 `REMOVE FILE` 파일을 제거합니다. 두 번째 예에서는 `Test1FG1` 절을 사용하여 존재하지 않는 파일 그룹 `REMOVE FILEGROUP`을 제거합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. (**참고 합니다.** 이 예에서는 파일과 파일 그룹이 이미 존재 한다고 가정 합니다. 이러한 개체를 만들려면 [ALTER DATABASE 파일 및 파일 그룹 옵션](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) 항목의 예제 B를 참조하세요. 첫 번째 예에서는 `test1dat3` 절과 함께 `test1dat4` 문을 사용하여 존재하지 않는 파일 그룹에서 `ALTER DATABASE` 및 `REMOVE FILE` 파일을 제거합니다. 두 번째 예에서는 `Test1FG1` 절을 사용하여 존재하지 않는 파일 그룹 `REMOVE FILEGROUP`을 제거합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -99,7 +99,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

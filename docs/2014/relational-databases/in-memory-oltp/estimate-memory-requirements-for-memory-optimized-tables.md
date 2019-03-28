@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509235"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533476"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
   작성 하는 경우 새 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 충분 한 사용 하 여 서버를 프로 비전 할 수 있도록 각 테이블의 메모리 요구 사항을 적절히 추정 하는 것이 중요은 메모리 액세스에 최적화 된 테이블 또는 메모리 최적화 테이블에 기존 디스크 기반 테이블 마이그레이션 메모리입니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509235"
 ##  <a name="bkmk_ExampleTable"></a> 메모리 최적화 테이블의 예  
  다음 메모리 최적화 테이블 스키마를 살펴봅니다.  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  해시 인덱스는 같은지 여부를 확인하는 다음과 같은 조회를 매우 빠르게 수행합니다.  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  비클러스터형 인덱스는 다음과 같은 범위 조회의 경우 더욱 빠릅니다.  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  디스크 기반 테이블을 마이그레이션하는 경우 다음을 사용하여 t1c2_index 인덱스에 대한 고유 값의 수를 확인할 수 있습니다.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  비클러스터형 인덱스는 다음 쿼리로 예시된 범위 조회에 사용될 때 가장 효과적입니다.  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  
@@ -173,7 +173,7 @@ SELECT * FROM t_hk
 ##  <a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리  
  위의 계산에서는 현재 상태의 테이블에 필요한 메모리를 예측합니다. 이 메모리 외에도 테이블의 증가를 예측하고 이러한 증가를 수용하는 데 충분한 메모리를 제공해야 합니다.  예를 들어 10% 증가를 예상하는 경우 위의 결과에 1.1을 곱하여 테이블에 필요한 총 메모리를 얻어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)  
   
   

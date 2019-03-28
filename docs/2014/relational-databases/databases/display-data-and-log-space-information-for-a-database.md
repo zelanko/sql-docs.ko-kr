@@ -19,12 +19,12 @@ ms.assetid: c7b99463-4bab-4e9b-9217-fcb0898dc757
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a0c32ad8dbbdd38ff0741e6b1f38c9cc084b27a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4850be4c112f9c0b987d543873cb55af08372455
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787125"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533235"
 ---
 # <a name="display-data-and-log-space-information-for-a-database"></a>데이터베이스의 데이터 및 로그 공간 정보 표시
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 대한 데이터와 로그 공간 정보를 표시하는 방법에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52787125"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 시스템 저장 프로시저를 사용하여 `Vendor` 테이블 및 해당 인덱스에 대한 디스크 공간 정보를 보고합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_spaceused N'Purchasing.Vendor';  
@@ -83,7 +83,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 카탈로그 뷰를 쿼리하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터 및 로그 파일에 대한 특정 정보를 반환합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT file_id, name, type_desc, physical_name, size, max_size  

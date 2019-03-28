@@ -13,12 +13,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416724"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537605"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
   FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52416724"
   
 -   [sys.tables&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)(**is_filetable** 열의 값 확인)  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -40,7 +40,7 @@ GO
   
  연결된 FileTable을 만들 때 생성된 시스템 정의 개체 목록을 가져오려면 카탈로그 뷰 [sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
     FROM sys.filetable_system_defined_objects  
     WHERE object_id = filetable_object_id;  
@@ -85,7 +85,7 @@ GO
  **전체 비트랜잭션 액세스를 사용하지 않도록 설정하려면**  
  **ALTER DATABASE** 문을 호출하고 **NON_TRANSACTED_ACCESS** 값을 **READ_ONLY** 또는 **OFF**로 설정합니다.  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
@@ -100,7 +100,7 @@ GO
  **전체 비트랜잭션 액세스를 다시 사용하도록 설정하려면**  
  **ALTER DATABASE** 문을 호출하고 **NON_TRANSACTED_ACCESS** 값을 **FULL**로 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
@@ -142,14 +142,14 @@ GO
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 옵션을 사용하여 ALTER TABLE 문을 호출합니다.  
   
  **FileTable 네임스페이스를 사용하지 않도록 설정하려면**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **FileTable 네임스페이스를 다시 사용하도록 설정하려면**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     ENABLE FILETABLE_NAMESPACE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ###  <a name="HowToListOpen"></a> 어떻게: FileTable과 연결된 열려 있는 파일 핸들 목록 가져오기  
  카탈로그 뷰 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -194,7 +194,7 @@ GO
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
  동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
     FROM sys.dm_filestream_non_transacted_handles  
     WHERE fcb_id IN  

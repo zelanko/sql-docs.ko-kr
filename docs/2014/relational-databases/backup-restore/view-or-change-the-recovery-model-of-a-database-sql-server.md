@@ -18,12 +18,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097494"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537435"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스의 복구 모델을 보거나 변경하는 방법에 대해 설명합니다. *복구 모델*은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다. **model** 데이터베이스는 새 데이터베이스의 기본 복구 모델을 설정합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "48097494"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [모델](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 데이터베이스의 복구 모델을 배우기 위해 **sys.databases** 카탈로그 뷰를 쿼리하는 방법을 보여줍니다.  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -112,7 +112,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `model` ALTER DATABASE `FULL` 문의 `SET RECOVERY` 옵션을 사용하여 [데이터베이스의 복구 모델을](/sql/t-sql/statements/alter-database-transact-sql-set-options) 로 변경하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
@@ -154,7 +154,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [작업 만들기](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [작업을 사용하지 않거나 사용하도록 설정](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   

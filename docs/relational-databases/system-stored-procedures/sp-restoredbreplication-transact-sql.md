@@ -16,12 +16,12 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 383c37219a0c1e901f58bcee7ccc436c36973d1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e116b0350e23f3ae86e3c7de819b47ecae13baf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775275"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534695"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@srv_orig =** ] **'***original_server_name***'**  
- 백업이 생성된 서버의 이름입니다. *original_server_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @srv_orig = ] 'original_server_name'` 백업 만들어진 서버의 이름입니다. *original_server_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@db_orig =** ] **'***original_database_name***'**  
- 백업한 데이터베이스 이름입니다. *original_database_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @db_orig = ] 'original_database_name'` 백업 된 데이터베이스의 이름입니다. *original_database_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@keep_replication =** ] *keep_replication*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@perform_upgrade=** ] *perform_upgrade*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -62,7 +58,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 하거나 **dbcreator** 고정된 서버 역할 또는 **dbo** 데이터베이스 스키마를 실행할 수 있습니다 **sp_restoredbreplication**.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

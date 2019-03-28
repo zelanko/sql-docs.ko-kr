@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760225"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530815"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- 결과 집합에 포함될 스키마 변경의 최소 번호입니다.  
+`[ @starting_schemaversion = ] starting_schemaversion` 결과 집합에 포함할 가장 낮은 숫자 스키마 변경 내용이입니다.  
   
 ## <a name="result-set"></a>결과 집합  
   

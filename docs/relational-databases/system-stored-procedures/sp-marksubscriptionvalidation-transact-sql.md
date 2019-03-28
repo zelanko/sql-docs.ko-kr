@@ -16,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131353"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536895"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber**=] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 는 sysname 이며 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 는 sysname 이며 기본값은 없습니다.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- 대상 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @destination_db = ] 'destination_db'` 대상 데이터베이스의 이름이입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher=** ] **'***게시자***'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 속하는 게시에 대 한 쓰일 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266104"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538585"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@traceid=** ] *trace_id*  
- 수정할 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다.  
+`[ @traceid = ] trace_id` 수정할 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다.  
   
- [ **@eventid=** ] *event_id*  
- 설정할 이벤트의 ID입니다. *event_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @eventid = ] event_id` 설정할 이벤트의 ID입니다. *event_id* 됩니다 **int**, 기본값은 없습니다.  
   
  다음 표에서는 추적에서 추가 또는 제거될 수 있는 이벤트를 보여 줍니다.  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|SQL Server에서 계획 지침이 포함된 쿼리 또는 일괄 처리에 대한 실행 계획을 생성하지 못했음을 나타냅니다. SQL Server에서 계획 지침을 적용하지 않고 이 쿼리 또는 일괄 처리의 실행 계획을 생성하려고 했습니다. 이러한 문제는 계획 지침이 잘못되어 발생할 수 있습니다. sys.fn_validate_plan_guide 시스템 함수를 사용하여 계획 지침의 유효성을 검사할 수 있습니다.|  
 |235|Audit Fulltext||  
   
- [ **@columnid=** ] *column_id*  
- 이벤트에 대해 추가할 열의 ID입니다. *column_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @columnid = ] column_id` 이벤트에 대해 추가할 열의 ID입니다. *column_id* 됩니다 **int**, 기본값은 없습니다.  
   
  다음 표에서는 이벤트에 추가될 수 있는 열을 나열합니다.  
   

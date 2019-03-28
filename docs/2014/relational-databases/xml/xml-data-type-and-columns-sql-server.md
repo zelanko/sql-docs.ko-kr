@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370005"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530825"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
   이 항목에 장점 및 제한 사항에 설명 합니다 `xml` 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XML 데이터를 저장 하는 방법을 선택할 수 있습니다.  

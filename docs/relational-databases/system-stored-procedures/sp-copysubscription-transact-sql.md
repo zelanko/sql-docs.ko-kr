@@ -16,12 +16,12 @@ ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0580ccfaa0505e027cedb5824aca26b6dbe51574
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124313"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531005"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@filename =**] **'**_file_name_**'**  
- 파일 이름을 포함한 전체 경로를 지정하는 문자열이며 데이터 파일(.mdf)의 사본을 저장할 위치에 해당합니다. *파일 이름* 됩니다 **nvarchar(260)**, 기본값은 없습니다.  
+`[ @filename = ] 'file_name'` 데이터 파일 (.mdf)의 복사본 저장 되는 파일 이름을 포함 한 전체 경로 지정 하는 문자열이입니다. *파일 이름* 됩니다 **nvarchar(260)**, 기본값은 없습니다.  
   
- [  **@temp_dir=**] **'**_temp_dir_**'**  
- 임시 파일이 포함된 디렉터리의 이름입니다. *temp_dir* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. NULL 인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
+`[ @temp_dir = ] 'temp_dir'` 임시 파일을 포함 하는 디렉터리의 이름이입니다. *temp_dir* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. NULL 인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
- [  **@overwrite_existing_file=**] **'**_overwrite_existing_file_**'**  
- 에 지정 된 동일한 이름의 기존 파일을 덮어쓸 것인지 여부를 지정 하는 선택적인 부울 플래그 **@filename**합니다. *overwrite_existing_file*됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **1**, 지정 된 파일을 덮어씁니다 **@filename**존재 하는 경우. 하는 경우 **0**, 파일이 존재 하는 경우 파일을 덮어쓰지 않습니다 저장된 프로시저가 실패 합니다.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 에 지정 된 동일한 이름의 기존 파일을 덮어쓸 것인지 여부를 지정 하는 선택적인 부울 플래그 **@filename**합니다. *overwrite_existing_file*됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **1**, 지정 된 파일을 덮어씁니다 **@filename**존재 하는 경우. 하는 경우 **0**, 파일이 존재 하는 경우 파일을 덮어쓰지 않습니다 저장된 프로시저가 실패 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -1,5 +1,5 @@
 ---
-title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서'
+title: '데모: 메모리 내 OLTP 성능 향상 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2ee9f530580d9c3aaff2d10a260be20a1970e8a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127993"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537292"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP의 성능 향상
   이 예제는 메모리 최적화된 테이블과 디스크 기반 테이블에 대해 동일한 Transact-SQL 쿼리를 실행하는 경우 응답 시간의 차이를 비교하여 메모리 내 OLTP 사용 시 성능 향상을 보여줍니다. 또한 고유하게 컴파일된 저장 프로시저가 생성되고(동일한 쿼리를 기반으로) 고유하게 컴파일된 저장 프로시저로 메모리 최적화 테이블을 쿼리하는 경우 일반적으로 최고의 응답 시간을 갖는다는 것을 설명하기 위해 실행됩니다. 이 샘플은 메모리 최적화 테이블에 포함된 데이터에 액세스 하는 경우 성능 향상의 한 가지 측면 즉, 삽입 수행 시 데이터 액세스 효율성만을 보여줍니다. 이 예제는 단일 스레드이며 메모리 내 OLTP의 동시성 이점을 활용하지 않습니다. 동시성을 사용하는 작업에서는 더 큰 성능 향상이 가능합니다.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "48127993"
   
  예제에 대한 **imoltp** 데이터베이스를 설치하려면 우선 빈 폴더 **c:\imoltp_data**를 만든 후 다음 코드를 실행합니다.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -55,7 +55,7 @@ GO
   
  그 후, 다음 코드를 실행하여 디스크 기반 테이블, 2개의 (2) 메모리 최적화 테이블, 다른 데이터 액세스 메서드를 보여주는데 사용될 고유하게 컴파일된 저장 프로시를 만듭니다.  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -120,7 +120,7 @@ GO
   
  예제를 완료하려면 다음 코드를 여러 번 실행합니다. 초기 메모리 할당에 의해 부정적인 영향을 받는 첫 번째 실행의 결과를 무시합니다.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

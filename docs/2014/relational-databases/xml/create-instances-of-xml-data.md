@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538625"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
   이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
@@ -180,7 +180,7 @@ go
  FOR XML에 대한 자세한 내용은 [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 `xml` 데이터 형식 인스턴스를 반환합니다. 또는 `xml` 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자를 요청 하는이 `xml` 데이터 형식 정보가 서버 로부터 이진 인코딩으로 전송 되도록 합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 `xml` 데이터 형식 인스턴스를 반환합니다. 또는 `xml` 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 응용 프로그램 코드에서 ADO.NET 공급자는 이 `xml` 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
  여기서의 인스턴스는 문자열 상수를 사용할 수는 `xml` 데이터 형식이 필요 합니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

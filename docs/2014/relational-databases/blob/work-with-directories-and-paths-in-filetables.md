@@ -12,12 +12,12 @@ ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa4fd0543c45e26f305506280bccce1f83107e55
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393296"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536505"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52393296"
 ##  <a name="BestPracticeRelativePaths"></a> 어떻게: 이식 가능한 코드에 상대 경로 사용  
  코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 `GetFileNamespacePath` 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
-```tsql  
+```sql  
 USE database_name;  
 DECLARE @root nvarchar(100);  
 DECLARE @fullpath nvarchar(1000);  

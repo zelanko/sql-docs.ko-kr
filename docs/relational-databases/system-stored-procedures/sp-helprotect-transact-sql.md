@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591187"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534505"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@name =** ] **'**_object_statement_**'**  
- 보고서에 대한 사용 권한을 가진 현재 데이터베이스에 있는 개체 또는 문의 이름입니다. *object_statement* 됩니다 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름 형식에서 소유자의 한정자를 포함할 수 있습니다 _소유자_**.** _개체_합니다.  
+`[ @name = ] 'object_statement'` 현재 데이터베이스 또는 보고서에 사용 권한이 있는 문의 개체의 이름이입니다. *object_statement* 됩니다 **nvarchar(776)**, 기본값은 NULL 반환 하는 모든 개체 및 문 사용 권한. 값이 개체(테이블,  뷰,  저장 프로시저 또는 확장 저장 프로시저)인 경우에는 반드시 현재 데이터베이스의 유효한 개체여야 합니다. 개체 이름 형식에서 소유자의 한정자를 포함할 수 있습니다 _소유자_**.** _개체_합니다.  
   
  하는 경우 *object_statement* , 문인 CREATE 문일 수 있습니다.  
   
- [  **@username =** ] **'**_security_account_**'**  
- 사용 권한이 반환되는 보안 주체의 이름입니다. *security_account* 됩니다 **sysname**, 기본값은 NULL 반환 하는 모든 보안 주체는 현재 데이터베이스에 있습니다. *security_account* 현재 데이터베이스에 존재 해야 합니다.  
+`[ @username = ] 'security_account'` 사용 권한이 반환 되는 보안 주체의 이름이입니다. *security_account* 됩니다 **sysname**, 기본값은 NULL 반환 하는 모든 보안 주체는 현재 데이터베이스에 있습니다. *security_account* 현재 데이터베이스에 존재 해야 합니다.  
   
- [  **@grantorname =** ] **'**_grantor_**'**  
- 사용 권한을 부여한 보안 주체의 이름입니다. *grantor* 됩니다 **sysname**, 기본값은 NULL 반환 하는 보안 주체는 데이터베이스에 의해 부여 된 권한에 대 한 모든 정보입니다.  
+`[ @grantorname = ] 'grantor'` 권한을 부여 하는 보안 주체의 이름이입니다. *grantor* 됩니다 **sysname**, 기본값은 NULL 반환 하는 보안 주체는 데이터베이스에 의해 부여 된 권한에 대 한 모든 정보입니다.  
   
- [  **@permissionarea =** ] **'**_형식_**'**  
- 개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 됩니다 **varchar(10)**, 기본값은 **os**합니다. *형식* 의 조합일 수 있습니다 **o** 및 **s**과 함께 또는 없이 쉼표나 사이 공백이 **o** 하 고 **s**입니다.  
+`[ @permissionarea = ] 'type'` 개체 사용 권한을 표시 여부를 나타내는 문자열 (문자열 **o**), 문 사용 권한 (문자열 **s**), 또는 둘 다 (**os**). *형식* 됩니다 **varchar(10)**, 기본값은 **os**합니다. *형식* 의 조합일 수 있습니다 **o** 및 **s**과 함께 또는 없이 쉼표나 사이 공백이 **o** 하 고 **s**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

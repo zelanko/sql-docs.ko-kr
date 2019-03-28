@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817865"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534655"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. 에 SQL Server 이외 게시자를 *publisher_db* 배포 데이터베이스의 이름입니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다. 에 SQL Server 이외 게시자를 *publisher_db* 배포 데이터베이스의 이름입니다.  
   
- [  **@publication=** ] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 둘 이상의 게시에서 배포 에이전트를 공유 하는 경우에에 대 한 모든 값을 지정 해야 *게시*합니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다. 둘 이상의 게시에서 배포 에이전트를 공유 하는 경우에에 대 한 모든 값을 지정 해야 *게시*합니다.  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- 배포자에서 구독자에 적용될 다음 트랜잭션의 LSN입니다. *xact_seqno* 됩니다 **varbinary(16)**, 기본값은 없습니다.  
+`[ @xact_seqno = ] xact_seqno` 배포자의 구독자에 적용 될 다음 트랜잭션의 LSN입니다. *xact_seqno* 됩니다 **varbinary(16)**, 기본값은 없습니다.  
   
 ## <a name="result-set"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**원래 XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
-|**업데이트 된 XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
 |**구독 스트림 수**|**int**|마지막 동기화 중에 사용된 구독 스트림의 수입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

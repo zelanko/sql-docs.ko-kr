@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629811"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533435"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@dbname=** ] **'***name***'**  
- 정보를 보고할 대상 데이터베이스의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 *이름* 지정 하지 않으면 **sp_helpdb** 에 있는 모든 데이터베이스에서 보고서를 **sys.databases** 카탈로그 뷰.  
+`[ @dbname = ] 'name'` 정보 보고 되는 데이터베이스의 이름이입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다. 하는 경우 *이름* 지정 하지 않으면 **sp_helpdb** 에 있는 모든 데이터베이스에서 보고서를 **sys.databases** 카탈로그 뷰.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -52,11 +51,11 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터베이스 이름입니다.|  
 |**db_size**|**nvarchar(13)**|데이터베이스의 총 크기입니다.|  
-|**소유자**|**sysname**|데이터베이스 소유자와 같은 **sa**합니다.|  
+|**owner**|**sysname**|데이터베이스 소유자와 같은 **sa**합니다.|  
 |**dbid**|**smallint**|데이터베이스 ID입니다.|  
 |**created**|**nvarchar(11)**|데이터베이스가 만들어진 날짜입니다.|  
 |**상태**|**nvarchar(600)**|현재 데이터베이스에 설정된 데이터베이스 옵션의 값을 쉼표로 분리하여 나열한 것입니다.<br /><br /> 부울 값 옵션은 활성화된 경우에만 나열됩니다. 부울이 아닌 옵션의 형태로 해당 값을 사용 하 여 나와 *option_name*=*값*합니다.<br /><br /> 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
-|**compatibility_level**|**tinyint**|데이터베이스 호환성 수준: 60, 65, 70, 80 또는 90입니다.|  
+|**compatibility_level**|**tinyint**|데이터베이스 호환성 수준이며 60, 65, 70, 80 또는 90입니다.|  
   
  하는 경우 *이름을* 이 지정 되어 있는 지정된 된 데이터베이스에 대 한 파일 할당을 보여 주는 추가 결과 집합은입니다.  
   
@@ -69,7 +68,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**size**|**nvarchar(18)**|파일 크기(MB)입니다.|  
 |**maxsize**|**nvarchar(18)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar(18)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양입니다.|  
-|**사용 현황**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
+|**usage**|**varchar(9)**|파일의 용도입니다. 데이터 파일에 대 한 값이 **'데이터만'** 하 고 값은 로그 파일에 대 한 **'로그'** 합니다.|  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **상태** 결과의 열을 데이터베이스에는 옵션이 ON으로 설정 되어 있는 보고서를 설정 합니다. 가 모든 데이터베이스 옵션을 보고 하지 않는 합니다 **상태** 열입니다. 현재 데이터베이스 옵션 설정의 전체 목록을 보려면를 사용 합니다 **sys.databases** 카탈로그 뷰.  

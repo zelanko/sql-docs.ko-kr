@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823334"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531581"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@viewname**=] **'***view_name***'**  
- 확인할 뷰의 이름입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @viewname = ] 'view_name'` 확인할 뷰의 이름이입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* 출력  
- 뷰 인덱스에 NULL을 허용하는 열이 있는지 여부를 표시하는 플래그입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다. 값을 반환 **1** 뷰 인덱스에는 열이 NULL을 허용 하는 경우. 값을 반환 **0** 보기에 NULL을 허용 하는 열이 없는 경우.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` 뷰 인덱스에 NULL을 허용 하는 열에 있는지 여부를 나타내는 플래그입니다. *view_name* 됩니다 **sysname**, 기본값은 없습니다. 값을 반환 **1** 뷰 인덱스에는 열이 NULL을 허용 하는 경우. 값을 반환 **0** 보기에 NULL을 허용 하는 열이 없는 경우.  
   
 > [!NOTE]  
 >  저장된 프로시저 자체가 반환 코드를 반환 하는 경우 **1**오류가 있었습니다 즉 저장된 프로시저 실행,이 값은 **0** 무시 해야 합니다.  
@@ -59,7 +57,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ivindexhasnullcols**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

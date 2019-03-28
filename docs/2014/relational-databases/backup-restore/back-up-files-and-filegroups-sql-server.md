@@ -16,12 +16,12 @@ ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a30880a6fd4acc62f13954c18f0ca8883f90754
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537368"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530765"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업* 에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다. 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)을 참조하세요.  
@@ -163,7 +163,7 @@ ms.locfileid: "52537368"
     |FILE **=**_logical_file_name_|파일 백업에 포함할 파일의 논리적 이름을 지정합니다.|  
     |FILEGROUP **=**_logical_filegroup_name_|파일 백업에 포함할 파일 그룹의 논리적 이름을 지정합니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.|  
     |[ **,**...*f* ]|여러 개의 파일 및 파일 그룹을 지정할 수 있음을 나타내는 자리 표시자입니다. 이때 파일 또는 파일 그룹의 수는 제한이 없습니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)).|  
+    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=**_physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](backup-devices-sql-server.md)인스턴스에서 가져온 경우에 필요합니다.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 DIFFERENTIAL과 같은 하나 이상의 추가 옵션을 지정합니다.<br /><br /> 참고: 차등 파일 백업에는 기반으로 전체 파일 백업이 필요합니다. 자세한 내용은 [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)를 참조하세요.|  
   
 2.  전체 복구 모델에서는 트랜잭션 로그도 백업해야 합니다. 전체 파일 백업의 전체 세트를 사용하여 데이터베이스를 복원하려면 첫 번째 파일 백업을 시작할 때부터 모든 파일 백업을 포함할 정도의 충분한 로그 백업이 있어야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
@@ -178,7 +178,7 @@ ms.locfileid: "52537368"
 #### <a name="a-creating-a-file-backup-of-two-files"></a>1. 두 파일의 파일 백업 만들기  
  다음 예에서는 `SGrp1Fi2` 의 `SalesGroup1` 파일과 `SGrp2Fi2` 파일 그룹의 `SalesGroup2` 파일에 대해서만 차등 파일 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -190,7 +190,7 @@ GO
 #### <a name="b-creating-a-full-file-backup-of-the-secondary-filegroups"></a>2. 보조 파일 그룹의 전체 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 전체 파일 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -202,7 +202,7 @@ GO
 #### <a name="c-creating-a-differential-file-backup-of-the-secondary-filegroups"></a>3. 보조 파일 그룹의 차등 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 차등 파일 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  

@@ -13,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b0575c3be5e0a5ce30267f32934ff073c5c3d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536134"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기(Transact-SQL)
   데이터 수집기와 함께 제공된 저장 프로시저를 사용하여 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 지정 컬렉션 집합을 만들 수 있습니다. 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "52748885"
   
 1.  새 컬렉션 항목은 이미 설치된 일반 수집기 유형을 기반으로 하므로 다음 코드를 실행하여 일반 T-SQL 쿼리 수집기 유형에 해당하는 GUID를 설정할 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -87,7 +87,7 @@ ms.locfileid: "52748885"
   
 2.  sp_syscollector_create_collection_item 저장 프로시저를 사용하여 컬렉션 항목을 만듭니다. 일반 T-SQL 쿼리 수집기 유형에 필요한 스키마에 매핑되도록 컬렉션 항목에 대한 스키마를 선언합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -108,7 +108,7 @@ ms.locfileid: "52748885"
   
 1.  새 컬렉션 집합을 시작하기 전에 다음 쿼리를 실행하여 새 컬렉션 집합 및 해당 컬렉션 항목이 생성되었는지 여부를 확인합니다.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -120,7 +120,7 @@ ms.locfileid: "52748885"
 ## <a name="example"></a>예제  
  다음 코드 예는 앞의 단계에 나와 있는 예제를 조합합니다. 컬렉션 집합 컬렉션 모드가 캐시됨 모드인 0으로 설정되어 있으므로 컬렉션 항목에 대해 설정된 컬렉션 빈도(5초)가 무시됩니다. 자세한 내용은 [Data Collection](data-collection.md)을 참조하세요.  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  
@@ -160,7 +160,7 @@ SELECT @collection_item_id;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [일정 관리](../../ssms/agent/manage-schedules.md)   
  [컬렉션 집합 시작 또는 중지](start-or-stop-a-collection-set.md)  

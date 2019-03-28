@@ -18,12 +18,12 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826631"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534495"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@database =** ] '*데이터베이스*'  
- 로그 전달 주 데이터베이스의 이름입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @database = ] 'database'` 로그 전달 주 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
- [ **@primary_id =** ] '*primary_id*'  
- 로그 전달 구성의 주 데이터베이스의 ID입니다. *primary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
+`[ @primary_id = ] 'primary_id'` 로그 전달 구성에 대 한 주 데이터베이스의 ID입니다. *primary_id* 됩니다 **uniqueidentifier** NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

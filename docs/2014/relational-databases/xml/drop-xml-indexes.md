@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194153"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535505"
 ---
 # <a name="drop-xml-indexes"></a>XML 인덱스 삭제
   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 기존 기본 또는 보조 XML 인덱스 및 비 XML 인덱스를 삭제할 수 있습니다. 그러나 DROP INDEX의 옵션은 XML 인덱스에 적용되지 않습니다. 기본 XML 인덱스를 삭제하려면 존재하는 보조 인덱스도 모두 삭제됩니다.  
   
  *TableName.IndexName* 이 있는 DROP 구문은 단계적으로 제거하며 XML 인덱스에 대해서는 지원되지 않습니다.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기 및 삭제  
- 다음 예제에서는 XML 인덱스가 만들어집니다에 `xml` 유형 열입니다.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예: 기본 XML 인덱스 만들기 및 삭제  
+ 다음 예에서는 XML 인덱스가 `xml` 유형 열에 생성됩니다.  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  테이블이 삭제될 때 그 테이블의 모든 XML 인덱스도 자동으로 삭제됩니다. 그러나 XML 인덱스가 열에 있는 경우 XML 열은 테이블에서 삭제할 수 없습니다.  
   
- 다음 예제에서는 XML 인덱스가 만들어집니다에 `xml` 유형 열입니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 다음 예에서는 XML 인덱스가 `xml` 유형 열에 생성됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예제: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
  다음 예에서는 XML 인덱스가`XmlColx`열에 생성됩니다. 그런 다음 같은 이름으로 된 다른 XML 인덱스가 다른 열`XmlColy`에 생성됩니다. `DROP_EXISTING` 옵션이 지정되어 있으므로 (`XmlColx)` )의 기존 XML 인덱스가 삭제되고 (`XmlColy`)의 새 XML 인덱스가 생성됩니다.  
   
 ```  

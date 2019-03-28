@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (TRANSACT-SQL) | Microsoft Docs
+title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529515"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_name =**] **'***job_name***'**  
- 중지할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 중지할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@job_id =**] *job_id*  
- 중지할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 중지할 작업의 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@originating_server =**] **'***master_server***'**  
- 마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 대상 서버에서.  
+`[ @originating_server = ] 'master_server'` 마스터 서버의 이름입니다. 지정된 경우 모든 다중 서버 작업이 중지됩니다. *master_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 대상 서버에서.  
   
 > [!NOTE]  
 >  처음 세 매개 변수 중 하나만 지정할 수 있습니다.  
   
- [ **@server_name =**] **'***target_server***'**  
- 다중 서버 작업을 중지할 특정 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 다중 서버 작업에 대 한 마스터 서버에서.  
+`[ @server_name = ] 'target_server'` 다중 서버 작업을 중지 하는 특정 대상 서버의 이름입니다. *target_server* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다. 호출 하는 경우에이 매개 변수를 지정할 **sp_stop_job** 다중 서버 작업에 대 한 마스터 서버에서.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -100,7 +96,7 @@ GO
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

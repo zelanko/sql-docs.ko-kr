@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796435"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529535"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher=**] **'***publisher***'**  
- 이 구독자의 업데이트에 참여하고 있는 게시자 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
+`[ @publisher = ] 'publisher'` 이 구독자의 업데이트에 참여 하는 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다. 게시하려면 게시자가 미리 구성되어 있어야 합니다.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication=**] **'***publication***'**  
- 이 구독자의 업데이트에 참여하고 있는 게시 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 이 구독자의 업데이트에 참여 하는 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' 출력**  
- 장애 조치 모드의 정수 값을 반환 하 고은 **출력** 매개 변수입니다. *failover_mode_id* 되는 **tinyint** 이며 기본값은 **0**합니다. 반환 **0** 즉시 업데이트 하 고 **1** 지연 업데이트에 대 한 합니다.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` 장애 조치 모드의 정수 값을 반환 하 고은 **출력** 매개 변수입니다. *failover_mode_id* 되는 **tinyint** 이며 기본값은 **0**합니다. 반환 **0** 즉시 업데이트 하 고 **1** 지연 업데이트에 대 한 합니다.  
   
- [**@failover_mode=**] **'***failover_mode***' 출력**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  구독자에서 데이터가 수정되는 모드를 반환합니다. *failover_mode* 되는 **nvarchar(10)** 이며 기본값은 NULL입니다. **출력** 매개 변수입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**직접 실행**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
-|**큐에 대기**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
+|**immediate**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
+|**queued**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226410"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530235"
 ---
 # <a name="xml-data-sql-server"></a>XML 데이터(SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 응용 프로그램을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 애플리케이션을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  
   
 -   `xml` 데이터 형식입니다. XML 값은 XML 스키마의 컬렉션에 따라 형식화되거나 형식화되지 않은 상태로 유지될 수 있는 `xml` 데이터 형식의 열에 기본적으로 저장될 수 있습니다. XML 열을 인덱싱할 수 있습니다.  
   

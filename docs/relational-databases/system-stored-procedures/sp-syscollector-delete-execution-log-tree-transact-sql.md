@@ -19,12 +19,12 @@ ms.assetid: 0a9a7c5b-c3cc-40ca-b524-e948a8cce4e4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b234caaa0de9f111c047cf54aeafca6d4fdce8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be3f468db321f1e8ba7af3d7b5b80c97803a0b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730431"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531245"
 ---
 # <a name="spsyscollectordeleteexecutionlogtree-transact-sql"></a>sp_syscollector_delete_execution_log_tree(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_execution_log_tree[ @log_id = ] log_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@log_id =** ] *log_id*  
- 컬렉션 집합 로그의 고유 식별자입니다. *log_id* 됩니다 **int**합니다.  
+`[ @log_id = ] log_id` 컬렉션에 대 한 고유 식별자를 로그를 설정 됩니다. *log_id* 됩니다 **int**합니다.  
   
- [ **@from_collection_set =** ] *from_collection_set*  
- 컬렉션 집합의 식별자입니다. *from_collection_set* 됩니다 **bit 1 =** 합니다.  
+`[ @from_collection_set = ] from_collection_set` 컬렉션 집합에 대 한 식별자가입니다. *from_collection_set* 됩니다 **bit 1 =** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

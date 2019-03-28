@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852341"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530245"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@configname=** ] **'***option_name***'**  
- 구성 옵션의 이름입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
+`[ @configname = ] 'option_name'` 구성 옵션의 이름이입니다. *option_name* 은 **varchar(35)** 이며 기본값은 NULL입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 구성 이름의 일부인 고유 문자열을 모두 인식합니다. 이 인수를 지정하지 않으면 옵션의 전체 목록이 반환됩니다.  
   
  사용 가능한 구성 옵션 및 설정에 대 한 정보를 참조 하세요 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)합니다.  
   
- [ **@configvalue=** ] **'***value***'**  
- 새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
+`[ @configvalue = ] 'value'` 새로운 구성 설정입니다. *value* 는 **int**이며 기본값은 NULL입니다. 최대값은 개별 옵션에 따라 달라집니다.  
   
  각 옵션에 대 한 최대값을 참조 합니다 **최대** 열을 **sys.configurations** 카탈로그 뷰.  
   
@@ -77,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>결과 집합  
  매개 변수 없이 실행 될 때 **sp_configure** 다섯 개의 열을 사용 하 여 설정 하는 결과 반환 하 고 다음 표에 표시 된 대로 옵션을 기준으로 사전순 오름차순으로 정렬 합니다.  
   
- 에 대 한 값 **config_value** 하 고 **run_value** 는 자동으로 서로 다릅니다. 사용 하 여 구성 설정을 업데이트 한 후 **sp_configure**, 시스템 관리자가 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 사용 하 여 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
+ 에 대 한 값 **config_value** 하 고 **run_value** 는 자동으로 서로 다릅니다. 사용 하 여 구성 설정을 업데이트 한 후 **sp_configure**, 시스템 관리자가 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 사용 하 여 실행 중인 구성 값을 업데이트 해야 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- 메시지입니다. "구성 옵션 'show advanced options' 1 0에서 변경 합니다. RECONFIGURE 문을 실행하여 설치하십시오."  
+ 메시지는 다음과 같습니다. "구성 옵션 'show advanced options'이(가) 0에서 1(으)로 변경되었습니다. RECONFIGURE 문을 실행하여 설치하십시오."  
   
  `RECONFIGURE`를 실행하여 모든 구성 옵션을 표시합니다.  
   

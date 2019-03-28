@@ -16,12 +16,12 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3cce9577f609a0216b5d96e82eeacbdc295b26d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802205"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534415"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@request_id**=] *request_id*  
- 특정 상태 요청 ID입니다. *request_id* 됩니다 **int**, 기본값은 없습니다.  
+`[ @request_id = ] request_id` 특정 상태 요청의 ID입니다. *request_id* 됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|상태 요청의 ID입니다.|  
-|**피어**|**sysname**|응답을 생성한 피어의 이름입니다.|  
+|**peer**|**sysname**|응답을 생성한 피어의 이름입니다.|  
 |**peer_db**|**sysname**|응답을 생성한 피어의 데이터베이스 이름입니다.|  
 |**received_date**|**datetime**|요청자가 요청을 보낸 피어로부터 응답을 받은 날짜 및 시간입니다.|  
   

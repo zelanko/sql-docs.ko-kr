@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360805"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532395"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>예: ELEMENT 지시어 및 엔터티 인코딩 지정
   이 예에서는 **ELEMENT** 및 **XML** 지시어 간의 차이점을 보여 줍니다. **ELEMENT** 지시어는 데이터를 엔터티화하지만 **XML** 지시어는 그렇지 않습니다. \<Summary> 요소는 쿼리에서 할당된 XML인 `<Summary>This is summary description</Summary>`입니다.  

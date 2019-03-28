@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630187"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535435"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@schedule_id =** ] *id*  
- 나열할 일정의 식별자입니다. *schedule_name* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_id = ] id` 나열할 일정의 식별자입니다. *schedule_name* 됩니다 **int**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 나열할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
+`[ @schedule_name = ] 'schedule_name'` 나열할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 없습니다. 어느 *schedule_id* 하거나 *schedule_name* 지정할 수 있습니다.  
   
- [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- 작업이 연결되어 있는 일정만 표시할지 여부를 지정합니다. *attached_schedules_only* 됩니다 **비트**, 기본값은 **0**합니다. 때 *attached_schedules_only* 됩니다 **0**, 모든 일정이 표시 됩니다. 때 *attached_schedules_only* 됩니다 **1**, 결과 집합은 작업에 연결 되어 있는 일정만 포함 합니다.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` 작업이 연결 되어 있는 일정만 표시할지 여부를 지정 합니다. *attached_schedules_only* 됩니다 **비트**, 기본값은 **0**합니다. 때 *attached_schedules_only* 됩니다 **0**, 모든 일정이 표시 됩니다. 때 *attached_schedules_only* 됩니다 **1**, 결과 집합은 작업에 연결 되어 있는 일정만 포함 합니다.  
   
- [ **@include_description** =] *include_description*  
- 결과 집합에 설명을 포함할지 여부를 지정합니다. *include_description* 됩니다 **비트**, 기본값은 **0**합니다. 때 *include_description* 됩니다 **0**의 *schedule_description* 자리 표시자를 포함 하는 결과 집합의 열입니다. 때 *include_description* 됩니다 **1**에 일정 설명이 결과 집합에 포함 됩니다.  
+`[ @include_description = ] include_description` 결과 집합에 설명을 포함할지 여부를 지정 합니다. *include_description* 됩니다 **비트**, 기본값은 **0**합니다. 때 *include_description* 됩니다 **0**의 *schedule_description* 자리 표시자를 포함 하는 결과 집합의 열입니다. 때 *include_description* 됩니다 **1**에 일정 설명이 결과 집합에 포함 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +64,7 @@ sp_help_schedule
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
 |**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  

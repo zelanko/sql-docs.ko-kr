@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368875"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531315"
 ---
 # <a name="string-utility-functions-sample"></a>문자열 유틸리티 함수 예제
   문자열 유틸리티 예제에는 쉼표로 구분된 문자열을 열이 하나인 테이블로 분할하는, Visual C# 및 Visual Basic으로 작성된 스트리밍 테이블 반환 함수가 포함되어 있습니다. 또한 문자열 열을 쉼표로 구분된 문자열로 변환하는 집계 함수도 포함되어 있습니다.  또한 정규식 대체 및 정규식 검색 기능을 제공하는 스칼라 함수와 테이블 반환 함수를 구현합니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "53368875"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -885,7 +885,7 @@ GO
   
  이는 함수를 실행하여 예제를 테스트하는 `test.sql`입니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

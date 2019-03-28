@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758621"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535755"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@traceid=** ] *trace_id*  
- 필터를 설정한 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다.  
+`[ @traceid = ] trace_id` 필터에 설정 된 추적의 ID입니다. *trace_id* 됩니다 **int**, 기본값은 없습니다. 사용자는이 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다.  
   
- [ **@columnid=** ] *column_id*  
- 필터를 적용한 열의 ID입니다 *column_id* 됩니다 **int**, 기본값은 없습니다. 하는 경우 *column_id* 가 null 인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 된 추적에 대 한 모든 필터를 지웁니다.  
+`[ @columnid = ] column_id` 필터를 적용 한 열의 ID입니다. *column_id* 됩니다 **int**, 기본값은 없습니다. 하는 경우 *column_id* 가 null 인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정된 된 추적에 대 한 모든 필터를 지웁니다.  
   
- [ **@logical_operator** =] *logical_operator*  
- 지정 여부를 AND (**0**) 또는 OR (**1**) 연산자가 적용 됩니다. *logical_operator* 됩니다 **int**, 기본값은 없습니다.  
+`[ @logical_operator = ] logical_operator` 지정 여부를 AND (**0**) 또는 OR (**1**) 연산자가 적용 됩니다. *logical_operator* 됩니다 **int**, 기본값은 없습니다.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
- 비교 유형을 지정합니다. *comparison_operator* 됩니다 **int**, 기본값은 없습니다. 비교 연산자 및 나타내는 값이 표에 나와 있습니다.  
+`[ @comparison_operator = ] comparison_operator` 비교의 형식을 지정 합니다. *comparison_operator* 됩니다 **int**, 기본값은 없습니다. 비교 연산자 및 나타내는 값이 표에 나와 있습니다.  
   
 |값|비교 연산자|  
 |-----------|-------------------------|  
 |**0**|=(같음)|  
-|**1**|<>(같지 않음)|  
-|**2**|>(보다 큼)|  
-|**3**|<(보다 작음)|  
-|**4**|>=(크거나 같음)|  
-|**5**|<=(작거나 같음)|  
+|**1**|<> (같지 않음)|  
+|**2**|> (보다 큼)|  
+|**3**|< (보다 작음)|  
+|**4**|> = (크거나 같음)|  
+|**5**|< = (작거나 같음)|  
 |**6**|LIKE|  
 |**7**|유사하지 않음|  
   
- [  **@value=** ] *값*  
- 필터링할 값을 지정합니다. 데이터 형식이 *값* 필터링 할 열의 데이터 형식과 일치 해야 합니다. 예를 들어 있는 개체 ID 열에 필터가 설정 됩니다는 **int** 데이터 형식 *값* 여야 **int**합니다. 경우 *값* 됩니다 **nvarchar** 하거나 **varbinary**, 최대 길이는 8000 있을 수 있습니다.  
+`[ @value = ] value` 필터링 할 값을 지정 합니다. 데이터 형식이 *값* 필터링 할 열의 데이터 형식과 일치 해야 합니다. 예를 들어 있는 개체 ID 열에 필터가 설정 됩니다는 **int** 데이터 형식 *값* 여야 **int**합니다. 경우 *값* 됩니다 **nvarchar** 하거나 **varbinary**, 최대 길이는 8000 있을 수 있습니다.  
   
  비교 연산자가 LIKE 또는 NOT LIKE일 경우 논리 연산자는 "%" 또는 LIKE 연산에 적합한 다른 필터를 포함할 수 있습니다.  
   
@@ -102,7 +97,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  한 번 실행에서 특정 열에 대 한 모든 필터를 함께 설정 되어야 합니다 **sp_trace_setfilter**합니다. 예를 들어 필터 두 개를 응용 프로그램 이름 열에, 그리고 필터 하나를 사용자 이름 열에 적용하려면 응용 프로그램 이름에 필터를 차례로 지정해야 합니다. 한 번의 저장 프로시저 호출에서 응용 프로그램 이름에 필터 하나를 지정한 다음 사용자 이름에 필터를 지정하고 응용 프로그램 이름에 나머지 필터 하나를 지정하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  
   
- 프로시저를 저장 하는 모든 SQL 추적의 매개 변수 (**sp_trace_xx**) 엄격 하 게 형식화 됩니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
+ 모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  사용자는 ALTER TRACE 권한이 있어야 합니다.  

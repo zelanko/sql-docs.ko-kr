@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650785"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531765"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@sent_before=** ] **'***sent_before***'**  
- 날짜 및 시간으로 제공 된 최대 전자 메일을 삭제 합니다 *sent_before* 인수입니다. *sent_before* 됩니다 **datetime** 기본적으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
+`[ @sent_before = ] 'sent_before'` 날짜 및 시간으로 제공 된 최대 전자 메일을 삭제 합니다 *sent_before* 인수입니다. *sent_before* 됩니다 **datetime** 기본적으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- 지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 됩니다 **varchar(8)** 기본값은 없습니다. 유효한 항목은 **전송**를 **보내지 않은**를 **을 다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
+`[ @sent_status = ] 'sent_status'` 지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 됩니다 **varchar(8)** 기본값은 없습니다. 유효한 항목은 **전송**를 **보내지 않은**를 **을 다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

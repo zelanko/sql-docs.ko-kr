@@ -18,12 +18,12 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0798359bedc959e792f56b3d81507329b618f217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781331"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536615"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@account_id** = ] *account_id*  
- 정보를 나열할 계정의 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @account_id = ] account_id` 정보를 나열할 계정의 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@account_name** =] **'***account_name***'**  
- 정보를 나열할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @account_name = ] 'account_name'` 정보를 나열할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

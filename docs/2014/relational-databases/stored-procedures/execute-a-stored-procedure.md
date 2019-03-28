@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057493"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532895"
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48057493"
   
 -   시스템 프로시저 이름을 일치시킬 때 호출 데이터베이스 데이터 정렬이 사용됩니다. 따라서 프로시저 호출에서 대/소문자를 구분하여 시스템 프로시저 이름을 항상 정확하게 지정해야 합니다. 예를 들어 다음 코드는 대/소문자를 구분하는 데이터 정렬을 사용하는 데이터베이스 컨텍스트에서 실행할 경우 실패합니다.  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057493"
   
      시스템 프로시저는 접두사 **sp_** 로 시작합니다. 시스템 프로시저는 모든 사용자 정의 데이터베이스와 시스템 정의 데이터베이스에 논리적으로 나타나기 때문에 프로시저 이름을 완전히 한정하지 않고도 모든 데이터베이스에서 시스템 프로시저를 실행할 수 있습니다. 그러나 이름 충돌이 발생하지 않도록 **sys** 스키마 이름으로 모든 시스템 프로시저 이름을 스키마로 한정하는 것이 좋습니다. 다음 예에서는 권장되는 시스템 프로시저 호출 방법을 보여 줍니다.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057493"
   
      다음 예에서는 권장되는 사용자 정의 프로시저 실행 방법을 보여 줍니다. 프로시저는 하나의 입력 매개 변수를 받아들입니다. 입력 및 출력 매개 변수를 지정하는 방법은 [매개 변수 지정](specify-parameters.md)을 참조하세요.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057493"
   
      -또는-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -164,7 +164,7 @@ ms.locfileid: "48057493"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 하나의 매개 변수를 예상하는 저장 프로시저를 실행하는 방법을 보여 줍니다. 또한 `uspGetEmployeeManagers` 매개 변수로 지정된 값인  `6` 을 사용하여 `@EmployeeID` 저장 프로시저를 실행합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) 을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

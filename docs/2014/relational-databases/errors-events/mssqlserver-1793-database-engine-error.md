@@ -10,12 +10,12 @@ ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e3120bc2f18b780101b705200761f868ba94b06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186903"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530045"
 ---
 # <a name="mssqlserver1793"></a>MSSQLSERVER_1793
     
@@ -42,7 +42,7 @@ ms.locfileid: "48186903"
   
  다음 예는 파티션 구성표가 기본 데이터에 대해서는 지정되어 있지만 FILESTREAM 데이터에 대해서는 지정되어 있지 않기 때문에 실패합니다.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY] )  
 GO  
@@ -50,7 +50,7 @@ GO
   
  다음 예제는 기본 데이터에 대한 **MOVE TO** 절과 FILESTREAM 데이터에 대한 **FILESTREAM_ON** 절이 모두 지정되어 있기 때문에 성공합니다.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY], filestream_on 'default' )  
 GO  
@@ -58,7 +58,7 @@ GO
   
  또한 다음 예제는 기본 데이터에 대한 **MOVE TO** 절이나 FILESTREAM 데이터에 대한 **FILESTREAM_ON** 절이 둘 다 지정되어 있지 않기 때문에 성공합니다.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF )  
 GO  

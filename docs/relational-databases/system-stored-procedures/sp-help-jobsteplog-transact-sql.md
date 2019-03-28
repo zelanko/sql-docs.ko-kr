@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535695"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id =**] **'***job_id***'**  
- 작업 단계 로그 정보를 반환할 작업 ID입니다. *job_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @job_id = ] 'job_id'` 작업 단계 로그 정보를 반환할 작업 id. *job_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@job_name =**] **'***job_name***'**  
- 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@step_id =**] *step_id*  
- 작업 단계의 ID입니다. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @step_id = ] step_id` 작업 단계의 id. 지정하지 않은 경우 작업의 모든 단계가 포함됩니다. *step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@step_name =**] **'***step_name***'**  
- 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @step_name = ] 'step_name'` 작업 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

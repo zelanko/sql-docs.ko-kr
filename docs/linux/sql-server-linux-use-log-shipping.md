@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 0db8a92539f83e543623f28067d0408b476c37a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032330"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531285"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달을 사용 시작
 
@@ -31,7 +31,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 - 보조 SQL Server 인스턴스에 하나 이상의 네트워크를 통해 트랜잭션 로그 백업 파일 복사
 - 보조 SQL Server 인스턴스에서 트랜잭션 로그 백업 파일 복원
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 - [Linux에서 SQL Server 에이전트를 설치 합니다.](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
 ## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>로그 전달이 CIFS를 사용 하 여 네트워크 공유 설정 
@@ -115,12 +115,12 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 
 - 주 서버에서이 스크립트를 실행 합니다.
 
-    ```tsql
+    ```sql
     BACKUP DATABASE SampleDB
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
-    ```tsql
+    ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
@@ -181,12 +181,12 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 
 - 보조 서버에서이 스크립트를 실행 합니다.
 
-    ```tsql
+    ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     WITH NORECOVERY;
     ```
     
-    ```tsql
+    ```sql
     DECLARE @LS_Secondary__CopyJobId    AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
@@ -289,7 +289,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 
 - 주 서버에서 다음 작업을 시작 하 여 로그 전달에서 작동 하는지 확인
 
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -299,7 +299,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
 
 - 보조 서버에서 다음 작업을 시작 하 여 로그 전달에서 작동 하는지 확인
  
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 

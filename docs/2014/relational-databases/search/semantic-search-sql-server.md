@@ -15,12 +15,12 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538535"
 ---
 # <a name="semantic-search-sql-server"></a>의미 체계 검색(SQL Server)
   통계 의미 체계 검색은 통계적으로 관련성이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 키 구 *를 추출한 다음 인덱싱하여*데이터베이스에 저장된 구조화되지 않은 문서를 깊이 있게 검색하는 기능입니다. 그런 다음 이 키 구를 사용하여 *유사하거나 관련된 문서*를 식별한 후 인덱싱합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48215653"
 ###  <a name="find1"></a> 문서의 키 구 찾기  
  다음 쿼리는 예제 문서에서 식별된 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 통계적 유의성 점수를 기준으로 내림차순으로 표시됩니다. 이 쿼리는 [semantickeyphrasetable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 함수를 호출합니다.  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> 유사 하거나 관련 된 문서를 만드는 키 구 찾기  
  다음 쿼리에서는 두 예제 문서를 서로 유사하거나 관련된 것으로 만드는 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 가중치 점수를 기준으로 내림차순으로 표시됩니다. 이 쿼리는 [semanticsimilaritydetailstable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 함수를 호출합니다.  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -98,7 +98,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="reltasks"></a> 관련 작업  
+##  <a name="reltasks"></a> 관련 태스크  
  [의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)  
  통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
   

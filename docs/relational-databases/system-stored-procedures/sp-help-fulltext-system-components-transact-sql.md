@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635693"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534325"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,8 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  전체 텍스트 구성 요소에 대한 정보를 반환합니다.  
   
- [ **@component_type=** ] *component_type*  
- 구성 요소 유형을 지정합니다. *component_type* 다음 중 하나일 수 있습니다.  
+`[ @component_type = ] component_type` 구성 요소의 형식을 지정합니다. *component_type* 다음 중 하나일 수 있습니다.  
   
 -   **wordbreaker**  
   
@@ -59,8 +58,7 @@ sp_help_fulltext_system_components
   
  전체 경로를 지정하는 경우 구성 요소 DLL의 전체 경로에도 *param* 을 지정해야 하며 그렇지 않으면 오류 메시지가 반환됩니다.  
   
- [ **@param=** ] *param*  
- 구성 요소 유형에 따라 LCID(로캘 ID), "." 접두사가 있는 LCID(로캘 ID), "." 접두사가 있는 파일 확장명, 프로토콜 처리기의 전체 구성 요소 이름 또는 구성 요소 DLL의 전체 경로 중 하나일 수 있습니다.  
+`[ @param = ] param` 구성 요소 유형에 따라이 다음 중 하나:는 LCID (로캘 식별자)를 사용 하 여 파일 확장명 "." 접두사를 전체 구성 요소 이름, 프로토콜 처리기 또는 구성 요소 DLL의 전체 경로입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

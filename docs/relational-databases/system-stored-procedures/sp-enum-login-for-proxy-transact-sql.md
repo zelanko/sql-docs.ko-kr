@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799443"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535585"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@name**=] '*이름*'  
- 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체, 로그인, 서버 역할 또는 **msdb** 프록시를 나열할 데이터베이스 역할. 이름은 **nvarchar(256)**, 기본값은 NULL입니다.  
+`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체, 로그인, 서버 역할 또는 **msdb** 프록시를 나열할 데이터베이스 역할. 이름은 **nvarchar(256)**, 기본값은 NULL입니다.  
   
- [ **@proxy_id**= ] *id*  
- 정보를 나열할 프록시의 프록시 ID입니다. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_id = ] id` 정보를 나열할 프록시의 프록시 id. 합니다 *proxy_id* 됩니다 **int**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 정보를 나열할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
+`[ @proxy_name = ] 'proxy_name'` 정보를 나열할 프록시의 이름입니다. 합니다 *proxy_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 중 하나는 *id* 또는 *proxy_name* 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

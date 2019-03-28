@@ -16,12 +16,12 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 175718b9d53556c5b24e65cb31e117fdf9a27418
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73494ded33f5fc67c86bc5976f16c2e3b0e8b083
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532625"
 ---
 # <a name="spreplmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** = ] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시된 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber** =] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscription_type** =] *subscription_type*  
- 구독 유형입니다. *publication_type* 됩니다 **int**이며 기본값은 없습니다 수 있습니다 이러한 값 중 하나일 수 있습니다.  
+`[ @subscription_type = ] subscription_type` 경우 구독 유형입니다. *publication_type* 됩니다 **int**이며 기본값은 없습니다 수 있습니다 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

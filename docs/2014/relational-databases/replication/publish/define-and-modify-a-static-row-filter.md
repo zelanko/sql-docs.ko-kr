@@ -14,12 +14,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0af353d79fcb84d1ca4b8921048c3c5f502c29f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771555"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535725"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -70,19 +70,19 @@ ms.locfileid: "52771555"
   
     -   **필터 문** 텍스트 영역에는 다음 형식의 기본 텍스트가 포함됩니다.  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   기본 텍스트는 변경할 수 없습니다. 표준 SQL 구문을 사용하여 WHERE 키워드 뒤에 필터 절을 입력합니다. 전체 필터 절은 다음과 같습니다.  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   정적 행 필터에는 사용자 정의 함수가 포함될 수 있습니다. 사용자 정의 함수가 있는 정적 행 필터에 대한 전체 필터 절은 다음과 같습니다.  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   

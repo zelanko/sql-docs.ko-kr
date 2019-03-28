@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8afb24373cf62d4b9f8696d9c2d9370ad665796
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 983711f4ac679cdb12fa7c31509725f13fba8bb3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352307"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531355"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve`는 geometry 또는 geography 유형의 연속적인 `CircularString` 또는 `LineString` 인스턴스가 하나 이상 포함된 컬렉션입니다.  
@@ -97,7 +97,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>1. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
  다음 예에서는 빈 `CompoundCurve` 인스턴스를 만드는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
@@ -105,21 +105,21 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>2. 동일한 문에서 CompoundCurve를 사용하여 기하 도형 인스턴스 선언 및 인스턴스화  
  다음 예에서는 동일한 문에서 `geometry` 을 사용하여 `CompoundCurve`인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>3. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화  
  다음 예에서는 `CompoundCurve`를 사용하여 `geography` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>4. CompoundCurve 인스턴스에 사각형 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 사각형을 저장하는 두 가지 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3), (1 3, 3 3),(3 3, 3 1), (3 1, 1 1))');  
 SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');  
@@ -131,7 +131,7 @@ SELECT @g1.STLength(), @g2.STLength();
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>5. 여러 CircularString을 포함하는 CompoundCurve를 사용하여 기하 도형 인스턴스 인스턴스화  
  다음 예에서는 서로 다른 두 `CircularString` 인스턴스를 사용하여 `CompoundCurve`를 초기화하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARSTRING(4 2, 2 4, 0 2))');  
 SELECT @g.STLength();  
@@ -142,7 +142,7 @@ SELECT @g.STLength();
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>6. CompoundCurve를 사용하여 반원 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 반원을 저장합니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))');  
 SELECT @g.STLength();  
@@ -151,7 +151,7 @@ SELECT @g.STLength();
 ### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>7. CompoundCurve에 여러 개의 CircularString 및 LineString 인스턴스 저장  
  다음 예에서는 `CircularString` 를 사용하여 여러 개의 `LineString` 및 `CompoundCurve`인스턴스를 저장하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3), (7 3, 7 5), CIRCULARSTRING(7 5, 5 7, 3 5))');  
 SELECT @g.STLength();  
@@ -160,14 +160,14 @@ SELECT @g.STLength();
 ### <a name="h-storing-instances-with-z-and-m-values"></a>8. Z 및 M 값이 있는 인스턴스 저장  
  다음 예에서는 `CompoundCurve` 인스턴스를 사용하여 Z 값과 M 값이 모두 있는 `CircularString` 및 `LineString` 인스턴스 시퀀스를 저장하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
 ### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>9. CircularString 인스턴스를 명시적으로 선언해야 하는 이유에 대한 설명  
  다음 예에서는 `CircularString` 인스턴스를 명시적으로 선언해야 하는 이유를 보여 줍니다. 프로그래머는 `CompoundCurve` 인스턴스에 원을 저장하려고 합니다.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;    
 DECLARE @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 2 4, 0 2))');  

@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779365"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534705"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication=**] **'***publication***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 아티클의 이름입니다. *문서* 는 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 합니다.  
+`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 는 **sysname**, 기본값은 **%**, 모든 아티클의 이름을 반환 합니다.  
   
- [  **@filtername=**] **'***filtername***'**  
- 정보를 반환할 필터의 이름입니다. *filtername* 됩니다 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
+`[ @filtername = ] 'filtername'` 정보를 반환할 필터의 이름이입니다. *filtername* 됩니다 **sysname**, 기본값은 **%**, 아티클 또는 게시에서 정의 된 모든 필터에 대 한 정보를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -63,7 +60,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**조인 테이블 소유자**|**sysname**|기본 테이블에 조인되는 테이블 소유자의 이름입니다.|  
 |**조인 테이블 이름**|**sysname**|기본 테이블에 조인되는 테이블의 이름입니다.|  
 |**문서 이름**|**sysname**|기본 테이블에 조인되는 테이블 아티클의 이름입니다.|  
-|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = 모두|  
+|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = both|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -74,7 +71,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 및 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_helpmergefilter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_addmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_changemergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376055"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533835"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>기본 제공 XML 스키마 컬렉션 참조(sys)
   사용자가 만드는 모든 데이터베이스의 **sys** 관계형 스키마에는 미리 정의된 **sys** XML 스키마 컬렉션이 있습니다. 이 스키마 컬렉션에는 이러한 미리 정의된 스키마가 포함되며 사용자가 만든 다른 XML 스키마 컬렉션으로부터 이러한 스키마를 액세스할 수 있습니다. 이러한 미리 정의된 스키마에 사용되는 접두사는 XQuery에서 의미를 갖습니다. 예약된 접두사는 **xml** 뿐입니다.  
@@ -41,7 +41,7 @@ xdt = http://www.w3.org/2004/07/xpath-datatypes
   
 -   XSD 유형  
   
--    **lang**, **base**및 **space**XML 특성  
+-   **lang**, **base**및 **space**XML 특성  
   
 -   **sqltypes** 네임스페이스의 구성 요소  
   
@@ -149,7 +149,7 @@ GO
   
  `instance of sqltypes:varchar?` 식은 <`root`> 요소 값이 `@var` 변수와 연결된 스키마에 따라 **varchar**로부터 파생된 유형이기 때문에 TRUE를 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

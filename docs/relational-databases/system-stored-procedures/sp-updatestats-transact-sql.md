@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586246"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535766"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0(성공) 또는 1(실패)  
   
 ## <a name="arguments"></a>인수  
- [ **@resample** =] **'resample'**  
- 지정 **sp_updatestats** RESAMPLE 옵션을 사용할지는 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문입니다. 하는 경우 **'resample'** 지정 하지 않으면 **sp_updatestats** 기본 샘플링을 사용 하 여 통계를 업데이트 합니다. **다시** 는 **varchar(8)** 번호의 기본값이  
+`[ @resample = ] 'resample'` 지정 **sp_updatestats** RESAMPLE 옵션을 사용할지는 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문입니다. 하는 경우 **'resample'** 지정 하지 않으면 **sp_updatestats** 기본 샘플링을 사용 하 여 통계를 업데이트 합니다. **다시** 는 **varchar(8)** 번호의 기본값이  
   
 ## <a name="remarks"></a>Remarks  
  **sp_updatestats** 실행 `UPDATE STATISTICS`를 지정 하 여는 `ALL` 키워드, 데이터베이스의 모든 사용자 정의 및 내부 테이블입니다. sp_updatestats는 진행률을 나타내는 메시지를 표시 합니다. 업데이트가 완료되면 모든 테이블에 대해 통계가 업데이트되었다고 보고합니다.  

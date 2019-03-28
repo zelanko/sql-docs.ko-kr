@@ -22,12 +22,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 714bfb68234a10a61b8ed41651da4f9f7037320e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531855"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버에 대한 사용 권한을 쉽게 관리할 수 있도록 서버 수준 역할을 제공합니다. 서버 역할은 다른 보안 주체를 그룹화하는 보안 주체입니다. 서버 수준 역할은 서버 측 사용 권한 범위에 속합니다. *역할* 은 Windows 운영 체제의 *그룹* 과 같습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "53351741"
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

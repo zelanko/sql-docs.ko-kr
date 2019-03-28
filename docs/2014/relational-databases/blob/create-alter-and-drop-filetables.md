@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 373cee8bf85815db18c50eb2919600ffec258f0b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516499"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530665"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52516499"
   
  다음 예제에서는 새 FileTable을 만들고 **FILETABLE_DIRECTORY** 및 **FILETABLE_COLLATE_FILENAME**둘 다에 대해 사용자 정의 값을 지정합니다.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -78,7 +78,7 @@ GO
   
  또한 다음 예에서는 새로운 Filetable을 만듭니다. 사용자 정의 값이 지원되지 않기 때문에 **FILETABLE_DIRECTORY** 값은 FileTable 값이 되고, **FILETABLE_COLLATE_FILENAME** 값은 database_default가 되며, 기본 키 및 UNIQUE 제약 조건에는 시스템에서 생성한 이름이 지정됩니다.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -113,7 +113,7 @@ GO
   
  **예제**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -144,7 +144,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> FileTable을 만들 때 생성되는 다른 데이터베이스 개체  
  새 FileTable을 만들면 일부 시스템 정의 인덱스 및 제약 조건도 만들어집니다. 이러한 개체는 변경하거나 삭제할 수 없으며, FileTable 자체가 삭제된 경우에만 사라집니다. 이러한 개체의 목록을 보려면 카탈로그 뷰 [sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)를 쿼리합니다.  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  

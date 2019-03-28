@@ -10,12 +10,12 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f4c4244b2d4c9bd785202805312f64194c73b5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530135"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침
   메모리 최적화 테이블에 액세스하는 트랜잭션에서 발생하는 오류 조건이 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "52531674"
   
  다음 예에서는 고유하게 컴파일된 저장 프로시저 또는 크로스 컨테이너 트랜잭션에 대한 호출이 포함된 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)] 저장 프로시저에 있는 재시도 논리를 보여 줍니다.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  

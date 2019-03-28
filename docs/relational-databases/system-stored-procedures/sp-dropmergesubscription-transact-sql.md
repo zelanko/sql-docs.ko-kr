@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535555"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'**_게시_**'**  
- 게시 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
+`[ @publication = ] 'publication'` 게시 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다.  
   
- [  **@subscriber=**] **'**_구독자_**'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
- 구독 데이터베이스의 이름입니다. *subscription_database*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscription_database*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- 구독 유형입니다. *subscription_type*됩니다 **nvarchar(15)**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @subscription_type = ] 'subscription_type'` 구독의 유형이입니다. *subscription_type*됩니다 **nvarchar(15)**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**모든**|밀어넣기, 끌어오기 및 익명 구독|  
-|**익명**|익명 구독입니다.|  
-|**푸시**|밀어넣기 구독입니다.|  
-|**끌어오기**|끌어오기 구독입니다.|  
+|**all**|밀어넣기, 끌어오기 및 익명 구독|  
+|**anonymous**|익명 구독입니다.|  
+|**push**|밀어넣기 구독입니다.|  
+|**pull**|끌어오기 구독입니다.|  
 |**둘 다** (기본값)|밀어넣기 및 끌어오기 구독 모두입니다.|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- 이 저장 프로시저가 배포자에 연결되지 않고 실행되는지 여부를 표시합니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용할 수 있습니다. 또한 배포자를 다시 설치해야 하는 경우에도 유용합니다.  
+`[ @ignore_distributor = ] ignore_distributor` 이 저장된 프로시저는 배포자에 연결 하지 않고 실행 되는지 여부를 나타냅니다. *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 정리 태스크를 수행하지 않고 게시를 삭제하는 데 사용할 수 있습니다. 또한 배포자를 다시 설치해야 하는 경우에도 유용합니다.  
   
- [  **@reserved=** ] *예약*  
- 나중에 사용하도록 예약되었습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
+`[ @reserved = ] reserved` 나중에 사용 하도록 예약 되어 있습니다. *예약* 됩니다 **비트**, 기본값은 **0**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

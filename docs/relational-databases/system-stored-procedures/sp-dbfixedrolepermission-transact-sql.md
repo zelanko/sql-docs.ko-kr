@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126213"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533365"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'**_역할_**'**  
- 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정 데이터베이스 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할* 지정 하지 않으면 모든 고정된 데이터베이스 역할에 대 한 사용 권한이 표시 됩니다.  
+`[ @rolename = ] 'role'` 유효한 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정된 데이터베이스 역할. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할* 지정 하지 않으면 모든 고정된 데이터베이스 역할에 대 한 사용 권한이 표시 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

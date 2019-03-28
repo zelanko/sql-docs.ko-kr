@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369315"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531725"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server로 로그인
   그래픽 관리 도구를 사용하거나 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 로그인할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "53369315"
 ## <a name="verifying-your-connection-protocol"></a>연결 프로토콜 확인  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결된 경우 다음 쿼리는 인증 방법(NTLM 또는 Kerberos)과 함께 현재 연결에 사용되는 프로토콜을 반환하며 연결이 암호화되는지 여부를 표시합니다.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

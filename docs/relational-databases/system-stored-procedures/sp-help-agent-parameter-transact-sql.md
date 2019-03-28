@@ -16,12 +16,12 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f7c9120872253706d45c813f78b8c437b3ff0484
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f732d1b8ab70fa5b188147f493af050a80bdca5b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786235"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534205"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@profile_id=**] *profile_id*  
- 프로필의 id를 [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 테이블입니다. *profile_id* 됩니다 **int**, 기본값은 **-1**, 모든 매개 변수를 반환 하는 합니다.  
+`[ @profile_id = ] profile_id` 프로필의 id를 [MSagent_parameters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) 테이블입니다. *profile_id* 됩니다 **int**, 기본값은 **-1**, 모든 매개 변수를 반환 하는 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -58,7 +57,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_help_agent_parameter**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

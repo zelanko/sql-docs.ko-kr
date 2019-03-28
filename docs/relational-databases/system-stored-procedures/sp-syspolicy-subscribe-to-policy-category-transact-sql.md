@@ -18,12 +18,12 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4af05ca0f4b4f042bcd2a59cda213f35537592ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2cb53d5d24bb450773bd1b421d749f7c8195fccc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532495"
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@policy_category=** ] **'***policy_category***'**  
- 데이터베이스에서 구독하도록 할 정책 범주의 이름입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
+`[ @policy_category = ] 'policy_category'` 정책 범주를 구독할 데이터베이스의 이름이입니다. *policy_category* 됩니다 **sysname**, 이며 반드시 지정 해야 합니다.  
   
  값을 얻으려면 *policy_category*, msdb.dbo.syspolicy_policy_categories 시스템 뷰를 쿼리 합니다.  
   

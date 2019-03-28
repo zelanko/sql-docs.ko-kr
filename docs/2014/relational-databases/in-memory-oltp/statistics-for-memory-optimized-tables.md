@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136073"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530835"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
   쿼리 최적화 프로그램에서는 열에 대한 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 통계는 데이터베이스의 테이블에서 수집되어 데이터베이스 메타데이터에 저장됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136073"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블을 배포할 때 통계에 대한 지침  
  쿼리 계획을 만들 때 쿼리 최적화 프로그램에 최신 통계가 사용되도록 다음 5단계를 사용하여 메모리 최적화 테이블을 배포합니다.  
   
-1.  테이블과 인덱스를 만듭니다. 인덱스를 인라인으로 지정된 된 `CREATE TABLE` 문입니다.  
+1.  테이블과 인덱스를 만듭니다. 인덱스는 `CREATE TABLE` 문에서 인라인으로 지정됩니다.  
   
 2.  테이블에 데이터를 로드합니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136073"
   
 4.  테이블에 액세스하는 저장 프로시저를 만듭니다.  
   
-5.  기본적으로 컴파일되고 해석의 혼합을 포함할 수 있는 워크 로드 실행 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로시저 뿐만 아니라 임시 일괄 처리를 저장 합니다.  
+5.  작업을 실행합니다. 작업에는 고유하게 컴파일된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장 프로시저와 해석된 저장 프로시저의 혼합뿐 아니라 임시 일괄 처리도 포함될 수 있습니다.  
   
  데이터를 로드하고 통계를 업데이트한 후 고유하게 컴파일된 저장 프로시저를 만들면 메모리 최적화 테이블에 사용 가능한 통계가 최적화 프로그램에 사용됩니다. 프로시저를 컴파일할 때 효율적인 쿼리 계획을 수행할 수 있습니다.  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  현재 데이터베이스에 있는 모든 메모리 최적화 테이블에 대한 통계를 업데이트하려면 다음 스크립트를 실행합니다.  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  다음 예에서는 메모리 최적화 테이블의 통계가 마지막으로 업데이트된 시기를 보고합니다. 이 정보로 통계를 업데이트해야 할지 여부를 결정할 수 있습니다.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

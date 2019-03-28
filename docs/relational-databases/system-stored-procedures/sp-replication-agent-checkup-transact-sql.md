@@ -16,12 +16,12 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529875"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- 진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다. *heartbeat_interval* 됩니다 **int**, 기본값은 10 분입니다.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` 진행률 메시지를 기록 하지 않고 에이전트를 실행할 수 있는 시간 (분) 최대 수가입니다. *heartbeat_interval* 됩니다 **int**, 기본값은 10 분입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **sp_replication_agent_checkup** 주의 대상으로 하는 각 에이전트에 대해 14151 오류를 발생 시킵니다. 또한 에이전트에 대한 실패 기록 메시지를 기록합니다.  

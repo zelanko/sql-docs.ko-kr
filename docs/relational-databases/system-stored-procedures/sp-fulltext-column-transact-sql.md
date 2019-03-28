@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0173c89273d208824bd945fa7c073ddd7940067e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615011"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537272"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,31 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@tabname=** ] **'***qualified_table_name***'**  
- 한 부분 또는 두 부분으로 구성된 테이블 이름입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. 테이블에 전체 텍스트 인덱스가 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
+`[ @tabname = ] 'qualified_table_name'` 하나 또는 두 부분 구성 테이블 이름이입니다. 테이블은 반드시 현재 데이터베이스에 있어야 합니다. 테이블에 전체 텍스트 인덱스가 있어야 합니다. *qualified_table_name* 됩니다 **nvarchar(517)**, 기본값은 없습니다.  
   
- [ **@colname=** ] **'***column_name***'**  
- 에 있는 열의 이름인 *qualified_table_name*합니다. 열은 문자, 해야 **varbinary (max)** 하거나 **이미지** 열 계산된 열일 수 없습니다. *column_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @colname = ] 'column_name'` 에 있는 열의 이름인 *qualified_table_name*합니다. 열은 문자, 해야 **varbinary (max)** 하거나 **이미지** 열 계산된 열일 수 없습니다. *column_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 저장 된 텍스트 데이터의 전체 텍스트 인덱스를 만들 수 **varbinary (max)** 하거나 **이미지** 데이터 형식입니다. 이미지와 그림은 인덱싱되지 않습니다.  
   
- [  **@action=** ] **'***동작***'**  
- 수행할 동작입니다. *동작* 됩니다 **varchar(20)"** 수 없고 기본값을 사용 하 여 다음 값 중 하나일 수 있습니다.  
+`[ @action = ] 'action'` 수행할 동작이입니다. *동작* 됩니다 **varchar(20)"** 수 없고 기본값을 사용 하 여 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**add**|추가 *column_name* 의 *qualified_table_name* 테이블의 비활성 전체 텍스트 인덱스를 합니다. 이 동작으로 전체 텍스트 인덱싱에 열을 사용할 수 있습니다.|  
 |**drop**|제거 *column_name* 의 *qualified_table_name* 테이블의 비활성 전체 텍스트 인덱스에서 합니다.|  
   
- [ **@language=** ] **'***language_term***'**  
- 열에 저장된 데이터의 언어입니다. 에 포함 된 언어의 목록을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)합니다.  
+`[ @language = ] 'language_term'` 열에 저장 된 데이터의 언어가입니다. 에 포함 된 언어의 목록을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조 하세요 [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)합니다.  
   
 > [!NOTE]  
 >  열에 여러 언어 또는 지원되지 않는 언어의 데이터가 있을 때는 중립을 사용하십시오. 기본값은 구성 옵션인 '기본 전체 텍스트 언어'에 의해 지정됩니다.  
   
- [ **@type_colname =** ] **'***type_column_name***'**  
- 에 있는 열의 이름인 *qualified_table_name* 의 문서 유형을 보관 하는 *column_name*합니다. 이 열 이어야 합니다 **char**, **nchar**하십시오 **varchar**, 또는 **nvarchar**. 데이터 형식의 경우에 사용 됩니다 *column_name* 유형의 **varbinary (max)** 하거나 **이미지**합니다. *type_column_name* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @type_colname = ] 'type_column_name'` 에 있는 열의 이름인 *qualified_table_name* 의 문서 유형을 보관 하는 *column_name*합니다. 이 열 이어야 합니다 **char**, **nchar**하십시오 **varchar**, 또는 **nvarchar**. 데이터 형식의 경우에 사용 됩니다 *column_name* 유형의 **varbinary (max)** 하거나 **이미지**합니다. *type_column_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -18,12 +18,12 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533155"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@viewname=** ] **'***viewname***'**  
- 뷰의 이름입니다. *viewname* 됩니다 **nvarchar**, 기본값은 없습니다. *viewname* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
+`[ @viewname = ] 'viewname'` 뷰의 이름이입니다. *viewname* 됩니다 **nvarchar**, 기본값은 없습니다. *viewname* 다중 부분 식별자가 될 수 있지만 현재 데이터베이스의 뷰만 참조할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  

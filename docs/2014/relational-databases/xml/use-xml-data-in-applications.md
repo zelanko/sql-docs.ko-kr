@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9d40c7624cff181d9955dae461e4d0e534dbb02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355489"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535015"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
   이 항목에서는 응용 프로그램에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  

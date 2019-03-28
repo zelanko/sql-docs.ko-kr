@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b41139bf7d2261f884ea078b6e3b8bafcb8c0197
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536569"
 ---
 # <a name="modify-xml-indexes"></a>XML 인덱스 수정
   [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 기존의 XML 인덱스와 비 XML 인덱스를 수정하는 데 사용할 수 없습니다. 그러나 모든 ALTER INDEX 옵션을 XML 인덱스에 사용할 수 있는 것은 아닙니다. XML 인덱스를 수정할 때 다음 옵션은 유효하지 않습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48088753"
   
 -   ALTER INDEX ALL이 지정되면 비-XML 인덱스 및 XML 인덱스 모두에 적용됩니다. 인덱싱 옵션은 두 가지 인덱스 유형에 모두 유효하지 않도록 지정할 수 있습니다. 이 경우 전체 문이 실패합니다.  
   
-## <a name="example-modifying-an-xml-index"></a>예제: XML 인덱스 수정  
+## <a name="example-modifying-an-xml-index"></a>예: XML 인덱스 수정  
  다음 예에서는 XML 인덱스가 생성되고 `ALLOW_ROW_LOCKS` 옵션을 `OFF`로 설정하여 수정됩니다. `ALLOW_ROW_LOCKS` 가 `OFF`일 때는 행이 잠기지 않고 페이지 수준 및 테이블 수준의 잠금을 사용하여 지정된 인덱스에 대한 액세스가 설정됩니다.  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>예제: XML 인덱스 활성화 및 비활성화  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>예: XML 인덱스 활성화 및 비활성화  
  기본적으로 XML 인덱스는 활성화됩니다. XML 인덱스가 비활성화되어 있는 경우 XML 열에 대해 실행되는 쿼리에서는 해당 XML 인덱스를 사용할 수 없습니다. XML 인덱스를 활성화하려면 `ALTER INDEX` 옵션과 함께 `REBUILD` 를 사용합니다.  
   
 ```  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd9d3d1660f549c93ae77106712364c15a41aa3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159143"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534065"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 선언의 값
   다음 표에서는 인식된 모든 XSD 단순 유형 열거를 기반으로 적용되는 제한 사항에 대해 간단하게 설명합니다.  

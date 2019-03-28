@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973922"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533675"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@ProcName =** ] **'**_procedure_**'**  
- 옵션을 설정할 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @ProcName = ] 'procedure'` 옵션을 설정할 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
   
- [ **@OptionName =** ] **'**_option_**'**  
- 설정할 옵션의 이름입니다. 에 대 한 값만 *옵션* 됩니다 **시작**합니다.  
+`[ @OptionName = ] 'option'` 설정 옵션의 이름이입니다. 에 대 한 값만 *옵션* 됩니다 **시작**합니다.  
   
- [ **@OptionValue =** ] **'**_value_**'**  
- 옵션을 설정할 것인지 여부입니다 (**true** 또는 **온**) 또는 해제 (**false** 또는 **해제**). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
+`[ @OptionValue = ] 'value'` 옵션을 설정할 것인지 여부입니다 (**true** 또는 **온**) 또는 해제 (**false** 또는 **해제**). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 오류 번호(실패)  

@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8ae16af1017d37afba6325d335ef24fd3b99a603
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590457"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537155"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table=** ] **'**_테이블_**'**  
- 저장소 형식을 변경할 테이블의 세 부분으로 구성된 이름입니다. *테이블* 됩니다 **nvarchar(776)** 합니다.  
+`[ @table = ] 'table'` 저장소 형식을 변경할 수는 테이블의 세 부분 이름이입니다. *테이블* 됩니다 **nvarchar(776)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

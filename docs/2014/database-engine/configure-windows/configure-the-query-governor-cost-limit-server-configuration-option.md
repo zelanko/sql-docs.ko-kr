@@ -14,12 +14,12 @@ ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 808100a35753a1a63e3e498d434fab4969a64342
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535145"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `query governor cost limit` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. 쿼리 관리자 비용 제한 옵션은 쿼리 실행 제한 시간에 대한 상한값을 지정합니다. 쿼리 비용이란 특정 하드웨어 구성에서 쿼리를 완료하는 데 필요한 예상 소요 시간(초)입니다. 이 옵션의 기본값은 0이며, 이 값은 쿼리 관리자 설정을 해제합니다. 기본값을 사용하면 시간 제한 없이 모든 쿼리를 실행할 수 있습니다. 0이나 음수가 아닌 값을 지정하면 쿼리 관리자가 그 값을 초과하는 예상 비용을 갖는 쿼리의 실행을 허용하지 않습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "52641521"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `query governor cost limit` 옵션 값을 `120` 초로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -91,7 +91,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 쿼리 관리자 비용 제한 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 쿼리 관리자 비용 제한 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

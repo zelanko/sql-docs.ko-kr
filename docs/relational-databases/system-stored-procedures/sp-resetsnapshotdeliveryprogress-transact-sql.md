@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773715"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530195"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@verbose_level**=] *verbose_level*  
- 반환될 정보의 양을 지정합니다. *verbose_level*됩니다 **int**, 기본값은 **1**합니다. 값 **1** 오류가 발생 함을 의미에서 필요한 잠금을 얻을 수 없습니다 경우 반환 된 **MSsnapshotdeliveryprogress** 테이블 및 **0** 즉 오류가 반환 되지 않습니다.  
+`[ @verbose_level = ] verbose_level` 반환 되는 정보의 양을 지정 합니다. *verbose_level*됩니다 **int**, 기본값은 **1**합니다. 값 **1** 오류가 발생 함을 의미에서 필요한 잠금을 얻을 수 없습니다 경우 반환 된 **MSsnapshotdeliveryprogress** 테이블 및 **0** 즉 오류가 반환 되지 않습니다.  
   
- [ **@drop_table**=] **'***drop_table***'**  
- 삭제할지 또는 잘라낼 스냅숏 진행에 테이블 포함 정보 여부입니다. *drop_table* 됩니다 **nvarchar(5)**, 기본값은 **FALSE**합니다. FALSE는 테이블을 잘라내며 TRUE는 테이블을 삭제합니다.  
+`[ @drop_table = ] 'drop_table'` 삭제할지 또는 잘라낼 스냅숏 진행에 테이블 포함 정보 여부입니다. *drop_table* 됩니다 **nvarchar(5)**, 기본값은 **FALSE**합니다. FALSE는 테이블을 잘라내며 TRUE는 테이블을 삭제합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

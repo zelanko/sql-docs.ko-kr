@@ -9,12 +9,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350572"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536715"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon`은 외부 경계 링과 0개 이상의 내부 링에서 정의하는 토폴로지 방식으로 닫힌 표면입니다.  
@@ -125,7 +125,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>1. 빈 CurvePolygon을 사용하여 Geometry 인스턴스 인스턴스화  
  이 예에서는 빈 `CurvePolygon` 인스턴스를 만드는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -133,21 +133,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>2. 동일한 문에서 CurvePolygon을 사용하여 Geometry 인스턴스 선언 및 인스턴스화  
  이 코드 조각은 동일한 문에서 `CurvePolygon`을 사용하여 geography 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>3. CurvePolygon을 사용하여 Geography 인스턴스 인스턴스화  
  이 코드 조각은 `geography`을 사용하여 `CurvePolygon` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>4. 외부 경계 링만 사용하여 CurvePolygon 저장  
  이 예에서는 단순 원을 `CurvePolygon` 인스턴스에 저장하는 방법을 보여 줍니다. 외부 경계 링만 사용하여 원을 정의합니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -156,7 +156,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>5. 내부 링을 포함하는 CurvePolygon 저장  
  이 예에서는 `CurvePolygon` 인스턴스에서 도넛형을 만듭니다. 외부 경계 링과 내부 링을 모두 사용하여 도넛형을 정의합니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -164,7 +164,7 @@ SELECT @g.STArea() AS Area;
   
  이 예에서는 내부 링을 사용할 때 유효하지 않은 인스턴스 및 유효한 `CurvePolygon` 인스턴스를 모두 보여 줍니다.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

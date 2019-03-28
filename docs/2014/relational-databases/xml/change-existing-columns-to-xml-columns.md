@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ef5193919d57fc5867dc45cafafd847f9767f48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530695"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>기존 열을 XML 열로 변경
   ALTER TABLE 문은 `xml` 데이터 형식을 지원합니다. 예를 들어 모든 문자열 유형 열을 `xml` 데이터 형식으로 변경할 수 있습니다. 이 경우 열에 포함된 문서는 올바른 형식이어야 합니다. 또한 열 유형을 문자열에서 형식화된 xml로 변경할 경우 지정된 XSD 스키마에 대해 열에 있는 문서의 유효성을 검사합니다.  

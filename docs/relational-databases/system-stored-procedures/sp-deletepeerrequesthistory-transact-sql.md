@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791525"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529935"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication=** ] **'***게시***'**  
- 상태가 요청된 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 상태 요청을 수행한는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@request_id=** ] *request_id*  
- 해당 요청에 대한 모든 응답을 삭제하도록 개별 상태 요청을 지정합니다. *request_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @request_id = ] request_id` 이 요청에 대 한 모든 응답은 삭제할 수 있도록 개별 상태 요청을 지정 합니다. *request_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- 해당 날짜 이전의 모든 응답 레코드를 삭제하도록 구분 날짜를 지정합니다. *cutoff_date* 됩니다 **datetime**, 이며 기본값은 NULL입니다.  
+`[ @cutoff_date = ] cutoff_date` 이전의 모든 응답 레코드는 삭제 되기까지의 구분 날짜를 지정 합니다. *cutoff_date* 됩니다 **datetime**, 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

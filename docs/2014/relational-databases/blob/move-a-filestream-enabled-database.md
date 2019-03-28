@@ -12,12 +12,12 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98887ac98ef0dc2e77a1a2ead02fbd773a8ae701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529805"
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM 사용 데이터베이스 이동
   이 항목에서는 FILESTREAM 사용 데이터베이스를 이동하는 방법을 보여 줍니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48100673"
   
 2.  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 쿼리 편집기에 복사한 다음 **실행**을 클릭합니다. 이 스크립트는 FILESTREAM 데이터베이스에서 사용하는 실제 데이터베이스 파일의 위치를 표시합니다.  
   
-    ```tsql  
+    ```sql  
     USE Archive  
     GO  
     SELECT type_desc, name, physical_name from sys.database_files  
@@ -39,7 +39,7 @@ ms.locfileid: "48100673"
   
 3.  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 쿼리 편집기에 복사한 다음 **실행**을 클릭합니다. 이 코드는 `Archive` 데이터베이스를 오프라인 상태로 만듭니다.  
   
-    ```tsql  
+    ```sql  
     USE master  
     EXEC sp_detach_db Archive  
     GO  
@@ -49,7 +49,7 @@ ms.locfileid: "48100673"
   
 5.  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 쿼리 편집기에 복사한 다음 **실행**을 클릭합니다. 이 스크립트는 `Archive` 데이터베이스를 온라인 상태로 설정합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE Archive ON  
     PRIMARY ( NAME = Arch1,  
         FILENAME = 'c:\moved_location\archdat1.mdf'),  

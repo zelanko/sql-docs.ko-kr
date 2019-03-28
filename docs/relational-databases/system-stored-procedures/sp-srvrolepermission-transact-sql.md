@@ -18,12 +18,12 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c025f6f1e7652e9b60ad8f8e9aea65aca112af81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23d8766a89619654ba89bc6d70cec342b11b8fe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821841"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534645"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@srvrolename =** ] **'***역할***'**  
- 사용 권한을 반환할 고정 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
+`[ @srvrolename = ] 'role'` 사용 권한이 반환 되는 고정된 서버 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -64,7 +63,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**서버 역할**|**sysname**|고정 서버 역할의 이름입니다.|  
+|**ServerRole**|**sysname**|고정 서버 역할의 이름입니다.|  
 |**사용 권한**|**sysname**|와 관련 된 권한은 **ServerRole**|  
   
 ## <a name="remarks"></a>Remarks  

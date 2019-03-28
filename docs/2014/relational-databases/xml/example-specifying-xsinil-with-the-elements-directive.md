@@ -1,5 +1,5 @@
 ---
-title: '예제: ELEMENTS 지시어를 사용하여 XSINIL 지정 | Microsoft 문서'
+title: '예: ELEMENTS 지시어를 사용하여 XSINIL 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf5020a092199d4440905302b309a573358d4471
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062933"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531795"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>예제: ELEMENTS 지시어를 사용하여 XSINIL 지정
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>예: ELEMENTS 지시어를 사용하여 XSINIL 지정
   다음 쿼리는 `ELEMENTS` 지시어를 지정하여 쿼리 결과로부터 요소 중심 XML을 생성합니다.  
   
 ## <a name="example"></a>예제  

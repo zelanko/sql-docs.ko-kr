@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a66591f5cc2eefcf60a9ea9b0a584a61c215df85
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537575"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 일정을 제거할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 일정을 제거할 작업의 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- 일정을 제거할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 일정을 제거할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@schedule_id=** ] *schedule_id*  
- 작업에서 제거할 일정의 ID입니다. *schedule_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @schedule_id = ] schedule_id` 작업에서 제거할 일정의 일정 id. *schedule_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- 작업을 제거할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @schedule_name = ] 'schedule_name'` 작업에서 제거할 일정의 이름입니다. *schedule_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 사용하지 않는 작업 일정을 삭제할지 여부를 지정합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **0**, 즉, 모든 일정이 유지 되는 참조 하는 작업이 없는 경우에 합니다. 경우로 **1**를 사용 하지 않는 작업 일정을 참조 하는 작업이 없는 경우 삭제 됩니다.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 사용 하지 않는 작업 일정을 삭제할지 여부를 지정 합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **0**, 즉, 모든 일정이 유지 되는 참조 하는 작업이 없는 경우에 합니다. 경우로 **1**를 사용 하지 않는 작업 일정을 참조 하는 작업이 없는 경우 삭제 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

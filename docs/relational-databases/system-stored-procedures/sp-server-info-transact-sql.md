@@ -18,12 +18,12 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846641"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529305"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@attribute_id =** ] **'***attribute_id***'**  
- 특성의 정수 ID입니다. *attribute_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @attribute_id = ] 'attribute_id'` 특성의 정수 ID입니다. *attribute_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
@@ -51,8 +50,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|특성의 ID 번호입니다.|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|특성 이름입니다.|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|특성의 현재 설정입니다.|  
+|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|특성 이름입니다.|  
+|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|특성의 현재 설정입니다.|  
   
  다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 클라이언트 라이브러리는 현재 특성을 사용 **1**, **2**합니다 **18**를 **22**, 및 **500** 연결 시 시간입니다.  
   

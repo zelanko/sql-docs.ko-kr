@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204043"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538135"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 IDENTITY 구현
   IDENTITY(1, 1)는 메모리 최적화 테이블에서 지원됩니다. 그러나 x != 1 또는 y != 1인 IDENTITY(x, y) 정의를 사용하는 ID 열은 메모리 최적화 테이블에서 지원되지 않습니다. IDENTITY 값에 대한 해결 방법은 SEQUENCE 개체를 사용합니다([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
   
  먼저 메모리 내 OLTP로 변환 중인 테이블에서 IDENTITY 속성을 제거합니다. 그런 다음 테이블의 행에 대해 새 SEQUENCE 개체를 정의합니다. ID 열인 SEQUENCE 개체는 NEXT VALUE FOR 구문을 사용하여 새 ID 값을 얻기 위해 열의 DEFAULT 값을 만드는 기능에 의존합니다. 메모리 내 OLTP에서는 DEFAULT가 지원되지 않으므로 새로 생성된 SEQUENCE 값을 INSERT 문 또는 삽입을 수행하는 고유하게 컴파일된 저장 프로시저로 전달해야 합니다. 다음 예에서는 이러한 패턴을 보여 줍니다.  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

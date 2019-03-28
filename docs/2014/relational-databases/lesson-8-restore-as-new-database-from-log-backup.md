@@ -11,12 +11,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b25bd1ad06b92aa3d9e1ba9cb4be4caa5d587d1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d807fae60099022e847e4799196305ccfbadf8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534445"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>9단원: Microsoft Azure Storage에서 데이터베이스 복원
   이 단원에서는 Microsoft Azure Storage의 데이터베이스 백업 파일을 온-프레미스나 Microsoft Azure의 가상 머신에 있는 데이터베이스에 복원하는 방법을 배웁니다. 이 단원을 수행하기 위해 4, 5, 6, 7, 8단원을 완료할 필요는 없습니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "48207923"
   
 3.  다음 전체 스크립트를 복사하여 쿼리 창에 붙여 넣습니다. 필요에 따라 스크립트를 수정 합니다.  
   
-     **참고:** 실행할 수는 `RESTORE` 데이터베이스 인스턴스를 다른 컴퓨터에 Windows Azure Storage에서 데이터베이스 백업 (.bak)을 복원 하는 문입니다.  
+     **참고:** `RESTORE` 문을 실행하여 Microsoft Azure Storage의 데이터베이스 백업(.bak)을 다른 컴퓨터의 데이터베이스 인스턴스에 복원합니다.  
   
-    ```tsql  
+    ```sql  
   
     USE master   
     GO   
@@ -96,6 +96,6 @@ ms.locfileid: "48207923"
   
     ```  
   
- **자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일**  
+ **자습서의 끝: Windows Azure Storage 서비스에서 SQL Server 데이터 파일**  
   
   

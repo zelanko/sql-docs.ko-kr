@@ -19,12 +19,12 @@ ms.assetid: e4734b3b-8fbe-4b65-9c48-91b5a3dd18e1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07e9e5c6b96e33dc416f7e81e363b988a0f615e3
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641244"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530915"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 복구 간격 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **복구 간격** 옵션은 데이터베이스를 복구하는 데 필요한 시간의 상한값을 정의합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 이 옵션에 지정된 값을 사용하여 지정된 데이터베이스에 대해 [자동 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md) 을 실행하는 대략적인 빈도를 결정합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "52641244"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 를 사용하여 `recovery interval` 옵션 값을 `3` 분으로 설정하는 방법을 보여 줍니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -103,10 +103,10 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 복구 간격 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: 복구 간격 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)   
  [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

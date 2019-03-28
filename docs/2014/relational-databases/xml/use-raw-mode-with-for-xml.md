@@ -15,15 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537045"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
   RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있는 XML 요소 또는 선택적으로 제공된 요소 이름으로 변환합니다. 기본적으로 행 집합에서 NULL이 아닌 각 열 값은 \<row> 요소의 특성으로 매핑됩니다. ELEMENTS 지시어가 FOR XML 절에 추가된 경우 각 열 값은 \<row> 요소의 하위 요소로 매핑됩니다. ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 xsi:nil=`"`true`"`특성이 있는 요소로 매핑할 수 있습니다.  
@@ -35,17 +35,17 @@ ms.locfileid: "48084243"
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   [예제: 제품 모델 정보를 XML로 검색](example-retrieving-product-model-information-as-xml.md)  
+-   [예: 제품 모델 정보를 XML로 검색](example-retrieving-product-model-information-as-xml.md)  
   
--   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [예: ELEMENTS 지시어를 사용 하 여 XSINIL 지정](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용 하 여 결과로 스키마 요청](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [예제: 이진 데이터 검색](example-retrieving-binary-data.md)  
+-   [예: 이진 데이터 검색](example-retrieving-binary-data.md)  
   
--   [예제: &#60;행&#62; 요소 이름 바꾸기](example-renaming-the-row-element.md)  
+-   [예: 이름 바꾸기는 &#60;행&#62; 요소](example-renaming-the-row-element.md)  
   
--   [예제: FOR XML로 생성된 XML에 대한 루트 요소 지정](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [예: FOR XML로 생성 된 xml 루트 요소 지정](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [예: XMLType 열 쿼리](example-querying-xmltype-columns.md)  
   

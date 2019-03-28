@@ -18,12 +18,12 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e56bfe08d9279408cc7bdbc4b57a9719a04946fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536685"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@job_id=** ] *job_id*  
- 삭제할 작업의 ID입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
+`[ @job_id = ] job_id` 삭제할 작업의 id 번호가입니다. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다.  
   
- [ **@job_name=** ] **'***job_name***'**  
- 삭제할 작업의 이름입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @job_name = ] 'job_name'` 삭제할 작업의 이름이입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 하거나 *job_name*지정 해야 하며 둘 다 지정할 수 없습니다.  
   
- [ **@originating_server=** ] **'***server***'**  
- 내부적으로만 사용할 수 있습니다.  
+`[ @originating_server = ] 'server'` 내부에 사용 합니다.  
   
- [ **@delete_history=** ] *delete_history*  
- 작업 기록 삭제 여부를 지정합니다. *delete_history* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_history* 됩니다 **1**, 작업에 대 한 작업 기록이 삭제 됩니다. 때 *delete_history* 됩니다 **0**, 작업 기록 삭제 되지 않습니다.  
+`[ @delete_history = ] delete_history` 작업 기록 삭제 여부를 지정 합니다. *delete_history* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_history* 됩니다 **1**, 작업에 대 한 작업 기록이 삭제 됩니다. 때 *delete_history* 됩니다 **0**, 작업 기록 삭제 되지 않습니다.  
   
  작업이 삭제 된 기록을 삭제 되지 않습니다을 작업에 대 한 기록 정보는 표시 되지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 그래픽 사용자 인터페이스 작업 기록 하지만 정보에 여전히에 상주할는 **sysjobhistory**테이블에 **msdb** 데이터베이스입니다.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- 이 작업에 연결된 일정이 다른 작업에 연결되어 있지 않은 경우 해당 일정의 삭제 여부를 지정합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_unused_schedule* 됩니다 **1**, 일정을 참조 하는 다른 작업이 없는 경우이 작업에 연결 된 일정이 삭제 됩니다. 때 *delete_unused_schedule* 됩니다 **0**, 일정은 삭제 되지 않습니다.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` 연결 있는지 여부를 일정을 삭제 하려면이 작업에 다른 작업에 연결 되어 있지 않은 경우를 지정 합니다. *delete_unused_schedule* 됩니다 **비트**, 기본값은 **1**합니다. 때 *delete_unused_schedule* 됩니다 **1**, 일정을 참조 하는 다른 작업이 없는 경우이 작업에 연결 된 일정이 삭제 됩니다. 때 *delete_unused_schedule* 됩니다 **0**, 일정은 삭제 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -106,7 +101,7 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

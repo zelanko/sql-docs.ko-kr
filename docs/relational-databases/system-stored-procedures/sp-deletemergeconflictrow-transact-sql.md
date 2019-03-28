@@ -16,12 +16,12 @@ ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b11096a9f1ac9f8c5f5c04f3afc36f2776e988e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535285"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- 충돌 테이블의 이름입니다. *conflict_table* 됩니다 **sysname**, 기본값은 **%** 합니다. 경우는 *conflict_table* NULL로 지정 되어 또는 **%**, 충돌이 삭제 충돌 및 일치 하는 행으로 간주 됩니다 *rowguid* 및 *origin_datasource* 하 고 *source_object* 에서 삭제 되는 [MSmerge_conflicts_info &#40;Transact SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
+`[ @conflict_table = ] 'conflict_table'` 충돌 테이블의 이름이입니다. *conflict_table* 됩니다 **sysname**, 기본값은 **%** 합니다. 경우는 *conflict_table* NULL로 지정 되어 또는 **%**, 충돌이 삭제 충돌 및 일치 하는 행으로 간주 됩니다 *rowguid* 및 *origin_datasource* 하 고 *source_object* 에서 삭제 되는 [MSmerge_conflicts_info &#40;Transact SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블입니다.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- 원본 테이블의 이름입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
+`[ @source_object = ] 'source_object'` 원본 테이블의 이름이입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 NULL입니다.  
   
- [  **@rowguid =**] **'**_rowguid_**'**  
- 삭제 충돌에 대한 행 식별자입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
+`[ @rowguid = ] 'rowguid'` 삭제 충돌에 대 한 행 식별자가입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
- [  **@origin_datasource=**] **'**_origin_datasource_**'**  
- 충돌이 발생한 곳입니다. *origin_datasource* 됩니다 **varchar(255)**, 기본값은 없습니다.  
+`[ @origin_datasource = ] 'origin_datasource'` 충돌의 원점이입니다. *origin_datasource* 됩니다 **varchar(255)**, 기본값은 없습니다.  
   
- [  **@drop_table_if_empty=**] **'**_drop_table_if_empty_**'**  
- 가 나타내는 플래그를 *conflict_table* 경우 삭제할는 빈 합니다. *drop_table_if_empty* 됩니다 **varchar(10)**, 기본값은 FALSE입니다.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` 가 나타내는 플래그를 *conflict_table* 경우 삭제할는 빈 합니다. *drop_table_if_empty* 됩니다 **varchar(10)**, 기본값은 FALSE입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +63,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_deletemergeconflictrow**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

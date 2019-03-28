@@ -10,17 +10,17 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 262a2a39ec8843a1e52a1418fe66f0ec0f40a128
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080003"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531735"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블 만들기 및 액세스
   고유하게 컴파일된 저장 프로시저의 TempDB에서 테이블을 만들거나 액세스하는 것은 지원되지 않습니다. 그 대신 테이블 형식과 테이블 변수를 사용합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
-```tsql  
+```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   
   AS TABLE   
    (id INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT=100000),   

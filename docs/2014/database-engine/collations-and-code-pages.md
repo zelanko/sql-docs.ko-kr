@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118173"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536535"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
   [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118173"
 > [!IMPORTANT]  
 >  BIN2 데이터 정렬을 사용하지 않는 인덱스 문자열 열에 대해서는 ORDER BY 또는 GROUP BY를 사용할 수 없습니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   메모리 최적화 테이블의 (var)char 열은 코드 페이지 1252와 데이터 정렬을 사용해야 합니다. n(var)char 열에는 이 제한 사항이 적용되지 않습니다. 다음 코드는 모든 1252 데이터 정렬을 검색합니다.  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   (n)(var)char 열의 인덱스는 BIN2 데이터 정렬만 사용하여 지정할 수 있습니다(첫 번째 예 참조). 다음 쿼리는 지원되는 모든 BIN2 데이터 정렬을 검색합니다.  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 해당 n (var) char (*n*) 값 n (var) char 형식으로 변환할 수 없습니다 (*합니까*) 이면 *합니까* < *n*경우는 데이터 정렬에 _SC 속성이 있습니다. 예를 들어 다음은 지원되지 않습니다.  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  다음 예에서는 메모리 내 OLTP의 데이터 정렬 제한 사항이 의미하는 것과 그 해결 방법을 몇 가지 보여 줍니다. 이 예에서는 위에 지정된 Employees 테이블을 사용하여 이 모든 직원을 나열 합니다. LastName의 경우 이진 데이터 정렬로 인해 대문자 이름이 소문자 앞에 정렬됩니다. 따라서 대문자에 더 낮은 코드 포인트가 있기 때문에 'Thomas'가 'nolan' 앞에 옵니다. FirstName의 데이터 정렬은 대/소문자를 구분하지 않습니다. 따라서 문자의 코드 포인트가 아니라 영문자 순으로 정렬됩니다.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

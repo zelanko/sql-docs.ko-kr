@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4f4e9c799e7c2554807bf43083dece0f1899896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fa03aae36fd7de30f8efd88742b1e3a73907a0f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194303"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530775"
 ---
 # <a name="create-dml-triggers"></a>DML 트리거 만들기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거를 만드는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48194303"
   
 7.  **쿼리 편집기**에서 `-- Insert statements for trigger here` 주석을 다음 문으로 바꿉니다.  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  

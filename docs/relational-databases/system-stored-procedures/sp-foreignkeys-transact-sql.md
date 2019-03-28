@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589951"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533825"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@table_server =** ] **'**_table_server_**'**  
- 테이블 정보가 반환될 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @table_server = ] 'table_server'` 테이블 정보를 반환 하는 연결 된 서버의 이름이입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@pktab_name =** ] **'**_pktab_name_**'**  
- 기본 키가 있는 테이블의 이름입니다. *pktab_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @pktab_name = ] 'pktab_name'` 기본 키가 있는 테이블의 이름이입니다. *pktab_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@pktab_schema =** ] **'**_pktab_schema_**'**  
- 기본 키가 있는 스키마의 이름입니다. *pktab_schema*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
+`[ @pktab_schema = ] 'pktab_schema'` 기본 키를 사용 하 여 스키마의 이름이입니다. *pktab_schema*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
   
- [  **@pktab_catalog =** ] **'**_pktab_catalog_**'**  
- 기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
+`[ @pktab_catalog = ] 'pktab_catalog'` 기본 키가 있는 카탈로그의 이름이입니다. *pktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
   
- [  **@fktab_name =** ] **'**_fktab_name_**'**  
- 외래 키가 있는 테이블의 이름입니다. *fktab_name*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @fktab_name = ] 'fktab_name'` 외래 키가 있는 테이블의 이름이입니다. *fktab_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@fktab_schema =** ] **'**_fktab_schema_**'**  
- 외래 키가 있는 스키마의 이름입니다. *fktab_schema*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @fktab_schema = ] 'fktab_schema'` 외래 키가 있는 스키마의 이름이입니다. *fktab_schema*됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@fktab_catalog =** ] **'**_fktab_catalog_**'**  
- 외래 키가 있는 카탈로그의 이름입니다. *fktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @fktab_catalog = ] 'fktab_catalog'` 외래 키가 있는 카탈로그의 이름이입니다. *fktab_catalog*됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
@@ -88,7 +81,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**DELETE_RULE**|**smallint**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 열에 대해 0, 1 또는 2를 반환합니다.<br /><br /> 0=CASCADE는 외래 키를 변경합니다.<br /><br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br /><br /> 2=SET_NULL. 외래 키를 NULL로 설정합니다.|  
 |**FK_NAME**|**sysname**|외래 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FOREIGN KEY 제약 조건 이름을 반환합니다.|  
 |**PK_NAME**|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 PRIMARY KEY 제약 조건 이름을 반환합니다.|  
-|**연기**|**smallint**|제약 조건 검사를 연기할 수 있는지 여부를 나타냅니다.|  
+|**DEFERRABILITY**|**smallint**|제약 조건 검사를 연기할 수 있는지 여부를 나타냅니다.|  
   
  결과 집합에서 FK_NAME 및 PK_NAME 열은 항상 NULL을 반환합니다.  
   

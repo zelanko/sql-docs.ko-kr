@@ -16,12 +16,12 @@ ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24aa8a9018a2de742a8ed4715b87e56126326021
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c8073b4e02e1eff910654bba635819b94b5cf5b2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532515"
 ---
 # <a name="spexpiredsubscriptioncleanup-transact-sql"></a>sp_expired_subscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher=** ] **'**_게시자_**'**  
- 비-의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 이 매개 변수를 지정하지 않습니다.  
+`[ @publisher = ] 'publisher'` 비-의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 이 매개 변수를 지정하지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -18,12 +18,12 @@ ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a823427067ca1c6d06a6d26b6ab3553d17df9489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535770"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538405"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@rolename =** ] **'**_역할_**'**  
- 현재 데이터베이스에서 제거할 데이터베이스 역할의 이름입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 이미 현재 데이터베이스에 있어야 합니다.  
+`[ @rolename = ] 'role'` 현재 데이터베이스에서 제거할 데이터베이스 역할의 이름이입니다. *역할* 되는 **sysname**, 기본값은 없습니다. *역할* 이미 현재 데이터베이스에 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -71,7 +70,7 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Security Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

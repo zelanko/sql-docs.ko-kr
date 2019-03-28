@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79abbfe8d9c3fd8d88c883e5fbbdb198f9de4e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223893"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529705"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한 부여
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저에 대한 사용 권한을 부여하는 방법에 대해 설명합니다. 데이터베이스의 기존 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 사용 권한을 부여할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48223893"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `EXECUTE` 이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo` 에 대한 `Recruiting11`권한을 부여합니다.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  

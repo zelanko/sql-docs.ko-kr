@@ -13,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1bcaade651e2e63bb2cabf6f0a8fc016781ba45b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748976"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534566"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>컬렉션 집합에 컬렉션 항목 추가(Transact-SQL)
   데이터 수집기와 함께 제공되는 저장 프로시저를 사용하여 기존 컬렉션 집합에 컬렉션 항목을 추가할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52748976"
   
 1.  **sp_syscollector_stop_collection_set** 저장 프로시저를 실행하여 항목을 추가할 컬렉션 집합을 중지합니다. 예를 들어, "Test Collection Set"라는 컬렉션 집합을 중지하려면 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -44,7 +44,7 @@ ms.locfileid: "52748976"
   
 2.  컬렉션 항목을 추가하려는 컬렉션 집합을 선택합니다. 다음 코드에서는 컬렉션 집합 ID를 선언하는 방법을 보여 줍니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -52,7 +52,7 @@ ms.locfileid: "52748976"
   
 3.  수집기 유형을 선언합니다. 다음 코드에서는 일반 T-SQL 쿼리 수집기 유형을 선언하는 방법을 보여 줍니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -60,7 +60,7 @@ ms.locfileid: "52748976"
   
      다음 코드를 실행하여 설치된 수집기 유형의 목록을 가져옵니다.  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -68,7 +68,7 @@ ms.locfileid: "52748976"
   
 4.  **sp_syscollector_create_collection_item** 저장 프로시저를 실행하여 컬렉션 항목을 만듭니다. 원하는 수집기 유형에 필요한 스키마에 매핑되도록 컬렉션 항목에 대한 스키마를 선언해야 합니다. 다음 예제에서는 일반 T-SQL 쿼리 입력 스키마를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

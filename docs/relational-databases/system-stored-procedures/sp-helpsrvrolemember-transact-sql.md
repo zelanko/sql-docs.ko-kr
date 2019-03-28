@@ -18,12 +18,12 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723771"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533495"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@srvrolename =** ] **'***역할***'**  
- 고정 서버 역할의 이름입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할*지정 하지 않으면 모든 고정된 서버 역할에 대 한 정보를 포함 하는 결과 집합입니다.  
+`[ @srvrolename = ] 'role'` 고정된 서버 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 하는 경우 *역할*지정 하지 않으면 모든 고정된 서버 역할에 대 한 정보를 포함 하는 결과 집합입니다.  
   
  *역할* 다음 값 중 하나일 수 있습니다.  
   

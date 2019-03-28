@@ -18,12 +18,12 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817552"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536038"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@alert_name =**] **'***alert***'**  
- 이 알림과 연결된 경고의 이름입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @alert_name = ] 'alert'` 이 알림과 연결 된 경고의 이름입니다. *경고* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@operator_name =**]  **'***operator***'**  
- 경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @operator_name = ] 'operator'` 경고가 발생할 경우 알림을 받을 운영자입니다. *연산자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@notification_method =**] *알림*  
- 운영자에게 알림을 보내는 방법입니다. *알림*됩니다 **tinyint**이며 기본값은 없고 수 있습니다 다음이 값 중 하나 이상일 수 있습니다.  
+`[ @notification_method = ] notification` 연산자 알려집니다 메서드. *알림*됩니다 **tinyint**이며 기본값은 없고 수 있습니다 다음이 값 중 하나 이상일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  

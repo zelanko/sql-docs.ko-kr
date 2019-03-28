@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209842"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534045"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'**_게시_**'**  
- 변경할 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다  
+`[ @publication = ] 'publication'` 변경할 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다  
   
- [ **@article** =] **'**_문서_**'**  
- 변경할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'` 변경할 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber** =] **'**_구독자_**'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@destination_db** =] **'**_destination_db_**'**  
- 구독 데이터베이스의 이름입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @destination_db = ] 'destination_db'` 구독 데이터베이스의 이름이입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@property=**] **'**_속성_**'**  
- 지정된 구독에 대해 변경할 속성입니다. *속성* 됩니다 **nvarchar(30)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 구독에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)**, 테이블의 값 중 하나일 수 있습니다.  
   
- [  **@value=**] **'**_값_**'**  
- 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(4000)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(4000)**, 테이블의 값 중 하나일 수 있습니다.  
   
 |속성|값|Description|  
 |--------------|-----------|-----------------|  
@@ -83,10 +77,9 @@ sp_changesubscription [ @publication = ] 'publication'
 |**subscriptionstreams**||_구독자에 변경 내용의 일괄 처리를 병렬로 적용하기 위해 배포 에이전트당 허용되는 연결의 수입니다. 값의 범위 **1** 하 **64** 대해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 이 속성은 이어야 **0** 에 대 한 비-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자, Oracle 게시자 또는 피어 투 피어 구독 합니다.|  
 |**subscriber_type**|**1**|ODBC 데이터 원본 서버|  
 ||**3**|OLE DB 공급자|  
-|**메모리 액세스에 최적화**|**bit**|구독 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 됩니다 **비트**, 1 (구독 메모리 액세스에 최적화 된 테이블에서 지원) true와 같습니다.|  
+|**memory_optimized**|**bit**|구독 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 됩니다 **비트**, 1 (구독 메모리 액세스에 최적화 된 테이블에서 지원) true와 같습니다.|  
   
- [  **@publisher =** ] **'**_게시자_**'**  
- 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

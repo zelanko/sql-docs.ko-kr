@@ -27,12 +27,12 @@ ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b31249dda65f427ce53d3418e7a62f4bb0abf6d1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533394"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publication**=] **'**_게시_**'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

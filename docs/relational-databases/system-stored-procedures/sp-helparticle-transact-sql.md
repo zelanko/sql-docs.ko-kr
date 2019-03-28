@@ -16,12 +16,12 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ebb3f1e81fbace678d281116643e1fcd97c3dc1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212510"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536154"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,23 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publication =**] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@article=**] **'***문서***'**  
- 게시에 있는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 *문서* 는 제공 되지 않으면 지정된 된 게시에 대 한 모든 문서에 대 한 정보 반환 됩니다.  
+`[ @article = ] 'article'` 게시에서 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 *문서* 는 제공 되지 않으면 지정된 된 게시에 대 한 모든 문서에 대 한 정보 반환 됩니다.  
   
- [  **@returnfilter=**] *returnfilter*  
- 필터 절을 반환해야 하는지 여부를 지정합니다. *returnfilter* 됩니다 **비트**, 기본값은 **1**, 필터 절을 반환 하는 합니다.  
+`[ @returnfilter = ] returnfilter` 필터 절을 반환할지 여부를 지정 합니다. *returnfilter* 됩니다 **비트**, 기본값은 **1**, 필터 절을 반환 하는 합니다.  
   
- [ **@publisher**=] **'***게시자***'**  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *게시자* 에서 게시 아티클에 대 한 정보를 요청할 때 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [  **@found=** ] *찾을* 출력  
- 내부적으로만 사용됩니다.  
+`[ @found = ] found OUTPUT` 내부 전용입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

@@ -18,12 +18,12 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 522dcff230177b807299d1647e0333517f93d8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728971"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538465"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@alert_name =**] **'***alert_name***'**  
- 경고 이름입니다. *alert_name* 됩니다 **nvarchar (128)** 합니다. 하는 경우 *alert_name* 은 지정 하지 않으면 모든 경고에 대 한 정보 반환 됩니다.  
+`[ @alert_name = ] 'alert_name'` 경고 이름입니다. *alert_name* 됩니다 **nvarchar (128)** 합니다. 하는 경우 *alert_name* 은 지정 하지 않으면 모든 경고에 대 한 정보 반환 됩니다.  
   
- [ **@order_by =**] **'***order_by***'**  
- 결과를 생성하는 데 사용할 정렬 순서입니다. *order_by*됩니다 **sysname**, N의 기본값을 사용 하 여 '*이름*'.  
+`[ @order_by = ] 'order_by'` 결과 생성에 사용할 정렬 순서입니다. *order_by*됩니다 **sysname**, N의 기본값을 사용 하 여 '*이름*'.  
   
- [ **@alert_id =**] *alert_id*  
- 보고할 정보가 있는 경고의 ID입니다. *alert_id*됩니다 **int**, 기본값은 NULL입니다.  
+`[ @alert_id = ] alert_id` 보고할 정보가 있는 경고의 id. *alert_id*됩니다 **int**, 기본값은 NULL입니다.  
   
- [ **@category_name =**]  **'***category***'**  
- 경고의 범주입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @category_name = ] 'category'` 경고에 대 한 범주입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@legacy_format**=] *legacy_format*  
- 레거시 결과 집합을 생성할지 여부입니다. *legacy_format* 됩니다 **비트**, 기본값은 **0**합니다. 때 *legacy_format* 됩니다 **1**를 **sp_help_alert** 반환한 결과 집합을 반환 합니다 **sp_help_alert** Microsoft SQL Server 2000에서.  
+`[ @legacy_format = ] legacy_format` 레거시 결과 집합을 생성할지 여부입니다. *legacy_format* 됩니다 **비트**, 기본값은 **0**합니다. 때 *legacy_format* 됩니다 **1**를 **sp_help_alert** 반환한 결과 집합을 반환 합니다 **sp_help_alert** Microsoft SQL Server 2000에서.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +63,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|시스템이 할당한 고유한 정수 ID입니다.|  
-|**name**|**sysname**|경고 이름 (예를 들어, 데모: 전체 **msdb** 로그).|  
+|**name**|**sysname**|경고 이름(예: Demo: 전체 **msdb** 로그).|  
 |**event_source**|**nvarchar(100)**|이벤트의 원본입니다. 해당 값은 항상 **MSSQLServer** 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -102,7 +97,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|시스템이 할당한 고유한 정수 ID입니다.|  
-|**name**|**sysname**|경고 이름 (예를 들어, 데모: 전체 **msdb** 로그).|  
+|**name**|**sysname**|경고 이름(예: Demo: 전체 **msdb** 로그).|  
 |**event_source**|**nvarchar(100)**|이벤트의 원본입니다. 해당 값은 항상 **MSSQLServer** 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -124,7 +119,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|작업 ID입니다.|  
 |**job_name**|**sysname**|요청 시 작업으로서 경고에 대한 응답으로 실행되어야 합니다.|  
 |**has_notification**|**int**|이 경고를 한 명 이상의 운영자에게 알려 주는 경우에는 0이 아닌 값을 사용합니다. 값은 다음 중 하나 이상이 될 수 있습니다(OR 연산으로 조인).<br /><br /> **1**= 전자 메일 알림<br /><br /> **2**= 호출기 알림<br /><br /> **4**= 했습니다 **net send** 알림.|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 을 참조하세요.|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|  
 |**performance_condition**|**nvarchar(512)**|하는 경우 **형식** 됩니다 **2**,이 열은 성능 조건의 정의 표시 합니다. 하는 경우 **형식** 됩니다 **3**,이 열은 WMI 이벤트에 대 한 쿼리를 표시 합니다. 그렇지 않은 경우 이 열은 NULL입니다.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 항상 '**[범주화]**'에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0입니다.|  
 |**type**|**int**|경고의 유형은 다음과 같습니다.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트 경고<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 경고<br /><br /> **3** = WMI 이벤트 경고|  

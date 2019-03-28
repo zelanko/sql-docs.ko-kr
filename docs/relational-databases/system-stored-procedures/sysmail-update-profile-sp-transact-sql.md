@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854211"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534665"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id** = ] *profile_id*  
- 업데이트할 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+`[ @profile_id = ] profile_id` 업데이트할 프로필 id입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 업데이트할 프로필의 이름 또는 프로필의 새 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
+`[ @profile_name = ] 'profile_name'` 업데이트할 프로필의 이름 또는 프로필에 대 한 새 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
- [ **@description** =] **'***설명***'**  
- 프로필에 대한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 프로필에 대 한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

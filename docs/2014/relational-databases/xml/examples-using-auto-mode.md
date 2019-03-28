@@ -1,5 +1,5 @@
 ---
-title: '예제: AUTO 모드 사용 | Microsoft 문서'
+title: 예를 들면 다음과 같습니다. AUTO 모드 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538455"
 ---
-# <a name="examples-using-auto-mode"></a>예제: AUTO 모드 사용
+# <a name="examples-using-auto-mode"></a>예를 들면 다음과 같습니다. AUTO 모드 사용
   다음 예에서는 AUTO 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 ProductModel 테이블에 있는 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예제: 고객, 주문 및 주문 세부 정보 검색  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예: 고객, 주문 및 주문 세부 정보 검색  
  이 쿼리는 특정 고객에 대한 고객, 주문 및 주문 세부 정보를 검색합니다.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>예제: GROUP BY 및 집계 함수 지정  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>예: GROUP BY 및 집계 함수 지정  
  다음 쿼리는 개별 고객 ID와 고객이 요청한 주문 번호를 반환합니다.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>예제: AUTO 모드에서 계산 열 지정  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>예: AUTO 모드에서 계산 열 지정  
  이 쿼리는 연결된 개별 고객 이름 및 주문 정보를 반환합니다. 계산 열은 해당 시점에 발생하는 가장 안쪽 수준으로 할당됩니다(이 예에서는 <`SOH`> 요소). 연결된 고객 이름은 결과에서 <`SOH`> 요소의 특성으로 추가됩니다.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>예제: 이진 데이터 반환  
+## <a name="example-returning-binary-data"></a>예: 이진 데이터 반환  
  이 쿼리는 `ProductPhoto` 테이블에서 제품 사진을 반환합니다. `ThumbNailPhoto`는 `ProductPhoto` 테이블의 `varbinary(max)` 열입니다. 기본적으로 `AUTO` 모드는 이진 데이터에 대해 쿼리가 실행되는 데이터베이스의 가상 루트에 대한 상대 URL인 참조를 반환합니다. 이미지를 식별하기 위해서는 `ProductPhotoID` 키 특성을 지정해야 합니다. 이 예에서 설명된 것과 같이 이미지 참조를 검색할 때 테이블의 기본 키도 행을 고유하게 식별할 수 있도록 `SELECT` 절에서 지정되어야 합니다.  
   
 ```  
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  이는 특히 대/소문자를 구분하는 데이터베이스에 대해 dbobject 쿼리를 실행하는 경우에 문제가 될 수 있습니다. 이러한 문제를 방지하려면 쿼리에 지정된 테이블 또는 열 이름의 대/소문자가 데이터베이스에 있는 테이블 또는 열 이름의 대/소문자와 일치해야 합니다.  
   
-## <a name="example-understanding-the-encoding"></a>예제: 인코딩 이해  
+## <a name="example-understanding-the-encoding"></a>예: 인코딩 이해  
  다음 예에서는 결과에서 발생하는 여러 가지 인코딩을 보여 줍니다.  
   
  다음 테이블을 만듭니다.  

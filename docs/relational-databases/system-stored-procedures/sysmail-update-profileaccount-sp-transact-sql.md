@@ -18,12 +18,12 @@ ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c3a8e3db9e0e66f3a3e300e972ca1d2f02f1d03b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96dc0a33c15f1547088c3fe7c79824da55cd1d35
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615531"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538125"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@profile_id** = ] *profile_id*  
- 업데이트할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 업데이트할 프로필의 프로필 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 업데이트할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 업데이트할 프로필의 프로필 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *profile_id* 또는 *profile_name* 지정 해야 합니다.  
   
- [ **@account_id** = ] *account_id*  
- 업데이트할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
+`[ @account_id = ] account_id` 업데이트할 계정 ID입니다. *account_id* 됩니다 **int**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
- [ **@account_name** =] **'***account_name***'**  
- 업데이트할 계정 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
+`[ @account_name = ] 'account_name'` 업데이트할 계정의 이름입니다. *account_name* 됩니다 **sysname**, 기본값은 NULL입니다. 중 하나는 *account_id* 또는 *account_name* 지정 해야 합니다.  
   
- [ **@sequence_number** =] *sequence_number*  
- 계정의 새 시퀀스 번호입니다. *sequence_number* 됩니다 **int**, 기본값은 없습니다. 시퀀스 번호는 프로필의 계정이 사용되는 순서를 결정합니다.  
+`[ @sequence_number = ] sequence_number` 계정의 새 시퀀스 번호입니다. *sequence_number* 됩니다 **int**, 기본값은 없습니다. 시퀀스 번호는 프로필의 계정이 사용되는 순서를 결정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

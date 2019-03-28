@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536375"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@devname =** ] **'***name***'**  
- 정보를 보고할 백업 장치의 이름입니다. 변수의 *이름을* 은 항상 **sysname**합니다.  
+`[ @devname = ] 'name'` 정보를 보고할 백업 장치의 이름이입니다. 변수의 *이름을* 은 항상 **sysname**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

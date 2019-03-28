@@ -16,12 +16,12 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65f1990c1c35278e67036f2bb3699f268a2aca8a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 002f74a57ee17f2699325d97e7335dcdae2a8aa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751846"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535315"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@artid=**] *artid*  
- 아티클 ID입니다. *artid* 됩니다 **int**, 기본값은 없습니다.  
+`[ @artid = ] artid` 아티클 ID입니다. *artid* 됩니다 **int**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  반환 된 결과 집합을 단일 이루어져 **nvarchar(4000)** 열입니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 사용되는 완전한 CREATE PROCEDURE 문을 형성합니다.  

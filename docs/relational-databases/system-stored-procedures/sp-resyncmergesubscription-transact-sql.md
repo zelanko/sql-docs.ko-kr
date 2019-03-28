@@ -16,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747555"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538155"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,17 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@publisher** = ] **'***publisher***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 게시자에서 실행될 경우 유효합니다. 저장 프로시저를 구독자에서 실행할 경우 게시자를 지정해야 합니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 게시자에서 실행될 경우 유효합니다. 저장 프로시저를 구독자에서 실행할 경우 게시자를 지정해야 합니다.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- 게시 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 게시 데이터베이스의 게시자에서 실행될 경우 유효합니다. 저장 프로시저를 구독자에서 실행할 경우 게시자를 지정해야 합니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 게시 데이터베이스의 게시자에서 실행될 경우 유효합니다. 저장 프로시저를 구독자에서 실행할 경우 게시자를 지정해야 합니다.  
   
- [ **@publication** =] **'***게시***'**  
- 게시의 이름입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시*됩니다 **sysname**, 기본값은 없습니다.  
   
- [ **@subscriber** =] **'***구독자***'**  
- 구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 구독자에서 실행될 경우 유효합니다. 저장 프로시저를 게시자에서 실행할 경우 구독자를 지정해야 합니다.  
+`[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 구독자에서 실행될 경우 유효합니다. 저장 프로시저를 게시자에서 실행할 경우 구독자를 지정해야 합니다.  
   
- [ **@subscriber_db** = ] **'***subscriber_db***'**  
- 구독 데이터베이스의 이름입니다. *subscription_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 구독 데이터베이스의 구독자에서 실행될 경우 유효합니다. 저장 프로시저를 게시자에서 실행할 경우 구독자를 지정해야 합니다.  
+`[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscription_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 값은 저장 프로시저가 구독 데이터베이스의 구독자에서 실행될 경우 유효합니다. 저장 프로시저를 게시자에서 실행할 경우 구독자를 지정해야 합니다.  
   
- [ **@resync_type** = ] *resync_type*  
- 다시 동기화가 시작될 시기를 정의합니다. *resync_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @resync_type = ] resync_type` 다시 동기화가 시작 시기를 정의 합니다. *resync_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -68,8 +62,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|마지막으로 성공한 유효성 검사 이후부터 동기화가 시작됩니다. 마지막으로 성공한 유효성 검사 이후에 시작된 모든 새로운 또는 완료되지 않은 생성은 구독자에 다시 적용됩니다.|  
 |**2**|지정한 날짜부터 동기화가 시작 됩니다 *resync_date_str*합니다. 이 날짜 이후에 시작된 모든 새로운 또는 완료되지 않은 생성은 구독자에 다시 적용됩니다.|  
   
- [ **@resync_date_str=**] *resync_date_string*  
- 다시 동기화가 시작될 날짜를 정의합니다. *resync_date_string* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다. 이 매개 변수는 때를 *resync_type* 의 값인 **2**합니다. 지정한 날짜 표현으로 변환할 **날짜/시간** 값입니다.  
+`[ @resync_date_str = ] resync_date_string` 에 다시 동기화가 시작 하는 경우 날짜를 정의 합니다. *resync_date_string* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다. 이 매개 변수는 때를 *resync_type* 의 값인 **2**합니다. 지정한 날짜 표현으로 변환할 **날짜/시간** 값입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

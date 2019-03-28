@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659492"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538165"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,27 +41,23 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tabname =**] **'***tabname***'**  
- 공간 인덱스가 지정된 테이블의 정규화된 이름 또는 정규화되지 않은 이름입니다.  
+`[ @tabname = ] 'tabname'` 공간 인덱스에 지정 된 테이블의 정규화 되거나 정규화 되지 않은 이름이입니다.  
   
  따옴표는 정규화된 테이블이 지정된 경우에만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *tabname* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@colname =** ] **'***columnname***'**  
- 지정된 공간 열의 이름입니다. *columnname* 되는 **sysname**, 기본값은 없습니다.  
+`[ @colname = ] 'columnname'` 지정 된 공간 열의 이름이입니다. *columnname* 되는 **sysname**, 기본값은 없습니다.  
   
- [  **@resolution =** ] **'***해상도***'**  
- 경계 상자의 해상도입니다. 유효한 값은 10부터 5000까지입니다. *해상도* 되는 **tinyint**, 기본값은 없습니다.  
+`[ @resolution = ] 'resolution'` 경계 상자의 해상도입니다. 유효한 값은 10부터 5000까지입니다. *해상도* 되는 **tinyint**, 기본값은 없습니다.  
   
- [  **@sample =** ] **'***샘플***'**  
- 사용된 테이블의 백분율입니다. 유효한 값은 0에서 100 사이입니다. *tablesample* 되는 **float**합니다. 기본값은 100입니다.  
+`[ @sample = ] 'sample'` 사용 되는 테이블의 비율이입니다. 유효한 값은 0에서 100 사이입니다. *tablesample* 되는 **float**합니다. 기본값은 100입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  테이블 값이 반환됩니다. 다음 표에서는 테이블의 열 내용에 대해 설명합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|각 셀의 고유한 ID를 나타내며 1부터 셉니다.|  
-|**셀**|**geography**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
+|**cell**|**geography**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
 |**row_count**|**bigint**|셀에 접해 있거나 셀을 포함하는 공간 개체 수를 나타냅니다.|  
   
 ## <a name="permissions"></a>사용 권한  

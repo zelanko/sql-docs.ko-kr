@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 036dd5fd4898f7b7abc55eba4971ce599b746423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608812"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538555"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +47,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 
 에 대 한 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 하 고 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]를 `sp_spaceused` 명명 된 매개 변수를 지정 해야 합니다 (예를 들어 `sp_spaceused (@objname= N'Table1');` 매개 변수의 서 수 위치에 의존 합니다. 
 
- [ **@objname=**] **'***objname***'** 
+`[ @objname = ] 'objname'`
    
  공간 사용 정보가 요청된 테이블, 인덱싱된 뷰 또는 큐의 정규화되거나 정규화되지 않은 이름입니다. 정규화된 개체 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함하는 정규화된 개체 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다.  
 하는 경우 *objname* 지정 하지 않으면 전체 데이터베이스에 대 한 결과 반환 합니다.  
@@ -55,11 +55,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] 및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 만 데이터베이스 및 테이블 개체를 지원 합니다.
   
- [ **@updateusage=**] **'***updateusage***'**  
- 공간 사용 정보를 업데이트하려면 DBCC UPDATEUSAGE를 실행해야 함을 나타냅니다. 때 *objname* 는 지정 하지 않으면 문이 전체 데이터베이스에서 실행 될; 명령문을 실행 하는 고, 그렇지 *objname*합니다. 값은 **true** 하거나 **false**합니다. *updateusage* 됩니다 **varchar(5)**, 기본값은 **false**합니다.  
+`[ @updateusage = ] 'updateusage'` 공간 사용 정보를 업데이트 하려면 DBCC UPDATEUSAGE를 실행 해야 나타냅니다. 때 *objname* 는 지정 하지 않으면 문이 전체 데이터베이스에서 실행 될; 명령문을 실행 하는 고, 그렇지 *objname*합니다. 값은 **true** 하거나 **false**합니다. *updateusage* 됩니다 **varchar(5)**, 기본값은 **false**합니다.  
   
- [ **@mode=**] **'***mode***'**  
- 결과의 범위를 나타냅니다. 스트레치 된 테이블 또는 데이터베이스를 *모드* 매개 변수를 사용 하면 포함 하거나 원격 개체 부분을 제외 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
+`[ @mode = ] 'mode'` 결과의 범위를 나타냅니다. 스트레치 된 테이블 또는 데이터베이스를 *모드* 매개 변수를 사용 하면 포함 하거나 원격 개체 부분을 제외 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
  합니다 *모드* 인수는 다음 값을 가질 수 있습니다.  
   
@@ -71,8 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *모드* 됩니다 **varchar(11)**, 기본값은 **N'ALL'** 합니다.  
   
- [ **@oneresultset=**] *oneresultset*  
- 단일 결과 집합을 반환할지 여부를 나타냅니다. 합니다 *oneresultset* 인수는 다음 값을 가질 수 있습니다.  
+`[ @oneresultset = ] oneresultset` 단일 결과 집합을 반환할지 여부를 나타냅니다. 합니다 *oneresultset* 인수는 다음 값을 가질 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -81,7 +78,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *oneresultset* 됩니다 **비트**, 기본값은 **0**합니다.  
 
-[ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
+`[ @include_total_xtp_storage] 'include_total_xtp_storage'`
 **적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)]합니다.  
   
  때 @oneresultset= 1, 매개 변수 @include_total_xtp_storage 단일 결과 집합에 MEMORY_OPTIMIZED_DATA 저장소에 대 한 열이 포함 되어 있는지 여부를 결정 합니다. 기본값은 0, 즉, 기본적으로 (매개 변수를 생략) XTP 열 결과 집합에 포함 되지 않습니다.  
@@ -253,7 +250,7 @@ GO
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys.allocation_units &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

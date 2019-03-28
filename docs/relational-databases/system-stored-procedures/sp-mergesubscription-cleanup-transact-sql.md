@@ -16,12 +16,12 @@ ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e6f5736bd95f33d19b3569006a9816a7731c2bae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e7f08abdc4cb7dccd148a55b8d4b0d5e05f21f93
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747516"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532295"
 ---
 # <a name="spmergesubscriptioncleanup-transact-sql"></a>sp_mergesubscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@publisher =**] **'***게시자***'**  
- 게시자의 이름입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- 게시자 데이터베이스의 이름입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher_db = ] 'publisher_db'` 게시자 데이터베이스의 이름이입니다. *publisher_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [  **@publication =**] **'***게시***'**  
- 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

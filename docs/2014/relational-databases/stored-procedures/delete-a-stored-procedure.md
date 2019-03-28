@@ -14,20 +14,20 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16b9c9fde041339e10c554541dc03e2ddc315bcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 78b78021f32faed097a4faf29ea139dd85f429e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211169"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532635"
 ---
 # <a name="delete-a-stored-procedure"></a>저장 프로시저 삭제
     
 ##  <a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 저장된 프로시저를 삭제하는 방법에 대해 설명합니다.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **프로시저를 삭제 하려면 사용 합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48211169"
   
 4.  현재 데이터베이스의 저장 프로시저 이름을 확인합니다. 개체 탐색기에서 **프로그래밍 기능** 을 확장한 다음 **저장 프로시저**를 확장합니다. 또는 쿼리 편집기에서 다음 문을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     SELECT name AS procedure_name   
         ,SCHEMA_NAME(schema_id) AS schema_name  
         ,type_desc  
@@ -83,7 +83,7 @@ ms.locfileid: "48211169"
   
 5.  다음 예제를 쿼리 편집기에 복사하여 붙여 넣고 저장 프로시저 이름을 입력하여 현재 데이터베이스에서 삭제합니다.  
   
-    ```tsql  
+    ```sql  
     DROP PROCEDURE <stored procedure name>;  
     GO  
     ```  

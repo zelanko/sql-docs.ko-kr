@@ -13,12 +13,12 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa7359fc1436cfbb4222dcc63f9bb700720bf3cb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537395"
 ---
 # <a name="set-or-change-the-database-collation"></a>데이터베이스 데이터 정렬 설정 또는 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 데이터 정렬을 설정하고 변경하는 방법에 대해 설명합니다. 데이터 정렬을 지정하지 않으면 서버 데이터 정렬이 사용됩니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "52772565"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [COLLATE](/sql/t-sql/statements/collations) 절을 사용하여 데이터 정렬 이름을 지정하는 방법을 보여 줍니다. 이 예에서는 `MyOptionsTest` 데이터 정렬을 사용하는 `Latin1_General_100_CS_AS_SC` 데이터베이스를 만듭니다. 데이터베이스를 만든 후 `SELECT` 문을 실행하여 설정을 확인합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -118,7 +118,7 @@ GO
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [ALTER DATABASE](/sql/t-sql/statements/collations) 문에 [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 절을 사용하여 데이터 정렬 이름을 변경하는 방법을 보여 줍니다. `SELECT` 문을 실행하여 변경 내용을 확인합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  
@@ -133,7 +133,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 정렬 및 유니코드 지원](collation-and-unicode-support.md)   
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   

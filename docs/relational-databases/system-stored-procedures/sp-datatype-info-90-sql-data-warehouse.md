@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 889c6d1b1a4e61286a96c2b57acd1a1148a069a4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043384"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530405"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,11 +36,9 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@data_type=** ] *data_type*  
- 지정된 데이터 형식의 코드 번호입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 됩니다 **int**, 기본값은 0입니다.  
+`[ @data_type = ] data_type` 지정된 된 데이터 형식에 대 한 코드입니다. 모든 데이터 형식의 목록을 가져오려면 이 매개 변수를 생략하세요. *data_type* 됩니다 **int**, 기본값은 0입니다.  
   
- [ **@ODBCVer=** ] *odbc_version*  
- 사용하고 있는 ODBC의 버전입니다. *odbc_version* 됩니다 **tinyint**, 기본값은 2입니다.  
+`[ @ODBCVer = ] odbc_version` 사용 되는 ODBC의 버전이입니다. *odbc_version* 됩니다 **tinyint**, 기본값은 2입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  

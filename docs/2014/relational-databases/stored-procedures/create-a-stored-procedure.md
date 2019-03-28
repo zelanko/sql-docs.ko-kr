@@ -14,20 +14,20 @@ ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 116fd45b97011060aab0dd79519648542ec5255c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 463b077fe6ac972f87dcf90773c07575e839bb14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084123"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530055"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="Top"></a>   
--   **시작하기 전에:**  [사용 권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  
   
--   **프로시저를 만들려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **저장 프로시저를 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="Permissions"></a> Permissions  
  데이터베이스의 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 필요합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48084123"
   
 7.  **쿼리 편집기**에서 SELECT 문을 다음 문으로 바꿉니다.  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

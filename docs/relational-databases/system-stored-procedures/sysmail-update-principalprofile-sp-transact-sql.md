@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601821"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533868"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@principal_id** = ] *principal_id*  
- 데이터베이스 사용자 또는 역할의 ID를 **msdb** 변경 하려면 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
+`[ @principal_id = ] principal_id` 데이터베이스 사용자 또는 역할의 ID를 **msdb** 변경 하려면 연결에 대 한 데이터베이스입니다. *principal_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정 해야 합니다.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- 데이터베이스 사용자 또는 역할의 이름을 합니다 **msdb** 업데이트할 연결에 대 한 데이터베이스입니다. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
+`[ @principal_name = ] 'principal_name'` 데이터베이스 사용자 또는 역할의 이름을 합니다 **msdb** 업데이트할 연결에 대 한 데이터베이스입니다. *principal_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *principal_id* 하거나 *principal_name* 지정할 수 있습니다.  
   
- [ **@profile_id** = ] *profile_id*  
- 연결을 변경할 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_id = ] profile_id` 연결을 변경할 프로필의 id입니다. *profile_id* 됩니다 **int**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- 연결을 변경할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
+`[ @profile_name = ] 'profile_name'` 연결을 변경할 프로필의 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 어느 *profile_id* 하거나 *profile_name* 지정 해야 합니다.  
   
- [ **@is_default** =] **'***is_default***'**  
- 이 프로필이 데이터베이스 사용자의 기본 프로필인지 여부입니다. 데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. *is_default* 됩니다 **비트**, 기본값은 없습니다.  
+`[ @is_default = ] 'is_default'` 이 프로필이 데이터베이스 사용자에 대 한 기본 프로필 인지 여부입니다. 데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. *is_default* 됩니다 **비트**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

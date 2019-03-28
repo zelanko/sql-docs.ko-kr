@@ -12,12 +12,12 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 543e248f19e76b0d2caca3ee595778fe430334ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018478"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531885"
 ---
 # <a name="linestring"></a>LineString
   `LineString`은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
@@ -102,7 +102,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid`에 대한 호출은 `LineString` 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 `LineString` 인스턴스가 `Point`로 변환됩니다.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  

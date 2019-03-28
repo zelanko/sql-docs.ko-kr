@@ -16,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529565"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ **@type** =] **'***형식***'**  
- 제거되는 사용자 지정 저장 프로시저 또는 스크립트의 유형입니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 사용자 지정 저장된 프로시저 또는 스크립트의 유형을 제거할 수 있습니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
-|**업데이트**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
+|**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거 끝에서 실행되는 등록된 사용자 지정 저장 프로시저 또는 스크립트입니다.|  
   
- [ **@publication** =] **'***게시***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publication = ] 'publication'` 사용자 지정 저장된 프로시저 또는 스크립트를 제거할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ **@article** =] **'***문서***'**  
- 사용자 지정 저장 프로시저 또는 스크립트가 제거되는 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @article = ] 'article'` 사용자 지정 저장된 프로시저 또는 스크립트를 제거할 아티클의 이름입니다. *문서* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -65,7 +62,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="permissions"></a>사용 권한  
  구성원만 합니다 **sysadmin** 고정 서버 역할을 **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_ unregister_custom_scripting**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_register_custom_scripting &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  
   
   

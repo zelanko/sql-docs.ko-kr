@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789046"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538545"
 ---
 # <a name="delete-a-database"></a>데이터베이스 삭제
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스를 삭제하는 방법을 설명합니다.  
@@ -90,14 +90,14 @@ ms.locfileid: "52789046"
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `Sales` 및 `NewSales` 데이터베이스를 제거합니다.  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  
 GO  
 ```  
   
-##  <a name="FollowUp"></a> 후속편: 데이터베이스를 삭제한 후  
+##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 삭제한 후  
  **master** 데이터베이스를 백업합니다. **master** 를 복원해야 할 경우 마지막 **master** 백업 이후 삭제된 모든 데이터베이스의 참조가 시스템 카탈로그 뷰에 아직 있어서 오류 메시지가 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535415"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>인수  
- [  **@tablename =**] **'***tablename***'**  
- 테이블의 이름입니다. *tablename* 됩니다 **sysname**, 기본값은 없습니다. 테이블은 지연 구독의 일부여야 합니다.  
+`[ @tablename = ] 'tablename'` 테이블의 이름이입니다. *tablename* 됩니다 **sysname**, 기본값은 없습니다. 테이블은 지연 구독의 일부여야 합니다.  
   
- [  **@owner =**] **'***소유자***'**  
- 구독 소유자입니다. *소유자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @owner = ] 'owner'` 구독 소유자가입니다. *소유자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [  **@tranid =** ] **'***transaction_id***'**  
- 트랜잭션 ID로 출력을 필터링할 수 있습니다. *transaction_id* 됩니다 **nvarchar(70)**, 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
+`[ @tranid = ] 'transaction_id'` 출력을을 트랜잭션 ID로 필터링 할 수 있습니다. *transaction_id* 됩니다 **nvarchar(70)**, 기본값은 NULL입니다. 지정된 경우 큐에 있는 명령과 연결된 트랜잭션 ID를 표시합니다. NULL인 경우 큐에 있는 모든 명령을 표시합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

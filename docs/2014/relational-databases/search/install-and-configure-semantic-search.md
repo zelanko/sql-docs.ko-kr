@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 17252769c0f9347f5f67dbf073a207d827963630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80a7b0dd13688dca542587fbebd20c5b1818972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377545"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537592"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
   통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "53377545"
   
  반환 값이 1이면 전체 텍스트 검색과 의미 체계 검색이 설치되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -79,7 +79,7 @@ GO
   
  기본적으로 데이터베이스의 이름은 **semanticsdb**입니다. 필요에 따라 데이터베이스를 연결할 때 데이터베이스에 다른 이름을 지정할 수 있습니다. 이후 단계에서 데이터베이스를 등록할 때 이 이름을 제공해야 합니다.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -92,7 +92,7 @@ GO
  **3. 의미 체계 언어 통계 데이터베이스를 등록합니다.**  
  저장 프로시저 [sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)를 호출하고 연결 시 데이터베이스에 지정한 이름을 제공합니다.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -101,7 +101,7 @@ GO
  **의미 체계 언어 통계 데이터베이스 등록을 취소 합니다.**  
  저장 프로시저 [sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)를 호출합니다. 인스턴스는 의미 체계 언어 통계 데이터베이스를 하나만 가질 수 있으므로 데이터베이스의 이름을 제공할 필요는 없습니다.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
  **의미 체계 언어 통계 데이터베이스를 분리 합니다.**  
  저장 프로시저 [sp_detach_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)를 호출하고 데이터베이스의 이름을 지정합니다.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   
