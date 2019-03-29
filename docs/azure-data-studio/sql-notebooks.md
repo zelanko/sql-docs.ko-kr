@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392721"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566382"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 사용 하는 방법
 
@@ -47,7 +47,7 @@ Azure Data Studio 또한 f1을 고 수 클릭 **새 연결** SQL Server에 연�
 
 Azure Data Studio Notebook 설치 SQL 커널을 고유 하 게 지원합니다. SQL 개발자 및 노트북을 사용 하려는 경우 선택한은 커널입니다. 
 
-SQL 커널은 PostgreSQL 서버 인스턴스에 연결 하려면 데도 사용할 수 있습니다. PostgreSQL 개발자 및 PostgreSQL 서버에 연결 하려는 경우를 다운로드 합니다 [ **PostgreSQL 확장** ](postgres-extension.md) Azure Data Studio 확장 marketplace에서.
+SQL 커널은 PostgreSQL 서버 인스턴스에 연결 하려면 데도 사용할 수 있습니다. PostgreSQL 개발자가 PostgreSQL 서버에 연결 하려고 하는 경우를 다운로드 합니다 [ **PostgreSQL 확장** ](postgres-extension.md) Azure Data Studio 확장 marketplace에서.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 

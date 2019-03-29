@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017849"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566522"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -115,4 +115,18 @@ ms.locfileid: "57017849"
 
 ## <a name="next-steps"></a>다음 단계
 
-부트스트랩 스크립트를 실행 한 후 예제 데이터베이스 및 HDFS 데이터를 빅 데이터 클러스터에 있습니다. 이 데이터 및 빅 데이터 클러스터를 탐색 하려면 참조는 [자습서](tutorial-query-hdfs-storage-pool.md) 이 단원의 합니다.
+부트스트랩 스크립트를 실행 한 후 예제 데이터베이스 및 HDFS 데이터를 빅 데이터 클러스터에 있습니다. 다음 자습서는 빅 데이터 클러스터 기능을 보여 주기 위해 샘플 데이터를 사용 합니다.
+
+데이터 가상화:
+
+- [자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리](tutorial-query-hdfs-storage-pool.md)
+- [자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리](tutorial-query-oracle.md)
+
+데이터 수집:
+
+- [자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.](tutorial-data-pool-ingest-sql.md)
+- [자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.](tutorial-data-pool-ingest-spark.md)
+
+Notebook:
+
+- [자습서: SQL Server 2019 빅 데이터 클러스터에는 샘플 notebook을 실행 합니다.](tutorial-notebook-spark.md)

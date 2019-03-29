@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 38dc7256e4a0e7ba2a459a9691e682cebbaa05ee
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 31cf9104ea47bdf8086e8676312d9ac8d8085184
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227175"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566552"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스를 복원 합니다.
 
@@ -117,11 +117,11 @@ ms.locfileid: "57227175"
 1. Docker 허브에서 SQL Server 2019 미리 보기 Linux 컨테이너 이미지를 끌어옵니다.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
    ```
 
    > [!TIP]
@@ -133,14 +133,14 @@ ms.locfileid: "57227175"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
    ```
 
    이 명령은 Developer edition (기본값)를 사용 하 여 SQL Server 2019 미리 보기 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트와 호스트에 노출 됩니다 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 라는 데이터 볼륨 컨테이너를 만듭니다 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하기 위해 사용 됩니다.
@@ -494,13 +494,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP2.4-ubuntu
     ```
 
 1. Wide World Importers 데이터베이스를 새 컨테이너에 포함 되었습니다. 이전 변경 내용을 확인 하는 쿼리를 실행 합니다.

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b17f232fc9dfb2c9d1ac663e831b8e9f78aaa3bb
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: e0f1b8a425e3b21ac1e36e0f301f3b380d791d1a
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457666"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566582"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
 
@@ -107,7 +107,7 @@ ms.locfileid: "54457666"
 
 1. **Linux에서 실행 되는 SSMS와 같은 도구는 있나요?**
 
-   새 Azure Data Studio (미리 보기)는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio (미리 보기) 이란](../azure-data-studio/what-is.md)합니다.
+   새 Azure Data Studio는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio 란](../azure-data-studio/what-is.md)합니다.
 
 1. **Linux에서 사용할 수 있는 sqlcmd 및 bcp와 같은 명령을?합니다**
 
