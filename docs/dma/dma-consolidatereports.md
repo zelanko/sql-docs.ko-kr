@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198202"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618180"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -72,7 +72,11 @@ SQL Server를 평가 하기 위해 PowerShell 스크립트를 실행 하기 전�
 
 ### <a name="if-using-a-csv-file"></a>CSV 파일을 사용 하는 경우
 > [!IMPORTANT]
+>
 > 인벤토리 파일을 쉼표로 구분 된 (CSV) 파일로 저장 되는 것을 확인 합니다.
+>
+> 기본 인스턴스의 경우 mssqlserver 인스턴스 이름을 설정 합니다.
+>
 
 데이터의 두 개의 열이 있는 csv 파일을 사용 하 여 데이터를 확인 **인스턴스 이름** 하 고 **데이터베이스 이름**, 열 머리글 행 없는 하 고 합니다.
  
@@ -100,7 +104,7 @@ Modules 디렉터리에 PowerShell 모듈을 로드 하 고 인벤토리를 만�
 
 DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**getServerListFrom** | 인벤토리 합니다. 가능한 값은 **SqlServer** 하 고 **CSV**합니다.<br/>자세한 내용은 참조 하세요. [SQL Server의 인벤토리를 만들고](#create-inventory)합니다. |
 |**csvPath** | CSV 인벤토리 파일 경로입니다.  사용 되는 경우에만 **getServerListFrom** 로 설정 된 **CSV**합니다. |
@@ -123,7 +127,7 @@ DmaDataCollector 함수와 연결 된 매개 변수를 다음과에서 같습니
 
 DmaProcessor 함수와 연결 된 매개 변수를 다음과에서 같습니다.
 
-|매개 변수  |설명 |
+|매개 변수  |Description |
 |---------|---------|
 |**processTo** | JSON 파일을 처리할 수 위치입니다. 가능한 값은 **SQLServer** 하 고 **AzureSQLDatabase**합니다. |
 |**serverName** | 데이터를 처리할지 SQL Server 인스턴스.  지정 하는 경우 **AzureSQLDatabase** 에 대 한 합니다 **processTo** 매개 변수를 SQL Server 이름만 포함 (포함 되지 않습니다. database.windows.net). 메시지가 표시 됩니다 두 로그인에 대 한 Azure SQL 데이터베이스를 대상으로 할 때 첫 번째 Azure 테 넌 트 자격 증명 있고 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |

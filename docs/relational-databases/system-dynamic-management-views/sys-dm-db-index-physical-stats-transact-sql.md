@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617881"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618300"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sys.dm_db_index_physical_stats (
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*에 NULL을 지정 해야 *partition_number*합니다.  
   
- *partition_number* | NULL | 0 | 기본  
+ *partition_number* | NULL | 0 | DEFAULT  
  개체의 파티션 번호입니다. *partition_number* 됩니다 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 경우 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
@@ -112,7 +112,7 @@ sys.dm_db_index_physical_stats (
 |forwarded_record_count|**bigint**|다른 데이터 위치로의 전달 포인터가 있는 힙의 레코드 수입니다. 이 상태는 업데이트하는 동안 원본 위치에 새 행을 저장할 공간이 충분하지 않은 경우에 발생합니다.<br /><br /> 힙의 IN_ROW_DATA 할당 단위 이외의 모든 할당 단위에 대해 NULL입니다.<br /><br /> 에 대 한 NULL 경우 힙에 *모드* = LIMITED입니다.|  
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
 |hobt_id|BIGINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합으로 데이터를 힙에 저장 되는지 이진 트리. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)합니다.<br /><br /> 경우에는 NULL|  
-|column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = 열기<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
+|column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = RETIRING<br /><br /> 5 = READY|  
 |column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> -Deleters 열고 스캐너가 옵션을 사용 합니다.<br /><br /> 드레이닝-deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시하는 중-버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 된 것입니다.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -197,7 +197,7 @@ GO
   
 -   DBCC DBREINDEX 대신 ALTER INDEX REBUILD를 사용하여 인덱스를 온라인이나 오프라인 상태로 다시 작성합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
- 인덱스를 다시 구성하거나 작성하는 이유가 전적으로 조각화 때문만은 아닙니다. 조각화는 주로 인덱스 검색 중 페이지 미리 읽기 성능을 저하시킵니다. 이로 인해 응답 시간이 느려집니다. 조각화된 테이블이나 인덱스에 대한 쿼리 작업은 기본적으로 단일 조회이기 때문에 검색과 관련이 없는 경우에는 조각화를 제거하더라도 효과를 기대하기 어려울 수 있습니다. 자세한 내용은 참조 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=31012)합니다.  
+ 인덱스를 다시 구성하거나 작성하는 이유가 전적으로 조각화 때문만은 아닙니다. 조각화는 주로 인덱스 검색 중 페이지 미리 읽기 성능을 저하시킵니다. 이로 인해 응답 시간이 느려집니다. 조각화된 테이블이나 인덱스에 대한 쿼리 작업은 기본적으로 단일 조회이기 때문에 검색과 관련이 없는 경우에는 조각화를 제거하더라도 효과를 기대하기 어려울 수 있습니다.
   
 > [!NOTE]  
 >  축소 작업 중에 인덱스 일부나 전부가 이동한 경우 DBCC SHRINKFILE 또는 DBCC SHRINKDATABASE를 실행하면 조각화가 발생할 수 있습니다. 따라서 조각화를 제거하기 전에 축소 작업을 수행하세요.  
@@ -428,8 +428,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

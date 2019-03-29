@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017999"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618240"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -39,9 +39,9 @@ AKS를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응�
 - Kubernetes 서버용 1.10 최소 버전입니다. AKS를 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.
 
 - AKS에서 기본 시나리오를 확인 하는 동안 최적의 환경을 사용 합니다.
-   - Vm 에이전트를 3 개
-   - VM 당 4 Vcpu
+   - 모든 노드에서 8 개의 Vcpu
    - 32GB의 메모리가 VM 당
+   - 모든 노드에서 24 또는 더 연결 된 디스크
 
    > [!TIP]
    > Vm에 대 한 여러 크기 옵션을 제공 하는 azure 인프라를 참조 하십시오 [여기](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) 배포 하려는 지역에 대 한 선택 항목에 대 한 합니다.
@@ -76,18 +76,18 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes 클러스터 만들기
 
-1. 사용 하 여 AKS에서 Kubernetes 클러스터 만들기는 [az aks 만들기](https://docs.microsoft.com/cli/azure/aks) 명령입니다. 다음 예제에서는 라는 Kubernetes 클러스터를 만듭니다 *kubcluster* 3 개의 Linux 에이전트 노드가 있는 합니다. 이전 섹션에서 사용한 동일한 리소스 그룹에서 AKS 클러스터를 만든 있는지 확인 합니다.
+1. 사용 하 여 AKS에서 Kubernetes 클러스터 만들기는 [az aks 만들기](https://docs.microsoft.com/cli/azure/aks) 명령입니다. 다음 예제에서는 라는 Kubernetes 클러스터를 만듭니다 *kubcluster* 크기의 Linux 에이전트 노드 하나를 사용 하 여 **Standard_L8s**합니다. 이전 섹션에서 사용한 동일한 리소스 그룹에서 AKS 클러스터를 만든 있는지 확인 합니다.
 
     ```azurecli
    az aks create --name kubcluster \
     --resource-group sqlbigdatagroup \
     --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
+    --node-vm-size Standard_L8s \
+    --node-count 1 \
     --kubernetes-version 1.10.9
     ```
 
-   늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 사용 하려는 에이전트 노드 수입니다. 여기에 AKS에서 내부적으로 관리 되는 마스터 Kubernetes 노드를 포함 되지 않습니다. 위의 예에서 가지 **3** 크기의 Vm **Standard_L4s** AKS 클러스터의 에이전트 노드를 사용 합니다.
+   늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 사용 하려는 에이전트 노드 수입니다. 여기에 AKS에서 내부적으로 관리 되는 마스터 Kubernetes 노드를 포함 되지 않습니다. 앞의 예제만 평가 목적에 대 한 단일 노드를 사용합니다.
 
    몇 분 후 명령이 완료 되 고 클러스터에 대 한 JSON 형식 정보를 반환 합니다.
 

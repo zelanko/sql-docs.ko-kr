@@ -5,17 +5,17 @@ description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510340"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618310"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -31,8 +31,11 @@ ms.locfileid: "58510340"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| GPU에 대 한 지침 딥 러닝 Spark에서 TensorFlow를 사용 하 여 실행에 대 한 지원. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.](spark-gpu-tensorflow.md) |
+| GPU에 대 한 지침 딥 러닝 Spark에서 TensorFlow를 사용 하 여 실행에 대 한 지원. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 TensorFlow 실행](spark-gpu-tensorflow.md)합니다. |
 | **SqlDataPool** 하 고 **SqlStoragePool** 데이터 원본에 더 이상 기본적으로 만들어집니다. | 필요에 따라 수동으로 이러한를 만듭니다. 참조 된 [알려진 문제](#externaltablesctp24)합니다. |
+| `INSERT INTO SELECT` 데이터 풀에 대 한 지원입니다. | 예를 들어 참조 [자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집](tutorial-data-pool-ingest-sql.md)합니다. |
+| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션입니다. | 강제로 또는 외부 테이블에서 쿼리 계산 풀을 사용 하는 사용 하지 않도록 설정 합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`) 을 입력합니다. |
+| 업데이트 된 AKS 배포 권장 사항입니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 권장 크기의 단일 노드를 사용 하 여 **Standard_L8s**합니다. |
 | Spark 2.4로 Spark 런타임 업그레이드 | |
 
 ### <a name="known-issues"></a>알려진 문제
