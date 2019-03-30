@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289331"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658346"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 비즈니스 인텔리전스 솔루션 관련 기능이 향상 된 환경입니다. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함되어 있습니다.  
@@ -31,9 +31,7 @@ ms.locfileid: "56289331"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> 솔루션 및 프로젝트  
  보고서 프로젝트는 보고서 정의 및 리소스에 대한 컨테이너 역할을 합니다. 보고서 프로젝트의 모든 파일은 프로젝트를 배포할 때 보고서 서버에 게시됩니다. 처음 프로젝트를 만들면 해당 프로젝트의 컨테이너 역할을 하는 솔루션도 만들어집니다. 하나의 솔루션에 여러 프로젝트를 추가할 수 있습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> 구성  
  엔터프라이즈 테스트 및 프로덕션 보고서 서버와 같은 배포 변형을 위한 여러 프로젝트 속성 집합을 만들려면 구성 관리자를 사용합니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289331"
 -   **보고서 서버 프로젝트 마법사** 보고서 서버 마법사 프로젝트를 선택하면 보고서 서버 프로젝트가 자동으로 만들어지고 보고서 마법사가 열립니다. 마법사에서는 각 페이지의 지침을 따라 데이터 원본에 대한 연결 문자열을 만들고, 데이터 원본 자격 증명을 설정하고, 쿼리를 디자인하고, 테이블 또는 행렬 데이터 영역을 추가하고, 보고서 데이터 및 그룹을 지정하고, 글꼴 및 색 스타일을 선택하고, 보고서 서버에 보고서를 게시하고, 보고서를 로컬에서 미리 보는 방법으로 보고서를 만들 수 있습니다. 마법사로 보고서를 만든 후에는 보고서 서버 프로젝트의 보고서 디자이너를 사용하여 보고서 데이터 및 보고서 디자이너를 변경할 수 있습니다.  
   
  ![SSDT의 새 프로젝트 템플릿](../../analysis-services/media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
- 보고서 디자이너는 두 가지 뷰를 지원합니다. **디자인** 은 보고서 데이터 및 보고서 레이아웃을 정의 하 고 **미리 보기** 보고서의 렌더링 된 보기를 표시 합니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
+ 보고서 디자이너는 두 가지 뷰를 지원합니다. **디자인**은 보고서 데이터 및 보고서 레이아웃을 정의하기 위한 뷰이고 **미리 보기**는 보고서의 렌더링된 뷰를 표시하기 위한 뷰입니다. 각 뷰에서 여러 창을 표시하면 렌더링된 보고서를 디자인하거나 보는 데 도움이 됩니다.  
   
 ###  <a name="bkmk_ReportDataPane"></a> 보고서 데이터 창  
  보고서 데이터 창에는 기본 제공 필드, 데이터 원본, 데이터 세트, 필드 컬렉션, 보고서 매개 변수 및 이미지가 표시됩니다.  
@@ -72,9 +68,7 @@ ms.locfileid: "56289331"
   
 > [!NOTE]  
 >  보고서 데이터 창이 표시되지 않는 경우 **보기** 메뉴에서 **보고서 데이터**를 클릭하십시오. 보고서 데이터 창이 부동 창인 경우 고정할 수 있습니다. 자세한 내용은 [보고서 디자이너에서 보고서 데이터 창 도킹&#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md)을 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> 그룹화 창  
  그룹화 창을 사용하여 테이블릭스 데이터 영역에 대한 그룹을 정의할 수 있습니다. 테이블의 경우 행 그룹 및 세부 그룹을 정의하고 행렬의 경우 행 및 열 그룹을 정의할 수 있습니다. 그룹화 창을 사용하여 차트 또는 다른 데이터 영역에 대한 그룹을 정의할 수 없습니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -90,9 +84,7 @@ ms.locfileid: "56289331"
 >  **기본** 모드와 **고급** 모드 사이를 토글하려면 **열 그룹** 아이콘의 오른쪽에 있는 아래쪽 화살표를 마우스 오른쪽 단추로 클릭합니다.  
   
  자세한 내용은 [Grouping Pane](grouping-pane.md)을 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> 도구 상자  
  도구 상자는 디자인 화면으로 끌 수 있는 보고서 항목을 포함합니다. 데이터 영역은 보고서에서 데이터를 구성하는 데 사용하는 보고서 항목입니다. 테이블, 행렬, 목록, 차트, 계기, 데이터 막대, 스파크라인 및 표시기가 데이터 영역입니다. 다른 보고서 항목에는 지도, 입력란, 사각형, 선, 이미지 및 하위 보고서가 있습니다. 사용자 지정 보고서 항목은 시스템 관리자가 설치 및 등록한 경우 이 목록에도 나타날 수 있습니다.  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289331"
 -   그룹화 창에서 현재 선택 된 그룹 멤버에 대한 속성을 설정합니다. 그룹 멤버 속성은 정적 그룹 머리글 및 바닥글 행을 각 그룹 인스턴스에 대해 반복하는 방식을 제어하는 데 유용합니다. 자세한 내용은 [그룹과 함께 헤더 및 바닥글 표시&#40;보고서 작성기 및 SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)를 참조하세요.  
   
  속성 창을 표시하려면 **보기** 메뉴에서 **속성 창**을 클릭합니다. 이 창의 도킹을 해제하여 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]창의 다른 영역으로 이동하거나 디자인 화면에서 해당 창을 탭 뷰로 표시할 수 있습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> 솔루션 탐색기  
  솔루션 탐색기는 프로젝트에 있는 모든 항목을 표시하는 표준 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 구성 요소입니다. 보고서 서버 프로젝트의 경우 이 구성 요소에는 공유 데이터 원본, 공유 데이터 세트, 보고서 및 리소스를 구성하는 폴더가 포함됩니다. 폴더 항목은 솔루션 파일을 열 때 사전순으로 자동 정렬됩니다. 속성 창에서 항목 속성을 보려면 해당 항목을 선택합니다.  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289331"
  출력 창은 보고서를 미리 볼 때에는 처리 오류를 표시하고 보고서 또는 공유 데이터 원본을 배포할 때에는 게시 오류를 표시합니다.  
   
  출력 및 문서 개요 창을 사용하여 식에서 오류를 디버그할 수 있습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> 문서 개요  
  문서 개요 창은 보고서 정의에 있는 모든 보고서 항목의 계층 목록을 표시합니다. 문서 개요 창을 열려면 **보기** 메뉴에서 **다른 창** 을 가리키고 **문서 창**을 클릭합니다.  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289331"
   
 ###  <a name="bkmk_TaskList"></a> 작업 목록  
  태스크 목록 창은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access와 같은 다른 애플리케이션에서 보고서를 가져올 때 지원되지 않는 기능에 대한 빌드 오류를 표시합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> 보고서 디자이너 디자인 뷰  
  기본적으로 보고서 서버 프로젝트를 만들면 보고서 디자이너가 디자인 뷰에서 열리고 디자인 화면을 표시합니다. 기본적으로 디자인 화면에는 보고서 본문 및 배경이 표시됩니다.  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289331"
  확대/축소 컨트롤을 사용하여 보고서의 배율을 늘리거나 줄일 수 있습니다.  
   
  보고서를 디자인하려면 보고서 항목을 도구 상자에서 끌어 디자인 화면에 놓은 다음 보고서에서 해당 속성을 구성하고 정렬을 변경합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> 보고서 디자이너 미리 보기  
  미리 보기를 사용하여 보고서를 실행하고 렌더링된 보고서를 보고서 뷰어에서 볼 수 있습니다. 미리 보기는 보고서 데이터를 로컬로 캐시합니다. 구성 속성을 설정하여 브라우저를 통해 디버그 뷰로 보고서를 실행할 수도 있습니다.  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289331"
 -   **구성 관리자 및 디버깅을 사용하여 보고서 미리 보기** [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서는 프로젝트 속성으로 보고서 배포 및 디버깅 방법을 정의합니다. 이러한 속성은 프로젝트에 있는 모든 보고서 및 공유 데이터 원본에 적용됩니다. 프로젝트 속성을 설정하려면 **프로젝트** 메뉴에서 **속성**을 클릭합니다. 이러한 속성을 사용하여 보고서를 테스트하고 보고서 서버에 게시할 수 있습니다.  
   
 -   **출력 창에서 오류 메시지 모니터링** 보고서를 미리 보고 보고서 처리기가 문제를 검색하면 출력 창에 오류 메시지가 기록됩니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> 보고서 디자이너 메뉴  
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너 프로젝트가 활성화되어 있으면 주 메뉴 모음에 다음 도구 모음이 추가됩니다. 보고서 디자이너 메뉴는 디자인 뷰에 있을 때만 표시됩니다.  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289331"
   
 -   **보고서 속성**   **보고서 속성** 대화 상자를 열려면 선택합니다. 이 대화 상자에서 작성자 이름, 눈금 간격 등의 일반 보고서 속성을 할당하고 열 개수 및 페이지 크기와 같은 보고서 레이아웃 속성을 지정할 수 있습니다. 또한 데이터 출력 요소, 데이터 변환 및 데이터 스키마의 이름과 사용자 지정 코드, 어셈블리와 클래스에 대한 참조를 포함할 수 있습니다.  
   
--   **보기** 두 보고서 디자이너 탭 간에 전환 합니다. 전환합니다.  
+-   **뷰** 보고서 디자이너의 [디자인] 탭과 [미리 보기] 탭 간에 전환합니다.  
   
 -   **페이지 머리글** 보고서에서 페이지 머리글을 추가하거나 삭제합니다. 페이지 머리글을 삭제하면 페이지 머리글의 모든 항목이 삭제됩니다.  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289331"
 -   **프로젝트 도구 상자 항목 새로 고침** 프로젝트에 새로운 사용자 지정 보고서 항목을 설치할 때 도구 상자 캐시를 새로 고칩니다.  
   
 -   **속성** 이 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 페이지 대화 상자](project-property-pages-dialog-box.md)를 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> 보고서 디자이너 도구 모음  
  보고서 디자이너는 보고서 디자인 시 사용할 수 있는 다음과 같은 특수화된 도구 모음을 제공합니다.  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289331"
 -   **표준** 프로젝트를 열거나 저장하고, 창을 표시하고, 디버그 구성을 선택합니다.  
   
  **보기** 메뉴를 사용하여 이러한 도구 모음을 표시할지 여부를 제어할 수 있습니다. 다른 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 도구 모음의 기능이 보고서 디자이너 기능에 적용되지 않을 경우 해당 도구 모음이 비활성화될 수 있습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> 원본 제어  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 는 원본 플러그 인과 통합할 수 있습니다. **옵션** 대화 상자의 프로젝트 및 솔루션 페이지를 사용하여 플러그 인 및 구성 속성을 지정할 수 있습니다.  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289331"
  사용자 지정 보고서를 새로운 보고서에 대한 템플릿으로 사용하려면 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 가 설치된 컴퓨터의 ReportProject 폴더에 이를 복사하기만 하면 됩니다. 기본적으로이 폴더는 \<드라이브 >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject에 있습니다. 보고서 프로젝트에 새 항목을 추가하면 사용자 지정 보고서가 템플릿 창에 표시됩니다.  
   
  보고서 마법사에 사용자 지정 스타일을 추가할 수도 있습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 더해서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 및 기본 devenv.exe 응용 프로그램입니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289331"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Reporting Services의 바로 가기 키  
  바로 가기 키를 사용하여 다음을 수행할 수 있습니다.  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289331"
     |입력란에서 식의 현재 커서 위치에서 시작 부분에 이르는 텍스트 선택|Ctrl+Shift+Home|  
     |입력란에서 식의 현재 커서 위치에서 끝 부분에 이르는 텍스트 선택|Ctrl+Shift+End|  
     |선택한 보고서 항목에 대한 바로 가기 메뉴를 엽니다.|Shift+F10+속성 키(최신 키보드에 있음)|  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>관련 항목  
  [솔루션 탐색기](../../ssms/solution/solution-explorer.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   

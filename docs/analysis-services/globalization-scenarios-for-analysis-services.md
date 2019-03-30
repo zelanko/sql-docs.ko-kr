@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4cfbb4d3cfb62405546ef5ff955a52811ded41b5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202252"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658327"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Analysis Services의 세계화 시나리오
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "53202252"
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)   
  [Windows 애플리케이션에 대한 국제화](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Go Global 개발자 센터](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [세계화](/globalization/)   
  [로캘 기반 적응형 디자인을 사용하여 Windows 스토어 앱 작성](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# 및 XAML을 사용하여 범용 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

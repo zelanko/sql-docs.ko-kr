@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371055"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658344"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
@@ -48,9 +48,9 @@ ms.locfileid: "53371055"
   
 -   [SQL Server 준비 인스턴스에서 기능 제거](#RemoveFeatures)  
   
--   [준비 인스턴스 제거](install-sql-server-using-sysprep.md#uninstall)  
+-   [준비 인스턴스 제거](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [SQL Server의 완료된 인스턴스 수정 또는 제거](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [SQL Server의 완료된 인스턴스 수정 또는 제거](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 클러스터 지원  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SysPrep은 명령줄에서 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 설치를 지원합니다. 자세한 내용은 [Sysprep이란?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx)을 참조하십시오.  
@@ -325,5 +325,3 @@ ms.locfileid: "53371055"
 ## <a name="see-also"></a>관련 항목  
  [Sysprep이란?](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Windows Sysprep 작동 방법](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214964"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658235"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013에서 파워 피벗 데이터 새로 고침
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -235,7 +235,7 @@ ms.locfileid: "53214964"
 ##  <a name="bkmk_moreinformation"></a> 자세한 정보  
  [파워 피벗 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel 서비스에서 SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
+ [Excel 서비스에서 SharePoint](/sharepoint/dev/general-development/excel-services-in-sharepoint)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

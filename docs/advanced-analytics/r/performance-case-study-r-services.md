@@ -2,17 +2,17 @@
 title: SQL Server R Services-결과 및 리소스-SQL Server Machine Learning Services에 대 한 성능
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510760"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645555"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대 한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ Resume-일치 하는 모델에 대 한 외부 스크립트 사용 하 여 과도
 
 이러한 모든 이유로, single 해결 방법은이 초기 로드 시간을 완화 하기 위한 태스크에 따라 성능에 영향을 크게 변경 됨. 예를 들어, 단일 행; 일괄 처리에서 점수 매기기에 대해 수행 됩니다 캐싱 따라서 후속 점수 매기기 작업은 훨씬 더 빠르게 하 고 모델도 아니고 R 런타임을 다시 로드 됩니다. 사용할 수도 있습니다 [네이티브 점수 매기기](../sql-native-scoring.md) R 런타임이 완전히 로드 되지 않도록 하려면.
 
-큰 모델을 학습 또는 큰 일괄 처리에서 점수 매기기 오버 헤드 또는 스트리밍 및 병렬 처리에서 데이터 이동을 방지할 향상을 비교 하 여 미미 될 수 있습니다. 이러한 최근 블로그 및 추가 성능 지침에 대 한 샘플을 참조 하세요.
+큰 모델을 학습 또는 큰 일괄 처리에서 점수 매기기 오버 헤드 또는 스트리밍 및 병렬 처리에서 데이터 이동을 방지할 향상을 비교 하 여 미미 될 수 있습니다. 이 블로그 게시물 추가 성능 지침을 보려면
 
-+ [SQL Server 2016 R Services를 사용 하 여 대출 분류](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [R Services를 사용 하 여 초기 고객 환경](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [초당 1 백만 트랜잭션에 사기 행위를 감지 하는 데 R 사용](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>리소스

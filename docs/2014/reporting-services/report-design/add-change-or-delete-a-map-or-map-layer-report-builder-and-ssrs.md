@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a894da9840b82dd861d6cb3b0e858663248f98e5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f174d2ba00211459d8ef7d7c0d61a0affa0b38ae
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290411"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657697"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  
@@ -67,22 +67,18 @@ ms.locfileid: "56290411"
 -   리본의 **삽입** 메뉴에서 **지도**를 클릭한 다음 **지도 Wizard.** 를 클릭합니다. 이 마법사를 사용하여 기존 지도에 계층을 추가할 수 있습니다. 지도 마법사와 지도 계층 마법사의 마법사 페이지는 대부분 동일합니다.  
   
      자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)를 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="ChangeLayer"></a> 지도 계층 마법사를 사용하여 계층의 옵션을 변경하려면  
   
 -   지도 계층 마법사를 실행합니다. 이 마법사를 통해 지도 계층 마법사를 사용하여 만든 계층의 옵션을 변경할 수 있습니다. 지도 창에서 계층을 마우스 오른쪽 단추로 클릭한 다음 도구 모음에서 계층 마법사 단추(![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
   
      자세한 내용은 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)를 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="AddVectorLayer"></a> 지도 창 도구 모음에서 점, 선 또는 다각형 계층을 추가하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  도구 모음에서 클릭 합니다 **계층 추가** 드롭 다운 목록에서 추가 하려는 계층의 유형을 클릭 합니다. **지점**하십시오 **줄**, 또는 **다각형**합니다.  
+2.  도구 모음에서 **계층 추가** 단추를 클릭하고 드롭다운 목록의 **점**, **선** 또는 **다각형** 중에서 추가할 계층의 유형을 클릭합니다.  
   
     > [!NOTE]  
     >  지도 계층을 추가하고 수동으로 구성할 수 있지만 지도 계층 마법사를 사용하여 새 계층을 추가하는 것이 좋습니다. 지도 창 도구 모음에서에서 마법사를 시작하려면 계층 마법사 단추(![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard"))를 클릭합니다.  
@@ -106,9 +102,7 @@ ms.locfileid: "56290411"
      공간 및 분석 데이터를 연결하는 방법에 대한 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="FilterAnalyticalData"></a> 계층에 대한 분석 데이터를 필터링하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -118,9 +112,7 @@ ms.locfileid: "56290411"
 3.  **필터**를 클릭합니다.  
   
 4.  지도 표시에 사용되는 분석 데이터를 제한할 필터 수식을 정의합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="PointProperties"></a> 점 계층 또는 다각형 중심점에 대한 점 속성을 제어하려면  
   
 1.  **지도 점 속성** 대화 상자에서 **일반** 을 선택하여 다음 지도 요소의 레이블, 도구 설명 및 표식 유형 옵션을 변경할 수 있습니다.  
@@ -128,9 +120,7 @@ ms.locfileid: "56290411"
     -   점 계층의 모든 동적 또는 포함된 점. 점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 포함된 점에 대한 옵션을 무시하려면 [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) 페이지를 사용합니다.  
   
     -   다각형 계층의 모든 동적 또는 포함된 다각형에 대한 중심점. 중심점의 색 규칙, 크기 규칙 및 표식 유형 규칙은 이러한 옵션을 무시합니다. 특정 중심점에 대한 옵션을 무시하려면 [지도 포함 점 속성 대화 상자, 표식](../map-embedded-point-properties-dialog-box-marker.md) 페이지를 사용합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="Embedded"></a> 포함된 데이터를 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -147,9 +137,7 @@ ms.locfileid: "56290411"
     >  필드의 이름을 모르고 ESRI 셰이프 파일로 이동한 경우 이 옵션 대신 **ESRI 셰이프 파일에 연결** 옵션을 사용합니다.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="ESRI"></a> ESRI 셰이프 파일을 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -164,9 +152,7 @@ ms.locfileid: "56290411"
     >  셰이프 파일이 로컬 컴퓨터에 있는 경우 공간 데이터가 보고서 정의에 포함됩니다. 보고서가 처리될 때 데이터를 동적으로 검색하려면 ESRI .shp 파일 및 해당 .dbf 지원 파일을 보고서 서버로 업로드해야 합니다. 자세한 내용은 "방법: 파일 또는 보고서 업로드 (보고서 관리자) "에 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 합니다.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="DatasetField"></a> 보고서 데이터 집합 필드를 공간 데이터의 원본으로 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -177,12 +163,10 @@ ms.locfileid: "56290411"
   
 4.  **데이터 집합 이름**에서 원하는 공간 데이터가 포함된 보고서의 데이터 집합 이름을 클릭합니다.  
   
-5.  **공간 필드 이름**에서 공간 데이터가 포함된 데이터 집합의 필드 이름을 클릭합니다.  
+5.  **공간 필드 이름**에서 공간 데이터가 포함된 데이터 세트의 필드 이름을 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="TileLayer"></a> 타일 계층을 추가하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -198,9 +182,7 @@ ms.locfileid: "56290411"
   
     > [!NOTE]  
     >  지도 또는 지도 계층 마법사에서 다각형, 선 또는 점 계층을 추가할 때 타일 계층도 추가할 수 있습니다. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **이 지도 보기에 대해 Bing Maps 배경 추가**옵션을 선택합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="DrawingOrder"></a> 계층의 그리기 순서를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -208,9 +190,7 @@ ms.locfileid: "56290411"
 2.  지도 창에서 계층을 클릭하여 선택합니다.  
   
 3.  지도 창 도구 모음에서 위로 또는 아래로 화살표를 클릭하여 각 계층의 그리기 순서를 변경합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="Transparency"></a> 다각형, 선 또는 점 계층의 투명도를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -222,9 +202,7 @@ ms.locfileid: "56290411"
 4.  **투명도 옵션**에서 투명도를 나타내는 값(%)을 입력합니다(예: **40**). 0% 투명도는 계층이 불투명함을 의미합니다. 100% 투명도는 보고서에서 계층을 볼 수 없음을 의미합니다.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="TileTransparency"></a> 타일 계층의 투명도를 변경하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -236,9 +214,7 @@ ms.locfileid: "56290411"
 4.  **투명도 옵션**에서 투명도를 나타내는 값(%)을 입력합니다(예: **40**).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="Secure"></a> 타일 계층에 대한 보안 연결을 지정하려면  
   
 1.  지도 창이 나타날 때까지 지도를 클릭합니다.  
@@ -248,9 +224,7 @@ ms.locfileid: "56290411"
 3.  속성 창에서 UseSecureConnection을 **True**로 설정합니다.  
   
  Bing Maps 웹 서비스의 연결에서는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 해당 계층에 대한 Bing Maps 타일을 검색합니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="Language"></a> 타일 레이블의 언어를 지정하려면  
   
 1.  기본적으로 레이블을 표시하는 타일 스타일의 경우 언어는 보고서 작성기에 대한 기본 로캘에서 결정됩니다. 다음과 같은 방법으로 타일 레이블에 대한 언어 설정을 사용자 지정할 수 있습니다.  
@@ -260,9 +234,7 @@ ms.locfileid: "56290411"
     -   보고서 배경을 클릭하여 보고서를 선택합니다. 속성 창의 드롭다운 목록에서 Language 속성에 대한 문화권 값을 선택합니다.  
   
      타일 레이블 언어 설정의 우선 순위는 보고서 속성 Language, 보고서 작성기에 대한 기본 로캘 및 지도 속성 TileLanguage입니다.  
-  
-2.  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="ConditionalHide"></a> 뷰포트 확대/축소 수준을 기반으로 계층을 조건에 따라 숨기려면  
   
 1.  설정 `Visibility` 지도 계층에 대 한 표시를 제어 하는 옵션입니다.  
@@ -278,11 +250,7 @@ ms.locfileid: "56290411"
     -   (선택 사항) 투명도 값을 입력합니다.  
   
      조건에 따라 계층을 숨길 수도 있습니다. 자세한 내용은 [항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)를 참조하세요.  
-  
-2.  ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ## <a name="see-also"></a>관련 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [보고서 문제 해결: 지도 보고서 &#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
-  
+ [보고서 문제 해결: 맵 보고서&#40;보고서 작성기 및 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

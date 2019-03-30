@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160631"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658097"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 SLES 클러스터 구성
 
@@ -221,7 +221,7 @@ Pacemaker 클러스터 공급 업체는 STONITH를 사용 하도록 설정 및 �
 
 노드 수준 펜싱 노드 리소스 실행 되지 않도록 보장 합니다. 노드를 다시 설정 하 여 이렇게 하 고는 Pacemaker 구현의 STONITH (약자인 "헤드에 있는 다른 노드가 특이") 이라고 합니다. 키를 누릅니다. Pacemaker는 다양 한 서버는 무정전 전원 공급 장치 또는 관리 인터페이스 카드와 같은 장치 펜싱을 지원 합니다.
 
-자세한 내용은 [부터 Pacemaker 클러스터](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)를 [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
+자세한 내용은 [부터 Pacemaker 클러스터](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)를 [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 고 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)합니다.
 
 클러스터 초기화 시 STONITH 구성이 감지 되 면 비활성화 됩니다. 다음 명령을 실행 하 여 나중에 활성화할 수 있습니다.
 

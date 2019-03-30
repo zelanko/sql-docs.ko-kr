@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367145"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658234"
 ---
 # <a name="statistics"></a>통계
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
@@ -104,8 +104,6 @@ ORDER BY s.name;
 ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
 ##  <a name="CreateStatistics"></a> 통계 작성 시기  
  쿼리 최적화 프로그램은 다음과 같은 방법으로 통계를 작성합니다.  
@@ -197,8 +195,6 @@ GO
   
  임시 통계는 `tempdb`에 저장되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
-  
 ##  <a name="UpdateStatistics"></a> 통계 업데이트 시기  
  쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음 쿼리 계획에 필요할 때 통계를 업데이트합니다. 경우에 따라 AUTO_UPDATE_STATISTICS를 ON으로 설정할 때보다 더 자주 통계를 업데이트하여 쿼리 계획을 향상시키고 쿼리 성능을 높일 수 있습니다. UPDATE STATISTICS 문 또는 저장 프로시저 sp_updatestats를 사용하여 통계를 업데이트할 수 있습니다.  
   
@@ -228,8 +224,6 @@ GO
  테이블 삭제와 같이 데이터 분포를 변경하는 유지 관리 작업을 수행한 후 또는 많은 양의 행에 대한 대량 삽입을 수행한 후 통계를 업데이트하십시오. 이렇게 하면 이후에 쿼리에서 자동 통계 업데이트를 기다리는 동안 쿼리 처리에 지연이 생기는 것을 방지할 수 있습니다.  
   
  인덱스 다시 작성, 다시 구성, 조각 모음 등의 작업은 데이터 분포를 변경하지 않습니다. 따라서 ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업을 수행한 후에는 통계를 업데이트할 필요가 없습니다. ALTER INDEX REBUILD 또는 DBCC DBREINDEX를 사용하여 테이블 또는 뷰에 대한 인덱스를 다시 작성하는 경우 쿼리 최적화 프로그램에서 통계를 업데이트하지만 이 통계 업데이트는 인덱스를 다시 만드는 과정에서 생성됩니다. DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업 이후에는 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
 ##  <a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql)을 참조하세요.  
@@ -328,8 +322,6 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>계획 지침을 사용하여 카디널리티 예상치 정확도 향상  
  일부 애플리케이션의 경우 쿼리를 변경할 수 없거나 RECOMPILE 쿼리 힌트 사용으로 인해 너무 많은 컴파일이 필요해서 통계 설계 지침이 적용되지 않을 수 있습니다. 애플리케이션 공급업체와 함께 애플리케이션 변경 내용을 조사하는 동안 쿼리 동작을 제어할 수 있도록 계획 지침을 사용하여 USE PLAN과 같은 기타 힌트를 지정할 수 있습니다. 계획 지침에 대한 자세한 내용은 [Plan Guides](../performance/plan-guides.md)를 참조하십시오.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
-  
 ## <a name="see-also"></a>관련 항목  
  [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -340,5 +332,3 @@ GO
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [필터링된 인덱스 만들기](../indexes/create-filtered-indexes.md)  
-  
-  

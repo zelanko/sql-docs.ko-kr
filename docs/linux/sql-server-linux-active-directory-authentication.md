@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: d3b3aaf9688d3517127495fe4b963f5b6de56f0f
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 82f4df8607af55a4b50f0ecfaf7b66a8c088c43a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973592"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657937"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 합니다.
 
@@ -164,7 +164,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    
    > SQL Server 사용자 계정 및 그룹 보안 식별자 (SID)에 매핑하기 위한 SSSD 및 NSS를 사용 합니다. SSSD 구성 하 고 AD 로그인을 성공적으로 만들려면 SQL Server에 대 한 순서 대로 실행 해야 합니다. Realmd 일반적으로이 도메인에 가입의 일부로 자동으로 않지만 일부 경우에 이렇게 해야 별도로 있습니다.
    >
-   > 구성 하려면 다음을 확인 [SSSD 수동으로](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > 구성 하려면 다음을 확인 [SSSD 수동으로](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/Configuring_Services#Configuration_Options-NSS_Configuration_Options)
 
 5. 도메인에 구성 되어 있는지 확인 `/etc/krb5.conf`
     ```/etc/krb5.conf

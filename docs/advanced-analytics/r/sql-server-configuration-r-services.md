@@ -2,17 +2,17 @@
 title: SQL Server 구성 (R Services)-SQL Server Machine Learning 서비스
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f5dd6ee267b7bac933e40f90282d1bf74aa57b62
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511850"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645545"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용에 대 한 SQL Server 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -165,10 +165,6 @@ SQL Server를; 노드를 자동으로 관리 소프트 NUMA를 사용 하는 경
 + [SQL Server에서 소프트 NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Cpu를 소프트 NUMA 노드를 매핑하는 방법
-
-+ [자동 SOFT-NUMA: 빠른 (Bob Ward) 실행](https://blogs.msdn.microsoft.com/bobsql/2016/06/03/sql-2016-it-just-runs-faster-automatic-soft-numa/)
-
-   기록에 설명 합니다. 최신 다중 코어 서버에서 성능 구현 세부 정보 뿐만 아니라 합니다.
 
 ## <a name="task-specific-optimizations"></a>태스크 별 최적화
 

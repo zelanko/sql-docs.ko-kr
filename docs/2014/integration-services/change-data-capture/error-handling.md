@@ -10,17 +10,17 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9bebcc588a3ccbe522d4747bab2428f5e30973a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379421"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657250"
 ---
 # <a name="error-handling"></a>오류 처리
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
   
- **cdc.xdbcdc_state**시스템 테이블에서 CDC 인스턴스의 상태가 유지됩니다. 언제든지 이 테이블을 쿼리하여 CDC 인스턴스의 상태를 확인할 수 있습니다. cdc.xdbcdc_state 테이블에 대한 자세한 내용은 [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)를 참조하세요.  
+ **cdc.xdbcdc_state**시스템 테이블에서 CDC 인스턴스의 상태가 유지됩니다. 언제든지 이 테이블을 쿼리하여 CDC 인스턴스의 상태를 확인할 수 있습니다. cdc.xdbcdc_state 테이블에 대한 자세한 내용은 [cdc.xdbcdc_state](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_state)를 참조하세요.  
   
  다음 표에서는 xdbcdc_state 테이블의 CDC 인스턴스 상태에 대해 설명합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "58379421"
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 예기치 않게 중지되었음을 나타냅니다.<br /><br /> ABORTED 하위 상태는 Oracle CDC 인스턴스가 ACTIVE 상태에서 실행되고 있지 않을 때 Oracle CDC Service 기본 인스턴스에 의해 설정됩니다.|  
 |error|0|1|Oracle CDC 인스턴스가 실행되고 있지 않습니다. ERROR 상태는 CDC 인스턴스가 ACTIVE 상태이지만 복구할 수 없는 오류가 발생하여 사용하지 않도록 설정되었음을 나타냅니다. ERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> MISCONFIGURED: 복구할 수 없는 구성 오류가 감지되었습니다.<br /><br /> PASSWORD-REQUIRED: Attunity Oracle CDC Designer에 대해 설정된 암호가 없거나 구성된 암호가 잘못되었습니다. 서비스 비대칭 키 암호 변경이 원인일 수 있습니다.|  
-|RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. RUNNING 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> IDLE: 모든 변경 레코드가 처리 되어 대상 컨트롤에 저장 된 (**_CT**) 테이블입니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 컨트롤에 아직 기록 되지 않은 처리 중인 변경 레코드가 있습니다 (**_CT**) 테이블입니다.|  
+|RUNNING|1|0|CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. RUNNING 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> IDLE: 모든 변경 레코드가 처리되어 대상 제어 테이블(**_CT**)에 저장되었습니다. 제어 테이블이 있는 활성 트랜잭션이 없습니다.<br /><br /> PROCESSING: 제어 테이블(**_CT**)에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
 |STOPPED|0|0|CDC 인스턴스가 실행되고 있지 않습니다. STOP 하위 상태는 CDC 인스턴스가 ACTIVE 상태에서 올바르게 중지되었음을 나타냅니다.|  
 |SUSPENDED|1|1|CDC 인스턴스가 실행되고 있지만 복구할 수 있는 오류로 인해 처리가 일시 중지되었습니다. SUSPENDED 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> DISCONNECTED: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> STORAGE: 저장소가 꽉 찼습니다. 스토리지를 사용할 수 있게 되면 처리가 다시 시작됩니다. 경우에 따라 상태 테이블을 업데이트할 수 없기 때문에 이 상태가 나타나지 않을 수 있습니다.<br /><br /> LOGGER: 로거가 Oracle에 연결되어 있지만 일시적인 문제로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
 |DATAERROR|x|x|이 상태 코드는 **xdbcdc_trace** 테이블에 대해서만 사용됩니다. **xdbcdc_state** 테이블에는 이 상태가 나타나지 않습니다. 추적 레코드에 이 상태가 있으면 Oracle 로그 레코드에 문제가 있는 것입니다. 잘못된 로그 레코드가 **data** 열에 BLOB으로 저장됩니다. DATAERROR 상태는 다음과 같은 하위 상태 코드를 포함합니다.<br /><br /> BADRECORD: 연결된 로그 레코드를 구문 분석할 수 없습니다.<br /><br /> CONVERT-ERROR: 일부 열의 데이터를 캡처 테이블의 대상 열로 변환할 수 없습니다. 이 상태는 변환 오류가 발생하면 추적 레코드를 생성하도록 구성에 지정된 경우에만 나타날 수 있습니다.|  
@@ -115,5 +115,3 @@ ms.locfileid: "58379421"
 ## <a name="see-also"></a>관련 항목  
  [Change Data Capture Designer for Oracle by Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC 인스턴스](the-oracle-cdc-instance.md)  
-  
-  

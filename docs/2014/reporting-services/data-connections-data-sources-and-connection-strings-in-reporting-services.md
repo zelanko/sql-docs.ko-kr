@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291772"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658125"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 및 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
@@ -86,7 +86,7 @@ ms.locfileid: "56291772"
   
 -   **데이터 원본 유형** 예를 들어, 연결 유형 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 연결 유형 드롭다운 목록에서 이 값을 선택합니다.  
   
--   **연결 정보** 연결 정보에는 데이터 원본의 이름과 위치 및 각 데이터 공급자마다 다른 연결 속성이 포함됩니다. *연결 문자열* 연결 정보는 텍스트 표현입니다. 예를 들어 데이터 원본이 SQL Server 데이터베이스인 경우에는 데이터베이스 이름을 지정할 수 있습니다. 포함된 데이터 원본의 경우에는 런타임에 평가되는 식 기반 연결 문자열을 작성할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [식 기반 연결 문자열](#Expressions) 을 참조하세요.  
+-   **연결 정보** 연결 정보에는 데이터 원본의 이름과 위치 및 각 데이터 공급자마다 다른 연결 속성이 포함됩니다. *연결 문자열* 연결 정보는 텍스트 표현입니다. 예를 들어 데이터 원본이 SQL Server 데이터베이스인 경우에는 데이터베이스 이름을 지정할 수 있습니다. 포함된 데이터 원본의 경우에는 런타임에 평가되는 식 기반 연결 문자열을 작성할 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [식 기반 연결 문자열](#bkmk_Expressions_in_connection_strings) 을 참조하세요.  
   
 -   **자격 증명** 데이터에 액세스하는 데 필요한 자격 증명을 제공합니다. 데이터 원본 및 데이터 원본의 특정 데이터에 모두 액세스할 수 있는 적절한 사용 권한을 데이터 원본 소유자가 부여해야 합니다. 예를 들어 네트워크 서버에 설치된 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 예제 데이터베이스에 연결하려면 서버에 연결할 수 있는 권한과 데이터베이스에 액세스할 수 있는 읽기 전용 권한이 모두 있어야 합니다.  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291772"
  [배포 속성 설정&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [데이터 연결이 나 데이터 원본 추가 및 확인 &#40;보고서 작성기 및 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

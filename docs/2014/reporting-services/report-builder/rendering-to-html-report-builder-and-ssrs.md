@@ -11,12 +11,12 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 473ff59f217662ea01f8e24335f3723bf26d40ec
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296851"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658027"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML로 렌더링(보고서 작성기 및 SSRS)
   HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.  
@@ -35,8 +35,6 @@ ms.locfileid: "56296851"
 ##  <a name="RenderingMHTML"></a> MHTML로 렌더링  
  HTML 렌더링 확장 프로그램은 보고서를 MHTML(MIME Encapsulation of Aggregate HTML Documents)로도 렌더링할 수 있습니다. MHTML은 HTML을 확장하여 이미지와 같이 인코딩된 개체를 HTML에 포함합니다. MHTML 렌더링 확장 프로그램을 사용하여 이미지, 문서 또는 다른 이진 파일과 같은 리소스를 보고서 HTML 내의 MIME 구조로 단일 파일에 포함할 수 있습니다. MHTML 보고서에는 모든 리소스가 포함되어 있으므로 MHTML 보고서는 전자 메일 메시지 내에 포함하는 데에도 유용합니다. 이 기능은 실제로는 MHTML을 렌더링하는 HTML 렌더링 확장 프로그램이지만, MHTML 렌더링 확장 프로그램이라고 부릅니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> 브라우저 지원  
  이 렌더링 확장 프로그램은 다음 브라우저 버전을 지원합니다.  
   
@@ -47,8 +45,6 @@ ms.locfileid: "56296851"
 -   Safari 3.0 이상  
   
  브라우저 간 고려 사항으로 인해 렌더링된 보고서는 브라우저마다 조금씩 다를 수 있습니다. 예를 들어 입력란에는 WritingMode라는 속성이 들어 있습니다. 이 속성은 Firefox에서 지원되지 않습니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> HTML 관련 렌더링 규칙  
  렌더링할 때에는 다음과 같은 HTML 관련 규칙이 적용됩니다.  
@@ -66,8 +62,6 @@ ms.locfileid: "56296851"
 -   다른 모든 행 및 열은 각 보고서 항목의 크기에 따라 커질 수 있습니다.  
   
 -   모든 좌표 및 보고서 항목 크기는 밀리미터로 변환됩니다. 스타일 속성을 비롯한 다른 모든 크기에는 원래의 단위가 유지됩니다. 0.2mm보다 작은 크기 및 위치 차이는 0mm로 처리됩니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="Interactivity"></a> 상호 작용  
  HTML에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
@@ -92,18 +86,12 @@ ms.locfileid: "56296851"
   
  ReportViewer Web Forms 컨트롤을 통해 추가 검색 및 찾기 기능이 제공됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
  디바이스 정보 설정을 변경하여 렌더링할 모드를 비롯한 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [HTML Device Information Settings](../html-device-information-settings.md)을 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

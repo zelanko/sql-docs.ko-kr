@@ -2,17 +2,17 @@
 title: 기계 학습 수명 주기 및 팀 프로세스-SQL Server Machine Learning 서비스
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511290"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645435"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Machine learning 수명 주기 및 사용자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ Machine learning 프로젝트 기술 및 전문가의 서로 다른 집합의 �
 
 > [!TIP]
 > 
-> Machine learning 프로젝트에서 시작 하기 전에 도구 및에서 제공 하는 모범 사례를 검토 하는 것이 좋습니다 합니다 [Microsoft Team Data Science Process](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), 또는 TDSP 합니다. 이 프로세스는 기계 학습 계획 및 반복 기계 학습 프로젝트에 대 한 모범 사례를 통합 하는 microsoft 컨설턴트에서 작성 되었습니다. TDSP은 CRISP-DM와 같은 업계 표준의 해당 루트를 갖지만 DevOps 및 시각화와 같은 최신 사례를 통합 합니다.
+> Machine learning 프로젝트에서 시작 하기 전에 도구 및에서 제공 하는 모범 사례를 검토 하는 것이 좋습니다 합니다 [Microsoft Team Data Science Process](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), 또는 TDSP 합니다. 이 프로세스는 기계 학습 계획 및 반복 기계 학습 프로젝트에 대 한 모범 사례를 통합 하는 microsoft 컨설턴트에서 작성 되었습니다. TDSP은 CRISP-DM와 같은 업계 표준의 해당 루트를 갖지만 DevOps 및 시각화와 같은 최신 사례를 통합 합니다.
 
 ## <a name="machine-learning-life-cycle"></a>Machine learning 수명 주기
 

@@ -10,12 +10,12 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90659977d3183108b5d97fe0bc92894f5277bb85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394412"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658057"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "58394412"
   
      이 섹션에서는 이 데이터베이스에 포함된 테이블과 이 데이터베이스가 CDC에 어떻게 중요한지에 대해 설명합니다.  
   
--   [CDC 데이터베이스](#BKMK_CDCdatabas)  
+-   [CDC 데이터베이스](#BKMK_CDCdatabase)  
   
      이 섹션에서는 CDC 데이터베이스에 대해 간단히 설명합니다. 이러한 데이터베이스는 Oracle CDC Designer 콘솔을 사용하여 만들어집니다. CDC 데이터베이스에 대한 자세한 내용은 CDC Designer 콘솔 설치 프로그램에 들어 있는 설명서를 참조하십시오.  
   
@@ -263,5 +263,3 @@ ms.locfileid: "58394412"
 ## <a name="see-also"></a>관련 항목  
  [CDC Service 명령줄 인터페이스를 사용하는 방법](how-to-use-the-cdc-service-command-line-interface.md)   
  [CDC를 위해 SQL Server를 준비하는 방법](prepare-sql-server-for-cdc.md)  
-  
-  

@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417175"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657827"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58417175"
 |app_name|**nvarchar(255)**|필요에 따라 연결 프로세스의 일부로 설정 하는 응용 프로그램 이름 정보를 캡처합니다.|모든 유효한 문자열입니다.|  
 |sql_spid|**int**|SPID의 id. 사용 된 `session_id` 이 세션입니다. 사용 된 `sql_spid` 열을 조인할 **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* 경고 \* \***  이 열에 닫힌된 Spid를 포함 합니다.||  
   
- 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.  
+ 이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  `VIEW SERVER STATE` 권한이 필요합니다.  

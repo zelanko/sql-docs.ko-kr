@@ -3,17 +3,17 @@ title: SQL Server R 및 Python 자습서-SQL Server Machine Learning
 description: 예제 및 R 및 SQL Server Machine Learning Services의 스크립팅는 Python에 대 한 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511050"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645405"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 및 Python에서 SQL Server Machine Learning 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ T-SQL에서 R 또는 Python을 실행 하는 방법 및 SQL 프로덕션 환경�
 | [고객 수행 Python 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Kmeans 알고리즘을 사용 하 여 고객의 감독 되지 않은 클러스터링을 수행 하는 방법에 알아봅니다. 이 예제는 Python 언어에 데이터베이스를 사용합니다.| SQL Server 2017 |
 | [R 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Ski 차량 대 여 사업에서 기계 학습 향후 대 여 예측을 비즈니스 계획 및 직원 미래 수요를 충족 하기 위해 도움이 되는 사용 하는 방법을 알아봅니다. 이 예제에서는 의사 결정 트리 모델과 로지스틱 회귀를 빌드하려면 Microsoft 알고리즘을 사용 합니다. | 
 | [Python 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 향후 수요에 대 한 계획 하는 데 Python을 사용 하 여 ski 차량 대 여 분석 응용 프로그램을 빌드하십시오. 새 Python 라이브러리를 사용 하 여이 예제 **revoscalepy**, 선형 회귀 모델을 만듭니다. | 
-| [SQL Server Machine Learning Services를 사용 하 여 Tableau를 사용 하는 방법](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | SQL Server 및 R을 사용 하 여 Tableau 그래프를 만들어 소셜 미디어 분석 | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ Microsoft 데이터 과학 팀에는 일반적인 시나리오에 대 한 솔루
 + [사용자 지정 이탈 예측](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [예측 유지 관리](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [병원 체류 기간 예측](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-자세한 내용은 [SQL Server 2016 R Services를 사용하는 Machine Learning 템플릿](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/)을 참조하세요.
 

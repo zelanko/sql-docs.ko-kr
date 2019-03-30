@@ -2,17 +2,17 @@
 title: 데이터 과학 시나리오 및 솔루션 템플릿-SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509850"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645495"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ ms.locfileid: "58509850"
 > [!TIP]
 > 
 > 템플릿 중 대부분 온-프레미스를 지 원하는 여러 버전에서 제공 하 고 클라우드 machine learning 위한 플랫폼. 예를 들어, SQL Server만 사용 하 여 솔루션을 빌드할 수 있습니다 또는 Microsoft R Server 또는 Azure Machine Learning 솔루션을 빌드할 수 있습니다.
-
-+ 세부 정보 및 업데이트에 대 한이 발표를 참조 하십시오. [Azure ML에서 흥미로운 새 템플릿](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + 다운로드 및 설치 지침을 참조 하세요 [템플릿을 사용 하는 방법을](#bkmk_HowTo)합니다.
 
@@ -67,8 +65,6 @@ ms.locfileid: "58509850"
 [예측 유지 관리 템플릿 (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **항목:** 예측 유지 관리는 이전 오류를 캡처하고 해당 정보를 사용 하 여 장치를 실패할 수 있는 시기나 위치를 예측 하 여 유지 관리 작업의 효율성을 높이기 위해 것을 목표로 합니다. 분산된 된 데이터 또는 센서를 사용 하는 응용 프로그램에 대 한 장치 노후화를 예측 하는 기능이 특히 유용 합니다. 이 메서드를 모니터링 하거나 IoT (사물 인터넷) 장치에서 오류를 예측 적용할 수도 없습니다.
-
-자세한 내용은이 발표를 참조 하십시오. [새 예측 유지 관리 템플릿](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **방법:** 이 솔루션은 "경우 컴퓨터를 서비스 하지 못합니다?" 라는 질문에 답변에 집중 입력 데이터는 항공기 엔진에 대해 시뮬레이트된 센서 측정값을 나타냅니다. 엔진의 현재 작동 상태를 현재 작업 주기, 설정, 센서 측정값 등을 모니터링에서 가져온 데이터는 세 가지 유형의 예측 모델을 만드는 데 사용 됩니다.
 

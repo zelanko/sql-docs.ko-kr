@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294691"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658357"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 세트를 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 세트 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -66,10 +66,8 @@ ms.locfileid: "56294691"
   
  사용자가 보고서 데이터를 효율적으로 제어할 수 있도록 필터 식에 매개 변수를 추가할 수 있습니다. 자세한 내용은 [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)를 참조하세요.  
   
- 각 사용자에 대한 뷰를 사용자 지정하려면 필터에 기본 제공 필드 UserID에 대한 참조를 포함합니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+ 각 사용자에 대한 뷰를 사용자 지정하려면 필터에 기본 제공 필드 UserID에 대한 참조를 포함합니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.
+
 ##  <a name="Grouping"></a> 보고서 데이터 그룹화  
  그룹은 표시하거나 집계 값을 계산하기 위한 보고서 데이터를 구성합니다. 그룹을 정의하고 그룹 기능을 사용하는 방법을 이해하면 보고서를 더욱 간결하게 디자인할 수 있습니다.  
   
@@ -103,16 +101,14 @@ ms.locfileid: "56294691"
 ### <a name="groups-and-scope-in-data-regions"></a>데이터 영역의 그룹 및 범위  
  동일한 데이터 세트에서 다양한 데이터 보기를 제공하려면 각 데이터 영역에 동일한 그룹 식을 지정합니다. 예를 들어 범주화된 데이터를 테이블에 표시하면 모든 세부 데이터를 표시할 수 있고 원형 차트에 표시하면 집계를 표시하고 전체 데이터 세트와 관련된 각 범주를 시각화할 수 있습니다. 자세한 내용은 [동일한 데이터 세트에 여러 데이터 영역 연결&amp;#40;보고서 작성기 및 SSRS&amp;#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
   
- 테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+ 테이블, 행렬 또는 목록의 셀에 있는 데이터 영역을 중첩시킬 경우 자동으로 데이터의 범위가 셀의 가장 안쪽 그룹 멤버 자격으로 지정됩니다. 예를 들어 행 그룹 및 열 그룹 모두에 있는 셀에 차트를 추가하면 런타임에 이 차트에서 데이터 사용 범위는 가장 안쪽 행 그룹 인스턴스와 가장 안쪽 열 그룹 인스턴스입니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+
 ##  <a name="Sorting"></a> 보고서 데이터 정렬  
  보고서에서 데이터의 정렬 순서를 제어하려면 데이터 세트 쿼리에서 데이터를 정렬하거나 데이터 영역 또는 그룹에 대한 정렬 식을 정의할 수 있습니다. 테이블 및 행렬에 대화형 정렬 단추를 추가하면 사용자가 행 정렬 순서를 변경할 수 있습니다.  
   
  동일한 보고서에서 세 가지 정렬 유형을 모두 사용할 수 있습니다. 기본적으로 정렬 순서는 데이터 세트 쿼리에서 반환되는 데이터의 순서에 따라 결정됩니다. 정렬 식은 데이터 영역과 데이터 영역 그룹에 적용됩니다. 대화형 정렬은 정렬 식 다음에 적용됩니다.  
   
- 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 집계 함수 첫 번째, 마지막으로, 및 이전 합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
+ 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 집계 함수 First, Last 및 Previous에 대한 반환 값은 정렬 순서의 영향을 받습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 세트 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 세트 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  
@@ -168,9 +164,7 @@ FROM Production.Product
  사용자가 테이블 또는 행렬에 있는 보고서 데이터의 정렬 순서를 변경할 수 있도록 하려면 열 머리글 또는 그룹 머리글에 대화형 정렬 단추를 추가합니다. 사용자는 이 단추를 클릭하여 정렬 순서를 토글할 수 있습니다. 대화형 정렬은 HTML과 같이 사용자 상호 작용을 허용하는 렌더링 형식에서 지원됩니다.  
   
  테이블릭스 데이터 영역 셀의 입력란에 대화형 정렬 단추를 추가합니다. 기본적으로 모든 테이블릭스 셀은 입력란을 포함합니다. 입력란 속성에서, 테이블 또는 행렬 데이터 영역에서 정렬할 부분(부모 그룹 값, 자식 그룹 값 또는 정보 행), 정렬 기준 및 피어 관계에 있는 다른 보고서 항목에 정렬 식을 적용할지 여부를 지정합니다. 예를 들어 같은 데이터 세트에 대한 테이블과 차트가 사각형 안에 포함된 경우 이 둘은 피어 데이터 영역입니다. 사용자가 테이블에서 정렬 순서를 전환하면 차트의 정렬 순서도 전환됩니다. 자세한 내용은 [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](interactive-sort-report-builder-and-ssrs.md)을 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [보고서를 스크롤할 때 머리글 계속 표시&#40;보고서 작성기 및 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [표시기&#40;보고서 작성기 및 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  

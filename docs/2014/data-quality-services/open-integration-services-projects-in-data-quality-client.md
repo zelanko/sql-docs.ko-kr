@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020144"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658087"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] 를 사용하여 정리 프로젝트를 일괄 처리 모드로 실행할 수 있습니다. 그러나 경우에 따라 DQS의 데이터 품질 프로젝트에서 정리 작업의 **결과 관리 및 보기** 탭에 있는 정리 결과를 검토하는 방법과 유사한 방식으로 Integration Services 패키지의 정리 결과를 검토할 수도 있습니다. DQS는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 Integration Services 프로젝트를 다른 데이터 품질 프로젝트와 마찬가지로 **프로젝트 열기** 화면에서 열 수 있도록 지원하고 Integration Services 프로젝트의 정리 결과에 대한 대화식 정리 환경을 제공합니다.  
@@ -38,8 +38,6 @@ ms.locfileid: "56020144"
 ####  <a name="Permissions"></a> Permissions  
  Integration Services 프로젝트를 열려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목에서](#Intro)  
-  
 ##  <a name="Open"></a> Integration Services 프로젝트 열기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -60,10 +58,6 @@ ms.locfileid: "56020144"
   
 6.  데이터를 내보낸 후 **마침** 을 클릭하여 Integration Services 프로젝트를 닫습니다.  
   
- ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목에서](#Intro)  
-  
 ## <a name="see-also"></a>관련 항목  
  [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services&#40;SSIS&#41; 프로젝트](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

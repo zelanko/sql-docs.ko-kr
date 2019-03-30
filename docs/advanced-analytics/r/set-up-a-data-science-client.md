@@ -3,17 +3,17 @@ title: R 개발-SQL Server Machine Learning Services에 대 한 데이터 과학
 description: SQL Server에 대 한 원격 연결에 대 한 개발 워크스테이션에 로컬 R 라이브러리 및 도구를 설치 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510440"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645535"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발에 대 한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ R 언어 옵션을 포함 하는 경우 이상 SQL Server 2016에서 사용할 �
 ![클라이언트-서버 구성 요소](media/sqlmls-r-client-revo.png "로컬 및 원격 R 세션 및 라이브러리")
 
 설치의 유효성을 검사 하려면 기본 제공을 사용할 수 있습니다 **RGUI** 이 문서에 설명 된 대로 도구 또는 [라이브러리를 링크](#install-ide) RStudio 또는 일반적으로 사용 하는 모든 다른 IDE.
-
-> [!Tip]
-> 이러한 실습 비디오 데모를 참조 하세요 [실행할 R 및 Python Jupyter Notebook에서 SQL Server에서 원격으로](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/)입니다.
 
 > [!Note]
 > 클라이언트 라이브러리 설치 하는 대신 사용 하는 [독립 실행형 서버](../install/sql-machine-learning-standalone-windows-install.md) 심층 시나리오 작업에 대 한 일부 고객은 선호 하는 풍부한 클라이언트로 합니다. 독립 실행형 서버는 SQL Server에서 완전히 분리 되어 있지만 동일한 R 라이브러리에 있기 때문에 사용할 수 있습니다 클라이언트로 SQL Server 데이터베이스 내 분석에 대 한 합니다. 가져오기 및 다른 데이터 플랫폼에서 데이터를 모델링 하는 기능을 포함 하 여 비 SQL 관련 작업에 사용할 수 있습니다. 독립 실행형 서버를 설치한 경우에이 위치에서 R 실행 파일을 찾을 수 있습니다: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`합니다. 설치 유효성을 검사 하 [R 콘솔 앱을 열고](#R-tools) 는 R.exe를 사용 하 여 해당 위치에서 명령을 실행 합니다.

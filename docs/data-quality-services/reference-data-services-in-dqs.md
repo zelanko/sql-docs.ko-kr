@@ -11,12 +11,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 98801ffe8ea0066bc425622a0f62e7306a217ff2
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305941"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658207"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
 
@@ -35,7 +35,7 @@ ms.locfileid: "58305941"
 -   Windows Azure Marketplace뿐만 아니라 다이렉트 온라인 타사 참조 데이터 공급자를 통해 직접 참조 데이터를 사용할 수 있습니다.  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace의 참조 데이터 사용  
- DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 애플리케이션 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. Marketplace에 대한 자세한 내용은 [Windows Azure Marketplace에 대해 알아보기](https://go.microsoft.com/fwlink/?LinkId=211291)(https://go.microsoft.com/fwlink/?LinkId=211291))를 참조하세요.  
+ DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 애플리케이션 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. Marketplace에 대 한 자세한 내용은 참조 하세요. [에 대 한 Microsoft Azure Marketplace 알아보기](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about)합니다.
   
  Marketplace와 DQS 간의 원활한 통합은 DQS 내 데이터 품질 프로젝트에 대한 정보 검색, 탐색 및 가져오기와 관련된 단계를 간소화합니다. DQS에서 데이터를 가져올 수 있으므로 DQS 사용자는 DQS, Marketplace 및 참조 데이터 서비스 공급자를 혁신적인 방식으로 결합하여 고품질 데이터를 얻을 수 있습니다.  
   

@@ -12,12 +12,12 @@ ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a6257a4f99637fd3be8d11f2848741806c10f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387811"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657707"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "58387811"
   
 2.  작업할 CDC Service를 선택합니다.  
   
-     작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [CDC Service에서 수행할 수 있는 작업](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice)을 참조하세요.  
+     작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [CDC Service에서 수행할 수 있는 작업](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)을 참조하세요.  
   
  **OR**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "58387811"
   
 2.  CDC Service 구성 콘솔의 가운데 섹션에서 작업할 서비스를 선택합니다.  
   
-     작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [CDC Service에서 수행할 수 있는 작업](manage-an-oracle-cdc-service.md#bkmk_whatcandowithcdcservice)을 참조하세요.  
+     작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [CDC Service에서 수행할 수 있는 작업](manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)을 참조하세요.  
   
 ##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service에서 수행할 수 있는 작업  
  CDC서비스에서 작업할 때 다음과 같은 동작을 수행할 수 있습니다.  
@@ -59,5 +59,3 @@ ms.locfileid: "58387811"
   
 ## <a name="see-also"></a>참고 항목  
  [로컬 CDC Service를 관리하는 방법](how-to-manage-a-local-cdc-service.md)  
-  
-  

@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295899"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658037"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
   XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.  
@@ -54,8 +54,6 @@ ms.locfileid: "56295899"
   
 -   `Images, lines, and custom report items`은 무시됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> 데이터 형식  
  입력란 요소 또는 특성은 입력란에 표시되는 값에 따라 XSD 데이터 형식이 지정됩니다.  
   
@@ -70,8 +68,6 @@ ms.locfileid: "56295899"
 |`Boolean`|**xsd:boolean**|  
 |`String`, `Char`|**xsd:string**|  
 |기타|**xsd:string**|  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 관련 렌더링 규칙  
  다음 섹션에서는 XML 렌더링 확장 프로그램을 통해 보고서 내의 항목이 어떻게 해석되는지 설명합니다.  
@@ -116,8 +112,6 @@ ms.locfileid: "56295899"
 ### <a name="lines"></a>선  
  선은 렌더링되지 않습니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ### <a name="tables-matrices-and-lists"></a>테이블, 행렬 및 목록  
  테이블, 행렬 및 목록은 요소로 렌더링됩니다. 요소의 이름은 테이블릭스 DataElementName RDL 속성을 따릅니다.  
   
@@ -155,17 +149,11 @@ ms.locfileid: "56295899"
   
  DataElementOutput 속성 값이 Output이면 반복되는 항목의 머리글이 세부 정보 요소의 자식으로 렌더링됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> 사용자 지정 형식 및 XSL 변환  
  XML 렌더링 확장 프로그램에서 만든 XML 파일은 XSLT(XSL 변환)를 사용하여 거의 모든 형식으로 변환할 수 있습니다. 이 기능을 사용하면 기존 렌더링 확장 프로그램에서 지원하지 않는 형식으로도 데이터를 만들 수 있습니다. 사용자 고유의 렌더링 확장 프로그램을 만들기 전에 XML 렌더링 확장 프로그램과 XSLT 사용을 고려해 보십시오.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> 중복 이름  
  동일한 범위 내에 데이터 요소 이름이 중복되어 있으면 렌더러를 실행할 때 오류 메시지가 나타납니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 변환  
  XML 렌더러로 서버 쪽 XSLT 변환을 원래 XML 데이터에 적용할 수 있습니다. XSLT를 적용하는 경우 렌더러에서는 원래 XML 데이터 대신 변환된 내용을 출력합니다. 변환은 클라이언트가 아니라 서버 쪽에서 진행됩니다.  
@@ -173,8 +161,6 @@ ms.locfileid: "56295899"
  출력에 적용할 XSLT는 보고서의 DataTransform 속성을 사용하여 보고서 정의 파일에 정의하거나 XSLT *DeviceInfo* 매개 변수를 사용하여 정의합니다. 이러한 값 중 하나를 설정하면 XML 렌더러를 사용할 때마다 변환이 일어납니다. 구독을 사용하는 경우에는 RDL DataTransform 속성에 XSLT를 정의해야 합니다.  
   
  DataTransform 정의 속성과 디바이스 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 디바이스 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 장치 정보 설정  
  디바이스 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
@@ -195,13 +181,9 @@ ms.locfileid: "56295899"
   
  자세한 내용은 [XML Device Information Settings](../xml-device-information-settings.md)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

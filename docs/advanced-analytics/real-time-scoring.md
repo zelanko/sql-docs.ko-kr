@@ -3,17 +3,17 @@ title: 실시간 sp_rxPredict 저장 프로시저-SQL Server Machine Learning Se
 description: Sp_rxPredict, SQL Server에서 R로 작성 된 미리 학습 된 모델에 대해 입력 데이터 점수 매기기를 사용 하 여 예측을 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509630"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645475"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning에서 sp_rxPredict으로 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ ms.locfileid: "58509630"
 2. 이진 형식으로 미리 학습 된 모델을 로드 합니다.
 3. 새 입력된 매길 데이터를 테이블 형식 또는 단일 행을 모델의 입력으로 제공할 수 있습니다.
 4. 점수를 생성 하려면 호출을 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 저장 프로시저입니다.
-
-> [!TIP]
-> 작업에서 실시간 점수 매기기의 예제를 참조 하세요. [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 실시간 점수 매기기 기능을 사용 하지 않으려면 관리자 권한 명령 프롬프트를 열고 다음 명령을 실행 합니다. `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>다음 단계
-
-점수를 매기기 위해 rxPredict를 사용할 수 있는 방법을의 예제를 참조 하세요 [종단 간 최종 대출 상각 예측 빌드를 사용 하 여 Azure HDInsight Spark 클러스터 및 SQL Server 2016 R 서비스가](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)합니다.
 
 SQL Server에서 점수 매기기 자세한 배경 정보를 참조 하세요 [SQL Server machine learning에서 예측을 생성 하는 방법을](r/how-to-do-realtime-scoring.md)합니다.

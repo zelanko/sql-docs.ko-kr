@@ -3,22 +3,22 @@ title: 미리 학습 된 기계 학습 모델-SQL Server Machine Learning 설치
 description: SQL Server 2017 Machine Learning Services (R 또는 Python) 또는 SQL Server 2016 R Services에 감정 분석 및 이미지 기능화 (featurization)에 대 한 미리 학습 된 모델을 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512300"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645575"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 Powershell을 사용 하 여 무료 미리 학습 된 기계 학습에 대 한 모델을 추가 하는 방법에 설명 *감정 분석* 하 고 *이미지 기능화 (featurization)* R 또는 Python을 SQL Server 데이터베이스 엔진 인스턴스에 통합 합니다. 미리 학습 된 모델은 Microsoft 및 사용 준비를 하 여 빌드됩니다. 설치 후 태스크로 데이터베이스 엔진 인스턴스를 추가 합니다. 이러한 모델에 대 한 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션입니다.
+이 문서에서는 Powershell을 사용 하 여 무료 미리 학습 된 기계 학습에 대 한 모델을 추가 하는 방법에 설명 *감정 분석* 하 고 *이미지 기능화 (featurization)* SQL Server 인스턴스에 있는 R 또는 Python 통합 합니다. 미리 학습 된 모델은 Microsoft 및 사용 준비를 하 여 빌드됩니다. 설치 후 태스크로 인스턴스를 추가 합니다. 이러한 모델에 대 한 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션입니다.
 
 설치 되 면 미리 학습된 된 모델 MicrosoftML (R) 및 microsoftml (Python) 라이브러리의 특정 함수는 구현 세부 사항으로 간주 됩니다. 처리할 수 있습니다 하 고 사용자 지정 코드에는 독립 된 리소스로 안 (이며) 보기, 사용자 지정 또는 모델을 재 학습 또는 다른 함수 쌍을 이룹니다. 
 
@@ -26,8 +26,8 @@ ms.locfileid: "58512300"
 
 | R 함수 (MicrosoftML) | Python 함수 (microsoftml) | 사용법 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대해 양수 음수가 감정 점수를 생성합니다. [자세한](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)합니다.|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출합니다. [자세한](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)합니다. |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대해 양수 음수가 감정 점수를 생성합니다. |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출합니다. |
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -182,13 +182,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ## <a name="examples-using-pre-trained-models"></a>미리 학습 된 모델을 사용 하는 예제
 
-다음 링크를 미리 학습 된 모델을 호출 하는 연습 및 예제 코드를 포함 합니다.
-
-+ [SQL Server Machine Learning Services에서 Python 사용 하 여 감정 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [미리 학습 된 심층 신경망 모델을 사용 하 여 이미지 기능화 (featurization)](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  이미지의 미리 학습 된 모델의 사용자가 제공한 이미지 기능화 (featurization)를 지원 합니다. 모델을 사용 하 여 호출 해야 합니다 **featurizeImage** 변환 합니다. 크기 조정 이미지가 로드 되 고 학습 된 모델에서 기능화 한 합니다. DNN featurizer의 출력 이미지 분류를 위해 선형 모델 학습에 사용 됩니다. 이 모델을 사용 하려면 모든 이미지 학습된 된 모델의 요구 사항에 맞게 크기가 조정 해야 합니다. 예를 들어는 AlexNet 모델을 사용 하면 이미지 크기가 조정 되도록 227 x 227에 px입니다.
+다음 링크를 미리 학습 된 모델을 호출 하는 예제 코드를 포함 합니다.
 
 + [코드 샘플: 텍스트 Featurizer를 사용 하 여 감정 분석](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

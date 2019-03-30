@@ -1,7 +1,7 @@
 ---
 title: 새로운 기능-SQL Server Machine Learning Services | Microsoft Docs
 description: 새로운 기능 발표의 각 릴리스에 대 한 SQL Server 2016 R Services, R Server, SQL Server 2017의 Machine Learning Services.
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509830"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645525"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -47,7 +47,7 @@ ms.locfileid: "58509830"
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>SQL Server 2017의에서 새로운 기능
 
-이 릴리스에 추가 되었습니다 [Python 지원 및 업계 최고의 기계 학습 알고리즘](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)합니다. 새 범위를 반영 하도록 이름이 바뀌었거나, SQL Server 2017 표시 미치는 [SQL Server Machine Learning Services (In-database)](what-is-sql-server-machine-learning.md), Python 및 R 모두에 대 한 언어 지원 
+이 릴리스에 추가 되었습니다 [Python 지원 및 업계 최고의 기계 학습 알고리즘](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)합니다. 새 범위를 반영 하도록 이름이 바뀌었거나, SQL Server 2017 표시 미치는 [SQL Server Machine Learning Services (In-database)](what-is-sql-server-machine-learning.md), Python 및 R 모두에 대 한 언어 지원 
 
 상향 기능 공지 사항 모두에 대 한 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)합니다.
 

@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511517"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657977"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
   Analysis Services를 사용하면 *DirectQuery 모드*를 통해 관계형 데이터베이스 시스템에서 직접 데이터 및 집계를 검색하여 테이블 형식 모델에서 데이터를 검색하고 보고서를 만들 수 있습니다. 이 항목에서는 메모리에만 있는 표준 테이블 형식 모델과 관계형 데이터 원본을 쿼리할 수 있는 테이블 형식 모델 간의 차이점을 소개하고 DirectQuery 모드에서 사용할 모델을 제작하고 배포하는 방법에 대해 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52511517"
   
 -   [DirectQuery 모드를 사용 하 여 사용할 모델 제작](#bkmk_Design)  
   
-    -   [DirectQuery 모델에 대 한 데이터 원본](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [DirectQuery 모델에 대 한 데이터 원본](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [유효성 검사 및 DirectQuery 모드에 대 한 디자인 제한 사항](#bkmk_Validation)  
   
@@ -71,11 +71,11 @@ ms.locfileid: "52511517"
   
  이렇게 하면 모델 디자이너가 혼합 모드에서 실행되도록 자동으로 작업 영역 데이터베이스를 구성하므로 캐시된 데이터를 계속해서 사용할 수 있습니다. 또한 모델 디자이너는 모델에서 DirectQuery 모드와 호환되지 않는 모든 기능을 알려 줍니다. 다음 목록에는 유의해야 할 주요 사항이 요약되어 있습니다.  
   
--   **데이터 원본:** DirectQuery 모델은 단일 SQL Server 데이터 원본의 데이터만 사용할 수 있습니다. 모델에서 DirectQuery 모드를 사용하도록 설정했으면 모델 디자이너에서 복사/붙여넣기 작업으로 추가한 테이블을 비롯한 다른 형식의 데이터를 사용할 수 없습니다. 또한 모든 가져오기 옵션도 사용할 수 없습니다. 쿼리에 포함된 모든 테이블은 SQL Server 데이터 원본의 일부여야 합니다. 자세한 내용은 [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)을 참조하십시오.  
+-   **데이터 원본:** DirectQuery 모델은 단일 SQL Server 데이터 원본의 데이터만 사용할 수 있습니다. 모델에서 DirectQuery 모드를 사용하도록 설정했으면 모델 디자이너에서 복사/붙여넣기 작업으로 추가한 테이블을 비롯한 다른 형식의 데이터를 사용할 수 없습니다. 또한 모든 가져오기 옵션도 사용할 수 없습니다. 쿼리에 포함된 모든 테이블은 SQL Server 데이터 원본의 일부여야 합니다. 자세한 내용은 [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)을 참조하십시오.  
   
 -   **계산된 열에 대 한 지원:** DirectQuery 모델에 대해서는 계산 열이 지원되지 않습니다. 그러나 데이터 집합에 대해 작동하는 측정값 및 KPI를 만들 수는 있습니다. 자세한 내용은 [유효성 검사](#bkmk_Validation) 섹션을 참조하십시오.  
   
--   **DAX 함수의 제한 된 사용:** 일부 DAX 함수는 DirectQuery 모드에서 사용할 수 없으므로 해당 함수를 다른 함수로 바꾸거나 데이터 원본에서 파생 열을 사용하여 값을 만들어야 합니다. 모델 디자이너에서는 DirectQuery 모드와 호환되지 않는 수식을 만들 때 발생하는 모든 오류에 대한 디자인 타임 유효성 검사 기능을 제공합니다. 자세한 내용은 [유효성 검사](#bkmk_Validation)합니다.  
+-   **DAX 함수의 제한 된 사용:** 일부 DAX 함수는 DirectQuery 모드에서 사용할 수 없으므로 해당 함수를 다른 함수로 바꾸거나 데이터 원본에서 파생 열을 사용하여 값을 만들어야 합니다. 모델 디자이너에서는 DirectQuery 모드와 호환되지 않는 수식을 만들 때 발생하는 모든 오류에 대한 디자인 타임 유효성 검사 기능을 제공합니다. 자세한 내용은 다음 단원을 참조하세요. [유효성 검사](#bkmk_Validation)합니다.  
   
 -   **수식 호환성:** 알려진 특정 경우에 동일한 수식에서 관계형 데이터 저장소만 사용하는 DirectQuery 모델과 비교했을 때 혼합 모델이나 캐시된 모델의 경우 다른 결과를 반환할 수 있습니다. xVelocity 메모리 내 분석(VertiPaq) 엔진과 SQL Server 간의 의미 체계 차이점 때문에 이러한 차이가 발생합니다. 이러한 차이점에 대한 자세한 내용은 [수식 호환성](#bkmk_FormulaCompat)합니다.  
   
@@ -178,9 +178,7 @@ ms.locfileid: "52511517"
 |[테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성](enable-directquery-mode-in-ssms.md)|DirectQuery 구성 이해|  
 |[Analysis Services 캐시 지우기](../instances/clear-the-analysis-services-caches.md)|테이블 형식 모델의 캐시 지우기|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)   
  [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-model-projects-ssas-tabular.md)   
  [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

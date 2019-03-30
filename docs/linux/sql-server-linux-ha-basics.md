@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 85ea90343ebf1cac9ba04a4b9252a6dd9fb748bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533077"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658409"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 배포에 대 한 SQL Server 가용성 기본 사항
 
@@ -58,7 +58,7 @@ Linux에서 많은 명령을 여러 가지를 관리자 권한으로 Windows Ser
 하나의 서버에서 파일 복사는 누구 든 지 사용 하 여 작업은 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Linux에서 해야 할 수 있습니다. 이 작업은 AG 구성에 대 한 매우 중요 합니다.
 
 Linux 에서도 Windows 기반 설치 사용 권한 문제 등 존재할 수 있습니다. 그러나 Windows에서 서버 간 복사 하는 방법에 익숙하다면 아닐 Linux에서 수행 되는 방법에 익숙하지 합니다. 명령줄 유틸리티를 사용 하는 일반적인 방법은 `scp`, 안전한 복사는 의미입니다. 내부적으로 `scp` OpenSSH를 사용 합니다. SSH는 보안 셸을 나타냅니다. Linux 배포에 따라 자체 OpenSSH는 설치할 수 있습니다. 없는 경우 OpenSSH를 먼저 설치 해야 합니다. OpenSSH를 구성 하는 방법에 대 한 자세한 내용은 각 배포에 대 한 다음 링크에서 정보를 참조 하세요.
--   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-OpenSSH.html)
+-   [Red Hat Enterprise Linux(RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server(SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -86,7 +86,7 @@ Windows와 마찬가지로 Linux 배포는 기본 제공 방화벽입니다. 회
 
 | 포트 번호 | 형식     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | (사용) 하는 경우 samba-끝점 매퍼                                                                                          |
 | 137         | UDP      | (사용) 하는 경우 samba-NetBIOS 이름 서비스                                                                                      |
 | 138         | UDP      | (사용) 하는 경우 samba-NetBIOS 데이터 그램                                                                                          |
@@ -117,7 +117,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **방화벽 설명서:**
--   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>설치 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 가용성에 대 한 패키지
@@ -200,7 +200,7 @@ WSFC는 달리 쿼럼을 사용 하려면 미러링 모니터 서버 리소스�
 #### <a name="cluster-log-location"></a>클러스터 로그 위치
 Pacemaker 클러스터에 대 한 로그 위치 분포에 따라 다릅니다.
 -   RHEL 및 SLES- `/var/log/cluster/corosync.log`
--   Ubuntu- `/var/log/corosync/corosync.log`
+-   Ubuntu - `/var/log/corosync/corosync.log`
 
 기본 로깅 위치를 변경 하려면 수정할 `corosync.conf`합니다.
 

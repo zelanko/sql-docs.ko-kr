@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664822"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657017"
 ---
 # <a name="migration-wizard-accesstosql"></a>마이그레이션 마법사 (AccessToSQL)
 마이그레이션 마법사는 과정을 안내 하나 이상의 데이터베이스의 마이그레이션에 대 한 액세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 마법사를 사용 하 여 있습니다는 프로젝트를 만들 데이터베이스 프로젝트를 추가, 연결 하 고, 마이그레이션하려는 개체를 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 또한 변환, 로드 하 고 Access 스키마 및 데이터 마이그레이션. 필요에 따라 액세스 테이블을 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 테이블입니다.  
@@ -76,7 +76,7 @@ Access 데이터베이스 추가 페이지가 하나 이상의 Access 데이터�
 필터링에 대 한 자세한 내용은의 옵션 섹션을 참조 하세요 [고급 개체 선택 영역 (SSMA 공통)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)합니다.  
   
 ## <a name="connect-to-sql-server-page"></a>SQL Server 페이지에 연결  
-에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서 연결 속성을 지정 하 고 다음 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 참조 하세요. [SQL Server에 연결](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서 연결 속성을 지정 하 고 다음 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [SQL Server에 연결](connect-to-sql-server-accesstosql.md)합니다.
   
 > [!IMPORTANT]  
 > 연결에 성공 하는 즉시 발생 **링크 테이블** 테이블을 연결 하는 옵션이 있는 페이지. 클릭 **다음** 마이그레이션을 시작 합니다.  

@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f533591be751375ce5686b7c2998af6410fb311
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366285"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658477"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
@@ -142,7 +142,7 @@ ms.locfileid: "53366285"
   
 -   /INSTANCEDIR=c:\Path는 지원됩니다.  
   
--   /INSTANCEDIR = "c:\Path"는  
+-   /INSTANCEDIR="c:\Path" is supported  
   
 > [!NOTE]
 >  -   관계형 서버 값은 경로에 대해 추가 종료 백슬래시 형식(백슬래시 또는 두 개의 백슬래시 문자)을 지원합니다.  
@@ -171,11 +171,11 @@ ms.locfileid: "53366285"
   
 -   [기능 매개 변수](#Feature)  
   
--   [역할 매개 변수](install-sql-server-from-the-command-prompt.md#role)  
+-   [역할 매개 변수](install-sql-server-from-the-command-prompt.md#Role)  
   
--   [/FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어](install-sql-server-from-the-command-prompt.md#rollownership)  
+-   [/FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어](install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
--   [Instance ID 또는 InstanceID 구성](install-sql-server-from-the-command-prompt.md#instanceid)  
+-   [Instance ID 또는 InstanceID 구성](install-sql-server-from-the-command-prompt.md#InstanceID)  
   
 ##  <a name="Install"></a> 설치 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 설치 명령줄 스크립트를 개발할 수 있습니다.  
@@ -234,10 +234,10 @@ ms.locfileid: "53366285"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> 자동<br /><br /> 사용 안 함<br /><br /> 수동|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 /SQLSYSADMINACCOUNTS가 필수 항목입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전에서 /SQLSYSADMINACCOUNTS는 원하는 경우 사용할 수 있지만 /SQLSYSADMINACCOUNTS 또는 /ADDCURRENTUSERASSQLADMIN은 반드시 사용해야 합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 관리자를 사용해야 합니다. 기본값:<br /><br /> Local Service Account|  
@@ -327,10 +327,10 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> 자동<br /><br /> 사용 안 함<br /><br /> 수동|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 관리자를 사용해야 합니다. 기본값:<br /><br /> Local Service Account|  
@@ -496,7 +496,7 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정을 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트|/AGTSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASBACKUPDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64 비트 WOW 모드: % Program files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup 합니다.<br /><br /> 기타 모든 설치의 경우: % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Backup 합니다.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값:<br /><br /> -Latin1_General_CI_AS|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값:<br /><br /> -   Latin1_General_CI_AS|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64 비트 WOW 모드: % Program files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config 합니다.<br /><br /> 기타 모든 설치의 경우: % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Config 합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64 비트 WOW 모드: % Program files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data 합니다.<br /><br /> 기타 모든 설치의 경우: % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Data 합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64 비트 WOW 모드: % Program files(x86)%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log 합니다.<br /><br /> 기타 모든 설치의 경우: % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< INSTANCEDIR\>\\< ASInstanceID\>\OLAP\Log 합니다.|  
@@ -507,15 +507,15 @@ Setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다.<br /><br /> 데이터 디렉터리는 공유 클러스터 디스크에 지정되어야 합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다. 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다. 지원되는 값:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup입니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)을 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 관리자를 사용해야 합니다. 기본값:<br /><br /> Local Service Account|  
@@ -634,13 +634,13 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일의 데이터 디렉터리를 지정합니다.<br /><br /> 데이터 디렉터리는 공유 클러스터 디스크에 지정되어야 합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sa 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다. 지원되는 값:<br /><br /> SQL|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Backup입니다.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Backup.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)을 참조하십시오.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **필수**|이 매개 변수를 사용하여 로그인을 sysadmin 역할의 멤버로 프로비전합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data 합니다.|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb에 대한 로그 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir > \ \<SQLInstanceID > \MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **선택 사항**|tempdb의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **선택 사항**|tempdb에 대한 로그 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 데이터 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다. 기본값:<br /><br /> \<InstallSQLDataDir>\ \<SQLInstanceID>\MSSQL\Data|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **파일만 모드에서 사용 가능**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
   
 ###### <a name="sample-syntax"></a>예제 구문:  
@@ -832,7 +832,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 -   SQL 인스턴스 ID:MSSQL12 합니다. \<INSTANCEID >  
   
--   AS 인스턴스 ID:MSAS12 합니다. \<INSTANCEID >  
+-   AS Instance ID:MSAS12.\<INSTANCEID>  
   
 -   RS 인스턴스 ID:MSRS12 합니다. \<INSTANCEID >  
   
@@ -840,9 +840,9 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< SQLInstanceID\>  
   
- % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< ASInstanceID\>  
+ %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<ASInstanceID\>  
   
- % Program Files %\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\< RSInstanceID\>  
+ %Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<RSInstanceID\>  
   
 > [!NOTE]  
 >  INSTANCEID가 명령줄에 지정되지 않은 경우 기본적으로 설치 프로그램에서 \<INSTANCEID>를 \<INSTANCENAME>으로 대체합니다.  
@@ -851,5 +851,3 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
  [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server 2014 BI 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
-  
-  

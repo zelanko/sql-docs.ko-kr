@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374556"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657847"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>SQL Server 2014 서비스 업데이트 설치
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 업데이트 설치에 대한 정보를 제공합니다. 이 섹션에서는 다음과 같은 정보를 제공합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "53374556"
   
 ## <a name="see-also"></a>관련 항목  
  [설치 마법사에서 SQL Server 2014를 설치 &#40;설치&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL server 2014 인스턴스에 기능 추가 &#40;설치&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [명령 프롬프트에서 업데이트를 설치](installing-updates-from-the-command-prompt.md) [는 인스턴스에 SQL Server 2014의 기능 추가 &#40;설치&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [SQL Server 2014 설치 삭제](repair-a-failed-sql-server-installation.md)  
   
   

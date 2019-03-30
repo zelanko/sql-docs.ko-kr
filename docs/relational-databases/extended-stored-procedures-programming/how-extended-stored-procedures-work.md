@@ -1,7 +1,7 @@
 ---
 title: 확장 저장된 프로시저 작동 원리 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +13,15 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 118603088f1cad1ee612f7e4035dc69ba66bc860
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838321"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645465"
 ---
 # <a name="how-extended-stored-procedures-work"></a>확장 저장 프로시저 작동 원리
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -35,8 +36,3 @@ ms.locfileid: "47838321"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 요청된 확장 저장 프로시저(DLL 내에 함수로 구현됨)를 호출합니다.  
   
 4.  확장 저장 프로시저가 결과 집합을 전달하고 확장 저장 프로시저 API를 통해 매개 변수를 서버로 반환합니다.  
-  
-## <a name="see-also"></a>관련 항목  
- [데이터베이스 엔진 확장 저장 프로시저 프로그래밍](../../relational-databases/database-engine-extended-stored-procedure-programming.md)  
-  
-  
