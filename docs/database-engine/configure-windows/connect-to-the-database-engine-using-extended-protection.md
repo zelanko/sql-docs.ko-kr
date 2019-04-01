@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133213"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657807"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54133213"
   
 -   [확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft 보안 공지(973811), 인증에 대한 확장된 보호.](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft 보안 공지(973811), 인증에 대한 확장된 보호.](/security-updates/SecurityAdvisories/2009/973811)
   
 ## <a name="settings"></a>설정  
  세 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 설정이 서비스 바인딩과 채널 바인딩에 영향을 줍니다. 이러한 설정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자 또는 WMI를 사용하여 구성할 수 있으며, 정책 기반 관리의 **서버 프로토콜 설정** 패싯을 사용해 볼 수 있습니다.  

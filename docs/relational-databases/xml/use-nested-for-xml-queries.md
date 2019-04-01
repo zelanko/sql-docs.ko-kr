@@ -12,15 +12,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb14ca08bdea68f307a0f455fd79707f64564ead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5774edb15c444663c94e7a0789ee9a4c0d55979
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810443"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510060"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>내부 FOR XML 쿼리 결과를 외부 쿼리에 xml 유형 인스턴스로 반환  
- 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 내부 쿼리 결과가 `FOR XML` 유형으로 외부 쿼리로 반환되는 중첩 **xml** 쿼리를 작성할 수 있습니다. 예를 들어  
   
 ```  
 SELECT Col1,   

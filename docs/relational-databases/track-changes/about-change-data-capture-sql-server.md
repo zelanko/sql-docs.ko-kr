@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: d4ab475b4829cf966777df9bb6524ac7167be091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590488"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527245"
 ---
 # <a name="about-change-data-capture-sql-server"></a>변경 데이터 캡처 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56590488"
 
 예를 들어 SQL_Latin1_General_CP1_CI_AS 데이터 정렬을 사용하는 하나의 데이터베이스가 있다면 다음 테이블을 고려합니다.
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
@@ -127,7 +127,7 @@ CREATE TABLE T1(
 
 데이터 정렬이 다르기 때문에(Chinese_PRC_CI_AI) CDC는 열 C2에 대한 이진 데이터를 캡처하지 못할 수 있습니다. 이 문제를 방지하기 위해 NVARCHAR를 사용합니다.
 
-```tsql
+```sql
 CREATE TABLE T1( 
      C1 INT PRIMARY KEY, 
      C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)

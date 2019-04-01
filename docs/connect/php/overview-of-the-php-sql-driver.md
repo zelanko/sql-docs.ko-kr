@@ -1,7 +1,7 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server 개요 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a879746757f7c5c1f9692d0341ddc5bedb4e5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682381"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645485"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 개요
 
@@ -31,18 +31,21 @@ ms.locfileid: "47682381"
 |항목|설명|  
 |---------|---------------|  
 | ![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[for PHP for SQL Server 드라이버를 다운로드 하려면](download-drivers-php-sql-server.md) | Microsoft Drivers for PHP for SQL Server를 다운로드하는 링크입니다. |
-|[Microsoft Drivers for PHP for SQL Server 릴리스 정보](../../connect/php/release-notes-for-the-php-sql-driver.md)|버전 4.0, 3.2, 3.1, 3.0 및 2.0에 추가된 기능을 나열합니다.|  
-|[Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스](../../connect/php/support-resources-for-the-php-sql-driver.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 응용 프로그램을 개발할 때 도움이 될 수 있는 리소스에 대한 링크를 제공합니다.|  
+|[Microsoft Drivers for PHP for SQL Server 릴리스 정보](../../connect/php/release-notes-php-sql-driver.md)|버전 4.0, 3.2, 3.1, 3.0 및 2.0에 추가된 기능을 나열합니다.|  
+|[Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스](../../connect/php/support-resources-for-the-php-sql-driver.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션을 개발할 때 도움이 될 수 있는 리소스에 대한 링크를 제공합니다.|  
 |[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)|이 설명서의 코드 예제를 실행할 때 도움이 될 수 있는 정보를 제공합니다.|  
-  
-## <a name="reference"></a>참조  
+| &nbsp; | &nbsp; |
+
+## <a name="reference"></a>참조
+
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 드라이버 참조](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-  
-## <a name="see-also"></a>참고 항목  
+
+## <a name="see-also"></a>참고 항목
+
 [시작 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[예제 응용 프로그램&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+[예제 애플리케이션&amp;#40;SQLSRV 드라이버&amp;#41;](../../connect/php/example-application-sqlsrv-driver.md)

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00d8cf6e8d7da94761415659e0ffd68b48562c92
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: b708e9ff71bd7f7599339ae2eebc0377b0c5fb1f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256048"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512920"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>예: ELEMENTS 지시어를 사용하여 XSINIL 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

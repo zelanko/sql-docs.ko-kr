@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434457"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657957"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "58434457"
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>PowerShell을 사용하여 자체 서명된 인증서 만들기
 
-[New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) cmdlet을 사용하여 자체 서명된 인증서를 만듭니다. 다음 예제에서는 상시 암호화에 대한 열 마스터 키로 사용할 수 있는 인증서를 생성하는 방법을 보여 줍니다.
+[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet을 사용하여 자체 서명된 인증서를 만듭니다. 다음 예제에서는 상시 암호화에 대한 열 마스터 키로 사용할 수 있는 인증서를 생성하는 방법을 보여 줍니다.
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ SSMS를 사용하고 Windows 인증서 저장소에 상시 암호화 키를 저�
 열 마스터 키가 *현재 사용자* 인증서 저장소 위치에 저장된 인증서인 경우 개인 키가 있는 인증서를 내보내고 암호화된 열에 저장된 데이터를 암호화 또는 암호 해독할 애플리케이션을 실행 중인 모든 사용자 계정의 현재 사용자 인증서 저장소 위치 또는 상시 암호화 구성 및 상시 암호화 키 관리용 도구(이러한 애플리케이션/도구가 포함된 모든 컴퓨터에서)로 인증서를 가져와야 합니다. 사용 권한 구성이 필요하지 않습니다. 사용자는 컴퓨터에 로그온한 다음 현재 사용자 인증서 저장소 위치에 있는 모든 인증서에 액세스할 수 있습니다.
 
 #### <a name="using-powershell"></a>PowerShell 사용
-[Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) 및 [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) cmdlet을 사용하여 인증서를 가져오고 내보낼 수 있습니다.
+[Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) 및 [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) cmdlet을 사용하여 인증서를 가져오고 내보낼 수 있습니다.
 
 #### <a name="using-microsoft-management-console"></a>Microsoft Management Console 사용 
 

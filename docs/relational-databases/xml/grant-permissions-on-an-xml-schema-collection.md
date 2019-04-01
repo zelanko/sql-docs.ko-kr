@@ -11,15 +11,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 556c4cb0a5b51adcd87f4308e296459650eeadc1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256658"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510430"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -239,7 +239,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>3. XML 스키마 컬렉션에 대한 ALTER 권한 부여  
+### <a name="c-granting-alter-permission-on-an-xml-schema-collection"></a>C. XML 스키마 컬렉션에 대한 ALTER 권한 부여  
  사용자가 데이터베이스에서 기존 XML 스키마 컬렉션을 수정하려면 ALTER 권한이 있어야 합니다. 다음 예에서는 `ALTER` 권한을 부여하는 방법을 보여 줍니다.  
   
 ```  

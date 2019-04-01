@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391726"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657797"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
@@ -22,11 +22,11 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
 1.  **웹 사이트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
+2.  **새 항목 추가** 대화 상자에서 **DataSet**을 선택하고 **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd**가 추가되고 데이터 세트 디자이너가 열립니다.  
   
-3.  도구 상자 창에서 **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
+3.  도구 상자 창에서 **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** 컨트롤을 디자인 화면으로 끌어옵니다. 그러면 **TableAdapter** 구성 마법사가 시작됩니다.  
   
 4.  **데이터 연결 선택** 페이지에서 **새 연결**을 선택합니다.  
   
@@ -46,7 +46,7 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
 7.  6단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 애플리케이션 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
-8.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
+8.  **애플리케이션 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
   
 9. **명령 유형을 선택하세요.** 페이지에서 **SQL 문 사용**을 선택하고 **다음**을 선택합니다.  
   

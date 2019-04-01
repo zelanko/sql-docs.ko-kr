@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3335e474819d43854bc3cf59158d04a78649c130
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 083eda191d51ec7043f24511d03c90beff9bfe84
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974362"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657738"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대 한 릴리스 정보
 
@@ -213,7 +213,7 @@ SQL Server 용 Microsoft JDBC Driver 6.2 4.1 및 4.2 JDBC 사양을 완벽 하 �
 >
 > 향상 된 또 다른 Azure Key Vault 종속 라이브러리 버전을 1.0.0, 업그레이드 및 새 jar (버전 6.2.2)는 2017 년 10 월 19 일에 발표 된 합니다.
 >
-> JDBC Driver 6.2에 대 한 최신 업데이트를 다운로드 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460)하십시오 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), 및 [Maven Central](https://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). 6.2.2를 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 자세한 내용은 릴리스 정보를 볼 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 하 고 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)합니다.
+> JDBC Driver 6.2에 대 한 최신 업데이트를 다운로드 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=852460)하십시오 [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), 및 [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). 6.2.2를 사용 하 여 프로젝트를 업데이트 하십시오 jar을 릴리스 합니다. 자세한 내용은 릴리스 정보를 볼 [6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) 하 고 [6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)합니다.
 
 ### <a name="azure-ad-support-for-linux"></a>Linux 용 azure AD 지원
 

@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dac049477fad134aa3cf8776c8ffa13f33e111ee
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666832"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478148"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -134,9 +135,9 @@ SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 �
 ![새 세션 > 이벤트, 필터 조건자 필드(동작)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-**데이터 저장소** 섹션에서는 **event_file**이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
+**데이터 스토리지** 섹션에서는 **event_file** 이 대상으로 선택되어 있습니다. 또한 **파일 롤오버 사용** 옵션이 선택되었습니다.
 
-![새 세션 > 데이터 저장소, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
+![새 세션 &gt; 데이터 스토리지, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
 마지막으로, **고급** 섹션에서는 **최대 디스패치 대기 시간** 값이 4초까지 감소되었습니다.
@@ -375,7 +376,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## <a name="c-dynamic-management-views-dmvs"></a>3. DMV(동적 관리 뷰)
+## <a name="c-dynamic-management-views-dmvs"></a>C. DMV(동적 관리 뷰)
 
 
 이제 DMV로 넘어가겠습니다. 이 섹션에서는 각각 유용한 특정 비즈니스 용도로 맞는 여러 개의 TRANSACT-SQL SELECT 문을 제공합니다. 또한 SELECT는 원하는 새 사용을 위해 DMV를 JOIN할 수 있는 방법을 보여 줍니다.

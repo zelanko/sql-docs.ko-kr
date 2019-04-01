@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805719"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657648"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54805719"
  
    - **AKV에 마스터 키 저장** 자세한 내용은 [Azure 키 자격 증명 모음 시작하기](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)를 참조하세요.  
  
- - Azure 키 자격 증명 모음에 열 마스터 키를 생성하려면 사용자가 키 자격 증명 모음에 대해 **WrapKey**, **UnwrapKey**, **확인**, **서명** 권한이 있어야 합니다. 사용자는 **가져오기**, **목록**, **만들기**, **삭제**, **업데이트**, **가져오기**, **백업**, **복원** 권한이 필요할 수도 있습니다. 자세한 내용은 [Azure Key Vault란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 및 [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx)를 참조하세요.  
+ - Azure 키 자격 증명 모음에 열 마스터 키를 생성하려면 사용자가 키 자격 증명 모음에 대해 **WrapKey**, **UnwrapKey**, **확인**, **서명** 권한이 있어야 합니다. 사용자는 **가져오기**, **목록**, **만들기**, **삭제**, **업데이트**, **가져오기**, **백업**, **복원** 권한이 필요할 수도 있습니다. 자세한 내용은 [Azure Key Vault란?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) 및 [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)를 참조하세요.  
  
  - 이 마법사는 두 가지 옵션만 지원합니다. 하드웨어 보안 모듈 및 고객 저장소는 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)]를 사용하여 구성해야 합니다.  
  

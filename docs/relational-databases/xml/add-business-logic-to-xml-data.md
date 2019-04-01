@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7198701d6a31f657be1a79f78f03a0641642ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd30df2ef65fcbdfa2118321b5e7c723b56316e7
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656811"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511560"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47656811"
   
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   
-## <a name="example-applying-xsl-transformation"></a>예제: XSL 변환 적용  
+## <a name="example-applying-xsl-transformation"></a>예: XSL 변환 적용  
  파일에 저장된 **xml** 데이터 형식 인스턴스와 XSL 변환을 수락하고, XML 데이터에 XSL 변환을 적용하고, 변환된 XML을 결과로 반환하는 CLR 함수 **TransformXml()** 를 고려해 보세요. 다음은 C#으로 작성된 기초 함수입니다.  
   
 ```  

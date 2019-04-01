@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver의 기능 종속성 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 02/07/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26402f5b15fa7dd8e24b13f3adc41836ff275228
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 820cc9f7faf3144852b761ac8b9ea3819935215f
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154688"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566412"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver의 기능 종속성
 
@@ -99,8 +99,8 @@ ms.locfileid: "56154688"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault 공급자를 사용 합니다.
 
-- JDBC 드라이버 버전 7.2.1-종속성 버전: Azure-keyvault (버전 1.2.0), Azure Keyvault Webkey (버전 1.2.0) Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
-- JDBC 드라이버 버전 7.0.0-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.6.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample.md))
+- JDBC 드라이버 버전 7.2.1-종속성 버전: Azure-keyvault (버전 1.2.0), Azure Keyvault Webkey (버전 1.2.0) Adal4j (1.6.3 버전), 클라이언트-런타임-에-AutoRest (1.6.5) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC 드라이버 버전 7.0.0-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.6.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC 드라이버 버전 6.4.0-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC 드라이버 버전 6.2.2-종속성 버전: Azure-keyvault (버전 1.0.0), Adal4j (버전 1.4.0) 및 해당 종속성 ([샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
 - JDBC 드라이버 버전 6.0.0-종속성 버전: Azure-keyvault (버전 0.9.7), Adal4j (버전 1.3.0) 및 해당 종속성 ( [샘플 응용 프로그램](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
@@ -127,4 +127,4 @@ ms.locfileid: "56154688"
 ## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc)  
- [JDBC 드라이버 API 참조](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC 드라이버 API 참조](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

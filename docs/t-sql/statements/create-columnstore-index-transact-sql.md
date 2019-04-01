@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128373"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658427"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -287,7 +287,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
 이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="GenRemarks"></a> 일반적인 주의 사항  
@@ -442,7 +442,7 @@ WITH (DROP_EXISTING = ON);
 GO  
 ```  
   
-### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>3. rowstore 테이블을 columnstore 인덱스로 변환할 때 비클러스터형 인덱스를 처리합니다.  
+### <a name="c-handle-nonclustered-indexes-when-converting-a-rowstore-table-to-a-columnstore-index"></a>C. rowstore 테이블을 columnstore 인덱스로 변환할 때 비클러스터형 인덱스를 처리합니다.  
  이 예에서는 rowstore 테이블을 columnstore 인덱스로 변환할 때 비클러스터형 인덱스를 처리하는 방법을 보여줍니다. 사실, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 특별한 작업이 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새로운 클러스터형 columnstore 인덱스에서 비클러스터형 인덱스를 자동으로 정의하고 다시 작성합니다.  
   
  비클러스터형 인덱스를 삭제하려면 columnstore 인덱스를 만들기 전에 DROP INDEX 문을 사용합니다. DROP EXISTING 옵션은 변환중인 클러스터형 인덱스만 삭제합니다. 비클러스터형 인덱스는 삭제하지 않습니다.  
@@ -629,7 +629,7 @@ GO
   
  분할된 테이블을 사용하는 전체 예를 보려면 [Columnstore 인덱스 개요](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조합니다.  
   
-### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>3. 필터링된 조건자를 사용하여 비클러스터형 columnstore 인덱스 만들기  
+### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. 필터링된 조건자를 사용하여 비클러스터형 columnstore 인덱스 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 Production.BillOfMaterials 테이블에 필터링된 비클러스터형 columnstore 인덱스를 만듭니다. 필터 조건자는 필터링된 인덱스에 키 열이 아닌 열을 포함할 수 있습니다. 이 예에서 조건자는 EndDate가 NULL이 아닌 행만 선택합니다.  
   
 ```sql  
@@ -704,7 +704,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>3. 클러스터형 Columnstore 인덱스의 이름 바꾸기  
+### <a name="c-change-the-name-of-a-clustered-columnstore-index"></a>C. 클러스터형 Columnstore 인덱스의 이름 바꾸기  
  클러스터형 columnstore 인덱스의 이름을 변경하려면 기존 클러스터형 columnstore 인덱스를 삭제한 다음, 새 이름으로 인덱스를 다시 만듭니다.  
   
  작은 테이블 또는 빈 테이블에서만 이 작업을 수행하는 것이 좋습니다. 대규모 클러스터형 columnstore 인덱스을 삭제하고 다른 이름으로 다시 작성하려면 시간이 오래 걸립니다.  
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. columnstore 테이블을 rowstore 힙으로 변환  
- 클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
+ 클러스터형 columnstore 인덱스를 삭제하고 테이블을 rowstore 힙으로 변환하려면 [DROP INDEX(SQL Server PDW)](drop-index-transact-sql.md)를 사용합니다. 이 예에서는 cci_xDimProduct 테이블을 rowstore 힙으로 변환합니다. 테이블은 계속 배포되지만 힙으로 저장됩니다.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

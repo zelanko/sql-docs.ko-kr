@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666972"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657897"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ sqlps
  **-**  
  **-Command-** 는 **sqlps** 유틸리티가 표준 입력으로부터 입력을 읽도록 지정합니다.  
   
- *script_block* [ **-args**_인수\_배열_ ]  
+ *script_block* [ **-args**_argument\_array_ ]  
  실행할 PowerShell 명령 블록을 지정합니다. 명령 블록은 중괄호 {}로 묶어야 합니다. *Script_block* 은 **sqlps** 유틸리티가 **PowerShell** 또는 다른 **sqlps** 유틸리티 세션에서 호출된 경우에만 지정할 수 있습니다. *argument_array* 는 *script_block*의 PowerShell 명령에 대한 인수를 포함하는 PowerShell 변수 배열입니다.  
   
  *string* [ *command_parameters* ]  
@@ -98,7 +98,7 @@ sqlps
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 경로를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체의 계층 구조를 탐색합니다.  
   
- 기본적으로 **sqlps** 유틸리티는 스크립팅 실행 정책이 **Restricted**로 설정된 상태로 실행됩니다. 이는 모든 PowerShell 스크립트의 실행을 차단합니다. **Set-ExecutionPolicy** cmdlet을 사용하면 서명된 스크립트나 모든 스크립트를 실행하도록 설정할 수 있습니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. PowerShell 스크립트를 설정하는 방법은 [Windows PowerShell 스크립트 실행](https://go.microsoft.com/fwlink/?LinkId=103166)을 참조하십시오.  
+ 기본적으로 **sqlps** 유틸리티는 스크립팅 실행 정책이 **Restricted**로 설정된 상태로 실행됩니다. 이는 모든 PowerShell 스크립트의 실행을 차단합니다. **Set-ExecutionPolicy** cmdlet을 사용하면 서명된 스크립트나 모든 스크립트를 실행하도록 설정할 수 있습니다. 신뢰할 수 있는 출처에서 제공하는 스크립트만 실행하고 적절한 NTFS 권한을 사용하여 모든 입력 및 출력 파일을 보호하십시오. PowerShell 스크립트를 설정하는 방법은 [Windows PowerShell 스크립트 실행](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10))을 참조하십시오.  
   
  **및** 의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 유틸리티 버전은 Windows PowerShell 1.0 미니 셸로 구현되었습니다. 미니 셸에는 사용자가 미니 셸에서 로드하는 스냅인 이외의 스냅인을 로드할 수 없는 것과 같은 몇 가지 제한 사항이 있습니다. 이러한 제한 사항은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 모듈을 사용하도록 변경된 **sqlps** 이상 버전의 유틸리티에는 적용되지 않습니다.  
   

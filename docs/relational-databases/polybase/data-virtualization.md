@@ -3,18 +3,19 @@ title: SQL Server 2019 CTP 2.0에서 외부 데이터 가상화 | Microsoft Docs
 description: 이 페이지에서는 관계형 데이터 원본에 대해 외부 테이블 만들기 마법사를 사용하는 단계를 자세히 설명합니다.
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596674"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510980"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 

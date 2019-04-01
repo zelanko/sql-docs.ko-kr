@@ -5345,7 +5345,7 @@ items:
     - name: PHP Linux 및 Mac 드라이버 설치 자습서
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: 릴리스 정보
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: 지원 리소스
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: 코드 샘플 정보
@@ -7649,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 용어 설명
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: ac6634fdea120f7c047f7b4ef8f532865e9e59c4
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566642"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645605"

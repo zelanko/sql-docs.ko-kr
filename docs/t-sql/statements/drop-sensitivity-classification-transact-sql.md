@@ -1,6 +1,6 @@
 ---
 title: DROP SENSITIVITY CLASSIFICATION(Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493095"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION(Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 하나 이상의 데이터베이스 열에서 민감도 분류 메타데이터를 삭제합니다.
 
@@ -62,7 +62,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 
 - 여러 개체 분류는 단일 'DROP SENSITIVITY CLASSIFICATION' 문을 사용하여 삭제할 수 있습니다.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 ALTER ANY SENSITIVITY CLASSIFICATION 권한이 필요합니다. ALTER ANY SENSITIVITY CLASSIFICATION은 데이터베이스 권한 ALTER 또는 서버 권한 CONTROL SERVER에 포함됩니다.
 

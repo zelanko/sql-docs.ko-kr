@@ -14,15 +14,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 96503e254c1b5d409b7e631671fc22783c573f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fe6c479332a417a52c3d46084f0f221e345375c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834701"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511140"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +159,7 @@ EXEC sp_xml_removedocument @idoc
   
  쿼리는 이름 루트가 포함된 루트 요소와 해당 루트 요소에 포함된 데이터를 반환합니다.  
   
-### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>3. xmltext 메타 속성을 지정하여 열에서 소비되지 않은 데이터 검색  
+### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. xmltext 메타 속성을 지정하여 열에서 소비되지 않은 데이터 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. **xmltext** 메타 속성 특성을 OPENXML의 행 집합 열에 매핑하여 소비되지 않은 XML 데이터를 검색하는 방법을 설명합니다.  
   
  **comment** 열은 **\@mp:xmltext** 메타 속성에 매핑됨으로써 오버플로 열로 식별됩니다. *flags* 매개 변수는 **9** (XML_ATTRIBUTE 및 XML_NOCOPY)로 설정됩니다. 이는 **특성 중심** 매핑을 나타내며 소비되지 않은 데이터만 오버플로 열에 복사되어야 함을 나타냅니다.  

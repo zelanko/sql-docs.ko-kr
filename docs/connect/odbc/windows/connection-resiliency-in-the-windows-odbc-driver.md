@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a038d146b21660e629c7ba7e44332aa6d2133a2c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545295"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658167"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC 드라이버에서 연결 복원
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52545295"
 > [!IMPORTANT]  
 >  연결 복원력 기능은 Microsoft Azure SQL Database 및 SQL Server 2014 이상 서버 버전에서 지원됩니다.  
   
- 유휴 연결 복원력에 대한 자세한 내용은 [Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)(기술 문서 - 유휴 연결 복원력)를 참조하세요.  
+ 유휴 연결 복원력에 대한 자세한 내용은 [Technical Article - Idle Connection Resiliency](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx)(기술 문서 - 유휴 연결 복원력)를 참조하세요.
   
  재연결 동작을 제어하기 위해 Windows 기반 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 다음과 같은 두 가지 옵션이 있습니다.  
   
