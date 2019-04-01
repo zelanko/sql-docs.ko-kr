@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: 기본 데이터 형식 사용
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Sql_variant 데이터 형식 사용
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: 공간 데이터 형식 사용
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: 트랜잭션 이해
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: 저장 프로시저가 있는 문 사용
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Azure Key Vault 샘플 버전 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Azure Key Vault 샘플 버전 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: 7.0 및 다른 사용자에 대한 Azure Key Vault 샘플
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Azure Key Vault 샘플 버전 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Azure Key Vault 샘플 버전 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: SQL Server용 Node.js 드라이버
@@ -5248,7 +5253,7 @@ items:
             href: ../connect/oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md
           - name: 결과 집합에서 행 인출
             href: ../connect/oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md
-        - name: 파일 스트림
+        - name: Filestream
           href: ../connect/oledb/ole-db-how-to/filestream/filestream-and-ole-db.md
           items:
           - name: IBCPSession을 사용하여 파일에 대한 FILESTREAM 열 읽기
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 용어 설명
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478308"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566642"

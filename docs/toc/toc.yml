@@ -44,7 +44,7 @@ items:
 - name: 빅 데이터 클러스터
   href: ../toc/redirectfrom-big-data-cluster.md
   items:
-  - name: 빅 데이터 클러스터 개요
+  - name: 개요
     items:
     - name: SQL Server 빅 데이터 클러스터란 무엇인가요?
       href: ../big-data-cluster/big-data-cluster-overview.md
@@ -52,6 +52,12 @@ items:
       href: ../big-data-cluster/release-notes-big-data-cluster.md
   - name: 설치
     items:
+    - name: 시작
+      items:
+      - name: 빅 데이터 클러스터 배포
+        href: ../big-data-cluster/deploy-get-started.md
+      - name: 샘플 데이터 로드
+        href: ../big-data-cluster/tutorial-load-sample-data.md
     - name: 도구 설치
       items:
       - name: 빅 데이터 도구 설치
@@ -72,20 +78,6 @@ items:
         href: ../big-data-cluster/deploy-with-kubeadm.md
       - name: Minikube
         href: ../big-data-cluster/deploy-on-minikube.md
-  - name: 자습서
-    items:
-    - name: 1_샘플 데이터 로드
-      href: ../big-data-cluster/tutorial-load-sample-data.md
-    - name: 2_HDFS 데이터 쿼리
-      href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
-    - name: 3_Oracle 데이터 쿼리
-      href: ../big-data-cluster/tutorial-query-oracle.md
-    - name: 4_SQL을 사용하여 데이터 풀 로드
-      href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
-    - name: 5_Spark를 사용하여 데이터 풀 로드
-      href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
-    - name: 6_Spark Notebook 실행
-      href: ../big-data-cluster/tutorial-notebook-spark.md
   - name: 개념
     items:
     - name: 컨트롤러
@@ -106,16 +98,28 @@ items:
     items:
     - name: 데이터 가상화
       items:
-      - name: 관계형 데이터 가상화
-        href: ../relational-databases/polybase/data-virtualization.md
-      - name: CSV 데이터 가상화
-        href: ../relational-databases/polybase/data-virtualization-csv.md
-      - name: HDFS 계층화
-        href: ../big-data-cluster/hdfs-tiering.md
+      - name: 관계형 데이터
+        items:
+        - name: 관계형 데이터 가상화
+          href: ../relational-databases/polybase/data-virtualization.md
+        - name: Oracle 데이터 쿼리
+          href: ../big-data-cluster/tutorial-query-oracle.md
+      - name: HDFS 데이터
+        items:
+        - name: CSV 데이터 가상화
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: HDFS 데이터 쿼리
+          href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
+        - name: HDFS 계층화
+          href: ../big-data-cluster/hdfs-tiering.md
     - name: 데이터 수집
       items:
       - name: curl을 사용하여 데이터 로드
         href: ../big-data-cluster/data-ingestion-curl.md
+      - name: SQL을 사용하여 데이터 로드
+        href: ../big-data-cluster/tutorial-data-pool-ingest-sql.md
+      - name: Spark를 사용하여 데이터 로드
+        href: ../big-data-cluster/tutorial-data-pool-ingest-spark.md
       - name: 데이터베이스 복원
         href: ../big-data-cluster/data-ingestion-restore-database.md
     - name: 앱 배포 및 사용
@@ -150,6 +154,8 @@ items:
       items:
       - name: 전자 필기장 개요
         href: ../big-data-cluster/notebooks-guidance.md
+      - name: 전자 필기장 자습서
+        href: ../big-data-cluster/tutorial-notebook-spark.md
       - name: 기존 전자 필기장 관리
         href: ../big-data-cluster/notebooks-how-to-manage.md
     - name: Spark 작업
@@ -6757,132 +6763,135 @@ items:
       - name: Showplan XML Statistics Profile 이벤트를 개별적으로 저장
         href: ../relational-databases/performance/save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
     - name: 성능 모니터
-      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
       items:
-      - name: 시스템 모니터 실행
-        href: ../relational-databases/performance-monitor/run-system-monitor.md
-      - name: 디스크 사용량 모니터링
-        href: ../relational-databases/performance-monitor/monitor-disk-usage.md
-      - name: CPU 사용량 모니터링
-        href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
-      - name: 메모리 사용량 모니터링
-        href: ../relational-databases/performance-monitor/monitor-memory-usage.md
-      - name: SQL Server 데이터베이스 경고 만들기
-        href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
-      - name: 차트, 경고, 로그 및 보고서 만들기
-        href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
-      - name: SQL Server XTP(메모리 내 OLTP) 성능 카운터
-        href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
+      - name: 개요
+        href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+      - name: 개념
         items:
-        - name: 커서
-          href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
-        - name: 데이터베이스
-          href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
-        - name: 가비지 수집
-          href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-        - name: IO 관리자
-          href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
-        - name: 가상 프로세서
-          href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
-        - name: 스토리지
-          href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
-        - name: 트랜잭션 로그
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
-        - name: 의
-          href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
-      - name: 개체 사용
-        href: ../relational-databases/performance-monitor/use-sql-server-objects.md
-        items:
-        - name: SQL Server 에이전트 개체
+        - name: 시스템 모니터 실행
+          href: ../relational-databases/performance-monitor/run-system-monitor.md
+        - name: 디스크 사용량 모니터링
+          href: ../relational-databases/performance-monitor/monitor-disk-usage.md
+        - name: CPU 사용량 모니터링
+          href: ../relational-databases/performance-monitor/monitor-cpu-usage.md
+        - name: 메모리 사용량 모니터링
+          href: ../relational-databases/performance-monitor/monitor-memory-usage.md
+        - name: SQL Server 데이터베이스 경고 만들기
+          href: ../relational-databases/performance-monitor/create-a-sql-server-database-alert.md
+        - name: 차트, 경고, 로그 및 보고서 만들기
+          href: ../relational-databases/performance-monitor/create-charts-alerts-logs-and-reports.md
+        - name: SQL Server XTP(메모리 내 OLTP) 성능 카운터
+          href: ../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md
           items:
-          - name: ','
-            href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
-          - name: 에서
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
-          - name: JobSteps
-            href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
-          - name: 통계
-            href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
-        - name: SQL Server 개체
-          items:
-          - name: 액세스 메서드
-            href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
-          - name: 가용성 복제본
-            href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
-          - name: 백업 디바이스
-            href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
-          - name: Batch Resp Statistics
-            href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
-          - name: Broker 활성화
-            href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
-          - name: Broker 통계
-            href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
-          - name: Broker TO 통계
-            href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
-          - name: Broker - DBM 전송
-            href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
-          - name: Buffer Manager
-            href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
-          - name: Buffer Node
-            href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
-          - name: 카탈로그 메타데이터
-            href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
-          - name: CLR 개체
-            href: ../relational-databases/performance-monitor/sql-server-clr-object.md
-          - name: columnstore
-            href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
-          - name: Cursor Manager by Type
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
-          - name: Cursor Manager Total
-            href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
-          - name: 데이터베이스 미러링
-            href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
-          - name: 데이터베이스 복제본
-            href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+          - name: 커서
+            href: ../relational-databases/performance-monitor/sql-server-xtp-cursors.md
           - name: 데이터베이스
-            href: ../relational-databases/performance-monitor/sql-server-databases-object.md
-          - name: 사용되지 않는 기능
-            href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
-          - name: ExecStatistics
-            href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
-          - name: 외부 스크립트
-            href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
-          - name: FileTable
-            href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
-          - name: 일반 통계
-            href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
-          - name: HTTP 스토리지
-            href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
-          - name: 래치
-            href: ../relational-databases/performance-monitor/sql-server-latches-object.md
-          - name: 잠금
-            href: ../relational-databases/performance-monitor/sql-server-locks-object.md
-          - name: LogPool FreePool
-            href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
-          - name: Memory Broker Clerk
-            href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
-          - name: Memory Manager
-            href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
-          - name: Memory Node
-            href: ../relational-databases/performance-monitor/sql-server-memory-node.md
-          - name: 계획 캐시
-            href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
-          - name: 쿼리 저장소
-            href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
-          - name: Resource Pool Stats
-            href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
-          - name: SQL 오류
-            href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
-          - name: SQL 통계
-            href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-databases.md
+          - name: 가비지 수집
+            href: ../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
+          - name: IO 관리자
+            href: ../relational-databases/performance-monitor/sql-server-xtp-io-governor.md
+          - name: 가상 프로세서
+            href: ../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
+          - name: 스토리지
+            href: ../relational-databases/performance-monitor/sql-server-xtp-storage.md
+          - name: 트랜잭션 로그
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md
           - name: 의
-            href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
-          - name: 사용자 설정 가능
-            href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
-          - name: Wait Statistics
-            href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
-          - name: Workload Group Stats
-            href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
+            href: ../relational-databases/performance-monitor/sql-server-xtp-transactions.md
+        - name: 개체 사용
+          href: ../relational-databases/performance-monitor/use-sql-server-objects.md
+          items:
+          - name: SQL Server 에이전트 개체
+            items:
+            - name: ','
+              href: ../relational-databases/performance-monitor/sql-server-agent-alerts-object.md
+            - name: 에서
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobs-object.md
+            - name: JobSteps
+              href: ../relational-databases/performance-monitor/sql-server-agent-jobsteps-object.md
+            - name: 통계
+              href: ../relational-databases/performance-monitor/sql-server-agent-statistics-object.md
+          - name: SQL Server 개체
+            items:
+            - name: 액세스 메서드
+              href: ../relational-databases/performance-monitor/sql-server-access-methods-object.md
+            - name: 가용성 복제본
+              href: ../relational-databases/performance-monitor/sql-server-availability-replica.md
+            - name: 백업 디바이스
+              href: ../relational-databases/performance-monitor/sql-server-backup-device-object.md
+            - name: Batch Resp Statistics
+              href: ../relational-databases/performance-monitor/sql-server-batch-resp-statistics-object.md
+            - name: Broker 활성화
+              href: ../relational-databases/performance-monitor/sql-server-broker-activation-object.md
+            - name: Broker 통계
+              href: ../relational-databases/performance-monitor/sql-server-broker-statistics-object.md
+            - name: Broker TO 통계
+              href: ../relational-databases/performance-monitor/sql-server-broker-to-statistics-object.md
+            - name: Broker - DBM 전송
+              href: ../relational-databases/performance-monitor/sql-server-broker-dbm-transport-object.md
+            - name: Buffer Manager
+              href: ../relational-databases/performance-monitor/sql-server-buffer-manager-object.md
+            - name: Buffer Node
+              href: ../relational-databases/performance-monitor/sql-server-buffer-node.md
+            - name: 카탈로그 메타데이터
+              href: ../relational-databases/performance-monitor/sql-server-catalog-metadata-object.md
+            - name: CLR 개체
+              href: ../relational-databases/performance-monitor/sql-server-clr-object.md
+            - name: columnstore
+              href: ../relational-databases/performance-monitor/sql-server-columnstore-object.md
+            - name: Cursor Manager by Type
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-by-type-object.md
+            - name: Cursor Manager Total
+              href: ../relational-databases/performance-monitor/sql-server-cursor-manager-total-object.md
+            - name: 데이터베이스 미러링
+              href: ../relational-databases/performance-monitor/sql-server-database-mirroring-object.md
+            - name: 데이터베이스 복제본
+              href: ../relational-databases/performance-monitor/sql-server-database-replica.md
+            - name: 데이터베이스
+              href: ../relational-databases/performance-monitor/sql-server-databases-object.md
+            - name: 사용되지 않는 기능
+              href: ../relational-databases/performance-monitor/sql-server-deprecated-features-object.md
+            - name: ExecStatistics
+              href: ../relational-databases/performance-monitor/sql-server-execstatistics-object.md
+            - name: 외부 스크립트
+              href: ../relational-databases/performance-monitor/sql-server-external-scripts-object.md
+            - name: FileTable
+              href: ../relational-databases/performance-monitor/sql-server-filetable-object.md
+            - name: 일반 통계
+              href: ../relational-databases/performance-monitor/sql-server-general-statistics-object.md
+            - name: HTTP 스토리지
+              href: ../relational-databases/performance-monitor/sql-server-http-storage-object.md
+            - name: 래치
+              href: ../relational-databases/performance-monitor/sql-server-latches-object.md
+            - name: 잠금
+              href: ../relational-databases/performance-monitor/sql-server-locks-object.md
+            - name: LogPool FreePool
+              href: ../relational-databases/performance-monitor/sql-server-logpool-freepool-object.md
+            - name: Memory Broker Clerk
+              href: ../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md
+            - name: Memory Manager
+              href: ../relational-databases/performance-monitor/sql-server-memory-manager-object.md
+            - name: Memory Node
+              href: ../relational-databases/performance-monitor/sql-server-memory-node.md
+            - name: 계획 캐시
+              href: ../relational-databases/performance-monitor/sql-server-plan-cache-object.md
+            - name: 쿼리 저장소
+              href: ../relational-databases/performance-monitor/sql-server-query-store-object.md
+            - name: Resource Pool Stats
+              href: ../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md
+            - name: SQL 오류
+              href: ../relational-databases/performance-monitor/sql-server-sql-errors-object.md
+            - name: SQL 통계
+              href: ../relational-databases/performance-monitor/sql-server-sql-statistics-object.md
+            - name: 의
+              href: ../relational-databases/performance-monitor/sql-server-transactions-object.md
+            - name: 사용자 설정 가능
+              href: ../relational-databases/performance-monitor/sql-server-user-settable-object.md
+            - name: Wait Statistics
+              href: ../relational-databases/performance-monitor/sql-server-wait-statistics-object.md
+            - name: Workload Group Stats
+              href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: 튜닝
     items:
     - name: 자동 튜닝
@@ -7139,41 +7148,44 @@ items:
       - name: 업그레이드 후 계획 지침의 유효성 검사
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: 리소스 관리자
-      href: ../relational-databases/resource-governor/resource-governor.md
       items:
-      - name: 사용
-        href: ../relational-databases/resource-governor/enable-resource-governor.md
-      - name: 사용 안함
-        href: ../relational-databases/resource-governor/disable-resource-governor.md
-      - name: 템플릿을 사용하여 리소스 관리자 구성
-        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-      - name: 리소스 관리자 속성 보기
-        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-      - name: Resource Pool
-        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+      - name: 개요
+        href: ../relational-databases/resource-governor/resource-governor.md
+      - name: 방법
         items:
-        - name: 만들기
-          href: ../relational-databases/resource-governor/create-a-resource-pool.md
-        - name: 설정 변경
-          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-      - name: 작업 그룹
-        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-        items:
-        - name: 만들기
-          href: ../relational-databases/resource-governor/create-a-workload-group.md
-        - name: 설정 변경
-          href: ../relational-databases/resource-governor/change-workload-group-settings.md
-        - name: 자세히 보기
-          href: ../relational-databases/resource-governor/move-a-workload-group.md
-        - name: DELETE
-          href: ../relational-databases/resource-governor/delete-a-workload-group.md
-      - name: 분류자 함수
-        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-        items:
-        - name: 분류자 사용자 정의 함수 만들기 및 테스트
-          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: 사용
+          href: ../relational-databases/resource-governor/enable-resource-governor.md
+        - name: 사용 안함
+          href: ../relational-databases/resource-governor/disable-resource-governor.md
+        - name: 템플릿을 사용하여 리소스 관리자 구성
+          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+        - name: 리소스 관리자 속성 보기
+          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+        - name: Resource Pool
+          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
+          items:
+          - name: 만들기
+            href: ../relational-databases/resource-governor/create-a-resource-pool.md
+          - name: 설정 변경
+            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+        - name: 작업 그룹
+          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+          items:
+          - name: 만들기
+            href: ../relational-databases/resource-governor/create-a-workload-group.md
+          - name: 설정 변경
+            href: ../relational-databases/resource-governor/change-workload-group-settings.md
+          - name: 자세히 보기
+            href: ../relational-databases/resource-governor/move-a-workload-group.md
+          - name: DELETE
+            href: ../relational-databases/resource-governor/delete-a-workload-group.md
+        - name: 분류자 함수
+          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+          items:
+          - name: 분류자 사용자 정의 함수 만들기 및 테스트
+            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: 통계
       href: ../relational-databases/statistics/statistics.md
       items:
@@ -12260,6 +12272,8 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md
       - name: sys.dm_exec_query_plan
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md
+      - name: sys.dm_exec_query_plan_stats
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md
       - name: sys.dm_exec_query_profiles
         href: ../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md
       - name: sys.dm_exec_query_resource_semaphores
@@ -12476,10 +12490,14 @@ items:
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md
       - name: sys.dm_resource_governor_resource_pools
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md
+      - name: sys.dm_resource_governor_pools_history_ex (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md
       - name: sys.dm_resource_governor_resource_pool_volumes
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-volumes-transact-sql.md
       - name: sys.dm_resource_governor_workload_groups
         href: ../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md
+      - name: sys.dm_user_db_resource_governance (Azure SQL Database)
+        href: ../relational-databases/system-dynamic-management-views/sys-dm-user-db-resource-governor-azure-sql-database.md
     - name: 보안 관련
       href: ../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md
       items:
@@ -17227,9 +17245,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538685"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618330"

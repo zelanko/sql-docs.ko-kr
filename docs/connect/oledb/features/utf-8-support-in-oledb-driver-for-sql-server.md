@@ -2,7 +2,7 @@
 title: SQL Server용 OLE DB 드라이버에서 UTF-8 지원| Microsoft Docs
 description: SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744857"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492605"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744857"
 
 Microsoft OLE DB Driver for SQL Server (버전 18.2.1) 인코딩을 u t F-8 서버에 대 한 지원을 추가합니다. SQL Server u t F-8 지원에 대 한 자세한 내용은 다음을 참조 합니다.
 - [데이터 정렬 및 유니코드 지원](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [UTF-8 지원(CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [UTF-8 지원](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>데이터 삽입을 u t F-8로 인코드된 CHAR 또는 VARCHAR 열
 버퍼의 배열을 사용 하 여 설명 삽입에 대 한 입력된 매개 변수 버퍼를 만들면 [DBBINDING 구조체](https://go.microsoft.com/fwlink/?linkid=2071182)합니다. DBBINDING 구조의 각 소비자의 버퍼에 단일 매개 변수를 연결 하 고 같은 길이 데이터 값의 형식 정보를 포함 합니다. CHAR 형식의 입력된 매개 변수 버퍼를 *wType* DBBINDING의 DBTYPE_STR로 구조를 설정 합니다. WCHAR 형식의 입력된 매개 변수 버퍼를 *wType* 의 DBBINDING 구조 DBTYPE_WSTR로 설정 해야 합니다.
