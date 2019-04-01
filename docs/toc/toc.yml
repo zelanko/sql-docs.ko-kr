@@ -905,6 +905,8 @@ items:
           href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: 일시 중지 또는 재개
           href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: 세션 설정
+          href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: 클라이언트 연결
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: 성능에 대한 경고 임계값
@@ -4123,6 +4125,8 @@ items:
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: 메모리의 페이지 잠금 옵션 사용
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: 하이브리드 버퍼 풀
+      href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: 서버 인증 모드 변경
       href: ../database-engine/configure-windows/change-server-authentication-mode.md
     - name: SQL 기록기 서비스
@@ -6978,6 +6982,8 @@ items:
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: 메모리 내 OLTP에 대한 예제 데이터베이스
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: 메모리 내 OLTP에 대한 하드웨어
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: 메모리 액세스에 최적화된 테이블
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -7950,6 +7956,8 @@ items:
         href: ../relational-databases/security/strong-passwords.md
       - name: 행 수준 보안
         href: ../relational-databases/security/row-level-security.md
+      - name: 동적 데이터 마스킹
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: 정적 데이터 마스킹
         href: ../relational-databases/security/static-data-masking.md
       - name: 인증서 및 비대칭 키
@@ -15281,6 +15289,8 @@ items:
         href: ../t-sql/data-types/constants-transact-sql.md
       - name: 변환
         href: ../t-sql/data-types/data-type-conversion-database-engine.md
+      - name: 비결정적 변환
+        href: ../t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: 우선 순위
         href: ../t-sql/data-types/data-type-precedence-transact-sql.md
       - name: 동의어
@@ -16555,6 +16565,8 @@ items:
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
+        - name: RESTORE SERVICE MASTER KEY
+          href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY
@@ -17245,9 +17257,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0683d445dc2cdfd5df37354a7922774433bab8b0
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618330"
+ms.locfileid: "58658497"

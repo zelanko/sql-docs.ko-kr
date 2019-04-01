@@ -31,7 +31,7 @@ ms.locfileid: "57973492"
   
  다음 예에서는 의미 체계 검색 기능을 보여 줍니다. 동시에 이러한 예제는 의미론적 인덱스를 쿼리하고 결과를 구조화된 데이터로 검색하는 데 사용하는 세 가지 Transact-SQL 행 집합 함수를 보여 줍니다.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> 문서의 키 구 찾기  
  다음 쿼리는 예제 문서에서 식별된 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 통계적 유의성 점수를 기준으로 내림차순으로 표시됩니다.
  
  이 쿼리는 [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 함수를 호출합니다.  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> 유사 하거나 관련 된 문서를 만드는 키 구 찾기  
  다음 쿼리에서는 두 예제 문서를 서로 유사하거나 관련된 것으로 만드는 키 구를 가져옵니다. 쿼리 결과는 각 키 구의 가중치 점수를 기준으로 내림차순으로 표시됩니다.
  
  이 쿼리는 [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 함수를 호출합니다.  
