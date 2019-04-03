@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio에서 노트북을 실행 합니다.
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 연결 하는 Azure Data Studio에서 Jupyter Notebook을 실행 하는 방법에 설명 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3bdd1a9de5e22a4577bcc8ac38ba1dde6c2ceb7c
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566442"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859974"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서는 Notebook 환경을 Azure 데이터 Studio에서 시작 하는 방법 및 고유한 전자 필기장 제작을 시작 하는 방법을 설명 합니다. 또한 다른 커널 사용 하 여 Notebook을 작성 하는 방법을 보여 줍니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Kubernetes에 데이터 지 속성
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지 속성의 작동 방식에 대해 알아봅니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494165"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860279"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 사용 하 여 데이터 지 속성
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [영구적 볼륨](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) 저장소 저장소가 제공 됩니다 하는 방법에 Kubernetes에 사용 되는 방법에서 추출 된 완료 된에 대 한 플러그 인 모델을 제공 합니다. 따라서 고유한 항상 사용 가능한 저장소를 가져올 수 있으며 SQL Server 빅 데이터 클러스터에 연결할 수 있습니다. 저장소, 가용성 및 성능이 필요한 유형의 전체 제어할 수 있습니다. Kubernetes는 다양 한 Azure 디스크/파일, NFS, 로컬 저장소 등을 포함 한 저장소 솔루션을 지원 합니다.
 

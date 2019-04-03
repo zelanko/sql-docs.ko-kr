@@ -80,6 +80,8 @@ items:
         href: ../big-data-cluster/deploy-on-minikube.md
   - name: 개념
     items:
+    - name: 응용 프로그램 개발
+      href: ../big-data-cluster/concept-application-deployment.md
     - name: 컨트롤러
       href: ../big-data-cluster/concept-controller.md
     - name: 마스터 인스턴스
@@ -8394,7 +8396,7 @@ items:
     - name: SQL Server 네트워크 구성
       href: ../tools/configuration-manager/sql-server-network-configuration.md
       items:
-      - name: <server>에 대한 프로토콜
+      - name: 에 대한 프로토콜 <server>
         href: ../tools/configuration-manager/protocols-for-server-sql-server-configuration-manager.md
         items:
         - name: 플래그 탭
@@ -17271,9 +17273,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: f2691a64da3ac891be319d82d427c7ed9b5db222
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.openlocfilehash: 7d3621712c6714eaeb2dbdb6a339088ac2fc7179
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788160"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872353"
