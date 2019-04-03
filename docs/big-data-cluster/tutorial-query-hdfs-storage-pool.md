@@ -1,6 +1,6 @@
 ---
 title: 저장소 풀의 HDFS 데이터를 쿼리 합니다.
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 HDFS 데이터를 쿼리 하는 방법을 보여 줍니다. 저장소 풀의 데이터에 대 한 외부 테이블을 만들고 쿼리를 실행 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57851a4e0f4cedde1e630afeca49ff26c971c7b5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860054"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 HDFS 데이터를 쿼리 하는 방법을 보여 줍니다.
 
@@ -33,9 +35,9 @@ ms.locfileid: "58511120"
 ## <a id="prereqs"></a> 필수 구성 요소
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>HDFS에 외부 테이블 만들기

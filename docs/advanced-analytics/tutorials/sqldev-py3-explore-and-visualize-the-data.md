@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b9011894c4cf524b0eeaf016cd0d3de60058832e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e9dd0a0884c96a8f5b17948c21b7f891a2e997ab
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512420"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860494"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,12 +84,12 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     CREATE PROCEDURE [dbo].[PyPlotMatplotlib]
     AS
     BEGIN
-      SET NOCOUNT ON;
-      DECLARE @query nvarchar(max) =
-      N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
-      EXECUTE sp_execute_external_script
-      @language = N'Python',
-      @script = N'
+        SET NOCOUNT ON;
+        DECLARE @query nvarchar(max) =
+        N'SELECT cast(tipped as int) as tipped, tip_amount, fare_amount FROM [dbo].[nyctaxi_sample]'
+        EXECUTE sp_execute_external_script
+        @language = N'Python',
+        @script = N'
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -161,7 +161,7 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};UID={USER_NAME};PWD={PASSWORD}')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
@@ -178,7 +178,7 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
     import pyodbc
     import pickle
     import os
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
+    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
     cursor = cnxn.cursor()
     cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
     tables = cursor.fetchall()
@@ -198,7 +198,7 @@ Serialize 된 Python을 반환 하는 저장된 프로시저 `figure` 스트림 
 
 ## <a name="next-step"></a>다음 단계
 
-[T-SQL을 사용하여 데이터 기능 만들기](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-SQL을 사용 하 여 데이터 기능 만들기](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>이전 단계
 

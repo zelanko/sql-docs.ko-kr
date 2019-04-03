@@ -1,23 +1,26 @@
 ---
 title: 클러스터 관리 포털
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 모니터링 하는 클러스터 관리 포털을 사용 하는 방법에 알아봅니다.
 author: yualan
 ms.author: alayu
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c83ad67b6d76ddf43762a814c26d2037594b78de
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492865"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860504"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>클러스터 관리 포털을 사용 하 여 SQL Server 빅 데이터 클러스터를 모니터링 하는 방법
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 모니터링 또는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결 하려는 경우 클러스터 관리 포털을 사용 합니다.
 

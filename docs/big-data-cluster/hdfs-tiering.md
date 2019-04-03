@@ -1,6 +1,6 @@
 ---
 title: HDFS 계층 구성
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에는 HDFS에 계층화 (미리 보기)는 SQL Server 2019 빅 데이터 클러스터에서 HDFS에 외부 Azure 데이터 레이크 저장소 파일 시스템 탑재를 구성 하는 방법을 설명 합니다.
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493779"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859645"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터에 계층화 하는 HDFS 구성
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 계층화 하는 HDFS 구성
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 HDFS 계층화 할 수 있게 탑재 외부 HDFS 호환 파일 시스템 HDFS에 합니다. 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 계층화 HDFS 구성 하는 방법에 설명 합니다. 이때 CTP 2.4는 기사의 초점 이기도 Azure Data Lake 저장소 Gen2, 연결할만 지원 합니다.
 
@@ -35,7 +37,7 @@ HDFS 계층화 할 수 있게 탑재 외부 HDFS 호환 파일 시스템 HDFS에
 - [배포 된 빅 데이터 클러스터](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
 
 ## <a id="load"></a> Azure Data Lake Storage로 데이터 로드
 

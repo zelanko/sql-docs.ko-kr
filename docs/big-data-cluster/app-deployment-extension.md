@@ -1,22 +1,25 @@
 ---
 title: 앱 배포 확장
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222027"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860414"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 Visual Studio Code를 사용 하 여 앱 배포 확장을 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법을 설명 합니다. 이 기능은 CTP 2.3에서 도입 되었습니다. 
 

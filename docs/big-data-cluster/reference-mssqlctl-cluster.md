@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 클러스터 참조
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527216"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860474"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl 클러스터
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 다음 문서에 대 한 참조를 제공 합니다 **클러스터** 명령에 **mssqlctl** 도구입니다. 다른 방법에 대 한 자세한 내용은 **mssqlctl** 명령 참조 [mssqlctl 참조](reference-mssqlctl.md)합니다.
 
@@ -24,10 +26,10 @@ ms.locfileid: "57527216"
 
 |||
 |---|---|
-| [create](#create) | 클러스터를 만듭니다. |
-| [delete](#delete) | 클러스터를 삭제 합니다. |
+| [만들기](#create) | 클러스터를 만듭니다. |
+| [삭제](#delete) | 클러스터를 삭제 합니다. |
 | [config](reference-mssqlctl-cluster-config.md) | 클러스터 구성 명령입니다. |
-| [debug](reference-mssqlctl-cluster-debug.md) | 명령을 디버그 합니다. |
+| [디버그](reference-mssqlctl-cluster-debug.md) | 명령을 디버그 합니다. |
 
 ## <a id="create"></a> mssqlctl 클러스터 만들기
 

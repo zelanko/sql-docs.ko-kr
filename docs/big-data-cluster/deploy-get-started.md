@@ -1,6 +1,6 @@
 ---
 title: 시작
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 단계 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 리소스에 알아봅니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860434"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터 시작
+# <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 배포 하는 방법의 개요는 [SQL Server 2019 빅 데이터 클러스터 (미리 보기)](big-data-cluster-overview.md)합니다. 개념을이 섹션의 다른 배포 기사를 이해 하기 위한 프레임 워크를 제공 하는 것이 것입니다. 특정 배포 단계는 클라이언트와 서버 플랫폼 선택에 따라 다릅니다.
 
@@ -27,9 +29,9 @@ ms.locfileid: "58567649"
 | 도구 | Description |
 |---|---|
 | **mssqlctl** | 배포 하 고 빅 데이터 클러스터를 관리 합니다. |
-| **kubectl** | 만들고 기본 Kubernetes 클러스터를 관리 합니다. |
+| **Kubectl** | 만들고 기본 Kubernetes 클러스터를 관리 합니다. |
 | **Azure Data Studio** | 빅 데이터 클러스터를 사용 하기 위한 그래픽 인터페이스입니다. |
-| **SQL Server 2019 확장** | 빅 데이터 클러스터 기능을 사용할 수 있는 azure Data Studio 확장입니다. |
+| **SQL Server 2019 extension** | 빅 데이터 클러스터 기능을 사용할 수 있는 azure Data Studio 확장입니다. |
 
 다른 도구는 다양 한 시나리오에 필요 합니다. 각 문서에는 특정 작업을 수행 하기 위한 필수 구성 요소 도구 설명 해야 합니다. 도구 및 설치 링크의 전체 목록을 참조 하세요 [SQL Server 설치 2019 빅 데이터 도구도](deploy-big-data-tools.md)합니다.
 
@@ -49,7 +51,7 @@ ms.locfileid: "58567649"
 
 빅 데이터 클러스터 환경 변수를 다르게 구성 하는 고유한 버전을 만들어 배포 스크립트를 사용자 지정할 수 있습니다.
 
-## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터를 배포 합니다.
+## <a name="deploy-a-big-data-cluster"></a>빅 데이터 클러스터 배포
 
 Kubernetes 및 빅 데이터 클러스터를 AKS 단일 스크립트를 사용 하 여 배포를 다음 예제를 참조 하세요.
 

@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987699"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872243"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>데이터베이스 실험 도우미를 사용 하 여 시작
 
@@ -81,7 +81,7 @@ SQL Server의 두 번째 단계는 대상 서버에 캡처된 추적 파일을 �
 
    - **재생 이름**: 재생 추적 파일 이름입니다.
    - **컨트롤러 컴퓨터 이름**: Distributed Replay 컨트롤러 컴퓨터의 이름입니다.
-   - **컨트롤러에서 원본 추적 파일에 대 한 경로**: 원본 추적 파일의 파일 경로 [캡처](#Capture)합니다.
+   - **컨트롤러에서 원본 추적 파일에 대 한 경로**: 원본 추적 파일의 파일 경로 [캡처](#capture)합니다.
    - **SQL Server 인스턴스 이름을**: 원본 추적을 재생 하는 SQL Server 인스턴스의 이름입니다.
    - **SQL Server 컴퓨터에서 대상 추적 파일을 저장할 경로**: 재생 추적 파일에 대 한 폴더 경로입니다.
 

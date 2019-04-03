@@ -1,6 +1,6 @@
 ---
 title: 계산 풀이란?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 계산 풀을 설명합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d9189c6533563a44b597dddc99e263d78750aa6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: d7965ff1f29310f39fb5b8b5994b3967b928ecde
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477868"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860245"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 계산 풀이란?
+# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 계산 풀이란?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 설명의 역할 *SQL Server 계산 풀* SQL Server 2019 미리 보기 빅 데이터 클러스터에 있습니다. 계산 풀 빅 데이터 클러스터에 대 한 스케일 아웃 계산 리소스를 제공합니다. 다음 섹션에서는 아키텍처 및 계산 풀의 기능을 설명합니다.
 

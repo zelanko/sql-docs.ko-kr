@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201962"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872203"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
 
@@ -72,7 +72,7 @@ ms.locfileid: "53201962"
 
 자동 장애 조치를 보장 하는 고가용성 구성에 대 한 AG에 3 개 이상의 복제본에 필요 합니다. 고가용성을 지원할 수 있습니다 다음 구성 중 하나:
 
-- [세 개의 동기 복제본](sql-server-linux-availability-group-ha.md#threeSynch)
+- [동기 복제본 3](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [두 개의 동기 복제본 plus 구성 복제본](sql-server-linux-availability-group-ha.md#twoSynch)
 
@@ -132,6 +132,7 @@ Linux에서 고가용성에 대 한 AG를 만듭니다. 사용 된 [CREATE AVAIL
    >[!IMPORTANT]
    >동기 복제본 3 개 AG를 만들려면 앞의 스크립트를 실행 한 후 다음 스크립트를 실행 하지 않습니다.
 
+<a name="configOnly"></a>
 - 두 개의 동기 복제본과 구성 복제본을 사용 하 여 AG를 만듭니다.
 
    >[!IMPORTANT]

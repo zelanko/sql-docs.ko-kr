@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio에서 Spark 작업 실행
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업을 제출 합니다.
 author: jejiang
 ms.author: jejiang
@@ -9,14 +9,16 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578243"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860454"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나에 SQL Server 2019 미리 보기에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
@@ -24,8 +26,8 @@ ms.locfileid: "57578243"
 
 - [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
-   - **kubectl**
+   - **SQL Server 2019 extension**
+   - **Kubectl**
 
 - [Azure Data Studio 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md)합니다.
 

@@ -1,23 +1,26 @@
 ---
 title: 컨트롤러는 무엇입니까?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 컨트롤러를 설명 합니다.
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491796"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860074"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 컨트롤러 란?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 컨트롤러 란?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 컨트롤러를 배포 하 고 빅 데이터 클러스터를 관리 하기 위한 핵심 논리를 호스트 합니다. Kubernetes 클러스터 및 HDFS 및 Spark와 같은 기타 구성 요소에 포함 된 SQL Server 인스턴스를 사용 하 여 모든 상호 작용 담당 합니다. 
 

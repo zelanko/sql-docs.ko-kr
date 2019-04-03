@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241654"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860084"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE 코드 Accelerator를 사용 하 여 데이터 Wrangling
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE 코드 가속기에 데이터 랭 글 링 작업에 대 한 읽을 수 있는 Python 코드를 생성합니다. Azure Data Studio 내에서 notebook에서 작업 하는 동안 원활한 방식으로 생성된 된 코드에 직접 작성 한 코드를 혼합할 수 있습니다. 이 문서에서는 코드 액셀러레이터 키를 사용 하는 방법의 개요를 제공 합니다.
 
@@ -118,7 +120,7 @@ builder.learn().code()
 | 1 |Naiara Moravcikova        |알 수 없음        |
 | 2 |Jihoo Spel                |2014           |
 | 3 |Viachaslau Gordan Hilario |22-년 4 월-67      |
-| 4 |Maya de Villiers          |19-월-60      |
+| 4 |Maya de Villiers          |19-Mar-60      |
 
 볼륨 및 데이터의 다양성에 따라 열에 서로 다른 패턴에 대 한 정규식을 작성은 시간이 오래 걸리는 작업을 수 있습니다. `FindPatternsBuilder` 는 문자열의 목록에 대 한 정규식을 생성 하 여 위의 문제를 해결 하는 강력한 코드 가속 도구입니다.
 

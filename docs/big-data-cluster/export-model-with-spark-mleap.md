@@ -1,6 +1,6 @@
 ---
 title: MLeap 사용 하 여 Spark ML 모델 내보내기
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Spark 기계 학습 MLeap 사용 하 여 모델을 내보내는 방법에 알아봅니다.
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242134"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860154"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Spark 기계 학습 MLeap 사용 하 여 모델 내보내기
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 일반적인 기계 학습 시나리오에는 Spark에서 모델 학습 및 Spark 외부에서 점수 매기기 포함 됩니다. Spark 외부는 사용할 수 있는 이식 가능한 형식으로 모델을 내보냅니다. [MLeap](https://github.com/combust/mleap) 은 이러한 하나의 모델 교환 형식입니다. Spark 기계 학습 파이프라인 및 모델을 사용 하 여 모든 JVM 기반 시스템에서 사용 하 고 이식 가능한 형식으로 내보낼 수는 `Mleap` 런타임입니다.
 

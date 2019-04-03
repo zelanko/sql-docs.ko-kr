@@ -1,6 +1,6 @@
 ---
 title: 빅 데이터 클러스터는 무엇 인가요?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장 옵션 및 HDFS 데이터를 제공 하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대해 알아봅니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860255"
 ---
-# <a name="what-are-sql-server-2019-big-data-clusters"></a>SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?
+# <a name="what-are-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터란 무엇인가요?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 부터 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], SQL Server 빅 데이터 클러스터를 사용 하면 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포 합니다. 이러한 구성 요소는 읽기, 쓰기, 및 TRANSACT-SQL 또는 Spark의 빅 데이터 처리, 결합 및 대규모 빅 데이터를 사용 하 여 높은 가치의 관계형 데이터에 분석 있게 할 수 있도록 나란히 실행 됩니다.
 
@@ -76,8 +78,8 @@ Kubernetes는 오픈 소스 컨테이너 오 케 스트레이 터를 필요에 �
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
-| **Node** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
+| **클러스터** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
+| **노드** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
 | **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 하나 이상의 컨테이너의 논리적 그룹-및 관련 응용 프로그램을 실행 하려면 리소스가 필요 합니다. 각 pod; 노드에서 실행 됩니다. 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터를 클러스터의 노드에 pod를 자동으로 할당합니다. |
 | &nbsp; ||
 

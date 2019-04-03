@@ -1,6 +1,6 @@
 ---
 title: 배포 빠른 시작
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 배포를 연습 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618150"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860531"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 빠른 시작에서는 Azure Kubernetes Service (AKS)를 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 배포 하는 샘플 배포 스크립트를 사용 합니다. 
 
@@ -33,9 +35,9 @@ ms.locfileid: "58618150"
 - Azure 구독입니다.
 - [빅 데이터 도구도](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
    - **Azure CLI**
 
 ## <a name="log-in-to-your-azure-account"></a>Azure 계정에 로그인

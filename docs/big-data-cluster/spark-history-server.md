@@ -1,6 +1,6 @@
 ---
 title: Spark 응용 프로그램을 디버그/진단
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Spark 기록 서버를 사용 하 여 디버그 및 SQL Server 2019 빅 데이터 클러스터에서 실행 중인 Spark 응용 프로그램 진단.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241794"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860335"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>디버그 및 Spark 기록 서버에서 SQL Server 빅 데이터 클러스터에 Spark 응용 프로그램 진단
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 확장 된 Spark 기록 서버를 사용 하 여 디버그를 SQL Server 2019 (미리 보기) 빅 데이터 클러스터에 Spark 응용 프로그램을 진단 하는 방법에 지침을 제공 합니다. 이러한 디버그 및 진단 기능 Spark 기록 서버에 기본 제공 되며 Microsoft에서 제공 됩니다. 확장에 데이터 탭 및 그래프 탭 진단 탭에 포함 됩니다. 데이터 탭에서 사용자는 Spark 작업의 입력 및 출력 데이터를 확인할 수 있습니다. 그래프 탭에서 사용자는 데이터 흐름을 확인 하 고 작업 그래프를 재생할 수 있습니다. 진단 탭에서 사용자는 실행 기 사용 현황 분석 데이터 기울이기, 시간 오차를 참조할 수 있습니다.
 

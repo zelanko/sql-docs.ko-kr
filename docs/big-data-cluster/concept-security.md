@@ -1,23 +1,26 @@
 ---
 title: 보안 개념
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 대 한 보안 개념을 설명 합니다. 클러스터 끝점 및 클러스터 인증을 설명 하는 것이 여기 있습니다.
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860114"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 보안 빅 데이터 클러스터에서 HDFS/Spark 및 SQL Server 인증 및 권한 부여 시나리오에 대 한 일관적이 고 일관 된 지원을 의미합니다. 인증은 사용자 또는 서비스의 id를 확인 하 고 주장 하는 이러한가 프로세스입니다. 권한 부여 권한을 부여 하거나 요청 하는 사용자의 id를 기준으로 특정 리소스에 대 한 액세스 거부를 가리킵니다. 사용자 인증을 통해 식별 되 면이 단계가 수행 됩니다.
 

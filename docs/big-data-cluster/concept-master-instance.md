@@ -1,6 +1,6 @@
 ---
 title: 마스터 인스턴스란 무엇 인가요?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 SQL Server 마스터 인스턴스를 설명 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860684"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터에 마스터 인스턴스란 무엇 인가요?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 마스터 인스턴스란 무엇 인가요?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는의 역할을 설명 합니다 *SQL Server 마스터 인스턴스* SQL Server 2019 빅 데이터 클러스터에. 마스터 인스턴스는 SQL Server 빅 데이터 클러스터에서 실행 되는 SQL Server 인스턴스에 [제어 평면](big-data-cluster-overview.md#controlplane)합니다.
 

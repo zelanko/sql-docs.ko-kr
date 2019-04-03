@@ -1,6 +1,6 @@
 ---
 title: Spark 작업을 사용 하 여 데이터를 수집 합니다.
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860674"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서에는 Spark 작업을 사용 하 여 데이터를 로드 하는 방법을 보여 줍니다.는 [데이터 풀](concept-data-pool.md) SQL Server 2019 빅 데이터 클러스터 (미리 보기). 
 
@@ -34,9 +36,9 @@ ms.locfileid: "58491906"
 ## <a id="prereqs"></a> 필수 구성 요소
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
-   - **kubectl**
+   - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>데이터 풀에서 외부 테이블 만들기

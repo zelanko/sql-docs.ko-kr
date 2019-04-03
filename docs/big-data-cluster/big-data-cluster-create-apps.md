@@ -1,23 +1,26 @@
 ---
 title: Mssqlctl를 사용 하 여 응용 프로그램 배포
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 응용 프로그램으로 Python 또는 R 스크립트를 배포 합니다.
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492805"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872003"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 배포 및 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 내에서 응용 프로그램으로 R 및 Python 스크립트를 관리 하는 방법을 설명 합니다.
 
@@ -63,7 +66,7 @@ mssqlctl app create --help
 
 다음 섹션에서는 이러한 명령을 자세히 설명합니다.
 
-## <a name="log-in"></a>로그인
+## <a name="sign-in"></a>로그인
 
 배포 하거나 응용 프로그램과 상호 작용 하기 전에 먼저 로그인을 사용 하 여 빅 데이터 클러스터 SQL Server는 `mssqlctl login` 명령입니다. 외부 IP 주소를 지정 합니다 `endpoint-service-proxy` 서비스 (예: `https://ip-address:30777`) 사용자 이름 및 클러스터에는 암호와 함께 합니다.
 
@@ -95,51 +98,49 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 빅 데이터 클러스터에 새 앱을 만들려면 다음 구문을 사용 합니다.
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 다음 명령은이 명령은 같습니다는 항목의 예를 보여줍니다.
-
-이라는 파일이 있다고 가정 `spec.yaml` 내에서 `addpy` 폴더입니다.
-`addpy` 폴더에는 `add.py` 및 `spec.yaml` 는 `spec.yaml` 은 사양 파일에 대 한는 `add.py` 앱.
-
-
-`add.py` 다음 python 앱을 만듭니다.
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-다음 스크립트는 샘플에 대 한 내용의 `spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-이 사용 하려면 위 코드 줄을 디렉터리에 두 개의 파일 복사 `addpy` 으로 `add.py` 및 `spec.yaml` 아래 명령을 실행 합니다.
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> `spec.yaml` 파일 둘 다 지정 된 `poolsize` 및 다양 한 `replicas`. 수가 `replicas` 배포 해야 하는 서비스의 복사본 수를 지정 합니다. `poolsize` 복제본 당 만들려는 풀 수를 지정 합니다. 이러한 설정을 배포 병렬로 처리할 수 있는 요청 양을 영향을 줍니다. 특정된 한 번에 요청의 최대 수는 같음 `replicas` 번 `poolsize`, 즉 5 개의 복제본 및 복제본 당 2 개의 풀에 있는 경우 배포에 10 개의 요청을 병렬로 처리할 수 있습니다. 그래픽 표현 아래 이미지를 참조 하세요 `replicas` 고 `poolsize`: ![Poolsize 및 복제본](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+이 있다고 가정 하는 응용 프로그램에 저장 된 `addpy` 폴더입니다. 이 폴더 호출 이라는 응용 프로그램에 대 한 사양 파일도 포함 해야 `spec.yaml`합니다. 참조 하세요 [응용 프로그램 배포 페이지](concept-application-deployment.md) 대 한 자세한 내용은 `spec.yaml` 파일입니다.
+
+이 샘플 앱을 배포 하려면 라는 디렉터리에 다음 파일을 만들고 `addpy`:
+
+- `add.py`. 이 파일에 다음 Python 코드를 복사 합니다.
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. 이 파일에 다음 코드를 복사 합니다.
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+그런 다음 아래 명령을 실행 합니다.
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 명령 목록을 사용 하 여 앱이 배포를 확인할 수 있습니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Kubectl을 사용 하 여 모니터링/문제를 해결 하려면
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결 및 모니터링에 대 한 유용한 kubectl 명령을 제공 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017909"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860374"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Kubectl 명령을 모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 모니터링 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 문제 해결에 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명 합니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행 하는 컨테이너에서 파일을 복사 하는 등의 일반적인 작업을 설명 합니다. 또한 pod의 빅 데이터 클러스터에 있는 다른 Kubernetes 아티팩트 자세한 세부 정보를 확인 하는 방법을 보여 줍니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Minikube를 구성 합니다.
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 minikube를 구성 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017749"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860694"
 ---
-# <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>SQL Server 2019 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
+# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 구성 하는 방법 설명 **minikube** SQL Server 2019 빅 데이터 클러스터 (미리 보기) 배포에 대 한 단일 컴퓨터에서. Minikube는 쉽게 데스크톱 이나 랩톱 같은 단일 컴퓨터에서 Kubernetes를 실행 하는 도구입니다. Minikube VM 내에서 단일 노드 Kubernetes 클러스터에서 실행 Kubernetes 사용해 또는를 사용 하 여 개발 하려는 사용자에 대 한 노트북 일상적인 됩니다. 
 

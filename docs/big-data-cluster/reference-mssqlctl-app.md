@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 앱 참조
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 앱 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527256"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860654"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl 앱
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 다음 문서에 대 한 참조를 제공 합니다 **앱** 명령에 **mssqlctl** 도구입니다. 다른 방법에 대 한 자세한 내용은 **mssqlctl** 명령 참조 [mssqlctl 참조](reference-mssqlctl.md)합니다.
 
@@ -24,11 +26,11 @@ ms.locfileid: "57527256"
 
 |||
 |---|---|
-| [create](#create) | 응용 프로그램을 만듭니다. |
-| [delete](#delete) | 응용 프로그램을 삭제 합니다. |
+| [만들기](#create) | 응용 프로그램을 만듭니다. |
+| [삭제](#delete) | 응용 프로그램을 삭제 합니다. |
 | [describe](#describe) | 응용 프로그램에 설명 합니다. |
-| [init](#init) | Kickstart 새 응용 프로그램 구조입니다. |
-| [list](#list) | 응용 프로그램을 나열 합니다. |
+| [Init](#init) | Kickstart 새 응용 프로그램 구조입니다. |
+| [목록](#list) | 응용 프로그램을 나열 합니다. |
 | [run](#run) | 응용 프로그램을 실행 합니다. |
 | [update](#update) | 응용 프로그램을 업데이트 합니다. |
 | [template](reference-mssqlctl-app-template.md) | 템플릿 명령입니다. |

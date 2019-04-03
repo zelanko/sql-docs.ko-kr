@@ -1,6 +1,6 @@
 ---
 title: Oracle에서 데이터를 외부 쿼리
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 Oracle 데이터를 쿼리 하는 방법을 보여 줍니다. Oracle에서 데이터에 대 한 외부 테이블을 만들고 쿼리를 실행 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859984"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서에는 SQL Server 2019 빅 데이터 클러스터에서 Oracle 데이터를 쿼리 하는 방법을 보여 줍니다. 이 자습서를 실행 하려면 Oracle 서버에 액세스할 수 있도록 해야 합니다. 액세스 없으면 외부 데이터 원본 SQL Server 빅 데이터 클러스터에 대 한 데이터 가상화의 작동 방식을 이해가이 자습서에 제공할 수 있습니다.
 
@@ -35,7 +37,7 @@ ms.locfileid: "54241914"
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Oracle 테이블 만들기

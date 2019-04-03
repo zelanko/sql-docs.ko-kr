@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513070"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860584"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>저장된 프로시저에 포함 된 Python을 사용 하 여 예측을 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ GO
 
 이 섹션에서는 두 개의 저장된 프로시저를 호출 하 여 단일 예측을 만드는 방법에 알아봅니다.
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) 단일 행을 scikit를 사용 하 여 점수 매기기를 위해 설계 되었습니다-모델에 알아봅니다.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) 단일 행 revoscalepy 모델을 사용 하 여 점수 매기기를 위해 설계 되었습니다.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) 단일 행을 scikit를 사용 하 여 점수 매기기를 위해 설계 되었습니다-모델에 알아봅니다.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) 단일 행 revoscalepy 모델을 사용 하 여 점수 매기기를 위해 설계 되었습니다.
 + 모델을 아직 학습 하지 않은 경우 돌아갑니다 [5 단계](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 일련의 승객 수, 여정 거리 등의 단일 값을 입력으로 두 모델 수행 합니다. 테이블 반환 함수, `fnEngineerFeatures`, 직접 거리, 새로운 기능에 대 한 입력에서 위도 및 경도 값을 변환 하는 데 사용 됩니다. [4 단원](sqldev-py4-create-data-features-using-t-sql.md) 이 테이블 반환 함수에 대 한 설명을 포함 합니다.

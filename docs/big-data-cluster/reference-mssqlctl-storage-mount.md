@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 저장소 탑재 참조
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 저장소 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8336c59ffc11ff1a2b7842c393f3387298b832a
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527186"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860294"
 ---
-# <a name="mssqlctl-storage-mount"></a>mssqlctl 저장소 탑재
+# <a name="mssqlctl-storage-mount"></a>mssqlctl 스토리지 탑재
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 다음 문서에 대 한 참조를 제공 합니다 **저장소 탑재** 명령에 **mssqlctl** 도구입니다. 다른 방법에 대 한 자세한 내용은 **mssqlctl** 명령 참조 [mssqlctl 참조](reference-mssqlctl.md)합니다.
 
@@ -24,8 +26,8 @@ ms.locfileid: "57527186"
 
 |||
 |---|---|
-| [create](#create) | HDFS에서 원격 저장소의 탑재를 만듭니다. |
-| [delete](#delete) | HDFS의 원격 저장소의 탑재를 삭제 합니다. |
+| [만들기](#create) | HDFS에서 원격 저장소의 탑재를 만듭니다. |
+| [삭제](#delete) | HDFS의 원격 저장소의 탑재를 삭제 합니다. |
 | [상태](#status) | Mount(s)의 상태입니다. |
 
 ## <a id="create"></a> mssqlctl 저장소 탑재 만들기

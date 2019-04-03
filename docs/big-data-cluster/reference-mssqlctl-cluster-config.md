@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 클러스터 구성 참조
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 26e93151a1150bbbbd1798b38486ca5b01aaab1d
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527206"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860024"
 ---
 # <a name="mssqlctl-cluster-config"></a>mssqlctl 클러스터 구성
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 다음 문서에 대 한 참조를 제공 합니다 **클러스터 구성** 명령에 **mssqlctl** 도구입니다. 다른 방법에 대 한 자세한 내용은 **mssqlctl** 명령 참조 [mssqlctl 참조](reference-mssqlctl.md)합니다.
 

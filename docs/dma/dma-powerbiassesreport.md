@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974122"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872074"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Power BI를 사용 하 여 Data Migration Assistant에서 만든 통합된 평가 보고서 분석
 
@@ -34,23 +34,23 @@ Data Migration Assistant에서 만든 마이그레이션 평가 통합 하는 �
 
 다음과 같은 보고서에 포함 되어 있습니다. 
 
-- [대시보드](#dashboard--details)
+- [대시보드](#dashboard-report)
 
   스냅숏 통계 및 드릴 다운 보고서를 포함합니다.
 
-- [온-프레미스 업그레이드 준비](#on-premises-upgrade-readiness--details)
+- [온-프레미스 업그레이드 준비](#on-premises-upgrade-readiness-report)
 
   데이터 소스는 DMAReporting 데이터베이스에서 UpgradeSuccessRanking 뷰입니다.  이 보고서는 평가 된 데이터베이스에 대 한 백분율 업그레이드 성공 여부를 나타냅니다.
 
-- [온-프레미스 기능 패리티](#on-premise-feature-parity--details)
+- [온-프레미스 기능 패리티](#on-premises-feature-parity-report)
 
   대상 SQL Server 버전에 권장 되는 기능을 보여 줍니다.
 
-- [Azure SQL DB 업그레이드 준비](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB 업그레이드 준비](#azure-sql-db-upgrade-readiness-report)
 
   데이터 소스는 DMAReporting 데이터베이스에서 UpgradeSuccessRanking 뷰입니다.  이 보고서는 Azure SQL DB 마이그레이션을 평가 하는 데이터베이스에 대 한 백분율 업그레이드 성공 여부를 나타냅니다.
 
-- [Azure SQL DB 지원 되지 않는 기능](#azure-sql-db-unsupported-features--details)
+- [Azure SQL DB 지원 되지 않는 기능](#azure-sql-db-unsupported-features-report)
 
   Azure SQL DB (V12)에서 지원 되지 않는 기존 데이터베이스의 기능을 보여 줍니다.
 

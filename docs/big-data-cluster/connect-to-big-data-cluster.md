@@ -1,6 +1,6 @@
 ---
 title: 마스터에 연결 하 고 HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: SQL Server 마스터 인스턴스와 SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 위한 HDFS/Spark 게이트웨이 연결 하는 방법에 알아봅니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017709"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860174"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용 하 여 SQL Server 빅 데이터 클러스터에 연결
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 연결 하는 방법을 설명 합니다. 빅 데이터 클러스터와 상호 작용 하는 데 사용 되는 기본 끝점을 두 가지가 있습니다.
 
@@ -33,8 +35,8 @@ ms.locfileid: "57017709"
 - 배포 된 [SQL Server 2019 빅 데이터 클러스터](deployment-guidance.md)합니다.
 - [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
-   - **kubectl**
+   - **SQL Server 2019 extension**
+   - **Kubectl**
 
 ## <a id="master"></a> 클러스터에 연결
 

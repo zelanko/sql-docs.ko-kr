@@ -1,6 +1,6 @@
 ---
 title: 샘플 노트북을 실행 합니다. | Microsoft Docs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 자습서에서는 실행을 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 샘플 Spark 노트북을 로드할 수 있습니다 하는 방법을 보여 줍니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 45845efe34c94f0c8f21c7e154dde673b0bfb889
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241849"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860184"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에는 샘플 notebook을 실행 합니다.
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 notebook 실행
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서에는 로드 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 Azure Data Studio에서 notebook을 실행 하는 방법을 보여 줍니다. 이렇게 하면 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
 
@@ -29,7 +31,7 @@ ms.locfileid: "54241849"
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>샘플 노트북 파일 다운로드

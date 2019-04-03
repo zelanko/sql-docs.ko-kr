@@ -1,6 +1,6 @@
 ---
 title: GPU 지원 및 TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 Azure 데이터 Studio 노트북에서 TensorFlow를 사용 합니다.
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494115"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860464"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서 Kubernetes AKS (Azure Service) 계산 집약적 워크 로드에 대 한 GPU 사용 노드 풀을 지 원하는 빅 데이터 클러스터를 배포 하는 방법에 설명 합니다. 그런 다음 GPU에 대 한 TensorFlow 사용 하 여 이미지 분류를 수행 하는 Azure Data Studio에서 예제 notebook을 실행 합니다.
 
@@ -25,9 +27,9 @@ ms.locfileid: "58494115"
 
 - [빅 데이터 도구도](deploy-big-data-tools.md):
   - **mssqlctl**
-  - **kubectl**
+  - **Kubectl**
   - **Azure Data Studio**
-  - **SQL Server 2019 확장**
+  - **SQL Server 2019 extension**
   - **Azure CLI**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
@@ -142,7 +144,7 @@ Gpu를 지 원하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)�
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ Gpu를 지 원하는 SQL Server 2019 빅 데이터 클러스터 (미리 보기)�
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

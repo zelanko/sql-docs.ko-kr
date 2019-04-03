@@ -3,17 +3,17 @@ title: SQL Server 누적 업데이트-SQL Server Machine Learning에 대 한 CAB
 description: R 및 Python CAB 패키지에는 SQL Server 2017의 Machine Learning Services 및 SQL Server 2016 R Services에 대 한 다운로드 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/19/2019
+ms.date: 04/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 22304bb9ec142e8f0c61797ed6907c0aa78c34f8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: db03da02344301043e144cdd5e1638c09000bb08
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511380"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872173"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>인스턴스가 SQL Server 데이터베이스 내 분석의 누적 업데이트에 대 한 CAB 다운로드
 
@@ -36,8 +36,13 @@ CAB 파일은 역방향 시간 순서로 나열 됩니다. CAB 파일을 다운�
 
 |릴리스  |구성 요소 | 다운로드 링크  | 해결 된 문제 | 
 |---------|----------|----------------|------------------|
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)** |  |  |  |
+| | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |
+| | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |
+| | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다. |
+| | Python Server    |[SPS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2071421&clcid=1033)| 패키지 내에서 이진 파일은 이제 서명 됩니다.  |
 |**[SQL Server 2017 CU13](https://support.microsoft.com/help/4466404)** |  |  |  |
-| | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 이전 버전에서 변경 되지 않았습니다. |
+| | Microsoft R Open     | [SRO_3.3.3.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| 이전 버전에서 변경 되지 않았습니다. |
 | | R Server      |[SRS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038263&clcid=1033)| 업그레이드에 대 한 수정 사항을 포함 한 [독립 실행형 R Server 조작](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)처럼 SQL Server 설치 프로그램을 통해 설치 된. CU13 cab 파일을 사용 하 고 따릅니다 [이러한 지침](sql-machine-learning-standalone-windows-install.md#apply-cu) 업데이트를 적용 합니다. |
 | | Microsoft Python Open     | [SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| 이전 버전에서 변경 되지 않았습니다. |
 | | Python Server    |[SPS_9.2.0.1300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2038197&clcid=1033)| 업그레이드에 대 한 수정 사항을 포함을 [독립 실행형 Python Server 운영 화](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)처럼 SQL Server 설치 프로그램을 통해 설치 합니다. CU13 cab 파일을 사용 하 고 따릅니다 [이러한 지침](sql-machine-learning-standalone-windows-install.md#apply-cu) 업데이트를 적용 합니다. |
@@ -91,14 +96,19 @@ SQL Server 2016 R Services에 대 한 초기 릴리스는 RTM 버전 또는 서�
 
 |릴리스  |다운로드 링크  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU1-CU4**     |
+|**SQL Server 2016 SP2 CU6**     |
+|Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
+|Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
+|**SQL Server 2016 SP2 CU1-CU5**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038)|
-|**SQL Server 2016 SP1 CU4-CU10**     |
 |**SQL Server 2016 SP2**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)|
-|**SQL Server 2016 SP1 CU1-CU3**     |
+|**SQL Server 2016 SP1 CU14**     |
+|Microsoft R Open     |[SRO_3.2.2.16100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2080130&clcid=1033)|
+|Microsoft R Server    |[SRS_8.0.3.17200_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079935&clcid=1033)|
+|**SQL Server 2016 SP1 CU1-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 |Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 |**SQL Server 2016 SP1**     |

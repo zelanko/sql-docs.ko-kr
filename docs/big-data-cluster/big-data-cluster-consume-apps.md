@@ -1,24 +1,26 @@
 ---
 title: 빅 데이터 클러스터에 응용 프로그램 사용
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: RESTful 웹 서비스 (미리 보기)를 사용 하 여 SQL Server 2019 빅 데이터 클러스터에 배포 된 응용 프로그램을 사용 합니다.
 author: jeroenterheerdt
 ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.reviewer: rothja
-ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389961"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860544"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에는 RESTful 웹 서비스 (미리 보기)를 사용 하는 SQL Server 2019 빅 데이터 클러스터에 배포 된 앱을 사용 하는 방법을 설명 합니다.
 

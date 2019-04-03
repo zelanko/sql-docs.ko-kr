@@ -1,20 +1,24 @@
 ---
 title: SQL Server 빅 데이터 클러스터에서 IntelliJ 용 Azure 도구 키트의 Spark 작업 실행
-titleSuffix: SQL Server Big Data Clusters
+titleSuffix: SQL Server big data clusters
 description: IntelliJ 용 Azure 도구 키트의 SQL Server 빅 데이터 클러스터에 Spark 작업을 제출 합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683623"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860325"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ에서 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ에서 SQL Server 빅 데이터 클러스터에서 Spark 작업 제출
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 SQL Server 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나에 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
@@ -88,7 +92,7 @@ SQL Server 빅 데이터 클러스터에 대 한 주요 시나리오 중 하나�
       
 
 ## <a name="submit-application-to-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 응용 프로그램 제출
-SQL Server 빅 데이터 클러스터 링크 후 응용 프로그램을 제출할 수 있습니다.
+SQL Server 빅 데이터 클러스터를 링크 한 후 응용 프로그램을 제출할 수 있습니다.
 
 1. 구성을 설정 **실행/디버그 구성** + 창 클릭->**SQL Server에서 Apache Spark**를 선택 탭 **클러스터에서 원격으로 실행**, 매개 변수를 설정 합니다. 에서는 다음 확인을 클릭 합니다.
 

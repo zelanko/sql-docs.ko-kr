@@ -1,6 +1,6 @@
 ---
 title: 저장소 풀이란?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 저장소 풀을 설명 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477928"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860574"
 ---
-# <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>저장소 풀 (SQL Server 2019 빅 데이터 클러스터) 란?
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>저장소 풀 (SQL Server 빅 데이터 클러스터) 란?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는의 역할을 설명 합니다 *SQL Server 저장소 풀* SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서. 다음 섹션에서는 아키텍처 및 SQL 저장소 풀의 기능을 설명합니다.
 

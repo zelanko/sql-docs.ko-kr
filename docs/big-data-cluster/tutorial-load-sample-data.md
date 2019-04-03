@@ -1,6 +1,6 @@
 ---
 title: 샘플 데이터 로드
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: 이 자습서에는 SQL Server 빅 데이터 클러스터에 샘플 데이터를 로드 하는 방법을 보여 줍니다. 샘플 데이터를 SQL Server 마스터 인스턴스에 관계형 데이터를 포함합니다. 저장소 풀의 HDFS 데이터도 포함 합니다. 이 데이터는이 단원의 다른 자습서를 지원합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859994"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>자습서: SQL Server 2019 빅 데이터 클러스터에 샘플 데이터 로드
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 자습서는 스크립트를 사용 하 여 SQL Server 2019 빅 데이터 클러스터 (미리 보기)로 샘플 데이터를 로드 하는 방법에 설명 합니다. 설명서의 자습서에서는 다른 많은이 샘플 데이터를 사용합니다.
 
@@ -29,7 +31,7 @@ ms.locfileid: "58566522"
 - [배포 된 빅 데이터 클러스터](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
    - **mssqlctl**
-   - **kubectl**
+   - **Kubectl**
    - **sqlcmd**
    - **curl**
 

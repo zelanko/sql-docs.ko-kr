@@ -1,6 +1,6 @@
 ---
 title: Azure Data Studio에 노트북 관리
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Azure Data Studio에서 notebook을 관리 하는 방법에 알아봅니다. 여기에 열기, 노트북, 저장 및 빅 데이터 클러스터 연결을 변경 합니다.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241929"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860514"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 관리 하는 방법
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서를 열고 SQL Server 2019 미리 보기를 사용 하 여 Azure Data Studio에서 notebook 파일을 저장 하는 방법을 보여 줍니다. 또한 SQL Server 빅 데이터 클러스터에 대 한 연결을 변경 하는 방법을 보여 줍니다.
 
@@ -28,7 +30,7 @@ ms.locfileid: "54241929"
 - [빅 데이터 클러스터를 배포](quickstart-big-data-cluster-deploy.md)합니다.
 - [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **SQL Server 2019 확장**
+   - **SQL Server 2019 extension**
    - **Kubectl**
 
 ## <a name="open-a-notebook"></a>Notebook을 엽니다.

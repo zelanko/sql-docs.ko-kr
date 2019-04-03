@@ -1,6 +1,6 @@
 ---
 title: mssqlctl 클러스터 디버그 참조
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Mssqlctl 클러스터 명령에 대 한 참조 문서입니다.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9312e972dfcb439f4ef19a4e72d8d66454622096
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527236"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860554"
 ---
 # <a name="mssqlctl-cluster-debug"></a>mssqlctl 클러스터 디버그
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 다음 문서에 대 한 참조를 제공 합니다 **클러스터 디버그** 명령에 **mssqlctl** 도구입니다. 다른 방법에 대 한 자세한 내용은 **mssqlctl** 명령 참조 [mssqlctl 참조](reference-mssqlctl.md)합니다.
 
@@ -25,7 +27,7 @@ ms.locfileid: "57527236"
 |||
 |---|---|
 | [copy-logs](#copy-logs) | 로그를 복사 합니다. |
-| [dump](#dump) | 트리거 로깅 덤프 합니다. |
+| [덤프(dump)](#dump) | 트리거 로깅 덤프 합니다. |
 
 ## <a id="copy-logs"></a> 디버그 로그 복사 클러스터
 
@@ -44,7 +46,7 @@ mssqlctl cluster debug copy-logs
 
 | 매개 변수 | Description |
 |---|---|
-| **--namespace -n** | Kubernetes 네임 스페이스에 대해 사용 되는 클러스터 이름입니다. 필수 사항입니다. |
+| **n-네임 스페이스** | Kubernetes 네임 스페이스에 대해 사용 되는 클러스터 이름입니다. 필수 사항입니다. |
 | **--container -c** | 로그 복사 비슷한 이름 가진 컨테이너에 대 한 선택 사항이 며 기본적으로 복사 모든 컨테이너에 대 한 로그입니다. 여러 번을 지정할 수 없습니다. 여러 번 지정 하면 마지막으로 인증서가 사용 됩니다. |
 | **--pod -p** | 비슷한 이름의 pod에 대 한 로그를 복사 합니다. 선택 사항입니다. 모든 pod에 대 한 기본 복사 로그 합니다. 여러 번을 지정할 수 없습니다. 여러 번 지정 하면 마지막으로 인증서가 사용 됩니다. |
 | **--target-folder -d** | 로그를 복사할 대상 폴더 경로입니다. 선택 사항이 며 기본적으로 만듭니다 결과 로컬 폴더에 있습니다.  여러 번을 지정할 수 없습니다. 여러 번 지정 하면 마지막으로 인증서가 사용 됩니다. |
@@ -66,7 +68,7 @@ mssqlctl cluster debug dump
 | 매개 변수 | Description |
 |---|---|
 | **--container -c** | 로그 복사 비슷한 이름 가진 컨테이너에 대 한 선택 사항이 며 기본적으로 복사 모든 컨테이너에 대 한 로그입니다. 여러 번을 지정할 수 없습니다. 여러 번 지정 하면 마지막으로 인증서가 사용 됩니다.  허용 되는 값: mssql 컨트롤러입니다. |
-| **--namespace -n** | Kubernetes 네임 스페이스에 대해 사용 되는 클러스터 이름입니다. 필수 사항입니다. |
+| **n-네임 스페이스** | Kubernetes 네임 스페이스에 대해 사용 되는 클러스터 이름입니다. 필수 사항입니다. |
 | **--target-folder -d** | 로그를 복사할 대상 폴더 경로입니다. 선택 사항이 며 기본적으로 만듭니다 결과 로컬 폴더에 있습니다.  여러 번을 지정할 수 없습니다. 여러 번 지정 하면 마지막으로 인증서가 사용 됩니다.  기본값: `./output/dump`합니다. 필수 사항입니다. |
 
 ## <a name="next-steps"></a>다음 단계
