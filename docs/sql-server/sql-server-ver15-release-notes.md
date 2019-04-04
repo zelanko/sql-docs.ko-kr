@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 1afd1c7c1c3c142745e667662f51027218598e2f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017729"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492855"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "57017729"
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
 
-## <a name="ctp-23"></a>CTP 2.3
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
+## <a name="ctp-24"></a>CTP 2.4
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 2.3 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 릴리스에 대한 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
 
 제한되는 지원은 다음 위치 중 하나에서 확인할 수 있습니다.
 
@@ -49,15 +49,15 @@ ms.locfileid: "57017729"
 
 - 또는 [@SQLServer](https://twitter.com/SQLServer) with [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)를 사용하여 트윗
 
-### <a name="documentation-ctp-23"></a>설명서(CTP 2.3)
+### <a name="documentation-ctp-24"></a>설명서(CTP 2.4)
 
 - **문제 및 고객에게 미치는 영향**: SQL Server 2019(15.x)의 설명서는 제한되며 내용은 [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 설명서 세트에 포함되어 있습니다. SQL Server 2019(15.x)와 관련된 문서의 내용은 **적용 대상**에서 설명합니다.
 
-- **문제 및 고객에게 미치는 영향**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 버전별로 필터링할 수 있습니다. 각 설명서 페이지의 왼쪽 맨 위에 있는 컨트롤을 사용하여 요구 사항에 맞게 필터링합니다. 
+- **문제 및 고객에게 미치는 영향**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 버전별로 필터링할 수 있습니다. 각 설명서 페이지의 왼쪽 맨 위에 있는 컨트롤을 사용하여 요구 사항에 맞게 필터링합니다.
 
 - **문제 및 고객에게 미치는 영향**: SQL Server 2019(15.x) 관련 오프라인 콘텐츠는 제공되지 않습니다.
 
-### <a name="hardware-and-software-requirements-ctp-23"></a>하드웨어 및 소프트웨어 요구 사항(CTP 2.3)
+### <a name="hardware-and-software-requirements-ctp-24"></a>하드웨어 및 소프트웨어 요구 사항(CTP 2.4)
 
 - **문제 및 고객에게 미치는 영향**: 하드웨어 및 소프트웨어 요구 사항은 계속 검토 중이며 제품 릴리스에 포함할 최종 내용이 아닙니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "57017729"
 
 - **해결 방법**: 해당 사항 없음
 
-- **적용 대상**: SQL Server 2019 CTP 2.3, CTP 2.2, CTP 2.1
+- **적용 대상**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
 ### <a name="utf-8-collations"></a>UTF-8 데이터 정렬
 
@@ -84,13 +84,14 @@ ms.locfileid: "57017729"
   - 연결된 서버
   - 메모리 내 OLTP
   - PolyBase용 외부 테이블
+  - Always Encrypted
 
   > [!Note]
   > 현재 Azure Data Studio 또는 SSDT(SQL Server Data Tools)에서 UTF-8 사용 데이터 정렬을 선택하도록 UI를 지원하지 않습니다. 최신 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) 버전은 UI의 다양한 UTF-8 사용 데이터 정렬 선택 옵션을 지원합니다.
  
 - **해결 방법**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP에 대한 해결 방법은 없습니다.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ### <a name="sql-graph"></a>SQL 그래프
 
@@ -98,7 +99,7 @@ ms.locfileid: "57017729"
 
 - **해결 방법**: [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 또는 SQLCMD를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 작성하고 서버에 대해 실행하면 됩니다. 에지 제약 조건을 만들거나, 새로운 병합 DML 구문을 포함하거나, 그래프 개체에 대한 파생 테이블/뷰를 만드는 데이터베이스 개체를 내보내거나 가져올 수 없습니다. 사용자는 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트를 사용하여 해당 데이터베이스에서 이러한 개체를 수동으로 만들어야 합니다. 
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, 2.0.
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 
@@ -106,23 +107,13 @@ ms.locfileid: "57017729"
 
 - **해결 방법**: 리치 계산을 사용하도록 설정하려면 `DBCC traceon(127,-1)`을 실행합니다. 자세한 내용은 [리치 계산 사용](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3, 2.2, CTP 2.1, 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 ### <a name="system-dynamic-management-views"></a>시스템 동적 관리 뷰
 
 - **문제 및 고객에게 미치는 영향**: 시스템 테이블 반환 함수 [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)는 `dependency` 열의 임의 값을 반환합니다.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
-
-### <a name="sql-server-analysis-services-ssas"></a>SSAS(SQL Server Analysis Services)
-
-- **문제 및 고객에게 미치는 영향**: 동적 보안이 적용된 테이블 형식 모델의 경우, 일부 환경에서는 사용자가 동일한 역할에 속하는 다른 사용자의 데이터를 볼 수 있습니다.
-
-  **시나리오**: 모델에는 2개 이상의 역할이 있습니다. 역할 중 하나에 `USERNAME` 또는 `USERPRINCIPALNAME`을 포함하는 동적 보안 식이 없습니다. 동적 행 수준 보안이 있는 두 번째 역할은 `USERNAME` 또는 `USERPRINCIPLENAME`이 포함된 식을 사용하여 사용자 A와 사용자 B에 대해 정의됩니다. 사용자 A와 사용자 B는 데이터를 연결하고 쿼리할 수 있지만, 사용자 B는 특정 환경에서 사용자 A에 대해서만 보호된 데이터를 볼 수 있습니다.
-
-- **해결 방법**: 모델에 더미 측정값을 추가합니다. 예를 들면 `[DummyMeasure] := UserName()`입니다. 이렇게 하면 행 수준 보안 식에 대해 동적 식을 계산할 수 있습니다.
-
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 
