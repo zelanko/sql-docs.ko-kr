@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275499"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657887"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -175,7 +175,7 @@ ms.locfileid: "58275499"
   
 -   technet.microsoft.com의 기술 문서 - [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
+-   _SQLCAT의 BI 및 분석 가이드_의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=220816)  
   

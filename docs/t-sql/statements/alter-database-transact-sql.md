@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417245"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538665"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE(Transact-SQL)
 
@@ -433,49 +433,49 @@ DTU 기반 모델에 대한 MAXSIZE 값은 지정된 경우 지정된 서비스 
 
 **vCore 기반 모델**
 
-**범용 서비스 계층 - 4세대 계산 플랫폼(1부)**
+**범용 서비스 계층 - 4세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|GP_Gen4_1|GP_Gen4_2|GP_Gen4_3|GP_Gen4_4|GP_Gen4_5|GP_Gen4_6|
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|
 
-**범용 서비스 계층 - 4세대 계산 플랫폼(2부)**
+**범용 서비스 계층 - 4세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|GP_Gen4_7|GP_Gen4_8|GP_Gen4_9|GP_Gen4_10|GP_Gen4_16|GP_Gen4_24
 |:----- | ------: |-------: |-------: |-------: |-------: |--------:|
 |최대 데이터 크기(GB)|1536|3072|3072|3072|4096|4096|
 
-**범용 서비스 계층 - 5세대 계산 플랫폼(1부)**
+**범용 서비스 계층 - 5세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|GP_Gen5_2|GP_Gen5_4|GP_Gen5_6|GP_Gen5_8|GP_Gen5_10|GP_Gen5_12|GP_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**범용 서비스 계층 - 5세대 계산 플랫폼(2부)**
+**범용 서비스 계층 - 5세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|GP_Gen5_16|GP_Gen5_18|GP_Gen5_20|GP_Gen5_24|GP_Gen5_32|GP_Gen5_40|GP_Gen5_80|
 |:----- | ------: |-------: |-------: |-------: |--------: |---------:|--------: |
 |최대 데이터 크기(GB)|3072|3072|3072|4096|4096|4096|4096|
 
-**중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼(1부)**
+**중요 비즈니스용 서비스 계층 - 4세대 컴퓨팅 플랫폼(1부)**
 
 |성능 수준|BC_Gen4_1|BC_Gen4_2|BC_Gen4_3|BC_Gen4_4|BC_Gen4_5|BC_Gen4_6|
 |:--------------- | ------: |-------: |-------: |-------: |-------: |-------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
-**중요 비즈니스용 서비스 계층 - 4세대 계산 플랫폼(2부)**
+**중요 비즈니스용 서비스 계층 - 4세대 컴퓨팅 플랫폼(2부)**
 
 |성능 수준|BC_Gen4_7|BC_Gen4_8|BC_Gen4_9|BC_Gen4_10|BC_Gen4_16|BC_Gen4_24|
 |:--------------- | ------: |-------: |-------: |--------: |--------: |--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1024|1024|1024|
 
-**중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼(1부)**
+**중요 비즈니스용 서비스 계층 - 5세대 컴퓨팅 플랫폼(1부)**
 
 |MAXSIZE|BC_Gen5_2|BC_Gen5_4|BC_Gen5_6|BC_Gen5_8|BC_Gen5_10|BC_Gen5_12|BC_Gen5_14|
 |:----- | ------: |-------: |-------: |-------: |---------: |--------:|--------: |
 |최대 데이터 크기(GB)|1024|1024|1024|1536|1536|1536|1536|
 
-**중요 비즈니스용 서비스 계층 - 5세대 계산 플랫폼(2부)**
+**중요 비즈니스용 서비스 계층 - 5세대 컴퓨팅 플랫폼(2부)**
 
 |MAXSIZE|BC_Gen5_16|BC_Gen5_18|BC_Gen5_20|BC_Gen5_24|BC_Gen5_32|BC_Gen5_40|BC_Gen5_80|
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
@@ -624,7 +624,15 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. 단일 데이터베이스를 서비스 계층 S0(표준 버전, 성능 수준 0)으로 업데이트
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. 데이터 손실이 있는 지역 복제 보조 데이터베이스로 강제 장애 조치(failover)
+
+주 서버를 사용할 수 없는 경우 `secondaryserver` 서버에서 실행될 때 `secondaryserver` 서버에서 보조 데이터베이스 db1을 새로운 주 데이터베이스가 되도록 합니다. 이 옵션은 데이터 손실이 발생할 수 있습니다. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. 단일 데이터베이스를 서비스 계층 S0(표준 버전, 성능 수준 0)으로 업데이트
 성능 수준 S0 및 최대 크기 250GB인 단일 데이터베이스를 표준 버전(서비스 계층)으로 업데이트합니다.
 
 ```sql
@@ -932,13 +940,13 @@ AUTOGROW = { ON | OFF }
 AUTOGROW 옵션을 업데이트합니다. AUTOGROW가 켜진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이 스토리지 요구 사항의 증가를 수용할 필요에 따라 복제된 테이블, 분산된 테이블 및 트랜잭션 로그에 대해 할당된 공간을 자동으로 증가시킵니다. AUTOGROW가 꺼진 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]은 복제된 테이블이나 분산된 테이블 또는 트랜잭션 로그가 최대 크기 설정을 초과한 경우 오류를 반환합니다.
 
 REPLICATED_SIZE = *size* [GB]         
-변경되는 데이터베이스에 모든 복제된 테이블을 저장하기 위해 계산 노드당 최대 기가바이트를 새로 지정합니다. 어플라이언스 스토리지 공간을 계획하는 경우 어플라이언스에서 REPLICATED_SIZE에 계산 노드 수를 곱해야 합니다.
+변경되는 데이터베이스에 모든 복제된 테이블을 저장하기 위해 컴퓨팅 노드당 최대 기가바이트를 새로 지정합니다. 어플라이언스 스토리지 공간을 계획하는 경우 어플라이언스에서 REPLICATED_SIZE에 컴퓨팅 노드 수를 곱해야 합니다.
 
 DISTRIBUTED_SIZE = *size* [GB]        
-변경되는 데이터베이스에 모든 분산된 테이블을 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 계산 노드에 분산됩니다.
+변경되는 데이터베이스에 모든 분산된 테이블을 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 컴퓨팅 노드에 분산됩니다.
 
 LOG_SIZE = *size* [GB]         
-변경되는 데이터베이스에 모든 트랜잭션 로그를 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 계산 노드에 분산됩니다.
+변경되는 데이터베이스에 모든 트랜잭션 로그를 저장하기 위해 데이터베이스당 최대 기가바이트를 새로 지정합니다. 해당 크기는 어플라이언스의 모든 컴퓨팅 노드에 분산됩니다.
 
 ENCRYPTION { ON | OFF }         
 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)이 **1**로 설정된 경우 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 암호화를 구성할 수 있습니다. 투명한 데이터 암호화를 구성하기 전에 데이터베이스 암호화 키를 만들어야 합니다. 데이터 암호화에 대한 자세한 내용은 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
@@ -1047,7 +1055,7 @@ ALTER DATABASE CustomerSales
 
 ### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>2. 복제된 테이블에 대해 최대 스토리지 변경
 
-다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 계산 노드당 스토리지 용량 한도입니다.
+다음 예제에서는 데이터베이스 `CustomerSales`에 대해 복제된 테이블 스토리지 용량 한도를 1GB로 설정. 컴퓨팅 노드당 스토리지 용량 한도입니다.
 
 ```sql
 ALTER DATABASE CustomerSales
@@ -1056,7 +1064,7 @@ ALTER DATABASE CustomerSales
 
 ### <a name="c-altering-the-maximum-storage-for-distributed-tables"></a>C. 분산된 테이블에 대해 최대 스토리지 변경
 
- 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 스토리지 용량 한도를 1000GB(1테라바이트)로 설정합니다. 계산 노드당 스토리지 용량 한도가 아닌 모든 계산 노드에 대해 어플라이언스에서 결합된 스토리지 용량 한도입니다.
+ 다음 예제에서는 데이터베이스 `CustomerSales`에 대해 분산된 테이블 스토리지 용량 한도를 1000GB(1테라바이트)로 설정합니다. 컴퓨팅 노드당 스토리지 용량 한도가 아닌 모든 컴퓨팅 노드에 대해 어플라이언스에서 결합된 스토리지 용량 한도입니다.
 
 ```sql
 ALTER DATABASE CustomerSales

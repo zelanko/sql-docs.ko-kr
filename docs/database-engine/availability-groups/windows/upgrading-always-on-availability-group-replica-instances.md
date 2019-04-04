@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771349"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535855"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Always On AG(가용성 그룹)를 호스트하는 [!INCLUDE[ssNoVersion](../../.
   
 1.  모든 동기-커밋 복제본에서 자동 장애 조치(failover)를 제거합니다.  
   
-2.  비동기-커밋 보조 복제본을 실행하는 모든 원격 보조 복제본 인스턴스를 업그레이드합니다.  
+2.  모든 비동기-커밋 보조 복제본 인스턴스를 업그레이드합니다. 
   
-3.  현재 주 복제본을 실행하지 않는 모든 로컬 보조 복제본 인스턴스를 업그레이드합니다.  
+3.  모든 원격 비동기-커밋 보조 복제본 인스턴스를 업그레이드합니다. 
+
+4.  모든 로컬 비동기-커밋 보조 복제본 인스턴스를 업그레이드합니다. 
   
-4.  수동으로 AG를 로컬 동기-커밋 보조 복제본으로 장애 조치(failover)합니다.  
+4.  수동으로 AG를 새로 업그레이드된 로컬 동기-커밋 보조 복제본으로 장애 조치(failover)합니다.  
   
 5.  이전에 주 복제본을 호스팅한 로컬 복제본 인스턴스를 업그레이드 또는 업데이트합니다.  
   
-6.  자동 장애 조치(Failover) 파트너를 원하는 대로 구성합니다.  
+6.  자동 장애 조치(Failover) 파트너를 원하는 대로 구성합니다.
   
  필요한 경우 추가 수동 장애 조치(failover)를 수행하여 AG를 원래 구성으로 되돌릴 수 있습니다.  
+ 
+   > [!NOTE]
+   > - 동기-커밋 복제본을 업그레이드하고 오프라인으로 전환해도 주 복제본의 트랜잭션이 지연되지 않습니다. 보조 복제본의 연결이 해제되면 보조 복제본에서 로그가 강화될 때까지 기다리지 않고 트랜잭션이 복제복에서 커밋됩니다. 
+   > - `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`이 `1` 또는 `2`로 설정되면 업데이트 프로세스 중에 해당하는 수의 동기화 보조 복제복을 사용할 수 없는 경우 기본 복제본을 읽기/쓰기에 사용 못할 수도 있습니다. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>원격 보조 복제본 하나가 포함된 AG  
  재해 복구용으로만 AG를 배포한 경우 AG를 비동기-커밋 보조 복제본으로 장애 조치(failover)해야 할 수 있습니다. 다음 그림에서는 이 구성을 보여 줍니다.  

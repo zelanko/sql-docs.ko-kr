@@ -1,7 +1,7 @@
 ---
 title: 추적 플래그(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/10/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: c6a6d5e92c6aa5ab2a88606e829acba3c765276f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736838"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494205"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57736838"
 |**205**|통계 자동 업데이트의 결과로 통계 종속 저장 프로시저를 다시 컴파일하는 경우 오류 로그에 보고합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/195565)를 참조하세요.<br /><br />**범위**: 전역만|
 |**260**|확장 저장 프로시저 동적 연결 라이브러리(DLL)에 대한 버전 관리 정보를 인쇄합니다. **GetXpVersion()** 에 대한 자세한 내용은 [확장 저장 프로시저 만들기](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)를 참조하세요.<br /><br />**범위:** 전역 또는 세션|
 |**272**|서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 ID 열의 값 차이를 방지하기 위해 ID 사전 할당을 사용하지 않도록 설정합니다. ID 캐싱은 ID 열이 있는 테이블에서 INSERT 성능을 향상시키는 데 사용됩니다.<br /><br />**참고:** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 IDENTITY_CACHE 옵션을 참조하세요.<br /><br />**범위**: 전역만|
-|**460**|데이터 잘림 메시지 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999)를 메시지 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)로 바꿉니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4468101)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역 또는 세션|
+|**460**|데이터 잘림 메시지 ID [8152](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-8000-to-8999)를 메시지 ID [2628](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-2000-to-2999)로 바꿉니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/4468101)를 참조하세요.<br /><br />[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 VERBOSE_TRUNCATION_WARNINGS 옵션을 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU12 이상의 빌드에 적용됩니다.<br /><br />**참고:** 데이터베이스 호환성 수준이 150부터는 메시지 ID 2628이 기본값이며 이 추적 플래그는 아무런 영향을 받지 않습니다.<br /><br />**범위**: 전역 또는 세션|
 |**610**|인덱싱된 테이블에 최소한으로 기록된 삽입을 제어합니다. 인덱싱된 테이블에 대해 최소 로깅이 기본적으로 설정되므로 이 추적 플래그는 SQL Server 2016을 시작하는 데 필요하지 않습니다. SQL Server 2016에서 대량 로드 작업에 따라 새 페이지가 할당되는 경우, 최소 로깅에 대한 다른 모든 필수 조건이 충족되면 해당 새 페이지를 순차적으로 채우는 모든 행이 최소한으로 로그됩니다. 인덱스 순서를 유지하기 위해 기존 페이지(새 페이지 할당 없음)에 삽입된 행은 모두 로드 중에 페이지 분할의 결과로 이동되는 행과 마찬가지로 여전히 로그됩니다. 또한 할당 중에 페이지 잠금이 획득되어 페이지 또는 익스텐트 할당만 로그되므로 최소 로깅 작업을 위해 인덱스에 대해 ALLOW_PAGE_LOCKS를 ON으로 설정해야 합니다(기본적으로 ON임). 자세한 내용은 [데이터 로드 성능 가이드](https://msdn.microsoft.com/library/dd425070.aspx)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|
 |**634**|백그라운드 columnstore 압축 태스크를 해제합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 압축되지 않은 데이터가 있는 columnstore 인덱스 행 그룹을 한 번에 행 그룹 하나씩 압축하는 튜플 이동기 백그라운드 태스크를 정기적으로 실행합니다.<br /><br />Columnstore 압축은 쿼리 성능을 향상시키기도 하지만 시스템 리소스를 소모합니다. 634 추적 플래그로 백그라운드 압축 태스크를 사용하지 않도록 해제한 다음, 원하는 시점에 ALTER INDEX...REORGANIZE 또는 ALTER INDEX...REBUILD를 명시적으로 호출하여 columnstore 압축 시기를 수동으로 제어할 수 있습니다.<br /><br />**범위**: 전역만|
 |**652**|페이지 프리페치 검사를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역 또는 세션|
@@ -81,6 +81,7 @@ ms.locfileid: "57736838"
 |**2390**|오름차순 또는 알 수 없는 키에 대해 자동으로 생성되는 빠른 통계를 사용하도록 설정합니다(히스토그램 수정). 2390 추적 플래그가 설정되고 선행 통계 열이 오름차순 또는 알 수 없음으로 표시되면, 카디널리티를 추정하는 데 사용되는 히스토그램이 쿼리 컴파일 시간에 조정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상에 적용되지 않습니다. 대신 4139 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**2422**|REQUEST_MAX_CPU_TIME_SEC Resource Governor 구성에 설정된 최대 시간이 초과되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 요청을 중단할 수 있도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/help/4038419)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역|
 |**2430**|대체 잠금 클래스 정리를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2754301)를 참조하세요.<br /><br />**범위**: 전역만| 
+|**2451**|sys.dm_exec_query_plan_stats의 마지막 실제 실행 계획과 동등한 기능을 사용합니다.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만|  
 |**2453**|충분한 수의 행이 변경되면 테이블 변수에서 다시 컴파일을 트리거하도록 합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2952444)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**2467**|최소한의 할당된 스레드가 있는 노드를 기준으로, 대체 병렬 작업자 스레드 할당 정책을 사용합니다. 자세한 내용은 [병렬 쿼리 처리](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)를 참조하세요. 최대 작업자 스레드 수 서버 옵션 구성에 대한 내용은 [최대 작업자 스레드 수 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)을 참조하세요.<br /><br />**참고:** 쿼리 DOP(병렬 처리 수준)가 사용되는 이 대체 정책의 단일 노드에 맞춰 조정되어야 하거나, 기본 스레드 할당 정책이 대신 사용됩니다. 이 추적 플래그를 사용하면 단일 노드의 스케줄러 수를 초과하는 DOP를 지정하여 쿼리를 실행하지 않는 것이 좋습니다. 단일 노드의 스케줄러 수와 같거나 그보다 적은 DOP를 지정하여 쿼리를 방해할 수 있기 때문입니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역만|
 |**2469**|분할된 columnstore 인덱스로 `INSERT INTO ... SELECT`에 대한 대체 교환을 활성화합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3204769)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|

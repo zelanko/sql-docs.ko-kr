@@ -3,22 +3,39 @@ title: SQL Server 2019 CTP 2.0에서 외부 데이터 가상화 | Microsoft Docs
 description: 이 페이지에서는 CSV 파일에 대해 외부 테이블 만들기 마법사를 사용하는 단계를 자세히 설명합니다.
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405680"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512960"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV 파일과 함께 외부 테이블 마법사 사용
 
 또한 SQL Server 2019를 사용하면 HDFS의 CSV 파일에서 데이터를 가상화할 수 있습니다.  이 프로세스는 데이터가 원래 위치를 유지하도록 하지만 SQL Server의 다른 테이블처럼 쿼리될 수 있게 SQL Server 인스턴스에서 데이터를 **가상화**할 수 있습니다. 이 기능은 ETL 프로세스의 필요성을 최소화합니다. 이러한 효과는 Polybase 커넥터를 사용하여 얻을 수 있습니다. 데이터 가상화에 대한 자세한 내용은 [PolyBase 시작](polybase-guide.md) 문서를 참조하세요.
+
+## <a name="prerequisite"></a>사전 요구 사항
+
+CTP 2.4부터 데이터 풀 및 스토리지 풀 외부 데이터 원본은 더 이상 빅 데이터 클러스터에 기본적으로 생성되지 않습니다. 마법사를 사용하기 전에 다음 Transact-SQL 쿼리를 사용하여 대상 데이터베이스에 기본 **SqlStoragePool** 외부 데이터 원본을 만듭니다. 먼저 쿼리의 컨텍스트를 대상 데이터베이스로 변경해야 합니다.
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>외부 테이블 마법사 시작
 

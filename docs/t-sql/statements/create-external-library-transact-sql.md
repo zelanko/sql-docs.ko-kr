@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 49e0704f80105ef0f24cacef43dfdcfb52b053dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017889"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493294"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY(Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "57017889"
 R, Python 또는 Java 패키지 파일을 지정된 바이트 스트림 또는 파일 경로의 데이터베이스에 업로드합니다. 이 명령문은 데이터베이스 관리자가 새 외부 언어 런타임 및 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]에서 지원되는 OS 플랫폼에 필요한 아티팩트를 업로드하기 위한 일반 메커니즘의 역할을 합니다. 
 
 > [!NOTE]
-> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.3에서 지원됩니다. Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.4에서 지원됩니다.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019용 구문
@@ -48,7 +48,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    [, PLATFORM = <platform> ])  
 }  
 
 <client_library_specifier> :: = 
@@ -64,12 +64,19 @@ WITH ( LANGUAGE = <language> )
     | varbinary_expression 
 }
 
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
 <language> :: = 
 {
       'R'
     | 'Python'
     | 'Java'
 }
+
 ```
 ::: moniker-end
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -133,13 +140,20 @@ WITH ( LANGUAGE = 'R' )
 
 이 옵션은 라이브러리를 만들거나 기존 라이브러리를 변경해야 하지만(그리고 그렇게 하기 위해 필요한 권한을 가지고 있지만) 서버의 파일 시스템이 제한되어 라이브러리 파일을 서버가 액세스할 수 있는 위치에 복사할 수 없는 경우에 유용합니다.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 값은 기본적으로 SQL Server가 실행 중인 호스트 플랫폼입니다. 그러므로 사용자는 값을 지정하지 않아도 됩니다. 이는 여러 플랫폼이 지원되거나 사용자가 다른 플랫폼을 지정해야 하는 경우에 필요합니다. 
 
-현재 Windows 플랫폼만 지원됩니다.
-
+SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**플랫폼**
+
+라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 값은 기본적으로 SQL Server가 실행 중인 호스트 플랫폼입니다. 그러므로 사용자는 값을 지정하지 않아도 됩니다. 이는 여러 플랫폼이 지원되거나 사용자가 다른 플랫폼을 지정해야 하는 경우에 필요합니다.
+
+SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
+
 **language**
 
 패키지의 언어를 지정합니다. 값은 `R`, `Python` 또는 `Java`일 수 있습니다.
@@ -147,9 +161,12 @@ WITH ( LANGUAGE = 'R' )
 
 ## <a name="remarks"></a>Remarks
 
-R 언어의 경우 파일을 사용할 때 패키지를 Windows용 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다. 현재 Windows 플랫폼만 지원됩니다. 
-
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+R 언어의 경우 파일을 사용할 때 패키지를 Windows용 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다. SQL Server 2017에서는 Windows 플랫폼만 지원됩니다. 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+R 언어의 경우 파일을 사용할 때 패키지를 .ZIP 확장명의 압축된 보관 파일 형태로 준비해야 합니다.  
+
 Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관 파일 형태로 준비되어야 합니다. 패키지가 이미 .zip 파일이면 새 .zip 파일에 포함되어야 합니다. 패키지를 .whl 또는 .zip 파일로 직접 업로드하는 것은 현재 지원되지 않습니다.
 ::: moniker-end
 
@@ -157,11 +174,13 @@ Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관
 
 인스턴스에 업로드된 라이브러리는 공용 또는 개인일 수 있습니다. 라이브러리가 `dbo`의 멤버에 의해 만들어진 경우, 라이브러리는 공용이며 모든 사용자와 공유될 수 있습니다. 그렇지 않으면 라이브러리는 해당 사용자 개인 전용입니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 `CREATE EXTERNAL LIBRARY` 권한이 필요합니다. 기본적으로 **db_owner** 역할의 멤버인 **dbo**가 있는 사용자는 외부 라이브러리를 만들 수 있는 권한이 있습니다. 기타 모든 사용자의 경우, 권한으로 CREATE EXTERNAL LIBRARY를 지정하는 [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) 문을 사용하여 명시적으로 권한을 부여해야 합니다.
 
 라이브러리를 수정하려면 별도의 권한 `ALTER ANY EXTERNAL LIBRARY`가 필요합니다.
+
+파일 경로를 사용하여 외부 라이브러리를 만들려면 사용자는 Windows 인증 로그인이거나 sysadmin 고정 서버 역할의 멤버여야 합니다.
 
 ## <a name="examples"></a>예
 
@@ -279,6 +298,26 @@ EXEC sp_execute_external_script
     , @script = N'customJar.MyCLass.myMethod'
     , @input_data_1 = N'SELECT * FROM dbo.MyTable'
 WITH RESULT SETS ((column1 int))
+```
+
+### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. Windows 및 Linux용 외부 패키지 추가
+
+Windows용 하나와 Linux용 하나로 최대 두 개의 `<file_spec>`를 지정할 수 있습니다.
+
+```sql
+CREATE EXTERNAL LIBRARY lazyeval 
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.zip', PLATFORM = WINDOWS),
+(CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.tar.gz', PLATFORM = LINUX)
+WITH (LANGUAGE = 'R')
+```
+
+`sp_execute_external_script`를 사용하여 패키지를 설치할 때 SQL Server 인스턴스가 실행 중인 플랫폼에 따라 해당 플랫폼의 라이브러리 콘텐츠가 사용됩니다.
+
+```sql
+EXECUTE sp_execute_external_script 
+    @LANGUAGE = N'R',
+    @SCRIPT = N'
+library(packageA)
 ```
 ::: moniker-end
 

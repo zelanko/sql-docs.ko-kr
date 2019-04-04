@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2017의 버전과 지원하는 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/11/2017
+ms.date: 03/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974502"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566502"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,14 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|정의|  
 |---------------------------------------|----------------|  
-|Enterprise|프리미엄 제품인 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 버전에서는 초고속 성능, 무제한 가상화 및 엔드투엔드 비즈니스 인텔리전스 기능이 포함된 포괄적인 고성능 데이터 센터를 제공하여 중요한 워크로드의 서비스 수준을 높이고 데이터 인사이트에 대해 최종 사용자 액세스를 가능하게 합니다.|  
+|Enterprise|프리미엄 제품인 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 버전에서는 초고속 성능, 무제한 가상화<sup>1</sup> 및 엔드투엔드 비즈니스 인텔리전스 기능이 포함된 포괄적인 고성능 데이터 센터를 제공하여 중요한 워크로드의 서비스 수준을 높이고 데이터 인사이트에 대해 최종 사용자 액세스를 가능하게 합니다.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 버전에서는 부서와 소규모 조직이 애플리케이션을 실행하기 위한 기본 데이터 관리 및 비즈니스 인텔리전스 데이터베이스를 제공하고 온-프레미스 및 클라우드용 공용 개발 도구를 지원하여 최소한의 IT 리소스로 데이터베이스 관리를 효율적으로 사용하도록 설정합니다.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 애플리케이션도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express 버전:|Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 애플리케이션을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 애플리케이션을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB는 모든 프로그래밍 기능을 포함하지만 사용자 모드에서 실행되며 구성이 필요 없는 빠른 설치가 가능하고 필수 구성 요소가 적은 새로운 경량 버전의 Express입니다.|  
-  
+
+<sup>1</sup> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)를 사용하는 엔터프라이즈 고객을 위해 Enterprise Edition에서 무제한 가상화를 사용할 수 있습니다. 배포는 [라이선스 정책](https://www.microsoft.com/sql-server/sql-server-2017-pricing)을 준수해야 합니다.  
+
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>인터넷 서버에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  인터넷 정보 서비스(IIS)를 실행하는 서버와 같은 인터넷 서버에는 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다. 클라이언트 도구에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 연결하는 애플리케이션이 사용하는 클라이언트 연결 구성 요소가 포함됩니다.  
   
@@ -326,7 +328,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 
 <sup>2</sup> 고급 통합은 하드웨어 제한에 따라 모든 크기의 데이터 집합을 병렬 처리하기 위해 사용 가능한 모든 코어를 사용할 수 있습니다. 
 
-<sup>3</sup> 여러 계산 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
+<sup>3</sup> 여러 컴퓨팅 노드를 사용하는 확장에는 헤드 노드가 필요합니다.
 
 
 ## <a name="IS"></a> Integration Services

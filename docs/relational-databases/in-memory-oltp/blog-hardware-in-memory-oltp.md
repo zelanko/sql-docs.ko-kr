@@ -1,7 +1,7 @@
 ---
 title: SQL 메모리 내 OLTP용 하드웨어 | Microsoft 문서
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087593"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645445"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>SQL Server 2014의 메모리 내 OLTP에 대한 하드웨어 고려 사항
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server의 메모리 내 OLTP에 대한 하드웨어 고려 사항
 
 메모리 내 OLTP는 메모리 및 디스크를 기존 디스크 기반 테이블과 다른 방식으로 사용합니다. 사용하는 하드웨어에 따라 메모리 내 OLTP의 성능이 향상되는 수준이 달라집니다. 이 블로그 게시물에서는 다양한 일반 하드웨어 고려 사항을 설명하고, 하드웨어를 메모리 내 OLTP에 사용하기 위한 일반 지침을 제공합니다.
 
 > [!NOTE]
-> 이 문서는 Microsoft SQL Server 2014 팀이 2013년 8월 1일에 올린 블로그 게시물입니다. 이 블로그 웹 페이지는 곧 사용 중지될 예정되며 이 문서는 블로그 텍스트를 간략하게 캡처한 것입니다. 블로그로 연결하는 데 사용된 설명서 문서는 이제 이 문서로 연결됩니다. 이 문서는 계속 유지되지 않습니다. 이 문서는 목차에서 제외될 수 있습니다.
-> 
+> 이 문서는 Microsoft SQL Server 2014 팀이 2013년 8월 1일에 올린 블로그 게시물입니다. 블로그 웹 페이지가 제거됩니다.
+>
 > [SQL Server 메모리 내 OLTP](index.md)
 
 <!--
@@ -32,7 +32,7 @@ ms.locfileid: "55087593"
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +47,7 @@ ms.locfileid: "55087593"
 지정된 메모리 최적화 테이블에서 메모리를 얼마나 사용하는지 확인하려면 다음 쿼리를 실행합니다.
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 결과를 보면 메모리 최적화 테이블과 해당 인덱스에 사용되는 메모리 양을 알 수 있습니다. 테이블 데이터에는 사용자 데이터뿐 아니라 실행 중인 트랜잭션에 필요하거나 시스템에서 아직 정리하지 않은 이전 행 버전이 포함됩니다. 해시 인덱스에서 사용하는 메모리는 상수이며 테이블의 행 수에 종속되지 않습니다.
@@ -74,3 +74,6 @@ NDT(비영구 메모리 최적화 테이블), 즉, DURABILITY=SCHEMA_ONLY인 메
 
 디스크 용량 측면에서는 메모리 최적화 테이블의 2-3배 크기를 권장합니다.
 
+## <a name="see-also"></a>관련 항목:
+
+[메모리 내 OLTP에 대한 예제 데이터베이스](sample-database-for-in-memory-oltp.md)

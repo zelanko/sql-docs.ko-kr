@@ -17,12 +17,12 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 684df573eba24e9e0337f33f17b8507523b199e3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699449"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657987"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -30,12 +30,12 @@ ms.locfileid: "51699449"
 
 이 페이지에서는 각 SQL Server 구성 요소에 대해 SQL Server 2016의 새로운 기능에 대한 자세한 정보를 확인할 수 있는 요약 정보 및 링크를 제공합니다. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **SQL Server를 지금 사용해 보세요.** 
 - **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
 - 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
-- Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 머신](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)을 설정하세요.
+- Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 머신](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)을 설정하세요.
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 데이터베이스 엔진
 - 이제 SQL Server 설치 및 설정 중에 **여러 tempDB** 데이터베이스 파일을 구성할 수 있습니다.
@@ -49,9 +49,9 @@ ms.locfileid: "51699449"
     - 최대 2TB 테이블을 지원합니다(256GB부터). 
     - 정렬 및 Always On 가용성 그룹 지원을 위한 향상된 열 저장 인덱스가 있습니다.
 - 새 보안 기능:
-    - **Always Encrypted:** 이 기능을 사용하면 암호화 키가 있는 응용 프로그램에서만 SQL Server 2016 데이터베이스의 암호화된 중요 데이터를 액세스할 수 있습니다. 이 키는 SQL Server에 전달되지 않습니다.
+    - **Always Encrypted:** 이 기능을 사용하면 암호화 키가 있는 애플리케이션에서만 SQL Server 2016 데이터베이스의 암호화된 중요 데이터에 액세스할 수 있습니다. 이 키는 SQL Server에 전달되지 않습니다.
     - **동적 데이터 마스킹:** 테이블 정의에 지정된 경우, 마스킹된 데이터가 대부분의 사용자로부터 숨겨지고 UNMASK 권한이 있는 사용자만 완전한 데이터를 볼 수 있습니다.
-    - **행 수준 보안:** 데이터 액세스를 데이터베이스 엔진 수준에서 제한할 수 있으므로 사용자가 관련된 항목만 것만 볼 수 있습니다. 
+    - **행 수준 보안:** 데이터 액세스를 데이터베이스 엔진 수준에서 제한할 수 있으므로 사용자는 자신과 관련된 항목만 볼 수 있습니다. 
 
 [데이터베이스 엔진](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)을 참조하세요.
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SSAS(SQL Server 2016 Analysis Services)

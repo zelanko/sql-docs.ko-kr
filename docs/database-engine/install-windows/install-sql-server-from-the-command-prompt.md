@@ -85,12 +85,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a0aa770bfbf3486dedf045b6a6da3f88c89bbade
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: bc2d05b54added3ac8ce57746eb89cbd9d1efd8d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976437"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537425"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -185,7 +185,7 @@ ms.locfileid: "57976437"
 -   [/FAILOVERCLUSTERROLLOWNERSHIP 매개 변수를 사용하여 장애 조치 동작 제어](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#RollOwnership)  
   
 -   [Instance ID 또는 InstanceID 구성](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#InstanceID) 
-  
+
 ##  <a name="Install"></a> 설치 매개 변수  
  다음 표에 나와 있는 매개 변수를 사용하여 설치 명령줄 스크립트를 개발할 수 있습니다.  
   
@@ -263,8 +263,8 @@ ms.locfileid: "57976437"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
-|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
@@ -371,8 +371,8 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
-|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다. 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
 |SQL Server 네트워크 구성|/NPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 명명된 파이프 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = 명명된 파이프 프로토콜 해제<br /><br /> 1 = 명명된 파이프 프로토콜을 사용하도록 설정|  
 |SQL Server 네트워크 구성|/TCPENABLED<br /><br /> **선택 사항**|SQL Server 서비스의 TCP 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = TCP 프로토콜 해제<br /><br /> 1 = TCP 프로토콜을 사용하도록 설정|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다.|  
@@ -576,8 +576,8 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **선택 사항**|사용자 데이터베이스의 로그 파일에 대한 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> **FILESTREAMLEVEL이 1보다 큰 경우 필수입니다.**|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
-|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
@@ -636,8 +636,8 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **선택 사항**|FILESTREAM 기능의 액세스 수준을 지정합니다. 지원되는 값:<br /><br /> 0 = 이 인스턴스에 대한 FILESTREAM 지원을 해제합니다. (기본값)<br /><br /> 1 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정합니다.<br /><br /> 2 = [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 파일 I/O 스트리밍 액세스에 FILESTREAM을 사용하도록 설정합니다. (클러스터 시나리오에는 적합하지 않습니다)<br /><br /> 3 = 원격 클라이언트가 FILESTREAM 데이터에 대한 스트리밍 액세스 권한을 가질 수 있도록 허용합니다.|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **선택 사항**<br /><br /> FILESTREAMLEVEL이 1보다 큰 경우 **필수**입니다.|FILESTREAM 데이터가 저장될 Windows 공유의 이름을 지정합니다.|  
-|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
-|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]에서 무시됩니다.|  
+|SQL Server 전체 텍스트|/FTSVCACCOUNT<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 계정을 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다. ServiceSID는 SQL Server와 전체 텍스트 필터 데몬 간 통신의 보안을 유지하는 데 도움을 주기 위해 사용됩니다.<br /><br /> 값이 제공되지 않으면 전체 텍스트 필터 시작 관리자 서비스를 사용할 수 없습니다. 서비스 계정을 변경하고 전체 텍스트 기능을 사용하려면 SQL Server 제어 관리자를 사용해야 합니다.<br /><br /> 기본값: Local Service Account|  
+|SQL Server 전체 텍스트|/FTSVCPASSWORD<br /><br /> **선택 사항**|전체 텍스트 필터 시작 관리자 서비스의 암호를 지정합니다.<br /><br /> 이 매개 변수는 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 이상에서 무시됩니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 계정을 지정합니다.<br /><br /> 기본값: NT AUTHORITY\NETWORK SERVICE|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 암호를 지정합니다.|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  

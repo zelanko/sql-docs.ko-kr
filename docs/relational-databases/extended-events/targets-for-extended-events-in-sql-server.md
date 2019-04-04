@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6f5eeb47852da17222c8c749bf7c83c1435ccf5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680261"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478138"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -38,7 +39,7 @@ ms.locfileid: "47680261"
 ### <a name="prerequisites"></a>사전 요구 사항
 
 
-- [빠른 시작: SQL Server에서 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다.
+- [빠른 시작에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다. SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)를 참조하세요.
 
 
 - 자주 업데이트되는 유틸리티 SQL Server Management Studio(SSMS.exe)의 최신 버전이 설치되어 있어야 합니다. 자세한 내용은 다음을 참조하세요.

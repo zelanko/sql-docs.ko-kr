@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 24c7a50845e4adb416251f25909c438d1bd4990d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27e7285fe95307c6ce6308dc27e0076146e86223
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394757"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657767"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>SQL Server 2005, 2008 또는 2008R2에서 업그레이드하나요?
 
@@ -41,7 +41,7 @@ ms.locfileid: "52394757"
   
 |관계형 스토리지 옵션|이점|고려할 기타 요소|  
 |-------------------------------|--------------|-------------------------------|  
-|**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 애플리케이션의 경우 이 옵션을 고려합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server의 이전 인스턴스에서 업그레이드하는 경우 이 환경이 가장 유사합니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.<br /><br /> 자세한 내용은 [SQL Server](https://www.microsoft.com/server-cloud/products/sql-server-2017/)를 참조하세요.|  
+|**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 애플리케이션의 경우 이 옵션을 고려합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server의 이전 인스턴스에서 업그레이드하는 경우 이 환경이 가장 유사합니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.<br /><br /> 자세한 내용은 [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.|  
 |**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음 이점을 원하는 경우 이 옵션을 선택하는 것이 좋습니다.<br /><br /> 호스트된 환경으로 마이그레이션하는 경우의 이점<br /><br /> 운영 환경에 대한 제어<br /><br /> 익숙한 SQL Server 기능 집합|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.<br /><br /> <br /><br /> 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|  
 |**Azure SQL 데이터베이스에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 스토리지뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL Database의 최대 데이터베이스 크기는 4TB인 반면 SQL Server의 경우에는 524PB입니다. 자세한 내용은 [단일 데이터베이스에 대한 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)을 참조하세요.<br /><br /> SQL Database에 대한 자세한 내용은 [Azure SQL Database 개요](https://azure.microsoft.com/services/sql-database/) 및 [Azure SQL Database 설명서](https://docs.microsoft.com/azure/sql-database/)를 참조하세요.<br /><br /> 마이그레이션에 대한 자세한 내용은 [Azure SQL 데이터베이스로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)을 참조하세요.|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52394757"
 |비관계형 솔루션|이점|  
 |------------------------------|--------------|  
 |**Azure Cosmos DB**<br /><br /> JSON 데이터를 사용하고 강력한 쿼리와 트랜잭션 데이터 처리를 함께 필요로 하는 확장 가능한 최신 모바일 및 웹 애플리케이션의 경우 이 옵션을 사용합니다.<br /><br /> 자세한 내용은 [Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)를 참조하세요.<br /><br /> 데이터 가져오기에 대한 자세한 내용은 [Cosmos DB에 데이터 가져오기](https://docs.microsoft.com/azure/cosmos-db/import-data/)를 참조하세요.|문서는 인덱싱되며 익숙한 SQL 구문을 사용하여 문서를 쿼리할 수 있습니다.<br /><br /> 데이터베이스는 스키마 없는 데이터베이스입니다.<br /><br /> 인덱스를 다시 작성하지 않고도 문서에 속성을 추가할 수 있습니다.<br /><br /> 데이터베이스 엔진 내에서 직접 JSON 및 JavaScript 지원을 이용합니다.<br /><br /> Azure 검색, HDInsight, Data Factory 등 다른 Azure 서비스와의 통합 및 지리 공간적 데이터에 대한 기본 지원을 이용합니다.<br /><br /> 예약된 처리량 수준을 통해 대기 시간이 짧은 고성능 스토리지를 사용합니다.|  
-|**Azure 테이블 저장소**<br /><br /> 비용 효율적인 솔루션에서 페타바이트 규모의 반구조적 데이터를 저장하려면 이 옵션을 고려합니다.<br /><br /> 자세한 내용은 [테이블 스토리지](https://azure.microsoft.com/services/storage/tables/)를 참조하세요.|데이터를 오프라인으로 전환하지 않고도 앱과 테이블 스키마를 개발할 수 있습니다.<br /><br /> 데이터 세트를 분할하지 않고도 확장할 수 있습니다.<br /><br /> 여러 지역에 걸쳐 데이터를 복제하는 지역 중복 스토리지를 사용합니다.|  
+|**Azure 테이블 스토리지**<br /><br /> 비용 효율적인 솔루션에서 페타바이트 규모의 반구조적 데이터를 저장하려면 이 옵션을 고려합니다.<br /><br /> 자세한 내용은 [테이블 스토리지](https://azure.microsoft.com/services/storage/tables/)를 참조하세요.|데이터를 오프라인으로 전환하지 않고도 앱과 테이블 스키마를 개발할 수 있습니다.<br /><br /> 데이터 세트를 분할하지 않고도 확장할 수 있습니다.<br /><br /> 여러 지역에 걸쳐 데이터를 복제하는 지역 중복 스토리지를 사용합니다.|  
   
 ## <a name="plan-your-upgrade"></a>업그레이드 계획  
   

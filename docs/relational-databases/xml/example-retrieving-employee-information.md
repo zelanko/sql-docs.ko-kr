@@ -1,5 +1,5 @@
 ---
-title: '예제: 직원 정보 검색 | Microsoft 문서'
+title: '예: 직원 정보 검색 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699091"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510330"
 ---
-# <a name="example-retrieving-employee-information"></a>예제: 직원 정보 검색
+# <a name="example-retrieving-employee-information"></a>예: 직원 정보 검색
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   이 예에서는 각 직원에 대한 직원 ID와 직원 이름을 검색합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 employeeID는 Employee 테이블의 BusinessEntityID 열로부터 가져올 수 있습니다. 직원 이름은 Person 테이블로부터 가져올 수 있습니다. BusinessEntityID 열을 사용하면 테이블을 조인할 수 있습니다.  
   
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  다음은 결과의 일부입니다.  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  첫 번째 `SELECT` 는 결과 행 집합에 대해 열 이름을 지정합니다. 이러한 이름은 두 개의 열 그룹을 형성합니다. 열 이름에서 `Tag` 값이 `1`인 그룹은 `Employee`를 요소로, `EmpID`는 특성으로 식별합니다. 다른 열 그룹에는 열에 `Tag` 값 `2`가 있으며 <`Name`>을 요소로, `FName` 및 `LName`은 특성으로 식별합니다.  
   
  다음 테이블은 쿼리에 의해 생성된 부분 행 집합을 보여 줍니다.  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+태그 | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+... | ... | ... | ... | ...
   
  이 테이블은 범용 테이블의 행을 처리하여 결과 XML 트리를 생성하는 방법을 보여 줍니다.  
   

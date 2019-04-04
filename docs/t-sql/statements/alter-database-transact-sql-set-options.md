@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494435"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -455,11 +455,13 @@ DATE_CORRELATION_OPTIMIZATION을 ON으로 설정하려면 ALTER DATABASE 문을 
 
 데이터베이스 암호화 상태를 제어합니다.
 
-ENCRYPTION {ON | OFF} 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
+ENCRYPTION {ON | OFF | SUSPEND | RESUME} 데이터베이스를 암호화하거나(ON) 암호화하지 않도록(OFF) 설정합니다. 데이터베이스 암호화에 대한 자세한 내용은 [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md) 및 [Azure SQL Database를 사용한 투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)를 참조하세요.
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상에서는 SUSPEND 및 RESUME 옵션을 사용하여 TDE를 활성화하거나 비활성한 후, 또는 암호화 키를 변경한 후 암호화 검사를 일시 중지했다가 다시 시작할 수 있습니다.
 
 데이터베이스 수준에서 암호화를 사용할 수 있으면 모든 파일 그룹이 암호화됩니다. 새로운 파일 그룹은 암호화된 속성을 상속합니다. 데이터베이스의 파일 그룹이 **READ ONLY**로 설정되면 데이터베이스 암호화 작업이 실패합니다.
 
-[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하면 데이터베이스의 암호화 상태를 확인할 수 있습니다.
+[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하여 데이터베이스의 암호화 상태와 암호화 검사 상태를 확인할 수 있습니다.
 
 **\<db_state_option> ::=**
 

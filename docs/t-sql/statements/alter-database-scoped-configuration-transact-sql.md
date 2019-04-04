@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974392"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493786"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -43,11 +43,12 @@ ms.locfileid: "57974392"
 - 데이터베이스 수준에서 ID 캐시를 사용하거나 사용하지 않도록 설정합니다.
 - 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 사용하거나 사용하지 않도록 설정합니다.
 - 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
-- ONLINE= 구문을 지원하지 않는 DDL 문에 기본적으로 온라인 옵션을 활성화 또는 비활성화합니다.
-- RESUMABLE= 구문을 지원하지 않는 DDL 문에 기본적으로 다시 시작 가능 옵션을 활성화 또는 비활성화합니다.
-- 글로벌 임시 테이블의 자동 삭제 기능을 활성화하거나 비활성화합니다. 
+- `ONLINE =` 구문을 지원하는 DDL 문에 기본적으로 온라인 옵션을 활성화 또는 비활성화합니다.
+- `RESUMABLE =` 구문을 지원하는 DDL 문에 기본적으로 다시 시작 가능 옵션을 활성화 또는 비활성화합니다.
+- 글로벌 임시 테이블의 자동 삭제 기능을 활성화하거나 비활성화합니다.
 - [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능을 활성화하거나 비활성화합니다.
 - [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화합니다.
+- 새 `String or binary data would be truncated` 오류 메시지를 활성화하거나 비활성화합니다.
 
 ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
+**적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
-데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 T-SQL Scalar UDF 인라인을 활성화하거나 비활성화할 수 있습니다. [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부 기능을 인라인하는 T-SQL Scalar UDF.
+데이터베이스 호환성 수준 150 이상을 유지하면서 데이터베이스 범위에서 T-SQL Scalar UDF 인라인을 활성화하거나 비활성화할 수 있습니다. T-SQL Scalar UDF 인라인은 [인텔리전트 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능 제품군의 일부입니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -292,7 +294,21 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화할 수 있습니다. LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커니즘보다 쿼리 성능 데이터를 더 효율적으로 제공하며 기본적으로 활성화되어 있습니다.
 
-## <a name="Permissions"></a> Permissions
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**적용 대상:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+새 `String or binary data would be truncated` 오류 메시지를 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+데이터베이스 호환성 수준 150에서 ON으로 설정하면 잘림 오류로 인해 더 많은 컨텍스트를 제공하고 문제 해결 프로세스를 간소화하기 위해 오류 메시지 2628이 발생합니다.
+
+데이터베이스 호환성 수준 150 OFF로 설정하면 잘림 오류로 인해 이전 오류 메시지 8152가 발생합니다.
+
+데이터베이스 호환성 수준 140 이하의 경우 오류 메시지 2628은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460을 사용하도록 설정해야 하는 옵트인 오류 메지시로 남아 있으며, 이 데이터베이스 범위 구성에 영향을 주지 않습니다.
+
+## <a name="Permissions"></a> 사용 권한
 
 데이터베이스에 `ALTER ANY DATABASE SCOPE CONFIGURATION`이 필요합니다. 이 사용 권한은 데이터베이스에서 CONTROL 권한이 있는 사용자에 의해 부여될 수 있습니다.
 

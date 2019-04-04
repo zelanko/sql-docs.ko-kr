@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 86609c0cb3e66397c4c8c8f3a09fba64b14089e4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018019"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492825"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "57018019"
 기존 패키지 라이브러리를 삭제합니다. 패키지 라이브러리는 지원되는 외부 런타임(예: R, Python 또는 Java)에서 사용합니다.
 
 > [!NOTE]
-> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.3에서 지원됩니다. Linux에 대한 지원은 후속 릴리스에서 계획되어 있습니다.
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.4에서 지원됩니다. 
 
 ## <a name="syntax"></a>구문
 
@@ -53,7 +53,7 @@ DROP EXTERNAL LIBRARY library_name
 
 데이터베이스 소유자는 다른 사용자가 만든 라이브러리를 삭제할 수 있습니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 라이브러리를 삭제하려면 ALTER ANY EXTERNAL LIBRARY 권한이 필요합니다. 기본적으로 모든 데이터베이스 소유자 또는 개체 소유자는 외부 라이브러리도 삭제할 수 있습니다.
 

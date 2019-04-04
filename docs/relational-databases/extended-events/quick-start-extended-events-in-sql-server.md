@@ -1,25 +1,26 @@
 ---
-title: '빠른 시작: SQL Server의 확장 이벤트 | Microsoft 문서'
+title: '빠른 시작: SQL Server의 확장 이벤트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658352"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478238"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
+# <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -124,7 +125,7 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
     - **형식** 드롭다운 목록에서 **event_file**을 선택합니다.
     - 즉, 사용자가 볼 수 있는 파일에 이벤트 데이터가 저장됩니다.
 
-    ![새 세션 > 데이터 저장소 > 대상 > 유형 > event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
+    ![새 세션 &gt; 데이터 스토리지 &gt; 대상 &gt; 유형 &gt; event_file](../../relational-databases/extended-events/media/xevents-session-newsessions-30-datastorage-ssms-yoursessionnode.png)
 
 11. **속성** 영역의 **서버의 파일 이름** 입력란에 전체 경로 및 파일 이름을 입력합니다.
     - 파일 이름 확장명은 *.xel*이어야 합니다.
@@ -426,7 +427,7 @@ SSMS **개체 탐색기**에서 이벤트 세션 노드를 마우스 오른쪽 �
 
 | 용어 | 설명 |
 | :--- | :---------- |
-| 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요. |
+| 이벤트 세션 | 하나 이상의 이벤트와 동작 및 대상 등 지원되는 항목에 대한 구성입니다. CREATE EVENT SESSION 문은 각 이벤트 세션을 생성합니다. 이벤트 세션이 원하는 대로 시작 및 중지되도록 변경할 수 있습니다. <br/> <br/> 이벤트 세션을 *세션*이라고 하는 경우도 있으며 컨텍스트상 구분이 필요한 경우에는 *이벤트 세션*이라고 합니다. <br/> <br/> 이벤트 세션에 대한 자세한 내용은 다음에서 설명되어 있습니다. [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | 이벤트 | 활성 이벤트 세션에서 감시하는 시스템의 특정 항목입니다. <br/> <br/> 예를 들어 *sql_statement_completed* 이벤트는 지정한 T-SQL 문이 완료되는 시점을 나타냅니다. 이벤트는 지속 시간 및 기타 데이터를 보고할 수 있습니다. |
 | target | 캡처한 이벤트에서 출력 데이터를 수신하는 항목입니다. 대상은 데이터를 표시합니다. <br/> <br/> 예제에는 *event_file*및 간편한 메모리 *ring_buffer*가 있습니다. 조금 더 복잡한 *histogram* 대상은 표시하기 전에 데이터를 일부 처리합니다. <br/> <br/> 모든 대상을 모든 이벤트 세션에 대해 사용할 수 있습니다. 자세한 내용은 [SQL Server에서 확장 이벤트에 대한 대상](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)을 참조하세요. |
 | action | 이벤트에 알려진 필드입니다. 필드의 데이터가 대상으로 전송됩니다. 작업 필드는 *조건자 필터*와 밀접한 관련이 있습니다. |
@@ -485,7 +486,7 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="sql-trace-event-classes-with-extended-events"></a>SQL 추적 이벤트 클래스 및 확장 이벤트
 
 
-SQL 추적 이벤트 클래스 및 열에서 확장 이벤트 사용에 대한 설명은 [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)을 참조하세요.
+SQL 추적 이벤트 클래스 및 열과 함께 확장 이벤트를 사용하는 설명은 다음에서 제공합니다. [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ SQL Server는 몇 가지 확장 이벤트를 기본으로 제공합니다. 이 �
 ### <a name="powershell-provider-for-extended-events"></a>확장 이벤트에 대한 PowerShell 공급자
 
 
-SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 관리할 수 있습니다. 자세한 내용은 [확장 이벤트에 PowerShell 공급자 사용](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)을 참조하세요.
+SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 관리할 수 있습니다. 자세한 내용은 다음을 참조하세요. [확장 이벤트에 PowerShell 공급자 사용](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>확장 이벤트에 대한 시스템 뷰
@@ -554,7 +555,7 @@ SQL Server PowerShell 공급자를 사용하여 SQL Server 확장 이벤트를 �
 
 
 <a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>부록: 사용 권한 소유자를 확인하기 위한 SELECT
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>부록: 사용 권한 소유자를 미리 확인하기 위한 SELECT
 
 
 이 문서에 언급된 사용 권한은 다음과 같습니다.

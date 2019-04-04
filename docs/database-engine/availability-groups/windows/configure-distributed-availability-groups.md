@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215369"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566562"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>분산 Always On 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-분산 가용성 그룹을 만들려면 각 WSFC(Windows Server 장애 조치 클러스터)에서 가용성 그룹 및 수신기를 만들어야 합니다. 그런 다음 이러한 가용성 그룹을 분산 가용성 그룹으로 결합해야 합니다. 다음 단계는 TRANSACT-SQL에서의 기본 예제를 제공합니다. 이 예제에서는 가용성 그룹 및 수신기를 만드는 데 관련된 자세한 내용을 다루지 않는 대신 주요 요구 사항을 집중적으로 다루고 있습니다. 
+분산형 가용성 그룹을 만들려면 각각의 자체 수신기를 사용하여 두 개의 가용성 그룹을 만들어야 합니다. 그런 다음 이러한 가용성 그룹을 분산 가용성 그룹으로 결합해야 합니다. 다음 단계는 TRANSACT-SQL에서의 기본 예제를 제공합니다. 이 예제에서는 가용성 그룹 및 수신기를 만드는 데 관련된 자세한 내용을 다루지 않는 대신 주요 요구 사항을 집중적으로 다루고 있습니다.
 
-분산 가용성 그룹에 대한 기술적 개요는 [분산 가용성 그룹](distributed-availability-groups.md)을 참조하세요.   
+분산 가용성 그룹에 대한 기술적 개요는 [분산 가용성 그룹](distributed-availability-groups.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 엔드포인트 수신기를 설정합니다.
 
-엔드포인트에서 분배 가용성 그룹의 서로 다른 가용성 그룹 간에 통신할 수 있는지 확인합니다. 하나의 가용성 그룹이 엔드포인트의 특정 네트워크로 설정되면 분산 가용성 그룹이 제대로 작동하지 않습니다. 분산 가용성 그룹에서 복제본을 호스팅하는 각 서버에서 수신기를 `LISTENER_IP = ALL`로 구성합니다. 
+엔드포인트에서 분배 가용성 그룹의 서로 다른 가용성 그룹 간에 통신할 수 있는지 확인합니다. 하나의 가용성 그룹이 엔드포인트의 특정 네트워크로 설정되면 분산 가용성 그룹이 제대로 작동하지 않습니다. 분산 가용성 그룹에서 복제본을 호스팅하는 각 서버에서 수신기가 모든 IP 주소(`LISTENER_IP = ALL`)를 수신 대기하도록 설정합니다.
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>모든 IP 주소를 수신 대기하도록 수신기 만들기
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>첫 번째 가용성 그룹 만들기
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>첫 번째 클러스터에 주 가용성 그룹 만들기  
-첫 WSFC에 주 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다. 기본 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전역 기본**이라고 합니다. Server1은 이 예제의 전역 기본입니다.        
+첫 번째 WSFC(Windows Server Failover Cluster)에서 가용성 그룹을 만듭니다.   이 예제에서 `ag1` 데이터베이스에 대한 가용성 그룹 이름은 `db1`입니다. 기본 가용성 그룹의 주 복제본을 분산 가용성 그룹에서 **전역 기본**이라고 합니다. Server1은 이 예제의 전역 기본입니다.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -205,15 +205,23 @@ GO
 ```  
 
 ## <a name="failover"></a> 두 번째 가용성 그룹의 보조에 있는 데이터베이스 조인
-두 번째 가용성 그룹의 보조 부분에 있는 데이터베이스가 복원 상태로 전환된 후 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
+두 번째 가용성 그룹의 보조 복제본에 있는 데이터베이스가 복원 상태로 전환된 후 해당 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> 보조 가용성 그룹에 대한 장애 조치(failover)  
-이 경우에는 수동 장애 조치(failover)만 지원됩니다. 다음 Transact-SQL 문은 `distributedag`라는 이름의 분산 가용성 그룹을 장애 조치(failover)합니다.  
 
+이 경우에는 수동 장애 조치(failover)만 지원됩니다. 분산 가용성 그룹을 수동으로 장애 조치(failover)하려면 다음을 수행합니다.
+
+1. 데이터가 손실되지 않도록 하려면 분산 가용성 그룹을 동기 커밋으로 설정합니다.
+1. 분산 가용성 그룹이 동기화될 때까지 기다립니다.
+1. 글로벌 기본 복제본에서 분산 가용성 그룹 역할을 `SECONDARY`로 설정합니다.
+1. 장애 조치(failover) 준비 상태를 테스트합니다.
+1. 기본 가용성 그룹을 장애 조치(failover)합니다.
+
+다음 Transact-SQL 예제에서는 `distributedag`라는 분산 가용성 그룹을 장애 조치(failover)하는 자세한 단계를 보여줍니다.
 
 1. 전역 기본 및 전달자 *모두*에서 다음 코드를 실행하여 분산 가용성 그룹을 동기 커밋으로 설정합니다.   
     
@@ -242,8 +250,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
       ```  
    >[!NOTE]
-   >일반 가용성 그룹과 마찬가지로 분산된 가용성 그룹의 두 가용성 그룹 복제본 부분 간에 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 예를 들어 동기 커밋이 발생할 경우 현재 주 가용성 그룹 및 보조 가용성 그룹은 모두 동기 커밋 가용성 모드로 구성되어야 합니다.  
-
+   >분산 가용성 그룹에서 두 가용성 그룹 간의 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 동기 커밋 모드의 경우 현재 기본 가용성 그룹과 현재 보조 가용성 그룹 모두 `SYNCHRONOUS_COMMIT` 가용성 모드가 있어야 합니다. 이러한 이유로 글로벌 기본 복제본과 전달자 모두에서 위의 스크립트를 실행해야 합니다.
 
 1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`으로 변경될 때까지 대기합니다. 기본 가용성 그룹의 주 복제본인 전역 기본에서 다음 쿼리를 실행합니다. 
     

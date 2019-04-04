@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658882"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478168"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>SQL Server 확장 이벤트의 대상 데이터 고급 보기
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -91,7 +92,7 @@ SSMS UI에 event_file 대상 데이터를 가져오는 방법에는 여러 가�
 
 
 - 시스템은 이벤트 세션이 시작될 때마다 새 파일 이름에 큰 정수를 포함하여 세션이 시작되기 이전의 경우와 다른 고유한 파일 이름을 지정합니다.
-  - *예:* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *예제:* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - .XEL 내의 내용은 Notepad.exe를 사용하여 볼 수 있는 일반 텍스트가 아닙니다.
@@ -173,7 +174,7 @@ SSMS UI의 탭 모음으로 .XEL 파일을 끌어서 놓을 수도 있습니다.
 
 
 
-## <a name="c-export-the-target-data"></a>3. 대상 데이터 내보내기
+## <a name="c-export-the-target-data"></a>C. 대상 데이터 내보내기
 
 
 SSMS에서 대상 데이터를 추가한 후에 다음을 수행하여 다양한 형식으로 데이터를 내보낼 수 있습니다.
@@ -189,7 +190,7 @@ SSMS에서 대상 데이터를 추가한 후에 다음을 수행하여 다양한
 
 
 
-## <a name="d-manipulate-data-in-the-display"></a>4. 표시되는 데이터 조작
+## <a name="d-manipulate-data-in-the-display"></a>D. 표시되는 데이터 조작
 
 
 SSMS UI는 단순히 데이터를 보는 것 외에 데이터를 조작하는 여러 방법을 제공합니다.

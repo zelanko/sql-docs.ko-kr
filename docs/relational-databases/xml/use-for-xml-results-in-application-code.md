@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be1c2f24083d86ee03156617acaa8c18b903fed0
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670471"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510720"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -171,7 +171,7 @@ ms.locfileid: "51670471"
   
 -   **Brands:** 3  
   
--   **Internet:** DSL  
+-   **인터넷:** DSL  
   
 -   **NumberEmployees:** 40  
   

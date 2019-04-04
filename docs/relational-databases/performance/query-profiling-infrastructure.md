@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889984"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645565"
 ---
 # <a name="query-profiling-infrastructure"></a>쿼리 프로파일링 인프라
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 모든 실행의 행 수 정보를 수집하는 수정된 버전의 간단한 프로파일링이 포함되어 있습니다. 기본적으로 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 간단한 프로파일링이 사용되며 추적 플래그 7412는 영향을 주지 않습니다.
 
+새 DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동등한 것을 반환하기 위해 도입되었습니다. 새 *query_post_execution_plan_profile* 확장 이벤트는 표준 프로파일링을 사용하는 *query_post_execution_showplan*과 달리 경량 프로파일링에 기반한 실제 계획과 동등한 것을 수집합니다. 
+
+*query_post_execution_plan_profile* 확장 이벤트를 사용하는 샘플 세션은 아래 예제와 같이 구성할 수 있습니다.
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 오버헤드가 적은 간단한 프로파일링 v2부터는 아직 CPU의 제약을 받지 않는 모든 서버는 간단한 프로파일링을 **지속적으로** 실행할 수 있으며, 데이터베이스 전문가는 언제든지 진행 중인 실행으로 이동할 수 있습니다. 예를 들어 Activity Monitor를 사용하여 또는 `sys.dm_exec_query_profiles`를 직접 쿼리하여 런타임 통계가 포함된 쿼리 계획을 가져올 수 있습니다.
 
-쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)를 참조하세요. 
+쿼리 프로파일링의 성능 오버헤드에 자세한 내용은 블로그 게시물 [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)를 참조하세요. 
+
+> [!NOTE]
+> 경량 프로파일링을 활용하는 확장 이벤트는 표준 프로파일링 인프라가 이미 활성화된 경우 표준 프로파일링의 정보를 사용합니다. 예를 들어 `query_post_execution_showplan`을 사용하는 확장 이벤트 세션이 실행 중이고 `query_post_execution_plan_profile`을 사용하는 세션이 시작됩니다. 두 번째 세션은 여전히 표준 프로파일링 정보를 사용합니다.
 
 ## <a name="see-also"></a>참고 항목  
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ WITH (MAX_MEMORY=4096 KB,
  [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [실제 실행 모드](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)      
- [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [개발자 선택 사항: 쿼리 진행률 - 언제, 어디서나](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 249bee21bdddacc369a99efe8c31be511e2d305a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 961f1e06cb7ba194612cf4e87f40d356096149bb
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837961"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510180"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "47837961"
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   [예제: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
+-   [예: 제품 모델 정보를 XML로 검색](../../relational-databases/xml/example-retrieving-product-model-information-as-xml.md)  
   
--   [예제: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
+-   [예: ELEMENTS 지시어를 사용하여 XSINIL 지정](../../relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청](../../relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
--   [예제: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
+-   [예: 이진 데이터 검색](../../relational-databases/xml/example-retrieving-binary-data.md)  
   
--   [예제: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
+-   [예: &#60;행&#62; 요소 이름 바꾸기](../../relational-databases/xml/example-renaming-the-row-element.md)  
   
--   [예제: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [예: FOR XML로 생성된 XML에 대한 루트 요소 지정](../../relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [예: XMLType 열 쿼리](../../relational-databases/xml/example-querying-xmltype-columns.md)  
   

@@ -13,20 +13,20 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: be3b29da5db98d63426f790986c21a54b85159bf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407720"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528195"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 각 멤버 노드에 대한 NodeWeight 설정을 보는 방법에 대해 설명합니다. NodeWeight 설정은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 재해 복구 및 다중 서브넷 시나리오를 지원하기 위한 쿼럼 투표 동안 사용됩니다.  
   
--   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **시작하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **쿼럼 NodeWeight 설정을 보려면:** [Transact-SQL 사용](#TsqlProcedure), [Powershell 사용](#PowerShellProcedure), [Cluster.exe 사용](#CommandPromptProcedure)  
+-   **쿼럼 NodeWeight 설정을 보려면 다음을 사용합니다.** [Transact-SQL 사용](#TsqlProcedure), [Powershell 사용](#PowerShellProcedure), [Cluster.exe 사용](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52407720"
 > [!IMPORTANT]  
 >  NodeWeight 설정을 사용하려면 WSFC 클러스터의 모든 서버에 다음 핫픽스를 적용해야 합니다.  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서 쿼럼 투표가 없는 클러스터 노드를 구성하는 데 사용할 수 있는 핫픽스  
   
 > [!TIP]  
 >  이 핫픽스가 설치되어 있지 않은 경우 이 항목의 예는 NodeWeight에 대해 빈 값이나 NULL 값을 반환합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52407720"
 ### <a name="example-transact-sql"></a>예제(Transact-SQL)  
  다음 예제에서는 시스템 뷰를 쿼리하여 해당 인스턴스의 클러스터에 있는 모든 노드에 대한 값을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  

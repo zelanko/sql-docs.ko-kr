@@ -1,5 +1,5 @@
 ---
-title: '예제: ID 및 IDREFS 지시어 지정 | Microsoft 문서'
+title: '예: ID 및 IDREFS 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREFS directive
 - ID directive
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c26c82cdff4837293ec5a920696b556048cf4a05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1f4514035e8fd340394185df1c1c4fc69093b8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670501"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513370"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>예제: ID 및 IDREFS 지시어 지정
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>예: ID 및 IDREFS 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   요소 특성을 **ID** 유형의 특성으로 지정한 다음 **IDREFS** 특성을 사용하여 이 특성을 참조할 수 있습니다. 이러한 방식은 문서 간 연결을 설정하며 관계형 데이터베이스의 기본 키 및 외래 키 관계와 비슷합니다.  
   
