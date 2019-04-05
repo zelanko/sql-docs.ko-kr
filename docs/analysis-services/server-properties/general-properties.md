@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 일반 속성 | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042392"
 ---
 # <a name="general-properties"></a>일반 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072390"
   
  **BackupDir**  
  백업 명령의 일부로 경로가 지정 되지 이벤트에 기본적으로 백업 파일을 저장할 디렉터리의 이름을 식별 하는 문자열 속성입니다.  
+ 
+**ClientCacheRefreshPolicy** Azure Analysis services에 적용 됩니다. 재정의 된 **예약 된 캐시 새로 고침** 모든 Power BI 데이터 집합에 대 한 설정입니다. Live Connect 모든 보고서 서버 수준 설정을 설정 하는 데이터 집합 수준에 관계 없이 관찰할 또는 작업 영역에 상주 합니다.
+
+이 속성의 기본값은-1로, 예약 된 캐시 새로 고침 데이터 집합에 대 한 설정에 지정 된 대로 모든 백그라운드 캐시 새로 고침을 허용 합니다. 모든 백그라운드 캐시 하지 못하게 하려면 새로 고칩니다. 영 (0)를 지정 합니다.
+
   
  **CollationName**  
  서버 데이터 정렬을 식별하는 문자열 속성입니다. 자세한 내용은 [언어 및 데이터 정렬&#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md)을 참조하세요.  
@@ -100,7 +105,7 @@ ms.locfileid: "53072390"
  이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
->  **ForceCommitTimeout** 은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
+>  **ForceCommitTimeout**은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
   
  **IdleConnectionTimeout**  
  비활성 상태의 연결에 대한 제한 시간(초)을 지정하는 정수 속성입니다.  
@@ -139,7 +144,7 @@ ms.locfileid: "53072390"
  처리, 복원 및 기타 작업 중에 사용되는 임시 파일을 정의하기 위한 위치를 지정하는 문자열 속성입니다. 이 속성의 기본값은 설치 프로그램에 의해 결정됩니다. 지정하지 않는 경우의 기본값은 Data 디렉터리입니다.  
   
 ## <a name="requestprioritization-category"></a>RequestPrioritization 범주  
- **Enabled**  
+ **설정**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **StatisticsStoreSize**  

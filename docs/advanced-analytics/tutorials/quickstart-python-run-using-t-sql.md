@@ -3,17 +3,17 @@ title: "\"Hello World\" 기본 Python에 대 한 빠른 시작 코드 T-SQL-SQL 
 description: SQL Server의 Python 스크립트에 대 한 빠른 시작입니다. Sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 hello world 연습에서 하는 Python 스크립트를 호출 하는 기본 사항을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513773"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042222"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>빠른 시작: SQL Server에서 "hello world" Python 스크립트 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "55513773"
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
@@ -98,4 +98,4 @@ GO
 몇 가지 간단한 Python 스크립트를 실행 하면 했으므로 자세히 살펴보겠습니다에서 입력 및 출력을 구성 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: 입 / 출력 처리](quickstart-python-inputs-and-outputs.md)
+> [빠른 시작: 입력 및 출력 처리](quickstart-python-inputs-and-outputs.md)

@@ -3,17 +3,17 @@ title: "\"Hello World\" 기본 R 코드 실행을 T-SQL-SQL Server Machine Learn
 description: SQL Server에서 R 스크립트에 대 한 빠른 시작입니다. Sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 hello world 연습에서 R 스크립트를 호출 하는 기본 사항을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046908"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042282"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 R 스크립트의 "hello world" 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,8 @@ ms.locfileid: "54046908"
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. 있다고 간주 되며 올바른 결과 올바르게 설정 하는 모든 계산 및 R `print` 함수는 결과 반환 합니다 **메시지** 창입니다.
@@ -90,4 +91,4 @@ GO
 몇 가지 간단한 R 스크립트를 실행 하면 이제는 살펴볼에서 입력 및 출력을 구성 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: 입 / 출력 처리](quickstart-r-inputs-and-outputs.md)
+> [빠른 시작: 입력 및 출력 처리](quickstart-r-inputs-and-outputs.md)

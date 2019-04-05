@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f2fff5a78be0dad52f674a8d23c1922a86391c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023326"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042262"
 ---
 # <a name="write-enabled-dimensions"></a>쓰기 가능 차원
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34023326"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 차원의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대한 차원을 쓰기 가능으로 설정할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 차원을 쓰기 가능으로 설정하면 업무용 사용자가 차원의 내용을 수정하고 변경 내용이 차원 계층에 미치는 직접적인 영향을 확인할 수 있습니다. 단일 테이블을 기반으로 하는 모든 차원을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능한 차원에서는 비즈니스 사용자와 관리자가 차원 내의 특성 멤버를 변경, 이동, 추가 및 삭제할 수 있습니다. 이러한 업데이트는 *차원 쓰기 저장(writeback)* 으로 통칭됩니다.  
+ 차원의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대한 차원을 쓰기 가능으로 설정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 비즈니스 사용자가 차원의 내용을 수정 하 여 차원의 계층 변경의 직접적인 영향을 확인할 수 있도록 차원을 쓰기 가능 하도록 합니다. 단일 테이블을 기반으로 하는 모든 차원을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능한 차원에서는 비즈니스 사용자와 관리자가 차원 내의 특성 멤버를 변경, 이동, 추가 및 삭제할 수 있습니다. 이러한 업데이트는 *차원 쓰기 저장(writeback)* 으로 통칭됩니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 모든 차원 특성에서 차원 쓰기 저장을 지원하며 차원의 멤버는 수정될 수 있습니다. 쓰기 가능 큐브 또는 파티션의 경우 업데이트 내용이 큐브의 원본 테이블과는 별개의 쓰기 저장 테이블에 저장됩니다. 그러나 쓰기 가능 차원의 경우에는 업데이트 내용이 차원 테이블에 직접 기록됩니다. 또한 쓰기 가능 차원이 여러 파티션으로 구성된 큐브에 포함되어 있고 파티션의 전체 또는 일부 데이터 원본에 차원 테이블의 복사본이 있는 경우 쓰기 저장 과정에서 원본 차원 테이블만 업데이트됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모든 차원 특성에서 차원 쓰기 저장을 지원하며 차원의 멤버는 수정될 수 있습니다. 쓰기 가능 큐브 또는 파티션의 경우 업데이트 내용이 큐브의 원본 테이블과는 별개의 쓰기 저장 테이블에 저장됩니다. 그러나 쓰기 가능 차원의 경우에는 업데이트 내용이 차원 테이블에 직접 기록됩니다. 또한 쓰기 가능 차원이 여러 파티션으로 구성된 큐브에 포함되어 있고 파티션의 전체 또는 일부 데이터 원본에 차원 테이블의 복사본이 있는 경우 쓰기 저장 과정에서 원본 차원 테이블만 업데이트됩니다.  
   
  쓰기 가능 차원과 쓰기 가능 큐브에는 서로 다르지만 상호 보완되는 기능이 있습니다. 쓰기 가능 차원은 업무용 사용자에게 멤버를 업데이트할 수 있는 기능을 제공하고 쓰기 가능 큐브는 셀 값을 업데이트할 수 있는 기능을 제공합니다. 이 두 기능은 상호 보완적이지만 두 기능을 함께 사용할 필요는 없습니다. 차원이 큐브에 포함되어 있어야 차원 쓰기 저장이 가능한 것은 아닙니다. 쓰기 가능 차원이 쓰기 가능하지 않은 큐브에 포함될 수도 있습니다. 차원과 큐브를 쓰기 가능으로 설정하는 작업과 보안을 유지하는 작업의 절차는 다릅니다.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "34023326"
   
  Administrators 역할의 사용자와 그룹은 큐브에 포함되어 있지 않은 쓰기 가능 차원의 특성 멤버도 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 차원 속성](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [쓰기 가능 파티션](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [차원 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [차원&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
