@@ -9,12 +9,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: d4df6baceb764777628f60691ed29ddb8ec0f8c4
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: a3e9c7ba359134dfb4509eb47b65e8c7d28bb962
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305861"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657340"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,7 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/dell_software.spotlight-enterprise-12-0?tab=Overview  
-[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer?tab=Overview  
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3 [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->

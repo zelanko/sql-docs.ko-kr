@@ -1,5 +1,5 @@
 ---
-title: '예: XMLTEXT 지시어 지정 | Microsoft 문서'
+title: '예: XMLTEXT 지시어 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806818"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511940"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ `XMLTEXT` 열 데이터의 경우 루트 요소에 특성이 있으면 이 특성은 XML 데이터 스키마에 표시되지 않고 MSXML 파서는 결과 XML 문서 조각의 유효성을 검사하지 않습니다. 예를 들어  
   
 ```  
 SELECT 1 AS Tag,  
