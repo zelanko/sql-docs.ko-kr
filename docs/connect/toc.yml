@@ -2667,7 +2667,7 @@ items:
       - name: 통합 인증 사용
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
     - name: 릴리스 정보
-      href: ../connect/odbc/linux-mac/release-notes.md
+      href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
     - name: 알려진 문제
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: ODBC Linux 및 macOS에 대한 FAQ(질문과 대답)
@@ -7649,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: ADO 용어 설명
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: f00c4725c76ec2f3ee46d2cfa0333d6fa913faeb
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.openlocfilehash: 64df9e9029736ab2c777f493146ec5005567e2c5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788140"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042472"
