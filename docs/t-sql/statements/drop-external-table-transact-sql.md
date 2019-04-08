@@ -14,12 +14,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 047adc4654d4e0104aa0fab79ba2be7a002de738
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3260abf50bf46a703a925f8ad0a7829d2d1c1315
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801047"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042352"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -37,10 +37,10 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>인수  
- [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ `[ database_name . [schema_name] . | schema_name . ] table_name`  
  제거할 외부 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 테이블 이름은 선택적으로 스키마 또는 데이터베이스와 스키마를 포함할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
   
 -   테이블이 속한 스키마에 대한 **ALTER** 권한이 필요합니다.  
   

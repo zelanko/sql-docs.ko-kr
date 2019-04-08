@@ -18,12 +18,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0881a8939788215d9d2f59c71b6f9c9aa44fe243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e4272345c1da08b79ffd1d76438a88baa9ea581a
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526975"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788040"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,8 +106,6 @@ ms.locfileid: "52526975"
  시스템 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 작업 관리자와 같은 다른 애플리케이션을 사용하여 이러한 이벤트에 대해 경고를 구성할 수 있습니다.  
   
  데이터베이스 미러링 이벤트에 대해 경고를 정의하는 경우 두 파트너 서버 인스턴스에서 모두 경고 임계값과 경고를 정의하는 것이 좋습니다. 개별 이벤트는 주 서버나 미러 서버 중 하나에서 생성되지만 각 파트너가 언제든지 두 역할 중 하나를 수행할 수 있습니다. 장애 조치 후에도 경고가 계속 작동하려면 두 파트너에서 모두 경고를 정의해야 합니다.  
-  
- 자세한 내용은 [SQL Server 웹 사이트](https://go.microsoft.com/fwlink/?linkid=62373)에서 데이터베이스 미러링 이벤트에 대한 경고와 관련된 백서를 참조하세요. 이 백서에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트, 데이터베이스 미러링 WMI 이벤트 및 예제 스크립트를 사용하여 경고를 구성하는 방법에 대한 정보가 들어 있습니다.  
   
 > [!IMPORTANT]  
 >  모든 미러링 세션에서 상태 변경 이벤트에 대해 경고를 보내도록 데이터베이스를 구성하는 것이 좋습니다. 수동 구성 변경의 결과로 상태 변경이 예상되는 경우가 아니면 문제가 발생한 것이므로 데이터가 손상될 수 있습니다. 데이터를 보호하려면 예기치 않은 상태 변경의 원인을 확인하고 해결합니다.  

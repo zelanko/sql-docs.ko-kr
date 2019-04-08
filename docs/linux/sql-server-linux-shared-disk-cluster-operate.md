@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e84fc2a6032e5886c4d82d630dc36a5bde338ed1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044509"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042362"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -31,8 +31,8 @@ Fci에 대 한 장애 조치는 Windows Server 장애 조치 클러스터 (WSFC)
 
 장애 조치 하는 방법은 Linux 배포판에 따라 달라 집니다. Linux 배포에 대 한 지침을 따릅니다.
 
-- [RHEL 또는 Ubuntu](#rhelFailover)
-- [SLES](#slesFailover)
+- [RHEL 또는 Ubuntu](#-manual-failover-rhel-or-ubuntu)
+- [SLES](#-manual-failover-sles)
 
 ## <a name = "#rhelFailover"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
 

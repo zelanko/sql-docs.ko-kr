@@ -8663,9 +8663,9 @@ items:
     - name: SSMS 다운로드
       href: ../ssms/download-sql-server-management-studio-ssms.md
       items:
-      - name: SSMS 변경 로그 및 이전 릴리스
-        href: ../ssms/sql-server-management-studio-changelog-ssms.md
-      - name: 릴리스 정보
+      - name: SSMS 릴리스 정보와 이전 릴리스
+        href: ../ssms/release-notes-ssms.md
+      - name: 관련 릴리스 정보 다운로드
         href: ../ssms/download-sql-server-management-studio-ssms.md#release-notes
       - name: 영어 이외의 SSMS 설치
         href: ../ssms/install-other-languages.md
@@ -17273,9 +17273,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 7d3621712c6714eaeb2dbdb6a339088ac2fc7179
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872353"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042492"

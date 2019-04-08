@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421370"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872293"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "55421370"
   
 SQL Server의 트랜잭션 격리 수준은 메모리 최적화 테이블과 디스크 기반 테이블에 서로 다르게 적용되며 기본 메커니즘이 서로 다릅니다. 이러한 차이점을 이해하면 프로그래머가 처리량이 높은 시스템을 디자인하는 데 도움이 됩니다. 트랜잭션 무결성의 목표는 모든 경우에서 공유됩니다.  
 
-메모리 최적화 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)섹션을 참조하세요.
+메모리 최적화 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#conflict-detection-and-retry-logic)섹션을 참조하세요.
   
 일반적인 정보는 [SET TRANSACTION ISOLATION LEVEL(Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
@@ -97,7 +97,7 @@ ALTER DATABASE CURRENT
   
 ## <a name="isolation-levels"></a>격리 수준 
   
-다음 표에는 가능한 트랜잭션 격리 수준이 오름차순으로 나열되어 있습니다. 발생할 수 있는 충돌 및 이러한 충돌을 처리하는 재시도 논리에 대한 자세한 내용은 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)를 참조하세요. 
+다음 표에는 가능한 트랜잭션 격리 수준이 오름차순으로 나열되어 있습니다. 발생할 수 있는 충돌 및 이러한 충돌을 처리하는 재시도 논리에 대한 자세한 내용은 [충돌 검색 및 다시 시도 논리](#conflict-detection-and-retry-logic)를 참조하세요. 
   
 | 격리 수준 | 설명 |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ ALTER DATABASE CURRENT
 #### <a name="validation-phase-2-of-3"></a>유효성 검사: 2/3단계  
   
 - 끝 시간이 지정되어 트랜잭션이 논리적으로 완료된 것으로 표시되면 유효성 검사 단계가 시작됩니다. 이 작업을 완성하면 트랜잭션의 모든 변경 내용을 이 트랜잭션에 의존하는 다른 트랜잭션에 표시하게 됩니다. 이 트랜잭션이 성공적으로 커밋될 때까지 종속 트랜잭션을 커밋할 수 없습니다. 또한 이러한 종속성을 갖는 트랜잭션에서는 결과 집합을 클라이언트로 반환할 수 없고 클라이언트에서는 데이터베이스에 성공적으로 커밋된 데이터만을 확인할 수 있습니다.  
-- 이 단계는 반복 읽기 및 직렬화 유효성 검사로 구성됩니다. 반복 읽기 유효성 검사에서는 트랜잭션에 의한 행 읽기가 업데이트되었는지 검사합니다. 직렬화 유효성 검사에서는 이 트랜잭션에 의해 스캔된 데이터 범위로 행이 삽입되었는지 검사합니다. 스냅샷 격리를 사용할 경우 [격리 수준 및 충돌](#confdegreeiso30ni)의 테이블당 반복 읽기 및 직렬화 유효성 검사가 발생하여 고유 및 외래 키 제약 조건의 일관성을 검사할 수 있습니다.  
+- 이 단계는 반복 읽기 및 직렬화 유효성 검사로 구성됩니다. 반복 읽기 유효성 검사에서는 트랜잭션에 의한 행 읽기가 업데이트되었는지 검사합니다. 직렬화 유효성 검사에서는 이 트랜잭션에 의해 스캔된 데이터 범위로 행이 삽입되었는지 검사합니다. 스냅샷 격리를 사용할 경우 [격리 수준 및 충돌](#isolation-levels)의 테이블당 반복 읽기 및 직렬화 유효성 검사가 발생하여 고유 및 외래 키 제약 조건의 일관성을 검사할 수 있습니다.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>커밋 처리: 3/3단계  
   
@@ -143,7 +143,7 @@ ALTER DATABASE CURRENT
 | 오류 코드 | 설명 | 원인 |
 | :-- | :-- | :-- |
 | **41302** | 현재 트랜잭션이 시작된 이후 다른 트랜잭션에서 업데이트된 행을 업데이트하려고 했습니다. | 이 오류 조건은 두 개의 동시 트랜잭션에서 같은 행을 동시에 업데이트 또는 삭제하려고 할 때 발생합니다. 두 개의 트랜잭션 중 하나에 이 오류 메시지가 전달되며 다시 시도해야 합니다. <br/><br/>  | 
-| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 을 참조하세요. |  
+| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 최적화 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 외래 키 제약 조건의 동시 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 최적화 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)을 참조하세요. |  
 | **41325** | 직렬화 유효성 검사 오류. 현재 트랜잭션에서 이전에 검색한 범위에 새 행을 삽입했습니다. 이를 가상 행이라고 합니다. | 이 오류는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 PRIMARY KEY, UNIQUE 또는 FOREIGN KEY 제약 조건의 위반이 발생하는 경우 발생할 수 있습니다. <br/><br/> 이러한 동시 제약 조건의 위반은 드물게 발생하며 일반적으로 애플리케이션 논리 또는 데이터 입력에 문제가 있다는 것을 의미합니다. 그러나 이 오류는 반복 읽기 유효성 검사 오류와 마찬가지로 관련 열에 인덱스가 없는 FOREIGN KEY 제약 조건이 있는 경우에도 발생할 수 있습니다. |  
 | **41301** | 종속성 오류: 나중에 커밋이 실패한 다른 트랜잭션에 종속되어 있습니다. | 이 트랜잭션(Tx1)은 다른 트랜잭션(Tx2)에 종속되어 있는데 해당 트랜잭션(Tx2)이 Tx2에서 쓰여진 데이터를 읽어 유효성 검사 또는 커밋 처리 단계였습니다. 이후에 Tx2 커밋에 실패했습니다. Tx2가 커밋에 실패하는 가장 일반적인 원인은 반복 읽기(41305) 및 직렬화(41325) 유효성 검사 실패이며 그 외에 로그 IO 실패 등이 있습니다. |
 | **41823** 및 **41840** | 메모리 최적화 테이블 및 테이블 변수의 사용자 데이터 할당량에 도달했습니다. | 오류 41823은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 단일 데이터베이스뿐만 아니라 SQL Server Express/Web/Standard Edition에도 적용됩니다. 오류 41840은 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]의 탄력적 풀에 적용됩니다. <br/><br/> 대부분의 경우 이러한 오류는 최대 사용자 데이터 크기에 도달했음을 나타내며, 오류를 해결하는 방법은 메모리 최적화 테이블에서 데이터를 삭제하는 것입니다. 그러나 이 오류가 일시적인 경우는 거의 없습니다. 따라서 이러한 오류가 처음 발생할 때 다시 시도하는 것이 좋습니다.<br/><br/> 이 목록의 다른 오류와 같이 오류 41823 및 41840은 활성 트랜잭션을 중단시킵니다. |
