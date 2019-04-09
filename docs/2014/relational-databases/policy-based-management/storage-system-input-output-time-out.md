@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241981"
 ---
 # <a name="storage-system-input-output-time-out"></a>스토리지 시스템 입/출력 시간 초과
   이 규칙은 시스템 이벤트 로그에서 EventId 9를 검사합니다. 이 메시지는 스토리지 시스템에서 I/O 시간 초과가 발생했음을 나타냅니다.  
@@ -30,6 +30,6 @@ ms.locfileid: "53364405"
 -   [Microsoft 기술 자료 문서 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>참조 항목  
- [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   
