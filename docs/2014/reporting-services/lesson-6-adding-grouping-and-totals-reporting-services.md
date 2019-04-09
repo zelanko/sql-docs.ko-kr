@@ -1,5 +1,5 @@
 ---
-title: '6단원: 그룹화 및 합계 (Reporting Services) 추가 | Microsoft Docs'
+title: '6단원: 그룹화 및 합계 추가(Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,29 +11,29 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241741"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
   
- 보고서에 누계 추가에 대한 자세한 내용은 curah.microsoft.com의 [Reporting Services (SSRS) 보고서에 합계 추가](https://go.microsoft.com/fwlink/p/?LinkId=403698)합니다.  
+ 보고서에 누계 추가 대 한 자세한 내용은 다음을 참조 하세요. [Reporting Services (SSRS) 보고서에 합계 추가](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)합니다.  
   
  **항목 내용**  
   
--   [보고서의 데이터를 그룹화](#bkmk_groupdata)  
+-   [보고서에서 데이터를 그룹화하려면](#bkmk_groupdata)  
   
--   [보고서에 합계를 추가 하려면](#bkmk_addtotals)  
+-   [보고서에 합계를 추가하려면](#bkmk_addtotals)  
   
--   [보고서에 일일 합계를 추가 하려면](#bkmk_adddailytotal)  
+-   [보고서에 일일 합계를 추가하려면](#bkmk_adddailytotal)  
   
--   [보고서에 총합계를 추가 하려면](#bkmk_addgrandtotal)  
+-   [보고서에 총합계를 추가하려면](#bkmk_addgrandtotal)  
   
--   [(선택 사항) 보고서 서버로 보고서를 게시 하려면](#bkmk_publishreport)  
+-   [보고서 서버에 보고서를 게시하려면(선택 사항)](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 보고서의 데이터를 그룹화  
   

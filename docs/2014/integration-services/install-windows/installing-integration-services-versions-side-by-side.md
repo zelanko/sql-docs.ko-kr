@@ -13,12 +13,12 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5552780cdc4a2f4e3faf39b9111882fcf4ffdd63
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240671"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>상호 운용성 및 공존성(Integration Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services(SSIS)는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services와 함께 나란히 공존할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "58380121"
   
 |기능|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|개발 환경|[SQL Server 2014 Data Tools-Visual Studio 2012 CTP 2 용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=40736)<br /><br /> [SQL Server 2014 Data Tools-Visual Studio 2013 용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools for Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools-Visual Studio 2012 용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|개발 환경|[SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Visual Studio 2013용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=42313)|[Visual Studio 2010용 SQL Server Data Tools](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Visual Studio 2012용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |관리 환경|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |패키지 저장을 위한 msdb의 주 시스템 테이블|sysssispackages|sysssispackages|sysssispackages|  
 |패키지 실행을 위한 주 명령 프롬프트 유틸리티|**dtexec** (dtexec.exe), 2014 버전|**dtexec** (dtexec.exe), 2012 버전|**dtexec** (dtexec.exe), 2008 버전|  
@@ -40,7 +40,7 @@ ms.locfileid: "58380121"
   
 -   **SQL Server Data Tools에서 패키지를 디자인합니다**. 다음 도구를 사용하여 해당 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 기반으로 하는 패키지를 개발하고 유지 관리합니다.  
   
-    -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]를 기반으로 하는 패키지를 개발하고 유지 보수하려면 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 버전의 Business Intelligence Development Studio를 사용합니다.  
+    -    [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 기반으로 하는 패키지를 개발하고 유지 보수하려면 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]  
   
     -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를 기반으로 하는 패키지를 개발하고 유지 관리하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 버전의 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]를 사용합니다.  
   

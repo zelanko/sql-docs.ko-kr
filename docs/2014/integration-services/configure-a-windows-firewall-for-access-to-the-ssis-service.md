@@ -19,24 +19,24 @@ ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aab23efecc139e4aaf4a4c3d6d0075cf02a7e7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: c40d0003211c0446982f70a9c7a00c1f189808b6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241919"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS 서비스 액세스에 대한 Windows 방화벽 구성
     
 > [!IMPORTANT]  
->  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]는 이전 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
+>  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
   
  Windows 방화벽 시스템을 사용하면 네트워크 연결을 통해 이루어지는 컴퓨터 리소스에 대한 무단 액세스를 차단할 수 있습니다. 이 방화벽을 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 액세스하려면 액세스 가능하도록 방화벽을 구성해야 합니다.  
   
 > [!IMPORTANT]  
 >  원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](configuring-the-integration-services-service-ssis-service.md)을 참조하세요.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에는 DCOM 프로토콜이 사용됩니다. 방화벽을 통한 DCOM 프로토콜 작동 방법은 MSDN Library에서 "[방화벽과 함께 분산 COM 사용(Using Distributed COM with Firewalls)](https://go.microsoft.com/fwlink/?LinkId=12490)" 문서를 참조하십시오.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에는 DCOM 프로토콜이 사용됩니다. 방화벽을 통한 DCOM 프로토콜 작동 하는 방법에 대 한 자세한 내용은 문서를 참조 하세요. "[방화벽과 함께 분산 COM 사용 하 여](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"입니다.  
   
  사용할 수 있는 방화벽 시스템은 여러 가지가 있습니다. Windows 방화벽 이외의 다른 방화벽을 사용하는 경우 사용 중인 시스템별 정보를 보려면 해당 방화벽 설명서를 참조하십시오.  
   

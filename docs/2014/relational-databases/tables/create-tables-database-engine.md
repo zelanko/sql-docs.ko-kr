@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241671"
 ---
 # <a name="create-tables-database-engine"></a>테이블 만들기(데이터베이스 엔진)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 새 테이블을 만들고, 테이블 이름을 지정하고, 이 테이블을 기존 데이터베이스에 추가할 수 있습니다.  
   
 > [!NOTE]  
->  SQL Azure 데이터베이스에 연결되어 있는 경우 새 테이블 옵션을 사용하면 테이블 만들기 템플릿 스크립트가 시작됩니다. 매개 변수를 편집한 다음 스크립트를 실행하여 새 테이블을 만듭니다. 자세한 내용은 [SQL Azure 개요(SQL Azure Overview)](https://go.microsoft.com/fwlink/?LinkId=163948)를 참조하세요.  
+>  SQL Azure 데이터베이스에 연결되어 있는 경우 새 테이블 옵션을 사용하면 테이블 만들기 템플릿 스크립트가 시작됩니다. 매개 변수를 편집한 다음 스크립트를 실행하여 새 테이블을 만듭니다. 자세한 내용은 [SQL Azure 개요(SQL Azure Overview)](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)를 참조하세요.  
   
  **항목 내용**  
   
@@ -31,9 +31,9 @@ ms.locfileid: "53377435"
   
      [보안](#Security)  
   
--   **테이블을 만들려면 사용 합니다.**  
+-   **테이블을 만들려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
