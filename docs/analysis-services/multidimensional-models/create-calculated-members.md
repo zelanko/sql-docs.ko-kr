@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241472"
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
   
- 계산 멤버의 정의는 저장되지만, 값은 메모리에만 존재합니다. 위의 예에서는 유로 값이 최종 사용자에게 표시되기만 하고 큐브 데이터로 저장되지는 않습니다.  
+ 계산 멤버의 정의는 저장되지만, 값은 메모리에만 존재합니다. 앞의 예제에서 유로화에서 값은 최종 사용자에 게 표시 되지만 큐브 데이터로 저장 되지 않습니다.  
   
  계산 멤버는 큐브에 만듭니다. 계산 멤버를 만들려면 큐브 디자이너의 **계산** 탭에서 도구 모음의 **새 계산 멤버** 아이콘을 클릭합니다. 이 명령은 계산 멤버에 대해 다음 옵션을 지정할 수 있는 폼을 표시합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34023180"
  Format String  
  계산 멤버를 기반으로 셀 값의 형식을 지정합니다. 이 속성은 측정값의 **Display Format** 속성과 같은 값을 받아들입니다. 표시 형식에 대한 자세한 내용은 [측정값 속성 구성](../../analysis-services/multidimensional-models/configure-measure-properties.md)을 참조하세요.  
   
- Visible  
+ 표시  
  큐브 메타데이터를 검색할 때 계산 멤버를 표시할 것인지 숨길 것인지 결정합니다. 계산 멤버를 숨길 경우 MDX 식, 문 및 스크립트에서 계산 멤버를 사용할 수는 있지만 클라이언트 사용자 인터페이스에서 선택 가능한 개체로 표시되지 않습니다.  
   
  Non-empty Behavior  
@@ -75,7 +75,7 @@ ms.locfileid: "34023180"
   
 -   계산 멤버가 측정값 차원에서 생성되는 경우 해당 차원에서 계산 멤버에 접근할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

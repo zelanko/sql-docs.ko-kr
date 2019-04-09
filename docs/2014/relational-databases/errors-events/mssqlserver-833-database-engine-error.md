@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241651"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -54,6 +54,6 @@ ms.locfileid: "53377525"
 > [!NOTE]  
 >  바이러스 백신 프로그램으로 인해 디스크 액세스가 느려질 수 있습니다. 액세스 속도를 높이려면 활성 바이러스 검사의 오류 메시지에서 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일을 제외하십시오.  
   
- I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장) 및 [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us)의 기술 자료 아티클을 참조하세요.  
+ I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))(Microsoft SQL Server I/O 기본 사항, 2장) 및 [https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284)의 기술 자료 아티클을 참조하세요.  
   
   

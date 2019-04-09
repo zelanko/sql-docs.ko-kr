@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241961"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
   메모리 최적화 테이블을 만들 때 `BUCKET_COUNT` 매개 변수 값을 지정해야 합니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "58536695"
   
  메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 인덱스 된에 할당 된 해시 테이블의 크기를 `BUCKET_COUNT` 의 매개 변수 [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) 또는 [CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
   
- 버킷 수와 관련한 문서 및 비디오에 대한 링크를 보려면 [해시 인덱스(메모리 내 OLTP)에 대한 올바른 버킷 수를 결정하는 방법](https://go.microsoft.com/fwlink/p/?LinkId=525853)(영문)을 참조하세요.  
+ 버킷 수와 관련한 문서 및 비디오에 대한 링크를 보려면 [해시 인덱스(메모리 내 OLTP)에 대한 올바른 버킷 수를 결정하는 방법](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)(영문)을 참조하세요.  
   
 ## <a name="recommendations"></a>권장 사항  
  대부분의 경우 버킷 수는 인덱스 키에 있는 고유한 값 수의 1~2배 사이여야 합니다. 인덱스 키에 중복 값이 많이 포함되어 있는 경우 평균적으로 각 인덱스 키 값에 대해 10개 이상의 행이 있으므로 대신 비클러스터형 인덱스를 사용하세요.  

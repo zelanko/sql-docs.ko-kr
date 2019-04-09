@@ -13,20 +13,20 @@ ms.assetid: 16715b85-0630-4a8e-99b0-c0d213cade26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fc304afad2b125d7b6a25dcd9eb7721ec6a793f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c35749671caabd8c6c61249d39bb3336257b1b8a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242491"
 ---
 # <a name="create-user-defined-hierarchies"></a>사용자 정의 계층 만들기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 사용자 정의 계층 구조를 만들 수 있습니다. 계층은 특성을 기반으로 하는 수준 모음입니다. 예를 들어 시간 계층에는 년, 분기, 월, 주 및 일 수준이 포함될 수 있습니다. 각 멤버 특성이 상위 멤버 특성을 고유하게 내재하고 있는 계층도 있는데 이를 자연 계층이라고 합니다. 최종 사용자가 계층을 사용하여 큐브 데이터를 검색할 수 있습니다. 계층은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 차원 디자이너의 계층 창을 사용하여 정의합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] lets you create user-defined hierarchies. A hierarchy is a col에서는 사용자 정의 계층 구조를 만들 수 있습니다.r계층은 특성을 기반으로 하는 수준 모음입니다.,예를 들어 시간 계층에는 년, 분기, 월, 주 및 일 수준이 포함될 수 있습니다.h각 멤버 특성이 상위 멤버 특성을 고유하게 내재하고 있는 계층도 있는데r이를 자연 계층이라고 합니다.i최종 사용자가 계층을 사용하여 큐브 데이터를 검색할 수 있습니다. 계층은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 차원 디자이너의 계층 창을 사용하여 정의합니다.  
   
  사용자 정의 계층 구조를 만들 때 *비정형*계층 구조가 될 수 있습니다. 비정형 계층에서는 최소한 한 멤버의 논리적 부모 멤버가 해당 멤버 바로 위 수준에 있지 않습니다. 비정형 계층일 경우 누락된 멤버 표시 여부와 누락된 멤버 표시 방법을 제어하는 설정이 있습니다. 자세한 내용은 [비정형 계층 구조](user-defined-hierarchies-ragged-hierarchies.md)를 참조하세요.  
   
 > [!NOTE]  
->  사용자 정의 계층 구조의 디자인 및 구성과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621)(SQL Server 2005 Analysis Services 성능 가이드)를 참조하세요.  
+>  사용자 정의 계층 구조의 디자인 및 구성과 관련된 성능 문제에 대한 자세한 내용은 [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)(SQL Server 2005 Analysis Services 성능 가이드)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 계층 속성](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   

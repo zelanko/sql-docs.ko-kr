@@ -20,12 +20,12 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 04217451f1a330b3a9b4e4a7ff91e6c6d35574eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242341"
 ---
 # <a name="identifiers-ssis"></a>식별자(SSIS)
   식에서 식별자는 연산에 사용할 수 있는 열과 변수입니다. 식은 일반 식별자와 정규화된 식별자를 사용할 수 있습니다.  
@@ -121,6 +121,6 @@ ms.locfileid: "58380710"
 ```  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
   

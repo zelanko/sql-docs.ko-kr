@@ -19,15 +19,15 @@ ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 45b0b733ccc6e42e1f4a63ba9c7a2f615d2b55eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241918"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 다차원에 대한 세계화 시나리오
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 표 형식 데이터 모델과 다차원 데이터 모델 모두에서 다국어 데이터와 메타데이터를 저장 및 조작합니다. 데이터 스토리지는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 표 형식 데이터 모델과 다차원 데이터 모델 모두에서 다국어 데이터와 메타데이터를 저장 및 조작합니다. 데이터 스토리지는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  
   
  유니코드를 지원한다는 것은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Windows 클라이언트 및 서버 운영 체제가 지원하는 언어를 사용하여 데이터를 저장하여, Windows 컴퓨터에 사용된 문자 집합으로 데이터를 읽고, 쓰고, 정렬하고 비교할 수 있음을 의미합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터를 사용하는 BI 클라이언트 응용 프로그램에서는 데이터가 모델에서 해당 언어로 존재한다고 가정하여 데이터를 사용자가 선택한 언어로 나타낼 수 있습니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53357871"
   
 ## <a name="see-also"></a>관련 항목  
  [Windows 애플리케이션에 대한 국제화](/windows/desktop/Intl/international-support)   
- [Go Global 개발자 센터](https://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Microsoft 전역화 설명서](/globalization/)   
  [로캘 기반 적응형 디자인을 사용하여 Windows 스토어 앱 작성](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [C# 및 XAML을 사용하여 범용 Windows 앱 개발](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   

@@ -3,7 +3,7 @@ title: Linux의 SQL Server에 대 한 active Directory 인증
 titleSuffix: SQL Server
 description: 이 문서에서는 Linux의 SQL Server에 대 한 Active Directory 인증 개요를 제공 합니다.
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241023"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 active Directory 인증
 
@@ -42,9 +42,11 @@ Active Directory 인증을 사용 하려면 네트워크에서 AD 도메인 컨�
 
 AD 인증을 구성 하는 방법에 대 한 세부 정보는 자습서에 나와 [자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 하 여](sql-server-linux-active-directory-authentication.md)입니다. 다음은 자습서의 각 섹션에 대 한 링크를 사용 하 여 요약을 제공:
 
-1. [SQL Server 호스트는 Active Directory 도메인에 가입](sql-server-linux-active-directory-authentication.md#join)합니다.
+1. [SQL Server 호스트는 Active Directory 도메인에 가입](sql-server-linux-active-directory-join-domain.md)합니다.
 1. [SQL Server에 대 한 AD 사용자를 만들고 ServicePrincipalName 설정](sql-server-linux-active-directory-authentication.md#createuser)합니다.
 1. [SQL Server 서비스 keytab 구성](sql-server-linux-active-directory-authentication.md#configurekeytab)합니다.
+1. [Keytab 파일을 보호](sql-server-linux-active-directory-authentication.md#securekeytab)합니다.
+1. [Kerberos 인증에 대 한 키 파일을 사용 하도록 SQL Server 구성](sql-server-linux-active-directory-authentication.md#keytabkerberos)합니다.
 1. [TRANSACT-SQL에서 AD 기반 SQL Server 로그인을 만들](sql-server-linux-active-directory-authentication.md#createsqllogins)합니다.
 1. [AD 인증을 사용 하 여 SQL Server에 연결](sql-server-linux-active-directory-authentication.md#connect)합니다.
 

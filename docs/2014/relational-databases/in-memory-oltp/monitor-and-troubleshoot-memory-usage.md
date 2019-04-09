@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d93743c90cafd83509ba4bbbd6c0f38369355be3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240441"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
@@ -196,7 +196,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
   
- 자세한 내용은 [sys.dm_xtp_system_memory_consumers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xtp-system-memory-consumers-transact-sql)를 참조하세요.  
+ 자세한 내용은 [sys.dm_xtp_system_memory_consumers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)를 참조하세요.  
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>메모리 최적화 테이블에 액세스할 때 런타임 시 메모리 사용  
  다음 쿼리를 사용하는 프로시저 캐시 등의 런타임 구조에서 사용하는 메모리를 확인할 수 있습니다. 이 쿼리를 실행하여 프로시저 캐시의 경우와 같이 런타임 구조에서 사용하는 메모리를 가져옵니다. 모든 런타임 구조에는 XTP로 태그가 지정됩니다.  

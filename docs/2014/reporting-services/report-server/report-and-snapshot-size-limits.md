@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240651"
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 관리하는 관리자는 이 항목의 정보를 통해 보고서가 보고서 서버에 게시되고, 런타임에 렌더링되고, 파일 시스템에 저장될 때 적용되는 보고서 크기 제한을 이해할 수 있습니다. 이 항목에서는 보고서 서버 데이터베이스의 크기를 측정하는 방법에 대한 지침을 제공하고 스냅숏 크기가 서버 성능에 미치는 영향에 대해 설명합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "56035644"
  Excel 형식으로 렌더링할 때만 보고서 크기가 엄격하게 제한됩니다. 워크시트의 행과 열은 각각 65536개와 256개를 초과할 수 없습니다. 다른 렌더링 형식은 이러한 제한이 없으므로 서버에 있는 리소스 양에 의해서만 크기가 제한됩니다. Excel 파일 제한에 대 한 자세한 내용은 참조 하세요. [다른 파일 형식으로 보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)합니다.  
   
 > [!NOTE]  
->  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services planning for Scalability and Performance](https://go.microsoft.com/fwlink/?LinkID=70650) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  
+>  보고서 처리 및 렌더링은 메모리에서 수행됩니다. 보고서가 크거나 사용자 수가 많은 경우에는 보고서 서버 배포가 사용자에게 만족스러운 수준에서 수행될 수 있도록 용량 계획을 세워야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services planning for Scalability and Performance](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  
   
 ## <a name="measuring-snapshot-storage"></a>스냅숏 스토리지 측정  
  특정 스냅숏의 크기는 보고서에 있는 데이터 양에 비례합니다. 스냅숏은 일반적으로 보고서 서버에 저장된 다른 항목보다 훨씬 큽니다. 스냅숏 크기는 몇 MB에서 수십 MB에 이르기까지 다양합니다. 보고서가 아주 큰 경우 스냅숏은 훨씬 더 커집니다. 스냅숏 사용 빈도와 보고서 기록 구성 방법에 따라 보고서 서버 데이터베이스에 필요한 디스크 공간 크기가 짧은 기간 동안에 빠르게 늘어날 수 있습니다.  

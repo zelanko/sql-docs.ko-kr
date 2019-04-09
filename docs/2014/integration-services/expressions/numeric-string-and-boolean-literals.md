@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242191"
 ---
 # <a name="literals-ssis"></a>리터럴(SSIS)
   식은 숫자, 문자열 및 부울 리터럴을 포함할 수 있습니다. 식 계산기는 정수, 10진수 및 부동 소수점 상수와 같은 다양한 숫자 리터럴을 지원합니다. 또한 식 계산기의 값 처리 방법을 지정하는 long 및 float 접미사와 숫자 리터럴의 과학적 표기법을 지원합니다.  
@@ -117,6 +117,6 @@ ms.locfileid: "58384751"
 >  식에서 부울 리터럴은 공백으로 구분해야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=217683)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7ea45b2b785666253405c579930d1f89417d4c58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240701"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 비롯한 스크립트를 통해 기본 모드 및 SharePoint 모드에서 PowerShell의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 개체 모델을 활용하여 다양한 개발 및 관리 시나리오를 지원합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "56024524"
   
 -   [Reporting Services WMI 공급자 액세스](access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.  
   
--   [PowerShell을 사용하여 SSRS를 관리하는 방법](http://curah.microsoft.com/13107/how-to-administer-ssrs-using-powershell).scriptin  
+-   [PowerShell을 사용하여 SSRS를 관리하는 방법](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin  
   
 ## <a name="rsexe-scripting-samples"></a>RS.exe 스크립팅 샘플  
   
@@ -68,6 +68,6 @@ ms.locfileid: "56024524"
 ## <a name="see-also"></a>관련 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [배포 및 관리 태스크 스크립팅](script-deployment-and-administrative-tasks.md)   
- [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트](script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   

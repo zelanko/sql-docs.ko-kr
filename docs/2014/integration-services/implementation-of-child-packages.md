@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242171"
 ---
 # <a name="implementation-of-child-packages"></a>자식 패키지 구현
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 로그 균형 조정을 구현하면 사용 가능한 CPU 또는 서버 시간을 사용할 다른 서버에 자식 패키지가 설치됩니다. 자식 패키지를 만들고 실행하려면 다음 단계를 수행하십시오.  
@@ -68,8 +68,8 @@ ms.locfileid: "58386778"
   
 ## <a name="related-content"></a>관련 내용  
   
--   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://go.microsoft.com/fwlink/?LinkId=257729), consultingblogs.emc.com 합니다.  
+-   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), andyleonard.blog에 있습니다.  
   
--   블로그 항목, [SSIS: In-process와 out-of-process-자식 패키지를 실행 해야 있습니다? ](https://go.microsoft.com/fwlink/?LinkId=220819), consultingblogs.emc.com 합니다.  
+-   문서 [패키지 실행 태스크](../integration-services/control-flow/execute-package-task.md)합니다.  
   
   

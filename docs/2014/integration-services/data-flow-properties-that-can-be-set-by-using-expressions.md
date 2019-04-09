@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240421"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
   데이터 흐름 태스크 컨테이너에서 사용할 수 있는 속성 식을 사용하여 데이터 흐름 개체의 특정 속성 값을 지정할 수 있습니다.  
@@ -79,12 +79,12 @@ ms.locfileid: "58378601"
 -   [속성 식 추가 또는 변경](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://pragmaticworks.com/cheatsheet/)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
 ## <a name="see-also"></a>관련 항목  
  [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)   
  [공용 속성](../../2014/integration-services/common-properties.md)   
- [변환 사용자 지정 속성](data-flow/transformations/transformation-custom-properties.md)   
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
  [경로 속성](../../2014/integration-services/path-properties.md)  
   
   

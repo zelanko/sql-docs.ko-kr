@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240732"
 ---
 # <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -88,9 +88,9 @@ ms.locfileid: "53374595"
  **ErrorLog\KeyErrorAction**  
  `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   `ConvertToUnknown`은 오류 키 값을 알 수 없는 멤버에 할당하도록 서버에 지시합니다.  
+-   `ConvertToUnknown` 알 수 없는 멤버로 오류 키 값을 할당 하도록 서버에 지시 합니다.  
   
--   `DiscardRecord`는 레코드를 제외하도록 서버에 지시합니다.  
+-   `DiscardRecord` 레코드를 제외 하도록 서버를 알려 줍니다.  
   
  **ErrorLog\KeyErrorLogFile**  
  서비스 계정이 읽기-쓰기 권한을 가지고 있는 폴더에 있는 사용자 정의 파일 이름이며, 이 파일의 확장명은 .log여야 합니다. 이 로그 파일에는 처리 중에 생성된 오류만 포함됩니다. 보다 자세한 정보가 필요한 경우 비행 레코더를 사용하십시오.  
@@ -101,18 +101,18 @@ ms.locfileid: "53374595"
  **ErrorLog\KeyErrorLimitAction**  
  키 오류 수가 상한에 도달한 경우 서버에서 수행하는 동작을 지정합니다. 이 동작에 대한 유효한 응답은 다음과 같습니다.  
   
--   `StopProcessing`은 오류 제한에 도달하는 경우 처리를 중지하도록 서버에 알려 줍니다.  
+-   `StopProcessing` 오류 제한에 도달 하면 처리를 중지 하려면 서버에 알려 줍니다.  
   
--   `StopLogging`은 오류 제한에 도달하는 경우 오류 기록을 중지하되 처리를 계속하도록 서버에 알려 줍니다.  
+-   `StopLogging` 오류 제한에 도달 하지만 처리가 계속 되도록 하는 경우 오류 기록을 중지 하도록 서버에 지시 합니다.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  `KeyNotFound` 오류가 발생할 때 서버에서 수행하는 동작을 지정합니다. 이 오류에 대한 유효한 응답은 다음과 같습니다.  
   
--   `IgnoreError`는 오류를 기록하거나 키 오류 제한에 대해 오류 개수를 계산하지 않고 처리를 계속하도록 서버에 지시합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드는 `KeyErrorAction` 속성으로 결정된 대로 삭제되거나 알 수 없는 멤버에 집계됩니다.  
+-   `IgnoreError` 계속 하도록 서버에 지시 하지 않고 오류를 기록 하거나 키 오류 제한에 대해 계산 처리 합니다. 오류를 무시하기만 하면 오류 개수에 추가하거나 화면 또는 로그 파일에 기록하지 않고 처리가 계속됩니다. 문제의 레코드에 데이터 무결성 문제가 있어서 데이터베이스에 레코드를 추가할 수 없습니다. 레코드는 `KeyErrorAction` 속성으로 결정된 대로 삭제되거나 알 수 없는 멤버에 집계됩니다.  
   
--   `ReportAndContinue`는 오류를 기록하고 키 오류 제한에 오류 수를 계산하고 처리를 계속하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
+-   `ReportAndContinue` 오류를 기록 하 고 키 오류 제한에 계산 하 고 처리를 계속 하도록 서버를 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
--   `ReportAndStop`은 키 오류 제한에 관계없이 오류를 기록하고 즉시 처리를 중지하도록 서버에 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
+-   `ReportAndStop` 오류를 기록 하 고 키 오류 제한에 관계 없이 즉시 처리를 중지 하도록 서버를 알려 줍니다. 오류를 발생시키는 레코드는 삭제되거나 알 수 없는 멤버로 변환됩니다.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  중복 키가 있을 때 서버가 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 `IgnoreError`, 오류를 기록하고 처리를 계속하는 `ReportAndContinue`, 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 `ReportAndStop`이 포함됩니다.  
@@ -199,7 +199,7 @@ ms.locfileid: "53374595"
  이 속성의 기본값은 False로 서버가 로그 테이블을 자동으로 만들지 않고 쿼리 이벤트를 기록하지 않음을 나타냅니다.  
   
 > [!NOTE]  
->  쿼리 로그 구성 방법에 대한 자세한 내용은 [Configuring the Analysis Services Query Log](https://go.microsoft.com/fwlink/?LinkId=81890)(Analysis Services 쿼리 로그 구성)를 참조하세요.  
+>  쿼리 로그 구성에 대 한 자세한 내용은 참조 하세요. [Analysis Services에서 작업을 기록](../instances/log-operations-in-analysis-services.md)합니다.  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
@@ -233,7 +233,7 @@ ms.locfileid: "53374595"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services의 서버 속성 구성](server-properties-in-analysis-services.md)   
+ [Analysis Services에서 서버 속성 구성](server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241721"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>설치, 제거 및 보고서 작성기 지원
   보고서 작성기는 보고서, 보고서 파트 및 공유 데이터 세트를 만들고 업데이트하고 공유하는 데 사용하는 보고서 작성 도구입니다. 보고서 작성기는 독립 실행형 버전 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]버전으로 사용할 수 있습니다. 독립 실행형 버전은 사용자나 관리자가 컴퓨터에 설치합니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전은 자동으로 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 와 함께 설치되고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트나 보고서 관리자에서 컴퓨터로 다운로드됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "56298321"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>컴퓨터에 보고서 작성기의 ClickOnce 버전 설치  
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전의 보고서 작성기는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]와 함께 설치됩니다. 이 버전은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]의 기본 설치 및 SharePoint 통합 설치 둘 다에서 설치됩니다.  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]는 Windows 응용 프로그램을 배포하는 Microsoft 기술입니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]에서는 사용자가 웹 페이지에서 링크를 클릭하여 보고서 작성기와 같은 Windows 응용 프로그램을 설치하고 실행할 수 있습니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 애플리케이션을 배포하는 방법, [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 애플리케이션 보안을 적용하는 방법 또는 인터넷 영역에서 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 애플리케이션을 실행하는 방법은 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network 웹 사이트( [www.microsoft.com/msdn](https://www.microsoft.com/msdn))에서 "Windows Forms 애플리케이션용 ClickOnce 배포(ClickOnce Deployment for Windows Forms Applications)", "Windows Forms 보안 개요(Security in Windows Forms Overview)" 또는 "신뢰할 수 있는 애플리케이션 배포 개요(Trusted Application Deployment Overview)" 기사를 참조하십시오.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 는 Windows 애플리케이션을 배포하는 Microsoft 기술입니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 에서는 사용자가 웹 페이지에서 링크를 클릭하여 보고서 작성기와 같은 Windows 애플리케이션을 설치하고 실행할 수 있습니다. 배포에 대 한 자세한 내용은 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 응용 프로그램에 적용 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 응용 프로그램 보안 또는 실행 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 인터넷 영역에서 응용 프로그램 "ClickOnce 배포에 대 한 Windows Forms 응용 프로그램", "보안을 참조 하세요. Windows Forms 개요"또는" Trusted Application Deployment Overview "문서에 [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network 웹 사이트 [ https://developer.microsoft.com/ ](https://developer.microsoft.com/)합니다.  
   
  [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전의 보고서 작성기는 보고서 서버에 있으며 보고서 관리자에서 **보고서 작성기** 단추를 클릭하거나 SharePoint 라이브러리의 **새 문서** 메뉴에서 **보고서 작성기 보고서** 옵션을 클릭할 때 컴퓨터에 설치됩니다.  
   

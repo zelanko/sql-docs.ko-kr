@@ -12,12 +12,12 @@ ms.assetid: ccd793bc-ba5d-4782-8d72-731fd01fc177
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5c3830a1bc86d927043e78a42b7ead94ca52a41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240742"
 ---
 # <a name="mssqlserver5515"></a>MSSQLSERVER_5515
     
@@ -36,6 +36,6 @@ ms.locfileid: "53350141"
  FILESTREAM 파일에 대해 지정된 컨테이너 디렉터리를 열 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 자세한 내용은 참조는 [이벤트 및 오류 메시지 센터](https://go.microsoft.com/fwlink/?linkid=47660)합니다.  
+ 오류의 원인은 해당 Windows 상태 코드를 참조하십시오. 자세한 내용은 참조는 [이벤트 및 오류 메시지 지원 센터](https://support.microsoft.com/search?query=events%20and%20errors)합니다.  
   
   

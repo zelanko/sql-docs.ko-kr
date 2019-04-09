@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40ecf3d032aaece172f7b3c456a9eef6c6cf1b30
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242301"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
   DAC(데이터 계층 애플리케이션) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "58618140"
   
  내보내기 프로세스에서는 DAC 버전을 1.0.0.0으로 설정하고 내보내기 파일의 DAC 설명을 빈 문자열로 설정합니다. 데이터베이스가 DAC에서 배포된 경우에는 내보내기 파일의 DAC 정의에 원본 DAC에 지정된 것과 동일한 이름이 포함되고, 그렇지 않은 경우에는 DAC 이름이 데이터베이스 이름으로 설정됩니다.  
   
- 
+
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 또는 데이터베이스를 내보낼 수 있습니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58618140"
 ##  <a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
- **옵션**  
+ **변수**  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "58618140"
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
 ##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
- **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
+ **.Net Framework 애플리케이션에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "58618140"
 3.  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 DAC를 내보냅니다. 내보낼 DAC의 이름과 내보내기 파일을 배치할 폴더의 경로를 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 계층 응용 프로그램](data-tier-applications.md)   
+ [개체 탐색기](data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](extract-a-dac-from-a-database.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 026ed516989bde6f2c0b305d6af159f13a82f156
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241621"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
  대부분의 애플리케이션에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 사설 클라우드, 공용 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 
@@ -111,7 +111,7 @@ ms.locfileid: "53358455"
 ## <a name="see-also"></a>참고자료 
  [SQL Server 2014 CTP2 제품 가이드](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Microsoft SQL Server 하이브리드 클라우드 블로그 시리즈](https://blogs.msdn.com/b/azure/archive/2013/10/16/microsoft-sql-server-hybrid-cloud-blog-series.aspx)  
- [Azure로 데이터 중심 응용 프로그램 마이그레이션](https://msdn.microsoft.com/library/jj156154.aspx) 
+ [Microsoft SQL Server 하이브리드 클라우드 블로그 시리즈](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Azure로 데이터 중심 응용 프로그램 마이그레이션](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

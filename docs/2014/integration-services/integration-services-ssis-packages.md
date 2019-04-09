@@ -20,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241661"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  
@@ -112,11 +112,6 @@ ms.locfileid: "58381381"
 -   [SQL Server Data Tools에서 패키지 만들기](create-packages-in-sql-server-data-tools.md)  
   
 -   개발자 가이드의 **프로그래밍 방식으로 패키지 작성** 섹션을 참조하십시오.  
-  
-## <a name="related-content"></a>관련 내용  
-  
--   [Microsoft Dynamics Mobile 사용 하 여 SQL Server Integration Services를 구현합니다.](https://msdn.microsoft.com/library/cc563950)  
-  
--   [방법: Microsoft Dynamics AX 용 SQL Server Integration Services 패키지 구성](https://msdn.microsoft.com/library/bb986852)  
+
   
   

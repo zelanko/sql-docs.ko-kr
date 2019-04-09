@@ -21,15 +21,15 @@ ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e591982dfccbc06d705879bc63fb8aa87c041d40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242451"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  
   
 > [!NOTE]  
 >  이 섹션의 정보는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 라이선스가 있는 미국의 사용자에게만 적용됩니다. 본 제품을 미국 이외의 국가에서 구입한 경우 패키지에 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 서비스 전화 번호 및 주소가 나열된 자회사 정보 카드가 들어 있습니다. 이 섹션에 설명된 제품 및 서비스 종류를 사용자의 지역에서 사용할 수 있는지 여부는 자회사에 문의하십시오. 영어, 프랑스어, 스페인어, 중국어, 일본어, 이탈리아어로 제공되는 추가 정보를 보려면 [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=8287)를 참조하십시오.  
@@ -48,12 +48,12 @@ ms.locfileid: "53360715"
   
 ### <a name="free-step-by-step-tutorials"></a>무료 단계별 자습서  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 컴퓨터에서 내게 필요한 옵션 기능 및 설정을 조정하는 방법을 익히는 데 도움이 되는 일련의 단계별 자습서를 제공합니다. 이 자습서에서는 장애가 있는 사용자 및 내게 필요한 옵션 기능을 필요로 하는 사용자의 요구에 맞게 옵션, 기능 및 설정을 조정하는 방법을 자세히 설명합니다. 또한 마우스와 키보드의 개별 사용 방법과 두 가지 방식을 함께 사용하는 방법을 나란히 설명하여 이해를 돕습니다. [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67163)에서 다양한 제품에 대한 단계별 자습서를 확인할 수 있습니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 컴퓨터에서 접근성 옵션 및 설정을 조정하는 방법을 익히는 데 도움이 되는 일련의 단계별 자습서를 제공합니다. 이 자습서에서는 장애가 있는 사용자 및 내게 필요한 옵션 기능을 필요로 하는 사용자의 요구에 맞게 옵션, 기능 및 설정을 조정하는 방법을 자세히 설명합니다. 또한 마우스와 키보드의 개별 사용 방법과 두 가지 방식을 함께 사용하는 방법을 나란히 설명하여 이해를 돕습니다. [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67163)에서 다양한 제품에 대한 단계별 자습서를 확인할 수 있습니다.  
   
 ## <a name="assistive-technology-products-for-windows"></a>Windows용 보조 기술 제품  
  장애가 있는 사용자가 컴퓨터를 보다 쉽게 사용할 수 있도록 하기 위해 다양한 보조 기술 제품이 제공됩니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 실행 되는 보조 기술 제품의 검색 가능 카탈로그를 제공 합니다 [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67166)합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 은(는) [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67166)에서 Windows 운영 체제에서 실행되는 검색 가능한 보조 기술 제품 카탈로그를 제공합니다.  
   
  사용할 수 있는 제품 유형은 다음과 같습니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "53360715"
  보조 기술 제품을 사용하는 경우 업그레이드하기 전에 보조 기술 제품 공급업체에 문의하여 사용 중인 컴퓨터에 설치되어 있는 제품과의 호환성을 확인하십시오. 또한 보조 기술 제품 공급업체에 사용 중인 Windows 버전이나 기타 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품과의 호환성을 최적화할 수 있도록 설정을 조정하는 방법을 문의할 수 있습니다.  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>다양한 형식의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 설명서  
- 장애가 있는 고객의 요구에 맞는 다양한 형식의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서가 제공됩니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서는 접근성 요구 사항을 가진 고객을 위해 대체 형식에서 사용할 수 있습니다.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서 구하기  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 온라인으로 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대 한 제품 설명서를 사용 하 여](../2014-toc/books-online-for-sql-server-2014.md)입니다.  
@@ -90,7 +90,9 @@ ms.locfileid: "53360715"
   
  미국 및 캐나다 외부 지역 전화 번호: (609) 452-0606  
   
- 팩스 번호: (609) 987-8116 웹: [http://www.rfbd.org/](https://go.microsoft.com/fwlink/?LinkId=48621)  
+ 팩스 번호: (609) 987-8116 웹 사이트 주소: 
+
+[Microsoft accessibility 웹 사이트](https://www.microsoft.com/accessibility/)  
   
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>청각 장애가 있거나 청력이 좋지 않은 사용자를 위한 고객 서비스  
  청각 장애가 있거나 청력이 좋지 않은 사용자의 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 및 고객 서비스의 모든 내용은 텍스트 전화(TTY/TDD) 서비스를 통해 사용할 수 있습니다. 한국에서는 이 서비스가 지원되지 않습니다.  

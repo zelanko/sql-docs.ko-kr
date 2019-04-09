@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241791"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "58382729"
 ## <a name="error-handling"></a>오류 처리  
  CDC 원본에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 값은 항상-1입니다.  
+-   **오류 코드**: 값은 항상 -1입니다.  
   
 -   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 오류 메시지  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
   
- **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_\<..>** 에 제공된 인수 개수가 부족합니다.  
+ **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_에 제공 된 인수 개수가 부족\<... >.**  
   
  이 오류는 인수가 누락되었음을 나타내지 않습니다. 대신 CDC 상태 변수의 시작 또는 끝 LSN 값이 잘못되었음을 의미합니다.  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>관련 내용  
   
--   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](https://go.microsoft.com/fwlink/?LinkId=242541)  
+-   mattmasson.com의 블로그 항목 - [CDC 원본 처리 모드](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)  
   
   

@@ -17,15 +17,15 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3883fdccb7f118ebd8954da670b968b745f36e27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241361"
 ---
 # <a name="data-flow"></a>데이터 흐름
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.n원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다.l변환은 데이터를 수정, 요약 및 삭제합니다.s대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
 >  사용자 지정 공급자를 사용할 경우 ProviderDescriptors.xml 파일을 메타데이터 열 값으로 업데이트해야 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "58394401"
 |원본|Description|  
 |------------|-----------------|  
 |Oracle 원본|Oracle 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
-|SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://go.microsoft.com/fwlink/?LinkId=110393)다운로드 페이지를 참조하십시오.|  
+|SAP BI 원본|SAP BI 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft SQL Server 2008 기능 팩](https://www.microsoft.com/download/details.aspx?id=16978)다운로드 페이지를 참조하십시오.|  
 |Teradata 원본|Teradata 원본은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity의 원본 구성 요소입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity에는 연결 관리자 및 대상도 포함되어 있습니다. 자세한 내용은 [Microsoft Connectors for Oracle by Attunity 및 Microsoft Connectors for Teradata by Attunity(Microsoft Connectors for Oracle and Teradata by Attunity)](https://go.microsoft.com/fwlink/?LinkId=254963)다운로드 페이지를 참조하십시오.|  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
@@ -189,7 +189,7 @@ ms.locfileid: "58394401"
  자세한 내용은 [데이터 오류 처리](error-handling-in-data.md)를 참조하세요.  
   
 ### <a name="columns"></a>열  
- 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
+ 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
   
 ## <a name="paths"></a>경로  
  경로는 데이터 흐름 구성 요소를 연결합니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 경로 속성을 보고 수정하고, 경로 시작 지점의 출력 메타데이터를 보고, 데이터 뷰어를 경로에 연결할 수 있습니다.  
@@ -218,6 +218,6 @@ ms.locfileid: "58394401"
 ## <a name="related-content"></a>관련 내용  
  technet.microsoft.com의 비디오, [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkID=210369)  
   
- 큐레이트 응답, curatedviews.cloudapp.net의 [SSIS에서 동적 연결 문자열을 만드는 방법](https://go.microsoft.com/fwlink/?LinkId=321994)  
+ 큐 레이트 응답, [SSIS에서 동적 연결 문자열을 만드는 방법](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html)합니다.  
   
   

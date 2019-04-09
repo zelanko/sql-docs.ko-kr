@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240381"
 ---
 # <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "58386641"
   
  XML 원본은 여러 개의 일반 출력과 여러 개의 오류 출력을 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 XML 원본 구성을 위한 **XML 원본 편집기**대화 상자가 있습니다. 이 대화 상자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring 에는 XML 원본 구성을 위한 **XML 원본 편집기**대화 상자가 있습니다.s이 대화 상자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -95,6 +95,6 @@ ms.locfileid: "58386641"
  [XML 원본을 사용하여 데이터 추출](xml-source.md)  
   
 ## <a name="related-content"></a>관련 내용  
- 큐레이트 응답, curatedviews.cloudapp.net에 [SSIS 패키지에 대한 XML 대상 만들기](https://go.microsoft.com/fwlink/?LinkId=321993)  
+ 기술 문서 [SSIS 패키지를 구성 XML 파일을 사용 하 여](https://www.sqlshack.com/using-xml-file-configure-ssis-package/)입니다.  
   
   

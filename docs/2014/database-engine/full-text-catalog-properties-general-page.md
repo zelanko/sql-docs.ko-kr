@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241453"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "53353578"
   
 -   **일시 중지됨**  
   
--   **제한**  
+-   **정체됨**  
   
--   **복구**  
+-   **복구 중**  
   
--   **종료**  
+-   **시스템 종료**  
   
 -   **증분 채우기 진행 중**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53353578"
   
 -   **디스크는 전체 일시 중지**  
   
--   **Change tracking**  
+-   **변경 내용 추적**  
   
  **항목 수**  
  카탈로그의 전체 텍스트 항목 수를 표시합니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "53353578"
   
 -   **아니요**  
   
--   **예**  
+-   **사용자 계정 컨트롤**  
   
--   분음 기호에 대한 자세한 내용은 MSN Encarta Encyclopeida의 [분음 기호(Diacritical Mark)](https://go.microsoft.com/fwlink/?LinkId=154091) 를 참조하십시오.  
+-   분음 기호에 대 한 정보를 참조 하세요 [분음 부호](https://www.merriam-webster.com/dictionary/diacritic) Merriam Webster 사전에 있습니다.  
   
  **마지막 채우기 날짜**  
  마지막으로 카탈로그를 채운 날짜를 표시합니다.  

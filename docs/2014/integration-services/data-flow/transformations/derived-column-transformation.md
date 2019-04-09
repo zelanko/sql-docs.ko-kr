@@ -18,12 +18,12 @@ ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a00b9cdd386a433fa25742d575751b051d77c5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240998"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
   파생 열 변환은 변환 입력 열에 식을 적용하여 새로운 열 값을 만듭니다. 변환 입력의 변수, 함수, 연산자 및 열의 모든 조합이 식에 포함될 수 있습니다. 결과는 새 열로 추가하거나 기존 열에 대체 값으로 삽입할 수 있습니다. 파생 열 변환은 여러 개의 파생 열을 정의할 수 있으며 임의의 변수 또는 입력 열이 여러 개의 식에 사용될 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "58377670"
   
 -   [공용 속성](../../common-properties.md)  
   
--   [변환 사용자 지정 속성](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
@@ -77,6 +77,6 @@ ms.locfileid: "58377670"
 ## <a name="related-content"></a>관련 내용  
  social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
   
- curatedviews.cloudapp.net의 큐레이트 응답, [SSIS를 사용하여 열 데이터를 분할하는 방법](https://go.microsoft.com/fwlink/?LinkId=321995)  
+ 블로그 [SSIS를 사용 하 여 열 데이터를 분할 하는 방법을](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)합니다.  
   
   

@@ -12,17 +12,17 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240641"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
   이 대화 상자를 사용하여 새 전체 텍스트 카탈로그를 만들 수 있습니다.  
   
- **전체 텍스트 카탈로그를 만들기 위해 SQL Server Management Studio를 사용 하려면**  
+ **SQL Server Management Studio를 사용하여 전체 텍스트 카탈로그를 만들려면**  
   
 -   [전체 텍스트 카탈로그 만들기 및 관리](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "53374535"
  이 카탈로그를 새 전체 텍스트 카탈로그의 기본 카탈로그로 설정하려면 선택합니다.  
   
  **악센트 구분**  
- 카탈로그에서 물결표(**~**), 양음 악센트 기호(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 기호에 대 한 정보를 참조 하세요[분음 부호 표시](https://go.microsoft.com/fwlink/?LinkId=154091) MSN Encarta 백과 사전에서.  
+ 카탈로그에서 물결표(**~**), 양음 악센트 기호(**´**) 또는 움라우트(**¨**) 등의 분음 기호를 구분할지 여부를 나타냅니다. **구분 안 함**을 선택하면 이 전체 텍스트 카탈로그와 연관된 전체 텍스트 인덱스에서 분음 기호가 무시됩니다. 분음 기호에 대 한 정보를 참조 하세요 [분음 부호 표시](https://www.merriam-webster.com/dictionary/diacritic) Merriam-webster가 영국식 웹 사이트에 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE FULLTEXT CATALOG&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

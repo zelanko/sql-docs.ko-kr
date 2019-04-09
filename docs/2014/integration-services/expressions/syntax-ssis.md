@@ -13,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240371"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "58389851"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 결과에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR 또는 DT_STR 데이터 형식이 있는 경우 식의 계산 결과에 대해 4000자 제한이 있었습니다. 이제 이 제한이 제거되었습니다.  
   
- 특정 연산자와 함수를 사용하는 예제 식을 보려면 이 항목의 각 연산자와 함수에 대해 설명된 항목인 [연산자 &#40;SSIS 식&#41; ](operators-ssis-expression.md) 하 고 [함수 &#40;식&#41;](functions-ssis-expression.md).  
+ 특정 연산자와 함수를 사용하는 예제 식을 보려면 이 항목의 각 연산자와 함수에 대해 설명된 항목인 [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)를 참조하세요.  
   
  여러 개의 연산자 및 함수뿐만 아니라 식별자와 리터럴도 사용하는 샘플 식은 [고급 Integration Services 식의 예](examples-of-advanced-integration-services-expressions.md)를 참조하세요.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58389851"
   
 ## <a name="related-content"></a>관련 내용  
   
--   pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://go.microsoft.com/fwlink/?LinkId=217683)  
+-   pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
 -   social.technet.microsoft.com의 기술 문서 - [SSIS 식 예](https://go.microsoft.com/fwlink/?LinkId=220761)  
   

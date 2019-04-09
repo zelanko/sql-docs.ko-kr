@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241761"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
   참조 데이터는 신뢰할 수 있는 공용 도메인에서 또는 고급 상용 콘텐츠 공급자를 통해 사용할 수 있는 관련 또는 분류된 전역 데이터(엔터프라이즈의 경계를 벗어남)의 정확하고 완전한 집합을 의미합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "56038354"
 -   Windows Azure Marketplace뿐만 아니라 다이렉트 온라인 타사 참조 데이터 공급자를 통해 직접 참조 데이터를 사용할 수 있습니다.  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace의 참조 데이터 사용  
- DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 애플리케이션 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. Marketplace에 대한 자세한 내용은 [Windows Azure Marketplace에 대해 알아보기](https://go.microsoft.com/fwlink/?LinkId=211291)(https://go.microsoft.com/fwlink/?LinkId=211291))를 참조하세요.  
+ DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 애플리케이션 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. Marketplace에 대 한 자세한 내용은 참조 하세요. [알아보려면 Windows Azure Marketplace에](https://azuremarketplace.microsoft.com/marketplace/)입니다.  
   
  Marketplace와 DQS 간의 원활한 통합은 DQS 내 데이터 품질 프로젝트에 대한 정보 검색, 탐색 및 가져오기와 관련된 단계를 간소화합니다. DQS에서 데이터를 가져올 수 있으므로 DQS 사용자는 DQS, Marketplace 및 참조 데이터 서비스 공급자를 혁신적인 방식으로 결합하여 고품질 데이터를 얻을 수 있습니다.  
   
@@ -53,17 +53,17 @@ ms.locfileid: "56038354"
 ##  <a name="HowToCleanse"></a> 참조 데이터를 사용하여 데이터를 정리하는 방법  
  참조 데이터를 사용하여 DQS의 데이터를 정리하기 위한 3단계는 다음과 같습니다.  
   
-1.  **DQS에서 참조 데이터 공급자 세부 정보를 구성**: DQS에서 참조 데이터를 사용하려면 DQS에서 참조 데이터 서비스 세부 정보를 구성해야 합니다.  
+1.  **DQS에서 참조 데이터 공급자 세부 정보 구성**: DQS에서 참조 데이터를 사용하려면 DQS에서 참조 데이터 서비스 세부 정보를 구성해야 합니다.  
   
-    1.  Marketplace를 사용하는 경우 유효한 Marketplace 계정 키를 제공하고 Marketplace의 [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) 데이터 범주로 이동한 후 필요한 공급자를 구독합니다.  
+    1.  Marketplace를 사용하는 경우 유효한 Marketplace 계정 키를 제공하고 Marketplace의 [Data Quality Services](../data-quality-services/data-quality-services.md) 데이터 범주로 이동한 후 필요한 공급자를 구독합니다.  
   
     2.  다이렉트 온라인 참조 데이터 공급자를 사용하는 경우 DQS에서 다이렉트 참조 데이터 공급자 세부 정보를 추가해야 사용할 수 있습니다.  
   
      DQS에서 참조 데이터 공급자 세부 정보를 구성하는 작업은 특정 데이터 공급자에 대해 한 번만 수행하면 됩니다. DQS 관리자만 DQS에서 참조 데이터 설정을 구성할 수 있습니다.  
   
-2.  **참조 데이터 서비스에서 기술 자료의 도메인/복합 도메인을 매핑할**: 1단계에서 구독/추가한 적절한 데이터 서비스에 도메인/복합 도메인을 매핑합니다.  
+2.  **기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑**: 1단계에서 구독/추가한 적절한 데이터 서비스에 도메인/복합 도메인을 매핑합니다.  
   
-3.  **데이터 품질 프로젝트의 정리 작업에 매핑된 도메인 사용**: 에 대 한 데이터 품질 프로젝트를 만드는 동안 합니다 **정리** 활동 2 단계에서 서 참조 데이터 서비스와 매핑된 도메인/복합 도메인이 포함 된 기술 자료를 선택 하 고 정리 작업을 수행 합니다.  
+3.  **데이터 품질 프로젝트의 정리 작업에 매핑된 도메인 사용**: **정리** 작업에 대한 데이터 품질 프로젝트를 만들 때 2단계서 참조 데이터 서비스와 매핑된 도메인/복합 도메인이 포함된 기술 자료를 선택하고 정리 작업을 수행합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
@@ -71,6 +71,6 @@ ms.locfileid: "56038354"
 |----------------------|-----------|  
 |Marketplace 또는 다이렉트 온라인 타사 데이터 공급자의 참조 데이터 서비스를 사용하도록 DQS를 구성하는 방법에 대해 설명합니다.|[참조 데이터를 사용하도록 DQS 구성](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑하는 방법에 대해 설명합니다.|[참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

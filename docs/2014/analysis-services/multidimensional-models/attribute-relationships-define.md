@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241241"
 ---
 # <a name="define-attribute-relationships"></a>특성 관계 정의
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "53360435"
 -   사용자 정의 계층이 관계 경로에 정의된 경우 집계 디자인 알고리즘에 따라 보다 효율적인 집계를 선택할 수 있습니다.  
   
     > [!NOTE]  
-    >  중요 성과 의미를 정의 하 고 특성 관계를 구성 하는 방법에 대 한 자세한 내용은 섹션을 참조 "쿼리 성능 향상"에 [SQL Server 2005 Analysis Services 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=81621)합니다.  
+    >  중요 성과 의미를 정의 하 고 특성 관계를 구성 하는 방법에 대 한 자세한 내용은 섹션을 참조 "쿼리 성능 향상"에 [SQL Server 2005 Analysis Services 성능 가이드](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)합니다.  
   
 ## <a name="attribute-relationship-considerations"></a>특성 관계 고려 사항  
  기본 데이터가 특성 관계를 지원하는 경우 특성 간의 고유한 특성 관계도 정의해야 합니다. 고유한 특성 관계를 정의하려면 차원 디자이너의 **특성 관계** 탭을 사용하십시오.  
@@ -48,6 +48,6 @@ ms.locfileid: "53360435"
 >  특성 관계를 잘못 정의하면 유효하지 않은 쿼리 결과를 얻을 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [에서 차원 디자이너의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [의 차원 디자이너에 있는 차원 구조 뷰의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242461"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
   암호화는 키 또는 암호를 사용하여 데이터를 난독 처리하는 프로세스입니다. 이 경우 해당하는 암호 해독 키 또는 암호가 없으면 데이터를 사용할 수 없게 됩니다. 암호화를 통해 액세스 제어 문제를 해결할 수는 없습니다. 그러나 암호화를 사용하면 액세스 제어가 무시되는 경우에도 데이터 손실을 제한하여 보안이 향상됩니다. 예를 들어 데이터베이스 호스트 컴퓨터가 잘못 구성되어 해커가 중요한 데이터를 얻는 경우 해당 정보가 암호화되어 있으면 해킹한 정보를 사용하지 못할 수도 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "53352196"
  데이터를 암호화하기 위해 인증서를 사용하는 방법에 대한 정보입니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 보안 및 보호](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [SQL Server 2005 보안 10 단계](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
 ## <a name="see-also"></a>관련 항목  

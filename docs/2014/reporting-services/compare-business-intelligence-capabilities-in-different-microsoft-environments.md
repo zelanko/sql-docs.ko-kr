@@ -11,12 +11,12 @@ ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4f4339b91573aad752460b71fb4cce2181c9b880
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e98dd10b670a3e6bb4f53f9b9d68f98411074ffc
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241691"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>다양한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교
   Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence는 SharePoint Server 포함 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , SharePoint Online 및 Office 365용 Power BI 등을 망라한 다양한 환경에서 배포할 수 있습니다. 이 항목에서는 구성 요소 및 각 환경에서 지원되는 기능을 비교합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "56018165"
   
 ## <a name="author-and-manage-bi-reports-and-dashboards"></a>BI 보고서 및 대시보드 작성 및 관리  
   
-||SQL Server 2014 및 SharePoint Server 2013|SharePoint Online 계획 2|Office 365용 Power BI|  
+||SQL Server 2014 & SharePoint Server 2013|SharePoint Online 계획 2|Office 365용 Power BI|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |BI 사이트|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 갤러리|아니요|Power BI 사이트|  
 |데이터 관리와 쿼리 공유 및 관리|아니요|아니요|예 **<sup>1</sup>**|  
 |MDS(Master Data Services) 및 DQS(Data Quality Services)와의 통합|사용자 계정 컨트롤|아니오|아니요|  
 |데이터 새로 고침 예약|예. 하지만 파워 쿼리 데이터가 들어 있는 통합 문서는 지원하지 않습니다.|아니요|사용자 계정 컨트롤|  
-|자연어 쿼리(Q&A)|아니요|아니요|예 **<sup>2</sup>**|  
+|자연어 쿼리 (Q & A)|아니요|아니요|예 **<sup>2</sup>**|  
 |예측|아니요|아니요|예 **<sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합|사용자 계정 컨트롤|아니오|아니요|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 통합(다차원 및 테이블 형식)|사용자 계정 컨트롤|아니오|아니요|  
@@ -64,9 +64,9 @@ ms.locfileid: "56018165"
   
 ## <a name="more-information"></a>자세한 정보  
   
--   [Excel, SharePoint Online 및 Office 365 용 Power BI의 비즈니스 인텔리전스 기능](https://technet.microsoft.com/en-us/library/dn198235.aspx)  
+-   [Excel 및 Office 365의 BI 기능](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)합니다.  
   
--   동의어 사용 요구 사항에 대한 정보는 [Power Pivot Excel 데이터 모델에 동의어 추가](https://support.office.com/Article/Add-synonyms-to-a-Power-Pivot-Excel-data-model-345f4f5b-5ec2-4998-bc46-a26bdc0810b6?ui=en-US&rs=en-US&ad=US)(영문)를 참조하세요.  
+-   동의어 사용 요구 사항에 대 한 자세한 내용은 [최적화 Power BI q&a 동의어 및 관용구를 사용 하 여](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) pragmaticworks.com에서.  
   
 -   [Office Online, 기업 소셜 네트워크를 선택 합니다. Yammer 또는 뉴스 피드? ](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "56018165"
   
 -   [BI 센터 사이트와 Office 365용 Power BI 사이트 비교](https://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)(영문).  
   
--   [Microsoft BI 보고 및 분석 도구 소개](https://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [Microsoft BI(business intelligence) 도구로 분석 및 보고](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
 ## <a name="community-content"></a>커뮤니티 콘텐츠  
  [온-프레미스와 클라우드 Microsoft 셀프 서비스 BI 비교](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)(영문).  

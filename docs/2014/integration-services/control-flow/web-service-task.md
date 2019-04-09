@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240812"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
   웹 서비스 태스크는 웹 서비스 메서드를 실행합니다. 웹 서비스 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -82,8 +82,8 @@ ms.locfileid: "58377311"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>관련 내용  
- MSDN Library의 비디오 - [방법: 웹 서비스 태스크 (SQL Server 비디오)를 사용 하 여 웹 서비스 호출](https://go.microsoft.com/fwlink/?LinkId=259642), technet.microsoft.com 합니다.  
+ MSDN Library의 비디오 - [방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오)](https://go.microsoft.com/fwlink/?LinkId=259642)을 참조하세요.  
   
- curatedviews.cloudapp.net의 큐레이트 응답, [스크립트를 사용하여 SSIS의 웹 서비스 사용](https://go.microsoft.com/fwlink/?LinkId=321996)  
+ [SSIS 패키지를 통해 웹 서비스를 사용 하는 방법을](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/)합니다.  
   
   

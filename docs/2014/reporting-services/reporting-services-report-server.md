@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241631"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
   이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 중앙 구성 요소인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버의 개요입니다. 인증, 데이터 처리, 렌더링 및 배달 작업을 처리하는 특수 용도의 확장 프로그램 모음과 처리 엔진 쌍으로 구성됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport) 섹션을 참조하세요.  
@@ -51,13 +51,13 @@ ms.locfileid: "56019094"
   
 -   [보고서 서버 모드의 개요](#bkmk_overview)  
   
--   [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport)  
+-   [Feature Comparison of SharePoint and Native Mode](#bkmk_featuresupport)  
   
--   [Native Mode](#bkmk_nativemode)  
+-   [기본 모드](#bkmk_nativemode)  
   
 -   [기본 모드와 SharePoint 웹 파트](#bkmk_nativewithwebparts)  
   
--   [SharePoint 모드](#bkmk_sharepointmode)  
+-   [SharePoint 모드 ](#bkmk_sharepointmode)  
   
 -   [보고 프로세스 및 일정 예약 및 배달 프로세스](#bkmk_reportprocessor)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "56019094"
   
  SharePoint 모드에 필요한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../includes/sps2010-md.md)]입니다.  
+-   [!INCLUDE[SPF2010](../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../includes/sps2010-md.md)].  
   
 -   SharePoint 2010 제품에 적합한 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능 버전  
   
@@ -133,9 +133,9 @@ ms.locfileid: "56019094"
   
 ||Description|  
 |-|-----------------|  
-|**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능은 데이터 원본 또는 구독 관리와 같은 태스크를 위해 보고서 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리 페이지 보기와 같은 웹 응용 프로그램 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
+|**(1)**|웹 서버 또는 WFE(웹 프런트 엔드). [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능은 데이터 원본 또는 구독 관리와 같은 태스크를 위해 보고서 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리 페이지 보기와 같은 웹 애플리케이션 기능을 활용하려는 각 웹 서버에 설치해야 합니다.|  
 |**(2)**|이 추가 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 프록시를 통해 클라이언트가 애플리케이션 서버와 통신할 수 있도록 URL 및 SOAP 엔드포인트를 설치합니다.|  
-|**(3)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스를 실행하는 응용 프로그램 서버. 보고서 처리의 확장은 SharePoint 팜의 일부로 그리고 추가 애플리케이션 서버에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스를 추가하여 관리됩니다.|  
+|**(3)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 공유 서비스를 실행하는 애플리케이션 서버. 보고서 처리의 확장은 SharePoint 팜의 일부로 그리고 추가 애플리케이션 서버에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스를 추가하여 관리됩니다.|  
 |**(4)**|권한, 전자 메일, 프록시 및 구독을 포함하여 서로 다른 구성을 사용하는 두 개 이상의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 만들 수 있습니다.|  
 |**(5)**|보고서, 데이터 원본 및 기타 항목은 SharePoint 콘텐츠 데이터베이스에 저장됩니다.|  
 |**(6)**|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션은 보고서 서버, 임시 및 데이터 경고 기능을 위한 세 가지 데이터베이스를 만듭니다. 모든 SSRS 서비스 애플리케이션에 적용되는 구성 설정은 **RSReportserver.config** 파일에 저장됩니다.|  
@@ -170,10 +170,10 @@ ms.locfileid: "56019094"
 |SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.|[HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |HTML 스타일 및 CSS 스타일시트에 익숙한 웹 개발자는 이 항목의 정보를 사용하여 보고서 관리자의 모양을 사용자 지정하기 위해 수정할 수 있는 파일을 확인할 수 있습니다.|[보고서 관리자에서 사용자 지정 인증 쿠키를 전달하도록 구성](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
-|보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](report-server/configure-available-memory-for-report-server-applications.md)|  
+|보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](report-server/configure-a-report-server-for-remote-administration.md)|  
-|기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 사용 및 사용 안 함 설정](report-server/enable-and-disable-my-reports.md)|  
-|지원되는 브라우저 내에서 인쇄 기능을 제공하는 RSClientPrint 컨트롤을 설정하는 방법에 대한 지침을 제공합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.|[Reporting Services에 대한 클라이언트 쪽 인쇄 기능 사용 및 사용 안 함 설정](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 설정 및 해제](report-server/enable-and-disable-my-reports.md)|  
+|지원되는 브라우저 내에서 인쇄 기능을 제공하는 RSClientPrint 컨트롤을 설정하는 방법에 대한 지침을 제공합니다. 브라우저 요구 사항에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.|[Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services 확장 프로그램](extensions/reporting-services-extensions.md)   
@@ -183,6 +183,6 @@ ms.locfileid: "56019094"
  [보안 확장 프로그램 구현](extensions/security-extension/implementing-a-security-extension.md)   
  [데이터 처리 확장 프로그램 구현](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [PowerShell (큐 레이트 응답)를 사용 하 여 SSRS를 관리 하는 방법](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [PowerShell을 사용하여 SSRS를 관리하는 방법](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

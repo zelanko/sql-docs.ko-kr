@@ -12,12 +12,12 @@ ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff6a91f14242d79c3fec543632f74eeb9f452bd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5cdcc410cc83d7f7fa53d937f6011ad2624655fb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241851"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>디스크 입/출력 하위 시스템에서 IO 지연 문제 확인
   이 규칙은 이벤트 로그에서 오류 메시지 833을 검사합니다. 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 읽기 또는 쓰기 요청을 실행하여 해당 요청이 반환되는 데 15초 이상 소요되었음을 나타냅니다. 이 오류는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 보고하며 디스크 I/O 하위 시스템에 문제가 있음을 나타냅니다. 이렇게 긴 시간의 지연이 발생하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경의 성능이 심각하게 저하될 수 있습니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "53354810"
   
  [Microsoft 기술 자료 문서 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

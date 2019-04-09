@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241251"
 ---
 # <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
@@ -97,14 +97,14 @@ ms.locfileid: "58387141"
  자세한 내용은 [자식 패키지에서 변수 및 매개 변수의 값 사용](../use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
   
 ### <a name="accessing-parent-package-variables"></a>부모 패키지 변수 액세스  
- 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기**의 **스크립트** 페이지에 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다. 스크립트 태스크를 사용 하 여 부모 패키지 변수에 액세스 하는 방법에 대 한 자세한 내용은이 블로그 항목을 참조 하세요. [SSIS: 부모 패키지의 변수 액세스](https://go.microsoft.com/fwlink/?LinkId=257729), consultingblogs.emc.com 합니다.  
+ 자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기**의 **스크립트** 페이지에 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다. 스크립트 태스크를 사용 하 여 부모 패키지 변수에 액세스 하는 방법에 대 한 자세한 내용은이 블로그 항목을 참조 하세요. [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)합니다.  
   
 ## <a name="configuring-the-execute-package-task"></a>패키지 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [패키지 실행 태스크 편집기](../execute-package-task-editor.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58387141"
   
 -   블로그 항목, [SSIS: In-process와 out-of-process-자식 패키지를 실행 해야 있습니다? ](https://go.microsoft.com/fwlink/?LinkId=220819), consultingblogs.emc.com 합니다.  
   
--   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://go.microsoft.com/fwlink/?LinkId=257729), consultingblogs.emc.com 합니다.  
+-   블로그 항목, [SSIS: 부모 패키지의 변수 액세스](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), andyleonard.blog에 있습니다. 
   
   

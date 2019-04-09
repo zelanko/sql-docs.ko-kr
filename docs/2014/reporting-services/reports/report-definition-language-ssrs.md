@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241154"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
   RDL(Report Definition Language)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 정의의 XML 표현입니다. 보고서 정의에는 보고서에 대한 데이터 검색 및 레이아웃 정보가 포함됩니다. RDL은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용으로 만들어진 XML 문법과 일치하는 XML 요소로 구성됩니다. 보고서 정의 파일 내에서 코드 어셈블리에 액세스하여 보고서 항목 값, 스타일, 서식 등을 제어하는 사용자 지정 함수를 추가할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "56010428"
 |`Language`|미국 영어의 경우 "en-us"와 같이 언어 및 culture 코드가 포함된 텍스트 값을 갖는 속성입니다. 값은 기본 언어가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에 정의된 중립 언어 또는 특정 언어여야 합니다.|  
 |`Name`|문자열 텍스트 값을 갖는 속성입니다. 이름은 항목의 네임스페이스 내에서 고유해야 합니다. 지정하지 않을 경우 항목의 네임스페이스는 가장 안쪽에 위치하고 있으며 이름이 있는 포함하는 개체입니다.|  
 |`NormalizedString`|일반화된 문자열 텍스트 값을 갖는 속성입니다.|  
-|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](https://go.microsoft.com/fwlink/?LinkId=9257)를 참조하십시오.<br /><br /> RDL에서 `Size`의 최대값은 160인치이고 최소 크기는 0인치입니다.|  
+|`Size`|크기 요소는 숫자를 포함해야 합니다(마침표 문자가 선택적 소수 구분 기호로 사용됨). 숫자 다음에는 cm, mm, in, pt, pc와 같은 CSS 길이 단위 지정자가 와야 합니다. 숫자와 지정자 사이의 공백은 선택적입니다. 크기 지정자에 대한 자세한 내용은 [CSS 길이 단위 참조(CSS Length Units Reference)](https://www.w3schools.com/CSSref/css_units.asp)를 참조하십시오.<br /><br /> RDL에서 `Size`의 최대값은 160인치이고 최소 크기는 0인치입니다.|  
 |`String`|문자열 텍스트 값을 갖는 속성입니다.|  
 |`UnsignedInt`|서명되지 않은 정수(int32) 값을 갖는 속성입니다.|  
 |`Variant`|단순 XML 유형을 갖는 속성입니다.|  
