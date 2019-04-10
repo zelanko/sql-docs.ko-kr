@@ -15627,6 +15627,8 @@ items:
           href: ../t-sql/functions/datefirst-transact-sql.md
         - name: CURRENT_TIMESTAMP
           href: ../t-sql/functions/current-timestamp-transact-sql.md
+        - name: CURRENT_TIMEZONE
+          href: ../t-sql/functions/current-timezone-transact-sql.md
         - name: DATEADD
           href: ../t-sql/functions/dateadd-transact-sql.md
         - name: DATEDIFF
@@ -17275,9 +17277,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: cae1885d4cadd788449b3f14bbd626ce06d9745d
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59242361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367261"

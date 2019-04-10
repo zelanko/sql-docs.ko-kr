@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 7031a7d2a3a260d9ffb29f8651d04d874cf84f76
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305531"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860424"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 전용 라우팅 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "58305531"
   
 -   **시작하기 전 주의 사항:**  
   
-     [필수 구성 요소](#Prerequisites)  
+     [사전 요구 사항](#Prerequisites)  
   
      [읽기 전용 라우팅을 지원하도록 구성하는 데 필요한 복제본 속성](#RORReplicaProperties)  
   
@@ -55,9 +55,7 @@ ms.locfileid: "58305531"
   
 -   [관련 작업](#RelatedTasks)  
   
--   [관련 내용](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
@@ -85,7 +83,7 @@ ms.locfileid: "58305531"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
   
 |태스크|사용 권한|  
 |----------|-----------------|  
@@ -193,7 +191,7 @@ GO
   
     -   보조 역할에 대한 읽기 전용 라우팅을 구성하려면 **ReadonlyRoutingConnectionUrl"**_url_**"** 매개 변수입니다.  
   
-         여기서 *url* 은 읽기 전용 연결을 위해 복제본으로 라우팅할 때 사용할 연결 FQDN(정규화된 도메인 이름) 및 포트입니다. 예를 들어  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         여기서 *url*은 읽기 전용 연결을 위해 복제본으로 라우팅할 때 사용할 연결 FQDN(정규화된 도메인 이름) 및 포트입니다. 예를 들어  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)을 참조하세요.  
   
@@ -207,7 +205,7 @@ GO
   
 ### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자 설정 및 사용  
   
--   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
@@ -291,10 +289,8 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
 
 - [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
 
-- [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+- [활성 보조 복제본: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;을 참조하세요.](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
 
 - [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  
-- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
-  
+- [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
