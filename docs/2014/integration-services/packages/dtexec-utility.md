@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241908"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   합니다 `dtexec` 명령 프롬프트 유틸리티를 사용 하 여 구성 및 실행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다. `dtexec`유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. `dtexec` 유틸리티를 사용 하면 이러한 원본에서 패키지를 로드할 수: 합니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버,.ispac 프로젝트 파일을를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템입니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "58388567"
   
 -   [매개 변수](#parameter)  
   
--   [주의](#remark)  
+-   [Remarks](#remark)  
   
 -   [예](#example)  
   
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> 예  
  다음 예제에 사용 하는 방법을 보여 줍니다 합니다 `dtexec` 명령 프롬프트 유틸리티를 구성 및 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다.  
   
- **실행 중인 패키지**  
+ **패키지 실행**  
   
  Windows 인증을 사용하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행하려면 다음 코드를 사용합니다.  
   
@@ -669,6 +669,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [SQL Server Data Tools에서 패키지 실행](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>관련 내용  
- www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://go.microsoft.com/fwlink/?LinkId=251523)블로그 항목  
+ www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
   
   

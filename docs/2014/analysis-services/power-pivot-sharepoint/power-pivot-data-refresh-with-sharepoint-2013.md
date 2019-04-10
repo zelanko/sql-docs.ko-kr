@@ -11,12 +11,12 @@ ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 250e6c0a6c7bf1f5ddeb0bb5978ca70ab3545f8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241941"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot Data Refresh with SharePoint 2013
   SharePoint 2013에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 새로 고치기 위한 디자인에서는 Excel Services를 기본 구성 요소로 사용하여 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 모델을 로드하고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다.  
@@ -27,17 +27,17 @@ ms.locfileid: "53352713"
   
  **항목 내용**  
   
--   [Interactive Data Refresh](#bkmk_interactive_refresh)  
+-   [대화형 데이터 새로 고침](#bkmk_interactive_refresh)  
   
 -   [통합 문서 데이터 연결 및 대화형 데이터 새로 고침을 사용하는 Windows 인증](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
+-   [예약된 데이터 새로 고침](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013의 예약된 데이터 새로 고침 아키텍처](#bkmk_refresh_architecture)  
   
 -   [인증에 대한 추가 고려 사항](#datarefresh_additional_authentication)  
   
--   [자세한 정보](#bkmk_moreinformation)  
+-   [추가 정보](#bkmk_moreinformation)  
   
 ## <a name="background"></a>배경  
  SharePoint Server 2013 Excel Services는 Excel 2013 통합 문서에 대한 데이터 새로 고침을 관리하고 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 데이터 모델 처리를 트리거합니다. Excel 2010 통합 문서의 경우 Excel Services에서 통합 문서와 데이터 모델의 로드 및 저장도 관리합니다. 그러나 Excel Services는 PowerPivot 시스템 서비스를 사용하여 데이터 모델에 처리 명령을 보냅니다. 다음 표에는 통합 문서 버전에 따라 데이터 새로 고침에 대한 처리 명령을 보내는 구성 요소가 요약되어 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 분석 서버를 사용하도록 SharePoint 2013 팜이 구성되어 있다고 가정합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "53352713"
   
  **데이터를 새로 고치려면**  
   
--   아래 그림을 참조하여 단계를 수행하세요.  
+-   아래 그림을 참조하여 단계를 수행하십시오.  
   
 1.  브라우저에서 SharePoint 문서 라이브러리의 PowerPivot 통합 문서를 엽니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "53352713"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 자세한 내용은 [운영 체제의 일부로 작동할](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (https://technet.microsoft.com/library/cc784323(WS.10).aspx)합니다.  
+ 자세한 내용은 [운영 체제의 일부로 작동](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)합니다.  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **예약된 데이터 새로 고침의 핵심 사항**  
@@ -233,10 +233,10 @@ ms.locfileid: "53352713"
 ##  <a name="bkmk_moreinformation"></a> 자세한 정보  
  [PowerPivot 데이터 새로고침 문제해결](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Excel 서비스에서 SharePoint 2013](https://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<https://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>)).  
+ [SharePoint 2013에서 서비스를 excel](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)합니다. 
   
 ## <a name="see-also"></a>관련 항목  
- [예약 된 데이터 새로 고침 및 통합 문서 업그레이드 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [SharePoint 2013용 PowerPivot 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

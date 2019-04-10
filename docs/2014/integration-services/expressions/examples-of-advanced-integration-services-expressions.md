@@ -15,12 +15,12 @@ ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa1465b8efb8c2e2b0f35e7dc2c6ec5e7ef766f3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241132"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
   이 섹션에서는 여러 개의 연산자와 함수가 결합된 고급 식의 예를 제공합니다. 선행 제약 조건이나 조건부 분할 변환에 사용된 식은 부울로 계산되어야 합니다. 그러나 속성 식, 변수, 파생 열 변환 또는 For 루프 컨테이너에 사용된 식에는 이 제한이 적용되지 않습니다.  
@@ -103,6 +103,6 @@ ms.locfileid: "58381671"
  [데이터 흐름 구성 요소에서 식 사용](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>관련 내용  
- pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://pragmaticworks.com/cheatsheet/)  
+ pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)  
   
   

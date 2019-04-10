@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241731"
 ---
 # <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  
@@ -204,7 +204,7 @@ ms.locfileid: "58380721"
   
 ## <a name="related-content"></a>관련 내용  
   
--   mattmasson.com의 블로그 항목 - [SQL Server 2012용 SSIS의 CDC](https://go.microsoft.com/fwlink/?LinkId=242543)  
+-   mattmasson.com의 블로그 항목 - [SQL Server 2012용 SSIS의 CDC](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)  
   
 -   blogs.msdn.com의 CDC Service 설정 관련 블로그 항목, [SQL Server 2012의 Oracle용 CDC](https://go.microsoft.com/fwlink/?LinkId=247827)  
   
