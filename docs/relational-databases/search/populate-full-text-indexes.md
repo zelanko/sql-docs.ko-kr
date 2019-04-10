@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973652"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042276"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -217,8 +217,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 크롤링 로그 파일 이름의 변수 부분은 다음과 같습니다.
--   <**DatabaseID**> - 데이터베이스의 ID입니다. <**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
--   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. <**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   <**DatabaseID**> - 데이터베이스의 ID입니다. \<**dbid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
+-   <**FullTextCatalogID**> - 전체 텍스트 카탈로그 ID입니다. \<**catid**>는 앞에 오는 0을 사용하는 5자리 숫자입니다.  
 -   <**n**> - 동일한 전체 텍스트 카탈로그의 탐색 로그가 하나 이상 있음을 나타내는 정수입니다.  
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  

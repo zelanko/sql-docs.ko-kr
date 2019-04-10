@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566502"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788100"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |Developer|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 애플리케이션도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express 버전:|Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 애플리케이션을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 애플리케이션을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB는 모든 프로그래밍 기능을 포함하지만 사용자 모드에서 실행되며 구성이 필요 없는 빠른 설치가 가능하고 필수 구성 요소가 적은 새로운 경량 버전의 Express입니다.|  
 
-<sup>1</sup> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)를 사용하는 엔터프라이즈 고객을 위해 Enterprise Edition에서 무제한 가상화를 사용할 수 있습니다. 배포는 [라이선스 정책](https://www.microsoft.com/sql-server/sql-server-2017-pricing)을 준수해야 합니다.  
+<sup>1</sup> [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default)를 사용하는 고객을 위해 Enterprise Edition에서 무제한 가상화를 사용할 수 있습니다. 배포는 [라이선스 가이드](https://download.microsoft.com/download/7/8/C/78CDF005-97C1-4129-926B-CE4A6FE92CF5/SQL_Server_2017_Licensing_guide.pdf)를 준수해야 합니다. 자세한 내용은 [가격 책정 및 라이선스 페이지](https://www.microsoft.com/sql-server/sql-server-2017-pricing)를 참조하세요.
 
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>인터넷 서버에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  인터넷 정보 서비스(IIS)를 실행하는 서버와 같은 인터넷 서버에는 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구를 설치합니다. 클라이언트 도구에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 연결하는 애플리케이션이 사용하는 클라이언트 연결 구성 요소가 포함됩니다.  

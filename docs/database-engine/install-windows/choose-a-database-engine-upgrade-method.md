@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306251"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872263"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58306251"
 > [!NOTE]  
 >  또한 Azure SQL 데이터베이스 업그레이드 또는 SQL Server 환경 가상화를 업그레이드 계획에 포함하여 고려할 수 있습니다. 이러한 문서는 본 문서의 범위를 벗어나지만, 일부 링크를 준비했습니다.
 >   - [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
->   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
+>   - [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/) 
 >   - [Azure에서 SQL Server 옵션 선택](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/)  
   
 ## <a name="upgrade-in-place"></a>전체 업그레이드  
@@ -77,7 +77,7 @@ ms.locfileid: "58306251"
  사용자 데이터베이스를 마이그레이션한 후에는 다양한 방법 중 하나(예: 서버 이름 변경, DNS 항목 사용, 연결 문자열 수정)를 사용하여 새 사용자가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 가리키도록 합니다.  새 설치 방식에서는 현재 위치 업그레이드에 비해 위험과 가동 중지 시간이 줄어들며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드할 때 하드웨어와 운영 체제도 함께 손쉽게 업그레이드할 수 있습니다.  
   
 > [!NOTE]  
->  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#RollingUpgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](../database-mirroring/setting-up-database-mirroring-sql-server.md) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](https://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
+>  이미 HA(고가용성) 솔루션이 설치되어 있거나 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 환경이 실행 중인 경우에는 [롤링 업그레이드](#rolling-upgrade)를 진행합니다. 고가용성 솔루션이 없는 경우에는 임시로 [데이터베이스 미러링](../database-mirroring/setting-up-database-mirroring-sql-server.md) 을 구성하여 가동 중지 시간을 더욱 최소화할 수 있습니다. 그럴 경우 이 업그레이드를 더 손쉽게 실행하거나 이 기회를 통해 영구 HA 솔루션으로 [Always On 가용성 그룹](https://msdn.microsoft.com/library/hh510260.aspx) 을 구성할 수 있습니다.  
   
  예를 들어 이 방식으로 다음을 업그레이드할 수 있습니다.  
   
@@ -109,7 +109,5 @@ ms.locfileid: "58306251"
 -   SQL Server Reporting Services 확장 환경: 이 환경에서 롤링 업그레이드를 수행하기 위한 자세한 단계는 [ Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계
- [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [데이터베이스 엔진 업그레이드 완료](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  

@@ -9,22 +9,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cfb679bdec74536d62b3f332ff644d80435907c0
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618270"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042422"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능을 요약하고 있습니다. 첫 번째 섹션에는 최신 미리 보기 릴리스에 추가된 기능을 식별합니다. 이 문서의 다른 섹션에서는 이 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 지금까지 릴리스된 모든 기능에 대한 세부 정보를 제공합니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 이전 릴리스를 토대로 하여 SQL Server로 구축되었으며 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제를 선택할 수 있는 플랫폼으로 개선되었습니다. 이 문서에서는[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능을 요약하고 있습니다. 첫 번째 섹션에는 최신 미리 보기 릴리스에 추가된 기능을 식별합니다. 이 문서의 다른 섹션에서는 이 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 지금까지 릴리스된 모든 기능에 대한 세부 정보를 제공합니다.
 
 자세한 내용 및 알려진 문제에 대해서는 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 정보](sql-server-ver15-release-notes.md)를 참조하세요.
 
-**체험하기[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]**
+**[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 체험해 보세요.**
 
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101)에서 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]를 다운로드하여 Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)합니다.
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
@@ -39,8 +39,8 @@ CTP(Community Technology Preview) 2.4는 [!INCLUDE[sql-server-2019](../includes/
 - [빅 데이터 클러스터](#bigdatacluster)
   - Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침.
   - Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다.
-  - `INSERT INTO SELECT`가 데이터 풀을 지원합니다.
-  - 외부 테이블 쿼리에 대한 `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션 절.
+  - `INSERT INTO SELECT` 지원(데이터 풀용)
+  - `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션 절(외부 테이블 쿼리용)
 
 - [데이터베이스 엔진](#databaseengine)
   - 잘림 오류 메시지는 기본적으로 테이블 및 열 이름과 잘린 값을 포함합니다. [잘림](#truncation)을 참조하세요.
@@ -59,8 +59,8 @@ CTP(Community Technology Preview) 2.4는 [!INCLUDE[sql-server-2019](../includes/
 
 - [Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다. (CTP 2.4)
-- `INSERT INTO SELECT`가 데이터 풀을 지원합니다.
-- 외부 테이블 쿼리에 대한 `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션 절.
+- `INSERT INTO SELECT` 지원(데이터 풀용)
+- `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션 절(외부 테이블 쿼리용)
 - [IntelliJ의 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 빅 데이터 클러스터에 Spark 작업을 제출합니다](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - R 및 Python을 통한 기계 학습 모델 운영, SSIS(SQL Server Integration Services) 작업 실행 등 다양한 데이터 관련 앱에 대한 [애플리케이션 배포 및 관리 환경](../big-data-cluster/big-data-cluster-create-apps.md). (CTP 2.3)
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 빅 데이터 클러스터에서 Sparklyr 사용](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -77,7 +77,7 @@ CTP(Community Technology Preview) 2.4는 [!INCLUDE[sql-server-2019](../includes/
 
 ## <a id="databaseengine"></a> 데이터베이스 엔진
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 다음과 같은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새로운 기능을 도입하거나 향상된 기능을 제공합니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 다음과 같은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새로운 기능을 도입하거나 향상된 기능을 제공합니다.
 
 ### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>새 query_post_execution_plan_profile 확장 이벤트(CTP 2.4)
 
@@ -171,7 +171,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>향상된 간접 검사점 확장성(CTP 2.3)
 
-이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 tempdb와 같이 많은 수의 더티 페이지를 생성하는 데이터베이스가 있는 경우 사용자에게 생성되지 않은 스케줄러 오류가 발생할 수 있습니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 간접 검사점에 대해 향상된 확장성을 도입하여 UPDATE/INSERT 워크로드가 많은 데이터베이스에서 이러한 오류를 방지할 수 있습니다.
+이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 tempdb와 같이 많은 수의 더티 페이지를 생성하는 데이터베이스가 있는 경우 사용자에게 생성되지 않은 스케줄러 오류가 발생할 수 있습니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 간접 검사점에 대해 향상된 확장성을 도입하여 UPDATE/INSERT 워크로드가 많은 데이터베이스에서 이러한 오류를 방지할 수 있습니다.
 
 ### <a name="utf-8-support-ctp-23"></a>UTF-8 지원(CTP 2.3)
 
@@ -197,7 +197,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="a-nametruncation-truncation-error-message-improved-to-include-table-and-column-names-and-truncated-value-ctp-21"></a><a name="truncation" />테이블 및 열 이름과 잘린 값을 포함하도록 잘림 오류 메시지 개선(CTP 2.1)
 
-오류 메시지 ID 8152 `String or binary data would be truncated`는 데이터 이동 작업을 개발 및 유지 관리하는 많은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개발자와 관리자에게 익숙합니다. 이 오류는 다른 스키마를 사용하여 원본과 대상 사이에 데이터를 전송하는 동안 원본 데이터가 너무 커서 대상 데이터 형식에 맞지 않을 때 발생합니다. 이 오류 메시지는 문제를 해결하는 데 시간이 오래 걸릴 수 있습니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.  
+오류 메시지 ID 8152 `String or binary data would be truncated`는 데이터 이동 작업을 개발 및 유지 관리하는 많은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개발자와 관리자에게 익숙합니다. 이 오류는 다른 스키마를 사용하여 원본과 대상 사이에 데이터를 전송하는 동안 원본 데이터가 너무 커서 대상 데이터 형식에 맞지 않을 때 발생합니다. 이 오류 메시지는 문제를 해결하는 데 시간이 오래 걸릴 수 있습니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 에서는 이 시나리오에 대해 보다 구체적인 새 오류 메시지(2628)를 제공합니다.  
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -210,7 +210,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>통계 차단에 대한 진단 데이터 개선(CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 동기 통계 업데이트 작업을 대기하는 장기 실행 쿼리를 위한 향상된 진단 데이터를 제공합니다. `SELECT`가 쿼리 실행을 계속하기 전에 동기 통계 업데이트 작업이 완료되도록 기다리고 있는 경우 동적 관리 뷰 `sys.dm_exec_requests` 열 `command`에서는 `SELECT (STATMAN)`가 나타납니다. 또한 새로운 대기 유형 `WAIT_ON_SYNC_STATISTICS_REFRESH`가 `sys.dm_os_wait_stats` 동적 관리 뷰에 표시됩니다. 동기 통계 새로 고침 작업에 소요된 누적된 인스턴스 수준 시간을 보여 줍니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 동기 통계 업데이트 작업을 대기하는 장기 실행 쿼리를 위한 향상된 진단 데이터를 제공합니다. `SELECT`가 쿼리 실행을 계속하기 전에 동기 통계 업데이트 작업이 완료되도록 기다리고 있는 경우 동적 관리 뷰 `sys.dm_exec_requests` 열 `command`에서는 `SELECT (STATMAN)`가 나타납니다. 또한 새로운 대기 유형 `WAIT_ON_SYNC_STATISTICS_REFRESH`가 `sys.dm_os_wait_stats` 동적 관리 뷰에 표시됩니다. 동기 통계 새로 고침 작업에 소요된 누적된 인스턴스 수준 시간을 보여 줍니다.
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>하이브리드 버퍼 풀(CTP 2.1)
 
@@ -220,7 +220,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="static-data-masking-ctp-21"></a>정적 데이터 마스킹(CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 정적 데이터 마스킹을 제공합니다. SQL Server 데이터베이스의 복사본에서 중요한 데이터를 삭제하는 정적 마스킹 데이터를 사용할 수 있습니다. 모든 중요한 정보가 프로덕션 외의 사용자와 복사본을 공유할 수 있는 방식으로 변경된 경우 정적 데이터 마스킹을 사용하면 정화된 데이터베이스 복사본을 만들 수 있습니다. 정적 데이터 마스킹은 개발, 테스트, 분석 및 비즈니스 보고, 규정 준수, 문제 해결 및 특정 데이터를 다른 환경에 복사할 수 없는 기타 시나리오에 사용할 수 있습니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 정적 데이터 마스킹을 제공합니다. SQL Server 데이터베이스의 복사본에서 중요한 데이터를 삭제하는 정적 마스킹 데이터를 사용할 수 있습니다. 모든 중요한 정보가 프로덕션 외의 사용자와 복사본을 공유할 수 있는 방식으로 변경된 경우 정적 데이터 마스킹을 사용하면 정화된 데이터베이스 복사본을 만들 수 있습니다. 정적 데이터 마스킹은 개발, 테스트, 분석 및 비즈니스 보고, 규정 준수, 문제 해결 및 특정 데이터를 다른 환경에 복사할 수 없는 기타 시나리오에 사용할 수 있습니다.
 
 정적 데이터 마스킹은 열 수준에서 작동합니다. 마스크할 열을 선택하고 선택한 각 열에 대해 마스킹 함수를 지정합니다. 정적 데이터 마스킹이 데이터베이스를 복사한 후 지정한 마스킹 함수를 열에 적용합니다.
 
@@ -295,7 +295,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
    - 수백만 개 이상의 행이 있는 데이터 집합에 액세스합니다.
    - 많은 수의 고유 값이 포함된 열을 집계합니다.
    - 응답성이 절대 정밀도보다 더 중요합니다.
-      - `APPROX_COUNT_DISTINCT`는 일반적으로 정확한 응답의 2% 내에 있는 결과를 반환합니다.
+      - `APPROX_COUNT_DISTINCT` 는 일반적으로 정확한 응답의 2% 내에 있는 결과를 반환합니다.
       - 또한 대략적인 응답의 경우 정확한 응답에 필요한 시간보다 짧은 시간 내에 반환됩니다.
 
 - **Rowstore의 일괄 처리 모드**에서는 더 이상 columnstore 인덱스가 쿼리를 일괄 처리 모드에서 처리할 필요가 없습니다. 일괄 처리 모드에서는 쿼리 연산자가 한 번에 행 1개가 아닌 행 집합에 작동할 수 있습니다. 이 기능은 데이터베이스 호환성 수준 150에서 기본적으로 사용하도록 설정됩니다. 일괄 처리 모드를 사용할 경우 다음 조건이 모두 true이면 rowstore 테이블에 액세스하는 쿼리의 속도가 빨라집니다.
@@ -368,7 +368,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>영구 메모리 디바이스에 대한 확장 지원(CTP 2.0)
 
-이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 효율적인 memcpy 작업을 사용하여 운영 체제 스토리지 스택을 우회하고 장치에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
+이제 영구 메모리 디바이스에 배치되는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일은 *지원* 모드로 작동될 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 효율적인 memcpy 작업을 사용하여 운영 체제 스토리지 스택을 우회하고 디바이스에 직접 액세스합니다. 이 모드는 이러한 디바이스에 대해 낮은 대기 시간의 입/출력을 허용하므로 성능을 향상시킵니다.
     - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 파일의 예에는 다음이 포함됩니다.
         - 데이터베이스 파일
         - 트랜잭션 로그 파일
@@ -377,15 +377,15 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
     - Microsoft 이외의 일부 웹 사이트에서는 경우에 따라 영구 메모리를 비공식적으로 *pmem*이라고도 합니다.
 
 > [!NOTE]
-> 이 미리 보기 릴리스에는 영구 메모리 디바이스의 파일을 Linux에서만 사용할 수 있습니다. Windows의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 영구 메모리 디바이스를 지원합니다.
+> 이 미리 보기 릴리스에는 영구 메모리 디바이스의 파일을 Linux에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (Windows용)는 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 영구 메모리 디바이스를 지원합니다.
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>DBCC CLONEDATABASE에서 Columnstore 통계 지원(CTP 2.0)
 
-`DBCC CLONEDATABASE`는 데이터를 복사하지 않고 쿼리 성능 문제를 해결하는 데 필요한 모든 요소가 포함된 데이터베이스의 스키마 전용 복사본을 만듭니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 명령은 columnstore 인덱스 쿼리 문제를 정확히 해결하는 데 필요한 통계를 복사하지 않으므로 수동 단계를 통해 이 정보를 캡처해야 했습니다. 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 `DBCC CLONEDATABASE`는 columnstore 인덱스에 대한 통계 Blob을 자동으로 캡처하므로 수동 단계가 필요하지 않습니다.
+`DBCC CLONEDATABASE` 는 데이터를 복사하지 않고 쿼리 성능 문제를 해결하는 데 필요한 모든 요소가 포함된 데이터베이스의 스키마 전용 복사본을 만듭니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 명령은 columnstore 인덱스 쿼리 문제를 정확히 해결하는 데 필요한 통계를 복사하지 않으므로 수동 단계를 통해 이 정보를 캡처해야 했습니다. 이제 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 `DBCC CLONEDATABASE`는 columnstore 인덱스에 대한 통계 Blob을 자동으로 캡처하므로 수동 단계가 필요하지 않습니다.
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>sp_estimate_data_compression_savings에 새로 추가된 옵션(CTP 2.0)
 
-`sp_estimate_data_compression_savings`는 요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 현재 이 프로시저는 `NONE`, `ROW` 및 `PAGE`의 세 가지 옵션을 지원합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 `COLUMNSTORE` 및 `COLUMNSTORE_ARCHIVE`라는 두 가지 새 옵션을 제공합니다. 이러한 새 옵션을 사용하면 표준 또는 보관 columnstore 압축을 사용하여 테이블에서 columnstore 인덱스를 만들 경우의 예상되는 공간 절약을 추정할 수 있습니다.
+`sp_estimate_data_compression_savings` 는 요청된 개체의 현재 크기를 반환하고 요청된 압축 상태에 대한 개체 크기를 예상합니다. 현재 이 프로시저는 `NONE`, `ROW` 및 `PAGE`의 세 가지 옵션을 지원합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 는 `COLUMNSTORE` 및 `COLUMNSTORE_ARCHIVE`라는 두 가지 새 옵션을 제공합니다. 이러한 새 옵션을 사용하면 표준 또는 보관 columnstore 압축을 사용하여 테이블에서 columnstore 인덱스를 만들 경우의 예상되는 공간 절약을 추정할 수 있습니다.
 
 ### <a id="ml"></a> SQL Server Machine Learning Services 장애 조치(Failover) 클러스터 및 파티션 기반 모델링(CTP 2.0)
 
@@ -409,7 +409,7 @@ LWP(간단한 쿼리 프로파일링 인프라)는 표준 프로파일링 매커
 
 ### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>페이지 정보를 반환하는 새 sys.dm_db_page_info 시스템 함수(CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)`는 데이터베이스의 페이지에 대한 정보를 반환합니다. 이 함수는 `object_id`, `index_id` 및 `partition_id`를 포함하여 페이지의 헤더 정보를 포함하는 행을 반환합니다. 이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다. 
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` 는 데이터베이스의 페이지에 대한 정보를 반환합니다. 이 함수는 `object_id`, `index_id` 및 `partition_id`를 포함하여 페이지의 헤더 정보를 포함하는 행을 반환합니다. 이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다. 
 
 페이지 관련 대기 문제를 보다 용이하게 해결하기 위해 page_resource라는 새 열도 `sys.dm_exec_requests` 및 `sys.sysprocesses`에 추가되었습니다. 이 새 열을 사용하면 또 다른 새 시스템 함수인 `sys.fn_PageResCracker`를 사용하여 `sys.dm_db_page_info`를 이러한 뷰에 조인할 수 있습니다. 다음 스크립트를 예제로 참조하세요.
 
@@ -490,7 +490,7 @@ FROM sys.dm_exec_requests AS d
   - 보안 Enclave를 사용한 Always Encrypted 지원 (CTP 2.0)
   - 보다 작아진 다운로드 크기 (CTP 2.0)
   - Visual Studio 2017 격리 셸을 기준으로 하는 새로운 방식 (CTP 2.0)
-  - 전체 목록을 보려면 [SSMS 변경 로그](../ssms/sql-server-management-studio-changelog-ssms.md)를 참조하세요. (CTP 2.0)
+  - 전체 목록을 보려면 [SSMS 변경 로그](../ssms/release-notes-ssms.md)를 참조하세요. (CTP 2.0)
 
 - [**SQL Server PowerShell 모듈**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): SqlServer PowerShell 모듈을 사용하면 SQL Server 개발자, 관리자 및 BI 전문가가 데이터베이스 배포 및 서버 관리를 자동화할 수 있습니다.
 
@@ -555,8 +555,8 @@ FROM sys.dm_exec_requests AS d
 
 CTP 2.4부터 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 다음 서비스의 새로운 기능을 도입하지 않습니다.
 
-- SSIS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)])
-- SSRS([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)])
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS)
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (SSRS)
 
 ## <a name="next-steps"></a>다음 단계
 

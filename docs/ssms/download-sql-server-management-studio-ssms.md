@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566542"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042030"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,9 +44,9 @@ SSMS는 무료입니다.
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1은 SSMS의 현재 GA(일반 공급) 버전입니다.
 
-[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![d다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 업그레이드 패키지 다운로드(17.x에서 17.9.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![d다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 업그레이드 패키지 다운로드(17.x에서 17.9.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **버전 정보**
 
@@ -61,7 +61,7 @@ SSMS는 무료입니다.
 
 [중국어(간체)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804) | [중국어(번체)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-SSMS 17.9.1에 대한 자세한 내용은 [SSMS 17.9.1 변경 로그](sql-server-management-studio-changelog-ssms.md#ssms-1791-latest-ga-release)를 참조하세요.
+SSMS 17.9.1에 대한 자세한 내용은 [SSMS 17.9.1 변경 로그](release-notes-ssms.md#1791-latest-ga-release)를 참조하세요.
 
 ## <a name="ssms-installation-tips-and-issues-ssms-1791"></a>SSMS 설치 팁 및 문제(SSMS 17.9.1)
 
@@ -76,9 +76,9 @@ SSMS 17.9.1에 대한 자세한 내용은 [SSMS 17.9.1 변경 로그](sql-server
 
 ## <a name="ssms-180-rc1"></a>SSMS 18.0(RC1)
 
-**SSMS 18.0 RC1(릴리스 후보 1)은 현재 사용할 수 있으며, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!** 를 지원하는 최신 세대 *SQL Server Management Studio*입니다.
+**SSMS 18.0 RC1(릴리스 후보 1)은 현재 사용할 수 있으며, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]을 지원하는 최신 세대 *SQL Server Management Studio*입니다.**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.0(RC1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![dow다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.0(RC1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1*은 SSMS 18.0의 최신 공개 미리 보기입니다. 이전 SSMS 18.0 미리 보기가 설치되어 있으면 먼저 이를 제거한 후에 SSMS 18.0 RC1을 설치합니다.
 
@@ -111,7 +111,7 @@ SQL Server Management Studio 18.0 업그레이드 패키지 다운로드(18.0으
 
 SSMS 18.0(RC1)은 최신 버전의 SQL Server Management Studio입니다. 18.X 세대의 SSMS는 SQL Server 2019 미리 보기를 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다.
 
-이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS 변경 로그](sql-server-management-studio-changelog-ssms.md)를 참조하세요.
+이 릴리스의 새로운 기능에 대한 자세한 내용은 [SSMS release notes](release-notes-ssms.md)(SSMS 릴리스 정보)를 참조하세요.
 
 ## <a name="supported-sql-offerings-ssms-180-rc1"></a>지원되는 SQL 제품(SSMS 18.0 RC1)
 
@@ -140,7 +140,7 @@ SSMS 18.0(RC1)은 최신 버전의 SQL Server Management Studio입니다. 18.X �
 
 ## <a name="previous-releases"></a>이전 릴리스
 
-[이전 SQL Server Management Studio 릴리스](../ssms/sql-server-management-studio-changelog-ssms.md#previous-ssms-releases)
+[SQL Server Management Studio의 이전 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>피드백
 

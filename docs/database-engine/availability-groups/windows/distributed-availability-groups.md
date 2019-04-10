@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381034"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860744"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53381034"
 
 분산 가용성 그룹은 별도의 두 가용성 그룹에 걸쳐 있는 특별한 유형의 가용성 그룹입니다. 분산 가용성 그룹에 참여하는 가용성 그룹은 동일한 위치에 있을 필요는 없습니다. 실제, 가상, 온-프레미스, 공용 클라우드 또는 가용성 그룹 배포를 지원하는 모든 위치에 있을 수 있습니다. 여기에는 Linux에서 호스팅되는 가용성 그룹과 Windows에서 호스팅되는 가용성 그룹 사이 같이 도메인 간 및 플랫폼 간이 포함됩니다. 두 가용성 그룹이 통신할 수 있는 한 이러한 가용성 그룹을 포함한 분산 가용성 그룹을 구성할 수 있습니다.
 
-기존 가용성 그룹에는 WSFC 클러스터에 구성된 리소스가 있습니다. 분산 가용성 그룹은 WSFC 클러스터에 아무 것도 구성하지 않습니다. 분산 가용성 그룹에 관한 모든 항목은 SQL Server 내에서 유지 관리됩니다. 분산 가용성 그룹에 대한 정보를 확인하는 방법은 [분산 가용성 그룹 정보 보기](#viewing-distributed-availability-group-information)를 참조하세요. 
+기존 가용성 그룹에는 WSFC 클러스터에 구성된 리소스가 있습니다. 분산 가용성 그룹은 WSFC 클러스터에 아무 것도 구성하지 않습니다. 분산 가용성 그룹에 관한 모든 항목은 SQL Server 내에서 유지 관리됩니다. 분산 가용성 그룹에 대한 정보를 확인하는 방법은 [분산 가용성 그룹 정보 보기](#monitor-distributed-availability-group-health)를 참조하세요. 
 
 분산 가용성 그룹의 경우 기본 가용성 그룹에 수신기가 있어야 합니다. 기존 가용성 그룹에서와 같이 독립 실행형 인스턴스에 대한 기본 서버 이름(또는 SQL Server FCI(장애 조치 클러스터 인스턴스)의 경우 네트워크 이름 리소스와 연결된 값)을 제공하는 대신, 매개 변수를 만들 때 ENDPOINT_URL 매개 변수를 사용하여 분산 가용성 그룹에 대해 구성된 수신기를 지정합니다. 분산 가용성 그룹의 기본 가용성 그룹마다 수신기가 있지만, 분산 가용성 그룹에는 수신기가 없습니다.
 
@@ -76,7 +76,7 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Windows Server 버전 및 분산 가용성 그룹
 
-분산 가용성 그룹은 여러 가용성 그룹에 걸쳐 있고, 각각 고유한 기본 WSFC 클러스터에 있으며, SQL Server 전용 구조입니다.  즉, 개별 가용성 그룹을 포함하는 WSFC 클러스터에는 서로 다른 주요 버전의 Windows Server가 있을 수 있습니다. 이전 섹션에서 설명한 대로 SQL Server의 주요 버전은 동일해야 합니다. 다음 그림에서는 [첫 번째 그림](#fig1)과 매우 비슷하게 분산 가용성 그룹에 참여하는 AG 1 및 AG 2를 보여 주지만, 각 WSFC 클러스터는 서로 다른 버전의 Windows Server입니다.
+분산 가용성 그룹은 여러 가용성 그룹에 걸쳐 있고, 각각 고유한 기본 WSFC 클러스터에 있으며, SQL Server 전용 구조입니다.  즉, 개별 가용성 그룹을 포함하는 WSFC 클러스터에는 서로 다른 주요 버전의 Windows Server가 있을 수 있습니다. 이전 섹션에서 설명한 대로 SQL Server의 주요 버전은 동일해야 합니다. 다음 그림에서는 첫 번째 그림과 매우 비슷하게 분산 가용성 그룹에 참여하는 AG 1 및 AG 2를 보여 주지만, 각 WSFC 클러스터는 서로 다른 버전의 Windows Server입니다.
 
 
 ![서로 다른 버전의 Windows Server를 사용하는 WSFC 클러스터에 포함된 분산 가용성 그룹](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -97,8 +97,8 @@ SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로
 분산 가용성 그룹을 사용하는 세 가지 주요 시나리오는 다음과 같습니다. 
 
 * [재해 복구 및 더 쉬운 다중 사이트 구성](#disaster-recovery-and-multi-site-scenarios)
-* [새 하드웨어 또는 구성으로 마이그레이션(새 하드웨어 사용, 기본 운영 체제 변경 등)](#migration-using-a-distributed-availability-group)
-* [여러 가용성 그룹을 확장하여 단일 가용성 그룹에서 읽기 가능한 복제본 수를 8개 이상으로 늘리는 경우](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [새 하드웨어 또는 구성으로 마이그레이션(새 하드웨어 사용, 기본 운영 체제 변경 등)](#migrate-by-using-a-distributed-availability-group)
+* [여러 가용성 그룹을 확장하여 단일 가용성 그룹에서 읽기 가능한 복제본 수를 8개 이상으로 늘리는 경우](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>재해 복구 및 다중 사이트 시나리오
 
@@ -212,7 +212,7 @@ Cluster Group                   JC                    Online
 
 ![작업에 사용할 수 있는 옵션이 없음](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-다음 그림에 표시된 것처럼 SQL Server Management Studio의 보조 복제본에는 분산 가용성 그룹과 관련된 항목이 아무것도 표시되지 않습니다. 이러한 가용성 그룹 이름은 이전 [CLUSTER_A WSFC 클러스터](#fig7) 이미지에 표시된 역할에 매핑합니다.
+다음 그림에 표시된 것처럼 SQL Server Management Studio의 보조 복제본에는 분산 가용성 그룹과 관련된 항목이 아무것도 표시되지 않습니다. 이러한 가용성 그룹 이름은 이전 CLUSTER_A WSFC 클러스터 이미지에 표시된 역할에 매핑합니다.
 
 ![보조 복제본의 SQL Server Management Studio에서 보기](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -374,7 +374,7 @@ GO
 
 
 ### <a name="dmv-to-show-current-state-of-seeding"></a>시드의 현재 상태를 표시하는 DMV
-아래 쿼리는 시드의 현재 상태에 대한 정보를 표시합니다. 복제본 간의 동기화 오류 문제를 해결하는 데 유용합니다. [David Barbarin에게 다시 한 번 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+아래 쿼리는 시드의 현재 상태에 대한 정보를 표시합니다. 복제본 간의 동기화 오류 문제를 해결하는 데 유용합니다. [David Barbarin에게 다시 한번 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
  ```sql
  -- shows current_state of seeding 
@@ -412,5 +412,3 @@ GO
 * [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
-
- 

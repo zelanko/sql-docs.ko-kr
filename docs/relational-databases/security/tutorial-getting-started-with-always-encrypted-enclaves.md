@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417155"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042132"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -38,6 +38,14 @@ ms.locfileid: "58417155"
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상
 - Windows 10 Enterprise 버전 1809 또는 Windows Server 2019 Datacenter
+- SQL Server 컴퓨터가 물리적 컴퓨터인 경우 SQL Server 컴퓨터는 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 충족해야 합니다.
+   - SLAT(두 번째 수준 주소 변환)를 사용하는 64비트 프로세서
+   - VM 모니터 모드 확장(Intel CPU의 VT-c)에 대한 CPU 지원
+   - 가상화 지원 사용(Intel VT-x 또는 AMD-V)
+- SQL Server 컴퓨터가 가상 머신인 경우에는 중첩된 가상화를 허용하도록 VM을 구성해야 합니다.
+   - Hyper-V 2016 이상에서 VM 프로세서의 [중첩된 가상화 확장을 사용하도록 설정](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
+   - Azure에서 Dv3 및 Ev3 시리즈 VM과 같은 중첩된 가상화를 지원하는 VM 크기를 실행 중인지 확인합니다. [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
+   - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
 - [SSMS(SQL Server Management Studio) 18.0 이상](../../ssms/download-sql-server-management-studio-ssms.md).
 
 대안으로 다른 머신에 SSMS를 설치할 수 있습니다.
@@ -105,6 +113,21 @@ ms.locfileid: "58417155"
    ```
 
 3. Hyper-V 설치를 완료하라는 메시지가 표시되면 SQL Server 컴퓨터를 다시 시작합니다.
+
+4. SQL Server 컴퓨터가 가상 머신이거나, UEFI 보안 부트를 지원하지 않거나 IOMMU가 장착되지 않은 레거시 물리적 컴퓨터인 경우 플랫폼 보안 기능에 대한 VBS 요구 사항을 제거해야 합니다.
+    1. Windows 레지스트리에서 이 요구 사항을 제거합니다.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. 컴퓨터를 다시 시작하여 줄어든 요구 사항을 사용하는 VBS가 온라인 상태로 전환되도록 합니다.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. SQL Server 컴퓨터에 관리자 권한으로 다시 로그인하고, 관리자 권한의 Windows PowerShell 콘솔을 열고 고유한 호스트 키를 생성한 다음, 결과 공개 키를 파일로 내보냅니다.
 
@@ -236,7 +259,7 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     3. **Windows 인증서 저장소(현재 사용자 또는 로컬 컴퓨터)** 또는 **Azure Key Vault**를 선택해야 합니다.
     4. **Enclave 계산 허용**을 선택합니다.
     5. Azure Key Vault를 선택한 경우 Azure에 로그인하고 Key Vault를 선택합니다. Always Encrypted용 Key Vault를 만드는 방법에 대한 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
-    6. 키가 이미 있는 경우 선택하고, 없는 경우 양식의 지침에 따라 새 키를 만듭니다.
+    6. 인증서나 Azure 키 값 키가 이미 존재하는 경우 하나를 선택하거나 **인증서 생성** 단추를 클릭하여 새 인증서를 생성합니다.
     7. **확인**을 선택합니다.
 
         ![Enclave 계산 허용](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
     3. 연결 \> 연결 변경을 선택합니다.
     4. **옵션**을 선택합니다. **Always Encrypted** 탭으로 이동하여 **Always Encrypted 사용**을 선택하고 enclave 증명 URL을 지정합니다(예: ht<span>tp://</span>hgs.bastion.local/Attestation).
     5. **연결**을 선택합니다.
-    6. 데이터베이스 컨텍스트를 ContosoHR 데이터베이스로 변경합니다.
-1. SSMS에서 데이터베이스 연결에 대해 Always Encrypted가 해제된 상태로 다른 쿼리 창을 구성합니다.
+    6. Always Encrypted 쿼리에 대한 매개 변수화를 사용할 것인지 묻는 메시지가 표시되면 **사용**을 클릭합니다.
+2. SSMS에서 데이터베이스 연결에 대해 Always Encrypted가 해제된 상태로 다른 쿼리 창을 구성합니다.
     1. SSMS에서 새 쿼리 창을 엽니다.
     2. 새 쿼리 창의 아무 곳이나 마우스 오른쪽 단추로 클릭합니다.
     3. 연결 \> 연결 변경을 선택합니다.
@@ -296,12 +319,12 @@ UnauthorizedHost 오류는 공개 키가 HGS 서버에 등록되지 않았음을
 
 이제 암호화된 열에 대해 리치 조회를 실행할 수 있습니다. 일부 쿼리 처리는 서버 쪽 Enclave 내에서 수행됩니다. 
 
-1. Always Encrypted에 대해 매개 변수화 사용
+1. [Always Encrypted에 대한 매개 변수화]가 사용되고 있는지 확인합니다.
     1. SSMS의 주 메뉴에서 **쿼리**를 선택합니다.
     2. **쿼리 옵션...** 을 선택합니다.
     3. **실행** > **고급**으로 이동합니다.
-    4. **Always Encrypted에 대해 매개 변수화 사용**을 선택합니다.
-    5. **확인**을 선택합니다.
+    4. [Always Encrypted에 대한 매개 변수화]가 선택되어 있는지 확인합니다.
+    5. 확인을 선택합니다.
 2. Always Encrypted가 설정된 쿼리 창에서 다음 쿼리를 붙여넣고 실행합니다. 이 쿼리는 지정된 검색 기준에 맞는 일반 텍스트 값 및 행을 반환해야 합니다.
 
     ```sql

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557840"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872023"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -41,7 +41,7 @@ ms.locfileid: "51557840"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **후속 작업:**  [데이터베이스의 이름을 바꾼 후](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Azure SQL Data Warehouse 또는 Parallel Data Warehouse에서 데이터베이스의 이름을 바꾸려면 [RENAME(Transact-SQL)](../../t-sql/statements/rename-transact-sql.md) 문을 사용합니다.
@@ -57,7 +57,7 @@ ms.locfileid: "51557840"
   
 ### <a name="security"></a>보안  
   
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>사용 권한
 
 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   

@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801597"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042452"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,7 +270,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>인수
 *OR ALTER*  
- **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  이미 있는 경우에만 함수를 조건부로 변경합니다. 
  
@@ -334,7 +334,7 @@ RETURNS return_data_type
   
  인라인 TVF에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
   
- <a name="mstvf"></a> MSTVF에서 @*return_variable*은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. @*return_variable*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
+ <a name="mstvf"></a> MSTVF에서 \@*return_variable*은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. \@*return_variable*은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
   
  *select_stmt*  
  인라인 TVF(테이블 반환 함수)의 반환 값을 정의하는 단일 SELECT 문입니다.  
@@ -347,15 +347,15 @@ RETURNS return_data_type
  만든 함수 이름에서 참조할 어셈블리 및 메서드를 지정합니다.  
   
 -   *assembly_name* - 다음의 `name` 열에 있는 값과 일치해야 합니다.   
-    `SELECT * FROM sys.assemblies;`을 참조하세요.  
+    `SELECT * FROM sys.assemblies;`.  
     이 이름은 `CREATE ASSEMBLY` 문에 사용된 이름입니다.  
   
 -   *class_name* - 다음의 `assembly_name` 열에 있는 값과 일치해야 합니다.  
-    `SELECT * FROM sys.assembly_modules;`을 참조하세요.  
+    `SELECT * FROM sys.assembly_modules;`.  
     흔히 이 값은 마침표 또는 점을 포함합니다. 이러한 경우 Transact-SQL 구문에서는 값을 대괄호 쌍 []이나 큰따옴표 쌍 ""으로 묶어야 합니다.  
   
 -   *method_name* - 다음의 `method_name` 열에 있는 값과 일치해야 합니다.   
-    `SELECT * FROM sys.assembly_modules;`을 참조하세요.  
+    `SELECT * FROM sys.assembly_modules;`.  
     메서드는 정적이어야 합니다.  
   
 일반적인 예에서 모든 형식이 MyFood 네임스페이스에 있는 MyFood.DLL의 경우 `EXTERNAL NAME` 값은 다음과 같을 수 있습니다.   
@@ -430,7 +430,7 @@ EXECUTE AS 절
 사용자 정의 함수가 실행되는 보안 컨텍스트를 지정합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 함수가 참조하는 데이터베이스 개체에 대한 사용 권한을 확인하는 데 사용할 사용자 계정을 제어할 수 있습니다.  
   
 > [!NOTE]  
-> `EXECUTE AS`는 인라인 테이블 반환 함수에 지정할 수 없습니다.
+> `EXECUTE AS` 는 인라인 테이블 반환 함수에 지정할 수 없습니다.
   
 자세한 내용은 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
 
@@ -456,7 +456,7 @@ INLINE = { ON | OFF }
  COLLATE 절은 **char**, **varchar**, **nchar** 및 **nvarchar** 데이터 형식의 열에 데이터 정렬을 변경하는 데만 사용할 수 있습니다.  
   
  > [!NOTE]
- > `COLLATE`는 CLR 테이블 반환 함수에 지정할 수 없습니다.  
+ > `COLLATE` 는 CLR 테이블 반환 함수에 지정할 수 없습니다.  
   
  ROWGUIDCOL  
  새 열이 행 GUID(Globally Unique Identifier) 열임을 나타냅니다. 테이블당 한 개의 **uniqueidentifier** 열만 ROWGUIDCOL 열로 지정할 수 있으며 ROWGUIDCOL 속성은 **uniqueidentifier** 열에만 할당할 수 있습니다.  
@@ -567,15 +567,15 @@ INLINE = { ON | OFF }
 
 -   `TRY...CATCH` 문을 제외한 흐름 제어 명령문  
 
--   로컬 데이터 변수 및 로컬 커서를 정의하는 `DECLARE` 문  
+-   `DECLARE` 문 - 로컬 데이터 변수 및 로컬 커서를 정의합니다.  
 
--   지역 변수에 값을 할당하는 식이 있는 SELECT 목록이 포함된 `SELECT` 문  
+-   `SELECT` 문 - 지역 변수에 값을 할당하는 식이 있는 SELECT 목록을 포함합니다.  
 
 -   함수에서 커서 선언, 열기, 닫기, 할당 취소 등 로컬 커서를 참조하는 커서 작업. `INTO` 절을 사용하여 지역 변수에 값을 할당하는 `FETCH` 문만 허용되며 클라이언트에게 데이터를 반환하는 `FETCH` 문은 허용되지 않습니다.  
 
--   지역 테이블 변수를 수정하는 `INSERT`, `UPDATE` 및 `DELETE` 문  
+-   `INSERT`, `UPDATE` 및 `DELETE` 문 - 지역 테이블 변수를 수정합니다.  
 
--   확장 저장 프로시저를 호출하는 `EXECUTE` 문  
+-   `EXECUTE` 문 - 확장 저장 프로시저를 호출합니다.  
 
 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
@@ -645,11 +645,11 @@ CLR 테이블 반환 함수에서 `ORDER` 절을 사용할 때는 다음 지침�
   
     -   `ORDER` 절이 인덱스와 호환되는 삽입 쿼리  
   
-    -   `ORDER` 절과 호환되는 `ORDER BY` 절  
+    -   `ORDER BY` `ORDER` 절과 호환되는 절  
   
     -   집계, 여기서 `GROUP BY`는 `ORDER` 절과 호환됩니다.  
   
-    -   고유 열이 `ORDER` 절과 호환되는 `DISTINCT` 집계  
+    -   `DISTINCT` 고유 열이 `ORDER` 절과 호환되는 집계.  
   
 SELECT 쿼리에도 `ORDER BY`를 지정하고 쿼리를 실행해야 `ORDER` 절에서 정렬된 결과를 얻을 수 있습니다. 테이블 반환 함수의 정렬 순서에 포함된 열을 쿼리하는 방법은 [sys.function_order_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md)를 참조하세요.  
   
@@ -826,7 +826,7 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
- [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
+ [DROP FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   
  [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   

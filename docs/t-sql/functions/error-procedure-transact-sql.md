@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617063"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899729"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,21 +49,21 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>반환 값  
-오류가 발생한 저장 프로시저 CATCH 블록에서 호출된 경우 `ERROR_PROCEDURE`는 해당 저장 프로시저 이름을 반환합니다.  
+CATCH 블록에서 호출된 경우 `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저나 트리거의 이름을 반환합니다.
   
-`ERROR_PROCEDURE`는 오류가 저장 프로시저나 트리거 내에서 발생하지 않은 경우 NULL을 반환합니다.  
+`ERROR_PROCEDURE` 는 오류가 저장 프로시저나 트리거 내에서 발생하지 않은 경우 NULL을 반환합니다.  
   
-`ERROR_PROCEDURE`는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
+`ERROR_PROCEDURE` 는 CATCH 블록 범위 밖에서 호출된 경우 NULL을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
-`ERROR_PROCEDURE`는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
+`ERROR_PROCEDURE` 는 CATCH 블록 범위 내의 어떤 위치에서나 호출을 지원합니다.  
   
-`ERROR_PROCEDURE`는 `CATCH` 블록 범위 내에서 실행 위치나 실행 횟수에 관계 없이 오류가 발생하는 저장 프로시저 또는 트리거의 이름을 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
+`ERROR_PROCEDURE` 는 `CATCH` 블록 범위 내에서 실행 위치나 실행 횟수에 관계 없이 오류가 발생하는 저장 프로시저 또는 트리거의 이름을 반환합니다. 이것은 오류가 발생한 명령문 바로 다음 명령문에 오류 번호만 반환하는 @@ERROR 같은 함수와 대조적입니다.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_PROCEDURE 사용  
-이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE`는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
+이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_PROCEDURE` 는 오류가 발생한 저장 프로시저의 이름을 반환합니다.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  
@@ -150,9 +150,9 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
  [ERROR_MESSAGE&#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE&#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
+ [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   
   
 

@@ -10,12 +10,12 @@ ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa0b798027bbd5eb5d310e31d97378a7375d4d60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
+ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632111"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58913308"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,12 @@ ms.locfileid: "47632111"
     -   장애 조치(Failover) 클러스터의 모든 노드는 32비트 또는 64비트의 동일한 플랫폼에 속해야 하며 동일한 운영 체제 에디션 및 버전을 실행해야 합니다. 또한 64비트 버전의 Windows 운영 체제를 실행 중인 64비트 하드웨어에는 64비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치해야 합니다. 이 릴리스에서는 장애 조치(Failover) 클러스터링에 WOW64가 지원되지 않습니다.  
   
 3.  각 장애 조치(Failover) 클러스터 인스턴스에 대해 IP 주소를 여러 개 지정할 수 있습니다. 각 서브넷에 대해 여러 IP 주소를 지정할 수 있습니다. 같은 서브넷에 여러 IP 주소가 있는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 AND로 설정하고, 여러 서브넷의 노드를 클러스터링하는 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 종속성을 OR로 설정합니다.  
-  
+
+4.  SQL Server FCI(장애 조치 클러스터 인스턴스)를 사용하려면 클러스터 노드가 도메인에 가입되어 있어야 합니다. 다음 구성은 **지원되지 않습니다**.
+    - 작업 그룹 클러스터에 대한 SQL FCI 
+    - 다중 도메인 클러스터에 대한 SQL FCI   
+    - 도메인 + 작업 그룹 클러스터에 대한 SQL FCI 
+
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치 옵션  
   
 ##### <a name="option-1-integrated-installation-with-add-node"></a>옵션 1: 통합 설치 - 노드 추가  
@@ -67,7 +72,7 @@ ms.locfileid: "47632111"
 #### <a name="ip-address-configuration-during-setup"></a>설치 중 IP 주소 구성  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 통해 다음 작업 중에 IP 리소스 종속성 설정을 설정하거나 변경할 수 있습니다.  
   
--   통합 설치 - [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   통합 설치 - [Create a New SQL Server Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
 -   CompleteFailoverCluster(고급 설치) - [새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   

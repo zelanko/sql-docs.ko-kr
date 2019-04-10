@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: '자습서: SQL Server Management Studio를 사용하기 위한 추가 팁과 요령'
 description: 'SSMS 사용에 대한 추가 팁과 요령을 다루는 자습서입니다. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663109"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872223"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
 이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
@@ -216,7 +216,7 @@ SQL Server 오류 로그에 대한 경로는 구성 설정에 따라 다를 수 
 SQL Server에 연결한 전후에 SQL Server의 이름을 찾는 몇 가지 옵션이 있습니다.  
 
 ### <a name="before-you-connect-to-sql-server"></a>SQL Server에 연결하기 전에
-1. 단계를 따라 [디스크의 SQL Server 오류 로그](#finding-your-error-log-if-you-cannot-connect-to-sql)를 찾습니다. 경로는 아래 이미지의 경로와 다를 수 있습니다.
+1. 단계를 따라 [디스크의 SQL Server 오류 로그](#find-the-error-log-location-if-you-cant-connect-to-sql-server)를 찾습니다. 경로는 아래 이미지의 경로와 다를 수 있습니다.
 2. 메모장에서 errorlog.log 파일을 엽니다.  
 3. *서버 이름은* 텍스트를 검색합니다.
     
@@ -253,5 +253,3 @@ SQL Server에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 �
 4. 연결된 SQL Server 인스턴스의 이름을 식별하려면 쿼리의 결과를 봅니다. 
     
     ![SQL Server 이름 쿼리](media/ssms-tricks/queryservername.png)
-
-

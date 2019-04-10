@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421220"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042173"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55421220"
 -   로그인이 없는 Windows 그룹 기반 사용자 `CREATE USER [Contoso\Sales];`  
 -   Azure Active Directory 사용자에 기반한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 사용자. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   암호가 있는 포함된 데이터베이스 사용자 ([!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 사용할 수 없습니다.) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   암호가 있는 포함된 데이터베이스 사용자 ([!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서는 사용할 수 없습니다.) `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Windows 그룹 로그인을 통해 연결하는 Windows 보안 주체 기반 사용자**  
   
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  데이터베이스 사용자를 만들 Azure Active Directory 보안 주체를 지정합니다. *Azure_Active_Directory_principal*은 Azure Active Directory 사용자, Azure Active Directory 그룹 또는 Azure Active Directory 애플리케이션이 될 수 있습니다. (Azure Active Directory 사용자는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 Windows 인증 로그인을 가질 수 없으며 데이터베이스 사용자만 가능합니다.) 연결 문자열은 포함된 데이터베이스를 초기 카탈로그로 지정해야 합니다.
 
- 사용자는 도메인 보안 주체의 전체 별칭을 사용합니다.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Azure AD 주체의 경우 CREATE USER 구문에는 다음 항목이 필요합니다.
 
- 보안 그룹은 보안 그룹의 *표시 이름*을 사용합니다. *Nurses* 보안 그룹은 다음을 사용합니다.  
+- Azure AD 사용자에 대한 Azure AD 개체의 UserPrincipalName.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- Azure AD 그룹 및 Azure AD 애플리케이션에 대한 Azure AD 개체의 DisplayName. *Nurses* 보안 그룹이 있다면 다음을 사용합니다.  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)을 참조하세요.  
   
@@ -342,7 +343,7 @@ Azure SQL Database 관리되는 인스턴스 데이터베이스에서 사용자�
  
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 포함된 데이터베이스 사용자에 대해 SSMS는 Multi-Factor Authentication을 지원할 수 있습니다. 자세한 내용은 [SQL Database 및 SQL Data Warehouse를 사용한 Azure AD MFA에 대한 SSMS 지원](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/)을 참조하세요.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY USER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -389,7 +390,7 @@ GO
 ```  
   
 ###  <a name="withoutLogin"></a> 4. 로그인이 없는 사용자 만들기 및 사용  
- 다음 예에서는 `CustomApp` 로그인에 매핑되지 않는 데이터베이스 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 만듭니다. 그런 다음 `adventure-works\tengiz0` 사용자를 가장하도록 사용자에게 `CustomApp` 권한을 부여합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑되지 않는 데이터베이스 사용자 `CustomApp`를 만듭니다. 그런 다음 `adventure-works\tengiz0` 사용자를 가장하도록 사용자에게 `CustomApp` 권한을 부여합니다.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -468,7 +469,7 @@ WITH
 
  Azure AD 로그인으로 Azure AD 사용자를 만들려면 다음 구문을 사용합니다.
 
- `sysadmin` 역할로 부여된 Azure AD 로그인을 사용하여 관리되는 인스턴스에 로그인합니다. 다음은 로그인 bob@contoso.com에서 Azure AD 사용자 bob@contoso.com을 만듭니다. 이 로그인은 [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account) 예제에서 생성되었습니다.
+ `sysadmin` 역할로 부여된 Azure AD 로그인을 사용하여 관리되는 인스턴스에 로그인합니다. 다음은 로그인 bob@contoso.com에서 Azure AD 사용자 bob@contoso.com을 만듭니다. 이 로그인은 [CREATE LOGIN](create-login-transact-sql.md#examples) 예제에서 생성되었습니다.
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -509,13 +510,9 @@ GO
  [데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
- [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
- [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
+ [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [데이터베이스 엔진 권한 시작](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

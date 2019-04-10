@@ -30,12 +30,12 @@ ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 7e8d9952c99ed78e98be6664e091cc744445f5d5
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685830"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872273"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ DBCC SHRINKFILE
 이 값을 지정하면 DBCC SHRINKFILE은 *target_size*로 파일을 축소합니다. 해제할 파일 영역에서 사용된 페이지는 파일 보유 영역의 사용 가능한 공간으로 이동됩니다. 예를 들어 10MB의 데이터 파일을 사용하면 *target_size*가 8인 DBCC SHRINKFILE 작업이 파일의 마지막 2MB에서 사용된 모든 페이지를 파일의 처음 8MB에서 할당되지 않은 페이지로 이동합니다. DBCC SHRINKFILE은 필요한 저장 데이터 크기 이하로 파일을 축소하지 않습니다. 예를 들어 10MB 데이터 파일에서 7MB가 사용되는 경우 *target_size*가 6인 DBCC SHRINKFILE 문은 파일을 6MB가 아니라 7MB로만 축소합니다.
   
 EMPTYFILE  
-지정한 파일의 모든 데이터를 **동일한 파일 그룹**의 다른 파일로 마이그레이션합니다. 즉, EMPTYFILE은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. ENPTYFILE은 이 파일이 읽기 전용이 아니더라도 파일에 새 데이터가 추가되지 않는다고 가정합니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일을 제거할 수 있습니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 크기를 변경하면 읽기 전용 플래그가 재설정되고 데이터를 추가할 수 있습니다.
+지정한 파일의 모든 데이터를 **동일한 파일 그룹**의 다른 파일로 마이그레이션합니다. 즉, EMPTYFILE은 지정된 파일의 데이터를 동일한 파일 그룹의 다른 파일로 마이그레이션합니다. EMPTYFILE은 이 파일이 읽기 전용이 아니더라도 파일에 새 데이터가 추가되지 않는다고 가정합니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일을 제거할 수 있습니다. [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용하여 파일 크기를 변경하면 읽기 전용 플래그가 재설정되고 데이터를 추가할 수 있습니다.
 
 FILESTREAM 파일 그룹 컨테이너의 경우 FILESTREAM 가비지 수집기가 실행되어 EMPTYFILE이 다른 컨테이너에 복사한 불필요한 파일 그룹 컨테이너 파일을 모두 삭제할 때까지 파일을 제거하는 데 ALTER DATABASE를 사용할 수 없습니다. 자세한 내용은 [sp_filestream_force_garbage_collection&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)을 참조하세요.
   
@@ -169,7 +169,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   축소 작업을 종료합니다. 축소 작업이 종료되면 완료된 작업이 모두 유지됩니다.  
 -   아무 작업도 하지 않고 차단하는 트랜잭션이 완료될 때까지 축소 작업이 대기할 수 있게 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
@@ -242,7 +242,7 @@ GO
 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
-[FILE_ID&#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
+[FILE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/file-id-transact-sql.md)  
 [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
 [파일 축소](../../relational-databases/databases/shrink-a-file.md)
   

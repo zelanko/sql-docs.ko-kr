@@ -22,12 +22,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4eb114e5309b1733e90b417517c885e23ec09a42
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: e3d3a6524d0f7e791628ec664bc9b5df17a0e529
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072211"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042192"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58072211"
 > [!IMPORTANT]  
 > **max server memory** 값을 너무 높게 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스가 동일한 호스트에서 호스팅되는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 메모리를 경쟁해야 할 수 있습니다. 그러나 이 값을 너무 낮게 설정하면 메모리 부족 및 성능 문제가 발생할 수 있습니다. **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 **_–f_** 시작 옵션을 사용하여 시작하고 **최대 서버 메모리**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
     
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리를 동적으로 사용할 수 있지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 메모리 양을 설정하기 전에 OS, max_server_memory setting에 의해 제어되지 않는 메모리 할당, 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 할당할 수 있는 최대 메모리 양입니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리를 동적으로 사용할 수 있지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 메모리 양을 설정하기 전에 OS, max_server_memory setting에 의해 제어되지 않는 메모리 할당, 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 할당할 수 있는 최대 메모리 양입니다.  
  
 ## <a name="setting-the-memory-options-manually"></a>메모리 옵션 수동 설정  
 서버 옵션 **min server memory** 및 **max server memory**를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 다른 애플리케이션의 메모리 요구 사항 또는 동일한 호스트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 구성하는 데 유용합니다.
@@ -52,7 +52,7 @@ ms.locfileid: "58072211"
 <a name="min_server_memory"></a> **min_server_memory** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다. 예를 들어 동일한 호스트에 여러 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 동시에 존재할 수 있는 경우 인스턴스의 메모리를 예약하기 위해 max_server_memory 대신 min_server_memory 매개 변수를 설정합니다. 또한 가상 환경에서 min_server_memory 값을 설정하여 기본 호스트의 메모리 압력을 가하는 것은 게스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신(VM)의 버퍼 풀에서 수용 가능한 성능에 필요한 것 이상으로 메모리를 할당 해제하지 않도록 하는 데 필수적입니다.
  
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **min server memory**에 지정된 메모리 양을 할당하는 것은 보장하지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
   
 <a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
  -  전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
@@ -86,7 +86,8 @@ ms.locfileid: "58072211"
 이 옵션을 설정해도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [동적 메모리 관리](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management)에는 영향을 미치지 않으므로 다른 메모리 클럭의 요청에 따라 확장 또는 축소할 수 있습니다. *메모리의 페이지 잠금* 사용자 권한을 사용할 때 **max server memory**를 에 대한 상한값을 [위에서 설명한 대로](#max_server_memory) 설정하는 것이 좋습니다.
 
 > [!IMPORTANT]
-> 이 옵션의 설정은 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용해야 합니다. 이 경우 오류 17890이 아래 `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` 예제와 유사한 Errorlog에 보고됩니다.
+> 이 옵션의 설정은 필요한 경우, 즉 sqlservr 프로세스가 페이징 아웃되고 있다는 징후가 있는 경우에만 사용해야 합니다. 이 경우 오류 17890이 아래 예와 유사하게 Errorlog에 보고됩니다.
+> `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [추적 플래그 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)는 페이지 잠금을 사용하는 데 Standard Edition가 필요하지 않습니다. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하려면  
@@ -120,7 +121,7 @@ ms.locfileid: "58072211"
  인스턴스를 다시 시작하지 않고 이러한 설정을 변경할 수 있으므로 사용 패턴에 가장 맞는 설정을 쉽게 찾을 수 있습니다.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server에 최대 메모리 양 제공  
-모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 프로세스 가상 주소 공간 제한까지 메모리를 구성할 수 있습니다. 자세한 내용은 [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)을 참조하세요.
+모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 프로세스 가상 주소 공간 제한까지 메모리를 구성할 수 있습니다. 자세한 내용은 [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016)을 참조하세요.
 
 ## <a name="examples"></a>예
 
@@ -174,8 +175,7 @@ FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)   
- [버전 및 SQL Server 2016의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
- [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
+ [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
+ [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux의 SQL Server 2017 버전 및 지원되는 기능](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Windows 및 Windows Server 릴리스에 대한 메모리 제한](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 

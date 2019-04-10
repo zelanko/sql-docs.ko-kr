@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828373"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797043"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN(Transact-SQL)
 
@@ -115,7 +115,7 @@ Windows 정책에 따라 강력한 암호가 필요한 경우에는 암호에 �
 - 대문자(A-Z)
 - 소문자(a-z)
 - 숫자(0-9)
-- 영숫자가 아닌 문자 중 하나(예:  공백,  _,  @,  *,  ^,  %,  !,  $,  #  또는 &)
+- 영숫자가 아닌 문자 중 하나(예:  공백, _, @, *, ^, %, !, $, # 또는 &)
 
 WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 
@@ -140,9 +140,9 @@ ASYMMETRIC KEY *asym_key_name* 이 로그인과 연결될 비대칭 키의 이�
 - 액세스를 허용하려면 서버의 [인증 모드](../../relational-databases/security/choose-an-authentication-mode.md)가 로그인 형식과 일치해야 합니다.
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-- 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles을 참조하세요.
+- 서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 - **CREDENTIAL** 옵션을 사용하는 경우에는 서버에 대한 **ALTER ANY CREDENTIAL** 권한도 필요합니다.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
@@ -309,9 +309,9 @@ SQL Database에서 연결을 인증하는 데 필요한 로그인 데이터 및 
 
 SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>을 참조하세요.
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 
 ## <a name="logins"></a>로그인
 
@@ -323,7 +323,7 @@ SQL Database 로그인에 대한 자세한 내용은 [Windows Azure SQL Database
 로그인을 만든 후 해당 로그인으로 SQL Database에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
 - 데이터베이스에 연결하려면 해당 데이터베이스에서 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
 
@@ -418,7 +418,9 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 - Azure AD 계정에 매핑된 서버 수준 보안 주체를 만들기 위한 새 구문이 도입되었습니다(**FROM EXTERNAL PROVIDER**).
 - **FROM EXTERNAL PROVIDER**가 지정된 경우:
 
-  - login_name은 현재 Azure SQL 관리되는 인스턴스로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다.
+  - login_name은 현재 Azure SQL 관리되는 인스턴스로 Azure AD에서 액세스할 수 있는 기존 Azure AD 계정(사용자, 그룹 또는 애플리케이션)을 나타내야 합니다. Azure AD 주체의 경우 CREATE LOGIN 구문에는 다음 항목이 필요합니다.
+    - Azure AD 사용자에 대한 Azure AD 개체의 UserPrincipalName.
+    - Azure AD 그룹 및 Azure AD 애플리케이션에 대한 Azure AD 개체의 DisplayName.
   - **PASSWORD** 옵션은 사용할 수 없습니다.
   - 현재 첫 번째 Azure AD 로그인은 위의 구문을 사용하여 `sysadmin`인 표준 SQL Server 계정(비 Azure AD)에 의해 생성되어야 합니다.
   - SQL Database 관리되는 인스턴스에 대한 Azure AD 관리자를 사용하여 Azure AD 로그인을 만들 때 다음 오류가 발생합니다.</br>
@@ -448,7 +450,7 @@ SID **=** *sid* 로그인을 다시 만드는데 사용됩니다. SQL Server 인
 로그인을 만든 후 해당 로그인으로 SQL Database 관리되는 인스턴스에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
 - Azure AD 로그인으로 Azure AD 사용자를 만들려면 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](../../t-sql/statements/grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
   - `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]` 명령을 사용하여 Azure AD 로그인에 `sysadmin` 역할을 추가합니다.
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
@@ -606,16 +608,16 @@ SQL Data Warehouse에서 연결을 인증하는 데 필요한 로그인 데이�
 
 SQL Data Warehouse 로그인에 대한 자세한 내용은 [Windows Azure SQL Database에서 데이터베이스 및 로그인 관리](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins)를 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>을 참조하세요.
+프로비전 프로세스를 통해 만들어진 서버 수준의 보안 주체 로그인이나 master 데이터베이스에서 `loginmanager` 데이터베이스 역할이 할당된 멤버만 새 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 
 로그인을 만든 후 해당 로그인으로 SQL Data Warehouse에 연결할 수 있지만 이 로그인은 **public** 역할에 부여된 권한만 있습니다. 다음 작업 중 일부를 수행하는 것이 좋습니다.
 
 - 데이터베이스에 연결하려면 로그인에 대한 데이터베이스 사용자를 만듭니다. 자세한 내용은 [CREATE USER](../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.
-- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
+- 데이터베이스에서 사용자에게 권한을 부여하려면 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 기본 제공 데이터베이스 역할 중 하나 또는 사용자 지정 역할에 사용자를 추가하거나 [GRANT](grant-transact-sql.md) 문을 사용하여 사용자에게 권한을 직접 부여합니다. 자세한 내용은 [비관리자 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [추가 서버 수준 관리 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [GRANT](grant-transact-sql.md) 문을 참조합니다.
 - 서버 차원의 사용 권한을 부여하려면 master 데이터베이스에서 데이터베이스 사용자를 만들고 **ALTER SERVER ROLE** ... **ADD MEMBER** 문을 사용하여 관리 서버 역할 중 하나에 사용자를 추가합니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) 및 [서버 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles)을 참조하세요.
 
 - **GRANT** 문을 사용하여 새 로그인 또는 해당 로그인을 포함한 역할에 서버 수준 권한을 부여합니다. 자세한 내용은 [GRANT](../../t-sql/statements/grant-transact-sql.md)를 참조하십시오.
@@ -710,7 +712,7 @@ Windows 정책에 따라 강력한 암호가 필요한 경우에는 암호에 �
 - 대문자(A-Z)
 - 소문자(a-z)
 - 숫자(0-9)
-- 영숫자가 아닌 문자 중 하나(예:  공백,  _,  @,  *,  ^,  %,  !,  $,  #  또는 &)
+- 영숫자가 아닌 문자 중 하나(예:  공백, _, @, *, ^, %, !, $, # 또는 &)
 
 WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 
@@ -728,9 +730,9 @@ WINDOWS 로그인이 Windows 로그인에 매핑되도록 지정합니다.
 - 로그인을 만들면 새 로그인이 자동으로 사용하도록 설정되고 해당 로그인에 서버 수준 **CONNECT SQL** 권한이 부여됩니다.
 - 권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
-서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>을 참조하세요.
+서버의 **ALTER ANY LOGIN** 권한 또는 **securityadmin** 고정 서버 역할의 멤버 자격이 있는 사용자만 로그인을 만들 수 있습니다. 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) 및 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md)을 참조하세요.
 
 ## <a name="after-creating-a-login"></a>로그인을 만든 후
 

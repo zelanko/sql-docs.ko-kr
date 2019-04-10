@@ -11,16 +11,16 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017004"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872253"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
-[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)], 및 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)]에서는 Windows Server 장애 조치(failover) 클러스터가 운영 체제 바로 업그레이드를 수행하지 못하게 방지하여 클러스터에 허용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 제한합니다. 클러스터가 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 이상으로 업그레이드되면 클러스터가 최신으로 유지될 수 있습니다.
+[!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)], [!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)] 및 [!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)]에서는 Windows Server 장애 조치(failover) 클러스터가 운영 체제 바로 업그레이드를 수행하지 못하게 방지하여 클러스터에 허용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 제한합니다. 클러스터가 [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 이상으로 업그레이드되면 클러스터가 최신으로 유지될 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -46,9 +46,9 @@ ms.locfileid: "56017004"
 
 |                                   | 모든 서버 개체와 VNN 필요 | 모든 서버 개체와 VNN 필요 | 서버 개체/VNN이 필요하지 않음\* | 서버 개체/VNN이 필요하지 않음\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_가용성 그룹? (예/아니요)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
-| **클러스터에서 SQL FCI만 사용**         | [시나리오 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [시나리오 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **_가용성 그룹이란? (Y/N)_**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
+| **클러스터에서 SQL FCI만 사용**         | [시나리오 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [시나리오 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [시나리오 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [시나리오 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **클러스터에서 독립 실행형 인스턴스 사용** | [시나리오 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [시나리오 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [시나리오 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [시나리오 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* 가용성 그룹 수신기 이름 제외
 
@@ -123,7 +123,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>시나리오 3: SQL FCI와 SQL Server 가용성 그룹이 모두 있는 Windows 클러스터
 
-독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 사용하지 않고 하나 이상의 가용성 그룹에 포함된 SQL FCI만 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 있는 경우 이를 "가용성 그룹 없음, 독립 실행형 인스턴스 없음" 시나리오와 유사한 방법을 사용하여 새 클러스터로 마이그레이션할 수 있습니다. 시스템 테이블을 대상 FCI 공유 디스크에 복사하기 전에 원본 환경의 모든 가용성 그룹을 삭제해야 합니다. 모든 데이터베이스가 대상 컴퓨터로 마이그레이션되면 동일한 스키마와 수신기 이름으로 가용성 그룹을 다시 만듭니다. 이렇게 하면 Windows Server 장애 조치(failover) 클러스터 리소스가 대상 클러스터에서 올바르게 형식이 지정되고 관리됩니다. **마이그레이션 전에 대상 환경의 각 컴퓨터의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager에서 Always On을 활성화해야 합니다.**
+독립 실행형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 사용하지 않고 하나 이상의 가용성 그룹에 포함된 SQL FCI만 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램이 있는 경우 이를 "가용성 그룹 없음, 독립 실행형 인스턴스 없음" 시나리오와 유사한 방법을 사용하여 새 클러스터로 마이그레이션할 수 있습니다. 시스템 테이블을 대상 FCI 공유 디스크에 복사하기 전에 원본 환경의 모든 가용성 그룹을 삭제해야 합니다. 모든 데이터베이스가 대상 컴퓨터로 마이그레이션되면 동일한 스키마와 수신기 이름으로 가용성 그룹을 다시 만듭니다. 이렇게 하면 Windows Server 장애 조치(failover) 클러스터 리소스가 대상 클러스터에서 올바르게 형식이 지정되고 관리됩니다. **마이그레이션 전에 대상 환경의 각 머신의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Configuration Manager에서 Always On을 활성화해야 합니다.**
 
 ### <a name="to-perform-the-upgrade"></a>업그레이드를 수행하려면
 
@@ -285,7 +285,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트
 
--   **작업**
+-   **에서**
 
     작업은 시스템 데이터베이스와 함께 올바르게 마이그레이션됩니다. SQL 에이전트 작업 또는 SQL 에이전트 자체를 실행하는 모든 사용자는 대상 컴퓨터에 대해 필수 구성 요소에 지정된 것과 동일한 사용 권한을 갖습니다.
 

@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207572"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860634"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 확장 이벤트 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
   
  [error_reported(1480): 데이터베이스 복제본 역할 변경](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  가용성 복제본의 상태가 변경되었을 때 발생합니다. 가용성 그룹을 만들거나 가용성 복제본을 조인하면 이 이벤트를 트리거할 수 있습니다. 실패한 자동 장애 조치(failover)의 진단에 유용합니다. 장애 조치 단계를 추적하는 데에도 사용할 수 있습니다.  
   
 #### <a name="event-information"></a>이벤트 정보  
@@ -101,8 +101,8 @@ Alwayson_health에서 다루는 몇몇 이벤트에 대한 자세한 내용은 [
 |availability_group_id|guid|가용성 그룹의 ID입니다.|  
 |availability_group_name|unicode_string|가용성 그룹의 이름입니다.|  
 |availability_replica_id|guid|가용성 복제본의 ID입니다.|  
-|previous_state|availability_replica_state|변경 전의 복제본 역할입니다.<br /><br /> **가능한 값:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-|current_state|availability_replica_state|변경 후의 복제본 역할입니다.<br /><br /> **가능한 값:**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|previous_state|availability_replica_state|변경 전의 복제본 역할입니다.<br /><br /> **가능한 값은**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|current_state|availability_replica_state|변경 후의 복제본 역할입니다.<br /><br /> **가능한 값은**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Alwayson_health 세션 정의  
   
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>다음 단계  
  [이벤트 세션 데이터 보기](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

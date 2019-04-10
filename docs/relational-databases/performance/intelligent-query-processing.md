@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042232"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -28,7 +28,7 @@ ms.locfileid: "58493984"
 
 ![지능형 쿼리 처리](./media/3_iqpfeaturefamily.png)
 
-데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다.  Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
+데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -51,7 +51,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 이 기능을 사용하면 계획인 단일 캐시된 계획을 사용하여 실행 중에 더 나은 조인 전략으로 동적으로 전환될 수 있습니다.
 
-일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
+일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
 작동 방식은 다음과 같습니다.
 -  중첩된 루프 조인이 해시 조인보다 적합할 만큼 빌드 조인 입력의 행 수가 충분히 작으면 계획이 중첩된 루프 알고리즘으로 전환됩니다.
 -  빌드 조인 입력이 특정 행 수 임계값을 초과하면 전환이 발생하지 않으며 계획이 해시 조인을 계속 사용합니다.
@@ -66,13 +66,13 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
 WHERE [fo].[Quantity] = 360;
 ```
 
-이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)를 사용하도록 설정하면 다음 계획이 표시됩니다.
+이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)를 사용하도록 설정하면 다음 계획이 표시됩니다.
 
 ![쿼리 결과 336개 행](./media/4_AQPStats336Rows.png)
 
 계획에 다음이 표시됩니다.
 1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
-1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
+1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
 1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여줍니다.
 1. 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
  이제 계획과 동일한 쿼리를 비교합니다. 하지만 이번에는 테이블에 하나의 행만 있는 *Quantity* 값에 대해 쿼리합니다.
@@ -84,7 +84,7 @@ INNER JOIN [Dimension].[Stock Item] AS [si]
        ON [fo].[Stock Item Key] = [si].[Stock Item Key]
 WHERE [fo].[Quantity] = 361;
 ```
-쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
+쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
 
 ![쿼리 결과 하나의 행](./media/5_AQPStatsOneRow.png)
 
@@ -96,7 +96,7 @@ WHERE [fo].[Quantity] = 361;
 작은 조인 입력 검색과 큰 조인 입력 검색 간에 자주 변동하는 워크로드가 이 기능에서 가장 큰 혜택을 받게 됩니다.
 
 ### <a name="adaptive-join-overhead"></a>적응 조인 오버헤드
-적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩된 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
+적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩된 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
 
 ### <a name="adaptive-join-caching-and-re-use"></a>적응 조인 캐싱 및 다시 사용
 일괄 처리 모드 적응 조인은 문의 초기 실행에서 작동하며, 컴파일된 후에는 컴파일된 적응 조인 임계값과 외부 입력의 빌드 단계를 통과하는 런타임 행에 따라 연속 실행이 적응 상태로 유지됩니다.
@@ -162,8 +162,8 @@ OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS'));
 USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
 
 ## <a name="batch-mode-memory-grant-feedback"></a>일괄 처리 모드 메모리 부여 피드백
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다.  동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
-다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이  **88초** 였습니다.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다. 동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
+다음 그래프에서는 일괄 처리 모드 적응 메모리 부여 피드백을 사용하는 한 가지 예를 보여 줍니다. 쿼리를 처음 실행하는 경우 높은 분산으로 인해 기간이 **88초**였습니다.   
 
 ```sql
 DECLARE @EndTime datetime = '2016-09-22 00:00:00.000';
@@ -177,7 +177,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ![높은 분산](./media/2_AQPGraphHighSpills.png)
 
-메모리 부여 피드백을 사용하여 두 번째로 실행하는 경우 기간이  **1초** (88초에서 감소)이고 분산이 완전히 제거되며 부여가 더 높습니다. 
+메모리 부여 피드백을 사용하여 두 번째로 실행하는 경우 기간이 **1초**(88초에서 감소)이고 분산이 완전히 제거되며 부여가 더 높습니다. 
 
 ![분산 없음](./media/3_AQPGraphNoSpills.png)
 
@@ -186,14 +186,14 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 크기가 부족한 메모리 부여 조건의 경우 일괄 처리 모드 연산자에 대해 디스크로 분산이 발생하며 메모리 부여 피드백이 메모리 부여 다시 계산을 트리거합니다. 분산 이벤트는 메모리 부여 피드백에 보고되며, *spilling_report_to_memory_grant_feedback* xEvent 이벤트를 통해 표시될 수 있습니다. 이 이벤트는 계획의 노드 ID와 해당 노드의 분산 데이터 크기를 반환합니다.
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>메모리 부여 피드백 및 매개 변수가 중요한 시나리오
-최적 상태를 유지하려면 매개 변수 값마다 다른 쿼리 계획이 필요할 수도 있습니다. 이러한 유형의 쿼리를 "매개 변수가 중요한" 쿼리로 정의합니다. 매개 변수가 중요한 계획의 경우 메모리 요구 사항이 불안정하면 쿼리에서 메모리 부여 피드백이 자동으로 비활성화됩니다. 쿼리가 여러 번 반복 실행된 후 계획이 비활성화되며, *memory_grant_feedback_loop_disabled* xEvent를 모니터링하면 이를 관찰할 수 있습니다. 매개 변수 스니핑 및 매개 변수 민감도에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)를 참조하세요.
+최적 상태를 유지하려면 매개 변수 값마다 다른 쿼리 계획이 필요할 수도 있습니다. 이러한 유형의 쿼리를 "매개 변수가 중요한" 쿼리로 정의합니다. 매개 변수가 중요한 계획의 경우 메모리 요구 사항이 불안정하면 쿼리에서 메모리 부여 피드백이 자동으로 비활성화됩니다. 쿼리가 여러 번 반복 실행된 후 계획이 비활성화되며, *memory_grant_feedback_loop_disabled* xEvent를 모니터링하면 이를 관찰할 수 있습니다. 매개 변수 스니핑 및 매개 변수 민감도에 대한 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)를 참조하세요.
 
 ### <a name="memory-grant-feedback-caching"></a>메모리 부여 피드백 캐싱
-단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 저장소에 캡처되지 않습니다.
-캐시에서 계획을 제거하면 피드백이 유지되지 않습니다. 장애 조치(failover)가 있는 경우에도 피드백이 손실됩니다. `OPTION (RECOMPILE)`을 사용하는 문은 새 계획을 만들지만 캐시하지 않습니다. 캐시되지 않으므로 메모리 부여 피드백이 생성되지 않으며 해당 컴파일 및 실행을 위해 저장되지 않습니다.  그러나 `OPTION (RECOMPILE)`을 사용하지 **않는** 동등한 문(즉, 동일한 쿼리 해시 포함)을 캐시한 후 다시 실행하는 경우 연속된 문은 메모리 부여 피드백에서 혜택을 받을 수 있습니다.
+단일 실행에 대해 캐시된 계획에 피드백을 저장할 수 있습니다. 그러나 메모리 부여 피드백 조정의 혜택을 받는 것은 해당 문의 연속 실행입니다. 이 기능은 문의 반복 실행에 적용됩니다. 메모리 부여 피드백은 캐시된 계획만 변경합니다. 변경 내용은 현재 쿼리 저장소에 캡처되지 않습니다.
+캐시에서 계획을 제거하면 피드백이 유지되지 않습니다. 장애 조치(failover)가 있는 경우에도 피드백이 손실됩니다. `OPTION (RECOMPILE)`을 사용하는 문은 새 계획을 만들지만 캐시하지 않습니다. 캐시되지 않으므로 메모리 부여 피드백이 생성되지 않으며 해당 컴파일 및 실행을 위해 저장되지 않습니다. 그러나 `OPTION (RECOMPILE)`을 사용하지 **않는** 동등한 문(즉, 동일한 쿼리 해시 포함)을 캐시한 후 다시 실행하는 경우 연속된 문은 메모리 부여 피드백에서 혜택을 받을 수 있습니다.
 
 ### <a name="tracking-memory-grant-feedback-activity"></a>메모리 부여 피드백 작업 추적
-*memory_grant_updated_by_feedback* xEvent 이벤트를 사용하여 메모리 부여 피드백 이벤트를 추적할 수 있습니다. 이 이벤트는 현재 실행 횟수 기록, 메모리 부여 피드백이 계획을 업데이트한 횟수, 수정 전 적합한 추가 메모리 부여, 메모리 부여 피드백이 캐시된 계획을 수정한 후 적합한 추가 메모리 부여를 추적합니다.
+*memory_grant_updated_by_feedback* xEvent 이벤트를 사용하여 메모리 부여 피드백 이벤트를 추적할 수 있습니다. 이 이벤트는 현재 실행 횟수 기록, 메모리 부여 피드백이 계획을 업데이트한 횟수, 수정 전 적합한 추가 메모리 부여, 메모리 부여 피드백이 캐시된 계획을 수정한 후 적합한 추가 메모리 부여를 추적합니다.
 
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>메모리 부여 피드백, 리소스 관리자 및 쿼리 힌트
 부여되는 실제 메모리는 리소스 관리자 또는 쿼리 힌트에 따른 쿼리 메모리 제한을 준수합니다.
@@ -414,7 +414,7 @@ rowstore의 일괄 처리 모드는 columnstore 인덱스를 요구하지 않고
 
 ### <a name="background"></a>배경
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 분석 워크로드를 가속화하기 위한 새로운 기능인 columnstore 인덱스를 도입했습니다. 각 후속 릴리스에서 사용 사례를 확장하고 columnstore 인덱스의 성능을 개선했습니다. 지금까지 이러한 모든 기능을 단일 기능으로 표시하고 문서화했습니다. 테이블의 columnstore 인덱스를 만듭니다. 또한 분석 워크로드가 더 빠르게 이동합니다. 그러나 관련이 있으나 고유한 두 가지 기술 세트가 사용됩니다.
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 분석 워크로드를 가속화하기 위한 새로운 기능인 columnstore 인덱스를 도입했습니다. 각 후속 릴리스에서 사용 사례를 확장하고 columnstore 인덱스의 성능을 개선했습니다. 지금까지 이러한 모든 기능을 단일 기능으로 표시하고 문서화했습니다. 테이블의 columnstore 인덱스를 만듭니다. 또한 분석 워크로드가 더 빠르게 이동합니다. 그러나 관련이 있으나 고유한 두 가지 기술 세트가 사용됩니다.
 - **columnstore** 인덱스를 사용하면 분석 쿼리는 필요한 열의 데이터에만 액세스합니다. 또한 columnstore 형식의 페이지 압축은 기존 **rowstore** 인덱스의 압축보다 더 효과적입니다. 
 - **일괄 처리 모드** 처리를 사용하면 쿼리 연산자가 데이터를 더 효율적으로 처리합니다. 이 연산자는 한 번에 하나의 행이 아니라 행 일괄 처리에서 작동합니다. 향상된 여러 다른 확장성이 일괄 처리 모드와 관련이 있습니다. 일괄 처리 모드에 대한 자세한 내용은 [실행 모드](../../relational-databases/query-processing-architecture-guide.md#execution-modes)를 참조하세요.
 
@@ -500,9 +500,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 ## <a name="see-also"></a>관련 항목:
 
-[SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [조인](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)       
-[Demonstrating Intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)(지능형 QP 시연)   
+[Demonstrating Adaptive Query Processing(적응 쿼리 처리 시연)](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
+[Demonstrating Intelligent QP(지능형 QP 시연)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

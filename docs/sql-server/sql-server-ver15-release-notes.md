@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492855"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860064"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "58492855"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 미리 보기 릴리스는 예정된 릴리스의 기능을 체험할 수 있도록 하기 위해 제공됩니다. 프로덕션 용도로 지원되거나 사용이 허가되지 않습니다. 다음 시나리오는 명시적으로 지원되지 않습니다.
 >
-> - 다른 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 병렬로 설치
+> - 다른 버전의 SQL Server와 병렬로 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > - 모든 버전에서 SQL Server의 기존 인스턴스 업그레이드
 
-**체험하기[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]**
+**[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]를 체험해 보세요.**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [다운로드하여 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)
@@ -37,7 +37,7 @@ ms.locfileid: "58492855"
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3은 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 릴리스에 대한 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4는 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다. CTP 릴리스에 대한 지원은 설치 미디어를 포함하는 `license_Eval.rtf`에 설명되어 있습니다.
 
 제한되는 지원은 다음 위치 중 하나에서 확인할 수 있습니다.
 

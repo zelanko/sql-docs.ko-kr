@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203360"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872323"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203360"
   
  다음과 같은 주제를 다룹니다.  
   
--   [데이터 동기화 프로세스](#BKMK_DATA_SYNC_PROCESS)  
+-   [데이터 동기화 프로세스](#data-synchronization-process)  
   
--   [흐름 제어 게이트](#BKMK_FLOW_CONTROL_GATES)  
+-   [흐름 제어 게이트](#flow-control-gates)  
   
--   [장애 조치(failover) 시간 예측(RTO)](#BKMK_RTO)  
+-   [장애 조치(failover) 시간 예측(RTO)](#estimating-failover-time-rto)  
   
--   [잠재적 데이터 손실 예측(RPO)](#BKMK_RPO)  
+-   [잠재적 데이터 손실 예측(RPO)](#estimating-potential-data-loss-rpo)  
   
--   [RTO 및 RPO 모니터링](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [RTO 및 RPO 모니터링](#monitoring-for-rto-and-rpo)  
   
 -   [성능 문제 해결 시나리오](#BKMK_SCENARIOS)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53203360"
   
 |||||  
 |-|-|-|-|  
-|**시퀀스**|**단계 설명**|**설명**|**유용한 메트릭**|  
+|**시퀀스**|**단계 설명**|**주석**|**유용한 메트릭**|  
 |1|로그 생성|로그 데이터는 디스크에 플러시됩니다. 이 로그를 보조 복제본에 복제해야 합니다. 로그 레코드에 전송 큐를 입력합니다.|[SQL Server:데이터베이스 > 플러시된 로그 바이트\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|캡처|각 데이터베이스에 대한 로그가 캡처되어 해당 파트너 큐(데이터베이스-복제본 쌍마다 한 개)로 전송됩니다. 이 캡처 프로세스는 가용성 복제본이 연결되고 데이터 이동이 어떤 이유로든 일시 중단되지 않는 한 지속적으로 실행되며 데이터베이스-복제본 쌍이 동기화 중이거나 동기화된 것으로 표시됩니다. 캡처 프로세스가 메시지를 충분히 빠르게 스캔하여 큐에 넣을 수 없는 경우 로그 전송 큐가 축적됩니다.|[SQL Server:가용성 복제본 > 복제본에 전송된 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)는 해당 가용성 복제본의 큐에 저장된 모든 데이터베이스 메시지의 합계를 집계한 것입니다.<br /><br /> 주 복제본의 [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB) 및 [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)(KB/sec).|  
 |3|Send|각 데이터베이스 복제본 큐의 메시지가 큐에서 제거되고 유선을 통해 해당 보조 복제본으로 전송됩니다.|[SQL Server:가용성 복제본 > 전송에 보낸 바이트 수\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) 및 [SQL Server:가용성 복제본 > 메시지 승인 시간](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
@@ -331,7 +331,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
  이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)에 지정된 GUI 자습서와 유사합니다.  
   
- [예상 장애 조치(failover) 시간(RTO)](#BKMK_RTO) 및 [예상 잠재적 데이터 손실(RPO)](#BKMK_RPO)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
+ [예상 장애 조치(failover) 시간(RTO)](#estimating-failover-time-rto) 및 [예상 잠재적 데이터 손실(RPO)](#estimating-potential-data-loss-rpo)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
   
  데모에서 보여 주는 스크립트는 다음 특성과 함께 해당 일정에 따라 실행되는 두 가지 시스템 정책을 만듭니다.  
   
@@ -474,5 +474,3 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 |hadr_dump_primary_progress|`alwayson`|디버그|주|  
 |hadr_dump_log_progress|`alwayson`|디버그|주|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analytic|보조|  
-  
-  

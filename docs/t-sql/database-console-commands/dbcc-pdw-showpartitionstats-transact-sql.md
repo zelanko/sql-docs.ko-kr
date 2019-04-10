@@ -12,12 +12,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d53158198b2df5ae5aaa0fbc3b176bdcd544367
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684914"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042302"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,10 +35,10 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>인수  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  표시될 테이블의 한 부분, 두 부분 또는 세 부분으로 이루어진 이름입니다.  두 부분 또는 세 부분으로 구성된 테이블 이름의 경우 이름을 큰따옴표(“”)로 묶어야 합니다. 한 부분으로 이루어진 테이블 이름을 따옴표로 묶는 것은 선택 사항입니다.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 **VIEW SERVER STATE** 권한이 필요합니다.
   
 ## <a name="result-sets"></a>결과 집합  
@@ -64,5 +64,5 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ```  
 ## <a name="see-also"></a>관련 항목:
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
-[DBCC PDW_SHOWSPACEUSED&#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
+[DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
  
