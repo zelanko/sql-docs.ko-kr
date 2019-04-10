@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290259"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797013"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +48,6 @@ ms.locfileid: "58290259"
 
 - **해결 방법:** 
   - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
-  - 로 구분하거나 여러
-  - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
 
 ### <a name="analysis-services"></a>Analysis Services
 - **문제 및 고객에게 미치는 영향:** 다음 원본에 대한 데이터 커넥터는 1400 호환성 수준의 표 형식 모델에서는 아직 사용할 수 없습니다.
@@ -96,9 +94,9 @@ ms.locfileid: "58290259"
     1. 관리자 모드로 명령 프롬프트를 시작합니다.
     2. 나머지 보고서 서버가 설치된 디렉터리로 이동합니다.
 
-        ‘Power BI Report Server 기본 위치: C:\Program Files\Microsoft Power BI Report Server’
+        ‘Power BI Report Server 기본 위치: C:\Program Files\Microsoft Power BI Report Server’*
 
-        ‘SQL Server Reporting Services 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services’
+        ‘SQL Server Reporting Services 기본 위치: C:\Program Files\Microsoft SQL Server Reporting Services’*
 
     3. 그런 다음 남아 있는 기능에 따라 *SSRS* 또는 *PBIRS* 폴더로 이동합니다.
     4. WMI 폴더로 이동합니다.
