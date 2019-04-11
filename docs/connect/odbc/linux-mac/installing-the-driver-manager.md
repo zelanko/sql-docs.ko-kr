@@ -1,7 +1,7 @@
 ---
 title: Installing the Driver Manager (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305811"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041922"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "58305811"
   
 1.  루트 권한이 있는지 확인합니다.  
   
-2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver 다운로드가 `msodbcsql-11.0.2270.0.tar.gz`라는 파일을 배치한 디렉터리로 이동합니다. Linux 버전과 일치하는 \*.tar.gz 파일이 있는지 확인합니다. 파일을 추출하려면 **tar xvzf msodbcsql-11.0.2270.0.tar.gz** 명령을 실행합니다.  
+2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 드라이버 다운로드에서 `msodbcsql-11.0.2270.0.tar.gz`라는 파일을 저장한 디렉터리로 이동합니다. Linux 버전과 일치하는 \*.tar.gz 파일이 있는지 확인합니다. 파일을 추출하려면 **tar xvzf msodbcsql-11.0.2270.0.tar.gz** 명령을 실행합니다.  
 
 3.  `msodbcsql-11.0.2270.0` 디렉터리로 변경하면 `build_dm.sh`라는 파일이 나타납니다. 실행할 수 있습니다 `build_dm.sh` unixODBC 드라이버 관리자를 설치 합니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "58305811"
   
 5.  설치 준비가 되고 컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 있는 경우 **./build_dm.sh** 명령을 실행합니다.
 
-컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. 가져올 수 있습니다 `unixODBC-2.3.0.tar.gz` 에서 [ http://www.unixodbc.org ](http://www.unixodbc.org/)합니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**합니다.  
+컴퓨터가 FTP를 통해 외부 사이트에 액세스할 수 없는 경우 `unixODBC-2.3.0.tar.gz`를 가져옵니다. [http://www.unixodbc.org](http://www.unixodbc.org/)에서 `unixODBC-2.3.0.tar.gz`를 가져올 수 있습니다. 페이지 왼쪽에서 **다운로드** 링크를 클릭하여 다운로드 페이지로 이동합니다. 그런 다음 적절한 링크를 클릭하여 unixODBC-2.3.0(unixODBC-2.3.1 아님)을 다운로드합니다. unixODBC-2.3.1은 이 릴리스의 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원되지 않습니다. UnixODBC 드라이버 관리자 설치를 시작 하려면 다음 명령을 실행 합니다. **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**합니다.  
 
 6.  **YES**를 입력하여 파일의 압축 해제를 진행합니다. 이 부분의 프로세스를 완료하려면 최대 5분까지 걸릴 수 있습니다.  
 
@@ -85,8 +85,8 @@ ms.locfileid: "58305811"
 이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server Linux 및 macOS 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목
-[Linux 및 macOS 기반 SQL Server용 Microsoft ODBC Driver 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[릴리스 정보](../../../connect/odbc/linux-mac/release-notes.md)
+[릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
