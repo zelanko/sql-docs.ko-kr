@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685431"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476719"
 ---
 # <a name="analyze-in-excel"></a>도구 모음
 
@@ -33,7 +33,7 @@ ms.locfileid: "57685431"
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>기본 큐브 뷰 및 Internet Sales 큐브 뷰를 사용하여 검색  
 
-이 첫 번째 태스크에서는 모델을 찾으면 사용자 모두 기본 큐브는 모든 모델 개체를 사용 하 여 및 인터넷 판매 큐브 뷰를 사용 하 여 이전 있습니다. Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외되어 있습니다.  
+이러한 첫 번째 작업을 모두 기본 큐브는 모든 모델 개체를 사용 하 여 모델을 찾아보고에 인터넷 판매 큐브 뷰를 사용 하 여 이전에 만든 합니다. Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외되어 있습니다.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>기본 큐브 뷰를 사용하여 찾아보려면  
   

@@ -15,14 +15,15 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677722"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476659"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 통합에 대한 보안 모델에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내에서 실행되는 서로 다른 유형의 CLR 개체와 CLR이 아닌 개체 간의 액세스를 관리하고 보호합니다. 이러한 개체는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 서버에서 실행되는 다른 CLR 개체에서 호출할 수 있습니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "51677722"
   
 -   사용자 정의 코드가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행된다는 것 때문에 시스템 리소스에 무단으로 액세스할 수 있게 되면 안 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 사용자 기반 모델과 CLR의 코드 액세스 기반 보안 모델을 통합합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이제 사용자 기반 보안 모델의 통합 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR의 코드 액세스 기반 보안 모델을 사용 하 여 합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "51677722"
  [부분적으로 신뢰할 수 있는 호출자 허용](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
   
- [응용 프로그램 도메인 및 CLR 통합 보안](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [애플리케이션 도메인 및 CLR 통합 보안](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  응용 프로그램 도메인에 어셈블리를 로드하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
