@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9e58af1c10322baae4321c62901a55000e631678
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240441"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480279"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.  
@@ -157,7 +157,7 @@ NULL       -3          0                             0                       2  
 NULL       -2          192                           25                      16                              16  
 ```  
   
- 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](https://msdn.microsoft.com/99b8a95f-d04b-4edb-a764-17b95581d071)를 참조하세요.  
+ 자세한 내용은 [sys.dm_db_xtp_table_memory_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql?view=sql-server-2016)합니다.  
   
 #### <a name="memory-consumption-by-internal-system-structures"></a>내부 시스템 구조의 메모리 사용  
  메모리는 트랜잭션 구조, 데이터 및 델타 파일 버퍼, 가비지 수집 구조 등의 시스템 개체에서도 사용합니다. 이러한 시스템 개체에서 사용하는 메모리는 여기 표시된 대로 `sys.dm_xtp_system_memory_consumers` 를 쿼리하여 확인할 수 있습니다.  
@@ -195,8 +195,9 @@ PGPOOL:256K               768                  768                  3
 PGPOOL: 64K               0                    0                    0  
 PGPOOL:  4K               0                    0                    0  
 ```  
-  
+
  자세한 내용은 [sys.dm_xtp_system_memory_consumers&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)를 참조하세요.  
+
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>메모리 최적화 테이블에 액세스할 때 런타임 시 메모리 사용  
  다음 쿼리를 사용하는 프로시저 캐시 등의 런타임 구조에서 사용하는 메모리를 확인할 수 있습니다. 이 쿼리를 실행하여 프로시저 캐시의 경우와 같이 런타임 구조에서 사용하는 메모리를 가져옵니다. 모든 런타임 구조에는 XTP로 태그가 지정됩니다.  
@@ -229,7 +230,7 @@ memory_object_address pages_ in_bytes bytes_used type
 0x00000001F813E040    16842752            NULL       MEMOBJ_XTPBLOCKALLOC  
 ```  
   
- 자세한 내용은 [sys.dm_os_memory_objects(Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)를 참조하세요.  
+ 자세한 내용은 [sys.dm_os_memory_objects (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)합니다.  
   
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리  
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진 및 메모리 액세스에 최적화된 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.  
@@ -255,7 +256,7 @@ MEMORYCLERK_XTP      DB_ID_5    0              1358
 MEMORYCLERK_XTP      Default    64             0  
 ```  
   
- 자세한 내용은 [sys.dm_os_memory_clerks(Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)를 참조하세요.  
+ 자세한 내용은 [sys.dm_os_memory_clerks (TRANSACT-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)합니다.  
   
 ##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>메모리 최적화 개체에서 사용하는 메모리 관리  
  메모리 최적화 테이블을 [메모리 최적화 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)항목에서 설명된 대로 명명된 리소스 풀에 바인딩하여 사용하는 총 메모리 양을 제어할 수 있습니다.  
@@ -267,7 +268,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 2.  메모리 사용 증가량과 남은 공간을 확인합니다. 메모리 사용을 주기적으로 모니터링하여 메모리 사용 증가량을 확인할 수 있습니다. 예를 들어, 데이터베이스를 명명된 리소스 풀에 매핑한 경우 성능 카운터 메모리 사용(KB)을 모니터링하여 메모리 사용량의 증가 정도를 확인할 수 있습니다.  
   
-3.  잠재적인 메모리 문제를 해소하기 위한 정정 작업을 수행합니다. 자세한 내용은 [OOM(메모리 부족) 문제 해결](resolve-out-of-memory-issues.md)을 참조하세요.  
+3.  잠재적인 메모리 문제를 해소하기 위한 정정 작업을 수행합니다. 자세한 내용은 [메모리 문제 개 해결](resolve-out-of-memory-issues.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
