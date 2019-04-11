@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400587"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872233"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
 
@@ -25,7 +25,7 @@ ms.locfileid: "52400587"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
 
-Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport) 섹션을 참조하세요.  
+Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#feature-comparison-of-sharepoint-and-native-mode) 섹션을 참조하세요.  
   
  **설치:** Reporting Services 설치 정보는 [Reporting Services 설치](../install-windows/install-reporting-services.md)를 참조하세요.
 
@@ -39,7 +39,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  Reporting Services 보고서 서버에서는 보고서 서버 인스턴스에 대해 다음 두 가지 배포 모드가 지원됩니다.  
   
--   **기본 모드**(기본 모드와 SharePoint 웹 파트 포함): 보고서 서버가 Reporting Services 구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다. Reporting Services 구성 관리자 및 SQL Server Management Studio로 기본 모드 보고서 서버를 구성합니다.  
+-   **기본 모드**(기본 모드와 SharePoint 웹 파트 포함): 보고서 서버가 Reporting Services 구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 애플리케이션 서버로 실행됩니다. Reporting Services 구성 관리자 및 SQL Server Management Studio로 기본 모드 보고서 서버를 구성합니다.  
   
 -   **SharePoint 모드**: 보고서 서버가 SharePoint 서버 팜의 일부로 설치됩니다.  PowerShell 명령 또는 SharePoint 콘텐츠 관리 페이지를 사용하여 SharePoint 모드를 배포 및 구성합니다.  
   
@@ -87,7 +87,7 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
   
  SharePoint 모드에 필요한 사항은 다음과 같습니다.  
   
--   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]입니다.  
+-   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
 -   SharePoint 2010 제품을 위한 적절한 Reporting Services 추가 기능 버전  
   
@@ -140,10 +140,10 @@ Reporting Services 보고서 서버는 기본 모드 또는 SharePoint 모드 �
 |SharePoint 모드로 Reporting Services를 설치합니다.|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
 |웹 개발자나 CSS 스타일시트 파일을 만드는 전문가인 경우 기본 스타일을 수정하여 도구 모음이나 보고서 관리자의 색, 글꼴 및 레이아웃을 변경할 수 있습니다. 단, 이로 인해 발생하는 모든 문제에 대한 책임은 자신에게 있습니다. 이 릴리스에서는 기본 스타일시트나 스타일시트 수정 지침을 다루지 않습니다.|[HTML 뷰어 및 보고서 관리자에 대한 스타일시트 사용자 지정](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |HTML 스타일 및 CSS 스타일시트에 익숙한 웹 개발자는 이 항목의 정보를 사용하여 보고서 관리자의 모양을 사용자 지정하기 위해 수정할 수 있는 파일을 확인할 수 있습니다.|[웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
-|보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
+|보고서 서버 웹 서비스 및 Windows 서비스에 대한 메모리 설정을 튜닝하는 방법에 대해 설명합니다.|[보고서 서버 애플리케이션을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |원격 관리를 위해 보고서 서버를 구성하는 권장 단계에 대해 설명합니다.|[원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |기본 보고서 서버 인스턴스에서 **내 보고서** 의 가용성을 구성하는 방법에 대한 지침을 제공합니다.|[내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  
-|지원되는 브라우저 내에서 인쇄 기능을 제공하는 RSClientPrint 컨트롤을 설정하는 방법에 대한 지침을 제공합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|[Reporting Services에 대한 클라이언트 쪽 인쇄 기능 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
+|지원되는 브라우저 내에서 인쇄 기능을 제공하는 RSClientPrint 컨트롤을 설정하는 방법에 대한 지침을 제공합니다. 브라우저 요구 사항에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.|[Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
 
 ## <a name="next-steps"></a>다음 단계
 

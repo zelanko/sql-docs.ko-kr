@@ -1,7 +1,7 @@
 ---
 title: 시스템 요구 사항(ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 287e6d44e3d816952f5802edd739a0af1160e82b
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: c2b4aca8fcd4f18f6e70c9e6f98b415402e19621
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955798"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042322"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "56955798"
 
 ## <a name="microsoft-odbc-driver-13-131-and-17-for-sql-server"></a>SQL Server용 Microsoft ODBC Driver 13, 13.1 및 17
 
-Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대해서만 사용할 수 있습니다.
+Linux 및 macOS 드라이버는 다음 운영 체제의 64비트 버전에만 사용할 수 있습니다.
 
-|운영 체제|지원 되는 드라이버 버전|
+|운영 체제|지원되는 드라이버 버전|
 |------------------------------------|--------------------------------|
-|Apple OS X 10.11 (El Capitan)|13, 13.1, 17|
-|Apple macOS 10.12(sierra)|13, 13.1, 17|
-|Apple macOS 10.13(high (High Sierra)|17| 
-|Apple macOS 10.14 (Mojave)|17| 
+|Apple OS X 10.11(El Capitan)|13, 13.1, 17|
+|Apple macOS 10.12(Sierra)|13, 13.1, 17|
+|Apple macOS 10.13(Sierra)|17| 
+|Apple macOS 10.14(Mojave)|17| 
 |Debian Linux 8|13, 13.1, 17|
 |Debian Linux 9|17|
 |RedHat Enterprise Linux 6|13, 13.1, 17|
 |RedHat Enterprise Linux 7|13, 13.1, 17|
-|SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **참고:** ODBC 드라이버 17 지원 SuSE Linux Enterprise Server 11 SP4|
+|SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **참고:** ODBC 드라이버 17은 SuSE Linux Enterprise Server 11 SP4만 지원합니다.|
 |SuSE Linux Enterprise Server 12|13, 13.1, 17|
 |SuSE Linux Enterprise Server 15|17|
 |Ubuntu Linux 14.04|13, 13.1, 17|
@@ -54,7 +54,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
 
-에 대 한 패키지를 설치 합니다 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13, 13.1 및 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Linux 및 macOS에서 드라이버의 종속성 에설명된대로사용자배포의패키지관리시스템을사용하여을설치하는경우에자동으로해결[ 드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.
+[드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)에서 설명한 대로 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC 드라이버 13, 13.1 및 17[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 설치 패키지는 사용자 배포의 패키지 관리 시스템을 사용하여 설치된 경우 드라이버의 종속성을 자동으로 해결합니다.
 
 ## <a name="microsoft-odbc-driver-11-for-sql-server"></a>Microsoft ODBC Driver 11 for SQL Server  
   
@@ -89,4 +89,4 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64 비트 버전에 대�
 
 [이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)  
 
-[릴리스 정보](../../../connect/odbc/linux-mac/release-notes.md)  
+[릴리스 정보](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

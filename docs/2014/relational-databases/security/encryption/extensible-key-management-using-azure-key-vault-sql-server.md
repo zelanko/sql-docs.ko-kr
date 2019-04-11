@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242210"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
   합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Key Vault 서비스를 활용 하 여 암호화를 [확장 가능 키 관리 &#40;EKM&#41; ](extensible-key-management-ekm.md) 보호 하기 위해 공급자 해당 암호화 키입니다.  
@@ -30,17 +30,17 @@ ms.locfileid: "53372765"
   
 -   [EKM 사용](#Uses)  
   
--   [1 단계: SQL Server에서 사용할 Key Vault 설정](#Step1)  
+-   [1단계: SQL Server에서 사용할 수 있도록 키 자격 증명 모음 설정](#Step1)  
   
--   [2단계: SQL Server 커넥터를 설치합니다.](#Step2)  
+-   [2단계: SQL Server 커넥터 설치](#Step2)  
   
--   [3 단계: 키 자격 증명 모음에 EKM 공급자를 사용 하도록 SQL Server 구성](#Step3)  
+-   [3단계: 키 자격 증명 모음에 EKM 공급자를 사용하도록 SQL Server 구성](#Step3)  
   
--   [A: 예 Key Vault에서 비대칭 키를 사용 하 여 투명 한 데이터 암호화](#ExampleA)  
+-   [예 1: 키 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화](#ExampleA)  
   
--   [예 2: Key Vault에서 비대칭 키를 사용 하 여 백업 암호화](#ExampleB)  
+-   [예 2: 키 자격 증명 모음에서 비대칭 키를 사용한 백업 암호화](#ExampleB)  
   
--   [예 3: Key Vault에서 비대칭 키를 사용 하 여 열 수준 암호화](#ExampleC)  
+-   [예 3: 키 자격 증명 모음에서 비대칭 키를 사용한 열 수준 암호화](#ExampleC)  
   
 ##  <a name="Uses"></a> EKM 사용  
  조직에서 중요한 데이터를 보호하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화를 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화를 포함 [투명 한 데이터 암호화 &#40;TDE&#41;](transparent-data-encryption.md)합니다 [열 수준 암호화](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) 및 [백업 암호화](../../backup-restore/backup-encryption.md). 이 암호화들에서는 모두 데이터가 대칭 데이터 암호화 키를 사용하여 암호화되고, 이 대칭 데이터 암호화 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 저장된 키의 계층 구조로 암호화하여 추가적으로 보호하게 됩니다. 이렇게 하는 대신, EKM 공급자 아키텍처를 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 외부 암호화 공급자에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 외부에 저장된 비대칭 키를 사용하여 데이터 암호화 키를 보호합니다. EKM 공급자 아키텍처를 사용하면 추가적인 보안 계층이 생기고 조직은 키와 데이터의 관리를 분리할 수 있습니다.  
@@ -51,8 +51,8 @@ ms.locfileid: "53372765"
   
  ![Azure Key Vault를 사용하는 SQL Server EKM](../../../database-engine/media/ekm-using-azure-key-vault.png "SQL Server EKM using the Azure Key Vault")  
   
-##  <a name="Step1"></a> 1 단계: SQL Server에서 사용할 수 있도록 키 자격 증명 모음 설정  
- 다음 단계를 사용하여 암호화 키 보호를 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 사용할 자격 증명 모음 키를 설정하세요. 자격 증명 모음은 이미 조직에 사용 중일 수 있습니다. 자격 증명 모음이 존재하지 않으면 암호화 키를 관리하도록 지정된 조직 내 Azure 관리자가 자격 증명 모음을 만들고, 이 자격 증명 모음에서 비대칭 키를 생성한 다음 키를 사용할 수 있는 권한을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 부여합니다. 자격 증명 모음 서비스에 대해 이해하려면 [Azure 키 자격 증명 모음 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문), 및 PowerShell [Azure 키 자격 증명 모음 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=521403) (영문) 참조를 검토하세요.  
+##  <a name="Step1"></a> 1단계: SQL Server에서 사용할 수 있도록 키 자격 증명 모음 설정  
+ 다음 단계를 사용하여 암호화 키 보호를 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 사용할 자격 증명 모음 키를 설정하세요. 자격 증명 모음은 이미 조직에 사용 중일 수 있습니다. 자격 증명 모음이 존재하지 않으면 암호화 키를 관리하도록 지정된 조직 내 Azure 관리자가 자격 증명 모음을 만들고, 이 자격 증명 모음에서 비대칭 키를 생성한 다음 키를 사용할 수 있는 권한을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 부여합니다. 자격 증명 모음 서비스에 대해 이해하려면 [Azure 키 자격 증명 모음 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문), 및 PowerShell [Azure 키 자격 증명 모음 Cmdlet](/powershell/module/azurerm.keyvault/) (영문) 참조를 검토하세요.  
   
 > [!IMPORTANT]  
 >  여러 Azure 구독이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 포함된 구독을 사용해야 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "53372765"
   
     -   PowerShell [Azure 주요 자격 증명 모음 Cmdlet](https://go.microsoft.com/fwlink/?LinkId=521403) 참조  
   
-##  <a name="Step2"></a> 2 단계: SQL Server 커넥터 설치  
+##  <a name="Step2"></a> 2단계: SQL Server 커넥터 설치  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 다운로드하여 설치합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=521700)에서 다운로드할 수 있습니다.  **Microsoft Azure 키 자격 증명 모음용 SQL Server 커넥터**를 검색하고, 세부 정보, 시스템 요구 사항 및 설치 지침을 검토하고, 커넥터를 다운로드하도록 선택하고 **실행**을 사용하여 설치를 시작하세요. 라이선스를 검토한 다음 라이선스를 수락하고 계속합니다.  
   
  기본적으로 커넥터는 **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**에 설치됩니다. 이 위치는 설치 중 변경할 수 있습니다. (변경할 경우 아래의 스크립트를 조정하세요.)  
@@ -113,7 +113,7 @@ ms.locfileid: "53372765"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 설치하면 원할 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화를 위한 샘플 스크립트를 다운로드할 수도 있습니다.  
   
-##  <a name="Step3"></a> 3 단계: 키 자격 증명 모음에 EKM 공급자를 사용하도록 SQL Server 구성  
+##  <a name="Step3"></a> 3단계: 키 자격 증명 모음에 EKM 공급자를 사용하도록 SQL Server 구성  
   
 ###  <a name="Permissions"></a> Permissions  
  이 전체 프로세스를 완료하려면 **sysadmin** 고정 서버 역할에 CONTROL SERVER 권한이나 멤버 자격이 있어야 합니다. 특정 작업에는 다음 권한이 필요합니다.  
@@ -196,7 +196,7 @@ ms.locfileid: "53372765"
     ```  
   
 > [!TIP]  
->  오류 메시지를 수신 하는 사용자가 **공급자에서 공개 키를 내보낼 수 없습니다. 공급자 오류 코드: 2053입니다.** 키 자격 증명 모음에서 **get**, CLE( CLE( **list**, CLE( CLE( **wrapKey**, CLE( CLE( and **unwrapKey** 권한을 필요로 합니다.  
+>  오류 메시지를 수신 하는 사용자가 **공급자에서 공개 키를 내보낼 수 없습니다. 공급자 오류 코드: 2053.** 키 자격 증명 모음에서 **get**, CLE( CLE( **list**, CLE( CLE( **wrapKey**, CLE( CLE( and **unwrapKey** 권한을 필요로 합니다.  
   
  자세한 내용은 다음 항목을 참조하세요.  
   
@@ -347,7 +347,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [확장 가능 키 관리 &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [EKM을 사용 하 여 TDE를 사용 하도록 설정](enable-tde-on-sql-server-using-ekm.md)   
+ [EKM을 사용하여 TDE 설정](enable-tde-on-sql-server-using-ekm.md)   
  [백업 암호화](../../backup-restore/backup-encryption.md)   
  [암호화된 백업 만들기](../../backup-restore/create-an-encrypted-backup.md)  
   
