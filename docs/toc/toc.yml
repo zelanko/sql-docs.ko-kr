@@ -2,7 +2,6 @@ items:
 - name: 시작
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: 개요
-  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: SQL Server의 새 기능
     items:
@@ -42,7 +41,6 @@ items:
     - name: SQL Server 2008 R2 SP2
       href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: 빅 데이터 클러스터
-  href: ../toc/redirectfrom-big-data-cluster.md
   items:
   - name: 개요
     items:
@@ -195,12 +193,10 @@ items:
         - name: mssqlctl 스토리지 탑재
           href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: 비즈니스 연속성
-  href: redirectfrom-business-continuity-10.md
   items:
   - name: 개요
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: 백업 및 복원
-    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: 개요
       items:
@@ -1008,7 +1004,6 @@ items:
         - name: 경고 임계값 설정
           href: ../database-engine/database-mirroring/set-warning-thresholds.md
   - name: 로그 전달
-    href: ../toc/redirectfrom-log-shipping.md
     items:
     - name: 개요
       href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
@@ -1047,7 +1042,6 @@ items:
       - name: 로그 전달 모니터 설정
         href: ../relational-databases/databases/log-shipping-monitor-settings.md
 - name: 데이터베이스 디자인
-  href: ../toc/redirectfrom-database-design.md
   items:
   - name: 계층적 데이터
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -1067,7 +1061,6 @@ items:
     - name: 세션 언어 설정
       href: ../relational-databases/collations/set-a-session-language.md
   - name: 데이터베이스
-    href: ../toc/redirectfrom-databases.md
     items:
     - name: 개요
       href: ../relational-databases/databases/databases.md
@@ -1929,7 +1922,6 @@ items:
       - name: OPENXML에서 value() 및 nodes() 메서드 사용
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 개발
-  href: redirectfrom-development-10.md
   items:
   - name: 프로그래밍 상호 작용 ++
     displayName: Connectivity, Connect, Connection
@@ -3972,7 +3964,6 @@ items:
   - name: 메모리 관리 아키텍처
     href: ../relational-databases/memory-management-architecture-guide.md
 - name: 설치
-  href: redirectfrom-installation-10.md
   items:
   - name: 개요
     items:
@@ -4417,7 +4408,6 @@ items:
       - name: 고급 페이지
         href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: 데이터 마이그레이션 및 로드
-  href: ../toc/sectionfor-migrate-load-data-overall-sql-server.md
   items:
   - name: SSIS(SQL Server Integration Services) ++
     href: ../integration-services/index.md
@@ -4585,7 +4575,6 @@ items:
     - name: DQS 보안
       href: ../data-quality-services/dqs-security.md
   - name: 복제
-    href: ../toc/redirectfrom-replication.md
     items:
     - name: 개요
       href: ../relational-databases/replication/sql-server-replication.md
@@ -7236,7 +7225,6 @@ items:
   - name: 하위 쿼리
     href: ../relational-databases/performance/subqueries.md
   - name: 데이터 가상화(Polybase)
-    href: ../toc/redirectfrom-polybase.md
     items:
     - name: 개요
       items:
@@ -10304,7 +10292,6 @@ items:
   - name: 도움말 뷰어에서의 로컬 콘텐츠
     href: ../sql-server/sql-server-help-installation.md
 - name: 참조
-  href: ../toc/redirectfrom-reference-10.md
   items:
   - name: SQL 문서 포함 파일
     href: ../sql-server/applies-to-includes.md
@@ -10312,7 +10299,6 @@ items:
     displayName: 2005, 2008, 2008 r2, 2012
     href: https://docs.microsoft.com/previous-versions/sql/
   - name: 데이터베이스 샘플
-    href: ../toc/redirectfrom-database-samples.md
     items:
     - name: 샘플 개요
       href: ../samples/sql-samples-where-are.md
@@ -10323,12 +10309,10 @@ items:
       - name: 설치 및 구성
         href: ../samples/adventureworks-install-configure.md
     - name: Wide World Importers
-      href: ../toc/redirectfrom-wide-world-importers.md
       items:
       - name: 개요
         href: ../samples/wide-world-importers-what-is.md
       - name: OLTP
-        href: ../toc/redirectfrom-oltp-10.md
         items:
         - name: 데이터베이스 카탈로그
           href: ../samples/wide-world-importers-oltp-database-catalog.md
@@ -10337,7 +10321,6 @@ items:
         - name: SQL Server 기능
           href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
       - name: 데이터 웨어하우스
-        href: ../toc/redirectfrom-data-warehouse-10.md
         items:
         - name: 데이터베이스 카탈로그
           href: ../samples/wide-world-importers-dw-database-catalog.md
@@ -17277,9 +17260,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: cae1885d4cadd788449b3f14bbd626ce06d9745d
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.openlocfilehash: bcc3ca478ec16c7a7fc1ff0213b67e29c8a28e78
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59367261"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506580"
