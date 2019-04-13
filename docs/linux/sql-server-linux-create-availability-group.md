@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205752"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542233"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
 
@@ -243,7 +243,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10.  LinAGN1_Cert 및 LinAGN3_Cert LinAGN2에 복원 합니다. 
+10. LinAGN1_Cert 및 LinAGN3_Cert LinAGN2에 복원 합니다.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. LinAGN2의 끝점에 연결할 LinAG1 및 LinAGN3 권한으로 연결 된 로그인 권한을 부여 합니다.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12.  인스턴스 수준 로그인 및 LinAGN1 LinAGN3에서 LinAGN2와 연결 된 사용자를 만듭니다.
+12. 인스턴스 수준 로그인 및 LinAGN1 LinAGN3에서 LinAGN2와 연결 된 사용자를 만듭니다.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13.  LinAGN1_Cert 및 LinAGN2_Cert LinAGN3에 복원 합니다. 
+13. LinAGN1_Cert 및 LinAGN2_Cert LinAGN3에 복원 합니다. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ sudo systemctl restart mssql-server
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. LinAGN3의 끝점에 연결할 LinAG1 및 LinAGN2 권한으로 연결 된 로그인 권한을 부여 합니다.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -369,7 +371,7 @@ sudo systemctl restart mssql-server
 
 16. AG를 만드는 완료 되 면 클릭 **닫기** 결과입니다. 이제 SSMS에서 Always On 고가용성 폴더 및 동적 관리 뷰에서 복제본 AG를 볼 수 있습니다.
 
-### <a name="use-transact-sql"></a>TRANSACT-SQL 사용
+### <a name="use-transact-sql"></a>Transact-SQL 사용
 
 이 섹션에서는 TRANSACT-SQL을 사용 하 여 AG를 만드는 방법의 예제를 보여 줍니다. AG 만들어진 후에 수신기 및 읽기 전용 라우팅을 구성할 수 있습니다. 자체 AG를 사용 하 여 수정할 수 있습니다 `ALTER AVAILABILITY GROUP`에서 수행할 수 없는 클러스터 유형을 변경 하지만 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]합니다. 클러스터 유형이 외부인을 사용 하 여 AG를 만들려는 되지는 않은 경우 삭제 하 고 클러스터 유형이 None을 사용 하 여 다시 만들어야 합니다. 자세한 내용 및 기타 옵션은 다음 링크에서 찾을 수 있습니다.
 
@@ -416,7 +418,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  구성 전용 복제본에 연결 된 쿼리 창에서 AG에 조인 합니다.
+3. 구성 전용 복제본에 연결 된 쿼리 창에서 AG에 조인 합니다.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
 1.  첫 번째 복제본에 연결 된 쿼리 창에서 다음을 실행 합니다.
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

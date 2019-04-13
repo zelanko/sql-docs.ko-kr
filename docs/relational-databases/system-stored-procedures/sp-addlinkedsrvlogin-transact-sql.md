@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838111"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542193"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838111"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ @useself **=** ] **'** TRUE **'** | 'F A L S | ' NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  에 연결할지 여부를 결정 *rmtsrvname* 로컬 로그인을 가장 또는 명시적으로 로그인 및 암호를 제출 합니다. 데이터 형식이 **varchar (** 8 **)**, 기본값은 TRUE입니다.  
   
  값이 true 이면 지정 로그인 자격 증명 자체를 사용 하 여 연결할 *rmtsrvname*를 사용 하 여는 *rmtuser* 및 *rmtpassword* 인수를 무시 합니다. FALSE를 지정 하는 *rmtuser* 하 고 *rmtpassword* 인수에 연결할 때 사용 됩니다 *rmtsrvname* 지정 된 *locallogin* . 하는 경우 *rmtuser* 하 고 *rmtpassword* 또한에 NULL, 로그인 또는 암호로 연결된 된 서버에 연결할 때 사용 됩니다.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  로컬 서버의 로그인입니다. *locallogin* 됩니다 **sysname**, 기본값은 NULL입니다. NULL이이 항목에 연결 하는 모든 로컬 로그인에 적용 되도록 지정 *rmtsrvname*합니다. NULL이 아닌 경우 *locallogin* 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 로그인 합니다. Windows 로그인은 직접적인 방법으로든 또는 액세스 권한이 있는 Windows 그룹의 멤버 자격을 이용한 방법으로든 반드시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한을 보유해야 합니다.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  에 연결 하는 데 사용 하는 원격 로그인 *rmtsrvname* 때 @useself 은 FALSE입니다. 원격 서버 인스턴스의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 인증을 사용 하지 않는 *rmtuser* 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다. *rmtuser* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  연결 된 암호 *rmtuser*합니다. *rmtpassword* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

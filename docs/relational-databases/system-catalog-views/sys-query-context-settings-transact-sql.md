@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ccf638687f5022554abd6b3cf8e57445858ae4a
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710654"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542143"
 ---
-# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact SQL)
+# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 컨텍스트 설정에 영향을 주는 의미 체계에 대 한 정보를 포함 합니다. 사용할 수 있는 다양 한 상황에 맞는 설정 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (쿼리의 올바른 결과 정의) 쿼리 의미 체계에 영향을 하는 합니다. 다양 한 설정에서 컴파일된 동일한 쿼리 텍스트 (기본 데이터)에 따라 다른 결과 생성할 수 있습니다.  

@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566632"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516519"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker에서 SQL Server 컨테이너 이미지를 구성 합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 구성 및 사용 하는 방법을 설명 합니다 [mssql server linux 컨테이너 이미지](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker를 사용 하 여 합니다. 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다.
+이 문서에서는 구성 및 사용 하는 방법을 설명 합니다 [mssql server linux 컨테이너 이미지](https://hub.docker.com/_/microsoft-mssql-server) Docker를 사용 하 여 합니다. 이 이미지는 Ubuntu 16.04 기반 Linux에서 실행 중인 SQL Server로 구성됩니다. Linux 또는 Mac/Windows용 Docker에서 Docker Engine 1.8+와 함께 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 문서에서는 mssql server linux 이미지를 사용 하 여 특별히 중점을 둡니다. Windows 이미지는 다루지 않지만에서 자세히 알아보십시오 합니다 [mssql server windows Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/)합니다.
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 여기서 최신 SQL Server 컨테이너 이미지를 사용 하려는 하지 시나리오가 있습니다. 특정 SQL Server 컨테이너 이미지를 실행 하려면 다음 단계를 사용 합니다.
 
-1. Docker를 식별 **태그** 사용 하려는 릴리스에 대 한 합니다. 사용 가능한 태그를 보려면 [mssql server linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
+1. Docker를 식별 **태그** 사용 하려는 릴리스에 대 한 합니다. 사용 가능한 태그를 보려면 [mssql server linux Docker 허브 페이지](https://hub.docker.com/_/microsoft-mssql-server)합니다.
 
 2. 태그를 사용 하 여 SQL Server 컨테이너 이미지를 끌어옵니다. 예를 들어 이미지를 가져와 RC1을 대체할 `<image_tag>` 사용 하 여 다음 명령에서 `rc1`합니다.
 

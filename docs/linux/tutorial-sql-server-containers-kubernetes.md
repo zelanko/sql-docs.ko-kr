@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626323"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516609"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Azure Kubernetes 서비스 (AKS)를 사용 하 여 Kubernetes에서 SQL Server 컨테이너를 배포 합니다.
 
@@ -155,7 +155,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
 
 이 예제에서는 SQL Server 인스턴스를 호스팅하는 컨테이너는 Kubernetes 배포 개체로 설명 되어 있습니다. 배포 된 복제본 집합을 만듭니다. 복제본 세트 pod를 만듭니다. 
 
-이 단계에서는 SQL Server를 기반으로 컨테이너를 설명 하는 매니페스트를 만듭니다 [mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 이미지입니다. 매니페스트 참조를 `mssql-server` 영구적 볼륨 클레임 및 `mssql` Kubernetes 클러스터에 이미 적용 하는 암호입니다. 매니페스트도 설명 합니다.는 [서비스](https://kubernetes.io/docs/concepts/services-networking/service/)합니다. 이 서비스는 부하 분산 장치. 부하 분산 장치 IP 주소를 SQL Server 인스턴스를 복구한 후에 유지 되도록 보장 합니다. 
+이 단계에서는 SQL Server를 기반으로 컨테이너를 설명 하는 매니페스트를 만듭니다 [mssql server linux](https://hub.docker.com/_/microsoft-mssql-server) Docker 이미지입니다. 매니페스트 참조를 `mssql-server` 영구적 볼륨 클레임 및 `mssql` Kubernetes 클러스터에 이미 적용 하는 암호입니다. 매니페스트도 설명 합니다.는 [서비스](https://kubernetes.io/docs/concepts/services-networking/service/)합니다. 이 서비스는 부하 분산 장치. 부하 분산 장치 IP 주소를 SQL Server 인스턴스를 복구한 후에 유지 되도록 보장 합니다. 
 
 1. 배포를 설명 하는 매니페스트 (YAML 파일)를 만듭니다. 다음 예제에서는 SQL Server 컨테이너 이미지를 기반으로 컨테이너를 포함 하 여 배포를 설명 합니다.
 
@@ -253,7 +253,7 @@ Kubernetes 클러스터에서 SA 암호를 만듭니다. Kubernetes로 암호와
    위의 이미지에서 pod의 상태는 `Running`합니다. 이 상태는 컨테이너 준비 되었음을 나타냅니다. 몇 분 정도 걸릴 수 있습니다.
 
    >[!NOTE]
-   >배포를 만든 후 pod 표시 되기 전에 몇 분 정도 걸릴 수 있습니다. 클러스터에서 가져오는 지연 되므로 합니다 [mssql server linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker 허브에서 이미지입니다. 이미지를 처음으로 가져오면 후에 캐시 된 이미지에 이미 있는 노드에 배포할 경우에 후속 배포 가속화할 수 있습니다. 
+   >배포를 만든 후 pod 표시 되기 전에 몇 분 정도 걸릴 수 있습니다. 클러스터에서 가져오는 지연 되므로 합니다 [mssql server linux](https://hub.docker.com/_/microsoft-mssql-server) Docker 허브에서 이미지입니다. 이미지를 처음으로 가져오면 후에 캐시 된 이미지에 이미 있는 노드에 배포할 경우에 후속 배포 가속화할 수 있습니다. 
 
 1. 서비스가 실행 중인지 확인 합니다. 다음 명령을 실행합니다.
 

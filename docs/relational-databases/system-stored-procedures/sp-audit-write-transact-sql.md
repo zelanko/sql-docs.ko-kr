@@ -18,12 +18,12 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732901"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542163"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,21 @@ ms.locfileid: "47732901"
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## <a name="arguments"></a>인수  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  매개 변수는 사용자가 정의한 및에 기록 합니다 **user_defined_event_id** 감사 로그의 열입니다. *@user_defined_event_id* 형식인 **smallint**합니다.  
   
- **@succeeded**  
- 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. *@succeeded* 됩니다 **비트**합니다.  
+ `[ @succeeded = ] succeeded`  
+ 이벤트 성공 여부를 표시하기 위해 사용자가 전달하는 매개 변수입니다. 이 매개 변수는 감사 로그의 succeeded 열에 표시됩니다. `@succeeded` 됩니다 **비트**합니다.  
   
- **@user_defined_information**  
- 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. *@user_defined_information* 됩니다 **nvarchar(4000)** 합니다.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ 사용자가 정의하며 감사 로그의 새 user_defined_event_id 열에 기록되는 텍스트입니다. `@user_defined_information` 됩니다 **nvarchar(4000)** 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

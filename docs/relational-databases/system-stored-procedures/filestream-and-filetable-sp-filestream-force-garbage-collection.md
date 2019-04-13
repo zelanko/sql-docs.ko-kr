@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973682"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542213"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973682"
 ## <a name="syntax"></a>구문  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
- **@dbname** = *database_name* 가비지 수집기를 실행할 데이터베이스의 이름을 표시 합니다.  
+ `[ @dbname = ]  'database_name'`  
+ 가비지 수집기를 실행할 데이터베이스 이름을 표시합니다.  
   
 > [!NOTE]  
->  *dbname* 됩니다 **sysname**합니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
+> `@dbname` 됩니다 **sysname**합니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
   
- **@filename** = *logical_file_name*  
- 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. **@filename** 선택 사항입니다. 없는 논리적 파일 이름을 지정 된 경우 가비지 수집기가 지정한 데이터베이스의 FILESTREAM 컨테이너를 모두 정리 합니다.  
+ `[ @filename = ] 'logical_file_name'`  
+ 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. `@filename`는 선택 사항입니다. 없는 논리적 파일 이름을 지정 된 경우 가비지 수집기가 지정한 데이터베이스의 FILESTREAM 컨테이너를 모두 정리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
   
