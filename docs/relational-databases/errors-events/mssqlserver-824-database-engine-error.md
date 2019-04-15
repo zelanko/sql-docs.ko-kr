@@ -12,12 +12,12 @@ ms.assetid: 2aa22246-2712-4fdb-9744-36e7e6f3175e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5dc0afe70b6f83e458d3e132e156982f82b7e50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 386a1936663ec3d195f587ff6382223fbf397fff
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241423"
 ---
 # <a name="mssqlserver824"></a>MSSQLSERVER_824
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "51664982"
 |메시지 텍스트|SQL Server에서 일관성 기반의 논리적인 I/O 오류가 검색되었습니다. %ls. 파일 '%ls'의 오프셋 %#016I64x에서 데이터베이스 ID %d에 있는 페이지 %S_PGID의 %S_MSG 중 이 오류가 발생했습니다.  자세한 내용은 SQL Server 오류 로그 또는 시스템 이벤트 로그의 추가 메시지에서 확인할 수 있습니다.|  
   
 ## <a name="explanation"></a>설명  
-이 오류는 Windows가 디스크에서 페이지를 성공적으로 읽었음을 보고하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 페이지에서 잘못된 내용을 발견했음을 나타냅니다. 이 오류는 Windows에서 오류를 감지하지 못한다는 점만 제외하면 오류 823과 비슷합니다. 일반적으로 이 오류는 디스크 드라이브 실패, 디스크 펌웨어 문제, 잘못된 디바이스 드라이버 등 I/O 하위 시스템의 문제를 나타냅니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
+이 오류는 Windows가 디스크에서 페이지를 성공적으로 읽었음을 보고하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 해당 페이지에서 잘못된 내용을 발견했음을 나타냅니다. 이 오류는 Windows에서 오류를 감지하지 못한다는 점만 제외하면 오류 823과 비슷합니다. 일반적으로 이 오류는 디스크 드라이브 실패, 디스크 펌웨어 문제, 잘못된 디바이스 드라이버 등 I/O 하위 시스템의 문제를 나타냅니다. I/O 오류에 대한 자세한 내용은 [Microsoft SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))(Microsoft SQL Server I/O 기본 사항, 2장)를 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
   
 ### <a name="look-for-hardware-failure"></a>하드웨어 오류 찾기  
-하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 응용 프로그램 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
+하드웨어 진단을 실행하여 문제가 있으면 이를 해결하십시오. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 시스템 및 애플리케이션 로그와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그도 검토하여 해당 오류가 하드웨어 오류로 인해 발생했는지 확인하십시오. 로그에 하드웨어 관련 문제가 포함되어 있으면 이를 해결하십시오.  
   
 데이터 손상 문제가 지속되면 다른 하드웨어 구성 요소로 교체하여 문제를 해결하십시오. 시스템의 디스크 컨트롤러에 쓰기 캐시가 설정되어 있지 않은지 확인하세요. 쓰기 캐시가 문제가 된다고 생각되면 하드웨어 공급업체에 문의하십시오.  
   

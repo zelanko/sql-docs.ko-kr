@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801918"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533341"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "56801918"
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 **PASSWORD** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
  백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 **있어야 합니다** . 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
@@ -211,19 +211,19 @@ ms.locfileid: "56801918"
 *
     5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 스토리지 컨테이너: **텍스트 상자에서** 를 선택합니다.
 
-    6.  **백업 파일:** 텍스트 상자에 `Sales_stripe1of2_20160601.bak`를 입력합니다.
+   6.  **백업 파일:** 텍스트 상자에 `Sales_stripe1of2_20160601.bak`를 입력합니다.
 
-    7.  **확인**을 클릭합니다.
+   7.  **확인**을 클릭합니다.
 
-    8.  **4** 단계와 **5**단계를 반복합니다.
+   8.  **4** 단계와 **5**단계를 반복합니다.
 
-    9.  **백업 파일:** 텍스트 상자에 `Sales_stripe2of2_20160601.bak`를 입력합니다.
+   9.  **백업 파일:** 텍스트 상자에 `Sales_stripe2of2_20160601.bak`를 입력합니다.
 
-    10.  **확인**을 클릭합니다.
+   10.  **확인**을 클릭합니다.
 
-    11.   **확인**을 클릭합니다.
+   11.   **확인**을 클릭합니다.
 
-    **D2.  공유 액세스 서명이 있고 SQL Server 자격 증명이 없는 경우**
+   **D2.  공유 액세스 서명이 있고 SQL Server 자격 증명이 없는 경우**
   5.    **Azure 스토리지 컨테이너:** 텍스트 상자에 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 입력합니다.
   
   6.    **공유 액세스 정책:** 텍스트 상자에 공유 액세스 서명을 입력합니다.

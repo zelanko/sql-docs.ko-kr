@@ -1,7 +1,7 @@
 ---
 title: '자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/09/2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d130177d51dc64e5eb1d0e763cc6068a61b7123
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: bcc5709a87939caf415f1b91b58e05a932aea14a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241871"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용
 
@@ -42,7 +42,9 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 - [AdventureWorks2016 샘플 데이터베이스](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)를 다운로드합니다.
 - 사용자 계정에 [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) 역할을 할당하고 [모든 자격 증명 변경](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 권한을 부여합니다. 
- 
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 저장된 액세스 정책 및 공유 액세스 스토리지 만들기
 
 이 섹션에서는 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 스크립트를 사용하여 저장된 액세스 정책을 통해 Azure Blob 컨테이너에 공유 액세스 서명을 만듭니다.  

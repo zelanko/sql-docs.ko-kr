@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295671"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516559"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 사용 가능한 최신 상태로 [데이터베이스 호환성 수준을 업그레이드](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)할 때는 워크로드가 성능 저하 위험에 노출될 수 있습니다. 또한 이는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]와 최신 버전 간에 업그레이드하는 경우에도 발생할 수 있습니다.
 
@@ -206,7 +206,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
     > 배포된 계획 지침이 있는 세션을 삭제하는 경우 QTA를 사용하여 롤백할 수 없습니다.    
     > 대신 [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) 시스템 테이블을 사용하여 계획 지침을 검색하고 [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)를 사용하여 수동으로 삭제합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **db_owner** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="see-also"></a>참고 항목  

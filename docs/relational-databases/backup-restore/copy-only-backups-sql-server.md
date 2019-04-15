@@ -1,7 +1,7 @@
 ---
 title: 복사 전용 백업(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/08/2018
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 860d6d2d5f84f41d006cb10972b63ec6b93210f3
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 6649909f4d3a4bf6b95b657ef45f55c34f042f3a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240691"
 ---
 # <a name="copy-only-backups-sql-server"></a>복사 전용 백업(SQL Server)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ ms.locfileid: "58658197"
 ### <a name="examples"></a>예  
 ###  <a name="SSMSProcedure"></a> 1.  SQL Server Management Studio 사용  
 이 예제에서는 `Sales` 데이터베이스의 복사 전용 백업이 기본 백업 위치에서 디스크에 백업됩니다.
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
@@ -95,7 +97,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
--   [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
 ## <a name="see-also"></a>참고 항목  

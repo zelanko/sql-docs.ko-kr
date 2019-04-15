@@ -13,12 +13,12 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f84f4e0e0e5b0529f3b79cd64cd9bb605737adf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242501"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
   **데이터 스트리밍 대상[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]은**SSIS용 OLE DB 공급자**가 SSIS 패키지의 출력을 탭 형식의 결과 집합으로 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**(SSIS) 대상 구성 요소입니다. SSIS용 OLE DB 공급자를 사용하는 연결 서버를 만든 다음 연결 서버에 SQL 쿼리를 실행하여 SSIS 패키지에서 반환한 데이터를 표시할 수 있습니다.  
@@ -48,18 +48,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 > [!IMPORTANT]  
 >  자세한 단계에 대해서는 [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)를 참조하세요.  
-  
-## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Power BI 관리 센터를 사용하여 SSIS 패키지의 출력 데이터를 OData 피드로 표시  
- IT 관리자는 Power BI 관리 센터를 사용하여 온-프레미스 데이터 원본의 데이터를 사용자에게 OData 피드로 표시할 수 있습니다. Power BI 관리 센터에서는 기본적으로 SQL Server 데이터 원본만 등록할 수 있습니다. 하지만 **데이터 스트리밍 대상** 과 **SQL Server Integration Services(SSISOLEDB)용 Microsoft OLE DB 공급자** 를 사용하면 SSIS 패키지를 데이터 원본으로 등록하고 SSIS 패키지의 결과 데이터를 사용자에게 OData 피드로 표시할 수 있습니다.  
-  
- 관리 센터를 사용하면 SQL Server 데이터베이스에 뷰를 게시할 수 있습니다. 따라서 SSIS 패키지 게시 마법사를 사용하여 SSIS 패키지를 SQL 뷰로 게시할 수 있습니다. 그런 다음 Power BI 관리 센터의 OData 피드에 포함할 뷰를 선택할 수 있습니다. 데이터 관리자는 Excel용 파워 쿼리 추가 기능을 사용하여 SSIS 패키지의 피드를 사용할 수 있습니다.  
-  
- 자세한 연습은 [SSIS 패키지를 OData 피드 원본으로 게시](https://go.microsoft.com/fwlink/?LinkID=317367)를 참조하십시오.  
-  
-## <a name="in-this-section"></a>섹션 내용  
-  
--   [연습: SSIS 패키지를 SQL 뷰로 게시](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
-  
+
 ## <a name="configure-data-streaming-destination"></a>데이터 스트리밍 대상 구성
   **고급 데이터 스트리밍 대상 편집기** 대화 상자를 사용하여 데이터 스트리밍 대상을 구성합니다. 구성 요소를 두 번 클릭하거나 데이터 흐름 디자이너에서 구성 요소를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭하여 이 대화 상자를 엽니다.  
   
@@ -78,9 +67,4 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
  이 탭의 위쪽 창에는 사용 가능한 모든 입력 열이 표시됩니다. 입력 열 중에서 이 구성 요소의 출력에 포함할 열을 선택합니다. 선택한 열은 아래쪽 창의 목록에 표시됩니다. 목록에서 **출력 별칭** 필드에 대한 새 이름을 입력해 출력 열의 이름을 변경할 수 있습니다.  
   
 ## <a name="input-output-properties-tab"></a>입력 및 출력 속성 탭  
- 이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열**을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [SSIS 패키지를 OData 피드 원본으로 게시](https://go.microsoft.com/fwlink/?LinkID=317367)  
-  
-  
+ 이 탭에서는 입력 열 탭에서와 비슷한 방식으로 출력 열의 이름을 변경할 수 있습니다. 왼쪽 트리 뷰에서 **데이터 스트리밍 대상 입력** 과 **입력 열**을 차례로 확장합니다. 입력 열 이름을 클릭하고 오른쪽 창에서 출력 열 이름을 변경합니다.

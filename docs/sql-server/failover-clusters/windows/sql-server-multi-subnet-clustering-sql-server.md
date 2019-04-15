@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407870"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516589"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 다중 서브넷 클러스터링(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407870"
 ##  <a name="VisualElement"></a> SQL Server 다중 서브넷 장애 조치 클러스터(2노드, 2서브넷)  
  다음 그림에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 노드와 서브넷이 각각 두 개인 FCI(장애 조치(failover) 클러스터 인스턴스)를 보여 줍니다.  
   
- ![MultiSubnetFailover가 포함된 다중 서브넷 아키텍처](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "MultiSubnetFailover가 포함된 다중 서브넷 아키텍처")  
+ ![MultiSubnetFailover가 포함된 다중 서브넷 아키텍처](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "MultiSubnetFailover가 포함된 다중 서브넷 아키텍처")  
   
   
 ##  <a name="Configurations"></a> 다중 서브넷 장애 조치(Failover) 클러스터 인스턴스 구성  

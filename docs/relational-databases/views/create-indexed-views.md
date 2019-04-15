@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191053"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533351"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   이 항목에서는 뷰에서 인덱스를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계는 인덱싱된 뷰를 만들고 성공적으로 구현하는 데 필요합니다.  
   
 1.  뷰에 참조될 기존의 모든 테이블에 대해 SET 옵션이 올바른지 확인합니다.    
@@ -46,7 +46,7 @@ ms.locfileid: "52191053"
 > <sup>1</sup> UPDATE, DELETE 또는 INSERT 작업 등   
   
 ###  <a name="Restrictions"></a> 인덱싱된 뷰에 필요한 SET 옵션  
-쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 `CONCAT_NULL_YIELDS_NULL`이 켜기로 설정된 후에는 `'abc' + NULL` 식이 `NULL` 값을 반환합니다. 그러나 `CONCAT_NULL_YIEDS_NULL`이 끄기로 설정된 후에는 같은 식이 `'abc'`를 생성합니다.  
+쿼리가 실행될 때 다른 SET 옵션이 활성화되어 있으면 같은 식을 계산해도 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 다른 결과가 나올 수 있습니다. 예를 들어 SET 옵션 `CONCAT_NULL_YIELDS_NULL`이 켜기로 설정된 후에는 `'abc' + NULL` 식이 `NULL` 값을 반환합니다. 그러나 `CONCAT_NULL_YIELDS_NULL`이 끄기로 설정된 후에는 같은 식이 `'abc'`를 생성합니다.  
   
 뷰를 올바르게 유지하고 일관된 결과를 반환하게 하려면 인덱싱된 뷰는 몇 가지 SET 옵션에 대해 고정 값이 필요합니다. 다음 테이블의 SET 옵션은 다음 상황이 발생할 때마다 **필요한 값** 열에 표시된 값으로 설정되어야 합니다.  
   
@@ -160,7 +160,7 @@ SET 옵션 및 결정적 함수 요구 사항 외에 다음 요구 사항을 충
 
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에는 **CREATE VIEW** 권한이 필요하고 뷰를 만들 구성표에는 **ALTER** 권한이 필요합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  

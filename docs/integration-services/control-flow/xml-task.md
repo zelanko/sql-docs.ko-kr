@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291553"
 ---
 # <a name="xml-task"></a>XML 태스크
   XML 태스크는 XML 데이터를 통한 작업 시 사용됩니다. 패키지는 이 태스크를 사용하여 XML 문서를 검색하고, XSLT(Extensible Stylesheet Language Transformations) 스타일시트 및 XPath 식을 통해 문서에 작업을 적용하고, 여러 문서를 병합하거나 업데이트된 문서를 파일 및 변수에 대해 유효성을 검사하고, 비교 및 저장할 수 있습니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "58290569"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [XML 태스크를 사용하여 XML 유효성 검사](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -245,7 +245,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -291,7 +291,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -371,7 +371,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -446,7 +446,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -492,7 +492,7 @@ ms.locfileid: "58290569"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **대상**  
+ **Destination**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -530,9 +530,7 @@ ms.locfileid: "58290569"
  **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>관련 내용  
-  
--   agilebi.com의 블로그 항목 - [XML 대상 스크립트 구성 요소](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/)  
-  
+
 -   www.codeplex.com의 CodePlex 예제 - [프로세스 XML 데이터 패키지 예제](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
   

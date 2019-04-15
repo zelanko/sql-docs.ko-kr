@@ -1,7 +1,7 @@
 ---
 title: PowerShell 스크립트 작업 단계 만들기 | Microsoft 문서
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1da40c8cc57b1f31447304717034b5c574d68143
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 268f504a717769a3b7ac9836349eb12273b49f5b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240361"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,12 +45,14 @@ ms.locfileid: "51695391"
     [Transact-SQL](#TSQL)  
   
     [SQL Server 관리 개체](#SMO)  
-  
+
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   
 ### <a name="Security"></a>보안  
-자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
-  
+자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="SSMS"></a>SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>PowerShell 스크립트 작업 단계를 만들려면  

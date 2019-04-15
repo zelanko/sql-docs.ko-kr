@@ -13,13 +13,13 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2e84a286cb4fa59c25426e9b1e8e8506fb51d91
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370545"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542203"
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
