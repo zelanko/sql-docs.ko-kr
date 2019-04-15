@@ -667,6 +667,8 @@ items:
           href: ../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md
     - name: 참조
       items:
+      - name: 시스템 개체
+        href: ../database-engine/availability-groups/windows/availability-group-system-object-reference.md
       - name: PowerShell Cmdlet
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
       - name: T-SQL
@@ -973,6 +975,8 @@ items:
           href: ../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md
     - name: 참조
       items:
+      - name: 시스템 개체
+        href: ../database-engine/database-mirroring/database-mirroring-system-object-reference.md
       - name: 보안 마법사
         href: ../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md
         items:
@@ -8386,7 +8390,7 @@ items:
     - name: SQL Server 네트워크 구성
       href: ../tools/configuration-manager/sql-server-network-configuration.md
       items:
-      - name: 에 대한 프로토콜 <server>
+      - name: <server>에 대한 프로토콜
         href: ../tools/configuration-manager/protocols-for-server-sql-server-configuration-manager.md
         items:
         - name: 플래그 탭
@@ -11400,20 +11404,6 @@ items:
       href: ../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md
     - name: 확장 속성 - sys.extended_properties
       href: ../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md
-    - name: 변경 내용 추적
-      items:
-      - name: sys.change_tracking_databases
-        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md
-      - name: sys.change_tracking_tables
-        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md
-    - name: 데이터베이스 미러링
-      items:
-      - name: Database Mirroring Witness - sys.database_mirroring_witnesses
-        href: ../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
-    - name: 데이터 계층 애플리케이션
-      items:
-      - name: 데이터 계층 애플리케이션 보기 - dbo.sysdac_instance
-        href: ../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md
     - name: 가용성 그룹
       href: ../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md
       items:
@@ -11458,6 +11448,12 @@ items:
         href: ../relational-databases/system-catalog-views/dbo-server-quotas-azure-sql-database.md
       - name: sys.server_resource_stats
         href: ../relational-databases/system-catalog-views/sys-server-resource-stats-azure-sql-database.md
+    - name: 변경 내용 추적
+      items:
+      - name: sys.change_tracking_databases
+        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md
+      - name: sys.change_tracking_tables
+        href: ../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md
     - name: CLR 어셈블리
       href: ../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md
       items:
@@ -11469,6 +11465,10 @@ items:
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
       - name: sys.trusted_assemblies(T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
+    - name: 데이터 계층 애플리케이션
+      items:
+      - name: 데이터 계층 애플리케이션 보기 - dbo.sysdac_instance
+        href: ../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md
     - name: 데이터 수집기
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
       items:
@@ -11512,6 +11512,10 @@ items:
         href: ../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md
       - name: sysmail_unsentitems
         href: ../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md
+    - name: 데이터베이스 미러링
+      items:
+      - name: Database Mirroring Witness - sys.database_mirroring_witnesses
+        href: ../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md
     - name: 데이터베이스 및 파일
       href: ../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md
       items:
@@ -12808,18 +12812,20 @@ items:
         href: ../relational-databases/system-functions/managed-backup-fn-get-health-status-transact-sql.md
       - name: managed_backup.fn_backup_instance_config
         href: ../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md
-    - name: sys.fn_get_sql
-      href: ../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md
-    - name: sys.fn_MSxe_read_event_stream
-      href: ../relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql.md
-    - name: sys.fn_stmt_sql_handle_from_sql_stmt
-      href: ../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md
-    - name: sys.fn_validate_plan_guide
-      href: ../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md
-    - name: sys.fn_xe_file_target_read_file
-      href: ../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md
-    - name: sys.fn_db_backup_file_snapshots
-      href: ../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md
+    - name: 쿼리 및 확장 이벤트
+      items:
+      - name: sys.fn_get_sql
+        href: ../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md
+      - name: sys.fn_MSxe_read_event_stream
+        href: ../relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql.md
+      - name: sys.fn_stmt_sql_handle_from_sql_stmt
+        href: ../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md
+      - name: sys.fn_validate_plan_guide
+        href: ../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md
+      - name: sys.fn_xe_file_target_read_file
+        href: ../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md
+      - name: sys.fn_db_backup_file_snapshots
+        href: ../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md
     - name: 전체 텍스트 검색 및 의미 체계 검색
       href: ../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md
       items:
@@ -17260,9 +17266,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bcc3ca478ec16c7a7fc1ff0213b67e29c8a28e78
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e25f2bfcc75fb8b1a72dae53d512ac99e5ad8284
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506580"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533381"

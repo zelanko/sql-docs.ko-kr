@@ -1,6 +1,6 @@
 ---
 title: InScope 함수(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 03/08/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab797be4ab284bbd4dd02964d24a6499adb8b721
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 38f49b73201c7e708e65227540da95052a3ce018
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367221"
 ---
 # <a name="report-builder-functions---inscope-function"></a>보고서 작성기 함수 - InScope 함수
   항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.  

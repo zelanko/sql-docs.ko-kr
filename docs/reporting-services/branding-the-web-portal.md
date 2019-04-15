@@ -1,6 +1,6 @@
 ---
 title: 웹 포털 브랜딩 | Microsoft Docs
-ms.date: 12/06/2018
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +8,21 @@ description: 이 문서에서는 브랜드 패키지를 통해 비즈니스로 �
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201043"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506510"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-웹 포털을 비즈니스로 브랜딩하여 모양을 변경할 수 있습니다. 이 작업은 브랜드 패키지를 통해 수행합니다. 브랜드 패키지는 사용자가 CSS 스타일 시트에 대한 깊은 지식이 없어도 만들 수 있도록 설계되었습니다.  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+웹 포털을 비즈니스로 브랜딩하여 모양을 변경할 수 있습니다. 이 작업은 브랜드 패키지를 통해 수행합니다. 브랜드 패키지는 사용자가 CSS 스타일 시트에 대한 깊은 지식이 없어도 만들 수 있도록 설계되었습니다.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>브랜드 패키지 만들기
   
 Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있으며 zip 파일로 패키지화되어 있습니다.   

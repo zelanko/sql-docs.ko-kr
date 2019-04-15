@@ -1,6 +1,6 @@
 ---
 title: Aggregate 함수(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24aba85806b6f13fac47371fc98d952afd0e177b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: a24554d0317c17edf9c532611c588ea7c38d1926
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287521"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367231"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>보고서 작성기 함수 - 집계 함수
   데이터 공급자가 정의한 대로 지정한 식의 사용자 지정 집계를 반환합니다.  
