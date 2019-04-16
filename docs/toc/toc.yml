@@ -17266,9 +17266,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: e25f2bfcc75fb8b1a72dae53d512ac99e5ad8284
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: db4bc5b476660691c89b814614b82919320733f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533381"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583466"

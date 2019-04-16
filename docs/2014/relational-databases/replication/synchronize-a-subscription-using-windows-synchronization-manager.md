@@ -13,12 +13,12 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042202"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582366"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화(Windows 동기화 관리자)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 동기화 관리자와 같은 컴퓨터에서 실행 중인 경우에는 구독을 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시와 동기화하는 데만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 동기화 관리자를 사용할 수 있습니다. 동기화 관리자를 사용하면 오프라인 파일과 웹 페이지를 동기화할 수도 있습니다. 동기화 관리자를 사용하려면 다음을 수행하십시오.  
@@ -97,7 +97,7 @@ ms.locfileid: "59042202"
   
 ### <a name="to-use-the-interactive-resolver"></a>대화형 해결 프로그램을 사용하려면  
   
-1.  대화형 해결을 사용할 아티클과 구독을 설정합니다. 자세한 내용은 [병합 아티클에 대한 상호 충돌 해결 지정](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)을 참조하세요.  
+1.  대화형 해결을 사용할 아티클과 구독을 설정합니다. 자세한 내용은 [병합 아티클에 대한 상호 충돌 해결 지정](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution)을 참조하세요.
   
 2.  동기화 관리자에서 구독이 동기화를 시작하면 대화형 충돌 해결이 설정되어 있고 하나 이상의 아티클에 대한 충돌이 있는 경우 대화형 해결 프로그램이 자동으로 시작됩니다. 대화형 해결 프로그램은 권장 해결 방법(게시 및 구독을 만들 때 지정한 해결 프로그램에 기반함)과 함께 한 번에 하나의 충돌을 표시합니다.  
   
@@ -117,4 +117,5 @@ ms.locfileid: "59042202"
 >  편집을 수행한 경우에는 편집 내용이 해결을 위해 선택한 행의 일부인 경우에만 적용됩니다. 예를 들어 **게시자**에서 편집을 수행한 다음 **구독자 허용**을 클릭하면 편집 내용이 무시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [대화형 충돌 해결](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+  
