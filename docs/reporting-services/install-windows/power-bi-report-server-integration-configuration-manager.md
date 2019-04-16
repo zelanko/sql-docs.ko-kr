@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556245"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506560"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57556245"
 
 - 고정하려는 보고서는 저장된 자격 증명을 사용해야 합니다. 이는 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합 자체의 요구 사항이 아니라 고정된 항목에 대한 새로 고침 프로세스의 요구 사항입니다.  보고서 항목 고정 작업은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들어 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에서 타일의 새로 고침 일정을 관리합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독에는 저장된 자격 증명이 필요합니다. 보고서에서 저장된 자격 증명을 사용하지 않는 경우 사용자는 보고서 항목을 고정할 수 있지만 연결된 구독에서 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]에 데이터를 새로 고치려고 경우 **내 구독** 페이지에 다음과 유사한 오류 메시지가 표시됩니다.
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 뿐만 아니라 사용자 데이터 원본 자격 증명도 실행할 수 없습니다.
 
 자격 증명을 저장하는 방법은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)에서 "보고서별 데이터 원본에 대한 저장된 자격 증명 구성" 섹션을 참조하세요.
 
 관리자는  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일에서 자세한 내용을 검토할 수 있습니다.  다음과 유사한 메시지가 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 로그 파일을 검토하고 모니터링하는 유용한 방법은 파일에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 파워 쿼리를 사용하는 것입니다.  자세한 내용 및 간단한 비디오는 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 세트를 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI 배달 오류: 대시보드: IT 지출 분석 샘플, visual: Chart2, 오류: 현재 작업을 완료할 수 없습니다. 사용자 데이터 원본 자격 증명이 요구 사항을 준수하지 않아 이 보고서 또는 공유 데이터 집합을 실행할 수 없습니다. 사용자 데이터 원본 자격 증명이 보고서 서버 데이터베이스에 저장되어 있지 않거나, 사용자 데이터 원본이 자격 증명을 요구하지 않도록 구성되어 있지만 무인 실행 계정이 지정되어 있지 않습니다.
 
 ## <a name="bkmk_steps2integrate"></a> 보고서 서버를 통합하고 등록하려면
 
@@ -79,7 +79,7 @@ ms.locfileid: "57556245"
 
 보고서 서버의 구성이 변경된 경우 **등록 업데이트** 를 사용합니다. 예를 들어 사용자가 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]로 이동하는 데 사용하는 URL을 추가하거나 제거하려는 경우가 여기에 해당합니다.
 
--  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL**을 선택합니다.
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서 **웹 포털 URL**을 선택합니다.
 
      **고급**을 선택합니다.
 
@@ -113,7 +113,7 @@ ms.locfileid: "57556245"
 
 1. 사용자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 보고서를 미리 보고 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 보고서 항목을 고정하려고 처음 클릭합니다.
 
-2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다.  [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
+2. 이렇게 하면 Azure AD 로그인 페이지로 리디렉션됩니다. [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **내 설정** 페이지에서 로그인할 수도 있습니다. 사용자가 Azure 관리되는 테넌트에 로그인하면 사용자의 Azure 계정과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 권한 간에 관계가 설정됩니다.  자세한 내용은 [Power BI 통합을 위한 내 설정&#40;웹 포털&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)을 참조하세요.
 
 3. 사용자 보안 토큰이 보고서 서버에 반환됩니다.
 
@@ -149,7 +149,7 @@ ms.locfileid: "57556245"
 
 ## <a name="considerations-and-limitations"></a>고려 사항 및 제한 사항
 
-* 바 이럴 및 정부 테 넌 트 지원 되지 않습니다.
+* 바이럴 및 정부 테넌트는 지원되지 않습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

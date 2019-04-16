@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0d1e59f0f049373b0858b756618454659898dc2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242281"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "53211932"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본에 대한 플랫폼 고려 사항은 보고서 제작 클라이언트와 보고서 서버에 대해 각각 다릅니다.  
   
 ### <a name="on-the-report-authoring-client"></a>보고서 제작 클라이언트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 는 32비트 애플리케이션입니다. [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 는 Itanium 기반 플랫폼에서 지원되지 않습니다. x64 플랫폼에서 보고서 디자이너를 통해 보고서를 편집 및 미리 보려면 x86 플랫폼 디렉터리에 32비트 데이터 공급자가 설치되어 있어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../는 32비트 애플리케이션입니다. is not supported on an Itanium-based platform. On 는 Itanium 기반 플랫폼에서 지원되지 않습니다.nx64 플랫폼에서 보고서 디자이너를 통해 보고서를 편집 및 미리 보려면 x86 플랫폼 디렉터리에 32비트 데이터 공급자가 설치되어 있어야 합니다.  
   
 ### <a name="on-the-report-server"></a>보고서 서버  
  64비트 보고서 서버에 보고서를 배포하는 경우 보고서 서버에 기본적으로 컴파일된 64비트 데이터 공급자가 설치되어 있어야 합니다. 64비트 인터페이스에 32비트 데이터 공급자를 래핑하는 기능은 지원되지 않습니다. 자세한 내용은 데이터 공급자에 대한 설명서를 참조하십시오.  
@@ -81,19 +81,19 @@ ms.locfileid: "53211932"
 ## <a name="supported-data-sources"></a>지원되는 데이터 원본  
  다음 표에서는 보고서 데이터 세트 및 보고서 모델에 대해 데이터를 검색하는 데 사용할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 처리 확장 프로그램 및 데이터 공급자를 보여 줍니다. 확장 프로그램이나 데이터 공급자에 대한 자세한 내용을 보려면 두 번째 열의 링크를 클릭하십시오. 표 열은 다음과 같습니다.  
   
--   보고서 데이터 원본: 액세스하는 데이터의 유형(예: 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML)입니다. 이 열을 통해 "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서에 사용할 수 있는 데이터 형식은 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   보고서 데이터 원본: 액세스하는 데이터의 유형(예: 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML)입니다. 이 열을 통해 " [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 보고서에 사용할 수 있는 데이터 형식은 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 데이터 원본을 정의할 때 드롭다운 목록에 표시되는 데이터 원본 유형 중 하나입니다. 이 목록은 설치 및 등록된 DPE와 데이터 공급자를 통해 채워집니다. 이 열을 통해 "보고서 데이터 원본을 만들 때 드롭다운 목록에서 어떤 데이터 원본 유형을 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 처리 확장 프로그램/데이터 공급자의 이름: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이나 선택한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형에 해당하는 다른 데이터 공급자입니다. 이 열을 통해 "데이터 원본 유형을 선택할 때 사용되는 해당 데이터 처리 확장 프로그램이나 데이터 공급자는 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 두 개 이상의 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   데이터 원본 *\<플랫폼>*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 *\<platform>*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 -   데이터 원본 버전: DPE 또는 데이터 공급자가 지원하는 대상 데이터 원본의 버전입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 버전의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   RS *\<플랫폼>*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   RS *\<platform>*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
 ###  <a name="DataSourcesTable"></a> 데이터 원본 유형  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53211932"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스|[ODBC](#ODBC)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OdbcClient 확장|Y|Y|SQL Server 2008 이상|Y|Y|  
 |[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 사항 없음|해당 사항 없음|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|
-|SQL 데이터 웨어하우스|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 사항 없음|해당 사항 없음|SQL 데이터 웨어하우스|Y|Y| 
+|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.SqlClient 확장|해당 사항 없음|해당 사항 없음|SQL Data Warehouse|Y|Y| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스|[Microsoft 병렬 데이터 웨어하우스](#PWD)|사용되지 않는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|해당 사항 없음|해당 사항 없음|해당 사항 없음|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스|[Microsoft SQL Server Analysis Services](#AnalysisServices)|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|ADOMD.NET 사용|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상|Y|Y|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스|OLEDB|기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램|System.Data.OledbClient 확장<br /><br /> 버전 10.0|Y|Y|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|   
@@ -150,7 +150,7 @@ ms.locfileid: "53211932"
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 그래픽 쿼리 디자이너는 **Microsoft SQL Server**데이터 원본 유형과 함께 사용하는 Visual Database Tool 디자이너가 아닌 관계형 쿼리 디자이너입니다.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]는 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다.   
   
@@ -229,7 +229,7 @@ ms.locfileid: "53211932"
  
 Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있습니다.
  
-1.  [Oracle의 다운로드 사이트](https://www.oracle.com/us/products/tools/index-090165.html)로 이동
+1.  [Oracle의 다운로드 사이트](https://www.oracle.com/technetwork/database/windows/downloads/index-090165.html)로 이동
 2.  Windows(서버에 대해 64비트, 도구에 대해 32비트)용 ODAC 12c 릴리스 4(12.1.0.2.4) 다운로드
 3.  Data Provider for .NET 4 설치
   
@@ -270,7 +270,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
   
  자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.  
   
- Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 다음 백서를 참조하십시오. [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)백서를 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
@@ -292,12 +292,12 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  지정할 수 있는 자격 증명은 클라이언트 애플리케이션에서 사용하는 구현에 따라 다릅니다. 자세한 내용은 [SharePoint 목록 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)을 참조하세요.  
   
 ###  <a name="XML"></a> XML 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 애플리케이션, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](https://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> SAP BW 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서의 SAP BW 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 SAP BW 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
