@@ -13,12 +13,12 @@ ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 32fe7018556c25cbe4eb9b980c8165b75a07db48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bcb553e6762580c20aa3fc126f2f1576d1d5ff68
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793315"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582487"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>통합 멤버 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 통합 멤버 준비 테이블(stg.name_Consolidated)을 사용하여 통합 멤버를 만들고, 업데이트하고, 비활성화하고, 삭제할 수 있습니다. 또한 통합 멤버에 대한 특성 값을 업데이트하기 위해 사용할 수도 있습니다.  
@@ -40,9 +40,9 @@ ms.locfileid: "52793315"
 |**NewCode**|멤버 코드를 변경하는 경우에만 사용합니다.|  
 |\<특성 이름>|엔터티의 각 특성에 대해 열이 존재합니다. **ImportType** **0** 또는 **2**에 사용합니다. 자유 형식 특성의 경우 특성의 새 텍스트 또는 문자열 값을 지정합니다. 도메인 기반 특성의 경우에는 특성이 될 멤버의 코드를 지정합니다. 링크 특성의 경우 URL이 **http://** 로 시작해야 합니다.<br /><br /> 참고: 파일 특성은 준비할 수 없습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
- [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+## <a name="see-also"></a>관련 항목  
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
+ [준비 프로세스를 사용 하 여 명시적 계층 멤버 이동 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [데이터 가져오기 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [준비 프로세스 오류&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872003"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582448"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터 (미리 보기)에서 앱을 배포 하는 방법
 
@@ -111,7 +111,7 @@ mssqlctl app create --spec ./addpy
 
 이 샘플 앱을 배포 하려면 라는 디렉터리에 다음 파일을 만들고 `addpy`:
 
-- `add.py`. 이 파일에 다음 Python 코드를 복사 합니다.
+- `add.py`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 이 파일에 다음 Python 코드를 복사 합니다.
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ mssqlctl app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. 이 파일에 다음 코드를 복사 합니다.
+- `spec.yaml`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 이 파일에 다음 코드를 복사 합니다.
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

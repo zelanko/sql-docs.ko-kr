@@ -3,18 +3,18 @@ title: Java 샘플 및 SQL Server 2019-SQL Server Machine Learning Services에 �
 description: SQL Server 데이터를 사용 하 여 Java 언어 확장을 사용 하는 단계를 알아보려면 SQL Server 2019에서 Java 샘플 코드를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 25deba880827cc7396082dac9a2c86cc4dd66cd8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493428"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582576"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 샘플 연습
 

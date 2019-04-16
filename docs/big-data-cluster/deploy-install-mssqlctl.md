@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c306ec99f0bd2aff89116e955283dd585f9d7cce
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860664"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582387"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 

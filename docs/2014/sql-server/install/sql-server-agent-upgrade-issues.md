@@ -14,12 +14,12 @@ ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba8f9ce8d5783ae2d16703d3057727caf0f06ddd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c58e0cb5b53d2866ff39a5c1352c7884383a0cf
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078215"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581940"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>SQL Server 에이전트 업그레이드 문제
   다음 항목에서는 업그레이드에 영향을 줄 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 문제에 대해 설명하고 이러한 변화가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48078215"
 -   [업그레이드하면 SQL Server 에이전트 사용자 프록시 계정이 임시 UpgradedProxyAccount로 변경됩니다.](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)   
  [업그레이드 문제 해결](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

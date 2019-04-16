@@ -12,12 +12,12 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 053eb234dee34d95e0fc3372a4626b8dee02a4ab
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: e4e84dc262cd03de74433c2e713b3a7b4cda0faa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973562"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583287"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -64,6 +64,9 @@ ms.locfileid: "57973562"
 [sys.workload_management_workload_classifier_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (미리 보기)
 
 [sys.workload_management_workload_classifiers &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (미리 보기)
+
+> [!Note]
+> 작업 분류 SQL Data Warehouse Gen2에서 미리 보기로 제공 됩니다. 워크 로드 관리 분류 및 중요도 미리 보기는 2019 년 4 월 9 일 이상 릴리스 날짜를 사용 하 여 빌드입니다.  사용자 워크 로드 관리 테스트에 대 한 빌드를이 날짜 이전의 사용을 피해 야 합니다.  빌드 워크 로드 관리 가능 인지를 확인 하려면 @ 선택 실행@version SQL Data Warehouse 인스턴스에 연결 된 경우.
  
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 카탈로그 뷰  
  다음 카탈로그 뷰에 적용할 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 만:

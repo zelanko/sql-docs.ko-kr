@@ -5,17 +5,17 @@ description: Kubernetes에서 SQL Server 2019 빅 데이터 클러스터 (미리
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860595"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582416"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -44,9 +44,9 @@ SQL Server 빅 데이터 클러스터의 Kubernetes 버전을 이상이 필요 v
 
 | Kubernetes에 배포 합니다. | Description | 링크 |
 |---|---|---|
-| **Minikube** | VM에서 단일 노드 Kubernetes 클러스터입니다. | [Instructions](deploy-on-minikube.md) |
-| **Azure Kubernetes 서비스 (AKS)** | Azure의 관리 되는 Kubernetes 컨테이너 서비스입니다. | [Instructions](deploy-on-aks.md) |
-| **여러 컴퓨터** | 물리적 컴퓨터 또는 가상 컴퓨터를 사용 하 여 배포 된 Kubernetes 클러스터의 **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
+| **Minikube** | VM에서 단일 노드 Kubernetes 클러스터입니다. | [지침](deploy-on-minikube.md) |
+| **Azure Kubernetes 서비스 (AKS)** | Azure의 관리 되는 Kubernetes 컨테이너 서비스입니다. | [지침](deploy-on-aks.md) |
+| **여러 컴퓨터** | 물리적 컴퓨터 또는 가상 컴퓨터를 사용 하 여 배포 된 Kubernetes 클러스터의 **kubeadm** | [지침](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > AKS와 SQL Server 빅 데이터 클러스터를 배포 하는 샘플 python 스크립트를 참조 하세요 [빅 데이터 클러스터 Azure Kubernetes Service (AKS)에서 SQL Server 배포](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks)합니다.
@@ -55,9 +55,9 @@ SQL Server 빅 데이터 클러스터의 Kubernetes 버전을 이상이 필요 v
 
 먼저 SQL Server 2019 빅 데이터 클러스터를 배포 하기 전에 [big data tools 설치](deploy-big-data-tools.md):
 - **mssqlctl**
-- **Kubectl**
+- **kubectl**
 - **Azure Data Studio**
-- **SQL Server 2019 extension**
+- **SQL Server 2019 확장**
 
 ## <a id="deploy"></a> SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -337,8 +337,8 @@ kubectl get svc -n <your-cluster-name>
 
    | 서비스 | Description |
    |---|---|
-   | **마스터-풀 끝점** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
-   | **끝점-컨트롤러** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
+   | **endpoint-master-pool** | 마스터 인스턴스에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP 31433** 하며 **SA** 사용자) |
+   | **endpoint-controller** | 도구 및 클러스터를 관리 하는 클라이언트를 지원 합니다. |
    | **endpoint-service-proxy** | 에 대 한 액세스를 제공 합니다 [클러스터 관리 포털](cluster-admin-portal.md)합니다.<br/>(https://**EXTERNAL-IP**: 30777/포털)|
    | **endpoint-security** | HDFS/Spark gateway에 대 한 액세스를 제공합니다.<br/>(**EXTERNAL-IP** 하며 **루트** 사용자) |
 

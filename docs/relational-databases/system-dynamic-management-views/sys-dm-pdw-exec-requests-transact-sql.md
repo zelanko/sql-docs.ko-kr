@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657748"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583321"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58657748"
 |database_id|**int**|명시적 컨텍스트 (예: 사용 하 여 DB_X) 사용 하는 데이터베이스의 식별자입니다.|ID를 참조 하세요 [sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)합니다.|  
 |command|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 포함 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. 4000 바이트를 초과할 수 있는 쿼리는 잘립니다.|  
 |resource_class|**nvarchar(20)**|이 요청에 대 한 리소스 클래스입니다. 관련 참조 **concurrency_slots_used** 에 [sys.dm_pdw_resource_waits &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  리소스 클래스에 대 한 자세한 내용은 참조 하세요. [리소스 클래스 및 워크 로드 관리](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|중요도 (SQL DW Gen2 미리 보기)|**nvarchar(32)**|요청을 설정 하는 중요도 사용 하 여 제출 되었습니다. 낮은 중요도 사용 하 여 요청 남아 대기 중인 일시 중단 된 상태에서 더 높은 중요도 요청 제출 되 면 있습니다.  높은 중요도 사용 하 여 요청 이전에 전송 된 낮은 중요도 요청 하기 전에 실행 됩니다.  중요도에 대 한 자세한 내용은 참조 하세요. [워크 로드 중요도](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)합니다.  |NULL</br>low</br>below_normal</br>보통 (기본값)</br>above_normal</br>high|
+|중요도 (작업 분류는 SQL Data Warehouse Gen2에서 미리 보기로 제공 됩니다. 워크 로드 관리 분류 및 중요도 미리 보기는 2019 년 4 월 9 일 이상 릴리스 날짜를 사용 하 여 빌드입니다.  사용자 워크 로드 관리 테스트에 대 한 빌드를이 날짜 이전의 사용을 피해 야 합니다.  빌드 워크 로드 관리 가능 인지를 확인 하려면 @ 선택 실행@version SQL Data Warehouse 인스턴스에 연결 된 경우.)|**nvarchar(32)**|요청을 설정 하는 중요도 사용 하 여 제출 되었습니다. 낮은 중요도 사용 하 여 요청 남아 대기 중인 일시 중단 된 상태에서 더 높은 중요도 요청 제출 되 면 있습니다.  높은 중요도 사용 하 여 요청 이전에 전송 된 낮은 중요도 요청 하기 전에 실행 됩니다.  중요도에 대 한 자세한 내용은 참조 하세요. [워크 로드 중요도](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance)합니다.  |NULL</br>low</br>below_normal</br>보통 (기본값)</br>above_normal</br>high|
   
  이 보기에 의해 보존 된 최대 행에 대 한 내용은에서 메타 데이터 섹션을 참조 합니다 [용량 제한](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) 항목입니다.   
   

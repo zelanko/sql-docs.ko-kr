@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046861"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582686"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>빠른 시작: 입력 및 SQL Server에서 R을 사용 하 여 출력 처리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ SELECT * FROM RTestData
     ```
 
     R은 대/소문자 구분, 하므로 입력 및 출력 변수 사례 `@input_data_1_name` 및 `@output_data_1_name` 에서 R 코드에 있는 이름과 일치 해야 `@script`합니다. 
-
-    또한 매개 변수의 순서가 중요 합니다. 선택적 매개 변수 *@input_data_1_name* 및 *@output_data_1_name*을 사용하기 위해 먼저 필수 매개 변수 *@input_data_1* 및 *@output_data_1*을 지정해야 합니다.
 
     하나의 입력 데이터 세트만 매개 변수로 전달할 수 있으며 하나의 데이터 세트만 반환할 수 있습니다. 그러나 R 코드 내에서 다른 데이터 세트를 호출할 수 있으며 데이터 세트 외에 다른 유형의 출력을 반환할 수 있습니다. 또한 모든 매개 변수에 OUTPUT 키워드를 추가하여 결과와 함께 매개 변수를 반환할 수도 있습니다. 
 

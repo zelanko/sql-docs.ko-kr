@@ -10,12 +10,12 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e66748610d648ec8e427315d2a317d26e699d06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3c254b8b6fea8a356e80d1a7c262228725cbf49e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758815"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582266"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>준비 저장 프로시저(Master Data Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 준비 프로세스를 시작할 때는 다음 세 가지 저장 프로시저 중 하나를 사용합니다.  
@@ -56,7 +56,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md)   
- [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
  [준비 프로세스 동안 발생 하는 오류를 보려면 &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)  
   
   

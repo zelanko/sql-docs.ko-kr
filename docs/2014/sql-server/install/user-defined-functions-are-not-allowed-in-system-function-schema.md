@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254278"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583107"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>system_function_schema에서 사용자 정의 함수가 허용되지 않습니다.
   업그레이드 관리자가 문서화 되지 않은 사용자가 소유한 사용자 정의 함수 **system_function_schema**합니다. 이 사용자를 지정해서는 사용자 정의 시스템 함수를 만들 수 없습니다. **system_function_schema** 존재 하지 않는 사용자 이름 및이 이름의 연결 된 사용자 ID (UID = 4)에 예약 되어 합니다 **sys** 스키마 있으며 내부 에서만 사용 하도록 제한 됩니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "54254278"
   
  이러한 변경 사항은 사용자 정의 시스템 함수에 다음과 같은 영향을 줍니다.  
   
--   DDL (데이터 정의 언어) 문이 참조 하는 **system_function_schema** 실패 합니다. 예를 들어, 다음 문 `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ...에 실패 합니다.  
+-   DDL (데이터 정의 언어) 문이 참조 하는 **system_function_schema** 실패 합니다. 예를 들어, 다음 문 `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... 성공 하지 못합니다.  
   
 -   로 업그레이드 한 후 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]를 소유한 기존 개체 **system_function_schema** 에 포함 됩니다는 **sys** 의 스키마를 **마스터** 데이터베이스. 시스템 개체는 수정할 수 없으므로 이러한 함수 되지 변경 하거나 수에서 삭제 합니다 **마스터** 데이터베이스입니다. 또한 이러한 함수는 다른 데이터베이스에서 한 부분으로 된 함수 이름을 지정하여 호출할 수 없습니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54254278"
 -   "리소스 데이터베이스"  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)   
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [시스템 개체를 수정 하는 문을 제거 합니다.](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [시스템 개체를 삭제하는 문을 제거합니다.](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

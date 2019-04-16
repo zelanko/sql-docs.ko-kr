@@ -5,17 +5,17 @@ description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860531"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582917"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -35,9 +35,9 @@ ms.locfileid: "58860531"
 - Azure 구독입니다.
 - [빅 데이터 도구도](deploy-big-data-tools.md):
    - **mssqlctl**
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 extension**
+   - **SQL Server 2019 확장**
    - **Azure CLI**
 
 ## <a name="log-in-to-your-azure-account"></a>Azure 계정에 로그인

@@ -5,17 +5,17 @@ description: 이 자습서에는 Spark 작업을 사용 하 여 Azure Data Studi
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860674"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582756"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집 합니다.
 
@@ -36,9 +36,9 @@ ms.locfileid: "58860674"
 ## <a id="prereqs"></a> 필수 구성 요소
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 extension**
+   - **SQL Server 2019 확장**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>데이터 풀에서 외부 테이블 만들기

@@ -1,9 +1,6 @@
 ---
 title: Reporting Services 업그레이드 및 마이그레이션 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017184"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583076"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  이 항목은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 업그레이드하는 방법은 일반적으로 두 가지가 있습니다.  
+
+이 항목은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 업그레이드하는 방법은 일반적으로 두 가지가 있습니다.  
   
 -   **업그레이드:** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은이 문서 및 관련된 항목 뒷부분에 나오는 '기본 모드에서 sharepoint 모드로 마이그레이션' 섹션을 참조 하세요 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017184"
   
     3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 온라인 설명서와 같은 기타 클라이언트 도구는 업그레이드되지 않습니다. 이러한 도구의 새 버전을 얻으려면 설치 프로그램을 실행할 때 추가해야 합니다. 이전 버전은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전과 함께 존재합니다. 예제를 설치한 경우 이전 버전으로 계속 유지됩니다. 설치 프로그램은 SQL Server 예제에 대한 업그레이드를 지원하지 않습니다.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 별도의 다운로드입니다. 자세한 내용은 [Microsoft SQL Server 2014 Data Tools - Microsoft Visual Studio 2012용 Business Intelligence](https://go.microsoft.com/fwlink/?LinkID=325512)를 참조하십시오.  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 별도의 다운로드입니다. 자세한 내용은 [Microsoft SQL Server 2014 Data Tools - Microsoft Visual Studio 2012용 Business Intelligence](https://www.microsoft.com/download/details.aspx?id=36843)를 참조하십시오.  
   
 6.  설치 프로그램은 서비스 제어 관리자에 있는 서비스 항목을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버 서비스에 다시 사용합니다. 이 서비스 항목에는 보고서 서버 Windows 서비스 계정이 포함됩니다.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "56017184"
   
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
-### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 -> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 -&gt; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **시작 환경:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007  
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010  
@@ -247,7 +247,7 @@ ms.locfileid: "56017184"
   
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
-### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 -> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 -&gt; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **시작 환경:** SQL Server 2005 SP2, SharePoint 2007  
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010  

@@ -5,17 +5,17 @@ description: 이 자습서에는 SQL Server 2019 빅 데이터 클러스터 (미
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 57605d74e81a6c1c37263fc4088cb70fa3431dec
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: c1c2ccf548b5df91420821a1865120c27edd2c02
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860054"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581266"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
 
@@ -35,9 +35,9 @@ ms.locfileid: "58860054"
 ## <a id="prereqs"></a> 필수 구성 요소
 
 - [빅 데이터 도구](deploy-big-data-tools.md)
-   - **Kubectl**
+   - **kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 extension**
+   - **SQL Server 2019 확장**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>HDFS에 외부 테이블 만들기

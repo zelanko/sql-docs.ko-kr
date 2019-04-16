@@ -3,18 +3,18 @@ title: SQL-SQL Server Machine Learning Services에서에서 Java를 호출 하�
 description: 이 Java 프로그래밍 언어 확장에 SQL Server 2019를 사용 하 여 SQL Server 저장 프로시저에서 Java 클래스를 호출 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8913f471b127663f9f1be179d791a4f72a0ed6aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493005"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581578"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 Java를 호출 하는 방법
 
@@ -93,7 +93,7 @@ JDK 실행 파일에 대 한 시스템 변수를 만든 것 처럼 코드 경로
 
 ## <a name="external-library"></a>외부 라이브러리
 
-SQL Server 2019 CTP 2.4이 하에서는 Windows 및 Linux에서 Java 언어에 대 한 외부 라이브러리를 사용할 수 있습니다. 동일한 기능을 예정 된 CTP에는 Linux에서 제공 됩니다. 클래스를 컴파일하여.jar 파일 및.jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에 업로드할 수는 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+SQL Server 2019 CTP 2.4이 하에서는 Windows 및 Linux에서 Java 언어에 대 한 외부 라이브러리를 사용할 수 있습니다. 클래스를 컴파일하여.jar 파일 및.jar 파일 및 기타 종속성을 사용 하 여 데이터베이스에 업로드할 수는 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 외부 라이브러리를 사용 하 여.jar 파일을 업로드 하는 방법의 예:
 

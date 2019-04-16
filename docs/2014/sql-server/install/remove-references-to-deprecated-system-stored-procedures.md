@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183361"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582866"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>더 이상 사용되지 않는 시스템 저장 프로시저에 대한 참조를 제거합니다.
   업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 더 이상 사용할 수 없는 문서화되지 않은 시스템 저장 프로시저 및 확장 저장 프로시저를 참조하는 문을 발견했습니다. 이러한 개체를 참조하는 문은 실패합니다. 문서화되지 않은 시스템 개체나 API는 이후 릴리스에서 알림 표시 없이 변경되거나 제거될 수 있으므로 사용하지 마십시오.  
@@ -104,6 +104,6 @@ ms.locfileid: "48183361"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

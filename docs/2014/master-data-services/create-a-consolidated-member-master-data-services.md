@@ -14,12 +14,12 @@ ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bef17d900fe9a823439a88b8e94eb78810e6627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766945"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582586"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>통합 멤버 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 명시적 계층에 대한 부모 노드가 필요한 경우 통합 멤버를 만듭니다. 통합된 멤버는 고유한 특성을 가질 수 있습니다. 이러한 특성은 그룹화에 사용됩니다. 다음 예제와 같이 계정을 포함하는 계정 그룹에 통합된 멤버를 사용할 수 있습니다.  
@@ -57,10 +57,10 @@ ms.locfileid: "52766945"
   
 -   [계층 내에서 멤버 이동 &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [명시적 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [리프 멤버 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)   
- [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [멤버 로드 또는 업데이트 Master Data Services에서 준비 프로세스를 사용 하 여](add-update-and-delete-data-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [명시적 계층&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   

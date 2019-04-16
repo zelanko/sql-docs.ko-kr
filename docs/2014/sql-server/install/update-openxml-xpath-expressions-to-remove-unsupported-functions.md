@@ -13,12 +13,12 @@ ms.assetid: b459abaf-8787-4b65-9231-ae30e5469fd0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2c4684c9e1f1f32f2d77fe5d8f7611a3645107a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0ed92b5a48fb92f98a73be92e578314a0bdb5d
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160453"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583097"
 ---
 # <a name="update-openxml-xpath-expressions-to-remove-unsupported-functions"></a>OPENXML XPath 식을 업데이트하여 지원되지 않는 함수를 제거합니다.
   업그레이드 관리자가 XPath 기능이 사용되는 것을 감지했습니다. 업그레이드한 후 OPENXML 기능에 대한 XPath 기능의 변경에 따른 영향을 받을 수 있습니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "48160453"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

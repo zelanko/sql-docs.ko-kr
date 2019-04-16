@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070903"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581928"
 ---
 # <a name="using-reports"></a>보고서 사용
   업그레이드 관리자 분석 마법사가 서버에서 분석하는 각 구성 요소에 대해 별도의 보고서가 생성되며, 필요한 경우 각 인스턴스에 대해서도 별도의 보고서가 생성됩니다. 보고서에는 업그레이드에 영향을 주는 알려진 문제에 대한 세부 정보가 제공됩니다. 또한 보고서에는 식별된 문제를 해결하기 위한 정보 및 권장 동작의 링크도 제공됩니다.  
@@ -85,8 +85,8 @@ ms.locfileid: "48070903"
 ## <a name="see-also"></a>관련 항목  
  [방법: 업그레이드 관리자 보고서를 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [방법: 보고서 내보내기](../../../2014/sql-server/install/how-to-export-reports.md)   
- [방법: 보고서를 필터링 합니다.](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [방법: 보고서 필터링](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [업그레이드 문제 해결](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4f7945a5657cefb43af402523a6aee3e12eb63a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 835e5fae4717748664affef9491ea1f7eeaec8b2
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137535"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583066"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 응용 프로그램을 수정합니다.
   sysperfinfo 반환을 `bigint` cntr_value 열의 값입니다.  
@@ -35,6 +35,6 @@ ms.locfileid: "48137535"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

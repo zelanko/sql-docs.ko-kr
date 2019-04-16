@@ -14,12 +14,12 @@ ms.assetid: 2985efc1-4b14-46c3-abbd-a656b159f23c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc80c3729e905d11284437f35af50cd4959e3ba0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051940"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583086"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>업그레이드 프로세스 중에 모든 파일 그룹이 쓰기 가능한지 확인합니다.
   업그레이드 관리자가 하나 이상의 파일 그룹이 있는 데이터베이스를 검색했습니다. 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터베이스의 파일 그룹을 READ_WRITE로 설정해야 합니다.  
@@ -32,6 +32,6 @@ ms.locfileid: "48051940"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

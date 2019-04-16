@@ -13,12 +13,12 @@ ms.assetid: 4f23f7e4-7b4d-4e19-86c9-7527bb8b107d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb9f8956108b07fdc6561c5ef8582e7510240434
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f68a641caf21e6cc1dfdefbcb31ff78a1fd8aa6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226994"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583036"
 ---
 # <a name="remove-colon-following-reserved-keyword"></a>예약 키워드 다음에 나오는 콜론을 제거합니다.
   업그레이드 관리자가 예약 키워드 뒤에서 콜론(:)이 포함된 스크립트를 감지했습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 구문이 무시되고 문이 성공적으로 실행되지만 이제는 데이터베이스 호환성 모드가 100 이상으로 설정된 경우 이 구문 때문에 문이 실패합니다.  
@@ -33,6 +33,6 @@ ms.locfileid: "48226994"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0cf438c6c5ef374e6119f583ffd72a76a99d3110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105793"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583126"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>큰 백업 또는 복원 기록 테이블이 있으면 업그레이드가 응답하지 않는 것으로 나타납니다.
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 경우 일부 백업 및 복원 기록 테이블에 새 열이 추가되었습니다. 이러한 테이블을 업그레이드하려면 새 열을 추가하도록 이러한 테이블을 변경해야 합니다. 이러한 테이블 중 하나 이상에 많은 수의 행이 포함되어 있으면 해당 테이블에 열을 추가하는 ALTER TABLE 문에서 업그레이드가 오랫동안 지체됩니다.  
@@ -54,6 +54,6 @@ ms.locfileid: "48105793"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

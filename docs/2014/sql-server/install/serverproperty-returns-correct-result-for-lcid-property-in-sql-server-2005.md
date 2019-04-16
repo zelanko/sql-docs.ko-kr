@@ -13,12 +13,12 @@ ms.assetid: 833a2fc9-b480-4697-aa7b-9677e78ee0b4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05202e19e95e719c8518f785be7ee1a1fbd8fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b85b15ec20579cb748cf3e09c0cded8b9e43fd9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163103"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582219"
 ---
 # <a name="serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005"></a>SQL Server 2005에서 SERVERPROPERTY는 LCID 속성에 대해 올바른 결과를 반환합니다.
   SERVERPROPERTY('LCID')가 이진 데이터 정렬 서버에서 실행될 경우 이 함수는 서버의 데이터 정렬에 해당하는 Windows LCID(로캘 ID)를 반환합니다.  
@@ -31,6 +31,6 @@ ms.locfileid: "48163103"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

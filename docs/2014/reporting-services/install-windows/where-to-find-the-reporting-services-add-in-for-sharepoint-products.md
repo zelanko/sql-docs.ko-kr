@@ -1,27 +1,27 @@
 ---
 title: SharePoint 제품용 Reporting Services 추가 기능 검색 위치 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041034"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582536"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 제품용 Reporting Services 추가 기능 검색 위치
-  SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rsSharePoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
+
+SharePoint 제품 및 기술용 SSRS( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ) 추가 기능(rsSharePoint.msi)은 SharePoint 배포와 보고서 서버를 통합하는 기능을 제공하는 웹 다운로드입니다.  
   
 > [!IMPORTANT]  
 >  지원 되는 조합의 목록은 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 참조 추가 기능, 보고서 서버 및 SharePoint에 대 한 자세한 내용은 참조 [지원 되는 SharePoint 및 Reporting Services 서버 및 추가 &#40;SQL Server 2014&#41; ](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041034"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services 추가 기능에 SharePoint 2007 제품 및 기술  
  Microsoft SharePoint 기술용 Microsoft SQL Server 2008 Reporting Services 추가 기능은 Windows SharePoint Services 3.0 또는 Microsoft Office SharePoint Server 2007 배포 내에서 보고서 서버를 실행하기 위한 기능을 제공합니다.  
   
- 이 파일의 최신 버전은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft SharePoint 기술용 Microsoft SQL Server 2008 Reporting Services 추가 기능](https://go.microsoft.com/fwlink/?LinkID=204813)에서 온라인으로 제공됩니다.  
+ 이 파일의 최신 버전은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 다운로드 센터의 [Microsoft SharePoint 기술용 Microsoft SQL Server 2008 Reporting Services 추가 기능](https://www.microsoft.com/download/details.aspx?id=622)에서 온라인으로 제공됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [설치 또는 제거는 Reporting Services 추가-SharePoint 용 &#40;SharePoint 2010 및 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

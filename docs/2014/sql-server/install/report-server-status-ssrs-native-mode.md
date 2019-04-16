@@ -13,19 +13,19 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374115"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582736"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>보고서 서버 상태(SSRS 기본 모드)
   이 페이지를 사용하여 현재 연결된 보고서 서버 인스턴스에 대한 정보를 볼 수 있습니다. 이 페이지는 보고서 서버 구성의 시작 페이지입니다. 추가 페이지에서는 URL, 서비스 계정, 보고서 서버 데이터베이스, 보고서 서버 전자 메일 배달, 스케일 아웃 배포 및 암호화 키를 구성할 수 있습니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
- 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자 &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)합니다.  
+ 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자 &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)합니다.  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자 (RSConfigTool.exe)는 "highestAvailable"의 권한 수준으로 설치 됩니다. 이 동작은 의도된 것입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API와의 통신이 필요합니다. 일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 통신에는 더 높은 수준 또는 관리자 권한이 필요합니다.  

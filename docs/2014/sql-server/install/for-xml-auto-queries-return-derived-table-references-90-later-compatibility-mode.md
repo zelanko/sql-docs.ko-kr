@@ -13,12 +13,12 @@ ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 068346ed0adb5c74d5e892d25c2cc7b93fc57871
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84e00a2111b9cfe38ca680ec6c17ada724456878
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096763"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583196"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO 쿼리는 호환성 모드 90 이상에서 파생 테이블 참조를 반환합니다.
   데이터베이스 호환성 수준이 90 이상으로 설정되어 있으면 AUTO 모드에서 실행되는 FOR XML 쿼리는 파생 테이블 별칭에 대한 참조를 반환합니다. 호환성 수준이 80으로 설정되어 있으면 FOR XML AUTO 쿼리는 파생 테이블을 정의하는 기본 테이블에 대한 참조를 반환합니다.  
@@ -62,6 +62,6 @@ FOR XML AUTO;
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

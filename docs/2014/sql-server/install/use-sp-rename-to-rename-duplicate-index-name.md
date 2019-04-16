@@ -17,12 +17,12 @@ ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 641dbb6e33f7b39a7542fdd43a940c487a4b21d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc6b4ec763457996309caf1884829638367e9b18
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093043"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582856"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>sp_rename을 사용하여 중복 인덱스 이름을 바꿉니다.
   업그레이드 관리자가 중복된 테이블 또는 뷰 인덱스 이름을 검색했습니다. 업그레이드하기 전에 인덱스 이름을 바꾸어 중복을 제거하십시오.  
@@ -63,6 +63,6 @@ ms.locfileid: "48093043"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

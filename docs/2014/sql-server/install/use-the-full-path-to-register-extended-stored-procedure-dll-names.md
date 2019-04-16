@@ -16,12 +16,12 @@ ms.assetid: f648d57c-af32-4c71-9882-47b6766f3c2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5c171389f5d2df4ae4b6ba34abe56a9b07431dbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ecdf37d4c7c97e8c474f5e7f08e3e6fef040723
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185273"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582646"
 ---
 # <a name="use-the-full-path-to-register-extended-stored-procedure-dll-names"></a>전체 경로를 사용하여 확장 저장 프로시저 DLL 이름을 등록합니다.
   DLL 이름에 대한 전체 경로 없이 이전에 등록된 확장 저장 프로시저는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 작동하지 않을 수 있습니다.  
@@ -41,6 +41,6 @@ ms.locfileid: "48185273"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

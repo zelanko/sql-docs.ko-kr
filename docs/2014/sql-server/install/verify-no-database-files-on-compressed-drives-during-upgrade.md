@@ -13,12 +13,12 @@ ms.assetid: 63be6853-c54a-42b2-ae1a-db2175f1d28e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7201c478ff5b2d46b66a179beed9172a4758c9ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd8a5524c5aede5538d77709f7b0ae7303d8191c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051803"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582996"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>업그레이드 프로세스 중에 데이터베이스 파일이 압축된 드라이브에 없는지 확인합니다.
   업그레이드 관리자가 압축된 드라이브에서 데이터베이스 파일을 검색했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 압축된 드라이브에서 데이터베이스를 만들거나 업그레이드할 수 없습니다.  
@@ -31,6 +31,6 @@ ms.locfileid: "48051803"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

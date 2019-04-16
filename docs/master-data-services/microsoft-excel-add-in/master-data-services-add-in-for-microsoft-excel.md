@@ -11,12 +11,12 @@ ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: e3892d17d25980efe16acea58a0e8a93c28325c4
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617603"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581617"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
 
@@ -31,6 +31,7 @@ ms.locfileid: "52617603"
 ## <a name="downloads"></a>다운로드 
 >*  SQL Server 2016 SP2를 위한 Excel용 Master Data Services 추가 기능은 [이 Microsoft 다운로드 센터 페이지](https://www.microsoft.com/download/details.aspx?id=56838)에서 다운로드할 수 있습니다. 
 >* [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836867)에서 SQL Server 2017용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 다운로드합니다.
+>*  SQL Server 2019 CTP에 대 한 Excel 용 Master Data Services 추가 기능에서는 다운로드 [Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=2086948)합니다. 
  
   
 ## <a name="terms"></a>용어  
@@ -73,7 +74,7 @@ ms.locfileid: "52617603"
   
 -   [데이터 새로 고침&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [개요: Excel에서 데이터 가져오기 &#40;MDS 추가 기능에 Excel 용&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

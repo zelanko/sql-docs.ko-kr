@@ -31,12 +31,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125313"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582246"
 ---
 # <a name="resolving-upgrade-issues"></a>업그레이드 문제 해결
   이 섹션의 항목에서는 검색 가능 여부에 관계없이 업그레이드 또는 업그레이드 이후 환경에 영향을 줄 수 있는 업그레이드 문제에 대해 설명합니다. 문제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소별로 구성됩니다.  
@@ -70,6 +70,6 @@ ms.locfileid: "48125313"
 -   [sp_rename을 사용하여 중복 인덱스 이름을 바꿉니다.](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

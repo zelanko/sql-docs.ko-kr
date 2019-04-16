@@ -6,16 +6,16 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: f47bc6b143a7afccc4dd175c23a17849ab071e7f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860464"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581598"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.
 
@@ -27,9 +27,9 @@ ms.locfileid: "58860464"
 
 - [빅 데이터 도구도](deploy-big-data-tools.md):
   - **mssqlctl**
-  - **Kubectl**
+  - **kubectl**
   - **Azure Data Studio**
-  - **SQL Server 2019 extension**
+  - **SQL Server 2019 확장**
   - **Azure CLI**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]

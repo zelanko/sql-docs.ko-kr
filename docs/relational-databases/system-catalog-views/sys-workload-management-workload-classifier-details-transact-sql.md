@@ -12,16 +12,19 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: ed7694f087a8e1b10697ed2083dbae8bf879528c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9afd00a887244c02849d40eed635500b06533709
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513310"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582726"
 ---
 # <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql-preview"></a>sys.workload_management_workload_classifier_details (TRANSACT-SQL) (미리 보기)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+
+> [!Note]
+> 작업 분류 SQL Data Warehouse Gen2에서 미리 보기로 제공 됩니다. 워크 로드 관리 분류 및 중요도 미리 보기는 2019 년 4 월 9 일 이상 릴리스 날짜를 사용 하 여 빌드입니다.  사용자 워크 로드 관리 테스트에 대 한 빌드를이 날짜 이전의 사용을 피해 야 합니다.  빌드 워크 로드 관리 가능 인지를 확인 하려면 @ 선택 실행@version SQL Data Warehouse 인스턴스에 연결 된 경우.
 
   각 분류자에 대 한 세부 정보를 반환 합니다.  
   
