@@ -19,10 +19,10 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242281"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "59242281"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본에 대한 플랫폼 고려 사항은 보고서 제작 클라이언트와 보고서 서버에 대해 각각 다릅니다.  
   
 ### <a name="on-the-report-authoring-client"></a>보고서 제작 클라이언트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../는 32비트 애플리케이션입니다. is not supported on an Itanium-based platform. On 는 Itanium 기반 플랫폼에서 지원되지 않습니다.nx64 플랫폼에서 보고서 디자이너를 통해 보고서를 편집 및 미리 보려면 x86 플랫폼 디렉터리에 32비트 데이터 공급자가 설치되어 있어야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 는 32비트 애플리케이션입니다. [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 는 Itanium 기반 플랫폼에서 지원되지 않습니다. x64 플랫폼에서 보고서 디자이너를 통해 보고서를 편집 및 미리 보려면 x86 플랫폼 디렉터리에 32비트 데이터 공급자가 설치되어 있어야 합니다.  
   
 ### <a name="on-the-report-server"></a>보고서 서버  
  64비트 보고서 서버에 보고서를 배포하는 경우 보고서 서버에 기본적으로 컴파일된 64비트 데이터 공급자가 설치되어 있어야 합니다. 64비트 인터페이스에 32비트 데이터 공급자를 래핑하는 기능은 지원되지 않습니다. 자세한 내용은 데이터 공급자에 대한 설명서를 참조하십시오.  
@@ -150,7 +150,7 @@ ms.locfileid: "59242281"
   
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]에서 이 데이터 확장 프로그램과 연결된 그래픽 쿼리 디자이너는 **Microsoft SQL Server**데이터 원본 유형과 함께 사용하는 Visual Database Tool 디자이너가 아닌 관계형 쿼리 디자이너입니다.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]는 **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** 와 **Microsoft SQL Server** 데이터 원본 유형을 자동으로 구별하여 해당 데이터 원본 유형과 연결된 그래픽 쿼리 디자이너를 엽니다.  
   
  그래픽 모드에서 이 쿼리 디자이너를 사용하면 쿼리가 분석되고 다시 작성될 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하여 쿼리를 작성할 수도 있습니다. 쿼리에 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 정확히 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다.   
   
@@ -297,7 +297,7 @@ Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> SAP BW 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서의 SAP BW 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서의 SAP BW 데이터 원본에서 데이터를 사용할 수 있도록 하는 데이터 처리 확장 프로그램을 포함합니다.
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
