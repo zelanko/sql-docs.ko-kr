@@ -81,7 +81,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>암호화 사용에 hostNameInCertificate 설정 필요
 
-7.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
+7.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **encrypt=true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
 
 예를 들어 다음과 같이 사용할 수 있습니다.
 
