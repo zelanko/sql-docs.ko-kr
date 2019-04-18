@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On 가용성 그룹 배포 패턴 | Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044936"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671179"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
 
@@ -62,7 +62,7 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 | |read-scale|고가용성 & </br> 데이터 보호 | 데이터 보호|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|주 중단 | 수동 장애 조치(failover). 데이터 손실이 있을 수 있습니다. 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 |
+|주 중단 |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 새 주 복제본은 R / W. |자동 장애 조치(failover). 이전의 주 데이터베이스를 복구 하 고 보조로 가용성 그룹에 조인 될 때까지 새 기본 사용자 트랜잭션에 대 한 사용할 수 없는 경우 |
 |1개 보조 복제본 중단  | 기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. |기본 R은 / W. 기본 경우 자동 장애 조치가 실패 합니다. | 기본은 사용자 트랜잭션에 대 한 제공 되지 않습니다. |
 
 <sup>\*</sup> 기본
@@ -71,7 +71,7 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 
 ## <a name="two-synchronous-replicas"></a>두 개의 동기 복제본
 
-이 구성에서는 데이터 보호를 수 있습니다. 다른 가용성 그룹 구성을 같은 읽기-배율 가능 합니다. 두 개의 동기 복제본 구성을 자동 고가용성을 제공 하지 않습니다. 
+이 구성에서는 데이터 보호를 수 있습니다. 다른 가용성 그룹 구성을 같은 읽기-배율 가능 합니다. 두 개의 동기 복제본 구성을 자동 고가용성을 제공 하지 않습니다. 두 개 복제본 구성을 SQL Server 2017 RTM에 적용 됩니다 및 이상을 사용 하 여 지원 되지 않는 (CU1 이상) SQL Server 2017의 버전...
 
 ![두 개의 동기 복제본][1]
 
@@ -84,9 +84,6 @@ SQL Server 2017 소개를 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러�
 |1개 보조 복제본 중단  |기본은 읽기/쓰기, 데이터 손실 위험에 노출 실행 합니다. |보조 복제본이 복구 될 때까지 기본 사용자 트랜잭션에 대 한 제공 되지 않습니다.|
 
 <sup>\*</sup> 기본
-
-> [!NOTE]
-> 앞의 시나리오에는 SQL Server 2017 CU 1 하기 전에 동작입니다. 
 
 <a name = "configOnly"></a>
 

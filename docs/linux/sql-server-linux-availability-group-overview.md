@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206622"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671289"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On 가용성 그룹이 linux
 
@@ -49,7 +49,7 @@ Pacemaker를 사용 하는 경우 올바르게 구성 해야를 실행 상태로
 
 클러스터 형식에 저장 됩니다는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 동적 관리 뷰 (DMV) `sys.availability_groups`, 열의 `cluster_type` 및 `cluster_type_desc`합니다.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>필요한\_동기화\_보조\_하려면\_커밋
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 접하는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Ag 호출에서 사용 되는 설정은 `required_synchronized_secondaries_to_commit`합니다. 이렇게 하면 AG를 주 데이터베이스와 연장선 상에 해야 하는 보조 복제본의 수입니다. 자동 장애 조치 (경우에 클러스터 유형이 외부인 Pacemaker와 통합 됨) 등이 있으며 온라인 또는 오프 라인 적절 한 수의 보조 복제본 인 경우 주 가용성 등의 동작을 제어 합니다. 이 방식에 대해 자세히 알아보려면 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 합니다 `required_synchronized_secondaries_to_commit` 값이 기본적으로 설정 되 고 Pacemaker에서 유지 관리 / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 수동으로이 값을 재정의할 수 있습니다.
 
@@ -57,7 +57,7 @@ Pacemaker를 사용 하는 경우 올바르게 구성 해야를 실행 상태로
 
 세 가지 값을 설정할 수 있는 `required_synchronized_secondaries_to_commit`: 0, 1 또는 2를 선택 합니다. 이러한 복제본을 사용할 수 없게 하는 경우의 동작을 제어 합니다. 숫자는 주 데이터베이스와 동기화 해야 하는 보조 복제본의 수에 해당 합니다. Linux는 동작은 다음과 같습니다.
 
--   0-자동 장애 조치가 불가능 보조 복제본이 없는 동기화 할 필요 하기 때문입니다. 주 데이터베이스를 항상 사용할 수 있습니다.
+-   0-보조 복제본 필요가 없습니다 주를 사용 하 여 동기화 된 상태 여야 합니다. 그러나 보조 복제본이 동기화 되지 않은 경우 자동 장애 조치가 됩니다. 
 -   1-하나 이상의 보조 복제본 주를 사용 하 여 동기화 된 상태에 있어야 합니다. 자동 장애 조치가 불가능 합니다. 보조 동기 복제본을 찾을 때까지 주 데이터베이스를 사용할 수 없는 경우
 -   2-3 개 이상의 노드 AG 구성의 보조 복제본을 주와 동기화 되어야 합니다. 자동 장애 조치가 불가능 합니다.
 
@@ -95,7 +95,7 @@ sudo crm resource param ms-<AGResourceName> set required_synchronized_secondarie
 
 새로운 기능 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] CU1부터 구성 전용 복제본입니다. Pacemaker는 WSFC 다르기 때문에 쿼럼 및 STONITH를 요구 하는 경우에 특히 방금 2-노드 구성이 작동 하지 않습니다 AG에 있어. Fci의 경우 Pacemaker에서 제공 하는 쿼럼 메커니즘 모든 FCI 장애 조치 중재 클러스터 계층에서 이루어지기 때문에 좋지만 수 있습니다. Linux에서 중재 진행을 AG에 대해 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]모든 메타 데이터 저장, 합니다. 구성 전용 복제본을 고려해 야 하는 위치입니다.
 
-다른 항목 없이 세 번째 노드와 동기화 된 복제본이 하나 이상 필요한 것입니다. 이 대 한 작동 하지 않습니다 [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]가 AG에 참여 하는 두 개의 복제본만 가질 수 있습니다. 구성 전용 복제본 AG 구성의 다른 복제본과 같은 master 데이터베이스에서 된 AG 구성을 저장합니다. 구성 전용 복제본을 AG에 참여 하는 사용자 데이터베이스에 없습니다. 주 데이터베이스에서 구성 데이터를 동기적으로 보내집니다. 이 구성 데이터가 든 상관 없이 자동 또는 수동 장애 조치 하는 동안 사용 됩니다.
+다른 항목 없이 세 번째 노드와 동기화 된 복제본이 하나 이상 필요한 것입니다. 구성 전용 복제본 AG 구성의 다른 복제본과 같은 master 데이터베이스에서 된 AG 구성을 저장합니다. 구성 전용 복제본을 AG에 참여 하는 사용자 데이터베이스에 없습니다. 주 데이터베이스에서 구성 데이터를 동기적으로 보내집니다. 이 구성 데이터가 든 상관 없이 자동 또는 수동 장애 조치 하는 동안 사용 됩니다.
 
 쿼럼을 유지 하 고 클러스터 유형이 외부인을 사용 하 여 자동 장애 조치를 사용 하도록 설정 하는 AG에 대 한 것 중 하나 수행 해야 합니다.
 

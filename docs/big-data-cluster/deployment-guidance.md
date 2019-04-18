@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582416"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671379"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에서 SQL Server 빅 데이터 클러스터를 배포 하는 방법
 
@@ -120,6 +120,29 @@ kubectl config view
 >1. 모든 특수 문자를 포함 하는 경우 큰따옴표로 암호를 배치 해야 합니다. 원하는 MSSQL_SA_PASSWORD를 설정할 수 있습니다 하지만 해야 충분히 복잡 하지 사용 하는 `!`, `&` 또는 `'` 문자입니다. 큰따옴표로 구분 기호에만 작동 하는 bash 명령입니다.
 >1. 클러스터의 이름에는 소문자 영숫자 문자만 공백 없이 이어야 합니다. 클러스터와 동일한 이름 가진 네임 스페이스의 클러스터에 대 한 모든 Kubernetes 아티팩트 (컨테이너, pod, 상태 집합, 서비스)를 만들 수는 지정 된 이름입니다.
 >1. 합니다 **SA** 계정은 설치 중에 생성 되는 SQL Server Master 인스턴스의 시스템 관리자입니다. 실행 하 여 검색할 수는 SQL Server 컨테이너를 지정한 MSSQL_SA_PASSWORD 환경 변수 만들기 후 컨테이너에서 $MSSQL_SA_PASSWORD 에코 합니다. 보안상의 이유로 설명 된 모범 사례에 따라 SA 암호를 변경 [여기](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password)합니다.
+
+YARN 구성 옵션의 다음 섹션에서는 세부 정보입니다. 참고: 이들은 전문가 수준 구성입니다. 사용자는 이러한 값 중 하나를 지정할 필요가 없습니다 및 경우에 기본값을 적용 합니다. Yarn은 리소스 관리자 Spark입니다. 저장소 pod에서 실행 되는 Spark 및 CLUSTER_STORAGE_POOL_REPLICAS를 통해 제어할 수 있습니다.
+
+| Yarn 환경 변수 | 필수 | 기본값 | Description |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | 아니요 | 2048  | HDFS 이름 및 데이터 노드 프로세스에 대 한 힙 크기 |
+| **YARN_HEAPSIZE**   | 아니요 | 2048  | Yarn RM 및 NM 프로세스에 대해 힙 크기 |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | 아니요 | 18432  | 최대 총 메모리 Yarn k 8 컨테이너 당 사용할 수 있습니다  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | 아니요 | 6  | 최대 가상 코어 Yarn 노드에서 사용할 수 있습니다.  |
+| **YARN_SCHEDULER_MAX_MEMORY** | 아니요 | 18432  | 최대 메모리를 Yarn 컨테이너 노드에 사용할 수 있습니다.  |
+| **YARN_SCHEDULER_MAX_VCORES** | 아니요 | 6  | 최대 메모리는 Yarn 컨테이너는 노드의에서 사용할 수 있습니다.  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | 아니요 | 0.3  | 응용 프로그램 마스터를 사용할 수 있는 총 메모리의 비율   |
+
+이 섹션에서는 옵션 Spark 구성에 대해 자세히 설명합니다. 참고: 이들은 전문가 수준 구성입니다. 사용자는 이러한 값 중 하나를 지정할 필요가 없습니다 및 경우에 기본값을 적용 합니다. 런타임 시 사용자는을 통해 응용 프로그램 별로 구성할 수 % %에서 spark 노트북을 구성 합니다.
+
+| Spark 환경 변수 | 필수 | 기본값 | Description |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | 아니요 | 2048  | Spark 드라이버를 사용 하는 메모리  |
+| **SPARK_DRIVER_CORES** | 아니요 | 1  | Spark 드라이버에서 사용 된 코어 수  |
+| **SPARK_EXECUTOR_INSTANCES** | 아니요 | 3  | Spark 드라이버를 사용 하는 메모리  |
+| **SPARK_EXECUTOR_MEMORY** | 아니요 | 1536  | Spark 실행 기를 사용 하는 메모리 |
+| **SPARK_EXECUTOR_CORES** | 아니요 | 1  | Spark 실행 기에서 사용 된 코어 수  |
+
 
 Windows 또는 Linux 클라이언트를 사용 하는 여부에 따라 다른 빅 데이터 클러스터를 배포 하는 데 필요한 환경 변수를 설정 합니다.  사용 중인 운영 체제에 따라 아래 단계를 선택 합니다.
 

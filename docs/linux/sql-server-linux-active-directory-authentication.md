@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240781"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671299"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 합니다.
 
@@ -42,9 +42,9 @@ ms.locfileid: "59240781"
 AD 인증을 구성 하기 전에 해야 합니다.
 
 * 네트워크에서 AD 도메인 컨트롤러 (Windows)를 설정  
-* Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-  * [RHEL(Red Hat Enterprise Linux)](quickstart-install-connect-red-hat.md)
-  * [SLES(SUSE Linux Enterprise Server)](quickstart-install-connect-suse.md)
+* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치
+  * [Red Hat Enterprise Linux(RHEL)](quickstart-install-connect-red-hat.md)
+  * [SUSE Linux Enterprise Server(SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> 조인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 도메인 컨트롤러 LDAPS를 지 원하는 경우 LDAPS를 통해 되도록 도메인 컨트롤러에 SQL Server에서 모든 연결을 강제할 수 있습니다. 클라이언트 ldaps의 경우 다음 bash 명령을 실행을 통해 도메인 컨트롤러에 연결할 수를 확인 하려면 `ldapsearch -H ldaps://contoso.com:3269`합니다. SQL Server만 LDAPS를 사용 하도록 설정 하려면 다음을 실행 합니다.
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-이 사용 하 여 LDAPS SSSD AD 도메인에 가입 하는 경우 호스트는 SSSD 패키지가 통해 수행 됨 및 **disablesssd** 설정 되어 있지 않으면 true로 합니다. 하는 경우 **disablesssd** 로 설정 되어 함께 true **forceldaps** 을 true로 설정 되 고 SQL Server가 수행한 openldap 라이브러리 호출을 통해 LDAPS 프로토콜을 사용 합니다.
+이 사용 하 여 LDAPS SSSD AD 도메인에 가입 하는 경우 호스트는 SSSD 패키지가 통해 수행 됨 및 **disablesssd** 설정 되어 있지 않으면 true로 합니다. 하는 경우 **disablesssd** 로 설정 되어 함께 true **forcesecureldap** 을 true로 설정 되 고 SQL Server가 수행한 openldap 라이브러리 호출을 통해 LDAPS 프로토콜을 사용 합니다.
 
 ### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
 

@@ -3,19 +3,19 @@ title: SQL을 R 데이터 형식 변환-SQL Server Machine Learning 서비스
 description: 데이터 과학 및 기계 학습 솔루션에서 R 및 SQL Server 간에 명시적 및 암시적 데이터 형식 converstions를 검토 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511540"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671119"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>데이터 형식 매핑 betweenR 및 SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R 및 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server Machine Learning Services에서 R 통합 기능에서 실행 되는 R 솔루션의 경우 지원 되지 않는 데이터 형식 및 R 라이브러리 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 데이터 형식 변환의 목록을 검토 합니다.

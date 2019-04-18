@@ -21,12 +21,12 @@ ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b69bfb4da1bf20a8d74f5adcda44e55954bbdf65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409640"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671349"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52409640"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|수신기의 내부 id입니다. Null을 허용하지 않습니다.<br /><br /> 기본 키입니다.|  
-|**ip_address**|**nvarchar48**|온라인 상태이고 현재 수신 중인 수신기 IP 주소입니다. IPv4 및 IPv6가 허용됩니다. 수신기에서 두 주소 유형을 모두 처리하는 경우 별도로 나열됩니다. IPv4 와일드 카드 이며 "0.0.0.0"으로 표시 됩니다. 으로 표시 되는 IPv6 와일드 카드 ":".<br /><br /> Null을 허용하지 않습니다.|  
+|**ip_address**|**nvarchar(48)**|온라인 상태이고 현재 수신 중인 수신기 IP 주소입니다. IPv4 및 IPv6가 허용됩니다. 수신기에서 두 주소 유형을 모두 처리하는 경우 별도로 나열됩니다. IPv4 와일드 카드 이며 "0.0.0.0"으로 표시 됩니다. 으로 표시 되는 IPv6 와일드 카드 ":".<br /><br /> Null을 허용하지 않습니다.|  
 |**is_ipv4**|**bit**|IP 주소 유형<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**int**|수신기가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**type**|**tinyint**|수신기 유형이며 다음 중 하나입니다.<br /><br /> 0 = [!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 데이터베이스 미러링<br /><br /> Null을 허용하지 않습니다.|  
