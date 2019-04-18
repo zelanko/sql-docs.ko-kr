@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375365"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671369"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
   이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "53375365"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>예제 사용자 지정 해결 프로그램 보기  
   
-1.  예제는 SQL Server 2000 예제 파일에서 제공됩니다. **SQL Server 2000 서비스 팩 3의 업데이트된 예제**[에서 sql2000samples.cab](https://www.microsoft.com/download/details.aspx?id=8560)을 다운로드하세요. 그러면 크기가 6.9MB에 이르는 8개 파일이 다운로드됩니다.  
+1.  예제는 SQL Server 2000 예제 파일에서 제공됩니다. 다운로드 합니다 [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip)합니다. 즉에 3 개의 파일이 다운로드 됩니다.  
   
 2.  다운로드한 압축 .cab 파일에서 파일의 압축을 풉니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53375365"
   
 6.   **subspres** 폴더에서 모든 원본 파일에 발생한 **#include sqlres.h** 를 찾고 **#import "replrec.dll" no_namespace, raw_interfaces_only**로 바꿉니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)  
