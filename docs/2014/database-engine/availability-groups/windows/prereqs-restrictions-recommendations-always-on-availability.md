@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242233"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>온라인 설명서의 AlwaysOn 가용성 그룹(SQL Server)에 대한 필수 구성 요소, 제한 사항 및 권장 사항
@@ -51,7 +51,7 @@ ms.locfileid: "59242233"
 |------|-----------------|----------|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|시스템이 도메인 컨트롤러가 아닌지 확인하세요.|가용성 그룹은 도메인 컨트롤러에서 지원되지 않습니다.|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 컴퓨터에서 x86(비 WOW64) 또는 x64 Windows Server 2008 이상 버전이 실행되고 있어야 합니다.|WOW64(Windows 32-bit on Windows 64-bit)에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 지원하지 않습니다.|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 컴퓨터가 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 노드여야 합니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(Failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 컴퓨터가 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 노드여야 합니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|WSFC 클러스터에 가용성 그룹 구성을 지원하기에 충분한 노드가 포함되어 있어야 합니다.|WSFC 노드는 특정 가용성 그룹에 대한 하나의 가용성 복제본만 호스팅할 수 있습니다. 특정 WSFC 노드에서는 하나 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 여러 가용성 그룹의 가용성 복제본을 호스팅할 수 있습니다.<br /><br /> 계획된 가용성 그룹의 가용성 복제본을 지원하는 데 필요한 WSFC 노드 수를 해당 데이터베이스 관리자에게 문의하세요.<br /><br /> [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|적용 가능한 모든 Windows 핫픽스가 WSFC 클러스터의 모든 노드에 설치되어 있는지 확인합니다.|**\*\* 중요 \* \***  핫픽스 수가 필요 하거나 WSFC의 노드가 클러스터에 대 한 권장 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 를 배포 하는 합니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 [AlwaysOn 가용성 그룹을 지원하는 Windows 핫픽스(Windows 시스템)](#WinHotfixes)을 참조하십시오.|  
   
@@ -64,13 +64,13 @@ ms.locfileid: "59242233"
 ||Windows 2008 SP2에 적용|Windows 2008 R2 SP1에 적용|Windows 2012에 포함됨|지원...|핫픽스|링크|  
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**최적의 WSFC 쿼럼 구성**|각 WSFC 노드에 기술 자료 문서 2494036에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스는 자동이 아닌 장애 조치(Failover) 대상에 대한 최적의 쿼럼 구성을 지원합니다. 이 기능을 사용하면 투표할 노드를 선택할 수 있으므로 다중 사이트 클러스터가 향상됩니다.|KB 2494036:  [핫픽스는 Windows Server 2008에서 및 Windows Server 2008 R2에서 쿼럼 투표가 없는 클러스터 노드를 구성 하는 데 사용할 수 있습니다.](https://support.microsoft.com/kb/2494036)<br /><br /> 쿼럼 투표에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**보다 효율적인 네트워크 대역폭 사용**|각 WSFC 노드에 기술 자료 문서 2616514에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스가 없으면 클러스터 서비스가 클러스터 노드 간에 불필요한 레지스트리 알림을 보냅니다. 이 동작은 네트워크 대역폭을 제한하며 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]에 심각한 문제가 됩니다.|KB 2616514:  [클러스터 서비스가 Windows Server 2008 또는 Windows Server 2008 R2에서 클러스터 노드 간에 불필요 한 레지스트리 키 변경 알림을 보낸다합니다](https://support.microsoft.com/kb/2616514)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||사용자 계정 컨트롤|해당 사항 없음|**일부 WSFC 노드에서 사용할 수 없는 디스크에 대한 VPD 스토리지 테스트**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행 중일 때 WSFC 클러스터의 모든 노드에 사용할 수 없는 온라인 상태의 디스크에서 이 서비스 팩을 잘못 실행한 후 SCSI 장치 VPD(Vital Product Data) 유효성 검사 스토리지 테스트가 실패할 경우 기술 자료 문서 2531907에 설명되어 있는 핫픽스를 설치해야 합니다.<br /><br /> 이 핫픽스를 사용하면 디스크가 온라인 상태일 때 유효성 검사 보고서에 잘못된 경고나 오류가 나타나지 않습니다.|KB 2531907:  [SCSI 장치 VPD Vital Product Data () Windows Server 2008 R2 SP1을 설치한 후 테스트가 실패를 확인 합니다.](https://support.microsoft.com/kb/2531907)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||사용자 계정 컨트롤|사용자 계정 컨트롤|**로컬 복제본으로의 장애 조치(Failover) 성능 향상**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행하는 경우 기술 자료 문서 KB 2687741에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스를 사용하면 로컬 복제본으로의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(Failover) 성능이 향상됩니다.|KB 2687741:  [SQL Server 2012에서 "AlwaysOn 가용성 그룹" 기능의 성능을 향상 시키는 핫픽스는 Windows Server 2008 R2에 사용할 수 있는](https://support.microsoft.com/KB/2687741)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**비대칭 저장소-장애 조치 클러스터 인스턴스 (Fci)**|FCI(장애 조치(Failover) 클러스터 인스턴스)가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 설정되어 있는 경우 Windows Server 2008 핫픽스 976097을 설치합니다.<br /><br /> 이 핫픽스는 WSFC 노드 중 일부에 대해서만 사용할 수 있는 비대칭 저장소 공유 디스크를 지원 하기 위해 장애 조치 클러스터 관리 Microsoft Management Console (MMC) 스냅인 사용 하도록 설정 합니다.|KB 976097:  [Windows Server 2008 또는 Windows Server 2008 R2를 실행 하는 장애 조치 클러스터에 대 한 장애 조치 클러스터 관리 MMC 스냅인에 비대칭 저장소에 대 한 지원을 추가 하는 핫픽스](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 아키텍처 가이드: 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축 ](https://technet.microsoft.com/library/jj215886.aspx)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|사용자 계정 컨트롤|해당 사항 없음|**IPsec(인터넷 프로토콜 보안)**|IPsec 연결을 사용하는 환경에서는 클라이언트 컴퓨터에서 가상 네트워크 이름(이 컨텍스트의 경우 가용성 그룹 수신기)에 대한 IPSec 연결을 다시 설정할 때 시간이 많이 지연(약 2-3분)될 수 있습니다. IPsec 연결을 사용하는 경우 기술 자료 문서(KB 980915)에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 980915:  [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행 하는 컴퓨터에서 IPSec 연결을 다시 연결할 때 긴 시간 지연 발생](https://support.microsoft.com/kb/980915)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**네트워크 대역폭의 효율적 사용**|각 WSFC 노드에 기술 자료 문서 2616514에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스가 없으면 클러스터 서비스가 클러스터 노드 간에 불필요한 레지스트리 알림을 보냅니다. 이 동작은 네트워크 대역폭을 제한하며 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]에 심각한 문제가 됩니다.|KB 2616514:  [클러스터 서비스가 Windows Server 2008 또는 Windows Server 2008 R2에서 클러스터 노드 간에 불필요 한 레지스트리 키 변경 알림을 보낸다합니다](https://support.microsoft.com/kb/2616514)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||사용자 계정 컨트롤|해당 사항 없음|**일부 WSFC 노드에서 제공 되지 않는 디스크에서 테스트 한 VPD 저장소**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행 중일 때 WSFC 클러스터의 모든 노드에 사용할 수 없는 온라인 상태의 디스크에서 이 서비스 팩을 잘못 실행한 후 SCSI 디바이스 VPD(Vital Product Data) 유효성 검사 저장소 테스트가 실패할 경우 기술 자료 문서 2531907에 설명되어 있는 핫픽스를 설치해야 합니다.<br /><br /> 이 핫픽스를 사용하면 디스크가 온라인 상태일 때 유효성 검사 보고서에 잘못된 경고나 오류가 나타나지 않습니다.|KB 2531907:  [SCSI 장치 VPD Vital Product Data () Windows Server 2008 R2 SP1을 설치한 후 테스트가 실패를 확인 합니다.](https://support.microsoft.com/kb/2531907)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||사용자 계정 컨트롤|사용자 계정 컨트롤|**로컬 복제본을 보다 빠르게 장애 조치할**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행하는 경우 기술 자료 문서 KB 2687741에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스를 사용하면 로컬 복제본으로의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(Failover) 성능이 향상됩니다.|KB 2687741:  [SQL Server 2012에서 "AlwaysOn 가용성 그룹" 기능의 성능을 향상 시키는 핫픽스는 Windows Server 2008 R2에 사용할 수 있는](https://support.microsoft.com/KB/2687741)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**비대칭 저장소-장애 조치 클러스터 인스턴스 (Fci)**|FCI(장애 조치(Failover) 클러스터 인스턴스)가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 설정되어 있는 경우 Windows Server 2008 핫픽스 976097을 설치합니다.<br /><br /> 이 핫픽스는 WSFC 노드 중 일부에 대해서만 사용할 수 있는 비대칭 저장소 공유 디스크를 지원 하기 위해 장애 조치 클러스터 관리 Microsoft Management Console (MMC) 스냅인 사용 하도록 설정 합니다.|KB 976097:  [Windows Server 2008 또는 Windows Server 2008 R2를 실행 하는 장애 조치 클러스터에 대 한 장애 조치 클러스터 관리 MMC 스냅인에 비대칭 저장소에 대 한 지원을 추가 하는 핫픽스](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://technet.microsoft.com/library/jj215886.aspx)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|사용자 계정 컨트롤|해당 사항 없음|**인터넷 프로토콜 보안 (IPsec)**|IPsec 연결을 사용하는 환경에서는 클라이언트 컴퓨터에서 가상 네트워크 이름(이 컨텍스트의 경우 가용성 그룹 수신기)에 대한 IPSec 연결을 다시 설정할 때 시간이 많이 지연(약 2-3분)될 수 있습니다. IPsec 연결을 사용하는 경우 기술 자료 문서(KB 980915)에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 980915:  [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행 하는 컴퓨터에서 IPSec 연결을 다시 연결할 때 긴 시간 지연 발생](https://support.microsoft.com/kb/980915)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**IPv6**|IPv6을 사용하는 경우 Windows Server 운영 체제에 따라 기술 자료 문서 2578103 또는 2578113에 설명된 특정 시나리오를 검토하는 것이 좋습니다.<br /><br /> Windows Server 토폴로지에서 IP 버전 6(IPv6)을 사용하는 경우 WSFC 클러스터 서비스가 IPv6 IP 주소를 장애 조치(Failover)하는 데 30초 정도 걸립니다. 따라서 클라이언트에서 IPv6 IP 주소에 다시 연결하려면 약 30초 동안 기다려야 합니다.|KB 2578103(Windows Server 2008):  [클러스터 서비스가 Windows Server 2008에서 IPv6 IP 주소를 조치할 약 30 초 소요](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113(Windows Server 2008 R2):  **Windows Server 2008 R2:** [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 조치할 약 30 초 소요](https://support.microsoft.com/kb/2578113)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**클러스터 및 애플리케이션 서버 간에 라우터가 없음**|장애 조치(Failover) 클러스터와 애플리케이션 서버 사이에 라우터가 없는 경우 클러스터 서비스가 네트워크 관련 리소스를 느리게 장애 조치(Failover)합니다. 이에 따라 가용성 그룹이 장애 조치된 후 클라이언트 재연결이 지연됩니다. 라우터가 없으면 해당 환경에 적용 가능한 경우 기술 자료 문서 2582281에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 2582281:  [클러스터와 응용 프로그램 서버 간에 라우터가 없는 경우 장애 조치(Failover) 작업이 느림](https://support.microsoft.com/kb/2582281)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용자 계정 컨트롤|예|사용자 계정 컨트롤|**라우터 간에 클러스터 및 응용 프로그램 서버 없음**|장애 조치(Failover) 클러스터와 애플리케이션 서버 사이에 라우터가 없는 경우 클러스터 서비스가 네트워크 관련 리소스를 느리게 장애 조치(Failover)합니다. 이에 따라 가용성 그룹이 장애 조치된 후 클라이언트 재연결이 지연됩니다. 라우터가 없으면 해당 환경에 적용 가능한 경우 기술 자료 문서 2582281에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 2582281:  [클러스터와 응용 프로그램 서버 간에 라우터가 없는 경우 장애 조치(Failover) 작업이 느림](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="ComputerRecommendations"></a> 가용성 복제본을 호스팅하는 컴퓨터에 대한 권장 사항(Windows 시스템)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "59242233"
   
 -   [네트워크 이름 리소스에 DNS 등록](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
   
--   [Windows 2008 R2 장애 조치(Failover) 멀티 사이트 클러스터링](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
+-   [Windows 2008 R2 장애 조치 다중 사이트 클러스터링](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server 인스턴스 필수 구성 요소 및 제한 사항  
  각 가용성 그룹에는 *인스턴스에서 호스팅되는*가용성 복제본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이라는 일련의 장애 조치(Failover) 파트너가 필요합니다. 특정 서버 인스턴스는 *독립 실행형 인스턴스* 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*장애 조치(failover) 클러스터 인스턴스* 일 수 있습니다.  
@@ -138,14 +138,14 @@ ms.locfileid: "59242233"
   
 ||사전 요구 사항|링크|  
 |-|------------------|-----------|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다. 지정된 가용성 그룹의 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 단일 WSFC 클러스터의 개별 노드에 있어야 합니다. 유일한 예외는 다른 WSFC 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있는 경우입니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(Failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다. 지정된 가용성 그룹의 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 단일 WSFC 클러스터의 개별 노드에 있어야 합니다. 유일한 예외는 다른 WSFC 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있는 경우입니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹이 Kerberos로 작동하도록 하려는 경우:<br /><br /> 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 SQL Server 서비스 계정을 사용해야 합니다.<br /><br /> 도메인 관리자는 가용성 그룹 수신기의 VNN(가상 네트워크 이름)에 대해 SQL Server 서비스 계정에서 Active Directory에 SPN(서비스 사용자 이름)을 수동으로 등록해야 합니다. SQL Server 서비스 계정이 아닌 다른 계정에 SPN이 등록된 경우 인증이 실패합니다.<br /><br /> **\*\* 중요 \*\*** SQL Server 서비스 계정을 변경하면 도메인 관리자가 SPN을 수동으로 다시 등록해야 합니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **간략한 설명:**<br /><br /> Kerberos 및 SPN은 상호 인증을 강제 적용합니다. SPN은 SQL Server 서비스를 시작하는 Windows 계정에 매핑됩니다. SPN이 올바르게 등록되지 않았거나 실패하면, Windows 보안 계층이 SPN과 연결된 계정을 확인할 수 없으며, Kerberos 인증을 사용할 수 없습니다.<br /><br /> 참고: NTLM에는 이러한 요구 사항이 없습니다.|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스팅하려는 경우 FCI 제한 사항을 이해하고 FCI 요구 사항을 충족해야 합니다.|[SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 사용하여 가용성 복제본을 호스트하기 위한 필수 구성 요소 및 요구 사항](#FciArLimitations) (이 항목 뒷부분)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Enterprise Edition을 실행해야 합니다.|[SQL Server 2014 버전에서 지원하는 기능](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬을 사용해야 합니다.|[서버 데이터 정렬 설정 또는 변경](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹의 가용성 복제본을 호스팅할 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하도록 설정합니다. 특정 컴퓨터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 설치에서 지원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 인스턴스를 개수에 관계없이 사용하도록 설정할 수 있습니다.|[AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> **\*\* 중요 \*\*** WSFC 클러스터를 삭제한 다음 다시 만들려는 경우 원본 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 사용할 수 있도록 설정한 각 서버 인스턴스에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 사용하지 않도록 설정한 후 다시 사용하도록 설정해야 합니다.|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 이 엔드포인트는 서버 인스턴스의 미러링 모니터 서버 및 데이터베이스 미러링 파트너와 모든 가용성 복제본에서 공유합니다.<br /><br /> 가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않는 경우, [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md) (또는 [가용성 그룹에 복제본 추가 마법사](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.<br /><br /> **\*\* 보안 정보 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 전송 보안은 데이터베이스 미러링의 경우와 동일합니다.|[데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다.|[FILESTREAM 사용 및 구성](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 있어야 합니다. 이 엔드포인트는 서버 인스턴스의 미러링 모니터 서버 및 데이터베이스 미러링 파트너와 모든 가용성 복제본에서 공유합니다.<br /><br /> 가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 엔드포인트를 가지고 있지 않는 경우, [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md) (또는 [가용성 그룹에 복제본 추가 마법사](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) 가 엔드포인트를 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 엔드포인트 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만들 수는 없습니다. 이 경우 마법사를 시작하기 전에 데이터 미러링 엔드포인트를 수동으로 만드는 것이 좋습니다.<br /><br /> **\*\* 보안 정보 \*\*** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에 대한 전송 보안은 데이터베이스 미러링의 경우와 동일합니다.|[데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|포함된 데이터베이스를 가용성 그룹에 추가하려는 경우 가용성 그룹의 가용성 복제본을 호스팅할 모든 서버 인스턴스에서 `contained database authentication` 서버 옵션이 `1`로 설정되어 있는지 확인합니다.|[contained database authentication 서버 구성 옵션](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [서버 구성 옵션&#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> 가용성 그룹의 스레드 사용량  
@@ -185,12 +185,12 @@ ms.locfileid: "59242233"
 |태스크|항목|  
 |----------|-----------|  
 |데이터베이스 미러링 엔드포인트가 있는지 여부 확인|[sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)|  
-|데이터베이스 미러링 엔드포인트 만들기(없는 경우)|[Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
+|데이터베이스 미러링 엔드포인트 만들기(없는 경우)|[Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)|  
 |AlwaysOn 가용성 그룹 사용|[AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)|  
   
 ###  <a name="RelatedContentSI"></a> 관련 내용(서버 인스턴스)  
   
--   [AlwaysON - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON-HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> 네트워크 연결 권장 사항  
  WSFC 클러스터 멤버 간의 통신 및 가용성 복제본 간의 통신에는 동일한 네트워크 링크를 사용하는 것이 좋습니다.  개별 네트워크 링크를 사용하면 가끔씩이라도 일부 링크에 문제가 발생할 경우 예기치 않은 동작이 발생할 수 있습니다.  
@@ -228,14 +228,14 @@ ms.locfileid: "59242233"
 |태스크|항목|  
 |----------|-----------|  
 |SQL Server 장애 조치(Failover) 클러스터 설치|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|SQL Server 장애 조치(Failover) 클러스터의 전체 업그레이드|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|SQL Server 장애 조치(Failover) 클러스터의 전체 업그레이드|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |기존 SQL Server 장애 조치(Failover) 클러스터 유지 관리|[SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="RelatedContentFCIs"></a> 관련 내용(FCI)  
   
--   [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
+-   [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [AlwaysOn 아키텍처 가이드: 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축 ](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [AlwaysOn 아키텍처 가이드: 장애 조치(failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 빌드](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> 가용성 그룹 필수 구성 요소 및 제한 사항  
 
@@ -253,7 +253,7 @@ ms.locfileid: "59242233"
   
 -   **가용성 그룹 및 컴퓨터당 가용성 데이터베이스의 최대 수:** 컴퓨터(가상 컴퓨터 또는 물리적 컴퓨터)에 만들 수 있는 데이터베이스와 가용성 그룹의 실제 수는 하드웨어 및 작업에 따라 다르며 정해진 제한은 없습니다. Microsoft는 물리적 컴퓨터당 10AG 및 100DB로 광범위하게 테스트되었습니다. 오버로드된 시스템 징후에는 작업자 스레드 소진, AlwaysOn 시스템 뷰와 DMV에 대한 느린 응답 시간 및/또는 대기된 디스패처 시스템 덤프 및 기타 징후가 포함될 수 있습니다. 해당 애플리케이션 SLA 내에서 최대 작업량을 처리할 수 있도록 하기 위해 프로덕션 환경과 유사한 작업으로 환경을 철저히 테스트하십시오. SLA를 고려할 경우 예상 응답 시간뿐 아니라 오류 상태에서의 로드를 검토해야 합니다.  
   
--   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마십시오.**  
+-   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마세요.**  
   
      이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "59242233"
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|포함된 데이터베이스를 가용성 그룹에 추가하기 전에 가용성 그룹의 가용성 복제본을 호스팅하거나 호스팅할 모든 서버 인스턴스에서 `contained database authentication` 서버 옵션이 `1`로 설정되어 있는지 확인합니다.|[contained database authentication 서버 구성 옵션](../../configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [서버 구성 옵션&#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md)|  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다.  
   
 ###  <a name="RestrictionsDb"></a> 제한 사항(가용성 데이터베이스)  
   
@@ -351,21 +351,21 @@ ms.locfileid: "59242233"
   
 |태스크|항목|  
 |----------|-----------|  
-|보조 데이터베이스 준비(수동)|[가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
+|보조 데이터베이스 준비(수동)|[가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |가용성 그룹에 보조 데이터베이스 조인(수동)|[가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)|  
 |가용성 데이터베이스 개수 수정|[가용성 그룹에 데이터베이스 추가&#40;SQL Server&#41;](availability-group-add-a-database.md)<br /><br /> [가용성 그룹에서 보조 데이터베이스 제거&#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)<br /><br /> [가용성 그룹에서 주 데이터베이스 제거&#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)|  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 솔루션 가이드 고가용성 및 재해 복구](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
--   [AlwaysON - HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [AlwaysON-HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 클라이언트 연결(SQL Server)](always-on-client-connectivity-sql-server.md)  
+ [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 클라이언트 연결 (SQL Server)](always-on-client-connectivity-sql-server.md)  
   
   

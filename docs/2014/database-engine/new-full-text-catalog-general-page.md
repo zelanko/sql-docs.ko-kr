@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240641"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
   이 대화 상자를 사용하여 새 전체 텍스트 카탈로그를 만들 수 있습니다.  
   
- **SQL Server Management Studio를 사용하여 전체 텍스트 카탈로그를 만들려면**  
+ **전체 텍스트 카탈로그를 만들기 위해 SQL Server Management Studio를 사용 하려면**  
   
 -   [전체 텍스트 카탈로그 만들기 및 관리](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   

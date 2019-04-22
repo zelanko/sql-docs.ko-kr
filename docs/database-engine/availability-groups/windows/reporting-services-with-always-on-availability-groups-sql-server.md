@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 81d9914bee2661bfc3b679898c26a0f2ec3ed112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212132"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506520"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53212132"
     -   [장애 조치(Failover) 발생 시 보고서 서버 동작](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Reporting Services 및 Always On 가용성 그룹 사용을 위한 요구 사항  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .NET Framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 Power BI Report Server에서는 .Net framework 4.0을 사용하며 데이터 원본과 함께 사용할 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열 속성을 지원합니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 2014 이전 버전에  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53212132"
  기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 > [!NOTE]  
->  **RSreportserver.config**와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSreportserver.config **와 같은** 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능으로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
   
 ##  <a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 기반으로 하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본의 동작은 관리자가 AG 환경을 구성한 방법에 따라 다를 수 있습니다.  
@@ -160,7 +160,7 @@ ms.locfileid: "53212132"
   
 -   **보조 복제본:** 하나 이상의 보조 복제본을 만듭니다. 주 복제본의 데이터베이스를 보조 복제본으로 복사하는 일반적인 방법은 'RESTORE WITH NORECOVERY'를 사용하여 각 보조 복제본에 데이터베이스를 복원하는 것입니다. 보조 복제본을 만들고 데이터 동기화가 작동하는지 확인하는 방법은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
--   **보고서 서버 자격 증명:** 보조 복제본에서 주 복제본에 만든 적합한 보고서 서버 자격 증명을 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
+-   **보고서 서버 자격 증명:** 주 복제본에 만든 적합한 보고서 서버 자격 증명을 보조 복제본에 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 -   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 애플리케이션에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
   

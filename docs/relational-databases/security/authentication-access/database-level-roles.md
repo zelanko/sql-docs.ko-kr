@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420098"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516499"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -58,7 +58,7 @@ ms.locfileid: "54420098"
   
  고정 데이터베이스 역할은 데이터베이스 수준에서 정의되며 각 데이터베이스에 존재합니다. **db_owner** 데이터베이스 역할의 멤버는 고정 데이터베이스 역할 멤버 자격을 관리할 수 있습니다. msdb 데이터베이스에는 몇 가지 특수한 용도의 데이터베이스 역할도 있습니다.  
   
- 데이터베이스 계정과 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 역할을 데이터베이스 수준 역할에 추가할 수 있습니다. 고정 데이터베이스 역할의 각 멤버는 같은 역할에 다른 사용자를 추가할 수 있습니다.  
+ 데이터베이스 계정과 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 역할을 데이터베이스 수준 역할에 추가할 수 있습니다.
   
 > [!TIP]  
 >  사용자 정의 데이터베이스 역할을 고정 역할의 멤버로 추가하지 마세요. 이로 인해 원하지 않는 권한 상승이 설정될 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "54420098"
 |고정 데이터베이스 역할 이름|설명|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]에서 데이터베이스를 삭제할 수도 있습니다. [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 일부 유지 관리 작업은 서버 수준 권한이 필요하여 **db_owners**으로 수행할 수 없습니다.|  
-|**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 멤버는 역할 멤버 자격을 수정하고 사용 권한을 관리할 수 있습니다. 이 역할에 보안 주체를 추가하면 원하지 않는 권한 상승이 설정될 수 있습니다.|  
+|**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 구성원은 사용자 지정 역할에 대해서만 역할 멤버 자격을 수정할 수 있습니다. 로그인하지 않고 사용자를 만들고 사용 권한을 관리할 수도 있습니다. 이 역할에 보안 주체를 추가하면 원하지 않는 권한 상승이 설정될 수 있습니다.|  
 |**db_accessadmin**|**db_accessadmin** 고정 데이터베이스 역할의 멤버는 Windows 로그인, Windows 그룹 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인의 데이터베이스에 대한 액세스를 추가하거나 제거할 수 있습니다.|  
 |**db_backupoperator**|**db_backupoperator** 고정 데이터베이스 역할의 멤버는 데이터베이스를 백업할 수 있습니다.|  
 |**db_ddladmin**|**db_ddladmin** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 DDL(데이터 정의 언어) 명령을 실행할 수 있습니다.|  
@@ -93,7 +93,7 @@ ms.locfileid: "54420098"
 
 |역할 이름|설명|  
 |--------------------|-----------------|
-|**dbmanager** | 데이터베이스를 만들고 삭제할 수 있습니다. 데이터베이스를 만드는 dbmanager 역할의 멤버는 해당 데이터베이스 소유자가 되어 사용자가 dbo 사용자로 데이터베이스에 연결할 수 있게 합니다. dbo 사용자는 해당 데이터베이스에서 모든 데이터베이스 사용 권한을 가집니다. dbmanager 역할의 멤버는 소유하지 않은 데이터베이스에 액세스할 권한이 반드시 필요하지는 않습니다.|
+|**dbmanager** | 데이터베이스를 만들고 삭제할 수 있습니다. 데이터베이스를 만드는 dbmanager 역할의 구성원은 해당 데이터베이스 소유자가 되어 사용자가 dbo 사용자로 데이터베이스에 연결할 수 있게 합니다. dbo 사용자는 해당 데이터베이스에서 모든 데이터베이스 사용 권한을 가집니다. dbmanager 역할의 멤버는 소유하지 않은 데이터베이스에 액세스할 권한이 반드시 필요하지는 않습니다.|
 |**loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.|
 
 > [!NOTE]
@@ -143,9 +143,9 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 |[sp_droprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|현재 데이터베이스에서 데이터베이스 역할을 제거합니다.|  
 |[sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|  
 |[sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|현재 데이터베이스의 SQL Server 역할에서 보안 계정을 제거합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 역할에 권한을 추가합니다.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 역할에 대한 권한을 거부합니다.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| 사용 권한 | 역할에 권한을 추가합니다.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| 사용 권한 | 역할에 대한 권한을 거부합니다.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| 사용 권한 | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
   
   
 ## <a name="public-database-role"></a>public 데이터베이스 역할  

@@ -1308,7 +1308,7 @@ items:
     - name: 오류 및 이벤트 참조(SharePoint용 파워 피벗)
       href: ../analysis-services/power-pivot-sharepoint/errors-and-events-reference-power-pivot-for-sharepoint.md
       items:
-      - name: 외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을 PowerPivot 데이터
+      - name: '외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을: PowerPivot 데이터'
         href: ../analysis-services/power-pivot-sharepoint/an-error-occurred-during-an-attempt-to-establish-a-connection.md
       - name: Microsoft.Data.Services 파일 또는 어셈블리를 로드할 수 없습니다.
         href: ../analysis-services/power-pivot-sharepoint/could-not-load-file-or-assembly-microsoft-data-services.md
@@ -1316,7 +1316,7 @@ items:
         href: ../analysis-services/power-pivot-sharepoint/could-not-load-microsoft-analysisservices-sharepoint-integration.md
       - name: 통합 문서의 데이터 연결 경로가 로컬 드라이브의 파일을 가리키거나 잘못된 URI입니다.
         href: ../analysis-services/power-pivot-sharepoint/the-data-connection-path-is-invalid.md
-      - name: 데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을 PowerPivot 데이터
+      - name: '데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: PowerPivot 데이터'
         href: ../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md
       - name: 다음 기능은 브라우저에서 지원되지 않으며 표시되지 않거나 부분적으로만 표시될 수 있습니다. 메모, 도형 또는 기타 개체
         href: ../analysis-services/power-pivot-sharepoint/comments-shapes-other-objects-not-supported-by-excel-services.md
@@ -2147,7 +2147,7 @@ items:
             href: ../mdx/comment-mdx.md
           - name: //(주석)
             href: ../mdx/comment-mdx-double-slash.md
-          - name: 으로 디코딩된 문자입니다. (범위)
+          - name: 으로 디코딩된 문자입니다. (Range)
             href: ../mdx/range-mdx.md
           - name: + (추가)"
             href: ../mdx/add-mdx.md
@@ -2487,8 +2487,8 @@ items:
   - name: MDX 및 DAX의 VBA 함수
     href: ../mdx/vba-functions-in-mdx-and-dax.md
 ms.openlocfilehash: a651b3240dcf27f61b4acfc9b6e68fc3a77d4c9c
-ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58788120"

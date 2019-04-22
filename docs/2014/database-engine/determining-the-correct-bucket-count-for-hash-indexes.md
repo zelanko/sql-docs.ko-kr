@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241961"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
@@ -137,11 +137,11 @@ GO
   
  이 테이블의 경우 3개의 해시 인덱스를 고려하세요.  
   
--   IX_Status: 버킷의 50%가 비어 있으며 좋습니다. 하지만 평균 체인 길이는 매우 깁니다(65,536). 이것은 중복 값이 많다는 것을 나타냅니다. 따라서 이 경우 비클러스터형 해시 인덱스를 사용하는 것은 적합하지 않습니다. 대신 비클러스터형 인덱스를 사용해야 합니다.  
+-   IX_Status: 버킷의 50%가 비어 있으며 상태가 정상입니다. 하지만 평균 체인 길이는 매우 깁니다(65,536). 이것은 중복 값이 많다는 것을 나타냅니다. 따라서 이 경우 비클러스터형 해시 인덱스를 사용하는 것은 적합하지 않습니다. 대신 비클러스터형 인덱스를 사용해야 합니다.  
   
--   IX_OrderSequence: 버킷의 0%는 비어 있으며 너무 낮습니다. 또한 평균 체인 길이는 8입니다. 이 인덱스에서 값이 고유하므로 이것은 평균 8개의 값이 각 버킷에 매핑됨을 의미합니다. 버킷 수를 늘려야 합니다. 인덱스 키에 262,144개의 고유한 값이 있으므로 버킷 수가 적어도 262,144개가 되어야 합니다. 향후에 더 성장할 것으로 예상된다면 수를 더 높여야 합니다.  
+-   IX_OrderSequence: 버킷의 0%가 비어 있으며 너무 낮습니다. 또한 평균 체인 길이는 8입니다. 이 인덱스에서 값이 고유하므로 이것은 평균 8개의 값이 각 버킷에 매핑됨을 의미합니다. 버킷 수를 늘려야 합니다. 인덱스 키에 262,144개의 고유한 값이 있으므로 버킷 수가 적어도 262,144개가 되어야 합니다. 향후에 더 성장할 것으로 예상된다면 수를 더 높여야 합니다.  
   
--   기본 키 인덱스 (PK__SalesOrder...): 버킷의 36%가 비어 있으며 좋습니다. 또한 평균 체인 길이가 1이면 좋습니다. 변경할 필요 없습니다.  
+-   기본 키 인덱스 (PK__SalesOrder...): 버킷의 36%가 비어 있으며 상태가 정상입니다. 또한 평균 체인 길이가 1이면 좋습니다. 변경할 필요 없습니다.  
   
  메모리 최적화 해시 인덱스 문제 해결에 대 한 자세한 내용은 참조 하세요. [메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)합니다.  
   

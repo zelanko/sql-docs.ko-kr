@@ -1,7 +1,7 @@
 ---
 title: Columnstore 인덱스 - 데이터 로드 지침 | Microsoft 문서
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668932"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506500"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 표준 SQL 대량 로드와 trickle insert 메서드를 사용하여 columnstore 인덱스에 데이터를 로드하는 작업에 대한 옵션 및 권장 사항입니다. 분석을 위한 준비 과정으로 데이터를 인덱스로 이동하기 때문에 columnstore 인덱스에 데이터를 로드하는 작업은 데이터 웨어하우징 프로세스의 필수 요소입니다.
@@ -33,11 +34,11 @@ ms.locfileid: "51668932"
 
 ![클러스터형 columnstore 인덱스로 로드](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "클러스터형 columnstore 인덱스로 로드")  
   
- 다이어그램에서 알 수 있듯이 대량 로드::  
+다이어그램에 나와 있듯이 대량 로드는 다음과 같습니다.
   
-* 데이터를 미리 정렬하지 않습니다. 수신하는 순서대로 데이터가 행 그룹으로 삽입됩니다.
-* 일괄 처리 크기가 102400 이상인 경우 행은 압축된 행 그룹으로 바로 삽입됩니다. 백그라운드 스레드, 튜플 이동기(TM)에 의해 행이 결과적으로 압축된 행 그룹으로 이동되기 전에 데이터 행을 델타 행 그룹으로 이동하는 것을 방지할 수 있으므로 효율적인 대량 가져오기를 위해 102400 이상의 일괄 처리 크기를 선택하는 것이 좋습니다.
-* 일괄 처리 크기가 102400 미만이거나 남은 행이 102400인 경우 행은 델타 행 그룹으로 로드됩니다.
+- 데이터를 미리 정렬하지 않습니다. 수신하는 순서대로 데이터가 행 그룹으로 삽입됩니다.
+- 일괄 처리 크기가 102400 이상인 경우 행은 압축된 행 그룹으로 바로 삽입됩니다. 백그라운드 스레드, TM(튜플 이동기)에 의해 행이 결과적으로 압축된 행 그룹으로 이동되기 전에 데이터 행을 델타 행 그룹으로 이동하는 것을 방지할 수 있으므로 효율적인 대량 가져오기를 위해 102,400 이상의 일괄 처리 크기를 선택하는 것이 좋습니다.
+- 일괄 처리 크기가 102400 미만이거나 남은 행이 102400인 경우 행은 델타 행 그룹으로 로드됩니다.
 
 > [!NOTE]
 > 비클러스터형 columnstore 인덱스 데이터가 있는 rowstore 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 항상 데이터를 기본 테이블에 삽입합니다. 데이터는 columnstore 인덱스에 직접 삽입되지 않습니다.  
@@ -60,6 +61,7 @@ columnstore 인덱스는 대부분의 행이 columnstore로 압축되고 델타 
 |145,000|145,000<br /><br /> 행 그룹 크기: 145,000|0|  
 |1,048,577|1,048,576<br /><br /> 행 그룹 크기: 1,048,576|1|  
 |2,252,152|2,252,152<br /><br /> 행 그룹 크기: 1,048,576, 1,048,576, 155,000|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  다음 예제에서는 1,048,577개 행을 테이블로 로드하는 결과를 보여 줍니다. 결과에는 columnstore에 COMPRESSED 행 그룹이 하나 있고(열 세그먼트로 압축됨) deltastore에 행이 1개 있습니다.  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>분할된 테이블로 로드의 작동 방식  
  분할된 데이터에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 먼저 각 행을 파티션에 할당한 다음 파티션 내에서 데이터에 columnstore 작업을 수행합니다. 각 파티션에는 고유한 행 그룹과 하나 이상의 델타 행 그룹이 있습니다.  
   
- ## <a name="next-steps"></a>다음 단계
- 로드 방법에 대한 자세한 내용은 이 [블로그 게시물](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx)을 참조하세요.  
+## <a name="next-steps"></a>다음 단계
+
+_techcommunity_에 호스트된 블로그 게시물, 2015년 3월 11일 작성: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)(클러스터형 columnstore 인덱스를 사용하는 데이터 로드 성능 고려 사항)

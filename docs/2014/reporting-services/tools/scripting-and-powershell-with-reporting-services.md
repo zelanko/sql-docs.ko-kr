@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9248c80830b6ebb432629bf47d73ad44fd832c3b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240701"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
@@ -68,6 +68,6 @@ ms.locfileid: "59240701"
 ## <a name="see-also"></a>관련 항목  
  [RS.exe 유틸리티&#40;SSRS&#41;](rs-exe-utility-ssrs.md)   
  [배포 및 관리 태스크 스크립팅](script-deployment-and-administrative-tasks.md)   
- [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](script-with-the-rs-exe-utility-and-the-web-service.md)  
+ [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립트](script-with-the-rs-exe-utility-and-the-web-service.md)  
   
   

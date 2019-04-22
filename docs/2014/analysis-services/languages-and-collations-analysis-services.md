@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241831"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성 설치 하는 동안 처음에 인스턴스 수준에서 설정 되었지만 개체 계층 구조의 여러 수준에서 나중에 변경할 수 있습니다.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
   
  다차원 모델 (전용)의 데이터베이스나 큐브에서 이러한 속성을 설정할 수 있습니다-큐브 내 개체에 대해 만드는 번역에 설정할 수 있습니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241831"
   
  또한 설정할 수 있습니다 `Language`, 자체로는 **번역** 개체입니다.  
   
- 번역 개체는 큐브나 차원에 번역을 추가할 때 생성됩니다. `Language` 번역 정의의 일부가입니다. `Collation`다른 한편으로 큐브의 이상으로 설정 되며 모든 번역에서 공유 합니다. 이것은 여러 언어 속성(각 번역에 대해 하나)과 오직 한 데이터 정렬이 표시되는 번역이 포함된 큐브의 XMLA에서 명백히 나타납니다. 차원 특성 번역에 대한 한 가지 예외가 있습니다. 이 예외에서는 원본 열과 일치하는 특성 데이터 정렬을 지정하기 위해 큐브 데이터 정렬을 재정의합니다. (데이터베이스 엔진에서는 개별 열에 대한 데이터 정렬 설정을 지원하며, 다른 원본 열에서 멤버 데이터를 가져오도록 개별 번역을 구성하는 것은 일반적입니다.) 하지만 그렇지 않으면 다른 모든 번역에 대해 `Language`에 상관없이 `Collation`가 단독으로 사용됩니다. 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
+ 번역 개체는 큐브나 차원에 번역을 추가할 때 생성됩니다. `Language` 번역 정의의 일부가입니다. 반면에 `Collation`은 큐브 이상의 수준에서 설정되며 모든 번역에서 공유됩니다. 이것은 여러 언어 속성(각 번역에 대해 하나)과 오직 한 데이터 정렬이 표시되는 번역이 포함된 큐브의 XMLA에서 명백히 나타납니다. 차원 특성 번역에 대한 한 가지 예외가 있습니다. 이 예외에서는 원본 열과 일치하는 특성 데이터 정렬을 지정하기 위해 큐브 데이터 정렬을 재정의합니다. (데이터베이스 엔진에서는 개별 열에 대한 데이터 정렬 설정을 지원하며, 다른 원본 열에서 멤버 데이터를 가져오도록 개별 번역을 구성하는 것은 일반적입니다.) 하지만 그렇지 않으면 다른 모든 번역에 대해 `Language`에 상관없이 `Collation`가 단독으로 사용됩니다. 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_lang"></a> Analysis Services의 언어 지원  
  `Language` 속성에서는 쿼리 처리 중 사용된 개체의 로캘을 설정하고 `Captions` 및 `Translations`을 사용하여 다국어 시나리오를 지원합니다. 로캘은 영어와 같은 언어 식별자와 미국이나 오스트레일리아와 같이 날짜와 시간 표현을 더 구체적으로 정의하는 지역을 기반으로 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "59241831"
 >  `Language` 속성은 시스템 메시지 표시용 언어나 사용자 인터페이스에 표시할 문자열을 결정하지 않습니다. 오류, 경고 및 메시지는 Office와 Office 365에서 지원하는 모든 언어로 지역화되어 있으며, 지원되는 로캘 중 하나를 클라이언트 연결이 지정하면 자동으로 사용됩니다.  
   
 ##  <a name="bkmk_collations"></a> Analysis Services에서의 데이터 정렬 지원  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 Windows 및 이진 데이터 정렬을 배타적으로 사용합니다. 레거시 SQL Server 데이터 정렬은 사용하지 않습니다. 큐브 내에서 단일 데이터 정렬은 특성 수준의 번역을 제외하고, 전체에서 사용됩니다. 특성 번역을 정의하는 방법에 대한 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 Windows 및 이진 데이터 정렬을 배타적으로 사용합니다. 레거시 SQL Server 데이터 정렬은 사용하지 않습니다. 큐브 내에서 단일 데이터 정렬은 특성 수준의 번역을 제외하고, 전체에서 사용됩니다. 특성 번역을 정의하는 방법에 대한 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
   
  데이터 정렬은 개체 식별자를 제외하고 bicameral 언어 스크립트에서 모든 문자열의 대/소문자 구분을 제어합니다. 개체 식별자에서 대문자와 소문자를 모두 사용하는 경우 개체 식별자의 대/소문자 구분은 데이터 정렬이 아니라 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 따라 결정됩니다. 영어 스크립트에 구성된 개체 식별자의 경우, 개체 식별자는 데이터 정렬에 관계없이 항상 대/소문자를 구분합니다. 키릴자모 및 기타 bicameral 언어에서는 반대로 수행합니다(항상 대/소문자 구분). 자세한 내용은 [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) 를 참조하세요.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59241831"
  GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. Analysis Services에는 외부 원본의 데이터를 처리할 때 데이터 변환이 이루어지지 않습니다. 데이터는 유니코드로 간단히 저장됩니다. 쿼리 시 클라이언트 운영 체제 설정에 따라 쿼리 결과에 텍스트 데이터가 반환되면 Analysis Services 클라이언트 라이브러리를 통해 GB18030 변환이 수행됩니다(특히, MSOLAP.dll OLE DB 공급자). 데이터베이스 엔진은 GB18030도 지원합니다. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 다차원에 대한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Analysis Services 다차원에 대 한 세계화 시나리오](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [세계화 팁과 모범 사례&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241941"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot Data Refresh with SharePoint 2013
@@ -27,17 +27,17 @@ ms.locfileid: "59241941"
   
  **항목 내용**  
   
--   [대화형 데이터 새로 고침](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [통합 문서 데이터 연결 및 대화형 데이터 새로 고침을 사용하는 Windows 인증](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [예약된 데이터 새로 고침](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013의 예약된 데이터 새로 고침 아키텍처](#bkmk_refresh_architecture)  
   
 -   [인증에 대한 추가 고려 사항](#datarefresh_additional_authentication)  
   
--   [추가 정보](#bkmk_moreinformation)  
+-   [자세한 정보](#bkmk_moreinformation)  
   
 ## <a name="background"></a>배경  
  SharePoint Server 2013 Excel Services는 Excel 2013 통합 문서에 대한 데이터 새로 고침을 관리하고 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 데이터 모델 처리를 트리거합니다. Excel 2010 통합 문서의 경우 Excel Services에서 통합 문서와 데이터 모델의 로드 및 저장도 관리합니다. 그러나 Excel Services는 PowerPivot 시스템 서비스를 사용하여 데이터 모델에 처리 명령을 보냅니다. 다음 표에는 통합 문서 버전에 따라 데이터 새로 고침에 대한 처리 명령을 보내는 구성 요소가 요약되어 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 분석 서버를 사용하도록 SharePoint 2013 팜이 구성되어 있다고 가정합니다.  
@@ -72,13 +72,13 @@ ms.locfileid: "59241941"
   
 -   대화형 데이터 새로 고침은 현재 사용자 세션의 데이터만 새로 고칩니다. 데이터가 자동으로 SharePoint 콘텐츠 데이터베이스의 통합 문서 항목에 다시 저장되지는 않습니다.  
   
--   **자격 증명:** 대화형 데이터 새로 고침은 현재 로그온한 사용자의 ID를 자격 증명 또는 저장된 자격 증명으로 사용하여 데이터 원본에 연결할 수 있습니다. 사용되는 자격 증명은 외부 데이터 원본에 대한 통합 문서 연결에 정의된 Excel Services 인증 설정에 따라 다릅니다.  
+-   **자격 증명:** 대화형 데이터 새로 고침 자격 증명이 나 저장 된 자격 증명으로 현재 로그온 한 사용자의 id를 사용 하 여 데이터 원본에 연결할 수 있습니다. 사용되는 자격 증명은 외부 데이터 원본에 대한 통합 문서 연결에 정의된 Excel Services 인증 설정에 따라 다릅니다.  
   
 -   **통합 문서를 지원 합니다.**  Excel 2013에서 만든 통합 문서입니다.  
   
  **데이터를 새로 고치려면**  
   
--   아래 그림을 참조하여 단계를 수행하십시오.  
+-   아래 그림을 참조하여 단계를 수행하세요.  
   
 1.  브라우저에서 SharePoint 문서 라이브러리의 PowerPivot 통합 문서를 엽니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "59241941"
   
 3.  Excel Services에서 PowerPivot 데이터베이스를 로드하고 처리한 다음 쿼리하여 Excel 통합 문서 캐시를 새로 고칩니다.  
   
-4.  **참고:** 업데이트된 통합 문서가 자동으로 문서 라이브러리에 다시 저장되지는 않습니다.  
+4.  **참고:** 업데이트 된 통합 문서가 문서 라이브러리에 다시 자동으로 저장 되지 않습니다.  
   
  ![대화형 데이터 새로 고침](../media/as-interactive-datarefresh-sharepoint2013.gif "대화형 데이터 새로 고침")  
   
@@ -95,21 +95,21 @@ ms.locfileid: "59241941"
   
  일반적인 사용자 환경: 고객이 PowerPivot 모델을 포함 하는 Excel 2013 통합 문서에서 "모든 연결 새로 고침"을 선택 하면 다음과 유사한 오류 메시지가 표시는:  
   
--   **외부 데이터 새로 고침 실패:** 통합 문서의 데이터 모델에서 작업하는 동안 오류가 발생했습니다. 다시 시도하세요. 이 통합 문서에서 하나 이상의 데이터 연결을 새로 고칠 수 없습니다.  
+-   **외부 데이터 새로 고침 실패:** 통합 문서의 데이터 모델에서 작업 하는 동안 오류가 발생 했습니다. 다시 시도하세요. 이 통합 문서에서 하나 이상의 데이터 연결을 새로 고칠 수 없습니다.  
   
  사용하는 데이터 공급자에 따라 ULS 로그에 다음과 비슷한 메시지가 기록됩니다.  
   
  **SQL Native Client 사용 시**  
   
--   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: ID '20102481-39c8-4d21-bf63-68f583ad22bb'를 참조하는 아웃오브 라인 개체 'DataSource'가 지정되었지만 사용되지 않았습니다.  OLE DB 또는 ODBC 오류: SQL Server에 연결을 설정하는 중에 네트워크 또는 인스턴스 관련 오류가 발생했습니다. 서버를 찾을 수 없거나 액세스할 수 없습니다. 인스턴스 이름이 올바르고 SQL Server가 원격 연결을 허용하도록 구성되어 있는지 확인하세요. 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.; 08001; SSL 공급자: 요청한 보안 패키지가 없습니다.; 08001; 클라이언트가 연결할 수 없습니다.; 08001; 클라이언트에서 암호화를 지원하지 않습니다.; 08001.  , ConnectionName: ThisWorkbookDataModel, 통합 문서: book1.xlsx  
+-   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: 아웃오브 라인 개체 '', ID(s) ' 20102481 39 c 8 4d 21-bf63-68f583ad22bb 참조 '가 지정 되었지만 사용 되지 않았습니다.  OLE DB 또는 ODBC 오류: SQL Server에 연결을 설정 하는 동안 네트워크 관련 또는 인스턴스 관련 오류가 발생 했습니다. 서버를 찾을 수 없거나 액세스할 수 없습니다. 인스턴스 이름이 올바르고 SQL Server가 원격 연결을 허용하도록 구성되어 있는지 확인하세요. 자세한 내용은 SQL Server 온라인 설명서를 참조 합니다.; 08001; SSL 공급자: 요청한 보안 패키지가 없습니다. 08001; 클라이언트 연결에 연결할 수 없습니다. 08001; 암호화는 클라이언트에서 지원 되지 않습니다.; 08001입니다.  ConnectionName: ThisWorkbookDataModel, 통합 문서: book1.xlsx.  
   
  **Microsoft OLE DB Provider for SQL Server 사용 시**  
   
--   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: ID '6e711bfa-b62f-4879-a177-c5dd61d9c242'를 참조하는 아웃오브 라인 개체 'DataSource'가 지정되었지만 사용되지 않았습니다. OLE DB 또는 ODBC 오류 , ConnectionName: ThisWorkbookDataModel, 통합 문서: OLEDB Provider.xlsx.  
+-   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: 아웃오브 라인 개체 '', ' 6e711bfa-b62f-4879-a177-c5dd61d9c242' ' ID(s) 참조가 지정 되었지만 사용 되지 않았습니다. OLE DB 또는 ODBC 오류 ConnectionName: ThisWorkbookDataModel, Workbook: OLEDB Provider.xlsx입니다.  
   
  **.NET Framework Data Provider for SQL Server 사용 시**  
   
--   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: ID 'f5fb916c-3eac-4d07-a542-531524c0d44a'를 참조하는 아웃오브 라인 개체 'DataSource'가 지정되었지만 사용되지 않았습니다.  상위 수준 관계형 엔진에서 오류가 발생했습니다. 관리되는 IDbConnection 인터페이스를 사용하는 동안 다음 예외가 발생했습니다: 파일이나 어셈블리 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' 또는 여기에 종속되어 있는 파일이나 어셈블리 중 하나를 로드할 수 없습니다. 필요한 가장 수준이 제공되지 않았거나, 제공된 가장 수준이 올바르지 않습니다. (HRESULT에서 예외가 발생했습니다: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, 통합 문서: NETProvider.xlsx.  
+-   외부 연결을 만들거나 쿼리를 실행하지 못했습니다. 공급자 메시지: 아웃오브 라인 개체 'DataSource', ' f5fb916c-3eac-4d 07-a542-531524c0d44a', ID(s) 참조가 지정 되었지만 사용 되지 않았습니다.  상위 수준 관계형 엔진에서 오류가 발생했습니다. 예외가 발생 하는 동안 관리 되는 IDbConnection 인터페이스를 사용 하는 동안: 파일 또는 어셈블리를 로드할 수 없습니다 ' System.Transactions, 버전 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089 =' 또는 해당 종속성 중 하나입니다. 필요한 가장 수준이 제공되지 않았거나, 제공된 가장 수준이 올바르지 않습니다. (HRESULT의 예외: 0x80070542).  ConnectionName: ThisWorkbookDataModel, Workbook: NETProvider.xlsx.  
   
  **구성 단계 요약** 로컬 서버에 대한 **운영 체제의 일부로 작동** 권한을 구성하려면  
   
@@ -142,9 +142,9 @@ ms.locfileid: "59241941"
   
     -   콘텐츠 데이터베이스에 통합 문서를 다시 저장합니다.  
   
--   **자격 증명:** 저장된 자격 증명을 사용합니다. 현재 사용자의 ID를 사용하지 않습니다.  
+-   **자격 증명:** 저장 된 자격 증명을 사용 합니다. 현재 사용자의 ID를 사용하지 않습니다.  
   
--   **통합 문서를 지원 합니다.** Excel 2010용 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 추가 기능이나 Excel 2013을 사용하여 만든 통합 문서. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 추가 기능을 사용하여 Excel 2010에서 만든 통합 문서는 지원되지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 이상의 형식으로 통합 문서를 업그레이드합니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
+-   **통합 문서를 지원 합니다.** 사용 하 여 만든 통합 문서는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 추가 기능에서 Excel 2010 또는 Excel 2013을 사용 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot 추가 기능을 사용하여 Excel 2010에서 만든 통합 문서는 지원되지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 이상의 형식으로 통합 문서를 업그레이드합니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
   
  **데이터 새로 고침 관리** 페이지를 표시하려면  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59241941"
   
 3.  사용 현황 데이터에 대한 자세한 내용과 사용 방법은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.  
   
- **진단 로그 데이터:** 데이터 새로 고침과 관련된 SharePoint 진단 로그 데이터를 볼 수 있습니다. 먼저 SharePoint 중앙 관리 **모니터링** 페이지에서 **PowerPivot 서비스** 에 대한 진단 로깅 구성을 확인합니다. "최소 중요 이벤트"에 대 한 로깅 수준을 높여야 해야 로그 합니다. 예를 들어, 값을 **자세히** 로 임시 설정한 다음 데이터 새로 고침 작업을 다시 실행하세요.  
+ **진단 로그 데이터:** 데이터 새로 고침에 관련 된 SharePoint 진단 로그 데이터를 볼 수 있습니다. 먼저 SharePoint 중앙 관리 **모니터링** 페이지에서 **PowerPivot 서비스** 에 대한 진단 로깅 구성을 확인합니다. "최소 중요 이벤트"에 대 한 로깅 수준을 높여야 해야 로그 합니다. 예를 들어, 값을 **자세히** 로 임시 설정한 다음 데이터 새로 고침 작업을 다시 실행하세요.  
   
  로그 항목에는 다음이 포함됩니다.  
   
@@ -210,9 +210,9 @@ ms.locfileid: "59241941"
 ##  <a name="datarefresh_additional_authentication"></a> 인증에 대한 추가 고려 사항  
  Excel 2013의 **Excel Services 인증 설정** 대화 상자 설정에 따라 Excel Services와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 새로 고침에 사용하는 Windows ID가 결정됩니다.  
   
--   **인증된 된 사용자의 계정을 사용 하 여**: Excel Services에서 현재 로그인한 사용자의 ID로 데이터 새로 고침을 수행합니다.  
+-   **인증된 된 사용자의 계정을 사용 하 여**: Excel Services에서 현재 로그인 한 사용자의 id로 데이터 새로 고침을 수행 합니다.  
   
--   **저장된 된 계정 사용**: Excel Services에서 사용자 이름과 암호를 검색하는 데 사용하는 SharePoint Secure Store Service 응용 프로그램 ID를 사용하여 데이터 새로 고침 인증을 수행합니다.  
+-   **저장된 된 계정 사용**: Excel Services 사용 하 여 사용자 이름 및 데이터 새로 고침 인증을 인증 하기 위한 암호를 검색 하는 SharePoint Secure Store Service 응용 프로그램 ID를 가정 합니다.  
   
 -   **없음**: Excel Services **무인 서비스 계정** 사용 됩니다. 서비스 계정이 Secure Store 프록시와 연결됩니다. **Excel Services 응용 프로그램 설정** 페이지의 **외부 데이터** 섹션에서 설정을 구성합니다.  
   
@@ -236,7 +236,7 @@ ms.locfileid: "59241941"
  [SharePoint 2013에서 서비스를 excel](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/)합니다. 
   
 ## <a name="see-also"></a>관련 항목  
- [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [예약 된 데이터 새로 고침 및 통합 문서 업그레이드 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
+ [SharePoint 2013용 PowerPivot 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

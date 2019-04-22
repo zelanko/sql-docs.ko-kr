@@ -1,7 +1,7 @@
 ---
 title: CREATE SPATIAL INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2c9e95ee5fd9b337c9efddf6a3708373ef061f32
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d8cfcce92fc2eea73aa872720e8c758a7c26c097
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980501"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542223"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,24 +39,22 @@ ms.locfileid: "53980501"
   
 ## <a name="syntax"></a>구문  
   
-```  
--- SQL Server Syntax  
-  
-CREATE SPATIAL INDEX index_name   
+```sql
+CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
        <geometry_tessellation> | <geography_tessellation>  
-    }   
+    }
   [ ON { filegroup_name | "default" } ]  
-[;]   
+[;]
   
 <object> ::=  
     [ database_name. [ schema_name ] . | schema_name. ]  table_name  
   
 <geometry_tessellation> ::=  
-{   
-  <geometry_automatic_grid_tessellation>   
-| <geometry_manual_grid_tessellation>   
+{
+  <geometry_automatic_grid_tessellation>
+| <geometry_manual_grid_tessellation>
 }  
   
 <geometry_automatic_grid_tessellation> ::=  
@@ -78,7 +76,7 @@ CREATE SPATIAL INDEX index_name
                         [ [,]<tessellation_cells_per_object> [ ,...n] ]  
                         [ [,]<spatial_index_option> [ ,...n] ]  
    )  
-}   
+}
   
 <geography_tessellation> ::=  
 {  
@@ -107,29 +105,29 @@ CREATE SPATIAL INDEX index_name
 <bounding_box> ::=  
 {  
       BOUNDING_BOX = ( {  
-       xmin, ymin, xmax, ymax   
-       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
+       xmin, ymin, xmax, ymax
+       | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>
   } )  
 }  
   
 <named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
   
 <tessellation_grid> ::=  
-{   
-    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }   
+{
+    GRIDS = ( { <grid_level> [ ,...n ] | <grid_size>, <grid_size>, <grid_size>, <grid_size>  }
         )  
 }  
 <tessellation_cells_per_object> ::=  
-{   
-   CELLS_PER_OBJECT = n   
+{
+   CELLS_PER_OBJECT = n
 }  
   
 <grid_level> ::=  
 {  
-     LEVEL_1 = <grid_size>   
-  |  LEVEL_2 = <grid_size>   
-  |  LEVEL_3 = <grid_size>   
-  |  LEVEL_4 = <grid_size>   
+     LEVEL_1 = <grid_size>
+  |  LEVEL_2 = <grid_size>
+  |  LEVEL_3 = <grid_size>
+  |  LEVEL_4 = <grid_size>
 }  
   
 <grid_size> ::= { LOW | MEDIUM | HIGH }  
@@ -151,70 +149,8 @@ CREATE SPATIAL INDEX index_name
   
 ```  
   
-```  
--- Windows Azure SQL Database Syntax   
-  
-CREATE SPATIAL INDEX index_name   
-    ON <object> ( spatial_column_name )   
-    {   
-      [ USING <geometry_grid_tessellation> ]   
-          WITH ( <bounding_box>   
-                [ [,] <tesselation_parameters> [,... n ] ]   
-                [ [,] <spatial_index_option> [,... n ] ] )   
-     | [ USING <geography_grid_tessellation> ]   
-          [ WITH ( [ <tesselation_parameters> [,... n ] ]   
-                   [ [,] <spatial_index_option> [,... n ] ] ) ]   
-    }  
-  
-[ ; ]  
-  
-<object> ::=  
-{  
-    [database_name. [schema_name ] . | schema_name. ]   
-                table_name   
-}  
-  
-<geometry_grid_tessellation> ::=   
-{ GEOMETRY_GRID }  
-  
-<bounding_box> ::=   
-BOUNDING_BOX = ( {  
-        xmin, ymin, xmax, ymax   
-   | <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>, <named_bb_coordinate>   
-  } )  
-  
-<named_bb_coordinate> ::= { XMIN = xmin | YMIN = ymin | XMAX = xmax | YMAX=ymax }  
-  
-<tesselation_parameters> ::=   
-{   
-    GRIDS = ( { <grid_density> [ ,... n ] | <density>, <density>, <density>, <density>  } )   
-  | CELLS_PER_OBJECT = n   
-}  
-  
-<grid_density> ::=   
-{  
-     LEVEL_1 = <density>   
-  |  LEVEL_2 = <density>   
-  |  LEVEL_3 = <density>   
-  |  LEVEL_4 = <density>   
-}  
-  
-<density> ::= { LOW | MEDIUM | HIGH }  
-  
-<geography_grid_tessellation> ::=   
-{ GEOGRAPHY_GRID }  
-  
-<spatial_index_option> ::=   
-{  
-    IGNORE_DUP_KEY = OFF  
-  | STATISTICS_NORECOMPUTE = { ON | OFF }  
-  | DROP_EXISTING = { ON | OFF }  
-  | ONLINE = OFF   
-}  
-  
-```  
-  
 ## <a name="arguments"></a>인수  
+
  *index_name*  
  인덱스의 이름입니다. 인덱스 이름은 테이블에서 고유해야 하지만 데이터베이스 내에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
@@ -230,10 +166,10 @@ BOUNDING_BOX = ( {
 |-------------------------|-------------------------|  
 |**geometry**|GEOMETRY_GRID|  
 |**geometry**|GEOMETRY_AUTO_GRID|  
-|**geography**|GEOGRAPY_GRID|  
+|**geography**|GEOGRAPHY_GRID|  
 |**geography**|GEOGRAPHY_AUTO_GRID|  
   
- 공간 인덱스는 **기하학** 또는 **지리**유형의 열에서만 만들 수 있습니다. 그렇지 않으면 오류가 발생합니다. 또한 지정된 형식에 잘못된 매개 변수가 전달되어도 오류가 발생합니다.  
+ 공간 인덱스는 **기하학** 또는 **지리** 형식의 열에서만 만들 수 있습니다. 다른 형식의 열에서 만들면 오류가 발생합니다. 지정된 형식에 잘못된 매개 변수가 전달되면 오류가 발생합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
@@ -249,7 +185,7 @@ BOUNDING_BOX = ( {
   
  이 컨텍스트에서 default는 키워드가 아닙니다. 이것은 기본 파일 그룹에 대한 식별자이며 ON "default" 또는 ON [default]와 같이 구분되어야 합니다. "default"를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- **\<object>::=**  
+ **\<object>::=**
   
  인덱싱할 정규화되거나 정규화되지 않은 개체입니다.  
   
@@ -264,7 +200,8 @@ BOUNDING_BOX = ( {
   
  database_name이 현재 데이터베이스이거나 database_name이 tempdb이고 object_name이 #으로 시작하는 경우 Microsoft Azure SQL Database는 세 부분으로 구성된 이름 형식 database_name.[schema_name].object_name을 지원합니다.  
   
-### <a name="using-options"></a>USING 옵션  
+### <a name="using-options"></a>USING 옵션
+
  GEOMETRY_GRID  
  사용하려는 **geometry** 표 공간 분할 구성표를 지정합니다. GEOMETRY_GRID는 **geometry** 데이터 형식의 열에만 지정할 수 있습니다.  GEOMETRY_GRID는 공간 분할 구성표의 수동 조정을 허용합니다.  
   
@@ -281,7 +218,8 @@ BOUNDING_BOX = ( {
   
  geography 데이터 형식의 열에만 지정할 수 있습니다.  이 데이터 형식의 기본값이므로 따로 지정할 필요는 없습니다.  
   
-### <a name="with-options"></a>WITH 옵션  
+### <a name="with-options"></a>WITH 옵션
+
 BOUNDING_BOX  
 경계 상자의 네 좌표를 정의하는 숫자로 된 네 튜플을 지정합니다. x-min과 y-min은 왼쪽 아래 모퉁이의 좌표를 지정하며 x-max와 y-max는 오른쪽 위 모퉁이의 좌표를 지정합니다.  
   
@@ -313,16 +251,16 @@ BOUNDING_BOX
  > 경계 상자 좌표는 USING GEOMETRY_GRID 절 내에서만 적용됩니다.  
  >
  > *xmax*는 *xmin*보다 커야 하고 *ymax*는 *ymin*보다 커야 합니다. *xmax* > *xmin* 및 *ymax* > *ymin*이라고 가정할 때, 모든 유효한 [float](../../t-sql/data-types/float-and-real-transact-sql.md) 값 표현을 지정할 수 있습니다. 그렇지 않으면 해당 오류가 발생합니다.  
- > 
+ >
  > 기본값은 없습니다.  
  >
  > 경계 상자 속성 이름은 데이터베이스 데이터 정렬에 관계없이 대/소문자를 구분하지 않습니다.  
   
  속성 이름을 지정하려면 각 항목을 한 번만 지정해야 합니다. 지정하는 순서에는 제한이 없습니다. 예를 들어 다음 절은 동등합니다.  
   
--   BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
+- BOUNDING_BOX =( XMIN =*xmin*, YMIN =*ymin*, XMAX =*xmax*, YMAX =*ymax* )  
   
--   BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
+- BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
 GRIDS  
 공간 분할 구성표의 각 수준에서 표의 밀도를 정의합니다. GEOMETRY_AUTO_GRID and GEOGRAPHY_AUTO_GRID를 선택한 경우에는 이 옵션을 사용할 수 없습니다.  
@@ -352,10 +290,10 @@ GRIDS
  HIGH  
  지정된 수준의 표에 가장 높은 밀도를 지정합니다. HIGH는 256셀(16x16 표)과 같습니다.  
   
-> [!NOTE] 
+> [!NOTE]
 > 수준 이름을 사용하면 순서에 관계없이 수준을 지정하고 수준을 생략할 수 있습니다. 수준에 이름을 사용하면 지정하는 다른 모든 수준에도 이름을 사용해야 합니다. 수준을 생략하면 해당 밀도의 기본값은 MEDIUM이 됩니다.  
-  
-> [!WARNING] 
+
+> [!WARNING]
 > 잘못된 밀도를 지정하면 오류가 발생합니다.  
   
 CELLS_PER_OBJECT =*n*  
@@ -393,7 +331,7 @@ FILLFACTOR =*fillfactor*
  인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 기본값은 0입니다. *fillfactor*가 100또는 0이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 리프 페이지가 꽉 찬 인덱스를 만듭니다.  
   
 > [!NOTE]  
->  채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
+> 채우기 비율 값 0과 100은 모든 면에서 동일합니다.
   
  FILLFACTOR 설정은 인덱스를 만들거나 다시 작성하는 경우에만 적용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 페이지에 지정된 비율의 빈 공간을 동적으로 유지하지 않습니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰를 사용하세요.  
   
@@ -513,7 +451,8 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE  
  인덱스 데이터에 페이지 압축 사용  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  CREATE SPATIAL INDEX 문에는 각 옵션을 한 번씩만 지정할 수 있으며 옵션을 중복 지정하면 오류가 발생합니다.  
   
  테이블의 각 공간 열에는 최대 249개의 공간 인덱스를 만들 수 있습니다. 예를 들어 특정 공간 열에 두 개 이상의 공간 인덱스를 만들면 한 열에 있는 서로 다른 공간 분할 매개 변수를 인덱싱하는 데 유용할 수 있습니다.  
@@ -523,22 +462,26 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
   
  인덱스 작성 작업은 사용 가능한 프로세스 병렬 처리를 사용할 수 없습니다.  
   
-## <a name="methods-supported-on-spatial-indexes"></a>공간 인덱스에서 지원되는 메서드  
+## <a name="methods-supported-on-spatial-indexes"></a>공간 인덱스에서 지원되는 메서드
+
  특정 조건에서 공간 인덱스는 여러 집합 지향 geometry 메서드를 지원합니다. 자세한 내용은 [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)를 참조하세요.  
   
-## <a name="spatial-indexes-and-partitioning"></a>공간 인덱스 및 분할  
+## <a name="spatial-indexes-and-partitioning"></a>공간 인덱스 및 분할
+
  기본적으로 분할된 테이블에 공간 인덱스를 만들면 인덱스가 테이블의 파티션 구성표에 따라 분할됩니다. 이를 통해 인덱스 데이터 및 관련 행이 동일한 파티션에 저장됩니다.  
   
  이 경우 기본 테이블의 파티션 구성표를 변경하려면 공간 인덱스를 삭제한 후 기본 테이블을 재분할해야 합니다. 이러한 제한을 막으려면 공간 인덱스를 만들 때 "ON filegroup" 옵션을 지정하세요. 자세한 내용은 이 항목 다음에 나오는 "공간 인덱스 및 파일 그룹"을 참조하세요.  
   
-## <a name="spatial-indexes-and-filegroups"></a>공간 인덱스 및 파일 그룹  
+## <a name="spatial-indexes-and-filegroups"></a>공간 인덱스 및 파일 그룹
+
  기본적으로 공간 인덱스는 인덱스가 지정된 테이블과 같은 파일 그룹으로 분할됩니다. 이는 파일 그룹 지정을 통해 다시 정의할 수 있습니다.  
   
  [ ON { *filegroup_name* | "default" } ]  
   
  공간 인덱스의 파일 그룹을 지정하면 인덱스가 테이블의 파티션 구성표에 관계없이 해당 파일 그룹에 생성됩니다.  
   
-## <a name="catalog-views-for-spatial-indexes"></a>공간 인덱스의 카탈로그 뷰  
+## <a name="catalog-views-for-spatial-indexes"></a>공간 인덱스의 카탈로그 뷰
+
  공간 인덱스와 관련된 카탈로그 뷰는 다음과 같습니다.  
   
  [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)  
@@ -547,25 +490,29 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)  
  공간 분할 구성표 및 각 공간 인덱스의 매개 변수에 대한 정보를 나타냅니다.  
   
-## <a name="additional-remarks-about-creating-indexes"></a>인덱스 작성에 대한 추가 주의 사항  
+## <a name="additional-remarks-about-creating-indexes"></a>인덱스 만들기에 대한 추가 주의 사항
+
  인덱스를 작성하는 방법은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)에서 "주의 사항" 섹션을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한
+
  사용자에게 테이블 또는 뷰에 대한 ALTER 권한이 있거나 sysadmin 고정 서버 역할, db_ddladmin 및 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1. geometry 열에 공간 인덱스 만들기  
+### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>1. geometry 열에 공간 인덱스 만들기
+
  다음 예에서는 **geometry** 형식 열 `geometry_col`을 포함하는 `SpatialTable` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
    ON SpatialTable(geometry_col)  
    WITH ( BOUNDING_BOX = ( 0, 0, 500, 200 ) );  
 ```  
   
-### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2. geometry 열에 공간 인덱스 만들기  
+### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>2. geometry 열에 공간 인덱스 만들기
+
  다음 예에서는 `SIndx_SpatialTable_geometry_col2` 테이블의 `geometry_col`에 두 번째 공간 인덱스 `SpatialTable`를 만듭니다. 이 예에서는 `GEOMETRY_GRID`를 공간 분할 구성표로 지정합니다. 또한 경계 상자를 지정하고 표 수준마다 다른 밀도를 지정하며 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
 ```sql  
@@ -579,7 +526,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>3. geometry 열에 공간 인덱스 만들기  
+### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. geometry 열에 공간 인덱스 만들기
+
  다음 예에서는 `SIndx_SpatialTable_geometry_col3` 테이블의 `geometry_col`에 세 번째 공간 인덱스 `SpatialTable`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정하고 셋째와 넷째 수준에 다른 셀 밀도를 사용하며 개체당 셀 수로 기본값을 사용합니다.  
   
 ```sql  
@@ -590,7 +538,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
     GRIDS = ( LEVEL_4 = HIGH, LEVEL_3 = MEDIUM ) );  
 ```  
   
-### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 공간 인덱스와 관련된 옵션 변경  
+### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. 공간 인덱스와 관련된 옵션 변경
+
  다음 예에서는 새 `SIndx_SpatialTable_geography_col3` 밀도를 지정하고 DROP_EXISTING을 ON으로 설정하여 이전 예에서 만든 공간 인덱스 `LEVEL_3`을 다시 작성합니다.  
   
 ```sql  
@@ -601,19 +550,21 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
         DROP_EXISTING = ON );  
 ```  
   
-### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. geography 열에 공간 인덱스 만들기  
+### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. geography 열에 공간 인덱스 만들기
+
  다음 예에서는 **geography** 형식 열 `geography_col`을 포함하는 `SpatialTable2` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
-CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1   
+CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
    ON SpatialTable2(object);  
 ```  
   
 > [!NOTE]  
->  geography 표 인덱스에는 경계 상자를 지정할 수 없습니다.  
+> geography 표 인덱스에는 경계 상자를 지정할 수 없습니다.
   
-### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. geography 열에 공간 인덱스 만들기  
+### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. geography 열에 공간 인덱스 만들기
+
  다음 예에서는 `SIndx_SpatialTable_geography_col2` 테이블의 `geography_col`에 두 번째 공간 인덱스 `SpatialTable2`를 만듭니다. 이 예에서는 `GEOGRAPHY_GRID`를 공간 분할 구성표로 지정합니다. 또한 수준마다 다른 표 밀도를 지정하고 개체당 64셀을 지정합니다. 인덱스 패딩은 `ON`으로 설정합니다.  
   
 ```sql  
@@ -626,7 +577,8 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
     PAD_INDEX  = ON );  
 ```  
   
-### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. geography 열에 공간 인덱스 만들기  
+### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. geography 열에 공간 인덱스 만들기
+
  다음 예에서는 `SIndx_SpatialTable_geography_col3` 테이블의 `geography_col`에 세 번째 공간 인덱스 `SpatialTable2`을 만듭니다. 이 예에서는 기본 공간 분할 구성표인 GEOGRAPHY_GRID와 기본 CELLS_PER_OBJECT 값(16)을 사용합니다.  
   
 ```sql  
@@ -635,21 +587,20 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
    WITH ( GRIDS = ( LEVEL_3 = HIGH, LEVEL_2 = HIGH ) );  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)   
- [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.spatial_index_tessellations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)   
- [sys.spatial_indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:
+
+- [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+- [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
+- [CREATE PARTITION SCHEME&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+- [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
+- [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
+- [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+- [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+- [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
+- [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
+- [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
+- [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
+- [sys.spatial_index_tessellations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
+- [sys.spatial_indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
+- [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)  

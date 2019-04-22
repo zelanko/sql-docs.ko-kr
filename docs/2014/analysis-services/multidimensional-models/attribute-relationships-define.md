@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241241"
 ---
 # <a name="define-attribute-relationships"></a>특성 관계 정의
@@ -48,6 +48,6 @@ ms.locfileid: "59241241"
 >  특성 관계를 잘못 정의하면 유효하지 않은 쿼리 결과를 얻을 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [의 차원 디자이너에 있는 차원 구조 뷰의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [에서 차원 디자이너의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

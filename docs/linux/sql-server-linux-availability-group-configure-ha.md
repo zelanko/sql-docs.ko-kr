@@ -12,10 +12,10 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872203"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>구성 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해
@@ -72,7 +72,7 @@ ms.locfileid: "58872203"
 
 자동 장애 조치를 보장 하는 고가용성 구성에 대 한 AG에 3 개 이상의 복제본에 필요 합니다. 고가용성을 지원할 수 있습니다 다음 구성 중 하나:
 
-- [동기 복제본 3](sql-server-linux-availability-group-ha.md#threeSynch)
+- [세 개의 동기 복제본](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [두 개의 동기 복제본 plus 구성 복제본](sql-server-linux-availability-group-ha.md#twoSynch)
 

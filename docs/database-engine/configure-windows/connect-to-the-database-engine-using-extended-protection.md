@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657807"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774548"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 **버전부터는** 확장된 보호 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]가 지원됩니다. **인증에 대한 확장된 보호** 는 운영 체제에서 구현하는 네트워크 구성 요소의 기능입니다. **확장된 보호** 는 Windows 7 및 Windows Server 2008 R2에서 지원됩니다. **확장된 보호** 는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 운영 체제의 경우에는 서비스 팩에 포함되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장된 보호 **를 사용하여 연결하면**의 보안이 강화됩니다.  
   
 > [!IMPORTANT]  
->  Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](https://support.microsoft.com/kb/968389)를 참조하십시오.  
+> Windows에서는 기본적으로 **확장된 보호** 를 사용할 수 없습니다. Windows에서 **확장된 보호** 를 사용하는 방법은 [인증에 대한 확장된 보호](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)를 참조하십시오.
   
 ## <a name="description-of-extended-protection"></a>확장된 보호 설명  
  **확장된 보호** 는 서비스 바인딩 및 채널 바인딩을 사용하여 인증 릴레이 공격을 방지합니다. 인증 릴레이 공격에서는 NTLM 인증을 수행할 수 있는 클라이언트(예: Windows 탐색기, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, .NET SqlClient 애플리케이션 등)가 악의적인 CIFS 파일 서버 등의 공격자에 연결하면, 공격자가 클라이언트 자격 증명을 사용해 클라이언트로 가장하여 서비스(예: [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스의 인스턴스)로 인증하게 됩니다.  

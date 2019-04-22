@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240371"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "59240371"
 > [!NOTE]  
 >  이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 결과에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR 또는 DT_STR 데이터 형식이 있는 경우 식의 계산 결과에 대해 4000자 제한이 있었습니다. 이제 이 제한이 제거되었습니다.  
   
- 특정 연산자와 함수를 사용하는 예제 식을 보려면 이 항목의 각 연산자와 함수에 대해 설명된 항목인 [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)를 참조하세요.  
+ 특정 연산자와 함수를 사용 하는 샘플 식에 대 한 각 연산자와 함수 항목에 대 한 항목을 참조 하세요. [연산자&#40;SSIS 식&#41;](operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](functions-ssis-expression.md)를 참조하세요.  
   
  여러 개의 연산자 및 함수뿐만 아니라 식별자와 리터럴도 사용하는 샘플 식은 [고급 Integration Services 식의 예](examples-of-advanced-integration-services-expressions.md)를 참조하세요.  
   

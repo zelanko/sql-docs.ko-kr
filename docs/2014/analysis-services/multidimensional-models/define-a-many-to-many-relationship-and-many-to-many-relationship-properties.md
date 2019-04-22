@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242481"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
@@ -122,7 +122,7 @@ ms.locfileid: "59242481"
   
 11. 큐브의 이름을 지정하고 **마침**을 클릭합니다.  
   
-#### <a name="step-3-define-many-to-many-relationship"></a>3단계: 다 대 다 관계 정의  
+#### <a name="step-3-define-many-to-many-relationship"></a>3단계: 정의 다 대 다 관계  
   
 1.  큐브 디자이너에서 차원 용도 탭을 클릭합니다. **Dim Sales Reason** 및 **Fact Internet Sales**간에 이미 다 대 다 관계가 있음을 확인합니다. 이전에 설명한 대로 다음 아이콘은 다 대 다 관계를 나타냅니다.  
   
@@ -180,16 +180,16 @@ ms.locfileid: "59242481"
 ##  <a name="bkmk_Learn"></a> Learn more  
  개념을 완전히 이해하는 데 유용한 추가 정보를 얻으려면 다음 링크를 사용하십시오.  
   
- [Analysis Services에서 다 대 다 차원을 정의하는 방법](../lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Analysis Services의 다 대 다 차원 정의](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [다 대 다 혁명 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [자습서: SQL Server Analysis Services의 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [자습서: SQL Server Analysis Services 다 대 다 대 다 차원 예제](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
- [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   
+ [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)   
+ [Analysis Services 프로젝트 & #40; 배포 SSDT & #41;](deploy-analysis-services-projects-ssdt.md)   
  [다차원 모델의 큐브 뷰](perspectives-in-multidimensional-models.md)  
   
   

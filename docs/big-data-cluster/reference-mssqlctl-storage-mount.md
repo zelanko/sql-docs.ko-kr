@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3ad8a97bac1f708dcf01612368c76d584fa39f5c
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860294"
 ---
 # <a name="mssqlctl-storage-mount"></a>mssqlctl 스토리지 탑재
@@ -26,8 +26,8 @@ ms.locfileid: "58860294"
 
 |||
 |---|---|
-| [만들기](#create) | HDFS에서 원격 저장소의 탑재를 만듭니다. |
-| [삭제](#delete) | HDFS의 원격 저장소의 탑재를 삭제 합니다. |
+| [create](#create) | HDFS에서 원격 저장소의 탑재를 만듭니다. |
+| [delete](#delete) | HDFS의 원격 저장소의 탑재를 삭제 합니다. |
 | [상태](#status) | Mount(s)의 상태입니다. |
 
 ## <a id="create"></a> mssqlctl 저장소 탑재 만들기

@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241513"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
   `sqlps` 유틸리티는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자와 cmdlet이 로드 및 등록된 Windows PowerShell 2.0 세션을 시작합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 및 해당 개체와 함께 작동하는 PowerShell 명령 또는 스크립트를 입력할 수 있습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 사용 된 `sqlps` PowerShell 모듈 대신 합니다. 에 대 한 자세한 내용은 합니다 `sqlps` 모듈을 참조 하세요 [SQLPS 모듈 가져오기](../database-engine/import-the-sqlps-module.md)합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] 대신 `sqlps` PowerShell 모듈을 사용하십시오. 에 대 한 자세한 내용은 합니다 `sqlps` 모듈을 참조 하세요 [SQLPS 모듈 가져오기](../database-engine/import-the-sqlps-module.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241513"
  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 `sqlps` 유틸리티 버전은 Windows PowerShell 1.0 미니 셸로 구현되었습니다. 미니 셸에는 사용자가 미니 셸에서 로드하는 스냅인 이외의 스냅인을 로드할 수 없는 것과 같은 몇 가지 제한 사항이 있습니다. 이러한 제한 사항은 `sqlps` 모듈을 사용하도록 변경된 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상 버전의 유틸리티에는 적용되지 않습니다.  
   
 ## <a name="examples"></a>예  
- **1. 저작권 배너를 표시하지 않고 sqlps 유틸리티를 기본 대화형 모드로 실행합니다.**  
+ **A. 저작권 배너를 표시하지 않고 sqlps 유틸리티를 기본 대화형 모드로 실행합니다.**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **2. 명령 프롬프트에서 SQL Server PowerShell 스크립트를 실행합니다.**  
+ **B. 명령 프롬프트에서 SQL Server PowerShell 스크립트를 실행합니다.**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **3. 명령 프롬프트에서 SQL Server PowerShell 스크립트를 실행하고 스크립트가 완료된 후에도 계속 실행되도록 합니다.**  
+ **C. 명령 프롬프트에서 SQL Server PowerShell 스크립트를 실행하고 스크립트가 완료된 후에도 계속 실행되도록 합니다.**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

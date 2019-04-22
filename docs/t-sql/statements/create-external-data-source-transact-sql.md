@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421200"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516529"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수직 분할)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/)을 참조하세요.  
 
 **BLOB_STORAGE**   
-이 유형은 대량 작업의 경우에만 사용되며, `LOCATION`은 Azure Blob 스토리지 및 컨테이너에 유효한 URL이어야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오. Blob 개체가 public이 아닌 경우 `CREDENTIAL`이 필요합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 
+이 유형은 대량 작업의 경우에만 사용되며, `LOCATION`은 Azure Blob 스토리지 및 컨테이너에 유효한 URL이어야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오. Blob 개체가 public이 아닌 경우 `CREDENTIAL`이 필요합니다. 예를 들어 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -216,7 +216,7 @@ WITH (  TYPE = BLOB_STORAGE,
         CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
 );
 ```
-사용된 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 사용하여 생성해야 하고 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC). 예를 들어 다음과 같이 사용할 수 있습니다.
+사용된 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 사용하여 생성해야 하고 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC). 예를 들어
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -302,7 +302,7 @@ CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential
   
 -   외부 데이터 원본과 외부 파일 형식을 참조하는 외부 테이블.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SQL DW, SQL Server, APS 2016 및 SQL DB의 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
 > [!IMPORTANT]  
@@ -325,6 +325,10 @@ Hadoop NameNode 장애 조치(Failover) 시 성공적인 PolyBase를 보장하�
  같은 Hadoop 클러스터 위치에 정의된 모든 데이터 원본은 RESOURCE_MANAGER_LOCATION 또는 JOB_TRACKER_LOCATION에 대해 같은 설정을 사용해야 합니다. 일관되지 않은 부분이 있으면 런타임 오류가 발생합니다.  
   
  Hadoop 클러스터가 이름을 사용하여 설정되었는데 외부 데이터 원본이 클러스터 위치에 대해 IP 주소를 사용하는 경우, PolyBase는 데이터 원본이 사용될 때 클러스터 이름을 여전히 확인할 수 있어야 합니다. 이름을 확인하려면 DNS 전달자를 활성화해야 합니다.  
+ 
+현재 `hadoop` 형식을 사용하는 SAS 토큰은 지원되지 않으며, 스토리지 계정 액세스 키를 사용하는 SAS 토큰만 지원됩니다. `hadoop` 형식을 사용하여 외부 데이터 원본을 만들려는 시도 및 SAS 자격 증명 사용은 실패하고 다음 오류가 나타날 수 있습니다.
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>잠금  
  EXTERNAL DATA SOURCE 개체에 대해 공유 잠금을 적용합니다.  

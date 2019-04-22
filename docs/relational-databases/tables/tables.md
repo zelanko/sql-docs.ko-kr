@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3498d05f32abac1a8ffccf408c4b4af30023ed8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c32afdaf39f924c8c734c12df2991dd29fad75d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664922"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774598"
 ---
 # <a name="tables"></a>테이블
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "51664922"
 ## <a name="types-of-tables"></a>테이블 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 기본 사용자 정의 테이블의 표준 역할 외에도 데이터베이스에서 특수한 용도로 사용되는 다음과 같은 테이블 유형을 제공합니다.  
   
- 분할된 테이블  
+### <a name="partitioned-tables"></a>분할된 테이블  
  분할된 테이블은 데이터가 수평 분할된 단위로 되어 데이터베이스의 여러 파일 그룹에 분산될 수 있는 테이블입니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하거나 관리하면서 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 더욱 편리하게 관리할 수 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 최대 15,000개의 파티션을 지원합니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
- 임시 테이블  
+### <a name="temporary-tables"></a>임시 테이블  
  임시 테이블은 **tempdb**에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다.  
   
- 시스템 테이블  
+### <a name="system-tables"></a>시스템 테이블  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버와 서버의 모든 테이블에 대한 구성을 정의하는 데이터를 시스템 테이블이라고 알려진 특수한 테이블 집합에 저장합니다. 사용자는 시스템 테이블을 직접 쿼리하거나 업데이트할 수 없습니다. 시스템 테이블의 정보는 시스템 뷰를 통해 사용할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
- 넓은 테이블  
+### <a name="wide-tables"></a>넓은 테이블  
  넓은 테이블에서는 [스파스 열](../../relational-databases/tables/use-sparse-columns.md) 을 사용하여 테이블이 포함할 수 있는 전체 열을 최대 30,000개까지 늘립니다. 스파스 열은 Null 값에 대해 최적화된 스토리지가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 넓은 테이블은 테이블의 모든 스파스 열을 구조화된 출력으로 결합하는 형식화되지 않은 XML 표현인 [열 집합](../../relational-databases/tables/use-column-sets.md)을 정의했습니다. 인덱스 및 통계 수도 각각 1,000개와 30,000개로 늘어납니다. 넓은 테이블 행의 최대 크기는 8,019바이트입니다. 따라서 특정 행에 포함된 대부분의 데이터는 NULL이어야 합니다. 넓은 테이블에 있는 비스파스 열과 계산 열을 더한 최대 개수는 1,024개입니다.  
   
  넓은 테이블은 성능에 다음과 같은 영향을 미칠 수 있습니다.  

@@ -9,10 +9,10 @@ ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 38f49b73201c7e708e65227540da95052a3ce018
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367221"
 ---
 # <a name="report-builder-functions---inscope-function"></a>보고서 작성기 함수 - InScope 함수

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241821"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>보고서 매개 변수(보고서 작성기 및 보고서 디자이너)
@@ -131,7 +131,7 @@ ms.locfileid: "59241821"
 |--------------|-----------------|  
 |이름|매개 변수의 대/소문자를 구분하는 이름을 입력합니다. 이 이름은 문자로 시작해야 하고 문자, 숫자 및 밑줄(_)을 포함할 수 있습니다. 이름에 공백은 포함할 수 없습니다. 자동으로 생성된 매개 변수의 이름은 데이터 세트 쿼리의 매개 변수와 일치합니다. 기본적으로 수동으로 만든 매개 변수는 ReportParameter1과 이름이 유사합니다.|  
 |프롬프트|보고서 뷰어 도구 모음에서 매개 변수 옆에 표시되는 텍스트입니다.|  
-|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean`. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime`. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text`. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대한 자세한 내용은 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)을 참조하세요.|  
+|데이터 형식|데이터 형식이 있는 경우에 사용자의 드롭다운 목록에서 값 선택 매개 변수에 대해 사용 가능한 값은 정의 하는 경우 `DateTime`합니다. 보고서 매개 변수는 다음 데이터 형식 중 하나여야 합니다.<br /><br /> `Boolean` 을 참조하세요. 사용자가 라디오 단추에서 True 또는 False를 선택합니다.<br /><br /> `DateTime` 을 참조하세요. 사용자가 달력 컨트롤에서 날짜를 선택합니다.<br /><br /> **Integer**. 사용자가 입력란에 값을 입력합니다.<br /><br /> **Float**. 사용자가 입력란에 값을 입력합니다.<br /><br /> `Text` 을 참조하세요. 사용자가 입력란에 값을 입력합니다.<br /><br /> 보고서 데이터 형식에 대한 자세한 내용은 [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)을 참조하세요.|  
 |빈 값 허용|매개 변수 값에 빈 문자열이나 공백을 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 공백 값을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 공백 값을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 공백이 자동으로 포함되지는 않습니다.|  
 |Null 값 허용|매개 변수 값이 Null이 될 수 있도록 허용하려면 이 옵션을 선택합니다.<br /><br /> 매개 변수에 대한 유효한 값을 지정할 경우 null을 유효한 값 중 하나로 허용하려면 지정한 값 중 하나로 null을 포함시켜야 합니다. 이 옵션을 선택해도 사용 가능한 값에 null이 자동으로 포함되지는 않습니다.|  
 |다중 값 허용|사용자가 선택할 수 있는 드롭다운 목록을 만드는 데 사용 가능한 값을 제공합니다. 이렇게 하면 데이터 세트 쿼리에서 유효한 값만 제출되도록 할 수 있습니다.<br /><br /> 매개 변수의 값이 드롭다운 목록에 표시되는 다중 값이 될 수 있도록 허용하려면 이 옵션을 선택합니다. Null 값은 허용되지 않습니다. 이 옵션을 선택하면 매개 변수 드롭다운 목록의 사용 가능한 값 목록에 확인란이 추가되고 목록의 맨 위에 **모두 선택**에 대한 확인란이 포함됩니다. 사용자는 원하는 값을 선택할 수 있습니다.<br /><br /> 값을 제공하는 데이터가 빠르게 변동될 경우 사용자에게 표시되는 목록이 최신 상태가 아닐 수도 있습니다.|  
@@ -160,7 +160,7 @@ ms.locfileid: "59241821"
   
 -   **캐시된 보고서.** 보고서에 대한 캐시 계획을 만들려면 각 매개 변수에 기본값이 있어야 합니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
--   **캐시된 공유 데이터 세트.** 공유 데이터 세트에 대한 캐시 계획을 만들려면 각 매개 변수에 기본값이 있어야 합니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
+-   **캐시된 공유 데이터 집합.** 공유 데이터 세트에 대한 캐시 계획을 만들려면 각 매개 변수에 기본값이 있어야 합니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
 -   **링크된 보고서.** 다양한 대상에 대한 데이터를 필터링하기 위해 미리 설정된 매개 변수 값을 사용하여 링크된 보고서를 만들 수 있습니다. 자세한 내용은 [연결된 보고서 만들기](../reports/create-a-linked-report.md)를 참조하세요.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "59241821"
   
 -   [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
--   [데이터 세트에 필터 추가&amp;#40;보고서 작성기 및 SSRS&amp;#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+-   [데이터 집합에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
 -   [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
@@ -227,9 +227,9 @@ ms.locfileid: "59241821"
 ##  <a name="bkmk_Related_Topics"></a> 관련 내용  
  [SSRS 보고서 매개 변수(퀴즈) 구성(영문)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Reporting Services에서 InvalidReportParameterException의 비밀 알아보기](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [보고 서비스에서 InvalidReportParameterException의 발생을 버스팅](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [보고서 예제(보고서 작성기 및 SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

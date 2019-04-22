@@ -1,7 +1,7 @@
 ---
 title: Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell | Microsoft 문서
 ms.custom: ''
-ms.date: 05/20/2016
+ms.date: 05/21/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e32f92112844e8a291d212e271281636df55e1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512889"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242471"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Azure Blob Storage에 여러 데이터베이스 백업 - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,14 @@ ms.locfileid: "52512889"
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>다중 데이터베이스, 다중 인스턴스 백업 작업에 대한 PowerShell  
  아래의 섹션들에는 여러 SQL Server 인스턴스에서 SQL 자격 증명을 만들고, 한 SQL Server 인스턴스의 모든 사용자 데이터베이스를 백업하는 등의 다양한 작업에 대한 스크립트가 포함되어 있습니다. 이러한 스크립트를 사용하여 사용자 환경의 요구 사항에 따라 백업 작업을 자동화하거나 예약할 수 있습니다. 여기에 있는 스크립트는 예로 제공되었으며 사용자 환경에 맞게 수정하거나 확장할 수 있습니다.  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  예제 스크립트에 대한 고려 사항은 다음과 같습니다.  
   
 1.  **SQL Server PowerShell 경로 탐색:** Windows PowerShell은 cmdlet을 구현하여 PowerShell 공급자가 지원하는 개체의 계층 구조를 나타내는 경로 구조를 탐색합니다. 경로의 노드를 탐색한 후 다른 cmdlet을 사용하여 현재 개체에 대한 기본 작업을 수행할 수 있습니다.  
   
-2.  **Get-ChildItem** cmdlet: **Get-ChildItem** 이 반환하는 정보는 SQL Server PowerShell 경로에서의 위치에 따라 달라집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또 다른 예로, 위치가 데이터베이스와 같은 개체 수준에 있으면 이 cmdlet은 데이터베이스 개체의 목록을 반환합니다.  기본적으로 **Get-ChildItem** cmdlet은 시스템 개체를 반환하지 않습니다.  –Force 매개 변수를 사용하면 시스템 개체를 표시할 수 있습니다.  
+2.  **Get-ChildItem** cmdlet: **Get-ChildItem**이 반환하는 정보는 SQL Server PowerShell 경로에서의 위치에 따라 달라집니다. 예를 들어 위치가 컴퓨터 수준에 있는 경우 이 cmdlet은 컴퓨터에 설치된 모든 SQL Server 데이터베이스 엔진 인스턴스를 반환합니다. 또 다른 예로, 위치가 데이터베이스와 같은 개체 수준에 있으면 이 cmdlet은 데이터베이스 개체의 목록을 반환합니다.  기본적으로 **Get-ChildItem** cmdlet은 시스템 개체를 반환하지 않습니다.  –Force 매개 변수를 사용하면 시스템 개체를 표시할 수 있습니다.  
   
      자세한 내용은 [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md)을 참조하세요.  
   
@@ -268,7 +270,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

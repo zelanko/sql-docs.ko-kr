@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242301"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
@@ -80,7 +80,7 @@ ms.locfileid: "59242301"
 ##  <a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
- **변수**  
+ **옵션**  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "59242301"
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
 ##  <a name="NetApp"></a> .Net Framework 응용 프로그램 사용  
- **.Net Framework 애플리케이션에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
+ **.Net Framework 응용 프로그램에서 Export() 메서드를 사용하여 DAC를 내보냅니다.**  
   
  코드 예제를 보려면 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 애플리케이션을 다운로드합니다.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "59242301"
 3.  `Export` 형식의 `Microsoft.SqlServer.Management.Dac.DacStore` 메서드를 사용하여 DAC를 내보냅니다. 내보낼 DAC의 이름과 내보내기 파일을 배치할 폴더의 경로를 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [개체 탐색기](data-tier-applications.md)   
+ [데이터 계층 응용 프로그램](data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](extract-a-dac-from-a-database.md)  
   
   

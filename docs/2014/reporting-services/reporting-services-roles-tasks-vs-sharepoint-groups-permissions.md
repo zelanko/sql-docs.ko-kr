@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241561"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
@@ -42,9 +42,9 @@ ms.locfileid: "59241561"
 -   [기본 모드 태스크 및 SharePoint 권한 비교](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 권한 도구 비교 및 용어  
- **기본 모드:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 권한 개체(역할 및 태스크)는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 생성되어 보고서 관리자에서 개별 사용자에 대해 구성됩니다.  
+ **기본 모드:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 권한 개체 (역할 및 태스크)에서 만들어진 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 보고서 관리자에서 개별 사용자에 대해 구성 합니다.  
   
- **SharePoint 모드:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에는 SharePoint 권한 기능이 사용됩니다. SharePoint 그룹 및 권한은 다음 **사이트 설정** 페이지에서 관리됩니다.  
+ **SharePoint 모드:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 권한 기능이 사용 됩니다. SharePoint 그룹 및 권한은 다음 **사이트 설정** 페이지에서 관리됩니다.  
   
  다음 표에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드와 SharePoint 사이의 권한 관련 개체 및 개념을 비교해서 보여줍니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59241561"
 ##  <a name="bkmk_compare_roles_groups"></a> 기본 모드 역할 및 SharePoint 그룹 비교  
  다음 표에서는 기본 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 미리 정의된 역할 정의를 표준 SharePoint 그룹과 비교합니다. SharePoint 그룹이 원하는 특정 역할과 일치하지 않는 경우 SharePoint에서 사용자 지정 그룹을 만들고 사용 권한 수준을 할당할 수 있습니다.  
   
- **참고**: 사용 가능한 기본 SharePoint 그룹은 SharePoint 사이트를 만드는 데 사용되는 사이트 템플릿에 따라 다릅니다.  
+ **참고**: 사용 가능한 기본 SharePoint 그룹은 SharePoint 사이트를 만드는 데 사이트 템플릿에 따라 다릅니다.  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 역할|SharePoint 그룹|  
 |--------------------------------------|-----------------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "59241561"
   
 ## <a name="see-also"></a>관련 항목  
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [역할 정의](security/role-definitions.md)   
  [미리 정의된 역할](security/role-definitions-predefined-roles.md)  

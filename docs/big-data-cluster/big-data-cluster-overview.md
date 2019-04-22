@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860255"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터란 무엇인가요?
@@ -78,8 +78,8 @@ Kubernetes는 오픈 소스 컨테이너 오 케 스트레이 터를 필요에 �
 
 |||
 |:--|:--|
-| **클러스터** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
-| **노드** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
+| **Cluster** | Kubernetes 클러스터는 노드 라는 컴퓨터 집합입니다. 하나의 노드 클러스터를 제어 하 고 지정 된 마스터 노드 나머지 노드는 작업자 노드입니다. Kubernetes 마스터는 작업자 간 작업 분산 및 클러스터의 상태를 모니터링 합니다. |
+| **Node** | 노드는 컨테이너 화 된 응용 프로그램을 실행 합니다. 물리적 컴퓨터 또는 가상 컴퓨터 수 있습니다. Kubernetes 클러스터는 혼합 물리적 컴퓨터와 가상 컴퓨터 노드를 포함할 수 있습니다. |
 | **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 하나 이상의 컨테이너의 논리적 그룹-및 관련 응용 프로그램을 실행 하려면 리소스가 필요 합니다. 각 pod; 노드에서 실행 됩니다. 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터를 클러스터의 노드에 pod를 자동으로 할당합니다. |
 | &nbsp; ||
 

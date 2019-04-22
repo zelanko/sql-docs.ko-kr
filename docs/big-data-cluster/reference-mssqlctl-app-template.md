@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860104"
 ---
 # <a name="mssqlctl-app-template"></a>mssqlctl 앱 템플릿
@@ -26,7 +26,7 @@ ms.locfileid: "58860104"
 
 |||
 |---|---|
-| [목록](#list) | 지원 되는 템플릿을 가져옵니다. |
+| [list](#list) | 지원 되는 템플릿을 가져옵니다. |
 | [pull](#pull) | 지원 되는 템플릿을 다운로드 합니다. |
 
 ## <a id="list"></a> mssqlctl 앱 템플릿 목록

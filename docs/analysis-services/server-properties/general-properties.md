@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042392"
 ---
 # <a name="general-properties"></a>일반 속성
@@ -105,7 +105,7 @@ ms.locfileid: "59042392"
  이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
 > [!IMPORTANT]  
->  **ForceCommitTimeout**은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
+>  **ForceCommitTimeout** 은 큐브 처리 명령과 쓰기 저장 작업에 적용됩니다.  
   
  **IdleConnectionTimeout**  
  비활성 상태의 연결에 대한 제한 시간(초)을 지정하는 정수 속성입니다.  
@@ -144,7 +144,7 @@ ms.locfileid: "59042392"
  처리, 복원 및 기타 작업 중에 사용되는 임시 파일을 정의하기 위한 위치를 지정하는 문자열 속성입니다. 이 속성의 기본값은 설치 프로그램에 의해 결정됩니다. 지정하지 않는 경우의 기본값은 Data 디렉터리입니다.  
   
 ## <a name="requestprioritization-category"></a>RequestPrioritization 범주  
- **설정**  
+ **Enabled**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **StatisticsStoreSize**  

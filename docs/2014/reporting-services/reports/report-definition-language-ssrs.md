@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241154"
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
@@ -64,7 +64,7 @@ ms.locfileid: "59241154"
 |----------|-----------------|  
 |`Binary`|Base-64로 인코딩된 이진 값을 갖는 속성입니다.|  
 |`Boolean`|개체 값으로 `true` 또는 `false`를 갖는 속성입니다. 다르게 지정되지 않는 이상 생략된 선택적 Boolean 개체의 값은 `False`입니다.|  
-|`Date`|완전히 지정된 날짜 또는 ISO8601 날짜 형식(YYYY-MM-DD[THH:MM[:SS[.S]]])으로 지정된 날짜/시간 값을 갖는 속성입니다.|  
+|`Date`|ISO8601 날짜 형식에서 지정을 완전히 지정 된 날짜 또는 날짜/시간 값을 갖는 속성: YYYY-MM-DD[THH:MM[:SS[.S]]].|  
 |`Enum`|지정된 값 목록의 하나인 문자열 텍스트 값을 갖는 속성입니다.|  
 |`Float`|float 값을 갖는 속성입니다. 마침표(.)를 선택적 소수 구분 기호로 사용합니다.|  
 |`Integer`|정수(int32) 값을 갖는 속성입니다.|  

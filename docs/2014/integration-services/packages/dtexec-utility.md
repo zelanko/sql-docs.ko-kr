@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241908"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
@@ -43,7 +43,7 @@ ms.locfileid: "59241908"
   
 -   [매개 변수](#parameter)  
   
--   [Remarks](#remark)  
+-   [주의](#remark)  
   
 -   [예](#example)  
   
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> 실행 단계  
  이 유틸리티를 실행하면 다음 4단계가 수행됩니다.  
   
-1.  명령을 읽어들이는 단계: 명령 프롬프트는 지정된 옵션 및 인수 목록을 읽습니다. **/?** 또는 **/HELP** 옵션이 있으면 이후의 모든 단계를 건너뜁니다.  
+1.  명령 읽어들이 단계: 명령 프롬프트 옵션 및 지정 된 인수 목록을 읽습니다. **/?** 또는 **/HELP** 옵션이 있으면 이후의 모든 단계를 건너뜁니다.  
   
 2.  패키지 로드 단계: 지정 된 패키지를 `/SQL`, **파일**, 또는 `/DTS` 옵션 로드 됩니다.  
   
-3.  구성 단계: 옵션은 다음 순서로 처리됩니다.  
+3.  구성 단계: 옵션은이 순서 대로 처리 됩니다.  
   
     -   패키지 플래그, 변수 및 속성을 설정하는 옵션  
   
@@ -480,7 +480,7 @@ dtexec /option [value] [/option [value]]...
                   (선택 사항) [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 패키지의 디지털 서명을 확인하도록 합니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](../security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
     > [!IMPORTANT]  
-    >  패키지의 서명을 확인하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 디지털 서명이 있는지, 유효한지, 그리고 신뢰할 수 있는 원본에서 제공된 것인지만 확인합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지가 변경되었는지 여부는 확인하지 않습니다.  
+    >  패키지의 서명을 확인하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 디지털 서명이 있는지, 유효한지, 그리고 신뢰할 수 있는 원본에서 제공된 것인지만 확인합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지가 변경되었는지 여부는 확인하지 않습니다.  
   
     > [!NOTE]  
     >  선택적 **BlockedSignatureStates** 레지스트리 값에서 설정한 디지털 서명 옵션 보다 더 제한적인 설정을 지정할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 이 든 여 `dtexec` 명령줄입니다. 이 경우 더 제한적인 설정이 다른 설정보다 우선합니다.  
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> 예  
  다음 예제에 사용 하는 방법을 보여 줍니다 합니다 `dtexec` 명령 프롬프트 유틸리티를 구성 및 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다.  
   
- **패키지 실행**  
+ **실행 중인 패키지**  
   
  Windows 인증을 사용하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지를 실행하려면 다음 코드를 사용합니다.  
   

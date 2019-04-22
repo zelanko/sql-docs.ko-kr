@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860474"
 ---
 # <a name="mssqlctl-cluster"></a>mssqlctl 클러스터
@@ -26,10 +26,10 @@ ms.locfileid: "58860474"
 
 |||
 |---|---|
-| [만들기](#create) | 클러스터를 만듭니다. |
-| [삭제](#delete) | 클러스터를 삭제 합니다. |
+| [create](#create) | 클러스터를 만듭니다. |
+| [delete](#delete) | 클러스터를 삭제 합니다. |
 | [config](reference-mssqlctl-cluster-config.md) | 클러스터 구성 명령입니다. |
-| [디버그](reference-mssqlctl-cluster-debug.md) | 명령을 디버그 합니다. |
+| [debug](reference-mssqlctl-cluster-debug.md) | 명령을 디버그 합니다. |
 
 ## <a id="create"></a> mssqlctl 클러스터 만들기
 

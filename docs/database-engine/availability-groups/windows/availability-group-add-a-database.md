@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860444"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 데이터베이스 추가
@@ -28,7 +28,7 @@ ms.locfileid: "58860444"
   
 -   **시작하기 전 주의 사항:**  
   
-     [사전 요구 사항 및 제한 사항](#prerequisites-and-restrictions)    
+     [필수 구성 요소 및 제한 사항](#prerequisites-and-restrictions)    
      [사용 권한](#Permissions)    
 -   **가용성 그룹에 데이터베이스를 추가하려면:**  
   
@@ -113,7 +113,7 @@ ms.locfileid: "58860444"
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
--   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
  전체 예제를 보려면 아래의 [예제(PowerShell)](#PSExample)를 참조하세요.  
   

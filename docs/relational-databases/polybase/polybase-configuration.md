@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241841"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Hadoop에 대한 PolyBase 구성 및 보안
 
@@ -33,6 +33,8 @@ Hadoop 클러스터에서 통신을 보호하는 일반적인 방법은 '개인 
      <value></value>
    </property> 
 ```
+
+hadoop.rpc.protection에 대해 ‘개인 정보’ 또는 ‘무결성’을 사용하려면 SQL Server가 SQL Server 2016 SP1 CU7, SQL Server 2016 SP2 또는 SQL Server 2017 CU3 이상이어야 합니다.
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 예제 XML 파일
 
@@ -156,14 +158,14 @@ MIT KDC를 사용하여 Kerberos로 보호되는 Hadoop 클러스터에 연결�
    
 3. 구성 값을 SQL Server 컴퓨터의 해당 파일 내 value 속성에 복사합니다.  
    
-   |**#**|**구성 파일**|**구성 키**|**동작**|  
+   |**#**|**구성 파일**|**구성 키**|**작업**|  
    |------------|----------------|---------------------|----------|   
    |1|core-site.xml|polybase.kerberos.kdchost|KDC 호스트 이름을 지정합니다. 예를 들면 kerberos.your-realm.com과 같습니다.|  
-   |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 예를 들어 다음과 같이 사용할 수 있습니다. YOUR-REALM.COM|  
-   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들어 다음과 같이 사용할 수 있습니다. KERBEROS<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
+   |2|core-site.xml|polybase.kerberos.realm|Kerberos 영역을 지정합니다. 예를 들어 YOUR-REALM.COM|  
+   |3|core-site.xml|hadoop.security.authentication|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들어 KERBEROS<br></br>**보안 정보:** KERBEROS는 대문자로 작성해야 합니다. 소문자로 작성되면 실행되지 않을 수 있습니다.|   
    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: hdfs/_HOST@YOUR-REALM.COM|  
    |5|mapred-site.xml|mapreduce.jobhistory.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: mapred/_HOST@YOUR-REALM.COM|  
-   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들어 다음과 같이 사용할 수 있습니다. 10.193.26.174:10020|  
+   |6|mapred-site.xml|mapreduce.jobhistory.address|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예를 들어 10.193.26.174:10020|  
    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Hadoop 쪽 구성을 찾아 SSQL Server 컴퓨터에 복사합니다. 예: yarn/_HOST@YOUR-REALM.COM|  
 
 4. 데이터베이스 범위 자격 증명 개체를 만들어 각 Hadoop 사용자에 대해 인증 정보를 지정합니다. [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)를 참조하세요.  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241341"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소 비교
@@ -31,7 +31,7 @@ ms.locfileid: "59241341"
 |기능|Description|  
 |-------------|-----------------|  
 |두 개의 디자인 타임 모드|태스크에서든 구성 요소에서든 코드를 작성하려면 먼저 편집기에서 속성을 지정한 다음 개발 환경으로 전환합니다.|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|태스크와 구성 요소는 모두 동일한 VSTA IDE를 사용하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#에서 작성된 코드를 지원합니다.|  
+|VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)|태스크와 구성 요소는 모두 동일한 VSTA IDE를 사용하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#에서 작성된 코드를 지원합니다.|  
 |미리 컴파일된 스크립트|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 이상에서는 모든 스크립트가 미리 컴파일되어 있습니다. 이전 버전에서는 스크립트가 미리 컴파일되었는지를 지정할 수 있었습니다.<br /><br /> 스크립트는 보다 빠르게 실행될 수 있도록 이진 코드로 미리 컴파일되지만 이 경우 패키지 크기는 늘어납니다.|  
 |디버깅|태스크 및 구성 요소 모두 디자인 환경에서 디버깅하는 동안 중단점과 단계별 코드 실행을 지원합니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](../control-flow/script-task.md) 및 [코딩 and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md 합니다.|  
   

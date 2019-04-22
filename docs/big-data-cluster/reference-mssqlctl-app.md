@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860654"
 ---
 # <a name="mssqlctl-app"></a>mssqlctl 앱
@@ -26,11 +26,11 @@ ms.locfileid: "58860654"
 
 |||
 |---|---|
-| [만들기](#create) | 응용 프로그램을 만듭니다. |
-| [삭제](#delete) | 응용 프로그램을 삭제 합니다. |
+| [create](#create) | 응용 프로그램을 만듭니다. |
+| [delete](#delete) | 응용 프로그램을 삭제 합니다. |
 | [describe](#describe) | 응용 프로그램에 설명 합니다. |
-| [Init](#init) | Kickstart 새 응용 프로그램 구조입니다. |
-| [목록](#list) | 응용 프로그램을 나열 합니다. |
+| [init](#init) | Kickstart 새 응용 프로그램 구조입니다. |
+| [list](#list) | 응용 프로그램을 나열 합니다. |
 | [run](#run) | 응용 프로그램을 실행 합니다. |
 | [update](#update) | 응용 프로그램을 업데이트 합니다. |
 | [template](reference-mssqlctl-app-template.md) | 템플릿 명령입니다. |

@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0923e52610d5fd0c7907d3edaa061073989d582e
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241907"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -51,7 +51,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 
 _릴리스 날짜:_ &nbsp; 2019년 1월 28일  
 _빌드 번호:_ &nbsp; 14.0.16186.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -61,7 +61,7 @@ _Visual Studio 2017용 SSDT._
 | :------- | :------ |
 | ADF 2017의 SSIS용 파워 쿼리 원본(미리 보기)을 추가합니다. | &nbsp; |
 | SQL Server 2012에 대한 지원을 다시 추가합니다. | &nbsp; |
-| SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다. | &nbsp; |
+| SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다. | SQL Server 2019에 대한 Oracle 원본 및 대상은 SSDT에 의해 이미 설치되어 있습니다.<br/><br/>서버 버전 2017 이하를 대상으로 하는 패키지를 디자인하려면 Microsoft 다운로드 사이트에서 해당 Oracle 커넥터 버전을 다운로드하여 SSDT 머신에 설치하세요. <br/>[SQL Server 2017을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[SQL Server 2016을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[SQL Server 2014를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[SQL Server 2012를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다. | &nbsp; |
 | 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다. | &nbsp; |
 | 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. | &nbsp; |
@@ -85,7 +85,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 11월 5일  
 _빌드 번호:_ &nbsp; 14.0.16182.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 **SSIS:**
@@ -101,7 +101,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 9월 27일  
 _빌드 번호:_ &nbsp; 14.0.16179.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -121,7 +121,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 9월 5일  
 _빌드 번호:_ &nbsp; 14.0.16174.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -144,7 +144,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 7월 2일  
 _빌드 번호:_ &nbsp; 14.0.16167.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -167,7 +167,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 6월 4일  
 _빌드 번호:_ &nbsp; 14.0.16165.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -192,7 +192,7 @@ _Visual Studio 2017용 SSDT._
 
 _릴리스 날짜:_ &nbsp; 2018년 4월 10일  
 _빌드 번호:_ &nbsp; 14.0.16162.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -220,7 +220,7 @@ _Visual Studio 2017용 SSDT._
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2,&nbsp; VS 2017용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.16156.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -243,7 +243,7 @@ _Visual Studio 2017용 SSDT._
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1,&nbsp; VS 2017용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.16148.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -257,7 +257,7 @@ Visual Studio 2017(15.5.1)은 설치 관리자에 대한 다음과 같은 버그
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0,&nbsp; VS 2017용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.16146.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -267,13 +267,13 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 1. 설치 UI가 지역화됩니다.
 1. 아이콘이 더 높은 품질 버전으로 바뀝니다.
 
-**IS(Integration Services)**
+**Integration Services(IS)**
 1. ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](../integration-services/lift-shift/ssis-azure-validate-packages.md)를 참조하세요.
 1. SSIS 확장이 지역화됩니다.
 
 ### <a name="bug-fixes"></a>버그 수정
 
-**IS(Integration Services)**
+**Integration Services(IS)**
 1. OLEDB 및 ADO.NET 연결 관리자의 레이아웃이 손상되는 문제를 수정했습니다.
 2. 차원 처리 작업을 편집하려고 할 때 어셈블리를 찾을 수 없는 오류가 발생하는 문제를 수정했습니다.
 
@@ -284,7 +284,7 @@ Visual Studio 2017용 SSDT(15.5.0)가 미리 보기에서 GA(일반 공급)로 �
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3,&nbsp; VS 2015용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.61712.050  
-_Visual Studio 2015용 SSDT._
+_Visual Studio 2015용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -294,7 +294,7 @@ _Visual Studio 2015용 SSDT._
   - 자동 형식 검색 - 사용하도록 설정할 경우 최신 데이터 원본에 대한 쿼리 편집기는 구조화되지 않은 쿼리가 로드되면 이러한 쿼리의 데이터 형식을 검색하려고 시도합니다. 검색에 성공하면 쿼리에 새 단계가 추가될 수 있습니다.
   - 백그라운드 분석 실행 - 사용하도록 설정할 경우 최신 데이터 원본에 대한 쿼리 편집기는 쿼리의 출력 스키마를 분석하기 위해 쿼리가 로드되면 데이터 원본에 대해 쿼리를 실행합니다.
 
-**IS(Integration Services)**
+**Integration Services(IS)**
 - ADF에서 Azure SSIS IR에 배포할 때 사용하는 배포 마법사에서, Azure SSIS IR에서 실행되는 SSIS 패키지의 잠재적 호환성 문제를 검색하는 패키지 유효성 검사 단계가 추가되었습니다. 자세한 내용은 [Azure에 배포된 SSIS 패키지 유효성 검사](../integration-services/lift-shift/ssis-azure-validate-packages.md)를 참조하세요.
 
 
@@ -333,7 +333,7 @@ _Visual Studio 2015용 SSDT._
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0(미리 보기),&nbsp; VS 2017용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.16134.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
   
 ### <a name="whats-new"></a>새로운 기능
 
@@ -366,7 +366,7 @@ _Visual Studio 2017용 SSDT._
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30,&nbsp; VS 2015용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.61709.290  
-_Visual Studio 2015용 SSDT._
+_Visual Studio 2015용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -391,7 +391,7 @@ _Visual Studio 2015용 SSDT._
 
 - 새 보고서 프로젝트 형식은 소스 제어 바인딩을 유지하지 않고 메시지와 유사한 오류를 발생시킵니다.
 
-   *프로젝트 파일 C:\path는 소스 제어에 바인딩되지 않지만 솔루션은 소스 제어 바인딩 정보를 포함합니다.*
+   *프로젝트 파일 C:\path는 원본 제어에 바인딩되지 않지만 솔루션은 원본 제어 바인딩 정보를 포함합니다.*
  
    이 문제를 해결하려면 솔루션을 열 때마다 **솔루션 바인딩 사용**을 클릭합니다.
 
@@ -459,7 +459,7 @@ _Visual Studio 2015용 SSDT._
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0(미리 보기),&nbsp; VS 2017용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.16121.0  
-_Visual Studio 2017용 SSDT._
+_Visual Studio 2017용 SSDT_
   
 ### <a name="whats-new"></a>새로운 기능
 
@@ -477,7 +477,7 @@ _Visual Studio 2017용 SSDT._
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2,&nbsp; VS 2015용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.61707.300  
-_Visual Studio 2015용 SSDT._
+_Visual Studio 2015용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 
@@ -493,7 +493,7 @@ _Visual Studio 2015용 SSDT._
 **일반**
 - SQL Server 2017에 대한 브랜딩 참조가 업데이트됨.
 
-**AS 프로젝트:**
+**AS 프로젝트**
 - DAX 측정값 변경 내용 및 기타 모델 편집 내용을 커밋할 때 환경 개선을 위해 중대한 성능을 수정함.
 - Analysis Services 프로젝트에서 1400 호환성 수준의 테이블 형식 모델을 사용하여 파워 쿼리 통합과 관련된 여러 가지 문제를 해결함.
 - VS2017의 다차원 프로젝트에서 디자인 집계 디자이너가 로드에 실패할 수 있는 문제를 해결함.
@@ -526,7 +526,7 @@ _Visual Studio 2015용 SSDT._
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10,&nbsp; VS 2015용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.61705.170  
-_Visual Studio 2015용 SSDT._
+_Visual Studio 2015용 SSDT_
 
 ### <a name="whats-new"></a>새로운 기능
 **AS 프로젝트:**
@@ -560,8 +560,8 @@ _Visual Studio 2015용 SSDT._
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0,&nbsp; VS 2015용 SSDT
 
 _빌드 번호:_ &nbsp; 14.0.61704.140  
-_Visual Studio 2015용 SSDT._  
-_SQL Server 2017까지 지원._
+_Visual Studio 2015용 SSDT_  
+_SQL Server 2017까지 지원_
 
 ### <a name="whats-new"></a>새로운 기능
 **데이터베이스 프로젝트:**
@@ -665,8 +665,8 @@ _SQL Server 2017까지 지원._
 
 _릴리스 날짜:_ &nbsp; 2016년 10월 20일  
 _빌드 번호:_ &nbsp; 14.0.61021.0  
-_Visual Studio 2015용 SSDT._  
-_SQL Server 2016까지 지원._
+_Visual Studio 2015용 SSDT_  
+_SQL Server 2016까지 지원_
 
 **새로운 기능**
 
@@ -758,13 +758,13 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 _릴리스 날짜:_ &nbsp; 2016년 9월 20일  
 _빌드 번호:_ &nbsp; 14.0.60918  
-_SQL Server 2016의 경우._
+_SQL Server 2016용_
 
 **새로운 기능**
 
 이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 애플리케이션 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 애플리케이션 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
 
-**Analysis Services – SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
+**Analysis Services - SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
 
 이제 SSDT 테이블 형식에 통합 작업 영역 모드를 사용할 경우 SSDT 테이블 형식이 백그라운드에서 자동으로 시작되는 내부 SSAS 인스턴스가 포함되어 있으므로 외부 작업 영역 서버 인스턴스를 제공할 필요 없이 모델 디자이너에서 테이블, 열 및 데이터를 추가하고 볼 수 있습니다. 통합 작업 영역 모드에서는 SSDT 테이블 형식이 작업 영역 서버 및 데이터베이스에서 작동하는 방식은 변경하지 않습니다. SSDT 테이블 형식이 작업 영역 데이터베이스를 호스트하는 위치만 변경합니다. 통합 작업 영역 모드를 사용하려면 새 테이블 형식 프로젝트를 만들 때 표시되는 테이블 형식 모델 디자이너 대화 상자에서 통합 작업 영역 옵션을 선택합니다. 현재 명시적 작업 영역 서버를 사용하는 기존 테이블 형식 프로젝트의 경우 솔루션 탐색기에서 Model.bim 파일을 선택할 때 표시되는 속성 창에서 통합 작업 영역 모드 매개 변수를 True로 설정하여 통합 작업 영역 모드로 전환할 수 있습니다. 자세한 내용은 [Analysis Services 블로그 게시물](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/)을 참조하세요.
 
@@ -797,7 +797,7 @@ _SQL Server 2016의 경우._
 
 _릴리스 날짜:_ &nbsp; 2016년 8월 15일  
 _빌드 번호:_ &nbsp; 14.0.60812.0  
-_SQL Server 2016의 경우._
+_SQL Server 2016용_
 
 **새로운 기능**
 
@@ -835,7 +835,7 @@ _SQL Server 2016의 경우._
 
 _릴리스 날짜:_ &nbsp; 2016년 6월 30일  
 _빌드 번호:_ &nbsp; 14.0.60629.0  
-_SQL Server 2016의 경우._
+_SQL Server 2016용_
 
 **새로운 기능**  
 - **Always Encrypted 지원:** Always Encrypted 열이 포함된 데이터베이스의 경우 이 릴리스에서는 핵심 API 및 명령줄 도구(SqlPackage.exe)를 통해 Always Encrypted가 완전히 지원됩니다. 모든 Always Encrypted 기능을 완전히 지원하는 데이터베이스 프로젝트를 빌드하고 게시할 수 있습니다.  
@@ -855,7 +855,7 @@ _SQL Server 2016의 경우._
     * 사용자가 Azure SQL DW 및 APS 연결에 대한 보안 폴더에 표시되지 않는 문제가 수정되었습니다.
 
 
- * **Analysis Services 및 Reporting Services**
+ * **Analysis Services 및 Reporting Services:**
     * 32비트 공급자만 설치되어 SQL Server 2014에 연결하는 64비트 Excel 2016에 영향을 주는 MSOLAP OLEDB 공급자 관련 SxS 문제가 수정되었습니다(Office365의 ClickOnce 설치에서는 재현되지 않고 MSI Excel 설치에서만 재현됨).
     * 비정상적인 상황이 더 안정적으로 처리되도록, 붙여넣은 테이블이 있는 AS 모델을 1103에서 1200 호환성 수준으로 업그레이드할 경우 “관계에서 잘못된 열 ID를 사용합니다.” 오류가 발생할 수 있는 문제가 해결되었습니다.
     * SSDT 2015(카트리지 공유 레지스트리 설정)를 제거한 후 동일한 컴퓨터의 SSDT-BI 2013이 AS 모델의 데이터를 더 이상 가져올 수 없는 SxS 문제가 수정되었습니다.
@@ -879,13 +879,13 @@ _SQL Server 2016의 경우._
 
 _릴리스 날짜:_ &nbsp; 2016년 6월 1일  
 _빌드 번호:_ &nbsp; 14.0.60525.0  
-_SQL Server 2016의 경우._
+_SQL Server 2016용_
 
 이제 SSDT GA(일반 공급)가 릴리스되었습니다. 2016년 6월의 SSDT GA 업데이트에서는 SQL Server 2016 RTM의 최신 업데이트 및 다양한 버그 수정 프로그램에 대한 지원이 추가되었습니다. 자세한 내용은 [2016년 6월의 SQL Server Data Tools GA 업데이트](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
   
-[SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
+[SSDT&#40;SQL Server Data Tools&#41; 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Data Tools&#40;SSDT 및 SSDT-BI&#41;의 이전 릴리스](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [데이터베이스 엔진의 새로운 기능](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  

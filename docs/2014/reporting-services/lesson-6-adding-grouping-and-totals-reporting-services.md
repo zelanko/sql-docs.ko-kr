@@ -12,28 +12,28 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241741"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 추가(Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>6단원: 그룹화 및 합계 (Reporting Services) 추가
   보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약할 수 있습니다.  
   
  보고서에 누계 추가 대 한 자세한 내용은 다음을 참조 하세요. [Reporting Services (SSRS) 보고서에 합계 추가](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)합니다.  
   
  **항목 내용**  
   
--   [보고서에서 데이터를 그룹화하려면](#bkmk_groupdata)  
+-   [보고서의 데이터를 그룹화](#bkmk_groupdata)  
   
--   [보고서에 합계를 추가하려면](#bkmk_addtotals)  
+-   [보고서에 합계를 추가 하려면](#bkmk_addtotals)  
   
--   [보고서에 일일 합계를 추가하려면](#bkmk_adddailytotal)  
+-   [보고서에 일일 합계를 추가 하려면](#bkmk_adddailytotal)  
   
--   [보고서에 총합계를 추가하려면](#bkmk_addgrandtotal)  
+-   [보고서에 총합계를 추가 하려면](#bkmk_addgrandtotal)  
   
--   [보고서 서버에 보고서를 게시하려면(선택 사항)](#bkmk_publishreport)  
+-   [(선택 사항) 보고서 서버로 보고서를 게시 하려면](#bkmk_publishreport)  
   
 ##  <a name="bkmk_groupdata"></a> 보고서의 데이터를 그룹화  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241741"
   
      출력 창에 다음과 비슷한 메시지가 표시되면 배포가 성공한 것입니다.  
   
-    > ------ 빌드 시작: 프로젝트: 자습서, 구성: 디버그 ------'Sales Orders.rdl'을 건너 뛰는 중입니다. 항목이 최신입니다. 빌드 완료 -- 0개 오류, 0개 경고------ 배포 시작: 프로젝트: 자습서, 구성: 디버그--- http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1개 성공 또는 최신, 0개 실패, 0개 생략 ==================== 배포: 1개 성공, 0개 실패, 0개 생략 ==========  
+    > ---빌드 시작: 프로젝트: 자습서, 구성: 디버그---'Sales Orders.rdl' 건너뜁니다. 항목은 최신 상태입니다. 빌드 완료--0 개 오류, 0 경고---배포 시작: 프로젝트: 자습서, 구성: 디버그--- http:// 배포\<서버 이름 > reportserverDeploying 보고서 ' 자습서/Sales Orders'. 배포 완료--0 개 오류, 0 개 경고 === 빌드: 1 개 성공 또는 최신, 0 개 실패, 0 개 건너뜀 === 배포: 1 개 성공, 실패 0, 0 개 건너뜀 ===  
   
      다음과 비슷한 오류 메시지가 표시되면 보고서 서버에 대한 권한이 있는지 확인하고 관리자 권한으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 시작했는지 확인합니다.  
   

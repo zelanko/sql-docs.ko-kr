@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860724"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
@@ -38,42 +38,42 @@ ms.locfileid: "58860724"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**SMALLINT**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
-|request_id|**ssNoversion**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
+|session_id|**smallint**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
+|request_id|**int**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
 |sql_handle|**varbinary(64)**|일괄 처리를 고유 하 게 식별 하는 토큰 또는 쿼리가 포함 된 저장된 프로시저입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
 |plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 및 해당 계획은 계획 캐시에 되거나 현재 실행 합니다. Dm_exec_query_stats.plan_handle를 참조합니다.|  
 |physical_operator_name|**nvarchar(256)**|물리적 연산자 이름입니다.|  
-|node_id|**ssNoversion**|쿼리 트리에서 연산자 노드를 식별합니다.|  
-|thread_id|**ssNoversion**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  
+|node_id|**int**|쿼리 트리에서 연산자 노드를 식별합니다.|  
+|thread_id|**int**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  
 |task_address|**varbinary(8)**|이 스레드가 사용하는 SQLOS 작업을 식별합니다. dm_os_tasks.task_address를 참조합니다.|  
-|row_count|**BIGINT**|지금까지 연산자에서 반환한 행 수입니다.|  
-|rewind_count|**BIGINT**|지금까지의 되감기 횟수입니다.|  
-|rebind_count|**BIGINT**|지금까지의 다시 바인딩 횟수입니다.|  
-|end_of_scan_count|**BIGINT**|지금까지의 검색 끝 수입니다.|  
-|estimate_row_count|**BIGINT**|예상 행 수입니다. estimated_row_count를 실제 row_count와 비교하는 것이 유용할 수 있습니다.|  
-|first_active_time|**BIGINT**|연산자가 밀리초 단위로 처음 호출된 시간입니다.|  
-|last_active_time|**BIGINT**|연산자가 밀리초 단위로 마지막 호출된 시간입니다.|  
-|open_time|**BIGINT**|열린 때의 타임스탬프입니다(밀리초).|  
-|first_row_time|**BIGINT**|첫 번째 행이 열린 타임스탬프입니다(밀리초).|  
-|last_row_time|**BIGINT**|마지막 행이 열린 타임스탬프입니다(밀리초).|  
-|close_time|**BIGINT**|닫을 때의 타임스탬프입니다(밀리초).|  
-|elapsed_time_ms|**BIGINT**|총 경과 시간 (밀리초) 지금까지 대상 노드의 작업으로 사용 합니다.|  
-|cpu_time_ms|**BIGINT**|지금까지 대상 노드의 연산자 CPU 시간 (밀리초) 사용 하 여를 총입니다.|  
-|database_id|**SMALLINT**|읽기 및 쓰기를 수행하는 개체가 포함된 데이터베이스의 ID입니다.|  
-|object_id|**ssNoversion**|읽기 및 쓰기를 수행하는 개체의 ID입니다. sys.objects.object_id를 참조합니다.|  
-|index_id|**ssNoversion**|행 집합이 열린 인덱스입니다(있는 경우).|  
-|scan_count|**BIGINT**|지금까지의 테이블/인덱스 검색 수 입니다.|  
-|logical_read_count|**BIGINT**|지금까지의 논리적 읽기 수입니다.|  
-|physical_read_count|**BIGINT**|지금까지의 물리적 읽기 수입니다.|  
-|read_ahead_count|**BIGINT**|지금까지의 read-ahead 수입니다.|  
-|write_page_count|**BIGINT**|실수로 인한 지금까지의 페이지 쓰기 수입니다.|  
-|lob_logical_read_count|**BIGINT**|지금까지의 LOB 논리적 읽기 수입니다.|  
-|lob_physical_read_count|**BIGINT**|지금까지의 LOB 물리적 읽기 수입니다.|  
-|lob_read_ahead_count|**BIGINT**|지금까지의 LOB read-ahead 수입니다.|  
-|segment_read_count|**ssNoversion**|지금까지의 세그먼트 read-ahead 수입니다.|  
-|segment_skip_count|**ssNoversion**|지금까지 생략된 세그먼트 수입니다.| 
-|actual_read_row_count|**BIGINT**|잔여 조건자가 적용 되기 전에 운영자를 읽은 행 수입니다.| 
-|estimated_read_row_count|**BIGINT**|**적용 대상:** 부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>잔여 조건자가 적용 되기 전에 운영자가 읽을 것으로 예상 되는 행 수입니다.|  
+|row_count|**bigint**|지금까지 연산자에서 반환한 행 수입니다.|  
+|rewind_count|**bigint**|지금까지의 되감기 횟수입니다.|  
+|rebind_count|**bigint**|지금까지의 다시 바인딩 횟수입니다.|  
+|end_of_scan_count|**bigint**|지금까지의 검색 끝 수입니다.|  
+|estimate_row_count|**bigint**|예상 행 수입니다. estimated_row_count를 실제 row_count와 비교하는 것이 유용할 수 있습니다.|  
+|first_active_time|**bigint**|연산자가 밀리초 단위로 처음 호출된 시간입니다.|  
+|last_active_time|**bigint**|연산자가 밀리초 단위로 마지막 호출된 시간입니다.|  
+|open_time|**bigint**|열린 때의 타임스탬프입니다(밀리초).|  
+|first_row_time|**bigint**|첫 번째 행이 열린 타임스탬프입니다(밀리초).|  
+|last_row_time|**bigint**|마지막 행이 열린 타임스탬프입니다(밀리초).|  
+|close_time|**bigint**|닫을 때의 타임스탬프입니다(밀리초).|  
+|elapsed_time_ms|**bigint**|총 경과 시간 (밀리초) 지금까지 대상 노드의 작업으로 사용 합니다.|  
+|cpu_time_ms|**bigint**|지금까지 대상 노드의 연산자 CPU 시간 (밀리초) 사용 하 여를 총입니다.|  
+|database_id|**smallint**|읽기 및 쓰기를 수행하는 개체가 포함된 데이터베이스의 ID입니다.|  
+|object_id|**int**|읽기 및 쓰기를 수행하는 개체의 ID입니다. sys.objects.object_id를 참조합니다.|  
+|index_id|**int**|행 집합이 열린 인덱스입니다(있는 경우).|  
+|scan_count|**bigint**|지금까지의 테이블/인덱스 검색 수 입니다.|  
+|logical_read_count|**bigint**|지금까지의 논리적 읽기 수입니다.|  
+|physical_read_count|**bigint**|지금까지의 물리적 읽기 수입니다.|  
+|read_ahead_count|**bigint**|지금까지의 read-ahead 수입니다.|  
+|write_page_count|**bigint**|실수로 인한 지금까지의 페이지 쓰기 수입니다.|  
+|lob_logical_read_count|**bigint**|지금까지의 LOB 논리적 읽기 수입니다.|  
+|lob_physical_read_count|**bigint**|지금까지의 LOB 물리적 읽기 수입니다.|  
+|lob_read_ahead_count|**bigint**|지금까지의 LOB read-ahead 수입니다.|  
+|segment_read_count|**int**|지금까지의 세그먼트 read-ahead 수입니다.|  
+|segment_skip_count|**int**|지금까지 생략된 세그먼트 수입니다.| 
+|actual_read_row_count|**bigint**|잔여 조건자가 적용 되기 전에 운영자를 읽은 행 수입니다.| 
+|estimated_read_row_count|**bigint**|**적용 대상:** 부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>잔여 조건자가 적용 되기 전에 운영자가 읽을 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  쿼리 계획 노드에 모든 I/O에 없는 경우 모든 O 관련 카운터가 NULL로 설정 됩니다.  
@@ -109,7 +109,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 2단계: 쿼리를 실행할 세션과 다른 두 번째 세션에 로그인합니다.  
+ 2단계: 쿼리가 실행 되는 세션에서 다른 두 번째 세션에 로그인 합니다.  
   
  다음 문은 세션 54에서 현재 실행 중인 쿼리의 진행률을 요약합니다. 진행률을 요약하기 위해 이 문은 각 노드에 대한 모든 스레드의 총 출력 행 수를 계산하고 해당 노드의 추정된 출력 행 수와 비교합니다.  
   

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476659"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
@@ -37,7 +37,7 @@ ms.locfileid: "59476659"
   
 -   사용자 정의 코드가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행된다는 것 때문에 시스템 리소스에 무단으로 액세스할 수 있게 되면 안 됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이제 사용자 기반 보안 모델의 통합 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR의 코드 액세스 기반 보안 모델을 사용 하 여 합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이제 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 사용자 기반 모델과 CLR의 코드 액세스 기반 보안 모델을 통합합니다. 이러한 통합된 보안 방법의 일부 이점에 대해 이 섹션에서 설명합니다.  
   
  다음 표에서는 이 섹션에서 다루는 항목을 나열합니다.  
   

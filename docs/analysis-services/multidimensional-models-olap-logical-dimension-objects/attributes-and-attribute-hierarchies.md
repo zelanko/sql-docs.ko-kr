@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b858af0f4f3e86e480099a16e2b8db607b8882c3
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042412"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>특성 및 특성 계층
@@ -36,7 +36,7 @@ ms.locfileid: "59042412"
   
 ## <a name="see-also"></a>관련 항목  
  [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
- [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
+ [특성 관계를 정의 합니다.](../../analysis-services/multidimensional-models/attribute-relationships-define.md)   
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

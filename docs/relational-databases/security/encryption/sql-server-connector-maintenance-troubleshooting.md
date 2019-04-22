@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241381"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "54327844"
  
 1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft 다운로드 센터 [에서 최신 버전의](https://www.microsoft.com/download/details.aspx?id=45344)커넥터를 설치합니다. 설치 관리자 마법사에서 원래의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 DLL의 파일 경로와 다른 파일 경로에 새 DLL 파일을 저장합니다. 예를 들면 새 파일 경로는 다음과 같습니다. `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 다음 TRANSACT-SQL 명령을 실행하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 새 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 가리키도록 합니다.
+2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 다음 TRANSACT-SQL 명령을 실행하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 새 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 가리키도록 합니다.
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -139,7 +139,7 @@ ms.locfileid: "54327844"
 8.  업데이트가 작동하는지 확인한 후, 3단계에서 제거하는 대신 이름을 변경하기로 선택한 경우 이전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 폴더를 삭제할 수 있습니다.  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 사용자 롤링  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Active Directory에서 만든 서비스 사용자를 자격 증명으로 사용하여 주요 자격 증명 모음에 액세스합니다.  서비스 사용자에게는 클라이언트 ID 및 인증 키가 있습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명은 **VaultName**, **클라이언트 ID**및 **인증 키**를 사용하여 설정됩니다.  **인증 키** 는 특정 기간(1년 또는 2년) 동안 유효합니다.   기간이 만료되기 전에 서비스 사용자에 대해 Azure AD에서 새 키를 생성해야 합니다.  그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 변경해야 합니다.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 현재 세션에서 자격 증명에 대한 캐시를 유지 관리하므로 자격 증명이 변경되면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 을(를) 다시 시작해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Active Directory에서 만든 서비스 사용자를 자격 증명으로 사용하여 주요 자격 증명 모음에 액세스합니다.  서비스 사용자에게는 클라이언트 ID 및 인증 키가 있습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명은 **VaultName**, **클라이언트 ID**및 **인증 키**를 사용하여 설정됩니다.  **인증 키** 는 특정 기간(1년 또는 2년) 동안 유효합니다.   기간이 만료되기 전에 서비스 사용자에 대해 Azure AD에서 새 키를 생성해야 합니다.  그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 변경해야 합니다.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 현재 세션에서 자격 증명에 대한 캐시를 유지 관리하므로 자격 증명이 변경되면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]을(를) 다시 시작해야 합니다.  
   
 ### <a name="key-backup-and-recovery"></a>키 백업 및 복구  
 주요 자격 증명 모음은 정기적으로 백업해야 합니다. 자격 증명 모음에 있는 비대칭 키를 분실한 경우 백업에서 복원할 수 있습니다. 키는 이전과 동일한 이름을 사용하여 복원되어야 하며, Restore PowerShell 명령으로 복원할 수 있습니다(아래 단계 참조).  
@@ -171,7 +171,7 @@ ms.locfileid: "54327844"
 -  *.vault.azure.net/*:443
   
 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 각 구성 단계에 대해 필요한 최소 권한 수준은 무엇인가요?**  
- sysadmin 고정 서버 역할이 있는 멤버로 구성 단계를 모두 수행할 수는 있지만 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 사용할 권한을 최소화하는 것이 권장됩니다. 다음 목록에서는 각 작업에 대한 최소 권한 수준을 정의합니다.  
+ sysadmin 고정 서버 역할이 있는 멤버로 구성 단계를 모두 수행할 수는 있지만 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서는 사용할 권한을 최소화하는 것이 권장됩니다. 다음 목록에서는 각 작업에 대한 최소 권한 수준을 정의합니다.  
   
 -   암호화 공급자를 만들려면 `CONTROL SERVER` sysadmin **고정 서버 역할에** 권한 또는 멤버 자격이 있어야 합니다.  
   
@@ -291,10 +291,10 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 -   [Azure 키 자격 증명 모음 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   PowerShell [Azure 주요 자격 증명 모음 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 참조  
+-   PowerShell [Azure 주요 자격 증명 모음 Cmdlet](/powershell/module/azurerm.keyvault/) 참조  
   
 ## <a name="see-also"></a>참고 항목  
- [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

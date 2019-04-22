@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042232"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774578"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -26,7 +26,7 @@ ms.locfileid: "59042232"
 
 지능형 QP(쿼리 처리) 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다. 
 
-![지능형 쿼리 처리](./media/3_iqpfeaturefamily.png)
+![지능형 쿼리 처리](./media/iqp-feature-family.png)
 
 데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
 
@@ -42,8 +42,8 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [대략적인 Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 예. 공개 미리 보기| 예. SQL Server 2019 CTP 2.0부터, 공개 미리 보기|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
 | [Rowstore의 일괄 처리 모드](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
 | [인터리브 실행](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
-| [메모리 부여 피드백(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 메모리를 50% 넘게 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
-| [메모리 부여 피드백(행 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 메모리를 50% 넘게 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
+| [메모리 부여 피드백(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
+| [메모리 부여 피드백(행 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
 | [스칼라 UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.1부터, 공개 미리 보기|스칼라 UDF는 호출 쿼리로 "인라인"되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
 | [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
 
@@ -245,7 +245,7 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 | 아니요: Accurate Grant | 디스크에 분산이 없고 문이 부여된 메모리의 50% 이상을 사용하면 메모리 부여 피드백이 트리거되지 않습니다. |
 | 아니요: Feedback 사용 안 함 | 메모리 부여 피드백이 지속적으로 트리거되고 메모리 증가 작업과 메모리 감소 작업 간에 변동되면 문에 대한 메모리 부여 피드백을 사용할 수 없습니다. |
 | 예: 조정 | 메모리 부여 피드백이 적용되었고 다음 실행에 맞게 추가 조정될 수 있습니다. |
-| 예: 안정적 | 메모리 부여 피드백이 적용되었고 이제 부여된 메모리가 안정적입니다. 이는 이전 실행에 마지막으로 부여된 메모리가 현재 실행에 부여된 메모리와 같음을 의미합니다. |
+| 예: Stable | 메모리 부여 피드백이 적용되었고 이제 부여된 메모리가 안정적입니다. 이는 이전 실행에 마지막으로 부여된 메모리가 현재 실행에 부여된 메모리와 같음을 의미합니다. |
 
 > [!NOTE]
 > 공개 미리 보기 행 모드 메모리 부여 피드백 계획 특성은 버전 17.9 이상의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 쿼리 실행 계획에서 표시됩니다. 
@@ -414,7 +414,7 @@ rowstore의 일괄 처리 모드는 columnstore 인덱스를 요구하지 않고
 
 ### <a name="background"></a>배경
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 분석 워크로드를 가속화하기 위한 새로운 기능인 columnstore 인덱스를 도입했습니다. 각 후속 릴리스에서 사용 사례를 확장하고 columnstore 인덱스의 성능을 개선했습니다. 지금까지 이러한 모든 기능을 단일 기능으로 표시하고 문서화했습니다. 테이블의 columnstore 인덱스를 만듭니다. 또한 분석 워크로드가 더 빠르게 이동합니다. 그러나 관련이 있으나 고유한 두 가지 기술 세트가 사용됩니다.
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 분석 워크로드를 가속화하기 위한 새로운 기능인 columnstore 인덱스를 도입했습니다. 각 후속 릴리스에서 사용 사례를 확장하고 columnstore 인덱스의 성능을 개선했습니다. 지금까지 이러한 모든 기능을 단일 기능으로 표시하고 문서화했습니다. 테이블의 columnstore 인덱스를 만듭니다. 또한 분석 워크로드가 더 빠르게 이동합니다. 그러나 관련이 있으나 고유한 두 가지 기술 세트가 사용됩니다.
 - **columnstore** 인덱스를 사용하면 분석 쿼리는 필요한 열의 데이터에만 액세스합니다. 또한 columnstore 형식의 페이지 압축은 기존 **rowstore** 인덱스의 압축보다 더 효과적입니다. 
 - **일괄 처리 모드** 처리를 사용하면 쿼리 연산자가 데이터를 더 효율적으로 처리합니다. 이 연산자는 한 번에 하나의 행이 아니라 행 일괄 처리에서 작동합니다. 향상된 여러 다른 확장성이 일괄 처리 모드와 관련이 있습니다. 일괄 처리 모드에 대한 자세한 내용은 [실행 모드](../../relational-databases/query-processing-architecture-guide.md#execution-modes)를 참조하세요.
 
@@ -500,9 +500,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 ## <a name="see-also"></a>관련 항목:
 
-[SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
+[SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [조인](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing(적응 쿼리 처리 시연)](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Demonstrating Intelligent QP(지능형 QP 시연)](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)       
+[Demonstrating Intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)(지능형 QP 시연)   

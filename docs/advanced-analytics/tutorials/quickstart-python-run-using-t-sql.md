@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476638"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>빠른 시작: SQL Server에서 "hello world" Python 스크립트 
@@ -98,4 +98,4 @@ GO
 몇 가지 간단한 Python 스크립트를 실행 하면 했으므로 자세히 살펴보겠습니다에서 입력 및 출력을 구성 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: 입력 및 출력 처리](quickstart-python-inputs-and-outputs.md)
+> [빠른 시작: 입 / 출력 처리](quickstart-python-inputs-and-outputs.md)

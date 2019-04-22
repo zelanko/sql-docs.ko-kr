@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429389"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="arguments"></a>인수  
  **'**\<algorithm>**'**  
- 입력 해시에 사용할 해싱 알고리즘을 나타냅니다. 필수 인수이며 기본값은 없습니다. 작은따옴표가 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 SHA2_256 및 SHA2_512 이외의 알고리즘은 사용되지 않습니다. 이전 알고리즘(권장하지 않음)은 계속 작동하지만 사용 중단 이벤트가 발생합니다.  
+ 입력 해시에 사용할 해싱 알고리즘을 나타냅니다. 필수 인수이며 기본값은 없습니다. 작은따옴표가 필요합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 SHA2_256 및 SHA2_512 이외의 알고리즘은 사용되지 않습니다.  
   
  **@input**  
  해시할 데이터를 포함하는 변수를 지정합니다. **@input**은 **varchar**, **nvarchar** 또는 **varbinary**입니다.  
@@ -52,9 +52,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  **'** *input* **'**  
  해시할 문자 또는 이진 문자열로 계산되는 식을 지정합니다.  
   
- 출력은 MD2, MD4 및 MD5의 경우 128비트(16바이트), SHA 및 SHA1의 경우 160비트(20바이트), SHA2_256의 경우 256비트(32바이트), 그리고 SHA2_512의 경우 512비트(64바이트) 알고리즘 표준을 준수합니다.  
+ 출력은 MD2, MD4 및 MD5의 경우 128비트(16바이트), SHA 및 SHA1의 경우 160비트(20바이트), SHA2_256의 경우 256비트(32바이트) 그리고 SHA2_512의 경우 512비트(64바이트) 알고리즘 표준을 준수합니다.  
   
-**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
+**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이하 버전에 허용되는 입력 값은 8000바이트로 제한됩니다.  
   
@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Remarks  
 해시 값을 계산하는 다른 방법으로 `CHECKSUM` 또는 `BINARY_CHECKSUM`을 사용하는 것이 좋습니다.
 
-MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 호환성 수준 130 이상에서 사용할 수 없습니다. 대신에 SHA2_256 또는 SHA2_512를 사용합니다.
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 MD2, MD4, MD5, SHA 및 SHA1 알고리즘은 사용되지 않습니다. 대신에 SHA2_256 또는 SHA2_512를 사용합니다. 이전 알고리즘은 계속 작동하지만 사용 중단 이벤트가 발생합니다.
 
 ## <a name="examples"></a>예  
 ### <a name="return-the-hash-of-a-variable"></a>변수의 해시 반환  

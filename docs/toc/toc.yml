@@ -4140,8 +4140,8 @@ items:
       href: ../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md
     - name: 데이터베이스 관리자를 위한 진단 연결
       href: ../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md
-    - name: SQL Server 2016 Express LocalDB
-      href: ../database-engine/configure-windows/sql-server-2016-express-localdb.md
+    - name: SQL Server Express LocalDB
+      href: ../database-engine/configure-windows/sql-server-express-localdb.md
     - name: 원격 서버
       href: ../database-engine/configure-windows/remote-servers.md
     - name: SQL Server 모니터 개요
@@ -17266,9 +17266,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: XQuery의 네임스페이스 처리
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: db4bc5b476660691c89b814614b82919320733f7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e52ddca93abcc372355dc86e24d809e5aef4e2d3
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583466"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774638"

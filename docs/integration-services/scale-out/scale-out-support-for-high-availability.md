@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241468"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -43,7 +43,7 @@ Scale Out 마스터의 주 노드에 SQL Server 데이터베이스 엔진 서비
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out 마스터 서비스 DNS 호스트 이름을 Scale Out 마스터 인증서의 CN에 포함
 
-이 호스트 이름은 Scale Out 마스터 엔드포인트에서 사용됩니다. (서버 이름이 아닌 DNS 호스트 이름을 제공하는지 확인합니다.)
+이 호스트 이름은 Scale Out 마스터 엔드포인트이며, 장애 조치(failover) 클러스터에서 클러스터형 일반 서비스로 만들어집니다(7단계 참조).   (서버 이름이 아닌 DNS 호스트 이름을 제공하는지 확인합니다.)
 
 ![HA 마스터 구성](media/ha-master-config.PNG)
 
@@ -112,5 +112,5 @@ Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다.
 
 ## <a name="next-steps"></a>다음 단계
 자세한 내용은 다음 문서를 참조하세요.
--   [Integration Services(SSIS) Scale Out 마스터](integration-services-ssis-scale-out-master.md)
--   [Integration Services(SSIS) Scale Out 작업자](integration-services-ssis-scale-out-worker.md)
+-   [Integration Services(SSIS) 규모 확장 마스터](integration-services-ssis-scale-out-master.md)
+-   [Integration Services(SSIS) 규모 확장 작업자](integration-services-ssis-scale-out-worker.md)

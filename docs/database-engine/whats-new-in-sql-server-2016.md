@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872313"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
@@ -29,7 +29,7 @@ ms.locfileid: "58872313"
 다른 SQL Server 구성 요소의 새로운 기능을 검토하려면 [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)을 참조하세요.
 
 > [!NOTE]
->  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 는 64비트 애플리케이션입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.
+>  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]는 64비트 애플리케이션입니다. 일부 요소는 32비트 구성 요소로 실행되지만 32비트 설치는 중단되었습니다.
 
 #### <a name="try-it-out"></a>사용해보기
 
@@ -41,7 +41,7 @@ ms.locfileid: "58872313"
 > 현재 릴리스 정보는 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)를 참조하세요.
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 서비스 팩 1(SP1)  
--  `CREATE OR ALTER <object>` 구문은 이제 [프로시저](../t-sql/statements/create-procedure-transact-sql.md), [뷰](../t-sql/statements/create-view-transact-sql.md), [함수](../t-sql/statements/create-function-transact-sql.md)및 [트리거](../t-sql/statements/create-trigger-transact-sql.md)에 사용할 수 있습니다.
+-  이제`CREATE OR ALTER <object>` 구문은 [프로시저](../t-sql/statements/create-procedure-transact-sql.md), [뷰](../t-sql/statements/create-view-transact-sql.md), [함수](../t-sql/statements/create-function-transact-sql.md)및 [트리거](../t-sql/statements/create-trigger-transact-sql.md)에 사용할 수 있습니다.
 -   `OPTION (USE HINT('<hint1>', '<hint2>'))`같은 보다 일반적인 쿼리 힌트 모델에 대한 지원이 추가되었습니다. 자세한 내용은 [쿼리 힌트(Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
 - [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) DMV가 목록 힌트에 추가됩니다.  
 - [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) DMV이 추가되어 실행 계획 XML 임시 통계를 반환합니다.  
@@ -56,10 +56,10 @@ ms.locfileid: "58872313"
 ##  <a name="Feature"></a> SQL Server 2016 RTM
 이 섹션에 포함된 하위 섹션은 아래와 같습니다.
 
--   [columnstore 인덱스](#columnstore-indexes)
+-   [Columnstore 인덱스](#columnstore-indexes)
 -   [데이터베이스 범위 구성](#database-scoped-configurations)
 -   [메모리 내 OLTP](#in-memory-oltp)
--   [쿼리 최적화 프로그램(query optimizer)](#query-optimizer)
+-   [쿼리 최적화 프로그램](#query-optimizer)
 -   [활성 쿼리 통계](#live-query-statistics)
 -   [쿼리 저장소](#query-store)
 -   [임시 테이블](#temporal-tables)
@@ -120,7 +120,7 @@ ms.locfileid: "58872313"
 
 SQL Server 2014 및 2016 간 메모리 액세스에 최적화된 테이블의 스토리지 형식이 변경되었습니다. SQL Server 2014에서의 업그레이드 및 연결/복원의 경우 데이터베이스가 복구되는 동안 새 스토리지 형식이 직렬화되고 데이터베이스가 한 번 다시 시작됩니다.
 
-- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [SQL Server 2016으로 업그레이드](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE은 로그에 최적화되고 병렬로 실행됨.
@@ -206,7 +206,7 @@ SQL Server 2014의 메모리 액세스에 최적화된 테이블에 지원되지
 
 - [메모리 액세스에 최적화된 테이블의 행 수준 보안](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
-- 이제 [MARS&#40;Multiple Active Result Sets&#41; 사용](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 연결이 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저에 액세스할 수 있습니다.
+- 이제 [MARS&#40;Multiple Active Result Sets&#41; 사용](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 연결이 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 액세스할 수 있습니다.
 
 - [TDE(투명한 데이터 암호화)](../relational-databases/security/encryption/transparent-data-encryption.md) 지원. 데이터베이스의 ENCRYPTION이 사용하도록 구성된 경우 이제 [메모리 액세스에 최적화된 파일 그룹](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)의 파일도 암호화됩니다.
 
@@ -228,14 +228,14 @@ SQL Server 2016으로 데이터베이스를 업그레이드할 때 사용했던 
 Insert select 문에서 Insert는 다중 스레드 형식이거나, 병렬 계획일 수 있습니다(호환성 수준 130). 병렬 계획을 가져오려면 INSERT... SELECT 문에서는 TABLOCK 힌트를 사용해야 합니다. 자세한 내용은 참조 [Parallel Insert Select](https://blogs.msdn.microsoft.com/sqlcat/2016/07/06/sqlsweet16-episode-3-parallel-insert-select/)를 참조하세요.
 
 ## <a name="live-query-statistics"></a>활성 쿼리 통계
- [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 은(는) 활성 쿼리의 활성 실행 계획을 보는 기능을 제공합니다. 이 활성 쿼리 계획을 통해 제어권이 한 쿼리 계획 연산자에서 다른 연산자로 흘러갈 때 쿼리 실행 프로세스를 실시간으로 파악할 수 있습니다. 자세한 내용은 [Live Query Statistics](../relational-databases/performance/live-query-statistics.md)를 참조하세요.
+ [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 는 활성 쿼리의 활성 실행 계획을 보는 기능을 제공합니다. 이 활성 쿼리 계획을 통해 제어권이 한 쿼리 계획 연산자에서 다른 연산자로 흘러갈 때 쿼리 실행 프로세스를 실시간으로 파악할 수 있습니다. 자세한 내용은 [Live Query Statistics](../relational-databases/performance/live-query-statistics.md)를 참조하세요.
 
 ## <a name="query-store"></a>쿼리 저장소
 쿼리 저장소는 DBA에게 쿼리 계획 선택 및 성능에 대한 정보를 제공하는 새로운 기능입니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 대화 상자를 사용하여 정보를 표시하고 이를 통해 선택된 쿼리 계획 중 하나에 쿼리를 적용할 수 있습니다. 자세한 내용은 [Monitoring Performance By Using the Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을 참조하세요.
 
 
 ## <a name="temporal-tables"></a>임시 테이블
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 은 이제 시스템 버전 temporal 테이블을 지원합니다. temporal 테이블은 언제든지 저장된 팩트에 대한 올바른 정보를 제공하는 새로운 테이블 유형입니다. 각 임시 테이블은 실제로 현재 데이터 및 기록 데이터에 각각 하나씩 해당하는 테이블 두 개로 구성됩니다. 시스템에서는 현재 데이터가 포함된 테이블의 데이터가 변경될 때 이전 값이 기록 테이블에 저장되어 있는지 확인합니다. 이와 같은 복잡한 구조가 사용자에게 표시되지 않도록 쿼리 구문이 제공됩니다. 자세한 내용은 [Temporal Tables](../relational-databases/tables/temporal-tables.md)을 참조하세요.
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 은 이제 시스템 버전 temporal 테이블을 지원합니다. 임시 테이블은 언제든지 저장된 팩트에 대한 올바른 정보를 제공하는 새로운 테이블 유형입니다. 각 임시 테이블은 실제로 현재 데이터 및 기록 데이터에 각각 하나씩 해당하는 테이블 두 개로 구성됩니다. 시스템에서는 현재 데이터가 포함된 테이블의 데이터가 변경될 때 이전 값이 기록 테이블에 저장되어 있는지 확인합니다. 이와 같은 복잡한 구조가 사용자에게 표시되지 않도록 쿼리 구문이 제공됩니다. 자세한 내용은 [Temporal Tables](../relational-databases/tables/temporal-tables.md)을 참조하세요.
 
 ## <a name="backups"></a>백업
 
@@ -361,7 +361,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 전체 내용을 보려면 다음을 참조하세요.
 
 - [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [고유하게 컴파일된 T-SQL 모듈 변경](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>향상된 시스템 뷰 기능
 - 새로운 두 개의 뷰가 행 수준 보안을 지원합니다. 자세한 내용은 [sys.security_predicates&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) 및 [sys.security_policies&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)를 참조하세요.

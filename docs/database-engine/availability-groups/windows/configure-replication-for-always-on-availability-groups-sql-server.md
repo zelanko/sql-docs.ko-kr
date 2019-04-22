@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: be1de83c0b3fccab722933ef1c080d018c5b74c0
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
+ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044320"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59367241"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 
@@ -32,7 +32,7 @@ ms.locfileid: "55044320"
   
 2.  [Always On 가용성 그룹을 구성합니다.](#step2)  
   
-3.  [모든 보조 복제본 호스트에 대해 복제가 구성되었는지 확인](#step3)  
+3.  [복제에 대해 모든 보조 복제본 호스트가 구성되었는지 확인](#step3)  
   
 4.  [보조 복제본 호스트를 복제 게시자로 구성](#step4)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "55044320"
 ##  <a name="step1"></a> 1. 데이터베이스 게시 및 구독 구성  
  **배포자 구성**  
   
- 배포 데이터베이스를 가용성 그룹에 배치할 수 없습니다.  
+ 배포 데이터베이스는 SQL Server 2012 및 SQL Server 2014를 사용하여 가용성 그룹에 배치할 수 없습니다. 배포 데이터베이스를 가용성 그룹에 배치하는 것은 SQL 2016 이상에서 지원됩니다. 자세한 내용은 [가용성 그룹에서 배포 데이터베이스 구성](../../../relational-databases/replication/configure-distribution-availability-group.md)을 참조하세요.
   
 1.  배포자에서 배포를 구성합니다. 구성에 저장 프로시저를 사용하는 경우 **sp_adddistributor**를 실행합니다. *@password* 매개 변수를 사용하여 원격 게시자에서 배포자에 연결할 때 사용될 암호를 식별합니다. 암호는 원격 배포자를 설정할 때 각 원격 게시자에서도 필요합니다.  
   
@@ -128,7 +128,7 @@ ALTER AVAILABILITY GROUP 'MyAG'
  자세한 내용은 [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)을 참조하세요.  
 
   
-##  <a name="step3"></a> 3. 모든 보조 복제본 호스트에 대해 복제가 구성되었는지 확인  
+##  <a name="step3"></a> 3. 복제에 대해 모든 보조 복제본 호스트가 구성되었는지 확인  
  각 보조 복제본 호스트에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 복제를 지원하도록 구성되어 있는지 확인합니다. 각 보조 복제본 호스트에서 다음 쿼리를 실행하여 복제가 설치되었는지 확인할 수 있습니다.  
   
 ```  
@@ -200,7 +200,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  메시지 21899, 수준 11, 상태 1, 프로시저 **sp_hadr_verify_subscribers_at_publisher**, 줄 109  
 >   
->  '976' 오류로 인해 리디렉션된 게시자 'MyReplicaHostName'에서 원래 게시자 'MyOriginalPublisher'의 구독자에 대한 sysserver 항목이 있는지 확인하기 위한 쿼리에 실패했습니다(오류 메시지 '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'이(가) 가용성 그룹에 참여 중이며 현재 쿼리로 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 **온라인 설명서의** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문을 참조하세요.'.  
+>  원래 게시자 'MyOriginalPublisher'의 구독자에 대해 sysserver 항목이 있는지 확인하기 위한 리디렉션된 게시자 'MyReplicaHostName'의 쿼리가 실패하고 '976' 오류가 발생했습니다. 오류 메시지는 다음과 같습니다. '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'가 가용성 그룹에 참여 중이며, 쿼리가 현재 이 대상 데이터베이스에 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 **온라인 설명서의** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문을 참조하세요.'.  
 >   
 >  복제본 호스트 'MyReplicaHostName'에 대해 하나 이상의 게시자 유효성 검사 오류가 발생했습니다.  
   
@@ -228,22 +228,22 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)  
   
--   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정 &#40;SQL Server &#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&amp;#40;SQL Server&amp;#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;SQL Server PowerShell &#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;SQL Server PowerShell&amp;#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Always On 가용성 그룹에 대한 필수 구성 사항, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹: 상호 운용성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server 복제](../../../relational-databases/replication/sql-server-replication.md)  
+ [SQL  Server  복제](../../../relational-databases/replication/sql-server-replication.md)  
   
   

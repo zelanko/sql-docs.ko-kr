@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860532"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
@@ -33,12 +33,12 @@ ms.locfileid: "58860532"
 
 | 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
-| GPU에 대 한 지침 딥 러닝 Spark에서 TensorFlow를 사용 하 여 실행에 대 한 지원. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 TensorFlow 실행](spark-gpu-tensorflow.md)합니다. |
+| Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 TensorFlow 실행](spark-gpu-tensorflow.md)합니다. |
 | **SqlDataPool** 하 고 **SqlStoragePool** 데이터 원본에 더 이상 기본적으로 만들어집니다. | 필요에 따라 수동으로 이러한를 만듭니다. 참조 된 [알려진 문제](#externaltablesctp24)합니다. |
-| `INSERT INTO SELECT` 데이터 풀에 대 한 지원입니다. | 예를 들어 참조 [자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집](tutorial-data-pool-ingest-sql.md)합니다. |
+| `INSERT INTO SELECT`가 데이터 풀을 지원합니다. | 예를 들어 참조 [자습서: TRANSACT-SQL을 사용 하 여 SQL Server 데이터 풀에 데이터를 수집](tutorial-data-pool-ingest-sql.md)합니다. |
 | `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션입니다. | 강제로 또는 외부 테이블에서 쿼리 계산 풀을 사용 하는 사용 하지 않도록 설정 합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`) 을 입력합니다. |
 | 업데이트 된 AKS 배포 권장 사항입니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 권장 크기의 단일 노드를 사용 하 여 **Standard_L8s**합니다. |
-| Spark 2.4로 Spark 런타임 업그레이드 | |
+| Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다. | |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -135,7 +135,7 @@ make: *** [deploy-clean] Error 2
 
 - 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 배포
+#### <a name="application-deployment"></a>응용 프로그램 개발
 
 - R, Python 또는 MLeap 응용 프로그램에서 RESTful API를 호출할 때 호출에에서 시간 초과 5 분입니다.
 
@@ -176,7 +176,7 @@ make: *** [deploy-clean] Error 2
 | VS Code 확장 빅 데이터 클러스터에 응용 프로그램을 배포 합니다. | [VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법](app-deployment-extension.md) |
 | 변경 된 **mssqlctl** 명령 사용법을 도구입니다. | 자세한 내용은 참조는 [알려진 mssqlctl 문제](#mssqlctlctp23)합니다. |
 | 빅 데이터 클러스터에 사용 하 여 Sparklyr | [SQL Server 2019 빅 데이터 클러스터에 사용 하 여 Sparklyr](sparklyr-from-RStudio.md) |
-| 외부 HDFS 호환 저장소를 사용 하 여 빅 데이터 클러스터에 탑재 **HDFS 계층화**합니다. | 참조 [HDFS 계층화](hdfs-tiering.md)합니다. |
+| **HDFS 계층화**를 통해 빅 데이터 클러스터에 외장 HDFS 호환 스토리지를 탑재합니다. | 참조 [HDFS 계층화](hdfs-tiering.md)합니다. |
 | 마스터 SQL Server 인스턴스 및 HDFS/Spark 게이트웨이에 대 한 새로운 통합 된 연결 환경입니다. | 참조 [SQL Server 마스터 인스턴스와 HDFS/Spark 게이트웨이](connect-to-big-data-cluster.md)합니다. |
 | 사용 하 여 클러스터를 삭제 **mssqlctl 클러스터 삭제** 이제 빅 데이터 클러스터에 포함 된 네임 스페이스에 있는 개체만 삭제 합니다. | 네임 스페이스 삭제 되지 않습니다. 그러나 이전 릴리스에서이 명령은 전체 네임 스페이스를 삭제 하지 못했습니다. |
 | _보안_ 끝점 이름이 변경 되었으며 통합 합니다. | **서비스-보안-lb** 하 고 **서비스-보안-nodeport** 로 통합 되었습니다 합니다 **끝점 보안** 끝점입니다. |
@@ -257,7 +257,7 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
 
 - 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 배포
+#### <a name="application-deployment"></a>응용 프로그램 개발
 
 - R, Python 또는 MLeap 응용 프로그램에서 RESTful API를 호출할 때 호출에에서 시간 초과 5 분입니다.
 

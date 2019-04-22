@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241293"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
   
- [데이터 액세스 및 스토리지 개발자 센터(Data Access and Storage Developer Center)](https://go.microsoft.com/fwlink?linkid=4173)  
+ [데이터 액세스 및 스토리지 개발자 센터](https://go.microsoft.com/fwlink?linkid=4173)  
  이 사이트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 기술에 대한 기술 문서, 예제 코드 및 기타 리소스를 제공합니다.  
   
- [데이터 액세스 블로그(Data Access Blog)](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [데이터 액세스 블로그](https://go.microsoft.com/fwlink/?LinkId=48617)  
  이 블로그 사이트에서는 데이터 액세스 기술에 대한 정보를 제공하며 제품 팀의 멤버와 직접 상호 작용할 수 있습니다.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

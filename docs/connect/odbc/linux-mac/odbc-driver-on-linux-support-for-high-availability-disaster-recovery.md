@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042382"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
@@ -27,9 +27,9 @@ Linux 및 macOS용 ODBC 드라이버는 [!INCLUDE[ssHADR](../../../includes/ssha
   
 -   [가용성 그룹의 생성 및 구성(SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
   
--   [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
   
--   [활성 보조: 읽기 가능한 보조 복제본(AlwaysOn 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)  
   
 연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. Linux 또는 macOS의 ODBC 애플리케이션이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 애플리케이션이 계속 작동하려면 새 연결을 열어야 합니다.
 
@@ -98,7 +98,7 @@ ODBC 연결 속성에 대한 자세한 내용은 [SQLSetConnectAttr](../../../re
 |함수|설명|  
 |------------|---------------|  
 |[SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect**는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 **ApplicationIntent**와 **MultiSubnetFailover**를 모두 지원합니다.|  
-|[SQLDriverConnect 함수(SQLDriverConnect Function)](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect**는 DSN, 연결 문자열 키워드 또는 연결 속성을 통해 **ApplicationIntent** 및 **MultiSubnetFailover**를 지원합니다.|
+|[SQLDriverConnect 함수](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect**는 DSN, 연결 문자열 키워드 또는 연결 속성을 통해 **ApplicationIntent** 및 **MultiSubnetFailover**를 지원합니다.|
   
 ## <a name="see-also"></a>참고 항목  
 

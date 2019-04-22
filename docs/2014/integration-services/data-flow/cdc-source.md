@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241791"
 ---
 # <a name="cdc-source"></a>CDC 원본
@@ -47,9 +47,9 @@ ms.locfileid: "59241791"
   
 -   **오류 코드**: 값은 항상 -1입니다.  
   
--   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
+-   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
   
--   **오류 행 열**: 오류의 원인이 되는 레코드 데이터입니다.  
+-   **오류 행 열**: 오류를 발생 시키는 레코드 데이터입니다.  
   
  오류 동작 설정에 따라 CDC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../cdc-source-editor-error-output-page.md)를 참조하세요.  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>SQL Server 오류 메시지  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
   
- **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_에 제공 된 인수 개수가 부족\<... >.**  
+ **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_\<..>** 에 제공된 인수 개수가 부족합니다.  
   
  이 오류는 인수가 누락되었음을 나타내지 않습니다. 대신 CDC 상태 변수의 시작 또는 끝 LSN 값이 잘못되었음을 의미합니다.  
   

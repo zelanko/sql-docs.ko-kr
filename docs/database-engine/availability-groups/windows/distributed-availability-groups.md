@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860744"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
@@ -374,7 +374,7 @@ GO
 
 
 ### <a name="dmv-to-show-current-state-of-seeding"></a>시드의 현재 상태를 표시하는 DMV
-아래 쿼리는 시드의 현재 상태에 대한 정보를 표시합니다. 복제본 간의 동기화 오류 문제를 해결하는 데 유용합니다. [David Barbarin에게 다시 한번 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+아래 쿼리는 시드의 현재 상태에 대한 정보를 표시합니다. 복제본 간의 동기화 오류 문제를 해결하는 데 유용합니다. [David Barbarin에게 다시 한 번 감사드립니다.](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
  ```sql
  -- shows current_state of seeding 

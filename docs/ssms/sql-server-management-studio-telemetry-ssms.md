@@ -11,16 +11,17 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240391"
 ---
-# <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 사용 현황 피드백 수집에 대한 로컬 감사
+# <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함됩니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
+
+SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. SSMS는 표준 컴퓨터 정보 및 Microsoft로 전송되어 SSMS의 품질, 보안 및 안정성 개선의 목적으로 분석될 수 있는 사용 및 성능에 대한 정보를 수집할 수 있습니다. 사용자 이름, 주소 또는 기타 개인 정보는 수집하지 않습니다. 자세한 내용은 [Microsoft 개인정보처리방침](https://privacy.microsoft.com/privacystatement) 및 [SQL Server 개인 정보 제공](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 
 ## <a name="audit-feature-usage-data"></a>기능 사용 현황 데이터 감사
 
@@ -33,8 +34,34 @@ SSMS를 통해 데이터베이스와 상호 작용할 경우 **출력** 창에 �
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>SSMS에서 사용 현황 피드백 수집 사용 또는 사용 안 함
 
-SSMS에 대한 사용 현황 데이터 수집을 포함하거나 제외하려면 [How to configure SQL Server 2016 to send feedback to Microsoft](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft)(Microsoft로 피드백을 보내도록 SQL Server 2016을 구성하는 방법)를 참조하세요.
+SSMS 사용 현황 데이터 수집에 참여하거나 참여하지 않으려면 다음을 수행합니다.
+
+- SQL Server Management Studio 17:
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
+
+  레지스트리 항목 이름 = `UserFeedbackOptIn`
+
+  항목 유형 `DWORD`: `0`은 참여하지 않음, `1`은 참여함
+
+  또한 SSMS 17.x는 Visual Studio 2015 셸에 기반을 두고 있으며, Visual Studio를 설치하면 기본적으로 고객 피드백이 활성화됩니다.  
+
+  개별 컴퓨터에서 고객 피드백을 비활성화하도록 Visual Studio를 구성하려면 다음 레지스트리 하위 키 값을 문자열 `0`으로 변경합니다. `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+
+  예를 들어 하위 키를 다음으로 변경합니다.  
+  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
+
+  이러한 레지스트리 하위 키에 대한 레지스트리 기반 그룹 정책은 SQL Server 2017 사용 현황 및 진단 데이터 수집에 따라 적용됩니다.
+
+- SQL Server Management Studio 18:
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
+
+  레지스트리 항목 이름 = `UserFeedbackOptIn`
+
+  항목 유형 `DWORD`: `0`은 참여하지 않음, `1`은 참여함
 
 ## <a name="see-also"></a>관련 항목:
 
-[SQL Server 사용 피드백 모음에 대한 로컬 감사](https://msdn.microsoft.com/library/mt743085.aspx)
+- [SQL Server 사용 현황 및 진단 데이터 수집 구성](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](http://msdn.microsoft.com/library/mt743085.aspx)

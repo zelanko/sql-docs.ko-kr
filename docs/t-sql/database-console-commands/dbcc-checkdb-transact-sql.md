@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685730"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429369"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 옵션은 지원되는 기능이지만, 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 항상 DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 없습니다. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 없습니다. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
 >     
 > REPAIR_ALLOW_DATA_LOSS 옵션을 사용해야 복구할 수 있는 특정 오류에는 오류를 지우기 위한 행, 페이지 또는 일련의 페이지 할당 취소가 포함됩니다. 할당 취소된 모든 데이터는 사용자가 더 이상 액세스하거나 복구할 수 없고 할당 취소된 데이터의 정확한 내용을 확인할 수 없습니다. 따라서 행이나 페이지가 할당 취소되고 나면 외래 키 제약 조건이 복구 작업 일부로 확인되거나 유지 관리되지 않으므로 참조 무결성이 정확하지 않을 수 있습니다. REPAIR_ALLOW_DATA_LOSS 옵션을 사용하고 나서 사용자는 DBCC CHECKCONSTRAINTS를 사용하여 데이터베이스의 참조 무결성을 검사해야 합니다.    
 >     
@@ -174,20 +174,20 @@ DBCC CHECKDB는 비활성화된 인덱스는 검사하지 않습니다. 비활�
 
 사용자 정의 형식이 바이트 정렬된 것으로 표시되면 사용자 정의 형식의 직렬화가 하나만 있어야 합니다. 바이트 정렬된 사용자 정의 형식의 일관성 있는 직렬화가 없으면 DBCC CHECKDB를 실행할 때 오류 2537이 발생합니다. 자세한 내용은 [사용자 정의 형식 요구 사항](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)을 참조하세요.    
 
-[리소스 데이터베이스](../../relational-databases/databases/resource-database.md)는 단일 사용자 모드에서만 수정할 수 있으므로 DBCC CHECKDB 명령은 이 데이터베이스에 대해 직접 실행할 수 없습니다. 하지만 [마스터 데이터베이스](../../relational-databases/databases/master-database.md)에 대해 DBCC CHECKDB를 실행할 때 또 다른 CHECKDB가 리소스 데이터베이스에 대해 내부적으로 실행되므로 DBCC CHECKDB가 추가적인 결과를 반환할 수 있습니다. 옵션을 설정하지 않거나 PHYSICAL_ONLY 또는 ESTIMATEONLY 옵션 중 하나를 설정하면 추가적인 결과 집합이 반환됩니다.    
+[리소스 데이터베이스](../../relational-databases/databases/resource-database.md)는 단일 사용자 모드에서만 수정할 수 있으므로 DBCC CHECKDB 명령은 이 데이터베이스에 대해 직접 실행할 수 없습니다. 하지만 [마스터 데이터베이스](../../relational-databases/databases/master-database.md)에 대해 DBCC CHECKDB를 실행할 때 또 다른 CHECKDB가 리소스 데이터베이스에 대해 내부적으로 실행되므로 DBCC CHECKDB가 추가적인 결과를 반환할 수 있습니다. 옵션을 설정하지 않거나 `PHYSICAL_ONLY` 또는 `ESTIMATEONLY` 옵션 중 하나를 설정하면 명령에서 추가적인 결과 집합을 반환합니다.    
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2부터 DBCC CHECKDB를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 삭제되지 **않습니다**. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2 이전에서는 DBCC CHECKDB를 실행하면 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>인덱스에 대한 논리적 일관성 검사 수행    
 인덱스의 논리적 일관성 검사는 다음과 같이 데이터베이스의 호환성 수준에 따라 달라집니다.
 -   호환성 수준이 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 이상인 경우:    
--   DBCC CHECKTABLE은 NOINDEX가 지정되지 않으면 단일 테이블 및 해당하는 모든 비클러스터형 인덱스에 대해 물리적 및 논리적 일관성 검사를 모두 수행합니다. 그러나 XML 인덱스, 공간 인덱스 및 인덱싱된 뷰에 대해서는 기본적으로 물리적 일관성 검사만 수행됩니다.
--   WITH EXTENDED_LOGICAL_CHECKS를 지정하면 인덱싱된 뷰, XML 인덱스 및 공간 인덱스에 대해 논리적 검사가 수행됩니다. 기본적으로 물리적 일관성 검사는 논리적 일관성 검사 전에 수행됩니다. NOINDEX도 지정할 경우 논리적 검사만 수행됩니다.
+-   DBCC CHECKDB는 `NOINDEX`가 지정되지 않으면 단일 테이블 및 해당하는 모든 비클러스터형 인덱스에 대해 물리적 및 논리적 일관성 검사를 모두 수행합니다. 그러나 XML 인덱스, 공간 인덱스 및 인덱싱된 뷰에 대해서는 기본적으로 물리적 일관성 검사만 수행됩니다.
+-   `WITH EXTENDED_LOGICAL_CHECKS`를 지정하면 인덱싱된 뷰, XML 인덱스 및 공간 인덱스에 대해 논리적 검사가 수행됩니다. 기본적으로 물리적 일관성 검사는 논리적 일관성 검사 전에 수행됩니다. `NOINDEX`도 지정할 경우 논리적 검사만 수행됩니다.
     
-이러한 논리적 일관성 검사는 인덱스 개체의 내부 인덱스 테이블과 이러한 테이블이 참조하는 사용자 테이블을 교차 검사합니다. 범위 외의 행을 찾기 위해 내부 쿼리가 생성되어 내부 및 사용자 테이블의 전체 교차를 수행합니다. 이 쿼리는 실행할 경우 성능에 큰 영향을 줄 수 있으며 진행 상태를 추적할 수 없습니다. 따라서 물리적 손상과 관계없는 인덱스 문제가 의심되는 경우, 또는 페이지 수준 체크섬이 해제되어 있고 열 수준 하드웨어 손상이 의심되는 경우에만 WITH EXTENDED_LOGICAL_CHECKS를 지정하는 것이 좋습니다.
+이러한 논리적 일관성 검사는 인덱스 개체의 내부 인덱스 테이블과 이러한 테이블이 참조하는 사용자 테이블을 교차 검사합니다. 범위 외의 행을 찾기 위해 내부 쿼리가 생성되어 내부 및 사용자 테이블의 전체 교차를 수행합니다. 이 쿼리는 실행할 경우 성능에 큰 영향을 줄 수 있으며 진행 상태를 추적할 수 없습니다. 따라서 물리적 손상과 관계없는 인덱스 문제가 의심되는 경우, 또는 페이지 수준 체크섬이 해제되어 있고 열 수준 하드웨어 손상이 의심되는 경우에만 `WITH EXTENDED_LOGICAL_CHECKS`를 지정하는 것이 좋습니다.
 -   인덱스가 필터링된 인덱스인 경우 DBCC CHECKDB는 일관성 검사를 수행하여 인덱스 항목이 필터 조건자를 만족하는지 확인합니다.
--   호환성 수준이 90 이하인 경우 DBCC CHECKTABLE은 NOINDEX가 지정되지 않으면 단일 테이블 또는 인덱싱된 뷰와 해당하는 모든 비클러스터형 및 XML 인덱스에서 물리적 및 논리적 일관성 검사를 모두 수행합니다. 공간 인덱스는 지원되지 않습니다.  
-- SQL Server 2016 이상에서는 과다한 수식 평가를 방지하기 위해 지속되는 계산된 열, UDT 열, 필터링된 인덱스에 대한 추가 검사가 기본적으로 실행되지 않습니다. 이렇게 변경하면 이 개체가 포함된 데이터베이스에 대한 CHECKDB 시간이 크게 단축됩니다. 그러나 이러한 개체의 물리적 일관성 검사는 항상 완료됩니다. EXTENDED_LOGICAL_CHECKS 옵션을 지정하는 경우에만 EXTENDED_LOGICAL_CHECKS 옵션의 일부로 기존의 논리적 검사(인덱싱된 뷰, XML 인덱스, 공간 인덱스)와 함께 식 평가가 수행됩니다.   
+-   호환성 수준이 90 이하인 경우 DBCC CHECKDB는 `NOINDEX`가 지정되지 않으면 단일 테이블 또는 인덱싱된 뷰와 해당하는 모든 비클러스터형 인덱스 및 XML 인덱스에서 물리적 및 논리적 일관성 검사를 모두 수행합니다. 공간 인덱스는 지원되지 않습니다.  
+- SQL Server 2016 이상에서는 과다한 수식 평가를 방지하기 위해 지속되는 계산된 열, UDT 열, 필터링된 인덱스에 대한 추가 검사가 기본적으로 실행되지 않습니다. 이렇게 변경하면 이 개체가 포함된 데이터베이스에 대한 CHECKDB 시간이 크게 단축됩니다. 그러나 이러한 개체의 물리적 일관성 검사는 항상 완료됩니다. `EXTENDED_LOGICAL_CHECKS` 옵션을 지정하는 경우에만 `EXTENDED_LOGICAL_CHECKS` 옵션의 일부로 기존의 논리적 검사(인덱싱된 뷰, XML 인덱스, 공간 인덱스)와 함께 식 평가가 수행됩니다.   
     
 **데이터베이스의 호환성 수준에 대한 자세한 내용**
 -   [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
@@ -203,7 +203,7 @@ Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 �
 예를 들어 테이블에 FILESTREAM 특성을 사용하는 **varbinary(max)** 열이 있는 경우 DBCC CHECKDB는 파일 시스템 디렉터리, 파일과 테이블 행, 열, 열 값 사이에 일 대 일 매핑이 존재하는지 확인합니다. REPAIR_ALLOW_DATA_LOSS 옵션을 지정하면 DBCC CHECKDB가 손상을 복구할 수 있습니다. FILESTREAM 손상을 복구하기 위해 DBCC에서는 파일 시스템 데이터가 없는 테이블 행을 삭제합니다.
     
 ## <a name="best-practices"></a>최선의 구현 방법    
-프로덕션 시스템에서 자주 사용하려면 PHYSICAL_ONLY 옵션을 사용하는 것이 좋습니다. PHYSICAL_ONLY를 사용하면 큰 데이터베이스에 대한 DBCC CHECKDB 실행 시간이 훨씬 단축될 수 있습니다. 또한 옵션을 지정하지 않고 정기적으로 DBCC CHECKDB를 실행하는 것이 좋습니다. 실행 빈도는 개별 비즈니스 및 프로덕션 환경에 따라 달라집니다.
+프로덕션 시스템에서 자주 사용하려면 `PHYSICAL_ONLY` 옵션을 사용하는 것이 좋습니다. PHYSICAL_ONLY를 사용하면 큰 데이터베이스에 대한 DBCC CHECKDB 실행 시간이 훨씬 단축될 수 있습니다. 또한 옵션을 지정하지 않고 정기적으로 DBCC CHECKDB를 실행하는 것이 좋습니다. 실행 빈도는 개별 비즈니스 및 프로덕션 환경에 따라 달라집니다.
     
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사    
 기본적으로 DBCC CHECKDB는 개체를 병렬로 검사합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 최대 프로세서 수를 제한하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
@@ -246,7 +246,7 @@ DBCC CHECKDB에 의해 오류가 보고되면 REPAIR 옵션 중 하나를 사용
 -   트랜잭션 로그 손상으로 인해 데이터베이스 복구가 실패하면 트랜잭션 로그가 다시 작성됩니다. 트랜잭션 로그를 다시 작성하면 트랜잭션 일관성을 유지할 수 없습니다.    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지원되는 기능입니다. 그러나 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 항상 DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 **없습니다**. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
+> REPAIR_ALLOW_DATA_LOSS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지원되는 기능입니다. 그러나 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 **없습니다**. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
 >     
 >  로그를 다시 작성하고 나면 전체 ACID가 보장되지 않습니다.    
 >     
@@ -365,7 +365,7 @@ DBCC CHECKDB는 ESTIMATEONLY가 지정되었을 때 다음 결과 집합을 반�
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>사용 권한    
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
     
 ## <a name="examples"></a>예    
@@ -393,6 +393,6 @@ GO
 ## <a name="see-also"></a>참고 항목    
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[시스템 테이블 &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[sp_helpdb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
+[시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

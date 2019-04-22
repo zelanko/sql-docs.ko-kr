@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241453"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
@@ -40,11 +40,11 @@ ms.locfileid: "59241453"
   
 -   **일시 중지됨**  
   
--   **정체됨**  
+-   **Throttled**  
   
--   **복구 중**  
+-   **Recovering**  
   
--   **시스템 종료**  
+-   **종료**  
   
 -   **증분 채우기 진행 중**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59241453"
   
 -   **디스크는 전체 일시 중지**  
   
--   **변경 내용 추적**  
+-   **Change tracking**  
   
  **항목 수**  
  카탈로그의 전체 텍스트 항목 수를 표시합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "59241453"
   
 -   **아니요**  
   
--   **사용자 계정 컨트롤**  
+-   **예**  
   
 -   분음 기호에 대 한 정보를 참조 하세요 [분음 부호](https://www.merriam-webster.com/dictionary/diacritic) Merriam Webster 사전에 있습니다.  
   

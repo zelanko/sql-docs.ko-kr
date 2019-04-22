@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241801"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>1단원: 프로젝트 및 기본 패키지 만들기
@@ -84,7 +84,7 @@ ms.locfileid: "59241801"
   
 -   [2단계: 플랫 파일 연결 관리자 추가 및 구성](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [3단계: OLE DB 연결 관리자 추가 및 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [3단계: 추가 하 고 OLE DB 연결 관리자 구성](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [4단계: 패키지에 데이터 흐름 태스크 추가](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "59241801"
   
 -   [7단계: OLE DB 대상 추가 및 구성](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [8단계: 1단원 패키지를 쉽게 이해할 수 있도록 만들기](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [8단계: 1 단원 패키지를 보다 쉽게 이해](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [9단계: 1단원 자습서 패키지 테스트](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [9단계: 1 단원 자습서 패키지 테스트](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
  [1단계: 새 Integration Services 프로젝트 만들기](lesson-1-1-creating-a-new-integration-services-project.md)  

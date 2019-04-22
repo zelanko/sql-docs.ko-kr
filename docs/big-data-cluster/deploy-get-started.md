@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860434"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 시작
@@ -29,9 +29,9 @@ ms.locfileid: "58860434"
 | 도구 | Description |
 |---|---|
 | **mssqlctl** | 배포 하 고 빅 데이터 클러스터를 관리 합니다. |
-| **Kubectl** | 만들고 기본 Kubernetes 클러스터를 관리 합니다. |
+| **kubectl** | 만들고 기본 Kubernetes 클러스터를 관리 합니다. |
 | **Azure Data Studio** | 빅 데이터 클러스터를 사용 하기 위한 그래픽 인터페이스입니다. |
-| **SQL Server 2019 extension** | 빅 데이터 클러스터 기능을 사용할 수 있는 azure Data Studio 확장입니다. |
+| **SQL Server 2019 확장** | 빅 데이터 클러스터 기능을 사용할 수 있는 azure Data Studio 확장입니다. |
 
 다른 도구는 다양 한 시나리오에 필요 합니다. 각 문서에는 특정 작업을 수행 하기 위한 필수 구성 요소 도구 설명 해야 합니다. 도구 및 설치 링크의 전체 목록을 참조 하세요 [SQL Server 설치 2019 빅 데이터 도구도](deploy-big-data-tools.md)합니다.
 

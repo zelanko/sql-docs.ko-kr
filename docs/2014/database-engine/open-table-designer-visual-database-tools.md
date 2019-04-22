@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240721"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>테이블 디자이너 열기(Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "59240721"
      **테이블 디자이너** 메뉴가 주 메뉴에 추가되고 디자이너 창에 테이블이 열립니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 디자인&#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [테이블 디자인 &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [테이블](../relational-databases/tables/tables.md)  
   
   

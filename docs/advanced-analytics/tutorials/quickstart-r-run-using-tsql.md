@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240171"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 R 스크립트의 "hello world" 
@@ -91,4 +91,4 @@ GO
 몇 가지 간단한 R 스크립트를 실행 하면 이제는 살펴볼에서 입력 및 출력을 구성 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: 입력 및 출력 처리](quickstart-r-inputs-and-outputs.md)
+> [빠른 시작: 입 / 출력 처리](quickstart-r-inputs-and-outputs.md)

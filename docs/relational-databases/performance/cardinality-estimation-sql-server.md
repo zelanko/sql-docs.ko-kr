@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828023"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516459"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 비용을 기반으로 하는 쿼리 최적화 프로그램입니다. 즉, 가장 낮은 예상 처리 비용으로 실행할 수 있는 쿼리 계획을 선택합니다. 쿼리 최적화 프로그램에서는 다음 두 가지 주요 요소를 기반으로 쿼리 계획 실행 비용을 결정합니다.
@@ -53,9 +54,10 @@ ms.locfileid: "56828023"
 - 여러 인스턴스가 동시에 자주 실행되는 OLTP(온라인 트랜잭션 처리) 쿼리  
 - OLTP 업무 시간 중 많은 집계가 실행되는 SELECT  
   
-새 CE보다 느리게 실행되는 쿼리를 확인할 수 있습니다. 또한 성능 문제를 해결하는 방법에 대한 옵션도 있습니다.     
+새 CE보다 느리게 실행되는 쿼리를 확인할 수 있습니다. 또한 성능 문제를 해결하는 방법에 대한 옵션도 있습니다.
   
-## <a name="versions-of-the-ce"></a>CE 버전  
+## <a name="versions-of-the-ce"></a>CE 버전
+
 1998년 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서 호환성 수준 70으로 CE가 크게 업데이트되었습니다. 이 버전의 CE 모델은 다음과 같은 4개의 기본 가정 하에 설정됩니다.
 
 -  **독립성:** 상관 관계 정보가 지원되고 사용되지 않으면 다른 열의 데이터 배포는 서로 독립적이라고 간주됩니다.
@@ -106,7 +108,7 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](https://msdn.microsoft.com/library/dn673537.aspx)  
  [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)     
  [힌트 쿼리 힌트 사용](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)   

@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860544"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful 웹 서비스를 사용 하 여 SQL Server 빅 데이터 클러스터에 배포 된 앱 사용
@@ -105,7 +105,7 @@ IP 주소를 적어둡니다 (`10.1.1.3` 이 예에서) 및 포트 번호 (`3077
 > [!NOTE]
 > 원하는 경우에 대 한 URL을 열 수 있습니다는 `swagger` 실행 했을 때 반환 않은 `mssqlctl app describe --name [appname] --version [version]` 브라우저에서는 비슷해야 `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. 에 사용한 동일한 자격 증명을 사용 하 여 로그인 해야 `mssqlctl login`합니다. 콘텐츠를 `swagger.json` 붙여넣을 수 있습니다 [Swagger 편집기](https://editor.swagger.io)합니다. 웹 서비스를 노출 하는 표시 됩니다는 `run` 메서드. 또한 note 위쪽에 표시 되는 기본 URL입니다.
 
-선호 하는 도구를 사용 하 여 호출 하는 `run` 메서드 (`https://[IP]:30778/api/app/[appname]/[version]/run`)를 json으로 POST 요청의 본문에 매개 변수를 전달 합니다. 이 예제에서는 사용 하 여 [Postman](https://www.getpostman.com/)합니다. 호출 하기 전에 설정 해야 합니다는 `Authorization` 에 `Bearer Token` 앞서 검색 한 토큰에 붙여넣습니다. 요청에서 헤더를 설정 합니다. 아래 스크린 샷을 참조하십시오.
+선호 하는 도구를 사용 하 여 호출 하는 `run` 메서드 (`https://[IP]:30778/api/app/[appname]/[version]/run`)를 json으로 POST 요청의 본문에 매개 변수를 전달 합니다. 이 예제에서는 사용 하 여 [Postman](https://www.getpostman.com/)합니다. 호출 하기 전에 설정 해야 합니다는 `Authorization` 에 `Bearer Token` 앞서 검색 한 토큰에 붙여넣습니다. 요청에서 헤더를 설정 합니다. 아래 스크린샷을 참조 하세요.
 
 ![Postman 실행 헤더](media/big-data-cluster-consume-apps/postman_run_1.png)
 

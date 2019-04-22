@@ -11,10 +11,10 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241761"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
@@ -53,7 +53,7 @@ ms.locfileid: "59241761"
 ##  <a name="HowToCleanse"></a> 참조 데이터를 사용하여 데이터를 정리하는 방법  
  참조 데이터를 사용하여 DQS의 데이터를 정리하기 위한 3단계는 다음과 같습니다.  
   
-1.  **DQS에서 참조 데이터 공급자 세부 정보 구성**: DQS에서 참조 데이터를 사용하려면 DQS에서 참조 데이터 서비스 세부 정보를 구성해야 합니다.  
+1.  **DQS에서 참조 데이터 공급자 세부 정보 구성**: DQS에서 참조 데이터를 사용 하려면 먼저 DQS에서 참조 데이터 서비스 세부 정보를 구성 해야 합니다.  
   
     1.  Marketplace를 사용하는 경우 유효한 Marketplace 계정 키를 제공하고 Marketplace의 [Data Quality Services](../data-quality-services/data-quality-services.md) 데이터 범주로 이동한 후 필요한 공급자를 구독합니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59241761"
   
      DQS에서 참조 데이터 공급자 세부 정보를 구성하는 작업은 특정 데이터 공급자에 대해 한 번만 수행하면 됩니다. DQS 관리자만 DQS에서 참조 데이터 설정을 구성할 수 있습니다.  
   
-2.  **기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑**: 1단계에서 구독/추가한 적절한 데이터 서비스에 도메인/복합 도메인을 매핑합니다.  
+2.  **기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑**: 1 단계에서 구독/추가한 적절 한 참조 데이터 서비스에 도메인/복합 도메인을 매핑하십시오.  
   
 3.  **데이터 품질 프로젝트의 정리 작업에 매핑된 도메인 사용**: **정리** 작업에 대한 데이터 품질 프로젝트를 만들 때 2단계서 참조 데이터 서비스와 매핑된 도메인/복합 도메인이 포함된 기술 자료를 선택하고 정리 작업을 수행합니다.  
   
@@ -71,6 +71,6 @@ ms.locfileid: "59241761"
 |----------------------|-----------|  
 |Marketplace 또는 다이렉트 온라인 타사 데이터 공급자의 참조 데이터 서비스를 사용하도록 DQS를 구성하는 방법에 대해 설명합니다.|[참조 데이터를 사용하도록 DQS 구성](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑하는 방법에 대해 설명합니다.|[참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

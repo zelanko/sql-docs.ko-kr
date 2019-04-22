@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042432"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014로 로그 전달 업그레이드(Transact-SQL)
@@ -74,12 +74,12 @@ ms.locfileid: "59042432"
 >  주 서버 인스턴스를 업그레이드하기 전에 보조 서버 인스턴스를 업그레이드해야 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [보조 서버 인스턴스 업그레이드](#UpgradeSecondary)를 참조하세요.  
   
   
-####  <a name="Scenario1"></a> 시나리오 1: 장애 조치를 사용하지 않고 주 서버 인스턴스 업그레이드  
+####  <a name="Scenario1"></a> 시나리오 1: 장애 조치 하지 않고 주 서버 인스턴스 업그레이드  
  이 시나리오는 간단한 반면에 장애 조치를 사용할 때보다 작동 중단 시간이 깁니다. 즉, 주 서버 인스턴스를 손쉽게 업그레이드할 수 있는 반면에 이 업그레이드 동안 데이터베이스를 사용할 수 없습니다.  
   
  서버가 업그레이드된 후에는 데이터베이스가 자동으로 업그레이드가 가능한 온라인 상태로 다시 설정됩니다. 데이터베이스가 업그레이드되면 로그 전달 작업이 다시 시작됩니다.  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>시나리오 2: 장애 조치를 사용하여 주 서버 인스턴스 업그레이드  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>시나리오 2: 장애 조치를 사용 하 여 주 서버 인스턴스 업그레이드  
  이 시나리오는 가용성을 최대화하고 작동 중단 시간을 최소화합니다. 즉, 보조 서버 인스턴스로의 제어된 장애 조치가 사용되기 때문에 원래 주 서버 인스턴스가 업그레이드되는 동안 데이터베이스가 사용 가능한 상태로 유지됩니다. 작동 중단 시간은 주 서버 인스턴스를 업그레이드하는 데 필요한 시간이 아니라 장애 조치하는 데 필요한 상대적으로 짧은 시간으로 제한됩니다.  
   
  장애 조치를 사용하여 주 서버 인스턴스를 업그레이드하는 프로세스에는 보조 서버로 제어된 장애 조치를 수행하고, 원래 주 서버 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하고, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 주 서버 인스턴스에 로그 전달을 설정하는 세 가지 일반적인 절차가 포함됩니다. 이 섹션에서는 이러한 절차에 대해 설명합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "59042432"
 >  보조 서버 인스턴스를 새 주 서버 인스턴스로 사용하려면 로그 전달 구성을 제거해야 합니다. 로그 전달은 원래 주 서버 인스턴스가 업그레이드된 후에 새 주 서버에서 새 보조 서버로 다시 구성해야 합니다. 자세한 내용은 [로그 전달 제거 &#40;SQL Server&#41;](remove-log-shipping-sql-server.md)합니다.  
   
   
-#####  <a name="Procedure1"></a> 절차 1: 보조 서버로 제어된 장애 조치(Failover) 수행  
+#####  <a name="Procedure1"></a> 절차 1: 보조 서버로 제어 된 장애 조치를 수행 합니다.  
  보조 서버로 제어된 장애 조치를 수행하려면 다음과 같이 하세요.  
   
 1.  수동으로 수행을 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) WITH NORECOVERY를 지정 하는 주 데이터베이스에서 트랜잭션 로그의 합니다. 이 로그 백업은 아직 백업되지 않은 모든 로그 레코드를 캡처하고 데이터베이스를 오프라인 상태로 만듭니다. 데이터베이스가 오프라인 상태일 때는 로그 전달 백업 작업이 실패합니다.  
@@ -130,10 +130,10 @@ ms.locfileid: "59042432"
   
     5.  데이터베이스가 온라인 상태일 때 보조 데이터베이스의 트랜잭션 로그가 채워지지 않도록 주의합니다. 트랜잭션 로그가 채워지지 않도록 하려면 트랜잭션 로그를 백업해야 할 수 있습니다. 이 경우 다른 서버 인스턴스에서 복원할 수 있도록 공유 위치인 *백업 공유*에 백업하는 것이 좋습니다.  
   
-#####  <a name="Procedure2"></a> 절차 2: 원래 주 서버 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드  
+#####  <a name="Procedure2"></a> 절차 2: 원래 주 서버 인스턴스를 업그레이드 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  원래 주 서버 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후에도 데이터베이스는 계속 오프라인 상태로 동일한 형식을 사용합니다.  
   
-#####  <a name="Procedure3"></a> 절차 3: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 로그 전달 설정  
+#####  <a name="Procedure3"></a> 절차 3: 로그 전달 설정 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  업그레이드 프로세스의 나머지 부분은 다음과 같이 로그 전달이 계속 구성되어 있는지 여부에 따라 달라집니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이상의 로그 전달 구성을 유지한 경우 원래 주 서버 인스턴스로 다시 전환합니다. 자세한 내용은 이 섹션의 뒷부분에 나오는 [원래 주 서버 인스턴스로 다시 전환하려면](#SwitchToOrigPrimary)을 참조하세요.  
@@ -193,7 +193,7 @@ ms.locfileid: "59042432"
 > [!IMPORTANT]  
 >  항상 주 서버를 업그레이드하기 전에 모든 보조 서버 인스턴스를 업그레이드하세요.  
   
- **장애 조치를 사용한 다음 원래 주 서버로 다시 전환하여 업그레이드하려면**  
+ **업그레이드 하려면 장애 조치를 사용 하 여 전환한 다음 다시 원래 주 서버**  
   
 1.  모든 보조 서버 인스턴스(서버 B 및 서버 C)를 업그레이드합니다.  
   
@@ -224,4 +224,4 @@ ms.locfileid: "59042432"
 ## <a name="see-also"></a>관련 항목  
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [로그 전달 테이블 및 저장 프로시저](log-shipping-tables-and-stored-procedures.md)  

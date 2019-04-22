@@ -1,7 +1,7 @@
 ---
 title: Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610181"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241751"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,10 @@ ms.locfileid: "47610181"
   
 ## <a name="configure-encryption"></a>암호화 구성  
  다음 단계는 저장 프로시저 [managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)를 사용하여 암호화 설정을 지정하는 방법을 설명합니다.  
-  
-1.  **암호화 알고리즘 결정:** 먼저 사용할 암호화 알고리즘의 이름을 결정합니다. 다음 알고리즘 중 하나 선택:  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+1.  **암호화 알고리즘 결정:** 사용할 암호화 알고리즘의 이름을 먼저 결정합니다. 다음 알고리즘 중 하나 선택:  
   
     -   AES_128  
   
@@ -44,7 +46,7 @@ ms.locfileid: "47610181"
   
     -   NO_ENCRYPTION  
   
-2.  **데이터베이스 마스터 키 생성:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
+2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +57,7 @@ ms.locfileid: "47610181"
     GO  
     ```  
   
-3.  **백업 인증서 또는 비대칭 키 생성:** 암호화에서 사용할 CERTIFICATE 또는 ASYMMETRIC KEY를 사용할 수 있습니다. 다음 예제에서는 백업 암호화에 사용할 백업 인증서를 만듭니다.  
+3.  **백업 인증서 또는 비대칭 키 만들기:** 암호화에서 사용할 인증서 또는 비대칭 키를 사용할 수 있습니다. 다음 예제에서는 백업 암호화에 사용할 백업 인증서를 만듭니다.  
   
     ```sql  
     USE Master;  
@@ -88,9 +90,9 @@ ms.locfileid: "47610181"
   
 2.  **로그 백업을 위한 빈도 결정:** 로그 백업을 수행하는 빈도를 결정합니다. 이 값은 분 단위 또는 시간 단위입니다.  
   
-3.  **주별 백업에 대한 요일 결정:** 주별로 백업하는 경우 전체 백업을 수행할 요일을 결정합니다.  
+3.  **주별 백업에 대한 요일 결정:** 주별로 백업하는 경우 전체 백업을 수행할 요일을 선택합니다.  
   
-4.  **백업 시작 시간 결정:** 24시간 표시법을 사용하여 백업을 시작할 시간을 선택합니다.  
+4.  **백업 시작 시간 결정:** 24시간 표기법을 사용하여 백업을 시작할 시간을 선택합니다.  
   
 5.  **백업에서 허용되는 시간 길이 결정:** 백업이 완료되어야 하는 시간의 양을 지정합니다.  
   

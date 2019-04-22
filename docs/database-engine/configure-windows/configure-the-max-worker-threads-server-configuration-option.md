@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230980"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429339"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "56230980"
   
 -   **후속 작업:**  [최대 작업자 스레드 수 옵션을 구성한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -77,14 +77,14 @@ ms.locfileid: "56230980"
     |\> 64개 프로세서|256 + ((논리 CPU 수 - 4) * 32)|512 + ((논리 CPU 수 - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32비트 운영 체제에 더 이상 설치할 수 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 이전 버전을 실행하는 고객을 돕기 위해 32비트 컴퓨터 값을 나열합니다.   32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1024로 설정하는 것이 좋습니다.  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32비트 운영 체제에 더 이상 설치할 수 없습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 이전 버전을 실행하는 고객을 돕기 위해 32비트 컴퓨터 값을 나열합니다. 32비트 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 최대 작업자 스레드 수는 1,024로 설정하는 것이 좋습니다.  
   
     > [!NOTE]  
-    >  64개가 넘는 CPU 사용에 대한 권장 사항은 [64개를 초과하는 CPU가 있는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)을 참조하세요.  
+    > 64개가 넘는 CPU 사용에 대한 권장 사항은 [64개를 초과하는 CPU가 있는 컴퓨터에서 SQL Server를 실행하기 위한 최선의 방법](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)을 참조하세요.  
   
 -   장기 실행 쿼리의 모든 작업자 스레드가 활성 상태이면 작업자 스레드가 완료되어 사용 가능 상태가 되기 전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 응답하지 않을 수 있습니다. 이는 오류는 아니지만 바람직한 상태는 아닙니다. 프로세스가 응답할 수 없고 새 쿼리를 처리할 수 없으면 DAC(관리자 전용 연결)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결한 다음 해당 프로세스를 중지합니다. 이를 방지하려면 max worker threads 수를 증가시킵니다.  
   
- **최대 작업자 스레드 수** 서버 구성 옵션은 가용성 그룹, Service Broker, 잠금 관리자 등의 모든 시스템 태스크에 필요한 스레드 수를 고려하지 않습니다. 다음 쿼리는 구성된 스레드 수를 초과할 경우 추가 스레드를 생성한 시스템 태스크에 대한 정보를 제공합니다.  
+ **최대 작업자 스레드 수** 서버 구성 옵션이 시스템에 생성될 수 있는 모든 스레드를 제한하는 것은 아닙니다. 가용성 그룹, Service Broker, 잠금 관리자 등의 작업에 필요한 스레드는 이 제한에서 벗어나 생성됩니다. 다음 쿼리는 구성된 스레드 수가 초과되면 추가 스레드를 생성한 시스템 작업에 대한 정보를 제공합니다.  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -103,8 +103,8 @@ ms.locfileid: "56230980"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
- 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+####  <a name="Permissions"></a> 사용 권한  
+ 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 `RECONFIGURE` 문을 실행하는 두 매개 변수를 사용하여 **sp_configure**를 실행하려면 사용자에게 `ALTER SETTINGS` 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 `ALTER SETTINGS` 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> 사용 중 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

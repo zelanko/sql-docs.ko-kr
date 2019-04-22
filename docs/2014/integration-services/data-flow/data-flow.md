@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241361"
 ---
 # <a name="data-flow"></a>데이터 흐름
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.n원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다.l변환은 데이터를 수정, 요약 및 삭제합니다.s대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 세트를 만듭니다.  
   
 > [!NOTE]  
 >  사용자 지정 공급자를 사용할 경우 ProviderDescriptors.xml 파일을 메타데이터 열 값으로 업데이트해야 합니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "59241361"
 ## <a name="transformations"></a>변환  
  변환의 기능은 매우 다양합니다. 변환은 데이터 업데이트, 요약, 삭제, 병합 및 배포와 같은 태스크를 수행할 수 있습니다. 열 값을 수정하고, 테이블 값을 조회하고, 데이터를 정리하고, 열 값을 집계할 수 있습니다.  
   
- 변환의 입력 및 출력은 들어오고 나가는 데이터의 열을 정의합니다. 데이터에서 수행되는 작업에 따라 변환에는 하나의 입력과 여러 출력이 포함되거나 여러 입력과 하나의 출력이 포함될 수 있습니다. 또한 변환에는 발생한 오류에 대한 정보와 함께 실패한 데이터를 제공하는 오류 출력이 포함될 수 있습니다. 예를 들어 정수 데이터 형식으로 변환될 수 없는 문자열 데이터가 포함될 수 있습니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델은 입력, 일반 출력 및 변환에 포함될 수 있는 오류 출력의 개수를 제한하지 않습니다. 여러 입력, 일반 출력 및 오류 출력의 임의 조합을 구현하는 사용자 지정 변환을 만들 수 있습니다.  
+ 변환의 입력 및 출력은 들어오고 나가는 데이터의 열을 정의합니다. 데이터에서 수행되는 작업에 따라 변환에는 하나의 입력과 여러 출력이 포함되거나 여러 입력과 하나의 출력이 포함될 수 있습니다. 변환 하지 못한 데이터와 함께 발생 한 오류에 대 한 정보를 제공 하는 오류 출력을 포함할 수도 있습니다. 예를 들어 정수 데이터 형식으로 변환할 수 없는 데이터는 문자열입니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델은 입력, 일반 출력 및 변환에 포함될 수 있는 오류 출력의 개수를 제한하지 않습니다. 여러 입력, 일반 출력 및 오류 출력의 임의 조합을 구현하는 사용자 지정 변환을 만들 수 있습니다.  
   
  변환의 입력은 하나 이상의 입력 열로 정의됩니다. 일부 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 또한 외부 열을 입력으로 참조할 수 있습니다. 예를 들어 OLE DB 명령 변환에 대한 입력에는 외부 열이 포함됩니다. 출력 열은 변환이 데이터 흐름에 추가하는 열입니다. 일반 출력과 오류 출력에는 모두 출력 열이 포함됩니다. 그런 다음 이러한 출력 열은 데이터 흐름에서 다른 변환이나 대상과 같은 다음 구성 요소에 대한 입력 열로 사용됩니다.  
   
@@ -178,7 +178,7 @@ ms.locfileid: "59241361"
  원본에는 출력이 포함되고, 대상에는 입력이 포함되고, 변환에는 입력과 출력이 모두 포함됩니다. 또한 여러 데이터 흐름 구성 요소는 하나의 오류 출력을 사용하도록 구성될 수 있습니다.  
   
 ### <a name="inputs"></a>입력  
- 대상 및 변환에는 입력이 포함됩니다. 입력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 입력 열이 포함됩니다. 입력은 데이터 흐름을 모니터링하고 제어하도록 구성될 수 있습니다. 예를 들어 구성 요소가 오류에 대한 응답으로 실패하거나, 오류를 무시하거나, 오류 행을 오류 출력으로 리디렉션하도록 지정할 수 있습니다. 또한 입력에 대한 설명을 할당하거나 입력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 입력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다. **고급 편집기** 에 대한 자세한 내용은 [Integration Services User Interface](../integration-services-user-interface.md)를 참조하십시오.  
+ 대상 및 변환에는 입력이 포함됩니다. 입력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 입력 열이 포함됩니다. 모니터링 하 고 데이터의 흐름 제어 입력을 구성할 수 있습니다. 예를 들어 경우 구성 요소 실패 오류에 대 한 응답에서, 오류를 무시 하거나 오류 행을 오류 출력으로 리디렉션하도록 지정할 수 있습니다. 또한 입력에 대한 설명을 할당하거나 입력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 입력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다. **고급 편집기** 에 대한 자세한 내용은 [Integration Services User Interface](../integration-services-user-interface.md)를 참조하십시오.  
   
 ### <a name="outputs"></a>출력  
  원본 및 변환에는 항상 출력이 포함됩니다. 출력에는 데이터 흐름 구성 요소가 외부 열을 사용하도록 구성된 경우 이러한 외부 열을 참조할 수 있는 하나 이상의 출력 열이 포함됩니다. 출력은 데이터의 다운스트림 처리에 유용한 정보를 제공하도록 구성될 수 있습니다. 예를 들어 출력이 정렬되는지 여부를 나타낼 수 있습니다. 또한 출력에 대한 설명을 제공하거나 출력 이름을 업데이트할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 출력은 **고급 편집기** 대화 상자를 사용하여 구성됩니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "59241361"
  자세한 내용은 [데이터 오류 처리](error-handling-in-data.md)를 참조하세요.  
   
 ### <a name="columns"></a>열  
- 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
+ 입력, 출력 및 오류 출력에는 해당 열이 포함됩니다. 각 열은 구성이 가능하며, 입력, 출력 또는 외부 등의 열 유형에 따라 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]는 열에 대해 서로 다른 속성을 제공합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 프로그래밍 방식으로 설정하거나 구성 요소 관련 대화 상자를 통해 설정하거나 **고급 편집기** 대화 상자를 통해 설정하는 세 가지 열 속성 설정 방법이 제공됩니다.  
   
 ## <a name="paths"></a>경로  
  경로는 데이터 흐름 구성 요소를 연결합니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 경로 속성을 보고 수정하고, 경로 시작 지점의 출력 메타데이터를 보고, 데이터 뷰어를 경로에 연결할 수 있습니다.  

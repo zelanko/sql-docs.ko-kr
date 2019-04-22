@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242331"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
@@ -36,13 +36,13 @@ ms.locfileid: "59242331"
 |통계|형식|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
-|**start_time**|**Datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**Datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 정확 하 게 5 분 이상 해당 하는 것은 항상 **start_time** 같은 행에 있습니다.|  
-|**success_count**|**ssNoversion**|성공한 연결 수:|  
-|**total_failure_count**|**ssNoversion**|실패한 연결의 총 수입니다. 이 값은 합계 **connection_failure_count**를 **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
-|**connection_failure_count**|**ssNoversion**|로그인 실패 횟수입니다.|  
-|**terminated_connection_count**|**ssNoversion**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 종료된 연결 수:|  
-|**throttled_connection_count**|**ssNoversion**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 정체된 연결 수입니다.|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. **End_time** 정확 하 게 5 분 이상 해당 하는 것은 항상 **start_time** 같은 행에 있습니다.|  
+|**success_count**|**int**|성공한 연결 수:|  
+|**total_failure_count**|**int**|실패한 연결의 총 수입니다. 이 값은 합계 **connection_failure_count**를 **terminated_connection_count**, 및 **throttled_connection_count**, 교착 상태 이벤트를 포함 하지 않습니다.|  
+|**connection_failure_count**|**int**|로그인 실패 횟수입니다.|  
+|**terminated_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 종료된 연결 수:|  
+|**throttled_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 정체된 연결 수입니다.|  
   
 ## <a name="remarks"></a>Remarks  
   

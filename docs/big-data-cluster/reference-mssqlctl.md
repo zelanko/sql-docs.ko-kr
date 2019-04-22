@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860355"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -26,11 +26,11 @@ ms.locfileid: "58860355"
 
 |||
 |---|---|
-| [앱](reference-mssqlctl-app.md) | 만들기, 삭제, 실행 및 응용 프로그램을 관리 합니다. |
-| [클러스터](reference-mssqlctl-cluster.md) | 선택 하 고, 관리 및 클러스터 작동 합니다. |
-| [로그인](#login) | 클러스터에 로그인 합니다. |
-| [로그 아웃](#logout) | 로그 아웃 클러스터 합니다. |
-| [저장소](reference-mssqlctl-storage.md) | 클러스터 저장소를 관리 합니다. |
+| [app](reference-mssqlctl-app.md) | 만들기, 삭제, 실행 및 응용 프로그램을 관리 합니다. |
+| [cluster](reference-mssqlctl-cluster.md) | 선택 하 고, 관리 및 클러스터 작동 합니다. |
+| [login](#login) | 클러스터에 로그인 합니다. |
+| [logout](#logout) | 로그 아웃 클러스터 합니다. |
+| [storage](reference-mssqlctl-storage.md) | 클러스터 저장소를 관리 합니다. |
 
 ## <a id="login"></a> mssqlctl 로그인
 
@@ -49,7 +49,7 @@ mssqlctl login
 |---|---|
 |**--endpoint -e**| 호스트 및 포트 (예:)을 클러스터 `http://host:port"`합니다. |
 |**--password -p**| 암호 자격 증명입니다. |
-|**--username-u**| 사용자 계정입니다. |
+|**--username -u**| 사용자 계정입니다. |
 
 ### <a name="examples"></a>예
 
@@ -84,7 +84,7 @@ mssqlctl logout
 
 | 매개 변수 | Description |
 |---|---|
-| **--username-u** | 계정 사용자의 경우 누락 된 경우 현재 활성 계정을 로그 아웃 합니다. |
+| **--username -u** | 계정 사용자의 경우 누락 된 경우 현재 활성 계정을 로그 아웃 합니다. |
 
 ### <a name="examples"></a>예
 

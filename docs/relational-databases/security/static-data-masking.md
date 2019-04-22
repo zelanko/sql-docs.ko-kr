@@ -1,27 +1,27 @@
 ---
 title: 정적 데이터 마스킹 | Microsoft 문서
-ms.date: 11/05/2018
+ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
-author: egranet
+author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec6c79fadb5ef2a63145fff3efe0df3c8cd0f9d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980459"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516469"
 ---
 # <a name="static-data-masking"></a>정적 데이터 마스킹
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-정적 데이터 마스킹은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 미리 보기 5 이상의 구성 요소입니다. SQL Server Management Studio의 최신 미리 보기는 [여기](../../ssms/download-sql-server-management-studio-ssms.md)에서 다운로드할 수 있습니다. 
+정적 데이터 마스킹은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 미리 보기 5 이상의 구성 요소로 릴리스되었습니다. 현재 프로토타입은 고객의 기대를 충족하지 못하는 것으로 결정되었습니다. 따라서 이 기능은 유지하지 않을 것입니다. 대체할 후보가 있는 경우 사용자 플랜이 업데이트됩니다.
 
 ![정적 데이터 마스킹](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

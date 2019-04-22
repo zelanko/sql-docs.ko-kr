@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240421"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>식을 사용하여 설정할 수 있는 데이터 흐름 속성
@@ -84,7 +84,7 @@ ms.locfileid: "59240421"
 ## <a name="see-also"></a>관련 항목  
  [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)   
  [공용 속성](../../2014/integration-services/common-properties.md)   
- [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)   
+ [변환 사용자 지정 속성](data-flow/transformations/transformation-custom-properties.md)   
  [경로 속성](../../2014/integration-services/path-properties.md)  
   
   

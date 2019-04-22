@@ -17,15 +17,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034551"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774588"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>활성 지역 복제-sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   이 프로시저는 기본 및 보조 간 [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] 관계로 한정됩니다. 호출 된 **sp_wait_for_database_copy_sync** 응용 프로그램에 커밋된 모든 트랜잭션이 복제 되 고 활성 보조 데이터베이스에서 승인 될 때까지 기다립니다. 실행할 **sp_wait_for_database_copy_sync** 주 데이터베이스 에서만.  
   

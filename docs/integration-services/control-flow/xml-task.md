@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59291553"
 ---
 # <a name="xml-task"></a>XML 태스크
@@ -121,7 +121,7 @@ ms.locfileid: "59291553"
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [XML 태스크를 사용하여 XML 유효성 검사](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  기존 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -245,7 +245,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -291,7 +291,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -371,7 +371,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -446,7 +446,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
@@ -492,7 +492,7 @@ ms.locfileid: "59291553"
  **OverwriteDestination**  
  대상 파일 또는 변수를 덮어쓸지 여부를 지정합니다.  
   
- **Destination**  
+ **대상**  
  **DestinationType**을 **파일 연결**로 설정한 경우 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  

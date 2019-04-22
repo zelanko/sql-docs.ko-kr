@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860514"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 notebook을 관리 하는 방법
@@ -30,8 +30,8 @@ ms.locfileid: "58860514"
 - [빅 데이터 클러스터를 배포](quickstart-big-data-cluster-deploy.md)합니다.
 - [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **SQL Server 2019 extension**
-   - **Kubectl**
+   - **SQL Server 2019 확장**
+   - **kubectl**
 
 ## <a name="open-a-notebook"></a>Notebook을 엽니다.
 

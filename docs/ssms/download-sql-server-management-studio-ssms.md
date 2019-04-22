@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042030"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
@@ -44,9 +44,9 @@ SSMS는 무료입니다.
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1은 SSMS의 현재 GA(일반 공급) 버전입니다.
 
-[![d다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 다운로드](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![d다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 업그레이드 패키지 다운로드(17.x에서 17.9.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.9.1 업그레이드 패키지 다운로드(17.x에서 17.9.1로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **버전 정보**
 
@@ -76,9 +76,9 @@ SSMS 17.9.1에 대한 자세한 내용은 [SSMS 17.9.1 변경 로그](release-no
 
 ## <a name="ssms-180-rc1"></a>SSMS 18.0(RC1)
 
-**SSMS 18.0 RC1(릴리스 후보 1)은 현재 사용할 수 있으며, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]을 지원하는 최신 세대 *SQL Server Management Studio*입니다.**
+**SSMS 18.0 RC1(릴리스 후보 1)은 현재 사용할 수 있으며, [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!** 를 지원하는 최신 세대 *SQL Server Management Studio*입니다.
 
-**[![dow다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.0(RC1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.0(RC1) 다운로드](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1*은 SSMS 18.0의 최신 공개 미리 보기입니다. 이전 SSMS 18.0 미리 보기가 설치되어 있으면 먼저 이를 제거한 후에 SSMS 18.0 RC1을 설치합니다.
 
@@ -140,7 +140,7 @@ SSMS 18.0(RC1)은 최신 버전의 SQL Server Management Studio입니다. 18.X �
 
 ## <a name="previous-releases"></a>이전 릴리스
 
-[SQL Server Management Studio의 이전 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)
+[이전 SQL Server Management Studio 릴리스](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
 ## <a name="feedback"></a>피드백
 

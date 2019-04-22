@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860164"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service 구성
@@ -35,7 +35,7 @@ AKS를 사용 하면 간단 하 게 생성, 구성 및 컨테이너 화 된 응�
 - [SQL Server 2019 빅 데이터 도구 배포](deploy-big-data-tools.md):
    - **Kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019 extension**
+   - **SQL Server 2019 확장**
    - **Azure CLI**
 
 - Kubernetes 서버용 1.10 최소 버전입니다. AKS를 사용 해야 `--kubernetes-version` 기본값과 다른 버전을 지정 하려면 매개 변수입니다.

@@ -1,7 +1,7 @@
 ---
 title: '자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작 | Microsoft Docs'
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/05/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 051123efd5c58048635bb83e43eaff73218c463e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241541"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,6 +46,7 @@ ms.locfileid: "59042132"
    - Hyper-V 2016 이상에서 VM 프로세서의 [중첩된 가상화 확장을 사용하도록 설정](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)합니다.
    - Azure에서 Dv3 및 Ev3 시리즈 VM과 같은 중첩된 가상화를 지원하는 VM 크기를 실행 중인지 확인합니다. [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
    - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
+   - 다른 하이퍼바이저 및 공용 클라우드는 가상화 확장(중첩된 가상화라고도 함)이 VM에 노출되어 있는 한 VM에서 보안 enclave를 통해 Always Encrypted를 사용하도록 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.
 - [SSMS(SQL Server Management Studio) 18.0 이상](../../ssms/download-sql-server-management-studio-ssms.md).
 
 대안으로 다른 머신에 SSMS를 설치할 수 있습니다.
