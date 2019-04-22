@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041882"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -65,8 +65,8 @@ ODBC 드라이버에는 [**sqlcmd**](../../tools/sqlcmd-utility.md) 및 [**bcp**
 
 ### <a name="windows"></a>Windows
 
-- [비동기 실행(알림 방법) 샘플](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
-- [Windows ODBC 드라이버에서 연결 복원](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
+- [비동기 실행(알림 메서드) 샘플](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
+- [Windows ODBC 드라이버의 연결 복원](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [드라이버 인식 연결 풀링](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [기능 및 동작 변경 내용](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 - [Windows 기반 SQL Server에 대한 ODBC 릴리스 정보](windows/release-notes-odbc-sql-server-windows.md)

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042252"
 ---
 # <a name="using-integrated-authentication"></a>통합 인증 사용
@@ -83,7 +83,7 @@ Kerberos 자격 증명이 설계에 따라 만료되므로 애플리케이션이
   
 -   애플리케이션 서버를 다른 데이터베이스로 인증하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결합니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 은 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 다른 데이터베이스에 데이터베이스 사용자로 인증합니다([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 통합된 인증을 구성한 후 자격 증명이 연결된 서버에 전달됩니다.  
   
@@ -105,7 +105,7 @@ SPN이 연결 문자열 또는 연결 특성에서 사용하는 구문은 다음
   
 ## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Active Directory를 사용하여 Linux 또는 macOS 컴퓨터 인증
 
-Kerberos를 구성하려면 `krb5.conf` 파일에 데이터를 입력합니다. `krb5.conf` `/etc/`에 있지만 구문(예: `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`)을 사용하여 다른 파일을 참조할 수 있습니다. 다음은 `krb5.conf` 파일의 예입니다.  
+Kerberos를 구성하려면 `krb5.conf` 파일에 데이터를 입력합니다. `krb5.conf`은 `/etc/`에 있지만 구문(예: `export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`)을 사용하여 다른 파일을 참조할 수 있습니다. 다음은 `krb5.conf` 파일의 예입니다.  
   
 ```  
 [libdefaults]  

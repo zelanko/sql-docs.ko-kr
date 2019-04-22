@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872013"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 기반 SQL Server에 대한 ODBC 릴리스 정보
@@ -98,7 +98,7 @@ GeneMi (and CraigG).  2019/03/30.
 > - 로컬 경로에서 UDT 만들기는 지원되지 않습니다.
 > - Windows 통합 인증은 지원되지 않습니다.
 > - DTC는 지원되지 않습니다.
-> - `sa` 계정이 없습니다(기본 계정을 `cloudSA`라 함).
+> - `sa`계정이 없습니다(기본 계정을 `cloudSA`라 함).
 > - TDS 토큰 ERROR(0xAA)가 잘못된 서버 이름을 반환합니다.
 > - 데이터베이스 이름에 특수 문자가 지원되지 않습니다.
 > - ALTER DATABASE [dbname1] MODIFY NAME = [dbname2]가 지원되지 않습니다.
