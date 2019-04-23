@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041922"
 ---
 # <a name="installing-the-driver-manager"></a>드라이버 관리자 설치
@@ -44,7 +44,7 @@ ms.locfileid: "59041922"
   
 1.  루트 권한이 있는지 확인합니다.  
   
-2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC 드라이버 다운로드에서 `msodbcsql-11.0.2270.0.tar.gz`라는 파일을 저장한 디렉터리로 이동합니다. Linux 버전과 일치하는 \*.tar.gz 파일이 있는지 확인합니다. 파일을 추출하려면 **tar xvzf msodbcsql-11.0.2270.0.tar.gz** 명령을 실행합니다.  
+2.  [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver 다운로드가 `msodbcsql-11.0.2270.0.tar.gz`라는 파일을 배치한 디렉터리로 이동합니다. Linux 버전과 일치하는 \*.tar.gz 파일이 있는지 확인합니다. 파일을 추출하려면 **tar xvzf msodbcsql-11.0.2270.0.tar.gz** 명령을 실행합니다.  
 
 3.  `msodbcsql-11.0.2270.0` 디렉터리로 변경하면 `build_dm.sh`라는 파일이 나타납니다. 실행할 수 있습니다 `build_dm.sh` unixODBC 드라이버 관리자를 설치 합니다.
 
@@ -85,7 +85,7 @@ ms.locfileid: "59041922"
 이제 드라이버를 설치할 준비가 되었습니다. 자세한 내용은 [Microsoft ODBC Driver for SQL Server Linux 및 macOS 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목
-[Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+[Linux 및 macOS 기반 SQL Server용 Microsoft ODBC Driver 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [이 버전의 드라이버에서 알려진 문제](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 

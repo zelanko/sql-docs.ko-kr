@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676151"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582896"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -66,15 +66,15 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |*$phpType*[선택 사항]|반환된 값의 PHP 데이터 형식을 지정하는 **SQLSRV_PHPTYPE_\*** 상수입니다.|  
     |*$sqlType*[선택 사항]|입력 값의 SQL Server 데이터 형식을 지정하는 **SQLSRV_SQLTYPE_\*** 상수입니다.|  
   
-*$options* [선택 사항]: 쿼리 속성을 설정하는 결합형 배열입니다. 다음 표는 지원되는 키와 해당 값을 나열합니다.  
-  
+*$options*[선택 사항]: <a name="properties">쿼리 속성</a>을 설정하는 결합형 배열입니다. 다음 표는 지원되는 키와 해당 값을 나열합니다.
+
 |Key|지원되는 값|설명|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|양의 정수|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB입니다. 자세한 내용은 [Cursor Type and Selecting Rows 지정](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)합니다.|
-|DecimalPlaces|0에서 4 (포함) 사이의 정수|소수 자릿수의 서식을 지정할 때 인출 money 값을 지정 합니다.<br /><br />음의 정수 또는 값을 4 보다 큰 무시 됩니다.<br /><br />이 옵션은 인 경우에 FormatDecimals **true**합니다.|
-|FormatDecimals|**true** 또는 **false**<br /><br />기본 값은 **false**입니다.|앞에 오는 0을 해당 하는 경우 10 진수 문자열을 사용 하면 추가 여부를 지정 합니다 `DecimalPlaces` money 형식 서식 지정에 대 한 옵션입니다.<br /><br />자세한 내용은 [10 진수 문자열 서식 지정 및 Money 값 (SQLSRV 드라이버)](../../connect/php/formatting-decimals-sqlsrv-driver.md)합니다.|
+|ClientBufferMaxKBSize|양의 정수|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10240KB입니다. 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.|
+|DecimalPlaces|0과 4(포함) 사이의 정수|가져온 money 값의 서식을 지정할 때 소수 자릿수를 지정합니다.<br /><br />음의 정수 또는 4보다 큰 값은 무시됩니다.<br /><br />이 옵션은 FormatDecimals가 **true**인 경우에만 작동합니다.|
+|FormatDecimals|**true** 또는 **false**<br /><br />기본 값은 **false**입니다.|해당하는 경우 10진수 문자열에 앞에 오는 0을 추가할지 여부를 지정하고 money 형식의 서식을 지정하기 위한 `DecimalPlaces` 옵션을 사용하도록 설정합니다.<br /><br />자세한 내용은 [Formatting Decimal Strings and Money Values (SQLSRV Driver)](../../connect/php/formatting-decimals-sqlsrv-driver.md)(10진수 문자열 및 Money 값 서식 지정(SQLSRV 드라이버)를 참조하세요.|
 |QueryTimeout|양의 정수|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과를 무한정 기다립니다.|  
-|ReturnDatesAsStrings|**true** 또는 **false**<br /><br />기본 값은 **false**입니다.|날짜 및 시간 형식을 문자열로 검색 하는 문을 구성 (**true**). 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)을 참조하세요.
+|ReturnDatesAsStrings|**true** 또는 **false**<br /><br />기본 값은 **false**입니다.|날짜 및 시간 형식을 문자열로 검색하는 문을 구성합니다(**true**). 자세한 내용은 [방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)을 참조하세요.
 |스크롤 가능|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.|  
 |SendStreamParamsAtExec|**true** 또는 **false**<br /><br />기본값은 **true**입니다.|실행 시 모든 스트림 데이터를 보내거나(**true**) 스트림 데이터를 청크로 보내도록(**false**) 드라이버를 구성합니다. 기본적으로 이 값은 **true**로 설정되어 있습니다. 자세한 내용은 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)을 참조하세요.|  
   
@@ -223,10 +223,10 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> 값을 바인딩하는 경우 입력으로 문자열을 사용 하는 것이 좋습니다.는 [소수 또는 숫자 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP에 대 한 전체 자릿수를 제한적으로 되도록 정밀도 정확도 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)합니다. 값의 범위 밖에 있는 경우 특히 bigint 열에도 마찬가지는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)합니다.
+> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
-이 코드 샘플에는 입력된 매개 변수로 10 진수 값을 바인딩하는 방법을 보여 줍니다.  
+이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  
 
 ```
 <?php

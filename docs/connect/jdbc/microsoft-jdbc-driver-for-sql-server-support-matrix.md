@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31c5829322a4c3d2bc6266a6a0ddd3a1f86f505a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c5afea07126f93937a46254682b163407db6f75d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154918"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671309"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft JDBC Driver for SQL Server 지원 매트릭스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "56154918"
     
  다음 Microsoft JDBC Driver는 지정된 지원 종료 날짜까지 지원됩니다.  
   
-|드라이버 이름|드라이버 패키지 버전|해당 JAR(s)|일반 지원 종료|
+|드라이버 이름|드라이버 패키지 버전|적용 가능한 JAR|일반 지원 종료|
 |-|-|-|-|  
-|SQL Server용 Microsoft JDBC Driver 7.2|7.2|mssql-jdbc-7.2.1.jre11.jar<br> mssql-jdbc-7.2.1.jre8.jar|2024 2 월 11,|
-|SQL Server용 Microsoft JDBC Driver 7.0|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 년 7 월 31,|  
-|SQL Server용 Microsoft JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 년 2 월 27,|    
+|SQL Server용 Microsoft JDBC Driver 7.2|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024년 4월 16일|
+|SQL Server용 Microsoft JDBC Driver 7.0|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023년 7월 31일|  
+|SQL Server용 Microsoft JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023년 2월 27일|    
 |SQL Server용 Microsoft JDBC Driver 6.2|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022년 6월 30일|    
-|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 년 7 월 14,|    
+|Microsoft JDBC Driver 6.0 for SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021년 7월 14일|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020년 8월 24일|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|2019년 12월 12일|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56154918"
   
 ## <a name="sql-version-compatibility"></a>SQL 버전 호환성  
   
-|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL 관리 인스턴스 (비공개 미리 보기 확장)|  
+|드라이버 버전|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL 데이터베이스|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance(비공개 미리 보기 확장)|  
 |-|-|-|-|-|-|-|-|-|-|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|Y|  
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|Y|  
@@ -86,9 +86,9 @@ ms.locfileid: "56154918"
   
 |JDBC 드라이버 버전|JRE 버전|JDBC API 버전| 
 |-|-|-|  
-|7.2|1.8, 11|4.2, 4.3 (부분적)|
-|7.0|1.8, 10|4.2, 4.3 (부분적)|
-|6.4|1.7, 1.8, 9|4.2, 4.1, 4.3 (부분적)|  
+|7.2|1.8, 11|4.2, 4.3(부분)|
+|7.0|1.8, 10|4.2, 4.3(부분)|
+|6.4|1.7, 1.8, 9|4.1, 4.2, 4.3(부분)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  

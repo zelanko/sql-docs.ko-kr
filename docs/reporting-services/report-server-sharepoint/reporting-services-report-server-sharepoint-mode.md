@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529737"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583356"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529737"
   
  보고서 서버를 SharePoint 제품 배포 내에서 실행되도록 구성하는 경우 여러 언어가 혼합되어 나타날 수 있습니다. 사용자 인터페이스, 설명서 및 메시지는 다음 언어로 표시됩니다.  
   
--   Reporting Services의 모든 애플리케이션 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 중 Reporting Services 인스턴스에 사용되는 언어로 표시됩니다.  
+- Reporting Services의 모든 애플리케이션 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 중 Reporting Services 인스턴스에 사용되는 언어로 표시됩니다.  
   
--   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 애플리케이션 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](https://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
+- SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 애플리케이션 페이지를 열면 Reporting Services 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](https://msdn.microsoft.com/sql/downloads/) 로 이동하여 SQL Server 2016 Reporting Services 추가 기능 다운로드 페이지를 찾으세요.  
   
--   SharePoint 사이트, SharePoint 중앙 관리, 온라인 도움말 및 메시지는 Office Server 제품에서 지원되는 언어로 제공됩니다.  
+- SharePoint 사이트, SharePoint 중앙 관리, 온라인 도움말 및 메시지는 Office Server 제품에서 지원되는 언어로 제공됩니다.  
   
  SharePoint 제품 또는 기술의 언어가 보고서 서버 언어와 다르면 Reporting Services는 같은 언어군에서 가장 일치하는 언어를 사용합니다. 근접하게 일치하는 대체 언어가 없는 경우 보고서 서버에서는 영어를 사용합니다.  
   
@@ -131,13 +132,12 @@ ms.locfileid: "52529737"
 |SharePoint 모드에서 Reporting Services 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)|  
 |보고서 서버를 추가하여 Reporting Services SharePoint 배포 스케일 아웃합니다.|[팜에 추가 보고서 서버 추가](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)|  
 |보기용으로 설치된 Reporting Services 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|SharePoint 내에서 보고서 서버에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
+|SharePoint 내에서 보고서 서버에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|
 |TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkId=221297)|  
 
 ## <a name="next-steps"></a>다음 단계
 
-[SharePoint용 Reporting Services 추가 기능 설치 및 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

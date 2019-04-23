@@ -1,7 +1,7 @@
 ---
-title: JDBC 드라이버를 사용 하 여 | Microsoft Docs
+title: JDBC Driver 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ec234f4a9d35b20b01f7752842dd6d59d1dc2ac
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 971b1aa8e8b3f2d75aa2178e109b4c8fb556c45d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154828"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671249"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
@@ -26,61 +26,61 @@ ms.locfileid: "56154828"
   
 ## <a name="choosing-the-right-jar-file"></a>올바른 JAR 파일 선택
 
-Microsoft JDBC Driver는 아래와 기본 Java Runtime Environment (JRE) 설정 사용 하 여 서신에 사용할 다른 Jar를 제공 합니다.
+Microsoft JDBC Driver에서는 기본 JRE(Java Runtime Environment) 설정에 따라 아래와 같이 다른 Jar를 사용할 수 있습니다.
 
-SQL Server 용 Microsoft JDBC Driver 7.2 제공 **mssql-jdbc-7.2.1.jre8.jar**, 및 **mssql-jdbc-7.2.1.jre11.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 7.2에서는 **mssql-jdbc-7.2.2.jre8.jar** 및 **mssql-jdbc-7.2.2.jre11.jar** 클래스 라이브러리 파일을 제공합니다.
 
-SQL Server 용 Microsoft JDBC Driver 7.0 제공 **mssql-jdbc-7.0.0.jre8.jar**, 및 **mssql-jdbc-7.0.0.jre10.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 7.0에서는 **mssql-jdbc-7.0.0.jre8.jar** 및 **mssql-jdbc-7.0.0.jre10.jar** 클래스 라이브러리 파일을 제공합니다.
 
-SQL Server 용 Microsoft JDBC Driver 6.4 제공 **mssql-jdbc-6.4.0.jre7.jar**를 **mssql-jdbc-6.4.0.jre8.jar**, 및 **mssql-jdbc-6.4.0.jre9.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 6.4에서는 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** 및 **mssql-jdbc-6.4.0.jre9.jar** 클래스 라이브러리 파일을 제공합니다.
 
-SQL Server 용 Microsoft JDBC Driver 6.2 제공 **mssql-6.2.2.jre7.jar**, 및 **mssql-jdbc-6.2.2.jre8.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 6.2에서는 **mssql-jdbc-6.2.2.jre7.jar** 및 **mssql-jdbc-6.2.2.jre8.jar** 클래스 라이브러리 파일을 제공합니다.
   
-Microsoft JDBC 드라이버 6.0 및 4.2 for SQL Server 제공 **sqljdbc41.jar**, 및 **sqljdbc42.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 6.0 및 4.2에서는 **sqljdbc41.jar** 및 **sqljdbc42.jar** 클래스 라이브러리 파일을 제공합니다.
   
-SQL Server 용 Microsoft JDBC Driver 4.1을 제공 합니다 **sqljdbc41.jar** 클래스 라이브러리 파일입니다.
+SQL Server용 Microsoft JDBC Driver 4.1에서는 **sqljdbc41.jar** 클래스 라이브러리 파일을 제공합니다.
 
-사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. JAR 파일을 선택 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)합니다.  
+사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. 선택할 JAR 파일에 대한 자세한 내용은 [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.  
   
 ## <a name="setting-the-classpath"></a>클래스 경로 설정
 
-Microsoft JDBC 드라이버 jar이 Java SDK의 일부가 아닌 및 사용자 응용 프로그램의 클래스 경로에 포함 되어야 합니다.
+Microsoft JDBC Driver jar는 Java SDK의 일부가 아니며 사용자 애플리케이션의 클래스 경로에 포함되어야 합니다.
 
-JDBC 드라이버 4.1 또는 4.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우 **sqljdbc41.jar** 하거나 **sqljdbc42.jar** 파일에서 해당 드라이버 다운로드 합니다.
+JDBC Driver 4.1 또는 4.2를 사용하는 경우 해당 드라이버 다운로드의 **sqljdbc41.jar** 또는 **sqljdbc42.jar** 파일을 포함하도록 클래스 경로를 설정합니다.
 
-JDBC Driver 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-6.2.2.jre7.jar** 하거나 **mssql-jdbc-6.2.2.jre8.jar**합니다.
+JDBC Driver 6.2를 사용하는 경우 **mssql-jdbc-6.2.2.jre7.jar** 또는 **mssql-jdbc-6.2.2.jre8.jar**를 포함하도록 클래스 경로를 설정합니다.
 
-JDBC Driver 6.4를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.4.0.jre7.jar**, * * mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**합니다.
+JDBC Driver 6.4를 사용하는 경우**mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**를 포함하도록 클래스 경로를 설정합니다.
 
-JDBC 드라이버 7.0을 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-7.0.0.jre8.jar** 하거나 **mssql-jdbc-7.0.0.jre10.jar**합니다.
+JDBC Driver 7.0을 사용하는 경우 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar**를 포함하도록 클래스 경로를 설정합니다.
 
-JDBC 드라이버 7.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-7.2.1.jre8.jar** 하거나 **mssql-jdbc-7.2.1.jre11.jar**합니다.
+JDBC Driver 7.2를 사용하는 경우**mssql-jdbc-7.2.2.jre8.jar** 또는 **mssql-jdbc-7.2.2.jre11.jar**를 포함하도록 클래스 경로를 설정합니다.
 
-응용 프로그램을 일반적인 시킵니다 클래스 경로 올바른 Jar 파일에 대 한 항목이 없으면 `Class not found` 예외입니다.  
+클래스 패스에 적절한 Jar 파일 항목이 없는 경우, 애플리케이션은 공통의 `Class not found`예외를 throw합니다.  
 
-### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC Driver 7.2에 대 한
+### <a name="for-microsoft-jdbc-driver-72"></a>Microsoft JDBC Driver 7.2의 경우
 
-합니다 **mssql-jdbc-7.2.1.jre8.jar** 또는 **mssql-jdbc-7.2.1.jre11.jar** 파일이 다음 위치에 설치 됩니다.
+**mssql-jdbc-7.2.2.jre8.jar** 또는 **mssql-jdbc-7.2.2.jre11.jar** 파일이 다음 위치에 설치됩니다.
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre8.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre8.jar
 
-\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.1.jre11.jar
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.2.2.jre11.jar
 ```
 
 다음 코드 조각은 Windows 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.2 for SQL Server\sqljdbc_7.2\enu\mssql-jdbc-7.2.2.jre11.jar`
 
 다음 코드 조각은 Unix/Linux 애플리케이션에 사용되는 CLASSPATH 문의 예제입니다.
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.1.jre11.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.2/enu/mssql-jdbc-7.2.2.jre11.jar`
 
-CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 하거나 같은 **mssql-jdbc-7.2.1.jre8.jar** 또는 **mssql-jdbc-7.2.1.jre11.jar**합니다.
+CLASSPATH 문에는 **mssql-jdbc-7.2.2.jre8.jar** 또는 **mssql-jdbc-7.2.2.jre11.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
   
-### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC Driver 7.0에 대 한
+### <a name="for-microsoft-jdbc-driver-70"></a>Microsoft JDBC Driver 7.0의 경우
 
-합니다 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar** 파일이 다음 위치에 설치 됩니다.
+**mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar** 파일이 다음 위치에 설치됩니다.
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre8.jar
@@ -96,11 +96,11 @@ CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../.
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
-CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 하거나 같은 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar**합니다.
+CLASSPATH 문에는 **mssql-jdbc-7.0.0.jre8.jar** 또는 **mssql-jdbc-7.0.0.jre10.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
-### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC Driver 6.4에 대 한
+### <a name="for-microsoft-jdbc-driver-64"></a>Microsoft JDBC Driver 6.4의 경우
 
-**mssql-jdbc-6.4.0.jre7.jar**, * * 6.4.0.jre8.jar-mssql-jdbc 또는 **mssql-jdbc-6.4.0.jre9.jar** 파일은 다음 위치에 설치 합니다.  
+**mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar** 파일이 다음 위치에 설치됩니다.  
 
 ```bash  
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre7.jar
@@ -118,11 +118,11 @@ CLASSPATH 문에 하나만 포함 되어 있는지 [!INCLUDE[jdbcNoVersion](../.
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
-CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 하거나 같은 **mssql-jdbc-6.4.0.jre7.jar**, * * mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**합니다.
+CLASSPATH 문에는 **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar 또는 **mssql-jdbc-6.4.0.jre9.jar**와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.
 
-### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC Driver 6.2에 대 한
+### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC Driver 6.2의 경우
 
-합니다 **mssql-6.2.2.jre7.jar** 하거나 **mssql-jdbc-6.2.2.jre8.jar** 파일이 다음 위치에 설치 됩니다.
+**mssql-jdbc-6.2.2.jre7.jar** 또는 **mssql-jdbc-6.2.2.jre8.jar** 파일이 다음 위치에 설치됩니다.
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre7.jar
@@ -138,9 +138,9 @@ CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersio
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
-CLASSPATH 문에 하나만 포함 되어 있는지 확인 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]mssql-6.2.2.jre7.jar 또는 mssql-jdbc-6.2.2.jre8.jar 등입니다.  
+CLASSPATH 문에는 mssql-jdbc-6.2.2.jre7.jar 또는 mssql-jdbc-6.2.2.jre8.jar와 같은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 하나만 포함되어 있어야 합니다.  
 
-### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC 드라이버 4.1, 4.2 및 6.0
+### <a name="for-microsoft-jdbc-driver-41-42-and-60"></a>Microsoft JDBC Driver 4.1, 4.2 및 6.0의 경우
 
 sqljdbc.jar 파일, sqljdbc4.jar 파일, sqljdbc41.jar 또는 sqljdbc42.jar 파일은 다음 위치에 설치됩니다.  
 
@@ -189,7 +189,7 @@ EJB(Enterprise Java Bean)는 EJB 컨테이너에서 실행됩니다. EJB 컨테�
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
-드라이버 로드 될 때 연결 URL 및 DriverManager 클래스의 getConnection 메서드를 사용 하 여 연결을 설정할 수 있습니다.
+드라이버가 로드되면 다음과 같이 연결 URL 및 DriverManager 클래스의 getConnection 메서드를 사용하여 연결을 설정할 수 있습니다.
 
 ```java
 String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
@@ -199,12 +199,12 @@ Connection con = DriverManager.getConnection(connectionUrl);
 
 JDBC API 4.0부터는 JDBC Driver를 자동으로 로드할 수 있도록 `DriverManager.getConnection()` 메서드가 개선되었습니다. 따라서 애플리케이션은 드라이버 jar 클래스 라이브러리를 사용할 때 드라이버를 등록하거나 로드하기 위해 `Class.forName` 메서드를 호출할 필요가 없습니다.  
   
-DriverManager 클래스의 getConnection 메서드를 호출 되 면 해당 드라이버를 등록 된 JDBC 드라이버 집합에서. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에 포함 된 "META-INF/services/java.sql.Driver" 파일을 포함 합니다 **com.microsoft.sqlserver.jdbc.SQLServerDriver** 등록 된 드라이버로 합니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 애플리케이션은 수정하지 않아도 계속 작동합니다.  
+DriverManager 클래스의 getConnection 메서드가 호출되면 등록된 JDBC 드라이버 집합에서 적합한 드라이버가 검색됩니다. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에는 "META-INF/services/java.sql.Driver" 파일이 포함되어 있으며, 이 파일에는 **com.microsoft.sqlserver.jdbc.SQLServerDriver**가 등록된 드라이버로 포함되어 있습니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 애플리케이션은 수정하지 않아도 계속 작동합니다.  
   
 > [!NOTE]  
-> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. 참조 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) 에서 지 원하는 JRE 버전 목록은 여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]입니다.  
+> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 JRE 버전 목록은 [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.  
 
-데이터 원본 연결 및 연결 URL을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md) 하 고 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+데이터 원본에 연결하는 방법 및 연결 URL을 사용하는 방법에 대한 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성) 및 [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md)(연결 속성 설정)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 
