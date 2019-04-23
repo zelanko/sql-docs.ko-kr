@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a53b1340891d539ca9aef224c7bdbbdcba9bf45d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298155"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959841"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>드릴스루 보고서(보고서 작성기 및 SSRS)
   드릴스루 보고서는 다른 보고서 내에서 링크를 클릭했을 때 열리는 보고서입니다. 드릴스루 보고서는 원본 요약 보고서에 포함된 항목에 대한 세부 정보를 포함합니다. 예를 들어 아래 그림의 판매 요약 보고서에는 판매 주문과 판매 총액이 나열되는데, 요약 목록에서 주문 번호를 클릭하면 해당 주문에 대한 세부 정보가 들어 있는 다른 보고서가 열립니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "56298155"
 > [!NOTE]  
 >  보고서 작성기에서 작업할 때 주 보고서에서 드릴스루 링크를 클릭하면 열리는 드릴스루 보고서를 보려면 보고서 서버에 연결되어 있어야 합니다.  
   
- 드릴스루 보고서를 사용 하 여 신속 하 게 시작 하려면 참조 [자습서: 드릴스루 보고서 및 주 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)합니다. 드릴스루 보고서는 두 개의 비즈니스 인텔리전스 솔루션의 주요도 [BI 보고: 보고서 및 구독 시나리오](https://technet.microsoft.com/bi/ff769487.aspx) 고 [회사 대시보드: 판매 솔루션](https://technet.microsoft.com/bi/ff643005.aspx)  
+ 드릴스루 보고서를 빠르게 시작하려면 [자습서: 드릴스루 보고서 및 주 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md)를 참조하세요. 드릴스루 보고서는 두 개의 비즈니스 인텔리전스 솔루션의 주요도 [BI 보고: 보고서 및 구독 시나리오](https://technet.microsoft.com/bi/ff769487.aspx) 고 [회사 대시보드: 판매 솔루션](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

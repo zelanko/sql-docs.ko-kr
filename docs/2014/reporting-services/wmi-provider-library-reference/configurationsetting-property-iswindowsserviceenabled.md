@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c51ae5de2755711fa6721e874b4d621b66dd3532
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027664"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969839"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 서비스를 사용하는지 여부를 나타냅니다. 읽기 전용입니다.  

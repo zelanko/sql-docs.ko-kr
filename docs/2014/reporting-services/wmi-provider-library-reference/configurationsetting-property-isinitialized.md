@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 740c172ebc3248aabf4841fc2dd92c39531fd545
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a8c41479b46a2020f0c460313ffc427eabded53e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021624"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962969"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 인스턴스가 초기화되었는지 여부를 나타냅니다. 읽기 전용입니다.  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 16dc2b9c39dd12e32be3a88c32a3639e8eb6b4ae
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043144"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947979"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
   프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "56043144"
   
 ## <a name="options"></a>변수  
  **Configuration**  
- 편집할 구성을 선택합니다. 처음에는 **디버그**하십시오 **DebugLocal**, 및 **릴리스**합니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
+ 편집할 구성을 선택합니다. 처음에 다음 구성을 사용할 수 있습니다. **디버그**하십시오 **DebugLocal**, 및 **릴리스**합니다. 활성 구성이 첫 번째로 표시됩니다(예: **활성(디버그)**).  
   
  두 개 이상의 구성에 대한 속성을 동시에 보려면 **모든 구성** 또는 **여러 구성**을 선택합니다.  
   

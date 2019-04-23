@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293131"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947970"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기
   이 문서에서는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 디바이스에서 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 및 워크플로를 설명합니다.  
@@ -49,16 +49,16 @@ iPad에서 보고서 보기 동작 보기
   
 2.  다음 중 하나를 수행하여 보고서를 엽니다.  
   
-    -   **전자 메일에서 시작 합니다.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독으로 만들어진 전자 메일에서 보고서의 URL을 누릅니다. 보고서가 브라우저에서 열립니다.  
+    -   **전자 메일에서 시작 합니다.** 으로 만들어진 전자 메일에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독 보고서의 URL을 탭 합니다. 보고서가 브라우저에서 열립니다.  
   
-    -   **보고서 서버에서 시작 합니다.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 있는 디렉터리를 찾은 다음 보고서 이름을 눌러 보고서를 엽니다.  
+    -   **보고서 서버에서 시작 합니다.** 디렉터리를 찾습니다는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버 및 보고서를 열려면 보고서 이름을 누릅니다.  
   
-    -   **SharePoint 문서 라이브러리에서 시작 합니다.** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서가 포함된 SharePoint 문서 라이브러리를 찾은 다음 보고서 이름을 누릅니다. 보고서를 보고 상호 작용할 수 있습니다.  
+    -   **SharePoint 문서 라이브러리에서 시작 합니다.** 포함 된 SharePoint 문서 라이브러리를 찾은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 및 보고서 이름을 누릅니다. 보고서를 보고 상호 작용할 수 있습니다.  
   
         > [!IMPORTANT]  
         >  iPad의 경우 Safari의 **Private 브라우징** 속성이 해제되어 있는지 확인합니다.  
   
-    -   **SharePoint 웹 파트:** SharePoint 페이지에 웹 파트가 추가된 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 볼 수 있습니다.  
+    -   **SharePoint 웹 파트:** 웹 파트를 SharePoint 페이지에 추가한 경우 볼 수 있습니다 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서입니다.  
   
 3.  Microsoft Surface 디바이스에서 보고서 관리자를 사용하여 보고서를 열 수도 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 있는 디렉터리를 찾은 다음 보고서 이름을 눌러 보고서를 엽니다.  
   

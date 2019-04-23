@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: c848ddd8d7234ab8286d5f25603704638ce26bfd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658357"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950999"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
   보고서에서 식은 보고서 데이터를 제어, 구성 및 정렬하는 데 사용됩니다. 기본적으로 데이터 세트를 만들고 보고서 레이아웃을 디자인하면 보고서 항목의 속성이 데이터 세트 필드, 매개 변수 및 보고서 데이터 창에 표시되는 기타 항목을 기반으로 자동으로 식에 설정됩니다. 또한 테이블 또는 행렬 셀에 대화형 정렬 단추를 추가하여 사용자가 그룹의 행 정렬 순서 또는 그룹 내 행을 대화형으로 변경하도록 할 수 있습니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "58658357"
   
  동일한 보고서에서 세 가지 정렬 유형을 모두 사용할 수 있습니다. 기본적으로 정렬 순서는 데이터 세트 쿼리에서 반환되는 데이터의 순서에 따라 결정됩니다. 정렬 식은 데이터 영역과 데이터 영역 그룹에 적용됩니다. 대화형 정렬은 정렬 식 다음에 적용됩니다.  
   
- 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 집계 함수 First, Last 및 Previous에 대한 반환 값은 정렬 순서의 영향을 받습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
+ 집계 함수가 포함된 식의 경우 대부분의 결과는 정렬 순서의 영향을 받지 않습니다. 정렬 순서 영향을 받는 다음 집계 함수에 대 한 반환 값: First, Last 및 Previous에 대한 반환 값은 정렬 순서의 영향을 받습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>데이터 세트 쿼리에서 데이터 정렬  
  보고서에서 데이터를 가져오기 전에 미리 정렬하려면 데이터 세트 쿼리에 정렬 순서를 추가합니다. 쿼리에서 데이터를 정렬하면 보고서 처리기가 아닌 데이터 원본에 의해 정렬 작업이 수행됩니다.  

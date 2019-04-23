@@ -1,5 +1,5 @@
 ---
-title: '2단원: 연결 정보 지정 (Reporting Services) | Microsoft Docs'
+title: '2단원: 연결 정보 지정(Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290181"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955579"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: 연결 정보 지정(Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>2단원: (Reporting Services)는 연결 정보 지정
   Tutorial 프로젝트에 보고서를 추가한 뒤에는 보고서에서 관계형 데이터베이스, 다차원 데이터베이스 또는 다른 리소스의 데이터에 액세스하기 위해 사용하는 연결 정보인 *데이터 원본*을 정의해야 합니다.  
   
  이 단원에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 예제 데이터베이스를 데이터 원본으로 사용합니다. 이 자습서에서는 이 데이터베이스가 로컬 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 기본 인스턴스에 있다고 가정합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "56290181"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 데이터 원본 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 에 추가 되는 **보고서 데이터** 창입니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. 참조 [3 단원: 테이블 보고서에 대 한 데이터 집합 정의 &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)합니다.  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 대한 연결이 정의되었습니다. 다음 단원에서는 보고서를 만듭니다. [3단원: 테이블 보고서에 대한 데이터 세트 정의&amp;#40;Reporting Services&amp;#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

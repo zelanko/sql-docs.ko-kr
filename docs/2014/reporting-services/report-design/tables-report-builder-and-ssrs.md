@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a6b1802f45183f862a5ab6a9cf5c892383e3cbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286651"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970139"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
   테이블을 사용하여 세부 데이터나 그룹화된 데이터 또는 두 데이터의 조합을 표시할 수 있습니다. 단일 필드, 여러 필드를 기준으로 하거나 사용자 고유의 식을 작성하여 데이터를 그룹화할 수 있습니다. 중첩 그룹 또는 독립적인 인접 그룹을 만들 수 있습니다. 그룹화된 데이터에 대해 집계된 값을 표시하려면 그룹에 합계를 추가합니다. 행 및 열의 서식을 지정하여 강조하려는 데이터를 강조 표시할 수 있습니다. 처음에 정보 데이터나 그룹화된 데이터를 숨길 수 있으며 드릴다운 토글을 포함하여 사용자가 표시할 데이터의 양을 대화형으로 선택하도록 할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "56286651"
 > [!NOTE]  
 >  테이블을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 빠르게 시작 하려면 테이블을 참조 하세요. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) 하거나 [기본 테이블 보고서 만들기 &#40;SSRS 자습서&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ 테이블을 빠르게 시작하려면 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 또는 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 테이블을 사용하는 다양한 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하면 테이블에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56286651"
   
  ![디자인 화면에서 테이블 템플릿 선택](../media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿 선택")  
   
- 데이터 행에 대한 행 핸들은 세부 정보 기호를 보여줍니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../media/rs-icontablix-detailsrow.gif "세부 정보 행에 3개의 평행선이 있는 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에서는 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.  
+ 데이터 행에 대한 행 핸들은 세부 정보 기호를 보여줍니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../media/rs-icontablix-detailsrow.gif "세부 정보 행에 3개의 평행선이 있는 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램은 이러한 필드를 사용 하 여 테이블 데이터 영역을 보여 줍니다. 날짜, 주문, 제품, Qty 및 라인 합계입니다.  
   
  ![디자인, 열 헤더가 굵게 설정된 테이블](../media/rs-basictabledetailsformatteddesign.gif "디자인, 열 헤더가 굵게 설정된 테이블")  
   

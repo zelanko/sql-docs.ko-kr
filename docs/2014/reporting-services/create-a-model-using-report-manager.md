@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010446"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955159"
 ---
 # <a name="create-a-model-using-report-manager"></a>보고서 관리자를 사용하여 모델 만들기
   보고서 관리자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 또는 Oracle 데이터베이스에서 모델을 생성할 수 있습니다. 보고서 모델은 보고서 서버에 게시된 공유 데이터 원본에서 생성됩니다. 공유 데이터 원본이 없는 경우 새로 만들어야 합니다.  
@@ -41,13 +41,13 @@ ms.locfileid: "56010446"
   
 5.  **이 데이터 원본 사용** 확인란이 선택되어 있는지 확인합니다.  
   
-6.  **연결 유형** 목록에서 연결할 데이터 원본 유형을 선택합니다. 연결 유형은 **Oracle**하십시오 **Microsoft SQL Server** 하거나 **Microsoft SQL Server Analysis Services**합니다.  
+6.  **연결 유형** 목록에서 연결할 데이터 원본 유형을 선택합니다. 연결 유형을 다음 중 하나 여야 합니다. **Oracle**하십시오 **Microsoft SQL Server** 하거나 **Microsoft SQL Server Analysis Services**합니다.  
   
 7.  **연결 문자열** 입력란에 데이터베이스를 가리키는 연결 문자열을 입력합니다.  
   
 8.  보고서 작성기 사용자가 데이터베이스에 연결할 때 사용할 연결 방법을 선택합니다.  
   
-    -   Windows 인증: 운영 체제에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자를 인증하게 하려면 이 옵션을 선택합니다. 이 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 암호 암호화 같은 Windows 보안 기능을 사용하여 사용자를 인증할 수 있습니다. 이 옵션을 반드시 선택하도록 합니다.  
+    -   Windows 인증: 운영 체제를 인증 하려는 경우이 옵션을 선택 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자입니다. 이 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 암호 암호화 같은 Windows 보안 기능을 사용하여 사용자를 인증할 수 있습니다. 이 옵션을 반드시 선택하도록 합니다.  
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증: 사용자가 사용 하도록 하려는 경우이 옵션을 선택는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만든 로그인 계정입니다. 사용자는 유효한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그인 이름과 암호를 제공해야 합니다.  
   

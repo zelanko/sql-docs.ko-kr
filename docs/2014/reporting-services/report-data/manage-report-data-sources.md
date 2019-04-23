@@ -13,15 +13,15 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8519b6dbb6c7d1fb1e72afa3f6dfcc70521df84a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 13454c9f73b54da7977dd52bbbdc7c1d2cddb28c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947989"
 ---
 # <a name="manage-report-data-sources"></a>보고서 데이터 원본 관리
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서, 보고서 모델 및 데이터 기반 구독은 외부 데이터 원본에서 데이터를 검색합니다. 보고서 서버는 외부 데이터 원본에 연결하기 위해 보고서, 모델 또는 구독에 정의되어 있거나 참조된 데이터 원본 연결 정보를 사용합니다. 데이터 원본 연결 속성은 보고서 또는 모델을 만들 때 항상 함께 정의되지만 보고서 또는 모델이 보고서 서버에 게시된 후에 독립적으로 관리할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "56025654"
   
  쿼리 수정은 데이터 원본 연결 관리에 속하지 않습니다. 보고서 또는 모델에 대한 쿼리를 수정하려면 제작 도구를 사용해야 하며 보고서 또는 모델 정의에서 변경을 수행해야 합니다.  
   
-## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>관리되는 속성: 데이터 원본 유형, 연결 문자열 및 자격 증명  
+## <a name="managed-properties-data-source-type-connection-strings-and-credentials"></a>관리 되는 속성: 데이터 원본 유형, 연결 문자열 및 자격 증명  
  보고서 서버에서 관리할 수 있는 데이터 원본 속성은 다음과 같습니다.  
   
 |속성|Description|관리 방법|  

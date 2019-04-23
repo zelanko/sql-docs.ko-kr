@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285721"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955749"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>데이터 원본 속성 대화 상자, 일반(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **일반** 을 선택하여 보고서 서버의 공유 데이터 원본을 선택하거나 보고서에 포함된 데이터 원본에 대한 연결 정보를 수정할 수 있습니다.  
