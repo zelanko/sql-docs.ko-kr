@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7390aa556898f4842850b66684c74a347caba94b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 375d4c87b444411c0882ecb748976df40ed98412
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293121"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936479"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>보고서 파트 게시 및 다시 게시(보고서 작성기 및 SSRS)
   보고서 파트는 기본 설정으로 기본 위치에 게시할 수도 있고 이름, 설명 등의 보고서 파트 메타데이터를 편집한 다음 보고서 서버의 다른 위치에 저장할 수도 있습니다. 또한 올바른 권한이 있는 경우에는 보고서 서버와 통합된 SharePoint 사이트에 보고서 파트를 저장할 수도 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56293121"
   
      그렇지 않으면 **게시하기 전에 보고서 파트 검토 및 수정**을 클릭합니다.  
   
-3.  보고서 파트 이름 및 설명을 편집합니다. 편집을 클릭 하 여 이름을 두 번 클릭 합니다 **설명을** 설명을 추가 하려면 필드입니다.  
+3.  보고서 파트 이름 및 설명을 편집 합니다. 이름을 두 번 클릭하여 편집하고 **설명** 필드를 클릭하여 설명을 추가합니다.  
   
     > [!NOTE]  
     >  다른 사람들이 검색할 때 쉽게 식별할 수 있도록 명확한 보고서 파트 이름과 설명을 지정하는 것이 좋습니다. 보고서 파트 이름의 최대 길이는 260자(전체 경로)입니다. 여기에는 서버의 폴더 이름 뒤에 보고서 파트의 실제 이름이 붙습니다.  

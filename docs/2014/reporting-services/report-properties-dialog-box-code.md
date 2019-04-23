@@ -11,15 +11,15 @@ f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eae136b7627a079356baeb4d723d2201e7d7c05e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8c751702b49846d80faa0295c5e245594c897efd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289571"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956049"
 ---
 # <a name="report-properties-dialog-box-code"></a>보고서 속성 대화 상자, 코드
   **보고서 속성**대화 상자에서 **코드** 를 선택하여 보고서 내에서 식에 사용할 사용자 지정 코드를 정의할 수 있습니다.  

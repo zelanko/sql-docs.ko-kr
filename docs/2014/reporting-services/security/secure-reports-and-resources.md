@@ -14,15 +14,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 20d800cc906a3953fe2f5143e980fd2e869ec318
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023524"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964419"
 ---
 # <a name="secure-reports-and-resources"></a>보고서 및 리소스 보안
   개별 보고서 및 리소스에 보안을 설정하여 사용자가 해당 항목에 대해 갖는 액세스 수준을 제어할 수 있습니다. 기본적으로 **Administrators** 기본 제공 그룹의 멤버인 사용자만 보고서 실행, 리소스 보기, 속성 수정, 항목 삭제 등의 작업을 수행할 수 있습니다. 다른 모든 사용자는 보고서나 리소스에 대한 액세스를 허용하는 역할 할당이 만들어져 있어야 합니다.  

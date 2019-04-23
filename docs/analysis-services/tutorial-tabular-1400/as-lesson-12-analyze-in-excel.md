@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476719"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945379"
 ---
 # <a name="analyze-in-excel"></a>도구 모음
 
@@ -25,11 +25,11 @@ ms.locfileid: "59476719"
   
 이 단원을 완료 하려면 Visual Studio와 동일한 컴퓨터에 Excel이 설치 되어 있어야 합니다.
   
-이 단원에 소요되는 예상 시간: **5 분**  
+예상이 단원을 완료 시간: **5 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [11 단원: 역할을 만들](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [11 단원: 역할을 만들](../tutorial-tabular-1400/as-lesson-11-create-roles.md)합니다.  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>기본 큐브 뷰 및 Internet Sales 큐브 뷰를 사용하여 검색  
 

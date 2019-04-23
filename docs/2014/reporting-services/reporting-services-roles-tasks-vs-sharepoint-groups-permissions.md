@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d845122010c549114b4487d2fca72a28bc226b6e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241561"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954529"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드의 역할 및 태스크 기반 권한 부여 기능과 SharePoint 제품의 보안 기능을 비교해서 보여줍니다. 이 항목에서는 역할, 태스크, SharePoint 그룹, 사용 권한 수준 및 사용 권한의 용어와 특징을 비교합니다.  

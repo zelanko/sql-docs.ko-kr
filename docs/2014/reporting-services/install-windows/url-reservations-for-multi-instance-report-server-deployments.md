@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 775e7a1bced0e35d191d3e3f613b86836b9b1ddb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac6232b85990bb065d8188ede372e2b44cdd20c5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949529"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>다중 인스턴스 보고서 서버 배포를 위한 URL 예약(SSRS 구성 관리자)
   같은 컴퓨터에 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하는 경우 각 인스턴스의 URL 예약을 어떻게 정의할지 고려해야 합니다. 각 인스턴스 내에서 보고서 서버 웹 서비스와 보고서 관리자에는 각각 한 개 이상의 URL 예약이 있어야 합니다. 전체 예약 집합은 HTTP.SYS에서 고유해야 합니다.  

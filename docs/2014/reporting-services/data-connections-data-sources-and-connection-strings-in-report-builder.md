@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288871"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962129"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열
   보고서에 데이터를 포함하려면 데이터 연결 및 데이터 집합을 만듭니다. 데이터 연결에는 외부 데이터 원본에 액세스하는 방법에 대한 정보가 포함됩니다. 데이터 집합에는 데이터 연결을 사용하여 포함할 데이터를 지정하는 쿼리 명령이 포함됩니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b12b925f0059224cf016c6987845535311e5eb0d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286361"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947649"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>동일한 데이터 세트에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
   여러 데이터 영역을 보고서에 추가하면 동일한 보고서 데이터 세트의 데이터를 여러 가지 방식으로 표시할 수 있습니다. 예를 들어 데이터를 테이블에 표시하고 차트로도 표시하려는 경우 해당 필터 식, 정렬 식 및 그룹 식에 동일한 식과 범위를 사용해야 합니다.  

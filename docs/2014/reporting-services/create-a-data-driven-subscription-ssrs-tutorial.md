@@ -12,15 +12,15 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017915"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964109"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>데이터 기반 구독 만들기(SSRS 자습서)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 데이터 기반 구독을 제공하므로 동적 구독자 데이터를 기반으로 보고서 배포를 사용자 지정할 수 있습니다. 데이터 기반 구독은 다음과 같은 종류의 시나리오에 사용됩니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "56017915"
   
 -   쓰기 권한이 있는 공유 폴더가 필요합니다. 이 공유 폴더는 네트워크 연결을 통해 액세스할 수 있어야 합니다.  
   
- **자습서에 소요되는 예상 시간:** 30분 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
+ **자습서에 소요되는 예상 시간:** 30 분입니다. 기본 보고서 자습서를 완료하지 않은 경우 추가 30분이 소요됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   

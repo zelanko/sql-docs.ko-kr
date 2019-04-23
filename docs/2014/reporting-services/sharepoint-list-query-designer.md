@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 835580a8c08712035776eb37432d10730363d417
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 321d4a0ba8731fc643cd045edc35bfc4e34df4cf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288921"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961839"
 ---
 # <a name="sharepoint-list-query-designer"></a>SharePoint 목록 쿼리 디자이너
   보고서 디자이너는 SharePoint 사이트에서 보고서 데이터 세트에 대해 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 SharePoint 목록 메타데이터를 탐색하고, 쿼리를 대화형으로 작성하고, 쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정하거나 쿼리 명령을 입력할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  

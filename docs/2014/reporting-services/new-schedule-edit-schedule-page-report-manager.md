@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034552"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967919"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>새 일정: 일정 편집 페이지 (보고서 관리자)
   새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅숏을 만들기 위해 구독에서 사용됩니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "56034552"
   
 -   **시간** 은 시간 간격으로 실행되는 일정을 정의합니다. 일정을 실행할 날짜를 지정하려면 **시작 및 끝 날짜** 섹션을 사용합니다.  
   
--   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 날짜는 모든 \< *하루*>, 주중 매일, 매 \< *번호*> 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
+-   **일** 은 선택하는 요일의 특정 시간 및 분에 실행되는 일정을 정의합니다. 다음과 같은 방법으로 일을 지정할 수 있습니다. 모든 \< *하루*>, 주중 매일, 매 \< *번호*> 일입니다. 한 가지 방법을 선택하면 다른 날이 선택된 것처럼 보이더라도 다른 방법은 사용할 수 없게 됩니다.  
   
 -   **주** 는 주별 간격으로 특정 시간 및 분에 실행되는 일정을 정의합니다. 간격은 주 전체(예: 격주간)나 주 중의 요일로 지정할 수 있습니다.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57046a5dc5b92cfd3b4b349dc86d004d477169f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043004"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966109"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
   기본적으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 Negotiate 또는 NTLM 인증을 지정하는 요청을 허용합니다. 배포에 이러한 보안 공급자를 사용하는 클라이언트 애플리케이션 및 브라우저가 포함된 경우 추가 구성 없이 기본값을 사용할 수 있습니다. Windows 통합 보안을 위해 다른 보안 공급자를 사용하거나(예: Kerberos를 직접 사용하려는 경우) 기본값을 수정하고 원래 설정을 복원하려는 경우 이 항목의 정보를 사용하여 보고서 서버에서 인증 설정을 지정할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "56043004"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  <`Authentication`>을(를) 찾습니다.  
+2.  찾을 <`Authentication`>.  
   
 3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. `RSWindowsNegotiate`, `RSWindowsNTLM` 및 `RSWindowsKerberos`를 순서에 상관없이 지정할 수 있습니다. 각 개별 요청이 아닌 연결을 인증하려는 경우 인증 지속성을 사용해야 합니다. 인증 지속성을 사용하면 인증이 필요한 모든 요청이 연결 기간 동안 허용됩니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "56043004"
           </AuthenticationTypes>  
     ```  
   
-4.  <`Authentication`>의 기존 항목을 선택하고 붙여넣어 덮어씁니다.  
+4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
   
      `Custom` 유형에서는 `RSWindows`을 사용할 수 없습니다.  
   

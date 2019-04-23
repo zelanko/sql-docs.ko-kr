@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75845ddac250c70078c8ee43d885b7d2b99a69a1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f5e927e8b25097e09d3ecba67bfd3e75d9e8c9be
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031094"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954789"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 기능 설정 또는 해제
   프로덕션 보고서 서버의 공격 노출 영역을 줄이기 위한 잠금 전략의 일환으로 사용하지 않는 보고서 서버 기능을 해제할 수 있습니다. 대부분의 경우에는 여러 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 동시에 실행하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 모든 기능을 사용해야 합니다. 그러나 배포 모델에 따라서는 필요하지 않은 기능을 비활성화할 수 있습니다. 예를 들어 모든 보고서 처리가 예약된 작업으로 구성된 경우 백그라운드 처리만 활성화할 수 있습니다. 마찬가지로 요청 시 실행되는 대화형 보고서만 원하는 경우에는 보고서 서버 웹 서비스만 실행할 수 있습니다.  

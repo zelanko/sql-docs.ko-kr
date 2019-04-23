@@ -1,5 +1,5 @@
 ---
-title: '자습서: 형식 텍스트 (보고서 작성기) | Microsoft Docs'
+title: '자습서: 텍스트 서식 지정(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297291"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961339"
 ---
-# <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
+# <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정 (보고서 작성기)
   이 자습서에서는 텍스트에 서식을 지정하는 다양한 방법을 연습해 볼 수 있습니다. 빈 보고서와 함께 데이터 원본 및 데이터 집합을 설정한 후 탐색할 단계를 선택할 수 있습니다.  
   
  다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "56297291"
   
  [보고서 저장](#Save)  
   
- 이 자습서에 소요되는 예상 시간: 20분.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  

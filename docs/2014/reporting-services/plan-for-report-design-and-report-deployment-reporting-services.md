@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032014"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936829"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>보고서 디자인 및 보고서 배포 계획(Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 작성 및 보고서 배포에 대 한 몇 가지 방법을 제공 합니다. 이 항목에서는 보고서 작성 환경과 보고서 서버가 함께 작동하도록 계획할 수 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 요소에서 지원되는 보고서 정의에 대한 개요를 보여 줍니다. 보고서 정의는 RDL(Report Definition Language) 또는 RDLC(Report Definition Language for Clients)로 작성된 XML 파일입니다. 각 보고서 정의는 파일의 첫 부분에 나열되어 있는 특정 스키마 버전을 따릅니다.  
@@ -56,15 +56,15 @@ ms.locfileid: "56032014"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> 보고서 서버 및 RDL 스키마 지원  
  다음과 같은 방법으로 보고서 정의 파일을 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버에 배포할 수 있습니다.  
   
--   **보고서 디자이너:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]의 보고서 디자이너에서 보고서를 배포합니다.  
+-   **보고서 디자이너:** 보고서 디자이너에서 보고서를 배포 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]합니다.  
   
--   **보고서 작성기:** 보고서 작성기의 보고서 서버에 보고서를 저장합니다.  
+-   **보고서 작성기:** 보고서 작성기에서 보고서 서버로 보고서를 저장 합니다.  
   
--   **보고서 관리자:** 보고서 관리자의 기본 모드 보고서 서버로 보고서를 업로드합니다.  
+-   **보고서 관리자:** 보고서 관리자에서 기본 모드 보고서 서버로 보고서를 업로드 합니다.  
   
--   **SharePoint:** SharePoint 모드 보고서 서버로 구성된 SharePoint 사이트에 보고서를 업로드합니다.  
+-   **SharePoint:** SharePoint 모드 보고서 서버를 사용 하 여 구성 된 SharePoint 사이트로 보고서를 업로드 합니다.  
   
--   **프로그래밍 방식으로:** SOAP API 인터페이스를 사용해서 보고서 서버에 보고서를 프로그래밍 방식으로 게시합니다. 자세한 내용은 [Report Server Web Service](report-server-web-service/report-server-web-service.md)을 참조하세요.  
+-   **프로그래밍 방식으로:** 프로그래밍 방식으로 보고서 서버에 SOAP API 인터페이스를 사용 하 여 보고서를 게시 합니다. 자세한 내용은 [Report Server Web Service](report-server-web-service/report-server-web-service.md)을 참조하세요.  
   
  다음 표에서는 보고서 서버 버전별로 지원되는 rdl 스키마 버전을 보여 줍니다.  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a2f664e4d8611cb50eda3ffdbb911d72eea6b39
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939719"
 ---
 # <a name="security-page-site-settings-report-manager"></a>보안 페이지(사이트 설정. 보고서 관리자)
   보안 페이지를 사용하여 보고서 서버 사이트에 대한 액세스를 제어하는 시스템 역할 할당을 볼 수 있습니다. 시스템 역할 할당은 보고서 서버 네임스페이스나 폴더 계층 구조의 범위 밖에 존재합니다. 시스템 역할 할당은 전역적이므로 특정 항목별로 다를 수 없습니다. 시스템 역할 할당을 통해 지원되는 작업에는 공유 일정 작성 및 사용, 보고서 작성기 사용, 일부 서버 기능에 대한 기본값 설정 등이 포함됩니다.  

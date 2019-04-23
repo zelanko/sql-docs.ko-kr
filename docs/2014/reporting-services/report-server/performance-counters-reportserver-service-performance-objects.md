@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037614"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944550"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터
   이 항목에서는 다음 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 성능 개체에 대한 성능 카운터에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "56037614"
 |`Logon Attempts/sec`|로그온 시도 비율입니다.|  
 |`Logon Successes Total`|RSWindows 인증 유형에 대해 로그온에 성공한 횟수입니다. RSWindows 인증 유형에는 RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos 및 RSWindowsBasic이 있습니다. 값 0은 사용자 지정 인증을 나타냅니다.|  
 |`Logon Successes/sec`|성공한 로그온 비율입니다.|  
-|`Memory Pressure State`|서버의 현재 메모리 상태를 나타내는 다음 값(1-5) 중 하나입니다.<br /><br /> 1: 가중 없음<br /><br /> 2: 낮은 가중<br /><br /> 3: 보통 가중<br /><br /> 4: 높은 가중<br /><br /> 5: 초과 가중|  
+|`Memory Pressure State`|서버의 현재 메모리 상태를 나타내는 다음 값(1-5) 중 하나입니다.<br /><br /> 1: 가 중 없음<br /><br /> 2: 낮은 중<br /><br /> 3: 보통가 중<br /><br /> 4: 높은 중<br /><br /> 5: 초과 중|  
 |`Memory Shrink Amount`|사용 중인 메모리를 줄이기 위해 서버에서 요청한 바이트 수입니다.|  
 |`Memory Shrink Notifications/sec`|사용 중인 메모리를 줄이기 위해 마지막 1초에 서버에서 발행한 알림 수입니다. 이 값은 서버에서 메모리 가중을 경험하는 횟수를 나타냅니다.|  
 |`Requests Disconnected`|통신 오류로 인해 연결이 끊어진 요청 수입니다.|  

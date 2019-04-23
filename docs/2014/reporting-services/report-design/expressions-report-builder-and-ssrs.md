@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327932f82ddee445c7e15f53f02edd39ba0b28bf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288631"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957589"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>식(보고서 작성기 및 SSRS)
   식은 데이터를 검색, 계산, 표시, 그룹화, 정렬, 필터링, 매개 변수화 및 서식 지정하기 위해 보고서 전체에서 광범위하게 사용됩니다. 많은 보고서 항목 속성을 식으로 설정할 수 있으므로 식을 사용하면 보고서의 내용, 디자인 및 상호 작용을 제어할 수 있습니다. 식은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]으로 작성되고 보고서 정의에 저장되며 보고서를 실행할 때 보고서 처리기에서 계산됩니다.  

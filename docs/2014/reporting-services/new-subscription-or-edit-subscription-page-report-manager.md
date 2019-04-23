@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6194516bfc230c73df928bda5095c106776beff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 926223ad0a5a8cdb1a5ff7aacfb7fdd7f84a8c57
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030134"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940259"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>새 구독 또는 구독 편집 페이지(보고서 관리자)
   새 구독 또는 구독 편집 페이지를 사용하여 보고서에 대한 새 구독을 만들거나 기존 구독을 수정할 수 있습니다. 이 페이지의 옵션은 사용자의 역할 할당에 따라 다릅니다. 고급 권한이 있는 사용자는 추가 옵션으로 작업할 수 있습니다.  

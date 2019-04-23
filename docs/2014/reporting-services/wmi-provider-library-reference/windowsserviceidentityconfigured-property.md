@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dc4532b3b7afadf4049fc99296b83c8ae04511a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3e457229b44a2d3176fe6c36d825f86dd917c47b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029745"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943571"
 ---
 # <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 서비스를 실행하도록 마지막으로 구성된 ID를 반환합니다. 읽기 전용입니다.  

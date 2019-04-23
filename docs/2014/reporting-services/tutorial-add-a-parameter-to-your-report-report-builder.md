@@ -1,5 +1,5 @@
 ---
-title: '자습서: 매개 변수 보고서에 추가 (보고서 작성기) | Microsoft Docs'
+title: '자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298661"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966519"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서 (보고서 작성기)에 매개 변수를 추가 합니다.
   보고서에 매개 변수를 추가하면 사용자가 데이터 원본이나 보고서에서 보고서 데이터를 필터링할 수 있습니다. 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,9 +55,9 @@ ms.locfileid: "56298661"
 10. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 원본을 선택 하 고 데이터 집합을 만들려면이 시리즈의 첫 번째 자습서를 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- 이 자습서에 소요되는 예상 시간: 25분  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 25 분에 한 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -119,7 +119,7 @@ ms.locfileid: "56298661"
   
      이 쿼리에는 쿼리 매개 변수가 포함되어 있지 않습니다. 이 자습서의 뒷부분에서 쿼리 매개 변수를 추가합니다.  
   
-11. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 네 상점의 각 하위 범주에 대한 판매 항목의 수량을 표시하는 11개 데이터 행을 표시하고 StoreID, Subcategory, Quantity 열을 포함합니다.  
+11. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 네 상점의 각 하위 범주에 대 한 판매 항목의 수량을 표시 하는 데이터의 11 개 행을 표시 하 고 다음 열이 포함: StoreID, Subcategory, Quantity 합니다.  
   
 12. **다음**을 클릭합니다.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "56298661"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     상점 열 머리글에 복잡한 식의 표시 텍스트인 **<\<Expr>>**.  
+     상점 열 머리글에는 복잡 한 식의 표시 텍스트를 포함 합니다. **<\<Expr>>**.  
   
 8.  보고서를 미리 봅니다.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298661"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. 방금 만든 식 앞의 입력란을 클릭한 다음 Parameter Values Selected:를 입력합니다.  
+15. 방금 만든 식 앞의 입력란을 클릭한 다음 Parameter Values Selected:입니다.  
   
 16. 보고서를 미리 봅니다.  
   

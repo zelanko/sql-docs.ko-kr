@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RemoveSSLCertificateBindings method
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e479580d9d5b7720fe4fb7b641236ec12e4537c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c923e2c92e22080f2b640afcec83c147ba3cfb6a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951039"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>RemoveSSLCertificateBindings 메서드(WMI MSReportServer_ConfigurationSetting)
   SSL 인증서 바인딩을 제거합니다.  

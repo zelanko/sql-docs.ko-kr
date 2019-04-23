@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f028a70d2f1d26f18f7940f89364c23dc5050b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021595"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967939"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>보고서 서버에 보고서 게시
   보고서 또는 보고서 집합을 디자인 및 테스트한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기본 제공 배포 기능을 사용하여 보고서를 보고서 서버에 게시할 수 있습니다. 개별 보고서 또는 보고서 서버 프로젝트를 게시할 수 있습니다. 보고서 서버 프로젝트를 게시하는 것은 여러 보고서를 게시하는 가장 쉬운 방법입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 용어를 사용 하 여 *배포할*, 라는 용어 대신 *게시*합니다. 두 용어는 같은 의미로 사용할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "56021595"
 ## <a name="project-configurations"></a>프로젝트 구성  
  유효한 보고서 정의만 보고서 서버에 게시되도록 하기 위해 보고서는 게시되기 전에 빌드됩니다. 프로젝트 구성에는 빌드된 보고서를 임시로 저장하는 폴더, 빌드 문제를 처리하는 방법 등과 같은 보고서 빌드를 위한 속성이 포함됩니다. 또한 보고서 서버의 위치 및 버전과 보고서 서버의 폴더를 지정하는 데 사용되는 속성도 포함됩니다.  
   
- 기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 DebugLocal, Debug 및 Release의 3가지 프로젝트 구성을 제공합니다. 기본 구성은 DebugLocal입니다. 일반적으로 DebugLocal 구성을 사용하면 로컬 미리 보기 창으로 보고서를 볼 수 있고 Debug 구성을 사용하면 테스트 서버에 보고서를 게시할 수 있으며 Release 구성을 사용하면 프로덕션 서버에 보고서를 게시할 수 있습니다. 표준 도구 모음의 솔루션 구성 드롭다운 목록에는 활성 구성이 표시됩니다. 다른 구성을 사용하려면 목록에서 해당 구성을 선택합니다.  
+ 기본적으로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 세 가지 프로젝트 구성을 제공 합니다. DebugLocal, Debug 및 Release입니다. 기본 구성은 DebugLocal입니다. 일반적으로 DebugLocal 구성을 사용하면 로컬 미리 보기 창으로 보고서를 볼 수 있고 Debug 구성을 사용하면 테스트 서버에 보고서를 게시할 수 있으며 Release 구성을 사용하면 프로덕션 서버에 보고서를 게시할 수 있습니다. 표준 도구 모음의 솔루션 구성 드롭다운 목록에는 활성 구성이 표시됩니다. 다른 구성을 사용하려면 목록에서 해당 구성을 선택합니다.  
   
  보고 환경에는 여러 보고서 서버와 다른 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 설치되었을 수 있습니다. 여러 구성을 만든 다음 배포 시나리오에 따라 다른 구성을 사용할 수 있습니다. 자세한 내용은 [배포 및 SQL Server Data Tools의 버전 지원 &#40;SSRS&#41; ](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md) 하 고 [배포 속성 설정 &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md).  
   

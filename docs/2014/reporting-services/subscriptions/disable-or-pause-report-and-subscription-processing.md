@@ -19,15 +19,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040684"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953889"
 ---
 # <a name="pause-report-and-subscription-processing"></a>보고서 및 구독 처리 일시 중지
   보고서나 구독을 직접 일시 중지할 수 없습니다. 그러나 프로세스가 시작되거나 데이터 원본 연결이 만들어지기 전에 보고서 및 구독 처리를 중단할 수 있습니다. 사용자가 보고서나 구독에 액세스하지 못하도록 하여 보고서나 구독 처리를 중단할 수도 있습니다.  

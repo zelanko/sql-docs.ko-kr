@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294431"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945439"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
   보고서를 작성할 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더러의 동작을 이해하여 렌더링된 보고서가 페이지 레이아웃 및 페이지 나누기를 비롯하여 원하는 식으로 표시되도록 해야 합니다. 렌더링된 보고서가 사용자나 조직이 흔히 사용하는 용지 크기에 맞게 표시되도록 설정해야 할 수도 있습니다.  
@@ -54,9 +54,9 @@ ms.locfileid: "56294431"
     > [!NOTE]  
     >  Atom 렌더링은 다른 형식으로 직접 내보낼 수는 없지만 보고서에서 데이터 파일을 생성합니다.  
   
--   **소프트 페이지 나누기 렌더러** 소프트 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성된 파일은 웹 페이지 등의 화면 중심 보기 및 배달용으로 최적화됩니다. 사용할 수 있는 소프트 페이지 나누기 렌더러는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, MHTML(웹 보관 파일) 및 HTML입니다.  
+-   **소프트 페이지 나누기 렌더러** 소프트 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성된 파일은 웹 페이지 등의 화면 중심 보기 및 배달용으로 최적화됩니다. 사용할 수 있는 소프트 페이지 나누기 렌더러는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] 웹 보관 파일 (MHTML), Word 및 HTML입니다.  
   
--   **하드 페이지 나누기 렌더러** 하드 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다. 사용할 수 있는 하드 페이지 나누기 렌더러는 TIFF와 PDF입니다.  
+-   **하드 페이지 나누기 렌더러** 하드 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다. 사용할 수 있는 하드 페이지 나누기 렌더러 지원 됩니다. TIFF와 PDF입니다.  
   
  보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 보고서 관리자에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기 &#40;보고서 작성기 및 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)합니다.  
   

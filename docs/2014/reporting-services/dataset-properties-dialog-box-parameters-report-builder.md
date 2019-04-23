@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298011"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968238"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 집합 속성 대화 상자, 매개 변수(보고서 작성기)
   선택 **매개 변수** 에 **데이터 집합 속성** 대화 상자를 추가, 변경 및 쿼리 매개 변수를 삭제 합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "56298011"
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [데이터 집합 속성 대화 상자, 쿼리 &#40;보고서 작성기&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [자습서: 보고서 매개 변수를 추가 &#40;보고서 작성기&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [쿼리 디자이너&#40;보고서 작성기&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

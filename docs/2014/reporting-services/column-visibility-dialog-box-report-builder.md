@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8aa1315ca0f4a69e234d627a415ba088bd45742b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294441"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943936"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>열 표시 유형 대화 상자(보고서 작성기)
   **열 표시 유형** 대화 상자를 사용하면 보고서를 처음 실행할 때 선택된 열을 표시하거나 숨길 수 있고 다른 보고서 항목을 사용하여 열의 표시 유형을 전환할 수 있습니다.  

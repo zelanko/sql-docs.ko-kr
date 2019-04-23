@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9393d4c4cdd3e3655a5088d8b1dd2bcfb33285a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0eed8032957a3741d7c1804d21cd08b72ef87657
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039624"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939879"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>보고서 뷰어의 로컬 모드와 연결 모드 보고서 비교(SharePoint 모드의 Reporting Services)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서는 *로컬 모드* 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 사용하는 *연결된 모드*로 구성할 수 있습니다. 데이터 확장 프로그램에서 로컬 모드 보고를 지원하는 경우 이제 보고서 뷰어를 사용하여 SharePoint에서 직접 보고서를 렌더링할 수 있습니다. 이 방법을 *로컬 모드*라고 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 이전 버전에서는 보고서 뷰어 컨트롤로 보고서를 렌더링하려면 SharePoint 팜을 사용하여 SharePoint 모드로 구성된 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 연결해야 했습니다. 이 방법을 *원격 모드* 또는 *연결된 모드*라고 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "56039624"
 -   [SharePoint 2010에서 로컬 모드 보고 구성](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> 로컬 모드 및 연결된 모드, 지원되는 확장 프로그램  
- **로컬 모드:** 로컬 모드를 지원하는 데이터 확장 프로그램이 있는 경우 보고서 뷰어가 SharePoint의 보고서를 바로 렌더링합니다. *로컬 모드* 에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 없습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 설치해야 하지만 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 필요하지 않습니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 **없습니다.**  
+ **로컬 모드:** 로컬 모드를 지 원하는 데이터 확장 프로그램에 있는 경우 보고서 뷰어가 SharePoint에서 보고서를 바로 렌더링 합니다. *로컬 모드* 에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 없습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능을 설치해야 하지만 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 필요하지 않습니다. 로컬 모드에서는 사용자가 보고서를 볼 수 있지만 구독, 데이터 경고 등과 같은 서버 쪽 기능에 액세스할 수 **없습니다.**  
   
  **원격 모드**라고도 하는 *연결된 모드* 는 보고서 뷰어 컨트롤로 보고서를 렌더링하려면 SharePoint 팜에 연결된 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버가 필요합니다.  
   

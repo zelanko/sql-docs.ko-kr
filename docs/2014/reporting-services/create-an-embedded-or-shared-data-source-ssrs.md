@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff7f9c94aded21d70ea4b6ef6b31d2f8094f2592
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289811"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960941"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>포함된 데이터 원본 또는 공유 데이터 원본 만들기(SSRS)
   보고서 데이터 원본은 이름 및 연결 정보를 지정합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 두 종류의 데이터 원본 지원 합니다: 포함 된 데이터 원본과 공유 합니다. 포함된 데이터 원본은 보고서 정의에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 개별 항목으로 정의되고 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)합니다.  

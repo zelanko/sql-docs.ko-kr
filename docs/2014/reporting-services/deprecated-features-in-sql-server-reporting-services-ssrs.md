@@ -13,15 +13,15 @@ helpviewer_keywords:
 - HTML OWC rendering extension [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4bcdd91fb11301de3f3f22fddbf8f4d6c27fbde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5b2b832fbd7eb83fa26353750770894bfb6f2a8a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020764"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965709"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014의 SQL Server Reporting Services에서 지원되지 않는 기능
   이 항목에서는 지원되지 않는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능에 대해 설명합니다. 이러한 기능은 지원되지 않는 버전에서 계속 사용할 수 있지만 이후 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 기능이 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  

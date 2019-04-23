@@ -12,15 +12,15 @@ helpviewer_keywords:
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034402"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947879"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
   보고서 관리자를 사용하여 보고서 서버에 게시된 보고서를 볼 수 있습니다. 기본적으로 모든 보고서는 HTML로 열립니다. 보고서가 열린 후 다른 애플리케이션 형식으로 내보내어 볼 수 있습니다. 보고서에 대화형 기능이 포함되어 있거나 보고서가 대화형 데이터를 포함한 보고서 작성기 보고서인 경우 해당 링크를 클릭하여 추가 보고서 또는 데이터를 볼 수 있습니다.  

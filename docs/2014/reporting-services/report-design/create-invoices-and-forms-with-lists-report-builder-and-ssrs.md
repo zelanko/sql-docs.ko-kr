@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290391"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950465"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>목록(보고서 작성기 및 SSRS)
   목록 데이터 영역은 보고서 데이터 세트의 각 그룹 또는 행에서 반복됩니다. 목록은 자유 형식 보고서나 송장 등의 양식을 만드는 데 사용하거나 다른 데이터 영역과 함께 사용할 수 있습니다. 여러 보고서 항목을 포함하는 목록을 정의할 수 있습니다. 목록을 다른 목록 안에 중첩하여 여러 그룹의 데이터를 제공할 수 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "56290391"
 > [!NOTE]  
 >  목록을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- 빠르게 시작 하려면 목록을 사용 하 여 참조 [자습서: 자유 형식 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-free-form-report-report-builder.md)합니다.  
+ 목록을 빠르게 시작하려면 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 목록을 사용하는 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하여 목록에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290391"
 ##  <a name="DisplayingLayout"></a> 자유 형식 레이아웃으로 데이터 표시  
  보고서 데이터를 표 대신 자유 형식 레이아웃으로 구성하려면 디자인 화면에 목록을 추가합니다. 보고서 데이터 창의 필드를 셀로 끌어옵니다. 기본적으로 셀에는 컨테이너 역할을 수행하는 사각형이 포함되어 있습니다. 원하는 디자인이 될 때까지 컨테이너의 각 필드를 이동합니다. 사각형 컨테이너의 입력란을 끌 때 표시되는 맞춤선을 사용하면 가로 및 세로로 가장자리를 맞추는 데 도움이 됩니다. 셀의 크기를 조정하여 불필요한 공백을 제거합니다 자세한 내용은 [행 높이 또는 열 너비 변경&#40;보고서 작성기 및 SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)을 참조하세요.  
   
- 다음 그림에서는 Date, Order, Qty, Product, LineTotal 및 이미지 필드를 포함한 주문에 대한 정보를 보여 줍니다.  
+ 다음 그림에는 이러한 필드를 포함 하 여 주문에 대 한 정보를 표시 하는 목록을 보여 줍니다. 날짜, 순서, Qty, Product, LineTotal 및 이미지  
   
  ![4개의 필드와 1개의 이미지가 있는 디자인 뷰의 목록](../media/rs-basiclistformdesign.gif "4개의 필드와 1개의 이미지가 있는 디자인 뷰의 목록")  
   

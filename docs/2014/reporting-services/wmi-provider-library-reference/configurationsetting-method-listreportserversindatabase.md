@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - ListReportServersInDatabase method
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 57b93a04e4003d56e7e6a1aef4b264240f2b7f46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eeb8b39355eac3526fa42aea08df33b32c70472a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022184"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957989"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>ListReportServersInDatabase 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에 보안 정보에 대한 액세스 권한이 있는지 여부에 관계없이 보고서 서버 데이터베이스에 있는 보고서 서버 설치 목록을 반환합니다.  

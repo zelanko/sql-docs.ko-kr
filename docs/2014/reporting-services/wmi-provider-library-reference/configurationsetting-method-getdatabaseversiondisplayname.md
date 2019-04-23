@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - GetDatabaseVersionDisplayName method
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8777faa32fd31bb31a161f8e4bcb6c297ff2c4b9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05f7e8818f5300ee1c7e391ad1345b696eb08154
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013365"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933479"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>GetDatabaseVersionDisplayName 메서드(WMI)
   지정된 보고서 서버 데이터베이스 버전 문자열의 표시 이름을 가져옵니다.  

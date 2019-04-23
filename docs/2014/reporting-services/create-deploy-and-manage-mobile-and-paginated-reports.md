@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee2218124f3bbae716c42d013ba9d7339c0b011b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294461"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943159"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services(SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 즉시 사용할 도구 및 서비스 만들기, 배포 및 조직에 대 한 보고서를 관리 하는 데 전체 범위를 제공 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에는 보고 기능을 확장하고 사용자 지정할 수 있는 프로그래밍 기능이 있습니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d82bf60225c2559866ee100127058e5b58a2bdd9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016264"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948524"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint 서비스 애플리케이션 관리
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션은 SharePoint 중앙 관리에서 관리됩니다. 관리 및 속성 페이지에서 서비스 애플리케이션의 구성과 일반 관리 태스크를 업데이트할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "56016264"
   
 2.  서비스 애플리케이션 이름 근처를 클릭하거나 **유형** 열을 클릭하여 전체 행을 선택하고 SharePoint 리본에서 **속성** 을 클릭합니다.  
   
- 서비스 응용 프로그램 속성에 대한 자세한 내용은 [3단계: Reporting Services 서비스 애플리케이션 만들기](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)의 "서비스 애플리케이션" 섹션을 참조하세요.  
+ 서비스 응용 프로그램 속성에 대 한 자세한 내용은 참조 하세요. [3 단계: Reporting Services 서비스 애플리케이션 만들기](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)의 "서비스 애플리케이션" 섹션을 참조하세요.  
   
 ##  <a name="bkmk_openpages"></a> 서비스 응용 프로그램 관리 페이지를 열려면  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대한 관리 페이지를 열려면 다음을 완료합니다.  

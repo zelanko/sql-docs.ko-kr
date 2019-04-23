@@ -1,7 +1,7 @@
 ---
 title: 보고서 미리 보기
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553235"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946949"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)에서 보고서 미리 보기
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 미리 보기
 
   보고서를 디자인할 때 프로덕션 환경에 게시하기 전에 보고서를 미리 볼 수 있습니다. 이 작업은 보고서 디자이너에서 미리 보기 모드로 전환하거나, 보고서 디자이너에서 미리 보기 창을 사용하거나, 테스트 환경의 보고서 서버에 보고서를 게시하여 수행할 수 있습니다.  
   

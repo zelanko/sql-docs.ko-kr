@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291911"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961829"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
   보고서를 실행한 후 Excel이나 PDF 같은 다른 형식으로 보고서를 내보내거나 보고서에서 사용할 수 있는 Atom 규격 데이터 피드를 나열하는 Atom 서비스 문서를 생성하여 보고서를 내보낼 수 있습니다.  
@@ -47,15 +47,15 @@ ms.locfileid: "56291911"
   
 -   **데이터 렌더링 확장 프로그램** 데이터 렌더링 확장 프로그램은 보고서에서 서식 및 레이아웃 정보를 모두 제거하고 데이터만 표시합니다. 이렇게 내보낸 파일은 Excel 같은 다른 파일 형식, 다른 데이터베이스, XML 데이터 메시지 또는 사용자 지정 애플리케이션으로 원시 보고서 데이터를 가져오는 데 사용할 수 있습니다. 데이터 렌더링 확장 프로그램은 페이지 나누기를 지원하지 않습니다.  
   
-     지원되는 데이터 렌더링 확장 프로그램은 CSV, XML 및 Atom입니다.  
+     다음 데이터 렌더링 확장 프로그램 지원 됩니다. CSV, XML 및 Atom입니다.  
   
 -   **소프트 페이지 나누기 렌더러 확장 프로그램** 소프트 페이지 나누기 렌더링 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 이렇게 내보낸 파일은 웹 페이지나 **ReportViewer** 컨트롤 같은 화면 중심의 보기 및 배달용으로 최적화됩니다.  
   
-     지원되는 소프트 페이지 나누기 렌더링 확장 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 MHTML(웹 보관 파일)입니다.  
+     다음과 같은 소프트 페이지 나누기 렌더링 확장 프로그램 지원 됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 및 웹 보관 파일 (MHTML).  
   
 -   **하드 페이지 나누기 렌더링 확장 프로그램** 하드 페이지 나누기 렌더러 확장 프로그램에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다.  
   
-     지원되는 하드 페이지 나누기 렌더링 확장 프로그램은 TIFF와 PDF입니다.  
+     다음 하드 페이지 나누기 렌더링 확장 프로그램 지원 됩니다. TIFF와 PDF입니다.  
   
 ##  <a name="ExportFormats"></a> 내보내기 형식  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다양한 형식으로 보고서를 렌더링하는 렌더링 확장 프로그램을 제공합니다. 이 기능을 사용하려는 경우 선택한 파일 형식에 맞게 보고서 디자인을 최적화해야 합니다. 각 렌더링 확장 프로그램에 대한 항목에서는 보고서가 이러한 형식으로 렌더링되는 방식에 대한 자세한 정보를 제공합니다.  
@@ -65,11 +65,11 @@ ms.locfileid: "56291911"
 |형식|렌더링 확장 프로그램 유형|Description|  
 |------------|------------------------------|-----------------|  
 |CSV|data|CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 보고서의 데이터를 결합하여 읽기 쉽고 많은 애플리케이션과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.<br /><br /> 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.|  
-|내보내기|소프트 페이지 나누기|Excel 렌더링 확장 프로그램은 Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩이 설치된 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003뿐만 아니라 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010과도 호환되는 Excel 문서로 보고서를 렌더링합니다 보고서를 Excel 워크시트로 내보내면 일부 레이아웃과 원래 디자인 요소가 유지되지 않을 수 있습니다. 보고서를 Excel로 내보낼 때 워크시트 탭 이름을 지정할 수 있도록 하는 속성을 보고서 및 보고서 내의 그룹에 설정할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 xlsx입니다.<br /><br /> 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003의 네이티브 형식으로 렌더링하는 Excel 2003 렌더링 확장 프로그램은 일부 보고 시나리오에서 사용할 수 있습니다.|  
-|Word|소프트 페이지 나누기|Word 렌더링 확장 프로그램은 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환되는 Word 문서로 보고서를 렌더링합니다. 보고서를 Word 문서로 내보낸 후에는 보고서의 내용을 변경하고 우편물 레이블, 구매 주문서 또는 편지 양식과 같은 문서 스타일의 보고서를 디자인할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 docx입니다.<br /><br /> 자세한 내용은 [Microsoft Word로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003의 네이티브 형식으로 렌더링하는 Word 2003 렌더링 확장 프로그램은 일부 보고 시나리오에서 사용할 수 있습니다.|  
+|내보내기|소프트 페이지 나누기|Excel 렌더링 확장 프로그램은 Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩이 설치된 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003뿐만 아니라 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007-2010과도 호환되는 Excel 문서로 보고서를 렌더링합니다 보고서를 Excel 워크시트로 내보내면 일부 레이아웃과 원래 디자인 요소가 유지되지 않을 수 있습니다. 보고서를 Excel로 내보낼 때 워크시트 탭 이름을 지정할 수 있도록 하는 속성을 보고서 및 보고서 내의 그룹에 설정할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 xlsx입니다.<br /><br /> 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: 네이티브 형식으로 렌더링 하는 Excel 2003 렌더링 확장 프로그램 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003은 일부 보고 시나리오에서 사용할 수 있습니다.|  
+|Word|소프트 페이지 나누기|Word 렌더링 확장 프로그램은 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003뿐만 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2007-2010과도 호환되는 Word 문서로 보고서를 렌더링합니다. 보고서를 Word 문서로 내보낸 후에는 보고서의 내용을 변경하고 우편물 레이블, 구매 주문서 또는 편지 양식과 같은 문서 스타일의 보고서를 디자인할 수 있습니다. 이 렌더러에 의해 생성되는 파일의 확장명은 docx입니다.<br /><br /> 자세한 내용은 [Microsoft Word로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-microsoft-word-report-builder-and-ssrs.md)를 참조하세요.<br /><br /> 참고: 네이티브 형식으로 렌더링 하는 Word 2003 렌더링 확장 프로그램 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003은 일부 보고 시나리오에서 사용할 수 있습니다.|  
 |웹 보관 파일|소프트 페이지 나누기|HTML 렌더링 확장 프로그램은 보고서를 HTML 형식으로 렌더링합니다. 완전한 형식의 HTML 페이지 또는 HTML 조각을 만들어 다른 HTML 페이지에 포함시킬 수도 있습니다. 모든 HTML은 UTF-8 인코딩을 사용하여 만들어집니다.<br /><br /> HTML 렌더링 확장 프로그램은 보고서 관리자에서 실행될 때를 포함하여 보고서 작성기에서 미리 보거나 브라우저에서 여는 보고서의 기본 렌더링 확장 프로그램입니다.<br /><br /> 자세한 내용은 [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](rendering-to-html-report-builder-and-ssrs.md)을 참조하세요.|  
 |Acrobat(PDF) 파일|하드 페이지 나누기|PDF 렌더링 확장 프로그램은 Adobe Acrobat 및 PDF 1.3을 지원하는 타사 PDF 뷰어에서 열 수 있는 파일로 보고서를 렌더링합니다. PDF 1.3은 Adobe Acrobat 4.0 이상 버전과 호환되지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 Adobe Acrobat 6 이상 버전을 지원합니다. 이 렌더링 확장 프로그램으로 보고서를 렌더링하기 위해 Adobe 소프트웨어가 필요한 것은 아닙니다. 그러나 PDF 형식으로 보고서를 보거나 인쇄하기 위해서는 Adobe Acrobat과 같은 PDF 뷰어가 필요합니다.<br /><br /> 자세한 내용은 [PDF 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-a-pdf-file-report-builder-and-ssrs.md)를 참조하세요.|  
-|TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램은 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]에서 지원하는 BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF 형식으로 파일을 생성할 수 있습니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
+|TIFF 파일|하드 페이지 나누기|이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다.<br /><br /> 이미지 렌더링 확장 프로그램에서 지 원하는 형식으로 파일을 생성할 수 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG 및 TIFF입니다.<br /><br /> 자세한 내용은 [이미지 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-an-image-file-report-builder-and-ssrs.md)를 참조하세요.|  
 |XML|데이터|XML 렌더링 확장 프로그램은 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 애플리케이션으로 전송할 수 있습니다.<br /><br /> 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.|  
 |Atom|data|Atom 렌더링 확장 프로그램은 보고서에서 Atom 규격 데이터 피드를 생성합니다. 데이터 피드는 Atom 규격 데이터 피드를 사용할 수 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트와 같은 응용 프로그램을 통해 읽을 수 있고 교환할 수 있습니다.<br /><br /> 이 확장 프로그램의 출력 형식은 보고서에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서입니다. 이 문서에서는 보고서의 각 데이터 영역에 대한 데이터 피드가 하나 이상 생성되는데, 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 여러 개의 데이터 피드가 생성될 수 있습니다.<br /><br /> 자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.|  
   

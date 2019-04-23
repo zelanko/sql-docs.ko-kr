@@ -11,15 +11,15 @@ helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e27a9a73c966e1058ec273415f17b80142a582ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291631"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945339"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
   이 섹션에서는 보고서 작성기 및 보고서 디자이너 설명서에 사용된 주요 개념을 간략하게 정의합니다. 특정 단어 또는 용어에 대한 정의를 보려면 [용어집&#40;보고서 작성기&#41;](../report-builder/glossary-report-builder.md)을 참조하세요.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cc6ef408-4a76-408a-9d3f-033481fe21cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: da4310a181df219422c29a7efa5538356ca41b90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 62ed0c324711ab38460c59ecc0e74291a1080d2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287231"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961849"
 ---
 # <a name="interactive-sort-document-maps-and-links-report-builder-and-ssrs"></a>대화형 정렬, 문서 구조 및 링크(보고서 작성기 및 SSRS)
   웹 기반 환경에서 사용자가 보고서와 상호 작용할 수 있도록 해주는 다양한 기능을 추가할 수 있습니다. 사용자는 보고서 값의 정렬 순서를 변경할 수 있고, 보고서의 항목을 표시하거나 숨길 수 있으며, 다른 보고서나 웹 페이지로 이동하는 링크를 클릭할 수 있습니다. 또한 목차나 문서 구조를 추가할 수 있습니다. 보고서 사용자는 목차나 문서 구조의 항목을 클릭하여 보고서 내의 영역으로 이동할 수 있습니다.  

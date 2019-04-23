@@ -1,5 +1,5 @@
 ---
-title: '자습서: 스파크 라인 보고서에 추가 (보고서 작성기) | Microsoft Docs'
+title: '자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294731"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951239"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: (보고서 작성기) 보고서에 스파크 라인 추가
   이 자습서에서는 예제 판매 데이터를 기반으로 하는 기본 테이블 보고서를 만든 다음 테이블의 셀에 스파크라인 차트를 추가합니다.  
   
  이 자습서에서 만드는 향상된 버전의 보고서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 보고서 작성기의 예제 보고서로 제공됩니다. 이 예제 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 예제 보고서(Report Builder sample reports)](https://go.microsoft.com/fwlink/?LinkId=184851)를 참조하십시오. 다음 그림에서는 만들려는 보고서와 비슷한 예제 보고서를 보여 줍니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "56294731"
   
  9. [보고서 저장](#Save)  
   
- 이 자습서에 소요되는 예상 시간: 30분  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -183,7 +183,7 @@ ms.locfileid: "56294731"
   
 14. 디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 3개와 행 3개가 있습니다.  
   
-     그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 **제품**합니다. 열 그룹 창에는 **SalesDate**합니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+     그룹화 창을 확인합니다. 그룹화 창이 표시되지 않는 경우 **보기** 메뉴에서 **그룹화**를 클릭합니다. 행 그룹 창에는 한 개의 행 그룹이 표시 됩니다. **Product**라는 하나의 행 그룹이 표시됩니다. 열 그룹 창에는 하나의 열 그룹을 보여 줍니다. **SalesDate**라는 하나의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
 15. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   

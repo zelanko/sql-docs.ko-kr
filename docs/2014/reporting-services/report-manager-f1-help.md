@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019324"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967959"
 ---
 # <a name="report-manager-f1-help"></a>보고서 관리자 F1 도움말
   다음 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 대한 페이지 수준 도움말을 제공합니다. 애플리케이션의 각 페이지에 대해 항목이 하나씩 있습니다. 일부 페이지에 대한 설명은 제공되지 않을 수 있습니다. 보안 설정에 따라 액세스할 수 있는 페이지가 다릅니다. 보고서 관리자에서 이 항목에 액세스하려면 기본 도구 모음에서 **도움말** 을 클릭합니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eda13c16caf3f123887da00e2c7896d36b8bf7ed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945450"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>3단원: 데이터 기반 구독 정의
   이 단원에서는 데이터 기반 구독 페이지를 사용하여 구독 데이터 원본에 연결하고 구독 데이터를 검색하는 쿼리를 작성하며 결과 집합을 보고서 및 배달 옵션에 매핑합니다.  
@@ -108,11 +108,11 @@ ms.locfileid: "56015544"
   
 7.  **암호**에 대해 **정적 값 지정**을 선택합니다. 암호를 입력합니다. 마법사에서는 암호의 유효성을 검사하지 않으므로 암호 입력 시 주의합니다.  
   
-8.   **다음.**  
+8.  **다음**을 클릭합니다.  
   
 ##  <a name="bkmk_configure_parameter"></a> 5 단계-보고서 출력 매개 변수 값을 구성 합니다.  
   
-1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다.  **다음.**  
+1.  **OrderNumber**에 대해 **데이터베이스에서 값 가져오기**를 선택합니다. 값에서 **Order**를 선택합니다. **다음**을 클릭합니다.  
   
 ##  <a name="bkmk_schedule_subscription"></a> 6 단계-구독을 예약 하려면  
   

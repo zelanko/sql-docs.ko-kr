@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7bffe55c89f597ee47b9b7117df67da40e6c400
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 78a9aa951b96354f628a8aa6fd180fbc01b186a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287351"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961539"
 ---
 # <a name="max-function-report-builder-and-ssrs"></a>Max 함수(보고서 작성기 및 SSRS)
   지정된 범위의 컨텍스트에서 식으로 지정된 Null이 아닌 모든 숫자 값의 최대값을 반환합니다.  

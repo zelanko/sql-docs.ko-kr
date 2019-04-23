@@ -11,15 +11,15 @@ f1_keywords:
 - "10150"
 - sql12.rtp.rptdesigner.datasetproperties.parameters.f1
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d792081d7554aefe4684b5a2e491aac875de49d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b756349acfc55a85c67e3a24921061bb1173e97
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038444"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958959"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 세트 속성 대화 상자, 매개 변수
   **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  

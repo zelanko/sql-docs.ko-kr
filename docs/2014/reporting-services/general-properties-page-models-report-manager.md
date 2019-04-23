@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947549"
 ---
 # <a name="general-properties-page-models-report-manager"></a>일반 속성 페이지, 모델(보고서 관리자)
   보고서 모델의 일반 속성 페이지를 사용하여 모델 정의 파일(.smdl)의 이름을 바꾸거나 파일을 삭제, 이동 또는 대체할 수 있습니다. 모델을 만들거나 수정한 사람 및 변경된 시간에 대한 자세한 내용은 페이지 맨 위에 표시됩니다.  

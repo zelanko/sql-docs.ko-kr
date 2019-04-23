@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029474"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960899"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 부터 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독 소유권을 프로그래밍 방식으로 한 사용자에서 다른 사용자에게 전송할 수 있습니다. 이 항목에서는 구독 소유권을 변경하거나 단순히 나열할 수 있는 여러 가지 Windows PowerShell 스크립트를 제공합니다. 각 샘플에는 기본 모드 및 SharePoint 모드에 대한 샘플 구문이 포함됩니다. 구독 소유자를 변경한 후 구독은 새 소유자의 보안 컨텍스트에서 실행되고, 보고서의 User!UserID 필드에 새 소유자 값이 표시됩니다. PowerShell 샘플의 개체 모델에 대한 자세한 내용은 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -60,11 +60,11 @@ ms.locfileid: "56029474"
   
 -   구독 나열: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" 보고서를 보고서의 ReadSubscription 및 사용자는 구독 소유자) 또는 ReadAnySubscription  
   
--   구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원여야 합니다.  
+-   구독 변경: 사용자는 BUILTIN\Administrators 그룹의 구성원 이어야 합니다.  
   
 -   자식 나열: 항목의 ReadProperties  
   
--   이벤트 발생: GenerateEvents (System)  
+-   이벤트 발생: GenerateEvents (시스템)  
   
  **SharePoint 모드:**  
   
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  SharePoint 모드에서 사이트 URL을 확인하려면 SharePoint cmdlet **Get-SPSite**를 사용합니다. 자세한 내용은 [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx)를 참조하세요.  
   
-##  <a name="bkmk_list_all_one_user"></a> 스크립트: 특정 사용자가 소유하는 모든 구독 나열  
+##  <a name="bkmk_list_all_one_user"></a> 스크립트: 특정 사용자가 소유 하는 모든 구독 나열  
  이 스크립트는 특정 사용자가 소유하는 모든 구독을 나열합니다. 이 스크립트를 사용하여 연결을 테스트하거나 다른 스크립트에서 사용하는 보고서 경로 및 구독 ID를 확인할 수 있습니다. 이 스크립트는 조직의 누군가가 떠나고 이들이 소유하고 있던 구독을 확인하여 소유자를 변경하거나 구독을 삭제하려고 할 때 유용합니다.  
   
  **기본 모드 구문:**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> 스크립트: 특정 소유자가 소유하는 모든 구독의 소유권 변경  
+##  <a name="bkmk_change_all"></a> 스크립트: 특정 사용자가 소유 하는 모든 구독의 소유권 변경  
  이 스크립트는 특정 소유자가 소유하는 모든 구독의 소유권을 새 소유자 매개 변수로 변경합니다.  
   
  **기본 모드 구문:**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> 스크립트: 특정 보고서와 연결된 모든 구독 나열  
+##  <a name="bkmk_list_for_1_report"></a> 스크립트: 특정 보고서와 연결 된 모든 구독 나열  
  이 스크립트는 특정 보고서와 연결된 모든 구독을 나열합니다. 보고서 경로 구문은 전체 URL이 필요한 다른 SharePoint 모드입니다. 구문 예제에서 사용된 보고서 이름은 "title only"이며 공백을 포함하고 있으므로 보고서 이름을 작은따옴표로 묶어야 합니다.  
   
  **기본 모드 구문:**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> 스크립트: 단일 구독 실행  
+##  <a name="bkmk_run_1_subscription"></a> 스크립트: (영문)을 단일 구독 실행  
  이 스크립트는 FireEvent 메서드를 사용하여 특정 구독을 실행합니다. 이 스크립트는 구독에 구성된 일정에 상관없이 구독을 즉시 실행합니다. EventType은 보고서 서버 구성 파일 **rsreportserver.config** 에 정의된 알려진 이벤트 집합과 일치합니다. 이 스크립트는 표준 구독에 대해 다음 이벤트 유형을 사용합니다.  
   
  `<Event>`  

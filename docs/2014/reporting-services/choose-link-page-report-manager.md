@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036124"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965479"
 ---
 # <a name="choose-link-page-report-manager"></a>링크 선택 페이지(보고서 관리자)
   링크 선택 페이지를 사용하여 현재 선택한 링크된 보고서의 기반이 되는 다른 보고서를 선택할 수 있습니다. 링크된 보고서는 보고서 서버에 이미 게시된 다른 보고서를 기반으로 합니다. 링크된 보고서는 기본 보고서의 레이아웃과 데이터를 사용하지만 별도의 속성 페이지가 있으므로 매개 변수 속성, 보안 설정, 이름, 설명 및 위치를 사용자 지정할 수 있습니다.  

@@ -15,15 +15,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 042a81dc4850c592542ca0764842b45a7756468d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293882"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948589"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>표시기(보고서 작성기 및 SSRS)
   표시기는 단일 데이터 값의 상태를 한 눈에 볼 수 있도록 제공하는 최소 계기입니다. 표시기 및 해당 상태를 나타내는 아이콘은 단순하며 작은 크기로 설정해도 효율적으로 해당 내용을 표시합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "56293882"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 그대로 사용 가능한 기본 제공 표시기 집합 및 표시기 아이콘을 제공하지만, 개별 표시기 아이콘 및 표시기 집합을 필요에 따라 사용자 지정할 수도 있습니다.  
   
- 표시기를 Kpi로 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 보고서에 KPI 추가 &#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)합니다.  
+ 표시기를 KPI로 사용하는 방법에 대한 자세한 내용은 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  표시기를 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  

@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ea5a469c43ce89cb4d5f73f29b7c192fde08678
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284491"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950039"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
   해당 데이터 영역 **속성** 대화 상자의 **숫자** 페이지에서 형식을 선택하여 데이터 영역에 있는 숫자와 날짜의 형식을 지정할 수 있습니다.  

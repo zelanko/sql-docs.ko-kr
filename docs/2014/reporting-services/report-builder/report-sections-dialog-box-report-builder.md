@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10009"
 ms.assetid: 56407152-a962-49dd-a080-aef11bb6f829
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f52afcf99e1727e8de255ca62aa74c893a24273
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015034"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944391"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>보고서 섹션 대화 상자(보고서 작성기)
   보고서를 열 때 보고서 작성기는 보고서에 RDL(Report Definition Language) **\<Section>** 요소 하나만 포함되어 있는지 확인합니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  

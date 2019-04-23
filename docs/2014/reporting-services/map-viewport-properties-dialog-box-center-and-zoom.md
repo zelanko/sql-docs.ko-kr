@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b29cc14559b1c81646a2285106e04b7380e6a77e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296271"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962009"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>지도 뷰포트 속성 대화 상자, 중심 및 확대/축소
   **지도 뷰포트 속성** 대화 상자의 **중심 및 확대/축소** 를 선택하여 지도의 중심 보기와 확대/축소 비율을 설정할 수 있습니다. 지도 데이터 원본과 보고서에 포함할 지도의 경계를 지정한 후 보기 중심과 확대/축소 비율을 지정하여 지도 표시를 세부적으로 제어할 수 있습니다. 옵션은 중심 및 확대/축소 값을 지정하는 데 사용하는 방법에 따라 달라집니다. 옵션의 값을 설정하는 식을 편집하려면 **식** 단추(*fx*)를 클릭합니다.  

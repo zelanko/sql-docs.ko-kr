@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f9143c2a93bc5a5c6ffbc116745511de58755d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024004"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953799"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio의 보고서 서버 F1 도움말
   이 섹션에서는 보고서 서버를 관리하는 데 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 대화 상자에 대한 항목을 제공합니다.  

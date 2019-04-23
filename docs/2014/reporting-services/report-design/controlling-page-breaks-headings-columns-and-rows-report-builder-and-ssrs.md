@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dc969fe0b0851ddfaa84e103b1683f42d09e0334
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291671"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949709"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>페이지 나누기, 머리글, 열 및 행 제어(보고서 작성기 및 SSRS)
   페이지 나누기를 사용하여 보고서를 개별 페이지로 나누어 보고 인쇄할 수 있습니다. 페이지 나누기는 보고서를 미리 볼 때나 다른 파일 형식으로 내보낼 때 최적의 상태로 표시하기 위해 내용을 보고서 페이지에 맞추는 방식을 결정합니다.  

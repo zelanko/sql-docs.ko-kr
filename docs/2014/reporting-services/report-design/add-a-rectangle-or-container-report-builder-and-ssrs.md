@@ -11,15 +11,15 @@ f1_keywords:
 - "10061"
 - sql12.rtp.rptdesigner.rectangleproperties.general.f1
 ms.assetid: f905c35f-754d-4d02-80f3-85e29ddda826
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b14c42d88354660c04955ddc20e7586fdc377f1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 21bf1d94f179f9c48fb3b00f06d98cec105c9f27
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291481"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949695"
 ---
 # <a name="add-a-rectangle-or-container-report-builder-and-ssrs"></a>사각형 또는 컨테이너 추가(보고서 작성기 및 SSRS)
   보고서 영역을 구분하거나, 보고서 영역을 강조하거나, 하나 이상의 보고서 항목에 대해 배경을 제공하기 위해 그래픽 요소가 필요한 경우 보고서에 사각형을 추가합니다. 사각형은 보고서에서 데이터 영역이 렌더링되는 방식을 제어하는 데 도움이 되는 컨테이너로도 사용됩니다. 배경색 및 테두리 색과 같은 사각형 속성을 편집하여 사각형의 모양을 사용자 지정할 수 있습니다. 사각형을 컨테이너로 사용하는 방법은 [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) 및 [행렬 및 차트에 같은 데이터 표시&#40;보고서 작성기&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md)를 참조하세요.  
@@ -29,7 +29,7 @@ ms.locfileid: "56291481"
   
 ### <a name="to-add-a-rectangle"></a>사각형을 추가하려면  
   
-1.   **삽입** 탭의 **보고서 항목** 그룹에서 **사각형**을 클릭합니다.  
+1.  **삽입** 탭의 **보고서 항목** 그룹에서 **사각형**을 클릭합니다.  
   
 2.  디자인 화면에서 사각형 왼쪽 위 모퉁이를 배치할 위치를 클릭한 다음 오른쪽 아래 모퉁이로 지정할 위치까지 끕니다.  
   

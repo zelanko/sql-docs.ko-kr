@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f79a72033039babf117d69330e452ffc47d75b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a5c8e5f256ae762989d6112cb09f846febecc4dd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298094"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936535"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>데이터 세트 속성 대화 상자, 필드(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **필드** 를 선택하여 보고서 데이터 집합의 필드 컬렉션을 변경할 수 있습니다. 필드 목록은 자동으로 채워지지만 **필드** 를 사용하여 쿼리와 계산 필드를 추가, 편집 및 삭제할 수도 있습니다.  

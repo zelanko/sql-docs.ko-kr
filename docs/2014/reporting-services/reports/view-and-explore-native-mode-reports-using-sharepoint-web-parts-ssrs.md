@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010663"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964959"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 특정 버전의 보고서 서버 및 배포 모드에서 작동하는 다양한 웹 파트를 제공합니다.  
   
--   **기본 모드:** 기본 모드 보고서 서버에서 SharePoint 사이트의 보고서 서버 내용에 액세스하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함되어 있는 SharePoint 2.0 웹 파트 보고서 탐색기 및 보고서 뷰어를 사용합니다. 2.0 웹 파트를 설치하고 사용하는 방법은 이 항목에 제공되어 있습니다.  
+-   **기본 모드:** SharePoint 2.0 웹 파트 보고서 탐색기 및 포함 된 보고서 뷰어 기본 모드 보고서 서버에서 SharePoint 사이트에서 보고서 서버 내용에 액세스 하려는 경우 사용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 2.0 웹 파트를 설치하고 사용하는 방법은 이 항목에 제공되어 있습니다.  
   
--   **SharePoint 모드:** SharePoint 모드에서 실행되는 보고서 서버에 액세스하려면 SharePoint 제품에 대해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능으로 설치된 웹 파트를 사용합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
+-   **SharePoint 모드:** SharePoint 모드에서 실행 되는 보고서 서버에 액세스 하려는 경우 사용 하 여 설치 된 웹 파트는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 제품에 추가 합니다. 추가 기능 다운로드에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
 -   > [!NOTE]  
     >  기본 모드의 보고서 뷰어 웹 파트(SPViewer.dwp)는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능으로 설치된 웹 파트(ReportViewer.dwp)와 다른 웹 파트입니다. 웹 파트는 스키마 및 구현이 서로 다르지만 이를 모두 동일한 SharePoint 팜에 설치할 수 있습니다. 추가 기능을 통해 설치되는 보고서 뷰어 웹 파트의 도구 모음에는 **동작** 메뉴가 있으므로 이러한 시각적 특징을 통해 두 웹 파트를 구분할 수 있습니다.  

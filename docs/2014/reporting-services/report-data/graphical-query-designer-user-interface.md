@@ -17,15 +17,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 938093f87f7c6252f85c309dfbb987bd6b63cb94
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039294"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936579"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요. 특정 데이터 원본 유형 작업에 대 한 자세한 내용은 참조 하세요. [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56039294"
  .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너는 3가지 유형의 쿼리 명령인 **텍스트**하십시오 **StoredProcedure**, 또는 **TableDirect**합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](../dataset-properties-dialog-box-query.md) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너에는 세 가지 유형의 쿼리 명령 지원합니다. **텍스트**하십시오 **StoredProcedure**, 또는 **TableDirect**합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](../dataset-properties-dialog-box-query.md) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   

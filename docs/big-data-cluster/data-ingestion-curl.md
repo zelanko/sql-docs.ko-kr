@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860149"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947799"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용
 

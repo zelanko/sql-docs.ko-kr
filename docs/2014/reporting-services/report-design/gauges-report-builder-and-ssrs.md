@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297391"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954259"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
   계기 데이터 영역은 데이터 세트에 있는 하나의 값을 표시하는 1차원 데이터 영역입니다. 개별 계기는 항상 자식 또는 인접 계기를 추가할 수 있는 계기 패널 안에 배치됩니다. 계기 패널을 사용하여 필터링, 그룹화, 정렬 등 공통 기능을 공유하는 여러 계기를 한 계기 패널 안에 만들 수 있습니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "56297391"
   
  ![계기 요소 다이어그램](../media/gauge-elements-diagram.gif "계기 요소 다이어그램")  
   
- 계기를 Kpi로 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 보고서에 KPI 추가 &#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)합니다.  
+ 계기를 KPI로 사용하는 방법에 대한 자세한 내용은 [자습서: 보고서에 KPI 추가&#40;보고서 작성기&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  계기를 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297391"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 방사형 계기 옵션: 방사형, 미니 계기가 있는 방사형, 두 개의 눈금, 북동쪽 90도, 북서쪽 90도, 남서쪽 90도, 남동쪽 90도, 북쪽 180도, 남쪽 180도, 서쪽 180도, 동쪽 180도 및 측정기  
+ 방사형 계기 옵션: 방사형, 미니 계기가, 두 개의 눈금, 북동쪽 90도, 북서쪽 90도, 남서쪽 90도, 남동쪽 90도, 북쪽 180도, 남쪽 180도, 180도 West180, 동쪽 및 미터를 사용 하 여 방사형 합니다.  
   
  **선형 계기**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 불릿(Bullet) 그래프  
+ 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 글머리 기호 그래프입니다.  
   
   
 ##  <a name="AddingData"></a> 계기에 데이터 추가  

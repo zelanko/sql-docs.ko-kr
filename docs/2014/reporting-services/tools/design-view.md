@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fad4cf000bda343970c0c2b6c18adb8f5e7fb548
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010427"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946699"
 ---
 # <a name="design-view"></a>디자인 뷰
   디자인 뷰를 사용하여 보고서에서 보고서 항목을 배치할 수 있습니다. 디자인 뷰는 디자인 화면 또는 레이아웃 뷰라고도 합니다.  

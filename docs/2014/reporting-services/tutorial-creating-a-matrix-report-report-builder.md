@@ -1,5 +1,5 @@
 ---
-title: '자습서: 행렬 보고서 (보고서 작성기) 만들기 | Microsoft Docs'
+title: '자습서: 행렬 보고서 만들기(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288418"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965699"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 만들기(보고서 작성기)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 (보고서 작성기) 만들기
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 행렬 보고서를 만드는 방법을 배웁니다. 행렬에는 중첩 행 및 열 그룹과 인접 열 그룹이 있습니다. 열의 서식을 지정하고 텍스트를 회전하는 방법도 배웁니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -48,7 +48,7 @@ ms.locfileid: "56288418"
   
 1.  [입력란 270도 회전](#RotateTextBox)  
   
- 이 자습서에 소요되는 예상 시간: 20분.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -74,7 +74,7 @@ ms.locfileid: "56288418"
   
 5.  **다음**을 클릭합니다.  
   
-6.  에 **데이터 원본에 대 한 연결 선택** 페이지, 기존 데이터 원본을 선택 하거나 보고서 서버로 이동 및 데이터 소스를 선택 합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 된 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+6.  에 **데이터 원본에 대 한 연결 선택** 페이지, 기존 데이터 원본을 선택 하거나 보고서 서버로 이동 및 데이터 소스를 선택 합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 된 데이터 원본을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  **다음**을 클릭합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "56288418"
   
 13. **마침**을 클릭합니다.  
   
-     디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 Territory 및 SalesDate라는 두 개의 행 그룹이 표시됩니다. 열 그룹 창에는 Subcategory 및 Product라는 두 개의 열 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+     디자인 화면에 행렬이 추가됩니다. 행 그룹 창에는 두 개의 행 그룹을 보여 줍니다. Territory 및 SalesDate 합니다. 열 그룹 창에는 두 개의 열 그룹이 표시 됩니다. Subcategory 및 Product 합니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
 14. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294271"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933105"
 ---
 # <a name="supported-access-report-features-ssrs"></a>지원되는 Access 보고서 기능(SSRS)
   보고서 디자이너로 보고서를 가져오는 과정에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access 보고서가 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] RDL(Report Definition Language) 파일로 변환됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 Access의 여러 기능을 지원하지만 Access와 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 차이로 인해 일부 항목이 약간 수정되거나 지원되지 않을 수 있습니다. 이 항목에서는 Access 보고서 기능이 RDL로 변환되는 방법에 대해 설명합니다.  
@@ -263,7 +263,7 @@ ms.locfileid: "56294271"
   
 |||||  
 |-|-|-|-|  
-|Avg|Count|최대값|최소값|  
+|Avg|개수|최대값|최소값|  
 |StDev|StDevP|합계|Var|  
 |VarP||||  
   

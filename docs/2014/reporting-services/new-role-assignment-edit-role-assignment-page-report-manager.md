@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc92d5e8bba2200bb1a88739cd83c12b2f0bdd12
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025554"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950159"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>새 역할 할당: 역할 할당 편집 페이지 (보고서 관리자)
   새 역할 할당 또는 역할 할당 편집 페이지를 사용하여 보고서 서버 항목 및 작업에 대한 권한을 부여할 수 있습니다. 보고서 서버에 액세스해야 하는 각 사용자에게는 액세스의 수준을 정의하는 역할 할당이 필요합니다. 루트 노드 또는 특정 보고서, 모델, 폴더, 리소스 또는 공유 데이터 원본에 대해 역할 할당을 만들 수 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보안은 항목에 적용하는 역할 할당을 통해 적용됩니다. 역할 할당에 따라 역할 정의가 그룹이나 사용자에 대응되며 각 역할 정의는 그룹이나 사용자가 특정 항목과 관련하여 수행할 수 있는 태스크를 식별합니다.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012074"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946929"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>무인 실행 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 무인 모드로 보고서를 처리하고 네트워크를 통해 연결 요청을 전송하는 데 사용되는 특수 계정을 제공합니다. 이 계정은 다음과 같은 방법으로 사용됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "56012074"
  무인 모드로 실행되는 보고서 처리란 사용자 요청 대신 이벤트(일정 기반 이벤트 또는 데이터 새로 고침 이벤트)에 의해 트리거되는 모든 보고서 실행 프로세스를 말합니다. 보고서 서버는 무인 모드로 실행되는 보고서 처리 계정을 사용하여 외부 데이터 원본을 호스팅하는 컴퓨터에 로그온합니다. 보고서 서버 서비스 계정의 자격 증명은 다른 컴퓨터에 연결할 때 사용되지 않으므로 이 계정이 필요합니다.  
   
 > [!IMPORTANT]  
->  이 계정 구성은 선택 사항입니다. 그러나 계정을 구성하지 않는 경우 일부 데이터 원본에 연결하는 옵션이 제한되며 원격 컴퓨터에서 이미지 파일을 검색하지 못할 수 있습니다. 계정을 구성하는 경우 최신 상태로 유지해야 합니다. 특히 암호가 만료되도록 하거나 계정 정보가 Active Directory에서 변경되는 경우 다음에 보고서를 처리하면 "로그온하지 못했습니다(rsLogonFailed). 로그온 실패: 알 수 없는 사용자 이름이거나 암호가 잘못되었습니다."와 같은 오류가 발생할 수 있습니다. 외부 이미지를 검색하거나 연결 요청을 외부 컴퓨터로 보내지 않는 경우에도 무인 모드로 실행되는 보고서 처리 계정을 적절하게 유지 관리해야 합니다. 계정을 구성한 다음 사용할 필요가 없게 되면 삭제하여 일상적인 계정 유지 관리 태스크를 수행하지 않을 수 있습니다.  
+>  이 계정 구성은 선택 사항입니다. 그러나 계정을 구성하지 않는 경우 일부 데이터 원본에 연결하는 옵션이 제한되며 원격 컴퓨터에서 이미지 파일을 검색하지 못할 수 있습니다. 계정을 구성하는 경우 최신 상태로 유지해야 합니다. 특히 암호가 만료 되도록 허용 하면, Active Directory에서 계정 정보를 변경 하는 경우 있습니다 됩니다 다음과 같은 오류가 다음에 보고서가 처리: "로그온 실패 (rsLogonFailed) 로그온 실패: 알 수 없는 사용자 이름 또는 암호가 잘못 되었습니다." 외부 이미지를 검색하거나 연결 요청을 외부 컴퓨터로 보내지 않는 경우에도 무인 모드로 실행되는 보고서 처리 계정을 적절하게 유지 관리해야 합니다. 계정을 구성한 다음 사용할 필요가 없게 되면 삭제하여 일상적인 계정 유지 관리 태스크를 수행하지 않을 수 있습니다.  
   
 ## <a name="how-to-configure-the-account"></a>계정 구성 방법  
  도메인 사용자 계정을 사용해야 합니다. 원래 용도대로 사용하려면 이 계정은 보고서 서버 서비스를 실행하는 데 사용되는 계정과 달라야 합니다. 보고서 서버에 데이터 원본 및 리소스를 제공하는 컴퓨터에 대해서만 최소 사용 권한(네트워크 연결 권한이 포함된 읽기 전용 액세스 권한이면 충분함)과 제한된 액세스 권한이 있는 계정을 사용해야 합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  

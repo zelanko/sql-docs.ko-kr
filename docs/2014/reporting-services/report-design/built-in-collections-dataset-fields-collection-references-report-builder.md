@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d4717b1f8a905576d2f59657fd8ae8ad00396e3b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297431"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950139"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 각 데이터 세트에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 세트 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 세트를 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "56297431"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>런타임에 동적 쿼리에 대해 누락된 필드 검색  
- 기본적으로 필드 컬렉션의 항목에는 두 가지 속성이 있습니다. Value 및 IsMissing 합니다. IsMissing 속성은 디자인 타임에 데이터 세트에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>* 일 수 있습니다.  
+ Fields 컬렉션의 항목에는 기본적으로 Value 및 IsMissing 속성이 있습니다. IsMissing 속성은 디자인 타임에 데이터 세트에 대해 정의된 필드가 런타임에 검색되는 필드에 포함되어 있는지 여부를 나타냅니다. 예를 들어 쿼리에서 입력 매개 변수에 따라 결과 집합이 달라지는 저장 프로시저를 호출하거나 쿼리가 테이블 정의가 변경된 `SELECT * FROM` *\<table>* 일 수 있습니다.  
   
 > [!NOTE]  
 >  IsMissing은 모든 유형의 데이터 원본에 대해 디자인 타임과 런타임 간의 데이터 세트 스키마 변경을 검색합니다. IsMissing은 다차원 큐브의 빈 멤버를 검색에 사용할 수 없습니다 및의 MDX 쿼리 언어 개념과 관련이 없는 `EMPTY` 고 `NON EMPTY`입니다.  

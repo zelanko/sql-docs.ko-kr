@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100938"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953959"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 웹 브라우저를 사용하여 보고서를 보고 보고서 관리자를 실행합니다. 모든 브라우저에서 모든 보고서 기능을 지원하는 것은 아닙니다. 이 항목에서는 보고서 관리자 관리 기능, 보고서 보기 및 Visual Studio의 보고서 뷰어 컨트롤에 대한 지원 및 요구 사항에 대해 설명합니다. 또한 이 항목에는 지원되는 브라우저, 인증 요구 사항 및 스크립트 요구 사항에 대한 기능 가용성이 요약되어 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "54100938"
   
 - SharePoint 2010 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [브라우저 지원 계획 (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx)합니다.  
   
-|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 및 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|  
 |**Internet Explorer 10 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|  
@@ -73,7 +73,7 @@ ms.locfileid: "54100938"
   
 -   SharePoint 2013 브라우저 지원에 대 한 자세한 내용은 참조 하세요. [SharePoint 2013의 브라우저 지원 계획](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx)합니다.  
   
-|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 및 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|  
 |**Internet Explorer 10 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|  
@@ -100,7 +100,7 @@ ms.locfileid: "54100938"
 
  다음은 보고서 뷰어에서 지원되는 기능 및 브라우저에 대한 현재 목록입니다. 보고서 뷰어는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자 및 SharePoint 라이브러리에서 보고서를 볼 수 있도록 지원합니다.  
   
-|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 및 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**iPad 용 iOS 6-7**|  
+|**브라우저**|**Windows 8 및 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iPad 용 iOS 6-7**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|  
 |**Internet Explorer 10 (데스크톱용)**|32비트, 64비트|32비트, 64비트|32비트, 64비트|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|  
@@ -169,7 +169,7 @@ ms.locfileid: "54100938"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**참고**|  
+|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**참고**|  
 |**Internet Explorer 11 (데스크톱용**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
 |**Internet Explorer 10 (데스크톱용)**|사용자 계정 컨트롤|예|사용자 계정 컨트롤|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
 |**Internet Explorer 9**|지원되지 않음|사용자 계정 컨트롤|지원되지 않음|사용자 계정 컨트롤|예|사용자 계정 컨트롤|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  

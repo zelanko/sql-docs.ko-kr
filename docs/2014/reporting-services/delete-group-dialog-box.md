@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Group dialog box
 ms.assetid: bc1c0f27-41cb-49ad-8bef-634a4c23586f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8f319a2bbca4a274800d72b9ef027f4852fb4a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030114"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949606"
 ---
 # <a name="delete-group-dialog-box"></a>그룹 삭제 대화 상자
   **그룹 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 그룹을 삭제할 수 있습니다. 그룹에 연결된 행 또는 열이 있는 경우 해당 구조도 함께 삭제할 수 있습니다.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011255"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962549"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>보고서 서버 실행 로그 및 ExecutionLog3 뷰
   보고서 서버 실행 로그에는 단일 서버 또는 기본 모드를 사용하는 스케일 아웃 배포 또는 SharePoint 팜을 사용한 다중 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 세트 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 세트 또는 처리)에 대한 사항을 제안할 수 있습니다.  
@@ -124,7 +124,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
 |TimeProcessing|보고서를 처리하는 데 걸린 시간(밀리초)|  
 |TimeRendering|보고서를 렌더링하는 데 걸린 시간(밀리초)|  
-|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **캐시**: 쿼리 라이브로 실행 되지 않은 데이터 집합에 예를 들어, 캐시 된 실행을 나타냅니다.<br /><br /> **스냅숏**<br /><br /> **기록**<br /><br /> **AdHoc** : 동적으로 생성된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용하는 클라이언트에서 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 이미 설정된 세션 안의 후속 보고서를 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**:  Report Definition Customization Extension을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> **라이브**<br /><br /> **캐시**: 쿼리 라이브로 실행 되지 않은 데이터 집합에 예를 들어, 캐시 된 실행을 나타냅니다.<br /><br /> **스냅숏**<br /><br /> **기록**<br /><br /> **AdHoc** : 동적으로 생성 된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링에 대 한 보고서 서버를 활용 하는 클라이언트에 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> **세션**: 요청이 이미 설정 된 세션 안의 후속을 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> **Rdce**:  Report Definition Customization Extension을 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
@@ -317,7 +317,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|요청 형식(사용자 또는 시스템)|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
-|ReportAction|가능한 값: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring입니다.|  
+|ReportAction|가능한 값: Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
 |TimeEnd||  
 |TimeDataRetrieval|데이터 검색, 보고서 처리 및 보고서 렌더링에 걸린 시간(밀리초 단위)|  
@@ -353,7 +353,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|데이터 검색, 보고서 처리 및 보고서 렌더링에 걸린 시간(밀리초 단위)|  
 |TimeProcessing||  
 |TimeRendering||  
-|원본|보고서 실행의 원본입니다. 가능한 값: 1=라이브, 2=캐시, 3=스냅숏, 4=기록, 5=임시, 6=세션, 7=RDCE입니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
 |상태|가능한 값: rsSuccess, rsProcessingAborted 또는 오류 코드입니다. 여러 오류가 발생한 경우 첫 번째 오류만 기록됩니다.|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  

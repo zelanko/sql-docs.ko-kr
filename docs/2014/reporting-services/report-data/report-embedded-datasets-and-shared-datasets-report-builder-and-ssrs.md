@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c1e16950a2092feb69159cdcad18c4b7d6f69fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea3e991cc936aed41350347f095f8e69d5025450
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936132"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 세트 및 공유 데이터 세트(보고서 작성기 및 SSRS)
   데이터 세트는 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 세트는 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 세트는 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  

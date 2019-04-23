@@ -21,15 +21,15 @@ f1_keywords:
 - "10066"
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4465621f2c46322a3c6ce3a5e0c97c04e3cffea9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294841"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936599"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>선, 색 및 이미지 서식 지정(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용하면 선, 색, 데이터 영역, 이미지 및 다른 보고서 항목의 서식을 지정할 수 있습니다.  

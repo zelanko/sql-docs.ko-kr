@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b85adfaffc3914eaeb18dc9385668edb4f34ec7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289621"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948529"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
   보고서의 항목에 서식을 지정하여 보고서를 더 보기 좋게 만들고 가독성을 높일 수 있습니다. 보고서 디자인 모드에서 데이터, 식, 이미지, 입력란 내에 있는 개별 항목 및 입력란의 서식을 지정할 수 있습니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 771c43f8100dd5e9dc45172f6173e8fa32d2d74e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: bf1d75ce7f0bb99b84b59eba27934f8bd848ab55
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657777"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953729"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>보고서 파트(보고서 작성기 및 SSRS)
   테이블, 행렬, 차트 및 이미지와 같은 보고서 항목은 *보고서 파트*로 게시할 수 있습니다. 보고서 파트는 보고서 서버에 별도로 게시된 보고서 항목으로, 다른 보고서에서 다시 사용할 수 있습니다. 보고서 파트는 .rsc 파일 확장명을 사용합니다.  

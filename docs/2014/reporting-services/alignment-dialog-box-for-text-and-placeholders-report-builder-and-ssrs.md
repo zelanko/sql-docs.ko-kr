@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.alignment.f1
 - sql12.rtp.rptdesigner.textproperties.alignment.f1
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c450670f38ba1fd9b7e9b17ce697c56f37e552b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953719"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자의 맞춤 대화 상자(보고서 작성기 및 SSRS)
   **맞춤** 탭을 선택하여 선택한 셀 또는 데이터 영역 내의 값 위치를 지정할 수 있습니다. 입력란 내 개별 텍스트의 가로 맞춤만 지정할 수 있습니다. 입력란에 안쪽 여백 값 또는 텍스트 세로 맞춤을 설정하려면 해당되는 입력란 속성을 사용해야 합니다. 자세한 내용은 [텍스트 상자 속성 대화 상자, 맞춤 &#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md)합니다.  

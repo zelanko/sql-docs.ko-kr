@@ -11,15 +11,15 @@ helpviewer_keywords:
 - application domains [Reporting Services]
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef807249672d02ca06d1ac1e41392eef6ebbd912
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dd13835d00fc86b8acd98bdab33ff2612834c360
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012674"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933580"
 ---
 # <a name="application-domains-for-report-server-applications"></a>보고서 서버 애플리케이션의 애플리케이션 도메인
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램을 포함하는 단일 서비스로 구현됩니다. 각 애플리케이션은 단일 보고 서버 프로세스 내 자체 애플리케이션 도메인에서 실행됩니다. 대부분의 경우 애플리케이션 도메인은 내부적으로 생성, 구성 및 관리됩니다. 그러나 보고서 서버 애플리케이션 도메인에 대해 재활용 작업이 발생하는 방식을 이해하면 성능 또는 메모리 문제를 조사하거나 서비스 장애 문제를 해결하는 경우 도움이 될 수 있습니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "56012674"
   
  재활용 작업을 발생시키는 상황에 따라 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션의 애플리케이션 도메인은 함께 또는 개별적으로 재활용될 수 있습니다.  
   
--   시작 된 재활용 작업 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에 영향을 줄 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램: 보고서 서버 웹 서비스 및 보고서 관리자에만 영향을 줍니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 모니터링하는 파일에 변경 내용이 있는지 여부에 따라 응용 프로그램 도메인을 재활용합니다. 일반적으로 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 애플리케이션에 대한 재활용 작업과 무관합니다.  
+-   시작 된 재활용 작업 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에 영향을 줄 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램: 보고서 서버 웹 서비스 및 보고서 관리자입니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 은 모니터링하는 파일에 변경 내용이 있는지 여부에 따라 응용 프로그램 도메인을 재활용합니다. 일반적으로 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에서 시작된 재활용 작업은 백그라운드 처리 애플리케이션에 대한 재활용 작업과 무관합니다.  
   
 -   일반적으로 보고서 서버에서 시작된 재활용 작업은 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션에 영향을 줍니다. 재활용 작업은 구성 설정 변경에 대한 응답으로 발생하며 서비스가 다시 시작됩니다.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_Instance class
 - MSReportServer_Instance class
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4edf20d92883c5446a4e63472e006acc3763084d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f76f8ed0de8fa11c1a0c3c4f6b9f6807892e2d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024154"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945419"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance 클래스
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  

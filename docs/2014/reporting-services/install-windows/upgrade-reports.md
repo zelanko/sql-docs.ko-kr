@@ -17,15 +17,15 @@ helpviewer_keywords:
 - report definition files [Reporting Services]
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 637b434a50aaa49c7d0f3ba87e8505368620d596
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2c8330266babdb260f80843213ddb892021eb8c8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015044"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954229"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   보고서 정의 파일(.rdl)은 다음과 같은 방법으로 자동 업그레이드됩니다.  
@@ -100,11 +100,11 @@ ms.locfileid: "56015044"
   
 -   주 보고서와 모든 하위 보고서를 업그레이드할 수 없습니다. 이러한 보고서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.  
   
--   주 보고서는 업그레이드할 수 있지만 하나 이상의 하위 보고서를 업그레이드할 수 없습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 업그레이드할 수 없는 하위 보고서가 표시될 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타납니다.  
+-   주 보고서는 업그레이드할 수 있지만 하나 이상의 하위 보고서를 업그레이드할 수 없습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 하위 보고서가 처리할 수 없습니다 "업그레이드할 수 없습니다. 하위 보고서가 나타나는 위치에 있습니다.  
   
--   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 하위 보고서가 나타나는 위치에 "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지를 표시합니다.  
+-   주 보고서를 업그레이드할 수 없지만 하나 이상의 하위 보고서는 업그레이드할 수 있습니다. 주 보고서에서 처리 되는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 되지만 렌더링된 된 보고서 메시지를 보여 줍니다. "오류: 하위 보고서가 처리할 수 없습니다 "경우 하위 보고서가 나타나는 위치에 있습니다.  
   
- "오류: 하위 보고서를 처리할 수 없습니다"라는 메시지가 나타나면 동일한 버전의 보고서 처리기를 사용하여 보고서를 처리할 수 있도록 주 보고서 또는 하위 보고서의 정의를 변경해야 합니다.  
+ 오류를 표시 하는 경우 "오류: 하위 보고서를 처리할 수 없습니다", 동일한 버전의 보고서 처리기에서 보고서를 처리할 수 있도록 주 보고서 또는 하위 보고서의 정의 변경 해야 합니다.  
   
  드릴스루 보고서는 독립적인 보고서로 처리되므로 이러한 제한이 없습니다.  
   

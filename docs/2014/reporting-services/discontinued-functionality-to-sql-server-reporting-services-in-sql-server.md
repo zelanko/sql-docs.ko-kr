@@ -1,7 +1,7 @@
 ---
 title: 지원 되지 않는 기능
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services-2014, sql-server-2014
 ms.reviewer: ''
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f36a55baee21f81305857ba766879d69c73bbdb5
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 3a5472859c582e026fc0c5aafac21abccdc93044
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552975"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949969"
 ---
-# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS)에서 지원 되지 않는 기능
+# <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)에서 지원되지 않는 기능
 
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 운영 체제 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 인터넷 정보 서비스(IIS)의 특정 버전에 대해 더 이상 지원되지 않는 기능에 대해서는 언급하지 않습니다. 시스템 필수 구성 요소에 대 한 자세한 내용은 참조 하세요. [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)합니다.  
   

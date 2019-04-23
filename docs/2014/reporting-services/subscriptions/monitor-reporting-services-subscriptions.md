@@ -14,15 +14,15 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295460"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933626"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
   사용자 인터페이스, Windows PowerShell 또는 로그 파일을 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 모니터링할 수 있습니다. 모니터링에 사용할 수 있는 옵션은 실행 중인 보고서 서버의 모드에 따라 달라집니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "56295460"
   
  다음은 구독과 관련된 추적 로그 파일 예제 오류 메시지입니다.  
   
--   라이브러리! WindowsService_7! b60! 05/20/2014-22: 34:36:: i 정보: 서버 시스템 properties.emailextension에 지정 된 대로 EnableExecutionLogging to 'True' 초기화! WindowsService_7! b60! 05/20/2014-22: 34:41:: e 오류: **전자 메일 보내기 오류**합니다.  예외:  System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요하거나 클라이언트가 인증되지 않았습니다. 서버 응답: 5.7.1 System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 응답)에서 클라이언트가 인증되지 않았습니다.  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **메일을 보내는 중 오류가 발생했습니다**. 예외:  System.Net.Mail.SmtpException: SMTP 서버에 보안 연결이 필요 하거나 클라이언트가 인증 되지 않았습니다. 서버 응답이 했습니다. 5.7.1 system.net.mail.mailcommand.checkresponse (SmtpStatusCode statusCode, 문자열 응답) 클라이언트가 인증 되지 않았습니다.  
   
  로그 파일에는 보고서를 열었는지 여부 또는 배달이 실제로 성공했는지 여부에 대한 정보가 없습니다. 성공적인 배달은 일정 예약 및 배달 프로세서에서 오류가 발생하지 않고 보고서 서버가 메일 서버에 연결되었음을 의미합니다. 사용자의 사서함에 전자 메일을 배달할 수 없다는 메시지 오류가 표시될 경우 해당 정보는 로그 파일에 포함되지 않습니다. 로그 파일에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56295460"
   
 3.  확장된 메뉴 옵션을 선택합니다(**...**).  
   
-4.   **구독 관리**를 선택합니다.  
+4.  **구독 관리**를 선택합니다.  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS 로그 파일  
  구독 관련 정보는 SharePoint ULS 로그에 기록됩니다. ULS 로그에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이벤트를 구성하는 방법에 대한 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)를 참조하세요.  다음은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독과 관련된 ULS 로그 항목의 예입니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "56295460"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|처리|영역|범주|Level|Correlation|메시지|  
-|5/21/2014 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|( 비어 있음)|**메일을 보내는 중 오류가 발생했습니다.**  예외:  System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답: 5.7.1 클라이언트가 Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification 알림)의 System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage 메시지)의 System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, 문자열 serverResponse)에서 이 보낸 사람으로 보낼 수 있는 권한이 없습니다.|  
+|5/21/2014 14:34:06:15|응용 프로그램 풀: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|보고서 서버 전자 메일 확장 프로그램|예기치 않은 오류|( 비어 있음)|**메일을 보내는 중 오류가 발생했습니다.** 예외:  System.Net.Mail.SmtpException: 사서함을 사용할 수 없습니다. 서버 응답이 했습니다. 5.7.1 클라이언트가 없는 System.Net.Mail.DataStopCommand.CheckResponse (SmtpStatusCode statusCode, 문자열 serverResponse)에서이 보낸 사람으로 보낼 수 있는 권한이 있는 System.Net.Mail.DataStopCommand.Send (SmtpConnection conn)에서 있는 (Notification 알림) at System.Net.Mail.SmtpClient.Send (MailMessage 메시지)|  
   
 ##  <a name="bkmk_use_powershell"></a> PowerShell을 사용한 구독 모니터링  
  기본 모드나 SharePoint 모드 구독의 상태를 확인하는 데 사용할 수 있는 PowerShell 스크립트 예가 필요하면 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)을 참조하세요.  

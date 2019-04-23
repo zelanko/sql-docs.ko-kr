@@ -1,5 +1,5 @@
 ---
-title: '3단원: 테이블 보고서 (Reporting Services)에 대 한 데이터 집합 정의 | Microsoft Docs'
+title: '3단원: 테이블 보고서에 대한 데이터 세트 정의(Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294341"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932489"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: 테이블 보고서에 대한 데이터 집합 정의(Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>3단원: (Reporting Services) 테이블 보고서에 대 한 데이터 집합 정의
   데이터 원본을 정의한 후에는 데이터 세트를 정의해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 보고서에 사용하는 데이터는 *데이터 집합*에 포함됩니다. 데이터 세트에는 데이터 원본에 대한 포인터와 보고서에서 사용하는 쿼리는 물론 계산된 필드 및 변수도 포함됩니다.  
   
  보고서 디자이너에서 쿼리 디자이너를 사용하여 쿼리를 디자인할 수 있습니다. 이 자습서에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]**2008** 데이터베이스에서 판매 주문 정보를 검색하는 쿼리를 만듭니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "56294341"
      **AdventureWorksDataset** 데이터 집합 및 필드가 보고서 데이터 창에 나타납니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- 보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. 참조 [4 단원: 보고서에 테이블 추가 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)합니다.  
+ 보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. [4단원: 보고서에 테이블 추가&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리, 보고서 디자이너 SQL Server Data Tools의 디자인 도구 &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

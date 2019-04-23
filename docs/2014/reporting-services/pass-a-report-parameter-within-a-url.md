@@ -11,15 +11,15 @@ helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f08d3842f5c77a46611fce8de7c2a2780ed87379
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f05aaedf8e3b8bb15d5d15d47823752832e659a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040755"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944139"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.finish.f1
 ms.assetid: d430bc08-61b4-439f-956e-2e825ca7113b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44deb9eae8d5ddc253de0b8927e6579422a3f42e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1f226cc3db3d9f10292624c363d3f0cc04b13010
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290271"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947539"
 ---
 # <a name="complete-the-report-wizard"></a>보고서 마법사 완료
   보고서 마법사 완료 페이지를 사용하여 보고서에 이름을 지정하거나 보고서에 적용할 옵션을 검토할 수 있습니다.  

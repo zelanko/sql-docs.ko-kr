@@ -12,15 +12,15 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb1f04a10837088a9c427d6c0994af4334e8988f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f81ac60dbd6ea315bab70d2f65e4953b456f3034
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035104"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968289"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
   Reporting Services 애플리케이션의 URL은 HTTP.SYS에서 URL 예약으로 정의됩니다. URL 예약은 웹 애플리케이션에 대한 URL 엔드포인트 구문을 정의합니다. 보고서 서버에서 애플리케이션을 구성하는 경우 보고서 서버 웹 서비스와 보고서 관리자 모두에 대해 URL 예약이 정의됩니다. 설치 프로그램 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 URL을 구성하면 URL 예약이 자동으로 생성됩니다.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.welcome.f1
 ms.assetid: d78d0bfb-143e-4442-99c3-8e7cfef06c25
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77e71ff528d787de0d3b235d39e1fabbc02924f2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 340f662cc71dc6a1c7a7e1ab0e94abefd9f1a22d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288091"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957639"
 ---
 # <a name="welcome-to-the-report-wizard"></a>보고서 마법사 시작
   보고서 마법사의 보고서 마법사 시작 페이지를 사용하여 수행할 태스크의 요약을 볼 수 있습니다.  

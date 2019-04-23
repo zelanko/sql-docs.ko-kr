@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9469f3b28c6821f5829e84d96dab2617f85670c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040874"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946859"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
   개발자와 보고서 서버 관리자는 **rs** 유틸리티(RS.exe)를 사용하여 보고서 서버 작업을 수행할 수 있습니다. 이 유틸리티를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]으로 작성한 스크립트를 사용하여 보고서 서버를 프로그래밍 방식으로 관리할 수 있습니다.  

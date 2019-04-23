@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a610ef918bc0a4ef76a6be2fa0b9ae132621ddb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f16faf950954c0c642971c81061f347a03716267
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292181"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964949"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>지도 뷰포트 속성 대화 상자, 일반
   **지도 뷰포트 속성** 대화 상자에서 **일반** 을 선택하여 좌표계, 도법 및 경계 옵션을 변경할 수 있습니다.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040644"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950739"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버 구독 만들기 및 관리
   SharePoint 모드 보고서 서버와 통합된 SharePoint 웹 애플리케이션에서 보고서를 배달하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들 수 있습니다. 구독은 보고서를 문서 라이브러리, 파일 폴더 또는 전자 메일로 배달할 수 있습니다. 이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 만들기 위한 요구 사항 및 단계를 요약합니다.  
@@ -31,11 +31,11 @@ ms.locfileid: "56040644"
   
  구독을 만들 때 3가지 방법으로 구독 배달 방식을 지정할 수 있습니다.  
   
--   **문서 라이브러리**: 원래 보고서 기반의 문서를 원래 보고서와 같은 SharePoint 사이트 내의 라이브러리로 배달하는 구독을 만들 수 있습니다. 다른 서버 또는 동일한 사이트 모음 내 다른 사이트의 라이브러리로는 문서를 배달할 수 없습니다. 문서를 배달하려면 보고서가 배달되는 라이브러리에 대한 항목 추가 권한이 있어야 합니다.  
+-   **문서 라이브러리**: 원래 보고서와 같은 SharePoint 사이트 내의 라이브러리로 원래 보고서 기반의 문서를 배달 하는 구독을 만들 수 있습니다. 다른 서버 또는 동일한 사이트 모음 내 다른 사이트의 라이브러리로는 문서를 배달할 수 없습니다. 문서를 배달하려면 보고서가 배달되는 라이브러리에 대한 항목 추가 권한이 있어야 합니다.  
   
--   **파일 폴더:** 원래 보고서 기반의 문서를 파일 시스템의 공유 폴더로 배달할 수 있습니다. 이때 네트워크 연결을 통해 액세스할 수 있는 기존 폴더를 선택해야 합니다.  
+-   **파일 폴더:** 파일 시스템에 공유 폴더에 원래 보고서 기반의 문서를 제공할 수 있습니다. 이때 네트워크 연결을 통해 액세스할 수 있는 기존 폴더를 선택해야 합니다.  
   
--   **전자 메일:** 보고서 서버 전자 메일 배달 확장 프로그램을 사용하도록 보고서 서버가 구성되어 있는 경우 보고서 또는 내보낸 보고서 파일(출력 형식으로 저장됨)을 받은 편지함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
+-   **전자 메일:** 보고서 서버는 보고서 서버 전자 메일 배달 확장 프로그램을 사용 하도록 구성 된, 경우에 보고서 또는 내보낸된 보고서 파일 (출력 형식으로 저장 됨) 편지 함으로 보내는 구독을 만들 수 있습니다. 보고서 또는 보고서 URL 없이 알림만 받으려면 **보고서에 대한 링크 포함** 및 **메시지 내에 보고서 표시** 확인란의 선택을 취소합니다.  
   
  **항목 내용**  
   

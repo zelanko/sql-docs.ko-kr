@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292590"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940409"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
   공유 데이터 집합 창에서 다른 사용자와 공유할 수 있는 데이터 집합 쿼리를 만들 수 있습니다. 이 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너에서 쿼리를 만들 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "56292590"
  보고서에서 데이터 작업에 대 한 자세한 내용은 참조 하세요. [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](../report-data/report-datasets-ssrs.md)합니다.  
   
 ##  <a name="Ribbon"></a> 리본  
- 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령은 연결, 데이터 집합, 쿼리 디자이너 같은 논리 그룹에 구성됩니다.  
+ 리본은 태스크를 완료하는 데 필요한 명령을 빠르게 찾을 수 있도록 도와줍니다. 명령에는 다음과 같은 논리 그룹으로 구성 되어 있습니다. 연결, 데이터 집합 및 쿼리 디자이너  
   
 ### <a name="connection"></a>연결  
  연결 그룹의 **선택** 단추를 사용하여 보고서에서 공유 데이터 원본을 선택하거나 보고서 서버에서 공유 데이터 원본을 찾습니다.  

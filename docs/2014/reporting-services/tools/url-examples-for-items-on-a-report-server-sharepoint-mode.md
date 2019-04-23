@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026534"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957159"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예(SSRS)
   SharePoint 라이브러리에 보고서 및 관련 항목을 게시하려면 보고서 디자이너와 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제작 도구를 사용하여 내용을 게시하거나 SharePoint 사이트 동작을 사용하여 내용을 업로드합니다.  

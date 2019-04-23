@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Report Builder 1.0, configuring access
 - configuring servers [Reporting Services]
 ms.assetid: a79003d0-c905-4d4c-9560-93a7cc1e1dd4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 421c499b5135bc6022eafbc8d7fa6bf4456ca19a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ce13c158cbc6d359a319a816aee9a01decabdc0b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020205"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938349"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
   보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "56020205"
   
     4.  보고서 관리자 사용자가 역할의 용도를 파악할 수 있도록 설명에 역할에 대한 설명을 입력합니다.  
   
-    5.  이 역할에 **보고서 사용**, **보고**를 **모델 보기**를 **리소스 보기**를 **폴더 보기**, 및  **개별 구독 관리**s입니다.  
+    5.  다음 작업을 추가 합니다. **보고서 사용**, **보고**를 **모델 보기**를 **리소스 보기**를 **폴더 보기**, 및  **개별 구독 관리**s입니다.  
   
     6.  **확인** 을 클릭하여 역할을 저장합니다.  
   

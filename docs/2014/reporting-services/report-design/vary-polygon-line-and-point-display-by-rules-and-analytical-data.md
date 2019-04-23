@@ -18,15 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294541"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969298"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경(보고서 작성기 및 SSRS)
   지도 계층의 다각형, 선 및 점에 대한 표시 옵션은 계층에 대한 옵션을 설정하거나, 계층의 지도 요소에 대한 규칙을 설정하거나, 계층의 특정 포함된 지도 요소에 대한 옵션을 무시하여 제어됩니다.  
@@ -101,7 +101,7 @@ ms.locfileid: "56294541"
 ##  <a name="Distribution"></a> 분포 옵션 이해  
  값의 분포를 만들려면 데이터를 범위로 나눌 수 있습니다. 분포 유형, 하위 범위 수 및 최소 및 최대 범위 값을 지정합니다.  
   
- 다음 목록에서는 세 가지 지도 요소와 범위가 1 ~ 9999이고 값이 1, 10, 200, 2000, 4777, 8999인 1, 10, 200, 2000, 4777, 8999.  
+ 다음은 세 가지 지도 요소를 보유 하 고 여섯 가지 관련 분석 값 범위는 1에서 9999 다음 값으로 가정 합니다. 1, 10, 200, 2000, 4777, 8999.  
   
 -   **동일 간격.** 데이터를 동일한 범위 간격으로 나누는 범위를 만듭니다. 예를 들어 세 범위는 0-2999, 3000-5999, 6000-8999입니다. 하위 범위 1: 1, 10, 200, 500. 하위 범위 2: 4777. 하위 범위 3: 8999. 이 방법은 데이터가 분포되는 방법을 고려하지 않습니다. 매우 큰 값이나 매우 작은 값은 분포 결과를 왜곡시킬 수 있습니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56294541"
   
 -   **최적** . 균형 있는 하위 범위를 만들기 위해 분포를 자동으로 조정하는 범위를 만듭니다. 하위 범위의 수는 알고리즘에 따라 결정됩니다.  
   
--   **사용자 지정.** 값의 분포를 제어하기 위해 범위 수를 지정합니다. 예제 데이터의 경우 세 범위 1-2, 3-8, 9.  
+-   **사용자 지정.** 값의 분포를 제어하기 위해 범위 수를 지정합니다. 예제 데이터의 경우 세 범위를 지정할 수 있습니다. 1-2, 3-8, 9.  
   
  분포 값은 지도 요소 표시 값을 변경하기 위해 규칙에서 사용됩니다.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ListSSLCertificates method
 ms.assetid: 88cd0936-b202-4ab8-90f2-d9c3f66d37f4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 138d1925b6bfe845623e56d70e6678e520a142c0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adda71c5ee0a88eabd619280457421bbf5ec0a75
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016054"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961579"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 컴퓨터의 인증서 목록을 반환합니다.  

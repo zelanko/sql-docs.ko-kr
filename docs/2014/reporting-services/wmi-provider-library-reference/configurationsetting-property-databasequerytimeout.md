@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf21ba6211a016676ea7d1f2547bf4d96b1e6fb4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25023ed146d00b8635b9ce822cbb2cdf23be65ec
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968389"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseQueryTimeout 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버에서 명령이 실패하거나 수행 시간이 너무 오래 걸린다고 간주하기 전에 경과해야 하는 시간(초)를 지정합니다. 보고서 서버는 보고서의 데이터 원본이 아닌 SQL 카탈로그에 대해 쿼리 시간을 계산합니다. 읽기/쓰기입니다.  

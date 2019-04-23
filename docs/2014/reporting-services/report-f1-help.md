@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285001"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936239"
 ---
 # <a name="report-f1-help"></a>보고서 F1 도움말
   이 절의 항목에서는 **보고서 속성** 대화 상자에서 보고서에 설정할 수 있는 옵션에 대해 설명합니다. **보고서 속성** 대화 상자를 열려면 보고서 디자이너의 배경을 마우스 오른쪽 단추로 클릭한 다음 **보고서 속성**을 클릭합니다.  

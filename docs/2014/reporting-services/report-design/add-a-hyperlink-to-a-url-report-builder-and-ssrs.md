@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a40980ddd8ee29d05fe4278baf512790751ee7d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293791"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958539"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
   사용자가 보고서의 링크를 클릭하여 지정 URL에 대한 브라우저를 열 수 있게 하기 위해 보고서 항목에 하이퍼링크를 추가할 수 있습니다. 하이퍼링크는 정적 URL 및 URL을 반환하는 식이 될 수 있습니다. URL을 포함하는 데이터베이스에 필드가 있는 경우 식에 해당 필드가 포함될 수 있으므로 보고서에 하이퍼링크의 동적 목록이 생깁니다. 입력란, 이미지, 차트 및 계기에 하이퍼링크를 추가할 수 있습니다. 이때 사용자가 제공 URL에 액세스할 수 있는 권한이 있는지 확인해야 합니다.  

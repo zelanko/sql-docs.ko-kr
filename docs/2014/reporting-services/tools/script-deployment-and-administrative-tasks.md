@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013704"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940449"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>배포 및 관리 태스크 스크립팅
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 스크립트를 사용하여 일반적인 설치, 배포 및 관리 태스크를 자동화할 수 있습니다. 보고서 서버를 배포하려면 여러 단계를 수행해야 합니다. 여러 가지 도구와 프로세스를 사용하여 배포를 구성해야 하며 모든 태스크를 자동화하는 데 사용할 수 있는 단일 프로그램이나 방법은 없습니다.  

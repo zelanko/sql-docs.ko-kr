@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10026"
 ms.assetid: 07ccca3f-86ed-4f7e-99bd-0a5e1c64a733
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e31320957e2d458a4a4693319951c42144b2b4df
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285661"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954039"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>쿼리 매개 변수 정의 대화 상자(보고서 작성기)
   디자인 타임에 샘플 데이터를 보기 위해 쿼리 디자이너에서 쿼리를 실행할 때 **쿼리 매개 변수 정의** 대화 상자를 사용하여 매개 변수 값을 지정할 수 있습니다. 쿼리 매개 변수는 데이터 원본의 데이터를 필터링하고 보고서에서 처리하는 데이터 양을 제한하는 데 도움이 됩니다. 이러한 값은 보고서 정의에 저장되지 않습니다.  

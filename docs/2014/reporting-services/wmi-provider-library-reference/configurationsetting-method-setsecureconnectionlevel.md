@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SetSecureConnectionLevel method
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b22e8d9e67e0c897aaab859dde097707d3272ec3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d78cd09c03f6507bdb87cda4c47e8132f2e1f9b6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029065"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947679"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 보안 연결 수준을 설정합니다.  

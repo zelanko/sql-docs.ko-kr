@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c71070aa63716efd9773b00d304346935c635000
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028314"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960819"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 뷰어 웹 파트
   보고서 뷰어 웹 파트는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능에 의해 설치되는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 SharePoint 통합 모드로 실행되도록 구성된 보고서 서버에서 보고서를 보고 탐색하며 인쇄하고 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 처리하는 보고서 정의 파일(.rdl)과 연결됩니다. 다른 소프트웨어 제품에서 만든 다른 보고서 문서와 함께 이 웹 파트를 사용할 수 없습니다.  

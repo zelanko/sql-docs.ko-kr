@@ -1,5 +1,5 @@
 ---
-title: '자습서: 세로 막대형 차트 (보고서 작성기) 보고서에 추가 | Microsoft Docs'
+title: '자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287091"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936859"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 세로 막대형 차트 (보고서 작성기) 보고서에 추가
   세로 막대형 차트에서 계열은 범주별로 그룹화된 일련의 세로 막대로 표시됩니다. 다음과 같은 경우에 세로 막대형 차트가 유용할 수 있습니다.  
   
 -   일정 시간 동안의 데이터 변화 표시  
@@ -53,9 +53,9 @@ ms.locfileid: "56287091"
 9. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 원본을 선택 하 고 데이터 집합을 만들려면이 시리즈의 첫 번째 자습서를 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- 이 자습서에 소요되는 예상 시간: 15 분입니다.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 15분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  

@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289551"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954989"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "56289551"
   
  그룹 식은 공간 데이터와 관계가 있는 분석 데이터가 계층의 각 지도 요소에 대해 집계되는 방법을 지정합니다. 기본적으로 그룹 식은 공간 데이터와 분석 데이터 간의 관계에 대해 지정된 일치 필드의 집합입니다. 예를 들어 국가 또는 지역의 도시 위치와 인구 크기를 표시하는 거품형 지도의 경우 이름이 같은 도시가 여러 개일 수 있기 때문에 일치 필드에는 도시 이름 [City]와 지역 이름 [Region]이 포함됩니다. 해당 그룹 식에는 두 필드 [City] 및 [Region]이 포함됩니다.  
   
- 자세한 내용은 참조 하세요. [지도 팁: SQL Server 및 공간 데이터를 집계 셰이프 파일을 가져오는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)합니다.  
+ 자세한 내용은 [맵 팁: 셰이프 파일을 SQL Server로 가져오고 공간 데이터를 집계하는 방법](https://go.microsoft.com/fwlink/?LinkID=214991)을 참조하세요.  
   
  
   

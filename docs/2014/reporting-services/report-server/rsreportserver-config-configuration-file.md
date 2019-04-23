@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015604"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958439"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** 파일은 보고서 관리자, 보고서 서버 웹 서비스 및 백그라운드 처리에 사용되는 설정을 저장합니다. 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션은 RSReportServer.config 파일에 저장된 구성 설정을 읽는 단일 프로세스 내에서 실행됩니다. 기본 모드 및 SharePoint 모드 보고서 서버에는 모두 RSReportServer.config가 사용되지만 두 모드가 구성 파일에서 모두 동일한 설정을 사용하지는 않습니다. 이 파일의 SharePoint 모드 버전은 SharePoint 모드의 설정 대부분이 파일이 아니라 SharePoint 구성 데이터베이스에 저장되기 때문에 더 작습니다. 이 항목에서는 기본 모드 및 SharePoint 모드에서 설치되는 기본 구성 파일과 구성 파일을 통해 제어되는 일부 중요한 설정 및 동작에 대해 설명합니다.  
@@ -176,7 +176,7 @@ ms.locfileid: "56015604"
 |`RSWindowsKerberos`|서버가 Kerberos 보안 토큰을 수락합니다.<br /><br /> 제한된 위임 인증 체계에서 Kerberos 인증을 사용할 경우에는 이 설정이나 RSWindowsNegotiate를 사용합니다.|N|  
 |`RSWindowsBasic`|서버가 기본 자격 증명을 수락하고, 자격 증명 없이 연결할 경우 시도/응답을 실행합니다.<br /><br /> 기본 인증을 사용하면 HTTP 요청 시 자격 증명이 일반 텍스트로 전달됩니다. 기본 인증을 사용할 경우 SSL을 사용하여 보고서 서버와의 네트워크 트래픽을 암호화해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 인증에 대한 구성 구문 예를 보려면 [보고서 서버 인증](../security/authentication-with-the-report-server.md)을 참조하세요.|N|  
 |`Custom`|보고서 서버 컴퓨터에 사용자 지정 보안 확장 프로그램을 배포한 경우 이 값을 지정합니다. 자세한 내용은 [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)을 참조하세요.|N|  
-|**LogonMethod**|이 값에 대 한 로그온 유형을 `RSWindowsBasic`합니다. 지정 하는 경우 `RSWindowsBasic`,이 값이 필요 합니다. 유효한 값은 2 또는 3입니다. 각 값에 대한 설명은 다음과 같습니다.<br /><br /> `2` = 일반 텍스트 암호를 인증하기 위한 네트워크 로그온 고성능 서버입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다.<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|N|  
+|**LogonMethod**|이 값에 대 한 로그온 유형을 `RSWindowsBasic`합니다. 지정 하는 경우 `RSWindowsBasic`,이 값이 필요 합니다. 유효한 값은 2 또는 3입니다. 각 값에 대한 설명은 다음과 같습니다.<br /><br /> `2` = 일반 텍스트 암호를 인증하기 위한 네트워크 로그온 고성능 서버입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다.<br /><br /> 참고: 값 0 (대화형 로그온) 및 1 (일괄 처리 로그온)에서 지원 되지 않습니다 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]합니다.|N|  
 |**Realm**|이 값에 사용 됩니다 `RSWindowsBasic`합니다. Realm은 조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|N|  
 |**DefaultDomain**|이 값에 사용 됩니다 `RSWindowsBasic`합니다. DefaultDomain은 사용자를 인증할 때 서버가 사용하는 도메인을 결정하는 데 사용됩니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|N|  
 |**RSWindowsExtendedProtectionLevel**|기본값은 **해제**입니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)를 참조하세요.|N|  

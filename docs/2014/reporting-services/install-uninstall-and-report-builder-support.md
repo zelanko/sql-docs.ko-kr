@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0272c7598e34d7ba920484b3d2b9c504587212cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241721"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958169"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>설치, 제거 및 보고서 작성기 지원
   보고서 작성기는 보고서, 보고서 파트 및 공유 데이터 세트를 만들고 업데이트하고 공유하는 데 사용하는 보고서 작성 도구입니다. 보고서 작성기는 독립 실행형 버전 및 [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]버전으로 사용할 수 있습니다. 독립 실행형 버전은 사용자나 관리자가 컴퓨터에 설치합니다. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] 버전은 자동으로 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 와 함께 설치되고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트나 보고서 관리자에서 컴퓨터로 다운로드됩니다.  

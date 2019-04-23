@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e568d04a58ad13479f0e3a58254f8e409c46164d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8969e3202a9c58b46fac2116912e3d90474d7072
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010824"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932540"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>보고서 서버에서 사용자 지정 또는 폼 인증 구성
   Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 추가할 수 있는 확장 가능한 아키텍처를 제공합니다. 배포 요구 사항에 Windows 통합 보안이나 기본 인증이 포함되지 않은 경우 사용자 지정 인증 확장 프로그램을 구현할 수 있습니다. 사용자 지정 인증을 사용하는 가장 일반적인 시나리오는 웹 애플리케이션에 대한 인터넷 또는 엑스트라넷 액세스를 지원하려는 경우입니다. 기본 Windows 인증 확장 프로그램을 사용자 지정 인증 확장 프로그램으로 바꾸면 외부 사용자에게 보고서 서버에 대한 액세스 권한을 부여하는 방법을 보다 자세히 제어할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "56010824"
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
-2.  <`Authentication`>을(를) 찾습니다.  
+2.  찾을 <`Authentication`>.  
   
 3.  다음 XML 구조를 복사합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56010824"
     </Authentication>  
     ```  
   
-4.  <`Authentication`>의 기존 항목을 선택하고 붙여넣어 덮어씁니다.  
+4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
   
      `Custom`은 다른 인증 유형과 함께 사용할 수 없습니다.  
   

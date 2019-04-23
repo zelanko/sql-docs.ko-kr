@@ -1,6 +1,6 @@
 ---
 title: 주요 개념 (Analysis Services) mdx에서 | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527819"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962169"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527819"
   
  ![호출 하는 모든 멤버를 사용 하 여 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "호출 하는 모든 멤버를 사용 하 여 피벗 테이블")  
   
- 계층을 확장하면 결국 최저 수준으로 이동합니다. 이를 **리프 구성원**이라고 합니다. 리프 구성원은 계층에서 하위 항목이 없는 구성원입니다. 이 예에서는 Australia가 리프 구성원입니다.  
+ 계층을 확장하면 결국 최저 수준으로 이동합니다. 이를 **리프 구성원**이라고 합니다. 리프 구성원은 계층에서 하위 항목이 없는 구성원입니다. 이 예제에서는 남서쪽 경우 리프 멤버  
   
  ![리프 멤버 호출 되는 테이블을 사용 하 여 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "리프 멤버 호출 되는 테이블을 사용 하 여 피벗 테이블")  
   
- 그 위의 것은 **상위 구성원**이라고 합니다. Pacific은 Australia의 상위입니다.  
+ 그 위의 것은 **상위 구성원**이라고 합니다. 미국 남서부의 부모인 합니다.  
   
  **특성 계층의 구성 요소**  
   

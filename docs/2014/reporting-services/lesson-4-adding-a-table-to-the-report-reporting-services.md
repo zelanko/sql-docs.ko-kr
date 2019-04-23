@@ -1,5 +1,5 @@
 ---
-title: '4단원: The Report (Reporting Services)에 테이블 추가 | Microsoft Docs'
+title: '4단원: 보고서에 테이블 추가(Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e47ec23a06971bd6ab1d6b4e13c07c5fc5092df
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290251"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933799"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: 보고서에 테이블 추가(Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>4단원: (Reporting Services) 보고서에 테이블 추가
   데이터 세트가 정의되면 보고서 디자인을 시작할 수 있습니다. 데이터 영역, 입력란, 이미지 및 보고서에 포함하려는 항목을 디자인 화면에 끌어다 놓는 방법으로 보고서 레이아웃을 만듭니다.  
   
  기본 데이터 세트의 반복되는 데이터 행이 포함된 항목을 *데이터 영역*이라고 합니다. 기본 보고서에는 데이터 영역이 하나만 있지만 테이블 형식 보고서에 차트를 추가할 때처럼 필요한 경우에는 데이터 영역을 추가할 수 있습니다. 데이터 영역을 추가한 뒤에는 데이터 영역에 필드를 추가할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "56290251"
     > [!NOTE]  
     >  열 머리글은 Line Total입니다. 보고서 디자이너가 자동으로 LineTotal을 두 단어로 분리하여 열의 이름을 만듭니다.  
   
-     다음 다이어그램은 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.  
+     다음 다이어그램은 이러한 필드를 사용 하 여 채워진 테이블 데이터 영역을 보여 줍니다. 날짜, 주문, 제품, Qty 및 라인 합계입니다.  
   
      ![디자인, 테이블 머리글 행 및 정보 행](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "디자인, 테이블의 머리글 행 및 정보 행")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56290251"
 >  **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. 참조 [5 단원: 보고서 서식 지정 &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)합니다.  
+ 보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블&#40;보고서 작성기 및 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   

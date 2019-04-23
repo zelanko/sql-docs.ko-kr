@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47a2cc499c9361b8d68be107cd874bebdfe74861
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac879ad519b08ae272c8ac30dd37021123570cca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038114"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950849"
 ---
 # <a name="role-definitions"></a>역할 정의
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *역할**정의*는 보고서 서버에서 사용할 수 있는 작업을 정의하는 명명된 태스크 모음입니다. 역할 정의는 보고서 서버가 보안을 강화하기 위해 사용하는 규칙을 제공합니다. 사용자가 보고서 게시와 같은 태스크를 수행하려고 하면 보고서 서버가 사용자의 역할 할당을 검사하여 이 태스크가 해당 역할 정의에 포함되어 있는지 여부를 확인합니다. 해당 태스크가 역할 정의에 포함되어 있으면 요청이 제출됩니다.  

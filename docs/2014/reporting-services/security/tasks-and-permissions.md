@@ -16,15 +16,15 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 097e61db74fbe2d1ba46ac35c6245745309d00af
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5ec2030e94abbc568e2ea030c781e904a4ce459d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010884"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956059"
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 *태스크* 는 사용자 또는 관리자가 수행할 수 있는 동작을 말하며 태스크는 미리 정의됩니다. 태스크는 사용자 지정할 수 없으며 프로그래밍 방식이나 도구를 통해 제공된 태스크를 수정할 수 없습니다. 모두 25가지의 태스크가 있습니다. 이러한 태스크는 역할 기반 보안에서 사용할 수 있는 전체 작업 집합을 구성합니다. "보고서 보기", "보고서 관리", "보고서 서버 속성 관리" 등과 같은 태스크가 있습니다.  

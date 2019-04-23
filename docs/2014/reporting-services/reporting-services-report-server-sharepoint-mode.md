@@ -4,18 +4,18 @@ ms.prod: sql-server-2014
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 411929fe3f5640d385a70c45f9526a4a372ee160
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 246b0be389857e002e5c9e30cb899826234a58b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582209"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939489"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
 
@@ -81,7 +81,7 @@ ms.locfileid: "59582209"
   
 -   *로컬 모드*: 로컬 모드에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능은 필요하지만 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 아닙니다. 추가 기능은 SharePoint 2010 제품 준비 도구를 비롯한 여러 가지 방법으로 설치할 수 있습니다. 로컬 모드에 대한 자세한 내용은 [보고서 뷰어의 로컬 모드와 연결 모드 보고서를 보고서 뷰어에서 &#40;SharePoint 모드의 Reporting Services&#41; ](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) 하 고 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)합니다.  
   
--   *연결 된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 공동 작업 기능과 구독, 스냅숏 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
+-   *연결 된 모드*: 통합 하 여 연결 된 모드는 지원 되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 중앙 관리를 사용 하 여 SharePoint 팜에 보고서 서버. 보고서 서버와의 통합을 사용 하면 전체 종단 간 보고, SharePoint 2010의 공동 작업 기능을 포함 하는 보고서 서버는 서버 기반 기능도 제공: 구독, 스냅숏 및 서버 기반 기능도 사용할 수 있습니다.  
   
 ##  <a name="bkmk_unsupportedsharepoint"></a> 지원되지 않는 SharePoint 기능
 

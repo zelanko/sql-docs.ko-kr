@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4aaea45ff2059564bf2215aa4728dee80e4539b3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 46e3db8807e8e730ce0476f27d2dad0e3a64eaf4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298401"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969089"
 ---
 # <a name="design-the-query"></a>쿼리 디자인
   보고서 마법사의 쿼리 디자인 페이지를 사용하여 쿼리를 수동으로 입력하거나 쿼리 작성기에서 대화형으로 쿼리를 작성하거나 다른 보고서에서 쿼리를 가져오는 방법을 통해 쿼리를 만들 수 있습니다.  

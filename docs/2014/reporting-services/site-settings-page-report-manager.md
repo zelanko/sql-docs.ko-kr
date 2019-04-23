@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b097b327121656cda3ff8c93ec24bfe1cb35921e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035034"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971989"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
   사이트 설정 페이지를 사용하여 애플리케이션 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "56035034"
   
  **기본 모드 보고서 서버:** 기본 모드 설치에서 기본 URL 인 http:// 형식을 따릅니다\<*computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application 합니다.  
   
- SharePoint 통합 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ SharePoint 통합된 모드: 기본 URL 인 http:// 형식을 따릅니다\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
   
  **적용**  
  변경 내용을 보고서 서버에 저장하려면 클릭합니다.  
