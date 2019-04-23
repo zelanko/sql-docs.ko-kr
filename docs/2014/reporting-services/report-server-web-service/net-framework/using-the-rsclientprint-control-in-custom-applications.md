@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036604"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157715"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 컨트롤인 **RSPrintClient**는 HTML 뷰어에 표시되는 보고서에 대한 클라이언트 쪽 인쇄 기능을 제공합니다. 사용자는 제공된 **인쇄** 대화 상자를 사용하여 인쇄 작업 시작, 보고서 미리 보기, 인쇄할 페이지 지정, 여백 조정 등의 작업을 수행할 수 있습니다. 클라이언트 쪽 인쇄 작업 과정에서 보고서 서버는 이미지(EMF) 렌더링 확장 프로그램으로 보고서를 렌더링하고 운영 체제의 인쇄 기능으로 인쇄 작업을 만들어 프린터에 보냅니다.  
@@ -44,7 +42,7 @@ ms.locfileid: "56036604"
 -   이미지(EMF) 렌더링에 대한 온라인 설명서 항목을 검토하여 인쇄 미리 보기와 출력을 위해 페이지가 렌더링되는 방법을 이해합니다.  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient 개요  
- 이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤은 CAB 파일로 패키지됩니다. **인쇄** 대화 상자의 텍스트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 모든 언어로 지역화됩니다. **RSPrintClient** ActiveX 컨트롤은 이미지 렌더링 확장 프로그램(EMF)을 사용하여 보고서를 인쇄합니다. 사용되는 EMF 장치 정보에는 StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight 및 PageWidth가 있습니다. 이미지 렌더링에 대한 다른 장치 정보 설정은 지원되지 않습니다.  
+ 이 컨트롤은 특정 페이지와 범위, 페이지 여백 및 방향을 지정하는 페이지 선택 기능, 인쇄 미리 보기 기능을 비롯하여 다른 인쇄 대화 상자에 공통적인 기능을 지원하는 사용자 지정 인쇄 대화 상자를 표시합니다. 컨트롤은 CAB 파일로 패키지됩니다. **인쇄** 대화 상자의 텍스트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 지원하는 모든 언어로 지역화됩니다. **RSPrintClient** ActiveX 컨트롤은 이미지 렌더링 확장 프로그램(EMF)을 사용하여 보고서를 인쇄합니다. 다음과 같은 EMF 장치 정보 사용 됩니다. StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight 및 PageWidth 합니다. 이미지 렌더링에 대한 다른 장치 정보 설정은 지원되지 않습니다.  
   
 ### <a name="language-support"></a>언어 지원  
  인쇄 컨트롤은 여러 언어로 사용자 인터페이스 텍스트를 제공하며 여러 단위의 입력 값을 허용합니다. 사용되는 언어와 단위는 **Culture** 및 **UICulture** 속성에 의해 결정됩니다. 두 속성 모두 LCID 값을 사용합니다. 지원되는 언어의 변형 언어에 대한 LCID를 지정하는 경우 이에 가장 근접한 언어가 사용됩니다. 지원되지 않는 LCID를 지정하는 경우 이와 근접한 LCID가 없으면 영어(미국)가 사용됩니다.  
@@ -76,7 +74,7 @@ ms.locfileid: "56036604"
 |PageWidth|Double|RW|보고서 설정|페이지 너비를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 215.9밀리미터입니다.|  
 |PageHeight|Double|RW|보고서 설정|페이지 높이를 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서 정의에 지정되지 않은 경우 기본값은 279.4밀리미터입니다.|  
 |Culture|Int32|RW|브라우저 로캘|LCID(로캘 ID)를 지정합니다. 이 값에 따라 사용자 입력 단위가 결정됩니다. 예를 들어, 사용자가 `3`, 언어가 영어 (미국) 이면 인치 프랑스어 이면 값이 밀리미터 단위로 측정 됩니다. 유효한 값은 다음과 같습니다. 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|RW|클라이언트 culture|대화 상자의 문자열 지역화를 지정합니다. 인쇄 대화 상자의 텍스트는 독일어, 스페인어, 영어, 이탈리아어, 일본어, 중국어 간체, 중국어 번체, 프랑스어 및 한국어로 지역화됩니다. 유효한 값은 다음과 같습니다. 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|RW|클라이언트 culture|대화 상자의 문자열 지역화를 지정합니다. 인쇄 대화 상자에서 텍스트는 같은 언어로 지역화 됩니다. 중국어 간체, 중국어 번체, 영어, 프랑스어, 독일어, 이탈리아어, 일본어, 한국어 및 스페인어입니다. 유효한 값은 다음과 같습니다. 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|사용 가능한 세션이 없는 인쇄에 대한 연결을 시작하기 위해 컨트롤이 보고서 서버에 대해 GET 명령을 실행할지 여부를 지정합니다.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>인증 속성 설정 시기  

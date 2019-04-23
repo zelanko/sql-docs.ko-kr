@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - invalid requests [Reporting Services]
 - exceptions [Reporting Services], invalid requests
 - valid requests [Reporting Services]
 ms.assetid: 4a4a2d97-4c10-43a9-8298-ef5a820ea549
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 85556b6ec616d16962214b1737fcc445b54d0801
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dcb850ad7e99768781b225978f531ff991766924
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019684"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158969"
 ---
 # <a name="preventing-invalid-requests"></a>잘못된 요청 방지
   응용 프로그램 흐름을 분석하고 보고서 서버로 전송되는 요청이 유효한지 확인하여 일부 유형의 예외가 throw되지 않도록 할 수 있습니다. 예를 들어 사용자가 보고서의 이름, 데이터 원본 또는 기타 보고서 서버 항목을 추가하거나 갱신할 수 있는 응용 프로그램의 경우 사용자가 입력하는 텍스트의 유효성을 검사해야 합니다. 또한 요청을 보고서 서버로 보내기 전에 항상 예약 문자를 확인해야 합니다. 코드에서 **if**문 또는 기타 논리 구문을 사용하여 보고서 서버에 요청을 보내는 데 필요한 조건이 충족되지 않았음을 사용자에게 알립니다.  

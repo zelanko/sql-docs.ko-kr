@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -25,19 +23,19 @@ ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ec379d0dde0775aad3fe81a3443cf5d27601d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087783"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157390"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>파티션(Analysis Services - 다차원 데이터)
   파티션은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Partition> 개체는 기본 정보, 조각화 정의, 집계 디자인 등으로 구성되어 있습니다. 기본 정보에는 파티션의 이름, 스토리지 모드, 처리 모드 등이 포함됩니다. 조각화 정의는 튜플 또는 집합을 지정하는 MDX 식입니다. 조각화 정의에는 StrToSet MDX 함수와 동일한 제한 사항이 있습니다. 조각화 정의는 CONSTRAINED 매개 변수와 함께 큐브의 차원, 계층, 수준, 멤버 이름, 키, 고유 이름 또는 기타 명명된 개체는 사용할 수 있지만 MDX 함수는 사용할 수 없습니다. 집계 디자인은 여러 파티션에서 공유할 수 있는 집계 정의의 컬렉션입니다. 기본값은 부모 큐브의 집계 디자인에서 가져옵니다.  
   
- 사용 하는 파티션을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 하 고 큐브의 데이터 및 측정값 그룹에 대 한 집계를 저장 합니다. 모든 측정값 그룹에는 파티션이 하나 이상 있으며 이 파티션은 측정값 그룹을 정의할 때 생성됩니다. 측정값 그룹에 대해 새 파티션을 만들면 해당 측정값 그룹에 대해 이미 존재하는 파티션 집합에 새 파티션이 추가됩니다. 측정값 그룹에는 모든 파티션에 있는 결합된 데이터가 반영됩니다. 즉, 측정값 그룹에 데이터가 여러 번 반영되지 않도록 측정값 그룹의 한 파티션에 대한 데이터에 측정값 그룹의 다른 모든 파티션에 대한 데이터가 포함되지 않도록 해야 합니다. 측정값 그룹의 원래 파티션은 큐브의 데이터 원본 뷰에 있는 단일 팩트 테이블을 기반으로 합니다. 측정값 그룹의 파티션이 여러 개가 있으면 각 파티션은 큐브의 데이터 원본 뷰 또는 기본 관계형 데이터 원본에 있는 서로 다른 테이블을 참조할 수 있습니다. 각 파티션을 테이블의 서로 다른 행으로 제한하는 경우 측정값 그룹에 있는 둘 이상의 파티션이 같은 테이블을 참조할 수 있습니다.  
+ 파티션은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 큐브의 측정값 그룹에 대한 데이터와 집계를 관리하고 저장하는 데 사용됩니다. 모든 측정값 그룹에는 파티션이 하나 이상 있으며 이 파티션은 측정값 그룹을 정의할 때 생성됩니다. 측정값 그룹에 대해 새 파티션을 만들면 해당 측정값 그룹에 대해 이미 존재하는 파티션 집합에 새 파티션이 추가됩니다. 측정값 그룹에는 모든 파티션에 있는 결합된 데이터가 반영됩니다. 즉, 측정값 그룹에 데이터가 여러 번 반영되지 않도록 측정값 그룹의 한 파티션에 대한 데이터에 측정값 그룹의 다른 모든 파티션에 대한 데이터가 포함되지 않도록 해야 합니다. 측정값 그룹의 원래 파티션은 큐브의 데이터 원본 뷰에 있는 단일 팩트 테이블을 기반으로 합니다. 측정값 그룹의 파티션이 여러 개가 있으면 각 파티션은 큐브의 데이터 원본 뷰 또는 기본 관계형 데이터 원본에 있는 서로 다른 테이블을 참조할 수 있습니다. 각 파티션을 테이블의 서로 다른 행으로 제한하는 경우 측정값 그룹에 있는 둘 이상의 파티션이 같은 테이블을 참조할 수 있습니다.  
   
  파티션은 큐브 중에서도 특히 크기가 큰 큐브를 관리하기 위한 강력하고도 융통성 있는 방법입니다. 예를 들어 판매 정보가 포함된 큐브에는 각 지난 연도의 데이터에 대한 파티션과 현재 연도의 각 분기에 대한 파티션이 포함될 수 있습니다. 큐브에 현재 정보를 추가할 때 현재 분기 파티션만 처리되어야 합니다. 적은 양의 데이터를 처리하면 처리 시간이 감소하여 처리 성능이 향상됩니다. 연말에는 4개의 분기별 파티션이 해당 연도에 대한 단일 파티션으로 병합될 수 있으며 새 연도의 첫 번째 분기에 대한 새 파티션이 생성됩니다. 또한 데이터 웨어하우스 로드 및 큐브 처리 절차의 일부로 새 파티션 생성 프로세스를 자동화할 수 있습니다.  
   
@@ -66,7 +64,7 @@ ms.locfileid: "48087783"
 ## <a name="incremental-updates"></a>증분 업데이트  
  여러 개의 파티션으로 이루어진 측정값 그룹에서 파티션을 만들고 관리할 때는 큐브 데이터가 정확하게 유지되도록 특별히 주의해야 합니다. 단일 파티션 측정값 그룹에는 대체로 이러한 주의가 필요하지 않지만 파티션 증분 업데이트를 수행할 때는 주의가 필요합니다. 파티션에 대해 증분 업데이트를 수행하면 원본 파티션과 동일한 구조로 새로운 임시 파티션이 생성됩니다. 임시 파티션은 처리된 다음 원본 파티션과 병합됩니다. 그러므로 임시 파티션을 채우는 처리 쿼리에서 기존 파티션에 있는 데이터를 복제하지 않도록 해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [측정값 속성 구성](../multidimensional-models/configure-measure-properties.md)   
  [다차원 모델의 큐브](../multidimensional-models/cubes-in-multidimensional-models.md)  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], naming
@@ -14,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce01d84be7f2850f916b21ccb02fb7cd24a6cdc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578416"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158889"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
   이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  

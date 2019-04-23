@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618180"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159009"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA 사용 하 여 평가 보고서 통합
 
@@ -71,18 +71,22 @@ SQL Server를 평가 하기 위해 PowerShell 스크립트를 실행 하기 전�
 - SQL Server 테이블
 
 ### <a name="if-using-a-csv-file"></a>CSV 파일을 사용 하는 경우
+
 > [!IMPORTANT]
->
 > 인벤토리 파일을 쉼표로 구분 된 (CSV) 파일로 저장 되는 것을 확인 합니다.
 >
 > 기본 인스턴스의 경우 mssqlserver 인스턴스 이름을 설정 합니다.
->
+
 
 데이터의 두 개의 열이 있는 csv 파일을 사용 하 여 데이터를 확인 **인스턴스 이름** 하 고 **데이터베이스 이름**, 열 머리글 행 없는 하 고 합니다.
  
  ![csv 파일 내용](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>SQL Server 테이블을 사용 하는 경우
+### <a name="if-using-a-sql-server-table"></a>SQL Server 테이블을 사용 하는 경우
+
+> [!IMPORTANT]
+> 기본 인스턴스의 경우 mssqlserver 인스턴스 이름을 설정 합니다.
+
 라는 데이터베이스를 만듭니다 **EstateInventory** 테이블을 호출 하 고 **DatabaseInventory**합니다. 다음 4 개의 열이 없으면으로이 인벤토리 데이터를 포함 하는 테이블 임의 개수의 열을 포함할 수 있습니다.
 - 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면
 - InstanceName
@@ -161,8 +165,8 @@ dmaProcessor에 평가 파일 처리 완료 후 보고서 데이터 표에 DMARe
 
 1. Power BI Desktop에서 DMA 보고서 Power BI 템플릿을 엽니다.
 2. 가리키는 서버 세부 정보를 입력 하 **DMAWarehouse** 데이터베이스를 선택한 후 **부하**합니다.
-   
-      ![DMA 보고서 Power BI 템플릿 로드](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![DMA 보고서 Power BI 템플릿 로드](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    보고서에서 데이터를 새로 고쳐 짐 후 합니다 **DMAWarehouse** 다음과 유사한 보고서를 사용 하 여 표시 하는 데이터베이스입니다.
 

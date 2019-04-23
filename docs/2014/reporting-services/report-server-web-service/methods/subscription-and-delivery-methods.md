@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], delivering
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3b16e33ff38107706a506803300d0499bfd3fc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157409"
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  

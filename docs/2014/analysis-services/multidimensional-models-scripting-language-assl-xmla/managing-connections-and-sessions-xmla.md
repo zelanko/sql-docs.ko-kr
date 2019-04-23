@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statefulness [XML for Analysis]
@@ -19,12 +17,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146238"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157379"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* 는 서버 id와 메서드 호출 간에 클라이언트의 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 유지 하지 않는 id와 컨텍스트를 클라이언트의 메서드 호출을 완료 하는 조건입니다.  
@@ -53,7 +51,7 @@ ms.locfileid: "50146238"
 > [!NOTE]  
 >  세션 ID는 세션이 유효한 상태를 유지함을 보장하지는 않습니다. 세션이 만료된 경우(예를 들어, 세션의 시간이 초과되거나 연결이 끊어진 경우) 공급자는 해당 세션의 동작을 종료하고 롤백할 수 있습니다. 결과적으로 세션 ID에 대한 클라이언트의 모든 후속 메서드 호출은 세션이 유효하지 않음을 나타내는 오류가 발생하면서 실패합니다. 클라이언트는 이 조건을 처리해야 하며 세션 메서드 호출을 처음부터 다시 보낼 준비를 해야 합니다.  
   
-## <a name="legacy-code-example"></a>레거시 예제 코드  
+## <a name="legacy-code-example"></a>레거시 코드 예제  
  다음 예제에서는 세션이 지원되는 방법을 보여 줍니다.  
   
 1.  세션을 시작하기 위해 SOAP의 BeginSession 헤더를 클라이언트의 아웃바운드 XMLA 메서드 호출에 추가합니다. 처음에는 세션 ID를 알지 못하므로 값 영역이 비어 있습니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - local mining models [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2fd3e4bb2804595db0bd219af0d116fee9192f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093682"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158879"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 배포의 클라이언트 아키텍처 요구 사항
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 씬 클라이언트 아키텍처를 지원합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 계산 엔진은 완전히 서버를 기반으로 하므로 모든 쿼리가 서버에서 확인 됩니다. 결과적으로 각 쿼리에는 클라이언트와 서버 간의 단일 왕복만이 필요하여 쿼리가 복잡해짐에 따라 성능이 확장될 수 있습니다.  
@@ -53,7 +51,7 @@ ms.locfileid: "48093682"
  클라이언트 응용 프로그램 및 중간 계층 응용 프로그램 모두는 공급자를 사용하지 않고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 직접 통신할 수 있습니다. 클라이언트 응용 프로그램과 중간 계층 응용 프로그램은 TCP/IP, HTTP 또는 HTTPS에서 SOAP 패킷으로 XML for Analysis를 보낼 수 있습니다. SOAP를 지원하는 언어를 사용하여 클라이언트를 작성할 수 있습니다. 이러한 경우 TCP/IP를 사용하여 서버에 직접 연결하도록 코딩할 수 있지만 HTTP를 사용하여 인터넷 정보 서비스(IIS)로 통신을 관리하는 것이 가장 쉽습니다. 이것이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 최상의 씬 클라이언트 솔루션입니다.  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>테이블 형식 또는 SharePoint 모드의 Analysis Services  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 테이블 형식 데이터베이스에 대해 xVelocity 메모리 내 분석 엔진 (VertiPaq) 모드에서 서버를 시작할 수 있습니다 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint 사이트에 게시 된 통합 문서.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서는 SharePoint 사이트에 게시된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 테이블 형식 데이터베이스에 대해 xVelocity 메모리 내 분석 엔진(VertiPaq) 모드로 서버를 시작할 수 있습니다.  
   
  [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 SharePoint 또는 테이블 형식 모드 각각을 사용하는 메모리 내 데이터베이스 만들고 쿼리하기 위해 지원되는 유일한 클라이언트 환경입니다. Excel을 사용 하 여 만든 포함 된 PowerPivot 데이터베이스 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 도구는 Excel 통합 문서 내에 포함 된 및 Excel.xlsx 파일의 일부로 저장 됩니다.  
   
@@ -63,7 +61,7 @@ ms.locfileid: "48093682"
 >  큐브를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 데이터 원본으로 사용할 경우 큐브에서 가져오는 데이터는 MDX 쿼리로 정의되지만, 결합된 스냅숏으로 데이터를 가져옵니다. 대화형으로 데이터를 사용하거나 큐브에서 데이터를 새로 고칠 수 없습니다.  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 클라이언트 인터페이스  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services에 대 한 설정 된 인터페이스 및 언어를 사용 하 여 통합 문서 내에서 xVelocity 메모리 내 분석 엔진 (VertiPaq) 저장소 엔진을 사용 하 여 상호 작용 합니다: AMO 및 ADOMD.NET 및 MDX 및 XMLA입니다. 추가 기능 내에서 측정값은 Excel, DAX(Data Analysis Expressions)와 유사한 수식 언어를 사용하여 정의됩니다. DAX 식은 in-process 서버에 보낸 XMLA 메시지 내에 포함됩니다.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services에 대 한 설정 된 인터페이스 및 언어를 사용 하 여 통합 문서 내 (VertiPaq) 저장소 엔진 xVelocity 메모리 내 분석 엔진을 사용 하 여 상호 작용 합니다. AMO 및 ADOMD.NET 및 MDX 및 XMLA입니다. 추가 기능 내에서 측정값은 Excel, DAX(Data Analysis Expressions)와 유사한 수식 언어를 사용하여 정의됩니다. DAX 식은 in-process 서버에 보낸 XMLA 메시지 내에 포함됩니다.  
   
 ### <a name="providers"></a>공급자  
  간의 통신 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel MSOLAP OLEDB 공급자 (버전 11.0)를 사용 합니다. MSOLAP 공급자 내에는 클라이언트와 서버 간에 메시지를 보내는 데 사용할 수 있는 네 가지 모듈 또는 전송이 있습니다.  
