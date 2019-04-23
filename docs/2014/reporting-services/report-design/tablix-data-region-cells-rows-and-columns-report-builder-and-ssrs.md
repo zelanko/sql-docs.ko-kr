@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.deleterows.f1
 - sql12.rtp.rptdesigner.deletecolumns.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdc452717be52dc857465e202771678f782d61f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296441"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937409"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역의 행 및 열 데이터가 보고서에 표시되는 방법을 제어하려면 세부 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블 &#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md), [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), 또는 [목록 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  

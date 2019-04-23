@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a6fd1eceffcf429d2a57602ef8b2944270fa497
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e4444821e00b4b6d271aa1c6d15b756121eecfd2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298411"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940909"
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)
   행 높이를 설정하면 렌더링되는 보고서의 최대 행 높이가 지정됩니다. 하지만 기본적으로 행의 입력란은 런타임에 행의 데이터 크기에 맞게 세로로 늘어나도록 설정되어 있으므로 행 높이가 지정한 높이를 초과할 수 있습니다. 고정 행 높이를 설정하려면 입력란 속성을 변경하여 입력란이 자동으로 늘어나지 않도록 해야 합니다.  

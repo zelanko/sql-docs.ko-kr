@@ -1,31 +1,32 @@
 ---
 title: 보고서 기록 페이지 (보고서 관리자) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033864"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945139"
 ---
 # <a name="report-history-page-report-manager"></a>보고서 기록 페이지(보고서 관리자)
-  보고서 기록 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
+
+보고서 기록 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
   
- 보고서 기록은 항상 이 기록의 원본으로 사용되는 보고서의 컨텍스트 내에서 볼 수 있습니다. 보고서 서버의 모든 보고서 기록을 한 곳에서 볼 수는 없습니다.  
+
+보고서 기록은 항상 이 기록의 원본으로 사용되는 보고서의 컨텍스트 내에서 볼 수 있습니다. 보고서 서버의 모든 보고서 기록을 한 곳에서 볼 수는 없습니다.  
   
- 보고서 기록을 생성하려면 보고서가 무인 모드로 실행될 수 있어야 합니다. 즉, 보고서에서 저장된 자격 증명을 사용해야 하며, 매개 변수 있는 보고서의 경우 모든 매개 변수에 대한 기본 매개 변수 값을 포함해야 합니다. 보고서 기록은 수동으로 또는 예약된 작업으로 생성할 수 있습니다. 보고서의 기록 속성에 따라 보고서 기록을 만드는 방법이 지정됩니다.  
+보고서 기록을 생성하려면 보고서가 무인 모드로 실행될 수 있어야 합니다. 즉, 보고서에서 저장된 자격 증명을 사용해야 하며, 매개 변수 있는 보고서의 경우 모든 매개 변수에 대한 기본 매개 변수 값을 포함해야 합니다. 보고서 기록은 수동으로 또는 예약된 작업으로 생성할 수 있습니다. 보고서의 기록 속성에 따라 보고서 기록을 만드는 방법이 지정됩니다.  
   
- 보고서 기록 스냅숏을 클릭하면 이 스냅숏을 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
+보고서 기록 스냅숏을 클릭하면 이 스냅숏을 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
 > [!NOTE]  
 >  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -59,6 +60,4 @@ ms.locfileid: "56033864"
  [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [일반 속성 페이지, 보고서&#40;보고서 관리자&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [보고서 관리자 F1 도움말](../../2014/reporting-services/report-manager-f1-help.md)   
- [스냅숏 옵션 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
-  
-  
+ [스냅숏 옵션 속성 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

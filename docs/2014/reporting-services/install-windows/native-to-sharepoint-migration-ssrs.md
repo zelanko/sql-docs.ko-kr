@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5aa1492942e76011eac784bbea90e41b7a3a2484
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61e0cc160e8e2881e7c2832956358424c24d97dd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011174"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937919"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
   한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 다른 서버 모드로 업그레이드하거나 변환할 수 없습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 사용되는 데이터베이스 스키마가 다르기 때문에 모드 간에 보고서 서버 데이터베이스를 복사할 수 없습니다. 한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션할 수 있습니다. 사용하는 도구는 원본 서버 및 대상 서버에 맞게 구성된 보고서 서버 모드의 유형에 따라 달라집니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56011174"
   
 1.  암호화 키 백업 및 복원. 데이터를 암호화하는 데 사용되는 키입니다. 암호화 키는 암호(예: 데이터 원본 연결을 위해 저장된 암호)를 암호화하는 데도 사용됩니다. 그러나 암호는 마이그레이션할 수 없으며 대화 환경에서 암호를 다시 입력해야 합니다.  
   
-2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 Visual Basic 스크립트를 작성합니다. **RS.exe** 유틸리티를 사용하여 이 스크립트를 실행합니다. Rs.exe는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다.  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 데이터베이스 간에 데이터를 복사 하려면 보고서 서버 웹 서비스 SOAP 메서드를 호출 하는 Visual Basic 스크립트를 작성 합니다. **RS.exe** 유틸리티를 사용하여 이 스크립트를 실행합니다. Rs.exe는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다.  
   
     -   [보고서 서버 간 콘텐츠 마이그레이션을 위한 예제 Reporting Services rs.exe](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) 이 항목에서는 CodePlex에서 다운로드할 수 있는 예제 스크립트를 사용하는 방법에 대해 설명합니다.  
   

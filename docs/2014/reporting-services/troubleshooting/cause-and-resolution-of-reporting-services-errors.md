@@ -12,15 +12,15 @@ helpviewer_keywords:
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d742c1b3c81ca995c106591fe7c610251537d5d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020265"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932999"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다. 이 섹션의 오류 메시지 항목에서는 오류 메시지, 가능한 원인 및 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  

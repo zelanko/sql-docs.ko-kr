@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010576"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937595"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>클릭 광고 보고서 페이지(보고서 관리자)
   클릭 광고 보고서는 보고서 내에 포함된 대화형 데이터를 클릭하면 관련된 데이터로 작성된 표를 표시합니다. 이러한 보고서는 보고서를 작성할 때 사용한 모델 내에 포함된 정보를 바탕으로 생성됩니다. 보고서 서버가 생성하는 클릭 광고 보고서를 사용하지 않으려면 사용자 지정 보고서를 만들어 보고서 서버에 게시하고 모델에 정의된 대화형 데이터 지점에 매핑하면 됩니다. 사용자 지정 보고서는 보고서 작성기에서 같은 모델을 통해 만든 다음 보고서 서버에 게시해야 합니다. 사용자 지정 보고서를 모델의 항목에 매핑하려면 보고서 관리자의 클릭 광고 보고서 페이지를 사용합니다.  

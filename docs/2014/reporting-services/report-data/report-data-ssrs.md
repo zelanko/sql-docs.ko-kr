@@ -1,7 +1,7 @@
 ---
 title: 보고서 데이터
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 56da8c0b57955735d1e796ad3de7ecb9817a9b99
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553025"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951799"
 ---
-# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>보고서 데이터를 SQL Server Reporting Services (SSRS)
+# <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터
 
   보고서 데이터는 조직의 다양한 데이터 원본에서 가져올 수 있습니다. 보고서 디자인의 첫 단계는 기본 보고서 데이터를 나타내는 데이터 원본 및 데이터 세트를 만드는 것입니다. 각 데이터 원본은 데이터 연결 정보를 포함합니다. 각 데이터 세트는 데이터 원본의 데이터로 사용할 필드 세트를 정의하는 쿼리 명령을 포함합니다. 각 데이터 세트의 데이터를 시각화하려면 테이블, 행렬, 차트 및 지도와 같은 데이터 영역을 추가합니다. 보고서를 처리하면 데이터 원본에 대한 쿼리가 실행되고 각 데이터 영역이 필요에 따라 확장되어 데이터 세트에 대한 쿼리 결과를 표시합니다.  
   

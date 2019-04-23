@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286331"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938079"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
   보고서 디자이너에서 프로젝트에 테이블, 차트 및 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  
   
  일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대 한 자세한 내용은를 참조 하세요 [보고서 파트 &#40;보고서 작성기 및 SSRS&#41; ](../report-parts-report-builder-and-ssrs.md) 에 [보고서 작성기 설명서](https://go.microsoft.com/fwlink/?LinkId=154494) msdn.microsoft.com 합니다.  
   
- 그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 즉, 다른 사람이 만들어 게시한 보고서 파트를 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
+ 그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능 합니다. 보고서 파트를 만들고 게시 합니다. 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향: 보고서 디자이너에서 보고서 파트를 게시 하 고 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
   
 ##  <a name="ComponentWorkflow"></a> 보고서 파트 게시 수명 주기  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
