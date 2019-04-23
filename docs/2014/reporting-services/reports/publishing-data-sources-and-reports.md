@@ -12,15 +12,15 @@ helpviewer_keywords:
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ef2839bd49e48615ed77ab917a90169ac20bca3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034084"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932579"
 ---
 # <a name="publishing-data-sources-and-reports"></a>데이터 원본 및 보고서 게시
   보고서를 게시하기 전에 미리 보기를 수행하여 보고서가 실행되었을 때의 모습을 확인해야 합니다. 만족스러운 결과가 나올 때까지 디자인을 계속 다듬을 수 있습니다.  

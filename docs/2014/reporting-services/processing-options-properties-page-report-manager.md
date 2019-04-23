@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013104"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939159"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>처리 옵션 속성 페이지(보고서 관리자)
   처리 옵션 속성 페이지를 사용하여 현재 선택한 보고서의 보고서 실행 속성을 설정할 수 있습니다. 이 옵션은 보고서의 데이터 처리가 수행되는 시간을 결정합니다. 이 옵션을 통해 사용량이 적은 시간에 보고서 데이터를 검색하도록 설정할 수 있습니다. 자주 액세스할 보고서가 있으면 이 보고서의 복사본을 임시로 캐시하여 여러 사용자가 같은 보고서를 짧은 시간 간격으로 동시에 액세스할 때 대기 시간을 없앨 수 있습니다.  

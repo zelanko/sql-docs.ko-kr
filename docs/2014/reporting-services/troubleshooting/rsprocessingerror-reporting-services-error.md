@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7c364708f3d574f5096210a94fc33174b3eb2c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f9826e22c617bbcae2630121ce1be23b2511a35
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021556"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932689"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
     
@@ -56,7 +56,7 @@ ms.locfileid: "56021556"
   
 -   Nullable 속성이로 설정 하는 매개 변수 `False` 매개 변수에서 null 값을 검색 했습니다.  
   
--   데이터 영역의 Hidden 속성에 대 한 식에 오류가 있습니다. 개체 참조가 개체의 인스턴스로 설정되지 않았습니다.  
+-   데이터 영역의 Hidden 속성에 대 한 식에 오류가 있습니다. 개체의 인스턴스에 개체 참조가 설정 되지 않았습니다.  
   
 -   식에 잘못된 함수 호출 또는 구문 오류가 있습니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56021556"
  다중값 매개 변수는 Null이 될 수 없습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>하위 보고서가 있는 주 보고서를 처리할 수 없음  
- 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 보고서와 하위 보고서 간에 버전이 호환되지 않는 경우 "하위 보고서를 처리할 수 없습니다." 메시지가 나타납니다.  
+ 하위 보고서가 있는 보고서는 동일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 프로세서 버전으로 처리해야 합니다. 보고서를 현재 버전의 보고서 정의 스키마로 업그레이드할 때 주 보고서와 하위 보고서는 동시에 업데이트될 수도 있고 업데이트되지 않을 수도 있습니다. 버전 보고서와 하위 보고서 간에 호환 되지 않으면 다음과 같은 메시지가 표시 됩니다. "하위 보고서를 처리할 수 없습니다."  
   
  주 보고서 또는 하위 보고서 중 하나를 변경하여 동일한 보고서 프로세서 버전으로 두 보고서를 처리할 수 있도록 해야 합니다. 보고서 업그레이드가 실패하는 이유에 대한 자세한 내용은 [보고서 업그레이드](../install-windows/upgrade-reports.md)를 참조하세요.  
   

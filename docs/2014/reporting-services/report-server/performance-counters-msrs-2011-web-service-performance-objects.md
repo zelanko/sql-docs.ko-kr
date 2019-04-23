@@ -15,15 +15,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f643f6a3ec09b95163ddbeab7177dc8903a11734
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7d28e597d36305b9c4df7c8b4a499dc507b1ed31
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934409"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>MSRS 2014 웹 서비스 및 MSRS 2014 Windows 서비스 성능 개체에 대한 성능 카운터(기본 모드)
   이 항목에서는 `MSRS 2014 Web Service` 및 `MSRS 2014 Windows Service` 성능 개체에 대한 성능 카운터에 대해 설명합니다.  

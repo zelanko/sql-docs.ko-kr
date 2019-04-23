@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d6f0dc131c4d85bf93a8b36fde0a77d3192843a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285641"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934779"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 함수(보고서 작성기 및 SSRS)
   항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.  

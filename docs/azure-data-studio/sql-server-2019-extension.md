@@ -3,7 +3,7 @@ title: SQL Server 2019 확장 (미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161551"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934129"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
 
@@ -30,9 +30,9 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
    |플랫폼|다운로드|릴리스 날짜|버전
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|2019 년 3 월 18 일 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|2019 년 3 월 18 일 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|2019 년 3 월 18 일 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|2019 년 4 월 18 일 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|2019 년 4 월 18 일 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|2019 년 4 월 18 일 |0.12.0
 
 1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
 
@@ -44,12 +44,27 @@ SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 
 
 1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
 
+## <a name="changes-in-release-012"></a>0.12 릴리스의 변경 내용
+
+* 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을이 릴리스에서 제거 되었습니다. SQL Server 빅 데이터 클러스터 연결에서 사용할 수 없었던 모든 기능이 SQL Server 연결에서 출시 되었습니다.
+* HDFS 검색에서 찾을 수 있습니다 합니다 **Data Services** 폴더
+* Notebook에는 PySpark 및 기타 빅 데이터 커널을 SQL Server 빅 데이터 클러스터에 마스터 SQL Server 인스턴스에 연결 하는 경우 작동 합니다.
+* 외부 테이블 마법사를 만듭니다.
+  * 기존 외부 데이터 원본을 사용 하 여 외부 테이블 만들기를 지원 합니다.
+  * 마법사에서 성능이 향상 되었습니다.
+  * 향상 된 특수 문자가 포함 된 개체 이름을 처리 합니다. 일부 경우에에서 이러한 발생 마법사가 실패 하
+  * 개체 매핑 페이지에 대 한 안정성 향상입니다.
+  * 제거 된 시스템 데이터베이스 'DWConfiguration', 'DWDiagnostics', 'dwqueue '를 설치-데이터베이스 드롭다운 목록에서.
+  * 외부 파일 형식 개체의 이름을 설정 하는 것에 대 한 지원 합니다 **CSV 파일에서 Create External Table** 마법사.
+  * 첫 페이지에 새로 고침 단추를 추가 합니다 **CSV 파일에서 Create External Table** 마법사.
+
 ## <a name="release-notes-v0110"></a>릴리스 정보 (v0.11.0)
-  * Jupyter Notebook 지원, Python3 및 Spark 커널에 대 한 지원 특히 Azure 데이터 Studio로 이동 되었습니다. 이 확장 Notebook을 사용 하기 위해 필요 하지 않습니다.
-  * 외부 데이터는 마법사의 여러 버그 수정:
-    * Oracle 형식 매핑은 SQL Server 2019 CTP 2.3에서 제공 하는 변경 내용과 일치 하도록 업데이트 되었습니다.
-    * 새 스키마 테이블 매핑 컨트롤에 입력 된 끊어져서 문제를 해결 했습니다.
-    * 여기서 테이블 매핑에 데이터베이스 노드를 확인 하는 중 발생 하지 모든 테이블 및 뷰 선택 되는 문제가 해결 되었습니다.
+
+* Jupyter Notebook 지원, Python3 및 Spark 커널에 대 한 지원 특히 Azure 데이터 Studio로 이동 되었습니다. 이 확장 Notebook을 사용 하기 위해 필요 하지 않습니다.
+* 외부 데이터는 마법사의 여러 버그 수정:
+  * Oracle 형식 매핑은 SQL Server 2019 CTP 2.3에서 제공 하는 변경 내용과 일치 하도록 업데이트 되었습니다.
+  * 새 스키마 테이블 매핑 컨트롤에 입력 된 끊어져서 문제를 해결 했습니다.
+  * 여기서 테이블 매핑에 데이터베이스 노드를 확인 하는 중 발생 하지 모든 테이블 및 뷰 선택 되는 문제가 해결 되었습니다.
 
 
 ## <a name="release-notes-v0102"></a>릴리스 정보 (v0.10.2)

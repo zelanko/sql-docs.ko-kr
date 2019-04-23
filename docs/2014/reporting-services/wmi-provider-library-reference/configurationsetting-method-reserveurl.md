@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b771042ca00c9a9a80d7ffa035b100e2c4a6dc0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aaae1838f9af2040105e85bd0dd7fdc82ac442d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020514"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939289"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>ReserveURL 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 애플리케이션에 대한 URL 예약을 추가합니다.  

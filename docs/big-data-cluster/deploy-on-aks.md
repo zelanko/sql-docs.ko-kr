@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ddf14cf97fc72acb4a7c44bbc123f171e31c20a2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860164"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935230"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대 한 Azure Kubernetes Service 구성
 
@@ -86,7 +86,7 @@ Azure 리소스 그룹은 Azure 리소스가 배포 및 관리 되는 논리적 
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.10.9
+    --kubernetes-version 1.12.6
     ```
 
    늘리거나 변경 하 여 Kubernetes 에이전트 노드 수를 줄일 수는 `--node-count <n>` 여기서 `<n>` 사용 하려는 에이전트 노드 수입니다. 여기에 AKS에서 내부적으로 관리 되는 마스터 Kubernetes 노드를 포함 되지 않습니다. 앞의 예제만 평가 목적에 대 한 단일 노드를 사용합니다.

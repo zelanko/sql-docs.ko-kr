@@ -12,15 +12,15 @@ helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: caf23eb7e7d0e06a9e79dbaa6b9a0120725a4b10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6b86bcb059d2186254a001f59f074a40eef659fd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031054"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934509"
 ---
 # <a name="clickthrough-reports-ssrs"></a>클릭 광고 보고서(SSRS)
   클릭 광고 보고서는 주 보고서 내에 포함되어 있는 데이터에 대한 세부 정보를 제공하는 보고서입니다. 클릭 광고 보고서는 사용자가 주 보고서에 나타나는 대화형 데이터를 클릭할 때 표시됩니다. 이러한 보고서는 보고서 서버에 의해 자동으로 생성됩니다. 모델 디자이너는 보고서 모델의 엔터티에 할당하는 `DefaultDetailAttribute` 및 `DefaultAggregateAttribute` 속성을 설정하여 클릭 광고 보고서에 표시될 내용을 결정합니다.  
