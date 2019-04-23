@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296113"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967739"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>지도 자오선 속성 대화 상자, 레이블
   사용 된 **MapMeridian 속성** 지도 뷰포트의 세로 격자 눈금에 대 한 레이블 옵션을 변경 하려면 대화 상자. 자오선은 뷰포트에 지정된 좌표계에 따라 다음 값을 나타냅니다.  

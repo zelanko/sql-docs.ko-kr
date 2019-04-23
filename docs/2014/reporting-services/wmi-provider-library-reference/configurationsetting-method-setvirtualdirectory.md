@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f20db632f41024cc3246eeaff93a41ff2cb713ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5be09f364a0cfcf881cdbedd1db8f1f099819d0d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016074"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970979"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserverconfigurationsetting"></a>SetVirtualDirectory 메서드(WMI MSReportServer_ConfigurationSetting)
   지정한 애플리케이션에 가상 디렉터리 이름을 설정합니다.  

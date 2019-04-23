@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036964"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967409"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>1단원: 새 웹 사이트 만들기
   이 단원에서는 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만드는 방법을 배웁니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "56036964"
  웹 사이트 프로젝트가 열립니다.  
   
 ## <a name="next-task"></a>다음 태스크  
- 새 웹 사이트 프로젝트를 성공적으로 만들었습니다. 이제 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만듭니다. 참조 [2 단원: 부모 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)합니다.  
+ 새 웹 사이트 프로젝트를 성공적으로 만들었습니다. 이제 부모 보고서에 대한 데이터 테이블 및 데이터 연결을 만듭니다. [2단원: 부모 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)합니다.  
   
   
