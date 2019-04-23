@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47519a65a927184f67799a7c82a9a10d1d39c91f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042802"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942129"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>9단원: 응용 프로그램 빌드 및 실행
+# <a name="lesson-9-build-and-run-the-application"></a>9단원: 빌드 및 응용 프로그램 실행
   데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 애플리케이션을 빌드하고 실행합니다.  
   
 ### <a name="to-build-and-run-the-application"></a>애플리케이션을 빌드하고 실행하려면  

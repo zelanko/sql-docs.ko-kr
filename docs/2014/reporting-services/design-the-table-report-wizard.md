@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designtable.f1
 ms.assetid: c64c659b-2926-4773-8cbb-0d8d22b640f3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: afde237bf423d5b59af2d94e27ada9d641557fb9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 44b5a7950517990f7e2b1ef2afb2d17b5c4340dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295971"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948879"
 ---
 # <a name="design-the-table-report-wizard"></a>테이블 디자인(보고서 마법사)
   보고서 마법사의 테이블 디자인 페이지를 사용하여 보고서에 만들 필드를 선택할 수 있습니다.  

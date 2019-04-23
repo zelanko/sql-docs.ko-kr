@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009688"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967749"
 ---
 # <a name="move-items-page-report-manager"></a>항목 이동 페이지(보고서 관리자)
   항목 이동 페이지를 사용하여 보고서, 폴더 또는 기타 항목을 보고서 서버의 새 위치로 이동할 수 있습니다. 새 위치의 경로를 입력하거나 트리 뷰를 사용하여 보고서 서버 네임스페이스에서 새 위치를 찾아볼 수 있습니다. 현재 보고서 서버에 저장되어 있고 이동 권한 있는 항목만 이동할 수 있습니다.  

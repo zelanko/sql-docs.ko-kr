@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028254"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948799"
 ---
 # <a name="schedules-page-report-manager"></a>일정 페이지(보고서 관리자)
   일정 페이지를 사용하여 공유 일정을 작성, 수정, 삭제, 일시 중지 또는 다시 시작할 수 있습니다. 공유 일정은 보고서, 구독 및 일정 정보를 사용하는 기타 프로세스와는 별도로 만들고 관리할 수 있는 명명된 일정입니다. 다른 사용자가 제공하는 공유 일정을 선택할 수 있습니다.  

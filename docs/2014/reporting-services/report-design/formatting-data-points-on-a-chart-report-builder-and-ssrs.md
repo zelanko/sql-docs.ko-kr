@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296881"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940709"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
   데이터 요소는 차트에서 가장 작은 개별 엔터티입니다. 셰이프 차트가 아닌 차트에서 데이터 요소는 차트 종류에 따라 다르게 표시됩니다. 예를 들어 선 계열은 하나 이상의 연결된 데이터 요소로 구성됩니다. 셰이프 차트에서 데이터 요소는 전체 차트를 구성하는 개별 조각 또는 세그먼트로 표현됩니다. 예를 들어 원형 차트에서는 각 조각이 데이터 요소입니다. 자세한 내용은 [차트 종류&#40;보고서 작성기 및 SSRS&#41;](chart-types-report-builder-and-ssrs.md)를 참조하세요.  
@@ -44,7 +44,7 @@ ms.locfileid: "56296881"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>차트에서 데이터 요소 레이블 위치 지정  
  모든 차트 종류에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택하면 데이터 요소 레이블을 표시할 수 있습니다. 데이터 요소 레이블의 위치는 다음과 같이 차트 종류에 따라 다른 방법으로 지정됩니다.  
   
--   가로 막대형 차트의 경우 **BarLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 4가지 가능한 위치는 바깥쪽, 왼쪽, 가운데 및 오른쪽입니다. 막대 레이블 스타일을 Outside로 설정하면 레이블이 차트 영역 내에서 막대의 바깥쪽으로 배치됩니다. 레이블의 위치를 막대의 바깥쪽 및 차트 영역의 안쪽으로 지정할 수 없으면 레이블이 막대 안쪽으로 배치됩니다.  
+-   가로 막대형 차트의 경우 **BarLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 네 가지 가능한 위치는: 바깥쪽, 왼쪽, 가운데 및 오른쪽입니다. 막대 레이블 스타일을 Outside로 설정하면 레이블이 차트 영역 내에서 막대의 바깥쪽으로 배치됩니다. 레이블의 위치를 막대의 바깥쪽 및 차트 영역의 안쪽으로 지정할 수 없으면 레이블이 막대 안쪽으로 배치됩니다.  
   
 -   원형 차트의 경우 **PieLabelStyle** 사용자 지정 특성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 데이터 요소 레이블의 위치를 지정할 때는 원형 차트의 크기, 원형 차트와 해당 범례 사이의 가용 공간 및 레이블의 크기 등 다양한 요소를 고려해야 합니다. 자세한 내용은 [원형 차트 외부에 데이터 요소 레이블 표시&#40;보고서 작성기 및 SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296881"
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [축 레이블의 서식을 날짜 또는 통화로 지정&#40;보고서 작성기 및 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [자습서: 보고서에 원형 차트 추가 &#40;보고서 작성기&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [자습서: 보고서에 원형 차트 추가&#40;보고서 작성기&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

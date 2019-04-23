@@ -1,5 +1,5 @@
 ---
-title: '자습서: 빠른 차트 보고서 만들기 오프 라인 (보고서 작성기) | Microsoft Docs'
+title: '자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c817f68fce5fcf561e7aac46f3d809d2213aad7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291271"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956839"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 오프라인에서 빠른 차트 보고서 만들기(보고서 작성기)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 빠른 차트 보고서 만들기 오프 라인 (보고서 작성기)
   이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 동일한 결과를 원형 차트는 다음 그림과에서 같은:  
   
  !["내 첫 번째 원형 차트" 실행에서 볼](../media/rs-my1stpierunview.gif "실행 보기에서 내 첫 번째 원형 차트")  

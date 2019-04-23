@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290731"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956109"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "56290731"
 -   사용 중인 데이터 처리 확장 프로그램에 미리 형식이 지정된 데이터를 검색하기 위한 메타데이터가 포함되어 있는지 확인합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리에는 큐브를 처리할 때 이미 형식이 지정된 큐브 값에 대한 FORMATTED_VALUE 확장 속성이 포함되어 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
 ## <a name="understanding-parameter-data-types"></a>매개 변수 데이터 형식 이해  
- 보고서 매개 변수는 Boolean, DateTime, Integer, Float 또는 Text(String이라고도 함) 데이터 형식 중 하나여야 합니다. 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
+ 보고서 매개 변수 데이터 형식 중 하나 여야 합니다. 부울, DateTime, Integer, Float 또는 텍스트 (문자열이 라고도 함). 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
   
 > [!NOTE]  
 >  DateTime 데이터 형식인 보고서 매개 변수는 밀리초를 지원하지 않습니다. 밀리초가 포함된 값을 기반으로 하는 매개 변수를 만들 수 있지만 사용 가능한 값 드롭다운 목록에서 밀리초가 포함된 날짜 또는 시간 값이 들어 있는 값을 선택할 수는 없습니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "56290731"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 `DateTime` 값은 `2007-07-06 04:07:07 PM`(2007년 7월 6일 오후 4:07)입니다.  
+         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 다음 `DateTime` 값: `2007-07-06 04:07:07 PM` (2007 7 월 6 일 오후 4시 07분)입니다.  
   
  문자열을 변환 하는 방법에 대 한 자세한 내용은 `DateTime` 데이터 형식 참조 [구문 분석 하는 날짜 및 시간 문자열](https://go.microsoft.com/fwlink/?LinkId=89703)를 [특정 문화권에 대 한 시간과 날짜 서식 지정](https://go.microsoft.com/fwlink/?LinkId=89704), 및 [선택 DateTime, DateTimeOffset 및 TimeZoneInfo 간의](https://go.microsoft.com/fwlink/?linkid=110652) MSDN에 있습니다.  
   

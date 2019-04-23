@@ -1,5 +1,5 @@
 ---
-title: '자습서: (보고서 작성기) 보고서에 KPI 추가 | Microsoft Docs'
+title: '자습서: 보고서에 KPI 추가(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296451"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946023"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: 보고서에 KPI 추가(보고서 작성기)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>자습서: (보고서 작성기) 보고서에 KPI 추가
   KPI(핵심 성과 지표)는 비즈니스에 중요한 의미가 있는 측정 가능한 값입니다. 이 자습서에서는 KPI를 보고서에 포함하는 방법을 배웁니다. 이 시나리오에서 제품 하위 범주별 판매 요약이 KPI입니다. KPI의 현재 상태는 색, 계기 및 표시기를 사용하여 표시됩니다.  
   
  다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "56296451"
 7.  [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만들고, 마법사를 실행하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+>  이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 하나는 데이터 세트를 만드는 절차이고 다른 하나는 테이블을 만드는 절차입니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 원본을 선택 데이터 집합을 만듭니다 및 마법사를 실행,이 시리즈의 첫 번째 자습서를 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- 이 자습서에 소요되는 예상 시간: 15 분입니다.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 15분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -75,7 +75,7 @@ ms.locfileid: "56296451"
   
 5.  **다음**을 클릭합니다.  
   
-6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 자세한 내용은 참조 하세요. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 자세한 내용은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 7.  **다음**을 클릭합니다.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "56296451"
   
 12. **마침**을 클릭합니다.  
   
-     디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 SalesDate, Subcategory 및 Details라는 3개의 행 그룹이 표시됩니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
+     디자인 화면에 테이블이 추가됩니다. 이 테이블에는 열 5개와 행 5개가 있습니다. 행 그룹 창에는 3 개의 행 그룹이 표시 됩니다. SalesDate, Subcategory, and 세부 정보를 제공 합니다. 세부 데이터는 모두 데이터 세트 쿼리로 검색된 데이터입니다.  
   
 13. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296451"
   
 1.  테이블을 마우스 오른쪽 단추로 클릭 두 셀 아래로 합니다 `[Sum(Sales)]` 셀 (부분합 행 하위 범주에 대 한 판매를 표시 하는) 및 클릭 **텍스트 상자 속성**합니다.  
   
-2.  **채우기**, 클릭 합니다 **fx** 단추 옆에 **채우기 색** 및 옵션에 다음 식을 입력를 **대 한 식 설정: BackgroundColor** 필드:  
+2.  **채우기**, 클릭 합니다 **fx** 단추 옆에 **채우기 색** 및 옵션에 다음 식을 입력를 **대 한 식 설정: BackgroundColor** 필드에 다음 식을 입력합니다.  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51ac8bee672064e07d66d924bc8efef0fc8aa1d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030564"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946439"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>데이터 연결이나 데이터 원본 추가 및 확인(보고서 작성기 및 SSRS)
   보고서 작성기에서는 보고서 서버에 있는 공유 데이터 원본을 추가하거나 보고서에 대한 포함된 데이터 원본을 만들 수 있습니다. 보고서 디자이너에서 공유 데이터 원본이나 포함된 데이터 원본을 만들고 보고서 서버에 배포할 수 있습니다.  
@@ -81,9 +81,9 @@ ms.locfileid: "56030564"
   
 2.  **연결 테스트**를 클릭합니다.  
   
-3.  연결이 성공적이면 “연결되었습니다.”라는 메시지가 나타납니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  연결이 성공 하면 다음과 같은 메시지가 표시 됩니다. "연결을 만들었습니다."입니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  연결이 성공적이지 않으면 "데이터 원본에 연결할 수 없습니다."라는 메시지가 나타납니다.  
+4.  연결이 성공 하는 경우 다음과 같은 메시지가 나타납니다. "데이터 원본에 연결할 수 없습니다."  
   
 5.  **자세히**를 클릭하고 표시되는 정보를 사용하여 문제를 해결합니다.  
   

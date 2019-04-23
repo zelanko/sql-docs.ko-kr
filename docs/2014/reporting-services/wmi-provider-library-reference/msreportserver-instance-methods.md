@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8b2c40220cceb6c0edb92ed0649c2337bd0850b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9a5fbc3725a5c25e257216e74a88f0b54d471bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036864"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953179"
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance 메서드
   MSReportServer_Instance 클래스는 클라이언트에서 설치된 보고서 서버에 연결하는 데 필요한 기본 정보를 제공합니다.  

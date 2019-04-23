@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012134"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963979"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
   데이터 경고 디자이너에서 데이터 경고 정의를 만들 수 있습니다. 경고 정의를 저장한 후 데이터 경고 디자이너에서 해당 정의를 다시 열어 편집한 후 다시 저장할 수 있습니다. 경고 정의 편집에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](manage-my-data-alerts-in-data-alert-manager.md) 및 [경고 디자이너에서 데이터 경고 편집](edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "56012134"
   
      선택한 열의 데이터 형식에 따라 다른 비교 연산자가 나열됩니다. 열에 날짜 데이터 형식이 포함된 경우 해당 규칙의 임계값 옆에 달력 아이콘이 표시됩니다. 달력에서 날짜를 클릭하거나 날짜를 입력하여 데이터를 입력할 수 있습니다.  
   
-     데이터 경고 디자이너는 **값 입력 모드** 하 고 **필드 선택 모드**합니다. 기본 모드는 **값 입력 모드**입니다. **값 입력 모드** 에 있고 **다음인 경우** 비교를 사용하는 경우에만 OR 절을 추가할 수 있습니다.  
+     데이터 경고 디자이너는 두 가지 비교 모드를 제공합니다. **값 입력 모드** 및 **필드 선택 모드**의 두 가지 비교 모드를 제공합니다. 기본 모드는 **값 입력 모드**입니다. **값 입력 모드** 에 있고 **다음인 경우** 비교를 사용하는 경우에만 OR 절을 추가할 수 있습니다.  
   
 9. OR 절을 추가하려면 아래쪽 화살표를 클릭한 다음 **값 입력 모드**를 클릭합니다.  
   

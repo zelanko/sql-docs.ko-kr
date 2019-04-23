@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583076"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952849"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 이 항목은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포를 업그레이드하는 방법은 일반적으로 두 가지가 있습니다.  
   
--   **업그레이드:** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은이 문서 및 관련된 항목 뒷부분에 나오는 '기본 모드에서 sharepoint 모드로 마이그레이션' 섹션을 참조 하세요 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)합니다.  
+-   **업그레이드:** 업그레이드는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 서버 및 현재 설치 된 인스턴스. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은이 문서 및 관련된 항목 뒷부분에 나오는 '기본 모드에서 sharepoint 모드로 마이그레이션' 섹션을 참조 하세요 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)합니다.  
   
--   **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고 보고서 항목 및 리소스를 새 환경에 복사하고 기존 내용을 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
+-   **마이그레이션**: 설치 및 새 SharePoint 환경을 구성에 보고서 항목 및 리소스를 새 환경에 복사 하 기존 내용을 사용 하도록 새 환경을 구성 합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
   
 ||  
 |-|  
@@ -113,7 +113,7 @@ ms.locfileid: "59583076"
   
 -   IIS의 기존 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리에 대한 모든 사용자 지정을 백업합니다.  
   
--   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못된 인증서가 있으면 업그레이드가 실패하고 Reporting Services 로그 파일에 다음과 같은 오류 메시지가 기록됩니다. **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Secure Sockets Layer (SSL) 인증서를 웹 사이트에서 구성 되지 않았습니다.** .  
+-   잘못된 SSL 인증서를 제거합니다.  여기에는 만료된 인증서 및 Reporting Services를 업그레이드하기 전에 업그레이드하지 않을 인증서가 포함됩니다.  잘못 된 인증서가 있으면 업그레이드가 실패 하 고 Reporting Services 로그 파일에 다음과 비슷한 오류 메시지가 기록 됩니다. **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Secure Sockets Layer (SSL) 인증서를 웹 사이트에서 구성 되지 않았습니다.** .  
   
  프로덕션 환경을 업그레이드하기 전에 프로덕션 환경과 동일하게 구성된 사전 프로덕션 환경에서 항상 테스트 업그레이드를 실행하십시오.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "59583076"
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> 기본 모드 업그레이드 및 마이그레이션 시나리오  
- **업그레이드:** 기본 모드의 내부 업그레이드 프로세스는 이 항목의 앞부분에 나와 있는 지원되는 각 버전에 사용되는 프로세스와 동일합니다. SQL Server 설치 마법사 또는 명령줄 설치를 실행합니다. 설치하면 보고서 서버 데이터베이스가 새 보고서 서버 데이터베이스 스키마로 자동 업그레이드됩니다. 자세한 내용은 이 항목의 [In-place upgrade](#bkmk_inplace_upgrade) 섹션을 참조하세요.  
+ **업그레이드:** 기본 모드에 대 한 전체 업그레이드는 지원 되는이 항목의 앞부분에 나열 된 버전 각각에 대 한 프로세스와 동일 합니다. SQL Server 설치 마법사 또는 명령줄 설치를 실행합니다. 설치하면 보고서 서버 데이터베이스가 새 보고서 서버 데이터베이스 스키마로 자동 업그레이드됩니다. 자세한 내용은 이 항목의 [In-place upgrade](#bkmk_inplace_upgrade) 섹션을 참조하세요.  
   
  업그레이드할 기존 보고서 서버 인스턴스를 선택하면 업그레이드 프로세스가 시작됩니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "59583076"
   
 9. 설치 프로그램이 구성 파일의 설정을 병합합니다. 현재 설치의 구성 파일을 기준으로 새 항목이 추가됩니다. 사용하지 않는 항목은 제거되지는 않지만 업그레이드가 끝난 후 보고서 서버에서 더 이상 읽어 들이지 않습니다. 업그레이드할 때 IIS에 있는 이전 로그 파일, 사용되지 않는 RSWebApplication.config 파일 또는 가상 설정이 삭제되지 않으며, SQL Server 2005 보고서 디자이너, Management Studio 또는 기타 클라이언트 도구도 제거되지 않습니다. 따라서 이러한 파일과 도구가 더 이상 필요하지 않을 경우에는 업그레이드가 끝난 후 제거해야 합니다.  
   
- **마이그레이션:** 이전 버전의 기본 모드 설치를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]으로 마이그레이션하는 단계는 이 항목의 앞부분에 나와 있는 지원되는 모든 버전에 사용되는 단계와 동일합니다. 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)을 참조하세요.  
+ **마이그레이션:** 이전 버전의 기본 모드 설치를 마이그레이션하 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는이 항목의 앞부분에 나와 있는 지원 버전 모두에 대 한 동일한 단계에 있습니다. 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)을 참조하세요.  
   
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "59583076"
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 또는 SharePoint 2013  
   
--   **SharePoint  2010:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 전체 업그레이드가 지원되지만 업그레이드 시나리오에는 SharePoint 환경의 작동 중단 시간이 필요합니다.  
+-   **SharePoint  2010:** 전체 업그레이드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 업그레이드 시나리오에는 SharePoint 환경의 작동 중단 시간이 필요 하지만 합니다.  
   
      종료 환경에서 SharePoint 2013을 실행하도록 하려면 SharePoint 2010에서 SharePoint 2013으로 데이터베이스 연결 업그레이드를 완료해야 합니다.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "59583076"
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 애플리케이션 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **시작 환경:** SQL Server 2008 R2, SharePoint 2010  
+ **시작 환경:** SQL Server 2008 R2, SharePoint 2010.  
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010  
   
@@ -228,7 +228,7 @@ ms.locfileid: "59583076"
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 -&gt; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **시작 환경:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007  
+ **시작 환경:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007.  
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010  
   
@@ -248,7 +248,7 @@ ms.locfileid: "59583076"
  ![맨 위 링크와 함께 사용 되는 화살표 아이콘](../../2014-toc/media/uparrow16x16.gif "맨 위 링크와 함께 사용 되는 화살표 아이콘") [이 항목의 합니다.](#bkmk_top)  
   
 ### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 -&gt; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **시작 환경:** SQL Server 2005 SP2, SharePoint 2007  
+ **시작 환경:** SQL Server 2005 SP2, SharePoint 2007.  
   
  **종료 환경:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010  
   

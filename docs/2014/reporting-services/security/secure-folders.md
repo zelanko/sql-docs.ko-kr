@@ -13,15 +13,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 338bd9ce47d0cc8ba323677af438793083337bc4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034824"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956579"
 ---
 # <a name="secure-folders"></a>보안 폴더
   폴더 보안 설정은 보고서 서버의 모든 내용에 보안을 설정하기 위한 기본 토대입니다. 보안 설정은 폴더 구조를 통해 상속되므로 폴더 계층의 큰 부분이나 작은 부분을 지정하여 특정 종류의 액세스를 허용할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "56034824"
   
 |태스크 선택|제공되는 사용 권한|  
 |----------------------|---------------------------|  
-|폴더 보기|폴더 계층과 폴더가 생성 및 수정된 시기를 나타내는 읽기 전용 속성을 봅니다.<br /><br /> 사용자가 "보고서 보기", "모델 보기", "리소스 보기" 및 "데이터 원본 보기"가 포함되는 역할에 할당되지 않으면 폴더의 항목을 볼 수 없습니다.|  
+|폴더 보기|폴더 계층과 폴더가 생성 및 수정된 시기를 나타내는 읽기 전용 속성을 봅니다.<br /><br /> 또한 다음 작업을 포함 하는 역할에 할당 되지 않으면 사용자 폴더에 항목을 볼 수 없습니다. "보고서 보기" "모델 보기", "리소스 보기" 및 "데이터 원본 보기."|  
 |폴더 관리|폴더 속성을 보거나, 이름 또는 설명을 변경하거나, 폴더를 다른 위치로 이동합니다. 이 태스크를 지정하면 사용자가 폴더를 만들 수 있습니다.|  
 |보고서 관리|파일 시스템의 보고서를 폴더에 추가하고, 보고서 디자이너의 보고서를 보고서 서버에 게시합니다.|  
 |데이터 원본 관리|폴더에 새 공유 데이터 원본 항목을 추가하거나 기존 공유 데이터 원본을 변경합니다.|  

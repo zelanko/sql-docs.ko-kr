@@ -33,15 +33,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24b1fbcacee78de2448100d9b46f79b412140a66
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287131"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948639"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>테이블, 행렬 및 목록(보고서 작성기 및 SSRS)
   테이블, 행렬 및 목록은 행과 열로 구성되는 셀에 보고서 데이터를 표시하는 데이터 영역입니다. 셀에는 보통 텍스트, 날짜, 숫자 등의 텍스트 데이터가 포함되지만 계기, 차트, 또는 보고서 항목(예: 이미지)도 포함될 수 있습니다. 테이블, 행렬 및 목록을 집합적으로 테이블릭스 데이터 영역이라고 하는 경우가 많습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "56287131"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- 빠르게 시작 하려면 테이블, 행렬 및 목록을 참조 하세요. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)하십시오 [자습서: 행렬 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-matrix-report-report-builder.md), 및 [자습서: 자유 형식 보고서 만들기 &#40;보고서 작성기&#41;](../tutorial-creating-a-free-form-report-report-builder.md)합니다.  
+ 테이블, 행렬 및 목록을 빠르게 시작하려면 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [자습서: 행렬 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-matrix-report-report-builder.md) 및 [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-free-form-report-report-builder.md)를 참조하세요.  
   
 > [!NOTE]  
 >  테이블, 행렬 및 목록을 보고서와는 별도로 보고서 파트로 게시할 수 있습니다. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +82,7 @@ ms.locfileid: "56287131"
   
  ![도구 상자에서 추가된 새 행렬 선택](../media/rs-matrixtemplatenewselected.gif "도구 상자에서 추가된 새 행렬 선택")  
   
- 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면 열 그룹에는 열이, 행 그룹에는 행이 추가되면 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀에는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 예를 들어 행렬에 판매량 합계를 표시하는 행 그룹 하나(Category)와 열 그룹 두 개(Territory, Year)가 있는 경우 보고서에서는 두 개의 셀에 Category 그룹의 각 값에 대한 판매량 합계가 표시됩니다. 셀의 범위가 되는 두 교차점은 Category/Territory 및 Category/Year입니다. 이 행렬에는 중첩된 그룹과 인접 그룹이 포함될 수 있습니다. 중첩된 그룹에는 부모-자식 관계가 있으며 인접 그룹에는 피어 관계가 있습니다. 행렬 내에 있는 중첩된 행 및 열 그룹의 일부 및 모든 수준에 대해 부분합을 추가할 수 있습니다.  
+ 행 및 열 그룹의 여러 필드나 식으로 데이터를 그룹화할 수 있습니다. 런타임에 보고서 데이터 및 데이터 영역이 결합되면 열 그룹에는 열이, 행 그룹에는 행이 추가되면 페이지에서 행렬이 가로와 세로 방향으로 확장됩니다. 행렬 셀에는 셀이 속한 행 및 열 그룹의 교차점으로 한정된 집계 값이 표시됩니다. 예를 들어 행렬에 판매량 합계를 표시하는 행 그룹 하나(Category)와 열 그룹 두 개(Territory, Year)가 있는 경우 보고서에서는 두 개의 셀에 Category 그룹의 각 값에 대한 판매량 합계가 표시됩니다. 셀의 범위는 두 교차점은 다음과 같습니다. 범주 및 Territory 및 범주와 연도입니다. 이 행렬에는 중첩된 그룹과 인접 그룹이 포함될 수 있습니다. 중첩된 그룹에는 부모-자식 관계가 있으며 인접 그룹에는 피어 관계가 있습니다. 행렬 내에 있는 중첩된 행 및 열 그룹의 일부 및 모든 수준에 대해 부분합을 추가할 수 있습니다.  
   
  행렬 데이터를 보다 읽기 쉽게 만들고 뚜렷하게 표시할 데이터를 강조하려면 셀을 가로 또는 세로로 병합하거나 분할하고 데이터 및 그룹 제목에 서식을 적용할 수 있습니다.  
   

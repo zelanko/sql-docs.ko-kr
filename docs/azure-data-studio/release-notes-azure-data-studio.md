@@ -3,7 +3,7 @@ title: 릴리스 정보
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 릴리스 정보
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381591"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963789"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
 **[다운로드 하 고 최신 릴리스를 설치!](download.md)**
+
+## <a name="april-2019"></a>2019년 4월
+
+2019 년 4 월 18 일 &nbsp;  /  &nbsp; 버전: 1.6.0 
+
+&nbsp;
+
+| 변경 | 설명 |
+| :----- | :------ |
+| 이름을 바꿀 **서버** 탭을 **연결** | |
+| Azure 리소스 탐색기는 Azure viewlet 연결에서로 이동 | 이제 사용자가 연결 보기에서 Azure viewlet 통해 자신의 Azure SQL 인스턴스를 볼 수 있으며 각 서버 또는 데이터베이스에서 개체를 보려면 확장.|
+| SQL 전자 필기장 개선 사항 | &bull; &nbsp; 모든 셀에 대 한 출력을 지우려면 도구 모음에서 추가 단추 <br/>&bull; &nbsp; 모든 셀을 실행 하려면 도구 모음의 추가 단추 <br/>&bull; &nbsp; 서버 이름 대신 고정된 연결 이름 (하는 경우 설정) 드롭다운에 연결 <br/>&bull; &nbsp; 상대 이미지 경로 사용 하는 경우 렌더링 되지 않는 markdown에서 이미지에 대 한 수정 <br/>&bull; &nbsp; 향상 된 기능을 추가 하 여 notebook 표가 자동으로 조정 열 크기를 두 번 클릭 및 마우스 휠을 지원 향상 <br/>&bull; &nbsp; 향상 된 오류 처리 및 python notebook 통해 python을 설치 하는 경우 복원 력을 설치합니다 <br/>&bull; &nbsp; Notebook 셀을 선택 하는 경우 "모두 선택" 기능 향상 <br/>&bull; &nbsp; Notebook을 닫고는 개체 탐색기 연결에 영향을 주지 않으려면 notebook 연결의 향상 된 기능 <br/>&bull; &nbsp; Notebook의 연결이 끊어지고 셀을 실행 하는 연결이 필요한 경우 사용자에 게 메시지를 표시 하려면 향상 된 전자 필기장 환경<br/>&bull; &nbsp; 광고를 다시 시작할 때 광고에서 리하이드레이션 하는 저장 되지 않은 전자 필기장에 대 한 향상 된 지원 |
+| 해결 된 버그 및 문제입니다. | 참조 [버그 및 GitHub에서 문제](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1)합니다. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>3 월 2019 (핫픽스)
 

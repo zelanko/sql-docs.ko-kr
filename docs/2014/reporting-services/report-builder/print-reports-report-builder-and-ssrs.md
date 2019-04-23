@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290461"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949349"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)
   보고서 서버에 보고서를 저장한 후에는 내보낸 보고서를 보는 데 사용되는 애플리케이션, 보고서 관리자 또는 브라우저에서 보고서를 보고 인쇄할 수 있습니다. 보고서를 저장하기 전 미리 볼 때 해당 보고서를 인쇄할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "56290461"
  다른 애플리케이션으로 내보낸 보고서를 인쇄하는 방법을 설명합니다.  
   
  [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- 보고서를 인쇄하는 방법, 페이지 여백을 조절하는 방법, 하드 페이지 나누기 렌더러(PDF, 이미지 또는 인쇄)로 렌더링할 보고서의 용지 크기를 지정하는 방법에 대한 단계별 지침을 제공합니다.  
+ 보고서를 인쇄 하는 방법에 대 한 단계별 지침을 제공 하는 하드 페이지 나누기 렌더러로 렌더링할 보고서의 용지 크기를 지정 하는 방법에는 페이지 여백을 조절 하는 방법. PDF, 이미지 또는 인쇄 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서를 내보내는 &#40;보고서 작성기 및 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

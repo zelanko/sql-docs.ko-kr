@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dcb6feb0accb9c8033ea6f7d58a645aae31bc25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017751"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953379"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 애플리케이션에서 보고서 서버 작업에 대한 사용 권한 설정
   SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트에 정의된 보안 설정에 따라 보고서, 보고서 모델 및 공유 데이터 원본을 보고 관리하는 방법이 결정됩니다. 기본 SharePoint 그룹, 사용 권한 수준 및 사용 권한 할당을 사용하는 경우 현재 보안 설정을 사용하여 보고서 및 기타 문서에 대해 작업을 수행할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "56017751"
   
  미리 정의된 사용 권한 수준을 사용하고 있다면 위의 사용 권한이 모든 권한, 디자인, 참가, 읽기 및 제한된 액세스에 이미 포함되어 있으므로 아무런 동작도 수행할 필요가 없습니다. 그러나 사용자 지정 권한 수준을 사용하거나 특정 사용자 또는 그룹에 할당된 권한을 편집하는 경우 사용 권한을 직접 추가해야 합니다.  
   
- "사용자 정보 찾아보기" 권한이 있는 경우 보고서 서버는 항목의 작성자 및 항목을 마지막으로 수정한 사용자에 대한 정보를 반환할 수 있습니다. 이 사용 권한이 없는 경우 보고서 서버는 다음 오류를 반환합니다. 찾아보기 작업에 대한 오류: "보고서 서버에 SharePoint 오류가 발생 했습니다. ---> System.UnauthorizedAccessException: "액세스가 거부 되었습니다. 게시 작업의 경우 오류는: "사용자에 게 부여 된 권한에 '\<도메인 >\\< 사용자\>'이 작업을 수행 하는 데 충분 하지 않습니다."  
+ "사용자 정보 찾아보기" 권한이 있는 경우 보고서 서버는 항목의 작성자 및 항목을 마지막으로 수정한 사용자에 대한 정보를 반환할 수 있습니다. 이 사용 권한이 없는 경우 보고서 서버는 다음 오류를 반환합니다. 찾아보기 작업의 경우 오류는 다음과 같습니다. "보고서 서버에 SharePoint 오류가 발생 했습니다. ---> System.UnauthorizedAccessException: "액세스가 거부 되었습니다. 게시 작업의 경우 오류는: "사용자에 게 부여 된 권한에 '\<도메인 >\\< 사용자\>'이 작업을 수행 하는 데 충분 하지 않습니다."  
   
 ##  <a name="permissionReports"></a> 보고서 보기 및 관리 권한  
  보고서 정의 권한은 보고서가 포함된 라이브러리의 목록 사용 권한을 통해 정의되지만 액세스를 제한하려는 경우 개별 보고서에 대해 사용 권한을 설정할 수 있습니다. 다음 표에서는 태스크 목록과 각 태스크를 지원하는 사용 권한을 설명합니다.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032425"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953499"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
   리소스의 일반 속성 페이지를 사용하여 리소스의 이름을 바꾸거나 리소스를 삭제, 이동 또는 대체할 수 있습니다. 리소스를 추가하거나 속성을 수정한 사람에 대한 정보가 페이지의 맨 위에 표시됩니다.  

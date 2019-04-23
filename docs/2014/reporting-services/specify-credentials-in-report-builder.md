@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 394bd37e587a0e42316a402aaec2e33691897244
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296931"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956069"
 ---
 # <a name="specify-credentials-in-report-builder"></a>보고서 작성기에 자격 증명 지정
   자격 증명은 데이터 원본에서 데이터를 검색하려는 사용자를 인증합니다. 데이터 원본의 소유자는 사용해야 하는 자격 증명의 유형을 결정합니다. 예를 들어, 데이터베이스 관리자는 사용자가 Windows 사용자 이름과 암호를 입력해야 하도록 지정할 수 있습니다.  

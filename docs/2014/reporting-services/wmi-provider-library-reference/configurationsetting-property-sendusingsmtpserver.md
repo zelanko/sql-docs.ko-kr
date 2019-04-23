@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 87f1a5fa6b7dd6d3d100665d0808f894b8224d9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040864"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956809"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 전자 메일 구성에 있는 `SendUsing` 요소가 `true`로 설정되어 있는지 여부를 지정합니다.  
@@ -40,7 +40,7 @@ public Boolean SendUsingSMTPServer;
 ```  
   
 ## <a name="property-values"></a>속성 값  
- 읽기 전용 `Boolean` 개체입니다.  
+ 읽기 전용 `Boolean` 개체  
   
 ## <a name="example-code"></a>코드 예  
  [MSReportServer_ConfigurationSetting 클래스](msreportserver-configurationsetting-class.md)  

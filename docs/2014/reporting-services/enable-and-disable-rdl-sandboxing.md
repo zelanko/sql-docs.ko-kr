@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013184"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956989"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL 샌드박싱 설정 및 해제
   RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 서버의 단일 웹 팜을 여러 명이 사용하는 환경에서 각 개인에 대해 특정 유형의 리소스 사용을 검색하고 제한할 수 있습니다. 여러 명 그리고 경우에 따라 서로 다른 회사에서 사용할 수 있는 보고서 서버의 단일 웹 팜을 유지 관리하는 호스팅 서비스 시나리오를 예로 들 수 있습니다. 보고서 서버 관리자는 이 기능을 설정하여 다음과 같이 할 수 있습니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "56013184"
   
 -   식의 명명된 매개 변수  
   
- 이 항목에서는 RSReportServer.Config 파일에서 <`RDLSandboxing`> 요소의 각 요소에 대해 설명합니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)를 참조하세요.  
+ 이 항목에서는 각 요소에 설명 합니다 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다. 이 파일을 수정하는 방법은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요. 서버 추적 로그는 RDL 샌드박싱 기능과 관련된 작업을 기록합니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](report-server/report-server-service-trace-log.md)를 참조하세요.  
   
 ## <a name="example-configuration"></a>구성 예  
- 다음 예에서는 RSReportServer.Config 파일의 <`RDLSandboxing`> 요소에 대한 설정 및 값 예를 보여 줍니다.  
+ 다음 예제에서는 설정 및 예제 값을 <`RDLSandboxing`> RSReportServer.Config 파일의 요소입니다.  
   
 ```  
 <RDLSandboxing>  

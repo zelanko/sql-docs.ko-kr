@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, what's new
 - SSRS, what's new
 ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 82ae5b3791fdd2b24ddba59be26659630b62c32f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 22b0caaa33d25ec74b1f2e34a363461ddc364111
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941899"
 ---
 # <a name="what39s-new-reporting-services"></a>새로운&#39;s (Reporting Services)
   

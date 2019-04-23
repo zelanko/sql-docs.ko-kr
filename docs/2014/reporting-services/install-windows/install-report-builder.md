@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe09fad05cc445b99ded7a35dc1e6b04b07f6450
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296861"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956529"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
   보고서 작성기를 설치할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=168472) 또는 보고서 작성기는 Windows Installer 패키지인 ReportBuilder3_x86.msi를가지고 있는 공용 폴더와 같은 위치 다운로드 되었습니다.  
   
- 보고서 작성기의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 보고서 작성기에서 제공하는 사용자 지정 매개 변수인 RBINSTALLDIR과 REPORTSERVERURL입니다. RBINSTALLDIR은 보고서 작성기의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 보고서 작성기에서 보고서를 서버에 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
+ 보고서 작성기의 명령줄 설치를 수행하고 인수를 제공하여 설치를 사용자 지정할 수도 있습니다. 표준 MSI 내장 매개 변수 외에도 보고서 작성기를 제공 하는 사용자 지정 매개 변수를 사용할 수 있습니다. RBINSTALLDIR과 REPORTSERVERURL입니다. RBINSTALLDIR은 보고서 작성기의 루트 설치 폴더를 지정합니다. REPORTSERVERURL은 보고서 작성기에서 보고서를 서버에 저장하기 위해 사용하는 기본 보고서 서버를 지정합니다.  
   
  사용자 인터페이스의 상호 작용이 필요 없는 완전 자동 설치를 수행하려면 **/quiet** 옵션을 지정합니다. 기본적으로 quiet 옵션 플래그를 사용하면 설치 오류가 표시되지 않습니다. 따라서 quite 옵션을 사용할 때는 로깅을 지정하는 **/l** 옵션을 함께 사용하는 것이 좋습니다.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56296861"
   
      `msiexec/i ReportBuilder3_.msi /option [value] [/option [value]]`  
   
-     보고서 작성기 설치에만 해당하는 두 가지 옵션은 RBINSTALLDIR과 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
+     보고서 작성기를 설치할 때 특정 두 옵션은 RBINSTALLDIR과 REPORTSERVERURL입니다. 이러한 인수는 명령줄에 포함하지 않아도 됩니다. 기본 명령은 다음과 같습니다.  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   

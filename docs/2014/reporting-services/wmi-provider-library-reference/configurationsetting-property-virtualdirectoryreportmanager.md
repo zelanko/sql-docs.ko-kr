@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportManager property
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e5023fbfcf7ebdd9e5a012fafb128aac25424ddb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fd46048e1c1361a8594503b9fa780d774ee4790f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016655"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942689"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다. 읽기 전용입니다.  

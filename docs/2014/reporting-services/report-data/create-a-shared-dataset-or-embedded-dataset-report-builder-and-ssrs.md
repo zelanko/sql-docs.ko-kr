@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc91e50c96018e14066f6e6cc0ad4625c128b639
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011164"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953089"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
   단일 보고서에 사용할 포함된 데이터 세트를 만들거나 여러 보고서에 사용하기 위해 보고서 서버에 저장할 공유 데이터 세트를 만들 수 있습니다. 데이터 세트를 만들려면 포함된 데이터 원본 또는 공유 데이터 원본이 있어야 합니다.  

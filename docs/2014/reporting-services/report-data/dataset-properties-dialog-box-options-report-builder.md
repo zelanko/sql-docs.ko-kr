@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b708b0ee524cbba2e7f1c6c173e067024f5d54b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cbf7814d51fd0f726a60d3b177af18fbeba223d2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039744"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971289"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>데이터 세트 속성 대화 상자, 옵션(보고서 작성기)
   **데이터 집합속성** 대화 상자에서 **옵션** 을 선택하여 데이터 정렬 옵션 및 부분합을 세부 데이터로 처리하는 옵션 등 쿼리에 대한 데이터 옵션을 변경할 수 있습니다. 데이터 정렬에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../relational-databases/collations/collation-and-unicode-support.md) 에서 [데이터 정렬 및 유니코드 지원](https://go.microsoft.com/fwlink/?linkid=98335)을 참조하세요.  

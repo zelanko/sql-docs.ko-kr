@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292261"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956598"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램은 보고서에서 사용할 수 있는 데이터 피드와 보고서의 데이터 영역에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서를 생성합니다. 이 확장 프로그램을 사용하면 보고서에서 생성된 데이터 피드를 사용할 수 있는 애플리케이션을 사용하여 읽을 수 있고 교환할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 예를 들어 Atom 렌더링 확장 프로그램을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 데이터 피드를 생성할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "56292261"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- 이 보고서에서 생성된 Atom 서비스 문서는 두 가지 데이터 피드(각 동적 피어 열에 대한 데이터 피드)를 포함합니다. 즉, Territory 및 Year가 이에 해당합니다. 다음 다이어그램에서는 각 데이터 피드의 내용을 보여 줍니다.  
+ 이 보고서에서 생성 된 Atom 서비스 문서는 각 동적 피어 열에 대 한 두 가지 데이터 피드가 포함 됩니다. Territory 및 Year입니다. 다음 다이어그램에서는 각 데이터 피드의 내용을 보여 줍니다.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
@@ -86,7 +86,7 @@ ms.locfileid: "56292261"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 다음 XML에서는 데이터 피드에 있는 해당 보고서의 <`entry`> 요소를 보여 줍니다. <`entry`> 요소에는 그룹의 판매량 및 주문량 합계와 모든 그룹의 판매량 및 주문량 합계가 포함되어 있습니다. <`entry`> 요소에는 보고서의 모든 값이 포함되어 있습니다.  
+ 에서는 다음 XML <`entry`> 보고서 데이터 피드의 요소입니다. 에 <`entry`> 요소 그룹에 대 한 주문을 확인 하 고 판매의 합계와의 모든 그룹의 판매량 및 합계를 포함 합니다. <`entry`> 요소에는 보고서의 모든 값이 포함되어 있습니다.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   

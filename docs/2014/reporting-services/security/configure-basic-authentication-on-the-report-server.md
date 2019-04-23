@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019334"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942739"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>보고서 서버에서 기본 인증 구성
   기본적으로 Reporting Services는 Negotiate 및 NTLM 인증을 지정하는 요청을 수락합니다. 현재 배포에 기본 인증을 사용하는 클라이언트 애플리케이션 또는 브라우저가 포함된 경우 지원되는 유형 목록에 기본 인증을 추가해야 합니다. 또한 보고서 작성기를 사용하려면 보고서 작성기 파일에 대한 익명 액세스를 설정해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "56019334"
   
      파일에 위치한  *\<드라이브 >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer입니다.  
   
-2.  <`Authentication`>을(를) 찾습니다.  
+2.  찾을 <`Authentication`>.  
   
 3.  다음 중 필요에 가장 맞는 XML 구조를 복사합니다. 첫 번째 XML 구조는 다음 섹션에 설명되어 있는 모든 요소를 지정하기 위한 자리 표시자를 제공합니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56019334"
           </AuthenticationTypes>  
     ```  
   
-4.  <`Authentication`>의 기존 항목을 선택하고 붙여넣어 덮어씁니다.  
+4.  에 대 한 기존 항목 위에 붙여넣습니다 <`Authentication`>.  
   
      여러 인증 유형을 사용하는 경우 `RSWindowsBasic` 요소만 추가하고 `RSWindowsNegotiate`, `RSWindowsNTLM` 또는 `RSWindowsKerberos`에 대한 요소는 삭제하지 마십시오.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "56019334"
   
 |요소|필수|유효한 값|  
 |-------------|--------------|------------------|  
-|LogonMethod|사용자 계정 컨트롤<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|`2` = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0(대화형 로그온) 및 1(일괄 처리 로그온)은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에서 지원되지 않습니다.|  
+|LogonMethod|사용자 계정 컨트롤<br /><br /> 값을 지정하지 않으면 3이 사용됩니다.|`2` = 일반 텍스트 암호를 인증하는 고성능 서버를 위한 네트워크 로그온입니다.<br /><br /> `3` = 각 HTTP 요청과 함께 전송되는 인증 패키지에 로그온 자격 증명을 유지하여 서버가 네트워크의 다른 서버에 연결할 때 사용자를 가장할 수 있도록 하는 일반 텍스트 로그온입니다. (기본값)<br /><br /> 참고: 값 0 (대화형 로그온) 및 1 (일괄 처리 로그온)에서 지원 되지 않습니다 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]합니다.|  
 |Realm|선택 사항|조직의 보호된 리소스에 대한 액세스를 제어하는 데 사용되는 권한 부여 및 인증 기능이 포함된 리소스 파티션을 지정합니다.|  
 |DefaultDomain|선택 사항|사용자를 인증할 때 서버가 사용하는 도메인을 지정합니다. 이 값은 선택 사항이지만 생략하면 보고서 서버가 컴퓨터 이름을 도메인으로 사용합니다. 컴퓨터가 도메인 멤버인 경우 해당 도메인이 기본 도메인입니다. 도메인 컨트롤러에 보고서 서버를 설치한 경우에는 컴퓨터에서 제어되는 도메인이 사용됩니다.|  
   
@@ -138,7 +138,7 @@ ms.locfileid: "56019334"
   
      Web.config 파일을 포함하는 경우 인증 모드가 `Windows`로 설정되어 있어야 합니다.  
   
-     `Identity impersonate`은 `True` 또는 `False`이 될 수 있습니다.  
+     `Identity impersonate`은 `True` 또는 `False`가 될 수 있습니다.  
   
     -   ASP.NET에서 보안 토큰을 읽지 않도록 하려면 `False`로 설정합니다. 요청은 보고서 서버 서비스의 보안 컨텍스트에서 실행됩니다.  
   
