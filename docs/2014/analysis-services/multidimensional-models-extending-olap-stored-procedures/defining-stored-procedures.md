@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services]
@@ -17,12 +15,12 @@ ms.assetid: f9c57d91-f60f-4f0e-8f7f-d87f4ba97b7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fdfb9e72609596fe41813ad6de3fde2dd070320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 69daca3a13cf5318e102002f0edfcb98b80ff9d1
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142283"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158734"
 ---
 # <a name="defining-stored-procedures"></a>저장 프로시저 정의
   저장된 프로시저를 사용 하 여에서 외부 루틴을 호출할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 저장 프로시저에서 호출할 외부 루틴을 C, C++, C#, Visual Basic 또는 Visual Basic .NET과 같은 CLR(공용 언어 런타임) 언어로 작성할 수 있습니다. 저장 프로시저는 한 번 만든 다음 다른 저장 프로시저, 계산 측정값 또는 클라이언트 응용 프로그램과 같은 다양한 컨텍스트에서 호출할 수 있습니다. 저장 프로시저를 사용하면 공통 코드를 한 번 개발한 다음 단일 위치에 저장하여 재사용할 수 있으므로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 개발 및 구현이 간편해집니다. 또한 MDX의 기본 기능에서 제공하지 않는 비즈니스 기능을 애플리케이션에 추가할 수 있습니다.  

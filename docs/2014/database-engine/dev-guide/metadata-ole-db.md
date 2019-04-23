@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
@@ -15,12 +13,12 @@ ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f41bffff76ec2fb18341f1ff083c4f2f748847c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059723"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154429"
 ---
 # <a name="metadata-ole-db"></a>메타데이터(OLE DB)
   이 섹션에서는 매개 변수 메타데이터, 결과 집합 열 메타데이터 및 스키마 행 집합 메타데이터에 대해 설명합니다.  

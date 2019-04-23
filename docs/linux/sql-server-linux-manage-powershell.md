@@ -10,22 +10,22 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 18b0fec36a572893cb5150ef75973df674cf875d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 903d2d89ca0d551cbb78cfb69dd305f852f62313
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685831"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158769"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Linux의 SQL Server를 관리 하는 Windows에서 PowerShell을 사용 하 여
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 소개 [SQL Server PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Linux의 SQL Server와 함께 사용 하는 방법에 몇 가지 예가 단계적으로 안내 합니다. SQL Server에 대 한 PowerShell 지원, Windows에서 현재 사용할 수 이므로 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터의 경우 사용할 수 있습니다.
+이 문서에서는 소개 [SQL Server PowerShell](../powershell/sql-server-powershell.md) Linux의 SQL Server와 함께 사용 하는 방법에 몇 가지 예가 단계적으로 안내 합니다. SQL Server에 대 한 PowerShell 지원, Windows에서 현재 사용할 수 이므로 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터의 경우 사용할 수 있습니다.
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows에서 SQL PowerShell의 최신 버전을 설치 합니다.
 
-[SQL PowerShell](https://msdn.microsoft.com/library/mt740629.aspx) Windows에 포함 되어 [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md)합니다. SQL Server에서 작업할 때 항상 최신 버전의 SSMS 및 SQL PowerShell를 사용 해야 합니다. 최신 버전의 SSMS는 지속적으로 업데이트 하 고 최적화 하 고 현재 Linux에서 SQL Server를 사용 하 여 작동 합니다. 다운로드 하 고 최신 버전 설치를 참조 하세요 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)합니다. 최신, 최신 버전의 SSMS 묻는 새 버전을 다운로드할 수 있으면 됩니다.
+[SQL PowerShell](../powershell/download-sql-server-ps-module.md) Windows에 PowerShell 갤러리에 유지 됩니다. SQL Server에서 작업할 때 SqlServer PowerShell 모듈의 최신 버전 항상 사용 해야 합니다.
 
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항
 
@@ -58,8 +58,7 @@ PowerShell은 다음 출력과 유사한 정보가 표시 되어야 합니다.
 ```
 ModuleType Version    Name          ExportedCommands
 ---------- -------    ----          ----------------
-Script     0.0        SqlServer
-Manifest   20.0       SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
+Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
 ## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server에 연결 하 고 서버 정보 가져오기
@@ -68,7 +67,6 @@ Linux의 SQL Server 인스턴스에 연결의 서버 속성을 표시 하에서 
 
 복사 하 고 PowerShell 프롬프트에서 다음 명령을 붙여 넣습니다. 이러한 명령은 실행 하면 PowerShell 됩니다.
 - 표시 된 *Windows PowerShell 자격 증명 요청* 자격 증명을 묻는 대화 (*SQL 사용자 이름* 및 *SQL 암호*) SQL Server에 연결 Linux 기반 인스턴스
-- SQL Server Management Objects (SMO) 어셈블리를 로드 합니다.
 - 인스턴스를 만듭니다는 [Server](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.server.aspx) 개체
 - 에 연결 합니다 **Server** 몇 가지 속성을 표시 하 고
 
@@ -79,26 +77,17 @@ Linux의 SQL Server 인스턴스에 연결의 서버 속성을 표시 하에서 
 $serverInstance = "<your_server_instance>"
 $credential = Get-Credential
 
-# Load the SMO assembly and create a Server object
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SMO') | out-null
-$server = New-Object ('Microsoft.SqlServer.Management.Smo.Server') $serverInstance
-
-# Set credentials
-$server.ConnectionContext.LoginSecure=$false
-$server.ConnectionContext.set_Login($credential.UserName)
-$server.ConnectionContext.set_SecurePassword($credential.Password)
-
 # Connect to the Server and get a few properties
-$server.Information | Select-Object Edition, HostPlatform, HostDistribution | Format-List
+Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
 PowerShell은 다음 출력과 유사한 정보가 표시 되어야 합니다.
 
 ```
-Edition          : Developer Edition (64-bit)
-HostPlatform     : Linux
-HostDistribution : Ubuntu
+Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution                
+-------------                   -------    ------------ -----------  ------------ ----------------                
+your_server_instance            14.0.3048  RTM          CU13         Linux        Ubuntu 
 ```
 > [!NOTE]
 > 아무 것도 이러한 값에 대 한 표시를 하는 경우 대상 SQL Server 인스턴스에 대 한 연결 가능성이 실패 했습니다. SQL Server Management Studio에서 연결 하려면 동일한 연결 정보를 사용할 수 있습니다 있는지 확인 합니다. 그런 다음 [connection troubleshooting recommendations](sql-server-linux-troubleshooting-guide.md#connection)(연결 문제 해결 권장 사항)를 검토합니다.

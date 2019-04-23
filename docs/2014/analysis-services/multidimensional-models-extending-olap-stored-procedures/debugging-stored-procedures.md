@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
@@ -15,12 +13,12 @@ ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f02cd9ec48a961336bcddc96024106702525899f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179783"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155542"
 ---
 # <a name="debugging-stored-procedures"></a>저장 프로시저 디버깅
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저는 실제로 C#이나 다른 CLR 또는 COM 언어로 작성되는 CLR 또는 COM 라이브러리(대개 DLL)입니다. 따라서 저장 프로시저를 디버깅하는 것은 Visual Studio 디버깅 환경에서 다른 응용 프로그램을 디버깅하는 것과 매우 유사합니다. 통합된 디버깅 기능을 사용하여 Visual Studio 개발 환경에서 저장 프로시저를 디버깅합니다. 이를 통해 프로시저 위치에서 중지하고 메모리와 레지스터 값을 검사하고 변수를 변경하고 메시지 트래픽을 관찰하고 코드 작동 방식을 자세히 살펴볼 수 있습니다.  

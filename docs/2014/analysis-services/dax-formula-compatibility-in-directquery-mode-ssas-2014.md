@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372665"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154249"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  
@@ -265,7 +263,7 @@ DirectQuery 모드에서는 반환되는 문자의 대/소문자가 항상 데�
   
 기본적으로는 대/소문자를 구분하지 않지만 악센트는 구분하는 Latin1_General 데이터 정렬이 사용됩니다. 따라서 소문자, 대문자 또는 대/소문자로 된 텍스트 문자열 인스턴스가 여러 개 있는 경우 모든 인스턴스가 동일한 문자열로 간주되어 첫 번째 문자열 인스턴스만 인덱스에 저장됩니다. 저장된 문자열에 대해 작동하는 모든 텍스트 함수는 인덱싱된 형태의 지정된 부분을 검색합니다. 따라서 위의 수식 예에서는 전체 열에 대해 첫 번째 인스턴스를 입력으로 사용하여 동일한 값이 반환됩니다.  
   
-[테이블 형식 모델의 문자열 저장소 및 데이터 정렬](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
+[테이블 형식 모델의 문자열 스토리지 및 데이터 정렬](https://msdn.microsoft.com/8516f0ad-32ee-4688-a304-e705143642ca)  
   
 이 동작은 RIGHT, MID 등의 다른 텍스트 함수에도 적용됩니다.  
   
@@ -318,7 +316,7 @@ DirectQuery 모드에서는 이 제한이 적용되지 않습니다.
 메모리 내 모델에서는 결과가 패딩 없이 마지막 문자열 문자에서 끝납니다.  
   
 ## <a name="bkmk_SupportedFunc"></a>DirectQuery 모드에서 지원 되는 함수  
-다음 DAX 함수는 DirectQuery 모드에서 사용할 수 있지만 앞의 섹션에 설명된 것과 같은 조건 이 적용됩니다.  
+다음 DAX 함수는 DirectQuery 모드에서 사용할 수 있지만 앞의 섹션에 설명된 것과 같은 조건이 적용됩니다.  
   
 **텍스트 함수**  
   

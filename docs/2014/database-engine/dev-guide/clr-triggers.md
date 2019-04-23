@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -27,12 +25,12 @@ ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c755b605b834d5c31a7017358fb6e714cfde7964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522889"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158539"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 에 대 한 전체 설명은 트리거를 참조 하세요 [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)합니다.  

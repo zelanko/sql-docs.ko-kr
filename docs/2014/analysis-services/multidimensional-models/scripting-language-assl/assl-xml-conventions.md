@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -26,12 +24,12 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531420"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156691"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
   ASSL(Analysis Services Scripting Language)은 개체의 계층을 요소 유형의 집합으로 나타내며, 각 요소 유형은 포함할 수 있는 자식 요소를 정의합니다.  
@@ -102,7 +100,7 @@ ms.locfileid: "52531420"
   
  여러 형식에 같은 이름의 속성이 있는 경우에는 일반적으로 상속을 사용하지 않습니다. 예를 들어, `Name` 및 `ID` 속성은 많은 요소에 나타나지만 이러한 속성은 추상 형식으로 승격되지 않습니다.  
   
-## <a name="whitespace"></a>공백  
+## <a name="whitespace"></a>Whitespace  
  요소 값 안의 공백은 유지됩니다. 그러나 선행 공백과 후행 공백은 항상 잘립니다. 예를 들어, 다음 요소는 동일한 텍스트를 가지고 있지만 텍스트의 공백 수가 다르므로 서로 다른 값을 가진 것으로 처리됩니다.  
   
  `<Description>My text<Description>`  

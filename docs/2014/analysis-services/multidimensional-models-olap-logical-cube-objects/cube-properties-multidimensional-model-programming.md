@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Collation property
@@ -33,12 +31,12 @@ ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 315635739984bd76d79ff3a36b32f09783aecae3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371445"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153997"
 ---
 # <a name="cube-properties"></a>큐브 속성
   큐브에는 큐브 차원 동작에 영향을 주기 위해 설정할 수 있는 많은 속성이 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
@@ -61,7 +59,7 @@ ms.locfileid: "53371445"
 |`Name`|큐브의 이름을 지정합니다.|  
 |`ProactiveCaching`|큐브에 대한 자동 관리 캐싱 설정을 정의합니다.|  
 |`ProcessingMode`|인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다. 옵션은 **정기적인** 또는 `lazy`합니다.|  
-|`ProcessingPriority`|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**합니다.|  
+|`ProcessingPriority`|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**입니다.|  
 |`ScriptCacheProcessingMode`|스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다. 옵션은 **정기적인** 고 `lazy`입니다.|  
 |`ScriptErrorHandlingMode`|오류 처리를 결정합니다. 사용할 수 있는 옵션은 `IgnoreNone` 또는 `IgnoreAll`입니다.|  
 |`Source`|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
@@ -72,7 +70,7 @@ ms.locfileid: "53371445"
 > [!NOTE]  
 >  Null 값 및 다른 데이터 무결성 문제를 작업할 때 ErrorConfiguration 속성에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Analysis Services 2005에서 데이터 무결성 문제 처리](https://go.microsoft.com/fwlink/?LinkId=81891)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [자동 관리 캐싱 &#40;파티션&#41;](partitions-proactive-caching.md)  
   
   

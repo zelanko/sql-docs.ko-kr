@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -19,12 +17,12 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177863"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154339"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>큐브 스토리지(Analysis Services - 다차원 데이터)
   스토리지에는 큐브 메타데이터만 포함되거나, 측정값 그룹과 관련된 차원으로 정의한 집계 및 팩트 테이블의 모든 원본 데이터가 포함될 수 있습니다. 저장되는 데이터 양은 선택한 스토리지 모드와 집계 수에 따라 달라집니다. 저장되는 데이터 양은 쿼리 성능에 직접적인 영향을 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 데이터 및 집계 저장소에 필요한 공간을 최소화 하는 것에 대 한 몇 가지 기법을 사용 합니다.  
@@ -47,7 +45,7 @@ ms.locfileid: "48177863"
  큐브의 파티션은 사용자에게 표시되지 않습니다. 그러나 다른 파티션에 대한 스토리지 설정 선택 사항은 데이터의 즉시성, 사용되는 디스크 공간의 양 및 쿼리 성능에 영향을 미칠 수 있습니다. 파티션을 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 저장하여 큐브 스토리지에 대한 클러스터형 액세스를 제공할 수 있으며 작업을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 전체에 걸쳐 분산시킬 수 있습니다. 자세한 내용은 [파티션 저장소 모드 및 처리](partitions-partition-storage-modes-and-processing.md)를 [원격 파티션을](partitions-remote-partitions.md), 및 [파티션 &#40;Analysis Services-Multidimensional Data&#41; ](partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>연결된 측정값 그룹  
- 서로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 큐브 복사본을 여러 개 저장하려면 상당한 디스크 공간이 필요할 수 있지만 측정값 그룹의 복사본을 연결된 측정값 그룹으로 바꿔 필요한 공간을 상당히 줄일 수 있습니다. 연결된 측정값 그룹은 동일하거나 서로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 또 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 큐브의 측정값 그룹을 기반으로 합니다. 연결된 측정값 그룹은 같은 원본 큐브의 연결된 차원에서도 사용할 수 있습니다. 연결된 차원과 측정값 그룹은 원본 큐브의 집계를 사용하며 자체의 데이터 스토리지가 필요하지 않습니다. 따라서 한 데이터베이스에서는 원본 측정값 그룹 및 차원을 유지 관리하고 다른 데이터베이스에서는 큐브에 연결된 큐브 및 차원을 만들어 스토리지로 사용될 수 있는 디스크 공간을 절약할 수 있습니다. 자세한 내용은 [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md)합니다.  
+ 서로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 큐브 복사본을 여러 개 저장하려면 상당한 디스크 공간이 필요할 수 있지만 측정값 그룹의 복사본을 연결된 측정값 그룹으로 바꿔 필요한 공간을 상당히 줄일 수 있습니다. 연결된 측정값 그룹은 동일하거나 서로 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 또 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 큐브의 측정값 그룹을 기반으로 합니다. 연결된 측정값 그룹은 같은 원본 큐브의 연결된 차원에서도 사용할 수 있습니다. 연결된 차원과 측정값 그룹은 원본 큐브의 집계를 사용하며 자체의 데이터 스토리지가 필요하지 않습니다. 따라서 한 데이터베이스에서는 원본 측정값 그룹 및 차원을 유지 관리하고 다른 데이터베이스에서는 큐브에 연결된 큐브 및 차원을 만들어 스토리지로 사용될 수 있는 디스크 공간을 절약할 수 있습니다. 자세한 내용은 [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [집계 및 집계 디자인](aggregations-and-aggregation-designs.md)  

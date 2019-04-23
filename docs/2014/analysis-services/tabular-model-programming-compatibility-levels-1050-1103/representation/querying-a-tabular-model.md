@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56308532b157828746db911e60240638826b988f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217391"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156270"
 ---
 # <a name="querying-a-tabular-model"></a>테이블 형식 모델 쿼리
   개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 위해 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하거나 MDX 및 검색 데이터를 큐브에서 튀어 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  

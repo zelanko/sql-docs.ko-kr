@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126003"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154070"
 ---
 # <a name="cube-translations"></a>큐브 번역
   번역은 표시된 레이블과 캡션을 한 언어에서 다른 언어로 변경하는 간단한 메커니즘입니다. 각 번역은 한 쌍의 값인 번역된 텍스트가 있는 문자열과 언어 ID가 있는 번호로 정의됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 있는 모든 개체를 번역할 수 있으며 차원의 특성 값도 번역할 수 있습니다. 클라이언트 응용 프로그램에서는 사용자가 정의한 언어 설정과 이 언어로 모든 캡션 및 레이블을 표시하는 스위치를 찾아야 합니다. 개체는 원하는 만큼 다양하게 번역할 수 있습니다.  
@@ -40,6 +38,6 @@ ms.locfileid: "48126003"
 ## <a name="see-also"></a>관련 항목  
  [차원 번역](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [번역 &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [세계화 팁과 모범 사례 &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [세계화 팁과 모범 사례&#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9e1dedaab57761c88487dbd3a61d359bcf0b3dd1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350274"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155669"
 ---
 # <a name="handling-large-objects-using-clr"></a>CLR을 사용하여 큰 개체 처리
   SQL Server의 `HandlingLOBUsingCLR` 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 CLR(공용 언어 런타임) 저장 프로시저를 사용하여 서버에서 사용할 수 있는 파일 시스템 간의 LOB(Large Object) 전송을 보여 줍니다. 이 예제에서는 서버 쪽 코드의 파일에 액세스하고 CLR 기반 저장 프로시저로부터 동적 쿼리와 저장 프로시저를 모두 호출하는 방법을 보여 줍니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 CLR 메서드와 어셈블리를 등록 및 등록 해제하는 방법을 보여 줍니다.  
@@ -25,9 +23,9 @@ ms.locfileid: "53350274"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://go.microsoft.com/fwlink/?LinkId=31046)에서 무료로 구할 수 있습니다.  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개발자 [웹 사이트](https://go.microsoft.com/fwlink/?linkid=62796)에서 제공되는 AdventureWorks 데이터베이스  
   
 -   .NET Framework SDK 2.0 이상 또는 Microsoft Visual Studio 2005 이상. .NET Framework SDK는 무료로 구할 수 있습니다.  
   
@@ -66,7 +64,7 @@ ms.locfileid: "53350274"
   
 3.  이 예에는 서명된 어셈블리가 필요하므로 다음 명령을 입력하여 비대칭 키를 만듭니다.  
   
-## <a name="sample-code"></a>샘플 코드  
+## <a name="sample-code"></a>예제 코드  
  다음은 이 예제에 대한 코드 목록입니다.  
   
  C#  
@@ -630,7 +628,7 @@ USE AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [공용 언어 런타임 &#40;CLR&#41; 통합에 대한 사용 시나리오 및 예제](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

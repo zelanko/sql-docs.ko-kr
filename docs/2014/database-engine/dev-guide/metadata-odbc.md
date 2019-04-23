@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, metadata
@@ -15,12 +13,12 @@ ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0a67c418891316c82165a5ad042b5259ac0ec10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155659"
 ---
 # <a name="metadata-odbc"></a>메타데이터(ODBC)
   이 섹션에서는 매개 변수, 열 집합 및 카탈로그 메타데이터에 대해 설명합니다.  

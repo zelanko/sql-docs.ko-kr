@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XMLA, concepts
@@ -14,12 +12,12 @@ ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d92e7d193d3b4f35becdda96fa9748e19410bd4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0da9467d293c0081309accd99fb46d7589fb4b8b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120490"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158119"
 ---
 # <a name="xmla-concepts"></a>XMLA 개념
   XMLA(XML for Analysis) 개방형 표준에서는 World Wide Web에 있는 데이터 원본에 대한 데이터 액세스를 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] XMLA 1.1 사양에 따라 XMLA를 구현합니다.  

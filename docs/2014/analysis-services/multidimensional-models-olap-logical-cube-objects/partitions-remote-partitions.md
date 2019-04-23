@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -22,12 +20,12 @@ ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09231b03e784c142ab8b99ed31c2c4c88f6e72d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051923"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154720"
 ---
 # <a name="remote-partitions"></a>원격 파티션
   원격 파티션의 데이터는 Microsoft의 다른 인스턴스에 저장 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션과 해당 부모 큐브가 정의 (메타 데이터)를 포함 하는 인스턴스보다 합니다. 원격 파티션은 파티션과 해당 부모 큐브가 정의된 것과 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 관리됩니다.  
@@ -58,8 +56,8 @@ ms.locfileid: "48051923"
 ## <a name="archiving-and-restoring-remote-partitions"></a>원격 파티션 보관 및 복원  
  원격 파티션을 저장하는 데이터베이스를 보관하거나 복원하는 경우 원격 파티션의 데이터를 보관하거나 복원할 수 있습니다. 원격 파티션을 복원하지 않고 데이터베이스를 복원하는 경우에는 먼저 원격 파티션을 처리해야 파티션에서 데이터를 사용할 수 있습니다. 데이터베이스 보관 및 복원 하는 방법에 대 한 자세한 내용은 참조 하세요. [백업 및 복원의 Analysis Services 데이터베이스](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)합니다.  
   
-## <a name="see-also"></a>관련 항목  
- [원격 파티션 만들기 및 관리 &#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+## <a name="see-also"></a>관련 항목:  
+ [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Analysis Services 개체 처리](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

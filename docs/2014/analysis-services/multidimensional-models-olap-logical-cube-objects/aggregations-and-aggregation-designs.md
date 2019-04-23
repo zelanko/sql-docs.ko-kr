@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - aggregations [Analysis Services], about aggregations
@@ -20,12 +18,12 @@ ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d522f0da9bbaad8233bf0e1d1d3f18d6db56c4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529178"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154600"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
   <xref:Microsoft.AnalysisServices.AggregationDesign>개체는 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  

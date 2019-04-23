@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531315"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158269"
 ---
 # <a name="string-utility-functions-sample"></a>문자열 유틸리티 함수 예제
   문자열 유틸리티 예제에는 쉼표로 구분된 문자열을 열이 하나인 테이블로 분할하는, Visual C# 및 Visual Basic으로 작성된 스트리밍 테이블 반환 함수가 포함되어 있습니다. 또한 문자열 열을 쉼표로 구분된 문자열로 변환하는 집계 함수도 포함되어 있습니다.  또한 정규식 대체 및 정규식 검색 기능을 제공하는 스칼라 함수와 테이블 반환 함수를 구현합니다.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [OLE DB]
@@ -16,12 +14,12 @@ ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb0ec7cd01f38f2279a1885d890ae47738b01080
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225173"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154590"
 ---
 # <a name="interfaces-ole-db"></a>인터페이스(OLE DB)
   제공 하 여 데이터 액세스 구성 요소 MDAC (Microsoft)에 핵심 OLE DB 인터페이스 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 추가 OLE DB 인터페이스를 구현 합니다.  

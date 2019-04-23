@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372225"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156262"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처 구현 개념의 토대입니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 이와 같이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 목표를 달성할 수 있도록 하는 기능을 제공 하는 개인 설정 확장 프로그램:  
@@ -141,10 +139,10 @@ ms.locfileid: "53372225"
  CREATE KPI 및 DROP KPI 명령이 MDX 구문에 추가되었습니다. KPI는 모든 MDX 스크립트에서 동적으로 만들어질 수 있습니다.  
   
 ### <a name="schema-rowsets-extensions"></a>스키마 행 집합 확장  
- MDSCHEMA_MEMBERS에 *범위* 열이 추가 됩니다. 범위 값은 MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2입니다.  
+ MDSCHEMA_MEMBERS에 *범위* 열이 추가 됩니다. 범위 값은 다음과 같습니다. MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
   
- Mdschema_sets *set_evaluation_context* 열이 추가 됩니다. 집합 계산 컨텍스트 값은 MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2입니다.  
+ Mdschema_sets *set_evaluation_context* 열이 추가 됩니다. 값은 계산 컨텍스트를 설정 합니다. MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- MDSCHEMA_KPIS에 scope 열이 추가되었습니다. 범위 값은 MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2입니다.  
+ MDSCHEMA_KPIS에 scope 열이 추가되었습니다. 범위 값은 다음과 같습니다. MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   

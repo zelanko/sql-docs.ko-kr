@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a60cce6d752dd6f44c3d94d209557a80cdca863
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147488"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154160"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 행 집합
   서버에서 현재 활성 상태인 XEvent 추적에 대한 정보를 제공합니다.  
@@ -41,7 +39,7 @@ ms.locfileid: "50147488"
 |인수|값|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
-|String|DISCOVER_XEVENT_TRACE_DEFINITION|  
+|문자열|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>관련 항목  
  [XML for Analysis 스키마 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   

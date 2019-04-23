@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - execution context [Analysis Services]
@@ -17,12 +15,12 @@ ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f6c5a22a6bc3768e324ca45805ff510b1a86668c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142223"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156769"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>저장 프로시저의 쿼리 컨텍스트 액세스
   저장 프로시저의 실행 컨텍스트는 ADOMD.NET 서버 개체 모델의 `Context` 개체로 저장 프로시저 코드 내에서 사용할 수 있습니다. 이것은 읽기 전용 컨텍스트이며 저장 프로시저로 수정할 수 없습니다. 이 개체에 다음 속성을 사용할 수 있습니다.  
@@ -30,7 +28,7 @@ ms.locfileid: "48142223"
 |속성|형식|Description|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|현재 쿼리 컨텍스트에 대한 큐브입니다.|  
-|**CurrentDatabaseName**|String|현재 데이터베이스의 식별자입니다.|  
+|**CurrentDatabaseName**|문자열|현재 데이터베이스의 식별자입니다.|  
 |**CurrentConnection**|연결|현재 컨텍스트의 연결 개체에 대한 참조입니다.|  
 |**전달**|정수|현재 컨텍스트의 패스 번호입니다.|  
   

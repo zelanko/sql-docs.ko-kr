@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -14,17 +12,17 @@ ms.assetid: 7109fad3-65d3-4971-87db-31194bc85e05
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dfbb0f5f5a5aed251649eac9ea02a91ffb8c777f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209913"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156400"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>물리적 아키텍처(Analysis Services - 다차원 데이터)
     
 ## <a name="in-this-section"></a>섹션 내용  
- 다음 항목에서는의 아키텍처에 대 한 자세한 정보는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 솔루션입니다.  
+ 다음 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 솔루션의 아키텍처에 대해 자세히 설명합니다.  
   
 |항목|Description|  
 |-----------|-----------------|  

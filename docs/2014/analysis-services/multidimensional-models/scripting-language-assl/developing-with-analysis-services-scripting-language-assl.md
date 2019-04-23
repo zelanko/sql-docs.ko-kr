@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services Scripting Language
@@ -15,12 +13,12 @@ ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e12f03e96618a530c4f62f6a26cca904efeb43c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154279"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>ASSL(Analysis Services Scripting Language)을 사용하여 개발
   ASSL(Analysis Services Scripting Language)은 서버에서 Analysis Services 구조를 직접 만들고 관리하기 위한 개체 정의 언어 및 명령 언어를 추가하는 XMLA에 대한 확장 프로그램입니다. 사용자 지정 응용 프로그램에서 ASSL을 사용하여 XMLA 프로토콜로 Analysis Services와 통신할 수 있습니다. ASSL은 두 부분으로 구성됩니다.  
@@ -34,6 +32,6 @@ ms.locfileid: "50145578"
 ## <a name="see-also"></a>관련 항목  
  [ASSL 개체 및 개체 특징](assl-objects-and-object-characteristics.md)   
  [ASSL XML 표기 규칙](assl-xml-conventions.md)   
- [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
+ [데이터 원본 및 바인딩 & #40; SSAS 다차원 & #41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   
   

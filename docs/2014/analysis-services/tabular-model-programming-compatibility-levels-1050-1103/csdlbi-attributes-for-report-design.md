@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352531"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157850"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
   이 섹션에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인에 영향을 주는 테이블 형식 모델링의 CSDL 확장에 있는 특성에 대해 설명합니다.  
@@ -67,7 +65,7 @@ ms.locfileid: "53352531"
 |`OrderBy`|MemberRef|이 필드의이 값에 대 한 정렬 순서를 정의 하는 모델 내에서 다른 필드에 대 한 참조입니다. 두 필드의 값이 1:1 매핑을 가지거나 정렬 동작이 정의되지 않습니다. 생략하면 필드는 필드 고유 값에 따라 정렬됩니다.|  
 |`Contents`|Enum|필드의 하위 형식 또는 내용을 설명하는 열거형입니다. 생략 하면 이상 특정 하위 형식으로 가정 필드의 데이터 형식이 이진이 아닌 경우에서 이미지 간주 됩니다. 지원되는 내용 유형의 전체 목록을 보려면 AMO 설명서를 참조하십시오.|  
 |`DefaultAggregateFunction`|Enum|일반적으로 이 필드를 집계하는 데 사용되는 기본 함수를 나타내는 값입니다(있는 경우). 가능한 값은 `None`, `Sum`, `Average`, `Count`, `Min`, `Max`입니다. 생략하면 숫자 필드에는 `Sum`이 사용되고, 다른 모든 필드에는 `None`이 사용됩니다.|  
-|`IsSimpleMeasure`|Boolean|측정값이 단순히 숫자 필드의 간단한 집계인지 여부를 나타냅니다. 이러한 집계는 필요한 경우 쿼리에 쉽게 정의할 수 있으므로 성능 향상을 위해 모델 정의에서 생략해야 합니다. 생략하면 `false`가 사용됩니다.|  
+|`IsSimpleMeasure`|Boolean|측정값이 단순히 숫자 필드의 간단한 집계인지 여부를 나타냅니다. 이러한 집계는 필요한 경우 쿼리에 쉽게 정의할 수 있으므로 성능 향상을 위해 모델 정의에서 생략해야 합니다. 생략된 경우 `false`를 가정합니다.|  
 |`Kpi`<br /><br /> `KpiGoal`<br /><br /> `KpiStatus`|하위 요소|측정값 요소가 KPI로 사용됨을 나타냅니다. KPI 하위 요소는 KpiGoal 및 KpiStauts 요소를 사용하여 관련된 표시 이미지 및 대상 범위를 정의합니다.|  
   
   

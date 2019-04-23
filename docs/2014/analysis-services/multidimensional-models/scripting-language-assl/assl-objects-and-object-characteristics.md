@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,18 +19,18 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082853"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157749"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 개체 및 개체 특징
   ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, 명명, 확장 및 처리에 관한 특정 지침을 따릅니다.  
   
 ## <a name="object-groups"></a>개체 그룹  
- 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체는 XML 표현이 있습니다. 개체는 다음과 같은 두 그룹으로 나뉩니다.  
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체에는 XML 표현이 있습니다. 개체는 다음과 같은 두 그룹으로 나뉩니다.  
   
  **주요 개체**  
  주요 개체는 독립적으로 만들고 변경하고 삭제할 수 있습니다. 주요 개체는 다음과 같습니다.  
@@ -90,9 +88,9 @@ ms.locfileid: "48082853"
   
 |열거형 값|에 대 한 허용 \<Alter >|Description|  
 |-----------------------|---------------------------|-----------------|  
-|*ReferenceOnly*|아니요|요청된 개체와 포함된 모든 주요 개체에 대한 이름, ID 및 타임스탬프만을 재귀적으로 반환합니다.|  
+|*ReferenceOnly*|no|요청된 개체와 포함된 모든 주요 개체에 대한 이름, ID 및 타임스탬프만을 재귀적으로 반환합니다.|  
 |*ObjectProperties*|예|요청된 개체와 포함된 보조 개체를 확장합니다. 그러나 포함된 주요 개체를 반환하지는 않습니다.|  
-|*ExpandObject*|아니요|*ObjectProperties*와 같지만 포함된 주요 개체에 대한 이름, ID 및 타임스탬프도 반환합니다.|  
+|*ExpandObject*|no|*ObjectProperties*와 같지만 포함된 주요 개체에 대한 이름, ID 및 타임스탬프도 반환합니다.|  
 |*ExpandFull*|예|요청된 개체와 포함된 모든 개체를 재귀적으로 완전히 확장합니다.|  
   
  이 ASSL 참조 섹션에서는 *ExpandFull* 표현에 대해 설명합니다. 다른 모든 `ObjectExpansion` 수준은 이 수준에서 파생됩니다.  
