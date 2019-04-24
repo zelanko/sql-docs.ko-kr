@@ -1,7 +1,7 @@
 ---
 title: SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7ccb6e362bdf602c4df650d96ca22eac269c46f1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243547"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582767"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
 

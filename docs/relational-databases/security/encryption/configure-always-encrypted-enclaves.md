@@ -12,10 +12,10 @@ ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872153"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
@@ -152,7 +152,7 @@ Enclave 사용 열 암호화 키를 프로비전하려면 열 암호화 키를 �
 
 - Enclave 사용 **열 마스터 키는 Windows 인증서 저장소 또는 Azure Key Vault에 저장해야 합니다**. Enclave 사용 열 마스터 키를 다른 유형의 키 저장소(하드웨어 보안 모듈 또는 사용자 지정 키 저장소)에 저장할 수 없습니다.
 
-### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 Enclave 사용 키 프로비저닝**
+### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**SSMS(SQL Server Management Studio)를 사용하여 Enclave 사용 키 프로비전**
 
 다음 단계는 Enclave 사용 키를 만듭니다(SSMS 18.0 이상 필요).
 
@@ -177,11 +177,11 @@ Enclave 사용 열 암호화 키를 프로비전하려면 열 암호화 키를 �
     3. **열 마스터 키** 드롭다운에서 이전 단계에서 만든 열 마스터 키를 선택합니다.
     4. **확인**을 클릭합니다.
 
-### **<a name="provision-enclave-enabled-keys-using-powershell"></a>PowerShell을 사용하여 Enclave 사용 키 프로비저닝**
+### <a name="provision-enclave-enabled-keys-using-powershell"></a>**PowerShell을 사용하여 Enclave 사용 키 프로비전**
 
 다음 섹션에서는 Enclave 사용 키를 프로비전하기 위한 샘플 PowerShell 스크립트를 제공합니다. 보안 Enclave를 사용한 Always Encrypted 관련(신규) 단계는 강조 표시됩니다. PowerShell을 사용한 키 프로비전에 대한 자세한 내용은(보안 Enclave를 사용한 Always Encrypted에만 국한되지 않는) [PowerShell을 사용하여 Always Encrypted 키 구성](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell)을 참조하세요.
 
-**Enclave 사용 키 프로비저닝 - Windows 인증서 저장소**
+**Enclave 사용 키 프로비전 - Windows 인증서 저장소**
 
 클라이언트/개발 컴퓨터에서 Windows PowerShell ISE를 열고 다음 스크립트를 실행합니다.
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 클라이언트/개발 컴퓨터에서 Windows PowerShell ISE를 열고 다음 스크립트를 실행합니다.
 
-**1단계: Azure Key Vault에서 열 마스터 키 프로비저닝**
+**1단계: Azure Key Vault에서 열 마스터 키 프로비전**
 
 이 작업은 Azure Portal을 사용하여 수행할 수도 있습니다. 자세한 내용은 [Azure Portal에서 Key Vault 관리](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/)를 참조하세요.
 
@@ -441,7 +441,7 @@ Enclave 사용 열 암호화 키를 사용할 경우 [ALTER TABLE (Transact-SQL)
 
 Enclave 사용 키가 아닌 키를 사용하여 열을 암호화하려면 SSMS의 Always Encrypted 마법사 또는 SqlServer PowerShell 모듈의 Set-SqlColumnEncryption cmdlet과 같은 클라이언트 쪽 도구를 사용해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- [상시 암호화 마법사](always-encrypted-wizard.md)
+- [Always Encrypted 마법사](always-encrypted-wizard.md)
 - [PowerShell을 사용하여 열 암호화 구성](configure-column-encryption-using-powershell.md)
 
 
@@ -553,7 +553,7 @@ Enclave를 사용한 Always Encrypted는 열 마스터 키 순환 워크플로�
 열 마스터 키 순환 프로세스는 관련 키가 Enclave 사용 키인지에 관계없이 동일합니다. 열 마스터 키를 순환하는 방법에 대한 자세한 내용은 다음 문서에 나와 있습니다.
 
 - [SSMS를 사용하여 열 마스터 키 순환](configure-always-encrypted-using-sql-server-management-studio.md)
-- [PowerShell을 사용하여 열 마스터 키 순환](rotate-always-encrypted-keys-using-powershell.md)
+- [PowerShell을 사용하여 열 마스터 키 순환](rotate-always-encrypted-keys-using-powershell.md)하기
 
 사용자 편의를 위해 열 마스터 키 순환을 위한 샘플 PowerShell 스크립트가 아래에 제공됩니다.
 
@@ -861,7 +861,7 @@ Always Encrypted 및 Enclave 계산을 사용하려면 애플리케이션이 연
 Always Encrypted를 사용하여 .NET Framework 애플리케이션을 개발하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 - [.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [항상 암호화: SQL Database의 중요한 데이터 보호 및 Azure Key Vault에 암호화 키 저장](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: SQL Database의 중요한 데이터 보호 및 Azure Key Vault에 암호화 키 저장](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>예제
 

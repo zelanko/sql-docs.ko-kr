@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860064"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582877"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -26,10 +26,10 @@ ms.locfileid: "58860064"
 > [!NOTE]
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 미리 보기 릴리스는 예정된 릴리스의 기능을 체험할 수 있도록 하기 위해 제공됩니다. 프로덕션 용도로 지원되거나 사용이 허가되지 않습니다. 다음 시나리오는 명시적으로 지원되지 않습니다.
 >
-> - 다른 버전의 SQL Server와 병렬로 설치 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+> - 다른 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]과 병렬로 설치
 > - 모든 버전에서 SQL Server의 기존 인스턴스 업그레이드
 
-**[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]를 체험해 보세요.**
+**체험하기[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]**
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [다운로드하여 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Windows에 설치](https://go.microsoft.com/fwlink/?LinkID=862101)
 - [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) 및 [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)용 Linux에 설치
 - [Docker의 SQL Server 2019에서 실행](../linux/quickstart-install-connect-docker.md)

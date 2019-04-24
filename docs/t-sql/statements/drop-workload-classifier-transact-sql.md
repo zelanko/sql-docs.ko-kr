@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 915d689b90bf5103d276ee711e34102e05f49330
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a9ef53323d77f1439df5daf0fedc669fe380cb3f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513090"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581517"
 ---
 # <a name="drop-workload-classifier-transact-sql-preview"></a>DROP WORKLOAD CLASSIFIER(Transact-SQL)(미리 보기)
+
+> [!Note]
+> 워크로드 분류는 SQL Data Warehouse Gen2에서 미리 보기로 사용 가능합니다. 워크로드 관리 분류 및 중요도 미리 보기는 2019년 4월 9일 이후의 릴리스 날짜로 빌드됩니다.  워크로드 관리 테스트에 이 날짜 이전의 빌드를 사용하지 않아야 합니다.  빌드에 워크로드 관리 기능이 있는지 확인하려면 SQL Data Warehouse 인스턴스에 연결되었을 때 select @@version을 실행하세요.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -71,4 +74,4 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 ## <a name="see-also"></a>참고 항목
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
-[SQL Data Warehouse 작업 분류](/azure/sql-data-warehouse/classification)
+[SQL Data Warehouse 작업 분류](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

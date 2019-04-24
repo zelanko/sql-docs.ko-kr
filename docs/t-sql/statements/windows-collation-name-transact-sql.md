@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974352"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671389"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -37,7 +37,6 @@ ms.locfileid: "57974352"
 ## <a name="syntax"></a>구문
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>인수
 
-*CollationDesignator* Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정합니다. 기본 데이터 정렬 규칙에는 다음 사항이 포함됩니다.
+*CollationDesignator*   
+Windows 데이터 정렬에 사용할 기본 데이터 정렬 규칙을 지정합니다. 기본 데이터 정렬 규칙에는 다음 사항이 포함됩니다.
 
 - 사전 정렬을 지정한 경우 적용되는 정렬 및 비교 규칙입니다. 정렬 규칙은 알파벳이나 언어를 기준으로 적용됩니다.
 - **varchar** 데이터를 저장하는 데 사용되는 코드 페이지입니다.
@@ -67,20 +67,20 @@ CollationDesignator_<ComparisonStyle>
 **AI**는 악센트를 구분하지 않도록 지정하고 **AS**는 악센트를 구분하도록 지정합니다.
 
 *KanatypeSensitive*  
-**Omitted**는 일본어 가나를 구분하지 않도록 지정하고 **KS**는 일본어 가나를 구분하도록 지정합니다.
+이 옵션을 생략하면 일본어 가나를 구분하지 않도록 지정하며, **KS**는 일본어 가나를 구분하도록 지정합니다.
 
 *WidthSensitivity*  
-**Omitted**는 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
+이 옵션을 생략하면 전자/반자를 구분하지 않도록 지정하고 **WS**는 전자/반자를 구분하도록 지정합니다.
 
 *VariationSelectorSensitivity*  
-**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
+- **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]로 시작 
 
-**생략**은 변형 선택기 구분 안 함을 지정하며, **VSS**는 변형 선택기 구분을 지정합니다.
+- 이 옵션을 생략하면 변형 선택기를 구분하지 않도록 지정하며, **VSS**는 변형 선택기를 구분하도록 지정합니다.
 
 **UTF8**  
-**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   
+- **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작   
 
-적합한 데이터 형식에 사용할 UTF-8 인코딩을 지정합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+- 적합한 데이터 형식에 사용할 UTF-8 인코딩을 지정합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
 
 **BIN**  
 이전 버전과 호환되는 이진 정렬 순서를 사용하도록 지정합니다.
@@ -197,7 +197,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |케추아어(페루)|Latin1_General_100_|사용할 수 없음|
 |로만시어(스위스)|Romansh_100_|사용할 수 없음|
 |이나리 라프어(핀란드)|Sami_Sweden_Finland_100_|사용할 수 없음|
-|룰레 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|
+|라프어(룰레, 노르웨이)|Sami_Norway_100_|사용할 수 없음|
 |룰레 라프어(스웨덴)|Sami_Sweden_Finland_100_|사용할 수 없음|
 |북부 라프어(핀란드)|Sami_Sweden_Finland_100_|사용할 수 없음|
 |북부 라프어(노르웨이)|Sami_Norway_100_|사용할 수 없음|

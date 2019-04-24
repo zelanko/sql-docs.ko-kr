@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042173"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER(Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "59042173"
 -   로그인이 없는 Windows 그룹 기반 사용자 `CREATE USER [Contoso\Sales];`  
 -   Azure Active Directory 사용자에 기반한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]의 사용자. `CREATE USER [Contoso\Fritz] FROM EXTERNAL PROVIDER;`     
 
--   암호가 있는 포함된 데이터베이스 사용자 ([!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서는 사용할 수 없습니다.) `CREATE USER Mary WITH PASSWORD = '********';`   
+-   암호가 있는 포함된 데이터베이스 사용자 ([!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에서 사용할 수 없습니다.) `CREATE USER Mary WITH PASSWORD = '********';`   
   
 **Windows 그룹 로그인을 통해 연결하는 Windows 보안 주체 기반 사용자**  
   
@@ -249,7 +249,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  기본 스키마는 서버에서 이 데이터베이스 사용자에 대한 개체 이름을 확인할 때 첫 번째로 검색하는 스키마가 됩니다. 달리 지정하지 않는 한 기본 스키마는 이 데이터베이스 사용자가 만든 개체의 소유자가 됩니다.  
   
- 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. 사용할 수 있는 기본 스키마 중 하나를 기본 설정 스키마로 명시적으로 선택할 수는 없습니다. 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
+ 사용자에게 기본 스키마가 있는 경우에는 해당 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없지만 사용자가 기본 스키마가 있는 그룹의 멤버인 경우에는 그룹의 기본 스키마가 사용됩니다. 사용자에게 기본 스키마가 없고 사용자가 두 개 이상 그룹의 멤버인 경우 principle_id가 가장 낮고 명시적으로 설정된 기본 스키마가 있는 Windows 그룹의 기본 스키마가 사용자의 기본 스키마가 됩니다. (사용할 수 있는 기본 스키마 중 하나를 기본 설정 스키마로 명시적으로 선택할 수는 없습니다.) 사용자의 기본 스키마를 확인할 수 없으면 **dbo** 스키마가 사용됩니다.  
   
  DEFAULT_SCHEMA는 가리키는 스키마가 만들어지기 전에 설정될 수 있습니다.  
   
@@ -510,9 +510,9 @@ GO
  [데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)   
  [sys.database_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [ALTER USER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
- [DROP USER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
- [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
+ [Azure Active Directory 인증을 사용하여 SQL Database에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [데이터베이스 엔진 권한 시작](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  

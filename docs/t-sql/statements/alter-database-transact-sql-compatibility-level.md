@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828083"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583376"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -176,6 +176,14 @@ SELECT name, compatibility_level FROM sys.databases;
 
 데이터베이스 호환성 수준 150은 현재 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 공개 미리 보기에 포함됩니다. 이 데이터베이스 호환성 수준은 데이터베이스 호환성 수준 140에 도입된 것을 넘어선 차세대 쿼리 처리 개선 사항과 연결됩니다.
 
+|호환성 수준 설정 140 이하|호환성 수준 설정 150|
+|--------------------------------------------------|-----------------------------------------|
+|관계형 데이터 웨어하우스 및 분석 워크로드는 OLTP 오버헤드, 공급업체 지원 부족 또는 기타 제한 때문에 columnstore 인덱스를 사용하지 못할 수 있습니다.  columnstore 인덱스가 없으면 이러한 워크로드는 일괄 처리 실행 모드를 활용할 수 없습니다.|이제 columnstore 인덱스가 없어도 분석 워크로드에 일괄 처리 실행 모드를 사용할 수 있습니다. 자세한 내용은 [Rowstore의 일괄 처리 모드](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore)를 참조하세요.|
+|디스크에 대한 분산이 발생하는 부족한 메모리 부여 크기를 요청하는 행 모드 쿼리는 연속 실행에 대한 문제가 지속될 수 있습니다.|디스크에 대한 분산이 발생하는 부족한 메모리 부여 크기를 요청하는 행 처리 모드 쿼리는 연속 실행에 대한 성능을 향상시킬 수 있습니다. 자세한 내용은 [행 모드 메모리 부여 피드백](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)을 참조하세요.|
+|동시성 문제가 발생하는 과도한 메모리 부여 크기를 요청하는 행 모드 쿼리는 연속 실행에 대한 문제가 지속될 수 있습니다.|동시성 문제가 발생하는 과도한 메모리 부여 크기를 요청하는 행 모드 쿼리는 연속 실행에 대한 동시성을 향상시킬 수 있습니다. 자세한 내용은 [행 모드 메모리 부여 피드백](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback)을 참조하세요.|
+|T-SQL 스칼라 UDF를 참조하는 쿼리는 반복 호출, 비용 부족 및 강제 직렬 실행을 사용합니다. |T-SQL 스칼라 UDF는 호출 쿼리로 "인라인"되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다. 자세한 내용은 [T-SQL UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining)를 참조하세요.|
+|테이블 변수는 카디널리티 추정에 고정 추측을 사용합니다.  실제 행 수가 추측된 값보다 훨씬 높은 경우 다운스트립 작업의 성능이 저하될 수 있습니다. |새 플랜은 고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다. 자세한 내용은 [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation)을 참조하세요.|
+
 데이터베이스 호환성 수준 150에서 사용하도록 설정된 쿼리 처리 기능에 대한 자세한 내용은 [SQL Server 2019의 새로운 기능](../../sql-server/what-s-new-in-sql-server-ver15.md) 및 [SQL 데이터베이스의 지능형 쿼리 처리](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017)를 참조하세요.
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>호환성 수준 130과 수준 140 사이의 차이
@@ -291,7 +299,7 @@ SQL Server 2017 이전의 SQL Server 이전 버전에서 추적 플래그 4199�
 
 자세한 내용은 [예약 키워드](../../t-sql/language-elements/reserved-keywords-transact-sql.md)를 참조하세요.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 데이터베이스에 대한 ALTER 권한이 필요합니다.
 

@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042502"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
@@ -227,10 +227,10 @@ RC1(릴리스 후보 1)은 SSMS 18.0에 대한 공개 미리 보기입니다. �
   - [미리 보기 7의 새로운 기능] "취약성 평가" 검사 결과가 SQL Azure DB의 검사 결과와 일치하도록 SQL Azure Managed Instance 서버에서 실행되는 취약성 평가 규칙 집합이 변경되었습니다. 
   - [미리 보기 7의 새로운 기능] "취약성 평가"는 이제 Azure SQL DW를 지원합니다.
 
-- **Always Encrypted**
+- **항상 암호화**
   - 서버에 연결 상자의 Always Encrypted 탭에 있는 Always Encrypted 확인란을 선택하면 데이터베이스 연결에 대해 Always Encrypted를 활성화/비활성화하는 쉬운 방법이 제공됩니다. 
 
-- [**보안 Enclave를 사용한 Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
+- [**보안 enclave를 사용한 Always Encrypted**](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves)
   - SQL Server 2019 미리 보기의 보안 enclave를 사용하는 Always Encrypted를 지원하기 위해 몇 가지를 개선했습니다.
     - 서버에 연결 대화 상자에서 enclave 증명 URL을 지정하기 위한 텍스트 필드(새로운 Always Encrypted 탭).
     - 새 열 마스터 키가 enclave 계산을 허용하는지 여부를 제어하는 새 열 마스터 키 대화 상자의 새로운 확인란.
@@ -242,7 +242,7 @@ RC1(릴리스 후보 1)은 SSMS 18.0에 대한 공개 미리 보기입니다. �
 - **데이터 계층 애플리케이션 마법사**
   - [미리 보기 7의 새로운 기능] 그래프 테이블을 통한 데이터 계층 애플리케이션의 가져오기/내보내기 지원이 추가되었습니다.
 
-- **Azure SQL 관리되는 인스턴스**
+- **Azure SQL Managed Instance**
   - [미리 보기 7의 새로운 기능] Azure SQL Managed Instance에 연결되는 경우 **AAD 로그인**을 새 로그인 유형으로 SMO 및 SSMS에 추가할 수 있습니다.
 
 - **XEvent 뷰어**
@@ -253,7 +253,7 @@ RC1(릴리스 후보 1)은 SSMS 18.0에 대한 공개 미리 보기입니다. �
 
 ### <a name="bug-fixes"></a>버그 수정
 
-- **작동 중단/무반응**
+- **크래시/중단**
   - GDI 개체와 관련된 일반적인 SSMS 작동 중단을 수정했습니다.
   - “Script as Create/Update/Drop”(작성/업데이트/삭제로 스크립트)를 선택할 때 반응이 없거나 성능이 저하되는 공통 소스를 수정했습니다(SMO 개체의 불필요한 페치를 제거함).
   - ADAL 추적을 사용하는 동안 MFA를 사용하여 Azure SQL DB에 연결할 때 반응이 없는 문제를 해결했습니다.
@@ -385,7 +385,7 @@ RC1(릴리스 후보 1)은 SSMS 18.0에 대한 공개 미리 보기입니다. �
 - **작업 활동 모니터**
   - 작업 활동 모니터(필터 포함)를 사용하는 동안 발생하는 작업 중단 문제를 해결했습니다.
 
-- **Managed Instance 지원**
+- **Managed Instance**
   - 관리되는 인스턴스 지원을 개선했습니다. UI에서 지원되지 않는 옵션을 사용할 수 없도록 설정하고 URL 감사 대상을 처리하도록 [감사 로그 보기] 옵션을 수정했습니다.
   - “스크립트 생성 및 게시” 마법사는 지원되지 않는 CREATE DATABASE 절을 스크립팅합니다.
   - CL 인스턴스에 대해 실시간 쿼리 통계를 사용하지 않도록 설정했습니다.
@@ -404,7 +404,7 @@ RC1(릴리스 후보 1)은 SSMS 18.0에 대한 공개 미리 보기입니다. �
   - [미리 보기 7의 새로운 기능] SMO에서 `ALTER DB ADD FILE` 명령문을 스크립팅하는 경우 생성된 T-SQL 스크립트가 비어 있는 문제가 해결되었습니다.
   - [RC1의 새로운 기능] Managed Instances 서버별 속성(하드웨어 생성, 서비스 계층, 사용 및 예약된 스토리지)의 표시가 개선되었습니다.
 
-- **Azure SQL 데이터베이스**
+- **Azure SQL Database**
   - 마스터 대신 Azure SQL DB에서 사용자 데이터베이스에 연결했을 때 Azure SQL Db 쿼리 창에 대해 데이터베이스 목록이 올바로 채워지지 않는 문제를 해결했습니다.
   - SQL Azure DB에 "임시 테이블"을 추가할 수 없는 문제를 해결했습니다.
   - [미리 보기 6의 새로운 기능] Azure의 통계 메뉴 아래에서 통계 속성 하위 메뉴 옵션을 사용하도록 설정했습니다. 이는 꽤 오랫동안 완벽하게 지원되었기 때문입니다.
@@ -502,7 +502,7 @@ SSMS에서는 다음 기능을 더 이상 사용할 수 없습니다.
 
 ## <a name="179"></a>17.9
 
-![다운로드](../ssdt/media/download.png) [SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
+![다운로드](../ssdt/media/download.png)[SSMS 17.9](https://go.microsoft.com/fwlink/?linkid=2014306&clcid=0x409)
 
 빌드 번호: 14.0.17285.0<br>
 릴리스 날짜: 2018년 9월 4일
@@ -592,7 +592,7 @@ Help:
 다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![](../ssdt/media/download.png)[SSMS 17.8.1 다운로드](https://go.microsoft.com/fwlink/?linkid=875802)
-*17.8에서 SQL 데이터베이스 프로비저닝과 관련된 버그가 발견되었으므로 SSMS는17.8.1이 17.8로 대체됩니다.*
+‘17.8에서 SQL 데이터베이스 프로비전과 관련된 버그가 발견되었으므로 SSMS는17.8.1이 17.8로 대체됩니다.’
 
 빌드 번호: 14.0.17277.0<br>
 릴리스 날짜: 2018년 6월 26일
@@ -676,7 +676,7 @@ SMO:
 Azure SQL Data Warehouse: 
 - Azure SQL Data Warehouse에서 외부 테이블에 대한 거부된 행 위치 지원을 추가합니다. 
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - Azure SQL Database에 배포할 SSIS 패키지에 대한 예약 기능을 추가했습니다. 고급 작업 스케줄러인 SQL Server 에이전트가 있는 SQL Server 온-프레미스 및 SQL Database Managed Instance와 달리 SQL Database에는 기본 제공 스케줄러가 없습니다. 이 새로운 SSMS 기능은 SQL Database에 배포된 패키지를 예약하는 데 사용되는 SQL Server 에이전트가 유사한 기능을 제공하는 친숙한 사용자 인터페이스를 제공 합니다. SQL Database를 사용하여 SSIS 카탈로그 데이터베이스인 SSISDB를 호스팅하는 경우 이 SSMS 기능을 사용하여 SSIS 패키지를 예약하는 데 필요한 데이터 팩터리 파이프라인, 활동 및 트리거를 생성할 수 있습니다. 그런 다음, 데이터 팩터리에서 이러한 개체를 편집하고 확장할 수 있습니다. 자세한 내용은 [SSMS를 지원하는 Azure SQL Database에서 SSIS 패키지 실행 예약](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)을 참조하세요. Azure Data Factory 파이프라인, 활동 및 트리거에 대한 자세한 내용은 [Azure Data Factory의 파이프라인 및 활동](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) 및 [Azure Data Factory에서 파이프라인 실행 및 트리거](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)를 참조하세요.
 - SQL 관리되는 인스턴스의 SQL 에이전트에서 SSIS 패키지 예약 지원. 이제 관리되는 인스턴스에서 SSIS 패키지를 실행하는 SQL 에이전트 작업을 만들 수 있습니다. 
@@ -715,7 +715,7 @@ SSMS 사용자 설정:
 기타:  
 - *통계 세부 정보* 페이지에 텍스트가 표시되는 방식이 개선되었습니다. 
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - Azure SQL Database Managed Instance에 대한 지원이 향상되었습니다.
 - 사용자가 SQL Server 2014 이하에 대한 카탈로그를 만들지 못하는 문제가 해결되었습니다.
@@ -759,7 +759,7 @@ SQL Database Managed Instance:
 데이터 분류:
 - 일반 개선 사항 및 버그 수정
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - [SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)로 패키지 배포에 대한 추가된 지원
 
@@ -802,7 +802,7 @@ SMO:
 
 - 변경 내용이 서버에 저장되지 않는 SSMS의 1400 호환성 수준 모델의 데이터 원본을 수정하는 문제를 해결했습니다.
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - SQL Database Managed Instance에 연결한 경우 SSMS에서 SSIS 카탈로그 노드 및 보고서를 표시하지 않는 문제를 해결했습니다.
 
@@ -921,7 +921,7 @@ XE 프로파일러:
 쿼리 저장소:
 - 쿼리 저장소 사용 가능 보고서 목록을 확장할 때 "회귀된 쿼리" 보고서가 복원되었습니다.
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 - 사용자가 Azure SSIS IR에서 지원되지 않는 SSIS 패키지 내부 구성 요소를 파악하는 데 도움을 주는 패키지 유효성 검사 함수가 배포 마법사에 추가되었습니다.
 
 ### <a name="bug-fixes"></a>버그 수정
@@ -997,8 +997,8 @@ SQL Data Warehouse에 대해 SQL 데이터베이스를 스크립팅하면 잘못
 - Always On: "이 백업 세트의 기호는 데이터베이스에 적용하기에 너무 이른 LSN x에서 종료됩니다."라는 오류로 인해 "로그 백업 복원"이 실패하는 문제가 해결되었습니다.
 - 작업 활동 모니터: 일관성 없는 아이콘을 수정했습니다. - [연결 항목 3133100](https://connect.microsoft.com/SQLServer/feedback/details/3133100)
 - 쿼리 저장소: 쿼리 저장소 보고서에 "사용자 지정" 날짜 범위를 선택할 수 없는 문제를 해결했습니다. 아래 연결 항목에 연결됩니다.
-   - [Connect 항목 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
-   - [Connect 항목 3139399](https://connect.microsoft.com/SQLServer/feedback/details/3139399)
+   - [연결 항목 3139842](https://connect.microsoft.com/SQLServer/feedback/details/3139842)
+   - [연결 항목 3139399](https://connect.microsoft.com/SQLServer/feedback/details/3139399)
 - 저장된 정보에 명명된 데이터베이스가 있고 사용자가 기본값을 선택할 때 연결 대화 상자가 가장 최근에 사용된 데이터베이스를 "정리"하지 않는 문제를 해결했습니다.
 - 개체 스크립팅: 사용자가 서버에서 DW 데이터베이스를 일시 중지한 경우 "데이터베이스 스크립트 생성"이 작동하지 않고 오류를 throw하지만 다른 DW가 아닌 데이터베이스를 선택하고 스크립트하려고 시도하는 문제를 해결했습니다.
 스크립팅된 저장 프로시저의 헤더가 스크립트 설정과 일치하지 않고 잘못된 스크립트를 생성하는 문제를 해결했습니다. - [연결 항목 3139784](https://connect.microsoft.com/SQLServer/feedback/details/3139784)
@@ -1052,7 +1052,7 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 - *재발된 쿼리*가 개체 탐색기에서 보고서의 쿼리 저장소 목록에서 누락되었습니다.
    - 해결 방법: 마우스 오른쪽 단추로 **쿼리 저장소** 노드를 클릭하고 **재발된 쿼리 보기**를 선택합니다.
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - [catalog].[event_messagea]에서 [execution_path]가 Scale Out에서 패키지 실행에 대해 올바르지 않습니다. [execution_path]는 패키지 실행 파일의 개체 이름 대신 "\Package"로 시작합니다. SSMS에서 패키지 실행의 개요 보고서를 볼 때 실행 개요에서 "실행 경로"의 링크는 작동하지 않습니다. 해결 방법은 개요 보고서에서 "메시지 보기"를 클릭하여 모든 이벤트 메시지를 확인하는 것입니다.
 
@@ -1113,7 +1113,7 @@ SQL Azure 개체를 대상으로 지정할 때 "스크립트" 단추를 다시 �
 
 - SSMS의 AS Azure 모델에서 메일 주소가 없는 사용자에 대한 새 AAD 역할 멤버 선택
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 
 - SSIS용 실행 보고서에 새 열("실행 수") 추가
 
@@ -1179,7 +1179,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 - 로드할 때 데이터베이스 삭제 대화 상자에서 오류가 발생할 수 있는 매우 드문 문제 해결
 - SQL 쿼리 및 M 파티션 정의가 혼합된 1400-compat 수준 모델에서 파티션을 보려고 할 때 발생할 수 있는 문제 해결
 
-**Integration Services(IS)**
+**IS(Integration Services)**
 - SSISDB 카탈로그의 실행 정보 보고서를 표시할 수 없는 문제 해결
 - SSMS에서 수많은 프로젝트/패키지의 성능 저하와 관련된 문제 해결
 
@@ -1266,7 +1266,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - SQL Server에 대한 그래프 확장. 그래프 노드와 에지 테이블에 대한 새 아이콘. 그래프 노드 및 에지 테이블이 그래프 테이블 폴더에 표시됨. 그래프 노드와 에지 테이블을 만드는 템플릿을 사용할 수 있음
 - 프레젠테이션 모드. 빠른 실행(Ctr-Q)을 통해 사용할 수 있는 새 작업 3개. PresentOn - 프레젠테이션 모드 켜기. PresentEdit - 프레젠테이션 모드에 대한 프레젠테이션 글꼴 크기 편집.  쿼리 편집기의 경우 "텍스트 편집기 글꼴".  다른 구성 요소의 경우 "환경 글꼴"
 RestoreDefaultFonts - 기본 설정으로 되돌리기
-*참고: 현재 PresentOff 명령이 없습니다.  프레젠테이션 모드를 끄려면 RestoreDefaultFonts를 사용하세요.*
+*참고: 현재 PresentOff 명령이 없습니다.  프레젠테이션 모드를 끄려면 RestoreDefaultFonts를 사용 하세요.*
 
 ### <a name="bug-fixes"></a>버그 수정
 

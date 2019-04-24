@@ -11,12 +11,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210712"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671209"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>단일 데이터베이스에 대한 기본 Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210712"
 ## <a name="limitations"></a>제한 사항  
  기본 가용성 그룹은 SQL Server 2016 Enterprise Edition의 고급 가용성 그룹에 비해 기능의 하위 집합을 사용합니다. 기본 가용성 그룹에는 다음과 같은 제한 사항이 포함됩니다.  
   
-- 두 개의 복제본(주 및 보조)으로 제한됩니다.  
+- 두 개의 복제본(주 및 보조)으로 제한됩니다. Linux에서 SQL Server 2017에 대한 기본 가용성 그룹은 추가 구성 전용 복제본만 지원합니다.
   
 - 보조 복제본에 대한 읽기 권한이 없습니다.  
   

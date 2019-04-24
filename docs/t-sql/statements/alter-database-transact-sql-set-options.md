@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 옵션(Transact-SQL) | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 자동 튜닝, 암호화, 쿼리 저장소와 같은 데이터베이스 옵션을 설정하는 방법 알아보기
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494435"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583386"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -707,7 +707,7 @@ TORN_PAGE_DETECTION - 페이지를 디스크에 쓸 때 8KB 데이터베이스 �
 
 값이 일치하지 않으면 페이지의 일부분만 디스크에 쓰여졌음을 의미합니다. 이 경우 조각난 페이지 오류를 나타내는 824 오류 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 Windows 이벤트 로그에 보고됩니다. 조각난 페이지가 실제로 쓰기가 완료되지 않은 페이지인 경우 조각난 페이지는 보통 데이터베이스 복구에서 검색됩니다. 그러나 다른 I/O 경로 오류도 언제든 조각난 페이지의 원인이 될 수 있습니다.
 
-NONE 데이터베이스 페이지 쓰기에서 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 생성되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 페이지 헤더에 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 있는 경우에도 읽기 중 체크섬이나 조각난 페이지를 확인하지 않습니다.
+NONE 데이터베이스 페이지 쓰기에서 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 생성되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 페이지 헤더에 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 있는 경우에도 읽기 중에 체크섬이나 조각난 페이지를 확인하지 않습니다.
 
 PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십시오.
 
