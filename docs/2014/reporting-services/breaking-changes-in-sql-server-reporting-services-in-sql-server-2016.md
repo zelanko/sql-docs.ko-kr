@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040174"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947659"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때나 사용자 지정 스크립트 또는 보고서에서 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -63,7 +63,7 @@ ms.locfileid: "56040174"
   
 -   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자, rskeymgmt.exe 및 rsconfig.exe [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성에 이러한 유틸리티를 사용하는 대신 SharePoint 중앙 관리 및 PowerShell을 사용합니다.  
   
--   SQL Server Management Studio: <machine_name>/<instance_name>과 유사한 구문을 사용하여 고객이 서버를 참조할 수 없습니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 릴리스부터 권장되는 방법은 SharePoint 사이트 URL을 사용하는 것입니다. 예를 들어 **http://<sharepoint_server>/<sharePoint_site&gt**합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 SharePoint 사이트 URL이 지원되는 유일한 구문입니다.  
+-   SQL Server Management Studio: 고객이 < machine_name >과 유사한 구문 사용 하 여 서버를 참조할 수 없습니다 / < instance_name >. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 릴리스부터 권장되는 방법은 SharePoint 사이트 URL을 사용하는 것입니다. 예를 들어 **http://<sharepoint_server>/<sharePoint_site&gt**합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 SharePoint 사이트 URL이 지원되는 유일한 구문입니다.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>보고서 모델 디자이너를 SQL Server Data Tools에서 사용할 수 없음  
  보고서 모델 프로젝트가 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 더 이상 지원되지 않습니다. 보고서 모델 디자이너는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에서 새 보고서 모델 프로젝트를 만들거나 기존 프로젝트를 열 수 없으며, 보고서 모델을 만들거나 업데이트할 수 없습니다. 보고서 모델을 업데이트하려는 경우 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 또는 이전 도구를 사용할 수 있습니다. 보고서 작성기 및 보고서 디자이너와 같은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 도구에서 승인된 보고서에서 보고서 모델을 데이터 원본으로 계속 사용할 수 있습니다. 보고서 모델에서 보고서 데이터를 추출하기 위해 쿼리를 만드는 데 사용하는 쿼리 디자이너는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서 계속 사용할 수 있습니다.  

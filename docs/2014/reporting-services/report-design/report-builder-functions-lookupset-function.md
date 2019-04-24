@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 39cb3f4ca7c1bf5ee934824521a7af8ea05c2bee
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 8b43eebafb47a2f9173825ea79b5ba035e27ebca
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287011"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966629"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 함수(보고서 작성기 및 SSRS)
   이름/값 쌍을 포함하는 데이터 세트에서 지정된 이름과 일치하는 값 집합을 반환합니다.  
@@ -50,7 +50,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Remarks  
  `LookupSet`을 사용하여 일 대 다 관계의 이름/값 쌍에 대한 지정된 데이터 집합에서 값 집합을 검색할 수 있습니다. 예를 들어 테이블에 있는 고객 식별자의 경우 `LookupSet`을 사용하여 데이터 영역에 바인딩되지 않은 데이터 집합에서 해당 고객에 대해 연결된 전화 번호를 모두 검색할 수 있습니다.  
   
- `LookupSet`은 다음을 수행합니다.  
+ `LookupSet`에서는 다음을 수행합니다.  
   
 -   현재 범위에서 원본 식을 평가합니다.  
   

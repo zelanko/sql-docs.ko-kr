@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033194"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937359"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014에서 SQL Server Reporting Services의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
@@ -56,24 +56,24 @@ ms.locfileid: "56033194"
  SharePoint 권한 수준에 대한 자세한 내용은 [사용자 권한 및 사용 권한 수준](https://technet.microsoft.com/library/cc721640.aspx)을 참조하세요.  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>SharePoint 모드에서 보고서 서버 추적 로그가 새 위치에 있음(SharePoint 모드)  
- **새 동작:** SharePoint 모드에서 설치된 보고서 서버의 경우 보고서 서버 추적 로그가 %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles 아래에 배치됩니다.  
+ **새 동작:** SharePoint 모드로 설치 된 보고서 서버의 경우 보고서 서버 추적 로그가 %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles 아래 됩니다.  
   
  **이전 동작:** 보고서 서버 추적 로그가 다음과 비슷한 경로 아래에서 찾을 수 없습니다: SQL Server %Programfilesdir%\Microsoft\\< RS_instance > services\logfiles  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>GetServerConfigInfo SOAP API가 더 이상 지원되지 않음(SharePoint 모드)  
  **새 동작**: PowerShell cmdlet "Get-sprsserviceapplicationservers"를 사용 합니다.  
   
- **이전 동작:** 고객이 SOAP 클라이언트 코드를 개발하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 끝점과 직접 통신하고 GetReportServerConfigInfo()를 호출할 수 있었습니다.  
+ **이전 동작:** 고객이 SOAP 클라이언트 코드와 직접 통신할 수를 개발할 수는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 끝점 및 GetReportServerConfigInfo() 호출 합니다.  
   
 ### <a name="report-server-configuration-and-management-tools"></a>보고서 서버 구성 및 관리 도구  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>구성 관리자가 SharePoint 모드에서 사용되지 않음  
- **새 동작:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드 보고서 서버를 지원하지 않습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성을 이제 SharePoint 중앙 관리를 사용하여 완료할 수 있으므로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드를 지원하지 않습니다. 구성 관리자는 이제 기본 모드 보고서 서버에만 사용됩니다.  
+ **새 동작:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager에는 더 이상 SharePoint 모드 보고서 서버만 지원 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 구성을 이제 SharePoint 중앙 관리를 사용하여 완료할 수 있으므로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자가 더 이상 SharePoint 모드를 지원하지 않습니다. 구성 관리자는 이제 기본 모드 보고서 서버에만 사용됩니다.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>서버를 한 모드에서 다른 모드로 변경할 수 없음  
  **새 동작:** 서버 모드를 변경할 수 없습니다. 보고서 서버를 기본 모드로 설치하는 경우 이것을 SharePoint 모드로 변경하거나 다시 구성할 수 없습니다. SharePoint 모드로 설치하는 경우 보고서 서버를 기본 모드로 변경할 수 있습니다.  
   
- **이전 동작:** 고객이 SharePoint 모드로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 설치합니다. 고객이 보고서 서버를 기본 모드로 전환하려는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 열어 새 기본 모드 데이터베이스를 만들거나 기존 기본 모드 데이터베이스에 연결하여 기본 모드로 전환할 수 있었습니다. 또한 고객은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 SharePoint 모드에서 기본 모드로 전환할 수 있었습니다.  
+ **이전 동작:** 고객 설치는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드의 보고서 서버. 고객이 보고서 서버를 기본 모드로 전환하려는 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 열어 새 기본 모드 데이터베이스를 만들거나 기존 기본 모드 데이터베이스에 연결하여 기본 모드로 전환할 수 있었습니다. 또한 고객은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 SharePoint 모드에서 기본 모드로 전환할 수 있었습니다.  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services 동작 변경 내용  
  이 섹션에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다.  

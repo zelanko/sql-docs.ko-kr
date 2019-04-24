@@ -14,22 +14,22 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024854"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935859"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>사용자에게 보고서 서버에 대한 액세스 권한 부여(보고서 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 역할 기반 보안을 사용하여 보고서 서버에 대한 액세스 권한을 사용자에게 부여합니다. 새 보고서 서버 설치에서는 로컬 관리자 그룹의 멤버인 사용자에게만 보고서 서버 내용 및 작업에 대한 사용 권한이 있습니다. 다른 사용자가 보고서 서버를 사용할 수 있게 하려면 태스크 모음을 지정하는 미리 정의된 역할에 사용자 또는 그룹 계정을 매핑하는 역할 할당을 만들어야 합니다.  
   
- **SharePoint 모드 보고서 서버:** SharePoint 통합 모드로 구성된 보고서 서버의 경우 SharePoint 사이트에서 SharePoint 사용 권한을 사용하여 액세스를 구성합니다. SharePoint 사이트의 사용 권한 수준에 따라 보고서 서버 내용 및 작업에 대한 액세스 권한이 결정됩니다. SharePoint 사이트에 대한 사용 권한을 부여하려면 사이트 관리자여야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)를 참조하세요.  
+ **SharePoint 모드 보고서 서버:** SharePoint 통합 모드로 구성 된 보고서 서버에 대 한 SharePoint 권한을 사용 하 여 SharePoint 사이트에서 액세스를 구성 합니다. SharePoint 사이트의 사용 권한 수준에 따라 보고서 서버 내용 및 작업에 대한 액세스 권한이 결정됩니다. SharePoint 사이트에 대한 사용 권한을 부여하려면 사이트 관리자여야 합니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)를 참조하세요.  
   
- **기본 모드 보고서 서버:** 이 항목에서는 기본 모드로 구성된 보고서 서버 및 보고서 관리자를 사용하여 역할에 사용자를 할당하는 방법에 대해 설명합니다. 역할에는 다음과 같은 두 가지 유형이 있습니다.  
+ **기본 모드 보고서 서버:** 이 항목에서는 기본 모드 및 사용자 역할에 할당 하려면 보고서 관리자를 사용 하도록 구성 된 보고서 서버에 포커스가 있습니다. 역할에는 다음과 같은 두 가지 유형이 있습니다.  
   
 -   항목 수준 역할은 보고서 서버 내용, 구독, 보고서 처리 및 보고서 기록을 보고, 추가하고, 관리하는 데 사용됩니다. 항목 수준 역할 할당은 루트 노드(홈 폴더)에 정의되거나 계층의 하위 수준에 있는 특정 폴더 또는 항목에 정의됩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: '자습서: 가로 막대형 차트 (보고서 작성기) 보고서에 추가 | Microsoft Docs'
+title: '자습서: 보고서에 막대 차트 추가(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295991"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938159"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 가로 막대형 차트 (보고서 작성기) 보고서에 추가
   가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   
 -   긴 범주 이름의 가독성 향상  
@@ -55,9 +55,9 @@ ms.locfileid: "56295991"
 10. [보고서 저장](#Save)  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 집합을 만들고 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기 &#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)합니다.  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 집합 만들기 및 데이터 원본 선택이 시리즈의 첫 번째 자습서를 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- 이 자습서에 소요되는 예상 시간: 15 분입니다.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 15분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -122,7 +122,7 @@ ms.locfileid: "56295991"
   
 2.  **가로 막대형**을 클릭하고 **다음**을 클릭합니다.  
   
-     에 **차트 필드 정렬** 페이지에 있는 4 개의 필드를 **사용 가능한 필드** 창: FirstName, LastName, SalesYear2009 및 SalesYear2008 필드가 있습니다.  
+     **차트 필드 정렬** 페이지의 **사용 가능한 필드** 창에는 FirstName, LastName, SalesYear2009 및 salesyear2008 필드가 있습니다.  
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   

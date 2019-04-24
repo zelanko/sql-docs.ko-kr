@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
-ms.translationtype: MT
+ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579603"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938329"
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
   식은 강력하고 융통성 있는 보고서를 만드는 데 도움이 됩니다. 이 자습서에서는 일반 함수와 연산자를 사용하는 식을 만들고 구현하는 방법을 배웁니다. 사용 합니다 **식** 식을 연결 하는 이름 값 확인을 별도 데이터 집합에서 값을 쓸 대화 상자 등 고 필드 값에 따라 서로 다른 그림에 표시 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "57579603"
   
 -   [보고서 저장](#Save)  
   
- 이 자습서에 소요되는 예상 시간: 30분  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -66,7 +66,7 @@ ms.locfileid: "57579603"
 >  이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
 > [!NOTE]  
->  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 다음 자습서를 참조하십시오. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은 데이터 원본을 선택 하 고 데이터 집합을 만들려면이 시리즈의 첫 번째 자습서를 참조 하세요. [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>새 테이블 보고서를 만들려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "57579603"
   
      이 쿼리에서는 생일, 이름, 성, 시/도, 국가/지역 식별자, 성별 및 구매량 연간 누계를 포함하는 열 이름을 지정합니다.  
   
-10. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합에는 20행의 데이터가 표시되고 FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 열이 포함됩니다.  
+10. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. 결과 집합은 20 행의 데이터가 표시 하 고 다음 열이 포함 됩니다. FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase 및 LastPurchase 합니다.  
   
 11. **다음**을 클릭합니다.  
   

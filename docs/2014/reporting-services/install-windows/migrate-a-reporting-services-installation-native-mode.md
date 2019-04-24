@@ -1,7 +1,7 @@
 ---
 title: Reporting Services 설치 마이그레이션(기본 모드) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.custom: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
-ms.openlocfilehash: 6993b1fa53bc6aa3d0b6de95ca9feff4eb34ad51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: MT
+ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351849"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969375"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 

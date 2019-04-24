@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286803"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951249"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 (보고서 작성기) 만들기
   이 자습서에서는 양식 편지와 유사한 SSRS 자유 형식 보고서를 만드는 방법을 배웁니다. 입력란, 이미지 및 다른 데이터 영역이 있는 양식을 만들기 위해 보고서 항목을 정렬할 수 있습니다.  
   
  이 자습서에서 만드는 보고서는 자습서에 포함된 샘플 판매 데이터를 기반으로 합니다. 이 보고서에서는 정보가 지역별로 그룹화되고 지역의 판매 관리자 이름과 세부 및 요약 판매 정보가 표시됩니다. 목록 데이터 영역을 자유 형식 보고서의 기초로 사용한 다음, 이미지가 있는 장식 패널, 데이터가 삽입된 정적 텍스트, 세부 정보를 표시할 테이블, 요약 정보를 표시할 원형 및 세로 막대형 차트(선택 사항) 등을 추가합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "56286803"
   
 -   [요약 데이터 시각화 추가](#Visualization)  
   
- 이 자습서에 소요되는 예상 시간: 20분.  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 20분.  
   
 ## <a name="requirements"></a>요구 사항  
  요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -224,7 +224,7 @@ ms.locfileid: "56286803"
   
 2.  리본 메뉴의 **삽입** 탭에서 **입력란**을 클릭한 다음 입력란을 목록의 왼쪽 상단으로 끌어 이전에 추가한 사각형 안에 배치합니다. 입력란의 높이와 너비를 각각 3인치와 5인치로 만듭니다.  
   
-3.  입력란의 위쪽에 커서를 놓고 **Newsletter for**.  
+3.  입력란의 위쪽에 커서를 놓은 다음 입력: **Newsletter for**.  
   
      ![뉴스레터 제목 텍스트 추가](../../2014/tutorials/media/tutorial-newsletterfor.png "뉴스레터 제목 텍스트 추가")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286803"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 합니다.  
+9. 형식과 3 단계에서 입력 한 텍스트 아래에 커서를 배치 합니다. **Hello** 합니다.  
   
     > [!NOTE]  
     >  "Hello" 단어 뒤에 추가 공백을 포함해야 합니다. 이 공백은 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
@@ -279,7 +279,7 @@ ms.locfileid: "56286803"
   
      ![뉴스레터 텍스트 추가](../../2014/tutorials/media/tutorial-newslettertext.png "뉴스레터 텍스트 추가")  
   
-20. 15단계에서 붙여 넣은 텍스트 아래에 커서를 놓고 **축에 총 판매량에** 입니다.  
+20. 15 단계에서 붙여 넣은 텍스트 아래에 커서를 놓고 입력 합니다. **축에 총 판매량에** 입니다.  
   
     > [!NOTE]  
     >  "of" 단어 뒤에 추가 공백을 포함해야 합니다. 이 공백은 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010924"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944399"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>보고서 서버(Reporting Services 기본 모드) 구성
   설치 중에 선택한 옵션에 따라 보고서 서버를 사용하기 전에 추가 구성이 필요할 수 있습니다. 보고서 서버 구성은 최소한 다음과 같은 요소로 구성됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "56010924"
   
 -   애플리케이션 데이터, 보고서 및 기타 항목을 저장하는 보고서 서버 데이터베이스  
   
- 기본 모드 기본 구성 또는 SharePoint 통합 모드 기본 구성 설치 옵션 중 하나를 선택한 경우 설치 프로그램은 최소 설정을 구성합니다. 파일만 모드로 보고서 서버를 설치한 경우(설치 마법사의 **구성 없이 설치** 옵션) 서비스 계정만 구성됩니다. 설치가 완료된 후 웹 서비스 URL과 보고서 서버 데이터베이스를 구성해야 합니다.  
+ 설치 모드 기본 구성 설치 옵션 중 하나를 선택 하는 경우: 기본 모드 기본 구성 또는 SharePoint 통합된 모드 기본 구성입니다. 파일만 모드로 보고서 서버를 설치한 경우(설치 마법사의 **구성 없이 설치** 옵션) 서비스 계정만 구성됩니다. 설치가 완료된 후 웹 서비스 URL과 보고서 서버 데이터베이스를 구성해야 합니다.  
   
  보고서 관리자는 기본 모드 보고서 서버의 선택적 기능이지만 사용자에게 보고서 서버에 대한 액세스 권한을 부여하고 보고서 서버 콘텐츠를 관리할 수 있도록 보고서 관리자를 구성하는 것이 좋습니다. 보고서 서버를 SharePoint 통합 모드로 배포하는 경우 SharePoint 서버의 웹 프런트 엔드를 사용하여 액세스 권한을 부여할 수 있습니다.  
   

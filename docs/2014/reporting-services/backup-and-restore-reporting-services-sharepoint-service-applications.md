@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033834"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971899"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원
   이 항목에서는 SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 백업하고 복원하는 방법에 대해 설명합니다. 이 항목에는 다음과 같은 내용이 포함되어 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "56033834"
  [서비스 응용 프로그램 백업(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 확인  
- **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있는지 확인하려면  
+ **실행 계정:** 확인 하려면 서비스 응용 프로그램에 실행 계정이 사용 되는 경우:  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56033834"
   
 4.  실행 계정이 구성된 경우 서비스 애플리케이션 백업을 복원할 때 자격 증명을 알아야 합니다. 올바른 자격 증명을 알 때까지 백업 및 복원 절차를 진행하지 마세요.  
   
- **데이터베이스 인증:** 서비스 응용 프로그램에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있는지 확인하려면  
+ **데이터베이스 인증:** 확인 하려면 서비스 응용 프로그램은 데이터베이스 인증을 위해 Windows 인증을 사용 하는 경우:  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033834"
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 암호화 키 복원에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 구성  
- **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있었던 경우 다음 단계를 수행하여 구성하십시오.  
+ **실행 계정:** 서비스 응용 프로그램에서 사용한 경우 전체 실행 계정 다음 단계를 구성 합니다.  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033834"
   
 5.  **확인**을 클릭합니다.  
   
- **데이터베이스 인증:** 서비스 응용 프로그램에 데이터베이스 인증을 위해 Windows 인증이 사용되고 있었던 경우 다음 단계를 수행하십시오.  
+ **데이터베이스 인증:** 서비스 응용 프로그램에서 사용한 경우 Windows 인증 완료 데이터베이스 인증을 위해 다음 단계:  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리** 를 클릭합니다.  
   

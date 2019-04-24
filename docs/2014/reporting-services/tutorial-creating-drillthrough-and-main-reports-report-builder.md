@@ -1,5 +1,5 @@
 ---
-title: '자습서: 드릴스루 보고서 및 주 보고서 (보고서 작성기) 만들기 | Microsoft Docs'
+title: '자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289871"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961239"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 (보고서 작성기) 만들기
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289871"
   
 8.  [주 보고서 및 드릴스루 보고서 실행](#MRunReports)  
   
- 이 자습서에 소요되는 예상 시간: 30분  
+ 이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  이 자습서를 실행하려면 Contoso Sales 큐브에 액세스해야 합니다. 이 요구 사항은 드릴스루 보고서와 주 보고서 모두에 적용됩니다. 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -168,7 +168,7 @@ ms.locfileid: "56289871"
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online**, **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-     이제 쿼리에는 온라인과 대리점 채널만 포함할 필터가 제공됩니다.  
+     이제 쿼리에이 채널만 포함할 필터가 제공 됩니다. 온라인 및 대리점입니다.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   
@@ -462,7 +462,7 @@ ms.locfileid: "56289871"
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online** , **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-     이제 쿼리에는 온라인과 대리점 채널만 포함할 필터가 제공됩니다.  
+     이제 쿼리에이 채널만 포함할 필터가 제공 됩니다. 온라인 및 대리점입니다.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289871"
   
 1.  **레이아웃 선택** 페이지의 **옵션**에서 **부분합 및 총합계 표시** 가 선택되어 있는지 확인합니다.  
   
-     마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹이며, 두 번째 행은 열 머리글을 포함하며, 세 번째 행은 제품 범주 데이터(`[Sum(Net_ QTY)]` 및 `[Sum(Net_Sales)]`)를 포함하며, 네 번째 행은 합계를 포함합니다.  
+     마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹, 열 머리글을 포함 하는 두 번째 행은 제품 범주 데이터를 포함 하는 세 번째 행 (`[Sum(Net_ QTY)]` 및 `[Sum(Net_Sales)]`, 네 번째 행은 합계를 포함 하 고 있습니다.  
   
 2.  **다음**을 클릭합니다.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289871"
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  **2009 Product Category Sales: Online and Reseller Category:** 합니다.  
+2.  형식 **2009 Product Category Sales: Online and Reseller Category:** 를 입력합니다.  
   
 3.  입력한 텍스트를 선택합니다.  
   

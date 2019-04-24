@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026424"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964799"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>2단원: 보고서 데이터 원본 속성 수정
   이 단원에서는 보고서 관리자를 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다. 다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
@@ -114,16 +114,16 @@ ms.locfileid: "56026424"
   
          ![매개 변수 영역이 표시 되는 보고서 뷰어](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "매개 변수 영역이 표시 되는 보고서 뷰어")  
   
-8.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용 된 프로젝트 속성에 대 한 자세한 내용은 게시 하려면 보고서를 보고서 서버 (선택 사항)' 섹션을 참조 하세요.의 [단원 6: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)합니다.  
+8.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용 된 프로젝트 속성에 대 한 자세한 내용은 게시 하려면 보고서를 보고서 서버 (선택 사항)' 섹션을 참조 하세요.의 [단원 6: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.  
   
 ##  <a name="bkmk_redeploy"></a> 보고서 다시 배포 하려면  
   
-1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용 된 프로젝트 속성에 대 한 자세한 내용은 게시 하려면 보고서를 보고서 서버 (선택 사항)' 섹션을 참조 하세요.의 [단원 6: 그룹화 및 합계 추가 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)합니다.  
+1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용 된 프로젝트 속성에 대 한 자세한 내용은 게시 하려면 보고서를 보고서 서버 (선택 사항)' 섹션을 참조 하세요.의 [단원 6: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)를 참조하세요.  
   
 2.  도구 모음에서 **빌드** 를 클릭한 후 **자습서 배포**를 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 저장된 자격 증명을 사용하여 데이터를 가져오도록 보고서를 구성했습니다. 다음 단원에서는 보고서 관리자의 데이터 기반 구독 페이지를 사용하여 구독을 지정합니다. 참조 [3 단원: 데이터 기반 구독 정의](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)합니다.  
+ 저장된 자격 증명을 사용하여 데이터를 가져오도록 보고서를 구성했습니다. 다음 단원에서는 보고서 관리자의 데이터 기반 구독 페이지를 사용하여 구독을 지정합니다. [3단원: 데이터 기반 구독 정의](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 데이터 원본 관리](report-data/manage-report-data-sources.md)   

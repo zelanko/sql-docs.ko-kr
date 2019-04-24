@@ -18,15 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032704"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955539"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 데이터 처리 확장 프로그램을 사용하는 확장 가능한 모듈식 데이터 계층을 통해 데이터 원본에서 보고서 데이터를 검색합니다. 데이터 원본에서 보고서 데이터를 검색하려면 데이터 원본 유형, 데이터 원본에서 실행 중인 소프트웨어 버전 및 데이터 원본 플랫폼(32비트 또는 64비트 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)])을 지원하는 데이터 처리 확장 프로그램을 선택해야 합니다.  
@@ -88,19 +88,19 @@ ms.locfileid: "56032704"
 ## <a name="supported-data-sources"></a>지원되는 데이터 원본  
  다음 표에서는 보고서 데이터 세트 및 보고서 모델에 대해 데이터를 검색하는 데 사용할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 데이터 처리 확장 프로그램 및 데이터 공급자를 보여 줍니다. 확장 프로그램이나 데이터 공급자에 대한 자세한 내용을 보려면 두 번째 열의 링크를 클릭하십시오. 표 열은 다음과 같습니다.  
   
--   보고서 데이터 원본: 액세스하는 데이터의 유형(예: 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML)입니다. 이 열을 통해 "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 보고서에 사용할 수 있는 데이터 형식은 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   보고서 데이터 원본: 액세스 중인; 데이터 형식 예를 들어, 관계형 데이터베이스, 다차원 데이터베이스, 플랫 파일 또는 XML입니다. 이 열이 질문에 대답합니다. "데이터 유형의 수 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 사용할?"  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 데이터 원본을 정의할 때 드롭다운 목록에 표시되는 데이터 원본 유형 중 하나입니다. 이 목록은 설치 및 등록된 DPE와 데이터 공급자를 통해 채워집니다. 이 열을 통해 "보고서 데이터 원본을 만들 때 드롭다운 목록에서 어떤 데이터 원본 유형을 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형: 데이터 원본을 정의할 때 드롭다운 목록에 표시 하는 데이터 원본 유형 중 하나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]합니다. 이 목록은 설치 및 등록된 DPE와 데이터 공급자를 통해 채워집니다. 이 열이 질문에 대답합니다. "어떤 데이터 원본 유형을 선택할 것인가 드롭 다운 목록에서 보고서 데이터 원본을 만들 때?"  
   
--   데이터 처리 확장 프로그램/데이터 공급자의 이름: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이나 선택한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형에 해당하는 다른 데이터 공급자입니다. 이 열을 통해 "데이터 원본 유형을 선택할 때 사용되는 해당 데이터 처리 확장 프로그램이나 데이터 공급자는 무엇인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 처리 확장 프로그램/데이터 공급자의 이름: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 나 해당 하는 다른 데이터 공급자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 원본 유형을 선택 합니다. 이 열이 질문에 대답합니다. 선택할 때 사용 되는 해당 데이터 처리 확장 프로그램이 나 데이터 공급자는 데이터 원본 유형의 경우? "  
   
--   기본 데이터 공급자 버전(옵션): 일부 데이터 원본 유형은 여러 데이터 공급자를 지원합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열을 통해 "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   기본 데이터 공급자 버전 (선택 사항): 일부 데이터 원본 유형은 둘 이상의 데이터 공급자를 지원 합니다. 이는 같은 공급자의 다른 버전일 수도 있고 데이터 공급자 유형에 대한 타사의 다른 구현일 수도 있습니다. 공급자 이름은 데이터 원본을 구성한 후 연결 문자열에 자주 나타납니다. 이 열이 질문에 대답합니다. "데이터 원본 유형을 선택한 후 **연결 속성** 대화 상자에서 어떤 데이터 공급자를 선택할 것인가?"라는 질문에 대한 답을 얻을 수 있습니다.  
   
--   데이터 원본 *\<플랫폼>*: 데이터 처리 확장 프로그램이나 데이터 공급자가 대상 데이터 원본에 대해 지원하는 데이터 원본 플랫폼입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 플랫폼 유형의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 *\<플랫폼>*: 대상 데이터 원본에 대 한 데이터 처리 확장 프로그램이 나 데이터 공급자가 지 원하는 데이터 원본 플랫폼입니다. 이 열이 질문에 대답합니다. "이 데이터 처리 확장 프로그램이 나 데이터 공급자 데이터를 검색할 수이 플랫폼 유형의 데이터 원본에서"?  
   
--   데이터 원본 버전: DPE 또는 데이터 공급자가 지원하는 대상 데이터 원본의 버전입니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자가 이 버전의 데이터 원본에서 데이터를 검색할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   데이터 원본 버전: DPE 또는 데이터 공급자가 지 원하는 대상 데이터 원본의 버전입니다. 이 열이 질문에 대답합니다. "이 데이터 처리 확장 프로그램이 나 데이터 공급자 데이터를 검색할 수이 버전의 데이터 원본에서"?  
   
--   RS *\<플랫폼>*: 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 서버 및 보고서 제작 클라이언트의 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열을 통해 "이 데이터 처리 확장 프로그램이나 데이터 공급자를 이 플랫폼 유형에 설치할 수 있는가?"라는 질문에 대한 답을 얻을 수 있습니다.  
+-   RS *\<플랫폼>*: 보고서 서버 및 사용자 지정 DPE 또는 데이터 공급자를 설치할 수 있는 보고서 제작 클라이언트에 대 한 플랫폼입니다. 기본 제공 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]설치에 포함되어 있습니다. 사용자 지정 데이터 처리 확장 프로그램이나 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 특정 플랫폼에 대해 기본적으로 컴파일되어야 합니다. 이 열이 질문에 대답합니다. "이 데이터 처리 확장 프로그램이 나 데이터 공급자에 설치할 수 있습니다이 플랫폼 유형의"?  
   
 ###  <a name="DataSourcesTable"></a> 데이터 원본 유형  
   
@@ -219,7 +219,7 @@ ms.locfileid: "56032704"
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> Oracle용 OLE DB  
- 데이터 처리 확장 프로그램인 Oracle용 OLE DB는 Oracle 데이터 형식 중 BLOB, CLOB, NCLOB, BFILE, UROWID를 지원하지 않습니다.  
+ Oracle 용 OLE DB 데이터 처리 확장에는 Oracle 데이터 형식은 지원 하지 않습니다. BLOB, CLOB, NCLOB, BFILE, UROWID 합니다.  
   
  이 확장 프로그램은 위치에 종속적인 명명되지 않은 매개 변수를 지원하지만 명명된 매개 변수는 지원하지 않습니다. 명명된 매개 변수를 사용하려면 [Oracle](#OracleClient) 데이터 처리 확장 프로그램을 사용합니다.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "56032704"
   
  자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](teradata-connection-type-ssrs.md)을 참조하세요.  
   
- Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 다음 백서를 참조하십시오. [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
+ Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 다음 백서를 참조 합니다. [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP).  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   

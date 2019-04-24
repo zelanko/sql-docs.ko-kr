@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016034"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939849"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "56016034"
   
 |도구|Description|액세스 방법|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 기반으로 보고서를 만들고 보고서와 상호 작용할 수 있도록 디자인한 대화형 데이터 탐색 및 시각 표현 환경입니다.<br /><br /> 참고: SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 필요합니다.|Silverlight 브라우저를 사용합니다.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델을 기반으로 보고서를 만들고 보고서와 상호 작용할 수 있도록 디자인한 대화형 데이터 탐색 및 시각 표현 환경입니다.<br /><br /> 참고: 필요한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서.|Silverlight 브라우저를 사용합니다.|  
 |보고서 디자이너|이 도구를 사용하면 보고서를 설계하고 기본 모드 또는 SharePoint 모드 보고서 서버에 배포할 수 있습니다.<br /><br /> 다음에서 호스트됨 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> 보고서에 사용되는 데이터를 구성하는 보고서 데이터 창<br /><br /> 대화형으로 보고서를 디자인할 수 있는 디자인 및 미리 보기 탭 뷰<br /><br /> 데이터 원본에서 검색할 데이터 및 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)의 데이터 원본 유형과 연결되는 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> IntelliSense를 사용하여 보고서 내용 및 모양을 사용자 지정하는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 식을 작성하는 식 편집기<br /><br /> 사용자 지정 보고서 항목 및 사용자 지정 쿼리 디자이너 지원<br /><br /> <br /><br /> 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |보고서 작성기|이 도구를 사용하면 보고서를 설계하고 기본 모드 또는 SharePoint 모드 보고서 서버에 배포할 수 있습니다.<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office와 비슷한 제작 환경<br /><br /> 보고서 항목을 보고서 파트로 저장하는 기능<br /><br /> 지도를 만들 수 있는 마법사<br /><br /> 집계의 집계<br /><br /> 향상된 식 지원<br /><br /> 선택한 기본 제공 데이터 원본 유형에서 검색할 데이터를 지정하는 데 유용한 쿼리 디자이너<br /><br /> <br /><br /> 자세한 내용은 [보고서 작성기 &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)합니다.|MSI를 다운로드하거나 보고서 관리자/SharePoint에서 엽니다.|  
   

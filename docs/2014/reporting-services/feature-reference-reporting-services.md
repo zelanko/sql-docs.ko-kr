@@ -13,15 +13,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ca90cb195ca7627dfc28808a2281293a0a2e278
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965379"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290441"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948269"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014의 보고서 작성기
   보고서 작성기는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Microsoft Office 환경에서 작업하는 것을 선호하는 비즈니스 사용자를 위한 보고서 제작 환경입니다. 보고서를 작성할 때는 데이터를 가져올 위치, 가져올 데이터 및 데이터를 표시할 방법을 정의해야 합니다. 보고서를 실행하면 보고서 처리기에서 사용자가 지정한 모든 정보를 사용하여 데이터를 검색하고 이를 보고서 레이아웃에 따라 정렬하여 보고서를 생성합니다. 보고서 작성기에서 보고서를 미리 보거나 다른 사람이 보고서를 실행할 수 있도록 보고서 서버 또는 SharePoint 통합 모드의 보고서 서버에 게시할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "56290441"
   
 -   **테이블, 행렬 또는 차트 마법사를 사용하여 보고서를 작성**합니다. 데이터 원본 연결을 선택하고, 필드를 끌어다 놓는 방법으로 데이터 세트 쿼리를 만들고, 레이아웃과 스타일을 선택하고, 보고서를 사용자 지정합니다.  
   
--   **지도 마법사를 사용** 하여 지리적 또는 기하학적 배경을 바탕으로 집계된 데이터를 표시하는 보고서를 작성합니다. 지도 데이터는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 공간 데이터 또는 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일일 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 지도 타일 배경을 추가할 수도 있습니다.  
+-   **지도 마법사를 사용** 하여 지리적 또는 기하학적 배경을 바탕으로 집계된 데이터를 표시하는 보고서를 작성합니다. 지도 데이터의 공간 데이터 수를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리나는 Environmental Systems Research Institute, Inc. (ESRI) 셰이프 파일입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing 지도 타일 배경을 추가할 수도 있습니다.  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290441"
  [SQL Server 2014용 보고서 작성기의 새로운 기능](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  지도를 비롯하여 이 보고서 작성기 버전의 새로운 기능에 대해 설명합니다.  
   
- [자습서: 오프 라인에서 빠른 차트 보고서 만들기](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [자습서: 오프라인에서 빠른 차트 보고서 만들기](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  보고서 작성기와 보고서 작성에 도움이 되는 마법사를 소개합니다. 사용할 데이터 집합이 제공되므로 데이터 원본에 연결하지 않고도 시작할 수 있습니다.  
   
  [보고서 계획&#40;보고서 작성기&#41;](../report-design/planning-a-report-report-builder.md)  
