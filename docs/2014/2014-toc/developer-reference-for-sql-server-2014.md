@@ -13,11 +13,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470348"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 개발자 참조
 

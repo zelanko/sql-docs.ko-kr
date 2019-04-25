@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501804"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>오류 메시지 카탈로그 뷰-sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 행을 포함 **message_id** 하거나 **language_id** 시스템 정의 및 사용자 정의 메시지에 대 한 시스템의 오류 메시지입니다. 자세한 내용은 [sp_addmessage&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)을 참조하세요.  
    
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|메시지의 ID입니다. 서버 전체에서 고유하며 50000 미만의 메시지 ID가 시스템 메시지입니다.|  
 |**language_id**|**smallint**|언어 ID의 텍스트가 **텍스트** 에 정의 된 대로 사용 됩니다 **syslanguages**합니다. 지정 된 고유 **message_id**합니다.|  

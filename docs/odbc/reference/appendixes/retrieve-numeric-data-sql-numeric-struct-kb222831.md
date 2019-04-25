@@ -1,6 +1,6 @@
 ---
 title: Sql_numeric_struct를 사용 하 여 숫자 데이터 검색 | Microsoft Docs
-description: ODBC를 사용 하 여 C/c + + sql_numeric_struct를 사용, SQL_C_NUMERIC 관련이 사용 하 여 SQL Server 숫자 데이터 형식을 검색 합니다.
+description: C /C++ ODBC를 사용 하 여 SQL Server 숫자 데이터 형식을 검색 합니다 sql_numeric_struct를 사용, SQL_C_NUMERIC 관련이 사용 하 여 합니다.
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -12,11 +12,11 @@ ms.author: genemi
 authors: MightyPen
 manager: craigg
 ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629515"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>SQL 사용 하 여 숫자 데이터를 검색할\_숫자\_구조체
 

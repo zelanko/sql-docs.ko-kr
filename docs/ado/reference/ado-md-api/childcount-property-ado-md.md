@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01be10781c0925683ed2da9fdff24190d175fca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469265"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount 속성(ADO MD)
 멤버 수를 나타내는 현재 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체가 계층의 부모입니다.  

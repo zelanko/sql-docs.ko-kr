@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469145"
 ---
 # <a name="lesson-11-create-roles"></a>11 단원: 역할 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 Windows 사용자로만 액세스를 제한함으로써 모델 데이터베이스 개체 및 데이터에 보안을 제공합니다. 각 역할은 없음, 읽기, 읽기 및 처리, 처리 또는 관리자라는 단일 사용 권한으로 정의됩니다. 역할 관리자를 사용 하 여 모델을 제작 하는 동안 역할을 정의할 수 있습니다. 모델을 배포한 후 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다. 자세한 내용은 [역할](../analysis-services/tabular-models/roles-ssas-tabular.md)의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다.  
+이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 Windows 사용자로만 액세스를 제한함으로써 모델 데이터베이스 개체 및 데이터에 보안을 제공합니다. 각 역할은 단일 사용 권한을 사용 하 여 정의 됩니다. 없음, 읽기, 읽기 및 프로세스, 프로세스 또는 관리자입니다. 역할 관리자를 사용 하 여 모델을 제작 하는 동안 역할을 정의할 수 있습니다. 모델을 배포한 후 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다. 자세한 내용은 [역할](../analysis-services/tabular-models/roles-ssas-tabular.md)의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다.  
   
 > [!NOTE]  
 > 이 자습서를 완료하기 위해 역할을 만들 필요는 없습니다. 기본적으로 현재 로그인하는 데 사용한 계정에는 모델에 대한 관리자 권한이 있습니다. 그러나 보고 클라이언트를 사용 하 여 모델을 탐색 하기 위해 조직에서 다른 사용자를 허용 하도록 사용 권한을 읽기를 사용 하 여 하나 이상의 역할을 만들 하며 해당 사용자를 멤버로 추가 합니다.  
@@ -32,12 +32,12 @@ ms.locfileid: "52512935"
   
 -   **관리자** -이 역할에서 무제한 액세스 및 권한을 model 데이터베이스에서 관리 작업을 수행할 수 있는 관리자 권한을 할당 하려는 사용자를 포함할 수 있습니다.  
   
-조직의 Windows 사용자 및 그룹 계정은 고유하므로 특정 조직의 계정을 멤버에 추가할 수 있습니다. 그러나 이 자습서에서는 멤버를 비워둘 수도 있습니다. 나중에 12단원: Excel에서 분석에서 각 역할의 효과를 테스트할 수 있습니다.  
+조직의 Windows 사용자 및 그룹 계정은 고유하므로 특정 조직의 계정을 멤버에 추가할 수 있습니다. 그러나 이 자습서에서는 멤버를 비워둘 수도 있습니다. 나중에 12 단원 각 역할의 효과 테스트할 수 계속 합니다. Excel에서 분석 합니다.  
   
-이 단원에 소요되는 예상 시간: **15 분**  
+예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [10 단원: 파티션을 만들](../analysis-services/lesson-10-create-partitions.md)합니다.  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [10 단원: 파티션을 만들](../analysis-services/lesson-10-create-partitions.md)합니다.  
   
 ## <a name="create-roles"></a>역할 만들기  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52512935"
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **읽기** 권한을 선택합니다. 
 
-    ![으로 테이블 형식-lesson11-새-역할](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  선택 사항: 클릭 합니다 **멤버** 탭을 클릭 한 다음 **추가**합니다. **사용자 또는 그룹 선택** 대화 상자에서 역할에 포함할 조직의 Windows 사용자 또는 그룹을 입력합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "52512935"
     ```
     
     행 필터 수식은 부울(TRUE/FALSE) 값으로 확인되어야 합니다. 이 수식을 사용 하 여 Country Region Code 값을 가진 행만 "us" 사용자에 게 표시 되도록 지정 됩니다.  
-    ![으로 테이블 형식-lesson11-역할-필터](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  선택 사항: **멤버** 탭을 클릭한 다음 **추가**를 클릭합니다. **사용자 또는 그룹 선택** 대화 상자에서 역할에 포함할 조직의 Windows 사용자 또는 그룹을 입력합니다.  
   

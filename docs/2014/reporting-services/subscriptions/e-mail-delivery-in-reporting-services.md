@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45e72fe3c163f05f283965beb5fb3cf6ce62c50e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510947"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 전자 메일 배달 확장 프로그램은 Reporting Services 구성 관리자를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하여 구성됩니다.  

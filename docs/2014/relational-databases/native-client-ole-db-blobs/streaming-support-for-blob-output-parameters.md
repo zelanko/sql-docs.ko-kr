@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468180"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
   이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  
@@ -508,6 +508,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [BLOB 및 OLE 개체](blobs-and-ole-objects.md)  
+ [Blob 및 OLE 개체](blobs-and-ole-objects.md)  
   
   

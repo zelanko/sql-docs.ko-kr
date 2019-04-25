@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445895"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>현재 위치 업데이트 및 Delete 문 시뮬레이션
 데이터 원본 위치 지정된 업데이트를 지원 하지 않으며 delete 문, 하는 경우 이러한 드라이버를 시뮬레이션할 수 있습니다. 예를 들어 ODBC 커서 라이브러리 위치 지정된 업데이트를 시뮬레이션 하 고 delete 문입니다. 위치 지정된 update 및 delete 문 시뮬레이션 하기 위한 일반적인 전략 검색된 것을 위치 지정된 된 문을 변환 하는 것입니다. 대체 하 여 이렇게 합니다 **WHERE CURRENT OF** 절을 검색된 **여기서** 현재 행을 식별 하는 절.  

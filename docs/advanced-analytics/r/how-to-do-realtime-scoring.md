@@ -9,18 +9,18 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503766"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>예측 및 SQL Server에서 기계 학습 모델을 사용 하 여 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 기존 모델을 사용 하 여 예측 또는 새 데이터 입력에 대 한 결과 예측할 기계 학습의 핵심 작업입니다. 이 문서에서는 SQL Server에서 예측을 생성 하는 방법을 열거 합니다. 접근 방식 간의 내부 처리 방법론 속도의 증분을 줄이는 것은 기반 고속 예측에 대해 실행 됩니다 시간 종속성. 더 빠른 예측이 더 적은 종속성을 의미합니다.
 
-내부 처리 인프라를 사용 하 여 라이브러리 요구 사항 함께 제공 됩니다 (실시간 또는 네이티브 점수 매기기). Microsoft 라이브러리의 함수 여야 합니다. 오픈 소스 또는 타사 함수를 호출 하는 R 또는 Python 코드는 CLR 또는 c + + 확장에서 지원 되지 않습니다.
+내부 처리 인프라를 사용 하 여 라이브러리 요구 사항 함께 제공 됩니다 (실시간 또는 네이티브 점수 매기기). Microsoft 라이브러리의 함수 여야 합니다. CLR에서 오픈 소스 또는 타사 함수를 호출 하는 R 또는 Python 코드를 사용할 수 없습니다 또는 C++ 확장 합니다.
 
 다음 표에서 예측 및 예측에 대 한 점수 매기기 프레임 워크를 보여 줍니다. 
 
@@ -28,13 +28,13 @@ ms.locfileid: "58510090"
 |-----------------------|-------------------|----------------------|----------------------|
 | 확장성 프레임워크 | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | 없음 모델 기반으로 모든 R 또는 Python 함수 | 수백 밀리초입니다. <br/>로드 된 런타임 환경에 새 데이터 점수를 매길 전에 3부터 6 백 밀리초 평균 고정된 비용. |
 | [실시간 점수 매기기 CLR 확장](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 직렬화 된 모델 | R: RevoScaleR, MicrosoftML <br/>Python: revoscalepy를 microsoftml | 평균 시간 (밀리초)을 수만 있습니다. |
-| [네이티브 점수 매기기 c + + 확장](../sql-native-scoring.md) | [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
+| [네이티브 점수 매기기 C++ 확장](../sql-native-scoring.md) | [예측 T-SQL 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) 직렬화 된 모델 | R: RevoScaleR <br/>Python: revoscalepy | 평균적으로 20 밀리초입니다. | 
 
 처리 속도 출력의 물질 하지 차별화 기능입니다. 동일한 기능 및 입력을 가정 하지 점수가 매겨진된 출력 해야 사용 하는 방법에 따라 다릅니다.
 
 모델을 지원 되는 함수를 사용 하 여 만든 다음 디스크에 저장 하거나 데이터베이스에 이진 형식으로 저장 하는 원시 바이트 스트림으로 serialize 될 해야 합니다. 저장된 프로시저 또는 T-SQL을 사용 하 여 로드 하 고는 R 또는 Python을 실행 하는 언어 시간 오버 헤드 없이 이진 모델을 사용 하 여 더 빠르게 완료 될 때까지 새 입력에 대 한 예측 점수를 생성할 때 발생 합니다.
 
-CLR 및 c + + 확장의 중요 한 이유는 자체 데이터베이스 엔진에 근접 합니다. 데이터베이스 엔진의 기본 언어는 c + +, 더 적은 종속성을 사용 하 여 실행 하는 c + +로 작성 된 확장을 의미 합니다. 반면 CLR 확장.NET Core에 따라 달라 집니다. 
+CLR의 중요성 및 C++ 확장 프로그램은 자체 데이터베이스 엔진에 근접 합니다. 데이터베이스 엔진의 기본 언어는 C++, 즉, 작성 된 확장 C++ 더 적은 종속성을 사용 하 여 실행 합니다. 반면 CLR 확장.NET Core에 따라 달라 집니다. 
 
 예상할 수 있듯이 이러한 런타임 환경에서 지원 되는 플랫폼 저하 됩니다. 네이티브 데이터베이스 엔진 확장 관계형 데이터베이스는 어디서 나 실행: Windows, Linux, Azure. .NET Core 필요가 있는 CLR 확장은 현재 Windows만 있습니다.
 
@@ -58,11 +58,11 @@ _점수 매기기_ 은 두 단계로 이루어집니다. 먼저 테이블에서 
 
 확장성 프레임 워크는 R 또는 Python에서 간단한 함수에서 교육 복잡 한 기계 학습 모델에 이르기까지에서 수행할 수 있는 모든 작업을 지원 합니다. 그러나 이중 프로세스 아키텍처 작업의 복잡성에 관계 없이 모든 호출에 대해 외부 R 또는 Python 프로세스를 호출 해야 합니다. 테이블에서 미리 학습 된 모델을 로드 하 고 SQL Server에 이미 있는 데이터에 대 한 점수 매기기 작업에 수반 되는 경우 외부 프로세스를 호출 하는 오버 헤드는 특정 상황에서 사용할 수 있는 대기 시간을 추가 합니다. 예를 들어 사기 감지에 관련 되도록 빠른 점수 매기기 필요 합니다.
 
-사기 감지 시나리오에 대 한 점수 매기기 속도 높이려면 SQL Server는 R 및 Python 시작 프로세스의 오버 헤드를 제거 하는 c + + 및 CLR 확장으로 기본 점수 매기기 라이브러리를 추가 합니다.
+사기 감지 시나리오에 대 한 점수 매기기 속도 높이려면 SQL Server로 기본 점수 매기기 라이브러리를 추가 C++ 및 R 및 Python 시작 프로세스의 오버 헤드를 제거 하는 CLR 확장 합니다.
 
 [**실시간 점수 매기기** ](../real-time-scoring.md) 고성능 점수 매기기에 대 한 첫 번째 솔루션 이었습니다. R 및 Python RevoScaleR, MicrosoftML (R), revoscalepy를 Microsoft 제어 함수 처리는 CLR 라이브러리에 의존 실시간 점수 매기기 초기 버전의 SQL Server 2017 및 이후 업데이트에서는 SQL Server 2016에 도입 하 고 microsoftml (Python)입니다. CLR 라이브러리를 사용 하 여 호출 되는 **sp_rxPredict** 저장된 프로시저를 R 또는 Python 런타임을 호출 하지 않고도 모든 지원 되는 모델 형식에서 점수를 생성 합니다.
 
-[**네이티브 점수 매기기** ](../sql-native-scoring.md) 는 SQL Server 2017 기능을 네이티브 c + + 라이브러리로 하지만 RevoScaleR 및 revoscalepy 모델에 대해서만 구현 합니다. 빠르고 보다 안전한 방법은 하지만 더 작은 다른 방법론을 기준으로 하는 함수 집합을 지원 합니다.
+[**네이티브 점수 매기기** ](../sql-native-scoring.md) 네이티브로 구현 하는 SQL Server 2017 기능을를 C++ RevoScaleR 및 revoscalepy 모델의 경우에 라이브러리입니다. 빠르고 보다 안전한 방법은 하지만 더 작은 다른 방법론을 기준으로 하는 함수 집합을 지원 합니다.
 
 ## <a name="choose-a-scoring-method"></a>점수 매기기 방법 선택
 

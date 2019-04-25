@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762328"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -30,7 +30,7 @@ ms.locfileid: "48101703"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|메시지 텍스트|데이터베이스 오류: 파일 'FILE'이(가) 잘못된 Filestream 파일입니다.|  
+|메시지 텍스트|데이터베이스 오류: ' File '파일을 올바른 Filestream 파일이 아닙니다.|  
   
 ## <a name="explanation"></a>설명  
  Filestream 데이터 공간 바로 아래에는 'filestream.hdr'과 같은 일부 특수한 파일을 제외한 다른 파일이 있을 수 없습니다.  

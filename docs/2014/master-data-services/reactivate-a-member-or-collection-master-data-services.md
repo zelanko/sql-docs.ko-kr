@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 208f801522e53eb8d8075cced223d2d0360f257b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765566"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 다시 활성화(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 다음과 같은 멤버를 다시 활성화할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "52762455"
   
 7.  확인 대화 상자에서 **확인**을 클릭합니다. 새 트랜잭션이 추가되고 **새 값** 열에 **활성** 이 표시됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [멤버 비활성화 또는 삭제 하는 준비 프로세스를 사용 하 여 &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [멤버 또는 컬렉션 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   

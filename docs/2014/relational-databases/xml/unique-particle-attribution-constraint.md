@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467419"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
   XSD에서 복잡한 콘텐츠 모델은 UPA(Unique Particle Attribution) 제약 조건 규칙에 의해 제한됩니다. 이 규칙에서는 항목 문서의 각 요소가 해당 부모 콘텐츠 모델에 있는 정확히 하나의 `<xsd:element>` 또는 `<xsd:any>` 파티클과 분명하게 일치해야 합니다. 잠재적으로 모호한 콘텐츠 모델이 있는 유형이 포함되는 스키마는 모두 거부됩니다.  
@@ -80,11 +80,11 @@ ms.locfileid: "58538524"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- "XML Schema Part 1: 구조 제2판, W3C 제안 수정 추천:  
+ "XML Schema Part 1: 구조 제 2 판, W3C 제안 수정된 추천 ":  
   
--   Section 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
+-   섹션 3.8.6: 모델 그룹 스키마 구성 요소에 대 한 제약 조건  
   
--   Appendix H: Unique Particle Attribution 제약 조건 분석(비표준)  
+-   부록 h: Unique Particle Attribution 제약 조건 (비표준) 분석  
   
  이 문서를 보려면 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)을 방문하세요.  
   

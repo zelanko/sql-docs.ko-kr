@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2dae92263d7be76490a51ea7027f79ab5fcd6118
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509799"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>System Center Operations Manager (SCOM) 분석 플랫폼 시스템 모니터링 구성
 Analytics Platform System에 대 한 System Center Operations Manager (SCOM) 관리 팩을 구성 하려면 다음이 단계를 따릅니다. 관리 팩은 SCOM에서 Analytics Platform System을 모니터링 해야 합니다.  

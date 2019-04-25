@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473214"
 ---
 # <a name="assign-alerts-to-an-operator"></a>운영자에게 경고 할당
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 운영자들이 작업에 대한 알림을 받을 수 있도록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고를 운영자에게 할당하는 방법을 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "52762855"
   
 5.  _operator_name_**속성** 대화 상자의 **페이지 선택**에서 **알림**을 선택합니다.  
   
-6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 전자 메일, 호출기 또는 Net send 중 하나 이상의 확인란을 선택하여 필요에 따라 **전자 메일**하십시오 **호출기**, 또는 **Net send**합니다.  
+6.  **사용자에게 알림을 보내는 방법**아래에서 **경고** 를 선택하여 이 운영자에게 보내진 경고 목록을 보거나 **작업** 을 선택하여 이 운영자에게 알림을 보내는 작업 목록을 봅니다. 필요에 따라 각 알림에 대 한 알림 방법을 정의 하려면 다음 확인란 중 하나 이상을 선택 합니다. **전자 메일**하십시오 **호출기**, 또는 **Net send**합니다.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   

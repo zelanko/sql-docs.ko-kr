@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445994"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>행 스크롤 및 페치(ODBC)
 스크롤 가능 커서를 사용 하는 경우 응용 프로그램 호출 **SQLFetchScroll** cursor와 fetch 행의 위치입니다. **SQLFetchScroll** 상대 스크롤을 지 원하는 (다음, 이전, 및 상대 *n* 행)을 절대 스크롤 (이름, 성 및 행 *n*), 및 책갈피에서 위치 지정 합니다. *FetchOrientation* 하 고 *FetchOffset* 에서 인수 **SQLFetchScroll** 다음 다이어그램에 나와 있는 것 처럼를 인출 하는 행 집합을 지정 합니다.  
@@ -41,4 +41,4 @@ ms.locfileid: "47642751"
  행 집합을 가져온 후 응용 프로그램이 호출할 수 있습니다 **SQLSetPos** 행 집합의 행 집합 또는 새로 고침 행에 있는 특정 행에 위치 합니다. 사용 하 여 대 한 자세한 내용은 **SQLSetPos**를 참조 하십시오 [SQLSetPos 사용 하 여 데이터 업데이트](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md)합니다.  
   
 > [!NOTE]  
->  스크롤 하는 ODBC 2에서 지원 됩니다. *x* 하 여 드라이버 **SQLExtendedFetch**합니다. 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.
+>  스크롤 하는 ODBC 2에서 지원 됩니다. *x* 하 여 드라이버 **SQLExtendedFetch**합니다. 자세한 내용은 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.

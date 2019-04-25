@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0767322f3adc8e8766c12ee963183c152f97767d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765686"
 ---
 # <a name="delete-an-entity-master-data-services"></a>엔터티 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 엔터티를 삭제하여 엔터티의 모든 멤버와 특성을 삭제합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52755371"
   
 7.  추가 확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [엔터티 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   

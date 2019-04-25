@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467645"
 ---
-# <a name="lesson-13-deploy"></a>13단원: 배포
+# <a name="lesson-13-deploy"></a>단원 13: 배포
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 배포 속성 구성 온-프레미스 또는 Azure 서버 인스턴스 및 모델에 대 한 이름을 지정 합니다. 해당 인스턴스에 모델을 배포 합니다. 모델을 배포한 후에 보고 클라이언트 응용 프로그램을 사용 하 여 사용자를 연결할 수 합니다. 배포에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 솔루션 배포](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) 하 고 [Azure Analysis Services에 배포](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)합니다.  
   
-이 단원에 소요되는 예상 시간: **5분**  
+예상이 단원을 완료 시간: **5 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [단원 12: Excel에서 분석](../analysis-services/lesson-12-analyze-in-excel.md)합니다.  
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [12 단원: Excel에서 분석](../analysis-services/lesson-12-analyze-in-excel.md)합니다.  
   
 ## <a name="deploy-the-model"></a>모델 배포  
   

@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503744"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR을 사용 하 여 R에서 MDX 쿼리를 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

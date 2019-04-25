@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467969"
 ---
 # <a name="create-roles"></a>역할 만들기
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 사용자 에게만 액세스를 제한 하 여 모델 데이터베이스 개체 및 데이터 보안을 제공 합니다. 각 역할은 없음, 읽기, 읽기 및 처리, 처리 또는 관리자라는 단일 사용 권한으로 정의됩니다. 역할 관리자를 사용 하 여 모델을 제작 하는 동안 역할을 정의할 수 있습니다. 모델을 배포한 후에 SQL Server Management Studio (SSMS)를 사용 하 여 역할을 관리할 수 있습니다. 자세한 내용은 [역할](../tabular-models/roles-ssas-tabular.md)의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다.
+이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 사용자 에게만 액세스를 제한 하 여 모델 데이터베이스 개체 및 데이터 보안을 제공 합니다. 각 역할은 단일 사용 권한을 사용 하 여 정의 됩니다. 없음, 읽기, 읽기 및 프로세스, 프로세스 또는 관리자입니다. 역할 관리자를 사용 하 여 모델을 제작 하는 동안 역할을 정의할 수 있습니다. 모델을 배포한 후에 SQL Server Management Studio (SSMS)를 사용 하 여 역할을 관리할 수 있습니다. 자세한 내용은 [역할](../tabular-models/roles-ssas-tabular.md)의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다.
   
 > [!NOTE]  
 > 이 자습서를 완료하기 위해 역할을 만들 필요는 없습니다. 기본적으로에 현재 로그온 계정에 관리자 권한 모델. 그러나 보고 클라이언트를 사용 하 여 찾아보려면 조직의 다른 사용자에 대 한 사용 권한을 읽기를 사용 하 여 하나 이상의 역할을 만들 하며 해당 사용자를 멤버로 추가 합니다.  
@@ -34,13 +34,13 @@ ms.locfileid: "57685460"
   
 -   **관리자** -이 역할에서 무제한 액세스 및 권한을 model 데이터베이스에서 관리 작업을 수행할 수 있는 관리자 권한을 할당 하려는 사용자를 포함할 수 있습니다.  
   
-조직의 Windows 사용자 및 그룹 계정은 고유하므로 특정 조직의 계정을 멤버에 추가할 수 있습니다. 그러나 이 자습서에서는 멤버를 비워둘 수도 있습니다. 나중에 12 단원 각 역할의 효과 테스트 합니다. Excel에서 분석에서 각 역할의 효과를 테스트할 수 있습니다.  
+조직의 Windows 사용자 및 그룹 계정은 고유하므로 특정 조직의 계정을 멤버에 추가할 수 있습니다. 그러나 이 자습서에서는 멤버를 비워둘 수도 있습니다. 나중에 12 단원 각 역할의 효과 테스트 합니다. Excel에서 분석 합니다.  
   
-이 단원에 소요되는 예상 시간: **15 분**  
+예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [10 단원: 파티션을 만들](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [10 단원: 파티션을 만들](../tutorial-tabular-1400/as-lesson-10-create-partitions.md)합니다.  
   
 ## <a name="create-roles"></a>역할 만들기  
   

@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468274"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리되는 인스턴스로서 성능과 구성을 모니터링할 수 있습니다. UCP(유틸리티 제어 지점)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스에서 15분마다 구성 및 성능 정보를 수집합니다. 이 정보는 UCP의 UMDW(유틸리티 관리 데이터 웨어하우스)에 저장됩니다. UMDW의 파일 이름은 sysutility_mdw입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 데이터를 정책과 비교하면 리소스 사용 병목 현상과 통합 기회를 식별하는 데 도움이 됩니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "52762485"
 >   
 >  Transact-SQL 문 또는 일괄 처리를 실행하는 동안 예외가 발생했습니다. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  추가 정보:  Windows NT 그룹/사용자에 대 한 정보를 가져올 수 없습니다 '\<DomainName\AccountName >', 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
+>  추가 정보:  Windows NT 그룹/사용자에 대 한 정보를 가져올 수 없습니다 '\<DomainName\AccountName >', 오류 코드 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  이 문제를 해결하는 자세한 내용은 [SQL Server 유틸리티 문제 해결](../../database-engine/troubleshoot-the-sql-server-utility.md)을 참조하세요.  
   

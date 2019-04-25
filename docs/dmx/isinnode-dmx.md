@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21c90bea43972f1c9088c228d6810b18308f93f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503618"
 ---
 # <a name="isinnode-dmx"></a>IsInNode(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>반환 형식  
- 부울 유형입니다.  
+ Boolean 형식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  **IsInNode** 에서만 사용 됩니다 [SELECT FROM &#60;모델&#62;합니다. 경우 &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) 하 고 [SELECT FROM &#60;모델&#62;합니다. SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md) 쿼리 합니다.  

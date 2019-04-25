@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466015"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **규칙**  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  시스템 DSN 시스템 정보 대신 HKEY_CURRENT_USER 항목 HKEY_LOCAL_MACHINE 항목에 등록 됩니다. 한 명의 사용자가 자신의 특정 사용자 이름 및 암호를 사용 하 여 로그온에 사용할 수 있지만 해당 컴퓨터의 모든 사용자가 또는 자동 시스템 전반에 걸쳐 서비스에 연결 되지 것입니다. 그러나 시스템 DSN가 하나의 컴퓨터에 연결 됩니다. 컴퓨터 간에 원격 Dsn을 사용 하 여 기능을 지원 하지는 않습니다. 시스템 Dsn 시스템 정보에 다음과 같이 등록 됩니다.  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>파일 Dsn  
  파일 데이터 원본이 없습니다 데이터 원본 이름, 컴퓨터 데이터 원본에는 모든 사용자 또는 컴퓨터에 등록 되어 있지 않습니다. 해당 데이터 원본에 대 한 연결 정보는 모든 컴퓨터에 복사할 수 있는.dsn 파일에 포함 됩니다. 파일 데이터 원본 수를 공유할 수 있는.dsn 파일을 네트워크에 상주 하는 경우 있으며 동시에 사용할 수는 네트워크에서 여러 사용자가 사용자에 적절 한 드라이버를 설치 합니다. 파일 데이터 원본도 수 없습니다를 공유할 수 있는 경우에 단일 컴퓨터에만 사용할 수 있습니다.  

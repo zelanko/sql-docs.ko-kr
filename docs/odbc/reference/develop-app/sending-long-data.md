@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465929"
 ---
 # <a name="sending-long-data"></a>Long 데이터 전송
 Dbms 정의할 *긴 데이터* 모든 문자 또는 이진 데이터 254 자 같은 특정 크기입니다. 메모리, 긴 텍스트 문서나 비트맵 항목이 나타내는 하는 경우에 긴 데이터의 전체 항목을 저장 하지 못할 수도 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없으므로 데이터 원본으로 보냅니다 드라이버에 사용 하 여 파트 **SQLPutData** 문이 실행 되는 경우. 실행 시 데이터는 전송 하는 매개 변수 라고 *실행 시 데이터 매개 변수*합니다.  
@@ -43,6 +43,6 @@ Dbms 정의할 *긴 데이터* 모든 문자 또는 이진 데이터 254 자 같
   
 7.  호출 **SQLParamData** 다시 가리키는 모든 매개 변수에 대해 데이터 전송에 해당 합니다. 드라이버는 SQL_NEED_DATA 및 다음 매개 변수를; 식별 하는 값을 반환 실행 시 데이터 매개 변수를에 전송 되지 않은 데이터의 경우 응용 프로그램 단계 6 반환합니다. 모든 실행 시 데이터 매개 변수에 대 한 데이터를 보낼 경우 문이 실행 됩니다. **SQLParamData** SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 및 수를 반환 하면 반환 값 또는 진단 하는 **SQLExecute** 하거나 **SQLExecDirect** 반환할 수 있습니다.  
   
- 이후에 **SQLExecute** 또는 **SQLExecDirect** SQL_NEED_DATA를 반환 합니다 이며 데이터 마지막 실행 시 데이터 매개 변수에 대 한 완전히 전송 되기 전에 문에 필요한 데이터 상태에서입니다. 문에 필요한 데이터 상태에서 이지만, 응용 프로그램 에서만 호출할 수 있습니다 **SQLPutData**를 **SQLParamData**하십시오 **SQLCancel**, **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수와 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문의 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
+ 이후에 **SQLExecute** 또는 **SQLExecDirect** SQL_NEED_DATA를 반환 합니다 이며 데이터 마지막 실행 시 데이터 매개 변수에 대 한 완전히 전송 되기 전에 문에 필요한 데이터 상태에서입니다. 문에 필요한 데이터 상태에서 이지만, 응용 프로그램 에서만 호출할 수 있습니다 **SQLPutData**를 **SQLParamData**하십시오 **SQLCancel**, **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수와 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문의 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 참조 하세요. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  실행 시 데이터를 보내는 예에 대 한 참조를 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) 함수 설명 합니다.

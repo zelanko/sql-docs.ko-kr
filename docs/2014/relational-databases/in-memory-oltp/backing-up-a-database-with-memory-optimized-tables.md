@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468329"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
   메모리 액세스에 최적화된 테이블은 일반적인 데이터베이스 백업의 일부로 백업됩니다. 디스크 기반 테이블의 경우 스토리지 손상을 검색하기 위해 데이터베이스 백업의 일부로 데이터 및 델타 파일 쌍의 CHECKSUM 유효성이 검사됩니다.  

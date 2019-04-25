@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468020"
 ---
 # <a name="create-a-tabular-model-project"></a>테이블 형식 모델 프로젝트 만들기
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685220"
 
 이 단원에서는 Visual Studio를 사용 하면 SQL Server Data Tools (SSDT) 또는 Microsoft Analysis Services 프로젝트 VSIX를 사용 하 여 Visual Studio 2017을 사용 하 여 1400 호환성 수준에서 새 테이블 형식 모델 프로젝트를 만듭니다. 시작할 수 있습니다 새 프로젝트가 만들어지면 데이터를 추가 하 고 모델을 작성 합니다. 이 단원에서는 테이블 형식 모델 제작 환경에 Visual Studio에 대 한 간략 한 소개를 제공 합니다.  
   
-이 단원에 소요되는 예상 시간: **10 분**  
+예상이 단원을 완료 시간: **10 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항
 

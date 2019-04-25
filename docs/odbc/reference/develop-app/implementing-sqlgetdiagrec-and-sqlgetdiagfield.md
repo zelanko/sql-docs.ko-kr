@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab1f808b005afaa91ed93bf8f8ec7a8385c9c945
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447287"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 구현
 **SQLGetDiagRec** 하 고 **SQLGetDiagField** 드라이버 관리자와 각 드라이버에 의해 구현 됩니다. 드라이버 관리자 및 각 드라이버 각 환경, 연결, 문 및 설명자 핸들에 대 한 진단 레코드를 유지 하 고 핸들 또는 핸들 해제가 사용 하 여 다른 함수를 호출할 경우에 이러한 레코드를 해제 합니다.  

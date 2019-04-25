@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 80c877341fc4ad9a952d94081d99f5a9c121fb1f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467369"
 ---
-# <a name="lesson-2-2---defining-a-cube"></a>단원 2-2-큐브를 정의 합니다.
+# <a name="lesson-2-2---defining-a-cube"></a>단원 2-2-큐브 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 큐브 마법사를 통해 큐브에 대한 측정값 그룹과 차원을 정의할 수 있습니다. 다음 태스크에서는 큐브 마법사를 사용하여 큐브를 만듭니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "34016900"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [차원에 특성 추가](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [다차원 모델의 큐브](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

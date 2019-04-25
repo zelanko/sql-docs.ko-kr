@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467927"
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>단원 2-1-차원 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,13 +54,13 @@ ms.locfileid: "34016480"
   
 8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. **날짜** > **달력** > **날짜**를 클릭합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
   
-    -   **English Month Name** to **Month**  
+    -   **English Month Name** 에서 **Month**  
   
-    -   **Calendar Quarter** to **Quarter**  
+    -   **Calendar Quarter** 에서 **Quarter**  
   
-    -   **Calendar Year** to **Year**  
+    -   **Calendar Year** 에서 **Year**  
   
-    -   **Calendar Semester** to **Half Year**  
+    -   **Calendar Semester** 에서 **Half Year**  
   
 9. **다음**을 클릭합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34016480"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [큐브 정의](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [기존 테이블을 사용하여 차원 만들기](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [차원 마법사를 사용하여 차원 만들기](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469348"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
 
@@ -26,9 +26,9 @@ ms.locfileid: "56030004"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  도메인의 속성을 설정하려면 기술 자료와 도메인을 만들어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  

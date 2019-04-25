@@ -10,11 +10,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 3e7dd580cd7d03235be704a7c46e5171a6526ae8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506216"
 ---
 #  <a name="get-r-and-python-package-information"></a>R 및 Python 패키지 정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

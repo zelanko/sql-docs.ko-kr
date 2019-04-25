@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469411"
 ---
 # <a name="run-a-matching-project"></a>일치 프로젝트 실행
 
@@ -48,7 +48,7 @@ ms.locfileid: "56015434"
 ##  <a name="StartingaMatchingProject"></a> 첫 번째 단계: 일치 프로젝트 시작  
  DQS 클라이언트 애플리케이션에서 만든 데이터 품질 프로젝트에서 일치 작업을 수행합니다.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 데이터 품질 프로젝트** 를 클릭하여 새 데이터 품질 프로젝트에서 일치를 수행합니다. 데이터 품질 프로젝트에 대한 이름과 설명을 입력하고 **기술 자료 사용**에서 일치에 사용할 기술 자료를 선택합니다. 작업에 대해 **일치** 를 클릭합니다. **다음** 을 클릭하여 매핑 단계로 이동합니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "56015434"
     > [!NOTE]  
     >  일치 프로젝트를 완료한 다음 다시 사용하면 해당 일치 프로젝트에서 당시에 게시된 기술 자료를 사용합니다. 즉, 프로젝트를 완료한 이후에 기술 자료에 적용한 변경 내용은 사용되지 않습니다. 이러한 변경 내용을 사용하거나 새 기술 자료를 사용하려면 새로운 일치 프로젝트를 만들어야 합니다. 반면, 일치 프로젝트를 만들고 완료하지 않은 경우 프로젝트에서 일치를 실행하면 일치 정책에 게시한 변경 내용이 사용됩니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 일치 프로젝트를 실행한 후  
+##  <a name="FollowUp"></a> 후속 작업: 일치 프로젝트를 실행 한 후  
  일치 프로젝트를 실행한 후 기술 자료의 일치 정책을 변경하고 업데이트된 일치 정책에 따라 다른 일치 프로젝트를 만들어 실행할 수 있습니다. 자세한 내용은 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)을 참조하세요.  
   
 ##  <a name="Profiler"></a> 프로파일러 및 결과 탭  
@@ -181,25 +181,25 @@ ms.locfileid: "56015434"
   
 -   **레코드**: 데이터베이스에 있는 전체 레코드 수  
   
--   **전체 값**: 필드에 있는 전체 값 수  
+-   **전체 값**: 필드의 값의 총 수  
   
--   **새 값**: 이전 실행 이후에 새로 생성된 전체 값 수와 값의 총 개수에 대한 해당 백분율  
+-   **새 값**: 전체에 대 한 해당 백분율 및 이전 실행 이후에 새로 생성 된 값의 총 수  
   
--   **고유 값**: 필드의 전체 고유 값 수와 값의 총 개수에 대한 해당 백분율  
+-   **고유 값**: 필드와 해당 백분율 전체에서 고유 값의 총 수  
   
--   **새로운 고유 값**: 필드에 새로 생성된 전체 고유 값 수와 값의 총 개수에 대한 해당 백분율  
+-   **새로운 고유 값**: 필드와 해당 백분율 전체에서 새로 생성 된 고유한 값의 총 수  
   
  필드 통계에는 다음이 포함됩니다.  
   
--   **필드**: 매핑에 포함된 필드 수  
+-   **필드**: 매핑에 포함 된 필드의 이름입니다.  
   
--   **도메인**: 필드에 매핑된 도메인의 이름  
+-   **도메인**: 필드에 매핑된 도메인의 이름입니다.  
   
--   **새로 만들기**: 새로 발견된 일치 레코드 수와 해당 백분율  
+-   **새로 만들기**: 새로 발견 된 일치 레코드 수와 해당 백분율  
   
--   **고유**: 필드의 고유 레코드 수와 해당 백분율  
+-   **고유**: 필드와 해당 백분율의 고유 레코드 수  
   
--   **완결성**: 규칙 실행의 완료율  
+-   **완결성**: 규칙 실행의 완료율 완료 되었습니다.  
   
 ### <a name="matching-policy-notifications"></a>일치 정책 알림  
  일치 정책 작업의 경우 다음과 같은 상황에서 알림이 발생합니다.  

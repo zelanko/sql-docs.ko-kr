@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 985be289be2bd3a362babeec1235dc594acb6bff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470080"
 ---
 # <a name="properties-property-servernetworkprotocol-class"></a>Properties 속성(ServerNetworkProtocol 클래스)
   서버 네트워크 프로토콜과 연결된 속성을 가져옵니다.  

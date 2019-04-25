@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470748"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "49169356"
 |**retry_interval**|**int**|재시도 간에 대기하는 시간입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
 |**output_file_name**|**nvarchar(200)**|일 때 단계의 출력 파일의 이름을 저장 되 **하위 시스템** 이 TSQL, PowerShell, 또는 **CmdExec**_합니다._|  
-|**last_run_outcome**|**int**|작업 단계의 이전 실행 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
+|**last_run_outcome**|**int**|작업 단계의 이전 실행 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = Retry<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|작업 단계의 마지막 실행에서 재시도한 횟수입니다.|  
 |**last_run_date**|**int**|단계가 마지막으로 실행을 시작했을 때의 날짜(yyyymmdd)입니다.|  

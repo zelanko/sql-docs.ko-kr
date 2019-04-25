@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84bd7e70c5ff3c1ee41bdcc331fefdd2422937ed
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471987"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 스토리지 및 데이터 정렬
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

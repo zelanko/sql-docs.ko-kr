@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e5c0173de2ea22e91c0a1f13517a9bcb7c58ed9
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472182"
 ---
 # <a name="rename-a-table-or-column"></a>테이블 또는 열 이름 바꾸기 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53072640"
   
  이름이 바뀐된 테이블을 사용 하는 또는 이름이 바뀐된 테이블의 열을 사용 하는 어떠한 계산도 업데이트 수 및 해당 계산에서 파생 된 데이터를 새로 고침 및 다시 계산 해야 합니다. 영향을 받는 테이블과 계산의 수에 따라서는 이러한 작업을 완료하는 데 시간이 걸릴 수 있습니다. 따라서 가져오기 프로세스를 진행하는 동안 또는 복잡한 관계와 계산을 만들기 전에 테이블 이름을 바꾸는 것이 가장 좋습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [파워 피벗에서 가져오기](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
  [Analysis Services에서 가져오기](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  

@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470811"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행할 작업에 관한 일정 정보를 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-> **참고:** 는 **sysjobschedules** 테이블을 반환 하는 값에 영향을 줄 수 있는 20 분 마다 새로 고칩니다 합니다 **sp_help_jobschedule** 저장 프로시저입니다.  
+> **참고:** 합니다 **sysjobschedules** 테이블을 반환 하는 값에 영향을 줄 수 있는 20 분 마다 새로 고칩니다 합니다 **sp_help_jobschedule** 저장 프로시저입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

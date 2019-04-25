@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1b4608dde67f31067ed34f7c552ba866a2095ed
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469325"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드(RDS)
 요청을 실행 하 고 ADO 2.1의에서 사용에 대 한 ADO 레코드 집합을 만듭니다.  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: add70b6a98a0246b2ad8ae8743ca57763e157f89
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469283"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 
@@ -27,7 +27,7 @@ ms.locfileid: "56011516"
 
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]을(를) 실행하고 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에 로그온합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  DQSInstaller.exe 파일을 실행하여 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 설치를 완료해야 합니다. 자세한 내용은 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)를 참조하세요.  
@@ -44,7 +44,7 @@ ms.locfileid: "56011516"
   
 2.  **서버에 연결** 대화 상자에서  
   
-    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션을 연결할 서버를 지정합니다. **(로컬)** 을 선택하여 로컬 컴퓨터의 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에 연결할 수 있습니다. 아래쪽 화살표를 클릭하고 **\<네트워크에서 추가 서버 찾아보기>** 를 선택하여 다른 서버에 연결하거나 이름에 따라 로컬 서버에 연결할 수도 있습니다. **서버 찾아보기** 대화 상자가 표시됩니다. **로컬 서버** 탭이나 **네트워크 서버** 탭에서 서버를 선택할 수 있습니다.  
+    1.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램을 연결할 서버를 지정합니다. **(로컬)** 을 선택하여 로컬 컴퓨터의 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에 연결할 수 있습니다. 아래쪽 화살표를 클릭하고 **\<네트워크에서 추가 서버 찾아보기>** 를 선택하여 다른 서버에 연결하거나 이름에 따라 로컬 서버에 연결할 수도 있습니다. **서버 찾아보기** 대화 상자가 표시됩니다. **로컬 서버** 탭이나 **네트워크 서버** 탭에서 서버를 선택할 수 있습니다.  
   
     2.  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 와 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]사이의 데이터 전송을 암호화하려면 **옵션**을 클릭하고 **연결 암호화** 확인란을 선택합니다.  
   

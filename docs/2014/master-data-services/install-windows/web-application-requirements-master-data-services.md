@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765204"
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 애플리케이션 요구 사항(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]은 Internet Explorer (IE) 7 이상에서만 사용할 수 있습니다. IE 7 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "53361295"
   
 ||  
 |-|  
-|인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 애플리케이션 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치하지 마십시오.]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
+|인터넷 정보 서비스<br /><br /> 웹 관리 도구<br /><br /> IIS 관리 콘솔<br /><br /> World Wide Web 서비스<br /><br /> 애플리케이션 개발<br /><br /> .NET 확장성 3.5<br /><br /> .NET 확장성 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> ISAPI 확장<br /><br /> ISAPI 필터<br /><br /> 일반 HTTP 기능<br /><br /> 기본 문서<br /><br /> 디렉터리 검색<br /><br /> HTTP 오류<br /><br /> 정적 콘텐츠<br /><br /> [참고: WebDAV 게시를 설치 하지 마십시오]<br /><br /> 상태 및 진단<br /><br /> HTTP 로깅<br /><br /> 요청 모니터<br /><br /> 성능<br /><br /> 정적 콘텐츠 압축<br /><br /> 보안<br /><br /> 요청 필터링<br /><br /> Windows 인증|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>기능(Windows Server 2008 또는 Windows Server 2008 R2, Windows 7 운영 체제)  
  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 또는 Windows Server 2008 R2에서 **서버 관리자** 를 사용하여 다음 필수 기능을 설치할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "53361295"
   
 ||  
 |-|  
-|.NET framework 3.5(.NET 2.0 및 3.0 포함)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 활성화 [참고: 필수 항목입니다.]<br /><br /> TCP 포트 공유<br /><br /> Windows Process Activation Service<br /><br /> 프로세스 모델<br /><br /> .NET 환경<br /><br /> 구성 API|  
+|.NET framework 3.5(.NET 2.0 및 3.0 포함)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP 활성화 [참고: 이것이 필요 합니다.]<br /><br /> TCP 포트 공유<br /><br /> Windows Process Activation Service<br /><br /> 프로세스 모델<br /><br /> .NET 환경<br /><br /> 구성 API|  
   
 ### <a name="accounts-and-permissions"></a>계정 및 사용 권한  
   

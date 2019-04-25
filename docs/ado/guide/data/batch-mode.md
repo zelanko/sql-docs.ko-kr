@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472837"
 ---
 # <a name="batch-mode"></a>일괄 처리 모드
 일괄 처리 모드에 적용 되는 경우는 **LockType** 속성이 **adLockBatchOptimistic** 공급자 일괄 처리 업데이트를 지원 합니다. 특정 잠금 유형을 커서 위치에 따라 사용할 수 없는 경우 예를 들어 비관적 잠금 유형에 사용할 수 없는 경우는 **CursorLocation** 로 설정 된 **adUseClient**합니다. 반대로, 커서 위치는 서버의 경우 공급자를 일괄 처리 낙관적 잠금을 지원할 수 없습니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47602401"
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [업데이트 전송: UpdateBatch 메서드](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [업데이트를 전송 합니다. UpdateBatch 메서드](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [업데이트된 레코드 필터링](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -39,4 +39,4 @@ ms.locfileid: "47602401"
   
 -   [레코드 집합 연결 끊기 및 다시 연결](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [JOIN 결과 업데이트: 고유한 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Join 결과 업데이트: 고유 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)

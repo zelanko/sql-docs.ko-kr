@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763274"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822357"
 |210041|"ROOT"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "ROOT"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210042|"MDMUNUSED"는 올바른 멤버 코드가 아닙니다.|**MemberCode** 값에 "MDMUNUSED"라는 단어가 포함되어 있습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210052|MemberCode는 도메인 기반 특성 값으로 사용되기 때문에 비활성화할 수 없습니다.|**ImportType** = **3** 또는 **4**일 때 멤버가 다른 멤버의 특성 값으로 사용되는 경우 준비할 수 없습니다. **ImportType5** 또는 **6** 을 사용하여 값을 NULL로 설정하거나 준비 프로세스를 실행하기 전에 값을 변경합니다.|리프<br /><br /> 통합|  
-|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 하거나 **4** 이며 멤버 코드가 존재 하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
+|300002|멤버 코드가 잘못되었습니다.|관계: 부모 또는 자식 멤버 코드가 존재 하지 않습니다.<br /><br /> 리프 또는 통합: **ImportType** = **3** 또는 **4**이며 멤버 코드가 존재하지 않습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |300004|멤버 코드가 이미 있습니다.|**ImportType** = **1** 이며, 이미 엔터티에 존재하는 멤버 코드를 사용했습니다.|리프<br /><br /> 통합|  
 |210011|**RelationshipType** 이 **1**인 경우 **ParentCode** 는 리프 멤버일 수 없습니다.|**ParentCode** 값이 통합 멤버 코드인지 확인합니다.|관계|  
 |210015|멤버 코드가 계층 및 배치에 대한 준비 테이블에 여러 번 나옵니다.|명시적 계층의 경우 동일한 배치에서 동일한 멤버의 위치를 여러 번 지정했습니다.|관계|  

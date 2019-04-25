@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467784"
 ---
 # <a name="imdembeddeddata-interface"></a>IMDEmbeddedData 인터페이스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  IMDEmbeddedData 인터페이스는 공용 인터페이스는 포함 된 관리 하는 데 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
+  IMDEmbeddedData 인터페이스는 포함 된 관리에 사용 되는 공용 인터페이스 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 또는 테이블 형식 모델 데이터베이스입니다. 이 인터페이스는 **IPersistStream** 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  
   
 -   컨테이너 문서의 포함된 스트림에 대한 식별자를 가져옵니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "34044387"
 -   로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. **IPersistStream**에서 상속됩니다.  
   
 ## <a name="reference"></a>참조  
- 다음 참조는 **IMDEmbeddedData** 인터페이스에 제공 된 대로 **msmd.h** 헤더 파일입니다.  
+ 다음 문서를 참조 합니다 **IMDEmbeddedData** 인터페이스에 제공 된 대로 **msmd.h** 헤더 파일입니다.  
   
-### <a name="source-file-pxoembeddeddataidl"></a>원본 파일: PXOEmbeddedData.idl  
+### <a name="source-file-pxoembeddeddataidl"></a>소스 파일: PXOEmbeddedData.idl  
   
 ```  
 [  
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  호스트 애플리케이션에 사용되는 식별자를 컨테이너 문서의 포함된 스트림에 가져옵니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -98,7 +98,7 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  스트림 식별자에 액세스하는 동안 오류가 발생했습니다.  
   
-#### <a name="remarks"></a>주의  
+#### <a name="remarks"></a>Remarks  
  현재 연결에 포함된 데이터베이스가 포함되어 있는지 확인하려면 OLE DB 연결 속성에서 DBPROP_MSMD_EMBEDDED_DATA 속성 값을 확인해야 합니다.  
   
  DBPROP_MSMD_EMBEDDED_DATA의 가능한 값은 다음과 같습니다.  
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 스트림을 포함하는 파일의 URL을 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함하는 애플리케이션이 호스팅된 환경에 있는지 여부를 나타내는 플래그를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함하는 애플리케이션에 사용되는 임시 파일에 대한 경로를 설정합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -213,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  현재 포함된 데이터베이스 작업을 취소합니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 개체를 저장하기 위해 스트림의 예상 크기(바이트)를 가져옵니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -264,7 +264,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 데이터베이스가 마지막으로 저장된 후에 변경되었는지 여부를 확인합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  포함된 데이터베이스를 로컬 또는 in-process 엔진에 로드합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>설명  
+#### <a name="description"></a>Description  
  로컬 또는 in-process 데이터베이스를 컨테이너 문서의 포함된 스트림에 저장합니다. **IPersistStream**에서 상속됩니다.  
   
 #### <a name="parameters"></a>매개 변수  

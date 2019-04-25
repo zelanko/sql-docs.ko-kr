@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472232"
 ---
 # <a name="the-fields-collection"></a>필드 컬렉션
 합니다 **필드** 컬렉션 ADO의 내장 컬렉션 중 하나입니다. 컬렉션은 하나의 단위로 참조할 수 있는 항목의 정렬된 된 집합입니다. ADO 컬렉션에 대 한 자세한 내용은 참조 하세요. [ADO 개체 모델](../../../ado/guide/data/ado-objects-and-collections.md)합니다.  

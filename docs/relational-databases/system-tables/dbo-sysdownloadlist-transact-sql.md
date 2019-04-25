@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470831"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47745094"
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|행의 자연 삽입 시퀀스를 제공하는 ID 열입니다.|  
 |**source_server**|**sysname**|원본 서버의 이름입니다.|  
-|**operation_code**|**tinyint**|작업의 운영 코드입니다.<br /><br /> **1** = INS (삽입)<br /><br /> **2** = UPD (업데이트)<br /><br /> **3** = DEL (삭제)<br /><br /> **4** = 시작<br /><br /> **5** = 중지|  
+|**operation_code**|**tinyint**|작업의 운영 코드입니다.<br /><br /> **1** = INS (삽입)<br /><br /> **2** = UPD (UPDATE)<br /><br /> **3** = DEL (삭제)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
 |**object_type**|**tinyint**|개체 유형 코드입니다.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|개체 ID입니다.|  
 |**target_server**|**sysname**|대상 서버의 이름입니다.|  

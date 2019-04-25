@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468198"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)를 참조하세요.  
@@ -80,7 +80,7 @@ ms.locfileid: "48050125"
   
 1.  메모리 내 사용량에 대한 정보를 가져오려면 다음과 같이 하십시오.  
   
-    -   **개체 탐색기**에서 메모리 최적화 테이블을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **저장소** 페이지를 클릭합니다. **데이터 공간** 속성에 대한 값은 테이블에 있는 데이터가 사용하는 메모리를 나타냅니다. **인덱스 공간** 속성에 대한 값은 테이블의 인덱스가 사용하는 메모리를 나타냅니다.  
+    -   **개체 탐색기**에서 메모리 최적화 테이블을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **스토리지** 페이지를 클릭합니다. **데이터 공간** 속성에 대한 값은 테이블에 있는 데이터가 사용하는 메모리를 나타냅니다. **인덱스 공간** 속성에 대한 값은 테이블의 인덱스가 사용하는 메모리를 나타냅니다.  
   
     -   **개체 탐색기**에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **일반** 페이지를 클릭합니다. **메모리 최적화 개체에 할당된 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체에 할당된 메모리를 나타냅니다. **메모리 최적화 개체가 사용하는 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 최적화 개체가 사용하는 메모리를 나타냅니다.  
   

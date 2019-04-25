@@ -1,5 +1,5 @@
 ---
-title: '10 단원: 관리자 역할 정의 | Microsoft Docs'
+title: '10단원: 관리자 역할 정의 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c1e0b9298857a07e3f85f77595c62a4213a52ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467379"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>10단원: 관리자 역할 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34017780"
 [데이터베이스 처리 권한 부여](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 이 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 처리 권한이 있는 보안 역할을 정의한 후 테스트합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

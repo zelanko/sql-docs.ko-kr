@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467283"
 ---
 # <a name="atomic-blocks"></a>ATOMIC 블록
   `BEGIN ATOMIC`은 ANSI SQL 표준의 일부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유하게 컴파일된 저장 프로시저의 최상위 수준에서만 ATOMIC 블록을 지원합니다.  
@@ -123,7 +123,7 @@ ORDER BY c1
 GO  
 ```  
   
- 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. ATOMIC 블록 범위 내에서 오류가 발생하면 트랜잭션을 중단시킵니다. 10772, 41301, 41302, 41305, 41325, 41332 및 41333.  
+ 메모리 최적화 테이블에 대한 다음 오류 메시지가 발생하면 트랜잭션이 실패합니다. Atomic 블록 범위에서 발생할 경우 트랜잭션이 중단 발생 됩니다. 10772, 41301, 41302, 41305, 41325, 41332 및 41333 합니다.  
   
 ## <a name="session-settings"></a>세션 설정  
  저장 프로시저가 컴파일되면 ATOMIC 블록의 세션 설정은 고정됩니다. 설정은 `BEGIN ATOMIC`으로 지정할 수도 있고 같은 값으로 항상 고정할 수도 있습니다.  

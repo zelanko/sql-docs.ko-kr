@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764229"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>겹치는 모델 및 멤버 권한(Master Data Services)
   멤버에 할당된 사용 권한과 모델 개체에 할당된 사용 권한이 겹칠 수 있습니다. 사용 권한이 겹치면 보다 제한적인 사용 권한이 적용됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52814565"
   
  **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **업데이트** 권한이 할당되어 있습니다.  
   
- 결과: **탐색기**, 사용자에 게 **업데이트** Mountain Bikes 노드에 있는 모든 멤버에 대 한 모든 특성 값 권한이 있습니다. 모든 다른 멤버와 특성은 숨겨집니다.  
+ 결과: **탐색기**에서 사용자는 Mountain Bikes 노드에 있는 모든 멤버의 모든 특성에 대해 **업데이트** 권한을 가지고 있습니다. 모든 다른 멤버와 특성은 숨겨집니다.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52814565"
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   

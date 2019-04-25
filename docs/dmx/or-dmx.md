@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a57d0b1c7f1fa75504e786712029326fc958135
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501814"
 ---
 # <a name="or-dmx"></a>OR(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ Expression1 OR Expression2
 |Expression1의 값|Expression2의 값|반환 값|  
 |-----------------------|-----------------------|---------------------|  
 |TRUE|TRUE|TRUE|  
-|TRUE|FALSE|TRUE|  
+|TRUE|FALSE|true|  
 |FALSE|TRUE|TRUE|  
 |FALSE|FALSE|FALSE|  
   

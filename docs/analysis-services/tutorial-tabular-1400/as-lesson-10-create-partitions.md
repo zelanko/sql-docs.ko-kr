@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 91b0fb17ae785098e54358132daa91c04c7f3e5d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466268"
 ---
 # <a name="create-partitions"></a>파티션 만들기
 
@@ -23,11 +23,11 @@ ms.locfileid: "57685700"
 
 이 단원에서는 만든 FactInternetSales 테이블을 처리할 수 있는 더 작은 논리적 부분으로 나누는 데 (새로 고침) 하는 파티션을 다른 파티션과 독립적으로 합니다. 기본적으로 모델에 포함 된 모든 테이블에는 모든 테이블의 열과 행을 포함 하는 하나의 파티션이 있습니다. FactInternetSales 테이블에 대 한 연도별; 데이터를 분할 하려는 각 테이블의 5 년에 대해 하나의 파티션을 합니다. 이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션](../tabular-models/partitions-ssas-tabular.md)을 참조하세요. 
   
-이 단원에 소요되는 예상 시간: **15 분**  
+예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [9 단원: 계층 구조를 만들](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [9 단원: 계층 구조를 만들](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)합니다.  
   
 ## <a name="create-partitions"></a>파티션 만들기  
   

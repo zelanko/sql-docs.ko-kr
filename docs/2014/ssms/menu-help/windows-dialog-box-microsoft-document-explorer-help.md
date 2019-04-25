@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510015"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>창 대화 상자(Microsoft Document Explorer 도움말)
   이 대화 상자를 사용하여 편집기와 디자이너에서 열리는 문서를 표시하고 닫으며 정렬할 수 있습니다. **창** 메뉴에서 **창** 을 클릭하여 이 대화 상자를 표시할 수 있습니다.  

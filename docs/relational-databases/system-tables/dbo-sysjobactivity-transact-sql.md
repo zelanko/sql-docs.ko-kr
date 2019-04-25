@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470967"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47690771"
 |**session_id**|**int**|에 저장 된 세션의 ID를 **syssessions** 테이블에 **msdb** 데이터베이스입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**run_requested_date**|**datetime**|작업 실행을 요청한 날짜와 시간입니다.|  
-|**run_requested_source**|**sysname(nvarchar(128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** SOURCE_ALERTER =<br /><br /> **3** SOURCE_BOOT =<br /><br /> **4** SOURCE_USER =<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|작업 실행을 요청한 사람입니다.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|이 작업이 대기한 날짜와 시간입니다. 작업이 바로 실행된 경우 이 열은 NULL입니다.|  
 |**start_execution_date**|**datetime**|작업을 실행하도록 예약된 날짜와 시간입니다.|  
 |**last_executed_step_id**|**int**|마지막으로 실행된 작업 단계의 ID입니다.|  

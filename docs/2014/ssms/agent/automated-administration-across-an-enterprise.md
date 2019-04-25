@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473152"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>기업 내 관리 자동화
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 여러 인스턴스에 대한 관리 자동화를 *다중 서버 관리*라고 합니다. 다중 서버 관리를 사용하여 다음을 수행합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "53210182"
  [기업 내의 자동화된 관리 튜닝](tune-automated-administration-across-an-enterprise.md)  
  다중 서버 환경에서 자동화된 관리를 통해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 자체 튜닝 기능을 사용하는 방법에 대해 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [서버 등록](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   

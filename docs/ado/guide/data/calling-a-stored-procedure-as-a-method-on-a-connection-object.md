@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472804"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>연결 개체의 메서드로 저장 프로시저 호출
 연결 열기 네이티브 메서드인 것 처럼 저장된 프로시저를 호출할 수 있습니다 **연결** 개체입니다. 명명 된 명령을 호출 비슷합니다는 **연결** 개체입니다.  

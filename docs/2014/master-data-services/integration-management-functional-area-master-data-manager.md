@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765106"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>통합 관리 기능 영역(마스터 데이터 관리자)
   통합 관리 기능 영역에서 관리자는 준비 테이블의 데이터를 가져와서 구독 시스템에 사용할 구독 뷰를 만들 수 있습니다. 관리자에 대한 자세한 내용은 [관리자&#40;Master Data Services&#41;](administrators-master-data-services.md)를 참조하세요.  

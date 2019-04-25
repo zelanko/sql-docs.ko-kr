@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472570"
 ---
 # <a name="data-providers"></a>데이터 공급자
 데이터 공급자는 다양 한 SQL 데이터베이스, 인덱싱된 순차 파일, 스프레드시트, 문서 저장소 및 메일 파일과 같은 데이터 원본을 나타냅니다. 공급자는 행 집합 이라고 하는 일반적인 추상화를 사용 하 여 균일 하 게 데이터를 표시 합니다.  

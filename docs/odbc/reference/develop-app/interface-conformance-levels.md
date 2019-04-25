@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446690"
 ---
 # <a name="interface-conformance-levels"></a>인터페이스 적합성 수준
 사용할 수 있는 기능을 드라이버에서 응용 프로그램에 알리기 위해 평준화의 목적은입니다. 함수를 기반으로 평준화 체계를 충분히이 목표를 얻지 않습니다. Odbc 3. *x*, 드라이버는 소유 하는 기능을 기반으로 분류 됩니다. 기능을 지 원하는 함수를 지 원하는 포함 될 수 있습니다. 반환 된 정보 유형에 대 한 설명자 필드, 문 특성, "Y" 값을 지 원하는 포함할 수도 있습니다 **SQLGetInfo**등입니다.  

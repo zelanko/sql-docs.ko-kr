@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 51df180342f48ea9d8f620bb1abe61edb4dfa6a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469683"
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>단원 7-1-Kpi 정의 및 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ KPI에 대해 정의한 이러한 요소 외에 KPI의 속성을 추가로 정�
   
     다음 그림에 표시된 것처럼 표시 창에 빈 KPI 템플릿이 나타납니다.  
   
-    ![디스플레이 창에서 빈 KPI 템플릿이](../analysis-services/media/l7-kpi-2.gif "디스플레이 창에서 빈 KPI 템플릿")  
+    ![표시 창의 빈 KPI 템플릿이](../analysis-services/media/l7-kpi-2.gif "표시 창의 빈 KPI 템플릿")  
   
 3.  **이름** 상자에 **Reseller Revenue**를 입력하고 **관련된 측정값 그룹** 목록에서 **Reseller Sales** 를 선택합니다.  
   
@@ -269,5 +269,5 @@ KPI에 대해 정의한 이러한 요소 외에 KPI의 속성을 추가로 정�
     North America의 대리점별로 Q3 CY 2007에 해당하는 Bikes 판매의 매출이익률이 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[8 단원: 동작 정의](../analysis-services/lesson-8-defining-actions.md)  
+[8단원: 작업 정의](../analysis-services/lesson-8-defining-actions.md)  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1b74505591b2f883b6cc7541a89c485435d5bab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472365"
 ---
 # <a name="data-shaping"></a>데이터 셰이핑
 이 섹션에서는 다음 항목을 다룹니다.  

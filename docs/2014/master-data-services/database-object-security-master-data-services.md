@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765766"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
@@ -46,11 +46,11 @@ ms.locfileid: "52822237"
   
 |작업|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
-|리프 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Leaf|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Leaf|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |리프 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Leaf|CREATE 문을 실행하기 전에|  
-|리프 통합 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Consolidated|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 통합 멤버 및 해당 속성을 준비 테이블에 로드합니다.|stg.name_Consolidated|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |통합 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Consolidated|CREATE 문을 실행하기 전에|  
-|리프 및 통합된 멤버 간의 관계를 명시적 계층에서 준비 테이블로 로드 합니다.|stg.name_Relationship|필수 사항: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
+|리프 및 통합된 멤버 간의 관계를 명시적 계층에서 준비 테이블로 로드 합니다.|stg.name_Relationship|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |관계 준비 테이블의 데이터를 해당 MDS 테이블에 로드합니다.|stg.udp_name_Relationship|CREATE 문을 실행하기 전에|  
 |준비 테이블의 데이터를 MDS 데이터 집합 테이블에 삽입하는 동안 발생한 오류를 봅니다.|stg.udp_name_Relationship|SELECT|  
   

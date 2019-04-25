@@ -1,5 +1,5 @@
 ---
-title: '3 단원: 측정값, 특성 및 계층 수정 | Microsoft Docs'
+title: '3단원: 측정값, 특성 및 계층 수정 | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a75fc19b3e6fca6520a1257cc979bf8f194cfa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469470"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "34016210"
 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
 이 태스크에서는 사용자 계층을 정의하고, 특성 멤버 이름을 수정하고, 복합 키를 사용하여 고유 특성 멤버를 지정합니다.  
   
-[배포 된 큐브 찾아보기](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
+[배포된 큐브 찾아보기](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
 이 태스크에서는 큐브 디자이너의 브라우저를 사용하여 큐브 데이터를 찾아봅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

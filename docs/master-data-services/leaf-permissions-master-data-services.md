@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467837"
 ---
 # <a name="leaf-permissions-master-data-services"></a>리프 권한(Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817805"
   
 -   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|사용자는 리프 멤버, 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 리프 멤버를 만들고 만드는 동안 특성 값을 할당할 수 있습니다.|  
@@ -51,18 +51,18 @@ ms.locfileid: "52817805"
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|사용자는 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 멤버를 만들 때 값을 할당할 수 있습니다.|  
 |**Update**|사용자는 특성을 업데이트할 수 있습니다.|  
 |**Delete**|아무런 영향이 없습니다.|  
-|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대 한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ### <a name="example"></a>예제  
  Product 엔터티에 대해 Subcategory 특성에 **업데이트** 권한을 할당합니다. 모든 다른 특성에 대한 사용 권한은 거부합니다.  
   
-|속성|코드|Subcategory(업데이트)|  
+|이름|코드|Subcategory(업데이트)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  
@@ -72,7 +72,7 @@ ms.locfileid: "52817805"
 > [!NOTE]  
 >  이 예에서 Subcategory는 SubcategoryList 엔터티를 기반으로 하는 도메인 기반 특성입니다. Mountain-100에 대해 다른 Subcategory를 선택할 수 있지만 SubcategoryList 엔터티에서 멤버를 추가하거나 삭제할 수는 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

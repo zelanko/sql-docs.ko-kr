@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14b0b2dfd3e4578558e49cc305c37821e208c65d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516032"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom(MDX)
 
@@ -31,17 +31,17 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Count*  
+ *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
  *Numeric_Expression*  
- 선택 사항입니다. 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
+ (선택 사항) 숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
  *Include_Calc_Members*  
- 선택 사항입니다. 계산 멤버를 드릴다운 결과에 추가하는 키워드입니다.  
+ (선택 사항) 계산 멤버를 드릴다운 결과에 추가하는 키워드입니다.  
   
 ## <a name="remarks"></a>Remarks  
  숫자 식이 지정 되는 **DrilldownLevelBottom** 오름차순으로 지정된 된 값에 따라 지정된 된 집합의 각 멤버의 자식을 자식 멤버 집합에 대해 계산 된 정렬 함수입니다. 숫자 식이 지정되지 않은 경우 이 함수는 쿼리 컨텍스트에서 확인된 대로 자식 구성원 집합이 나타내는 셀의 값에 따라 지정된 집합에 있는 각 구성원의 자식을 오름차순으로 정렬합니다. 이 동작은 구성원 집합을 정렬하지 않고 일반적인 순서로 반환하는 BottomCount 및 Tail(MDX) 함수와 비슷합니다.  

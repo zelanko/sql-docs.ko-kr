@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9f49b71a6e6774c83f1573ff7b0d5d20e169a83d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466852"
 ---
 # <a name="master-data-services-and-data-quality-services-features-support"></a>Master Data Services 및 Data Quality Services 기능 지원
 
@@ -27,9 +27,9 @@ ms.locfileid: "55044569"
 
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Developer|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스|예||||||예|  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션|예||||||예|  
-|데이터베이스 엔진 서비스|예||||||예|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
+|Data  Quality  Services|사용자 계정 컨트롤||||||사용자 계정 컨트롤|  
 
 
 

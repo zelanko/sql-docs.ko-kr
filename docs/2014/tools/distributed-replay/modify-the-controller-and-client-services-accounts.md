@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505989"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
   이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52822117"
   
 3.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller Properties** 창의 **로그온** 탭에서 **계정 지정**을 선택하거나 **찾아보기** 를 클릭하고 새 로그온 계정을 입력한 다음 **확인**을 클릭합니다.  
   
-     **중요 한**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
+     **중요 한**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행 하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
   
     -   도메인 사용자 계정  
   

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4433de08779a908686efb3082f3ce4651f76a402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517089"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>탐색기 기능 영역(마스터 데이터 관리자)
 
@@ -62,7 +62,7 @@ ms.locfileid: "52821897"
   
  [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)  
   
   

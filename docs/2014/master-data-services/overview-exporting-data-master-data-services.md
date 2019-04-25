@@ -1,5 +1,5 @@
 ---
-title: 데이터 내보내기 (Master Data Services) | Microsoft Docs
+title: 데이터 내보내기(Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763826"
 ---
 # <a name="exporting-data-master-data-services"></a>데이터 내보내기(Master Data Services)
   구독 뷰를 만들어 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터를 구독 시스템으로 내보낼 수 있습니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 뷰에 대한 자세한 내용은 [뷰](../relational-databases/views/views.md)를 참조하세요.  

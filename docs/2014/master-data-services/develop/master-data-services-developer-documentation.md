@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765436"
 ---
 # <a name="developer39s-guide-master-data-services"></a>개발자&#39;가이드 (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]와 상호 작용하는 방식을 사용자 지정하기 위해 코드를 작성하는 방법에 대한 정보를 찾아볼 수 있습니다. 다음 작업을 수행하는 방법을 배워 보십시오.  

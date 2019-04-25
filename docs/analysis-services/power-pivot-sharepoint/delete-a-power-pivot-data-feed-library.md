@@ -1,5 +1,5 @@
 ---
-title: 파워 피벗 데이터 피드 라이브러리 삭제 | Microsoft Docs
+title: Power Pivot 데이터 피드 라이브러리 삭제 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5faff360ee314ae35632e9fc8578d6bd71436b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467596"
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Power Pivot 데이터 피드 라이브러리 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34022560"
   
 5.  사용 권한 및 관리에서 **이 라이브러리 삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Power Pivot 데이터 피드](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

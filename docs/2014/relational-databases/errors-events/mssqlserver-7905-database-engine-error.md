@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762387"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143053"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|메시지 텍스트|데이터베이스 오류: 디렉터리 'DIRECTORY'이(가) 잘못된 Filestream 디렉터리입니다.|  
+|메시지 텍스트|데이터베이스 오류: 'DIRECTORY' 디렉터리는 유효한 Filestream 디렉터리가 아닙니다.|  
   
 ## <a name="explanation"></a>설명  
  'ghost'와 같은 특수한 행 집합 디렉터리 이름을 제외하고, 행 집합 디렉터리의 이름은 파티션의 파티션 ID입니다. 행 집합 디렉터리 이름을 파티션 ID로 변환할 수 없는 경우 이 디렉터리는 잘못된 열 집합 디렉터리입니다.  

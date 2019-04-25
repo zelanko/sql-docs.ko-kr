@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472212"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시용 OLE DB 공급자
 ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 하 고 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체 수 Microsoft OLE DB provider for Internet Publishing (게시 공급자 인터넷) 액세스 하 고 리소스를 조작 웹 폴더 또는 파일 등 Microsoft FrontPage에서 제공 합니다. ADO의 원본을 지정할 수 있습니다는 **레코드**, **Stream**, 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 한 URL 이어야 합니다. 수 다음 업로드, 다운로드, 이동, 복사 및 리소스를 삭제 또는 직접 리소스 속성을 조작 합니다.  
@@ -55,4 +55,4 @@ ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 하 고 [St
 > [!NOTE]
 >  Msdaipp.dso을 사용 하 여 공급자의 값으로 명시적으로 지정 하는 경우는 *공급자* 연결 문자열 키워드 또는 **공급자** 속성을 사용할 수 없습니다 "URL =" 연결 문자열에 있습니다. 이렇게 하면 오류가 발생 합니다. 대신, URL만 지정 하면 앞서 설명한 대로 합니다.  
   
- 인터넷 게시 공급자에 대 한 자세한 내용은 참조 하세요. [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), 또는 있는 원본 응용 프로그램과 함께 제공 되는 공급자 설명서의 OLE DB 공급자 인터넷 게시 된 설치: Windows 2000, Office 2000 또는 Internet Explorer 5.0입니다.
+ 인터넷 게시 공급자에 대 한 자세한 내용은 참조 하세요. [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), 또는 있는 원본 응용 프로그램과 함께 제공 되는 공급자 설명서의 OLE DB 공급자 인터넷 게시 설치 됨: Windows 2000, Office 2000 또는 Internet Explorer 5.0입니다.

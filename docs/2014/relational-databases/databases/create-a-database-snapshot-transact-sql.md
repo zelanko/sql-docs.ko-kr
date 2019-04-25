@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762343"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅숏 만들기를 지원하지 않습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52768335"
   
 -   [최선의 구현 방법: 데이터베이스 스냅숏 수 제한](#Limiting_Number)  
   
--   [최선의 구현 방법: 데이터베이스 스냅숏에 대 한 클라이언트 연결](#Client_Connections)  
+-   [최선의 구현 방법: 데이터베이스 스냅숏에 대한 클라이언트 연결](#Client_Connections)  
   
 ####  <a name="Naming"></a> 최선의 구현 방법: 데이터베이스 스냅숏 명명  
  스냅숏의 이름은 중요하므로 스냅숏을 만들기 전에 고려해야 합니다. 각 데이터베이스 스냅숏에는 고유한 데이터베이스 이름이 필요합니다. 쉬운 관리를 위해 데이터베이스를 식별하는 다음과 같은 정보를 스냅숏 이름에 첨가할 수 있습니다.  
@@ -88,7 +88,7 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  데이터베이스를 스냅숏으로 되돌리기 위해서는 해당 데이터베이스의 다른 스냅숏을 삭제해야 합니다.  
   
-####  <a name="Client_Connections"></a> 최선의 구현 방법: 데이터베이스 스냅숏에 대한 클라이언트 연결  
+####  <a name="Client_Connections"></a> 최선의 구현 방법: 데이터베이스 스냅숏에 대 한 클라이언트 연결  
  클라이언트가 데이터베이스 스냅숏을 사용하려면 그 위치를 알아야 합니다. 사용자가 데이터베이스 스냅숏을 읽는 동안 다른 스냅숏이 생성되거나 삭제될 수 있습니다. 따라서 기존의 스냅숏을 새 스냅숏으로 대체하면 클라이언트를 새 스냅숏으로 리디렉션해야 합니다. 사용자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 이용해 수동으로 데이터베이스 스냅숏에 연결할 수 있습니다. 하지만 프로덕션 환경을 지원하려면 보고 및 작성 클라이언트를 자동으로 데이터베이스의 최신 데이터베이스 스냅숏으로 리디렉션하는 프로그래밍 솔루션을 만들어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -172,7 +172,7 @@ AS SNAPSHOT OF Sales;
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](view-a-database-snapshot-sql-server.md)  
   

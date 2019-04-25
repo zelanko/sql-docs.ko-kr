@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d44e4a7269c8fb11533b7fb287684c9a6b7b5d83
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501882"
 ---
-# <a name="operators---unary"></a>단항 연산자-
+# <a name="operators---unary"></a>연산자 - 단항
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   단항 연산자는 숫자 식의 음수 값 또는 양수 값을 반환하는 것처럼 단일 피연산자에서 연산을 수행합니다.  
@@ -26,10 +26,10 @@ ms.locfileid: "34841596"
 |연산자|Description|  
 |--------------|-----------------|  
 |[- &#40;음수&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
-|[+ &#40;양의&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
+|[+ &#40;긍정&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -38,7 +38,7 @@ ms.locfileid: "34841596"
  [식 &#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [연산자 &#40;DMX&#41;](../dmx/operators-dmx.md)   
- [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

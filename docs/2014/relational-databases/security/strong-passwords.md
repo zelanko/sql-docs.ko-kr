@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470360"
 ---
 # <a name="strong-passwords"></a>강력한 암호
   서버 보안 배포에서 암호는 가장 약한 링크가 될 수 있습니다. 암호를 선택할 때는 항상 주의를 기울여야 합니다. 강력한 암호의 특징은 다음과 같습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48075733"
   
 -   $ 또는 \@ 문자로 시작하는 경우  
   
- OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! \@ 을 참조하세요. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
+ OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 다음과 같은 문자 [] {}() , ; ?를 포함하지 말아야 함 * ! \@에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [암호 정책](password-policy.md)  

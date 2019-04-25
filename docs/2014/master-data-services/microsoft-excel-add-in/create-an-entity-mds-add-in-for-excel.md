@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7d9df5f8cd96421f97ecbdd0401fc87d800ffab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764626"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>엔터티 만들기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 새 엔터티를 만들어 데이터를 저장할 수 있습니다. 엔터티를 만들 때 엔터티에 저장할 데이터의 샘플을 로드해야 합니다.  
