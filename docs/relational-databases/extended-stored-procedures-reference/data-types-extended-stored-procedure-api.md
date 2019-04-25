@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742191"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>데이터 형식(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51660272"
 |SRVIMAGE|**image**|**image** 데이터 형식입니다.|  
 |SRVINT1|**tinyint**|1바이트 **tinyint** 데이터 형식입니다.|  
 |SRVINT2|**smallint**|2바이트 **smallint** 데이터 형식입니다.|  
-|SRVINT4|**int**|4바이트 **int** 데이터 형식입니다.|  
+|SRVINT4|**ssNoversion**|4바이트 **int** 데이터 형식입니다.|  
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|**tinyint**, **smallint** 또는 **int** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVMONEY4|**smallmoney**|4바이트 **smallmoney** 데이터 형식입니다.|  
 |SRVMONEY|**money**|8바이트 **money** 데이터 형식입니다.|  

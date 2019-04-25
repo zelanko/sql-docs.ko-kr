@@ -1,17 +1,17 @@
 ---
 title: srv_got_attention(확장 저장 프로시저 API) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: stored-procedures
 ms.topic: reference
-apiname:
+api_name:
 - srv_got_attention
-apilocation:
+api_location:
 - opends60.dll
-apitype: DLLExport
+topic_type:
+- apiref
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,14 +21,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 02471fe1d955486e0ba17926dbf8bf042290b6b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671988"
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention(확장 저장 프로시저 API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -39,9 +38,11 @@ ms.locfileid: "51663402"
   
 ```  
   
-BOOL srv_got_attention (SRV_PROC *   
+BOOL srv_got_attention  
+(SRV_PROC *  
 srvproc  
 );  
+  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
