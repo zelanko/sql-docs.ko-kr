@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264977"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -173,7 +173,7 @@ ms.locfileid: "56319094"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Backup 및 Restore 메서드</h3>
+                                                    <h3>백업 및 복원</h3>
                                                     <p>SQL Server 내에 저장된 중요한 데이터를 보호하기 위한 필수 보호 방법을 제공하는 구성 요소입니다.</p>
                                                 </div>
                                             </div>

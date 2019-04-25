@@ -1,4 +1,3 @@
-items:
 - name: SQL Server 구성 관리자 도움말
   href: sql-server-configuration-manager-help.md
 - name: SQL Server 서비스
@@ -6,94 +5,94 @@ items:
 - name: Analysis Server <server>(SQL Server 구성 관리자)
   href: analysis-server-server-sql-server-configuration-manager.md
   items:
-  - name: 분석 서버 속성(로그온 탭)
-    href: analysis-server-properties-log-on-tab.md
-  - name: 분석 서버 속성(서비스 탭)
-    href: analysis-server-properties-service-tab.md
-  - name: 분석 서버 속성(고급 탭)
-    href: analysis-server-properties-advanced-tab.md
+    - name: 분석 서버 속성(로그온 탭)
+      href: analysis-server-properties-log-on-tab.md
+    - name: 분석 서버 속성(서비스 탭)
+      href: analysis-server-properties-service-tab.md
+    - name: 분석 서버 속성(고급 탭)
+      href: analysis-server-properties-advanced-tab.md
 - name: Notification Services(SQL Server 구성 관리자)
   href: notification-services-sql-server-configuration-manager.md
   items:
-  - name: NS$<service name> 속성(로그온 탭)
-    href: ns-service-name-properties-log-on-tab.md
-  - name: NS$<service name> 속성(서비스 탭)
-    href: ns-service-name-properties-service-tab.md
-  - name: NS$<service name> 속성(고급 탭)
-    href: ns-service-name-properties-advanced-tab.md
+    - name: NS$<service name> 속성(로그온 탭)
+      href: ns-service-name-properties-log-on-tab.md
+    - name: NS$<service name> 속성(서비스 탭)
+      href: ns-service-name-properties-service-tab.md
+    - name: NS$<service name> 속성(고급 탭)
+      href: ns-service-name-properties-advanced-tab.md
 - name: 보고서 서버 <server>(SQL Server 구성 관리자)
   href: report-server-server-sql-server-configuration-manager.md
   items:
-  - name: 보고서 서버 속성(로그온 탭)
-    href: report-server-properties-log-on-tab.md
-  - name: 보고서 서버 속성(서비스 탭)
-    href: report-server-properties-service-tab.md
-  - name: 보고서 서버 속성(고급 탭)
-    href: report-server-properties-advanced-tab.md
+    - name: 보고서 서버 속성(로그온 탭)
+      href: report-server-properties-log-on-tab.md
+    - name: 보고서 서버 속성(서비스 탭)
+      href: report-server-properties-service-tab.md
+    - name: 보고서 서버 속성(고급 탭)
+      href: report-server-properties-advanced-tab.md
 - name: SQL Server 에이전트 <server>(SQL Server 구성 관리자)
   href: sql-server-agent-server-sql-server-configuration-manager.md
   items:
-  - name: SQL Server 에이전트 속성(로그온 탭)
-    href: sql-server-agent-properties-log-on-tab.md
-  - name: SQL Server 에이전트 속성(고급 탭)
-    href: sql-server-agent-properties-advanced-tab.md
-  - name: SQL Server 에이전트 속성(서비스 탭)
-    href: sql-server-agent-properties-service-tab.md
+    - name: SQL Server 에이전트 속성(로그온 탭)
+      href: sql-server-agent-properties-log-on-tab.md
+    - name: SQL Server 에이전트 속성(고급 탭)
+      href: sql-server-agent-properties-advanced-tab.md
+    - name: SQL Server 에이전트 속성(서비스 탭)
+      href: sql-server-agent-properties-service-tab.md
 - name: SQL Server Browser(SQL Server 구성 관리자)
   href: sql-server-browser-sql-server-configuration-manager.md
   items:
-  - name: SQL Server Browser 속성(로그온 탭)
-    href: sql-server-browser-properties-log-on-tab.md
-  - name: SQL Server Browser 속성(서비스 탭)
-    href: sql-server-browser-properties-service-tab.md
-  - name: SQL Server Browser 속성(고급 탭)
-    href: sql-server-browser-properties-advanced-tab.md
+    - name: SQL Server Browser 속성(로그온 탭)
+      href: sql-server-browser-properties-log-on-tab.md
+    - name: SQL Server Browser 속성(서비스 탭)
+      href: sql-server-browser-properties-service-tab.md
+    - name: SQL Server Browser 속성(고급 탭)
+      href: sql-server-browser-properties-advanced-tab.md
 - name: SQL Server <server>(SQL Server 구성 관리자)
   href: sql-server-server-sql-server-configuration-manager.md
   items:
-  - name: SQL Server 속성(로그온 탭)
-    href: sql-server-properties-log-on-tab.md
-  - name: SQL Server 속성(서비스 탭)
-    href: sql-server-properties-service-tab.md
-  - name: SQL Server 속성(FILESTREAM 탭)
-    href: sql-server-properties-filestream-tab.md
-  - name: SQL Server 속성(AlwaysOn 고가용성 탭)
-    href: sql-server-properties-alwayson-high-availability-tab.md
-  - name: SQL Server 속성(시작 매개 변수 탭)
-    href: sql-server-properties-startup-parameters-tab.md
-  - name: SQL Server 속성(고급 탭)
-    href: sql-server-properties-advanced-tab.md
+    - name: SQL Server 속성(로그온 탭)
+      href: sql-server-properties-log-on-tab.md
+    - name: SQL Server 속성(서비스 탭)
+      href: sql-server-properties-service-tab.md
+    - name: SQL Server 속성(FILESTREAM 탭)
+      href: sql-server-properties-filestream-tab.md
+    - name: SQL Server 속성(AlwaysOn 고가용성 탭)
+      href: sql-server-properties-alwayson-high-availability-tab.md
+    - name: SQL Server 속성(시작 매개 변수 탭)
+      href: sql-server-properties-startup-parameters-tab.md
+    - name: SQL Server 속성(고급 탭)
+      href: sql-server-properties-advanced-tab.md
 - name: SQL Server Integration Services 10.0(SQL Server 구성 관리자)
   href: sql-server-integration-services-10-0-sql-server-configuration-manager.md
   items:
-  - name: SQL Server Integration Services 속성(로그온 탭)
-    href: sql-server-integration-services-properties-log-on-tab.md
-  - name: SQL Server Integration Services 속성(서비스 탭)
-    href: sql-server-integration-services-properties-service-tab.md
-  - name: SQL Server Integration Services 속성(고급 탭)
-    href: sql-server-integration-services-properties-advanced-tab.md
+    - name: SQL Server Integration Services 속성(로그온 탭)
+      href: sql-server-integration-services-properties-log-on-tab.md
+    - name: SQL Server Integration Services 속성(서비스 탭)
+      href: sql-server-integration-services-properties-service-tab.md
+    - name: SQL Server Integration Services 속성(고급 탭)
+      href: sql-server-integration-services-properties-advanced-tab.md
 - name: SQL 전체 텍스트 필터 데몬 시작 관리자(SQL Server 구성 관리자)
   href: sql-full-text-filter-daemon-launcher-sql-server-configuration-manager.md
   items:
-  - name: SQL 전체 텍스트 필터 데몬 시작 관리자(로그온 탭)
-    href: sql-full-text-filter-daemon-launcher-log-on-tab.md
-  - name: SQL 전체 텍스트 필터 데몬 시작 관리자(서비스 탭)
-    href: sql-full-text-filter-daemon-launcher-service-tab.md
-  - name: SQL 전체 텍스트 필터 데몬 시작 관리자(고급)
-    href: sql-full-text-filter-daemon-launcher-advanced.md
+    - name: SQL 전체 텍스트 필터 데몬 시작 관리자(로그온 탭)
+      href: sql-full-text-filter-daemon-launcher-log-on-tab.md
+    - name: SQL 전체 텍스트 필터 데몬 시작 관리자(서비스 탭)
+      href: sql-full-text-filter-daemon-launcher-service-tab.md
+    - name: SQL 전체 텍스트 필터 데몬 시작 관리자(고급)
+      href: sql-full-text-filter-daemon-launcher-advanced.md
 - name: 알 수 없는 서비스(로그온 탭)
   href: unknown-service-log-on-tab.md
 - name: SQL Server 네트워크 구성
   href: sql-server-network-configuration.md
   items:
-  - name: <server>에 대한 프로토콜(SQL Server 구성 마법사)
-    href: protocols-for-server-sql-server-configuration-manager.md
-  - name: MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
-    href: protocols-for-mssqlserver-properties-flags-tab.md
-  - name: MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
-    href: protocols-for-mssqlserver-properties-certificate-tab.md
-  - name: MSSQLSERVER 속성에 대한 프로토콜(고급 탭)
-    href: protocols-for-mssqlserver-properties-advanced-tab.md
+    - name: <server>에 대한 프로토콜(SQL Server 구성 마법사)
+      href: protocols-for-server-sql-server-configuration-manager.md
+    - name: MSSQLSERVER에 대한 프로토콜 속성(플래그 탭)
+      href: protocols-for-mssqlserver-properties-flags-tab.md
+    - name: MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
+      href: protocols-for-mssqlserver-properties-certificate-tab.md
+    - name: MSSQLSERVER 속성에 대한 프로토콜(고급 탭)
+      href: protocols-for-mssqlserver-properties-advanced-tab.md
 - name: 공유 메모리 속성
   href: shared-memory-properties.md
 - name: 명명된 파이프 속성
@@ -105,31 +104,31 @@ items:
 - name: SQL Native Client 11.0 구성
   href: sql-native-client-11-0-configuration.md
   items:
-  - name: SQL Server Native Client 구성 속성(플래그 탭)
-    href: sql-server-native-client-configuration-properties-flags-tab.md
-  - name: 클라이언트 프로토콜(SQL Server 구성 관리자)
-    href: client-protocols-sql-server-configuration-manager.md
-  - name: 클라이언트 프로토콜 속성(순서 탭)
-    href: client-protocols-properties-order-tab.md
-  - name: 클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
-    href: client-protocols-shared-memory-properties-protocol-tab.md
-  - name: 클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
-    href: client-protocols-tcp-and-ip-properties-protocol-tab.md
-  - name: 클라이언트 프로토콜 - 명명된 파이프 속성(프로토콜 탭)
-    href: client-protocols-named-pipes-properties-protocol-tab.md
+    - name: SQL Server Native Client 구성 속성(플래그 탭)
+      href: sql-server-native-client-configuration-properties-flags-tab.md
+    - name: 클라이언트 프로토콜(SQL Server 구성 관리자)
+      href: client-protocols-sql-server-configuration-manager.md
+    - name: 클라이언트 프로토콜 속성(순서 탭)
+      href: client-protocols-properties-order-tab.md
+    - name: 클라이언트 프로토콜 - 공유 메모리 속성(프로토콜 탭)
+      href: client-protocols-shared-memory-properties-protocol-tab.md
+    - name: 클라이언트 프로토콜 - TCP/IP 속성(프로토콜 탭)
+      href: client-protocols-tcp-and-ip-properties-protocol-tab.md
+    - name: 클라이언트 프로토콜 - 명명된 파이프 속성(프로토콜 탭)
+      href: client-protocols-named-pipes-properties-protocol-tab.md
 - name: 별칭(SQL Server 구성 관리자)
   href: aliases-sql-server-configuration-manager.md
   items:
-  - name: 새 별칭(별칭 탭)
-    href: new-alias-alias-tab.md
-  - name: <Alias> 속성(별칭 탭)
-    href: alias-properties-alias-tab.md
-  - name: 공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기
-    href: creating-a-valid-connection-string-using-shared-memory-protocol.md
-  - name: TCP/IP를 사용하여 유효한 연결 문자열 만들기
-    href: creating-a-valid-connection-string-using-tcp-ip.md
-  - name: 명명된 파이프를 사용하여 유효한 연결 문자열 만들기
-    href: creating-a-valid-connection-string-using-named-pipes.md
+    - name: 새 별칭(별칭 탭)
+      href: new-alias-alias-tab.md
+    - name: <Alias> 속성(별칭 탭)
+      href: alias-properties-alias-tab.md
+    - name: 공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기
+      href: creating-a-valid-connection-string-using-shared-memory-protocol.md
+    - name: TCP/IP를 사용하여 유효한 연결 문자열 만들기
+      href: creating-a-valid-connection-string-using-tcp-ip.md
+    - name: 명명된 파이프를 사용하여 유효한 연결 문자열 만들기
+      href: creating-a-valid-connection-string-using-named-pipes.md
 - name: SQL Server Browser 서비스
   href: sql-server-browser-service.md
 - name: IPv6을 사용하여 연결
@@ -139,15 +138,9 @@ items:
 - name: 오류 로그 모니터링
   href: monitoring-the-error-logs.md
   items:
-  - name: SQL Server 오류 로그 보기
-    href: viewing-the-sql-server-error-log.md
-  - name: Windows 애플리케이션 로그 보기
-    href: viewing-the-windows-application-log.md
+    - name: SQL Server 오류 로그 보기
+      href: viewing-the-sql-server-error-log.md
+    - name: Windows 애플리케이션 로그 보기
+      href: viewing-the-windows-application-log.md
 - name: SQL Server 사용 조건 정보 (SSCM)
   href: about-the-sql-server-license-terms-sscm.md
-ms.openlocfilehash: fbd90f8833c8158174fe6c5d3c08483257647090
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39315864"

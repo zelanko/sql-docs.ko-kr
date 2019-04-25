@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
 ms.openlocfilehash: 2cafca919cc7592b9b7c6998b1f20910e9be7d4e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206631"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -137,7 +137,7 @@ ms.locfileid: "57334760"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Linux의 SQL Server</h3>
+                                                <h3>SQL Server on Linux</h3>
                                                 <ul class="noBullet">
                                                     <li><a class="barLink" href="/sql/linux/sql-server-linux-overview/"><strong>온-프레미스</strong></a></li>
                                                     <li><a class="barLink" href="/sql/linux/quickstart-install-connect-clouds/"><strong>Azure VM에서 실행</strong></a></li>
@@ -328,7 +328,7 @@ ms.locfileid: "57334760"
                                             <div class="cardPadding">
                                                 <div class="card">
                                                   <div class="cardText">
-                                                        <h3>Tools</h3>
+                                                        <h3>도구</h3>
                                                         <ul class="noBullet">
                                                             <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS(SQL Server Management Studio)</a></li>
                                                             <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 

@@ -1,22 +1,21 @@
-items:
 - name: CLR(공용 언어 런타임) 통합 프로그래밍 개요
   href: common-language-runtime-clr-integration-programming-concepts.md
 - name: CLR(공용 언어 런타임) 통합 개요
   href: common-language-runtime-integration-overview.md
   items:
-  - name: CLR 통합 개요
-    href: clr-integration-overview.md
-  - name: CLR 통합 아키텍처
-    href: ../../database-engine/dev-guide/architecture-of-clr-integration.md
+    - name: CLR 통합 개요
+      href: clr-integration-overview.md
+    - name: CLR 통합 아키텍처
+      href: ../../database-engine/dev-guide/architecture-of-clr-integration.md
 - name: CLR 통합으로 작업 시작
   href: database-objects/getting-started-with-clr-integration.md
 - name: CLR 통합의 새로운 기능
   href: clr-integration-what-s-new.md
   items:
-  - name: CLR 호스팅 환경
-    href: clr-integration-architecture-clr-hosted-environment.md
-  - name: 통합된 CLR의 성능
-    href: clr-integration-architecture-performance.md
+    - name: CLR 호스팅 환경
+      href: clr-integration-architecture-clr-hosted-environment.md
+    - name: 통합된 CLR의 성능
+      href: clr-integration-architecture-performance.md
 - name: CLR 저장 프로시저
   href: ../../database-engine/dev-guide/clr-stored-procedures.md
 - name: CLR 트리거
@@ -26,139 +25,139 @@ items:
 - name: 어셈블리
   href: assemblies-database-engine.md
   items:
-  - name: 어셈블리 디자인
-    href: assemblies-designing.md
-  - name: 어셈블리 구현
-    href: assemblies-implementing.md
-  - name: 어셈블리에 대한 정보 가져오기
-    href: assemblies-getting-information.md
-  - name: 어셈블리 속성(일반 페이지)
-    href: assemblies-properties.md
+    - name: 어셈블리 디자인
+      href: assemblies-designing.md
+    - name: 어셈블리 구현
+      href: assemblies-implementing.md
+    - name: 어셈블리에 대한 정보 가져오기
+      href: assemblies-getting-information.md
+    - name: 어셈블리 속성(일반 페이지)
+      href: assemblies-properties.md
 - name: CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
   href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
   items:
-  - name: 지원되는 .NET Framework 라이브러리
-    href: database-objects/supported-net-framework-libraries.md
-  - name: CLR 통합 프로그래밍 모델 제한 사항
-    href: database-objects/clr-integration-programming-model-restrictions.md
-  - name: .NET Framework의 SQL Server 데이터 형식
-    href: ../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
-    items:
-    - name: Null 허용 여부 및 3개의 값 논리 비교
-      href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
-    - name: 데이터 정렬 및 CLR 통합 데이터 형식
-      href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
-    - name: CLR의 LOB(Large Object) 매개 변수 처리
-      href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
-    - name: CLR 매개 변수 데이터 매핑
-      href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
+    - name: 지원되는 .NET Framework 라이브러리
+      href: database-objects/supported-net-framework-libraries.md
+    - name: CLR 통합 프로그래밍 모델 제한 사항
+      href: database-objects/clr-integration-programming-model-restrictions.md
+    - name: .NET Framework의 SQL Server 데이터 형식
+      href: ../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+      items:
+        - name: Null 허용 여부 및 3개의 값 논리 비교
+          href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
+        - name: 데이터 정렬 및 CLR 통합 데이터 형식
+          href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
+        - name: CLR의 LOB(Large Object) 매개 변수 처리
+          href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
+        - name: CLR 매개 변수 데이터 매핑
+          href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
 - name: CLR 통합 사용자 지정 특성 개요
   href: ../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md
   items:
-  - name: CLR 루틴용 사용자 지정 특성
-    href: database-objects/clr-integration-custom-attributes-for-clr-routines.md
+    - name: CLR 루틴용 사용자 지정 특성
+      href: database-objects/clr-integration-custom-attributes-for-clr-routines.md
 - name: CLR 사용자 정의 함수
   href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
   items:
-  - name: CLR 스칼라 반환 함수
-    href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
-  - name: CLR 테이블 반환 함수
-    href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
-  - name: CLR 사용자 정의 집계
-    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
-  - name: CLR 사용자 정의 집계 요구 사항
-    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
-  - name: CLR 사용자 정의 집계 함수 호출
-    href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
+    - name: CLR 스칼라 반환 함수
+      href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
+    - name: CLR 테이블 반환 함수
+      href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
+    - name: CLR 사용자 정의 집계
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+    - name: CLR 사용자 정의 집계 요구 사항
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
+    - name: CLR 사용자 정의 집계 함수 호출
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
 - name: CLR 사용자 정의 형식
   href: ../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
   items:
-  - name: 사용자 정의 형식
-    href: ../../database-engine/dev-guide/user-defined-type.md
-  - name: UTF8 문자열 UDT(사용자 정의 데이터 형식)
-    href: ../../database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md
-  - name: 사용자 정의 형식 만들기
-    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
-  - name: 사용자 정의 형식 요구 사항
-    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
-  - name: 사용자 정의 형식 코딩
-    href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-  - name: SQL Server의 사용자 정의 형식 등록
-    href: ../clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
-  - name: SQL 서버의 사용자 정의 형식 작업
-    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
-  - name: UDT 테이블 및 열 정의
-    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
-  - name: UDT 데이터 조작
-    href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
-  - name: ADO.NET의 사용자 정의 형식 액세스
-    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
-  - name: UDT 데이터 검색
-    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
-  - name: DataAdapter로 UDT 열 업데이트
-    href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+    - name: 사용자 정의 형식
+      href: ../../database-engine/dev-guide/user-defined-type.md
+    - name: UTF8 문자열 UDT(사용자 정의 데이터 형식)
+      href: ../../database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md
+    - name: 사용자 정의 형식 만들기
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+    - name: 사용자 정의 형식 요구 사항
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
+    - name: 사용자 정의 형식 코딩
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
+    - name: SQL Server의 사용자 정의 형식 등록
+      href: ../clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
+    - name: SQL 서버의 사용자 정의 형식 작업
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+    - name: UDT 테이블 및 열 정의
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
+    - name: UDT 데이터 조작
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
+    - name: ADO.NET의 사용자 정의 형식 액세스
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+    - name: UDT 데이터 검색
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
+    - name: DataAdapter로 UDT 열 업데이트
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
 - name: CLR 데이터베이스 개체에서 데이터 액세스
   href: data-access/data-access-from-clr-database-objects.md
   items:
-  - name: 컨텍스트 연결
-    href: data-access/context-connection.md
-    items:
-    - name: 일반 연결 및 컨텍스트 연결
-      href: data-access/context-connections-vs-regular-connections.md
-    - name: 일반 연결 및 컨텍스트 연결에 대한 제한 사항
-      href: data-access/context-connections-and-regular-connections-restrictions.md
-  - name: 연결에 대한 가장 및 자격 증명
-    href: data-access/impersonation-and-credentials-for-connections.md
+    - name: 컨텍스트 연결
+      href: data-access/context-connection.md
+      items:
+        - name: 일반 연결 및 컨텍스트 연결
+          href: data-access/context-connections-vs-regular-connections.md
+        - name: 일반 연결 및 컨텍스트 연결에 대한 제한 사항
+          href: data-access/context-connections-and-regular-connections-restrictions.md
+    - name: 연결에 대한 가장 및 자격 증명
+      href: data-access/impersonation-and-credentials-for-connections.md
 - name: ADO.NET에 대한 SQL Server In-Process 전용 확장
   href: ../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
   items:
-  - name: SqlContext 개체
-    href: ../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md
-  - name: SqlPipe 개체
-    href: ../clr-integration-data-access-in-process-ado-net/sqlpipe-object.md
-  - name: SqlTriggerContext 개체
-    href: ../clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
-  - name: SqlDataRecord 개체
-    href: ../clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md
+    - name: SqlContext 개체
+      href: ../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md
+    - name: SqlPipe 개체
+      href: ../clr-integration-data-access-in-process-ado-net/sqlpipe-object.md
+    - name: SqlTriggerContext 개체
+      href: ../clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
+    - name: SqlDataRecord 개체
+      href: ../clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md
 - name: CLR 통합 및 트랜잭션
   href: ../clr-integration-data-access-transactions/clr-integration-and-transactions.md
   items:
-  - name: 트랜잭션 승격
-    href: ../clr-integration-data-access-transactions/transaction-promotion.md
-  - name: 현재 트랜잭션 액세스
-    href: ../clr-integration-data-access-transactions/accessing-the-current-transaction.md
-  - name: System.Transactions 사용
-    href: ../clr-integration-data-access-transactions/using-system-transactions.md
-  - name: 트랜잭션 수명
-    href: ../clr-integration-data-access-transactions/transaction-lifetimes.md
+    - name: 트랜잭션 승격
+      href: ../clr-integration-data-access-transactions/transaction-promotion.md
+    - name: 현재 트랜잭션 액세스
+      href: ../clr-integration-data-access-transactions/accessing-the-current-transaction.md
+    - name: System.Transactions 사용
+      href: ../clr-integration-data-access-transactions/using-system-transactions.md
+    - name: 트랜잭션 수명
+      href: ../clr-integration-data-access-transactions/transaction-lifetimes.md
 - name: CLR 데이터베이스 개체에서 XML 직렬화
   href: ../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md
 - name: CLR 통합 보안
   href: security/clr-integration-security.md
   items:
-  - name: CLR 통합 코드 액세스 보안
-    href: security/clr-integration-code-access-security.md
-  - name: CLR 통합 보안의 링크
-    href: ../../database-engine/dev-guide/links-in-clr-integration-security.md
-  - name: 가장 및 CLR 통합 보안
-    href: ../../database-engine/dev-guide/impersonation-and-clr-integration-security.md
-  - name: 부분적으로 신뢰할 수 있는 호출자 허용
-    href: ../../database-engine/dev-guide/allowing-partially-trusted-callers.md
-  - name: 애플리케이션 도메인 및 CLR 통합 보안
-    href: ../../database-engine/dev-guide/application-domains-and-clr-integration-security.md
+    - name: CLR 통합 코드 액세스 보안
+      href: security/clr-integration-code-access-security.md
+    - name: CLR 통합 보안의 링크
+      href: ../../database-engine/dev-guide/links-in-clr-integration-security.md
+    - name: 가장 및 CLR 통합 보안
+      href: ../../database-engine/dev-guide/impersonation-and-clr-integration-security.md
+    - name: 부분적으로 신뢰할 수 있는 호출자 허용
+      href: ../../database-engine/dev-guide/allowing-partially-trusted-callers.md
+    - name: 애플리케이션 도메인 및 CLR 통합 보안
+      href: ../../database-engine/dev-guide/application-domains-and-clr-integration-security.md
 - name: 호스트 보호 특성 및 CLR 통합 프로그래밍
   href: ../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
   items:
-  - name: Microsoft.VisualBasic.dll에 허용되지 않는 유형 및 멤버
-    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md
-  - name: mscorlib.dll에 허용되지 않는 유형 및 멤버
-    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md
-  - name: Disallowed Types and Members In System.dll
-    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
-  - name: System.Data.dll에 허용되지 않는 유형 및 멤버
-    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md
-  - name: System.Core.dll에 허용되지 않는 유형 및 멤버
-    href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md
+    - name: Microsoft.VisualBasic.dll에 허용되지 않는 유형 및 멤버
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+    - name: mscorlib.dll에 허용되지 않는 유형 및 멤버
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md
+    - name: Disallowed Types and Members In System.dll
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
+    - name: System.Data.dll에 허용되지 않는 유형 및 멤버
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md
+    - name: System.Core.dll에 허용되지 않는 유형 및 멤버
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md
 - name: CLR 데이터베이스 개체 디버깅
   href: debugging-clr-database-objects.md
 - name: CLR 데이터베이스 개체 배포
@@ -166,52 +165,46 @@ items:
 - name: CLR 통합 어셈블리 관리
   href: assemblies/managing-clr-integration-assemblies.md
   items:
-  - name: 어셈블리 만들기
-    href: assemblies/creating-an-assembly.md
-  - name: 어셈블리 변경
-    href: assemblies/altering-an-assembly.md
-  - name: 어셈블리 삭제
-    href: assemblies/dropping-an-assembly.md
+    - name: 어셈블리 만들기
+      href: assemblies/creating-an-assembly.md
+    - name: 어셈블리 변경
+      href: assemblies/altering-an-assembly.md
+    - name: 어셈블리 삭제
+      href: assemblies/dropping-an-assembly.md
 - name: 관리되는 데이터베이스 개체 모니터링 및 문제 해결
   href: monitoring-and-troubleshooting-managed-database-objects.md
 - name: CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
   href: ../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md
   items:
-  - name: CLR UDF에서 네이티브 코드 액세스
-    href: ../../database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md
-  - name: 배열 매개 변수 예제
-    href: ../../database-engine/dev-guide/array-parameter-sample.md
-  - name: 달력 인식 날짜/시간 UDT 예제
-    href: ../../database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md
-  - name: CLR 트랜잭션 예제
-    href: ../../database-engine/dev-guide/clr-transactions-sample.md
-  - name: CLR 및 XML을 사용한 연락처 만들기
-    href: ../../database-engine/dev-guide/contact-creation-using-clr-and-xml.md
-  - name: 통화 형식 및 변환 함수
-    href: ../../database-engine/dev-guide/currency-type-and-conversion-function.md
-  - name: CLR을 사용하여 큰 개체 처리
-    href: ../../database-engine/dev-guide/handling-large-objects-using-clr.md
-  - name: Hello World Ready 예제
-    href: ../../database-engine/dev-guide/hello-world-ready-sample.md
-  - name: Hello World 예제
-    href: ../../database-engine/dev-guide/hello-world-sample.md
-  - name: In-Process 데이터 액세스 예제
-    href: ../../database-engine/dev-guide/in-process-data-access-sample.md
-  - name: 결과 집합 예제
-    href: ../../database-engine/dev-guide/result-set-sample.md
-  - name: 데이터 집합 보내기 예제
-    href: ../../database-engine/dev-guide/send-dataset-sample.md
-  - name: 문자열 유틸리티 함수 예제
-    href: ../../database-engine/dev-guide/string-utility-functions-sample.md
-  - name: 보조 문자 인식 문자열 조작 예제
-    href: ../../database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md
+    - name: CLR UDF에서 네이티브 코드 액세스
+      href: ../../database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md
+    - name: 배열 매개 변수 예제
+      href: ../../database-engine/dev-guide/array-parameter-sample.md
+    - name: 달력 인식 날짜/시간 UDT 예제
+      href: ../../database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md
+    - name: CLR 트랜잭션 예제
+      href: ../../database-engine/dev-guide/clr-transactions-sample.md
+    - name: CLR 및 XML을 사용한 연락처 만들기
+      href: ../../database-engine/dev-guide/contact-creation-using-clr-and-xml.md
+    - name: 통화 형식 및 변환 함수
+      href: ../../database-engine/dev-guide/currency-type-and-conversion-function.md
+    - name: CLR을 사용하여 큰 개체 처리
+      href: ../../database-engine/dev-guide/handling-large-objects-using-clr.md
+    - name: Hello World Ready 예제
+      href: ../../database-engine/dev-guide/hello-world-ready-sample.md
+    - name: Hello World 예제
+      href: ../../database-engine/dev-guide/hello-world-sample.md
+    - name: In-Process 데이터 액세스 예제
+      href: ../../database-engine/dev-guide/in-process-data-access-sample.md
+    - name: 결과 집합 예제
+      href: ../../database-engine/dev-guide/result-set-sample.md
+    - name: 데이터 집합 보내기 예제
+      href: ../../database-engine/dev-guide/send-dataset-sample.md
+    - name: 문자열 유틸리티 함수 예제
+      href: ../../database-engine/dev-guide/string-utility-functions-sample.md
+    - name: 보조 문자 인식 문자열 조작 예제
+      href: ../../database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md
 - name: UDT 유틸리티
   href: ../../database-engine/dev-guide/udt-utilities.md
 - name: 사용하지 않는 어셈블리 정리
   href: ../../database-engine/dev-guide/unused-assembly-cleanup.md
-ms.openlocfilehash: 489757d0be22558adee156703d6ef53187074565
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39315688"

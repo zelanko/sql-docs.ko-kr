@@ -1,35 +1,28 @@
-items:
 - name: 개요
   href: about-log-shipping-sql-server.md
 - name: 방법
   items:
-  - name: SQL Server 2014로 로그 전달 업그레이드
-    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
-  - name: 로그 전달 구성
-    href: configure-log-shipping-sql-server.md
-  - name: 보조 데이터베이스 추가
-    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-  - name: 보조 데이터베이스 제거
-    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-  - name: 로그 전달 제거
-    href: remove-log-shipping-sql-server.md
-  - name: 로그 전달 보고서 보기
-    href: view-the-log-shipping-report-sql-server-management-studio.md
-  - name: 로그 전달 모니터링
-    href: monitor-log-shipping-transact-sql.md
-  - name: 보조로 장애 조치(Failover)
-    href: fail-over-to-a-log-shipping-secondary-sql-server.md
-  - name: 주 및 보조 간의 역할 변경
-    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: SQL Server 2014로 로그 전달 업그레이드
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: 로그 전달 구성
+      href: configure-log-shipping-sql-server.md
+    - name: 보조 데이터베이스 추가
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: 보조 데이터베이스 제거
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: 로그 전달 제거
+      href: remove-log-shipping-sql-server.md
+    - name: 로그 전달 보고서 보기
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: 로그 전달 모니터링
+      href: monitor-log-shipping-transact-sql.md
+    - name: 보조로 장애 조치(Failover)
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: 주 및 보조 간의 역할 변경
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
 - name: 개념
   items:
-  - name: 로그 전달 및 복제
-    href: log-shipping-and-replication-sql-server.md
-  - name: 로그 전달 테이블 및 저장 프로시저
-    href: log-shipping-tables-and-stored-procedures.md
-ms.openlocfilehash: 951323a40f1adbd3b02e3016da2835f989bd7cec
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513823"
+    - name: 로그 전달 및 복제
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

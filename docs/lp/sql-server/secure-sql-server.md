@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: f1b88c2a82866c171601d5184a90fd0d6362a435
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213586"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -116,7 +116,7 @@ ms.locfileid: "56319124"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>항상 암호화</h3>
+                                                    <h3>Always Encrypted</h3>
                                                     <p>클라이언트가 클라이언트 애플리케이션의 중요한 데이터를 암호화하고 키를 데이터베이스 엔진에 표시하지 않도록 할 수 있습니다. </p>
                                                 </div>
                                             </div>
@@ -154,7 +154,7 @@ ms.locfileid: "56319124"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Permissions</h3>
+                                                    <h3>사용 권한</h3>
                                                     <p>누가 SQL Server 내의 어떤 항목에 액세스할 수 있는지를 지정합니다. </p>
                                                 </div>
                                             </div>
@@ -211,7 +211,7 @@ ms.locfileid: "56319124"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>투명한 데이터 암호화</h3>
+                                                    <h3>TDE(투명한 데이터 암호화)</h3>
                                                     <p>디스크의 미사용 데이터를 암호화합니다. </p>
                                                 </div>
                                             </div>

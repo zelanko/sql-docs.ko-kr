@@ -1,440 +1,433 @@
-items:
 - name: Docs
   tocHref: /
   topicHref: /
   items:
-  - name: SQL
-    tocHref: /sql/
-    topicHref: /sql/index
-    items:
-    - name: SQL 2014
-      tocHref: /sql/2014-toc/
-      topicHref: /sql/2014-toc/books-online-for-sql-server-2014
+    - name: SQL
+      tocHref: /sql/
+      topicHref: /sql/index
       items:
-      - name: 시작
-        tocHref: /sql/getting-started/
-        topicHref: /sql/getting-started/getting-started-sql-server-2014
-      - name: 데이터베이스 엔진
-        tocHref: /sql/database-engine/
-        topicHref: /sql/database-engine/sql-server-database-engine-overview
-        items:
-        - name: 구성
-          tocHref: /sql/database-engine/configure-windows/
-          topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
-        - name: 데이터 정렬
-          tocHref: /sql/relational-databases/collations/
-          topicHref: /sql/relational-databases/collations/collation-and-unicode-support
-        - name: 스크립팅
-          tocHref: /sql/relational-databases/scripting/
-          topicHref: /sql/relational-databases/scripting/database-engine-scripting
+        - name: SQL 2014
+          tocHref: /sql/2014-toc/
+          topicHref: /sql/2014-toc/books-online-for-sql-server-2014
           items:
-          - name: PowerShell
-            tocHref: /sql/powershell/
-            topicHref: /sql/powershell/sql-server-powershell
-        - name: 유지 관리 계획
-          tocHref: /sql/relational-databases/maintenance-plans/
-          topicHref: /sql/relational-databases/maintenance-plans/maintenance-plans
-        - name: 관리
-          tocHref: /sql/relational-databases/resource-governor/
-          topicHref: /sql/relational-databases/resource-governor/resource-governor
-        - name: 데이터베이스 메일
-          tocHref: /sql/relational-databases/database-mail/
-          topicHref: /sql/relational-databases/database-mail/database-mail
-        - name: 확장 이벤트
-          tocHref: /sql/relational-databases/extended-events/
-          topicHref: /sql/relational-databases/extended-events/extended-events
-        - name: SQL 추적
-          tocHref: /sql/relational-databases/sql-trace/
-          topicHref: /sql/relational-databases/sql-trace/sql-trace
-        - name: 프로파일러
-          tocHref: /sql/tools/sql-server-profiler/
-          topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
-        - name: 변경 내용 추적
-          tocHref: /sql/relational-databases/track-changes/
-          topicHref: /sql/relational-databases/track-changes/track-data-changes-sql-server
-        - name: 로그
-          tocHref: /sql/relational-databases/logs/
-          topicHref: /sql/relational-databases/logs/log-file-viewer
-        - name: 성능
-          tocHref: /sql/relational-databases/performance/
-          topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
-        - name: SQLXML
-          tocHref: /sql/relational-databases/sqlxml/
-          topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
-        - name: 확장 저장 프로시저 프로그래밍
-          tocHref: /sql/relational-databases/extended-stored-procedures-programming/
-          topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
-        - name: Express LocalDB 오류 메시지
-          tocHref: /sql/relational-databases/express-localdb-error-messages/
-          topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
-        - name: Express LocalDB 인스턴스 API
-          tocHref: /sql/relational-databases/express-localdb-instance-apis/
-          topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
-        - name: SMO
-          tocHref: /sql/relational-databases/server-management-objects-smo/
-          topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
-        - name: WMI 공급자
-          tocHref: /sql/relational-databases/wmi-provider-configuration/
-          topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
-        - name: SSMS
-          tocHref: /sql/ssms/
-          topicHref: /sql/ssms/sql-server-management-studio-ssms
-          items:
-          - name: Visual Database Tools
-            tocHref: /sql/ssms/visual-db-tools/
-            topicHref: /sql/ssms/visual-db-tools/visual-database-tools
-          - name: 메뉴 도움말
-            tocHref: /sql/ssms/menu-help/
-            topicHref: /sql/ssms/menu-help/sql-server-management-studio-menu-help
-          - name: 에이전트
-            tocHref: /sql/ssms/agent/
-            topicHref: /sql/ssms/agent/sql-server-agent
-        - name: 관리
-          tocHref: /sql/relational-databases/manage/
-          topicHref: /sql/relational-databases/manage/sql-server-utility-features-and-tasks
-        - name: 정책 기반 관리
-          tocHref: /sql/relational-databases/policy-based-management/
-          topicHref: /sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
-        - name: 서버 등록
-          tocHref: /sql/ssms/register-servers/
-          topicHref: /sql/ssms/register-servers/register-servers
-        - name: Distributed Replay
-          tocHref: /sql/tools/distributed-replay/
-          topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
-        - name: 데이터 컬렉션
-          tocHref: /sql/relational-databases/data-collection/
-          topicHref: /sql/relational-databases/data-collection/data-collection
-        - name: 성능 모니터
-          tocHref: /sql/relational-databases/performance-monitor/
-          topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
-        - name: 장애 조치(failover) 클러스터
-          tocHref: /sql/sql-server/failover-clusters/
-          topicHref: /sql/sql-server/failover-clusters/windows-server-failover-clustering-wsfc-with-sql-server
-        - name: Always On 가용성 그룹
-          tocHref: /sql/database-engine/availability-groups/windows/
-          topicHref: /sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server
-        - name: 데이터베이스 미러링
-          tocHref: /sql/database-engine/database-mirroring/
-          topicHref: /sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server
-        - name: 로그 전달
-          tocHref: /sql/database-engine/log-shipping/
-          topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
-        - name: 보안
-          tocHref: /sql/relational-databases/security/
-          topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-        - name: 유틸리티 참조
-          tocHref: /sql/tools/
-          topicHref: /sql/tools/command-prompt-utility-reference-database-engine
-          items:
-          - name: dta
-            tocHref: /sql/tools/dta/
-            topicHref: /sql/tools/dta/dta-utility
-          - name: ssbdiagnose
-            tocHref: /sql/tools/ssbdiagnose/
-            topicHref: /sql/tools/ssbdiagnose/ssbdiagnose-utility-service-broker
-        - name: 오류 및 이벤트 참조
-          tocHref: /sql/relational-databases/errors-events/
-          topicHref: /sql/relational-databases/errors-events/errors-and-events-reference-database-engine
-          items:
-          - name: 이벤트 클래스
-            tocHref: /sql/relational-databases/event-classes/
-            topicHref: /sql/relational-databases/event-classes/sql-server-event-class-reference
-      - name: Analysis Services
-        tocHref: /sql/analysis-services/
-        topicHref: /sql/analysis-services/analysis-services
-        items:
-        - name: 테이블 형식 모델
-          tocHref: /sql/analysis-services/tabular-models/
-          topicHref: /sql/analysis-services/tabular-models/tabular-models-ssas
-        - name: 다차원 모델
-          tocHref: /sql/analysis-services/multidimensional-models/
-          topicHref: /sql/analysis-services/multidimensional-models/multidimensional-models-ssas
-          items:
-          - name: MDX
-            tocHref: /sql/analysis-services/multidimensional-models/mdx/
-            topicHref: /sql/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data
-        - name: 데이터 마이닝
-          tocHref: /sql/analysis-services/data-mining/
-          topicHref: /sql/analysis-services/data-mining/data-mining-ssas
-        - name: 다차원 UI 마법사
-          tocHref: /sql/analysis-services/ui-wizards-multidimensional/
-          topicHref: /sql/analysis-services/ui-wizards-multidimensional/ui-wizards-multidimensional
-        - name: 다차원 UI 디자이너 대화 상자
-          tocHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/
-          topicHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional
-        - name: 테이블 형식 UI 디자이너 대화 상자
-          tocHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/
-          topicHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular
-        - name: 데이터 마이닝 UI 디자이너 대화 상자
-          tocHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/
-          topicHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining
-        - name: 데이터 마이닝 UI 마법사
-          tocHref: /sql/analysis-services/ui-wizards-data-mining/
-          topicHref: /sql/analysis-services/ui-wizards-data-mining/ui-wizards-data-mining
-      - name: Integration Services
-        tocHref: /sql/integration-services/
-        topicHref: /sql/integration-services/sql-server-integration-services
-        items:
-        - name: 제어 흐름
-          tocHref: /sql/integration-services/control-flow/
-          topicHref: /sql/integration-services/control-flow/control-flow
-        - name: 데이터 흐름
-          tocHref: /sql/integration-services/data-flow/
-          topicHref: /sql/integration-services/data-flow/data-flow
-          items:
-          - name: 변환
-            tocHref: /sql/integration-services/data-flow/transformations/
-            topicHref: /sql/integration-services/data-flow/transformations/integration-services-transformations
-        - name: 변경 데이터 캡처
-          tocHref: /sql/integration-services/change-data-capture/
-          topicHref: /sql/integration-services/change-data-capture/change-data-capture-ssis
-        - name: 데이터 가져오기 및 내보내기
-          tocHref: /sql/integration-services/import-export-data/
-          topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
-        - name: 문제 해결
-          tocHref: /sql/integration-services/troubleshooting/
-          topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
-        - name: 연결 관리자
-          tocHref: /sql/integration-services/connection-manager/
-          topicHref: /sql/integration-services/connection-manager/integration-services-ssis-connections
-        - name: 식
-          tocHref: /sql/integration-services/expressions/
-          topicHref: /sql/integration-services/expressions/integration-services-ssis-expressions
-        - name: 서비스
-          tocHref: /sql/integration-services/service/
-          topicHref: /sql/integration-services/service/integration-services-service-ssis-service
-        - name: 서버 및 카탈로그
-          tocHref: /sql/integration-services/catalog/
-          topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
-        - name: 패키지
-          tocHref: /sql/integration-services/packages/
-          topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
-        - name: 모니터
-          tocHref: /sql/integration-services/performance/
-          topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
-        - name: 보안
-          tocHref: /sql/integration-services/security/
-          topicHref: /sql/integration-services/security/security-overview-integration-services
-        - name: 스크립팅을 사용한 패키지 확장
-          tocHref: /sql/integration-services/extending-packages-scripting/
-          topicHref: /sql/integration-services/extending-packages-scripting/extending-packages-with-scripting
-      - name: 데이터베이스 엔진 서비스
-        tocHref: /sql/data-quality-services/
-        topicHref: /sql/data-quality-services/data-quality-services
-      - name: 관계형 데이터베이스 기능
-        tocHref: /sql/relational-databases/
-        topicHref: /sql/relational-databases/database-features
-        items:
-        - name: 데이터베이스
-          tocHref: /sql/relational-databases/databases/
-          topicHref: /sql/relational-databases/databases/databases
-        - name: 테이블
-          tocHref: /sql/relational-databases/tables/
-          topicHref: /sql/relational-databases/tables/tables
-        - name: 메모리 내 OLTP
-          tocHref: /sql/relational-databases/in-memory-oltp/
-          topicHref: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
-        - name: 인덱스
-          tocHref: /sql/relational-databases/indexes/
-          topicHref: /sql/relational-databases/indexes/indexes
-        - name: 파티션
-          tocHref: /sql/relational-databases/partitions/
-          topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
-        - name: 뷰
-          tocHref: /sql/relational-databases/views/
-          topicHref: /sql/relational-databases/views/views
-        - name: 저장 프로시저 및 OLE
-          tocHref: /sql/relational-databases/stored-procedures/
-          topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
-        - name: 검색
-          tocHref: /sql/relational-databases/search/
-          topicHref: /sql/relational-databases/search/full-text-search
-        - name: 사용자 정의 함수
-          tocHref: /sql/relational-databases/user-defined-functions/
-          topicHref: /sql/relational-databases/user-defined-functions/user-defined-functions
-        - name: 통계
-          tocHref: /sql/relational-databases/statistics/
-          topicHref: /sql/relational-databases/statistics/statistics
-        - name: 트리거
-          tocHref: /sql/relational-databases/triggers/
-          topicHref: /sql/relational-databases/triggers/ddl-triggers
-        - name: XML
-          tocHref: /sql/relational-databases/xml/
-          topicHref: /sql/relational-databases/xml/xml-data-sql-server
-        - name: 공간
-          tocHref: /sql/relational-databases/spatial/
-          topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
-        - name: Blob
-          tocHref: /sql/relational-databases/blob/
-          topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
-        - name: 데이터 계층 애플리케이션
-          tocHref: /sql/relational-databases/data-tier-applications/
-          topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
-        - name: Backup 및 Restore 메서드
-          tocHref: /sql/relational-databases/backup-restore/
-          topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
-        - name: 대량 가져오기 및 내보내기
-          tocHref: /sql/relational-databases/import-export/
-          topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
-        - name: Data Compression
-          tocHref: /sql/relational-databases/data-compression/
-          topicHref: /sql/relational-databases/data-compression/data-compression
-        - name: 이벤트 알림
-          tocHref: /sql/relational-databases/service-broker/
-          topicHref: /sql/relational-databases/service-broker/event-notifications
-        - name: CLR 통합
-          tocHref: /sql/relational-databases/clr-integration/
-          topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
-        - name: 복제
-          tocHref: /sql/relational-databases/replication/
-          topicHref: /sql/relational-databases/replication/sql-server-replication
-          items:
-          - name: 관리
-            tocHref: /sql/relational-databases/replication/administration/
-            topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
-          - name: 에이전트
-            tocHref: /sql/relational-databases/replication/agents/
-            topicHref: /sql/relational-databases/replication/agents/replication-agents-overview
-          - name: 개발자 가이드 - 복제
-            tocHref: /sql/relational-databases/replication/concepts/
-            topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
-          - name: 오류 및 이벤트
-            tocHref: /sql/relational-databases/replication/errors-events/
-            topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
-          - name: 병합
-            tocHref: /sql/relational-databases/replication/merge/
-            topicHref: /sql/relational-databases/replication/merge/merge-replication
-          - name: 모니터
-            tocHref: /sql/relational-databases/replication/monitor/
-            topicHref: /sql/relational-databases/replication/monitoring-replication
-          - name: 비SQL
-            tocHref: /sql/relational-databases/replication/non-sql/
-            topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
-          - name: 게시
-            tocHref: /sql/relational-databases/replication/publish/
-            topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
-          - name: 트랜잭션
-            tocHref: /sql/relational-databases/replication/transactional/
-            topicHref: /sql/relational-databases/replication/transactional/transactional-replication
-          - name: 보안
-            tocHref: /sql/relational-databases/replication/security/
-            topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
-        - name: Native Client 프로그래밍
-          tocHref: /sql/relational-databases/native-client/
-          topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
-          items:
-          - name: OLE DB
-            tocHref: /sql/relational-databases/native-client/ole-db/
-            topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
-          - name: ODBC
-            tocHref: /sql/relational-databases/native-client/odbc/
-            topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
-            items:
-            - name: Bulk Copy Functions
-              tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
-              topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
-            - name: API
-              tocHref: /sql/relational-databases/native-client-odbc-api/
-              topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
-      - name: Reporting Services
-        tocHref: /sql/reporting-services/
-        topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
-        items:
-        - name: 보고서 서버 - SharePoint
-          tocHref: /sql/reporting-services/report-server-sharepoint/
-          topicHref: /sql/reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library
-        - name: 보고서 서버 - Native
-          tocHref: /sql/reporting-services/report-server/
-          topicHref: /sql/reporting-services/report-server/reporting-services-report-server-native-mode
-        - name: 보고서 작성기
-          tocHref: /sql/reporting-services/report-builder/
-          topicHref: /sql/reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs
-        - name: 보고서 데이터
-          tocHref: /sql/reporting-services/report-data/
-          topicHref: /sql/reporting-services/report-data/report-datasets-ssrs
-        - name: 보고서 디자인
-          tocHref: /sql/reporting-services/report-design/
-          topicHref: /sql/reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs
-        - name: 보고서
-          tocHref: /sql/reporting-services/reports/
-          topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs
-        - name: 구독 및 일정
-          tocHref: /sql/reporting-services/subscriptions/
-          topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
-        - name: 보안
-          tocHref: /sql/reporting-services/security/
-          topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
-        - name: Tools
-          tocHref: /sql/reporting-services/tools/
-          topicHref: /sql/reporting-services/tools/reporting-services-tools
-        - name: WMI 공급자 참조
-          tocHref: /sql/reporting-services/wmi-provider-library-reference/
-          topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
-        - name: 문제 해결
-          tocHref: /sql/reporting-services/troubleshooting/
-          topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
-        - name: 응용 프로그램 통합
-          tocHref: /sql/reporting-services/application-integration/
-          topicHref: /sql/reporting-services/application-integration/integrating-reporting-services-into-applications
-        - name: 보고서 서버 웹 서비스
-          tocHref: /sql/reporting-services/report-server-web-service/
-          topicHref: /sql/reporting-services/report-server-web-service/report-server-web-service
-        - name: 확장 프로그램
-          tocHref: /sql/reporting-services/extensions/
-          topicHref: /sql/reporting-services/extensions/reporting-services-extensions
-        - name: 사용자 지정 보고서 항목
-          tocHref: /sql/reporting-services/custom-report-items/
-          topicHref: /sql/reporting-services/custom-report-items/custom-report-items
-        - name: 사용자 지정 어셈블리
-          tocHref: /sql/reporting-services/custom-assemblies/
-          topicHref: /sql/reporting-services/custom-assemblies/using-custom-assemblies-with-reports
-      - name: Master  Data  Services
-        tocHref: /sql/master-data-services/
-        topicHref: /sql/master-data-services/master-data-services
-      - name: 구성 관리자
-        tocHref: /sql/tools/configuration-manager/
-        topicHref: /sql/tools/configuration-manager/sql-server-configuration-manager-help
-      - name: 개발자 가이드 - Analysis Services
-        tocHref: /sql/analysis-services/dev-guide/
-        topicHref: /sql/analysis-services/dev-guide/analysis-services-dev-guide
-        items:
-        - name: 테이블 형식 모델 프로그래밍
-          tocHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103
-          topicHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
-        - name: 스키마 행 집합
-          tocHref: /sql/analysis-services/schema-rowsets/
-          topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
-        - name: 스크립팅
-          tocHref: /sql/analysis-services/scripting/
-          topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
-          items:
-          - name: 개체
-            tocHref: /sql/analysis-services/scripting/objects/
-            topicHref: /sql/analysis-services/scripting/objects/objects-assl
-          - name: 컬렉션
-            tocHref: /sql/analysis-services/scripting/collections/
-            topicHref: /sql/analysis-services/scripting/collections/collections-assl
-          - name: 속성
-            tocHref: /sql/analysis-services/scripting/properties/
-            topicHref: /sql/analysis-services/scripting/properties/properties-assl
-          - name: 데이터 형식
-            tocHref: /sql/analysis-services/scripting/data-type/
-            topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
-        - name: XMLA
-          tocHref: /sql/analysis-services/xmla/
-          topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
-      - name: SQL Server 설치
-        tocHref: /sql/database-engine/install-windows/
-        topicHref: /sql/database-engine/install-windows/installation-for-sql-server
-      - name: T-SQL 자습서
-        tocHref: /sql/t-sql/
-        topicHref: /sql/t-sql/tutorial-writing-transact-sql-statements
-      - name: 자습서
-        tocHref: /sql/tutorials/
-        topicHref: /sql/tutorials/tutorials-for-sql-server-2014
-ms.openlocfilehash: a5f31d82b44d0fa5c1bd03c8ac3dbf7ac1213a67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124943"
+            - name: 시작
+              tocHref: /sql/getting-started/
+              topicHref: /sql/getting-started/getting-started-sql-server-2014
+            - name: 데이터베이스 엔진
+              tocHref: /sql/database-engine/
+              topicHref: /sql/database-engine/sql-server-database-engine-overview
+              items:
+                - name: 구성
+                  tocHref: /sql/database-engine/configure-windows/
+                  topicHref: /sql/database-engine/configure-windows/configure-database-engine-instances-sql-server
+                - name: 데이터 정렬
+                  tocHref: /sql/relational-databases/collations/
+                  topicHref: /sql/relational-databases/collations/collation-and-unicode-support
+                - name: 스크립팅
+                  tocHref: /sql/relational-databases/scripting/
+                  topicHref: /sql/relational-databases/scripting/database-engine-scripting
+                  items:
+                    - name: PowerShell
+                      tocHref: /sql/powershell/
+                      topicHref: /sql/powershell/sql-server-powershell
+                - name: 유지 관리 계획
+                  tocHref: /sql/relational-databases/maintenance-plans/
+                  topicHref: /sql/relational-databases/maintenance-plans/maintenance-plans
+                - name: 관리
+                  tocHref: /sql/relational-databases/resource-governor/
+                  topicHref: /sql/relational-databases/resource-governor/resource-governor
+                - name: 데이터베이스 메일
+                  tocHref: /sql/relational-databases/database-mail/
+                  topicHref: /sql/relational-databases/database-mail/database-mail
+                - name: 확장 이벤트
+                  tocHref: /sql/relational-databases/extended-events/
+                  topicHref: /sql/relational-databases/extended-events/extended-events
+                - name: SQL 추적
+                  tocHref: /sql/relational-databases/sql-trace/
+                  topicHref: /sql/relational-databases/sql-trace/sql-trace
+                - name: 프로파일러
+                  tocHref: /sql/tools/sql-server-profiler/
+                  topicHref: /sql/tools/sql-server-profiler/sql-server-profiler
+                - name: 변경 내용 추적
+                  tocHref: /sql/relational-databases/track-changes/
+                  topicHref: /sql/relational-databases/track-changes/track-data-changes-sql-server
+                - name: 로그
+                  tocHref: /sql/relational-databases/logs/
+                  topicHref: /sql/relational-databases/logs/log-file-viewer
+                - name: 성능
+                  tocHref: /sql/relational-databases/performance/
+                  topicHref: /sql/relational-databases/performance/monitor-and-tune-for-performance
+                - name: SQLXML
+                  tocHref: /sql/relational-databases/sqlxml/
+                  topicHref: /sql/relational-databases/sqlxml/sqlxml-4-0-programming-concepts
+                - name: 확장 저장 프로시저 프로그래밍
+                  tocHref: /sql/relational-databases/extended-stored-procedures-programming/
+                  topicHref: /sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming
+                - name: Express LocalDB 오류 메시지
+                  tocHref: /sql/relational-databases/express-localdb-error-messages/
+                  topicHref: /sql/relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages
+                - name: Express LocalDB 인스턴스 API
+                  tocHref: /sql/relational-databases/express-localdb-instance-apis/
+                  topicHref: /sql/relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis
+                - name: SMO
+                  tocHref: /sql/relational-databases/server-management-objects-smo/
+                  topicHref: /sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide
+                - name: WMI 공급자
+                  tocHref: /sql/relational-databases/wmi-provider-configuration/
+                  topicHref: /sql/relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management
+                - name: SSMS
+                  tocHref: /sql/ssms/
+                  topicHref: /sql/ssms/sql-server-management-studio-ssms
+                  items:
+                    - name: Visual Database Tools
+                      tocHref: /sql/ssms/visual-db-tools/
+                      topicHref: /sql/ssms/visual-db-tools/visual-database-tools
+                    - name: 메뉴 도움말
+                      tocHref: /sql/ssms/menu-help/
+                      topicHref: /sql/ssms/menu-help/sql-server-management-studio-menu-help
+                    - name: 에이전트
+                      tocHref: /sql/ssms/agent/
+                      topicHref: /sql/ssms/agent/sql-server-agent
+                - name: 관리
+                  tocHref: /sql/relational-databases/manage/
+                  topicHref: /sql/relational-databases/manage/sql-server-utility-features-and-tasks
+                - name: 정책 기반 관리
+                  tocHref: /sql/relational-databases/policy-based-management/
+                  topicHref: /sql/relational-databases/policy-based-management/administer-servers-by-using-policy-based-management
+                - name: 서버 등록
+                  tocHref: /sql/ssms/register-servers/
+                  topicHref: /sql/ssms/register-servers/register-servers
+                - name: Distributed Replay
+                  tocHref: /sql/tools/distributed-replay/
+                  topicHref: /sql/tools/distributed-replay/sql-server-distributed-replay
+                - name: 데이터 컬렉션
+                  tocHref: /sql/relational-databases/data-collection/
+                  topicHref: /sql/relational-databases/data-collection/data-collection
+                - name: 성능 모니터
+                  tocHref: /sql/relational-databases/performance-monitor/
+                  topicHref: /sql/relational-databases/performance-monitor/monitor-resource-usage-system-monitor
+                - name: 장애 조치(failover) 클러스터
+                  tocHref: /sql/sql-server/failover-clusters/
+                  topicHref: /sql/sql-server/failover-clusters/windows-server-failover-clustering-wsfc-with-sql-server
+                - name: Always On 가용성 그룹
+                  tocHref: /sql/database-engine/availability-groups/windows/
+                  topicHref: /sql/database-engine/availability-groups/windows/always-on-availability-groups-sql-server
+                - name: 데이터베이스 미러링
+                  tocHref: /sql/database-engine/database-mirroring/
+                  topicHref: /sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server
+                - name: 로그 전달
+                  tocHref: /sql/database-engine/log-shipping/
+                  topicHref: /sql/database-engine/log-shipping/about-log-shipping-sql-server
+                - name: 보안
+                  tocHref: /sql/relational-databases/security/
+                  topicHref: /sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
+                - name: 유틸리티 참조
+                  tocHref: /sql/tools/
+                  topicHref: /sql/tools/command-prompt-utility-reference-database-engine
+                  items:
+                    - name: dta
+                      tocHref: /sql/tools/dta/
+                      topicHref: /sql/tools/dta/dta-utility
+                    - name: ssbdiagnose
+                      tocHref: /sql/tools/ssbdiagnose/
+                      topicHref: /sql/tools/ssbdiagnose/ssbdiagnose-utility-service-broker
+                - name: 오류 및 이벤트 참조
+                  tocHref: /sql/relational-databases/errors-events/
+                  topicHref: /sql/relational-databases/errors-events/errors-and-events-reference-database-engine
+                  items:
+                    - name: 이벤트 클래스
+                      tocHref: /sql/relational-databases/event-classes/
+                      topicHref: /sql/relational-databases/event-classes/sql-server-event-class-reference
+            - name: Analysis Services
+              tocHref: /sql/analysis-services/
+              topicHref: /sql/analysis-services/analysis-services
+              items:
+                - name: 테이블 형식 모델
+                  tocHref: /sql/analysis-services/tabular-models/
+                  topicHref: /sql/analysis-services/tabular-models/tabular-models-ssas
+                - name: 다차원 모델
+                  tocHref: /sql/analysis-services/multidimensional-models/
+                  topicHref: /sql/analysis-services/multidimensional-models/multidimensional-models-ssas
+                  items:
+                    - name: MDX
+                      tocHref: /sql/analysis-services/multidimensional-models/mdx/
+                      topicHref: /sql/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data
+                - name: 데이터 마이닝
+                  tocHref: /sql/analysis-services/data-mining/
+                  topicHref: /sql/analysis-services/data-mining/data-mining-ssas
+                - name: 다차원 UI 마법사
+                  tocHref: /sql/analysis-services/ui-wizards-multidimensional/
+                  topicHref: /sql/analysis-services/ui-wizards-multidimensional/ui-wizards-multidimensional
+                - name: 다차원 UI 디자이너 대화 상자
+                  tocHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/
+                  topicHref: /sql/analysis-services/ui-designers-dialog-boxes-multidimensional/ui-designers-dialog-boxes-multidimensional
+                - name: 테이블 형식 UI 디자이너 대화 상자
+                  tocHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/
+                  topicHref: /sql/analysis-services/ui-designers-dialog-boxes-tabular/ui-designers-dialog-boxes-tabular
+                - name: 데이터 마이닝 UI 디자이너 대화 상자
+                  tocHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/
+                  topicHref: /sql/analysis-services/ui-designers-dialog-boxes-data-mining/ui-designers-dialog-boxes-data-mining
+                - name: 데이터 마이닝 UI 마법사
+                  tocHref: /sql/analysis-services/ui-wizards-data-mining/
+                  topicHref: /sql/analysis-services/ui-wizards-data-mining/ui-wizards-data-mining
+            - name: Integration Services
+              tocHref: /sql/integration-services/
+              topicHref: /sql/integration-services/sql-server-integration-services
+              items:
+                - name: 제어 흐름
+                  tocHref: /sql/integration-services/control-flow/
+                  topicHref: /sql/integration-services/control-flow/control-flow
+                - name: 데이터 흐름
+                  tocHref: /sql/integration-services/data-flow/
+                  topicHref: /sql/integration-services/data-flow/data-flow
+                  items:
+                    - name: 변환
+                      tocHref: /sql/integration-services/data-flow/transformations/
+                      topicHref: /sql/integration-services/data-flow/transformations/integration-services-transformations
+                - name: 변경 데이터 캡처
+                  tocHref: /sql/integration-services/change-data-capture/
+                  topicHref: /sql/integration-services/change-data-capture/change-data-capture-ssis
+                - name: 데이터 가져오기 및 내보내기
+                  tocHref: /sql/integration-services/import-export-data/
+                  topicHref: /sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard
+                - name: 문제 해결
+                  tocHref: /sql/integration-services/troubleshooting/
+                  topicHref: /sql/integration-services/troubleshooting/troubleshooting-tools-for-package-development
+                - name: 연결 관리자
+                  tocHref: /sql/integration-services/connection-manager/
+                  topicHref: /sql/integration-services/connection-manager/integration-services-ssis-connections
+                - name: 식
+                  tocHref: /sql/integration-services/expressions/
+                  topicHref: /sql/integration-services/expressions/integration-services-ssis-expressions
+                - name: 서비스
+                  tocHref: /sql/integration-services/service/
+                  topicHref: /sql/integration-services/service/integration-services-service-ssis-service
+                - name: 서버 및 카탈로그
+                  tocHref: /sql/integration-services/catalog/
+                  topicHref: /sql/integration-services/catalog/integration-services-ssis-server-and-catalog
+                - name: 패키지
+                  tocHref: /sql/integration-services/packages/
+                  topicHref: /sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages
+                - name: 모니터
+                  tocHref: /sql/integration-services/performance/
+                  topicHref: /sql/integration-services/performance/monitor-running-packages-and-other-operations
+                - name: 보안
+                  tocHref: /sql/integration-services/security/
+                  topicHref: /sql/integration-services/security/security-overview-integration-services
+                - name: 스크립팅을 사용한 패키지 확장
+                  tocHref: /sql/integration-services/extending-packages-scripting/
+                  topicHref: /sql/integration-services/extending-packages-scripting/extending-packages-with-scripting
+            - name: 데이터베이스 엔진 서비스
+              tocHref: /sql/data-quality-services/
+              topicHref: /sql/data-quality-services/data-quality-services
+            - name: 관계형 데이터베이스 기능
+              tocHref: /sql/relational-databases/
+              topicHref: /sql/relational-databases/database-features
+              items:
+                - name: 데이터베이스
+                  tocHref: /sql/relational-databases/databases/
+                  topicHref: /sql/relational-databases/databases/databases
+                - name: 테이블
+                  tocHref: /sql/relational-databases/tables/
+                  topicHref: /sql/relational-databases/tables/tables
+                - name: 메모리 내 OLTP
+                  tocHref: /sql/relational-databases/in-memory-oltp/
+                  topicHref: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
+                - name: 인덱스
+                  tocHref: /sql/relational-databases/indexes/
+                  topicHref: /sql/relational-databases/indexes/indexes
+                - name: 파티션
+                  tocHref: /sql/relational-databases/partitions/
+                  topicHref: /sql/relational-databases/partitions/partitioned-tables-and-indexes
+                - name: 뷰
+                  tocHref: /sql/relational-databases/views/
+                  topicHref: /sql/relational-databases/views/views
+                - name: 저장 프로시저 및 OLE
+                  tocHref: /sql/relational-databases/stored-procedures/
+                  topicHref: /sql/relational-databases/stored-procedures/stored-procedures-database-engine
+                - name: 검색
+                  tocHref: /sql/relational-databases/search/
+                  topicHref: /sql/relational-databases/search/full-text-search
+                - name: 사용자 정의 함수
+                  tocHref: /sql/relational-databases/user-defined-functions/
+                  topicHref: /sql/relational-databases/user-defined-functions/user-defined-functions
+                - name: 통계
+                  tocHref: /sql/relational-databases/statistics/
+                  topicHref: /sql/relational-databases/statistics/statistics
+                - name: 트리거
+                  tocHref: /sql/relational-databases/triggers/
+                  topicHref: /sql/relational-databases/triggers/ddl-triggers
+                - name: XML
+                  tocHref: /sql/relational-databases/xml/
+                  topicHref: /sql/relational-databases/xml/xml-data-sql-server
+                - name: 공간
+                  tocHref: /sql/relational-databases/spatial/
+                  topicHref: /sql/relational-databases/spatial/spatial-data-sql-server
+                - name: Blob
+                  tocHref: /sql/relational-databases/blob/
+                  topicHref: /sql/relational-databases/blob/binary-large-object-blob-data-sql-server
+                - name: 데이터 계층 애플리케이션
+                  tocHref: /sql/relational-databases/data-tier-applications/
+                  topicHref: /sql/relational-databases/data-tier-applications/data-tier-applications
+                - name: Backup 및 Restore 메서드
+                  tocHref: /sql/relational-databases/backup-restore/
+                  topicHref: /sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases
+                - name: 대량 가져오기 및 내보내기
+                  tocHref: /sql/relational-databases/import-export/
+                  topicHref: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+                - name: Data Compression
+                  tocHref: /sql/relational-databases/data-compression/
+                  topicHref: /sql/relational-databases/data-compression/data-compression
+                - name: 이벤트 알림
+                  tocHref: /sql/relational-databases/service-broker/
+                  topicHref: /sql/relational-databases/service-broker/event-notifications
+                - name: CLR 통합
+                  tocHref: /sql/relational-databases/clr-integration/
+                  topicHref: /sql/relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts
+                - name: 복제
+                  tocHref: /sql/relational-databases/replication/
+                  topicHref: /sql/relational-databases/replication/sql-server-replication
+                  items:
+                    - name: 관리
+                      tocHref: /sql/relational-databases/replication/administration/
+                      topicHref: /sql/relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators
+                    - name: 에이전트
+                      tocHref: /sql/relational-databases/replication/agents/
+                      topicHref: /sql/relational-databases/replication/agents/replication-agents-overview
+                    - name: 개발자 가이드 - 복제
+                      tocHref: /sql/relational-databases/replication/concepts/
+                      topicHref: /sql/relational-databases/replication/concepts/replication-developer-documentation
+                    - name: 오류 및 이벤트
+                      tocHref: /sql/relational-databases/replication/errors-events/
+                      topicHref: /sql/relational-databases/replication/errors-events/errors-events-replication
+                    - name: 병합
+                      tocHref: /sql/relational-databases/replication/merge/
+                      topicHref: /sql/relational-databases/replication/merge/merge-replication
+                    - name: 모니터
+                      tocHref: /sql/relational-databases/replication/monitor/
+                      topicHref: /sql/relational-databases/replication/monitoring-replication
+                    - name: 비SQL
+                      tocHref: /sql/relational-databases/replication/non-sql/
+                      topicHref: /sql/relational-databases/replication/non-sql/heterogeneous-database-replication
+                    - name: 게시
+                      tocHref: /sql/relational-databases/replication/publish/
+                      topicHref: /sql/relational-databases/replication/publish/publish-data-and-database-objects
+                    - name: 트랜잭션
+                      tocHref: /sql/relational-databases/replication/transactional/
+                      topicHref: /sql/relational-databases/replication/transactional/transactional-replication
+                    - name: 보안
+                      tocHref: /sql/relational-databases/replication/security/
+                      topicHref: /sql/relational-databases/replication/security/view-and-modify-replication-security-settings
+                - name: Native Client 프로그래밍
+                  tocHref: /sql/relational-databases/native-client/
+                  topicHref: /sql/relational-databases/native-client/sql-server-native-client-programming
+                  items:
+                    - name: OLE DB
+                      tocHref: /sql/relational-databases/native-client/ole-db/
+                      topicHref: /sql/relational-databases/native-client/ole-db/sql-server-native-client-ole-db
+                    - name: ODBC
+                      tocHref: /sql/relational-databases/native-client/odbc/
+                      topicHref: /sql/relational-databases/native-client/odbc/sql-server-native-client-odbc
+                      items:
+                        - name: Bulk Copy Functions
+                          tocHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/
+                          topicHref: /sql/relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions
+                        - name: API
+                          tocHref: /sql/relational-databases/native-client-odbc-api/
+                          topicHref: /sql/relational-databases/native-client-odbc-api/odbc-api-implementation-details
+            - name: Reporting Services
+              tocHref: /sql/reporting-services/
+              topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
+              items:
+                - name: 보고서 서버 - SharePoint
+                  tocHref: /sql/reporting-services/report-server-sharepoint/
+                  topicHref: /sql/reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library
+                - name: 보고서 서버 - Native
+                  tocHref: /sql/reporting-services/report-server/
+                  topicHref: /sql/reporting-services/report-server/reporting-services-report-server-native-mode
+                - name: 보고서 작성기
+                  tocHref: /sql/reporting-services/report-builder/
+                  topicHref: /sql/reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs
+                - name: 보고서 데이터
+                  tocHref: /sql/reporting-services/report-data/
+                  topicHref: /sql/reporting-services/report-data/report-datasets-ssrs
+                - name: 보고서 디자인
+                  tocHref: /sql/reporting-services/report-design/
+                  topicHref: /sql/reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs
+                - name: 보고서
+                  tocHref: /sql/reporting-services/reports/
+                  topicHref: /sql/reporting-services/reports/reporting-services-reports-ssrs
+                - name: 구독 및 일정
+                  tocHref: /sql/reporting-services/subscriptions/
+                  topicHref: /sql/reporting-services/subscriptions/subscriptions-and-delivery-reporting-services
+                - name: 보안
+                  tocHref: /sql/reporting-services/security/
+                  topicHref: /sql/reporting-services/security/reporting-services-security-and-protection
+                - name: 도구
+                  tocHref: /sql/reporting-services/tools/
+                  topicHref: /sql/reporting-services/tools/reporting-services-tools
+                - name: WMI 공급자 참조
+                  tocHref: /sql/reporting-services/wmi-provider-library-reference/
+                  topicHref: /sql/reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs
+                - name: 문제 해결
+                  tocHref: /sql/reporting-services/troubleshooting/
+                  topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
+                - name: 응용 프로그램 통합
+                  tocHref: /sql/reporting-services/application-integration/
+                  topicHref: /sql/reporting-services/application-integration/integrating-reporting-services-into-applications
+                - name: 보고서 서버 웹 서비스
+                  tocHref: /sql/reporting-services/report-server-web-service/
+                  topicHref: /sql/reporting-services/report-server-web-service/report-server-web-service
+                - name: 확장 프로그램
+                  tocHref: /sql/reporting-services/extensions/
+                  topicHref: /sql/reporting-services/extensions/reporting-services-extensions
+                - name: 사용자 지정 보고서 항목
+                  tocHref: /sql/reporting-services/custom-report-items/
+                  topicHref: /sql/reporting-services/custom-report-items/custom-report-items
+                - name: 사용자 지정 어셈블리
+                  tocHref: /sql/reporting-services/custom-assemblies/
+                  topicHref: /sql/reporting-services/custom-assemblies/using-custom-assemblies-with-reports
+            - name: Master  Data  Services
+              tocHref: /sql/master-data-services/
+              topicHref: /sql/master-data-services/master-data-services
+            - name: 구성 관리자
+              tocHref: /sql/tools/configuration-manager/
+              topicHref: /sql/tools/configuration-manager/sql-server-configuration-manager-help
+            - name: 개발자 가이드 - Analysis Services
+              tocHref: /sql/analysis-services/dev-guide/
+              topicHref: /sql/analysis-services/dev-guide/analysis-services-dev-guide
+              items:
+                - name: 테이블 형식 모델 프로그래밍
+                  tocHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103
+                  topicHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
+                - name: 스키마 행 집합
+                  tocHref: /sql/analysis-services/schema-rowsets/
+                  topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
+                - name: 스크립팅
+                  tocHref: /sql/analysis-services/scripting/
+                  topicHref: /sql/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla
+                  items:
+                    - name: 개체
+                      tocHref: /sql/analysis-services/scripting/objects/
+                      topicHref: /sql/analysis-services/scripting/objects/objects-assl
+                    - name: 컬렉션
+                      tocHref: /sql/analysis-services/scripting/collections/
+                      topicHref: /sql/analysis-services/scripting/collections/collections-assl
+                    - name: 속성
+                      tocHref: /sql/analysis-services/scripting/properties/
+                      topicHref: /sql/analysis-services/scripting/properties/properties-assl
+                    - name: 데이터 형식
+                      tocHref: /sql/analysis-services/scripting/data-type/
+                      topicHref: /sql/analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl
+                - name: XMLA
+                  tocHref: /sql/analysis-services/xmla/
+                  topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
+            - name: SQL Server 설치
+              tocHref: /sql/database-engine/install-windows/
+              topicHref: /sql/database-engine/install-windows/installation-for-sql-server
+            - name: T-SQL 자습서
+              tocHref: /sql/t-sql/
+              topicHref: /sql/t-sql/tutorial-writing-transact-sql-statements
+            - name: 자습서
+              tocHref: /sql/tutorials/
+              topicHref: /sql/tutorials/tutorials-for-sql-server-2014

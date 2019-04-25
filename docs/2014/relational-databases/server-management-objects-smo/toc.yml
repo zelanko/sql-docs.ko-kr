@@ -112,7 +112,7 @@
       href: tasks/using-messages.md
     - name: 전체 텍스트 검색 구현
       href: tasks/implementing-full-text-search.md
-    - name: 끝점 구현
+    - name: 엔드포인트 구현
       href: tasks/implementing-endpoints.md
     - name: 통계 생성 및 업데이트
       href: tasks/creating-and-updating-statistics.md

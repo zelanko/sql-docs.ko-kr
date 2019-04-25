@@ -1,4 +1,3 @@
-items:
 - name: SQL Server 2014의 새로운 기능
   href: what-s-new-in-sql-server-2016.md
 - name: 고가용성 솔루션 +
@@ -9,9 +8,3 @@ items:
   href: editions-and-components-of-sql-server-2016.md
 - name: 최대 용량 사양
   href: maximum-capacity-specifications-for-sql-server.md
-ms.openlocfilehash: 40bc048a7b8153deaac87152979cd7e1caf2ffb9
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39315280"

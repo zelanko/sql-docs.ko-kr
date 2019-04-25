@@ -1,162 +1,161 @@
-items:
 - name: Integration Services 변환
   href: integration-services-transformations.md
 - name: 집계 변환
   href: aggregate-transformation.md
   items:
-  - name: 집계 변환 편집기(집계 탭)
-    href: ../../aggregate-transformation-editor-aggregations-tab.md
-  - name: 집계 변환 편집기(고급 탭)
-    href: ../../aggregate-transformation-editor-advanced-tab.md
-  - name: 집계 변환을 사용하여 데이터 세트의 값 집계
-    href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+    - name: 집계 변환 편집기(집계 탭)
+      href: ../../aggregate-transformation-editor-aggregations-tab.md
+    - name: 집계 변환 편집기(고급 탭)
+      href: ../../aggregate-transformation-editor-advanced-tab.md
+    - name: 집계 변환을 사용하여 데이터 세트의 값 집계
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
 - name: 감사 변환
   href: audit-transformation.md
   items:
-  - name: 감사 변환 편집기
-    href: ../../audit-transformation-editor.md
+    - name: 감사 변환 편집기
+      href: ../../audit-transformation-editor.md
 - name: 분산 데이터 배포자 변환
   href: balanced-data-distributor-transformation.md
 - name: 문자표 변환
   href: character-map-transformation.md
   items:
-  - name: 문자표 변환 편집기
-    href: ../../character-map-transformation-editor.md
+    - name: 문자표 변환 편집기
+      href: ../../character-map-transformation-editor.md
 - name: 조건부 분할 변환
   href: conditional-split-transformation.md
   items:
-  - name: 조건부 분할 변환 편집기
-    href: ../../conditional-split-transformation-editor.md
-  - name: 조건부 분할 변환을 사용하여 데이터 세트 분할
-    href: split-a-dataset-by-using-the-conditional-split-transformation.md
+    - name: 조건부 분할 변환 편집기
+      href: ../../conditional-split-transformation-editor.md
+    - name: 조건부 분할 변환을 사용하여 데이터 세트 분할
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
 - name: 열 복사 변환
   href: copy-column-transformation.md
   items:
-  - name: 열 복사 변환 편집기
-    href: ../../copy-column-transformation-editor.md
+    - name: 열 복사 변환 편집기
+      href: ../../copy-column-transformation-editor.md
 - name: 데이터 변환
   href: data-conversion-transformation.md
   items:
-  - name: 데이터 변환 편집기
-    href: ../../data-conversion-transformation-editor.md
-  - name: 데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
-    href: convert-data-type-by-using-data-conversion-transformation.md
+    - name: 데이터 변환 편집기
+      href: ../../data-conversion-transformation-editor.md
+    - name: 데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
+      href: convert-data-type-by-using-data-conversion-transformation.md
 - name: 데이터 마이닝 쿼리 변환
   href: data-mining-query-transformation.md
   items:
-  - name: 데이터 마이닝 쿼리 변환 편집기(마이닝 모델 탭)
-    href: ../../data-mining-query-transformation-editor-mining-model-tab.md
-  - name: 데이터 마이닝 쿼리 변환 편집기(쿼리 탭)
-    href: ../../data-mining-query-transformation-editor-query-tab.md
+    - name: 데이터 마이닝 쿼리 변환 편집기(마이닝 모델 탭)
+      href: ../../data-mining-query-transformation-editor-mining-model-tab.md
+    - name: 데이터 마이닝 쿼리 변환 편집기(쿼리 탭)
+      href: ../../data-mining-query-transformation-editor-query-tab.md
 - name: DQS 정리 변환
   href: dqs-cleansing-transformation.md
   items:
-  - name: DQS 정리 변환 편집기 대화 상자
-    href: ../../dqs-cleansing-transformation-editor-dialog-box.md
-  - name: DQS 정리 연결 관리자
-    href: ../../connection-manager/dqs-cleansing-connection-manager.md
-  - name: 데이터 원본에 데이터 품질 규칙 적용
-    href: apply-data-quality-rules-to-data-source.md
-  - name: 복합 도메인에 열 매핑
-    href: map-columns-to-composite-domains.md
+    - name: DQS 정리 변환 편집기 대화 상자
+      href: ../../dqs-cleansing-transformation-editor-dialog-box.md
+    - name: DQS 정리 연결 관리자
+      href: ../../connection-manager/dqs-cleansing-connection-manager.md
+    - name: 데이터 원본에 데이터 품질 규칙 적용
+      href: apply-data-quality-rules-to-data-source.md
+    - name: 복합 도메인에 열 매핑
+      href: map-columns-to-composite-domains.md
 - name: 파생 열 변환
   href: derived-column-transformation.md
   items:
-  - name: 파생 열 변환 편집기
-    href: ../../derived-column-transformation-editor.md
-  - name: 파생 열 변환을 사용하여 열 값 파생
-    href: derive-column-values-by-using-the-derived-column-transformation.md
+    - name: 파생 열 변환 편집기
+      href: ../../derived-column-transformation-editor.md
+    - name: 파생 열 변환을 사용하여 열 값 파생
+      href: derive-column-values-by-using-the-derived-column-transformation.md
 - name: 열 내보내기 변환
   href: export-column-transformation.md
   items:
-  - name: 열 내보내기 변환 편집기(열 페이지)
-    href: ../../export-column-transformation-editor-columns-page.md
-  - name: 열 내보내기 변환 편집기(오류 출력 페이지)
-    href: ../../export-column-transformation-editor-error-output-page.md
+    - name: 열 내보내기 변환 편집기(열 페이지)
+      href: ../../export-column-transformation-editor-columns-page.md
+    - name: 열 내보내기 변환 편집기(오류 출력 페이지)
+      href: ../../export-column-transformation-editor-error-output-page.md
 - name: 유사 항목 그룹화 변환
   href: fuzzy-grouping-transformation.md
   items:
-  - name: 유사 항목 그룹화 변환 편집기(연결 관리자 탭)
-    href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
-  - name: 유사 항목 그룹화 변환 편집기(열 탭)
-    href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
-  - name: 유사 항목 그룹화 변환 편집기(고급 탭)
-    href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
-  - name: 유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
-    href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+    - name: 유사 항목 그룹화 변환 편집기(연결 관리자 탭)
+      href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
+    - name: 유사 항목 그룹화 변환 편집기(열 탭)
+      href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
+    - name: 유사 항목 그룹화 변환 편집기(고급 탭)
+      href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
+    - name: 유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
 - name: 유사 항목 조회 변환
   href: fuzzy-lookup-transformation.md
   items:
-  - name: 유사 항목 조회 변환 편집기(참조 테이블 탭)
-    href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
-  - name: 유사 항목 조회 변환 편집기(열 탭)
-    href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
-  - name: 유사 항목 조회 변환 편집기(고급 탭)
-    href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
+    - name: 유사 항목 조회 변환 편집기(참조 테이블 탭)
+      href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
+    - name: 유사 항목 조회 변환 편집기(열 탭)
+      href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
+    - name: 유사 항목 조회 변환 편집기(고급 탭)
+      href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
 - name: 열 가져오기 변환
   href: import-column-transformation.md
 - name: 조회 변환
   href: lookup-transformation.md
   items:
-  - name: 조회 변환 편집기(연결 페이지)
-    href: ../../lookup-transformation-editor-connection-page.md
-  - name: 조회 변환 편집기(고급 페이지)
-    href: ../../lookup-transformation-editor-advanced-page.md
-  - name: 조회 변환 편집기(열 페이지)
-    href: ../../lookup-transformation-editor-columns-page.md
-  - name: 조회 변환 편집기(일반 페이지)
-    href: ../../lookup-transformation-editor-general-page.md
-  - name: 조회 변환 편집기(오류 출력 페이지)
-    href: ../../lookup-transformation-editor-error-output-page.md
-  - name: 캐시 없음 또는 부분 캐시 모드로 조회 구현
-    href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
-  - name: 캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
-    href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
-  - name: OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
-    href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
-  - name: 조회 변환에 대한 캐시 만들기 및 배포
-    href: create-and-deploy-a-cache-for-the-lookup-transformation.md
-  - name: 관계 만들기
-    href: create-relationships.md
-  - name: 캐시 변환
-    href: cache-transform.md
-  - name: 캐시 연결 관리자
-    href: ../../connection-manager/cache-connection-manager.md
-  - name: 캐시 연결 관리자 편집기
-    href: ../../cache-connection-manager-editor.md
-  - name: 캐시 변환 편집기(연결 관리자 페이지)
-    href: ../../cache-transformation-editor-connection-manager-page.md
-  - name: 캐시 변환 편집기(매핑 페이지)
-    href: ../../cache-transformation-editor-mappings-page.md
+    - name: 조회 변환 편집기(연결 페이지)
+      href: ../../lookup-transformation-editor-connection-page.md
+    - name: 조회 변환 편집기(고급 페이지)
+      href: ../../lookup-transformation-editor-advanced-page.md
+    - name: 조회 변환 편집기(열 페이지)
+      href: ../../lookup-transformation-editor-columns-page.md
+    - name: 조회 변환 편집기(일반 페이지)
+      href: ../../lookup-transformation-editor-general-page.md
+    - name: 조회 변환 편집기(오류 출력 페이지)
+      href: ../../lookup-transformation-editor-error-output-page.md
+    - name: 캐시 없음 또는 부분 캐시 모드로 조회 구현
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: 캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: 조회 변환에 대한 캐시 만들기 및 배포
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: 관계 만들기
+      href: create-relationships.md
+    - name: 캐시 변환
+      href: cache-transform.md
+    - name: 캐시 연결 관리자
+      href: ../../connection-manager/cache-connection-manager.md
+    - name: 캐시 연결 관리자 편집기
+      href: ../../cache-connection-manager-editor.md
+    - name: 캐시 변환 편집기(연결 관리자 페이지)
+      href: ../../cache-transformation-editor-connection-manager-page.md
+    - name: 캐시 변환 편집기(매핑 페이지)
+      href: ../../cache-transformation-editor-mappings-page.md
 - name: 병합 변환
   href: merge-transformation.md
   items:
-  - name: 병합 변환 편집기
-    href: ../../merge-transformation-editor.md
+    - name: 병합 변환 편집기
+      href: ../../merge-transformation-editor.md
 - name: Merge Join Transformation
   href: merge-join-transformation.md
   items:
-  - name: 병합 조인 변환 편집기
-    href: ../../merge-join-transformation-editor.md
-  - name: 병합 조인 변환을 사용하여 데이터 세트 확장
-    href: extend-a-dataset-by-using-the-merge-join-transformation.md
-  - name: 병합 및 병합 조인 변환을 위한 데이터 정렬
-    href: sort-data-for-the-merge-and-merge-join-transformations.md
+    - name: 병합 조인 변환 편집기
+      href: ../../merge-join-transformation-editor.md
+    - name: 병합 조인 변환을 사용하여 데이터 세트 확장
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: 병합 및 병합 조인 변환을 위한 데이터 정렬
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
 - name: 멀티캐스트 변환
   href: multicast-transformation.md
   items:
-  - name: 멀티캐스트 변환 편집기
-    href: ../../multicast-transformation-editor.md
+    - name: 멀티캐스트 변환 편집기
+      href: ../../multicast-transformation-editor.md
 - name: OLE DB 명령 변환
   href: ole-db-command-transformation.md
   items:
-  - name: OLE DB 명령 변환 구성
-    href: ../../configure-the-ole-db-command-transformation.md
+    - name: OLE DB 명령 변환 구성
+      href: ../../configure-the-ole-db-command-transformation.md
 - name: 비율 샘플링 변환
   href: percentage-sampling-transformation.md
   items:
-  - name: 비율 샘플링 변환 편집기
-    href: ../../percentage-sampling-transformation-editor.md
+    - name: 비율 샘플링 변환 편집기
+      href: ../../percentage-sampling-transformation-editor.md
 - name: 피벗 변환
   href: pivot-transformation.md
 - name: 행 개수 변환
@@ -164,84 +163,78 @@ items:
 - name: 행 샘플링 변환
   href: row-sampling-transformation.md
   items:
-  - name: 행 샘플링 변환 편집기(샘플링 페이지)
-    href: ../../row-sampling-transformation-editor-sampling-page.md
+    - name: 행 샘플링 변환 편집기(샘플링 페이지)
+      href: ../../row-sampling-transformation-editor-sampling-page.md
 - name: 스크립트 구성 요소
   href: script-component.md
   items:
-  - name: 스크립트 변환 편집기(입력 열 페이지)
-    href: ../../script-transformation-editor-input-columns-page.md
-  - name: 스크립트 변환 편집기(입/출력 페이지)
-    href: ../../script-transformation-editor-inputs-and-outputs-page.md
-  - name: 스크립트 변환 편집기(스크립트 페이지)
-    href: ../../script-transformation-editor-script-page.md
-  - name: 스크립트 변환 편집기(연결 관리자 페이지)
-    href: ../../script-transformation-editor-connection-managers-page.md
-  - name: 스크립트 구성 요소 유형 선택
-    href: ../../select-script-component-type.md
+    - name: 스크립트 변환 편집기(입력 열 페이지)
+      href: ../../script-transformation-editor-input-columns-page.md
+    - name: 스크립트 변환 편집기(입/출력 페이지)
+      href: ../../script-transformation-editor-inputs-and-outputs-page.md
+    - name: 스크립트 변환 편집기(스크립트 페이지)
+      href: ../../script-transformation-editor-script-page.md
+    - name: 스크립트 변환 편집기(연결 관리자 페이지)
+      href: ../../script-transformation-editor-connection-managers-page.md
+    - name: 스크립트 구성 요소 유형 선택
+      href: ../../select-script-component-type.md
 - name: 느린 변경 차원 변환
   href: slowly-changing-dimension-transformation.md
   items:
-  - name: 느린 변경 차원 마법사를 사용하여 출력 구성
-    href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
-  - name: 느린 변경 차원 마법사 F1 도움말
-    href: slowly-changing-dimension-wizard-f1-help.md
-  - name: 느린 변경 차원 마법사 시작
-    href: welcome-to-the-slowly-changing-dimension-wizard.md
-  - name: 차원 테이블 및 키 선택(느린 변경 차원 마법사)
-    href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
-  - name: 느린 변경 차원 열(느린 변경 차원 마법사)
-    href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
-  - name: 고정 및 변경 특성 옵션(느린 변경 차원 마법사)
-    href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
-  - name: 기록 특성 옵션(느린 변경 차원 마법사)
-    href: historical-attribute-options-slowly-changing-dimension-wizard.md
-  - name: 유추 차원 멤버(느린 변경 차원 마법사)
-    href: inferred-dimension-members-slowly-changing-dimension-wizard.md
-  - name: 느린 변경 차원 마법사 완료
-    href: finish-the-slowly-changing-dimension-wizard.md
+    - name: 느린 변경 차원 마법사를 사용하여 출력 구성
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: 느린 변경 차원 마법사 F1 도움말
+      href: slowly-changing-dimension-wizard-f1-help.md
+    - name: 느린 변경 차원 마법사 시작
+      href: welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: 차원 테이블 및 키 선택(느린 변경 차원 마법사)
+      href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: 느린 변경 차원 열(느린 변경 차원 마법사)
+      href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: 고정 및 변경 특성 옵션(느린 변경 차원 마법사)
+      href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 기록 특성 옵션(느린 변경 차원 마법사)
+      href: historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 유추 차원 멤버(느린 변경 차원 마법사)
+      href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: 느린 변경 차원 마법사 완료
+      href: finish-the-slowly-changing-dimension-wizard.md
 - name: 정렬 변환
   href: sort-transformation.md
   items:
-  - name: 정렬 변환 편집기
-    href: ../../sort-transformation-editor.md
+    - name: 정렬 변환 편집기
+      href: ../../sort-transformation-editor.md
 - name: 용어 추출 변환
   href: term-extraction-transformation.md
   items:
-  - name: 용어 추출 변환 편집기(용어 추출 탭)
-    href: ../../term-extraction-transformation-editor-term-extraction-tab.md
-  - name: 용어 추출 변환 편집기(제외 탭)
-    href: ../../term-extraction-transformation-editor-exclusion-tab.md
-  - name: 용어 추출 변환 편집기(고급 탭)
-    href: ../../term-extraction-transformation-editor-advanced-tab.md
+    - name: 용어 추출 변환 편집기(용어 추출 탭)
+      href: ../../term-extraction-transformation-editor-term-extraction-tab.md
+    - name: 용어 추출 변환 편집기(제외 탭)
+      href: ../../term-extraction-transformation-editor-exclusion-tab.md
+    - name: 용어 추출 변환 편집기(고급 탭)
+      href: ../../term-extraction-transformation-editor-advanced-tab.md
 - name: 용어 조회 변환
   href: term-lookup-transformation.md
   items:
-  - name: 용어 조회 변환 편집기(참조 테이블 탭)
-    href: ../../term-lookup-transformation-editor-reference-table-tab.md
-  - name: 용어 조회 변환 편집기(용어 조회 탭)
-    href: ../../term-lookup-transformation-editor-term-lookup-tab.md
-  - name: 용어 조회 변환 편집기(고급 탭)
-    href: ../../term-lookup-transformation-editor-advanced-tab.md
+    - name: 용어 조회 변환 편집기(참조 테이블 탭)
+      href: ../../term-lookup-transformation-editor-reference-table-tab.md
+    - name: 용어 조회 변환 편집기(용어 조회 탭)
+      href: ../../term-lookup-transformation-editor-term-lookup-tab.md
+    - name: 용어 조회 변환 편집기(고급 탭)
+      href: ../../term-lookup-transformation-editor-advanced-tab.md
 - name: UNION ALL 변환
   href: union-all-transformation.md
   items:
-  - name: UNION ALL 변환 편집기
-    href: ../../union-all-transformation-editor.md
-  - name: UNION ALL 변환을 사용하여 데이터 병합
-    href: merge-data-by-using-the-union-all-transformation.md
+    - name: UNION ALL 변환 편집기
+      href: ../../union-all-transformation-editor.md
+    - name: UNION ALL 변환을 사용하여 데이터 병합
+      href: merge-data-by-using-the-union-all-transformation.md
 - name: 피벗 해제 변환
   href: unpivot-transformation.md
   items:
-  - name: 피벗 해제 변환 편집기
-    href: ../../unpivot-transformation-editor.md
+    - name: 피벗 해제 변환 편집기
+      href: ../../unpivot-transformation-editor.md
 - name: 변환을 사용하여 데이터 변환
   href: transform-data-with-transformations.md
 - name: Transformation Custom Properties
   href: transformation-custom-properties.md
-ms.openlocfilehash: 0788828cb196bd0c0b81f5088936ac6eda9d6ec0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39315121"

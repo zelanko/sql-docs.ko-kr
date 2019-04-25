@@ -1,43 +1,36 @@
-items:
 - name: 명령 프롬프트 유틸리티 참조(데이터베이스 엔진)
   href: command-prompt-utility-reference-database-engine.md
   items:
-  - name: bcp 유틸리티
-    href: bcp-utility.md
-  - name: dta 유틸리티 +
-    href: dta/dta-utility.md
-  - name: SqlLocalDB 유틸리티
-    href: sqllocaldb-utility.md
-  - name: osql 유틸리티
-    href: osql-utility.md
-  - name: 프로파일러 유틸리티
-    href: profiler-utility.md
-  - name: sqlagent90 애플리케이션
-    href: sqlagent90-application.md
-  - name: sqlcmd Utility
-    href: sqlcmd-utility.md
-  - name: SQLdiag Utility
-    href: sqldiag-utility.md
-  - name: sqlmaint 유틸리티
-    href: sqlmaint-utility.md
-  - name: sqllogship 애플리케이션
-    href: sqllogship-application.md
-  - name: sqlps 유틸리티
-    href: sqlps-utility.md
-  - name: sqlservr 애플리케이션
-    href: sqlservr-application.md
-  - name: ssbdiagnose 유틸리티(Service Broker)
-    href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
-  - name: Ssms 유틸리티
-    href: ../ssms/ssms-utility.md
-    items:
-    - name: SQL Server Management Studio 바로 가기 키
-      href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-  - name: tablediff 유틸리티
-    href: tablediff-utility.md
-ms.openlocfilehash: 94810d27dfaf09a37e96da31c1666d36e4ece7d8
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39315040"
+    - name: bcp 유틸리티
+      href: bcp-utility.md
+    - name: dta 유틸리티 +
+      href: dta/dta-utility.md
+    - name: SqlLocalDB 유틸리티
+      href: sqllocaldb-utility.md
+    - name: osql 유틸리티
+      href: osql-utility.md
+    - name: 프로파일러 유틸리티
+      href: profiler-utility.md
+    - name: sqlagent90 애플리케이션
+      href: sqlagent90-application.md
+    - name: sqlcmd Utility
+      href: sqlcmd-utility.md
+    - name: SQLdiag Utility
+      href: sqldiag-utility.md
+    - name: sqlmaint 유틸리티
+      href: sqlmaint-utility.md
+    - name: sqllogship 애플리케이션
+      href: sqllogship-application.md
+    - name: sqlps 유틸리티
+      href: sqlps-utility.md
+    - name: sqlservr 애플리케이션
+      href: sqlservr-application.md
+    - name: ssbdiagnose 유틸리티(Service Broker)
+      href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
+    - name: Ssms 유틸리티
+      href: ../ssms/ssms-utility.md
+      items:
+        - name: SQL Server Management Studio 바로 가기 키
+          href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+    - name: tablediff 유틸리티
+      href: tablediff-utility.md

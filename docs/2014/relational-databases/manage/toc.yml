@@ -1,4 +1,3 @@
-items:
 - name: SQL Server 유틸리티 기능 및 태스크
   href: sql-server-utility-features-and-tasks.md
 - name: 같은 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 집합을 실행하기 위한 고려 사항
@@ -38,17 +37,11 @@ items:
 - name: 유틸리티 탐색기 F1 도움말
   href: utility-explorer-f1-help.md
   items:
-  - name: 유틸리티 대시보드(SQL Server 유틸리티)
-    href: ../../database-engine/utility-dashboard-sql-server-utility.md
-  - name: 배포된 데이터 계층 애플리케이션 세부 정보(SQL Server 유틸리티)
-    href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
-  - name: 관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
-    href: ../../database-engine/managed-instance-details-sql-server-utility.md
-  - name: 유틸리티 관리(SQL Server 유틸리티)
-    href: ../../database-engine/utility-administration-sql-server-utility.md
-ms.openlocfilehash: 546a342dc06d466dc1657cdfd931080c14bdcfea
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39314640"
+    - name: 유틸리티 대시보드(SQL Server 유틸리티)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: 배포된 데이터 계층 애플리케이션 세부 정보(SQL Server 유틸리티)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: 관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: 유틸리티 관리(SQL Server 유틸리티)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

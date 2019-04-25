@@ -80,7 +80,7 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: 사용자 지정 구성이 포함된 XML 입력 파일 예제(DTA)
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: '자습서: 데이터베이스 엔진 튜닝 관리자'
+- name: '자습서: Database Engine Tuning Advisor'
   href: tutorial-database-engine-tuning-advisor.md
   items:
     - name: '1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색'

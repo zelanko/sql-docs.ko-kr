@@ -33,8 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: 링크된 보고서 만들기
   href: create-a-linked-report.md
-- name: 클릭 광고 보고서(SSRS)
-  href: clickthrough-reports-ssrs.md
 - name: SharePoint 웹 파트를 사용하여 기본 모드 보고서 보기 및 탐색(SSRS)
   href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: 보고서 F1 도움말
