@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d14b1bf3200802e9fab359ba3ede9fa295911fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760931"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Distributed Replay 설치 복구
   Distributed Replay 구성 요소(컨트롤러 또는 서비스)를 복구하면 다음 작업이 수행됩니다.  

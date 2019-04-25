@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516512"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한(Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817922"
   
  계층 멤버 권한은 할당 대상 모델 버전과 해당 버전의 모든 이후 복사본에 적용되며, 할당 대상 버전보다 이전 버전에는 적용되지 않습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|멤버가 표시됩니다.<br /><br /> <br /><br /> 참고: **루트**에 **읽기**권한만 할당하면 **루트** 아래의 멤버는 읽기 전용이 되지만 명시적 계층 및 컬렉션에서는 사용자가 멤버를 **루트**로 이동하고 **루트**에 새 멤버를 추가할 수 있습니다.|  
 |**만들기**|계층 멤버 권한에서는 만들기 권한이 제공되지 않습니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "52817922"
 ## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [향상된 보안 기능](https://go.microsoft.com/fwlink/p/?LinkId=615376)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

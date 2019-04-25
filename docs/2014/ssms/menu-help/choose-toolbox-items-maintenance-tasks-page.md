@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470050"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>도구 상자 항목 선택(유지 관리 태스크 페이지)
   **도구 상자 사용자 지정** 대화 상자의 이 탭에는 컴퓨터에 등록되어 있는 모든 유지 관리 태스크 구성 요소의 목록이 표시되며 이 탭을 사용하여 도구 상자에 표시되는 구성 요소를 변경할 수 있습니다. **도구 상자 사용자 지정** 대화 상자는 **도구** 메뉴에서 열 수 있습니다. 구성 요소 목록을 정렬하려면 열 머리글 중 하나를 선택합니다.  

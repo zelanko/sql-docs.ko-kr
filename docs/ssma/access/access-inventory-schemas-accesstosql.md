@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759700"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 인벤토리 스키마 (AccessToSQL)
 다음 섹션에 액세스 하는 스키마를 내보낼 때 SSMA에서 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "47653728"
 |**DatabaseId**|**uniqueidentifier**|각 데이터베이스를 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블에 대 한 기본 키 이기도합니다.|  
 |**DatabaseName**|**nvarchar(4000)**|Access 데이터베이스의 이름입니다.|  
 |**ExportTime**|**datetime**|날짜 및 SSMA 하 여이 메타 데이터를 만든 시간입니다.|  
-|**파일 경로**|**nvarchar(4000)**|Access 데이터베이스의 전체 경로 및 파일 이름입니다.|  
+|**FilePath**|**nvarchar(4000)**|Access 데이터베이스의 전체 경로 및 파일 이름입니다.|  
 |**FileSize**|**bigint**|기술 자료에서 Access 데이터베이스의 크기입니다.|  
 |**FileOwner**|**nvarchar(4000)**|Access 데이터베이스의 소유자로 지정 된 Windows 계정입니다.|  
 |**DateCreated**|**datetime**|날짜 및 Access 데이터베이스를 만든 시간입니다.|  
@@ -98,7 +98,7 @@ ms.locfileid: "47653728"
 |**DataType**|**nvarchar(4000)**|데이터 액세스 등의 입력 열 **텍스트** 하거나 **긴**합니다.|  
 |**IsAutoIncrement**|**bit**|정수 값 열이 자동으로 증가 하는 경우를 지정 합니다. 값이 1 이면 정수는 자동으로 증가 합니다.|  
 |**Ordinal**|**smallint**|0부터 테이블의 열 순서입니다.|  
-|**DefaultValue**|**nvarchar(4000)**|열의 기본값입니다.|  
+|**DefaultValue**|**nvarchar(4000)**|열에 대 한 기본 값입니다.|  
 |**ValidationRule**|**nvarchar(4000)**|열에서 업데이트 또는 추가할 데이터의 유효성을 검사 하는 데 사용 되는 규칙입니다.|  
   
 ## <a name="indexes"></a>인덱스  
@@ -144,7 +144,7 @@ ms.locfileid: "47653728"
 |**QueryType**|**nvarchar(4000)**|와 같은 쿼리 유형을 지정 **선택** 하거나 **SetOperation**합니다.|  
 |**ExternalSource**|**nvarchar(4000)**|쿼리가 외부 데이터 소스를 참조 하는 경우 쿼리에서 사용 되는 연결 문자열입니다.|  
   
-## <a name="forms"></a>폼  
+## <a name="forms"></a>양식  
 형식 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryForms** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
 |열 이름|데이터 형식|Description|  

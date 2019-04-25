@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50da9f42927747d0d901e24a6c1018cc7ab3f3f6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523322"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset, SourceRecordset 속성(RDS)
 나타냅니다 합니다 **레코드 집합** 사용자 지정 비즈니스 개체에서 반환 된 개체입니다.  
   
- **적용 대상:** [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **적용 대상:** [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
@@ -41,7 +41,7 @@ Recordset = DataControl.Recordset
  *DataControl*  
  나타내는 개체 변수는 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
- *레코드 집합*  
+ *Recordset*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

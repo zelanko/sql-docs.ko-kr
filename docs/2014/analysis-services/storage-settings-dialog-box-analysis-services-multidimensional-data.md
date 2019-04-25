@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758482"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>스토리지 설정 대화 상자(Analysis Services - 다차원 데이터)
   **의** 저장소 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브, 측정값 그룹 또는 파티션에 대해 자동 관리 캐싱, 저장소 및 알림 설정을 지정할 수 있습니다. 다음을 수행하여 **에서** 스토리지 설정 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 표시할 수 있습니다.  

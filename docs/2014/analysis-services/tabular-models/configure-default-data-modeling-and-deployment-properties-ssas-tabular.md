@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 337a90ea5068e405a97e44856be467ea478e5759
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757578"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 각각의 새로운 테이블 형식 모델 프로젝트에 대해 미리 정의될 수 있는 기본 호환성 수준, 배포 및 작업 영역 데이터베이스 속성 설정을 구성하는 방법에 대해 설명합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
@@ -72,8 +72,8 @@ ms.locfileid: "48189189"
 >  기본 모델 속성을 변경해도 변경 전에 만들어진 기존 모델의 속성은 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
- [모델 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
+ [프로젝트 속성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)   
+ [모델 속성&#40;SSAS 테이블 형식&#41;](model-properties-ssas-tabular.md)   
  [호환성 수준 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761148"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 제약 조건 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UNIQUE 제약 조건을 삭제할 수 있습니다. UNIQUE 제약 조건을 삭제하면 제약 조건 식에 포함된 열 또는 열 조합에 입력한 값의 고유성 요구 사항이 제거되고 해당 고유 인덱스가 삭제됩니다.  

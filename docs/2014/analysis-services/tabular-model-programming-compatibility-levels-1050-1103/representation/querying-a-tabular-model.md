@@ -1,23 +1,23 @@
 ---
 title: 테이블 형식 모델 쿼리 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/07/2018
+ms.prod: sql
 ms.technology: analysis-services
+ms.custom: tabular-models
 ms.topic: reference
-ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 61b6f366843b326a8983c27c3d5ee945604756f0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757739"
 ---
 # <a name="querying-a-tabular-model"></a>테이블 형식 모델 쿼리
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   개발자는 테이블 형식 데이터베이스에서 데이터를 검색할 의미 테이블 형식 모델 쿼리 이 목표를 위해 두 가지 옵션이 있습니다: dax에서 테이블 쿼리를 사용 하거나 MDX 및 검색 데이터를 큐브에서 튀어 사용 합니다. 그러나 테이블 형식 모델의 기본 모드에 따라 DAX 테이블 쿼리만 사용하도록 제한될 수 있습니다. DirectQuery 모드를 사용하려면 DAX 테이블 쿼리를 사용해야 합니다.  
   
 ## <a name="querying-with-adomdnet"></a>ADOMD.Net을 사용하여 쿼리  

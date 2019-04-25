@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760764"
 ---
 # <a name="descriptor-handles"></a>설명자 핸들
 A *설명자* 응용 프로그램 또는 드라이버에 표시 되는 SQL 문의 매개 변수 또는 결과 집합의 열을 설명 하는 메타 데이터의 컬렉션 (라고도 합니다 *구현*). 따라서 설명자를 네 가지 역할 중 하나를 작성할 수 있습니다.  

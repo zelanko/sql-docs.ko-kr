@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509825"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VC + +)
 에 있는 모든 심리학 책의 책 종류를 변경 하는이 예제는 ***타이틀*** 데이터베이스의 테이블입니다. 후는 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 방법에 대 한 모든 변경 내용을 격리 하는 트랜잭션을 시작 합니다 ***제목*** 테이블을 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드 변경 내용을 저장 합니다. 사용할 수는 [롤백](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 사용 하 여 저장 된 변경 내용을 취소 하는 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757748"
 ---
 # <a name="perspective-representation-tabular"></a>큐브 뷰 표현(테이블 형식)
   큐브 뷰는 클라이언트 응용 프로그램을 위해 모델을 더 작은 부분으로 간소화하거나 집중시키는 메커니즘입니다.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26981ad1cc1cfbf9b3a69cca49f9529c0b590b61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760822"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>계층 메서드를 사용하여 계층적 테이블 쿼리
   이제 HumanResources.EmployeeOrg 테이블을 완전히 채웠으므로 이 태스크에서는 일부 계층 메서드를 사용하여 계층을 쿼리하는 방법을 보여 줍니다.  

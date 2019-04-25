@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757898"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Excel용 테이블 분석 도구
   데이터 마이닝 도구를 **분석** 도구 모음에는 데이터 마이닝 시작 하기 가장 쉬운 방법입니다. 각 도구는 자동으로 배포 및 데이터 유형을 분석하고 결과가 유효하다는 것을 증명하기 위한 매개 변수를 설정합니다. 알고리즘을 선택하거나 복잡한 매개 변수를 구성할 필요가 없습니다.  

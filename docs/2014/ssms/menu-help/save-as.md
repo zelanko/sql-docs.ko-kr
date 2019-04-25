@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510322"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
   이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 클릭 **저장할**  *\<파일 >* **으로** 에 **파일** 메뉴 (여기서  *\<파일 >* 현재 항목의 이름)에 코드 편집기에서 ALT + F를 누르십시오.  

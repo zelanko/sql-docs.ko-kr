@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9428a6462efac8643fcbb5343cb5cb3c8343aff9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629881"
 ---
 # <a name="validation-statuses-master-data-services"></a>유효성 검사 상태(Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52769755"
 
   **버전 유효성 검사** 페이지의 **버전 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  
   
-|상태|설명|  
+|상태|Description|  
 |------------|-----------------|  
 |유효성 검사 대기 중|유효성 검사를 받기 위해 대기 중인 새로 만든 모든 멤버입니다.|  
 |유효성 재검사 대기 중|유효성 검사를 받기 위해 대기 중인 기존 멤버입니다.|  
@@ -32,7 +32,7 @@ ms.locfileid: "52769755"
 |유효성 검사 실패|비즈니스 규칙 유효성 검사에 실패한 멤버입니다.|  
 |종속 멤버 유효성 재검사 대기 중|자식 멤버와 함께 유효성 검사를 받기 위해 대기 중인 업데이트된 통합 멤버입니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   

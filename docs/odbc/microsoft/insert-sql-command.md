@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471178"
 ---
 # <a name="insert---sql-command"></a>INSERT - SQL 명령
 지정 된 필드 값이 포함 된 테이블의 끝에 레코드를 추가 합니다.  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  지정한 테이블이 열려 있으면 INSERT 테이블에 새 레코드를 추가 합니다. 레코드 추가 된; 후 현재 작업 영역 이외의 테이블 작업 영역에 열려 있으면 선택 하지 않은 현재 작업 영역 선택 되어 있습니다.  
   
- [( *fname1*[합니다 *fname2*[,...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  새 레코드에서 필드의 이름을 지정 된 값이 삽입 되는에 있습니다.  
   
- 값 ( *eExpression1*[합니다 *eExpression2*[,...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  새 레코드를 삽입 하 여 필드 값을 지정 합니다. 필드 이름을 생략 하면 테이블 구조에 정의 된 순서 대로 필드 값을 지정 해야 합니다.  
   
 ## <a name="remarks"></a>Remarks  

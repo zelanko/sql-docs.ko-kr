@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509861"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>마이닝 구조 태스크 및 방법
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "34015790"
   
 -   [마이닝 구조에서 열 제거](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [마이닝 구조에 중첩된 테이블 추가](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [마이닝 구조에 중첩 테이블 추가](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
--   [마이닝 구조 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [마이닝 구조의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [마이닝 구조에 사용 되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [마이닝 구조에 사용되는 데이터 원본 뷰 편집](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [마이닝 구조 처리](../../analysis-services/data-mining/process-a-mining-structure.md)  
   
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [디자인 및 구현 방법 도움말 항목(Analysis Services - 데이터 마이닝)](https://msdn.microsoft.com/library/bb522452.aspx)  
   
   

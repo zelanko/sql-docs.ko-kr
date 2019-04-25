@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757972"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View 보고서의 보고 속성 구성
   이 추가 단원에서는 Adventure Works Internet Sales Model 프로젝트에 대한 보고 속성을 설정해 봅니다. 보고 속성을 사용하면 최종 사용자가 Power View에서 모델 데이터를 쉽게 선택하고 표시할 수 있습니다. 또한 특정 열과 테이블을 숨기고 차트에서 사용할 새 데이터를 만드는 속성을 설정합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "53363465"
   
  이 단원에서는 Power View 보고서를 만들고 사용하는 방법에 대해 설명하지는 않습니다. 이 단원의 목적은 테이블 형식 모델 작성자에게 이러한 속성 및 Power View에서 모델 데이터가 표시되는 방식에 영향을 주는 설정에 대한 소개를 제공하기 위한 것입니다. Power View 보고서 작성 하는 방법에 대 한 자세한 내용은를 참조 하세요. [자습서: Power View에서 예제 보고서를 만드는](https://go.microsoft.com/fwlink/?LinkId=221204)합니다.  
   
- 이 단원에 소요되는 예상 시간: **30 분**  
+ 예상이 단원을 완료 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 추가 단원은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 태스크를 수행하려면 이전 단원을 모두 완료해야 합니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "53363465"
      **Date**  
   
     > [!NOTE]  
-    >  7단원: 날짜 테이블로 표시에서 날짜 테이블로 표시 설정을 사용하여 날짜 테이블을 모델 날짜 테이블로 선택하고 날짜 테이블의 날짜 열을 고유 식별자로 사용할 열로 선택했으므로 날짜 열의 행 식별자 속성이 자동으로 True로 설정되며 변경할 수 없습니다. DAX 수식에서 시간 인텔리전스 함수를 사용할 때는 날짜 테이블을 지정해야 합니다. 이 모델에서는 시간 인텔리전스 함수를 사용하여 이전 분기 및 현재 분기 등 다양한 기간에 대해 KPI에서도 사용할 판매 데이터를 측정하는 여러 측정값을 만들었습니다. 날짜 테이블 지정 방법에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정&#40;SSAS 테이블 형식&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)을 참조하세요.  
+    >  날짜 테이블을 모델 날짜 테이블 설정으로 표시를 사용 하 여 테이블을 날짜 선택, 때문에 7 단원: 날짜 열의 행 식별자 속성을 고유 식별자로 사용할 날짜 테이블로 표시 및 열으로 날짜 테이블의 날짜 열을 True로 자동 설정 됩니다 및 변경할 수 없습니다. DAX 수식에서 시간 인텔리전스 함수를 사용할 때는 날짜 테이블을 지정해야 합니다. 이 모델에서는 시간 인텔리전스 함수를 사용하여 이전 분기 및 현재 분기 등 다양한 기간에 대해 KPI에서도 사용할 판매 데이터를 측정하는 여러 측정값을 만들었습니다. 날짜 테이블 지정 방법에 대한 자세한 내용은 SQL Server 온라인 설명서에서 [시간 인텔리전스에 사용할 날짜 테이블로 표시 지정&#40;SSAS 테이블 형식&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)을 참조하세요.  
   
     |Column|속성|값|  
     |------------|--------------|-----------|  

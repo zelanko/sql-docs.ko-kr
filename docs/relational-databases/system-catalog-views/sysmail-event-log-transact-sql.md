@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759951"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 메일 시스템이 반환한 각 Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지당 한 개의 행을 포함합니다. 여기서 메시지란 전자 메일 메시지가 아닌 오류 메시지와 같은 메시지를 의미합니다. 구성 된 **로깅 수준** 를 사용 하 여 매개 변수를 **시스템 매개 변수 구성** 데이터베이스 메일 구성 마법사의 대화 상자 또는 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)저장 프로시저에서 반환 되는 메시지를 결정 합니다.  
+  데이터베이스 메일 시스템이 반환한 각 Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지당 한 개의 행을 포함합니다. (이 컨텍스트에서 메시지는 전자 메일 메시지가 아닌 오류 메시지와 같은 메시지를 나타냅니다.) 구성 된 **로깅 수준** 를 사용 하 여 매개 변수를 **시스템 매개 변수 구성** 데이터베이스 메일 구성 마법사의 대화 상자 또는 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)저장 프로시저에서 반환 되는 메시지를 결정 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

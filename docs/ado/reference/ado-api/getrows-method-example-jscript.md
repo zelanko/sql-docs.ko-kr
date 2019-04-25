@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630665"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 메서드 예제(JScript)
 이 예제에서는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 모든 행을 검색 하는 메서드는 *Custiomers* 에서 테이블을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 원하는 행 수보다 적은 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **GetRowsJS.asp**합니다.  

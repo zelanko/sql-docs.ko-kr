@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472285"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
 직접 실행 모드에서는 레코드 집합을 사용 하 여 처리 하는 경우 동시성 문제가 발생할 가능성이 낮아집니다 있습니다. 반면에 응용 프로그램 일괄 업데이트 모드를 사용 하는 경우 있을 잘 변경 동일한 레코드를 편집 하는 다른 사용자가 수행한 변경 내용을 저장 하기 전에 하나의 사용자 레코드를 변경 됩니다. 이러한 경우 응용 프로그램을 정상적으로 충돌을 처리 해야 합니다. 마지막으로 서버에 업데이트를 보내는 사용자 "알고리즘이 적용 됩니다." 내리 세요 수도 있습니다. 또는 가장 최근 사용자가 결정 업데이트 충돌 하는 두 값 중에서 선택 사항이 제공 하 여 보다 우선적으로 적용 해야 하는 것이 좋습니다.  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759908"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL)를 사용 하 여 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 사용 하면 Access 데이터베이스 개체를 신속 하 게 변환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 개체에 결과 개체를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB에 대 한 액세스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 필요에 따라 연결할 수 있습니다도 테이블에 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL DB를 사용 하 여 기존 액세스 프런트 엔드 응용 프로그램을 사용 하 여 계속할 수 있도록 테이블 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
@@ -88,7 +88,7 @@ SSMA을 찾아서 액세스 작업을 수행 합니다. 사용할 수 있는 두
 자세한 내용은 [SQL Server로 변환 된 데이터베이스 개체 로드](loading-converted-database-objects-into-sql-server-accesstosql.md)합니다.  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 액세스 메타 데이터 탐색기에서 테이블을 선택 하면 4 개의 탭이 표시: **테이블**를 **형식 매핑**하십시오 **속성**, 및 **데이터** . 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시: **테이블**를 **SQL**, 및 **데이터**입니다.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 액세스 메타 데이터 탐색기에서 테이블을 선택 하는 경우 4 개의 탭 표시 됩니다. **테이블**, **형식 매핑**합니다 **속성**, 및 **데이터**입니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭이 나타납니다. **테이블**하십시오 **SQL**, 및 **데이터**입니다.  
   
 대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512515"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>동작(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **동작** 탭을 사용하여 선택한 큐브에 대한 드릴스루 작업 및 보고 작업을 포함한 작업을 보고 편집할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48067582"
   
 ## <a name="see-also"></a>관련 항목  
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [도구 모음 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [동작 구성 도우미 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [계산 도구 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

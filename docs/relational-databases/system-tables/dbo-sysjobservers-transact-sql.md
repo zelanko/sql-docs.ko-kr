@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 635c71efaeed6d41a9b9e62ef3e8c79b4e9aae95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470788"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "47607281"
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|작업 ID입니다.|  
 |server_id|**int**|서버 ID입니다.|  
-|last_run_outcome|**tinyint**|작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소|  
-|last_outcome_ 메시지|**nvarchar(1024)**|last_run_outcome 열과 연관된 메시지(있는 경우)입니다.|  
+|last_run_outcome|**tinyint**|작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = Fail<br /><br /> **1** = 성공<br /><br /> **3** = 취소|  
+|last_outcome_ message|**nvarchar(1024)**|last_run_outcome 열과 연관된 메시지(있는 경우)입니다.|  
 |last_run_date|**int**|작업을 마지막으로 실행한 날짜입니다.|  
 |last_run_time|**int**|작업을 마지막으로 실행한 시간입니다.|  
 |last_run_duration|**int**|작업의 실행 시간(시, 분, 초)입니다. 수식을 사용 하 여 계산 합니다. (*시간*\*10000) + (*분*\*100) + *초*합니다.|  

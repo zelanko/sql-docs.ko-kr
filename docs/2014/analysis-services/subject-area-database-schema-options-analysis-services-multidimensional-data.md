@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e608f6ca210f1d86a58b469145a9840f7c25ba2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758492"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>주제 영역 데이터베이스 스키마 옵션(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **주제 영역 데이터베이스 스키마 옵션** 페이지를 사용하여 스키마 생성 방법을 제어하고 데이터 유지 방법을 정의할 수 있습니다.  

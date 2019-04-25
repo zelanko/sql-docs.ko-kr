@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757622"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
   테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 애플리케이션에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  

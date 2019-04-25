@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ef5188934628589751fe92d1839da0efb265766
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62522223"
 ---
 # <a name="supplying-web-service-method-arguments"></a>웹 서비스 메서드 인수 제공
   보고서 서버 웹 서비스 메서드는 HTTP를 통해 SOAP을 사용하여 주어진 URL에 있는 서비스에 요청을 보냅니다. 서비스에서는 요청을 수신하고 처리한 다음 응답을 반환합니다. 이러한 요청과 응답은 XML 문서 형식입니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509975"
 ---
 # <a name="mining-structure-columns"></a>마이닝 구조 열
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,19 +27,19 @@ ms.locfileid: "34015160"
   
  마이닝 구조 열의 정의에는 다음 정보가 포함되어야 합니다.  
   
--   **ID**: 열의 고유 이름이며 이름과 동일한 경우가 많습니다. 마이닝 구조를 만든 후 이름은 변경할 수 있지만 ID는 변경할 수 없습니다.  
+-   **ID**: 이름으로 종종 동일한 열의 고유 이름입니다. 마이닝 구조를 만든 후 이름은 변경할 수 있지만 ID는 변경할 수 없습니다.  
   
--   **이름**: 열의 이름 또는 별칭입니다.  
+-   **이름**: 이름 또는 열에 대 한 별칭입니다.  
   
--   **콘텐츠**: 데이터가 불연속형인지 연속형인지 여부를 설명하는 열거형입니다.  
+-   **콘텐츠**: 데이터가 불연속 또는 연속 인지 여부를 설명 하는 열거형입니다.  
   
 -   **형식**: 일반 데이터 형식을 나타내는 열거형입니다.  
   
--   **분포**: 예상 분포 값을 설명하는 열거형입니다. 열이 연속인 경우 분포가 포함됩니다.  
+-   **배포**: 값의 예상된 분포를 설명 하는 열거형입니다. 열이 연속인 경우 분포가 포함됩니다.  
   
--   **모델링 플래그**: 누락 값 등을 처리하는 방법을 나타내는 열거형입니다. 마이닝 모델에 대해 모델링 플래그를 정의할 수도 있지만 모델 플래그는 구조 열에 사용되는 플래그와 다릅니다.  
+-   **모델링 플래그**: 누락 값을 가져오고 처리 하는 방법을 나타내는 열거형입니다. 마이닝 모델에 대해 모델링 플래그를 정의할 수도 있지만 모델 플래그는 구조 열에 사용되는 플래그와 다릅니다.  
   
--   **바인딩**: 원본 데이터를 지정하는 속성입니다.  
+-   **바인딩**: 원본 데이터를 지정 하는 속성입니다.  
   
  타사 알고리즘은 마이닝 구조 열에 대해 정의할 수 있는 사용자 지정 속성을 포함할 수도 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "34015160"
 |한 마이닝 구조 열을 다른 마이닝 구조 열과 연결하는 데 사용할 수 있는 특수한 유형의 열인 분류된 열에 대해 설명합니다.|[분류된 열&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |마이닝 구조 열을 추가하고 수정하는 방법에 대해 알아봅니다.|[마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)  
   

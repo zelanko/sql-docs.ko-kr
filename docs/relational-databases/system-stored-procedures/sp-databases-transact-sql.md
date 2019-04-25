@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1be4fbfb6ce30443a979fb500954e7aa8fa9779a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507408"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_databases
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. 에 [!INCLUDE[ssDE](../../includes/ssde-md.md)],이 열에 저장 된 데이터베이스 이름을 나타냅니다는 **sys.databases** 카탈로그 뷰.|  
 |**DATABASE_SIZE**|**int**|데이터베이스 크기(KB)입니다.|  
-|**설명**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
+|**REMARKS**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
   
 ## <a name="remarks"></a>Remarks  
  반환된 데이터베이스 이름은 현재 데이터베이스 컨텍스트를 변경하기 위해 USE 문에서 매개 변수로 사용할 수 있습니다.  

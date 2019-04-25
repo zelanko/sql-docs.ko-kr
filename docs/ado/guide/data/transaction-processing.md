@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472192"
 ---
-# <a name="transaction-processing"></a>트랜잭션 처리
+# <a name="transaction-processing"></a>트랜잭션 처리 
 A *트랜잭션* 일련의 연결을 통해 실행 하는 데이터 액세스 작업의 시작과 끝을 구분 합니다. 데이터 원본의 트랜잭션 기능에 따라 합니다 **연결** 개체도 트랜잭션을 만들고 관리할 수 있습니다. 예를 들어, Microsoft OLE DB Provider for SQL Server를 사용 하 여 Microsoft SQL Server에서 데이터베이스 액세스를 실행 하면 명령에 대 한 여러 중첩 된 트랜잭션을 만들 수 있습니다.  
   
  트랜잭션의 작업에서 결과 데이터 원본에 변경 내용을 함께 성공적으로 또는 전혀 수행 되도록 하는 ADO.  
   
  트랜잭션을 취소 하는 경우 또는 작업 중 하나가 실패할 경우 결과가 발생 하지 않았는데도 트랜잭션에서 작업 처럼 됩니다. 데이터 원본에는 트랜잭션이 시작 되기 전의 상태로 유지 됩니다.  
   
- ADO 트랜잭션 제어에 대 한 메서드를 제공 합니다. **BeginTrans**, **CommitTrans**, 및 **RollbackTrans**. 이러한 메서드를 사용 하는 **연결** 개체에 저장 하거나 일련의 단일 단위와 원본 데이터에 대 한 변경 취소 하려는 경우. 예를 들어, money 계정 간에 전송할 하나에서 추가 하는 동일한 다른 합니다. 실패를 업데이트 하거나 계정을 더 이상 분산 합니다. 열린 트랜잭션 내에서 이러한 변경을 수행한 되도록 하거나 아무것도 변경 내용을 이동 합니다.  
+ ADO는 트랜잭션 제어에 대 한 메서드를 제공 합니다. **BeginTrans**하십시오 **CommitTrans**, 및 **RollbackTrans**합니다. 이러한 메서드를 사용 하는 **연결** 개체에 저장 하거나 일련의 단일 단위와 원본 데이터에 대 한 변경 취소 하려는 경우. 예를 들어, money 계정 간에 전송할 하나에서 추가 하는 동일한 다른 합니다. 실패를 업데이트 하거나 계정을 더 이상 분산 합니다. 열린 트랜잭션 내에서 이러한 변경을 수행한 되도록 하거나 아무것도 변경 내용을 이동 합니다.  
   
 > [!NOTE]
 >  일부 공급자는 트랜잭션을 지원 합니다. 확인 하는 공급자가 정의한 속성 "**트랜잭션 DDL**"에 표시 되는 **연결** 개체의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 공급자를 지원함을 나타내는 컬렉션 트랜잭션입니다. 공급자는 트랜잭션을 지원 하지 않습니다, 경우 다음이 방법 중 하나를 호출 하는 오류가 반환 됩니다.  

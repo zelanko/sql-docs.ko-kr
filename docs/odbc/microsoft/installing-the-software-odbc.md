@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471098"
 ---
 # <a name="installing-the-software-odbc"></a>소프트웨어 설치(ODBC)
 > [!IMPORTANT]  

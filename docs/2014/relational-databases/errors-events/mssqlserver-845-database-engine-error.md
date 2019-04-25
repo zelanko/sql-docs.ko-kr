@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_845 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 845 (Database Engine error)
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d98be02727582d4f9201ec7f47c3cdb8db5a56b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761923"
 ---
 # <a name="mssqlserver845"></a>MSSQLSERVER_845
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>설명  
   
 |||  
@@ -33,10 +34,10 @@ ms.locfileid: "48100703"
 |메시지 텍스트|데이터베이스 ID %d, 페이지 %S_PGID에 대한 버퍼 래치 유형 %d을(를) 기다리는 중 시간이 초과되었습니다.|  
   
 ## <a name="explanation"></a>설명  
- 프로세스에서 래치를 얻기 위해 기다렸지만 시간 제한이 초과되어 래치를 얻지 못했습니다. 이 오류는 일반적으로 시스템 프로세스를 차단하는 다른 태스크로 인해 I/O 작업을 완료하는 데 너무 많은 시간이 소요되는 경우 발생할 수 있습니다. 하드웨어 오류로 인해 이 오류가 발생하는 경우도 있습니다.  
+프로세스에서 래치를 얻기 위해 기다렸지만 시간 제한이 초과되어 래치를 얻지 못했습니다. 이 오류는 일반적으로 시스템 프로세스를 차단하는 다른 태스크로 인해 I/O 작업을 완료하는 데 너무 많은 시간이 소요되는 경우 발생할 수 있습니다. 하드웨어 오류로 인해 이 오류가 발생하는 경우도 있습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 다음 태스크를 수행하면 이 오류를 방지할 수 있습니다.  
+다음 태스크를 수행하면 이 오류를 방지할 수 있습니다.  
   
 -   작업을 줄입니다.  
   
@@ -46,6 +47,5 @@ ms.locfileid: "48100703"
   
 -   어설션과 같은 오류가 자주 발생하면 이 문제를 해결하십시오.  
   
- 오류가 지속되면 Microsoft 고객 서비스 지원 센터에 문의하십시오.  
-  
+오류가 지속되면 Microsoft 고객 서비스 지원 센터에 문의하십시오.  
   

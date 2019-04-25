@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0c77323f6ae37e3543cf070817a9fee05943f3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760856"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>계층 메서드를 사용하여 계층적 테이블 채우기
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 의 마케팅 부서에는 8명의 직원이 근무하고 있습니다. 직원 계층은 다음과 같습니다.  

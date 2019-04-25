@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d7101cf4775e5280c22cc27ecae009410d231d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511688"
 ---
 # <a name="using-sql-server-default-result-sets"></a>SQL Server 기본 결과 집합 사용
   기본 ODBC 커서 특성은 다음과 같습니다.  

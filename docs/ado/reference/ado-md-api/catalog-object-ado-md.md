@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469918"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 개체(ADO MD)
 다차원 스키마 정보 (큐브 기본 차원, 계층, 수준 및 멤버)는 다차원 데이터 (MDP 공급자)를 포함합니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628892"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
 다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 강요 하지 않지만 최소 SQL 문법을; 그러나 응용 프로그램은 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 위해 이러한 키워드를 사용 하 여를 방지 해야 합니다. #**정의** 값 SQL_ODBC_KEYWORDS 이러한 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "47626341"
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|겹침|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
@@ -79,7 +79,7 @@ ms.locfileid: "47626341"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|커서|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -120,7 +120,7 @@ ms.locfileid: "47626341"
 |FOUND|TRANSACTION|  
 |FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
-|GET|TRIM|  
+|가져오기|TRIM|  
 |GLOBAL|TRUE|  
 |GO|UNION|  
 |GOTO|UNIQUE|  
@@ -128,9 +128,9 @@ ms.locfileid: "47626341"
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|User|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|값|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

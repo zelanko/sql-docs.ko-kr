@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 177450ed6cbe934406fc596606e0bb13ee51f7eb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511027"
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
   이 항목에서는 일정을 만들고 수정하고 삭제하는 방법을 알아봅니다.  

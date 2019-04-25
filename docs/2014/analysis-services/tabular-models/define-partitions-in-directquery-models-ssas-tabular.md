@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757317"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>파티션 및 DirectQuery 모드(SSAS 테이블 형식)
   이 섹션에서는 DirectQuery 모델에서 파티션을 사용하는 방법에 대해 설명합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)을 참조하세요.  
@@ -43,12 +43,12 @@ ms.locfileid: "48054050"
   
  DirectQuery에 대한 처리 옵션은 두 가지가 있습니다. 이 속성을 설정하려면 **또는** 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]파티션 관리자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하고 **처리 옵션** 속성을 선택합니다. 다음 표에서는 이 속성 값을 나열하고 각 값을 연결 문자열에서 DirectQueryUsage 속성과 결합할 때의 효과에 대해 설명합니다.  
   
-|**DirectQueryUsage** 속성|**처리 옵션** 속성|참고|  
+|**DirectQueryUsage** property|**처리 옵션** 속성|참고|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|이 파티션 처리 안 함|모델이 DirectQuery만 사용 중인 경우 처리가 필요 없습니다.<br /><br /> 혼합 모델에서 DirectQuery 파티션이 처리되지 않도록 구성할 수 있습니다. 예를 들어 매우 큰 데이터 집합에 대해 작동 중일 때 캐시에 전체 결과를 추가하지는 않으려는 경우 테이블의 다른 모든 파티션에 대한 결과의 합집합을 DirectQuery 파티션에 포함하도록 지정할 수 있습니다. 관계형 원본으로 이동하는 쿼리는 영향을 받지 않으며 캐시된 데이터에 대한 쿼리는 다른 파티션의 데이터를 결합합니다.|  
 |InMemory With DirectQuery|파티션을 처리하도록 허용|모델이 혼합 모드를 사용 중인 경우 메모리 내 모델에 대한 쿼리와 DirectQuery 데이터 원본에 대한 쿼리에 대해 동일한 파티션을 사용해야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
+ [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)  
   
   

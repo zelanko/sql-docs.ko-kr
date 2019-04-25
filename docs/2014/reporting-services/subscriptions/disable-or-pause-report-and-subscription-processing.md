@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510630"
 ---
 # <a name="pause-report-and-subscription-processing"></a>보고서 및 구독 처리 일시 중지
   보고서나 구독을 직접 일시 중지할 수 없습니다. 그러나 프로세스가 시작되거나 데이터 원본 연결이 만들어지기 전에 보고서 및 구독 처리를 중단할 수 있습니다. 사용자가 보고서나 구독에 액세스하지 못하도록 하여 보고서나 구독 처리를 중단할 수도 있습니다.  

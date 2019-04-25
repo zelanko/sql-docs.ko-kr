@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628617"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL 예제
 다음 코드는 간단한 embedded SQL 프로그램, C로 작성 된 프로그램에는 아니지만 많은 전부는 아님 포함 된 SQL 기술을 보여 줍니다. 프로그램 주문 번호에 대 한 라는 메시지를 고객 번호, 영업 사원, 및는 주문 상태를 검색 하며 화면에 검색된 된 정보를 표시 합니다.  

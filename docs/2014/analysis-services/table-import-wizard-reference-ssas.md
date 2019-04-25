@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757786"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>테이블 가져오기 마법사 참조(SSAS)
   이 섹션에서는 **테이블 가져오기 마법사**에 대한 도움말을 제공합니다. 이 마법사를 사용하여 다양한 데이터 원본에서 데이터를 가져올 수 있습니다. 모델 디자이너에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>인쇄할 페이지  
   
 -   [고급 설정 &#40;SSAS&#41;](advanced-settings-ssas.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48218183"
 -   [SQL 또는 MDX 쿼리 지정 &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
   
   

@@ -18,11 +18,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c466a2e928afb5239c738463a39e6fee8a1991fa
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514563"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>서버 이벤트용 WMI 공급자 개념
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "51215038"
  [서버 이벤트용 WMI 공급자에 WQL 사용](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
  WQL(WMI 쿼리 언어) 구문에 대해 설명하고 이를 통해 공급자에 대한 프로그램을 작성하는 방법을 설명합니다.  
   
- [예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [샘플: 서버 이벤트 용 WMI 공급자를 사용 하 여 SQL Server 에이전트 경고 만들기](../../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  WMI 공급자를 사용하여 SQL Server 에이전트 경고를 만드는 데 사용할 추적 이벤트 정보를 반환하는 예를 제공합니다.  
   
- [샘플:.NET Framework에서 WMI 이벤트 공급자 사용](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [샘플: .NET Framework를 사용 하 여 WMI 이벤트 공급자를 사용 합니다.](../../relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  C# 애플리케이션에서 WMI 공급자를 사용하여 이벤트 데이터를 반환하는 예를 제공합니다.  
   
  [서버 이벤트용 WMI 공급자 클래스 및 속성](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)  

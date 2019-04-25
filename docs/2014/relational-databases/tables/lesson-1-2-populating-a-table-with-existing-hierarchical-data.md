@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce20cc81961c70984eb36ad39e8aa0b06fab0e08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760837"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>기존 계층적 데이터로 테이블 채우기
   이 태스크에서는 새 테이블을 만들고 이를 **EmployeeDemo** 테이블의 데이터로 채웁니다. 이 태스크의 단계는 다음과 같습니다.  

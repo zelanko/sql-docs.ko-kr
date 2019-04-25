@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759859"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47824851"
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**subject**|**nvarchar(510)**|메시지의 제목 줄입니다.|  
-|**body**|**varchar(max)**|메시지의 본문입니다.|  
+|**body**|**varchar(max)**|메시지 본문입니다.|  
 |**body_format**|**varchar(20)**|메시지 본문의 형식입니다. 가능한 값은 TEXT 및 HTML입니다.|  
 |**importance**|**varchar(6)**|합니다 **중요도** 메시지의 매개 변수입니다.|  
 |**sensitivity**|**varchar(12)**|합니다 **민감도** 메시지의 매개 변수입니다.|  

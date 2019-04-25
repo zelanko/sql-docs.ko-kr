@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471132"
 ---
 # <a name="data-buffer-address"></a>데이터 버퍼 주소
 응용 프로그램 종종 명명 된 인수를 드라이버에 데이터 버퍼의 주소를 전달 *ValuePtr* 또는 비슷한 이름입니다. 예를 들어, 다음에서에 호출할 **SQLBindCol**, 응용 프로그램의 주소를 지정 합니다 *날짜* 변수:  

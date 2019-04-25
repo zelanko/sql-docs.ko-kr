@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759582"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>데이터베이스 찾기 마법사 (위치 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 위치 선택 페이지에서 Access 데이터베이스를 찾기 위한 검색 매개 변수를 입력 합니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757654"
 ---
 # <a name="add-a-table-ssas-tabular"></a>테이블 추가(SSAS 테이블 형식)
   이 항목에서는 이전에 데이터를 모델로 가져왔던 데이터 원본의 테이블을 추가하는 방법에 대해 설명합니다. 같은 데이터 원본의 테이블을 추가하려면 기존 데이터 원본 연결을 사용합니다. 단일 데이터 원본에서 임의 개수의 테이블을 가져올 때는 항상 단일 연결을 사용하는 것이 좋습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48146513"
 >  단일 데이터 원본에서 여러 테이블을 동시에 가져올 때는 원본에 있는 해당 테이블 간의 관계가 모델에서 자동으로 생성됩니다. 그러나 나중에 테이블을 추가할 때는 새로 추가한 테이블과 이전에 가져온 테이블 간에 모델에서 관계를 수동으로 만들어야 할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)   
- [테이블을 삭제 &#40;&AMP;#40;SSAS 테이블 형식&#41;](delete-a-table-ssas-tabular.md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)   
+ [테이블 삭제&#40;SSAS 테이블 형식&#41;](delete-a-table-ssas-tabular.md)  
   
   

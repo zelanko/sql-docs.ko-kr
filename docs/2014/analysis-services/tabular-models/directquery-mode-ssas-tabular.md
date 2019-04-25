@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757368"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery 모드(SSAS 테이블 형식)
   Analysis Services를 사용하면 *DirectQuery 모드*를 통해 관계형 데이터베이스 시스템에서 직접 데이터 및 집계를 검색하여 테이블 형식 모델에서 데이터를 검색하고 보고서를 만들 수 있습니다. 이 항목에서는 메모리에만 있는 표준 테이블 형식 모델과 관계형 데이터 원본을 쿼리할 수 있는 테이블 형식 모델 간의 차이점을 소개하고 DirectQuery 모드에서 사용할 모델을 제작하고 배포하는 방법에 대해 설명합니다.  
@@ -71,17 +71,17 @@ ms.locfileid: "58657977"
   
  이렇게 하면 모델 디자이너가 혼합 모드에서 실행되도록 자동으로 작업 영역 데이터베이스를 구성하므로 캐시된 데이터를 계속해서 사용할 수 있습니다. 또한 모델 디자이너는 모델에서 DirectQuery 모드와 호환되지 않는 모든 기능을 알려 줍니다. 다음 목록에는 유의해야 할 주요 사항이 요약되어 있습니다.  
   
--   **데이터 원본:** DirectQuery 모델은 단일 SQL Server 데이터 원본의 데이터만 사용할 수 있습니다. 모델에서 DirectQuery 모드를 사용하도록 설정했으면 모델 디자이너에서 복사/붙여넣기 작업으로 추가한 테이블을 비롯한 다른 형식의 데이터를 사용할 수 없습니다. 또한 모든 가져오기 옵션도 사용할 수 없습니다. 쿼리에 포함된 모든 테이블은 SQL Server 데이터 원본의 일부여야 합니다. 자세한 내용은 [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)을 참조하십시오.  
+-   **데이터 원본:** DirectQuery 모델을 단일 SQL Server 데이터 원본의 데이터만 사용할 수 있습니다. 모델에서 DirectQuery 모드를 사용하도록 설정했으면 모델 디자이너에서 복사/붙여넣기 작업으로 추가한 테이블을 비롯한 다른 형식의 데이터를 사용할 수 없습니다. 또한 모든 가져오기 옵션도 사용할 수 없습니다. 쿼리에 포함된 모든 테이블은 SQL Server 데이터 원본의 일부여야 합니다. 자세한 내용은 [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)을 참조하십시오.  
   
--   **계산된 열에 대 한 지원:** DirectQuery 모델에 대해서는 계산 열이 지원되지 않습니다. 그러나 데이터 집합에 대해 작동하는 측정값 및 KPI를 만들 수는 있습니다. 자세한 내용은 [유효성 검사](#bkmk_Validation) 섹션을 참조하십시오.  
+-   **계산된 열에 대 한 지원:** 계산된 열은 DirectQuery 모델에 대해 지원 되지 않습니다. 그러나 데이터 집합에 대해 작동하는 측정값 및 KPI를 만들 수는 있습니다. 자세한 내용은 [유효성 검사](#bkmk_Validation) 섹션을 참조하십시오.  
   
--   **DAX 함수의 제한 된 사용:** 일부 DAX 함수는 DirectQuery 모드에서 사용할 수 없으므로 해당 함수를 다른 함수로 바꾸거나 데이터 원본에서 파생 열을 사용하여 값을 만들어야 합니다. 모델 디자이너에서는 DirectQuery 모드와 호환되지 않는 수식을 만들 때 발생하는 모든 오류에 대한 디자인 타임 유효성 검사 기능을 제공합니다. 자세한 내용은 다음 단원을 참조하세요. [유효성 검사](#bkmk_Validation)합니다.  
+-   **DAX 함수의 제한 된 사용:** 일부 DAX 함수를 다른 함수로 바꾸거나 또는 파생된 열을 사용 하 여 데이터 원본에 값을 만들어야 합니다 하므로 DirectQuery 모드에서 사용할 수 없습니다. 모델 디자이너에서는 DirectQuery 모드와 호환되지 않는 수식을 만들 때 발생하는 모든 오류에 대한 디자인 타임 유효성 검사 기능을 제공합니다. 자세한 내용은 다음 단원을 참조하세요. [유효성 검사](#bkmk_Validation)합니다.  
   
--   **수식 호환성:** 알려진 특정 경우에 동일한 수식에서 관계형 데이터 저장소만 사용하는 DirectQuery 모델과 비교했을 때 혼합 모델이나 캐시된 모델의 경우 다른 결과를 반환할 수 있습니다. xVelocity 메모리 내 분석(VertiPaq) 엔진과 SQL Server 간의 의미 체계 차이점 때문에 이러한 차이가 발생합니다. 이러한 차이점에 대한 자세한 내용은 [수식 호환성](#bkmk_FormulaCompat)합니다.  
+-   **수식 호환성:** 알려진 특정 경우에 동일한 수식에서 관계형 데이터 저장소만 사용하는 DirectQuery 모델과 비교했을 때 혼합 모델이나 캐시된 모델의 경우 다른 결과를 반환할 수 있습니다. xVelocity 메모리 내 분석(VertiPaq) 엔진과 SQL Server 간의 의미 체계 차이점 때문에 이러한 차이가 발생합니다. 이러한 차이점에 대 한 자세한 내용은이 섹션을 참조 하세요. [수식 호환성](#bkmk_FormulaCompat)합니다.  
   
--   **보안:** 모델의 배포 방법에 따라 모델 보안을 설정하는 데 사용하는 방법이 다릅니다. 테이블 형식 모델의 캐시된 데이터에는 Analysis Services 인스턴스의 보안 모델을 사용하여 보안이 설정됩니다. 역할을 사용하여 DirectQuery 모델 보안을 설정할 수 있지만 관계형 데이터 저장소에 정의된 보안을 사용할 수도 있습니다. 즉, DirectQuery 전용 모델을 기반으로 보고서를 여는 사용자가 SQL Server에서 해당 사용자의 사용 권한에 허용되는 데이터만 볼 수 있도록 모델을 구성할 수 있습니다. 자세한 내용은 다음 섹션을 참조하십시오. [보안](#bkmk_Security)합니다.  
+-   **보안:** 배포 방법에 따라 모델 보안을 설정 하려면 다른 메서드를 사용할 수 있습니다. 테이블 형식 모델의 캐시된 데이터에는 Analysis Services 인스턴스의 보안 모델을 사용하여 보안이 설정됩니다. 역할을 사용하여 DirectQuery 모델 보안을 설정할 수 있지만 관계형 데이터 저장소에 정의된 보안을 사용할 수도 있습니다. 즉, DirectQuery 전용 모델을 기반으로 보고서를 여는 사용자가 SQL Server에서 해당 사용자의 사용 권한에 허용되는 데이터만 볼 수 있도록 모델을 구성할 수 있습니다. 자세한 내용은이 섹션을 참조 하십시오. [보안](#bkmk_Security)합니다.  
   
--   **클라이언트 제한 사항:** DirectQuery 모드에 있는 모델은 DAX를 사용해서만 쿼리할 수 있습니다. MDX를 사용하여 쿼리를 만들 수는 없습니다. 즉, Excel에서는 MDX를 사용하기 때문에 Excel 피벗 클라이언트를 사용할 수 없습니다.  
+-   **클라이언트 제한 사항:** 모델을 DirectQuery 모드일 때만 DAX를 사용 하 여 쿼리할 수 있습니다. MDX를 사용하여 쿼리를 만들 수는 없습니다. 즉, Excel에서는 MDX를 사용하기 때문에 Excel 피벗 클라이언트를 사용할 수 없습니다.  
   
      그러나 DirectQuery 모델에 대 한 쿼리를 만들 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DAX 테이블 쿼리를 XMLA Execute 문의 일부로 자세한를 사용 하면 참조 [DAX 쿼리 구문 참조](https://msdn.microsoft.com/library/ee634217.aspx)합니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "58657977"
 |-------------------|-----------------|  
 |**DirectQueryMode 속성**|이 속성은 모델 디자이너에서 DirectQuery 모드를 사용하도록 설정합니다. 다른 DirectQuery 속성을 변경하려면 이 속성을 `On`으로 설정해야 합니다.<br /><br /> 자세한 내용은 [DirectQuery 디자인 모드를 사용 하도록 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](enable-directquery-mode-in-ssdt.md)합니다.|  
 |**QueryMode 속성**|이 속성은 DirectQuery 모델에 대한 기본 쿼리 메서드를 지정합니다. 이 속성은 모델을 배포할 때 모델 디자이너에서 설정하지만 나중에 재정의할 수 있습니다. 속성 값은 다음과 같습니다.<br /><br /> **DirectQuery** -이 설정은 모델에 대 한 모든 쿼리에서 관계형 데이터 원본만 사용할지를 지정 합니다.<br /><br /> **DirectQuery with In-Memory** - 이 설정은 클라이언트의 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 관계형 원본을 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory** - 이 설정은 캐시만 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory with DirectQuery** - 이 설정은 기본적으로 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 캐시를 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> <br /><br /> 자세한 내용은 [DirectQuery의 기본 연결 방법 설정 또는 변경](../set-or-change-the-preferred-connection-method-for-directquery.md)을 참조하세요.|  
-|**DirectQueryMode 속성**|모델을 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 속성을 변경하여 DirectQuery 모델에 대해 기본적으로 사용되는 쿼리 데이터 원본을 변경할 수 있습니다.<br /><br /> 이전 속성과 마찬가지로 이 속성은 모델의 기본 데이터 원본을 지정하며 속성 값은 다음과 같습니다.<br /><br /> **InMemory**: 쿼리에서 캐시만 사용할 수 있습니다.<br /><br /> **DirectQuerywithInMemory**: 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 쿼리에서 관계형 데이터 원본을 사용합니다.<br /><br /> **InMemorywithDirectQuery**: 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 쿼리에서 캐시를 사용합니다.<br /><br /> (**DirectQuery**: 쿼리에서 관계형 데이터 원본만 사용합니다.<br /><br /> <br /><br /> 자세한 내용은 [DirectQuery의 기본 연결 방법 설정 또는 변경](../set-or-change-the-preferred-connection-method-for-directquery.md)을 참조하세요.|  
+|**DirectQueryMode 속성**|모델을 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 이 속성을 변경하여 DirectQuery 모델에 대해 기본적으로 사용되는 쿼리 데이터 원본을 변경할 수 있습니다.<br /><br /> 이전 속성과 마찬가지로 이 속성은 모델의 기본 데이터 원본을 지정하며 속성 값은 다음과 같습니다.<br /><br /> **InMemory**: 쿼리는 캐시만을 사용할 수 있습니다.<br /><br /> **DirectQuerywithInMemory**: 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 쿼리에서 관계형 데이터 원본을 사용합니다.<br /><br /> **InMemorywithDirectQuery**: 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 쿼리에서 캐시를 사용합니다.<br /><br /> (**DirectQuery**: 쿼리에서 관계형 데이터 원본만 사용합니다.<br /><br /> <br /><br /> 자세한 내용은 [DirectQuery의 기본 연결 방법 설정 또는 변경](../set-or-change-the-preferred-connection-method-for-directquery.md)을 참조하세요.|  
 |**가장 설정 속성**|이 속성은 쿼리 시 SQL Server 데이터 원본에 연결하는 데 사용되는 자격 증명을 정의합니다. 모델 디자이너에서 이 속성을 설정할 수 있으며 모델을 배포한 후 나중에 값을 변경할 수도 있습니다.<br /><br /> 이러한 자격 증명은 관계형 데이터 저장소에 대한 쿼리 응답에만 사용되며, 혼합 모델의 캐시를 처리하는 데 사용되는 자격 증명과는 다릅니다.<br /><br /> 모델을 메모리에 내에서만 사용하는 경우에는 가장을 사용할 수 없습니다. 모델에서 DirectQuery 모드를 사용하지 않는 경우에는 `ImpersonateCurrentUser` 설정이 유효하지 않습니다.|  
   
  또한 모델에 파티션이 포함되어 있는 경우 DirectQuery 모드에서 쿼리의 원본으로 사용할 하나의 파티션을 선택해야 합니다. 자세한 내용은 [파티션 및 DirectQuery 모드 &#40;&AMP;#40;SSAS 테이블 형식&#41;](define-partitions-in-directquery-models-ssas-tabular.md)합니다.  

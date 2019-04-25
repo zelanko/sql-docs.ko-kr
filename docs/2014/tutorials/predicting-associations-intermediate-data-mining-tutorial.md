@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472848"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>연결 예측(중급 데이터 마이닝 자습서)
   모델이 처리되면 모델에 저장된 연결 정보를 사용하여 예측을 만들 수 있습니다. 이 단원의 마지막 태스크에서는 만든 연결 모델에 대해 예측 쿼리를 작성하는 방법에 대해 설명합니다. 이 단원에서는 사용자가 예측 쿼리 작성기를 사용하는 방법에 익숙하며 연결 모델에 대해 예측 쿼리를 작성하는 방법을 알아보려 한다고 가정합니다. 자세한 내용은 예측 쿼리 작성기를 사용 하는 방법 [데이터 마이닝 쿼리 인터페이스](../../2014/analysis-services/data-mining/data-mining-query-tools.md)합니다.  

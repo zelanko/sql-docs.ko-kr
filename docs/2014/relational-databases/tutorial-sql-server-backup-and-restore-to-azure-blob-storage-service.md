@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524053"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
   SQL Server 백업 및 Windows Azure Blob Storage 서비스로 복원 시작 자습서를 시작합니다. 이 자습서는 Windows Azure Blob 스토리지 서비스에서 백업을 작성하고 복원하는 방법을 이해하도록 도와 줍니다.  
@@ -23,16 +23,16 @@ ms.locfileid: "52811245"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서에서는 Windows 스토리지 계정과 blob 컨테이너를 만들어서 스토리지 계정에 액세스할 자격 증명을 만들고 Blob 서비스에 백업을 작성하며 간단한 복원을 수행할 수 있는 방법을 보여 줍니다. 이 자습서는 다음 네 단원으로 이루어져 있습니다.  
   
- [1 단원: Windows Azure 저장소 개체 만들기](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [1단원: Windows Azure 저장소 개체 만들기](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  이 단원에서는 Windows Azure 스토리지 계정 및 blob 컨테이너를 만듭니다.  
   
  [2단원: SQL Server 자격 증명 만들기](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  이 단원에서는 Windows Azure 스토리지 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만들 수 있습니다.  
   
- [3 단원: Windows Azure Blob Storage 서비스에 전체 데이터베이스 백업을 작성합니다](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
+ [3단원: Windows Azure Blob Storage 서비스에 전체 데이터베이스 백업을 작성합니다](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  
  이 단원에서는 Windows Azure Blob 스토리지 서비스에 AdventureWorks2012 데이터베이스 백업을 작성하는 T-SQL 문을 실행합니다.  
   
- [4 단원: 전체 데이터베이스 백업에서 복원 수행](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
+ [4단원: 전체 데이터베이스 백업에서 복원 수행](../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)  
  이 단원에서는 이전 단원에서 만든 데이터베이스 백업에서 복원하는 T-SQL 문을 실행합니다.  
   
 ### <a name="requirements"></a>요구 사항  

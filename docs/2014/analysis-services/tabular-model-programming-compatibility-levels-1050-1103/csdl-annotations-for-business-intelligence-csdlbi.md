@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757956"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>비즈니스 인텔리전스에 대한 CSDL 주석(CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석이라는 XML 형식으로 테이블 형식 모델 정의를 표현할 수 있도록 합니다.  

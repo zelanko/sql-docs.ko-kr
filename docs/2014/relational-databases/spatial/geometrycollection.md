@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524572"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection`은 1개 이상의 `geometry` 또는 `geography` 인스턴스 컬렉션입니다. `GeometryCollection`은 비워 둘 수 있습니다.  

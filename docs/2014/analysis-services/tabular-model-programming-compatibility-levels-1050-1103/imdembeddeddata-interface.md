@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757784"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded 인터페이스
   IMDEmbedded 인터페이스는 포함된 PowerPivot 데이터베이스 또는 테이블 형식 model 데이터베이스를 관리하는 데 사용되는 공용 인터페이스입니다. 이 인터페이스는 `IPersistStream` 인터페이스에서 상속됩니다. 이 인터페이스에서는 다음 작업이 허용됩니다.  

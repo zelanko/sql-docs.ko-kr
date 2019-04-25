@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c796cefc03092e944520a6517bc31c585a2dc42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509915"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)
 트랜잭션 내에서 처리를 관리 하는 이러한 트랜잭션 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다음과 같이 개체:  

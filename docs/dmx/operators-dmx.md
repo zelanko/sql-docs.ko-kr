@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 072d0a36a4803f4de1d50ba066e4e86e5d171c5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502054"
 ---
 # <a name="operators-dmx"></a>연산자(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "37989675"
   
  DMX에서는 아래 섹션에 설명된 것처럼 다양한 범주의 연산자를 사용합니다. 개별 연산자에 대 한 자세한 내용은 참조 하세요. [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)합니다.  
   
-|연산자 범주|연산 유형|  
+|연산자 범주|작업의 형식|  
 |-----------------------|-----------------------|  
 |[산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)|더하기, 빼기, 곱하기 또는 나누기를 수행합니다.|  
 |[비교 연산자 &#40;DMX&#41;](../dmx/operators-comparison.md)|값을 다른 값 또는 식과 비교합니다.|  
@@ -41,13 +41,13 @@ ms.locfileid: "37989675"
  간단한 식을 결합하여 복잡한 식을 만들 때 결과 식의 데이터 형식은 연산자 규칙과 데이터 형식 우선 순위 규칙에 따라 결정됩니다. 결과가 문자 또는 유니코드 값인 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 결과의 데이터 정렬이 연산자 규칙과 데이터 정렬 우선 순위 규칙에 따라 결정됩니다. 간단한 식의 전체 자릿수, 소수 자릿수 및 길이를 기준으로 결과의 전체 자릿수, 소수 자릿수 및 길이를 결정하는 규칙도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

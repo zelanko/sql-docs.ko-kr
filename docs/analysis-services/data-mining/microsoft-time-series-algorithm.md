@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758070"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34018540"
   
  원본 데이터와 예측 데이터의 조합을 *계열*이라고 합니다.  
   
- ![시계열 예](../../analysis-services/data-mining/media/time-series.gif "시계열 예")  
+ ![시계열의 예로](../../analysis-services/data-mining/media/time-series.gif "시계열 예")  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘의 중요한 기능은 교차 예측을 수행할 수 있다는 것입니다. 관련된 두 개의 별도 계열이 있는 알고리즘을 학습하는 경우 결과 모델을 사용하여 한 계열의 동작을 기반으로 다른 계열의 결과를 예측할 수 있습니다. 예를 들어 관찰된 특정 제품의 판매량이 다른 제품의 예측 판매량에 영향을 줄 수 있습니다.  또한 교차 예측은 여러 계열에 적용될 수 있는 일반 모델을 만드는 데에도 유용합니다. 예를 들어 계열에 높은 품질의 데이터가 부족하기 때문에 특정 지역에 대한 예측이 불안정합니다.  4개 지역 모두의 평균으로 일반 모델을 학습한 다음 개별 계열에 이 모델을 적용하여 각 지역에 대해 더 안정된 예측을 만들 수 있습니다.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "34018540"
   
  두 가지 예에서 향후 각 제품의 새로운 판매량과 부피를 예측할 수 있지만 제품 또는 시간에 대한 새로운 값을 예측할 수는 없습니다.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예제 1: 계열이 열 값으로 표현된 시계열 데이터 집합  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예 1: 계열이 열 값으로 표현 된 시계열 데이터 집합  
  이 예에서는 다음 입력 사례 표를 사용합니다.  
   
 |TimeID|Product|Sales|볼륨|  
 |------------|-------------|-----------|------------|  
-|1/2001|변수를 잠그기 위한|1000|600|  
-|2/2001|변수를 잠그기 위한|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018540"
   
  Sales 열은 지정한 제품의 하루 매출총이익을 나타내고 Volume 열은 창고에 남아 있는 지정한 제품의 수량을 나타냅니다. 이러한 두 개의 열에는 모델을 학습하는 데 사용되는 데이터가 들어 있습니다. Sales와 Volume은 둘 다 Product 열에 있는 각 계열의 예측 가능한 특성일 수 있습니다.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예제 2: 각 계열이 별도의 열에 있는 시계열 데이터 집합  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예 2: 각 계열이 별도 열에 있는 시계열 데이터 집합  
  이 예에서는 기본적으로 첫 번째 예와 동일한 입력 데이터를 사용하지만 다음 표와 같이 입력 데이터가 다르게 구성됩니다.  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018540"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 그리고 A_Sales, A_Volume, B_Sales 및 B_Volume과 같은 4개의 예측 가능한 열이 포함되는 시계열 모델이 생성됩니다.  
+ 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 이 4 개의 예측 가능한 열이 포함 된 시계열 모델을 만듭니다. A_Sales, A_Volume, B_Sales 및 B_Volume 합니다.  
   
  또한 제품을 다른 열로 구분했기 때문에 추가 계열 키 열을 지정하지 않아도 됩니다. 모델의 모든 열은 사례 계열 열 또는 예측 가능한 열 중 하나입니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "34018540"
   
 -   시계열 모델은 서버에서 사용하는 64비트 운영 체제에 따라 때로는 크게 다른 예측을 만들 수 있습니다. 이러한 차이는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 시스템이 부동 소수점 산술의 수를 표시하고 처리하는 방식이 [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]기반 시스템의 방식과 다르기 때문에 발생합니다. 예측 결과는 운영 체제에 따라 달라질 수 있으므로 프로덕션 환경에서 사용할 운영 체제와 동일한 운영 체제에서 모델을 평가하는 것이 좋습니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   PMML(Predictive Model Markup Language)을 사용한 마이닝 모델 생성은 지원하지 않습니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "34018540"
   
 -   드릴스루를 지원합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   

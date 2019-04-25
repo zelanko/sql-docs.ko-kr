@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761125"
 ---
 # <a name="feature-review"></a>기능 검토
   기능 검토 페이지는 현재 준비되어 있고 앞으로 구성되어 이미지 완료 단계의 끝에 완성될 여러 가지 기능이 포함된 읽기 전용 목록입니다. 기능 목록은 이미지 준비 단계에서 선택되며 이미지 완료 단계에서는 수정할 수 없습니다. 준비 인스턴스에는 표시된 기능뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client도 포함됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48182663"
   
 |구성 요소 그룹|구성 요소 및 기능|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 구성 요소는 다음과 같습니다.<br /><br /> 복제: (선택 사항) 복제는 한 데이터베이스에서 다른 데이터베이스로 데이터와 데이터베이스 개체를 복사 및 배포한 후 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다.<br /><br /> 전체 텍스트 검색: (옵션) 전체 텍스트 검색에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 일반 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행합니다.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (선택 사항): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)는 데이터 원본에서 일관성 없고 올바르지 않은 데이터를 검색할 수 있도록 하 고 데이터를 정리 하려면 자동화 된 대화형 방법을 제공 하는 데이터 정리 솔루션입니다.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 구성 요소는 다음과 같습니다.<br /><br /> 복제: (선택 사항) 복제는 복사 및 배포한 후 일관성을 유지 하는 데이터베이스 간에 동기화를 수행 및 다른 한 데이터베이스에서 데이터 및 데이터베이스 개체에 대 한 기술 집합입니다.<br /><br /> 전체 텍스트 검색: (선택 사항) 전체 텍스트 검색에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 일반 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행합니다.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (선택 사항): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)는 데이터 원본에서 일관성 없고 올바르지 않은 데이터를 검색할 수 있도록 하 고 데이터를 정리 하려면 자동화 된 대화형 방법을 제공 하는 데이터 정리 솔루션입니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 테이블 형식, 행렬, 그래픽 및 자유 형식 보고서를 생성, 관리 및 배포하기 위한 서버/클라이언트 구성 요소가 포함되어 있습니다. 또한[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 응용 프로그램을 개발하는 데 사용할 수 있는 확장 가능 플랫폼입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

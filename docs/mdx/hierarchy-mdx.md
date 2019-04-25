@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0699ce1d66c420061091436ebf879c9b32b3ca7c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629099"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy(MDX)
 
@@ -40,7 +40,7 @@ Level_Expression.Hierarchy
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ### <a name="examples"></a>예  
- 다음 예에서는 AdventureWorks 큐브에서 Date 차원의 Calendar 계층의 이름을 반환합니다.  
+ 다음 예제에서는 AdventureWorks 큐브에서 Date 차원의 Calendar 계층의 이름을 반환합니다.  
   
  `WITH`  
   
@@ -55,6 +55,6 @@ Level_Expression.Hierarchy
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37c313484b2ee7ff87668cbfdd0b87ed52cdaf98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67466abfccb03a689d5f717159e833143fcfafb4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472059"
 ---
 # <a name="import-data-by-using-a-native-query"></a>원시 쿼리를 사용하여 데이터 가져오기
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]

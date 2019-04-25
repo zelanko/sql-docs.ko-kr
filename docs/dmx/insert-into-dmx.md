@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505158"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,10 +32,10 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ```  
   
 ## <a name="arguments"></a>인수  
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
- *구조*  
+ *structure*  
  구조 식별자입니다.  
   
  *매핑된 모델 열*  
@@ -87,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **OPENROWSET**  
   
--   **셰이프**  
+-   **SHAPE**  
   
 -   행 집합을 반환하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리  
   

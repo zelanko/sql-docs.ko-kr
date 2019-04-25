@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760827"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access 인벤토리 (AccessToSQL) 내보내기
 Access 데이터베이스를 여러 개 있고 깨달음을로 마이그레이션하려면 확실 하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 프로젝트의 모든 Access 데이터베이스의 인벤토리를 내보낼 수 있습니다. 검토 하 고 데이터베이스 및 마이그레이션하려면 해당 데이터베이스 내의 개체가 결정 인벤토리 메타 데이터를 쿼리할 수 있습니다. 이 인벤토리 사용 하면 신속 하 게 다음과 같은 질문에 답변 찾기:  
@@ -107,7 +107,7 @@ Access 인벤토리 내보내기 있습니다 먼저 또는 SSMA 프로젝트를
   
     -   다른 컴퓨터의 기본 인스턴스에 연결 하는 경우에 컴퓨터의 이름을 입력 합니다.  
   
-    -   명명 된 인스턴스에 연결 하는 경우 컴퓨터 이름, 백슬래시 및 인스턴스 이름을 입력 합니다. 예를 들어: MyServer\MyInstance 합니다.  
+    -   명명 된 인스턴스에 연결 하는 경우 컴퓨터 이름, 백슬래시 및 인스턴스 이름을 입력 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. MyServer\MyInstance.  
   
 3.  에 **데이터베이스** 상자에서 내보낸된 메타 데이터에 대 한 대상 데이터베이스의 이름을 입력 합니다.  
   

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e95a30c813ad2d72313a0e470136d650ea9686a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473687"
 ---
 # <a name="upgrade-process-overview"></a>업그레이드 프로세스 개요
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자를 사용하는 최선의 구현 방법과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 위한 권장 프로세스에 대한 요약 정보를 제공합니다.  

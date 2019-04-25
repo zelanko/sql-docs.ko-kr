@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628456"
 ---
 # <a name="file-data-sources"></a>파일 데이터 원본
 *데이터 원본 파일* 파일에 저장 되 고 단일 사용자가 반복적으로 사용 하거나 여러 사용자 간에 공유 연결 정보를 허용 합니다. 파일 데이터 소스를 사용 하면 드라이버 관리자.dsn 파일에 정보를 사용 하 여 데이터 원본에 연결을 만듭니다. 이 파일은 다른 파일 처럼 조작할 수 있습니다. 파일 데이터 원본이 없습니다 데이터 원본 이름, 컴퓨터 데이터 원본에는 모든 사용자 또는 컴퓨터에 등록 되어 있지 않습니다.  

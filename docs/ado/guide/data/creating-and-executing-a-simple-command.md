@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 644ee0c1ca4baee72a5fd33aeb16843dc7c59795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472639"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>간단한 명령 만들기 및 실행
 간단한 명령은 없는 지 속성을 하며 매개 변수가 없는 것입니다. 만들고 간단한 명령을 실행 하는 방법은 세 가지가 있습니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519228"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
   SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시됩니다.  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Visual Basic에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 Visual Basic 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. `operator`가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드이므로 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 대괄호로 묶어야 합니다.  
   
@@ -281,7 +281,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트](../../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
  [작업 구현](../../../ssms/agent/implement-jobs.md)  
   
   

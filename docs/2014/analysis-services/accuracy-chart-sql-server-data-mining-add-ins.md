@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520257"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>정확도 차트(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본 메뉴의 정확도 차트 단추](media/dmc-accchart.gif "데이터 마이닝 리본의 정확도 차트 단추")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136803"
      마법사에서 리프트 차트 및 기본 데이터를 포함하는 보고서를 만듭니다.  
   
 ### <a name="requirements"></a>요구 사항  
- 불연속 값을 예측하는 경우 예측할 대상 값을 선택해야 합니다. 예를 들어, 예:: "구입" 1로 응답 및 2로 "아니요:: 수행 되지 않습니다. 구입 합니다" 응답을 사용 하 여 데이터 분류 되며, 경우 예측 값으로 1 또는 2 지정 해야 합니다. 그러나 값 범위를 예측하는 경우 값을 한 번에 두 개만 비교할 수 있습니다. 예를 들어 5 위 점수를 예측 하려는 것이 있으면 두 개의 집합으로 결과 구분 하는 새 모델을 만들고 원본 데이터 레이블 재지정: 5 및 점 미만 5 보다 큰 것입니다. 그런 다음 이러한 두 그룹의 정확도 비교할 수 있습니다.  
+ 불연속 값을 예측하는 경우 예측할 대상 값을 선택해야 합니다. 예를 들어, 데이터 응답을 사용 하 여 분류 하는 경우 "예: 1 대 한 응답으로 "구입" 아니요: 수행 하지 않습니다. 구입 합니다"2, 1 또는 2를 예측 값으로 지정 해야 합니다. 그러나 값 범위를 예측하는 경우 값을 한 번에 두 개만 비교할 수 있습니다. 예를 들어 5 위 점수를 예측 하려는 것이 있으면 두 개의 집합으로 결과 구분 하는 새 모델을 만들고 원본 데이터 레이블 재지정: 5 및 점 미만 5 보다 큰 것입니다. 그런 다음 이러한 두 그룹의 정확도 비교할 수 있습니다.  
   
 ## <a name="understanding-accuracy"></a>정확도 이해  
  예측 가능한 열의 상태를 지정하는 차트 종류와 상태를 지정하지 않는 차트 종류를 만들 수 있습니다.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473052"
 ---
 # <a name="post-download-instructions"></a>다운로드 명령 게시
   이 페이지를 사용하여 대상 서버에 대한 다운로드 명령을 지정할 수 있습니다.  

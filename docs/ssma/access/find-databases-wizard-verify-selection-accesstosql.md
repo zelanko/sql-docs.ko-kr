@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759659"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>데이터베이스 찾기 마법사 (선택 확인) (AccessToSQL)
 데이터베이스 찾기 마법사의 확인 선택 페이지 SSMA에 추가할 파일을 나열 합니다. 파일 목록이 올바르지 않으면, 클릭 **다시** 목록을 수정할 수 있습니다. 그렇지 않은 경우 클릭 **완료** 파일을 추가 합니다.  

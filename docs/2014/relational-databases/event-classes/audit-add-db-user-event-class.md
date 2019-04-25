@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761642"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
   **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  

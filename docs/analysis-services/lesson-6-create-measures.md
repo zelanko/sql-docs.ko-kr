@@ -1,5 +1,5 @@
 ---
-title: '6 단원: 측정값 만들기 | Microsoft Docs'
+title: '6단원: 측정값 만들기 | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469819"
 ---
-# <a name="lesson-6-create-measures"></a>6 단원: 측정값 만들기
+# <a name="lesson-6-create-measures"></a>6단원: 측정값 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 모델에 포함할 측정값을 만듭니다. 이전 단원에서 만든 계산된 열과 마찬가지로 측정값은 DAX 수식을 사용 하 여 만든 계산입니다. 그러나 계산 열과는 달리 측정값은 사용자가 선택한 *필터*를 기반으로 계산됩니다. 피벗 테이블의 행 레이블 필드에 추가된 특정 열이나 슬라이서를 예로 들 수 있습니다. 적용된 측정값에 따라 필터의 각 셀에 대한 값이 계산됩니다. 측정값은 수치 데이터에 동적인 계산을 수행 하기 위해 거의 모든 테이블 형식 모델에 포함 하려는 강력 하 고 유연한 계산입니다. 자세한 내용은 참조 하세요 [측정값](../analysis-services/tabular-models/measures-ssas-tabular.md)합니다.  
@@ -27,10 +27,10 @@ ms.locfileid: "42795622"
   
 이 단원에서는 수식 입력줄에 DAX 수식을 입력하는 방법과 자동 합계 기능을 이용하는 방법을 모두 사용해 측정값을 만듭니다.  
   
-이 단원에 소요되는 예상 시간: **30분**  
+예상이 단원을 완료 시간: **30 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [5 단원: 계산 열 만들기](../analysis-services/lesson-5-create-calculated-columns.md)합니다.  
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [5단원: 계산된 열 만들기](../analysis-services/lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  
   
@@ -48,7 +48,7 @@ ms.locfileid: "42795622"
   
     왼쪽 위 셀이 이제 라는 측정값 이름이 포함 되어 있습니다 **DaysCurrentQuarterToDate**결과 차례로 **92**합니다.
     
-      ![으로-테이블 형식-6 단원-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     측정값 수식을 사용 하 여 계산 된 열을 달리 측정값 이름, 쉼표, 수식 순서로 입력할 수 있습니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "42795622"
   
     자동 합계 기능은 DistinctCount 표준 집계 수식을 사용하여 선택한 열에 대한 측정값을 자동으로 만듭니다.  
     
-       ![으로-테이블 형식-6 단원-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  측정값 표에서 새 측정값을 클릭 한 다음 합니다 **속성** 창에서 **측정값 이름**, 측정값 이름 바꾸기 **InternetDistinctCountSalesOrder**합니다. 
  
@@ -124,6 +124,6 @@ ms.locfileid: "42795622"
 FactInternetSales 테이블에 대해 만든 측정값은 판매와 비용, 이익률은 사용자가 선택한 필터로 정의 된 항목에 대 한 중요 한 재무 데이터를 분석 하려면 사용할 수 있습니다.  
   
 ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [7 단원: 핵심 성과 지표 만들기](../analysis-services/lesson-7-create-key-performance-indicators.md)합니다.  
+다음 단원으로 이동 합니다. [7단원: 핵심 성과 지표 만들기](../analysis-services/lesson-7-create-key-performance-indicators.md)합니다.  
 
   

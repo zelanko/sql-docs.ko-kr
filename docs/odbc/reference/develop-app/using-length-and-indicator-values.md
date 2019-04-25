@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501114"
 ---
 # <a name="using-length-and-indicator-values"></a>길이 및 표시기 값 사용
 길이/표시기 버퍼는 데이터 버퍼에 데이터가 NULL 인지 여부를 나타내는 SQL_NULL_DATA 등 특수 표시기 데이터의 바이트 길이 전달 하는 데 사용 됩니다. 사용 되는 함수에 따라 길이/표시기 버퍼는 SQLINTEGER 또는 SQLSMALLINT 되도록 정의 됩니다. 따라서 단일 인수 설명에 필요 합니다. 데이터 버퍼 nondeferred 입력된 버퍼 이면이 인수 자체 데이터의 바이트 길이 또는 표시기 값을 포함 합니다. 이름은 종종 *StrLen_or_Ind* 또는 비슷한 이름입니다. 예를 들어, 다음 코드 호출 **SQLPutData** 버퍼에 전달할 데이터의 전체; 바이트 길이 (*ValueLen*) 때문에 직접 전달 됩니다 데이터 버퍼 (*ValuePtr*)은 입력된 버퍼입니다.  
@@ -57,18 +57,18 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
 -   0.  
   
--   SQL_NTS 합니다. 드라이버는 해당 데이터 버퍼에 보낼 문자열은 null로 끝나는; 문자열을 전달 하는 바이트 길이 계산 하지 않고 C 프로그래머를 위한 편리한 방법입니다. 이 값에서 드라이버에 데이터를 보낼 때에 유효 합니다. 드라이버 응용 프로그램에 데이터를 반환 될 때 항상 데이터의 실제 바이트 길이 반환 합니다.  
+-   SQL_NTS. 드라이버는 해당 데이터 버퍼에 보낼 문자열은 null로 끝나는; 문자열을 전달 하는 바이트 길이 계산 하지 않고 C 프로그래머를 위한 편리한 방법입니다. 이 값에서 드라이버에 데이터를 보낼 때에 유효 합니다. 드라이버 응용 프로그램에 데이터를 반환 될 때 항상 데이터의 실제 바이트 길이 반환 합니다.  
   
  다음 값은 길이/표시기 값으로 잘못 되었습니다. SQL_NULL_DATA는 SQL_DESC_INDICATOR_PTR 설명자 필드;에 저장 됩니다. 다른 모든 값은 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드에 저장 됩니다.  
   
--   SQL_NULL_DATA로 합니다. 데이터는 NULL 데이터 값, 및 해당 데이터 버퍼의 값은 무시 됩니다. 이 값은 SQL 데이터를 전송 하거나 드라이버에서 검색할에 적합 합니다.  
+-   SQL_NULL_DATA. 데이터는 NULL 데이터 값, 및 해당 데이터 버퍼의 값은 무시 됩니다. 이 값은 SQL 데이터를 전송 하거나 드라이버에서 검색할에 적합 합니다.  
   
--   SQL_DATA_AT_EXEC입니다. 데이터 버퍼에 데이터가 없습니다. 사용 하 여 데이터를 전송 하는 대신 **SQLPutData** 때나 문이 실행 될 때 **SQLBulkOperations** 하거나 **SQLSetPos** 라고 합니다. 이 값은 드라이버에 전송 되는 SQL 데이터에만 적합 합니다. 자세한 내용은 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)를 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), 및 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)합니다.  
+-   SQL_DATA_AT_EXEC. 데이터 버퍼에 데이터가 없습니다. 사용 하 여 데이터를 전송 하는 대신 **SQLPutData** 때나 문이 실행 될 때 **SQLBulkOperations** 하거나 **SQLSetPos** 라고 합니다. 이 값은 드라이버에 전송 되는 SQL 데이터에만 적합 합니다. 자세한 내용은 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)를 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), 및 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)합니다.  
   
 -   결과 SQL_LEN_DATA_AT_EXEC (*길이*) 매크로입니다. 이 값은 SQL_DATA_AT_EXEC 비슷합니다. 자세한 내용은 [긴 데이터를 보내는](../../../odbc/reference/develop-app/sending-long-data.md)합니다.  
   
--   SQL_NO_TOTAL 합니다. 드라이버는 출력 버퍼에서 반환할 수 있습니다. 긴 데이터의 바이트 수를 확인할 수 없습니다. 이 값은 드라이버에서 검색 된 SQL 데이터에만 적합 합니다.  
+-   SQL_NO_TOTAL. 드라이버는 출력 버퍼에서 반환할 수 있습니다. 긴 데이터의 바이트 수를 확인할 수 없습니다. 이 값은 드라이버에서 검색 된 SQL 데이터에만 적합 합니다.  
   
--   SQL_DEFAULT_PARAM 합니다. 프로시저를 해당 데이터 버퍼의 값이 아닌 프로시저에서 입력된 매개 변수의 기본값을 사용 하는 것입니다.  
+-   SQL_DEFAULT_PARAM. 프로시저를 해당 데이터 버퍼의 값이 아닌 프로시저에서 입력된 매개 변수의 기본값을 사용 하는 것입니다.  
   
--   SQL_COLUMN_IGNORE 합니다. **SQLBulkOperations** 나 **SQLSetPos** 데이터 버퍼의 값을 무시 하는 것입니다. 호출 하 여 데이터 행을 업데이트 하는 경우 **SQLBulkOperations** 하거나 **SQLSetPos** 열 값이 변경 되지 않습니다. 호출 하 여 데이터의 새 행을 삽입할 때 **SQLBulkOperations**, 열 값을 기본값으로 설정 되어 또는 열에 기본값을 NULL로 없는 경우.
+-   SQL_COLUMN_IGNORE. **SQLBulkOperations** 나 **SQLSetPos** 데이터 버퍼의 값을 무시 하는 것입니다. 호출 하 여 데이터 행을 업데이트 하는 경우 **SQLBulkOperations** 하거나 **SQLSetPos** 열 값이 변경 되지 않습니다. 호출 하 여 데이터의 새 행을 삽입할 때 **SQLBulkOperations**, 열 값을 기본값으로 설정 되어 또는 열에 기본값을 NULL로 없는 경우.
