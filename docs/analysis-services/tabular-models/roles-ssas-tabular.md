@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472136"
 ---
 # <a name="roles"></a>역할
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "53072170"
   
 |Table|DAX 식|  
 |-----------|--------------------|  
-|Region|= 영역 [Country] = "USA"|  
-|ProductCategory|= ProductCategory [이름] = "자전거"|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |의|=Transactions[Year]=2008|  
   
  Transactions 테이블에 이러한 사용 권한이 적용되면 멤버는 고객이 USA에 있고, 제품 범주가 Bicycles이며, 연도가 2008년에 해당하는 데이터 행을 쿼리할 수 있습니다. 사용자는 해당 사용 권한이 부여된 다른 역할의 멤버가 아닌 한 미국 이외의 국가에서 발생한 거래, Bicycles 범주가 아닌 거래 또는 2008년에 발생하지 않은 거래를 쿼리할 수 없습니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "53072170"
 |-----------|-----------------|  
 |[역할 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [큐브 뷰](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Excel에서 분석](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
  [USERNAME 함수(DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   

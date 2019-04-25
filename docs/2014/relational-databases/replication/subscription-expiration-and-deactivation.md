@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630373"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
   지정된 *보존 기간*내에 동기화되지 않는 구독을 비활성화하거나 만료할 수 있습니다. 동작은 복제 유형 및 초과한 보존 기간에 따라 달라집니다.  

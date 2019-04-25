@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503849"
 ---
 # <a name="not-dmx"></a>NOT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ NOT Expression1
 |Expression1의 값|반환 값|  
 |-----------------------|---------------------|  
 |TRUE|FALSE|  
-|FALSE|TRUE|  
+|false|TRUE|  
   
 ## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41eb6c43a0ddd7e9babf948bbb6135694deadc40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469582"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Catalog 개체 속성, 메서드 및 이벤트(ADO MD)
 ## <a name="propertiescollections"></a>속성/컬렉션  

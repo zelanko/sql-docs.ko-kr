@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62521014"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,8 @@ sp_get_distributor
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**설치**|**int**|**0** = 아니요. **1** = 예|  
-|**배포 서버**|**sysname**|배포자 서버의 이름입니다.|  
+|**installed**|**int**|**0** = 아니요. **1** = 예|  
+|**distribution server**|**sysname**|배포자 서버의 이름입니다.|  
 |**배포 db가 설치 됨**|**int**|**0** = 아니요. **1** = 예|  
 |**배포 게시자**|**int**|**0** = 아니요. **1** = 예|  
 |**원격 배포 게시자가 있음**|**int**|**0** = 아니요. **1** = 예|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757428"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>지원되는 데이터 원본 (SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "53371315"
 |-|-|-|-|  
 |원본|버전|파일 유형|공급자 <sup>1</sup>|  
 |Access 데이터베이스|Microsoft Access 2003, 2007, 2010|.accdb 또는 .mdb|ACE 14 OLE DB 공급자|  
-|SQL Server 관계형 데이터베이스|Microsoft SQL Server2005, 2008, 2008 R2 SQL Server 2012, Microsoft SQL Azure 데이터베이스 <sup>2</sup>|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 10.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server 관계형 데이터베이스|Microsoft SQL Server2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 10.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
 |SQL Server 병렬 데이터 웨어하우스 (PDW) <sup>3</sup>|2008 R2|(해당 사항 없음)|SQL Server PDW용 OLE DB 공급자|  
 |Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6, V12|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  

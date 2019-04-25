@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1142a0d184107a99267ed995314678a98b2aac0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627754"
 ---
 # <a name="stored-procedures---running"></a>저장 프로시저 - 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,6 +56,6 @@ ms.locfileid: "47784301"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 반환 코드 및 출력 매개 변수는 반환 되지 않습니다 결과 집합 처리 되거나 해제 될 때까지 나타내려면 DBPROPVAL_OA_ATROWRELEASE로 DBPROP_OUTPUTPARAMETERAVAILABILITY 속성을 설정 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [저장된 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

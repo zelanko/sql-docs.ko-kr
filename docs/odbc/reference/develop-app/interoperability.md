@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446490"
 ---
 # <a name="interoperability"></a>상호 운용성
 *상호 운용성* 은 여러 다른 Dbms를 사용 하 여 작동 하는 단일 응용 프로그램의 기능입니다. 제네릭, 상호 운용 가능한 응용 프로그램을 작성할 필요가 앞에 ODBC의 개발에 중요 한 요인 중 하나 였습니다. 그러나 상호 운용성이 뒤에 "하지 상호 운용 가능한"에서 간단한 경로에 "완전히 상호 운용 가능 합니다." 경로 많은 분기가 있고 각 기능, 속도, 코드 복잡성 및 개발 시간 간의 절충이 필요 합니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "47794126"
   
 -   [제품 주기의 길이](../../../odbc/reference/develop-app/length-of-the-product-cycle.md)  
   
--   [상호 운용 가능한 응용 프로그램 작성](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
+-   [상호 운용 가능한 애플리케이션 작성](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
   
--   [상호 운용 가능한 응용 프로그램 테스트](../../../odbc/reference/develop-app/testing-interoperable-applications.md)
+-   [상호 운용 가능한 애플리케이션 테스트](../../../odbc/reference/develop-app/testing-interoperable-applications.md)

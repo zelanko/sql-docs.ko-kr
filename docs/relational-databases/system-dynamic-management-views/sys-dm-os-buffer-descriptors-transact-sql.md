@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506060"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47704711"
   
  데이터 페이지를 디스크에서 읽으면 해당 페이지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 복사되며 다시 사용할 수 있도록 캐싱됩니다. 각 캐시된 데이터 페이지에는 하나의 버퍼 설명자가 있습니다. 버퍼 설명자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 현재 캐시된 각 데이터 페이지를 고유하게 식별합니다. sys.dm_os_buffer_descriptors는 모든 사용자 및 시스템 데이터베이스에 대 한 캐시 된 페이지를 반환합니다. 여기에는 Resource 데이터베이스와 연결된 페이지가 포함됩니다.  
   
-> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 하거나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 이름을 사용 하 여 **sys.dm_pdw_nodes_os_buffer_descriptors**합니다.  
+> **참고:** 이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_buffer_descriptors**합니다.  
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -49,9 +49,9 @@ ms.locfileid: "47704711"
 |free_space_in_bytes|**int**|페이지의 사용 가능한 공간(바이트)입니다. Null을 허용합니다.|  
 |is_modified|**bit**|1 = 디스크에서 읽은 후 페이지가 수정되었습니다. Null을 허용합니다.|  
 |numa_node|**int**|버퍼에 대한 Nonuniform Memory Access 노드입니다. Null을 허용합니다.|  
-|read_microsec|**bigint**|페이지를 버퍼로 읽어 오는 데 필요한 실제 시간(밀리초)입니다 이 값은 버퍼를 다시 사용하면 다시 설정됩니다. Null을 허용합니다.|  
-|is_in_bpool_extension|**bit**|1 = 페이지는 버퍼 풀 확장 합니다. Null을 허용합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
+|read_microsec|**bigint**|페이지를 버퍼로 읽어 오는 데 필요한 실제 시간(밀리초)입니다 이 값은 버퍼를 다시 사용하면 다시 설정됩니다. Null을 허용합니다.|  
+|is_in_bpool_extension|**bit**|1 = 페이지는 버퍼 풀 확장 합니다. Null을 허용합니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a671f33fa26829e96cb53e1a040eb042406bc4eb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757708"
 ---
 # <a name="calculated-column-representation-tabular"></a>계산 열 표현(테이블 형식)
   계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  

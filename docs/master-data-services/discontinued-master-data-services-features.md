@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517818"
 ---
 # <a name="discontinued-master-data-services-features"></a>지원되지 않는 MDS(Master Data Services) 기능
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759885"
   
  메타데이터 모델을 사용할 수 없습니다. 탐색기 기능 영역에서 더 이상 메타데이터를 볼 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)  
   
   

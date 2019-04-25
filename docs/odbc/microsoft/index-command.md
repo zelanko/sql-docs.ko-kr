@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471261"
 ---
 # <a name="index-command"></a>INDEX 명령
 인덱스 파일을 표시 및 액세스용 논리적 순서에 따라 테이블 레코드를 만듭니다.  
@@ -46,10 +46,10 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  길이가 0 인 인덱스 키를 만들 가능성이 있습니다. 예를 들어 0 길이 인덱스 키 인덱스 식에 필드를 빈 메모의 부분 문자열인 경우 생성 됩니다. 0 길이 인덱스 키에는 오류 메시지를 생성 합니다. Visual FoxPro는 인덱스를 만드는 테이블의 첫 번째 레코드의 필드를 평가 합니다. 필드가 비어 있으면 길이가 0 인 인덱스 키를 방지 하기 위해 첫 번째 레코드의 필드에 임시 데이터를 입력 해야 할 수도 있습니다.  
   
- *IDXFileName*  
+ TO *IDXFileName*  
  .Idx 인덱스 파일을 만듭니다. 인덱스 파일에는 기본 확장.idx를 지정 됩니다.  
   
- 태그 *TagName*[OF *CDXFileName*]  
+ TAG *TagName*[OF *CDXFileName*]  
  복합 인덱스 파일을 만듭니다. 복합 인덱스 파일이 별도 태그 (인덱스 항목)을 개수에 관계 없이 구성 된 단일 인덱스 파일입니다. 각 태그는 고유한 태그 이름으로 식별 됩니다. 태그 이름은 문자 또는 밑줄을 사용 하 여 시작 해야 하며 최대 10 개의 문자, 숫자 또는 밑줄의 조합으로 구성 될 수 있습니다. 복합 인덱스 파일에는 태그 수가 사용 가능한 메모리 및 디스크 공간에 의해서만 제한 됩니다.  
   
  여러 항목 복합 인덱스 파일이 항상 압축 합니다. 복합 인덱스 파일을 만들 때 COMPACT를 포함할 필요는 없습니다. 복합 인덱스 파일의 이름은.cdx 확장을 제공 됩니다.  
@@ -62,7 +62,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  복합 인덱스 파일이 이미 생성 되어 열, 하는 경우 태그를 사용 하 여 인덱스를 발급 *TagName* 복합 인덱스 파일에 태그를 추가 합니다.  
   
- 에 대 한 *lExpression*  
+ FOR *lExpression*  
  여기서는 조건을 지정 필터 식을 만족 하는 레코드만 *lExpression* 표시 및 액세스에 사용할 수 있는 인덱스 키 일치 필터 식 해당 레코드에 대 한 인덱스 파일이 만들어집니다.  
   
  Visual FoxPro Rushmore 기술 인덱스를 최적화 하는 중... 에 대 한 *lExpression* 명령 *lExpression* 최적화할 수 있는 식입니다. 최상의 성능을 최적화할 수 있는 식을 FOR 절에 사용 합니다.  

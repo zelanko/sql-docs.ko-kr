@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509535"
 ---
 # <a name="collection-permissions-master-data-services"></a>컬렉션 권한(Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52759275"
 > [!NOTE]  
 >  이러한 사용 권한은 사용자 인터페이스의 **탐색기** 기능 영역에만 적용됩니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|사용자는 컬렉션 멤버 및 멤버 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 컬렉션 멤버를 만들고 특성 값을 할당할 수 있습니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "52759275"
   
  읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수 있습니다. 만들기, 업데이트 및 삭제가 할당될 때 읽기 권한은 자동으로 할당됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  

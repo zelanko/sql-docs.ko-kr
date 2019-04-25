@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447825"
 ---
 # <a name="identifier-case"></a>식별자 사례
 SQL 문 및 카탈로그 함수 인수 식별자와 따옴표 붙은 식별자 일 수 있습니다 대/소문자 구분 또는 그렇지 않은 응용 프로그램 호출 하 여 확인할 수 있는 **SQLGetInfo** SQL_QUOTED_ SQL_IDENTIFIER_CASE와 IDENTIFIER_CASE 옵션입니다.  

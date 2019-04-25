@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518217"
 ---
 # <a name="master-data-services-developer-documentation"></a>Master Data Services 개발자 설명서
 
@@ -52,7 +52,7 @@ ms.locfileid: "47812241"
 ## <a name="web-server-namespaces"></a>웹 서버 네임스페이스  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 웹 서버 컴퓨터에 어셈블리 집합을 설치합니다. 이러한 어셈블리에는 웹 서버 컴퓨터의 동작을 사용자 지정하는 고급 시나리오에 사용할 수 있는 네임스페이스가 포함됩니다. 다음 표에서는 이러한 네임스페이스에 대해 설명합니다.  
   
-|Namespace|설명|  
+|Namespace|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|모델에서 배포 패키지를 만들고 패키지를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 배포하는 데 사용할 수 있는 클래스를 포함합니다.|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 통해 웹 서버 컴퓨터에 대해 실행되는 웹 서비스 작업을 수신하고 처리하는 클래스를 포함합니다.|  

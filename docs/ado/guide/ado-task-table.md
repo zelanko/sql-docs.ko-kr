@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518623"
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에 나와 있는 프로그래밍 작업을 *ADO Programmer's Guide* 각 작업에 대 한 참조를 제공 합니다. 텍스트 설명 또는 코드 예제는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있습니다 이러한 참조일 수 있습니다.
 
-|ADO 작업|References|
+|ADO 작업|참조|
 |--------------|----------------|
 |데이터 공급자에 연결|[데이터 원본에 연결](../../ado/guide/data/connecting-to-data-sources.md)|
 |명령을 실행 하거나 저장된 프로시저를 호출 합니다.|[준비 및 실행 명령을](../../ado/guide/data/preparing-and-executing-commands.md)|

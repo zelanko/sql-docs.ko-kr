@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507312"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,15 +52,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ \@이름 =] N'*plan_guide_name*'  
+ [ \@name = ] N'*plan_guide_name*'  
  계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md) 하며 숫자 기호를 사용 하 여 시작할 수 없습니다 (#). 최대 길이인 *plan_guide_name* 는 124 자입니다.  
   
- [ \@stmt =] N'*statement_text*'  
+ [ \@stmt = ] N'*statement_text*'  
  계획 지침을 만들 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 일치 하는 쿼리를 인식할 *statement_text*를 *plan_guide_name* 적용 됩니다. 성공 하는 계획 지침을 만들 *statement_text* 하 여 지정 된 컨텍스트에 나타나야 합니다 합니다 \@형식 \@module_or_batch, 및 \@params 매개 변수입니다.  
   
  *statement_text* 쿼리 최적화 프로그램에서 식별 된 모듈 또는 일괄 처리 내에서 제공 하는 해당 문을 사용 하 여 일치 시킬 수 있는 방식으로 제공 되어야 합니다 \@module_or_batch 및 \@매개 변수입니다. 자세한 내용은 "주의" 섹션을 참조하십시오. 크기인 *statement_text* 서버의 사용 가능한 메모리 크기로 제한 됩니다.  
   
- [\@유형 =] N'{개체 | SQL | 템플릿}'  
+ [\@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
  엔터티 형식인 *statement_text* 나타납니다. 일치 하는 컨텍스트를 지정 하는이 *statement_text* 하 *plan_guide_name*합니다.  
   
  OBJECT  
@@ -72,14 +72,14 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  계획 지침에 지정 된 형식으로 매개 변수화 되는 모든 쿼리에 적용 됨을 나타냅니다 *statement_text*합니다. 템플릿이 지정 된 경우 PARAMETERIZATION {FORCED | SIMPLE} 쿼리 힌트에 지정할 수는 \@매개 변수 힌트입니다. TEMPLATE 계획 지침에 대 한 자세한 내용은 참조 하세요. [계획 지침 사용 하 여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)합니다.  
   
- [\@module_or_batch =] {N'[ *schema_name*합니다. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
  개체의 이름을 지정 *statement_text* 나타나면 또는는 일괄 처리 텍스트 *statement_text* 나타납니다. 일괄 처리 텍스트를 사용 하 여 포함할 수 없습니다*데이터베이스* 문입니다.  
   
  응용 프로그램에서 전송한 일괄 처리를 일치 하는 계획 지침에 대 한 *batch_tex*t 동일한 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
  [*schema_name*.] *object_name* 의 이름을 지정 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 스칼라 함수, 다중 문 테이블 반환 함수 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 포함 하는 DML 트리거 *statement_text*. 하는 경우 *schema_name* 지정 하지 않으면 *schema_name* 현재 사용자의 스키마를 사용 합니다. NULL을 지정 하는 경우 및 \@유형 = 'SQL', 값 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 하는 경우 \@유형 = ' 템플릿을 **'**, \@module_or_batch는 NULL 이어야 합니다.  
   
- [ \@params =] {N'*\@parameter_name data_type* [합니다 *...n* ]' | NULL}  
+ [ \@params =] {N'*\@parameter_name data_type* [,*... n* ]' | NULL}  
  에 포함 된 모든 매개 변수의 정의 지정 합니다 *statement_text*합니다. \@params 인 경우에 다음 중 하나가 true 적용 됩니다.  
   
 -   \@형식 = 'SQL' 또는 'TEMPLATE'. 경우 'TEMPLATE' \@params NULL 이어야 합니다.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@parameter_name data_type* 에 전송 된 것과 정확히 같은 형식에 제공 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_executesql을 사용 하 여 매개 변수화 한 후 내부에서 전송한 또는 합니다. 자세한 내용은 설명 섹션을 참조하세요. 일괄 처리에 매개 변수가 없는 경우 NULL이 지정되어야 합니다. 크기 \@매개 변수는 서버의 사용 가능한 메모리 크기로 제한 됩니다.  
   
- [\@힌트 =] {N'OPTION (*query_hint* [합니다 *...n* ])' | N'*XML_showplan*' | NULL}  
- N'OPTION (*쿼리 힌트* [합니다 *...n* ])  
+ [\@힌트 =] {N'OPTION (*query_hint* [,*... n* ])' | N'*XML_showplan*' | NULL}  
+ N'OPTION (*쿼리 힌트* [,*... n* ])  
  일치 하는 쿼리에 연결할 OPTION 절을 지정 \@stmt. \@힌트 이어야 구문상 SELECT 문의 OPTION 절과 동일 하며 쿼리 힌트의 유효한 시퀀스를 포함할 수 있습니다.  
   
  N'*XML_showplan*'  
@@ -113,11 +113,11 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  계획 지침은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일부 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 계획 지침은 모든 버전에 표시됩니다. 계획 지침이 포함된 데이터베이스를 모든 버전에 추가할 수 있습니다. 업그레이드된 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 복원하거나 첨부해도 계획 지침은 그대로 유지됩니다. 서버를 업그레이드한 후에는 각 데이터베이스의 계획 지침을 원활하게 사용할 수 있는지 확인해야 합니다.  
   
 ## <a name="plan-guide-matching-requirements"></a>계획 지침 일치 요구 사항  
- 지정 하는 계획 지침이 \@형식 = 'SQL' 또는 \@유형 = 'TEMPLATE' 값에 대 한 쿼리를 성공적으로 일치 *batch_text* 하 고  *\@parameter_name data_type*[,*...n* ] 응용 프로그램에서 전송 된 해당 부분과 정확히 같은 형식에 제공 되어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일러가 수신한 것과 정확히 같게 일괄 처리 텍스트를 제공해야 함을 의미합니다. 실제 일괄 처리 및 매개 변수 텍스트를 캡처하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용할 수 있습니다. 자세한 내용은 [만들기 및 테스트 계획 지침을 사용 하 여 SQL Server Profiler](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)합니다.  
+ 지정 하는 계획 지침이 \@형식 = 'SQL' 또는 \@유형 = 'TEMPLATE' 값에 대 한 쿼리를 성공적으로 일치 *batch_text* 하 고  *\@parameter_name data_type* [,*... n* ] 응용 프로그램에서 전송 된 해당 부분과 정확히 같은 형식에 제공 되어야 합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일러가 수신한 것과 정확히 같게 일괄 처리 텍스트를 제공해야 함을 의미합니다. 실제 일괄 처리 및 매개 변수 텍스트를 캡처하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용할 수 있습니다. 자세한 내용은 [만들기 및 테스트 계획 지침을 사용 하 여 SQL Server Profiler](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)합니다.  
   
  때 \@유형 = 'SQL' 및 \@module_or_batch의 값을 NULL로 설정 됩니다 \@module_or_batch의 값으로 설정 되어 \@stmt 합니다. 즉, 값 *statement_text* 정확히 같은 형식으로 제공 되어야 합니다-문자를에 전송 된 것과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이 일치 작업을 더 효과적으로 처리하기 위해 내부 변환은 수행되지 않습니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값과 일치 *statement_text* 하려면 *batch_text* 하 고  *\@parameter_name data_type* [,*....n* ], 이거나 \@유형 = **'** 개체 ', 내에서 해당 쿼리를 텍스트로 *object_name*, 다음 문자열 요소가 고려 되지 않습니다:  
+ 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값과 일치 *statement_text* 하려면 *batch_text* 하 고  *\@parameter_name data_type* [,*... n* ], 이거나 \@유형 = **'** 개체 ', 내에서 해당 쿼리를 텍스트로 *object_name*, 다음 문자열 요소가 고려 되지 않습니다:  
   
 -   문자열 안에 있는 공백 문자(탭, 공백, 캐리지 리턴 또는 줄 바꿈)  
   
@@ -332,7 +332,7 @@ GO
  [sys.plan_guides&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   

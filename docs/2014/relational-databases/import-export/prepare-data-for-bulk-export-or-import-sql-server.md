@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519287"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>대량 내보내기 또는 가져오기를 위한 데이터 준비(SQL Server)
   이 섹션에서는 대량 내보내기 작업을 계획하는 방법과 관련된 고려 사항 및 대량 가져오기 작업의 요구 사항에 대해 설명합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "53358135"
 -   데이터 파일의 각 필드는 대상 테이블의 해당 열과 호환 가능해야 합니다. 예를 들어 `int` 필드는 `datetime` 열로 로드할 수 없습니다. 자세한 내용은 [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) 및 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  전체 파일이 아니라 데이터 파일에서 가져올 행의 하위 집합을 지정하려면 **-F** *first_row* 스위치 및/또는 **-L** *last_row* 스위치와 함께 **bcp** 명령을 사용할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)을(를) 참조하세요.  
+    >  전체 파일이 아니라 데이터 파일에서 가져올 행의 하위 집합을 지정하려면 **-F** *first_row* 스위치 및/또는 **-L** *last_row* 스위치와 함께 **bcp** 명령을 사용할 수 있습니다. 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하세요.  
   
 -   고정 길이 또는 고정 너비 필드가 있는 데이터 파일에서 데이터를 가져오려면 서식 파일을 사용해야 합니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   

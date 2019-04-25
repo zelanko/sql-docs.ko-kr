@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765406"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>웹 구성 페이지(Master Data Services 구성 마법사)
   **웹 구성** 페이지를 사용하여 새 웹 사이트를 만들거나 새 웹 사이트 또는 웹 응용 프로그램을 만들 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 선택한 후 해당 응용 프로그램의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 지정하고 Data Quality Services를 사용하도록 설정할 수 있습니다.  

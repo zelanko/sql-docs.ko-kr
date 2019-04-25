@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762246"
 ---
 # <a name="mssqlserver7908"></a>MSSQLSERVER_7908
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074103"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|메시지 텍스트|테이블 오류: 파티션 ID PN_ID의 파일 'FILE'이(가) 잘못된 Filestream 파일입니다.|  
+|메시지 텍스트|테이블 오류: 파티션 ID PN_ID의에서 파일 'F'는 유효한 Filestream 파일이 아닙니다.|  
   
 ## <a name="explanation"></a>설명  
  열 디렉터리에 있는 FILESTREAM 파일의 이름이 ROWGUID입니다. 열 디렉터리에 있는 파일 이름을 ROWGUID로 변환할 수 없으면 이 파일은 잘못된 파일입니다.  

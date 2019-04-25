@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512385"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
   확장 이벤트를 사용하여 SQL 추적 이벤트 클래스 및 열에 해당하는 이벤트 데이터를 수집하려는 경우 SQL 추적 이벤트가 확장 이벤트의 이벤트 및 동작에 매핑되는 방식을 이해하고 있으면 유용합니다.  

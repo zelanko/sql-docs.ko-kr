@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472887"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Naive Bayes 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘은 자전거 구매와 입력된 특성 간의 상호 작용을 표시 하는 여러 가지 방법을 제공 합니다.  

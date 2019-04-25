@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 429956528484a11b26caf6c39a666ef933515314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762370"
 ---
 # <a name="mssqlserver8651"></a>MSSQLSERVER_8651
     
@@ -42,7 +42,7 @@ ms.locfileid: "48145311"
   
 1.  다른 애플리케이션 또는 서비스가 현재 서버의 메모리를 사용 중인지 확인합니다. 중요도가 낮은 애플리케이션이나 서비스에서 메모리를 덜 사용하도록 다시 구성합니다.  
   
-2.  **SQL Server: Buffer Manager**, **SQL Server: Memory Manager**에 대한 성능 모니터 카운터 수집을 시작합니다.  
+2.  에 대 한 성능 모니터 카운터 수집을 시작 **SQL Server: 버퍼 관리자**, **SQL Server: Memory Manager**합니다.  
   
 3.  다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 구성 매개 변수를 확인합니다.  
   

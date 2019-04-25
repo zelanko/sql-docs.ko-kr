@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6a4ae05aecf7d4a25a88efa61ec42fe098f1d63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765706"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>파생 계층 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 파생 계층이 더 이상 필요하지 않으면 삭제할 수 있습니다.  

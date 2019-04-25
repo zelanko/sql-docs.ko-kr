@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472867"
 ---
 # <a name="anticipating-errors"></a>오류 예측
 오류 방지는 적어도 오류 처리 만큼 중요 합니다. 이 최종 섹션에서는 응용 프로그램 오류가 발생할 가능성이 적습니다 확인 하기 위해 취할 수 예방 조치의 짧은 목록을 포함 합니다.  

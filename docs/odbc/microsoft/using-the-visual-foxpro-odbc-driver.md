@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447661"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 사용
 이 섹션에서는 다음 항목에는 Microsoft® Visual FoxPro® ODBC Driver를 사용 하는 방법을 설명 합니다.  
@@ -36,6 +36,6 @@ ms.locfileid: "47825681"
   
 -   [Visual FoxPro ODBC 드라이버를 사용 하 여 Visual Basic 응용 프로그램을 사용 하 여](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)  
   
--   [Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 c + + 응용 프로그램을 사용 하 여](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
+-   [Visual FoxPro ODBC 드라이버를 사용 하 여 프로그램 C를 사용 하 여 또는 C++ 응용 프로그램](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Microsoft Office에서 Visual FoxPro 데이터에 액세스](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)

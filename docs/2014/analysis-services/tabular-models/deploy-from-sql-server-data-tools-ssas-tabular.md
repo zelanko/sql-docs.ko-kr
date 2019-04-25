@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757339"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>SQL Server Data Tools에서 배포(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 배포 명령을 사용하여 테이블 형식 모델 솔루션을 배포하려면 이 항목의 태스크를 사용합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48054143"
 -   [배포 상태](#bkmk_deploy_status)  
   
 ##  <a name="bkmk_deploy"></a> 배포 옵션 및 배포 서버 속성 구성  
- 테이블 형식 모델 솔루션을 배포하기 전에 먼저 배포 옵션 및 배포 서버 속성을 지정해야 합니다. 배포 속성 설정에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)합니다.  
+ 테이블 형식 모델 솔루션을 배포하기 전에 먼저 배포 옵션 및 배포 서버 속성을 지정해야 합니다. 배포 속성 및 설정에 대한 자세한 내용은 [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)에서 배포 명령을 사용하여 테이블 형식 모델 솔루션을 배포하려면 이 항목의 태스크를 사용합니다.  
   
 #### <a name="to-configure-deployment-options-and-deployment-server-properties"></a>배포 옵션 및 배포 서버 속성을 구성하려면  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48054143"
  배포 작업을 중지하려면 클릭합니다. 이 옵션은 배포 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 솔루션 배포 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [기본 데이터 모델링 및 배포 속성 구성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
   
   

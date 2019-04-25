@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629635"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
-  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제공된 최상의 수행 방법 외에 다음의 FAQ 항목을 읽고 일반적인 질문 사항과 문제점에 대해 숙지하십시오. [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md)합니다.  
+  복제를 구성한 후에는 복제 토폴로지 관리 방법을 이해하는 것이 중요합니다. 이 항목에서는 다양한 영역의 작업에 대한 기본적인 수행 방법과 각 영역에 대한 추가 정보를 제공하는 링크를 제공합니다. 이 항목에 제시 된 최선의 방법 지침을 수행 하는 것 외에도 숙지 일반적인 질문 사항과 문제점에 자주 묻는 질문 항목을 고려 합니다. [복제 관리자를 위한 질문과 대답](frequently-asked-questions-for-replication-administrators.md).  
   
  최선의 수행 방법을 다음과 같은 두 가지 영역으로 나누면 이해가 쉽습니다.  
   

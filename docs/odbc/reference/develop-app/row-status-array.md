@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468630"
 ---
 # <a name="row-status-array"></a>행 상태 배열
 데이터 뿐만 아니라 **SQLFetch** 하 고 **SQLFetchScroll** 행 집합의 각 행의 상태를 제공 하는 배열을 반환할 수 있습니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR 문 특성을 통해 지정 됩니다. 이 배열 응용 프로그램에 의해 할당 되 고 SQL_ATTR_ROW_ARRAY_SIZE 문 특성에 의해 지정 된 만큼의 요소가 있어야 합니다. 배열의 값 설정 됩니다 **SQLBulkOperations**를 **SQLFetch**합니다 **SQLFetchScroll**, 및 **SQLSetPos 합니다.** 값의 행과 마지막 페치된 이후로 해당 상태가 변경 되었는지 여부 상태를 설명 합니다.  

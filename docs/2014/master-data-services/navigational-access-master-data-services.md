@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 74e29a2e266dd525893e5b2fe54ba82414e046c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763853"
 ---
 # <a name="navigational-access-master-data-services"></a>탐색 액세스 권한(Master Data Services)
   탐색 액세스 권한은 **모델** 탭에 지정된 모델 개체 보안에 적용됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52780865"
   
  컬렉션에 사용 권한을 할당할 경우 이름, 코드, 설명 및 소유자 ID를 읽거나 업데이트할 수 있습니다. 모델 이름을 읽을 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)  
   
   

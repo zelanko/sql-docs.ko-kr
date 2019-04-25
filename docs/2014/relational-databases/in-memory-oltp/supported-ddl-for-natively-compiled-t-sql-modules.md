@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467877"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 지원되는 구문
   이 항목에서는 고유하게 컴파일된 저장 프로시저에서 지원되는 구문에 대해 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48113213"
 ## <a name="security"></a>보안  
  다음 항목이 지원됩니다.  
   
--   프로시저: EXECUTE AS OWNER, SELF 및 사용자  
+-   프로시저: EXECUTE AS OWNER, SELF 및 사용자입니다.  
   
 -   테이블 및 프로시저에 대한 GRANT 및 DENY 권한  
   

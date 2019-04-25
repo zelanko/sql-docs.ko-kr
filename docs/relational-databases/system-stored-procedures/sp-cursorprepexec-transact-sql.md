@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62507343"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
  와 마찬가지로 *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청 된 다른 값을 할당할 수 있습니다.  
   
- *행 개수*  
+ *rowcount*  
  AUTO_FETCH에 사용할 인출 버퍼 행 수를 나타내는 선택적 매개 변수입니다. 기본값은 20개 행입니다. *행 개수* 입력된 값과 반환 값으로 할당할 때 다르게 동작 합니다.  
   
 |입력 값일 때|반환 값일 때|  

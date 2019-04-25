@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762352"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
   SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 인스턴스와 해당 인스턴스가 실행 중인 컴퓨터를 식별해야 합니다. 컴퓨터와 인스턴스를 지정하는 구문은 SQL Server 식별자 규칙과 Windows PowerShell 경로 규칙을 모두 준수해야 합니다.  
   
 1.  **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions)  
   
-2.  **인스턴스를 지정 합니다.**  [예제](#Examples)  
+2.  **인스턴스를 지정 합니다.**  [예](#Examples)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  

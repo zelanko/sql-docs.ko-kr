@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629093"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -37,22 +37,22 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  검색할 문자열 식입니다.  
   
- *비교*  
- (선택 사항) 정수 값입니다. 이 인수는 항상 무시되며, 다른 호환을 위해 정의 된 **Instr** 다른 언어의 함수입니다.  
+ *Compare*  
+ (선택 사항) 정수 값입니다. 이 인수는 항상 무시되며, 다른 호환성을 위해 정의 된 **Instr** 다른 언어의 함수입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 정수 값의 시작 위치와 *String2* 에 *String1*합니다.  
+ 시작 위치를 사용 하 여 정수 값 *String2* 에 *String1*합니다.  
   
- 또한 **InStr** 함수는 조건에 따라 다음 표에 나열 된 값을 반환 합니다.  
+ 또한 **InStr** 함수는 조건에 따라 다음 표의 값을 반환 합니다.  
   
 |조건|반환 값|  
 |---------------|------------------|  
-|String1의 길이가 0인 경우|영(0)|  
+|String1의 길이가 0인 경우|영 (0)|  
 |String1이 Null인 경우|정의되지 않음|  
 |String2의 길이가 0인 경우|start|  
 |String2가 Null인 경우|정의되지 않음|  
-|String2를 찾을 수 없는 경우|영(0)|  
-|start가 Len(String2)보다 큰 경우|영(0)|  
+|String2를 찾을 수 없는 경우|영 (0)|  
+|start가 Len(String2)보다 큰 경우|영 (0)|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -60,7 +60,7 @@ InStr([start, ]searched_string, search_string[, compare])
 >  **Instr** 항상 대/소문자 구분 비교를 수행 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는의 사용법을 보여 줍니다.는 **Instr** 함수 및 다른 표시 시나리오 발생 합니다.  
+ 다음 예제에서는 사용 합니다 **Instr** 함수와 다른 표시 될 시나리오입니다.  
   
 ```  
 with   

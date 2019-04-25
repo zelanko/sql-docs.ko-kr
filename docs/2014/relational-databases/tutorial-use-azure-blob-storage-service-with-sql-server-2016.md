@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523897"
 ---
 # <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>자습서: Microsoft Azure Storage의 SQL Server 데이터 파일 서비스
   Windows Azure 스토리지 서비스의 SQL Server 데이터 파일 자습서를 시작합니다. 이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  

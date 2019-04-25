@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 920ca38ae50975bfb187bbcf3d3a0bb14dfa917e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517627"
 ---
 # <a name="entities-master-data-services"></a>엔터티(Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "52769875"
  관련 모델 개체를 포함하여 엔터티에 대한 사용 권한을 사용자에게 부여할 수 있습니다. 자세한 내용은 [엔터티 권한&#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)을 참조하세요.  
   
 ## <a name="entity-examples"></a>엔터티 예  
- 다음 예는 Name, Code, Subcategory, StandardCost, ListPrice 및 FilePhoto 특성이 있습니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
+ 다음 예제에서는 이러한 특성을 가진 엔터티를 보여 줍니다. 이름, 코드, Subcategory, StandardCost, ListPrice 및 FilePhoto 합니다. 있습니다. 각 멤버는 단일 특성 값 행으로 표시됩니다.  
   
  ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   

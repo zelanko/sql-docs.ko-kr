@@ -22,16 +22,16 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0995b501bd1032cdbc067fcef6c8f59693ef9abf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466818"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  전체 텍스트 인덱싱 작업에 사용할 수 있는 각 문서 유형에 대해 행을 반환합니다. 각 행은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 등록되는 IFilter 인터페이스를 나타냅니다.  
+  전체 텍스트 인덱싱 작업에 사용할 수 있는 각 문서 유형에 대해 행을 반환합니다. 각 행은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 등록되는 IFilter 인터페이스를 나타냅니다.  
   
  
 |열 이름|데이터 형식|Description|  
@@ -40,7 +40,7 @@ ms.locfileid: "47812931"
 |**class_id**|**uniqueidentifier**|파일 확장명을 지원하는 IFilter 클래스의 GUID입니다.|  
 |**path**|**nvarchar(260)**|IFilter DLL의 경로입니다. 이 경로는 **serveradmin** 고정 서버 역할의 멤버만 볼 수 있습니다.|  
 |**version**|**sysname**|IFilter DLL의 버전입니다.|  
-|**manufacturer**|**sysname**|IFilter 제조업체의 이름입니다.<br /><br /> 참고: 제조업체로 문서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 지원 되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**manufacturer**|**sysname**|IFilter 제조업체의 이름입니다.<br /><br /> 참고: 으로 제조업체 인 문서만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 사용할 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

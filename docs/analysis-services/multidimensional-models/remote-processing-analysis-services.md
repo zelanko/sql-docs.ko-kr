@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472425"
 ---
 # <a name="remote-processing-analysis-services"></a>원격 처리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "40395803"
 -   원격 처리를 시도하기 전에 모든 기존 로컬 처리 오류를 해결합니다. 처리 요청이 로컬인 경우 외부 관계형 데이터 원본에서 데이터를 검색할 수 있는지 확인합니다. 데이터 검색에 사용되는 자격 증명 지정에 대한 지침은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.  
   
 ## <a name="on-demand-remote-processing"></a>요청 시 원격 처리  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자 권한이 있는 사용자 또는 응용 프로그램 계정의 처리 요청을 수락합니다. 관리자인 경우 원격 인스턴스에 연결하고 원격 연결을 통해 데이터베이스를 수동으로 처리할 수 있는지 확인하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자 권한이 있는 사용자 또는 애플리케이션 계정의 처리 요청을 수락합니다. 관리자인 경우 원격 인스턴스에 연결하고 원격 연결을 통해 데이터베이스를 수동으로 처리할 수 있는지 확인하세요.  
   
 1.  처리를 예약하는 데 사용할 컴퓨터에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 시작하고 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "40395803"
 2.  마지막 단계로, 정의하는 일정으로 실행되도록 작업을 수정하고 작업을 관리하는 데 필요한 경고 또는 알림을 추가합니다. 또한 처리 스크립트를 구체화하거나 개체를 독립적으로 처리하기 위해 작업에 여러 단계를 만들 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 에이전트 구성 요소](../../ssms/agent/sql-server-agent.md)   
- [SQL Server 에이전트를 사용 하 여 SSAS 관리 태스크 예약](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [일괄 처리 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
+ [SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [개체 처리 &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [개체 처리&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

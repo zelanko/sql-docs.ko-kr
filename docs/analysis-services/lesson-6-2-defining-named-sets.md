@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469770"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>단원 6-2-명명 된 집합 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -133,9 +133,9 @@ ms.locfileid: "52507658"
     ![설정 하는 두 개의 명명 된 포함 된 필터 창](../analysis-services/media/l6-named-set-05.gif "설정 하는 두 개의 명명 된 포함 된 필터 창")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[7 단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[7단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [새 명명된 집합](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [명명된 집합 만들기](../analysis-services/multidimensional-models/create-named-sets.md)  
   

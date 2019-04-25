@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629749"
 ---
 # <a name="join-filters"></a>Join Filters
   조인 필터를 사용하여 게시의 관련 테이블이 필터링되는 방식에 따라 테이블을 필터링할 수 있습니다. 일반적으로 부모 테이블은 매개 변수가 있는 필터를 사용하여 필터링됩니다. 그리고 나서 테이블 간 조인을 정의하는 방식과 매우 유사하게 하나 이상의 조인 필터가 정의됩니다. 조인 필터는 매개 변수가 있는 필터를 확장하므로 관련 테이블의 데이터는 조인 필터 절과 일치할 경우에만 복제됩니다.  

@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762024"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
   각 보고서 서버 인스턴스에는 보고서 서버에서 관리하는 보고서, 보고서 모델, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다. 기본 구성을 설치하는 경우 보고서 서버를 설치하는 동안 초기 연결을 만들 수 있습니다. 대부분의 경우 설치를 완료한 다음에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 구성합니다. 언제라도 연결을 수정하여 계정 유형을 변경하거나 자격 증명을 다시 설정할 수 있습니다. 데이터베이스를 만들고 연결을 구성하기 위한 단계별 지침은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
@@ -54,7 +54,7 @@ ms.locfileid: "48202655"
   
 -   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름  
   
--   보고서 서버 데이터베이스의 이름. 처음으로 연결을 만드는 경우 보고서 서버 데이터베이스를 새로 만들거나 기존 데이터베이스를 선택할 수 있습니다. 자세한 내용은 [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)합니다.  
+-   보고서 서버 데이터베이스의 이름. 처음으로 연결을 만드는 경우 보고서 서버 데이터베이스를 새로 만들거나 기존 데이터베이스를 선택할 수 있습니다. 자세한 내용은 [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)를 참조하세요.  
   
 -   자격 증명 유형. 서비스 계정, Windows 도메인 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용할 수 있습니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48202655"
  여러 보고서 서버에서 동일한 보고서 서버 데이터베이스를 사용하도록 구성할 수 있습니다. 이 배포 구성을 스케일 아웃 배포라고 합니다. 서버 클러스터에서 보고서 서버를 여러 개 실행하려는 경우 이 구성이 반드시 필요합니다. 그러나 서비스 애플리케이션을 분할하거나 새 보고서 서버 인스턴스의 설치 및 설정을 테스트한 다음 이를 기존 보고서 서버 설치와 비교하려는 경우에도 이 설정을 사용할 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472649"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
 연결 문자열 (즉, 매개 변수) 인수/값 쌍의 세미콜론으로 구분 된 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

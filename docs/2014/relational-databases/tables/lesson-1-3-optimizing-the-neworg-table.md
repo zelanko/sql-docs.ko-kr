@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761739"
 ---
 # <a name="optimizing-the-neworg-table"></a>NewOrg 테이블 최적화
   합니다 **NewOrd** 에서 만든 테이블의 [기존 계층적 데이터로 테이블 채우기](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) 작업 모든 직원 정보를 포함 하 고 를사용하여계층구조를나타냅니다`hierarchyid`데이터 형식입니다. 이 태스크에서는 새 인덱스를 추가하여 `hierarchyid` 열에서의 검색을 지원합니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146983"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     깊이 우선 인덱스: 직원 레코드가 해당 관리자에 인접하게 저장됩니다.  
+     깊이 우선 인덱스: 직원 레코드가 해당 관리자에 인접 하 저장 됩니다.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146983"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     **EmployeeID** 우선 인덱스: 행이 **EmployeeID** 시퀀스에 저장됩니다.  
+     **EmployeeID**-우선 인덱스: 행에 저장 됩니다 **EmployeeID** 시퀀스입니다.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   

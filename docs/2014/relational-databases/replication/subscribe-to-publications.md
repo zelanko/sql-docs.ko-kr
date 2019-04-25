@@ -25,11 +25,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629689"
 ---
 # <a name="subscribe-to-publications"></a>게시 구독
   구독은 게시에 있는 데이터 및 데이터베이스 개체 복사본에 대한 요청입니다. 구독은 어떤 게시를 언제 어디서 받을 것인지를 정의합니다. 구독을 계획하는 경우 에이전트 처리를 수행할 위치를 고려합니다. 선택한 구독 유형에 따라 에이전트가 실행되는 위치가 결정됩니다. 밀어넣기 구독을 사용하면 병합 에이전트 또는 배포 에이전트가 배포자에서 실행되고 끌어오기 구독을 사용하면 에이전트가 구독자에서 실행됩니다. 구독을 만든 후에는 해당 유형을 변경할 수 없습니다.  

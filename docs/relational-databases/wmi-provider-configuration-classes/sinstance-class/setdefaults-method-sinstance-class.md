@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: efef6f438e63fb195b0b97332dad334f111a1658
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62515468"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 메서드(SInstance 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ object.SetDefaults(OverwriteAll)
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*OverwriteAll*|인스턴스의 기존 값을 덮어쓸지 여부를 지정 하는 부울 값을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트: **true** 기존의 데이터를 덮어쓰는 경우 또는 **false** 경우 기존 데이터를 덮어쓰지 않습니다.|  
   

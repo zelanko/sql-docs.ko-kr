@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98e52afac4a14a1572658e74faf114d603081685
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506048"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>SQL Server 에이전트 작업 단계의 토큰 구문을 업데이트합니다.
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 사용된 토큰 구문이 변경되었습니다.  

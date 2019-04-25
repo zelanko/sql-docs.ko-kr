@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f644f882d1a252f678d868d3492b4aed4e11006f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510005"
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52531906"
  특성 열 값이 Null 값을 포함할 수 없음을 나타냅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다.  
   
  **MODEL_EXISTENCE_ONLY**  
- 열이 **누락** 하 고 **기존**합니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
+ 열은 두 가지 상태로 처리 됩니다 것을 나타냅니다. **누락** 하 고 **기존**합니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
   
  실제로 MODEL_EXISTENCE_ONLY 플래그 설정 **True** 가지 두 상태만 있도록 값의 표현을 변경: **누락** 하 고 **기존**합니다. 누락 이외의 상태는 모두 단일 **있음** 값으로 결합됩니다.  
   

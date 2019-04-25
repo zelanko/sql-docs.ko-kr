@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68c00133fde8c15fb028c013032c316658c056a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466842"
 ---
 # <a name="manage-changesets-master-data-services"></a>변경 집합 관리(Master Data Services)
 

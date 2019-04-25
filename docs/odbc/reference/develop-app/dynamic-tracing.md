@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468780"
 ---
 # <a name="dynamic-tracing"></a>동적 추적
 추적을 사용 하도록 설정 또는 언제 든 지 실행 응용 프로그램에서 사용 하지 않도록 설정 수 있습니다. 이렇게 하면 응용 프로그램을 여러 개의 함수 호출을 추적 합니다.  

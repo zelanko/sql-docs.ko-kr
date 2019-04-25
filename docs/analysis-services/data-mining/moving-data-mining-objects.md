@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509875"
 ---
 # <a name="moving-data-mining-objects"></a>데이터 마이닝 개체 이동
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "34016630"
 ### <a name="scripting"></a>스크립팅  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]개체를 스크립팅 하는 데 사용할 수 있는 여러 언어를 제공 합니다.  
   
--   **XMLA**: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체를 마우스 오른쪽 단추로 클릭하면 XMLA를 사용하여 개체를 스크립팅할 수 있습니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
+-   **XMLA**: 개체를 마우스 오른쪽 단추로 클릭 하 여 XMLA를 사용 하 여 개체를 스크립팅할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
   
--   **DMX**: [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공하는 템플릿 또는 쿼리 작성기 중 하나를 사용하여 스크립트를 만들 수 있습니다.  
+-   **DMX**: 템플릿을 사용 하 여 스크립트를 만들 수 있습니다 또는 쿼리 작성기 중 하나에서 제공 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다.  
   
  하지만 각 스크립트 언어로 수행할 수 있는 태스크에는 차이가 있습니다.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757831"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>테이블 바인딩 세부 정보(파티션 원본 대화 상자)(Analysis Services - 다차원 데이터)
   **파티션 원본** 대화 상자의 **테이블 바인딩** 옵션을 사용하여 파티션에 대한 데이터를 제공하는 팩트 테이블을 지정할 수 있습니다. **파티션 원본** 대화 상자의 **바인딩 유형** 옵션에서 **테이블 바인딩** 을 선택하여 이 창을 표시할 수 있습니다.  

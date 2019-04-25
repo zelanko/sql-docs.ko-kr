@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466520"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -282,7 +282,7 @@ ms.locfileid: "53205612"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 및 엔터티를 사용하여 데이터 구조를 작성하는 방법에 대한 개요는 [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
     
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)   
  [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)   
  [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

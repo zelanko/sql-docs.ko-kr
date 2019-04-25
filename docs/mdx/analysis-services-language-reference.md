@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c51a9b1364131630daddabec316c01992ffedfd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62521390"
 ---
 # <a name="analysis-services-language-reference"></a>Analysis Services 언어 참조
 
 
   [DAX(Data Analysis Expressions) 참조](https://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   
- [MDX&#40;Multidimensional Expression&#41; 참조](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [다차원 식 & #40; Mdx& #41; 참조](../mdx/multidimensional-expressions-mdx-reference.md)  
   
  [DMX&#40;Data Mining Extensions&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)  
   

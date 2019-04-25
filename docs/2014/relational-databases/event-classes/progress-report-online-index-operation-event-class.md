@@ -1,5 +1,5 @@
 ---
-title: 'Progress Report: Online Index Operation 이벤트 클래스 | Microsoft Docs'
+title: '진행률 보고서: Online Index Operation 이벤트 클래스 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520411"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation 이벤트 클래스
-  Progress Report: Online Index Operation 이벤트 클래스는 온라인 인덱스 작성 작업을 진행하는 동안 온라인 인덱스 작성 진행률을 나타냅니다.  
+# <a name="progress-report-online-index-operation-event-class"></a>진행률 보고서: Online Index Operation 이벤트 클래스
+  Progress Report: Online Index Operation 이벤트 클래스는 빌드 프로세스에서 실행 되는 동안 온라인 인덱스 빌드 작업의 진행률을 나타냅니다.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Online Index Operation 이벤트 클래스 데이터 열  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>진행률 보고서: Online Index Operation 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  

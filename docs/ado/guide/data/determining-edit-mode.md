@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472344"
 ---
 # <a name="determining-edit-mode"></a>편집 모드 확인
 ADO는 현재 레코드와 연결 된 편집 버퍼를 유지 합니다. 합니다 **EditMode** 속성은이 버퍼에 변경 사항이 있는지 여부 또는 새 레코드를 만들어졌는지를 나타냅니다. 사용 하 여 **EditMode** 현재 레코드의 편집 상태를 확인 합니다. 편집 프로세스가 중단 된 보류 중인 변경 내용에 대 한 테스트를 사용 해야 하는지 여부를 확인 합니다 **업데이트** 또는 **CancelUpdate** 메서드.  

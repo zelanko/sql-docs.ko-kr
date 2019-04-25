@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9833eb23936b41f63facb4ea4c018f23d8182377
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512234"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>동작 구성 도우미(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **동작** 탭의 **동작 구성 도우미** 창을 사용하여 지정한 큐브에 포함된 동작에 액세스할 수 있습니다.  

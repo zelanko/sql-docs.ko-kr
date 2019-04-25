@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471314"
 ---
 # <a name="divide-mdx"></a>나누기(MDX)
 
@@ -29,10 +29,10 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>인수  
- *분자*  
+ *numerator*  
  피제수 또는 나누어지는 숫자입니다.  
   
- *분모*  
+ *denominator*  
  제수 또는 나눌 숫자입니다.  
   
  *alternateresult*  
@@ -42,6 +42,6 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  0으로 나누기의 대체 결과는 상수여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512995"
 ---
 # <a name="how-extended-stored-procedures-work"></a>확장 저장 프로시저 작동 원리
     
@@ -34,7 +34,7 @@ ms.locfileid: "52804115"
   
 4.  확장 저장 프로시저가 결과 집합을 전달하고 확장 저장 프로시저 API를 통해 매개 변수를 서버로 반환합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 확장 저장 프로시저 프로그래밍](../database-engine-extended-stored-procedure-programming.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472828"
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드 집합** 지원 합니다 **BOF** 하 고 **EOF** 를 데이터 집합의 시작과 끝을 각각 설명 하는 속성입니다. 생각할 수 있습니다 **BOF** 하 고 **EOF** 시작과 끝에 배치 되는 "가상" 레코드로 합니다 **레코드 집합**합니다. 계산 **BOF** 하 고 **EOF**, 샘플 **레코드 집합** 은 이제 다음과 같습니다.  

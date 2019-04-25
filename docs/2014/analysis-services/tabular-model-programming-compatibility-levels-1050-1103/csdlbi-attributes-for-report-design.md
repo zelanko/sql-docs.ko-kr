@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757932"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
   이 섹션에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 쿼리 디자인에 영향을 주는 테이블 형식 모델링의 CSDL 확장에 있는 특성에 대해 설명합니다.  

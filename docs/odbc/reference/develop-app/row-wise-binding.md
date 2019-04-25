@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468698"
 ---
 # <a name="row-wise-binding"></a>행 단위 바인딩
 행 단위 바인딩을 사용 하는 경우 응용 프로그램 하나 또는 두 개가 포함 된 구조를 정의 또는 일부의 경우이 세 가지 데이터 반환 되는 각 열에 대 한 요소입니다. 첫 번째 요소에는 데이터 값을 보유 하 고 길이/표시기 버퍼를 보유 하는 두 번째 요소 키를 누릅니다. 표시기 및 길이 값은 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 다른 값을 설정 하 여 별도 버퍼에 저장할 있습니다. 이 작업을 하는 경우 구조는 세 번째 요소를 포함 합니다. 그런 다음 응용 프로그램은 행 집합의 행이 있는 만큼의 요소가 포함 된 이러한 구조의 배열을 할당 합니다.  

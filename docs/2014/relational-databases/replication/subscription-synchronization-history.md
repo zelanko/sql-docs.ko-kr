@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629709"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>구독, 동기화 기록(병합 구독, SQL Server 2005 이상)
   **동기화 기록** 탭은 상태, 아티클 통계, 기록, 정보 메시지, 모든 오류 메시지 등 병합 에이전트에 대한 자세한 정보를 표시합니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "54124423"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)   
  [복제 에이전트 개요](agents/replication-agents-overview.md)  
   

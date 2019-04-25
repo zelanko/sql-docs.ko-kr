@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5ed014aaed74ea9da70485b73d089e8ddaae0f43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765496"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 데이터를 다른 사용자와 공유하려는 경우 데이터를 MDS 리포지토리에 게시합니다. 데이터가 게시되는 즉시 추가 기능의 다른 사용자가 다운로드할 수 있습니다.  
