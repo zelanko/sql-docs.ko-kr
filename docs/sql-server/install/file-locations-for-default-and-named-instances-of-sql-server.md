@@ -31,7 +31,7 @@ ms.locfileid: "53213432"
 >  
 >  SQL Server 폴더 및 파일 형식을 제외하도록 바이러스 백신 및 스파이웨어 방지 애플리케이션과 같은 검색 소프트웨어를 구성해야 할 수도 있습니다. 자세한 내용은 다음 지원 문서를 검토하세요. [SQL Server를 실행하는 컴퓨터의 바이러스 백신 소프트웨어](https://support.microsoft.com/kb/309422).
 > 
->  시스템 데이터베이스(master, model, MSDB 및 tempdb)와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스는 SMB(서버 메시지 블록) 파일 서버에 저장소 옵션으로 설치될 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다. 자세한 내용은 [SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
+>  시스템 데이터베이스(master, model, MSDB 및 tempdb)와 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스는 SMB(서버 메시지 블록) 파일 서버에 스토리지 옵션으로 설치될 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다. 자세한 내용은 [SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)를 참조하세요.  
 >   
 >  Binn, Data, Ftdata, HTML, 1033 또는 1042 디렉터리나 포함된 내용을 삭제하지 마십시오. 필요한 경우 다른 디렉터리는 삭제할 수 있지만 삭제된 기능이나 데이터를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거했다가 다시 설치해야 합니다. HTML 디렉터리의 .htm 파일을 삭제하거나 수정하지 마십시오. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 올바르게 동작하는 데 필요합니다.  
   

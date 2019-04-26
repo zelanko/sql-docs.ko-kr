@@ -292,7 +292,7 @@ LOB_COMPACTION = OFF
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2016부터) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 columnstore 인덱스의 경우, REORGANIZE는 다음과 같은 추가 조각 모음 최적화를 온라인으로 수행합니다.  
   
--   행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, SQL Server는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 저장소를 절약합니다.  
+-   행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, SQL Server는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 스토리지를 절약합니다.  
   
 -   하나 이상의 압축된 rowgroup을 결합하여 rowgroup당 행 수를 최대 1,024,576개로 증가시킵니다. 예를 들어 행 102,400개의 대량 가져오기 5회를 수행하면 압축된 rowgroup 5개를 얻습니다. REORGANIZE를 실행하면 이러한 rowgroup이 크기 512,000행의 압축된 rowgroup 1개로 병합됩니다. 이때 사전 크기 또는 메모리 제한이 없는 것으로 가정합니다.  
   
@@ -965,7 +965,7 @@ REBUILD PARTITION = 12;
 ### <a name="g-change-a-clustered-columstore-index-to-use-archival-compression"></a>G. 클러스터형 columstore를 보관 압축을 사용하도록 변경  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에는 적용되지 않습니다.  
   
- COLUMNSTORE_ARCHIVE 데이터 압축 옵션을 사용하여 클러스터형 columstore 인덱스의 크기를 훨씬 더 줄이는 방법을 선택할 수 있습니다. 이 방법은 저렴한 저장소에 보관하려는 오래된 데이터에 실용적입니다. 일반적인 COLUMNSTORE 압축을 사용하면 압축 해제가 더 느려지므로 자주 액세스하지 않는 데이터에 대해서만 이 방법을 사용하는 것이 좋습니다.  
+ COLUMNSTORE_ARCHIVE 데이터 압축 옵션을 사용하여 클러스터형 columstore 인덱스의 크기를 훨씬 더 줄이는 방법을 선택할 수 있습니다. 이 방법은 저렴한 스토리지에 보관하려는 오래된 데이터에 실용적입니다. 일반적인 COLUMNSTORE 압축을 사용하면 압축 해제가 더 느려지므로 자주 액세스하지 않는 데이터에 대해서만 이 방법을 사용하는 것이 좋습니다.  
   
  다음 예에서는 보관 압축을 사용하기 위해 클러스터형 columnstore 인덱스를 다시 작성한 다음 보관 압축을 제거하는 방법을 보여 줍니다. 마지막 결과에서는 columnstore 압축만 사용합니다.  
   

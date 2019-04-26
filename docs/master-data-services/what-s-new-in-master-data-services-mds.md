@@ -28,7 +28,7 @@ ms.locfileid: "52764605"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
   
- **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면**  [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
+ **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면 ** [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
  **다운로드**  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52764605"
   
 ##  <a name="improved-transaction-log-maintenance"></a>향상된 트랜잭션 로그 유지 관리  
   
- 이제 미리 결정된 간격 또는 일정에 따라 시스템 설정을 사용하여 모델 수준에서 트랜잭션 로그를 정리할 수 있습니다. 데이터 변경 및 ETL 프로세스가 많은 MDS 시스템의 경우 이러한 테이블이 기하급수적으로 증가할 수 있으므로 성능 저하 및 저장소 공간 문제가 발생할 수 있습니다.  
+ 이제 미리 결정된 간격 또는 일정에 따라 시스템 설정을 사용하여 모델 수준에서 트랜잭션 로그를 정리할 수 있습니다. 데이터 변경 및 ETL 프로세스가 많은 MDS 시스템의 경우 이러한 테이블이 기하급수적으로 증가할 수 있으므로 성능 저하 및 스토리지 공간 문제가 발생할 수 있습니다.  
   
  다음과 같은 형식의 데이터를 로그에서 제거할 수 있습니다.  
   

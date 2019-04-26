@@ -1347,7 +1347,7 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
 
 ### <a name="a-simple-example"></a>1. 간단한 예
-데이터 웨어하우스 데이터베이스를 만드는 간단한 예 그러면 10240 GB의 가장 작은 최대 크기, SQL_Latin1_General_CP1_CI_AS의 기본 데이터 정렬 및 DW100인 가장 작은 계산 능력을 가진 데이터베이스가 생성됩니다.
+데이터 웨어하우스 데이터베이스를 만드는 간단한 예 그러면 10240 GB의 가장 작은 최대 크기, SQL_Latin1_General_CP1_CI_AS의 기본 데이터 정렬 및 DW100인 가장 작은 컴퓨팅 능력을 가진 데이터베이스가 생성됩니다.
 
 ```sql
 CREATE DATABASE TestDW
@@ -1429,7 +1429,7 @@ AUTOGROW가 OFF인 경우 사용자가 *distributed_size*를 초과하여 크기
 
 AUTOGROW가 ON인 경우 로그 파일은 이 제한을 초과하여 성장하도록 허용됩니다. [DBCC SHRINKLOG(Azure SQL 데이터 웨어하우스)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) 문을 사용하여 로그 파일의 크기를 원래 크기로 줄입니다.
 
-AUTOGROW가 OFF인 경우 *log_size*를 초과한 개별 계산 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.
+AUTOGROW가 OFF인 경우 *log_size*를 초과한 개별 컴퓨팅 노드에서 로그 크기를 증가시키는 모든 작업에 대해서 사용자에게 오류가 반환됩니다.
 
 ## <a name="permissions"></a>사용 권한
 master 데이터베이스에서 `CREATE ANY DATABASE` 권한 또는 **sysadmin** 고정 서버 역할에서 멤버자격이 필요합니다.
@@ -1451,7 +1451,7 @@ GO
 
 데이터베이스에 대한 최소 및 최대 제약 조건에 관한 자세한 내용은 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]에서 “최소 및 최대 값”을 참조합니다.
 
-데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 계산 노드*에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
+데이터베이스를 만들 경우 다음 크기의 총합계를 할당하기 위해 *각 컴퓨팅 노드*에 충분히 사용할 수 있는 여유 공간이 있어야 합니다.
 
 - *replicated_table_size* 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
 - (*distributed_table_size* / 계산 노드 수) 크기의 테이블이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.
@@ -1466,7 +1466,7 @@ DATABASE 개체에 대한 공유 잠금을 사용합니다.
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 ### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제
-다음 예제에서는 복제된 테이블에 대해 계산 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.
+다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.
 
 ```sql
 CREATE DATABASE mytest
@@ -1488,7 +1488,7 @@ CREATE DATABASE mytest
 ```
 
 ### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
-다음 예제에서는 복제된 테이블에 대해 계산 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.
+다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.
 
 ```sql
 CREATE DATABASE mytest

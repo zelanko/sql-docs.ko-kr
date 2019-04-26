@@ -56,7 +56,7 @@ ms.locfileid: "53590767"
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조하세요.|  
 |기능|계산 열|**적용 대상:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>계산된 열은 메모리 최적화 테이블에서 지원되지 않습니다. **CREATE TABLE** 문에서 계산된 열을 제거합니다.<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 이상은 메모리 최적화 테이블 및 인덱스에서 계산된 열을 지원합니다.|  
 |기능|복제|복제는 메모리 최적화 테이블에서 지원되지 않습니다.|  
-|기능|FILESTREAM|FILESTREAM 저장소는 메모리 최적화 테이블의 열에 지원되지 않습니다. 열 정의에서 **FILESTREAM** 키워드를 제거합니다.|  
+|기능|FILESTREAM|FILESTREAM 스토리지는 메모리 최적화 테이블의 열에 지원되지 않습니다. 열 정의에서 **FILESTREAM** 키워드를 제거합니다.|  
 |기능|SPARSE|메모리 최적화 테이블의 열을 SPARSE로 정의할 수 없습니다. 열 정의에서 **SPARSE** 키워드를 제거합니다.|  
 |기능|ROWGUIDCOL|ROWGUIDCOL 옵션은 메모리 최적화 테이블의 열에서 지원되지 않습니다. 열 정의에서 **ROWGUIDCOL** 키워드를 제거합니다.|  
 |기능|FOREIGN KEY|**적용 대상:** [!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] 및 SQL Server [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)] 이상<br/>메모리 최적화 테이블에의 경우 외래 키 제약 조건은 다른 메모리 최적화 테이블의 기본 키를 참조하는 외래 키에서만 지원됩니다. 외래 키가 고유 제약 조건을 참조하는 경우 테이블 정의에서 제약 조건을 제거합니다.<br/><br/>[!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)]에서 외래 키 제약 조건은 메모리 최적화 테이블에 지원되지 않습니다.|  
