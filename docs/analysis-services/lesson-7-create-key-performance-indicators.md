@@ -1,5 +1,5 @@
 ---
-title: '7 단원: 핵심 성과 지표 만들기 | Microsoft Docs'
+title: '7단원: 핵심 성과 지표 만들기 | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523361"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>7단원: 핵심 성과 지표 만들기
+# <a name="lesson-7-create-key-performance-indicators"></a>7단원: KPI(핵심 성과 지표) 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 KPI(핵심 성과 지표)를 만듭니다. KPI는 *기본* 측정값으로 정의된 값을 측정값이나 절대값으로 정의된 *대상* 값과 비교하여 값 성과를 측정하는 데 사용됩니다. 비즈니스 전문가는 보고 클라이언트 애플리케이션에서 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 이해하기 쉬운 요약 정보를 얻거나 추세를 확인할 수 있습니다. 자세한 내용은 참조 하세요 [Kpi](../analysis-services/tabular-models/kpis-ssas-tabular.md)합니다.  
   
-이 단원에 소요되는 예상 시간: **15분**  
+예상이 단원을 완료 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [6 단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)합니다.   
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [6단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)합니다.   
   
 ## <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기  
   
@@ -50,7 +50,7 @@ ms.locfileid: "42790104"
   
 8.  **아이콘 스타일 선택**에서 다이아몬드(빨간색), 삼각형(노란색), 원(녹색) 아이콘 유형을 선택합니다.
   
-    ![으로-테이블 형식-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > 확장 가능한 **설명을** 가능한 아이콘 스타일 아래에 레이블을 합니다. 이 사용 하 여 클라이언트 응용 프로그램에서 쉽게 식별할 수 있도록 다양 한 KPI 요소에 대 한 설명을 입력 합니다.  
@@ -78,6 +78,6 @@ ms.locfileid: "42790104"
 6.  **아이콘 스타일 선택**에서 다이아몬드(빨간색), 삼각형(노란색), 원(녹색) 아이콘 유형을 선택한 다음 **확인**을 클릭합니다.  
   
 ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [8 단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)합니다.
+다음 단원으로 이동 합니다. [8단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)합니다.
   
   

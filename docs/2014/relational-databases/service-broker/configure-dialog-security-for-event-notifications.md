@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630723"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성해야 합니다. 대화 보안은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 높은 수준의 대화 보안 모델에 따라 수동으로 구성해야 합니다. 높은 수준의 보안 모델은 원격 서버와 주고 받는 메시지의 암호화 및 암호 해독을 가능하게 합니다. 이벤트 알림은 한 방향으로 전송되지만 오류와 같은 다른 메시지는 반대 방향으로도 반환됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "53359525"
 > [!IMPORTANT]  
 >  모든 인증서는 유효한 시작 날짜와 만료 날짜를 사용하여 만들어야 합니다.  
   
- **1 단계: TCP 포트 번호와 대상 서비스 이름을 설정 합니다.**  
+ **1단계: TCP 포트 번호와 대상 서비스 이름을 설정 합니다.**  
   
  원본 서버와 대상 서버가 메시지를 받을 TCP 포트를 설정합니다. 대상 서비스의 이름도 결정해야 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53359525"
 |대상 서버가 액세스할 수 있는 파일에[인증서를 백업합니다](/sql/t-sql/statements/backup-certificate-transact-sql) .|원본 서버가 액세스할 수 있는 파일에 인증서를 백업합니다.|  
 |대상 데이터베이스의 사용자와 WITHOUT LOGIN을 지정하여[사용자를 만듭니다](/sql/t-sql/statements/create-user-transact-sql). 이 사용자는 백업 파일로부터 생성될 대상 데이터베이스 인증서를 소유하게 됩니다. 이 사용자는 다음 3단계에서 만드는 대상 데이터베이스 인증서를 소유하는 용도로만 사용되므로 사용자를 로그인에 매핑할 필요는 없습니다.|원본 데이터베이스의 사용자와 WITHOUT LOGIN을 지정하여 사용자를 만듭니다. 이 사용자는 백업 파일로부터 생성될 원본 데이터베이스 인증서를 소유하게 됩니다. 이 사용자는 다음 3단계에서 만드는 원본 데이터베이스 인증서를 소유하는 용도로만 사용되므로 사용자를 로그인에 매핑할 필요는 없습니다.|  
   
- **3 단계: 인증서를 공유 하 고 데이터베이스 수준 인증에 대 한 사용 권한을 부여 합니다.**  
+ **3단계: 인증서를 공유 하 고 데이터베이스 수준 인증에 대 한 사용 권한을 부여 합니다.**  
   
  원본 서버와 대상 서버 둘 다에서 다음 동작을 완료합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "53359525"
 ||원본 데이터베이스 사용자에게 대상 서비스에 대한[SEND 권한을 부여합니다](/sql/t-sql/statements/grant-transact-sql) .|  
 |대상 서버에 원본 데이터베이스의 Service Broker 식별자를 제공합니다. 이 식별자는 **sys.databases** 카탈로그 뷰의 [service_broker_guid](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열을 쿼리하면 얻을 수 있습니다. 서버 수준 이벤트 알림의 경우 **msdb**의 Service Broker 식별자를 사용합니다.|원본 서버에 대상 데이터베이스의 Service Broker 식별자를 제공합니다.|  
   
- **4 단계: 경로 만들고 서버 수준의 인증을 설정 합니다.**  
+ **4단계: 경로 만들고 서버 수준의 인증을 설정 합니다.**  
   
  원본 서버와 대상 서버 둘 다에서 다음 동작을 완료합니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53359525"
 |대상 인증자 로그인에 엔드포인트에 대한[CONNECT 권한을 부여합니다](/sql/t-sql/statements/grant-transact-sql) .|원본 인증자 로그인에 엔드포인트에 대한 CONNECT 권한을 부여합니다.|  
 |[사용자를 만들고](/sql/t-sql/statements/create-user-transact-sql)대상 인증자 로그인을 지정합니다.|사용자를 만들고 원본 인증자 로그인을 지정합니다.|  
   
- **5 단계: 서버 수준의 인증에 대 한 인증서를 공유 하 고 이벤트 알림을 생성 합니다.**  
+ **5단계: 서버 수준의 인증에 대 한 인증서를 공유 하 고 이벤트 알림을 생성 합니다.**  
   
  원본 서버와 대상 서버 둘 다에서 다음 동작을 완료합니다.  
   

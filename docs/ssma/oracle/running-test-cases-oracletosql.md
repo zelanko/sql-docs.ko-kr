@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625802"
 ---
 # <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
 SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우 테스트에 성공 합니다. Oracle 간에 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트에 스키마 매핑 설정에 따라 결정 됩니다.  
@@ -49,7 +49,7 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대 한 
 |USER_TABLE$ AUDID|테이블|새로운 기능과 변경 된 행을 저장 하는 테이블입니다.|  
 |USER_TABLE|뷰|테이블 수정의 간소화 된 표현입니다.|  
 |새 USER_TABLE $|뷰|삽입 되거나 덮어쓸 행의 간소화 된 표현입니다.|  
-|USER_TABLE$ NEW_ID|뷰|삽입 되거나 변경 된 행의 id입니다.|  
+|USER_TABLE$NEW_ID|뷰|삽입 되거나 변경 된 행의 id입니다.|  
 |USER_TABLE$ 이전|뷰|행을 삭제 하 고 덮어쓸의 간소화 된 표현입니다.|  
   
 다음 개체에 확인 된 테이블의 스키마에 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

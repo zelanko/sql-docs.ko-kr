@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632550"
 ---
 # <a name="unicode"></a>유니코드
 유니코드는 많은 언어의 문자 인코딩을 정의 합니다.  

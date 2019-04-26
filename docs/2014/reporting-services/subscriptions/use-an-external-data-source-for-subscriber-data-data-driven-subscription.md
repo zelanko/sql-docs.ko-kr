@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631846"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>구독자 데이터에 외부 데이터 원본 사용(데이터 기반 구독)
   데이터 기반 구독에서는 외부 데이터 원본에서 데이터를 검색하는 쿼리 또는 명령에 의해 동적 구독 데이터가 제공됩니다. 데이터 기반 구독 처리 요구 사항을 만족하는 지원되는 모든 데이터 원본에서 구독 데이터를 검색할 수 있습니다. 쿼리 또는 명령 구문은 보고서 서버와 함께 설치되는 데이터 처리 확장 프로그램에 유효해야 합니다.  

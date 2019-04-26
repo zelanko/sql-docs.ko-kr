@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632416"
 ---
 # <a name="parameter-data-types"></a>매개 변수 데이터 형식
 각 매개 변수에 지정 된 경우에 **SQLBindParameter** 은 입력 내장 데이터가 없을 경우 SQL 데이터 형식의 SQL 문에서 매개 변수를 사용 하 여 정의 합니다. 따라서 문에서 다른 피연산자에서 해당 데이터 형식을 유추할 수 있습니다. 경우에 매개 변수 표식은 SQL 문에 포함할 수 있습니다. 와 같은 산술 식의 예를 들어? + 열 1을 나타내는 명명 된 열의 데이터 형식에서 COLUMN1, 매개 변수의 데이터 형식을 유추할 수 있습니다. 응용 프로그램 데이터 형식을 확인할 수 없는 경우 매개 변수 표식을 사용할 수 없습니다.  

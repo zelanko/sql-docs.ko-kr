@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524475"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
   지리 공간 데이터 형식인 `geography`는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원 (둥근 표면) 데이터를 저장 합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "53369495"
 ###  <a name="gml"></a> GML 텍스트 입력으로부터 지리 인스턴스 구성  
  합니다 `geography` 데이터 형식을 생성 하는 메서드를 제공 합니다.는 `geography` 의 XML 표현인 GML에서 인스턴스를 `geography` 인스턴스. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
   
- Geography Markup Language에 대한 자세한 내용은 OGC [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Geography Markup Language에 대 한 자세한 내용은 OGC 사양을 참조 하세요. [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.  
   
  **GML 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [GeomFromGML&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  
@@ -266,7 +266,7 @@ ms.locfileid: "53369495"
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [공간 데이터&#40;SQL Server&#41;](spatial-data-sql-server.md)  
   
   

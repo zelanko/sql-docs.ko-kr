@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626060"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>마이그레이션된 데이터베이스 개체 테스트(OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA 테스터) Oracle 테스터를 위한 데이터베이스 개체를 변환 하 고 SSMA 수행한 데이터 마이그레이션에 자동으로 테스트 합니다. 모든 SSMA 마이그레이션 단계가 완료 되 면 모든 데이터가 제대로 전송 된 및 변환 된 개체가 동일한 방식으로 작동 하는지 확인 하려면 SSMA 테스터를 사용 합니다.  
@@ -58,7 +58,7 @@ SSMA 테스터를 사용 하려는 경우 사용 하 여 SSMA Oracle 확장 팩�
   
 SSMA 테스터의 현재 버전은 동일한 원본 또는 대상 서버에서 다른 사용자가 병렬 실행을 지원 하지 note 합니다.  
   
-## <a name="getting-started"></a>시작  
+## <a name="getting-started"></a>시작하기  
 [테스트 사례 만들기 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>관련 항목  

@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524379"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
   DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 메모리에 상주하는 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 이 테이블에서 데이터를 직접 수정하거나 CREATE INDEX와 같은 DDL(데이터 정의 언어) 작업을 수행할 수 없습니다.  

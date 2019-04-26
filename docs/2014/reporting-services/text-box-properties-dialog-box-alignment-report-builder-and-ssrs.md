@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631285"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>입력란 속성 대화 상자, 맞춤(보고서 작성기 및 SSRS)
   **입력란 속성** 대화 상자의 **맞춤** 을 선택하여 선택한 셀 또는 데이터 영역 내 값의 위치를 지정할 수 있습니다.  

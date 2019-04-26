@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626586"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>바인딩된 Text 및 Image 열과 바인딩되지 않은 Text 및 Image 열
   서버 커서를 사용 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 바인딩되지 않은 대 한 데이터를 전송 하지 않도록 최적화 되어 **텍스트**를 **ntext**, 또는 **이미지** 열에는 시간 **SQLFetch** 수행 됩니다. **텍스트**, **ntext**, 또는 **이미지** 데이터는 검색 되지 않습니다 서버에서 응용 프로그램 문제까지 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 에 열입니다.  

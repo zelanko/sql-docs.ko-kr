@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631724"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>테이블 및 열에 대한 의미 체계 검색 사용
   문서 또는 텍스트가 들어 있는 선택한 열에서 통계 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -115,7 +115,7 @@ GO
  **SQL Server Management Studio를 사용 하 여 새 의미 체계 인덱스 만들기**  
  전체 텍스트 인덱싱 마법사를 실행하고 **테이블 열 선택** 페이지에서 의미 체계 인덱스를 만들 각 열에 대해 **통계 의미 체계** 를 사용하도록 설정합니다. 전체 텍스트 인덱싱 마법사를 시작하는 방법을 비롯한 자세한 내용은 [전체 텍스트 인덱싱 마법사 사용](use-the-full-text-indexing-wizard.md)을 참조하세요.  
   
-###  <a name="HowToEnableAlter"></a> 어떻게: 기존 전체 텍스트 인덱스가 있을 때 의미 체계 인덱스 만들기  
+###  <a name="HowToEnableAlter"></a> 어떻게: 기존 전체 텍스트 인덱스에 있을 때 의미 체계 인덱스 만들기  
  **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 추가할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 추가할 수 있습니다.  
   
  **TRANSACT-SQL을 사용 하 여 의미 체계 인덱스 추가**  
@@ -271,7 +271,7 @@ GO
   
  인덱싱할 문서 형식이 지원되는 형식 목록에 없는 경우 추가 필터를 찾은 다음 다운로드하여 설치해야 할 수 있습니다. 자세한 내용은 [등록된 필터와 단어 분리기 보기 및 변경](view-or-change-registered-filters-and-word-breakers.md)을 참조하세요.  
   
-##  <a name="BestPracticeFilegroup"></a> 최선의 구현 방법: 전체 텍스트 및 의미 체계 인덱스에 대한 개별 파일 그룹을 만들 때의 고려 사항  
+##  <a name="BestPracticeFilegroup"></a> 최선의 구현 방법: 전체 텍스트 및 의미 체계 인덱스에 대 한 별도 파일 그룹을 만드는 것이 좋습니다  
  디스크 공간 할당이 중요한 경우 전체 텍스트 및 의미 체계 인덱스에 대한 별도의 파일 그룹을 만드는 것이 좋습니다. 의미 체계 인덱스는 전체 텍스트 인덱스와 동일한 파일 그룹에 만들어집니다. 완전히 채워진 의미 체계 인덱스에는 많은 양의 데이터가 포함될 수 있습니다.  
   
 ##  <a name="BestPracticeUnderstand"></a>   

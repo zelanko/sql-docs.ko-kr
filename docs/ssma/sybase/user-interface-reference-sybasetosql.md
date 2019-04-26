@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626563"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>사용자 인터페이스 참조(SybaseToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase 합니다.  

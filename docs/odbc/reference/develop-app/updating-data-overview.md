@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632668"
 ---
 # <a name="updating-data-overview"></a>데이터 업데이트 개요
 SQL 문을 실행 하 여 또는 호출 하 여 응용 프로그램 데이터를 업데이트할 수 있습니다 **SQLSetPos** 하거나 **SQLBulkOperations**합니다. **업데이트**, **삭제**, 및 **삽입** 문 데이터 원본에 직접 작업할 및 드라이버에서 일반적으로 지원 됩니다. 업데이트 검색 및 delete 문을 변경 하려면 행에 대 한 사양 포함 합니다. 배치 업데이트 및 delete 문 및 **SQLSetPos** 커서를 통해 데이터 원본에서 역할 및 널리 지원 됩니다.  

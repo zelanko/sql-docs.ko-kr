@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524096"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
   이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 생성한 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  

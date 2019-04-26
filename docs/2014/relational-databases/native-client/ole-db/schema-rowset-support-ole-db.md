@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625969"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 처리할 때 또한 네이티브 클라이언트 OLE DB 공급자는 연결 된 서버에서 스키마 정보를 반환 지원 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 분산 쿼리 합니다.  

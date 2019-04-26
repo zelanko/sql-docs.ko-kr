@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 23d5177ace1079525ae880b36617904a164ad5d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632054"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>전역 설정 (대화 상자) (SybaseToSQL)
 대화 상자 페이지를 사용 합니다 **전역 설정** SSMA에 대 한 경고 설정을 확인 하 고 기본 사용자 동작을 지정 하려면 대화 상자.  

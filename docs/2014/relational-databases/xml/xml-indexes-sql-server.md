@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631369"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
   XML 인덱스를 `xml` 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "58533975"
   
 -   보조 XML 인덱스  
   
- `xml` 형식 열의 첫 번째 인덱스는 기본 XML 인덱스여야 합니다. 기본 XML 인덱스를 사용하면 PATH, VALUE 및 PROPERTY 형식의 보조 인덱스가 지원됩니다. 이러한 보조 인덱스는 쿼리 유형에 따라 쿼리 성능을 향상시킬 수 있습니다.  
+ `xml` 형식 열의 첫 번째 인덱스는 기본 XML 인덱스여야 합니다. 기본 XML 인덱스를 사용 하 여 보조 인덱스 유형은 지원 됩니다. PATH, VALUE 및 PROPERTY 합니다. 이러한 보조 인덱스는 쿼리 유형에 따라 쿼리 성능을 향상시킬 수 있습니다.  
   
 > [!NOTE]  
 >  데이터베이스 옵션이 `xml` 데이터 형식 작업에 대해 제대로 설정되지 않을 경우 XML 인덱스를 만들거나 수정할 수 없습니다. 자세한 내용은 [XML 열에 전체 텍스트 검색 사용](use-full-text-search-with-xml-columns.md)을 참조하세요.  

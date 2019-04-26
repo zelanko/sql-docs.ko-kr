@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625767"
 ---
 # <a name="save-metadata--oracletosql"></a>메타데이터 저장(OracleToSQL)
 합니다 **메타 데이터 저장** SSMA 프로젝트를 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일이이 있습니다.  

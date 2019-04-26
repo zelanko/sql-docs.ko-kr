@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513277"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server 트랜잭션 잠금 및 행 버전 관리 지침
 

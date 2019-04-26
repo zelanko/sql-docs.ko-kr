@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633028"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>형식 매핑 편집(SybaseToSQL)
 합니다 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "47745471"
 **보낸 사람**  
 이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식에서 시작 하는 범위에 대 한이 매핑 임을 지정 하려면 10을 입력할 수 있습니다 **nchar(10)** 합니다.  
   
-**수행할 작업**  
+**대상**  
 이 매핑에 대 한 최대 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식으로이 매핑은 끝 범위를 지정 하는 20을 입력할 수 있습니다 **nchar(20)** 합니다.  
   
 **대상 유형**  

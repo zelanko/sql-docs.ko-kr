@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630896"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>프로젝트 설정(시스템 개체 로드)(OracleToSQL)
 시스템 개체 로드 페이지의 **프로젝트 설정** 대화 상자는 Oracle 시스템 개체 SSMA 변환 및 로드를 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47664247"
   
 -   SYS.DBMS_SQL  
   
--   SYS입니다. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Oracle 개체 추가 시스템 개체를 참조 하는 경우 해당 개체를 선택 해야 합니다. Oracle 데이터베이스 개체에 의해 참조 되는 시스템 개체를 선택 하지 않으면 SSMA 변환 오류를 보고 합니다. 누락 된 시스템 개체 인해 변환 오류가 발생할 경우이 대화 상자에서 누락 된 개체를 선택 합니다. 그런 다음 필요에 따라 변환을 반복할 수 있습니다.  
   

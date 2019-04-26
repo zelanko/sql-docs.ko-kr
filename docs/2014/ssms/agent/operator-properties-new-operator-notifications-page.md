@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630690"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>연산자 속성: 새 운영자 (알림 페이지)
+# <a name="operator-properties-new-operator-notifications-page"></a>연산자 속성: 새 연산자(알림 페이지)
   이 페이지를 사용하여 운영자에게 알릴 경고 및 작업을 설정할 수 있습니다.  
   
 ## <a name="options"></a>변수  

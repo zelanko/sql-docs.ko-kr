@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626106"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에서 동작 폼 편집기 창을 사용하여 표준 작업을 생성 및 수정할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48225553"
 |-----------|---------------------|  
 |특성 멤버|**대상 개체**의 특성에 기반한 수준에서 멤버가 선택됩니다.|  
 |셀|**대상 개체** 의 명명된 집합이 선택됩니다. 큐브의 모든 셀을 선택하려면 **셀 추가** 를 선택합니다.|  
-|Cube|**대상 개체** 의 큐브가 선택됩니다. 현재 큐브를 사용하려면 CURRENTCUBE를 선택합니다.<br /><br /> 참고: CURRENTCUBE를 사용하면 큐브의 이름을 바꾸거나 동작을 다른 큐브로 복사하는 경우 이식성이 향상됩니다. CURRENTCUBE를 사용하여 현재 큐브를 나타내는 것이 좋습니다.|  
+|Cube|**대상 개체** 의 큐브가 선택됩니다. 현재 큐브를 사용하려면 CURRENTCUBE를 선택합니다.<br /><br /> 참고: CURRENTCUBE를 사용 하는 큐브의 이름을 바꿀 수 또는 작업을 다른 큐브로 복사 하는 경우 이식성을 제공 합니다. CURRENTCUBE를 사용하여 현재 큐브를 나타내는 것이 좋습니다.|  
 |차원 멤버|**대상 개체** 의 차원 멤버가 선택됩니다.|  
 |계층|**대상 개체** 의 계층이 선택됩니다.|  
 |계층 멤버|**대상 개체** 의 계층 내에 있는 멤버가 선택됩니다.|  

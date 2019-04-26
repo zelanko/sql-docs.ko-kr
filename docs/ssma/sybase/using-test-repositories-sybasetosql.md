@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625830"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 사용(SybaseToSQL)
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례와 나중에 사용할 테스트 결과입니다. 리포지토리 데이터를 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 하 고 **RunTestCaseResultRepository** 스키마에서 **ssma_sybase_utilities** 의**ssmatesterdb_syb** 데이터베이스입니다.  
@@ -64,7 +64,7 @@ SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례와 �
   
 -   이름: 테스트 사례 이름입니다.  
   
--   Started: 실행의 테스트 사례 날짜입니다.  
+-   시작: 실행의 테스트 사례 날짜입니다.  
   
 -   결과: (이 셀의 도구 설명 전체 테스트 실행 요약을 표시 하는 데 사용) 테스트 실행의 한 간단한 요약입니다.  
   

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524187"
 ---
 # <a name="multilinestring"></a>MultiLineString
   A `MultiLineString` 0 개 이상의 컬렉션인 `geometry` 하거나 **geographyLineString** 인스턴스.  

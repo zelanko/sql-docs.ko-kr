@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524337"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 시작 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 처음으로 사용하는 사용자 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 설치한 사용자를 위해 작성되었습니다. 이 간단한 자습서를 사용하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 처음 사용하는 경우 도움이 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "53355193"
   
  이 자습서는 다음 두 단원으로 이루어져 있습니다.  
   
- [1 단원: 데이터베이스 엔진에 연결](lesson-1-connecting-to-the-database-engine.md)  
+ [1단원: 데이터베이스 엔진에 연결](lesson-1-connecting-to-the-database-engine.md)  
  이 단원에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 연결하는 방법과 추가 사용자가 연결할 수 있도록 설정하는 방법을 설명합니다.  
   
  [2단원: 다른 컴퓨터에서 연결](lesson-2-connecting-from-another-computer.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "53355193"
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 설치한 사용자를 위해 작성되었습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 프로그램으로 설치할 수도 있고 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=144346)에서 다운로드하여 설치할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [자습서: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

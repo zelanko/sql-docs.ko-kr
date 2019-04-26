@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29d251c05639d928f3ea5a9925a4cc21935e0529
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630881"
 ---
 # <a name="is-mdx"></a>IS(MDX)
 
@@ -36,13 +36,13 @@ Expression1 IS ( Expression2 | NULL )
  MDX 개체 참조를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 반환 하는 부울 값 **true** 두 인수는 같은 개체;를 참조 하는 경우 이렇게 하지 않으면 **false**합니다. 경우는 **NULL** 연산자 반환 키워드를 지정 **true** 경우 *Expression1* 은 **null**, 그렇지 않으면 **false**합니다.  
+ 반환 하는 부울 값 **true** 인수가 모두 동일한 개체;를 참조 하는 경우이 고, 그렇지 **false**합니다. 경우는 **NULL** 키워드를 지정 하는 연산자를 반환 합니다 **true** 하는 경우 *Expression1* 됩니다 **null**고, 그렇지 않으면 **false** .  
   
 ## <a name="remarks"></a>Remarks  
- **IS** 연산자는 대개 튜플 및 멤버가 지 확인 idempotent 값과 동일을 있음을 의미 합니다.  
+ 합니다 **IS** 연산자는 대개 지 여부를 확인할 튜플 및 멤버가 멱 등 원, 정확히 동일한 지를 의미 합니다.  
   
 ## <a name="examples"></a>예  
- 사용 하는 방법을 보여 주는 다음 예제는 **IS** 연산자 축에 있는 현재 멤버가 특정 멤버 인지 확인 하려면:  
+ 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 **IS** 연산자 축에 있는 현재 멤버가 특정 멤버 인지 확인 하려면:  
   
  `With`  
   

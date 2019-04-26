@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45c66f4092304d804f5e5401aceba1fcefc135e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632208"
 ---
 # <a name="use-my-subscriptions"></a>내 구독 사용
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 관리자 포함 된 **내 구독** 구독을 한 곳에서 모든 구성 페이지입니다. 내 구독을 사용하여 기존 구독을 보고, 수정하고, 삭제할 수 있습니다. 하지만 내 구독을 사용하여 구독을 만들 수는 없습니다.  

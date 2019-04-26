@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625877"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>테이블 반환 매개 변수 진단 레코드 필드
   두 개의 새 진단 필드인 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER가 진단 레코드에 추가되었습니다. 두 필드는 오류 및 경고와 관련된 테이블 반환 매개 변수 열 값을 확인하는 데 유용합니다.  
