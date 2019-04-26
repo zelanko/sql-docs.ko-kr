@@ -154,7 +154,7 @@ OPENROWSET
 
 'errorfile_data_source_name'   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.
-가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 저장소 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
+가져오는 동안 발견된 오류를 포함할 오류 파일의 Azure Blob 스토리지 위치를 가리키는 명명된 외부 데이터 원본입니다. 외부 데이터 원본은 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1에서 추가된 `TYPE = BLOB_STORAGE` 옵션을 사용하여 만들어야 합니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)를 참조하세요.
   
  FIRSTROW =*first_row*  
  로드할 첫 번째 행의 번호를 지정합니다. 기본값은 1입니다. 지정한 데이터 파일의 첫 번째 행을 나타냅니다. 행 번호는 행 종결자를 계산하여 결정됩니다. FIRSTROW는 1부터 시작합니다.  
@@ -417,9 +417,9 @@ SELECT * FROM OPENROWSET(
 > Microsoft Azure SQL Database는 Windows 파일에서 읽기를 지원하지 않습니다.
 
 
-### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9. Azure Blob 저장소에 저장된 파일에서 데이터에 액세스   
+### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>9. Azure Blob 스토리지에 저장된 파일에서 데이터에 액세스   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]CTP 1.1.   
-다음 예에서는 공유 액세스 서명을 위해 만든 데이터베이스 범위 자격 증명 및 Azure 저장소 계정의 컨테이너를 가리키는 외부 데이터 원본을 사용합니다.     
+다음 예에서는 공유 액세스 서명을 위해 만든 데이터베이스 범위 자격 증명 및 Azure 스토리지 계정의 컨테이너를 가리키는 외부 데이터 원본을 사용합니다.     
 
 ```sql
 SELECT * FROM OPENROWSET(

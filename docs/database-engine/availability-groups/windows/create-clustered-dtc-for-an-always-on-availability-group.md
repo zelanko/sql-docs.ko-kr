@@ -335,7 +335,7 @@ GO
  
 ## <a name="ClusterDTC"></a>8.  클러스터 리소스 준비
 
-이 스크립트는 다음 DTC 종속 리소스를 준비합니다. 디스크 및 IP.  공유 저장소는 Windows 클러스터에 추가됩니다.  네트워크 리소스가 만들어지고 DTC 생성되어 가용성 그룹에 리소스로 적용됩니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다. 스크립트에 대해 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)에게 감사드립니다.
+이 스크립트는 다음 DTC 종속 리소스를 준비합니다. 디스크 및 IP.  공유 스토리지는 Windows 클러스터에 추가됩니다.  네트워크 리소스가 만들어지고 DTC 생성되어 가용성 그룹에 리소스로 적용됩니다.  `SQLNODE1`에서 다음 PowerShell 스크립트를 실행합니다. 스크립트에 대해 [Allan Hirt](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/)에게 감사드립니다.
 
 ```powershell  
 # Create a clustered Microsoft Distributed Transaction Coordinator properly in the resource group with SQL Server

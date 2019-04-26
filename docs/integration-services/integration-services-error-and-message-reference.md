@@ -1033,8 +1033,8 @@ ms.locfileid: "58290889"
 |0xC0047097|-1073450857|DTS_E_EXPREVALUNEXPECTEDPARSEERROR|식 "%1"을(를) 구문 분석하는 동안 오류가 발생했습니다. 알 수 없는 이유로 인해 이 식을 구문 분석하지 못했습니다.|  
 |0xC0047098|-1073450856|DTS_E_EXPREVALFAILEDTOPARSEEXPRESSIONWITHHR|식 "%1"을(를) 구문 분석하지 못했으며 오류 코드 0x%2!8.8X!이(가) 반환되었습니다. 이 식은 구문 분석할 수 없습니다. 이 식은 잘못된 요소를 포함하거나 형식이 잘못되었을 수 있습니다. 또한 메모리가 부족할 수도 있습니다.|  
 |0xC0047099|-1073450855|DTS_E_EXPREVALFAILEDTOPARSEEXPRESSION|식 "%1"이(가) 잘못되었으며 구문 분석할 수 없습니다. 식에 잘못된 요소가 있거나 식의 형식이 잘못되었을 수 있습니다.|  
-|0xC004709A|-1073450854|DTS_E_EXPREVALEXPRESSIONEMPTY|계산할 식이 없습니다. 빈 식의 문자열을 계산하거나 가져오려고 했습니다.|  
-|0xC004709B|-1073450853|DTS_E_EXPREVALCOMPUTEFAILED|식 "%1"을(를) 계산하지 못했습니다(오류 코드 0x%2!8.8X!).|  
+|0xC004709A|-1073450854|DTS_E_EXPREVALEXPRESSIONEMPTY|컴퓨팅할 식이 없습니다. 빈 식의 문자열을 컴퓨팅하거나 가져오려고 했습니다.|  
+|0xC004709B|-1073450853|DTS_E_EXPREVALCOMPUTEFAILED|식 "%1"을(를) 컴퓨팅하지 못했습니다(오류 코드 0x%2!8.8X!).|  
 |0xC004709C|-1073450852|DTS_E_EXPREVALBUILDSTRINGFAILED|식의 문자열 표현을 생성하지 못했습니다(오류 코드 0x%1!8.8X!). 식을 나타내는 표시 가능한 문자열을 생성하는 동안 오류가 발생했습니다.|  
 |0xC004709D|-1073450851|DTS_E_EXPREVALCANNOTCONVERTRESULT|식 결과 데이터 형식 "%1"을(를) 열 데이터 형식 "%2"(으)로 변환할 수 없습니다. 식 결과를 입/출력 열에 기록해야 하지만 식의 데이터 형식을 열의 데이터 형식으로 변환할 수 없습니다.|  
 |0xC004709E|-1073450850|DTS_E_EXPREVALCONDITIONALOPINVALIDCONDITIONTYPE|조건부 연산자의 조건 식 "%1"에 잘못된 데이터 형식 "%2"이(가) 있습니다. 조건부 연산자의 조건 식은 DT_BOOL 유형의 부울을 반환해야 합니다.|  
@@ -1186,7 +1186,7 @@ ms.locfileid: "58290889"
 |0xC004904B|-1073442741|DTS_E_EXPREVALSTATIC_INVALIDTOKEN|인식되지 않는 토큰이 식에 있습니다. 잘못된 요소가 있기 때문에 식을 구문 분석할 수 없습니다.|  
 |0xC004904C|-1073442740|DTS_E_EXPREVALSTATIC_FAILEDTOPARSEEXPRESSION|식이 잘못되었으며 구문 분석할 수 없습니다. 식에 잘못된 요소가 있거나 식의 형식이 잘못되었을 수 있습니다.|  
 |0xC004904D|-1073442739|DTS_E_EXPREVALSTATIC_UNARYOPOVERFLOW|단항 마이너스(부정) 연산의 결과가 결과 데이터 형식의 최대 크기를 오버플로합니다. 연산 결과의 크기가 결과의 유형을 오버플로합니다.|  
-|0xC004904E|-1073442738|DTS_E_EXPREVALSTATIC_COMPUTEFAILED|식을 계산하지 못했습니다.|  
+|0xC004904E|-1073442738|DTS_E_EXPREVALSTATIC_COMPUTEFAILED|식을 컴퓨팅하지 못했습니다.|  
 |0xC004904F|-1073442737|DTS_E_EXPREVALSTATIC_BUILDSTRINGFAILED|식의 문자열 표현을 생성하지 못했습니다.|  
 |0xC0049050|-1073442736|DTS_E_EXPREVALSTATIC_CANNOTCONVERTRESULT|식 결과 데이터 형식을 열 데이터 형식으로 변환할 수 없습니다. 식 결과를 입/출력 열에 기록해야 하지만 식의 데이터 형식을 열의 데이터 형식으로 변환할 수 없습니다.|  
 |0xC0049051|-1073442735|DTS_E_EXPREVALSTATIC_CONDITIONALOPINVALIDCONDITIONTYPE|조건부 연산자의 조건 식에 잘못된 데이터 형식이 있습니다. 조건 식은 DT_BOOL 유형이어야 합니다.|  
