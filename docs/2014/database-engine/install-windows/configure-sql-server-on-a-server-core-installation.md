@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779735"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core 설치 시 SQL Server 구성
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1의 Server Core 설치에서 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 를 구성하는 방법에 대한 자세한 내용을 다룹니다. 
@@ -175,7 +175,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
   
      `GO`  
   
-### <a name="enable-and-start-the-sql-server-browser-service"></a>SQL  Server  Browser  서비스 설정 및 시작  
+### <a name="enable-and-start-the-sql-server-browser-service"></a>사용 하도록 설정 하 고 SQL Server Browser 서비스 시작  
  Browser 서비스는 기본적으로 해제되어 있습니다.  Server Core에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 해제된 경우 명령 프롬프트에서 다음 명령을 실행하여 설정합니다.  
   
  `sc config SQLBROWSER start= auto`  
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>문제 해결 도구 사용  
  원격으로 [SQLdiag Utility](../../tools/sqldiag-utility.md) 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. SQLdiag는 Microsoft 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
   
- 항목에 지정된 구문을 사용하여 Server Core의 관리자 명령 프롬프트에서 유틸리티를 시작할 수 있습니다. [SQLdiag 유틸리티](../../tools/sqldiag-utility.md).  
+ 항목에 지정 된 구문을 사용 하 여 Server core의 관리자 명령 프롬프트에서 유틸리티를 시작할 수 있습니다. [SQLdiag 유틸리티](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>관련 항목  
  [Server Core에 SQL Server 2014 설치](install-sql-server-on-server-core.md)   

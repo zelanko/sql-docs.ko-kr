@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780683"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SMO에 대한 SQL-DMO 매핑
   SQL-DMO(SQL Distributed Management Objects)는 더 이상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 포함되지 않습니다. SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects)를 사용하도록 SQL-DMO 응용 프로그램을 변환해야 합니다. SMO 개체 모델은 SQL-DMO와 비슷하므로 대부분의 SQL-DMO 개체는 SMO에서 이름이 같은 개체에 매핑됩니다. 그러나 일부 SQL-DMO 개체는 SMO로 전환되는 과정에서 변경되거나 삭제되었습니다. 다음 표에는 SMO로 직접 변환되지 않은 SQL-DMO 개체에 대해 수행할 수 있는 권장 작업이 나와 있습니다.  

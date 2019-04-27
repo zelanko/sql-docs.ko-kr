@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757206"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>테이블의 데이터 필터링(SSAS 테이블 형식)
   데이터를 가져올 때 필터를 적용하여 테이블에 로드되는 행을 제어할 수 있습니다. 데이터를 가져온 후에는 개별 행을 삭제할 수 없습니다. 그러나 사용자 지정 필터를 적용하여 행이 표시되는 방식을 제어할 수 있습니다. 필터링 조건을 충족하지 않는 행은 숨겨집니다. 하나 이상의 열을 기준으로 필터링할 수 있습니다. 필터는 가산적이므로 현재 필터를 기준으로 필터를 추가할 때마다 데이터의 하위 집합이 줄어듭니다.  
@@ -53,8 +53,8 @@ ms.locfileid: "48079703"
 2.  **열** 메뉴에서 **필터 모두 지우기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 필터링 및 정렬 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

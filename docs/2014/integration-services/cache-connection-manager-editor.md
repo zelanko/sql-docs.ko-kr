@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771730"
 ---
 # <a name="cache-connection-manager-editor"></a>캐시 연결 관리자 편집기
   캐시 연결 관리자는 캐시 변환이나 캐시 파일(.caw)에서 참조 데이터 세트를 읽고 데이터를 캐시 파일에 저장할 수 있습니다. 데이터는 항상 메모리에 저장됩니다.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84ec9e17d525521620abac48fc294461281b50cb
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780650"
 ---
 # <a name="sql-server-native-client-errors"></a>SQL Server Native Client 오류
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 설치할 때 발생할 수 있는 오류를 설명하는 항목을 제공합니다.  

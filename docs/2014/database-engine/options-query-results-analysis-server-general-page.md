@@ -14,11 +14,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774783"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>옵션 (쿼리 결과-Analysis Server-일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리에 대한 쿼리 결과 창의 기본 동작을 결정할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 선택합니다. **쿼리 결과** 폴더에서 **분석 서버** 하위 폴더를 확장한 다음 **일반**을 선택합니다.  

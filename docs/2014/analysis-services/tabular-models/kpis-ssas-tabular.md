@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756952"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI(SSAS 테이블 형식)
   테이블 형식 모델에서 *KPI*(핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  
@@ -80,7 +80,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  핵심 성과 지표 대화 상자를 보려면 테이블에 대한 측정값 표에서 기준 값으로 사용되는 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. 측정값이 기준 값으로 KPI에 확장된 후에는 KPI와 관련된 측정값을 식별하는 아이콘이 측정값 표의 측정값 이름 옆에 나타납니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  

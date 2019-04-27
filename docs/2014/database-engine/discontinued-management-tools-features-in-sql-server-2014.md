@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780352"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 관리 도구 기능
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]관리 도구 기능에 대해 설명합니다.  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>제거 된 기능 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 제거된 기능  
  없음  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>제거 된 기능 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 제거된 기능  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  SQL Server Compact Edition 코드 편집기는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 제거되었습니다. SQL Server Compact Edition에 대한 지원도 개체 탐색기, 솔루션 탐색기 및 템플릿 탐색기에서 제거되었습니다. Microsoft Visual Studio 2010 서비스 팩 1 또는 Webmatrix의 Transact-SQL 편집기를 대신 사용하십시오.  

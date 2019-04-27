@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771809"
 ---
 # <a name="handling-events-programmatically"></a>프로그래밍 방식으로 이벤트 처리
   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 런타임에서는 패키지의 유효성 검사 및 실행 전후와 도중에 발생하는 이벤트 컬렉션을 제공합니다. 이러한 이벤트는 두 가지 방법으로 캡처할 수 있습니다. 첫 번째 방법은 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하고 해당 클래스를 패키지의 `Execute` 및 `Validate` 메서드에 대한 매개 변수로 지정하는 것입니다. 두 번째 방법은 태스크 및 루프와 같이 다른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체를 포함할 수 있으며 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 이벤트가 발생할 때 실행되는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 개체를 만드는 것입니다. 이 섹션에서는 이러한 두 가지 방법에 대해 설명하고 각 사용 방법을 보여 주는 코드 예를 제공합니다.  

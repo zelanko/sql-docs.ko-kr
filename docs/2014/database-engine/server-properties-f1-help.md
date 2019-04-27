@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6632aa6ebcf55234bc89a23f24edc7ff8ee11106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773419"
 ---
 # <a name="server-properties-f1-help"></a>서버 속성 F1 도움말
   이 섹션에서는 SQL Server Management Studio의 **서버 속성** 페이지에 대한 F1 도움말 항목을 제공합니다.  

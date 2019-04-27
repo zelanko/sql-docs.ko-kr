@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773369"
 ---
 # <a name="view-file-status"></a>파일 상태 보기
   소스 제어는 모든 원본 제어 항목에 대한 자세한 상태 정보를 유지 관리합니다. 이 정보를 사용하여 파일의 현재 상태를 식별하고 해당 항목에 대한 상태 보고서를 만들 수 있습니다.  

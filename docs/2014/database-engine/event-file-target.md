@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ea74f0361d5152ade31a91424d594d376e513f8
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779456"
 ---
 # <a name="event-file-target"></a>Event File Target
   이벤트 파일 대상은 전체 버퍼를 디스크에 기록하는 대상입니다.  
@@ -58,9 +58,9 @@ SELECT *, CAST(event_data AS XML) AS 'event_data_XML'
 FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 확장 이벤트 대상](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.fn_xe_file_target_read_file &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
+ [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774887"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>로그 전달 모니터링(Transact-SQL)
   로그 전달을 구성한 후 모든 로그 전달 서버의 상태에 대한 정보를 모니터링할 수 있습니다. 로그 전달 작업의 기록과 상태는 항상 로그 전달 작업에 의해 로컬에 저장됩니다. 백업 작업의 기록과 상태는 주 서버에 저장되고 복사 및 복원 작업의 기록과 상태는 보조 서버에 저장됩니다. 원격 모니터 서버를 구현한 경우 이 정보는 모니터 서버에도 저장됩니다.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774346"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>관리되는 인스턴스 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 관리되는 인스턴스 뷰에 나오는 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 개별 인스턴스에 대한 사용 데이터, CPU 사용 기록, 파일 수준의 스토리지 사용 세부 정보, 그리고 정책 임계 값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계 값은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 수준, 컴퓨터, 데이터베이스 파일과 로그 파일, 그리고 스토리지 볼륨 수준에서 제어할 수 있습니다. 개별 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 관리되는 인스턴스 속성 정보를 볼 수도 있습니다.  

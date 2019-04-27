@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a48a5cb8b5fb317c40a2106b4ee433e49188d783
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786828"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  

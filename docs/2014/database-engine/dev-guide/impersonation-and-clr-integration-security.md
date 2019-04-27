@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781131"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>가장 및 CLR 통합 보안
   관리 코드에서 외부 리소스를 액세스할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 루틴이 실행되고 있는 현재 실행 컨텍스트를 자동으로 가장하지 않습니다. `EXTERNAL_ACCESS` 및 `UNSAFE` 어셈블리의 코드에서는 현재 실행 컨텍스트를 명시적으로 가장할 수 있습니다.  

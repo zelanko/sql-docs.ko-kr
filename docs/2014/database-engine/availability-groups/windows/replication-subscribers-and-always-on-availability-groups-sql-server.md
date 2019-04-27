@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789149"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>복제 구독자 및 AlwaysOn 가용성 그룹(SQL Server)
-  복제 구독자인 데이터베이스를 포함하는 AlwaysOn 가용성 그룹이 장애 조치(Failover)되면 복제 구독은 실패할 수 있습니다. 트랜잭션 복제 밀어넣기 구독자에 대 한 AG 수신기 이름을 사용 하 여 구독을 만든 경우 장애 조치 후 자동으로 복제 배포 에이전트에서 계속 됩니다. 트랜잭션 복제 끌어오기 구독자에 대 한 배포 에이전트가 구독을 사용 하 여 AG 수신기 이름 및 원래 구독자 서버 구성 및 실행 만든 경우에 장애 조치 후 자동으로 복제를 계속 됩니다. 배포 에이전트 작업은 본래 구독자 (AG의 주 복제본)에 생성 때문입니다. 병합 구독자의 경우 복제 관리자가 복제를 다시 만들어 수동으로 구독자를 다시 구성해야 합니다.  
+  복제 구독자인 데이터베이스를 포함하는 AlwaysOn 가용성 그룹이 장애 조치(Failover)되면 복제 구독은 실패할 수 있습니다. 트랜잭션 복제 밀어넣기 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었다면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 트랜잭션 복제 풀 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었고 원래 구독자 서버가 실행 중이라면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 이는 배포 에이전트 작업이 원래 구독자 서버(AG의 주 복제본)에서만 생성되기 때문입니다. 병합 구독자의 경우 복제 관리자가 복제를 다시 만들어 수동으로 구독자를 다시 구성해야 합니다.  
   
 ## <a name="what-is-supported"></a>지원되는 기능  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 게시자에 대한 자동 장애 조치, 트랜잭션 구독자에 대한 자동 장애 조치 및 병합 구독자에 대한 수동 장애 조치를 제공합니다. 가용성 데이터베이스의 배포자에 대한 장애 조치는 지원되지 않습니다. AlwaysOn은 Websync 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact 시나리오와 함께 사용할 수 없습니다.  

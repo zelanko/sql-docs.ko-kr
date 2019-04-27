@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 142a775415da489e67bc00b048651209a2a30179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757238"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>테이블 삭제(SSAS 테이블 형식)
   모델 디자이너의 모델 작업 영역 데이터베이스에서 더 이상 필요하지 않은 테이블을 삭제할 수 있습니다. 테이블을 삭제하면 원래 원본 데이터는 영향을 받지 않고 가져와서 작업하고 있는 데이터만 삭제됩니다. 테이블의 삭제는 실행 취소할 수 없습니다.  
@@ -34,6 +34,6 @@ ms.locfileid: "48224763"
 -   해당 테이블을 사용하여 계산 열을 만든 경우 해당 테이블의 열도 삭제됩니다. 다른 테이블에서 삭제된 테이블의 열을 사용하는 계산 열에서는 오류가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)  
   
   

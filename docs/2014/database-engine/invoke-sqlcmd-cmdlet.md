@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774597"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
   **Invoke-Sqlcmd**는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery 언어로 된 문과 **sqlcmd** 유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |대화형 명령, 시작 스크립트 및 환경 변수를 사용하지 않음|-X|-DisableCommands|  
 |변수 대체를 사용하지 않음|-X|-DisableVariables|  
 |보고할 최소 심각도 수준|-v|-SeverityLevel|  
-|보고할 최소 오류 수준|-m|-ErrorLevel|  
+|보고할 최소 오류 수준|-M|-ErrorLevel|  
 |로그인 제한 시간 간격|-l|-ConnectionTimeout|  
 |호스트 이름|-H|-HostName|  
 |암호 변경 후 종료|-Z|-NewPassword|  
@@ -132,8 +132,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |지정된 쿼리 실행 후 실행 중인 상태로 유지|-Q|매개 변수 없음|  
 |출력 데이터에 사용할 코드 페이지|-f|매개 변수 없음|  
 |암호 변경 후 실행 중인 상태로 유지|-Z|매개 변수 없음|  
-|패킷 크기|-a|매개 변수 없음|  
-|열 구분 기호|-s|매개 변수 없음|  
+|패킷 크기|-A|매개 변수 없음|  
+|열 구분 기호|-S|매개 변수 없음|  
 |출력 헤더 제어|-H|매개 변수 없음|  
 |제어 문자 지정|-k|매개 변수 없음|  
 |고정 길이 표시 너비|-Y|매개 변수 없음|  
@@ -142,7 +142,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |따옴표 붙은 식별자 사용|-i|매개 변수 없음|  
 |후행 공백 제거|-w|매개 변수 없음|  
 |인스턴스 나열|-l|매개 변수 없음|  
-|출력을 유니코드 형식으로 지정|-U|매개 변수 없음|  
+|출력을 유니코드 형식으로 지정|-u|매개 변수 없음|  
 |통계 인쇄|-p|매개 변수 없음|  
 |명령 종료|-c|매개 변수 없음|  
 |Windows 인증을 사용하여 연결|-E|매개 변수 없음|  

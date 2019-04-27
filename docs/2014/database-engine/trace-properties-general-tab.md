@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35e9ee16ee50d5dc697e862b2777db7f0199970d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773805"
 ---
 # <a name="trace-properties-general-tab"></a>추적 속성(일반 탭)
   **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775012"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 애플리케이션 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  

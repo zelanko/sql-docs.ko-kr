@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9854218e66d3edfe10f4220a5ac662cccc6f481
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781141"
 ---
 # <a name="in-process-data-access-sample"></a>In-Process 데이터 액세스 예제
   `InProcessDataAccess` 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 몇 가지 간단한 함수가 포함되어 있습니다.  

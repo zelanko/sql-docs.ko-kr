@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781952"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` 개체 드라이버를 연결 하 고 인스턴스와 통신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

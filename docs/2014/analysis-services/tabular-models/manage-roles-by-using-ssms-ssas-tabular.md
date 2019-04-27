@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d437313d93871de4a8f7cdb21b3c0e18df8c1f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756977"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS를 사용하여 역할 관리(SSAS 테이블 형식)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델에 대한 역할을 생성, 편집 및 관리할 수 있습니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "48218933"
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 삭제할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

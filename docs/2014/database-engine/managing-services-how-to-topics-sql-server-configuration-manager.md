@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774356"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>서비스 관리 방법 도움말 항목(SQL Server 구성 관리자)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 서비스로 실행됩니다. 서비스에 대한 자세한 내용은 [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md)를 참조하십시오.  

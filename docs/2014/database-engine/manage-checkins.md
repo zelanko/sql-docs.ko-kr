@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774295"
 ---
 # <a name="manage-checkins"></a>체크 인 관리
   소스 제어 파일의 변경 내용을 다른 사용자가 사용할 수 있게 하려면 해당 파일을 체크 인해야 합니다. 파일을 체크 인하면 작성한 버전이 소스 제어 공급자에 복사되고 파일의 최신 버전이 되며 일반적으로 적절한 사용 권한을 가진 사용자가 사용할 수 있게 됩니다.  

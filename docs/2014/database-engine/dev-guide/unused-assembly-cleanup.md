@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780180"
 ---
 # <a name="unused-assembly-cleanup"></a>사용하지 않는 어셈블리 정리
   `AssemblyCleanup` 예제에는 메타데이터 카탈로그를 쿼리하여 현재 데이터베이스에서 사용되지 않는 어셈블리를 정리하는 .NET 저장 프로시저가 포함되어 있습니다. 유일한 매개 변수인 `visible_assemblies`는 사용되지 않으면서 표시되는 어셈블리를 삭제할지 여부를 지정하는 데 사용됩니다. 값 'false'는 기본적으로 사용되지 않으면서 표시되지 않는 어셈블리만 삭제함을 나타냅니다. 다른 값은 사용되지 않는 모든 어셈블리를 삭제합니다. 사용되지 않는 어셈블리 집합은 진입점이 정의되어 있지 않으며(루틴/유형 및 집계) 해당 어셈블리를 직접 또는 간접적으로 참조하는 사용되는 어셈블리가 없는 어셈블리입니다.  

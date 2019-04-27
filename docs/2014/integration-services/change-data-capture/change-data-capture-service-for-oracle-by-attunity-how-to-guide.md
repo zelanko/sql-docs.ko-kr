@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 712c89918af1b66bb4c3e50c0ec08ef44d1222d7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771423"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Attunity Oracle CDC Service 방법 가이드
   이 섹션에서는 CDC Service 구성 콘솔에서 태스크를 수행하는 방법에 대해 설명합니다.  

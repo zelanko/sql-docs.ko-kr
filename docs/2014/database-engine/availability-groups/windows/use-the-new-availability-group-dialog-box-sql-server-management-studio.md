@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788065"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
   이 항목에서는 **의** 새 가용성 그룹 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하도록 설정된 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "53373175"
   
 -   초기 데이터 동기화를 수행할 수 없습니다.  
   
- 이러한 구성 태스크에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [후속 작업: 가용성 그룹을 만든 후](#FollowUp)이 항목의 뒷부분에 나오는.  
+ 이러한 구성 작업에 대 한 정보를 참조 하세요. [후속: 가용성 그룹을 만든 후](#FollowUp)이 항목의 뒷부분에 나오는.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53373175"
   
      가용성 그룹을 만들지 않고 대화 상자를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 새 가용성 그룹 대화 상자를 사용하여 가용성 그룹을 만든 후  
+##  <a name="FollowUp"></a> 후속 작업: 새 가용성 그룹 대화 상자를 사용 하 여 가용성 그룹 만들기  
   
 -   가용성 그룹의 보조 복제본을 호스팅하는 각 서버 인스턴스에 차례로 연결하여 다음 단계를 완료해야 합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53373175"
   
 -   새 가용성 그룹에 대해 가용성 그룹 수신기를 만드는 것이 좋습니다. 이렇게 하려면 현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **가용성 그룹 및 복제본 속성을 구성하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  

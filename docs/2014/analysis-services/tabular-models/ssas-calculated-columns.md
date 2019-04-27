@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756582"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>계산 열(SSAS 테이블 형식)
   테이블 형식 모델에서 계산 열을 사용하여 새 데이터를 모델에 추가할 수 있습니다. 붙여넣기 또는 열에 값을 가져오는 대신 열 행 수준 값을 정의 하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  

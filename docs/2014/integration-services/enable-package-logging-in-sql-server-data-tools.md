@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769959"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 로깅 사용
   이 절차에서는 패키지에 로그를 추가하는 방법, 패키지 수준 로깅을 구성하는 방법 및 로깅 구성을 XML 파일에 저장하는 방법을 설명합니다. 로그는 패키지 수준에서만 추가할 수 있지만 패키지에 포함되는 컨테이너에서 로깅을 활성화하기 위해 패키지가 로깅을 수행할 필요는 없습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "58387021"
     > [!NOTE]  
     >  기본적으로 모든 정보가 로깅됩니다.  
   
-9.  **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
+9. **세부 정보** 탭에서 **저장**을 클릭합니다. **다른 이름으로 저장** 대화 상자가 나타납니다. 로깅 구성을 저장할 폴더를 찾고 새 로그 구성의 파일 이름을 입력한 다음 **저장**을 클릭합니다.  
   
 10. **확인**을 클릭합니다.  
   

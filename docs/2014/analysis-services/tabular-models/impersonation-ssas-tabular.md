@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757249"
 ---
 # <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
   이 항목에서는 테이블 형식의 모델 작성자를 대상으로 데이터 원본에 연결하여 데이터를 가져오고 처리(새로 고침)할 때 로그온 자격 증명이 Analysis Services에서 사용되는 방법에 대해 설명합니다.  

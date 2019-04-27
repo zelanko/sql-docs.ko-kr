@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756146"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>사용 빈도 기반 최적화 마법사 F1 도움말
   사용 빈도 기반 최적화 마법사는 출력 면에서 집계 디자인 마법사와 유사하며 파티션에 대한 집계를 디자인하는 데 사용됩니다. 그러나 사용 빈도 기반 최적화 마법사는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 쿼리 로그에 기록된 쿼리의 특정 사용 패턴을 기반으로 집계를 디자인합니다. 집계를 사용하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산된 합계를 검색할 수 있으므로 성능이 향상됩니다.  

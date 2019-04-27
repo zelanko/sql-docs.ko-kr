@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771749"
 ---
 # <a name="selecting-input-columns-programmatically"></a>프로그래밍 방식으로 입력 열 선택
   프로그래밍 방식으로 구성 요소를 연결한 후에는 업스트림 구성 요소에서 다운스트림 구성 요소로 변환하거나 전달할 열을 선택합니다. 구성 요소의 입력 열을 선택하지 않으면 해당 구성 요소는 데이터 흐름 태스크에서 행을 받지 않습니다.  

@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756438"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "56016774"
   
     6.  **찾기** 입력란에 하나 이상의 자릿수를 입력하여 관계 테이블의 값을 찾습니다. 문자열의 일치 항목이 강조 표시됩니다. 위쪽, 아래쪽 화살표를 사용하여 테이블의 여러 문자열 인스턴스로 이동할 수 있습니다.  
   
-    7.  **맞춤법 검사기**: 값을 **값** 또는 **수정** 에 빨간색 물결선 밑줄이 열, 맞춤법 검사기 값에 대 한 수정 사항을 제안 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
+    7.  **맞춤법 검사기**: **값** 또는 **다음으로 수정** 열 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [DQS 맞춤법 검사기 사용](../../2014/data-quality-services/use-the-dqs-speller.md) 및 [도메인 속성 설정](../../2014/data-quality-services/set-domain-properties.md)를 참조하세요.  
   
         > [!NOTE]  
         >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **용어 기반 관계** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  

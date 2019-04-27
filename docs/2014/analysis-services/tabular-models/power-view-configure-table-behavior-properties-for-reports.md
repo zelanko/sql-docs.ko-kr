@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757127"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>파워 뷰 보고서의 테이블 동작 속성 구성(SSAS 테이블 형식)
   테이블 형식 모델을 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 대한 데이터 모델로 사용할 경우 정보 행을 더 자세히 표시하는 테이블 동작 속성을 설정할 수 있습니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보(예: 이름, 사진 ID, 로고 이미지)의 기본 배치가 향상됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "53352879"
 -   **기본 이미지** - 행 데이터를 표시하는 이미지를 제공하는 열을 지정합니다(예: 직원 레코드의 사진 ID).  
   
 > [!NOTE]  
->  특정 표시 형식의 관점에서 레이아웃을 최적화하는 방법은 다음 섹션을 참조하십시오.  [특정 레이아웃 최적화](#bkmk_optimizeforlayout)합니다.  
+>  다음 섹션을 최적화 하는 방법은 레이아웃 관점에서 특정 표시 형식의 참조 하세요.  [특정 레이아웃 최적화](#bkmk_optimizeforlayout)합니다.  
   
 ## <a name="opening-the-table-behavior-dialog-box"></a>테이블 동작 대화 상자 열기  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53352879"
   
  이 속성을 설정하면 기본 그룹화 동작이 캔버스에 있는 열을 기반으로 하는 동적 그룹화에서 행 식별자를 기반으로 요약하는 고정 그룹화 동작으로 변경됩니다. 기본 그룹화 동작 변경은 행의 각 열에 대해 그룹화하거나 부분합을 표시하는 보고서 레이아웃(예: 행렬)과 관련이 있습니다.  
   
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에서 행 식별자를 설정하여 추가 속성인 **고유한 행 유지** 속성인 **기본 레이블** 속성인 및 **Default Image** 속성입니다.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], 다음과 같은 추가 속성을 사용 하면 행 식별자를 설정 합니다. **고유한 행 유지** 속성인 **기본 레이블** 속성인 및 **Default Image** 속성입니다.  
   
  **행 식별자** 를 독립 실행형 속성으로 사용하여 다음을 설정할 수도 있습니다.  
   

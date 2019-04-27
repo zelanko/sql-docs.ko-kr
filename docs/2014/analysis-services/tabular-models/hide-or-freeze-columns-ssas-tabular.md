@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f16095d7473d098745f16943a60f50c104c94cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757108"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>열 숨기기 또는 고정(SSAS 테이블 형식)
   모델 디자이너에서 테이블에 표시하지 않으려는 열이 있는 경우 해당 열을 임시로 숨길 수 있습니다. 열을 숨기면 새 열을 추가하거나 관련 데이터 열만 사용하여 작업하기 위해 화면에서 공간을 확보할 수 있습니다. 모델 디자이너의 **열** 메뉴 및 각 열 머리글을 마우스 오른쪽 단추로 클릭했을 때 열리는 메뉴를 사용하여 열을 숨기거나 숨겨진 열을 표시할 수 있습니다. 모델의 다른 영역으로 스크롤할 때 모델의 특정 영역이 계속 표시되도록 하려면 해당 영역의 열을 고정하여 잠글 수 있습니다.  
   
 > [!IMPORTANT]  
->  열을 숨기는 기능은 데이터 보안의 목적보다는 모델 디자이너 또는 보고서에 표시되는 열의 목록을 단순화하고 간소화하기 위해 사용됩니다. 데이터 보안을 위해서는 보안 역할을 정의할 수 있습니다. 역할을 통해 특정 개체에 대해서만 메타데이터와 데이터를 볼 수 있도록 제한할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)을 참조하세요.  
+>  열을 숨기는 기능은 데이터 보안의 목적보다는 모델 디자이너 또는 보고서에 표시되는 열의 목록을 단순화하고 간소화하기 위해 사용됩니다. 데이터 보안을 위해서는 보안 역할을 정의할 수 있습니다. 역할을 통해 특정 개체에 대해서만 메타데이터와 데이터를 볼 수 있도록 제한할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
  열을 숨길 때 모델 디자이너 또는 보고서에서 작업할 동안에만 열을 숨기는 방법도 있습니다. 모든 열을 숨기면 모델 디자이너에서 전체 테이블이 공백으로 나타납니다.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "48055143"
     >  열이 고정되면 디자이너에서 테이블의 왼쪽(또는 앞)으로 이동합니다. 나중에 열의 고정을 취소해도 다시 원래 위치로 이동하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757004"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 실행 모드는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 프로그램 개발자를 대상으로 합니다. `LocalDB` 설치를 시작 하는 데 필요한 파일의 최소 집합을 복사 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]합니다. 한 번 `LocalDB` 가 설치 되어 개발자가 연결을 시작 특수 연결 문자열을 사용 하 여 합니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 태스크 또는 시간이 많이 걸리는 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 개발자가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제공할 수 있습니다. 인스턴스의 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` 사용 하 여 관리 되는 `SqlLocalDB.exe` 유틸리티입니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 대신 사용 해야는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 되지 않는 사용자 인스턴스 기능입니다.  

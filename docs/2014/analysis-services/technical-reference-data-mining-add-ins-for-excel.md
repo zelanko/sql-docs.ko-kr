@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756536"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>기술 참조(Excel용 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능에는 프로그래머와 고급 데이터 마이너에게 유용한 기능이 포함되어 있습니다.  

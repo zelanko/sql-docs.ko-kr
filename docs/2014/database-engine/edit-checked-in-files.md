@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779607"
 ---
 # <a name="edit-checked-in-files"></a>체크 인 파일 편집
   일반적으로 원본 제어 파일을 편집하려면 먼저 해당 파일을 체크 아웃해야 합니다. 그러나 체크 아웃하지 않는 파일을 수정할 수 있도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 구성할 수 있습니다. 이렇게 할 경우에는 파일을 저장할 때까지 변경 내용이 메모리에 유지됩니다. 그런 다음 소스 제어에서 파일을 체크 아웃하라는 메시지가 나타납니다.  

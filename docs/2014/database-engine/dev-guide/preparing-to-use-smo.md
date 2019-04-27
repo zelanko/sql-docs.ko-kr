@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780834"
 ---
 # <a name="preparing-to-use-smo"></a>SMO 사용 준비
   이 섹션에서는 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects)를 처음 사용할 때 필요한 정보에 대해 설명합니다. 다음 목록은 설명서의 구문 스타일, SMO로 프로그래밍하기 위한 시스템 요구 사항, 파일 및 버전 번호, SMO의 새로운 기능에 대한 설명, 설치 지침에 대한 정보를 찾는 데 도움이 됩니다.  

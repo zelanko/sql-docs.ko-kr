@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771607"
 ---
 # <a name="certification-by-sap"></a>SAP 인증
   SAP BW용 Microsoft Connector 1.1은 SAP으로부터 SAP NetWeaver와의 통합에 대한 인증을 받았습니다.  

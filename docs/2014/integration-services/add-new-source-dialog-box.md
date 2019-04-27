@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b084f04d403d139c25b44ef0d3c543af933f118d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772009"
 ---
 # <a name="add-new-source-dialog-box"></a>새 원본 추가 대화 상자
   다음 표에서는 새 원본 추가 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  

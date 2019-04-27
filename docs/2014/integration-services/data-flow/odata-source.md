@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771039"
 ---
 # <a name="odata-source"></a>OData 원본
   SSIS 패키지의 OData 원본 구성 요소를 사용하여 Open Data Protocol(OData) 서비스에서 데이터를 사용할 수 있습니다. 이 구성 요소는 OData v2 및 v3 프로토콜뿐만 아니라 ATOM 및 JSON 데이터 형식을 지원합니다.  

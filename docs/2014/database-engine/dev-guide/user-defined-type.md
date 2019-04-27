@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779837"
 ---
 # <a name="user-defined-type"></a>사용자 정의 형식
   사용자 정의 데이터 형식 예제는 `System.Data.SqlClient`를 사용하는 클라이언트 애플리케이션 및 Transact-SQL에서 간단한 사용자 정의 데이터 형식을 만들고 사용하는 방법을 보여 줍니다.  

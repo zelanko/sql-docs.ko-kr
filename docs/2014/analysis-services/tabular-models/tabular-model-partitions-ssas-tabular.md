@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8cfe346c56b767b2986ea929271a1ee0e601953
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756797"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>테이블 형식 모델 파티션(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 모델 제작 중에 모델에 대해 정의한 파티션은 배포된 모델에서 복제됩니다. 배포한 후에는 **의** 파티션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 관리하고 새 파티션을 만들 수 있습니다. 이 항목에서 제공하는 정보는 배포된 테이블 형식 model 데이터베이스의 파티션에 대해 설명합니다. 모델을 제작하는 동안 파티션을 만들고 관리하는 방법에 대한 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)을 참조하세요.  
@@ -74,7 +74,7 @@ ms.locfileid: "52417577"
 |지우기 처리|파티션에서 모든 데이터를 제거합니다.|  
 |증분 처리|새 데이터로 파티션을 증분 업데이트합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |태스크|Description|  
 |----------|-----------------|  

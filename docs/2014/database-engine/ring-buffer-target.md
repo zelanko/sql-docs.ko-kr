@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773681"
 ---
 # <a name="ring-buffer-target"></a>링 버퍼 대상
   간단히 말해 링 버퍼 대상은 메모리에 이벤트 데이터를 보관합니다. 이 대상은 다음 두 모드 중 하나로 이벤트를 관리할 수 있습니다.  

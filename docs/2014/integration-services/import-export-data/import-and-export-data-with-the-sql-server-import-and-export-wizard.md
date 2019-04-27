@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768169"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 만드는 가장 간단한 방법을 제공을 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본에서 대상 데이터를 복사 하는 패키지입니다.  

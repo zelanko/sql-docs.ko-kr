@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757187"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Analysis Services에서 가져오기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 서버에서 가져오기 프로젝트 템플릿을 사용하여 기존 테이블 형식 모델에서 메타데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
@@ -37,6 +37,6 @@ ms.locfileid: "48130513"
 5.  **데이터베이스 이름**에서 가져올 모델 메타데이터가 포함된 테이블 형식 model 데이터베이스를 선택한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [프로젝트 속성 &#40;&AMP;#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
+ [프로젝트 속성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)  
   
   

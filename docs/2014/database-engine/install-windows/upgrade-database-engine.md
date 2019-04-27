@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774984"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
   이 항목에서는 업그레이드 프로세스를 준비하고 이해하는 데 필요한 다음과 같은 정보를 제공합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "51018568"
 >  한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다른 버전으로 업그레이드하기 전에 현재 사용 중인 기능이 업그레이드할 버전에서 지원되는지 확인하세요.  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise Edition에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드하는 경우 엔터프라이즈 버전: 코어 기반 라이선스와 엔터프라이즈 버전 중에서 선택합니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
+>  로 업그레이드 하는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이전 버전의에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, Enterprise Edition 중에서 선택: 코어 기반 라이선스 및 Enterprise Edition입니다. 이러한 엔터프라이즈 버전은 라이선스 모드와 관련해서만 다릅니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
 ## <a name="pre-upgrade-checklist"></a>업그레이드 전 검사 목록  
  이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서의 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 지원됩니다. 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 데이터베이스를 마이그레이션할 수도 있습니다. 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 같은 컴퓨터에 있는 다른 인스턴스로, 또는 다른 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 마이그레이션할 수 있습니다. 마이그레이션 옵션에는 데이터베이스 복사 마법사, 백업 및 복원 기능, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가져오기 및 내보내기 마법사, 대량 내보내기/대량 가져오기 방법의 사용이 포함됩니다.  

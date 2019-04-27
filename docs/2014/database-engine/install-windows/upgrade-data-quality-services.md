@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775633"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services 업그레이드
   이 항목에서는 기존 DQS(Data Quality Services) 설치를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2로 업그레이드하는 방법을 설명합니다. DQS의 Data Quality 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 DQS 데이터베이스 스키마도 업그레이드해야 합니다.  
@@ -83,12 +83,12 @@ ms.locfileid: "53353210"
   
 3.  출력에는 업그레이드 날짜와 함께 각 업그레이드에 대한 항목이 표시됩니다. 최신 날짜의 최대 VERSION_ID 및 ASSEMBLY_VERSION이 현재 버전입니다. STATUS 열의 값이 2이면 성공을 나타냅니다. 오류가 발생한 경우 ERROR 열에 오류가 표시됩니다. 예제 출력:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|error|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Data Quality 서버 개체 제거](../../sql-server/install/remove-data-quality-server-objects.md)   
  [SQL Server 2014로 업그레이드](upgrade-sql-server.md)  

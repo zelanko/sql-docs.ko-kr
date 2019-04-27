@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756568"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot에서 복원
   SQL Server Management Studio의 PowerPivot 기능에서 복원을 사용하여 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 PowerPivot 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  
@@ -44,12 +44,12 @@ ms.locfileid: "48146653"
   
 3.  **대상 복원**의 **데이터베이스 복원**에 새 데이터베이스 또는 기존 데이터베이스의 이름을 입력합니다. 이름을 지정하지 않으면 통합 문서의 이름이 사용됩니다.  
   
-4.  **저장소 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
+4.  **스토리지 위치**에서 **찾아보기**를 클릭한 다음 데이터베이스를 저장할 위치를 선택합니다.  
   
 5.  **옵션**에서 **보안 정보 포함** 을 선택합니다. PowerPivot 통합 문서에서 복원할 때 이 설정은 적용되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 Model 데이터베이스 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
+ [테이블 형식 model 데이터베이스&#40;SSAS 테이블 형식&#41;](tabular-model-databases-ssas-tabular.md)   
  [PowerPivot에서 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

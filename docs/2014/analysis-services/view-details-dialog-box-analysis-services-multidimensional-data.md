@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756119"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>자세히 보기 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 자세히 보기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 메시지 또는 작업에 대한 자세한 정보를 볼 수 있습니다. 다음을 수행하여 **자세히 보기** 대화 상자를 표시할 수 있습니다.  

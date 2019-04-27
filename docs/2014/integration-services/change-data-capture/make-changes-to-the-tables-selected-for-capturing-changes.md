@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e8b98135d07ecc51ce2570a481fac4924266668
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771140"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>변경 캡처를 위해 선택된 테이블 변경
   이 대화 상자에서 변경을 캡처할 선택된 테이블의 특정 열을 선택할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  

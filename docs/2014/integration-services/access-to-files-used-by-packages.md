@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eed6f09197585e7eb8575c43146ed730497af8a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772259"
 ---
 # <a name="access-to-files-used-by-packages"></a>패키지에서 사용되는 파일 액세스
   패키지 보호 수준은 패키지 외부에 저장된 파일을 보호하지 않습니다. 이러한 파일은 다음과 같습니다.  

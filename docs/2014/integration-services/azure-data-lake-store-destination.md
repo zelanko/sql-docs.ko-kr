@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f10f78f59a6ec1dd5d5119a89624295935d6ff9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771899"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store 대상
   **Azure Data Lake Store 대상** 구성 요소를 사용하면 SSIS 패키지가 Azure Data Lake Store에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. 텍스트, Avro 및 ORC. 

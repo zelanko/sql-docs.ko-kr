@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787069"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language 서버 구성 옵션 구성
   이 항목에서는 구성 하는 방법에 설명 합니다 `default full-text language` 서버 구성 옵션에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다. `default full-text language` 옵션 전체 텍스트 인덱스에 대 한 기본 언어 값을 지정 합니다. 언어 분석은 전체 텍스트 인덱싱된 모든 데이터에 대해 수행되고 해당 데이터 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 지역화 된 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 집합을 설치 합니다 `default full-text language` 적절 한 일치 하는 경우 서버의 언어 옵션입니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 경우 `default full-text language` 옵션이 영어입니다.  

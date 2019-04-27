@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51ad82519e8afd5e4a871046465e0cafec2f783e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774987"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
   조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다.  
   
 ## <a name="sample-syntax-for-installation"></a>설치 구문 예제  
- 업데이트 패키지의 이름은 다양하며 언어, 버전 및 프로세서 구성 요소를 포함할 수 있습니다. 명령 프롬프트에서 <package_name>을 해당하는 업데이트 패키지 이름으로 바꾸어 업데이트를 적용합니다.  
+ 업데이트 패키지의 이름은 다양하며 언어, 버전 및 프로세서 구성 요소를 포함할 수 있습니다. 명령 프롬프트에서 <package_name>을 해당 업데이트 패키지 이름으로 바꾸어 업데이트를 적용합니다.  
   
--   단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 모든 공유 구성 요소(예: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 관리 도구) 업데이트: InstanceName 매개 변수 또는 InstanceID 매개 변수를 사용하여 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스를 업데이트하려면 다음과 같이 InstanceID 매개 변수를 지정해야 합니다. <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 또는 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<인스턴스 ID>  
+-   단일 인스턴스를 업데이트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 같은 모든 공유 구성 요소 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 관리 도구: InstanceName 매개 변수 또는 InstanceID 매개 변수를 사용하여 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스를 업데이트하려면 다음과 같이 InstanceID 매개 변수를 지정해야 합니다. <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 또는 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<인스턴스 ID>  
   
 -   설치 프로그램에서 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다. 다음과 같이 제품 업데이트를 포함하도록 데이터베이스 엔진 인스턴스 설치를 준비할 수 있습니다. setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<인스턴스 ID> /FEATURES=SQLEngine  
   
@@ -48,9 +48,9 @@ ms.locfileid: "51018768"
 |스위치|Description|  
 |------------|-----------------|  
 |**/?**|무인 설치 명령 프롬프트 도움말을 표시합니다.|  
-|**/action=Patch 또는 /action=RemovePatch**|설치 동작(Patch 또는 RemovePatch)을 지정합니다.|  
+|**/action=Patch 또는 /action=RemovePatch**|설치 작업을 지정합니다. Patch 또는 RemovePatch 합니다.|  
 |**/allinstances**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.|  
-|**/instancename = InstanceName** <sup>1</sup>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 InstanceName이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.|  
+|**/instancename=InstanceName** <sup>1</sup>|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 InstanceName이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.|  
 |**/InstanceID=Inst1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 인스턴스에 적용하고 인스턴스를 인식하지 않는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소에도 적용합니다.|  
 |**/quiet**|무인 모드로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치 프로그램을 실행합니다.|  
 |**/qs**|진행률 UI 대화 상자만 표시합니다.|  

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773671"
 ---
 # <a name="search-property-list-editor"></a>검색 속성 목록 편집기
   이 대화 상자를 사용하여 검색 속성 목록에서 검색 속성을 추가하거나 삭제할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48148943"
  **속성 이름**  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. **속성 이름** 의 최대 길이는 255자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 `System.Author`나 `System.Contact.HomeAddress`와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다. **속성 이름** 은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다.  
   
- 개발자는 속성 이름을 사용 하 여 속성을 식별 합니다 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자입니다. 따라서 속성을 추가할 때는 속성을 의미 있게 나타내는 값을 지정해야 합니다.  
+ 개발자는 속성 이름을 사용하여 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자에 있는 속성을 식별합니다. 따라서 속성을 추가할 때는 속성을 의미 있게 나타내는 값을 지정해야 합니다.  
   
  **속성 집합 GUID**  
  속성이 속한 속성 집합의 식별자를 지정합니다. 이 식별자는 GUID(Globally Unique Identifier)입니다. 속성 집합은 논리적으로 관련이 있는 속성의 모음입니다. 이 값을 가져오는 방법은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  

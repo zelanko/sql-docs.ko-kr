@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774587"
 ---
 # <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달을 구성하는 방법에 대해 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48049243"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   주 데이터베이스는 전체 또는 대량 로그 복구 모델이어야 합니다. 데이터베이스를 단순 복구로 전환하면 로그 전달이 작동하지 않습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48049243"
   
 8.  백업 일정은 **백업 작업** 의 **일정**상자에 나열됩니다. 설치 일정을 사용자 지정하려면 **일정** 을 클릭한 다음 필요에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정을 조정합니다.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 **기본 서버 설정 사용**, **백업 압축**또는 **백업 압축 안 함**중 하나를 선택하여 로그 백업에 대한 백업 압축 동작을 제어할 수 있습니다. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 로그 전달 구성을 만들 때 다음 옵션 중 하나를 선택 하 여 로그 백업의 백업 압축 동작을 제어할 수 있습니다. **기본 서버 설정 사용**, **백업 압축**, 또는 **백업 압축 안 함**합니다. 자세한 내용은 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)을 참조하세요.  
   
 10. **확인**을 클릭합니다.  
   

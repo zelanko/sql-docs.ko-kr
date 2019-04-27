@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779194"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>전체 텍스트 카탈로그 속성(테이블 및 뷰 페이지)
   이 대화 상자를 사용하여 전체 텍스트 카탈로그에 할당된 테이블과 뷰를 보거나 수정할 수 있습니다.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
  **이 데이터베이스의 모든 적합 한 테이블/뷰 개체**  
- 고유 인덱스가 정의되어 있지만 아직 전체 텍스트 카탈로그에 포함되지 않은 테이블 및 뷰를 나열합니다. 테이블이나 뷰를 선택한 다음 카탈로그에 할당하려면 목록 상자에서 항목을 선택하고 "->" 단추를 누릅니다.  
+ 고유 인덱스가 정의되어 있지만 아직 전체 텍스트 카탈로그에 포함되지 않은 테이블 및 뷰를 나열합니다. 테이블 또는 뷰를 선택 하 고 카탈로그에 할당 하려면 목록 상자에서 항목을 선택 하 고 "->" 단추를 누릅니다.  
   
  **카탈로그에 할당 된 테이블/뷰 개체**  
  현재 전체 텍스트 카탈로그에 할당된 테이블과 뷰를 나열합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48202093"
 |||  
 |-|-|  
 |**자동**|기본 테이블의 데이터가 수정, 추가 또는 삭제되면 전체 텍스트 인덱스가 자동으로 업데이트됩니다.|  
-|**수동**|데이터 수정, 추가 하거나 인덱싱된 데이터의 삭제 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용을 추적 합니다. **수동** 변경 내용 추적을 사용하는 경우 해당 변경 내용으로 인덱스가 자동으로 업데이트되지 않습니다. 대신 관리자는 변경 내용을 적용할 수 수동으로 사용 하 여는 [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 문입니다.|  
+|**수동**|인덱싱된 데이터가 수정, 추가 또는 삭제되면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 변경 내용을 추적합니다. **수동** 변경 내용 추적을 사용하는 경우 해당 변경 내용으로 인덱스가 자동으로 업데이트되지 않습니다. 대신 관리자는 변경 내용을 적용할 수 수동으로 사용 하 여는 [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) 문입니다.|  
 |**변경 추적 안 함**|이 옵션을 사용하는 경우 카탈로그의 인덱싱된 데이터에 대한 변경 내용이 기록되지 않습니다. 관리자는 ALTER FULLTEXT INDEX와 함께 FULL POPULATION 또는 INCREMENTAL POPULATION을 사용하여 인덱스를 만들어야 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

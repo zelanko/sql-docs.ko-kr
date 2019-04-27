@@ -27,11 +27,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f112bc1a9928185fa5ecf15b953df8c982ff36f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774445"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 대한 이전 버전과의 호환성 정보를 다룹니다. 여기에는 사용되지 않는 기능, 사용 중단 기능, 주요 변경, 기능 변경 등에 대한 정보가 포함됩니다.  

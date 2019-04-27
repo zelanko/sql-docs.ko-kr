@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774285"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리(SQL Server)
   AlwaysOn 가용성 그룹의 모든 주 데이터베이스와 해당 보조 데이터베이스에서 동일한 사용자 로그인 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 집합을 정기적으로 유지 관리해야 합니다. 로그인과 작업은 가용성 그룹에 대한 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 모든 인스턴스에서 재현되어야 합니다.  

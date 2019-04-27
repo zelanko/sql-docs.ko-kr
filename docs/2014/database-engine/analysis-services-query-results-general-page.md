@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 242c40b4ded7196d80ad0716666854551865153b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791834"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Analysis Services 쿼리 결과(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다.  

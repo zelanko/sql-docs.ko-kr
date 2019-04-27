@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756033"
 ---
 # <a name="dqs-administration"></a>dqs 관리
   DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "56032784"
 ### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
--   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure Marketplace 또는 직접 참조 데이터 서비스 공급자. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
+-   **참조 데이터**: 참조 데이터 서비스 공급자를 구성 합니다. Windows Azure Marketplace 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
   
--   **일반 설정**: 데이터 정리 및 데이터 일치에 대한 임계값을 지정하고 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 프로파일링을 위한 알림을 사용하도록 설정할지 여부를 지정합니다. 이러한 임계값은 데이터 품질 프로젝트에서 컴퓨터 기반 정리 및 일치 활동 중에 DQS에서 사용됩니다.  
+-   **일반 설정**: 데이터 정리 및 데이터 일치 및 프로 파일링을 위한 알림을 사용 여부에 대 한 임계값을 지정 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]합니다. 이러한 임계값은 데이터 품질 프로젝트에서 컴퓨터 기반 정리 및 일치 활동 중에 DQS에서 사용됩니다.  
   
--   **로그 설정**: DQS의 로그 파일은 DQS에서 수행되는 활동을 기록하며 유지 관리 및 문제 해결 중 작업 문제를 추적하는 데 유용합니다. 이벤트 심각도 수준에 따라 다양한 DQS 기능(도메인 관리, 기술 자료 검색, 정리, 일치 및 참조 데이터 서비스) 및 DQS 모듈에 대해 기록하려는 메시지를 필터링할 수 있습니다.  
+-   **로그 설정**: DQS의 로그 파일은 DQS에서 수행 하는 활동을 기록 하 고 유지 관리 및 문제 해결 중 작업 문제를 추적 하는 데 유용 합니다. 이벤트 심각도 수준에 따라 다양한 DQS 기능(도메인 관리, 기술 자료 검색, 정리, 일치 및 참조 데이터 서비스) 및 DQS 모듈에 대해 기록하려는 메시지를 필터링할 수 있습니다.  
   
 > [!NOTE]  
 >  **구성** 화면은 DQS_MAIN 데이터베이스에서 dqs_administrator 역할이 있는 사용자에게만 제공됩니다.  
@@ -61,9 +61,9 @@ ms.locfileid: "56032784"
 ##  <a name="AdminOutsideClient"></a> Data Quality 클라이언트 외부의 관리 활동  
  다음 활동은 Data Quality 클라이언트 외부에서 수행됩니다.  
   
--   **DQS 데이터베이스 백업 및 복원**: DQS 데이터베이스의 백업 및 복원은 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 백업 및 복원하는 것과 동일합니다.  
+-   **DQS 데이터베이스 백업 및 복원**: 백업 및 복원 DQS 데이터베이스의 백업 및 복원 하는 dqs와 관련 된 몇 가지 고려 사항 사용 하 여 모든 SQL Server 데이터베이스와 동일 합니다.  
   
--   **DQS 데이터베이스 연결 및 분리**: DQS 데이터베이스를 분리 및 연결하는 단계는 DQS와 관련된 몇 가지 고려 사항을 제외하면 다른 SQL Server 데이터베이스를 분리 및 연결하는 단계와 동일합니다.  
+-   **DQS 데이터베이스 분리 및 연결**: DQS 데이터베이스 연결 및 분리 하는 단계 dqs와 관련 된 몇 가지 고려 사항 사용 하 여 모든 SQL Server 데이터베이스 연결 및 분리와 동일 합니다.  
   
  자세한 내용은 [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)을 참조하세요.  
   

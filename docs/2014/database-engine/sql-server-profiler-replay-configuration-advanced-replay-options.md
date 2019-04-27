@@ -16,20 +16,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773289"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>SQL Server 프로파일러 - 재생 구성(고급 재생 옵션)
   **재생 구성** 대화 상자에서 **고급 재생 옵션** 탭을 사용하여 추적 파일 재생 방법을 지정할 수 있습니다.  
   
- 이 창을 보려면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일 또는 테이블이 열려 있는 상태로 **재생** 메뉴에서 **시작**을 클릭하고 추적을 재생할 SQL Server의 인스턴스에 연결한 다음 **고급 재생 옵션** 탭을 클릭합니다.  
+ 이 창을 보려면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 사용하여 재생에 적합한 이벤트가 포함된 추적 파일 또는 테이블을 엽니다. 자세한 내용은 [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md)을 참조하세요. 추적 파일 또는 테이블이 열려 있는 상태로 **재생** 메뉴에서 **시작**을 클릭하고 추적을 재생할 SQL Server의 인스턴스에 연결한 다음 **고급 재생 옵션** 탭을 클릭합니다.  
   
 ## <a name="options"></a>변수  
  **시스템 SPID 재생**  
- [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에서 SPID(시스템 프로세스 식별자)를 재생할지 여부를 지정합니다.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 SPID(시스템 프로세스 식별자)를 재생할지 여부를 지정합니다.  
   
  **한 SPID만 재생**  
  선택한 SPID와 관련된 원본 추적 파일의 작업만 재생합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "48192483"
  차단된 프로세스 모니터에서 차단된 프로세스 또는 차단 프로세스를 검색하는 간격을 구성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 테이블 재생 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [추적 테이블 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [추적 재생](../tools/sql-server-profiler/replay-traces.md)  
   

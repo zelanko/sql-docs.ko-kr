@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778825"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>전체 텍스트 카탈로그 속성(채우기 일정 페이지)
   이 대화 상자를 사용하여 전체 텍스트 카탈로그를 채우거나 다시 채우는 시기를 결정하는 일정을 추가하거나 수정할 수 있습니다.  

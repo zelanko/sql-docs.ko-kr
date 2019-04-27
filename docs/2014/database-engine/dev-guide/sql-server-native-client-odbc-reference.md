@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27c46e8e186f0e8424e679e9c023854e7887e232
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780552"
 ---
 # <a name="sql-server-native-client-odbc-reference"></a>SQL Server Native Client(ODBC) 참조
   ODBC(Open Database Connectivity)는 응용 프로그램에서 ODBC 데이터 원본의 데이터에 액세스하는 데 사용하는 Microsoft Win32 응용 프로그래밍 인터페이스입니다.  

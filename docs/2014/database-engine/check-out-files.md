@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786748"
 ---
 # <a name="check-out-files"></a>파일 체크 아웃
   체크 인한 파일을 편집하는 것을 허용하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경을 구성하지 않은 경우 파일을 수정할 수 있으려면 체크 아웃해야 합니다. 파일을 체크 아웃하면 파일 버전의 복사본이 로컬 디스크에 복사되며 파일의 읽기 전용 특성이 제거됩니다.  
@@ -60,10 +60,10 @@ ms.locfileid: "48051223"
      **이름**  
      체크 아웃할 수 있는 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 체크 아웃하지 않으려면 확인란의 선택을 취소합니다.  
   
-     **옵션**  
+     **Options**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 아웃 옵션이 표시됩니다.  
   
-     **Sort**  
+     **정렬**  
      표시된 열의 순서를 정렬합니다.  
   
      **트리 뷰**  

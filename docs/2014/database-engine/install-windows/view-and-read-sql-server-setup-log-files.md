@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774325"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
   설치 프로그램을 실행할 각 만듭니다 로그 파일은 %programfiles% 새로운 타임 스탬프 로그 폴더를 사용 하 여 생성 됩니다\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\합니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  

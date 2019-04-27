@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782146"
 ---
 # <a name="result-set-sample"></a>결과 집합 예제
   경우에 따라서는 쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 것이 유용할 수 있습니다. ADO.NET 2.0의 MARS(Multiple Active Result Set)는 이러한 작업을 가능하게 하는 기술입니다. 현재로서는 서버 쪽 프로그래밍에 사용되는 in-process 공급자에는 MARS가 구현되지 않습니다. 서버 쪽 커서를 사용하면 이러한 제한을 해결할 수 있습니다. 이 예제는 서버 쪽 커서를 사용하여 서버 쪽 프로그래밍을 지원하지 않는 MARS의 한계를 극복하는 방법을 보여 줍니다.  

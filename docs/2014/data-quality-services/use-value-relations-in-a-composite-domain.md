@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 28af90490875c06382845fbb9ae7a07281725d25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791927"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>복합 도메인의 값 관계 사용
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기술 자료 검색 프로세스 중에 복합 도메인에 대해 발견된 값 조합을 보는 방법에 대해 설명합니다. 이 페이지에서는 값 조합의 발생 횟수를 보여줍니다. 복합 도메인에는 값 관리가 지원되지 않으므로 이러한 값에 대해 어떠한 작업도 수행할 수 없습니다.  

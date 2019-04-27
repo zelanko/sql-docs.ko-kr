@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7e24657764e16bf5b826019419dd57077276463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774125"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation cmdlet
   **Invoke-PolicyEvaluation** 은 SQL Server 개체의 대상 집합이 하나 이상의 정책 기반 관리 정책에 지정된 조건을 준수하는지 여부를 보고하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  

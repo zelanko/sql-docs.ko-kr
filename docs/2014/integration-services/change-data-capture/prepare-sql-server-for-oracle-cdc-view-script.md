@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771270"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC를 위한 SQL Server 준비-스크립트 보기
   이 대화 상자에서는 MSXDBCDC 데이터베이스를 만드는 SQL 준비 스크립트를 보여 줍니다. 이 데이터베이스를 SQL Server용 Oracle CDC에 사용하려면 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있어야 합니다.  

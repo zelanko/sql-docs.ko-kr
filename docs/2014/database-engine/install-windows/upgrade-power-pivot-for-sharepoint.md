@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775659"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>SharePoint용 PowerPivot 업그레이드
   이 항목에서는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포를 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]으로 업그레이드하는 데 필요한 단계에 대해 간략하게 설명합니다. 구체적인 단계는 사용자 환경에서 현재 실행 중인 SharePoint 버전에 따라 달라 집니다 및 SharePoint 추가 기능에 대 한 PowerPivot 포함 (**spPowerPivot.msi**).  
@@ -187,7 +187,7 @@ ms.locfileid: "58434504"
   
     10. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 PowerPivot 데이터에 대 한 연결 요청은 실패 "데이터를 새로 고칠 수 없습니다." 또는 "오류가 발생 했습니다 요청한 작업을 수행 하려고 합니다. 다시 시도하세요." 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
   
-8.  **프로세스를 반복** 팜의 각 SQL Server Analysis Services (PowerPivot) 서비스에 대 한 합니다. 1) SQL Server 설치 프로그램을 실행합니다. 2) PowerPivot 구성 도구를 실행합니다.  
+8.  **프로세스를 반복** 팜의 각 SQL Server Analysis Services (PowerPivot) 서비스에 대 한 합니다. PowerPivot 구성 도구를 실행, 1) SQL Server 설치 프로그램 2) 실행 합니다.  
   
 9. 업그레이드 후 단계를 수행하고 팜의 PowerPivot 서버 버전을 확인하여 업그레이드에 성공했는지 확인합니다. 자세한 내용은 이 항목의 [업그레이드 후 확인 태스크](#verify) 와 다음 섹션을 참조하세요.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58434504"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  기존 배포에서 **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+    2.  기존 배포에서 다음 정보를 검토 합니다. **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
     3.  배포 또는 취소의 경우 PowerPivot 솔루션에 관련 된 GUID 값을 복사에 대 한 **JobId** 다음 명령에 붙여 넣습니다 (셸의 편집 메뉴에서 GUID를 복사 하려면 표시, 복사 및 붙여넣기 명령의 사용):  
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774957"
 ---
 # <a name="open-projects-from-source-control"></a>원본 제어에서 프로젝트 열기
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원본 제어에서 프로젝트를 직접 열 수 있습니다. 이렇게 할 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 최신 버전의 프로젝트를 검색하여 로컬 디스크에 복사합니다. 또한 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경은 프로젝트에 대한 솔루션을 자동으로 만듭니다.  

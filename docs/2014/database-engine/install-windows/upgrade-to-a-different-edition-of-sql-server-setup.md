@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774577"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>다른 SQL Server 2014 버전으로 업그레이드(설치 프로그램)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 프로그램은 다양한 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 간에 버전 업그레이드를 지원합니다. 지원되는 버전 업그레이드 경로에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 인스턴스 버전 업그레이드를 시작하기 전에 다음 항목을 검토하십시오.  
@@ -29,7 +29,7 @@ ms.locfileid: "51019048"
 -   [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터 노드 중 하나에서 버전 업그레이드를 실행하면 충분합니다. 이 노드는 Active 또는 Passive일 수 있으며 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 설정하지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 환경:** 노드 중 하나에서 버전 업그레이드를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터가 충분 합니다. 이 노드는 Active 또는 Passive일 수 있으며 엔진은 버전 업그레이드 중에 리소스를 오프라인으로 설정하지 않습니다. 버전 업그레이드 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하거나 다른 노드에 대한 장애 조치(failover)를 다시 시작해야 합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 권한이 있는 도메인 계정을 사용해야 합니다.  

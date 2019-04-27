@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773299"
 ---
 # <a name="view-file-history"></a>파일 기록 보기
   사용할 수 있습니다는 **기록** 명령 소스 제어 파일에 대 한 버전 기록을 볼 수 있습니다. 이 기록에는 원본 제어에서 파일이 추가 또는 체크 인된 날짜와 시간이 포함되어 있습니다.  

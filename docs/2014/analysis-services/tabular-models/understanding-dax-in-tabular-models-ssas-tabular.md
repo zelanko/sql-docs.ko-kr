@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2274fc3342c1a6cc11053c0f226232632bc225
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756780"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델의 DAX 이해(SSAS 테이블 형식)
   DAX(Data Analysis Expressions)는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 통합 문서 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에서 사용자 지정 계산을 만드는 데 사용되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  

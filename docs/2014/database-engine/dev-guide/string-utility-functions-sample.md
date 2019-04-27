@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780588"
 ---
 # <a name="string-utility-functions-sample"></a>문자열 유틸리티 함수 예제
   문자열 유틸리티 예제에는 쉼표로 구분된 문자열을 열이 하나인 테이블로 분할하는, Visual C# 및 Visual Basic으로 작성된 스트리밍 테이블 반환 함수가 포함되어 있습니다. 또한 문자열 열을 쉼표로 구분된 문자열로 변환하는 집계 함수도 포함되어 있습니다.  또한 정규식 대체 및 정규식 검색 기능을 제공하는 스칼라 함수와 테이블 반환 함수를 구현합니다.  

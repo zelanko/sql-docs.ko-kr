@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771547"
 ---
 # <a name="project-versions-dialog-box"></a>프로젝트 버전 대화 상자
   **프로젝트 버전** 대화 상자를 사용하여 프로젝트 버전을 확인하고 이전 버전으로 복원할 수 있습니다.  

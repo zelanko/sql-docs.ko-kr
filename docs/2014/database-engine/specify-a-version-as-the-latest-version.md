@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773479"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>최신 버전으로 버전 지정
   파일을 원본 제어에 체크 인하면 체크 인한 버전은 최신 버전이 됩니다. 최신 버전을 체크 아웃하거나 검색하는 사용자는 가장 최근에 체크 인된 항목의 로컬 복사본을 받게 됩니다.  

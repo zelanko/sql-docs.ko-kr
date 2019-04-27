@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773793"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>비클러스터형 columnstore 인덱스 사용
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 비클러스터형 columnstore 인덱스를 사용하기 위한 주요 태스크를 설명합니다.  
   
- Columnstore 인덱스의 개요를 보려면 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
+ columnstore 인덱스에 대한 개요는 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)를 참조하십시오.  
   
- 클러스터형된 columnstore 인덱스에 대 한 자세한 내용은 [클러스터형 Columnstore 인덱스를 사용 하 여](../relational-databases/indexes/indexes.md)입니다.  
+ 클러스터형 columnstore 인덱스에 대한 자세한 내용은 [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
 ## <a name="contents"></a>내용  
   

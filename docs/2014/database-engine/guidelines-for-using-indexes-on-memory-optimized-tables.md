@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779227"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스 사용 지침
   인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블에서 데이터에 효율적으로 액세스하는 데 사용됩니다. 올바른 인덱스를 지정하면 쿼리 성능을 크게 개선할 수 있습니다. 예를 들어, 다음 쿼리를 살펴보세요.  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  열 c1에 인덱스가 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 전체 테이블 t를 검색한 다음 조건 c1=1을 만족하는 행을 필터링해야 합니다. 그러나 열 c1에 인덱스가 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 값 1을 직접 검색하고 행을 검색할 수 있습니다.  
   
- 테이블에 있는 하나 이상의 열에 대해 특정한 값 또는 값의 범위를 갖는 레코드를 검색할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 이러한 열에 있는 인덱스를 사용하여 해당 레코드를 신속하게 찾을 수 있습니다. 디스크 기반 및 메모리 최적화 테이블 모두 인덱스를 이용할 수 있습니다. 그러나 메모리 최적화 테이블을 사용하는 경우에는 인덱스 구조 사이의 특정한 차이를 고려해야 합니다. 메모리 최적화 테이블의 인덱스를 메모리 최적화 인덱스라고 합니다. 주요 차이점은 다음과 같습니다.  
+ 테이블에 있는 하나 이상의 열에 대해 특정한 값 또는 값의 범위를 갖는 레코드를 검색할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]은 이러한 열에 있는 인덱스를 사용하여 해당 레코드를 신속하게 찾을 수 있습니다. 디스크 기반 및 메모리 최적화 테이블 모두 인덱스를 이용할 수 있습니다. 그러나 메모리 최적화 테이블을 사용하는 경우에는 인덱스 구조 사이의 특정한 차이를 고려해야 합니다. (메모리 최적화 테이블의 인덱스 라고 메모리 최적화 인덱스입니다.) 주요 차이점은 다음과 같습니다.  
   
 -   메모리 최적화 인덱스를 사용 하 여 만들어야 합니다 [CREATE TABLE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)합니다. 디스크 기반 인덱스는 `CREATE TABLE` 및 `CREATE INDEX`를 사용하여 만들 수 있습니다.  
   
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      가비지 컬렉션은 테이블의 모든 인덱스를 사용하는 경우 가장 잘 작동합니다. 드물게 사용되는 인덱스는 오래된 행 버전의 경우 가비지 컬렉션 시스템이 최적의 성능을 발휘하지 못하게 할 수 있습니다.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 액세스에 최적화된 인덱스 만들기: 코드 예제  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>메모리 최적화 인덱스를 만듭니다. 코드 예제  
  열 수준 해시 인덱스:  
   
 ```sql  

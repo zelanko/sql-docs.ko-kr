@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772280"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014에 대한 사용자 의견 제공
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 할애해 시간 개선을 위해을 내어 주셔서 감사는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품과 설명서. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  

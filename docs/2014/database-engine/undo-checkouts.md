@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773399"
 ---
 # <a name="undo-checkouts"></a>체크 아웃 취소
   **체크 아웃 취소** 명령을 사용하여 기존 체크 아웃을 취소할 수 있습니다. 파일을 수정 및 저장한 다음 나중에 변경 내용을 롤백해야 하는 경우에 이 명령이 특히 유용합니다.  
@@ -45,16 +45,16 @@ ms.locfileid: "48078323"
      **이름**  
      체크 아웃을 취소할 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 항목의 체크 아웃을 취소하지 않으려면 해당 확인란의 선택을 취소합니다.  
   
-     **옵션**  
+     **Options**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 아웃 취소 옵션이 표시됩니다.  
   
-     **Sort**  
+     **정렬**  
      열 표시의 순서를 정렬합니다.  
   
      **트리 뷰**  
      체크 아웃을 되돌리고 있는 항목의 폴더 및 항목 계층 구조를 표시합니다.  
   
-     **체크 아웃 취소**  
+     **Undo Checkout**  
      체크 아웃된 파일의 모든 변경 내용을 삭제하고 체크 아웃을 되돌립니다.  
   
 ## <a name="see-also"></a>관련 항목  

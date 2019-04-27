@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756763"
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
   테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "48191743"
 |1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 이러한 테이블을 동일한 데이터베이스에서 가져오는 경우, 테이블 가져오기 마법사에서는 [대괄호] 안에 있는 열을 기준으로 테이블 간의 관계를 검색하여 모델 디자이너에서 이러한 관계를 재현할 수 있습니다. 자세한 내용은 이 항목의 [관계 자동 검색 및 유추](#detection) 를 참조하십시오. 여러 원본에서 테이블을 가져오는 경우 수동으로 만들면 관계에 설명 된 대로 [는 두 테이블 간에 관계 만들기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
+ 이러한 테이블을 동일한 데이터베이스에서 가져오는 경우, 테이블 가져오기 마법사에서는 [대괄호] 안에 있는 열을 기준으로 테이블 간의 관계를 검색하여 모델 디자이너에서 이러한 관계를 재현할 수 있습니다. 자세한 내용은 이 항목의 [관계 자동 검색 및 유추](#detection) 를 참조하십시오. 테이블을 여러 원본에서 가져오는 경우 [두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)에서 사용하는 방법입니다.  
   
 ### <a name="columns-and-keys"></a>열 및 키  
  관계는 동일한 데이터가 포함된 각 테이블의 열에 기반을 둡니다. 예를 들어 Customers 테이블과 Orders 테이블은 둘 모두 고객 ID가 저장된 열을 포함하기 때문에 서로 관련시킬 수 있습니다. 이 항목의 예에서는 열 이름이 같지만 반드시 같아야 할 필요는 없습니다. 한 열은 이름이 CustomerID이고 다른 열은 이름이 CustomerNumber일 수 있습니다. Orders 테이블의 모든 행에 Customers 테이블에 저장되어 있는 ID만 있으면 됩니다.  
@@ -111,9 +111,9 @@ ms.locfileid: "48191743"
  모델 디자이너에서 관계를 만들 때 따라야 할 몇 가지 요구 사항이 있습니다.  
   
 ### <a name="single-active-relationship-between-tables"></a>테이블 간 단일 활성 관계  
- 관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블의 세 가지 다른 열인 OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
+ 관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블에서 세 개의 다른 열과 관련 된 DateKey 열을 포함: OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
   
- \* 관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-원인: 테이블 간의 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
+ \* 관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 간의 관계를 만들 수 없습니다 \<표 1 > 및 \<표 2 >. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
   
  테이블이 두 개 있고 이 테이블 간에 여러 관계가 있는 경우 조회 열을 포함하는 테이블의 여러 복사본을 가져와서 각 테이블 쌍 간에 하나의 관계를 만들어야 합니다.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "48191743"
   
  모델에 있는 데이터의 원본이 여러 개인 경우 수동으로 관계를 만들어야 할 가능성이 많습니다. 예를 들어 관계형 데이터 원본에서 Customers, CustomerDiscounts 및 Orders 테이블을 가져올 수 있습니다. 원본의 이러한 테이블 간에 있는 관계는 자동으로 모델에 만들어집니다. 그런 다음 다른 원본의 다른 테이블을 추가할 수 있습니다. 예를 들어 icrosoft Excel 통합 문서의 Geography 테이블에서 영역 데이터를 가져올 수 있습니다. 그런 다음 Customers 테이블의 열과 Geography 테이블 간 관계를 수동으로 만들 수 있습니다.  
   
- 다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 테이블 형식 모델에 관계를 수동으로 만들 수 있습니다. 다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 한 테이블의 열을 클릭한 다음 다른 테이블로 커서를 끌어 테이블 간에 올바른 순서로 쉽게 관계를 만들 수 있습니다. 관계 관리 대화 상자에는 간단한 테이블 형식으로 테이블 간의 관계가 표시됩니다. 수동으로 관계를 만드는 방법에 알아보려면 참조 [는 두 테이블 간에 관계 만들기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)합니다.  
+ 다이어그램 뷰의 모델 디자이너나 관계 관리 대화 상자를 사용하여 테이블 형식 모델에 관계를 수동으로 만들 수 있습니다. 다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 한 테이블의 열을 클릭한 다음 다른 테이블로 커서를 끌어 테이블 간에 올바른 순서로 쉽게 관계를 만들 수 있습니다. 관계 관리 대화 상자에는 간단한 테이블 형식으로 테이블 간의 관계가 표시됩니다. 수동으로 관계를 만드는 방법에 대한 자세한 내용은 [두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)에서 사용하는 방법입니다.  
   
 ##  <a name="bkmk_dupl_errors"></a> 중복 값 및 기타 오류  
  관계에 사용할 수 없는 열을 선택하면 열 옆에 빨간색 X가 나타납니다. 오류 아이콘 위에 커서를 두면 문제에 대한 자세한 정보를 제공하는 메시지가 표시됩니다. 다음과 같은 문제로 인해 선택된 열 간에 관계를 만들지 못할 수 있습니다.  
@@ -187,11 +187,11 @@ ms.locfileid: "48191743"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[두 테이블 간에 관계 만들기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|두 테이블 간의 관계를 수동으로 만드는 방법을 설명합니다.|  
-|[관계 삭제 &#40;&AMP;#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
+|[두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|두 테이블 간의 관계를 수동으로 만드는 방법을 설명합니다.|  
+|[관계 삭제&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tables-and-columns-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../import-data-ssas-tabular.md)  
   
   

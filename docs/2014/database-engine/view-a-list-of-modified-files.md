@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773434"
 ---
 # <a name="view-a-list-of-modified-files"></a>수정된 파일의 목록 보기
   사용할 수는 **보류 중인 체크 인** 전혀 표시할 창 시간이 현재 솔루션에서 체크 아웃 된 파일의 목록 및 단일 단추를 사용 하 여 이러한 파일을 체크 인하려면 클릭 합니다.  
@@ -38,14 +38,14 @@ ms.locfileid: "48225061"
      **설명**  
      일반 텍스트 설명을 보류 중인 체크 인에 연결합니다. 만들어진 설명은 각 버전의 프로젝트와 연결되며 원본 제어 데이터베이스에 저장됩니다.  
   
-     **옵션**  
+     **Options**  
      소스 제어를 클릭할 때 수행 해야 하는 작업을 지정 합니다 **체크 인** 단추입니다.  
   
     -   **모든 체크 아웃 유지**  
   
          변경 내용이 원본 제어 공급자에 기록되지만 파일의 체크 아웃 상태는 유지하도록 지정합니다.  
   
-     **Sort**  
+     **정렬**  
      항목 목록에 표시되는 열의 정렬 순서를 지정합니다.  
   
      **열**  

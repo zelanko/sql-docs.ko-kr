@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773383"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션 이해
   트랜잭션은 낙관적 동시 버전 동시성 제어의 형태를 사용하여 메모리 최적화 테이블에 액세스합니다. 즉, 데이터의 서로 다른 버전이 있습니다. 각 트랜잭션은 동시에 실행 중인 다른 트랜잭션에 독립적이면서 트랜잭션 측면에서 데이터베이스 자체의 일관된 버전에서 작동합니다. 뿐만 아니라 트랜잭션은 다른 동시 트랜잭션과 충돌이 없을 것이라는 낙관적 가정 하에서 작동합니다. 이렇게 하면 잠금을 사용할 필요가 없지만 시스템이 충돌을 감지하고 충돌하는 트랜잭션 중 하나를 종료해야 합니다. 충돌은 쓰기-쓰기 트랜잭션 및 읽기-쓰기 트랜잭션에 대해서만 발생할 수 있습니다. 쓰기-쓰기 충돌이 발생할 경우 쓰기 트랜잭션 하나가 종료됩니다.  
