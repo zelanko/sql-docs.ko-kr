@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781318"
 ---
 # <a name="interfaces-ole-db"></a>인터페이스(OLE DB)
   제공 하 여 데이터 액세스 구성 요소 MDAC (Microsoft)에 핵심 OLE DB 인터페이스 외에도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 추가 OLE DB 인터페이스를 구현 합니다.  

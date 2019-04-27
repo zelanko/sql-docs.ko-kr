@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ca92c8ed66c7669863cc234fe4999ab95e662
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743299"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
   MSOLAP.5는 SQL Server 2012용 Analysis Services OLE DB 공급자를 나타냅니다. Excel 서비스가 서버에서 PowerPivot 데이터를 사용할 수 있도록 하는 연결 요청을 만들려면 이 공급자를 신뢰해야 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48051188"
   
 4.  목록에 없으면 **신뢰할 수 있는 데이터 공급자 추가**를 클릭합니다.  
   
-5.  공급자 ID에 입력 `MSOLAP.5`합니다.  
+5.  공급자 ID에 `MSOLAP.5`를 입력합니다.  
   
 6.  공급자 유형에서 OLE DB가 선택되어 있는지 확인합니다.  
   

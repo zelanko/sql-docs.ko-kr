@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659222"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services에서 지원하는 인증 방법
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,11 +78,11 @@ ms.locfileid: "34019140"
   
  저장된 자격 증명에 대한 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) 및 [SharePoint Server 2013에서 보안 저장소 서비스와 함께 Excel Services 사용](http://go.microsoft.com/fwlink/?LinkID=309869)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [전송 보안을 통해 가장 사용](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Kerberos 제한된 위임에 대해 Analysis Services 구성](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services 인스턴스에 대 한 SPN 등록](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
+ [Analysis Services 인스턴스에 대한 SPN 등록](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

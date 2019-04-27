@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791743"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>편집 시 자동으로 파일 체크 아웃
   편집을 시작할 때 파일을 자동으로 체크 아웃하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 구성할 수 있습니다.  

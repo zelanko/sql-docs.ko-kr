@@ -1,5 +1,5 @@
 ---
-title: 마이닝 구조 속성 변경 | Microsoft Docs
+title: 마이닝 구조의 속성 변경 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670179"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>마이닝 구조 속성 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34014050"
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

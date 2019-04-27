@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f425112a324cbef3bc18ea6ddabf671d5bcd20c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747745"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>연결 정의 방법 선택(데이터 원본 마법사)(Analysis Services)
   **연결 정의 방법 선택** 페이지를 사용하여 데이터 원본에 대한 데이터 연결을 생성 또는 선택할 수 있습니다.  

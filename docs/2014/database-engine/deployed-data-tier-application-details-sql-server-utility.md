@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754105"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>배포된 데이터 계층 애플리케이션 세부 정보(SQL Server 유틸리티)
   유틸리티 탐색기의 배포된 데이터 계층 애플리케이션 뷰에 나오는 정보는 개별 데이터 계층 애플리케이션의 사용 데이터, CPU 사용 기록, 파일 수준의 저장소 사용 세부 정보, 그리고 정책 임계값을 확인 및 업데이트하는 기능을 제공합니다. 정책 임계값은 데이터 계층 애플리케이션 수준에서 CPU 사용에 대해, 그리고 데이터베이스 데이터 파일 및 로그 파일에 대해 제어할 수 있습니다. 개별 데이터 계층 애플리케이션의 속성 정보를 볼 수도 있습니다.  

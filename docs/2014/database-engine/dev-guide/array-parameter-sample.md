@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753735"
 ---
 # <a name="array-parameter-sample"></a>배열 매개 변수 예제
   데이터베이스에서 행 집합을 생성, 업데이트 또는 삭제해야 하는 경우가 있습니다. 이러한 작업을 수행하는 방법은 여러 가지가 있습니다. 그 중 한 가지는 CLR(공용 언어 런타임) 통합 사용자 정의 데이터 형식을 사용하여 클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하는 것입니다. 서버에 제공되는 데이터의 크기는 이러한 사용자 정의 데이터 형식의 특성으로 인해 8000바이트로 제한됩니다. 따라서 이 방법은 크거나 복잡한 데이터의 경우에는 적합하지 않습니다. 조작 중인 데이터가 작고 단순한 경우에는 각 행에 대해 저장 프로시저를 호출하는 것보다 이 방법이 훨씬 더 효율적일 수 있습니다. 배열을 전달함으로써 순서가 중요한 애플리케이션에 대해 데이터의 순서가 유지됩니다. 이 예제에는 다음이 포함되어 있습니다.  

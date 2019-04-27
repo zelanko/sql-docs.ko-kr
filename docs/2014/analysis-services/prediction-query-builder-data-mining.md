@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748685"
 ---
 # <a name="prediction-query-builder-data-mining"></a>예측 쿼리 작성기(데이터 마이닝)
   **마이닝 모델 예측** 뷰를 사용하여 마이닝 구조에 포함된 마이닝 모델을 기반으로 예측을 만들 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095053"
   
 -   [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [DMX 사용 하 여 데이터 마이닝 모델 만들기 및 쿼리: 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [만들기 및 DMX 사용 하 여 데이터 마이닝 모델을 쿼리 합니다. 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [데이터 마이닝 쿼리](data-mining/data-mining-queries.md)  
   

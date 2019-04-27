@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749248"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>SharePoint에 PowerPivot 솔루션 배포
   다음 지침을 사용하여 SharePoint Server 2010 환경에 PowerPivot 기능을 추가하는 두 개의 솔루션 패키지를 수동으로 배포할 수 있습니다. 솔루션 배포는 SharePoint 2010 서버에서 SharePoint용 PowerPivot을 구성하기 위한 필수 단계입니다. 필수 단계의 전체 목록을 보려면를 참조 하세요 [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)합니다.  
@@ -27,19 +27,19 @@ ms.locfileid: "52515970"
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
- [사전 요구 사항: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인](#bkmk_classic)  
+ [필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인](#bkmk_classic)  
   
- [1 단계: 팜 솔루션 배포](#bkmk_farm)  
+ [1단계: 팜 솔루션 배포](#bkmk_farm)  
   
  [2단계: 중앙 관리에 PowerPivot 웹 응용 프로그램 솔루션 배포](#deployCA)  
   
- [3 단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포](#deployUI)  
+ [3단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포](#deployUI)  
   
  [솔루션 다시 배포 또는 취소](#retract)  
   
  [PowerPivot 솔루션 정보](#intro)  
   
-##  <a name="bkmk_classic"></a> 필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용하는지 확인  
+##  <a name="bkmk_classic"></a> 필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인  
  SharePoint용 PowerPivot은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**대체, `http://<top-level site name>` SharePoint 사이트의 이름:  
   
 ```  
@@ -48,7 +48,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  반환 값은 **false**여야 합니다. 있으면 **true**,이 웹 응용 프로그램을 사용 하 여 PowerPivot 데이터에 액세스할 수 없습니다.  
   
-##  <a name="bkmk_farm"></a> 1 단계: 팜 솔루션 배포  
+##  <a name="bkmk_farm"></a> 1단계: 팜 솔루션 배포  
  이 섹션에서는 PowerShell을 사용하여 솔루션을 배포하는 방법을 보여 주지만 PowerPivot 구성 도구를 사용하여 이 태스크를 완료할 수도 있습니다. 자세한 내용은 [PowerPivot 구성 또는 복구 SharePoint 2010 용 &#40;PowerPivot 구성 도구&#41;](../configure-repair-powerpivot-sharepoint-2010.md)합니다.  
   
  이 태스크는 SharePoint용 PowerPivot을 설치한 후 한 번만 수행해야 합니다.  
@@ -69,7 +69,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 2 단계: 중앙 관리에 PowerPivot 웹 응용 프로그램 솔루션 배포  
+##  <a name="deployCA"></a> 2단계: 중앙 관리에 PowerPivot 웹 응용 프로그램 솔루션 배포  
  팜 솔루션을 배포한 후 중앙 관리에 웹 애플리케이션 솔루션을 배포해야 합니다. 이 단계에서는 중앙 관리에 PowerPivot 관리 대시보드를 추가합니다.  
   
 1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint  2010  관리 셸을 엽니다.  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  이제 중앙 관리에 웹 애플리케이션 솔루션이 배포되었으므로 중앙 관리를 사용하여 모든 나머지 구성 단계를 완료할 수 있습니다.  
   
-##  <a name="deployUI"></a> 3 단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포  
+##  <a name="deployUI"></a> 3단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포  
  앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 PowerPivot 데이터 액세스를 지원하는 각각의 기존 웹 응용 프로그램에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 애플리케이션을 더 많이 추가하는 경우 추가 웹 애플리케이션에 대해 이 단계를 반복해야 합니다.  
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  

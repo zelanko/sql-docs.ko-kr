@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41115e764099540a5b4548986c7c4c912d562f5b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753785"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>달력 인식 날짜 및 시간 UDT 예제
   사용되는 달력 시스템에 대한 인식 부족으로 날짜의 의미를 잘 모르는 상태에서 날짜를 문자열로 저장하면 혼동될 수 있습니다. `CADatetime` 예제에서는 달력을 사용하여 날짜와 시간을 처리할 수 있는 두 개의 사용자 정의 데이터 형식(`CADatetime` 및 `CADate`)을 정의합니다.  

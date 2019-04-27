@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745544"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>구조 데이터에 드릴스루 사용(기본 데이터 마이닝 자습서)
   광고 캠페인의 일부로 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 메일러를 보내는 잠재 고객 34 ~ 40 시대에 인구 통계. 마케팅 부서에서는 5년 전에 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 에서 자전거를 구매한 고객에게도 메일러를 보내려고 합니다. 이 단원에서는 오래 전에 자전거를 구매한 고객을 식별하고 그들의 연락처 정보를 검색합니다. 이 정보는 모델에 포함되어 있지 않지만 구조에는 포함되어 있습니다. 연락처 정보를 검색하려면 먼저 구조에 대해 드릴스루를 사용할 수 있는지 확인한 다음 드릴스루를 사용하여 대상 고객의 이름과 주소를 확인합니다.  

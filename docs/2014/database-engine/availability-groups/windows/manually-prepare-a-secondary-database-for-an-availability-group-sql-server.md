@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792083"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 AlwaysOn 가용성 그룹에 대한 보조 데이터베이스를 준비하는 방법에 대해 설명합니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스팅하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 AlwaysOn 가용성 그룹에 대한 보조 데이터베이스를 준비하는 방법에 대해 설명합니다. 보조 데이터베이스를 준비한 두 단계가 필요 합니다. (1) 주 데이터베이스의 최근 데이터베이스 백업 및 후속 로그 백업을 보조 복제본을 호스팅하는 각 서버 인스턴스로 복원 하 고 RESTORE WITH NORECOVERY를 사용 하 여 (2) 가용성 그룹에 복원된 된 데이터베이스를 조인 합니다.  
   
 > [!TIP]  
 >  기존 로그 전달 구성이 있는 경우 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 AlwaysOn 주 데이터베이스 및 하나 이상의 AlwaysOn 보조 데이터베이스로 변환할 수 있습니다. 자세한 내용은 [필수 구성 요소 마이그레이션에 대 한 로그 전달에서 AlwaysOn 가용성 그룹에 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)합니다.  
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> 후속편: 보조 데이터베이스를 준비한 후  
+##  <a name="FollowUp"></a> 후속 작업: 보조 데이터베이스를 준비한 후  
  보조 데이터베이스 구성을 완료하려면 새로 복원한 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

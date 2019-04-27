@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eae0fe81f501ff83d81722ece541085b00ade44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730692"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>다차원 데이터 원본에서 가져오기(SSAS 테이블 형식)
   Analysis Services 큐브 데이터베이스를 테이블 형식 모델의 데이터 원본으로 사용할 수 있습니다. Analysis Services 큐브에서 데이터를 가져오려면 MDX 쿼리를 정의하여 가져올 데이터를 선택해야 합니다  
@@ -34,7 +34,7 @@ ms.locfileid: "48076993"
 3.  테이블 가져오기 마법사의 단계별 지침을 따릅니다. **MDX 쿼리 지정** 페이지에서 MDX 쿼리를 지정할 수 있습니다. MDX 쿼리 디자이너를 사용하려면 MDX 쿼리 지정 페이지에서 **디자인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

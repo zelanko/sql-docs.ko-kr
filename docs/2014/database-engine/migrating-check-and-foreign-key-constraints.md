@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774934"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 및 FOREIGN KEY 제약 조건 마이그레이션
   CHECK 및 FOREIGN KEY 제약 조건은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서 지원되지 않습니다. 이러한 제약 조건은 주로 스키마에서 논리 데이터 무결성을 강화하는 데 사용되고 애플리케이션의 기능 수정을 유지할 때 중요할 수 있습니다.  

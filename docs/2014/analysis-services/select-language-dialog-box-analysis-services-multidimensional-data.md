@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f3e5023741793547a087f78e8591ce6063df445
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747315"
 ---
 # <a name="select-language-dialog-box-analysis-services---multidimensional-data"></a>언어 선택 대화 상자(Analysis Services - 다차원 데이터)
   **의** 언어 선택 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 새 번역에 대한 언어를 선택할 수 있습니다. 다음을 수행하여 **언어 선택** 대화 상자를 표시할 수 있습니다.  

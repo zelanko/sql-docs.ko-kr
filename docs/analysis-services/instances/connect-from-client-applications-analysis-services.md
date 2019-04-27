@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d71320fad55b9a0d052ad1bb9c9fd25ab861246c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748645"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>클라이언트 애플리케이션에서 연결(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "34019590"
   
  [SQL Server 2005 Analysis Services 연결 시나리오의 일반적인 연결 문제 해결](http://technet.microsoft.com/library/cc917670.aspx). 이 문서는 몇 년 전에 작성되었지만 정보와 방법은 여전히 유효합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services에서 지 원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [가장](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   

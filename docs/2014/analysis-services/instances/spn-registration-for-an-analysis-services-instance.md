@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729788"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   SPN(서비스 사용자 이름)은 Kerberos가 클라이언트 및 서비스 ID를 상호 인증하는 데 사용되는 Active Directory 도메인의 서비스 인스턴스를 고유하게 식별합니다. SPN은 서비스 인스턴스가 실행되는 로그온 계정과 연결되어 있습니다.  

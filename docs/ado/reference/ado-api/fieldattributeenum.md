@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db3b72b7bdaf60febdeb41eb6f6e1e86c5064f63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653559"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 하나 이상의 특성을 지정 하는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  

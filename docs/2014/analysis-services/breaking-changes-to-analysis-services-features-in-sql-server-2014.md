@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 944385d23b39938a6cb4a28afa16c3d2d67dca23
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658152"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014에서 Analysis Services 기능의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 SQL Server을 기반으로 한 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다.  

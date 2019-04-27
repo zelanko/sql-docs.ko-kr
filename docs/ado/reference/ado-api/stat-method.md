@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 127aab5e00247ce5550f25e2a281e190472b0186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740343"
 ---
 # <a name="stat-method"></a>Stat 메서드
 에 대 한 정보를 검색 한 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -64,7 +64,7 @@ Long stream.Stat(StatStg, StatFlag)
  이 저장소, 스트림 또는 바이트 배열에 대 한 생성 시간을 나타냅니다.  
   
  *atime*  
- 이 저장소, 스트림 또는 바이트 배열에 대 한 마지막 액세스 시간을 나타냅니다.  
+ 이 스토리지, 스트림 또는 바이트 배열에 대한 최종 액세스 시간을 나타냅니다.  
   
  STATFLAG_NONAME StatFlag 매개 변수에 지정 된 경우에 스트림의 이름을 반환 되지 않습니다.  
   

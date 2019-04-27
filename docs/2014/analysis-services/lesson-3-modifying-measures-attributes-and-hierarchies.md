@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729359"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
   처음 큐브를 정의한 후에는 큐브를 보다 유용하고 친숙하게 사용할 수 있습니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  
@@ -41,8 +41,8 @@ ms.locfileid: "53377575"
  [배포된 큐브 찾아보기](lesson-3-5-browsing-the-deployed-cube.md)  
  이 태스크에서는 큐브 디자이너의 브라우저를 사용하여 큐브 데이터를 찾아봅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
- [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링 & #40; Adventure Works 자습서 & #41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

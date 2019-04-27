@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 957657e71103b248cdafb645bf44a68a9b486a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756847"
 ---
 # <a name="perspectives-ssas-tabular"></a>큐브 뷰(SSAS 테이블 형식)
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 애플리케이션의 관점에서 파악할 수 있습니다.  
@@ -45,10 +45,10 @@ ms.locfileid: "48169093"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[큐브 뷰를 만들고 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
+|[큐브 뷰 만들기 및 관리&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
- [계층 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
+ [계층 구조&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
   
   

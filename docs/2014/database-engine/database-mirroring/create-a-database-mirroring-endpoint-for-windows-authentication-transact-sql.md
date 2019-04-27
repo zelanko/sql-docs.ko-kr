@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755288"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 Windows 인증을 사용하는 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다. 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 지원하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 인스턴스에 데이터베이스 미러링 엔드포인트가 필요합니다. 서버 인스턴스는 하나의 포트가 있는 데이터베이스 미러링 엔드포인트를 하나만 가질 수 있습니다. 데이터베이스 미러링 엔드포인트는 엔드포인트가 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 서버 인스턴스의 모든 데이터베이스 미러링 세션이 이 포트에서 수신하고 데이터베이스 미러링에 대해 들어오는 모든 연결에 이 포트가 사용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48213893"
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **데이터베이스 미러링 엔드포인트를 만들려면:**[Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48213893"
         > [!IMPORTANT]  
         >  각 서버 인스턴스에는 하나의 고유 수신기 포트만 필요합니다.  
   
-    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod>* 는 연결을 인증하는 데 사용되는 방법을 NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 지정합니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
+    -   엔드포인트에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod >* 다음 중 하나로 연결을 인증 하는 데 사용 하는 방법을 지정 합니다. NTLM, KERBEROS 또는 NEGOTIATE 중에서 선택 합니다. 기본값인 NEGOTIATE를 적용하면 엔드포인트가 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 엔드포인트의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
   
     -   ENCRYPTION은 기본적으로 REQUIRED로 설정되어 있으며 이는 엔드포인트에 대한 모든 연결에 암호화를 사용해야 함을 의미합니다. 그러나 다음과 같이 엔드포인트에 대해 암호화를 해제하거나 선택적으로 사용할 수 있습니다. 대체 방법은 다음과 같습니다.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "48213893"
   
          한 엔드포인트에 암호화가 필요한 경우 다른 엔드포인트의 ENCRYPTION은 SUPPORTED나 REQUIRED로 설정해야 합니다.  
   
-    -   *\<알고리즘&gt;* 은 엔드포인트의 암호화 표준을 지정하는 옵션을 제공합니다. *\<알고리즘>* 값은 RC4, AES, AES RC4 또는 RC4 AES 중 하나이거나 이러한 알고리즘의 조합일 수 있습니다.  
+    -   *\<알고리즘&gt;* 은 엔드포인트의 암호화 표준을 지정하는 옵션을 제공합니다. 변수의  *\<알고리즘 >* 하나 이거나 알고리즘의 조합일 수 있습니다. RC4, AES, AES RC4 또는 RC4 AES  
   
          AES RC4는 엔드포인트가 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 엔드포인트가 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 엔드포인트가 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 엔드포인트의 알고리즘이 적용됩니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "48213893"
     > [!NOTE]  
     >  기존 엔드포인트를 변경하려면 [ALTER ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)를 사용합니다.  
   
-###  <a name="TsqlExample"></a> 예: 데이터베이스 미러링 지원을 위한 엔드포인트 만들기(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제: 데이터베이스 미러링 (Transact SQL) 지원을 위한 끝점 만들기  
  다음 예에서는 세 대의 다른 컴퓨터 시스템에 있는 기본 서버 인스턴스에 대한 데이터베이스 미러링 엔드포인트를 만듭니다.  
   
 |서버 인스턴스의 역할|호스트 컴퓨터 이름|  
@@ -201,7 +201,7 @@ GO
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](specify-a-server-network-address-database-mirroring.md)   
- [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
+ [예: Windows 인증을 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

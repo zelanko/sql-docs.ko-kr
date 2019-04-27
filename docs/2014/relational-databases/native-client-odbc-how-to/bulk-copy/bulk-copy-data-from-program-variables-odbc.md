@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753645"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>프로그램 변수에서 데이터 대량 복사(ODBC)
   이 예제에서는 `bcp_bind` 및 `bcp_sendrow`를 사용하여 프로그램 변수에서 SQL Server로 데이터를 대량 복사하는 대량 복사 함수의 사용 방법을 보여 줍니다. 이 예제를 간소화하기 위해 오류 검사 코드는 제거했습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "53364425"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름을 지정합니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을 지정합니다. 응용 프로그램에서 뷰 또는 테이블로 복사하려는 경우 DB_IN, 테이블 또는 뷰에서 응용 프로그램으로 복사하려는 경우 DB_OUT입니다.  
+    -   복사본의 방향: DB_IN 뷰 또는 테이블로 복사 하려는 경우 DB_OUT 응용 프로그램에서 테이블 또는 뷰에서 응용 프로그램입니다.  
   
 5.  호출 [bcp_bind](../../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 열을 프로그램 변수에 바인딩할 대량 복사에서 각 열에 대 한 합니다.  
   

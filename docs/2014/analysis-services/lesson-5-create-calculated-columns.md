@@ -1,5 +1,5 @@
 ---
-title: '6 단원: 계산된 열 만들기 | Microsoft Docs'
+title: '6단원: 계산된 열 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728647"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>6단원: 계산 열 만들기
   이 단원에서는 계산 열을 추가하여 모델에 새 데이터를 만듭니다. 계산 열은 모델에 이미 있는 데이터를 기반으로 합니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](tabular-models/ssas-calculated-columns.md)을 참조하세요.  
   
  서로 다른 세 테이블에 다섯 개의 새 계산 열을 만듭니다. 태스크마다 단계가 조금씩 다릅니다. 이는 새 열을 만들고 열의 이름을 바꾸고 테이블의 다양한 위치에 열을 배치하는 데 여러 가지 방법이 있음을 보여 주기 위한 것입니다.  
   
- 이 단원에 소요되는 예상 시간: **15분**  
+ 예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [5단원: 관계 만들기](lesson-4-create-relationships.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [5단원: 관계를 만들](lesson-4-create-relationships.md)합니다.  
   
 ## <a name="create-calculated-columns"></a>계산 열 만들기  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134045"
      계산 열의 모든 행에 값이 채워집니다. 테이블의 아래쪽으로 스크롤하면 각 행의 데이터에 따라 이 열에서 행마다 서로 다른 값을 포함할 수 있음을 알 수 있습니다.  
   
     > [!NOTE]  
-    >  오류 메시지가 표시되면 수식의 열 이름이 [3단원: 열 이름 바꾸기](rename-columns.md)에서 변경한 열 이름과 일치하는지 확인합니다.  
+    >  오류가 발생 하는 경우 열 이름을 수식에에서 변경한 열 이름과 일치 확인 [단원 3: 열 이름 바꾸기](rename-columns.md)합니다.  
   
 5.  이 열의 이름을 바꿀 `Month Calendar`합니다.  
   
@@ -127,6 +127,6 @@ ms.locfileid: "48134045"
  Margin 계산 열은 각(제품) 행의 매출이익률을 분석하는 데 사용됩니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이 단원을 계속하려면 다음 단원인 [7단원: 측정값 만들기](lesson-6-create-measures.md)로 이동하세요.  
+ 이 단원을 계속 하려면 다음 단원으로 이동 합니다. [7단원: 측정값 만들기](lesson-6-create-measures.md)합니다.  
   
   

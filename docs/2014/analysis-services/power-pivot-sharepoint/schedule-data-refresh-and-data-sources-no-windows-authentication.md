@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749085"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약 및 Windows 인증을 지원하지 않는 데이터 원본(SharePoint용 PowerPivot)
   이 항목에서는 Windows 인증을 지원하지 **않는** 데이터 원본을 사용할 수 있는 SharePoint용 PowerPivot 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "53374865"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013|  
   
- **개요:** 보안 저장소 대상 응용 프로그램을 두 개 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 애플리케이션(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 애플리케이션을 구성합니다. 두 번째 대상 애플리케이션도 무인 데이터 새로 고침 계정에는 첫 번째 대상 애플리케이션을 사용합니다.  
+ **개요:** 두 보안 저장소 대상 응용 프로그램을 만듭니다. Windows 자격 증명을 사용하는 첫 번째 대상 애플리케이션(PowerPivotDataRefresh)을 구성합니다. Windows 인증을 지원하지 않는 데이터 원본(예: Oracle 데이터베이스)에 대한 자격 증명을 사용하여 두 번째 대상 애플리케이션을 구성합니다. 두 번째 대상 애플리케이션도 무인 데이터 새로 고침 계정에는 첫 번째 대상 애플리케이션을 사용합니다.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** Windows 인증으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
+-   **(1) PowerPivotDatarefresh:** 보안 저장소 대상 응용 프로그램 ID는 windows 인증을 사용 하 여 설정 됩니다.  
   
--   **(2) OracleAuthentication:** Oracle 자격 증명으로 설정된 보안 저장소 대상 응용 프로그램 ID입니다.  
+-   **(2) OracleAuthentication:** 보안 저장소 대상 응용 프로그램 ID Oracle 자격 증명을 사용 하 여 설정 됩니다.  
   
 -   **(3)**  PowerPivot 서비스 응용 프로그램은 대상 응용 프로그램 "PowerPivotDataRefresh"를 사용 하도록 구성에 대 한 합니다 **무인 데이터 새로 고침 계정**합니다.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "53374865"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh를 입력합니다.  
+    -   **대상 응용 프로그램 ID:** PowerPivotDataRefresh.  
   
-    -   **표시 이름:** PowerPivotDataRefresh를 입력합니다.  
+    -   **표시 이름:** PowerPivotDataRefresh.  
   
     -   **담당자 메일:** ?  
   
-    -   **대상 응용 프로그램 형식:** 그룹  
+    -   **대상 응용 프로그램 형식:** 그룹입니다.  
   
     -   **대상 응용 프로그램 페이지 URL:** 없음  
   
@@ -89,13 +89,13 @@ ms.locfileid: "53374865"
   
 4.  **새 보안 저장소 대상 응용 프로그램 만들기** 페이지에서 다음 값을 구성합니다.  
   
-    -   **대상 응용 프로그램 ID:** OracleAuthentication  
+    -   **대상 응용 프로그램 ID:** OracleAuthentication.  
   
-    -   **표시 이름:** OracleAuthentication  
+    -   **표시 이름:** OracleAuthentication.  
   
     -   **담당자 메일:** ?  
   
-    -   **대상 응용 프로그램 형식:** 그룹  
+    -   **대상 응용 프로그램 형식:** 그룹입니다.  
   
     -   **대상 응용 프로그램 페이지 URL:** 없음  
   

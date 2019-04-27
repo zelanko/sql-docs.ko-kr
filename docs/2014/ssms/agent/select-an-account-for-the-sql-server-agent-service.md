@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666800"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
   서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 계정을 선택하십시오.  
@@ -92,23 +92,23 @@ ms.locfileid: "52788465"
  <sup>4</sup> 아래의 제한 4를 참조 하세요.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
- 대상 서버를 마스터 서버에 참여시키면 실패하고 "참여 작업이 실패했습니다"라는 오류 메시지가 표시될 수 있습니다.  
+ 다음 오류 메시지를 사용 하 여 대상 서버를 마스터 서버에 참여 시키면 실패할 수 있습니다. "참여 작업이 실패 했습니다."  
   
  이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 모두 다시 시작합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>제한 사항 2: 다중 서버 관리에 로컬 시스템 계정 사용  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>제한 사항 2: 다중 서버 관리에 대 한 로컬 시스템 계정 사용  
  마스터 서버와 대상 서버가 같은 컴퓨터에 있을 경우에만 로컬 시스템 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 실행할 때 다중 서버 관리가 지원됩니다. 이 구성을 사용하면 대상 서버를 마스터 서버에 참여시킬 때 다음 메시지가 반환됩니다.  
   
  "*<target_server_computer_name>* 의 에이전트 시작 계정에 대상 서버로 로그인할 권한이 있는지 확인하세요."  
   
  이 정보 메시지는 무시해도 됩니다. 참여 작업이 성공적으로 완료됩니다. 자세한 내용은 [다중 서버 환경 만들기](create-a-multiserver-environment.md)를 참조하세요.  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>제한 사항 3: SQL Server 사용자인 경우 네트워크 서비스 계정 사용  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>제한 사항 3: SQL Server 사용자 인 경우 네트워크 서비스 계정 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 실행하고 해당 네트워크 서비스 계정에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인할 수 있는 액세스 권한이 명시적으로 부여된 경우 에이전트가 시작되지 않을 수 있습니다.  
   
  이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있는 컴퓨터를 다시 부팅합니다. 이 작업은 한 번만 수행해야 합니다.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>제한 4: 같은 컴퓨터에서 SQL Server Reporting Services가 실행되고 있을 때 네트워크 서비스 계정 사용  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>제한 사항 4: 같은 컴퓨터에서 SQL Server Reporting Services가 실행되고 있을 때 네트워크 서비스 계정 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 실행하고 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 도 실행되고 있으면 에이전트가 시작되지 않을 수 있습니다.  
   
  이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행되고 있는 컴퓨터를 다시 부팅하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 모두 다시 시작합니다. 이 작업은 한 번만 수행해야 합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "52788465"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 운영 체제가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작되도록 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [서비스 관리 방법 도움말 항목&#40;SQL Server 구성 관리자&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)   
  [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)  

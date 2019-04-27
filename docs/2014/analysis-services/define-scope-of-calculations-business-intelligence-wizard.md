@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732099"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>계산 범위 정의(비즈니스 인텔리전스 마법사)
   **계산 범위 정의** 페이지를 사용하여 새 시간 계산을 개별 측정값과 연결할 수 있습니다.  

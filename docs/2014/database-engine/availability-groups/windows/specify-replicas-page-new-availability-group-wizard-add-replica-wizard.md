@@ -1,5 +1,5 @@
 ---
-title: '복제본 페이지 지정 (새 가용성 그룹 마법사: 복제본 추가 마법사) | Microsoft Docs'
+title: '복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788356"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정 (새 가용성 그룹 마법사: 복제본 추가 마법사)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
   이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
   
 |탭|간단한 설명|  
@@ -38,7 +38,7 @@ ms.locfileid: "53371575"
  보조 복제본을 호스팅하는 데 사용하는 서버 인스턴스가 **가용성 복제본** 표에 나열되지 않는 경우 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
   
  **초기 역할**  
- 새 복제본이 처음에 수행할 **주** 나 **보조**합니다.  
+ 새 복제본이 처음에 수행할 역할을 나타냅니다. 역할(**주** 또는 **보조**)을 나타냅니다.  
   
  **자동 장애 조치 (최대 2 개)**  
  이 가용성 복제본을 자동 장애 조치(failover) 파트너로 사용하려는 경우에만 이 확인란을 선택합니다. 자동 장애(failover) 조치를 구성하려면 초기 주 복제본 및 보조 복제본 하나에 대해 이 옵션을 선택해야 합니다. 이러한 복제본은 모두 동기-커밋 가용성 모드를 사용합니다. 두 개의 복제본만 자동 장애 조치(failover)를 지원할 수 있습니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "53371575"
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
 > [!IMPORTANT]  
->  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 ### <a name="replica-backup-priorities-grid"></a>복제본 백업 우선 순위 표  
  가용성 그룹의 각 복제본에 대한 백업 우선 순위를 지정하려면 **복제 백업 우선 순위** 표를 사용합니다. 이 표에는 다음 열이 있습니다.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742269"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 함수
 **규칙**  
@@ -43,6 +43,6 @@ ms.locfileid: "53204353"
 > [!NOTE]  
 >  ODBC 3.8에 도입 된 SQL_ASYNC_DBC_FUNCTION_ENABLE 특성에서 지원 되지 않습니다 **SQLSetConnectOption**합니다. 연결 핸들에서 비동기 작업을 사용 하는 응용 프로그램을 사용 해야 합니다 **SQLSetConnectAttr**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

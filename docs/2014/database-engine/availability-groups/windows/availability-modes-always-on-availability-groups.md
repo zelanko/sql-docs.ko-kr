@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791815"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>가용성 모드(Always On 가용성 그룹)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 *가용성 모드* 는 지정된 가용성 복제본을 동기 커밋 모드에서 실행할 수 있는지 여부를 결정하는 복제본 속성입니다. 각 가용성 복제본에 대해 가용성 모드를 동기 커밋 모드나 비동기 커밋 모드로 구성해야 합니다.  주 복제본이 *비동기 커밋 모드*로 구성된 경우 주 복제본에서는 보조 복제본이 들어오는 트랜잭션 로그 레코드를 디스크에 기록( *로그 확정*)할 때까지 기다리지 않습니다. 특정 보조 복제본이 비동기 커밋 모드로 구성된 경우 주 복제본은 해당 보조 복제본이 로그를 확정할 때까지 기다리지 않습니다. 주 복제본과 특정 보조 복제본이 모두 *동기 커밋 모드*로 구성된 경우에는 보조 복제본이 주 복제본의 *세션 제한 시간*내에 주 복제본을 ping하는 데 실패하지 않은 한 주 복제본은 보조 복제본이 로그를 확정했음을 확인할 때까지 기다립니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "53376315"
 > [!NOTE]  
 >  WSFC 쿼럼 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **가용성 모드와 장애 조치(failover) 모드를 변경하려면**  
   
 -   [가용성 복제본의 가용성 모드 변경&#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
@@ -153,7 +153,7 @@ ms.locfileid: "53376315"
   
 -   [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [장애 조치 및 장애 조치 모드 &#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

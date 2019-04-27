@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740283"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy 개체(ADO MD)
 한 가지 방식을의 멤버는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 집계 되거나 "롤업 합니다." 차원 하나 이상의 계층 구조에 따라 집계할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47851441"
 |----------|-----------------|  
 |AllMember|계층 구조에서 롤업의 가장 높은 수준에서 멤버입니다.|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
-|CubeName|큐브의 이름입니다.|  
+|CubeName|큐브 이름입니다.|  
 |DefaultMember|이 계층에 대 한 기본 멤버의 고유 이름입니다.|  
 |Description|계층의 의미 있는 설명입니다.|  
 |DimensionType|이 계층이 속한 차원의 형식입니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "47851441"
 |HierarchyCaption|계층과 연결된 레이블 또는 캡션입니다.|  
 |HierarchyCardinality|계층의 멤버 수입니다.|  
 |HierarchyGUID|계층의 GUID입니다.|  
-|HierarchyName|계층 이름입니다.|  
+|HierarchyName|계층의 이름입니다.|  
 |HierarchyUniqueName|계층의 명확한 이름입니다.|  
 |SchemaName|이 큐브가 속한 스키마의 이름입니다.|  
   

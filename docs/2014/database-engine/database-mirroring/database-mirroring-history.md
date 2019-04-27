@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754834"
 ---
 # <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
   이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48086193"
 |-----------------|-----------------|  
 |**기록된 시간**|기록 행의 타임스탬프입니다.|  
 |**역할**|이 데이터베이스에 대한 서버 인스턴스의 현재 미러링 역할(주 서버 또는 미러 서버)입니다.|  
-|**미러링 상태**|데이터베이스의 상태입니다.<br /><br /> 연결 끊김<br /><br /> 장애 조치(Failover) 보류 중<br /><br /> 일시 중지됨<br /><br /> 동기화됨<br /><br /> 동기화 중<br /><br /> Unknown|  
+|**미러링 상태**|데이터베이스의 상태입니다.<br /><br /> 연결 끊김<br /><br /> 장애 조치(Failover) 보류 중<br /><br /> Suspended<br /><br /> 동기화됨<br /><br /> 동기화 중<br /><br /> Unknown|  
 |**미러링 모니터 서버 연결**|데이터베이스의 미러링 세션에 있는 미러링 모니터 서버 연결의 상태입니다(연결됨 또는 연결 끊김). 미러링 모니터 서버가 없을 경우 값은 NULL입니다.|  
 |**보내지 않은 로그**|주 서버 인스턴스의 Send Queue에 있는 보내지 않은 로그의 크기(KB)입니다.|  
 |**전송 시간**|주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다( *전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.|  

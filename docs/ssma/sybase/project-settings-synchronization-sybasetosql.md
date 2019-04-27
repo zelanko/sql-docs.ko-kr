@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667984"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>프로젝트 설정(동기화)(SybaseToSQL)
 [동기화] 페이지의 **프로젝트 설정** 대화 상자에는 SSMA를 테이블 및 저장된 프로시저와 같은 데이터베이스 개체를 로드 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  

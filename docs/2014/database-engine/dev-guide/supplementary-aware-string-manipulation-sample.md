@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780493"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>보조 문자 인식 문자열 조작 예제
   이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제는 보조 문자 인식 문자열 처리 단계를 보여 줍니다. 이 예제에서는 기본 제공 함수와 동일한 문자열 조작 함수를 제공할 뿐만 아니라 추가 보조 문자 인식 기능을 통해 유니코드 및 보조 문자의 문자열을 모두 처리할 수 있는 다섯 가지 Transact-SQL 문자열 함수의 구현 예를 보여 줍니다. 다섯 가지 함수는 lens(), `lefts(), rights(), subs()` 및 `replace_s()` 입니다. 이는 기본 제공 함수 `LEN(), LEFT(), RIGHT(), SUBSTRING()` 및 `REPLACE()` 문자열 함수에 해당됩니다.  

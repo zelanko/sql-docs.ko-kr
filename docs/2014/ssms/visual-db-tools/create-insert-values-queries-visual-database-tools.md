@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 019c2fe96be00c6e86e0c94286770d30e7a54a9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676335"
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>값 삽입 쿼리 만들기(Visual Database Tools)
   값 삽입 쿼리를 사용하여 현재 테이블에 새 행을 만들 수 있습니다. 값 삽입 쿼리를 만들려면 다음 항목을 지정합니다.  

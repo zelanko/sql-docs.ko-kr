@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779010"
 ---
 # <a name="get-dialog-box-source-control"></a>가져오기 대화 상자(소스 제어)
   선택한 항목의 읽기 전용 복사본을 원본 제어 데이터베이스에서 작업 폴더나 지정한 다른 폴더로 가져옵니다.  
@@ -46,10 +46,10 @@ ms.locfileid: "48048793"
  **이름**  
  가져올 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 가져오지 않으려면 확인란의 선택을 취소합니다.  
   
- **옵션**  
+ **Options**  
  단추 오른쪽의 화살표를 클릭하면 Source Safe 플러그 인의 가져오기 옵션이 표시됩니다.  
   
- **Sort**  
+ **정렬**  
  표시된 열의 순서를 정렬합니다.  
   
  **트리 뷰**  

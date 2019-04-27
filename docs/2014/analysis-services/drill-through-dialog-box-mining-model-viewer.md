@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731552"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>드릴스루 대화 상자(마이닝 모델 뷰어)
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭을 사용하여 마이닝 모델을 볼 때 모델에 드릴스루가 사용되도록 설정되어 있으면 사례 데이터에 대한 세부 정보로 드릴스루할 수 있습니다. 또한 기본 마이닝 구조에서도 드릴스루를 사용하도록 설정하면 마이닝 구조에서 마이닝 모델에 포함되지 않은 열도 볼 수 있습니다. 열 목록의 구조 열에는 접두사로 "Structure" 레이블이 붙습니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "48066963"
  데이터를 새로 고치려면 녹색 화살표 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [드릴스루 쿼리 &#40;데이터 마이닝&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [드릴스루 쿼리&#40;데이터 마이닝&#41;](data-mining/drillthrough-queries-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [마이닝 모델 뷰어 태스크 및 방법](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

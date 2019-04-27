@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743169"
 ---
 # <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>테이블 1: ATOMIC 블록의 내구성  
+### <a name="table-1-durability-in-atomic-blocks"></a>표 1: Atomic 블록의 내구성  
   
 |ATOMIC 블록 내구성 옵션|기존 트랜잭션 없음|처리 중인 트랜잭션(완전 또는 지연된 내구성이 있음)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   시스템 저장 프로시저 실행 `sp_flush_log`를 실행합니다. 이 프로시저는 모든 이전에 커밋된 지연된 내구성이 있는 트랜잭션의 로그 레코드를 디스크에 강제로 플러시합니다. 자세한 내용은 [sys.sp_flush_log&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql)를 참조하세요.  
   
-##  <a name="delayed-durability-and-other-sql-server-features"></a>지연된 내구성 및 기타 SQL Server 설정  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>지연 된 내구성 및 기타 SQL Server 기능  
  **변경 추적 및 변경 데이터 캡처**  
  변경 추적을 적용한 모든 트랜잭션은 완전 내구성을 가집니다. 변경 추적을 사용하도록 설정한 테이블에 쓰기 작업을 수행하는 경우 트랜잭션은 변경 추적 속성이 있습니다. 지연된 내구성 사용은 CDC(변경 데이터 캡처)를 사용하는 데이터베이스에 지원되지 않습니다.   
   

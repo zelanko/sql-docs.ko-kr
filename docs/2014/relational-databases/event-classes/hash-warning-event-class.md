@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc2b6d2ba25ee487053a7f9f711c499356a5ec59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662347"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 이벤트 클래스
   Hash Warning 이벤트 클래스는 해시 연산 중 해시 재귀 또는 해시 중단(해시 재귀 한도 초과) 발생을 모니터링하는데 사용할 수 있습니다.  

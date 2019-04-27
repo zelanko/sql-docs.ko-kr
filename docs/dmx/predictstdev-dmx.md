@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659009"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 지정 된 형식의 스칼라 값  *\<스칼라 열 참조 >* 합니다.  
+ 지정 된 유형의 스칼라 값을  *\<스칼라 열 참조 >* 합니다.  
   
 ## <a name="remarks"></a>Remarks  
  열 참조가 불연속 유형인 경우 **PredictStdev** 불연속 값의 표준 편차를 계산할 수 없기 때문에 0을 반환 합니다.  

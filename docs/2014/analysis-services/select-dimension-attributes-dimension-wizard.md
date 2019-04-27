@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7abb4560696dba21512066a7ff0ba3153ae2319a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748095"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>차원 특성 선택(차원 마법사)
   **차원 특성 선택** 페이지를 사용하여 차원에 대해 만들 특성을 선택하고 수정할 수 있습니다.  

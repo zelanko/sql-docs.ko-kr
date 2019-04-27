@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730419"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>텍스트 파일에서 가져오기(SSAS 테이블 형식)
   텍스트 가져오기 마법사를 사용하여 Microsoft Excel 파일 및 텍스트 파일에서 데이터를 가져올 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48055782"
 3.  테이블 가져오기 마법사의 단계별 지침을 따릅니다. 다음 페이지에서 **테이블 및 뷰 선택** 페이지를 사용하여 특정 테이블을 선택하고 필터를 적용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

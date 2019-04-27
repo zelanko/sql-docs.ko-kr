@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780988"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>text 및 image 열 관리 방법 도움말 항목(ODBC)
   Microsoft  SQL Server  ODBC 드라이버를 사용하면 텍스트 및 이미지 매개 변수를 사용하여 결과 집합의 text, ntext 및 image 열에서 데이터를 검색할 수 있습니다.  

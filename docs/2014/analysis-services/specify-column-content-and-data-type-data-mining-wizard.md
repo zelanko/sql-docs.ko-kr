@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746286"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>열 내용 및 데이터 형식 지정(데이터 마이닝 마법사)
   **열 내용 및 데이터 형식 지정** 페이지를 사용하여 마법사의 이전 페이지에서 선택한 각 열의 사용법 및 데이터 형식을 지정할 수 있습니다. 열을 무시하려면 **뒤로** 를 클릭하여 **학습 데이터 지정**페이지로 돌아간 다음 모든 확인란의 선택을 취소합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48213473"
   
  데이터 형식은 열에 포함되는 데이터 형식에 대한 추가 정보 및 학습 중에 데이터가 사용되는 방법을 지정합니다. 일부 내용 유형에는 특정 데이터 형식이 필요하고 특정 데이터 형식에는 일부 내용 유형이 필요합니다. 마이닝 모델을 만들 때 사용하는 알고리즘에 따라 특정 데이터 형식을 지정해야 할 수도 있습니다. 마이닝 모델과 구조의 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](data-mining/content-types-data-mining.md)을 참조하세요.  
   
- **자세한 내용:** [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md)를 [마이닝 모델 열](data-mining/mining-model-columns.md)합니다 [데이터 마이닝 마법사 &#40;&#40;analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ 관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **마이닝 모델 구조**  

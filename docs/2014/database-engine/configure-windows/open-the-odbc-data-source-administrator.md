@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781403"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기
   이 항목에서는 ODBC 데이터 원본 관리자를 여는 방법에 대해 설명합니다. ODBC 데이터 원본 관리자는 Windows 구성 요소입니다. ODBC 데이터 원본 관리자를 사용하여 ODBC 데이터 원본을 만들고 관리할 수 있습니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740793"
 ---
 # <a name="use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들기
   큐브 디자이너의 **동작** 뷰에는 일반적인 동작을 만드는 데 사용할 수 있는 수많은 템플릿이 들어 있습니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다.  
@@ -33,6 +33,6 @@ ms.locfileid: "48154501"
 -   필수 정보를 입력하여 템플릿 기반의 동작 작성을 완료합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [작업 &#40;Analysis Services-다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)  
+ [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

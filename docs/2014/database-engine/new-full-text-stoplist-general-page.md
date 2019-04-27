@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774215"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>새 전체 텍스트 중지 목록(일반 페이지)
   이 대화 상자를 사용하여 전체 텍스트 중지 목록을 만들 수 있습니다. *중지 목록은* *중지 단어*라고 하는 일반적으로 사용되는 단어 집합으로, 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  

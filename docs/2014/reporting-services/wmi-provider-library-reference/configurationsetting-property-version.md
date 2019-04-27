@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8646edde7c9d076ee62d8bd1109d21135c1f964b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645761"
 ---
 # <a name="version-property--wmi-msreportserverconfigurationsetting"></a>Version 속성(WMI MSReportServer_ConfigurationSetting)
   Major.Minor.Build.Revision 형식으로 보고서 서버의 버전을 반환합니다. 읽기 전용입니다.  

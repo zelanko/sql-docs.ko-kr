@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755924"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>새로운&#39;용 데이터 마이닝 추가 기능의 Office에에서 포함 된
   Office 2013용 데이터 마이닝 추가 기능을 설치할 때 모든 설치 옵션을 선택하면 다음과 같은 도구 모음과 템플릿이 추가됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "52519093"
   
      사용할 데이터와 데이터를 준비하는 방법을 아는 것은 데이터 분석에 매우 중요합니다. 이 항목에서는 가능한 최상의 모델을 만들기 위해 데이터를 준비하는 방법에 대한 유용한 정보를 제공합니다.  
   
-     데이터 마이닝을 처음 접하고 시험 삼아 도구를 사용해 보려는 경우에는 추가 기능과 함께 설치된 예제 데이터의 통합 문서를 사용하는 것이 좋습니다. 이 데이터를 살펴보면 시계열 모델이나 연결 모델에 대한 데이터를 준비하는 방법의 예도 볼 수 있습니다.  
+     데이터 마이닝에 하는 도구를 사용 하 여 실험 하려는 경우에 추가 기능을와 함께 설치 되는 샘플 데이터 통합 문서를 사용 하는 것이 좋습니다. 이 데이터를 확인 하 여 볼 수도 시계열 모델이 나 연결 모델에 대 한 데이터를 준비 하는 방법의 예제.  
   
      **샘플 데이터**  
   
@@ -59,9 +59,9 @@ ms.locfileid: "52519093"
   
     -   \<드라이브 >: \Program Files\Microsoft SQL Server 2014 DM 추가 기능  
   
-    -   \<드라이브 >: \Program 파일 (x86) \Microsoft SQL Server 2014 DM 추가 기능  
+    -   \<drive>:\Program Files(x86)\Microsoft SQL Server 2014 DM add-ins  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝을 시작 하기 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

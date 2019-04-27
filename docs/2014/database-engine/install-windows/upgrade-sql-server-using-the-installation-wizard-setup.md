@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775423"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 2014로 업그레이드(설치 프로그램)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 구성 요소를 업그레이드할 수 있는 단일 기능 트리를 제공합니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 이전 버전과 함께 설치하거나 기존 데이터베이스 및 구성 설정을 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 마이그레이션하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 적용할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52536917"
 > [!WARNING]  
 >  업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 된 인스턴스에 기능을 추가 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 작업이 완료 되 면 참조 [는 인스턴스에 SQL Server 2014의 기능 추가 &#40;설치&#41;](add-features-to-an-instance-of-sql-server-setup.md)합니다.  
   
-## <a name="procedure"></a>프로시저  
+## <a name="procedure"></a>절차  
   
 #### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>다음으로 업그레이드하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   

@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737539"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 관계형 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "56030647"
 ```  
   
 > [!NOTE]  
->  이 쿼리를 템플릿에 지정하는 경우 < 문자는 XML 문서에서 특별한 의미를 가지므로 엔터티 인코딩해야 합니다. 템플릿에서는 `<`를 사용하여 < 문자를 지정합니다.  
+>  템플릿에서이 쿼리를 지정 합니다 < 문자 므로 엔터티 인코딩해야 여야 합니다.는 < 문자는 XML 문서에서 특별 한 의미 합니다. 템플릿에서 사용 하 여 `<` 지정 하 여 < 문자.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

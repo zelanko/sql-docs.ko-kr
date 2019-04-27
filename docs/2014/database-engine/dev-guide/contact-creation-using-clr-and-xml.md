@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753365"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>CLR 및 XML을 사용한 연락처 만들기
   SQL Server의 연락처 예제는 기본 AdventureWorks2012 예제 데이터베이스의 맨 위에 추가 기능 계층을 형성하는 몇 가지 유용한 유틸리티를 제공합니다. 첫 번째 유틸리티는 AdventureWorks2012 데이터베이스와 관련이 있는 여러 부류의 사람에 대한 연락처 레코드를 만듭니다. 연락처 정보는 XML을 사용하여 지정하고 C# 기반 또는 VB 저장 프로시저로 전달되어 XML을 만들고 이 XML을 데이터베이스의 적합한 테이블에 배치합니다.  

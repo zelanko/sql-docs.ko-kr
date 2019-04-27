@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748497"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>수익 차트 설정 대화 상자(마이닝 정확도 차트 뷰)
   **수익 차트 설정** 대화 상자를 사용하여 수익 차트 생성을 위한 설정을 구성할 수 있습니다. 수익 차트에 대한 자세한 내용은 [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/lift-chart-analysis-services-data-mining.md)를 참조하세요.  
@@ -39,6 +39,6 @@ ms.locfileid: "48114191"
 ## <a name="see-also"></a>관련 항목  
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

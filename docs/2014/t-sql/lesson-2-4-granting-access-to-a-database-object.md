@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643448"
 ---
 # <a name="granting-access-to-a-database-object"></a>데이터베이스 개체에 대한 액세스 권한 부여
   관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  
@@ -40,10 +40,10 @@ ms.locfileid: "48209513"
  저장 프로시저를 실행하려면 EXECUTE 권한이 있어야 합니다. 데이터를 액세스 및 변경하려면 SELECT, INSERT, UPDATE 및 DELETE 권한이 있어야 합니다. 또한 GRANT 문은 테이블 작성 권한과 같은 다른 사용 권한에도 사용됩니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [요약: 데이터베이스 개체에 대한 사용 권한 구성](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [요약: 데이터베이스 개체의 사용 권한 구성](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [취소 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE&#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

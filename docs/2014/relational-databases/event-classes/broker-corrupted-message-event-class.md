@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664088"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 손상된 메시지를 수신할 때 **Broker:Corrupted Message** 이벤트를 발생시킵니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "52761345"
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|사용자 계정 컨트롤|  
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|사용자 계정 컨트롤|  
 |**ObjectName**|**nvarchar**|원격 데이터베이스에서 이 데이터베이스에 연결하기 위해 사용된 연결 문자열 및 대화의 다른 한 쪽의 서비스 이름입니다.|34|아니요|  
-|**RoleName**|**nvarchar**|이 메시지를 수신하는 엔드포인트의 역할입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **초기자**:<br />                  수신 엔드포인트가 대화의 시작자입니다.<br /><br /> **대상**:<br />                  수신 엔드포인트가 대화의 대상입니다.|38|아니요|  
+|**RoleName**|**nvarchar**|이 메시지를 수신하는 엔드포인트의 역할입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **initiator**:<br />                  수신 엔드포인트가 대화의 시작자입니다.<br /><br /> **target**:<br />                  수신 엔드포인트가 대화의 대상입니다.|38|아니요|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**Severity**|**int**|오류로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 경우 오류의 심각도입니다.|29|아니요|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  

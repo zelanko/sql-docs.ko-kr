@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781233"
 ---
 # <a name="metadata-odbc"></a>메타데이터(ODBC)
   이 섹션에서는 매개 변수, 열 집합 및 카탈로그 메타데이터에 대해 설명합니다.  

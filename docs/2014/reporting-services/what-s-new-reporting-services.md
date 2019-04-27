@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22b0caaa33d25ec74b1f2e34a363461ddc364111
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647356"
 ---
 # <a name="what39s-new-reporting-services"></a>새로운&#39;s (Reporting Services)
   

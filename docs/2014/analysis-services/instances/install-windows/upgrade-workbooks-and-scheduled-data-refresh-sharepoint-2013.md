@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730192"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
   이 항목은 이전 PowerPivot 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 PowerPivot 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대 한 자세한 내용은 참조 하세요 [PowerPivot의 새로운](https://go.microsoft.com/fwlink/?LinkID=203917)합니다.  
@@ -53,14 +53,14 @@ ms.locfileid: "53373952"
 |통합 문서 작성 환경|\<|지원 및 동작|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot for SharePoint 2010**|**SharePoint 2010 용 2012 PowerPivot**|**2012 SP1 SharePoint 2013 용 PowerPivot**|  
-|**2008 R2 PowerPivot for Excel 2010**|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** SharePoint 팜에서 PowerPivot 시스템 서비스에 대해 자동 업그레이드가 사용되는 경우 통합 문서가 문서 라이브러리에서 자동으로 업그레이드됩니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자가 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
-|**2012 PowerPivot for Excel**|지원되지 않음|모든 기능|**환경:** 사용자가 브라우저에서 통합 문서와 상호 작용하고 이를 다른 솔루션의 데이터 원본으로 사용할 수 있습니다. 데이터 새로 고침 예약을 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드는 지원되지 않습니다. 사용자가 통합 문서를 Office 2013 버전으로 직접 업그레이드할 수 있습니다.<br /><br /> **데이터 새로고침 예약:** 을 지원합니다.|  
+|**2008 R2 PowerPivot for Excel 2010**|모든 기능|**환경:** 사용자는 브라우저에서 통합 문서와 상호 작용 하 고 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 통합 문서를 자동으로 업그레이드 문서 라이브러리에서 PowerPivot 시스템 서비스를 SharePoint 팜의에 대해 자동 업그레이드가 사용 되는 경우<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원 되지 않습니다. 통합 문서를 업그레이드해야 합니다.|**환경:** 사용자는 통합 문서와 상호 작용 하 고 다른 솔루션의 데이터 원본으로 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드를 사용할 수 없습니다. 사용자가 2008 R2 통합 문서를 2012 버전이나 office 2013 버전으로 직접 업그레이드해야 합니다.<br /><br /> **데이터 새로 고침을 예약 합니다.** 지원 되지 않습니다. 통합 문서를 업그레이드해야 합니다.|  
+|**2012 PowerPivot for Excel**|지원되지 않음|모든 기능|**환경:** 사용자는 브라우저에서 통합 문서와 상호 작용 하 고 다른 솔루션의 데이터 원본으로 사용할 수 있습니다. 데이터 새로 고침 예약을 사용할 수 있습니다.<br /><br /> **업그레이드:** 자동 업그레이드는 지원 되지 않습니다. 사용자가 통합 문서를 Office 2013 버전으로 직접 업그레이드할 수 있습니다.<br /><br /> **데이터 새로고침 예약:** 을 지원합니다.|  
 |**Excel 2013**|지원되지 않음|지원되지 않음|모든 기능|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> SQL Server 2008 R2 통합 문서에서 2012 서비스 팩 1(SP1) 통합 문서로 업그레이드  
  이 섹션에서는 SQL Server 2008 R2 PowerPivot for Excel 2010 통합 문서에서 SQL Server 2012 SP1 PowerPivot for Excel 2013 통합 문서로 업그레이드에 대해 설명합니다.  
   
- **동작 변경 내용:** SQL Server 2008 R2 PowerPivot 통합 문서는 SQL Server 2012 SP1 SharePoint 2013용 PowerPivot에서 사용할 경우 자동으로 업그레이드되지 않습니다. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 PowerPivot 통합 문서에 대해 작동하지 않습니다.  
+ **동작 변경 내용:** SQL Server 2008 R2 PowerPivot 통합 문서 업그레이드 되지 않습니다 자동으로 SharePoint 2013 용 SQL Server 2012 SP1 PowerPivot에서 사용할 때. 따라서 예약된 데이터 새로 고침이 SQL Server 2008 R2 PowerPivot 통합 문서에 대해 작동하지 않습니다.  
   
  2008 R2 통합 문서는 SharePoint 2013용 PowerPivot에서 열리지만 예약된 데이터 새로 고침은 작동하지 않습니다. 새로 고침 기록을 검토하면 다음과 유사한 오류 메시지가 표시됩니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373952"
   
 -   SQL Server 2012 PowerPivot for Excel 2013.  
   
- **통합 문서 업그레이드 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약된 데이터 새로 고침이 작동하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.  
+ **통합 문서 업그레이드 방법:** 통합 문서를 2012 통합 문서로 업그레이드할 때까지 예약 된 데이터 새로 고침이 작동 하지 않습니다. 통합 문서와 통합 문서에 포함된 모델을 업그레이드하려면 다음 중 하나를 수행하세요.  
   
 -   통합 문서를 다운로드하고 SQL Server 2012 PowerPivot for Excel 추가 기능이 설치된 Microsoft Excel 2010에서 통합 문서를 엽니다.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746127"
 ---
 # <a name="specify-source-information-partition-wizard"></a>원본 정보 지정(파티션 마법사)
   **원본 정보 지정** 페이지를 사용하여 파티션이 생성될 측정값 그룹과 파티션에 대한 데이터 원본 뷰를 선택할 수 있을 뿐만 아니라 파티션에 대한 테이블을 필터링할 수 있습니다.  
@@ -50,6 +50,6 @@ ms.locfileid: "48120560"
 >  테이블을 두 개 이상 선택하면 **행 제한** 페이지가 표시되지 않고 선택한 테이블에서 생성된 파티션에 대해 행을 제한할 수 없습니다. 각 파티션에 대한 행을 제한하려면 파티션이 생성될 각 테이블마다 파티션 마법사를 한 번씩 실행합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

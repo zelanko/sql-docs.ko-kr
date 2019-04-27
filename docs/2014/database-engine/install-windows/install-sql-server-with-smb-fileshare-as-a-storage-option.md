@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775336"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
@@ -114,7 +114,7 @@ ms.locfileid: "54136053"
   
 -   NetApp 디바이스와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
     2015-06-04 경우 spid9s Error: 17053, 심각도: 16, 상태: 1.  
-    2015-06-04 경우 spid9s DoDevIoCtlOut() GetOverlappedResult(): 운영 체제 오류가 1 (잘못 된 함수입니다.) 발생 했습니다.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() : 운영 체제 오류가 1 (잘못 된 함수입니다.) 발생 했습니다.  
   
      NTFS의 경우 이 오류는 무시해도 됩니다.  하지만 ReFS의 경우에는 심각한 성능 저하를 발생할 수 있습니다.  
   

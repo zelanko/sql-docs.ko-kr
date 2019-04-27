@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732306"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>데이터베이스 속성 대화 상자(SSAS - 테이블 형식)
   이 대화 상자에서는 타임스탬프, 기타 설명 정보 및 데이터베이스가 캐시된 데이터를 사용하는지 여부를 결정하는 사용자 지정 가능 속성을 제공합니다. 이 외에도 데이터베이스 이름 변경 및 가장 옵션 같은 사용자 지정 가능 속성이 있습니다.  

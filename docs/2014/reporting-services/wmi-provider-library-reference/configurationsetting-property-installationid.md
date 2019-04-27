@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca6afd1c3bc916c5a8ce6667c7a765901d0881b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646190"
 ---
 # <a name="installationid-property-wmi-msreportserverconfigurationsetting"></a>InstallationID 속성(WMI MSReportServer_ConfigurationSetting)
   이 속성은 특정 보고서 서버 인스턴스의 고유 식별자를 반환합니다.  

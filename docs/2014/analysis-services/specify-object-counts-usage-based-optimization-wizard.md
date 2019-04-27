@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746137"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>개체 수 지정(사용 빈도 기반 최적화 마법사)
   **개체 수 지정** 페이지를 사용하여 큐브의 개체 수를 자동으로 계산하거나 예상 개수를 직접 입력할 수 있습니다. 사용 빈도 기반 최적화 마법사는 개체 수를 사용하여 스토리지 요구 사항을 예상합니다.  

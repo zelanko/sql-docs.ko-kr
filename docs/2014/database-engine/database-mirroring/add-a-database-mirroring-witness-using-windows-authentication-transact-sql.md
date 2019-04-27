@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754917"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가(Transact-SQL)
   데이터베이스에 미러링 모니터를 설정하려면 데이터베이스 소유자는 데이터베이스 엔진 인스턴스를 미러링 모니터 서버의 역할로 할당해야 합니다. 미러링 모니터 서버 인스턴스는 주 서버 인스턴스 또는 미러 서버 인스턴스와 동일한 컴퓨터에서 실행될 수 있으나 이 경우 자동 장애 조치(Failover)의 효과가 크게 저하됩니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52502809"
     ```  
   
     > [!IMPORTANT]  
-    >  데이터베이스 미러링 엔드포인트가 있으며 이미 사용 중인 경우 서버 인스턴스의 모든 세션에 이 엔드포인트를 사용하는 것이 좋습니다. 사용 중인 엔드포인트를 삭제하면 기존 세션의 연결이 손상됩니다. 세션에 미러링 모니터가 설정된 경우 데이터베이스 미러링 엔드포인트를 삭제하면 해당 세션의 주 서버에서 쿼럼이 손실될 수 있습니다. 이 경우 데이터베이스는 오프라인 상태가 되며 해당 사용자의 연결이 끊어집니다. 자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
+    >  데이터베이스 미러링 엔드포인트가 있으며 이미 사용 중인 경우 서버 인스턴스의 모든 세션에 이 엔드포인트를 사용하는 것이 좋습니다. 사용 중인 엔드포인트를 삭제하면 기존 세션의 연결이 손상됩니다. 세션에 미러링 모니터가 설정된 경우 데이터베이스 미러링 엔드포인트를 삭제하면 해당 세션의 주 서버에서 쿼럼이 손실될 수 있습니다. 이 경우 데이터베이스는 오프라인 상태가 되며 해당 사용자의 연결이 끊어집니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
      미러링 모니터 서버에 엔드포인트가 없는 경우 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)을 참조하세요.  
   

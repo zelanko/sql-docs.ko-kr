@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743089"
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34026040"
  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]또는 MDX를 통해 큐브 정의에서 집계 방법을 할당하거나 변경할 수 있습니다. 자세한 내용은 [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md) 또는 [집계&#40;MDX&#41;](../../mdx/aggregate-mdx.md)를 참조하세요.  
   
 ##  <a name="AggFunction"></a> 집계 함수  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 측정값 그룹에 포함된 차원에 따라 측정값을 집계하는 함수를 제공합니다. 집계 함수의 *가산성* 은 큐브에 있는 모든 차원에서 측정값이 집계되는 방식을 결정합니다. 집계 함수의 가산성 수준은 다음과 같이 세 가지로 구분됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 측정값 그룹에 포함된 차원에 따라 측정값을 집계하는 함수를 제공합니다. 집계 함수의 *가산성* 은 큐브에 있는 모든 차원에서 측정값이 집계되는 방식을 결정합니다. 집계 함수의 가산성 수준은 다음과 같이 세 가지로 구분됩니다.  
   
  가산적  
  완전 가산적 측정값이라고도 하는 가산적 측정값은 아무런 제한 없이 측정값이 포함된 측정값 그룹 내의 모든 차원에 따라 집계할 수 있습니다.  
@@ -64,9 +64,9 @@ ms.locfileid: "34026040"
   
  멤버를 계산하는 고유 카운트 측정값은 팩트 테이블의 외래 키 열을 기반으로 합니다. 즉, 측정값의 **Source Column** 속성은 이 열을 식별합니다. 이 열은 고유 카운트 측정값으로 계산되는 멤버를 식별하는 차원 테이블 열을 조인합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [측정값 및 측정값 그룹](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [MDX 함수 참조 & #40; Mdx& #41;](../../mdx/mdx-function-reference-mdx.md)   
- [반 가산적 동작 정의](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

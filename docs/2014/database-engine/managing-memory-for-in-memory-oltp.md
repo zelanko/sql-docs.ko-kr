@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774837"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>메모리 내 OLTP의 메모리 관리
   메모리 액세스에 최적화된 테이블을 사용하려면 모든 행과 인덱스를 메모리 내에 유지하는 데 충분한 메모리가 있어야 합니다. 메모리는 한정된 리소스이므로 시스템에서 메모리 사용량을 파악하고 관리해야 합니다. 이 섹션의 항목에서는 일반적인 메모리 사용 및 관리 시나리오를 다룹니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "52407221"
 |[데이터베이스를 복원하여 리소스 풀에 바인딩](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|[!INCLUDE[hek_2](../includes/hek-2-md.md)] 데이터베이스를 복원하고 명명된 리소스 풀에 바인딩하는 단계입니다.|  
 |[메모리 내 OLTP 가비지 수집](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|삭제된 행에서 가비지 수집이 작동하는 방법을 이해합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

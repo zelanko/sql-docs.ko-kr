@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 98fffc189aab674f46030086a8277395e84f7f4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678599"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Analytics Platform System에 프로 비전 인증서
 합니다 **PDW 인증서 프로 비전** Analytics Platform System의 페이지**Configuration Manager** 가져옵니다 또는 PDW에서 사용 된 인증서를 제거 합니다. 

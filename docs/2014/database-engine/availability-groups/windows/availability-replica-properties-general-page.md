@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791907"
 ---
 # <a name="availability-replica-properties-general-page"></a>가용성 복제본 속성(일반 페이지)
   이 대화 상자를 사용하여 가용성 복제본의 속성을 확인할 수 있습니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "48149873"
  **예**  
  이 복제본의 보조 데이터베이스에 대한 모든 연결이 허용되지만 읽기 액세스만 가능합니다. 즉, 모든 보조 데이터베이스에 대한 읽기 액세스가 가능합니다.  
   
- 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+ 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  **세션 제한 시간(초)**  
  제한 시간(초)입니다. 제한 시간은 복제본이 주 복제본과 보조 복제본 간의 연결이 실패한 것으로 간주하기 전에 복제본에서 다른 복제본의 메시지를 받기 위해 기다리는 최대 시간입니다. 세션 제한 시간은 보조 복제본이 주 복제본에 연결되어 있는지 여부를 검색합니다. 실패한 보조 복제본 연결을 검색한 경우 주 복제본은 보조 복제본을 NOT_SYNCHRONIZED로 간주합니다. 주 복제본과의 실패한 연결을 검색할 경우 보조 복제본에서는 단순히 다시 연결을 시도합니다.  

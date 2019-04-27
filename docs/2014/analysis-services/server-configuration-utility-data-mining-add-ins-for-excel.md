@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746805"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>서버 구성 유틸리티(Excel용 데이터 마이닝 추가 기능)
-  Excel용 데이터 마이닝 추가 기능을 설치하면 서버 구성 유틸리티도 설치되며, 추가 기능을 처음 열 때 함께 실행됩니다. 이 항목에서는 이 유틸리티를 사용해서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결하고 데이터 마이닝 모델에 사용할 수 있도록 데이터베이스를 설정하는 방법에 대해 설명합니다.  
+  Excel 용 데이터 마이닝 추가 기능을 설치할 때 서버 구성 유틸리티도 설치 되어 및 추가 기능을 열면 처음으로 실행 됩니다. 이 항목에서는 유틸리티를 사용 하 여 인스턴스에 연결 하는 방법을 설명 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및 데이터 마이닝 모델을 사용 하 여 작업에 사용할 데이터베이스를 설정 합니다.  
   
 
   
-##  <a name="bkmk_step1"></a> 1 단계: Analysis Services에 연결  
+##  <a name="bkmk_step1"></a> 1단계: Analysis Services에 연결  
  데이터 마이닝 알고리즘을 제공하고 사용자의 데이터 마이닝 모델을 저장하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버를 선택합니다.  
   
  데이터 마이닝을 설정하기 위한 연결을 만들 때는 데이터 마이닝 모델을 실험할 수 있는 서버를 선택해야 합니다. 서버에서 새 데이터베이스를 만들고 이를 데이터 마이닝 전용으로 사용하거나 관리자에게 데이터 마이닝 서버를 준비하도록 요청하는 것이 좋습니다. 이렇게 하면 다른 서비스의 성능에 영향을 주지 않고 모델을 구축할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48069635"
  **인증**  
  인증 방법을 지정합니다. 관리자가 HTTPPump를 통해 서버에 액세스하도록 구성하지 않은 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결하려면 Windows 인증이 필요합니다.  
   
-##  <a name="bkmk_step2"></a> 2 단계: 임시 모델 허용  
+##  <a name="bkmk_step2"></a> 2단계: 임시 모델 허용  
  추가 기능을 사용하려면 먼저 임시 마이닝 모델 생성을 허용하도록 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 속성을 변경해야 합니다.  
   
  임시 마이닝 모델 이라고 *세션 모델*합니다. 현재 세션이 열려 있는 동안에만 모델이 저장되기 때문입니다. 서버에 대한 연결을 닫으면 세션이 종료되고 세션이 열려 있는 동안 사용된 모든 모델이 삭제됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48069635"
   
  마법사는 먼저 사용자가 지정한 서버에서 설정을 검색합니다. 서버에서 이미 임시 마이닝 모델을 허용 하는 경우 클릭할 수 있습니다 **다음** 계속 합니다. 마법사에는 또한 지정된 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에서 임시 마이닝 모델을 사용하도록 설정하는 방법 또는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 관리자에게 요청을 수행하는 방법에 대한 지침이 제공됩니다.  
   
-##  <a name="bkmk_step3"></a> 3 단계: 추가 기능 사용자 용 데이터베이스 만들기  
+##  <a name="bkmk_step3"></a> 3단계: 추가 기능 사용자 용 데이터베이스 만들기  
  설정 및 구성 마법사의 이 페이지에서 데이터 마이닝 전용의 새 데이터베이스를 만들거나 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 선택할 수 있습니다.  
   
 > [!WARNING]  

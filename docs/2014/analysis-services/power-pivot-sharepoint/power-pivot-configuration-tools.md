@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749646"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   PowerPivot 구성 도구를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 을 구성, 복구 또는 제거합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "53210872"
   
      ![두 개의 파워 피벗 구성 도구](../media/as-powerpivot-configtools-bothicons.gif "두 개의 파워 피벗 구성 도구")  
   
-     **참고:** 이 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]이 로컬 서버에 설치된 경우에만 사용할 수 있습니다.  
+     **참고:** 도구는 사용할 수 있는 경우에만 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 로컬 서버에 설치 됩니다.  
   
 2.  시작 시 구성 도구는 설치 상태를 확인하고 설치에 유효한 태스크를 제공합니다.  
   

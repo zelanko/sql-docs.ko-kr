@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663509"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute 이벤트 클래스
   **CursorExecute** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 실행 이벤트를 설명합니다. 커서 실행 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 커서 준비 이벤트로 만들어진 실행 계획의 커서를 만들고 채울 때 발생합니다.  

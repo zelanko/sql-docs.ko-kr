@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664665"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정(변환)(SybaseToSQL)
 변환 페이지의 **프로젝트 설정** 대화 상자에는 SSMA Sybase 적응형 Server Enterprise (ASE) 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문입니다.  
@@ -183,7 +183,7 @@ SSMA 발견할 경우는 *format_string* 인수를 해당 변수를 사용 하 �
   
 -   SSMA 각, PRINT 및 RAISERROR 문의 하 여 새 변수를 빌드하고 다음 해당 변수를 사용 하 여 문자열 값을 선택 **새 변수 만들기**합니다.  
   
-    이 모드에서는 PRINT 또는 RAISERROR 문 자리 표시자 및 로컬 변수를 사용 하지 않는 경우 SSMA 모든 이중 백분율 문자 (%)로 대체 준수 하기 위해 단일 백분율 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 구문입니다.  
+    이 모드에서는 PRINT 또는 RAISERROR 문 자리 표시자 및 로컬 변수를 사용 하지 않는 경우 SSMA 대체 모든 이중 백분율 문자 (%) 준수 하기 위해 단일 백분율 문자를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure 구문입니다.  
   
     자리 표시자와 PRINT 또는 RAISERROR 문을 사용 하는 경우 또는 다음 예와 같이 자세한 지역 변수:  
   
@@ -445,6 +445,6 @@ Ase에 함수 `SUBSTRING(expression, start, length)` 식의 문자 수보다 크
 > [!NOTE]  
 > SQL Azure 연결할 때 기본적으로 True입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748326"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>레이블 재지정(SQL Server 데이터 마이닝 추가 기능)
   ![레이블 재지정 도구에 대 한 office 13 아이콘](media/dm13-relabel.gif "레이블 재지정 도구에 대 한 Office 13 아이콘")  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788418"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>일부 가용성 복제본의 연결이 해제됨
     
@@ -44,7 +44,7 @@ ms.locfileid: "53370345"
 ## <a name="possible-solution"></a>가능한 해결 방법  
  가용성 복제본 정책 상태를 사용하여 DISCONNECTED 상태인 가용성 복제본을 찾은 다음 가용성 복제본에서 문제를 해결합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

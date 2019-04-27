@@ -19,14 +19,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c66cf723f81e6676e991251ea1305bc2005722e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790192"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 데이터베이스 조인(SQL Server)
-  이 항목에서는 사용 하 여 AlwaysOn 가용성 그룹에 보조 데이터베이스를 조인 하는 방법에 설명 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]하십시오 [!INCLUDE[tsql](../../../includes/tsql-md.md)], 또는 PowerShell을 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]입니다. 보조 복제본용 보조 데이터베이스를 준비한 후에는 가능한 한 빨리 해당 데이터베이스를 가용성 그룹에 조인해야 합니다. 그러면 해당 주 데이터베이스에서 보조 데이터베이스로 데이터 이동이 시작됩니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다. 보조 복제본용 보조 데이터베이스를 준비한 후에는 가능한 한 빨리 해당 데이터베이스를 가용성 그룹에 조인해야 합니다. 그러면 해당 주 데이터베이스에서 보조 데이터베이스로 데이터 이동이 시작됩니다.  
   
 -   **시작하기 전 주의 사항:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48064683"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "48064683"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **가용성 그룹에 보조 데이터베이스를 조인하려면**  
   
-1.  디렉터리를 변경 (`cd`) 보조 복제본을 호스팅하는 서버 인스턴스에 있습니다.  
+1.  보조 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  사용 하 여는 `Add-SqlAvailabilityDatabase` cmdlet을 하나 이상의 보조 데이터베이스를 가용성 그룹에 조인 합니다.  
+2.  `Add-SqlAvailabilityDatabase` cmdlet을 사용하여 하나 이상의 보조 데이터베이스를 가용성 그룹에 조인합니다.  
   
      예를 들어 다음 명령은 보조 데이터베이스 `Db1`을 보조 복제본을 호스팅하는 서버 인스턴스 중 하나의 가용성 그룹 `MyAG` 에 조인합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "48064683"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   

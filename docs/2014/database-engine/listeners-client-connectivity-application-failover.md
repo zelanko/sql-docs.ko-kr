@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774796"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] 클라이언트 연결 및 애플리케이션 장애 조치(failover) 기능에 대한 고려 사항에 대해 설명합니다.  
@@ -216,7 +216,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 클라이언트 연결 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조 복제본: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
   
   

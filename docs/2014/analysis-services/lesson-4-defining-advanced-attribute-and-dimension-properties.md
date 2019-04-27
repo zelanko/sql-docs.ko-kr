@@ -1,5 +1,5 @@
 ---
-title: '4 단원: 고급 정의 특성 및 차원 속성 | Microsoft Docs'
+title: '4단원: 고급 특성 및 차원 속성 정의 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728765"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
   이 단원에서는 특성의 일부 고급 속성, 특성 계층 및 차원 속성을 사용하는 방법에 대해 설명합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48184073"
  이 태스크에서는 UnknownMember 및 UnknownMemberName 속성을 구성하여 Null 차원 멤버가 발생시킨 오류 조건을 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 차원과 측정값 그룹의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [5단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   

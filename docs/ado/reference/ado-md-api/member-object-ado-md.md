@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740083"
 ---
 # <a name="member-object-ado-md"></a>Member 개체(ADO MD)
 셀 집합의 축 따라 위치 멤버나 수준의 멤버의 자식을 큐브의 수준의 멤버를 나타냅니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47633551"
 ## <a name="remarks"></a>Remarks  
  속성을 **멤버** 사용 되는 컨텍스트에 따라 달라 집니다. **멤버** 의 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 에서 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 에 [자식](../../../ado/reference/ado-md-api/children-property-ado-md.md) 반환 하는 속성을 **멤버** 에서 현재에서 계층 구조에서 다음 하위 수준의 **멤버**합니다. 에 대 한는 **멤버** 의 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md)의 **자식** 컬렉션은 항상 비어 있습니다. 또한 합니다 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성에만 적용 됩니다 **멤버** 의 **수준**합니다.  
   
- A **멤버** 의 **위치** 에 두 속성을 표시 하는 경우에 유용 합니다 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) 및 [ ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)합니다. 이러한 속성에 액세스 하는 경우 오류가 발생 한 **멤버** 의 **수준**합니다.  
+ A **멤버** 의 **위치** 에 두 속성을 표시 하는 경우에 유용 합니다 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) 하 고 [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)합니다. 이러한 속성에 액세스 하는 경우 오류가 발생 한 **멤버** 의 **수준**합니다.  
   
  컬렉션 및 속성을 사용 하 여는 **멤버** 의 개체를 **수준**, 다음을 수행할 수 있습니다:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47633551"
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |ChildrenCardinality|멤버의 자식 수입니다.|  
-|CubeName|큐브의 이름입니다.|  
+|CubeName|큐브 이름입니다.|  
 |Description|멤버의 의미 있는 설명입니다.|  
 |DimensionUniqueName|모호 하지 않은 이름의 합니다 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)합니다.|  
 |HierarchyUniqueName|계층의 명확한 이름입니다.|  

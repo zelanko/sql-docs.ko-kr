@@ -37,11 +37,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746715"
 ---
 # <a name="network-properties"></a>네트워크 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -59,7 +59,7 @@ ms.locfileid: "48101963"
 |값|Description|  
 |-----------|-----------------|  
 |*0*|IPv4가 해제되어 클라이언트가 연결할 수 없습니다.|  
-|*1.*|(기본값) IPv4가 필요하고 IPv4를 수신할 수 없으면 서버가 시작되지 않습니다.|  
+|*1*|(기본값) IPv4가 필요하고 IPv4를 수신할 수 없으면 서버가 시작되지 않습니다.|  
 |*2*|IPv4가 옵션이고 서버가 IPv4로 수신을 시도하기는 하지만 불가능한 경우에도 서버가 시작됩니다.|  
   
  `IPV6Support`  
@@ -68,7 +68,7 @@ ms.locfileid: "48101963"
 |값|Description|  
 |-----------|-----------------|  
 |*0*|IPv6이 해제되어 클라이언트가 연결할 수 없습니다.|  
-|*1.*|(기본값) IPv6이 필요하고 IPv6을 수신할 수 없으면 서버가 시작되지 않습니다.|  
+|*1*|(기본값) IPv6이 필요하고 IPv6을 수신할 수 없으면 서버가 시작되지 않습니다.|  
 |*2*|IPv6이 옵션이고 서버가 IPv6으로 수신을 시도하기는 하지만 불가능한 경우에도 서버가 시작됩니다.|  
   
  `MaxAllowedRequestSize`  

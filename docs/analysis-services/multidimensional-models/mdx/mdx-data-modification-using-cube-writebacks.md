@@ -1,5 +1,5 @@
 ---
-title: 큐브 쓰기 되돌림 (MDX)를 사용 하 여 | Microsoft Docs
+title: 큐브 쓰기 저장 (MDX)를 사용 하 여 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740128"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 데이터 수정-쓰기 되돌림 큐브를 사용 하 여
+# <a name="mdx-data-modification---using-cube-writebacks"></a>MDX 데이터 수정 - 큐브 쓰기 저장(Writeback) 사용
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   큐브를 업데이트하는 데는 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) 문을 사용합니다. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  
   
@@ -110,7 +110,7 @@ USE_EQUAL_ALLOCATION
   
 -   쓰기 저장(writeback)에 포함된 차원의 차원 세분성 변경  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터 & #40; 수정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 수정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

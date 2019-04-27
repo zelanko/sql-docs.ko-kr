@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753285"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>업그레이드 관리자 실행(명령 프롬프트)
   사용 된 **UpgradeAdvisorWizardCmd** 명령 프롬프트에서 업그레이드 관리자를 실행 하는 유틸리티입니다. XML 형식, 또는 쉼표로 구분된 값을 사용하는 파일로 결과를 받을 수 있습니다.  
@@ -43,33 +43,33 @@ where <server_info> is any combination of the following:
  **-?**  
  명령 구문을 표시합니다.  
   
- **-ConfigFile** _파일 이름_  
+ **-ConfigFile** _filename_  
  경로 이름 및 실행할 때 사용할 설정이 포함 된 XML 파일의 파일 이름을 합니다 **UpgradeAdvisorWizardCmd** 유틸리티입니다.  
   
- *< 자유롭게 >*  
+ *<server_info>*  
  분석할 컴퓨터와 인스턴스를 지정합니다. 구성 파일을 사용하지 않는 경우 이 옵션을 사용하십시오.  
   
  *< 자유롭게 >* 다음 네 개의 인수의 조합일 수 있습니다.  
   
- **서버** _server_name_  
+ **-Server** _server_name_  
  분석할 컴퓨터의 이름을 지정합니다. 로컬 컴퓨터(기본값) 또는 원격 컴퓨터일 수 있습니다.  
   
- **-인스턴스** _instance_name_  
+ **-Instance** _instance_name_  
  분석할 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 매개 변수를 지정하지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 검색되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLSERVER입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-ASInstance**_이름_   
+ **-ASInstance**  _AS_instance_name_  
  분석할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대한 값은 MSSQLServerOLAPService입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
- **-RSInstance**_서버_   
+ **-RSInstance**  _RS_instance_name_  
  분석할 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 이름을 지정합니다. 기본값은 없습니다. 이 값을 지정하지 않으면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색되지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 기본 인스턴스에 대한 값은 ReportServer입니다. 명명된 인스턴스의 경우 인스턴스 이름을 사용합니다.  
   
  **-SqlUser** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 이 값은 업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인입니다. 로그인을 지정하지 않으면 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  
   
- **-SqlPassword** _암호_  
+ **-SqlPassword** _password_  
  사용 하는 경우는 **-SqlUser** 인수에이 인수를 사용 하 여 암호를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  
   
- **CSV**  
+ **-CSV**  
  표준 XML 결과 외에 쉼표로 구분된 값을 사용하여 .csv 파일로도 결과를 제공하도록 지정합니다. 결과 내 문서에 기록 됩니다\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports 폴더입니다.  
   
 ## <a name="return-values"></a>반환 값  

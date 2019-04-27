@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779115"
 ---
 # <a name="migrate-query-plans"></a>쿼리 계획 마이그레이션
   데이터베이스를 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하면 대부분의 경우 쿼리 성능이 향상됩니다. 그러나 성능 향상을 위해 세심하게 튜닝된 중요한 쿼리의 경우 업그레이드하기 전에 각 쿼리에 대한 계획 지침을 만들어 쿼리 계획을 보존할 수 있습니다. 업그레이드 후에 쿼리 최적화 프로그램에서 한 개 이상의 쿼리에 대해 효율성이 낮은 계획이 선택된 경우 계획 지침을 사용하여 쿼리 최적화 프로그램에서 업그레이드 전 계획이 사용되도록 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "53352513"
 ## <a name="example"></a>예제  
  다음 예에서는 계획 지침을 만들어 쿼리에 대한 업그레이드 전 계획을 기록하는 방법을 보여 줍니다.  
   
-### <a name="step-1-collect-the-plan"></a>1단계: 계획 수집  
+### <a name="step-1-collect-the-plan"></a>1단계: 계획을 수집  
  계획 지침에 기록되는 쿼리 계획은 XML 형식이어야 합니다. 다음과 같은 방법으로 XML 형식의 쿼리 계획을 생성할 수 있습니다.  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>2단계: 계획을 강제 적용할 계획 지침 만들기  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>2단계: 계획을 적용할 계획 지침 만들기  
  앞에서 설명한 방법 중 하나로 만든 XML 형식의 쿼리 계획을 계획 지침에 사용하려면 sp_create_plan_guide의 OPTION 절에 지정된 USE PLAN 쿼리 힌트 안에 쿼리 계획을 문자열 리터럴로 복사하고 붙여 넣습니다.  
   
  계획 지침을 만들기 전에 XML 계획 내에 표시된 따옴표(')에 두 번째 따옴표를 추가하여 이스케이프 처리합니다. 예를 들어 `WHERE A.varchar = 'This is a string'`이 포함된 계획에서 코드를 `WHERE A.varchar = ''This is a string''`으로 수정하여 이스케이프 처리해야 합니다.  
@@ -88,10 +88,10 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>3단계: 계획 지침이 쿼리에 적용되는지 확인  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>3단계: 계획 지침이 쿼리에 적용 되었는지 확인  
  쿼리를 다시 실행하고 생성되는 쿼리 계획을 확인합니다. 생성된 계획이 계획 지침에 지정한 계획과 일치하는 것을 볼 수 있을 것입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)  

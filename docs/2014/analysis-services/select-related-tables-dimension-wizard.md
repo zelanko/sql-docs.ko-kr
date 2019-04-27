@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747225"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>관련 테이블 선택(차원 마법사)
   **관련 테이블 선택** 페이지를 사용하여 관련 테이블(주 차원 테이블과 관련된 데이터 원본 뷰의 테이블)을 차원에 포함할 수 있습니다.  

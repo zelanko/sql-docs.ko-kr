@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a527ad5c165ff7b155b04627a41062a2b553c62b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62750179"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 의미 체계 모델 연결(.bism)
   BI 의미 체계 모델 연결(.bism)은 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 데이터베이스 또는 다차원 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결하는 이식 가능한 연결입니다. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "53362245"
 ##  <a name="bkmk_prereq"></a> 지원되는 데이터베이스  
  BI 의미 체계 모델 연결은 테이블 형식 모델 데이터를 가리킵니다. 이 데이터의 원본은 다음 세 가지입니다.  
   
--   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스하려면 사용 권한이 추가로 필요합니다. 이에 대해서는 이 항목에서 설명합니다. [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
+-   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스 하기에이 항목의에 대 한 읽을 수 있는 추가 권한이 필요 합니다. [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
   
 -   SharePoint에 저장된 PowerPivot 통합 문서. Excel 통합 문서 안에 포함된 PowerPivot 데이터베이스는 독립 실행형 Analysis Services 테이블 형식 모드 서버에서 실행되는 테이블 형식 모델 데이터베이스에 해당합니다. 이미 PowerPivot for Excel과 SharePoint용 PowerPivot을 사용하는 경우 SharePoint 라이브러리에서 PowerPivot 통합 문서를 가리키는 BI 의미 체계 모델 연결을 정의하고 기존 PowerPivot 데이터를 사용하여 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서를 작성할 수 있습니다.  SQL Server 2008 R2 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전의 PowerPivot for Excel에서 만든 통합 문서를 사용할 수 있습니다.  
   

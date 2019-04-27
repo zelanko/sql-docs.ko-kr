@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740213"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성**옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
+  BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성** 옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
   
  **예측 쿼리 작성기** 에는 다음과 같은 세 가지 디자인 모드가 있습니다. 모드는 왼쪽 위 모퉁이에 있는 아이콘을 클릭하여 전환할 수 있습니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34014690"
   
 8.  **마이닝 모델 예측** 탭의 도구 모음에 있는 첫 번째 단추를 누른 다음 **결과**를 선택하여 쿼리를 실행합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 디자이너에서 단일 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   

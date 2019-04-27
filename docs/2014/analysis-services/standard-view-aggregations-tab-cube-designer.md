@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3cc09c5306d5c4fb9e63b1cba9b859f9633fcccc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745843"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>표준 뷰(집계 탭, 큐브 디자이너)
   집계 디자이너의 **표준 뷰** 를 사용하여 집계를 볼 수 있습니다. 또한 이 뷰에서 **집계 디자인 마법사** 또는 **사용 빈도 기반 최적화 마법사**를 사용하여 집계 디자인을 만들고 수정할 수도 있습니다.  

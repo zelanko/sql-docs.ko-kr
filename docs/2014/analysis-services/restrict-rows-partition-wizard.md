@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748235"
 ---
 # <a name="restrict-rows-partition-wizard"></a>행 제한(파티션 마법사)
   **행 제한** 페이지를 사용하여 지정한 테이블에서 검색한 다음 집계하여 파티션에 포함시킬 행을 제한할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48131713"
   
  이 옵션을 선택할 때 **WHERE 절 제공** 이 비어 있으면 이전에 선택한 테이블에서 모든 열과 모든 행을 검색하는 SQL 문으로 해당 옵션이 채워집니다.  
   
- **쿼리**  
+ **데이터 집합 속성**  
  파티션 처리 시 테이블에서 행을 검색할 때 사용되는 SQL 문을 입력하거나 수정합니다.  
   
 > [!IMPORTANT]  
@@ -45,6 +45,6 @@ ms.locfileid: "48131713"
  **쿼리** 의 문이 유효한 SQL 문인지 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

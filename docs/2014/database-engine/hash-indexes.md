@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779495"
 ---
 # <a name="hash-indexes"></a>해시 인덱스
   인덱스는 메모리 최적화 테이블의 진입점으로 사용됩니다. 테이블의 행을 읽으려면 메모리에 있는 데이터를 찾을 인덱스가 필요합니다.  

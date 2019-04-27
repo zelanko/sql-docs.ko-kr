@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748375"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>쿼리 창(마이닝 모델 예측 뷰)
   **쿼리** 창에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 문을 표시합니다. 문을 수정한 다음 **쿼리 결과 뷰로 전환** 단추를 클릭하여 결과를 반환합니다. 다시 **디자인** 뷰로 전환하면 문에 적용한 변경 내용이 손실됩니다.  
   
- **자세한 내용:** [DMX&#40;Data Mining Extensions&#41; 데이터 조작 문](/sql/dmx/dmx-statements-data-manipulation), [SQL Server Management Studio에서 DMX 쿼리 만들기](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **참조 항목:** [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](/sql/dmx/dmx-statements-data-manipulation)하십시오 [SQL Server Management Studio에서 DMX 쿼리 만들기](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>변수  
  **쿼리 결과 뷰로 전환**  

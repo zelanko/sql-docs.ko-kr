@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752987"
 ---
 # <a name="exception-message-box-reference"></a>예외 메시지 상자 참조
   예외 메시지 상자는 Microsoft.ExceptionMessageBox.dll 어셈블리의 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 클래스에 의해 구현됩니다. 이 어셈블리의 기본 설치 폴더는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]입니다. 예외 메시지 상자는 <xref:Microsoft.SqlServer.MessageBox> 네임스페이스 참조 설명서에 설명되어 있습니다. 다음 예제에서는 예외를 처리하는 동안 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> 개체를 사용합니다.  

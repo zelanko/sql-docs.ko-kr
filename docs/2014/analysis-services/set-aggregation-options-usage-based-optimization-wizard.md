@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: becc1bb290d37eec7e717d9400dc0f694188eeeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746645"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>집계 옵션 설정(사용 빈도 기반 최적화 마법사)
-  **집계 옵션 설정** 페이지를 사용하여 집계 디자인 프로세스를 시작하고 사용 빈도 기반 최적화 마법사를 사용하여 생성한 집계에 대한 저장소 또는 성능 제한을 지정할 수 있습니다.  
+  **집계 옵션 설정** 페이지를 사용하여 집계 디자인 프로세스를 시작하고 사용 빈도 기반 최적화 마법사를 사용하여 생성한 집계에 대한 스토리지 또는 성능 제한을 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **예상된 저장소 크기**  

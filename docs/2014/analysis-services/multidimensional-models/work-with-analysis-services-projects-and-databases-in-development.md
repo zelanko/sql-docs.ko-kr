@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740806"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>개발 단계 중의 Analysis Services 프로젝트 및 데이터베이스 작업
   프로젝트 모드나 온라인 모드로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 개발할 수 있습니다.  

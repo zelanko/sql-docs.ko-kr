@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743369"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>구성 설정 참조(SharePoint용 PowerPivot)
   이 항목에서는 SharePoint 팜에서 PowerPivot 서비스 응용 프로그램에 의해 사용되는 구성 설정에 대한 참조 설명서를 제공합니다. PowerShell 스크립트를 사용하여 서버를 구성하거나 특정 설정에 대한 정보를 찾아보려는 경우 이 항목의 정보가 자세한 설명을 제공합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48147523"
 |최대 관리 연결 풀 크기|200|-1, 0 또는 1 ~ 10000<br /><br /> -1은 유휴 연결 수에 제한이 없음을 의미합니다.|Analysis Services 서버 인스턴스에 대한 PowerPivot 서비스 응용 프로그램 연결을 위해 만들어진 모든 관리 연결 풀의 최대 유휴 서버 연결 수. 서버 연결은 데이터베이스 로드 요청 및 변경 내용을 SharePoint 데이터베이스에 다시 저장하기 위해 사용됩니다.|  
   
 ##  <a name="AllocationScheme"></a> 부하 분산  
- PowerPivot 서비스에서 수행하는 기능 중 하나는 사용 가능한 PowerPivot 서비스 인스턴스 중에서 Analysis Services 데이터가 로드될 위치를 결정하는 것입니다. `AllocationMethod` 설정은 서비스 인스턴스를 선택 하는 조건을 지정 합니다.  
+ PowerPivot 서비스에서 수행하는 기능 중 하나는 사용 가능한 PowerPivot 서비스 인스턴스 중에서 Analysis Services 데이터가 로드될 위치를 결정하는 것입니다. `AllocationMethod` 설정은 서비스 인스턴스 선택 조건을 지정합니다.  
   
 |이름|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "48147523"
 |종료 시간|오후 8시|1 ~ 12시, 값은 이 범위 내의 유효한 정수<br /><br /> 유형은 Time|업무 시간 범위의 상한값을 설정합니다.|  
 |PowerPivot 무인 데이터 새로 고침 계정|없음|대상 애플리케이션 ID|이 계정은 일정 소유자 대신 데이터 새로 고침 작업을 실행하는 데 사용됩니다.<br /><br /> 무인 데이터 새로 고침 계정을 서비스 애플리케이션 구성 페이지에서 참조하려면 해당 계정을 미리 정의해야 합니다. 자세한 내용은 [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;SharePoint 용 PowerPivot&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)합니다.|  
 |사용자가 사용자 지정 Windows 자격 증명을 입력할 수 있습니다.|설정|Boolean|예약된 데이터 새로 고침 구성 페이지에 예약 소유자가 데이터 새로 고침 작업을 실행하는 데 사용할 Windows 사용자 계정과 암호를 지정할 수 있는 옵션이 표시되는지 여부를 결정합니다.<br /><br /> 이 옵션을 사용하려면 Secure Store Service를 사용하도록 설정해야 합니다. 자세한 내용은 [PowerPivot 데이터 새로 고침을 위한 저장 된 자격 증명 구성 &#40;SharePoint 용 PowerPivot&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.|  
-|최대 처리 기록 길이|365|1~5000 일|데이터 새로 고침 기록이 PowerPivot 서비스 응용 프로그램 데이터베이스에 보존되는 기간을 결정합니다. 자세한 내용은 [PowerPivot 사용 현황 데이터 수집](power-pivot-usage-data-collection.md)합니다.|  
+|최대 처리 기록 길이|365|1~5000 일|데이터 새로 고침 기록이 PowerPivot 서비스 응용 프로그램 데이터베이스에 보존되는 기간을 결정합니다. 자세한 내용은 [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md)을 참조하세요.|  
   
 ##  <a name="UsageData"></a> 사용 데이터 수집  
  PowerPivot 관리 대시보드에 표시되는 사용 보고서는 PowerPivot 사용 통합 문서의 사용 방법에 대한 중요한 정보를 제공할 수 있습니다. 다음 구성 설정은 이후에 사용 또는 작업 보고서에 표시되는 PowerPivot 서버 이벤트에 대한 사용 데이터 컬렉션을 제어합니다.  

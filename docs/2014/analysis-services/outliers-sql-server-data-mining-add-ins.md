@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0771c953875e9871c53892bc14a3e2a537060833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743627"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>이상값(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 이상 값 마법사](media/dmc-outliers.gif "데이터 마이닝 리본의 이상 값 마법사")  
@@ -89,7 +89,7 @@ ms.locfileid: "48224115"
 ### <a name="related-options"></a>관련 옵션  
  마법사는 다음과 같은 옵션을 제공합니다.  
   
-|**옵션**|**설명**|  
+|**Options**|**설명**|  
 |-----------------|-----------------|  
 |**열 선택**|한 번에 하나의 열만 사용할 수 있습니다.|  
 |**임계값 처리 지정**|사용 하 여 임계값을 설정 **최소** 임계값 보다 적은 수의 행에 있는 값을 제외 하도록 합니다.<br /><br /> 처음에 값 **최소** 가장 적은 행을 사용 하 여 값과 같은 값 보다 작은 최소를 변경할 수 없습니다.|  

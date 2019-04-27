@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679573"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>큐브 또는 모델 속성 대화 상자(SSAS)
   **의** 데이터베이스 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 큐브 또는 model 데이터베이스의 속성을 설정할 수 있습니다. **개체 탐색기** 에서 큐브 또는 모델을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 이 대화 상자를 표시할 수 있습니다.  
@@ -40,10 +40,10 @@ ms.locfileid: "48153503"
 |**설명**|큐브 또는 모델에 대한 설명을 표시합니다.|  
 |**생성된 타임스탬프**|큐브 또는 모델을 만든 날짜와 시간을 표시합니다.|  
 |**최종 스키마 업데이트**|큐브 또는 모델에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
-|**스크립트 캐시 처리 모드**|큐브 또는 모델의 스크립트 캐시에 사용할 처리 모드를 선택합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>합니다.|  
-|**처리 모드**|큐브 또는 모델에 사용할 처리 모드를 선택합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>합니다.|  
-|**저장소 위치**|큐브 또는 모델과 연결된 측정값 그룹 및 파티션의 기본 스토리지 위치로 사용할 폴더를 입력하거나 줄임표 단추 (**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 폴더를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>합니다.|  
-|**State**|큐브 또는 모델의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
+|**스크립트 캐시 처리 모드**|큐브 또는 모델의 스크립트 캐시에 사용할 처리 모드를 선택합니다. 이 속성 값에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>를 참조하십시오.|  
+|**처리 모드**|큐브 또는 모델에 사용할 처리 모드를 선택합니다. 이 속성 값에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>를 참조하십시오.|  
+|**저장소 위치**|큐브 또는 모델과 연결된 측정값 그룹 및 파티션의 기본 스토리지 위치로 사용할 폴더를 입력하거나 줄임표 단추 (**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시하고 폴더를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> 이 속성 값에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>를 참조하십시오.|  
+|**State**|큐브 또는 모델의 처리 상태를 표시합니다. 이 속성 값에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>를 참조하십시오.|  
 |**LastProcessed**|큐브 또는 모델을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

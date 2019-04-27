@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643513"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Excel에서 분석(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 개발자는**Excel에서 분석** 을 사용하여 프로젝트가 최종 사용자에게 어떻게 표시될지 빠르게 검토할 수 있습니다. **Excel에서 분석** 기능은 Microsoft Excel을 열고 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 이 기능은 이전 릴리스에서 브라우저 탭에 포함된 피벗 테이블을 제공하던 Office Web Control을 대체합니다.  
@@ -45,9 +45,9 @@ ms.locfileid: "48075093"
   
  **Excel에서 분석** 기능에 대한 자세한 내용은 다음 리소스를 참조하십시오.  
   
- [Excel에서 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel에서 분석&#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Excel에서 테이블 형식 모델 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Excel에서 테이블 형식 모델 분석&#40;SSAS 테이블 형식&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [큐브에서 데이터 및 메타데이터 찾아보기](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   

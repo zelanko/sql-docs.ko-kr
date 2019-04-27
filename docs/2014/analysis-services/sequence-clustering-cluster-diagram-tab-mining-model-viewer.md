@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746785"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 다이어그램 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 다이어그램** 탭에는 시퀀스 클러스터링 모델에 포함된 모든 클러스터가 그래픽으로 표시됩니다.  
   
  드릴스루가 사용하도록 설정된 경우 이 시퀀스 클러스터링 모델 뷰를 사용하여 각 클러스터에서 지원하는 사례로 드릴스루할 수 있습니다. 또한 클러스터에 설명이 포함된 이름을 할당하고 음영 변수를 변경하여 값의 분포를 한눈에 평가할 수 있습니다.  
   
- **자세한 내용:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **참조 항목:** [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -34,7 +34,7 @@ ms.locfileid: "48174203"
  **마이닝 모델**  
  현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 사용자 지정 뷰어 또는 **Microsoft 일반 콘텐츠 트리 뷰어**를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **확대/축소**  
@@ -77,8 +77,8 @@ ms.locfileid: "48174203"
  다이어그램의 선은 시퀀스 클러스터 간의 연결을 나타냅니다. 클러스터의 오른쪽에 있는 슬라이더를 조정하여 뷰어에 표시되는 링크의 수를 조정할 수 있습니다. 슬라이더를 내리면 강력한 링크만 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

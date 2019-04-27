@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773691"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>테이블 디자이너에서 작업 내용 저장(Visual Database Tools)
   테이블 디자이너에 열려 있는 테이블의 변경 내용을 저장할 수 있습니다.  

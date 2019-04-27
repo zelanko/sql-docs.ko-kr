@@ -32,11 +32,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668839"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,11 +85,11 @@ ms.locfileid: "52395437"
   
 |데이터 형식|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비XML**|SQL Server의<br /><br /> **XML**|SQL Server의<br /><br /> **비XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|통과<sup>6,7</sup>|오류<sup>1</sup>|확인<sup>11, 6</sup>|오류<sup>8</sup>|  
+|DBTYPE_XML|통과<sup>6,7</sup>|Error<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
 |DBTYPE_BYTES|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|확인<sup>11, 6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|OK<sup>4, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_BSTR|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_STR|확인<sup>6, 9, 10</sup>|해당 없음<sup>2</sup>|확인<sup>5, 6, 12</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6, 9, 10</sup>|해당 없음<sup>2</sup>|확인<sup>5, 6, 12</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|**ISequentialStream**을 통한 바이트 스트림<sup>7</sup>|해당 없음<sup>2</sup>|**ISequentialStream**을 통한 바이트 스트림<sup>11</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|통과<sup>6,7</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|통과<sup>6,10</sup>|해당 없음<sup>2</sup>|확인<sup>3</sup>|해당 없음<sup>2</sup>|  

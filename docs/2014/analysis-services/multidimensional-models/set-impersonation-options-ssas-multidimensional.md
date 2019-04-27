@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 273cc75fdd09db548b8083c20a322e9ba9172c70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740911"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>가장 옵션 설정(SSAS - 다차원)
   Analysis Services 모델에서 `data source` 개체를 만들 때 구성해야 하는 설정 중 하나는 가장 옵션입니다. 이 옵션은 Analysis Services에서 OLE DB 데이터 공급자를 로드하거나 로밍 프로필을 지원하는 환경에서 사용자 프로필 정보를 분석하는 등 연결과 관련된 로컬 작업을 수행할 때 특정 Windows 사용자 계정의 ID를 가장할지 여부를 결정합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "53365745"
  대화 상자에서 모든 옵션을 사용할 수는 있지만 일부 경우에는 일부 옵션이 적절하지 않을 수 있습니다. 다음 정보를 사용하여 상황에 가장 적합한 옵션을 선택하십시오.  
   
  **특정 사용자 이름 및 암호 사용**  
- 다음 형식으로 지정된 Windows 사용자 계정의 보안 자격 증명을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 사용하려면 이 옵션을 선택합니다. *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
+ 이 옵션을 선택 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 형식으로 지정 된 Windows 사용자 계정의 보안 자격 증명을 사용 합니다. *\<도메인 이름 >***\\***\<사용자 계정 이름 >* 합니다.  
   
  데이터 액세스용으로 특별히 만든 전용, 최소 권한 Windows 사용자 ID를 사용하려면 이 옵션을 선택합니다. 예를 들어 보고서에 사용되는 데이터를 검색하기 위한 일반 용도의 계정을 정기적으로 만들 경우 여기에서 해당 계정을 지정할 수 있습니다.  
   

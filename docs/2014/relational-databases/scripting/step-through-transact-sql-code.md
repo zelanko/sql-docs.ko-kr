@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b46deb42a6729cbf122aca0fcb4618143bc786a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667100"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48144413"
   
  다음 표에서는 문이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 실행되는 방법을 제어하는 여러 방법을 나열합니다.  
   
-|작업|프로시저|  
+|작업|절차|  
 |------------|---------------|  
 |현재 문부터 다음 중단점까지 모든 문을 실행합니다.|에 **디버그** 메뉴에서 클릭 **계속**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **계속** 단추입니다.|  
 |다음 문 또는 모듈을 한 단계씩 코드 실행합니다.|에 **디버그** 메뉴에서 클릭 **단계씩**합니다.<br /><br /> 에 **디버그** 도구 모음에서 클릭 합니다 **한 단계씩 코드 실행** 단추입니다.<br /><br /> F11 키를 누릅니다.|  

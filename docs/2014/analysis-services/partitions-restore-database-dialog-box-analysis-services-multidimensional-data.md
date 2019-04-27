@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743479"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>파티션(데이터베이스 복원 대화 상자)(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] **데이터베이스 복원** 대화 상자의 **파티션** 페이지를 사용하여 로컬 파티션을 복원할 위치를 지정하고 원격 파티션 복원 여부와 원격 파티션 복원 시 사용할 원격 백업 파일을 지정할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "51639870"
   
  이 옵션을 선택하면 활성화되는 다음 표는 각 로컬 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.  
   
-|Column|설명|  
+|Column|Description|  
 |------------|-----------------|  
 |**Cube**|로컬 파티션이 포함된 큐브 이름을 표시합니다.|  
 |**측정값 그룹**|로컬 파티션이 포함된 측정값 그룹 이름을 표시합니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "51639870"
   
  이 옵션을 선택하면 활성화되는 다음 표는 각 로컬 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.  
   
-|Column|설명|  
+|Column|Description|  
 |------------|-----------------|  
 |**Server**|원격 파티션을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 이름을 표시합니다.|  
 |**데이터 원본**|백업 파일에서 원격 파티션이 포함된 데이터베이스를 나타내는 데이터 원본 이름을 표시합니다.|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749022"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>중앙 관리에서 PowerPivot 서버 관리 및 구성
   PowerPivot 서버 관리 및 구성은 SharePoint 서비스 애플리케이션 관리자에 의해 SharePoint Server 관리를 통해 수행됩니다.  

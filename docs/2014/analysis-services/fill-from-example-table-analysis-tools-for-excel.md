@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731590"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>예제로 채우기(Excel용 테이블 분석 도구)
   ![테이블 분석 도구의 예제로 채우기 단추](media/tat-fillex.gif "테이블 분석 도구의 예제로 채우기 단추")  
@@ -62,7 +62,7 @@ ms.locfileid: "48160905"
   
 |Column|값|유사성|상대적 영향|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500km|80%|  
+|StateProvinceCode|AB|> 500 킬로미터|80%|  
   
  즉, AB 값을 **StateProvinceCode** 열의 배송 거리를 강력히 예측 > 500 킬로미터 합니다.  
   

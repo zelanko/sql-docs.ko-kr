@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dbf1d34d801696861a1766d1fdca432037c94b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663231"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile 이벤트 클래스
   **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743569"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>파티션 원본 대화 상자(Analysis Services - 다차원 데이터)
   **의** 파티션 원본 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 파티션에 대한 팩트 테이블 데이터의 원본을 지정할 수 있습니다. 다음을 수행하여 **파티션 원본** 대화 상자를 표시할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48203183"
   
 |옵션|정의|  
 |------------|----------------|  
-|**바인딩 유형**|지정한 파티션의 원본에 사용할 바인딩 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.<br /><br /> **테이블 바인딩**: 표시 하려면 선택 합니다 **테이블 바인딩 세부 정보** 창 파티션이 데이터 원본 또는 데이터 원본 뷰의 테이블 내용에 바인딩되어 있음을 나타냅니다. **테이블 바인딩 세부 정보** 창에 대한 자세한 내용은 [테이블 바인딩 세부 정보&#40;파티션 원본 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> **세부 정보**: 표시 하려면 선택 합니다 **쿼리 바인딩 세부 정보** 창 파티션이 데이터 원본에 대해 실행 되는 쿼리 내용에 바인딩되어 있음을 나타냅니다. **쿼리 바인딩 세부 정보** 창에 대한 자세한 내용은 [쿼리 바인딩 세부 정보&#40;파티션 원본 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**바인딩 유형**|지정한 파티션의 원본에 사용할 바인딩 유형을 선택합니다. 사용할 수 있는 옵션은 다음과 같습니다.<br /><br /> **테이블 바인딩**: **테이블 바인딩 세부 정보** 창을 표시하고 파티션이 데이터 원본 또는 데이터 원본 뷰의 테이블 내용에 바인딩되어 있음을 나타내려면 선택합니다. **테이블 바인딩 세부 정보** 창에 대한 자세한 내용은 [테이블 바인딩 세부 정보&#40;파티션 원본 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md)를 참조하세요.<br /><br /> **세부 정보**: **쿼리 바인딩 세부 정보** 창을 표시하고 파티션이 데이터 원본에서 실행되는 쿼리 내용에 바인딩되어 있음을 나타내려면 선택합니다. **쿼리 바인딩 세부 정보** 창에 대한 자세한 내용은 [쿼리 바인딩 세부 정보&#40;파티션 원본 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**Detail**|**바인딩 유형** 옵션의 값에 따라 **테이블 바인딩 세부 정보** 대화 상자 또는 **쿼리 바인딩 세부 정보** 대화 상자를 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

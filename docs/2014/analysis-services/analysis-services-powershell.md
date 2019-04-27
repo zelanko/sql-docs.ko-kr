@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643539"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]에는 Windows PowerShell을 사용하여 Analysis Services 개체를 탐색, 관리 및 쿼리할 수 있도록 Analysis Services PowerShell(SQLAS) 공급자 및 cmdlet이 포함되어 있습니다.  
@@ -61,10 +61,10 @@ ms.locfileid: "53355914"
 |다차원 인스턴스 및 데이터베이스|로컬 및 원격 관리에 지원됩니다.<br /><br /> 병합 파티션에는 로컬 연결이 필요합니다.|  
 |테이블 형식 인스턴스 및 데이터베이스|로컬 및 원격 관리에 지원됩니다.<br /><br /> 에 대 한 자세한 내용은 참조는 2011 년 8 월 블로그 [테이블 형식 모델 사용 하 여 PowerShell 관리](https://go.microsoft.com/fwlink/?linkID=227685)합니다.|  
 |SharePoint용 PowerPivot 인스턴스 및 데이터베이스|제한적으로 지원됩니다. HTTP 연결 및 SQLAS 공급자를 사용하여 인스턴스 및 데이터베이스 정보를 볼 수 있습니다.<br /><br /> 하지만 cmdlet은 사용할 수 없습니다. Analysis Services PowerShell을 사용하여 메모리 내 PowerPivot 데이터베이스를 백업 또는 복원하거나, 역할을 추가 또는 제거하거나, 데이터를 처리하거나, 임의의 XMLA 스크립트를 실행해서는 안 됩니다.<br /><br /> SharePoint용 PowerPivot에는 구성 작업에 사용할 수 있는 기본 제공 PowerShell 지원 기능이 포함되어 있습니다. 이 기능은 별도로 제공됩니다. 자세한 내용은 [SharePoint 용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)합니다.|  
-|로컬 큐브에 대한 네이티브 연결<br /><br /> "데이터 Source=c:\backup\test.cub"|지원되지 않습니다.|  
-|SharePoint의 BI 의미 체계 모델 연결 파일(.bism)에 대한 HTTP 연결<br /><br /> "데이터 원본 =http://server/shared_docs/name.bism"|지원되지 않습니다.|  
+|로컬 큐브에 대한 네이티브 연결<br /><br /> "Data Source=c:\backup\test.cub"|지원되지 않습니다.|  
+|SharePoint의 BI 의미 체계 모델 연결 파일(.bism)에 대한 HTTP 연결<br /><br /> "Data Source=http://server/shared_docs/name.bism"|지원되지 않습니다.|  
 |PowerPivot 데이터베이스에 대한 포함된 연결<br /><br /> "데이터 원본 = $Embedded$"|지원되지 않습니다.|  
-|Analysis Services 저장 프로시저의 로컬 서버 컨텍스트<br /><br /> "데이터 원본 = *"|지원되지 않습니다.|  
+|Analysis Services 저장 프로시저의 로컬 서버 컨텍스트<br /><br /> "Data Source=*"|지원되지 않습니다.|  
   
 ##  <a name="bkmk_auth"></a> 인증 요구 사항 및 보안 고려 사항  
  Analysis Services에 연결하는 경우 Windows 사용자 ID를 사용해야 합니다. 대부분 Windows 통합 보안을 사용하여 연결이 이루어지는데 이 경우 현재 사용자의 ID가 서버 작업이 수행되는 보안 컨텍스트를 설정합니다. 하지만 Analysis Services에 대한 HTTP 액세스를 구성하면 추가 인증 방법을 사용할 수 있습니다. 이 섹션에서는 연결 유형에 따라 사용할 수 있는 인증 옵션에 대해 설명합니다.  
@@ -147,21 +147,21 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> 원격 관리를 사용 하도록 설정  
- 원격 Analysis Services 인스턴스에서 Analysis Services PowerShell을 사용하려면 먼저 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 방화벽 구성에 문제가 있으면 다음 오류가 발생합니다. "RPC 서버를 사용할 수 없습니다. (HRESULT에서 예외가 발생했습니다: 0x800706BA)".  
+ 원격 Analysis Services 인스턴스에서 Analysis Services PowerShell을 사용하려면 먼저 원격 관리 및 파일 공유를 사용하도록 설정해야 합니다. 다음 오류 방화벽 구성 문제를 나타냅니다. "RPC 서버를 사용할 수 없습니다. (HRESULT의 예외: 0x800706BA)".  
   
 1.  로컬 및 원격 컴퓨터 모두에 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] 버전의 클라이언트 및 서버 도구가 있는지 확인하십시오.  
   
 2.  Analysis Services 인스턴스를 호스팅하는 원격 서버의 Windows 방화벽에서 TCP 포트 2383을 엽니다. Analysis Services를 명명된 인스턴스로 설치했거나 사용자 지정 포트를 사용하는 경우 포트 번호가 달라질 수 있습니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
-3.  원격 서버에서  RPC(원격 프로시저 호출) 서비스, TCP/IP NetBIOS Helper 서비스, WMI(Windows Management Instrumentation) 서비스, WS-Management(Windows Remote Management) 서비스가 시작되었는지 확인합니다.  
+3.  원격 서버에서 다음 서비스가 시작 되었는지 확인 합니다.  원격 프로시저 호출 (RPC) 서비스, TCP/IP NetBIOS Helper 서비스, Windows Management Instrumentation (WMI) 서비스, Windows Remote Management (Ws-management) 서비스입니다.  
   
 4.  원격 서버에서 그룹 정책 개체 편집기 스냅인(gpedit.msc)을 시작합니다.  
   
 5.  컴퓨터 구성에서 관리 템플릿, 네트워크, 네트워크 구성 요소, Windows 방화벽을 차례로 연 다음 도메인 프로파일을 엽니다.  
   
-6.  **Windows 방화벽: 인바운드 원격 관리 예외 허용**을 선택 **Enabled**를 클릭 하 고 **확인**합니다.  
+6.  두 번 클릭 **Windows 방화벽: 인바운드 원격 관리 예외 허용**을 선택 **Enabled**를 클릭 하 고 **확인**합니다.  
   
-7.  **Windows 방화벽: 인바운드 파일 및 프린터 공유 예외 허용**을 선택 **Enabled**를 클릭 하 고 **확인**합니다.  
+7.  두 번 클릭 **Windows 방화벽: 인바운드 파일 및 프린터 공유 예외 허용**을 선택 **Enabled**를 클릭 하 고 **확인**합니다.  
   
 8.  클라이언트 도구가 있는 로컬 컴퓨터에서 원격 관리를 대체에 대 한 실제 서버 이름을 확인 하려면 다음 cmdlet을 사용 합니다 *원격 서버 이름* 자리 표시자입니다. Analysis Services가 기본 인스턴스로 설치된 경우 인스턴스 이름은 생략합니다. 이 명령은 SQLPS 모듈을 이미 가져온 경우에만 작동합니다.  
   
@@ -196,13 +196,13 @@ PS SQLSERVER\sqlas:> cd localhost\default
 PS SQLSERVER\sqlas\localhost\default:> dir  
 ```  
   
- Assemblies, Databases, Roles 및 Traces 컬렉션이 표시되어야 합니다. 계속하여 `cd` 및 `dir`을 사용하여 각 컬렉션의 내용을 볼 수 있습니다.  
+ 다음 컬렉션에 표시 됩니다. 어셈블리, 데이터베이스, 역할 및 추적 합니다. 계속하여 `cd` 및 `dir`을 사용하여 각 컬렉션의 내용을 볼 수 있습니다.  
   
  **Analysis Services에 대 한 HTTP 연결**  
   
  ![Analysis Services에 HTTP 연결](media/ssas-powershell-httpconnection.gif "Analysis Services에 HTTP 연결")  
   
- 이 항목의 지침을 사용하여 HTTP 액세스를 사용하도록 서버를 구성한 경우 HTTP 연결을 유용하게 사용할 수 있습니다. [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ HTTP 연결은이 문서의 지침을 사용 하 여 HTTP 액세스를 위해 서버를 구성 하는 경우에 유용 합니다. [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
  서버 url http://localhost/olap/msmdpump.dll, 연결을 다음과 같이 표시 될 수 있습니다.  
   
@@ -213,7 +213,7 @@ PS SQLSERVER\sqlas\http_ds:> cd $Url
 PS SQLSERVER\sqlas\http_ds\http%3A%2F%2Flocalhost%2olap%2msmdpump%2Edll:> dir  
 ```  
   
- Assemblies, Databases, Roles 및 Traces 컬렉션이 표시되어야 합니다. 이 컬렉션의 내용을 볼 수 없는 경우 OLAP 가상 디렉터리의 인증 설정을 확인하십시오. 익명 액세스가 비활성화되어 있는지 확인합니다. Windows 인증을 사용하는 경우 Windows 사용자 계정에 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다.  
+ 다음 컬렉션에 표시 됩니다. 어셈블리, 데이터베이스, 역할 및 추적 합니다. 이 컬렉션의 내용을 볼 수 없는 경우 OLAP 가상 디렉터리의 인증 설정을 확인하십시오. 익명 액세스가 비활성화되어 있는지 확인합니다. Windows 인증을 사용하는 경우 Windows 사용자 계정에 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다.  
   
 ###  <a name="bkmk_admin"></a> 서비스 관리  
  서비스가 실행되고 있는지 확인합니다. Analysis Services(MSSQLServerOLAPService) 및 데이터베이스 엔진을 비롯하여 SQL Server 서비스의 상태, 이름 및 표시 이름을 반환합니다.  

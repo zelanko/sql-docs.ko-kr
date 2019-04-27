@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658262"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원되는 ODBC SQL 문법
 ODBC 드라이버는 코어 및 ODBC 2.5 확장 문법에서 최소 ODBC 2.5 문법 및 다음 절 완전히 지원합니다. 이동 하 여 추가 정보를 표시할 수 있습니다 합니다 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md)를 [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  
@@ -40,7 +40,7 @@ ODBC 드라이버는 코어 및 ODBC 2.5 확장 문법에서 최소 ODBC 2.5 문
   
 -   [날짜 산술](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: 날짜, 시간, 타임스탬프 리터럴](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: 날짜, 시간 및 타임 스탬프 리터럴](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX 문](../../odbc/microsoft/drop-index-statement.md)  
   

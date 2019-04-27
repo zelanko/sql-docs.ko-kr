@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787105"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 쿼리 제한 시간 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **원격 쿼리 제한 시간** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제한 시간이 초과될 때까지 원격 작업을 수행할 수 있는 시간(초)을 지정합니다. 이 옵션의 기본값은 600이며, 10분 동안 대기할 수 있습니다. 이 값은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 시작된 나가는 연결에 원격 쿼리로 적용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 수신된 쿼리에는 이 값이 적용되지 않습니다. 제한 시간을 사용하지 않으려면 값을 0으로 설정합니다. 쿼리는 완료될 때까지 대기합니다.  
@@ -86,7 +86,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 원격 쿼리 제한 시간 옵션을 구성한 후  
+##  <a name="FollowUp"></a> 후속 작업: Remote query timeout 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

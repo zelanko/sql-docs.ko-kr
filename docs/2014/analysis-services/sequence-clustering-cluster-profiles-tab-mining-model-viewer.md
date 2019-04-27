@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746815"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 프로필 탭(마이닝 모델 뷰어
   **Microsoft 시퀀스 클러스터링 뷰어**의 **클러스터 프로필** 탭에는 각 클러스터에 포함된 시퀀스가 색으로 지정되어 표시됩니다.  
   
  이 시퀀스 클러스터링 모델 뷰를 사용하여 모델이 검색한 시퀀스가 그룹화되는 방법을 신속하게 확인할 수 있습니다. 긴 시퀀스의 수와 짧은 시퀀스의 수를 한눈에 볼 수 있습니다. 또한 클러스터를 클릭하고 **마이닝 범례** 를 표시하여 각 시퀀스의 색이 나타내는 상태를 정확히 확인할 수 있습니다.  
   
- **자세한 내용은**[Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **참조 항목:**  [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md), [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -34,7 +34,7 @@ ms.locfileid: "48068793"
  **마이닝 모델**  
  현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 사용자 지정 뷰어 또는 **Microsoft 일반 콘텐츠 트리 뷰어**를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **범례 표시**  
@@ -50,17 +50,17 @@ ms.locfileid: "48068793"
   
  두 히스토그램 집합은 모델의 각 클러스터에 대해 표시되며 각각 그래프의 다른 행에 있습니다.  
   
--   **\<특성 이름 >.samples**:이 행의 히스토그램은 각 클러스터의 특징을 나타내는 항목의 시퀀스를 보여 줍니다. DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
+-   **\<특성 이름 >.samples**: 이 행의 히스토그램은 각 클러스터의 특징을 나타내는 항목의 시퀀스를 보여 줍니다. DMX 측면에서 이러한 항목은 각 클러스터에 대한 샘플 사례입니다.  
   
--   **\<특성 이름 >**:이 행의 히스토그램 모든 클러스터에 포함 된 항목과 전체적인 분포를 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
+-   **\<특성 이름 >**: 이 행의 히스토그램은 클러스터에 포함 된 모든 항목 및 전체적인 분포를 설명 합니다. **마이닝 범례** 가 표시될 때 히스토그램을 클릭하면 각각의 숫자 값을 볼 수 있습니다.  
   
  **상태**  
  차트의 이 열은 선택 사항이며 **범례 표시** 옵션을 선택하여 표시하거나 제거할 수 있습니다. **상태** 열은 해당 클러스터 히스토그램에서 어떤 색이 어떤 상태를 나타내는지를 안내합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](data-mining/microsoft-sequence-clustering-algorithm.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)   
  [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

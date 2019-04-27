@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679930"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>사용자 지정 멤버 수식 만들기(차원)(비즈니스 인텔리전스 마법사)
   사용 된 **사용자 지정 멤버 수식 만들기** 는 비즈니스 인텔리전스 마법사는 특성과 연결할 사용자 지정 멤버 수식 열-열 MDX (Multidimensional Expressions)를 포함 하는 차원 선택 페이지 해당 특성의 멤버 값을 정의 하는 문입니다.  

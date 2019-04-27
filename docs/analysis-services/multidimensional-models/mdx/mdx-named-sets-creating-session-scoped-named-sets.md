@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739993"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>명명 된 집합에서 만드는 세션 범위 MDX 명명 된 집합
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>명명 된 집합-세션 범위를 만드는 MDX 명명 된 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX 세션에서 사용할 수 있는 명명된 집합을 만들려면 [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) 문을 사용하세요. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  
   
@@ -49,7 +49,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [세트 & #40; 명명 된 쿼리 범위를 만들기 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>관련 항목  
+ [쿼리 범위 명명된 집합 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

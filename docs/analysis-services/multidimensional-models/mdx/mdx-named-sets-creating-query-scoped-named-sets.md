@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739983"
 ---
 # <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>명명 된 집합-쿼리 범위를 만드는 MDX 명명 된 집합
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -89,8 +89,8 @@ FROM Sales
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [SELECT 문 & #40; Mdx& #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [세트 & #40; 명명 된 세션 범위를 만들기 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+## <a name="see-also"></a>관련 항목  
+ [SELECT 문&#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [세션 범위 명명된 집합 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

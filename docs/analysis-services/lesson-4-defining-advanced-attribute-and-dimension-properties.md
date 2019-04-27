@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752770"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "52951585"
 이 태스크에서는 UnknownMember 및 UnknownMemberName 속성을 구성하여 Null 차원 멤버가 발생시킨 오류 조건을 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[5 단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[5단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
-[다차원 모델링&#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [다차원 모델의 차원](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

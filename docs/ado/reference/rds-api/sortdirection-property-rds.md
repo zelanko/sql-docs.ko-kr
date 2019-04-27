@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ef187cd2ae291413fccf10e2af51642c50e06e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670879"
 ---
 # <a name="sortdirection-property-rds"></a>SortDirection 속성(RDS)
 정렬 순서는 오름차순 또는 내림차순으로 하는지 여부를 나타냅니다.  

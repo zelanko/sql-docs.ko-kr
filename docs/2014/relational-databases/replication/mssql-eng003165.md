@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4c2c6e01fd3e0b862511f71d90baf31d28948ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666709"
 ---
 # <a name="mssqleng003165"></a>MSSQL_ENG003165
     
@@ -52,7 +52,7 @@ ms.locfileid: "52780985"
   
      필요한 경우 복제를 다시 구성합니다. 복제 토폴로지를 권장 사항대로 스크립팅한 경우에는 스크립트를 사용하여 토폴로지를 다시 구성합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 데이터베이스 백업 및 복원](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](administration/back-up-and-restore-replicated-databases.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](errors-and-events-reference-replication.md)  

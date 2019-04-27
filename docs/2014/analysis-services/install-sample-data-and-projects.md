@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730356"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
   
-## <a name="step-1-install-sql-server-software"></a>1단계: SQL Server 소프트웨어 설치  
+## <a name="step-1-install-sql-server-software"></a>1단계: SQL Server 소프트웨어를 설치 합니다.  
  이 자습서의 단원에서는 다음 소프트웨어가 설치되어 있다고 가정합니다. 다음 소프트웨어는 모두 SQL Server 설치 미디어를 사용하여 설치됩니다. 배포를 간단하게 하기 위해 모든 기능을 단일 컴퓨터에 설치할 수도 있습니다. 이러한 기능을 설치하려면 SQL Server 설치 프로그램을 실행하고 기능 선택 페이지에서 해당 기능을 선택합니다. 자세한 내용은 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다.  
   
 -   데이터베이스 엔진  
   
 -   Analysis Services  
   
-     Analysis Services는 Evaluation, Enterprise, Business Intelligence, Standard 버전에서만 사용할 수 있습니다.  
+     Analysis Services는 버전 에서만 제공 됩니다. Evaluation, Enterprise, Business Intelligence, Standard입니다.  
   
      SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면 [평가판 버전을 다운로드하세요](https://go.microsoft.com/fwlink/?LinkId=392824).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53355070"
   
 7.  데이터베이스 정보에서 로그 파일 항목을 제거합니다. 예제에는 로그 파일이 없지만 설치 프로그램에서는 로그 파일이 있다고 가정합니다. 데이터베이스를 연결하면 자동으로 새 로그 파일이 만들어집니다. 로그 파일을 선택하고 **제거**를 클릭한 다음 **확인** 을 클릭하여 주 데이터베이스 파일만 연결합니다.  
   
-## <a name="step-4-grant-database-permissions"></a>4단계: 데이터베이스 사용 권한 부여  
+## <a name="step-4-grant-database-permissions"></a>4단계: Grant 데이터베이스 사용 권한  
  예제 프로젝트에서는 데이터를 가져오거나 처리하는 데 사용되는 보안 컨텍스트를 지정하는 데이터 원본 가장을 사용합니다. 기본적으로 가장 설정은 데이터 액세스에 사용할 Analysis Services 서비스 계정을 지정합니다. 이 기본 설정을 사용하려면 Analysis Services를 실행하는 데 사용되는 서비스 계정에 **AdventureWorksDW2012** 데이터베이스에 대한 데이터 읽기 권한이 있는지 확인해야 합니다.  
   
 > [!NOTE]  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8dfe34895ae18f3195ee90882ed0b400299418e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646279"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>InstanceName 속성(WMI MSReportServer_ConfigurationSetting)
   특정 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 읽기 전용입니다.  

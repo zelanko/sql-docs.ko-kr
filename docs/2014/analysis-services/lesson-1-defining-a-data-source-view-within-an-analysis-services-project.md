@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729609"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Analysis Services 프로젝트 내의 데이터 원본 뷰 정의
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>1단원: Services 프로젝트 내의 분석 데이터 원본 뷰 정의
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 비즈니스 인텔리전스 애플리케이션 디자인은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 만드는 것부터 시작됩니다. 이 프로젝트에서 솔루션의 모든 요소를 정의하고 데이터 원본 뷰를 사용하여 시작합니다.  
   
  이 단원에서는 다음 태스크를 다룹니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "53365172"
 ## <a name="next-lesson"></a>다음 단원  
  [2단원: 정의 및 큐브를 배포 합니다.](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
  [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
- [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링 & #40; Adventure Works 자습서 & #41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

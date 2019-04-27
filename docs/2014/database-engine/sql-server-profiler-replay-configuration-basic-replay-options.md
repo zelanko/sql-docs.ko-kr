@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773825"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server 프로파일러 - 재생 구성(기본 재생 옵션)
   **재생 구성** 대화 상자에서 **기본 재생 옵션** 페이지를 사용하여 추적 파일 또는 테이블을 재생하는 방법을 지정할 수 있습니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "48088303"
  다른 서버에 연결하려면 **서버에 연결** 대화 상자를 시작합니다.  
   
  **파일에 저장**  
- 재생 결과를 파일에 저장합니다. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 파일을 저장할 위치를 지정할 수 있는 표준 파일 대화 상자를 표시 합니다.  
+ 재생 결과를 파일에 저장합니다. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 위치를 지정하여 파일을 저장할 수 있는 표준 파일 대화 상자가 표시됩니다.  
   
  **테이블에 저장**  
- 재생 결과를 테이블에 저장합니다. 그러면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에서 위치를 지정하여 테이블을 저장할 수 있는 테이블 선택 대화 상자가 표시됩니다.  
+ 재생 결과를 테이블에 저장합니다. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 위치를 지정하여 테이블을 저장할 수 있는 테이블 선택 대화 상자가 표시됩니다.  
   
  **재생 스레드 수**  
  동시에 사용할 재생 스레드 수를 지정합니다. 숫자가 높을수록 재생 중 소비되는 리소스가 늘어나지만 재생 속도가 빨라지고 동시성이 향상됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "48088303"
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에 재생 결과를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 테이블 재생 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [추적 테이블 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [추적 재생](../tools/sql-server-profiler/replay-traces.md)  
   

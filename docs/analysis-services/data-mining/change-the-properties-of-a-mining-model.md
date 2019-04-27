@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670383"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>마이닝 모델의 속성 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34014850"
   
  다음 모델 속성의 경우 식을 만들거나 복잡한 모델 속성을 구성하는 데 사용할 수 있는 고급 편집기가 제공됩니다.  
   
--   **Filter** 속성: [데이터 집합 필터 또는 모델 필터 대화 상자](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7)를 엽니다.  
+-   **필터** 속성: 열립니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7)합니다.  
   
--   **AlgorithmParameters** 속성: [알고리즘 매개 변수 대화 상자&#40;마이닝 모델 뷰&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060)를 엽니다.  
+-   **AlgorithmParameters** 속성: 열립니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060)합니다.  
   
  마이닝 모델의 속성을 설정하는 방법은 [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)을 참조하세요.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34014850"
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

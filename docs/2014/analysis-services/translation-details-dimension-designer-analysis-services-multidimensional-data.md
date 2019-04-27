@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756333"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너에서 **번역** 탭의 **번역 세부 정보** 창을 사용하여 현재 선택한 차원의 번역을 정의하고 관리할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48179023"
   
 -   attribute  
   
-     `Caption`하십시오 `AttributeHierarchyDisplayFolder`, 및 `NamingTemplate` 속성  
+     `Caption`, `AttributeHierarchyDisplayFolder` 및 `NamingTemplate` 속성  
   
     > [!NOTE]  
     >  `NamingTemplate` 속성은 부모 특성에 대해서만 사용할 수 있습니다.  
@@ -55,14 +55,14 @@ ms.locfileid: "48179023"
   
      `Caption` 속성  
   
- **\<언어 >**  
+ **\<Language>**  
  차원 개체의 속성 값을 선택한 언어로 입력하거나 선택합니다. 줄임표 단추(**...**)를 클릭하면 편집 중인 속성에 따라 추가 대화 상자가 열립니다.  
   
 -   `NamingTemplate` 속성  
   
      [수준 명명 템플릿 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md)를 표시합니다.  
   
--   `Caption` 속성 (특성)  
+-   `Caption` 속성(특성의 경우)  
   
      [특성 데이터 번역 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md)를 표시합니다.  
   

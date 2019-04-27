@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653758"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: xsd 도구를 사용하여 RDL 스키마에서 클래스 생성
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>2단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스를 생성 합니다.
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 프로젝트를 만든 후 다음 단계는 보고서 정의 스키마의 로컬 복사본을 검색하고 XML 스키마 정의 도구(Xsd.exe)를 실행하는 것입니다.  
   
 ### <a name="to-generate-the-rdl-classes"></a>RDL 클래스를 생성하려면  
@@ -52,7 +52,7 @@ ms.locfileid: "56025204"
     >  프로젝트에 ReportDefinition.xsd 파일을 추가한 후에도 **솔루션 탐색기** 에 ReportDefinition.cs(.vb) 파일이 표시되지 않습니다. 파일을 표시하려면 ReportDefinition.xsd 파일 옆에 있는 확장/축소 단추를 클릭합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서는 RDL 스키마에서 생성한 클래스를 사용하여 보고서 서버에서 보고서 정의를 로드하는 코드를 작성합니다. 참조 [3 단원: 보고서 서버에서 보고서 정의 로드](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)합니다.  
+ 다음 단원에서는 RDL 스키마에서 생성한 클래스를 사용하여 보고서 서버에서 보고서 정의를 로드하는 코드를 작성합니다. [3단원: 보고서 서버에서 보고서 정의 로드](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

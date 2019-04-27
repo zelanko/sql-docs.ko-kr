@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780221"
 ---
 # <a name="udt-utilities"></a>UDT 유틸리티
   UDT 유틸리티 예제에는 여러 유틸리티 함수가 포함되어 있습니다. 여기에는 어셈블리 메타데이터를 Transact-SQL에 표시하는 함수, 어셈블리의 형식을 테이블로 반환하는 예제 스트리밍 테이블 반환 함수, 사용자 정의 데이터 형식의 필드, 메서드 및 속성을 반환하는 함수 등이 있습니다. 이 예제에서는 Transact-SQL의 스트리밍 테이블 반환 함수, .NET Framework 리플렉션 API, .NET Framework의 테이블 반환 함수 호출 등의 기술을 보여 줍니다.  

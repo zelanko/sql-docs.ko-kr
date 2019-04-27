@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85dcae394c84a6af889dc6483e9989bc6dbe2ead
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755867"
 ---
 # <a name="building-a-knowledge-base"></a>기술 자료 구축
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료는 데이터 관련 정보의 리포지토리로서 데이터를 이해하고 데이터의 무결성을 유지하는 데 사용됩니다. 기술 자료는 데이터 필드의 데이터를 나타내는 각각의 도메인으로 구성됩니다. 기술 자료는 DQS에서 데이터베이스에 대해 데이터 정리 및 중복 제거를 수행하는 데 사용됩니다. 데이터 정리를 위해 기술 자료를 준비하려면 데이터 샘플에 대한 컴퓨터 기반 분석을 실행하고 도메인의 값을 대화식으로 관리하면 됩니다. DQS를 통해 정보를 가져오고, 규칙 및 관계를 만들고, 데이터 값을 직접 변경하고, 기본 데이터베이스를 활용할 수 있습니다.  

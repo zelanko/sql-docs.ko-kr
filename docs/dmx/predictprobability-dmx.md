@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f2a01e2cfd460d503e4326c44eaf356b8a5ecb4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659166"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값  
+ 스칼라 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  예측 상태를 생략하면 누락된 상태 버킷을 제외하고 확률이 가장 높은 상태가 사용됩니다. 누락 된 상태 버킷을 포함 하려면 설정 합니다 \<예측 상태별 > 하 **INCLUDE_NULL**합니다. 누락 된 상태에 대 한 확률을 반환 하려면 설정의 \<예측 상태별 > NULL로 합니다.  

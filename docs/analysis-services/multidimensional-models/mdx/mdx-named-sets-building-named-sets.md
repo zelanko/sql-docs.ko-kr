@@ -1,5 +1,5 @@
 ---
-title: 명명 된 집합에서 MDX (MDX)을 빌딩 | Microsoft Docs
+title: 구성 집합을 MDX (MDX) 라는 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740063"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>명명 된 집합-명명 된 집합 작성 MDX
+# <a name="mdx-named-sets---building-named-sets"></a>MDX 명명 된 집합-명명 된 집합 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   식 집합은 길고 복잡한 선언이 될 수 있으므로 이해하기 어려울 수 있습니다. 또는 식 집합이 너무 자주 사용되어 반복적으로 집합을 정의하는 작업이 부담이 될 수 있습니다. 이렇게 길고, 복잡하며, 일상적으로 사용되는 식을 쉽게 만들기 위해 MDX에서는 *명명된 집합*이라는 식을 사용할 수 있습니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34021280"
   
      CREATE SET 문을 사용하여 세션에서 명명된 집합을 만드는 방법에 대한 자세한 내용은 [세션 범위 명명된 집합 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SELECT 문 & #40; Mdx& #41;](../../../mdx/mdx-data-manipulation-select.md)   
  [SET 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-set.md)   
  [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c05e45f5641c2d325c5e7d05472e3881ee7c807
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728801"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>다 대 다 관계 정의
   차원을 정의할 경우 일반적으로 각 팩트는 하나의 차원 멤버에만 조인되지만 단일 차원 멤버는 여러 팩트와 연결될 수 있습니다. 예를 들어 각 고객은 여러 개의 주문을 가질 수 있지만 각 주문은 단일 컴퓨터에 속합니다. 관계형 데이터베이스 용어에서 이 관계를 *일 대 다 관계*라고 합니다. 그러나 단일 팩트가 여러 차원 멤버에 조인될 수도 있습니다. 관계형 데이터베이스 용어에서 이 관계를 *다 대 다 관계*라고 합니다. 예를 들어 고객이 구매하는 데는 여러 이유가 있고 구매 이유는 여러 구매와 연결될 수 있습니다. 조인 테이블을 사용하여 각 구매와 관련된 판매 이유를 정의합니다. 그러므로 이러한 관계에서 생성된 Sales Reason 차원에는 단일 판매 트랜잭션과 관련된 여러 멤버가 포함됩니다. 다 대 다 차원은 차원 모델을 표준 별모양 스키마 이상으로 확장하고 차원이 팩트 테이블에 직접 관련되지 않는 경우 복잡한 분석을 지원합니다.  

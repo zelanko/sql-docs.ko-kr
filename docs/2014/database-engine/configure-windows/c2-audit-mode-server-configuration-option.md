@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0233f6c40e15fd4f612002854477d98068901b15
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786672"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>c2 audit mode 서버 구성 옵션
   C2 Audit Mode는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 통해 구성하거나 **sp_configure** 에 **c2 audit mode**옵션을 사용하여 구성할 수 있습니다. 이 옵션을 선택하면 문과 개체에 대해 실패한 액세스 시도와 성공한 액세스 시도를 모두 기록하도록 서버가 구성됩니다. 이 정보는 시스템 동작을 파악하고 보안 정책 위반을 추적하는 데 도움이 됩니다.  

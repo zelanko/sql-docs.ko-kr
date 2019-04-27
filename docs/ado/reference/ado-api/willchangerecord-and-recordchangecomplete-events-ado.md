@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642897"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
 합니다 **WillChangeRecord** 이벤트에서 하나 이상의 레코드 (행) 하기 전에 호출 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 변경 합니다. 합니다 **RecordChangeComplete** 후 이벤트를 호출 하거나 더 많은 레코드를 변경 합니다.  
@@ -62,7 +62,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
 ## <a name="remarks"></a>Remarks  
- A **WillChangeRecord** 또는 **RecordChangeComplete** 다음으로 인해 행의 변경된 된 첫 번째 필드에 대 한 이벤트가 발생할 수 있습니다 **Recordset** operations: [ 업데이트](../../../ado/reference/ado-api/update-method.md), [삭제할](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)를 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)를 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [ CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)합니다. 값을 **레코드 집합** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 작업 발생할 이벤트를 결정 합니다.  
+ A **WillChangeRecord** 하거나 **RecordChangeComplete** 다음으로 인해 행의 변경된 된 첫 번째 필드에 대 한 이벤트가 발생할 수 있습니다 **Recordset** 작업: [업데이트](../../../ado/reference/ado-api/update-method.md), [삭제할](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)를 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)를 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). 값을 **레코드 집합** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 작업 발생할 이벤트를 결정 합니다.  
   
  중 합니다 **WillChangeRecord** 이벤트를 **레코드 집합** [필터](../../../ado/reference/ado-api/filter-property.md) 속성이로 설정 되어 **adFilterAffectedRecords**합니다. 이벤트를 처리 하는 동안이 속성을 변경할 수 없습니다.  
   

@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744384"
 ---
 # <a name="determining-cursor-capabilities"></a>커서 기능 확인
 다음 네 가지 옵션 **SQLGetInfo** 지 원하는 커서의 형식 및 해당 기능에 설명 합니다.  
   
--   SQL_CURSOR_SENSITIVITY 합니다. 커서를 다른 커서가 변경한 내용의 중요 한지 여부를 나타냅니다.  
+-   SQL_CURSOR_SENSITIVITY. 커서를 다른 커서가 변경한 내용의 중요 한지 여부를 나타냅니다.  
   
--   SQL_SCROLL_OPTIONS 합니다. 지원 되는 커서 유형에 (정방향 전용, 정적, 키 집합 커서, 동적 또는 혼합)을 나열합니다. 모든 데이터 원본 정방향 전용 커서를 지원 해야 합니다.  
+-   SQL_SCROLL_OPTIONS. 지원 되는 커서 유형에 (정방향 전용, 정적, 키 집합 커서, 동적 또는 혼합)을 나열합니다. 모든 데이터 원본 정방향 전용 커서를 지원 해야 합니다.  
   
 -   SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 (커서 유형)에 따라 다름 스크롤 가능 커서를 지 원하는 인출 유형을 나열 합니다. 인출 형식에 해당 하는 반환 값의 비트 **SQLFetchScroll**합니다.  
   

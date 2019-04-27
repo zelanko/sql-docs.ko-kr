@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730617"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 브라우저(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **KPI 브라우저** 창을 사용하여 KPI(핵심 성과 지표)의 결과를 보고 테스트할 수 있습니다. 검색하기 전에 먼저 KPI를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포해야 합니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48174603"
  **Weight**  
  KPI의 가중치 요인을 표시합니다.  
   
- **(설명)**  
+ **(Description)**  
  KPI에 대한 설명이 제공된 경우 정보 아이콘을 표시합니다.  
   
  정보 아이콘을 마우스로 가리키면 KPI에 대한 설명이 포함된 도구 설명이 표시됩니다.  

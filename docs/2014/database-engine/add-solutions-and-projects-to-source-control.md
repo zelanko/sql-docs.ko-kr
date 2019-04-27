@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792093"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>원본 제어에 솔루션 및 프로젝트 추가
   솔루션을 원본 제어에 추가할 경우 솔루션은 원본 제어 공급자가 작성 및 유지 관리하는 동적 버전 관리 보관의 일부가 됩니다. 누군가가 솔루션의 새 버전을 체크 인할 때마다 해당 버전은 보관의 일부가 되며 다른 소스 제어 사용자가 사용할 수 있게 됩니다.  

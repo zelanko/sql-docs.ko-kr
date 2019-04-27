@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729661"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 폼 편집기(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **KPI 폼 편집기** 창을 사용하여 선택한 KPI(핵심 성과 지표)를 생성하거나 수정할 수 있습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "52523472"
   
  백슬래시(\\)를 사용하여 표시 폴더 내의 폴더 이름을 구분하고 세미콜론(;)을 사용하여 여러 표시 폴더를 구분할 수 있습니다. 예를 들어 `Category\Goal\Scientific;Category\Goal\Metric`과 같이 입력합니다.  
   
- **부모 KPI**  
+ **Parent KPI**  
  클라이언트 애플리케이션에서 사용할 KPI를 분류할 기존 상위 KPI를 선택합니다.  
   
 > [!NOTE]  

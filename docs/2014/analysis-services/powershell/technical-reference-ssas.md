@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ac8e3de76709f4ae8e4839d79d1f40aae9195ce
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748894"
 ---
 # <a name="technical-reference-ssas"></a>기술 참조(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하고 관리하는 데 대한 도구, 언어 및 PowerShell 참조 설명서를 찾습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "50147838"
  [SharePoint 용 PowerPivot에 대 한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **쿼리 및 식 언어 참조**  
- [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [다차원 식 & #40; Mdx& #41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
  [Data Analysis Expressions &#40;DAX&#41; 참조](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)  
   

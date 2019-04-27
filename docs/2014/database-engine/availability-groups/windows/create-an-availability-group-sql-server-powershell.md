@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790672"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>가용성 그룹 만들기(SQL Server PowerShell)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 PowerShell cmdlet을 사용하여 AlwaysOn 가용성 그룹을 만들고 구성하는 방법에 대해 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "53350300"
   
 |태스크|PowerShell cmdlet(사용 가능한 경우) 또는 Transact-SQL 문|태스크를 수행할 위치**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|`New-SqlHadrEndPoint`|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br /> 참고: 기존 데이터베이스 미러링 엔드포인트를 변경하려면 `Set-SqlHadrEndpoint`를 사용합니다.|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스당 하나의 데이터베이스 미러링 엔드포인트 만들기|`New-SqlHadrEndPoint`|데이터베이스 미러링 엔드포인트가 없는 각 서버 인스턴스에서 실행합니다.<br /><br /> 참고: 기존 데이터베이스 미러링 끝점을 변경 하려면 사용 하 여 `Set-SqlHadrEndpoint`입니다.|  
 |가용성 그룹 만들기|먼저 `New-SqlAvailabilityReplica` cmdlet과 `-AsTemplate` 매개 변수를 사용하여 가용성 그룹에 포함할 두 개의 각 가용성 복제본에 대한 메모리 내 가용성 복제본 개체를 만듭니다.<br /><br /> 그런 다음 `New-SqlAvailabilityGroup` cmdlet을 사용하고 가용성 복제본 개체를 참조하여 가용성 그룹을 만듭니다.|초기 주 복제본을 호스트할 서버 인스턴스에서 실행합니다.|  
 |가용성 그룹에 보조 복제본 조인|`Join-SqlAvailabilityGroup`|보조 복제본을 호스팅할 각 서버 인스턴스에서 실행합니다.|  
 |보조 데이터베이스 준비|`Backup-SqlDatabase` 및 `Restore-SqlDatabase`|주 복제본을 호스트하는 서버 인스턴스에 백업을 만듭니다.<br /><br /> `NoRecovery` 복원 매개 변수를 사용하여 보조 복제본을 호스팅하는 각 서버 인스턴스에 백업을 복원합니다. 또한 주 복제본을 호스팅하는 컴퓨터와 대상 보조 복제본을 호스팅하는 컴퓨터의 파일 경로가 다른 경우 `RelocateFile` 복원 매개 변수를 사용합니다.|  
@@ -88,7 +88,7 @@ ms.locfileid: "53350300"
 > [!NOTE]  
 >  서버 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이 다른 도메인 사용자 계정으로 실행되는 경우에는 각 서버 인스턴스에서 다른 서버 인스턴스에 대한 로그인을 만들고 로컬 데이터베이스 미러링 엔드포인트에 이 로그인 CONNECT 권한을 부여합니다.  
   
-##  <a name="ExampleConfigureGroup"></a> 예: PowerShell을 사용하여 가용성 그룹 만들기  
+##  <a name="ExampleConfigureGroup"></a> 예제: PowerShell을 사용 하 여 가용성 그룹을 만들려면  
  다음 PowerShell 예에서는 가용성 복제본 두 개와 가용성 데이터베이스 한 개가 포함된 `MyAG` 라는 단순한 가용성 그룹을 만들고 구성합니다. 예:  
   
 1.  `MyDatabase` 와 해당 트랜잭션 로그를 백업합니다.  
@@ -164,7 +164,7 @@ Join-SqlAvailabilityGroup -Path "SQLSERVER:\SQL\SecondaryComputer\Instance" -Nam
 Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\AvailabilityGroups\MyAG" -Database "MyDatabase"  
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **AlwaysOn 가용성 그룹에 대 한 서버 인스턴스를 구성 하려면**  
   
 -   [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -219,7 +219,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **블로그:**  
   
-     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server PowerShell을 사용 하 여 AlwaysOn 구성](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   

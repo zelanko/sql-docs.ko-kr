@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8f0807478066e5e82cf479246c35dcd6b511f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728963"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI 정의 및 찾아보기
   KPI(핵심 성과 지표)를 정의하려면 먼저 KPI 이름 및 KPI와 연관된 측정값 그룹을 정의합니다. KPI는 모든 측정값 그룹 또는 단일 측정값 그룹과 연관될 수 있습니다. 그런 후 KPI의 다음 요소를 정의합니다.  
@@ -269,6 +269,6 @@ ms.locfileid: "48170383"
      North America의 대리점별로 Q3 CY 2007에 해당하는 Bikes 판매의 매출이익률이 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [8단원: 동작 정의](../analysis-services/lesson-8-defining-actions.md)  
+ [8단원: 작업 정의](../analysis-services/lesson-8-defining-actions.md)  
   
   

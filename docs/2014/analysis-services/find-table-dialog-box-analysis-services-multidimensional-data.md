@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731198"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>테이블 찾기 대화 상자(Analysis Services - 다차원 데이터)
   **의** 테이블 찾기 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 차원, 큐브 또는 마이닝 구조와 연결된 데이터 원본 뷰에서 테이블을 찾을 수 있습니다. 다음과 같은 방법으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 이 대화 상자를 표시할 수 있습니다.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743459"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>큐브 뷰 세부 정보(큐브 뷰 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 뷰** 탭에 있는 **큐브 뷰 세부 정보** 창을 사용하면 선택한 큐브 뷰를 쿼리하는 사용자에게 제공되는 메타데이터를 관리할 수 있습니다.  

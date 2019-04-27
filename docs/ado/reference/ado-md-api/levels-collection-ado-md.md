@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de15d97098c61ae73ddade761ddad716947715f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740143"
 ---
 # <a name="levels-collection-ado-md"></a>Levels 컬렉션(ADO MD)
 포함 된 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 계층을 구성 하는 개체입니다.  

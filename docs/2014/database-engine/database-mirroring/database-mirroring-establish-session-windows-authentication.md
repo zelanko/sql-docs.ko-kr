@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755515"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "54135533"
      데이터베이스 미러링 세션의 각 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 필요합니다. 따라서 엔드포인트가 없으면 만들어야 합니다.  
   
     > [!NOTE]  
-    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
+    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 같습니다. Windows 인증 또는 인증서 기반 인증 합니다. 자세한 내용은 [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)합니다.  
   
      각 파트너 서버에서 데이터베이스 미러링의 엔드포인트가 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 엔드포인트가 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 엔드포인트에 파트너 역할을 할당합니다(ROLE**=** PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 엔드포인트 역할을 ALL로 지정합니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54135533"
     ```  
   
     > [!IMPORTANT]  
-    >  사용 중인 데이터베이스 미러링 엔드포인트는 다시 구성하지 마세요. 데이터베이스 미러링 엔드포인트가 있으며 이미 사용 중인 경우 서버 인스턴스의 모든 세션에 이 엔드포인트를 사용하는 것이 좋습니다. 사용 중인 엔드포인트를 삭제하면 엔드포인트가 다시 시작되어 기존 세션의 연결이 끊어지므로 다른 서버 인스턴스에서 오류가 발생할 수 있습니다. 이는 특히 파트너에 엔드포인트를 다시 구성하면 장애 조치(Failover) 오류가 발생할 수 있는 자동 장애 조치(Failover)가 있는 보호 우선 모드에서 중요한 사항입니다. 또한 세션에 미러링 모니터 서버가 설정된 경우 데이터베이스 미러링 엔드포인트를 삭제하면 해당 세션의 주 서버에서 쿼럼이 손실될 수 있습니다. 이 경우 데이터베이스는 오프라인 상태가 되며 해당 사용자의 연결이 끊어집니다. 자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
+    >  사용 중인 데이터베이스 미러링 엔드포인트는 다시 구성하지 마세요. 데이터베이스 미러링 엔드포인트가 있으며 이미 사용 중인 경우 서버 인스턴스의 모든 세션에 이 엔드포인트를 사용하는 것이 좋습니다. 사용 중인 엔드포인트를 삭제하면 엔드포인트가 다시 시작되어 기존 세션의 연결이 끊어지므로 다른 서버 인스턴스에서 오류가 발생할 수 있습니다. 이는 특히 파트너에 엔드포인트를 다시 구성하면 장애 조치(Failover) 오류가 발생할 수 있는 자동 장애 조치(Failover)가 있는 보호 우선 모드에서 중요한 사항입니다. 또한 세션에 미러링 모니터 서버가 설정된 경우 데이터베이스 미러링 엔드포인트를 삭제하면 해당 세션의 주 서버에서 쿼럼이 손실될 수 있습니다. 이 경우 데이터베이스는 오프라인 상태가 되며 해당 사용자의 연결이 끊어집니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
      파트너 중 하나에 엔드포인트가 없는 경우 [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기 &#40;Transact-SQL &#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)버전에서는 데이터베이스 미러링을 사용할 수 없습니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54135533"
          자동 장애 조치 기능을 지원하지 않고 가용성보다 성능을 우선하려면 트랜잭션 보안을 해제합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
   
         > [!NOTE]  
-        >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.  
+        >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
   

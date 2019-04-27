@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753248"
 ---
 # <a name="currency-type-and-conversion-function"></a>통화 형식 및 변환 함수
   이 예에서는 C#을 사용하여 Currency 사용자 정의 데이터 형식을 정의합니다. 이 사용자 정의 데이터 형식에서는 금액과 culture를 모두 캡슐화하여 금액을 해당 culture의 통화 값으로 렌더링하는 올바른 방법을 결정하는 데 도움을 줍니다. 이 예에서는 Currency 사용자 정의 데이터 형식의 인스턴스를 반환하는 통화 변환 함수도 제공합니다. AdventureWorks 데이터베이스에 미국 달러(USD)를 지정된 culture와 연관된 통화로 변환하는 환율이 있는 경우 변환 함수는 변환된 환율 및 요청 culture와 일치하는 culture와 함께 Currency 사용자 정의 데이터 형식을 반환합니다. 그렇지 않으면 Currency 사용자 정의 데이터 형식은 `en-us` culture인 미국 달러(USD) 단위의 원래 금액과 함께 반환됩니다. 이 예에서는 Transact-SQL을 사용하여 CLR(공용 언어 런타임) 메서드 및 어셈블리를 등록 및 등록 해제하는 방법도 보여 줍니다.  

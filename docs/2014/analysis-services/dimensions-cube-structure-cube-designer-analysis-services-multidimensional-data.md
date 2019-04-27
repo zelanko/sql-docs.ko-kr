@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72d896e4d8e7b098729fb65c7b2d21ff81df96fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731699"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>차원(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **차원** 창을 사용하여 계층 및 특성을 포함한 큐브 차원을 보고 편집할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **계층**  
+ **계층 구조**  
  사용 가능한 큐브 차원 및 관련 큐브 계층을 표시하려면 클릭합니다.  
   
  큐브 차원을 확장 하 고 선택 **편집할 \<차원 >** 차원 디자이너를 표시 하 고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집 합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  

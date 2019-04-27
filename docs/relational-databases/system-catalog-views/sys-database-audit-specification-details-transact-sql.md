@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652481"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "47648951"
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|감사 사양의 ID입니다.|  
 |**audit_action_id**|**int**|감사 동작의 ID입니다.|  
-|**audit_action_name**|**sysname**|감사 동작 또는 감사 동작 그룹의 이름입니다.|  
+|**audit_action_name**|**Sysname**|감사 동작 또는 감사 동작 그룹의 이름입니다.|  
 |**클래스**|**int**|감사 중인 개체의 클래스를 식별합니다.|  
-|**class_ desc**|**nvarchar(60)**|감사 중인 개체의 클래스에 대한 설명:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|감사 중인 개체의 클래스에 대한 설명:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Table Audit 동작의 Table ID와 같이 감사 중인 개체의 주 ID입니다.|  
 |**minor_id**|**정수**|Table Audit 동작의 열 ID와 같이 클래스에 따라 해석되어 감사 중인 개체의 보조 ID입니다.|  
 |**audited_principal_id**|**int**|감사 중인 보안 주체입니다.|  
-|**audited_result**|**nvarchar(60)**|감사 동작 결과:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|감사 동작 결과:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|다음은 개체가 그룹인지 여부를 보여 줍니다.<br /><br /> 0 - 그룹 아님<br /><br /> 1 - 그룹임|  
   
 ## <a name="permissions"></a>사용 권한  

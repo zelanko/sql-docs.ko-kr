@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ebda5596422d8dd8964c9da1e042f266d3e23db
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756869"
 ---
 # <a name="measures-ssas-tabular"></a>측정값(SSAS 테이블 형식)
   테이블 형식 모델에서 측정값은 보고 클라이언트용 DAX 수식을 사용하여 만든 계산입니다. 측정값은 보고 클라이언트 애플리케이션에서 사용자가 선택하는 필드, 필터 및 슬라이서에 따라 평가됩니다.  
@@ -69,7 +69,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 -   측정값 표에서 빈 셀을 클릭하고 수식 입력줄에서 DAX 수식을 입력합니다. ENTER를 클릭하여 수식을 완성하면 측정값이 측정값 표의 셀에 나타납니다.  
   
--   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계: 자동 합계 단추를 사용하여 만든 Sum, Average, Count, DistinctCount, Max 및 Min 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
+-   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계 됩니다. Sum, Average, Count, DistinctCount, Max, Min. 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
   
  기본적으로 자동 합계를 사용하면 관련 열의 이름, 콜론, 수식이 차례로 연결된 형태로 측정값의 이름이 정의됩니다. 이 이름은 수식 입력줄 또는 속성 창의 **측정값 이름** 속성 설정에서 변경할 수 있습니다. 사용자 지정 수식을 사용하여 측정값을 만들 경우 수식 입력줄에 이름, 콜론, 수식을 차례로 입력하거나 속성 창의 **측정값 이름** 속성 설정에 이름을 입력할 수 있습니다.  
   

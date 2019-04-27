@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747955"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약(SharePoint용 PowerPivot)
   SharePoint 사이트에 게시한 Excel 통합 문서 내의 PowerPivot 데이터가 자동으로 업데이트되도록 데이터 새로 고침을 예약할 수 있습니다.  

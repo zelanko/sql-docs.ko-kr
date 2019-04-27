@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754686"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 데이터베이스 미러링을 제거하는 방법에 대해 설명합니다.  데이터베이스 소유자는 언제든지 데이터베이스에서 미러링을 제거하여 수동으로 데이터베이스 미러링 세션을 중지할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52506131"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> 후속편: 데이터베이스 미러링 제거  
+##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링 제거  
   
 > [!NOTE]  
 >  미러링 제거의 영향에 대한 자세한 내용은 [데이터베이스 미러링 제거&#40;SQL Server&#41;](database-mirroring-sql-server.md)를 참조하세요.  
@@ -89,7 +89,7 @@ ms.locfileid: "52506131"
     > [!IMPORTANT]  
     >  이 데이터베이스를 복구하면 같은 이름의 두 분기 데이터베이스가 온라인 상태가 됩니다. 따라서 클라이언트가 두 데이터베이스 중 하나(일반적으로 가장 최근의 주 데이터베이스)에만 액세스할 수 있는지 확인해야 합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [데이터베이스 미러링 세션 일시 중지 또는 재개&#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52506131"
   
 -   [예: 인증서를 사용 하 여 데이터베이스 미러링 설정 &#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [AlwaysOn 가용성 그룹 (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  

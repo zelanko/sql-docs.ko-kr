@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76635a5c1f1140bb66adf1d9ac40885c3dc43269
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771249"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>변경 데이터 검색 및 이해
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 첫 번째 태스크는 변경 데이터를 검색하는 쿼리를 실행하는 것입니다. 데이터 흐름 태스크의 원본 구성 요소 내에서 이 쿼리를 실행합니다. 그런 다음 다운스트림 변환 및 대상을 사용하여 대상에 변경 데이터를 적용할 수 있습니다.  

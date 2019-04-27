@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 978a14c59c92328add341427c990b4f9b14b8f79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650684"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭을 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729299"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>큐브 및 차원 속성 검토
   큐브를 정의한 후에는 큐브 디자이너를 사용하여 결과를 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48196273"
   
 4.  **큐브 구조** 탭의 **차원** 창에서 **Customer**를 확장한 후 **Customer 편집** 을 클릭하여 차원 디자이너에서 이 차원을 엽니다.  
   
-     차원 디자이너에는 **차원 구조**, **특성 관계**, **번역**및 **브라우저**탭이 있습니다. **차원 구조** 탭에는 **특성**, **계층**및 **데이터 원본 뷰**창이 있습니다. 차원에 포함된 특성은 **특성** 창에 나타납니다. 자세한 내용은 [차원 특성 속성 참조](multidimensional-models/dimension-attribute-properties-reference.md)를 [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)합니다.  
+     차원 디자이너 이러한 탭을 있습니다. **차원 구조**, **특성 관계**합니다 **번역**, 및 **브라우저**합니다. 다음에 유의 합니다 **차원 구조** 탭에는: **특성**, **계층**, 및 **데이터 원본 뷰**합니다. 차원에 포함된 특성은 **특성** 창에 나타납니다. 자세한 내용은 [차원 특성 속성 참조](multidimensional-models/dimension-attribute-properties-reference.md)를 [사용자 정의 계층 만들기](multidimensional-models/user-defined-hierarchies-create.md)합니다.  
   
 5.  큐브 디자이너로 전환하려면 솔루션 탐색기에서 **큐브** 노드의 **Analysis Services Tutorial** 큐브를 마우스 오른쪽 단추로 클릭하고 **디자이너 보기**를 클릭합니다.  
   

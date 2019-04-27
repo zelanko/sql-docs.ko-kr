@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730780"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>표(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **차원 용도** 탭의 **표** 창을 사용하여 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 각 차원 관계는 표에 셀로 표시되며 측정값 그룹과 차원은 각각 열과 행에 표시됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48180023"
 |------------|----------------|  
 |**측정값 그룹**|**표** 창에 열로 표시할 측정값 그룹을 선택합니다. **(모두 표시)** 를 선택하면 사용 가능한 모든 측정값 그룹이 표시됩니다.<br /><br /> 측정값 그룹의 이름을 바꾸려면 측정값 그룹에 대해 선택한 열의 머리글을 클릭합니다.|  
 |**Dimensions**|**표** 창에 행으로 표시할 큐브 차원을 선택합니다. **(모두 표시)** 를 선택하면 사용 가능한 모든 큐브 차원이 표시됩니다.<br /><br /> 큐브 차원의 이름을 바꾸려면 차원에 대해 선택한 행의 머리글을 클릭합니다.|  
-|**(셀)**|**관계 정의**대화 상자를 표시하고 큐브 차원과 측정값 그룹 간의 차원 관계를 정의하려면 셀을 선택한 다음 줄임표 단추 ( **...** )를 클릭합니다. **관계 정의** 대화 상자에 대한 자세한 내용은 [관계 정의 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**(Cell)**|**관계 정의**대화 상자를 표시하고 큐브 차원과 측정값 그룹 간의 차원 관계를 정의하려면 셀을 선택한 다음 줄임표 단추 ( **...** )를 클릭합니다. **관계 정의** 대화 상자에 대한 자세한 내용은 [관계 정의 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  다음은 **표** 창을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴에서 사용할 수 있는 옵션입니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "48180023"
 |------------|----------------|  
 |**큐브 차원 추가**|**큐브 차원 추가** 대화 상자를 표시하고 큐브의 기존 또는 새 데이터베이스 차원에 참조를 추가하려면 선택합니다. **큐브 차원 추가** 대화 상자에 대한 자세한 내용은 [큐브 차원 추가 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**새 연결 된 개체**|**연결된 개체 마법사** 를 표시하여 다른 큐브의 측정값 그룹 및 차원을 연결하고 선택한 큐브로 동작, KPI 및 계산을 가져오려면 선택합니다. **연결된 개체 마법사**에 대한 자세한 내용은 [연결된 개체 마법사 F1 도움말](linked-object-wizard-f1-help.md)을 참조하세요.|  
-|**잘라내기**|참고:이 옵션이 비활성화 됩니다.|  
-|**복사**|참고:이 옵션이 비활성화 됩니다.|  
-|**붙여넣기**|참고:이 옵션이 비활성화 됩니다.|  
+|**Cut**|참고: 이 옵션은 사용할 수 없습니다.|  
+|**복사**|참고: 이 옵션은 사용할 수 없습니다.|  
+|**붙여넣기**|참고: 이 옵션은 사용할 수 없습니다.|  
 |**Delete**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계를 큐브에서 삭제하려면 선택합니다.|  
 |**이름 바꾸기**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계의 이름을 바꾸려면 선택합니다.|  
 |**Properties**|**에 선택한 큐브 차원, 측정값 그룹 또는 차원 관계에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시하려면 선택합니다.|  

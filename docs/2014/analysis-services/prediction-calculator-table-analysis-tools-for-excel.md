@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748875"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>예측 계산기(Excel용 테이블 분석 도구)
   ![예측 계산기 도구](media/tat-predcal.gif "예측 계산기 도구")  
@@ -101,7 +101,7 @@ ms.locfileid: "48060023"
 |attribute|값|상대적 영향|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|Marital Status|단일|71|  
+|Marital Status|Single|71|  
 |Gender|Female|13|  
 |Gender|Male|0|  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48060023"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  
-|Income|39050-71062|117|  
+|Income|39050 - 71062|117|  
 |Children|0|157|  
 |Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
@@ -140,7 +140,7 @@ ms.locfileid: "48060023"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37-46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745853"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>학습 데이터 지정(데이터 마이닝 마법사)
   **학습 데이터 지정** 페이지를 사용하여 마이닝 구조에 포함할 열을 확인할 수 있습니다. 모든 모델에서 열을 사용하지 않는 경우에도 열을 선택하여 구조에 포함할 수 있습니다. 예를 들어 마이닝 모델에서 열로 드릴스루하려는 경우 모델이 아닌 구조에 열을 포함할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48149333"
 > [!NOTE]  
 >  다른 마이닝 알고리즘은 키를 다르게 사용합니다. 다른 종류의 키에 대한 자세한 내용은 [콘텐츠 형식&#40;데이터 마이닝&#41;](data-mining/content-types-data-mining.md)을 참조하세요.  
   
- **자세한 내용:** [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md)를 [마이닝 모델 열](data-mining/mining-model-columns.md)합니다 [데이터 마이닝 마법사 &#40;&#40;analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [ 관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **테이블/열**  
@@ -59,7 +59,7 @@ ms.locfileid: "48149333"
   
  **참고** 이 열은 마이닝 모델과 마이닝 구조를 함께 만드는 경우에만 사용할 수 있습니다.  
   
- **제안**  
+ **Suggest**  
  Entropy를 기반으로 데이터 샘플을 분석하여 선택한 **예측 가능** 열에 가장 밀접히 관련되어 있는 입력 열을 식별하는 **관련 열 제안** 대화 상자를 열려면 클릭합니다. 이 분석은 OLAP 원본을 기반으로 하는 중첩 테이블 열 또는 마이닝 구조에도 적용됩니다.  
   
  **참고** 이 열은 마이닝 모델과 마이닝 구조를 함께 만드는 경우에만 사용할 수 있습니다.  

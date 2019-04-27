@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774430"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
   효율적인 데이터 액세스를 위한 메모리 최적화 테이블 및 효율적인 쿼리 처리 및 비즈니스 논리 실행을 위한 고유하게 컴파일된 저장 프로시저 이외에 [!INCLUDE[hek_2](../includes/hek-2-md.md)]은 메모리 최적화 테이블 형식이라는 세 번째 개체를 도입했습니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "58530745"
   
 -   테이블 변수를 사용하여 고유하게 컴파일된 저장 프로시저에서 커서를 시뮬레이트할 수 있으며, 이를 통해 고유하게 컴파일된 저장 프로시저에서 화면 영역 제한을 해결할 수 있습니다.  
   
- 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블 형식별로 하나의 DLL을 생성합니다. 컴파일은 메모리 최적화 테이블 형식을 만들 때 호출되고 메모리 최적화 테이블 변수를 만드는 데 사용되는 경우에는 호출되지 않습니다. 이 DLL은 인덱스에 액세스하고 테이블 변수에서 데이터를 검색하는 함수를 포함합니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
+ 메모리 최적화 테이블과 마찬가지로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메모리 최적화 테이블 형식별로 하나의 DLL을 생성합니다. (컴파일은 메모리 최적화 테이블 형식을 만들 때, 그리고 호출을 메모리 최적화 테이블 변수를 만드는 데 사용 하는 경우에 없습니다.) 이 DLL은 인덱스에 액세스하고 테이블 변수에서 데이터를 검색하는 함수를 포함합니다. 테이블 형식을 기반으로 메모리 최적화 테이블 변수를 선언할 경우 테이블 형식에 따라 테이블 및 인덱스 구조의 인스턴스가 사용자 세션에 만들어집니다. 이 테이블 변수는 디스크 기반 테이블 변수와 동일한 방법으로 사용할 수 있습니다. 테이블 변수에서 행을 삽입, 업데이트 및 삭제하고 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리에서 변수를 사용할 수 있습니다. 변수를 고유하게 컴파일된 저장 프로시저와 해석된 저장 프로시저에 TVP(테이블 반환 매개 변수)로 전달할 수도 있습니다.  
   
  다음 샘플 AdventureWorks 기반 메모리 내 OLTP 샘플에서 메모리 최적화 테이블 형식을 보여 줍니다 ([SQL Server 2014 메모리 내 OLTP 샘플](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   

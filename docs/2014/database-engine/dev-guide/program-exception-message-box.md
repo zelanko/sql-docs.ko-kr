@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780701"
 ---
 # <a name="program-exception-message-box"></a>프로그램 예외 메시지 상자
   응용 프로그램에서 예외 메시지 상자를 사용하면 <xref:System.Windows.Forms.MessageBox> 클래스에 비해 메시징 환경을 보다 강력하게 제어할 수 있습니다. 자세한 내용은 [예외 메시지 상자 프로그래밍](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)합니다. 예외 메시지 상자 .dll 가져오기 및 배포에 대한 자세한 내용은 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)를 참조하십시오.  

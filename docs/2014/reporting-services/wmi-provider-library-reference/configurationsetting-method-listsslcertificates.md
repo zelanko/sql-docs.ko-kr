@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adda71c5ee0a88eabd619280457421bbf5ec0a75
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646731"
 ---
 # <a name="listsslcertificates-method-wmi-msreportserverconfigurationsetting"></a>ListSSLCertificates 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 컴퓨터의 인증서 목록을 반환합니다.  

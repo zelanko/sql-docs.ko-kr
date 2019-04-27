@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662970"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 이벤트 클래스
   **DTCTransaction** 이벤트 클래스를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] DTC(Distributed Transaction Coordinator)를 통해 통합된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트랜잭션의 상태를 모니터링할 수 있습니다. 여기에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일 인스턴스에서 둘 이상의 데이터베이스와 관련된 트랜잭션 또는 둘 이상의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 관련된 분산 트랜잭션이 있습니다.  

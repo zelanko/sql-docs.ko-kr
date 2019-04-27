@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747215"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>테이블 선택 대화 상자(마이닝 정확도 차트 뷰)
   **테이블 선택** 대화 상자를 사용하여 선택한 마이닝 구조에 포함된 마이닝 모델의 정확도를 테스트하는 데 사용할 테이블을 선택할 수 있습니다.  
@@ -35,6 +35,6 @@ ms.locfileid: "48140193"
 ## <a name="see-also"></a>관련 항목  
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

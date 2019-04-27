@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664413"
 ---
 # <a name="browsing-an-association-rules-model"></a>연결 규칙 모델 찾아보기
   사용 하 여 연결 모델을 열면 **찾아보기**에서의 연결 규칙 뷰어와 비슷한 대화형 뷰어에서 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.  이 뷰어에서는 서로 연관된 항목을 한 눈에 확인할 수 있으며 예측 또는 제안에 사용할 수 있는 규칙이 표시됩니다.  
@@ -149,9 +149,9 @@ ms.locfileid: "52537182"
   
  고급 매개 변수를 설정 하거나 최소 확률 및 지지도 사용 하 여 변경 하려는 경우는 [연결 마법사 &#40;Excel 용 데이터 마이닝 클라이언트&#41; ](associate-wizard-data-mining-client-for-excel.md) 마법사를 사용 하 여 고유한 모델 빌드를 [에 모델 추가 구조 &#40;Excel 용 데이터 마이닝 추가 기능&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) 옵션을 모델링 합니다.  
   
--   **항목 집합:** 모델을 만들 때 MINIMUM_PROBABILITY 매개 변수에 값을 지정하는 방법으로도 생성되는 항목 집합의 수를 제어할 수 있습니다. 이 매개 변수는 알고리즘 매개 변수 대화 상자에서 사용할 수 있습니다.  
+-   **항목 집합:** 모델을 만들 때에 MINIMUM_PROBABILITY 매개 변수에 값을 할당 하 여 생성 되는 항목 집합 수를 제어할 수 있습니다. 이 매개 변수는 알고리즘 매개 변수 대화 상자에서 사용할 수 있습니다.  
   
--   **규칙:** [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 규칙 알고리즘은 확률 값을 사용하여 생성되는 규칙의 수를 제한합니다. `MINIMUM_PROBABILITY` 또는 `MINIMUM _IMPORTANCE` 매개 변수를 설정해서 규칙 수를 제어할 수 있습니다.  
+-   **규칙:** [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 규칙 알고리즘 확률 값을 사용 하 여 생성 되는 규칙의 수를 제한할 수 있습니다. `MINIMUM_PROBABILITY` 또는 `MINIMUM _IMPORTANCE` 매개 변수를 설정해서 규칙 수를 제어할 수 있습니다.  
   
  고급 매개 변수를 구성 하는 방법에 대 한 자세한 내용은 참조 하십시오 [데이터 마이닝 알고리즘 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)합니다.  
   

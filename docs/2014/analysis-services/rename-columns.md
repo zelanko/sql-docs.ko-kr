@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748245"
 ---
 # <a name="lesson-3-rename-columns"></a>3단원: 열 이름 바꾸기
   이 단원에서는 가져온 각 테이블에 있는 여러 열의 이름을 바꿉니다. 열 이름을 바꾸면 모델 디자이너에서 열을 명확하게 식별하고 탐색할 수 있을 뿐 아니라 사용자는 클라이언트 애플리케이션에서 필드를 손쉽게 선택할 수 있습니다. 자세한 내용은 [테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)를 참조하세요.  
@@ -24,10 +24,10 @@ ms.locfileid: "52416694"
 > [!IMPORTANT]  
 >  이 자습서를 완료하기 위해 열 이름을 바꿀 필요는 없습니다. 그러나 관계 만들기, DAX 수식을 사용해 계산 열 및 측정값 만들기에 대해 소개하는 단원을 비롯한 나머지 단원에서는 이 단원에 설명된 알아보기 쉬운 열 이름을 참조합니다. 열 이름을 바꾸지 않으려는 경우 이 단원에 제공된 원래 원본 열 이름을 사용하도록 5, 6, 7단원에서 DAX 수식을 편집해야 합니다.  
   
- 이 단원에 소요되는 예상 시간: **20 분**  
+ 예상이 단원을 완료 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [2단원: 데이터 추가](lesson-2-add-data.md)합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [2단원: 데이터 추가](lesson-2-add-data.md)합니다.  
   
 ## <a name="rename-columns"></a>열 이름 바꾸기  
   
@@ -172,6 +172,6 @@ ms.locfileid: "52416694"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원으로 이동하십시오. [4 단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)합니다.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [4단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)합니다.  
   
   

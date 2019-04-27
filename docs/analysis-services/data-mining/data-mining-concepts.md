@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650103"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "54185139"
   
 -   **예측**: 서버 부하 또는 서버 가동 중지 시간을 예측 하는 추정 판매  
   
--   **위험 및 확률**: 타겟 메일링을 위한 최적합 고객의 선택, 위험 시나리오를 위한 예상 손익 평형 포인트 결정, 진단 또는 기타 결과에 확률 할당  
+-   **위험 및 확률**: 선택 된 고객에 게 타겟된 메일링 위험 시나리오를 위한 예상 손익 평형 포인트 결정, 진단 또는 기타 결과에 확률 할당  
   
--   **권장 사항**: 함께 판매될 가능성이 높은 제품 확인, 권장 구성 생성  
+-   **권장 사항**: 제품 추천 함께 판매 될 가능성이 있는 확인  
   
--   **연계 성 찾기**: 장바구니의 고객 선택 분석, 적절한 다음 이벤트 예측  
+-   **연계 성 찾기**: 다음 이벤트 예측 장바구니의 고객 선택 분석  
   
--   **그룹화**: 고객 또는 이벤트를 관련된 항목의 클러스터로 분리, 선호도 분석 및 예측  
+-   **그룹화**: 고객 또는 이벤트 관련된 항목, 선호도 분석 및 예측의 클러스터로 분리  
   
  마이닝 모델을 작성하는 것은 데이터에 대해 질문하고 이러한 질문에 답을 해 줄 모델을 만드는 것부터 모델을 작업 환경에 배포하는 것에 이르기까지 모든 작업을 포함하는 대규모 프로세스의 일부분입니다. 이 프로세스는 다음 6가지 기본 단계로 정의될 수 있습니다.  
   

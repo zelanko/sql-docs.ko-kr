@@ -1,5 +1,5 @@
 ---
-title: '13 단원: Excel에서 분석 | Microsoft Docs'
+title: '단원 13: Excel에서 분석 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,24 +12,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729449"
 ---
-# <a name="lesson-13-analyze-in-excel"></a>13단원: Excel에서 분석
+# <a name="lesson-13-analyze-in-excel"></a>단원 13: 도구 모음
   이 단원에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 Excel에서 분석 기능을 사용하여 Microsoft Excel을 열고, 모델 작업 영역에 자동으로 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 자동으로 추가합니다. Excel에서 분석 기능을 사용하면 모델을 배포하기 전에 모델 디자인의 효율성을 빠르고 손쉽게 테스트해 볼 수 있습니다. 이 단원에서는 데이터 분석을 수행하지 않습니다. 이 단원의 목표는 모델 작성자가 모델 디자인을 테스트하는 데 사용할 수 있는 도구를 익히도록 하는 것입니다. 모델 작성자를 위한 Excel에서 분석 기능을 사용하는 것과 달리 최종 사용자는 Excel 또는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]와 같은 클라이언트 보고 애플리케이션을 사용하여 배포된 모델 데이터에 연결하고 해당 데이터를 검색합니다.  
   
  이 단원을 완료하려면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]가 설치되어 있는 컴퓨터에 Excel이 설치되어 있어야 합니다. 자세한 내용은 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)을 참조하세요.  
   
- 이 단원에 소요되는 예상 시간: **20분**  
+ 예상이 단원을 완료 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [11단원: 파티션 만들기](lesson-10-create-partitions.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [11 단원: 파티션을 만들](lesson-10-create-partitions.md)합니다.  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>기본 큐브 뷰 및 Internet Sales 큐브 뷰를 사용하여 검색  
- 이 첫 번째 태스크에서는 모든 모델 개체가 포함되어 있는 기본 큐브 뷰와 8단원: 큐브 뷰 만들기에서 만든 Internet Sales 큐브 뷰를 사용하여 모델을 검색합니다. Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외되어 있습니다.  
+ 이 첫 번째 태스크에서는 기본 큐브를 모든 모델 개체를 포함 하는 사용 하 여 모델을 찾아보면 됩니다 및도 인터넷 판매 큐브 뷰를 사용 하 여 만든 단원 8: 큐브 뷰를 만듭니다. Internet Sales 큐브 뷰에는 Customer 테이블 개체가 제외되어 있습니다.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>기본 큐브 뷰를 사용하여 찾아보려면  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48052083"
      새 통합 문서와 함께 Excel이 열립니다. 피벗 테이블은 자동으로 만들어집니다. 피벗 테이블 필드 목록에는 새 모델에서 사용할 수 있는 모든 데이터 필드가 포함되어 있습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [14단원: 배포](lesson-13-deploy.md)로 이동하세요.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [단원 14: 배포](lesson-13-deploy.md)합니다.  
   
   

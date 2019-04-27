@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731515"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>노드 찾기 대화 상자(마이닝 모델 뷰어)
   모델의 **종속성 네트워크** 탭에서 사용할 수 있는 **노드 찾기** 대화 상자를 사용하여 특정 노드를 찾을 수 있습니다. 이 기능은 많은 노드 또는 항목 집합이 포함된 복잡한 다이어그램에서 유용합니다.  
@@ -36,8 +36,8 @@ ms.locfileid: "48218545"
  노드 목록에서 노드를 선택한 다음 **확인**을 클릭합니다. 대화 상자가 닫히고 선택한 노드가 뷰어에서 강조 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)   
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

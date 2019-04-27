@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743199"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 보낼 나머지 행을 커밋합니다.  
@@ -46,7 +46,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>예제  
  이 예제에서는 **IBCPSession** 인터페이스를 사용하는 방법을 보여 줍니다.  
   
- 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행해야 합니다.  
+ 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 실행해야 합니다.  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

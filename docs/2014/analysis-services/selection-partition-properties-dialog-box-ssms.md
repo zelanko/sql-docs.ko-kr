@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747095"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>선택(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio **파티션 속성** 대화 상자의 **선택** 페이지를 사용하여 **일반**, **자동 관리 캐싱**또는 **오류 구성** 창에서 속성을 보거나 수정할 파티션을 측정값 그룹에서 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **표**  
+ **눈금**  
  선택한 파티션이 포함된 측정값 그룹의 파티션을 표시합니다.  
   
  **일반**, **자동 관리 캐싱**또는 **오류 구성** 페이지에서 속성을 보려는 파티션을 선택합니다.  

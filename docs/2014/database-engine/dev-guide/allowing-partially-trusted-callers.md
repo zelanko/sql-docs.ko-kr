@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754201"
 ---
 # <a name="allowing-partially-trusted-callers"></a>부분적으로 신뢰할 수 있는 호출자 허용
   코드 라이브러리 공유는 CLR(공용 언어 런타임) 통합에서의 일반적인 시나리오입니다. 이 경우 사용자 정의 형식, 저장 프로시저, 사용자 정의 함수, 사용자 정의 집계, 트리거 또는 유틸리티 클래스가 포함된 어셈블리를 다른 어셈블리나 응용 프로그램에서 액세스하는 경우가 많습니다. 여러 응용 프로그램에서 공유할 코드 라이브러리는 강력한 이름으로 서명되어야 합니다.  

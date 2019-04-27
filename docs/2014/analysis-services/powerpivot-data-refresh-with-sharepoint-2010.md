@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749292"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010에서 PowerPivot 데이터 새로 고침
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 새로 고침은 예약된 서버 쪽 작업으로서, 외부 데이터 원본을 쿼리하여 콘텐츠 라이브러리에 저장된 Excel 2010 통합 문서의 포함된 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터를 업데이트합니다.  
@@ -34,21 +34,21 @@ ms.locfileid: "53365555"
   
  **항목 내용**  
   
- [1 단계: Secure Store Service 사용 및 마스터 키 생성](#bkmk_services)  
+ [1단계: Secure Store Service 사용 및 마스터 키 생성](#bkmk_services)  
   
  [2단계: 지원 하지 않으려는 경우 자격 증명 옵션 해제](#bkmk_creds)  
   
- [3 단계: 데이터 새로 고침에 사용 되는 자격 증명을 저장할 대상 응용 프로그램 만들기](#bkmk_stored)  
+ [3단계: 데이터 새로 고침에 사용 되는 자격 증명을 저장할 대상 응용 프로그램 만들기](#bkmk_stored)  
   
- [4 단계: 확장 가능한 데이터 새로 고침에 대 한 서버 구성](#bkmk_scale)  
+ [4단계: 확장 가능한 데이터 새로 고침에 대 한 서버 구성](#bkmk_scale)  
   
- [5 단계: PowerPivot 데이터를 가져오는 데 사용 되는 데이터 공급자 설치](#bkmk_installdp)  
+ [5단계: PowerPivot 데이터를 가져오는 데 사용 되는 데이터 공급자 설치](#bkmk_installdp)  
   
- [6 단계: 일정을 만들고 외부 데이터 원본에 액세스 하는 권한 부여](#bkmk_accounts)  
+ [6단계: 일정을 만들고 외부 데이터 원본에 액세스 하는 권한 부여](#bkmk_accounts)  
   
- [7 단계: 데이터 새로 고침을 위해 통합 문서 업그레이드 사용](#bkmk_upgradewrkbk)  
+ [7단계: 데이터 새로 고침을 위해 통합 문서 업그레이드 사용](#bkmk_upgradewrkbk)  
   
- [8 단계: 데이터 새로 고침 구성 확인](#bkmk_verify)  
+ [8단계: 데이터 새로 고침 구성 확인](#bkmk_verify)  
   
  [데이터 새로 고침에 대 한 구성 설정을 수정 합니다.](#bkmk_config)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53365555"
   
  서버 환경 및 권한이 구성되었는지 확인한 후에는 데이터 새로 고침을 바로 사용할 수 있습니다. 데이터 새로 고침을 사용하기 위해 SharePoint 사용자는 PowerPivot 통합 문서에서 데이터 새로 고침 발생 빈도를 지정하는 일정을 만듭니다. 주로 통합 문서 소유자 또는 파일을 SharePoint에 게시한 통합 문서 만든 이가 일정을 만듭니다. 이 사용자는 자신이 소유하는 통합 문서에 대한 데이터 새로 고침 일정을 만들어 관리합니다. 자세한 내용은 [데이터 새로 고침 예약 &#40;SharePoint 용 PowerPivot&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)합니다.  
   
-##  <a name="bkmk_services"></a> 1 단계: Secure Store Service 사용 및 마스터 키 생성  
+##  <a name="bkmk_services"></a> 1단계: Secure Store Service 사용 및 마스터 키 생성  
  PowerPivot 데이터 새로 고침은 데이터 새로 고침 작업을 실행하고 저장 프로시저를 사용하는 외부 데이터 원본에 연결하는 데 사용되는 자격 증명을 제공하는 Secure Store Service를 기반으로 합니다.  
   
  새 서버 옵션을 사용하여 SharePoint용 PowerPivot을 설치한 경우 Secure Store Service가 자동으로 구성됩니다. 모든 다른 설치 시나리오의 경우 Secure Store Service에 대한 서비스 애플리케이션을 만들고 구성하고 마스터 암호화 키를 생성해야 합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "53365555"
   
  문제 해결에 유용한 Store Service 작업의 감사 로깅을 사용하려면 이 기능을 사용하도록 설정해야 합니다. 로깅을 사용하도록 설정하는 방법은 [Secure Store Service 구성(SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)을 참조하십시오.  
   
-##  <a name="bkmk_creds"></a> 2 단계: 지원하지 않으려는 자격 증명 옵션 해제  
+##  <a name="bkmk_creds"></a> 2단계: 지원 하지 않으려는 경우 자격 증명 옵션 해제  
  PowerPivot 데이터 새로 고침은 데이터 새로 고침 일정에 세 가지 자격 증명 옵션을 제공합니다. 통합 문서 소유자는 데이터 새로 고침을 예약할 때 이러한 옵션 중 하나를 선택하여 데이터 새로 고침 작업을 실행할 계정을 결정할 수 있습니다. 관리자는 일정 소유자가 사용할 수 있는 자격 증명 옵션을 결정할 수 있습니다.  
   
  데이터 새로 고침이 작동하려면 사용 가능한 옵션이 하나 이상 있어야 합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365555"
   
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")  
   
- 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 생성된 대상 응용 프로그램은 PowerPivotDataRefresh_\<guid >. 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.  
+ 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 생성 된 대상 응용 프로그램을이 명명 규칙을 사용 하 여 만들어집니다. PowerPivotDataRefresh_\<guid>. 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.  
   
  이 자격 증명 옵션을 사용할 경우의 가장 큰 이점은 사용 편의성과 단순성입니다. 대상 애플리케이션이 자동으로 만들어지므로 추가 작업이 최소화됩니다. 또한 일정 소유자(통합 문서를 만든 사람과 거의 동일함)의 자격 증명으로 데이터 새로 고침을 실행하면 권한 요구 사항 다운스트림이 간소화됩니다. 대부분 이 사용자에게는 대상 데이터베이스에 대한 권한이 이미 있습니다. 데이터 새로 고침이 실행이 사람의 Windows 사용자 id로 데이터를 지정 하는 연결 하는 경우 '현재 사용자' 자동으로 작동 합니다.  
   
@@ -139,14 +139,14 @@ ms.locfileid: "53365555"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 3 단계: 데이터 새로 고침에 사용된 자격 증명을 저장할 대상 응용 프로그램 만들기  
+##  <a name="bkmk_stored"></a> 3단계: 데이터 새로 고침에 사용 되는 자격 증명을 저장할 대상 응용 프로그램 만들기  
  Secure Store Service가 구성되면 SharePoint 관리자는 대상 애플리케이션을 만들어 PowerPivot 무인 데이터 새로 고침 계정 또는 데이터 새로 고침 작업을 실행하거나 외부 데이터 원본에 연결하는 데 사용할 다른 계정의 자격 증명을 비롯하여 저장된 자격 증명을 데이터 새로 고침 작업에 사용할 수 있게 설정할 수 있습니다.  
   
  이전 섹션에서 특정 자격 증명 옵션을 다시 사용하려면 대상 애플리케이션을 만들어야 한다는 점을 설명했습니다. 특히, PowerPivot 무인 데이터 새로 고침 계정에 대한 대상 애플리케이션을 만들고 이후 데이터 새로 고침 작업에서 사용할 수 있도록 저장해야 할 추가 자격 증명을 만들어야 합니다.  
   
  저장 된 자격 증명을 포함 하는 대상 응용 프로그램을 만드는 방법에 대 한 자세한 내용은 참조 하세요. [PowerPivot 무인 데이터 새로 고침 계정 구성 &#40;SharePoint 용 PowerPivot&#41; ](configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 하 고 [ PowerPivot 데이터 새로 고침에 대 한 저장 된 자격 증명 구성 &#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
-##  <a name="bkmk_scale"></a> 4 단계: 확장 가능한 데이터 새로 고침을 위한 서버 구성  
+##  <a name="bkmk_scale"></a> 4 단계: 확장 가능한 데이터 새로 고침에 대 한 서버 구성  
  기본적으로 각 SharePoint용 PowerPivot 설치에서는 요청 시 쿼리와 예약된 데이터 새로 고침을 둘 다 지원합니다.  
   
  각 설치에 대해 Analysis Services 서버 인스턴스에서 쿼리와 예약된 데이터 새로 고침을 둘 다 지원할지, 아니면 인스턴스가 특정 유형의 작업에만 사용되도록 할지 지정할 수 있습니다. 팜에 설치된 SharePoint용 PowerPivot이 여러 개인 경우 데이터 새로 고침 작업이 지연되거나 실패할 때를 대비하여 데이터 새로 고침 작업 전용 서버를 두는 것이 좋을 수 있습니다.  
@@ -155,14 +155,14 @@ ms.locfileid: "53365555"
   
  자세한 내용은 [Query-Only 처리 또는 구성 전용 데이터 새로 고침 &#40;SharePoint 용 PowerPivot&#41;](configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)합니다.  
   
-##  <a name="bkmk_installdp"></a> 5 단계: PowerPivot 데이터를 가져오는 데 사용되는 데이터 공급자 설치  
+##  <a name="bkmk_installdp"></a> 5 단계: PowerPivot 데이터를 가져오는 데 사용 되는 데이터 공급자 설치  
  데이터 새로 고침 작업은 기본적으로 원래 데이터를 검색하는, 반복되는 가져오기 작업입니다. 즉, PowerPivot 클라이언트 애플리케이션에서 데이터를 가져오는 데 사용되는 것과 동일한 데이터 공급자가 PowerPivot 서버에도 설치되어 있어야 합니다.  
   
  Windows 서버에 데이터 공급자를 설치하려면 로컬 관리자여야 합니다. 추가 드라이버를 설치하려는 경우 SharePoint용 PowerPivot이 설치되어 있는 SharePoint 팜의 각 컴퓨터에 설치해야 합니다. 팜에 PowerPivot 서버가 여러 대 있는 경우 각 서버에 공급자를 설치해야 합니다.  
   
  SharePoint 서버는 64비트 애플리케이션입니다. 데이터 새로 고침 작업을 지원하려면 사용 중인 데이터 공급자의 64비트 버전을 설치해야 합니다.  
   
-##  <a name="bkmk_accounts"></a> 6 단계: 일정을 만들고 외부 데이터 원본에 액세스할 수 있는 권한 부여  
+##  <a name="bkmk_accounts"></a> 6 단계: 일정을 만들고 외부 데이터 원본에 액세스 하는 권한 부여  
  통합 문서 소유자 또는 만든 이가 통합 문서에서 데이터 새로 고침을 예약하려면 **참가** 권한이 있어야 합니다. 이 권한 수준은 들어 자신이 열고 편집할 수 있습니다 일정 데이터 새로 고침 하는 데 사용 되는 정보 및 자격 증명을 지정 하는 통합 문서의 데이터 새로 고침 구성 페이지입니다.  
   
  SharePoint 사용 권한 외에 외부 데이터 원본에 대한 데이터베이스 권한도 검토하여 데이터 새로 고침 중에 사용되는 계정에 데이터에 대한 액세스 권한이 있는지 확인해야 합니다. 부여해야 하는 권한은 통합 문서의 연결 문자열 및 데이터 새로 고침 작업을 실행하는 사용자 ID에 따라 다르므로 권한 요구 사항을 결정할 때는 신중하게 평가해야 합니다.  

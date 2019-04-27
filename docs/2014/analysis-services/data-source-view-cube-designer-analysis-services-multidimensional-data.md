@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732665"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 큐브와 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. 이 창은 **데이터 원본 뷰** 창에서 **측정값** 창으로 열을 끌어 측정값 그룹 및 측정값을 만드는 데 사용합니다.  

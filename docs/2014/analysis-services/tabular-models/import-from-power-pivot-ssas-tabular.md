@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757223"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>PowerPivot에서 가져오기(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 PowerPivot에서 가져오기 프로젝트 템플릿을 사용하여 PowerPivot 통합 문서에서 메타데이터와 데이터를 가져와서 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "52390608"
   
 4.  **열기** 대화 상자에서 가져올 모델 메타데이터 및 데이터가 포함된 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 파일을 선택한 다음 **열기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)   
  [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../copy-and-paste-data-ssas-tabular.md)  
   

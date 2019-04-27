@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748926"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 사용 데이터 컬렉션
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다. PowerPivot 사용 현황 데이터 수집을 구성 하는 방법에 대 한 자세한 내용은 이벤트 참조 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
- PowerPivot 관리 대시보드의 사용 데이터에 대 한 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ PowerPivot 관리 대시보드의 사용 데이터에 대한 자세한 내용을 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.  
   
  **항목 내용**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48187483"
   
  사용 데이터 수집 시스템에서 이벤트 정보는 애플리케이션 서버나 웹 프런트 엔드의 사용 수집 시스템에 입력됩니다. 사용 데이터는 물리적 서버의 임시 데이터 파일에서 데이터베이스 서버의 영구 스토리지로 데이터를 이동하게 하는 타이머 작업에 응답하여 시스템을 통해 이동됩니다. 다음 다이어그램은 데이터 컬렉션 및 보고 시스템을 통해 사용 데이터를 이동하는 구성 요소와 프로세스를 보여 줍니다.  
   
- **참고:** 사용 데이터 컬렉션이 설정되었는지 확인합니다. 확인하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동합니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
+ **참고:** 사용 데이터 컬렉션이 설정 되었는지 확인 합니다. 확인하려면 SharePoint 중앙 관리에서 **모니터링** 으로 이동합니다. 자세한 내용은 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.  
   
  ![구성 요소 및 사용 현황 데이터 수집의 프로세스입니다. ](../media/gmni-usagedata.gif "구성 요소 및 사용 현황 데이터 수집의 프로세스.")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48187483"
 |데이터 로드|[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]의 데이터 로드 작업입니다. 데이터 로드 이벤트는 가장 자주 사용되는 데이터 원본을 식별합니다.|활성화 및 비활성화할 수 있습니다 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.|  
 |데이터 언로드|PowerPivot 서비스 애플리케이션의 데이터 언로드 작업입니다. [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]는 사용 중이 아니거나, 서버에 메모리가 부족하거나, 데이터 새로 고침 작업을 실행할 추가 메모리가 필요한 경우 비활성 PowerPivot 데이터 원본을 언로드합니다.|활성화 및 비활성화할 수 있습니다 [에 대 한 사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)합니다.|  
 |서버 상태|CPU와 메모리 사용률로 측정한 서버 상태를 나타내는 서버 작업입니다. 이 데이터는 기록 데이터이며, 서버의 현재 처리 로드에 대한 실시간 정보를 제공하지 않습니다.|아니요. 이 이벤트에 대해 사용 데이터가 항상 수집됩니다.|  
-|데이터 새로 고침|예약된 데이터 업데이트를 위해 PowerPivot 서비스에서 시작된 데이터 새로 고침 작업입니다. 데이터 새로 고침에 대한 사용 기록은 작업 보고서에 대해 애플리케이션 수준에서 수집되고, 개별 통합 문서에 대해 데이터 새로 고침 관리 페이지에 반영됩니다.<br /><br /> **참고:** [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] 및 SharePoint 2013 배포의 경우 Analysis Services Server가 아닌 Excel Services로 데이터 새로 고침이 관리됩니다.|아니요. PowerPivot 서비스 애플리케이션에 대해 데이터 새로 고침을 사용하는 경우 데이터 새로 고침 사용 데이터가 항상 수집됩니다.|  
+|데이터 새로 고침|예약된 데이터 업데이트를 위해 PowerPivot 서비스에서 시작된 데이터 새로 고침 작업입니다. 데이터 새로 고침에 대한 사용 기록은 작업 보고서에 대해 애플리케이션 수준에서 수집되고, 개별 통합 문서에 대해 데이터 새로 고침 관리 페이지에 반영됩니다.<br /><br /> **참고:** 에 대 한 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Excel Services 및 Analysis Services 서버에서 관리 되는 SharePoint 2013 배포의 경우 데이터 새로 고침 합니다.|아니요. PowerPivot 서비스 애플리케이션에 대해 데이터 새로 고침을 사용하는 경우 데이터 새로 고침 사용 데이터가 항상 수집됩니다.|  
   
 ##  <a name="servicesjobs"></a> 서비스 및 타이머 작업  
  다음 표에서는 사용 데이터 수집 시스템의 서비스 및 데이터 수집 저장소에 대해 설명합니다. PowerPivot 관리 대시보드 보고서 서버 상태 및 사용 현황 데이터의 데이터 새로 고침을 강제 합니다. 타이머 작업 일정을 재정의 하는 방법에 지침을 참조 하세요 [SharePoint 2010을 사용 하 여 PowerPivot 데이터 새로 고침](../powerpivot-data-refresh-with-sharepoint-2010.md)합니다. SharePoint 중앙 관리에서 타이머 작업을 볼 수 있습니다. **모니터링**으로 이동하고 **작업 상태 확인**을 클릭합니다. **작업 정의 검토**를 클릭합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "48187483"
 ##  <a name="reporting"></a> 사용 데이터에 대한 보고  
  PowerPivot 데이터에 대한 사용 데이터를 보기 위해 PowerPivot 관리 대시보드에서 기본 제공 보고서를 볼 수 있습니다. 기본 제공 보고서는 서비스 애플리케이션 데이터베이스의 보고 데이터 구조에서 검색한 사용 데이터를 통합합니다. 기본 보고서 데이터는 매일 업데이트되므로 Microsoft SharePoint Foundation 사용 데이터 처리 타이머 작업이 데이터를 PowerPivot 서비스 애플리케이션 데이터베이스로 복사한 후에만 기본 제공 사용 보고서에 업데이트된 정보가 표시됩니다. 기본적으로 이 작업은 하루에 한 번 발생합니다.  
   
- 보고서를 보는 방법에 대 한 자세한 내용은 참조 하세요 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ 보고서를 보는 방법은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)   

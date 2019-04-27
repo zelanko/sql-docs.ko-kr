@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771619"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 세 번째이자 마지막 태스크는 대상에 변경 내용을 적용하는 것입니다. 삽입을 적용할 구성 요소, 업데이트를 적용할 구성 요소 및 삭제를 적용할 구성 요소가 필요합니다.  

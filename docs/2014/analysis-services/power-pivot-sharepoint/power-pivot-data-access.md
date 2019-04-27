@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749378"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot 데이터 액세스
   이 항목에서는 Sharepoint 라이브러리에 게시되는 PowerPivot 통합 문서에서 데이터를 검색하는 방법을 설명합니다.  

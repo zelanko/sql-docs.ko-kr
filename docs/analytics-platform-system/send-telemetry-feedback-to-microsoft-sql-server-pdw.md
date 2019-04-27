@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678373"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System에 대 한 Microsoft 원격 분석 피드백 보내기
 Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 선택적 원격 분석 기능이 있습니다. 
@@ -42,7 +42,7 @@ Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 
     > [!NOTE]  
     > 가져올를 명령에는 마침표 두 개 사용 해야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 
     > [!NOTE]  
     > 가져올를 명령에는 마침표 두 개 사용 해야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Analytics Platform System에 microsoft 관리 콘솔 데이터를 전송 하는 
   
 4.  호출 된 `Disable-RemoteMonitoring` 매개 변수 없이 명령을 합니다. 이 명령은 사용자 의견 보내기 중지 됩니다. (이 영향을 주지 않습니다 로컬 모니터링 합니다.) 그러나 명령이 됩니다 하지 DNS 전달자를 사용 하지 않도록 설정 하거나 모든 인터넷 연결을 사용 하지 않도록 설정 합니다. 이 성공적으로 피드백을 해제 한 후 수동으로 수행 되어야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

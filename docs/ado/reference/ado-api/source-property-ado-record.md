@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740403"
 ---
 # <a name="source-property-ado-record"></a>Source 속성(ADO 레코드)
 데이터 소스를 나타내는 개체를 나타내는 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741248"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>데이터베이스 찾기 마법사 (파일 선택) (AccessToSQL)
 데이터베이스 찾기 마법사의 파일 선택 페이지를 검색 하는 동안 발견 된 파일을 나열 합니다. SSMA에 추가할 파일을 선택 하려면 파일 이름을 포함 하는 행을 선택 합니다. 파일 선택을 완료 했으면 클릭 **다음** 확인 선택 페이지를 표시 합니다.  

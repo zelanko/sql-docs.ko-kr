@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746476"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>중첩 조인 지정 대화 상자(마이닝 정확도 차트 뷰)
   **중첩 조인 지정** 대화 상자에서는 중첩 테이블과 사례 테이블 간의 관계를 만듭니다. **중첩 조인 지정** 대화 상자를 열려면 중첩 테이블을 선택하고 **조인 수정**을 클릭합니다.  

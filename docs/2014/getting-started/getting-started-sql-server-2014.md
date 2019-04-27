@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b571739fc268547e944dfe26672735a2520ff943
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772379"
 ---
 # <a name="getting-started-sql-server-2014"></a>시작(SQL Server 2014)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 정보, 시스템 요구 사항, 설치 지침 등의 원본을 살펴봅니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749557"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
   동일한 팜의 PowerPivot 통합 문서로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 사용합니다.  

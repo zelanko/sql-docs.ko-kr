@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668516"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>물리적 아키텍처(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버와 클라이언트 구성 요소를 사용 하 여 비즈니스 인텔리전스 응용 프로그램에 대 한 데이터 마이닝 기능을 제공 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 서버 및 클라이언트 구성 요소를 모두 사용하여 비즈니스 인텔리전스 응용 프로그램에 데이터 마이닝 기능을 제공합니다.  
   
 -   서버 구성 요소는 Microsoft Windows 서비스로 구현됩니다. 동일한 컴퓨터에서 각각 별개의 Windows 서비스 인스턴스로 구현된 여러 개의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 유지할 수 있습니다.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "34015750"
 ## <a name="server-configuration"></a>서버 구성  
  하나의 서버 인스턴스는 각각 클라이언트 요청에 응답하고 개체를 처리하는 고유의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 인스턴스가 있는 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 지원할 수 있습니다.  
   
- 테이블 형식 모델과 데이터 마이닝 및/또는 다차원 모델을 사용하려면 별도의 인스턴스를 설치해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 테이블 형식 모드(xVelocity 메모리 내 분석 엔진(VertiPaq) 저장소 엔진 사용)로 실행되는 인스턴스와 기존 OLAP, MOLAP 또는 ROLAP 구성 중 하나로 실행되는 인스턴스의 단계별 설치를 지원합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+ 테이블 형식 모델과 데이터 마이닝 및/또는 다차원 모델을 사용하려면 별도의 인스턴스를 설치해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테이블 형식 모드(xVelocity 메모리 내 분석 엔진(VertiPaq) 저장소 엔진 사용)로 실행되는 인스턴스와 기존 OLAP, MOLAP 또는 ROLAP 구성 중 하나로 실행되는 인스턴스의 단계별 설치를 지원합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
  클라이언트와 Analysis Services 서버 간의 모든 통신은 플랫폼 독립적, 언어 독립적인 프로토콜인 XMLA를 사용합니다. 클라이언트의 요청이 수신되면 Analysis Services는 이 요청이 OLAP과 관련된 것인지 또는 데이터 마이닝과 관련된 것인지 판단하고 이 판단에 따라 요청을 라우팅합니다. 자세한 내용은 [OLAP 엔진 서버 구성 요소](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [논리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

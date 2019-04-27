@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780299"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자(SQLXML 4.0)
   SQLXMLOLEDB 공급자는 ADO를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 기능을 제공하는 OLE DB 공급자입니다.  

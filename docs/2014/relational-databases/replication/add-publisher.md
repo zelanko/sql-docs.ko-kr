@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676912"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>SQL Server 복제 게시자 추가 ' 대화 상자 
   **게시자 추가** 대화 상자를 사용하여 복제 모니터의 왼쪽 창에 하나 이상의 게시자를 추가할 수 있습니다. 게시자를 추가한 후 왼쪽 창에서 게시자를 선택하면 오른쪽 창에 해당 게시자에 대한 정보가 표시됩니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54133303"
   
 -   **Oracle 게시자 추가...**  
   
-      [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화 상자를 사용하여 Oracle 게시자에 연결된 **서버에 연결** 대화 상자가 시작됩니다.  
   
 -   **배포자를 지정한 후 해당 게시자 추가...**  
   

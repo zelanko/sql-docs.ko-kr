@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746735"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>차원 유형 지정(차원 마법사)
   **차원 유형 지정** 페이지를 사용하여 차원 유형을 정의하고 선택한 차원 유형과 관련된 특수 특성 유형을 차원에 추가할 수 있습니다.  

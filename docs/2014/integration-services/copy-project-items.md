@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4185751f0aded344577acb6206f259debdb37642
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831460"
 ---
 # <a name="copy-project-items"></a>프로젝트 항목 복사
   이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 내 또는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 간에 개체를 복사하는 방법에 대해 설명합니다. 또한 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 다른 유형 간에 개체를 복사할 수도 있습니다. 프로젝트 간에 복사하려면 프로젝트가 같은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 솔루션의 일부여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 프로젝트](integration-services-ssis-projects-and-solutions.md)를 참조하세요.  

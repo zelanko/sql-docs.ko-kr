@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730973"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>일반(마이닝 구조 대화 상자)(Analysis Services - 데이터 마이닝)
   **SQL Server Management Studio** 의 **마이닝 구조 속성** 대화 상자에 있는 **일반** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 마이닝 구조에 대한 일반 속성을 설정할 수 있습니다.  
@@ -32,10 +32,10 @@ ms.locfileid: "48099223"
 |**설명**|마이닝 구조에 대한 설명을 표시합니다.|  
 |**생성된 타임스탬프**|마이닝 구조를 만든 날짜와 시간을 표시합니다.|  
 |**최종 스키마 업데이트**|마이닝 구조에 대한 메타데이터를 마지막으로 업데이트한 날짜와 시간을 표시합니다.|  
-|**State**|마이닝 구조의 처리 상태를 표시합니다. 이 속성의 값에 대 한 자세한 내용은 참조 하세요. <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>합니다.|  
+|**State**|마이닝 구조의 처리 상태를 표시합니다. 이 속성 값에 대한 자세한 내용은 <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>를 참조하십시오.|  
 |**마지막으로 처리**|마이닝 구조를 마지막으로 처리한 날짜와 시간을 표시합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

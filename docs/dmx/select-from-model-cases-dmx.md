@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658774"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 사례 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
+ (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
   
- *식 목록*  
+ *expression list*  
  쉼표로 구분된 식 목록입니다. 식은 열 식별자, UDF(사용자 정의 함수), VBA 함수 등을 포함할 수 있습니다.  
   
  마이닝 모델에 포함되지 않은 구조 열을 포함하려면 `StructureColumn('<structure column name>')` 함수를 사용합니다.  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
+ (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  마이닝 모델과 마이닝 구조 모두에 드릴스루가 사용되도록 설정되어 있으면 모델과 구조에 대해 드릴스루 권한을 가지는 역할의 멤버인 사용자는 마이닝 모델에 포함되지 않은 마이닝 구조 열에 액세스할 수 있습니다. 따라서 중요 한 데이터 나 개인 정보를 보호 하려면 구성 않아야 개인 정보를 마스킹 권한을 부여 하 여 데이터 원본 뷰 **AllowDrillthrough** 반드시 필요한 경우에 마이닝 구조에 대 한 권한이 있습니다.  
@@ -64,7 +64,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="examples"></a>예  
  다음 예에서는 마이닝 구조에 기반한 기반으로 하는 타겟 메일링을 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]데이터베이스와 연결된 된 마이닝 모델. 자세한 내용은 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)합니다.  
   
-### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>예 1: 모델 사례 및 구조 열로 드릴스루  
+### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>예 1: 모델 사례 및 구조 열으로 드릴스루  
  다음 예에서는 대상 메일 모델을 테스트하는 데 사용된 모든 사례에 대해 열을 반환합니다. 모델이 작성되는 마이닝 구조에 홀드아웃 테스트 데이터 집합이 없으면 이 쿼리는 0개의 사례를 반환합니다. 식 목록을 사용하여 필요한 열만 반환할 수 있습니다.  
   
 ```  

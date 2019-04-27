@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ff8dfddd844a766172ff0f459a1fff5d984574
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646397"
 ---
 # <a name="databasename-property-wmi-msreportserverconfigurationsetting"></a>DatabaseName 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정합니다. 읽기 전용입니다.  

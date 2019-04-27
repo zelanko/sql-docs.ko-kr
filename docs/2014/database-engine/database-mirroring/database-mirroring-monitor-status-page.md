@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754707"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
   이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  

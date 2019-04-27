@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748175"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>최적화될 쿼리 확인(사용 빈도 기반 최적화 마법사)
   **최적화될 쿼리 확인** 페이지를 사용하여 사용 빈도 기반 최적화 마법사에서 선택한 파티션에 대한 집계를 디자인하는 데 사용할 쿼리 로그에서 검색된 쿼리를 표시하고 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **(선택)**  
+ **(Select)**  
  집계를 디자인할 쿼리의 확인란을 선택합니다.  
   
  **클라이언트 요청**  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b86baa47a755b52e99025a4a2fecc0922c80a08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740534"
 ---
 # <a name="source-property-example-vb"></a>Source 속성 예제(VB)
 이 예제에서는 합니다 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다른 데이터 원본을 기반으로 개체입니다.  

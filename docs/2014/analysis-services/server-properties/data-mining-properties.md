@@ -59,16 +59,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746835"
 ---
 # <a name="data-mining-properties"></a>데이터 마이닝 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 데이터 마이닝 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
   
- **적용 대상:** 다차원 서버 모드에만  
+ **적용 대상:** 다차원 서버 모드에만 적용됩니다.  
   
 ## <a name="non-specific-category"></a>일반 범주  
  `AllowSessionMiningModels`  
@@ -119,7 +119,7 @@ ms.locfileid: "48224393"
 >  서버에서 사용할 수 있는 데이터 마이닝 서비스를 정의하는 속성 외에 특정 알고리즘의 동작을 정의하는 데이터 마이닝 속성도 있습니다. 이러한 속성은 서버 수준에서 데이터 마이닝 모델을 만들 때가 아니라 개별 데이터 마이닝 모델을 만들 때 구성합니다. 자세한 내용은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [물리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Analysis Services의 서버 속성 구성](server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

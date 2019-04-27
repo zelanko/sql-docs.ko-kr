@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741365"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경해야 하는 경우가 종종 있습니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  

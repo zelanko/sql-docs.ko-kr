@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676272"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>1단원: Market Basket 마이닝 구조 만들기
   이 단원에서는 고객이 동시에 구입하는 경향이 있는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 제품을 예측할 수 있는 마이닝 구조를 만듭니다. 마이닝 구조 및 데이터 마이닝에 해당 역할을 사용 하 여 잘 모르는 경우 [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)합니다.  

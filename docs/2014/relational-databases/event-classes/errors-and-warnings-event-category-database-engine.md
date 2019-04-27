@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662629"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 이벤트 범주(데이터베이스 엔진)
   **Errors and Warnings** 이벤트 범주에는 일반적인 오류 및 경고 이벤트가 포함되어 있습니다.  

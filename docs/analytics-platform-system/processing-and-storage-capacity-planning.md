@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678553"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System의 처리 및 저장소 용량
 비즈니스 요구 사항을 Analytics Platform System (APS) 어플라이언스에서에 필요한 계산 노드의 디스크의 크기와 데이터 배율 단위의 수를 결정 합니다. 이러한 처리 및 저장소 계산을 사용 하 여 용량 구매 및 계획 결정을 안내 합니다.  

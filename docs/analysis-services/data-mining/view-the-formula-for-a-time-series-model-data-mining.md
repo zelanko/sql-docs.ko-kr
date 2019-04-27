@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659733"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "34017230"
     > [!NOTE]  
     >  ARIMA와 ARTXP 모델을 모두 사용하는 혼합 모델의 콘텐츠를 찾아보면 두 모델은 모델을 나타내는 루트 노드에서 결합된 별도의 트리에 있습니다. ARIMA 및 ARTXP 모델은 편의상 하나의 뷰어에 표시되지만 구조는 결합하거나 비교할 수 없는 수식과 마찬가지로 매우 다릅니다. ARTXP 트리는 의사 결정 트리와 더 유사한 반면 ARIMA 트리는 일련의 이동 평균을 나타냅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

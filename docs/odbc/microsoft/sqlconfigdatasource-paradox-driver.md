@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665345"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource(Paradox 드라이버)
 > [!NOTE]  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8328c060d7096cb43edcbc31206a8b55e82e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749528"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>파일 또는 어셈블리를 로드할 수 없습니다 &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 PowerPivot용 애플리케이션 수준 솔루션이 제대로 배포되지 않은 경우 이 오류가 발생합니다.  

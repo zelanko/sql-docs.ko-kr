@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666592"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>특성 속성-사용자 지정 멤버 수식 정의
+# <a name="attribute-properties---define-custom-member-formulas"></a>특성 속성 - 사용자 지정 멤버 수식 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expression) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
   
@@ -33,23 +33,23 @@ ms.locfileid: "34021670"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   분기 1: 700  
   
-    -   Quarter 2: 500  
+    -   분기 2: 500  
   
-    -   Quarter 3: 100  
+    -   3 분기: 100  
   
-    -   Quarter 4: 800  
+    -   분기 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   분기 1: 600  
   
-    -   Quarter 2: 200  
+    -   분기 2: 200  
   
-    -   Quarter 3: 300  
+    -   3 분기: 300  
   
-    -   Quarter 4: 400  
+    -   분기 4: 400  
   
  사용자 지정 멤버 수식을 사용할 경우 사용자 지정 롤업 수식에서 멤버의 값을 대신 제공합니다. 예를 들어 다음과 같은 사용자 지정 멤버 수식을 사용하여 Time 차원에 있는 2004 멤버의 Quarter 4 자식 멤버에 대한 값을 450으로 제공할 수 있습니다.  
   
@@ -66,8 +66,8 @@ Time.[Quarter 3] * 1.5
   
  특성의 멤버에 대해 계산 멤버와 사용자 지정 롤업 수식을 모두 사용하려면 평가 순서를 알고 있어야 합니다. 계산 멤버가 사용자 지정 롤업 수식보다 먼저 확인됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [차원 특성에 대 한 사용자 지정 멤버 수식 설정](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [차원에 특성의 사용자 지정 멤버 수식 설정](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

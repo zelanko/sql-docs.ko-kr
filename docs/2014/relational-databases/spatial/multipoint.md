@@ -12,11 +12,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 36c0268ef87eb4cd9996744f9ff0015bf499a9a2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659976"
 ---
 # <a name="multipoint"></a>MultiPoint
   `MultiPoint`는 1개 이상의 점 컬렉션입니다. `MultiPoint` 인스턴스의 경계는 비어 있습니다.  

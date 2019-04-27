@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748415"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 복원 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **데이터베이스 복원** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백업 파일(.abf) 형식을 사용하는 백업 파일에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48091034"
   
  **데이터베이스 복원** 대화 상자에는 다음 페이지가 있습니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>인쇄할 페이지  
  **일반**  
  이 페이지를 사용하여 데이터베이스 복원 중에 사용할 일반 옵션 및 암호를 비롯하여 복원할 데이터베이스, 데이터베이스를 복원할 백업 파일을 선택할 수 있습니다. 이 페이지에 대한 자세한 내용은 [일반&#40;데이터베이스 복원 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)을 참조하세요.  
   

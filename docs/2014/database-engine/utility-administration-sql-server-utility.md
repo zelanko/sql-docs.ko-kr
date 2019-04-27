@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773755"
 ---
 # <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
   유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
@@ -91,9 +91,9 @@ ms.locfileid: "48128843"
   
 -   UMDW 이름: Sysutility_mdw_\<GUID>_DATA.  
   
--   컬렉션 집합 업로드 빈도: 15분마다.  
+-   컬렉션 집합 업로드 빈도: 15 분 마다  
   
- UMDW 디렉터리는 구성할 수 있으며 \<시스템 드라이브>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<시스템 드라이브>는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
+ UMDW 디렉터리는 구성할 수 있습니다. \<시스템 드라이브 >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\여기서 \<시스템 드라이브 >는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
   
 > [!NOTE]  
 >  UMDW(sysutility_mdw) 파일 위치는 detach/attach 또는 ALTER DATABASE를 사용하여 변경할 수 있으며 ALTER DATABASE를 사용하는 것이 좋습니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  

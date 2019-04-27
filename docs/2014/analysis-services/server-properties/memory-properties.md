@@ -25,18 +25,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747465"
 ---
 # <a name="memory-properties"></a>메모리 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 다음 표에 나열된 서버 메모리 속성을 사용할 수 있습니다. 이 속성 설정에 대한 지침을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하세요.  
   
  1과 100 사이의 값은 **실제 총 메모리** 또는 **가상 주소 공간**중 더 작은 쪽의 백분율을 나타냅니다. 100을 초과하는 값은 메모리 제한(바이트)을 나타냅니다.  
   
- **적용 대상:** 다차원 및 테이블 형식 서버 모드(다르게 표시되지 않은 경우)  
+ **적용 대상:** 다차원 및 테이블 형식 서버 모드를 다른 설명이 없는 경우.  
   
 ## <a name="properties"></a>속성  
  `LowMemoryLimit`  

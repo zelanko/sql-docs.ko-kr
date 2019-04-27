@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781942"
 ---
 # <a name="smo-how-to-topics"></a>SMO 방법 도움말 항목
   SMO 방법 도움말 항목에서는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 프로그래밍 환경을 설정하여 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 또는 C#으로 프로그램을 만드는 방법에 대한 정보를 제공합니다.  

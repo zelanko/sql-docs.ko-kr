@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747285"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>중첩 테이블 열 선택(새 중첩 테이블 추가 마법사)
   **중첩 테이블 열 선택** 페이지를 사용하여 중첩 테이블에 포함시킬 특성 및 측정값을 선택하고 마이닝 모델에서 해당 특성 및 측정값을 사용하는 방식을 정의할 수 있습니다.  
   
- **자세한 내용:** [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [마이닝 모델 열](data-mining/mining-model-columns.md), [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)합니다 [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **열**  

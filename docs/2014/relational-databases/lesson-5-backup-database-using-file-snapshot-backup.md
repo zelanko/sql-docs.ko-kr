@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743327"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>6단원: 온-프레미스의 원본 컴퓨터에서 Windows Azure의 대상 컴퓨터로 데이터베이스 마이그레이션
   이 단원에서는 이미 다른 SQL Server가 있다고 가정합니다. 이 SQL Server는 다른 온-프레미스 컴퓨터나 Microsoft Azure의 가상 머신에 있을 수 있습니다. Microsoft Azure에서 SQL Server 가상 머신을 만드는 방법은 [Microsoft Azure에서 SQL Server 가상 머신 프로비전](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조하세요. Microsoft Azure에서 SQL Server 가상 머신을 프로비전한 후 다른 컴퓨터에서 SQL Server Management Studio를 통해 이 가상 머신의 SQL Server 인스턴스에 연결할 수 있는지 확인합니다.  

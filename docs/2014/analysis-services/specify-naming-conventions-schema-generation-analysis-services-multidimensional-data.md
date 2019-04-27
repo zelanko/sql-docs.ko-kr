@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746276"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>명명 규칙 지정(스키마 생성 마법사)(Analysis Services - 다차원 데이터)
   **명명 규칙 지정** 페이지를 사용하여 스키마 생성 마법사에서 스키마 개체를 만들 때 사용하는 명명 규칙을 정의할 수 있습니다.  

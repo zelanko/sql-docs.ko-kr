@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754636"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>서식 파일을 사용하여 대량 복사(ODBC)
   이 예제에서는 ODBC bcp_init 함수를 서식 파일과 함께 사용하는 방법을 보여 줍니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "53354319"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을 지정합니다. DB_IN이면 파일에서 테이블 또는 뷰로 복사됩니다.  
+    -   복사본의 방향: DB_IN 파일에서 테이블 또는 뷰.  
   
 5.  [bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 를 호출하여 대량 복사 작업에 사용할 데이터 파일을 설명하는 서식 파일을 만듭니다.  
   

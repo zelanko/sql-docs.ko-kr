@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731679"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 배포 시나리오(SSAS 테이블 형식)
   이 항목에서는 DirectQuery 모델에 대한 디자인 및 배포 프로세스를 연습할 수 있습니다. 관계형 데이터만 사용하도록 DirectQuery를 구성하거나(DirectQuery 전용) 전환을 통해 캐시된 데이터만 사용하거나 관계형 데이터만 사용하도록 모델을 구성할 수 있습니다(혼합 모드). 이 항목에서는 두 모드에 대한 구현 프로세스에 대해 설명하고 모드와 보안 구성에 따라 달라질 수 있는 쿼리 결과에 대해 살펴봅니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48135183"
   
 |||  
 |-|-|  
-|**DirectQuery 전용**|**가장 설정** 속성에서 SQL Server 데이터 원본에 연결하는 데 사용할 계정을 지정합니다.<br /><br /> 값을 사용 하는 경우 **ImpersonateCurrentUser**, 인스턴스의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 호스트 모델은 전달할 모델의 현재 사용자의 자격 증명을 SQL Server 데이터베이스입니다.|  
+|**DirectQuery 전용**|**가장 설정** 속성에서 SQL Server 데이터 원본에 연결하는 데 사용할 계정을 지정합니다.<br /><br /> **ImpersonateCurrentUser**값을 사용하면 모델을 호스팅하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 현재 모델 사용자의 자격 증명을 SQL Server 데이터베이스에 전달합니다.|  
 |**혼합 모드**|**가장 설정** 속성에서 SQL Server 데이터 원본의 데이터에 액세스하는 데 사용할 계정을 지정합니다.<br /><br /> 이 설정은 모델에 사용된 캐시를 처리하는 데 사용되는 자격 증명에 영향을 주지 않습니다.|  
   
  **7 단계입니다. 모델 배포**  
@@ -106,7 +106,7 @@ ms.locfileid: "48135183"
  **DirectQuery 전용**  
  단일 데이터 원본을 사용하려고 하거나 데이터가 너무 커서 메모리에 맞지 않는 경우 이 옵션을 사용하는 것이 좋습니다. 매우 큰 관계형 데이터 원본을 사용하는 경우 디자인 타임에 데이터의 일부 하위 집합을 사용하여 모델을 만들 수 있습니다. DirectQuery 전용 모드에서 모델을 배포하는 경우 필요한 데이터를 모두 포함하도록 데이터 원본 정의를 편집할 수 있습니다.  
   
- 관계형 데이터 원본에서 제공하는 보안을 사용하여 데이터에 대한 사용자 액세스를 제어하려는 경우에도 이 옵션을 사용하는 것이 좋습니다. 캐시 된 테이블 형식 모델을 사용 하 여 사용할 수도 있습니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 역할 데이터 액세스를 제어 하는, 있지만 캐시에 저장 된 데이터를 보호 해야 합니다. 보안 컨텍스트를 위해 데이터를 캐시해서는 안 되는 경우에는 항상 이 옵션을 사용해야 합니다.  
+ 관계형 데이터 원본에서 제공하는 보안을 사용하여 데이터에 대한 사용자 액세스를 제어하려는 경우에도 이 옵션을 사용하는 것이 좋습니다. 캐시된 테이블 형식 모델을 사용하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 역할을 사용하여 데이터 액세스를 제어할 수도 있지만 캐시에 저장된 데이터에 보안도 설정해야 합니다. 보안 컨텍스트를 위해 데이터를 캐시해서는 안 되는 경우에는 항상 이 옵션을 사용해야 합니다.  
   
  다음 표에서는 DirectQuery 전용 모드에서 가능한 배포 결과에 대해 설명합니다.  
   

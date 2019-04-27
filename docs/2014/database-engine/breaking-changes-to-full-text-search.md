@@ -16,11 +16,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787761"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>전체 텍스트 검색의 주요 변경 내용
   이 항목에서는 전체 텍스트 검색의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
@@ -43,14 +43,14 @@ ms.locfileid: "49460698"
 |CONTAINSTABLE 및 **ItemCount**|변경 내용을 MSSearch로 밀어넣기 전에 기본 테이블에서 행을 삭제합니다.|CONTAINSTABLE이 삭제할 레코드를 반환합니다. **ItemCount** 변경 되지 않습니다.|CONTAINSTABLE이 삭제할 레코드를 반환하지 않습니다.|  
 |**ItemCount**|테이블에 Null 문서 또는 유형 열이 있습니다.|인덱싱된 문서 외에도 null 이거나 null 유형의 문서에서 계산 되는 **ItemCount** 값입니다.|인덱싱된 문서만에서 계산 되는 **ItemCount** 값입니다.|  
 |카탈로그 **ItemCount**|Blob 열에 NULL 확장이 있습니다.|계산 됩니다 **ItemCount** 카탈로그|에 포함 되지 않습니다 **ItemCount** 카탈로그입니다.|  
-|**UniqueKeyCount**|고유 키를 쿼리 개수는 카탈로그에서 예를 들어 두 개의 테이블 (table1 및 table2) 각 세 단어를 사용 하 여: word1, word2, word3 하 고 있습니다.|**UniqueKeyCount** = 9입니다. 다음 테이블은 이 값을 구하는 방법을 간략히 보여 줍니다.<br /><br /> table1 = 3<br /><br /> table1의 전체 텍스트 인덱스에 대한 EOF = 1<br /><br /> table2 = 3<br /><br /> table2의 전체 텍스트 인덱스에 대한 EOF = 1<br /><br /> 전체 텍스트 카탈로그 = 1|각 테이블에 대해 **UniqueKeyCount** 는 distinct 키워드 수 + 1은 (0xFF).  한 개 이상의 문서에 있는 동일 단어를 새 고유 키로 처리하지 않습니다.<br /><br /> 카탈로그에 대 한 **UniqueKeyCount** 의 합계인 **UniqueKeyCount** 카탈로그에서 테이블의 각. 다른 테이블에 있는 동일 단어가 고유 키로 처리됩니다. 이 경우 고유 키 수는 8입니다.|  
+|**UniqueKeyCount**|고유 키를 쿼리 개수는 카탈로그에서 예를 들어 두 개의 테이블 (table1 및 table2) 각 세 단어를 사용 하 여: word1, word2, word3 하 고 있습니다.|**UniqueKeyCount** = 9. 다음 테이블은 이 값을 구하는 방법을 간략히 보여 줍니다.<br /><br /> table1 = 3<br /><br /> table1의 전체 텍스트 인덱스에 대한 EOF = 1<br /><br /> table2 = 3<br /><br /> table2의 전체 텍스트 인덱스에 대한 EOF = 1<br /><br /> 전체 텍스트 카탈로그 = 1|각 테이블에 대해 **UniqueKeyCount** 는 distinct 키워드 수 + 1은 (0xFF).  한 개 이상의 문서에 있는 동일 단어를 새 고유 키로 처리하지 않습니다.<br /><br /> 카탈로그에 대 한 **UniqueKeyCount** 의 합계인 **UniqueKeyCount** 카탈로그에서 테이블의 각. 다른 테이블에 있는 동일 단어가 고유 키로 처리됩니다. 이 경우 고유 키 수는 8입니다.|  
 |**순위 사전 계산** 서버 수준 옵션|FREETEXTTABLE 쿼리 성능 최적화.|사용 하 여 지정 된 FREETEXTTABLE 쿼리 하는 옵션을 1로 설정 하는 경우 *top_n_by_rank* 전체 텍스트 카탈로그에 저장 하는 미리 계산 된 순위 데이터를 사용 합니다.|지원되지 않습니다.|  
 |[sp_fulltext_pendingchanges](/sql/relational-databases/system-stored-procedures/sp-fulltext-pendingchanges-transact-sql) 키 열을 업데이트 하는 경우|두 행 테이블에서 한 행의 전체 텍스트 키 열을 업데이트하고 sp_fulltext_pendingchanges를 실행합니다.|두 행이 표시됩니다.|한 행만 표시됩니다.|  
 |인라인 함수|전체 텍스트 연산자가 있는 인라인 함수|오류 메시지를 반환합니다.|관련 행을 반환합니다.|  
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|sp_fulltext_database를 사용하여 전체 텍스트 검색을 설정하거나 해제합니다.|전체 텍스트 쿼리에 대한 결과가 반환되지 않습니다. 데이터베이스에서 전체 텍스트를 사용할 수 없는 경우 전체 텍스트 작업이 허용되지 않습니다.|전체 텍스트 쿼리에 대한 결과를 반환하며 데이터베이스에서 전체 텍스트를 사용할 수 없는 경우라도 전체 텍스트 작업이 허용됩니다.|  
 |로캘별 중지 단어|벨기에 프랑스어 및 캐나다 같은 부모 언어에서의 변형 inlocale 별 쿼리합니다.|쿼리 inlocale 특정 변형 부모 언어의 구성 요소 (단어 분리기, 형태소 분석기 및 중지 단어)에서 처리 됩니다. 예를 들어 프랑스어(프랑스)는 프랑스어(벨기에)를 구문 분석하는 데 사용됩니다.|각 LCID(로캘 ID)마다 중지 단어를 명시적으로 추가해야 합니다. 예를 들어 벨기에, 캐나다, 프랑스에 대해 LCID를 지정해야 합니다.|  
 |동의어 사전 및 형태소 분석|동의어 사전 및 활용 형태(형태소 분석)를 사용합니다.|동의어 사전 단어 확장 뒤에서 자동으로 형태소가 분석됩니다.|확장에서 형태소 형태를 사용하려는 경우 형태소 형태를 명시적으로 추가해야 합니다.|  
-|전체 텍스트 카탈로그 경로 및 파일 그룹|전체 텍스트 카탈로그 작업을 수행합니다.|각 전체 텍스트 카탈로그가 물리적 경로를 사용하며 파일 그룹에 속합니다. 전체 텍스트 카탈로그는 데이터베이스 파일로 처리됩니다.|전체 텍스트 카탈로그는 가상 개체이며 어떠한 파일 그룹에도 속하지 않습니다. 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다.<br /><br /> 참고: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] 전체 텍스트 카탈로그를 지정 하는 DDL 문은 올바르게 작동 합니다.|  
+|전체 텍스트 카탈로그 경로 및 파일 그룹|전체 텍스트 카탈로그 작업을 수행합니다.|각 전체 텍스트 카탈로그가 물리적 경로를 사용하며 파일 그룹에 속합니다. 전체 텍스트 카탈로그는 데이터베이스 파일로 처리됩니다.|전체 텍스트 카탈로그는 가상 개체이며 어떠한 파일 그룹에도 속하지 않습니다. 전체 텍스트 카탈로그는 전체 텍스트 인덱스 그룹을 나타내는 논리적 개념입니다.<br /><br /> 참고: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] 전체 텍스트 카탈로그를 지정 하는 DDL 문은 올바르게 작동 합니다.|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|이 카탈로그 뷰의 path, data_space_id 및 file_id를 사용합니다.|이러한 열이 특정 값을 반환합니다.|전체 텍스트 카탈로그가 더 이상 파일 시스템에 없으므로 이러한 열이 NULL을 반환합니다.|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|더 이상 사용되지 않는 이 시스템 테이블의 PATH 열을 사용합니다.|전체 텍스트 카탈로그의 파일 시스템 경로를 반환합니다.|전체 텍스트 카탈로그가 더 이상 파일 시스템에 없으므로 NULL을 반환합니다.|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|더 이상 사용되지 않는 이 저장 프로시저의 PATH 열을 사용합니다.|전체 텍스트 카탈로그의 파일 시스템 경로를 반환합니다.|전체 텍스트 카탈로그가 더 이상 파일 시스템에 없으므로 NULL을 반환합니다.|  

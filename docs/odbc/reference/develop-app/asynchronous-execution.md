@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbc6e6fe3c45a6395620e017decef285ae9dd51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672521"
 ---
 # <a name="asynchronous-execution"></a>비동기 실행
 ODBC 문 및 연결 작업에 대 한 비동기 작업을 지원합니다. 비동기 작업이 완료 되 면 확인 하려면 두 가지가 있습니다.  

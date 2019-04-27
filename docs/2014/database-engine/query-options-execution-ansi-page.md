@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773941"
 ---
 # <a name="query-options-execution-ansi-page"></a>쿼리 옵션 실행(ANSI 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 ISO(ANSI) 표준에 지정되어 있는 설정의 일부 또는 전부를 사용하여 쿼리를 실행하도록 지정할 수 있습니다.  

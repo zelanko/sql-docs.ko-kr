@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749012"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
   데이터 새로 고침 기록은 Excel 통합 문서의 PowerPivot 데이터에 대한 모든 데이터 새로 고침 작업의 레코드입니다. 데이터 새로 고침 작업은 제공된 일정에 따라 SharePoint 팜의 Analysis Services 서버 인스턴스에서 수행됩니다. 기본적으로 데이터 새로 고침 기록은 1년 동안 보존됩니다. 그러나 팜 관리자가 데이터 새로 고침 레코드 보관 기간을 결정하는 사용 및 이벤트 기록에 대한 다른 보존 정책을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48118973"
   
  [기록 정보 사용](#pageelements)  
   
-##  <a name="prereq"></a> 필수 구성 요소  
+##  <a name="prereq"></a> 사전 요구 사항  
  데이터 새로 고침 기록을 보려면 참가 권한 이상의 권한이 있어야 합니다.  
   
  PowerPivot 데이터가 포함된 통합 문서에서 데이터 새로 고침을 사용하도록 설정하고 예약해야 합니다. 데이터 새로 고침을 예약하지 않은 경우 기록 정보 대신 예약 정의 페이지가 표시됩니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48118973"
  현재 Excel 통합 문서의 PowerPivot 데이터에 대한 모든 새로 고침 작업의 전체 레코드를 보여 주는 기록 페이지가 표시됩니다.  
   
 ##  <a name="viewITOps"></a> 모든 통합 문서에 대한 데이터 새로 고침 기록 보기  
- 팜 관리자와 서비스 응용 프로그램 관리자는 중앙 관리의 PowerPivot 관리 대시보드를 사용하여 모든 PowerPivot 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)합니다.  
+ 팜 관리자와 서비스 응용 프로그램 관리자는 중앙 관리의 PowerPivot 관리 대시보드를 사용하여 모든 PowerPivot 통합 문서에 대한 데이터 새로 고침 기록과 상태를 전체적으로 볼 수 있습니다. 자세한 내용은 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)을 참조하세요.  
   
 ##  <a name="pageelements"></a> 기록 정보 사용  
  데이터 새로 고침 기록 페이지에는 각 새로 고침 작업에 대한 자세한 정보가 제공됩니다. 이 페이지의 정보를 사용하여 새로 고침이 발생했는지 여부와 새로 고침이 실패한 이유를 확인할 수 있습니다.  

@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748365"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>관계형 개체 대화 상자(Analysis Services - 다차원 데이터)
-  **의** 관계형 개체 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본에서 자동 관리 캐싱을 설정할 테이블, 뷰 또는 다른 개체를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 저장소 옵션**대화 상자의**알림 **탭에서** 추적 테이블 지정 **옵션 중 하나에 대한 줄임표 단추(** ... **)를 클릭하면** 에 이 대화 상자가 표시됩니다.  
+  **의** 관계형 개체 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본에서 자동 관리 캐싱을 설정할 테이블, 뷰 또는 다른 개체를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 스토리지 옵션**대화 상자의**알림 **탭에서** 추적 테이블 지정 **옵션 중 하나에 대한 줄임표 단추(** ... **)를 클릭하면** 에 이 대화 상자가 표시됩니다.  
   
 ## <a name="options"></a>변수  
  **자동 관리 캐싱을 설정할 관계형 개체를 선택 합니다.**  

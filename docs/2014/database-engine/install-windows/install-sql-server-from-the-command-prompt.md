@@ -85,11 +85,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13f6cb50604047e7c5f2aaaa60c3e3b77cae5913
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781006"
 ---
 # <a name="install-sql-server-2014-from-the-command-prompt"></a>Install SQL Server 2014 from the Command Prompt
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
@@ -247,7 +247,7 @@ ms.locfileid: "58658477"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|/ISSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성|/NPENABLED<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 명명된 파이프 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = 명명된 파이프 프로토콜 해제<br /><br /> 1 = 명명된 파이프 프로토콜을 사용하도록 설정|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 구성|/TCPENABLED<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 TCP 프로토콜 상태를 지정합니다. 지원되는 값:<br /><br /> 0 = TCP 프로토콜 해제<br /><br /> 1 = TCP 프로토콜을 사용하도록 설정|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다. 지원되는 값:<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 참고: 설치에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되는 경우 기본 RSINSTALLMODE는 DefaultNativeMode입니다.<br /><br /> 설치에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 기본 RSINSTALLMODE는 FilesOnlyMode입니다.<br /><br /> DefaultNativeMode를 선택해도 설치에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 설치 시 RSINSTALLMODE가 FilesOnlyMode로 자동 변경됩니다.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 설치 모드를 지정합니다. 지원되는 값:<br /><br /> SharePointFilesOnlyMode<br /><br /> DefaultNativeMode<br /><br /> FilesOnlyMode<br /><br /> 참고: 설치에 포함 된 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], 기본 RSINSTALLMODE는 DefaultNativeMode입니다.<br /><br /> 설치에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 기본 RSINSTALLMODE는 FilesOnlyMode입니다.<br /><br /> DefaultNativeMode를 선택해도 설치에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 포함되지 않는 경우 설치 시 RSINSTALLMODE가 FilesOnlyMode로 자동 변경됩니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
@@ -308,7 +308,7 @@ Setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INDICATEPROGRESS<br /><br /> **선택 사항**|세부 설치 로그 파일이 콘솔로 전달되도록 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCEID<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 1 누적 업데이트 2(2013년 1월) 이전에는 **요구됨**<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 1 누적 업데이트 2부터는 **선택 사항**|이미지 준비 단계 중에 지정한 인스턴스 ID를 사용합니다. 지원되는 값:<br /><br /> 준비된 인스턴스의 InstanceID|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/INSTANCENAME<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 1 누적 업데이트 2(2013년 1월) 이전에는 **요구됨**<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서비스 팩 1 누적 업데이트 2부터는 **선택 사항**|완료 중인 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 지정합니다.<br /><br /> 자세한 내용은 [Instance Configuration](../../sql-server/install/instance-configuration.md)을 참조하세요.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.<br /><br /> 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Tools 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Advanced Services를 설치하는 경우에는 PID가 미리 정의됩니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/PID<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 제품 키를 지정합니다. 이 매개 변수를 지정하지 않으면 Evaluation이 사용됩니다.<br /><br /> 참고: 설치 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with tools 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express with Advanced Services는 PID가 미리 정의 합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/Q<br /><br /> **선택 사항**|설치 프로그램이 사용자 인터페이스 없이 자동 모드에서 실행되도록 지정합니다. 이 옵션은 무인 설치에 사용됩니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/QS<br /><br /> **선택 사항**|설치 프로그램이 UI를 통해 실행되고 진행률을 표시하지만 입력을 받거나 오류 메시지를 표시하지 않도록 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 컨트롤|/SQMREPORTING<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 기능 사용 보고를 지정합니다.<br /><br /> 자세한 내용은 [Microsoft 오류 보고 서비스에 대한 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkID=72173)을 참조하십시오. 지원되는 값:<br /><br /> 1 = 사용<br /><br /> 0 = 사용 안 함|  

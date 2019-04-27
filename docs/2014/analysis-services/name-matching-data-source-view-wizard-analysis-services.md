@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743645"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>이름 일치(데이터 원본 뷰 마법사)(Analysis Services)
   **이름 일치** 페이지를 사용하여 스키마의 데이터 원본 뷰에 대해 선택한 테이블과 해당 스키마의 다른 테이블 간의 관계를 감지하는 데 사용할 조건을 선택할 수 있습니다. 테이블 간에 물리적 외래 키 관계가 없으면 이 기준이 관련 테이블을 식별하고 데이터 원본 뷰에 추가하는 데 도움이 됩니다. 이름 일치로 식별된 논리적 관계도 데이터 원본 뷰에 추가됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48217773"
  **외래 키 일치**  
  데이터 원본의 테이블과 뷰 간에 논리적 관계를 만드는 데 사용할 기준을 선택합니다. 영숫자 이외의 문자는 일치 문자열에서 무시됩니다. 예를 들어 "Customer ID", "Customer_ID", "CustomerID"는 모두 일치합니다. 지정한 조건으로 관계를 만들려면 다음 표의 옵션 중 하나를 선택합니다.  
   
-|Select|만들 관계|  
+|선택|만들 관계|  
 |------------|---------------|  
 |**기본 키와 같은 이름**|열 이름이 선택한 테이블의 기본 키 열 이름과 같은 테이블에 대한 논리적 관계|  
 |**대상 테이블 이름과 같은 이름**|열 이름이 선택한 테이블의 이름과 일치하는 테이블에 대한 논리적 관계|  

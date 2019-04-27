@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752960"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 프로그래밍 모델 세부 정보
 다음은 RDS 프로그래밍 모델의 주요 요소입니다.  

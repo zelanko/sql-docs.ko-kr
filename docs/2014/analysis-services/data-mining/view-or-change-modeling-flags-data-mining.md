@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732634"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>모델링 플래그 확인 또는 변경(데이터 마이닝)
   모델링 플래그는 알고리즘이 분석 중에 데이터를 처리하는 방법을 제어하기 위해 마이닝 구조 열이나 마이닝 모델 열에 대해 설정하는 속성입니다.  
@@ -53,6 +53,6 @@ ms.locfileid: "48050143"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
- [모델링 플래그 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+ [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
   
   

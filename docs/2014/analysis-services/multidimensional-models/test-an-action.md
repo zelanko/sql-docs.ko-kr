@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7cf922fb0182c2905ac855daef0f90cd80ddf55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740971"
 ---
 # <a name="test-an-action"></a>동작 테스트
   큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  

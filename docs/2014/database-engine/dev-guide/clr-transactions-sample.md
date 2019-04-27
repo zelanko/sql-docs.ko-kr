@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754071"
 ---
 # <a name="clr-transactions-sample"></a>CLR 트랜잭션 예제
   이 예제에서는 `System.Transactions` 네임스페이스에 있는 관리되는 API를 사용하여 트랜잭션을 제어하는 방법을 보여 줍니다. 특히 `System.Transactions.TransactionScope` 클래스는 요청을 처리할 재고가 충분하지 않는 경우 재고 수치를 조정하지 않고, 재고가 충분한 경우 한 위치에서 다른 위치로 재고를 원자 단위로 이동하도록 트랜잭션 경계를 설정하는 데 사용됩니다. 분산 트랜잭션에서의 자동 등록은 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 저장된 감사 데이터베이스에 재고 변경 내용을 기록하여 표시됩니다.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747516"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>멤버 선택(비즈니스 인텔리전스 마법사)
   **멤버 선택** 페이지를 사용하여 비즈니스 인텔리전스 마법사가 **통화 변환 옵션 설정** 페이지에 지정된 통화 변환 기능을 적용할 멤버를 결정할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48105150"
 |**측정값**|**계정 멤버** 에서 선택한 멤버의 측정값을 변환할 때 사용할 환율이 포함된 요율 측정값 그룹에서 측정값을 선택합니다.|  
   
  **유형을 기반으로 하는 계정 계층**  
- 계정 계층에서의 모든 멤버에 통화 변환 기능을 적용 하려면 선택 특성 `Type` 지정한 계정 유형으로 설정 합니다.  
+ `Type` 속성이 지정한 계정 유형으로 설정된 계정 계층에서 특성의 모든 멤버에 통화 변환 기능을 적용하려면 선택합니다.  
   
  선택하면 다음 표에 나열된 옵션이 표에 표시됩니다.  
   

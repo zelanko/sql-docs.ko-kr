@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c26ceea2f6dd8ad136d505269f028f47e0b9b7fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748395"
 ---
 # <a name="query-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>쿼리 바인딩 세부 정보(파티션 원본 대화 상자)(Analysis Services - 다차원 데이터)
   **파티션 원본** 대화 상자의 **쿼리 바인딩** 옵션을 사용하여 파티션에 대한 데이터를 제공하는 쿼리를 지정할 수 있습니다. **파티션 원본** 대화 상자의 **바인딩 유형** 옵션에서 **쿼리 바인딩** 을 선택하여 이 창을 표시할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48062504"
  **데이터 원본**  
  파티션에 대한 팩트 데이터를 제공하기 위해 쿼리를 실행할 데이터 원본을 선택합니다.  
   
- **쿼리**  
+ **데이터 집합 속성**  
  파티션 처리 시 팩트 데이터를 검색할 때 사용되는 SQL 문을 입력하거나 수정합니다.  
   
 > [!IMPORTANT]  
