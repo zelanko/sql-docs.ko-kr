@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e28fec1fb562c5ba6ed28ad615f40ada5fc2db9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766795"
 ---
 # <a name="save-copy-of-package"></a>패키지 복사본 저장
   **에서 사용할 수 있는** 패키지 복사본 저장 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 복사본을 다른 위치에 저장하고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  

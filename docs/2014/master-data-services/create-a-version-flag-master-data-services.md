@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60fdd3e60cd7f9015950a16d02a3f4a9ff2f7fcf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765823"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전에 할당할 버전 플래그를 만듭니다. 플래그는 사용자나 구독 시스템에서 사용해야 하는 버전을 나타낼 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52755165"
   
 -   [버전에 플래그 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [버전 플래그 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   

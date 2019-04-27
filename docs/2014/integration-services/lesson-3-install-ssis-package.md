@@ -12,27 +12,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767575"
 ---
 # <a name="lesson-3-installing-packages"></a>3단원: 패키지 설치
-  [2 단원: 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), 배포 유틸리티를 만든 항목이 포함 된 배포 번들을 생성 및 다른 컴퓨터에서 패키지를 설치 해야 합니다. 또한 배포 번들에서 파일 목록을 확인하고 배포 유틸리티를 작성할 때 만들었던 매니페스트 파일의 내용을 검사했습니다.  
+  [2단원: 배포 번들 만들기](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), 배포 유틸리티를 만든 항목이 포함 된 배포 번들을 생성 및 다른 컴퓨터에서 패키지를 설치 해야 합니다. 또한 배포 번들에서 파일 목록을 확인하고 배포 유틸리티를 작성할 때 만들었던 매니페스트 파일의 내용을 검사했습니다.  
   
  이 단원에서는 배포 번들을 대상 컴퓨터에 복사한 다음 패키지 설치 마법사를 실행하여 패키지, 패키지 종속 파일 및 보조 파일을 해당 컴퓨터에 설치합니다. 패키지는 **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 설치되고 다른 항목은 파일 시스템에 설치됩니다. 패키지 설치를 완료한 후에 패키지 실행 유틸리티를 통해 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 패키지를 실행하여 배포를 테스트합니다.  
   
- **예상이 단원을 완료 시간:** 30분  
+ **이 단원에 소요되는 예상 시간:**: 30분  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  
   
 -   [1단계: 배포 번들 복사](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [2단계: 패키지 설치 마법사를 실행합니다.](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [2단계: 패키지 설치 마법사 실행](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [3단계: 배포 된 패키지 테스트](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [3단계: 배포된 패키지 테스트](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>단원 시작  
  [1단계: 배포 번들 복사](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  

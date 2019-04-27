@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: f4a57f89a89ed8d5cbf81cc3d63fc1f19b42e51a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641062"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server에서 Python 및 R 자습서 아이리스 데이터 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

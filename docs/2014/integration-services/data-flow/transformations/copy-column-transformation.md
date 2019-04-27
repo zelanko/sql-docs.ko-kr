@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ebdcc68c4fe8c4782251e2f4e5896e4557e23e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770329"
 ---
 # <a name="copy-column-transformation"></a>열 복사 변환
   열 복사 변환은 입력 열을 복사하고 새 열을 변환 출력에 추가하여 새 열을 만듭니다. 데이터 흐름의 뒷부분에서 열 복사본에 다른 변환을 적용할 수 있습니다. 예를 들어 열 복사 변환을 사용하여 열 복사본을 만든 다음 문자표 변환을 사용하여 복사한 데이터를 대문자로 변환하거나 집계 변환을 사용하여 새 열에 집계를 적용할 수 있습니다.  

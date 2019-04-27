@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abdbf8215b782f5db4343365a26d479542fc2dad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767075"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>패키지 역할 대화 상자 UI 참조
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 **패키지 역할** 대화 상자를 통해 패키지에 대한 읽기 권한이 있는 데이터베이스 수준 역할 및 패키지에 대한 쓰기 권한이 있는 데이터베이스 수준 역할을 지정할 수 있습니다. 데이터베이스 수준 역할은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb** 데이터베이스에 저장된 패키지에만 적용됩니다.  

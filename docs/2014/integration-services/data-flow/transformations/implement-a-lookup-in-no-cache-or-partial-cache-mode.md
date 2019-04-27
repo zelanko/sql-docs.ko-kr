@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770739"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
   부분 캐시 또는 캐시 없음 모드를 사용하여 조회 변환을 구성할 수 있습니다.  

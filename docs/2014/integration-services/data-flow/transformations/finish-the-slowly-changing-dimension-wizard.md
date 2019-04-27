@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770369"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 완료
   **느린 변경 차원 마법사 완료** 대화 상자를 사용하여 마법사가 느린 변경 차원에 대한 지원 기능을 구성하기 전에 선택한 내용을 확인할 수 있습니다.  

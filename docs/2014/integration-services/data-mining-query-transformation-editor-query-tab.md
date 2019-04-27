@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d752fbd5ec1cd82ce7d573bb68ddb8acd162adc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769969"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>데이터 마이닝 쿼리 변환 편집기(쿼리 탭)
   **데이터 마이닝 쿼리 변환 편집기** 대화 상자의 **쿼리** 탭을 사용하여 예측 쿼리를 만들 수 있습니다.  

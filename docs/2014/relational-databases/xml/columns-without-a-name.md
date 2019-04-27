@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e4d4eccfe7bcad3abd2c6d89f867ac8f88129a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637591"
 ---
 # <a name="columns-without-a-name"></a>이름이 없는 열
   이름이 없는 열은 인라인됩니다. 예를 들어 계산 열이나 열 별칭을 지정하지 않는 중첩된 스칼라 쿼리는 이름이 없는 열을 생성합니다. `xml` 유형의 열일 경우 해당 데이터 형식 인스턴스의 내용이 삽입됩니다. 그렇지 않을 경우에는 열 내용이 텍스트 노드로 삽입됩니다.  

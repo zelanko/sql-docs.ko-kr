@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cc27106e3aa749f9462659190f006bcc8f5627b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766136"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>패키지 업그레이드(SSIS 패키지 업그레이드 마법사)
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b5153a210c1d276b481cea240e1f28b77751ad4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769509"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^(배타적 비트 OR)(SSIS 식)
   두 정수 값의 배타적 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 0이고 다른 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 두 비트가 모두 0 또는 1이면 해당 결과 비트는 0으로 설정됩니다.  

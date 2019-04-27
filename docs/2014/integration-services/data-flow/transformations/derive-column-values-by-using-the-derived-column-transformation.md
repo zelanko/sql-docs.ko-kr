@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770704"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
   파생 열 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768907"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>실행 계획 및 버퍼 할당
   실행 전에 데이터 흐름 태스크에서는 구성 요소를 검사하고 각 구성 요소 시퀀스에 대한 실행 계획을 생성합니다. 이 섹션에서는 실행 계획, 실행 계획을 보는 방법 및 실행 계획에 따라 입력 및 출력 버퍼가 할당되는 방식에 대해 자세히 설명합니다.  

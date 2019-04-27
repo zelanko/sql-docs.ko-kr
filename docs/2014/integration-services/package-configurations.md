@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2cd70f20297e446971b46fa38bd2f3e8379192e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767125"
 ---
 # <a name="package-configurations"></a>패키지 구성
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  

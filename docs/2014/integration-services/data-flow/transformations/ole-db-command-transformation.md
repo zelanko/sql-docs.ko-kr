@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770394"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB 명령 변환
   OLE DB 명령 변환은 데이터 흐름의 각 행에 대해 SQL 문을 실행합니다. 예를 들어 데이터베이스 테이블에서 행을 삽입, 업데이트 또는 삭제하는 SQL 문을 실행할 수 있습니다.  

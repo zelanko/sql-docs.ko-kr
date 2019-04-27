@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767693"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지
   패키지는 연결, 제어 흐름 요소, 데이터 흐름 요소, 이벤트 처리기, 변수, 매개 변수 및 구성으로 이루어진 컬렉션으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 그래픽 디자인 도구를 사용하여 조합하거나 프로그래밍 방식으로 작성합니다.  그런 다음 완성된 패키지를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템에 저장하거나, ssISnoversion 프로젝트를 [!INCLUDE[ssIS](../includes/ssis-md.md)] 서버에 배포할 수 있습니다. 패키지는 검색, 실행 및 저장되는 작업 단위입니다.  

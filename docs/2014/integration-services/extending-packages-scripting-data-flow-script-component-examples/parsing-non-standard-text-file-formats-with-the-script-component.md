@@ -16,23 +16,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769019"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
   
- [예제 1: 행으로 구분 된 레코드의 구문 분석](#example1)  
+ [예제 1: 행으로 구분된 레코드의 구문 분석](#example1)  
   
- [예제 2: 부모와 자식 레코드 분](#example2)  
+ [예제 2: 부모 레코드와 자식 레코드 분할](#example2)  
   
 > [!NOTE]  
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
   
-##  <a name="example1"></a> 예제 1: 행으로 구분된 레코드의 구문 분석  
+##  <a name="example1"></a> 예제 1: 행으로 구분 된 레코드의 구문 분석  
  이 예에서는 각 데이터 열이 별도의 줄에 나타나는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 대상 테이블로 구문 분석하는 방법을 보여 줍니다.  
   
  데이터 흐름의 변환으로 사용 하 여 스크립트 구성 요소를 구성 하는 방법에 대 한 자세한 내용은 참조 하세요. [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)고 [는 비동기 만들기 스크립트 구성 요소를 사용 하 여 변환](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)합니다.  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> 예제 2: 부모 레코드와 자식 레코드 분할  
+##  <a name="example2"></a> 예제 2: 부모와 자식 레코드 분  
  이 예에서는 구분 행 뒤에 부모 레코드 행이 있고 그 뒤에 불특정 개수의 자식 레코드 행이 있는 텍스트 파일을 가져오고 스크립트 구성 요소를 사용하여 이를 올바르게 정규화된 부모 및 자식 대상 테이블로 구문 분석하는 방법을 보여 줍니다. 이 간단한 예는 각각의 부모 및 자식 레코드에 둘 이상의 행 또는 열을 사용하는 원본 파일에 맞게 쉽게 조정할 수 있습니다. 단, 각 레코드의 시작 부분과 끝 부분을 식별할 수 있어야 합니다.  
   
 > [!CAUTION]  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768005"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>테이블 생성 SQL 문(SQL Server 가져오기 및 내보내기 마법사)
   사용 된 **테이블 생성 SQL 문** 용도 맞게 수정 하거나 자동으로 생성 된 방침을 보려면 대화 상자. 이 문을 수정하면 관련 변경 내용을 열 매핑에 적용해야 할 수도 있고 그에 따라 편집된 SQL 문을 직접 유지 관리해야 합니다.  

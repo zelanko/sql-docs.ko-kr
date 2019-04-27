@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768469"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>스크립트 태스크를 사용하여 원격 개인 메시지 큐에 메시지 보내기
   개발자는 메시지 큐(MSMQ)를 통해 메시지를 주고 받는 방법으로 신속하고 안전하게 응용 프로그램과 통신할 수 있습니다. 메시지 큐는 로컬 컴퓨터나 원격 컴퓨터에 있을 수 있으며 공개 큐이거나 개인 큐일 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 MSMQ 연결 관리자와 메시지 큐 태스크에서 원격 컴퓨터의 개인 큐로 메시지를 보낼 수 없습니다. 그러나 스크립트 태스크를 사용하면 원격 개인 메시지 큐에 메시지를 쉽게 보낼 수 있습니다.  

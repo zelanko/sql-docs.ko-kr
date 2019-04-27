@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768529"
 ---
 # <a name="persisting-custom-objects"></a>사용자 지정 개체 지속
   만든 사용자 지정 개체의 속성이 `integer` 및 `string`과 같은 단순한 데이터 형식만 사용하는 경우 사용자 지정 개체의 사용자 지정 지속성을 구현할 필요가 없습니다. 기본 지속성 구현에서는 모든 속성 값과 함께 개체의 메타데이터가 저장됩니다.  

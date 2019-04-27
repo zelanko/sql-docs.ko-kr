@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768959"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 대상 구성 요소를 사용하여 업스트림 원본 및 변환에서 받은 데이터를 데이터 원본에 저장할 수 있습니다. 일반적으로 대상 구성 요소는 기존 연결 관리자를 통해 데이터 원본에 연결합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "58375241"
   
  열면 합니다 **프로젝트 탐색기** vsta에서 창에서 읽기 전용으로 스크립트 구성 요소 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
   
- 런타임에 데이터 흐름 엔진은 `ProcessInput` 부모 클래스의 `UserComponent` 메서드를 재정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.  
+ 런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.  
   
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성  
  사용자 지정 대상 구성 요소 만들기를 마치기 위해 `ScriptMain` 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "58375241"
   
 3.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 대상으로 구성합니다.  
   
-4.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 포함 된 샘플 데이터베이스 적어도 **AddressID** 및 **City** 열입니다.  
+4.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 포함 된 샘플 데이터베이스 적어도 **AddressID** 및 **City** 열입니다.  
   
 5.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 입력 열을 선택합니다.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 대상으로 구성합니다.  
   
-3.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 예제 데이터베이스 및 있어야 적어도 **AddressID** 및 **City** 열입니다.  
+3.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) 이 출력 데이터를 제공 해야 합니다 **Person.Address** 목차를 `AdventureWorks` 예제 데이터베이스 및 있어야 적어도 **AddressID** 및 **City** 열입니다.  
   
 4.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.  
   

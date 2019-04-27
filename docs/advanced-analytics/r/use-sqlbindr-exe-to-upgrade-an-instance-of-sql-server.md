@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642041"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

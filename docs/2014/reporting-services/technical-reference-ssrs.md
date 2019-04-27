@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e88abe61ef373cb93449d44d40c47742f95898
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631768"
 ---
 # <a name="technical-reference-ssrs"></a>기술 참조(SSRS)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 사용하거나 관리하기 위한 도구 및 PowerShell 참조 설명서를 찾습니다.  

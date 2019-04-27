@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25922725e202bc7b38e2c6141a097df1af119ed2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767425"
 ---
 # <a name="lesson-5-adding-package-configurations-for-the-package-deployment-model"></a>5단원: 패키지 배포 모델을 위한 패키지 구성 추가
   패키지 구성을 사용하면 개발 환경 외부에서 런타임 속성과 변수를 설정할 수 있습니다. 구성을 통해 쉽고 유연하게 배포할 수 있는 패키지를 개발할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 다음과 같은 구성 유형을 제공합니다.  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767505"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>1단원: 프로젝트 및 기본 패키지 만들기
   이 단원에서는 하나의 플랫 파일 원본에서 데이터를 추출하고 두 개의 조회 변환 구성 요소를 사용하여 데이터를 변환하며 **AdventureWorksDW2012** 의 **FactCurrency**팩트 테이블에 해당 데이터를 쓰는 간단한 ETL 패키지를 만듭니다. 이 단원에서는 새로운 패키지를 만들고 데이터 원본 및 대상 연결을 추가하고 구성하며 새로운 제어 흐름 및 데이터 흐름 구성 요소를 사용하여 작업하는 방법에 대해 설명합니다.  

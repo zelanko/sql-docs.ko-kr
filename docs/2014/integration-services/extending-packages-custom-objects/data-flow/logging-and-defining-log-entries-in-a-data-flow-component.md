@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4b328e1e39646f9b47e66bd313940de768ea73c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768649"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 로그 항목 로깅 및 정의
   사용자 지정 데이터 흐름 구성 요소에서는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 사용하여 기존 로그 항목에 메시지를 게시할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> 메서드나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 유사한 메서드를 사용하여 사용자에게 정보를 제공할 수도 있습니다. 그러나 이 방법을 사용할 경우 추가 이벤트를 발생시키고 처리하는 오버헤드가 발생하며 사용자가 직접 관심 있는 메시지에 대한 자세한 정보 메시지를 조사해야 합니다. 아래에서 설명하는 대로 사용자 지정 로그 항목을 사용하면 구성 요소 사용자에게 고유한 레이블이 지정된 사용자 지정 로그 정보를 제공할 수 있습니다.  
@@ -59,11 +59,11 @@ End Sub
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> 열거형은 이벤트가 기록되는 빈도에 대한 힌트를 런타임에 제공합니다.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: 이벤트가 실행 시마다 로깅되는 것이 아니라 가끔씩만 로깅됩니다.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: 이벤트는 모든 실행 중이 아니라 가끔씩만 기록 됩니다.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: 이벤트가 실행 시마다 일정 횟수만큼 로깅됩니다.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: 이벤트가 실행 시 마다 일정 횟수입니다.  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>: 이벤트가 완료된 작업 양에 비례하여 여러 번 로깅됩니다.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_PROPORTIONAL>: 이벤트가 여러 번 완료 된 작업의 크기에 비례 합니다.  
   
  위의 예에서는 구성 요소가 실행 시마다 한 번씩 로그 항목을 로깅해야 하므로 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>를 사용합니다.  
   

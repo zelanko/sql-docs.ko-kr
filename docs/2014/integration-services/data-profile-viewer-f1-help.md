@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769989"
 ---
 # <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
   데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 볼 수 있습니다.  

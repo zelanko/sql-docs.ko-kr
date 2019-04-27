@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768309"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 노드를 사용하여 원본 파일의 내용을 테이블 형식으로 볼 수 있습니다.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4d8500dbe5253bddcbd71b4376050c6f3d56cdbe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765956"
 ---
 # <a name="xml-task-editor-general-page"></a>XML 태스크 편집기(일반 페이지)
   **XML 태스크 편집기** 대화 상자의 **일반** 노드를 사용하여 작업 유형을 지정하고 작업을 구성할 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "58393908"
   
  **Source**를 **변수**로 설정한 경우 기존 변수를 선택하거나 **\<새 변수...>** 를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ## <a name="operationtype-dynamic-options"></a>OperationType 동적 옵션  
   
@@ -119,7 +119,7 @@ ms.locfileid: "58393908"
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--xslt"></a>OperationType = XSLT  
  XSLT 작업에 대한 옵션을 지정합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "58393908"
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -165,7 +165,7 @@ ms.locfileid: "58393908"
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--xpath"></a>OperationType = XPATH  
  XPath 작업에 대한 옵션을 지정합니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "58393908"
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -211,7 +211,7 @@ ms.locfileid: "58393908"
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **PutResultInOneNode**  
  결과를 단일 노드에 쓸지 여부를 지정합니다.  
@@ -246,7 +246,7 @@ ms.locfileid: "58393908"
   
  **XPathStringSourceType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  XPath 문을 사용하여 원본 문서의 병합 위치를 식별하는 경우 이 문은 단일 노드를 반환해야 합니다. 여러 노드가 반환되는 경우에는 첫 번째 노드만 사용됩니다. 두 번째 문서의 내용은 XPath 쿼리에서 반환하는 첫 번째 노드 아래에 병합됩니다.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "58393908"
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -291,7 +291,7 @@ ms.locfileid: "58393908"
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--diff"></a>OperationType = Diff  
  비교 작업에 대한 옵션을 지정합니다.  
@@ -313,11 +313,11 @@ ms.locfileid: "58393908"
 |**IgnoreXMLDeclaration**|XML 선언을 비교할지 여부를 지정합니다.|  
 |**IgnoreDTD**|DTD(문서 유형 정의)를 무시할지 여부를 지정합니다.|  
 |**IgnoreWhiteSpaces**|문서 비교 시 공백 양의 차이를 무시할 것인지 여부를 지정합니다.|  
-|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 로컬 이름은 같지만 네임스페이스가 다른 두 요소를 동일한 것으로 간주합니다.|  
+|**IgnoreNamespaces**|요소의 네임스페이스 URI(Uniform Resource Identifier)와 해당 요소의 특성 이름을 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션 설정 하는 경우 `True`, 다른 두 요소는 동일한 로컬 이름을 네임 스페이스와 동일한 것으로 간주 됩니다.|  
 |**IgnoreProcessingInstructions**|처리 명령을 비교할지 여부를 지정합니다.|  
-|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 형제 목록에서의 위치만 다른 여러 자식 요소를 동일한 것으로 간주합니다.|  
+|**IgnoreOrderOfChildElements**|자식 요소의 순서를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션 설정 하는 경우 `True`, 형제 목록에서 해당 위치 에서만에서 차이가 있는 자식 요소는 동일한 것으로 간주 합니다.|  
 |**IgnoreComments**|주석 노드를 비교할지 여부를 지정합니다.|  
-|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 `True`로 설정하는 경우 로컬 이름은 같지만 네임스페이스 URI 및 접두사가 다른 두 요소를 동일한 것으로 간주합니다.|  
+|**IgnorePrefixes**|요소와 특성 이름의 접두사를 비교할지 여부를 지정합니다.<br /><br /> 참고: 이 옵션을 설정 하는 경우 `True`, 로컬 이름은 같지만 다른 네임 스페이스 Uri 및 접두사가 있는 두 개의 요소가 동일한 것으로 간주 됩니다.|  
   
  **FailOnDifference**  
  비교 작업이 실패할 경우 태스크가 실패할지 여부를 지정합니다.  
@@ -338,7 +338,7 @@ ms.locfileid: "58393908"
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -366,7 +366,7 @@ ms.locfileid: "58393908"
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ### <a name="operationtype--patch"></a>OperationType = Patch  
  패치 작업에 대한 옵션을 지정합니다.  
@@ -384,7 +384,7 @@ ms.locfileid: "58393908"
   
  **DestinationType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수 추가](../../2014/integration-services/add-variable.md)합니다.  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
  **DestinationType**  
  XML 문서의 대상 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -412,7 +412,7 @@ ms.locfileid: "58393908"
   
  **SecondOperandType**을 **변수**로 설정한 경우 기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

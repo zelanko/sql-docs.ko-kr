@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633018"
 ---
 # <a name="text-file-format-text-file-driver"></a>텍스트 파일 형식(텍스트 파일 드라이버)
 텍스트 ODBC 드라이버는 구분 기호로 분리 된 파일과 고정 너비 텍스트 파일을 모두 지원합니다. 선택적 헤더 줄과 0 개 이상의 텍스트 줄의 텍스트 파일로 구성 됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "47739531"
 |형식|표시|  
 |------------|--------------------|  
 |비-기울임꼴|표시 된 대로 입력 해야 하는 문자|  
-|*기울임꼴*|문법에서 다른 곳에서 정의 된 인수|  
+|*italics*|문법에서 다른 곳에서 정의 된 인수|  
 |대괄호 ()|선택 항목|  
 |중괄호 ({})|상호 배타적인 선택 목록|  
 |세로 막대 (&#124;)|별도 상호 배타적인 선택|  

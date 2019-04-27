@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767435"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>3단계: 플랫 파일 연결 관리자 수정
   이 태스크에서는 1단원에서 만들어 구성한 플랫 파일 연결 관리자를 수정합니다. 처음 만든 플랫 파일 연결 관리자는 파일 하나를 정적으로 로드하도록 구성되어 있습니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User:varFileName`을 허용하도록 연결 관리자의 ConnectionString 속성을 수정해야 합니다.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770379"
 ---
 # <a name="create-relationships"></a>관계 만들기
   **관계 만들기** 대화 상자를 사용하여 유사 항목 조회 변환 편집기, 조회 변환 편집기 및 용어 조회 변환 편집기에서 구성한 원본 열과 조회 테이블 열 간의 매핑을 편집할 수 있습니다.  

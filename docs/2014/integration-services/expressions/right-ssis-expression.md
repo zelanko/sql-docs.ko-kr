@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768799"
 ---
 # <a name="right-ssis-expression"></a>RIGHT(SSIS 식)
   지정한 문자 식의 오른쪽에서부터 지정한 개수의 문자를 반환합니다.  

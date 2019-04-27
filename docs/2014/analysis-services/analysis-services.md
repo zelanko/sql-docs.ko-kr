@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638816"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 의사 결정 지원 및 BI(비즈니스 인텔리전스) 솔루션에서 사용되는 온라인 분석 데이터 엔진으로, Excel, Reporting Services 보고서, 타사 BI 도구와 같은 클라이언트 응용 프로그램 및 비즈니스 보고서에 대해 분석 데이터를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 일반적인 워크플로에는 OLAP 또는 표 형식 데이터 모델 작성, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 데이터베이스로 모델 배포, 데이터베이스를 처리하여 데이터와 함께 로드, 데이터 액세스 허용 권한 할당이 포함됩니다. 이 다목적 데이터 모델은 준비가 되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 데이터 원본으로 지원하는 클라이언트 응용 프로그램에서 액세스할 수 있습니다.  

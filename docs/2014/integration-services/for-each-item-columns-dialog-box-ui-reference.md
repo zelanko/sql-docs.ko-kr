@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d6e1b3a7b0be7e158ff2594a9d629cd82aaff95e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768218"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>For Each Item 열 대화 상자 UI 참조
   **For Each Item 열** 대화 상자를 사용하여 Foreach Item 열거자에서 열거하는 항목에 열을 정의할 수 있습니다.  

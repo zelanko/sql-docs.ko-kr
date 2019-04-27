@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a025826262097ef23da8a54bbbefd6781e601f6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767165"
 ---
 # <a name="odata-connection-manager-editor"></a>OData 연결 관리자 편집기
   **OData 연결 관리자 편집기** 대화 상자를 사용하여 OData 원본에 연결을 추가하거나 기존 연결을 편집할 수 있습니다.  

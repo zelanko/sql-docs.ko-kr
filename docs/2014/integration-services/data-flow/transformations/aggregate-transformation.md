@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770639"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "58384879"
   
  집계 변환은 비동기적이며 따라서 행별로 데이터를 사용하고 게시하지 않습니다. 대신 전체 행 집합을 사용하고 그룹화 및 집계를 수행한 다음 결과를 게시합니다.  
   
- 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 **CountryRegion**, **도시**, 및 **채우기**합니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
+ 이 변환은 어떤 열을 통해서도 전달되지 않지만 게시하는 데이터에 대한 데이터 흐름에 새 열을 만듭니다. 집계 함수가 적용하는 입력 열이나 변환에서 그룹화를 위해 사용되는 입력 열만 변환 출력으로 복사됩니다. 예를 들어 집계 변환 입력에는 세 개의 열 있을 수 있습니다. **CountryRegion**, **City** 및 **Population**과 같은 3개의 열만 포함될 수 있습니다. 변환은 **CountryRegion** 열에 따라 그룹화되며 Sum 함수를 **Population** 열에 적용합니다. 따라서 출력에는 **City** 열이 포함되지 않습니다.  
   
  또한 집계 변환에 여러 출력을 추가하고 각 집계를 서로 다른 출력으로 지정할 수 있습니다. 예를 들어 집계 변환이 Sum 및 the Average 함수를 적용하는 경우 각 집계는 서로 다른 출력으로 지정될 수 있습니다.  
   

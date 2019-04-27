@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766885"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 패키지 예약
   다음 절차에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업 단계를 통해 패키지 실행을 자동화하여 패키지를 실행하는 단계를 제공합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "58388101"
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
-    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.|  
+    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: 로 관리 되는 파일 시스템에 추가로 폴더를 지정 하거나 다른 폴더를 지정할 수 있습니다 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대 한 구성 파일을 수정 하 여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]입니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.|  
     |**파일 시스템**|컴퓨터의 임의 폴더에 저장된 패키지입니다.|  
   
      **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  
@@ -77,7 +77,7 @@ ms.locfileid: "58388101"
     ||**오류 시 덤프**: 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다.<br /><br /> 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다.<br /><br /> 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 파일을 저장합니다.|  
     ||**32비트 런타임** 64비트 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
   
-     **패키지 원본**:  SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
+     **패키지 원본**:  SQL Server, SSIS 패키지 저장소 또는 파일 시스템  
   
      패키지에 설정하는 대부분의 옵션이 SQL Server, SSIS 패키지 저장소 또는 파일 시스템에 저장되며 `dtexec` 명령 프롬프트 유틸리티의 명령줄 옵션에 해당합니다. 유틸리티와 명령줄 옵션에 대한 자세한 내용은 [dtexec 유틸리티](packages/dtexec-utility.md)를 참조하세요.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "58388101"
     |**로깅**|로그 공급자를 패키지 실행과 연결합니다.<br /><br /> **텍스트 파일용 SSIS 로그 공급자**<br /> ASCII 텍스트 파일에 로그 항목을 기록합니다.<br /><br /> **SQL Server용 SSIS 로그 공급자**<br /> MSDB 데이터베이스의 sysssislog 테이블에 로그 항목을 기록합니다.<br /><br /> **SQL Server Profiler용 SSIS 로그 공급자**<br /> SQL Server 프로파일러를 사용하여 볼 수 있는 추적 정보를 기록합니다.<br /><br /> **Windows 이벤트 로그용 SSIS 로그 공급자**<br /> Windows 이벤트 로그의 애플리케이션 로그에 로그 항목을 기록합니다.<br /><br /> **XML 파일용 SSIS 로그 공급자**<br /> XML 파일에 로그 파일을 기록합니다.<br /><br /> 텍스트 파일, XML 파일 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로파일러 로그 공급자의 경우 패키지에 포함된 파일 연결 관리자를 선택합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로그 공급자의 경우 패키지에 포함된 OLE DB 연결 관리자를 선택합니다.<br /><br /> 이 옵션은 `/Logger`의 `dtexec` 옵션에 해당합니다.|  
     |**값 설정**|패키지 속성 설정을 재정의합니다. **속성** 상자에서 **속성 경로** 및 **값** 열에 값을 입력합니다. 속성 하나에 대한 값을 입력하면, **속성** 상자에 빈 행이 나타나고 다른 속성에 대한 값을 입력할 수 있게 됩니다.<br /><br /> 속성 상자에서 속성을 제거하려면 행을 클릭한 다음 **제거**를 클릭합니다.<br /><br /> 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> XML 구성 파일에서 속성 경로 복사 (\*.dtsconfig) 파일입니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. 다음은 MaximumErrorCount 속성에 대한 경로의 예입니다.<br /><br /> \Package.Properties[MaximumErrorCount]<br /><br /> **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.|  
     |**확인**|**서명된 패키지만 실행**<br /> 패키지 서명 확인 여부를 나타냅니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 이 옵션은 `/VerifySigned`의 `dtexec` 옵션에 해당합니다.<br /><br /> **패키지 빌드 확인**<br /> 패키지의 빌드 번호가 이 옵션 옆에 있는 **빌드** 상자에 입력된 빌드 번호와 비교하여 검증되었는지를 나타냅니다. 일치하지 않을 경우 패키지가 실행되지 않습니다. 이 옵션은 `/VerifyBuild`의 `dtexec` 옵션에 해당합니다.<br /><br /> **패키지 ID 확인**<br /> 패키지의 GUID가 이 옵션 옆에 있는 **패키지 ID** 상자에 입력된 package ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 `/VerifyPackageID`의 `dtexec` 옵션에 해당합니다.<br /><br /> **버전 ID 확인**<br /> 패키지의 버전 GUID가 이 옵션 옆에 있는 **버전 ID** 상자에 입력된 버전 ID와 비교하여 검증되었는지를 나타냅니다. 이 옵션은 `/VerifyVersionID`의 `dtexec` 옵션에 해당합니다.|  
-    |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하십시오.<br /><br /> 팁:  명령 프롬프트 창에 명령줄을 복사하고 `dtexec`을 추가하여 명령줄에서 패키지를 실행할 수 있습니다. 이렇게 하면 명령줄 텍스트를 쉽게 만들 수 있습니다.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> 작업 단계에 변경한 내용을 저장하기 위해 **확인**을 클릭하기 전에 **원래 옵션 복원**을 클릭하면 **명령줄** 상자에 추가로 입력한 옵션을 모두 삭제할 수 있습니다.|  
+    |**명령줄**|dtexec의 명령줄 옵션을 수정합니다. 옵션에 대한 자세한 내용은 [dtexec Utility](packages/dtexec-utility.md)를 참조하십시오.<br /><br /> 팁:  명령 프롬프트 창에 명령줄을 복사를 추가할 수 있습니다 `dtexec`, 명령줄에서 패키지를 실행 합니다. 이렇게 하면 명령줄 텍스트를 쉽게 만들 수 있습니다.<br /><br /> **원래 옵션 복원**<br /> **작업 단계 속성**대화 상자의 **패키지**, **구성**, **명령 파일**, **데이터 원본**, **실행 옵션**, **로깅**, **값 설정** , **확인** 탭에 설정한 명령줄 옵션을 사용합니다.<br /><br /> **수동으로 명령 편집**<br /> **명령줄** 상자에 명령줄 옵션을 추가로 입력합니다.<br /><br /> 작업 단계에 변경한 내용을 저장하기 위해 **확인**을 클릭하기 전에 **원래 옵션 복원**을 클릭하면 **명령줄** 상자에 추가로 입력한 옵션을 모두 삭제할 수 있습니다.|  
   
 9. **확인** 을 클릭하여 설정을 저장하고 **새 작업 단계** 대화 상자를 닫습니다.  
   

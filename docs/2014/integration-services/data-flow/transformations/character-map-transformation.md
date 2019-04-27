@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770424"
 ---
 # <a name="character-map-transformation"></a>문자표 변환
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  

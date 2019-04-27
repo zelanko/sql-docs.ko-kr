@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768789"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
   **속성 식 편집기** 대화 상자를 사용하여 속성 값을 업데이트하는 속성 식을 생성, 편집 또는 삭제할 수 있습니다.  

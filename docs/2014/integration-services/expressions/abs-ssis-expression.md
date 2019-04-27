@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769619"
 ---
 # <a name="abs-ssis-expression"></a>ABS(SSIS 식)
   숫자 식의 절대값을 양수로 반환합니다.  

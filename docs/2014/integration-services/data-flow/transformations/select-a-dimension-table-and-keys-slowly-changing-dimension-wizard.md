@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f93d60b28488dbb910dcb727015c25848db220e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770449"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>차원 테이블 및 키 선택(느린 변경 차원 마법사)
   **차원 테이블 및 키 선택** 페이지를 사용하여 로드할 차원 테이블을 선택할 수 있습니다. 데이터 흐름의 열을 로드하는 열에 매핑합니다.  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 86392b3851af7a5774b5acb572cfc19c62266ab6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769899"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services 프로젝트 배포
   프로젝트에 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 사용하려면 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 환경을 설치해야 합니다. 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: effe6c8e07ea9303bb77842934afebb7c2e6bec1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767045"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>패키지 및 프로젝트 보호 수준 대화 상자
   **패키지 보호 수준** 대화 상자를 사용하여 패키지 보호 수준을 업데이트할 수 있습니다. 보호 수준은 보호 방법(암호 또는 사용자 키)과 패키지 보호의 범위를 결정합니다. 보호에는 모든 데이터를 포함시키거나 중요한 데이터만 포함시킬 수 있습니다.  

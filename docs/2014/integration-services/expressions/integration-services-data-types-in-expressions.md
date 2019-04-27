@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769115"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
   식 계산기는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 사용합니다. 데이터가 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에 처음 포함될 때 데이터 흐름 엔진이 모든 열 데이터를 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환하므로 식에 사용되는 열 데이터는 이미 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식입니다. 조건부 분할 및 파생 열 변환에 사용된 식은 열 데이터가 포함된 데이터 흐름에 속해 있으므로 열을 참조할 수 있습니다.  

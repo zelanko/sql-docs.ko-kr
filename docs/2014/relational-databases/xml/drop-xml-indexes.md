@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638108"
 ---
 # <a name="drop-xml-indexes"></a>XML 인덱스 삭제
   [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 기존 기본 또는 보조 XML 인덱스 및 비 XML 인덱스를 삭제할 수 있습니다. 그러나 DROP INDEX의 옵션은 XML 인덱스에 적용되지 않습니다. 기본 XML 인덱스를 삭제하려면 존재하는 보조 인덱스도 모두 삭제됩니다.  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예: DROP_EXISTING 인덱스 옵션을 사용 하 여 XML 인덱스 만들기  
  다음 예에서는 XML 인덱스가`XmlColx`열에 생성됩니다. 그런 다음 같은 이름으로 된 다른 XML 인덱스가 다른 열`XmlColy`에 생성됩니다. `DROP_EXISTING` 옵션이 지정되어 있으므로 (`XmlColx)` )의 기존 XML 인덱스가 삭제되고 (`XmlColy`)의 새 XML 인덱스가 생성됩니다.  
   
 ```  

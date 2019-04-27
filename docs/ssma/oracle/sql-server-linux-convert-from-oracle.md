@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629862"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server 2017로 마이그레이션
 
@@ -28,7 +28,7 @@ ms.locfileid: "51659662"
 > * 샘플 HR 스키마 변환
 > * 데이터 마이그레이션
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 - 인스턴스가 Oracle 12c (12.2.0.1.0)는 **HR** 스키마 설치
 - Linux의 SQL Server의 작업 인스턴스를
@@ -128,7 +128,7 @@ Oracle 용 SSMA는 기본적으로 Oracle 샘플 스키마를 사용 하지 않�
 
 더 복잡 한 Orcale 스키마의 경우 변환 프로세스는 자세한 시간, 테스트 및 클라이언트 응용 프로그램 변경이 발생할에 포함 됩니다. 이 자습서의 용도 전체 마이그레이션 프로세스의 일부로 Oracle 용 SSMA를 사용 하는 방법을 보여 줍니다.
 
-이 자습서에서는 학습 하는 방법.
+이 자습서에서는 다음과 같은 방법을 학습했습니다.
 > [!div class="checklist"]
 > * SSMA Windows 설치
 > * 새 SSMA 프로젝트 만들기

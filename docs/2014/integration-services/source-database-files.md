@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fb0f2659323960e58bb70ff2bb36f8367088dd7a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766466"
 ---
 # <a name="source-database-files"></a>원본 데이터베이스 파일
   **원본 데이터베이스 파일** 대화 상자를 사용하여 원본 서버의 데이터베이스 파일 이름 및 위치를 보거나 데이터베이스 전송 태스크에 대한 네트워크 파일 공유 위치를 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  

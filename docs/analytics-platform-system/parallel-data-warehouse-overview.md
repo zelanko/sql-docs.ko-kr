@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639890"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-Analytics Platform System
 이 문서는 어플라이언스 소프트웨어 및 Analytics Platform System의 비 어플라이언스 소프트웨어 구성 요소를 설명합니다.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637631"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>특성 이름 및 데이터 형식 변경(Master Data Services)
 
@@ -59,7 +59,7 @@ ms.locfileid: "52785281"
   
 9. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767205"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기(연결 관리자 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "58384491"
 |옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련된 정보:** [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)|  
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 데이터 원본에서 데이터를 검색합니다.|  
 |변수를 사용한 SQL 명령|변수에 SQL 쿼리 텍스트를 지정합니다.|  
   

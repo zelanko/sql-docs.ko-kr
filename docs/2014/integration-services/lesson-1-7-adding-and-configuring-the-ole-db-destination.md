@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767562"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>7단계: OLE DB 대상 추가 및 구성
   이제 패키지는 플랫 파일 원본에서 데이터를 추출하여 대상과 호환되는 형식으로 이 데이터를 변환할 수 있습니다. 다음 태스크에서는 변환된 데이터를 실제로 대상에 로드합니다. 데이터를 로드하려면 데이터 흐름에 OLE DB 대상을 추가해야 합니다. OLE DB 대상은 데이터베이스 테이블, 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스에 데이터를 로드할 수 있습니다.  

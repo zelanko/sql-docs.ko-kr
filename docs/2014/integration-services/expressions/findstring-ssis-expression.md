@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769179"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING(SSIS 식)
   문자 식에서 지정한 문자열 발생 위치를 반환합니다. 반환 결과는 항목의 인덱스(1부터 시작)입니다. 문자열 매개 변수는 문자 식으로 계산되고 발생 빈도 매개 변수는 정수여야 합니다. 문자열을 찾을 수 없는 경우 반환 값은 0입니다. 문자열이 발생 인수에 지정된 횟수보다 적게 발생하는 경우에도 반환 값이 0입니다.  

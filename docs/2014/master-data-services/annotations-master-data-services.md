@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 73be214576870a13b37b16c0774e645e77518bea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765996"
 ---
 # <a name="annotations-master-data-services"></a>주석(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 주석은 트랜잭션에 대한 세부 정보를 제공하기 위해 입력하는 설명입니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8968b56e235b4f95f8106e17daff506b13ca7b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636457"
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>단원 1-1-Analysis Services 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34016260"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [데이터 원본 정의](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Analysis Services 프로젝트 & #40; 만들기 SSDT & #41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

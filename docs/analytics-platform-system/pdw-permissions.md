@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639508"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 관리 권한
 이 문서에서는 요구 사항 및 SQL Server PDW에 대 한 데이터베이스 권한을 관리 하기 위한 옵션을 설명 합니다.  

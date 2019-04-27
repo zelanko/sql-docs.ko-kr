@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: bff48432749d6886f58c985adc9cb779303edb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626754"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>프로젝트 설정(변환)(OracleToSQL)
 변환 페이지의 **프로젝트 설정** 대화 상자에는 SSMA Oracle 구문을 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문입니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "52410310"
 |**시퀀스 생성기를 변환 합니다.**|Oracle에서는 고유 식별자를 생성 하는 시퀀스를 사용할 수 있습니다.<br /><br />SSMA는 다음에 시퀀스를 변환할 수 있습니다.<br /><br />(이 옵션은만 사용할 수 있는 SQL Server 2012 및 SQL Server 2014를 변환 하는 경우)는 SQL Server 시퀀스 생성기를 사용 합니다.<br /><br />SSMA 시퀀스 생성기를 사용합니다.<br /><br />열 id를 사용 하 여 합니다.<br /><br />SQL Server 2012 또는 SQL Server 2014를 변환 하는 경우 기본 옵션을 SQL Server 시퀀스 생성기를 사용 하는 것입니다. 그러나 SQL Server 2012 및 SQL Server 2014 지원 하지 않습니다 (예: Oracle 시퀀스 currval 메서드는) 현재 시퀀스 값 가져오기. Oracle 시퀀스 currval 메서드를 마이그레이션에 대 한 지침은 SSMA 팀 블로그 사이트를 참조 하십시오.<br /><br />SSMA는 또한 Oracle 시퀀스 SSMA 시퀀스 에뮬레이터를 변환 하는 옵션을 제공 합니다. SQL Server 2012 이전의 변환할 때 이것이 기본 옵션<br /><br />마지막으로, SQL Server id 값을 테이블의 열에 할당 된 시퀀스를 변환할 수 있습니다. Oracle에서 id 열에 시퀀스 간의 매핑을 지정 해야 합니다 **테이블** 탭|  
 |**외부 트리거 CURRVAL 변환**|변환할 시퀀스 생성기로 설정 된 경우에 표시 **identity 열을 사용 하 여**입니다. Oracle 시퀀스는 테이블에서 별도 개체를 생성 하 고 새 시퀀스 값을 삽입 트리거를 사용 하는 시퀀스를 사용 하는 여러 테이블. SSMA 이러한 문을 주석으로 처리 하거나 주석 처리 아웃 오류를 생성 하는 경우 오류로 표시 합니다.<br /><br />선택 하는 경우 **예**, SSMA에서 변환 된 트리거 외부 CURRVAL 경고를 사용 하 여 시퀀스에 대 한 모든 참조 표시 됩니다.<br /><br />선택 하는 경우 **No**, SSMA에서 변환 된 트리거 외부 CURRVAL 오류가 발생 하 여 시퀀스에 대 한 모든 참조 표시 됩니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

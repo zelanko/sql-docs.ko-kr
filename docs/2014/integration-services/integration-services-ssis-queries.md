@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767665"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
   SQL 쿼리는 SQL 실행 태스크, OLE DB 원본, OLE DB 대상 및 조회 변환에서 사용될 수 있습니다. SQL 실행 태스크에서 SQL 문은 데이터베이스 개체 및 데이터를 생성, 업데이트 및 삭제할 수 있으며 저장 프로시저를 실행하고 SELECT 문을 수행할 수 있습니다. OLE DB 원본 및 조회 변환에서 일반적으로 SQL 문은 SELECT 문 또는 EXEC 문입니다. 후자는 결과 집합을 반환하는 저장 프로시저를 가장 자주 실행합니다.  

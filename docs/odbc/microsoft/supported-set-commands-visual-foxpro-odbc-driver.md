@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9832d2a3772d63c1b0641f6ca08205e25a9867c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633784"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>지원되는 SET 명령(Visual FoxPro ODBC 드라이버)
 응용 프로그램에 다음 Visual FoxPro 보낼 수 있습니다 **설정** 데이터 원본에 명령 합니다.  

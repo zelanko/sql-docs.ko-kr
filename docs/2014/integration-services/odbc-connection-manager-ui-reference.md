@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767115"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 연결 관리자 UI 참조
   **ODBC 연결 관리자 구성** 대화 상자를 사용하여 ODBC 데이터 원본에 대한 연결을 추가할 수 있습니다.  

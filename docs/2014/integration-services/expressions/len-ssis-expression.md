@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8bcaeb04bdc2ff8b37860ffc434d2e188436411
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769079"
 ---
 # <a name="len-ssis-expression"></a>LEN(SSIS 식)
   문자 식에 포함된 문자의 수를 반환합니다. 문자열에 선행 및 후행 공백이 포함되어 있으면 공백도 개수에 포함됩니다. LEN은 싱글바이트 및 더블바이트 문자의 동일한 문자열에 대해 같은 값을 반환합니다.  

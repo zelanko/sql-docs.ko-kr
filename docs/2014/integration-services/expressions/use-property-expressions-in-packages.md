@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768857"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
   속성 식은 런타임에 동적으로 속성을 업데이트하기 위해 속성에 할당한 식입니다. 예를 들어 속성 식을 사용하면 메일 보내기 태스크에서 사용하는 받는 사람 줄에 변수에 저장된 전자 메일 주소를 삽입할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "58376044"
   
 -   식 내의 변수는 스크립트 태스크 및 스크립트 구성 요소가 실행하는 스크립트에서 업데이트할 수 있습니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어를 사용하여 식을 작성할 수 있습니다. 식에서는 시스템 변수 또는 사용자 정의 변수를 식 언어에서 제공하는 연산자, 함수 및 형식 변환과 함께 사용할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어를 사용하여 식을 작성할 수 있습니다. 식에서는 시스템 변수 또는 사용자 정의 변수를 식 언어에서 제공하는 연산자, 함수 및 형식 변환과 함께 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  사용자 정의 변수 및 시스템 변수의 이름은 대/소문자를 구분합니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "58376044"
   
  패키지 이름이 EmailRowCountPP이고 2005/3/4에 9초 동안 실행된 경우 식이 다음 문자열로 계산됩니다.  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression-패키지->: (EmailRowCountPP) 시작: 2005 년 3 월 4 일 오전 11시 06분: 18 기간: 9 시간 (초)입니다.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>전자 메일 메시지의 메시지에 속성 식 사용  
  다음 속성 식을 사용하여 메일 보내기 태스크의 MessageSource 속성을 설정할 수 있습니다. 식에는 문자열 리터럴 조합, 사용자 정의 변수 및 연결 (+) 연산자를 사용합니다. 사용자 정의 변수의 이름은 `nasdaqrawrows`, `nyserawrows`및 `amexrawrows`입니다. 문자열 "\n"은 캐리지 리턴을 나타냅니다.  

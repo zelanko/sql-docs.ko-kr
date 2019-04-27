@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635589"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터 작동
 
@@ -261,7 +261,7 @@ pacemaker: active/enabled
 
     다음 포트를 전달할 수 있게 되기를 Pacemaker에 대 한 모든 노드에서 열려 있어야 합니다.
     
-    - * * TCP: 2224를 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
 - **Pacemaker 또는 Corosync 서비스 실행**
 

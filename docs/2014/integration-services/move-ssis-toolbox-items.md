@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767215"
 ---
 # <a name="move-ssis-toolbox-items"></a>SSIS 도구 상자 항목 이동
   새 SSIS 도구 상자에는 기본 설정에 따라 항목을 구성할 수 있는 기능과 새 범주가 포함되어 있습니다. 도구 상자의 아래쪽에 있는 정보 창에는 선택한 도구 상자 항목에 대한 설명과 온라인 설명서 항목의 링크가 제공됩니다.  

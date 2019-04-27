@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b749a88a0783e6981cf9fd643412f0ca614e6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768737"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING(SSIS 식)
   문자 식에서 지정된 위치부터 시작하여 지정된 길이만큼 반환합니다. *position* 매개 변수와 *length* 매개 변수는 정수여야 합니다.  

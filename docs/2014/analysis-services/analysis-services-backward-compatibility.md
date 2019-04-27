@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635224"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services 이전 버전과의 호환성
   이 섹션의 항목에서는  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]버전 간의 변경된 동작에 대해 설명합니다.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97c41b4ca75336f70b049239112132c89b05fba5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768489"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅
   이 절차에서는 스크립트 태스크 및 스크립트 구성 요소에 사용되는 스크립트에서 중단점을 설정하는 방법에 대해 설명합니다.  

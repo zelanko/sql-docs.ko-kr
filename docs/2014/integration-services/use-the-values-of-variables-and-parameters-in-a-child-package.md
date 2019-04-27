@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766106"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>자식 패키지에서 변수 및 매개 변수의 값 사용
   이 절차에서는 부모 변수 구성 유형을 사용하는 패키지 구성을 만드는 방법에 대해 설명합니다. 이 구성 유형을 사용하여 부모 패키지에서 실행되는 자식 패키지가 부모 변수에 액세스하도록 설정할 수 있습니다.  

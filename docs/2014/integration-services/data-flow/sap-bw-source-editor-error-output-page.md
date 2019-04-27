@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770715"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
   **SAP BW 원본 편집기** 의 **오류 출력** 페이지에서는 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  

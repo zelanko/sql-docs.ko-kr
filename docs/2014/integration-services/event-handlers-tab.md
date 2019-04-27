@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f13aa09f7b424da63348c5363bc6d5077ed9f2c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769759"
 ---
 # <a name="event-handlers-tab"></a>이벤트 처리기 탭
   **디자이너의** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 제어 흐름을 작성할 수 있습니다. 이벤트 처리기는 패키지 또는 패키지의 태스크나 컨테이너에 의해 발생한 이벤트에 대한 응답으로 실행됩니다.  

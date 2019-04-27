@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abc0228063e62447c34b0236009977a33bddb176
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768499"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. 합니다 `System.Drawing.Printing` 네임 스페이스에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 프린터 작업을 위한 클래스를 제공 합니다.  

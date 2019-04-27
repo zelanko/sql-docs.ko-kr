@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5c2971b1d4da669cadc57f0a557b32bf2b1adde
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767325"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>조회 변환 편집기(연결 페이지)
   **조회 변환 편집기** 대화 상자의 **연결** 페이지를 사용하여 연결 관리자를 선택할 수 있습니다. OLE DB 연결 관리자를 선택하면 쿼리, 테이블 또는 뷰를 선택하여 참조 데이터 세트를 생성할 수도 있습니다.  

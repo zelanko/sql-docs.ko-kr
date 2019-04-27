@@ -20,11 +20,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631631"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58494036"
 |NAME|**NVARCHAR(128)**|서버 수준 방화벽 설정을 설명하고 구분하기 위해 선택한 이름입니다.|  
 |start_ip_address|**VARCHAR(45)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  
 |end_ip_address|**VARCHAR(45)**|서버 수준 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다.<br /><br /> 참고: Windows Azure 연결을 시도할 수 있습니다이 필드와 **start_ip_address** equals 필드 `0.0.0.0`합니다.|  
-|create_date|**DATETIME**|서버 수준 방화벽 설정이 만들어진 UTC 날짜 및 시간입니다.<br /><br /> 참고: UTC는 Coordinated Universal Time의 약어입니다.|  
+|create_date|**DATETIME**|서버 수준 방화벽 설정이 만들어진 UTC 날짜 및 시간입니다.<br /><br /> 참고: UTC는 Coordinated Universal time 머리 글자어입니다.|  
 |modify_date|**DATETIME**|서버 수준 방화벽 설정이 마지막 수정된 UTC 날짜 및 시간입니다.|  
   
 ## <a name="remarks"></a>Remarks
