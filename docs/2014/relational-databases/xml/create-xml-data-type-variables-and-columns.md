@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637996"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
   `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 사용할 수 있는 다른 기본 제공 형식과 합니다 `xml` 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 테이블을 만들 때 데이터 형식을 열 유형으로 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)합니다.  

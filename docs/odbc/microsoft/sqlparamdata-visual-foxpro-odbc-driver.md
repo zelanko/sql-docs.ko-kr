@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a29b9502fcadf77075f6ee1d49b021233f07ab1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636742"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47771541"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  와 함께 사용할 [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) 문 실행 시 데이터 매개 변수를 지정 합니다.  
   

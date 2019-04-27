@@ -1,5 +1,5 @@
 ---
-title: '? : (조건부) (SSIS 식) | Microsoft Docs'
+title: '? : (조건부)(SSIS 식) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769400"
 ---
-# <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
+# <a name="--conditional-ssis-expression"></a>? : (조건부) (SSIS 식)
   부울 식의 계산에 따라 두 식 중 하나를 반환합니다. 부울 식이 TRUE이면 첫 번째 식이 계산되고 반환 결과는 식의 결과입니다. 부울 식이 FALSE이면 두 번째 식이 계산되고 반환 결과는 식의 결과입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -57,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* 및 *expression2* 모두 숫자 데이터 형식이어야 합니다. 데이터 형식의 교집합은 식 계산기가 수행하는 암시적 숫자 변환에 대한 규칙에 지정된 대로 숫자 데이터 형식이어야 합니다. 두 숫자 데이터 형식의 교집합은 Null일 수 없습니다. 자세한 내용은 [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md)을 참조하세요.  
   
--   **문자열** 둘 다 *expression1* 하 고 *expression2* 문자열 데이터 형식 이어야 합니다. DT_STR 또는 DT_WSTR여야 합니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
+-   **String** *expression1*과 *expression2* 모두 문자열 데이터 형식인 DT_STR 또는 DT_WSTR입니다. 두 식이 서로 다른 문자열 데이터 형식으로 계산될 수 있습니다. 결과는 DT_WSTR 데이터 형식으로 둘 중에서 긴 인수의 길이입니다.  
   
--   **날짜, 시간 또는 날짜/시간** 둘 다 *expression1* 하 고 *expression2* 다음 데이터 형식 중 하나로 계산 되어야 합니다. DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, DT_FILETIME 데이터 형식 중 하나로 계산되어야 합니다.  
+-   **Date, Time 또는 Date/Time** *expression1*과 *expression2* 모두 DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET 또는 DT_FILETIME 합니다.  
   
     > [!NOTE]  
     >  시간 데이터 형식으로 계산되는 식과 날짜 또는 날짜/시간 데이터 형식 중 하나로 계산되는 식 사이의 비교는 지원되지 않습니다. 시스템에서 오류가 발생합니다.  

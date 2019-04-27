@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767385"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 파일 만들기
+# <a name="step-2-creating-a-corrupted-file"></a>2단계: 손상된 된 파일 만들기
   변환 오류의 구성 및 처리를 보여 주기 위해 처리 시 구성 요소의 실패를 야기하는 예제 플랫 파일을 만들어야 합니다.  
   
  이 태스크에서는 기존 예제 플랫 파일의 복사본을 만듭니다. 그런 다음 메모장에서 해당 파일을 열고 변환 조회를 수행하는 동안 일치 항목을 생성하지 못하도록 **CurrencyID** 열을 편집합니다. 이 새 파일을 처리하면 조회 실패로 Currency Key Lookup 변환이 실패하며 따라서 패키지의 나머지 부분도 실패합니다. 손상된 예제 파일을 만든 다음에는 패키지를 실행하여 패키지 오류를 봅니다.  

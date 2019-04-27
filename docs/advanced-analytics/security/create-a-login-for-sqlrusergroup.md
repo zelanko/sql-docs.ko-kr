@@ -9,13 +9,13 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642103"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대 한 로그인 만들기
+# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 만들기를 [SQL Server 로그인](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) 에 대 한 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 때를 [루프백 연결 루프](../../advanced-analytics/concepts/security.md#implied-authentication) 스크립트에서 지정을 *트러스트 된 연결*, 코드를 포함 하는 개체를 실행 하는 데 id 및 Windows 사용자 계정입니다.
