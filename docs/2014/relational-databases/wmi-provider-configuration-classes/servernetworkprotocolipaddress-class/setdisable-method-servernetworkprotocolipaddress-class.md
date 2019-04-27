@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adaa66fd04f6e3b6f97b4e4edc75d9a21ea4e31f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643214"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>SetDisable 메서드(ServerNetworkProtocolIPAddress 클래스)
   IP 주소를 해제합니다.  

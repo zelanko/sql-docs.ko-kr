@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731495"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>테이블 속성 편집 대화 상자(SSAS)
   **테이블 속성 편집** 대화 상자에서는 테이블 가져오기 마법사를 사용하여 모델 디자이너로 가져온 테이블의 속성을 보고 수정할 수 있습니다. 모델 디자이너에서 이 대화 상자를 열려면 가져온 데이터의 테이블을 선택한 다음 **테이블** 메뉴를 클릭하고 **테이블 속성**을 클릭합니다.  
@@ -100,6 +100,6 @@ ms.locfileid: "48229283"
  열 바꾸기를 비롯한 모든 변경 내용을 적용하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 및 열 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [테이블 및 열&#40;SSAS 테이블 형식&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

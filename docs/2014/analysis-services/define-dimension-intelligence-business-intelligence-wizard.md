@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732119"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>차원 인텔리전스 정의(비즈니스 인텔리전스 마법사)
   **차원 인텔리전스 정의** 페이지를 사용하여 기존 차원 특성을 지정한 차원 유형의 특성 유형으로 매핑할 수 있습니다.  

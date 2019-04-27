@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666970"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "54123933"
   
  **게시 및 구독 상태를 보려면**  
   
--   복제 모니터: [정보 및 복제 모니터를 사용 하 여 수행할 작업을 보려면](view-information-and-perform-tasks-replication-monitor.md)합니다.
+-   복제 모니터: [복제 모니터를 사용하여 정보 보기 및 태스크 수행](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>게시 상태 값  

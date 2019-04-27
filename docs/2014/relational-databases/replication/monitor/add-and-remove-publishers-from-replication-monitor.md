@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667421"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
   복제 모니터를 실행하는 서버가 게시자인 경우 자동으로 모니터에 추가됩니다. **게시자 추가** 대화 상자를 통해 게시자를 추가할 수 있습니다. 게시자를 추가하면 게시자는 모니터의 왼쪽 창에 있는 그룹에 표시됩니다. **내 게시자** 그룹이 기본적으로 포함되지만 새 그룹을 만들어 하나 이상의 복제 토폴로지를 관리할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](start-the-replication-monitor.md)을 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "52788443"
   
 2.  **게시자 추가** 대화 상자에서 **추가**를 클릭한 다음 **Oracle 게시자 추가**를 클릭합니다.  
   
-3.   **서버에 연결** 대화 상자에서 Oracle 게시자와 관련된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력한 다음 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
+3.  **서버에 연결** 대화 상자에서 Oracle 게시자와 관련된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자의 이름을 입력한 다음 인증 유형을 선택합니다. **SQL Server 인증**을 선택한 경우 로그인 및 암호를 입력합니다. 지정한 자격 증명은 나중에 이 서버에 연결할 때 사용하기 위해 복제 모니터에 의해 저장됩니다. 지정한 Windows 계정 또는 SQL Server 로그인은 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에 있는 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 4.  **연결**을 클릭합니다.  
   

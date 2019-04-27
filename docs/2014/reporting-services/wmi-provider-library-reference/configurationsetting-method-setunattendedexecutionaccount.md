@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3c0402d8ae19850c213355cb69cf452e5a3cc0f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646340"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>SetUnattendedExecutionAccount 메서드(WMI MSReportServer_ConfigurationSetting)
   무인 모드로 보고서를 실행하는 데 사용되는 계정을 지정합니다.  

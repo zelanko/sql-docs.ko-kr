@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d78cd09c03f6507bdb87cda4c47e8132f2e1f9b6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646369"
 ---
 # <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 보안 연결 수준을 설정합니다.  

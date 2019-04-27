@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaac46d0fd741e53493903d6fe0bb4656e9499a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774137"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
   다음 격리 수준은 메모리 최적화 테이블에 액세스하는 트랜잭션에 대해 지원됩니다.  

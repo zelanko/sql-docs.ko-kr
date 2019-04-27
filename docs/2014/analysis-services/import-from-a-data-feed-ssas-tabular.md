@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730766"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>데이터 피드에서 가져오기(SSAS 테이블 형식)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 XML 데이터 스트림입니다. 테이블 가져오기 마법사를 사용하여 데이터 피드의 데이터를 모델로 가져올 수 있습니다.  
@@ -191,10 +191,10 @@ ms.locfileid: "48099843"
 12. **테이블 및 뷰 선택** 페이지에서 **마침**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [지원 되는 데이터 형식 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [가장 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
+ [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [가장&#40;SSAS 테이블 형식&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [데이터 처리&#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)  
   
   

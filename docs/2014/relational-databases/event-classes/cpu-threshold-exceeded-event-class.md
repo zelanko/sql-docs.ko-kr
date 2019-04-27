@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663486"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>CPU Threshold Exceeded 이벤트 클래스
   CPU Threshold Exceeded 이벤트 클래스는 리소스 관리자가 REQUEST_MAX_CPU_TIME_SEC에 지정된 CPU 임계값을 초과하는 쿼리를 감지했음을 나타냅니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "52770455"
 |EventSubClass|`int`|CPU 제한 위반입니다.|21|사용자 계정 컨트롤|  
 |GroupID|`int`|위반이 발생한 그룹 ID입니다.|66|사용자 계정 컨트롤|  
 |OwnerID|`int`|위반을 발생시킨 프로세스의 SPID입니다.|58|사용자 계정 컨트롤|  
-|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 ID는 시스템 스레드가 CPU 사용량의 유효성을 백그라운드 태스크로 검사할 경우 실제 사용자 SPID와 다를 수 있습니다.|12|사용자 계정 컨트롤|  
+|SPID|`int`|이 이벤트를 발생시키는 서버 프로세스의 ID입니다.<br /><br /> 참고: 이 값은 시스템 스레드를 백그라운드 작업으로 CPU 사용량의 유효성을 검사 하는 경우 실제 사용자 SPID에서에서 달라질 수 있습니다.|12|사용자 계정 컨트롤|  
 |StartTime|`datetime`|이 이벤트가 발생한 시간입니다.|14|사용자 계정 컨트롤|  
   
 ## <a name="see-also"></a>관련 항목  

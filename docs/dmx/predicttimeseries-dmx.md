@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659182"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,14 +46,14 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* 0 일 수 없습니다. 하나 이상의 예측을 만들지 않으면 함수에서 오류가 반환됩니다.  
   
- *n-시작, n-종료*  
+ *n-start, n-end*  
  시계열 단계의 범위를 지정합니다.  
   
  *n 시작* 정수 이어야 하며 0 일 수 없습니다.  
   
  *n 엔드* 보다 큰 정수 여야 합니다 *n 시작*합니다.  
   
- *\<원본 쿼리 >*  
+ *\<source query>*  
  예측을 수행하는 데 사용되는 외부 데이터를 정의합니다.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -85,12 +85,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   세 번째 예는 EXTEND_MODEL_CASES 매개 변수를 사용하여 마이닝 모델을 새 데이터로 업데이트하는 방법을 보여 줍니다.  
   
- 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 참조는 데이터 마이닝 자습서 [2 단원: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 하 고 [시간 시계열 예측 DMX 자습서](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
+ 시계열 모델을 사용 하는 방법에 대 한 자세한 내용은 데이터 마이닝 자습서를 참조 하세요. [단원 2: 예측 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) 하 고 [시간 시계열 예측 DMX 자습서](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)합니다.  
   
 > [!NOTE]  
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>예제 1: 시간 조각의 수 예측  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>예 1: 시간 조각의 수 예측  
  다음 예제에서는 합니다 **PredictTimeSeries** 다음에 대 한 예측을 반환 하는 함수 세 시간 단계 및 결과를 Europe 및 Pacific 지역의 M200 계열로 제한 합니다. 이 모델에서 예측 가능한 특성은 Quantity 이므로 사용 해야 `[Quantity]` PredictTimeSeries 함수에 첫 번째 인수입니다.  
   
 ```  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  이 예에서는 결과를 읽기 쉽도록 FLATTENED 키워드가 사용되었습니다.  FLATTENED 키워드를 사용하지 않고 계층적 행 집합을 반환하면 이 쿼리에서 두 열을 반환합니다. 첫 번째 열에는 [ModelRegion]에 대한 값이 포함되고 두 번째 열에는 두 개의 열(예측되는 시간 조각을 보여 주는 $TIME 및 예측되는 값을 포함하는 Quantity)이 있는 중첩 테이블이 포함됩니다.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예제 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>예 2: 새 데이터를 추가 및 REPLACE_MODEL_CASES 사용  
  특정 지역에 대한 데이터가 잘못된 것을 발견하고 모델의 패턴을 사용하여 새 데이터와 일치하도록 예측을 조정하려 한다고 가정합니다. 다른 지역의 추세가 더 안정적이라는 것을 발견하고 가장 안정적인 모델을 여러 지역의 데이터에 적용하려고 할 수도 있습니다.  
   
  이러한 시나리오에서는 REPLACE_MODEL_CASES 매개 변수를 사용하고 기록 데이터로 사용할 새 데이터 집합을 지정할 수 있습니다. 이렇게 하면 프로젝션이 지정된 모델의 패턴을 기반으로 하지만 새 데이터 요소의 끝에서 부드럽게 이어집니다. 이 시나리오의 전체 연습을 참조 하세요 [고급 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71)합니다.  
@@ -194,11 +194,11 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   새로 확장된 모델을 기반으로 나머지 세 개의 시간 조각에 대한 새 예측을 반환합니다.  
   
- 다음 표에서는 예 2 쿼리의 결과를 보여 줍니다. M200 Europe에 대해 반환된 첫 두 값은 사용자가 제공한 새 값과 동일합니다. 이 동작은 의도적인 것으로, 새 데이터의 끝 이후부터 예측을 시작하려면 시작 및 종료 시간 단계를 지정해야 합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요 [5 단원: 시계열 모델 확장](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)합니다.  
+ 다음 표에서는 예 2 쿼리의 결과를 보여 줍니다. M200 Europe에 대해 반환된 첫 두 값은 사용자가 제공한 새 값과 동일합니다. 이 동작은 의도적인 것으로, 새 데이터의 끝 이후부터 예측을 시작하려면 시작 및 종료 시간 단계를 지정해야 합니다. 이 작업을 수행 하는 방법의 예제를 참조 하세요. [5 단원: 모델의 시계열을 확장](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d)합니다.  
   
  Pacific 지역에 대한 새 데이터도 제공하지 않았습니다. 따라서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 5개의 시간 조각 모두에 대해 새 예측을 반환합니다.  
   
- M200 Europe: quantity 합니다. EXTEND_MODEL_CASES:  
+ 수량: M200 Europe 합니다. EXTEND_MODEL_CASES:  
   
 |$TIME|수량|  
 |-----------|--------------|  
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- M200 Pacific: quantity 합니다. EXTEND_MODEL_CASES:  
+ 수량:  M200 Pacific입니다. EXTEND_MODEL_CASES:  
   
 |$TIME|수량|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>시계열 예측의 통계를 반환 하는 예제 4:  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>예제 4: 시계열 예측의 통계 반환  
  합니다 **PredictTimeSeries** 함수를 지원 하지 않습니다 *INCLUDE_STATISTICS* 매개 변수로 합니다. 그러나 다음 쿼리를 사용하면 시계열 쿼리에 대한 예측 통계를 반환할 수 있습니다. 이 방법은 중첩 테이블 열이 있는 모델에도 사용할 수 있습니다.  
   
  이 모델에서 예측 가능한 특성은 Quantity 이므로 사용 해야 `[Quantity]` PredictTimeSeries 함수에 첫 번째 인수입니다. 모델에서 다른 예측 가능한 특성을 사용하는 경우 다른 열 이름으로 대체할 수 있습니다.  
@@ -255,6 +255,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [시계열 모델 쿼리 예제](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [예측&#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [예측 & #40; DMX & #41;](../dmx/predict-dmx.md)  
   
   

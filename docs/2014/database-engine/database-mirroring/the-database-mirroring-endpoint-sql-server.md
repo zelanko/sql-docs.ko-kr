@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754652"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>데이터베이스 미러링 엔드포인트(SQL Server)
   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링에 참여하려면 서버 인스턴스에 자체의 전용 *데이터베이스 미러링 엔드포인트*가 필요합니다. 데이터베이스 미러링 엔드포인트는 다른 서버 인스턴스로부터 연결을 받는 데만 사용되는 특별한 용도의 엔드포인트입니다. 지정된 서버 인스턴스에서 다른 모든 서버 인스턴스에 대한 모든 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 연결은 단일 데이터베이스 미러링 엔드포인트를 사용합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "48170373"
   
 -   로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행되는 서버 인스턴스가 하나라도 있을 경우에는 엔드포인트 인증에 인증서를 사용해야 합니다. 데이터베이스 미러링 엔드포인트에 인증서를 사용하려면 시스템 관리자가 아웃바운드 및 인바운드 연결 모두에 인증서를 사용하도록 각 서버 인스턴스를 구성해야 합니다.  
   
-     인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT를 사용 해야 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 `New-SqlHadrEndpoint` PowerShell cmdlet. 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다. 서버 인스턴스에서 인증서 인증을 사용 하도록 설정 하는 방법에 대 한 내용은 [데이터베이스 미러링 끝점에 대 한 인증서 사용 &#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)합니다.  
+     인증서를 통해 데이터베이스 미러링 보안을 구성하는 자동화된 방법은 없습니다. CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 `New-SqlHadrEndpoint` PowerShell cmdlet을 사용해야 합니다. 자세한 내용은 [CREATE ENDPOINT&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-endpoint-transact-sql)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다. 서버 인스턴스에서 인증서 인증을 사용 하도록 설정 하는 방법에 대 한 내용은 [데이터베이스 미러링 끝점에 대 한 인증서 사용 &#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)합니다.  
   
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
@@ -96,6 +96,6 @@ ms.locfileid: "48170373"
  [데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대 한 전송 보안 &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

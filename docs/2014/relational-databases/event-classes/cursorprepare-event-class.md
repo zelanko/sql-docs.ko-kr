@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee6325c134070f60fa578709d2247c85dc3d5173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663387"
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare 이벤트 클래스
   **CursorPrepare** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 준비 이벤트를 설명합니다. 커서 준비 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 커서와 연관된 SELECT 문을 실행 계획으로 컴파일하지만 커서를 만들지 않은 경우 발생합니다.  

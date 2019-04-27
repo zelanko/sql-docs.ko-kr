@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756017"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio에서 데이터 마이닝 모델 보기(데이터 마이닝 추가 기능)
   데이터 마이닝용 Visio 셰이프를 사용하여 서버에 연결하고 기존 데이터 마이닝 모델을 나타내는 다이어그램을 만들 수 있습니다. 그런 다음 Visio 컨트롤을 사용하여 다이어그램을 사용자 지정할 수 있지만, 데이터로 드릴다운하고, 일부 기본 통계를 노출하고, 기본 모델을 사용할 수도 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050643"
 |Visio 셰이프|지원되는 모델|  
 |-----------------|----------------------|  
 |의사 결정 트리|의사 결정 트리 또는 선형 회귀 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
-|종속성 네트워크|이 셰이프를 사용 하 여 다음과 같은 알고리즘 중 하나에 따라 모델에 대 한: Naive Bayes, 의사 결정 트리 또는 연결 규칙입니다.|  
+|종속성 네트워크|다음 알고리즘 중 하나에 따라 모델에 대 한이 셰이프를 사용 합니다. Naive Bayes, 의사 결정 트리 또는 연결 규칙|  
 |클러스터|클러스터링 알고리즘을 기반으로 하는 모델에 이 셰이프를 사용합니다.|  
   
  마이닝 모델의 데이터 형식에 따라 마법사에서 제공하는 옵션이 다를 수 있습니다. 예를 들어, 연속 숫자를 포함하는 열은 범주 변수를 포함하는 열과 다르게 시각화됩니다.  

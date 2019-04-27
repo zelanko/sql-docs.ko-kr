@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658955"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;모델&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *select 식 목록*  
  열 식별자 및 식의 쉼표로 구분된 목록이며 마이닝 모델에서 파생됩니다.  
   
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
  *sub 선택*  
@@ -78,7 +78,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  ORDER BY 절에는 단일 열만 인수로 사용할 수 있으므로 둘 이상의 열에 따라 정렬할 수는 없습니다.  
   
-## <a name="example-1-singleton-query"></a>예제 1: 단일 쿼리  
+## <a name="example-1-singleton-query"></a>예 1: 단일 쿼리  
  다음 예에서는 특정 개인이 자전거를 구입할지 여부를 실시간으로 예측하는 쿼리를 만드는 방법을 보여 줍니다. 이 쿼리에서는 데이터가 테이블이나 다른 데이터 원본에 저장되지 않으며 쿼리에 직접 입력됩니다. 쿼리에 사용되는 개인의 특성은 다음과 같습니다.  
   
 -   35세  
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
+## <a name="example-2-using-openquery"></a>예 2: OPENQUERY 사용  
  다음 예에서는 외부 데이터 집합에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  

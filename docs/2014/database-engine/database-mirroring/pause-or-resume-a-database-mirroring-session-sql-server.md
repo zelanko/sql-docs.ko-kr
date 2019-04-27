@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754592"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링을 일시 중지하거나 재개하는 방법에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48094003"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스 미러링을 일시 중지하거나 재개한 후](#FollowUp)  
+-   **후속 작업:**  [일시 중지 하거나 데이터베이스 미러링을 재개 한 후](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  언제든지 데이터베이스 미러링 세션을 일시 중지하여 병목 상태에서 성능을 향상시킬 수 있으며, 일시 중지된 세션을 언제든지 재개할 수 있습니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "48094003"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 미러링을 일시 중지하거나 재개한 후  
+##  <a name="FollowUp"></a> 후속 작업: 일시 중지 하거나 데이터베이스 미러링을 재개 한 후  
   
 -   **데이터베이스 미러링을 일시 중지한 후**  
   

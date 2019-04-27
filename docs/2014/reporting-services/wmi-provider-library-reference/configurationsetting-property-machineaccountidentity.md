@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340b1b54054ff8687fc08a92ebc91e1380f2ae7a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646161"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>MachineAccountIdentity 속성(WMI)
   보고서 서버가 설치되어 있는 컴퓨터의 컴퓨터 계정 ID를 가져옵니다.  

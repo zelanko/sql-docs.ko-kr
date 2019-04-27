@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853471"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *열 정의 목록*  
  쉼표로 구분된 열 정의 목록입니다.  
   
- *알고리즘*  
+ *algorithm*  
  현재 공급자가 정의한 데이터 마이닝 알고리즘 이름입니다.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *XML 문자열*  
- 고급 사용자만 사용해야 합니다. XML 인코딩 모델(PMML)이며 문자열을 작은따옴표(')로 묶어야 합니다.  
+ (고급 사용을 위한.) 하는 XML 인코딩 모델 (PMML). 문자열을 작은따옴표(')로 묶어야 합니다.  
   
  합니다 **세션** 절을 사용 하면 연결이 종료 되거나 세션 제한 시간이 초과 하는 경우 서버에서 자동으로 제거 하는 마이닝 모델을 만들 수 있습니다. **세션** 마이닝 모델은 데이터베이스 관리자가 사용할 필요가 없습니다 수 있으며만 디스크 공간 사용에 대 한 연결이 열려으로 하므로 유용 합니다.  
   

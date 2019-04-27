@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660192"
 ---
 # <a name="browsing-a-neural-network-model"></a>신경망 모델 찾아보기
   **찾아보기**를 사용하여 신경망 또는 로지스틱 회귀 모델을 열면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 신경망 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시됩니다. 이 뷰어에서는 상관 관계를 탐색하고 모델 및 기본 데이터의 패턴에 대한 정보를 얻을 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48218583"
   
 -   [입력](#BKMK_Inputs)  
   
--   [출력](#BKMK_Outputs)  
+-   [Outputs](#BKMK_Outputs)  
   
  이 뷰어를 시험해 보려는 경우 [분류 마법사&#40;Excel용 데이터 마이닝 추가 기능&#41;](classify-wizard-data-mining-add-ins-for-excel.md) 마법사를 사용하여 모델을 만들고 **고급** 옵션을 사용하여 **알고리즘 매개 변수** 대화 상자에서 Microsoft 로지스틱 회귀로 알고리즘을 변경할 수 있습니다.  
   
@@ -73,13 +73,13 @@ ms.locfileid: "48218583"
   
      *중요도* 점수, *확률* 점수 쌍 및 *리프트* 값 쌍이 포함된 도구 설명이 나타납니다.  
   
-    -   **중요도**는 전체 데이터 집합에서 계산되고 모든 입력이 제공된 경우에 대상 결과와 상관 관계가 가장 높은 특성을 식별합니다. 뷰어에서 중요도 점수를 기준으로 차트의 값이 정렬됩니다.  
+    -   **중요도**는 전체 데이터 세트에서 계산되고 모든 입력이 제공된 경우에 대상 결과와 상관 관계가 가장 높은 특성을 식별합니다. 뷰어에서 중요도 점수를 기준으로 차트의 값이 정렬됩니다.  
   
     -   **확률**은 전체 데이터 집합에서 대상 결과에 대한 특성-값 쌍의 각 집합에 대해 계산됩니다.  
   
     -   **리프트**는 이 특정한 특성-값 쌍이 한 결과나 다른 결과를 촉진하는 데 얼마나 유용한지를 알려 줍니다.  
   
-     참고: 마우스를 어느 열에 놓든 간에 도구 설명에는 동일한 정보가 포함됩니다.  
+     참고: 열이 하나 또는 다른 위에 마우스를 놓고 여부에 관계 없이 동일한 정보를 포함 하는 도구 설명 합니다.  
   
  [맨 위로 이동](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218583"
  [맨 위로 이동](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>신경망 모델에 대한 추가 정보  
- 뷰어의 정보는 이 모델 유형과 관련된 저장 프로시저인 System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores를 사용하여 서버에서 검색됩니다.  
+ 뷰어의 정보는이 모델 유형과 관련 저장된 프로시저를 사용 하 여 서버에서 검색 됩니다. System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  추가 기능을 사용하여 예측 가능한 여러 특성으로 모델을 만들려면 **고급** 모델링 옵션을 사용합니다.  
   

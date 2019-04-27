@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657630"
 ---
 # <a name="install-sql-server-management-tools"></a>SQL Server 관리 도구 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구에는 다음과 같은 구성 요소가 포함되어 있습니다.  
@@ -33,9 +33,9 @@ ms.locfileid: "48061951"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 추가 기능 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 사용할 수 있는 별도의 옵션입니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 동안 사용할 수 있는 별도의 옵션입니다.  
   
- 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 수에 관계없이 하나의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 관리 도구 복사본만 설치됩니다.  
+ 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 수에 관계없이 하나의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 관리 도구 복사본만 설치됩니다.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 관리 도구-나란히 실행할 수의 이전 버전을 사용 하 여 동일한 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구입니다.  
   

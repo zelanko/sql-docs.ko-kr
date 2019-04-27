@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657369"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말
   이 섹션에는 다양한 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대한 도움말이 포함되어 있습니다. F1 키를 누르거나 대화 상자에 표시된 도움말 단추를 클릭하여 도움말을 열 수도 있습니다.  

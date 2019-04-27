@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dc3f38aec3ba41330e29aa8ac5fdea771d90da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747115"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>수정할 파티션 선택(사용 빈도 기반 최적화 마법사)
   **수정할 파티션 선택** 페이지를 사용하여 집계를 디자인할 파티션을 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **(선택)**  
+ **(Select)**  
  열 제목에서 확인란을 선택하여 측정값 그룹의 모든 파티션에 대해 집계를 디자인할 수 있습니다.  
   
  선택한 파티션에 대해서만 집계를 디자인하려면 개별 파티션의 확인란을 선택합니다.  

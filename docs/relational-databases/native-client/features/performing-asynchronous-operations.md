@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fc08bc82fa4a02b2e78479d3075357b8816874b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744299"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47691768"
   
  그러면 **QueryInterface**를 통해 여러 결과 인터페이스를 쿼리하여 **IDBAsynchStatus** 및 **ISSAsynchStatus** 인터페이스를 가져올 수 있습니다.  
   
- 명령 실행을 마치면 **IMultipleResults** 동기 사례에서 한 가지 예외를 사용 하 여 정상적으로 사용할 수 있습니다: DB_S_ASYNCHRONOUS을 반환할 수 있으며 이때 **IDBAsynchStatus** 또는 **ISSAsynchStatus** 작업이 완료 되 면 확인 하기 위해 사용할 수 있습니다.  
+ 명령 실행을 마치면 **IMultipleResults** 동기 사례에서 한 가지 예외를 사용 하 여 정상적으로 사용할 수 있습니다. DB_S_ASYNCHRONOUS을 반환할 수 있으며 이때 **IDBAsynchStatus** 하거나 **ISSAsynchStatus** 작업이 완료 되 면 확인 하기 위해 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 응용 프로그램에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut*으로 지정한 시간이 경과될 때까지 내부 이벤트 개체를 기다립니다.  

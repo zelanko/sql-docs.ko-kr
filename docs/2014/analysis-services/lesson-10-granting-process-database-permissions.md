@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729520"
 ---
 # <a name="granting-process-database-permissions"></a>데이터베이스 처리 권한 부여
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 설치하면 해당 인스턴스에 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 관리자 역할의 모든 멤버가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 내에서 모든 태스크를 수행할 수 있는 서버 차원의 사용 권한을 갖습니다. 기본적으로 어떠한 사용자에게도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스의 개체를 관리하거나 볼 수 있는 권한이 없습니다.  
@@ -57,6 +57,6 @@ ms.locfileid: "48171763"
 >  10단원의 완료된 프로젝트는 예제를 다운로드 및 설치하여 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](install-sample-data-and-projects.md)을(를) 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [역할 및 사용 권한 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [역할 및 권한&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

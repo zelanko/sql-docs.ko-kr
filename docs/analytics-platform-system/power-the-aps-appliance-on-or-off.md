@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678631"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스를 끄거나 전원
 이 항목에서는 어떻게 전원에 Analytics 플랫폼 Systemappliance 해제 전원 켜 짐 또는 실행 하 병렬 데이터 웨어하우스를 설명 합니다. 사용 하 여이 항목에서는 분석 플랫폼 시스템 어플라이언스를 이동 하면 하거나 전원 어플라이언스에서 심각한 전원 오류가 발생 한 후입니다.  

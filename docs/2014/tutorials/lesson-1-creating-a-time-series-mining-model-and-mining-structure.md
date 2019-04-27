@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678445"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>1단원: 시계열 마이닝 모델 및 마이닝 구조 만들기
   이 단원에서는 기록 데이터를 기반으로 시간 경과에 따라 값을 예측할 수 있는 마이닝 모델을 만듭니다. 모델을 만들면 기본 구조가 자동으로 생성되고 추가 마이닝 모델에 대한 기초로 사용될 수 있습니다.  

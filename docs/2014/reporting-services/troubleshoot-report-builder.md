@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657422"
 ---
 # <a name="troubleshoot-report-builder"></a>보고서 작성기 문제 해결
   보고서 작성기는 다양한 종류의 데이터 원본을 기반으로 보고서를 작성하고, 보고서 서버 또는 SharePoint 사이트에 보고서를 게시하는 데 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 제작 도구입니다. 일부로 또는 웹 브라우저에서 보고서 작성기에서 만든 보고서를 볼 수 있습니다는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 응용 프로그램 또는 SharePoint 사이트입니다.  

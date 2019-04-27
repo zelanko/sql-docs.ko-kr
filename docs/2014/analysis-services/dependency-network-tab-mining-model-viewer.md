@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732199"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>종속성 네트워크 탭(마이닝 모델 뷰어)
   **종속성 네트워크** 탭에서는 마이닝 모델에 포함된 모든 특성에 대한 그래픽 뷰를 제공하고 특성의 관계를 보여 줍니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48226173"
  **마이닝 모델**  
  현재 마이닝 구조에서 보려는 마이닝 모델을 선택합니다. 사용자 지정 뷰어에서 마이닝 모델이 열립니다. 각 모델에 사용되는 사용자 지정 뷰어의 유형은 모델을 만드는 데 사용한 알고리즘에 따라 결정됩니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 각 마이닝 모델에 대해 제공되는 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다. Microsoft 콘텐츠 트리 뷰어는 모든 모델에서 사용할 수 있으며 HTML 테이블로 모델 콘텐츠를 나타냅니다.  
   
  **확대/축소**  
@@ -65,8 +65,8 @@ ms.locfileid: "48226173"
  모든 모델 유형에 대한 일반 규칙은 링크가 강력할수록 두 특성 간의 예측 관계도 강력하다는 것입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

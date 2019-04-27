@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627736"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
   연산자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 쿼리 또는 DML(데이터 조작 언어) 문이 실행되는 방식을 설명합니다. 쿼리 최적화 프로그램은 연산자를 사용하여 쿼리 계획을 작성함으로써 쿼리에 지정된 결과를 만들거나 DML 문에 지정된 작업을 수행합니다. 쿼리 계획은 물리 연산자로 구성된 트리입니다. SET SHOWPLAN 문, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 그래픽 실행 계획 옵션 또는 SQL Server Profiler의 Showplan 이벤트 클래스를 사용하여 쿼리 계획을 볼 수 있습니다.  
@@ -155,11 +155,11 @@ ms.locfileid: "53361485"
   
  물리 연산자는 초기화하고 데이터를 수집하며 종료합니다. 특히 물리 연산자는 다음 3개의 메서드 호출에 응답할 수 있습니다.  
   
--   **Init ()**: 합니다 **init ()** 메서드를 사용 하면 물리 연산자가 초기화 하 고 필요한 데이터 구조를 설정 합니다. 일반적으로 물리 연산자는 하나의 **Init()** 호출을 받지만 여러 개의 호출을 받을 수도 있습니다.  
+-   **Init()**: **Init()** 메서드는 물리 연산자가 초기화하고 필요한 데이터 구조를 설정하도록 합니다. 일반적으로 물리 연산자는 하나의 **Init()** 호출을 받지만 여러 개의 호출을 받을 수도 있습니다.  
   
--   **Getnext ()**: 합니다 **getnext ()** 메서드를 사용 하면 데이터의 첫 번째 또는 후속 행을 가져오도록 물리 연산자입니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
+-   **GetNext()**: **GetNext()** 메서드는 물리 연산자가 처음 또는 다음 데이터 행을 가져오도록 합니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
   
--   **Close ()**: 합니다 **close ()** 메서드를 사용 하면 일부 정리 작업을 수행 하 고 자동으로 종료 하는 물리 연산자입니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
+-   **Close()**: **Close()** 메서드는 물리 연산자가 정리 작업을 수행하고 종료하도록 합니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
   
  **GetNext()** 메서드는 하나의 데이터 행을 반환하며 호출 횟수는 SET STATISTICS PROFILE ON 또는 SET STATISTICS XML ON을 사용하여 생성된 실행 계획 출력에 **ActualRows**로 나타납니다. 이러한 SET 옵션에 대한 자세한 내용은 [SET STATISTICS PROFILE&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql) 및 [SET STATISTICS XML&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)을 참조하세요.  
   

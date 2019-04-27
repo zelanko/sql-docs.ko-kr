@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c7230150807b5bdd0849ea7ad5af00dbedb4ff3
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781538"
 ---
 # <a name="handling-large-objects-using-clr"></a>CLR을 사용하여 큰 개체 처리
   SQL Server의 `HandlingLOBUsingCLR` 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 CLR(공용 언어 런타임) 저장 프로시저를 사용하여 서버에서 사용할 수 있는 파일 시스템 간의 LOB(Large Object) 전송을 보여 줍니다. 이 예제에서는 서버 쪽 코드의 파일에 액세스하고 CLR 기반 저장 프로시저로부터 동적 쿼리와 저장 프로시저를 모두 호출하는 방법을 보여 줍니다. 또한 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 CLR 메서드와 어셈블리를 등록 및 등록 해제하는 방법을 보여 줍니다.  

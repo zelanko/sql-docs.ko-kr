@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753955"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 관리 도구 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 관리 도구 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
@@ -27,9 +27,9 @@ ms.locfileid: "48083873"
 |osql.exe|경고|  
 |SQLMail|경고|  
 |SMO 클래스: Microsoft.SQLServer.Management.Smo.Information 클래스|알림|  
-|SMO 클래스: Microsoft.SQLServer.Management.Smo.Settings 클래스|알림|  
+|SMO 클래스: Microsoft.SQLServer.Management.Smo.Settings class|알림|  
 |SMO 클래스: Microsoft.SQLServer.Management.Smo.DatabaseOptions 클래스|알림|  
-|SMO 클래스: Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication 속성|알림|  
+|SMO 클래스: Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication property|알림|  
 |SSMS의 데이터베이스 프로젝트 시스템(예: 원본 제어 통합)|알림|  
 |Net send 알림([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트)|알림|  
 |호출기 알림([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트)|알림|  

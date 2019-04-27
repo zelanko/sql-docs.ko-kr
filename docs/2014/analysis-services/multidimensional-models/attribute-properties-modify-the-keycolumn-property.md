@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92624d18c0e8aae6a549f0769277e5fd4fdd0c34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727287"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>특성의 KeyColumn 속성 수정
   특성의 **KeyColumns** 속성을 수정할 수 있습니다. 예를 들어 단일 키 대신 복합 키를 특성 키로 지정할 수 있습니다.  

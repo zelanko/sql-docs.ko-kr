@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774506"
 ---
 # <a name="new-search-property-list"></a>새 검색 속성 목록
   이 대화 상자를 사용하여 검색 속성 목록을 만들 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48195233"
  참조 [CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)합니다.  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>SQL Server Management Studio를 사용하여 검색 속성 목록을 관리하려면  
- 속성 검색에 대 한 전체 텍스트 인덱스를 구성 하는 방법에 대 한 만들기, 보기, 변경 또는 검색 속성 목록을 삭제 하는 방법에 대 한 정보를 참조 하세요 [검색 속성 목록을 사용 하 여 문서 속성 검색](../relational-databases/search/search-document-properties-with-search-property-lists.md)합니다.  
+ 검색 속성 목록을 만들거나, 보거나, 변경하거나, 삭제하는 방법과 속성 검색을 위해 전체 텍스트 인덱스를 구성하는 방법은 [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

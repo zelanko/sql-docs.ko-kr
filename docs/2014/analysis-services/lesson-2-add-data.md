@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729319"
 ---
 # <a name="lesson-2-add-data"></a>2단원: 데이터 추가
   이 섹션에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 의 테이블 가져오기 마법사를 사용하여 AdventureWorksDW SQL Database에 연결하고, 데이터를 선택하고, 미리 보고 필터링한 다음 해당 데이터를 모델 작업 영역으로 가져옵니다.  
   
- 테이블 가져오기 마법사를 사용하여 Access, SQL, Oracle, Sybase, Informix, DB2, Teradata 등 다양한 관계형 원본에서 데이터를 가져올 수 있습니다. 이러한 각 관계형 원본에서 데이터를 가져오는 단계는 아래에 설명된 과정과 매우 비슷합니다. 또한 저장 프로시저를 사용하여 데이터를 선택할 수 있습니다.  
+ 테이블 가져오기 마법사를 사용 하 여 다양 한 관계형 원본에서에서 데이터를 가져올 수 있습니다. 액세스, SQL, Oracle, Sybase, Informix, DB2, Teradata, 등 이러한 각 관계형 원본에서 데이터를 가져오는 단계는 아래에 설명된 과정과 매우 비슷합니다. 또한 저장 프로시저를 사용하여 데이터를 선택할 수 있습니다.  
   
  데이터를 가져오는 방법 및 데이터를 가져올 수 있는 다양한 종류의 데이터 원본에 대한 자세한 내용은 [데이터 원본&#40;SSAS 테이블 형식&#41;](data-sources-ssas-tabular.md)을 참조하세요.  
   
- 이 단원에 소요되는 예상 시간: **20 분**  
+ 예상이 단원을 완료 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="create-a-connection"></a>연결 만들기  
   
@@ -165,6 +165,6 @@ ms.locfileid: "52416354"
 -   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **파일** 메뉴를 클릭한 다음 **모두 저장**을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원으로 이동하십시오. [3 단원: 열 이름 바꾸기](rename-columns.md)합니다.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [3단원: 열 이름 바꾸기](rename-columns.md)합니다.  
   
   

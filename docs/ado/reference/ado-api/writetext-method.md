@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642955"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
 에 지정 된 텍스트 문자열을 쓰고를 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -38,7 +38,7 @@ Stream.WriteText Data, Options
  *데이터*  
  A **문자열** 쓸 문자에 텍스트를 포함 하는 값입니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) 지정된 된 문자열의 끝 줄 구분 기호 문자를 작성 해야 하는지 여부를 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  

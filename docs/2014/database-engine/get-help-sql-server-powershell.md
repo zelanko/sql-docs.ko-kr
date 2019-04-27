@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779105"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
@@ -107,7 +107,7 @@ Get-Help SQLServer
   
 2.  실행 합니다 **Get-member** cmdlet 메서드 또는 속성으로 설정-형식 매개 변수를 사용 하 여  
   
-### <a name="examples-listing-methods-and-properties"></a>예: 메서드 및 속성 나열  
+### <a name="examples-listing-methods-and-properties"></a>예를 들면 다음과 같습니다. 메서드 및 속성 나열  
  이 예에서는 Databases 노드에 지원되는 메서드를 나열합니다.  
   
 ```  

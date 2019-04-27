@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731760"
 ---
 # <a name="dmx-templates"></a>DMX 템플릿
   데이터 마이닝 템플릿을 사용하면 정교한 쿼리를 신속하게 작성할 수 있습니다. DMX 쿼리의 일반 구문이 잘 설명되어 있더라도 템플릿을 사용하면 인수 및 데이터 원본을 클릭하고 가리켜서 쿼리를 보다 쉽게 작성할 수 있습니다.  

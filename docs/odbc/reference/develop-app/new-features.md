@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658186"
 ---
 # <a name="new-features"></a>새로운 기능
 ODBC 3에서 다음과 같은 새 기능이 도입 되었습니다. *x*합니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하는 응용 프로그램 *.x* 드라이버는이 기능을 사용할 수 없습니다. ODBC 3입니다. *x* 는 ODBC 2를 사용 하 여 작업할 때 드라이버 관리자에서는 이러한 기능을 매핑하지 않습니다 *.x* 드라이버입니다.  
   
--   설명자를 사용 하는 함수의 인수로 서 처리 합니다. **SQLSetDescField**, **SQLGetDescField**합니다 **SQLSetDescRec**를 **SQLGetDescRec**, 및 **SQLCopyDesc**합니다.  
+-   설명자를 사용 하는 함수의 인수로 서 처리 합니다. **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
 -   함수 **SQLSetEnvAttr** 하 고 **SQLGetEnvAttr**합니다.  
   

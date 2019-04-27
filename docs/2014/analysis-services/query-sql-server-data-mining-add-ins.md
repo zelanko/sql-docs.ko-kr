@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748477"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>쿼리(SQL Server 데이터 마이닝 추가 기능)
   ![쿼리 모델 단추, 데이터 마이닝 리본의](media/dmc-query.gif "데이터 마이닝 리본, 모델 쿼리 단추")  

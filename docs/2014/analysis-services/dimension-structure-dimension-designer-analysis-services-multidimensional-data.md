@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731799"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>차원 구조(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **차원 구조** 페이지를 사용하여 선택한 차원의 특성, 계층 및 수준을 수정할 수 있습니다. **차원 구조** 페이지에는 도구 모음과 세 개의 창이 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48172233"
  [데이터 원본 뷰](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)  
  차원과 연결된 데이터 원본 뷰를 탐색 및 관리하려면 **데이터 원본 뷰** 창을 사용합니다.  
   
- [계층](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
+ [계층 구조](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)  
  차원의 계층 및 수준을 관리하려면 **계층** 창을 사용합니다.  
   
  [특성](attributes-dimension-designer-analysis-services-multidimensional-data.md)  

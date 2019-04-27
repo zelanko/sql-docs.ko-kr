@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756594"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>테이블 형식 model 데이터베이스(SSAS 테이블 형식)
   테이블 형식 model 데이터베이스는 Analysis Services 테이블 형식 모델 프로젝트 템플릿을 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 Analysis Services 데이터베이스입니다. 이 템플릿에서는 테이블과 관계가 데이터를 나타내기 위한 기본 구조입니다.  
@@ -25,20 +25,20 @@ ms.locfileid: "48190703"
  테이블 형식 model 데이터베이스는 특히 관계형 데이터베이스 배경인 경우 다차원 데이터베이스에 비해 쉽게 작성할 수 있습니다. 그렇지 않으면 다차원 데이터베이스의 데이터베이스 관리와 동일하지 않을 경우 관리 태스크가 유사합니다. 같은 도구와 접근 방법이 적용됩니다.  
   
 ## <a name="related-content"></a>관련 내용  
- [테이블 형식 모델 솔루션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [테이블 형식 모델 솔루션&#40;SSAS 테이블 형식&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터 액세스](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
  [데이터베이스, 테이블 또는 파티션 처리](process-database-table-or-partition-analysis-services.md)  
   
- [테이블 형식 모델 역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-roles-ssas-tabular.md)  
+ [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [테이블 형식 모델 파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션&#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성](enable-directquery-mode-in-ssms.md)  
   
- [테이블 형식 모델 데이터베이스에 연결 &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [테이블 형식 model 데이터베이스에 연결&#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [PowerPivot에서 복원](restore-from-power-pivot.md)  
   

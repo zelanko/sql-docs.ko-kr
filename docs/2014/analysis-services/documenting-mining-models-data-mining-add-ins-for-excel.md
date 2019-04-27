@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731738"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 문서화(Excel용 데이터 마이닝 추가 기능)
   ![문서 모델 단추, 데이터 마이닝 리본의](media/dmc-docmodel.gif "데이터 마이닝 리본, 모델 문서화 단추")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118076"
   
 3.  에 **모델 선택** 대화 상자에서 보고서로 모델을 선택 하 고 클릭 **다음**합니다. 실행 해야 합니다 **문서 모델** 문서화 하려는 각 모델에 대해 별도로 마법사.  
   
-4.  에 **문서 세부 정보 선택** 대화 상자에서 두 옵션 중 하나를 선택: **정보** 또는 **요약 정보**합니다.  
+4.  에 **문서 세부 정보 선택** 대화 상자에서 두 옵션 중 하나: **정보를 완성** 나 **요약 정보**합니다.  
   
 5.  **마침**을 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48118076"
 ||||  
 |-|-|-|  
 |**메타데이터**|모델 메타데이터|알고리즘 매개 변수 및 값|  
-||열 메타데이터|열 이름<br /><br /> 사용법<br /><br /> 데이터 형식<br /><br /> 내용 유형<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
+||열 메타데이터|열 이름<br /><br /> 사용법<br /><br /> 데이터 형식<br /><br /> 콘텐츠 형식<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
 |**모델 통계**|연속 열|평균값<br /><br /> 최소값<br /><br /> 최대값<br /><br /> 제곱 평균 오차<br /><br /> 절대 평균 오차<br /><br /> 로그 점수<br /><br /> 회귀 수식(선형 회귀 모델만 해당)|  
 ||불연속 열|전달 횟수<br /><br /> 실패 횟수<br /><br /> 로그 점수<br /><br /> 리프트|  
   

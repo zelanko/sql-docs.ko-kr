@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746345"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>테이블 유형 지정(데이터 마이닝 마법사)
   **테이블 유형 지정** 페이지를 사용하여 마이닝 구조 정의에 사용할 테이블을 식별할 수 있습니다. 선택하지 않은 테이블은 마이닝 구조 정의에 사용되지 않습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202643"
 > [!NOTE]  
 >  나중에 **데이터 마이닝 디자이너**의 **마이닝 구조** 탭에서 테이블을 추가할 수 있습니다.  
   
- **자세한 내용:** [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [중첩 테이블 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/nested-tables-analysis-services-data-mining.md)를 [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)를 [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **테이블**  

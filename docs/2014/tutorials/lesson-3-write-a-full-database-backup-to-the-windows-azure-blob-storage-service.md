@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653692"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>3단원: Microsoft Azure Blob Storage Service로 전체 데이터베이스 백업 작성
   이 단원에서는 Windows Azure Blob 스토리지 서비스로 전체 데이터베이스 백업을 수행하는 tsql 문을 사용하는 방법을 보여 줍니다.  

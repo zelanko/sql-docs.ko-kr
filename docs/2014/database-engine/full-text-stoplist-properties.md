@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779410"
 ---
 # <a name="full-text-stoplist-properties"></a>전체 텍스트 중지 목록 속성
   이 대화 상자를 사용하여 중지 단어를 개별적으로 추가 또는 삭제하거나 특정 언어에 대한 중지 단어를 모두 삭제하거나 현재 중지 목록을 지울 수 있습니다. 중지 단어란 자주 사용되는 단어 중 중지 목록에 포함된 것을 말합니다. 중지 목록에 있는 중지 단어는 해당 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 848de74437835311c8585001f5906169aa1dbb7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771359"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>미러 테이블 및 CDC 캡처 인스턴스 생성
   미러 테이블 생성 페이지를 사용하여 CDC 인스턴스에 포함된 테이블에 대한 미러 테이블 생성  

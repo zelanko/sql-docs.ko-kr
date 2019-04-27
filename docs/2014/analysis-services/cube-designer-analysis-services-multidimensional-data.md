@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679629"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>큐브 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **큐브 디자이너**를 사용하여 큐브에 포함된 데이터를 찾아볼 수 있을 뿐만 아니라 큐브에 포함된 측정값 그룹 및 측정값, 큐브 차원 및 차원 관계, 계산, KPI(핵심 성과 지표), 동작, 파티션, 큐브 뷰 및 번역을 포함하여 기존 큐브의 다양한 속성을 편집할 수 있습니다. 다음 방법으로 **큐브 디자이너** 대화 상자를 표시할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48155423"
 |---------|----------------|  
 |**큐브 구조**|이 탭을 사용하여 측정값 그룹 및 측정값을 생성 및 수정하고, 큐브 차원을 추가하고, 연결된 데이터 원본 뷰에서 큐브에 포함된 개체를 표시할 수 있습니다. 이 탭에 대한 자세한 내용은 [큐브 구조&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**차원 용도**|이 탭을 사용하여 큐브에 포함된 큐브 차원과 측정값 그룹 간에 관계를 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [차원 용도&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
-|**계산**|이 탭을 사용하여 계산 멤버, 명명된 집합 및 MDX(Multidimensional Expressions) 스크립트를 비롯하여 큐브에 포함될 계산을 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [계산&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)을 참조하세요.|  
+|**새 명명된 집합**|이 탭을 사용하여 계산 멤버, 명명된 집합 및 MDX(Multidimensional Expressions) 스크립트를 비롯하여 큐브에 포함될 계산을 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [계산&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)을 참조하세요.|  
 |**KPI**|이 탭을 사용하여 큐브에 포함될 KPI를 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [KPI&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
 |**동작**|이 탭을 사용하여 드릴스루 작업 및 보고 작업을 비롯하여 큐브에 포함될 동작을 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [작업&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)을 참조하세요.|  
 |**파티션**|이 탭을 사용하여 측정값 그룹 및 파티션에 대한 자동 관리 캐싱 설정을 비롯하여 큐브에 포함될 파티션을 생성 및 수정할 수 있습니다. 이 탭에 대한 자세한 내용은 [파티션&#40;큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)을 참조하세요.|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c2b5fbc89b6852d178ae4afc5c8cab67259ee89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747154"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>사례 키 선택(데이터 마이닝 마법사)
   **사례 키 선택** 페이지를 사용하여 마이닝 구조의 키로 지정할 원본 큐브 차원의 특성을 선택할 수 있습니다. 이 특성은 계층 내에 있어야 하며 그렇지 않은 경우 해당 특성 계층을 설정해야 합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48090493"
 > [!NOTE]  
 >  이 페이지는 마법사의 **정의 방법 선택** 페이지에서 **기존 큐브 사용**을 선택한 경우에만 나타납니다.  
   
- **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)하십시오 [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **특성**  

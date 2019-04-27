@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f01af90a2857017a9644f3bc5685c966be8797
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827442"
 ---
 # <a name="prepare-sql-event-class"></a>Prepare SQL 이벤트 클래스
   Prepare SQL 이벤트 클래스는 SqlClient, ODBC, OLE DB 또는 DB-Library가 사용할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 준비했음을 나타냅니다.  

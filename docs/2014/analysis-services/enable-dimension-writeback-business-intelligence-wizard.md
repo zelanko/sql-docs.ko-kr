@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ea5615fcc88e81be11fb833761bb67537b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731465"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>차원 쓰기 저장(writeback) 설정(비즈니스 인텔리전스 마법사)
   **차원 쓰기 저장(writeback) 설정** 페이지를 사용하여 선택한 차원의 쓰기 저장 기능을 설정 또는 해제할 수 있습니다.  

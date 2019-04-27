@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643617"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 쿼리 디자이너(SSAS)
   Analysis Services MDX(Multidimensional Expression) 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대한 MDX 쿼리를 만드는 데 유용한 그래픽 사용자 인터페이스를 제공합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665355"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource(dBASE 드라이버)
 > [!NOTE]  
@@ -29,7 +29,7 @@ ms.locfileid: "47631651"
   
 |키워드|Description|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|필드 정렬 되는 시퀀스입니다.<br /><br /> 시퀀스 될 수 있습니다: ASCII (기본값) 또는 International입니다.<br /><br /> 동일한 옵션을 설정 **데이터 정렬 시퀀스** 설정 대화 상자에서.|  
+|COLLATINGSEQUENCE|필드 정렬 되는 시퀀스입니다.<br /><br /> 시퀀스 될 수 있습니다. ASCII (기본값) 또는 International입니다.<br /><br /> 동일한 옵션을 설정 **데이터 정렬 시퀀스** 설정 대화 상자에서.|  
 |DEFAULTDIR|디렉터리에 경로 지정 합니다.|  
 |DELETED|DBASE 드라이버의 경우 삭제 된 것으로 표시 된 행을 검색 하거나 배치할 수 있는지 여부를 지정 합니다. 삭제 된 행을 1로 표시 되지 않으면; 삭제 된 행을 0으로 설정 되 면 삭제 되지 않은 행으로 동일 하 게 처리 합니다.<br /><br /> 동일한 옵션을 설정 **삭제 된 행 표시** 설정 대화 상자에서.|  
 |DESCRIPTION|데이터 원본에 있는 데이터의 설명입니다.<br /><br /> 동일한 옵션을 설정 **설명을** 설정 대화 상자에서.|  

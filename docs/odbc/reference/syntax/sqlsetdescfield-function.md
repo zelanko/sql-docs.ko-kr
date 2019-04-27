@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742259"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 함수
 
@@ -140,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  헤더 필드의 초기화를 뒤에 오는 테이블에 설명 된 합니다.  
   
-|헤더 필드 이름|형식|R/W|Default|  
+|헤더 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|카드가: R APD: R IRD: R IPD: R|카드가: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> APD: 에 대 한 SQL_DESC_ALLOC_AUTO 암시적 또는 SQL_DESC_ALLOC_USER에 대 한 명시적<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|카드가: R/W APD: R/W IRD: 사용 되지 않는 IPD: 사용 되지 않는|ARD:[1] APD:[1] IRD: 사용 되지 않는 IPD: 사용 되지 않는|  
@@ -154,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  레코드 필드를 초기화 하는 다음 표에 나와 있는 것 처럼 됩니다.  
   
-|레코드 필드 이름|형식|R/W|Default|  
+|레코드 필드 이름|형식|R/W|기본값|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: R IPD: 사용 되지 않는|카드가: 사용 되지 않는 APD: 사용 되지 않는 IRD: D IPD: 사용 되지 않는|  

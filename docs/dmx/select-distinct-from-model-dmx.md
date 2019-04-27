@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658895"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>인수  
  *n*  
- 선택 사항입니다. 반환할 행 수를 지정하는 정수입니다.  
+ (선택 사항) 반환할 행 수를 지정하는 정수입니다.  
   
- *식 목록*  
+ *expression list*  
  관련 열 식별자(모델에서 파생됨) 또는 식의 쉼표로 구분된 목록입니다.  
   
  *model*  
@@ -43,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
+ (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
  합니다 **SELECT DISTINCT FROM** 문을 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
@@ -129,7 +129,7 @@ FROM [TM Decision Tree]
   
  예를 들어 의사 결정 트리 뷰어를 사용하여 모델을 탐색하면서 수입별로 그룹화된 고객이 들어 있는 노드를 클릭하면 도구 설명에 다음과 같은 노드 속성이 표시됩니다.  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Age > = 69 및 Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  최소 버킷의 최소값과 최대 버킷의 최대값은 단순히 관측 값 중 가장 높은 값과 가장 낮은 값입니다. 이러한 관측 범위에서 벗어나는 값은 최소 버킷과 최대 버킷에 속하는 것으로 간주됩니다.  

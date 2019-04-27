@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647513"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>자습서: 행렬 보고서 (보고서 작성기) 만들기
   이 자습서에서는 예제 판매 데이터를 기반으로 기본 행렬 보고서를 만드는 방법을 배웁니다. 행렬에는 중첩 행 및 열 그룹과 인접 열 그룹이 있습니다. 열의 서식을 지정하고 텍스트를 회전하는 방법도 배웁니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  

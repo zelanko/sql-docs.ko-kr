@@ -1,5 +1,5 @@
 ---
-title: 통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을 PowerPivot 데이터 | Microsoft Docs
+title: '통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을: PowerPivot 데이터 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749122"
 ---
-# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을 새로 고치지 못했습니다.
+# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을: PowerPivot 데이터
   Excel Services는 PowerPivot 서버에 연결 요청을 제출하고 이 요청이 실패하는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  
   
 ## <a name="details"></a>설명  
@@ -28,7 +28,7 @@ ms.locfileid: "53371005"
 |적용 대상:|SharePoint용 PowerPivot 설치|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|아래를 참조하십시오.|  
-|메시지 텍스트|통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을 새로 고치지 못했습니다.|  
+|메시지 텍스트|통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을: PowerPivot 데이터|  
   
 ## <a name="explanation-and-resolution"></a>설명 및 해결 방법  
  Excel Services가 PowerPivot 데이터에 연결하거나 로드할 수 없습니다. 이 오류가 발생하는 조건은 다음과 같습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "53371005"
   
  열려는 통합 문서가 SQL Server 2008 R2 버전의 PowerPivot for Excel에서 작성되었을 수 있습니다. 이는 대개 데이터 연결 문자열에 지정된 Analysis Services 데이터 공급자가 요청을 처리할 컴퓨터에 없는 경우에 해당합니다.  
   
- 이러한 경우 ULS 로그에 다음과 같은 메시지가 포함됩니다. "통합 문서에서 ' PowerPivot 데이터 '에 대 한 새로 고침 실패 '\<통합 문서에 대 한 URL >'", "연결을 가져올 수 없습니다."입니다.  
+ 이 경우에 ULS 로그에이 메시지를 찾을 수 있습니다. "통합 문서에서 ' PowerPivot 데이터 '에 대 한 새로 고침 실패 '\<통합 문서에 대 한 URL >'", "연결을 가져올 수 없습니다."입니다.  
   
  통합 문서의 버전을 확인하려면 Excel에서 해당 통합 문서를 열고 연결 문자열에 지정된 데이터 공급자를 확인합니다. SQL Server 2008 R2 통합 문서는 MSOLAP.4를 데이터 공급자로 사용합니다.  
   

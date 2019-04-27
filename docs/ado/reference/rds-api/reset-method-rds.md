@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fc769436a919a4d522fb48699c6fc6faa0d6e5c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670262"
 ---
 # <a name="reset-method-rds"></a>Reset 메서드(RDS)
 클라이언트 쪽에서 정렬 또는 필터 실행 **레코드 집합** 지정 된 정렬 및 필터링 할 속성을 기반으로 합니다.  

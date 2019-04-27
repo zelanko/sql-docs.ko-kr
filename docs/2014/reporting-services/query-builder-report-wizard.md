@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657609"
 ---
 # <a name="query-builder-report-wizard"></a>쿼리 작성기(보고서 마법사)
   쿼리 작성기를 사용하여 보고서에 사용할 결과 집합을 검색하는 쿼리를 지정할 수 있습니다. 다음과 같은 두 개의 쿼리 작성기 중에서 선택할 수 있습니다.  

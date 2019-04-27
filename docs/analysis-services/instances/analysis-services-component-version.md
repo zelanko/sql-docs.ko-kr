@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659061"
 ---
 # <a name="verify-analysis-services-cumulative-update-build-version"></a>Analysis Services 누적 업데이트 빌드 버전 확인
 

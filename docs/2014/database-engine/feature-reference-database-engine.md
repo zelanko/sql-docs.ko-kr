@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779758"
 ---
 # <a name="feature-reference-database-engine"></a>기능 참조(데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에는 데이터베이스 개체와 데이터를 생성, 관리 및 표시할 수 있는 여러 가지 도구와 응용 프로그램이 있습니다. 또한 기능, 서비스 및 네트워크 프로토콜을 활성화 및 비활성화하고 서버와 데이터베이스 성능을 모니터링하고 문제 해결하는 데 사용할 수 있는 도구가 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자를 설명하는 항목을 제공합니다.  

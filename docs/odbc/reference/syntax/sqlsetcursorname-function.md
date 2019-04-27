@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742249"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 함수
 **규칙**  
@@ -48,7 +48,7 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *cursorName*  
+ *CursorName*  
  [입력] 커서 이름입니다. 효율적인 처리를 위해 커서 이름 커서 이름에 선행 또는 후행 공백을 모두를 포함 하지 않아야 하 고 커서 이름에서 첫 번째 문자로 구분 기호를 배치 해야 커서 이름이 구분된 식별자에 포함 된 경우.  
   
  *NameLength*  

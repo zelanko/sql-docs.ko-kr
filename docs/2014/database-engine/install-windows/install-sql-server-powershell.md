@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775443"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
   사용자가 PowerShell 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 선택했지만 Windows PowerShell 2.0이 설치되지 않은 것으로 감지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 중지됩니다. Windows 관리 프레임워크를 사용하여 PowerShell을 설치하고 설치 프로그램을 다시 실행해야 합니다.  

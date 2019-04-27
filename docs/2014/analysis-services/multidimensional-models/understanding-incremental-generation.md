@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740943"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
   처음 스키마를 생성한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브 및 차원 정의를 변경하고 스키마 생성 마법사를 다시 실행할 수 있습니다. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "48049293"
  반면, 데이터 원본 연결 문자열을 이전 생성에서 다른 데이터베이스로 변경하는 경우에는 오류가 발생하지 않습니다. 새 데이터베이스가 사용되고 이전 데이터베이스는 변경되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [변경 내용을 데이터 원본 뷰 및 데이터 원본 관리](manage-changes-to-data-source-views-and-data-sources.md)   
- [스키마 생성 마법사 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [데이터 원본 뷰 및 데이터 원본에 대한 변경 내용 관리](manage-changes-to-data-source-views-and-data-sources.md)   
+ [스키마 생성 마법사&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

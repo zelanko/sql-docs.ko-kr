@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789083"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>정책 평가 결과(AlwaysOn)
   AlwaysOn 대시보드의 **정책 평가 결과** 페이지를 사용하여 현재 정책 문제를 확인할 수 있습니다.  

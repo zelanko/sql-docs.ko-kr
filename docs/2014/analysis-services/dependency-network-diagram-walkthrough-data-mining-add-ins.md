@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732179"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>종속성 네트워크 다이어그램 연습(데이터 마이닝 추가 기능)
   몇 가지 유형의 데이터 마이닝 모델은 데이터에서 관계를 탐색하는 수단으로 네트워크 그래프를 사용합니다. Visio를 사용 하 여 이러한 모델을 가져올 수 있습니다 합니다 **종속성 네트워크** 셰이프 및 사용자 지정 레이아웃을 개선 하 고 계속 합니다. 합니다 **Visio 용 데이터 마이닝 셰이프** 종속성 네트워크 다이어그램으로 작업에 대 한 다음 사용자 지정 컨트롤을 포함 합니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "48197933"
      **페이지 크기 조정**  
      모든 노드가 표시되도록 페이지의 크기를 변경합니다.  
   
-     **가장자리 수준**  
+     **Edge Strength**  
      전체 그래프에 대한 가장자리 수준 표시를 설정/해제합니다. 가장자리는 노드 간 연결입니다. 슬라이더 컨트롤을 사용하여 강력하지 않은 연결을 필터링으로 제외할 수 있습니다.  
   
      **슬라이더**  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33296b1b3d1935f0f716a6e411c23481ee0e2789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755951"
 ---
 # <a name="what39s-new-in-analysis-services-and-business-intelligence"></a>새로운&#39;Analysis Services 및 Business Intelligence 기능
   다차원 모델에 대한 Power View 보고서를 지원하는 추가된 기능을 제외하고 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 이전 릴리스와 달라지지 않았습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "53356519"
   
  ![SSDT의 새 프로젝트 템플릿](media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
   
-## <a name="features-recently-added-power-view-for-multidimensional-models"></a>최근에 추가된 기능: 다차원 모델용 파워 뷰  
+## <a name="features-recently-added-power-view-for-multidimensional-models"></a>최근에 추가 된 기능은 다음과 같습니다. 다차원 모델용 파워 뷰  
  다차원 모델에 대한 Power View 보고서를 만드는 기능은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서비스 팩 1 누적 업데이트 4에서 처음 도입되었습니다. 다차원 모델용 Power View 기능은 이제 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]의 일부로 포함되어 있습니다.  
   
  **다차원 모델용 power View 보고서**  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667863"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 멤버 폼 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **계산 멤버 폼 편집기** 창을 사용하여 계산 멤버를 만들거나 수정할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049113"
   
  **참고** 이 옵션은 **부모 계층** 이 MEASURES 이외의 계층을 지정하는 경우에만 사용할 수 있습니다.  
   
- **변경**  
+ **Change**  
  **부모 멤버 선택** 대화 상자를 표시하여 **부모 멤버**에 대한 멤버를 선택하려면 이 옵션을 선택합니다. **부모 멤버 선택** 대화 상자에 대한 자세한 내용은 [부모 멤버 선택 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **식**  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771183"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "58658057"
 |NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 Oracle 데이터베이스의 이름입니다.|  
 |config_version|해당 CDC 데이터베이스 **xdbcdc_config** 테이블의 마지막 변경에 대한 타임스탬프(UTC) 또는 이 테이블의 현재 행에 대한 타임스탬프(UTC)입니다.<br /><br /> UPDATE 트리거는 이 항목에 대한 GETUTCDATE()의 값을 적용합니다. **config_version** 을 사용하여 CDC Service에서 구성 변경 또는 설정/해제를 확인해야 할 CDC 인스턴스를 식별할 수 있습니다.|  
 |cdc_service_name|이 항목은 어떤 Oracle CDC Service가 선택한 Oracle 데이터베이스를 처리할지를 결정합니다.|  
-|enabled|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC인스턴스는 재시도할 수 없는 오류로 인해 비활성화될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
+|enabled|Oracle CDC 인스턴스가 활성인지(1) 또는 비활성(0)인지를 나타냅니다. Oracle CDC Service가 시작될 때 사용(1)으로 표시된 인스턴스만 시작됩니다.<br /><br /> **참고**: Oracle CDC 인스턴스는 재시도할 수 없는 오류로 인해 비활성화 될 수 있습니다. 이 경우 오류를 해결한 후 수동으로 인스턴스를 다시 시작해야 합니다.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  이 테이블에는 호스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 CDC Service가 나열됩니다. 이 테이블은 CDC Designer 콘솔에서 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 구성된 CDC Service의 목록을 확인하는 데 사용됩니다. 이 테이블은 CDC Service에서 실행 중인 하나의 Windows 서비스에서만 지정된 Oracle CDC Service 이름이 처리되는지 확인하는 데도 사용됩니다.  
@@ -217,7 +217,7 @@ ms.locfileid: "58658057"
   
  **sql-username**, **sql-password** 는 업데이트되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 자격 증명입니다. sqlacct에서 사용자 이름과 암호가 모두 비어 있는 경우 Oracle CDC Service는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
+ **참고**: 공백이 나 따옴표가 포함 된 매개 변수는 큰따옴표 (")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ###  <a name="BKMK_create"></a> 만들기  
  `Create` 를 사용하여 스크립트에서 Oracle CDC Service를 만듭니다. 컴퓨터 관리자가 명령을 실행해야 합니다. 다음은 `Create` 명령의 예입니다.  
@@ -243,7 +243,7 @@ ms.locfileid: "58658057"
   
  **sql-username**, **sql-password** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 이름과 암호입니다. 이 두 매개 변수가 모두 비어 있으면 Oracle CDC Service는 Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
+ **참고**: 공백이 나 따옴표가 포함 된 매개 변수는 큰따옴표 (")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  `Delete` 를 사용하여 스크립트에서 Oracle CDC Service를 완전히 삭제합니다. 컴퓨터 관리자가 이 명령을 실행해야 합니다. 다음은 `Delete` 명령의 예입니다.  
@@ -258,7 +258,7 @@ ms.locfileid: "58658057"
   
  **cdc-service-name** 삭제할 CDC Service의 이름입니다.  
   
- **참고**: 공백이나 따옴표가 포함된 매개 변수는 큰따옴표(")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
+ **참고**: 공백이 나 따옴표가 포함 된 매개 변수는 큰따옴표 (")로 묶어야 합니다. 포함된 큰따옴표는 이중으로 사용해야 합니다(예: **"A#B" D** 를 암호로 사용하려면 **""A#B"" D"** 입력).  
   
 ## <a name="see-also"></a>관련 항목  
  [CDC Service 명령줄 인터페이스를 사용하는 방법](how-to-use-the-cdc-service-command-line-interface.md)   

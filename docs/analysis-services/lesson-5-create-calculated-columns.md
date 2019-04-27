@@ -1,5 +1,5 @@
 ---
-title: '5 단원: 계산된 열 만들기 | Microsoft Docs'
+title: '5단원: 계산된 열 만들기 | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752524"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>5단원: 계산 열 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "42792184"
   
 서로 다른 세 테이블에 다섯 개의 새 계산 열을 만듭니다. 태스크마다 단계가 조금씩 다릅니다. 이는 새 열을 만들고 열의 이름을 바꾸고 테이블의 다양한 위치에 열을 배치하는 데 여러 가지 방법이 있음을 보여 주기 위한 것입니다.  
   
-이 단원에 소요되는 예상 시간: **15분**  
+예상이 단원을 완료 시간: **15 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [4 단원: 관계 만들기](../analysis-services/lesson-4-create-relationships.md)합니다. 
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [4단원: 관계를 만들](../analysis-services/lesson-4-create-relationships.md)합니다. 
   
 ## <a name="create-calculated-columns"></a>계산 열 만들기  
   
@@ -52,7 +52,7 @@ ms.locfileid: "42792184"
   
 5.  이 열의 이름을 바꿀 **MonthCalendar**합니다. 
 
-    ![으로-테이블 형식-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 MonthCalendar 계산 열은 월에 대 한 정렬 가능한 이름을 제공 합니다.  
   
@@ -122,12 +122,12 @@ ProductCategoryName 계산 된 열은 DimProductCategory 테이블에서 English
   
 5.  열 사이로 끕니다 합니다 **SalesAmount** 열 및 **TaxAmt** 열입니다. 
  
-      ![으로-테이블 형식-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     Margin 계산된 열은 각 판매의 이익률을 분석에 사용 됩니다.  
   
 ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [6 단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)합니다.
+다음 단원으로 이동 합니다. [6단원: 측정값 만들기](../analysis-services/lesson-6-create-measures.md)합니다.
   
   
   

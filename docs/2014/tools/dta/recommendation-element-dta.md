@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659586"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 요소(DTA)
   사용자 지정 구성의 일부인 가상 인덱스에 대한 정보를 포함합니다.  

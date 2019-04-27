@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d44c3aefaf3fc0b87f36da8f5b15c97555183612
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646152"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>SendUsingSMTPServer 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버의 전자 메일 구성에 있는 `SendUsing` 요소가 `true`로 설정되어 있는지 여부를 지정합니다.  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 815158ddcdb93b1e779f9a12ef06f034741de590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643415"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 속성(ServerNetworkProtocolIPAddress 클래스)
   IP 주소와 연결된 속성을 가져옵니다.  

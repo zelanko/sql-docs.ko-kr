@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730667"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>명명된 쿼리 생성 대화 상자(Analysis Services - 다차원 데이터)
   **의** 명명된 쿼리 생성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **데이터 탐색** 대화 상자의 **피벗 차트** 탭에 표시된 차트에서 선택한 차트 계열, 차트 계열 값 또는 차트 필터를 기반으로 명명된 쿼리를 만들 수 있습니다. **데이터 탐색** 대화 상자에서 **명명된 쿼리 생성** 을 클릭하면 **명명된 쿼리 생성** 대화 상자를 표시할 수 있습니다.  

@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788687"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 마법사 사용(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 새 가용성 그룹 마법사를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다. *가용성 그룹* 은 단일 단위로 장애 조치(Failover)될 사용자 데이터베이스 집합과 장애 조치(Failover)를 지원하는 장애 조치(Failover) 파트너 집합( *가용성 복제본*이라고 함)을 정의합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "53363886"
   
      [보안](#Security)  
   
--   **만들고 구성할 가용성 그룹을 사용 하 여:**  [새 가용성 그룹 마법사 (SQL Server Management Studio)](#RunAGwiz)  
+-   **가용성 그룹을 만들고 구성하려면 다음을 사용합니다.**  [새 가용성 그룹 마법사 (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  새 가용성 그룹 마법사 대신 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell cmdlet을 사용할 수도 있습니다. 자세한 내용은 [가용성 그룹 만들기&#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) 또는 [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다.  
@@ -111,12 +111,12 @@ ms.locfileid: "53363886"
   
      데이터베이스를 적합하도록 변경한 경우 **새로 고침** 을 클릭하여 데이터베이스 표를 업데이트합니다.  
   
-7.  **복제본 선택** 페이지에서 새 가용성 그룹에 대해 하나 이상의 복제본을 지정하고 구성합니다. 이 페이지에는 네 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 참조는 [복제본 지정 페이지 &#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) 항목입니다.  
+7.  **복제본 선택** 페이지에서 새 가용성 그룹에 대해 하나 이상의 복제본을 지정하고 구성합니다. 이 페이지에는 네 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) 항목을 참조하세요.  
   
     |탭|간단한 설명|  
     |---------|-----------------------|  
     |**복제본**|이 탭에서는 보조 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정할 수 있습니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.|  
-    |**엔드포인트**|기존 데이터베이스 미러링 엔드포인트를 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 엔드포인트가 없는 경우 엔드포인트를 자동으로 만들려면 이 탭을 사용합니다. **참고:**  서버 인스턴스가 도메인 사용자 계정이 아닌 계정으로 실행 중인 경우 마법사를 계속하려면 먼저 서버 인스턴스를 수동으로 변경해야 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#PrerequisitesRestrictions)를 참조하세요.|  
+    |**엔드포인트**|기존 데이터베이스 미러링 엔드포인트를 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 엔드포인트가 없는 경우 엔드포인트를 자동으로 만들려면 이 탭을 사용합니다. **참고:**  서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우 마법사를 계속 하기 전에 서버 인스턴스를 수동으로 변경 확인 수행 해야 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#PrerequisitesRestrictions)를 참조하세요.|  
     |**백업 기본 설정**|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
     |**수신기**|이 탭을 사용하여 가용성 그룹 수신기를 만들 수 있습니다. 기본적으로 마법사는 수신기를 만들지 않습니다.|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "53363886"
   
      마법사가 완료되면 **닫기** 를 클릭하여 종료합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **가용성 그룹 구성을 완료하려면**  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -196,7 +196,7 @@ ms.locfileid: "53363886"
   
 -   **블로그:**  
   
-     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   

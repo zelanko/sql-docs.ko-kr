@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731327"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>필터 대화 상자(마이닝 정확도 차트)
   **필터** 대화 상자를 사용하면 데이터 집합에 적용할 수 있는 조건을 작성할 수 있습니다. 데이터 집합은 테스트에 사용되는 외부 데이터 집합이나 마이닝 모델 학습에 사용되는 사례 데이터일 수 있습니다. 이 대화 상자를 사용하면 **데이터 집합 필터** 대화 상자 또는 **모델 필터** 대화 상자에서 보다 복잡한 필터 조건의 일부로 저장할 수 있는 조건을 작성할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48060179"
   
  새 데이터 집합에 필터를 적용하면 기존 데이터 마이닝 모델을 사용하여 데이터 집합에서 조건에 맞는 사례만 평가됩니다. 그러나 마이닝 모델 자체에 필터를 적용하면 마이닝 모델 내에서 이러한 조건에 맞는 사례에 대해서만 모델의 정확도가 평가됩니다.  
   
- **자세한 내용:** [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **자세한 내용은 다음을 참조하세요.** [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>변수  
  **조건**  

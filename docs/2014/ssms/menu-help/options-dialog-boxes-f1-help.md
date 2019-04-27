@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662084"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>옵션 대화 상자 F1 도움말
   이 섹션에서는 **의** 도구 **메뉴에서** 옵션 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 클릭하면 사용할 수 있는 대화 상자에 대한 F1 도움말을 제공합니다.  

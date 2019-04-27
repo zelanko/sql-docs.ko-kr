@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792356"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>데이터 품질 프로젝트 관리(열기, 잠금 해제, 이름 바꾸기 및 삭제)
   이 항목에서는 데이터 품질 프로젝트 열기, 잠금 해제, 이름 바꾸기, 삭제 등 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 를 사용하여 데이터 품질 프로젝트를 관리하는 방법에 대해 설명합니다.  
@@ -59,9 +59,9 @@ ms.locfileid: "56020325"
   
 4.  데이터 품질 프로젝트가 마지막으로 닫힌 작업 상태에서 열립니다. 데이터 품질 프로젝트의 상태는 다음과 같습니다.  
   
-    -   에 대 한 합니다 **정리** 활동, 데이터 품질 프로젝트는 다음과 같은 상태를 가질 수 있습니다. **정리 중-매핑**, **정리 중-정리**합니다 **정리 중-결과 관리 및 보기**, 및 **정리-내보내기**합니다.  
+    -   **정리** 작업의 경우 데이터 품질 프로젝트의 상태는 **정리 중 - 매핑**, **정리 중 - 정리**, **정리 중 – 결과 관리 및 보기**, **정리 중 – 내보내기** 중 하나일 수 있습니다.  
   
-    -   에 대 한 합니다 **일치** 활동, 데이터 품질 프로젝트는 다음과 같은 상태를 가질 수 있습니다. **일치-매핑**, **일치-일치**를 **일치-Survivorship**, 및 **일치-내보내기**합니다.  
+    -   **일치** 작업의 경우 데이터 품질 프로젝트의 상태는 **일치 - 매핑**, **일치 - 일치**, **일치 - Survivorship**, **일치 - 내보내기** 중 하나일 수 있습니다.  
   
 ##  <a name="Unlock"></a> 데이터 품질 프로젝트 잠금 해제  
  데이터 품질 프로젝트를 만드는 경우 다른 사용자가 사용하거나 수정하지 못하도록 프로젝트가 잠긴 상태로 있습니다. 다른 사용자가 데이터 품질 프로젝트에서 작업할 수 있도록 하려면 작업을 완료한 후 데이터 품질 프로젝트의 잠금을 해제해야 합니다. 잠긴 프로젝트에는 자물쇠 기호가 표시됩니다.  

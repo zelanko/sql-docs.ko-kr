@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 14babb777aa4c5de85c0a0324621aebf91cb5367
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653483"
 ---
 # <a name="gt-greater-than-or-equal-to-mdx"></a>&gt;= (크거나 같음) (MDX)
 
@@ -35,11 +35,11 @@ MDX_Expression >= MDX_Expression
 ## <a name="return-value"></a>반환 값  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   **true 이면** 첫 번째 매개 변수 보다 큰 또는 두 번째 매개 변수 값과 같지 않은 값이 하는 경우.  
+-   **true** 첫 번째 매개 변수 중 두 번째 매개 변수의 값 보다 크거나는 값을 가진 경우입니다.  
   
--   **false** 첫 번째 매개 변수의 두 번째 매개 변수 값 보다 낮은 값이 있습니다.  
+-   **false** 첫 번째 매개 변수의 두 번째 매개 변수의 값 보다 낮은 값이 있습니다.  
   
--   **true 이면** 매개 변수가 모두 null 이거나 한 매개 변수가 null이 고 다른 매개 변수가 0입니다.  
+-   **true** 매개 변수가 모두 null 이거나 한 매개 변수가 null 하 고 다른 매개 변수가 0 인 경우.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

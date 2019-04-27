@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731787"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>차원 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 차원에 포함된 데이터를 찾아보고 특성, 계층, 수준, 특성 관계, 번역 등을 포함하여 기존 차원의 다양한 속성을 수정할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52528939"
  [차원 구조](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  이 페이지를 사용하여 차원의 특성, 계층 및 수준을 보고 수정할 수 있습니다.  
   
- [특성 관계](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
+ [에서 차원 디자이너의](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
  이 페이지를 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  
   
  [번역](translations-dimension-designer-analysis-services-multidimensional-data.md)  

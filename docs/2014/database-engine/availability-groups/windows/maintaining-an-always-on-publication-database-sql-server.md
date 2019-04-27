@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791994"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn 게시 데이터베이스 유지 관리(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹을 사용할 경우 게시 데이터베이스 유지 관리와 관련하여 특별히 고려해야 할 사항에 대해 설명합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "54126987"
   
      이때 게시된 데이터베이스의 복사본을 유지하거나 삭제할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [AlwaysOn 가용성 그룹 (SQL Server)에 대 한 복제 구성](always-on-availability-groups-sql-server.md)  
   

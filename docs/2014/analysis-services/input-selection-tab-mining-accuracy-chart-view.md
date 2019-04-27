@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729888"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>입력 선택 탭(마이닝 정확도 차트 뷰)
   **마이닝 정확도 차트** 디자이너의 **입력 선택** 탭을 사용하여 모델을 테스트하고 정확도 차트를 작성하는 데 사용되는 데이터 원본을 지정할 수 있습니다.  
   
- **자세한 내용:** [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **자세한 내용은 다음을 참조하세요.** [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>변수  
  **예측 열과 값**  **동기화**  
@@ -36,7 +36,7 @@ ms.locfileid: "48120873"
   
 |값|Description|  
 |-----------|-----------------|  
-|**표시**|마이닝 모델의 예측 가능한 열 중 차트에 표시할 각 열의 이름 옆에 있는 상자를 선택합니다.<br /><br /> 차트가 너무 복잡해서 보기 어려우면 하나 이상의 열 옆에 있는 상자의 선택을 취소하여 차트를 간단하게 만듭니다.<br /><br /> 참고: 하나 이상의 열을 선택하지 않으면 정확도 차트를 만들 수 없습니다.|  
+|**표시**|마이닝 모델의 예측 가능한 열 중 차트에 표시할 각 열의 이름 옆에 있는 상자를 선택합니다.<br /><br /> 차트가 너무 복잡해서 보기 어려우면 하나 이상의 열 옆에 있는 상자의 선택을 취소하여 차트를 간단하게 만듭니다.<br /><br /> 참고: 하나 이상의 열을 선택 하지 않으면 정확도 차트를 만들 수 없습니다.|  
 |**마이닝 모델**|마이닝 구조에 포함된 마이닝 모델을 나열합니다.|  
 |**예측 가능한 열 이름**|마이닝 모델에 포함된 예측 가능한 열 중 리프트 차트를 만드는 데 사용할 열을 선택합니다.|  
 |**예측 값**|예측 가능한 열의 값을 선택합니다. 이 필드를 비워 두면 리프트 차트에서는 예측 가능한 열의 모든 상태에 대한 모델의 성능을 예측합니다.|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120873"
  [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [마이닝 모델에 필터를 적용 합니다.](data-mining/apply-a-filter-to-a-mining-model.md)   
- [마이닝 모델에 대 한 필터 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

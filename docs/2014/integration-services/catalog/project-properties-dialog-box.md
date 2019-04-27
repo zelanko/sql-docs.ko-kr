@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771659"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 하나의 배포 단위입니다. 각 프로젝트는 패키지, 매개 변수 및 환경 참조를 포함할 수 있습니다. 프로젝트는 검색 가능한 개체이며 데이터베이스 보안 주체의 사용 권한을 정의할 수 있습니다. 프로젝트를 다시 배포하는 경우 이전 버전의 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 저장할 수 있습니다.  

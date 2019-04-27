@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756273"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>데이터 처리 문제 해결(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 모델을 제작할 때의 모델 데이터 처리(새로 고침)에 대한 정보를 제공합니다. 이 항목에서는 Analysis Services 서버 인스턴스에 배포된 모델에서 데이터 처리에 대한 정보를 제공하지 않습니다. 배포된 모델에서 데이터를 처리하는 방법에 대한 자세한 내용은 [Analysis Services의 스크립트 관리 태스크](script-administrative-tasks-in-analysis-services.md)를 참조하세요.  
@@ -47,7 +47,7 @@ ms.locfileid: "48174703"
   
  따라서 데이터 원본을 변경하거나 해당 데이터 원본에서 가져온 데이터를 처리하기 전에 항상 잠재적인 영향에 주의해야 하며 다음과 같은 잠재적인 결과를 고려해야 합니다.  
   
--   데이터 원본의 변경으로 인해 모델 데이터의 일부가 손상될 수도 있습니다. 데이터 원본에서 일부 열을 검색할 수 없는 경우(예: 해당 열이 삭제되거나 변경된 경우) 처리가 실패하며 원본 데이터와 모델 데이터 간의 매핑을 업데이트해야 합니다. 자세한 내용은 [기존 데이터 원본 연결 편집 &#40;&AMP;#40;SSAS 테이블 형식&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)합니다.  
+-   데이터 원본의 변경으로 인해 모델 데이터의 일부가 손상될 수도 있습니다. 데이터 원본에서 일부 열을 검색할 수 없는 경우(예: 해당 열이 삭제되거나 변경된 경우) 처리가 실패하며 원본 데이터와 모델 데이터 간의 매핑을 업데이트해야 합니다. 자세한 내용은 [기존 데이터 원본 연결 편집&#40;SSAS 테이블 형식&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)를 사용하여 모델을 제작할 때의 모델 데이터 처리(새로 고침)에 대한 정보를 제공합니다.  
   
 -   처리 후 일부 열이 오류를 포함하는 것으로 플래그가 지정될 수도 있습니다. 이러한 문제는 열에 있는 DAX 수식에서 사용하는 데이터가 처리로 인해 사용할 수 없게 되거나 데이터 형식이 변경되거나 잘못된 값이 외부 데이터에 추가되었기 때문에 발생합니다. 이 문제를 해결하려면 수식을 편집하거나 더 이상 사용할 수 없는 데이터에 기반하는 열을 삭제합니다.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48174703"
 -   서로 다른 테이블의 열을 다중 선택하고 열의 속성을 변경하는 것은 불가능합니다. 한 번에 하나의 테이블 또는 뷰만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터를 수동으로 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](manually-process-data-ssas-tabular.md)   
- [기존 데이터 원본 연결 편집 &#40;&AMP;#40;SSAS 테이블 형식&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [수동으로 데이터 처리&#40;SSAS 테이블 형식&#41;](manually-process-data-ssas-tabular.md)   
+ [기존 데이터 원본 연결 편집&#40;SSAS 테이블 형식&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

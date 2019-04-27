@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659216"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = 학습 사례 수를 기반으로 하는 사례의 로그 유사도로 계산되는 한계 사례가 나타날 가능성  
   
--   Z Exp (log(x)-Log(Y)) =  
+-   Z = Exp( log(x) - Log(Y))  
   
  정규화 = (z / (1 + z))  
   

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990189"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "53363825"
   
 -   필요한 최소한의 실제 메모리를 갖춘 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 제거하려면 먼저 페이지 파일 크기가 충분한지 확인해야 합니다. 페이지 파일 크기는 실제 메모리의 두 배여야 합니다. 가상 메모리가 부족하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 완전히 제거되지 않을 수도 있습니다.  
   
--    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스가 여러 개인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 마지막 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스가 제거될 때 자동으로 제거됩니다.  
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 모든 구성 요소를 제거하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어판 **의** 프로그램 및 기능 **에서**Browser 구성 요소를 수동으로 제거해야 합니다.  
   

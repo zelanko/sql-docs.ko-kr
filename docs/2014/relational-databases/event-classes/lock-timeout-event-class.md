@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663958"
 ---
 # <a name="locktimeout-event-class"></a>Lock:Timeout 이벤트 클래스
   Lock:Timeout 이벤트 클래스는 페이지 등의 특정 리소스에 대해 다른 트랜잭션이 차단 잠금을 보유 중이기 때문에 해당 리소스에 대한 잠금 요청 시간이 초과되었음을 나타냅니다. 제한 시간은 @@LOCK_TIMEOUT 시스템 함수에 의해 결정되며 SET LOCK_TIMEOUT 문을 사용하여 설정할 수 있습니다.  

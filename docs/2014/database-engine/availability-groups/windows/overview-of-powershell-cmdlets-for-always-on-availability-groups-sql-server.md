@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789460"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹에 대한 PowerShell Cmdlet 개요(SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell은 시스템 관리를 위해 특별히 설계된 태스크 기반 명령줄 셸이자 스크립팅 언어입니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스를 배포, 관리 및 모니터링할 수 있도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에 PowerShell cmdlet 집합을 제공합니다.  

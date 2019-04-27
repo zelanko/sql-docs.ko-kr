@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655437"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
   트랜잭션 복제는 일반적으로 게시 데이터베이스 개체 및 데이터의 스냅숏으로 시작됩니다. 일반적으로 초기 스냅숏이 사용되자마자 게시자에서의 후속 데이터 변경 내용 및 스키마 수정 내용이 구독자로 배달됩니다. 이러한 작업은 거의 실시간으로 수행됩니다. 데이터 변경 내용은 게시자에서 발생한 것과 같은 순서 및 같은 트랜잭션 경계 내에서 구독자에 적용되므로 게시 내에서는 트랜잭션 일관성이 보장됩니다.  
@@ -70,13 +70,13 @@ ms.locfileid: "54127683"
 ## <a name="publication-types"></a>게시 유형
 
   
-트랜잭션 복제는 네 가지 게시 유형을 제공 합니다.  
+트랜잭션 복제는 다음과 같은 네 가지 게시 유형을 제공합니다.  
   
 |게시 유형|Description|  
 |----------------------|-----------------|  
 |표준 트랜잭션 게시|구독자의 모든 데이터가 읽기 전용인 토폴로지에 적합합니다. 트랜잭션 복제는 구독자의 모든 데이터를 읽기 전용으로 변경하지 않습니다.<br /><br /> 표준 트랜잭션 게시는 Transact-SQL 또는 RMO(복제 관리 개체)를 사용하는 경우 기본적으로 생성됩니다. 새 게시 마법사를 사용하는 경우에는 **게시 유형** 페이지에서 **트랜잭션 게시** 를 선택하면 해당 게시가 생성됩니다.<br /><br /> 게시를 만드는 방법은 [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조하세요.|  
-|업데이트할 수 있는 구독이 있는 트랜잭션 게시|이 게시 유형의 특성은 다음과 같습니다.<br /><br /> -각 위치가 동일한 데이터를 하나의 게시자와 하나의 가입자에 <br /> 구독자에서 행을 업데이트 하는-이 가능<br /> -이 토폴로지는 고가용성이 필요한 서버 환경에 가장 적합 및 읽기 확장성.<br /><br />자세한 내용은 [업데이트할 수 있는 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)합니다.|  
-|피어 투 피어 토폴로지|이 게시 유형의 특성은 다음과 같습니다.<br /> -각 위치가 동일한 데이터 며 게시자와 구독자 모두로 작동 합니다.<br /> -같은 행은 한 번에 한 위치 에서만 변경할 수 있습니다.<br /> -지원 [충돌 검색](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-이 토폴로지는 고가용성이 필요한 서버 환경에 가장 적합 및 읽기 확장성.<br /><br />자세한 내용은 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
-|양방향 트랜잭션 복제|이 게시 유형의 특성은 다음과 같습니다.<br />그러나 양방향 복제 피어 투 피어 복제에 비슷합니다., 충돌 해결을 제공 하지 않습니다. 또한 양방향 복제 서버 2로 제한 됩니다. <br /><br /> 자세한 내용은 참조 하세요. [양방향 트랜잭션 복제](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|업데이트할 수 있는 구독이 있는 트랜잭션 게시|이 게시 유형의 특성은 다음과 같습니다.<br /><br /> -각 위치가 동일한 데이터를 하나의 게시자와 하나의 가입자에 <br /> 구독자에서 행을 업데이트 하는-이 가능<br /> - 이 토폴로지는 고가용성 및 읽기 확장성이 필요한 서버 환경에 가장 적합합니다.<br /><br />자세한 내용은 [업데이트할 수 있는 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)을 참조하세요.|  
+|피어 투 피어 토폴로지|이 게시 유형의 특성은 다음과 같습니다.<br /> - 각 위치가 동일한 데이터를 가지며 게시자와 구독자 역할을 합니다.<br /> - 같은 행은 한 번에 한 위치에서만 변경될 수 있습니다.<br /> - [충돌 검색](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) 지원  <br />- 이 토폴로지는 고가용성 및 읽기 확장성이 필요한 서버 환경에 가장 적합합니다.<br /><br />자세한 내용은 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
+|양방향 트랜잭션 복제|이 게시 유형의 특성은 다음과 같습니다.<br />양방향 복제 피어 투 피어 복제와 유사하지만 충돌 해결은 제공하지 않습니다. 또한 양방향 복제는 2개의 서버로 제한됩니다. <br /><br /> 자세한 내용은 [양방향 트랜잭션 복제](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조하세요. |  
   
   

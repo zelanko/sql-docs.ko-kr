@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748215"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>결과 창(마이닝 모델 예측 뷰)
   **결과** 창에서는 예측 쿼리 작성기의 **디자인** 뷰에서 디자인한 데이터 마이닝 예측 쿼리의 결과를 표시합니다. 표의 선택 부분 또는 전체 결과 표를 클립보드에 복사할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48071183"
  예측 쿼리를 다시 처리합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)   
+ [예측 쿼리 작성기&#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)   
  [데이터 마이닝 쿼리 인터페이스](data-mining/data-mining-query-tools.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
   

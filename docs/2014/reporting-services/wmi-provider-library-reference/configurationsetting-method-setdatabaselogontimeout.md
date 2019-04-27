@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bf1da1a02fabe1675533de13992ffd34350f4ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646429"
 ---
 # <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseLogonTimeout 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스 연결에 대한 기본 제한 시간 값을 지정합니다.  

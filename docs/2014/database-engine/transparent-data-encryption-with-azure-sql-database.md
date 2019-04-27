@@ -15,25 +15,25 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773893"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 투명 한 데이터 암호화 (미리 보기)는 응용 프로그램을 변경할 필요 없이 데이터베이스, 연결 된 백업 및 미사용 트랜잭션 로그 파일의 실시간 암호화 및 해독을 수행 하 여 악의적인 활동의 위협 으로부터 보호할 수 있습니다.  
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 투명한 데이터 암호화(미리 보기)는 응용 프로그램을 변경할 필요 없이 사용하지 않는 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일에 대한 실시간 암호화 및 암호 해독을 수행하여 악의적인 활동의 위협으로부터 보호하도록 도와줍니다.  
   
  TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 스토리지를 암호화합니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에서 데이터베이스 암호화 키는 기본 제공 서버 인증서로 보호됩니다. 기본 제공 서버 인증서는 각 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 서버에 대해 고유합니다. GeoDR 관계에 있는 데이터베이스는 각 서버에서 다른 키로 보호됩니다. 두 개의 데이터베이스가 동일한 서버에 연결된 경우에는 동일한 기본 제공 인증서를 공유합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 적어도 90일마다 이러한 인증서를 자동으로 회전시킵니다. TDE에 대한 일반적인 설명은 [투명한 데이터 암호화&#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 [Key Vault에서 비대칭 키를 사용 하 여 예제 a: 투명 한 데이터 암호화](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)합니다.  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 참조 하세요. [예 1: Key Vault에서 비대칭 키를 사용 하 여 투명 한 데이터 암호화](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)합니다.  
   
 ||  
 |-|  
 |**적용 대상**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([일부 지역에서는 미리 보기](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  현재 미리 보기 기능입니다. 확인 하 고 해당 구현의 동의 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 내 데이터베이스에서 투명 한 데이터 암호화 (예: 기업 계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기 가입 하면 사용권 계약의 미리 보기 약관은 계약)에 해당 [추가 사용 약관에 대 한 Microsoft Azure 미리 보기](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)합니다.  
+>  현재 미리 보기 기능입니다. 내 데이터베이스에서의 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 투명한 데이터 암호화 구현에는 사용권 계약의 미리 보기 약관(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)과 해당 [Microsoft Azure Preview 추가 사용 약관](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의합니다.  
   
  TDE 상태 미리보기는 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL 데이터베이스의 새로운 소식](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48049783"
   
 -   이미 TDE 미리 보기에 등록되어 있어야 합니다.  
   
--   해야 데이터베이스 암호화 키를 만들려면를 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 관리자나 사용자의 멤버 여야 합니다는 **dbmanager** 마스터의 역할 데이터베이스를 **컨트롤** 데이터베이스에 대 한 권한.  
+-   데이터베이스 암호화 키를 만들려면 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 관리자여야 하거나 master 데이터베이스의 **dbmanager** 역할 구성원이고 데이터베이스에 대한 **CONTROL** 권한이 있어야 합니다.  
   
 -   SET 옵션을 사용하여 ALTER DATABASE 문을 실행하려면 **dbmanager** 역할에서 구성원 자격만 있으면 됩니다.  
   

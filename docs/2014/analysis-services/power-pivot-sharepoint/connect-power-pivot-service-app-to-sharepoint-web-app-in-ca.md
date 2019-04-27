@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d2f83b1b003e6be2fc5c47b8a0e12b440f537c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749421"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>중앙 관리에서 SharePoint 웹 애플리케이션에 PowerPivot 서비스 애플리케이션 연결
   팜의 여러 SharePoint 웹 애플리케이션에서 PowerPivot 서비스 애플리케이션을 사용할 수 있습니다. PowerPivot 서비스 애플리케이션을 사용할 수 있도록 하려면 서비스 연결 목록에 이를 추가합니다.  

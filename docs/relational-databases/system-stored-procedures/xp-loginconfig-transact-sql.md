@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645107"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ xp_loginconfig ['config_name']
 |**기본 로그인**|일치하는 로그인 이름이 없는 사용자에 대해 트러스트된 연결의 권한이 있는 사용자에 대한 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID의 이름입니다. 기본 로그인은 **게스트**합니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
 |**기본 도메인**|트러스트된 연결의 네트워크 사용자에 대한 기본 Windows 도메인 이름입니다. 기본 도메인은 Windows 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 컴퓨터의 도메인입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
 |**감사 수준**|감사 수준입니다. 가능한 값은 **없음**, **성공**, **장애**, 및 **모든**. 감사는 오류 로그 및 Windows 이벤트 뷰어에 기록됩니다.|  
-|**호스트 이름 설정**|클라이언트 로그인 레코드의 호스트 이름이 Windows 네트워크 사용자 이름으로 대체되는지 여부를 나타냅니다. 가능한 값은 **true** 하거나 **false**합니다. 네트워크 사용자 이름에서 출력에 표시 되는이 값으로 설정 하는 경우 **sp_who**합니다.|  
-|**지도 _**|유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 밑줄(_)에 매핑되는 Windows 특수 문자를 보고합니다. 가능한 값은 **도메인 구분 기호** (기본값) 이면 **공간**합니다 **null**, 또는 모든 단일 문자입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
+|**set hostname**|클라이언트 로그인 레코드의 호스트 이름이 Windows 네트워크 사용자 이름으로 대체되는지 여부를 나타냅니다. 가능한 값은 **true** 하거나 **false**합니다. 네트워크 사용자 이름에서 출력에 표시 되는이 값으로 설정 하는 경우 **sp_who**합니다.|  
+|**map _**|유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 밑줄(_)에 매핑되는 Windows 특수 문자를 보고합니다. 가능한 값은 **도메인 구분 기호** (기본값) 이면 **공간**합니다 **null**, 또는 모든 단일 문자입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
 |**$ 매핑**|유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 달러 표시($)에 매핑되는 Windows 특수 문자를 보고합니다. 가능한 값은 **도메인 구분 기호**를 **공간**합니다 **null**, 또는 모든 단일 문자입니다. 기본값은 **공간**입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
-|**# 매핑**|유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 숫자 기호(#)에 매핑되는 Windows 특수 문자를 보고합니다. 가능한 값은 **도메인 구분 기호**를 **공간**합니다 **null**, 또는 모든 단일 문자입니다. 기본값은 하이픈입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
+|**map #**|유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 숫자 기호(#)에 매핑되는 Windows 특수 문자를 보고합니다. 가능한 값은 **도메인 구분 기호**를 **공간**합니다 **null**, 또는 모든 단일 문자입니다. 기본값은 하이픈입니다. 이 값은 이전 버전과의 호환성을 위해 제공됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,7 +65,7 @@ xp_loginconfig ['config_name']
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|구성 값|  
-|**구성 값**|**sysname**|구성 값 설정|  
+|**config value**|**sysname**|구성 값 설정|  
   
 ## <a name="remarks"></a>Remarks  
  **xp_loginconfig** 구성 값 설정에 사용할 수 없습니다.  

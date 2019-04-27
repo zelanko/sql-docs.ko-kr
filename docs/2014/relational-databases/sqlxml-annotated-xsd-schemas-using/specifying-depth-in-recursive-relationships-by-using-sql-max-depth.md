@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745484"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>sql:max-depth를 사용하여 재귀 관계의 깊이 지정
   관계형 데이터베이스에서 테이블이 자신과 관계를 맺고 있는 경우 재귀 관계라고 합니다. 예를 들어 supervisor-supervisee 관계에서 직원 레코드를 저장하는 테이블은 자신과 관계가 있습니다. 이 경우 employees 테이블은 관계의 한쪽에서는 supervisor 역할을 하고 다른 쪽에서는 supervisee 역할을 합니다.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  관계가 재귀적이므로 스키마에서 재귀 깊이를 지정할 방법이 필요합니다. 그렇지 않으면 무한 재귀(직원이 직원에게 보고하고 이 직원은 또 다른 직원에게 보고하는 등)가 생성됩니다. `sql:max-depth` 주석을 사용하면 재귀가 계속되는 깊이를 지정할 수 있습니다. 다음의 특정 예제에서 `sql:max-depth` 값을 지정하려면 회사에서 관리 계층 구조가 어떠한 깊이로 이루어져 있는지 알아야 합니다.  
   
 > [!NOTE]  
->  이 스키마에서는 `sql:limit-field` 주석은 지정하지만 `sql:limit-value` 주석은 지정하지 않습니다. 따라서 결과 계층 구조에서 최상위 노드는 누구에게도 보고하지 않는 직원 즉, ReportsTo가 NULL인 직원으로만 제한됩니다. `sql:limit-field` 주석을 지정하고 `sql:limit-value` 주석(기본값은 NULL)을 지정하지 않으면 이 작업을 수행할 수 있습니다. 결과 XML에 가능한 모든 보고 트리(테이블의 모든 직원에 대한 보고 트리)를 포함하려면 스키마에서 `sql:limit-field` 주석을 제거합니다.  
+>  이 스키마에서는 `sql:limit-field` 주석은 지정하지만 `sql:limit-value` 주석은 지정하지 않습니다. 따라서 결과 계층 구조에서 최상위 노드는 누구에게도 보고하지 않는 직원 (ReportsTo은 NULL입니다.) 지정 `sql:limit-field` 지정 하지 않으면 `sql:limit-value` (기본값은 NULL) 주석이 작업을 수행 합니다. 결과 XML에 가능한 모든 보고 트리(테이블의 모든 직원에 대한 보고 트리)를 포함하려면 스키마에서 `sql:limit-field` 주석을 제거합니다.  
   
 > [!NOTE]  
 >  다음 절차에서는 tempdb 데이터베이스를 사용합니다.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  스키마에서 `sql:max-depth` 주석을 사용하여 스키마에 설명된 재귀 관계의 재귀 깊이를 지정할 수 있습니다. `sql:max-depth` 주석 값은 재귀 횟수를 나타내는 1에서 50 사이의 양의 정수입니다.  예를 들어 값이 1이면 `sql:max-depth` 주석이 지정된 요소에서 재귀가 중단되고 2이면 `sql:max-depth`가 지정된 요소의 다음 수준에서 재귀가 중단됩니다.  
   
 > [!NOTE]  
->  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 변환됩니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. `sql:max-depth`에 지정하는 값이 높을수록 생성되는 FOR XML EXPLICIT 쿼리가 커집니다. 그러면 검색 시간이 느려질 수 있습니다.  
+>  기본 구현에서는 매핑 스키마에 대해 지정된 XPath 쿼리가 SELECT ... FOR XML EXPLICIT 쿼리로 합니다. 이 쿼리에서는 한정된 재귀 깊이를 지정해야 합니다. `sql:max-depth`에 지정하는 값이 높을수록 생성되는 FOR XML EXPLICIT 쿼리가 커집니다. 그러면 검색 시간이 느려질 수 있습니다.  
   
 > [!NOTE]  
 >  Updategrams 및 XML 대량 로드에서는 max-depth 주석을 무시합니다. 따라서 max-depth에 지정하는 값에 상관없이 재귀 업데이트 또는 삽입이 수행됩니다.  

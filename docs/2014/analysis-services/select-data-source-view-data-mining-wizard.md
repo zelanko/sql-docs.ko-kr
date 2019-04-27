@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747705"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>데이터 원본 뷰 선택(데이터 마이닝 마법사)
   **데이터 원본 뷰 선택** 페이지를 사용하여 마이닝 구조에 대한 데이터 원본 뷰를 식별할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48177923"
 > [!NOTE]  
 >  이 페이지는 마법사의 **정의 방법 선택** 페이지에서 **기존 관계형 데이터베이스 또는 데이터 웨어하우스 사용**을 선택한 경우에만 표시됩니다.  
   
- **자세한 내용:** [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md), [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
+ **참조 항목:** [데이터 원본 다차원 모델의 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md), [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)를 [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>변수  
  **사용 가능한 데이터 원본 뷰**  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781108"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 통합 사용자 지정 특성 개요
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 CLR(공용 언어 런타임)에서는 특성이라고 하는 설명적 키워드를 사용할 수 있습니다. 이러한 특성은 메서드와 클래스 같은 많은 요소에 대한 추가적인 정보를 제공합니다. 특성은 개체의 메타데이터와 함께 어셈블리에 저장되며 다른 개발 도구를 위한 코드 설명이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 런타임 동작 제어에 사용될 수 있습니다.  

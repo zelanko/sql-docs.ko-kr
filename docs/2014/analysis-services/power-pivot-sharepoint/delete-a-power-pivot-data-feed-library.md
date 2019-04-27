@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749405"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot 데이터 피드 라이브러리 삭제
   데이터 피드 라이브러리를 삭제하려면 사이트 소유자여야 합니다. 라이브러리에 항목이 포함되어 있는 경우 이 항목도 라이브러리와 함께 삭제됩니다.  

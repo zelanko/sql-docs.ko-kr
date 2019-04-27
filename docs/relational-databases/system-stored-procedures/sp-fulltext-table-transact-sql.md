@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743989"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  테이블이 다시 활성화되고 인덱스가 다시 채워지지 않은 경우, 신규가 아닌 남아 있는 모든 전체 텍스트를 사용할 수 있는 열에 대해 쿼리할 때 여전히 이전 인덱스를 사용할 수 있습니다. 삭제된 열에서 가져온 데이터는 모든 전체 텍스트 열 검색을 지정하는 쿼리에서 짝을 찾습니다.  
   
- 테이블이 전체 텍스트 인덱싱에 대해 정의된 이후, 전체를 다시 채우지 않고 해당 열의 데이터 형식을 변경하거나 한 열에서 다른 열로 전체 텍스트 고유 키 열을 변경하여 한 데이터 형식에서 다른 데이터 형식으로 전체 텍스트 고유 키 열을 변경하는 경우, 후속 쿼리 동안 실패가 발생하며, 다음과 같은 오류 메시지가 반환됩니다. "형식으로 변환 *data_type* 전체 텍스트 검색 키 값에 대 한 실패 *key_value*." 이 방지 하려면 사용 하 여이 테이블에 대 한 전체 텍스트 정의 삭제 합니다 **drop** 의 동작 **sp_fulltext_table** 를 사용 하 여 재정의 **sp_fulltext_table** 및 **sp_fulltext_column**합니다.  
+ 테이블 후 정의 된 전체 텍스트 인덱싱에 대해 전체 텍스트 고유 키 열 데이터 형식에서 다른 위치로 해당 열의 데이터 형식을 변경 하거나 전체를 다시 채우지 않고 다른 하나의 열에서 전체 텍스트 고유 키를 변경 하 여 전환 후속 쿼리 및 오류 메시지를 반환 하는 중에 오류가 발생할 수 있습니다. "형식으로 변환 *data_type* 전체 텍스트 검색 키 값에 대 한 실패 *key_value*." 이 방지 하려면 사용 하 여이 테이블에 대 한 전체 텍스트 정의 삭제 합니다 **drop** 의 동작 **sp_fulltext_table** 를 사용 하 여 재정의 **sp_fulltext_table** 및 **sp_fulltext_column**합니다.  
   
  전체 텍스트 키 열은 900바이트 이하로 정의되어야 합니다. 키 열의 크기는 성능 향상을 위해 가능한 작은 것이 좋습니다.  
   

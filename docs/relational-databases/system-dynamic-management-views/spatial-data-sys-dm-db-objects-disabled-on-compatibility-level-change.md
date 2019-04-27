@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669451"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>공간 데이터 요금-sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Spatial Data - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호환성 수준 변경의 결과로 비활성화되는 인덱스 및 제약 조건을 나열합니다. 식에서 공간 UDT를 사용하는 지속형 계산 열을 포함하는 인덱스 및 제약 조건은 호환성 수준을 업그레이드하거나 변경하면 비활성화됩니다. 이 동적 관리 함수를 사용하여 호환성 수준 변경의 결과를 확인할 수 있습니다.  
@@ -105,7 +105,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography:: STBuffer**  
   
--   **Geography:: Bufferwithtolerance &**  
+-   **Geography:: BufferWithTolerance**  
   
 -   **Geography:: 구문 분석**  
   
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>비활성화된 개체의 동작  
  **인덱스**  
   
- 클러스터형 인덱스가 비활성화되거나 비클러스터형 인덱스가 강제로 비활성화되면 다음 오류가 발생합니다. "쿼리 프로세서에서 계획을 생성할 수 없는 인덱스 ' %. \*l s에 테이블 또는 뷰 ' %. \*l s를 사용 하지 않도록 설정 합니다. " 이러한 개체를 다시 활성화 하려면 인덱스를 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX ON... REBUILD**를 사용하여 변경할 수 있습니다.  
+ 클러스터형된 인덱스가 비활성화 된 경우, 비클러스터형 인덱스를 강제 적용 하는 경우 다음 오류가 발생 합니다. "쿼리 프로세서에서 계획을 생성할 수 없는 인덱스 ' %. \*l s에 테이블 또는 뷰 ' %. \*l s를 사용 하지 않도록 설정 합니다. " 이러한 개체를 다시 활성화 하려면 인덱스를 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX ON... REBUILD**를 사용하여 변경할 수 있습니다.  
   
  **힙**  
   

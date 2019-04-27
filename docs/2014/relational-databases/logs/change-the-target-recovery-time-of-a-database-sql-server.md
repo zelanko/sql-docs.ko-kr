@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743219"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>데이터베이스의 대상 복구 시간 변경(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스의 대상 복구 시간을 설정하거나 변경하는 방법에 대해 설명합니다. 기본적으로 대상 복구 시간은 0이고, 데이터베이스에서는 *복구 간격* 서버 옵션에 의해 제어되는 **자동 검사점** 을 사용합니다. 대상 복구 시간을 0보다 큰 값으로 설정하면 데이터베이스에서 *간접 검사점* 을 사용하고 이 데이터베이스에 대한 복구 시간의 상한을 설정합니다.  
@@ -23,9 +23,9 @@ ms.locfileid: "54131453"
 > [!NOTE]  
 >  장기 실행 트랜잭션으로 인해 UNDO 시간이 과도하게 길어지는 경우 주어진 데이터베이스에 대해 대상 복구 시간 설정에 지정된 상한이 초과될 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#Restrictions), [보안](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
--   **변경 대상 복구 시간을 사용 하 여:**  [SQL Server Management Studio](#SSMSProcedure) 또는 [TRANSACT-SQL](#TsqlProcedure)  
+-   **대상 복구 시간을 변경하려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure) 또는 [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   

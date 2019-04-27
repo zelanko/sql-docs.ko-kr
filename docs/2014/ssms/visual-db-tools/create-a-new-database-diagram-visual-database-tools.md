@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f96156bc22f730a8e550ef6007bb45401284f60
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666689"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>새 데이터베이스 다이어그램 만들기(Visual Database Tools)
   개체 탐색기를 사용하여 새 데이터베이스 다이어그램을 만들 수 있습니다. 데이터베이스 다이어그램은 데이터베이스의 구조를 그래픽으로 표시합니다. 데이터베이스 다이어그램을 사용하면 테이블, 열, 관계 및 키를 만들고 수정할 수 있으며, 인덱스 및 제약 조건을 수정할 수도 있습니다.  

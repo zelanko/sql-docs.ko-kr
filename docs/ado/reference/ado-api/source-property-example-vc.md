@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f0e0244df7adae2d0fd89e0c83f9b660a0ef0dd
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740320"
 ---
 # <a name="source-property-example-vc"></a>Source 속성 예제(VC++)
 이 예제에서는 합니다 [원본](../../../ado/reference/ado-api/source-property-ado-recordset.md) 속성 3 개를 열어 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다른 데이터 원본을 기반으로 개체입니다.  

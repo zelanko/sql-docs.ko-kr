@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740755"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
   스키마 생성 마법사는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 및 측정값 그룹을 기반으로 주제 영역 데이터베이스에 대한 비정규 관계형 스키마를 생성합니다. 마법사는 각 차원에 대해 차원 데이터를 저장할 관계형 테이블(차원 테이블)과 각 측정값 그룹에 대해 팩트 데이터를 저장할 관계형 테이블(팩트 테이블)을 생성합니다. 이러한 관계형 테이블을 생성할 때 연결된 차원, 연결된 측정값 및 서버 시간 차원은 무시합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48133433"
  스키마 생성 마법사는 각 차원에 대해 주제 영역 데이터베이스에 포함할 차원 테이블을 생성합니다. 차원 테이블의 구조는 차원 테이블의 기반이 되는 차원을 디자인할 때 선택한 사항에 따라 달라집니다.  
   
  열  
- 마법사는 차원 테이블을 기준으로 하는에 대 한 바인딩 같은 차원의 각 특성에 연결 된 바인딩에 대해 하나의 열을 생성 합니다 `KeyColumns`, `NameColumn`를 `ValueColumn`를 `CustomRollupColumn`, `CustomRollupPropertiesColumn`, 및 `UnaryOperatorColumn`각 특성의 속성입니다.  
+ 마법사는 차원 테이블의 기반이 되는 차원의 각 특성에 연결되는 바인딩(예: 각 특성의 `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`, `UnaryOperatorColumn` 속성에 대한 바인딩) 각각에 대해 열을 생성합니다.  
   
  관계  
  마법사는 각 부모 특성에 대한 열과 차원 테이블의 기본 키 간에 관계를 생성합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48133433"
  스키마 생성 마법사는 큐브의 각 측정값 그룹에 대해 주제 영역 데이터베이스에 포함할 팩트 테이블을 생성합니다. 팩트 테이블의 구조는 팩트 테이블의 기반이 되는 측정값 그룹을 디자인할 때 선택한 사항 및 측정값 그룹과 포함된 차원 간에 설정된 관계에 따라 달라집니다.  
   
  열  
- 마법사를 사용 하는 측정값을 제외 하 고 각 측정값에 대해 하나의 열을 생성 합니다 `Count` 집계 함수입니다. 이 함수를 사용하는 측정값에는 팩트 테이블에서 해당되는 열이 필요하지 않습니다.  
+ 마법사는 `Count` 집계 함수를 사용하는 측정값을 제외하고 각 측정값에 대해 열을 생성합니다. 이 함수를 사용하는 측정값에는 팩트 테이블에서 해당되는 열이 필요하지 않습니다.  
   
  또한 마법사는 측정값 그룹에 있는 각 일반 차원 관계의 세분성 특성 열 각각에 대해 열을 생성하고, 테이블의 기반이 되는 측정값 그룹에 대한 팩트 차원 관계가 있는 차원의 각 특성에 연결된 바인딩에 대해 하나 이상의 열을 생성합니다(해당되는 경우).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133433"
  마법사는 측정값 그룹에서 번역 열이 필요한 속성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>데이터 형식 변환 및 기본 길이  
- 스키마 생성 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 데이터 형식을 사용하는 열을 제외하고 모든 경우에 데이터 형식을 무시합니다. 합니다 `wchar` 데이터 크기도 직접 변환 됩니다는 `nvarchar` 데이터 형식입니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
+ 스키마 생성 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 데이터 형식을 사용하는 열을 제외하고 모든 경우에 데이터 형식을 무시합니다. `wchar` 데이터 크기는 `nvarchar` 데이터 형식으로 직접 변환됩니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
   
  특성에 대한 바인딩과 같은 데이터 항목에 대해 길이를 지정하지 않으면 해당 열에 다음 표의 기본 길이가 사용됩니다.  
   

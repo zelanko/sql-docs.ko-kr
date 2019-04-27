@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729462"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트 만들기
   이 단원에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만듭니다. 새 프로젝트를 만든 후 테이블 가져오기 마법사를 사용하여 데이터를 추가할 수 있습니다. 이 단원에서는 새 프로젝트를 만들 뿐 아니라 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 테이블 형식 모델 제작 환경에 대해서도 간단히 소개합니다.  
   
  다양한 유형의 테이블 형식 모델 프로젝트에 대한 자세한 내용은 [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)를 참조하세요. 테이블 형식 모델 제작 환경에 대 한 자세한 내용은 참조 하세요 [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)합니다.  
   
- 이 단원에 소요되는 예상 시간: **10 분**  
+ 예상이 단원을 완료 시간: **10 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 항목은 테이블 형식 모델 제작 자습서의 첫 번째 단원입니다. 이 섹션을 완료하려면 SQL Server 인스턴스에 AdventureWorksDW 데이터베이스가 설치되어 있어야 합니다. 자세한 내용은 [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](tabular-modeling-adventure-works-tutorial.md)을 참조하세요.  
@@ -64,6 +64,6 @@ ms.locfileid: "52394176"
  테이블 형식 모델 제작과 관련된 다양한 기능의 위치와 대화 상자를 살펴보십시오. 일부 항목은 아직 활성화되어 있지 않지만 테이블 형식 모델 제작 환경을 파악하는 데 도움이 될 것입니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원으로 이동하십시오. [2단원: 데이터 추가](lesson-2-add-data.md)합니다.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [2단원: 데이터 추가](lesson-2-add-data.md)합니다.  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650378"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded) 이벤트 클래스
   Showplan Text (Unencoded) 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. 이 이벤트 클래스는 Showplan Text 이벤트 클래스와 동일하지만 해당 이벤트 정보의 형식이 이진 데이터가 아닌 문자열입니다.  

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b8e3cab3ae78b43a5a37432e230c9bef6a8a383c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646131"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>UnattendedExecutionAccount 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 서버가 무인 모드로 보고서를 실행할 때 가장하는 사용자 계정을 반환합니다. 읽기 전용입니다.  

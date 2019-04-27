@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748255"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>집계 사용법 검토(사용 빈도 기반 최적화 마법사)
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48164053"
  **없음**  
  특성의 집계 사용 설정을 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 큐브의 집계에 이 특성을 포함할 수 없습니다.  
   
- **무제한**  
+ **Unrestricted**  
  특성의 집계 사용 설정을 제한 없음으로 설정하려면 선택합니다. 이 설정을 사용하면 집계 디자이너에 제한 사항이 지정되지 않지만 해당 특성이 집계에 적절한 특성인지 여부는 계속 평가되어야 합니다.  
   
  **모두 기본값으로 설정**  

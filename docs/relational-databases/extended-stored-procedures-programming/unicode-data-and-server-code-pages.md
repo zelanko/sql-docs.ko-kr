@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742129"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>유니코드 데이터 및 서버 코드 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47846141"
  확장 저장 프로시저 API 응용 프로그램에서 유니코드를 사용하는 경우 이 데이터를 확장 저장 프로시저 API로 전달하기 전에 유니코드 메타데이터 열 이름, 오류 메시지 등을 멀티바이트 데이터로 변환해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음을 참고하십시오.  
+ 다음 확장 저장 프로시저는 설명된 유니코드 변환의 예를 제공합니다. 다음 사항에 유의합니다.  
   
 -   열 데이터는 유니코드 데이터로 전달 됩니다 **srv_describe** 열이 srvnvarchar 설명 되어 있으므로.  
   

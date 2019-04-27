@@ -11,17 +11,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792411"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   이 섹션에서는 백업/복원 또는 분리/연결과 같이 DQS 데이터베이스에서 수행할 수 있는 데이터베이스 관리 작업에 대한 정보를 제공합니다.  
   
 ##  <a name="BackupRestore"></a> DQS 데이터베이스 백업 및 복원  
- SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]는 크게 DQS_MAIN과 DQS_PROJECTS라는 두 개의 SQL Server 데이터베이스로 구현됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
+ SQL Server 데이터베이스 백업 및 복원은 데이터베이스 관리자가 재해 복구 시 백업 데이터베이스에서 데이터를 복구하여 데이터 손실을 방지하기 위해 수행하는 일반적인 작업입니다. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 두 SQL Server 데이터베이스에서 주로 구현 됩니다. DQS_MAIN과 DQS_PROJECTS 됩니다. DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터베이스의 백업 및 복원 절차는 다른 SQL Server 데이터베이스의 경우와 비슷합니다. DQS 데이터베이스의 백업 및 복원을 수행할 때는 다음과 같은 세 가지 점에 주의해야 합니다.  
   
 -   DQS 데이터베이스의 백업 및 복원 작업이 동기화되어야 합니다. 그렇지 않으면 복원된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 작동하지 않습니다.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748905"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용 데이터
   PowerPivot 관리 대시보드는 SharePoint 중앙 관리의 미리 정의된 보고서 및 웹 파트 컬렉션으로 이를 통해 SharePoint용 SQL Server PowerPivot 배포를 관리할 수 있습니다. 관리 대시보드는 서버 상태, 통합 문서 작업 및 데이터 새로 고침과 관련된 정보를 제공합니다. 대시보드는 SharePoint 사용 데이터 컬렉션의 데이터를 사용합니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "55087714"
   
 -   [사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- PowerPivot 서버 시스템에 대한 데이터를 캡처하려면 이벤트 메시징, 데이터 새로 고침 기록 및 기타 사용 기록이 각 PowerPivot 서비스 애플리케이션에 대해 설정되어 있는지 확인하십시오. 정상적인 서버 작업 중에 수집된 서버 데이터 및 사용 데이터는 원본 데이터가 되며 최종적으로 내부 데이터 모델에 저장됩니다. **참고:** 이벤트나 사용 기록을 해제하면 불완전하거나 오류가 있는 복합 보고서가 생성됩니다.  
+ PowerPivot 서버 시스템에 대한 데이터를 캡처하려면 이벤트 메시징, 데이터 새로 고침 기록 및 기타 사용 기록이 각 PowerPivot 서비스 애플리케이션에 대해 설정되어 있는지 확인하십시오. 정상적인 서버 작업 중에 수집된 서버 데이터 및 사용 데이터는 원본 데이터가 되며 최종적으로 내부 데이터 모델에 저장됩니다. **참고:** 이벤트 나 사용 기록을 해제 하면 불완전 하거나 오류가 있는 복합 보고서 됩니다.  
   
 ##  <a name="edit"></a> PowerPivot 대시보드 편집  
  대시보드 개발이나 사용자 지정에 대한 전문 지식이 있는 경우 대시보드를 편집하여 새 웹 파트를 포함할 수 있습니다. 대시보드에 포함되는 웹 파트의 속성을 편집할 수도 있습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "55087714"
  사용자 보고를 시작할 때 PowerPivot 관리 대시보드에서는 원본 통합 문서 연결을 위한 Office 데이터 연결 파일(.odc)을 제공합니다. 예를 들어, .Excel에서 odc 파일을 사용하여 추가 보고서를 만들 수 있습니다.  
   
 > [!NOTE]  
->  Excel에서 .odc 파일을 사용하려고 할 때 다음과 같은 오류가 발생하지 않도록 파일을 편집합니다. "데이터 원본을 초기화하지 못했습니다." 자동 생성된 .odc 파일에는 MSOLAP OLE DB 공급자에서 지원하지 않는 매개 변수가 포함되어 있습니다. 다음 지침에서는 이러한 매개 변수를 제거하는 방법을 제공합니다.  
+>  Excel에서.odc 파일을 사용 하려고 할 때 다음 오류를 방지 하려면 파일을 편집 합니다. "데이터 원본 초기화 하지 못했습니다". 자동 생성된 .odc 파일에는 MSOLAP OLE DB 공급자에서 지원하지 않는 매개 변수가 포함되어 있습니다. 다음 지침에서는 이러한 매개 변수를 제거하는 방법을 제공합니다.  
   
  중앙 관리에서 PowerPivot 통합 문서를 기반으로 하는 보고서를 작성하려면 팜 또는 서비스 관리자여야 합니다.  
   

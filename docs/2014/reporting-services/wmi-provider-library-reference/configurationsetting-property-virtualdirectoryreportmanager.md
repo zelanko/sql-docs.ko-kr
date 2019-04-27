@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd46048e1c1361a8594503b9fa780d774ee4790f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646171"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportManager 속성(WMI MSReportServer_ConfigurationSetting)
   보고서 관리자 애플리케이션의 가상 디렉터리를 반환합니다. 읽기 전용입니다.  

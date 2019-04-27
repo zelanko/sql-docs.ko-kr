@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57031c75e9433981b45419348ab2d5c0745edbfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659497"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53202632"
   
      PRC 및 싱가포르에서 Microsoft 지원은 중국어 간체를 한어병음과 함께 기본 정렬 순서로 확인하는 경향이 있습니다. 권장 데이터 정렬은 Chinese_PRC(SQL Server 2000), Chinese_PRC_90(SQL Server 2005) 또는 Chinese_Simplified_Pinyin_100(SQL Server 2008 이상)입니다.  
   
-     대만에서는 획수에 따른 권장 정렬 순서 Chinese_Taiwan_Stroke(SQL Server 2000), Chinese_Taiwan_Stroke_90(SQL Server 2005) 또는 Chinese_Traditional_Stroke_Count_100(SQL Server 2008 이상)으로 중국어 번체를 확인하는 것이 더 일반적입니다.  
+     대만에서는 획 수에 따른 권장된 정렬 순서를 사용 하 여 중국어 (번체) 수 기반 하는 것이 것: Chinese_Taiwan_Stroke (SQL Server 2000), (SQL Server 2005) 용 Chinese_Taiwan_Stroke_90 또는 Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 이상).  
   
      다른 지역(예: 홍콩 특별 행정구 및 마카오 특별 행정구)에서는 중국어 번체도 사용합니다. 홍콩에서는 데이터 정렬로 Chinese_Hong_Kong_Stroke_90(SQL Server 2005)을 확인하는 것이 일반적입니다. 마카오 특별 행정구에서는 Chinese_Traditional_Stroke_Count_100(SQL Server 2008 이상)이 자주 사용됩니다.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53202632"
   
 |언어 스크립트|대/소문자 구분|  
 |---------------------|----------------------|  
-|**기본 라틴어 알파벳**|라틴어 스크립트(26개의 영어 대문자 또는 소문자 중 사용)로 표현되는 개체 식별자는 데이터 정렬과 상관없이 대/소문자를 구분하는 것으로 처리됩니다. 예를 들어, 개체 ID 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**합니다. 내부적으로 Analysis Services에서는 문자열의 문자들을 모두 대문자인 것처럼 처리한 다음 언어에 상관없는 간단한 바이트 비교를 수행합니다.<br /><br /> 26개 문자에만 적용됩니다. 서부 유럽 언어에 스칸디나비아어 문자가 사용되면 추가 문자는 대문자로 처리되지 않습니다.|  
+|**기본 라틴어 알파벳**|라틴어 스크립트(26개의 영어 대문자 또는 소문자 중 사용)로 표현되는 개체 식별자는 데이터 정렬과 상관없이 대/소문자를 구분하는 것으로 처리됩니다. 예를 들어, 개체 Id는 같다고 간주 됩니다. 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. 내부적으로 Analysis Services에서는 문자열의 문자들을 모두 대문자인 것처럼 처리한 다음 언어에 상관없는 간단한 바이트 비교를 수행합니다.<br /><br /> 26개 문자에만 적용됩니다. 서부 유럽 언어에 스칸디나비아어 문자가 사용되면 추가 문자는 대문자로 처리되지 않습니다.|  
 |**키릴자모, 그리스어, 콥트어, 아르메니아어**|키릴자모와 같은 비라틴 bicameral 스크립트의 개체 식별자는 항상 대/소문자 구분입니다. 예를 들어, Измерение 및 измерение은 유일한 차이점이 첫 글자의 대소문자 여부임에도 불구하고 두 개의 서로 다른 값으로 간주됩니다.|  
   
  **개체 식별자에 대한 대/소문자 구분의 의미**  
@@ -122,7 +122,7 @@ ms.locfileid: "53202632"
   
 3.  **일반적인 날짜 및 시간 정보를 위한 ISO 날짜 형식 사용**  
   
-     하나의 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 에이 권장 사항: "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정에 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
+     하나의 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 에이 권장 사항: "항상 사용 해야는 ISO 날짜 형식 yyyy-월-일 전달 하는 SQL 또는 MDX 쿼리에 형식은 명확 하 고 클라이언트나 서버의 국가별 설정에 관계 없이 작동 하기 때문에 날짜 문자열에 대 한 합니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
   
 4.  **국가별 언어 설정에 관계없이 Format 함수를 사용하여 특정 형식 적용**  
   

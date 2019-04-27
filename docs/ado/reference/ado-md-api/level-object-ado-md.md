@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740193"
 ---
 # <a name="level-object-ado-md"></a>Level 개체(ADO MD)
 계층에서 순위가 동일한 멤버 집합이 포함 되어 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47734561"
 |이름|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
-|CubeName|큐브의 이름입니다.|  
+|CubeName|큐브 이름입니다.|  
 |Description|수준의 의미 있는 설명입니다.|  
 |DimensionUniqueName|모호 하지 않은 이름의 합니다 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)합니다.|  
 |HierarchyUniqueName|계층의 명확한 이름입니다.|  

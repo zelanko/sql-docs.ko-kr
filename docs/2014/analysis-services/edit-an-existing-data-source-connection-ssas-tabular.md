@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731572"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>기존 데이터 원본 연결 편집(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 기존 데이터 원본 연결의 속성을 편집하는 방법에 대해 설명합니다.  
@@ -79,7 +79,7 @@ ms.locfileid: "48117803"
      현재 테이블 속성 집합을 저장하면 테이블을 처리해야 한다는 메시지가 나타날 수 있습니다. **처리** 를 클릭하여 업데이트된 데이터를 모델에 로드합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 처리&#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

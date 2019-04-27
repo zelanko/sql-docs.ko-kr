@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789584"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 개요(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [AlwaysOn 가용성 그룹&amp;#40;SQL Server&amp;#41;](always-on-availability-groups-sql-server.md)을 참조하세요.  
@@ -29,7 +29,7 @@ ms.locfileid: "53363595"
  *가용성 그룹* 은 함께 장애 조치(Failover)되는 사용자 데이터베이스( *가용성 데이터베이스*라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 가용성 그룹은 주 데이터베이스 집합과 1~8개의 해당 보조 데이터베이스 집합을 지원합니다. 보조 데이터베이스는 백업이 *아닙니다* . 계속하여 정기적으로 데이터베이스 및 해당 트랜잭션 로그를 백업하세요.  
   
 > [!TIP]  
->  모든 유형의 주 데이터베이스 백업을 만들 수 있습니다. 또는 로그 백업과 보조 데이터베이스의 복사 전용 전체 백업을 만들 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  모든 유형의 주 데이터베이스 백업을 만들 수 있습니다. 또는 로그 백업과 보조 데이터베이스의 복사 전용 전체 백업을 만들 수 있습니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
  각 가용성 데이터베이스 집합은 *가용성 복제본*에 의해 호스팅됩니다. 가용성 복제본에는 *주 복제본*과 *보조 복제본*의 두 가지 유형이 있습니다. 주 복제본은 하나이고 주 데이터베이스를 호스팅하며, 보조 복제본은 1~8개로 각각 보조 데이터베이스 집합을 호스팅하고 가용성 그룹에 대한 잠재적인 장애 조치(Failover) 대상 역할을 합니다. 가용성 그룹은 가용성 복제본의 수준에서 장애 조치(Failover)됩니다. 가용성 복제본은 가용성 그룹에 속한 데이터베이스 세트에 대해 데이터베이스 수준에서만 중복을 제공합니다. 따라서 데이터 파일 손실, 트랜잭션 로그 손상 등으로 인해 주의 대상 데이터베이스가 발생할 경우 이러한 데이터베이스 문제로는 장애 조치(Failover)가 수행되지 않습니다.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "53363595"
   
 -   **보조 복제본에 대한 백업 작업 수행**  
   
-     보조 복제본은 전체 데이터베이스, 파일 또는 파일 그룹의 [복사 전용](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 백업 및 로그 백업 수행을 지원합니다. 가용성 그룹을 구성하여 백업을 수행해야 하는 위치에 대한 기본 설정을 지정할 수 있습니다. 기본 설정은 SQL Server에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 각 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 개별 가용성 복제본에 대해 동일한 가용성 그룹의 다른 복제본과 관련하여 이 복제본에서 백업을 수행하기 위한 우선 순위를 지정할 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+     보조 복제본은 전체 데이터베이스, 파일 또는 파일 그룹의 [복사 전용](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) 백업 및 로그 백업 수행을 지원합니다. 가용성 그룹을 구성하여 백업을 수행해야 하는 위치에 대한 기본 설정을 지정할 수 있습니다. 기본 설정은 SQL Server에서 적용하는 것이 아니므로 임시 백업에 영향을 미치지 않는다는 것을 이해해야 합니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 각 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 개별 가용성 복제본에 대해 동일한 가용성 그룹의 다른 복제본과 관련하여 이 복제본에서 백업을 수행하기 위한 우선 순위를 지정할 수 있습니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 -   **하나 이상의 보조 복제본(읽기 가능한 보조 복제본)에 대한 읽기 전용 액세스(읽기 가능한 보조 복제본)**  
   
-     가용성 복제본이 보조 역할을 수행할 경우 로컬 데이터베이스에 대한 읽기 전용 액세스를 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 또한 주 복제본에서 읽기 전용 작업이 실행되지 않도록 하려는 경우에는 주 역할로 실행될 때 읽기/쓰기 액세스만 허용하도록 복제본을 구성할 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+     가용성 복제본이 보조 역할을 수행할 경우 로컬 데이터베이스에 대한 읽기 전용 액세스를 허용하도록 구성할 수 있습니다. 그러나 일부 작업은 부분적으로만 지원됩니다. 또한 주 복제본에서 읽기 전용 작업이 실행되지 않도록 하려는 경우에는 주 역할로 실행될 때 읽기/쓰기 액세스만 허용하도록 복제본을 구성할 수 있습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
      가용성 그룹에 현재 가용성 그룹 수신기와 하나 이상의 읽기 가능한 보조 복제본이 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 읽기 전용 연결 요청을 이러한 보조 복제본 중 하나로 라우팅할 수 있습니다(*읽기 전용 라우팅*). 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)개념을 소개합니다.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "53363595"
   
 -   **블로그:**  
   
-     [AlwaysON-HADRON 학습 시리즈: HADRON 작업자 풀 사용 가능 데이터베이스](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 학습 시리즈: HADRON 사용 데이터베이스의 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -177,8 +177,8 @@ ms.locfileid: "53363595"
  [메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)   
  [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [활성 보조: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [활성 보조: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조 복제본: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [활성 보조 복제본: 보조 복제본에 백업 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
   
   

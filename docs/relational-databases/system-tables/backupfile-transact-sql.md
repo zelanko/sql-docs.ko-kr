@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645503"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47842981"
 |**logical_name**|**nvarchar(128)**|백업된 파일의 논리적 이름입니다. NULL일 수 있습니다.|  
 |**physical_drive**|**nvarchar(260)**|물리적 드라이브 또는 파티션 이름입니다. NULL일 수 있습니다.|  
 |**physical_name**|**nvarchar(260)**|물리적(운영 체제) 파일 이름의 남은 부분입니다. NULL일 수 있습니다.|  
-|**state**|**tinyint**|파일 상태이며 다음 중 하나입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 삭제<br /><br /> 참고: 값 5는 데이터베이스 상태에 대 한 값에 해당 하는 이러한 값을 건너뜁니다.|  
+|**state**|**tinyint**|파일 상태이며 다음 중 하나입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 참고: 데이터베이스 상태에 대 한 값에 해당 하는 이러한 값을 값 5는 건너뜁니다.|  
 |**state_desc**|**nvarchar(64)**|파일 상태에 대한 설명이며 다음 중 하나입니다.<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|파일이 생성된 시점의 로그 시퀀스 번호입니다.|  
 |**drop_lsn**|**numeric(25,0)**|파일이 삭제된 시점의 로그 시퀀스 번호입니다. NULL일 수 있습니다.<br /><br /> 파일이 아직 삭제되지 않은 경우 이 값은 NULL입니다.|  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781998"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 Kerberos 인증을 사용하려면 다음 조건 중 하나에 해당해야 합니다.  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |시나리오|인증 방법|  
 |--------------|---------------------------|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 여기서 올바르다는 것은 등록된 SPN에 의해 매핑되는 계정이 SQL Server 서비스를 실행하고 있는 계정과 일치함을 의미합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
-|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 여기서 올바르다는 것은 등록된 SPN에 의해 매핑되는 계정이 SQL Server 서비스를 실행하고 있는 계정과 일치함을 의미합니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다. 예를 들어 로컬 시스템 또는 NETWORK SERVICE에 매핑됩니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 계정에 SQL Server 서비스를 실행 하는 올바른 방법입니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
+|SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정입니다.<br /><br /> 참고: 매핑되는 등록 된 SPN을 사용 하는 계정이 계정에 SQL Server 서비스를 실행 하는 올바른 방법입니다.|로컬 연결은 NTLM을 사용하고, 원격 연결은 Kerberos를 사용합니다.|  
 |SPN이 잘못된 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑됩니다.|인증에 실패하게 됩니다.|  
 |SPN 조회에 실패했거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정에 매핑되지 않거나 SPN이 올바른 도메인 계정, 가상 계정, MSA 또는 기본 제공 계정이 아닙니다.|로컬 및 원격 연결이 NTLM을 사용합니다.|  
   

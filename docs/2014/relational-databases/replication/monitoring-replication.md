@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666871"
 ---
 # <a name="monitoring-replication"></a>모니터링(복제)
   복제 토폴로지의 모니터링은 복제 배포의 중요한 부분입니다. 복제 작업이 배포되므로 복제에 관련된 모든 컴퓨터에서 활동 및 상태를 추적해야 합니다. 다음 도구를 사용하여 복제를 모니터링할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "54134303"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 는 복제 모니터에 대한 액세스를 제공합니다. 또한 로그 판독기 에이전트, 스냅숏 에이전트, 병합 에이전트 및 배포 에이전트에 의해 기록된 현재 상태 및 마지막 메시지를 보고 각 에이전트를 시작 및 중지할 수 있도록 합니다. 자세한 내용은 [Monitor Replication Agents](monitor/monitor-replication-agents.md)을 참조하세요.  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] 는 복제 모니터에 대한 액세스를 제공합니다. 또한 현재 상태 및 다음 에이전트에서 기록한 마지막 메시지를 볼 수 있습니다 하 고 시작 하 고 각 에이전트를 중지할 수 있습니다. 로그 판독기 에이전트, 스냅숏 에이전트, 병합 에이전트 및 배포 에이전트입니다. 자세한 내용은 [Monitor Replication Agents](monitor/monitor-replication-agents.md)을 참조하세요.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)  
   

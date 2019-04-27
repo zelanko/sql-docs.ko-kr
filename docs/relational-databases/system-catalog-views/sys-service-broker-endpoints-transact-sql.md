@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855262"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "47736051"
 |**\<열을 상속 >**|**--**|열을 상속 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
 |**is_message_forwarding_enabled**|**bit**|메시지 전달을 위해 엔드포인트를 지원합니다. 처음으로 설정 됩니다 **0** (사용 안 함). NULL을 허용하지 않습니다.|  
 |**message_forwarding_size**|**int**|최대 메가바이트 **tempdb** 공간 전달할 메시지에 사용할 수 있습니다. 처음으로 설정 됩니다 **10**합니다. NULL을 허용하지 않습니다.|  
-|**connection_auth**|**tinyint**|이 엔드포인트에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -협상<br /><br /> **4** -인증서<br /><br /> **5** -NTLM, CERTIFICATE<br /><br /> **6** -KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** -CERTIFICATE, NTLM<br /><br /> **9** -CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE<br /><br /> NULL을 허용하지 않습니다.|  
+|**connection_auth**|**tinyint**|이 엔드포인트에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -협상<br /><br /> **4** - CERTIFICATE<br /><br /> **5** - NTLM, CERTIFICATE<br /><br /> **6** - KERBEROS, CERTIFICATE<br /><br /> **7** -NEGOTIATE, CERTIFICATE<br /><br /> **8** - CERTIFICATE, NTLM<br /><br /> **9** -CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICATE, NEGOTIATE<br /><br /> NULL을 허용하지 않습니다.|  
 |**connection_auth_desc**|**nvarchar(60)**|이 엔드포인트에 연결하는 데 필요한 연결 인증 유형에 대한 설명이며 다음 중 하나입니다.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> NULL을 허용합니다.|  
 |**certificate_id**|**int**|인증에 사용된 인증서 ID<br /><br /> 0 = Windows 인증 사용 중|  
-|**encryption_algorithm**|**tinyint**|암호화 알고리즘입니다. 다음은 해당 설명과 해당 DDL 옵션을 사용 하 여 가능한 값입니다.<br /><br /> **0** : 없음. 해당 DDL 옵션: 사용 안 함.<br /><br /> **1** :  RC4. 해당 DDL 옵션: {0} 필요한 &#124; 필요한 알고리즘 RC4}.<br /><br /> **2** : AES. 해당 DDL 옵션: 필요한 알고리즘 AES입니다.<br /><br /> **3** : NONE, RC4입니다. 해당 DDL 옵션: {지원 되는 &#124; 지원 되는 알고리즘 RC4}.<br /><br /> **4** : NONE, AES입니다. 해당 DDL 옵션: 알고리즘 AES를 지원 합니다.<br /><br /> **5** : RC4, AES입니다. 해당 DDL 옵션: 필요한 알고리즘 RC4 AES입니다.<br /><br /> **6** : AES, RC4. 해당 DDL 옵션: 필요한 알고리즘 AES RC4입니다.<br /><br /> **7** : NONE, RC4, AES입니다. 해당 DDL 옵션: 알고리즘 RC4 AES를 지원 합니다.<br /><br /> **8** : NONE, AES, RC4입니다. 해당 DDL 옵션: 알고리즘 AES RC4를 지원 합니다.<br /><br /> NULL을 허용하지 않습니다.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대 한 설명입니다. 가능한 값 및 해당 DDL 옵션은 다음과 같습니다.<br /><br /> NONE: 사용 안 함<br /><br /> RC4: {0} 필요한 &#124; 필요한 알고리즘 RC4}<br /><br /> AES: 필요한 알고리즘 AES<br /><br /> -NONE, RC4: {지원 &#124; 지원 되는 알고리즘 RC4}<br /><br /> -NONE, AES: 지원 되는 알고리즘 AES<br /><br /> RC4, AES의 경우: 필요한 알고리즘 RC4 AES<br /><br /> AES, RC4: 필요한 알고리즘 AES RC4<br /><br /> -NONE, RC4, AES: 지원 되는 알고리즘 RC4 AES<br /><br /> -NONE, AES, RC4: 지원 되는 알고리즘 AES RC4<br /><br /> NULL을 허용합니다.|  
+|**encryption_algorithm**|**tinyint**|암호화 알고리즘입니다. 다음은 해당 설명과 해당 DDL 옵션을 사용 하 여 가능한 값입니다.<br /><br /> **0** : NONE. 해당 DDL 옵션: 사용 안 함.<br /><br /> **1** :  RC4. 해당 DDL 옵션: {0} 필요한 &#124; 필요한 알고리즘 RC4}.<br /><br /> **2** : AES입니다. 해당 DDL 옵션: 필요한 알고리즘 AES 사용 합니다.<br /><br /> **3** : -NONE, RC4입니다. 해당 DDL 옵션: {지원 되는 &#124; 지원 되는 알고리즘 RC4}.<br /><br /> **4** : -NONE, AES입니다. 해당 DDL 옵션: 지원 되는 알고리즘 AES입니다.<br /><br /> **5** : RC4, AES. 해당 DDL 옵션: 필요한 알고리즘 RC4 AES입니다.<br /><br /> **6** : AES, RC4. 해당 DDL 옵션: 필요한 알고리즘 AES RC4입니다.<br /><br /> **7** : -NONE, RC4, AES입니다. 해당 DDL 옵션: 지원 되는 알고리즘 RC4 AES입니다.<br /><br /> **8** : -NONE, AES, RC4입니다. 해당 DDL 옵션: 지원 되는 알고리즘 AES RC4입니다.<br /><br /> NULL을 허용하지 않습니다.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|암호화 알고리즘에 대 한 설명입니다. 가능한 값 및 해당 DDL 옵션은 다음과 같습니다.<br /><br /> NONE: 사용 안 함<br /><br /> RC4: {0} 필요한 &#124; 필요한 알고리즘 RC4}<br /><br /> AES: 필요한 알고리즘 AES<br /><br /> -NONE, RC4: {지원 &#124; 지원 되는 알고리즘 RC4}<br /><br /> -NONE, AES: 지원 되는 알고리즘 AES<br /><br /> RC4, AES: 필요한 알고리즘 RC4 AES<br /><br /> AES, RC4: 필요한 알고리즘 AES RC4<br /><br /> -NONE, RC4, AES: 지원 되는 알고리즘 RC4 AES<br /><br /> -NONE, AES, RC4: 지원 되는 알고리즘 AES RC4<br /><br /> NULL을 허용합니다.|  
   
 ## <a name="remarks"></a>Remarks  
   

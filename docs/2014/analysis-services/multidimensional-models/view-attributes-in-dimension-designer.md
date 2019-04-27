@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740783"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>차원 디자이너에서 트리, 목록 또는 표 형태로 특성 보기
   이 절차에서는 차원 디자이너의 특성 표시 방식을 변경하는 방법을 설명합니다.  

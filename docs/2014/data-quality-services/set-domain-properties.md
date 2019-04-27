@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9766aa397b5fb89a3b664cc75e473abbb1d062ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792245"
 ---
 # <a name="set-domain-properties"></a>도메인 속성 설정
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "56015479"
  도메인이 생성된 후 도메인 이름 또는 설명을 변경할 수 있습니다. 도메인 이름은 기술 자료에 대해 고유해야 합니다. 설명은 최대 256자까지 지정할 수 있습니다.  
   
 ###  <a name="Type"></a> 데이터 형식  
- 도메인을 만들 때 도메인의 값에 대해 **문자열** (기본값) **날짜**를 **정수**, 또는 **Decimal**합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+ 도메인을 만들 때 도메인의 값에 대해 **문자열**(기본값), **날짜**, **정수** 또는 **10진수** 데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 ###  <a name="Leading"></a> 선행 값 사용  
  동의어 값 대신 동의어 그룹의 선행 값이 출력되도록 지정하려면 이 확인란을 선택합니다. 각 동의어 값이 올바른 형식 또는 수정된 형식으로 출력되고 동의어 그룹의 선행 값으로 바뀌지 않도록 지정하려면 **선행 값 사용** 을 선택 취소합니다.  

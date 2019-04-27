@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b4e01f1a0e6ab49939e3c8ad8339402a7d2b8431
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647106"
 ---
 # <a name="initializereportserver-method-wmi-msreportserverconfigurationsetting"></a>InitializeReportServer 메서드(WMI MSReportServer_ConfigurationSetting)
   지정된 보고서 서비스 인스턴스를 초기화합니다.  

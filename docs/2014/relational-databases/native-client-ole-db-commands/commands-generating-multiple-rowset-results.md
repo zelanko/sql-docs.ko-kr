@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657683"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 여러 행 집합을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
@@ -46,7 +46,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [IMultipleResults를 사용하여 여러 결과 집합 처리](using-imultipleresults-to-process-multiple-result-sets.md)  
+-   [IMultipleResults를 사용 하 여 여러 결과 집합 처리](using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [도구](commands.md)  

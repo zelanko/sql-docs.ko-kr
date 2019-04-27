@@ -1,5 +1,5 @@
 ---
-title: '활성 보조: 보조 복제본 (Always On 가용성 그룹)에 백업 | Microsoft Docs'
+title: '활성 보조 복제본: 보조 복제본 (Always On 가용성 그룹)에 백업 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a94db154042f2cc6314459b6af4b52a43c2c9966
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790682"
 ---
-# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>활성 보조: 보조 복제본에 백업(Always On 가용성 그룹)
+# <a name="active-secondaries-backup-on-secondary-replicas-always-on-availability-groups"></a>활성 보조 복제본: 보조 복제본 (Always On 가용성 그룹)에 백업
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 보조 복제본에서의 백업 작업 수행 지원이 포함됩니다. 백업 작업은 백업 압축과 함께 I/O 및 CPU에 상당한 부담을 줄 수 있습니다. 백업을 동기화되었거나 동기화 중인 보조 복제본으로 오프로드하면 계층 1 작업에 대한 주 복제본을 호스팅하는 서버 인스턴스에서 리소스를 사용할 수 있습니다.  
   
 > [!NOTE]  
@@ -43,14 +43,14 @@ ms.locfileid: "48186973"
   
      가용성 모드(동기 커밋 또는 비동기 커밋)에 관계없이 모든 복제본(주 또는 보조)에서 수행되는 로그 백업에 대해 일관된 로그 체인이 보장됩니다.  
   
--   보조 데이터베이스를 백업 하려면 보조 복제본을 주 복제본과 통신할 수 있어야 합니다 및 여야 `SYNCHRONIZED` 또는 `SYNCHRONIZING`합니다.  
+-   보조 데이터베이스를 백업하려면 보조 복제본이 주 복제본과 통신할 수 있어야 하고 `SYNCHRONIZED` 또는 `SYNCHRONIZING` 상태여야 합니다.  
   
 ##  <a name="WhereBuJobsRun"></a> 백업 작업이 실행되는 위치 구성  
  보조 복제본에서 백업을 수행하여 주 프로덕션 서버에서 백업 작업을 오프로드하면 많은 이점이 있습니다. 그러나 보조 복제본에서 백업을 수행하면 백업 작업이 실행되어야 하는 위치를 결정하는 프로세스가 상당히 복잡해집니다. 이 문제를 해결하려면 백업 작업이 실행되는 위치를 다음과 같이 구성합니다.  
   
 1.  가용성 그룹을 구성하여 백업을 수행할 가용성 복제본을 지정합니다. 자세한 내용은 *CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;* 또는 *ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;* 에서 [CREATE AVAILABILITY GROUP&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/create-availability-group-transact-sql) 또는 [ALTER AVAILABILITY GROUP&amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)상태여야 합니다.  
   
-2.  백업을 수행할 후보 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 모든 가용성 데이터베이스에 대한 스크립트 백업 작업을 만듭니다. 자세한 내용은 [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)상태여야 합니다.  
+2.  백업을 수행할 후보 가용성 복제본을 호스팅하는 모든 서버 인스턴스에서 모든 가용성 데이터베이스에 대한 스크립트 백업 작업을 만듭니다. 자세한 내용은 참조는 "후속 작업: [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)의 보조 복제본에 백업을 구성한 후" 섹션을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **보조 복제본에 백업을 구성하려면**  

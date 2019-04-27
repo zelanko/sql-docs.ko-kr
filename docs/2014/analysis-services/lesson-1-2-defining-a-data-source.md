@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729669"
 ---
 # <a name="defining-a-data-source"></a>데이터 원본 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 일반적으로 프로젝트에 사용할 하나 이상의 데이터 원본을 정의하여 프로젝트 작업을 시작합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
@@ -56,6 +56,6 @@ ms.locfileid: "48195893"
  [데이터 원본 뷰 정의](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 만들기 &#40;SSAS 다차원&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [데이터 원본 만들기&#40;SSAS 다차원&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

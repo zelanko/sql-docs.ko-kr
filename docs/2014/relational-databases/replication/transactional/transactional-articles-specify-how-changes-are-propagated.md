@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655678"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정
   트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  

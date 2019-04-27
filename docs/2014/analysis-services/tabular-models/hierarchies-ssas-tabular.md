@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2301f57d97c42ef2887824d2acd092e2a78aee7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757074"
 ---
 # <a name="hierarchies-ssas-tabular"></a>계층(SSAS 테이블 형식)
   테이블 형식 모델에서 계층은 테이블에서 두 개 이상의 열 간의 관계를 정의하는 메타데이터입니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48133443"
   
  예를 들어 날짜 테이블에서 달력 계층을 만들 수 있습니다. 이때 역년이 최상위 부모 수준으로 사용되고 월, 주 및 일은 자식 수준으로 포함됩니다(역년->월->주->일). 이 계층은 역년에서 일까지의 논리적 관계를 보여 줍니다. 클라이언트 사용자는 필드 목록에서 Calendar Year를 선택하여 피벗 테이블에 모든 수준을 포함하거나, 계층을 확장하고 피벗 테이블에 포함할 특정 수준만 선택할 수 있습니다.  
   
- 계층의 각 수준은 테이블 열의 표현이므로 수준의 이름을 변경할 수 있습니다. 테이블 형식 모델에서 임의 열의 이름을 바꿀 수 있는 계층에만 국한되지 않고, 계층 수준의 이름을 바꾸면 사용자가 수준을 쉽게 찾아서 보고서에 포함할 수 있습니다. 수준의 이름을 변경해도 해당 수준이 참조하는 열의 이름은 바뀌지 않으며, 수준을 식별하기가 더 쉬워질 뿐입니다. 예를 들어 Calendar Year 계층의 데이터 뷰에 있는 데이터 테이블에서 CalendarYear, CalendarMonth, CalendarWeek 및 CalendarDay 열의 이름을 Calendar Year, Month, Week 및 Day로 변경하여 식별하기 쉽게 만들었습니다. 수준의 이름을 바꾸면 사용자가 피벗 테이블, 차트 등에서 열 이름을 읽기 쉽게 변경할 필요가 없기 때문에 보고서의 일관성이 유지되는 추가적인 이점이 있습니다.  
+ 계층의 각 수준은 테이블 열의 표현이므로 수준의 이름을 변경할 수 있습니다. 테이블 형식 모델에서 임의 열의 이름을 바꿀 수 있는 계층에만 국한되지 않고, 계층 수준의 이름을 바꾸면 사용자가 수준을 쉽게 찾아서 보고서에 포함할 수 있습니다. 수준의 이름을 변경해도 해당 수준이 참조하는 열의 이름은 바뀌지 않으며, 수준을 식별하기가 더 쉬워질 뿐입니다. Calendar Year 계층 예제에서는 데이터 뷰 열에서에서 날짜 테이블에서: CalendarYear, CalendarMonth, CalendarWeek 및 CalendarDay 이름을 변경 하 여 연도, 월, 주 및 일 보다 쉽게 식별할 수 있도록 합니다. 수준의 이름을 바꾸면 사용자가 피벗 테이블, 차트 등에서 열 이름을 읽기 쉽게 변경할 필요가 없기 때문에 보고서의 일관성이 유지되는 추가적인 이점이 있습니다.  
   
  계층은 큐브 뷰에 포함될 수 있습니다. 큐브 뷰는 모델을 비즈니스 또는 애플리케이션 중심의 관점에서 파악할 수 있게 해주는 보기 가능한 모델 하위 집합을 정의합니다. 예를 들어 큐브 뷰에서는 특정 보고 요구 사항에 필요한 데이터 항목만으로 구성된 보기 목록(계층)을 제공할 수 있습니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)를 참조하세요.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "48133443"
   
 |태스크|Description|  
 |----------|-----------------|  
-|[계층 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
+|[계층 만들기 및 관리&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../tabular-model-designer-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

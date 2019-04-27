@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743587"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>파티션 속성 대화 상자(SSMS)
   SQL Server Management Studio의 **파티션 속성** 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 큐브에 대한 파티션 속성을 설정할 수 있습니다.  
@@ -27,17 +27,17 @@ ms.locfileid: "48113203"
   
  **파티션 속성** 대화 상자에는 다음과 같은 페이지가 있습니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>인쇄할 페이지  
   
 |호출|Description|  
 |----------|-----------------|  
 |**선택**|**선택** 페이지를 사용하여 속성을 표시 또는 수정할 측정값 그룹의 파티션을 선택합니다. 이 페이지에 대한 자세한 내용은 [선택&#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)를 참조하세요.|  
 |**일반**|**일반** 페이지를 사용하여 **선택** 페이지에서 선택한 파티션의 일반 속성을 표시 및 수정할 수 있습니다. 이 페이지에 대한 자세한 내용은 [일반&#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md)를 참조하세요.|  
-|**자동 관리 캐싱**|**자동 관리 캐싱** 페이지를 사용하여 **선택** 페이지에서 선택한 파티션의 저장소 및 자동 관리 캐싱 설정을 표시 및 수정할 수 있습니다. 이 페이지에 대한 자세한 내용은 [자동 관리 캐싱&#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)을 참조하세요.|  
+|**자동 관리 캐싱**|**자동 관리 캐싱** 페이지를 사용하여 **선택** 페이지에서 선택한 파티션의 스토리지 및 자동 관리 캐싱 설정을 표시 및 수정할 수 있습니다. 이 페이지에 대한 자세한 내용은 [자동 관리 캐싱&#40;파티션 속성 대화 상자&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)을 참조하세요.|  
 |**오류 구성**|**오류 구성** 페이지를 사용하여 **선택** 페이지에서 선택한 파티션을 처리하기 위한 오류 구성 설정을 표시 및 수정할 수 있습니다. 이 페이지에 대한 자세한 내용은 [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [원격 파티션](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

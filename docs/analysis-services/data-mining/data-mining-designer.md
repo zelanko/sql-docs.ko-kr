@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 25eea114d105ec445e91b5bebbbe74e1d0f846f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650383"
 ---
-# <a name="data-mining-designer"></a>데이터 마이닝 디자이너
+# <a name="data-mining-designer"></a>Data Mining Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   데이터 마이닝 디자이너는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 사용하는 기본 환경입니다. 기존 마이닝 구조를 선택하거나 데이터 마이닝 마법사를 사용하여 새 마이닝 구조 및 마이닝 모델을 만들면 데이터 마이닝 디자이너에 액세스할 수 있습니다. 데이터 마이닝 디자이너를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34014360"
 ## <a name="mining-structure-tab"></a>마이닝 구조 탭  
  **마이닝 구조** 탭을 사용하여 열을 추가하고 기존 마이닝 구조의 속성을 수정할 수 있습니다. 다음 태스크 및 항목에서는 마이닝 구조 작업에 대한 추가 정보를 제공합니다.  
   
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34014360"
   
  마이닝 모델 작업에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
- [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34014360"
   
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [테스트 및 유효성 검사 작업과 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>마이닝 모델 예측 탭  
  **마이닝 모델 예측** 탭에는 DMX(Data Mining Extensions) 예측 쿼리를 만들 때 사용할 수 있는 예측 쿼리 작성기가 있습니다. 또한 마이닝 모델 및 입력 테이블을 지정하고, 마이닝 모델의 열을 입력 테이블의 열로 매핑하고, 쿼리에 함수를 추가하고, 각 열에 대한 조건을 지정하기 위한 도구가 포함되어 있습니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "34014360"
   
  [데이터 마이닝 쿼리 태스크 및 방법](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

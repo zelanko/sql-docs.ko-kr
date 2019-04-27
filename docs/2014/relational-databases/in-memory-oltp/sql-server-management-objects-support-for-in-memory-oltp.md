@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066441"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
   이 항목에서는 메모리 내 OLTP에 대한 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)의 변경 내용을 설명합니다.  

@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778954"
 ---
 # <a name="full-text-search-f1-help"></a>전체 텍스트 검색 F1 도움말
-  이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 전체 텍스트 Search 대화 상자에 대한 도움말 항목을 제공합니다. 사용자 인터페이스 도움말 항목을 사용하려면 대화 상자가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다.  
+  이 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]전체 텍스트 검색 대화 상자에 대한 도움말 항목을 제공합니다. 사용자 인터페이스 도움말 항목을 사용하려면 대화 상자가 열려 있는 상태에서 F1 키를 누르거나 **도움말** 을 클릭합니다.  
   
 |||  
 |-|-|  

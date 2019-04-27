@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771202"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "58658397"
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
 |connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153)을 참조하세요.|  
-|use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
+|use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름과 암호를 인증 (기본값)을 위해 제공 됩니다.<br /><br /> **1**: Oracle 데이터베이스에 연결 하려면 Windows 인증이 사용 됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  
 |transaction_staging_timeout|커밋되지 않은 Oracle 트랜잭션이 **cdc.xdbcdc_staged_transactions** 테이블에 기록되기 전에 메모리에 보관되는 시간(초)입니다. 기본값은 120초입니다.|  
@@ -141,8 +141,8 @@ ms.locfileid: "58658397"
 |----------|-----------------|  
 |상태|현재 Oracle CDC 인스턴스에 대한 현재 상태 코드입니다. 상태는 CDC의 현재 상태를 설명합니다.|  
 |sub_status|현재 상태에 대한 추가 정보를 제공하는 두 번째 수준 상태입니다.|  
-|active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태입니다.|  
-|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태에 있지 않습니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태에 있습니다.|  
+|active|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 활성 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스 프로세스가 활성 상태인 합니다.|  
+|error|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle CDC 인스턴스 프로세스가 오류 상태가 아닙니다.<br /><br /> **1**: Oracle CDC 인스턴스가 오류 상태인 경우|  
 |status_message|오류 또는 상태에 대해 설명하는 문자열입니다.|  
 |TIMESTAMP|캡처 상태를 마지막으로 업데이트한 시간(UTC)이 포함된 타임스탬프입니다.|  
 |active_capture_node|Oracle 트랜잭션 로그를 처리 중인 Oracle CDC Service 및 Oracle CDC 인스턴스를 현재 실행 중인 호스트의 이름입니다. 호스트는 클러스터 내의 노드일 수 있습니다.|  

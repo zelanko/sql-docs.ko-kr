@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731027"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-forecast.gif "연결 데이터 마이닝 리본의 마법사")  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657581"
 ---
 # <a name="publish-reports"></a>보고서 게시
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서는 프로젝트를 배포하여 보고서 서버 프로젝트의 모든 보고서 및 공유 데이터 원본을 보고서 서버에 게시하거나 단일 보고서를 게시할 수 있습니다. 보고서를 게시하기 전에 대상 보고서 서버의 URL을 지정해야 합니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)을 참조하세요.  

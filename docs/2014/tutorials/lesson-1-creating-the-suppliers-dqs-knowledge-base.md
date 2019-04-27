@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676040"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>1단원: 공급자 DQS 기술 자료 만들기
   이 단원에서는 공급자 데이터에 대한 지식(메타데이터)이 포함된 **Suppliers** 라는 DQS 기술 자료를 만듭니다. 이 기술 자료는 입력 공급자 데이터에 대해 정리 및 일치 작업을 수행하는 데 사용됩니다. 정리 작업은 잘못된/올바르지 않은 데이터를 식별하고, 잘못된 데이터를 수정하고, 수정/제안을 제공하고, 데이터를 표준화하고, 자세한 정보를 사용해서 데이터를 강화합니다. 일치 작업은 데이터를 비교하고 데이터에서 중복 항목을 제거하는 데 도움이 될 수 있도록 데이터에서 비슷하지만 약간 다른 레코드를 식별합니다.  

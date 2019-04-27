@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650785"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>연결 마법사(Excel용 데이터 마이닝 클라이언트)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-associate.gif "연결 데이터 마이닝 리본의 마법사")  
@@ -62,7 +62,7 @@ ms.locfileid: "52400476"
   
     -   규칙 확률을 낮추는 것은 전체 데이터 집합의 컨텍스트에서 조합이 중요하게 고려되기 위해 충족해야 하는 요구 사항을 낮추는 것입니다.  
   
-     **팁:** 지지도와 확률의 다양한 조합을 사용하여 여러 개의 마이닝 모델을 만드는 것이 좋습니다. 각 모델에 사용한 설정을 추적을 사용할 수 있습니다는 **문서 모델** Excel 및 사용에 대 한 데이터 마이닝 클라이언트에서 사용할 수 있는 마법사를 **자세히** 옵션을 보고 합니다. 자세한 내용은 [마이닝 모델 문서화 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)합니다.  
+     **팁:** 지지도 확률의 다양 한 조합을 사용 하 여 여러 마이닝 모델을 만드는 것이 좋습니다. 각 모델에 사용한 설정을 추적을 사용할 수 있습니다는 **문서 모델** Excel 및 사용에 대 한 데이터 마이닝 클라이언트에서 사용할 수 있는 마법사를 **자세히** 옵션을 보고 합니다. 자세한 내용은 [마이닝 모델 문서화 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)합니다.  
   
 6.  필요에 따라 클릭 **매개 변수** 알고리즘 매개 변수를 변경 하 여 마이닝 모델의 동작을 사용자 지정 합니다.  
   

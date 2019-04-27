@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679540"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>데이터 탐색 옵션 대화 상자(Analysis Services - 데이터 마이닝)
   **의** 데이터 탐색 옵션 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **데이터 탐색** 대화 상자의 샘플링 및 차트 옵션을 설정할 수 있습니다. **데이터 탐색** 대화 상자에서 **샘플링 옵션** 을 클릭하여 **데이터 탐색 옵션** 대화 상자를 표시할 수 있습니다.  

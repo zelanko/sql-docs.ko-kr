@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3994aa8a442f0ec1522bdf2314e0d6023e94bcf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667067"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     
@@ -41,7 +41,7 @@ ms.locfileid: "52760246"
   
 -   ID 열이 있는 테이블이 사용되지만 해당 열이 적절히 관리되지 않습니다.  
   
--   병합 복제에서이 오류가 발생할 수 있습니다 삽입 하는 동안 시스템 테이블로 **MSmerge_contents**; 발생 하는 오류와 비슷합니다. "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
+-   병합 복제에서이 오류가 발생할 수 있습니다 삽입 하는 동안 시스템 테이블로 **MSmerge_contents**; 발생 하는 오류와 비슷합니다. 고유 인덱스가 'ucl1syccontents'.' 개체에 중복 키 행을 삽입할 수 없습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  필요한 동작은 오류 발생 원인에 따라 다릅니다.  

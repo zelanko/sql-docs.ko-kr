@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662416"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 이벤트 클래스
   Execution Warnings 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문이나 저장 프로시저를 실행하는 동안 발생한 메모리 부여 경고를 나타냅니다. 이 이벤트 클래스를 모니터링하여 계속하기 전에 쿼리가 1초 이상 메모리를 기다려야 하는지 또는 메모리를 가져오려는 초기 시도가 실패했는지 여부를 확인할 수 있습니다. 쿼리 대기 기간에 대한 정보를 통해 성능에 영향을 미칠 수 있는 시스템이 경합 문제를 확인할 수 있습니다.  
