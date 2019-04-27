@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661835"
 ---
 # <a name="database-element-for-server-dta"></a>Server의 Database 요소(DTA)
   특정 서버에서 튜닝할 데이터베이스를 지정합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52782895"
 ## <a name="example"></a>예제  
  사용 예는 `Database` 요소를 참조 하세요 [Server 요소 &#40;DTA&#41;](server-element-dta.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659863"
 ---
 # <a name="server-configuration---service-accounts"></a>서버 구성 - 서비스 계정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 로그인 계정을 할당할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48066883"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|Distributed Replay Client 서비스에 사용되는 서비스 계정입니다.<br /><br /> Distributed Replay Client 서비스를 실행할 계정을 지정합니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 사용하는 계정과 달라야 합니다.<br /><br /> 기본 시작 유형은 수동입니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|Distributed Replay Controller 서비스에 사용되는 서비스 계정입니다.<br /><br /> Distributed Replay Controller 서비스를 실행할 계정을 지정합니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 사용하는 계정과 달라야 합니다.<br /><br /> 기본 시작 유형은 수동입니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 필터 데몬 시작 관리자|fdhost.exe 프로세스를 만드는 서비스입니다. 이 서비스는 전체 텍스트 인덱싱을 위해 텍스트 데이터를 처리하는 단어 분리기 및 필터를 호스팅하는 데 필요합니다.<br /><br /> FDHOST Launcher 서비스를 실행할 도메인 계정을 지정하는 경우에는 권한 수준이 낮은 계정을 사용하는 것이 좋습니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 사용하는 계정과 달라야 합니다.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 브라우저를 제공 하는 이름 확인 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에 연결 정보입니다. 이 서비스는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스에서 공유됩니다. 기본 로그온 계정은 NT Authority\Local 서비스이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 도중에 변경할 수 없습니다. 이 계정은 설치가 완료된 다음에 변경할 수 있습니다. 시작 유형을 설치 중에 지정하지 않으면 다음과 같이 결정됩니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 아래에 설명 된 설치 시나리오 대로 실행 되 고 자동으로 설정 됩니다.<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스<br />-<br />                            TCP 또는 NP 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스<br />-<br />                            Analysis Server의 명명된 인스턴스(클러스터링되지 않음)<br /><br /> 위의 시나리오에 해당되지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 이미 설치되어 있다면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 현재 상태가 유지됩니다.<br /><br /> 설치하기 전에 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 기존 인스턴스가 없는 경우에는 시작 유형이 사용 안 함으로 설정되고 중지됩니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 클라이언트 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보를 제공하는 이름 확인 서비스입니다. 이 서비스는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스에서 공유됩니다. 기본 로그온 계정은 NT Authority\Local 서비스이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 도중에 변경할 수 없습니다. 이 계정은 설치가 완료된 다음에 변경할 수 있습니다. 시작 유형을 설치 중에 지정하지 않으면 다음과 같이 결정됩니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 자동으로 설정되어 다음에 설명된 설치 시나리오대로 실행됩니다.<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스<br />-<br />                            TCP 또는 NP 설정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스<br />-<br />                            Analysis Server의 명명된 인스턴스(클러스터링되지 않음)<br /><br /> 위의 시나리오에 해당되지 않는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser가 이미 설치되어 있다면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser의 현재 상태가 유지됩니다.<br /><br /> 설치하기 전에 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 기존 인스턴스가 없는 경우에는 시작 유형이 사용 안 함으로 설정되고 중지됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 설치에 대한 보안 고려 사항](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

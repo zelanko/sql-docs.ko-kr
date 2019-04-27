@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670446"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 삭제(Visual Database Tools)
   더 이상 필요하지 않은 데이터베이스 다이어그램을 삭제할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52771165"
   
  데이터베이스에서 해당 데이터베이스 다이어그램이 삭제됩니다. 데이터베이스 다이어그램을 삭제할 때 다이어그램에 있는 테이블은 삭제되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

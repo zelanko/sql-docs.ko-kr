@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652901"
 ---
 # <a name="setup-dll-api-reference"></a>설정 DLL API 참조
 이 섹션에서는 드라이버 설치 프로그램은 두 함수로 구성 된 DLL API의 구문을 설명 합니다 (**ConfigDriver** 하 고 **ConfigDSN**). **ConfigDriver** 하 고 **ConfigDSN** 드라이버 DLL에에서 있을 수 있습니다 또는 별도의 DLL을 설치 합니다.  

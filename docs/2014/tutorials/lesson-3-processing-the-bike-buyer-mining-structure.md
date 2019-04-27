@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655809"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>3단원: Bike Buyer 마이닝 구조 처리
   이 단원에서는 사용 하 여 INSERT INTO 문과의 vTargetMail 뷰를 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 데이터베이스에서 만든 마이닝 모델과 마이닝 구조를 처리 하는 데 [1 단원: Bike Buyer 마이닝 구조를 만드는](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) 고 [2 단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)합니다.  

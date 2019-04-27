@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643720"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 마법사(다차원 데이터)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마법사에서 사용 하기 위해 제공 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 고 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]입니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  

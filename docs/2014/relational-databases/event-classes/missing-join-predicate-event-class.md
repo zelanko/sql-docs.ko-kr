@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662187"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 이벤트 클래스
   Missing Join Predicate 이벤트 클래스는 조인 조건자가 없는 쿼리가 실행 중임을 나타냅니다. 이 결과 실행 시간이 긴 쿼리가 나타날 수 있습니다. 조인 조건자에 대한 자세한 내용은 [조건자&#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)를 참조하세요.  

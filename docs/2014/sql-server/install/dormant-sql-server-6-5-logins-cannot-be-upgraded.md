@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0381e04ae1df53e5502c49eb17d0823fcf611e89
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645818"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>SQL Server 6.5 유휴 로그인은 업그레이드할 수 없습니다.
   업그레이드 관리자에서 해당 암호를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 직접 업그레이드할 수 없는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 로그인이 검색되었습니다.  

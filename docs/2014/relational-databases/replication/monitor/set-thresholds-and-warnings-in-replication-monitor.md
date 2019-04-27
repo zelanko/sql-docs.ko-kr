@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667186"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "52781195"
   
 2.  **경고** 탭을 클릭합니다. 이 탭의 옵션에 대한 자세한 내용을 보려면 메뉴 모음의 **도움말** 을 클릭하세요.  
   
-3.  다음 중 해당 확인란을 선택하여 경고를 설정합니다. **구독이 임계값 내에서 만료 되는 경우 경고** 나 **대기 시간 임계값을 초과 하는 경우 경고**합니다.  
+3.  다음 중 해당 확인란을 선택하여 경고를 설정합니다. **구독이 임계값 내에 만료되는 경우 경고** 또는 **대기 시간이 임계값을 초과하는 경우 경고** 중 해당 사항을 선택하여 경고를 설정합니다.  
   
 4.  **임계값** 열에서 경고에 대한 임계값을 설정합니다. 예를 들어 3단계에서 **대기 시간이 임계값을 초과하는 경우 경고** 를 선택한 경우 **임계값** 열에서 대기 시간에 대해 **60초** 를 선택할 수 있습니다.  
   

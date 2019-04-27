@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676843"
 ---
 # <a name="view-policies-dialog-box"></a>정책 보기 대화 상자
   이 대화 상자를 사용하여 이 대상에 적용되는 정책을 볼 수 있습니다. 이 대화 상자에는 관련 정책, 해당 정책 범주 및 정책에 대한 정보가 표시됩니다.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653712"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>3단원: 모델 추가 및 처리
   이전 단원에서 만든 마이닝 구조에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘에 기반한 단일 마이닝 모델이 포함되어 있습니다. 이 모델을 사용하여 타겟 메일링 캠페인을 위한 고객을 식별할 수 있습니다. 그러나 철저한 분석을 위해서는 다양한 알고리즘을 사용하여 관련 모델을 만들고 결과를 비교하는 것이 일반적입니다. 이 방법으로 다양한 이해도 얻을 수 있습니다. 따라서 두 개의 추가 모델을 만든 다음 모델을 처리하고 배포합니다.  

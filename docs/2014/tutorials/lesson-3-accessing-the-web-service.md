@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653786"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>3단원: 웹 서비스에 액세스
+# <a name="lesson-3-accessing-the-web-service"></a>3단원: 웹 서비스 액세스
   보고서 서버 웹 서비스에 대한 참조를 프로젝트에 추가한 후에는 웹 서비스의 프록시 클래스 인스턴스를 만듭니다. 그런 다음 프록시 클래스에서 메서드를 호출하여 웹 서비스의 메서드에 액세스할 수 있습니다. 애플리케이션에서 이러한 메서드를 호출하면 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 에 의해 생성된 프록시 클래스 코드가 사용자 애플리케이션과 웹 서비스간의 통신을 처리합니다.  
   
  먼저 웹 서비스의 프록시 클래스 인스턴스인 <xref:ReportService2010.ReportingService2010>를 만듭니다. 그런 다음 프록시 클래스를 사용하여 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 호출합니다. 이 호출로 예제 보고서인 Company Sales에 대한 이름 및 설명을 검색할 수 있습니다.  

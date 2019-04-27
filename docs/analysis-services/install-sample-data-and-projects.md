@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df7311aad9c356376fffafc8a4882af8e29e746b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659242"
 ---
 # <a name="install-sample-data-and-multidimensional-projects"></a>샘플 데이터 및 다차원 프로젝트 설치 
 [!INCLUDE[ssas-appliesto-sqlas-all](../includes/ssas-appliesto-sqlas-all.md)]
@@ -28,7 +28,7 @@ Analysis Services 자습서에 사용 되는 데이터 및 프로젝트 파일�
   
 -   SQL Server Analysis Services (SSAS) 
   
-    Analysis Services는 Evaluation, Enterprise, Business Intelligence, Standard 버전에서만 사용할 수 있습니다. 다차원 모델은 Azure Analysis Services에서 지원 되지 않습니다.
+    Analysis Services는 버전 에서만 제공 됩니다. Evaluation, Enterprise, Business Intelligence, Standard입니다. 다차원 모델은 Azure Analysis Services에서 지원 되지 않습니다.
   
     기본적으로 Analysis Services 2016 이상 설치 마법사의 구성 페이지는 서버에서 다차원 서버 모드를 선택 하 여 재정의할 수 있는 테이블 형식 인스턴스로 설치 됩니다.
   

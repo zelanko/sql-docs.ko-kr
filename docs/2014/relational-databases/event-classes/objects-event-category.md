@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661954"
 ---
 # <a name="objects-event-category"></a>Objects 이벤트 범주
   **Objects** 이벤트 범주에는 일반적인 개체 이벤트가 포함됩니다.  

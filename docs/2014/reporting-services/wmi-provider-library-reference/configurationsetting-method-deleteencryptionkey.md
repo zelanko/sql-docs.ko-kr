@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e594b68fffccc3cb73feda3541a93686bfc6aef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646967"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptionKey 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 데이터베이스에서 암호화 키를 삭제합니다.  

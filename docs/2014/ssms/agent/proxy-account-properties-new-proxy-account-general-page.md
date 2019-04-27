@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650204"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>프록시 계정 속성 및 새 프록시 계정(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 속성을 확인하거나 변경할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52797625"
  **작업 단계 재할당 대상**  
  작업 단계를 다시 할당할 프록시를 선택합니다. 이 목록은 프록시가 이전에 액세스할 수 있었던 하위 시스템에 대한 액세스를 취소할 때 활성화됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 프록시 만들기](create-a-sql-server-agent-proxy.md)  
   
   

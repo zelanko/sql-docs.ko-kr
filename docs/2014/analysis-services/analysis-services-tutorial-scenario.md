@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643346"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
   이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북미, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
@@ -61,9 +61,9 @@ ms.locfileid: "48106753"
   
 -   미국 외부에 있는 비즈니스 사용자에게 지역화된 경험을 제공합니다.  
   
- Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  
+ Analysis Services 자습서의 단원에서는 이러한 모든 목표에 맞는 큐브 데이터베이스를 작성하는 데 필요한 지침을 제공합니다. 시작 하려면 첫 번째 단원으로 이동 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 모델링 &#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링 & #40; Adventure Works 자습서 & #41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

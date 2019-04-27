@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca61f383198207223abf30ce25d9c922909f6526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653503"
 ---
 # <a name="close-method-ado-md"></a>Close 메서드(ADO MD)
 열려 있는 셀 집합을 닫습니다.  

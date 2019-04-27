@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b24f8c609aea85acea9cd702459d78f105e7efc2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646620"
 ---
 # <a name="setservicestate-method-wmi-msreportserverconfigurationsetting"></a>SetServiceState 메서드(WMI MSReportServer_ConfigurationSetting)
   보고서 서버 Windows 및 웹 서비스를 설정하거나 해제합니다.  
