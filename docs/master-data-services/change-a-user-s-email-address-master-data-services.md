@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 724c4d7ce6e9c2c72a918248db379b45912cf30e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637115"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>사용자의 전자 메일 주소 변경(Master Data Services)
 
@@ -45,11 +45,11 @@ ms.locfileid: "52790215"
   
 6.  **저장**을 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

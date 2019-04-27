@@ -19,29 +19,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632773"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버;에서 지원 되는 ODBC 날짜 및 시간 함수 동일한 함수에 대 한 Visual FoxPro 문법 ODBC 구문을 다를 경우에 해당 Visual FoxPro 나열 됩니다.  
   
 |ODBC 문법|Visual FoxPro 문법|  
 |------------------|---------------------------|  
-|CURDATE *)*|날짜 *)*|  
-|CURTIME *)*|시간 *)*|  
+|CURDATE *( )*|DATE *( )*|  
+|CURTIME *( )*|TIME *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|일 *)*|  
-|시간 *(time_exp)*||  
-|분 *(time_exp)*||  
-|월 *(time_exp)*||  
+|DAYOFMONTH(*date_exp)*|DAY *( )*|  
+|HOUR *(time_exp)*||  
+|MINUTE *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|이제 *)*|DATETIME *)*|  
-|두 번째 *(time_exp)*|초 *(time_exp)*|  
-|주 *(date_exp)*||  
-|연도 *(date_exp)*||  
+|NOW *( )*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|WEEK *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  다음 날짜 및 시간 함수는 지원 되지 않습니다.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "52538749"
   
  분기 *(date_exp)*  
   
- TIMESTAMPADD *(간격, integer_exp timestamp_exp)*  
+ TIMESTAMPADD *(interval, integer_exp, timestamp_exp)*  
   
- TIMESTAMPDIFF *(간격, timestamp_exp1 timestamp_exp2)*  
+ TIMESTAMPDIFF *(interval, timestamp_exp1, timestamp_exp2)*  
   
 ## <a name="odbc-escape-sequences"></a>ODBC 이스케이프 시퀀스  
  또한 드라이버는 날짜 및 타임 스탬프 데이터에 대 한 ODBC 이스케이프 시퀀스를 지원합니다. Escape 절 구문 아래와 같습니다.  

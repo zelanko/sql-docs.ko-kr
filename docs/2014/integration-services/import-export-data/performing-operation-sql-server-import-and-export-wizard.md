@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767905"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>작업을 수행하는 중(SQL Server 가져오기 및 내보내기 마법사)
   **작업을 수행하는 중** 페이지를 사용하여 가져오기/내보내기 작업의 진행률 및 결과를 보고 필요한 경우 작업을 중단할 수 있습니다.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766995"
 ---
 # <a name="progress-tab"></a>진행률 탭
   **디자이너의** 진행률 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭을 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 실행하는 경우 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]패키지의 실행 진행률을 볼 수 있습니다. **진행률** 탭에는 패키지와 패키지 실행 파일의 유효성 검사와 실행에 대한 시작/완료/경과 시간, 패키지에 대한 정보나 경고, 진행률 알림, 패키지의 성공 여부, 패키지 실행 중 생성된 모든 오류 메시지가 나열됩니다.  

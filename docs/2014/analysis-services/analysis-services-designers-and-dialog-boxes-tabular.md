@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bed90099c42383ea45ba6ad17459c7e0f6048b8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638460"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services 디자이너 및 대화 상자(테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 프로젝트 제작 환경 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 의 테이블 형식 모델 관리 도구에는 다양한 대화 상자, 속성 페이지 및 마법사 페이지가 포함되어 있습니다. 도움말 단추를 클릭하거나 F1을 눌러 자세한 정보를 볼 수 있습니다.  

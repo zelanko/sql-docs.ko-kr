@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 286647785defdb2391f2c9e7be4d1fc4c6d5599b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634653"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
 
@@ -44,11 +44,11 @@ ms.locfileid: "52796515"
   
 5.  **확인**을 클릭합니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

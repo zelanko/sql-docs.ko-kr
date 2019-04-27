@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 8a339d52b04b297227e28833ea490f615ed268f9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641108"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R (RevoScaleR 및 SQL Server 자습서)를 사용 하 여 데이터 변환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

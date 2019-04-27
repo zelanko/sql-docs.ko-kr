@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b7288952ce9b57b0825f20d1a93fcbcd20d3c37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766326"
 ---
 # <a name="ssis-package-format"></a>SSIS 패키지 형식
   현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 보다 쉽게 형식을 읽고 패키지를 비교할 수 있도록 패키지 형식(.dtsx 파일)이 크게 변경되었습니다. 또한 충돌 하는 변경 또는 이진 형식으로 저장 된 변경 내용을 포함 하지 않는 패키지를 안정적으로 병합할 수 있습니다.  

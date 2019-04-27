@@ -1,5 +1,5 @@
 ---
-title: 테이블 또는 데이터 원본 뷰 (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs
+title: 테이블 또는 Data Source View (Analysis Services)에서 명명된 된 쿼리 바꾸기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a171eafc35446f588d64c74457792912dcebe75a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641120"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰의 테이블 또는 명명된 쿼리 바꾸기(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34020810"
   
 6.  수정된 데이터 원본 뷰를 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

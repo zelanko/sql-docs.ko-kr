@@ -23,11 +23,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632311"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47672591"
 |ftcatid|**smallint**|전체 텍스트 인덱싱을 위해 등록된 모든 사용자 테이블의 경우 전체 텍스트 카탈로그 식별자이며, 등록되지 않은 모든 사용자 테이블의 경우 0입니다.|  
 |schema_ver|**int**|테이블의 스키마가 변경될 때마다 증가하는 버전 번호입니다. 항상 0을 반환합니다.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|유형|**char(2)**|개체 유형입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
+|유형|**char(2)**|개체 유형입니다. 다음 값 중 하나입니다.<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = 기본값 또는 DEFAULT 제약 조건<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수 IF = 인라인 테이블 함수<br /><br /> IT = 내부 테이블<br /><br /> K = PRIMARY KEY 또는 UNIQUE 제약 조건<br /><br /> L = 로그<br /><br /> P = 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> R = 규칙<br /><br /> RF = 복제 필터 저장 프로시저<br /><br /> S = 시스템 테이블<br /><br /> SN = 동의어<br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = 테이블 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> U = 사용자 테이블<br /><br /> V = 뷰<br /><br /> X = 확장 저장 프로시저|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

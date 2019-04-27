@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b12c9e533d404b01f896dd66ee046c9a9cd110d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628234"
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "47659683"
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|페이지 영역의 기준 주소에 대한 포인터입니다. Null을 허용하지 않습니다.|  
 |**region_allocation_base_address**|**varbinary(8)**|VirtualAlloc Windows API 함수에 의해 할당된 페이지 영역의 기준 주소에 대한 포인터입니다. BaseAddress 멤버가 가리키는 페이지가 이 할당 범위 내에 포함됩니다. Null을 허용하지 않습니다.|  
-|**region_allocation_protection**|**varbinary(8)**|영역이 처음 할당되었을 때의 보호 특성입니다. 값은 다음 중 하나입니다.<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-PAGE_EXECUTE_READWRITE<br />-PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Null을 허용하지 않습니다.|  
+|**region_allocation_protection**|**varbinary(8)**|영역이 처음 할당되었을 때의 보호 특성입니다. 값은 다음 중 하나입니다.<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-   PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> Null을 허용하지 않습니다.|  
 |**region_size_in_bytes**|**bigint**|모든 페이지의 특성이 동일한 기준 주소에서 시작하는 영역의 크기(바이트)입니다. Null을 허용하지 않습니다.|  
-|**region_state**|**varbinary(8)**|영역의 현재 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   MEM_COMMIT<br />-MEM_RESERVE<br />-   MEM_FREE<br /><br /> Null을 허용하지 않습니다.|  
-|**region_current_protection**|**varbinary(8)**|보호 특성입니다. 값은 다음 중 하나입니다.<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-PAGE_EXECUTE_READWRITE<br />-PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Null을 허용하지 않습니다.|  
-|**region_type**|**varbinary(8)**|영역의 페이지 형식을 나타냅니다. 이 값은<br /><br /> -   MEM_PRIVATE<br />-MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> Null을 허용하지 않습니다.|  
+|**region_state**|**varbinary(8)**|영역의 현재 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> -   MEM_COMMIT<br />-   MEM_RESERVE<br />-   MEM_FREE<br /><br /> Null을 허용하지 않습니다.|  
+|**region_current_protection**|**varbinary(8)**|보호 특성입니다. 값은 다음 중 하나입니다.<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-   PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-   PAGE_GUARD<br />-   PAGE_NOCACHE<br /><br /> Null을 허용하지 않습니다.|  
+|**region_type**|**varbinary(8)**|영역의 페이지 형식을 나타냅니다. 이 값은<br /><br /> -   MEM_PRIVATE<br />-   MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> Null을 허용하지 않습니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

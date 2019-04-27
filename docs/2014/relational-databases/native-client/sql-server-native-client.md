@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638846"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>새로운&#39;SQL Server Native Client 기능
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client를 설치하며, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client는 없습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "53361305"
   
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](features/sql-server-native-client-features.md)  
   
   

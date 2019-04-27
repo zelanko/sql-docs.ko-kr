@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638241"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 엔진은 다음과 같은 역할을 하는 서비스 및 개체의 집합입니다.  

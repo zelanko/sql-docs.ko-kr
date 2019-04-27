@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640493"
 ---
 # <a name="pseudo-type-identifiers"></a>의사(pseudo) 형식 식별자
 ODBC 응용 프로그램 프로그래밍 편의 위해 다양 한 의사 (pseudo) 형식 식별자를 정의합니다. 이러한 식별자는 실제로 실제 데이터 형식에 맞지 않는 이지만 대신 상황에 따라 기존 데이터 형식으로 확인 합니다.  

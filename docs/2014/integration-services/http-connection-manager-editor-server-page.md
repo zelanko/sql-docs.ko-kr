@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 730b055542296edad39bd3a8322d1b9110b7a7b0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768015"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>HTTP 연결 관리자 편집기(서버 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **서버** 탭에서 URL이나 보안 자격 증명 등의 속성을 지정하여 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. HTTP 연결 관리자를 구성했으면 연결을 테스트할 수도 있습니다.  

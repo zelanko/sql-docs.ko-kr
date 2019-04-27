@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a6d0b88805c1e6fb86e7656d96cc0be7fa045f8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766306"
 ---
 # <a name="standard-parse"></a>Standard Parse
   표준 구문 분석은 로캘 기반의 구문 분석 루틴이며 Oleaut32.dll 및 Ole2dsip.dll에서 사용할 수 있는 자동 데이터 형식 변환 API에 제공되는 모든 데이터 형식 변환을 지원합니다. 표준 구문 분석은 API를 구문 분석하는 OLE DB와 동일합니다.  

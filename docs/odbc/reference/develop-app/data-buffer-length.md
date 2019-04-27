@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640499"
 ---
 # <a name="data-buffer-length"></a>데이터 버퍼 길이
 명명 된 인수를 드라이버에 데이터 버퍼의 바이트 길이 전달 하는 응용 프로그램 *BufferLength* 또는 비슷한 이름입니다. 예를 들어, 다음에서에 호출할 **SQLBindCol**, 응용 프로그램의 길이 지정 합니다 *ValuePtr* 버퍼 (**sizeof (***ValuePtr***)**):  

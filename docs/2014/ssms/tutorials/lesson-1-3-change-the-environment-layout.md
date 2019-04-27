@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634277"
 ---
 # <a name="change-the-environment-layout"></a>환경 레이아웃 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 구성 요소는 서로 화면 공간을 차지하려고 합니다. 공간을 더 확보하려는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소를 닫거나 숨기거나 이동할 수 있습니다. 이 페이지의 연습에서는 구성 요소를 다른 위치로 이동합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48226802"
   
 1.  개체 탐색기의 제목 표시줄을 마우스 오른쪽 단추로 클릭하고 다음 메뉴 옵션을 확인합니다.  
   
-    -   float  
+    -   부동  
   
     -   도킹  
   

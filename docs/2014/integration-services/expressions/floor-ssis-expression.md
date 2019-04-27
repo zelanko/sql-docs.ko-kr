@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769169"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR(SSIS 식)
   숫자 식보다 작거나 같은 최대 정수를 반환합니다.  

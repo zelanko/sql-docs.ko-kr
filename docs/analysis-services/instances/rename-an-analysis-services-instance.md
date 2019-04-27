@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec5f84d40c3ba0628ea111502dd2be41cc7d346
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635957"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

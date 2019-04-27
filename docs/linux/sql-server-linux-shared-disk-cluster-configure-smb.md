@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634167"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성
 
@@ -22,7 +22,7 @@ ms.locfileid: "52532001"
 
 이 문서에서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 SMB 저장소를 구성 하는 방법에 설명 합니다. 
  
-Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일반 인터넷) 공유 및 참조 Samba를 통해 구현 됩니다. Windows 환경에서 SMB 공유에 액세스 하면 이러한 방식으로 수행 됩니다. \\SERVERNAME\SHARENAME 합니다. Linux 기반 SQL Server 설치에 대 한 SMB 공유 폴더로 탑재 되어야 합니다.
+Windows가 아닌 환경에서는 SMB는 종종으로 파일 시스템 CIFS (일반 인터넷) 공유 및 참조 Samba를 통해 구현 됩니다. Windows 환경에서 SMB 공유에 액세스 하면 이러한 방식으로 수행 됩니다. \\SERVERNAME\SHARENAME. Linux 기반 SQL Server 설치에 대 한 SMB 공유 폴더로 탑재 되어야 합니다.
 
 ## <a name="important-source-and-server-information"></a>원본 및 서버에 대 한 중요 한 정보
 

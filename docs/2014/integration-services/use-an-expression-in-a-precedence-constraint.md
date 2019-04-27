@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b2491a03e0d0121f3aa3b31f354f71b36088e5d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766126"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>선행 제약 조건에서 식 사용
   이 절차에서는 **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건에 식을 추가하는 방법에 대해 설명합니다. 선행 제약 조건에 식을 추가하려면 패키지에 태스크 또는 컨테이너와 같은 실행 개체가 적어도 두 개 이상 포함되어야 하며 선행 제약 조건에 의해 연결되어 있어야 합니다.  

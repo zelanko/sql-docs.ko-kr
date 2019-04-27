@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: efab3218e3b4ee94af22c5fe52c9c4183666c54d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765836"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체를 포함할 모델을 만듭니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "52794995"
   
 -   [엔터티 만들기&#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델&#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [모델 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   

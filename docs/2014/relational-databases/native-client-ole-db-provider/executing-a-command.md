@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638450"
 ---
 # <a name="executing-a-command"></a>명령 실행
   소비자를 호출 하는 데이터 원본에 대 한 연결 설정 되 면 합니다 **idbcreatesession:: Createsession** 메서드 세션을 만듭니다. 세션은 명령, 행 집합 또는 트랜잭션 팩토리로 작동합니다.  

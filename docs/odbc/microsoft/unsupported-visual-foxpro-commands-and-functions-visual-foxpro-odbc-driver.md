@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633373"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원되지 않는 Visual FoxPro 명령 및 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서 FoxPro 명령 및 Visual FoxPro ODBC 드라이버에서 지원 되지 않지만 Microsoft® Visual FoxPro®에서 지원 되는 함수를 나열 합니다.  
@@ -33,15 +33,15 @@ ms.locfileid: "47802701"
   
 ||||  
 |-|-|-|  
-|# #UNDEF DEFINE...|... #IF #ENDIF 전처리기 지시문|#IFDEF &AMP;#124; #IFNDEF|  
+|# #UNDEF DEFINE...|... #IF #ENDIF 전처리기 지시문|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE 전처리기 지시문|:: 범위 결정 연산자|! 명령 (실행이 표시 &#124; ! 명령)|  
-|? &#124; ?? Command|??? Command|\ &#124; \\\ 명령|  
+|? &#124; ?? Command|??? Command|\ &#124; \\\ Command|  
 |@ ... 명령 상자|@ ... 명령 클래스|@ ... 지우기 명령|  
-|@ ... 편집-상자 명령 편집|@ ... 명령 입력|@ ... GET|  
+|@ ... 편집-상자 명령 편집|@ ... 명령 입력|@ ... 가져오기|  
 |@ ... 메뉴 명령|@ ... 명령 프롬프트|@ ... 명령 예를 들어합니다|  
 |@ ... 스크롤 명령|@ ... 명령||  
   
-## <a name="a"></a>A  
+## <a name="a"></a>변수를 잠그기 위한  
   
 ||||  
 |-|-|-|  
@@ -287,7 +287,7 @@ ms.locfileid: "47802701"
   
 ||||  
 |-|-|-|  
-|_TABS 시스템 메모리 변수|텍스트는 중... ENDTEXT 명령|TXTWIDTH () 함수|  
+|_TABS System Memory Variable|텍스트는 중... ENDTEXT 명령|TXTWIDTH () 함수|  
 |() 함수를 변환 합니다.|_TRANSPORT 시스템 메모리 변수||  
 |명령 유형|_THROTTLE 시스템 메모리 변수||  
   

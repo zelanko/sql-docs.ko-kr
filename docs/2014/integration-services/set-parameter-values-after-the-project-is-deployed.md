@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766516"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>프로젝트를 배포한 후 매개 변수 값 설정
   카탈로그에 프로젝트를 배포할 때 배포 마법사를 사용하여 서버 기본 매개 변수 값을 설정할 수 있습니다. 프로젝트가 카탈로그에 배포된 후 SSMS(SQL Server Management Studio) 개체 탐색기 또는 Transact-SQL을 사용하여 서버 기본값을 설정할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "58379931"
   
 3.  **페이지 선택** 에서 **매개 변수**를 클릭하여 매개 변수 페이지를 엽니다.  
   
-4.  **매개 변수** 목록에서 원하는 매개 변수를 선택합니다. 참고: 합니다 **컨테이너** 열에서 패키지 매개 변수와 프로젝트 매개 변수를 구별할 수 있습니다.  
+4.  **매개 변수** 목록에서 원하는 매개 변수를 선택합니다. 참고: **컨테이너** 열을 통해 패키지 매개 변수와 프로젝트 매개 변수를 구별할 수 있습니다.  
   
 5.  **값** 열에 원하는 서버 기본 매개 변수 값을 지정합니다.  
   

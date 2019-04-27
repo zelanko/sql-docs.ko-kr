@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635599"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>고급 데이터 원본 뷰 옵션 대화 상자(데이터 원본 뷰 마법사)(Analysis Services)
   **고급 데이터 원본 뷰 옵션** 대화 상자에서는 데이터 원본 뷰에서 데이터 원본의 스키마 및 관계를 끌어와서 뷰를 작성하는 방법을 추가로 제어할 수 있습니다.  

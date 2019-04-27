@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639539"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Analytics Platform System의 병렬 데이터 웨어하우스 방화벽 구성
 합니다 **방화벽** SQL Server PDW 구성 관리자의 페이지를 사용 하면 허용 하거나 Analytics Platform System appliance에서 특정 포트에 대 한 액세스를 방지 하는 방화벽 규칙을 사용 하지 않도록 설정 하거나 설정할 수 있습니다.  

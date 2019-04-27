@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633403"
 ---
 # <a name="supported-odbc-api-functions"></a>지원되는 ODBC API 함수
 사용할 수 있는 기능을 드라이버에서 응용 프로그램에 알리기 위해 평준화의 목적은입니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버는 모든 핵심 및 수준 1 함수를 지원합니다.  

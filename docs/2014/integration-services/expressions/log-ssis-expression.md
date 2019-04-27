@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769069"
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
   숫자 식의 상용 로그를 반환합니다.  

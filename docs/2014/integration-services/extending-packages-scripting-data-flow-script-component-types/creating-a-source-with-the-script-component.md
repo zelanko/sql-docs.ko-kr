@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768669"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 원본 구성 요소를 사용하여 데이터 원본의 데이터를 로드하고 다운스트림 변환 및 대상에 전달할 수 있습니다. 일반적으로 데이터 원본에 연결하는 데는 기존 연결 관리자를 사용합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "58381181"
   
  열면 합니다 **프로젝트 탐색기** vsta에서 창에서 읽기 전용으로 스크립트 구성 요소 생성도을 확인할 수 있습니다 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목입니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.  
   
- 런타임에 데이터 흐름 엔진은 `PrimeOutput` 부모 클래스의 `UserComponent` 메서드를 재정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.  
+ 런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `PrimeOutput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.  
   
 1.  `CreateNewOutputRows` 메서드: 처음에는 비어 있는 출력 버퍼에 데이터 원본의 행을 추가하려면 `ScriptMain`에서 이 메서드를 재정의합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "58381181"
   
 1.  `AcquireConnections` 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.  
   
-2.  모든 원본 데이터를 동시에 로드할 수 있는 경우 `PreExecute` 메서드를 재정의하여 데이터를 로드합니다. 예를 들어 `SqlCommand` 데이터베이스에 대한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 모든 원본 데이터를 동시에 `SqlDataReader`로 로드할 수 있습니다. 텍스트 파일을 읽는 경우와 같이 원본 데이터를 한 번에 한 행씩 로드해야 하는 경우에는 `CreateNewOutputRows`에서 행을 반복할 때 데이터를 로드할 수 있습니다.  
+2.  모든 원본 데이터를 동시에 로드할 수 있는 경우 `PreExecute` 메서드를 재정의하여 데이터를 로드합니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대해 `SqlCommand`를 실행하고 모든 원본 데이터를 동시에 `SqlDataReader`로 로드할 수 있습니다. 텍스트 파일을 읽는 경우와 같이 원본 데이터를 한 번에 한 행씩 로드해야 하는 경우에는 `CreateNewOutputRows`에서 행을 반복할 때 데이터를 로드할 수 있습니다.  
   
 3.  재정의된 `CreateNewOutputRows` 메서드를 사용하여 빈 출력 버퍼에 새 행을 추가하고 새 출력 행의 각 열 값을 채웁니다. 각 출력 버퍼의 `AddRow` 메서드를 사용하여 비어 있는 새 행을 추가한 다음 각 열의 값을 설정합니다. 일반적으로는 외부 원본에서 로드된 열의 값을 복사합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "58381181"
   
 5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -267,7 +267,7 @@ ms.locfileid: "58381181"
   
 6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. (원본 변환 하지 않고 대상에 직접 연결할 수 있습니다.) [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

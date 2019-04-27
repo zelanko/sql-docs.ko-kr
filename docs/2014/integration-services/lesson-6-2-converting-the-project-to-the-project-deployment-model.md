@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767355"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>2단계: 프로젝트를 프로젝트 배포 모델로 변환
   이 작업에서는 프로젝트를 프로젝트 배포 모델로 변환하기 위해 Integration Services 프로젝트 변환 마법사를 사용합니다.  

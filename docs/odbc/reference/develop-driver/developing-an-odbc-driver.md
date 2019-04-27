@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c4affd835931c00fd5f8ad2514070527ce1b80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636141"
 ---
 # <a name="developing-an-odbc-driver"></a>ODBC 드라이버 개발
 이 섹션에서는 ODBC 드라이버를 개발 하는 방법을 설명 하는 항목을 포함 합니다.  

@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767515"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>2단원: 배포 번들 만들기
-  [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)에서 만든 된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트 Deployment Tutorial 이라는 프로젝트에 패키지와 지원 파일을 추가 하 고 패키지에서 구성을 구현 했습니다.  
+  [1단원: 배포 번들 작성 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)에서는 Deployment Tutorial이라는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 지원 파일을 이 프로젝트에 추가했으며 패키지에서 구성을 구현했습니다.  
   
  이 단원에서는 패키지를 다른 컴퓨터에 설치하는 데 필요한 항목을 포함하는 폴더인 배포 번들을 만듭니다. 배포 번들은 Deployment Tutorial 프로젝트의 배포 매니페스트, 패키지 복사본 및 지원 파일 복사본을 포함합니다. 배포 매니페스트는 배포 번들의 패키지, 기타 파일 및 구성을 나열합니다.  
   
  또한 배포 번들의 파일 목록을 확인하고 매니페스트의 내용을 검사합니다.  
   
- **예상이 단원을 완료 시간:** 30분  
+ **이 단원에 소요되는 예상 시간:**: 30분  
   
 ## <a name="lesson-tasks"></a>단원 태스크  
  이 단원에서는 다음 태스크를 다룹니다.  

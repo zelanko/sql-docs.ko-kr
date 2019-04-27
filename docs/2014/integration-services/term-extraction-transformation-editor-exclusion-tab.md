@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6292fa7798c9f9d76868b4230317eb99a1f8b3d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766286"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
   **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  

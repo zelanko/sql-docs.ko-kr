@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637763"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  

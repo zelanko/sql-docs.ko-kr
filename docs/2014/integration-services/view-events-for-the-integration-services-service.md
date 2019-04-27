@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c00739cefe457575e6b05dee368d8965775a387
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766066"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services 서비스의 뷰 이벤트
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스의 이벤트는 다음 두 도구를 사용하여 볼 수 있습니다.  

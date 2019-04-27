@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636242"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버 연결 풀링 서비스를 제공 해야 하는 방법에 대 한 정보를 포함 하는 ODBC 드라이버를 개발 하는 세부 정보를 설명 합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "52417374"
   
  연결 정보 (연결 문자열, 연결 특성 및 DSN)에 여러 원본에서 가져올 수 있습니다, 되므로 드라이버 연결 문자열을 구문 분석 하 고 이러한 위의 함수 호출의 각이 원본 간의 충돌을 해결 해야 합니다.  
   
- 따라서 새 ODBC 핸들을 도입 되었습니다. SQL_HANDLE_DBC_INFO_TOKEN 합니다. SQL_HANDLE_DBC_INFO_TOKEN를 사용 하 여 드라이버 않아도 연결 문자열을 구문 분석 하 고 두 번 이상 연결 정보에서 충돌을 해결 합니다. 드라이버가 연결 정보와 같은 데이터를 저장할 수 있습니다 또는 풀 id입니다. 드라이버별 데이터 구조 이므로  
+ 따라서 새 ODBC 핸들을 도입 되었습니다. SQL_HANDLE_DBC_INFO_TOKEN. SQL_HANDLE_DBC_INFO_TOKEN를 사용 하 여 드라이버 않아도 연결 문자열을 구문 분석 하 고 두 번 이상 연결 정보에서 충돌을 해결 합니다. 드라이버가 연결 정보와 같은 데이터를 저장할 수 있습니다 또는 풀 id입니다. 드라이버별 데이터 구조 이므로  
   
  이 핸들은 드라이버 관리자와 드라이버 인터페이스로만 사용 됩니다. 응용 프로그램은이 핸들을 직접 할당할 수 없습니다.  
   
@@ -139,12 +139,12 @@ ms.locfileid: "52417374"
 ## <a name="sequence-diagram"></a>시퀀스 다이어그램  
  이 시퀀스 다이어그램에는이 항목에서 설명한 기본 풀링 메커니즘을 보여 줍니다. 사용 표시 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 되지만 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 사례 비슷합니다.  
   
- ![시퀀스 다이어그램](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
+ ![Sequence Diagram](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>상태 다이어그램  
  이 상태 다이어그램 개체를 보여 줍니다 연결 정보 토큰을이 항목에서 설명 합니다. 다이어그램만 보여 줍니다 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 되지만 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 사례 비슷합니다. 드라이버 관리자는 언제 든 지 오류를 처리 해야 할 수 있으므로, 드라이버 관리자를 호출할 수 있습니다 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) 상태입니다.  
   
- ![상태 다이어그램](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
+ ![State Diagram](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
 ## <a name="see-also"></a>관련 항목  
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   

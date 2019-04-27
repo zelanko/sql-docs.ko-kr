@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627919"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47785341"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|개체의 메모리 주소입니다.|  
-|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> RUNNABLE:, 실행 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 합니다.<br /><br /> 일시 중단 됨: 작업 자가 있지만 이벤트 대기 합니다.<br /><br /> 완료: 완료 합니다.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
+|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드 대기 중입니다.<br /><br /> 실행 가능 합니다. 실행 가능 하지만 퀀텀 수신 대기 합니다.<br /><br /> 실행: 현재 스케줄러에서 실행 중입니다.<br /><br /> 일시 중단 합니다. 작업 자가 있지만 이벤트 대기 합니다.<br /><br /> 이 작업을 수행 합니다. 완료 합니다.<br /><br /> SPINLOOP: Spinlock에 걸려 있습니다.|  
 |**context_switches_count**|**int**|이 태스크로 완료된 스케줄러 컨텍스트 전환 수입니다.|  
 |**pending_io_count**|**int**|이 태스크로 수행된 실제 I/O 수입니다.|  
 |**pending_io_byte_count**|**bigint**|이 태스크로 수행된 I/O의 총 바이트 수입니다.|  

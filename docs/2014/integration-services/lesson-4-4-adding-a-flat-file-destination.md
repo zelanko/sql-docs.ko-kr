@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767375"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>4단계: 플랫 파일 대상 추가
   Lookup Currency Key 변환의 오류 출력은 조회 작업에 실패한 모든 데이터 행을 스크립트 변환으로 리디렉션합니다. 발생한 오류에 대한 정보를 보강하기 위해 스크립트 변환은 오류에 대한 설명을 가져오는 스크립트를 실행합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "58384821"
   
 11. 옵션 창에서 **열**을 클릭합니다.  
   
-     원본 데이터 파일의 열 외에 새로운 열인 ErrorCode, ErrorColumn 및 ErrorDescription이 있는 것을 볼 수 있습니다. 이러한 열은 Lookup Currency Key 변환의 오류 출력 및 Get Error Description 변환의 스크립트에 의해 생성되었으며 해당 열을 사용하여 실패한 행의 원인에 따라 문제를 해결할 수 있습니다.  
+     를 원본 데이터 파일에서 열 외에도 세 개의 새로운 열이 존재 하는지 확인 합니다. ErrorCode, ErrorColumn 및 ErrorDescription입니다. 이러한 열은 Lookup Currency Key 변환의 오류 출력 및 Get Error Description 변환의 스크립트에 의해 생성되었으며 해당 열을 사용하여 실패한 행의 원인에 따라 문제를 해결할 수 있습니다.  
   
 12. **확인**을 클릭합니다.  
   

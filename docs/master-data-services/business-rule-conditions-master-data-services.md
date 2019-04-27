@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ed0aa7fad822748bfab2426ef22071a72ba1774
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637130"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52823255"
   
 ## <a name="business-rule-conditions"></a>비즈니스 규칙 조건  
   
-|조건 이름|설명|  
+|조건 이름|Description|  
 |--------------------|-----------------|  
 |**같음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**같지 않음**|선택한 특성이 특정 특성 또는 특정 특성 값과 **같지 않거나** , 비어 있습니다.<br /><br /> 이 조건은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
@@ -55,7 +55,7 @@ ms.locfileid: "52823255"
 > [!NOTE]  
 >  비즈니스 규칙에 두 값을 비교하는 조건이 포함되었고 두 값이 모두 Null인 멤버에 대해 이 규칙을 적용할 경우 해당 멤버의 유효성 검사가 실패합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

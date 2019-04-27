@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c47d1905602f5cd96b58265963072cdd2dc01939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765936"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 모델 관리자와 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템 관리자의 두 가지 관리자 유형이 있습니다.  

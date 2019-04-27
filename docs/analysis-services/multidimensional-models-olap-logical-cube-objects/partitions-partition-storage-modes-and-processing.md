@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640455"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>파티션 - 파티션 스토리지 모드 및 처리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

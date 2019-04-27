@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66f0cd3a17baa9a09a5eeef2ade3d730f0a206b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636663"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47806082"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  응용 프로그램에서 할당 하는 매개 변수 집합에 대 한 여러 값을 지정할 수 있습니다 [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)합니다. 매개 변수 집합에 대 한 여러 값을 지정 하는 기능 대량 삽입 및 다양 한 매개 변수 값으로 여러 번 동일한 SQL 문을 처리 하도록 데이터 소스를 요구 하는 다른 작업에 유용 합니다. 응용 프로그램 세 가지 연결 된 매개 변수 집합에 대 한 값을 지정할 수는 예를 들어,는 **삽입** 문을 실행 합니다 **삽입** 문을 한 번 수행 하는 세 가지 삽입 작업입니다.  
   

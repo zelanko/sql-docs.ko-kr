@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633168"
 ---
 # <a name="table-names"></a>테이블 이름
 경우 dBASE, Microsoft Excel, Paradox, 또는 드라이버를 사용 하는 텍스트, 테이블 이름에서에서 발생 하는 SELECT 또는 DELETE FROM 절은 INSERT INTO 절은 후 업데이트를 CREATE TABLE 및 DROP TABLE 올바른 경로 포함할 수 있습니다, 기본 이름 및 파일 이름 확장명 .  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638167"
 ---
 # <a name="columns-with-a-name"></a>이름이 있는 열
   다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: faa24a68b0f8a8e6eecdacae41afeecb529af3b5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640140"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant for Oracle (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle은 Oracle 데이터베이스 마이그레이션 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 및 Linux (미리 보기) 및 Azure SQL DB의 2017. Oracle 용 SSMA는 Oracle 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체에서 이러한 개체를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -24,7 +24,7 @@ Oracle 용 SSMA 소개 하 고 Oracle 데이터베이스 마이그레이션에 �
   
 ## <a name="contents"></a>내용  
   
-|섹션|설명|  
+|섹션|Description|  
 |-----------|---------------|  
 |[Oracle 용 SSMA의 새로운 기능](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|이 버전의 Oracle 용 SSMA의 새로운 기능|  
 |[Oracle 용 SSMA 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|필수 구성 요소 및 실행 하는 컴퓨터에 Oracle 클라이언트 및 필수 구성 요소에 대 한 SSMA를 설치 하기 위한 지침을 제공 하는 항목이 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

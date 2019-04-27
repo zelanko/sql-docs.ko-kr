@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765824"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>구독 뷰 만들기(Master Data Services)
   구독 뷰를 만들면 데이터의 뷰를 만들려는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 구독 시스템에서 사용 합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52747935"
   
 10. **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 내보내기 &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
  [구독 뷰 삭제&#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [버전 플래그 만들기&#40;Master Data Services&#41;](create-a-version-flag-master-data-services.md)  

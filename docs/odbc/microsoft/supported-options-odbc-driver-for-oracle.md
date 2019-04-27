@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634554"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>지원되는 옵션(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
@@ -48,7 +48,7 @@ ms.locfileid: "47610382"
   
 -   [SQL_CONCURRENCY](../../odbc/microsoft/statement-options.md)  
   
--   [에서는 SQL_CURSOR_TYPE](../../odbc/microsoft/statement-options.md)  
+-   [SQL_CURSOR_TYPE](../../odbc/microsoft/statement-options.md)  
   
 -   [SQL_KEYSET_SIZE](../../odbc/microsoft/statement-options.md)  
   

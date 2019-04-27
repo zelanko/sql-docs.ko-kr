@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee56d8f285eb3e054241ac912b552e55665a552
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766905"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>SQL 실행 태스크의 결과 집합
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에서 결과 집합이 SQL 실행 태스크에 반환되는지 여부는 태스크에 사용되는 SQL 명령의 유형에 따라 다릅니다. 예를 들어 SELECT 문은 일반적으로 결과 집합을 반환하지만 INSERT 문은 결과 집합을 반환하지 않습니다.  

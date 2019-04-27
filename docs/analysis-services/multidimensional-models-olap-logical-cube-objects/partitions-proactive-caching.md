@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640394"
 ---
-# <a name="partitions---proactive-caching"></a>파티션-자동 관리 캐싱
+# <a name="partitions---proactive-caching"></a>파티션 - 자동 관리 캐싱
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   자동 관리 캐싱은 OLAP 개체에 자동 MOLAP 캐시 생성 및 관리 기능을 제공합니다. 큐브는 데이터베이스로부터 알림을 수신하는 즉시 데이터베이스에 있는 데이터의 변경 내용을 통합합니다. 자동 관리 캐싱의 목표는 ROLAP에서 제공하는 즉시성과 관리 용이성을 유지하면서 기존 MOLAP의 성능을 제공하는 것입니다.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34020760"
 ### <a name="maximizing-performance"></a>성능 최대화  
  대기 시간을 줄이는 동시에 성능을 최대화하기 위해 현재 사용 중인 MOLAP 개체를 삭제하지 않고 캐싱을 사용할 수도 있습니다. 그러면 새 캐시로 데이터가 읽히고 처리되는 동안 쿼리는 계속 MOLAP 개체에 대해 수행됩니다. 이 방법을 사용하면 성능은 향상되지만 새 캐시를 다시 작성하는 동안 쿼리에서 오래된 데이터를 반환할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [차원 저장소](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [파티션 저장소 & #40; 설정 합니다. Analysis Services-다차원 & #41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [파티션 저장소 설정&#40;Analysis Services - 다차원&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

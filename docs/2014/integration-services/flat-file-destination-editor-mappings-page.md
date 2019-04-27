@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f758e70c4133c28182a4d8e0019dd1e568441025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768279"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>플랫 파일 대상 편집기(매핑 페이지)
   **플랫 파일 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

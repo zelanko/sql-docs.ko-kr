@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab927ca95e32f1ad2a34a6e7910dd35a498eec0e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634467"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서는 보고서 서버 프로젝트의 항목을 보고서 서버에 게시할 수 있도록 보고서 서버를 지정하고 필요에 따라 보고서 및 공유 데이터 원본의 폴더를 지정해야 합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 빌드, 미리 보기 및 배포하는 데 필요한 속성과 값은 보고서 서버 프로젝트의 프로젝트 구성에 저장됩니다. 속성 집합을 편리하게 전환할 수 있도록 이러한 프로젝트 속성에 대한 명명된 집합을 여러 개 만들 수 있습니다. 각 속성 집합은 하나의 구성입니다. 예를 들어 테스트 서버에 보고서를 게시하는 구성과 프로덕션 서버에 보고서를 게시하는 구성이 각각 존재할 수 있습니다.  

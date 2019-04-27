@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767005"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>파티션 처리 대상 편집기(매핑 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 파티션 열에 매핑할 수 있습니다.  

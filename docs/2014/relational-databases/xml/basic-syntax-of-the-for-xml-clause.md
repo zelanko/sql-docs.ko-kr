@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637874"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 절의 기본 구문
   FOR XML 모드는 RAW, AUTO, EXPLICIT 또는 PATH일 수 있습니다. 이 모드는 결과 XML의 셰이프를 결정합니다.  

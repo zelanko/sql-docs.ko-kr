@@ -20,11 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7a2c01750ac0cb1a743e6961cc693f9912857d8b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628214"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 프로그래밍
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "51662292"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 연결된 런타임 오류에 대한 항목을 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
+ [SQL Server 2005 Native Client에서 애플리케이션 업데이트](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

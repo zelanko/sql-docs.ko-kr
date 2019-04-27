@@ -12,11 +12,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3ce8d425aeb1c1b66f198efb4b222dc94c6e24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627988"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "51677802"
 
 SNAC, 또는 SQL Server Native Client ODBC 및 OLE DB 드라이버 SQL Server에 대 한 참조를 같은 의미로 사용 된 용어입니다.
 
-**참고:** 새로운 개발에 대 한이 드라이버를 사용 하는 것은 권장 되지 않습니다. 새 OLE DB 공급자가 호출 된 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 앞으로 최신 서버 기능을 사용 하 여 업데이트 됩니다.
+**참고:**  하지 새로운 개발에이 드라이버를 사용 하는 것이 좋습니다. 새 OLE DB 공급자가 호출 된 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 앞으로 최신 서버 기능을 사용 하 여 업데이트 됩니다.
 
 
 **자세한 내용은 및 SNAC 또는 ODBC 드라이버를 다운로드 하려면 방문 [SNAC 수명 주기를 설명](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/)합니다.**

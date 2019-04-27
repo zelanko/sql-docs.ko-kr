@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640426"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "51674272"
  자세한 내용은 [메모리 내 OLTP &#40;메모리 내 최적화&#41; ](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) 하 고 [Guidelines for Using Indexes on Memory-Optimized Tables](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|이 인덱스가 속한 개체의 ID입니다.|  
-|xtp_object_id|**bigint**|개체의 현재 버전에 해당 하는 내부 ID입니다.<br /><br /> 참고: 적용할 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]합니다.|  
+|xtp_object_id|**bigint**|개체의 현재 버전에 해당 하는 내부 ID입니다.<br /><br /> 참고: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 적용됩니다.|  
 |index_id|**bigint**|인덱스의 ID입니다. index_id는 프로젝트 내에서만 고유합니다.|  
 |scans_started|**bigint**|수행된 메모리 내 OLTP 인덱스 검사 수입니다. 모든 SELECT, INSERT, UPDATE 또는 DELETE에는 인덱스 검사가 필요합니다.|  
 |scans_retries|**bigint**|다시 시도해야 하는 인덱스 검사 수입니다.|  

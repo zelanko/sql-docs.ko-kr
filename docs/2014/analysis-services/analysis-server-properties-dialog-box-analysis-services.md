@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636782"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **Analysis Server 속성** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성**을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "50145098"
   
      이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 악센트가 있는 문자와 악센트가 없는 문자가 동일한 것으로 간주합니다.  
   
--   **일본어 가나 구분** 은 관련된 언어 또는 알파벳에 대해 제공된 사전 규칙을 기준으로 데이터를 정렬 및 비교하고 히라가나와 가타카나 등 두 가지 유형의 일본어 가나 문자를 구분하는 데 사용됩니다.  
+-   **일본어가 나 구분** 하는 데 사용 되며 두 가지 유형의 일본어가 나 문자를 구분 하는 관련 된 언어 또는 알파벳에 대해 제공 된 사전 규칙을 기준으로 데이터를 비교 합니다. 히라가나와 가타카나를 제공 합니다.  
   
      이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 히라가나 문자와 가타카나 문자가 동일한 것으로 간주합니다.  
   

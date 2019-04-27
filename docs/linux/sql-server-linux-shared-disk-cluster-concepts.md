@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: cabebb91ecb7d276066cb0f1c6a2f09c633d0ba0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635671"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스
 

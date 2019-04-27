@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637611"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
   이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  *style* 매개 변수가 사용되지 않거나 해당 값이 0으로 설정된 경우 xml DT 인스턴스의 변환에 대해 불필요한 공백이 유지되지 않습니다. 문자열 데이터를 xml DT 인스턴스로 변환할 때 CONVERT 연산자 및 해당 *style* 매개 변수를 사용하는 방법은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>예: 문자열 값을 형식화된 xml로 캐스팅하여 열에 할당  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>예: 형식화 된 xml 문자열 값을 캐스팅 하 고 열에 할당  
  다음 예에서는 XML 조각을 포함 하는 문자열 변수를 캐스팅 합니다 `xml` 데이터 형식으로 저장 된 `xml` 형식 열:  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>예: 문자열을 형식화된 xml로 변환하여 변수에 할당  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>예: 형식화 된 xml 문자열로 변환 하 고 변수에 할당  
  문자열로 변환한 다음 예에서 `xml` 입력 하 고 변수에 할당 된 `xml` 데이터 형식:  
   
 ```  

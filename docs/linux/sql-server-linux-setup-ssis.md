@@ -11,11 +11,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634141"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux의 SQL Server Integration Services (SSIS)를 설치 합니다.
 
@@ -136,7 +136,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | 환경 변수 | Description |
 |---|---|
 | **ACCEPT_EULA** | 허용 값으로 설정 된 경우 SQL Server 사용권 계약 (예를 들어 `Y`).|
-| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>개발자<br/>Express <br/>Web <br/>표준<br/>Enterprise <br/>제품 키<br/><br/>제품 키 제품 키를 지정 하는 경우 폼 묶어야 `#####-#####-#####-#####-#####`여기서 `#` 문자 또는 숫자입니다.  |
+| **SSIS_PID** | SQL Server 버전 또는 제품 키를 설정합니다. 가능한 값은 다음과 같습니다.<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>제품 키<br/><br/>제품 키 제품 키를 지정 하는 경우 폼 묶어야 `#####-#####-#####-#####-#####`여기서 `#` 문자 또는 숫자입니다.  |
 | | |
 
 ## <a name="next-steps"></a>다음 단계

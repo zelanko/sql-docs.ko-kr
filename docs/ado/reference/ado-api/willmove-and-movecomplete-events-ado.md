@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642468"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 및 MoveComplete 이벤트(ADO)
 **WillMove** 보류 중인 작업을 현재 위치를 변경 하기 전에 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md). **MoveComplete** 이벤트 후의 현재 위치 라고 합니다 **레코드 집합** 변경.  
@@ -60,7 +60,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  A [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
 ## <a name="remarks"></a>Remarks  
- A **WillMove** 또는 **MoveComplete** 이벤트는 다음으로 인해 발생할 수 있습니다 **레코드 집합** operations: [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md), [이동](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), 및 [Requery](../../../ado/reference/ado-api/requery-method.md)합니다. 이러한 이벤트는 다음 속성으로 인해 발생할 수 있습니다: [필터](../../../ado/reference/ado-api/filter-property.md), [인덱스](../../../ado/reference/ado-api/index-property.md)를 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)를 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), 및 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)합니다. 이러한 이벤트는 경우 자식에도 발생할 **레코드 집합** 가 **레코드 집합** 연결 된 이벤트 및 부모 **레코드 집합** 이동 됩니다.  
+ A **WillMove** 하거나 **MoveComplete** 이벤트는 다음으로 인해 발생할 수 있습니다 **레코드 집합** 작업: [오픈](../../../ado/reference/ado-api/open-method-ado-recordset.md), [이동](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)를 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), 및 [Requery](../../../ado/reference/ado-api/requery-method.md)합니다. 이러한 이벤트는 다음 속성으로 인해 발생할 수 있습니다. [필터](../../../ado/reference/ado-api/filter-property.md), [인덱스](../../../ado/reference/ado-api/index-property.md)합니다 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md)를 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), 및 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)합니다. 이러한 이벤트는 경우 자식에도 발생할 **레코드 집합** 가 **레코드 집합** 연결 된 이벤트 및 부모 **레코드 집합** 이동 됩니다.  
   
  설정 해야 합니다 *adStatus* 매개 변수를 **adStatusUnwantedEvent** 각 가능한 *adReason* 모든 이벤트에 대 한 이벤트 알림을 완전히 중지 하려면 값은 포함 된 *adReason* 매개 변수입니다.  
   

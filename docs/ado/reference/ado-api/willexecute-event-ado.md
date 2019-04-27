@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 234a0eeba57958063a6f2eedb8510486df8a53a0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642514"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
 합니다 **WillExecute** 이벤트 연결에서 보류 중인 명령이 실행 되기 전에 호출 됩니다.  
@@ -44,7 +44,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 에 대 한 잠금 형식을 포함 하는 합니다 **레코드 집합** 는 열립니다. 이 매개 변수를 사용 하 여 잠금을 중 임의의 형식으로 변경할 수 있습니다는 **RecordsetOpen** 작업 합니다. *LockType* 다른 작업에 대 한 무시 됩니다.  
   
- *옵션*  
+ *Options*  
  A **긴** 명령을 실행 하거나 열을 사용할 수 있는 옵션을 나타내는 값을 **레코드 집합**합니다.  
   
  *adStatus*  

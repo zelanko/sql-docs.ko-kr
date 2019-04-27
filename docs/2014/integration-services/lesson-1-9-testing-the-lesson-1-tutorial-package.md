@@ -1,5 +1,5 @@
 ---
-title: '9단계: 1 단원 자습서 패키지 테스트 | Microsoft Docs'
+title: '9 단계: 1 단원 자습서 패키지 테스트 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767613"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>9단계: 1단원 자습서 패키지 테스트
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>9 단계: 1 단원 자습서 패키지 테스트
   이 단원에서는 다음 태스크를 수행했습니다.  
   
 -   새 [!INCLUDE[ssIS](../includes/ssis-md.md)] 프로젝트를 만들었습니다.  

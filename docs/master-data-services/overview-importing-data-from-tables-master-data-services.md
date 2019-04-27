@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d4703d6a5e8438404ba282b09b6af6edf40ea71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639464"
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>개요: 테이블에서 데이터 가져오기(Master Data Services)
 

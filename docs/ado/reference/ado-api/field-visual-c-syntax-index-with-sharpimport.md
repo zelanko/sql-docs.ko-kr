@@ -1,5 +1,5 @@
 ---
-title: '필드 (Visual c + + 구문 인덱스 #import) | Microsoft Docs'
+title: '필드 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2f442f665f6292c529b4d2360494869d9a0b2c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642575"
 ---
-# <a name="field-visual-c-syntax-index-with-import"></a>필드 (Visual c + + 구문 인덱스 #import)
+# <a name="field-visual-c-syntax-index-with-import"></a>필드 (Visual C++ #import 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  
