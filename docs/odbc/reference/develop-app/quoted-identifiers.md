@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861648"
 ---
 # <a name="quoted-identifiers"></a>따옴표 붙은 식별자
 SQL 문에서 특수 문자나 일치 키워드를 포함 하는 식별자 묶어야 *식별자 따옴표*;와 같은 문자 묶인 식별자 라고 *따옴표 붙은 식별자*(라고도 *구분 식별자* SQL-92에). 예를 들어, Accounts Payable 식별자 다음에 나와 **선택** 문:  

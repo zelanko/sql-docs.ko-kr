@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861513"
 ---
 # <a name="relative-and-absolute-scrolling"></a>상대 및 절대 스크롤
 스크롤 옵션의 대부분 **SQLFetchScroll** 현재 위치를 기준으로 또는 절대 위치에 커서를 놓습니다. **SQLFetchScroll** 다음을 인출할 이전, 첫 번째 및 마지막 행 집합에도으로 상대 인출로 (행 집합을 인출할 *n* 현재 행 집합의 시작 부분에서 행)과 절대 인출 (페치를 시작 하는 행 집합 행 *n*). 하는 경우 *n* 는 절대 인출에서 음수 이면 행 결과 집합의 끝에서 계산 됩니다. 따라서 결과 집합의 마지막 행을 시작 하는 행 집합을 인출 하는-1 행의 절대 인출을 의미 합니다.  

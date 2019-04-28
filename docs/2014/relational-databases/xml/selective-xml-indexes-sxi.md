@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679824"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
   선택적 XML 인덱스는 일반 XML 인덱스 외에 추가로 제공되는 또 다른 유형의 XML 인덱스입니다. 선택적 XML 인덱스 기능의 목적은 다음과 같습니다  
@@ -123,7 +123,7 @@ FOR
   
 -   base64Binary 및 hexBinary와 같은 이진 XS 유형이 있는 노드의 인덱싱  
   
--   끝에 `*` 와일드카드 문자가 포함된 XPath 식을 사용하여 인덱싱할 노드 지정. 예를 들면 다음과 같습니다. 예를 들어 `/a/b/c/*`하십시오 `/a//b/*`, 또는 `/a/b/*:c`합니다.  
+-   와일드 카드 문자를 포함 하는 XPath 식을 사용 하 여 인덱싱할 노드 지정 `*` 끝: 예: `/a/b/c/*`, `/a//b/*` 또는 `/a/b/*:c`.  
   
 -   자식, 특성 또는 하위 항목 이외의 모든 축 인덱싱. `//<step>` 은 특별한 경우로 허용됩니다.  
   

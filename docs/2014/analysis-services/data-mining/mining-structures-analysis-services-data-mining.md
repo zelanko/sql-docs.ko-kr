@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733343"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>마이닝 구조(Analysis Services - 데이터 마이닝)
   마이닝 구조는 마이닝 모델을 작성하는 데이터, 즉 원본 데이터 뷰, 열 유형과 수, 학습 및 테스트 집합으로의 선택적 분할을 정의합니다. 하나의 마이닝 구조는 같은 도메인을 공유하는 여러 개의 마이닝 모델을 지원할 수 있습니다. 다음 다이어그램에서는 데이터 마이닝 구조와 이를 구성하는 데이터 마이닝 모델 및 데이터 원본 간의 관계를 보여 줍니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172523"
 ### <a name="processing-mining-structures"></a>마이닝 구조 처리  
  마이닝 구조는 처리되기 전까지는 단순한 메타데이터 컨테이너입니다. 마이닝 구조를 처리할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 데이터에 대한 통계, 연속 특성을 불연속화하는 방법 및 나중에 마이닝 모델에서 사용되는 기타 정보를 저장하는 캐시를 만듭니다. 마이닝 모델은 이 요약 정보를 저장하지 않지만, 대신 마이닝 구조가 처리될 때 캐시된 요약 정보를 참조합니다. 따라서 기존 구조에 새 모델을 추가할 때마다 구조를 다시 처리할 필요가 없으며 해당 모델만 처리하면 됩니다.  
   
- 캐시가 매우 큰 경우 또는 세부 데이터를 제거하려는 경우에는 캐시를 처리 후에 삭제하도록 지정할 수 있습니다. 데이터를 캐시하지 않으려면 마이닝 구조의 `CacheMode` 속성을 `ClearAfterProcessing`으로 변경하면 됩니다. 이렇게 하면 모델이 처리된 후 캐시가 삭제됩니다. 설정 된 `CacheMode` 속성을 `ClearAfterProcessing` 마이닝 모델에서 드릴스루 사용 하지 않도록 설정 됩니다.  
+ 캐시가 매우 큰 경우 또는 세부 데이터를 제거하려는 경우에는 캐시를 처리 후에 삭제하도록 지정할 수 있습니다. 데이터를 캐시하지 않으려면 마이닝 구조의 `CacheMode` 속성을 `ClearAfterProcessing`으로 변경하면 됩니다. 이렇게 하면 모델이 처리된 후 캐시가 삭제됩니다. `CacheMode` 속성을 `ClearAfterProcessing`으로 설정하면 마이닝 모델에서 드릴스루 기능을 사용할 수 없게 됩니다.  
   
  그러나 캐시를 삭제한 후에는 마이닝 구조에 새 모델을 추가할 수 없습니다. 구조에 새 마이닝 모델을 추가하거나 기존 모델의 속성을 변경하려면 먼저 마이닝 구조를 다시 처리해야 합니다. 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48172523"
 ## <a name="using-data-mining-models-with-mining-structures"></a>마이닝 구조에서 데이터 마이닝 모델 사용  
  데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 모델은 특정 마이닝 구조에 속하는 개체로서, 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다. 하나의 구조에 여러 구조 열 복사본을 추가할 수 있습니다. 또한 하나의 모델에 여러 구조 열 복사본을 추가한 다음 모델의 각 구조 열에 다른 이름이나 *별칭*을 할당할 수 있습니다. 구조 열의 별칭을 지정하는 방법에 대한 자세한 내용은 [모델 열의 별칭 만들기](create-an-alias-for-a-model-column.md) 및 [마이닝 모델 속성](mining-model-properties.md)을 참조하세요.  
   
- 데이터 마이닝 모델의 아키텍처에 대 한 자세한 내용은 참조 하세요 [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)합니다.  
+ 데이터 마이닝 모델의 아키텍처에 대한 자세한 내용은 [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  마이닝 구조에 대한 정의, 관리 및 사용 방법에 대한 자세한 내용을 보려면 아래 링크를 참조하십시오.  
@@ -122,7 +122,7 @@ ms.locfileid: "48172523"
 |기본 데이터 원본 작업 및 원본 데이터 업데이트|[마이닝 구조에 사용되는 데이터 원본 뷰 편집](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [마이닝 구조 처리](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터베이스 개체 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
+ [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](mining-models-analysis-services-data-mining.md)  
   
   

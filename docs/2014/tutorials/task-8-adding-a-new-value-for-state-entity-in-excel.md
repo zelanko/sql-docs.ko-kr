@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866529"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>태스크 8: Excel에서 State 엔터티에 새 값 추가
   이 작업에서는 Excel에서 State 엔터티에 대한 값을 추가하고 변경 내용을 MDS 서버에 게시합니다.  
@@ -26,11 +26,11 @@ ms.locfileid: "56032034"
   
 2.  **Excel**를 클릭 합니다 **마스터 데이터** 메뉴의 탭을 클릭 **탐색기 표시** 리본의.  
   
-3.  에 **마스터 데이터 탐색기**를 선택 **Suppliers** 에 대 한 **모델**합니다. 엔터티 목록에는 **공급 업체** 하 고 **상태** 엔터티 목록에서.  
+3.  에 **마스터 데이터 탐색기**를 선택 **Suppliers** 에 대 한 **모델**합니다. 두 개의 엔터티가 표시 됩니다. **공급 업체** 하 고 **상태** 엔터티 목록에서.  
   
 4.  두 번 클릭 **상태** 목록에서입니다. 모든 멤버를 **상태** 워크시트에 MDS에서 엔터티를 표시 해야 합니다.  
   
-5.  이제 마지막 행에서 **North Carolina** 에 대 한 **이름** 하 고 **NC** 에 대 한 **코드**합니다. 색 구분에 따라 새 레코드/업데이트된 레코드가 다른 레코드와 구분됩니다.  
+5.  이제 다음 값을 사용 하 여 끝에 행을 추가: **North Carolina** 에 대 한 **이름** 하 고 **NC** 에 대 한 **코드**합니다. 색 구분에 따라 새 레코드/업데이트된 레코드가 다른 레코드와 구분됩니다.  
   
      ![Excel-상태에 North Carolina 추가](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel-상태에 North Carolina 추가")  
   

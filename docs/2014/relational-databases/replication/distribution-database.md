@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 283fd67d14d57c3d1d5d60dd9d8de2a159ca6d5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721368"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
   배포 데이터베이스는 모든 유형의 복제에 대한 메타데이터 및 기록 데이터와 트랜잭션 복제에 대한 트랜잭션을 저장합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52752425"
 > [!NOTE]  
 >  배포 데이터베이스 로그를 배포 데이터베이스에서 별개의 디스크 드라이브에 두어 트랜잭션을 기록하는 데 걸리는 시간을 줄이고 복제 성능을 향상시킬 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [배포 구성](configure-distribution.md)   
  [게시 및 배포 구성](configure-publishing-and-distribution.md)   
  [배포자 및 게시자 속성 보기 및 수정](view-and-modify-distributor-and-publisher-properties.md)  

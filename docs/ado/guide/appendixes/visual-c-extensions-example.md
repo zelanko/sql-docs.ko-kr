@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 확장 예제 | Microsoft Docs
+title: Visual C++ 확장 예 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802891"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
-이 프로그램에는 값 필드에서 검색 되 고 C/c + + 변수를 변환 하는 방법을 보여 줍니다.  
+이 프로그램에서는 값 필드에서 검색 되 고 C로 변환 하는 방법을 보여 줍니다. /C++ 변수입니다.  
   
  이 예제에서는 또한 활용 자동으로 호출 하는 COM 관련 세부 정보를 처리 하는 "스마트 포인터" `QueryInterface` 및 참조에 대 한 계산 된 **IADORecordBinding** 인터페이스입니다.  
   
@@ -51,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual c + + 확장을 구현 하기 때문에 **레코드 집합** 개체, 스마트 포인터에 대 한 생성자 `picRs`는 _`RecordsetPtr` 포인터 `pRs`합니다. 생성자 호출 `QueryInterface` 를 사용 하 여 `pRs` 찾으려고 합니다 `IADORecordBinding` 인터페이스입니다.  
+ 때문에 시각적 개체 C++ 확장을 구현 합니다 **레코드 집합** 개체, 스마트 포인터에 대 한 생성자 `picRs`, _는`RecordsetPtr` 포인터 `pRs`. 생성자 호출 `QueryInterface` 를 사용 하 여 `pRs` 찾으려고 합니다 `IADORecordBinding` 인터페이스입니다.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -110,6 +110,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [Visual c + + 확장을 사용 하 여](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+## <a name="see-also"></a>관련 항목  
+ [시각적 개체를 사용 하 여 C++ 확장](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

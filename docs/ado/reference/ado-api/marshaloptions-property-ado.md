@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864138"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 속성(ADO)
 레코드를 지정 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 서버에 다시 마샬링되어야 하는 합니다.  

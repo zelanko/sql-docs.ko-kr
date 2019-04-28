@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866290"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>태스크 7: 복합 도메인 만들기
   이 태스크에서는 복합 도메인을 만듭니다 **Address Validation**, 구성 되는 **Address Line**를 **City**를 **상태**, 및  **Zip** 도메인입니다. 복합 도메인을 사용하면 규칙에 여러 도메인이 포함되는 도메인 간 규칙을 정의할 수 있습니다. 복합 도메인에는 필드 값을 여러 도메인으로 구문 분석할 수 있는 등의 다른 이점이 있습니다.  예를 들어 Full Name 필드에 대한 값을 각각 First Name, Middle Name 및 Last Name 도메인으로 구문 분석할 수 있습니다. 이 자습서에서는 도메인 간 규칙만 정의합니다. 참조 [복합 도메인 관리](https://msdn.microsoft.com/library/hh510399.aspx) 대 한 자세한 내용은 합니다.  

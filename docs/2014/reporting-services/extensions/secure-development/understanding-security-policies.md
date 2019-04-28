@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990128"
 ---
 # <a name="understanding-security-policies"></a>보안 정책 이해
   보고서 서버에 의해 실행되는 모든 코드는 특정 코드 액세스 보안 정책의 일부여야 합니다. 이러한 보안 정책은 증명 정보를 일련의 명명된 권한 집합에 매핑하는 코드 그룹으로 구성됩니다. 코드 그룹은 해당 그룹의 코드에 대해 허용 가능한 권한을 지정하는 명명된 권한 집합과 연결되어 있는 경우가 많습니다. 런타임은 신뢰할 수 있는 호스트 또는 로더가 제공하는 증명 정보를 사용하여 코드가 속하는 코드 그룹을 결정하고 이에 따라 코드에 부여할 권한을 결정합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 의해 정의된 대로 이 보안 정책 아키텍처를 따릅니다. 다음 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 다양한 코드 유형 및 이와 연결된 정책 규칙에 대해 설명합니다.  

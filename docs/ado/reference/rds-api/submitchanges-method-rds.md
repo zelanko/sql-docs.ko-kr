@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710197"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
 보류 중인 변경 내용을 로컬로 캐시 된 및 업데이트할 수 있는 전송 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 에 지정 된 데이터 원본에는 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성.  
@@ -44,7 +44,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *대량 삽입 태스크 편집기*  
  A **문자열** 사용 하 여 만든 연결을 나타내는 값을 **rds. DataControl** 개체의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.  
   
- *레코드 집합*  
+ *Recordset*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

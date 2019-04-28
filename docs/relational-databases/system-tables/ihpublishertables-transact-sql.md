@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704156"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52802585"
 |**table_id**|**int**|게시된 테이블을 식별합니다.|  
 |**publisher_id**|**smallint**|비-SQL Server 게시자 테이블은 게시를 식별 합니다.|  
 |**name**|**sysname**|게시된 테이블의 이름입니다.|  
-|**소유자**|**sysname**|테이블 소유자입니다.|  
+|**owner**|**sysname**|테이블 소유자입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

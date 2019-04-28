@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715150"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
   BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성** 옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189693"
 8.  **마이닝 모델 예측** 탭의 도구 모음에 있는 첫 번째 단추를 누른 다음 **결과**를 선택하여 쿼리를 실행합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 디자이너에서 단일 쿼리를 만들려면](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [데이터 마이닝 디자이너에서 단일 쿼리 작성](create-a-singleton-query-in-the-data-mining-designer.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)  
   
   

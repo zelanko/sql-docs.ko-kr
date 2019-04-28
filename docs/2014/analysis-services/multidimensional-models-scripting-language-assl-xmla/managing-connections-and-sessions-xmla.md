@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701992"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* 는 서버 id와 메서드 호출 간에 클라이언트의 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 유지 하지 않는 id와 컨텍스트를 클라이언트의 메서드 호출을 완료 하는 조건입니다.  

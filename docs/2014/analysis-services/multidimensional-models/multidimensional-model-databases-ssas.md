@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699237"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>다차원 model 데이터베이스(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스는 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 역할의 모음입니다. 필요에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에는 데이터 마이닝 구조 및 데이터베이스에 사용자 정의 기능을 추가하기 위한 방법을 제공하는 사용자 지정 어셈블리가 포함될 수 있습니다.  
@@ -50,11 +50,11 @@ ms.locfileid: "48082803"
   
  [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md)  
   
- [다차원 데이터베이스 이름 바꾸기 &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [다차원 데이터베이스 이름 바꾸기&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
  [호환성 수준으로 다차원 데이터베이스 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [다차원 데이터베이스 속성 설정 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [다차원 데이터베이스 속성 설정&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Analysis Services 데이터베이스 동기화](synchronize-analysis-services-databases.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48082803"
   
 ## <a name="see-also"></a>관련 항목  
  [온라인 모드로 Analysis Services 데이터베이스에 연결](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
  [MDX를 사용하여 다차원 데이터 쿼리](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

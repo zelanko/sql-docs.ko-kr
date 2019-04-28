@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727839"
 ---
 # <a name="model-tab-mining-model-viewers"></a>모델 탭(마이닝 모델 뷰어)
   Microsoft 시계열 뷰어의 **모델** 탭에는 의사 결정 트리 모델에서 사용되는 것과 유사하게 그래프의 노드로 시계열이 표시됩니다.  
   
  이 시계열 모델 뷰를 사용하여 그래프에 대한 수식, ARIMA 항, 계수 등, 시계열 분석에 대한 유용한 정보를 추출할 수 있습니다.  
   
- **자세한 내용:** [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
+ **참조 항목:** [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)하십시오 [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -34,7 +34,7 @@ ms.locfileid: "48164173"
  **마이닝 모델**  
  확인할 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 모델 유형에 대한 사용자 지정 뷰어 또는 **Microsoft 일반 콘텐츠 트리** 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **확대/축소**  
@@ -71,8 +71,8 @@ ms.locfileid: "48164173"
  트리에 표시되는 수준 수를 변경합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

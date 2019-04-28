@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723998"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_cursorexecute prepared_handle, cursor
 > [!IMPORTANT]  
 >  경우는 *ccopt* 값을 지정 하지, 기본값은 OPTIMISTIC입니다 관계 없이 *ccopt* sp_cursorprepare에서 지정한 값입니다.  
   
- *행 개수*  
+ *rowcount*  
  AUTO_FETCH에 사용할 인출 버퍼 행 수를 나타내는 선택적 매개 변수입니다. 기본값은 20개 행입니다. *행 개수* 입력된 값과 반환 값으로 할당할 때 다르게 동작 합니다.  
   
 |입력 값일 때|반환 값일 때|  
@@ -80,7 +80,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>코드 반환 값  
  *행 개수* 다음 값을 반환할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |-1|행 수를 알 수 없습니다.|  
 |-n|비동기 채우기가 적용됩니다.|  

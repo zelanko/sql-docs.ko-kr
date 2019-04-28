@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680596"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>마법사 완료(집계 디자인 마법사)
   **마법사 완료** 페이지를 사용하여 집계 디자인을 선택한 파티션에 저장할 수 있습니다. 집계 디자인 마법사에서 집계 디자인과 저장을 완료한 후 선택한 파티션을 선택적으로 배포 및 처리할 수도 있습니다.  

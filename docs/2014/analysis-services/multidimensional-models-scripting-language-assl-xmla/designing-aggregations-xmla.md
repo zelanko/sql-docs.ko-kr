@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702127"
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
   집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 사용 하 여 나중에 병합할 수 있는 파티션을 쉽게 정의할 수 있습니다 파티션에 동일한 저장 구조를 사용 합니다 [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) 명령입니다. 집계 디자인에 대 한 자세한 내용은 참조 하세요. [집계 및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691704"
 ---
 # <a name="results-detailed-view-dialog-box"></a>결과 자세히 보기 대화 상자
   **정책 실행** 대화 상자를 사용하여 정책을 실행하고 **실행**을 클릭하면 정책 평가 결과가 이 대화 상자에 표시됩니다. 이 대화 상자는 읽기 전용이며 속성 식에서 실패할 수 있는 부분을 이해하는 데 도움이 됩니다.  

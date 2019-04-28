@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987892"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>보고서 내보내기(보고서 작성기 및 SSRS)
   보고서를 실행한 후 Excel이나 PDF 같은 다른 형식으로 보고서를 내보내거나 보고서에서 사용할 수 있는 Atom 규격 데이터 피드를 나열하는 Atom 서비스 문서를 생성하여 보고서를 내보낼 수 있습니다.  

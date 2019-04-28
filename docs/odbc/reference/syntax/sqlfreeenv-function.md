@@ -1,5 +1,5 @@
 ---
-title: SQLFreeEnv 함수 | Microsoft Docs
+title: SQLFreeEnv Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 979e34f89128a27a416f0af9305b1f97c6d0d385
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982266"
 ---
 # <a name="sqlfreeenv-function"></a>SQLFreeEnv 함수
 **규칙**  
@@ -37,6 +37,6 @@ ms.locfileid: "53203782"
 > [!NOTE]
 >  새로운 드라이버 관리자는이 함수를 경우 맵을 ODBC 2 대 한 자세한 내용은 *.x* 는 ODBC 3을 사용 하 여 응용 프로그램이 작동 *.x* 드라이버를 참조 하세요. [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)부록 g: 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

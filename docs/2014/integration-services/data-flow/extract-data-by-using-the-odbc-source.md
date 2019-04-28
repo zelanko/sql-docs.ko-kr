@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8ecb517174c8cd8189ad2f7382c774df3545620
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864950"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  
@@ -32,11 +32,11 @@ ms.locfileid: "58376121"
   
 5.  데이터 액세스 방법을 선택합니다.  
   
-    -   **테이블 이름**: 데이터베이스의 테이블 또는 뷰를 선택하거나 ODBC 연결 관리자가 연결될 테이블을 식별하는 정규식을 입력합니다.  
+    -   **테이블 이름**: 데이터베이스의 테이블 또는 뷰를 선택 하거나 ODBC 연결 관리자를 연결 하는 테이블을 식별 하는 정규식을 입력.  
   
          이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.  
   
-    -   **SQL 명령**: SQL 명령을 입력 하거나 클릭 **찾아보기** 텍스트 파일에서 SQL 쿼리를 로드 합니다.  
+    -   **SQL 명령**: SQL 명령을 입력하거나 **찾아보기**를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.  
   
 6.  **미리 보기** 를 클릭하면 ODBC 원본에 의해 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   

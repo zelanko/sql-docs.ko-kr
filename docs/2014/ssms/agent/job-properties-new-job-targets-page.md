@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695445"
 ---
 # <a name="job-properties-new-job-targets-page"></a>작업 속성: 새 작업 (대상 페이지)
   이 페이지를 사용하여 작업의 대상 서버를 관리할 수 있습니다.  

@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679698"
 ---
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
   데이터 모델링은 데이터 마이닝의 단계를 작성할 수 있는 패턴 및 추세를 적용 하 여 *알고리즘* 데이터입니다. 이러한 패턴을 사용하여 나중에 분석하거나 예측할 수 있습니다.  

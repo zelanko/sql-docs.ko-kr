@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832579"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
   데이터 프로파일링 태스크는 데이터 추출, 변환 및 로드 프로세스 내에서 데이터 프로파일링 기능을 제공합니다. 데이터 프로파일링 태스크를 사용하면 다음과 같은 이점이 있습니다.  
@@ -55,12 +55,12 @@ ms.locfileid: "58379237"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services 및 데이터 프로파일링  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 프로세스는 다음 단계로 구성됩니다.  
   
- **1단계: 데이터 프로 파일링 태스크 설정**  
+ **1단계: 데이터 프로파일링 태스크 설정**  
  데이터 프로파일링 태스크는 컴퓨팅하려는 프로필을 구성하기 위해 사용하는 태스크입니다. 데이터 프로파일링 태스크를 포함하는 패키지를 실행하여 프로필을 컴퓨팅합니다. 이 태스크는 프로필 출력을 XML 형식으로 파일이나 패키지 변수에 저장합니다.  
   
  **자세한 내용은 다음을 참조하세요.** [데이터 프로파일링 태스크 설정](data-profiling-task.md)  
   
- **2단계: 데이터 프로 파일링 태스크가 계산 하는 프로필 검토**  
+ **2단계: 데이터 프로파일링 태스크가 계산하는 프로필 검토**  
  데이터 프로파일링 태스크가 계산하는 데이터 프로필을 보려면 출력을 파일로 보낸 다음 데이터 프로필 뷰어를 사용합니다. 이 뷰어는 선택적 드릴다운 기능과 함께 요약 및 세부 정보 형식으로 프로필 출력을 표시하는 독립 실행형 유틸리티입니다.  
   
  **자세한 내용은 다음을 참조하세요.** [데이터 프로필 뷰어](data-profile-viewer.md)  

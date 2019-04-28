@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690252"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47709171"
 |**id**|**int**|인덱스가 속한 테이블의 ID입니다.|  
 |**상태**|**int**|시스템 상태 정보입니다.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|첫 페이지 또는 루트 페이지에 대한 포인터입니다.<br /><br /> 사용 되지 않는 경우 **indid** = 0.<br /><br /> NULL = 인덱스를 분할 하면 **indid** > 1.<br /><br /> NULL = 테이블 때 분할 **indid** 0 또는 1입니다.|  
-|**indid**|**smallint**|인덱스의 ID입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> >1 = 비클러스터형 인덱스|  
+|**indid**|**smallint**|인덱스의 ID입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**root**|**binary(6)**|에 대 한 **indid** > = 1, **루트** 루트 페이지에 대 한 포인터입니다.<br /><br /> 사용 되지 않는 경우 **indid** = 0.<br /><br /> NULL = 인덱스를 분할 하면 **indid** > 1.<br /><br /> NULL = 테이블 때 분할 **indid** 0 또는 1입니다.|  
 |**minlen**|**smallint**|행의 최대 크기입니다.|  
 |**keycnt**|**smallint**|키 수입니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "47709171"
 |**impid**|**smallint**|인덱스 구현 플래그입니다.<br /><br /> 0을 반환합니다.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|인덱스에 대해 고려된 잠금 세분성을 제약하는 데 사용합니다. 예를 들어 잠금 비용을 최소화하기 위해 일반적으로 읽기 전용인 조회 테이블을 테이블 수준의 잠금만 수행하도록 설정할 수 있습니다.|  
 |**pgmodctr**|**int**|0을 반환합니다.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**키**|**varbinary(816)**|인덱스 키를 구성하는 열의 열 ID 목록입니다.<br /><br /> NULL을 반환합니다.<br /><br /> 인덱스 키 열을 표시 하려면 사용 하 여 [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)합니다.|  
+|**keys**|**varbinary(816)**|인덱스 키를 구성하는 열의 열 ID 목록입니다.<br /><br /> NULL을 반환합니다.<br /><br /> 인덱스 키 열을 표시 하려면 사용 하 여 [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)합니다.|  
 |**name**|**sysname**|인덱스 또는 통계의 이름입니다. NULL을 반환 **indid** = 0. 응용 프로그램을 수정하여 NULL 힙 이름을 찾습니다.|  
 |**statblob**|**image**|통계 BLOB(Binary Large Object)입니다.<br /><br /> NULL을 반환합니다.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

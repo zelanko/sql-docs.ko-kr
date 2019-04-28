@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961915"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @table_server=] '*table_server*'  
+ [ @table_server= ] '*table_server*'  
  테이블 정보가 요청된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 연결된 서버의 이름입니다. *table_server* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  인덱스 정보를 제공할 원격 테이블의 이름입니다. *table_name* 됩니다 **sysname**, 기본값은 NULL입니다. NULL을 지정한 경우에는 지정된 데이터베이스의 모든 테이블이 반환됩니다.  
   
- [ @table_schema=] '*table_schema*'  
+ [ @table_schema= ] '*table_schema*'  
  테이블 스키마를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다. *table_schema* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ @table_catalog=] '*table_db*'  
+ [ @table_catalog= ] '*table_db*'  
  데이터베이스의 이름인 *table_name* 상주 합니다. *table_db* 됩니다 **sysname**, 기본값은 NULL입니다. NULL 인 경우 *table_db* 기본값으로 **마스터**합니다.  
   
- [ @index_name=] '*index_name*'  
+ [ @index_name= ] '*index_name*'  
  정보가 요청되는 인덱스의 이름입니다. *인덱스* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  정보가 반환될 인덱스의 유형입니다. *is_unique* 됩니다 **비트**, 기본값은 NULL 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -85,7 +85,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|데이터 정렬에 사용되는 순서입니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 A를 반환합니다.|  
 |CARDINALITY|**int**|테이블의 열 번호 또는 인덱스의 고유한 값입니다.|  
 |PAGES|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  

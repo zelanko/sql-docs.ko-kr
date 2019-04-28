@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809007"
 ---
 # <a name="server-properties-security-page"></a>서버 속성(보안 페이지)
   이 페이지를 사용하여 서버 보안 옵션을 확인하거나 수정할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52639451"
  **데이터베이스 간 소유권 체인**  
  데이터베이스가 데이터베이스 간 소유권 체인의 원본이나 대상이 되도록 허용하려면 선택합니다. 자세한 내용은 [cross db ownership chaining 서버 구성 옵션](cross-db-ownership-chaining-server-configuration-option.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

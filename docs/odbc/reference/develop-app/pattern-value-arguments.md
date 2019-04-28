@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861730"
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 카탈로그에서 일부 인수 함수는 *TableName* 에서 인수 **SQLTables**, 검색 패턴을 허용 합니다. 이러한 인수는 검색 패턴 수락 SQL_ATTR_METADATA_ID 문 특성 SQL_FALSE;로 설정 된 경우 이들은이 특성이 SQL_TRUE로 설정 된 경우 검색 패턴을 허용 하지 않는 식별자 인수입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "53208333"
   
 |검색 패턴|Description|  
 |--------------------|-----------------|  
-|% A %|문자를 포함 하는 모든 식별자|  
+|%A%|문자를 포함 하는 모든 식별자|  
 |ABC_|ABC로 시작 하는 모든 4 문자 식별자|  
 |ABC\\_|식별자 ABC_, 가정 이스케이프 문자는 백슬래시 (\\)|  
 |\\\\%|백슬래시를 사용 하 여 시작 하는 모든 식별자 (\\), 백슬래시는 이스케이프 문자를 가정 합니다.|  

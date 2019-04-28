@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679842"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>교차 유효성 검사(SQL Server 데이터 마이닝 추가 기능)
   ![교차 유효성 검사 단추, 데이터 마이닝 리본의](media/dmc-xvalid.gif "교차 유효성 검사 단추, 데이터 마이닝 리본 메뉴")  
@@ -96,7 +96,7 @@ ms.locfileid: "48171753"
   
 -   모델의 전체 파티션에서 특정 측정값에 대한 평균값과의 편차에 대한 평균입니다.  
   
-#### <a name="classification-passfail"></a>분류: 성공/실패  
+#### <a name="classification-passfail"></a>분류: 통과/실패  
  이 측정값은 예측 가능 특성에 대해 대상 값을 지정하지 않은 경우에 분류 모델에서 사용합니다. 예를 들어 여러 확률을 예측하는 모델을 만드는 경우 이 측정값은 모델이 모든 가능한 값을 얼마나 잘 예측했는지 알려 줍니다.  
   
  통과/실패는 다음 조건을 충족 하는 사례를 계산 하 여 계산 됩니다. **전달** 경우 확률이 가장 높은 예측된 상태가 입력된 상태와 같습니다 및 확률에 대 한 지정 된 값 보다 큽니다. **상태 임계값**이 고, 그렇지 않으면 **실패**합니다.  

@@ -1,5 +1,5 @@
 ---
-title: '4 단계: 서버 반환 레코드 집합 (RDS 자습서) | Microsoft Docs'
+title: '4단계: 서버 (RDS 자습서) 레코드 집합을 반환 합니다. | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f111fab97b81ed847870f6535399c58bd856ab99
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955819"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>4단계: 서버가 레코드 집합을 반환합니다(RDS 자습서).
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [5 단계: DataControl 유용 수행 (RDS 자습서)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [5단계: DataControl 유용 수행 (RDS 자습서)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

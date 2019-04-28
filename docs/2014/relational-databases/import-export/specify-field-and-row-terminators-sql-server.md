@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712800"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>필드 및 행 종결자 지정(SQL Server)
   문자 데이터 필드의 경우 데이터 파일의 각 필드 끝은 *필드 종결자* 를, 그리고 각 행의 끝은 필요에 따라 *행 종결자*를 사용해 표시할 수 있습니다. 종결 문자는 프로그램이 한 개의 필드 또는 행이 끝나고 다른 필드 또는 행이 시작되는 부분을 읽도록 나타내는 한 가지 방법입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52539746"
 |탭|\t<br /><br /> 기본 필드 종결자입니다.|  
 |줄 바꿈 문자|\n<br /><br /> 기본 행 종결자입니다.|  
 |캐리지 리턴/줄 바꿈|\r|  
-|백슬래시<sup>1</sup>|\\\|  
+|Backslash<sup>1</sup>|\\\|  
 |Null 종결자 (표시 되지 않는 종결자)<sup>2</sup>|\0|  
 |인쇄 가능한 모든 문자(Null, 탭, 줄 바꿈, 캐리지 리턴을 제외한 모든 제어 문자는 인쇄되지 않음)|(*, A, t, l 등)|  
 |앞에서 나열된 종결 문자 중 일부 또는 전체를 포함한 최고 10개까지의 출력 가능한 문자열|(**\t\*\*, end, !!!!!!!!!!, \t-\n 등)|  

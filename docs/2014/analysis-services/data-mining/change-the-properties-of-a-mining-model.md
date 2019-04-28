@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689049"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>마이닝 모델의 속성 변경
-  일부 마이닝 모델 속성은 모델 전체에 적용되고 다른 모델 속성은 개별 열에 적용됩니다. 전체 모델에 적용 되는 속성의 예로 `Drillthrough` 사례 데이터를 쿼리에 사용할지 여부를 지정 하는 속성 및 `Description` 속성입니다. 열에 적용되는 속성으로는 모델 내에서 열의 데이터가 사용되는 방식을 제어하는 `Usage` 및 `ModelingFlags`가 있습니다.  
+  일부 마이닝 모델 속성은 모델 전체에 적용되고 다른 모델 속성은 개별 열에 적용됩니다. 모델 전체에 적용되는 속성의 예로는 사례 데이터를 쿼리에 사용할지 여부를 지정하는 `Drillthrough` 속성과 `Description` 속성이 있습니다. 열에 적용되는 속성으로는 모델 내에서 열의 데이터가 사용되는 방식을 제어하는 `Usage` 및 `ModelingFlags`가 있습니다.  
   
  다음 모델 속성의 경우 식을 만들거나 복잡한 모델 속성을 구성하는 데 사용할 수 있는 고급 편집기가 제공됩니다.  
   
--   `Filter` 속성: 엽니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)합니다.  
+-   `Filter` 속성: 열립니다는 [데이터 집합 필터 또는 모델 필터 대화 상자](../data-set-filter-or-model-filter-dialog-box.md)합니다.  
   
--   `AlgorithmParameters` 속성: 엽니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)합니다.  
+-   `AlgorithmParameters` 속성: 열립니다는 [알고리즘 매개 변수 대화 상자 &#40;마이닝 모델 뷰&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)합니다.  
   
  마이닝 모델의 속성을 설정하는 방법은 [마이닝 모델 열](mining-model-columns.md)을 참조하세요.  
   

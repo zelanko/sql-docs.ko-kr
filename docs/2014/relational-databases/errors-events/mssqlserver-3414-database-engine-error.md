@@ -13,15 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 890179c3f5a6bc7d3d627ce9cf2c51fc5d2e96ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62868278"
 ---
 # <a name="mssqlserver3414"></a>MSSQLSERVER_3414
     
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |||  
 |-|-|  

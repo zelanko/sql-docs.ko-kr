@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864519"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic for Applications로 ADO 사용하기
 Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO 프로젝트를 설정하고 ADO 코드를 작성하는 작업은 거의 비슷합니다. 이 항목에서는 Visual Basic 및 Visual Basic for Applications에서 ADO를 사용하는 방법 및 차이점에 대한 유의 사항을 다룹니다.
@@ -64,7 +64,7 @@ Visual Basic을 사용하든 Visual Basic for Application을 사용하든 ADO �
 4.  **확인**을 클릭합니다.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic에서 ADO 개체 만들기
- 자동화 변수 및 해당 변수에 대한 개체의 인스턴스를 만들려면 두 가지 방법을 사용할 수 있습니다: **Dim** 혹은 **CreateObject** 문을 사용합니다.
+ Automation 변수 및 해당 변수에 대 한 개체의 인스턴스를 만들려면 두 가지 방법을 사용할 수 있습니다. **Dim** 나 **CreateObject**합니다.
 
 ### <a name="dim"></a>Dim 문
  한 번에 ADO 개체의 인스턴스를 만들려면 **Dim** 문과 함께 **New** 키워드를 사용합니다.

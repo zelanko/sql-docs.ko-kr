@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9109f47ba1173c115234f9040445fb110e3f0e3c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680884"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>분류 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 분류 마법사](media/dmc-classify.gif "데이터 마이닝 리본의 분류 마법사")  
@@ -34,7 +34,7 @@ ms.locfileid: "52419684"
   
 2.  에 **원본 데이터 선택** 페이지에서 분석할 데이터를 선택 합니다.  
   
-     이 마법사에서는 Excel 테이블, Excel 범위 및 외부 데이터 원본 등 여러 가지 유형의 데이터가 지원됩니다. 외부 데이터의 경우 Excel에 추가하거나 Analysis Services 데이터 원본에서 테이블 또는 뷰 집합을 선택할 수 있습니다. 또한 테이블을 추가하고 열을 변경해서 임시 데이터 원본을 만들 수 있습니다.  
+     이 마법사는 여러 종류를의 데이터를 지원합니다. Excel 테이블, Excel 범위 및 외부 데이터 원본입니다. 외부 데이터의 경우 Excel에 추가하거나 Analysis Services 데이터 원본에서 테이블 또는 뷰 집합을 선택할 수 있습니다. 또한 테이블을 추가하고 열을 변경해서 임시 데이터 원본을 만들 수 있습니다.  
   
 3.  에 **분류** 페이지에서 분류 하려는 열을 선택 합니다.  
   

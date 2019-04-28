@@ -1,5 +1,5 @@
 ---
-title: 분류 열 (데이터 마이닝) | Microsoft Docs
+title: 개의 분류 된 열 (데이터 마이닝) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724838"
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,9 +48,9 @@ ms.locfileid: "34019950"
  **별칭**  
  이 열의 값은 관련 값의 가중치 또는 사례 복제 요소입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [콘텐츠 형식 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+## <a name="see-also"></a>관련 항목  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [데이터 형식 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [데이터 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 459afedd5d9e9e417410961d010c6b650eb0a01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701388"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>특성 관계 다이어그램의 셰이프 정렬
   **의 차원 디자이너에 있는 차원 구조 뷰의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 셰이프의 레이아웃을 변경할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48090533"
      또한 **셰이프 정렬** 을 클릭하여 차원 디자이너에서 사용하는 레이아웃 알고리즘에 따라 모든 셰이프를 자동으로 정렬할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [의 차원 디자이너에 있는 차원 구조 뷰의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [특성 관계 정의](attribute-relationships-define.md)  
   
   

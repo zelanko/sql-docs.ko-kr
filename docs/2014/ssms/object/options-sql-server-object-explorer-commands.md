@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999303"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>옵션 (SQL Server 개체 탐색기-명령)
   개체 탐색기에서 테이블이나 뷰를 마우스 오른쪽 단추로 클릭하면 테이블의 행을 표시하는 다음 두 가지 옵션이 나타납니다.  

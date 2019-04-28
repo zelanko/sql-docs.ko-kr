@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680823"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>테이블 형식 및 다차원 솔루션(SSAS) 비교
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 모델링에 대 한 두 가지 고유한 방법을 제공 합니다: 테이블 형식 및 다차원입니다. 두 방식 간에 중요한 공통점이 있지만 작업 진행 방식을 어떻게 결정할지에 영향을 미치는 중요한 차이점도 있습니다. 이 항목에서는 기능을 비교하고 각 접근 방식이 일반적인 프로젝트 요구 사항을 해결하는 방법을 설명합니다. 예를 들어 특정 데이터 원본을 지원하는 것이 가장 중요하게 고려되는 경우 데이터 원본에 대한 섹션이 사용할 모델링 방법을 결정하는 데 도움이 될 수 있습니다.  

@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866439"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>태스크 9: UNION ALL 변환을 추가하여 수정 및 수정된 레코드 결합
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>태스크 9: Union All 변환을 추가 하 여 수정 및 수정 된 레코드 결합
   이 작업에서는 UNION ALL 변환을 데이터 흐름에 추가합니다. UNION ALL 변환은 여러 개의 입력을 하나의 출력으로 결합합니다. 이 시나리오에서는 Correct 및 Corrected 레코드를 모두 하나의 스트림에 결합합니다.  
   
 1.  끌어서 놓기 **Union All** 에서 변환 **일반적인** 섹션의 **SSIS 도구 상자** 에 **데이터 흐름** 아래에배치하고탭**수정 및 수정 된 레코드 선택**합니다.  

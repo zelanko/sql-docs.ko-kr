@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808401"
 ---
 # <a name="connection-properties-dialog-box"></a>연결 속성 대화 상자
   이 대화 상자를 사용하여 현재 연결 속성을 확인할 수 있습니다. 다양한 개체 탐색기 대화 상자에서 **연결 속성 보기** 를 클릭하면 이 대화 상자를 사용할 수 있습니다. 이 페이지에 표시된 속성은 읽기 전용입니다.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959613"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publisher** =] **'***게시자***'**  
+ [**@publisher** = ] **'***publisher***'**  
  비-의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업이 속한 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -49,9 +49,9 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**lastdate**|**varchar(22)**|작업을 실행한 최근 날짜입니다.|  
 |**thisdate**|**varchar(22)**|변경 시간|  
 |**nextdate**|**varchar(22)**|작업을 실행할 다음 날짜입니다.|  
-|**분**|**varchar(1)**|작업이 끊어지는지 여부를 나타내는 플래그입니다.|  
-|**간격**|**varchar(200)**|작업 간격입니다.|  
-|**오류**|**int**|해당 작업에 대한 실패 횟수입니다.|  
+|**broken**|**varchar(1)**|작업이 끊어지는지 여부를 나타내는 플래그입니다.|  
+|**interval**|**varchar(200)**|작업 간격입니다.|  
+|**failures**|**int**|해당 작업에 대한 실패 횟수입니다.|  
 |**xactsetjobwhat**|**varchar(200)**|작업에 의해 실행된 프로시저 이름입니다.|  
 |**xactsetjob**|**varchar(1)**|작업의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** -작업을 사용 하도록 설정 합니다.<br /><br /> **0** -작업이 해제 합니다.|  
 |**xactsetlonginterval**|**int**|작업에 대한 긴 간격입니다.|  
@@ -70,7 +70,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>사용 권한  
  구성원만 합니다 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_helpxactsetjob**합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Oracle 게시자에 대한 트랜잭션 집합 작업 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   

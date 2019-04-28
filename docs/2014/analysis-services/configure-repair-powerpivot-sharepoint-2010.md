@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680483"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>SharePoint 2010용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
   SharePoint 2010용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot 설치를 구성하거나 복구하려면 PowerPivot 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2010용 PowerPivot 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 참조 하세요. [PowerPivot 구성 또는 복구 SharePoint 2013 용 &#40;PowerPivot 구성 도구&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)합니다.  

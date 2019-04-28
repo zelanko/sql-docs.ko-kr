@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663b12f2e83de016d3f1799536b8a3ed674ef544
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680866"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>클러스터 프로필 탭(마이닝 모델 뷰어)
   **클러스터 프로필** 탭을 사용하여 알고리즘이 클러스터링 모델 내에서 발견한 클러스터를 전체적으로 볼 수 있습니다. 이 탭에는 각 클러스터에서의 특성 분포와 함께 각 특성이 표시됩니다.  
   
- **자세한 내용:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **참조 항목:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -32,7 +32,7 @@ ms.locfileid: "48196083"
  **마이닝 모델**  
  현재 마이닝 구조에서 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 보는 데 사용할 뷰어를 선택합니다. 마이닝 모델에 대해 제공되는 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **범례 표시**  
@@ -51,8 +51,8 @@ ms.locfileid: "48196083"
  이 섹션에는 모델의 각 클러스터에 대한 열이 포함됩니다. 각 특성에 대해 히스토그램에 해당 클러스터에 대한 특성의 값 분포가 표시됩니다. 히스토그램을 사용하여 모델의 모든 사례가 아니라 각 특성에 대한 값의 분포를 표시하는 **모집단**에 대한 열도 차트에 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

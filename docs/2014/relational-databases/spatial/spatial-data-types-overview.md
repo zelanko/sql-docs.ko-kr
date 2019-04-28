@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715050"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
   공간 데이터 형식은 두 가지가 있습니다. `geometry` 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. `geometry` 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준)과 호환됩니다.  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` 인스턴스는 `LineString` 및 `CircularString` 구성 요소를 모두 허용하므로 원형 조각의 선 세그먼트에 대한 두 개의 점만 알면 됩니다.  이 코드 예제에서는 `CompoundCurve`를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.  
+ `CompoundCurve` 인스턴스는 모두 허용 `LineString` 고 `CircularString` 해야 구성 요소를 원형 조각의 선 세그먼트에 대 한 두 개의 점만 알 수 있습니다.  이 코드 예제에서는 `CompoundCurve`를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.  
   
 ```sql  
 DECLARE @g geometry;  

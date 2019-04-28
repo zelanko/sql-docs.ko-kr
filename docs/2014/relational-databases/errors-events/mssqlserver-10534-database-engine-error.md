@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a20d1003e8b87179e2690fa35ad44b50894568
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870582"
 ---
 # <a name="mssqlserver10534"></a>MSSQLSERVER_10534
     
@@ -33,7 +33,7 @@ ms.locfileid: "48132463"
 |메시지 텍스트|계획 지침 ' %. \*l s에 대 한 지정 된 값 때문에 `@params` 올바르지 않습니다. *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.|  
   
 ## <a name="explanation"></a>설명  
- `@params`에 지정된 값이 잘못되었습니다.  
+ 지정 된 값 `@params` 올바르지 않습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  *parameter_name parameter_type* 형식으로 값을 지정하거나 NULL을 지정하세요.  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54896093b887985fc658e823f7d277347a70f0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724997"
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Microsoft 신경망 알고리즘
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 기계 학습을 위해 널리 사용되고 조정 가능한 신경망 아키텍처의 구현입니다.  이 알고리즘은 예측 가능한 특성의 가능한 각 상태에 대해 입력 특성의 가능한 각 상태를 테스트하고 학습 데이터를 기반으로 각 조합의 확률을 계산합니다. 이러한 확률을 분류 또는 회귀 작업에 사용하여 일부 입력 특성을 기반으로 결과를 예측할 수 있습니다. 신경망은 연결 분석에도 사용할 수 있습니다.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "34015550"
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3개의 노드( *뉴런*이라고도 함) 계층으로 구성된 신경망을 만듭니다. 이러한 계층은 *입력 계층*, *숨겨진 계층*및 *출력 계층*입니다.  
   
- **입력 계층:** 입력 노드는 데이터 마이닝 모델의 모든 입력 특성 값과 해당 확률을 정의합니다.  
+ **입력된 계층:** 입력된 노드 데이터 마이닝 모델 및 해당 확률에 대 한 모든 입력된 특성 값을 정의 합니다.  
   
- **숨겨진 계층:** 숨겨진 노드는 입력 노드에서 입력을 받아 출력 노드에 출력을 제공합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 노드에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
+ **숨겨진된 계층:** 숨겨진된 노드는 입력 노드에서 입력을 수신 하 고 출력 노드에 출력을 제공 합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 노드에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
   
- **출력 계층:** 출력 노드는 데이터 마이닝 모델의 예측 가능한 특성 값을 나타냅니다.  
+ **출력 계층:** 출력 노드는 데이터 마이닝 모델에 대 한 예측 가능한 특성 값을 나타냅니다.  
   
  입력 계층, 숨겨진 계층 및 출력 계층이 생성되고 점수가 매겨지는 방법에 대한 자세한 내용은 [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)를 참조하세요.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34015550"
   
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   드릴스루 또는 데이터 마이닝 차원은 지원하지 않습니다. 이는 마이닝 모델의 노드 구조가 기본 데이터와 반드시 일치하지는 않기 때문입니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34015550"
   
 -   데이터 마이닝 차원의 생성은 지원하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)   

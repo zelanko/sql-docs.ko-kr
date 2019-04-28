@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701371"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>차원에 계정 인텔리전스 추가
   계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분류를 사용하여 시간별로 계정을 집계할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48183443"
     |**Liability**|`LastNonEmpty`|특정 시간에 진 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지 않으므로 자연히 시간에 따라 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Asset**|`LastNonEmpty`|특정 시간에 보유하고 있는 빚의 가치나 금액입니다. 이 계정 유형은 시간에 따라 누적되지만 시간에 따라 자연히 집계되지는 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다. 이 계정 유형은 End of Period 비율을 사용하여 통화 간을 변환합니다.|  
     |**Balance**|`LastNonEmpty`|특정 시간의 항목 합계입니다. 이 계정 유형은 누적되지만 시간에 따라 자연히 집계되지 않습니다. 예를 들어 Year 금액은 데이터가 있는 마지막 월의 값입니다.|  
-    |**Flow**|`Sum`|항목의 증분 합계입니다. 이 계정 유형은으로 집계를 `Sum` 시간이 지남에 따라 되지만 통화 변환 규칙을 사용 하 여 변환 하지 않습니다.|  
+    |**Flow**|`Sum`|항목의 증분 합계입니다. 이 계정 유형은 시간에 따라 `Sum`으로 집계되지만 통화 변환 규칙을 사용하여 통화 간을 변환하지 않습니다.|  
     |**Expense**|`Sum`|소비한 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 `Sum`으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
     |**Income**|`Sum`|받은 항목의 가치나 금액입니다. 이 계정 유형은 시간에 따라 `Sum`으로 집계되며 평균 비율을 사용하여 통화 간을 변환합니다.|  
   

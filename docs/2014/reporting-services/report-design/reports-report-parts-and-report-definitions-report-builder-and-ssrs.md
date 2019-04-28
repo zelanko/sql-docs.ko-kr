@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7534c317f2e690e0766299961f4f21d35a674702
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720223"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>보고서, 보고서 파트 및 보고서 정의(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 다양 한 용어를 사용 하 여 사용자에 게 표시 된 대로 초기 정의 게시 된 보고서 및 표시 된 보고서를 비롯 한 여러 상태의 보고서를 설명 합니다.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8834e8412cedbd2d97f9b5717f2e7979999a0a06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681200"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>기능 선택(비즈니스 인텔리전스 마법사)
   **기능 선택** 페이지를 사용하여 큐브 또는 차원에 추가할 비즈니스 인텔리전스 기능을 선택할 수 있습니다.  

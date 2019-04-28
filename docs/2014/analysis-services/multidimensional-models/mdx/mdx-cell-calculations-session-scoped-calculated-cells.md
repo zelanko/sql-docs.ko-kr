@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725407"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>세션 범위 계산 셀 만들기
     
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이 예로 `Descendants`(*Member_Expression*를 *Level_Expression*를 *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX로 셀 계산 작성 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [MDX로 셀 계산 작성&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

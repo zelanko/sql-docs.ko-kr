@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fc2a9dffe5dc22c1dadfa075b91d8a6b26215de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863680"
 ---
 # <a name="mode-property-ado"></a>Mode 속성(ADO)
 데이터 수정에 사용할 수 있는 권한을 나타냅니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)를 [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957138"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ sp_linkedservers
 |**SRV_NAME**|**sysname**|연결된 서버의 이름입니다.|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|지정되어 있는 연결된 서버에 대한 액세스를 관리하는 OLE DB 공급자의 이름입니다.|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|연결된 서버의 제품 이름입니다.|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 데이터 원본 속성입니다.|  
-|**데 충분할 경우 SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 공급자 문자열 속성입니다.|  
-|**서버의 이름이**|**nvarchar (** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 위치 속성입니다.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 데이터 원본 속성입니다.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 공급자 문자열 속성입니다.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|지정되어 있는 연결된 서버에 해당하는 OLE DB의 위치 속성입니다.|  
 |**SRV_CAT**|**sysname**|지정되어 있는 연결된 서버에 해당하는 OLE DB 카탈로그 속성입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

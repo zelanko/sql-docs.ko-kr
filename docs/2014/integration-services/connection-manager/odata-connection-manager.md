@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833111"
 ---
 # <a name="odata-connection-manager"></a>OData 연결 관리자
   OData 연결 관리자를 사용하면 패키지에서 OData 원본에 연결할 수 있습니다. OData 원본 구성 요소는 OData 연결 관리자를 사용하여 OData 원본에 연결하고 서비스에서 데이터를 사용합니다. 이러한 구성 요소 설치 지침을 비롯한 자세한 내용은 [OData Source](../data-flow/odata-source.md)섹션을 참조하십시오.  

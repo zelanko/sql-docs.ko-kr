@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31cd85e73a0bd85a83bb752216f870b4f394807f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680626"
 ---
 # <a name="completing-the-wizard-linked-object-wizard"></a>마법사 완료(연결된 개체 마법사)
   **마법사 완료** 페이지를 사용하여 마법사의 이전 페이지에서 결정한 사항을 검토할 수 있습니다.  

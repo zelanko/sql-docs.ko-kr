@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 668e26430e97a1e7d34e0e420966b975874224c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717900"
 ---
 # <a name="other-annotations-sqlxml-40"></a>기타 주석(SQLXML 4.0)
   XML 대량 로드는 이 섹션의 이전 항목에서 설명한 주석 외에 다음과 같은 기타 주석도 해석합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52750035"
  `sql:key-fields`  
  XML 대량 로드는 이 주석을 항상 무시합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [주석 해석 &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

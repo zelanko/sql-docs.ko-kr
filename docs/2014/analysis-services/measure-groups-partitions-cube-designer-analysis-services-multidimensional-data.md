@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727989"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>측정값 그룹(파티션 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **파티션** 탭에 있는 **측정값 그룹** 창을 사용하여 큐브의 각 측정값 그룹과 연결된 파티션을 관리할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48084803"
  **파티션**  
  선택한 측정값 그룹을 지원하는 파티션의 목록을 포함하는 표를 표시합니다. 표에는 다음 열이 있습니다.  
   
- **(서 수)**  
+ **(Ordinal)**  
  측정값 그룹 내 파티션의 서수 위치를 표시합니다.  
   
  파티션의 전체 행을 선택하려면 클릭합니다.  

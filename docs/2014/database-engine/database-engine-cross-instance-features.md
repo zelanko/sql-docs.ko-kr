@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807527"
 ---
 # <a name="database-engine-cross-instance-features"></a>데이터베이스 엔진 인스턴스 간 기능
   이 섹션에서는 서버 및 데이터베이스 인스턴스를 관리하고 모니터링하는 데 관련된 도구 및 태스크에 대해 설명합니다.  

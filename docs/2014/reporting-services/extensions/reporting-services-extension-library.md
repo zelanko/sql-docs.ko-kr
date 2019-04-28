@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985749"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services 확장 프로그램 라이브러리
   Reporting Services 확장 프로그램 라이브러리는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 클래스, 인터페이스 및 값 형식의 집합입니다. 이 라이브러리는 시스템 기능에 액세스할 수 있도록 하며 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 애플리케이션에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 확장하는 데 사용할 수 있는 기초가 되도록 디자인되었습니다.  

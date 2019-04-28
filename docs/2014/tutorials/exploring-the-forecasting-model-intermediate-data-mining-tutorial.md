@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992261"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>예측 모델 탐색(중급 데이터 마이닝 자습서)
-  사용 하 여 결과 탐색할 수는 예측 마이닝 모델을 작성 했으므로 이제는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 뷰어에는 **차트** 하 고 **모델**합니다.  
+  사용 하 여 결과 탐색할 수는 예측 마이닝 모델을 작성 했으므로 이제는 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 뷰어를 두 개의 탭이 있습니다. **차트** 하 고 **모델**합니다.  
   
  또한 모든 모델에 Microsoft 일반 트리 뷰어를 사용할 수 있습니다. 각 뷰에는 시계열 모델의 조금씩 다른 그림 정보가 표시됩니다.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "56040034"
 ##  <a name="bkmk_Content"></a> (선택 사항) 일반 콘텐츠 트리 뷰어  
  시계열에 대 한 사용자 지정 뷰어 외에도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 제공 합니다 **MicrosoftGeneric 콘텐츠 트리 뷰어** 모든 데이터 마이닝 모델을 사용 합니다. 이 뷰어는 다음과 같은 이점을 제공합니다.  
   
--   **Microsoft 시계열 뷰어**: 이 뷰는 두 가지 알고리즘의 결과를 병합합니다. 각 계열을 개별적으로 볼 수는 있지만 각 알고리즘의 결과가 결합된 방법을 확인할 수는 없습니다. 또한 이 뷰에서 도구 설명 및 마이닝 범례에는 가장 중요한 통계만 표시됩니다.  
+-   **Microsoft 시계열 뷰어**: 이 보기는 두 알고리즘의 결과 병합합니다. 각 계열을 개별적으로 볼 수는 있지만 각 알고리즘의 결과가 결합된 방법을 확인할 수는 없습니다. 또한 이 뷰에서 도구 설명 및 마이닝 범례에는 가장 중요한 통계만 표시됩니다.  
   
--   **일반 콘텐츠 트리 뷰어**: 모델에 사용된 모든 데이터 계열을 한 번에 탐색하고 볼 수 있으며, 혼합 모델을 만든 경우 ARIMA 및 ARTXP 트리가 같은 그래프에 모두 표시됩니다.  
+-   **일반 콘텐츠 트리 뷰어**: 찾아보기 하는 데 사용 된 데이터 계열의 모든 모델에 한 번에 볼 수 있습니다 및 혼합를 만든 경우 모델을 모두 ARIMA 및 ARTXP 트리가 같은 그래프에 표시 됩니다.  
   
      이 뷰어를 사용하여 두 가지 알고리즘으로부터 값의 분포는 물론 전체 통계를 얻을 수 있습니다.  
   

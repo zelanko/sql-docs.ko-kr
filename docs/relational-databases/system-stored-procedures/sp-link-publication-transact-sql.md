@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960173"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저에 지정 된 로그인을 사용 하 여 인증 *로그인* 하 고 *암호*합니다.<br /><br /> 참고: 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 동적 RPC(원격 프로시저 호출)를 지정하는 데 이 옵션을 사용합니다.|  
-|**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고: 이 계정은 충분한 권한을 설정한 상태로 게시자에도 존재해야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
+|**0**|사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저에 지정 된 로그인을 사용 하 여 인증 *로그인* 하 고 *암호*합니다.<br /><br /> 참고: 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],이 옵션은 동적 원격 프로시저 호출 (RPC)를 지정 하는 데 사용 되었습니다.|  
+|**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고: 이 계정은 충분 한 권한이 있는 게시자에서 있어야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
 |**2**|사용 하 여 만든 기존, 사용자 정의 연결 된 서버 로그인을 사용 **sp_link_publication**합니다.|  
   
 `[ @login = ] 'login'` 로그인이입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수 이어야 때 지정한 *security_mode* 됩니다 **0**합니다.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955812"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더 대괄호로 구성 됩니다 (**[]**) 형식 및 매개 변수를 포함 합니다. 네 가지 섹션 유형은 리터럴 문자열에 표시 됩니다 **연결**, **sql**합니다 **userlist**, 또는 **로그**합니다. 리터럴 문자열, 기본, 사용자가 지정한 식별자를 또는 nothing입니다.  

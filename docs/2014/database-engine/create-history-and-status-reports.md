@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807507"
 ---
 # <a name="create-history-and-status-reports"></a>기록 및 상태 보고서 만들기
   현재 로드된 솔루션에서 파일의 기록 또는 현재 상태에 대한 보고서를 만들 수 있습니다. 또한 보고서를 미리 본 다음 프린터, 파일 또는 클립보드로 보고서를 보낼 수 있습니다. 이러한 보고서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 의해 생성되지 않습니다. 대신에 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe가 이 보고서를 생성합니다.  

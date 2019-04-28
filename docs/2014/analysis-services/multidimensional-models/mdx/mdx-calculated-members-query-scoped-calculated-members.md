@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725547"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>쿼리 범위 계산 멤버 만들기(MDX)
   단일 MDX 쿼리에만 계산 멤버가 필요한 경우 WITH 키워드를 사용하여 해당 계산 멤버를 정의할 수 있습니다. WITH 키워드를 사용하여 만든 계산 멤버는 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
@@ -92,8 +92,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [만드는 세션 범위 계산 멤버 &#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
+ [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 문&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [세션 범위 계산 멤버 만들기&#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

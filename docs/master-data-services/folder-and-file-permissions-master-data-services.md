@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696363"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "52760167"
   
 ###### <a name="program-files-default-permissions"></a>Program Files 기본 사용 권한  
   
-|그룹 또는 계정 이름|Permissions|  
+|그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|특별 사용 권한|  
 |SYSTEM|특별 사용 권한|  
@@ -49,7 +49,7 @@ ms.locfileid: "52760167"
   
 ###### <a name="mdstempdir-permissions"></a>MDSTempDir 사용 권한  
   
-|그룹 또는 계정 이름|Permissions|  
+|그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |SYSTEM|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
 |관리자|수정, 읽기 & 실행, 폴더 내용 보기, 읽기, 쓰기|  
@@ -57,7 +57,7 @@ ms.locfileid: "52760167"
   
 ###### <a name="webconfig-permissions"></a>Web.config 사용 권한  
   
-|그룹 또는 계정 이름|Permissions|  
+|그룹 또는 계정 이름|사용 권한|  
 |---------------------------|-----------------|  
 |SYSTEM|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
 |관리자|모든 권한, 수정, 읽기 & 실행, 읽기, 쓰기|  
@@ -65,7 +65,7 @@ ms.locfileid: "52760167"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config 파일의 내용에 대한 자세한 내용은 [웹 구성 참조&#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDS(Master Data Services) 설치](../master-data-services/install-windows/install-master-data-services.md)  
   
   

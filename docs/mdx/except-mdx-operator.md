@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 618beda530627898cdf55f08be5071fd7568688c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690867"
 ---
-# <a name="except-mdx-operator"></a>(MDX) 연산자를 제외 하 고
+# <a name="except-mdx-operator"></a>MDX 연산자를 제외 하 고
 
 
   중복된 멤버를 제거하고 두 집합 간의 차집합을 반환하는 집합 연산을 수행합니다.  
@@ -36,7 +36,7 @@ Set_Expression - Set_Expression
  지정된 두 매개 변수에서 공유되지 않는 멤버가 포함된 집합입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **-(제외)** 연산자는 기능적으로 동일는 [제외한](../mdx/except-mdx-function.md) 함수입니다.  
+ 합니다 **-(Except)** 연산자는 기능적으로 동일 합니다 [제외 하 고](../mdx/except-mdx-function.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

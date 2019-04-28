@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828046"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
   이 항목에서는 일반적인 성능 문제를 방지할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 디자인하는 방법에 대한 제안 사항을 제공합니다. 또한 이 항목에서는 패키지의 성능 문제를 해결하기 위해 사용할 수 있는 기능 및 도구에 대한 정보를 제공합니다.  
@@ -143,7 +143,7 @@ ms.locfileid: "58392781"
   
  일반적으로 느린 변경 차원 변환에서 가장 느린 구성 요소는 한 번에 하나의 행에 대해 UPDATE를 수행하는 OLE DB 명령 변환입니다. 따라서 느린 변경 차원 변환의 성능을 향상시키는 가장 효과적인 방법은 OLE DB 명령 변환을 바꾸는 것입니다. 업데이트할 모든 행을 준비 테이블에 저장하는 대상 구성 요소로 이러한 변환을 바꿀 수 있습니다. 그런 다음 모든 행에 대해 동시에 단일 집합 기반 Transact-SQL UPDATE를 수행하는 SQL 실행 태스크를 추가할 수 있습니다.  
   
- 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 설명 및이 방법의 예 섹션을 "고유 차원 시나리오" 백서를 참조 하세요 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)합니다.  
+ 고급 사용자는 느린 변경 차원 처리를 위해 대규모 차원에 대해 최적화된 사용자 지정 데이터 흐름을 디자인할 수 있습니다. 이 방법에 대한 설명 및 예는 백서 [Project REAL: 비즈니스 인텔리전스 ETL 디자인 방법](https://go.microsoft.com/fwlink/?LinkId=96602)의 “고유 차원 시나리오” 섹션을 참조하세요.  
   
 ### <a name="destinations"></a>대상  
  대상에서 성능을 향상시키려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 사용하고 대상의 성능을 테스트하십시오.  
@@ -166,9 +166,9 @@ ms.locfileid: "58392781"
 ## <a name="related-content"></a>관련 내용  
  **기사와 블로그 게시물**  
   
--   기술 문서, [SQL Server 2005 Integration Services: 성능에 대 한 전략](https://go.microsoft.com/fwlink/?LinkId=98899), technet.microsoft.com  
+-   technet.microsoft.com의 기술 문서 - [SQL Server 2005 Integration Services: 성능에 대한 전략](https://go.microsoft.com/fwlink/?LinkId=98899)  
   
--   기술 문서, [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900), technet.microsoft.com  
+-   technet.microsoft.com의 기술 문서 - [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
 -   sqlcat.com의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)  
   

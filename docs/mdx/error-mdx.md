@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6644318053321ae5189a70a2bd2c1f0e67d092fc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691327"
 ---
 # <a name="error-mdx"></a>Error(MDX)
 
@@ -33,7 +33,7 @@ Error( [ Error_Text ] )
  반환할 오류 메시지가 들어 있는 유효한 문자열 식입니다.  
   
 ## <a name="examples"></a>예  
- 다음 쿼리를 사용 하는 방법을 보여 줍니다는 **오류** 함수는 계산된 측정값 내:  
+ 다음 쿼리를 사용 하는 방법을 보여 줍니다 합니다 **오류** 함수는 계산된 측정값 내에서:  
   
  `WITH MEMBER MEASURES.ERRORDEMO AS ERROR("THIS IS AN ERROR")`  
   
@@ -44,6 +44,6 @@ Error( [ Error_Text ] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

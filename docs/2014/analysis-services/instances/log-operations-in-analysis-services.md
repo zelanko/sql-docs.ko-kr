@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703281"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
   Analysis Services 인스턴스에 설치한 각 인스턴스마다 하나씩 msmdsrv.log 파일에 서버 알림, 오류 및 경고가 로깅됩니다. 관리자는 이 로그에서 루틴 및 비정상적 이벤트에 대한 정보를 참조합니다. 최신 릴리스에서는 더 많은 정보를 포함하도록 로깅이 향상되었습니다. 이제 로그 레코드에는 제품 버전과 버전 정보, 프로세서, 메모리, 연결, 차단 이벤트 등이 모두 포함되어 있습니다. 전체 변경 목록은 [로깅 개선 사항](https://support.microsoft.com/kb/2965035)에서 확인할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "53363755"
 -   [팁과 모범 사례](#bkmk_tips)  
   
 > [!NOTE]  
->  로깅에 대한 정보를 찾는 경우 처리 및 쿼리 실행 경로를 보여주는 추적 작업에도 관심을 가질 수 있습니다. 임시 및 지속적인 추적(예: 큐브 액세스 감사)에 대한 추적 개체와 비행 레코더, SQL Server Profiler 및 xEvent를 최대한 활용하는 방법에 대한 권장 사항은 이 페이지의 링크를 통해 확인할 수 있습니다. [Analysis Services 인스턴스 모니터](monitor-an-analysis-services-instance.md)합니다.  
+>  로깅에 대한 정보를 찾는 경우 처리 및 쿼리 실행 경로를 보여주는 추적 작업에도 관심을 가질 수 있습니다. 하는 방법을 효율적으로 사용 하 비행 레코더, SQL Server Profiler 및 Xevent 있습니다 링크를 통해이 페이지에 대 한 권장 사항 뿐만 아니라 임시 및 지속적인 추적 (예: 큐브 액세스 감사)에 대 한 추적 개체: [Analysis Services 인스턴스 모니터](monitor-an-analysis-services-instance.md)합니다.  
   
 ##  <a name="bkmk_location"></a> 로그의 위치 및 유형  
  Analysis Services에서는 아래 설명된 로그를 제공합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "53363755"
 |관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|아니요|  
 |SQLDmp\<guid >.mdmp 파일|충돌 및 예외|상세한 문제 해결|아니요|  
   
- 이 항목에서 다루지 않는 추가 정보는 다음 링크를 참조하세요. [초기 데이터 수집 팁 Microsoft 지원에서](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)합니다.  
+ 이 항목에서 다루지 않는 추가 정보 리소스에 대 한 다음 링크를 항상 좋습니다. [초기 데이터 수집 팁 Microsoft 지원에서](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)합니다.  
   
 ##  <a name="bkmk_general"></a> 로그 파일 구성 설정에 대한 일반 정보  
  각 로그에 대한 섹션은 \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config 폴더의 msmdsrv.ini 서버 구성 파일에 있습니다. 파일 편집 지침은 [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) 을 참조하세요.  
@@ -149,7 +149,7 @@ ms.locfileid: "53363755"
   
  **충돌 보고서 구성**  
   
- Microsoft 지원에서 별도로 지시하지 않는 한 대부분의 관리자는 기본 설정을 사용합니다. 이 오래된 기술 자료 문서는 덤프 파일을 구성하는 방법에 대한 지침을 제공하는 데 여전히 사용됩니다. [메모리 덤프 파일을 생성 하도록 Analysis Services를 구성 하는 방법](https://support.microsoft.com/kb/919711)합니다.  
+ Microsoft 지원에서 별도로 지시하지 않는 한 대부분의 관리자는 기본 설정을 사용합니다. 오래 된 기술 자료 문서는 여전히 덤프 파일을 구성 하는 방법에 대 한 지침을 제공 하는 데 사용 됩니다. [메모리 덤프 파일을 생성 하도록 Analysis Services를 구성 하는 방법](https://support.microsoft.com/kb/919711)합니다.  
   
  수정될 가능성이 가장 높은 구성 설정은 메모리 덤프 파일을 생성할지 여부를 결정하는 데 사용되는 `CreateAndSendCrashReports` 설정입니다.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53363755"
   
 -   msmdsrv 로그 파일의 크기와 수를 제어하도록 msmdsrv.log 파일을 구성합니다. 설정은 기본적으로 사용되지 않으므로 설치 후 단계로 설정을 추가해야 합니다. 이 항목의 [MSMDSRV 서비스 로그 파일](#bkmk_msmdsrv) 을 참조하세요.  
   
--   서버 작업에 대한 정보를 가져오는 데 사용되는 리소스에 대한 자세한 내용은 Microsoft 고객 지원 서비스의 이 블로그 게시물을 참조하세요. [초기 데이터 수집](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   서버 작업에 대 한 정보를 사용 하 여 어떤 리소스를 알아보려면 Microsoft 고객 지원의 블로그 게시물을 참조 하세요. [초기 데이터 수집](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   쿼리 로그 대신 ASTrace2012를 사용하여 큐브를 쿼리 중인 사용자에 대해 알아봅니다. 쿼리 로그는 일반적으로 사용 빈도 기반 최적화 마법사에 대한 입력을 제공하는 데 사용되며 쿼리 로그에 캡처되는 데이터는 읽거나 해석하기 쉽지 않습니다. ASTrace2012는 쿼리 작업을 캡처하는 데 널리 사용되는 커뮤니티 도구입니다. 참조 [Microsoft SQL Server 커뮤니티 샘플: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)합니다.  
   

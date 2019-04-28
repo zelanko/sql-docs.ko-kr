@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7a23e955452408c5c1b57adcaf8de6ece84aa2fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704407"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>트랜잭션 되돌리기(Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52751856"
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-reverse-a-transaction"></a>트랜잭션을 되돌리려면  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52751856"
   
 7.  확인 대화 상자에서 **확인**을 클릭합니다. 되돌린 트랜잭션을 기록하기 위해 또 다른 트랜잭션이 표에 추가됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [멤버 수정 기록 롤백](../master-data-services/rollback-member-revision-history-master-data-services.md)

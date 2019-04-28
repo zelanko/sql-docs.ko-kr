@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721785"
 ---
 # <a name="article-properties---ltarticlegt"></a>아티클 속성 - &lt;Article&gt;
   **아티클 속성** 대화 상자는 새 게시 마법사 및 **게시 속성** 대화 상자에서 사용할 수 있습니다. 이 대화 상자를 사용하여 모든 아티클 유형에 대한 속성을 보고 설정할 수 있습니다. 게시가 생성된 경우에만 설정할 수 있거나 게시에 활성 구독이 없는 경우에만 설정할 수 있는 속성이 있습니다. 설정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124993"
  이 옵션은 저장 프로시저에만 적용됩니다. 저장 프로시저의 정의(CREATE PROCEDURE 문)를 복제할 것인지 아니면 저장 프로시저의 실행을 복제할 것인지를 결정합니다. 저장 프로시저의 실행을 복제하면 구독이 초기화될 때 프로시저 정의가 구독자로 복제됩니다. 게시자에서 이 프로시저를 실행하면 이러한 복제의 결과로 구독자에서 해당 프로시저가 실행됩니다. 이렇게 하면 대규모 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 자세한 내용은 [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md)을 참조하세요.  
   
 ## <a name="options-for-merge-publications"></a>병합 게시에 대한 옵션  
- 합니다 **아티클 속성** 병합 게시에 대 한 대화 상자에 두 개의 탭이 있습니다. **속성** 하 고 **확인자**합니다.  
+ 병합 게시의 **문서 속성** 대화 상자에는 **속성**과 **해결 프로그램**의 두 가지 탭이 있습니다.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **동기화 방향**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124993"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 모든 COM 기반 해결 프로그램이 서명됩니다. 동기화할 때 해결 프로그램이 유효한지 확인하려면 이 옵션을 선택합니다.  
   
 ## <a name="options-for-oracle-publications"></a>Oracle 게시에 대한 옵션  
- 합니다 **아티클 속성** Oracle 게시에 대 한 대화 상자에 두 개의 탭이 있습니다. **속성** 하 고 **데이터 매핑**합니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
+ Oracle 게시의 **문서 속성** 대화 상자에는 **속성**과 **데이터 매핑**의 두 가지 탭이 있습니다. Oracle 게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에서 지원하는 속성 중 일부만 지원합니다. 자세한 내용은 [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 ### <a name="properties-tab"></a>속성 탭  
  **INSERT, UPDATE 및 DELETE 저장 프로시저 복사**  

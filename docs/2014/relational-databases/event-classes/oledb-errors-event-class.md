@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961074"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors 이벤트 클래스
   OLEDB Errors 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 OLE DB 공급자에 대한 호출이 오류를 반환하는 경우 발생합니다. OLE DB 공급자의 실패한 HRESULT를 보려면 이 이벤트 클래스를 추적에 포함시킵니다.  

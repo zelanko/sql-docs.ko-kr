@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690641"
 ---
 # <a name="odbc-driver-architecture"></a>ODBC 드라이버 아키텍처
 드라이버 작성자는 드라이버 아키텍처 영향을 줄 수 응용 프로그램이 특정 DBMS SQL을 사용할 수 있는지 여부를 알고 있어야 합니다.  

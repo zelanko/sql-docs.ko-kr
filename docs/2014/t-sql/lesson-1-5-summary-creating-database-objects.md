@@ -13,17 +13,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 11cd1134a770d62afeb50dd5da53c375b482b723
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704491"
 ---
 # <a name="summary-creating-database-objects"></a>요약: 데이터베이스 개체 만들기
   이 자습서에서는 데이터베이스를 만들어 데이터베이스에 테이블을 만들고 테이블에 데이터를 삽입한 다음 데이터를 변경하고 테이블에서 데이터를 읽었습니다. 사용된 문의 구문은 기본 구문에 불과하기 때문에 많은 구문 옵션을 이 자습서에서 다루지 않았습니다. 이러한 문에 대해 자세히 알아보려면 SQL Server 온라인 설명서에서 이러한 문의 전체 구문을 확인하고 해당 항목에서 제공되는 여러 예를 살펴보십시오.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [2단원: 데이터베이스 개체에 대한 사용 권한 구성](lesson-2-configuring-permissions-on-database-objects.md)  
+ [2단원: 데이터베이스 개체의 사용 권한 구성](lesson-2-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  

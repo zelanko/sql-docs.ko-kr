@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8595050b478743b7092787acf880425b24c5b1e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720303"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
   셰이프 차트가 아닌 차트에서 새로운 색은 차트 내 계열의 인덱스를 기반으로 색상표에서 선택됩니다. 예를 들어 차트의 첫 번째 계열은 색상표의 첫 번째 색에 매핑됩니다. 그러나 셰이프 차트의 경우 다르게 동작합니다. 셰이프 차트에서 색상표의 각 색은 데이터 세트의 데이터 요소와 매핑됩니다. 즉 데이터 요소 1은 색상표의 첫 번째 색과 매핑되며 데이터 요소 2는 두 번째 색 등의 형태로 매핑됩니다.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817159"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "52785755"
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**subscriber_id**|**smallint**|잘 알려진 에이전트에서만 사용하는 구독자의 ID입니다. 익명 에이전트를 위해 이 열이 예약됩니다.|  
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
-|**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기 합니다.<br /><br /> **1** = 끌어오기.<br /><br /> **2** = 익명입니다.|  
+|**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = Push.<br /><br /> **1** = 끌어오기.<br /><br /> **2** = Anonymous.|  
 |**local_job**|**bit**|로컬 배포자에는 SQL Server 에이전트 작업이 있는지 여부를 나타냅니다.|  
 |**job_id**|**binary(16)**|작업 ID입니다.|  
 |**subscription_guid**|**binary(16)**|이 에이전트의 구독 ID입니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "52785755"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|배포 또는 병합 에이전트가 생성된 datetime입니다.|  
-|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열 값을 포함 **SQL**합니다.<br /><br /> 참고: MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)는 더 이상 사용되지 않으며 지원되지 않습니다.|  
+|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열 값을 포함 **SQL**합니다.<br /><br /> 참고: 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 사용 되지 않으며 더 이상 지원 되지.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|에이전트를 원격으로 활성화할 수 있는지 여부를 나타냅니다.<br /><br /> **0** 에이전트를 원격으로 활성화할 수 없습니다 지정 합니다.<br /><br /> **1** 에 지정 된 원격 컴퓨터를 원격으로 에이전트를 활성화할 수 있도록 지정 합니다 *offload_server* 속성입니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화에 사용할 서버의 네트워크 이름입니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "52785755"
 |**reset_partial_snapshot_progress**|**bit**|스냅숏이 일부분만 다운로드된 경우 이를 삭제하여 전체 스냅숏 과정을 다시 시작하도록 할지 여부입니다.|  
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작 되는 단계의 SQL Server 에이전트 작업의 고유 ID입니다.|  
 |**subscriptionstreams**|**tinyint**|변경 내용을 구독자에 병렬로 일괄 적용하기 위해 허용되는 배포 에이전트당 연결 수를 설정합니다. 1에서 64 사이의 값 범위가 지원됩니다.|  
-|**메모리 액세스에 최적화**|**bit**|1은 메모리 액세스에 최적화 된 테이블에 대 한 구독자를 사용할 수 있다는 것을 나타냅니다.|  
+|**memory_optimized**|**bit**|1은 메모리 액세스에 최적화 된 테이블에 대 한 구독자를 사용할 수 있다는 것을 나타냅니다.|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   

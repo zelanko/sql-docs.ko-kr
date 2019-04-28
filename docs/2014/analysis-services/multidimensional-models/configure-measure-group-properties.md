@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1a87d594eb2837671a7fdc45bc48827a075440e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700520"
 ---
 # <a name="configure-measure-group-properties"></a>측정값 그룹 속성 구성
   측정값 그룹에는 측정값 그룹의 작동 방법을 정의할 수 있는 속성이 있습니다.  

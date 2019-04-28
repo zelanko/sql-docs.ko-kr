@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services)는 다차원 데이터베이스의 호환성 수준을 | Microsoft Docs
+title: (Analysis Services) 다차원 데이터베이스의 호환성 수준 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825896"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

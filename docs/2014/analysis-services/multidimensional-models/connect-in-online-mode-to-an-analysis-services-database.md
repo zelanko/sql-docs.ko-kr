@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d87e8919f7a6173614f0da6a874d83e5da7a874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702096"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>온라인 모드로 Analysis Services 데이터베이스에 연결
   기존 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 직접 연결하여 해당 데이터베이스 내의 개체를 직접 수정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 직접 연결하면 개체 변경이 즉시 수행되며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트가 생성되지 않습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "48056683"
      이제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 모든 개체를 직접 편집할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 작업 프로젝트 및 데이터베이스 개발 단계](work-with-analysis-services-projects-and-databases-in-development.md)   
- [다차원 모델을 만들 SQL Server Data Tools를 사용 하 여 &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [개발 단계 중의 Analysis Services 프로젝트 및 데이터베이스 작업](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

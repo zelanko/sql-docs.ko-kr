@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736129"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>GetCurrentCertificate 메서드(ServerSettings 클래스)
   현재 보안 인증서를 가져옵니다.  
@@ -41,7 +41,7 @@ SHA
   
 ## <a name="parts"></a>부분  
  *object*  
- `ServerSettings` 인스턴스의 서버 설정을 나타내는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서버 설정을 나타내는 `ServerSettings` 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806926"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(SQL Server Management Studio)
     
@@ -61,7 +61,7 @@ ms.locfileid: "52520335"
     |------------|--------------|-----------------|  
     |**성능 우선(비동기)**|Null(있어도 사용되지 않지만 세션에 쿼럼이 필요함)|성능을 최대화하기 위해 미러 데이터베이스는 항상 주 데이터베이스와 시간 간격을 두며 앞서가지 않습니다. 그러나 두 데이터베이스의 시간 간격은 일반적으로 크지 않습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 세션에 권장된 미러링 모니터 서버가 없거나 미러링 모니터 서버가 미러 서버에 연결되어 있으면 웜 대기로 미러 서버에 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> <br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
     |**자동 장애 조치(Failover)가 없는 보호 우선(동기)**|아니요|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다.<br /><br /> 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 웜 대기로 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
-    |**자동 장애 조치(Failover)가 있는 보호 우선(동기)**|예(필수)|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다. 자동 장애 조치를 지원하도록 미러링 모니터 서버 인스턴스를 포함하여 가용성을 최대화합니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 옵션을 선택할 수 있습니다. 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 미러링 모니터 서버가 있을 경우 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> -주 서버 인스턴스를 사용할 수 없는 경우 자동 장애 조치가 발생 합니다. 미러 서버 인스턴스가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.<br /><br /> -미러 서버 인스턴스를 사용할 수 없는 경우 주 서버는 계속 됩니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.<br /><br /> **\*\* 중요 \*\*** 미러링 모니터 서버의 연결이 끊어지면 파트너가 서로 연결되어 있어야만 데이터베이스를 사용할 수 있습니다. 자세한 내용은 참조 하세요. [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향 &#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)합니다.|  
+    |**자동 장애 조치(Failover)가 있는 보호 우선(동기)**|예(필수)|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다. 자동 장애 조치를 지원하도록 미러링 모니터 서버 인스턴스를 포함하여 가용성을 최대화합니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 옵션을 선택할 수 있습니다. 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 미러링 모니터 서버가 있을 경우 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> -주 서버 인스턴스를 사용할 수 없는 경우 자동 장애 조치가 발생 합니다. 미러 서버 인스턴스가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.<br /><br /> -미러 서버 인스턴스를 사용할 수 없는 경우 주 서버는 계속 됩니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.<br /><br /> **\*\* 중요 \*\*** 미러링 모니터 서버의 연결이 끊어지면 파트너가 서로 연결되어 있어야만 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.|  
   
 7.  다음 조건을 모두 만족하면 **미러링 시작** 을 클릭하여 미러링을 시작합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "52520335"
     > [!NOTE]  
     >  미러링 모니터 서버를 제거하려면 **미러링 모니터 서버** 필드에서 서버 네트워크 주소를 삭제합니다. 자동 장애 조치(failover)가 있는 보호 우선 모드에서 성능 우선 모드로 전환하면 **미러링 모니터 서버** 필드가 자동으로 지워집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

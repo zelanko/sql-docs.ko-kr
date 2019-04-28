@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711123"
 ---
 # <a name="copy-items-in-a-solution"></a>솔루션에서 항목 복사
   솔루션 탐색기나 Windows 탐색기를 사용하여 항목을 복사할 수 있습니다.  

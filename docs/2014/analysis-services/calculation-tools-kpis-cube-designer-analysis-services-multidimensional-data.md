@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b845d0ab12447580bb27be43f0d776eac98ee7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681120"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 도구(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **계산 도구** 창을 사용하여 KPI(핵심 성과 지표)에 사용할 수 있는 메타데이터, 함수 및 템플릿을 탐색할 수 있습니다.  

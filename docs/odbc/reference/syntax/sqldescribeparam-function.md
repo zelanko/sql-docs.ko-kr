@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982299"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 함수(SQLDescribeParam Function)
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: ODBC  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLDescribeParam** 준비 된 SQL 문과 사용 하 여 연결 하는 매개 변수 표식에 대 한 설명을 반환 합니다. 이 정보는 IPD 필드에도 사용할 수 있습니다.  
@@ -51,17 +51,17 @@ SQLRETURN SQLDescribeParam(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *상태로*  
+ *ParameterNumber*  
  [입력] 매개 변수 표식 번호 정렬 순차적으로 증가 매개 변수 순서에 1에서 시작 합니다.  
   
  *DataTypePtr*  
- [출력] 매개 변수의 SQL 데이터 형식을 반환 하는 버퍼에 대 한 포인터입니다. IPD의 SQL_DESC_CONCISE_TYPE 레코드 필드에서이 값을 읽습니다. 에 있는 값 중 하나일 수는이 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식 또는 드라이버별 SQL 데이터 형식에 대 한 부분입니다.  
+ [출력] 매개 변수의 SQL 데이터 형식을 반환 하는 버퍼에 대 한 포인터입니다. IPD의 SQL_DESC_CONCISE_TYPE 레코드 필드에서이 값을 읽습니다. 에 있는 값 중 하나일 수는이 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 섹션의 부록 d: 데이터 형식 또는 드라이버별 SQL 데이터 형식입니다.  
   
  Odbc 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME 또는 SQL_TYPE_TIMESTAMP에서 반환될지  *\*DataTypePtr* 날짜, 시간 또는 타임 스탬프 데이터에 대 한 ODBC 2에서 각각;. *x*, SQL_DATE, SQL_TIME, 또는 SQL_TIMESTAMP 반환 됩니다. 드라이버 관리자는 ODBC 2 때 필요한 매핑을 수행 합니다. *x* 응용 프로그램이 작동을 ODBC 3. *x* 드라이버 때나는 ODBC 3. *x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 합니다. *x* 드라이버입니다.  
   
  때 *ColumnNumber* 같은지 SQL_BINARY 반환 됩니다 (책갈피 열)에 대해 0으로  *\*DataTypePtr* 가변 길이 책갈피에 대 한 합니다. (SQL_INTEGER는 책갈피가 ODBC 3에서 사용 되는 경우에 반환 됩니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 또는 ODBC 2. *x* 응용 프로그램을 사용 하는 ODBC 3. *x* 드라이버입니다.)  
   
- 자세한 내용은 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식에서입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.  
+ 자세한 내용은 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.  
   
  *ParameterSizePtr*  
  [출력] 데이터 원본에 의해 정의 된 대로 열 또는 식의 해당 매개 변수 표식 문자 크기를 반환 하는 버퍼에 대 한 포인터입니다. 열 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.  
@@ -76,7 +76,7 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NULLABLE: 매개 변수는 NULL 값을 허용 합니다.  
   
--   SQL_NULLABLE_UNKNOWN: 드라이버 매개 변수에 NULL 값을 허용 하는지 여부를 확인할 수 없습니다.  
+-   SQL_NULLABLE_UNKNOWN: 드라이버는 매개 변수에 NULL 값을 허용 하는지 여부를 확인할 수 없습니다.  
   
 ## <a name="returns"></a>반환 값  
  관계 없이 SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR를 또는 SQL_INVALID_HANDLE 합니다.  

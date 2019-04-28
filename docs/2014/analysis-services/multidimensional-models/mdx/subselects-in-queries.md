@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ca1078bbc0d70ca36ad97e3b2f4aa69cd7d170
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699141"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
   하위 SELECT 식은 바깥쪽 외부 SELECT가 실행되는 큐브 공간을 제한하는 데 사용되는 중첩 SELECT 식입니다. 하위 SELECT를 사용하면 모든 계산이 실행되는 새로운 공간을 정의할 수 있습니다.  
@@ -203,7 +203,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|미국|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -258,7 +258,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|미국|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -283,7 +283,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|미국|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -306,7 +306,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|Australia|캐나다|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  

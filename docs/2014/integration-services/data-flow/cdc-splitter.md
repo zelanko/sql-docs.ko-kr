@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828237"
 ---
 # <a name="cdc-splitter"></a>CDC 분할자
   CDC 분할자는 CDC 원본 데이터 흐름의 단일 변경 행 흐름을 삽입, 업데이트 및 삭제 작업을 위한 여러 데이터 흐름으로 분할합니다. 데이터 흐름은 필요한 열인 `__$operation` 과 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블의 해당 표준 값을 기반으로 분할됩니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "58387748"
   
  구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 1로 설정됩니다.  
+-   **오류 코드**: 1로 설정 합니다.  
   
--   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
+-   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
   
--   **오류 행 열**: 오류의 원인이 된 행의 입력 열입니다.  
+-   **오류 행 열**: 오류의 원인이 된 행의 입력된 열입니다.  
   
 ## <a name="configuring-the-cdc-splitter"></a>CDC 분할자 구성  
  CDC 분할자에 대해 구성 가능한 속성은 없습니다.  

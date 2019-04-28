@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4fa53595d304dc8200805a98491a824cf52a1bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735079"
 ---
 # <a name="what-the-driver-manager-does"></a>드라이버 관리자가 수행하는 작업
 다음 표에서 어떻게 ODBC 3 *.x* 드라이버 관리자는 ODBC 2로 호출을 매핑합니다. *x* 고 ODBC 3 *.x* 드라이버입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47639131"
 |-----------------------------------------|--------------|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|사용 하는 책갈피를 가리키는 **SQLFetchScroll**합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램을 ODBC 2에서이 설정 합니다. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자에서 캐시 합니다. 포인터를 역참조 하 고 ODBC 2 값을 전달 합니다. *x* 드라이버에는 *FetchOffset* 인수의 **SQLExtendedFetch** 때 **SQLFetchScroll** 나중에 응용 프로그램에서 호출 됩니다.<br />응용 프로그램을 ODBC 3에서이으로 설정 되는-*.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.|  
 |SQL_ATTR_ROW_STATUS_PTR|행 상태 배열 가리키는 채울 **SQLFetch**, **SQLFetchScroll**를 **SQLBulkOperations**, 및 **SQLSetPos**합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램을 ODBC 2에서이 설정 합니다. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자는 해당 값을 캐시 합니다. ODBC 2로이 값을 전달합니다. *x* 드라이버에는 *RowStatusArray* 인수의 **SQLExtendedFetch** 면 **SQLFetchScroll** 또는 **SQLFetch** 라고 합니다.<br />응용 프로그램을 ODBC 3에서이으로 설정 되는-*.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.<br />상태 S6, 응용 프로그램 SQL_ATTR_ROW_STATUS_PTR을 설정 하 고 호출 하는 경우 옵트인 **SQLBulkOperations** (사용 하 여는 *작업이* SQL_ADD의) 또는 **SQLSetPos** 첫 번째 호출 하지 않고 **SQLFetch** 하거나 **SQLFetchScroll**, SQLSTATE HY011 (특성 지금 설정할 수 없습니다)이 반환 됩니다.|  
-|SQL_ATTR_ROWS_FETCHED_PTR을 설정|버퍼를 가리키는 **SQLFetch** 하 고 **SQLFetchScroll** 인출 된 행 수를 반환 합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램을 ODBC 2에서이 설정 합니다. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자는 해당 값을 캐시 합니다. ODBC 2로이 값을 전달합니다. *x* 드라이버에는 *RowCountPtr* 인수의 **SQLExtendedFetch** 면 **SQLFetch** 또는 **SQLFetchScroll** 응용 프로그램에서 호출 됩니다.<br />응용 프로그램을 ODBC 3에서이으로 설정 되는-*.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.|  
+|SQL_ATTR_ROWS_FETCHED_PTR|버퍼를 가리키는 **SQLFetch** 하 고 **SQLFetchScroll** 인출 된 행 수를 반환 합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램을 ODBC 2에서이 설정 합니다. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자는 해당 값을 캐시 합니다. ODBC 2로이 값을 전달합니다. *x* 드라이버에는 *RowCountPtr* 인수의 **SQLExtendedFetch** 면 **SQLFetch** 또는 **SQLFetchScroll** 응용 프로그램에서 호출 됩니다.<br />응용 프로그램을 ODBC 3에서이으로 설정 되는-*.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.|  
 |SQL_ATTR_ROW_ARRAY_SIZE|행 집합 크기를 설정합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램을 ODBC 2에서이 설정 합니다. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 SQL_ROWSET_SIZE 문 특성에 매핑합니다.<br />응용 프로그램을 ODBC 3에서이으로 설정 되는-*.x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 드라이버에 대 한 호출을 전달 합니다.<br />-때 ODBC 3을 사용 하는 응용 프로그램 *.x* 드라이버 호출 **SQLSetScrollOptions**, SQL_ROWSET_SIZE 값으로 설정 됩니다는 *RowsetSize* 인수 하는 경우 기본 드라이버 지원 하지 않습니다 **SQLSetScrollOptions**합니다.|  
 |SQL_ROWSET_SIZE|사용 되는 행 집합 크기 설정 **SQLExtendedFetch** 때 **SQLExtendedFetch** 는 ODBC 2 호출한 *.x* 응용 프로그램입니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램 설정이 ODBC 3 *.x* 드라이버 관리자, 드라이버 버전에 관계 없이 드라이버에 대 한 호출을 전달 합니다.<br />-때 작업 하는 ODBC 2를 사용 하 여 응용 프로그램입니다. *x* 드라이버 호출 **SQLSetScrollOptions**, SQL_ROWSET_SIZE 값으로 설정 됩니다는 **RowsetSize** 인수입니다.|  
 |**SQLBulkOperations**|삽입 작업이 나 업데이트, 삭제 또는 책갈피 작업 하는 페치를 수행합니다. 다음은 구현 세부 정보입니다.<br /><br /> -응용 프로그램 호출 **SQLBulkOperations** 사용 하 여는 *작업이* SQL_ADD는 ODBC 2에서의. *x* 드라이버는 ODBC 3 *.x* 드라이버 관리자 매핑합니다 **SQLSetPos** 사용 하 여를 *작업* SQL_ADD입니다.<br />-작업 시는 ODBC 2입니다. *x* 드라이버를 지원 하지 않는 **SQLSetPos** 사용 하 여는 *작업이* SQL_ADD, ODBC 3의 *.x* 드라이버관리자에매핑되지**SQLSetPos** 사용 하 여는 *작업* 에 SQL_ADD의 **SQLBulkOperations** 사용 하 여는 *작업* SQL_ADD입니다. 왜냐하면 **SQLBulkOperations** S7에서는 상태에는 ODBC 2에서 호출할 수 없습니다. *x* 가 있는 유일한 상태 이기 때문 **SQLSetPos** 호출할 수 있습니다.<br />-응용 프로그램을 호출 하는 경우 **SQLBulkOperations** 사용 하 여는 *작업이* SQL_ADD는 ODBC 2에서의. *x* 호출 하기 전에 드라이버 **SQLFetchScroll**, ODBC 3 *.x* 드라이버 관리자 오류를 반환 합니다.|  

@@ -1,5 +1,5 @@
 ---
-title: 셀 계산 만들기 세션 범위 | Microsoft Docs
+title: 세션 범위 계산 만들기 셀 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799531"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>세션 범위 계산된 셀-MDX 셀 계산
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>MDX 셀 계산-세션 범위 계산된 셀
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -80,7 +80,7 @@ FOR String_Expression AS 'MDX_Expression'
 |수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이에 대한 한 예가 *Level_Expression*.**Members** MDX 함수입니다. 계산 멤버를 포함하려면 *Level_Expression*.**AllMembers** MDX 함수를 사용합니다.<br /><br /> 자세한 내용은 [AllMembers&#40;MDX&#41;](../../../mdx/allmembers-mdx.md)를 참조하세요.|  
 |하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이에 대한 한 예가 **Descendants**(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](../../../mdx/descendants-mdx.md)를 참조하세요.|  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;로 셀 계산 작성 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX로 셀 계산 작성&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

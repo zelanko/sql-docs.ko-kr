@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701677"
 ---
 # <a name="define-custom-member-formulas"></a>사용자 지정 멤버 수식 정의
-  사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expressions) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
+  사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expression) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
   
  사용자 지정 멤버 수식은 멤버에 연결되는 셀 값을 결정하고 측정값의 집계 함수를 무시합니다. 사용자 지정 멤버 수식은 MDX로 작성됩니다. 각각의 사용자 지정 멤버 수식은 단일 멤버에 적용됩니다. 사용자 지정 멤버 수식은 차원 테이블이나 해당 차원 테이블과 외래 키 관계에 있는 다른 테이블에 저장됩니다.  
   
@@ -39,23 +39,23 @@ ms.locfileid: "48186023"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   분기 1: 700  
   
-    -   Quarter 2: 500  
+    -   분기 2: 500  
   
-    -   Quarter 3: 100  
+    -   3 분기: 100  
   
-    -   Quarter 4: 800  
+    -   분기 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   분기 1: 600  
   
-    -   Quarter 2: 200  
+    -   분기 2: 200  
   
-    -   Quarter 3: 300  
+    -   3 분기: 300  
   
-    -   Quarter 4: 400  
+    -   분기 4: 400  
   
  사용자 지정 멤버 수식을 사용할 경우 사용자 지정 롤업 수식에서 멤버의 값을 대신 제공합니다. 예를 들어 다음과 같은 사용자 지정 멤버 수식을 사용하여 Time 차원에 있는 2004 멤버의 Quarter 4 자식 멤버에 대한 값을 450으로 제공할 수 있습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186023"
 Time.[Quarter 3] * 1.5  
 ```  
   
- 사용자 지정 멤버 수식은 차원 테이블의 열에 저장됩니다. 설정 하 여 사용자 지정 롤업 수식을 사용할 수는 `CustomRollupColumn` 특성의 속성입니다.  
+ 사용자 지정 멤버 수식은 차원 테이블의 열에 저장됩니다. 특성에 `CustomRollupColumn` 속성을 설정하여 사용자 지정 롤업 수식을 사용할 수 있습니다.  
   
  특성의 모든 멤버에 단일 MDX 식을 적용하려면 MDX 식을 리터럴 문자열로 반환하는 차원 테이블에 명명된 계산을 만듭니다. 그런 다음 구성할 특성에 `CustomRollupColumn` 속성 설정을 사용하여 명명된 계산을 지정합니다. 명명된 계산은 SQL 식으로 정의된 행 값을 반환하는 데이터 원본 뷰 테이블의 열입니다. 명명된 계산을 만드는 방법에 대한 자세한 내용은 [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)를 참조하세요.  
   

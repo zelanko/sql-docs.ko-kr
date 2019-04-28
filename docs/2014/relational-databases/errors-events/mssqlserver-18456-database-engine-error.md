@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869598"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "53355033"
 |메시지 텍스트|사용자 '%.*ls'이(가) 로그인하지 못했습니다.%.\*ls|  
   
 ## <a name="explanation"></a>설명  
- 잘못된 암호나 사용자 이름과 관련된 인증 실패로 인해 연결 시도가 거부되면 다음과 유사한 메시지가 클라이언트로 반환됩니다.  "사용자 '<user_name>'이(가) 로그인하지 못했습니다. (Microsoft SQL Server, 오류: 18456)".  
+ 잘못 된 암호나 사용자 이름과 관련 된 인증 실패로 인해 연결 시도가 거부 되 면 다음과 유사한 메시지가 클라이언트로 반환 됩니다.  "사용자 '<user_name>'이(가) 로그인하지 못했습니다. (Microsoft SQL Server, Error: 18456)".  
   
  클라이언트로 반환되는 추가 정보는 다음과 같습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "53355033"
 |2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: \<ip 주소 >]|  
   
 > [!NOTE]  
->  Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 변경하면 처음에는 **sa** 로그인을 사용할 수 없습니다. 이 경우 상태 7 오류: "사용자 'sa'이(가) 로그인하지 못했습니다"가 발생합니다. **sa** 로그인을 사용하도록 설정하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.  
+>  Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 변경하면 처음에는 **sa** 로그인을 사용할 수 없습니다. 이렇게 하면 상태 7 오류: "사용자 's'에 대 한 로그인 하지 못했습니다." **sa** 로그인을 사용하도록 설정하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조하세요.  
   
 ## <a name="user-action"></a>사용자 동작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려고 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 혼합 인증 모드로 구성되어 있는지 확인합니다.  
@@ -109,6 +109,6 @@ ms.locfileid: "53355033"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 포함된 데이터베이스를 지원하는 경우 포함된 데이터베이스 사용자로 마이그레이션한 후 해당 로그인이 삭제되지 않았는지 확인하십시오.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 참조 하세요. [방법: ASP.NET의 리소스에 액세스 하려면 네트워크 서비스 계정 사용](https://msdn.microsoft.com/library/ff647402.aspx)  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로컬로 연결하는 경우 **NT AUTHORITY\NETWORK SERVICE**에서 실행되는 서비스의 연결도 컴퓨터의 정규화된 도메인 이름을 사용하여 인증해야 합니다. 자세한 내용은 [방법: ASP.NET의 리소스에 액세스 하려면 네트워크 서비스 계정 사용](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

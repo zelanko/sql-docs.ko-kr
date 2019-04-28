@@ -30,11 +30,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678059"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "56039924"
 |둘 모두 노드 집합이 아닙니다.|두 피연산자를 변환 **수** 를 비교 합니다.|두 피연산자를 모두 일반 형식으로 변환한 다음 비교합니다. 변환할 **부울** 중 하나에 해당 하는 경우 **부울**, **번호** 중 하나에 해당 하는 경우 **번호**고, 그렇지 않으면 변환할 **문자열**.|  
   
 > [!NOTE]  
->  XPath 관계형 연산자는 항상 해당 피연산자를 변환 하기 때문에 **수**하십시오 **문자열** 비교 가능 하지 않습니다. 날짜 비교를 포함하기 위해 SQL Server 2000에서는 XPath 사양에 대한 다음과 같은 변형을 제공합니다. 관계형 연산자를 비교 하는 경우는 **문자열** 에 **문자열**, 노드 집합이 **문자열**, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는  **문자열** 비교 (하지는 **번호** 비교) 수행 됩니다.  
+>  XPath 관계형 연산자는 항상 해당 피연산자를 변환 하기 때문에 **수**하십시오 **문자열** 비교 가능 하지 않습니다. 날짜 비교를 포함 하려면 SQL Server 2000에서는 XPath 사양에이 변형을 제공 합니다. 관계형 연산자를 비교 하는 경우는 **문자열** 에 **문자열**, 노드 집합이 **문자열**, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는  **문자열** 비교 (하지는 **번호** 비교) 수행 됩니다.  
   
 ## <a name="node-set-conversions"></a>노드 집합 변환  
  노드 집합 변환이 항상 직관적이지는 않습니다. 노드 집합으로 변환 됩니다는 **문자열** 집합의 첫 번째 노드의 문자열 값을 수행 하 여 합니다. 노드 집합으로 변환할 **수** 으로 변환 **문자열**, 변환 및 **문자열** 에 **번호**합니다. 노드 집합으로 변환할 **부울** 있는지 테스트 합니다.  
@@ -131,7 +131,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X는 알 수 없는 형식입니다.|X가 **문자열**|X가 **수**|X는 **부울**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN (X) &GT; 0|X != 0|-|  
   
 ## <a name="examples"></a>예  
   

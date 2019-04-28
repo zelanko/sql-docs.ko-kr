@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812587"
 ---
 # <a name="check-in-files"></a>파일 체크 인
   수정한 원본 제어 파일을 다른 사용자가 사용할 수 있게 만들려면 파일을 원본 제어로 체크 인해야 합니다. 파일을 체크 인하면 체크 인한 버전이 원본 제어 공급자에 기록되며 파일의 최신 버전이 됩니다.  
@@ -50,10 +50,10 @@ ms.locfileid: "48096773"
      **이름**  
      체크 인할 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 체크 인하지 않으려면 확인란의 선택을 취소합니다.  
   
-     **옵션**  
+     **Options**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 인 옵션이 표시됩니다.  
   
-     **Sort**  
+     **정렬**  
      열 표시의 순서를 정렬합니다.  
   
      **트리 뷰**  

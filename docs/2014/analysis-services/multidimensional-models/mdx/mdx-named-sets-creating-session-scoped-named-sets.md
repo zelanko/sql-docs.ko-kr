@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699577"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>세션 범위 명명된 집합 만들기(MDX)
   MDX 세션에서 사용할 수 있는 명명된 집합을 만들려면 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 문을 사용하세요. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [명명 된 집합 쿼리 범위 만들기 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [쿼리 범위 명명된 집합 만들기&#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

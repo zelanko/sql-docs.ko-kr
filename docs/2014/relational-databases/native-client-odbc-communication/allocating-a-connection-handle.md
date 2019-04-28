@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865004"
 ---
 # <a name="allocating-a-connection-handle"></a>연결 핸들 할당
   응용 프로그램이 데이터 원본이나 드라이버에 연결하려면 먼저 연결 핸들을 할당해야 합니다. 호출 하 여 이렇게 **SQLAllocHandle** 사용 하 여는 *HandleType* 매개 변수를 SQL_HANDLE_DBC로 설정 하 고 *InputHandle* 초기화 된 환경 핸들을 가리키는 합니다.  

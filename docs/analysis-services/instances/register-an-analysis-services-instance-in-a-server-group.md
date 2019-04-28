@@ -1,5 +1,5 @@
 ---
-title: 서버 그룹의 Analysis Services 인스턴스를 등록 | Microsoft Docs
+title: 서버 그룹에 Analysis Services 인스턴스를 등록 합니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 45edecf23d0db4580aad134780ee31ea938e887c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709000"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>서버 그룹에 Analysis Services 등록
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services 서버 인스턴스의 수가 많은 경우 Management Studio에서 서버 그룹을 만들어 서버 관리 작업을 손쉽게 수행할 수 있습니다. 서버 그룹의 용도는 관리 작업 영역 내에서 서로 관련이 있는 서버를 하나의 그룹으로 묶는 데 있습니다. 예를 들어 Analysis Services 인스턴스 10개를 관리하는 업무를 맡았다고 가정해 보겠습니다. 서버 모드, 가동 시간 기준 또는 부서나 영역별로 인스턴스를 그룹화하면 특성이 동일한 인스턴스를 더 쉽게 확인하고 인스턴스에 연결할 수 있습니다. 또한 서버 사용 방식을 쉽게 기억할 수 있도록 설명 정보를 추가할 수 있습니다.  
   
- ![구성원 서버가 포함 된 등록 서버 창](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "구성원 서버에 있는 등록 된 서버 창")  
+ ![구성원 서버를 사용 하 여 등록 된 서버 창을](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "구성원 서버를 사용 하 여 등록 된 서버 창")  
   
  계층 구조로 서버 그룹을 만들 수 있습니다. 로컬 서버 그룹이 루트 노드입니다. 이 노드에는 항상 로컬 컴퓨터에서 실행되는 Analysis Services 인스턴스가 포함됩니다. 원격 서버는 로컬 그룹을 포함하여 모든 그룹에 추가할 수 있습니다.  
   

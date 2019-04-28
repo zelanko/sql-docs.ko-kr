@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705060"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>VBScript를 사용하여 SQL Server 서비스 고급 속성 수정
   이 섹션에서는 설치 된 인스턴스의 버전을 나열 하는 VBScript 프로그램을 만드는 방법 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 실행 되는 합니다.  

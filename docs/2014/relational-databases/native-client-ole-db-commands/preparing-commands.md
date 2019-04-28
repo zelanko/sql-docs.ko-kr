@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865025"
 ---
 # <a name="preparing-commands"></a>명령 준비
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 단일 명령을 효율적으로 여러 번 실행하기 위한 명령 준비를 지원합니다. 그러나 명령 준비로 인해 오버헤드가 늘어나며 소비자가 명령을 두 번 이상 실행하기 위해 준비할 필요는 없습니다. 일반적으로 4번 이상 실행할 명령을 준비해야 합니다.  

@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715840"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "56012384"
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY가 OFF입니다.|항상 0입니다.|  
 |is_primary_key|**bit**|1 = 인덱스가 PRIMARY KEY 제약 조건의 일부입니다.|항상 0입니다.|  
 |is_unique_constraint|**bit**|1 = 인덱스가 UNIQUE 제약 조건의 일부입니다.|항상 0입니다.|  
-|fill_factor|**tinyint**|> 0 = 인덱스가 생성 또는 다시 생성될 때 사용된 FILLFACTOR 백분율입니다.<br /><br /> 0 = 기본값|항상 0입니다.|  
+|fill_factor|**tinyint**|> 0 = FILLFACTOR 백분율 인덱스를 만들거나 다시 작성할 때 사용 합니다.<br /><br /> 0 = 기본값|항상 0입니다.|  
 |is_padded|**bit**|0 = PADINDEX가 OFF입니다.|항상 0입니다.|  
 |is_disabled|**bit**|1 = 인덱스가 비활성화되었습니다.<br /><br /> 0 = 인덱스가 비활성화되지 않았습니다.||  
 |is_hypothetical|**bit**|0 = 인덱스가 가상 인덱스입니다.|항상 0입니다.|  

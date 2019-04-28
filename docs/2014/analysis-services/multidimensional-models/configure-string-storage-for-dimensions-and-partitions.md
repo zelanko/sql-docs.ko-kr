@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700921"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 스토리지 구성
   문자열 스토리지에 대한 4GB 파일 크기 제한을 초과하는 차원 특성 또는 파티션의 매우 큰 문자열을 수용할 수 있도록 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
@@ -88,9 +88,9 @@ ms.locfileid: "48060393"
  새 문자열 저장소 아키텍처를 사용하는 각 개체에 대해 전체 처리 옵션을 사용해야 합니다. 처리하기 전에 차원에 대한 영향 분석을 실행하여 종속 개체에도 재처리가 필요한지 여부를 확인해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [도구 및 처리 접근 방법 &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [처리 옵션 및 설정 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [파티션 저장소 모드 및 처리](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [도구 및 처리 접근 방법&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [처리 옵션 및 설정 & #40; Analysis Services & #41;](processing-options-and-settings-analysis-services.md)   
+ [파티션 스토리지 모드 및 처리](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [차원 저장소](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

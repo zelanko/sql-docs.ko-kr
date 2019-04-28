@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7996eaaad9d900a8839191d22c86cf7ab014e516
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704949"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>선호도 마스크 기본값 유지
   이 규칙은 선호도 마스크에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설정이 기본값인 0으로 설정되어 있는지 검사합니다. 선호도 마스크 옵션은 CPU 선호도를 동적으로 제어합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "52773335"
 ## <a name="for-more-information"></a>참조 항목  
  [affinity mask 서버 구성 옵션](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

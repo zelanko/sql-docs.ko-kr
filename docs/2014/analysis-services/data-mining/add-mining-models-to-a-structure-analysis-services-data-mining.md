@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689601"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>구조에 마이닝 모델 추가(Analysis Services - 데이터 마이닝)
   마이닝 구조는 여러 마이닝 모델을 지원하도록 설계되었습니다. 따라서 마법사를 완료한 후 구조를 열고 새 마이닝 모델을 추가할 수 있습니다. 모델을 만들 때마다 다른 알고리즘을 사용하거나 매개 변수를 변경하거나 필터를 적용하여 다른 데이터 하위 집합을 사용할 수 있습니다.  

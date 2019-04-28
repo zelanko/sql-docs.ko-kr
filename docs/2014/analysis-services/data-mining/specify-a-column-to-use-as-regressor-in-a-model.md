@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c35eeb8905a5f4753572ae89adce0c8fdfbec691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732871"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>모델에서 회귀 변수로 사용할 열 지정
   선형 회귀 모델은 데이터를 예상 회귀선에 가능한 한 근접하게 맞추는 방식으로 입력을 조합하는 수식의 결과로 예측 가능한 특성 값을 나타냅니다. 알고리즘은 숫자 값만 입력으로 받으며 가장 적합한 입력을 자동으로 검색합니다.  
@@ -64,6 +64,6 @@ ms.locfileid: "48179932"
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
- [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

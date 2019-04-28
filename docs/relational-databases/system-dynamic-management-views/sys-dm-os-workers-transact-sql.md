@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9c1e81b333a4f486923478b7a4f3004b7960d3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690393"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,11 +59,11 @@ ms.locfileid: "47728731"
 |exception_severity|**int**|이 작업자에 마지막으로 발생한 예외의 심각도입니다.|  
 |exception_address|**varbinary(8)**|예외가 발생한 코드 주소입니다.|  
 |affinity|**bigint**|작업자의 스레드 선호도입니다. 스레드 선호도 일치 [sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)합니다.|  
-|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
+|state|**nvarchar(60)**|작업자 상태입니다. 다음 값 중 하나입니다.<br /><br /> INIT = 작업자가 현재 초기화되고 있습니다.<br /><br /> RUNNING = 작업자가 현재 선점형 모드나 비선점형 모드로 실행되고 있습니다.<br /><br /> RUNNABLE = 스케줄러에서 작업자를 실행할 준비가 되었습니다.<br /><br /> SUSPENDED = 작업자가 현재 일시 중지되어 이벤트에서 신호를 보낼 때까지 기다리고 있습니다.|  
 |start_quantum|**bigint**|이 작업자의 현재 실행이 시작된 시간(밀리초)입니다.|  
 |end_quantum|**bigint**|이 작업자의 현재 실행이 종료된 시간(밀리초)입니다.|  
 |last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 참조 하세요 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.|  
-|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
+|return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나입니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
 |quantum_used|**bigint**|내부적으로만 사용됩니다.|  
 |max_quantum|**bigint**|내부적으로만 사용됩니다.|  
 |boost_count|**int**|내부적으로만 사용됩니다.|  

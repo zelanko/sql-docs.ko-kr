@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 80198964075bc6de2bdd816c54ccf2ca1e3710f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705379"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 조건에 설명을 추가할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52817525"
  **수정한 사람**  
  조건을 가장 최근에 변경한 사람의 로그인 정보입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
   
   

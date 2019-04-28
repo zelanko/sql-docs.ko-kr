@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b8412cf0465594c2546c18990be51510f8938c27
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707005"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ClusterProbability([<Node_Caption>])
  이 함수는 기본 데이터 마이닝 모델이 클러스터링을 지원할 때만 사용할 수 있습니다.  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 값  
+ 스칼라 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  다음 구문은 마이닝 모델 콘텐츠 스키마 행 집합을 사용하여 마이닝 모델에 있는 노드 캡션을 반환합니다.  

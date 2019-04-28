@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813380"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
   복제본을 가용성 그룹에 추가 마법사를 사용하여 기존 AlwaysOn 가용성 그룹에 새 보조 복제본을 쉽게 추가할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48218153"
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는, 하는 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션에서 참조 [필수 구성 요소, 제한 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -77,12 +77,12 @@ ms.locfileid: "48218153"
   
 4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결 &#40;복제본 추가 마법사 및 데이터베이스 추가 마법사&#41;](connect-to-existing-secondary-replicas-page.md)합니다.  
   
-5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)을 참조하세요.  
+5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)를 참조하세요.  
   
     |탭|간단한 설명|  
     |---------|-----------------------|  
     |**복제본**|이 탭에서는 새 보조 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정할 수 있습니다.|  
-    |**엔드포인트**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 엔드포인트(있는 경우)를 확인할 수 있습니다. 이 엔드포인트가 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 엔드포인트를 자동으로 만들도록 시도합니다. **참고:** 는 수동 서버 인스턴스를 하려면 먼저 변경 마법사를 계속 해야 하는 서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
+    |**엔드포인트**|이 탭에서는 각 새 보조 복제본에 대한 기존 데이터베이스 미러링 엔드포인트(있는 경우)를 확인할 수 있습니다. 이 엔드포인트가 서버 계정에서 Windows 인증을 사용하는 서버 인스턴스에 없는 경우 마법사가 엔드포인트를 자동으로 만들도록 시도합니다. **참고:**  서버 인스턴스를 비-도메인 사용자 계정으로 실행 하는 경우 마법사를 계속 하기 전에 서버 인스턴스를 수동으로 변경 확인 수행 해야 합니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.|  
     |**백업 기본 설정**|이 탭에서는 현재 설정을 수정하려는 경우 가용성 그룹 전체에 대한 백업 기본 설정을 지정하고 개별 가용성 복제본에 대한 백업 우선 순위를 지정할 수 있습니다.|  
   
 6.  **초기 데이터 동기화 선택** 페이지에서 새 보조 복제본을 만들고 가용성 그룹에 조인할 방법을 선택합니다. 다음 옵션 중 하나를 선택합니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "48218153"
      마법사가 완료되면 **닫기** 를 클릭하여 종료합니다.  
   
 > [!IMPORTANT]  
->  복제본을 추가한 후에 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
+>  복제본을 추가한 후 참조를 "후속 작업: [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)의 복제본 추가 후" 섹션을 참조하세요.  
   
 
   

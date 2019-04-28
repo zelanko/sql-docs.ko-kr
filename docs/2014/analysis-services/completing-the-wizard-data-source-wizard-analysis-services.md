@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680586"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>마법사 완료(데이터 원본 마법사)(Analysis Services)
   마법사의 **마법사 완료** 페이지를 사용하여 연결 문자열을 검토하고 새 데이터 원본의 이름을 지정할 수 있습니다.  

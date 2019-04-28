@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808764"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>서버에 연결(로그인 페이지) Analysis Services
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결할 때 이 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48192243"
  연결할 서버 인스턴스를 선택합니다. 마지막으로 연결한 서버 인스턴스가 기본적으로 표시됩니다.  
   
  **인증**  
- Analysis Services의 인스턴스에 연결하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드가 지원됩니다.  
+ 다음 인증 모드의 Analysis Services 인스턴스에 연결할 때 지원 됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증입니다.  
   
  **Windows 인증 모드(Windows 인증)**  
  Windows 인증 모드에서는 사용자가 Windows 사용자 계정을 통해 연결할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48192243"
  **Connect**  
  위에서 선택한 서버에 연결합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0525a50b30036470336dafe10c78a42218486c63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686233"
 ---
 # <a name="sysdbmaintplans-transact-sql"></a>sysdbmaintplans(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47774672"
 |**plan_id**|**uniqueidentifier**|데이터베이스 유지 관리 계획 ID입니다.|  
 |**plan_name**|**sysname**|데이터베이스 유지 관리 계획 이름입니다.|  
 |**date_created**|**datetime**|데이터베이스 유지 관리 계획을 만든 날짜입니다.|  
-|**소유자**|**sysname**|데이터베이스 유지 관리 계획의 소유자입니다.|  
+|**owner**|**sysname**|데이터베이스 유지 관리 계획의 소유자입니다.|  
 |**max_history_rows**|**int**|시스템 테이블에 있는 데이터베이스 유지 관리 계획을 기록하는 데 사용하도록 지정된 최대 행 수입니다.|  
 |**remote_history_server**|**sysname**|기록 보고서를 작성할 원격 서버의 이름입니다.|  
 |**max_remote_history_rows**|**int**|기록 보고서를 작성할 수 있는 원격 서버의 시스템 테이블에서 지정된 최대 행 수입니다.|  

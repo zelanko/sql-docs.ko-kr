@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17591d2420b23c741d988b87a6de2519cbcc4bb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826988"
 ---
 # <a name="commands"></a>명령
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ICommand** 이 섹션에서 설명 하는 인터페이스 및 명령 개체:  
@@ -29,7 +29,7 @@ ms.locfileid: "48079993"
   
 -   [명령 준비](preparing-commands.md)  
   
--   [여러 행 집합 결과를 생성하는 명령](commands-generating-multiple-rowset-results.md)  
+-   [여러 행 집합 결과 생성 하는 명령](commands-generating-multiple-rowset-results.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client&#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  

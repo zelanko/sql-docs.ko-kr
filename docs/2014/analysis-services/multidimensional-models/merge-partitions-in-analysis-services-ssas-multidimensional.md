@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699080"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services의 파티션 병합(SSAS - 다차원 데이터)
   기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 파티션을 병합하여 같은 측정값 그룹의 여러 파티션에 있는 팩트 데이터를 통합할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48063343"
 ##  <a name="bkmk_Where"></a> 파티션을 병합한 후 파티션 원본 업데이트  
  파티션은 데이터를 처리하는 데 사용되는 SQL 쿼리의 WHERE 절과 같은 쿼리 또는 파티션에 데이터를 제공하는 명명된 쿼리나 테이블을 기준으로 분할됩니다. 파티션의 `Source` 속성은 파티션이 쿼리에 바인딩되는지 테이블에 바인딩되는지 나타냅니다.  
   
- 파티션을 병합할 파티션의 내용을 통합 되지만 `Source` 속성은 파티션의 추가 범위를 반영 하도록 업데이트 되지 않습니다. 즉, 이후에 원래 유지 하는 파티션을 다시 처리 하는 경우 `Source`, 해당 파티션에서 잘못 된 데이터를 얻게 됩니다. 파티션은 부모 수준에서 데이터를 잘못 집계합니다. 다음 예에서는 이러한 동작을 보여 줍니다.  
+ 파티션을 병합하면 파티션 내용은 통합되지만 `Source` 속성은 파티션의 추가 범위를 반영하도록 업데이트되지 않습니다. 즉, 이후에 원래 `Source`를 유지하는 파티션을 다시 처리하는 경우 해당 파티션에서 잘못된 데이터를 얻게 됩니다. 파티션은 부모 수준에서 데이터를 잘못 집계합니다. 다음 예에서는 이러한 동작을 보여 줍니다.  
   
  **문제**  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48063343"
   
  **솔루션**  
   
- 솔루션 업데이트 하는 것을 `Source` 속성, WHERE 절 또는 명명 된 쿼리를 조정 하거나 확장된 된 파티션 범위가 지정 된 후속 처리가 정확한 지 확인 하는 기본 팩트 테이블에서 데이터를 수동으로 병합 합니다.  
+ 해결 방법은 WHERE 절 또는 명명된 쿼리를 조정하거나 기본 팩트 테이블의 데이터를 수동으로 병합하여 후속 처리에 확장된 파티션 범위가 정확하게 제공되도록 `Source` 속성을 업데이트하는 것입니다.  
   
  이 예에서는 파티션 3을 파티션 2로 병합한 후 결과 파티션 2에 ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet')와 같은 필터를 제공하여 팩트 테이블에서 [ColaDecaf] 및 [ColaDiet]에 대한 데이터만 추출하고 [ColaFull]에 관련된 데이터는 제외하도록 지정할 수 있습니다. 다른 방법으로는 파티션 2와 파티션 3이 만들어질 때 그에 대한 필터를 지정할 수 있으며 이러한 필터들은 병합기 프로세스 중에 결합됩니다. 어떤 방법을 사용하든 파티션 처리 후 큐브에는 중복 데이터가 포함되지 않습니다.  
   
  **결론**  
   
- 파티션을 병합 한 후 검사할는 `Source` 병합된 된 데이터에 대 한 올바른 필터 인지 확인 합니다. Q1, Q2 및 Q3에 대한 기록 데이터가 포함된 파티션으로 시작했고 이제 Q4를 병합하는 경우 Q4를 포함하도록 필터를 조정해야 합니다. 그렇지 않으면 파티션의 후속 처리 시 잘못된 결과가 발생합니다. Q4에 대해 올바르지 않습니다.  
+ 파티션을 병합한 후에는 항상 `Source`를 검사하여 병합된 데이터에 대해 올바른 필터인지 확인해야 합니다. Q1, Q2 및 Q3에 대한 기록 데이터가 포함된 파티션으로 시작했고 이제 Q4를 병합하는 경우 Q4를 포함하도록 필터를 조정해야 합니다. 그렇지 않으면 파티션의 후속 처리 시 잘못된 결과가 발생합니다. Q4에 대해 올바르지 않습니다.  
   
 ##  <a name="bkmk_fact"></a> 팩트 테이블 또는 명명된 쿼리를 통해 분할되는 파티션에 대한 특별 고려 사항  
- 쿼리 외에 파티션도 테이블 또는 명명된 쿼리를 기준으로 분할할 수 있습니다. 원본 파티션과 대상 파티션이 데이터 원본 또는 데이터 원본 뷰의 동일한 팩트 테이블을 사용하는 경우 파티션 병합 후 `Source` 속성이 유효합니다. 결과 파티션에 적합한 팩트 테이블 데이터가 지정됩니다. 결과 파티션에 필요한 팩트가 팩트에서 테이블에 있으므로 수정 하지 않습니다는 `Source` 속성이 필요 합니다.  
+ 쿼리 외에 파티션도 테이블 또는 명명된 쿼리를 기준으로 분할할 수 있습니다. 원본 파티션과 대상 파티션이 데이터 원본 또는 데이터 원본 뷰의 동일한 팩트 테이블을 사용하는 경우 파티션 병합 후 `Source` 속성이 유효합니다. 결과 파티션에 적합한 팩트 테이블 데이터가 지정됩니다. 결과 파티션에 필요한 팩트가 팩트 테이블에 있으므로 `Source` 속성에 대한 수정이 필요 없습니다.  
   
  여러 팩트 테이블 또는 명명된 쿼리의 데이터를 사용하는 파티션에는 추가 작업이 필요합니다. 원본 파티션의 팩트 테이블에 있는 팩트를 대상 파티션의 팩트 테이블에 수동으로 병합해야 합니다.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48063343"
   
  같은 이유로 명명된 쿼리에서 분할된 데이터를 가져오는 파티션도 업데이트해야 합니다. 이제 결합된 파티션에는 이전에 별도의 명명된 쿼리에서 가져온 결합된 결과 집합을 반환하는 명명된 쿼리가 있어야 합니다.  
   
-## <a name="partition-storage-considerations-molap"></a>파티션 스토리지 고려 사항: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>파티션 저장소 고려 사항: MOLAP  
  MOLAP 파티션이 병합될 때는 파티션의 다차원 구조에 저장된 팩트도 병합됩니다. 이로 인해 내부적으로 완벽하고도 일관성 있는 파티션이 만들어집니다. 그러나 MOLAP 파티션에 저장된 팩트는 팩트 테이블에 있는 팩트의 복사본입니다. 다음에 파티션을 처리할 때는 다차원 구조의 팩트가 삭제되고(전체 처리 및 새로 고침 처리 시에만) 파티션의 데이터 원본 및 필터에 의해 지정된 대로 팩트 테이블에서 데이터가 복사됩니다. 원본 파티션이 대상 파티션의 여러 가지 팩트 테이블을 사용하는 경우에는 원본 파티션의 팩트 테이블을 대상 파티션의 팩트 테이블과 수동으로 병합하여 결과 파티션이 처리될 때 완벽한 데이터 집합을 사용할 수 있도록 해야 합니다. 이 작업은 두 개의 파티션이 서로 다른 명명된 쿼리를 기반으로 하는 경우에도 적용됩니다.  
   
 > [!IMPORTANT]  
 >  불완전한 팩트 테이블과 병합된 MOLAP 파티션에는 팩트 테이블 데이터가 내부적으로 병합된 복사본이 포함되며 파티션이 처리될 때까지는 제대로 작동합니다.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>파티션 스토리지 고려 사항: HOLAP 및 ROLAP 파티션  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>파티션 저장소 고려 사항: HOLAP 및 ROLAP 파티션  
  여러 가지 팩트 테이블을 가지고 있는 HOLAP 또는 ROLAP 파티션이 병합될 때 팩트 테이블은 자동으로 병합되지 않습니다. 팩트 테이블을 수동으로 병합하지 않으면 대상 파티션에 관련된 팩트 테이블만 결과 파티션에 대해 사용할 수 있습니다. 원본 파티션에 관련된 팩트는 결과 파티션에서 드릴다운에 사용할 수 없으며 집계는 파티션이 처리될 때 사용할 수 없는 테이블의 데이터를 요약하지 않습니다.  
   
 > [!IMPORTANT]  
@@ -134,10 +134,10 @@ ms.locfileid: "48063343"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 개체 처리](processing-analysis-services-objects.md)   
- [파티션 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [원격 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [파티션 쓰기 저장 설정](set-partition-writeback.md)   
+ [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [만들기 및 원격 파티션을 & #40; 관리 Analysis Services & #41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [파티션 쓰기 설정](set-partition-writeback.md)   
  [쓰기 가능 파티션](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [차원 및 파티션에 대한 문자열 저장소 구성](configure-string-storage-for-dimensions-and-partitions.md)  
   

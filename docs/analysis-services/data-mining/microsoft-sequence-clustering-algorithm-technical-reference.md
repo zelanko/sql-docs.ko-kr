@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 331a7c4df759114e18fd47007058ddc38b2f77d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724902"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "52418384"
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열이 두 가지 가능한 상태인 **누락** 하 고 **기존**합니다. Null은 **Missing** 값으로 처리됩니다.  
+ 열의 상태를 가진 것으로 간주 됩니다 것을 의미 합니다. **누락** 하 고 **기존**합니다. Null은 **Missing** 값으로 처리됩니다.  
   
  마이닝 모델 열에 적용됩니다.  
   

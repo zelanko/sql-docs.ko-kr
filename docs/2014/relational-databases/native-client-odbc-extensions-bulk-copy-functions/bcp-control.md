@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689520"
 ---
 # <a name="bcpcontrol"></a>bcp_control
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  
@@ -120,7 +120,7 @@ iValue
  BCPODBC  
  TRUE 인 경우 지정 **날짜/시간** 하 고 **smalldatetime** 문자 형식으로 저장 하는 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사 사용 합니다. BCPODBC 옵션은 BCP_OUT에만 적용됩니다.  
   
- FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 변환됩니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
+ FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 1997-01-01 00:00:00.000. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  현재(또는 마지막) BCP 작업에 의해 영향을 받는 행의 수를 반환합니다.  

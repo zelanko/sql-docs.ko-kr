@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823280"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>콜 센터 구조에 로지스틱 회귀 모델 추가(중급 데이터 마이닝 자습서)
   콜 센터 운영에 영향을 줄 수 있는 요인을 분석하는 것 외에 직원이 서비스 품질을 향상시킬 수 있는 방법에 대한 일부 특정 권장 사항을 제공할 것도 요청받았습니다. 이 작업에서는 탐색 모델을 작성하는 데 사용한 마이닝 구조를 그대로 사용하고 예측을 만드는 데 사용될 마이닝 모델을 추가합니다.  

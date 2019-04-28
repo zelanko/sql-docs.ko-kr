@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680455"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 PowerPivot)
   사용하려는 자격 증명을 저장할 대상 응용 프로그램을 Secure Store Service에 만들면 Windows 사용자 계정으로 PowerPivot 데이터 새로 고침 작업을 실행할 수 있습니다. 마찬가지로, 원래 PowerPivot for Excel에서 데이터를 가져오는 데 사용된 것과 다른 데이터베이스 로그인을 제공하려는 경우 해당 자격 증명을 보안 저장소 서비스 대상 응용 프로그램에 매핑한 다음 데이터 새로 고침 일정에서 해당 응용 프로그램을 지정하면 됩니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "53365087"
   
 17. **확인**을 클릭합니다.  
   
-###  <a name="bkmk_grant"></a> 2 단계: 계정에 참가 권한 부여  
+###  <a name="bkmk_grant"></a> 2단계: 계정에 참가 권한 부여  
  저장된 자격 증명을 사용하려면 먼저 해당 계정으로 사용할 PowerPivot 통합 문서에 대한 참가 권한을 계정에 할당해야 합니다. 이 권한 수준은 라이브러리에서 통합 문서를 열고 데이터를 새로 고친 후 다시 라이브러리에 저장하는 데 필요합니다.  
   
  사용 권한 할당은 사이트 모음 관리자가 수행하는 단계입니다. SharePoint 사용 권한은 루트 사이트 모음이나 개별 문서 및 항목을 포함하여 루트 사이트 모음 아래의 모든 수준에서 할당할 수 있습니다. 사용 권한 설정 방법은 사용 권한의 세분화 정도에 따라 달라집니다. 다음 단계에서는 사용 권한을 부여하는 한 가지 방법을 보여 줍니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365087"
   
 5.  선택 **참가**를 클릭 하 고 **확인**합니다.  
   
-###  <a name="bkmk_dbread"></a> 3 단계: 데이터를 새로 고치는 데 사용되는 외부 데이터 원본에 액세스할 수 있는 읽기 권한 부여  
+###  <a name="bkmk_dbread"></a> 3단계: 읽기 데이터 새로 고침에 사용 되는 외부 데이터 원본에 액세스 하는 권한 부여  
  PowerPivot 통합 문서로 데이터를 가져올 때 외부 데이터에 대한 연결은 현재 사용자의 ID를 데이터 원본에 연결하는 데 사용하는 가장된 연결이나 트러스트된 연결을 기반으로 하는 경우가 많습니다. 이러한 유형의 연결은 현재 사용자에게 자신이 가져오는 데이터를 읽을 수 있는 권한이 있는 경우에만 작동합니다.  
   
  데이터 새로 고침 시나리오에서는 데이터를 가져오는 데 사용된 것과 같은 연결 문자열이 데이터를 새로 고치는 데 다시 사용됩니다. 연결 문자열이 현재 사용자를 가정하는 경우(예를 들어 Integrated_Security=SSPI를 포함하는 문자열의 경우), PowerPivot 시스템 서비스에서는 대상 응용 프로그램에 지정된 사용자 ID를 현재 사용자로 전달합니다. 이 연결은 계정에 외부 데이터 원본에 대한 읽기 권한이 있는 경우에만 성공합니다.  

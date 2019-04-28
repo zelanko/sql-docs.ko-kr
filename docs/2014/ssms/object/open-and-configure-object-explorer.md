@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999562"
 ---
 # <a name="open-and-configure-object-explorer"></a>개체 탐색기 열기 및 구성
   **의** 보기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]메뉴를 사용하여 개체 탐색기를 엽니다. **도구** 메뉴의 **옵션** 을 사용하여 개체 탐색기 옵션을 구성합니다.  

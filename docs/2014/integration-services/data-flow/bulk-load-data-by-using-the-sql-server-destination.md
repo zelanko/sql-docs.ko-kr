@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828133"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>SQL Server 대상을 사용하여 데이터 대량 로드
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 데이터 원본이 이미 들어 있어야 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "58387411"
     > [!NOTE]  
     >  대상은 같은 이름의 열로 자동으로 매핑됩니다.  
   
-9. 클릭 **고급** 대량 로드 옵션을 설정 합니다. **Id 유지**, **null 유지**를 **테이블 잠금**를 **Check 제약 조건**, 및 **트리거를 발생 시키는**합니다.  
+9. **고급**을 클릭하고 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건** 및 **트리거 실행**과 같은 대량 로드 옵션을 설정합니다.  
   
      선택적으로 삽입할 첫 번째와 마지막 입력 행, 삽입 작업이 중지되기 전에 발생할 수 있는 최대 오류 개수 및 삽입이 정렬될 열을 지정합니다.  
   

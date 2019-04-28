@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854335"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>인수  
- *구조*  
+ *structure*  
  구조의 고유한 이름입니다.  
   
  *열 정의 목록*  
  쉼표로 구분된 열 정의 목록입니다.  
   
- *홀드 아웃 maxpercent*  
+ *holdout-maxpercent*  
  테스트용으로 따로 보관하는 데이터의 비율을 나타내는 1에서 100 사이의 정수입니다.  
   
- *홀드 아웃 maxcases*  
+ *holdout-maxcases*  
  테스트에 사용할 사례의 최대 수를 나타내는 정수입니다.  
   
  최대 사례에 지정된 값이 입력 사례 수보다 크면 모든 입력 사례가 테스트에 사용되며 경고가 발생합니다.  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  구조 열을 정의하는 데 사용할 수 있는 데이터 형식, 내용 유형, 열 배포 및 모델링 플래그의 목록은 다음 항목을 참조하십시오.  
   
--   [데이터 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [데이터 형식&#40;데이터 마이닝&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [콘텐츠 형식 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [콘텐츠 형식&#40;데이터 마이닝&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [열 배포 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [열 배포&#40;데이터 마이닝&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [모델링 플래그 &#40;데이터 마이닝&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [모델링 플래그&#40;데이터 마이닝&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  열 하나에 대해 여러 개의 모델링 플래그 값을 정의할 수 있습니다. 단, 하나의 열에는 각각 하나의 내용 유형과 데이터 형식만 있을 수 있습니다.  
   
@@ -137,7 +137,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>예  
  다음 예에서는 DMX를 사용하여 홀드아웃이 있는 마이닝 구조를 만드는 방법을 보여 줍니다.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 학습 집합을 포함하지 않는 구조 추가  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 없는 학습 집합을 사용 하 여 구조 추가  
  다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법에 알아보려면 참조 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
 ```  
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예 2: 홀드아웃 비율 및 초기값 지정  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예 2: 홀드 아웃 비율 및 초기값 지정  
  다음 절은 열 정의 목록 이후에 추가되어 마이닝 구조와 관련된 모든 마이닝 모델을 테스트하는 데 사용할 수 있는 데이터 집합을 정의할 수 있습니다. 다음 문은 최대 사례 수에 제한 없이 전체 입력 사례의 25%에 해당하는 테스트 집합을 만듭니다. 파티션을 만드는 초기값으로 5000이 사용됩니다. 초기값을 지정하는 경우 기본 데이터가 변경되지 않으면 마이닝 구조를 처리할 때마다 테스트 집합에 대해 동일한 사례가 선택됩니다.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>예 3: 홀드아웃 비율 및 최대 사례 지정  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>예제 3: 홀드 아웃 비율 및 최대 사례 지정  
  다음 절은 전체 입력 사례의 25%와 2000개의 사례 중 더 적은 쪽을 포함하는 테스트 집합을 만듭니다. 초기값으로 0이 지정되므로 입력 사례의 샘플링을 시작하는 데 사용되는 초기값은 마이닝 구조의 이름을 사용하여 생성됩니다.  
   
 ```  

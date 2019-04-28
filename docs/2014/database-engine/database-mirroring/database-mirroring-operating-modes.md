@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807671"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "58658367"
  데이터베이스 미러링 세션이 동기적으로 작동하며 필요한 경우 주 서버와 미러 서버뿐 아니라 미러링 모니터 서버도 사용합니다.  
   
  트랜잭션 보안  
- 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 보안 수준은 FULL 및 OFF의 두 가지입니다.  
+ 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 두 개의 보안 수준이 있습니다. FULL 및 OFF입니다.  
   
  미러링 모니터  
  보호 우선 모드에서만 사용할 수 있으며, 자동 장애 조치(Failover)가 시작되었는지 여부를 미러 서버에서 인식할 수 있도록 하는 SQL Server의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 장애 조치(Failover) 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "58658367"
 
   
 ####  <a name="TxnSafety"></a> Transaction Safety  
- 트랜잭션 보안은 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 보안 수준은 FULL 및 OFF의 두 가지입니다.  
+ 트랜잭션 보안은 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 두 개의 보안 수준이 있습니다. FULL 및 OFF입니다.  
   
 -   SAFETY FULL  
   

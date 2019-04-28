@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694829"
 ---
-# <a name="mdx-data-definition---update-member"></a>MDX 데이터 정의-UPDATE MEMBER
+# <a name="mdx-data-definition---update-member"></a>MDX 데이터 정의 - UPDATE MEMBER
 
 
   기존 계산 멤버를 업데이트합니다.  
@@ -62,15 +62,15 @@ UPDATE MEMBER Cube_Name.Member_Name
 |속성 식별자|의미|  
 |-------------------------|-------------|  
 |FORMAT_STRING|클라이언트 응용 프로그램 셀 값을 표시 하는 데 사용할 수 있는 한 Office 스타일 서식 문자열입니다.|  
-|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다.  계산 된 집합에 멤버를 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성에 대 한 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
+|VISIBLE|계산 멤버를 스키마 행 집합에서 볼 수 있는지 여부를 나타내는 값입니다.  계산 멤버를 사용 하 여 집합에 추가할 수는 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 함수입니다. 0이 아닌 값은 계산 멤버를 볼 수 있음을 나타냅니다. 이 속성의 기본값은 *Visible*합니다.<br /><br /> 볼 수 없는 계산 멤버는 일반적으로 더 복잡한 계산 멤버에서 중간 단계로 사용됩니다. 이런 계산 멤버는 측정값과 같은 다른 종류의 멤버가 참조할 수도 있습니다.|  
 |NON_EMPTY_BEHAVIOR|빈 셀을 확인할 때 계산 멤버의 동작을 결정하기 위해 MDX가 사용하는 측정값 또는 집합입니다.|  
 |CAPTION|클라이언트 응용 프로그램이 멤버를 표시하기 위해 사용하는 캡션을 지정하는 문자열 값입니다.|  
-|DISPLAY_FOLDER|클라이언트 응용 프로그램이 멤버를 표시하는 표시 폴더의 경로를 지정하는 문자열 값입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및에서 제공 하는 클라이언트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
+|DISPLAY_FOLDER|클라이언트 응용 프로그램이 멤버를 표시하는 표시 폴더의 경로를 지정하는 문자열 값입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및 클라이언트에서 제공한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|이 멤버를 연결할 측정값 그룹의 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [DROP MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREATE MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [MEMBER 문 & #40; 만들기 Mdx& #41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

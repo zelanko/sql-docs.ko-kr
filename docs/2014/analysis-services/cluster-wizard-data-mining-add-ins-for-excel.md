@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7803b5a5a2fccd3381b827eb15a19e036ffa017e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680762"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>클러스터 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 클러스터 마법사](media/dmc-cluster.gif "데이터 마이닝 리본의 클러스터 마법사")  

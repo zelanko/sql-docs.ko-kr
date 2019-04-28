@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955882"
 ---
 # <a name="troubleshooting-rds"></a>RDS 문제 해결
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51560400"
   
 -   [Windows 2000에서 RDS 구성](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   ["인터넷 서버 오류: 액세스가 거부 되었습니다."](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["인터넷 서버 오류: 액세스 거부 됨 "](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS는 "스트림을 읽지 않았습니다." 오류를 반환합니다.](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

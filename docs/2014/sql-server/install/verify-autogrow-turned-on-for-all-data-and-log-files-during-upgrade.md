@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985863"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>업그레이드 프로세스 중에 모든 데이터 및 로그 파일에 자동 증가 기능이 설정되어 있는지 확인합니다.
   업그레이드 관리자가 자동 증가로 설정되지 않은 데이터 또는 로그 파일을 검색했습니다. 새로운 기능과 향상 된 사용자 데이터베이스에 대 한 추가 디스크 공간이 필요 하며 **tempdb** 시스템 데이터베이스입니다. 모든 사용자 데이터 및 로그 파일에 대해 autogrow를 ON으로 설정 좋습니다 리소스 업그레이드 및 후속 프로덕션 작업 중에 크기 증가 수용할 수 있도록 하며 **tempdb** 업그레이드 하기 전에 데이터 및 로그 파일입니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "59583276"
   
 |기능|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 변경 내용|  
 |-------------|-----------------------------------------------------|  
-|행 버전 관리|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 버전 관리는 다음에 대해 사용되는 일반적인 방법입니다.<br /><br /> 트리거를 지원 합니다. 트리거에 inserted 및 deleted 테이블 작성. 트리거에 의해 수정된 모든 행의 버전이 지정됩니다. 여기에는 트리거를 실행한 문에 의해 수정된 행과 트리거에 의해 수정된 모든 데이터가 포함됩니다. 버전 저장소를 사용 하 여 트리거 후 **tempdb** 보유 하는 트리거에 의해 변경 된 행의 이전 이미지입니다. 트리거가 설정된 경우 데이터를 대량 로드하면 각 행의 복사본이 버전 저장소에 추가됩니다.<br /><br /> MARS(Multiple Active Result Sets) 지원. 활성 결과 집합이 있을 때 MARS 세션에서 INSERT, UPDATE 또는 DELETE와 같은 데이터 수정 문을 실행하면 이 수정 문의 영향을 받는 행의 버전이 지정됩니다.<br /><br /> ONLINE 옵션을 지정하는 인덱스 작업 지원 온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 또한 동시 사용자 업데이트 작업 중 및 삭제 온라인 인덱스 작업의 버전 레코드를 위한 공간이 필요 **tempdb**합니다.<br /><br /> 행 버전 관리 기반 트랜잭션 격리 수준 지원 행 버전 관리를 사용하여 문 수준의 읽기 일관성을 유지하는 새로운 커밋된 읽기 격리 수준 구현 트랜잭션 수준의 읽기 일관성을 유지하는 새로운 스냅숏 격리 수준<br /><br /> <br /><br /> 행 버전에 저장 합니다 **tempdb** 버전 행 버전 관리 기반 격리 수준으로 실행 되는 트랜잭션의 요구 사항을 만족할 때까지 저장 합니다.<br /><br /> 행 버전 관리와 버전 저장소에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "행 버전 관리 기반 격리 수준 이해" 항목을 참조하십시오.|  
+|행 버전 관리|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 버전 관리는 다음에 대해 사용되는 일반적인 방법입니다.<br /><br /> 트리거를 지원 합니다. 트리거에서 inserted 및 deleted 테이블을 빌드하십시오. 트리거에 의해 수정된 모든 행의 버전이 지정됩니다. 여기에는 트리거를 실행한 문에 의해 수정된 행과 트리거에 의해 수정된 모든 데이터가 포함됩니다. 버전 저장소를 사용 하 여 트리거 후 **tempdb** 보유 하는 트리거에 의해 변경 된 행의 이전 이미지입니다. 트리거가 설정된 경우 데이터를 대량 로드하면 각 행의 복사본이 버전 저장소에 추가됩니다.<br /><br /> MARS(Multiple Active Result Sets) 지원. 활성 결과 집합이 있을 때 MARS 세션에서 INSERT, UPDATE 또는 DELETE와 같은 데이터 수정 문을 실행하면 이 수정 문의 영향을 받는 행의 버전이 지정됩니다.<br /><br /> ONLINE 옵션을 지정하는 인덱스 작업 지원 온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 또한 동시 사용자 업데이트 작업 중 및 삭제 온라인 인덱스 작업의 버전 레코드를 위한 공간이 필요 **tempdb**합니다.<br /><br /> 행 버전 관리 기반 트랜잭션 격리 수준 지원 행 버전 관리를 사용하여 문 수준의 읽기 일관성을 유지하는 새로운 커밋된 읽기 격리 수준 구현 트랜잭션 수준의 읽기 일관성을 유지하는 새로운 스냅숏 격리 수준<br /><br /> <br /><br /> 행 버전에 저장 합니다 **tempdb** 버전 행 버전 관리 기반 격리 수준으로 실행 되는 트랜잭션의 요구 사항을 만족할 때까지 저장 합니다.<br /><br /> 행 버전 관리와 버전 저장소에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "행 버전 관리 기반 격리 수준 이해" 항목을 참조하십시오.|  
 |임시 테이블 및 임시 변수 메타데이터의 캐싱|임시 테이블 및 임시 변수 메타 데이터 캐시에서 캐시의 모든 메타 데이터에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 할당 된 두 개의 추가 페이지가 **tempdb**합니다.<br /><br /> 저장 프로시저 또는 트리거가 임시 테이블이나 임시 변수를 만드는 경우 해당 프로시저 또는 트리거의 실행이 완료되었을 때 임시 개체는 삭제되지 않습니다. 대신 임시 개체는 한 페이지로 잘리고 프로시저 또는 트리거가 다음 번 실행될 때 다시 사용됩니다.|  
 |분할된 테이블의 인덱스|경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 각 파티션의 중간 정렬 실행의 필요를 보관 하기에 충분 한 공간 분할 된 인덱스를 작성 하기 위해 정렬을 수행할 **tempdb** SORT_IN_TEMPDB 인덱스 옵션이 지정 된 경우.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 명시적으로 사용 하 여 **tempdb** (대화 당 약 1 KB)를 메모리에 보관할 수 없는 기존 대화 컨텍스트를 유지 하는 경우.<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 암시적으로 사용 **tempdb** 개체 쿼리 실행 컨텍스트에 캐싱하여 합니다. 타이머 이벤트 및 백그라운드에 전달된 대화에 사용되는 작업 테이블).<br /><br /> DBMail, 이벤트 알림 및 쿼리 알림 기능은 암시적으로 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용합니다.|  

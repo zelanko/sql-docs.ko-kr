@@ -15,50 +15,50 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3ab7c0ebe10537e3c84bd532f83791a6d193b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725447"
 ---
 # <a name="supported-mdx-mdx"></a>지원되는 MDX(MDX)
   MDX 스크립트 내에서는 다음 문과 함수가 지원됩니다.  
   
- [&#40;주석&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [&#40;설명&#41;&#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [- &#40;주석&#41; &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [--&#40;설명&#41;&#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [주석 &#40;MDX&#41;](/sql/mdx/comment-mdx)  
+ [설명&#40;MDX&#41;](/sql/mdx/comment-mdx)  
   
- [ALTER CUBE 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
+ [ALTER CUBE 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)  
   
 > [!NOTE]  
 >  MDX 스크립팅에서는 기본 멤버 변경만 지원됩니다.  
   
- [CALCULATE 문 &#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
+ [CALCULATE 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-calculate)  
   
- [CASE 문 &#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
+ [CASE 문&#40;MDX&#41;](/sql/mdx/case-statement-mdx)  
   
- [CREATE CELL CALCULATION 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
- [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
- [CREATE SET 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
- [EXISTING 키워드 &#40;MDX&#41;](mdx-query-existing-keyword.md)  
+ [EXISTING 키워드&#40;MDX&#41;](mdx-query-existing-keyword.md)  
   
- [FREEZE 문 &#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
+ [FREEZE 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-freeze)  
   
- [IF 문 &#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
+ [IF 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-if)  
   
- [이 &#40;MDX&#41;](/sql/mdx/this-mdx)  
+ [This&#40;MDX&#41;](/sql/mdx/this-mdx)  
   
 > [!NOTE]  
->  MDX 셀 속성에 할당할 수: `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`합니다 `FONT_NAME`, 및 `FONT_SIZE`합니다. 자세한 내용은 [셀 속성 사용&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)을 참조하세요. MDX 대입도 지원 합니다 `NON_EMPTY_BEHAVIOR` 의 속성을 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문.  
+>  MDX는 `BACK_COLOR`, `FORE_COLOR`, `FORMAT_STRING`, `FONT_FLAGS`, `FONT_NAME` 및 `FONT_SIZE` 셀 속성에 대한 할당을 지원합니다. 자세한 내용은 [셀 속성 사용&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)을 참조하세요. MDX 대입도 지원 합니다 `NON_EMPTY_BEHAVIOR` 의 속성을 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문.  
   
- [SCOPE 문 &#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
+ [SCOPE 문&#40;MDX&#41;](/sql/mdx/mdx-scripting-scope)  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 MDX 스크립트 &#40;MDX&#41;](the-basic-mdx-script-mdx.md)  
+ [기본 MDX 스크립트 & #40; Mdx& #41;](the-basic-mdx-script-mdx.md)  
   
   

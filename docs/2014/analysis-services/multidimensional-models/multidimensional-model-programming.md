@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 668878e93d72c9c0b276b95ad090c8570f3fc936
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725197"
 ---
 # <a name="multidimensional-model-programming"></a>다차원 모델 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 Analysis Services 인스턴스와 사용 가능한 다차원 데이터베이스에 대한 프로그래밍을 위해 사용할 수 있는 여러 API를 제공합니다. 이 섹션에서는 Analysis Services 다차원 솔루션을 사용하여 사용자 지정 애플리케이션을 만들려는 개발자를 위한 접근 방법을 설명합니다. 이 정보를 활용하여 특정 프로젝트의 요구 사항에 가장 적합한 프로그래밍 인터페이스를 선택할 수 있습니다. Analysis Services 개발 프로젝트는 Windows 플랫폼이나 HTTP 액세스를 지원하는 다른 플랫폼에서 실행되는 관리 또는 비관리 코드를 기반으로 할 수 있습니다.  

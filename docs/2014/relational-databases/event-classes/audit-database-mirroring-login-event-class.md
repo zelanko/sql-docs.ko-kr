@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711827"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Database Mirroring Login** 이벤트를 만들어 데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "52776485"
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니요|  
-|**TargetUserName**|**nvarchar**|로그인 상태입니다. 다음 중 하나입니다.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> 참고: ISC = 보안 컨텍스트 시작. ASC = 보안 컨텍스트 허용.|39|아니요|  
+|**TargetUserName**|**nvarchar**|로그인 상태입니다. 다음 중 하나입니다.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> 참고: ISC = 보안 컨텍스트 시작. ASC = 보안 컨텍스트 허용.|39|아니요|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니요|  
   
  다음 표에서는 이 이벤트 클래스에 대한 하위 클래스 값을 나열합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52776485"
 |5|Authentication Failure|Authentication Failure 이벤트는 데이터베이스 미러링 엔드포인트가 오류로 인해 연결을 인증할 수 없음을 보고합니다. Windows 인증일 경우 이 이벤트는 데이터베이스 미러링 엔드포인트가 Windows 인증을 사용할 수 없음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 데이터베이스 미러링 엔드포인트가 인증서에 액세스할 수 없음을 보고합니다.|  
 |6|Authorization Failure|Authorization Failure 이벤트는 데이터베이스 미러링 엔드포인트에서 연결 인증을 거부했음을 보고합니다. Windows 인증일 경우 이 이벤트는 연결의 보안 식별자가 데이터베이스 사용자와 일치하지 않음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 메시지에 전달된 공개 키가 **master** 데이터베이스의 인증서와 맞지 않음을 보고합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

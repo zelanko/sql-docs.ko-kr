@@ -1,5 +1,5 @@
 ---
-title: '예: 이름 바꾸기는 &lt;행&gt; 요소 | Microsoft Docs'
+title: '예: &lt;행&gt; 요소 이름 바꾸기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704908"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>예: 이름 바꾸기는 &lt;행&gt; 요소
+# <a name="example-renaming-the-ltrowgt-element"></a>예: &lt;행&gt; 요소 이름 바꾸기
   결과 집합의 각 행에 대해 RAW 모드는 `<row>`요소를 생성합니다. 이 쿼리에 표시된 것과 같이 RAW 모드에 선택적 인수를 지정하여 선택적으로 이 요소에 다른 이름을 지정할 수 있습니다. 이 쿼리는 행 집합의 각 행에 대해 <`ProductModel`> 요소를 반환합니다.  
   
 ## <a name="example"></a>예제  

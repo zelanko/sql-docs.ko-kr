@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709514"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
 저장된 프로시저를 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 **프로시저** 개체 추가, 삭제 또는 수정 저장된 프로시저에 사용할 수 있습니다.  

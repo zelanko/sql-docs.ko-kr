@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956313"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 많은 새로운 기술과 기능이 도입되었습니다.  

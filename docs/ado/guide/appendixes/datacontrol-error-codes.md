@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf56b6614587c333f473136f1cafc72128846a2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719760"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl 개체 오류 코드
 다음 표에서 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 오류 코드 개체입니다. 낮은 2 바이트의 양의 10 진수 변환, 전체 오류 코드 및 16 진수 값은 음수 10 진수 변환 표시 됩니다.

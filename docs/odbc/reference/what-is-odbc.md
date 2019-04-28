@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc9c7a3d9f75e1863d90b16986234e0036229d01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714095"
 ---
 # <a name="what-is-odbc"></a>ODBC란?
 ODBC에 대 한 많은 오해 컴퓨팅 전 세계에 존재합니다. 최종 사용자에 게는 Microsoft® Windows® 제어판에 있는 아이콘 것입니다. 응용 프로그램 프로그래머에 게 데이터 액세스 루틴을 포함 하는 라이브러리는 것입니다. 기타 다양 한 항목 것 적이 기대 하는 모든 데이터베이스 액세스 문제에 대 한 답 합니다.  

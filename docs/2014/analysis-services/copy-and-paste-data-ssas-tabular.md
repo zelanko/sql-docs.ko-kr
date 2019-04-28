@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680128"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>데이터 복사 및 붙여넣기(SSAS 테이블 형식)
   외부 애플리케이션에서 테이블 형식의 데이터를 복사하여 모델 디자이너의 신규 또는 기존 테이블에 붙여넣을 수 있습니다. Excel 또는 Word에서 복사한 데이터와 같은 클립보드에서 붙여넣는 데이터는 HTML 형식이어야 합니다. 모델 디자이너는 데이터 형식을 자동으로 감지하여 붙여넣은 데이터에 적용합니다. 사용자가 직접 열의 데이터 형식이나 서식을 수정할 수도 있습니다.  
@@ -87,8 +87,8 @@ ms.locfileid: "48129303"
  클립보드 내용의 예제를 보여 줍니다. 대상 테이블의 기존 데이터가 삭제되고 새 행이 테이블에 삽입됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 가져오기 &#40;&AMP;#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
- [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [열의 데이터 형식 설정 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](import-data-ssas-tabular.md)   
+ [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [열 데이터 형식 설정&#40;SSAS 테이블 형식&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

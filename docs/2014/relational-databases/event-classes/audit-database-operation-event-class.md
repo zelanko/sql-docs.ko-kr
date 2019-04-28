@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698857"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation 이벤트 클래스
   **Audit Database Operation** 이벤트 클래스는 데이터베이스에서 검사점 또는 쿼리 알림 구독과 같은 작업이 수행될 때 발생합니다.  

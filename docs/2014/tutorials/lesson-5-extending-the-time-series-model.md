@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822075"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>5단원: 시계열 모델 확장
+# <a name="lesson-5-extending-the-time-series-model"></a>5단원: 모델의 시계열을 확장
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise에서는 시계열 모델에 새 데이터를 추가하고 새 데이터를 모델에 자동으로 통합할 수 있습니다. 다음 두 가지 방법 중 하나를 사용하여 시계열 마이닝 모델에 새 데이터를 추가할 수 있습니다.  
   
 -   PREDICTION JOIN을 사용하여 외부 원본의 데이터를 학습 데이터에 조인합니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871920"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 삭제(Transact-SQL)
   데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 스냅숏이 삭제되고 스냅숏에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅숏에 대한 모든 사용자 연결이 종료됩니다.  
@@ -52,7 +52,7 @@ DROP DATABASE SalesSnapshot0600 ;
 > [!NOTE]  
 >  데이터베이스 스냅숏이 사용하는 스파스 파일에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)에서 데이터베이스의 스냅숏을 확인할 수 있습니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](create-a-database-snapshot-transact-sql.md)  
   
@@ -62,7 +62,7 @@ DROP DATABASE SalesSnapshot0600 ;
   
 
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [DROP DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)  
   

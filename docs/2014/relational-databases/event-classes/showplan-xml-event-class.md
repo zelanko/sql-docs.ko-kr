@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c025a899b426de714fb522218467e8d4cf805b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691868"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML 이벤트 클래스
   Showplan XML 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan 연산자를 식별하려면 Showplan XML 이벤트 클래스를 포함시키십시오. 이 이벤트 클래스는 각 이벤트를 정의된 XML 문서로 저장합니다.  

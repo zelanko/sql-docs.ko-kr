@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866840"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상(OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 에 대 한 개요는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 지원 새 날짜 및 시간 데이터 형식에 대 한 참조 [날짜 및 시간 기능 향상](../native-client/features/date-and-time-improvements.md)합니다. 샘플을 보려면 [사용 하 여 향상 된 날짜 및 시간 기능 &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52818054"
  OLE DB에 대 한 정보를 제공 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 지 원하는 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식입니다.  
   
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- DBBINDING 구조, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` 및 I`ColumnsInfo::GetColumnInfo`에 대한 정보가 포함되어 있습니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
+ DBBINDING 구조에 대 한 정보를 포함 `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`, 및 I`ColumnsInfo::GetColumnInfo`합니다. OLE DB 스키마 행 집합의 업데이트에 대한 정보도 제공합니다.  
   
  [바인딩 및 변환&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  기존 데이터 형식 및 새로운 데이터 형식에 대한 서버와 클라이언트 간 변환 규칙을 설명합니다.  

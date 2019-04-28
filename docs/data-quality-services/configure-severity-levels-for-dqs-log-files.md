@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 598d0512593c737f1138577f36dfd5f8232d1c91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864479"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
 
@@ -32,19 +32,19 @@ ms.locfileid: "56010993"
 
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
   
--   **치명적**: 심각한/예기치 않은 결과를 일으킬 수 있는 치명적인 런타임 오류입니다.  
+-   **치명적**: 심각한/예기치 않은 결과 일으킬 수 있는 치명적인 런타임 오류입니다.  
   
 -   **오류**: 그 외 런타임 오류입니다.  
   
--   **경고**: 오류를 일으킬 수 있는 이벤트에 대한 경고입니다.  
+-   **경고**: 오류가 발생할 수 있는 이벤트에 대 한 경고입니다.  
   
--   **정보**: 오류나 경고가 아닌 일반 이벤트에 대한 정보입니다. 예를 들어 'DQS 프로세스가 시작되었습니다'가 있습니다.  
+-   **정보**: 오류나 경고가 아닌 일반 이벤트에 대 한 정보입니다. 예를 들어 'DQS 프로세스가 시작되었습니다'가 있습니다.  
   
--   **디버그**: 이벤트에 대한 자세한(세부) 정보입니다.  
+-   **디버그**: 이벤트에 대 한 자세한 (세부) 정보입니다.  
   
  다양한 DQS 작업 및 모듈의 심각도를 구성하면 해당 DQS 작업 또는 모듈에 대한 DQS 로그 파일에 로깅하고 기록할 정보가 필터링됩니다. 예를 들어 DQS 작업의 심각도를 **경고**로 설정하면 해당 DQS 작업과 관련된 경고 이상의 심각도 메시지만 로깅됩니다(오류 및 치명적).  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
@@ -52,15 +52,15 @@ ms.locfileid: "56010993"
  로그 심각도 설정을 구성하려면 DQS_MAIN 데이터베이스에 대한 dqs_administrator 역할이 있어야 합니다.  
   
 ##  <a name="ConfigureActivity"></a> 작업 수준에서 심각도 구성  
- DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이렇게 하려면  
+ DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이를 수행하려면:  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **구성**을 클릭합니다.  
   
 3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**, **기술 자료 검색**, **정리 프로젝트(예: RDS)**, **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
   
-4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
+4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 다음 중 하나를 선택할 수 있습니다. **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
   
     > [!NOTE]  
     >  기본적으로 각 작업에 대해 **오류** 가 선택됩니다. 이는 각 작업에 대한 DQS 로그 파일에 기본적으로 오류 및 치명적 메시지가 기록됨을 의미합니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "56010993"
   
 2.  표시된 표에서 **모듈** 열에 있는 드롭다운 목록의 모듈 이름을 선택합니다.  
   
-3.  다음으로, **심각도** 열의 드롭다운 목록에서 모듈의 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다.  
+3.  다음으로, **심각도** 열의 드롭다운 목록에서 모듈의 심각도를 선택합니다. 다음 중 하나를 선택할 수 있습니다. **치명적**, **오류**, **경고**, **정보** 및 **디버그** 중 하나를 선택할 수 있습니다.  
   
      예를 들어 도메인 관리 작업 내에서 **Microsoft.Ssdqs.DomainRules.Define** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 규칙 정의 기능의 세분성 수준을 도메인 관리 작업과 다르게 설정할 수 있습니다. 마찬가지로 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 간 규칙 기능의 세분성 수준을 다르게 설정할 수 있습니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56010993"
   
 5.  **닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 로그 파일에 대한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

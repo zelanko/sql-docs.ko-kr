@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691898"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
   예측 쿼리를 만들려면 먼저 쿼리의 기반이 될 마이닝 모델을 선택해야 합니다. 현재 프로젝트에 있는 모든 마이닝 모델을 선택할 수 있습니다.  
@@ -119,7 +119,7 @@ ms.locfileid: "52519921"
   
      다음 표에는 예상 결과가 나와 있습니다.  
   
-    |Bike Buyer|$Cluster|별칭|CEILING|  
+    |Bike Buyer|$Cluster|SUPPORT|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|클러스터 8|954|953.948638926372|  
   

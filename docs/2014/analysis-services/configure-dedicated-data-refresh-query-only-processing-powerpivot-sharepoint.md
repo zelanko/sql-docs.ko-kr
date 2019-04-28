@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680437"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>전용 데이터 새로 고침 또는 쿼리만 처리 구성(SharePoint용 PowerPivot)
   SharePoint 통합 모드에서 Analysis Services 서버 인스턴스를 데이터 새로 고침 또는 쿼리만 처리와 같이 처리 요청의 특정 유형을 지원하도록 구성할 수 있습니다. 기본적으로 두 가지 유형의 로드 요청이 모두 설정됩니다. 한 가지 유형을 해제하여 전용 쿼리 엔진이나 데이터 새로 고침 서버를 만들 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "48168189"
   
 |설정|유효한 값|Description|  
 |-------------|------------------|-----------------|  
-|기본값|RAM을 기반으로 계산|기본값은 사용 가능한 메모리 용량을 4GB로 나눈 값을 기반으로 합니다. 기본값은 수식에 의해 계산되므로 시스템의 기능에 따라 설정이 조정될 수 있습니다.<br /><br /> 참고: 4gb 제 수 실제 PowerPivot 데이터 원본의 대규모 샘플링을 위해 RAM 사용량을 기준으로 선택 되었습니다. PowerPivot 물리적 아키텍처 또는 논리적 아키텍처를 기반으로 한 것이 아닙니다.|  
+|기본값|RAM을 기반으로 계산|기본값은 사용 가능한 메모리 용량을 4GB로 나눈 값을 기반으로 합니다. 기본값은 수식에 의해 계산되므로 시스템의 기능에 따라 설정이 조정될 수 있습니다.<br /><br /> 참고: 4gb 제 수는 실제 PowerPivot 데이터 원본의 대규모 샘플링을 위해 RAM 사용량을 기준으로 선택 되었습니다. PowerPivot 물리적 아키텍처 또는 논리적 아키텍처를 기반으로 한 것이 아닙니다.|  
 |최대값|CPU 수를 기반으로 계산|지정할 수 있는 최대 동시 작업 수는 컴퓨터의 프로세서 수를 기반으로 합니다. 예를 들어 소켓이 4개인 쿼드-코어 컴퓨터에서 동시에 실행할 수 있는 최대 작업 수는 16입니다.|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>기본값을 더 큰 값으로 증가  

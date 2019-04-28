@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e288434b771b46323950972ad301b78f8d05c5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988276"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>Distributed Replay의 기존 인스턴스 제거
   Distributed Replay 구성 요소(컨트롤러 또는 클라이언트)를 제거하면 다음 항목이 제거됩니다.  

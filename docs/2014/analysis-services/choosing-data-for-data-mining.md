@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681190"
 ---
 # <a name="choosing-data-for-data-mining"></a>데이터 마이닝을 위한 데이터 선택
   데이터 마이닝을 시작 하면 궁금할 "데이터의 양을 해야 합니까?" "사항이 대해 알아야 할 정리 또는 데이터의 형식을 지정 하는 경우 특별 한 요구 사항이?" 또는  

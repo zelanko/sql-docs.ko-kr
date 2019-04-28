@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812948"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>최소 작동 중지 및 데이터 손실로 가용성 그룹 서버 업그레이드 및 업데이트
   서버 인스턴스를 SQL Server 2012에서 서비스 팩 또는 최신 버전으로 업데이트하거나 업그레이드할 때 순차적 업데이트 또는 업그레이드를 수행하면 가용성 그룹의 작동 중단을 단 한 번의 수동 장애 조치(Failover)로 줄일 수 있습니다. SQL Server 버전을 업그레이드하는 경우 롤링 업그레이드라고 하고, 핫픽스 또는 서비스 팩이 포함된 현재 SQL Server 버전을 업데이트하는 것을 롤링 업데이트라고 합니다.  

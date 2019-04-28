@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689023"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   지정한 BCP 유형 토큰의 SQL 유형 이름을 반환합니다.  
@@ -89,12 +89,12 @@ fIsMaxType
 |`SQLAOPMIN`|모두|**Min**|  
 |`SQLAOPMAX`|모두|**Max**|  
 |`SQLDATETIM4`|모두|**smalldatetime**|  
-|`SQLMONEY4`|모두|**smallmoney**|  
+|`SQLMONEY4`|모두|**Smallmoney**|  
 |`SQLFLT4`|모두|**실제**|  
 |`SQLUNIQUEID`|모두|**uniqueidentifier**|  
 |`SQLNCHAR`|아니요|**Nchar**|  
 |`SQLNVARCHAR`|아니요|**Nvarchar**|  
-|`SQLNTEXT`|모두|**ntext**|  
+|`SQLNTEXT`|모두|**Ntext**|  
 |`SQLVARIANT`|모두|**sql_variant**|  
 |`SQLINT8`|모두|**Bigint**|  
 |`SQLCHARACTER`|사용자 계정 컨트롤|**varchar(max)**|  
@@ -108,7 +108,7 @@ fIsMaxType
 |`SQLNCHAR`|사용자 계정 컨트롤|**nvarchar(max)**|  
 |`SQLNVARCHAR`|사용자 계정 컨트롤|**nvarchar(max)**|  
 |`SQLXML`|사용자 계정 컨트롤|**Xml**|  
-|`SQLUDT`|모두|**udt**|  
+|`SQLUDT`|모두|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  
  날짜/시간 형식에 대 한 토큰 매개 변수 값에서 테이블의 "sqlncli.h의 유형" 열에 나와 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다. 반환 값은 "파일 스토리지 유형" 열의 해당 행에 있습니다.  

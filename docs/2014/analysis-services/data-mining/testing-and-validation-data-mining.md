@@ -30,11 +30,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732911"
 ---
 # <a name="testing-and-validation-data-mining"></a>테스트 및 유효성 검사(데이터 마이닝)
   유효성 검사는 실제 데이터에 대한 마이닝 모델의 성능을 평가하는 프로세스입니다. 마이닝 모델을 프로덕션 환경으로 배포하기 전에 품질과 특징을 이해하여 마이닝 모델의 유효성을 검사하는 것이 중요합니다.  
@@ -87,13 +87,13 @@ ms.locfileid: "48077753"
 |항목|링크|  
 |------------|-----------|  
 |마법사 또는 DMX 명령을 사용하여 테스트 데이터 집합을 설정하는 방법 배우기|[데이터 집합 학습 및 테스트](training-and-testing-data-sets.md)|  
-|마이닝 구조에서 데이터의 배포 및 대표성을 테스트하는 방법 배우기|[교차 유효성 검사 &#40;Analysis Services-데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
-|[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 제공하는 정확도 차트 종류에 대해 배우기.|[리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트 &#40;Analysis Services-데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산 점도 &#40;Analysis Services-데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|여러 참과 거짓의 긍정 및 부정을 평가할 수 있는 분류 행렬(혼동 행렬이라고도 함)을 만드는 방법 배우기.|[분류 행렬 &#40;Analysis Services-데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|마이닝 구조에서 데이터의 배포 및 대표성을 테스트하는 방법 배우기|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
+|[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 제공하는 정확도 차트 종류에 대해 배우기.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [산점도&#40;Analysis Services - 데이터 마이닝&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|여러 참과 거짓의 긍정 및 부정을 평가할 수 있는 분류 행렬(혼동 행렬이라고도 함)을 만드는 방법 배우기.|[분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 도구](data-mining-tools.md)   
  [데이터 마이닝 솔루션](data-mining-solutions.md)   
- [테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

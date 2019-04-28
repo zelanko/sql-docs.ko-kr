@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 속성을 변경 | Microsoft Docs
+title: Data Source View (Analysis Services)에서 속성을 변경 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988096"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 속성 변경(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,8 +72,8 @@ ms.locfileid: "34023280"
 |길이|기본 테이블이나 뷰의 열 데이터를 기반으로 열의 최대 길이를 지정합니다.|  
 |이름|기본 열의 이름 또는 명명된 계산의 이름을 지정합니다. **Name** 속성은 명명된 계산을 기반으로 특성을 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 계산에 대해서만 편집할 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 디자이너 & #40;에서 다이어그램 작업 Analysis Services & #41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

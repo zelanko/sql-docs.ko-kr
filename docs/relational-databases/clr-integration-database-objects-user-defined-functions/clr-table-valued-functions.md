@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62707152"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ select * from table t cross apply function(t.column);
 ## <a name="a-sample-table-valued-function"></a>예제 테이블 반환 함수  
  다음 테이블 반환 함수는 시스템 이벤트 로그의 정보를 반환합니다. 함수는 읽을 이벤트 로그의 이름을 포함하는 단일 문자열 인수를 받습니다.  
   
-###### <a name="sample-code"></a>샘플 코드  
+###### <a name="sample-code"></a>예제 코드  
   
 ```csharp  
 using System;  
@@ -177,7 +177,7 @@ WHERE T.Category = N'Logon/Logoff';
 go  
 ```  
   
-## <a name="sample-returning-the-results-of-a-sql-server-query"></a>예제: SQL Server 쿼리 결과 반환  
+## <a name="sample-returning-the-results-of-a-sql-server-query"></a>예제: SQL Server 쿼리 결과 반환합니다.  
  다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 쿼리하는 테이블 반환 함수를 보여줍니다. 이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 AdventureWorks Light 데이터베이스를 사용합니다. 참조 [ https://www.codeplex.com/sqlserversamples ](https://go.microsoft.com/fwlink/?LinkId=87843) AdventureWorks 다운로드에 대 한 자세한 내용은 합니다.  
   
  원본 코드 파일 FindInvalidEmails.cs 또는 FindInvalidEmails.vb를 지정하십시오.  

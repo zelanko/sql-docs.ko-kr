@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6e8fd1c3ee57b1e85411eb9a546e8330ce53054
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867857"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
     
@@ -33,7 +33,7 @@ ms.locfileid: "48074125"
 |메시지 텍스트|내부 작업을 수행하는 중 불일치가 감지되었습니다. 기술 지원 서비스에 문의하십시오. 참조 번호는 %ld입니다.|  
   
 ## <a name="explanation"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리 내 저장소 엔진 구조에서 구조적 불일치를 감지했습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리 내 스토리지 엔진 구조에서 구조적 불일치를 감지했습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DBCC CHECKDB&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   

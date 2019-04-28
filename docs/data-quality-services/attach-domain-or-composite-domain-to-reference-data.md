@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862462"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>참조 데이터에 도메인 또는 복합 도메인 연결
 
@@ -35,27 +35,27 @@ ms.locfileid: "56010724"
   
  참조 데이터 서비스를 사용하도록 선택한 경우 참조 데이터 서비스 스키마에 적절한 도메인과 함께 매핑되어야 하는 필수 열이 있을 수 있습니다. 참조 데이터 스키마의 필수 열은 열 이름에서 "(M)"으로 식별됩니다. 예를 들어 **AddressLine**은 **Melissa Data – Address Data**의 필수 스키마 열이고 **CompanyName**은 **Digital Trowel Inc. – Us companies and professional data for SQL users**의 필수 스키마 열입니다.  
   
- 이 항목에서는 **Address Line**, **City**, **State** 및 **Zip**과 복합 도메인 내의 **Address Verification**에서는 복합 도메인을 **Melissa Data - Address Check** 참조 데이터 서비스에 연결한 다음, 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑합니다.  
+ 이 항목에서는 도메인 4 개 만듭니다. **Address Line**, **City**, **State** 및 **Zip**과 복합 도메인 내의 **Address Verification**에서는 복합 도메인을 **Melissa Data - Address Check** 참조 데이터 서비스에 연결한 다음, 복합 도메인 내의 개별 도메인을 참조 데이터 서비스 스키마의 적절한 열에 매핑합니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  참조 데이터 서비스를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성한 상태여야 합니다. [참조 데이터를 사용하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>사용 권한  
  참조 데이터에 도메인을 매핑하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 역할이 있어야 합니다.  
   
 ##  <a name="Map"></a> Melissa Data의 참조 데이터에 도메인 매핑  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **기술 자료 관리**에서 **새 기술 자료**를 클릭합니다.  
   
 3.  **새 기술 자료** 화면에서 새 기술 자료의 이름을 입력하고 **도메인 관리** 작업을 클릭한 후 **만들기**를 클릭합니다.  
   
-4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 4개 도메인 **Address Line**, **City**, **State** 및 **Zip**를 만듭니다.  
+4.  **도메인 관리** 화면에서 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 다음 4 개 도메인을 만듭니다. **Address Line**, **City**, **State** 및 **Zip**를 만듭니다.  
   
 5.  **복합 도메인 만들기** 아이콘을 클릭하여 복합 도메인을 만듭니다. **복합 도메인 만들기** 대화 상자에서 **복합 도메인 이름** 입력란에 **Address Verification** 을 입력하고 3단계에서 만든 모든 도메인을 복합 도메인에 포함합니다. **확인**을 클릭합니다.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "56010724"
   
 9. **참조 데이터** 탭으로 돌아갑니다. **공급자 설정** 영역에서 필요에 따라 다음 입력란의 값을 변경합니다.  
   
-    -   **자동 수정 임계값**: 신뢰도 수준이 이 임계값보다 높은 참조 데이터 서비스의 수정 사항이 자동으로 적용됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 90%의 경우 0.9를 입력합니다.  
+    -   **자동 수정 임계값**: 신뢰도 수준이이 임계값 보다 높은 참조 데이터 서비스의 수정 사항이 자동으로 수행 됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 90%의 경우 0.9를 입력합니다.  
   
-    -   **제안된 후보**: 참조 데이터 서비스에서 표시할 제안된 후보의 개수입니다.  
+    -   **제안된 후보**: 참조 데이터 서비스에서 표시할 제안 된 후보의 개수입니다.  
   
-    -   **최소 신뢰도**: 신뢰도 수준이 이 값보다 낮은 참조 데이터 서비스의 제안은 무시됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 60%의 경우 0.6을 입력합니다.  
+    -   **최소 신뢰도**: 신뢰도 수준이이 값 보다 낮은 참조 데이터 서비스의 제안은 무시 됩니다. 해당 백분율 값의 10진수 표기법으로 값을 입력합니다. 예를 들어 60%의 경우 0.6을 입력합니다.  
   
 10. **마침** 을 클릭하여 기술 자료를 게시합니다. 기술 자료가 올바르게 게시되면 확인 메시지가 나타납니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "56010724"
 ##  <a name="FollowUp"></a> 후속 작업: 참조 데이터에 도메인을 매핑한 후  
  데이터 품질 프로젝트를 만들고 미국 주소가 포함된 원본 데이터를 이 항목에서 만든 기술 자료와 비교하여 정리 작업을 실행합니다. [참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS의 참조 데이터 서비스](../data-quality-services/reference-data-services-in-dqs.md)   
  [데이터 정리](../data-quality-services/data-cleansing.md)  
   

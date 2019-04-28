@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822452"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>고급 시계열 예측(중급 데이터 마이닝 자습서)
   예측 모델 탐색을 통해 대부분 지역의 판매는 유사한 패턴을 따르지만 태평양 지역의 M200 모델과 같이 특정 지역 및 모델은 서로 매우 다른 추세를 보여 준다는 사실을 알았습니다. 이는 놀라운 일이 아니고 알려진 바와 같이 지역 간 차이는 일반적인 것이며 마케팅 홍보, 정확하지 않은 보고 또는 지정학적 사건과 같은 많은 요인으로 인해 발생할 수 있습니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "56032804"
   
      **데이터 원본**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **테이블 및 뷰 선택**: 어떤 테이블도 선택하지 않습니다.  
+     **테이블 및 뷰 선택**: 모든 테이블을 선택 하지 마십시오  
   
      **이름**: `T1000 Pacific Region`  
   

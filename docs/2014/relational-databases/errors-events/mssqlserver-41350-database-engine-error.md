@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9d5d403312bc2267fe629d62f5393b835351a32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867887"
 ---
 # <a name="mssqlserver41350"></a>MSSQLSERVER_41350
     
@@ -30,7 +30,7 @@ ms.locfileid: "48066373"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|메시지 텍스트|경고: 데이터베이스 암호화를 사용할 수 있는 데이터베이스에 내구성이 SCHEMA_AND_DATA인 메모리 액세스에 최적화된 테이블이 만들어졌습니다. 메모리 액세스에 최적화된 테이블의 데이터는 암호화되지 않습니다.|  
+|메시지 텍스트|경고: 메모리 액세스 최적화 된 테이블 내구성이 SCHEMA_AND_DATA 암호화에 사용 되는 데이터베이스에서 만들어졌습니다. 메모리 액세스에 최적화된 테이블의 데이터는 암호화되지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

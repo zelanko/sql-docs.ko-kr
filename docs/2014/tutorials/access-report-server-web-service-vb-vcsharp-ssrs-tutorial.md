@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62824536"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Visual Basic 또는 Visual C#을 사용하여 보고서 서버 웹 서비스에 액세스(SSRS 자습서)
   이 자습서에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[csprcs](../includes/csprcs-md.md)]을 사용하여 만든 애플리케이션에서 보고서 서버 웹 서비스에 액세스하는 방법을 보여 줍니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "56015624"
 > [!NOTE]  
 >  설치 시 예제가 자동으로 설치되지 않지만 예제는 언제든지 설치할 수 있습니다. 예제에 대한 정보는 [SQL Server 제품 예제](https://go.microsoft.com/fwlink/?LinkId=182887)를 참조하십시오.  
   
- **자습서에 소요되는 예상 시간:** 60분  
+ **자습서에 소요되는 예상 시간:** 60 분  
   
 ## <a name="tasks"></a>태스크  
  [1단원: 웹 서비스 클라이언트 프로젝트 만들기](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  

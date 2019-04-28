@@ -42,11 +42,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710339"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 속성(ADOX)
 공급자별 속성에 대 한 액세스를 제공 하는 테이블, 사용자 또는 열 개체의 부모 카탈로그를 지정 합니다.  

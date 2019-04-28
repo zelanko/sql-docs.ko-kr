@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861708"
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "34744112"
   
  집합의 전체 식은 중괄호로 묶인 0개 이상의 명시적으로 지정된 튜플로 구성됩니다.  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]을 (를)  
+ { [ { *Tuple_expression* | *Member_expression* } [ , { *Tuple_expression* | *Member_expression* } ] ... ] }  
   
  집합 식에서 지정된 멤버 식은 멤버가 하나인 튜플 식으로 변환됩니다.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "34744112"
   
  집합은 Measures 차원의 두 멤버로 구성됩니다. Rows 축에서  
   
- {([Product].[Product Categories].[Category].&[4], [Date].[Calendar].[Calendar Year].&[2004]),  
+ {0} ([product]입니다. [Product Categories]입니다. [Category]. [4] 및 [Date]. [일정]입니다. [Calendar Year]. [2004] &),  
   
- ([Product].[Product Categories].[Category].&[1], [Date].[Calendar].[Calendar Year].&[2003]),  
+ ([Product]입니다. [Product Categories]입니다. [Category]. [1] 및 [Date]. [일정]입니다. [Calendar Year]. [2003] &),  
   
- ([Product].[Product Categories].[Category].&[3], [Date].[Calendar].[Calendar Year].&[2004])}  
+ ([Product]입니다. [Product Categories]입니다. [Category]. [3] 및 [Date]. [일정]입니다. [Calendar Year]. amp;[2004])}  
   
  집합은 3개의 튜플로 구성됩니다. 각 튜플은 Product 차원의 Product Categories 계층 및 Date 차원의 Calendar 계층에 있는 멤버에 대한 두 개의 명시적 참조를 포함합니다.  
   
- 집합을 반환 하는 함수의 예 참조 [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
+ 집합을 반환 하는 함수의 예제를 참조 하세요 [Members, Tuples, and Sets를 사용 하 여 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  

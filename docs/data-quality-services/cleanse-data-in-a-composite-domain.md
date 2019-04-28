@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864489"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
 
@@ -40,7 +40,7 @@ ms.locfileid: "56013214"
 ##  <a name="CDCorrection"></a> 선언적 도메인 간 규칙을 사용하여 데이터 수정  
  복합 도메인의 도메인 간 규칙을 사용하여 복합 도메인의 개별 도메인 간 관계를 나타내는 규칙을 만들 수 있습니다. 도메인 간 규칙은 복합 도메인과 관련된 원본 데이터에 대해 정리 작업을 실행할 때 고려됩니다. 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**은 도메인 간 규칙의 유효성에 대해 알려줄 뿐만 아니라 데이터 정리 작업 시 데이터를 수정합니다.  
   
- 다음 예제를 살펴보세요. 3개의 개별 도메인이 있는 복합 도메인 Product가 있습니다. ProductName, CompanyName 및 ProductVersion이 있는 복합 도메인 Product가 있습니다. 다음과 같은 선언적 도메인 간 규칙을 만드세요.  
+ 다음 예제를 살펴보세요. 3개의 개별 도메인이 있는 복합 도메인 Product가 있습니다. ProductName, CompanyName 및 ProductVersion 합니다. 다음과 같은 선언적 도메인 간 규칙을 만드세요.  
   
  도메인 'CompanyName' 값에 *Microsoft*가 포함되고 도메인 'ProductName' 값이 *Office*와 동일하고 'ProductVersion' 값이 *2010*과 동일하면 도메인 'ProductName' 값은 *Microsoft Office 2010*과 동일합니다.  
   

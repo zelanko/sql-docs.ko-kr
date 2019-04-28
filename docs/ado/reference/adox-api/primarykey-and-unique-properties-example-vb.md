@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709863"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 및 Unique 속성 예제(VB)
 이 예제에서는 합니다 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) 및 [Unique](../../../ado/reference/adox-api/unique-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 두 개의 열을 사용 하 여 새 테이블을 만듭니다. 합니다 **PrimaryKey** 하 고 **Unique** 속성을 사용 하는 중복 값이 허용 되지 기본 키 열이 하나를 확인 합니다.  

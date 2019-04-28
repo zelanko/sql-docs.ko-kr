@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695742"
 ---
 # <a name="create-a-master-data-services-database"></a>Master Data Services 데이터베이스 만들기
 
@@ -38,7 +38,7 @@ ms.locfileid: "47818591"
   
 4.  **데이터베이스 만들기** 마법사를 완료하여 데이터베이스를 만들고 구성합니다. 마법사의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   데이터베이스 및 웹 애플리케이션에 대한 시스템 설정을 구성합니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47818591"
   
 -   데이터베이스 및 트랜잭션 로그를 백업하도록 유지 관리 계획을 구성합니다. 자세한 내용은 [데이터베이스 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

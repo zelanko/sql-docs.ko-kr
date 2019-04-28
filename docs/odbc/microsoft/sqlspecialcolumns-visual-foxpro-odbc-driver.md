@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c4095448b8a9068dad3c4df1c28065e7cffbd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62687511"
 ---
 # <a name="sqlspecialcolumns-visual-foxpro-odbc-driver"></a>SQLSpecialColumns(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47721150"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  테이블의 행을 고유 하 게 식별 하는 최적의 열 집합을 검색 합니다.  
   

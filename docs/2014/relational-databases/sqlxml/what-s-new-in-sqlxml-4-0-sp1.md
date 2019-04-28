@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8804132c280642ab4d79ee05417395c7ef9b5a76
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718030"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>새로운&#39;의 SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1에는 다양한 업데이트와 향상된 기능이 포함되어 있습니다. 이 항목에서는 업데이트를 요약하고 사용 가능한 경우 자세한 정보 링크를 제공합니다. SQLXML 4.0 SP1에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 도입된 새로운 데이터 형식을 지원하기 위한 향상된 기능을 추가로 제공합니다. 이 항목은 다음과 같은 주제로 이루어져 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "53371235"
  SQLXML 4.0은 MSXML을 설치하지 않습니다. SQLXML 4.0은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이후 설치의 일부로 설치되는 MSXML 6.0을 사용합니다.  
   
 ## <a name="redistributing-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 재배포  
- 재배포 가능 설치 관리자 패키지를 사용하여 SQLXML 4.0 SP1을 배포할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 Authoring a Custom Bootstrapper Package for Visual Studio 2005 및 사용자 지정 필수 구성 요소 추가를 참조하십시오.  
+ 재배포 가능 설치 관리자 패키지를 사용하여 SQLXML 4.0 SP1을 배포할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 작성 및 사용자 지정 필수 구성 요소 추가를 참조하십시오.  
   
  응용 프로그램을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   

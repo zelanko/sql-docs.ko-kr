@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 확장을 사용 하 여 | Microsoft Docs
+title: 시각적 개체를 사용 하 여 C++ 확장 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,27 +17,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864434"
 ---
-# <a name="visual-c-extensions"></a>Visual c + + 확장
+# <a name="visual-c-extensions"></a>Visual C++ 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
- ADO 연결 또는 바인딩 필드에 대 한 Microsoft Visual c + + 확장을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 C/c + + 변수입니다. 때마다 바인딩된의 현재 행 **레코드 집합** 바인딩된 모든 필드를 변경 합니다 **레코드 집합** C/c + + 변수를에 복사 됩니다. 필요한 경우 복사한 데이터는 C/c + + 변수 선언 된 데이터 형식으로 변환 됩니다.
+ Microsoft Visual C++ 의 ADO 연결 또는 바인딩 필드에 대 한 확장을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 c /C++ 변수입니다. 때마다 바인딩된의 현재 행 **레코드 집합** 바인딩된 모든 필드를 변경 합니다 **레코드 집합** C에 복사 됩니다 /C++ 변수입니다. 필요한 경우 C의 선언 된 데이터 형식으로 복사 된 데이터를 변환는 /C++ 변수입니다.
 
- 합니다 **BindToRecordset** 메서드는 **IADORecordBinding** 인터페이스 C/c + + 변수를 필드에 바인딩합니다. 합니다 **AddNew** 바인딩된에 새 행을 추가 하는 메서드 **Recordset**합니다. **업데이트** 메서드는 새 행의 필드를 채우려고 합니다 **레코드 집합**, C/c + + 변수 값을 사용 하 여 기존 행의 필드를 업데이트 또는 합니다.
+ **BindToRecordset** 메서드는 **IADORecordBinding** 인터페이스 C 바인딩할 필드 /C++ 변수입니다. 합니다 **AddNew** 바인딩된에 새 행을 추가 하는 메서드 **Recordset**합니다. **업데이트** 메서드는 새 행의 필드를 채우려고 합니다 **레코드 집합**, C의 값을 사용 하 여 기존 행의 필드를 업데이트 하거나 /C++ 변수입니다.
 
  합니다 **IADORecordBinding** 가 인터페이스를 구현 합니다 **레코드 집합** 개체입니다. 코딩 하지 구현을 직접.
 
 ## <a name="binding-entries"></a>바인딩 항목
- ADO의 Visual c + + 확장의 필드를 매핑하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 C/c + + 변수입니다. 필드 및 변수 간의 매핑 정의 라고는 *항목을 바인딩*합니다. 매크로 숫자, 고정 길이 및 가변 길이 데이터에 대 한 바인딩 항목을 제공합니다. Visual c + + 확장 클래스에서 파생 된 클래스에서 선언 된 C/c + + 변수와 바인딩 항목 **CADORecordBinding**합니다. 합니다 **CADORecordBinding** 클래스 바인딩 항목 매크로 통해 내부적으로 정의 됩니다.
+ 시각적 개체 C++ ADO에 대 한 확장의 필드를 매핑하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 c /C++ 변수입니다. 필드 및 변수 간의 매핑 정의 라고는 *항목을 바인딩*합니다. 매크로 숫자, 고정 길이 및 가변 길이 데이터에 대 한 바인딩 항목을 제공합니다. 바인딩 항목과 C /C++ 시각적 개체에서 파생 된 클래스에서 선언 된 변수는 C++ 확장 클래스 **CADORecordBinding**합니다. 합니다 **CADORecordBinding** 클래스 바인딩 항목 매크로 통해 내부적으로 정의 됩니다.
 
  ADO OLE DB에 내부적으로 이러한 매크로의 매개 변수를 매핑합니다 **DBBINDING** OLE DB를 만들고 구조체 **접근자** 이동 및 변환 필드 및 변수 간에 데이터를 관리 하는 개체입니다. 구성 데이터를 정의 하는 OLE DB의 세 부분으로 구성 합니다. A *버퍼* 데이터가 저장 됩니다; 여기서는 *상태* 여부를 필드에에서 저장 되었습니다. 버퍼 또는 변수의; 필드를 복원 해야 하는 방법을 나타내는 및 *길이* 데이터. (참조 [가져오기 및 설정 데이터 (OLE DB)](https://msdn.microsoft.com/4369708b-c9fb-4d48-a321-bf949b41a369)자세한 정보에 대 한 OLE DB 프로그래머 참조.)
 
 ## <a name="header-file"></a>헤더 파일
- ADO의 Visual c + + 확장을 사용 하려면 응용 프로그램에서 다음 파일을 포함 합니다.
+ 시각적 개체를 사용 하기 위해 응용 프로그램에 다음 파일을 포함할 C++ ADO에 대 한 확장:
 
 ```cpp
 #include <icrsint.h>
@@ -45,23 +45,23 @@ ms.locfileid: "52544181"
 
 ## <a name="binding-recordset-fields"></a>레코드 집합 필드 바인딩
 
-#### <a name="to-bind-recordset-fields-to-cc-variables"></a>레코드 집합 필드 C/c + + 변수를 바인딩할
+#### <a name="to-bind-recordset-fields-to-cc-variables"></a>레코드 집합 필드를 C 바인딩할 /C++ 변수
 
 1.  파생 된 클래스를 만듭니다는 **CADORecordBinding** 클래스입니다.
 
-2.  파생된 클래스에서 바인딩 항목 및 해당 C/c + + 변수를 지정 합니다. 사이의 바인딩 항목을 대괄호 **BEGIN_ADO_BINDING** 하 고 **END_ADO_BINDING** 매크로입니다. 쉼표 또는 세미콜론을 사용 하 여 매크로 종료 하지 마세요. 적절 한 구분 기호는 각 매크로 의해 자동으로 지정 됩니다.
+2.  바인딩 항목 및 해당 C 지정 /C++ 파생된 클래스에서 변수입니다. 사이의 바인딩 항목을 대괄호 **BEGIN_ADO_BINDING** 하 고 **END_ADO_BINDING** 매크로입니다. 쉼표 또는 세미콜론을 사용 하 여 매크로 종료 하지 마세요. 적절 한 구분 기호는 각 매크로 의해 자동으로 지정 됩니다.
 
-     C/c + + 변수로 매핑될 수 있도록 각 필드에 대 한 바인딩 항목을 하나씩 지정 합니다. 적절 한 멤버를 사용 하 여는 **ADO_FIXED_LENGTH_ENTRY**를 **ADO_NUMERIC_ENTRY**, 또는 **ADO_VARIABLE_LENGTH_ENTRY** 매크로 제품군입니다.
+     C에 매핑할 각 필드에 대 한 바인딩 항목을 하나씩 지정 /C++ 변수입니다. 적절 한 멤버를 사용 하 여는 **ADO_FIXED_LENGTH_ENTRY**를 **ADO_NUMERIC_ENTRY**, 또는 **ADO_VARIABLE_LENGTH_ENTRY** 매크로 제품군입니다.
 
-3.  응용 프로그램에서 파생 된 클래스의 인스턴스를 만듭니다 **CADORecordBinding**합니다. 가져오기의 **IADORecordBinding** 에서 인터페이스를 **레코드 집합**합니다. 호출을 **BindToRecordset** 바인딩할 메서드는 **레코드 집합** C/c + + 변수 필드입니다.
+3.  응용 프로그램에서 파생 된 클래스의 인스턴스를 만듭니다 **CADORecordBinding**합니다. 가져오기의 **IADORecordBinding** 에서 인터페이스를 **레코드 집합**합니다. 다음 호출을 **BindToRecordset** 바인딩할 메서드는 **레코드 집합** c 필드 /C++ 변수.
 
- 자세한 내용은 참조는 [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)합니다.
+ 자세한 내용은 참조 하세요. 합니다 [시각적 C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)합니다.
 
 ## <a name="interface-methods"></a>인터페이스 메서드
  합니다 **IADORecordBinding** 인터페이스에 세 가지 방법이 있습니다. **BindToRecordset**하십시오 **AddNew**, 및 **업데이트**합니다. 각 방법의 유일한 인수는에서 파생 된 클래스의 인스턴스에 대 한 포인터 **CADORecordBinding**합니다. 따라서 합니다 **AddNew** 하 고 **업데이트** 메서드는 ADO 메서드 namesakes의 매개 변수를 지정할 수 없습니다.
 
 ## <a name="syntax"></a>구문
- **BindToRecordset** 메서드에 연결 합니다 **레코드 집합** C/c + + 변수를 사용 하 여 필드입니다.
+ **BindToRecordset** 메서드에 연결 합니다 **레코드 집합** C 사용 하 여 필드 /C++ 변수입니다.
 
 ```cpp
 BindToRecordset(CADORecordBinding *binding)
@@ -113,14 +113,14 @@ Update(CADORecordBinding *binding)
 
 |매개 변수|Description|
 |---------------|-----------------|
-|*클래스*|C/c + + 변수와 바인딩 항목 정의 되는 클래스입니다.|
-|*Ordinal*|서 수를 1에서 계산 된 **레코드 집합** C/c + + 변수에 해당 하는 필드.|
-|*DataType*|C/c + + 변수 해당 ADO 데이터 형식 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값을 **레코드 집합** 필드 필요한 경우이 데이터 형식으로 변환 됩니다.|
-|*Buffer*|C/c + + 변수의 이름을 여기서는 **레코드 집합** 필드 저장 됩니다.|
+|*클래스*|클래스는 바인딩 항목과 C /C++ 변수 정의 됩니다.|
+|*Ordinal*|하나에서 계산 되는 서 수를 **레코드 집합** 필드에 해당 하 여 C /C++ 변수.|
+|*DataType*|C의 해당 하는 ADO 데이터 형식 /C++ 변수 (참조 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 유효한 데이터 형식 목록에 대 한). 값을 **레코드 집합** 필드 필요한 경우이 데이터 형식으로 변환 됩니다.|
+|*Buffer*|C의 이름 /C++ 변수 위치는 **레코드 집합** 필드가 저장 됩니다.|
 |*크기*|최대 크기 (바이트)입니다 *버퍼*합니다. 하는 경우 *버퍼* 에 가변 길이 문자열을 포함 종료 0에 대 한 공간을 허용 합니다.|
 |*상태*|나타내는 변수의 이름입니다 여부를 내용의 *버퍼* 올바른지 여부에 관계 없이 필드를 변환 하는 *DataType* 성공 했습니다.<br /><br /> 이 변수에 대 한 가장 중요 한 두 값이 **adFldOK**, 즉, 변환 작업이 성공적 및 **adFldNull**, VT_NULL 형식의 VARIANT 필드의 값을 의미 하는 것 뿐만 아니라 및 비어 있습니다.<br /><br /> 가능한 값 *상태* "상태 값입니다." 다음 표에 나열 되어 있습니다|
 |*수정*|부울 플래그입니다. TRUE 이면 ADO 해당 업데이트를 허용 됨을 나타냅니다 **Recordset** 포함 된 값을 사용 하 여 필드 *버퍼*합니다.<br /><br /> 설정할 부울 *수정* 바인딩된 필드를 업데이트 하는 ADO를 사용 하도록 설정 하려면 TRUE이 고 필드를 검사 하지만 변경 하지 않으려면 FALSE 매개 변수입니다.|
-|*정밀도*|숫자 변수를 나타낼 수 있는 자릿수의 수입니다.|
+|*전체 자릿수*|숫자 변수를 나타낼 수 있는 자릿수의 수입니다.|
 |*소수 자릿수*|숫자 변수에 대 한 소수 자릿수의 수입니다.|
 |*길이*|에 있는 데이터의 실제 길이 포함 하는 4 바이트 변수의 이름을 *버퍼*합니다.|
 
@@ -147,4 +147,4 @@ Update(CADORecordBinding *binding)
 |**adFldDefault**|13|를 업데이트할 때 기본값이 사용 되었습니다.|
 
 ## <a name="see-also"></a>관련 항목
- [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual c + + 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Visual C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md) [시각적 C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)

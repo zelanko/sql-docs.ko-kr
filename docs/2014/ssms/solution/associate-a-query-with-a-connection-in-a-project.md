@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955896"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>쿼리를 프로젝트의 연결 정보로 연결
   쿼리를 연결 없이 만들었거나 특정 프로젝트에서 다른 프로젝트로 쿼리를 이동한 경우 해당 쿼리는 현재 프로젝트의 연결에 연결되지 않습니다.  

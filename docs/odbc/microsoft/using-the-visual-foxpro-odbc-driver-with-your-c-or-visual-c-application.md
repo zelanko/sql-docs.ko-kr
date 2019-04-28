@@ -1,5 +1,5 @@
 ---
-title: Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 Visual c + + 응용 프로그램 | Microsoft Docs
+title: Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 시각적 개체를 사용 하 여 C++ 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694602"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 Visual c + + 응용 프로그램
-전송 하 여 Visual FoxPro 데이터를 사용 하 여 통신 하는 C 또는 c + + 응용 프로그램을 [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 또는 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro에 문의 합니다. 이 문은 다음을 포함할 수 있습니다.  
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 시각적 개체를 사용 하 여 C++ 응용 프로그램
+에 C 또는 C++ 전송 하 여 Visual FoxPro 데이터를 사용 하 여 통신 하는 응용 프로그램을 [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 하거나 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual FoxPro 문을 합니다. 이 문은 다음을 포함할 수 있습니다.  
   
 -   Visual FoxPro 언어에 기본 SQL 문을 같은 합니다 [DROP TABLE](../../odbc/microsoft/drop-table-command.md) 명령입니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "47612271"
   
  Visual FoxPro 네이티브 SQL에 대 한 자세한 내용은 Visual FoxPro 설명서를 참조 하십시오.  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>예제: C 또는 c + + 응용 프로그램을 사용 하 여 Visual FoxPro ODBC 드라이버 사용  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>예: Visual FoxPro ODBC 드라이버를 사용 하 여 프로그램 C를 사용 하 여 또는 C++ 응용 프로그램  
  다음 예제에서는 성 필드 TasTrade 라는 Microsoft® Visual FoxPro 예제 데이터베이스의 employee 테이블에 저장 된 데이터를 검색 하는 ODBC C API를 사용 합니다. 이 데이터베이스 Visual FoxPro와 함께 제공 되 고 다음 위치에는 기본적으로 설치 됩니다.  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  

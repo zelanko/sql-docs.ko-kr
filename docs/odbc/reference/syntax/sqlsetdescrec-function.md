@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982173"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  합니다 **SQLSetDescRec** 열 또는 매개 변수에 바인딩된 버퍼 데이터 및 데이터 형식에 영향을 주는 여러 설명자 필드를 설정 하는 함수입니다.  

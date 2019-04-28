@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999547"
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
   대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  

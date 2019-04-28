@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699131"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>멤버, 튜플 및 집합 작업(MDX)
   MDX는 하나 이상의 멤버, 튜플 또는 집합을 반환하거나 멤버, 튜플 또는 집합에 대해 실행되는 다양한 함수를 제공합니다.  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- 사용할 수도 있습니다는 `FirstChild` 다음 예제와 같이 동일한 멤버를 반환 하는 함수입니다.  
+ 또한 다음 예에서와 같이 `FirstChild` 함수를 사용하여 앞의 예제와 동일한 멤버를 반환할 수 있습니다.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  문자열 함수는 MDX 식에 대해 실행되며 문자열을 반환합니다. 예를 들어 [UniqueName&#40;MDX&#41;](/sql/mdx/uniquename-mdx) 함수는 차원, 계층, 수준 또는 멤버의 고유 이름이 들어 있는 문자열 값을 반환합니다. 문자열 함수에 대한 자세한 내용은 [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX 함수 참조&#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

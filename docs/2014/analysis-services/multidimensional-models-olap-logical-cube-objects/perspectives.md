@@ -1,31 +1,23 @@
 ---
 title: 큐브 뷰 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/02/2018
+ms.prod: sql
 ms.technology: analysis-services
-ms.topic: reference
-helpviewer_keywords:
-- ready-only cube view
-- OLAP objects [Analysis Services], perspectives
-- storing data [Analysis Services], perspectives
-- perspectives [Analysis Services]
-- cubes [Analysis Services], perspectives
-- visibility [Analysis Services]
-- storage [Analysis Services], perspectives
-ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-author: minewiskan
+ms.custom: olap
+ms.topic: conceptual
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702632"
 ---
 # <a name="perspectives"></a>큐브 뷰
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   큐브 뷰는 큐브를 보다 간단하게 표시할 수 있는 정의로, 큐브 기능의 하위 집합입니다. 큐브 뷰를 사용하면 관리자가 큐브 뷰를 만들어 사용자가 가장 관련 있는 데이터에 집중하도록 할 수 있습니다. 큐브 뷰에는 모든 큐브 개체의 하위 집합이 포함됩니다. 그러나 상위 큐브에 정의되지 않은 요소는 큐브 뷰에 포함될 수 없습니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Perspective> 개체는 기본 정보, 차원, 측정값 그룹, 계산, KPI 및 동작으로 구성되어 있습니다. 기본 정보에는 큐브 뷰의 이름과 기본 측정값이 포함됩니다. 차원은 큐브 차원의 하위 집합입니다. 측정값 그룹은 큐브 측정값 그룹의 하위 집합입니다. 계산은 큐브 계산의 하위 집합입니다. KPI는 큐브 KPI의 하위 집합입니다. 동작은 큐브 동작의 하위 집합입니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863700"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
 이 예제에서는 합니다 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 10 개의 가장 비싼 책 제목을 포함 하는 ***제목*** 테이블.  
@@ -168,14 +168,14 @@ void PrintComError(_com_error &e) {
   
  **가격으로 상위 10 개의 제목:**  
 **하지만 사용자 친숙 한이? ---22.95**  
-**컴퓨터 Phobic 및 비 Phobic 개인: 동작 변형---21.59**  
-**Onions, Leeks, 및 마늘: 요리 지중해---20.95의 비밀**  
+**Phobic 및 비 Phobic 개인용 컴퓨터: 동작의 변형을---21.59**  
+**Onions, Leeks, 및 마늘: ---20.95 지중해의 요리 비밀**  
 **실리콘밸리---20.00의 비밀**  
 **사용 중인 경영진의 데이터베이스 가이드---19.99**  
 **컴퓨터---19.99에 대 한 직접 강연**  
 **실리콘밸리 Gastronomic 처리---19.99**  
 **장기적인된 데이터 Deprivation: 네 가지 사례 연구---19.99**  
-**Sushi, 누구나? ---14.99**  
+**Sushi, Anyone? ---   14.99**  
 **50 년 Buckingham Palace 사용---11.95에**   
 ## <a name="see-also"></a>관련 항목  
  [MaxRecords 속성 (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   

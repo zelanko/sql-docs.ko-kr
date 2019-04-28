@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62818928"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(OracleToSQL)
 Oracle 스키마 변환 하면 SQL server, SQL Server에 결과 데이터베이스 개체를 로드할 수 있습니다. 개체를 만드는 SSMA를 포함할 수 있습니다 또는 개체를 스크립팅 합니다 하 고 직접 스크립트를 실행할 수 있습니다. 또한 SSMA 대상 메타 데이터를 SQL Server 데이터베이스의 실제 내용으로 업데이트할 수 있습니다.  
