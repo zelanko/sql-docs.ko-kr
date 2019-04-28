@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792504"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치를 완료하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치한 후 DQSInstaller.exe 파일을 실행해야 합니다. 이 항목에서는 **시작** 화면, **시작** 메뉴, Windows 탐색기 또는 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법에 대해 설명합니다. DQSInstaller.exe 파일을 실행하기 위해 어떤 방법이나 선택할 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "56026324"
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 설치하려는 컴퓨터에서 다음 중 하나를 사용하여 DQSInstaller.exe 파일을 실행합니다.  
   
-    -   **시작 화면**: 에 **시작** 화면에서 **Data Quality Server Installer.**  
+    -   **시작 화면**: **시작** 화면에서 **Data Quality 서버 설치 프로그램**을 클릭합니다.  
   
     -   **시작 메뉴**: 작업 표시줄에서 클릭 **시작**, 가리킨 **프로그램도**, 클릭 **Microsoft SQL Server 2014**합니다.  **Microsoft SQL Server 2014**에서 **Data Quality Services**를 클릭한 다음 **Data Quality 서버 설치 프로그램**을 클릭합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56026324"
 3.  데이터베이스 마스터 키에 대한 암호를 입력하라는 메시지가 표시됩니다. 데이터베이스 마스터 키는 나중에 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)에서 참조 데이터 공급자를 설정할 때 DQS_MAIN 데이터베이스에 저장되는 참조 데이터 서비스 공급자 키를 암호화하기 위해 필요합니다.  
   
     > [!IMPORTANT]  
-    >  암호는 8자 이상이어야 하며 영어 대문자 (A, B, C... Z), 영어 소문자(a, b, c,...), 숫자(0, 1, 2,... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?//)로 분류되는 4가지 범주입니다. 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
+    >  암호 적어도 8 자 이어야 하며 다음 네 가지 범주 중 3 가지 문자를 포함 해야 합니다. 영어 대문자(A, B, C,... Z), 영어 소문자(a, b, c,...), 숫자(0, 1, 2,... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?//)로 분류되는 4가지 범주입니다. 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
   
 4.  암호를 제공하고, 다시 암호를 확인한 다음 Enter 키를 눌러 설치를 계속합니다.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "56026324"
   
 3.  명령 프롬프트에서 명령줄 매개 변수를 사용하거나 사용하지 않고 DQSInstaller.exe를 실행합니다.  
   
-    -   **명령줄 매개 변수 없이**: `dqsinstaller.exe`를 입력한 다음 Enter 키를 누릅니다.  
+    -   **명령줄 매개 변수 사용 안 함**: `dqsinstaller.exe`를 입력한 다음 Enter 키를 누릅니다.  
   
-    -   **명령줄 매개 변수를 사용 하 여**: 위 표에서 설명한 대로 필요한 명령을 입력한 다음 Enter 키를 누릅니다.  
+    -   **명령줄 매개 변수 사용**: 위의 표에서 설명한 대로 필요한 명령을 입력 하 고 enter 키를 누릅니다.  
   
 4.  필요한 동작은 지정된 명령을 기반으로 수행됩니다. 명령줄 매개 변수를 사용하지 않고 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 설치하기로 한 경우 나머지 단계는 이전 섹션 [시작 화면, 시작 메뉴 또는 Windows 탐색기에서 DQSInstaller.exe 실행](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)의 2~6단계에 설명된 것과 같습니다.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730267"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services 프로젝트 만들기
   다음 작업을 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 새 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 프로젝트 `Analysis Services Tutorial`기반으로 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트 템플릿. *프로젝트* 는 관련된 개체의 모음입니다. 프로젝트는 솔루션 내에 있으며 솔루션은 하나 이상의 프로젝트를 포함합니다. 자세한 내용은 [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)를 참조하세요.  
@@ -25,7 +25,7 @@ ms.locfileid: "48066971"
   
 1.  **시작**을 클릭하고 **모든 프로그램**, **Microsoft SQL Server 2012**를 차례로 가리킨 후 **SQL Server Data Tools**를 클릭합니다.  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경이 열립니다.  
+      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 개발 환경이 열립니다.  
   
 2.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]시작 페이지에서 **새 프로젝트**를 클릭합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48066971"
  [데이터 원본 정의](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [다차원 모델을 만들 SQL Server Data Tools를 사용 하 여 &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [SQL Server 데이터 도구 & #40;를 사용 하 여 다차원 모델 만들기 SSDT & #41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

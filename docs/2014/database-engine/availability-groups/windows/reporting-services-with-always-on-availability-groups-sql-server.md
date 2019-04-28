@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fef73519d067218a152e35bad2db9e1bae3372c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789239"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 포함된 Reporting Services(SQL Server)
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "53370232"
 ##  <a name="bkmk_requirements"></a> Reporting Services 및 AlwaysOn 가용성 그룹 사용에 대 한 요구 사항  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용하려면 .Net 3.5 SP1에 대한 핫픽스를 다운로드하고 설치해야 합니다. 이 핫픽스는 AG 기능을 위한 SQL 클라이언트에 대한 지원과 **ApplicationIntent** 및 **MultiSubnetFailover**연결 문자열 속성 지원을 추가합니다. 보고서 서버를 호스팅하는 각 컴퓨터에 이 핫픽스가 설치되어 있지 않으면 사용자가 보고서를 미리 보려고 시도할 때 다음과 비슷한 오류 메시지가 표시되고 오류 메시지가 보고서 서버의 추적 로그에 기록됩니다.  
   
-> **오류 메시지:** ' 키워드가 지원 되지 않습니다 applicationintent "''  
+> **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
  이 메시지는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 연결 문자열에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 속성 중 하나를 포함했지만 서버에서 이러한 속성이 인식되지 않는 경우에 발생합니다. 위에 언급한 오류 메시지는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 사용자 인터페이스에서 '연결 테스트' 단추를 클릭할 때 그리고 원격 오류가 보고서 서버에 설정된 경우 보고서를 미리 볼 때 표시됩니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53370232"
   
  보고서를 만들고 게시하는 방법에 따라 연결 문자열을 편집할 위치가 결정됩니다.  
   
--   **기본 모드:** 기본 모드 보고서 서버에 이미 게시된 공유 데이터 원본 및 보고서에 대해 보고서 관리자를 사용합니다.  
+-   **기본 모드:** 공유 데이터 원본 및 기본 모드 보고서 서버에 이미 게시 된 보고서에 대해 보고서 관리자를 사용 합니다.  
   
 -   **SharePoint 모드:** SharePoint 서버에 이미 게시된 보고서에 대한 문서 라이브러리 내에서 SharePoint 구성 페이지를 사용합니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53370232"
   
 -   **원격 또는 서버 모드 미리 보기:** 보고서를 보고서 서버에 게시한 후 또는 [!INCLUDE[ssRBDenali](../../../includes/ssrbdenali-md.md)]에서 미리 보기를 사용한 후 다음과 비슷한 오류가 표시되면 보고서를 미리 보려고 시도한 보고서 서버에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 .Net Framework 3.5 SP1 핫픽스가 설치되지 않았기 때문입니다.  
   
-> **오류 메시지:** ' 키워드가 지원 되지 않습니다 applicationintent "''  
+> **오류 메시지:** "키워드가 지원되는 'applicationintent'가 아닙니다."  
   
 ##  <a name="bkmk_reportserverdatabases"></a> 보고서 서버 데이터베이스 및 가용성 그룹  
  Reporting Services는 보고서 서버 데이터베이스에 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하는 데 있어서 제한적인 지원을 제공합니다. 보고서 서버 데이터베이스를 AG에서 복제본의 일부로 구성할 수 있지만 장애 조치(Failover)가 발생했을 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 가 보고서 서버 데이터베이스에 대해 다른 복제본을 자동으로 사용하지는 않습니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "53370232"
   
 -   **보조 복제본:** 하나 이상의 보조 복제본을 만듭니다. 주 복제본의 데이터베이스를 보조 복제본으로 복사하는 일반적인 방법은 'RESTORE WITH NORECOVERY'를 사용하여 각 보조 복제본에 데이터베이스를 복원하는 것입니다. 보조 복제본을 만들고 데이터 동기화가 작동하는지 확인하는 방법은 [AlwaysOn 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
--   **보고서 서버 자격 증명:** 보조 복제본에서 주 복제본에 만든 적합한 보고서 서버 자격 증명을 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
+-   **보고서 서버 자격 증명:** 주 복제본에 만든 적합한 보고서 서버 자격 증명을 보조 복제본에 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
 -   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 애플리케이션에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
   

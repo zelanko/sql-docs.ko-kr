@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10b5776a4d4be5f31522740c28a6142a7e213576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746635"
 ---
 # <a name="attribute-properties---define-a-default-member"></a>특성 속성 - 기본 멤버 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52516730"
   
  계층의 수준이 자연적으로 집계되는 경우 계층의 다른 특성과 관계없이 계층의 모든 특성에 대한 기본 멤버를 정의할 수 있습니다. 예를 들어 국가-시/도-City 계층의 [City]과 같이 City에 대 한 기본 멤버를 정의할 수 있습니다. [Montreal] 상태에 대 한 또는 국가 대 한 기본 멤버를 정의 하지 않고 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 계층에 대해 &#40;All&#41; 수준 구성](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

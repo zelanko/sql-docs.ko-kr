@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d966c4602a870a51c64dc7cf86e5363b99a4e76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747925"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>데이터 원본 선택(연결된 개체 마법사)
-  **데이터 원본 선택** 페이지를 사용하여 연결하거나 가져올 개체가 포함된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본을 선택할 수 있습니다.  
+   **데이터 원본 선택** 페이지를 사용하여 연결하거나 가져올 개체가 포함된 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본을 선택할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **Analysis Services 데이터 원본**  

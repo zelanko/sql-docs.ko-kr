@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788131"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Windows Azure VM을 만들고 새로운 또는 기존 AlwaysOn 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
@@ -28,12 +28,12 @@ ms.locfileid: "48095643"
   
      [보안](#Security)  
   
--   **복제본을 추가하려면:**  [Azure 복제본 추가 마법사(SQL Server Management Studio)](#SSMSProcedure)  
+-   **복제본을 추가하려면:**  [Azure 복제본 추가 마법사 (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가한 적이 없는, 하는 경우 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션에서 참조 [필수 구성 요소, 제한 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48095643"
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> Permissions  
- [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)를 참조하세요.  
+  [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> Azure 복제본 추가 마법사 사용(SQL Server Management Studio)  
  [복제본 페이지 지정](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)에서 Azure 복제본 추가 마법사를 시작할 수 있습니다. 다음 두 가지 방법으로 이 페이지에 도달할 수 있습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48095643"
   
 4.  새 보조 복제본을 호스팅할 Windows Azure VM에 대한 설정을 지정합니다.  
   
-     이미지  
+     image  
      Windows Azure VM에 사용할 SQL Server 이미지의 이름  
   
      VM 크기  

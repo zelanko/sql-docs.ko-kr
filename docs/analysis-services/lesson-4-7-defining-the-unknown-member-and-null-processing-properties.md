@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752597"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>단원 4-7-알 수 없는 멤버 및 Null 처리 속성 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -179,7 +179,7 @@ ms.locfileid: "52525916"
     ![어셈블리 구성 요소를 보여 주는 제품 이름 수준](../analysis-services/media/l4-assemblycomponents-1.gif "어셈블리 구성 요소를 보여 주는 제품 이름 수준")  
   
 ## <a name="next-lesson"></a>다음 단원  
-[5 단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[5단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

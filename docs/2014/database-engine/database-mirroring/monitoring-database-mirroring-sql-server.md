@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755361"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
   이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52542908"
   
  데이터베이스 미러링 모니터링 작업인 **데이터베이스 미러링 모니터 작업**은 데이터베이스 미러링 모니터와 별개로 백그라운드에서 작동합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 1분마다 **데이터베이스 미러링 모니터 작업** 을 호출하고 작업에서는 미러링 상태를 업데이트하는 저장 프로시저를 호출합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 미러링 세션을 시작하는 경우 **데이터베이스 미러링 모니터 작업** 은 자동으로 생성됩니다. 그러나 ALTER DATABASE *<database_name>* SET PARTNER만 사용하여 미러링을 시작할 경우에는 저장 프로시저를 실행하여 작업을 만들어야 합니다.  
   
- **항목 내용**  
+ **항목 내용:**  
   
 -   [미러링 상태 모니터링](#MonitoringStatus)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52542908"
   
      다음 표에서는 데이터베이스 미러링 모니터와 별도로 데이터베이스 미러링 모니터링을 관리하고 사용하기 위한 저장 프로시저를 설명합니다.  
   
-    |프로시저|Description|  
+    |절차|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|서버 인스턴스의 모든 미러된 데이터베이스에 대한 상태 정보를 정기적으로 업데이트하는 작업을 만듭니다.|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|데이터베이스 미러링 모니터링 매개 변수의 값을 변경합니다.|  
@@ -301,7 +301,7 @@ ms.locfileid: "52542908"
   
      데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다. 자세한 내용은 [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)을 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

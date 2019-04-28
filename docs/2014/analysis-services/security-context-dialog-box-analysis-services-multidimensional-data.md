@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748127"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>보안 컨텍스트 대화 상자(Analysis Services - 다차원 데이터)
-  **의** 보안 컨텍스트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 또는 메타데이터를 검사하는 데 사용되는 사용자 및 역할을 변경할 수 있습니다. 큐브 디자이너의 **계산** 탭 또는 **브라우저** 탭에서 **도구 모음** 창의 **보안 컨텍스트** 를 클릭하여 **보안 컨텍스트** 대화 상자를 표시할 수 있습니다.  
+   **의** 보안 컨텍스트 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 데이터 또는 메타데이터를 검사하는 데 사용되는 사용자 및 역할을 변경할 수 있습니다. 큐브 디자이너의 **계산** 탭 또는 **브라우저** 탭에서 **도구 모음** 창의 **보안 컨텍스트** 를 클릭하여 **보안 컨텍스트** 대화 상자를 표시할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **현재 사용자**  

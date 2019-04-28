@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749390"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>중앙 관리에서 PowerPivot 서비스 응용 프로그램 만들기 및 구성
   PowerPivot 서비스 응용 프로그램은 PowerPivot 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 애플리케이션은 고유한 애플리케이션 ID, 구성 설정, 속성 및 내부 데이터 저장소를 포함합니다.  
