@@ -1,5 +1,5 @@
 ---
-title: 차원에 차원 인텔리전스를 추가 | Microsoft Docs
+title: 차원에 차원 인텔리전스 추가 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717350"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 마법사-차원에 차원 인텔리전스 추가
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>BI 마법사 - 차원에 차원 인텔리전스 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   큐브나 차원에 차원 인텔리전스 기능을 추가하여 차원에 대한 표준 비즈니스 유형을 지정할 수 있습니다. 이 기능은 차원 특성에 해당하는 유형도 지정합니다. 클라이언트 애플리케이션은 데이터를 분석할 때 이러한 유형 지정을 사용할 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34027210"
   
  예를 들어 계정 차원에 차원 인텔리전스를 추가하려면 **차원 유형**에서 **계정**을 선택합니다. 차원에 **계정 유형** 및 **계정 설명** 특성이 있는 경우 **포함** 열에서 **계정 이름** 및 **계정 유형** 계정 유형에 대한 확인란을 선택합니다. 그런 다음 **차원 특성** 열에서 이러한 계정 유형을 차원의 **계정 설명** 및 **계정 유형** 특성에 각각 연결합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [비즈니스 인텔리전스 마법사를 사용 하 여 시간 인텔리전스 계산 정의](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

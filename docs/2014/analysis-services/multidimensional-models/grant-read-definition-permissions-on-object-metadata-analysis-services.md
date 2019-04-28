@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725897"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
   선택한 개체에 대한 개체 정의 또는 메타데이터를 읽을 수 있는 권한을 통해 관리자는 개체 정의를 수정하거나 개체 구조를 수정하거나 개체에 대한 실제 데이터를 볼 수 있는 권한을 부여하지 않고도 개체 정보를 볼 수 있는 권한을 부여할 수 있습니다. `Read Definition` 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 권한은 부여할 수 있습니다. 필요한 경우 `Read Definition` 큐브에 대 한 권한을 설정한 다음 `Read Definition` 데이터베이스에 대 한 합니다. 사용 권한은 가산적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  

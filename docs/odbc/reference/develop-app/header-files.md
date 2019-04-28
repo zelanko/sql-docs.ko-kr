@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724368"
 ---
 # <a name="header-files"></a>헤더 파일
 헤더 파일 Sql.h ODBC는 핵심 인터페이스 적합성 수준에서 기능에 대 한 프로토타입이 포함 되어 있습니다. Sqlext.h 헤더 파일에는 수준 1 및 수준 2 API 적합성 수준 기능에 대 한 프로토타입을 포함 되어 있습니다. 형식 정 및 SQL 데이터 형식에 대 한 지표 Sqltypes.h 헤더 파일에 포함 되어 있습니다.  

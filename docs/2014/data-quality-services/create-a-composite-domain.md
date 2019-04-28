@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793214"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
@@ -79,11 +79,11 @@ ms.locfileid: "56034094"
   
 4.  **구문 분석 방법**에 대해 다음 중 하나를 선택합니다.  
   
-    -   **참조 데이터**: 참조 데이터 서비스 (RDS)에서 데이터를 포맷 하는 방법에 따라 필드의 값을 구문 분석 합니다. Data Quality Services에서 복합 도메인의 값을 RDS로 보내면 RDS에서 복합 도메인 내의 도메인에 따라 수정하고 구문 분석한 데이터를 반환합니다.  
+    -   **참조 데이터**: RDS(참조 데이터 서비스)에 의해 데이터 형식이 지정된 방식에 따라 필드의 값을 구문 분석합니다. Data Quality Services에서 복합 도메인의 값을 RDS로 보내면 RDS에서 복합 도메인 내의 도메인에 따라 수정하고 구문 분석한 데이터를 반환합니다.  
   
-    -   **순서 대로**: 복합 도메인에 도메인의 순서에 따라 필드의 값을 구문 분석 합니다. 첫 번째 값은 첫 번째 도메인에 포함되고, 두 번째 값은 두 번째 도메인에 포함되는 방식으로 이루어집니다.  
+    -   **순서대로**: 복합 도메인에 있는 도메인의 순서에 따라 필드의 값을 구문 분석합니다. 첫 번째 값은 첫 번째 도메인에 포함되고, 두 번째 값은 두 번째 도메인에 포함되는 방식으로 이루어집니다.  
   
-    -   **구분 기호**: 라디오 단추에서 선택한 구분 기호에 따라 필드의 값을 구문 분석을 표시 하는 경우 구분 기호 선택 됩니다. 구분 기호는 **탭**, **세미콜론**, **쉼표**, **공백**또는 **기타**일 수 있습니다. **기타**를 선택한 경우 구분 기호 역할을 할 값을 입력합니다.  
+    -   **구분 기호**: 구분 기호를 선택할 때 표시된 라디오 단추에서 선택한 구분 기호에 따라 필드의 값을 구문 분석합니다. 구분 기호는 **탭**, **세미콜론**, **쉼표**, **공백**또는 **기타**일 수 있습니다. **기타**를 선택한 경우 구분 기호 역할을 할 값을 입력합니다.  
   
 5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [Knowledge-Based Parsing](#KnowledgeBaseParsing)을 참조하세요.  
   

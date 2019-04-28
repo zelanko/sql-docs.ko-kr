@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733682"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어 inData 마이닝 디자이너는 가장 쉬운 방법은 시계열 모델에 사용 되는 회귀 수식의 세부 정보를 보려면를 제공 합니다.  

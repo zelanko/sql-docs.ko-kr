@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721718"
 ---
 # <a name="configure-distribution"></a>배포 구성
   배포자는 배포 데이터베이스를 포함하는 서버이며 배포 데이터베이스는 트랜잭션 복제에 대한 모든 유형의 복제 및 트랜잭션에 대한 메타데이터와 기록 데이터를 저장합니다. 복제를 설정하려면 배포자를 구성해야 합니다. 각 게시자는 하나의 배포자 인스턴스에만 할당될 수 있지만 여러 게시자가 하나의 배포자를 공유할 수 있습니다. 배포자가 있는 서버에는 다음과 같은 추가 리소스가 필요합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52813835"
   
  게시자 및 배포자 속성을 수정하려면 [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md)을 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 및 데이터베이스 개체 게시](publish/publish-data-and-database-objects.md)   
  [배포자 보안 설정](security/secure-the-distributor.md)  
   

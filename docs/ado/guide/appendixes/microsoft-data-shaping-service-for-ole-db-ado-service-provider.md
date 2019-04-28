@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719746"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 데이터 셰이핑 서비스에 대 한 OLE DB 개요
 > [!IMPORTANT]
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  데이터 모양 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [데이터 셰이핑](../../../ado/guide/data/data-shaping-overview.md)합니다.
 
 ## <a name="see-also"></a>관련 항목
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

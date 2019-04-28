@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715090"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 동작을 수행하는 ODBC 함수에 대해 설명합니다. 여기에서 모든 ODBC 함수를 설명하는 것은 아닙니다. 개별 항목에서는 ODBC 함수의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 문제에 대해서만 설명합니다. 즉 ODBC 함수에 대한 완전한 참조 자료가 아닙니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "53369125"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client &#40;ODBC&#41; 참조](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [SQL Server Native Client를 사용하여 응용 프로그램 빌드](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   

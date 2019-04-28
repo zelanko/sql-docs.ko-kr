@@ -1,26 +1,23 @@
 ---
 title: 큐브 마법사를 사용 하 여 큐브 만들기 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- cubes [Analysis Services], creating
-ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 7545bc1e1ad37ff395f3e4c3f65b1cb4614e533e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726897"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>큐브 마법사를 사용하여 큐브 만들기
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 큐브 마법사를 사용하여 새 큐브를 만들 수 있습니다.  
   
 ### <a name="to-create-a-new-cube"></a>새 큐브를 만들려면  

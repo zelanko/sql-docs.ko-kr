@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703747"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
   Analysis Services는 다차원 및 데이터 마이닝(기본값), SharePoint용 PowerPivot, 테이블 형식 중 한 가지 서버 모드로 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  

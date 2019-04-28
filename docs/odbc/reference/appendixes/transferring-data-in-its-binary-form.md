@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735049"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>이진 형식으로 데이터 전송
 안전 하 게 응용 프로그램 같은 DBMS 및 하드웨어 플랫폼을 사용 하는 두 개의 데이터 원본 간에 데이터 (지정 된 DBMS에서 사용 하는 내부 형식)를 전송할 수 있습니다. 특정 데이터에 대 한 원본 및 대상 데이터 원본에 동일한 SQL 데이터 형식 이어야 합니다. C 데이터 형식은 SQL_C_BINARY입니다.  

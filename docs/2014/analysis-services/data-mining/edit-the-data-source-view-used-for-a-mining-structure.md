@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fdd72ba8d23a58e26ec8db00596be6399bef729
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722455"
 ---
 # <a name="edit-the-data-source-view-used-for-a-mining-structure"></a>마이닝 구조에 사용되는 데이터 원본 뷰 편집
   데이터 마이닝 디자이너 내에서 데이터 원본 뷰를 열어 수정할 수 있습니다.  

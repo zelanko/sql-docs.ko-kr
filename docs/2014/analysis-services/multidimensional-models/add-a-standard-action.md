@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727407"
 ---
 # <a name="add-a-standard-action"></a>표준 동작 추가
   큐브 디자이너의 동작 뷰를 사용하여 데이터베이스에 동작을 추가합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](processing-analysis-services-objects.md)을 참조하세요.  

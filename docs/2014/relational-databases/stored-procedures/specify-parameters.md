@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736366"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
   프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  

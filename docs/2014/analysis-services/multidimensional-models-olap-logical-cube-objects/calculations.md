@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702688"
 ---
 # <a name="calculations"></a>새 명명된 집합
   MDX (Multidimensional Expressions) 식 또는 스크립트에 있는 큐브에 계산된 멤버, 명명된 된 집합 또는 범위 할당을 정의 하는 데 사용 되는 계산은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 계산을 사용하면 큐브의 데이터가 아니라 큐브의 다른 부분, 다른 큐브 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 외부의 정보까지도 참조할 수 있는 식에 의해 정의된 개체를 추가할 수 있습니다. 또한 계산을 사용하면 큐브의 기능을 확장하여 비즈니스 인텔리전스 응용 프로그램의 융통성과 성능을 높일 수 있습니다. 스크립팅 계산에 대 한 자세한 내용은 참조 하세요. [Introduction to MDX Scripting in Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)합니다. MDX 쿼리 및 계산과 관련 된 성능 문제에 대 한 자세한 내용은 참조는 [SQL Server 2005 Analysis Services 성능 가이드](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)합니다.  

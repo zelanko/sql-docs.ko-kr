@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704620"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>새 작업 일정: 작업 일정 속성
   이 페이지를 사용하여 일정 속성을 확인하고 변경할 수 있습니다.  

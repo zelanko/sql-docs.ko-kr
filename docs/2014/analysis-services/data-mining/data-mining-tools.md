@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722886"
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "48171553"
 ## <a name="data-mining-wizard"></a>데이터 마이닝 마법사  
  데이터 마이닝 마법사를 사용하여 데이터 마이닝 솔루션 생성을 시작할 수 있습니다. 이 마법사는 빠르고 쉬우며 데이터 마이닝 구조 및 초기 관련 마이닝 모델을 만드는 과정을 안내하고 알고리즘 유형 및 데이터 원본 선택 태스크와 분석에 사용되는 사례 데이터 정의 태스크를 포함합니다.  
   
- **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **참조 항목:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  데이터 마이닝 마법사를 사용하여 마이닝 구조와 마이닝 모델을 만든 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 데이터 마이닝 디자이너를 사용하여 기존 모델과 구조로 작업할 수 있습니다.  
@@ -88,10 +88,10 @@ ms.locfileid: "48171553"
   
 -   로지스틱 회귀를 사용하여 위험을 기준으로 들어오는 고객을 구분합니다.  
   
- **자세한 내용:** [데이터 마이닝 솔루션 관련 프로젝트](data-mining-solutions.md)  
+ **참조 항목:** [데이터 마이닝 솔루션 관련 프로젝트](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 솔루션](data-mining-solutions.md)  

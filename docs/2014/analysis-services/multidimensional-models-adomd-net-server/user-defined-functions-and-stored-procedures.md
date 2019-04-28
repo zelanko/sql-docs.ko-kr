@@ -1,27 +1,20 @@
 ---
 title: 사용자 정의 함수 및 저장 프로시저 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/02/2018
+ms.prod: sql
 ms.technology: analysis-services
-ms.topic: reference
-helpviewer_keywords:
-- stored procedures [ADOMD.NET]
-- ADOMD.NET, user defined functions
-- user defined functions [ADOMD.NET]
-- ADOMD.NET, UDFs
-- ADOMD.NET, stored procedures
-ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
-author: minewiskan
+ms.custom: adomd
+ms.topic: conceptual
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727859"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>사용자 정의 함수 및 저장 프로시저
   ADOMD.NET 서버 개체를 사용 하 여 UDF (사용자 정의 함수) 또는 저장된 프로시저를 만들 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 메타 데이터 및 서버에서 데이터 상호 작용 하는 합니다. 이러한 in-process 메서드는 MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 통해 호출되어 네트워크 통신에 따른 지연 시간 없이 추가 기능을 제공합니다.  
@@ -93,7 +86,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### <a name="applying-a-filter-to-a-tuple"></a>튜플에 필터 적용  
  다음 예의 UDF는 집합을 매개 변수로 받고 Expression 개체를 사용하여 집합의 각 튜플에 필터를 적용하도록 정의되어 있습니다. 필터에 맞는 모든 튜플은 반환 집합에 추가됩니다.  
   
- [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
+ [!code-cs[Adomd.NetServer#FilterSet](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_1.cs)]  
   
  위의 예는 이름이 'A'로 시작하는 도시로 집합을 필터링하는 다음 MDX 예에서 호출됩니다.  
   
@@ -106,6 +99,6 @@ From [Adventure Works]
 ## <a name="stored-procedure-example"></a>저장 프로시저 예  
  다음 예의 MDX 기반 저장 프로시저는 필요한 경우 AMO를 사용하여 인터넷 판매를 위한 파티션을 만듭니다.  
   
- [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
+ [!code-cs[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_2.cs)]  
   
   

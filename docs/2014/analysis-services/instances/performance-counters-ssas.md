@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a7d4e13542e8361fb9f4bf4fb05509ebe01669ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703488"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
   성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  

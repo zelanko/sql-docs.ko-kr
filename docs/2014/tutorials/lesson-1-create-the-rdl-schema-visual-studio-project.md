@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678521"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>1단원: RDL Schema Visual Studio 프로젝트 만들기
   이 자습서에서는 간단한 콘솔 애플리케이션을 만듭니다. 개발은 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]에서 수행한다고 가정합니다.  
@@ -197,7 +197,7 @@ ms.locfileid: "56018914"
     ```  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서는 XML 스키마 정의 도구(Xsd.exe)를 사용하여 RDL 스키마의 클래스를 생성하고 이를 프로젝트에 포함시킵니다. 참조 [2 단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스 생성](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)합니다.  
+ 다음 단원에서는 XML 스키마 정의 도구(Xsd.exe)를 사용하여 RDL 스키마의 클래스를 생성하고 이를 프로젝트에 포함시킵니다. [2단원: Xsd 도구를 사용 하 여 RDL 스키마에서 클래스 생성](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

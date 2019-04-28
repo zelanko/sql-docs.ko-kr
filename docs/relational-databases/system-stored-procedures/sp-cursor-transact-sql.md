@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724208"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|기본 테이블로 버퍼를 다시 채우는 데 사용되며, 낙관적 동시성 제어로 인해 업데이트나 삭제가 실패하는 경우 또는 UPDATE 후에 행을 새로 고치는 데 사용할 수 있습니다.|  
 |0X10|LOCK|SQL Server U-잠금을 얻기 위해 지정된 된 행이 포함 된 페이지에 발생 합니다. 이 잠금은 S 잠금과는 호환되지만 X 잠금 또는 기타 U 잠금과는 호환되지 않습니다. 단기 잠금을 구현하는 데 사용할 수 있습니다.|  
 |0X20|SETPOSITION|DELETE 또는 UPDATE 문을 배치 프로그램은 후속 SQL Server를 실행 하려는 경우에 사용 됩니다.|  
-|0X40|ABSOLUTE|UPDATE 또는 DELETE와 함께 사용해야 합니다.  ABSOLUTE는 KEYSET 커서와 함께 사용해야 하며, DYNAMIC 커서의 경우에는 무시되고 STATIC 커서는 업데이트할 수 없습니다.<br /><br /> 참고: 인출되지 않은 키 집합의 행에 대해 ABSOLUTE를 지정하면 작업에서 동시성 검사가 실패할 수 있으며 반환 결과를 보장할 수 없습니다.|  
+|0X40|ABSOLUTE|UPDATE 또는 DELETE와 함께 사용해야 합니다.  ABSOLUTE는 KEYSET 커서와 함께 사용해야 하며, DYNAMIC 커서의 경우에는 무시되고 STATIC 커서는 업데이트할 수 없습니다.<br /><br /> 참고: 절대 인출 되지 않은 키 집합의 행에 대해 지정 된 경우 작업은 동시성 확인에 실패할 수 있습니다 하 고 반환 결과 보장할 수 없습니다.|  
   
  *rownum*  
  커서가 작업을 수행하거나 업데이트 또는 삭제할 인출 버퍼의 행을 지정합니다.  

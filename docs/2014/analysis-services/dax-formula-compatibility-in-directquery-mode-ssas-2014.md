@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732475"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 Data Analysis Expression 언어 (DAX) Analysis Services 테이블 형식 모델에서 측정값 및 사용에 대 한 다른 사용자 지정 수식을 만드는 데 사용할 수 있습니다 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서에서 데이터 모델 및 Power BI Desktop 데이터 모델입니다. 대부분의 측면에서 이러한 환경에서 사용자가 만드는 모델은 동일 하 고 동일한 측정값, 관계 및 Kpi를 사용할 수 등입니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드로 배포 하는 경우 일부의 제한이 있습니다 사용할 수 있는 수식입니다. 이 항목에서는 이러한 차이점의 개요를 제공, 1100 또는 1103 호환성 수준에서 SQL Server 2014 Analysis Services tabulars 모델 및 DirectQuery 모드에서 지원 되지 않는 함수를 나열 하 고 지원 되는 함수를 나열 하지만 수 있습니다. 다른 결과 반환 합니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709087"
 ---
 # <a name="comments-dmx"></a>주석(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "38042111"
 -   **/\* ... \*/ (슬래시-별표 문자 쌍).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있고 실행 코드 안에도 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 여는 주석 문자부터 모든 내용을 (/ *)를 닫는 주석 문자 (\*/) 주석의 일부로. 여러 줄 주석을 만들려면 오픈 주석 문자 쌍을 사용 하 여 주석을 시작 (/\*), 닫는 주석 문자 쌍을 사용 하 여 주석을 끝냅니다 (\*/). 이 주석 줄에는 다른 주석 문자를 삽입해서는 안 됩니다. 이 주석 문자에 대 한 자세한 내용은 참조 하세요. [슬래시 별표 &#40;주석&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

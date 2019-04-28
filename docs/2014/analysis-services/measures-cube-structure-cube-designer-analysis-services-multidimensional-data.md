@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727979"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>측정값(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에서 **측정값** 창을 사용하여 측정값 그룹 및 멤버를 조작할 수 있습니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "48090322"
 |옵션|정의|  
 |------------|----------------|  
 |**트리**|측정값 그룹과 측정값을 트리 뷰에 표시합니다.|  
-|**표**|측정값 그룹과 측정값을 표에 표시합니다.|  
+|**눈금**|측정값 그룹과 측정값을 표에 표시합니다.|  
   
  **이름 바꾸기**  
  선택한 측정값 그룹 또는 측정값의 이름을 바꾸려면 선택합니다.  

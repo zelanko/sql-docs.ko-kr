@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796582"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|시스템이 할당한 고유한 정수 ID입니다.|  
-|**name**|**sysname**|경고 이름(예: Demo: 전체 **msdb** 로그).|  
+|**name**|**sysname**|경고 이름 (예를 들어, 데모: 전체 **msdb** 로그).|  
 |**event_source**|**nvarchar(100)**|이벤트의 원본입니다. 해당 값은 항상 **MSSQLServer** 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -97,7 +97,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|시스템이 할당한 고유한 정수 ID입니다.|  
-|**name**|**sysname**|경고 이름(예: Demo: 전체 **msdb** 로그).|  
+|**name**|**sysname**|경고 이름 (예를 들어, 데모: 전체 **msdb** 로그).|  
 |**event_source**|**nvarchar(100)**|이벤트의 원본입니다. 해당 값은 항상 **MSSQLServer** 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

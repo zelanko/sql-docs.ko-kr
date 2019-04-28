@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14de33e27d184c4474aeb6eb601f7d34969c47a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709421"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append 메서드 예제(VB)
 다음 코드를 사용 하는 방법에 설명 된 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션 [추가](../../../ado/reference/adox-api/append-method-adox-procedures.md) 기본 데이터 원본에 새 프로시저를 만드는 방법.  

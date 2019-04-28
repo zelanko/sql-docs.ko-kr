@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696322"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 애플리케이션 만들기(Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "47694553"
   
 ## <a name="prerequisites"></a>사전 요구 사항  
   
--   웹 응용 프로그램을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 응용 프로그램 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.  
+-   웹 애플리케이션을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 애플리케이션 요구 사항&amp;#40;Master Data Services&amp;#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.  
   
 ## <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>새 웹 사이트에서 마스터 데이터 관리자 웹 애플리케이션을 만들려면  
  새 웹 사이트를 만들면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 루트 웹 애플리케이션입니다. 또한 웹 애플리케이션이 새 애플리케이션 풀에 추가됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "47694553"
   
 4.  **응용 프로그램 만들기**를 클릭합니다.  
   
-5.  **웹 응용 프로그램 만들기** 대화 상자에서 새 웹 응용 프로그램에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 응용 프로그램 만들기 대화 상자&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
+5.  **웹 응용 프로그램 만들기** 대화 상자에서 새 웹 응용 프로그램에 대한 정보를 지정합니다. 대화 상자의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [웹 애플리케이션 만들기 대화 상자&amp;#40;Master Data Services 구성 관리자&amp;#41;](../../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조하세요.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47694553"
   
 -   필요에 따라 SSL(Secure Sockets Layer)을 사용하여 콘텐츠를 암호화하려는 경우 HTTPS 바인딩을 사용하도록 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 호스트하는 웹 사이트를 구성합니다. IIS 관리자와 같은 IIS(인터넷 정보 서비스) 도구를 사용하여 웹 서버에 대한 서버 인증서를 구성하고 사이트에 대한 HTTPS 바인딩 및 SSL 설정을 구성해야 합니다. 자세한 내용은 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

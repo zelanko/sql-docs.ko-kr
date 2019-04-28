@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733417"
 ---
 # <a name="moving-data-mining-objects"></a>데이터 마이닝 개체 이동
   데이터 마이닝 개체를 이동하기 위한 가장 일반적인 시나리오는 테스트 또는 분석 환경에서 프로덕션 환경으로 모델을 배포하거나 다른 사용자와 모델을 공유하는 것입니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "48071853"
  Analysis Services 솔루션 배포에 대한 자세한 내용은 [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)를 참조하세요.  
   
 ### <a name="scripting"></a>스크립팅  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 개체를 스크립팅하는 데 사용할 수 있는 여러 언어를 제공합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]개체를 스크립팅 하는 데 사용할 수 있는 여러 언어를 제공 합니다.  
   
--   **XMLA**: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체를 마우스 오른쪽 단추로 클릭하면 XMLA를 사용하여 개체를 스크립팅할 수 있습니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
+-   **XMLA**: 개체를 마우스 오른쪽 단추로 클릭 하 여 XMLA를 사용 하 여 개체를 스크립팅할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 스크립트를 실행하려면 대상 서버의 **XMLA 쿼리** 창에서 스크립트를 엽니다.  
   
--   **DMX**: [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공하는 템플릿 또는 쿼리 작성기 중 하나를 사용하여 스크립트를 만들 수 있습니다.  
+-   **DMX**: 템플릿을 사용 하 여 스크립트를 만들 수 있습니다 또는 쿼리 작성기 중 하나에서 제공 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]입니다.  
   
  하지만 각 스크립트 언어로 수행할 수 있는 태스크에는 차이가 있습니다.  
   
@@ -67,23 +67,23 @@ ms.locfileid: "48071853"
  자세한 내용은 [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)을 참조하세요.  
   
 ### <a name="backup-and-restore"></a>Backup 및 Restore 메서드  
- 전체 Analysis Services 데이터베이스의 백업 및 복원은 현재 데이터 마이닝 구조가 OLAP 개체에 의존하는 경우 선택하는 방법입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 데이터베이스 백업을 더 빠르고 쉽게 할 수 있는 새로운 백업 및 복원 기능을 제공합니다.  
+ 전체 Analysis Services 데이터베이스의 백업 및 복원은 현재 데이터 마이닝 구조가 OLAP 개체에 의존하는 경우 선택하는 방법입니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]데이터베이스 백업을 더 빠르고 쉽게 할 수 있는 백업 및 복원 기능을 제공 합니다.  
   
  백업에 대한 자세한 내용은 [Analysis Services 데이터베이스 백업 및 복원](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md)을 참조하세요.  
   
 ### <a name="exporting-and-importing"></a>내보내기 및 가져오기  
  DMX 문을 사용하여 마이닝 모델 및 구조를 내보낸 다음 다시 가져오는 것은 개별 관계형 데이터 마이닝 개체를 이동하거나 백업하는 가장 쉬운 방법입니다. 이러한 작업에 사용하는 DMX 구문에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [내보내기 &AMP;#40;DMX&AMP;#41;](/sql/dmx/export-dmx)  
+-   [내보내기 & #40; DMX & #41;](/sql/dmx/export-dmx)  
   
--   [가져오기 &AMP;#40;DMX&AMP;#41;](/sql/dmx/import-dmx)  
+-   [가져오기 & #40; DMX & #41;](/sql/dmx/import-dmx)  
   
- INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
+ INCLUDE DEPENDENCIES 옵션을 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 필요한 모든 데이터 원본 뷰 정의도 내보내며, 사용자가 모델 또는 구조를 가져올 때 대상 서버에서 데이터 원본 뷰를 다시 생성합니다. 모델 가져오기를 마친 후에는 개체에 대해 필요한 마이닝 사용 권한을 설정해야 합니다.  
   
 > [!NOTE]  
 >  OLAP 모델은 DMX를 사용하여 내보내고 가져올 수 없습니다. 마이닝 모델이 OLAP 큐브를 기반으로 하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 기능을 사용하여 전체 데이터베이스를 백업한 다음 복원하거나 큐브와 해당 모델을 다시 배포해야 합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 솔루션 및 개체 관리](management-of-data-mining-solutions-and-objects.md)  
   
   

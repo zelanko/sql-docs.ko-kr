@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43864fb135faf61a2a0205199d7717d7b5c04026
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720612"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
   Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트를 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 및 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 사이트에 연결하고 이러한 사이트에서 목록 데이터를 검색할 수 있습니다.  

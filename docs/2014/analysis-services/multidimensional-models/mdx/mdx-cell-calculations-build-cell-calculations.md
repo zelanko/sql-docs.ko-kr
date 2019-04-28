@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f817a74d71d12e02d4cb742a0d5423b9a8ac7807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725473"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>MDX로 셀 계산 작성(MDX)
   MDX는 계산 멤버, 사용자 지정 롤업, 사용자 지정 멤버 등 계산 값을 생성하기 위한 여러 가지 도구를 제공합니다. 하지만 이러한 기능을 사용하여 특정 셀 집합 또는 문제가 되는 단일 셀에 영향을 주기는 어렵습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48226023"
   
  작성 범위 측면에서, 계산 셀은 한 세션 또는 단일 쿼리 중에만 임시로 만들거나 큐브의 일부로 전체적으로 사용할 수 있다는 점에서 명명된 집합 및 계산 멤버 모두와 비슷합니다.  
   
--   **쿼리 범위** MDX 쿼리의 일부로 정의되는 계산 셀을 만들어서 해당 범위가 쿼리로 제한되도록 하려면 WITH 키워드를 사용합니다. 그런 다음 MDX SELECT 문 내에서 계산 셀을 사용할 수 있습니다. 이 방법을 사용 하 여 만든 계산된 셀을 `WITH` 키워드는 SELECT 문을 배포 하지 않아도 변경할 수 있습니다.  
+-   **쿼리 범위** MDX 쿼리의 일부로 정의되는 계산 셀을 만들어서 해당 범위가 쿼리로 제한되도록 하려면 WITH 키워드를 사용합니다. 그런 다음 MDX SELECT 문 내에서 계산 셀을 사용할 수 있습니다. 이 방식을 사용할 경우 `WITH` 키워드를 사용하여 만든 계산 셀은 SELECT 문을 배포하지 않아도 변경할 수 있습니다.  
   
      WITH 키워드를 사용하여 계산 멤버를 만드는 방법에 대한 자세한 내용은 [쿼리 범위 셀 계산 만들기&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)를 참조하세요.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "48226023"
      CREATE CELL CALCULATION 또는 ALTER CUBE 문을 사용하여 세션에서 계산 셀을 만드는 방법에 대한 자세한 내용은 [세션 범위 계산 셀 만들기](mdx-cell-calculations-session-scoped-calculated-cells.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [ALTER CUBE 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
- [CREATE CELL CALCULATION 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [쿼리 범위 셀 계산 만들기 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [ALTER CUBE 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
+ [쿼리 범위 셀 계산 만들기&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710509"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
   데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7627a52322563a03881d138f6d3244d97cb8ca29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733168"
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
@@ -226,6 +226,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [5 단원: 신경망 및 로지스틱 회귀 모델 작성 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [5단원: 신경망 및 로지스틱 회귀 모델 작성 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

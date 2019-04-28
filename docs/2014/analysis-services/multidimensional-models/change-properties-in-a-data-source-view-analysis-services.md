@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726837"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 속성 변경(Analysis Services)
   데이터 원본 뷰 마법사를 사용하여 데이터 원본 뷰를 정의하고 데이터 원본 뷰에 테이블, 뷰, 명명된 계산 및 명명된 쿼리를 추가한 후 다음과 관련된 속성을 변경할 수 있습니다.  
@@ -82,6 +82,6 @@ ms.locfileid: "48153033"
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 디자이너의 다이어그램 작업 &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

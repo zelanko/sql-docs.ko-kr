@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733083"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
   데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  

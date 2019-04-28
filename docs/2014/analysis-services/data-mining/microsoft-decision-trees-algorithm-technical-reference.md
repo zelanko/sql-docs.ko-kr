@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722005"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  

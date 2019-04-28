@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 29ea08478089982f9652154fa0a167d122b2cd34
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697461"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션(보고서 작성기 및 SSRS)
   데이터 세트 필드는 데이터 연결의 데이터를 나타냅니다. 필드는 숫자 데이터나 숫자가 아닌 데이터를 나타낼 수 있습니다. 예로는 판매액, 총 판매액, 고객 이름, 데이터베이스 식별자, URL, 이미지, 공간 데이터, 전자 메일 주소 등이 있습니다. 디자인 화면에서 필드는 입력란, 테이블 및 차트와 같은 보고서 항목에서 식으로 나타납니다.  

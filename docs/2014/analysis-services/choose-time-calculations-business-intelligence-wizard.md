@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe045f479d7c482da0a3eb3691479d0159bf978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681080"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>시간 계산 선택(비즈니스 인텔리전스 마법사)
   **시간 계산 선택** 페이지를 사용하여 기존 시간 계층에 대해 생성될 새 시간 계산의 해결 방법을 정의합니다.  

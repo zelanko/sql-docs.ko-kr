@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724048"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @cursor_return=] *cursor_variable_name*출력  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  선언된 커서 변수의 이름입니다. *cursor_variable_name* 됩니다 **커서**, 기본값은 없습니다. 커서는 스크롤할 수 있으며 동적이고 읽기 전용입니다.  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  보고할 커서 수준을 지정합니다. *cursor_scope* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -76,7 +76,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |fetch_status|**smallint**|해당 커서의 마지막 인출 상태입니다. 자세한 내용은 [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = 인출 성공입니다.<br /><br /> -1 = 인출이 실패하였거나 커서의 범위 밖입니다.<br /><br /> -2 = 요청된 행이 누락되었습니다.<br /><br /> -9 = 커서에 대한 인출이 없습니다.|  
 |column_count|**smallint**|커서 결과 집합 내의 열 수입니다.|  
 |row_count|**smallint**|커서의 마지막 조작에 의해 영향을 받는 행의 수입니다. 자세한 내용은 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)합니다.|  
-|last_operation|**smallint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = 열기<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
+|last_operation|**smallint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = OPEN<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
 |cursor_handle|**int**|서버 범위에서 커서를 식별하는 고유한 값입니다.|  
   
 ## <a name="remarks"></a>Remarks  

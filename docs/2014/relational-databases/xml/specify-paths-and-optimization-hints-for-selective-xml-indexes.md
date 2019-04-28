@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679801"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  

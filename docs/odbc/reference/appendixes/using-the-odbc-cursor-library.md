@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fe19efb2d39e875cdafec76f2c50164f3a66f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735028"
 ---
 # <a name="using-the-odbc-cursor-library"></a>ODBC 커서 라이브러리 사용
 > [!IMPORTANT]  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721811"
 ---
 # <a name="replication-programming-concepts"></a>복제 프로그래밍 개념
   복제 기능을 사용하는 애플리케이션을 개발하려면 먼저 다음과 같은 일반적인 계획 단계를 따르는 것이 좋습니다.  

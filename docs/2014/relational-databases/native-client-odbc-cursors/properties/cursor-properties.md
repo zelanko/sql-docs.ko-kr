@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711468"
 ---
 # <a name="cursor-properties"></a>커서 속성
   커서의 전체적인 특성은 ODBC 스타일 커서 형식이나 SQL-92/ISO 커서 동작을 설정하는 방법으로 결정됩니다. 다음 항목에서는 커서 동작에 영향을 미치는 추가적인 문과 연결 특성에 대해 설명합니다.  

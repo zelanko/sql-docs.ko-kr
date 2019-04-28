@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794451"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 **차원 디자이너** 의 **브라우저**탭에서 일반 작업을 수행할 수 있습니다.  

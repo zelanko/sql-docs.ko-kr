@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699751"
 ---
 # <a name="using-cube-writebacks-mdx"></a>큐브 쓰기 저장(Writeback) 사용(MDX)
   큐브를 업데이트하는 데는 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 문을 사용합니다. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   쓰기 저장(writeback)에 포함된 차원의 차원 세분성 변경  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 수정 &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [데이터 수정&#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

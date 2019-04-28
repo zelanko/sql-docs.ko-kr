@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721985"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "52524397"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 연결 알고리즘](microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](association-model-query-examples.md)   
  [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  

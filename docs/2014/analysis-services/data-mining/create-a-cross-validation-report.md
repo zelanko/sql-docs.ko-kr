@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ca341e5de77a1677e197b4263b554e99956fee9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715140"
 ---
 # <a name="create-a-cross-validation-report"></a>교차 유효성 검사 보고서 만들기
   이 항목에서는 데이터 마이닝 디자이너에서 정확도 차트 탭을 사용하여 교차 유효성 검사 보고서를 만드는 단계를 안내합니다. 교차 유효성 검사 보고서의 표시 형태 및 해당 보고서에 포함되는 통계 측정값에 대한 일반적인 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)를 참조하세요.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733701"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft 시퀀스 클러스터링 알고리즘
   합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은에서 제공 하는 시퀀스 분석 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 알고리즘을 사용 하 여 다음 경로 의해 연결 될 수 있는 이벤트가 포함 된 데이터를 탐색 하거나 *시퀀스*합니다. 이 알고리즘은 동일한 시퀀스를 그룹화하거나 클러스터링하여 가장 일반적인 시퀀스를 찾습니다. 일반적인 문제나 비즈니스 시나리오에 대한 통찰력을 제공하기 위해 데이터 마이닝에 사용할 수 있는 시퀀스가 포함된 데이터의 몇 가지 예는 다음과 같습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48190783"
 -   OLAP 마이닝 모델의 사용과 마이닝 모델 차원의 생성을 지원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)   
  [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

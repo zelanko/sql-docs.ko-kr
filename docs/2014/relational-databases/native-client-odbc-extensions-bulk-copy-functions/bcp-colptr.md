@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689148"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   현재 복사본의 프로그램 변수 데이터 주소를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설정합니다.  
@@ -57,7 +57,7 @@ idxServerCol
  큰 값 형식에 대 한 자세한 내용은 참조 하세요. [bcp_bind](bcp-bind.md)**합니다.**  
   
  *idxServerCol*  
- 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서 수 위치를 보고 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)합니다.  
+ 데이터 복사 대상인 데이터베이스 테이블 열의 서수 위치입니다. 테이블의 첫 번째 열은 열 1입니다. 열의 서수 위치는 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  

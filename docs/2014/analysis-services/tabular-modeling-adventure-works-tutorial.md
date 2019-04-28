@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795540"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>테이블 형식 모델링(Adventure Works 자습서)
   이 자습서에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 테이블 형식 모델을 만드는 방법을 설명하는 단원을 제공합니다.  
@@ -68,20 +68,20 @@ ms.locfileid: "53373685"
   
 |단원|소요되는 예상 시간|  
 |------------|--------------------------------|  
-|[1 단원: 새 테이블 형식 모델 프로젝트 만들기](lesson-1-create-a-new-tabular-model-project.md)|10분|  
+|[1단원: 새 테이블 형식 모델 프로젝트 만들기](lesson-1-create-a-new-tabular-model-project.md)|10분|  
 |[2단원: 데이터 추가](lesson-2-add-data.md)|20분|  
-|[3 단원: 열 이름 바꾸기](rename-columns.md)|20분|  
-|[4 단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)|3분|  
-|[5 단원: 관계 만들기](lesson-4-create-relationships.md)|10분|  
-|[6 단원: 계산된 열 만들기](lesson-5-create-calculated-columns.md)|15분|  
-|[7 단원: 측정값 만들기](lesson-6-create-measures.md)|30분|  
-|[8 단원: 핵심 성과 지표 만들기](lesson-7-create-key-performance-indicators.md)|15분|  
+|[3단원: 열 이름 바꾸기](rename-columns.md)|20분|  
+|[4단원: 날짜 테이블로 표시](lesson-3-mark-as-date-table.md)|3분|  
+|[5단원: 관계 만들기](lesson-4-create-relationships.md)|10분|  
+|[6단원: 계산된 열 만들기](lesson-5-create-calculated-columns.md)|15분|  
+|[7단원: 측정값 만들기](lesson-6-create-measures.md)|30분|  
+|[8단원: 핵심 성과 지표 만들기](lesson-7-create-key-performance-indicators.md)|15분|  
 |[9 단원: 큐브 뷰 만들기](lesson-8-create-perspectives.md)|5분|  
 |[10 단원: 계층 만들기](lesson-9-create-hierarchies.md)|20분|  
 |[11 단원: 파티션 만들기](lesson-10-create-partitions.md)|15분|  
 |[12 단원: 역할 만들기](lesson-11-create-roles.md)|15분|  
 |[단원 13: Excel에서 분석](lesson-12-analyze-in-excel.md)|20분|  
-|[단원 14: 배포](lesson-13-deploy.md)|5분|  
+|[단원 14: Deploy](lesson-13-deploy.md)|5분|  
   
 ## <a name="supplemental-lessons"></a>추가 단원  
  이 자습서에는 [추가 단원](../tutorials/supplemental-lessons.md)도 포함되어 있습니다. 이 섹션의 항목은 자습서를 완료하기 위한 필수 항목은 아니지만 고급 테이블 형식 모델 제작 기능을 더 잘 이해하는 데 유용할 수 있습니다.  
@@ -94,6 +94,6 @@ ms.locfileid: "53373685"
 |[Power View 보고서에 대 한 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)Power View 보고서에 대 한 보고 속성 구성|30분|  
   
 ## <a name="next-step"></a>다음 단계  
- 자습서를 시작하려면 첫 번째 단원으로 이동하십시오. [1 단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
+ 자습서를 시작 하려면 첫 번째 단원으로 이동 합니다. [1단원: 새 테이블 형식 모델 프로젝트를 만들](lesson-1-create-a-new-tabular-model-project.md)합니다.  
   
   

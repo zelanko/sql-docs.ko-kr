@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689591"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>데이터 마이닝 자습서(Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쉽게 정교한 데이터 마이닝 솔루션을 만들 수 있도록 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 도구를 사용하여 관계형 또는 큐브 데이터를 사용하는 데이터 마이닝 모델을 디자인, 생성 및 관리할 수 있습니다. 데이터 마이닝 모델에 대한 클라이언트 액세스를 관리하고 여러 클라이언트에서 예측 쿼리를 생성할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "53358925"
   
  [데이터 마이닝 프로젝트](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 솔루션](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server 데이터 마이닝 리소스](https://go.microsoft.com/fwlink/?LinkId=97965)   
  [만들기 및 DMX 사용 하 여 데이터 마이닝 모델을 쿼리 합니다. 자습서 &#40;Analysis Services-데이터 마이닝&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  

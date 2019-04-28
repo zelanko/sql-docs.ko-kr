@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b756349acfc55a85c67e3a24921061bb1173e97
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696527"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>데이터 세트 속성 대화 상자, 매개 변수
   **데이터 집합 속성** 대화 상자에서 **매개 변수** 를 선택하여 보고서 매개 변수에 연결되는 쿼리 매개 변수를 비롯한 쿼리 매개 변수를 추가, 변경 및 삭제할 수 있습니다.  

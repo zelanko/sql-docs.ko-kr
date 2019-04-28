@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f7a61772b93c78173f3eca8ad38fca1ade671a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699743"
 ---
 # <a name="user-defined-member-properties-mdx"></a>사용자 정의 멤버 속성(MDX)
-  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 사용자 정의 멤버 속성을 추가할 수 없습니다는 `(All)` 자체 계층 구조 또는 계층의 수준입니다.  
+  사용자 정의 멤버 속성을 차원 내의 특정한 이름의 수준에 특성 관계로 추가할 수 있습니다. 계층의 `(All)` 수준 또는 수준 자체에는 사용자 정의 멤버 속성을 추가할 수 없습니다.  
   
 ## <a name="creating-user-defined-member-properties"></a>사용자 정의 멤버 속성 만들기  
  사용자 정의 멤버 속성을 서버 기반 차원 또는 큐브에 추가하는 데는 사용자 인터페이스 방식 또는 프로그래밍 방식을 사용할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48114313"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시 됩니다. 예를 들어 다음 MDX 쿼리를 `PROPERTIES` 키워드를 검색 합니다 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성 년 1 월에 판매 된 제품을 식별 하는 집합 식 뒤 및:  
+ `PROPERTIES` 키워드는 축 사양의 집합 식 뒤에 표시됩니다. 예를 들어 다음 MDX 쿼리에는 1월에 판매된 제품을 식별하는 집합 식 뒤에 `List Price` 및 `Dealer Price` 사용자 정의 멤버 속성을 검색하는 `PROPERTIES` 키워드가 있습니다.  
   
 ```  
 SELECT   
@@ -53,7 +53,7 @@ WHERE ([Date].[Month of Year].[January])
 ```  
   
 ### <a name="using-the-properties-function-to-retrieve-user-defined-member-properties"></a>Properties 함수를 사용하여 사용자 정의 멤버 속성 검색  
- 또는 `Properties` 함수를 사용해 사용자 정의 멤버 속성에 액세스할 수 있습니다. 예를 들어 다음 MDX 쿼리를 사용 하는 `WITH` 구성 된 계산된 멤버를 만들려면 키워드를 `List Price` 멤버 속성:  
+ 또는 `Properties` 함수를 사용해 사용자 정의 멤버 속성에 액세스할 수 있습니다. 예를 들어 다음 MDX 쿼리는 `WITH` 키워드를 사용해 `List Price` 멤버 속성으로 구성된 계산 멤버를 만듭니다.  
   
 ```  
 WITH   
@@ -68,7 +68,7 @@ FROM [Adventure Works]
  계산 멤버 작성에 대한 자세한 내용은 [계산 멤버를 MDX로 작성&#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [멤버 속성을 사용 하 여 &#40;MDX&#41;](mdx-member-properties.md)   
- [속성 &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [멤버 속성 & #40;를 사용 하 여 Mdx& #41;](mdx-member-properties.md)   
+ [속성 & #40; Mdx& #41;](/sql/mdx/properties-mdx)  
   
   

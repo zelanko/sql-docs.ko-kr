@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721040"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 다시 컴파일하는 방법에 대해 설명합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다: `WITH RECOMPILE` 프로시저 정의 또는 프로시저를 호출할 때 옵션을 `RECOMPILE` 쿼리 힌트를 사용 하 여 또는 개별 문에 `sp_recompile` 시스템 저장 프로시저. 이 항목에서는 프로시저 정의를 만들고 기존 프로시저를 실행할 때 RECOMPILE 옵션을 사용하는 방법에 대해 설명합니다. 또한 sp_recompile 시스템 저장 프로시저를 사용하여 기존 프로시저를 다시 컴파일하는 방법에 대해서도 설명합니다.  

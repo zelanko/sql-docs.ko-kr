@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813560"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>AlwaysOn 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
   이 항목에서는 AlwaysOn 가용성 그룹에 데이터베이스를 추가한 후 데이터 동기화를 시작하는 방법에 대해 설명합니다. 각 새로운 주 복제본에 대해 보조 복제본을 호스팅하는 서버 인스턴스에서 보조 데이터베이스를 준비해야 합니다. 그런 다음 이러한 각 보조 데이터베이스를 가용성 그룹에 수동으로 조인해야 합니다.  

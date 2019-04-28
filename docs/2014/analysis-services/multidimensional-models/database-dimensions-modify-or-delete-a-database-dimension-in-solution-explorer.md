@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a994b87e8be4b8ca527cb3b0863af4a1a4a1e1a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726507"
 ---
 # <a name="modify-or-delete-a-database-dimension-in-solution-explorer"></a>솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 차원 디자이너를 사용하여 차원을 수정하거나 삭제할 수 있습니다. 차원을 수정하는 경우 해당 차원을 처리해야 사용자가 변경 내용을 사용할 수 있습니다. 자세한 내용은 [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)합니다.  

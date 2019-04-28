@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 785a03a5d9fffe3adf072a32f578b0ba936ae6f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725237"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>기본 MDX 쿼리(MDX)
   기본 MDX (Multidimensional Expressions) 쿼리는 MDX에서 SELECT 문에 가장 자주 사용 되는 쿼리. MDX SELECT 문에서 결과 집합을 지정하는 방식, SELECT 문의 구문 정의 및 SELECT 문을 사용하여 간단한 쿼리를 만드는 방법을 이해하면 MDX를 사용하여 다차원 데이터를 쿼리하는 방법을 확실히 알 수 있습니다.  
@@ -109,7 +109,7 @@ WHERE ( [Sales Territory].[Southwest] )
   
  자세한 예는 [쿼리 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) 및 [Slicer 축의 내용 지정&#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [SELECT 문 & #40; Mdx& #41;](/sql/mdx/mdx-data-manipulation-select)  
   

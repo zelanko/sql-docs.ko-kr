@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1adcc97430db480628b4b139ba12506766fe59fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732444"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>계정 인텔리전스 정의(차원)(비즈니스 인텔리전스 마법사)
   이 페이지를 사용하여 차원 및 특성 유형 설정, 반가산적 측정값 정의 및 기타 기능을 포함한 계정 인텔리전스를 적용할 차원을 선택할 수 있습니다.  

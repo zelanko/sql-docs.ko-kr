@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794231"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **차원 용도** 탭에서 큐브 차원 추가 또는 큐브 처리와 같은 일반 동작을 수행할 수 있습니다.  

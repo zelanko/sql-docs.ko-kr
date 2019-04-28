@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e00851557b502bda3a98763eff4bac9c3abdccff
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690773"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel(MDX)
 
@@ -36,7 +36,7 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **DrillupLevel** 지정된 된 집합에 포함 된 멤버에 따라 멤버 집합을 계층적으로 구성 하는 함수 반환 합니다. 지정된 집합의 멤버 간 순서는 유지됩니다.  
+ 합니다 **DrillupLevel** 지정한 집합에 포함 된 멤버를 기준으로 한 멤버 집합을 계층적으로 구성 하는 함수 반환 합니다. 지정된 집합의 멤버 간 순서는 유지됩니다.  
   
  수준 식이 지정 되는 **DrillupLevel** 함수는 지정 된 수준의 위쪽에 있는 멤버만 검색 하 여 집합을 구성 합니다. 수준 식이 지정되어 있고 지정된 집합에 지정된 수준의 멤버가 표시되지 않는 경우에는 지정된 집합이 반환됩니다.  
   
@@ -58,6 +58,6 @@ SELECT DrillUpLevel
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

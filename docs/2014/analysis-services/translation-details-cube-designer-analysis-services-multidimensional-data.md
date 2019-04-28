@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794284"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **번역** 탭에 있는 **번역 세부 정보** 창을 사용하여 현재 선택한 큐브의 번역을 정의 및 관리할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48118753"
   
 -   KPI(핵심 성과 지표)  
   
-     `Caption`하십시오 `Description`, 및 `DisplayFolder` 속성  
+     `Caption`, `Description` 및 `DisplayFolder` 속성  
   
 -   작업  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48118753"
   
      `Caption` 속성  
   
- **\<언어 >**  
+ **\<Language>**  
  선택한 언어로 큐브 개체의 속성 값을 입력합니다.  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  

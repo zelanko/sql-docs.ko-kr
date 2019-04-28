@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c798ff08653e770ea633597dfc64dfadf4639fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722740"
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 마이닝을 통합하는 솔루션을 위한 통합 플랫폼을 제공합니다. 관계형 또는 큐브 데이터를 사용하여 예측 분석이 포함된 비즈니스 인텔리전스 솔루션을 만들 수 있습니다.  
@@ -31,34 +31,34 @@ ms.locfileid: "48227174"
 ## <a name="key-data-mining-features"></a>주요 데이터 마이닝 기능  
  SQL 서버는 통합 데이터 마이닝 솔루션을 지원하여 다음과 같은 기능을 제공합니다.  
   
--   여러 데이터 원본: 데이터 마이닝을 수행하기 위해 데이터 웨어하우스나 OLAP 큐브를 만들 필요가 없습니다. 외부 공급자, 스프레드시트 및 텍스트 파일에서도 테이블 형식 데이터를 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
+-   여러 데이터 원본: 데이터 웨어하우스 또는 데이터 마이닝을 수행 하는 OLAP 큐브를 만들 필요가 없습니다. 외부 공급자, 스프레드시트 및 텍스트 파일에서도 테이블 형식 데이터를 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 OLAP 큐브를 쉽게 마이닝할 수도 있습니다. 그러나 메모리 내 데이터베이스에서 데이터를 사용할 수 없습니다.  
   
--   통합 데이터 정리, 데이터 관리 및 ETL: Data Quality Services는 데이터 프로파일링 및 정리를 위한 고급 도구를 제공합니다. Integration Services는 데이터 정리와 모델 작성, 처리, 학습 및 업데이트를 위한 ETL 프로세스를 작성하는 데 사용할 수 있습니다.  
+-   통합된 데이터 정리, 데이터 관리 및 ETL: Data Quality Services 프로 파일링 및 데이터 정리를 위한 고급 도구를 제공 합니다. Integration Services는 데이터 정리와 모델 작성, 처리, 학습 및 업데이트를 위한 ETL 프로세스를 작성하는 데 사용할 수 있습니다.  
   
--   사용자 지정 가능한 다양한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘 제공 외에도 플랫폼은 고유의 사용자 지정 플러그인 알고리즘의 개발을 지원합니다.  
+-   여러 사용자 지정 가능한 알고리즘: 클러스터링, 신경망 및 의사 결정 트리와 같은 알고리즘을 제공 하는 것 외에도 플랫폼 사용자 고유의 사용자 지정 플러그인 알고리즘의 개발을 지원 합니다.  
   
--   모델 테스트 인프라: 교차 유효성 검사, 분류표, 리프트 차트 및 산점도와 같은 중요한 통계 도구를 사용하여 모델과 데이터 집합을 테스트합니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
+-   모델 테스트 인프라: 모델을 테스트 하 고 중요 한 통계 도구를 사용 하 여 교차 유효성 검사로는 데이터 집합, 분류표, 리프트 차트, 산 점도입니다. 테스트 및 학습 집합을 간편하게 만들고 관리합니다.  
   
--   쿼리 및 드릴스루: 예측 쿼리를 만들고 모델 패턴 및 통계를 검색하며 사례 데이터를 드릴스루합니다.  
+-   쿼리 및 드릴스루: 예측 쿼리를 만들고 모델 패턴 및 통계를 검색 사례 데이터로 드릴스루 합니다.  
   
--   클라이언트 도구: SQL Server에서 제공하는 개발 및 디자인 스튜디오 외에도 Excel용 데이터 마이닝 추가 기능을 사용하여 모델을 만들고 쿼리하며 찾아볼 수 있습니다. 또한 웹 서비스를 포함한 사용자 지정 클라이언트를 만듭니다.  
+-   클라이언트 도구: SQL Server에서 제공 된 개발 및 디자인 스튜디오 외에도 쿼리를 만들고 모델을 탐색 하려면 Excel 용 데이터 마이닝 추가 기능을 사용할 수 있습니다. 또한 웹 서비스를 포함한 사용자 지정 클라이언트를 만듭니다.  
   
--   스크립팅 언어 지원 및 관리되는 API: 모든 데이터 마이닝 개체는 완전히 프로그래밍할 수 있습니다. 스크립팅은 MDX, XMLA, 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 PowerShell 확장을 통해 가능합니다. 빠른 쿼리 및 스크립팅을 위해 DMX(Data Mining Extensions) 언어를 사용합니다.  
+-   스크립팅 언어 지원 및 관리 되는 API: 모든 데이터 마이닝 개체는 완전히 프로그래밍할 수 있습니다. 스크립팅은 MDX, XMLA, 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 PowerShell 확장을 통해 가능합니다. 빠른 쿼리 및 스크립팅을 위해 DMX(Data Mining Extensions) 언어를 사용합니다.  
   
--   보안 및 배포: 모델 및 구조 데이터의 드릴스루에 대한 별도의 사용 권한을 포함하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 통해 역할 기반 보안을 제공합니다. 사용자가 패턴에 액세스하거나 예측을 수행할 수 있도록 다른 서버에 모델을 간편하게 배포  
+-   보안 및 배포: 역할 기반 보안을 통해 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 모델 및 구조 데이터로 드릴스루에 대 한 별도 사용 권한을 포함 합니다. 사용자가 패턴에 액세스하거나 예측을 수행할 수 있도록 다른 서버에 모델을 간편하게 배포  
   
 ## <a name="in-this-section"></a>섹션 내용  
  이 섹션의 항목에서는 SQL Server 데이터 마이닝의 주요 기능 및 관련 태스크를 소개합니다.  
   
 -   [데이터 마이닝 개념](data-mining-concepts.md)  
   
--   [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [데이터 마이닝 알고리즘 & #40; Analysis Services-데이터 마이닝 & #41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)  
   
--   [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
+-   [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+-   [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
 -   [데이터 마이닝 쿼리](data-mining-queries.md)  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48227174"
   
 -   [데이터 마이닝 아키텍처](data-mining-architecture.md)  
   
--   [보안 개요 &#40;데이터 마이닝&#41;](security-overview-data-mining.md)  
+-   [보안 개요 & #40; 데이터 마이닝 & #41;](security-overview-data-mining.md)  
   
   

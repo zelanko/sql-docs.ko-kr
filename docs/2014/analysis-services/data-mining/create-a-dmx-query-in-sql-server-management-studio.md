@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715350"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio에서 DMX 쿼리 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 마이닝 모델 및 마이닝 구조에 대해 예측 쿼리, 내용 쿼리 및 데이터 정의 쿼리를 작성하는 데 유용한 기능 집합이 있습니다.  
@@ -87,6 +87,6 @@ ms.locfileid: "48101413"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)   
- [Data Mining Extensions &#40;DMX&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

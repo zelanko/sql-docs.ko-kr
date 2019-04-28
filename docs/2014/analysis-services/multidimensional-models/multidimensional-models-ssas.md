@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699023"
 ---
 # <a name="multidimensional-modeling-ssas"></a>다차원 모델링(SSAS)
   Analysis Services 다차원 솔루션은 여러 차원에서 비즈니스 데이터를 분석하기 위해 큐브 구조를 사용합니다. 다차원 모드는 Analysis Services의 기본 서버 모드입니다. 데이터 확장 요구 사항과 성능의 균형을 맞추기 위한 MOLAP, ROLAP 및 HOLAP 스토리지 모드와 함께 OLAP 데이터의 쿼리 및 계산 엔진을 포함합니다. Analysis Services OLAP 엔진은 광범위한 BI 도구와 함께 효과적으로 작동하는 업계 최고의 OLAP 서버입니다. 대부분의 Analysis Services 배포는 기존 OLAP 서버로 설치됩니다.  
@@ -27,13 +27,13 @@ ms.locfileid: "48117563"
  Analysis Services 다차원 데이터베이스를 사용할 경우 또 하나의 중요한 이점은 Excel, Reporting Services 및 PerformancePoint처럼 공통적으로 사용되는 BI 보고 도구는 물론 사용자 지정 애플리케이션 및 타사 솔루션과의 통합이 가능하다는 것입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [다차원 모델 솔루션 &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
+ [다차원 모델 솔루션&#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [다차원 model 데이터베이스&#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)  
   
- [역할 및 사용 권한 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
  [다차원 모델용 파워 뷰](power-view-for-multidimensional-models.md)  
   

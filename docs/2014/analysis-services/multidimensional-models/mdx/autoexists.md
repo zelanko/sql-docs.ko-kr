@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700529"
 ---
 # <a name="autoexists"></a>AUTOEXIST
   *AUTOEXIST* 개념에서는 동일한 계층의 특성 계층 멤버로 만들 수 있는 모든 조합의 결과로 존재하는 셀이 아니라 큐브에서 실제로 존재하는 셀로 큐브 공간을 제한합니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
@@ -315,9 +315,9 @@ WHERE (Measures.[Internet Sales Amount],
  [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](cube-space.md)   
  [튜플](tuples.md)   
- [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](visual-totals-and-non-visual-totals.md)   
  [MDX 언어 참조&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [다차원 식 & #40; Mdx& #41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

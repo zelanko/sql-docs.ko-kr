@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734914"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 예측 가능한 특성의 가능한 각 상태를 사용 하 여 입력된 특성의 가능한 각 상태를 결합 하 고 학습 데이터를 사용 하 여 확률을 계산 합니다. 나중에 이러한 확률을 분류 또는 회귀에 사용하여 입력 특성을 기반으로 예측 특성의 결과를 예측할 수 있습니다.  
@@ -52,13 +52,13 @@ ms.locfileid: "48203483"
 -   많은 입력과 비교적 적은 출력 간의 복잡한 관계를 분석하는 모든 예측 모델  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3 개의 뉴런 계층으로 구성 된 네트워크를 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 최대 3개의 뉴런 계층으로 구성된 신경망을 만듭니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
- **입력된 계층:** 입력 뉴런은 데이터 마이닝 모델 및 해당 확률에 대 한 모든 입력된 특성 값을 정의 합니다.  
+ **입력된 계층:** 입력된 뉴런은 데이터 마이닝 모델 및 해당 확률에 대 한 모든 입력된 특성 값을 정의 합니다.  
   
- **숨겨진 계층:** 숨겨진 뉴런은 입력된 뉴런에서 입력을 수신 하 고 출력 뉴런에 출력을 제공 합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 뉴런에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
+ **숨겨진된 계층:** 숨겨진 뉴런은 입력 뉴런에서 입력을 받아 출력 뉴런에 출력을 제공합니다. 숨겨진 뉴런은 입력의 다양한 확률에 가중치가 할당되는 위치입니다. 가중치는 숨겨진 뉴런에 대한 특정 입력의 관련성 또는 중요도를 설명합니다. 입력에 할당된 가중치가 클수록 해당 입력 값의 중요도도 큽니다. 가중치는 음수가 될 수 있으며 이 경우 입력이 특정 결과를 지지하는 것이 아니라 제한할 수 있음을 의미합니다.  
   
- **출력 계층:** 출력 뉴런은 데이터 마이닝 모델에 대 한 예측 가능한 특성 값을 나타냅니다.  
+ **출력 계층:** 출력 뉴런은 데이터 마이닝 모델의 예측 가능한 특성 값을 나타냅니다.  
   
  입력 계층, 숨겨진 계층 및 출력 계층이 생성되고 점수가 매겨지는 방법에 대한 자세한 내용은 [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)를 참조하세요.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48203483"
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)   
- [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](neural-network-model-query-examples.md)   
  [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)  
   

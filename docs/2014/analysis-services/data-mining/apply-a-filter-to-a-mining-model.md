@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692095"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
   마이닝 구조에 중첩 테이블이 포함된 경우 사례 테이블, 중첩 테이블 또는 두 테이블 모두에 필터를 적용할 수 있습니다.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **값** 입력란을 클릭하고 상자에 값을 입력합니다.  
   
-     예를 들어 `Income`을(를) 열로 선택하고 보다 큼 연산자(>)를 선택한 다음 `30000`을(를) 입력합니다.  
+     예를 들어 선택할 `Income` 열 선택 큼 연산자 (>)를 입력 한 후와 `30000`합니다.  
   
 9. 표에서 다음 행을 클릭합니다.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 7-8단계의 설명에 따라 연산자를 선택하고 값을 입력합니다.  
   
-     예를 들어 `Income`을(를) 열로 다시 선택하고 보다 작음 연산자(<)를 선택한 다음 `40000`을(를) 입력합니다.  
+     예를 들어 선택할 `Income` 다시 열 보다 작음 (<) 연산자를 선택한 다음 입력 `40000`합니다.  
   
 12. 표에서 다음 행을 클릭합니다.  
   

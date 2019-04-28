@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721995"
 ---
 # <a name="articles"></a>아티클
   **아티클** 페이지에서 게시에 아티클로 포함할 데이터베이스 개체를 지정할 수 있습니다. 하나 이상의 다른 데이터베이스 개체에 종속된 데이터베이스 개체를 게시하는 경우 참조된 개체를 모두 게시해야 합니다. 예를 들어 테이블에 종속된 뷰를 게시하는 경우 테이블도 게시해야 합니다.  

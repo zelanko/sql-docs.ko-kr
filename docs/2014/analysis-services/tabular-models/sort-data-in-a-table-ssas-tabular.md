@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794373"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>테이블의 데이터 정렬(SSAS 테이블 형식)
   하나 이상의 열에 있는 데이터를 텍스트 및 숫자별로 오름차순 또는 내림차순으로 정렬할 수 있습니다.  
@@ -48,8 +48,8 @@ ms.locfileid: "48081853"
     >  결과가 예상과 다른 경우 열에 숫자가 아니라 텍스트로 저장된 숫자가 포함되어 있을 수 있습니다. 예를 들어 일부 재무 회계 시스템에서 가져온 음수 또는 '(아포스트로피)와 함께 입력한 숫자는 텍스트로 저장됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 필터링 및 정렬 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
+ [데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)  
   
   

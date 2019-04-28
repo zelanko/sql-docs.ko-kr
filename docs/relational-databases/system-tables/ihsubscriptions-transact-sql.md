@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719610"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "52823577"
 |**timestamp**|**timestamp**|구독을 만든 날짜와 시간입니다.|  
 |**queued_reinit**|**bit**|아티클을 초기화 또는 다시 초기화하도록 표시할지 여부를 지정합니다. 값이 **1** 구독된 아티클을 초기화 또는 다시 초기화 하도록 표시 되도록 지정 합니다.|  
 |**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 구독 합니다.<br /><br /> **2** = 활성입니다.|  
-|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = automatic.<br /><br /> **2** = none입니다.|  
+|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = Automatic.<br /><br /> **2** = none입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기-배포 에이전트가 구독자에서 실행 됩니다.<br /><br /> **1** = 끌어오기-배포 에이전트가 배포자에서 실행 됩니다.|  
 |**update_mode**|**tinyint**|업데이트 모드입니다.<br /><br /> **0** = 읽기 전용입니다.<br /><br /> **1** = 즉시 업데이트 합니다.|  
-|**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** 않습니다 = 다시 보내지 않습니다.|  
+|**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** 않습니다 = 다시 보내지 않습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

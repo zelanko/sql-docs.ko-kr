@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bdbed10df5dd2d8b52fdaa49d04758d150098b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991478"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>이미지 파일로 내보내기(보고서 작성기 및 SSRS)
   이미지 렌더링 확장 프로그램은 보고서를 비트맵이나 메타파일로 렌더링합니다. 기본적으로 이미지 렌더링 확장 프로그램은 보고서를 여러 페이지로 볼 수 있도록 TIFF 파일로 만듭니다. 클라이언트가 이미지를 수신하면 이미지 뷰어에서 확인하거나 인쇄할 수 있습니다. 이 항목에서는 이미지 렌더러 관련 정보를 제공하고 렌더링 규칙의 예외를 설명합니다.  

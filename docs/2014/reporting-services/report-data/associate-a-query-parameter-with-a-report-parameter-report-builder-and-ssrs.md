@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 290da32b7ca9c1ab61f84371152c7b72f8168a10
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697528"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>보고서 매개 변수와 쿼리 매개 변수 연결(보고서 작성기 및 SSRS)
   쿼리 변수가 포함된 데이터 세트 쿼리를 정의할 경우 쿼리 명령이 구문 분석됩니다. 각 쿼리 변수에 대해 해당 데이터 세트 매개 변수 및 보고서 매개 변수가 생성됩니다. 데이터 세트 매개 변수는 보고서 매개 변수를 가리킵니다. 이를 통해 사용자는 쿼리에 직접 전달되는 값을 입력할 수 있습니다. 쿼리 명령을 편집할 때마다 동일한 프로세스가 수행됩니다.  

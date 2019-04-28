@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d29adab062e11be3e6a74b604a6e70453d5856ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735241"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact(dBASE 드라이버)
 > [!NOTE]  

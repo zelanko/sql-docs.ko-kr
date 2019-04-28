@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc4665cb0730b283491bffd1a3bd27c8707ffb09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792639"
 ---
 # <a name="importing-and-exporting-knowledge"></a>기술 자료 가져오기 및 내보내기
   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 직접 기술 자료와 도메인을 만들거나 기술 자료의 정보를 가져오거나 내보낼 수 있습니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 애플리케이션에서 가져오기 및 내보내기 작업에 데이터 파일을 사용하거나 가져오기 작업에 Excel 파일을 사용할 수 있습니다. 사용되는 데이터 파일은 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )로 만들어 암호화된 파일로서 확장명이 .dqs입니다. Microsoft Excel에서 만든 파일은 .xlsx, .xls 또는.csv 확장명을 가질 수 있습니다. 이러한 작업을 통해 데이터 정리와 일치를 수행하는 데 사용하는 기술 자료를 보다 융통성 있게 작성하고 공유할 수 있습니다.  

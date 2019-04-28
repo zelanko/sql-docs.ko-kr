@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99aabef0bd8e7ba293c0e66428607fe7fb4642e6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721725"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 스냅숏을 만드는 방법에 대해 설명합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "53361941"
   
 3.  선택적으로 스냅숏을 새로 고칠 일정을 지정합니다.  
   
-    1.   **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
+    1.  **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
   
     2.  기본으로 제공되는 스냅숏 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   

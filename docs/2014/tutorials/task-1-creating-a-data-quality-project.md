@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735811"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>작업 1: 데이터 품질 프로젝트 만들기
   이 작업에서는 이 자습서의 앞 부분에서 만든 Suppliers 기술 자료에 대해 Excel 파일에서 공급자 데이터를 정리하기 위한 데이터 품질 프로젝트를 만듭니다.  

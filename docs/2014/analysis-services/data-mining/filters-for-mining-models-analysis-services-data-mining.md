@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722425"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>마이닝 모델에 대한 필터(Analysis Services - 데이터 마이닝)
   데이터 기반 모델 필터링을 사용하면 마이닝 구조에서 데이터의 하위 집합을 사용하는 마이닝 모델을 만들 수 있습니다. 포괄적인 데이터 원본 뷰를 기반으로 단일 마이닝 구조를 만들 수 있으므로 필터링을 사용하면 마이닝 구조 및 데이터 원본을 유연하게 디자인할 수 있습니다. 그런 다음 데이터의 각 하위 집합에 대해 서로 다른 구조 및 관련 모델을 작성하는 대신 다양한 모델의 학습 및 테스트에 해당 데이터의 일부만 사용하기 위한 필터를 만들 수 있습니다.  

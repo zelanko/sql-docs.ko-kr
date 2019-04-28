@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715180"
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
   분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48193753"
 >  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘은 분류된 열의 사용을 지원하지 않습니다. 이 기능은 사용자 지정 알고리즘을 만드는 데 사용하기 위해 제공됩니다.  
   
 ## <a name="defining-a-classified-column"></a>분류된 열 정의  
- 분류 된 열의 데이터 형식 중 하나 여야 합니다 `Long` 또는 `Double`합니다.  
+ 분류된 열의 데이터 형식은 `Long` 또는 `Double` 중 하나여야 합니다.  
   
  다음 목록에서는 분류된 열에 대해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 지원하는 내용 유형을 설명합니다.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48193753"
  이 열의 값은 관련 값의 가중치 또는 사례 복제 요소입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [콘텐츠 형식 &#40;데이터 마이닝&#41;](content-types-data-mining.md)   
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
- [데이터 형식 &#40;데이터 마이닝&#41;](data-types-data-mining.md)  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](content-types-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
+ [데이터 형식&#40;데이터 마이닝&#41;](data-types-data-mining.md)  
   
   

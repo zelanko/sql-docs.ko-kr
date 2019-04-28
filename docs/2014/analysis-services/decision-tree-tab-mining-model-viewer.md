@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732684"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>의사 결정 트리 탭(마이닝 모델 뷰어)
   **의사 결정 트리** 창에서는 의사 결정 트리 모델에서 만들어진 의사 결정 규칙을 시각적으로 표현합니다. 의사 결정 규칙은 특정 결과로 가는 경로를 설명합니다.  
   
- **자세한 내용:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **참조 항목:** [Microsoft 의사 결정 트리 알고리즘](data-mining/microsoft-decision-trees-algorithm.md), [Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -32,7 +32,7 @@ ms.locfileid: "48194493"
  **마이닝 모델**  
  현재 마이닝 구조에서 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **확대/축소**  
@@ -66,8 +66,8 @@ ms.locfileid: "48194493"
  트리 그래프에 표시되는 수준 수를 조정하려면 슬라이더 막대를 오른쪽이나 왼쪽으로 이동합니다. 모델의 모든 노드를 보려면 막대를 맨 오른쪽으로 이동합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

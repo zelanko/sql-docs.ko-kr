@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e56e641a594d9a543c70485dc37daaf83f5e46f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724188"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47757364"
 |state|**int**|트랜잭션의 상태입니다.<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|트랜잭션 상태에 대한 설명입니다.|  
 |result|**int**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> error<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|이 트랜잭션의 결과입니다. 가능한 값은 다음과 같습니다.<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|내부적으로만 사용됩니다.|  
 |is_speculative|**bit**|내부적으로만 사용됩니다.|  
 |is_prepared|**bit**|내부적으로만 사용됩니다.|  

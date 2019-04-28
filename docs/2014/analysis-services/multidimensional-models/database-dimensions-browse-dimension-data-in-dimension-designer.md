@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726747"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>차원 디자이너에서 차원 데이터 찾아보기
   **에서 액세스하는 차원 디자이너의** 브라우저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 차원에 있는 데이터를 찾아볼 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48114190"
     >  차원에는 선택한 언어에 대해 정의된 번역이 있어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [차원 소개 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [차원 소개&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 차원](dimensions-in-multidimensional-models.md)  
   
   

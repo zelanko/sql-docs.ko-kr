@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724218"
 ---
 # <a name="hard-coded-sql-statements"></a>하드 코딩된 SQL 문
 일반적으로 고정 된 작업을 수행 하는 응용 프로그램에 하드 코딩 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템을 열고 판매 주문 목록 다음 호출을 사용할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47746241"
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- 여러 가지 이점이 있습니다 하드 코딩 된 SQL 문에: 때 응용 프로그램에 씌; 테스트할 수 있습니다 간단 하 게; 런타임에 생성 하는 문을 보다 구현 및 응용 프로그램을 간소화할 수 있습니다.  
+ 하드 코드 된 SQL 문에 장점은 다음과 같습니다. 응용 프로그램; 쓰면 테스트할 수 있습니다. 간단 하 게; 런타임에 생성 하는 문을 보다 구현 및 응용 프로그램을 간소화할 수 있습니다.  
   
  문 준비와 문 매개 변수를 사용 하 여 하드 코드 된 SQL 문을 사용 하 여 더 나은 방법 제공 합니다. 예를 들어 부품 테이블 PartID, 설명 및 가격 열을 포함 합니다. 이 테이블에 새 행을 삽입 하는 한 가지 방법은 생성 하 고 실행 하는 것을 **삽입** 문:  
   

@@ -1,27 +1,23 @@
 ---
 title: 참조 관계를 정의 및 참조 관계 속성 | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- referenced dimension relationship
-- relationships [Analysis Services], referenced dimensions
-ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 0b173aa62dfe5656bfc784c766791c294453596c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700109"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>참조 관계 및 참조 관계 속성 정의
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   참조 차원 관계는 큐브 디자이너의 **차원 용도** 탭에서 다음을 지정하여 정의됩니다.  
   
 -   조인할 중간 차원. 일반 차원이나 다른 참조 차원이 될 수 있습니다.  

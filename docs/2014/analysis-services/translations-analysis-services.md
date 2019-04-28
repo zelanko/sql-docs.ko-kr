@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794484"
 ---
 # <a name="translations-analysis-services"></a>번역(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
@@ -54,7 +54,7 @@ ms.locfileid: "50145958"
   
  날짜, 시간 및 통화에 대한 형식은 번역을 통해 구현되지 않습니다. 클라이언트의 로캘을 기반으로 문화 관련 형식을 동적으로 제공하려면 통화 변환 마법사와 `FormatString` 속성을 사용합니다. 자세한 내용은 [통화 변환&#40;Analysis Services&#41;](currency-conversions-analysis-services.md) 및 [FormatString 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)를 참조하세요.  
   
- Analysis Services 자습서의[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 에서는 번역 만들기 및 테스트를 위한 절차를 순서대로 안내합니다.  
+ [9 단원: 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md) Analysis Services 자습서에 안내 번역 만들기 및 테스트에 대 한 단계입니다.  
   
 ## <a name="defining-translations"></a>번역 정의  
  번역을 정의하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스, 차원 또는 큐브 개체의 자식으로서 `Translation` 개체가 생성됩니다. [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 를 사용하여 솔루션을 열고 번역을 정의합니다.  

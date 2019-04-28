@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721072"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
   지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에서 이벤트를 보기 위한 속성을 제공합니다.  
@@ -42,11 +42,11 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
-|InstanceName|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
-|LogDate|데이터 형식: `datetime`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
-|메시지|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
-|ProcessInfo|데이터 형식: `string`<br /><br /> 액세스 유형: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
+|FileName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
+|InstanceName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
+|LogDate|데이터 형식: `datetime`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
+|메시지|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
+|ProcessInfo|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -91,7 +91,7 @@ Next
   
 -   오류 로그를 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그는 다음 경로에 있습니다 (여기서 \< *드라이브 >* 설치한 드라이브를 나타내고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 고 \< *InstanceName*>는 인스턴스의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<드라이브 >: \Program Files\Microsoft SQL Server\MSSQL12** **.\< N a m e > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12** **.\<InstanceName>\MSSQL\Log**  
   
  방화벽을 통해 연결하는 경우 방화벽에 원격 대상 컴퓨터의 WMI에 대한 예외가 설정되어 있는지 확인합니다. 자세한 내용은 [WMI Remotely Starting with Windows Vista 연결할](https://go.microsoft.com/fwlink/?LinkId=178848)합니다.  
   

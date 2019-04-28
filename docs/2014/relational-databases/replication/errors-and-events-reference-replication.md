@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721324"
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
   설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "52781035"
 |MSSQL_ENG021642. [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|유형이 다른 게시자에는 연결된 서버가 필요합니다. 이름이 '%s'인 연결된 서버가 이미 있습니다. 연결된 서버를 제거하거나 다른 게시자 이름을 선택하십시오.|  
 |MSSQL_ENG021663. [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|원본 테이블 [%s].[%s]에 대해 올바른 기본 키를 찾을 수 없습니다.|  
 |MSSQL_ENG021684. [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|Oracle 게시자 '%s'의 관리자 로그인과 연관된 사용 권한이 충분하지 않습니다.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s'은(는) '컴퓨터\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' 형식의 올바른 Windows 로그인 해야 합니다. '\' 또는 '도메인 '입니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|계속하려면 먼저 '%s'을(를) 통해 '%s' 에이전트 작업을 추가해야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|'%2'에서 '%1'을(를) 실행할 수 없습니다.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|병합 프로세스에서 '%1'의 생성 기록을 변경할 수 없습니다. 문제를 해결하려면 자세한 기록 로깅으로 동기화를 다시 시작하고 기록할 출력 파일을 지정하십시오.|  

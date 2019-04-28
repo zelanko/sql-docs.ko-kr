@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703274"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analysis Services 인스턴스 모니터
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 성능 모니터( [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] PerfMon **)를 사용하여**의 성능을 모니터할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 작성 및 관리하고 추적 결과를 분석 및 재생할 수 있습니다. 성능 모니터는 다음 섹션에서 설명하는 것처럼 특정 카운터를 통해 인덱싱된 서버 상태를 보고합니다.  

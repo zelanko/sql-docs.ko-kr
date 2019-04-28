@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724498"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name =] N'*plan_guide_name*'  
+ [ @name = ] N'*plan_guide_name*'  
  계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 에 대 한 규칙을 따라야 [식별자](../../relational-databases/databases/database-identifiers.md) 하며 숫자 기호를 사용 하 여 시작할 수 없습니다 (#). 최대 길이인 *plan_guide_name* 는 124 자입니다.  
   
- [ @plan_handle =] *plan_handle*  
+ [ @plan_handle = ] *plan_handle*  
  계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 됩니다 **varbinary(64)** 합니다. *plan_handle* 에서 가져올 수 있습니다 합니다 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
   
- [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  지정 된 일괄 처리 안에 있는 문의 시작 위치를 식별 *plan_handle*합니다. *statement_start_offset* 됩니다 **int**, 기본값은 NULL입니다.  
   
  문 오프셋 statement_start_offset 열에 해당 합니다 [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰.  
@@ -126,8 +126,8 @@ GO
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

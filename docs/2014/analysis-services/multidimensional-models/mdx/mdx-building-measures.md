@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699789"
 ---
 # <a name="building-measures-in-mdx"></a>MDX로 측정값 만들기
   MDX에서 측정값은 테이블 형식 모델의 값을 반환하기 위해 식을 계산하여 확인되는 명명된 DAX 식입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 측정값을 구성하고 사용할 수 있으면 테이블 형식 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  
@@ -44,8 +44,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>관련 항목  
- [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [MEMBER 문 & #40; 만들기 Mdx& #41;](/sql/mdx/mdx-data-definition-create-member)   
+ [MDX 함수 참조 & #40; Mdx& #41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 문 & #40; Mdx& #41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

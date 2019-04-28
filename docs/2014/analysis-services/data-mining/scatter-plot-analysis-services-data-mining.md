@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733006"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>산점도(Analysis Services - 데이터 마이닝)
   *산점도* 는 모델로 예측되는 값과 데이터의 실제 값을 비교하여 그래프로 표시합니다. 산점도에서 실제 값은 X축을 따라 표시되고 예측 값은 Y축을 따라 표시됩니다. 또한 예측 값과 실제 값이 정확하게 일치하는 완벽한 예측을 보여 주는 선이 표시됩니다. 이 이상적인 45도 각도 선으로부터 점의 거리는 예측의 정확도를 나타냅니다.  
@@ -48,12 +48,12 @@ ms.locfileid: "48179173"
   
 |항목|링크|  
 |------------|-----------|  
-|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용 하 여 정확도 테스트 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|관련 차트 종류에 대해 설명합니다.|[리프트 차트 &#40;Analysis Services-데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트 &#40;Analysis Services-데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [분류 행렬 &#40;Analysis Services-데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
-|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사 &#40;Analysis Services-데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
-|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법 &#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|타겟 메일링 모델에 대한 리프트 차트를 만드는 방법을 보여 주는 연습을 제공합니다.|[기본 데이터 마이닝 자습서](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [리프트 차트를 사용하여 정확도 테스트&#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|관련 차트 종류에 대해 설명합니다.|[리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [수익 차트&#40;Analysis Services - 데이터 마이닝&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|마이닝 모델 및 마이닝 구조에 대한 교차 유효성 검사의 용도를 설명합니다.|[교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](cross-validation-analysis-services-data-mining.md)|  
+|리프트 차트 및 기타 정확도 차트를 만드는 단계를 설명합니다.|[테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
+ [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   
   

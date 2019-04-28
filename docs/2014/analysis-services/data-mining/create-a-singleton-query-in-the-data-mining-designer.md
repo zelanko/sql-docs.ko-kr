@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715060"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
   단일 쿼리는 단일 사례에 대한 예측을 만들려는 경우 유용합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
@@ -81,6 +81,6 @@ AS [t]
      새 화면이 열리고 쿼리 결과를 표시합니다. 방금 만든 DMX 문을 보려면 **SQL**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [예측 쿼리 &#40;데이터 마이닝&#41;](prediction-queries-data-mining.md)  
+ [예측 쿼리&#40;데이터 마이닝&#41;](prediction-queries-data-mining.md)  
   
   

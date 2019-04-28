@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 247548de6f3a89afac2143347d987a6f6d638c55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714821"
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>저장 프로시저를 사용하여 수동 추적 만들기
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 애플리케이션에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 애플리케이션을 쓸 수 있습니다.  

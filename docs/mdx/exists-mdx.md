@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690854"
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
 
@@ -94,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [비어 있지 않은 &#40;MDX&#41;](../mdx/nonempty-mdx.md)   

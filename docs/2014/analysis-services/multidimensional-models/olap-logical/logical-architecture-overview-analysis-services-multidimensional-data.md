@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699191"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
   Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 및 쿼리 하는 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 powerpivot 설치 된 Analysis Services의 인스턴스를 가리킵니다.  

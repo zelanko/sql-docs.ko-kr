@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725869"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
   차원 보안은 데이터가 아닌 차원 개체에 대한 권한을 설정하는 데 사용됩니다. 일반적으로, 차원에 대한 권한을 설정할 때 기본 목표는 처리 작업에 대한 액세스를 허용하거나 거부하는 것입니다.  
@@ -72,7 +72,7 @@ ms.locfileid: "50146328"
  [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709123"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete 메서드 예제(VB)
 다음 코드를 사용 하 여 프로시저를 삭제 하는 방법에 설명 합니다 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 메서드는 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션입니다.  

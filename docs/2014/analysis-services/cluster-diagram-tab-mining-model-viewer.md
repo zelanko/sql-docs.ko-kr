@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681031"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>클러스터 다이어그램 탭(마이닝 모델 뷰어)
   **클러스터 다이어그램** 탭은 클러스터링 모델에 포함된 모든 클러스터를 그래픽으로 표시합니다.  
   
- **자세한 내용:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **참조 항목:** [Microsoft 클러스터링 알고리즘](data-mining/microsoft-clustering-algorithm.md), [Microsoft 클러스터 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -32,7 +32,7 @@ ms.locfileid: "48184204"
  **마이닝 모델**  
  현재 마이닝 구조에서 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색할 뷰어를 선택합니다. 사용자 지정 클러스터링 뷰어 중 하나를 사용하거나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **확대/축소**  
@@ -71,8 +71,8 @@ ms.locfileid: "48184204"
  슬라이더를 위아래로 이동하여 클러스터 간에 표시되는 링크 수를 조정합니다. 슬라이더를 아래로 이동하면 클러스터 간의 가장 강한 연결만 남습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720452"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역의 행 및 열 데이터가 보고서에 표시되는 방법을 제어하려면 세부 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블 &#40;보고서 작성기 및 SSRS&#41;](tables-report-builder-and-ssrs.md), [행렬 &#40;보고서 작성기 및 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), 또는 [목록 &#40;보고서 작성기 및 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)합니다.  

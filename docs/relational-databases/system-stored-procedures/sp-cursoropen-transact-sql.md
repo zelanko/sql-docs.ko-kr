@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724038"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  와 마찬가지로 *scrollopt*하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청한 재정의할 수 있습니다 *ccopt* 값.  
   
- *행 개수*  
+ *rowcount*  
  AUTO_FETCH에 사용할 인출 버퍼 행 수입니다. 기본값은 20개 행입니다. *행 개수* 입력된 값과 반환 값으로 할당할 때 다르게 동작 합니다.  
   
 |입력 값일 때|반환 값일 때|  
@@ -118,7 +118,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  FETCH 작업이 진행 중입니다.  
   
- A  
+ 변수를 잠그기 위한  
  이 커서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 할당 취소되었으며 사용할 수 없습니다.  
   
  오류가 발생하면 반환 값이 불일치할 수 있으며 정확도를 보장할 수 없습니다.  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  빠른 정방향 커서가 자동으로 닫혔습니다.  
   
 > [!NOTE]  
->  sp_cursoropen 프로시저가 성공적으로 실행되면 TDS 열 형식 정보(0xa0 및 0xa1 메시지)가 포함된 결과 집합과 RPC 반환 매개 변수가 전송됩니다. 프로시저가 실패하면 하나 이상의 RPC 오류 메시지가 전송됩니다. 두 경우 모두 행 데이터가 반환 됩니다 및 *수행* 메시지 수는 0이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이전 버전을 사용 중인 경우 0xa0, 0xa1(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 버전을 사용 중인 경우에는 0x81(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다.  
+>  RPC 반환 매개 변수 및 결과 TDS 열 형식 정보를 사용 하 여 집합을 sp_cursoropen 프로시저가 성공적으로 실행 하는 경우 (0xa0 및 0xa1 메시지) 전송 됩니다. 프로시저가 실패하면 하나 이상의 RPC 오류 메시지가 전송됩니다. 두 경우 모두 행 데이터가 반환 됩니다 및 *수행* 메시지 수는 0이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이전 버전을 사용 중인 경우 0xa0, 0xa1(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 버전을 사용 중인 경우에는 0x81(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다.  
   
 ## <a name="remarks"></a>Remarks  
   

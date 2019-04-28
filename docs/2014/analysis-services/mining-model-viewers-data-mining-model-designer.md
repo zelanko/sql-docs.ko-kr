@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727939"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48152810"
  **마이닝 모델**  
  현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 마이닝 모델은 연결된 사용자 지정 뷰어에서 먼저 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 가 각 마이닝 모델에 대해 제공하는 뷰어, [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함되어 있습니다.  
   
  다음 다이어그램에서는 같은 모델에 대해 사용자 지정 뷰어와 일반 뷰어를 보여 줍니다.  

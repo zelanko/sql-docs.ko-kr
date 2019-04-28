@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722826"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
   A *데이터 마이닝 알고리즘* 는 데이터에서 데이터 마이닝 모델을 만드는 추론 및 계산 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 정의합니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "48218573"
 |**기술 참조**|알고리즘 구현에 대한 기술 정보를 제공하고 필요한 경우 학술 참조를 제공합니다. 알고리즘의 동작을 제어하고 모델 결과를 사용자 지정하기 위해 설정할 수 있는 매개 변수를 나열합니다. 데이터 요구 사항에 설명하고 가능한 경우 성능 팁을 제공합니다.|  
 ||[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |**모델 콘텐츠**|각 데이터 마이닝 모델 유형에서 정보가 구성되는 방법과 각 노드에 저장된 정보를 해석하는 방법을 설명합니다.|  
-||[마이닝 모델 콘텐츠 연결 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 콘텐츠 의사 결정 트리 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 콘텐츠 로지스틱 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [마이닝 모델 콘텐츠 Naive Bayes 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 콘텐츠 시퀀스 클러스터링 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [마이닝 모델 콘텐츠 시계열 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+||[연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [선형 회귀 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [시퀀스 클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**데이터 마이닝 쿼리**|각 모델 유형과 함께 사용할 수 있는 여러 쿼리를 제공합니다. 모델의 패턴에 대해 알아 볼 수 있는 내용 쿼리 및 패턴을 기반으로 예측을 작성하는 데 도움이 되는 예측 쿼리 등을 예로 들 수 있습니다.|  
 ||[연결 모델 쿼리 예제](association-model-query-examples.md)<br /><br /> [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)<br /><br /> [의사 결정 트리 모델 쿼리 예제](decision-trees-model-query-examples.md)<br /><br /> [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)<br /><br /> [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)<br /><br /> [Naive Bayes 모델 쿼리 예제](naive-bayes-model-query-examples.md)<br /><br /> [신경망 모델 쿼리 예제](neural-network-model-query-examples.md)<br /><br /> [시퀀스 클러스터링 모델 쿼리 예제](sequence-clustering-model-query-examples.md)<br /><br /> [시계열 모델 쿼리 예제](time-series-model-query-examples.md)|  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48218573"
 |사용자 지정 플러그 인 알고리즘 만들기|[플러그 인 알고리즘](plugin-algorithms.md)|  
 |알고리즘별 뷰어를 사용하여 모델 탐색|[데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)|  
 |일반 테이블 형식을 사용하여 모델 내용 보기|[Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|데이터를 설정하고 알고리즘을 사용하여 모델을 만드는 방법에 대해 알아봅니다|[마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)|  
+|데이터를 설정하고 알고리즘을 사용하여 모델을 만드는 방법에 대해 알아봅니다|[마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [마이닝 모델 & #40; Analysis Services-데이터 마이닝 & #41;](mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 도구](data-mining-tools.md)  

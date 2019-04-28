@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681220"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>데이터 마이닝 준비 검사 목록
   마이닝 추가 기능을 사용하여 쉽고 재미있게 모델을 만들고 시험해 볼 수 있지만 반복 및 실행 가능한 결과가 필요한 경우 기본 비즈니스 요구 사항을 공식화하고 데이터를 구하고 준비하는 데 충분한 시간을 가져야 합니다. 이 단원에서는 검사 활동을 계획하기 위한 검사 목록을 다루며, 일반적인 문제에 대해 설명합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52519934"
   
 -   데이터 집합을 결합한 경우, 동일한 데이터 열이 여러 개 있는지 확인했습니까?  
   
- **원본 데이터가 어디에 저장되고, 어디에서 왔고, 어떻게 처리되는지 알고 있습니다. 프로세스가 필요한 경우 쉽게 반복할 수 있습니다.**  
+ **원본 데이터를 저장, from, 출처와 처리 되는 방법을 알고 있습니다. 프로세스가 필요한 경우 쉽게 반복할 수 있습니다.**  
  일회성 데이터 집합 실험에 대 한 세밀 하 게 되지만 운영 데이터에는 치료 프로세스를 적용할 수 하는 방법에 대해 미리 생각 하려는 모델을 프로덕션으로 이동 하려는 경우. 또한 운영 데이터가 있는 경우 알아야 할 방법을 어떻게 변경 되었는지 맞습니다 전에-어떻게이 반올림 또는 요약 확실히 알아야 할 것입니다.  
   
 -   실험을 반복 실행하시겠습니까?  
@@ -111,7 +111,7 @@ ms.locfileid: "52519934"
   
 -   도메인 전문가의 도움을 받아 결과를 해석하고 개선 사항을 제안 받을 수 있습니까?  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝을 위한 데이터 선택](choosing-data-for-data-mining.md)  
   
   

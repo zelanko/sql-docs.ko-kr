@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3869a18e8b19062a0bc6eabfcf45b53d4220dab0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726319"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>데이터 원본 뷰 삭제(Analysis Services)
   OLAP 프로젝트에서 DSV(데이터 원본 뷰)를 더 이상 사용하지 않으려는 경우 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 프로젝트에서 해당 뷰를 삭제할 수 있습니다.  
@@ -35,6 +35,6 @@ ms.locfileid: "48197599"
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰에서 속성 변경 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

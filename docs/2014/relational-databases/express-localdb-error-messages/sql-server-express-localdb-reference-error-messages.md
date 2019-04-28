@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714910"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB 오류 메시지 참조
   이 섹션에서는 다음 SQL Server Express LocalDB 오류 메시지에 대한 참조 정보를 제공합니다.  

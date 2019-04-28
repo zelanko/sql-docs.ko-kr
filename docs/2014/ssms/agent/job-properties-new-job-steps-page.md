@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695653"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>작업 속성: 새 작업(단계 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 단계를 확인하고 구성할 수 있습니다.  

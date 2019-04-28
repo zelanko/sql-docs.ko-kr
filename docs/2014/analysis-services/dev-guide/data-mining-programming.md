@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732269"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  

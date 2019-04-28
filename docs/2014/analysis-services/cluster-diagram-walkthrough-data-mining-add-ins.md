@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680949"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>클러스터 다이어그램 연습(데이터 마이닝 추가 기능)
   클러스터링 모델을 만든 후 Visio를 사용 하 여 가져올 수 있습니다 합니다 **클러스터** 셰이프 및 사용자 지정 레이아웃을 개선 하 고 계속 합니다. 합니다 **Visio 용 데이터 마이닝 셰이프** 데이터 마이닝 다이어그램을 사용 하 여 작업에 대 한 다음 사용자 지정 컨트롤을 포함 합니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "52420008"
   
      ![셰이프 색을 선택 하는 고급](media/dm13-visio-clusteroptions-advanced.gif "셰이프 색을 선택 하는 고급을 클릭 합니다.")  
   
-     **팁:** 일부 색은 Visio 테마 및 셰이프 편집 컨트롤을 사용하여 나중에 변경할 수 있습니다. 그러나 Visio 테마는 이러한 색 선택 중 일부를 재정의하기도 하므로 기본 색부터 시작하여 점차적으로 변경을 적용하는 것이 좋습니다.  
+     **팁:** 일부 색은 Visio 테마 및 셰이프 편집 컨트롤을 사용 하 여 나중에 변경할 수 있습니다. 그러나 Visio 테마는 이러한 색 선택 중 일부를 재정의하기도 하므로 기본 색부터 시작하여 점차적으로 변경을 적용하는 것이 좋습니다.  
   
 9. 클릭 **완료** 그래프를 만듭니다.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "52420008"
   
      ![클러스터에 대 한 세부 정보를 가져오려면 설명을 클릭](media/dm13-visio-cluster-description-control.gif "클러스터에 대 한 세부 정보를 가져오려면 설명을 클릭")  
   
-     **가장자리 수준**  
+     **Edge Strength**  
      클러스터를 연결하는 선에 대한 신뢰성 점수를 표시합니다.  
   
      그러나 일부 배경을 비롯하여 마법사에서 생성된 기본 서식 이외의 특수한 서식을 적용하는 경우 이러한 점수가 표시되지 않을 수도 있습니다.  

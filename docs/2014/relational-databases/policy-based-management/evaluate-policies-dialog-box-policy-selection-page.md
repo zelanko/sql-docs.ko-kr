@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705132"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책을 평가합니다. **평가 결과** 페이지를 선택하면 정책을 준수하지 않는 대상 집합의 항목에 정책을 적용할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "52780955"
  **정책: 범주**  
  정책의 범주입니다. 이 부분은 읽기 전용입니다.  
   
- **정책: 패싯**  
+ **정책: Facet**  
  정책에 의해 구현되는 패싯입니다. 이 부분은 읽기 전용입니다.  
   
  **평가**  
@@ -60,7 +60,7 @@ ms.locfileid: "52780955"
   
     -   대상 서버 유형은 정책을 평가하는 서버 유형과 다릅니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 만든 정책을 평가하면 빈 대상 집합을 받게 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)   
  [정책 평가 대화 상자, 평가 결과 페이지](evaluate-policies-dialog-box-evaluation-results-page.md)  
   

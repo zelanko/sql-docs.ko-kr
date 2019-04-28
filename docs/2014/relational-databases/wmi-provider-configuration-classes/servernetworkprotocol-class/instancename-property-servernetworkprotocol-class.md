@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 134e5a05f0dcb79daab40c53723dff467c83e5f8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736193"
 ---
 # <a name="instancename-property-servernetworkprotocol-class"></a>InstanceName 속성(ServerNetworkProtocol 클래스)
   인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 네트워크 프로토콜에서 참조 되는 합니다.  

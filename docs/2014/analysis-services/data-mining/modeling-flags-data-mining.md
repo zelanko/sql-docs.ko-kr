@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 427744a5971cae92f5a3a8e111a85dd5a858b882
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733189"
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  

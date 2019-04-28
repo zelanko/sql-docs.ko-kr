@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726069"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  
   
- Analysis Services의 기본 쿼리 구조는 해당 특정 개체에 대한 사용자 권한 집합을 포함하는 큐브(또는 테이블 형식 모델)입니다. 데이터베이스 로그인 및 사용자 권한(보통 `db_datareader`)이 데이터베이스 자체에 설정되는 관계형 데이터베이스 엔진과는 대조적으로 Analysis Services 데이터베이스는 일반적으로 데이터 모델에서 기본 쿼리 개체의 컨테이너입니다. 우선적인 목표가 큐브 또는 테이블 형식 모델의 데이터에 액세스하는 것이라면 일단 데이터베이스 사용 권한을 바이패스하고 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) 항목으로 이동해도 됩니다.  
+ Analysis Services의 기본 쿼리 구조는 해당 특정 개체에 대한 사용자 권한 집합을 포함하는 큐브(또는 테이블 형식 모델)입니다. 데이터베이스 로그인 및 사용자 권한(보통 `db_datareader`)이 데이터베이스 자체에 설정되는 관계형 데이터베이스 엔진과는 대조적으로 Analysis Services 데이터베이스는 일반적으로 데이터 모델에서 기본 쿼리 개체의 컨테이너입니다. 우선적인 목표가 큐브 또는 테이블 형식 모델에 대 한 데이터 액세스를 사용 하도록 설정 하려면 경우에 이제 데이터베이스 사용 권한을 바이패스 하 고이 항목에서는 바로 이동할 수 있습니다. [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)합니다.  
   
  Analysis Services의 데이터베이스 사용 권한은 데이터베이스의 모든 권한과 마찬가지로 관리 기능을 광범위하게 사용하도록 설정하거나 처리 작업을 위임한 경우에 더 세밀하게 설정할 수 있습니다. Analysis Services 데이터베이스의 사용 권한 수준이 다음 그림에 나와 있으며 아래에 설명된 대로 **역할 만들기** 대화 상자의 **일반** 창에서 지정합니다.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149013"
 > [!NOTE]  
 >  또한 서버 관리자(서버 관리자 역할의 구성원)는 해당 서버의 모든 데이터베이스에 대해 암시적으로 모든 권한을 갖게 됩니다.  
   
- `Process Database` 이 권한은 데이터베이스 수준에서 처리를 위임 하는 데 사용 되며 대조적입니다. 관리자는 다른 사용자 또는 서비스가 데이터베이스의 모든 개체에 대한 처리 작업을 호출할 수 있는 역할을 만들어 이 작업을 오프로드할 수 있습니다. 또는 특정 개체에 대한 처리를 사용할 수 있는 역할을 만들 수도 있습니다. 자세한 내용은 [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 를 참조하세요.  
+ `Process Database` 이 권한은 데이터베이스 수준에서 처리를 위임 하는 데 사용 되며 대조적입니다. 관리자는 다른 사용자 또는 서비스가 데이터베이스의 모든 개체에 대한 처리 작업을 호출할 수 있는 역할을 만들어 이 작업을 오프로드할 수 있습니다. 또는 특정 개체에 대한 처리를 사용할 수 있는 역할을 만들 수도 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 를 참조하세요.  
   
- `Read Definition` 이 사용 권한은 개체 메타 데이터를 읽을 수 있는 기능을 부여 하는 권한은 연결 된 데이터를 볼 수 기능을 제외 합니다. 일반적으로 이 사용 권한은 전용 처리를 위해 만든 역할에 사용되며, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 도구를 사용하여 데이터베이스를 대화형으로 처리하는 기능을 추가합니다. `Read Definition` 권한이 없는 `Process Database` 권한은 스크립팅된 시나리오에서만 효과적입니다. 아마도 SSIS 또는 다른 스케줄러를 통해 처리를 자동화 하려는 경우 아마도 원하는 있는 역할을 만드는 `Process Database` 없이 `Read Definition`합니다. 그렇지 않으면 동일한 역할에 두 속성을 함께 결합하여 사용자 인터페이스에서 데이터 모델을 시각적으로 표시하는 SQL Server 도구를 통해 무인 및 대화형 처리를 둘 다 지원하는 방법도 고려해 볼 수 있습니다.  
+ `Read Definition` 이 사용 권한은 개체 메타 데이터를 읽을 수 있는 기능을 부여 하는 권한은 연결 된 데이터를 볼 수 기능을 제외 합니다. 일반적으로 이 사용 권한은 전용 처리를 위해 만든 역할에 사용되며, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 와 같은 도구를 사용하여 데이터베이스를 대화형으로 처리하는 기능을 추가합니다. `Read Definition` 권한이 없는 `Process Database` 권한은 스크립팅된 시나리오에서만 효과적입니다. SSIS 또는 다른 스케줄러를 통해 처리를 자동화할 계획인 경우 `Process Database` 권한은 없고 `Read Definition` 권한만 있는 역할을 만들 수 있습니다. 그렇지 않으면 동일한 역할에 두 속성을 함께 결합하여 사용자 인터페이스에서 데이터 모델을 시각적으로 표시하는 SQL Server 도구를 통해 무인 및 대화형 처리를 둘 다 지원하는 방법도 고려해 볼 수 있습니다.  
   
 ## <a name="full-control-administrator-permissions"></a>모든 권한(관리자)  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 데이터베이스 관리자는 모든 권한(관리자)을 갖는 역할에 할당된 임의의 Windows 사용자 ID입니다. 데이터베이스 관리자는 데이터베이스 내에서 다음을 비롯한 모든 작업을 수행할 수 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "48149013"
   
 2.  **일반** 창에서 DBAdmin 등의 이름을 입력합니다.  
   
-3.  큐브에 대해 **모든 권한(관리자)** 확인란을 선택합니다. `Process Database` 및 `Read Definition` 권한은 자동으로 선택됩니다. 포함 하는 역할에 포함 된 항상 이러한 권한을 모두 `Full Control`합니다.  
+3.  큐브에 대해 **모든 권한(관리자)** 확인란을 선택합니다. `Process Database` 및 `Read Definition` 권한은 자동으로 선택됩니다. 이러한 권한은 모두 `Full Control`을 갖는 역할에 항상 포함됩니다.  
   
 4.  **멤버 자격** 창에서 이 역할을 사용하여 Analysis Services에 연결하는 Windows 사용자 및 그룹 계정을 입력합니다.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "48149013"
   
 ## <a name="see-also"></a>관련 항목  
  [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [처리 권한 부여 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

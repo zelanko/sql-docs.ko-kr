@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815728"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 데이터베이스 추가 마법사 사용(SQL Server Management Studio)
   가용성 그룹에 데이터베이스 추가 마법사를 사용하여 기존 AlwaysOn 가용성 그룹에 하나 이상의 데이터베이스를 손쉽게 추가할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48055641"
   
      [보안](#Security)  
   
--   **데이터베이스를 추가하려면:**  [가용성 그룹에 데이터베이스 추가 마법사 사용(SQL Server Management Studio)](#SSMSProcedure)  
+-   **데이터베이스를 추가 하려면 사용 합니다.**  [가용성 그룹 마법사 (SQL Server Management Studio)에 데이터베이스 추가](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 데이터베이스를 추가한 적이 없는, 하는 경우의 "가용성 데이터베이스" 섹션을 참조 하세요 [필수 조건, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)합니다.  

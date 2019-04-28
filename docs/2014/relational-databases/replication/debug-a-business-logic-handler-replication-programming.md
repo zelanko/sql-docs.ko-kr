@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721503"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
   비즈니스 논리 처리기를 사용하여 병합 구독이 동기화될 때 사용자 지정 비즈니스 논리를 호출할 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "54128763"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>로컬 컴퓨터의 비즈니스 논리 처리기를 디버깅하려면  
   
-1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 구독을 만듭니다. 자세한 내용은 [Configure Publishing and Distribution](configure-publishing-and-distribution.md) 하 고 [Create a Publication](publish/create-a-publication.md).  
+1.  게시 및 배포를 구성하고 게시를 만들고 게시에 대한 구독을 만듭니다. 자세한 내용은 [게시 및 배포 구성](configure-publishing-and-distribution.md) 및 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
   
 2.  비즈니스 논리 처리기를 만들고 등록합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요.  
   

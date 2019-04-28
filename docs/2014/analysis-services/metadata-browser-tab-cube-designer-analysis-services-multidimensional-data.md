@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727949"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>메타데이터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **브라우저** 탭에 있는 **메타데이터** 창을 사용하여 큐브 구조를 찾아보고, 관련 측정값을 확인하고, 차원을 보거나 만들 수 있습니다. 계층을 드릴다운하고, 사용 가능한 측정값 및 KPI 목록을 보고, 개체의 정규화된 이름을 복사할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48171153"
   
  테이블 형식 모델을 사용할 경우 함수 목록에 MDX 함수와 DAX 함수가 모두 포함됩니다. 그 외의 경우에는 MDX만 목록에 포함됩니다. 다차원 모델은 DAX 식을 개체 정의의 일부로 포함할 수는 있지만 DAX 함수를 직접 사용할 수는 없습니다.  
   
- 팁: DAX 함수가 포함된 폴더는 모두 대문자로 표시됩니다. 다른 모든 폴더에는 MDX 함수가 포함됩니다. 예를 들어 통계 함수를 위한 폴더가 두 개 있는 경우 **STATISTICAL** 에는 관련 DAX 함수가 포함됩니다.  
+ 팁:  DAX 함수가 포함 된 폴더는 모든 대문자에 나열 됩니다. 다른 모든 폴더에는 MDX 함수가 포함됩니다. 예를 들어 통계 함수를 위한 폴더가 두 가지. **통계** 는 관련된 DAX 함수가 포함 되어 있습니다.  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  다음 옵션은 **메타데이터** 창에서 요소를 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴를 통해 사용할 수 있습니다.  
@@ -47,8 +47,8 @@ ms.locfileid: "48171153"
 |옵션|Description|  
 |------------|-----------------|  
 |**쿼리에 추가**|쿼리 작성 영역의 아래쪽 창에 선택한 개체를 추가하려면 클릭합니다.|  
-|**필터에 추가**|선택한 차원, 특성, 계층 또는 수준을 **브라우저**의 필터 영역에 추가하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 차원, 특성, 계층 또는 수준을 선택한 경우에만 사용할 수 있습니다.|  
-|**복사**|선택한 항목을 클립보드에 추가하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 개체의 정규화된 이름을 복사합니다.|  
+|**필터에 추가**|선택한 차원, 특성, 계층 또는 수준을 **브라우저**의 필터 영역에 추가하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 차원, 특성, 계층, 경우에 또는 수준을 선택 합니다.|  
+|**복사**|선택한 항목을 클립보드에 추가하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 개체의 정규화 된 이름을 복사 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [도구 모음 &#40;브라우저 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

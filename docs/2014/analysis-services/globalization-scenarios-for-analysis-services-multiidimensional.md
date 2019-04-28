@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730607"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 다차원에 대한 세계화 시나리오
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 표 형식 데이터 모델과 다차원 데이터 모델 모두에서 다국어 데이터와 메타데이터를 저장 및 조작합니다. 데이터 스토리지는 유니코드 인코딩을 사용하는 문자 집합으로 된 유니코드(UTF-16)입니다. 데이터 모델에 ANSI 데이터를 로드하는 경우 문자는 유니코드 해당 코드 포인트를 사용하여 저장됩니다.  

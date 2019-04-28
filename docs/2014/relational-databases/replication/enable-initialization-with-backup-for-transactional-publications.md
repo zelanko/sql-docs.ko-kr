@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 046eb926391faff26bb3238dfd225619e9fec374
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721336"
 ---
 # <a name="enable-initialization-with-a-backup-for-transactional-publications-sql-server-management-studio"></a>트랜잭션 게시에 대한 백업으로 초기화 설정(SQL Server Management Studio)
   백업에서 트랜잭션 게시에 대한 구독을 초기화하려면 백업에서 초기화할 수 있도록 게시를 설정한 다음 구독을 만들 때 백업 정보를 지정합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52753195"
   
 1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **백업 파일에서 초기화 허용** 옵션에 대해 **True** 값을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [스냅숏 없이 트랜잭션 구독 초기화](initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

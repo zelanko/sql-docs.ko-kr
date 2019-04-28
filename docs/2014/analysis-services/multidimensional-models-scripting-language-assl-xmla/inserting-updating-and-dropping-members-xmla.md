@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727167"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
   사용할 수는 [삽입](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)를 [업데이트](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla), 및 [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) 명령은 xml에서 for Analysis (XMLA) 삽입, 업데이트 또는 쓰기 가능 차원에서 멤버를 삭제 합니다. 쓰기 가능 차원에 대 한 자세한 내용은 참조 하세요. [쓰기 가능한 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)합니다.  

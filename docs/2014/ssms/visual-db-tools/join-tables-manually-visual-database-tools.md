@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711060"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
   쿼리에 둘 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 데이터베이스에 저장된 테이블 관계 정보나 공용 데이터를 기반으로 테이블을 조인합니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)을 참조하세요. 하지만 쿼리 및 뷰 디자이너가 테이블을 자동으로 조인하지 않은 경우나 테이블간에 추가로 조인 조건을 만들려는 경우에는 테이블을 수동으로 조인하면 됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52812765"
   
  쿼리 및 뷰 디자이너는 [SQL 창](sql-pane-visual-database-tools.md)의 SQL 문에 INNER JOIN 절을 추가합니다. 조인 형식을 외부 조인으로 변경할 수 있습니다. 자세한 내용은 [외부 조인 만들기&#40;Visual Database Tools&#41;](create-outer-joins-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [조인을 사용한 쿼리&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   
   

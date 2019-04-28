@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6fbccf5cfd31e79252933a67b2e0c66a73ee6dc3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725507"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
   하위 큐브는 기본 데이터의 필터링된 뷰를 나타내는 큐브의 하위 집합입니다. 큐브를 하위 큐브로 제한하여 쿼리 성능을 높일 수 있습니다.  
@@ -67,7 +67,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8e04ec8fa809f4bea8c19e2e0167b943767224c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705334"
 ---
 # <a name="disable-lightweight-pooling"></a>경량 풀링 해제
   이 규칙은 서버에 경량 풀링이 해제되어 있는지 검사합니다. lightweightpooling을 1로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 파이버 모드 일정으로 전환됩니다. 파이버 모드는 UMS 작업자의 컨텍스트 전환으로 인해 중대한 성능 병목 상태가 발생하는 특정한 상황을 위한 것입니다. 이런 경우는 드물기 때문에 파이버 모드가 일반 시스템의 성능이나 확장성을 향상시키는 경우는 거의 없습니다.  

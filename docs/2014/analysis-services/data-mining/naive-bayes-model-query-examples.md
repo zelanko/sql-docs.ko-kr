@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733286"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Naive Bayes 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다. 이 섹션에서는 Microsoft Naive Bayes 알고리즘을 기반으로 하는 모델에 대해 이러한 쿼리를 만드는 방법을 설명합니다.  
@@ -89,10 +89,10 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|1.|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
-|TM_NaiveBayes|Bike Buyer|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Gender|Missing|0|0|1|  
+|TM_NaiveBayes|Bike Buyer|1.|8615|0.492736216|4|  
+|TM_NaiveBayes|Gender|Missing|0|0|1.|  
 |TM_NaiveBayes|Gender|F|8656|0.495081217|4|  
 |TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
   
@@ -100,7 +100,7 @@ WHERE NODE_TYPE = 26
   
  Naive Bayes 모델의 NODE_DISTRIBUTION 테이블에 제공되는 값에 대한 정의는 [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)를 참조하세요. 누락 값이 지지도 및 확률 계산에 주는 영향에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
-###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 특성에 대한 추가 정보 찾기  
+###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 특성에 대 한 추가 정보 찾기  
  Naive Bayes 모델에는 서로 다른 특성 간의 관계에 대한 복잡한 정보가 들어 있는 경우도 있으므로 이러한 관계를 가장 쉽게 보는 방법은 [Microsoft Naive Bayes 뷰어](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 사용하는 것입니다. 그러나 DMX 쿼리를 만들어 데이터를 반환할 수도 있습니다.  
   
  다음 예에서는 모델에서 특정 특성 `Region`에 대한 정보를 반환하는 방법을 보여 줍니다.  
@@ -116,7 +116,7 @@ WHERE ATTRIBUTE_NAME = 'Region'
   
 |NODE_TYPE|NODE_CAPTION|NODE_PROBABILITY|NODE_SUPPORT|MSOLAP_NODE_SCORE|NODE_TYPE|  
 |----------------|-------------------|-----------------------|-------------------|-------------------------|----------------|  
-|10|Bike Buyer -> Region|1|17484|84.51555875|10|  
+|10|Bike Buyer -> Region|1.|17484|84.51555875|10|  
 |11|Bike Buyer -> Region = Missing|0|0|0|11|  
 |11|Bike Buyer -> Region = North America|0.508236102|8886|0|11|  
 |11|Bike Buyer -> Region = Pacific|0.193891558|3390|0|11|  
@@ -168,7 +168,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Naive Bayes 모델을 사용하여 예측 만들기  
  Microsoft Naive Bayes 알고리즘은 일반적으로 예측에 사용되는 경우보다 입력 및 예측 가능한 특성 간의 관계를 탐색하는 데 사용되는 경우가 더 많습니다. 그러나 이 모델에서는 예측 및 연결 모두에 대해 예측 함수를 사용할 수 있습니다.  
   
-###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 단일 쿼리를 사용하여 결과 예측  
+###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 단일 쿼리를 사용 하 여 결과 예측  
  다음 쿼리에서는 단일 쿼리를 사용하여 새 값을 제공하고 모델을 기반으로 해당 특성을 갖는 고객이 자전거를 구입할 가능성이 있는지를 예측합니다. 회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 `TM_NaiveBayes` 모델을 선택하고 **단일 쿼리**를 선택한 다음 드롭다운 목록에서 `[Commute Distance]` 및 `Gender`의 값을 선택하여 다음과 같은 DMX 쿼리를 작성할 수 있습니다.  
   
 ```  
@@ -208,13 +208,13 @@ NATURAL PREDICTION JOIN
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
 |0|10161.5714|0.581192599|0.010530981|0|0|  
-|1|7321.428768|0.418750215|0.008945684|0|0|  
+|1.|7321.428768|0.418750215|0.008945684|0|0|  
 ||0.999828444|5.72E-05|5.72E-05|0|0|  
   
  표의 마지막 행에서는 누락 값의 지지도 및 확률에 대한 조정을 보여 줍니다. 분산 및 표준 편차 값은 항상 0이지만 Naive Bayes 모델에서는 연속 값을 모델링할 수 없습니다.  
   
 ###  <a name="bkmk_Query7"></a> 예제 쿼리 7: 연결 예측  
- 마이닝 구조에 예측 가능한 특성을 키로 사용하는 중첩 테이블이 들어 있는 경우 연결 분석에 Microsoft Naive Bayes 알고리즘을 사용할 수 있습니다. 예를 들어 데이터 마이닝 자습서의 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)에서 만든 마이닝 구조를 사용하여 Naive Bayes 모델을 작성할 수 있습니다. 이 예에 사용된 모델을 수정하여 사례 테이블에 수입 및 고객 지역에 대한 정보를 추가했습니다.  
+ 마이닝 구조에 예측 가능한 특성을 키로 사용하는 중첩 테이블이 들어 있는 경우 연결 분석에 Microsoft Naive Bayes 알고리즘을 사용할 수 있습니다. 예를 들어, Naive Bayes 모델에서 만든 마이닝 구조를 사용 하 여 작성할 수 있습니다 [단원 3: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 데이터 마이닝 자습서입니다. 이 예에 사용된 모델을 수정하여 사례 테이블에 수입 및 고객 지역에 대한 정보를 추가했습니다.  
   
  다음 쿼리 예에서는 `'Road Tire Tube'`제품의 구매와 관련된 제품을 예측하는 단일 쿼리를 보여 줍니다. 이 정보를 사용하여 특정 유형의 고객에게 제품을 추천할 수 있습니다.  
   
@@ -245,19 +245,19 @@ AS t
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[예측 &#40;DMX&#41;](/sql/dmx/predict-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[예측 & #40; DMX & #41;](/sql/dmx/predict-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
+|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
   
  특정 함수의 구문을 보려면 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)   
  [Microsoft Naive Bayes 알고리즘](microsoft-naive-bayes-algorithm.md)   
- [마이닝 모델 콘텐츠 Naive Bayes 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Naive Bayes 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

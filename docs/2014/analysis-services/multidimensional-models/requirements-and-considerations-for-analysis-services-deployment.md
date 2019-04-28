@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736731"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
   솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 스토리지를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  

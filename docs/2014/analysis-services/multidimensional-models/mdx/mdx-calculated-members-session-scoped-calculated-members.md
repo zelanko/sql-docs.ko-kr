@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725397"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>세션 범위 계산 멤버 만들기(MDX)
   MDX 세션 전체에서 사용할 수 있는 계산 멤버를 만들려면 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문을 사용합니다. CREATE MEMBER 문을 사용하여 만든 계산 멤버는 MDX 세션이 닫힌 후까지 제거되지 않습니다.  
@@ -53,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [만드는 쿼리 범위 계산 멤버 &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [쿼리 범위 계산 멤버 만들기&#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

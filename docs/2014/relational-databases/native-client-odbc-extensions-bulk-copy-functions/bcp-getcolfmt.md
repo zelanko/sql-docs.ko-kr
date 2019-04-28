@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689085"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
   열 형식 속성 값을 찾는 데 사용됩니다.  
@@ -60,7 +60,7 @@ pcbLen
  *field*  
  속성을 검색할 열 번호입니다.  
   
- *property*  
+ *속성*  
  속성 상수 중 하나입니다.  
   
  *pValue*  
@@ -76,9 +76,9 @@ pcbLen
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 에 나열 된 열 형식 속성 값을 [bcp_setcolfmt](bcp-setcolfmt.md) 항목입니다. 열 형식 속성 값은 **bcp_setcolfmt** 함수를 호출하여 설정되고 **bcp_getcolfmt** 함수는 열 형식 속성 값을 찾는 데 사용됩니다.  
+ 열 형식 속성 값은 [bcp_setcolfmt](bcp-setcolfmt.md) 항목에 나와 있습니다. 열 형식 속성 값은 **bcp_setcolfmt** 함수를 호출하여 설정되고 **bcp_getcolfmt** 함수는 열 형식 속성 값을 찾는 데 사용됩니다.  
   
- 에 연결할 때 동작 변경 내용이 관찰 될 수 있습니다는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (또는 이상) 서버 컴퓨터에서 이전에 비해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전입니다. 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
+ 이전 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전과 비교해서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전의 서버 컴퓨터에 연결할 때 동작 변경 내용이 관찰될 수 있습니다. 자세한 내용은 [Metadata Discovery](../native-client/features/metadata-discovery.md)를 참조하십시오.  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_getcolfmt 지원  
  형식을 사용 합니다 `BCP_FMT_TYPE` 날짜/시간 형식에 대 한 속성에 지정 된 대로 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.  

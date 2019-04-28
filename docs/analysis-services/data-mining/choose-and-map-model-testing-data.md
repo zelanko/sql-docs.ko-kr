@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2e1b4751d21b9aea4f80561909910d81abbc3756
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725748"
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "52545318"
   
      **열 매핑 지정** 대화 상자에 새 열 매핑이 표시됩니다. 열 사이의 선을 선택하고 Delete 키를 눌러 매핑을 제거할 수 있습니다. **마이닝 구조** 테이블의 열을 선택하고 **입력 테이블 선택** 테이블의 해당 열로 끌어 새 연결을 만들 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

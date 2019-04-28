@@ -1,5 +1,5 @@
 ---
-title: '부록 a: 공급자 | Microsoft Docs'
+title: '부록 A: 공급자 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,13 +18,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14194998e699fa3d16ab50ab488c8d1577660dcc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719912"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>부록 a: 데이터 및 서비스 공급자
+# <a name="appendix-a-data-and-service-providers"></a>부록 A: 데이터 및 서비스 공급자
 이 섹션에서는 세 가지 공급자: 데이터 공급자, 서비스 공급자 및 서비스 구성 요소입니다. 공급자 두 범주로 나누어집니다: 서비스를 제공 하 고 데이터를 제공 합니다. A *데이터 공급자* 자체 데이터를 소유 하 고 응용 프로그램에 테이블 형식으로 제공 합니다. A *서비스 공급자* 생성 하 고 ADO 응용 프로그램의 기능을 확대 하는 데이터를 사용 하 여 서비스를 캡슐화 합니다. 으로 서비스 공급자를 추가로 정의할 수도 있습니다는 *서비스 구성 요소*에 다른 서비스 공급자 또는 구성 요소와 함께 작동 해야 합니다.
 
 ## <a name="data-providers"></a>데이터 공급자
@@ -44,7 +44,7 @@ ms.locfileid: "51291529"
 |----------|-----------|
 |ODBC 데이터베이스|[Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft 인덱싱 서비스|[Microsoft 인덱싱 서비스용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Active Directory 서비스|[Microsoft Active Directory 서비스용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Active Directory Service|[Microsoft Active Directory 서비스용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Microsoft Jet 데이터베이스|[Microsoft Jet 용 OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
 |Oracle 데이터베이스|[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|

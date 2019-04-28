@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722655"
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
   이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에서 호스팅되는 데이터 마이닝 솔루션의 아키텍처에 대해 설명합니다. 이 섹션의 항목에서는 데이터 마이닝을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 논리적 아키텍처와 물리적 아키텍처에 대해 설명하고, 데이터 마이닝 서버와 통신하는 데 사용하고 데이터 마이닝 개체에 대해 로컬 또는 원격으로 작업하는 데 사용할 수 있는 프로토콜, 클라이언트 및 공급자에 대한 정보를 제공합니다.  
@@ -27,22 +27,22 @@ ms.locfileid: "48121053"
   
  [Analysis Services에 연결](../instances/connect-to-analysis-services.md)  
   
- [데이터베이스 저장소 위치](../multidimensional-models/database-storage-location.md)  
+ [데이터베이스 스토리지 위치](../multidimensional-models/database-storage-location.md)  
   
- [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  비즈니스 인텔리전스 솔루션에서 데이터 마이닝을 구현하는 방법은 MSDN Library의 솔루션 가이드를 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [논리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [물리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [데이터 마이닝 서비스 및 데이터 원본](data-mining-services-and-data-sources.md)  
   
  [데이터 마이닝 솔루션 및 개체 관리](management-of-data-mining-solutions-and-objects.md)  
   
- [보안 개요 &#40;데이터 마이닝&#41;](security-overview-data-mining.md)  
+ [보안 개요&#40;데이터 마이닝&#41;](security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델 프로그래밍](../multidimensional-models/multidimensional-model-programming.md)   

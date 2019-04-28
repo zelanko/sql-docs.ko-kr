@@ -1,8 +1,9 @@
 ---
 title: 추적 데이터에 대한 액세스 향상 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -15,13 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714620"
 ---
 # <a name="improve-access-to-trace-data"></a>추적 데이터에 대한 액세스 향상
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적 데이터에 대한 액세스를 향상시키기 위해 **temp** 디렉터리의 공간을 사용합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에는 적어도 10MB의 사용 가능한 공간이 필요합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하는 동안 여유 공간이 10MB 이하로 내려가면 모든 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 기능이 중지됩니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 **temp** 디렉터리의 공간을 사용할 경우 이 공간 사용으로 인해 **temp** 디렉터리가 급격하게 커질 수 있습니다. TEMP 환경 변수의 값을 변경하여 **temp** 디렉터리를 시스템 드라이브가 아닌 드라이브에 두면 파일 증가 문제를 방지할 수 있습니다.  
@@ -40,7 +42,7 @@ ms.locfileid: "52767896"
   
 5.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982225"
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: 사용 되지 않음  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 사용되지 않음  
   
  **요약**  
  ODBC 2.0에서는 ODBC 1.0 함수 **SQLSetParam** 바뀌었습니다 **SQLBindParameter**합니다. 자세한 내용은 [SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다.  

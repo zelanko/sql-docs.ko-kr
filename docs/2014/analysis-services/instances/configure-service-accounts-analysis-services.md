@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703821"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
   제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 비롯한 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  

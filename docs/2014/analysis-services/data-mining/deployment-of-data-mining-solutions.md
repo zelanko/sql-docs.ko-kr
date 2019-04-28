@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722697"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>데이터 마이닝 솔루션 배포
   데이터 마이닝 프로세스의 마지막 단계는 모델을 프로덕션 환경에 배포하는 것입니다. 배포 작업을 수행해야 사용자가 모델을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
@@ -78,13 +78,13 @@ ms.locfileid: "48087643"
   
  모델이 큐브를 데이터 원본으로 사용하는 경우 모델과 해당 지원 큐브 데이터를 이동하는 방법을 보려면 다음 항목을 참조하십시오.  
   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 배포에 대한 일반적인 정보를 제공하고 프로젝트를 구성할 때 설정할 수 있는 속성에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델 개체 처리](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [데이터 마이닝 쿼리 인터페이스](data-mining-query-tools.md)   
- [처리 요구 사항 및 고려 사항 &#40;데이터 마이닝&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [처리 요구 사항 및 고려 사항 & #40; 데이터 마이닝 & #41;](processing-requirements-and-considerations-data-mining.md)  
   
   

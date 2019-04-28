@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7922638ed06f52740a3c34f6e66ff72dbb5bbd98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714810"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행
   SQL 추적을 사용한 추적 프로세스는 추적을 만들고 실행하는 데 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용할지 아니면 시스템 저장 프로시저를 사용할지에 따라 달라집니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "52756035"
 |[추적 파일 및 테이블 크기 제한](limit-trace-file-and-table-sizes.md)|추적 데이터가 기록되는 파일 및 테이블의 크기를 제한하는 방법을 설명합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서만 테이블에 추적 정보를 쓸 수 있습니다.|  
 |[예약된 추적](schedule-traces.md)|추적 시작 시간 및 종료 시간을 설정하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_trace_create&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-create-transact-sql)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sp_trace_setfilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727669"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>큐브 스토리지(Analysis Services - 다차원 데이터)
   스토리지에는 큐브 메타데이터만 포함되거나, 측정값 그룹과 관련된 차원으로 정의한 집계 및 팩트 테이블의 모든 원본 데이터가 포함될 수 있습니다. 저장되는 데이터 양은 선택한 스토리지 모드와 집계 수에 따라 달라집니다. 저장되는 데이터 양은 쿼리 성능에 직접적인 영향을 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브 데이터 및 집계 저장소에 필요한 공간을 최소화 하는 것에 대 한 몇 가지 기법을 사용 합니다.  

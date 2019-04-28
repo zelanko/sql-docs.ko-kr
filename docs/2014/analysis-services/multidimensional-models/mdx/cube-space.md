@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725588"
 ---
 # <a name="cube-space"></a>큐브 공간
   큐브 공간은 큐브 특성 계층의 멤버와 큐브의 측정값을 곱하여 생성된 공간입니다. 따라서 큐브 공간은 큐브의 모든 특성 계층 멤버와 큐브의 측정값을 곱한 결과의 조합으로 결정되며 큐브의 최대 크기를 정의합니다. 실제로는 조합이 불가능한 것으로 간주될 수도 있지만(예: 도시는 파리이고 국가는 잉글랜드, 스페인, 일본 또는 인도인 조합의 경우) 이 공간은 특성 계층 멤버의 가능한 모든 조합을 포함합니다.  
@@ -130,12 +130,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>계산 컨텍스트  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [튜플](tuples.md)   
  [Autoexist](autoexists.md)   
- [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](visual-totals-and-non-visual-totals.md)   
- [MDX 언어 참조 &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Multidimensional Expression &#40;MDX&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [MDX 언어 참조&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [다차원 식 & #40; Mdx& #41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

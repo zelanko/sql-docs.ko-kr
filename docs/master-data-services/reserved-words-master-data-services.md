@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704746"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 
@@ -80,7 +80,7 @@ ms.locfileid: "52752114"
 ##  <a name="members"></a> 멤버  
  멤버의 경우 **코드**특성 값에 대해 **MDMMemberStatus**, **MDMUnused** 또는 **ROOT** 을 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720695"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 분산 처리 및 데이터 스토리지를 위해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 데이터베이스를 사용합니다.  

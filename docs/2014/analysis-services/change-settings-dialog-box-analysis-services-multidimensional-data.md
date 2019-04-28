@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681170"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>설정 변경 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 설정 변경 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 **처리** 대화 상자에 나열된 개체의 처리를 제어하는 설정을 변경할 수 있습니다. **처리** 대화 상자에서 **설정 변경** 을 클릭하여 **설정 변경** 대화 상자를 표시할 수 있습니다.  

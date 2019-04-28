@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 181e2a367f6196d50f90aee77ca9590f55ba0ce4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733065"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
   이 항목에서는 데이터 마이닝 개체를 처리할 때 유의해야 할 몇 가지 기술적 고려 사항에 대해 설명합니다. 처리의 정의와 처리가 데이터 마이닝에 적용되는 방식에 대한 일반적인 설명은 [데이터 마이닝 개체 처리](processing-data-mining-objects.md)를 참조하세요.  
@@ -63,13 +63,13 @@ ms.locfileid: "53369725"
   
  이러한 시나리오에서는 마이닝 모델도 처리됩니다.  
   
- **프로젝트의 배포**: 프로젝트 설정 및 프로젝트의 현재 상태에 따라 프로젝트를 배포할 때 프로젝트의 마이닝 모델은 대개 전체적으로 처리됩니다.  
+ **프로젝트의 배포**: 프로젝트의 마이닝 모델 프로젝트 설정 및 프로젝트의 현재 상태에 따라 일반적으로 프로젝트를 배포할 때 전체에서 처리 됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 이전에 처리한 버전이 있고 구조에 대한 이후 변경 내용이 없지 않으면 배포 시작 시 처리가 자동으로 시작됩니다. 드롭다운 목록에서 **솔루션 배포** 를 선택하거나 F5 키를 눌러 프로젝트를 배포할 수 있습니다. 다음을 수행할 수 있습니다.  
   
  마이닝 모델이 배포되는 방식을 제어하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 속성을 설정하는 방법은 [데이터 마이닝 솔루션 배포](deployment-of-data-mining-solutions.md)를 참조하세요.  
   
- **마이닝 모델 이동**: EXPORT 명령을 사용하여 마이닝 모델을 이동하는 경우 모델에 데이터를 제공할 것으로 예상되는 마이닝 구조의 이름이 포함된 모델의 정의만 내보내집니다.  
+ **마이닝 모델 이동**: 내보내기 명령을 사용 하 여 마이닝 모델을 이동 하는 경우 모델의 정의 내보내집니다 해야 모델에 데이터를 제공 하는 마이닝 구조의 이름이 포함 된 합니다.  
   
  EXPORT 및 IMPORT 명령을 사용하는 다음 시나리오에 대한 다시 처리 요구 사항은 다음과 같습니다.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732167"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>반가산적 동작 정의(비즈니스 인텔리전스 마법사)
   **반가산적 동작 정의** 페이지를 사용하여 측정값에 대한 반가산적 동작을 설정 또는 해제할 수 있습니다. 반가산적 동작은 큐브에 포함된 측정값이 시간 차원에 대해 집계되는 방법을 결정합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48168013"
  큐브에 포함된 모든 측정값의 반가산적 동작을 해제합니다.  
   
  **검색 되었습니다.는 \<차원 이름 > 반 가산적 멤버가 포함 된 계정 차원입니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
- 반가산적 멤버를 포함하는 계정 차원에 대한 반가산적 동작을 설정합니다. 계정 차원에 참조 된 측정값 그룹의 모든 측정값의 집계 함수를 설정이 옵션을 선택 하면 `ByAccount`합니다.  
+ 반가산적 멤버를 포함하는 계정 차원에 대한 반가산적 동작을 설정합니다. 이 옵션을 선택하면 계정 차원을 참조하는 측정값 그룹의 모든 측정값 집계 함수가 `ByAccount`로 설정됩니다.  
   
  계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.  
   

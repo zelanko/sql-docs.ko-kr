@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 410bb163ba04d99ea8f71c262c8e671f8393c841
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792936"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 데이터 파일의 전체 기술 자료를 가져오는 방법에 대해 설명합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 내에서 기존 기술 자료를 내보내서 데이터 파일을 만듭니다([.dqs 파일로 기술 자료 내보내기](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md) 참조).  
@@ -64,7 +64,7 @@ ms.locfileid: "56039555"
   
 13. Data Quality Services 홈 페이지에서 **최근 기술 자료**에 해당 기술 자료가 나열되는지 확인합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: .dqs 파일에서 기술 자료를 가져온 후  
+##  <a name="FollowUp"></a> 후속 작업: .Dqs 파일에서 기술 자료를 가져온 후  
  .dqs 파일에서 기술 자료를 가져온 후 기술 자료에 정보를 추가하거나 기술 자료의 내용에 따라 정리 또는 일치 프로젝트에서 기술 자료를 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../../2014/data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../../2014/data-quality-services/managing-a-domain.md), [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../../2014/data-quality-services/create-a-matching-policy.md), [데이터 정리](../../2014/data-quality-services/data-cleansing.md) 또는 [데이터 일치](../../2014/data-quality-services/data-matching.md)를 참조하세요.  
   
   

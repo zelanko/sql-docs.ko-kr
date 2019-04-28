@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722395"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
   *기능 선택* 도구와 입력 처리 및 분석을 위해 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 기법을 설명 하기 위해 데이터 마이닝에서 일반적으로 사용 하는 용어입니다. 기능 선택은 뿐 아니라 *카디널리티 감소가*, 즉, 모델 뿐만 아니라 특성, 즉 선택 빌드할 때 고려할 수 있는 특성의 수에는 임의의 또는 미리 정의 된 구분 나아가 분석가 또는 모델링 도구가 적극적으로 선택 하거나 분석의 유용성을 기반으로 특성을 삭제 합니다.  

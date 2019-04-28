@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726404"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
   데이터 원본 뷰를 포함 하 여 사용 하는 스키마의 논리 모델 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 데이터베이스 개체 즉 큐브, 차원 및 마이닝 구조입니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  

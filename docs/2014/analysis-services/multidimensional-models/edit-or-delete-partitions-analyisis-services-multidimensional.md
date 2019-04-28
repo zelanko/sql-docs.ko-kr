@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726099"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
   큐브 파티션은 **에서 큐브 디자이너의** 파티션 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]탭을 사용하여 수정됩니다. **파티션** 탭에서는 큐브에 있는 모든 측정값 그룹의 파티션을 나열합니다. 또한 쓰기 저장(writeback)이 설정된 쓰기 저장 파티션을 나열합니다.  
@@ -48,8 +48,8 @@ ms.locfileid: "48104914"
  큐브에 있는 각 측정값 그룹의 각 파티션에 대해 스토리지를 별도로 구성할 수 있습니다. 큐브 또는 측정값 그룹에 대한 기본 스토리지 설정을 구성할 수도 있습니다. 스토리지는 큐브 마법사의 **파티션** 탭에서 구성합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [로컬 파티션 만들기 및 관리 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [집계 디자인 &#40;Analysis Services-다차원&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services의 파티션 병합 &#40;&AMP;#40;SSAS-다차원&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [집계 & #40; 디자인 Analysis Services-다차원 & #41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Analysis Services & #40;의 파티션 병합 SSAS-다차원 데이터 & #41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

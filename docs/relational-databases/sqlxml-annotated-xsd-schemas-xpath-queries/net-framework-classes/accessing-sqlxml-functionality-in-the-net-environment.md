@@ -1,9 +1,8 @@
 ---
 title: .NET 환경에서 SQLXML 기능 액세스 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -13,19 +12,17 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: MightyPen
-ms.author: genemi
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a04ee9ea48075635e192e2410c64fd6a357a76a2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719883"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 환경에서 SQLXML 기능 액세스
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 예에서는 다음 내용을 설명합니다.  
   
 -   사용 하는 방법 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml) Microsoft에 액세스 하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경입니다.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715100"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
   단일 쿼리는 모델을 예측에 사용 하려고 하지만 외부 입력된 데이터 집합에 매핑하거나 대량 예측을 수행 하지 않으려는 경우에 유용 합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  

@@ -22,18 +22,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c898401e97bbc993fa0d913a46c4e264def40a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725877"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>데이터 마이닝 구조 및 모델에 대한 권한 부여(Analysis Services)
   기본적으로 Analysis Services 서버 관리자만 데이터베이스의 데이터 마이닝 구조 또는 마이닝 모델을 볼 수 있습니다. 관리자가 아닌 사용자에게 권한을 부여하려면 아래 지침을 따르세요.  
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>마이닝 구조에 대한 액세스 권한 설정  
   
-1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 응용 프로그램에서 연결&#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
+1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 애플리케이션에서 연결&amp;#40;Analysis Services&amp;#41;](../instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
   
 2.  **데이터베이스** 폴더를 열고 개체 탐색기에서 데이터베이스를 선택합니다.  
   
@@ -69,8 +69,8 @@ ms.locfileid: "48051213"
   
 ## <a name="see-also"></a>관련 항목  
  [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea31ff7c14baff6a102ad9aa11c227e9c333da60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725536"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>계산 멤버를 MDX로 작성(MDX)
   MDX에서 계산 멤버는 값을 반환하기 위해 MDX 식을 계산하여 확인되는 멤버입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 계산 멤버를 구성하고 사용할 수 있으면 다차원 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  
@@ -39,8 +39,8 @@ ms.locfileid: "48051799"
      CREATE MEMBER 문을 사용하여 세션에서 계산 멤버를 만드는 방법은 [세션 범위 계산 멤버 만들기&#40;MDX&#41;](mdx-calculated-members-session-scoped-calculated-members.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX 함수 참조 &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [MEMBER 문 & #40; 만들기 Mdx& #41;](/sql/mdx/mdx-data-definition-create-member)   
+ [MDX 함수 참조 & #40; Mdx& #41;](/sql/mdx/mdx-function-reference-mdx)   
+ [SELECT 문 & #40; Mdx& #41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723125"
 ---
 # <a name="data-definition-queries-data-mining"></a>데이터 정의 쿼리(데이터 마이닝)
   데이터 마이닝의 *데이터 정의 쿼리* 범주는 다음을 수행하는 DMX 문이나 XMLA 명령을 의미합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "50147521"
 |예측 쿼리 작성기를 사용하여 모든 종류의 쿼리를 디자인합니다.|[예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](create-a-prediction-query-using-the-prediction-query-builder.md)|  
 |SQL Server Profiler를 사용하여 쿼리 정의를 캡처하고 추적을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 모니터링합니다.|[Use SQL Server Profiler to Monitor Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 제공되는 스크립트 언어와 프로그래밍 언어에 대해 자세히 알아봅니다.|[XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)<br /><br /> [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT&#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT&#40;DMX&#41;](/sql/dmx/import-dmx)|  
+|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT&#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [가져오기 & #40; DMX & #41;](/sql/dmx/import-dmx)|  
 |외부 데이터를 쿼리하기 위한 OPENROWSET 및 다른 방법에 대해 자세히 알아봅니다.|[&#60;원본 데이터 쿼리&#62;](/sql/dmx/source-data-query).|  
   
 ## <a name="see-also"></a>관련 항목  

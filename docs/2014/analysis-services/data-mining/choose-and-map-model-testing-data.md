@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705951"
 ---
 # <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정확도 차트를 만들려면 모델을 테스트하는 데 사용할 데이터를 선택하고 데이터를 모델에 매핑해야 합니다.  

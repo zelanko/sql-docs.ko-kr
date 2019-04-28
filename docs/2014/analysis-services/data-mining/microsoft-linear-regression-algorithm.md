@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734137"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 선형 회귀 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 종속 변수와 독립 변수 간의 선형 관계를 계산하고 이 관계를 예측에 사용하는 데 도움이 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘의 변형입니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48180413"
   
  수식에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)를 사용하여 계수 및 기타 세부 정보를 확인하십시오.  
   
- 선형 회귀 모델의 경우 모델 콘텐츠에는 메타데이터, 회귀 수식 및 입력 값의 분산에 대한 통계가 포함됩니다. 자세한 내용은 [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)합니다.  
+ 선형 회귀 모델의 경우 모델 콘텐츠에는 메타데이터, 회귀 수식 및 입력 값의 분산에 대한 통계가 포함됩니다. 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)의 요구 사항 섹션을 참조하세요.  
   
 ## <a name="creating-predictions"></a>예측 만들기  
  모델을 처리한 후에는 결과가 선형 회귀 수식과 함께 일련의 통계로 저장되며 이를 사용하여 향후 추세를 컴퓨팅할 수 있습니다. 선형 회귀 모델을 사용하는 쿼리의 예는 [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)를 참조하세요.  
@@ -78,9 +78,9 @@ ms.locfileid: "48180413"
 -   OLAP 마이닝 모델의 사용을 지원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
  [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)   
- [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

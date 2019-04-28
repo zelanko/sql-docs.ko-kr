@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e183c1e25aa81b05c897674fc5c9f4a2dd8d0c5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718136"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>리프트 차트, 수익 차트 또는 분류표 만들기
   다음과 같은 기본적인 다섯 단계로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델에 대한 정확도 차트를 만들 수 있습니다.  
@@ -111,7 +111,7 @@ ms.locfileid: "52529362"
      **개인별 수익**  
      성공적인 각 판매와 관련된 수익입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](lift-chart-analysis-services-data-mining.md)   
  [분류표&#40;Analysis Services - 데이터 마이닝&#41;](classification-matrix-analysis-services-data-mining.md)  
   

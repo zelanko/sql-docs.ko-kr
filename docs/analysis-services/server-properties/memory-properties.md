@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714440"
 ---
 # <a name="memory-properties"></a>메모리 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -60,7 +60,7 @@ HardMemoryLimit | Analysis Services가 메모리 압력으로 인해 완전히 �
 **QueryMemoryLimit**   
 Azure Analysis Services에만 해당 합니다. 고급 속성을 쿼리 하는 동안 임시 결과에서 얼마나 많은 메모리를 사용할 수 있습니다. DAX 측정값 및 쿼리에만 적용 됩니다. 쿼리에 사용 되는 일반 메모리 할당에 고려 되지 않습니다. 최대 100%에서를 지정 합니다. 그 외에도 바이트입니다. 지정 된 설정 값이 0 이면 제한이 없습니다. Azure 분석에 대 한 기본값은 계획에 의해 결정 됩니다. 
 
-|계획  |Default  |
+|계획  |기본값  |
 |---------|---------|
 |D1     |   80      |
 |다른 모든 계획     |    20     | 

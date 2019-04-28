@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722909"
 ---
 # <a name="data-mining-projects"></a>데이터 마이닝 프로젝트
   데이터 마이닝 프로젝트는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션의 일부입니다. 디자인 프로세스 중에 이 프로젝트에서 만든 개체를 작업 영역 데이터베이스의 일부로 테스트 및 쿼리할 수 있습니다. 사용자가 프로젝트에서 개체를 쿼리하거나 찾아볼 수 있도록 하려면 다차원 모드로 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 프로젝트를 배포해야 합니다.  

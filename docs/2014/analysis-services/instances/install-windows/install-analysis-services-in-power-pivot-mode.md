@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703550"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2013 중앙 관리를 사용하는 SQL Server 설치 마법사 및 구성 태스크가 포합됩니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "53373975"
   
  [필수 구성 요소](#bkmk_prereq)  
   
- [1 단계: PowerPivot for SharePoint 설치](#InstallSQL)  
+ [1단계: PowerPivot for SharePoint 설치](#InstallSQL)  
   
  [2단계: Basic Analysis Services SharePoint 통합 구성](#bkmk_config)  
   
- [3 단계: 통합 확인](#bkmk_verify)  
+ [3단계: 통합 확인](#bkmk_verify)  
   
  [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](#bkmk_firewall)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "53373975"
 ##  <a name="bkmk_background"></a> 배경  
  SharePoint용 PowerPivot은 SharePoint 2013 팜에서 PowerPivot 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  
   
--   **백 엔드 서비스:** PowerPivot for Excel을 사용하여 분석 데이터가 포함된 통합 문서를 만드는 경우 서버 환경에서 이러한 데이터에 액세스하려면 SharePoint용 PowerPivot이 있어야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
+-   **백 엔드 서비스:** PowerPivot for Excel 사용 하 여 분석 데이터가 포함 된 통합 문서를 만드는 경우 서버 환경에서 데이터에에서 액세스 하려면 SharePoint 용 PowerPivot를 해야 합니다. SharePoint Server 2013이 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 SQL Server 설치 프로그램을 실행할 수 있습니다. Analysis Services는 SharePoint에 종속성이 없습니다.  
   
-     **참고:** 이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스의 설치에 대해 설명합니다.  
+     **참고:** 설치에 설명 합니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스입니다.  
   
--   **중간 계층:** PowerPivot 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 PowerPivot 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+-   **중간 계층:** PowerPivot 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함 한 SharePoint의 PowerPivot 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
     -   [설치 하거나 SharePoint 추가 기능에 대 한 PowerPivot을 제거할 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53373975"
   
  [Microsoft SQL Server 2012 릴리스 정보 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893)합니다.  
   
-##  <a name="InstallSQL"></a> 1 단계: SharePoint용 PowerPivot 설치  
+##  <a name="InstallSQL"></a> 1단계: PowerPivot for SharePoint 설치  
  이 단계에서는 SQL Server 설치 프로그램을 실행하여 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치합니다. 이후 단계에서는 통합 문서 데이터 모델에 이 서버를 사용하도록 Excel Services를 구성합니다.  
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "53373975"
   
 9. 다른 **설치 지원 규칙**이 표시되면 경고를 검토하고 **다음**을 클릭합니다.  
   
-     **참고:** Windows 방화벽이 설정되었기 때문에 원격 액세스를 사용할 수 있도록 포트를 열라는 경고가 표시됩니다.  
+     **참고:** Windows 방화벽이 설정 되었기 때문에 원격 액세스를 활성화 하는 포트를 열라는 경고가 표시 됩니다.  
   
 10. **설치 역할** 페이지에서 **SQL Server SharePoint용 PowerPivot**을 선택합니다. 이 옵션을 선택하면 SharePoint 모드에서 Analysis Services를 설치합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "53373975"
   
 3.  Analysis Services 인스턴스(예: **[서버 이름]\POWERPIVOT**)에 연결합니다. 인스턴스에 연결할 수 있는 경우 서비스가 실행 중인 것입니다.  
   
-##  <a name="bkmk_config"></a> 2 단계: Basic Analysis Services SharePoint 통합 구성  
+##  <a name="bkmk_config"></a> 2단계: Basic Analysis Services SharePoint 통합 구성  
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint Server 2013 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Analysis Services에 Excel Services 서버 관리 권한 부여  
@@ -203,10 +203,10 @@ ms.locfileid: "53373975"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 3 단계: 통합 확인  
+##  <a name="bkmk_verify"></a> 3단계: 통합 확인  
  다음 단계에서는 새 통합 문서를 만들고 업로드하여 Analysis Services 통합을 확인하는 방법을 단계별로 설명합니다. 이들 단계를 완료하려면 SQL Server 데이터베이스가 필요합니다.  
   
-1.  **참고:** 슬라이서 또는 필터가 포함된 고급 통합 문서가 이미 있는 경우 이 통합 문서를 SharePoint 문서 라이브러리에 업로드하고 문서 라이브러리 뷰에서 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다.  
+1.  **참고:** SharePoint 문서 라이브러리에 업로드 하 고 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다 슬라이서 또는 필터가 포함 된 고급 통합 문서를 이미 있는 경우 문서 라이브러리 보기에서 사용 합니다.  
   
 2.  Excel에서 새 통합 문서를 시작합니다.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "53373975"
   
 -   [PowerPivot 구성 및 솔루션 배포 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)  
   
- **중복 및 서버 부하:** SharePoint 모드의 보조 또는 추가 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능이 중복됩니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
+ **중복 및 서버 부하:** 설치는 두 번째 이상의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드의 서버 중복성을 제공 합니다는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능입니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [Excel 서비스에서 데이터 모델 처리를 위해 Analysis Services 구성](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15))합니다.  
   

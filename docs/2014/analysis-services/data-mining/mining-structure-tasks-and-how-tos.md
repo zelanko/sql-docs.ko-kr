@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733323"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>마이닝 구조 태스크 및 방법
   **에서 데이터 마이닝 디자이너의** 마이닝 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에 있는 도구를 사용하여 마이닝 구조를 만들고 편집하고 처리할 수 있습니다.  

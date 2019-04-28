@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725377"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>쿼리 범위 명명된 집합 만들기(MDX)
   단일 MDX 쿼리에만 명명된 집합이 필요한 경우 WITH 키워드를 사용하여 해당 명명된 집합을 정의할 수 있습니다. WITH 키워드를 사용하여 만든 명명된 집합은 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  
@@ -94,7 +94,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [SELECT 문의 &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [명명 된 집합 세션 범위 만들기 &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT 문&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [세션 범위 명명된 집합 만들기&#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

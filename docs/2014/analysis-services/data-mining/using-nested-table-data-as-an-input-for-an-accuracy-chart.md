@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732901"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
   외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트할 때 마이닝 모델에 중첩 테이블이 포함되어 있으면 외부 데이터에도 사례 테이블 및 연결된 중첩 테이블이 포함되어 있어야 합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52518286"
   
      중첩 테이블과 사례 테이블 간의 관계를 수정해야 하는 경우 **조인 수정** 을 클릭하여 **관계 만들기** 대화 상자를 엽니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 테스트 데이터 선택 및 매핑](choose-and-map-model-testing-data.md)   
  [모델 테스트 데이터에 필터 적용](apply-filters-to-model-testing-data.md)  
   

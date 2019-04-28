@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792616"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 의 두 가지 구성 요소가 포함됩니다.  
   
 |DQS 구성 요소|Description|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 엔진을 기반으로 설치되며 DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA의 세 데이터베이스를 포함합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 위쪽에 설치 되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 엔진, 세 데이터베이스를 포함 하 고: DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 응용 프로그램으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019642"
   
  DQS 설치는 3단계로 수행되는 프로세스입니다.  
   
--   [설치 전 태스크](#PreInstallationTasks): DQS를 설치하기 전에 시스템 요구 사항을 확인합니다.  
+-   [설치 전 태스크](#PreInstallationTasks): DQS를 설치 하기 전에 시스템 요구 사항을 확인 합니다.  
   
--   [Data Quality Services 설치 태스크](#DQSInstallation): SQL Server 설치 프로그램을 사용하여 DQS를 설치합니다.  
+-   [Data Quality Services 설치 태스크](#DQSInstallation): SQL Server 설치 프로그램을 사용 하 여 DQS를 설치 합니다.  
   
--   [설치 후 태스크](#PostInstallationTasks): SQL Server 설치를 마친 후 다음 태스크를 수행하여 DQS 설치를 완료합니다.  
+-   [설치 후 태스크](#PostInstallationTasks): DQS 설치를 완료 하려면 SQL Server 설치를 완료 한 후 이러한 작업을 수행 합니다.  
   
 > [!NOTE]  
 >  이 항목에서는 명령줄에서 설치 프로그램을 실행하는 데 대한 지침을 다루지 않습니다. 설치용 명령줄 옵션에 대 한 자세한 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 및 클라이언트를 참조 하세요 [기능 매개 변수](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) 에서 [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bd7fd390010096e943e397a95c018c967f09d21a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696048"
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>멤버 권한 즉시 적용(Master Data Services)
 
@@ -52,7 +52,7 @@ ms.locfileid: "52760157"
   
 4.  쿼리를 실행합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   

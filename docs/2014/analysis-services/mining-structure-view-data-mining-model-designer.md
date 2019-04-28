@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702928"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>마이닝 구조 뷰(데이터 마이닝 모델 디자이너)
   **마이닝 구조** 뷰를 사용하여 마이닝 구조를 수정하고 마이닝 구조 및 연결된 모든 마이닝 모델을 처리할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48144583"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰 &#40;데이터 마이닝 모델 디자이너&#41;](mining-models-view-data-mining-model-designer.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [마이닝 정확도 차트 디자이너 &#40;데이터 마이닝&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](prediction-query-builder-data-mining.md)  
   

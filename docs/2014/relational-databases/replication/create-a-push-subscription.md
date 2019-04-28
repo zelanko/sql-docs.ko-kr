@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721735"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "54135543"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>게시자에서 밀어넣기 구독을 만들려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "54135543"
  [Create a Publication](publish/create-a-publication.md)   
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [게시 구독](subscribe-to-publications.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../scripting/sqlcmd-use-with-scripting-variables.md)  
   
   

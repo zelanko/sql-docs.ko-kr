@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700112"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>데이터 원본 뷰를 사용하여 큐브 만들기
   기존 데이터 원본 뷰를 사용하려는 경우 새 큐브를 생성하는 이 방법을 사용합니다. 이 방법을 사용하여 데이터 원본 뷰를 지정하고 데이터 원본 뷰에서 사용할 팩트 및 차원 테이블을 선택합니다. 그런 다음 큐브에 포함할 차원과 측정값을 선택합니다.  

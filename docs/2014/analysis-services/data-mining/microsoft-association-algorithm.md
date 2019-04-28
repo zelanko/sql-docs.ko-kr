@@ -32,14 +32,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722110"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 연결 알고리즘으로 추천 엔진에 유용합니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 제품을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다. 시장 바구니 분석의 예제를 보려면 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 데이터 마이닝 자습서에서입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 연결 알고리즘으로 추천 엔진에 유용합니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 제품을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다. 시장 바구니 분석의 예제를 참조 하세요. [단원 3: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 데이터 마이닝 자습서에서입니다.  
   
  연결 모델은 개별 사례 및 사례에 포함된 항목 모두에 대한 식별자를 포함하는 데이터 세트를 기반으로 작성됩니다. 사례에 포함된 항목 그룹을 *항목 집합*이라고 합니다. 연결 모델은 일련의 항목 집합과 이러한 항목이 사례 내에서 그룹화되는 방법을 설명하는 규칙으로 구성됩니다. 알고리즘이 식별하는 규칙은 고객의 쇼핑 카트에 이미 들어 있는 항목을 바탕으로 고객의 향후 구매 항목을 예측하는 데 사용할 수 있습니다. 다음 다이어그램에서는 항목 집합에 포함된 일련의 규칙을 보여 줍니다.  
   

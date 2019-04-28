@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 648c974b1a23128c9d6c6e3977494291ef182510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726294"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>솔루션 탐색기에서 데이터 원본 삭제(SSAS 다차원)
   데이터 원본 개체를 삭제하여 Analysis Services 다차원 모델 프로젝트에서 해당 개체를 영구적으로 제거할 수 있습니다.  

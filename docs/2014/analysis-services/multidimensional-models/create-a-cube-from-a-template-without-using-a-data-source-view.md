@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700319"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>데이터 원본 뷰를 사용하지 않고 템플릿에서 큐브 만들기
   데이터 원본 뷰를 사용하지 않고 큐브를 만들려면 큐브 마법사의 첫 페이지에서 **데이터 원본을 사용하지 않고 큐브 생성** 을 선택하십시오. 나중에 스키마 생성 마법사를 사용하여 큐브의 구조 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 바탕으로 데이터 원본 뷰에 대한 관계형 스키마를 생성할 수 있습니다. 스키마 생성 방법에 대한 자세한 내용은 [스키마 생성 마법사&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)를 참조하세요.  

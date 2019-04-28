@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1627a0058336be654dbd18c52e27cdbae614c686
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722535"
 ---
 # <a name="decision-trees-model-query-examples"></a>의사 결정 트리 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 의사 결정 트리 모델에 대한 내용 쿼리는 각 트리 수준의 사례 수에 대한 통계를 제공하거나 사례를 구분하는 규칙을 제공할 수 있습니다. 또한 예측 쿼리는 권장 사항, 분류 등을 생성하기 위해 모델을 새 데이터에 매핑합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -61,13 +61,13 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용하여 모델 내용에 대한 정보 반환  
+###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용 하 여 모델 콘텐츠에 대 한 정보 반환  
  다음 쿼리는 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)에서 모델을 작성할 때 만들어진 의사 결정 트리에 대한 몇 가지 기본 정보를 반환합니다. 각 트리 구조는 자체 노드에 저장됩니다. 이 모델에는 예측 가능한 특성이 하나이므로 트리 노드가 한 개뿐입니다. 그러나 의사 결정 트리 알고리즘을 사용하여 연결 모델을 만드는 경우 각 제품에 대해 하나씩 수백 개의 트리가 있을 수 있습니다.  
   
  이 쿼리는 예측 가능한 특정 특성을 나타내는 최상위 트리 노드인 유형 2 노드를 모두 반환합니다.  
   
 > [!NOTE]  
->  열 `CHILDREN_CARDINALITY`, 동일한 이름의 MDX 예약 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
+>  열 `CHILDREN_CARDINALITY`는 대괄호로 묶어 동일한 이름의 MDX 예약 키워드와 구분해야 합니다.  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,7 +87,7 @@ WHERE NODE_TYPE = 2
  다음 관련 쿼리는 이러한 5개 하위 그룹의 자식을 자식 노드의 특성 및 값 분포와 함께 반환합니다. 지지도, 확률 및 분산과 같은 통계는 중첩 테이블 `NODE_DISTRIBUTION`에 저장되므로 이 예에서는 `FLATTENED` 키워드를 사용하여 중첩 테이블 열을 출력합니다.  
   
 > [!NOTE]  
->  중첩된 테이블 열 `SUPPORT`, 동일한 이름의 예약된 키워드와 구별 하기 위해 대괄호로 묶어야 합니다.  
+>  중첩 테이블 열 `SUPPORT`는 대괄호로 묶어 동일한 이름의 예약 키워드와 구분해야 합니다.  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -108,7 +108,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
- 이러한 결과 통해 확인할 수 있습니다 하는 고객의 자전거를 구입한 (`[Bike Buyer]` = 1), 중 1067 명이 하지 않았으며 473 3 대입니다.  
+ 이러한 결과를 통해 자전거를 구입한 고객(`[Bike Buyer]` = 1) 중 1067명이 차량을 소유하지 않았으며 473명은 3대의 차량을 소유했다는 것을 알 수 있습니다.  
   
 ###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 모델에서 하위 트리 검색  
  자전거를 구입한 고객에 대한 추가 정보를 검색한다고 가정합니다. 다음 예와 같이 쿼리에 [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 함수를 사용하여 하위 트리에 대한 추가 세부 정보를 볼 수 있습니다. 이 쿼리는 트리에서 42세 이상인 고객을 포함하는 리프 노드(NODE_TYPE = 4)를 검색하여 자전거 구매자 수를 반환합니다. 이 쿼리는 중첩 테이블의 행을 Bike Buyer = 1인 행으로 제한합니다.  
@@ -193,7 +193,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  공급자가 여기에 표시된 것과 같은 계층적 행 집합을 지원하지 않는 경우 쿼리에 FLATTENED 키워드를 사용하여 반복되는 열 값 대신 Null을 포함하는 테이블로 결과를 반환할 수 있습니다. 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](nested-tables-analysis-services-data-mining.md) 또는 [DMX Select 문 이해](/sql/dmx/understanding-the-dmx-select-statement)를 참조하세요.  
   
 ###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 의사 결정 트리 모델에서 연결 예측  
- 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)을 참조하세요.  
+ 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [단원 3: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)합니다.  
   
  다음 예제 쿼리는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 필드를 선택한 다음 드롭다운 목록에서 이러한 필드의 값을 선택하여 간단하게 만들 수 있는 단일 쿼리입니다.  
   
@@ -259,16 +259,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode & #40; DMX & #41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
+|[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
+|[PredictStdev & #40; DMX & #41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   
@@ -276,6 +276,6 @@ WHERE NODE_TYPE = 25
  [데이터 마이닝 쿼리](data-mining-queries.md)   
  [Microsoft 의사 결정 트리 알고리즘](microsoft-decision-trees-algorithm.md)   
  [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)   
- [마이닝 모델 콘텐츠 의사 결정 트리 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [의사 결정 트리 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

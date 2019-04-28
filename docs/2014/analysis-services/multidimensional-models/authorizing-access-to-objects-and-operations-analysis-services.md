@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727004"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
@@ -59,16 +59,16 @@ ms.locfileid: "48197113"
   
  다음으로, 테이블 형식 또는 다차원 솔루션이 생성된 후 서버에 데이터베이스로 배포됩니다. 서버 관리자는 해당 데이터베이스에 대해 모든 권한을 지닌 역할을 정의하여 데이터베이스 관리 작업을 위임할 수 있습니다. 이 역할의 구성원은 데이터베이스의 개체를 처리하거나 쿼리할 뿐만 아니라 데이터베이스 자체 내의 큐브, 차원 및 기타 개체에 대해 추가 역할을 만들 수 있습니다. 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)를 참조하세요.  
   
- **3단계: 쿼리 및 작업 처리에 대해 큐브 또는 모델 액세스 활성화**  
+ **3단계: 쿼리 및 처리 워크 로드에 대 한 큐브 또는 모델 액세스 활성화**  
   
- 기본적으로 서버 및 데이터베이스 관리자만 큐브 또는 테이블 형식의 모델에 액세스할 수 있습니다. 지정 하는 권한이 있는 Windows 사용자 및 그룹 계정을 큐브 또는 모델을 함께 매핑하는 추가 역할 할당이 필요 조직의 다른 사용자에 게 이러한 데이터 구조를 사용할 수 있도록 `Read` 권한. 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
+ 기본적으로 서버 및 데이터베이스 관리자만 큐브 또는 테이블 형식의 모델에 액세스할 수 있습니다. 조직 내 다른 사람들도 이러한 데이터 구조를 사용할 수 있도록 하려면 `Read` 권한을 지정하는 권한과 함께 Windows 사용자 및 그룹 계정을 큐브 또는 모델에 매핑하는 추가 역할 할당이 필요합니다. 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
   
  처리 태스크는 다른 관리 기능과 격리되어 서버 및 데이터베이스 관리자가 이 태스크를 다른 사람에게 위임하거나 예약 소프트웨어를 실행하는 서비스 계정을 지정하여 무인 처리를 구성할 수 있습니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)를 참조하세요.  
   
 > [!NOTE]  
 >  사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 데이터를 로드하는 기본 관계형 데이터베이스에 있는 관계형 테이블에 대해 사용 권한이 필요하지 않으며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터에서 파일 수준의 사용 권한도 필요로 하지 않습니다.  
   
- **4단계: 내부 큐브 개체에 대한 액세스를 허용하거나 거부합니다.**  
+ **4 단계 (선택 사항): 내부 큐브 개체에 대 한 액세스 허용 또는 거부**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 데이터 모델 내의 차원 구성원 및 셀을 포함하여 각 개체에 대한 권한을 설정하는 보안 설정을 제공합니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48197113"
   
 ## <a name="see-also"></a>관련 항목  
  [서버 관리자 권한 부여 &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [역할 및 사용 권한 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [역할 및 권한&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [Analysis Services에서 지원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

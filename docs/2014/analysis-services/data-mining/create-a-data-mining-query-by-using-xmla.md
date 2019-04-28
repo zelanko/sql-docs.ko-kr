@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715210"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
   AMO, DMX 또는 XML/A를 사용하여 데이터 마이닝 개체에 대한 다양한 쿼리를 만들 수 있습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "50148088"
   
      다음 줄로 바꿉니다.  
   
-     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  제한 목록에 새 조건을 추가하여 이름으로 마이닝 모델을 지정하도록 제한 목록을 변경합니다.  
   

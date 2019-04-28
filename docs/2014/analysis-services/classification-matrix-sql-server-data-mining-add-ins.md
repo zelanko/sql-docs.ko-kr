@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681153"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>분류표(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본, 분류표 단추](media/dmc-cmatrix.gif "데이터 마이닝 리본, 분류표 단추")  
@@ -61,7 +61,7 @@ ms.locfileid: "52522168"
   
 3.  정확도를 평가하려는 열을 선택합니다. 분류표를 만들 때 열을 하나만 선택할 수 있지만 열의 값이 여러 개일 수 있습니다.  
   
-     팁:  예측 가능한 열에 비교할 여러 열이 있는 경우 분류표를 해석하기가 어려울 수 있습니다.  
+     팁:  예측 가능한 열에 비교할 여러 열에 있는 경우 분류표를 해석 하기 어려울 수 있습니다.  
   
      에 **예측할 열 선택** 페이지를 지정할 수 있습니다도 올바르지 않은 값의 개수를 표시 하거나 백분율을 표시할 것인지 여부를 합니다.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52522168"
 ### <a name="known-issues"></a>알려진 문제  
  SQL Server 2012 및 SQL Server 2014에서는 내부 테스트 데이터 집합을 모델에 매핑할 수에서 작동 하지 않습니다 합니다 **분류표** 도구입니다. 그러나 외부 데이터 집합을 지정한 다음 학습 집합을 입력으로 선택하여 원래 데이터 집합에 대한 오류를 확인할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [모델 유효성 검사 및 예측 용 모델 사용 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [데이터 탐색 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md)  

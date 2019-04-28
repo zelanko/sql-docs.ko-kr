@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d967c6ace03180ae596a3e7f45c830d4bec54b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709153"
 ---
 # <a name="procedures-collection-adox"></a>Procedures 컬렉션(ADOX)
 모든 포함 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 카탈로그의 개체입니다.  

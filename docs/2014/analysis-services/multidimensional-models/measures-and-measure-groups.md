@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725796"
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
   큐브에는 *측정값 그룹* 의 *측정값*, 비즈니스 논리 및 측정값이 제공하는 숫자 데이터를 평가하기 위한 컨텍스트를 제공하는 차원 컬렉션이 포함됩니다. 측정값과 측정값 그룹은 둘 다 큐브의 필수 구성 요소입니다. 큐브는 최소 하나의 측정값과 측정값 그룹 없이는 존재할 수 없습니다.  

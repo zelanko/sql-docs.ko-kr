@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722625"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>데이터 마이닝 스키마 행 집합 쿼리(Analysis Services - 데이터 마이닝)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 기존 OLE DB 데이터 마이닝 스키마 행 집합 대부분이 DMX(Data Mining Extensions) 문을 사용하여 쿼리할 수 있는 시스템 테이블 집합으로 노출됩니다. 데이터 마이닝 스키마 행 집합을 대상으로 쿼리를 작성하면 사용할 수 있는 서비스를 식별하고, 모델과 구조의 상태에 대한 업데이트를 가져오고, 모델 콘텐츠나 매개 변수에 대한 정보를 찾을 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 설명은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)을 참조하십시오.  
@@ -60,7 +60,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>예 2: 마이닝 모델 매개 변수 나열  
+### <a name="example-2-list-mining-model-parameters"></a>예 2: 마이닝 모델 매개 변수 목록  
  다음 예는 특정 마이닝 모델을 만드는 데 사용된 매개 변수를 반환합니다.  
   
 ```  
@@ -69,7 +69,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>예 3: 모든 행 집합 나열  
+### <a name="example-3-list-all-rowsets"></a>예제 3: 모든 행 집합 나열  
  다음 예에서는 현재 서버에서 사용할 수 있는 행 집합의 전체 목록을 반환합니다.  
   
 ```  

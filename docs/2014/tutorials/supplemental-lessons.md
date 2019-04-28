@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 70640df678dcd6ee48145912504e542d62e2ae75
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717265"
 ---
 # <a name="supplemental-lessons"></a>추가 단원
   이 단원에서는 고급 테이블 형식 모델 기능을 사용하는 방법에 대한 추가 정보와 단원을 제공합니다.  

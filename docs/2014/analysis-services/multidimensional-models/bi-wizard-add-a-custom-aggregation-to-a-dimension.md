@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726887"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>차원에 사용자 지정 집계 추가
   큐브나 차원에 향상된 사용자 지정 집계 기능을 추가하여 차원 멤버와 연결되는 기본 집계를 다른 단항 연산자로 바꿀 수 있습니다. 이 향상된 기능은 부모-자식 계층의 멤버에 대한 롤업을 정의하는 차원 테이블에 단항 연산자 열을 지정합니다. 단항 연산자는 부모-자식 계층의 부모 특성에 대해 실행됩니다.  

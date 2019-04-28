@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 960a435500f243598f9db078644950d38d7869f2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733955"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
@@ -276,13 +276,13 @@ ms.locfileid: "53351951"
   
 |분할 조건|노드의 결과|  
 |---------------------|--------------------|  
-|n 경우 \< 5|관계를 수식 1로 표현할 수 있습니다.|  
+|if n \< 5|관계를 수식 1로 표현할 수 있습니다.|  
 |n이 5와 10 사이에 있는 경우|수식 없음|  
 |n > 10일 경우|관계를 수식 2로 표현할 수 있습니다.|  
   
  회귀 노드에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)   

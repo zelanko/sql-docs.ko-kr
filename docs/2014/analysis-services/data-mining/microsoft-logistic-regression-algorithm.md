@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733751"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft 로지스틱 회귀 알고리즘
   로지스틱 회귀는 이진 결과 모델링에 사용되는 유명한 통계 기법입니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "48179393"
 -   PMML(Predictive Model Markup Language)을 사용한 마이닝 모델 생성은 지원하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 로지스틱 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)  
   

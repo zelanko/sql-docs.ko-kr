@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724438"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_cursoroption cursor, code, value
 |0x0003|TEXTDATA|후속 인출에서 특정 텍스트 또는 이미지 열에 대해 텍스트 포인터가 아닌 실제 데이터를 반환합니다. 즉, TEXTPTR_ONLY의 효과를 실행 취소합니다.<br /><br /> 특정 열에 대해 TEXTDATA를 설정하면 행을 다시 인출하거나 새로 고치며, 그런 다음 행을 TEXTPTR_ONLY로 다시 설정할 수 있습니다. TEXTPTR_ONLY와 마찬가지로 값 매개 변수는 열 번호를 지정하는 정수이며, 값이 0이면 모든 텍스트 또는 이미지 열이 반환됩니다.|  
 |0x0004|SCROLLOPT|스크롤 옵션입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "반환 코드 값"을 참조하십시오.|  
 |0x0005|CCOPT|동시성 제어 옵션입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "반환 코드 값"을 참조하십시오.|  
-|0x0006|ROWCOUNT|현재 결과 집합에 있는 행의 수입니다.<br /><br /> 참고: 비동기 채우기를 사용 중인 경우에는 sp_cursoropen에서 값이 반환된 이후 ROWCOUNT가 변경되었을 수 있습니다. 행 수가 알 수 없는 경우-1 값이 반환 됩니다.|  
+|0x0006|ROWCOUNT|현재 결과 집합에 있는 행의 수입니다.<br /><br /> 참고: 비동기 채우기를 사용 중인 경우 sp_cursoropen에서 반환 되는 값 이후 ROWCOUNT가 변경 될 수 있습니다. 행 수가 알 수 없는 경우-1 값이 반환 됩니다.|  
   
  *value*  
  반환 되는 값을 지정 *코드*합니다. *값* 0x0001, 0x0002 또는 0x0003 필요로 하는 필수 매개 변수 *코드* 값을 입력 합니다.  

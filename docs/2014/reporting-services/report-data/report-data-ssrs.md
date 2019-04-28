@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 8c0a6ef25f33b5396ecea36edfd57ac3c42e8f5b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721409"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터
 

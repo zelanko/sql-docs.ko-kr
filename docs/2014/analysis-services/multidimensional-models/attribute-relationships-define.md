@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701393"
 ---
 # <a name="define-attribute-relationships"></a>특성 관계 정의
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성은 차원의 기본 구성 요소입니다. 차원은 특성 관계를 기반으로 구성되는 특성 집합을 포함합니다.  

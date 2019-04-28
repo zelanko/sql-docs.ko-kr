@@ -1,5 +1,5 @@
 ---
-title: '7 단원: 측정값 만들기 | Microsoft Docs'
+title: '7단원: 측정값 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728109"
 ---
 # <a name="lesson-7-create-measures"></a>7단원: 측정값 만들기
   이 단원에서는 모델에 포함할 측정값을 만듭니다. 이전 단원에서 만든 계산 열과 마찬가지로 측정값은 기본적으로 DAX 수식을 사용해 만든 계산입니다. 그러나 계산 열과는 달리 측정값은 사용자가 선택한 *필터*를 기반으로 계산됩니다. 피벗 테이블의 행 레이블 필드에 추가된 특정 열이나 슬라이서를 예로 들 수 있습니다.   적용된 측정값에 따라 필터의 각 셀에 대한 값이 계산됩니다. 측정값은 숫자 데이터에 대해 동적 계산을 수행하기 위해 대부분의 테이블 형식 모델에 포함할 수 있는 강력하고 유연한 계산입니다. 자세한 내용은 [측정값&#40;SSAS 테이블 형식&#41;](tabular-models/measures-ssas-tabular.md)을 참조하세요.  
@@ -27,10 +27,10 @@ ms.locfileid: "48213243"
   
  이 단원에서는 수식 입력줄에 DAX 수식을 입력하는 방법과 자동 합계 기능을 이용하는 방법을 모두 사용해 측정값을 만듭니다.  
   
- 이 단원에 소요되는 예상 시간: **30분**  
+ 예상이 단원을 완료 시간: **30 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [6단원: 계산 열 만들기](lesson-5-create-calculated-columns.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [6단원: 계산된 열 만들기](lesson-5-create-calculated-columns.md)합니다.  
   
 ## <a name="create-measures"></a>측정값 만들기  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213243"
  인터넷 판매 테이블에서 만든 측정값을 사용하여 사용자가 선택한 필터로 필터링된 항목의 매출, 비용, 이익률 등의 중요 회계 데이터를 분석할 수 있습니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [8단원: 핵심 성과 지표 만들기](lesson-7-create-key-performance-indicators.md)로 이동하세요.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [8단원: 핵심 성과 지표 만들기](lesson-7-create-key-performance-indicators.md)합니다.  
   
   

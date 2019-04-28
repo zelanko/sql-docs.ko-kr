@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0e6d619a4922b58a99bc8cb45c952123bbae44d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712740"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>대량 데이터 가져오기 준비(SQL Server)
   **bcp** 명령, BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하여 데이터 파일의 데이터만 대량으로 가져올 수 있습니다.  

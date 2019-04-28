@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732831"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>현지 통화 참조 정의(비즈니스 인텔리전스 마법사)
   **현지 통화 참조 정의** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 다 대 일 변환 유형을 다루는 통화 변환 기능에 대한 현지 통화를 정의할 수 있습니다. 현지 통화는 **측정값 선택** 페이지에서 선택한 측정값에 대한 트랜잭션이 저장되는 통화입니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52507891"
 > [!NOTE]  
 >  이 옵션은 **차원 테이블의 특성** 옵션을 선택하지 않으면 사용할 수 없습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)   
  [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [차원 디자이너 &#40;Analysis Services-다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

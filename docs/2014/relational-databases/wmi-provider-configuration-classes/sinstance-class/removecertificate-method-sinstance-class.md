@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d98cff84b93a13daec7be86dbc24b5fe9556f76c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720933"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>RemoveCertificate 메서드(SInstance 클래스)
   현재 보안 인증서를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 제거합니다.  

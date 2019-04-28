@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721104"
 ---
 # <a name="lesson-3-configuring-distribution"></a>3단원: 배포 구성
   이 단원에서는 게시자에서 배포를 구성하고 게시 및 배포 데이터베이스에서 필수 사용 권한을 설정합니다. 배포자를 이미 구성한 경우 이 단원을 시작하기 전에 우선 게시와 배포를 해제해야 합니다. 기존 복제 토폴로지를 유지해야 하는 경우에는 이 작업을 수행하지 마십시오.  

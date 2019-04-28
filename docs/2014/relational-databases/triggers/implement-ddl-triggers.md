@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a32b4b17974dfbd761ee56a16ec7f8f74e7d4b76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698498"
 ---
 # <a name="implement-ddl-triggers"></a>DDL 트리거 구현
   이 항목에서는 DDL 트리거 생성, DDL 트리거 수정, DDL 트리거 해제 또는 삭제 방법에 대한 정보를 제공합니다.  

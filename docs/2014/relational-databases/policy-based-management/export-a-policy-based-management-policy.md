@@ -1,25 +1,27 @@
 ---
 title: 정책 기반 관리 정책 내보내기 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, export policy
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc7067432c46e1d03323ed2a32dab84ebdf72755
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705324"
 ---
 # <a name="export-a-policy-based-management-policy"></a>정책 기반 관리 정책 내보내기
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책을 내보내는 방법에 대해 설명합니다.  
   
  **항목 내용**  

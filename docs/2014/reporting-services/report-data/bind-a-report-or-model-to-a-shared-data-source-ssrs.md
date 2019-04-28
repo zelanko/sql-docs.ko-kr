@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83edc5eb7d0a79e6af7bb88253cc501cc30d0f60
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697511"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>보고서 또는 모델을 공유 데이터 원본에 바인딩(SSRS)
   보고서나 모델을 테스트 서버에서 프로덕션 서버로 이동할 때와 같이 로컬 컴퓨터에 파일을 저장한 다음 이 파일을 다른 보고서 서버로 업로드해야 하는 경우가 있습니다. 보고서나 모델을 새 서버로 업로드하는 경우 새 보고서 서버에 저장된 공유 데이터 원본에 다시 바인딩해야 합니다. 보고서나 모델을 다시 바인딩하지 않으면 새 보고서 서버에서 액세스할 때 제대로 작동하지 않습니다.  

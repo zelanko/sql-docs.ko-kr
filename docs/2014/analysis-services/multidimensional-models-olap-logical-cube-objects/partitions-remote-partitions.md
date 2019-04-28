@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727358"
 ---
 # <a name="remote-partitions"></a>원격 파티션
   원격 파티션의 데이터는 Microsoft의 다른 인스턴스에 저장 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 파티션과 해당 부모 큐브가 정의 (메타 데이터)를 포함 하는 인스턴스보다 합니다. 원격 파티션은 파티션과 해당 부모 큐브가 정의된 것과 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 관리됩니다.  

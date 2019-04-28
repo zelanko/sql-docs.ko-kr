@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e49207e99887e13cdd5321821e7325b4a2dac7dc
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717850"
 ---
 # <a name="attribute-relationships---define"></a>특성 관계 - 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52983964"
 > [!NOTE]  
 >  특성 관계를 잘못 정의하면 유효하지 않은 쿼리 결과를 얻을 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [에서 차원 디자이너의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

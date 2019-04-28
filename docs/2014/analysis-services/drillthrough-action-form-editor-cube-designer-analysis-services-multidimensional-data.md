@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731718"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>드릴스루 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에 있는 **드릴스루 동작 폼 편집기** 창을 사용하여 **작업 구성 도우미** 창에서 선택한 드릴스루 작업을 수정할 수 있습니다. 드릴스루 동작에 대한 자세한 내용은 [작업&#40;Analysis Services - 다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -104,7 +104,7 @@ ms.locfileid: "48213233"
  클라이언트 애플리케이션에서 동작에 대해 표시할 캡션을 나타내는 문자열을 반환하는 MDX 식이 **캡션** 에 포함되어 있음을 나타내려면 **True** 를 선택합니다. 클라이언트 애플리케이션으로 동작을 반환하기 전에 MDX 식을 확인해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Multidimensional Expression &#40;MDX&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [MDX&#40;Multidimensional Expression&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [작업 &#40;큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [도구 모음 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [동작 구성 도우미 &#40;동작 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

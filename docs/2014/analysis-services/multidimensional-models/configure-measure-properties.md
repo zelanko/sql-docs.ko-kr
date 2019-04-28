@@ -43,11 +43,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f54906f8fbaa363495619318a5197957c96e1250
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726937"
 ---
 # <a name="configure-measure-properties"></a>측정값 속성 구성
   측정값에는 해당 측정값의 작동 방법을 정의하고 측정값의 표시 방법을 제어하는 데 사용할 수 있는 속성이 있습니다.  

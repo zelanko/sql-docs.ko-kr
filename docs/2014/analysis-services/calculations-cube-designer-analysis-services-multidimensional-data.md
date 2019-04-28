@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681090"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>계산(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭을 사용하여 선택한 큐브에 대한 계산 멤버, 명명된 집합 및 MDX(Multidimensional Expressions) 스크립트 명령을 포함한 계산을 보고 편집할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "48103913"
 ## <a name="see-also"></a>관련 항목  
  [큐브 개체 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [계산](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [큐브 디자이너 &#40;Analysis Services-다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [명명된 집합 만들기](multidimensional-models/create-named-sets.md)  
   

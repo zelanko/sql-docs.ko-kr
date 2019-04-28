@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721128"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅숏으로 구독 초기화
   게시가 생성된 후 일반적으로 초기 스냅숏이 생성되어 스냅숏 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅숏은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅숏 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅숏 프로세스는 게시 유형에 따라 달라집니다.  

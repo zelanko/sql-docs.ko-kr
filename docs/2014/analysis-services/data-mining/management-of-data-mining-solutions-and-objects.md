@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722223"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "50147578"
   
 -   [마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+-   [모델링 플래그 & #40; 데이터 마이닝 & #41; 확인 또는 변경](modeling-flags-data-mining.md)  
   
 -   [알고리즘 매개 변수 확인 또는 변경](view-or-change-algorithm-parameters.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "50147578"
   
 -   [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](/sql/dmx/dmx-statements-data-definition)  
   
- **제한 사항:** 일부 속성은 DMX를 사용하여 변경할 수 없습니다.  
+ **제한 사항:** 일부 속성은 DMX를 사용 하 여 변경할 수 없습니다.  
   
 ### <a name="xml-for-analysis-xmla"></a>XMLA(XML for Analysis)  
  XMLA(XML for Analysis)는 모든 Analysis Services에 대한 데이터 정의 언어입니다. XMLA를 사용하면 대부분의 데이터 마이닝 개체와 서버 작업을 제어할 수 있습니다. 클라이언트와 서버 간의 모든 관리 작업은 XMLA를 사용하여 수행할 수 있습니다. 편의상 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language)을 사용하여 XML을 래핑할 수 있습니다.  

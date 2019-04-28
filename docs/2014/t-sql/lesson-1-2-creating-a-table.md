@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704566"
 ---
 # <a name="creating-a-table-tutorial"></a>테이블 만들기(자습서)
   테이블을 만들려면 테이블의 이름과 테이블에 있는 각 열의 이름 및 데이터 형식을 제공해야 합니다. 또한 각 열에서 Null 값이 허용되는지 여부를 나타내는 것이 좋습니다.  

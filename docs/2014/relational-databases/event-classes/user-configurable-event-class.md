@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724832"
 ---
 # <a name="user-configurable-event-class"></a>User-Configurable 이벤트 클래스
   User-Configurable 이벤트 범주를 사용하여 사용자 정의 이벤트를 모니터링할 수 있습니다. 다른 이벤트 범주의 시스템 제공 이벤트 클래스에서 모니터링할 수 없는 이벤트를 모니터링하도록 사용자 정의 이벤트 클래스를 만듭니다. 예를 들어 테스트 중인 애플리케이션의 진행률을 모니터링하도록 사용자 정의 이벤트를 만들 수 있습니다. 애플리케이션이 실행될 때 미리 정의한 지점에서 이벤트를 생성하여 애플리케이션의 현재 실행 지점을 판단하도록 할 수 있습니다.  

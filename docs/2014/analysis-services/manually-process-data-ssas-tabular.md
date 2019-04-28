@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728339"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>수동으로 데이터 처리(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업 영역 데이터를 수동으로 처리하는 방법에 대해 설명합니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "48189773"
  처리 작업을 중지하려면 클릭합니다. 이 옵션은 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
- [데이터 처리 문제 해결 &#40;&AMP;#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [데이터 처리&#40;SSAS 테이블 형식&#41;](process-data-ssas-tabular.md)   
+ [데이터 처리 문제 해결&#40;SSAS 테이블 형식&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

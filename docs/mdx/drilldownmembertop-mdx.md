@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690851"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop(MDX)
 
@@ -35,7 +35,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *Count*  
+ *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
  *Numeric_Expression*  

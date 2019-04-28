@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721079"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>2단원: 트랜잭션 게시에 구독 만들기
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 이 단원에서는 이전 단원을 완료 해야 [1 단원: 트랜잭션 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-transactional-replication.md)합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "54129393"
 3.  **AdvWorksProductTrans**에 해당 구독이 표시되지 않으면 F5 키를 눌러 목록을 새로 고칩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 트랜잭션 게시에 구독을 성공적으로 만들었습니다. 이 구독에 대한 배포 에이전트가 계속 실행되므로 구독은 생성될 때 초기화됩니다. 다음 단원에서는 추적 프로그램 토큰을 사용하여 변경 내용이 구독자에 복제되었는지 여부 및 대기 시간을 확인합니다. 참조 [3 단원: 구독 유효성 검사 및 대기 시간 측정](lesson-3-validating-the-subscription-and-measuring-latency.md)합니다.  
+ 트랜잭션 게시에 구독을 성공적으로 만들었습니다. 이 구독에 대한 배포 에이전트가 계속 실행되므로 구독은 생성될 때 초기화됩니다. 다음 단원에서는 추적 프로그램 토큰을 사용하여 변경 내용이 구독자에 복제되었는지 여부 및 대기 시간을 확인합니다. [3단원: 구독 유효성 검사 및 대기 시간 측정](lesson-3-validating-the-subscription-and-measuring-latency.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)   

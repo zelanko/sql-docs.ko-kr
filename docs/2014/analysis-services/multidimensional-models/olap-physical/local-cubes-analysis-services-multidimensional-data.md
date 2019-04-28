@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699188"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>로컬 큐브(Analysis Services - 다차원 데이터)
   로컬 큐브를 만들거나 업데이트하거나 삭제하려면 ASSL 스크립트나 AMO 프로그램을 작성하여 실행해야 합니다.  

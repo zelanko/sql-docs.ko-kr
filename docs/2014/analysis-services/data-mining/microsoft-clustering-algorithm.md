@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721971"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
-  합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘에서 제공 하는 세그먼트화 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 세그먼트화 알고리즘입니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
   
  클러스터링 모델은 관찰만 가지고는 논리적으로 이끌어 낼 수 없을 수 있는 데이터 세트 내 관계를 식별합니다. 예를 들어 자전거로 통근하는 사람은 일반적으로 회사에서 먼 곳에 살지 않는다는 사실을 논리적으로 인식할 수 있습니다. 그러나 알고리즘은 자전거 통근자에 대해 확연하게 드러나지 않는 다른 특징을 찾아낼 수 있습니다. 다음 다이어그램에서 클러스터 A는 자가용으로 통근하는 사람에 대한 데이터를 나타내고 클러스터 B는 자전거로 통근하는 사람에 대한 데이터를 나타냅니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195103"
   
 -   **입력 열** 각 모델은 클러스터 작성에 사용되는 값을 포함하는 입력 열을 하나 이상 포함해야 합니다. 입력 열은 원하는 만큼 사용할 수 있지만 각 열의 값 수에 따라 추가되는 열로 인해 모델 학습에 걸리는 시간이 길어질 수 있습니다.  
   
--   **선택적 예측 가능한 열** 이 알고리즘의 경우 모델을 작성하는 데 예측 가능한 열이 필요하지는 않지만 거의 모든 데이터 형식의 예측 가능한 열을 추가할 수는 있습니다. 예측 가능한 열의 값은 클러스터링 모델에 대한 입력으로 처리되거나 예측용으로만 사용되도록 지정할 수 있습니다. 예를 들어, 지역 또는 연령과 같은 인구 통계를 클러스터링 하 여 고객의 소득을 예측 하려는 경우 지정으로 income `PredictOnly` 하 고 다른 모든 열, 지역 또는 연령과 같은 입력으로 추가 합니다.  
+-   **선택적 예측 가능한 열** 이 알고리즘의 경우 모델을 작성하는 데 예측 가능한 열이 필요하지는 않지만 거의 모든 데이터 형식의 예측 가능한 열을 추가할 수는 있습니다. 예측 가능한 열의 값은 클러스터링 모델에 대한 입력으로 처리되거나 예측용으로만 사용되도록 지정할 수 있습니다. 예를 들어 지역 및 연령과 같은 인구 통계를 클러스터링하여 고객의 소득을 예측하려는 경우 소득을 `PredictOnly`로 지정한 다음 지역 또는 연령과 같은 다른 모든 열을 입력으로 추가할 수 있습니다.  
   
  클러스터링 모델에 대해 지원되는 콘텐츠 형식 및 데이터 형식에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)의 요구 사항 섹션을 참조하세요.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195103"
 -   OLAP 마이닝 모델의 사용과 마이닝 모델 차원의 생성을 지원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)   
- [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)  
   
   

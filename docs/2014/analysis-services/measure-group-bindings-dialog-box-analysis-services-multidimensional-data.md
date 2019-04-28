@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c803d434fac98c6f2397465738599bac5fa1d8ad
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727970"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>측정값 그룹 바인딩 대화 상자(Analysis Services - 다차원 데이터)
   **관계 정의** 대화 상자에서 액세스할 수 있는 **측정값 그룹 바인딩** 대화 상자를 사용하여 큐브 차원의 모든 특성에 대해 Null 처리 옵션을 지정할 수 있을 뿐만 아니라 일반 차원 관계에 대해 큐브 차원의 비세분성 특성과 측정값 그룹 열 간의 직접 관계를 생성 및 수정할 수 있습니다.  

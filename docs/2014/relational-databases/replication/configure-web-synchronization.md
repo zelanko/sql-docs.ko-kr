@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721657"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 복제를 위한 웹 동기화 옵션을 사용하면 인터넷에서 HTTPS 프로토콜을 사용하여 데이터를 복제할 수 있습니다. 웹 동기화를 사용하려면 먼저 다음 구성 동작을 수행해야 합니다.  

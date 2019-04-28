@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705032"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>업데이트된 백업이 필요한 일반 동작
   정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제 스키마 또는 토폴로지에 변경 작업을 수행한 후 게시, 배포, 구독, **msdb**및 **master** 데이터베이스 백업을 수행합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "52773235"
   
 -   게시자 및 배포자의 배포 게시자에서 게시자 활성화 또는 비활성화  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](back-up-and-restore-replicated-databases.md)  
   

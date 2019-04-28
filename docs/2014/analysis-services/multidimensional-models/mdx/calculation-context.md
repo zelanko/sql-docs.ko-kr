@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725534"
 ---
 # <a name="calculation-context"></a>계산 컨텍스트
   계산 컨텍스트는 식이 계산되고 모든 좌표가 명시적으로 알려지거나 식에서 파생될 수 있는 큐브의 알려진 하위 공간입니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48081483"
   
 5.  각 축의 큐브 또는 하위 큐브 셀. 이때 축의 빈 튜플은 제거하고 HAVING 절을 적용합니다.  
   
-6.  자세한 내용은 [쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)합니다.  
+6.  자세한 내용은 [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)을 참조하세요.  
   
  다음 쿼리에서 행 축의 계산 컨텍스트는 WHERE 절에 지정된 Country 특성 멤버와 Calendar Year 특성 멤버에 의해 제한됩니다.  
   
@@ -71,8 +71,8 @@ WHERE (Customer.Country.France,
 >  쿼리 성능을 향상시키려면 멤버와 튜플을 확인 과정에서 가능한 한 빨리 제거해야 합니다. 이렇게 하면 쿼리할 때 최종 멤버 집합에 대한 복잡한 계산이 가능한 가장 적은 수의 셀에 대해 수행됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [쿼리에 큐브 컨텍스트 설정 &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](mdx-query-fundamentals-analysis-services.md)   
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

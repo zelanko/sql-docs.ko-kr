@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726257"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>솔루션 배포를 위한 구성 설정 지정
   합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사는 파티션 및 역할 배포 옵션을 읽습니다 로부터 배포 스크립트에서 사용 하는 합니다 \< *프로젝트 이름을*>.configsettings 파일입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 작성할 때 이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 현재 프로젝트의 구성 설정을 사용 하 여 만듭니다는 \< *프로젝트 이름*>.configsettings 파일입니다.  

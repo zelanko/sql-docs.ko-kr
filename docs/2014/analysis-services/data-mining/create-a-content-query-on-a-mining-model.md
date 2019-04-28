@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715240"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
   AMO 또는 XML/A를 사용하여 프로그래밍 방식으로 마이닝 모델 콘텐츠를 쿼리할 수 있지만 DMX를 사용하여 쿼리를 만드는 편이 더 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "50148038"
      결과 창에 모델의 콘텐츠가 표시됩니다.  
   
     > [!NOTE]  
-    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면 `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS 쿼리를 사용합니다. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)를 참조하십시오.  
+    >  현재 인스턴스에서 쿼리할 수 있는 모든 스키마 행 집합의 목록을 보려면이 쿼리를 사용 합니다. `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. 또는 데이터 마이닝과 관련된 스키마 행 집합의 목록은 [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   

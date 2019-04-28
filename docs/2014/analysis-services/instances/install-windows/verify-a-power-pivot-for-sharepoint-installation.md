@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703313"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 확인
   SharePoint 팜에 설치하는 SharePoint용 PowerPivot 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  

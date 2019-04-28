@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701289"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>특성 관계 만들기, 수정 또는 삭제
   **에서 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 차원 특성 간의 특성 관계를 만들거나 수정 또는 삭제할 수 있습니다.  
@@ -61,6 +61,6 @@ ms.locfileid: "48202793"
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [특성 관계](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [에서 차원 디자이너의](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

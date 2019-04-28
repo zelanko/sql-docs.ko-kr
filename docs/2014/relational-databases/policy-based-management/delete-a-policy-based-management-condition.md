@@ -1,25 +1,27 @@
 ---
 title: 정책 기반 관리 조건 삭제 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, delete policy conditions
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6c5ae10727f14d84c74d7f57d312908734d14a4e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705276"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>정책 기반 관리 조건 삭제
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 조건을 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  

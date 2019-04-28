@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b05f01a5c8100f4c06d8cc6b294bdb49e5baed71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712790"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
   이 항목에서는 데이터 형식 특성, 필드별 프롬프트 및 비 xml 서식 파일의 필드에서 데이터를 저장 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `bcp` 명령입니다. 이러한 개념을 잘 알고 있으면 다른 데이터베이스 프로그램과 같은 다른 프로그램으로 대량으로 가져오기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 대량으로 내보낼 때 특히 유용합니다. 원본 테이블의 기본 데이터 형식(네이티브, 문자 또는 유니코드)이 다른 프로그램에서 필요한 데이터 레이아웃과 호환되지 않을 수 있습니다. 호환되지 않는 경우 데이터를 내보낼 때는 데이터 레이아웃을 지정해야 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48214774"
   
 -   파일 스토리지 유형  
   
-     *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터 또는 내보낼 수 데이터 파일에는 데이터베이스 테이블 형식 (네이티브 형식)로 문자 표시 (문자 형식), 암시적 변환이 지원 되는 데이터 형식으로 예를 들어 복사를 `smallint` 으로 `int`합니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.  
+     *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다. 자세한 내용은 [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)을 참조하세요.  
   
 -   접두사 길이  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48214774"
      문자 데이터 필드에서 필요에 따라 종료 문자를 사용하면 데이터 파일 내 각 필드( *필드 종결자*사용)와 행( *행 종결자*사용)의 끝을 표시할 수 있습니다. 종결 문자는 한 필드나 행이 끝나고 다른 필드나 행이 시작하는 부분을 표시하여 데이터 파일을 읽는 프로그램에 전달하는 한 방법입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
 ##  <a name="FieldSpecificPrompts"></a> 필드별 프롬프트 개요  
- 대화형 `bcp` 명령에는 **에** 또는 **아웃** 옵션은 있 서식 파일 스위치 포함 되지 않습니다 (**-f**) 데이터 형식 스위치 (또는 **-n**, **-c**합니다 **-w**, 또는 **-N**), 각 이전에 대 한 원본 또는 대상 테이블의 각 열에는 명령 프롬프트 특성을 설정 합니다. 각 프롬프트에서를 `bcp` 명령을 기반으로 기본 값을 제공 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 열의 데이터 형식입니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식(**-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
+ 대화형 `bcp` 명령에는 **에** 또는 **아웃** 옵션은 있 서식 파일 스위치 포함 되지 않습니다 (**-f**) 데이터 형식 스위치 (또는 **-n**, **-c**합니다 **-w**, 또는 **-N**), 각 이전에 대 한 원본 또는 대상 테이블의 각 열에는 명령 프롬프트 특성을 설정 합니다. 각 프롬프트에서 `bcp` 명령은 테이블 열의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 따라 기본값을 제공합니다. 모든 메시지에서 기본값을 그대로 사용하면 명령줄에서 네이티브 형식(**-n**)을 지정한 것과 동일한 결과가 생성됩니다. 각 프롬프트에서 기본값은 [*default*]와 같이 대괄호에 묶여 표시됩니다. 표시된 기본값을 적용하려면 Enter 키를 누릅니다. 기본값 이외의 값을 지정하려면 프롬프트에서 새 값을 입력합니다.  
   
 ### <a name="example"></a>예제  
- 다음 예제에서는 합니다 `bcp` 대량 명령에서 데이터를 내보낼는 `HumanResources.myTeam` 대화형으로 테이블는 `myTeam.txt` 파일. 예를 실행하려면 이 테이블을 만들어야 합니다. 테이블 및 테이블을 만드는 방법은 [HumanResources.myTeam 예제 테이블&#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)을 참조하세요.  
+ 다음 예에서는 `bcp` 명령을 사용하여 대화형으로 `HumanResources.myTeam` 테이블에서 `myTeam.txt` 파일로 데이터를 대량 내보냅니다. 예를 실행하려면 이 테이블을 만들어야 합니다. 테이블 및 테이블을 만드는 방법은 [HumanResources.myTeam 예제 테이블&#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)을 참조하세요.  
   
- 명령에서 서식 파일이 나 데이터 형식을 모두 지정 발생 `bcp` 데이터 형식 정보를 입력 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
+ 명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 `bcp`는 데이터 형식 정보를 묻는 프롬프트를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
 ```  
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  각 테이블 열에 대한 프롬프트(필요한 경우에만)가 순서대로 표시됩니다.  
   
 ##  <a name="FieldByFieldNonXmlFF"></a> 비 XML 서식 파일에 필드 단위 데이터 저장  
- 모든 테이블의 열이 지정 된 된 `bcp` 명령은 필드 별로 정보 방금 입력 (이전 예 참조)를 저장 하는 비 XML 서식 파일을 만들 것인지 묻는 메시지를 표시 합니다. 서식 파일 생성하도록 선택하면 해당 테이블에서 데이터를 내보내거나 구조가 비슷한 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 때마다 서식 파일을 생성할 수 있습니다.  
+ 테이블 열이 모두 지정된 후 `bcp` 명령은 방금 제공된 필드 단위 정보를 저장할 비 XML 서식 파일을 만들 것인지 묻는 메시지를 표시합니다(이전 예 참조). 서식 파일 생성하도록 선택하면 해당 테이블에서 데이터를 내보내거나 구조가 비슷한 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 때마다 서식 파일을 생성할 수 있습니다.  
   
 > [!NOTE]  
 >  서식 파일을 사용하면 데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스로 데이터를 대량 가져오거나 테이블에서 데이터를 대량 내보낼 때 서식을 다시 지정할 필요가 없습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f1014578527684e9e9e5b66065a5166941f16f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733853"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>마이닝 모델 및 데이터 마이닝 뷰어 선택
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 뷰어 중 하나를 사용하여 마이닝 모델을 탐색할 수 있습니다. 손쉽게 모델 간에 전환하거나 사용 중인 뷰어를 변경할 수 있습니다.  
   
 -   **에서 데이터 마이닝 디자이너의** 마이닝 모델 뷰어 **탭에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 드롭다운 목록 상자에는 현재 마이닝 구조에 포함된 모든 마이닝 모델이 나열되어 있습니다.  
   
--   각 모델 유형에 대해 사용자 지정 뷰어가 제공됩니다. 모든 사용자 지정 뷰어에 대한 개요는 [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](../mining-model-viewers-data-mining-model-designer.md)를 참조하세요. 모델을 이해하도록 사용자 지정 뷰어를 사용하는 방법을 보여 주는 연습은 [4단원: 타겟 메일링 모델 탐색&#40;기본 데이터 모델링 자습서&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)을 참조하세요.  
+-   각 모델 유형에 대해 사용자 지정 뷰어가 제공됩니다. 모든 사용자 지정 뷰어에 대한 개요는 [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](../mining-model-viewers-data-mining-model-designer.md)를 참조하세요. 모델을 이해 하도록 사용자 지정 뷰어를 사용 하는 방법의 연습을 참조 하세요. [4 단원: 타겟된 메일링 모델 탐색 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 뷰어에는 트리 내 표준 노드 표시의 알고리즘을 통해 발견한 패턴이 표시됩니다. 일반 트리 뷰에 모델의 모든 내용이 보다 자세하게 표시되기는 하지만 해석하기가 더 어렵습니다. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)를 참조하세요.  
   

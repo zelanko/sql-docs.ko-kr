@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734861"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
   합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리를 기반으로 하며 제공한 분류 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예측 모델링에 사용 합니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  

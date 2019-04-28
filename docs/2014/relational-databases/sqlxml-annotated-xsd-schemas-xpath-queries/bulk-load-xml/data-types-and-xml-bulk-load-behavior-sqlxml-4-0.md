@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 95fdeec756a149f0663bfb337eb2103085fb8859
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717596"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>데이터 형식과 XML 대량 로드 동작(SQLXML 4.0)
   매핑 스키마(XSD 또는 XDR 형식 및 `sql:datatype`)에 지정된 데이터 형식은 일반적으로 다음 경우를 제외하고는 무시됩니다.  

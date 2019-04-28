@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b877875c6a5c02b7d7715916d5515e93d95dbeb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725557"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>쿼리에 큐브 컨텍스트 설정(MDX)
   모든 MDX 쿼리는 지정된 큐브 컨텍스트 내에서 실행됩니다. 이 컨텍스트는 쿼리 내의 식에 의해 계산되는 멤버를 정의합니다.  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
  MDX [LookupCube](/sql/mdx/lookupcube-mdx) 함수를 사용하면 큐브 컨텍스트 외부의 다른 큐브에서 데이터를 검색할 수 있습니다. 또한 [Filter](/sql/mdx/filter-mdx) 함수 등을 사용하여 쿼리를 계산할 때 컨텍스트를 임시적으로 제한할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

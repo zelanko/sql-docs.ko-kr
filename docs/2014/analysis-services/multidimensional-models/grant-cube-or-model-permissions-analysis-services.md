@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725967"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
   큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
@@ -102,8 +102,8 @@ ms.locfileid: "48149713"
  큐브 권한을 구체화하여 셀 또는 차원 데이터에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Analysis Services에서 지원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

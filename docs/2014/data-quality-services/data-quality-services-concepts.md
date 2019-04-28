@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 649d687b93a2eeff940c92c79b7b966511a1d79d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792975"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
   이 항목에서는 기술 자료 관리, 데이터 품질 프로젝트 및 데이터 품질 관리의 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 개념을 간단히 요약합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "56015644"
   
  DQS의 데이터 정리 작업은 DQS 기술 자료의 지식을 기반으로 수행됩니다. DQS의 데이터 정리 작업은 2단계 프로세스입니다.  
   
--   **컴퓨터 기반 정리**: DQS에서는 정리 프로젝트에 대해 선택된 기술 자료의 지식을 사용하여 데이터 원본에 있는 값에 대한 수정/제안 사항을 제공합니다.  
+-   **컴퓨터 기반 정리**: DQS 정리 프로젝트에 대해 선택한 기술 자료에서 기술 자료를 사용 하 여 데이터 원본에 값을 수정/제안 사항을 제공.  
   
--   **대화형 정리**: 데이터 관리자는 대화형 정리 프로세스를 수행하여 컴퓨터 기반 데이터 정리 프로세스에서 제안한 데이터 수정 사항을 변경하거나 보강할 수 있습니다. 데이터 관리자는 데이터 정리 프로세스에서 식별된 신뢰 수준과 통계를 사용하거나 변경 사항을 프로젝트에 수동으로 입력하여 이 작업을 수행합니다.  
+-   **대화형 정리**: 데이터 관리자는 대화형 정리 프로세스는 컴퓨터 기반 데이터 정리 프로세스에서 제안한 데이터 수정 변경 하거나 보강할를 수행할 수 있습니다. 데이터 관리자는 데이터 정리 프로세스에서 식별된 신뢰 수준과 통계를 사용하거나 변경 사항을 프로젝트에 수동으로 입력하여 이 작업을 수행합니다.  
   
  데이터 관리자는 데이터를 정리한 후 처리된 데이터를 SQL Server 데이터베이스, .csv 파일 또는 Excel 파일로 내보낼 수 있습니다. 자세한 내용은 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)을 참조하세요.  
   

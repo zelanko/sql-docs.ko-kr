@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df563ae17a04d37d7d3ea667e79cf9de2c7d9a51
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722673"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
   비즈니스 요구를 충족하는 알고리즘을 선택한 후 다음과 같은 방법으로 마이닝 모델을 사용자 지정하여 결과를 잠재적으로 향상시킬 수 있습니다.  
@@ -107,8 +107,8 @@ ms.locfileid: "52407888"
 |HIDDEN_NODE_RATIO|[Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용되는 홀드아웃 백분율 값과는 다릅니다.|  
-|HOLDOUT_SEED|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용되는 홀드아웃 초기값과는 다릅니다.|  
+|HOLDOUT_PERCENTAGE|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용 되는 홀드 아웃 백분율 값과 다릅니다.|  
+|HOLDOUT_SEED|[Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> 참고: 이 매개 변수는 마이닝 구조에 적용 되는 홀드 아웃 초기값과 다릅니다.|  
 |INSTABILITY_SENSITIVITY|[Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Microsoft 클러스터링 알고리즘 기술 참조](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft 의사 결정 트리 알고리즘 기술 참조](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Microsoft Naive Bayes 알고리즘 기술 참조](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Microsoft 신경망 알고리즘 기술 참조](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Microsoft 연결 알고리즘 기술 참조](microsoft-association-algorithm-technical-reference.md)|  

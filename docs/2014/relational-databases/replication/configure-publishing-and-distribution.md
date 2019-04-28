@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721705"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 구성하는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "54135863"
   
 #### <a name="to-configure-distribution"></a>배포를 구성하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 배포자가 될 서버에 연결한 다음 서버 노드를 확장합니다. 게시자와 배포자가 같은 서버인 경우가 많습니다.  
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포 구성**을 클릭합니다.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735059"
 ---
 # <a name="system-functions"></a>시스템 함수
 다음 표에서 ODBC 스칼라 함수 집합에 포함 된 시스템 함수를 나열 합니다. 호출 하 여 **SQLGetInfo** 사용 하 여는 *정보 유형* SQL_SYSTEM_FUNCTIONS의 응용 프로그램을 드라이버에서 지원 되는 시스템 함수 확인할 수 있습니다.  
@@ -33,5 +33,5 @@ ms.locfileid: "53591517"
 |기능|Description|  
 |--------------|-----------------|  
 |**데이터베이스 ()** (ODBC 1.0)|연결 핸들에 해당 데이터베이스의 이름을 반환 합니다. (호출 하 여 데이터베이스의 이름을 사용할 수 있는 이기도 **SQLGetConnectOption** SQL_CURRENT_QUALIFIER 연결 옵션을 사용 하 여.)|  
-|**IFNULL (** _exp_하십시오_값_**)** (ODBC 1.0)|하는 경우 *exp* 가 null *값* 반환 됩니다. 하는 경우 *exp* null이 아니면 *exp* 반환 됩니다. 가능한 데이터 형식 또는 형식의 *값* 데이터 형식과 호환 되어야 *exp*합니다.|  
-|**사용자 ()** (ODBC 1.0)|DBMS의 사용자 이름을 반환 합니다. (사용자 이름은 또한의 방식으로 사용할 수 있습니다 **SQLGetInfo** 정보 형식을 지정 하 여: SQL_USER_NAME입니다.) 로그인 이름과 다를 수 있습니다.|
+|**IFNULL(** _exp_,_value_**)**  (ODBC 1.0)|하는 경우 *exp* 가 null *값* 반환 됩니다. 하는 경우 *exp* null이 아니면 *exp* 반환 됩니다. 가능한 데이터 형식 또는 형식의 *값* 데이터 형식과 호환 되어야 *exp*합니다.|  
+|**사용자 ()** (ODBC 1.0)|DBMS의 사용자 이름을 반환 합니다. (사용자 이름은 또한의 방식으로 사용할 수 있습니다 **SQLGetInfo** 정보 형식을 지정 하 여: SQL_USER_NAME.) 로그인 이름과 다를 수 있습니다.|

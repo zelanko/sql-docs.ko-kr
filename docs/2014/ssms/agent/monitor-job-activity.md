@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704770"
 ---
 # <a name="monitor-job-activity"></a>작업 활동 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 정의된 모든 작업의 현재 활동을 모니터링할 수 있습니다.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722773"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
   *교차 유효성 검사*는 분석의 표준 도구이며 데이터 마이닝 모델 개발 및 미세 조정에 도움이 되는 중요한 기능입니다. 마이닝 구조 및 관련 마이닝 모델을 만든 후 교차 유효성 검사를 사용하여 모델의 유효성을 확인합니다.  교차 유효성 검사는 다음과 같이 적용됩니다.  

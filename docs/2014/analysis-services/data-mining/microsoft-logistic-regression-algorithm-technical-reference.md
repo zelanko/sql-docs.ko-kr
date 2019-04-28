@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733937"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 로지스틱 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 분석 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘의 변형으로, *HIDDEN_NODE_RATIO* 매개 변수가 0으로 설정됩니다. 이렇게 설정하면 숨겨진 계층을 포함하지 않으므로 로지스틱 회귀와 동등한 신경망 모델이 생성됩니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "52518050"
   
  Μ = p-(상태의 사전 확률)  
   
- StdDev sqrt(p(1-p)) =  
+ StdDev  = sqrt(p(1-p))  
   
  값이 있음:     (1-μ)/σ / / (에서 mu를 뺀 하나)를 시그마로 나눔)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  이 쿼리는 각 출력 값에 대해 다시 관련 입력 노드를 가리키는 계수 및 ID를 반환합니다. 또한 출력 값과 절편이 들어 있는 행을 반환합니다. 각 입력 X에는 고유한 계수 (Ci) 하지만 중첩된 테이블을 다음 수식에 따라 계산 된 "자유" 계수 (Co)도 포함 되어 있습니다.  
   
- F (x) = X1 * C1 + X2\*C2... + + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activation: exp(F(X)) / (1 + exp(F(X)) )  
   
@@ -153,7 +153,7 @@ WHERE NODE_TYPE = 23
 |입력 특성|Continuous, Discrete, Discretized, Key, Table|  
 |예측 가능한 특성|Continuous, Discrete, Discretized|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)   
  [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)   
  [로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-logistic-regression-models.md)   

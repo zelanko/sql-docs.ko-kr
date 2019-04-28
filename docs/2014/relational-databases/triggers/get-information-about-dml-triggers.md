@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698736"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML 트리거에 대한 정보 가져오기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 DML 트리거에 대한 정보를 얻는 방법에 대해 설명합니다. 이 정보에는 테이블에 있는 트리거의 유형, 이름, 소유자 및 작성 또는 수정 날짜가 포함될 수 있습니다. 트리거를 만들었을 때 암호화하지 않은 경우 트리거의 정의를 얻을 수 있습니다. 이 정의를 사용하여 테이블에 정의된 트리거가 해당 테이블에 어떠한 영향을 주는지를 이해할 수 있습니다. 또한 특정 트리거가 사용하는 개체를 찾을 수 있습니다. 이 정보를 사용하면 데이터베이스에서 변경되거나 삭제될 때 트리거에 영향을 주는 개체를 식별할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "58531865"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)을 참조하세요.  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- **public** 역할의 멤버 자격이 필요합니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여 받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 사용자 개체의 정의 개체 소유자 또는 다음 권한 중 하나가 있는 피부 여자에 게 표시 합니다. ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION입니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
  **sys.sql_expression_dependencies**  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 **sys.sql_expression_dependencies** 에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 **db_owner** 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  

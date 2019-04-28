@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725387"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services의 데이터 형식
   모든 <xref:Microsoft.AnalysisServices.DataItem> 개체를 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다음 하위 집합을 지 원하는 `System.Data.OleDb.OleDbType`합니다. 를 설정 하거나 데이터 형식의 읽을 [DataItem 데이터 형식 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)합니다.  

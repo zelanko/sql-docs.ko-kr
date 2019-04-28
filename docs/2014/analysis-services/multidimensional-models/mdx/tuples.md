@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725167"
 ---
 # <a name="tuples"></a>튜플
   튜플은 큐브의 데이터 조각을 고유하게 식별합니다. 동일한 계층에 속하는 둘 이상의 멤버가 없는 경우 튜플은 차원 멤버의 조합으로 구성됩니다.  
@@ -64,9 +64,9 @@ FROM [Adventure Works]
 >  특성 멤버는 멤버 이름이나 멤버 키로 참조할 수 있습니다. 앞의 예에서 [CY 2004]에 대한 참조는 &[2004]로 바꿀 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX의 개념을 키 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](cube-space.md)   
- [Autoexist](autoexists.md)   
- [멤버, 튜플 및 집합 작업 &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [Autoexists](autoexists.md)   
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

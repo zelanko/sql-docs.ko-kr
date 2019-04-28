@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720050"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>데이터 형식 및 내용 유형 지정(기본 데이터 마이닝 마법사)
   구조를 구축하고 모델을 학습하는 데 사용할 열을 선택했으므로 마법사에서 설정한 기본 데이터와 내용 유형을 변경해야 합니다.  

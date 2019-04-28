@@ -1,5 +1,5 @@
 ---
-title: 선택 하 고 예측 쿼리에 대 한 입력된 데이터를 매핑할 | Microsoft Docs
+title: 예측 쿼리에 대 한 입력된 데이터를 매핑하고 선택 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724866"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>예측 쿼리에 대한 입력 데이터 선택 및 매핑
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "34015060"
   
      관계가 이미 존재한다면 마이닝 모델의 열이 입력 테이블에 있는 동일한 이름의 열에 자동으로 매핑됩니다. **조인 수정**을 클릭하면 열리는 **관계 만들기** 대화 상자를 사용하여 중첩 테이블과 사례 테이블 간의 관계를 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [예측 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>관련 항목  
+ [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

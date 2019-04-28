@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700155"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
   이 항목에서는 Analysis Services의 다 대 다 차원에 대해 설명하고 이러한 차원을 사용하는 경우와 만드는 방법도 살펴봅니다.  

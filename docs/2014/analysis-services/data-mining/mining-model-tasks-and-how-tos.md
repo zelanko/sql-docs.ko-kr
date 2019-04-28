@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733381"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>마이닝 모델 태스크 및 방법
   **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭을 사용하여 마이닝 구조의 마이닝 모델을 관리하고 처리할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48196066"
   
 -   [마이닝 모델에서 열의 분할 변경](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [모델링 플래그 확인 또는 변경 &#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
+-   [모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)  
   
 -   [모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48196066"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)   
- [마이닝 모델 &#40;Analysis Services-데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
+ [마이닝 모델&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
  [데이터 마이닝 개념](data-mining-concepts.md)  
   
   

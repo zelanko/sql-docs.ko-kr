@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2c0c2154ce6c16e76c96f0aa9655d0a64bb2bf8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999887"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>개체 탐색기에서 시스템 개체 숨기기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 시스템 개체를 숨기는 방법에 대해 설명합니다. 개체 탐색기의 **데이터베이스** 노드에는 시스템 데이터베이스와 같은 시스템 개체가 있습니다. **도구**/**옵션** 페이지를 사용하여 시스템 개체를 숨길 수 있습니다. 시스템 함수 및 시스템 데이터 형식과 같은 일부 시스템 개체는 이 설정의 영향을 받지 않습니다.  

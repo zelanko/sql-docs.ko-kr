@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc94dc4a23e952a81e33d98a1ba0c2cf2c5f9022
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700126"
 ---
 # <a name="create-named-sets"></a>명명된 집합 만들기
   명명된 집합은 MDX(Multidimensional Expressions) 쿼리 등에서 다시 사용할 수 있도록 생성되는 집합 식이나 차원 멤버 집합입니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 예를 들어 Production 측정값에 대한 최상위 값을 갖는 Factories 차원의 10개 멤버가 포함된 명명된 집합을 Top Ten Factories라는 이름으로 만들 수 있습니다. 이 Top Ten Factories를 최종 사용자가 쿼리에서 사용할 수 있습니다. 예를 들어 최종 사용자는 Top Ten Factories를 한 축에 배치하고 다른 축에는 Production을 포함하여 Measures 차원을 배치할 수 있습니다. 자세한 내용은 [다차원 모델의 계산](calculations-in-multidimensional-models.md) 및 [명명된 집합을 MDX로 작성&#40;MDX&#41;](mdx/mdx-named-sets-building-named-sets.md)을 참조하세요.  

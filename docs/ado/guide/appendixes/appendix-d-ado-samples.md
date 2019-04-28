@@ -1,5 +1,5 @@
 ---
-title: '부록 D: Windows SDK의 ADO 예제 | Microsoft Docs'
+title: '부록 D: ADO 샘플 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a274985583d2b0d4403a567f57c3bf1a8eb3f144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719776"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK의 ADO 예제
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK에서에서 ADO 샘플
 Windows SDK에는 ADO 및 RDS 코드의 사용을 보여주는 몇 가지 예제 응용 프로그램이 있습니다. 이러한 예제를 통해 ADO와 RDS를 사용하는 방법을 배울 수 있습니다. 그러나 프로덕션 서버에 배포하는 것에는 유의하기 바랍니다.
 
 > [!NOTE]
@@ -34,4 +34,4 @@ Windows SDK에는 ADO 및 RDS 코드의 사용을 보여주는 몇 가지 예제
  또한 ADO 문서에는 이 온라인 도움말 항목으로 포함되는 여러 언어로 작성된 코드 예제가 들어 있습니다. 이러한 예제에 대한 자세한 내용은 [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md)를 참고하세요.
 
 ## <a name="see-also"></a>관련 항목
- [Microsoft ActiveX Data Objects(ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [VBScript의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual C++의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [RDS 구성](../../../ado/guide/remote-data-service/configuring-rds.md) [부록 C: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 이력](../../../ado/guide/ado-history.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [시각적 개체의 ADO 코드 예제 C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [RDS 구성](../../../ado/guide/remote-data-service/configuring-rds.md) [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 기록](../../../ado/guide/ado-history.md)
