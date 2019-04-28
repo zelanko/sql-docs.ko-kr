@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724793"
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
   SMO에서 <xref:Microsoft.SqlServer.Management.Trace> 네임스페이스의 `Trace` 및 `Replay` 개체는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 기능에 대한 프로그래밍 방식 액세스를 제공합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 모니터링하는 데 사용됩니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  

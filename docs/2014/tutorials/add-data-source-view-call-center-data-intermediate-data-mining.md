@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823303"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>콜 센터 데이터의 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
   이 태스크에서는 콜 센터 데이터에 액세스하는 데 사용할 데이터 원본 뷰를 추가합니다. 탐색을 위한 초기 신경망 모델과 권장하는 데 사용할 로지스틱 회귀 모델 모두를 작성하는 데 동일한 데이터가 사용됩니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "56035044"
 |FactCallCenterID|데이터를 데이터 웨어하우스로 가져올 때 만든 임의 키입니다.<br /><br /> 이 열은 고유 레코드를 식별하며 데이터 마이닝 모델에 대한 사례 키로 사용해야 합니다.|  
 |DateKey|콜 센터 운영 날짜로, 정수로 표시됩니다. 정수 날짜 키는 데이터 웨어하우스에서 종종 사용되지만, 날짜 값으로 그룹화하려는 경우 날짜/시간 형식으로 날짜를 구할 수도 있습니다.<br /><br /> 공급업체에서 각 운영일의 각 교대조에 대해 별도의 보고서를 제공하기 때문에 날짜는 고유하지 않습니다.|  
 |WageType|날짜가 평일인지, 아니면 주말 또는 공휴일인지를 나타냅니다.<br /><br /> 차이가 고객 서비스 품질에서 주중 및 주말에이 열을 입력으로 사용 가능 합니다.|  
-|Shift|통화를 기록한 교대조를 나타냅니다. 이 콜 센터는 영업일을 4개의 교대조인 오전, 오후 1, 오후 2 및 자정으로 나눕니다.<br /><br /> 교대조가 고객 서비스 품질에 영향을 줄 수 있으므로 이를 입력으로 사용합니다.|  
+|Shift|통화를 기록한 교대조를 나타냅니다. 이 콜 센터는 영업일을 4 개의 교대 합니다. AM, PM1, PM2, 및 자정입니다.<br /><br /> 교대조가 고객 서비스 품질에 영향을 줄 수 있으므로 이를 입력으로 사용합니다.|  
 |LevelOneOperators|근무 중인 첫 번째 수준의 전화 상담원 수를 나타냅니다.<br /><br /> 콜 센터 직원은 첫 번째 수준부터 시작하므로 이러한 직원은 덜 숙련되어 있습니다.|  
 |LevelTwoOperators|근무 중인 두 번째 수준의 전화 상담원 수를 나타냅니다.<br /><br /> 직원이 두 번째 수준의 전화 상담원이 되기 위해서는 특정 서비스 시간을 기록해야 합니다.|  
 |TotalOperators|교대조 동안 근무하는 총 전화 상담원 수입니다.|  

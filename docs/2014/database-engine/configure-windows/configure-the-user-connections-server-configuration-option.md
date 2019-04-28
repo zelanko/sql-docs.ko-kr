@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811224"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용자 연결 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 설정하는 방법에 대해 설명합니다. **사용자 연결** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 허용되는 최대 동시 사용자 연결 수를 지정합니다. 허용되는 실제 사용자 연결 수는 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 애플리케이션 및 하드웨어 제한에 따라서도 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자 연결을 최대 32,767개까지 허용합니다. **사용자 연결 수** 는 동적(자체 구성) 옵션이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 허용 가능한 최대값까지 필요한 만큼 자동으로 최대 사용자 연결 수를 조정합니다. 예를 들어, 10명의 사용자만 로그인했으면 10개의 사용자 연결 개체가 할당됩니다. 대부분의 경우 이 옵션의 값을 변경하지 않아도 됩니다. 기본값은 0이며 최대(32,767) 사용자 연결을 허용합니다.  

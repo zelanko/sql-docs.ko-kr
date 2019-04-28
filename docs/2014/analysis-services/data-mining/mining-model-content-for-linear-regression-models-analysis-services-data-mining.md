@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c39ec7718ee2d79ab95c13ebfd3e30afc189d805
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733643"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -46,7 +46,7 @@ ms.locfileid: "49120040"
  모델의 이름입니다.  
   
  ATTRIBUTE_NAME  
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
  **회귀 노드:** 예측 가능한 특성의 이름입니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "49120040"
  NODE_CAPTION  
  노드에 연결된 레이블 또는 캡션입니다. 이 속성은 주로 표시용으로 사용됩니다.  
   
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
- **회귀 노드:** 모든 항목을 포함합니다.  
+ **회귀 노드:** 모두  
   
  CHILDREN_CARDINALITY  
  노드에 있는 예상 자식 수입니다.  
@@ -83,9 +83,9 @@ ms.locfileid: "49120040"
  NODE_DESCRIPTION  
  노드에 대한 설명입니다.  
   
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
- **회귀 노드:** 모든 항목을 포함합니다.  
+ **회귀 노드:** 모두  
   
  NODE_RULE  
  선형 회귀 모델에는 사용되지 않습니다.  
@@ -96,23 +96,23 @@ ms.locfileid: "49120040"
  NODE_PROBABILITY  
  이 노드와 관련된 확률입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 1입니다.  
+ **회귀 노드:** 1  
   
  MARGINAL_PROBABILITY  
  부모 노드에서 해당 노드에 도달할 확률입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 1입니다.  
+ **회귀 노드:** 1  
   
  NODE_DISTRIBUTION  
  노드의 값에 대한 통계를 제공하는 중첩 테이블입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 회귀 수식을 작성하는 데 사용된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
+ **회귀 노드:** 회귀 수식을 작성 하는 데 사용 된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
   
 |VALUETYPE|  
 |---------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "49120040"
  NODE_SUPPORT  
  이 노드를 지지하는 사례 수입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
  **회귀 노드:** 학습 사례의 수입니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "49120040"
  따라서 평균 연령이 45세라고 간주하면 회귀 수식의 절편(VALUETYPE = 11)은 평균 수입을 알려 줍니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](microsoft-linear-regression-algorithm-technical-reference.md)   
  [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)  

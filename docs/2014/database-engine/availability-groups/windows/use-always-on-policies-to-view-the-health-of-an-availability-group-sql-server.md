@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812988"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 AlwaysOn 정책 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 작동 상태를 확인하는 방법에 대해 설명합니다. AlwaysOn 정책 기반 관리에 대 한 정보를 참조 하세요 [AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 운영 문제에 대 한 AlwaysOn 정책](always-on-policies-for-operational-issues-always-on-availability.md)합니다.  
@@ -117,11 +117,11 @@ ms.locfileid: "54420128"
 ##  <a name="RelatedContent"></a> 관련 내용  
  **SQL Server AlwaysOn 팀 PowerShell 사용 하 여 AlwaysOn 상태 블로그 모니터링:**  
   
--   [1 부: 기본 Cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+-   [1부: 기본 Cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
   
--   [2 부: 고급 Cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+-   [2부: 고급 Cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
   
--   [3 부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+-   [3부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
   
 -   [4 부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   

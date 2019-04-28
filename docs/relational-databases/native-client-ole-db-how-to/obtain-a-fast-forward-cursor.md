@@ -1,9 +1,8 @@
 ---
 title: FAST_FORWARD 커서 가져오기 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.date: 04/27/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
@@ -13,18 +12,14 @@ ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb7c0956a505aab1043a90d29fe63b46836fbfea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690352"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD 커서 가져오기
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
-
   정방향 전용, 읽기 전용 커서를 가져오려면 행 집합 속성 DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT 및 DBPROP_OWNUPDATEDELETE를 VARIANT_TRUE로 설정합니다.  
   
  전체 예제에서는 행 집합 속성을 설정하여 FAST_FORWARD 커서를 가져오는 방법을 보여 줍니다. 속성이 설정된 후에 SELECT 문이 실행되어 **AdventureWorks** 데이터베이스에 있는 **Purchasing.Vendor** 테이블의 **Name** 열이 검색되고 표시됩니다.  

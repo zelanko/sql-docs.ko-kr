@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735069"
 ---
 # <a name="transfer-octet-length"></a>8진수 길이 전송
 전송 8 진수 길이 열의 데이터는 기본 C 데이터 형식으로 전송 될 때 응용 프로그램에 반환 된 바이트의 최대입니다. 문자 데이터에 대 한 전송 8 진수 길이 null 종료 문자에 대 한 공간이 포함 되지 않습니다. 열의 전송 8 진수 길이 데이터 원본에서 데이터를 저장 하는 데 필요한 바이트의 수보다 달라질 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "47601331"
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|문자 집합을 ANSI 이면이 데이터의 문자 표시를 보유 하는 데 필요한 바이트 수 및이 두 배 문자 집합 이므로 경우 유니코드를 기본적으로이 데이터 형식은 문자열로 반환 됩니다. 20 자의 문자 표현으로 구성 됩니다: 서명 되지 않은 경우 20 자리의 숫자 및 기호를 서명 하는 경우에 19입니다. 따라서 길이 20 개입니다.|  
+|SQL_BIGINT|문자 집합을 ANSI 이면이 데이터의 문자 표시를 보유 하는 데 필요한 바이트 수 및이 두 배 문자 집합 이므로 경우 유니코드를 기본적으로이 데이터 형식은 문자열로 반환 됩니다. 문자 표현 20 자 이루어져 있습니다. 숫자 및 기호를 서명 하는 경우에 대 한 19 또는 20 자리의 서명 되지 않은 경우. 따라서 길이 20 개입니다.|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

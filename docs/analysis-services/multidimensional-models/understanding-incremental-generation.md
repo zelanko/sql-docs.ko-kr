@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802699"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,8 +79,8 @@ ms.locfileid: "34024350"
   
  반면, 데이터 원본 연결 문자열을 이전 생성에서 다른 데이터베이스로 변경하는 경우에는 오류가 발생하지 않습니다. 새 데이터베이스가 사용되고 이전 데이터베이스는 변경되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [데이터 원본 뷰 및 데이터 원본에 대 한 변경 관리](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [스키마 생성 마법사 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [데이터 원본 뷰 및 데이터 원본에 대한 변경 내용 관리](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [스키마 생성 마법사&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699825"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>쿼리 범위 셀 계산 만들기(MDX)
   MDX에서 `WITH` 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. `WITH` 키워드는 다음 구문을 가집니다.  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  한편으로 MDX는 계산 셀 정의에 포함된 셀과 관련된 큐브에 대해 MDX 쿼리를 실행할 때마다 계산 수식을 처리합니다. 작성 범위에 상관없이 이렇게 처리됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CREATE CELL CALCULATION 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

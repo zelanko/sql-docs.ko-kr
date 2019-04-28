@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990698"
 ---
 # <a name="extended-events"></a>확장 이벤트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  

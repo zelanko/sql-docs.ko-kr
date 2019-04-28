@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4f56e11e7c6e60a1a0144de7d42cc726323e80e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735723"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 속성(ServerSettingsGeneralFlag 클래스)
   플래그의 이름을 가져옵니다.  

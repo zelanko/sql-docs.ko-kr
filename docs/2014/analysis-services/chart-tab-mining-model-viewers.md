@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681180"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>차트 탭(마이닝 모델 뷰어)
   **차트** 창을 사용하여 예측 값과 함께 시계열 모델의 학습에 사용되는 기록 데이터를 표시할 수 있습니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다. 미래 예측은 점선으로 나타납니다.  
   
- **자세한 내용:** [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **참조 항목:** [Microsoft 시계열 알고리즘](data-mining/microsoft-time-series-algorithm.md), [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>변수  
  **뷰어 내용 새로 고침**  
@@ -32,7 +32,7 @@ ms.locfileid: "48146019"
  **마이닝 모델**  
  현재 마이닝 구조에서 마이닝 모델을 선택합니다. 관련 뷰어에서 마이닝 모델이 열립니다.  
   
- **뷰어**  
+ **Viewer**  
  선택한 마이닝 모델을 탐색할 뷰어를 선택합니다. 시계열 모델의 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 사용할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
  **확대/축소**  
@@ -60,8 +60,8 @@ ms.locfileid: "48146019"
  뷰어에 포함할 계열을 선택할 수 있는 대화 상자를 엽니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 모델 뷰어 &#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)  
   
   

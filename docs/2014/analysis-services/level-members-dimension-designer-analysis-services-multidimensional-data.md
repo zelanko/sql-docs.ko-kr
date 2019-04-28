@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728160"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>수준 및 멤버(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   이 창을 사용하여 현재 선택한 계층 및 언어의 멤버를 찾아볼 수 있습니다. 찾아볼 계층 또는 언어를 선택하려면 **도구 모음** 창의 **계층** 및 **언어** 옵션을 사용합니다. 도구 모음 창에 대 한 자세한 내용은 참조 하세요. [도구 모음 &#40;브라우저 탭, 차원 디자이너&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)합니다.  
   
 ## <a name="writeback-mode"></a>쓰기 저장 모드  
- 쓰기 저장 모드를 설정하면 이 창의 기능이 바뀝니다. 선택한 차원을 쓰기 가능 해야 (즉, 합니다 `WriteEnabled` 차원의 속성을 설정 해야 true로) 차원에 배포 되어야 합니다는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쓰기 저장 모드를 사용 하도록 설정 하기 위해 인스턴스.  
+ 쓰기 저장 모드를 설정하면 이 창의 기능이 바뀝니다. 쓰기 저장 모드를 설정하려면 선택한 차원을 쓰기 가능하도록 설정, 즉 차원의 `WriteEnabled` 속성을 true로 설정하고 해당 차원을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포해야 합니다.  
   
  쓰기 저장 모드를 설정하려면 **도구 모음** 창에서 **쓰기 저장** 을 선택하거나 **수준 및 멤버** 창을 마우스 오른쪽 단추로 클릭한 다음 상황에 맞는 메뉴에서 **쓰기 저장** 을 선택합니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48209709"
 > [!NOTE]  
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
   
- **잘라내기**  
+ **Cut**  
  선택한 멤버를 클립보드로 복사하고 계층에서 제거합니다.  
   
 > [!NOTE]  

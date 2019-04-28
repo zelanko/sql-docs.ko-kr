@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704001"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>기존 마이닝 구조에 마이닝 모델 추가
   초기 모델을 추가한 후 마이닝 구조에 마이닝 모델을 더 추가할 수 있습니다. 각 모델에 구조에 있는 열이 포함되어야 하지만 마이닝 모델마다 다르게 열 용도를 정의할 수 있습니다. 마이닝 모델 열을 정의하는 방법은 [마이닝 모델 열](mining-model-columns.md)을 참조하세요.  

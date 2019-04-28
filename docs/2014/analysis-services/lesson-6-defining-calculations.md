@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728479"
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
   이 단원에서는 MDX(Multidimensional Expressions) 식 또는 스크립트에 해당하는 계산을 정의하는 방법을 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "53361392"
  이 태스크에서는 명명된 집합의 정의 방법을 배웁니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [7 단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [7단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)   

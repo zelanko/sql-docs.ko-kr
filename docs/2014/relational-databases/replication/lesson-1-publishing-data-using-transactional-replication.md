@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721087"
 ---
-# <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용하여 데이터 게시
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용 하 여 데이터 게시
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 트랜잭션 게시를 만들어 **샘플 데이터베이스에** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 시작하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
@@ -79,7 +79,7 @@ ms.locfileid: "54125973"
 4.  **게시 액세스 추가** 대화 상자에서 _<Machine_Name>_**\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. 참조 [2 단원: 트랜잭션 게시에 구독을 만드는](lesson-2-creating-a-subscription-to-the-transactional-publication.md)합니다.  
+ 트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 트랜잭션 게시에 구독을 만드는](lesson-2-creating-a-subscription-to-the-transactional-publication.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [게시된 데이터 필터링](publish/filter-published-data.md)   

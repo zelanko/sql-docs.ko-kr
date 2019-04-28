@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724138"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,14 +114,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|성공|  
 |0x0001|실패|  
-|1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고: 원인은 문에서 결과 집합을 생성하지 않기 때문입니다(예: INSERT 또는 DDL 문인 경우).|  
+|1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고: 이 원인은 문의 결과 집합을 생성 하지 않습니다. 예를 들어는 INSERT 또는 DDL 문입니다.|  
   
 ## <a name="examples"></a>예  
  때 *stmt* 매개 변수가 하며 *scrollopt* PARAMETERIZED_STMT 값이 ON 일 문자열의 형식은 다음과 같습니다.  
   
  {  *\<로컬 변수 이름 > * *\<데이터 형식 >* } [,... *n* ]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sp_cursorexecute &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
  [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorunprepare &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   

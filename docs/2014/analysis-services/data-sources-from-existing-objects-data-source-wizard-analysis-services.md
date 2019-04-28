@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732786"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>기존 개체의 데이터 원본(데이터 원본 마법사)(Analysis Services)
   **기존 개체의 데이터 원본** 페이지를 사용하여 새 데이터 원본의 기반으로 사용할 기존 데이터 원본 또는 프로젝트를 지정할 수 있습니다.  

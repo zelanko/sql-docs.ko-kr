@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721033"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>2단원: 병합 게시에 대한 구독 만들기
+# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>2단원: 병합 게시에 대 한 구독 만들기
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 그런 다음 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅숏을 수동으로 생성합니다. 이 단원에서는 이전 단원을 완료 해야 [1 단원: 병합 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)합니다.  
   
 ### <a name="to-create-the-subscription"></a>구독을 만들려면  
@@ -71,11 +71,11 @@ ms.locfileid: "54127543"
 5.  새로 추가된 파티션을 선택하고 **선택한 스냅숏 지금 생성**을 클릭한 다음 **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 구독이 초기화되면 사용할 수 있도록 병합 게시에 대한 구독을 만들고 새 구독의 데이터 파티션에 대한 필터링된 스냅숏을 생성했습니다. 다음 단원에서는 병합 에이전트에 구독 데이터베이스에 대한 권한을 부여하고 병합 에이전트를 실행하여 동기화를 시작하고 구독을 초기화합니다. 참조 [3 단원: 병합 게시에 구독 동기화](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)합니다.  
+ 구독이 초기화되면 사용할 수 있도록 병합 게시에 대한 구독을 만들고 새 구독의 데이터 파티션에 대한 필터링된 스냅숏을 생성했습니다. 다음 단원에서는 병합 에이전트에 구독 데이터베이스에 대한 권한을 부여하고 병합 에이전트를 실행하여 동기화를 시작하고 구독을 초기화합니다. [3단원: 병합 게시에 구독 동기화](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Subscribe to Publications](subscribe-to-publications.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [게시 구독](subscribe-to-publications.md)   
+ [끌어오기 구독 만들기](create-a-pull-subscription.md)   
  [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692022"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel용 데이터 마이닝 클라이언트(SQL Server 데이터 마이닝 추가 기능)
   Excel용 데이터 마이닝 클라이언트는 데이터 정리부터 모델 작성 및 예측 쿼리에 이르는 일반적인 데이터 마이닝 작업을 수행할 수 있는 도구 집합입니다. Excel 테이블 또는 범위에서 데이터를 사용하거나 외부 데이터 원본에 액세스할 수 있습니다.  
@@ -77,12 +77,12 @@ ms.locfileid: "48063561"
  [분류 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  **분류** 마법사를 사용하면 Excel 테이블, Excel 범위 또는 외부 데이터 원본의 기존 데이터를 기반으로 분류 모델을 만들 수 있습니다. 분류 모델을 사용하면 유사성을 나타내는 데이터의 패턴을 추출하여 값 그룹에 따라 예측할 수 있습니다. 예를 들어 수입 또는 지출 패턴을 기반으로 위험을 예측하는 데 분류 모델을 사용할 수 있습니다.  
   
- **분류**  마법사는 다음 Microsoft 데이터 마이닝 알고리즘의 사용을 지원합니다. 즉, 의사 결정 트리 알고리즘, 로지스틱 회귀, Naïve Bayes, 신경망입니다.  
+ 합니다 **분류** 마법사는 이러한 Microsoft 데이터 마이닝 알고리즘의 사용을 지원 합니다. 즉, 의사 결정 트리 알고리즘, 로지스틱 회귀, Naïve Bayes, 신경망입니다.  
   
  [추정 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  **추정** 마법사로 추정 모델을 만들 수 있습니다. 추정 마법사는 데이터 패턴을 추출하고 이 패턴을 사용하여 통화, 판매액, 날짜 또는 시간 등의 숫자 결과를 예측합니다.  
   
- **추정** 마법사는 다음과 같은 Microsoft 데이터 마이닝 알고리즘을 사용합니다. 즉, 의사 결정 트리, 선형 회귀, 로지스틱 회귀, 신경망입니다.  
+ 합니다 **예상** 마법사는 이러한 Microsoft 데이터 마이닝 알고리즘을 사용 합니다. 즉, 의사 결정 트리, 선형 회귀, 로지스틱 회귀, 신경망입니다.  
   
  [주요 영향 요인 분석 &#40;Excel 용 테이블 분석 도구&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  클러스터 마법사를 사용하면 클러스터링 모델을 만들 수 있습니다. 클러스터링 모델은 비슷한 특성을 공유하는 행 그룹을 검색합니다. 이 마법사는 모든 종류의 데이터에서 패턴을 탐색하는 데 유용합니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "48063561"
  이 도구는 고급 사용자를 위해 DMX에 대한 끌어서 놓기 인터페이스를 제공합니다. 구문에 대한 걱정 없이 손쉽게 예측 쿼리 또는 새로운 모델을 만들 수 있습니다.  
   
 ##  <a name="bkmk_ViewModels"></a> 모델 보기  
- 만든 모델은 탐색을 위해 자동으로 열립니다. 그러나 서버에서 모델을 탐색하고 새로운 시각화를 생성할 수도 있습니다. 사용 된 [Visio 셰이프](viewing-data-mining-models-in-visio-data-mining-add-ins.md) 모델 다이어그램을 사용자 지정 가능한 캔버스로 내보낼 합니다.  
+ 만든 모델은 탐색을 위해 자동으로 열립니다. 그러나 서버에서 모델을 탐색하고 새로운 시각화를 생성할 수도 있습니다. [Visio 셰이프](viewing-data-mining-models-in-visio-data-mining-add-ins.md) 를 사용하여 모델 다이어그램을 사용자 지정 가능한 캔버스로 내보낼 수 있습니다.  
   
  [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
  각 모델 유형에 맞게 사용자 지정된 대화형 그래프를 사용하여 만들어진 모델을 확인합니다.  
@@ -141,15 +141,15 @@ ms.locfileid: "48063561"
  필요한 권한이 있는 경우 Excel을 벗어나지 않고도 기존 마이닝 모델 및 구조를 삭제, 수정, 이름 변경 또는 처리할 수 있습니다.  
   
  [추적 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](trace-data-mining-client-for-excel.md)  
- 클릭 **추적** Excel 클라이언트 간의 상호 작용을 지속적으로 캡처하여 볼 수 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서버. 모든 작업은 DMX 또는 XMLA 문으로 저장되므로 데이터 마이닝 세션의 문제를 해결하거나 나중에 사용하기 위해 정보를 저장할 수 있습니다.  
+ **추적** 을 클릭하여 Excel 클라이언트와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서버의 상호 작용을 지속적으로 캡처하여 볼 수 있습니다. 모든 작업은 DMX 또는 XMLA 문으로 저장되므로 데이터 마이닝 세션의 문제를 해결하거나 나중에 사용하기 위해 정보를 저장할 수 있습니다.  
   
  [데이터 마이닝 서버에 연결](connect-to-a-data-mining-server.md)  
- Excel을 데이터 마이닝 클라이언트로 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결해야 합니다. 이를 통해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 엔진에 액세스할 수 있습니다. 사용 권한이 있는 경우에는 연결을 통해 발견한 모든 패턴을 저장하고 기존 데이터 마이닝 개체를 수정할 수 있습니다.  
+ Excel을 데이터 마이닝 클라이언트로 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 연결해야 합니다. 이를 통해 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 엔진에 액세스할 수 있습니다. 사용 권한이 있는 경우에는 연결을 통해 발견한 모든 패턴을 저장하고 기존 데이터 마이닝 개체를 수정할 수 있습니다.  
   
- 합니다 **연결** 인스턴스에 연결 관리 마법사를 제공 하는 도구 모음 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다. 데이터 마이닝 도구와 알고리즘을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 정의해야 합니다. 추가 기능을 설치할 때 연결을 만들거나 나중에 추가할 수 있습니다.  
+ **연결** 도구 모음은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 관리하는 마법사를 제공합니다. 데이터 마이닝 도구와 알고리즘을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 정의해야 합니다. 추가 기능을 설치할 때 연결을 만들거나 나중에 추가할 수 있습니다.  
   
  **시작**  
- 클릭 합니다 **Getting Started** 인스턴스에 연결을 만드는 과정을 단계별로 안내 하는 구성 마법사를 시작 하는 단추 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 데이터 마이닝을 수행 하는 데 필요한 사용 권한을 취득 합니다.  
+ **시작하기** 단추를 클릭하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대한 연결을 만들고 데이터 마이닝을 수행하는 데 필요한 사용 권한을 취득하는 프로세스를 안내하는 구성 마법사를 시작합니다.  
   
  **도움말**  
  **도움말** 드롭다운 메뉴는 설치를 완료하고 데이터 마이닝을 시작하는 데 도움이 되는 온라인 도움말, 웹 사이트 및 구성 마법사에 대한 링크를 제공합니다.  

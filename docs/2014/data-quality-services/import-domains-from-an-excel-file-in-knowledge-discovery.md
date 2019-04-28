@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4f2e680829f51664fc13116953298a281aae7679
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792709"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>기술 자료 검색 시 Excel 파일에서 도메인 가져오기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 기술 자료 검색 작업을 통해 Excel 파일에서 하나 이상의 도메인을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스는 기술 자료 생성 프로세스를 간소화하여 시간과 노력을 절감합니다. Excel 파일이나 텍스트 파일에 데이터가 있는 사용자는 이 프로세스를 통해 해당 데이터를 포함한 기술 자료를 만들 수 있습니다. (기존 기술 자료의 도메인에 값을 가져오는 방법에 대한 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  

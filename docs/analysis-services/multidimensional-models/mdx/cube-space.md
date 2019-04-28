@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58f1a22cbba10eff6c10d2fc70dffcb13632b15d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800205"
 ---
 # <a name="cube-space"></a>큐브 공간
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -128,13 +128,13 @@ FROM [Adventure Works]
   
 ## <a name="calculation-context"></a>계산 컨텍스트  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [다차원 식 & #40; Mdx& #41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

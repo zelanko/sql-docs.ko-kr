@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809358"
 ---
 # <a name="server-properties-connections-page"></a>서버 속성(연결 페이지)
   이 페이지를 사용하여 연결 옵션을 확인하거나 수정할 수 있습니다.  

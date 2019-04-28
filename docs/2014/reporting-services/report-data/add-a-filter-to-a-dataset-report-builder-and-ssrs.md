@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb2c717ca9d88d9c1ff1fe4f02fb89c46fe8f0e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697751"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 세트에 필터 추가(보고서 작성기 및 SSRS)
   데이터 세트에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 세트에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  

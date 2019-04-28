@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733465"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>클러스터링 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
-  이 항목에서는 Microsoft 클러스터링 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 대해 마이닝 모델 콘텐츠를 일반적인 설명은 참조 하세요. [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)합니다.  
+  이 항목에서는 Microsoft 클러스터링 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>클러스터링 모델 구조에 대한 이해  
  클러스터링 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 클러스터 기본 목록이 있습니다(NODE_TYPE = 5). 이 구조는 다음 이미지와 같습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48190283"
   
  부모 노드에는 모든 학습 사례에 대한 실제 분포를 설명하는 유용한 통계가 포함되어 있는데, 이러한 통계는 중첩 테이블 열 NODE_DISTRIBUTION에 있습니다. 예를 들어 다음 표는 `TM_Clustering`기본 데이터 마이닝 자습서 [에서 만든 클러스터링 모델](../../tutorials/basic-data-mining-tutorial.md)의 고객 인구 통계 분포를 설명하는 NODE_DISTRIBUTION 테이블의 몇 개 행을 보여 줍니다.  
   
-|ATTRIBUTE_NAME|ATRIBUTE_VALUE|별칭|PROBABILITY|분산|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
 |Age|Missing|0|0|0|1(누락)|  
 |Age|44.9016152716593|12939|1|125.663453102554|3(연속)|  
@@ -51,7 +51,7 @@ ms.locfileid: "48190283"
 > [!NOTE]  
 >  분산은 클러스터에 대한 총 분산을 나타냅니다. 분산 값이 작은 경우 이는 대부분의 열 값이 평균에 매우 근접해 있음을 의미합니다. 표준 편차를 구하려면 분산의 제곱근을 계산하십시오.  
   
- 각 특성에 대 한는 `Missing` 얼마나 많은 데이터가 없는 사례 해당 특성에 대해 알려 주는 형식 값입니다. 누락 데이터는 중요하며 데이터 형식에 따라 여러 가지 방식으로 계산에 영향을 미칩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ 각 특성마다 해당 특성에 대한 데이터가 없는 사례 수를 보여 주는 `Missing` 값 유형이 있습니다. 누락 데이터는 중요하며 데이터 형식에 따라 여러 가지 방식으로 계산에 영향을 미칩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
 ## <a name="model-content-for-a-clustering-model"></a>클러스터링 모델에 대한 모델 콘텐츠  
  이 섹션에서는 클러스터링 모델과 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보와 예만 제공합니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "48190283"
   
  **부모 노드** 모델 유형: 클러스터 모델  
   
- **클러스터 노드** 클러스터의 예제: 클러스터 1.  
+ **클러스터 노드** 클러스터의 예: 클러스터 1입니다.  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 클러스터링 모델을 만드는 여러 가지 방법을 제공합니다. 작업 중인 모델이 어떤 방법으로 만들어졌는지 모르는 경우 ADOMD 클라이언트 또는 AMO를 사용하거나 데이터 마이닝 스키마 행 집합을 쿼리하여 모델 메타데이터를 프로그래밍 방식으로 검색할 수 있습니다. 자세한 내용은 [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](query-the-parameters-used-to-create-a-mining-model.md)를 참조하세요.  
@@ -160,7 +160,7 @@ ms.locfileid: "48190283"
 >  모델의 구조와 콘텐츠는 사용한 클러스터링 방법이나 매개 변수에 관계없이 동일하게 유지됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)   
  [Microsoft 클러스터링 알고리즘](microsoft-clustering-algorithm.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)  

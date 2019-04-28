@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718150"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>통합 Kerberos 인증(OLE DB)
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 OLE DB를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다. 이 예제는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서만 작동합니다.  

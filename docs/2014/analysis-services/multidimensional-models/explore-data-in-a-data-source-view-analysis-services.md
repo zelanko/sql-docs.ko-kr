@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f02ffda65cfd981f84a41f62ed310a06b8dfbd63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725977"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 데이터 탐색(Analysis Services)
   **의 데이터 원본 뷰 디자이너에 있는** 데이터 탐색 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 DSV(데이터 원본 뷰)에서 테이블, 뷰 또는 명명된 쿼리의 데이터를 찾아볼 수 있습니다. 데이터 원본 뷰 디자이너에서 데이터를 탐색하면 선택한 테이블, 뷰 또는 명명된 쿼리에 있는 각 데이터 열의 내용을 볼 수 있습니다. 실제 내용을 보면 모든 열이 필요한지 여부, 사용자에게 친숙함과 유용성을 높이기 위해 명명된 계산이 필요한지 여부 및 기존의 명명된 계산이나 명명된 쿼리에서 예상된 값을 반환하는지 여부를 확인할 수 있습니다.  

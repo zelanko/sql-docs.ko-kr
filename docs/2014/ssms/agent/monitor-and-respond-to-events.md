@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720130"
 ---
 # <a name="monitor-and-respond-to-events"></a>이벤트 모니터링 및 응답
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *의 메시지, 특정 성능 조건 및 WMI(Windows Management Instrumentation) 이벤트와 같은*이벤트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 자동으로 응답할 수 있습니다.  

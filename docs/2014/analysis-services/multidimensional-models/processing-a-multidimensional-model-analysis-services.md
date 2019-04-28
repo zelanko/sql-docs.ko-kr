@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736920"
 ---
 # <a name="multidimensional-model-object-processing"></a>다차원 모델 개체 처리
   처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 스토리지를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 스토리지의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 스토리지를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "48173323"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리할 때는 처리 옵션을 선택하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 적절한 처리 유형을 결정하도록 할 수 있습니다. 사용 가능한 처리 방법은 개체에 따라 달라지며 개체 유형을 기반으로 합니다. 또한 사용 가능한 방법은 개체를 마지막으로 처리한 후 적용된 개체 변경 내용을 기반으로 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다. 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [논리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [데이터베이스 개체 &#40;Analysis Services-다차원 데이터&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [데이터베이스 개체 & #40; Analysis Services-다차원 데이터 & #41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

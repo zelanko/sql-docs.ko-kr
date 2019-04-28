@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982304"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
@@ -107,8 +107,8 @@ SQLRETURN SQLFetch(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |시작 하기 전에|1|  
-|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|종료 후|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  
   
  [1] 행 집합 크기 인출 간에 변경 되 면 이전 인출에 사용 된 행 집합 크기입니다.  
@@ -182,9 +182,9 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되지 않은 합니다.|  
 |SQL_ROW_SUCCESS_WITH_INFO|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되지 않은 합니다. 그러나 행에 대 한 경고가 반환 되었습니다.|  
 |SQL_ROW_ERROR|행을 인출 하는 동안 오류가 발생 했습니다.|  
-|SQL_ROW_UPDATED [1], [2] 및 [3]|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되었습니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 행의 새 상태에는 상태가 변경 됩니다.|  
-|SQL_ROW_DELETED가 [3]|행이 결과 집합에서 마지막으로 페치된 이후로 삭제 되었습니다.|  
-|SQL_ROW_ADDED [4]|행으로 삽입 된 **SQLBulkOperations**합니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 상태가 SQL_ROW_SUCCESS입니다.|  
+|SQL_ROW_UPDATED[1],[2], and [3]|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되었습니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 행의 새 상태에는 상태가 변경 됩니다.|  
+|SQL_ROW_DELETED[3]|행이 결과 집합에서 마지막으로 페치된 이후로 삭제 되었습니다.|  
+|SQL_ROW_ADDED[4]|행으로 삽입 된 **SQLBulkOperations**합니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 상태가 SQL_ROW_SUCCESS입니다.|  
 |SQL_ROW_NOROW|행 집합 결과 집합의 끝을 중첩 하 고 행이 행 상태 배열이 요소에 해당 하는 반환 된 키를 누릅니다.|  
   
  [1] keyset, 혼합 및 동적 커서에 대 한 키 값을 업데이트 하는 경우 데이터의 행을 삭제 된 것으로 간주 됩니다 하 고 새 행을 추가 합니다.  

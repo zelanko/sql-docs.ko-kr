@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 714bc18b6eda419bbcc148c32c5ddcc316daf503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794563"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>테이블 형식 모델 역할(SSAS 테이블 형식)
   이 항목과 관련 태스크의 정보는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델의 역할을 만들고 관리하는 테이블 형식 모델 데이터베이스 관리자를 위한 것입니다. 테이블 형식 모델에 대한 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)을 참조하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자를 사용하여 테이블 형식 모델 프로젝트의 역할을 만들고 관리하는 방법에 대한 자세한 내용은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)를 참조하세요.  
@@ -27,6 +27,6 @@ ms.locfileid: "48186651"
   
 |태스크|Description|  
 |----------|-----------------|  
-|[SSMS를 사용 하 여 역할 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|역할을 만들고 역할의 멤버를 추가 및 제거하고 역할의 사용 권한을 변경하고 DAX를 사용하여 행 수준 필터를 추가, 편집 또는 제거하는 방법을 설명합니다.|  
+|[SSMS를 사용하여 역할 관리&#40;SSAS 테이블 형식&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|역할을 만들고 역할의 멤버를 추가 및 제거하고 역할의 사용 권한을 변경하고 DAX를 사용하여 행 수준 필터를 추가, 편집 또는 제거하는 방법을 설명합니다.|  
   
   

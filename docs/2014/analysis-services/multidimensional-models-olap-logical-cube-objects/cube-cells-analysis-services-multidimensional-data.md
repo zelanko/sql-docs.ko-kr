@@ -27,11 +27,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4be0cf2c9045ec47d8731830db99c87f32cf0b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727733"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>큐브 셀(Analysis Services - 다차원 데이터)
   큐브는 셀로 이루어져 있으며 셀은 측정값 그룹과 차원으로 구성됩니다. 셀은 큐브의 모든 차원에서 한 멤버 큐브의 고유한 논리적 교집합을 나타냅니다. 예를 들어 아래 다이어그램의 큐브는 Source, Route 및 Time이라는 세 차원으로 이루어지며 두 측정값을 갖는 측정값 그룹을 하나 포함합니다.  

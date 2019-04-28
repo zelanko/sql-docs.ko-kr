@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a1631532cb31813d8425fbf97ee4eec1936d9a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62683834"
 ---
 # <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "47836121"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|사용 권한이 있는 클래스를 나타냅니다.<br /><br /> 100 = 서버<br /><br /> 101 = 서버 보안 주체<br /><br /> 105 = 엔드포인트|  
-|**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다. 다음 값 중 하나입니다.<br /><br /> **서버**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
-|**major_id**|**int**|사용 권한이 있는 보안 개체의 ID이며 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 ID는 다음과 같이 해석됩니다.<br /><br /> 100 = 항상 0|  
+|**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다. 다음 값 중 하나입니다.<br /><br /> **SERVER**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**major_id**|**int**|사용 권한이 있는 보안 개체의 ID이며 클래스에 따라 해석됩니다. 대부분의 항목에서 이 ID는 클래스가 나타내는 대상의 ID입니다. 비표준 ID는 다음과 같이 해석됩니다.<br /><br /> 100 = Always 0|  
 |**minor_id**|**int**|사용 권한이 있는 대상의 보조 ID이며 클래스에 따라 해석됩니다.|  
 |**grantee_principal_id**|**int**|사용 권한을 부여할 서버 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|이 사용 권한을 부여한 사용자의 서버 보안 주체 ID입니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "47836121"
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
 |CRHE|CREATE ENDPOINT|SERVER|  
 |CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
-|IM|IMPERSONATE|Login|  
+|IM|IMPERSONATE|LOGIN|  
 |SHDN|SHUTDOWN|SERVER|  
 |TO|TAKE OWNERSHIP|엔드포인트|  
 |VW|VIEW DEFINITION|ENDPOINT, LOGIN|  

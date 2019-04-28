@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 546ee0df900f25395314adffde19cea01abb481b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703239"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 확장 이벤트(XEvent)를 사용하여 Analysis Services 모니터링
   사용 하 여 추적 기능을 제공 하는 analysis Services [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "52519941"
  *trace_id*  
  삭제할 추적의 고유 식별자를 정의합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

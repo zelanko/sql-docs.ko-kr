@@ -1,5 +1,5 @@
 ---
-title: '데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
+title: '데이터베이스 미러링: 상호 운용성 및 공존 성 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807309"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존 성 (SQL Server)
   데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
 -   [AlwaysOn 장애 조치 클러스터 인스턴스 (SQL Server 장애 조치 클러스터링)](database-mirroring-and-sql-server-failover-cluster-instances.md)  

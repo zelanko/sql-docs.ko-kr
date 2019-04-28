@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6a27cfbbe4a499f6ac2c598e80f30409a37ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728217"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>7단원: KPI(핵심 성과 지표) 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 KPI(핵심 성과 지표)를 정의하는 방법을 배웁니다. KPI는 비즈니스를 측정하는 서버 쪽 계산을 정의하기 위한 프레임워크를 제공하며 결과 정보의 표시 방식을 표준화합니다. KPI는 보고서, 포털 및 대시보드에 표시할 수 있으며 데이터 액세스 API, [!INCLUDE[msCoName](../includes/msconame-md.md)] 도구 및 타사 도구를 통해 표시할 수 있습니다. KPI는 정규 측정값 및 기타 MDX(Multidimensional Expressions) 식에 대한 메타데이터 래퍼입니다. 자세한 내용은 [다차원 모델의 KPI&#40;핵심 성과 지표&#41;](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)를 참조하세요.  
@@ -30,7 +30,7 @@ ms.locfileid: "53370405"
  이 태스크에서는 폼 보기에서 KPI를 정의한 후 브라우저 보기로 전환하여 KPI를 사용해 큐브 데이터를 찾아봅니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [8 단원: 작업 정의](lesson-8-defining-actions.md)  
+ [8단원: 작업 정의](lesson-8-defining-actions.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   

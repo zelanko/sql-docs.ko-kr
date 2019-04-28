@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80b02e10fa148924e78159024969bad077392d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864858"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>테스트 사례 초기화(OracleToSQL)
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정할 수 있습니다.  

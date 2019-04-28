@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 935f1c9ea98c28b7f75e1665de7445f779af41d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717770"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field(SQLXML 4.0)
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 `sql:overflow-field` 주석을 사용하여 스키마에 지정합니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  

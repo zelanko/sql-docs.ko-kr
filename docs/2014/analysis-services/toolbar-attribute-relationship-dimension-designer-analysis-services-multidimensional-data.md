@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794580"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭에서 도구 모음을 사용하여 다음 절차를 수행하십시오.  

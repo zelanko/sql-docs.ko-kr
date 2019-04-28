@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 225b6010e5d5a6c45a84d7e22272c4e5242906fd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827897"
 ---
 # <a name="data-in-data-flows"></a>데이터 흐름의 데이터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 흐름에 사용되는 데이터 형식 집합이 제공됩니다.  

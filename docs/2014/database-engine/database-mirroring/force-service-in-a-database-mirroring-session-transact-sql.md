@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806715"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
   성능 우선 모드 및 장애 조치를 지원하지 않는 보호 우선 모드에서 미러 서버는 사용할 수 있는데 주 서버는 실패하는 경우 데이터베이스 소유자는 서비스가 미러 데이터베이스로 장애 조치(데이터 손실 가능)되도록 강제 적용하여 데이터베이스를 사용 가능하게 만들 수 있습니다. 이 옵션은 다음 조건이 모두 충족된 경우에만 사용할 수 있습니다.  
@@ -46,6 +46,6 @@ ms.locfileid: "48101423"
   
 ## <a name="see-also"></a>관련 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

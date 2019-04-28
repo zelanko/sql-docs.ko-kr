@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d87af32662b9b971d3ba983d38f3df39b5a3202c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795350"
 ---
 # <a name="model-properties-ssas-tabular"></a>모델 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 속성에 대해 설명합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트 각각에는 제작하는 모델의 빌드 방식, 백업 방식 및 작업 영역 데이터베이스의 저장 방식에 영향을 주는 모델 속성이 있습니다. 여기서 설명하는 모델 속성은 이미 배포된 모델에는 적용되지 않습니다.  

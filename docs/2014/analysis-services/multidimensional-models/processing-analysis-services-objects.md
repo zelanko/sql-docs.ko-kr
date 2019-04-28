@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736791"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services 개체 처리
   처리를 수행하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 유형인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 큐브, 차원, 측정값 그룹, 파티션, 데이터 마이닝 구조 및 모델이 영향을 받습니다. 각 개체에 대해 개체 처리 수준을 지정하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 최적 처리 수준을 선택하도록 기본값 처리 옵션을 지정할 수 있습니다. 각 개체의 다른 처리 수준에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)을 참조하세요.  
@@ -57,9 +57,9 @@ ms.locfileid: "48050973"
   
 |Country|Sales Region|State|  
 |-------------|------------------|-----------|  
-|United States|West|California|  
-|United States|West|Oregon|  
-|United States|West|Washington|  
+|미국|West|California|  
+|미국|West|Oregon|  
+|미국|West|Washington|  
   
  처리 자체에서는 테이블 형식의 데이터를 사용 가능한 계층으로 변환합니다. 이러한 계층은 완전히 표시된 멤버 이름이며 내부적으로 고유 숫자 경로로 표시됩니다. 다음 예에서는 계층을 텍스트로 표시합니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48050973"
   
  차원 처리 시 큐브 수준에서 정의된 계산 멤버를 만들거나 업데이트하지 않습니다. 계산 멤버는 큐브 정의가 업데이트될 때 영향을 받습니다. 또한 차원 처리 시 집계를 만들거나 업데이트하지 않지만 집계가 삭제될 수 있습니다. 집계는 파티션을 처리하는 동안에만 생성 또는 업데이트됩니다.  
   
- 차원을 처리할 때는 해당 차원이 여러 큐브에서 사용될 수 있다는 점을 기억해야 합니다. 차원을 처리하면 해당 큐브는 처리되지 않은 것으로 표시되고 쿼리에 사용할 수 없게 됩니다. 차원과 관련 큐브 둘 다 동시에 처리하려면 일괄 처리 설정을 사용합니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)를 참조하세요.  
+ 차원을 처리할 때는 해당 차원이 여러 큐브에서 사용될 수 있다는 점을 기억해야 합니다. 차원을 처리하면 해당 큐브는 처리되지 않은 것으로 표시되고 쿼리에 사용할 수 없게 됩니다. 차원과 관련 큐브 둘 다 동시에 처리하려면 일괄 처리 설정을 사용합니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_procmeasure"></a> 측정값 그룹 처리  
  측정값 그룹을 처리하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 측정값 그룹의 전체 또는 일부 파티션 및 측정값 그룹에 참여하지만 처리되지 않은 모든 차원을 처리합니다. 처리 작업의 세부 사항은 선택하는 처리 옵션에 따라 달라집니다. 큐브의 다른 측정값 그룹에 영향을 미치지 않고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 하나 이상의 측정값 그룹을 처리할 수 있습니다.  
@@ -94,8 +94,8 @@ ms.locfileid: "48050973"
  마이닝 구조 및 모델을 처리하는 방법은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [도구 및 처리 접근 방법 &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [일괄 처리 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [도구 및 처리 접근 방법&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [다차원 모델 개체 처리](processing-a-multidimensional-model-analysis-services.md)  
   
   

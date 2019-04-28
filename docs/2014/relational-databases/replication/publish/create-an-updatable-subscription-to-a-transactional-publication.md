@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691592"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>트랜잭션 게시에 업데이트할 수 있는 구독 만들기(Management Studio)
 
@@ -29,7 +29,7 @@ ms.locfileid: "54131613"
 
 **새 구독 마법사**의 **업데이트할 수 있는 구독** 페이지에서 업데이트할 수 있는 구독을 구성할 수 있습니다. 이 페이지는 업데이트할 수 있는 구독에 대해 트랜잭션 게시를 설정한 경우에만 사용할 수 있습니다. 업데이트할 수 있는 구독을 사용하도록 설정하는 방법에 대한 자세한 내용은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](enable-updating-subscriptions-for-transactional-publications.md)을 참조하세요.   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>게시자에서 업데이트할 수 있는 구독을 구성 합니다.  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>게시자에서 업데이트할 수 있는 구독 구성  
 
 1. Microsoft SQL Server Management Studio에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.
 2. **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.
@@ -159,7 +159,7 @@ ms.locfileid: "54131613"
      * `2`[sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 사용하여 만든 기존의 사용자 정의 연결된 서버 로그인을 사용합니다.
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>지연된 업데이트 끌어오기 구독 만들기 ##
+## <a name="create-a-queued-updating-pull-subscription"></a>지연 업데이트 끌어오기 구독 만들기 ##
 
 1. 게시자에서 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행하여 게시에서 지연 업데이트 구독을 지원하는지 확인합니다. 
 
@@ -200,7 +200,7 @@ ms.locfileid: "54131613"
 1. 게시자에서 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행하여 게시에서 지연 업데이트 구독을 지원하는지 확인합니다. 
 
     * 결과 집합의 allow_queued_tran 값이 1이면 게시는 즉시 업데이트 구독을 지원합니다.
-    * 결과 집합의 allow_queued_tran 값이 0이면 지연 업데이트 구독을 설정하여 게시를 다시 만들어야 합니다. 자세한 내용은 방법: Subscriptions for Transactional Publications (복제 TRANSACT-SQL 프로그래밍) 업데이트를 사용 하도록 설정 합니다.
+    * 결과 집합의 allow_queued_tran 값이 0이면 지연 업데이트 구독을 설정하여 게시를 다시 만들어야 합니다. 자세한 내용은 방법: 트랜잭션 게시에 대한 구독 업데이트를 설정합니다(복제 Transact-SQL 프로그래밍).
 
 2. 게시자에서 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행하여 게시에서 밀어넣기 구독을 지원하는지 확인합니다. 
 

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794555"
 ---
 # <a name="process-database-table-or-partition"></a>데이터베이스, 테이블 또는 파티션 처리
   이 항목의 태스크를 사용 하 여 테이블 형식 모델 데이터베이스, 테이블 또는 파티션을 수동으로 처리 하는 방법에 설명 합니다 **프로세스 \<개체 >** 대화 상자 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
  테이블 형식 모델 처리에 대한 자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_process_tasks"></a> 태스크  
+##  <a name="bkmk_process_tasks"></a> 작업  
   
 ###  <a name="bkmk_process_db"></a> 데이터베이스를 처리하려면  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48067723"
 4.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 형식 모델 파티션 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)   
- [테이블 형식 모델 파티션 만들기 및 관리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [테이블 형식 모델 파티션&#40;SSAS 테이블 형식&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

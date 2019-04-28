@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698950"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
   다음 항목을 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스를 더 잘 이해하고 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현하는 방법을 계획할 수 있습니다.  

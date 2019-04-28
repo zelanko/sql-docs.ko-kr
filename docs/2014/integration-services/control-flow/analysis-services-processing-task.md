@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832968"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 테이블 형식 모델, 큐브, 차원 및 마이닝 모델과 같은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "58379131"
   
  이 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 로드하는 대량 삽입 태스크나 데이터를 테이블에 로드하는 데이터 흐름을 구현하는 데이터 흐름 태스크와 함께 자주 사용됩니다. 예를 들어 OLTP(온라인 트랜잭션 데이터베이스) 데이터베이스에서 데이터를 추출하여 데이터 웨어하우스의 팩트 테이블에 로드하는 데이터 흐름이 데이터 흐름 태스크에 포함될 수 있습니다. 그런 다음 데이터 웨어하우스에 작성된 큐브 처리를 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크가 호출됩니다.  
   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 연결합니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md)을 참조하세요.  
   
 ## <a name="error-handling"></a>오류 처리  
   

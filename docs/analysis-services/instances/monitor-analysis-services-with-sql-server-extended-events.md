@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc51c444483dc9a89cf0b9edbd557c3dce11a054
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709241"
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

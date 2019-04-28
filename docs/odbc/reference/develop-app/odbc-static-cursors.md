@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799017"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 정적 커서
 정적 커서는 결과 집합 static으로 표시 되는 하나입니다. 멤버 자격, 순서 또는 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용이 일반적으로 감지 하지 못합니다. 예를 들어 정적 커서를 행 및 다른 응용 프로그램을 가져오는 다음 해당 행을 업데이트 합니다. 정적 커서는 행을 다시, 경우에 발견 하는 값을 다른 응용 프로그램에의 한 변경 되더라도 변경 되지 않습니다.  

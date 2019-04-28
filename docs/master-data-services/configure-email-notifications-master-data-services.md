@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9bbad65583c79cc5ac1a3184f0ef6f83a5b7a73a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678581"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>전자 메일 알림 구성(Master Data Services)
 
@@ -40,11 +40,11 @@ ms.locfileid: "52806709"
     > [!NOTE]  
     >  알림을 구성한 후에는 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 를 사용하여 변경할 수 없으며 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스를 직접 변경해야 합니다. 자세한 내용은 [Database Mail Configuration Objects](../relational-databases/database-mail/database-mail-configuration-objects.md)을(를) 참조하세요.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에는 알림에 영향을 주는 설정이 있습니다. 이러한 설정은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에서 조정하거나 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정 테이블에서 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [전자 메일 알림 문제 해결(Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
  [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  

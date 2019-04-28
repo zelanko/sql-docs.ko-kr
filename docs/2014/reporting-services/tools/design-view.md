@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fad4cf000bda343970c0c2b6c18adb8f5e7fb548
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711223"
 ---
 # <a name="design-view"></a>디자인 뷰
   디자인 뷰를 사용하여 보고서에서 보고서 항목을 배치할 수 있습니다. 디자인 뷰는 디자인 화면 또는 레이아웃 뷰라고도 합니다.  

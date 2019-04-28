@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722485"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
   연결 모델에 필터링을 사용하여 보고자 하는 연결로만 결과를 제한할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "48118633"
   
 5.  **최소 중요도**에서 결과 규칙 수를 줄이려면 중요도 값을 늘리고 결과 규칙 수를 늘리려면 중요도 값을 줄입니다.  
   
-6.  **표시**에서 **특성 이름 및 값 표시**, **특성 이름만 표시**또는 **특성 값만 표시**옵션 중 하나를 선택합니다.  
+6.  에 대 한 **표시**, 다음 옵션 중 하나를 선택 합니다. **특성 이름 및 값 표시**하십시오 **특성 이름만 표시**, 또는 **특성 값만 표시**합니다.  
   
 7.  **최대 행 수**에서 지정한 조건을 만족하는 총 규칙 수를 늘리려면 값을 늘리고 반환되는 규칙 수를 제한하려면 값을 줄입니다. 확률을 기준으로 규칙이 정렬되므로 확률 또는 중요도에 대해 지정한 조건을 만족하는 추가 규칙을 제거할 수도 있습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48118633"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [3단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795522"
 ---
 # <a name="partition-representation-tabular"></a>파티션 표현(테이블 형식)
   원활한 운영을 위해 테이블 하나를 여러 개의 행 하위 집합으로 나눌 수 있습니다. 이 행들이 결합하여 테이블을 구성하며 각각의 하위 집합은 테이블의 파티션입니다.  

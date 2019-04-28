@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25bacf8c94e9393943948a3a7816f192818e8058
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726237"
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Analysis Services 프로젝트 배포(SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 개발하는 동안 프로젝트에서 정의된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 만들기 위해 개발 서버에 자주 프로젝트를 배포합니다. 큐브에서 셀을 찾아보거나 차원 멤버를 찾아보거나 KPI(핵심 성과 지표) 수식을 확인하는 등 프로젝트를 테스트하려면 이 작업을 수행해야 합니다.  
@@ -33,6 +33,6 @@ ms.locfileid: "48133163"
  프로젝트 구성 및 관련 설정에 따라 프로젝트 배포에 사용되는 배포 속성이 결정됩니다. 공유 프로젝트의 경우 각 개발자가 선택한 프로젝트 구성 옵션이 포함된 고유한 구성을 사용할 수 있습니다. 예를 들어 각 개발자는 서로 다른 테스트 서버를 지정하여 다른 개발자와 격리된 상태로 작업할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
+ [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
   
   

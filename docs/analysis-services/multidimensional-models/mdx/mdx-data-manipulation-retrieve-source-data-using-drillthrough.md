@@ -1,5 +1,5 @@
 ---
-title: DRILLTHROUGH를 사용 하 여 원본 데이터 검색 (MDX) | Microsoft Docs
+title: 드릴스루를 사용 하 여 원본 데이터 (MDX)를 검색 합니다. | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81c873d0ea6e5c21d97fc719ce1c72a773df43e5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802837"
 ---
-# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX 데이터 조작 드릴스루를 사용 하 여 원본 데이터 검색
+# <a name="mdx-data-manipulation---retrieve-source-data-using-drillthrough"></a>MDX 데이터 조작 - DRILLTHROUGH를 사용하여 원본 데이터 검색
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX(Multidimensional Expressions)는 [DRILLTHROUGH](../../../mdx/mdx-data-manipulation-drillthrough.md)문을 사용하여 큐브 셀의 원본 데이터에서 행 집합을 검색합니다.  
   
@@ -50,7 +50,7 @@ From Stores
 RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 & #40; 조작 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

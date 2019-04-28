@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725857"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>데이터 원본 개체에 대한 권한 부여(Analysis Services)
   일반적으로 대부분의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 기반이 되는 데이터 원본에 액세스할 필요가 없습니다. 사용자는 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 데이터를 쿼리하기만 합니다. 그러나 마이닝 모델 기반의 예측을 수행하는 등의 데이터 마이닝 컨텍스트에서는 사용자가 마이닝 모델에서 얻은 데이터와 사용자 제공 데이터를 조인해야 합니다. 사용자 제공 데이터가 포함된 데이터 원본에 연결하기 위해 사용자는 [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) 또는 [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset) 절이 포함된 DMX(Data Mining Extensions) 쿼리를 사용합니다.  
@@ -56,10 +56,10 @@ ms.locfileid: "48126263"
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본](data-sources-in-multidimensional-models.md)   
- [연결 문자열 속성 &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
- [Analysis Services에서 지 원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [차원 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [연결 문자열 속성&#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Analysis Services에서 지원하는 인증 방법](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

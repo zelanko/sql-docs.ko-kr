@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833158"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크는 큐브 및 차원과 같은 다차원 개체와 마이닝 모델을 만들거나 삭제 또는 변경할 수 있는 DDL(데이터 정의 언어) 문을 실행합니다. 예를 들어 DDL 문은 **Adventure Works** 큐브에 파티션을 만들거나 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]에 포함된 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 차원을 삭제할 수 있습니다.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805893"
 ---
 # <a name="enhance-merge-replication-performance"></a>병합 복제 성능 향상
   [일반적인 복제 성능 향상](enhance-general-replication-performance.md)에서 설명하는 일반적인 성능 팁을 고려한 후 병합 복제에 대한 다음 영역을 추가로 고려해 보십시오.  
@@ -140,10 +140,10 @@ ms.locfileid: "54129123"
   
 -   병합 복제 시스템 테이블의 인덱스를 가끔씩 다시 만듭니다.  
   
-     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory**, 및 **MSmerge_tombstone**하십시오 **MSmerge_current_partition_mappings**, 및 **MSmerge_ past_partition_mappings**합니다. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
+     병합 복제 유지 관리의 한 부분으로 병합 복제와 연결된 **MSmerge_contents**, **MSmerge_genhistory** 및 **MSmerge_tombstone**, **MSmerge_current_partition_mappings** 및 **MSmerge_past_partition_mappings** 시스템 테이블의 증가를 확인합니다. 이러한 테이블의 인덱스를 주기적으로 다시 만듭니다. 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../indexes/reorganize-and-rebuild-indexes.md)을 참조하세요.  
   
 -   복제 모니터의 **동기화 기록** 탭을 사용하여 동기화 성능을 모니터링합니다.  
   
-     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계를 보기에 대 한 자세한 내용은 참조 하세요. [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+     병합 복제의 경우 복제 모니터는 각 처리 단계(변경 내용 업로드, 변경 내용 다운로드 등)에 소요된 시간을 포함하여 동기화 중에 처리된 각 아티클에 대한 자세한 통계를 **동기화 기록** 탭에 표시합니다. 이 통계는 속도 저하의 원인이 되고 병합 구독의 성능 문제를 해결하기에 가장 적합한 특정 테이블을 정확히 찾아내는 데 도움이 될 수 있습니다. 자세한 통계 보기에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
   

@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828265"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob 대상
-  SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. CSV 및 AVRO입니다. 놓은 다음 **Azure Blob 대상** 를 데이터 흐름 디자이너 및 편집기를 표시 하려면 두 번 클릭).  
+  SSIS 패키지는 **Azure Blob 대상** 구성 요소를 통해 Azure Blob에 데이터를 쓸 수 있습니다. 지원되는 파일 형식은 다음과 같습니다. CSV와 AVRO. 놓은 다음 **Azure Blob 대상** 를 데이터 흐름 디자이너 및 편집기를 표시 하려면 두 번 클릭).  
   
 1.  **Azure 스토리지 연결 관리자** 필드에서는 기존 Azure 스토리지 연결 관리자를 지정하거나 Azure 스토리지 계정을 참조하는 스토리지 연결 관리자를 새로 만듭니다.  
   

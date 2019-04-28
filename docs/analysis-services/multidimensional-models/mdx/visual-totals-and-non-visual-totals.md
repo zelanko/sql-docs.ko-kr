@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90925c99f281d128ff197fb7b0ef3b088faf5b7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62984482"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -96,13 +96,13 @@ ms.locfileid: "34026750"
   
  이전 결과와 비교하면 [All Resellers] 행에는 [Value Added Reseller] 및 [Warehouse]에 표시된 값에 대한 합계가 표시되고 [All Products] 열에는 표시되지 않은 제품을 포함한 모든 제품의 합계 값이 표시되는 것을 알 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX & #40;의 주요 개념 Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>관련 항목  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [기본 MDX 쿼리 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [쿼리 및 Slicer 축 & #40;으로 쿼리 제한 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
- [쿼리 & #40; 큐브 컨텍스트 설정 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
+ [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [쿼리 및 Slicer 축으로 쿼리 제한&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)  
   
   

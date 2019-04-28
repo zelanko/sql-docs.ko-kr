@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700944"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>큐브에서 데이터 및 메타데이터 찾아보기
   큐브 디자이너의 **브라우저** 탭에서 큐브 데이터를 검색할 수 있습니다. 이 뷰를 사용하여 큐브의 구조를 검토하고 데이터베이스 개체의 데이터, 계산, 형식, 보안을 확인할 수 있습니다. 보고 도구 또는 기타 클라이언트 애플리케이션에서 최종 사용자에게 큐브가 어떻게 표시되는지 신속하게 검토할 수 있습니다. 큐브 데이터를 검색할 때는 차원별로 데이터를 조회하고, 멤버를 드릴다운하고, 차원을 통해 데이터를 조각화할 수 있습니다.  

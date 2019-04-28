@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7e721ca02733b1602c2388657d52321f46fa9bc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812343"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 메시징 및 큐 응용 프로그램에 대한 기본 지원을 제공합니다. 이러한 지원을 통해 개발자는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 요소를 사용하여 서로 다른 데이터베이스 간에 통신하는 복잡한 애플리케이션을 쉽게 만들 수 있습니다. 개발자는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 사용하여 신뢰할 수 있는 분산 애플리케이션을 간단하게 작성할 수 있습니다.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807466"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
   데이터베이스 미러링은 게시 데이터베이스의 가용성을 제공하기 위해 복제와 함께 사용될 수 있습니다. 데이터베이스 미러링에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 수행한 업데이트는 미러 데이터베이스라고 하는 다른 데이터베이스 복사본에 적용됩니다. 미러링에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 미러 데이터베이스에 적용하는 작업이 포함됩니다.  

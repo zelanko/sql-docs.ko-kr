@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733435"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 시퀀스 클러스터링 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  모델 콘텐츠를 쿼리하여 관찰된 경로 목록을 가져오는 방법이나 시퀀스 클러스터링 모델에 대한 다른 쿼리 예를 보려면 [시퀀스 클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [시퀀스 클러스터링 모델 쿼리 예제](clustering-model-query-examples.md)  
   
   

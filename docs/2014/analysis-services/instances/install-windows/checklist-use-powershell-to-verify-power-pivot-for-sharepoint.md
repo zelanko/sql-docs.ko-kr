@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730005"
 ---
-# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인
+# <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>검사 목록: PowerShell를 사용 하 여 SharePoint 용 PowerPivot 확인
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 애플리케이션 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
 |||  
@@ -29,7 +29,7 @@ ms.locfileid: "55087792"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **이 항목의**: 다음 목차의 문자 항목이 다이어그램 영역에 해당합니다. 다이어그램에서는 다음을 보여 줍니다.  
+ **이 항목의**: 다이어그램의 영역에 해당 다음에서 목차의 문자 항목이 있습니다. 다이어그램에서는 다음을 보여 줍니다.  
   
 |||  
 |-|-|  
@@ -42,7 +42,7 @@ ms.locfileid: "55087792"
   
  **관리자 권한**으로 Powershell 창 또는 PowerShell ISE(통합 스크립팅 환경)를 엽니다. 명령을 실행할 때 관리자 권한이 없는 경우 다음과 유사한 오류 메시지가 표시됩니다.  
   
- Get-SPLogEvent: 컴퓨터를 가질 필요가 **관리자 권한** 이 cmdlet을 실행 합니다.  
+ Get-splogevent: 컴퓨터를 가질 필요가 **관리자 권한** 이 cmdlet을 실행 합니다.  
   
  **SharePoint 및 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 모듈  
   

@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808681"
 ---
 # <a name="connect-to-server-reporting-services"></a>서버에 연결(Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다.  
@@ -54,11 +54,11 @@ ms.locfileid: "48054193"
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  
   
- **옵션**  
+ **Options**  
  서버 등록, 암호 저장 등의 추가 서버 연결 옵션을 표시하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio에서 보고서 서버에 연결](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [보고서 서버 인증](../reporting-services/security/authentication-with-the-report-server.md)  
   

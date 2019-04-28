@@ -1,5 +1,5 @@
 ---
-title: 전원 피벗 BI 의미 체계 모델 연결 (.bism) | Microsoft Docs
+title: 파워 피벗 BI 의미 체계 모델 연결 (.bism) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8841a67a13db4321618c82f3b1e830988dce9a35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960268"
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>파워 피벗 BI 의미 체계 모델 연결(.bism)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,12 +22,12 @@ ms.locfileid: "34024430"
   
  BI 의미 체계 모델 연결은 SharePoint를 통해 만들고 액세스합니다. BI 의미 체계 모델 연결을 만들면 라이브러리에서 BI 의미 체계 모델 연결에 대한 빠른 시작 명령을 사용할 수 있습니다. 빠른 시작 명령은 새 Excel 통합 문서 또는 연결 파일 편집 옵션을 엽니다. Reporting Services가 설치되어 있는 경우 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서를 만드는 명령도 표시됩니다.  
   
- ![빠른 시작 명령의 스크린 샷의 BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 실행 명령")  
+ ![빠른 시작 명령의 스크린 샷의 BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 시작 명령")  
   
 ##  <a name="bkmk_prereq"></a> 지원되는 데이터베이스  
  BI 의미 체계 모델 연결은 테이블 형식 모델 데이터를 가리킵니다. 이 데이터의 원본은 다음 세 가지입니다.  
   
--   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스하려면 사용 권한이 추가로 필요합니다. 이에 대해서는 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목에서 설명합니다.  
+-   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스 하기에이 항목의에 대 한 읽을 수 있는 추가 권한이 필요 합니다. [테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)합니다.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서. Excel 통합 문서 안에 포함된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 독립 실행형 Analysis Services 테이블 형식 모드 서버에서 실행되는 테이블 형식 model 데이터베이스에 해당합니다. 이미 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하는 경우 SharePoint 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 가리키는 BI 의미 체계 모델 연결을 정의하고 기존 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 데이터를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 보고서를 작성할 수 있습니다.  SQL Server 2008 R2 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만든 통합 문서를 사용할 수 있습니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "34024430"
 ## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI 의미 체계 연결에 대한 연결 시퀀스 이해  
  이 섹션에서는 Excel 데스크톱 애플리케이션이나 SharePoint의 파워 뷰 보고 클라이언트와 같은 다양한 클라이언트 애플리케이션과, SharePoint 팜 내부 또는 외부의 테이블 형식 모델 데이터베이스 간의 연결 동작을 설명합니다.  
   
- 테이블 형식 모델 데이터베이스로의 모든 연결은 데이터를 요청하는 사용자의 자격 증명을 사용하여 이루어집니다. 하지만 해당 연결의 메커니즘은 연결이 팜 내 연결인지 단일 홉 또는 이중 홉 연결인지 그리고 Kerberos를 사용할 수 있는지 여부에 따라 다릅니다. SharePoint와 백 엔드 데이터 원본 간의 인증된 연결에 대한 자세한 내용은 [이중 홉 인증: NTLM은 실패하고 Kerberos는 작동하는 이유](http://go.microsoft.com/fwlink/?LinkId=237137)를 참조하세요.  
+ 테이블 형식 모델 데이터베이스로의 모든 연결은 데이터를 요청하는 사용자의 자격 증명을 사용하여 이루어집니다. 하지만 해당 연결의 메커니즘은 연결이 팜 내 연결인지 단일 홉 또는 이중 홉 연결인지 그리고 Kerberos를 사용할 수 있는지 여부에 따라 다릅니다. SharePoint와 백 엔드 데이터 원본 간의 인증 된 연결에 대 한 자세한 내용은 참조 하세요. [이중 홉 인증: NTLM이 실패 하 고 Kerberos가 작동 하는 이유](http://go.microsoft.com/fwlink/?LinkId=237137)합니다.  
   
  **Excel에서 네트워크의 테이블 형식 데이터에 연결**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34024430"
   
  [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   

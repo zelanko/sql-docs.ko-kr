@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721355"
 ---
 # <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server 복제 배포자 설정 대화 상자
   **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  

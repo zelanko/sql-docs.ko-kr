@@ -1,5 +1,5 @@
 ---
-title: '8 단원: 핵심 성과 지표 만들기 | Microsoft Docs'
+title: '8단원: 핵심 성과 지표 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728139"
 ---
-# <a name="lesson-8-create-key-performance-indicators"></a>8단원: 핵심 성과 지표 만들기
+# <a name="lesson-8-create-key-performance-indicators"></a>8단원: KPI(핵심 성과 지표) 만들기
   이 단원에서는 KPI(핵심 성과 지표)를 만듭니다. KPI는 *기본* 측정값으로 정의된 값을 측정값이나 절대값으로 정의된 *대상* 값과 비교하여 값 성과를 측정하는 데 사용됩니다. 비즈니스 전문가는 보고 클라이언트 애플리케이션에서 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 이해하기 쉬운 요약 정보를 얻거나 추세를 확인할 수 있습니다. 자세한 내용은 [KPI&#40;SSAS 테이블 형식&#41;](tabular-models/kpis-ssas-tabular.md)를 참조하세요.  
   
- 이 단원에 소요되는 예상 시간: **15분**  
+ 예상이 단원을 완료 시간: **15 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [7단원: 측정값 만들기](lesson-6-create-measures.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [7단원: 측정값 만들기](lesson-6-create-measures.md)합니다.  
   
 ## <a name="create-key-performance-indicators"></a>KPI(핵심 성과 지표) 만들기  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48120670"
 7.  **아이콘 스타일 선택**에서 다이아몬드(빨간색), 삼각형(노란색), 원(녹색) 아이콘 유형을 선택한 다음 **확인**을 클릭합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [9단원: 큐브 뷰 만들기](lesson-8-create-perspectives.md)로 이동하세요.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [9 단원: 큐브 뷰 만들기](lesson-8-create-perspectives.md)합니다.  
   
   

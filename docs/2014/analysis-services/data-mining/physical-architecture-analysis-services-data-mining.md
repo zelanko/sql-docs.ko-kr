@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733234"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>물리적 아키텍처(Analysis Services - 데이터 마이닝)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 서버 및 클라이언트 구성 요소를 모두 사용하여 비즈니스 인텔리전스 응용 프로그램에 데이터 마이닝 기능을 제공합니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "48094153"
  클라이언트와 Analysis Services 서버 간의 모든 통신은 플랫폼 독립적, 언어 독립적인 프로토콜인 XMLA를 사용합니다. 클라이언트의 요청이 수신되면 Analysis Services는 이 요청이 OLAP과 관련된 것인지 또는 데이터 마이닝과 관련된 것인지 판단하고 이 판단에 따라 요청을 라우팅합니다. 자세한 내용은 [OLAP 엔진 서버 구성 요소](../multidimensional-models/olap-physical/olap-engine-server-components.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [논리적 아키텍처 &#40;Analysis Services-데이터 마이닝&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [논리적 아키텍처 & #40; Analysis Services-데이터 마이닝 & #41;](logical-architecture-analysis-services-data-mining.md)  
   
   

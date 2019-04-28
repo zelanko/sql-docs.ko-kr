@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719840"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB 개요에 대 한 Microsoft 커서 서비스
 OLE DB에 대 한 Microsoft 커서 서비스의 데이터 공급자 커서 지원 기능을 보완합니다. 결과적으로 사용자에 게 모든 데이터 공급자에서 상대적으로 균일 한 기능입니다.
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  기본 데이터 공급자가 지원 되는 경우에 동적 속성 DBPROP_SERVERDATAONINSERT 커서 서비스에서 지원 되지 않습니다.
 
-|속성 이름|설명|
+|속성 이름|Description|
 |-------------------|-----------------|
 |자동 다시 계산 (DBPROP_ADC_AUTORECALC)|이 값을 얼마나 자주 나타냅니다 Data Shaping Service를 사용 하 여 만든 레코드 집합에 대 한 계산 및 집계 열이 계산 됩니다. 기본값 (값 = 1) Data Shaping Service 값이 변경 되었는지 확인 될 때마다 다시 계산 합니다. 값이 0 이면 계층을 처음으로 빌드될 때 계산 또는 집계 열만 계산 됩니다.|
 |일괄 처리 크기 (DBPROP_ADC_BATCHSIZE)|데이터 저장소에 전송 되기 전에 일괄 처리할 수 있는 update 문의 수를 나타냅니다. 일괄 처리에서 더 많은 문이 데이터에 더 적은 왕복을 저장합니다.|
@@ -83,11 +83,11 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>기본 제공 속성 동작
  OLE DB에 대 한 커서 서비스는 특정 기본 제공 속성의 동작을도 영향을 줍니다.
 
-|속성 이름|설명|
+|속성 이름|Description|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|에 사용할 수 있는 커서 유형의 보완을 **레코드 집합**합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|에 대 한 사용 가능한 잠금의 종류를 보완을 **레코드 집합**합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드 이름을 지정 합니다 **레코드 집합** 정렬 각 필드가 오름차순 또는 내림차순으로 정렬 되는지 여부 및에 합니다.|
+|[정렬](../../../ado/reference/ado-api/sort-property.md)|하나 이상의 필드 이름을 지정 합니다 **레코드 집합** 정렬 각 필드가 오름차순 또는 내림차순으로 정렬 되는지 여부 및에 합니다.|
 
 ## <a name="method-behavior"></a>메서드 동작
  OLE DB에 대 한 커서를 사용 하거나의 동작에 영향을 줍니다 합니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 [추가](../../../ado/reference/ado-api/append-method-ado.md) 메서드 및 **레코드 집합** 개체의 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md)를 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [저장](../../../ado/reference/ado-api/save-method.md) 메서드.

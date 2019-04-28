@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864904"
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정(테스터)(OracleToSQL)
 테스터 페이지를 사용 합니다 **전역 설정** SSMA 테스터를 위한 설정을 지정 하려면 대화 상자.  
@@ -43,7 +43,7 @@ ms.locfileid: "47679321"
   
 4.  테이블 비교에 실패 한 경우 사용자에 게 요청  
   
-기본 옵션 집합은: **언제 든 지 삭제할**합니다.  
+기본 옵션이 설정이 됩니다. **언제 든 지 삭제할**합니다.  
   
 **데이터 롤백 수행**  
 이 설정은 각 테스트 사례를 실행 한 후에 롤백 작업을 수행할지 여부를 지정 합니다. 기본 옵션 집합이 **No**합니다.  

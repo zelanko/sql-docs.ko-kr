@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814659"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅숏(SQL Server)
   가용성 그룹의 주 데이터베이스 또는 보조 데이터베이스에서 데이터베이스 스냅숏을 만들 수 있습니다. 복제본 역할은 RESOLVING 상태가 아닌 PRIMARY 또는 SECONDARY 상태여야 합니다.  

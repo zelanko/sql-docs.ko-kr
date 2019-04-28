@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727579"
 ---
 # <a name="partition-storage-modes-and-processing"></a>파티션 스토리지 모드 및 처리
   파티션의 저장소 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 저장소 요구 사항, 저장소 위치 등에 영향을 줍니다. 선택한 저장소 모드는 처리 선택 사항에도 영향을 줍니다.  

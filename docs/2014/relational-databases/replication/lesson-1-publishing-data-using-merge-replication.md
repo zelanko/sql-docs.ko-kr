@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721182"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용하여 데이터 게시
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용 하 여 데이터 게시
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 병합 게시를 만들어 **샘플 데이터베이스에**Employee **,** SalesOrderHeader **및** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 하위 집합을 게시합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 사용하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
@@ -110,7 +110,7 @@ ms.locfileid: "54131067"
 4.  게시 액세스 추가 대화 상자에서 _<Machine_Name>_**\repl_merge**를 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. 참조 [2 단원: 병합 게시에 대 한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)합니다.  
+ 병합 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 병합 게시에 대 한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [게시된 데이터 필터링](publish/filter-published-data.md)   

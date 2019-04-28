@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54a04cc9d787ae4d6d4545bbc5d9661bbba213d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869384"
 ---
 # <a name="mssqlserver2020"></a>MSSQLSERVER_2020
     

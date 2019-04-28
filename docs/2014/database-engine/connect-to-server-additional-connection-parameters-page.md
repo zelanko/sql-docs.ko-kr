@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808682"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>서버에 연결(추가 연결 매개 변수 페이지)
   **의** 연결 대상 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자에서는 가장 일반적인 연결 문자열 값을 옵션으로 제공합니다. **추가 연결 매개 변수** 페이지를 사용하면 연결 문자열에 연결 매개 변수를 더 추가할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48087953"
   
 ## <a name="examples"></a>예  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>예 1: 데이터베이스 엔진에 연결  
+### <a name="example-a-connecting-to-the-database-engine"></a>A: 예 데이터베이스 엔진에 연결  
  ACCOUNTING 서버의 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스에 연결하려면 **추가 연결 매개 변수** 페이지에 다음을 입력합니다.  
   
 ```  

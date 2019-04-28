@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861906"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>사용자에게 연결 정보 요청
 응용 프로그램을 사용 하는 경우 **SQLConnect** 모든 연결 정보를 입력 하도록 요구 하 고 사용자 이름 및 암호와 같은 해당 작업을 수행 해야 자체입니다. 이 응용 프로그램의 "모양과 느낌" 제어를 사용 하면 하는 동안 드라이버 관련 코드를 포함 하도록 응용 프로그램을 강요할 수 있습니다. 이 응용 프로그램은 드라이버별 연결 정보에 대 한 사용자에 게 해야 하는 경우 발생 합니다. 이 응용 프로그램 기록 될 때 존재 하지 않는 드라이버를 포함 하 여 모든 드라이버를 통해 작동 하도록 설계 된 일반 응용 프로그램에 대 한 불가능 한 상황을 표시 합니다.  

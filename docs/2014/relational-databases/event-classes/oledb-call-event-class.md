@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956364"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
   **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  

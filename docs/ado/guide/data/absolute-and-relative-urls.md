@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802932"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 지정 하는 URL입니다. 대상 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 및 등 수*입니다.*  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998897"
 ---
 # <a name="retrieving-results-advanced"></a>결과 검색(고급)
 응용 프로그램 오프셋이 바인딩된 데이터 버퍼 주소 및 해당 길이/표시기에 추가 되었는지를 지정할 수 있습니다 때 버퍼 주소 **SQLBulkOperations**하십시오 **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos** 라고 합니다. 이러한 추가의 결과 이러한 작업에 사용 되는 주소를 확인 합니다.  

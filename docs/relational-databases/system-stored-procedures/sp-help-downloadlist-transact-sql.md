@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796186"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|명령이 적용되는 개체입니다.|  
 |**object_id**|**uniqueidentifier**|해당 명령에 의해 영향을 받는 개체의 id입니다 (**job_id** 작업 개체를 또는 0x00 서버 개체에 대 한) 또는 관련 데이터 값을 **operation_code**합니다.|  
 |**target_server**|**nvarchar(30)**|해당 명령이 다운로드될 대상 서버입니다.|  
-|**error_message**|**nvarchar(1024)**|명령을 처리하는 동안 문제가 발생하는 경우 대상 서버에서 발행되는 오류 메시지입니다.<br /><br /> 참고: 오류 메시지가 발생하면 대상 서버가 더 이상 다운로드를 못하도록 모든 다운로드 작업을 차단합니다.|  
+|**error_message**|**nvarchar(1024)**|명령을 처리하는 동안 문제가 발생하는 경우 대상 서버에서 발행되는 오류 메시지입니다.<br /><br /> 참고: 추가 된 오류 메시지 블록이 모든 대상 서버에서 다운로드 합니다.|  
 |**date_posted**|**datetime**|명령이 테이블에 게시된 날짜입니다.|  
 |**date_downloaded**|**datetime**|대상 서버가 명령을 다운로드한 날짜입니다.|  
 |**상태**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드 되지 않음<br /><br /> **1** = 성공적으로 다운로드 합니다.|  

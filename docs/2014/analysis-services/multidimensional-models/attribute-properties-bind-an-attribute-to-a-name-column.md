@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701760"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>이름 열로 특성 바인딩
   이 절차에서는 차원 디자이너의 **특성** 창과 **개체 바인딩** 대화 상자를 사용하여 수동으로 이름 열에 특성을 바인딩하는 방법에 대해 설명합니다.  

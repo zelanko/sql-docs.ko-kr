@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc921f458861da420c4dd34bb672dc8a4f58f361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704375"
 ---
 # <a name="sqlallocstmt-visual-foxpro-odbc-driver"></a>SQLAllocStmt(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

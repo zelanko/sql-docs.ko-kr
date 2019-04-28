@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864004"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions 속성 예제(VC++)
 이 예제에서는 합니다 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성에 지정할 행 server-모든 행 또는 수정 된 행만 다시 전송 됩니다.  
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MarshalOptions 속성(ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

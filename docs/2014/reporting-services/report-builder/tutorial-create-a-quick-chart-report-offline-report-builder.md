@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd22b4419b8300fdaf8db6e98a3eab9683fd226e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698426"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>자습서: 빠른 차트 보고서 만들기 오프 라인 (보고서 작성기)
   이 자습서에서는 마법사를 사용하여 원형 차트를 만든 다음 차트를 어떤 식으로 수정할 수 있는지 보여 주기 위해 차트를 조금 수정합니다. 이 자습서는 다음 두 가지 방법으로 진행할 수 있습니다. 두 방법 모두 동일한 결과를 원형 차트는 다음 그림과에서 같은:  

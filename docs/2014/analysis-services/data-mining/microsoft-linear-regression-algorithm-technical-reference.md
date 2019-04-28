@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721905"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링하는 데 최적화된 특수한 버전의 Microsoft 의사 결정 트리 알고리즘입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "48106073"
 ### <a name="scoring-methods-and-feature-selection"></a>점수 매기기 방법 및 기능 선택  
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 선형 회귀 모델에서는 연속 열만 지원하므로 선형 회귀에서 기능 선택에 사용되는 방법은 흥미도 점수입니다. 다음 표에서는 참조를 위해 선형 회귀 알고리즘의 기능 선택과 의사 결정 트리 알고리즘의 기능 선택에 어떤 차이점이 있는지를 보여 줍니다.  
   
-|알고리즘|분석 방법|주석|  
+|알고리즘|분석 방법|설명|  
 |---------------|------------------------|--------------|  
 |선형 회귀|흥미도 점수|기본.<br /><br /> 의사 결정 트리 알고리즘에 사용할 수 있는 다른 기능 선택 방법은 불연속 변수에만 적용되므로 선형 회귀 모델에는 적용되지 않습니다.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않을 경우 기본 방법이나 지정된 방법이 사용됩니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "48106073"
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
 |NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
-|REGRESSOR|분석 중 잠재적 독립 변수로 처리될 연속 숫자 값이 열에 포함되도록 지정합니다.<br /><br /> 참고: 열에 회귀 변수 플래그를 설정한다고 해서 해당 열이 항상 최종 모델에서 회귀 변수로 사용되는 것은 아닙니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|REGRESSOR|분석 중 잠재적 독립 변수로 처리될 연속 숫자 값이 열에 포함되도록 지정합니다.<br /><br /> 참고: 열에 회귀 변수 플래그 열 최종 모델에서 회귀 변수로 사용할는 보장 하지 않습니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>선형 회귀 모델의 회귀 변수  
  선형 회귀 모델은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않더라도 의사 결정 트리에 연속 특성에 대한 회귀를 나타내는 트리나 노드가 포함될 수 있습니다.  
@@ -83,11 +83,11 @@ ms.locfileid: "48106073"
 |예측 가능한 특성|Continuous, Cyclical 및 Ordered|  
   
 > [!NOTE]  
->  `Cyclical` 및 `Ordered` 콘텐츠 형식은 지원 되지만 알고리즘은 불연속 값으로는 처리 및 특수 한 처리를 수행 하지 않습니다.  
+>  `Cyclical` 및 `Ordered` 내용 유형이 지원되지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 선형 회귀 알고리즘](microsoft-linear-regression-algorithm.md)   
  [선형 회귀 모델 쿼리 예제](linear-regression-model-query-examples.md)   
- [마이닝 모델 콘텐츠 선형 회귀 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

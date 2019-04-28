@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734064"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 시계열 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 시간이 지남에 따라 제품 판매량과 같은 연속 값을 예측에 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 세트만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "48134263"
   
  두 가지 예에서 향후 각 제품의 새로운 판매량과 부피를 예측할 수 있지만 제품 또는 시간에 대한 새로운 값을 예측할 수는 없습니다.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예제 1: 계열이 열 값으로 표현된 시계열 데이터 집합  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>예 1: 계열이 열 값으로 표현 된 시계열 데이터 집합  
  이 예에서는 다음 입력 사례 표를 사용합니다.  
   
 |TimeID|Product|Sales|볼륨|  
@@ -115,7 +115,7 @@ ms.locfileid: "48134263"
   
  Sales 열은 지정한 제품의 하루 매출총이익을 나타내고 Volume 열은 창고에 남아 있는 지정한 제품의 수량을 나타냅니다. 이러한 두 개의 열에는 모델을 학습하는 데 사용되는 데이터가 들어 있습니다. Sales와 Volume은 둘 다 Product 열에 있는 각 계열의 예측 가능한 특성일 수 있습니다.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예제 2: 각 계열이 별도의 열에 있는 시계열 데이터 집합  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>예 2: 각 계열이 별도 열에 있는 시계열 데이터 집합  
  이 예에서는 기본적으로 첫 번째 예와 동일한 입력 데이터를 사용하지만 다음 표와 같이 입력 데이터가 다르게 구성됩니다.  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +123,7 @@ ms.locfileid: "48134263"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 그리고 A_Sales, A_Volume, B_Sales 및 B_Volume과 같은 4개의 예측 가능한 열이 포함되는 시계열 모델이 생성됩니다.  
+ 이 표에서 TimeID 열에는 key time 열로 지정한 시계열 모델에 대한 사례 계열이 계속 포함됩니다. 그러나 이전의 Sales 열 및 Volume 열은 이제 각각 두 개의 열로 분할되고 분할된 각 열 앞에는 제품 이름이 붙습니다. 그 결과 각 날짜에 대해 TimeID 열에 하나의 항목만 존재합니다. 이 4 개의 예측 가능한 열이 포함 된 시계열 모델을 만듭니다. A_Sales, A_Volume, B_Sales 및 B_Volume 합니다.  
   
  또한 제품을 다른 열로 구분했기 때문에 추가 계열 키 열을 지정하지 않아도 됩니다. 모델의 모든 열은 사례 계열 열 또는 예측 가능한 열 중 하나입니다.  
   
@@ -154,10 +154,10 @@ ms.locfileid: "48134263"
 -   드릴스루를 지원합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft 시계열 알고리즘 기술 참조](microsoft-time-series-algorithm-technical-reference.md)   
  [시계열 모델 쿼리 예제](time-series-model-query-examples.md)   
- [마이닝 모델 콘텐츠 시계열 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [시계열 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

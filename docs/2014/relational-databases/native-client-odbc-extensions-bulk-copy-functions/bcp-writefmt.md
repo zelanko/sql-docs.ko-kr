@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689413"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   현재 대량 복사 데이터 파일의 서식에 대한 설명이 포함된 서식 파일을 만듭니다.  
@@ -53,7 +53,7 @@ szFormatFile
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>Remarks  
- 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. 에 대 한 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md) 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 이 정의에서 참조 하는 파일에 저장 *szFormatFile*합니다. 자세한 내용은 [bcp_init](bcp-init.md)합니다.  
+ 서식 파일은 대량 복사를 통해 만들어진 데이터 파일의 데이터 형식을 지정합니다. 에 대 한 호출 [bcp_columns](bcp-columns.md) 하 고 [bcp_colfmt](bcp-colfmt.md) 데이터 파일의 형식을 정의 합니다. **bcp_writefmt** 이 정의에서 참조 하는 파일에 저장 *szFormatFile*합니다. 자세한 내용은 [bcp_init](bcp-init.md)를 참조하십시오.  
   
  구조에 대 한 자세한 내용은 **bcp** 데이터 형식으로 파일을 참조 하십시오 [bcp 유틸리티를 사용 하 여 대량 데이터 내보내기 및 가져오기 &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   

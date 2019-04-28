@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832569"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 길이 분포 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 길이 분포 프로필은 선택한 열에 있는 문자열 값의 모든 고유 길이 및 각 길이가 나타내는 테이블 내 행의 비율을 보고합니다. 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 두 개의 문자로 구성된 미국 주 코드 열을 프로파일링하는 중 3자 이상의 값이 검색될 수 있습니다.  

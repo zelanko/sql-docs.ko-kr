@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700996"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>차원에 특성의 사용자 지정 멤버 수식 설정
-  큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expressions) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 `CustomRollupColumn` 속성을 설정합니다.  
+  큐브나 차원에 사용자 지정 멤버 수식 기능을 추가하여 차원 멤버와 연결된 기본 집계를 MDX(Multidimensional Expression) 식의 결과로 바꿀 수 있습니다. 이 기능은 차원에서 지정한 특성에 대한 `CustomRollupColumn` 속성을 설정합니다.  
   
 > [!NOTE]  
 >  사용자 지정 멤버 수식은 기존 데이터 원본을 기반으로 하는 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우에는 사용자 지정 멤버 수식을 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  

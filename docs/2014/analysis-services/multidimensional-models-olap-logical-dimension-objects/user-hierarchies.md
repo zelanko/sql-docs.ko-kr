@@ -26,11 +26,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702471"
 ---
 # <a name="user-hierarchies"></a>사용자 계층
   사용자 정의 계층은 사용자 정의 계층에 사용 되는 특성 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하 차원의 멤버를 계층 구조로 구성 하 고 큐브의 탐색 경로 제공 합니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  

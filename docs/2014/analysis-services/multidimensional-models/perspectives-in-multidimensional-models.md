@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb1d01e8ba6e6fa55af9e1f63d6d5fb9da29cde0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736900"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>다차원 모델의 큐브 뷰
   큐브 뷰는 특정 애플리케이션이나 사용자 그룹을 위해 생성된 큐브 하위 집합입니다. 큐브 자체가 기본 큐브 뷰입니다. 큐브 뷰는 큐브로 클라이언트에게 노출됩니다. 큐브 뷰는 사용자에게 다른 큐브와 같게 보입니다. 큐브 뷰에서 쓰기 저장을 통해 큐브 데이터를 변경하면 원본 큐브에 변경 내용이 반영됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 뷰에 대한 자세한 내용은 [큐브 뷰](../multidimensional-models-olap-logical-cube-objects/perspectives.md)를 참조하세요.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a599a1ad2b4a2da7b3078b42b87f859b0f6bdfd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728297"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
   큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  

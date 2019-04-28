@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862677"
 ---
 # <a name="change-domain-values"></a>도메인 값 변경
 
@@ -36,9 +36,9 @@ ms.locfileid: "56011904"
   
 -   Excel 파일에서 도메인 값 가져오기  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  도메인 값을 변경하려면 도메인 관리 작업에서 기술 자료와 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -57,7 +57,7 @@ ms.locfileid: "56011904"
   
  값을 변경하려면 다음과 같이 계속합니다.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
@@ -89,12 +89,12 @@ ms.locfileid: "56011904"
   
     -   **선택한 도메인 값을 그룹의 선행 값으로 설정**: 그룹의 선행 값을 변경하려면 그룹에서 선행 값으로 지정되지 않은 값을 선택한 다음, **선택한 도메인 값을 그룹의 선행 값으로 설정** 단추를 클릭합니다. 이렇게 하면 선행 값이 다른 값의 대체 값으로 설정됩니다. 그룹화된 둘 이상의 값을 설정했고 DQS에서 지정된 값의 선행 값을 다른 값으로 변경하려는 경우에만 이 작업을 수행할 수 있습니다. 선행 값은 굵게 표시된 값이 있는 파란색 행으로 표시됩니다.  
   
-7.  **맞춤법 검사기**: 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../data-quality-services/set-domain-properties.md)를 참조하세요.  
+7.  **맞춤법 검사기**: 값에 빨간색 물결선 경우 맞춤법 검사기가 값으로 수정 사항을 제안 하 합니다. 밑줄이 표시된 값을 마우스 오른쪽 단추로 클릭하고 해당하는 수정 사항을 선택합니다. 값 형식이 오류로 변경 또는 유지되고 수정 사항이 **다음으로 수정** 열에 추가됩니다. 제안된 수정 사항을 더 보려면 아래쪽 화살표를 클릭합니다. 수정 사항을 직접 입력하여 맞춤법 검사기 사전에 추가한 후 수정 사항으로 선택할 수 있습니다. 자세한 내용은 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../data-quality-services/set-domain-properties.md)를 참조하세요.  
   
     > [!NOTE]  
     >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **도메인 값** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  
   
-8.  **새 도메인 값 추가**: 테이블의 끝에 행을 추가하려면 클릭합니다. 값을 입력하면 행의 위치가 사전순으로 변경되고 별표 기호가 앞에 표시되어 새 항목으로 식별됩니다.  
+8.  **새 도메인 값 추가**: 테이블의 끝에 행을 추가 하려면 클릭 합니다. 값을 입력하면 행의 위치가 사전순으로 변경되고 별표 기호가 앞에 표시되어 새 항목으로 식별됩니다.  
   
 9. **Excel에서 도메인 값 가져오기**: Excel 스프레드시트에서 새 값을 추가하려면 **값 가져오기** 아이콘에 대해 아래쪽 화살표를 클릭한 다음, **Excel에서 도메인 값 가져오기**를 선택합니다. 파일 이름을 입력하고 해당하는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택한 다음 **확인**을 클릭합니다. 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)을 참조하세요.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "56011904"
 ##  <a name="Meaning"></a> 올바름, 오류, 유효하지 않음 값의 의미  
  **도메인 값** 페이지에서 **값** 테이블의 각 값에는 **올바름** , **오류**또는 **유효하지 않음**의 **형식**설정이 할당됩니다. 값 형식은 초기에 기술 자료 검색 작업에 의해 생성되며 나중에 적절한 값으로 변경할 수 있습니다. 검색 및 대화식 변경 내용에 기초한 마지막 형식은 정리 작업에 의해 생성됩니다. 이러한 설정에는 다음과 같은 의미가 있습니다.  
   
--   **올바름:** 도메인에 속하며 구문 오류가 없는 값입니다. 예를 들어 City 도메인의 "Chicago"는 올바릅니다.  
+-   **올바름:** 이 도메인에 속하며 구문 오류가 없는 값입니다. 예를 들어 City 도메인의 "Chicago"는 올바릅니다.  
   
--   **오류:** 도메인에 속해 있지만 올바르지 않은 값입니다. 예를 들어 City 도메인에서 "Chicago"가 아닌 "Shicago"에는 오류가 있습니다. DQS는 검색 프로세스에서 구문 오류 및 관련 수정 사항을 감지한 값을 오류가 있는 것으로 지정합니다. 구문 오류에는 맞춤법 오류가 포함됩니다.  
+-   **오류:** 도메인에 속해 있지만 올바르지 않은 값 하는 값입니다. 예를 들어 City 도메인에서 "Chicago"가 아닌 "Shicago"에는 오류가 있습니다. DQS는 검색 프로세스에서 구문 오류 및 관련 수정 사항을 감지한 값을 오류가 있는 것으로 지정합니다. 구문 오류에는 맞춤법 오류가 포함됩니다.  
   
--   **잘못됨:** 도메인에 속하지 않으며 수정 사항이 없는 값입니다. 예를 들어 City 도메인의 값 "12345"는 유효하지 않습니다. DQS는 도메인 규칙에 실패한 값을 유효하지 않은 것으로 지정합니다.  
+-   **잘못됨:** 도메인에 속하지는 수정 되지 않은 값입니다. 예를 들어 City 도메인의 값 "12345"는 유효하지 않습니다. DQS는 도메인 규칙에 실패한 값을 유효하지 않은 것으로 지정합니다.  
   
  수동으로 값의 형식을 나머지 두 값 중 하나로 변경할 수 있습니다. DQS는 수동 작업에 대해 유효성 및 오류 의미 체계를 적용하지 않습니다. 유효하지 않은 값의 상태를 변경하지 않고 수정 사항을 입력할 수 있습니다. 도메인 규칙에 실패하지 않은 값을 유효하지 않은 것으로 지정할 수 있습니다. 검색 프로세스에서 구문 오류가 없다고 표시한 값을 오류가 있는 것으로 지정할 수 있습니다. 또한 올바름으로 표시된 오류 값의 상태를 변경하지 않고 수정 사항을 제거할 수도 있습니다.  
   

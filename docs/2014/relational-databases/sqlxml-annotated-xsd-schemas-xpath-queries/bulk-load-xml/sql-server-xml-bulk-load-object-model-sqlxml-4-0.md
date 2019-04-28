@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717470"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 대량 로드 개체 모델(SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXMLBulkLoad 개체의 XML 대량 로드 개체 모델은 구성 됩니다. 이 개체는 다음 메서드 및 속성을 지원합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "52750475"
  기본값은 FALSE입니다.  
   
  TempFilePath  
- XML 대량 로드에서 트랜잭션된 대량 로드에 사용할 임시 파일을 만들 파일 경로를 지정합니다. 이 속성은 Transaction 속성이 TRUE로 설정된 경우에만 유용합니다. XML 대량 로드에 사용하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정에 이 경로에 대한 액세스 권한이 있어야 합니다. 이 속성이 설정되지 않은 경우 XML 대량 로드에서는 임시 파일을 TEMP 환경 변수에 지정된 위치에 저장합니다.  
+ XML 대량 로드에서 트랜잭션된 대량 로드에 사용할 임시 파일을 만들 파일 경로를 지정합니다. (이 속성은 Transaction 속성이 TRUE로 설정 된 경우에 유용 합니다.) 확인 해야 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 대량 로드에 사용 되는 계정에이 경로에 액세스할 수 있습니다. 이 속성이 설정되지 않은 경우 XML 대량 로드에서는 임시 파일을 TEMP 환경 변수에 지정된 위치에 저장합니다.  
   
  트랜잭션  
  대량 로드를 트랜잭션으로 수행할지 여부를 지정합니다. 트랜잭션으로 수행하면 대량 로드가 실패할 경우 롤백이 수행됩니다. 이 속성은 부울 속성입니다. 이 속성이 TRUE로 설정된 경우 대량 로드가 트랜잭션 컨텍스트에서 수행됩니다. TempFilePath 속성이 트랜잭션이 TRUE로 설정 된 경우에 유용 합니다.  

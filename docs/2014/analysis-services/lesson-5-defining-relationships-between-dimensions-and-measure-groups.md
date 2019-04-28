@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728129"
 ---
-# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹의 관계 정의
+# <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹 간의 관계를 정의합니다.
   이 자습서의 이전 단원에서는 큐브에 추가한 데이터베이스 차원을 하나 이상의 큐브 차원에 대한 기준으로 사용하는 방법에 대해 설명했습니다. 이 단원에서는 큐브 차원과 측정값 그룹 간에 서로 다른 유형의 관계를 정의하고 이 관계의 속성을 지정하는 방법에 대해 설명합니다.  
   
  자세한 내용은 [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)를 참조하세요.  
@@ -41,9 +41,9 @@ ms.locfileid: "53368735"
  이 태스크에서는 특정 측정값 그룹의 차원 세분성을 수정하는 방법에 대해 알아봅니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [6 단원: 계산 정의](lesson-6-defining-calculations.md)  
+ [6단원: 계산 정의](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
  [다차원 모델링 &#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

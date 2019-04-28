@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794365"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
   모델에 데이터를 가져오거나 붙여넣을 때 모델 디자이너에서 자동으로 데이터 형식을 감지하고 적용합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
@@ -66,9 +66,9 @@ ms.locfileid: "48083219"
   
  데이터 형식은 지원되지만 모델 디자이너에서 새 데이터 형식에 맞지 않는 값을 발견할 경우에는 다른 오류가 표시되며 계속하기 전에 데이터 값을 수정해야 합니다.  
   
- 비즈니스 인텔리전스 의미 체계 모델에 사용 되는 데이터 형식에 대 한 자세한 내용은 수식에서 사용 되는 암시적으로 변환 하 고 다양 한 데이터 형식인 하는 방법을 참조 하세요 [지원 되는 데이터 형식 &#40;&AMP;#40;SSAS 테이블 형식&#41; ](data-types-supported-ssas-tabular.md).  
+ 비즈니스 인텔리전스 의미 체계 모델에서 사용되는 데이터 형식, 이러한 데이터 형식이 암시적으로 변환되는 방법 및 수식에서 다양한 데이터 형식이 사용되는 방법에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [지원 되는 데이터 형식 &#40;&AMP;#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)  
+ [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](data-types-supported-ssas-tabular.md)  
   
   

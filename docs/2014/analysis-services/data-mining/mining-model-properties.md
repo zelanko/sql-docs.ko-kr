@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733333"
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
   마이닝 모델의 속성은 다음과 같습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48171383"
   
 ## <a name="see-also"></a>관련 항목  
  [마이닝 모델 열](mining-model-columns.md)   
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](mining-model-tasks-and-how-tos.md)   
  [마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)   
  [데이터 마이닝 도구](data-mining-tools.md)   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4195e8f17f822bc84bf72bb41420a477ab683017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795480"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Excel에서 분석(SSAS 테이블 형식)
   테이블 형식 모델 작성자는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 Excel에서 분석 기능을 사용하여 개발 중 신속하게 모델 프로젝트를 분석할 수 있습니다. Excel에서 분석 기능은 Microsoft Excel을 열고 모델 작업 영역 데이터베이스에 데이터 원본을 연결한 후 자동으로 워크시트에 피벗 테이블을 추가합니다. 피벗 테이블 필드 목록에 작업 영역 데이터베이스 개체(테이블, 열 및 측정값)가 필드로 포함됩니다. 그런 다음 유효 사용자 또는 역할 및 큐브 뷰의 컨텍스트 내에서 개체 및 데이터를 조회할 수 있습니다.  
@@ -54,11 +54,11 @@ ms.locfileid: "48081733"
   
 |**항목**|**설명**|  
 |---------------|---------------------|  
-|[Excel에서 테이블 형식 모델 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|이 항목에서는 모델 디자이너에서 Excel에서 분석 기능을 사용하여 Excel을 열고, 모델 작업 영역 데이터베이스에 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 추가하는 방법을 설명합니다.|  
+|[Excel에서 테이블 형식 모델 분석&#40;SSAS 테이블 형식&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|이 항목에서는 모델 디자이너에서 Excel에서 분석 기능을 사용하여 Excel을 열고, 모델 작업 영역 데이터베이스에 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 추가하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Excel에서 테이블 형식 모델 분석 &#40;&AMP;#40;SSAS 테이블 형식&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
- [역할 &#40;&AMP;#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
- [큐브 뷰 &#40;&AMP;#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)  
+ [Excel에서 테이블 형식 모델 분석&#40;SSAS 테이블 형식&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
+ [역할&#40;SSAS 테이블 형식&#41;](roles-ssas-tabular.md)   
+ [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)  
   
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733613"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -190,9 +190,9 @@ ms.locfileid: "48197333"
 |---------------|----------------------------|  
 |모델 루트(1)|항상 0입니다.|  
 |한계 통계 노드(26)|임의의 ID 값입니다.|  
-|예측 가능한 특성(9)|10000000으로 시작하는 16진수입니다.<br /><br /> 예제: 100000001, 10000000b|  
-|입력 특성(10)|두 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 20000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작합니다.<br /><br /> 예제: 20000000b00000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
-|입력 특성 상태(11)|세 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 30000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작하며, 세 번째 부분은 값의 식별자를 나타냅니다.<br /><br /> 예제: 30000000b00000000200000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
+|예측 가능한 특성(9)|10000000으로 시작하는 16진수입니다.<br /><br /> 예: 100000001, 10000000b|  
+|입력 특성(10)|두 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 20000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작합니다.<br /><br /> 예: 20000000b00000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
+|입력 특성 상태(11)|세 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 30000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작하며, 세 번째 부분은 값의 식별자를 나타냅니다.<br /><br /> 예: 30000000b00000000200000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
   
  ID를 사용하여 입력 특성 및 상태를 예측 가능한 특성과 연결할 수 있습니다. 예를 들어 다음 쿼리는 `TM_NaiveBayes`모델에 대한 입력 특성과 예측 가능한 특성의 가능한 조합을 나타내는 노드의 이름과 캡션을 반환합니다.  
   
@@ -273,7 +273,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1|8615|0.492736216|0|4|  
+|Bike Buyer|1.|8615|0.492736216|0|4|  
 |Marital Status|Missing|0|0|0|1|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
@@ -286,12 +286,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Naive Bayes 모델에는 연속 특성이 있을 수 없으므로 모든 숫자 데이터는 Discrete(VALUE_TYPE = 4) 또는 Discretized(VALUE_TYPE = 5)로 표현됩니다.  
   
- `Missing` 값 (VALUE_TYPE = 1)은 학습 데이터에 없었던 잠재적인 값을 나타내는 모든 입력 및 출력 특성에 추가 합니다. 주의 해 서 "없음" 문자열을 기본 구별 해야 `Missing` 값입니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ `Missing` 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 `Missing` 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](data-mining-queries.md)   
- [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)  
+ [Microsoft Naive Bayes 알고리즘](microsoft-naive-bayes-algorithm.md)  
   
   

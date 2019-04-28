@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5d21e0b5a187fa7b55e104df9b633adc180070c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730251"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개
-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 의해 생성된 이벤트를 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스에 의해 생성된 이벤트를 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스의 성능을 모니터링합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54128483"
 -   캡처된 이벤트에 대한 데이터를 화면에 표시하거나 이후 분석 또는 재생용으로 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 각 이벤트에 대한 데이터를 캡처하고 저장할 수 있습니다. 데이터를 재생할 때는 저장된 이벤트를 원래 이벤트가 발생한 순서대로 실시간 또는 단계별로 실행할 수 있습니다.  
   
 ## <a name="using-sql-server-profiler"></a>SQL Server Profiler 사용  
- 추적을 만들거나 재생하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버여야 합니다.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버인 경우 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시작 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **프로그램 그룹에서** 를 시작할 수 있습니다.  
+ 추적을 만들거나 재생하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버여야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 역할의 멤버인 경우 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 시작 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **프로그램 그룹에서** 를 시작할 수 있습니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용할 때는 다음에 유의하십시오.  
   

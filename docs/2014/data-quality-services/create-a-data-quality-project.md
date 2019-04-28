@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793106"
 ---
 # <a name="create-a-data-quality-project"></a>데이터 품질 프로젝트 만들기
   이 항목에서는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 데이터 품질 프로젝트를 만드는 방법에 대해 설명합니다. 데이터 품질 프로젝트는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 정리 또는 일치 작업을 실행하는 데 사용됩니다.  
@@ -51,9 +51,9 @@ ms.locfileid: "56020174"
   
     4.  **작업 선택** 영역에서 이 데이터 품질 프로젝트를 사용하여 수행할 작업을 클릭합니다.  
   
-        -   **정리**: 원본 데이터를 정리하려면 이 작업을 선택합니다.  
+        -   **정리**: 원본 데이터를 정리 하려면이 작업을 선택 합니다.  
   
-        -   **일치 하는**: 일치를 수행하려면 이 작업을 선택합니다. 데이터 품질 프로젝트를 위해 선택한 기술 자료에 일치 정책이 포함된 경우에만 이 작업을 사용할 수 있습니다.  
+        -   **일치**: 일치를 수행 하려면이 작업을 선택 합니다. 데이터 품질 프로젝트를 위해 선택한 기술 자료에 일치 정책이 포함된 경우에만 이 작업을 사용할 수 있습니다.  
   
 4.  **만들기** 를 클릭하여 데이터 품질 프로젝트를 만듭니다.  
   

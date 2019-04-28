@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821444"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
 -   **BOF** 레코드의 현재 위치에서 첫 번째 레코드 앞에 있는 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -62,9 +62,9 @@ ms.locfileid: "47748121"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|로 **True**|로 **True**|  
-|**이동** 0|변경 내용 없음|변경 내용 없음|  
-|**MovePrevious**, **Move** < 0|로 **True**|변경 내용 없음|  
-|**MoveNext**하십시오 **이동** > 0|변경 내용 없음|로 **True**|  
+|**이동** 0|변경 안 함|변경 안 함|  
+|**MovePrevious**, **Move** < 0|로 **True**|변경 안 함|  
+|**MoveNext**, **Move** > 0|변경 안 함|로 **True**|  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

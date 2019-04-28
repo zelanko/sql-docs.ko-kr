@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f350fed895d039a0d5298832e2cd0437748a0a92
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695765"
 ---
 # <a name="empty-and-null-data-points-in-charts-report-builder-and-ssrs"></a>차트의 빈 데이터 요소 및 Null 데이터 요소(보고서 작성기 및 SSRS)
   빈 값이나 null 값이 있는 필드를 차트에 표시하면 차트가 제대로 표시되지 않을 수 있습니다. 차트에서 빈 값이 처리되는 방법은 지정된 차트 종류에 따라 다릅니다.  

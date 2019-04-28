@@ -1,25 +1,27 @@
 ---
 title: 일정에 따라 정책 기반 관리 정책 평가 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, evaluate policy
 ms.assetid: bea09522-ff47-4037-ab55-a98ea7c10099
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705151"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>일정에 따라 정책 기반 관리 정책 평가
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 일정에 따라 정책 기반 관리 정책을 평가하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -53,7 +55,7 @@ ms.locfileid: "54132363"
   
 5.  평가하려는 일정이 지정된 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-6.  에 **정책 열기-**_policy_name_ 대화 상자를 **평가 모드** 목록에서 **일정에 따라**합니다.  
+6.  **정책 열기** _–policy_name_ 대화 상자의 **평가 모드** 목록에서 **예약 시**를 선택합니다.  
   
 7.  **일정**에서 **선택** 을 클릭하여 기존 일정을 지정하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.  
   

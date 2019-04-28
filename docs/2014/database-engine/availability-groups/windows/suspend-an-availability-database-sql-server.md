@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814026"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>가용성 데이터베이스 일시 중지(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 데이터베이스를 일시 중지할 수 있습니다. 일시 중지하거나 재개할 데이터베이스를 호스팅하는 서버 인스턴스에서 일시 중지 명령을 실행해야 합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "48108093"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **후속 작업:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
+-   **후속편:** [꽉 찬 트랜잭션 로그 방지](#FollowUp)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -64,11 +64,11 @@ ms.locfileid: "48108093"
 ###  <a name="Restrictions"></a> 제한 사항  
  SUSPEND 명령은 대상 데이터베이스를 호스팅하는 복제본에서 수락되는 즉시 반환하지만 실제로 데이터베이스 일시 중지는 비동기식으로 발생합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  일시 중지할 데이터베이스를 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다. 주 데이터베이스와 해당 보조 데이터베이스를 일시 중지하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결합니다. 주 데이터베이스는 사용 가능한 상태로 두고 보조 데이터베이스를 일시 중지하려면 보조 복제본에 연결합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
- 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 이 항목 뒷부분에 나오는 [후속 작업: 꽉 찬 트랜잭션 로그 방지](#FollowUp)를 참조하세요.  
+ 병목 현상 중에 하나 이상의 보조 데이터베이스를 잠시 중단하면 주 복제본의 성능을 일시적으로 향상됩니다. 보조 데이터베이스가 일시 중지된 상태인 동안에는 해당 주 데이터베이스의 트랜잭션 로그를 자를 수 없으므로 로그 레코드가 주 데이터베이스에 누적됩니다. 따라서 일시 중지된 보조 데이터베이스를 신속하게 다시 시작하거나 제거하는 것이 좋습니다. 자세한 내용은 참조 하세요. [후속 작업: 전체 트랜잭션 로그 방지](#FollowUp)이 항목의 뒷부분에 나오는.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -107,9 +107,9 @@ ms.locfileid: "48108093"
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
  **데이터베이스를 일시 중지하려면**  
   
-1.  디렉터리를 변경 (`cd`) 데이터베이스를 일시 중단할 복제본을 호스팅하는 서버 인스턴스에 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
+1.  데이터베이스를 일시 중지할 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경합니다(`cd`). 자세한 내용은 이 항목의 앞부분에 나오는 [필수 구성 요소](#Prerequisites)를 참조하세요.  
   
-2.  사용 된 `Suspend-SqlAvailabilityDatabase` cmdlet은 가용성 그룹을 일시 중단 합니다.  
+2.  `Suspend-SqlAvailabilityDatabase` cmdlet을 사용하여 가용성 그룹을 일시 중지합니다.  
   
      예를 들어 다음 명령은 서버 인스턴스 `MyDb3` 에서 가용성 그룹 `MyAg` 에 있는 가용성 데이터베이스 `Computer\Instance`에 대한 데이터 동기화를 일시 중단합니다.  
   
@@ -119,13 +119,13 @@ ms.locfileid: "48108093"
     ```  
   
     > [!NOTE]  
-    >  Cmdlet의 구문을 보려면 사용 하 여는 `Get-Help` cmdlet은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경입니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 `Get-Help` cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> 후속 작업: 꽉 찬 트랜잭션 로그 방지  
  일반적으로 데이터베이스에서 자동 검사점을 수행하면 다음 로그 백업 이후 해당 트랜잭션 로그가 이 검사점까지 잘립니다. 그러나 보조 데이터베이스를 일시 중지하는 동안 모든 현재 로그 레코드가 주 데이터베이스에서 활성 상태로 남아 있습니다. 서버 인스턴스의 공간이 부족하거나 최대 크기에 도달하여 트랜잭션 로그가 가득 차면 데이터베이스는 더 이상 업데이트를 수행할 수 없습니다.  
   
  이 문제를 방지하려면 다음 중 하나를 수행해야 합니다.  

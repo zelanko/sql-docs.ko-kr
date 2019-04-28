@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732437"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>의사 결정 트리 다이어그램 연습 (데이터 마이닝 추가 기능)
   의사 결정 트리 모델을 만든 경우 의사 결정 트리 셰이프 또는 종속성 네트워크 셰이프를 사용하여 Visio에서 사용자 지정된 다이어그램을 만들 수 있습니다. 이 항목으로 수행할 수 있는 사용자 지정을 설명 합니다 **의사 결정 트리** 셰이프 및 이러한 컨트롤:  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcf32b558d34340d727a357136884b8d6530887b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701067"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준 설정(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터베이스 호환성 수준 속성은 데이터베이스의 기능 수준을 결정합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어, 호환성 수준이 `1100` 다차원 또는 테이블 형식 데이터베이스 인지에 따라 의미가 다릅니다.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989984"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode 대안을 제공 [ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) 열 형식을 지정 합니다. Ibcpsession:: Bcpcolfmt를 개별 열 형식 특성을 설정 하는 달리 IBCPSession2::BCPSetBulkMode 모든 특성을 설정 합니다.  
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

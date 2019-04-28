@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702248"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 애플리케이션 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 애플리케이션에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  

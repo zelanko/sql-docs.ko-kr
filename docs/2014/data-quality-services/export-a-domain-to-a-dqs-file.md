@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792740"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>.dqs 파일로 도메인 내보내기
   이 항목에는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 파일로 도메인을 내보내는 방법에 대해 설명합니다. 도메인 또는 전체 기술 자료를 데이터 파일로 내보낼 수 있습니다. 기술 자료 내보내기에 대한 자세한 내용은 [.dqs 파일로 기술 자료 내보내기](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)를 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "56023644"
   
 6.  **도메인 내보내기** 대화 상자에서 상태 줄에 내보내기가 완료되었다고 표시되는지 확인합니다. **확인**을 클릭합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 도메인을 .dqs 파일로 내보낸 후  
+##  <a name="FollowUp"></a> 후속 작업: 도메인을.dqs 파일로 내보낸 후  
  도메인을 .dqs 파일로 내보낸 후 다른 기술 자료로 해당 도메인을 가져올 수 있습니다.  
   
   

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704555"
 ---
 # <a name="lesson-1-creating-database-objects"></a>1단원: 데이터베이스 개체 만들기
   이 단원에서는 데이터베이스를 만들고 데이터베이스에서 테이블을 만든 다음 테이블의 데이터에 액세스 및 변경하는 방법에 대해 보여 줍니다. 이 단원은 [!INCLUDE[tsql](../includes/tsql-md.md)]사용을 소개하는 데 목적이 있으므로 이러한 문에 사용 가능한 많은 옵션을 사용하거나 설명하지는 않습니다.  

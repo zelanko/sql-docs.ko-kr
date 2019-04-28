@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733573"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -102,12 +102,12 @@ ms.locfileid: "48135063"
 |RULE_COUNT|모델에 있는 모든 규칙 수입니다.|  
 |MIN_SUPPORT|단일 항목 집합에 대해 발견된 최소 지지도입니다.<br /><br /> **참고** 이 값은 *MINIMUM _SUPPORT* 매개 변수에 설정한 값과 다를 수 있습니다.|  
 |MAX_SUPPORT|단일 항목 집합에 대해 발견된 최대 지지도입니다.<br /><br /> **참고** 이 값은 *MAXIMUM_SUPPORT* 매개 변수에 설정한 값과 다를 수 있습니다.|  
-|MIN_ITEMSET_SIZE|최소 항목 집합의 크기이며 항목 수로 표시됩니다.<br /><br /> 값이 0 이면는 `Missing` 상태가 개별 항목으로 처리 되었습니다.<br /><br /> **참고** *MINIMUM_ITEMSET_SIZE* 매개 변수의 기본값은 1입니다.|  
+|MIN_ITEMSET_SIZE|최소 항목 집합의 크기이며 항목 수로 표시됩니다.<br /><br /> 값 0은 `Missing` 상태가 개별 항목으로 처리되었음을 나타냅니다.<br /><br /> **참고** *MINIMUM_ITEMSET_SIZE* 매개 변수의 기본값은 1입니다.|  
 |MAX_ITEMSET_SIZE|발견된 가장 큰 항목 집합의 크기를 나타냅니다.<br /><br /> **참고** 이 값은 모델을 만들 때 *MAX_ITEMSET_SIZE* 매개 변수에 설정한 값에 따라 제약을 받습니다. 즉, 해당 매개 변수 값보다 작거나 같아야 합니다. 기본값은 3입니다.|  
 |MIN_PROBABILITY|모델에 있는 단일 항목 집합 또는 규칙에 대해 발견된 최소 확률입니다.<br /><br /> 예: 0.400390625<br /><br /> **참고** 항목 집합의 경우 이 값은 모델을 만들 때 *MINIMUM_PROBABILITY* 매개 변수에 설정한 값보다 항상 큽니다.|  
 |MAX_PROBABILITY|모델에 있는 단일 항목 집합 또는 규칙에 대해 발견된 최대 확률입니다.<br /><br /> 예: 1<br /><br /> **참고** 항목 집합의 최대 확률을 제약하는 매개 변수는 없습니다. 너무 자주 사용되는 항목을 제거하려면 *MAXIMUM_SUPPORT* 매개 변수를 대신 사용하세요.|  
-|MIN_LIFT|모델이 항목 집합에 제공하는 최소 리프트 양입니다.<br /><br /> 예: 0.14309369632511<br /><br /> 참고: 최소 리프트를 알면 한 항목 집합에 대한 리프트가 중요한지 여부를 확인할 수 있습니다.|  
-|MAX_LIFT|모델이 항목 집합에 제공하는 최대 리프트 양입니다.<br /><br /> 예: 1.95758227647523 **참고** 최대 리프트를 알면 한 항목 집합에 대한 리프트가 중요한지 여부를 확인할 수 있습니다.|  
+|MIN_LIFT|모델이 항목 집합에 제공하는 최소 리프트 양입니다.<br /><br /> 예: 0.14309369632511<br /><br /> 참고: 최소 리프트를 알면 한 항목 집합에 대 한 리프트가 중요 한지 여부를 확인할 수 있습니다 수 있습니다.|  
+|MAX_LIFT|모델이 항목 집합에 제공하는 최대 리프트 양입니다.<br /><br /> 예: 1.95758227647523 **참고** 최대 리프트를 알면 도움이 한 항목 집합에 대 한 리프트가 중요 한지 여부를 결정 합니다.|  
   
  **항목 집합 노드** 항목 집합 노드는 항목 목록을 포함하며 쉼표로 구분된 텍스트 문자열로 표시됩니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "48135063"
  비어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 연결 알고리즘](microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](association-model-query-examples.md)  
   

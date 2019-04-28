@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817069"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "52787215"
 |**security_mode**|**int**|배포자에서 구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.<br /><br /> **1** = Windows 인증입니다.|  
 |**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 대한 로그인 ID입니다.|  
 |**password**|**nvarchar(524)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 위한 암호화된 암호입니다.|  
-|**Active**|**bit**|원격 게시자가 로컬 배포자를 사용하고 있는지 여부를 나타냅니다.|  
+|**active**|**bit**|원격 게시자가 로컬 배포자를 사용하고 있는지 여부를 나타냅니다.|  
 |**신뢰할 수 있는**|**bit**|원격 게시자가 로컬 배포자와 동일한 암호를 사용하는지 여부를 나타냅니다.<br /><br /> **0** = 원격 게시자에서 배포자에 연결할 암호가 필요 합니다.<br /><br /> **1** = No 암호가 필요 합니다.|  
-|**탐색기**|**bit**|게시자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치인지 여부를 나타냅니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다. **1** = 유형이 다른 데이터 원본입니다.|  
+|**third_party**|**bit**|게시자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치인지 여부를 나타냅니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 합니다. **1** = 유형이 다른 데이터 원본입니다.|  
 |**publisher_type**|**sysname**|게시자 유형<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.<br /><br /> **ORACLE** = 표준 Oracle 게시자입니다.<br /><br /> **ORACLE GATEWAY** = Oracle 게이트웨이 게시자입니다.|  
 |**storage_connection_string**|**nvarchar(779)**|Azure SQL Database 저장소 연결 문자열의 값입니다.|  
 

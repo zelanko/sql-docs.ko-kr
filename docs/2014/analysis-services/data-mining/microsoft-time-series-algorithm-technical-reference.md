@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04183bb7e6376d1a22bfbf0882388e15940cf4da
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734928"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft Time Series Algorithm Technical Reference
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘에는 시계열을 분석하기 위한 두 가지 알고리즘이 포함되어 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "53350713"
   
  ARIMA_AR_ORDER 값이 1보다 크면 알고리즘이 다항식 항으로 시계열을 곱합니다. 다항식의 한 항이 루트 1 또는 1에 근접한 수로 확인되면 알고리즘이 항을 제거하고 차분 차수를 1 늘려서 모델의 안정성을 보존하려고 시도합니다. 차분 차수가 이미 최대값인 경우 항이 제거되고 차분 차수가 변경되지 않습니다.  
   
- 예를 들어 AR의 값이 2이면 결과 AR 다항식 항은 다음과 비슷하게 됩니다. 1-1.4B +.45B ^2 (1-.9B) = (1-0.5B). 약 0.9의 루트에 있는 용어 (1-.9B) note 합니다. 알고리즘은 다항식에서 이 항을 제거하지만 이미 최대값 2이기 때문에 차분 차수를 1 늘릴 수 없습니다.  
+ 예를 들어 경우 AR의 값 = 2 이면 결과 AR 다항식 항은 다음과 같이 표시 될 수 있습니다. 1 - 1.4B + .45B^2 = (1- .9B) (1- 0.5B). 약 0.9의 루트에 있는 용어 (1-.9B) note 합니다. 알고리즘은 다항식에서 이 항을 제거하지만 이미 최대값 2이기 때문에 차분 차수를 1 늘릴 수 없습니다.  
   
  차분 차수를 **강제로** 변경할 수 있는 유일한 방법은 지원되지 않는 매개 변수인 ARIMA_DIFFERENCE_ORDER를 사용하는 것입니다. 사용자 지정 알고리즘 매개 변수를 입력하여 설정할 수 있는 이 숨겨진 매개 변수는 알고리즘이 시계열에서 차분을 수행하는 횟수를 제어합니다. 하지만 실험 준비가 되어 있지 않고 관련된 계산에 익숙하지 않다면 이 값을 변경하지 않는 것이 좋습니다. 또한 숨겨진 매개 변수를 포함하여 차분 차수의 증분이 발생하는 임계값을 제어할 수 있는 메커니즘은 현재까지 존재하지 않습니다.  
   
@@ -132,18 +132,18 @@ ms.locfileid: "53350713"
   
 |매개 변수|Description|  
 |---------------|-----------------|  
-|*AUTO_DETECT_PERIODICITY*|주기를 검색하는 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 숫자 값을 지정합니다. 기본값은 0.6입니다.<br /><br /> 이 값을 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]에 가깝게 설정하면 주기성이 강한 데이터만 검색합니다.<br /><br /> 이 값을 1에 가깝게 설정하면 거의 주기적인 패턴을 다양하게 검색하고 주기 힌트를 자동으로 생성할 수 있습니다.<br /><br /> 참고: 많은 주기 힌트를 처리할수록 모델 학습 시간은 현저하게 길어지지만 보다 정확한 모델을 만들 수 있습니다.|  
+|*AUTO_DETECT_PERIODICITY*|주기를 검색하는 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 숫자 값을 지정합니다. 기본값은 0.6입니다.<br /><br /> 이 값을 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]에 가깝게 설정하면 주기성이 강한 데이터만 검색합니다.<br /><br /> 이 값을 1에 가깝게 설정하면 거의 주기적인 패턴을 다양하게 검색하고 주기 힌트를 자동으로 생성할 수 있습니다.<br /><br /> 참고: 많은 주기 힌트를 처리할수록 모델 학습 시간은 현저, 길어지지만 보다 정확한 모델을 만들 수 있습니다.|  
 |*COMPLEXITY_PENALTY*|의사 결정 트리의 증가를 제어합니다. 기본값은 0.1입니다.<br /><br /> 이 값을 줄이면 분할 가능성이 높아지고 값을 늘리면 가능성이 낮아집니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*FORECAST_METHOD*|분석과 예측에 사용할 알고리즘을 지정합니다. 가능한 값은 ARTXP, ARIMA 또는 MIXED입니다. 기본값은 MIXED입니다.|  
 |*HISTORIC_MODEL_COUNT*|작성할 기록 모델 수를 지정합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*HISTORICAL_MODEL_GAP*|두 연속 기록 모델 간의 지연 시간을 지정합니다. 기본값은 10입니다. 이 값은 시간 단위 수를 나타내며 단위는 모델에 의해 정의됩니다.<br /><br /> 예를 들어 이 값을 g로 설정하면 g, 2*g, 3\*g 등의 시간 간격으로 데이터를 잘라 기록 모델을 작성합니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
-|*INSTABILITY_SENSITIVITY*|예측 분산이 특정 임계값을 초과하고 ARTXP 알고리즘이 예측을 표시하지 않는 지점을 제어합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 ARIMA만 사용하는 모델에는 적용되지 않습니다.<br /><br /> 기본값 1은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 동일한 동작을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 예측에 대한 정규화된 표준 편차를 모니터링합니다. 이 값이 예측에 대한 임계값을 초과하자마자 시계열 알고리즘은 NULL을 반환하고 예측 프로세스를 중지합니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 값은 불안정 검색을 중지합니다. 이는 분산에 상관없이 만들 수 있는 예측 수에 제한이 없다는 것을 의미합니다.<br /><br /> 참고: 이 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서만 수정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본값 1만 사용됩니다.|  
+|*INSTABILITY_SENSITIVITY*|예측 분산이 특정 임계값을 초과하고 ARTXP 알고리즘이 예측을 표시하지 않는 지점을 제어합니다. 기본값은 1입니다.<br /><br /> 참고: 이 매개 변수는 ARIMA만 사용 하는 모델에 적용 되지 않습니다.<br /><br /> 기본값 1은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서와 동일한 동작을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 예측에 대한 정규화된 표준 편차를 모니터링합니다. 이 값이 예측에 대한 임계값을 초과하자마자 시계열 알고리즘은 NULL을 반환하고 예측 프로세스를 중지합니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 값은 불안정 검색을 중지합니다. 이는 분산에 상관없이 만들 수 있는 예측 수에 제한이 없다는 것을 의미합니다.<br /><br /> 참고: 이 매개 변수에서 수정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본값 1만 사용됩니다.|  
 |*MAXIMUM_SERIES_VALUE*|예측에 사용할 최대값을 지정합니다. 이 매개 변수는 *MINIMUM_SERIES_VALUE*와 함께 예측을 예상 범위로 제한하는 데 사용됩니다. 예를 들어 특정 일의 예상 판매 수량이 재고 제품 수를 초과하지 않도록 지정할 수 있습니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*MINIMUM_SERIES_VALUE*|예측할 수 있는 최소값을 지정합니다. 이 매개 변수는 *MAXIMUM_SERIES_VALUE*와 함께 예측을 예상 범위로 제한하는 데 사용됩니다. 예를 들어 예측된 판매 수량이 음수가 아니어야 함을 지정할 수 있습니다.<br /><br /> 참고: 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다.|  
 |*MINIMUM_SUPPORT*|각 시계열 트리에서 분할을 생성하는 데 필요한 최소 시간 조각 수를 지정합니다. 기본값은 10입니다.|  
-|*MISSING_VALUE_SUBSTITUTION*|기록 데이터의 간격을 채우는 방법을 지정합니다. 기본적으로 데이터의 간격은 허용되지 않습니다. 데이터에 여러 계열이 포함된 경우 계열은 또한 비정형 가장자리를 가질 수 없습니다. 즉, 모든 계열은 동일한 시작점과 끝점을 가져야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 또한 시계열 모델에서 `PREDICTION JOIN`을 수행할 때 새 데이터의 간격을 채우기 위해 이 매개 변수의 값이 사용됩니다. 다음 표에서는 이 매개 변수에 사용할 수 있는 값을 나열합니다.<br /><br /> None: 기본. 누락된 값을 학습된 모델의 곡선을 따라 표시된 값으로 대체합니다.<br /><br /> 이전: 이전 시간 조각의 값을 반복합니다.<br /><br /> 평균: 학습에 사용되는 시간 조각의 이동 평균을 사용합니다.<br /><br /> 숫자 상수: 모든 누락된 값을 대체하기 위해 지정된 숫자를 사용합니다.|  
-|*PERIODICITY_HINT*|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다.<br /><br /> 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다. 예를 들어 매월 제공되는 데이터에 대한 여러 주기 힌트를 제공하려면 년, 분기 및 월에 대한 패턴을 검색하기 위해 {12, 3, 1}을 입력할 수 있습니다. 그러나 주기는 모델 품질에 큰 영향을 줍니다. 제공한 힌트가 실제 주기와 다르면 결과에 부정적인 영향을 줄 수 있습니다.<br /><br /> 기본값은 {1}입니다.<br /><br /> 참고: 중괄호가 필요합니다. 또한 이 매개 변수는 문자열 데이터 형식을 가집니다. 따라서 이 매개 변수를 DMX(Data Mining Extensions) 문의 일부로 입력할 경우 숫자와 중괄호를 따옴표로 묶어야 합니다.|  
-|*PREDICTION_SMOOTHING*|예측을 최적화하기 위해 모델을 혼합해야 하는 방법을 지정합니다. 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다. [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 값을 입력하거나 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 예측에서 ARTXP만 사용하도록 지정합니다. 예측은 적은 예측에 맞게 최적화됩니다.<br /><br /> 0.5: (기본값) 두 알고리즘 모두 예측에 사용되고 결과가 혼합되도록 지정합니다.<br /><br /> 1: 예측에서 ARIMA만 사용하도록 지정합니다. 예측은 많은 예측에 맞게 최적화됩니다.<br /><br /> <br /><br /> 참고: 사용 된 *FORECAST_METHOD* 매개 변수 학습을 제어 합니다.|  
+|*MISSING_VALUE_SUBSTITUTION*|기록 데이터의 간격을 채우는 방법을 지정합니다. 기본적으로 데이터의 간격은 허용되지 않습니다. 데이터에 여러 계열이 포함된 경우 계열은 또한 비정형 가장자리를 가질 수 없습니다. 즉, 모든 계열은 동일한 시작점과 끝점을 가져야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 또한 시계열 모델에서 `PREDICTION JOIN`을 수행할 때 새 데이터의 간격을 채우기 위해 이 매개 변수의 값이 사용됩니다. 다음 표에서는 이 매개 변수에 사용할 수 있는 값을 나열합니다.<br /><br /> None: 기본. 누락된 값을 학습된 모델의 곡선을 따라 표시된 값으로 대체합니다.<br /><br /> 이전: 이전 시간 조각의 값을에서 반복합니다.<br /><br /> 평균: 학습에 사용 되는 시간 조각의 이동 평균을 사용 합니다.<br /><br /> 숫자 상수: 지정된 된 숫자를 사용 하 여 모든 누락 값으로 바꿉니다.|  
+|*PERIODICITY_HINT*|데이터의 주기성과 관련된 알고리즘에 대한 힌트를 제공합니다. 예를 들어 판매량이 매년 다르고 계열의 측정 단위가 월인 경우 주기성은 12입니다. 이 매개 변수는 {n [, n]} 형식이며, 여기서 n은 임의의 양수입니다.<br /><br /> 대괄호([]) 안의 n은 선택 사항이며 필요한 만큼 반복할 수 있습니다. 예를 들어 매월 제공되는 데이터에 대한 여러 주기 힌트를 제공하려면 년, 분기 및 월에 대한 패턴을 검색하기 위해 {12, 3, 1}을 입력할 수 있습니다. 그러나 주기는 모델 품질에 큰 영향을 줍니다. 제공한 힌트가 실제 주기와 다르면 결과에 부정적인 영향을 줄 수 있습니다.<br /><br /> 기본값은 {1}입니다.<br /><br /> 참고: 중괄호가 필요 합니다. 또한 이 매개 변수는 문자열 데이터 형식을 가집니다. 따라서 이 매개 변수를 DMX(Data Mining Extensions) 문의 일부로 입력할 경우 숫자와 중괄호를 따옴표로 묶어야 합니다.|  
+|*PREDICTION_SMOOTHING*|예측을 최적화하기 위해 모델을 혼합해야 하는 방법을 지정합니다. 이 매개 변수는 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서만 사용할 수 있습니다. [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 및 1 사이의 값을 입력하거나 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]: 예측에서 ARTXP만 사용하도록 지정합니다. 예측은 적은 예측에 맞게 최적화됩니다.<br /><br /> 0.5: (기본값) 두 알고리즘을 사용 해야 하는 예측 하 고 결과가 혼합을 지정 합니다.<br /><br /> 1: 예측에서 ARIMA만 지정 합니다. 예측은 많은 예측에 맞게 최적화됩니다.<br /><br /> <br /><br /> 참고: 사용 된 *FORECAST_METHOD* 매개 변수 학습을 제어 합니다.|  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음과 같은 모델링 플래그를 지원합니다. 마이닝 구조나 마이닝 모델을 만들 경우 분석 중 각 열의 값이 처리되는 방법을 지정하기 위해 모델링 플래그를 정의합니다. 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)를 참조하세요.  
@@ -151,7 +151,7 @@ ms.locfileid: "53350713"
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
 |NOT NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
-|MODEL_EXISTENCE_ONLY|열이 두 가지 가능한 상태인 Missing 및 Existing 상태를 갖는 것으로 처리됨을 의미합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열의 상태를 가진 것으로 간주 됩니다 것을 의미 합니다. Missing 및 Existing 합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  시계열 모델은 고유한 값, 입력 열 및 하나 이상의 예측 가능한 열을 포함하는 Key Time 열을 포함해야 합니다.  

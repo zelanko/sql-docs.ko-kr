@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736801"
 ---
 # <a name="parent-child-hierarchy"></a>부모-자식 계층
   부모-자식 계층은 부모 특성이 포함된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 멤버 위치는 부모 특성의 `KeyColumns` 및 `RootMemberIf` 속성에 의해 결정되지만 한 수준의 멤버 위치는 부모 특성의 `OrderBy` 속성에 의해 결정됩니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  
@@ -52,7 +52,7 @@ ms.locfileid: "52505558"
   
  그러나 부모-자식 계층에는 자식 멤버에서 집계되는 데이터뿐 아니라 기본 데이터 원본에서 파생되는 데이터를 포함하는 리프가 아닌 멤버가 있을 수 있습니다. 부모-자식 계층의 이러한 리프가 아닌 멤버에 대해서는 기본 팩트 테이블 데이터가 포함된 특별한 시스템 생성 자식 멤버를 만들 수 있습니다. *데이터 멤버*라고 하는 이러한 특수 자식 멤버에는 리프가 아닌 멤버와 직접 연결되며 리프가 아닌 멤버의 하위 항목에서 계산되는 요약 값에 독립적인 값이 포함됩니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](parent-child-dimension-attributes.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [부모-자식 계층의 특성](parent-child-dimension-attributes.md)   
  [데이터베이스 차원 속성](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718100"
 ---
 # <a name="bcpcollen"></a>bcp_collen
   현재 대량 복사에 대한 프로그램 변수의 데이터 길이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설정합니다.  
@@ -53,7 +53,7 @@ idxServerCol
  길이 표시기나 종결자의 길이를 제외한 프로그램 변수의 데이터 길이입니다. 설정 *cbData* 를 sql_null_data로 열에 대해 NULL 값을 포함 하는 서버에 복사 하는 모든 행을 나타냅니다. SQL_VARLEN_DATA로 설정하면 복사되는 데이터의 길이를 확인하는 데 문자열 종결자 또는 다른 메서드가 사용됩니다. 길이 표시기와 종결자가 모두 있으면 시스템에서는 복사되는 데이터 크기가 더 작은 것이 사용됩니다.  
   
  *idxServerCol*  
- 데이터가 복사되는 대상 테이블 열의 서수 위치입니다. 첫 번째 열은 1입니다. 열의 서 수 위치를 보고 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)합니다.  
+ 데이터가 복사되는 대상 테이블 열의 서수 위치입니다. 첫 번째 열은 1입니다. 열의 서수 위치는 [SQLColumns](../native-client-odbc-api/sqlcolumns.md)를 사용하여 확인할 수 있습니다.  
   
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  

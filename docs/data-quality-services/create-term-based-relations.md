@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862750"
 ---
 # <a name="create-term-based-relations"></a>용어 기반 관계 만들기
 
@@ -54,9 +54,9 @@ ms.locfileid: "56024674"
   
  정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 경우 TBR에 의해 변경된 값은 올바른 값으로 가져오게 됩니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  용어 기반 관계를 만들려면 도메인 관리 작업에서 도메인을 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -66,7 +66,7 @@ ms.locfileid: "56024674"
   
 ##  <a name="Create"></a> 용어 기반 관계 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   

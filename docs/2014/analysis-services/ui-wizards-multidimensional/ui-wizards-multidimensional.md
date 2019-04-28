@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f20cde3c40d29a205a62c6ab62b83851460f933
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793372"
 ---
 # <a name="ui-wizards-for-multidimensional-analysis"></a>다차원 분석을 위해 UI 마법사
 

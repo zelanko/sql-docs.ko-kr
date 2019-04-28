@@ -1,5 +1,5 @@
 ---
-title: '10 단원: 계층 만들기 | Microsoft Docs'
+title: '10단원: 계층 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728119"
 ---
 # <a name="lesson-10-create-hierarchies"></a>10단원: 계층 만들기
   이 단원에서는 계층을 만듭니다. 계층은 수준별로 정렬된 열 그룹입니다. 예를 들어 Geography 계층에는 Country, State, County 및 City에 대한 하위 수준이 포함될 수 있습니다. 계층은 보고 클라이언트 애플리케이션 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은 [계층 구조&#40;SSAS 테이블 형식&#41;](tabular-models/hierarchies-ssas-tabular.md)를 참조하세요.  
   
  계층을 만들려면 *다이어그램 뷰*에서 모델 디자이너를 사용합니다. 계층 만들기 및 관리는 데이터 뷰의 모델 디자이너에서는 지원되지 않습니다.  
   
- 이 단원에 소요되는 예상 시간: **20분**  
+ 예상이 단원을 완료 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
- 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원인 [9단원: 큐브 뷰 만들기](lesson-8-create-perspectives.md)를 완료해야 합니다.  
+ 이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [9 단원: 큐브 뷰 만들기](lesson-8-create-perspectives.md)합니다.  
   
 ## <a name="create-hierarchies"></a>계층 만들기  
   
@@ -89,6 +89,6 @@ ms.locfileid: "48187293"
     |Day Of Week|Day|  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 자습서를 계속하려면 다음 단원인 [11단원: 파티션 만들기](lesson-10-create-partitions.md)로 이동하세요.  
+ 이 자습서를 계속 하려면 다음 단원으로 이동 합니다. [11 단원: 파티션을 만들](lesson-10-create-partitions.md)합니다.  
   
   

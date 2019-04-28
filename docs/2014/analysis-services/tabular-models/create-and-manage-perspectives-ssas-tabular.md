@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25f8de0649f82abbcc6ceb4ac6a92844de04b4b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795400"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>큐브 뷰 만들기 및 관리(SSAS 테이블 형식)
   큐브 뷰는 모델을 비즈니스 또는 애플리케이션 중심의 관점에서 파악할 수 있게 해주는 보기 가능한 모델 하위 집합을 정의합니다. 이 항목의 태스크에서는 모델 디자이너의 **큐브 뷰** 를 사용하여 큐브 뷰를 만들고 관리하는 방법을 설명합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "52502279"
   
 -   큐브 뷰 열 머리글을 가리키면 합니다 **복사** 단추가 나타납니다. 큐브 뷰의 복사본을 만들려면 **복사** 단추를 클릭합니다. 그러면 선택한 큐브 뷰의 복사본이 기존 큐브 뷰의 오른쪽에 새 큐브 뷰로 추가됩니다. 새 큐브 뷰는 복사 원본 큐브 뷰의 이름을 상속하며, 이름 끝에 *- 복사본* 이라는 주석이 추가됩니다. 예를 들어, 복사본을 *Sales* 큐브 뷰를 만든, 새 큐브 뷰의 이름은 *Sales-복사본*합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [큐브 뷰&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)   
  [계층 구조&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)  
   

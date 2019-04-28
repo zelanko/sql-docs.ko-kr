@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795443"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>KPI(핵심 성과 지표) 표현(테이블 형식)
   KPI는 기본 측정값으로 정의된 값을 대상 값과 비교하여 값 성과를 측정하는 데 사용됩니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795330"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
   이 항목에서는 기존 테이블에 열을 추가하는 방법을 설명합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48184723"
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 속성 편집 대화 상자 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [테이블, 열 또는 행 필터 매핑 변경 &#40;&AMP;#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+ [테이블 속성 편집 대화 상자&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

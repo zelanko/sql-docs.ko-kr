@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722025"
 ---
 # <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
   예측 쿼리 작성기를 사용하여 쿼리를 디자인한 후에는 데이터 마이닝 디자이너의 **마이닝 모델 예측** 의 탭에서 쿼리 텍스트 보기로 전환하여 해당 쿼리를 수정할 수 있습니다. 쿼리 작성기가 만든 쿼리를 표시할 텍스트 편집기가 화면 맨 아래에 나타납니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "48065543"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](data-mining-queries.md)   
- [예측 쿼리 작성기 &#40;데이터 마이닝&#41;](../prediction-query-builder-data-mining.md)   
- [6 단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [예측 쿼리 작성기&#40;데이터 마이닝&#41;](../prediction-query-builder-data-mining.md)   
+ [6단원: 만들기 및 예측 작업 &#40;기본 데이터 마이닝 자습서&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

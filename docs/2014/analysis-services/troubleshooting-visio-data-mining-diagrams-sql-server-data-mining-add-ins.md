@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51afb2516da54ce63d170619edd4c5429fd85144
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794148"
 ---
 # <a name="troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins"></a>Visio 데이터 마이닝 다이어그램 문제 해결(SQL Server 데이터 마이닝 추가 기능)
   이 항목에는 Visio 데이터 마이닝 다이어그램 문제를 해결할 때 사용할 수 있는 몇 가지 추가 정보가 들어 있습니다.  

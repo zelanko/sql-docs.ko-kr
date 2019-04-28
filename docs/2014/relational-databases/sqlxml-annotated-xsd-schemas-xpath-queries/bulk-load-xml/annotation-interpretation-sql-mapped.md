@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717760"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped(SQLXML 4.0)
   XML 대량 로드 프로세스를 `sql:mapped` 예상 있는 XSD 스키마에서 주석 인 매핑 스키마 지정 하는 경우 `sql:mapped="false"` 임의의 요소 또는 특성에 대 한 XML 대량 로드가 해당 열에 연결 된 데이터를 저장 하려고 시도 하지 않습니다.  

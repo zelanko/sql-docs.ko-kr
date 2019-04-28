@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827953"
 ---
 # <a name="create-infosource"></a>InfoSource 만들기
   **InfoSource 만들기** 대화 상자에서는 새 InfoSource를 만들 수 있습니다. 새 InfoSource를 만들려면 **트랜잭션 데이터용 InfoSource 만들기** 또는 **마스터 데이터용 InfoSource 만들기** 대화 상자를 사용합니다.  

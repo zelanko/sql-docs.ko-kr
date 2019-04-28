@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692184"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties(OLE DB)
   OLE DB 표준 사양을 통해 공급자가 `DBPROPINFO::vValues`에 대해 VT_EMPTY를 지정할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB는 항상 VT_EMPTY를 반환를 호출할 때 `IDBProperties::GetPropertyInfo` 사용 하 여 `DBPROPSET_ROWSETALL` 행 집합 속성을 검색 합니다.  

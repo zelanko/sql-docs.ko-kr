@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812822"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>데이터베이스 엔진 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]과 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다.  

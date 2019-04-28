@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a485cc23a399496a4c86cc2eab0e8d26b360066e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735885"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 메서드(ServerSettings 클래스)
   현재 보안 인증서를 설정합니다.  

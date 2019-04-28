@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989762"
 ---
 # <a name="using-reports"></a>보고서 사용
   업그레이드 관리자 분석 마법사가 서버에서 분석하는 각 구성 요소에 대해 별도의 보고서가 생성되며, 필요한 경우 각 인스턴스에 대해서도 별도의 보고서가 생성됩니다. 보고서에는 업그레이드에 영향을 주는 알려진 문제에 대한 세부 정보가 제공됩니다. 또한 보고서에는 식별된 문제를 해결하기 위한 정보 및 권장 동작의 링크도 제공됩니다.  

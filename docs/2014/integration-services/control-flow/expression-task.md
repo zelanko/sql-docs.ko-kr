@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831427"
 ---
 # <a name="expression-task"></a>식 태스크
   식 태스크는 식 작성기를 사용하여 런타임에 변수 값을 설정하는 식을 만들고 평가합니다. 태스크를 편집하면 [Expression Builder](../expressions/expression-builder.md) 가 시작됩니다.  

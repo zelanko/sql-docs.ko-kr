@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c156f9e0d6df2afbf7710b1ed5c19fb60034e92
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800214"
 ---
 # <a name="autoexists"></a>AUTOEXIST
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -314,9 +314,9 @@ WHERE (Measures.[Internet Sales Amount],
  [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
+ [멤버, 튜플 및 집합 & #40; 사용 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX&#40;Multidimensional Expression&#41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
+ [다차원 식 & #40; Mdx& #41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

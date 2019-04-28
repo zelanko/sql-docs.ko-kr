@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705166"
 ---
 # <a name="detect-failed-input-output-request"></a>실패 한 입된/출력 요청 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 50을 검사합니다. 이 오류는 실패한 I/O 요청으로 인해 발생합니다.  

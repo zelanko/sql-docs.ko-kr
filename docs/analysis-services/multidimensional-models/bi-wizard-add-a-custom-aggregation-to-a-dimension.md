@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717380"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 마법사-차원에 사용자 지정 집계 추가
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>BI 마법사 - 차원에 사용자 지정 집계 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   큐브나 차원에 향상된 사용자 지정 집계 기능을 추가하여 차원 멤버와 연결되는 기본 집계를 다른 단항 연산자로 바꿀 수 있습니다. 이 향상된 기능은 부모-자식 계층의 멤버에 대한 롤업을 정의하는 차원 테이블에 단항 연산자 열을 지정합니다. 단항 연산자는 부모-자식 계층의 부모 특성에 대해 실행됩니다.  
   

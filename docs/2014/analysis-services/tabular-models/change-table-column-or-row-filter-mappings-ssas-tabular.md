@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795360"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>테이블, 열 또는 행 필터 매핑 변경(SSAS 테이블 형식)
   이 항목에서는 **에서** 테이블 속성 편집 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]대화 상자를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법에 대해 설명합니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "48201493"
          실수가 있어 새로 시작해야 하는 경우 **행 필터 지우기**를 클릭하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블 속성 편집 대화 상자 &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [테이블 속성 편집 대화 상자&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

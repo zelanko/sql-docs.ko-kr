@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806377"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>SQL Server 유틸리티 제어 지점 만들기(SQL Server 유틸리티)
   엔터프라이즈에서는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 있으며 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 데이터 계층 애플리케이션을 관리할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에는 UCP(유틸리티 제어 지점)가 하나씩 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 위한 새 UCP를 만들어야 합니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스와 데이터 계층 애플리케이션은 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 멤버이며 단일 UCP에 의해 관리됩니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "53377665"
   
 -   UCP를 만들 때 필요한 권한인 sysadmin 권한의 사용자가 이 절차를 실행해야 합니다.  
   
--   모든 SQL Server의 관리되는 인스턴스는 해당 UCP에서 제거되어야 합니다. 즉, UCP가 SQL Server의 관리되는 인스턴스입니다. 자세한 내용은 참조 하세요. [방법: SQL Server 유틸리티에서 SQL server 인스턴스 제거](https://go.microsoft.com/fwlink/?LinkId=169392)합니다.  
+-   모든 SQL Server의 관리되는 인스턴스는 해당 UCP에서 제거되어야 합니다. 즉, UCP가 SQL Server의 관리되는 인스턴스입니다. 자세한 내용은 [방법: SQL Server 유틸리티에서 SQL server 인스턴스 제거](https://go.microsoft.com/fwlink/?LinkId=169392)합니다.  
   
  이 프로시저를 사용하여 SQL Server 유틸리티에서 SQL Server UCP를 제거합니다. 제거가 완료되면 SQL Server 인스턴스에서 UCP를 다시 만들 수 있습니다.  
   

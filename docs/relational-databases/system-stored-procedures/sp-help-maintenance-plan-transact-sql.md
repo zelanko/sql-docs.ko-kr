@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719555"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 하는 경우 *plan_id* 를 지정 하면 **sp_help_maintenance_plan** 세 개의 테이블을 반환 합니다. 세 가지 테이블을 반환합니다.  
+ 하는 경우 *plan_id* 를 지정 하면 **sp_help_maintenance_plan** 세 개의 테이블을 반환 합니다. 계획, 데이터베이스 및 작업입니다.  
   
 ### <a name="plan-table"></a>계획 테이블  
   

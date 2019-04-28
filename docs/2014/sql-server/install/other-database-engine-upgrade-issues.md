@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805636"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>기타 데이터베이스 엔진 업그레이드 문제
   다음은 최신 업그레이드 관리자 버전에서 감지할 수 없는 업그레이드 문제입니다. 아래에 나와 있는 문제를 검토하여 이러한 문제가 시스템에 줄 수 있는 잠재적 영향을 평가하십시오.  

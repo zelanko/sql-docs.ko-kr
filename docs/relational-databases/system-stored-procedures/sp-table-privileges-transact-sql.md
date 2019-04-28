@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688364"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @table_name=] '*table_name*'  
+ [ @table_name= ] '*table_name*'  
  카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 됩니다 **nvarchar (** 384 **)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
   
- [ @table_owner=] '*table_owner*'  
+ [ @table_owner= ] '*table_owner*'  
  카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner*됩니다 **nvarchar (** 384 **)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 소유자를 지정하지 않은 경우 기본 DBMS의 기본 테이블 표시 유형 규칙이 적용됩니다.  
   
  현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 테이블을 소유 하지 않는 한 *이름*,이 프로시저는 지정 된 테이블 *table_name* 소유 하는 데이터베이스 소유자입니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
- [ @table_qualifier=] '*table_qualifier*'  
+ [ @table_qualifier= ] '*table_qualifier*'  
  테이블 한정자의 이름입니다. *table_qualifier* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (*qualifier.owner.name*). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ @fUsePattern=] '*fUsePattern*'  
+ [ @fUsePattern= ] '*fUsePattern*'  
  밑줄 (_), 백분율 (%) 및 대괄호 ([또는]) 문자 와일드 카드 문자로 해석할지 여부를 결정 합니다. 유효한 값은 0(패턴 일치 해제)과 1(패턴 일치 설정)입니다. *fUsePattern* 됩니다 **비트**, 기본값은 1입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

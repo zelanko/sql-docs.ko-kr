@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3fd3692049ef1a5fb85ef188a73d453762d4daf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794296"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52420195"
   
  매우 큰 데이터 집합을 작업하는 경우 특정 데이터가 표시되지 않도록 필터링할 수 있습니다. 다른 순서로 데이터를 정렬할 수도 있습니다. 모델 디자이너를 사용하면 필터, 정렬 및 숨기기 기능을 사용하여 전체 열 또는 특정 데이터를 표시하거나 표시하지 않을 수 있습니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
 |항목|Description|  
 |-----------|-----------------|  

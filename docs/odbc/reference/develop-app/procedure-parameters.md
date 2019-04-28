@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861533"
 ---
 # <a name="procedure-parameters"></a>프로시저 매개 변수
 프로시저 호출에서 매개 변수 입력 될 수 있습니다, 입/출력 또는 출력 매개 변수입니다. 이 다른 모든 SQL 문의 경우 입력된 매개 변수는 항상의 매개 변수에서 다릅니다.  

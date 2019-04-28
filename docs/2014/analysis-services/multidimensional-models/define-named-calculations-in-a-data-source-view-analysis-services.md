@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726466"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
   명명된 계산은 계산 열로 표시된 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  
@@ -85,6 +85,6 @@ FROM
  명명된 계산을 삭제하려고 하면 프로젝트나 데이터베이스에 정의된 개체 중에서 삭제 작업으로 인해 무효화될 개체 목록이 표시됩니다. 계산을 삭제하기 전에 목록을 신중하게 검토합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 뷰에서 명명 된 쿼리 정의 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 쿼리 정의&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

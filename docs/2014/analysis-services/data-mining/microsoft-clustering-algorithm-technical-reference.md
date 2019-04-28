@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721891"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 클러스터링 알고리즘 기술 참조
   이 섹션에서는 클러스터링 모델의 동작을 제어하는 데 사용할 수 있는 매개 변수를 비롯한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘 구현에 대해 설명합니다. 또한 클러스터링 모델을 만들고 처리할 때 성능을 향상시킬 수 있는 방법도 제공합니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "53371525"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열은 두 가지 가능한 상태인 Missing 및 Existing 상태를 갖는 것으로 처리됨을 의미합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열 상태를 가진 것으로 간주 됩니다. Missing 및 Existing 합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
 |NOT NULL|이 열에는 Null이 포함될 수 없습니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,5 +1,5 @@
 ---
-title: Members (MDX) 계산 된 쿼리 범위 만들기 | Microsoft Docs
+title: 쿼리 범위 계산 만들기 Members (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802677"
 ---
 # <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX 계산 멤버-쿼리 범위 계산된 멤버
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -87,9 +87,9 @@ WHERE [Product].[Category].[Bikes]
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
- [MDX 함수 참조 & #40; Mdx& #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [SELECT 문 & #40; Mdx& #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [멤버 & #40; 계산 된 세션 범위를 만들기 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
+## <a name="see-also"></a>관련 항목  
+ [MDX 함수 참조&#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT 문&#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [세션 범위 계산 멤버 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

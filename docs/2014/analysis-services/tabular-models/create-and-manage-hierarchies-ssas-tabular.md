@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bda916232a3d1b0c46a4278def28ec3759e346d3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795390"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>계층 만들기 및 관리(SSAS 테이블 형식)
   모델 디자이너(다이어그램 뷰)에서 계층을 만들고 관리할 수 있습니다. 모델 디자이너(다이어그램 뷰)를 보려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭합니다.  

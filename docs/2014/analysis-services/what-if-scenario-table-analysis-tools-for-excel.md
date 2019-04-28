@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793235"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>가상 시나리오(Excel용 테이블 분석 도구)
   ![테이블 분석 도구의 시나리오 단추](media/tat-whatif.gif "What-if 시나리오 테이블 분석 도구 단추")  
@@ -84,7 +84,7 @@ ms.locfileid: "48140363"
   
  **'자전거 구입' = 예**  
   
- **신뢰성: 양호**  
+ **신뢰: 공정**  
   
  이 결과는 데이터 테이블의 기존 행에 기반을 두고 있으므로 특정 고객에 대해 그 밖의 모든 조건을 같게 유지하고 고객의 나이를 25세로 증가시키면 자전거를 구입할 가능성이 높아짐을 의미합니다.  
   

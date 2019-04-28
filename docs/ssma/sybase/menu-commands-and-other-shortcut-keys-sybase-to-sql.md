@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705868"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>메뉴 명령 및 기타 바로 가기 키(Sybase To SQL)
 다음 섹션에서는 메뉴 명령 및 Sybase 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에서 사용 되는 기타 바로 가기 키에 액세스 하는 바로 가기 키를 설명 합니다.  

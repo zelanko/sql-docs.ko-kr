@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689429"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>데이터 마이닝 마법사 F1 도움말(Analysis Services - 데이터 마이닝)
   **데이터 마이닝 마법사** 를 사용하여 새 마이닝 구조 및 선택적으로 연결된 마이닝 모델을 만들 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "48087763"
   
 -   마이닝 모델 열의 내용 및 데이터 형식을 지정합니다.  
   
--   모델의 학습에 사용되는 데이터를 필터링합니다.  OLAP만 해당합니다.  
+-   모델의 학습에 사용되는 데이터를 필터링합니다. OLAP만 해당합니다.  
   
 -   데이터를 학습 집합과 테스트 집합으로 분할합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48087763"
  마이닝 구조와 선택적 마이닝 모델을 만든 후에는 **데이터 마이닝 디자이너** 를 사용하여 해당 속성을 수정할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 마법사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [데이터 마이닝 마법사 & #40; Analysis Services-데이터 마이닝 & #41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [데이터 마이닝 디자이너](data-mining/data-mining-designer.md)   
  [관계형 마이닝 구조 만들기](data-mining/create-a-relational-mining-structure.md)   
  [정의 방법 선택 &#40;데이터 마이닝 마법사&#41;](select-the-definition-method-data-mining-wizard.md)   

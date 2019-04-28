@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 409cdbaa10dc93c5cb659961f084d76bc3370bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726477"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
   연결된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "48114237"
   
 ## <a name="see-also"></a>관련 항목  
  [호환성 수준으로 다차원 데이터베이스 설정 &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)   
- [연결 된 측정값 그룹](linked-measure-groups.md)   
+ [연결된 측정값 그룹](linked-measure-groups.md)   
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   

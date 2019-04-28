@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733625"
 ---
 # <a name="mining-model-columns"></a>마이닝 모델 열
   데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 구조와 마찬가지로 마이닝 모델에는 열이 포함됩니다. 마이닝 모델은 마이닝 구조 내에 포함되며 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다.  
@@ -46,8 +46,8 @@ ms.locfileid: "48167993"
  사용법 속성을 설정하고 DMX를 사용하여 프로그래밍 방식으로 모델링 플래그를 정의하는 방법은 [CREATE MINING MODEL&#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)을 참조하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용법 속성을 설정하고 모델링 플래그를 정의하는 방법은 [데이터 마이닝 개체 이동](moving-data-mining-objects.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델의 속성 변경](change-the-properties-of-a-mining-model.md)   
  [마이닝 모델에서 열 제외](exclude-a-column-from-a-mining-model.md)   
  [마이닝 구조 열](mining-structure-columns.md)  

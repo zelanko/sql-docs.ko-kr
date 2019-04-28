@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719521"
 ---
-# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact SQL)
+# <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 반환 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 트랜잭션 로그의 정보입니다. 참고 모든 트랜잭션 로그 파일은 테이블 출력에 결합 됩니다. 출력의 각 행의 트랜잭션 로그에 VLF를 나타내며 해당 VLF 로그에서 관련 된 정보를 제공 합니다.

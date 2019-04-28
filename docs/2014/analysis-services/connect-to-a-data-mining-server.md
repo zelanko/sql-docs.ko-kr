@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680404"
 ---
 # <a name="connect-to-a-data-mining-server"></a>데이터 마이닝 서버에 연결
   ![연결 단추](media/misc-connection.gif "연결 단추")  
@@ -108,7 +108,7 @@ ms.locfileid: "52420394"
   
 2.  연결 활동 로그를 확인하고 열 및 예측 가능 결과(예)를 검토하여 모델을 찾습니다.  
   
-     고급 사용자: DMX 또는 XMLA에 대해 잘 알고 있는 경우 이 문을 나중에 사용할 수 있도록 파일에 복사할 수 있습니다.  
+     고급 사용자: DMX 또는 XMLA를 사용 하 여 잘 알고 있다면 문을 나중에 사용할 파일을 복사할 수 있습니다.  
   
 3.  임시 모델 및 구조 이름을 찾으면 엽니다 **모델 관리** 고 모델을 선택 합니다.  
   

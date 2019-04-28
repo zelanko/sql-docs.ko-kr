@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6108a35d3f1c51f4d3dedbcf673be1d837091b71
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692068"
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text 이벤트 클래스
   Showplan Text 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 SQL 문을 실행할 때 발생합니다. Showplan All, Showplan XML Statistics Profile 또는 Showplan XML 이벤트 클래스에서 사용할 수 있는 정보의 일부만 포함하고 있습니다.  

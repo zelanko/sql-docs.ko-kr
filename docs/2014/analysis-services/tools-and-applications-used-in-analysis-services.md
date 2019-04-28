@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e8425b3d6fdb461b369c2311ba415dd8f032293
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794626"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Analysis Services에서 사용되는 도구 및 애플리케이션
   Analysis Services 모델을 개발하고 Analysis Services 인스턴스에서 연결된 데이터베이스를 관리하기 위해 필요한 도구 및 애플리케이션을 찾으세요.  

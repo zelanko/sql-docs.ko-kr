@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733144"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
   이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
@@ -304,7 +304,7 @@ FILTER (EXISTS (Products))
   
  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)   
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](testing-and-validation-data-mining.md)  
   

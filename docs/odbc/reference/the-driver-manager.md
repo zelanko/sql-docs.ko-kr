@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719734"
 ---
 # <a name="the-driver-manager"></a>드라이버 관리자
 합니다 *드라이버 관리자* 응용 프로그램 및 드라이버 간의 통신을 관리 하는 라이브러리입니다. 예를 들어, Microsoft® Windows® 플랫폼에서 드라이버 관리자는 동적 연결 라이브러리 (DLL)는 Microsoft에서 기록 되 고 사용자의 재배포 가능 패키지 MDAC 2.8 SP1 SDK가 재배포할 수 있습니다.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823700"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용
   사용자 지정 보고서가 선택한 개체 탐색기 노드의 보고서 매개 변수를 참조하면 사용자 지정 보고서를 해당 노드의 컨텍스트에서 실행할 수 있습니다. 이렇게 하면 사용자 지정 보고서가 현재 컨텍스트(예: 현재 데이터베이스)나 데이터베이스 또는 서버 개체를 사용할 수 있습니다.  

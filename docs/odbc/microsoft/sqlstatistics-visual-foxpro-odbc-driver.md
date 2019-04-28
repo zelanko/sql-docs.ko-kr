@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd96e1bbd35835382557baffda4fc3accb206672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62686947"
 ---
 # <a name="sqlstatistics-visual-foxpro-odbc-driver"></a>SQLStatistics(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47848950"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  단일 테이블 및 인덱스 또는 테이블에 연결 된 태그 이름에 대 한 통계의 목록을 검색 합니다. 드라이버 정보 결과 집합으로 반환 합니다.  
   

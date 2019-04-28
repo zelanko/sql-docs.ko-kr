@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714730"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
   결정적 함수는 데이터베이스의 상태가 같을 경우 특정 입력 값 집합으로 호출될 때마다 항상 동일한 결과를 반환합니다. 비결정적 함수는 액세스하는 데이터베이스의 상태가 동일하게 유지되더라도 특정 입력 값 집합으로 호출될 때마다 다른 결과를 반환할 수 있습니다. 예를 들어 AVG 함수는 항상 위에서 설명된 조건에 따라 동일한 결과를 반환하지만 현재 날짜/시간 값을 반환하는 GETDATE 함수는 항상 다른 결과를 반환합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48214713"
 |--------------|--------------|  
 |모든 집계 함수|모든 집계 함수는 OVER 및 ORDER BY 절로 지정되지 않는 한 결정적입니다. 이러한 함수 목록은 [집계 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)를 참조하세요.|  
 |CAST|`datetime`, `smalldatetime` 또는 `sql_variant`와 함께 사용하지 않는 경우 결정적입니다.|  
-|CONVERT|다음과 같은 경우를 제외하고 결정적입니다.<br /><br /> 원본 유형이 `sql_variant`인 경우<br /><br /> 대상 유형이 `sql_variant` 고 해당 원본 유형이 비 결정적인 합니다.<br /><br /> 원본 또는 대상 유형이 `datetime`이거나 `smalldatetime`이고 다른 원본 또는 대상 유형이 문자열이며 비결정적 스타일을 지정한 경우 결정적이려면 스타일 매개 변수가 상수여야 합니다. 또한 100 이하의 스타일(스타일 20 및 21 제외)은 비결정적입니다. 100보다 큰 스타일(스타일 106, 107, 109, 113 제외)은 결정적입니다.|  
+|CONVERT|다음과 같은 경우를 제외하고 결정적입니다.<br /><br /> 원본 유형이 `sql_variant`인 경우<br /><br /> 대상 유형이 `sql_variant`이고 해당 원본 유형이 비결정적인 경우<br /><br /> 원본 또는 대상 유형이 `datetime`이거나 `smalldatetime`이고 다른 원본 또는 대상 유형이 문자열이며 비결정적 스타일을 지정한 경우 결정적이려면 스타일 매개 변수가 상수여야 합니다. 또한 100 이하의 스타일(스타일 20 및 21 제외)은 비결정적입니다. 100보다 큰 스타일(스타일 106, 107, 109, 113 제외)은 결정적입니다.|  
 |CHECKSUM|CHECKSUM(*)을 제외하고 모두 결정적입니다.|  
 |ISDATE|CONVERT 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
 |RAND|RAND는 *seed* 매개 변수가 지정된 경우에만 결정적입니다.|  

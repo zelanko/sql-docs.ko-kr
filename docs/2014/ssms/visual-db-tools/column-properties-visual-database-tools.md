@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990200"
 ---
 # <a name="column-properties-visual-database-tools"></a>열 속성(Visual Database Tools)
   열 속성 집합에는 테이블 디자이너([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서만 사용 가능) 내 **열 속성** 탭에서 볼 수 있는 전체 집합과 서버 탐색기를 사용하여 속성 창에서 볼 수 있는 하위 집합이 있습니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52757585"
  **Null 허용**  
  열에 Null 값이 허용되는지 여부를 표시합니다.  
   
- **정밀도**  
+ **전체 자릿수**  
  숫자 데이터 형식에 허용되는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
  **소수 자릿수**  

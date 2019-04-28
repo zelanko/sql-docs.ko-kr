@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 361d29ca1051fd045e36fb1f23f9a5c08abef925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710109"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters 컬렉션, Command 속성 예제(VC++)
 다음 코드를 사용 하는 방법에 설명 합니다 [명령](../../../ado/reference/adox-api/command-property-adox.md) 속성을를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 프로시저의 매개 변수 정보를 검색 하는 개체입니다.  
