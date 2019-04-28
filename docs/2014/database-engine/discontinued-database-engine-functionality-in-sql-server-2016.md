@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779878"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 데이터베이스 엔진 기능
   이 항목에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "54132621"
 |범주|지원되지 않는 기능|대체 기능|  
 |--------------|--------------------------|-----------------|  
 |Backup 및 Restore 메서드|**백업 {데이터베이스 &#124; LOG} WITH PASSWORD** 및 **백업 {데이터베이스 &#124; LOG} WITH MEDIAPASSWORD** 은 지원 되지 않습니다. **복원 {데이터베이스 &#124; 로그} [MEDIA] PASSWORD를 사용 하 여**계속 되지 않습니다.|없음|  
-|Backup 및 Restore 메서드|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... RESTRICTED_USER를 사용 하 여**|  
+|Backup 및 Restore 메서드|**RESTORE { DATABASE &#124; LOG } ... WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ... RESTRICTED_USER를 사용 하 여**|  
 |호환성 수준|호환성 수준 80|데이터베이스를 호환성 수준 90 이상으로 설정해야 합니다.|  
 |구성 옵션|`sp_configure 'user instance timeout'` 및 `'user instances enabled'`|Local Database 기능을 사용합니다. 자세한 내용은 참조 하세요. [SqlLocalDB 유틸리티](../tools/sqllocaldb-utility.md)|  
 |연결 프로토콜|VIA 프로토콜에 대한 지원이 중단되었습니다.|대신 TCP를 사용하십시오.|  
@@ -66,7 +66,7 @@ ms.locfileid: "54132621"
 |메모리 관리|32비트 AWE(Address Windowing Extensions) 및 32비트 Hot Add 메모리 지원.|64비트 운영 체제를 사용하십시오.|  
 |메타데이터|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |프로그래밍 기능|SQL-DMO(SQL Server Distributed Management Objects)|SMO(SQL Server Management Objects)|  
-|쿼리 힌트|`FASTFIRSTROW` 힌트|`OPTION (FAST` *n* `)`합니다.|  
+|쿼리 힌트|`FASTFIRSTROW` 힌트|`OPTION (FAST` *n* `)`.|  
 |원격 서버|`sp_addserver`를 사용하여 새 원격 서버를 만드는 기능은 더 이상 사용되지 않습니다. 'local' 옵션을 사용한 `sp_addserver`는 계속 사용할 수 있습니다. 업그레이드 중에 보존되었거나 복제로 만들어진 원격 서버는 사용할 수 있습니다.|연결된 서버를 사용하여 원격 서버를 대체합니다.|  
 |보안|`sp_dropalias`|별칭을 사용자 계정 및 데이터베이스 역할의 조합으로 대체해야 합니다. 업그레이드된 데이터베이스에서 `sp_dropalias`를 사용하여 별칭을 제거해야 합니다.|  
 |보안|**2000 이전의 로그인 값을 나타내는** PWDCOMPARE [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전 매개 변수는 더 이상 사용되지 않습니다.|없음|  

@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745275"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a> 클라이언트 연결의 SPN(서비스 사용자 이름) 지원 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ ms.locfileid: "53979969"
   새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.   
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결된 서버가 만들어질 때 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 **@provstr** 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이 따른 장점은 클라이언트 연결 문자열에 Spn을 지정 하는 동일 합니다.  즉, Kerberos 인증을 사용하는 연결을 더 간단하게, 더 안정적으로 설정할 수 있습니다.   
+ 연결된 서버가 만들어질 때 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)의 **@provstr** 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 해서 얻는 이점은 클라이언트 연결 문자열에 SPN을 지정할 때의 이점과 같습니다. 즉, Kerberos 인증을 사용하는 연결을 더 간단하게, 더 안정적으로 설정할 수 있습니다.   
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>애플리케이션에서 지정하는 SPN의 관리 측면  
  애플리케이션에서 연결 문자열을 통해 SPN을 지정할지, 또는 기본 공급자가 생성한 SPN을 사용하지 않고 연결 속성을 통해 프로그래밍 방식으로 SPN을 지정할지 선택할 때는 다음 사항을 고려해야 합니다.  
   
--   보안:  지정된 SPN이 보호되는 정보를 노출합니까?   
+-   보안: 지정된 SPN이 보호되는 정보를 노출합니까?   
   
--    안정성:   기본 SPN 사용을 활성화하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 서비스 계정에 KDC의 Active Directory를 업데이트할 수 있는 충분한 권한이 있어야 합니다.   
+-   안정성:  기본 SPN 사용을 활성화하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 서비스 계정에 KDC의 Active Directory를 업데이트할 수 있는 충분한 권한이 있어야 합니다.   
   
--    편의성 및 위치 투명성:   데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 응용 프로그램 SPN은 어떤 영향을 받습니까?  데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
+-   편의성 및 위치 투명성:  데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 응용 프로그램 SPN은 어떤 영향을 받습니까?  데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
   
 ## <a name="specifying-the-spn"></a>SPN 지정  
  대화 상자 또는 코드에서 SPN을 지정할 수 있습니다. 이 섹션에서는 SPN을 지정하는 방법에 대해 설명합니다.  

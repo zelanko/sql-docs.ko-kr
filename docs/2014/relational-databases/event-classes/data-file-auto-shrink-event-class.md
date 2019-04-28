@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663175"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink 이벤트 클래스
   **Data File Auto Shrink** 이벤트 클래스는 데이터 파일이 축소되었음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 데이터 파일이 축소될 경우에는 트리거되지 않습니다. 데이터 파일 크기 변화를 모니터링하는 추적에 **Data File Auto Shrink** 이벤트 클래스를 포함시키십시오.  

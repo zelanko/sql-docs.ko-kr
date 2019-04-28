@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749595"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
   PowerPivot 갤러리는 특수한 유형의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.  
@@ -137,7 +137,7 @@ ms.locfileid: "53358905"
 |----------|-----------------|  
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|  
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|  
-|극장식 보기 및 회전식 보기|이 보기는 소수의 관련 문서를 특별하게 보여 주는 경우 가장 적합한 특수한 보기입니다. 축소판 그림의 전체 표시에는 라이브러리에 있는 모든 문서의 모든 페이지가 포함됩니다. 문서 수가 많은 경우 이러한 보기를 사용하여 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 찾거나 여는 것이 적합하지 않을 수 있습니다.<br /><br /> 극장식 보기: 미리 보기 영역이 중앙에 있습니다. 각 워크시트에 대한 더 작은 축소판 그림이 페이지 아래의 양쪽에 나타납니다.<br /><br /> 회전식 보기: 미리 보기 영역이 중앙에 있습니다. 현재 축소판 그림의 바로 앞과 뒤에 있는 축소판 그림이 미리 보기 영역에 인접하여 나타납니다.|  
+|극장식 보기 및 회전식 보기|이 보기는 소수의 관련 문서를 특별하게 보여 주는 경우 가장 적합한 특수한 보기입니다. 축소판 그림의 전체 표시에는 라이브러리에 있는 모든 문서의 모든 페이지가 포함됩니다. 문서 수가 많은 경우 이러한 보기를 사용하여 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 찾거나 여는 것이 적합하지 않을 수 있습니다.<br /><br /> 극장식 보기: 미리 보기 영역이 가운데 표시 됩니다. 각 워크시트에 대한 더 작은 축소판 그림이 페이지 아래의 양쪽에 나타납니다.<br /><br /> 회전식 보기: 미리 보기 영역이 가운데 표시 됩니다. 현재 축소판 그림의 바로 앞과 뒤에 있는 축소판 그림이 미리 보기 영역에 인접하여 나타납니다.|  
   
 ### <a name="switch-to-a-different-view"></a>다른 보기로 전환  
   

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730229"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  

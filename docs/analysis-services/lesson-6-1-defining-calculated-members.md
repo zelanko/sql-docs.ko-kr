@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523681"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>단원 6-1-정의 계산 멤버
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "34018790"
   
 7.  **계산 도구** 창의 **메타데이터** 탭에서 **Reseller Sales**를 확장한 후 **계산 식** 창의 **식** 상자에서 더하기 기호(+) 뒤로 **Reseller Sales-Sales Amount** 를 끌어옵니다.  
   
-8.  **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
+8.   **형식 문자열** 목록에서 **"Currency"** 를 선택합니다.  
   
 9. **비어 있지 않은 동작** 목록에서 **Internet Sales-Sales Amount** 및 **Reseller Sales-Sales Amount**에 대한 확인란을 선택한 다음 **확인**을 클릭합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34018790"
   
     다음 그림에서는 이전 단계에서 지정한 설정으로 채워진 **계산 식** 창을 보여 줍니다.  
   
-    ![계산 식 창 Populated](../analysis-services/media/l6-calculatedmembers-03.gif "채워진 계산 식 창")  
+    ![계산 식 창의 Populated](../analysis-services/media/l6-calculatedmembers-03.gif "채워진 계산 식 창")  
   
 10. **계산** 탭의 도구 모음에서 **스크립트 보기**를 클릭한 후 **계산 식** 창에서 계산 스크립트를 검토합니다.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34018790"
   
     다음 그림에서는 자습서의 이 부분에서 **계산 식** 창에 표시되어야 하는 계산 스크립트를 보여 줍니다.  
   
-    ![계산 식 창에 스크립트](../analysis-services/media/l6-calculatedmembers-04.gif "계산 식 창에 스크립트")  
+    ![계산 식 창의 스크립트](../analysis-services/media/l6-calculatedmembers-04.gif "계산 식 창의 스크립트")  
   
 12. **계산** 탭의 도구 모음에서 **폼 보기**를 클릭하고 **스크립트 구성 도우미** 창에서 **[Total Sales Amount]** 가 선택되어 있는지 확인한 후 **새 계산 멤버**를 클릭합니다.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "34018790"
   
     다음 그림에서는 3개의 새 계산을 포함하는 **식** 창을 보여 줍니다.  
   
-    ![계산 식 창에 새 계산](../analysis-services/media/l6-calculatedmembers-05.gif "계산 식 창에 새 계산")  
+    ![계산 식 창의 새 계산](../analysis-services/media/l6-calculatedmembers-05.gif "계산 식 창의 새 계산")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>총 계산의 백분율 정의  
   
@@ -288,9 +288,9 @@ ms.locfileid: "34018790"
     부속품 판매는 시간에 따라 증가하지만 이러한 판매는 총 판매의 일부에 지나지 않습니다. 또한 부속품 판매의 매출이익률은 자전거 판매 매출이익률보다 높습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
-[명명 된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
+[명명된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [새 계산 멤버](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
 [다차원 모델의 계산](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
 [계산 멤버 만들기](../analysis-services/multidimensional-models/create-calculated-members.md)  

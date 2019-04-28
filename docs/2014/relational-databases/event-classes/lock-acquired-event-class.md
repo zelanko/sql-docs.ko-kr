@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49ddbbbff88ca0ae33caf4230954df710f29365
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665325"
 ---
 # <a name="lockacquired-event-class"></a>Lock:Acquired 이벤트 클래스
   Lock:Acquiredevent 클래스는 데이터 페이지와 같은 리소스에 대한 잠금 획득이 이루어졌음을 나타냅니다.  
