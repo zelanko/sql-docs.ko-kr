@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 547ebeb6043345821d2b2a19b407599abfd14008
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814712"
 ---
 # <a name="configure-replication-for-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹에 대한 복제 구성(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 및 AlwaysOn 가용성 그룹을 구성하는 과정은 7단계로 구성됩니다. 각 단계에 대해서는 다음 섹션에서 자세하게 설명합니다.  
@@ -180,7 +180,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  메시지 21899, 수준 11, 상태 1, 프로시저 `sp_hadr_verify_subscribers_at_publisher`, 줄 109  
 >   
->  '976' 오류로 인해 리디렉션된 게시자 'MyReplicaHostName'에서 원래 게시자 'MyOriginalPublisher'의 구독자에 대한 sysserver 항목이 있는지 확인하기 위한 쿼리에 실패했습니다(오류 메시지 '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'이(가) 가용성 그룹에 참여 중이며 현재 쿼리로 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 `ALTER AVAILABILITY GROUP` 문을 참조하십시오.').  
+>  원래 게시자 'MyOriginalPublisher'의 구독자에 대해 sysserver 항목이 있는지 확인하기 위한 리디렉션된 게시자 'MyReplicaHostName'의 쿼리가 실패하고 '976' 오류가 발생했습니다. 오류 메시지는 다음과 같습니다. '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'가 가용성 그룹에 참여 중이며, 쿼리가 현재 이 대상 데이터베이스에 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 `ALTER AVAILABILITY GROUP` 문을 참조하십시오.').  
 >   
 >  복제본 호스트 'MyReplicaHostName'에 대해 하나 이상의 게시자 유효성 검사 오류가 발생했습니다.  
   
@@ -189,7 +189,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 ##  <a name="step7"></a> 7. 원래 게시자를 복제 모니터에 추가  
  각 가용성 그룹 복제본에서 원래 게시자를 복제 모니터에 추가합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **복제**  
   
 -   [AlwaysOn 게시 데이터베이스 유지 관리 &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d04b79bb2d7cb70e2e36261547e462e1a7f2742
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817251"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52750066"
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**source_owner**|**sysname**|게시자에서 원본 테이블의 스키마 이름입니다.|  
 |**source_object**|**sysname**|아티클을 추가할 출처가 되는 원본 개체의 이름입니다.|  
-|**description**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
+|**description**|**nvarchar(255)**|아티클 설명입니다.|  
 |**destination_owner**|**sysname**|구독자에서 생성된 테이블의 스키마 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

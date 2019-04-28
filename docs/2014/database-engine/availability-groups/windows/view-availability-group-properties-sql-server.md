@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813254"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>가용성 그룹 속성 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 AlwaysOn 가용성 그룹에 대한 가용성 그룹 속성을 보는 방법에 대해 설명합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48126360"
   
 3.  속성을 보려는 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **속성** 명령을 선택합니다.  
   
-4.  **가용성 그룹 속성** 대화 상자에서 **일반** 및 **백업 기본 설정** 페이지를 사용하여 선택한 가용성 그룹의 속성을 보고 필요한 경우 변경합니다. 자세한 내용은 [가용성 그룹 속성 및 새 가용성 그룹&#40;일반 페이지&#41;](availability-group-properties-new-availability-group-general-page.md) 및 [가용성 그룹 속성: 새 가용성 그룹&#40;백업 기본 설정 페이지&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)을 참조하세요.  
+4.  **가용성 그룹 속성** 대화 상자에서 **일반** 및 **백업 기본 설정** 페이지를 사용하여 선택한 가용성 그룹의 속성을 보고 필요한 경우 변경합니다. 자세한 내용은 [가용성 그룹 속성 및 새 가용성 그룹 &#40;일반 페이지&#41; ](availability-group-properties-new-availability-group-general-page.md) 하 고 [가용성 그룹 속성: 새 가용성 그룹 &#40;백업 기본 설정 페이지&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)합니다.  
   
      **사용 권한** 페이지를 사용하여 가용성 그룹과 연결된 현재 로그인, 역할 및 명시적 권한을 확인할 수 있습니다. 자세한 내용은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)을 참조하세요.  
   

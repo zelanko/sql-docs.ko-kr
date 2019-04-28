@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812994"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>유효성 검사 페이지(AlwaysOn 가용성 그룹 마법사)
   이 도움말 항목에서는 **유효성 검사** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지를 사용하여 사용자 환경에서 마법사의 이전 페이지에서 선택한 모든 구성 항목을 지원하는지 확인할 수 있습니다.  

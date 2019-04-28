@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d513da9588b8ae8fb4f20ece11390c29d71bcf9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817052"
 ---
 # <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52750098"
 |**dest_scale**|**int**|여기서 NULL 값 확장은 사용 되지 않음을 의미, 대상 데이터 형식의 소수 자릿수 및 값 정의 **-1** 원본 데이터 형식의 소수 자릿수 사용 됨을 의미 합니다.|  
 |**dest_length**|**bigint**|여기서 NULL 값은 길이가 사용 되지 않음을 의미, 대상 데이터 형식, 길이 및 값 정의 **-1** 원본 데이터 형식의 길이가 사용 됨을 의미 합니다.|  
 |**dest_nullable**|**bit**|매핑의 대상 열이 NULL 값을 허용하는지 여부를 나타냅니다. 여기서 NULL 값은 이 정의가 필요하지 않음을 의미합니다.|  
-|**dest_createparams**|**int**|각 데이터 형식에 적용할 수 있는 길이, 전체 자릿수, 소수 자릿수의 조합을 설명하는 비트맵이며 다음을 포함합니다.<br /><br /> **0x1** = 전체 자릿수입니다.<br /><br /> **0x2** = 소수 자릿수입니다.<br /><br /> **0x4** = 길이입니다.|  
+|**dest_createparams**|**int**|각 데이터 형식에 적용할 수 있는 길이, 전체 자릿수, 소수 자릿수의 조합을 설명하는 비트맵이며 다음을 포함합니다.<br /><br /> **0x1** = PRECISION.<br /><br /> **0x2** = SCALE.<br /><br /> **0x4** = LENGTH.|  
   
 ## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

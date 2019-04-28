@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 880546e50479de28c8b3aa98bb0439e54bd594b9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807438"
 ---
 # <a name="database-engine-features-and-tasks"></a>데이터베이스 엔진 기능 및 태스크
   해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-작성 하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스입니다.  

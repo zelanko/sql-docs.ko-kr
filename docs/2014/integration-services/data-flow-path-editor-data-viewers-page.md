@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cc83f8c1aa545be505247317b0b047394fca26f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828503"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>데이터 흐름 경로 편집기(데이터 뷰어 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **데이터 뷰어** 페이지를 사용하여 경로에 연결된 데이터 뷰어를 관리할 수 있습니다.  

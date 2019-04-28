@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 16692ea8cac91960bd7f940f59c018d663f418dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807107"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
   다음 예에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 XML 대량 로드 기능을 보여 줍니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
@@ -564,7 +564,7 @@ OrderDetail (OrderID, ProductID)
   
 -   CheckConstraints 합니다. 이 속성을 TRUE로 설정하면 테이블에 삽입되는 데이터가 테이블에 지정된 제약 조건을 위반하지 않도록 보장할 수 있습니다(이 예에서는 Cust와 CustOrder 테이블 간에 지정된 PRIMARY KEY/FOREIGN KEY 제약 조건). 제약 조건 위반이 발생하면 대량 로드는 실패합니다.  
   
--   XMLFragment 합니다. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
+-   XMLFragment. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
   
  다음은 VBScript 코드입니다.  
   

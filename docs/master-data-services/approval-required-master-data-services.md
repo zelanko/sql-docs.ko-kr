@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee8a63632d54c727051e405dff2f237b58849c2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817708"
 ---
 # <a name="approval-required-master-data-services"></a>승인 필요(Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "52759183"
   
 4.  **편집**을 클릭하고 **승인 필요**를 선택한 후에 **저장**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [변경 집합&#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

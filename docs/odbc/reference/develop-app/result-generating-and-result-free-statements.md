@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861523"
 ---
 # <a name="result-generating-and-result-free-statements"></a>결과 생성 및 결과 없는 명령문
 SQL 문 다음 다섯 가지 범주로 나눌 수 느슨하게:  

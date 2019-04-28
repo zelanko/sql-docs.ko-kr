@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c58b3bffe2873cd412be0639ae9006252a4443e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828442"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>데이터 흐름 경로 편집기(메타데이터 페이지)
   **데이터 흐름 경로 편집기** 대화 상자의 **메타데이터** 페이지를 사용하여 경로 열의 메타데이터를 볼 수 있습니다.  

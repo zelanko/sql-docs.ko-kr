@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d726e1e79b1a3e24aea074c0821e1f8773b233c5
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809333"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>서버 속성(기타 서버 설정 페이지)
   이 페이지를 사용하여 서버 설정을 확인하거나 수정할 수 있습니다.  

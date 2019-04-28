@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808255"
 ---
 # <a name="continue-with-restore"></a>복원 계속
   **복원 계속** 대화 상자를 사용하여 다음 백업 세트를 복원할지 여부를 나타낼 수 있습니다. 예를 들어 테이프를 바꾸기 위해 복원 작업을 지연하려면 계속할 준비가 될 때까지 기다렸다가 **확인**을 클릭합니다.  

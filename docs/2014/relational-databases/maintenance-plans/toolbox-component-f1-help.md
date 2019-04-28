@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806831"
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
 
@@ -35,6 +35,6 @@ ms.locfileid: "53328943"
   
  **도구 상자** 항목을 추가하거나 제거하려면 **도구** 메뉴에서 **도구 상자 항목 선택**을 클릭합니다. **유지 관리 태스크** 만 **도구 상자** 아이콘으로 만들어 사용할 수 있습니다. 또한 일부 구성 요소는 사용하지 못할 수도 있습니다. 예를 들어 유지 관리 태스크는 유지 관리 계획을 만드는 경우에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [도구 상자 사용](../../ssms/use-the-toolbox.md)   
  [도구 상자 항목 선택&#40;유지 관리 태스크 페이지&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  

@@ -1,5 +1,5 @@
 ---
-title: '9 단원: Defining Perspectives and Translations | Microsoft Docs'
+title: '9단원: Defining Perspectives and Translations | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d36bf95a0f0758b9e33a6c695a5a060ba54706b8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807517"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34016160"
   
 이 단원에서는 다음 태스크를 다룹니다.  
   
-[정의 및 찾아보기 큐브 뷰](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
+[큐브 뷰 정의 및 찾아보기](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
 이 태스크에서는 큐브 뷰를 정의하고 검색하여 특정 사용자나 사용에 대해 표시되는 큐브 뷰를 단순화합니다.  
   
 [번역 정의 및 찾아보기](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "34016160"
 ## <a name="next-lesson"></a>다음 단원  
 [10 단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)  
 [다차원 모델링 & #40; Adventure Works 자습서 & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [큐브 뷰](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  

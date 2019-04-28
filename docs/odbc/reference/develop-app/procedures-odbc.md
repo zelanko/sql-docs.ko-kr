@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37cf1cb1a6fe2193ec30ad3163950834351c3364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861543"
 ---
 # <a name="procedures-odbc"></a>프로시저 ODBC
-A *프로시저* 는 데이터 원본에 저장 된 실행 개체입니다. 일반적으로 미리 컴파일된 하나 이상의 SQL 문입니다.  
+A *프로시저* 는 데이터 원본에 저장 된 실행 개체입니다. 일반적으로 미리 컴파일된 하나 이상의 SQL 문을 것입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

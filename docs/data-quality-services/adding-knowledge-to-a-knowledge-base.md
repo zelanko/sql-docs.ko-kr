@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15802f061f9996d377aa5110b180e0a1fb065081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862471"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>기술 자료에 정보 추가
 

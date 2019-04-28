@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749af9366ef78ef182ad037258eb75603333195f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808208"
 ---
 # <a name="copy-or-export-target-data"></a>대상 데이터 복사 또는 내보내기
   대상 데이터를 복사하고 대상 데이터를 .CSV 파일로 내보낼 수도 있습니다.  

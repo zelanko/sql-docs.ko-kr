@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816602"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>텍스트 파일에 대한 SQLGetInfo 반환 값
 다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "47676701"
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM: 텍스트<br /><br /> 버전: 1.0<br /><br /> 버전 번호의 형식은: 01.00.0000|  
+|SQL_DBMS_VER|ISAM: 텍스트 모드<br /><br /> 버전: 1.0<br /><br /> 버전 번호의 형식: 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -142,7 +142,7 @@ ms.locfileid: "47676701"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|다중 값|  
-|SQL_ODBC_SAG_CLI_ 규칙|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|드라이버 관리자에서|  
 |SQL_OJ_CAPABILITIES|다중 값|  

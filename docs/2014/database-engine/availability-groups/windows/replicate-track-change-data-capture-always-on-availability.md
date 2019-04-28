@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814059"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579323"
   
 -   병합 복제를 사용할 때 게시 데이터베이스가 가용성 그룹에 있는 경우:  
   
-    -   밀어넣기 구독인 경우. 게시자와 배포자 모두 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 실행해야 합니다.  
+    -   밀어넣기 구독: 게시자와 배포자 모두 최소한 실행 해야 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다.  
   
-    -   끌어오기 구독인 경우. 게시자, 배포자 및 구독자 데이터베이스는 최소한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 있어야 합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
+    -   끌어오기 구독: 게시자, 배포자 및 구독자 데이터베이스에 있어야 이상 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]합니다. 구독자의 병합 에이전트가 가용성 그룹이 보조 그룹으로 장애 조치(Failover)하는 방법을 이해해야 하기 때문입니다.  
   
 -   배포 데이터베이스는 가용성 그룹에 배치할 수 없습니다.  
   

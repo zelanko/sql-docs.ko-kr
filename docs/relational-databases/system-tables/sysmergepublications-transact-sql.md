@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817039"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52748426"
 |**allow_subscriber_initiated_snapshot**|**bit**|구독자가 매개 변수가 있는 필터를 사용하여 게시에 대한 스냅숏을 생성하는 프로세스를 시작할 수 있음을 나타냅니다. **1** 구독자가 스냅숏 프로세스를 시작할 수 있음을 나타냅니다.|  
 |**dynamic_snapshot_queue_timeout**|**int**|매개 변수가 있는 필터를 사용할 때 스냅숏 생성 프로세스가 시작될 때까지 구독자가 큐에서 대기하는 시간(분)을 지정합니다.|  
 |**dynamic_snapshot_ready_timeout**|**int**|매개 변수가 있는 필터를 사용할 때 스냅숏 생성 프로세스가 완료될 때까지 구독자가 대기하는 시간(분)을 지정합니다.|  
-|**배포자**|**sysname**|게시 배포자의 이름입니다.|  
+|**distributor**|**sysname**|게시 배포자의 이름입니다.|  
 |**snapshot_jobid**|**binary(16)**|구독자가 스냅숏 생성 프로세스를 시작할 수 있을 때 스냅숏을 생성하는 에이전트 작업을 식별합니다.|  
 |**allow_web_synchronization**|**bit**|게시 웹 동기화에 사용 되는지 여부를 지정 합니다. 여기서 **1** 웹 동기화는 게시에 대해 사용할 수 있음을 의미 합니다.|  
 |**web_synchronization_url**|**nvarchar(500)**|웹 동기화에 사용되는 인터넷 URL의 기본값을 지정합니다.|  

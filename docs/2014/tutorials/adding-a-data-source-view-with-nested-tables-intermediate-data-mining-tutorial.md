@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822783"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>중첩 테이블이 있는 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
   시장 바구니 모델을 만들려면 연관 데이터를 지원하는 데이터 원본 뷰를 사용해야 합니다. 이 데이터 원본 뷰는 시퀀스 클러스터링 시나리오에도 사용됩니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "56016754"
 -   사례 및 중첩 테이블 간에 다 대 일 관계를 지정합니다.  
   
     > [!NOTE]  
-    >  의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 사례 테이블과 중첩 테이블 간의 관계를 올바르게 지정하고 모델을 처리할 때 오류를 피하려면 설명된 절차를 정확하게 따르는 것이 중요합니다.  
+    >  . 사례 테이블과 중첩 테이블 간의 관계를 올바르게 지정하고 모델을 처리할 때 오류를 피하려면 설명된 절차를 정확하게 따르는 것이 중요합니다.  
   
 -   모델에서 데이터 열이 사용되는 방법을 정의합니다.  
   

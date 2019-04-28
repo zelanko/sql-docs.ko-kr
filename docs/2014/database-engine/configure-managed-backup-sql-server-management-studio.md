@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812710"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>관리되는 백업 구성(SQL Server Management Studio) 
   **관리되는 백업** 대화에서는 인스턴스의 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성할 수 있습니다. 이 항목에서는 이 대화를 사용하여인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성하는 방법과, 이 때 고려해야 할 옵션에 대해 설명합니다. 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성할 때 이 설정은 이후 생성되는 모든 새 데이터베이스에 적용됩니다.  

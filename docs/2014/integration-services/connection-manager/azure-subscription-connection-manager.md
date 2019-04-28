@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833492"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure 구독 연결 관리자
-  Azure HDInsight 연결 관리자를 SSIS 패키지를 속성에 대해 지정 된 값을 사용 하 여 Azure 구독에 연결할 수 있습니다. Azure 구독 ID 및 관리 인증서입니다.  
+  Azure HDInsight 연결 관리자를 SSIS 패키지를 속성에 대해 지정 된 값을 사용 하 여 Azure 구독에 연결할 수 있습니다. Azure 구독에 연결할 수 있습니다.  
   
 1.  위에 나와 있는 **SSIS 연결 관리자 추가** 대화 상자에서 **Azure 구독**을 선택하고 **추가**를 클릭합니다.  다음과 같은 **Azure 구독 연결 관리자 편집기** 대화 상자가 표시됩니다.  
   

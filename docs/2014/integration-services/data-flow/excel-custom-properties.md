@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827236"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -47,11 +47,11 @@ ms.locfileid: "58391090"
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer(열거형)|대상에서 해당 대상 데이터베이스에 액세스하는 방법을 지정하는 값입니다.<br /><br /> 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `OpenRowset` (0)-테이블 또는 뷰의 이름을 제공 해야 합니다.<br /><br /> `OpenRowset from Variable` (1)-테이블 또는 뷰의 이름이 포함 된 변수의 이름을 제공 해야 합니다.<br /><br /> `OpenRowset Using Fastload` (3)-테이블 또는 뷰의 이름을 제공 해야 합니다.<br /><br /> `OpenRowset Using Fastload from Variable` (4)-테이블 또는 뷰의 이름이 포함 된 변수의 이름을 제공 해야 합니다.<br /><br /> `SQL Command` (2)-SQL 문을 제공 해야 합니다.|  
-|CommandTimeout|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **Excel 대상 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
+|CommandTimeout|정수|제한 시간이 초과될 때까지 SQL 명령을 실행할 수 있는 최대 시간(초)입니다. 값 **0** 은 제한 시간이 없음을 의미합니다. 이 속성의 기본값은 **0**입니다.<br /><br /> 참고: 이 속성은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |FastLoadKeepIdentity|Boolean|데이터를 로드할 때 ID 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나를 사용할 경우에만 사용할 수 있습니다. 이 속성의 기본값은 **False**입니다.|  
 |FastLoadKeepNulls|Boolean|데이터를 로드할 때 Null 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나와 함께 사용해야 합니다. 이 속성의 기본값은 **False**입니다.|  
 |FastLoadMaxInsertCommitSize|정수|Excel 대상에서 빠른 로드 작업을 수행하는 동안 커밋을 시도하는 일괄 처리 크기를 지정하는 값입니다. 기본값은 **2147483647**입니다. **0** 값은 모든 행이 처리된 후의 단일 커밋 작업을 나타냅니다.|  
-|FastLoadOptions|문자열|빠른 로드 옵션 모음입니다. 빠른 로드 옵션에는 테이블 잠금 및 제약 조건 검사가 포함됩니다. 둘 다 또는 둘 중 하나를 지정하거나 아무 것도 지정하지 않을 수 있습니다.<br /><br /> 참고: 이 속성에 대 한 몇 가지 옵션에서 사용할 수 없는 합니다 **Excel 대상 편집기**를 사용 하 여 설정할 수 있습니다는 **고급 편집기**.|  
+|FastLoadOptions|문자열|빠른 로드 옵션 모음입니다. 빠른 로드 옵션에는 테이블 잠금 및 제약 조건 검사가 포함됩니다. 둘 다 또는 둘 중 하나를 지정하거나 아무 것도 지정하지 않을 수 있습니다.<br /><br /> 참고: 이 속성의 일부 옵션은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |OpenRowset|문자열|AccessMode가 하는 경우 `OpenRowset`를 Excel 대상에 액세스 하는 뷰나 테이블의 이름입니다.|  
 |OpenRowsetVariable|문자열|AccessMode가 하는 경우 `OpenRowset from Variable`를 Excel 대상에 액세스 하는 뷰나 테이블의 이름이 포함 된 변수의 이름입니다.|  
 |SqlCommand|문자열|AccessMode가 하는 경우 `SQL Command`를 Excel 대상 데이터의 대상 열을 지정 하는 데 사용 하는 TRANSACT-SQL 문입니다.|  

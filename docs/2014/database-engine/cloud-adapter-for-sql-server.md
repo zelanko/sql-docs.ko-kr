@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812637"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server에 대한 클라우드 어댑터
   클라우드 어댑터 서비스는 Windows Azure VM에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로비전의 일부로 만들어집니다. 클라우드 어댑터 서비스는 첫 번째 실행 중에 자체 서명된 SSL 인증서를 생성한 다음 **로컬 시스템** 계정으로 실행됩니다. 이 서비스는 자체적으로 구성하는 데 사용되는 구성 파일을 생성합니다. 또한 클라우드 어댑터는 기본 포트 11435에서 들어오는 TCP 연결을 허용하는 Windows Firewall 규칙도 만듭니다.  
@@ -48,23 +48,23 @@ ms.locfileid: "52518265"
   
 -   **구성 파일 매개 변수** -  
   
-    -   \<구성 >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<키 추가 = "WebServicePort" value = "" / >  
+            -   \<add key="WebServicePort" value="" />  
   
             -   \<키 추가 = "WebServiceCertificate" value = "GUID" / >  
   
             -   \<키 추가 = "ExposeExceptionDetails" value = "true" / >  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</configuration >  
+    -   \</configuration>  
   
 -   **인증서 세부 정보** -인증서에는 다음 값:  
   
-    -   주체-"CN = CloudAdapter\<VMName >, DC = SQL Server, DC = Microsoft"  
+    -   Subject - "CN=CloudAdapter\<VMName>, DC=SQL Server, DC=Microsoft"  
   
     -   인증서에는 서버 인증 EKU만 사용해야 합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52518265"
   
 -   **추적, 이벤트** -모든 이벤트는 응용 프로그램 이벤트 로그에 기록 됩니다.  
   
--   **제어, 구성** -에 있는 구성 파일을 사용 합니다.  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\합니다.  
+-   **제어, 구성** -에 있는 구성 파일을 사용 합니다.  C:\Program Files\Microsoft SQL Server\120\Tools\CloudAdapter\\.  
   
 |Error|오류 ID|원인|해결 방법|  
 |-----------|--------------|-----------|----------------|  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815705"
 ---
 # <a name="add-solutions-to-source-control"></a>원본 제어에 솔루션 추가
   소스 제어에 솔루션을 추가할 경우 일반적으로 전체 솔루션과 솔루션에 포함된 모든 프로젝트를 추가하고 싶을 것입니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 솔루션을 원본 제어에 추가할 수 있습니다.  

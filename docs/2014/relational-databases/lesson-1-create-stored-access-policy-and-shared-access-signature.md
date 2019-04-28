@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806734"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>2단원. 컨테이너에 정책 만들기 및 SAS(공유 액세스 서명) 키 생성
   이 단원에서는 Blob 컨테이너에서 정책을 만들고 SAS키를 생성하는 방법을 배웁니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "48124083"
   
  다음 방법 중 하나를 사용하여 정책과 공유 액세스 서명을 만들 수 있습니다.  
   
--   Windows Azure REST API 작업: [컨테이너 만들기](https://msdn.microsoft.com/library/azure/dd179468.aspx), [컨테이너 ACL 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx)및 [컨테이너 ACL 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Windows Azure REST API 작업: [컨테이너를 만듭니다](https://msdn.microsoft.com/library/azure/dd179468.aspx), [컨테이너 ACL 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx), 및 [컨테이너 ACL 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx)합니다.  
   
 -   Windows Azure SDK의[CloudBlobContainer.GetSharedAccessSignature 메서드](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48124083"
   
     ```  
   
--   [Azure 저장소 탐색기](http://azurestorageexplorer.codeplex.com/)등의 타사 Windows Azure 탐색기 도구.  
+-   [Azure 스토리지 탐색기](http://azurestorageexplorer.codeplex.com/)등의 타사 Windows Azure 탐색기 도구.  
   
  **다음 단원:**  
   
