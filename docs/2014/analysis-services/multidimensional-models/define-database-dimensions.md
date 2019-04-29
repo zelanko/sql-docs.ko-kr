@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700542"
 ---
 # <a name="define-database-dimensions"></a>데이터베이스 차원 정의
    [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52518982"
 |탭|Description|  
 |---------|-----------------|  
 |**차원 구조**|이 탭에 차원 구조를 사용 하 여 작업을 검토 하거나 특성을 사용 하 여 작동 하 고 사용자 정의 계층의 특성을 구성 하는 차원에 대 한 데이터 원본 뷰 스키마를 만들고 사용 합니다.|  
-|**특성 관계**|이 탭을 사용하여 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.|  
+|**에서 차원 디자이너의**|이 탭을 사용하여 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.|  
 |**번역**|이 탭을 사용하여 여러 언어로 차원 메타데이터의 번역을 추가하고 편집할 수 있습니다.|  
 |**브라우저**|이 탭을 사용하여 처리된 차원의 멤버를 확인하고 차원 메타데이터의 번역을 검토할 수 있습니다.|  
   

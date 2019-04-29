@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811678"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 기본 언어 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **기본 언어** 옵션을 사용하면 새로 만드는 모든 로그인의 기본 언어를 지정할 수 있습니다. 기본 언어를 설정하려면 원하는 언어의 **langid** 값을 지정합니다. **sys.syslanguages** 호환성 뷰를 쿼리하여 **langid** 값을 얻을 수 있습니다.  

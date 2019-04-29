@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6b27b086e84f173e72a61cf01341d5d01ec7ea9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736751"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스 이름 바꾸기(Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 이름을 변경하는 방식은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 연결하는 방법에 따라 달라집니다. 기존 데이터베이스의 이름을 변경하려면 온라인 모드로 연결해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 개체를 인스턴스화할 데이터베이스의 이름을 변경하려면 프로젝트 모드에서 연결해야 합니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 이름을 변경하는 방식은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 연결하는 방법에 따라 달라집니다. 기존 데이터베이스의 이름을 변경하려면 온라인 모드로 연결해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 개체를 인스턴스화할 데이터베이스의 이름을 변경하려면 프로젝트 모드에서 연결해야 합니다.  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>온라인 모드에서 데이터베이스 이름을 변경하려면  
   
@@ -53,8 +53,8 @@ ms.locfileid: "48168223"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services의 서버 속성 구성](../server-properties/server-properties-in-analysis-services.md)   
- [다차원 데이터베이스 속성 설정 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
- [Analysis Services 프로젝트 속성 구성 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Analysis Services 프로젝트 배포 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [다차원 데이터베이스 속성 설정&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)   
+ [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Analysis Services 프로젝트 배포&#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

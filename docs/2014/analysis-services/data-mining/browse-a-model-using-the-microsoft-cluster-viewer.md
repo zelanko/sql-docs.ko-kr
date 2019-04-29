@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78172be64641195f787e0e807149b4995c3b5805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689528"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 데이터를 탐색하여 데이터의 잘못된 부분을 식별하고 예측을 만드는 데 사용할 수 있는 세그먼트화 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm](microsoft-clustering-algorithm.md)을(를) 참조하세요.  

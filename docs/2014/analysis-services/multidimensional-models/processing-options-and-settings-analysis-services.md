@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736962"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>처리 옵션 및 설정(Analysis Services)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
   
  처리 설정을 지정하면 처리되는 개체 및 이러한 개체를 처리하는 데 사용되는 방법을 제어할 수 있습니다. 일부 처리 설정은 배치 처리 작업에 주로 사용됩니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)를 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48049503"
 |**전체 처리**|큐브, 데이터베이스, 차원, 측정값 그룹, 마이닝 모델, 마이닝 구조 및 파티션|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체와 이 개체에 포함된 모든 개체를 처리합니다. 이미 처리된 개체에 대해 전체 처리를 실행하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 개체의 모든 데이터를 삭제한 다음 개체를 처리합니다. 이 처리 유형은 특성 계층이 추가, 삭제 또는 이름이 바뀐 경우와 같이 개체 구조가 변경된 경우에 필요합니다.|  
 |**지우기 처리**|큐브, 데이터베이스, 차원, 측정값 그룹, 마이닝 모델, 마이닝 구조 및 파티션|지정한 개체 및 모든 하위 요소 개체의 데이터를 삭제합니다. 삭제한 데이터는 다시 로드되지 않습니다.|  
 |**데이터 처리**|차원, 큐브, 측정값 그룹 및 파티션|집계나 인덱스를 작성하지 않고 데이터만 처리합니다. 파티션에 데이터가 있는 경우 파티션에 원본 데이터를 다시 채우기 전에 데이터가 삭제됩니다.|  
-|**증분 처리**|차원, 측정값 그룹 및 파티션<br /><br /> 참고: 증분 처리의 차원 처리에 사용할 수 없는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], 없지만이 작업을 수행 하는 XMLA 스크립트를 작성할 수 있습니다.|차원의 경우 새 멤버를 추가하고 차원 특성 캡션 및 설명을 업데이트합니다.<br /><br /> 측정값 그룹 및 파티션의 경우 새로 사용 가능한 팩트 데이터 및 프로세스를 관련 파티션에만 추가합니다.|  
+|**증분 처리**|차원, 측정값 그룹 및 파티션<br /><br /> 참고: 증분 처리의 차원 처리에 사용할 수 없는. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], 없지만이 작업을 수행 하는 XMLA 스크립트를 작성할 수 있습니다.|차원의 경우 새 멤버를 추가하고 차원 특성 캡션 및 설명을 업데이트합니다.<br /><br /> 측정값 그룹 및 파티션의 경우 새로 사용 가능한 팩트 데이터 및 프로세스를 관련 파티션에만 추가합니다.|  
 |**업데이트 처리**|차원|데이터 다시 읽기 및 차원 특성 업데이트를 강제로 수행합니다. 관련 파티션의 가변 집계와 인덱스가 삭제됩니다.|  
 |**인덱스 처리**|큐브, 차원, 측정값 그룹 및 파티션|처리된 모든 파티션에 대한 인덱스 및 집계를 만들거나 다시 빌드합니다. 처리되지 않은 개체의 경우 이 옵션을 사용하면 오류가 발생합니다.<br /><br /> 지연 처리를 해제하는 경우 이 옵션으로 처리해야 합니다.|  
 |**구조 처리**|큐브 및 마이닝 구조|큐브가 처리되지 않은 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 필요에 따라 큐브의 모든 차원을 처리한 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은(는) 큐브 정의만 만듭니다. 마이닝 구조에 이 옵션을 적용하면 마이닝 구조에 원본 데이터가 채워집니다. 이 옵션과 전체 처리 옵션의 차이점으로 이 옵션은 마이닝 모델 자체에까지 처리를 반복하지 않는다는 것입니다.|  

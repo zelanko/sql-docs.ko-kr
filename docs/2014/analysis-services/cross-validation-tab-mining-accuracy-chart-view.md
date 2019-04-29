@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679751"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>교차 유효성 검사 탭(마이닝 정확도 차트 뷰)
-  교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 각 모델에 대해 표준 정확도 메트릭 집합을 생성 합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  
+  교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. 그러면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]가 각 모델에 대해 표준 정확도 메트릭 집합을 생성합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  
   
  자세한 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -91,18 +91,18 @@ ms.locfileid: "48188213"
  교차 유효성 검사 보고서의 결과를 해석하는 방법은 [교차 유효성 검사 보고서의 측정값](data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.  
   
 ## <a name="setting-the-accuracy-threshold"></a>정확도 임계값 설정  
- **대상** **임계값**을 설정하여 예측 정확도를 측정하기 위한 표준을 제어할 수 있습니다. 임계값은 일종의 정확도 막대를 나타냅니다. 각 예측에는 예측 값이 정확할 확률이 할당됩니다. 따라서 **대상** **임계값** 을 1에 가깝게 설정하면 특정 예측의 확률이 매우 높아야 예측이 올바른 예측으로 간주됩니다. 반대로 **대상** **임계값** 을 0에 가깝게 설정하면 확률 값이 낮은 예측도 "올바른" 예측으로 간주됩니다.  
+  **대상** **임계값**을 설정하여 예측 정확도를 측정하기 위한 표준을 제어할 수 있습니다. 임계값은 일종의 정확도 막대를 나타냅니다. 각 예측에는 예측 값이 정확할 확률이 할당됩니다. 따라서 **대상** **임계값** 을 1에 가깝게 설정하면 특정 예측의 확률이 매우 높아야 예측이 올바른 예측으로 간주됩니다. 반대로 **대상** **임계값** 을 0에 가깝게 설정하면 확률 값이 낮은 예측도 "올바른" 예측으로 간주됩니다.  
   
- 예측의 확률은 만드는 예측의 유형과 데이터의 양에 따라 달라지므로 권장되는 임계값은 없습니다. 확률 수준이 다른 몇 가지 예측을 검토하여 데이터에 적합한 정확도 막대를 결정해야 합니다. **대상** **임계값** 에 설정하는 값은 측정된 모델의 정확도에 영향을 주므로 이 작업을 수행하는 것이 중요합니다.  
+ 예측의 확률은 만드는 예측의 유형과 데이터의 양에 따라 달라지므로 권장되는 임계값은 없습니다. 확률 수준이 다른 몇 가지 예측을 검토하여 데이터에 적합한 정확도 막대를 결정해야 합니다.  **대상** **임계값** 에 설정하는 값은 측정된 모델의 정확도에 영향을 주므로 이 작업을 수행하는 것이 중요합니다.  
   
- 예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다. **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
+ 예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다.  **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
   
  때 **대상** **임계값** 로 설정 된 `null`, 기본 값, 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테스트 및 유효성 검사 &#40;데이터 마이닝&#41;](data-mining/testing-and-validation-data-mining.md)   
- [교차 유효성 검사 &#40;Analysis Services-데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [테스트 및 유효성 검사 & #40; 데이터 마이닝 & #41;](data-mining/testing-and-validation-data-mining.md)   
+ [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [교차 유효성 검사 보고서의 측정값](data-mining/measures-in-the-cross-validation-report.md)   
- [데이터 마이닝 저장 프로시저 &#40;Analysis Services-데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [데이터 마이닝 저장 프로시저&#40;Analysis Services - 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

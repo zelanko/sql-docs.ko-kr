@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703788"
 ---
 # <a name="connection-string-properties-analysis-services"></a> 연결 문자열 속성(Analysis Services) 
   이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 애플리케이션에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다.  전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 응용 프로그램에 대한 연결을 사용자 지정할 수 있습니다.   

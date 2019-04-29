@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701743"
 ---
 # <a name="group-attribute-members-discretization"></a>특성 멤버 그룹화(불연속화)
   멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 특성의 멤버를 불연속화라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  

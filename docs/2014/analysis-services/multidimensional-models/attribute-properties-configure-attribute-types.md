@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 040bcc41137bce095d4db3ec2cbf8d8a22610f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727127"
 ---
 # <a name="configure-attribute-types"></a>특성 유형 구성
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 특성 유형은 업무 기능에 따라 특성을 분류하는 데 유용합니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 애플리케이션에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  

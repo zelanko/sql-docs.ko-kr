@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 479b0d562ffb78bc0003ca320eea0a85ab172430
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721697"
 ---
 # <a name="connect-to-server-oracle-connection-properties"></a>서버에 연결(Oracle), 연결 속성
   **서버에 연결** 대화 상자의 **연결 속성** 탭을 사용하여 **게이트웨이** 또는 **전체**게시 옵션을 지정할 수 있습니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. 자세한 내용은 [Oracle 게시자 구성](non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
@@ -31,7 +31,7 @@ ms.locfileid: "52811965"
  **제한 시간**  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자가 제한 시간 오류가 발생할 때까지 Oracle 게시자에 연결을 시도하는 시간을 지정합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Oracle 게시를 위한 용어 설명](non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Performance Tuning for Oracle Publishers](non-sql/performance-tuning-for-oracle-publishers.md)  
   

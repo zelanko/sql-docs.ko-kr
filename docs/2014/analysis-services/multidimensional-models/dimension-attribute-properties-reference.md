@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c763eba5a1908e2ee55844dc137af7ddf675e8f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726129"
 ---
 # <a name="dimension-attribute-properties-reference"></a>차원 특성 속성 참조
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 차원 및 차원 특성의 작동 방식을 결정하는 많은 속성이 있습니다. 다음 표에서는 이러한 각 특성 속성을 나열하고 설명합니다.  

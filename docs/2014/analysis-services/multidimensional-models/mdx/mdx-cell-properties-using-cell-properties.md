@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700622"
 ---
 # <a name="using-cell-properties-mdx"></a>셀 속성 사용(MDX)
   MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  
@@ -50,7 +50,7 @@ SELECT [<axis_specification>
   
 |속성|Description|  
 |--------------|-----------------|  
-|`ACTION_TYPE`|셀에 존재하는 동작 유형을 나타내는 비트 마스크입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 참고: where 절 내에 집합을 포함하는 쿼리는 드릴스루 동작을 포함하지 않습니다.|  
+|`ACTION_TYPE`|셀에 존재하는 동작 유형을 나타내는 비트 마스크입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 참고: 드릴스루 동작 where에서 집합을 포함 하는 쿼리 포함 되지 않습니다. 절.|  
 |**BACK_COLOR**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 배경색입니다. 자세한 내용은 [FORE_COLOR 및 BACK_COLOR 내용&#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)을 참조하세요.|  
 |`CELL_ORDINAL`|데이터 세트 내의 셀 서수 번호입니다.|  
 |**FONT_FLAGS**|글꼴 효과를 자세하게 지정하는 비트 마스크입니다. 예를 들어 5는 굵게(`MDFF_BOLD`) 및 밑줄 (`MDFF_UNDERLINE`) 글꼴 효과의 조합을 나타냅니다. 값은 다음과 같은 하나 이상의 상수에 대한 비트 OR 연산의 결과입니다.<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  

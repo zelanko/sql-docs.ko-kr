@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679617"
 ---
 # <a name="currency-conversions-analysis-services"></a>통화 변환(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  다차원 전용  
@@ -55,7 +55,7 @@ ms.locfileid: "48190843"
  통화 차원  
   다음 설정으로 정의된 데이터베이스 차원입니다.   
   
--   `Type` 차원의 속성을 Currency로 설정 합니다.  
+-    차원의 `Type` 속성을 Currency로 설정합니다.   
   
 -    차원의 한 특성에 대한 `Type` 속성을 CurrencyName으로 설정합니다.   
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190843"
   
 -    시간 차원과 요율 측정값 그룹 사이에 일반 차원 관계가 있습니다.   
   
--    필요에 따라 `Type` 속성을 ExchangeRate로 설정합니다.  가능성이 있는 요율 측정값 그룹을 식별 하는 통화 차원과 시간 차원을 사용 하 여 관계를 사용 하는 비즈니스 인텔리전스 마법사에서 설정 된 `Type` 속성을 exchangerate로 클라이언트를 응용 프로그램 속도 측정값을 보다 쉽게 식별할 수 있도록 그룹입니다.  
+-    필요에 따라 `Type` 속성을 ExchangeRate로 설정합니다.   비즈니스 인텔리전스 마법사는 통화 차원과 시간 차원 간의 관계를 사용하여 가능성이 있는 요율 측정값 그룹을 식별하므로 `Type` 속성을 ExchangeRate로 설정하면 클라이언트 응용 프로그램에서 요율 측정값 그룹을 보다 쉽게 식별할 수 있습니다.   
   
 -   요율 측정값 그룹에 포함된 환율을 나타내는 하나 이상의 측정값입니다.  
   
  보고 통화 차원  
  통화 변환을 정의한 다음 비즈니스 인텔리전스 마법사에서 정의한 차원이며 해당 통화 변환에 대한 보고 통화를 포함합니다. 보고 통화 차원은 통화 차원의 주 차원 테이블에서 명명된 쿼리를 기반으로 합니다. 이 쿼리는 요율 측정값 그룹과 연결된 통화 차원이 기반으로 하는 데이터 원본 뷰에 정의되어 있습니다.  다음 설정으로 보고 통화 차원이 정의됩니다.   
   
--   `Type` 차원의 속성을 Currency로 설정 합니다.  
+-    차원의 `Type` 속성을 Currency로 설정합니다.   
   
--   `Type` 차원의 키 특성의 속성을 currencyname으로 설정 됩니다.  
+-    차원의 키 특성에 대한 `Type` 속성을 CurrencyName으로 설정합니다.   
   
--   `Type` 차원 내의 한 특성의 속성을 CurrencyDestination으로 설정 되 고 해당 특성에 바인딩된 열에 통화 변환에 대 한 보고 통화를 나타내는 통화 식별자를 포함 합니다.  
+-    차원 내의 한 특성에 대한 `Type` 속성을 CurrencyDestination으로 설정하고 해당 특성에 바인딩된 열에 통화 변환에 대한 보고 통화를 나타내는 통화 식별자를 포함합니다.   
   
 ## <a name="defining-currency-conversions"></a>통화 변환 정의  
  비즈니스 인텔리전스 마법사를 사용하여 큐브에 대한 통화 변환 기능을 정의하거나 MDX 스크립트를 사용하여 수동으로 통화 변환을 정의할 수 있습니다.  

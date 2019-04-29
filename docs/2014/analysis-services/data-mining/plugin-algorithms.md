@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3112efa1b2eec2f25abe35315ecec13bedbf8871
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733179"
 ---
 # <a name="plugin-algorithms"></a>플러그 인 알고리즘
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  

@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 927442d1fe46fc42998643d4f7de47b438cbaa49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732462"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>계정 인텔리전스 정의(차원 마법사)
-  **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 정의한 계정 유형을 차원의 **계정 유형** 특성 유형과 연결된 차원 특성에서 정의한 계정 유형으로 매핑할 수 있습니다.  
+   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 정의한 계정 유형을 차원의 **계정 유형** 특성 유형과 연결된 차원 특성에서 정의한 계정 유형으로 매핑할 수 있습니다.  
   
 > [!NOTE]  
 >  **차원 유형 선택** 페이지에서 **표준 차원** 을 선택했으며 **차원 유형 지정** 페이지에서 차원 특성을 **계정 유형** 특성 유형에 매핑한 경우에만 이 페이지가 표시됩니다.  

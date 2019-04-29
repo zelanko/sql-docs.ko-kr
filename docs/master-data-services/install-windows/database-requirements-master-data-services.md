@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d9d62078c4c3f2e4b72abed1bc7275fbf616b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695788"
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
 
@@ -63,15 +63,15 @@ ms.locfileid: "52504608"
   
 ### <a name="accounts-and-permissions"></a>계정 및 사용 권한  
   
-|형식|설명|  
+|형식|Description|  
 |----------|-----------------|  
 |사용자 계정|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 호스팅하기 위해 Windows 계정 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 계정을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 인스턴스에 연결할 수 있습니다. 사용자 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 **sysadmin** 서버 역할에 속해야 합니다. **sysadmin** 역할에 대한 자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.|  
-|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 관리자 계정|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 시스템 관리자가 될 도메인 사용자 계정을 지정해야 합니다. 이 데이터베이스에 연결된 모든 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 대해 이 사용자는 모든 기능 영역에서 모든 모델과 데이터를 업데이트할 수 있습니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.|  
+|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 관리자 계정|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 시스템 관리자가 될 도메인 사용자 계정을 지정해야 합니다. 이 데이터베이스에 연결된 모든 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 대해 이 사용자는 모든 기능 영역에서 모든 모델과 데이터를 업데이트할 수 있습니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md)를 참조하세요.|  
   
 ### <a name="database-backup"></a>데이터베이스 백업  
  매일 작업량이 적은 시간에 전체 데이터베이스를 백업하고 사용자 환경의 요구 사항에 따라 트랜잭션 로그를 보다 자주 백업하는 것이 가장 좋습니다. 데이터베이스 백업에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services 데이터베이스](../../master-data-services/master-data-services-database.md)   

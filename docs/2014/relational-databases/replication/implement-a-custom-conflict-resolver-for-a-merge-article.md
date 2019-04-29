@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721231"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
   이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  

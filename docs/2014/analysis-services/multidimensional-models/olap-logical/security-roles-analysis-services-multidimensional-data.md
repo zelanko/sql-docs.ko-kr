@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725257"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>보안 역할(Analysis Services - 다차원 데이터)
   역할은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체와 데이터의 보안을 관리하는 데 사용됩니다. 기본적으로 역할은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]인스턴스에서 관리하는 개체에 대한 액세스 권한과 사용 권한이 정의된 Microsoft Windows 사용자 및 그룹의 SID(보안 식별자)와 연결됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 다음 두 가지 유형의 역할을 제공합니다.  

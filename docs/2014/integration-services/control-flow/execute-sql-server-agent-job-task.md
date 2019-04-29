@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f91fcb7033dfe2944e863d67a6c6bf53434e6db
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831945"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>SQL Server 에이전트 작업 실행 태스크
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 SQL Server의 인스턴스에 정의된 작업을 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 서비스입니다. Transact-SQL 문과 ActiveX 스크립트를 실행하는 작업을 만들거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 복제 유지 관리 태스크를 수행하거나 패키지를 실행할 수 있습니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 모니터링하고 경고가 발생하도록 작업을 구성할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 일반적으로 반복해서 수행하는 태스크를 자동화하는 데 사용됩니다. 자세한 내용은 [작업 구현](../../ssms/agent/implement-jobs.md)을 참조하세요.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809279"
 ---
 # <a name="server-properties-processors-page"></a>서버 속성(프로세서 페이지)
   이 페이지를 사용하여 프로세서 옵션을 확인하거나 수정할 수 있습니다. 프로세서 선호도 설정은 프로세서가 두 개 이상 설치되어 있는 경우에만 활성화됩니다.  

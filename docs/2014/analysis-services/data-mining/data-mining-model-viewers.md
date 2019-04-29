@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722848"
 ---
 # <a name="data-mining-model-viewers"></a>데이터 마이닝 모델 뷰어
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 모델의 성향을 습득한 후 모델에서 관심 있는 추세를 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 마이닝 모델의 성향을 습득한 후 모델에서 관심 있는 추세를 탐색할 수 있습니다. 마이닝 모델의 결과는 복잡하며 원시 형식으로 이해하기 어려울 수 있으므로 데이터를 시각적으로 조사하는 것이 데이터 내에서 알고리즘으로 찾은 규칙과 관계를 가장 쉽게 이해하는 방법일 수 있습니다.  
   
  모델 작성 시 사용하는 알고리즘에 따라 다른 유형의 결과가 반환됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 각 알고리즘에 대해 별개의 뷰어를 제공합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어를 사용하여 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48068863"
   
  사용자 지정 뷰어가 모델을 탐색하고 이해하기 위해 디자인된 반면 일반 뷰어는 이미 모델을 이해하고 있으며 특정 노드에서 통계 또는 규칙을 추출하려고 할 때 보다 유용합니다. 예를 들어 노드 확률, 회귀 수식 등과 같이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분석 중에 캡처하는 패턴 및 통계에 대한 자세한 정보를 보려면 일반 뷰어를 사용합니다.  
   
- 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](content-queries-data-mining.md)를 참조하세요.  
+ 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](content-queries-data-mining.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 각 뷰어에 대해 자세히 설명하고 각 뷰어에서 정보를 해석하는 방법에 대해 알아봅니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "48068863"
  모든 데이터 마이닝 모델에 대한 일반 뷰어에서 사용할 수 있는 세부 정보에 대해 설명하고 각 알고리즘의 정보를 해석하는 방법에 대한 예를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [데이터 마이닝 디자이너](data-mining-designer.md)  
   
   

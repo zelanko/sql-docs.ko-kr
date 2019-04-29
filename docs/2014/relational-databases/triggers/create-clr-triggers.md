@@ -15,14 +15,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698825"
 ---
 # <a name="create-clr-triggers"></a>CLR 트리거 만들기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 만들어진 어셈블리에 프로그래밍된 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 다양한 기능의 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 DML 트리거, DDL 트리거, 저장 프로시저, 함수, 집계 함수 및 유형이 있습니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에 만들어진 어셈블리에 프로그래밍된 데이터베이스 개체를 만들 수 있습니다. CLR에서 제공하는 다양한 기능의 프로그래밍 모델을 활용할 수 있는 데이터베이스 개체에는 DML 트리거, DDL 트리거, 저장 프로시저, 함수, 집계 함수 및 유형이 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 CLR 트리거(DML 또는 DDL)를 만드는 단계는 다음과 같습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48049203"
 -   등록된 어셈블리를 참조하는 트리거를 만듭니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 SQL Server 프로젝트를 배포하면 해당 프로젝트에 대해 지정된 데이터베이스에 어셈블리가 등록됩니다. 또한 프로젝트를 배포하면 모든 메서드에 대해 `SqlTrigger` 특성으로 주석 지정으로 지정하기 위해 데이터베이스에 CLR 트리거를 만듭니다. 자세한 내용은 [Deploying CLR Database Objects](../clr-integration/deploying-clr-database-objects.md)을(를) 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 에서 SQL Server 프로젝트를 배포하면 해당 프로젝트에 대해 지정된 데이터베이스에 어셈블리가 등록됩니다. 또한 프로젝트를 배포하면 모든 메서드에 대해 `SqlTrigger` 특성으로 주석 지정으로 지정하기 위해 데이터베이스에 CLR 트리거를 만듭니다. 자세한 내용은 [Deploying CLR Database Objects](../clr-integration/deploying-clr-database-objects.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CLR 코드 실행 기능은 기본적으로 해제되어 있습니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 만들고 변경하고 삭제할 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_configure(Transact-SQL) [을 사용하여](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) clr enabled 옵션 [을 설정하지 않는 한 이러한 참조는](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)에서 실행되지 않습니다.  

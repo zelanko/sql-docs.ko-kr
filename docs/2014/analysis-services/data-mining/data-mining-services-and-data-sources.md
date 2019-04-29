@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5f21211b933bcf0327ba1dbf15703f354225550
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722896"
 ---
 # <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  

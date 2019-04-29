@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af799e8e806696022635a04d808213ffb5c0e779
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794304"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>시간 인텔리전스에 사용할 날짜 테이블로 표시 지정(SSAS 테이블 형식)
   DAX 수식에 시간 인텔리전스 함수를 사용하려면 날짜 테이블 및 날짜 데이터 형식의 고유 식별자(datetime) 열을 지정해야 합니다. 날짜 테이블의 열을 고유 식별자로 지정한 후에는 날짜 테이블과 임의의 팩트 테이블에 있는 열 간에 관계를 만들 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48148573"
   
 1.  모델 디자이너에서 날짜 테이블을 클릭합니다.  
   
-2.  **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
+2.   **테이블** 메뉴를 클릭한 다음 **날짜**, **Mark as 날짜 테이블**를 차례로 클릭합니다.  
   
 3.  **날짜 테이블로 표시** 대화 상자의 **날짜** 목록 상자에서 고유 식별자로 사용할 열을 선택합니다. 이 열은 고유 값을 포함해야 하며 날짜 데이터 형식이어야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48148573"
 4.  필요한 경우 팩트 테이블과 날짜 테이블 간에 관계를 만듭니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [계산 &#40;&AMP;#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)   
+ [계산&#40;SSAS 테이블 형식&#41;](calculations-ssas-tabular.md)   
  [시간 인텔리전스 함수 &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

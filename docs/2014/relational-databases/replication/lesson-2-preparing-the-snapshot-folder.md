@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721016"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>2단원: 스냅숏 폴더 준비
   이 단원에서는 게시 스냅숏을 만들고 저장하는 데 사용되는 스냅숏 폴더를 구성하는 방법을 배웁니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "54128493"
 10. **확인** 을 클릭하여 **repldata 속성** 대화 상자를 닫고 repldata 공유를 만듭니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 스냅숏 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. 참조 [3 단원: 배포 구성](lesson-3-configuring-distribution.md)합니다.  
+ 스냅숏 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. [3단원: 배포 구성](lesson-3-configuring-distribution.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)  

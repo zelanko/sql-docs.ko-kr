@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67feaca0d4244011e496fccc7e81833f2b0204a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681210"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>마법사 완료(비즈니스 인텔리전스 마법사)
   **마법사 완료** 페이지를 사용하여 비즈니스 인텔리전스 마법사를 완료한 후 변경될 내용을 검토할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **변경 내용**  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 개체에 대한 변경 내용을 표시합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트의 개체에 대한 변경 내용을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [비즈니스 인텔리전스 마법사 F1 도움말](business-intelligence-wizard-f1-help.md)   

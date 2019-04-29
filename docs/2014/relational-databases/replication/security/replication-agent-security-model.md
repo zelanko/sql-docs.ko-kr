@@ -21,25 +21,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960848"
 ---
 # <a name="replication-agent-security-model"></a>복제 에이전트 보안 모델
-  복제 에이전트 보안 모델을 사용하여 복제 에이전트를 실행 및 연결하는 계정을 세밀하게 제어할 수 있습니다. 즉, 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
+  복제 에이전트 보안 모델에 대 한 복제 에이전트 실행 및 연결 하는 계정 세밀 하 게 제어할 수 있습니다. 각 에이전트에 대해 다른 계정을 지정할 수 있습니다. 계정을 지정하는 방법은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  **sysadmin** 고정 서버 역할의 멤버가 복제를 구성할 경우 복제 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 계정을 가장하도록 구성할 수 있습니다. 이는 복제 에이전트의 로그인과 암호를 지정하여 수행할 수 있지만 이 방법은 사용하지 않는 것이 좋습니다. 대신 이 항목의 뒷부분에 나오는 "에이전트에 필요한 사용 권한" 섹션에서 설명하는 최소 사용 권한이 있는 각 에이전트에 대해 계정을 지정(최상의 보안 방법)하는 것이 좋습니다.  
   
  복제 에이전트는 모든 실행 파일처럼 Windows 계정의 컨텍스트에서 실행됩니다. 이 에이전트는 이 계정을 사용하여 Windows 통합 보안 연결을 설정합니다. 에이전트를 실행하는 계정은 에이전트를 시작하는 방법에 따라 달라집니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업에서 에이전트 시작(기본값) - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 복제 에이전트를 시작하면 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
+-   에이전트 시작을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업, 기본값: 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 에이전트를 시작 하려면 에이전트 작업을 사용, 복제를 구성할 때 지정한 계정의 컨텍스트에서 에이전트가 실행 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 복제에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "SQL Server 에이전트의 에이전트 보안" 섹션을 참조하십시오. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 실행하는 계정에 필요한 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 구성](../../../ssms/agent/configure-sql-server-agent.md)을 참조하세요.  
   
--   MS-DOS 명령줄에서 직접 또는 스크립트를 통해 시작 - 명령줄에서 에이전트를 실행하는 사용자 계정의 컨텍스트에서 에이전트가 실행됩니다.  
+-   직접 또는 스크립트를 통해는 MS-DOS 명령줄에서 에이전트를 시작 합니다. 명령줄에서 에이전트를 실행 하는 사용자 계정의 컨텍스트에서 에이전트가 실행 됩니다.  
   
--   RMO(복제 관리 개체) 또는 ActiveX 컨트롤을 사용하는 응용 프로그램에서 에이전트 시작 - RMO 또는 ActiveX 컨트롤을 호출하는 응용 프로그램의 컨텍스트에서 에이전트가 실행됩니다.  
+-   복제 관리 개체 (RMO) 또는 ActiveX 컨트롤을 사용 하는 응용 프로그램에서 에이전트를 시작 합니다. RMO 또는 ActiveX 컨트롤을 호출 하는 응용 프로그램의 컨텍스트에서 에이전트가 실행 됩니다.  
   
     > [!NOTE]  
     >  ActiveX 컨트롤은 더 이상 사용되지 않습니다.  

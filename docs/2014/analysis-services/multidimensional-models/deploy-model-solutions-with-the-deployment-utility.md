@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726407"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>배포 유틸리티를 사용하여 모델 솔루션 배포
-  **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
+   **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

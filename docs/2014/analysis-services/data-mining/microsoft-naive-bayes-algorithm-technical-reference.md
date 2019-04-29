@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734826"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Microsoft Naive Bayes 알고리즘 기술 참조
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 예측 모델링용 분류 알고리즘입니다. 이 알고리즘은 입력 열과 예측 가능한 열 간의 조건부 확률을 계산하며 열이 서로 독립적이라고 가정합니다. 이와 같은 독립성 가정으로 인해 Naive Bayes라는 이름이 붙었습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "53376935"
   
 |모델링 플래그|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|열이 두 가지 가능한 상태인 Missing 및 Existing 상태를 갖는 것으로 처리됨을 의미합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
+|MODEL_EXISTENCE_ONLY|열의 상태를 가진 것으로 간주 됩니다 것을 의미 합니다. Missing 및 Existing 합니다. Null은 누락 값입니다.<br /><br /> 마이닝 모델 열에 적용됩니다.|  
 |NOT  NULL|열에 null이 포함될 수 없음을 나타냅니다. 따라서 Analysis Services가 모델 학습 중 Null을 발견할 경우 오류가 발생합니다.<br /><br /> 마이닝 구조 열에 적용됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
@@ -99,7 +99,7 @@ ms.locfileid: "53376935"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Naive Bayes 알고리즘](microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 모델 쿼리 예제](naive-bayes-model-query-examples.md)   
  [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

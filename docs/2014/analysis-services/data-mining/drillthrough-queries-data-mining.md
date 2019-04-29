@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722475"
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
   *드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "52538892"
 |Microsoft 선형 회귀 알고리즘|지원됩니다. 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
 |Microsoft 시계열 알고리즘|지원됩니다. 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> [Lag&#40;DMX&#41;](/sql/dmx/lag-dmx) 함수를 사용하여 모델의 사례에서 날짜를 반환할 수도 있습니다.<br /><br /> Microsoft 시계열 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용합니다.|  
   
-##  <a name="bkmk_Tasks"></a> 관련 작업  
+##  <a name="bkmk_Tasks"></a> 관련 태스크  
  특정 시나리오에서 드릴스루를 사용하려면 다음 링크를 사용하십시오.  
   
 |태스크|링크|  

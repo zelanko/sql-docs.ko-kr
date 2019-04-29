@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733672"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
   데이터 마이닝 모델을 작성하여 모델 결과를 사용자 지정하는 데 사용하는 알고리즘과 함께 제공되는 매개 변수를 변경할 수 있습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 매개 변수는 모델에 대한 속성보다 훨씬 더 많으며, 이 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 매개 변수는 모델에 대한 속성보다 훨씬 더 많으며, 이 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
   
 -   클러스터링 메서드와 같은 분석 방법을 변경합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48226999"
   
 -   모델 생성에 사용되는 내부 홀드아웃 집합의 크기 또는 초기값을 지정합니다.  
   
- 각 알고리즘마다 제공되는 매개 변수는 크게 다릅니다. 각 알고리즘에 대해 설정할 수 있는 매개 변수 목록은 이 섹션의 기술 참조 항목 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
+ 각 알고리즘 마다 제공 되는 매개 변수는 매우 다양 합니다. 각 알고리즘에 대해 설정할 수 있는 매개 변수 목록은이 섹션의 기술 참조 항목을 참조: [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)합니다.  
   
 ### <a name="change-an-algorithm-parameter"></a>알고리즘 매개 변수 변경  
   

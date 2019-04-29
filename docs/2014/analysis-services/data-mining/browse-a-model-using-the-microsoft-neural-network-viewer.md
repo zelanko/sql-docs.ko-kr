@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689437"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Microsoft 신경망 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신경망 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 개방형 분석 및 탐색에 유용하고 여러 입력 및 출력을 분석할 수 있는 분류 및 회귀 마이닝 모델을 만듭니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)를 참조하십시오.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 신경망 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 개방형 분석 및 탐색에 유용하고 여러 입력 및 출력을 분석할 수 있는 분류 및 회귀 마이닝 모델을 만듭니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어를 사용하여 모델을 탐색할 때는 일반적으로 대상 특성 및 상태를 선택한 다음 뷰어를 사용하여 입력 특성이 출력에 영향을 주는 방식을 확인합니다.  
   
@@ -70,14 +70,14 @@ ms.locfileid: "48117863"
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> 변수  
- **변수** 탭의 표에는 **특성**, **값**, **[값 1]과(와)의 유사성**및 **[값 2]과(와)의 유사성**열이 있습니다. 기본적으로 열은 **[값 1]과(와)의 유사성**수준에 따라 정렬됩니다. 열 제목을 클릭하면 선택한 열의 정렬 순서가 변경됩니다.  
+ 표 형태에는 **변수** 탭에는 다음 열을 포함 합니다. **특성**, **값**를 **[값 1] 선호**, 및 **[값 2]을 선호**합니다. 기본적으로 열은 **[값 1]과(와)의 유사성**수준에 따라 정렬됩니다. 열 제목을 클릭하면 선택한 열의 정렬 순서가 변경됩니다.  
   
  특성의 오른쪽에 있는 막대는 지정된 입력 특성 상태가 유사한 출력 특성 상태를 보여 줍니다. 막대의 크기는 출력 상태와 입력 상태의 유사한 정도를 보여 줍니다.  
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>관련 항목  
- [Microsoft 신경망 알고리즘](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 도구](data-mining-tools.md)   

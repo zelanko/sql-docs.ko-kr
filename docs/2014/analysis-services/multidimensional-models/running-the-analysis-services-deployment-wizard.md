@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cc8ae36dbcc728062e2074d715673a39f95e1d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736607"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
    [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하는 경우 다음과 같은 방법으로 마법사를 실행할 수 있습니다.  
@@ -74,7 +74,7 @@ ms.locfileid: "52535045"
   
 2.  **Microsoft.AnalysisServices.Deployment.exe** 를 입력하고 뒤에 마법사를 실행하려는 모드에 해당하는 스위치를 추가합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 배포 스크립트 이해](understanding-the-analysis-services-deployment-script.md)   
  [배포 마법사를 사용하여 모델 솔루션 배포](deploy-model-solutions-using-the-deployment-wizard.md)  
   

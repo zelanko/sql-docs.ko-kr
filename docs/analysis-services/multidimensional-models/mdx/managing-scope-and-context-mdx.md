@@ -1,5 +1,5 @@
 ---
-title: 범위 및 컨텍스트 관리 (MDX) | Microsoft Docs
+title: 범위 및 컨텍스트 (MDX) 관리 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1656ac98555d4377ec70c37a43b70217b9be759c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800033"
 ---
 # <a name="managing-scope-and-context-mdx"></a>범위 및 컨텍스트 관리(MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX(Multidimensional Expressions) 스크립트는 스크립트 실행의 특정 시점에 전체 큐브나 큐브의 특정 부분에 적용될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX(Multidimensional Expressions) 스크립트는 스크립트 실행의 특정 시점에 전체 큐브나 큐브의 특정 부분에 적용될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
   
 > [!NOTE]  
 >  계산 패스가 계산에 미치는 영향에 대한 자세한 내용은 [패스 순서 및 계산 순서 이해&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)를 참조하세요.  
@@ -106,9 +106,9 @@ END SCOPE;
   
  SCOPE 문의 구문에 대한 자세한 내용은 [SCOPE 문&#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [MDX 언어 참조 & #40; Mdx& #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [기본 MDX 스크립트 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [기본 MDX 스크립트&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -15,27 +15,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd00dda1628cd3934d3658ff5b29d9beb5bdb0d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702081"
 ---
 # <a name="define-cube-dimension-properties"></a>큐브 차원 속성 정의
   큐브 차원은 큐브 내의 데이터베이스 차원 인스턴스입니다. 데이터베이스 차원은 다중 큐브에서 사용할 수 있으며 다중 큐브 차원은 단일 데이터베이스 차원을 기반으로 할 수 있습니다. 다음 표에서는 큐브 차원의 속성을 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 집계 디자이너로 집계를 디자인하는 방식을 제어합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **전체**: 큐브의 모든 집계가 All 멤버를 포함해야 합니다.<br /><br /> **없음**: 큐브의 어떤 집계도 All 멤버를 포함할 수 없습니다. 이것은 기본값입니다.<br /><br /> **제한 없음**: 집계 디자이너에 제한 사항이 지정되지 않습니다.<br /><br /> **기본값**: 제한 없음과 같습니다.|  
+|`AllMemberAggregationUsage`| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 집계 디자이너로 집계를 디자인하는 방식을 제어합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> **전체**: 큐브의 모든 집계가 All 멤버를 포함해야 합니다.<br /><br /> **없음**: 큐브에 대 한 집계 없음 All 멤버를 포함할 수 있습니다. 이것은 기본값입니다.<br /><br /> **제한 없음**: 집계 디자이너에 제한 사항이 지정되지 않습니다.<br /><br /> **기본값**: Unrestricted와 동일한 기능을 합니다.|  
 |`Description`|수준에 대한 설명이 포함된 이름을 제공합니다.|  
 |`DimensionID`|데이터베이스 차원의 고유 ID를 포함합니다.|  
-|`HierarchyUniqueNameStyle`|큐브 차원에 포함된 계층에 고유한 이름을 생성하는 방식을 결정합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `IncludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함 합니다. 이것은 기본값입니다.<br /><br /> `ExcludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함 합니다.|  
+|`HierarchyUniqueNameStyle`|큐브 차원에 포함된 계층에 고유한 이름을 생성하는 방식을 결정합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `IncludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함됩니다. 이것은 기본값입니다.<br /><br /> `ExcludeDimensionName`: 차원 이름이 계층 이름의 일부로 포함되지 않습니다.|  
 |`ID`|큐브 차원의 고유 ID를 포함합니다.|  
-|`MemberUniqueNameStyle`|큐브 차원에 포함된 계층의 멤버에 고유한 이름을 생성하는 방식을 결정합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `Native`: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 자동으로 멤버의 고유한 이름을 결정 합니다. 이것은 기본값입니다.<br /><br /> `NamePath`: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 각 수준의 이름과 멤버의 캡션으로 구성 된 복합 이름을 생성 합니다.|  
+|`MemberUniqueNameStyle`|큐브 차원에 포함된 계층의 멤버에 고유한 이름을 생성하는 방식을 결정합니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `Native`: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자동으로 멤버의 고유한 이름을 결정합니다. 이것은 기본값입니다.<br /><br /> `NamePath`: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 각 수준의 이름과 멤버의 캡션으로 구성된 복합 이름을 생성합니다.|  
 |`Name`|큐브 차원의 이름을 포함합니다. 기본적으로 큐브 차원의 이름은 동일한 이름의 다른 큐브 차원이 이미 정의되어 있지 않는 한 데이터베이스 차원의 이름과 같습니다.|  
 |`Visible`|큐브 차원 표시 여부를 결정합니다. 기본값은 `True`입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [차원 &#40;Analysis Services-다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [차원&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

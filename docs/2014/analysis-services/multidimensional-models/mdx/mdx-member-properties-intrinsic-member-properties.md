@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699838"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>기본 멤버 속성(MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 응용 프로그램에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "53370465"
 |`IS_DATAMEMBER`|멤버가 데이터 멤버인지 여부를 나타내는 부울입니다.|  
 |`IS_PLACEHOLDERMEMBER`|멤버가 자리 표시자인지 여부를 나타내는 부울입니다.|  
 |`KEYx`|멤버에 대한 키이며 x는 키의 서수 값(0부터 시작)입니다. KEY0은 복합 키와 비복합 키에 모두 사용할 수 있습니다.<br /><br /> 복합 키가 아닌 경우 KEY0은 `Key`와 같습니다.<br /><br /> KEY0, KEY1, KEY2 등이 모여 복합 키가 형성됩니다. 쿼리에서 각 키를 참조하여 복합 키의 해당 부분을 반환할 수 있습니다. 예를 들어 KEY0을 지정하면 복합 키의 첫 번째 부분이 반환되고 KEY1을 지정하면 복합 키의 다음 부분이 반환됩니다.<br /><br /> `KEYx`는 컨텍스트 내에서는 물론 컨텍스트 없이도 사용할 수 있습니다. 이러한 이유로 이 키는 두 목록에 모두 나와 있습니다.<br /><br /> 이 멤버 속성을 사용 하는 방법의 예제를 참조 하세요. [간단한 MDX Tidbit: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364)합니다.|  
-|`LCID` *X*|로캘 ID 16진수 값으로 멤버 캡션을 변환한 값이며 *x* 는 로캘 ID 10진수 값(예: 영어-캐나다의 경우 LCID1009)입니다. 데이터 원본에 바인딩된 캡션 열이 변환에 있는 경우에만 이 값을 사용할 수 있습니다.|  
+|`LCID` *x*|로캘 ID 16진수 값으로 멤버 캡션을 변환한 값이며 *x* 는 로캘 ID 10진수 값(예: 영어-캐나다의 경우 LCID1009)입니다. 데이터 원본에 바인딩된 캡션 열이 변환에 있는 경우에만 이 값을 사용할 수 있습니다.|  
 |`LEVEL_NUMBER`|계층 루트에서 멤버까지의 거리입니다. 루트 수준은 0입니다.|  
 |`LEVEL_UNIQUE_NAME`|이 멤버가 속한 수준의 고유한 이름입니다. 자격에 따라 고유한 이름을 생성하는 공급자의 경우 이 이름의 각 구성 요소는 구분 기호로 분리됩니다.|  
 |`MEMBER_CAPTION`|멤버에 연결된 레이블 또는 캡션입니다. 캡션은 주로 표시용으로 사용합니다. 캡션이 없는 경우 쿼리는 `MEMBER_NAME`을 반환합니다.|  

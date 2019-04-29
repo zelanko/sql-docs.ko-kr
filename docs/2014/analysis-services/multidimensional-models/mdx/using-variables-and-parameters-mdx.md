@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4ca51b182ca528c6bab05804da4396fbde4dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699490"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>변수 및 매개 변수 사용(MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 MDX(Multidimensional Expressions) 문을 매개 변수화할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 MDX(Multidimensional Expressions) 문을 매개 변수화할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
   
  매개 변수가 있는 문을 만들 때 매개 변수 이름은 이름 앞에 @ 부호를 붙여 식별합니다. 예를 들어 @Year 유효한 매개 변수 이름 이어야 합니다  
   
@@ -57,9 +57,9 @@ from [Adventure Works]
 </Envelope>  
 ```  
   
- OLE DB를 사용 하 여이 기능을 사용 하려면 사용 된 `ICommandWithParameters` 인터페이스입니다. ADOMD.Net과 함께 이 기능을 사용하려면 **AdomdCommand.Parameters** 컬렉션을 사용하십시오.  
+ OLE DB와 함께 이 기능을 사용하려면 `ICommandWithParameters` 인터페이스를 사용하십시오. ADOMD.Net과 함께 이 기능을 사용하려면 **AdomdCommand.Parameters** 컬렉션을 사용하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 스크립팅 기본 사항 &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

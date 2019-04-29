@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 870e0fb8cb24a62a2914281e58915c7749771213
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689473"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
@@ -91,7 +91,7 @@ ms.locfileid: "52521211"
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)   

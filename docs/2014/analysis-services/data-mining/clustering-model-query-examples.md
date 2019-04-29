@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715360"
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
@@ -178,7 +178,7 @@ WHERE NODE_TYPE = 5
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 시스템 저장 프로시저를 사용하여 클러스터 프로필 반환  
+###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 저장 프로시저를 시스템을 사용 하 여 클러스터 프로필 반환  
  DMX를 사용하여 직접 쿼리를 작성하는 것보다는 클러스터 작업을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용하는 시스템 저장 프로시저를 호출하는 것이 더 간단할 수 있습니다. 다음 예에서는 내부 저장 프로시저를 사용하여 ID가 002인 클러스터에 대한 프로필을 반환하는 방법을 보여 줍니다.  
   
 ```  
@@ -204,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 클러스터에 대한 판별 요소 찾기  
+###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 클러스터에 대 한 판별 요소 찾기  
  **클러스터 뷰어** 의 **클러스터 판별** 탭에서는 손쉽게 한 클러스터와 다른 클러스터를 비교하거나, 한 클러스터와 나머지 모든 사례(나머지 클러스터)를 비교할 수 있습니다.  
   
  그러나 이러한 정보를 반환하는 쿼리를 만드는 것이 복잡할 수 있으며 임시 결과를 저장하고 둘 이상의 쿼리 결과를 비교하기 위해서는 클라이언트에서 약간의 추가 처리가 필요할 수 있습니다. 이 경우 간단하게 시스템 저장 프로시저를 사용할 수 있습니다.  
@@ -258,7 +258,7 @@ WHERE IsInNode('001')
  [맨 위로 이동](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> 예제 쿼리 8: 클러스터링 모델에서 결과 예측  
- 만든 클러스터링 모델에 예측 가능한 특성이 포함되어 있는 경우 이 모델을 사용하여 결과에 대한 예측을 만들 수 있습니다. 모델이 예측 가능한 열으로 설정 되는 여부에 따라 다르게 예측 가능한 특성을 처리 하는 반면 `Predict` 또는 `PredictOnly`합니다. 열의 사용법을 설정할 경우 `Predict`, 해당 특성에 값을 클러스터링 모델에 추가 되 고 완성된 된 모델에서 특성으로 표시 합니다. 그러나 열 사용법을 `PredictOnly`로 설정하면 해당 값이 클러스터를 만드는 데 사용되지 않습니다. 대신 모델이 완성 된 후 클러스터링 알고리즘이 만듭니다에 대 한 새 값을 `PredictOnly` 각 사례가 속해 있는 클러스터를 기반으로 한 특성입니다.  
+ 만든 클러스터링 모델에 예측 가능한 특성이 포함되어 있는 경우 이 모델을 사용하여 결과에 대한 예측을 만들 수 있습니다. 그러나 예측 가능한 열을 `Predict`로 설정했는지 또는 `PredictOnly`로 설정했는지에 따라 모델이 예측 가능한 특성을 다르게 처리합니다. 열 사용법을 `Predict`로 설정하면 해당 특성 값이 클러스터링 모델에 추가되고 완성된 모델에 특성으로 표시됩니다. 그러나 열 사용법을 `PredictOnly`로 설정하면 해당 값이 클러스터를 만드는 데 사용되지 않습니다. 대신 모델이 완성된 후 클러스터링 알고리즘이 각 사례가 속해 있는 클러스터를 기반으로 `PredictOnly` 특성에 대한 새 값을 생성합니다.  
   
  다음 쿼리는 모델에 새로운 단일 사례를 제공하는데, 사례에 대한 유일한 정보는 연령과 성별입니다. SELECT 문에 관심 있는 예측 가능한 특성/값 쌍을 지정하고 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 함수는 이러한 특성이 포함된 사례의 대상 결과 확률을 알려 줍니다.  
   
@@ -272,7 +272,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- 사용량이로 설정 되는 경우의 예제 결과 `Predict`:  
+ 열 사용법이 `Predict`로 설정된 경우의 예제 결과는 다음과 같습니다.  
   
 |Bike Buyer|식|  
 |----------------|----------------|  
@@ -310,7 +310,7 @@ NATURAL PREDICTION JOIN
   
  [맨 위로 이동](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> 예제 쿼리 3: 클러스터 멤버 자격 결정  
+###  <a name="bkmk_Query9"></a> 예제 쿼리 9: 클러스터 멤버 자격 결정  
  이 예에서는 [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) 함수를 사용하여 새로운 사례가 속해 있을 가능성이 가장 높은 클러스터를 반환하고, [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) 함수를 사용하여 해당 클러스터의 멤버 자격에 대한 확률을 반환합니다.  
   
 ```  
@@ -371,20 +371,20 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |예측 함수|사용법|  
-|[클러스터 &#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
-|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
-|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
-|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
-|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
+|[Cluster&#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
+|[ClusterDistance&#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
+|[ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
+|[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
+|[IsInNode & #40; DMX & #41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
+|[PredictAssociation & #40; DMX & #41;](/sql/dmx/predictassociation-dmx)|연관 데이터 세트에서의 멤버 자격을 예측합니다.|  
+|[PredictCaseLikelihood&#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|입력 사례가 기존 모델에 적합할 가능성을 반환합니다.|  
+|[PredictHistogram&#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  
+|[PredictNodeId & #40; DMX & #41;](/sql/dmx/predictnodeid-dmx)|각 사례에 대한 Node_ID를 반환합니다.|  
+|[PredictProbability & #40; DMX & #41;](/sql/dmx/predictprobability-dmx)|예측 값의 확률을 반환합니다.|  
+|[PredictStdev & #40; DMX & #41;](/sql/dmx/predictstdev-dmx)|지정된 열의 예측 표준 편차를 반환합니다.|  
+|[PredictSupport & #40; DMX & #41;](/sql/dmx/predictsupport-dmx)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictVariance & #40; DMX & #41;](/sql/dmx/predictvariance-dmx)|지정한 열의 분산을 반환합니다.|  
   
  특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](/sql/dmx/data-mining-extensions-dmx-function-reference)를 참조하세요.  
   

@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989683"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Reporting Services 보안 정책 파일 사용
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 설치 중에 파일 시스템으로 복사되는 세 개의 구성 파일에 구성 요소 보안 정책 정보를 저장합니다. 이러한 구성 파일에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 코드 어셈블리에 대한 내부용 보안 정책과 사용자 정의 보안 정책의 조합이 들어 있을 수 있습니다. 세 개의 구성 파일에서 세 가지 보안 개체 구성 요소에 해당 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: 보고서 서버 Windows 서비스, 보고서 관리자 웹 응용 프로그램 및 보고서 디자이너 미리 보기 창입니다.  

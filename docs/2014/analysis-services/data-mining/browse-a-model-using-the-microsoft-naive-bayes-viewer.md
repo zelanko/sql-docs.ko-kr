@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e90593dc605d700ed766d089e4605bd8cd243399
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689445"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)를 참조하십시오.  

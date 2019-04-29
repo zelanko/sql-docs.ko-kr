@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 874d28c4a2ff53f0e9146dbf9a8af5a42f5b6519
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732502"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>데이터베이스 디자이너(Analysis Services - 다차원 데이터)
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 데이터베이스 디자이너를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경하고 이 데이터베이스에서 생성된 경고를 검토할 수 있습니다.  
+   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 데이터베이스 디자이너를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경하고 이 데이터베이스에서 생성된 경고를 검토할 수 있습니다.  
   
 ## <a name="tabs"></a>탭  
  데이터베이스 디자이너에는 다음과 같은 탭이 있습니다.  
@@ -32,6 +32,6 @@ ms.locfileid: "48187793"
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [다차원 Model 데이터베이스 &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [다차원 model 데이터베이스&#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

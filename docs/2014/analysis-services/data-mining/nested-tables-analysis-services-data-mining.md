@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733264"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>중첩 테이블(Analysis Services - 데이터 마이닝)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터가 사례 테이블에 포함된 일련의 사례로 데이터 마이닝 알고리즘에 공급되어야 합니다. 그러나 한 개의 데이터 행으로 설명할 수 없는 사례도 있습니다. 예를 들어 한 사례가 두 테이블, 즉 고객 정보가 포함된 한 테이블과 고객 구매 내용이 포함된 다른 테이블에서 파생될 수 있습니다. 고객 정보 테이블의 단일 고객이 고객 구매 테이블에서 여러 항목을 가질 수 있으므로 단일 행을 사용하여 데이터를 설명하기 어렵습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 *중첩 테이블*을 사용하여 이러한 사례를 처리하는 고유한 방법을 제공합니다. 다음 그림에서는 중첩 테이블의 개념을 보여 줍니다.  
   
  ![중첩된 테이블을 사용 하 여 두 테이블 결합](../media/nested-tables.gif "중첩된 테이블을 사용 하 여 두 테이블 결합")  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48121093"
  모델 필터를 만들고 사용하는 방법은 [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](mining-models-analysis-services-data-mining.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726612"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
   큐브에 대한 읽기 권한을 활성화한 후 차원 구성원(큐브에 사용된 모든 측정값을 포함하는 측정값 차원에 포함된 측정값 포함)에 대한 액세스를 명시적으로 허용하거나 거부하는 추가 권한을 설정할 수 있습니다. 예를 들어 여러 범주의 재판매인의 경우, 특정 비즈니스 유형에 대한 데이터를 제외하도록 권한을 설정할 수 있습니다. 다음은 Reseller 차원에서 Warehouse 비즈니스 유형에 대한 액세스 거부의 전후 효과를 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "48091742"
   
 2.  `DefaultMeasure`를 검색합니다. 큐브에 대해 하나, 각 큐브 뷰에 대해 하나를 찾아야 합니다. 차원 보안을 정의할 때 기본 측정값에 대한 액세스를 제한하지 않습니다.  
   
-3.  그런 다음 검색 `MeasureExpression`합니다. 측정값 식은 계산에 종종 다른 측정값이 포함되는 계산을 기준으로 하는 측정값입니다. 제한하려는 측정값이 식에 사용되지 않는지 확인합니다. 또는 액세스를 제한하고 큐브의 해당 측정값에 대한 모든 참조를 제외하는지도 확인합니다.  
+3.  다음으로 `MeasureExpression`을 검색합니다. 측정값 식은 계산에 종종 다른 측정값이 포함되는 계산을 기준으로 하는 측정값입니다. 제한하려는 측정값이 식에 사용되지 않는지 확인합니다. 또는 액세스를 제한하고 큐브의 해당 측정값에 대한 모든 참조를 제외하는지도 확인합니다.  
   
 4.  마지막으로 `DefaultMember`를 검색합니다. 특성의 기본 구성원 역할을 하는 특성을 적어 둡니다. 차원 보안을 설정할 때 그러한 특성에 제한을 설정하지 않습니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "48091742"
     >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 가정 된 `All` 특성 계층의 멤버 권한이 적용 되기 전에 200의 개수를 반환 합니다. 일부 구성원에 대 한 액세스를 거부 하는 권한이 적용 된 후 `All` 사용자에 게 표시 되는 구성원 값 훨씬 적은 경우에 계속 200을 반환 합니다. 큐브의 소비자가 혼동을 방지 하려면 구성할 수 있습니다는 `All` 멤버의 모든 특성 계층의 멤버에 대 한 집계가 아니라, 역할 구성원에 대 한 구성원의 집계 됩니다. 이 동작을 호출 하기 위해 사용할 수 있습니다 `Visual Totals` 에 **고급** 차원 보안을 구성 하는 경우를 탭 합니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
   
 ## <a name="hiding-measures"></a>측정값 숨기기  
- [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
+  [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
   
 1.  **차원 데이터** | **기본**에서 큐브 차원에 도달할 때까지 차원 목록을 아래로 스크롤한 다음 **측정값 차원**을 선택합니다.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "48091742"
   
  MDX 작성기를 사용하여 MDX 문을 쓸 수 있습니다. 자세한 내용은 [MDX 작성기&#40;Analysis Services - 다차원 데이터&#41;](../mdx-builder-analysis-services-multidimensional-data.md)를 참조하세요. **고급** 탭에는 다음 옵션이 있습니다.  
   
- **Attribute**  
+ **특성**  
  멤버 보안을 관리할 특성을 선택합니다.  
   
  **허용된 멤버 집합**  
@@ -112,7 +112,7 @@ ms.locfileid: "48091742"
   
 -   데이터베이스 역할이 특성에 대한 기본 멤버를 정의하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 특성 자체에 대해 정의된 기본 멤버를 사용합니다. 특성이 집계할 수 없는 것으로 정의된 경우를 제외하고는 달리 지정하지 않는 한 특성에 대한 기본 멤버는 `All` 멤버입니다.  
   
- 예를 들어 데이터베이스 역할을 지정 한다고 가정 `Male` 에 대 한 기본 멤버로 `Gender` 특성입니다. 쿼리가 `Gender` 특성을 명시적으로 포함하면서 이 특성에 대해 다른 멤버를 지정하는 경우가 아니면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 남성 고객만 포함하는 데이터 집합을 반환합니다. 기본 멤버 설정에 대한 자세한 내용은 [기본 멤버 정의](attribute-properties-define-a-default-member.md)를 참조하세요.  
+ 예를 들어 데이터베이스 역할이 `Male`을 `Gender` 특성에 대한 기본 구성원으로 지정한다고 가정합니다. 쿼리가 `Gender` 특성을 명시적으로 포함하면서 이 특성에 대해 다른 멤버를 지정하는 경우가 아니면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 남성 고객만 포함하는 데이터 집합을 반환합니다. 기본 멤버 설정에 대한 자세한 내용은 [기본 멤버 정의](attribute-properties-define-a-default-member.md)를 참조하세요.  
   
  **보이는 값 합계 사용**  
  VisualTotals 속성은 표시되는 집계된 셀 값이 모든 셀 값에 따라 계산되는지 또는 데이터베이스 역할에 표시되는 셀 값에 따라서만 계산되는지 나타냅니다.  
@@ -127,9 +127,9 @@ ms.locfileid: "48091742"
  이 페이지에서 정의한 MDX 구문을 테스트하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [데이터 원본 개체에 대 한 권한 부여 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

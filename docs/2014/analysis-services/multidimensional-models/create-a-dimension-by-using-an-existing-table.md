@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702141"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>기존 테이블을 사용하여 차원 만들기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 테이블에서 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **기존 테이블 사용** 옵션을 선택하십시오. 이 옵션을 선택할 경우 마법사는 기존 데이터 원본 뷰에 있는 차원 테이블, 차원 테이블 열, 차원 테이블 열 간의 관계를 기반으로 하여 차원 구조를 만듭니다. 마법사는 원본 테이블과 관련 테이블의 데이터를 샘플링한 다음 이 데이터를 사용하여 차원 테이블 열을 기반으로 하는 특성 열을 정의하고 특성의 계층( *사용자 정의* 계층이라고 함)을 정의합니다. 차원 마법사를 사용하여 차원을 만든 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
  기존 테이블을 사용하여 차원을 만드는 경우 차원 마법사는 다음 단계로 이루어집니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "48226623"
 > [!NOTE]  
 >  차원을 만들 때 차원 유형과 표준 특성 유형을 설정하지 않은 경우 차원을 만든 후 비즈니스 인텔리전스 마법사를 사용하여 이러한 값을 설정하십시오. 자세한 내용은 [차원에 차원 인텔리전스 추가](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 또는 계정 유형 차원의 경우 [차원에 계정 인텔리전스 추가](bi-wizard-add-account-intelligence-to-a-dimension.md)를 참조하세요.  
   
- 지정된 특성 유형에 따라 자동으로 차원 유형이 설정됩니다. 마법사 집합에서 지정한 특성 유형은 `Type` 특성에 대 한 속성입니다. 차원 및 차원 특성에 대한 `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 경우에 따라 이러한 `Type` 속성 설정은 클라이언트 응용 프로그램에 대 한 지침을 제공 하며 선택적입니다. 다른 경우 계정, 시간 또는 통화 차원에 `Type` 속성 설정이 특정 서버 기반 동작을 결정 하며 특정 큐브 동작을 구현 해야 할 수 있습니다.  
+ 지정된 특성 유형에 따라 자동으로 차원 유형이 설정됩니다. 마법사에서 지정한 특성 유형은 특성의 `Type` 속성을 설정합니다. 차원 및 차원 특성에 대한 `Type` 속성 설정은 서버 및 클라이언트 응용 프로그램에 차원 내용에 대한 정보를 제공합니다. 경우에 따라 이 `Type` 속성 설정은 클라이언트 응용 프로그램에 대한 지침만 제공하며 선택적입니다. 일부 경우에는 계정, 시간 또는 통화 차원에 대한 `Type` 속성 설정이 특정 서버 기반 동작을 결정하며 특정 큐브 동작을 구현하는 데 필요할 수도 있습니다.  
   
  차원 및 특성 유형에 대한 자세한 내용은 [차원 유형](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md), [특성 유형 구성](attribute-properties-configure-attribute-types.md)을 참조하세요.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "48226623"
   
  **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 검토하여 마법사를 완료합니다.  
   
-## <a name="see-also"></a>관련 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [시간 테이블을 생성 하 여 시간 차원 만들기](create-a-time-dimension-by-generating-a-time-table.md)   
  [차원 특성 속성 참조](dimension-attribute-properties-reference.md)   
  [시간 테이블을 생성 하 여 시간 차원 만들기](create-a-time-dimension-by-generating-a-time-table.md)   
- [데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

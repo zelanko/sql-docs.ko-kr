@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813681"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>선호도 입력-출력 마스크 서버 구성 옵션
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 및 Windows Server 2003에서는 멀티태스킹을 수행하기 위해 경우에 따라 여러 프로세서 사이에 프로세스 스레드를 이동하기도 합니다. 운영 체제 측면에서는 효율적이지만 각 프로세서 캐시에 데이터가 반복적으로 다시 로드되어 시스템 로드가 많은 경우 이로 인해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 저하될 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서가 다시 로드되지 않으므로 이러한 조건에서도 성능을 향상시킬 수 있습니다. 스레드와 프로세서 간의 이러한 연결을 프로세서 선호도라고 합니다.  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721452"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 게시 및 배포를 해제하는 방법에 대해 설명합니다.  
@@ -131,7 +131,7 @@ ms.locfileid: "52765445"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 관리 개체 개념](concepts/replication-management-objects-concepts.md)   
  [복제 시스템 저장 프로시저 개념](concepts/replication-system-stored-procedures-concepts.md)  
   

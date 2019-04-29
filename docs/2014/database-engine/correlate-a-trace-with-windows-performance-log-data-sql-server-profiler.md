@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808378"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>추적과 Windows 성능 로그 데이터의 상관 관계 지정(SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Microsoft Windows 시스템 모니터 카운터와 상호 연결할 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이벤트입니다. Windows 시스템 모니터는 지정한 카운터에 대한 시스템 작업을 성능 로그에 기록합니다.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 는 Microsoft Windows 시스템 모니터 카운터와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이벤트와의 상관 관계를 지정할 수 있습니다. Windows 시스템 모니터는 지정한 카운터에 대한 시스템 작업을 성능 로그에 기록합니다.  
   
 > [!NOTE]  
 >  다른 버전의 Windows 간 로그 공유에 대한 자세한 내용은 이 항목의 마지막 부분에 있는 절차를 참조하십시오.  
@@ -30,7 +30,7 @@ ms.locfileid: "48049153"
   
 1.  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에서 저장된 추적 파일 또는 추적 테이블을 엽니다. 계속 이벤트 데이터를 수집하고 있는 실행 중인 추적의 경우 상관 관계를 지정할 수 없습니다. 시스템 모니터 데이터와의 정확한 상관 관계를 위해 추적이 **StartTime** 과 **EndTime** 데이터 열을 모두 포함하도록 해야 합니다.  
   
-2.  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **성능 데이터 가져오기**를 클릭합니다.  
+2.   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **성능 데이터 가져오기**를 클릭합니다.  
   
 3.  **열기** 대화 상자에서 성능 로그가 들어 있는 파일을 선택합니다. 추적 데이터가 캡처되는 기간 동안 성능 로그 데이터 역시 캡처해야 합니다.  
   

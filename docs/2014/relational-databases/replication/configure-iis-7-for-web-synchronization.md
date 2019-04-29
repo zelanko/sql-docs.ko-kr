@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721549"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
   이 항목의 절차에서는 병합 복제를 위한 웹 동기화에서 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스) 버전 7 이상을 수동으로 구성하는 프로세스를 안내합니다. 
@@ -28,7 +28,7 @@ ms.locfileid: "52819335"
  전체 구성 프로세스에 대한 개요는 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]가 있으면 다음과 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못되었습니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
+>  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 와 같은 오류가 발생할 수 있습니다. "웹 동기화 중 메시지 형식이 잘못 되었습니다. 합니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
  웹 동기화를 사용하려면 다음 단계를 완료하여 IIS 7을 구성해야 합니다. 이 항목에서는 각 단계를 자세히 설명합니다.  
   

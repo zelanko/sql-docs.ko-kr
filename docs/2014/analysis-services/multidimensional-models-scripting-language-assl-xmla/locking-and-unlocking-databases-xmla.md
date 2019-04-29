@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702227"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>데이터베이스 잠금 및 잠금 해제(XMLA)
   잠금 및 각각 사용 하는 데이터베이스 잠금 해제, [잠금을](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) 및 [잠금 해제](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) xml for Analysis (XMLA) 명령입니다. 일반적으로 다른 XMLA 명령은 실행 중 해당 명령을 수행하는 데 필요할 경우 자동으로 개체를 잠그거나 잠금 해제합니다. 수 명시적으로 잠그거나 잠금을 해제할 데이터베이스와 같은 단일 트랜잭션 내에서 여러 명령을 수행 하는 [일괄 처리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) 다른 응용 프로그램에서 데이터베이스에 쓰기 트랜잭션을 커밋하지 못하게 하는 동안 명령입니다.  

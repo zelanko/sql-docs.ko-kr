@@ -27,11 +27,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f73de6a8474b6e2842de7b1caf0b882ff2b5c8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831457"
 ---
 # <a name="integration-services-tasks"></a>Integration Services 태스크
   태스크는 패키지 제어 흐름에서 수행되는 작업 단위를 정의하는 제어 흐름 요소입니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 두 개 이상의 태스크로 구성되어 있습니다. 패키지에 둘 이상의 태스크가 포함되면 이러한 태스크는 선행 제약 조건에 의해 제어 흐름으로 연결되고 순차화됩니다.  

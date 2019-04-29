@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808734"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>서버에 연결(로그인 페이지) Integration Services
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결할 때 이 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결할 때 이 탭을 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **서버 유형**  
@@ -48,7 +48,7 @@ ms.locfileid: "48143146"
  **연결**  
  위에서 선택한 서버에 연결합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
   

@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731623"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 Analysis Services 기능
   이 항목에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
 |범주|사용되지 않는 기능|대체 기능|  
 |--------------|------------------------|-----------------|  

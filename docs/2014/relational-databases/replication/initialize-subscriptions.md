@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721140"
 ---
 # <a name="initialize-subscriptions"></a>구독 초기화
   구독자는 초기화되어야만 복제된 데이터를 받을 수 있습니다. 초기 데이터 세트는 필요 없지만 구독자에는 적어도 복제된 각 개체에 대한 스키마와 복제에 필요한 메타데이터 테이블 및 프로시저가 있어야 합니다.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3775443782b433651af4dd927c60ead1382b004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794533"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **동작** 탭에서 일반 동작을 수행할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48206934"
 |------------|-----------------|  
 |**비즈니스 인텔리전스 추가**|**비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.|  
 |**처리**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.|  
-|**다시 연결**|**동작** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  **동작** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|  
+|**다시 연결**| **동작** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  **동작** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|  
 |**새 작업**|**동작 폼 편집기** 창을 표시하고 새 동작을 만들려면 클릭합니다.|  
 |**새 드릴스루 동작**|**드릴스루 동작 폼 편집기** 를 표시하고 새 드릴스루 동작을 만들려면 클릭합니다.|  
 |**새 보고 동작**|**보고 동작 폼 편집기** 를 표시하고 새 보고서 동작을 만들려면 클릭합니다.|  

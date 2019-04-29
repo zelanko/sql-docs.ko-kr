@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699005"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access 이벤트 클래스
   **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  

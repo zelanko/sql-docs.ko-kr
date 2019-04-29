@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b7192fda17360ec473956332db03ed3b4feab5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717460"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
   XML 대량 로드는 XML 입력 데이터를 처리하고 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 적절한 테이블로 사용할 수 있도록 레코드를 준비합니다. XML 대량 로드의 로직은 새 레코드를 생성할 시기, 레코드 필드로 복사할 자식 요소나 특성 값, 레코드가 완성되어 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 삽입할 수 있도록 보낼 준비가 끝나는 시기를 결정합니다.  

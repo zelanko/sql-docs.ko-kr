@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83da6c1ba0a278d2d6b80f309a7bc7f6a1688ba4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724993"
 ---
 # <a name="column-distributions-data-mining"></a>열 배포(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열 배포를 정의한 다음 마이닝 모델을 만들 때 알고리즘의 열 데이터 처리 방법에 정의 내용을 적용할 수 있습니다. 이렇게 하면 공통적인 값 배포가 열에 포함되어 있을 경우 모델을 처리하기 전에 몇몇 알고리즘에서 연속 열 배포를 정의하는 데 도움이 됩니다. 배포를 정의하지 않으면 알고리즘이 데이터를 해석하는 데 사용할 정보가 더 줄어듭니다. 따라서 마이닝 모델에서 얻는 예측의 정확도가 배포를 정의했을 경우보다 낮아질 수 있습니다.  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 마이닝 구조의 열 배포를 정의한 다음 마이닝 모델을 만들 때 알고리즘의 열 데이터 처리 방법에 정의 내용을 적용할 수 있습니다. 이렇게 하면 공통적인 값 배포가 열에 포함되어 있을 경우 모델을 처리하기 전에 몇몇 알고리즘에서 연속 열 배포를 정의하는 데 도움이 됩니다. 배포를 정의하지 않으면 알고리즘이 데이터를 해석하는 데 사용할 정보가 더 줄어듭니다. 따라서 마이닝 모델에서 얻는 예측의 정확도가 배포를 정의했을 경우보다 낮아질 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 사용 가능한 알고리즘은 다음 배포 유형을 지원합니다.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "34014110"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 알고리즘에 대한 자세한 내용은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [콘텐츠 형식 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [분할 방법 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
- [배포 & #40; DMX & #41;](../../dmx/distributions-dmx.md)   
+## <a name="see-also"></a>관련 항목  
+ [콘텐츠 형식&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [분할 메서드&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/discretization-methods-data-mining.md)   
+ [배포&#40;DMX&#41;](../../dmx/distributions-dmx.md)   
  [마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   
