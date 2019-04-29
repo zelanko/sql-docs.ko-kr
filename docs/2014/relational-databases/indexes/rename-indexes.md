@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036236"
 ---
 # <a name="rename-indexes"></a>인덱스 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 이름을 바꾸는 방법에 대해 설명합니다. 인덱스 이름을 바꾸면 현재 인덱스 이름이 새 이름으로 바뀝니다. 지정된 이름은 테이블 또는 뷰에서 고유해야 합니다. 예를 들어 **XPK_1**이라는 인덱스가 두 테이블에 있을 수는 있지만 동일한 테이블에 **XPK_1**이라는 인덱스가 두 개 있을 수는 없습니다. 기존의 비활성 인덱스와 동일한 이름의 인덱스는 만들 수 없습니다. 인덱스 이름을 바꾼다고 인덱스가 다시 작성되는 것은 아닙니다.  

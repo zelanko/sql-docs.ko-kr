@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7797245901cd4d01f82995defcf44498fba1e1f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894071"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>FTP 태스크 편집기(파일 전송 페이지)
   **FTP 태스크 편집기** 대화 상자의 **파일 전송** 페이지를 사용하여 태스크에서 수행할 FTP 작업을 구성할 수 있습니다.  

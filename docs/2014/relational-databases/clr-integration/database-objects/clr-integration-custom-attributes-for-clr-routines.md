@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873803"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR 루틴용 사용자 지정 특성
   공용 언어 런타임 (CLR) 루틴, 사용자 정의 형식에 등록 된 사용자 정의 집계를 나열 된 특성을 적용할 수 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]입니다. 특성이 적용되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 기본값을 사용합니다. 나열된 특성은 `Microsoft.SqlServer.Server` 네임스페이스에 정의됩니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 695214082f9d2d3c2655d2e1da00c5d1db9697a6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912321"
 ---
 # <a name="attention-event-class"></a>Attention 이벤트 클래스
   **Attention** 이벤트 클래스는 취소, 클라이언트 인터럽트 요청, 클라이언트 연결 끊어짐 등의 attention 이벤트가 발생했음을 나타냅니다. 취소 작업은 데이터 액세스 드라이버 제한 시간 구현의 일부라고 할 수 있습니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020070"
 ---
 # <a name="create-named-sets"></a>명명된 집합 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "34021580"
  **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다. **계산 도구** 창의 **함수** 탭에서 함수를 복사하거나 **명명된 집합 폼 편집기** 창의 **식** 상자로 끌 수 있습니다.  
   
 > [!IMPORTANT]  
->  명시적으로 해당 집합의 멤버 이름을 지정 하 여 집합 식을 만드는 경우 중괄호 쌍에 멤버 목록을 묶습니다 ({}).  
+>  집합 식을 명시적으로 명명 된 집합의 멤버를 만드는 경우 중괄호 쌍의 멤버 목록을 묶습니다 ({}).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

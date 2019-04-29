@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874467"
 ---
 # <a name="implementing-assemblies"></a>어셈블리 구현
   이 항목에서는 사용자가 데이터베이스에서 어셈블리를 구현하고 사용하는 데 도움이 되는 다음 영역에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48131273"
 -   어셈블리 버전 관리  
   
 ## <a name="creating-assemblies"></a>어셈블리 만들기  
- 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. 또한 SQL Server에서 프로젝트를 배포 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 대해 지정 된 데이터베이스에 어셈블리를 등록 합니다. 자세한 내용은 [Deploying CLR Database Objects](deploying-clr-database-objects.md)을(를) 참조하세요.  
+ 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 문을 사용하여 만들고 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 Assembly Assisted Editor를 사용하여 만듭니다. 또한 SQL Server에서 프로젝트를 배포 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트에 대해 지정 된 데이터베이스에 어셈블리를 등록 합니다. 자세한 내용은 [Deploying CLR Database Objects](deploying-clr-database-objects.md)을 참조하세요.  
   
  **TRANSACT-SQL을 사용 하 여 어셈블리를 만들려면**  
   

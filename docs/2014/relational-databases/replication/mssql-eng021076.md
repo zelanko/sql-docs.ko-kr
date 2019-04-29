@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bd163d63fa3939e35facc49cb3be7f8f07ff91
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023211"
 ---
 # <a name="mssqleng021076"></a>MSSQL_ENG021076
     
@@ -38,7 +38,7 @@ ms.locfileid: "54129293"
 ## <a name="user-action"></a>사용자 동작  
  구독이 생성된 후 게시의 스냅숏 에이전트가 시작되지 않은 경우 또는 구독을 다시 초기화하도록 마지막으로 선택한 후 스냅숏 에이전트가 시작되지 않은 경우 배포 에이전트를 시작하기 전에 스냅숏 에이전트를 시작한 다음 완료해야 합니다. 자세한 내용은 [스냅숏 만들기 및 적용](create-and-apply-the-snapshot.md)을 참조하세요.  
   
- 스냅숏 에이전트가 완료되지 않는 경우 스냅숏 에이전트 기록에서 오류를 확인한 후 해결합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대 한 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+ 스냅숏 에이전트가 완료되지 않는 경우 스냅숏 에이전트 기록에서 오류를 확인한 후 해결합니다. 복제 모니터에서 에이전트 상태 및 오류 정보를 보는 방법에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 작업 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
  오류가 계속 발생하면 에이전트의 로깅을 늘리고 해당 로그의 출력 파일을 지정하십시오. 오류의 컨텍스트에 따라 이러한 작업을 수행하면 오류 및/또는 추가 오류 메시지가 발생할 수 있습니다.  
   

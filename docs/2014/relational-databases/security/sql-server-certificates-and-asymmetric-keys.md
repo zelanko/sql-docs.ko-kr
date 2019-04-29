@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025797"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
   PKI(공개 키 암호화)는 사용자가 *공개* 키 및 *개인* 키를 만드는 메시지 비밀화의 형식입니다. 개인 키는 비밀을 유지하지만 공개 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 공개 키로 개인 키를 쉽게 이끌어 낼 수 없습니다. 공개 키는 데이터를 암호화하는 데 사용되고 개인 키는 데이터의 암호를 해독하는 데 사용됩니다. 공개 키를 사용하여 암호화된 메시지는 올바른 개인 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  

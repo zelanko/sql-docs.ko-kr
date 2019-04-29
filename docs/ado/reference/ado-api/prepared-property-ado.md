@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7317b6b9a5251c8d104e6c2153ec8c009b2aea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027805"
 ---
 # <a name="prepared-property-ado"></a>준비된 속성(ADO)
 컴파일된 버전을 저장할지 여부를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 실행 하기 전에 합니다.  

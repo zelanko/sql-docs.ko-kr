@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9f59953dee77453bb8b453a40a36d17e865a1fe5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034930"
 ---
 # <a name="diagnostic-handling-rules"></a>진단 처리 규칙
 다음 규칙에 따라 진단 처리 **SQLGetDiagRec** 하 고 **SQLGetDiagField**합니다.  

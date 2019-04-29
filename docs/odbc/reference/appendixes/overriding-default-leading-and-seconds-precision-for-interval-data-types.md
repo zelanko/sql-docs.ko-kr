@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018478"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>간격 데이터 형식에 대한 기본 선행 및 초 전체 자릿수 재정의
 호출 하 여는 카드가의 SQL_DESC_TYPE 필드는 datetime 또는 간격 C 형식으로 설정 하면 **SQLBindCol** 하거나 **SQLSetDescField**, SQL_DESC_PRECISION 필드 (포함 하는 간격 (초) 전체 자릿수)는 다음 기본값으로 설정 됩니다.  

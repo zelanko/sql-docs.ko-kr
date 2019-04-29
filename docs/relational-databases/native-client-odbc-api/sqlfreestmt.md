@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32b1f1185dad9b173c12f3acb232c2426d5db411
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014471"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51664902"
  일반적으로 삭제 하는 보다 새로 할당 문을 다시 사용 하려면 더 효율적입니다. 문을 다시 사용과 같은 일부 상황에서 SQLFreeStmt 계속 사용 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLFreeStmt 함수](https://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt Function](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

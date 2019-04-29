@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fae6e3ba4f861fa7d75ae3ee4e8825350d80c39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046748"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
   대량 복사 작업에 대한 옵션을 설정합니다.  
@@ -51,7 +51,7 @@ void *iValue);
 |BCP_OPTION_FILEFMT|데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 120 기본값입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다.  예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 **varchar(max)** 열로 가져오려면 80을 지정해야 합니다. 마찬가지로 **varchar(max)** 열에서 데이터를 내보낼 때 80을 지정하면 해당 데이터가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 텍스트 열이 저장되는 것과 같이 저장되어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.|  
 |BCP_OPTION_FIRST|복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.|  
 |BCP_OPTION_FIRSTEX|BCP out 작업의 경우 데이터 파일에 복사할 데이터베이스 테이블의 첫 번째 행을 지정합니다.<br /><br /> BCP in 작업의 경우 데이터베이스 테이블에 복사할 데이터 파일의 첫 번째 행을 지정합니다.<br /><br /> *iValue* 매개 변수는 값을 포함하는 부호 있는 64비트 정수 주소여야 합니다. BCPFIRSTEX에 전달할 수 있는 최대값은 2^63-1입니다.|  
-|BCP_OPTION_FMTXML|생성되는 서식 파일이 XML 형식이 되도록 지정하는 데 사용됩니다. 이 옵션은 기본적으로 해제되어 있으며 서식 파일은 텍스트 파일로 저장됩니다. XML 서식 파일은 더 높은 유연성을 제공하지만 몇 가지 제약 조건이 있습니다. 예를 들어 이전 서식 파일에서는 가능했던 작업인 필드의 접두사와 종결자를 동시에 지정할 수 없습니다. **참고:**  XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치된 경우에만 지원됩니다.|  
+|BCP_OPTION_FMTXML|생성되는 서식 파일이 XML 형식이 되도록 지정하는 데 사용됩니다. 이 옵션은 기본적으로 해제되어 있으며 서식 파일은 텍스트 파일로 저장됩니다. XML 서식 파일은 더 높은 유연성을 제공하지만 몇 가지 제약 조건이 있습니다. 예를 들어 이전 서식 파일에서는 가능했던 작업인 필드의 접두사와 종결자를 동시에 지정할 수 없습니다. **참고:**  XML 서식 파일은만 실행할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구와 함께 설치 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client입니다.|  
 |BCP_OPTION_HINTS|*iValue* 인수는 와이드 문자열 포인터를 포함합니다. 주소가 지정된 문자열에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 처리 힌트나 결과 집합을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 둘 이상의 결과 집합을 반환하도록 지정된 경우 첫 번째 결과 집합 다음에 오는 결과 집합은 모두 무시됩니다.|  
 |BCP_OPTION_KEEPIDENTITY|*iValue* 인수가 TRUE로 설정된 경우 이 옵션은 대량 복사 메서드에서 IDENTITY 제약 조건을 사용하여 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 제공된 데이터 값을 삽입하도록 지정합니다. 입력 파일은 ID 열에 해당하는 값을 제공해야 합니다. 설정되지 않은 경우 삽입된 행에 대해 새 ID 값이 생성됩니다. 파일에서 ID 열에 대한 데이터는 모두 무시됩니다.|  
 |BCP_OPTION_KEEPNULLS|파일의 빈 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL 값으로 변환할지 여부를 지정합니다. *iValue* 인수가 TRUE로 설정된 경우 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL로 변환됩니다. 기본적으로 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 열의 기본값(있는 경우)으로 변환됩니다.|  

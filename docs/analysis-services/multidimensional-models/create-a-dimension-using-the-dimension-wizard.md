@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866889"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>차원 마법사를 사용하여 차원 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "34023270"
     > [!NOTE]  
     >  차원 마법사를 완료한 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [기존 테이블을 사용 하 여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+## <a name="see-also"></a>관련 항목  
+ [기존 테이블을 사용하여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

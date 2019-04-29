@@ -24,17 +24,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876118"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 오류가 검색되면 데이터베이스를 복구할 수 있는 옵션을 제공합니다. 중요한 새 오류 검색 메커니즘을 사용하면 백업 작업으로 만들고 복원 작업으로 유효성을 검사할 수 있는 백업 체크섬을 만들 수 있습니다. 작업에서 오류를 검사할지 여부 및 오류 발생 시 작업을 중지할지 아니면 계속할지를 제어할 수 있습니다. 백업에 백업 체크섬이 들어 있으면 RESTORE 문과 RESTORE VERIFYONLY 문으로 오류를 검사할 수 있습니다.  
   
 > [!NOTE]  
->  미러된 백업은 미디어 세트 복사본(미러)을 4개까지 제공하고 손상된 미디어로 인한 오류를 복구하기 위한 대체 복사본을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
+>  미러된 백업은 미디어 세트 복사본(미러)을 4개까지 제공하고 손상된 미디어로 인한 오류를 복구하기 위한 대체 복사본을 제공합니다. 자세한 내용은 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)를 참조하세요.  
   
   
   

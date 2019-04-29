@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015422"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>인덱스 및 키 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 인덱스, 기본 키, 고유 키를 만들거나 수정할 수 있습니다. 이 대화 상자에 액세스하려면 인덱스나 키가 포함된 테이블의 테이블 정의를 열고 테이블 정의 표를 마우스 오른쪽 단추로 클릭한 다음 **인덱스/키**를 클릭합니다.  

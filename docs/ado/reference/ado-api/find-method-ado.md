@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028140"
 ---
 # <a name="find-method-ado"></a>Find 메서드(ADO)
 검색을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 지정된 된 조건을 만족 시키는 행에 대 한 합니다. 필요에 따라 검색, 시작 행 및 오프셋을 시작할 행의 방향을 지정할 수 있습니다. 현재 행 위치가 찾은 레코드;에 설정 된 조건이 충족 되 면 하는 경우 끝 (또는 시작) 위치 설정 되어이 고, 그렇지 합니다 **레코드 집합**합니다.  

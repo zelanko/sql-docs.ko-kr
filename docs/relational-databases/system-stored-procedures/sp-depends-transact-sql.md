@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047177"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,17 +68,17 @@ sp_depends [ @objname = ] '<object>'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
+|**name**|**nvarchar(257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar(16)**|항목의 유형입니다.|  
-|**업데이트**|**nvarchar(7)**|항목의 업데이트 여부를 결정합니다.|  
-|**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
+|**updated**|**nvarchar(7)**|항목의 업데이트 여부를 결정합니다.|  
+|**selected**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
 |**column**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
  다음 결과 집합에 종속 된 개체를 보여 줍니다  *\<개체 >* 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
+|**name**|**nvarchar(257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar(16)**|항목의 유형입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

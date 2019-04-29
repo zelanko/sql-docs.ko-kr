@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023455"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape 이벤트 클래스
   Mount Tape 이벤트 클래스는 테이프 탑재 요청을 받을 때 발생합니다. 이 이벤트 클래스를 사용하여 테이프 탑재 요청 및 요청의 성공 또는 실패를 모니터링할 수 있습니다.  

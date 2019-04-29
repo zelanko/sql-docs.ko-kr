@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60923181e553fe0fb5cb35de2201718e2a155d79
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019218"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>데이터 품질 클라이언트에서 Integration Services 프로젝트 열기
 
@@ -24,7 +24,7 @@ ms.locfileid: "56041555"
 
   Integration Services의 DQS 정리 구성 요소를 사용하여 일괄 처리 모드에서 정리 프로젝트를 실행할 수 있습니다. 그러나 경우에 따라 DQS의 데이터 품질 프로젝트에서 정리 작업의 **결과 관리 및 보기** 탭에 있는 정리 결과를 검토하는 방법과 유사한 방식으로 Integration Services 패키지의 정리 결과를 검토할 수도 있습니다. DQS는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 의 Integration Services 프로젝트를 다른 데이터 품질 프로젝트와 마찬가지로 **프로젝트 열기** 화면에서 열 수 있도록 지원하고 Integration Services 프로젝트의 정리 결과에 대한 대화식 정리 환경을 제공합니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
   
@@ -34,7 +34,7 @@ ms.locfileid: "56041555"
   
 -   잠긴 Integration Services 프로젝트는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 삭제할 수 없습니다. 삭제하려면 먼저 잠금을 해제해야 합니다.  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항  
+###  <a name="Prerequisites"></a> 필수 구성 요소  
  DQS 정리 구성 요소 패키지가 포함된 Integration Services 프로젝트를 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 보고 열려면 올바르게 실행이 완료된 상태여야 합니다.  
   
 ###  <a name="Security"></a> 보안  
@@ -45,13 +45,13 @@ ms.locfileid: "56041555"
   
 ##  <a name="Open"></a> Integration Services 프로젝트 열기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 애플리케이션을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **데이터 품질 프로젝트 열기**를 클릭합니다. **프로젝트 열기** 화면이 나타납니다.  
   
 3.  **프로젝트 열기** 화면에서 다음 방법 중 하나로 Integration Services 프로젝트를 식별할 수 있습니다.  
   
-    1.  **프로젝트 이름**: Integration Services 프로젝트는 "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." 명명 용어를 사용하여 나열됩니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
+    1.  **프로젝트 이름**: Integration Services 프로젝트는 다음과 같은 이름 지정 용어를 사용 하 여 나열 됩니다. "Package.DQS Cleansing_*\<DATE>\<TIME>*_{GUID}." 명명 용어를 사용하여 나열됩니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 동일한 패키지를 올바르게 실행할 때마다 **프로젝트 열기** 화면에 새 프로젝트가 나열됩니다.  
   
     2.  **프로젝트 형식**: Integration Services 프로젝트는 **프로젝트 열기** 화면에서 **SSIS**라는 프로젝트 형식을 가집니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "56041555"
 6.  데이터를 내보낸 후 **마침** 을 클릭하여 Integration Services 프로젝트를 닫습니다.  
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services(SSIS) 프로젝트](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

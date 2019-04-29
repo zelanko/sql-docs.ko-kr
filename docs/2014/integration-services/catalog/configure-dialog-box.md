@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836116"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
   **구성** 대화 상자를 사용하여 패키지 및 프로젝트에 대한 매개 변수, 연결 관리자, 환경 참조 등을 구성할 수 있습니다.  

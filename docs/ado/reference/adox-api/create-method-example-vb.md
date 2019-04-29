@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ecc581d8aaa3822a571d93f6c134e19a8a7b510
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183868"
 ---
 # <a name="create-method-example-vb"></a>Create 메서드 예제(VB)
 다음 코드에 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다 합니다 [만들기](../../../ado/reference/adox-api/create-method-adox.md) 메서드.  

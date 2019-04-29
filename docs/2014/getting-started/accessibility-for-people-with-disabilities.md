@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842754"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842887"
 ---
 # <a name="view-event-session-data"></a>이벤트 세션 데이터 보기
   이 항목에서는 디스플레이 사용자 인터페이스를 사용하여 확장 이벤트 데이터를 확인하고 분석하는 방법에 대해 설명합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "49120300"
   
 -   event_file 대상의 경우 다음 방법 중 하나를 사용하여 파일 대상 데이터(.XEL 파일)를 봅니다.  
   
-    -   파일 사용 -> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 열기.  
+    -   사용 하 여 파일에서 열기-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]합니다.  
   
     -   파일을 끌어서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 놓습니다.  
   

@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022233"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 게시자를 위한 성능 튜닝
   Oracle 게시 아키텍처는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시 아키텍처와 유사하므로 성능을 개선하기 위한 Oracle 복제 튜닝의 첫 단계는 [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md)의 일반 튜닝 권장 사항을 따르는 것입니다.  
   
  또한 Oracle 게시자 성능과 관련된 다음 두 가지 방법을 사용할 수 있습니다.  
   
--   Oracle 또는 Oracle Gateway 중에서 적절한 게시 옵션 지정  
+-   적절 한 게시 옵션을 지정 합니다. Oracle 또는 Oracle Gateway입니다.  
   
 -   적절한 간격으로 게시자의 변경 내용을 처리하도록 트랜잭션 세트 작업 구성  
   

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027521"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage에서 외부 데이터에 액세스 하는 PolyBase를 구성 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "49460636"
 > [!NOTE]
 > AP는 현재 지원 표준 범용 v1 로컬 중복 (LRS) Azure Blob storage.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
  - 구독에서 azure Blob 저장소입니다.
  - Azure Blob storage에서 만든 컨테이너입니다.
@@ -89,7 +89,7 @@ Azure Blob storage의 데이터를 쿼리하려면 Transact SQL 쿼리에 사용
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 Azure Storage에 저장된 데이터를 가리키는 외부 테이블을 만듭니다. 이 예제에서는 외부 데이터는 차량 센서 데이터를 포함합니다.
+1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 Azure Storage에 저장된 데이터를 가리키는 외부 테이블을 만듭니다. 이 예제에서 외부 데이터는 차량 센서 데이터를 포함합니다.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -179,5 +179,5 @@ SQL Server Data Tools, 외부 테이블을 별도 폴더에 표시 됩니다 **�
 
 ## <a name="next-steps"></a>다음 단계
 
-PolyBase에 대 한 자세한 내용은 참조는 [PolyBase 란?](../relational-databases/polybase/polybase-guide.md)합니다. 
+PolyBase에 대한 자세한 내용은 [PolyBase란?](../relational-databases/polybase/polybase-guide.md)을 참조하세요. 
 

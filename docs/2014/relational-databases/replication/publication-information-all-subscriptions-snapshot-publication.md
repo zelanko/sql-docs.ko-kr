@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021822"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>게시 정보, 모든 구독(스냅숏 게시)
   **모든 구독** 탭은 선택한 스냅숏 게시의 모든 구독에 대한 정보를 표시합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135733"
 ## <a name="options"></a>변수  
  자세한 내용 및 구독과 관련된 태스크를 보려면 해당 구독에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
--   **정렬**: 하나 이상의 열에 정렬 된 **정렬 열** 대화 상자.  
+-   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
   
--   **표시할 열 선택**: 열을 표시 및 표시 되는 순서를 선택 합니다 **열 선택** 대화 상자.  
+-   **표시할 열 선택**: **열 선택** 대화 상자에서 표시할 열 및 해당 열이 표시되는 순서를 선택합니다.  
   
--   **필터**: 열 값에 따라 표의 행을 필터링 합니다 **필터 설정** 대화 상자.  
+-   **필터**: **필터 설정** 대화 상자의 열 값에 따라 표의 행을 필터링합니다.  
   
--   **필터 지우기**: 표에 대한 모든 필터 설정을 지웁니다.  
+-   **필터 지우기**: 표에 대 한 모든 필터 설정을 지웁니다.  
   
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "54135733"
  **곧 만료됨/만료됨** 상태 값은 임계값을 설정한 경우에만 표시됩니다. 임계값 설정에 대한 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로, 형식은 형식은 *SubscriberName: SubscriptionDatabaseName*합니다.  
+ 폼에서 각 구독의 이름: *SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **마지막 동기화**  
  배포 에이전트가 마지막으로 실행된 시간입니다. 동기화가 진행 중인 경우 **진행 중** 이 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844777"
 ---
 # <a name="query-options-execution-general-page"></a>쿼리 옵션 실행(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 쿼리 편집기 창의 본문을 마우스 오른쪽 단추로 클릭한 다음 **쿼리 옵션**을 클릭합니다.  

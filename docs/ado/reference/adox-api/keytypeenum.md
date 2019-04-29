@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d203e1539b42cd2ba1b785fd394a9126ef37713f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710328"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 유형을 지정 [키](../../../ado/reference/adox-api/key-object-adox.md): 기본, 외래, 또는 고유 합니다.  

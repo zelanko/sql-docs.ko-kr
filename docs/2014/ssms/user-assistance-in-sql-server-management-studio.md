@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016182"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio의 사용자 지원
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서는 도움말 메뉴 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 통해 사용자에 대한 지원이 제공됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 의 도움말 메뉴는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 볼 수 있는 여러 다른 경로를 제공합니다. 또한 이전에 도움말 환경 내에서 사용할 수 없었던 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커뮤니티 및 MSDN 온라인 리소스에 대한 액세스가 제공됩니다. 이외에도 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 환경 내에서 시작되거나 연관된 고유한 외부 창에서 시작되도록 도움말 환경을 구성할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "52757645"
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **도움말** 메뉴에서 **어떻게 할까요?** 를 클릭합니다.  
   
-2.   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **어떻게 할까요?** 페이지가 열립니다. 커뮤니티 링크 세로 막대에서 액세스할 커뮤니티 사이트의 이름을 클릭합니다.  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **어떻게 할까요?** 페이지가 열립니다. 커뮤니티 링크 세로 막대에서 액세스할 커뮤니티 사이트의 이름을 클릭합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 실행 중인 컴퓨터는 웹에 직접 연결되어 있어야 합니다.  

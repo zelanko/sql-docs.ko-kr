@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875003"
 ---
 # <a name="restore-database-files-page"></a>데이터베이스 복원(파일 페이지)
   **데이터베이스 복원** 대화 상자의 **파일** 페이지를 사용하여 데이터베이스 내에서 복원하려고 선택한 특정 파일을 관리할 수 있습니다.  

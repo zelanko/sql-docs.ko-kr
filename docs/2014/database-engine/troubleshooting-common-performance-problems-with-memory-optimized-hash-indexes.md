@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842538"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>메모리 액세스에 최적화된 해시 인덱스의 일반적인 성능 문제 해결
   이 항목에서는 해시 인덱스의 일반적인 문제 해결을 집중적으로 다룹니다.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>검색에 해시 인덱스 키 열의 하위 집합 필요  
- **문제점:** 해시 값을 계산하고 해시 테이블에서 해당 행을 찾으려면 해시 인덱스에 모든 인덱스 키 열의 값이 필요합니다. 따라서 쿼리의 WHERE 절에 인덱스 키의 하위 집합에만 적용되는 같음 조건자가 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Index Seek를 사용하여 WHERE 절의 조건자에 해당하는 행을 찾을 수 없습니다.  
+ **문제점:** 해시 인덱스 해시 값을 계산 하기 위해 모든 인덱스 키 열 값이 필요 하 고 해시 테이블의 해당 행을 찾습니다. 따라서 쿼리의 WHERE 절에 인덱스 키의 하위 집합에만 적용되는 같음 조건자가 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Index Seek를 사용하여 WHERE 절의 조건자에 해당하는 행을 찾을 수 없습니다.  
   
  반대로 디스크 기반 비클러스터형 인덱스 및 메모리 최적화 비클러스터형 인덱스와 같은 정렬된 인덱스는 인덱스 키 열의 하위 집합에서 Index Seek를 지원합니다(해당 열이 인덱스의 선행 열인 한에서).  
   
- **증상:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 일반적으로 더 빠른 연산인 Index Seek 대신에 전체 테이블 검색을 실행해야 하기 때문에 결과적으로 성능이 저하됩니다.  
+ **증상:** 이 인해 성능이 저하 되는으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 일반적으로 더 빠른 연산인 index seek 대신 전체 테이블 검색 실행 해야 합니다.  
   
- **해결 방법:** 성능 저하 외에도, 쿼리 계획을 검사하면 Index Seek 대신에 검색이 표시됩니다. 쿼리가 매우 간단한 경우 쿼리 텍스트와 인덱스 정의를 검사해도 검색에 인덱스 키 열의 하위 집합이 필요한지 여부가 표시됩니다.  
+ **해결 방법:** 성능 저하 외에도 쿼리 계획의 검사는 index seek 대신에 검색이 표시 됩니다. 쿼리가 매우 간단한 경우 쿼리 텍스트와 인덱스 정의를 검사해도 검색에 인덱스 키 열의 하위 집합이 필요한지 여부가 표시됩니다.  
   
  다음 테이블과 쿼리를 살펴 보십시오.  
   
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  테이블에는 두 열(o_id, od_id)에 해시 인덱스가 있지만 쿼리에는 (o_id)에 같음 조건자가 있습니다. 쿼리에는 인덱스 키 열의 하위 집합에만 같음 연산자가 있으므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 PK_od를 사용하여 Index Seek 연산을 수행할 수 없습니다. 그 대신, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 전체 인덱스 검색으로 돌아가야 합니다.  
   
- **해결 방법:** 여러 가지 해결 방법이 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ **해결 방법:** 가능한 해결 방법의 여러 가지가 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
 -   비클러스터형 해시 대신 비클러스터형 유형으로 인덱스를 다시 만듭니다. 메모리 최적화 비클러스터형 인덱스가 정렬되므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 선행 인덱스 키 열에서 Index Seek를 수행할 수 있습니다. 결과적으로 이 예의 기본 키 정의는 `constraint PK_od primary key nonclustered`가 됩니다.  
   

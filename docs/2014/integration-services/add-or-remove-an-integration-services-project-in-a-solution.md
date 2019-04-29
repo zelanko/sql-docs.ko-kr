@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2581aaffaeeba033e92cff305f0e9904cfb9a970
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837083"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>솔루션에서 Integration Services 프로젝트 추가 또는 제거
   다음 절차에서는 솔루션에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 추가 또는 제거하는 방법에 대해 설명합니다.  

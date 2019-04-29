@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 241bd91cf05f3a7317dcdbfe6684b7266fee947c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890525"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>다중 플랫 파일 연결 관리자 편집기(열 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **열** 노드를 사용하여 행 정보 및 열 정보를 지정하고 선택한 첫 번째 파일을 미리 볼 수 있습니다.  

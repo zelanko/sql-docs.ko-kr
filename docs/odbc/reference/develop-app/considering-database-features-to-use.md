@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042189"
 ---
 # <a name="considering-database-features-to-use"></a>사용할 데이터베이스 기능 고려
-기본 수준의 상호 운용성을 알게 되 면 응용 프로그램에서 사용 하는 데이터베이스 기능 고려 되어야 합니다. 예를 들어, SQL 문을 응용 프로그램 실행 됩니다. 스크롤 가능 커서를 사용 하 여 응용 프로그램은? 트랜잭션? 프로시저? Long 데이터? 기능에 대 한 아이디어 모든 Dbms에서 지원 되지 않는에 대 한 참조를 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명과 [ 부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 응용 프로그램에 필요한 기능 일부 Dbms 대상 Dbms의 목록에서 제거할 수 있습니다. 또한 응용 프로그램이 여러 Dbms를 쉽게 대상 수 표시 될 수 있습니다.  
+기본 수준의 상호 운용성을 알게 되 면 응용 프로그램에서 사용 하는 데이터베이스 기능 고려 되어야 합니다. 예를 들어, SQL 문을 응용 프로그램 실행 됩니다. 스크롤 가능 커서를 사용 하 여 응용 프로그램은? 트랜잭션? 프로시저? Long 데이터? 기능에 대 한 아이디어 모든 Dbms에서 지원 되지 않는에 대 한 참조를 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명과 [ 부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 응용 프로그램에 필요한 기능 일부 Dbms 대상 Dbms의 목록에서 제거할 수 있습니다. 또한 응용 프로그램이 여러 Dbms를 쉽게 대상 수 표시 될 수 있습니다.  
   
- 예를 들어, 필요한 기능 간단한 경우 일반적으로 구현할 수는 높은 수준의 상호 운용성을 사용 하 여 합니다. 간단한을 실행 하는 응용 프로그램 **선택** 정방향 전용 커서를 사용 하 여 문 및 검색 결과 가능성이 매우 간소 덕분 상호 운용 가능한: 거의 모든 드라이버 및 Dbms 기능을 지원 하기 해야합니다.  
+ 예를 들어, 필요한 기능 간단한 경우 일반적으로 구현할 수는 높은 수준의 상호 운용성을 사용 하 여 합니다. 간단한을 실행 하는 응용 프로그램 **선택** 정방향 전용 커서를 사용 하 여 문 및 검색 결과 가능성이 간소 덕분 상호 운용성: 거의 모든 드라이버 및 Dbms 필요한 기능을 지원 합니다.  
   
  그러나 필요한 기능 스크롤 가능 커서, 위치 지정된 update 및 delete 문 및 프로시저와 같은 더 복잡 한 경우 장단점 자주 수행 되어야 합니다. 일부의 가능성이 있습니다.  
   

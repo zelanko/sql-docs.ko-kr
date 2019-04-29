@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021369"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>게시에 대한 아티클 추가 및 삭제(SQL Server Management Studio)
   새 게시 마법사에서 게시를 만들 때 처음으로 게시에 아티클을 추가합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  

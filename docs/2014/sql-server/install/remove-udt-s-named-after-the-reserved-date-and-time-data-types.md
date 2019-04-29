@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5471788d3e730c9694ea6394b7e3d1fc659eda96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855254"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>UDT를 제거 합니다&#39;s의 예약된 된 날짜 및 시간 데이터 형식의 이름을 딴
   업그레이드 관리자가 `date` 또는 `time` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다.  

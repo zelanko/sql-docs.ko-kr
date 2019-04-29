@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889196"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>스크립트 변환 편집기(입/출력 페이지)
   **스크립트 변환 편집기** 대화 상자의 **입/출력** 페이지를 사용하여 스크립트 변환에 대한 입력 및 출력을 추가, 제거 및 구성할 수 있습니다.  

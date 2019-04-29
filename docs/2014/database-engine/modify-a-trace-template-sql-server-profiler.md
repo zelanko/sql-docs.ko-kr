@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1292037036ef32564115cf4d575929abc8b66d47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845656"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>추적 템플릿 수정(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]를 사용하여 추적 템플릿을 수정하는 방법에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "48227063"
 4.  **저장**또는 **다른 이름으로 저장**을 클릭하여 추적 템플릿을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [추적 파일에 대 한 이벤트 및 데이터 열을 지정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [실행 중인 추적으로부터 템플릿 파생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [추적 파일 또는 추적 테이블에서 템플릿 파생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

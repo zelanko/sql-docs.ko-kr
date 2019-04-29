@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_partition_stats (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025118"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47809181"
 |**object_id**|**int**|파티션이 속한 테이블 또는 인덱싱된 뷰의 개체 ID입니다.|  
 |**index_id**|**int**|파티션이 속한 힙 또는 인덱스의 ID입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**partition_number**|**int**|인덱스 또는 힙 내의 1부터 시작하는 파티션 번호입니다.|  
-|**in_row_data_page_count**|**bigint**|이 파티션의 행 내부 데이터를 저장하는 데 사용되는 페이지 수입니다. 파티션이 힙의 일부인 경우 이 값은 힙의 데이터 페이지 수입니다. 파티션이 인덱스의 일부인 경우 이 값은 리프 수준의 페이지 수입니다. B-트리의 리프가 아닌 페이지는 이 수에 포함되지 않습니다. 어느 경우에도 IAM(Index Allocation Map) 페이지는 포함되지 않습니다. xVelocity 메모리 최적화 columnstore 인덱스의 경우 항상 0입니다.|  
+|**in_row_data_page_count**|**bigint**|이 파티션의 행 내부 데이터를 저장하는 데 사용되는 페이지 수입니다. 파티션이 힙의 일부인 경우 이 값은 힙의 데이터 페이지 수입니다. 파티션이 인덱스의 일부인 경우 이 값은 리프 수준의 페이지 수입니다. (B-트리의 리프가 아닌 페이지 수에는 포함 되지 않습니다.) IAM (Index Allocation Map) 페이지는 두 경우 모두 포함 되지 않습니다. xVelocity 메모리 최적화 columnstore 인덱스의 경우 항상 0입니다.|  
 |**in_row_used_page_count**|**bigint**|이 파티션의 행 내부 데이터를 저장하고 관리하는 데 사용되는 페이지의 총 수입니다. 리프가 아닌 B-트리 페이지, IAM 페이지 및에 포함 된 모든 페이지를 포함 하는이 개수는 **in_row_data_page_count** 열입니다. columnstore 인덱스의 경우 항상 0입니다.|  
 |**in_row_reserved_page_count**|**bigint**|페이지 사용 여부에 관계없이 이 파티션의 행 내부 데이터를 저장하고 관리하는 데 사용하도록 예약된 페이지의 총 수입니다. columnstore 인덱스의 경우 항상 0입니다.|  
 |**lob_used_page_count**|**bigint**|저장 하 고 행 아웃 관리에 대 한 사용 페이지 수가 **텍스트**를 **ntext**를 **이미지**를 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 및 **xml** 파티션 내에서 열. IAM 페이지가 포함됩니다.<br /><br /> 파티션의 columnstore 인덱스를 저장하고 관리하는 데 사용되는 LOB의 총 수입니다.|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031976"
 ---
 # <a name="field-ado---wfc-syntax"></a>필드(ADO - WFC 구문)
 ## <a name="package-commswfcdata"></a>package com.ms.wfc.data  

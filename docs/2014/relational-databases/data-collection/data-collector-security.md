@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873616"
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
   데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 구현하는 역할 기반 보안 모델을 사용합니다. 이 모델을 사용하면 데이터베이스 관리자가 해당 태스크를 수행하는 데 반드시 필요한 사용 권한만 있는 보안 컨텍스트에서 다양한 데이터 수집기 태스크를 실행할 수 있습니다. 이 방법은 저장 프로시저 또는 뷰를 사용해야만 액세스할 수 있는 내부 테이블 관련 작업에도 사용됩니다. 내부 테이블에 대한 사용 권한이 부여되지 않는 대신, 해당 테이블에 액세스하는 데 사용되는 저장 프로시저 또는 뷰의 사용자에 대해 사용 권한을 확인합니다.  

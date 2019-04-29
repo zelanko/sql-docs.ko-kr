@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919316"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>CLR(공용 언어 런타임) 통합 개요
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이제 통합된 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows용 .NET Framework의 CLR(공용 언어 런타임) 구성 요소를 제공합니다. CLR은 관리 코드에 언어 간 통합, 코드 액세스 보안, 개체 수명 관리 및 디버깅과 프로파일링 지원 등의 서비스를 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 및 응용 프로그램 개발자는 이제 통합된 CLR을 사용하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#을 포함한 .NET Framework 언어로 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수(스칼라 및 테이블 반환), 사용자 정의 집계 함수를 작성할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework 버전 4가 미리 설치되어 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "53354851"
  [CLR 통합 사용](clr-integration-enabling.md)  
  통합된 CLR을 사용하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [.NET Framework 설치](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [통합된 CLR의 성능](clr-integration-architecture-performance.md)  
   

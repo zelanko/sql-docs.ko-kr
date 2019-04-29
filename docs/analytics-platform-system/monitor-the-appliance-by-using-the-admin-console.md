@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027540"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>관리 콘솔-Analytics Platform System을 사용 하 여 어플라이언스 모니터링
 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램은 사용자가 Internet Explorer를 통해 관리 콘솔에 연결합니다.  

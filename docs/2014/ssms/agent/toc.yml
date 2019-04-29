@@ -114,7 +114,7 @@
           items:
             - name: Notify an Operator of Job Status
               href: notify-an-operator-of-job-status.md
-            - name: Write the Job Status to the Windows Application Log
+            - name: Windows 애플리케이션 로그에 작업 상태 쓰기
               href: write-the-job-status-to-the-windows-application-log.md
         - name: 작업 보기 또는 수정
           href: view-or-modify-jobs.md
@@ -215,7 +215,7 @@
           href: change-steps-of-a-sql-server-agent-master-job.md
         - name: Remove Steps from a SQL Server Agent Master Job
           href: remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+        - name: SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
         - name: 다중 서버 환경에 적합한 SQL Server 에이전트 서비스 계정 선택
           href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: 운영자 속성 및 새 운영자(일반 페이지)
       href: operator-properties-new-operator-general-page.md
-    - name: '운영자 속성: 새 운영자(알림 페이지)'
+    - name: '연산자 속성: 새 연산자(알림 페이지)'
       href: operator-properties-new-operator-notifications-page.md
     - name: 운영자 속성(기록 페이지)
       href: operator-properties-history-page.md

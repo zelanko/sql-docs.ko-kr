@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835569"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 보는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 인스턴스 작업을 쉽게 관리하기 위해 만든 인스턴스에 대한 정보를 보는 방법에 대해 설명합니다.  

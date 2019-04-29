@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 45e4f0578d06eeafc545bea2b6374a37b8ef7cbc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874061"
 ---
 # <a name="what39s-new-in-clr-integration"></a>새로운&#39;CLR 통합 기능
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 CLR 통합에 새로 추가된 기능은 다음과 같습니다.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22fe9f04ea03769cbdc2f100ec6284d17deff097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043848"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

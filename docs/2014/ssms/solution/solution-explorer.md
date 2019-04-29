@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025718"
 ---
 # <a name="solution-explorer"></a>솔루션 탐색기
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 솔루션 탐색기 창은 데이터베이스 스크립트, 쿼리, 데이터 연결 및 파일을 관리하기 위해 프로젝트라는 컨테이너를 제공합니다. 서로 관련된 하나 이상의 프로젝트를 솔루션이라는 하나의 컨테이너에 결합할 수 있습니다.  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890243"
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
   합니다 `dtexec` 명령 프롬프트 유틸리티를 사용 하 여 구성 및 실행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 있습니다. `dtexec`유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. `dtexec` 유틸리티를 사용 하면 이러한 원본에서 패키지를 로드할 수: 합니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버,.ispac 프로젝트 파일을를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템입니다.  

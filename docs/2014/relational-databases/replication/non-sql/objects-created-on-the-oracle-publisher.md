@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022141"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제는 변경 내용 추적 및 전달을 사용할 수 있도록 Oracle 게시자에 데이터베이스 개체를 설치합니다.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 Oracle 게시자에 이진 파일을 설치하지 않습니다. 다음 표에서는 Oracle 게시자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 식별될 때 Oracle 게시자에서 생성된 개체를 나열합니다. 개체 설명은 정보 제공의 목적으로만 제공됩니다. 이러한 개체는 수정하면 안 됩니다.  
@@ -41,8 +41,8 @@ ms.locfileid: "52754785"
 |HREPL|패키지 및 패키지 본문|게시자에서 생성된 게시자 지원 코드의 패키지입니다.|  
 |MSSQLSERVERDISTRIBUTOR|공용 동의어|HREPL_Distributor 테이블에 대한 공용 동의어입니다. Oracle 게시자와 함께 사용하도록 배포자를 구성하면 이 동의어가 이미 데이터베이스에 있는 경우 동의어가 삭제되고 다시 생성됩니다.<br /><br /> CASCADE 옵션으로 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.|  
 |HREPL_Len_I_J_K|기능|Oracle 게시 패키지 코드 외부에 정의되어 LONG 열의 길이에 대한 쿼리에 사용되는 함수입니다. 게시된 LONG 열이 있는 테이블에 대한 매개 변수가 있는 명령을 생성할 때 사용됩니다. LONG 열이 있는 게시된 각 테이블에 대해 함수가 생성됩니다.|  
-|HREPL_DropPublisher|프로시저|Oracle 게시 패키지 코드 외부에 정의되어 Oracle 게시자를 삭제하는 데 사용되는 프로시저입니다.|  
-|HREPL_ExecuteCommand|프로시저|Oracle 게시 패키지 코드 외부에 정의되어 게시자에서 명령을 실행하는 데 사용되는 프로시저입니다.|  
+|HREPL_DropPublisher|절차|Oracle 게시 패키지 코드 외부에 정의되어 Oracle 게시자를 삭제하는 데 사용되는 프로시저입니다.|  
+|HREPL_ExecuteCommand|절차|Oracle 게시 패키지 코드 외부에 정의되어 게시자에서 명령을 실행하는 데 사용되는 프로시저입니다.|  
 |HREPL_ArticleN_Trigger_Row|트리거|게시된 각 테이블에 대해 생성되어 행 변경 내용을 추적하는 데 사용되는 트리거입니다.|  
 |HREPL_ArticleN_Trigger_Stmt|트리거|게시된 각 테이블에 대해 생성되어 문 수준 변경 내용을 추적하는 데 사용되는 트리거입니다.|  
 |HREPL_Article_I_J|보기|게시된 각 테이블에 대해 생성되어 게시된 테이블을 쿼리하는 데 사용되는 뷰입니다.|  

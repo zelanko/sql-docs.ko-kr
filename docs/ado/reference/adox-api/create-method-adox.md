@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ca88f95882da8e900e7695f81570b46977db9c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183856"
 ---
 # <a name="create-method-adox"></a>Create 메서드(ADOX)
 새 카탈로그를 만듭니다.  

@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014279"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51664222"
 ## <a name="diagnostics"></a>진단  
  하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 관련 SQLSTATE SQLPutData에 대 한 합니다.  
   
-|SQLSTATE|Error|설명|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|보낼 바이트에는 데이터의 길이 지정 된 경우 응용 프로그램에 예를 들어 SQL_LEN_DATA_AT_EXEC를 사용 하 여 (*n*) 위치 *n* 를 통해 응용 프로그램에서 지정 된 바이트의 총 수는 0 보다 크면 SQLPutData 지정된 된 길이 일치 해야 합니다.|  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51664222"
   
  합니다 *DataPtr* 매개 변수는 무시 되지만 NULL이 아닌 값으로 설정 해야 합니다. 변수 TVP 행 바인딩에 대 한 자세한 내용은 섹션을 참조 [바인딩 및 Data Transfer of Table-Valued 매개 변수 및 열 값](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)합니다.  
   
- 경우 *StrLen_Or_Ind* SQL_DEFAULT_PARAM 또는 0과 SQL_PARAMSET_SIZE 사이의 숫자 이외의 모든 값 (즉, 합니다 *ColumnSize* SQLBindParameter의 매개 변수), 오류가 발생 합니다. 이 오류가 발생 하면 SQLPutData에서 sql_error: SQLSTATE HY090, = "잘못 된 문자열 또는 버퍼 길이"입니다.  
+ 경우 *StrLen_Or_Ind* SQL_DEFAULT_PARAM 또는 0과 SQL_PARAMSET_SIZE 사이의 숫자 이외의 모든 값 (즉, 합니다 *ColumnSize* SQLBindParameter의 매개 변수), 오류가 발생 합니다. 이 오류로 인해 SQLPutData에서 SQL_ERROR를 반환 합니다. SQLSTATE HY090, = "잘못 된 문자열 또는 버퍼 길이"입니다.  
   
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "51664222"
  **SQLPutData** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLPutData 함수](https://go.microsoft.com/fwlink/?LinkId=59365)   
+ [SQLPutData Function](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

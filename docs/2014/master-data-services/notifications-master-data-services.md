@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ac5fbbd7a2ea3988fab52aaf921a74ba36519c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923302"
 ---
 # <a name="notifications-master-data-services"></a>알림(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델 버전 변경의 상태 또는 비즈니스 규칙 유효성 검사가 실패할 때 전자 메일 알림을 보내도록 구성할 수 있습니다.  

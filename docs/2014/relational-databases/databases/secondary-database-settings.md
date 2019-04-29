@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871221"
 ---
 # <a name="secondary-database-settings"></a>보조 데이터베이스 설정
   이 대화 상자를 사용하여 로그 전달 구성에서 보조 데이터베이스의 속성을 구성하고 수정할 수 있습니다.  

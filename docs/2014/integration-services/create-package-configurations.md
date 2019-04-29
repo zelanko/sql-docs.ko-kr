@@ -33,7 +33,7 @@ ms.locfileid: "62831994"
 >  **구성**속성 옆에 있는 줄임표 단추를 클릭하여 **패키지 구성 도우미** 에 액세스할 수도 있습니다. 구성 속성은 패키지의 속성 창에 나타납니다.  
   
 > [!NOTE]  
->  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
+>  구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [프로젝트 및 패키지 배포](packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
   
  **패키지 구성 도우미** 대화 상자에서는 구성을 사용하도록 패키지를 활성화하고 구성을 추가 및 삭제하며 구성이 로드되는 기본 순서를 설정할 수 있습니다.  
   
@@ -96,9 +96,9 @@ ms.locfileid: "62831994"
   
 6.  패키지 구성 마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
-7.  구성 유형 선택 페이지에서 구성 유형을 지정하고 구성 유형과 관련된 속성을 설정합니다. 자세한 내용은 [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md)을 참조하세요.  
+7.  구성 유형 선택 페이지에서 구성 유형을 지정하고 구성 유형과 관련된 속성을 설정합니다. 자세한 내용은 [패키지 구성 마법사 UI 참조](../../2014/integration-services/package-configuration-wizard-ui-reference.md)합니다.  
   
-8.  내보낼 속성 선택 페이지에서 구성에 포함할 패키지 개체의 속성을 선택합니다. 구성 유형이 하나의 속성만 지원할 경우 이 마법사 페이지의 제목은 대상 속성 선택입니다. 자세한 내용은 [Package Configuration Wizard UI Reference](../../2014/integration-services/package-configuration-wizard-ui-reference.md)을 참조하세요.  
+8.  내보낼 속성 선택 페이지에서 구성에 포함할 패키지 개체의 속성을 선택합니다. 구성 유형이 하나의 속성만 지원할 경우 이 마법사 페이지의 제목은 대상 속성 선택입니다. 자세한 내용은 [패키지 구성 마법사 UI 참조](../../2014/integration-services/package-configuration-wizard-ui-reference.md)합니다.  
   
     > [!NOTE]  
     >  한 개의 구성에 여러 속성을 포함하는 기능은 **XML 구성 파일** 및 **SQL Server** 구성 유형만 지원합니다.  

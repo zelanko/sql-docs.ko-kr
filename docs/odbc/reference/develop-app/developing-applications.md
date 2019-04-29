@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034891"
 ---
 # <a name="developing-applications"></a>애플리케이션 개발
 이 섹션에서는 ODBC 인터페이스와 구현 하는 드라이버를 사용 하는 응용 프로그램을 개발 하는 방법에 대 한 정보를 포함 합니다.  

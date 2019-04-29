@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048477"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect(Access 드라이버)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47626387"
   
  **SQLDriverConnect** 데이터 소스 (DSN)를 만들지 않고 드라이버에 연결할 수 있습니다.  
   
- 다음 키워드는 모든 드라이버에 대 한 연결 문자열에서 지원: **DSN**를 **DBQ**, 및 **FIL**합니다.  
+ 다음 키워드는 모든 드라이버에 대 한 연결 문자열에 지원 됩니다. **DSN**하십시오 **DBQ**, 및 **FIL**합니다.  
   
  합니다 **UID** 하 고 **PWD** 키워드 에서도 지원 됩니다.  
   
@@ -37,4 +37,4 @@ ms.locfileid: "47626387"
   
 |드라이버|필요한 키워드|예|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Driver, DBQ|Driver = {Microsoft Access Driver (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|
+|Microsoft Access|Driver, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870882"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 스파스 파일의 크기 보기(Transact-SQL)
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일이 스파스 파일인지 확인하고 이 파일의 실제 크기 및 최대 크기를 찾는 방법을 보여 줍니다. NTFS 파일 시스템의 기능인 스파스 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏에 사용됩니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "52803685"
   
      (*number_of_pages* * 8192)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [sys.fn_virtualfilestats&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
  [sys.database_files&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   

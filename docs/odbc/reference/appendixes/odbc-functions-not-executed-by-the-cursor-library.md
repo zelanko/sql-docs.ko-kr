@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e3daee4ea5f5d46ecf0e7490e1d2e82303dd8a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018374"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>커서 라이브러리에 의해 실행되지 않는 ODBC 함수
 > [!IMPORTANT]  

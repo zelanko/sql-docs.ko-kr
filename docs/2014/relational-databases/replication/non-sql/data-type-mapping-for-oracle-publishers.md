@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022650"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  

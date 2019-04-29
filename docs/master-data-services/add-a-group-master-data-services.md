@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1ac283320d94cc77b26c09baf8e75ed7f19e6be4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016937"
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
 
@@ -49,11 +49,11 @@ ms.locfileid: "52777235"
     > [!NOTE]  
     >  사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 처음으로 액세스하면 사용자의 이름이 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 목록에 추가됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

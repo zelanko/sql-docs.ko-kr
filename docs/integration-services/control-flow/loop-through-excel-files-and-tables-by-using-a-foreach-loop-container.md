@@ -86,7 +86,7 @@ ms.locfileid: "58282847"
 6.  **스키마**값으로 테이블을 선택합니다.  
   
     > [!NOTE]  
-    >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트 또는 명명된 범위 목록만 필터링해야 하는 경우 스크립트 태스크에 이를 위한 사용자 지정 코드를 작성해야 합니다. 자세한 내용은 [Working with Excel Files with the Script Task](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)을 참조하세요.  
+    >  Excel 통합 문서의 테이블 목록에는 워크시트($ 접미사를 가짐)와 명명된 범위가 모두 포함됩니다. 워크시트 또는 명명된 범위 목록만 필터링해야 하는 경우 스크립트 태스크에 이를 위한 사용자 지정 코드를 작성해야 합니다. 자세한 내용은 [스크립트 태스크를 사용 하 여 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)합니다.  
   
 7.  **변수 매핑** 페이지에서 현재 테이블 이름을 포함하도록 앞에서 만든 문자열 변수에 인덱스 2를 매핑합니다.  
   

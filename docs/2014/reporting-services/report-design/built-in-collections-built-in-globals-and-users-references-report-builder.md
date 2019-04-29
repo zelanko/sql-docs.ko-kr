@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022472"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>기본 제공 Globals 및 Users 참조(보고서 작성기 및 SSRS)
   `Globals` 및 `User` 컬렉션을 모두 포함하는 기본 제공 필드 컬렉션은 보고서를 처리할 때 Reporting Services에서 제공하는 전역 값을 나타냅니다. `Globals` 컬렉션은 보고서의 이름, 보고서 처리가 시작된 시간, 보고서 머리글 또는 바닥글의 현재 페이지 번호와 같은 값을 제공합니다. `User` 컬렉션은 사용자 식별자 및 언어 설정을 제공합니다. 이러한 값을 식에 사용하여 보고서의 결과를 필터링할 수 있습니다.  

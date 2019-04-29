@@ -1,5 +1,5 @@
 ---
-title: '4 단원: Windows Azure Storage에 데이터베이스 만들기 | Microsoft Docs'
+title: '4단원: Windows Azure Storage에서 데이터베이스 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182011"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>4단원: Windows Azure 스토리지에서 데이터베이스 만들기
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>4단원: Microsoft Azure Storage에서 데이터베이스 만들기
   이 섹션에서는 Windows Azure의 SQL Server 데이터 파일 기능을 사용하여 데이터베이스를 만드는 방법을 배웁니다. 이 단원 전에 1, 2, 3단원을 완료해야 합니다. 3단원은 4단원 전에 Windows Azure 스토리지 컨테이너에 대한 정보와 관련 정책 이름 및 SAS 키를 SQL Server 자격 증명 저장소에 저장해야 하기 때문에 매우 중요한 단계입니다.  
   
  데이터 또는 로그 파일에서 사용하는 각 스토리지 컨테이너에 대해 컨테이너 경로와 일치하는 이름의 SQL Server 자격 증명을 만들어야 합니다. 이렇게 하면 Windows Azure 스토리지에서 새 데이터베이스를 만들 수 있습니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "48063013"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **참고:** 컨테이너의 데이터 파일에 대한 활성 참조가 있는 경우 연결된 SQL Server 자격 증명을 삭제하려고 하면 실패합니다. 이와 마찬가지로 BLOB의 특정 데이터베이스 파일에 대한 임대가 이미 있는 경우 SQL Server 자격 증명을 삭제하려면 먼저 BLOB에서 임대를 해제해야 합니다. 임대를 중단하려면 [Blob 임대](https://msdn.microsoft.com/library/azure/ee691972.aspx)를 사용할 수 있습니다.  
+ **참고:** 컨테이너의 데이터 파일에 대 한 활성 참조가 없으면 연결 된 SQL Server 자격 증명을 삭제 하려는 모든 시도가 실패 합니다. 이와 마찬가지로 BLOB의 특정 데이터베이스 파일에 대한 임대가 이미 있는 경우 SQL Server 자격 증명을 삭제하려면 먼저 BLOB에서 임대를 해제해야 합니다. 임대를 중단하려면 [Blob 임대](https://msdn.microsoft.com/library/azure/ee691972.aspx)를 사용할 수 있습니다.  
   
  이 새로운 기능을 사용하면 CREATE DATABASE 문이 기본적으로 클라우드 사용 데이터베이스로 설정되도록 SQL Server를 구성할 수 있습니다. 즉, SQL Server Management Studio 서버 인스턴스 속성에서 기본 데이터 및 로그 위치를 설정하여 데이터베이스를 만들 때마다 모든 데이터베이스 파일(.mdf, .ldf)이 Windows Azure 스토리지에서 페이지 BLOB으로 만들어지도록 할 수 있습니다.  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043764"
 ---
 # <a name="core-interface-conformance"></a>핵심 인터페이스 적합성
 모든 ODBC 드라이버를 갖추고 있어야 합니다. 최소한 핵심 인터페이스 적합성 합니다. 코어 수준에서 기능 가장 일반적인 상호 운용 가능한 응용 프로그램에 필요한 것 이기 때문에 이러한 응용 프로그램은 드라이버를 사용할 수 있습니다. 코어 수준에서 기능에도 nonoptional 기능 열기 그룹 CLI 사양에서 정의 하는 ISO CLI 사양에 정의 된 기능에 해당 합니다. 핵심 수준 인터페이스와 호환 되는 ODBC 드라이버는 다음과 같은 작업을 수행 하는 응용 프로그램을 허용 합니다.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65067452553f3a0c44259e12b294bc795baa9d12
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931403"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 반환 &quot;읽지 않았습니다 Stream&quot; 오류
 "Stream 개체 읽을 수 없습니다, 비어 있거나 현재 위치는 Stream의 끝 때문에 있습니다. 비어 있지 않은 스트림용 Position 속성을 사용 하 여 현재 위치를 설정 합니다. Stream 비어 있는지를 확인 하려면 크기 속성을 확인 합니다. "  

@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871576"
 ---
 # <a name="file-states"></a>파일 상태
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 파일의 상태는 데이터베이스 상태와는 별도로 유지 관리됩니다. 파일은 항상 하나의 특정 상태에 있습니다. 예를 들어 ONLINE이나 OFFLINE 상태일 수 있습니다. 파일의 현재 상태를 보려면 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 또는 [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) 카탈로그 뷰를 사용합니다. 데이터베이스가 오프라인 상태일 경우 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) 카탈로그 뷰에서 파일 상태를 볼 수 있습니다.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021303"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>데이터 세트 필터, 데이터 영역 필터 및 그룹 필터 추가(보고서 작성기 및 SSRS)
   보고서에서 필터는 보고서에 사용된 데이터를 제한하기 위해 만든 데이터 세트, 데이터 영역 또는 데이터 영역 그룹의 일부입니다. 공유 데이터 세트를 사용하는 경우와 같이 데이터 세트 쿼리를 변경할 수 없는 경우 필터를 사용하여 보고서 데이터를 제어할 수 있습니다.  

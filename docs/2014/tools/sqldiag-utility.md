@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035422"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
   **SQLdiag** 유틸리티는 콘솔 응용 프로그램 또는 서비스로 실행할 수 있는 범용 진단 정보 수집 유틸리티입니다. **SQLdiag** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 기타 서버 유형에서 로그 및 데이터 파일을 수집할 수 있으며 이러한 파일을 사용하여 지속적으로 서버를 모니터링하거나 특정 서버 문제를 해결할 수 있습니다. **SQLdiag** 는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 지원 서비스에서 진단 정보를 빠르고 간편하게 수집할 수 있도록 지원하는 유틸리티입니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "53590257"
   
  **SQLdiag** 는 유틸리티를 실행하는 컴퓨터의 현지 시간을 사용합니다.  
   
- **/ A** _SQLdiag_application_name_  
+ **/A** _SQLdiag_application_name_  
  동일한 **인스턴스에 대해 여러** SQLdiag [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 인스턴스를 실행할 수 있도록 합니다.  
   
  각 *SQLdiag_application_name* 은 서로 다른 **SQLdiag**인스턴스를 식별합니다. *SQLdiag_application_name* 인스턴스와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 이름은 전혀 관계가 없습니다.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753865"
 ---
 # <a name="architecture-of-clr-integration"></a>CLR 통합 아키텍처
   .NET Framework CLR(공용 언어 런타임)과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 통합을 사용하면 데이터베이스 프로그래머가 Visual C#, Visual Basic .NET, 및 Visual C++와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  

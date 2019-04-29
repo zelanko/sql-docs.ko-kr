@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021874"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>예제: 외래 키, 기본 키 및 UNIQUE 제약 조건 열  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>예제: 외래 키, 기본 키 및 Unique 제약 조건 열  
  이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.  
   
 -   기존 개체에서 외래 키 찾기  

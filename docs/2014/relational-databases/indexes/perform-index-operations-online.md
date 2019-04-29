@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9eceaff8ea7fee16eac3afef8bdc560d7fb1642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036220"
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 온라인으로 인덱스를 만들거나, 다시 작성하거나, 삭제하는 방법에 대해 설명합니다. ONLINE 옵션을 사용하면 여러 사용자가 인덱스 작업 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 모든 관련 비클러스터형 인덱스에 동시에 액세스할 수 있습니다. 예를 들어 특정 사용자가 클러스터형 인덱스를 다시 작성하는 동안 해당 사용자와 다른 사용자가 계속해서 기본 데이터를 업데이트하고 쿼리할 수 있습니다. 클러스터형 인덱스 작성 또는 다시 작성 등의 DDL(데이터 정의 언어) 작업을 오프라인으로 수행할 때 이러한 작업은 기본 데이터와 관련 인덱스에 대해 배타적 잠금을 보유합니다. 이로 인해 해당 인덱스 작업이 완료될 때까지 기본 데이터를 수정하거나 쿼리할 수 없습니다.  

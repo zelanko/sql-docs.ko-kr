@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015315"
 ---
 # <a name="get-information-about-event-notifications"></a>이벤트 알림에 대한 정보 가져오기
   다음 카탈로그 뷰는 이벤트 알림에 대한 메타데이터를 쿼리하는 데 사용할 수 있습니다.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191483"
 -   [sys.event_notifications&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  데이터베이스 수준에서 만든 **sys.event_notifications** 에서 이벤트 알림에 대한 메타데이터를 보려면 최소한 데이터베이스에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나, 이벤트 알림의 소유자이거나, ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다. 특정 큐에서 만든 이벤트 알림의 경우 최소한 개체에 대한 CONTROL, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 있거나, 이벤트 알림의 소유자이거나, ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있어야 합니다.  
+>  이벤트 알림에 대 한 메타 데이터를 보려는 **sys.event_notifications** 최소 수준 데이터베이스에서 만든 다음을 있어야 합니다. 제어, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 데이터베이스, 이벤트 알림의 소유자 또는 ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있습니다. 특정 큐에 만들어진 이벤트 알림에 대 한 최소 있습니다 다음이 있어야 합니다. 제어, ALTER, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한이 개체에, 이벤트 알림의 소유자 또는 ALTER ANY DATABASE EVENT NOTIFICATION 권한이 있습니다.  
   
  **서버 수준 이벤트 알림에 대한 정보를 가져오려면**  
   
 -   [sys.server_event_notifications&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  최소한 서버에 대한 CONTROL 또는 VIEW ANY DEFINITION 권한이 있거나, 이벤트 알림의 로그온 또는 소유자이거나, **sys.server_event_notifications**에서 이벤트 알림에 대한 메타데이터를 볼 수 있는 ALTER ANY EVENT NOTIFICATION 권한이 있어야 합니다.  
+>  최소한 다음이 필요 합니다. 컨트롤 또는 VIEW ANY DEFINITION 권한이 서버의 로그온 또는 이벤트 알림의 소유자에서 이벤트 알림에 대 한 메타 데이터를 보려면 ALTER ANY EVENT NOTIFICATION 권한이 **sys.server_event_notifications**.  
   
  **이벤트 알림을 발생시킬 수 있는 모든 이벤트에 대한 정보를 가져오려면**  
   

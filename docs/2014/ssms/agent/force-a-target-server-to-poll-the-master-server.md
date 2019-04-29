@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044058"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>대상 서버를 강제 실행하여 마스터 서버 폴링
   이 항목에서는 강제로 대상 서버가 마스터 서버를 폴링하도록 하는 방법에 대해 설명합니다. 대상 서버는 마스터 서버에 등록된 서버여야 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52764215"
 > [!NOTE]  
 >  대상 서버에서 작업 상태 업로드를 시도할 때 마스터 서버가 액세스 가능하지 않은 경우 작업 상태는 마스터 서버가 액세스 가능해질 때까지 스풀링됩니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#Restrictions), [보안](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
   
 -   **대상 서버가 마스터 서버를 폴링하도록 설정 하려면을 사용 하 여:**  다른 도구는 [SQL Server Management Studio](#SSMS)  
   

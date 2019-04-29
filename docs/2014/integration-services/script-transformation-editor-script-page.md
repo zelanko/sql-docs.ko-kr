@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d03f6d705707683195ad58b8562d2b964955b8e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889313"
 ---
 # <a name="script-transformation-editor-script-page"></a>스크립트 변환 편집기(스크립트 페이지)
   **스크립트 변환 편집기** 대화 상자의 **스크립트** 탭을 사용하여 스크립트 및 관련 속성을 지정할 수 있습니다.  

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035602"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>인덱스에 대한 SORT_IN_TEMPDB 옵션
   인덱스를 만들거나 다시 만들 때 SORT_IN_TEMPDB 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 **tempdb** 를 사용하여 인덱스를 만드는 데 사용되는 중간 정렬 결과를 저장하도록 지시할 수 있습니다. 이 옵션을 사용하면 인덱스를 만드는 데 사용되는 임시 디스크 공간이 늘어나지만 **tempdb** 가 사용자 데이터베이스와 다른 디스크 집합에 있을 때 인덱스를 만들거나 다시 만드는 데 필요한 시간이 줄어듭니다. **tempdb**에 대한 자세한 내용은 [인덱스 생성 메모리 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)를 참조하십시오.  

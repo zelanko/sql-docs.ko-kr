@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8406d02e167258901c3a6ce9ed3a1d7de935df54
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048517"
 ---
 # <a name="level-mdx"></a>Level(MDX)
 
@@ -33,7 +33,7 @@ Member_Expression.Level
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ### <a name="examples"></a>예  
- 다음 예제에서는 **수준** Adventure Works 큐브의 모든 월을에서 반환 하는 함수입니다.  
+ 다음 예제에서는 합니다 **수준** Adventure Works 큐브의 모든 월을에서 반환 하는 함수입니다.  
   
 ```  
 SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,  
@@ -41,7 +41,7 @@ SELECT[Date].[Fiscal].[Month].[February 2002].Level.Members ON 0,
 FROM [Adventure Works]  
 ```  
   
- 다음 예제에서는 **수준** Adventure Works 큐브에 있는 Model Name 특성 계층의 All-Purpose Bike Stand에 대 한 수준 이름을 반환 하는 함수입니다.  
+ 다음 예제에서는 합니다 **수준** Adventure Works 큐브에 있는 Model Name 특성 계층의 All-Purpose Bike Stand에 대 한 수준 이름을 반환 하는 함수입니다.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

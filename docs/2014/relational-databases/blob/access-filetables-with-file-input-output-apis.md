@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876915"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
   FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  

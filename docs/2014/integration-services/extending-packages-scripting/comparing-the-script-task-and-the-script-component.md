@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62895022"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>스크립트 태스크와 스크립트 구성 요소 비교
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 디자이너의 제어 흐름 창에서 사용할 수 있는 스크립트 태스크와 데이터 흐름 창에서 사용할 수 있는 스크립트 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 서로 매우 다른 용도로 사용됩니다. 태스크는 일반적인 용도의 제어 흐름 도구인 반면 구성 요소는 데이터 흐름에서 원본, 변환 또는 대상으로 사용됩니다. 이러한 차이에도 불구하고 스크립트 태스크와 스크립트 구성 요소는 사용하는 코딩 도구와 개발자가 사용할 수 있는 패키지의 개체에서 약간의 유사성이 있습니다. 이러한 유사점과 차이점을 이해하면 태스크와 구성 요소 모두를 보다 효율적으로 사용할 수 있습니다.  

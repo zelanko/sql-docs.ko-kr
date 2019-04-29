@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23d25be8de243cab1e6620bb48c9568b96599a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046226"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  

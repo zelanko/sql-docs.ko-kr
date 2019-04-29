@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032926"
 ---
 # <a name="rules-for-conversions"></a>변환에 대한 규칙
 이 섹션의 규칙은 숫자 리터럴을 포함 하는 변환에 적용 됩니다. 이러한 규칙을 위해 다음 조건에 정의 됩니다.  
   
--   *할당 저장:* 데이터베이스의 테이블 열으로 데이터를 보낼 때. 호출 하는 동안 이런 **SQLExecute**를 **SQLExecDirect**, 및 **SQLSetPos**합니다. 저장소 할당 하는 동안 데이터베이스 열 "target"을 참조 하 고 "source" 응용 프로그램 버퍼의 데이터를 가리킵니다.  
+-   *할당을 저장 합니다.* 때 데이터베이스의 테이블 열으로 데이터를 보냅니다. 호출 하는 동안 이런 **SQLExecute**를 **SQLExecDirect**, 및 **SQLSetPos**합니다. 저장소 할당 하는 동안 데이터베이스 열 "target"을 참조 하 고 "source" 응용 프로그램 버퍼의 데이터를 가리킵니다.  
   
--   *검색 할당:* 응용 프로그램 버퍼를 데이터베이스에서 데이터를 검색할 때. 호출 하는 동안 이런 **SQLFetch**, **SQLGetData**합니다 **SQLFetchScroll**, 및 **SQLSetPos**합니다. 검색 할당 하는 동안 "target" 응용 프로그램 버퍼를 나타내며 "source" 데이터베이스 열을 가리킵니다.  
+-   *검색 할당 합니다.* 응용 프로그램 버퍼를 데이터베이스에서 데이터를 검색 합니다. 호출 하는 동안 이런 **SQLFetch**, **SQLGetData**합니다 **SQLFetchScroll**, 및 **SQLSetPos**합니다. 검색 할당 하는 동안 "target" 응용 프로그램 버퍼를 나타내며 "source" 데이터베이스 열을 가리킵니다.  
   
 -   *CS:* 문자 소스 값입니다.  
   
--   *NT:* 숫자 대상의 값입니다.  
+-   *NT:* 숫자 대상 값입니다.  
   
 -   *NS:* 숫자 원본 값입니다.  
   
--   *CT:* 문자 대상의 값입니다.  
+-   *CT:* 문자 대상 값입니다.  
   
 -   정확한 숫자 리터럴은 전체 자릿수: 포함 하는 자릿수입니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47706101"
   
     -   NS 0 보다 작은 경우의 결과 Y 하면:  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          여기서 '&#124;&#124;'은 문자열 연결 연산자.  
   

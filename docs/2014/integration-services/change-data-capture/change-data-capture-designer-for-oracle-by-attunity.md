@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835949"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
   CDC Designer 콘솔은 Oracle CDC 인스턴스를 개발하고 유지 관리하는 데 사용됩니다. CDC Designer 콘솔은 다음 요소를 포함하는 Microsoft 관리 콘솔 스냅인입니다.  
   
 -   새 인스턴스 마법사: 이 마법사는 새 Oracle CDC 인스턴스를 만듭니다. 새 인스턴스 마법사를 사용하는 방법은 [Use the New Instance Wizard](use-the-new-instance-wizard.md)을 참조하십시오.  
   
--   CDC 인스턴스 속성 뷰어: 선택된 CDC 인스턴스의 상태와 구성을 보여 주는 도킹된 뷰입니다. 속성 뷰어에 대한 자세한 내용은 [CDC 인스턴스 관리 방법](manage-a-cdc-instance.md)을 참조하세요.  
+-   CDC 인스턴스 속성 뷰어: 이것이 상태 및 구성을 선택한 CDC 인스턴스를 보여 주는 도킹 된 보기입니다. 속성 뷰어에 대한 자세한 내용은 [CDC 인스턴스 관리 방법](manage-a-cdc-instance.md)을 참조하세요.  
   
--   CDC 인스턴스 속성 편집기: 이 대화 상자는 기존 Oracle CDC Service 인스턴스를 편집하는 데 사용됩니다. CDC 인스턴스 속성을 편집하는 방법은 [Edit Instance Properties](edit-instance-properties.md)을 참조하십시오.  
+-   CDC 인스턴스 속성 편집기: 이 대화 상자는 기존 Oracle CDC Service 인스턴스를 편집에 사용 됩니다. CDC 인스턴스 속성을 편집하는 방법은 [Edit Instance Properties](edit-instance-properties.md)을 참조하십시오.  
   
 ## <a name="in-this-documentation"></a>이 설명서의 내용  
   

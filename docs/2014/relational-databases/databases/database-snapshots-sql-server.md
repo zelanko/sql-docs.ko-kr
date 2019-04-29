@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917150"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅숏(SQL Server)
   데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  

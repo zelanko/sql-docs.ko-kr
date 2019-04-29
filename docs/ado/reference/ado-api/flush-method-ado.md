@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66deae3833a738075259928855881f87b64ef0dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028120"
 ---
 # <a name="flush-method-ado"></a>Flush 메서드(ADO)
 내용을 강제로 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 는 기본 개체를 ADO 버퍼에에서 남아 있는 **Stream** 연결 합니다.  

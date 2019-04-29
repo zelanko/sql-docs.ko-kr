@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018362"
 ---
 # <a name="outer-join-escape-sequence"></a>외부 조인 이스케이프 시퀀스
 ODBC는 외부 조인 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -40,13 +40,13 @@ ODBC는 외부 조인 이스케이프 시퀀스를 사용합니다. 이 이스�
   
  외부 조인 {*테이블 이름* [*상관 관계 이름*] &#124; *외부 조인*} ON  
   
- *검색-*  
+ *search-*  
   
- *조건*  
+ *condition*  
   
- *상관 관계 이름* :: = *사용자 정의 이름*  
+ *correlation-name* ::= *user-defined-name*  
   
- *ODBC esc 시작자* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC esc 종결자* :: =}  
   

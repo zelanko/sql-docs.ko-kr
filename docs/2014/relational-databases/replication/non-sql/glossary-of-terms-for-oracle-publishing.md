@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022400"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
   Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  

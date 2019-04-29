@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae0775260a0f86ae79f91e3bdaa3773ef58976de
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837165"
 ---
 # <a name="add-an-annotation-to-a-package"></a>패키지에 주석 추가
   이 절차에서는 패키지에 주석을 추가하는 방법에 대해 설명합니다.  

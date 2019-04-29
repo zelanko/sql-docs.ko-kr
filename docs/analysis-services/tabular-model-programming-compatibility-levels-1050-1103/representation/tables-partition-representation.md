@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019335"
 ---
-# <a name="tables---partition-representation"></a>테이블-파티션 표현
+# <a name="tables---partition-representation"></a>테이블 - 파티션 표현
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   원활한 운영을 위해 테이블 하나를 여러 개의 행 하위 집합으로 나눌 수 있습니다. 이 행들이 결합하여 테이블을 구성하며 각각의 하위 집합은 테이블의 파티션입니다.  
   

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b48ae5874146d31552bc940dc3e15eaf80e11883
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022376"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>EditionName 속성(WMI MSReportServer_Instance)
   사람이 읽을 수 있는 보고서 서버 버전의 이름을 반환합니다. 읽기 전용입니다.  

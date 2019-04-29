@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770969"
 ---
 # <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  

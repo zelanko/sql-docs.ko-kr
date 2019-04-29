@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045506"
 ---
 # <a name="processing-a-sql-statement"></a>SQL 문 처리
 프로그래밍 방식으로 SQL을 사용 하는 것에 대 한 기술에 설명 하기 전에 SQL 문을 처리 하는 방법에 대해 설명 하는 데 필요한 됩니다. 단계는 각 기술에서는 서로 다른 시간에 수행 하지만 세 가지 기술 모두에 공통적으로 적용 합니다. 다음 그림과 단계와 관련 된이 섹션의 나머지 부분 전체에서 설명 하는 SQL 문 처리 합니다.  

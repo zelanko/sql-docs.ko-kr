@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184212"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
 새로 만듭니다 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  

@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 17e9fa90b66c2bdaad9f029614119f9b9faada37
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836538"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>패키지에 읽기 및 쓰기 역할 할당
   각 패키지에 읽기 및 쓰기 역할을 할당할 수 있습니다.  

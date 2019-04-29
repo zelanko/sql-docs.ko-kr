@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844289"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Text Editor - Plain Text - Tabs Page)
   이 대화 상자를 사용하여 특정 개발 언어와 연관되지 않은 문서를 편집하는 데 사용되는 텍스트 편집기의 탭 이동 동작을 변경할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴의 **옵션** 을 클릭한 다음 **텍스트 편집기**를 확장하고 **일반 텍스트**를 확장한 다음 **탭**을 클릭합니다.  
@@ -30,18 +30,18 @@ ms.locfileid: "48074772"
  **없음**  
  Enter 키를 눌러 새 줄을 만들 때 들여쓰지 않습니다. 커서는 새 줄의 첫 번째 열에 배치됩니다.  
   
- **블록**  
+ **Block**  
  Enter 키를 눌러 새 줄을 만들 때 앞 줄과 동일하게 들여씁니다.  
   
- **스마트**  
+ **Smart**  
  일반 텍스트 편집기는 이 서식을 지원하지 않습니다.  
   
 ## <a name="tabs"></a>탭  
  **탭 크기**  
- 탭 정지 간의 거리를 공백 수로 설정합니다. 기본값은 공백 4개입니다.  
+ 탭 정지 간의 거리를 공백 수로 설정합니다. 기본값은 네 칸입니다.  
   
  **들여쓰기 크기**  
- 자동 들여쓰기의 크기를 공백 수로 설정합니다. 기본값은 공백 4개입니다. 탭 문자나 공백 문자 또는 두 가지 문자 모두를 삽입하여 지정한 크기를 채웁니다.  
+ 자동 들여쓰기의 크기를 공백 수로 설정합니다. 기본값은 네 칸입니다. 탭 문자나 공백 문자 또는 두 가지 문자 모두를 삽입하여 지정한 크기를 채웁니다.  
   
  **공백 삽입**  
  탭 문자가 아닌 공백 문자만 사용하여 들여씁니다. 예를 들어 **들여쓰기 크기** 를 5로 설정하면 Tab 키를 누르거나 **서식** 도구 모음의 **들여쓰기** 단추를 누를 때마다 5개의 공백 문자가 삽입됩니다.  

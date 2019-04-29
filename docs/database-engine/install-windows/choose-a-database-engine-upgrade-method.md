@@ -65,7 +65,7 @@ ms.locfileid: "58872263"
  
    애플리케이션에 대한 데이터베이스를 다른 서버 인스턴스로 이동할 경우 대상 서버 인스턴스의 master 및 msdb에서 종속 개체와 엔터티의 모든 메타데이터를 다시 만들어야 합니다. 예를 들어 데이터베이스 애플리케이션이 서비스 수준 트리거를 사용하는 경우 단순히 새 시스템에서 데이터베이스를 연결하거나 복원하는 것만으로 충분하지 않습니다. master 데이터베이스에서 이러한 트리거에 대한 모든 메타데이터를 수동으로 다시 만들지 않으면 데이터베이스가 예상대로 작동하지 않습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조하세요.  
   
--   **MSDB에 저장된 Integration Services 패키지:** 패키지를 MSDB에 저장하는 경우 [dtutil Utility](../../integration-services/dtutil-utility.md)를 사용하여 이러한 패키지를 제외하거나 새 서버에 재배포해야 합니다. 새 서버에서 패키지를 사용하기 전에 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드해야 합니다. 자세한 내용은 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하세요.  
+-   **MSDB에 저장된 Integration Services 패키지:** 패키지를 MSDB에 저장하는 경우 [dtutil Utility](../../integration-services/dtutil-utility.md)를 사용하여 이러한 패키지를 제외하거나 새 서버에 재배포해야 합니다. 새 서버에서 패키지를 사용하기 전에 패키지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 업그레이드해야 합니다. 자세한 내용은 [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md) 합니다.  
   
 -   **Reporting Services 암호화 키:** 보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다. 자세한 내용은 [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md) 및 [Upgrade 및 Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하세요.  
   

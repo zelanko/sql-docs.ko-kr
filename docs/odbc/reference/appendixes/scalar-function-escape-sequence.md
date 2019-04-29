@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032845"
 ---
 # <a name="scalar-function-escape-sequence"></a>스칼라 함수 이스케이프 시퀀스
 ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -32,7 +32,7 @@ ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. �
 ## <a name="remarks"></a>Remarks  
  BNF 표기법의 구문은 다음과 같습니다.  
   
- *스칼라 함수 이스케이프 ODBC* :: =  
+ *ODBC-scalar-function-escape* ::=  
   
  *ODBC esc 시작자* fn *스칼라 함수 ODBC esc 종결자*  
   
@@ -40,8 +40,8 @@ ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. �
   
  (비 단말은에 대 한 정의 *함수 이름* 및 *함수 이름* (*인수 목록*)의 스칼라 함수 목록에서 파생 된 [ 부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC esc 시작자* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC esc 종결자* :: =}  
   
- 드라이버는 ODBC 프로시저 호출 구문 지원를 데이터 소스는 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출할 수 있습니다 **SQLGetInfo**합니다. 자세한 내용은 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)합니다.
+ 드라이버는 ODBC 프로시저 호출 구문 지원를 데이터 소스는 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출할 수 있습니다 **SQLGetInfo**합니다. 자세한 내용은 참조 하세요. [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)합니다.

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c6be518211edb07251ff9234b095f3d3dde248b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024274"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY 식 목록
 식은은 ORDER BY 절에서 사용할 수 있습니다. 예를 들어, 다음 절에서 테이블 정렬 되 세 가지 키 식에 의해: a + b, c + d 및 e입니다.  

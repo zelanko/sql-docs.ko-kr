@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025829"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted 이벤트 클래스
   Object:Deleted 이벤트 클래스는 DROP INDEX 및 DROP TABLE 문 등에 의해 개체가 삭제되었음을 나타냅니다. 이 이벤트 클래스를 사용하면 임시 저장 프로시저를 자주 만드는 ODBC 애플리케이션 등에 의해 개체가 삭제되었는지 파악할 수 있습니다.  

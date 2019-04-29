@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019251"
 ---
-# <a name="tables---calculated-column-representation"></a>테이블-계산된 열 표현
+# <a name="tables---calculated-column-representation"></a>테이블 - 계산 열 표현
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   계산 열은 테이블에 새 열을 만드는 DAX 식이며 구해진 값이 테이블에 저장됩니다. 테이블이 처리될 때마다 계산 열 식이 계산됩니다.  
   

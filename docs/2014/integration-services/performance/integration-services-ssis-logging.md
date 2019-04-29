@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889815"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함됩니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "58394313"
 |연산자|패키지를 시작한 사용자의 ID입니다.|  
 |SourceName|로그 이벤트가 발생한 컨테이너 또는 태스크의 이름입니다.|  
 |SourceID|로그 이벤트가 발생한 패키지, For Loop, Foreach Loop, 시퀀스 컨테이너 또는 태스크의 고유 식별자입니다.|  
-|ExecutionID|패키지 실행 인스턴스의 GUID입니다.<br /><br /> 참고: 단일 패키지를 실행하면 ExecutionID 요소에 대한 여러 값이 포함된 로그 항목이 만들어질 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 실행하면 유효성 검사 단계에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 해당하는 ExecutionID 요소가 포함된 로그 항목이 만들어질 수 있습니다. 그러나 실행 단계에서는 dtshost.exe에 해당하는 ExecutionID 요소가 포함된 로그 항목이 만들어질 수 있습니다. 또 Execute Package 태스크가 포함된 패키지를 실행하면 이러한 각 태스크가 자식 패키지를 실행합니다. 이러한 자식 패키지는 부모 패키지에서 만든 로그 항목과 다른 ExecutionID 요소가 포함된 로그 항목을 만들 수 있습니다.|  
+|ExecutionID|패키지 실행 인스턴스의 GUID입니다.<br /><br /> 참고: 단일 패키지를 실행 하면 ExecutionID 요소에 대 한 값이 서로 다른 로그 항목 만들 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 실행하면 유효성 검사 단계에서 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 해당하는 ExecutionID 요소가 포함된 로그 항목이 만들어질 수 있습니다. 그러나 실행 단계에서는 dtshost.exe에 해당하는 ExecutionID 요소가 포함된 로그 항목이 만들어질 수 있습니다. 또 Execute Package 태스크가 포함된 패키지를 실행하면 이러한 각 태스크가 자식 패키지를 실행합니다. 이러한 자식 패키지는 부모 패키지에서 만든 로그 항목과 다른 ExecutionID 요소가 포함된 로그 항목을 만들 수 있습니다.|  
 |MessageText|로그 항목과 연결된 메시지입니다.|  
 |DataBytes|로그 항목과 관련된 바이트 배열입니다. 이 필드의 의미는 로그 항목에 따라 다릅니다.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58394313"
   
 1.  패키지 및 패키지에 속한 태스크에 대해 로깅을 사용하도록 설정합니다. 로깅은 패키지, 컨테이너 및 태스크 수준에서 발생할 수 있습니다. 패키지, 컨테이너 및 태스크에 대해 서로 다른 로그를 지정할 수 있습니다.  
   
-2.  로그 공급자를 선택하고 패키지에 대한 로그를 추가합니다. 로그는 패키지 수준에서만 만들 수 있으며 태스크나 컨테이너는 패키지에 대해 만들어진 로그 중 하나를 사용해야 합니다. 각 로그는 텍스트 파일, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows 이벤트 로그, XML 파일 중 하나의 로그 공급자와 연결됩니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../enable-package-logging-in-sql-server-data-tools.md)을 참조하세요.  
+2.  로그 공급자를 선택하고 패키지에 대한 로그를 추가합니다. 로그는 패키지 수준에서만 만들 수 있으며 태스크나 컨테이너는 패키지에 대해 만들어진 로그 중 하나를 사용해야 합니다. 각 로그는 다음 로그 공급자 중 하나를 사용 하 여 연결 됩니다. 텍스트 파일인 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows 이벤트 로그 또는 XML 파일입니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../enable-package-logging-in-sql-server-data-tools.md)을 참조하세요.  
   
 3.  로그에서 캡처할 각 이벤트 및 해당 이벤트에 대한 로그 스키마 정보를 선택합니다. 자세한 내용은 [저장된 구성 파일을 사용하여 로깅 구성](../configure-logging-by-using-a-saved-configuration-file.md)을 참조하세요.  
   

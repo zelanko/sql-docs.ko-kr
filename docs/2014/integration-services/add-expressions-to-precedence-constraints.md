@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837301"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>선행 제약 조건에 식 추가
   선행 제약 조건에서는 식을 사용하여 선행 실행 개체 및 제약 조건이 지정된 실행 개체 간의 제약 조건을 정의할 수 있습니다. 실행 개체는 태스크 또는 컨테이너일 수 있습니다. 식은 단독으로 사용되거나 선행 실행 개체의 실행 결과와 함께 사용될 수 있습니다. 실행 개체의 실행 결과는 성공 또는 실패입니다. 선행 제약 조건의 실행 결과를 구성할 경우 `Success`, `Failure` 또는 `Completion`으로 실행 결과를 지정할 수 있습니다. `Success`로 설정하려면 선행 실행 개체가 성공해야 하며, `Failure`는 선행 실행 개체가 실패해야 하며, `Completion`은 선행 태스크의 성공 또는 실패 여부에 관계없이 제약 조건이 지정된 실행 개체가 실행되어야 함을 나타냅니다.  자세한 내용은 [Precedence Constraints](control-flow/precedence-constraints.md)을(를) 참조하세요.  

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3382e222a03f7538d3c666c3b85527b487d499f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911516"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>계층적 레코드 집합 유지
-계층을 저장할 수 있습니다 **레코드 집합** ADTG 또는 XML 형식으로 호출 하 여 파일에는 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 그러나 두 가지 제한 사항 적용 계층을 저장 하는 경우 **레코드 집합**XML 형식으로 s: 경우 XML에 저장할 수 없습니다는 계층적 **레코드 집합** 보류 중인 업데이트가 포함 매개 변수가 있는 저장할 수 없습니다 계층적 **레코드 집합**합니다.  
+계층을 저장할 수 있습니다 **레코드 집합** ADTG 또는 XML 형식으로 호출 하 여 파일에는 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 그러나 두 가지 제한 사항 적용 계층을 저장 하는 경우 **레코드 집합**XML 형식에서: 경우 XML에 저장할 수 없습니다는 계층적 **Recordset** 보류 중인 업데이트가 포함 매개 변수가 있는 저장할 수 없습니다 계층적 **레코드 집합**.  
   
  데이터 셰이핑 공급자에 대 한 자세한 내용은 참조 하세요. [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (ADO) 및 [for OLE DB Data Shaping Service 개요](https://msdn.microsoft.com/9f51e471-8e85-448e-9fb8-b64bbf767bf3)합니다.  
   

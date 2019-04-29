@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872219"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
@@ -90,7 +90,7 @@ ms.locfileid: "54131493"
  마법사를 사용할 때마다 **구성 태스크 선택** 페이지를 사용하여 수행할 작업을 지정할 수 있습니다. 마법사를 완료하기 전에 태스크를 취소하고 다른 태스크를 수행하려면 **뒤로** 단추를 눌러 이 페이지로 다시 돌아와 다른 태스크를 선택합니다.  
   
 > [!NOTE]  
->  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
+>  데이터베이스 메일이 설정 되지 않은 경우 메시지가 표시 됩니다. **데이터베이스 메일 기능을 사용할 수 없는 경우  이 기능을 설정하시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
   
  **다음 태스크를 수행하여 데이터베이스 메일 설치**  
  최초로 데이터베이스 메일을 설정하는 데 필요한 모든 태스크를 수행합니다. 이 옵션에는 다른 세 가지 옵션이 모두 포함됩니다.  

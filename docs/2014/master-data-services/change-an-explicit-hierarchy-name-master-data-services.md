@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: df02cc4a8f3ed35a360ac6d323ce88640c49247e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925884"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>명시적 계층 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 이름을 변경할 수 있습니다.  

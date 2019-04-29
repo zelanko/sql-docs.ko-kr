@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869213"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
     
@@ -30,7 +30,7 @@ ms.locfileid: "48118082"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC_DUPLICATE_KEYS|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형). 페이지 P_ID1, 슬롯 SLOT1과(와) 페이지 P_ID2, 슬롯 P_ID2의 키가 중복되었습니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID (type 유형). 페이지 P_ID1, 슬롯 SLOT1과(와) 페이지 P_ID2, 슬롯 P_ID2의 키가 중복되었습니다.|  
   
 ## <a name="explanation"></a>설명  
  두 개의 지정된 슬롯에 `uniqueifiers`를 포함하는 동일한 키가 있습니다.  

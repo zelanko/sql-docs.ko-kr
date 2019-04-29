@@ -1,5 +1,5 @@
 ---
-title: '예제: 데이터베이스의 증분 복원(전체 복구 모델) | Microsoft 문서'
+title: '예: 데이터베이스의 증분 복원(전체 복구 모델) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 157541fe3792ba082d9b1ec84c3ab45ca0617060
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875825"
 ---
-# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예: 데이터베이스의 증분 복원(전체 복구 모델)
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기가 가능한 모든 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  
   
  이 예에서 `adb` 데이터베이스는 재해 발생 후 새 컴퓨터에 복원됩니다. 데이터베이스에서 전체 복구 모델을 사용하고 있으므로 복원이 시작되기 전에 데이터베이스의 비상 로그 백업을 만들어야 합니다. 재해가 발생하기 전에 모든 파일 그룹은 온라인 상태입니다. 파일 그룹 `B` 는 읽기 전용입니다. 모든 보조 파일 그룹이 복원되어야 합니다. 단, 복원은 `A` (가장 중요), `C`, `B`와 같은 중요도 순으로 이루어져야 합니다. 이 예에서는 비상 로그 백업을 포함하여 4개의 로그 백업이 있습니다.  
@@ -83,17 +83,17 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 ## <a name="additional-examples"></a>추가 예  
   
--   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [예제: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [예: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [예: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [예: 읽기 전용 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

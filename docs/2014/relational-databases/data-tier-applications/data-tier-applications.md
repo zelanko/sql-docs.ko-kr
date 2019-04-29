@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873104"
 ---
 # <a name="data-tier-applications"></a>의
   DAC(데이터 계층 애플리케이션)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540125"
   
 -   **가져오기** - 사용자가 스키마 및 데이터를 호스트 서버의 새 데이터베이스로 가져올 수 있습니다.  
   
- 이러한 두 기능은 Server Management Studio, SQL Azure용 관리 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서 지원됩니다.  
+ 두이 기능이 모두 데이터베이스 관리 도구에서 지원 됩니다. Server Management Studio, SQL Azure 용 관리 포털 및 dacfx API에서 지원 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `CREATE DATABASE` 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 `dbmanager` 역할의 멤버이거나 사용자에게 `DROP DATABASE` 권한이 할당되어 있어야 합니다.  

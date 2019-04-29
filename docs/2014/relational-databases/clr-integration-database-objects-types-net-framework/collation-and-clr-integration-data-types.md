@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874852"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>데이터 정렬 및 CLR 통합 데이터 형식
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서는 `CompareInfo` 개체가 데이터 정렬을 처리합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 문자열 API(응용 프로그래밍 인터페이스)는 현재 스레드의 `CompareInfo` 개체와 연결된 `CultureInfo` 속성을 사용하여 문자열 비교를 수행합니다. 기본 설정을 `CultureInfo` 개체의 기반이 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 컴퓨터는 Windows 로캘 설정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 합니다. `CultureInfo` 값을 비교할 때 `System.String`가 명시적으로 지정되지 않은 경우 이 설정에 따라 기본 비교 의미 체계가 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터베이스 또는 서버 데이터 정렬에 대한 `CompareInfo` 속성을 명시적으로 변경하지 않습니다. 필요한 경우 사용자가 자신의 루틴에서 적절한 `CompareInfo` 속성을 설정해야 합니다.  

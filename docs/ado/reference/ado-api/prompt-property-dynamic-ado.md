@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027755"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 속성-동적(ADO)
 OLE DB 공급자 초기화 정보에 대 한 사용자 메시지를 표시 하는지 여부를 지정 합니다.  

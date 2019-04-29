@@ -25,7 +25,7 @@
       href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
     - name: '예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기'
       href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-    - name: '샘플: .NET Framework에서 WMI 이벤트 공급자 사용'
+    - name: '예제: .NET Framework에서 WMI 이벤트 공급자 사용'
       href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
 - name: WMI 공급자 이벤트 및 오류
   href: ../../database-engine/dev-guide/wmi-provider-events-and-errors.md

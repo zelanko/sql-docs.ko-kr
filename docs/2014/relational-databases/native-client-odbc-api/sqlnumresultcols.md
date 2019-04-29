@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046758"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   실행된 문의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합의 열 수를 보고할 때 서버에 연결하지 않습니다. 이 경우 `SQLNumResultCols` 서버 왕복은 발생 하지 않습니다. 와 같은 [SQLDescribeCol](sqldescribecol.md) 하 고 [SQLColAttribute](sqlcolattribute.md)호출, `SQLNumResultCols` 준비 되었지만 실행된 되지 않은 문에 서버 왕복이 생성 합니다.  

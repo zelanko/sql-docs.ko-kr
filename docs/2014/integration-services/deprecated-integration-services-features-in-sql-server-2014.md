@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 761d42ba234dceda7cd6689af89e6a3038b901eb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898953"
 ---
 # <a name="deprecated-integration-services-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 Integration Services 기능
   이 항목에서는 사용 되지 않는 설명 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 현재 릴리스에서 계속 사용할 수 있는 기능 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  

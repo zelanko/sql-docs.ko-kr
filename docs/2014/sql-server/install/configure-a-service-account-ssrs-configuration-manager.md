@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033630"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 응용 프로그램은 하나의 서비스 내에서 실행됩니다. 서비스를 실행하는 계정은 설치 중 서비스 ID 페이지에 계정을 지정할 때 정의되지만 다른 계정을 사용하거나 암호를 업데이트하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용할 수 있습니다.  
   
- 보고서 서버가 SharePoint 통합 모드를 사용 하도록 구성 된 및 사용 하 여 서비스 계정을 변경 하는 경우는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구, 있습니다 해야 SharePoint 중앙 관리를 열어 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용 합니다. 이 단계 액세스 권한이 부여 됩니다 새 서비스 계정에 SharePoint 데이터베이스에 통합 하는 데 필요한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용 하 여 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]합니다.  
+ 보고서 서버가 SharePoint 통합 모드를 사용하도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스 계정을 변경하는 경우 SharePoint 중앙 관리를 열어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용해야 합니다. 이 단계를 수행하면 새 서비스 계정에 SharePoint 데이터베이스에 대한 액세스 권한이 부여됩니다. 이 액세스 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 또는 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]과 통합하는 데 필요합니다.  
   
  서비스 계정을 업데이트할 때는 서비스 ID에 종속된 다른 설정도 함께 업데이트되도록 항상 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하십시오.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "48136383"
 -   서비스 계정을 업데이트할 때 URL 예약 오류가 발생할 수 있습니다. 각 URL 예약에는 서비스 계정에 URL 요청을 수락할 권한을 부여하는 DACL(임의 액세스 제어 목록)이 포함된 보안 설명자가 있습니다. 계정을 업데이트할 때 URL을 다시 만들어 새 계정 정보로 DACL을 업데이트해야 합니다. URL 예약을 다시 만들 수 없지만 올바른 계정임이 확실한 경우에는 컴퓨터를 다시 시작합니다. 그래도 오류가 계속되면 다른 계정을 사용해 보십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [서비스 계정 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

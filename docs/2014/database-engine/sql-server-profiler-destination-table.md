@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842744"
 ---
 # <a name="sql-server-profiler---destination-table"></a>SQL Server 프로파일러 - 대상 테이블
   **대상 테이블** 대화 상자를 사용하여 추적을 저장할 테이블을 지정할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48227563"
  추적을 저장할 테이블의 이름을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [테이블에 추적 결과 저장 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [테이블에 추적 결과 저장&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](../tools/sql-server-profiler/sql-server-profiler.md)  
   

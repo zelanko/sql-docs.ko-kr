@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844164"
 ---
 # <a name="options-text-editor---file-extension-page"></a>옵션(텍스트 편집기 - 파일 확장명 페이지)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 특정 파일 확장명의 모든 파일을 처리하는 방법을 지정할 수 있습니다. 입력하는 확장명마다 편집기를 선택할 수 있으므로 특정 형식의 문서를 열 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 편집기를 선택할 수 있습니다. 파일 확장명 옵션을 열려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기**를 확장한 다음 **파일 확장명**을 클릭합니다.  

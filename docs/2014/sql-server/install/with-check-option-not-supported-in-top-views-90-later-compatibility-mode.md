@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b91a4b5bb42ebc86e72d532b9f8d210fbba5506
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184368"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>호환성 모드 90 이상의 TOP이 포함된 뷰에서는 WITH CHECK OPTION이 지원되지 않습니다.
   업그레이드 관리자가 뷰의 SELECT 문이나 참조된 뷰에서 WITH CHECK OPTION 및 TOP 절을 사용하는 뷰를 검색했습니다. 데이터베이스 호환성 모드를 80 이하 모드로 설정한 상태에서 뷰를 이러한 방식으로 정의하면 해당 뷰를 통해 데이터가 잘못 수정될 수 있으며 부정확한 결과가 나올 수 있습니다. 뷰 또는 참조된 뷰가 TOP 절을 사용하고 데이터베이스 호환성 모드가 90 이상으로 설정된 경우에는 뷰를 통해 데이터를 삽입하거나 업데이트할 수 없습니다.  

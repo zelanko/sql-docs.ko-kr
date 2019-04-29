@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016336"
 ---
 # <a name="upgrade-advisor-progress"></a>업그레이드 관리자 진행률
   업그레이드 관리자 분석은 선택된 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 분석을 수행하는 전용 분석기를 통해 시작됩니다. 진행률을 보고 구성 요소가 분석 되는 **진행률** 대화 상자.  

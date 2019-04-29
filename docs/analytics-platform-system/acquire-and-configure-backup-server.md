@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040829"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>획득 및 Parallel Data Warehouse에 대 한 백업 서버 구성
 이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하 여 백업 서버로 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다.  
@@ -61,7 +61,7 @@ Windows Server 2012 권장 또는를 순서 대로 이상:
   
 3.  이중 포트 카드에 대 한 FDR InfiniBand 케이블 2 개 또는 단일 포트 카드에 대 한 1 FDR InfiniBand 케이블을 구입 합니다. FDR InfiniBand 케이블 어플라이언스의 InfiniBand 네트워크에 로드 서버를 연결 됩니다. 케이블 길이 사용자 환경에 따라 로드 서버와 어플라이언스 InfiniBand 스위치 간의 거리에 따라 달라 집니다.  
   
-## <a name="Step3"></a>3 단계: InfiniBand 네트워크에 서버 연결  
+## <a name="Step3"></a>3 단계: InfiniBand 네트워크에 서버를 연결 합니다.  
 로드 서버 InfiniBand 네트워크를 연결 하려면 다음이 단계를 사용 합니다. 서버 InfiniBand 네트워크에 사용 하지 않는 경우이 단계를 건너뜁니다.  
   
 1.  어플라이언스 InfiniBand 네트워크에 연결할 수 있도록 서버 랙 어플라이언스로 닫을 합니다.  
@@ -101,7 +101,7 @@ PDW는 UNC 파일 공유를 통해 백업 서버에 액세스 합니다. 파일 
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>5 단계: 데이터를 백업 시작  
+## <a name="Step5"></a>5 단계: 데이터 백업 시작  
 이제 백업 서버로 데이터를 백업 시작할 준비가 되었습니다.  
   
 백업 데이터, 쿼리 클라이언트를 사용 하 여 SQL Server PDW에 연결한 후 백업 또는 복원할 데이터베이스를 제출 하는 명령입니다. 디스크를 사용 하 여 백업 서버 및 백업 위치를 지정 하는 절 =.  
@@ -147,7 +147,7 @@ PDW에서 네트워크 자격 증명을 제거 하려면 사용 합니다 [sp_pd
 로드 서버에서 작업에는 신뢰할 수 있는 내부 네트워크 외부 데이터를 UNC 경로 사용 수 있습니다. 공격자가 네트워크 또는 이름 확인에 영향을 줄 수 있는 기능을 사용 하 여 가로채 거 나 PDW로 전송 된 데이터를 수정할 수 있습니다. 이 변조 및 정보 공개 위험을 표시합니다. 변조 위험을 완화 하려면:
 
 - 연결에 서명 해야 합니다. 
-- 로드 서버에서 보안 설정 \ 로컬 정책 \ 보안 옵션에서 다음 그룹 정책 옵션을 설정 합니다: Microsoft 네트워크 클라이언트: 디지털 서명 통신 (항상): 사용 하도록 설정 합니다.  
+- 로드 서버에서 보안 설정 \ 로컬 정책 \ 보안 옵션에 다음 그룹 정책 옵션을 설정 합니다.  Microsoft 네트워크 클라이언트: 디지털 서명 통신 (항상): 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
 [백업 및 복원](backup-and-restore-overview.md)  

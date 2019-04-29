@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027758"
 ---
 # <a name="properties-collection-ado"></a>Properties 컬렉션(ADO)
 모든 포함 된 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체의 특정 인스턴스에 대 한 개체입니다.  
@@ -42,4 +42,4 @@ ms.locfileid: "47616761"
   
 ## <a name="see-also"></a>관련 항목  
  [속성 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

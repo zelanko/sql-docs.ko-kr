@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b3f4f1d4efed51a8f9e3b5eaf3bd4a2c7f385e75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034994"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 공급자(ADO)
 OLE DB 균일 한 액세스를 사용 하 여 응용 프로그램을 다양 한 소스에 저장 된 데이터를 제공 하는 COM 인터페이스 집합을 정의 합니다. 이 방법을 통해 데이터 원본을 지 원하는 DBMS 기능은 데이터 원본에 적절 한 인터페이스를 통해 데이터를 공유할 수 있습니다. 기본적으로 OLE DB의 고성능 아키텍처는 유연 하 고 구성 요소 기반 서비스 모델의 용도 기준으로 합니다. OLE DB에는 응용 프로그램과 데이터 간의 중간 계층의 수를 지정된 대신 하는 데 필요한 만큼의 구성에는 특정 태스크를 수행 하는 때에 필요 합니다.  
   
  예를 들어 사용자가 쿼리를 실행 하는 것으로 가정 합니다. 다음과 같은 시나리오를 고려해 보세요.  
   
--   데이터가 있는 현재 존재 하는 ODBC 드라이버는 있지만 네이티브 OLE DB 공급자는 관계형 데이터베이스에 있는: 응용 프로그램이 다음 적절 한 ODBC 드라이버를 로드 하는 ODBC 용 OLE DB 공급자에 게 ADO를 사용 합니다. 드라이버가 dbms의 데이터를 검색 하는 SQL 문을 전달 합니다.  
+-   데이터가 있는 현재 존재 하는 ODBC 드라이버는 있지만 네이티브 OLE DB 공급자는 관계형 데이터베이스에 있습니다. 그런 다음 적절 한 ODBC 드라이버를 로드 하는 ODBC 용 OLE DB 공급자에 게 ADO를 사용 하는 응용 프로그램입니다. 드라이버가 dbms의 데이터를 검색 하는 SQL 문을 전달 합니다.  
   
--   네이티브 OLE DB 공급자가 Microsoft SQL Server의 데이터가 있는: 응용 프로그램이 Microsoft SQL Server 용 OLE DB 공급자에 게 직접 이야기 ADO를 사용 합니다. 없는 매개자는 필요 합니다.  
+-   데이터는 네이티브 OLE DB 공급자가 Microsoft SQL Server에 상주 합니다. ADO를 사용 하 여 Microsoft SQL Server 용 OLE DB 공급자에 직접 연결 하는 응용 프로그램입니다. 없는 매개자는 필요 합니다.  
   
--   에 OLE DB 공급자는 SQL 쿼리를 처리 하기 위한 엔진으로 노출 하지 않습니다는 Microsoft Exchange Server에 상주 하는 데이터: 응용 프로그램 Microsoft Exchange 용 OLE DB 공급자에 게 ADO를 사용 하 고는 OLE DB 쿼리 프로세서를 호출 쿼리를 처리 하는 구성 요소입니다.  
+-   데이터에는 OLE DB 공급자는 SQL 쿼리를 처리 하기 위한 엔진으로 노출 하지 않습니다는 Microsoft Exchange Server에 상주 합니다. 응용 프로그램이 ADO를 사용 하 여 Microsoft Exchange 용 OLE DB 공급자에 게 및 쿼리 처리에 OLE DB 쿼리 프로세서 구성 요소를 호출 합니다.  
   
--   문서 형식의 Microsoft NTFS 파일 시스템에 상주 하는 데이터: Microsoft 인덱싱 서비스에 대해 효율적으로 콘텐츠를 사용 하도록 설정 하려면 파일 시스템에 콘텐츠 및 문서 속성을 인덱싱하는 네이티브 OLE DB 공급자를 사용 하 여 데이터에 액세스 검색합니다.  
+-   데이터는 문서 형식의 Microsoft NTFS 파일 시스템에 상주합니다. Microsoft 인덱싱 서비스에 대해 효율적인 콘텐츠 검색을 사용 하도록 설정 하려면 파일 시스템에 콘텐츠 및 문서 속성을 인덱싱하는 네이티브 OLE DB 공급자를 사용 하 여 데이터 액세스 됩니다.  
   
  위의 모든 예제에서 응용 프로그램 데이터를 쿼리할 수 있습니다. 최소한의 구성 요소를 사용 하 여 사용자의 요구 사항이 충족 됩니다. 각각의 경우에서 필요한 경우에 사용 되는 추가 구성 요소 및 필수 구성 요소 호출 됩니다. OLE DB를 사용할 때 재사용 가능한와 공유할 수 있는 구성 요소의이 요청 시 로드 높은 성능에 크게 기여 합니다.  
   

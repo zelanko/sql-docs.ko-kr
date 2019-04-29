@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017178"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>중급 데이터 마이닝 자습서(Analysis Services - 데이터 마이닝)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 만들고 데이터 마이닝 모델을 사용 하 여 작업 하기 위한 통합된 환경을 제공 합니다. 데이터 원본에 쉽게 바인딩하고, 여러 모델을 만들어 같은 데이터에 대해 테스트하고, 예측 분석에 사용할 모델을 배포할 수 있습니다.  

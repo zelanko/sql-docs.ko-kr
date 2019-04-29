@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035252"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>SQL Server Profiler로 추적 필터링
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 이벤트의 데이터 열에 필터를 정의하여 관심이 있는 이벤트에 대한 정보만 캡처할 수 있습니다. 추적 필터를 사용하면 추적 시 캡처되는 이벤트 수가 줄어 들기 때문에 추적이 시스템 성능에 미치는 영향이 감소합니다. 또한 필터링을 통해 검색할 이벤트 수가 적어지므로 추적 출력을 읽기 쉽습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "52775375"
   
  [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

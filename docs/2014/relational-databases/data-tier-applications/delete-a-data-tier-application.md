@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872722"
 ---
 # <a name="delete-a-data-tier-application"></a>데이터 계층 애플리케이션 삭제
   데이터 계층 애플리케이션 삭제 마법사 또는 Windows PowerShell 스크립트를 사용하여 데이터 계층 애플리케이션을 삭제할 수 있습니다. 연결된 데이터베이스를 보존, 분리 또는 삭제할지를 지정할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **DAC를 업그레이드 하려면 사용 합니다.**  [데이터 계층 응용 프로그램 등록 마법사](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 등록 마법사](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  DAC(데이터 계층 애플리케이션) 인스턴스를 삭제할 때는 데이터 계층 애플리케이션과 연결된 데이터베이스에 대해 어떠한 작업을 수행할지 지정하는 3가지 옵션 중 하나를 선택할 수 있습니다. 3가지 옵션 모두 DAC 정의 메타데이터를 삭제합니다. 각 옵션은 데이터 계층 애플리케이션과 연결된 데이터베이스에 대해 수행되는 작업에 차이가 있습니다. 마법사는 로그인처럼 DAC 또는 데이터베이스와 연결된 인스턴스 수준 개체는 삭제하지 않습니다.  

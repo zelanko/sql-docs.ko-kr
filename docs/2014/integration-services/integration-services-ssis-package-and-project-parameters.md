@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892264"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services(SSIS) 매개 변수
   SSIS([!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 *프로젝트 매개 변수* 를 만들고 패키지 수준에서 *패키지 매개 변수* 를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다.  
@@ -102,6 +102,6 @@ ms.locfileid: "58377981"
  [프로젝트를 배포한 후 매개 변수 값 설정](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>관련 내용  
- 블로그 항목, [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781), mattmasson.com.  
+ mattmasson.com의 블로그 항목 - [SSIS 빠른 팁: 필수 매개 변수](https://go.microsoft.com/fwlink/?LinkId=239781).  
   
   

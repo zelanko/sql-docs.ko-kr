@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032980"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47696482"
 |**scope_object_id**|**정수**|범위가 OBJECT인 경우 계획 지침의 범위를 정의하는 개체의 object_id입니다.<br /><br /> 계획 지침 범위가 OBJECT가 아니면 NULL입니다.|  
 |**scope_batch**|**nvarchar(max)**|경우에 텍스트를 일괄 처리 **scope_type** sql입니다.<br /><br /> 일괄 처리 형식이 SQL이 아니면 NULL입니다.<br /><br /> Null 인 경우와 **scope_type** SQL의 값은 **query_text** 적용 됩니다.|  
 |**parameters**|**nvarchar(max)**|계획 지침과 연결된 매개 변수 목록을 정의하는 문자열입니다.<br /><br /> NULL = 계획 지침에 연결되는 매개 변수 목록이 없습니다.|  
-|**힌트**|**nvarchar(max)**|계획 지침과 연결된 OPTION 절 힌트입니다.|  
+|**hints**|**nvarchar(max)**|계획 지침과 연결된 OPTION 절 힌트입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

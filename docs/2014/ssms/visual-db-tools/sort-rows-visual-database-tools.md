@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049160"
 ---
 # <a name="sort-rows-visual-database-tools"></a>행 정렬(Visual Database Tools)
   쿼리 결과에서 행을 정렬할 수 있습니다. 즉, 해당 값이 결과 집합의 행 순서를 결정하는 특정 열 또는 열 집합의 이름을 지정할 수 있습니다.  

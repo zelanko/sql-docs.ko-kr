@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049449"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>장애 조치(failover) 클러스터 인스턴스 관리 및 유지 관리
-  사용 하 여 노드 추가 또는 제거에서 기존 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI) 등의 유지 관리 작업 수행을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램입니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
+  기존 AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스)에서 노드 추가 또는 제거와 같은 유지 관리 태스크는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 수행합니다. IP 주소 리소스 변경, 특정 FCI 시나리오 복구 등과 같은 다른 관리 태스크는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 관리 스냅인인 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 수행합니다.  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>장애 조치(Failover) 클러스터 인스턴스 유지 관리  
  FCI는 설치한 후에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 변경하거나 복구할 수 있습니다. 예를 들어 FCI에 노드를 더 추가하거나 FCI를 독립 실행형 인스턴스로 실행하거나 FCI 구성에서 노드를 제거할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "48110543"
 |태스크 설명|항목 링크|  
 |----------------------|----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 종속성을 추가하는 방법에 대해 설명합니다.|[SQL Server 리소스에 종속성 추가](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos는 클라이언트/서버 애플리케이션을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. Kerberos 인증을 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 AlwaysOn Fci를 사용 하 여 합니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos는 클라이언트/서버 애플리케이션을 위한 강력한 인증을 제공하기 위해 디자인된 네트워크 인증 프로토콜입니다. Kerberos는 상호 운용성의 기반을 제공하고 기업 전체의 네트워크 인증 보안을 강화합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 독립 실행형 인스턴스 또는 AlwaysOn FCI에서 Kerberos 인증을 사용할 수 있습니다.|[Kerberos 연결의 서비스 사용자 이름 등록](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Kerberos 인증을 사용하는 방법을 설명하는 콘텐츠에 대한 링크를 제공합니다.||  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 오류를 복구하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스 오류 복구](recover-from-failover-cluster-instance-failure.md)|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스에 대한 IP 주소 리소스를 변경하는 데 사용되는 프로시저에 대해 설명합니다.|[장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경](change-the-ip-address-of-a-failover-cluster-instance.md)|  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bf8cce4fec8bb0156155d5e2cb3ef6d7a9ea5a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836883"
 ---
 # <a name="add-variable"></a>변수 추가
   **변수 추가** 대화 상자를 사용하여 새 변수의 속성을 지정할 수 있습니다.  

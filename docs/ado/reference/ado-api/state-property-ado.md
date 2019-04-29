@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027664"
 ---
 # <a name="state-property-ado"></a>State 속성(ADO)
 적용 가능한 모든 개체에 대 한 개체의 상태 열렸는지 닫혔는지 여부를 나타냅니다. 개체는 비동기 메서드를 실행 하는 경우 개체의 현재 상태에 연결, 실행 또는 검색을 나타냅니다.  

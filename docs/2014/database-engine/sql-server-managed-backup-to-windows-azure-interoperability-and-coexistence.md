@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4d883d54a1ad933d4e248f292d9b6a222915a00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842910"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업: 상호 운용성 및 공존성
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 의 몇 가지 기능에 대한 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 상호 운용성 및 공존성에 대해 설명합니다. 이러한 기능에는 AlwaysOn 가용성 그룹, 데이터베이스 미러링, 백업 유지 관리 계획, 로그 전달, 임시 백업, 데이터베이스 분리 및 데이터베이스 삭제가 있습니다.  

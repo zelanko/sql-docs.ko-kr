@@ -47,11 +47,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027901"
 ---
 # <a name="item-property-ado"></a>Item 속성(ADO)
 이름 또는 서 수로 컬렉션의 특정 멤버를 나타냅니다.  

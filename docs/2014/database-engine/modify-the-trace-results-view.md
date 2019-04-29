@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845963"
 ---
 # <a name="modify-the-trace-results-view"></a>추적 결과 보기 수정
   이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  

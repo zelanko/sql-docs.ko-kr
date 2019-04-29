@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023436"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning 이벤트 클래스
   **Bitmap Warning** 이벤트 클래스를 사용하여 쿼리 내의 비트맵 필터 사용을 모니터링할 수 있습니다. 또한 이벤트 하위 클래스를 사용하여 쿼리 내에서 비트맵 필터가 해제되면 보고되도록 할 수 있습니다.  

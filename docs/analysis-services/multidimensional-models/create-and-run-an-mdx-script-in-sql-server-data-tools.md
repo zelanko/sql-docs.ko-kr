@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b63c72053445875eda3afd007d1235ef87c9ff53
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866904"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>SQL Server Data Tools에서 MDX 스크립트 만들기 및 실행
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "34025300"
   
 4.  MDX 스크립트를 실행하려면 새 MDX 스크립트 변경 내용이 포함된 큐브를 배포하고 처리합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [기본 MDX 스크립트 & #40; Mdx& #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [MDX 스크립팅 기본 사항 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [MDX 스크립팅 문 & #40; Mdx& #41;](../../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>관련 항목  
+ [기본 MDX 스크립트&#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 스크립팅 문&#40;MDX&#41;](../../mdx/mdx-scripting-statements-mdx.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900003"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 `Object` 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  

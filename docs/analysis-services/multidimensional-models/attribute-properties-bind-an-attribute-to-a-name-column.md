@@ -1,5 +1,5 @@
 ---
-title: 이름 열에 특성 바인딩 | Microsoft Docs
+title: 이름 열으로 특성 바인딩 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020438"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>특성 속성-이름 열에 특성 바인딩
+# <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>특성 속성 - 이름 열에 특성 바인딩
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 절차에서는 차원 디자이너의 **특성** 창과 **개체 바인딩** 대화 상자를 사용하여 수동으로 이름 열에 특성을 바인딩하는 방법에 대해 설명합니다.  
   

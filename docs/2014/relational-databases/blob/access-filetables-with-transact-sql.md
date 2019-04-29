@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 28447ca0e1e503e73826aba5e02b22bf71cff6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920304"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "48209693"
   
 -   INSERT 문이 **name**, **path_locator**, **parent_path_locator** 또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
--   응용 프로그램에서는 [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
+-   애플리케이션에서는 [GetPathLocator&amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
   
 ##  <a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  

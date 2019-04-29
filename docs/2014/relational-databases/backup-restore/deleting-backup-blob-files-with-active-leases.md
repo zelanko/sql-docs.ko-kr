@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876173"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>활성 임대가 있는 백업 Blob 파일 삭제
   Windows Azure Storage로 백업하거나 복원할 때 SQL Server는 blob에 대한 단독 액세스를 잠그기 위해 무한 임대를 획득합니다. 백업 또는 복원 프로세스가 성공적으로 완료되면 임대가 해제됩니다. 백업 또는 복원에 실패하면 백업 프로세스에서는 잘못된 모든 blob을 정리하려고 합니다. 하지만 오랫동안 지속된 네트워크 연결 오류로 인해 백업이 실패한 경우에는 백업 프로세스에서 blob에 액세스할 수 없으므로 blob이 분리됩니다. 즉, 임대가 해제될 때까지 blob을 쓰거나 삭제할 수 없습니다. 이 항목에서는 임대를 해제하고 blob을 삭제하는 방법에 대해 설명합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "53352665"
   
      **임대 해제 중**  
   
-     **에 대 한 임대 \<b의 U >는 복원 임대 합니다. 여전히 활성 상태인 복원 임대를 가진 blob이 있는 경우에이 메시지가 나타납니다.**  
+     **Blob의 \<URL>에 대한 임대는 복원 임대입니다. 아직 활성 상태인 복원 임대를 가진 Blob이 있는 경우에만 이 메시지가 나타납니다.**  
   
      **\<Blob의 URL>의 임대는 \<Blob의 URL>의 복원 임대 해제 임대가 아닙니다.**  
   

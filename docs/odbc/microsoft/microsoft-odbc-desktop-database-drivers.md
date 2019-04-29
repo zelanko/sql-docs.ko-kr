@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045955"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 데스크톱 데이터베이스 드라이버
 ODBC는 데이터베이스 액세스 언어와 언어 SQL (구조적 쿼리)를 사용 하는 API입니다. 응용 프로그램의 소스 코드에 직접 통합 되는 동일한 ODBC 소스 코드를 사용 하 여 다양 한 Dbms (데이터베이스 관리 시스템)에 액세스할 수 있습니다. Microsoft ODBC 데스크톱 데이터베이스 드라이버를 사용 하 여 ODBC 사용 응용 프로그램의 사용자 쿼리를 열려면 하 고 ODBC 인터페이스를 통해 데스크톱 데이터베이스를 업데이트할 수 있습니다.  

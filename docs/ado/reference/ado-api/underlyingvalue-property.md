@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043508"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue 속성
 현재 값을 나타내는 [필드](../../../ado/reference/ado-api/field-object.md) 데이터베이스의 개체입니다.  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022181"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server와 함께 제공되는 OLE DB 공급자를 통해 IBM DB2/AS 400, DB2/MVS 및 DB2/Universal Database에 대한 밀어넣기 구독을 지원합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "53356666"
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`image`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
@@ -139,7 +139,7 @@ ms.locfileid: "53356666"
 |`uniqueidentifier`|CHAR (38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|FOR BIT DATA VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|VARCHAR(0) FOR BIT DATA<sup>1</sup>|  
 |`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`xml`|VARCHAR(0)<sup>1</sup>|  
   

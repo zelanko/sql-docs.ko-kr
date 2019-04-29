@@ -1,5 +1,5 @@
 ---
-title: '9 단원: 계층 만들기 | Microsoft Docs'
+title: '9단원: 계층 만들기 | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017255"
 ---
 # <a name="lesson-9-create-hierarchies"></a>9단원: 계층 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ ms.locfileid: "42791700"
   
 계층을 만들려면 모델 디자이너를 사용할지 *다이어그램 보기*합니다. 계층 만들기 및 관리 데이터 뷰에서 지원 되지 않습니다.  
   
-이 단원에 소요되는 예상 시간: **20분**  
+예상이 단원을 완료 시간: **20 분**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 완료 해야 이전 단원: [8 단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)합니다.  
+## <a name="prerequisites"></a>사전 요구 사항  
+이 항목은 순서대로 완료해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [8단원: 큐브 뷰 만들기](../analysis-services/lesson-8-create-perspectives.md)합니다.  
   
 ## <a name="create-hierarchies"></a>계층 만들기  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42791700"
   
 5.  마우스 오른쪽 단추로 클릭 합니다 **ModelName** 열 > **계층 구조를 추가할**를 선택한 후 **범주**합니다. 에 대 한 동일한 작업을 수행할 **EnglishProductName**합니다. 계층 구조에서 이러한 열의 이름을 바꿀 **모델** 하 고 **제품**합니다.  
 
-    ![으로 테이블 형식-lesson9-범주](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>DimDate 테이블에서 계층을 만들려면  
   
@@ -73,6 +73,6 @@ ms.locfileid: "42791700"
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>다음 단계
-다음 단원으로 이동 합니다. [단원 10: 파티션 만들기](../analysis-services/lesson-10-create-partitions.md)합니다. 
+다음 단원으로 이동 합니다. [10 단원: 파티션을 만들](../analysis-services/lesson-10-create-partitions.md)합니다. 
   
   

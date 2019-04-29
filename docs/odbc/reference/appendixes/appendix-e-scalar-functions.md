@@ -1,5 +1,5 @@
 ---
-title: '부록 e: 스칼라 함수 | Microsoft Docs'
+title: '부록 E: 스칼라 함수 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026677"
 ---
-# <a name="appendix-e-scalar-functions"></a>부록 e: 스칼라 함수
+# <a name="appendix-e-scalar-functions"></a>부록 E: 스칼라 함수
 ODBC이이 부록의 해당 섹션에 제공 된 이러한 함수 형식을 각각에 대 한 자세한 정보를 사용 하 여 다음과 같은 유형의 스칼라 함수를 지정 합니다. 함수 설명에는 연결 된 구문 포함 됩니다.  
   
  이 부록에는 다음 항목에 있습니다.  

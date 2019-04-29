@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916825"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>클러스터형 인덱스의 크기 예측
   다음 단계를 사용하여 클러스터형 인덱스에 데이터를 저장하는 데 필요한 공간을 예측할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "48140793"
      ***Max_Var_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 스토리지 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
     > [!NOTE]  
-    >  결합할 수 있습니다 `varchar`, `nvarchar`하십시오 `varbinary`, 또는 `sql_variant` 정의 된 총 테이블 너비가 8,060 바이트를 초과 하는 열. 이러한 각 열의 길이는 `varchar`, `varbinary` 또는 `sql_variant` 열의 경우 8,000바이트 이내여야 하고 `nvarchar` 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
+    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 `varchar`, `nvarchar`, `varbinary` 또는 `sql_variant` 열을 결합할 수 있습니다. 이러한 각 열의 길이는 `varchar`, `varbinary` 또는 `sql_variant` 열의 경우 8,000바이트 이내여야 하고 `nvarchar` 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다.  
   
      가변 길이 열이 없는 경우에는 ***Variable_Data_Size*** 를 0으로 설정합니다.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48140793"
   
 -   LOB(Large Object) 값  
   
-     공간 LOB 데이터 형식을 저장 하려면 사용할 정확 하 게 하는 알고리즘 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`를 `xml`, 및 `image` 값은 복잡 합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
+     LOB 데이터 형식 `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` 및 `image` 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
   
 -   압축  
   

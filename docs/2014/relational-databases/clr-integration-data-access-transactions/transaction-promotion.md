@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874769"
 ---
 # <a name="transaction-promotion"></a>트랜잭션 승격
   트랜잭션 *승격* 은 필요에 따라 완전히 배포 가능한 트랜잭션으로 자동 승격될 수 있는 경량 로컬 트랜잭션에 대해 설명합니다. 서버의 데이터베이스 트랜잭션 내에서 관리되는 저장 프로시저를 호출하면 로컬 트랜잭션의 컨텍스트에서 CLR(공용 언어 런타임) 코드가 실행됩니다.  데이터베이스 트랜잭션 내에서 원격 서버에 대한 연결을 열면 원격 서버에 대한 연결이 분산 트랜잭션에 참여하고 로컬 트랜잭션이 분산 트랜잭션으로 자동 승격됩니다. 따라서 트랜잭션 승격은 필요할 때까지 분산 트랜잭션의 생성을 지연시켜 분산 트랜잭션의 오버헤드를 최소화합니다. `Enlist` 키워드를 사용하여 트랜잭션 승격을 사용하도록 설정한 경우 트랜잭션 승격이 자동으로 수행되며 개발자 작업이 필요하지 않습니다. .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 .NET Framework `System.Data.SqlClient` 네임스페이스의 클래스를 통해 처리되는 트랜잭션 승격 지원을 제공합니다.  

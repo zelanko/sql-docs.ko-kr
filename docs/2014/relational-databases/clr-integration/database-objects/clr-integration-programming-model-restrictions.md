@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873814"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>CLR 통합 프로그래밍 모델 제한 사항
   관리 되는 저장 프로시저나 다른 관리 되는 데이터베이스 개체를 작성할 때 가지 특정 코드 검사를 수행한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 처음 등록 될 때 관리 코드 어셈블리에서 검사를 사용 하 여는 `CREATE ASSEMBLY` 문 및 런타임에도 합니다. 실제로 런타임에 접근할 수 없는 코드 경로가 어셈블리에 있을 수 있으므로 관리 코드는 런타임에도 검사됩니다.  따라서 특히 클라이언트 환경에서 실행되는 '안전하지 않은' 코드가 있는 경우 어셈블리가 차단되지 않고 호스팅된 CLR에서 실행되지 않도록 유연성 있게 타사 어셈블리를 등록할 수 있습니다. 관리 코드가 충족 해야 하는 요구 사항으로 어셈블리를 등록 하는 여부에 따라 달라 집니다 `SAFE`, `EXTERNAL_ACCESS`, 또는 `UNSAFE`, `SAFE` 가 가장 엄격 함 및 아래에 나열 되어 있습니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "52509905"
 ### <a name="safe"></a>SAFE  
  모든 `EXTERNAL_ACCESS` 조건이 검사됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [지원 되는.NET Framework 라이브러리](supported-net-framework-libraries.md)   
  [CLR 통합 코드 액세스 보안](../security/clr-integration-code-access-security.md)   
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

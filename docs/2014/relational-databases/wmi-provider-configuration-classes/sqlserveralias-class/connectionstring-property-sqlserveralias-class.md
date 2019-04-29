@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 647fb88b6af501ad17dcf64738d72679f36e704e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035623"
 ---
 # <a name="connectionstring-property-sqlserveralias-class"></a>ConnectionString 속성(SqlServerAlias 클래스)
   서버 연결 별칭에 대한 연결을 설정하는 데 사용되는 연결 문자열을 가져옵니다.  

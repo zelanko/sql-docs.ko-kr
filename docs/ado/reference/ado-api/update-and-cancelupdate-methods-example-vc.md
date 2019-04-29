@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8094271c765b9e211f724b7c18a72862f70a1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042279"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 및 CancelUpdate 메서드 예제(VC++)
 이 예제에서는 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드와 함께 합니다 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  

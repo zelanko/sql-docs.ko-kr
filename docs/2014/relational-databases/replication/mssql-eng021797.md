@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023584"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -30,7 +30,7 @@ ms.locfileid: "52753785"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |심볼 이름||  
-|메시지 텍스트|'%s'은(는) '컴퓨터\\로그인' 또는 '도메인\\로그인' 형식의 올바른 Windows 로그인이어야 합니다. '%s'에 대한 설명서를 참조하십시오.|  
+|메시지 텍스트|'%s' 형식의 올바른 Windows 로그인 해야 합니다. '\' 또는 '도메인 '입니다. '%s'에 대한 설명서를 참조하십시오.|  
   
 ## <a name="explanation"></a>설명  
  이 오류는 **@job_login** 매개 변수에 대해 지정된 값이 Null이거나 잘못된 경우 다음 복제 저장 프로시저에 의해 발생합니다. 이 오류는 **db_owner** 고정 데이터베이스 역할의 멤버가 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 스크립트를 실행하는 경우 발생할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 보안 모델이 변경되었으므로 이러한 스크립트를 업데이트해야 합니다.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705195"
 ---
 # <a name="export-as-policy-dialog-box"></a>정책으로 내보내기 대화 상자
   이 대화 상자를 사용하여 정책 기반 관리 패싯 속성 집합을 정책으로 저장할 수 있습니다. 정책을 XML 파일로 저장하거나 현재 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 직접 저장할 수 있습니다.  

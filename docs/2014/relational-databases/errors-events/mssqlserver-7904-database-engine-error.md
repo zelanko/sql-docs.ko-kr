@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913740"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -30,7 +30,7 @@ ms.locfileid: "48115053"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_MISSING_FILE|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID에서 열 ID C_ID, ROWGUID RG_ID의 FileStream 파일을 찾지 못했습니다.|  
+|메시지 텍스트|테이블 오류: Filestream 파일 열 ID C_ID, ROWGUID RG_ID의 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID 찾을 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  파티션의 열 값에 해당 FILESTREAM 열 디렉터리와 일치하는 FILESTREAM 파일이 없습니다.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183474"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
   이 대화 상자를 사용하여 특정 일정을 참조하는 작업에 대한 정보를 확인할 수 있습니다.  

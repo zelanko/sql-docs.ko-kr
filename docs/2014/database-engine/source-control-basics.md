@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842988"
 ---
 # <a name="source-control-basics"></a>원본 제어 기본 사항
   소스 제어란 서버 소프트웨어의 중심부에서 파일 버전을 저장 및 추적하고 파일에 대한 액세스를 제어하는 시스템을 말합니다. 일반 원본 제어 시스템에는 원본 제어 공급자 및 둘 이상의 원본 제어 클라이언트가 포함됩니다.  

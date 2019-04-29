@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046689"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 값을 반환합니다. **SQLProcedures** 결과 집합 열 PROCEDURE_TYPE에 대해 sql_pt_function을 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "53365995"
   
  **SQLProcedures** 이름과 일치 하는 모든 프로시저에 대 한 정보를 반환 *ProcName* 는 현재 사용자에 부여 된 VIEW DEFINITION 권한 또는 현재 사용자가 실행 될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLProcedures 함수](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

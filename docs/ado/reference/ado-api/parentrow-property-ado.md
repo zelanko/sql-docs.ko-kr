@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027873"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 속성(ADO)
 OLE DB의 컨테이너를 설정 **행** 에서 개체를 **ADORecordConstruction** 개체를 부모 행의 ADO에 켜져 있도록 **레코드** 개체입니다.  

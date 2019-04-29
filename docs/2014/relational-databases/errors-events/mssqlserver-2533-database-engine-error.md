@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914821"
 ---
 # <a name="mssqlserver2533"></a>MSSQLSERVER_2533
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074450"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC_PAGE_WAS_NOT_SEEN|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형)에 할당된 페이지 P_ID이(가) 없습니다. 페이지가 잘못되었거나 페이지 머리글의 할당 단위 ID가 잘못되었을 수 있습니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 된 페이지 P_ID, 할당 단위 ID A_ID (type 유형) 표시 되지 않습니다. 페이지가 잘못되었거나 페이지 머리글의 할당 단위 ID가 잘못되었을 수 있습니다.|  
   
 ## <a name="explanation"></a>설명  
  페이지가 할당 단위 ID *A_ID*에 할당되었지만 이 할당 단위는 페이지 머리글에 없습니다. 헤더에 다른 할당 단위 ID가 있습니다. 페이지 헤더에 있는 할당 단위 ID가 올바른 개체에 대한 것이면 해당 페이지에 MSSQLEngine_2534 오류가 발생할 수 있습니다.  

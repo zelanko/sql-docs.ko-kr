@@ -1,5 +1,5 @@
 ---
-title: 로컬 파티션 (Analysis Services) 만들기 및 관리 | Microsoft Docs
+title: (Analysis Services)는 로컬 파티션 만들기 및 관리 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49ac59377001eb6007f7f647d3817993c6121b74
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866684"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>로컬 파티션 만들기 및 관리(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34024700"
 > [!NOTE]  
 >  파티션에서 데이터를 필터링하지 않고 같은 쿼리를 사용하여 DSV에 이름 쿼리를 만든 다음 명명된 쿼리를 기준으로 파티션을 사용합니다.  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>옵션 2: 테이블, 뷰 또는 명명된 쿼리 사용  
+## <a name="option-2-use-tables-views-or-named-queries"></a>옵션 2: 테이블, 뷰 또는 명명 된 쿼리를 사용 합니다.  
  이미 DSV가 팩트를 개별 테이블(예: 연도 또는 분기별)로 구성하는 경우 각 파티션에 자체 데이터 원본 테이블이 있는 개별 테이블을 기반으로 파티션을 만들 수 있습니다. 이것은 기본적으로 측정값 그룹이 분할되는 방식이지만 여러 파티션의 경우에는 원래 파티션을 여러 파티션으로 나누고 각각의 새 파티션을 데이터를 제공하는 데이터 원본 테이블에 매핑하십시오.  
   
  세 개체 모두 DSV에 정의되고 파티션 원본 대화 상자의 테이블 바인딩 옵션을 사용하여 파티션에 바인딩된다는 점에서 뷰와 명명된 쿼리는 테이블과 기능적으로 동일합니다. 뷰 또는 명명된 쿼리를 만들어 각 파티션에 필요한 데이터 세그먼트를 생성할 수 있습니다. 자세한 내용은 [데이터 원본 뷰에서 명명된 쿼리 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)를 참조하세요.  
@@ -117,7 +117,7 @@ ms.locfileid: "34024700"
   
  마지막 단계로, 일반적으로 테이블 자체(아직 있는 경우)를 기반으로 하는 기본 파티션을 제거합니다. 제거하지 않으면 쿼리 기반 파티션이 전체 테이블을 기반으로 하는 쿼리와 겹치게 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [파티션 & #40; Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [원격 파티션](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services & #40;의 파티션 병합 SSAS-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  

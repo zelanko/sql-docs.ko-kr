@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cb5a00278e8b740df5efa93e71c417ccb4943f5d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016299"
 ---
 # <a name="displayname-property-sqlservice-class"></a>DisplayName 속성(SqlService 클래스)
   서비스의 표시 이름을 가져옵니다.  
@@ -52,7 +52,7 @@ object
 mysqlservice.DisplayName = "Atdisk"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

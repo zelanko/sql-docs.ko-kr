@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032988"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "52779775"
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**publication_type**|**int**|게시의 유형입니다.<br /><br /> **0** = 트랜잭션.<br /><br /> **2** = 병합 합니다.|  
 |**publisher_login**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용하는 로그인 ID입니다.|  
 |**publisher_password**|**nvarchar(524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용하는 암호화된 암호입니다.|  
 |**publisher_security_mode**|**int**|게시자에서 구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증 합니다.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.<br /><br /> **2** = 동기화 트리거를 사용 하는 정적 **sysservers** 원격 프로시저 호출 (RPC), 작업을 수행 하는 항목 및 *게시자* 정의 해야 합니다는 **sysservers**테이블에서 원격 서버 또는 연결 된 서버입니다.|  
-|**배포자**|**sysname**|배포자 이름입니다.|  
+|**distributor**|**sysname**|배포자 이름입니다.|  
 |**distributor_login**|**sysname**|배포자에서 SQL Server 인증에 사용 되는 로그인 ID입니다.|  
 |**distributor_password**|**nvarchar(524)**|배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호화된 암호입니다.|  
 |**distributor_security_mode**|**int**|배포자에서 구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.<br /><br /> **1** = Windows 인증입니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "52779775"
 |**internet_password**|**nvarchar(524)**|병합 에이전트가 사용 하 여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 하는 로그인 암호를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  
 |**internet_security_mode**|**int**|여기서 값에는 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 되는 인증 모드 **1** Windows 인증 및 값 의미 **0** 의미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  
 |**internet_timeout**|**int**|웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
-|**호스트 이름**|**sysname**|에 대 한 값을 지정 **HOST_NAME** 에서이 함수는 사용 하는 경우를 **여기서** 조인 필터 또는 논리적 레코드 관계 절.|  
+|**hostname**|**sysname**|에 대 한 값을 지정 **HOST_NAME** 에서이 함수는 사용 하는 경우를 **여기서** 조인 필터 또는 논리적 레코드 관계 절.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

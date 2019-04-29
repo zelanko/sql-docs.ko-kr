@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028040"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 인터페이스
 셰이프 공급자에 대 한 기본 OLE DB 데이터 원본 개체를 가져옵니다.  

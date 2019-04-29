@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043227"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "34026920"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>시간 인텔리전스 기능 보기  
  비즈니스 인텔리전스 마법사의 마지막 페이지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 변경 사항을 확인할 수 있습니다. 시간 인텔리전스 기능의 경우 다음 표에서 설명하는 것처럼 마법사에서 선택한 시간 차원, 연결된 데이터 원본 뷰 및 연결된 큐브를 변경합니다.  
   
-|개체|변경|  
+|Object|변경|  
 |------------|------------|  
 |시간 차원|각 계산(또는 보기)에 특성을 추가합니다.|  
 |데이터 원본 뷰|시간 차원의 각 새 특성에 대한 시간 테이블에 계산 열을 추가합니다.|  
 |Cube|계산을 수행하는 MDX(Multidimensional Expressions) 코드를 정의하는 계산 멤버를 추가합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
- [계산된 멤버 만들기](../../analysis-services/multidimensional-models/create-calculated-members.md)  
+## <a name="see-also"></a>관련 항목  
+ [계산 멤버 만들기](../../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

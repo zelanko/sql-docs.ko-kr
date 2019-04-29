@@ -17,11 +17,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837523"
 ---
 # <a name="legal-notice-for-documentation"></a>설명서에 대한 법적 고지 사항
   이 설명서는 "있는 그대로" 제공됩니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서의 내용 및 의견은 예고 없이 변경될 수 있습니다. 해당 사용으로 인해 발생하는 모든 위험은 귀하의 책임입니다.  

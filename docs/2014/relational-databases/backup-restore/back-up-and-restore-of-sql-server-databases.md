@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922944"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다.  

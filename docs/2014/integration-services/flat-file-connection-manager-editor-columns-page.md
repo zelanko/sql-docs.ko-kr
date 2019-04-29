@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894446"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>플랫 파일 연결 관리자 편집기(열 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **열** 페이지를 사용하여 행 및 열 정보를 지정하고 파일을 미리 볼 수 있습니다.  

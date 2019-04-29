@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <=(작거나 같음)(SSIS 식)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? : (조건부)(SSIS 식)'
+    - name: '? 으로 디코딩된 문자입니다. (조건부)(SSIS 식)'
       href: conditional-ssis-expression.md
 - name: 함수(SSIS 식)
   href: functions-ssis-expression.md

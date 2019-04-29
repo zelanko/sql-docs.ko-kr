@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bf67585a29ffe1e055efaf9132656c3d1da5dc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837660"
 ---
 # <a name="sql-server-backward-compatibility"></a>이전 SQL Server 버전과의 호환성
   이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전 간에 변경된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]동작을 설명합니다.  

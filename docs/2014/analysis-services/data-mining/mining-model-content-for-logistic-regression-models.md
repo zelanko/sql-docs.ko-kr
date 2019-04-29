@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733516"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>로지스틱 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 로지스틱 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -141,7 +141,7 @@ ms.locfileid: "48164513"
  부모 노드에서 해당 노드에 도달할 확률입니다. 로지스틱 회귀 모델의 경우 항상 0입니다.  
   
  NODE_DISTRIBUTION  
- 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형에 대해이 테이블의 내용에 대 한 자세한 정보에서 NODE_DISTRIBUTION 테이블 이해 섹션을 참조 하세요 [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형과 관련해서 이 테이블에 포함되는 내용에 대한 자세한 내용은 [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)를 참조하세요.  
   
  NODE_SUPPORT  
  로지스틱 회귀 모델의 경우 항상 0입니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "48164513"
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 로지스틱 회귀 알고리즘](microsoft-logistic-regression-algorithm.md)   
- [마이닝 모델 콘텐츠 신경망 모델에 대 한 &#40;Analysis Services-데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [로지스틱 회귀 모델 쿼리 예제](logistic-regression-model-query-examples.md)   
  [Microsoft 로지스틱 회귀 알고리즘 기술 참조](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

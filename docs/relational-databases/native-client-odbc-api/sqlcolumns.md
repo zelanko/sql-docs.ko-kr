@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft 문서
+title: SQLColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014615"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52414080"
   
  **SQLColumns** 는 정적 서버 커서에 대해 실행할 수 있습니다. 실행 하려고 **SQLColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*합니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*.  
   
  Odbc 2. *x* 응용 프로그램에서 와일드 카드를 사용 하지 *TableName*하십시오 **SQLColumns** 에 대 한 정보가 테이블 이름이 일치를 반환 *TableName*현재 사용자가 소유 하 고 있습니다. 현재 사용자와 이름이 같은 없는 테이블을 소유 하는 경우는 *TableName* 매개 변수를 **SQLColumns** 일치 하는 테이블 이름이 다른 사용자가 소유한 모든 테이블에 대 한 정보를 반환 합니다  *TableName* 매개 변수입니다. Odbc 2. *x* 와일드 카드를 사용 하 여 응용 프로그램 **SQLColumns** 이름이 일치 하는 모든 테이블을 반환 *TableName*합니다. Odbc 3. *x* 응용 프로그램 **SQLColumns** 이름이 일치 하는 모든 테이블을 반환 *TableName* 소유자 또는 와일드 카드 사용 여부에 관계 없이 합니다.  
   
@@ -83,8 +83,8 @@ ms.locfileid: "52414080"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
-|SS_IS_COLUMN_SET|**smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_SPARSE|**Smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_COLUMN_SET|**Smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
   
  ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET 표시에 추가 된 모든 드라이버별 열 앞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 그리고 ODBC 자체에서 지정한 모든 열 뒤 합니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "52414080"
   
  ODBC의 스파스 열에 대 한 자세한 내용은 참조 하세요. [Sparse Columns Support &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLColumns 함수](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

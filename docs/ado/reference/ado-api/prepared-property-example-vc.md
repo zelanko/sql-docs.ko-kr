@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028000"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared 속성 예제(VC++)
 이 예제에서는 합니다 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 열어 두는 속성 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체-준비 및 준비 되지 않았습니다.  

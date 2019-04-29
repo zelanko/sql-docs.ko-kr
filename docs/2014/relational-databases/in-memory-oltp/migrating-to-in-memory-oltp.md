@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015306"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>메모리 내 OLTP로 마이그레이션
   이 섹션에서는 데이터베이스 개체를 마이그레이션하여 메모리 내 OLTP를 사용하는 방법을 설명합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "53362802"
   
  마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](in-memory-oltp-in-memory-optimization.md)   
  [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](memory-optimized-tables.md)  
   

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899041"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.  

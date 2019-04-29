@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875639"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
   **데이터베이스 복원** 대화 상자의 **옵션** 페이지를 사용하여 복원 작업의 동작 및 결과를 수정할 수 있습니다.  

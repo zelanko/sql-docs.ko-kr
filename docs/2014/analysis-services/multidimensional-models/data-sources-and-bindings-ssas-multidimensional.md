@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700061"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>데이터 원본 및 바인딩(SSAS 다차원)
   큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 데이터 원본에 바인딩될 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "52510545"
 |정수|부호 있는 32비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Int32 데이터 형식 및 OLE DB의 DBTYPE_I4 데이터 형식에 매핑됩니다.|  
 |Single|-3.40E+38부터 3.40E+38 사이의 단정밀도 부동 소수점 숫자입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Single 데이터 형식 및 OLE DB의 DBTYPE_R4 데이터 형식에 매핑됩니다.|  
 |SmallInt|부호 있는 16비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 Int16 데이터 형식 및 OLE DB의 DBTYPE_I2 데이터 형식에 매핑됩니다.|  
-|TinyInt|부호 있는 8비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 SByte 데이터 형식 및 OLE DB의 DBTYPE_I1 데이터 형식에 매핑됩니다.<br /><br /> 참고: 데이터 원본에 데이터 형식이 tinyint인 필드가 포함되어 있고, AutoIncrement 속성이 True로 설정되어 있는 경우 이러한 필드는 데이터 원본 뷰에서 정수로 변환됩니다.|  
+|TinyInt|부호 있는 8비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 SByte 데이터 형식 및 OLE DB의 DBTYPE_I1 데이터 형식에 매핑됩니다.<br /><br /> 참고: 데이터 원본은 데이터 형식이 tinyint 인 필드가 포함 하 고 데이터 원본 뷰에서 정수로 변환 됩니다 AutoIncrement 속성이 True로 설정 됩니다.|  
 |UnsignedBigInt|부호 없는 64비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt64 데이터 형식 및 OLE DB의 DBTYPE_UI8 데이터 형식에 매핑됩니다.|  
 |UnsignedInt|부호 없는 32비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt32 데이터 형식 및 OLE DB의 DBTYPE_UI4 데이터 형식에 매핑됩니다.|  
 |UnsignedSmallInt|부호 없는 16비트 정수입니다. 이 데이터 형식은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 UInt16 데이터 형식 및 OLE DB의 DBTYPE_UI2 데이터 형식에 매핑됩니다.|  

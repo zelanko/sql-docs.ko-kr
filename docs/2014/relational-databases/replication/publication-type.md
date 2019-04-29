@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021792"
 ---
 # <a name="publication-type"></a>게시 유형
   복제에서는 다음과 같은 게시 유형을 제공합니다.  

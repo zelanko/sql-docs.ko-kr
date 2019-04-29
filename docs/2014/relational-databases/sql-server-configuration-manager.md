@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044458"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server 구성 관리자
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 연관된 서비스를 관리하고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용되는 네트워크 프로토콜을 구성하며 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 컴퓨터에서 네트워크 연결 구성을 관리하기 위한 도구입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 시작 메뉴에서 사용할 수 있거나 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 표시에 추가할 수 있는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 스냅인입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) 열려면 Windows System32 폴더의 SQLServerManager10.msc 파일을 사용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager입니다.  

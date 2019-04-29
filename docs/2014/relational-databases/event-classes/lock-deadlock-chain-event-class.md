@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2f993f699be738ea653ab0fc977fb16f84278853
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662394"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
   Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 596d67527807782ee89043e0b198f0923552db7b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853417"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -68,7 +68,7 @@ MSDAORA
 |**창 핸들**|창 핸들을 사용 하 여 추가 정보를 묻는 메시지를 나타냅니다.|
 |**로캘 ID**|(예: 1033) 사용자의 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자를 나타냅니다. 이러한 기본 설정을 나타내는 날짜 및 시간 형식 지정 방법을, 문자열 비교 되 고, 항목이 사전순으로 정렬 됩니다.|
 |**OLE DB 서비스**|OLE DB 서비스를 사용 하거나 사용 하지 않도록 지정 하는 비트 마스크를 나타냅니다.|
-|**프롬프트**|사용자에 게 프롬프트는 연결이 설정 되는 동안 여부를 나타냅니다.|
+|**Prompt**|사용자에 게 프롬프트는 연결이 설정 되는 동안 여부를 나타냅니다.|
 |**확장된 속성**|공급자별 확장된 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자 특정 연결 정보에 대해서만이 속성을 사용 합니다.|
 
 ## <a name="see-also"></a>관련 항목

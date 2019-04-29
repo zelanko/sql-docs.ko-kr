@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842518"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장된 이벤트 대상은 이벤트 소비자가 됩니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 대상은 이벤트 소비자입니다. 대상은 파일에 기록하거나 이벤트 데이터를 메모리 버퍼에 저장하거나 이벤트 데이터를 집계할 수 있습니다. 대상은 동기적 또는 비동기적으로 데이터를 처리할 수 있습니다.  
   
  확장 이벤트는 대상이 세션당 단 한 번만 이벤트를 수신하도록 설계되어 있습니다.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "48163673"
   
 -   [Windows (ETW) 용 이벤트 추적](../relational-databases/extended-events/event-tracing-for-windows-target.md)  
   
-     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트와 Windows 운영 체제 또는 응용 프로그램 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다. 이 대상은 동기 대상입니다.  
+     [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트와 Windows 운영 체제 또는 애플리케이션 이벤트 데이터의 상관 관계를 파악하는 데 사용합니다. 이 대상은 동기 대상입니다.  
   
--   [히스토그램](../../2014/database-engine/histogram-target.md)  
+-   [Histogram](../../2014/database-engine/histogram-target.md)  
   
      지정된 이벤트 열 또는 동작을 기반으로 지정된 이벤트가 발생한 횟수를 계산하는 데 사용합니다. 이 대상은 비동기 대상입니다.  
   

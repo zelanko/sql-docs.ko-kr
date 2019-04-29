@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026574"
 ---
 # <a name="compatibility-matrix"></a>호환성 매트릭스
 다음 표에서 응용 프로그램 및 드라이버를이 단원의 이전에 정의 된 유형의의 호환성을 설명 합니다.  
   
-|응용 프로그램 유형<br /><br /> 및 버전|32 비트 ODBC<br /><br /> 2.*x* 드라이버|ODBC 3입니다. *x*<br /><br /> 드라이버|ODBC 3.8 드라이버|ISO 및 열린 그룹 규격 드라이버|  
+|응용 프로그램 유형<br /><br /> 및 버전|32 비트 ODBC<br /><br /> 2.*x* 드라이버|ODBC 3.*x*<br /><br /> 드라이버|ODBC 3.8 드라이버|ISO 및 열린 그룹 규격 드라이버|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |16 비트 응용 프로그램, 모든 버전|호환성|호환성|호환성|호환성|  
 |순수 2입니다. *x* 응용 프로그램|호환성|호환성|호환성|하지 호환 되는 [3]|  

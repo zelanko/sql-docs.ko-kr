@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021068"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN을 사용하여 인터넷을 통해 데이터 게시
   VPN(가상 개인 네트워크) 기술을 사용하면 집, 지점, 원격 클라이언트 및 다른 회사에서 사용자가 인터넷을 통해 회사 네트워크에 연결하여 안전하게 통신할 수 있습니다. 사용자는 LAN(근거리 통신망)에서처럼 Windows 인증을 사용할 수 있습니다. 모든 유형의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제는 VPN을 통해 데이터를 복제할 수 있지만 웹 동기화에는 VPN이 필요하지 않으므로 병합 복제를 사용할 경우 웹 동기화 사용을 고려해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md)을 참조하세요.  

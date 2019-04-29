@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843443"
 ---
 # <a name="what39s-new-database-engine"></a>새로운&#39;s (데이터베이스 엔진)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 최신 릴리스에는 데이터 저장소 시스템을 디자인, 개발 및 유지 관리하는 설계자, 개발자 및 관리자의 작업 효율성과 생산성을 증대시키는 새로운 기능과 향상된 기능이 추가되었습니다. 다음은 [!INCLUDE[ssDE](../includes/ssde-md.md)]에서 향상된 기능에 대한 설명입니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "53371555"
   
      클러스터형 columnstore 인덱스를 사용해서 주로 대량 로드 및 읽기 전용 쿼리를 수행하는 데이터 웨어하우징 작업의 데이터 압축 및 쿼리 성능을 향상시킬 수 있습니다. 클러스터형 columnstore 인덱스는 업데이트 가능하므로 해당 작업에서 여러 삽입, 업데이트 및 삭제 작업을 수행할 수 있습니다. 자세한 내용은 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md) 하 고 [클러스터형 Columnstore 인덱스를 사용 하 여](../relational-databases/indexes/indexes.md)입니다.  
   
--   **실행 계획**  
+-   **SHOWPLAN**  
   
      SHOWPLAN에서는 columnstore 인덱스 정보를 표시합니다. 합니다 **EstimatedExecutionMode** 하 고 **ActualExecutionMode** 속성에 두 개의 가능한 값: **일괄 처리** 나 **행**합니다.  합니다 **저장소** 속성에 두 개의 가능한 값: **RowStore** 하 고 **ColumnStore**합니다.  
   

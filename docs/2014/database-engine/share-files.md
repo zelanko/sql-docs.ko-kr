@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843559"
 ---
 # <a name="share-files"></a>파일 공유
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 여러 원본 제어 프로젝트에서 항목을 공유할 수 있습니다. 항목을 공유할 경우 항목에 대한 모든 변경 내용이 항목이 공유되는 모든 프로젝트에 반영됩니다.  

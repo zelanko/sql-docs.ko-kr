@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8848497ed90909079b9c0142bc570f00466110b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027525"
 ---
 # <a name="status-property-example-vc"></a>Status 속성 예제(VC++)
 이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 하는 속성입니다.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b03dd7f886cee5816d591034d1be63ece45d8d1d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021334"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)
   복제 저장 프로시저를 사용하여 스냅숏 속성을 프로그래밍 방식으로 정의 및 수정할 수 있습니다. 사용되는 저장 프로시저는 게시 유형에 따라 달라집니다.  

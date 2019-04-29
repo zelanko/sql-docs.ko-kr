@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048970"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>dta 명령 프롬프트 유틸리티 시작 및 작업 튜닝
   이 태스크에서는 **dta** 유틸리티를 시작하고 도움말을 본 다음 이 유틸리티를 사용하여 명령 프롬프트에서 작업을 튜닝하는 과정을 안내합니다. 여기서는 데이터베이스 엔진 튜닝 관리자 GUI(그래픽 사용자 인터페이스) 연습인 [작업 튜닝](lesson-1-1-tuning-a-workload.md)에 대해 만든 MyScript.sql 작업을 사용합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "48171113"
   
 -   [dta Utility](dta-utility.md) - 유틸리티 작업을 제어하는 데 사용할 수 있는 명령 프롬프트 유틸리티 및 선택적 XML 파일에 대한 참조 자료  
   
- 자습서의 시작 부분으로 돌아가려면 [Tutorial: Database Engine Tuning Advisor](tutorial-database-engine-tuning-advisor.md)를 참조하십시오.  
+ 이 자습서의 시작 부분으로 돌아가려면 참조 [자습서: 데이터베이스 엔진 튜닝 관리자](tutorial-database-engine-tuning-advisor.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 자습서](../../relational-databases/database-engine-tutorials.md)  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027911"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel 및 모드 속성 예제 (VC + +)
 이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **하지만 사용자 친숙 한이? -popular_comp**  
 **Popular_comp 실리콘밸리의 비밀**  
 **Net 티켓-popular_comp**  
-**컴퓨터 Phobic 및 비-Phobic 개인: 동작 변형-self_help**  
+**Phobic 및 비 Phobic 개인용 컴퓨터: 동작의 변형을-self_help**  
 **분노 적 인지 확인 합니다. -self_help**  
 **걱정-self_help 없이 수명**  
-**장기간된 데이터 Deprivation: 네 가지 사례 연구-self_help**  
-**감정적인 Security: 새 알고리즘을-self_help**  
-**Onions, Leeks, 및 마늘: 지중해-trad_cook의 요리 비밀**  
+**장기적인된 데이터 Deprivation: 네 가지 사례 연구-self_help**  
+**감정적인 보안: 새 알고리즘-self_help**  
+**Onions, Leeks, 및 마늘: 요리 지중해-trad_cook의 비밀**  
 **50 년 Buckingham Palace 사용-trad_cook에**  
 **Sushi, 누구나? -trad_cook**   
 ## <a name="see-also"></a>관련 항목  

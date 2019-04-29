@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b2f6adeb2ef94b7a030a8772cf4ba603162c378
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843664"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler 실행
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]를 실행하려면 **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server 2014**, **성능 도구**를 차례로 가리킨 다음 **SQL Server Profiler**를 클릭합니다.  

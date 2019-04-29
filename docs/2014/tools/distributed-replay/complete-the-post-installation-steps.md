@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025659"
 ---
 # <a name="complete-the-post-installation-steps"></a>설치 후 단계 완료
   Distributed Replay를 설치한 후에는 Distributed Replay Controller 및 Client 서비스 계정을 수정해야 합니다.  
   
 ### <a name="to-complete-the-post-installation-steps"></a>설치 후 단계를 완료하려면  
   
-1.  **방화벽 규칙을 만들**: 컨트롤러 및 클라이언트 컴퓨터에서 해당 서비스에 대해 방화벽을 통과하는 인바운드 트래픽을 허용해야 합니다. 서비스 실행 파일에 대해 방화벽 규칙을 지정합니다. 이 파일은 설치 폴더에 있습니다.  
+1.  **방화벽 규칙을 만들**: 컨트롤러 및 클라이언트 컴퓨터에서 해당 서비스에 대 한 방화벽을 통해 인바운드 트래픽을 허용 해야 합니다. 서비스 실행 파일에 대해 방화벽 규칙을 지정합니다. 이 파일은 설치 폴더에 있습니다.  
   
     1.  컨트롤러 서비스의 경우 설치 폴더에 있는 **DReplayController.exe**에 대해 규칙을 만듭니다. 예를 들어 다음 명령은 이 규칙을 설정하며 여기서 `%InstallPath%` 는 서비스 설치 폴더입니다.  
   

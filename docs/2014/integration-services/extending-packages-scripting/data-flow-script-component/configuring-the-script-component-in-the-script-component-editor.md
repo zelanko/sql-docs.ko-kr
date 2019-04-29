@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894817"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
   스크립트 구성 요소에서 사용자 지정 코드를 작성하려면, 먼저 만들려는 데이터 흐름 구성 요소의 유형(원본, 변환 또는 대상)을 선택한 다음, **스크립트 변환 편집기**에서 구성 요소의 메타데이터 및 속성을 구성해야 합니다.  

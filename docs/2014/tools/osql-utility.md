@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017185"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -294,7 +294,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  일괄 처리를 실행한 다음 종료하며 값을 반환하지 않습니다.  
   
--   끝내기 **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  쿼리를 포함한 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  

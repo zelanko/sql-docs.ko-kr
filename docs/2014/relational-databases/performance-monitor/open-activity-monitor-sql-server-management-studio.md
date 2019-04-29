@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032007"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>작업 모니터 열기(SQL Server Management Studio)
   이 항목에서는 작업 모니터를 열어서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 대한 정보 및 이러한 프로세스가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 미치는 영향에 대한 정보를 얻을 수 있습니다. 또한 작업 모니터의 새로 고침 간격을 설정하는 방법에 대해서도 설명합니다.  

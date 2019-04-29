@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842402"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 시스템 보기, 저장 프로시저, DMV 및 대기 형식
   이 항목은 메모리 내 OLTP를 지원하는 많은 데이터베이스 개체에 대한 간략한 설명과 링크를 제공합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52406163"
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|고유하게 컴파일된 저장 프로시저를 보다 효율적으로 실행할 수 있도록 매개 변수가 null을 허용하지 않는지 확인합니다.|**is_nullable** 열입니다.|  
 |[sys.all_sql_modules &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|저장 프로시저가 고유하게 컴파일되었는지 확인합니다.|**uses_native_compilation** 열입니다.|  
 |[sys.sql_modules&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|저장 프로시저가 고유하게 컴파일되었는지 확인합니다.|**uses_native_compilation** 열입니다.|  
-|[sys.table_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|테이블이 메모리 최적화되었는지 확인합니다.|**is_memory_optimized** 열입니다.|  
+|[sys.table_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|테이블이 메모리 최적화되었는지 확인합니다.|**is_memory_optimized** column.|  
 |[sys.tables&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|테이블 메모리 최적화 테이블의 내구성 설정을 확인 하는 경우를 확인 합니다.|**내구성**하십시오 **durability_desc**, 및 **is_memory_optimized** 열입니다.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|메모리 최적화 테이블의 해시 인덱스를 표시합니다.|메모리 내 OLTP에 특정합니다.|  
   
@@ -44,12 +44,12 @@ ms.locfileid: "52406163"
   
 |저장 프로시저|Description|  
 |----------------------|-----------------|  
-|[sys.sp_xtp_bind_db_resource_pool &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|메모리 내 OLTP 데이터베이스를 리소스 풀로 바인딩합니다.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|메모리 내 OLTP 데이터베이스를 리소스 풀로 바인딩합니다.|  
 |[sys.sp_xtp_checkpoint_force_garbage_collection &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|메모리 내 OLTP 데이터베이스에서 가비지 수집을 시작합니다.|  
-|[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|고유하게 컴파일된 저장 프로시저에 대한 통계 컬렉션을 설정합니다.|  
-|[sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|고유하게 컴파일된 저장 프로시저에 대한 쿼리당 통계 컬렉션을 설정합니다.|  
-|[sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|데이터 및 델타 파일을 병합합니다.|  
-|[sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|데이터베이스와 리소스 풀 간의 바인딩을 제거합니다.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|고유하게 컴파일된 저장 프로시저에 대한 통계 컬렉션을 설정합니다.|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|고유하게 컴파일된 저장 프로시저에 대한 쿼리당 통계 컬렉션을 설정합니다.|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|데이터 및 델타 파일을 병합합니다.|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|데이터베이스와 리소스 풀 간의 바인딩을 제거합니다.|  
   
 ## <a name="dynamic-management-views-dmvs"></a>동적 관리 뷰(DMV)  
  메모리 최적화 테이블에는 몇 가지 DMV가 있습니다.  

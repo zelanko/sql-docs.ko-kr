@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842506"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server 프로파일러 - 찾기 대화 상자
   **찾기** 대화 상자를 사용하여 추적에서 특정 문자 또는 단어를 검색할 수 있습니다. 진행 중인 검색을 취소하려면 Esc 키를 누릅니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "48078933"
   
 ## <a name="see-also"></a>관련 항목  
  [값 또는 추적 하는 동안 데이터 열 찾기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [추적 만들기 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [추적 만들기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [추적 테이블 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

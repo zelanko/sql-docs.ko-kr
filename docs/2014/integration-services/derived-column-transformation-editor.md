@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898361"
 ---
 # <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "58386681"
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- **관련 항목**: [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)를 [연산자 &#40;식&#41;](expressions/operators-ssis-expression.md), 및 [함수 &#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
+ **관련 항목**: [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
   
  **데이터 형식**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 식을 자동으로 계산하고 데이터 형식을 적절하게 설정합니다. 이 열의 값은 읽기 전용입니다. 자세한 내용은 [Integration Services Data Types](data-flow/integration-services-data-types.md)을 참조하세요.  

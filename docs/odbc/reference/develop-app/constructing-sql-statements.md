@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38ff4066f7ff693d96f3ef239ef25948b2caf3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042513"
 ---
 # <a name="constructing-sql-statements"></a>SQL 문 생성
 세 가지 방법 중 하나에 SQL 문을 생성할 수 있습니다: 개발, 런타임 시 생성 되거나 사용자가 직접 입력 하는 동안 하드 코딩 합니다.  

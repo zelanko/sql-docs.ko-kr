@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034940"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse의 T-SQL 문
 TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
@@ -25,12 +25,12 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [스키마 변경](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [COLUMNSTORE 인덱스 만들기](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
-* [만들 데이터베이스 범위 자격 증명](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+* [CREATE DATABASE SCOPED CREDENTIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [외부 데이터 원본 만들기](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [외부 파일 형식 만들기](../t-sql/statements/create-external-file-format-transact-sql.md)
-* [외부 테이블 만들기](../t-sql/statements/create-external-table-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)
 * [함수 만들기](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE  INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
@@ -85,7 +85,7 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [하위 쿼리](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>보안 문
-* 사용 권한: [권한 부여](../t-sql/statements/grant-transact-sql.md)를 [DENY](../t-sql/statements/deny-transact-sql.md), [취소](../t-sql/statements/revoke-transact-sql.md)
+* 사용 권한: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -97,11 +97,11 @@ TRANSACT-SQL (T-SQL) 문을 대 한 분석 Platform System (APS) SQL Server 병�
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [인증서 만들기](../t-sql/statements/create-certificate-transact-sql.md)
 * [CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [로그인 만들기](../t-sql/statements/create-login-transact-sql.md)
-* [마스터 키 만들기](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [역할 만들기](../t-sql/statements/create-role-transact-sql.md)
 * [사용자 만들기](../t-sql/statements/create-user-transact-sql.md)
-* [인증서 삭제](../t-sql/statements/drop-certificate-transact-sql.md)
+* [DROP CERTIFICATE](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)

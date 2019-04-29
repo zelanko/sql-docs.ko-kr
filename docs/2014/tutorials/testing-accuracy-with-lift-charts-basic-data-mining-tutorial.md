@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042676"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>리프트 차트를 사용하여 정확도 테스트(기본 데이터 마이닝 자습서)
   에 **마이닝 정확도 차트** 탭 데이터 마이닝 디자이너의 예측을 사용 하면 각 모델이 얼마나 잘 계산 및 다른 모델의 결과 대해 직접 각 모델의 결과 비교할 수 있습니다. 이 비교 방법을 라고 하는 *리프트 차트*합니다. 일반적으로 마이닝 모델의 예측 정확도는 리프트 또는 분류 정확도를 통해 측정됩니다. 이 자습서에서는 리프트 차트만 사용합니다.  

@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014428"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "51675438"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 문|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 및 테이블 반환 매개 변수  
- SQLGetDiagField를 사용 하 여 두 개의 진단 필드를 검색할 수 있습니다: SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER 합니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
+ SQLGetDiagField 두 진단 필드를 검색에 사용할 수 있습니다. SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER를 제공 합니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
   
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   

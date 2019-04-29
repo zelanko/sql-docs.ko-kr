@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844194"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>옵션(텍스트 편집기 - 모든 언어 - 탭 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 포함된 5개 편집기 모두의 탭 이동 동작을 설정할 수 있습니다. 이 옵션을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **텍스트 편집기** 폴더를 선택한 다음 **모든 언어** 폴더를 확장하고 **탭**을 클릭합니다.  
@@ -33,18 +33,18 @@ ms.locfileid: "51030143"
  **없음**  
  이 옵션을 선택하면 Enter 키를 누를 때 생성되는 새 줄을 들여쓰지 않습니다. 커서는 새 줄의 첫 번째 열에 배치됩니다.  
   
- **블록**  
+ **Block**  
  이 옵션을 선택하면 Enter 키를 누를 때 생성되는 새 줄을 자동으로 앞 줄과 동일하게 들여씁니다.  
   
- **스마트**  
+ **Smart**  
  이 옵션을 선택하면 Enter 키를 누를 때 생성되는 새 줄의 위치가 컨텍스트에 따라 지정됩니다.  
   
 ## <a name="tabs"></a>탭  
  **탭 크기**  
- 탭 정지 간의 거리를 공백 수로 설정합니다. 기본값은 공백 4개입니다.  
+ 탭 정지 간의 거리를 공백 수로 설정합니다. 기본값은 네 칸입니다.  
   
  **들여쓰기 크기**  
- 자동 들여쓰기의 크기를 공백 수로 설정합니다. 기본값은 공백 4개입니다. 탭 문자나 공백 문자 또는 두 가지 문자 모두를 삽입하여 지정한 크기를 채웁니다.  
+ 자동 들여쓰기의 크기를 공백 수로 설정합니다. 기본값은 네 칸입니다. 탭 문자나 공백 문자 또는 두 가지 문자 모두를 삽입하여 지정한 크기를 채웁니다.  
   
  **공백 삽입**  
  이 옵션을 선택하면 들여쓰기 작업에서 탭 문자 대신 공백 문자만 삽입합니다. 예를 들어 **들여쓰기 크기**를 5로 설정하면 Tab 키를 누르거나 기본 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 창에서 도구 모음의 **들여쓰기** 단추를 클릭할 때마다 5개의 공백 문자가 삽입됩니다.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855714"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>2단원: 시계열 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 방금 만든 마이닝 구조에 새 마이닝 모델을 추가 합니다 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)합니다.  

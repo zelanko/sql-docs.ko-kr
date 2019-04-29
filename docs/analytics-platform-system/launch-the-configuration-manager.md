@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183421"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Configuration Manager 시작
 이 항목에서는 시작 지침을 제공 합니다 **Configuration Manager** Analytics Platform System 어플라이언스에 대 한 합니다.  
@@ -47,6 +47,6 @@ Configuration Manager를 실행 하려면 PDW 제어 노드에 연결 하려면 
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [관리자 콘솔을 사용 하 여 어플라이언스 모니터링 &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

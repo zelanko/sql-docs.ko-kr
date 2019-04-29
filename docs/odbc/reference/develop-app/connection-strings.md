@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7e52ec70e53608f1af48b4abcd2dd1edb4fc454
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042585"
 ---
 # <a name="connection-strings"></a>연결 문자열
 연결을 설정 하는 데 사용 되는 정보를 포함 하는 연결 문자열입니다. 전체 연결 문자열을 연결 하는 데 필요한 모든 정보를 포함 합니다. 연결 문자열은 일련의 키워드/값 쌍을 세미콜론으로 구분 합니다. (연결 문자열의 전체 구문에 대 한 참조를 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.) 연결 문자열에서 사용 됩니다.  
