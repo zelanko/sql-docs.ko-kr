@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8532661c57901cd720e10b5d42047aa8f1071414
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165465"
 ---
 # <a name="delete-group-dialog-box"></a>그룹 삭제 대화 상자
   **그룹 삭제** 대화 상자를 사용하여 테이블, 행렬 또는 목록 데이터 영역에서 그룹을 삭제할 수 있습니다. 그룹에 연결된 행 또는 열이 있는 경우 해당 구조도 함께 삭제할 수 있습니다.  

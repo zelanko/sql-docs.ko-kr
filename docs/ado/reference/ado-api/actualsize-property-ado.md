@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4676f1d0a9d96779303898631164101bbdc4201d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065411"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize 속성(ADO)
 필드의 값 (바이트)의 실제 길이 나타냅니다.  

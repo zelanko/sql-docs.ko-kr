@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071471"
 ---
 # <a name="migrating-triggers"></a>트리거 마이그레이션
   이 항목에서는 DDL 및 DML 트리거와 메모리 최적화 테이블에 대해 설명합니다.  

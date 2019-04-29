@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149863"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>예약어(MDX 구문)
 
 
-  Analysis Services를 배타적으로 사용할 특정 키워드를 예약 합니다. 예약 된 키워드 목록은 참조 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
+  Analysis Services 예약어는 배타적으로 사용 합니다. 예약 된 키워드 목록은 참조 하세요 [MDX 예약어](../mdx/mdx-reserved-words.md)합니다.  
   
  예약어는 다음 지침을 따릅니다.  
   

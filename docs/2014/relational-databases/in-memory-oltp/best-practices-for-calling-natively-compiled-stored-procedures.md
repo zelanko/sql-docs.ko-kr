@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156775"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저를 호출하는 최선의 구현 방법
   고유하게 컴파일된 저장 프로시저의 특징  
@@ -48,7 +48,7 @@ ms.locfileid: "48048533"
   
  XEvent `hekaton_slow_parameter_passing`에 `reason=named_parameters`을 사용하면 고유하게 컴파일된 저장 프로시저에 비효율적인 명명된 매개 변수가 사용되었는지 감지할 수 있습니다.  
   
- 마찬가지로 동일한 xevent 일치 하지 않는 형식의 사용을 감지할 수 있습니다 `hekaton_slow_parameter_passing`를 사용 하 여 `reason=parameter_conversion`입니다.  
+ 마찬가지로 동일한 XEvent `hekaton_slow_parameter_passing`에 `reason=parameter_conversion`을 사용하여 일치하지 않는 형식의 사용을 감지할 수 있습니다.  
   
  메모리 최적화 테이블을 사용할 때 많은 시나리오에서 재시도 논리를 구현해야 하며 몇 가지 기능 제한에 대한 문제를 해결해야 하기 때문에 래퍼에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만들어야 할 수 있습니다. 예를 보려면 [메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침](memory-optimized-tables.md)을 참조하세요.  
   

@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073997"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 데이터베이스에서 데이터에 대한 변경 내용을 추적하는 [변경 데이터 캡처](#Capture) 및 [변경 내용 추적](#Tracking)과 같은 두 가지 기능을 제공합니다. 이러한 기능은 데이터베이스의 사용자 테이블에 적용된 DML 변경 내용(삽입, 업데이트 및 삭제 작업)을 애플리케이션에서 확인할 수 있게 해줍니다. 변경 데이터 캡처 및 변경 추적은 동일한 데이터베이스에서 설정할 수 있으며 특별한 고려 사항은 필요하지 않습니다. 에디션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 데이터 캡처 및 변경 내용 추적을 지 원하는 보면 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -168,7 +168,7 @@ ms.locfileid: "53351700"
   
 -   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. 설명서에서 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], 항목 "방법: "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 설명서에서 "방법: "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
   
   
 ## <a name="related-tasks-required"></a>관련 태스크(필수)  

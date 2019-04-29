@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151568"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서 (보고서 작성기)에 매개 변수를 추가 합니다.
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
   보고서에 매개 변수를 추가하면 사용자가 데이터 원본이나 보고서에서 보고서 데이터를 필터링할 수 있습니다. 보고서 매개 변수는 데이터 세트 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  

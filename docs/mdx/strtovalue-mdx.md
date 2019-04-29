@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136110"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue(MDX)
 
@@ -35,7 +35,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
 ## <a name="remarks"></a>Remarks  
  합니다 **StrToValue** 함수는 MDX 식에서 지정한 숫자 값을 반환 합니다. 합니다 **StrToValue** 함수는 대개 외부 함수의 MDX 식을 단일 셀으로 확인 될 수 있는 MDX 문에으로 다시 돌아가려면 사용자 정의 함수와 함께 사용 됩니다.  
   
--   CONSTRAINED 플래그를 사용할 경우 MDX 식에는 스칼라 값만 들어 있어야 합니다. CONSTRAINED 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 스칼라 값으로 직접 확인할 수 없는 MDX 식을 지정하면 "STRTOVALUE 함수에서 CONSTRAINED 플래그로 설정한 제한을 위반했습니다"라는 오류가 나타납니다.  
+-   CONSTRAINED 플래그를 사용할 경우 MDX 식에는 스칼라 값만 들어 있어야 합니다. CONSTRAINED 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. MDX 식을 제공 스칼라 값으로 직접 확인할 수 없는 경우 다음 오류가 표시 됩니다. "CONSTRAINED 설정한 제한을 위반 했습니다 STRTOVALUE 함수에서 플래그."  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우에는 원하는 만큼 복잡한 MDX 식을 지정할 수 있습니다. 단, 해당 식은 단일 셀을 반환하는 유효한 MDX 식으로 확인되어야 합니다.  
   

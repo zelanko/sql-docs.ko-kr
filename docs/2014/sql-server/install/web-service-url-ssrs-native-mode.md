@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131185"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>웹 서비스 URL(SSRS 기본 모드)
   웹 서비스 URL 페이지에서는 보고서 서버에 액세스하는 데 사용되는 URL을 구성하거나 수정할 수 있습니다. *URL 예약* 은 지정된 URL을 기준으로 만들어집니다. URL 예약에는 다음에 보고서 서버 웹 서비스에 액세스할 때 사용할 수 있는 모든 URL에 대한 구문과 규칙이 정의되어 있으며, 보고서 서버 웹 서비스에 대한 접두사, 호스트, 포트 및 가상 디렉터리가 지정되어 있습니다. 호스트를 지정하는 방식에 따라 하나의 예약에 대해 여러 개의 URL을 사용할 수도 있습니다. 호스트 기본값에는 강력한 와일드카드가 지정되어 있습니다. 강력한 와일드카드를 사용하면 보고서 서버를 호스팅하는 컴퓨터로 확인될 수 있는 호스트 이름을 URL에 지정할 수 있습니다. URL 구성 및 예약에 대 한 자세한 내용은 참조 하세요. [URL 구성 &#40;SSRS 구성 관리자&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) 하 고 [보고서 서버 Url 구성 &#40;&AMP;#40;SSRS 구성 관리자&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53203363"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 다시 설치했는데 기본 IP 주소 값인 모두 할당됨과 포트 80을 사용하려고 할 때 오류가 발생하는 경우 일반적으로 서비스를 다시 시작한 후 URL을 다시 만들면 오류를 해결할 수 있습니다.  
   
 ## <a name="options"></a>변수  
- **가상 디렉터리**  
+ **Virtual Directory**  
  보고서 서버 웹 서비스의 가상 디렉터리 이름을 지정합니다. 같은 컴퓨터에서는 각 보고서 서버 웹 서비스 인스턴스에 대한 가상 디렉터리 이름을 한 개만 지정할 수 있습니다.  
   
  **IP 주소**  
@@ -63,7 +63,7 @@ ms.locfileid: "53203363"
  **SSL 포트**  
  SSL 연결용 포트를 지정합니다.  
   
- **Url**  
+ **URLs**  
  현재 보고서 서버 인스턴스에 대해 정의된 URL을 표시합니다.  
   
  **고급**  

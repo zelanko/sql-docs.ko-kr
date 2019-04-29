@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d53891b4e82b3ae391d095e8cbca2189fb201d29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142962"
 ---
 # <a name="updating-and-persisting-data"></a>데이터 업데이트 및 유지
 데이터 원본에서 데이터를 이동 하려면 ADO를 사용 하는 방법, 데이터를 이동 하는 방법 및 데이터를 편집 하는 방법에도 이전 장에서 살펴보았습니다. 물론, 응용 프로그램의 목적은 사용자가 데이터를 변경할 수 있도록 하는 경우 해당 변경 내용을 저장 하는 방법을 이해 해야 합니다. 하거나 유지할 수 있습니다 합니다 **레코드 집합** 사용 하 여 파일 변경 합니다 **저장** 하거나 메서드를 사용 하 여 저장소에 대 한 데이터 원본에 변경 내용을 다시 보낼 수는 **업데이트** 또는  **UpdateBatch** 메서드.  

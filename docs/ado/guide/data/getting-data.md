@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15d64d7b25abe5f67ba00e207f8f46c820aacd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161764"
 ---
 # <a name="getting-data"></a>데이터 가져오기
 [ADO 기본 사항](../../../ado/guide/data/ado-fundamentals.md), 및 [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) 예제 ADO 응용 프로그램을 만드는 데 관련 된 네 가지 기본 작업을 특히 도입: 데이터 가져오기, 데이터를 검사, 데이터, 편집 및 데이터를 업데이트 합니다. 이 섹션에서는 시작 데이터를 더 자세히 설명 합니다.  

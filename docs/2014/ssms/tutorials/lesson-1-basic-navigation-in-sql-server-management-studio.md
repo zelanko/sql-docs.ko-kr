@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151509"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>1단원: SQL Server Management Studio의 기본 탐색
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 강력하고 유연한 도구입니다. 그러나 Microsoft Visual Studio를 처음 사용할 경우 올바른 기능에 액세스하는 가장 빠른 방법을 찾는 데 어려움을 겪기도 합니다. 이 단원에서는 창이 연동하여 작업을 보다 쉽게 만드는 디자인 화면을 제공하는 방법을 보여 줍니다. 이 단원의 학습을 마친 후에는 필요 없는 창을 제거하는 방법, 필요한 정보가 있는 창을 빠르게 불러오는 방법, 자주 수행하는 작업을 지원하는 기본 화면을 구성하는 방법을 알 수 있습니다.  

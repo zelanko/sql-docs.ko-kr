@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143012"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>범례 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **범례** 대화 상자를 사용하여 차트의 범례 모양과 레이아웃을 정의할 수 있습니다. 자세한 내용은 [차트의 범례 서식 지정 &#40;보고서 작성기 및 SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)합니다.  

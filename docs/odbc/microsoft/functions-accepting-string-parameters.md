@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127328"
 ---
 # <a name="functions-accepting-string-parameters"></a>문자열 매개 변수를 수락하는 함수
 문자열 매개 변수를 사용 하는 모든 함수를 유니코드로 변환 됩니다. ("W" 형식의 함수를 내보냅니다.) 바이트 수는 해당 ODBC Api의 문자 수로 변환 됩니다. 이 다음 함수에 적용 됩니다.  

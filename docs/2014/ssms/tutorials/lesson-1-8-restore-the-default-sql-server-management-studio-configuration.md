@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151536"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>기본 SQL Server Management Studio 구성 복원
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 처음 접하는 사용자는 실수로 창을 닫거나 숨긴 후 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 원래 레이아웃으로 복원하는 데 어려움을 겪을 수 있습니다. 다음 단계에서는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 기본 환경 레이아웃으로 복원합니다.  

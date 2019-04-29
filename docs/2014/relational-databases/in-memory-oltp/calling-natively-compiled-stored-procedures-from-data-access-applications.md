@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156838"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저 호출
   이 항목에서는 데이터 액세스 애플리케이션에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156553"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>보고서 작성기 옵션 대화 상자, 설정(보고서 작성기)
   **보고서 작성기** 단추를 클릭한 다음 **옵션** 을 클릭하여 최근 파일 및 연결 표시에 대한 옵션을 설정합니다. 기본 보고서 서버를 변경하고 기본값이 없는 경우 새로 추가할 수도 있습니다.  

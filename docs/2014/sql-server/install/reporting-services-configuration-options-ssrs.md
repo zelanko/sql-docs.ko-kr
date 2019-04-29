@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058139"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 구성 옵션(SSRS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **Reporting Services 구성** 페이지를 사용하여 보고서 서버의 설치 및 구성 방법을 지정할 수 있습니다. 사용 가능한 설치 옵션은 이전에 **기능 선택** 페이지에서 선택한 옵션과 보고서 서버 설치 시 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 로컬 인스턴스도 함께 설치하는지 여부에 따라 달라집니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "53375685"
 #### <a name="install-only"></a>설치만  
  보고서 서버 프로그램 파일을 설치하고 보고서 서버 서비스 계정을 만든 다음 보고서 서버 WMI(Windows Management Instrumentation) 공급자를 등록합니다. 이 설치 옵션은 "파일만" 설치라고도 합니다. 기본 구성을 사용하지 않으려면 이 옵션을 선택합니다. 기본 구성을 설치할 수 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]장애 조치 클러스터를 설치하는 경우에는 이 옵션만 사용할 수 있습니다. 파일만 설치에 대 한 자세한 내용은 참조 하세요. [파일만 설치 (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093)합니다.  
   
- 설치가 완료된 후 보고서 서버 데이터베이스를 만들고 보고서 서버를 사용할 수 있도록 구성합니다. 보고서 서버를 구성하고 데이터베이스를 만들려면 Reporting Services 구성 관리자를 사용합니다. 자세한 내용은 참조 하세요. [방법: Create a Report Server Database (Reporting Services 구성)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) 하 고 [보고서 서버 데이터베이스 연결을 구성할](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)합니다.  
+ 설치가 완료된 후 보고서 서버 데이터베이스를 만들고 보고서 서버를 사용할 수 있도록 구성합니다. 보고서 서버를 구성하고 데이터베이스를 만들려면 Reporting Services 구성 관리자를 사용합니다. 자세한 내용은 [방법: Create a Report Server Database (Reporting Services 구성)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) 하 고 [보고서 서버 데이터베이스 연결을 구성할](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)합니다.  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 모드  
   

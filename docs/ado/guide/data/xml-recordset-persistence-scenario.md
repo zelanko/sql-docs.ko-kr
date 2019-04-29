@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184824"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP Active Server Pages () 응용 프로그램을 만듭니다.  
@@ -38,10 +38,10 @@ ms.locfileid: "51600243"
   
 -   수신 하 고 데이터를 표시 합니다.  
   
-## <a name="step-1-set-up-the-application"></a>1 단계: 응용 프로그램 설정  
+## <a name="step-1-set-up-the-application"></a>1단계: 응용 프로그램 설정  
  사용 권한 스크립팅 "XMLPersist" 이라는 IIS 가상 디렉터리를 만듭니다. 가상 디렉터리를 가리키는, 하나의 명명 된 "XMLResponse.asp,"는 다른 명명 된 "Default.htm." 폴더에 새 텍스트 파일을 두 개를 만듭니다.  
   
-## <a name="step-2-get-the-data"></a>2 단계: 데이터 가져오기  
+## <a name="step-2-get-the-data"></a>2단계: 데이터 가져오기  
  이 단계에서는 클라이언트에 보낼 준비를 ADO 레코드 집합을 열고 코드를 작성 합니다. 메모장과 같은 텍스트 편집기를 사용 하 여 XMLResponse.asp 파일을 열고 다음 코드를 삽입 합니다.  
   
 ```  
@@ -70,7 +70,7 @@ ms.locfileid: "51600243"
   
  열기 및 다음 단계로 이동 파일을 유지 합니다.  
   
-## <a name="step-3-send-the-data"></a>3 단계: 데이터 보내기  
+## <a name="step-3-send-the-data"></a>3단계: 데이터 보내기  
  레코드 집합 했으므로 ASP 응답 개체를 XML로 저장 하 여 클라이언트에 보낼 해야 있습니다. XMLResponse.asp 맨 아래에 다음 코드를 추가 합니다.  
   
 ```  
@@ -89,7 +89,7 @@ ms.locfileid: "51600243"
   
  저장 하 고 단계를 진행 하기 전에 XMLResponse.asp를 닫습니다. XMLResponse.asp 파일을 저장 하는 동일한 폴더에 기본 ADO 라이브러리 설치 폴더에서 adovbs.inc 파일을 복사할 수도 있습니다.  
   
-## <a name="step-4-receive-and-display-the-data"></a>4 단계: 받고 데이터를 표시 합니다.  
+## <a name="step-4-receive-and-display-the-data"></a>4단계: 수신 하 고 데이터를 표시 합니다.  
  이 단계에서 만들려는 HTML 파일을 사용 하 여 포함 된 [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 를 레코드 집합을 가져올 XMLResponse.asp 파일에서 가리키는 개체입니다. Default.htm 메모장과 같은 텍스트 편집기를 열고 다음 코드를 추가 합니다. URL에 "sqlserver를" 서버 이름으로 바꿉니다.  
   
 ```  

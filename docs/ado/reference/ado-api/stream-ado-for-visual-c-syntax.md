@@ -1,5 +1,5 @@
 ---
-title: Stream (Visual c + + 구문에 대 한 ADO) | Microsoft Docs
+title: Stream (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77da08e1d6ead2ad5777f41113a1ed164a7fb5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062621"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>스트림(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  
