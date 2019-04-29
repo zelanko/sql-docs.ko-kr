@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84752b7e23c5394757764bf5ade57cb54004b01a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943149"
 ---
 # <a name="duplicated-features"></a>중복된 기능
 다음 ODBC 2입니다. *x* ODBC 3 씩 함수 중복 되었습니다. *x* 함수입니다. 결과적으로 ODBC 2. *x* ODBC 3에서 함수는 사용 되지 않습니다. *x*합니다. ODBC 3입니다. *x* 함수를 대체 함수 라고 합니다.  

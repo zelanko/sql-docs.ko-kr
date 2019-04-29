@@ -10,18 +10,18 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317122"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330607"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 계층화 하는 HDFS에 대 한 탑재 S3 하는 방법
 
 다음 섹션에서는 HDFS S3 저장소 데이터 원본을 사용 하 여 계층을 구성 하는 방법의 예제를 제공 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 - [배포 된 빅 데이터 클러스터](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
@@ -30,7 +30,7 @@ ms.locfileid: "63317122"
 - 만들고 S3 버킷에 데이터 업로드 
   - CSV 업로드 하 여 S3 버킷에 파일 Parquet 또는 합니다. 이 빅 데이터 클러스터의 HDFS에 탑재 하는 외부 HDFS 데이터입니다.
 
-## <a name="access-keys"></a>액세스 키
+## <a name="access-keys"></a>선택키
 
 1. 빅 데이터 클러스터에 액세스할 수 있는 클라이언트 컴퓨터에서 명령 프롬프트를 엽니다.
 
@@ -42,7 +42,7 @@ ms.locfileid: "63317122"
    ```
 
    > [!TIP]
-   > S3을 만드는 방법에 대 한 자세한 내용은 액세스 키 (`<s3-access-key>`)를 참조 하세요 [S3 액세스 키](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)합니다.
+   > S3 액세스 키를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [S3 선택키가](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)합니다.
 
 ## <a id="mount"></a> 원격 HDFS 저장소를 탑재 합니다.
 

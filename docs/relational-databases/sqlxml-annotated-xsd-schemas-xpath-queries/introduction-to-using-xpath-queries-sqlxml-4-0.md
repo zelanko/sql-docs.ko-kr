@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013351"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041634"
   
  템플릿에 XPath 쿼리를 지정할 때는 다음 동작에 유의하십시오.  
   
--   XPath에는 XML(템플릿은 XML 문서임)에서 특수한 의미를 가지는 < 또는 &와 같은 문자가 포함될 수 있습니다. 이러한 문자를 XML & 인코딩을 사용하여 이스케이프 처리하거나 XPath를 URL에 지정해야 합니다.  
+-   XPath는와 같은 문자를 포함할 수 있습니다 < 또는 XML에서 특별 한 의미가 있는 (및 서식 파일은 XML 문서). XML을 사용 하 여 이러한 문자를 이스케이프 처리 해야 &-인코딩 또는 URL에 XPath를 지정 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

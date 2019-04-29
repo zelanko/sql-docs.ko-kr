@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022683"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>새 피어 초기화(피어 투 피어 복제)
   **새 피어 초기화** 페이지를 사용하여 피어 데이터베이스가 초기화된 방법을 지정할 수 있습니다. 이 마법사를 완료하기 전에 피어를 초기화해야 합니다. 피어는 수동으로 초기화되거나 트랜잭션 복제에서 제공하는 **initialize with backup** 기능을 사용하여 초기화됩니다. 피어 투 피어 트랜잭션 복제는 스냅숏을 사용한 피어 초기화를 지원하지 않습니다. 여러 피어를 각각 다른 방법을 사용하여 초기화해야 하는 경우에는 이 마법사를 두 번 수행하여 피어를 개별적으로 추가해야 합니다.  

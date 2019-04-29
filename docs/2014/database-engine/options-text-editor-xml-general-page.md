@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843807"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   이 대화 상자를 사용하여 XML 문서를 편집하는 데 사용되는 XML 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **XML** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "51029102"
   
  줄이 비어 있지 않으면 이 설정은 **복사** 또는 **잘라내기** 에 영향을 주지 않습니다. 어떤 영역도 선택하지 않으면 줄 전체를 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 줄 전체의 텍스트와 줄 끝 문자를 붙여 넣습니다.  
   
-## <a name="display"></a>디스플레이  
+## <a name="display"></a>표시  
  **줄 번호**  
  이 확인란을 선택하면 각 코드 줄 옆에 줄 번호가 표시됩니다.  
   

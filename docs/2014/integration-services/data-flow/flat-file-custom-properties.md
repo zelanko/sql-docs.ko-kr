@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902050"
 ---
 # <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -26,7 +26,7 @@ ms.locfileid: "58392081"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|문자열|파일 이름이 포함된 출력 열의 이름입니다. 이름이 지정되지 않은 경우 파일 이름이 포함된 출력 열이 생성되지 않습니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
+|FileNameColumnName|문자열|파일 이름이 포함된 출력 열의 이름입니다. 이름이 지정되지 않은 경우 파일 이름이 포함된 출력 열이 생성되지 않습니다.<br /><br /> 참고: 이 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |RetainNulls|Boolean|데이터 변환 파이프라인 엔진에서 데이터를 처리할 때 원본 파일의 Null 값을 Null 값으로 유지할지 여부를 지정하는 값입니다. 이 속성의 기본값은 `False`입니다.|  
   
  플랫 파일 원본의 출력에는 사용자 지정 속성이 없습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "58392081"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|열이 DTS에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 자세한 내용은 [Fast Parse](../fast-parse.md) 및 [Standard Parse](../standard-parse.md)를 참조하세요. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성을 사용할 수 없습니다는 **플랫 파일 원본 편집기**를 사용 하 여 설정할 수 있습니다 합니다 **고급 편집기**.|  
+|FastParse|Boolean|열이 DTS에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 자세한 내용은 [Fast Parse](../fast-parse.md) 및 [Standard Parse](../standard-parse.md)를 참조하세요. 이 속성의 기본값은 `False`입니다.<br /><br /> 참고: 이 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
   
  자세한 내용은 [Flat File Source](flat-file-source.md)을 참조하세요.  
   

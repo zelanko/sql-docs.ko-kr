@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911372"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류를 반환 됩니다. 이 오류를 받게 되 면 확인 합니다 **오류** 활성 컬렉션 **연결** 발생 한 문제를 설명 하는 하나 이상의 오류를 포함 하는 개체입니다.  

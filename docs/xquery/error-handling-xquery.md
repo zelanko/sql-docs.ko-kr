@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 78a89ddcb27111396ec279af0b418e8490780e6a
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934598"
 ---
 # <a name="error-handling-xquery"></a>오류 처리(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "51291339"
  정적 오류는 [!INCLUDE[tsql](../includes/tsql-md.md)] 오류 메커니즘을 사용하여 반환됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery 형식 지정 오류는 정적으로 반환됩니다. 자세한 내용은 [XQuery 및 정적 형식 지정](../xquery/xquery-and-static-typing.md)합니다.  
   
 ## <a name="dynamic-errors"></a>동적 오류  
- XQuery에서 대부분의 동적 오류는 빈 시퀀스("()")로 매핑됩니다. 두 가지 예외가 있지만 이들은: 조건 XQuery 집계 함수와 XML-DML 유효성 검사 오류를 오버플로 합니다. 대부분의 동적 오류는 빈 시퀀스로 매핑됩니다. 그렇지 않으면 XML 인덱스를 활용하는 쿼리 실행 시 오류가 발생할 수 있습니다. 따라서 오류를 발생시키지 않고 효율적으로 쿼리를 실행하기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동적 오류를 ()로 매핑합니다.  
+ XQuery에서 대부분의 동적 오류는 빈 시퀀스("()")로 매핑됩니다. 그러나이 두 가지 예외: XQuery 집계 함수와 XML-DML 유효성 검사 오류 조건을 오버플로 합니다. 대부분의 동적 오류는 빈 시퀀스로 매핑됩니다. 그렇지 않으면 XML 인덱스를 활용하는 쿼리 실행 시 오류가 발생할 수 있습니다. 따라서 오류를 발생시키지 않고 효율적으로 쿼리를 실행하기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동적 오류를 ()로 매핑합니다.  
   
  동적 오류가 조건자 내에서 발생하는 경우에는 오류가 발생하지 않아도 ()가 False로 매핑되기 때문에 의미가 변경되지 않는 경우가 많습니다. 하지만 일부 경우 동적 오류 대신 ()를 반환하면 예기치 않은 결과가 발생할 수 있습니다. 다음은 이를 보여 주는 예입니다.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>예: avg () 함수를 사용 하 여 문자열을 사용 하 여  
+### <a name="example-using-the-avg-function-with-a-string"></a>예: Avg () 함수를 사용 하 여 문자열을 사용 하 여  
  다음 예제에서는 [avg 함수](../xquery/aggregate-functions-avg.md) 세 가지 값의 평균을 계산 하기 위해 호출 됩니다. 이들 값 중 하나는 문자열입니다. 이 경우 XML 인스턴스는 형식화되지 않았기 때문에 이 인스턴스의 모든 데이터는 형식화되지 않은 원자 유형입니다. 합니다 **avg ()** 함수는 먼저 이러한 값을 캐스팅 **xs: double** 평균을 계산 하기 전에 합니다. 그러나 값을 `"Hello"`를 캐스팅할 수 없는 **xs: double** 동적 오류를 만듭니다. 캐스팅 동적 오류를 반환 하는 대신에 예에서 `"Hello"` 하 **xs: double** 빈 시퀀스가 발생 합니다. 합니다 **avg ()** 함수이 값이 무시 다른 두 값의 평균을 계산 하 고 150을 반환 합니다.  
   
 ```  
@@ -58,7 +58,7 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>예: not을 사용 하 여 함수  
+### <a name="example-using-the-not-function"></a>예: Not을 사용 하 여 함수  
  사용 하는 경우는 [작동 하지](../xquery/functions-on-boolean-values-not-function.md) 예를 들어, 조건자에서 `/SomeNode[not(Expression)]`, 동적 오류가 발생 하는 식, 빈 시퀀스가 반환 됩니다 오류 대신 합니다. 적용 **not ()** 빈 시퀀스를 오류 대신 True를 반환 합니다.  
   
 ### <a name="example-casting-a-string"></a>예: 문자열 캐스팅  

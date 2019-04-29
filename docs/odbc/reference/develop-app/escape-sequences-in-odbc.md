@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942976"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC의 이스케이프 시퀀스
 언어 등의 기능, 외부 조인 및 스칼라 함수 호출 수는 일반적으로 Dbms에 의해 구현 됩니다. 그러나 이러한 기능에 대 한 구문은 경향이 DBMS 관련 표준 구문을 다양 한 표준 기관에서 정의 된 경우에 있습니다. 이 인해 ODBC는 다음 언어 기능에 대 한 표준 구문을 포함 하는 이스케이프 시퀀스를 정의 합니다.  

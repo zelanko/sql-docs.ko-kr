@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8c7c2f178391b93b1034d3e1bfb07ff9f7714ed
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012571"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout 이벤트 클래스
    **Audit Logout** 이벤트 클래스는 사용자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 로그아웃(로그오프)했음을 나타냅니다. 이 이벤트 클래스는 연결 풀에서 다시 사용된 연결 또는 새 연결에 의해 발생합니다.  

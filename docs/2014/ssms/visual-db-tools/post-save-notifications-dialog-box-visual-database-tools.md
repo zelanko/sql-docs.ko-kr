@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033475"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>사후 저장 알림 대화 상자(Visual Database Tools)
   이 대화 상자는 테이블에 대한 변경 내용을 저장하려 할 때 오류가 발생하면 나타납니다. 이 대화 상자에는 데이터베이스에 성공적으로 저장된 개체와 저장되지 않은 개체 및 발생한 오류가 표시됩니다.  

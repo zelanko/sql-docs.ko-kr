@@ -19,12 +19,12 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013270"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ sys.dm_exec_query_plan(plan_handle)
   
  임시 쿼리를 간단 하거나 강제 매개 변수화를 사용 하는 경우는 **query_plan** 문 텍스트만 및 실제 쿼리 계획 하지 열이 포함 됩니다. 쿼리 계획을 반환 하려면 호출 **sys.dm_exec_query_plan** 준비 된 매개 변수가 있는 쿼리의 계획 핸들에 대 한 합니다. 참조 하 여 쿼리 매개 변수화 되었는지 여부를 확인할 수 있습니다는 **sql** 열을 [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 뷰 또는 텍스트 열을는 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)동적 관리 뷰.  
   
- 에 허용 된 중첩된 수준 수가 제한으로 인해 합니다 **xml** 데이터 형식 **sys.dm_exec_query_plan** 중첩 요소의 128 수준을 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 및 이후 버전에서는 합니다 **query_plan** 열 NULL을 반환 합니다. 사용할 수는 [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 동적 관리 함수를 텍스트 형식의 쿼리 계획의 출력을 반환 합니다.  
+> [!NOTE] 
+> 에 허용 된 중첩된 수준 수가 제한으로 인해 합니다 **xml** 데이터 형식 **sys.dm_exec_query_plan** 중첩 요소의 128 수준을 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 및 이후 버전에서는 합니다 **query_plan** 열 NULL을 반환 합니다.   
+> 사용할 수는 [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 동적 관리 함수를 텍스트 형식의 쿼리 계획의 출력을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  실행할 **sys.dm_exec_query_plan**, 사용자의 멤버 여야 합니다.는 **sysadmin** 있거나 고정 서버 역할은 `VIEW SERVER STATE` 서버에 대 한 권한.  

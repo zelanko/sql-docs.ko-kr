@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004705"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47735781"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**< 상속 된 열 >**||열을 상속 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)합니다.|  
-|**사이트**|**nvarchar(128)**|이 사이트에 대한 호스트 컴퓨터의 이름이며 SITE = 옵션으로 지정됩니다.|  
+|**site**|**nvarchar(128)**|이 사이트에 대한 호스트 컴퓨터의 이름이며 SITE = 옵션으로 지정됩니다.|  
 |**url_path**|**nvarchar(4000)**|이 HTTP 엔드포인트에 대한 URL의 경로 부분이며 PATH= 옵션으로 지정됩니다.|  
 |**is_clear_port_enabled**|**bit**|1 = CLEAR 포트가 PORT = CLEAR 옵션을 사용하여 활성화되었습니다.|  
-|**clear_port 트래픽의 경우**|**int**|CLEAR PORT = 옵션에 지정된 포트 번호입니다.<br /><br /> NULL = 지정되지 않음|  
+|**clear_port**|**int**|CLEAR PORT = 옵션에 지정된 포트 번호입니다.<br /><br /> NULL = 지정되지 않음|  
 |**is_ssl_port_enabled**|**bit**|1 = SSL 포트가 PORT = SSL 옵션을 사용하여 활성화되었습니다.|  
 |**ssl_port**|**int**|SSL PORT = 옵션에 지정된 포트 번호 값입니다.<br /><br /> NULL = 지정되지 않음|  
 |**is_anonymous_enabled**|**bit**|1 = 익명 액세스가 AUTHENTICATION = ANONYMOUS 옵션을 사용하여 활성화되었습니다.|  

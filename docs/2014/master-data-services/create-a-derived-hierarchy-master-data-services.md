@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0b56342c407bf2324da503810ca00d797b1c5cc6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925251"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>파생 계층 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버가 올바른 수준으로 유지되는 수준 기반 계층을 원하는 경우 파생 계층을 만듭니다. 파생 계층은 모델에 있는 도메인 기반 특성 관계를 기반으로 합니다.  

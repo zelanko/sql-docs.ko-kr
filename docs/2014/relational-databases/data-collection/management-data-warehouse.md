@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918341"
 ---
 # <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
   관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  

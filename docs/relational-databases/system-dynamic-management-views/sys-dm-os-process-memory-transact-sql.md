@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 03830b00df02332069383e496c0b22d198b95d7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013015"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47597029"
 |**total_virtual_address_space_kb**|**bigint**|가상 주소 공간의 사용자 모드 부분의 총 크기를 나타냅니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_reserved_kb**|**bigint**|프로세스에 예약된 가상 주소 공간의 총 크기를 나타냅니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_committed_kb**|**bigint**|물리적 페이지에 커밋되거나 매핑된 예약된 가상 주소 공간의 크기를 나타냅니다. Null을 허용하지 않습니다.|  
-|**virtual_address_space_available_kb**|**bigint**|현재 사용 가능한 가상 주소 공간의 크기를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 존재할 수 할당 세분성 보다 작은 지역 무료입니다. 이러한 영역은 할당에 사용할 수 없습니다.|  
+|**virtual_address_space_available_kb**|**bigint**|현재 사용 가능한 가상 주소 공간의 크기를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 할당 세분성 보다 작은 사용 가능한 영역이 있을 수 있습니다. 이러한 영역은 할당에 사용할 수 없습니다.|  
 |**page_fault_count**|**bigint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 발생한 페이지 폴트 수를 나타냅니다. Null을 허용하지 않습니다.|  
 |**memory_utilization_percentage**|**int**|작업 집합에 있는 커밋된 메모리의 비율을 지정합니다. Null을 허용하지 않습니다.|  
 |**available_commit_limit_kb**|**bigint**|프로세스에서 커밋할 수 있는 메모리의 양을 나타냅니다. Null을 허용하지 않습니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "47597029"
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (TRANSACT-SQL) | Microsoft Docs
+title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013582"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "47815271"
 |**time_queued**|**datetime**|작업이 큐에 추가된 시간입니다.|  
 |**job_id**|**int**|작업 식별자입니다.|  
 |**database_id**|**int**|작업을 실행할 데이터베이스입니다.|  
-|**object_id1**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 주의 섹션을 참조하세요.|  
-|**object_id2**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 주의 섹션을 참조하세요.|  
-|**object_id3**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 주의 섹션을 참조하세요.|  
-|**object_id4**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 주의 섹션을 참조하세요.|  
+|**object_id1**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|**object_id2**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|**object_id3**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|**object_id4**|**int**|값이 작업 유형에 따라 달라집니다. 자세한 내용은 설명 섹션을 참조하세요.|  
 |**error_code**|**int**|장애로 인해 작업이 다시 삽입된 경우의 오류 코드입니다. 일시 중지되었거나 선택되지 않았거나 완료된 경우에는 NULL입니다.|  
 |**request_type**|**smallint**|작업 요청 유형입니다.|  
 |**retry_count**|**smallint**|작업이 큐에서 선택되었다가 리소스 부족이나 기타 이유로 큐에 다시 삽입된 횟수입니다.|  

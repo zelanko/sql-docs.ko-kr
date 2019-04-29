@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920023"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "58536505"
 |FileTable의 파일이나 디렉터리에 대한 절대 또는 상대 UNC 경로를 가져옵니다.|[GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |경로를 제공하여 FileTable의 지정된 파일 또는 디렉터리에 대한 경로 로케이터 ID 값을 가져옵니다.|[GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 어떻게: 이식 가능한 코드에 상대 경로 사용  
+##  <a name="BestPracticeRelativePaths"></a> 어떻게: 이식 가능한 코드에 대 한 상대 경로 사용 합니다.  
  코드와 애플리케이션을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 `GetFileNamespacePath` 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```sql  

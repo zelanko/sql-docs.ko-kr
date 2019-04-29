@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048047"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52407150"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|래치 클래스의 이름입니다.|  
 |waiting_requests_count|**bigint**|이 클래스의 래치 대기 수입니다. 이 카운터는 래치 대기가 시작될 때 증가합니다.|  
-|wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열은 래치 대기 동안 5분마다 업데이트되고 래치 대기가 끝날 때도 업데이트됩니다.|  
+|wait_time_ms|**bigint**|이 클래스의 총 래치 대기 시간(밀리초)입니다.<br /><br /> **참고:** 이 열에는 래치 대기가 끝날 때 및 래치 대기 동안 5 분 마다 업데이트 됩니다.|  
 |max_wait_time_ms|**bigint**|메모리 개체가 이 래치를 기다린 최대 시간입니다. 이 값이 지나치게 높으면 내부 교착 상태가 발생한 것일 수 있습니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   

@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910893"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML의 레코드 집합 동적 속성
 (Client Cursor Engine)에서 다음 레코드 집합 공급자별 속성을 XML 형식으로 현재 유지 됩니다.  
   
 -   다시 동기화를 업데이트 합니다.  
   
--   고유 테이블  
+-   고유한 테이블  
   
 -   고유한 스키마  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901781"
 ---
 # <a name="look-up-infopackage"></a>InfoPackage 조회
   **InfoPackage 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoPackage를 조회할 수 있습니다. InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  

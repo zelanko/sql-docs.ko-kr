@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b287bb547b3f151ba26d0f0707f57bf04c8ec163
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999808"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>MDS 저장소에 연결(Excel용 MDS 추가 기능)
 
@@ -39,7 +39,7 @@ ms.locfileid: "52413050"
   
 4.  **새 연결 추가** 대화 상자의 **설명** 필드에서 연결에 대한 설명을 입력합니다. 이 연결은 사용자가 도구 모음에서 **연결** 단추 아래의 화살표를 클릭할 때 표시됩니다.  
   
-5.  **MDS 서버 주소** 상자에 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: `https://contoso/mds`)을 입력합니다.  
+5.  **MDS 서버 주소** 상자에 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: `https://contoso/mds`)을 입력합니다.  
   
     > [!NOTE]  
     >  컴퓨터 이름을 사용해야 합니다. "localhost"는 사용하지 마십시오.  
@@ -50,13 +50,13 @@ ms.locfileid: "52413050"
   
 8.  **연결**을 클릭합니다. **Master Data Services** 창이 표시됩니다.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>다음 단계  
   
 -   [Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)  
   
 -   [내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목  
  [연결&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
   
