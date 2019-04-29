@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912137"
 ---
 # <a name="sqlservice-class"></a>SqlService 클래스
   [SqlService 클래스](sqlservice-class.md) 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스의 인스턴스를 나타냅니다.  

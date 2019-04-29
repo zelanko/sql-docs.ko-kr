@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919666"
 ---
 # <a name="user-defined-type-requirements"></a>사용자 정의 형식 요구 사항
   사용자 정의 형식 (UDT)에 설치를 만들 때 몇 가지 중요 한 설계 결정을 내려야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대부분의 UDT는 구조로 만드는 것이 좋지만 클래스로 만드는 방법도 고려해 볼 수 있습니다. UDT 정의가 UDT 생성 사양에 맞아야만 UDT 정의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 있습니다.  
@@ -112,33 +112,33 @@ ms.locfileid: "49120100"
  이 UDT의 모든 인스턴스 길이가 같은지 여부를 나타냅니다.  
   
  `MaxByteSize`  
- 인스턴스의 최대 크기(바이트)입니다. `MaxByteSize` 직렬화 형식과 함께 `UserDefined`를 지정해야 합니다. 사용자 정의 직렬화가 지정된 UDT의 경우 `MaxByteSize`는 사용자가 정의한 대로 직렬화된 형식의 전체 UDT 크기를 나타냅니다. `MaxByteSize` 값은 1에서 8000 사이의 값이어야 합니다. UDT가 8000바이트보다 크다는 것을 나타내려면 이 값을 -1로 설정해야 하며 총 크기는 최대 LOB 크기를 초과할 수 없습니다. 10개의 문자(`System.Char`)로 구성된 문자열 속성이 있는 UDT가 있다고 가정해 보십시오. UDT BinaryWriter를 사용 하 여 serialize 되 면 serialize 된 문자열의 총 크기는 22 바이트: 2 바이트 문자의 최대 수와 컨트롤 2 바이트의 이진 스트림으로 직렬화 하는 작업에서 발생 하는 오버 헤드를 곱한 유니코드 utf-16 문자 당 합니다. 따라서 `MaxByteSize`의 값을 결정할 때 직렬화된 UDT의 전체 크기를 고려해야 합니다. 이 크기는 이진 형식으로 직렬화된 데이터의 크기와 직렬화로 인해 발생한 오버헤드를 합한 것입니다.  
+ (바이트)에서 인스턴스의 최대 크기입니다. `MaxByteSize` 직렬화 형식과 함께 `UserDefined`를 지정해야 합니다. 를 지정 하는 사용자 정의 직렬화 된 udt `MaxByteSize` 사용자가 정의 된 대로 serialize 된 형식에서 UDT의 총 크기를 나타냅니다. `MaxByteSize` 값은 1에서 8000 사이의 값이어야 합니다. UDT가 8000바이트보다 크다는 것을 나타내려면 이 값을 -1로 설정해야 하며 총 크기는 최대 LOB 크기를 초과할 수 없습니다. 10 자 문자열의 속성을 사용 하 여 UDT는 것이 좋습니다 (`System.Char`). UDT BinaryWriter를 사용 하 여 serialize 되 면 serialize 된 문자열의 총 크기는 22 바이트: 유니코드 utf-16 문자당 2 바이트를 곱한 자와 2 컨트롤의 최대 바이트의 오버 헤드를 이진 스트림으로 직렬화 하는 작업에서 발생 합니다. 따라서 `MaxByteSize`의 값을 결정할 때 직렬화된 UDT의 전체 크기를 고려해야 합니다. 이 크기는 이진 형식으로 직렬화된 데이터의 크기와 직렬화로 인해 발생한 오버헤드를 합한 것입니다.  
   
  `ValidationMethodName`  
  UDT의 인스턴스가 유효한지 여부를 검사하는 데 사용되는 메서드의 이름입니다.  
   
 ### <a name="setting-isbyteordered"></a>IsByteOrdered 설정  
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered` 속성을 `true`로 설정하면 이는 직렬화된 이진 데이터가 정보의 의미 정렬(semantic ordering)에 사용될 수 있도록 보장하는 것과 같습니다. 따라서 바이트 정렬된 UDT 개체의 각 인스턴스에는 직렬화된 표현이 하나만 포함될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 직렬화된 바이트에 대한 비교 작업이 수행되면 그 결과는 동일한 비교 작업이 관리 코드에서 수행된 결과와 같아야 합니다. `IsByteOrdered`가 `true`로 설정된 경우 다음 기능도 지원됩니다.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute.IsByteOrdered` 속성을 `true`로 설정하면 이는 직렬화된 이진 데이터가 정보의 의미 정렬(semantic ordering)에 사용될 수 있도록 보장하는 것과 같습니다. 따라서 바이트 정렬 UDT 개체의 각 인스턴스는 직렬화 된 표현이 하나만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 직렬화된 바이트에 대한 비교 작업이 수행되면 그 결과는 동일한 비교 작업이 관리 코드에서 수행된 결과와 같아야 합니다. `IsByteOrdered`가 `true`로 설정된 경우 다음 기능도 지원됩니다.  
   
--   이 형식의 열에 인덱스를 만드는 기능  
+-   이 형식의 열에 인덱스를 만들 수 있습니다.  
   
--   이 형식의 열에 CHECK 및 UNIQUE 제약 조건과 기본 키 및 외래 키를 만드는 기능  
+-   이 형식의 열에 CHECK 및 UNIQUE 제약 조건 뿐만 아니라 기본 및 외래 키를 만들 수 있습니다.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] ORDER BY, GROUP BY 및 PARTITION BY 절을 사용하는 기능. 이 경우 형식의 이진 표현이 순서를 결정하는 데 사용됩니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] ORDER BY, GROUP BY 및 PARTITION BY 절을 사용하는 기능. 이러한 경우 종류의 이진 순서를 결정 하려면 사용 됩니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 비교 연산자를 사용하는 기능  
   
--   이 형식의 계산 열을 유지하는 기능  
+-   이 형식의 계산된 열을 유지할 수 있습니다.  
   
- `Native`가 `UserDefined`로 설정된 경우 `IsByteOrdered` 및 `true` 직렬화 형식은 다음 비교 연산자를 지원합니다.  
+ 모두를 `Native` 및 `UserDefined` 직렬화 형식은 다음 비교 연산자를 지원 하면 `IsByteOrdered` 로 설정 된 `true`:  
   
--   같음(=)  
+-   같음 (=)  
   
 -   같지 않음(!=)  
   
 -   보다 큼(>)  
   
--   보다 작음(\<)  
+-   보다 작은 (\<)  
   
 -   크거나 같음(>=)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "49120100"
  UDT에서 문자열로의 변환 또는 문자열에서 UDT로의 변환을 지원하려면 클래스에서 `Parse` 메서드와 `ToString` 메서드를 제공해야 합니다. `Parse` 메서드는 문자열을 UDT로 변환할 수 있게 하며, `static`(Visual Basic의 경우 `Shared`)으로 선언되고 `System.Data.SqlTypes.SqlString` 유형의 매개 변수를 사용해야 합니다. 자세한 내용 및 구현 하는 방법의 예는 `Parse` 하 고 `ToString` 메서드를 참조 하세요 [코딩 형식](creating-user-defined-types-coding.md)합니다.  
   
 ## <a name="xml-serialization"></a>XML 직렬화  
- UDT는 XML 직렬화 계약에 따라 UDT에서 `xml` 데이터 형식으로의 변환 또는 xml 데이터 형식에서 UDT로의 변환을 지원해야 합니다. `System.Xml.Serialization` 네임스페이스에는 개체를 XML 형식 문서나 스트림으로 직렬화하는 데 사용되는 클래스가 있습니다. XML 직렬화 및 역직렬화를 위한 사용자 지정 형식을 제공하는 `xml` 인터페이스를 사용하여 `IXmlSerializable` 직렬화를 구현할 수 있습니다.  
+ UDT는 XML 직렬화 계약에 따라 UDT에서 `xml` 데이터 형식으로의 변환 또는 xml 데이터 형식에서 UDT로의 변환을 지원해야 합니다. `System.Xml.Serialization` 네임 스페이스에 개체를 XML 형식 문서 또는 스트림으로 serialize 하는 데 사용 되는 클래스가 포함 되어 있습니다. XML 직렬화 및 역직렬화를 위한 사용자 지정 형식을 제공하는 `xml` 인터페이스를 사용하여 `IXmlSerializable` 직렬화를 구현할 수 있습니다.  
   
  XML 직렬화를 사용하면 UDT에서 `xml`로의 명시적 변환 외에도 다음과 같은 작업이 가능합니다.  
   

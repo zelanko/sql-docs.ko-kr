@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842529"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server 유틸리티 문제 해결
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 문제 해결에는 SQL Server 인스턴스를 UCP에 등록하는 작업의 실패 해결, UCP에서 관리되는 인스턴스 목록 뷰에 회색 아이콘으로 표시되는 실패한 데이터 수집 문제 해결, 성능 병목 현상 완화, 리소스 상태 문제 해결 등이 포함됩니다. 로 식별 되는 리소스 상태 문제를 완화 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP를 참조 하세요 [SQL Server 리소스 상태 문제 해결 &#40;SQL Server 유틸리티&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "53371065"
   
  Transact-SQL 문 또는 일괄 처리를 실행하는 동안 예외가 발생했습니다. (Microsoft.SqlServer.ConnectionInfo)  
   
- 추가 정보:  Windows NT 그룹/사용자에 대 한 정보를 가져올 수 없습니다 '\<DomainName\AccountName >', 오류 코드 0x5. (Microsoft SQL Server, 오류: 15404)  
+ 추가 정보:  Windows NT 그룹/사용자에 대 한 정보를 가져올 수 없습니다 '\<DomainName\AccountName >', 오류 코드 0x5. (Microsoft SQL Server, Error: 15404)  
   
  이 문제는 다음과 같은 예제 시나리오에서 발생합니다.  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371065"
   
  이 경우 다음과 같은 오류 메시지만 출력됩니다.  
   
- 셸 변수 "ErrorActionPreference"가 Stop으로 설정되어 있으므로 명령 실행이 중지되었습니다. 액세스가 거부되었습니다.  
+ 명령 실행에는 셸 변수 "ErrorActionPreference"가 Stop으로 설정 하기 때문에 중지 되었습니다. 액세스가 거부되었습니다.  
   
- 오류: \<날짜-시간 (MM/DD/YYYY h:mm: ss) >: CPU 속성을 수집하는 동안 예외가 발생했습니다.///  WMI 쿼리가 실패했을 수 있습니다.  경고.  
+ 오류: \<날짜-시간 (MM/DD/YYYY h:mm: ss) >: Cpu 속성을 수집 하는 동안 예외가 있습니다.  WMI 쿼리가 실패했을 수 있습니다.  경고.  
   
  이 문제를 해결하려면 다음 구성 설정을 확인하십시오.///  
   
@@ -164,7 +164,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  사용자를 이 그룹에 추가하기 전에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 이미 UCP가 등록된 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server 리소스 상태 문제 해결&#40;SQL Server 유틸리티&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
   

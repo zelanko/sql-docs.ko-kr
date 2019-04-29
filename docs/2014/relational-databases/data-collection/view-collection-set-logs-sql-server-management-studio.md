@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a68d71c44304d2f57c39d5a32fd57a5efb9617e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918243"
 ---
 # <a name="view-collection-set-logs-sql-server-management-studio"></a>컬렉션 집합 로그 보기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모든 컬렉션 집합 로그 또는 개별 컬렉션 집합 로그를 볼 수 있습니다.  

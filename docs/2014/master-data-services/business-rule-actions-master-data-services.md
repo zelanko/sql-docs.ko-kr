@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877197"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 비즈니스 규칙 동작은 비즈니스 규칙 조건 평가의 결과입니다. 조건이 True이면 동작이 시작됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "53357725"
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**잘못됨**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
-|**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 이 동작을 필수 조건과 함께 사용하여 구독 시스템의 인덱스 필드 유효성을 유지합니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 구독 시스템에서 인덱스 필드 유효성을 확인 하는 필수 조건 사용 하 여이 작업을 결합 합니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**다음 값 중 하나가 있어야 함**|선택한 특성에 목록에 지정된 **값 중 하나가 있어야** 합니다.<br /><br /> 이 동작은 텍스트 값에 유효합니다.|  
 |**보다 커야 함**|선택한 특성이 특정 특성 또는 특정 특성 값 **보다 크거나** , 비어 있어야 합니다.<br /><br /> 이 동작은 텍스트, 숫자 및 날짜 값에 유효합니다.|  
 |**같아야 함**|선택한 특성이 정의된 특성 값 또는 다른 특성과 **같거나** , 비어 있어야 합니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  

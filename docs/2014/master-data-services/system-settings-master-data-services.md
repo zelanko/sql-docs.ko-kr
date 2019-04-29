@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923182"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 응용 프로그램 및 웹 서비스에 대해 시스템 설정을 구성할 수 있습니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "53370205"
 |**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션의 URL(예: http://constoso/mds)입니다.|  
 |**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
 |**단일 전자 메일의 알림 수**|**NotificationsPerEmail**|단일 알림 전자 메일에 나열될 유효성 검사 문제의 최대 개수입니다. 문제가 더 있더라도 전자 메일에는 포함되지 않지만 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 제공됩니다.|  
-|**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 개별 사용자에 대 한이 재정의할 수 있습니다 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], 변경 및 저장 합니다 **전자 메일 형식** 사용자의 **일반** 탭 합니다.|  
+|**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 사용자의 **일반** 탭에서 **이메일 형식**을 변경 및 저장하여 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]의 개별 사용자에 대한 이 설정을 재정의할 수 있습니다.|  
 |**전자 메일 주소에 대한 정규식**|**EmailRegExPattern**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 사용자의 **일반** 탭에 입력한 전자 메일 주소의 유효성을 검사하는 데 사용되는 정규식입니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
 |**데이터베이스 메일 계정**|**EmailProfilePrincipalAccount**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 계정을 표시합니다. 기본 프로필은 **mds_email_user**입니다.|  
 |**데이터베이스 메일 프로필**|**DatabaseMailProfile**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 프로필입니다. 기본값은 공백입니다.|  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5425431d465c9bddba23c959aab41cefbfcdd89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915332"
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
     
@@ -32,7 +32,7 @@ ms.locfileid: "48203643"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름||  
-|메시지 텍스트|서버에서 로그인에 필요한 SSL 공급자 라이브러리를 로드할 수 없습니다. 연결이 닫혔습니다. SSL은 관리자가 서버를 구성한 방식에 따라 로그인 시퀀스 또는 모든 통신을 암호화하는 데 사용됩니다. 온라인 설명서에서 다음 오류 메시지에 대한 정보를 확인하세요.:  0xXXXX. [클라이언트: 11.11.11.11]|  
+|메시지 텍스트|서버에서 로그인에 필요한 SSL 공급자 라이브러리를 로드할 수 없습니다. 연결이 닫혔습니다. SSL은 관리자가 서버를 구성한 방식에 따라 로그인 시퀀스 또는 모든 통신을 암호화하는 데 사용됩니다. 이 오류 메시지에 대 한 정보에 대 한 온라인 설명서를 참조 하세요.  0xXXXX. [클라이언트: 11.11.11.11]|  
   
 ## <a name="explanation"></a>설명  
  이 오류는 클라이언트가 연결을 닫았음을 나타내며 연결 제한 시간이 초과되어 발생할 수 있습니다. 이 오류 메시지에는 근본 문제를 설명하는 운영 체제의 값이 표시됩니다.  

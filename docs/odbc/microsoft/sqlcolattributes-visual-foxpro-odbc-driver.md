@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928170"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -37,7 +37,7 @@ ms.locfileid: "47820062"
   
 |*fDescType*|설명|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|FALSE를 반환 합니다: Visual FoxPro 필드가 없습니다. 카운터입니다.|  
+|SQL_COLUMN_AUTO_INCREMENT|FALSE를 반환합니다. Visual FoxPro 카운터 필드가 없습니다.|  
 |SQL_COLUMN_CASE_SENSITIVE|열 유형이 문자에 항상 TRUE를 반환 합니다.|  
 |SQL_COLUMN_LABEL|또한 SQL_COLUMN_NAME에서 반환 하는 열 이름을 반환 합니다.|  
 |SQL_COLUMN_MONEY|열 유형입니다 (Visual FoxPro 언어에서 "Y"로 표현 됨) 통화 하는 경우 TRUE를 반환 합니다.|  

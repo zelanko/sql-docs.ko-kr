@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921829"
 ---
 # <a name="file-restores-simple-recovery-model"></a>파일 복원(단순 복구 모델)
   이 항목에서는 하나 이상의 읽기 전용 보조 파일 그룹이 있는 단순 모델 데이터베이스와 관련된 내용을 다룹니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "54126903"
      온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)을 참조하세요.  
   
     > [!TIP]  
-    >  오프 라인 파일 복원을 위해 데이터베이스를 원하는 경우 데이터베이스를 오프 라인 복원 시퀀스를 실행 하 여 시작 하기 전에 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 문: ALTER DATABASE *database_name* 오프 라인으로 설정 합니다.  
+    >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) 문: ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스 오프라인으로 전환합니다.  
   
 
   
@@ -76,13 +76,13 @@ ms.locfileid: "54126903"
   
 ### <a name="examples"></a>예  
   
--   [예: 읽기 전용 파일 온라인 복원 &#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [예: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [예: 주 서버와 다른 파일 그룹의 오프 라인 복원 &#40;전체 복구 모델&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [예: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원&#40;전체 복구 모델&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
  **파일과 파일 그룹을 복원하려면**  
   
 -   [기존 파일에서 파일 및 파일 그룹 복원&#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -96,7 +96,7 @@ ms.locfileid: "54126903"
   
   
 ## <a name="see-also"></a>관련 항목  
- [백업 및 복원: 상호 운용성 및 공존 성 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [백업 및 복원: 상호 운용성 및 공존성&#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [전체 파일 백업&#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   

@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925415"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>통합 사용 권한(Master Data Services)
   통합 사용 권한은 엔터티의 모든 통합 멤버에 대한 특성 값에 적용됩니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "56042904"
 |----------------|-----------------|  
 |**읽기 전용**|특성이 표시되지만 사용자가 특성 값을 변경할 수 없습니다.|  
 |**Update**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
-|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: Name 및 Code 특성에 대 한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878226"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>사용자 정의 변수의 속성 설정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용자 정의 변수의 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
   
 -   변수 창.  
   
--   속성 창. 합니다 **속성** 창에서 사용할 수 없는 변수를 구성 하기 위한 속성을 나열 합니다 **변수** 창: 설명, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump  
+-   속성 창. **속성** 창에는 **변수** 창에서 사용할 수 없는 변수를 구성하기 위한 속성인 Description, EvaluateAsExpression, Expression, ReadOnly, ValueType 및 IncludeInDebugDump가 나열됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 속성을 업데이트할 수 없는 시스템 변수 집합도 제공합니다(RaiseChangedEvent 속성은 제외).  

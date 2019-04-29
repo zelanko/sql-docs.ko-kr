@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b8d5e7cd1d1696624ebb6fe919cfa3b1ba6ee5c7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017930"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>단원 9-2-번역 정의 및 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "52535009"
 ## <a name="next-lesson"></a>다음 단원  
 [10 단원: 관리자 역할 정의](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [차원 번역](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
 [큐브 번역](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)  
 [Analysis Services에서의 번역 지원](../analysis-services/translation-support-in-analysis-services.md)  

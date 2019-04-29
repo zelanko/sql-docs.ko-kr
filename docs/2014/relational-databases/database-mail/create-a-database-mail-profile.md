@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872209"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "53979139"
   
 -   **프로필 및 계정 관리** 페이지에서 **새 프로필 만들기** 옵션을 선택하고 **다음**을 클릭합니다.  
   
--   에 **새 프로필** 페이지에서 프로필 이름과 설명을 지정 하 고 계정을 클릭 하 여 프로필에 포함 될 추가 **다음**합니다.  
+-   **새 프로필** 페이지에서 프로필 이름과 설명을 지정하고, 프로필에 포함할 계정을 추가하고, **다음**을 클릭합니다.  
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 프로필 만들기를 완료합니다.  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855850"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 인덱싱 서비스 개요
 Microsoft OLE DB Provider for Microsoft Indexing Service가 파일 시스템 및 Microsoft 인덱싱 서비스에 의해 인덱싱된 웹 데이터에 대 한 프로그래밍 방식으로 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램 콘텐츠 및 파일 속성 정보를 검색 하는 SQL 쿼리를 실행할 수 있습니다.
@@ -97,20 +97,20 @@ MSIDXS
 |메서드|사용 가능 여부|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|사용자 계정 컨트롤|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|사용자 계정 컨트롤|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|
-|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
-|[지원](../../../ado/reference/ado-api/supports-method.md)|예|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|사용자 계정 컨트롤|
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|사용자 계정 컨트롤|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|
 |[Update](../../../ado/reference/ado-api/update-method.md)|아니요|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
 

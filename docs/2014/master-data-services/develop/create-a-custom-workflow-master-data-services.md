@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924725"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 이러한 솔루션을 사용하면 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. 기본 제공 워크플로 동작으로 가능한 것보다 복잡한 처리가 필요한 경우에는 사용자 지정 워크플로를 사용하십시오. 사용자 지정 워크플로는 사용자가 만드는 .NET 어셈블리입니다. 사용자 워크플로 어셈블리가 호출되면 상황에 따라 필요한 동작이 코드에 사용될 수 있습니다. 예를 들어, 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 CEP(복합 이벤트 처리)가 필요한 경우 데이터를 분석하고 어디로 데이터를 보내서 승인을 받을지를 결정하는 사용자 지정 워크플로를 시작하도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52750945"
 5.  SQL Server MDS Workflow Integration Services가 해당 데이터를 워크플로 처리기 어셈블리로 라우팅합니다.  
   
 > [!NOTE]  
->  참고: SQL Server MDS Workflow Integration Service는 간단한 프로세스를 트리거하기 위한 서비스입니다. 사용자 지정 코드에 복잡한 처리가 필요한 경우 별도의 스레드나 워크플로 프로세스 외부에서 처리를 완료하십시오.  
+>  참고: SQL Server MDS Workflow Integration Service는 간단한 프로세스를 트리거하기 위한 것입니다. 사용자 지정 코드에 복잡한 처리가 필요한 경우 별도의 스레드나 워크플로 프로세스 외부에서 처리를 완료하십시오.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>사용자 지정 워크플로용 MDS(Master Data Services) 구성  
  사용자 지정 워크플로를 만들려면 사용자 지정 코드를 일부 작성하고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 워크플로 데이터를 사용자 워크플로 처리기로 전달하도록 구성해야 합니다. 사용자 지정 워크플로 처리를 사용하려면 다음 단계를 수행하십시오.  
@@ -141,7 +141,7 @@ ms.locfileid: "52750945"
   
 1.  서비스 스냅인을 사용하여 서비스를 중지합니다.  
   
-2.  명령 프롬프트를 열고, 서비스 위치로 이동하고, Microsoft.MasterDataServices.Workflow.exe -console을 입력하여 서비스를 콘솔 모드로 실행합니다.  
+2.  명령 프롬프트를 열고 서비스의 위치로 이동 입력 하 여 콘솔 모드에서 서비스를 실행 합니다. Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 멤버를 업데이트하고 비즈니스 규칙을 다시 적용합니다. 콘솔 창에 자세한 로그가 표시됩니다.  
   

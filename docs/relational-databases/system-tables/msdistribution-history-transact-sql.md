@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903700"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52817325"
 |**start_time**|**datetime**|작업 실행을 시작할 시간입니다.|  
 |**time**|**datetime**|메시지가 기록되는 시간입니다.|  
 |**duration**|**int**|메시지 세션의 기간(초)입니다.|  
-|**주석**|**nvarchar(4000)**|메시지 텍스트입니다.|  
+|**comments**|**nvarchar(4000)**|메시지 텍스트입니다.|  
 |**xact_seqno**|**varbinary(16)**|마지막에 처리된 트랜잭션 시퀀스 번호입니다.|  
 |**current_delivery_rate**|**float**|마지막 기록 항목 이후에 초당 전달된 평균 명령 수입니다.|  
 |**current_delivery_latency**|**int**|마지막 기록 항목 이후 배포 데이터베이스를 시작하고 구독자에 적용될 때까지의 대기 시간입니다. 밀리초.|  

@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042519"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3단원: 보고서 서버에서 보고서 정의 로드
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>3단원: 보고서 서버에서 보고서 정의 로드 합니다.
   프로젝트를 만들고 RDL 스키마에서 클래스를 생성하면 보고서 서버에서 보고서 정의를 로드할 준비가 됩니다.  
   
 ### <a name="to-load-a-report-definition"></a>보고서 정의를 로드하려면  
@@ -97,7 +97,7 @@ ms.locfileid: "56025644"
     ```  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서는 코드를 작성하여 보고서 서버에서 로드된 보고서 정의를 업데이트합니다. 참조 [4 단원: 보고서 정의 프로그래밍 방식으로 업데이트할](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)합니다.  
+ 다음 단원에서는 코드를 작성하여 보고서 서버에서 로드된 보고서 정의를 업데이트합니다. [4단원: 보고서 정의 프로그래밍 방식으로 업데이트할](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

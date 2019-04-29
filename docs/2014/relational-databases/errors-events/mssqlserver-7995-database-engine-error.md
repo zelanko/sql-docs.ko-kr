@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc99c877374228545c575558539cad5fcac1edbe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913255"
 ---
 # <a name="mssqlserver7995"></a>MSSQLSERVER_7995
     

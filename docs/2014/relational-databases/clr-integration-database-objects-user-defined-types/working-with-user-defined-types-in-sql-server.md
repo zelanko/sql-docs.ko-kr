@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919954"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL 서버의 사용자 정의 형식 작업
   사용자 정의 형식 (UDT) 기능에 액세스할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일반 쿼리 구문을 사용 하 여 언어입니다. UDT는 데이터베이스 개체 정의에 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 함수 및 저장 프로시저의 변수, 그리고 함수 및 저장 프로시저의 인수로 사용할 수 있습니다.  

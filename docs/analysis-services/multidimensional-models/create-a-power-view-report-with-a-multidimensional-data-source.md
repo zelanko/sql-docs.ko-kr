@@ -1,5 +1,5 @@
 ---
-title: 다차원 데이터 원본과 Power View 보고서 만들기 | Microsoft Docs
+title: 다차원 데이터 소스를 사용 하 여 파워 뷰 보고서 만들기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48328b57ffd8064f9f7994c9660ceebd8a459eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866714"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>다차원 데이터 원본이 포함된 파워 뷰 보고서 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

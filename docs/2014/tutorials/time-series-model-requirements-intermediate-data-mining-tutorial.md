@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043118"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>시계열 모델에 대한 요구 사항 이해(중급 데이터 마이닝 자습서)
   예측 모델에서 사용할 데이터를 준비할 때 데이터에 시계열의 단계를 식별하는 데 사용할 수 있는 열이 포함되어 있는지 확인해야 합니다. 이 열은 `Key Time` 열로 지정됩니다. 이 열은 키이므로 고유 숫자 값을 포함해야 합니다.  

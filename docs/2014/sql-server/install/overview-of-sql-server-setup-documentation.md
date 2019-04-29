@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 284c02898bb0ba51b7e99a2ba259f06d4092a23f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010946"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 설치 설명서 개요
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서는 설치 미디어에 포함되어 있거나 온라인으로 볼 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48202123"
   
 -   [SQL Server 2014 BI 기능 설치](install-sql-server-business-intelligence-features.md)  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 응용 프로그램을 포함하는 Microsoft BI 플랫폼에 속하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기능 설치 옵션에 대해 설명합니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 분석 데이터를 만들거나 사용하는 데 사용되는 일부 클라이언트 애플리케이션을 포함하는 Microsoft BI 플랫폼에 속하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기능 설치 옵션에 대해 설명합니다.  
   
 -   [SQL Server 2014로 업그레이드](../../database-engine/install-windows/upgrade-sql-server.md)  
   

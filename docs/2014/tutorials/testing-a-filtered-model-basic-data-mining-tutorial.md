@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044098"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>필터링된 모델 테스트(기본 데이터 마이닝 자습서)
   확인 했으므로 했으므로 합니다 `TM_Decision_Tree` 모델은 가장 정확한, 모델의 요구에 맞게 사용자 지정할는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 타겟 메일링 캠페인입니다. 특히, 마케팅 부서의 male 및 female 고객 사이 차이가 있는지 알고 싶습니다. 정보를 광고 하는 데 잡지를 결정 하는 데 도움이 수 및 제품 하도록 메일 기능을 합니다.  

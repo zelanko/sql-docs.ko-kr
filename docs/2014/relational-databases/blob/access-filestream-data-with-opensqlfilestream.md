@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875092"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스
-  OpenSqlFilestream API는 FILESTREAM binary large object (BLOB) 파일 시스템에 저장 된에 대 한 Win32 호환 파일 핸들을 가져옵니다. 이 핸들은 [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)합니다 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)를 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)를 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), 또는 [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)합니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
+  OpenSqlFilestream API는 FILESTREAM binary large object (BLOB) 파일 시스템에 저장 된에 대 한 Win32 호환 파일 핸들을 가져옵니다. 핸들을 다음 Win32 api 전달할 수 있습니다. [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423)합니다 [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424)를 [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425)를 [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), 또는 [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427)합니다. 이 핸들을 다른 Win32 API에 전달하면 ERROR_ACCESS_DENIED 오류가 반환됩니다. 핸들은 트랜잭션이 커밋 또는 롤백되기 전에 Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) API에 전달하는 방식으로 닫아야 합니다. 핸들을 닫지 못하면 서버 쪽 리소스 노출이 발생합니다.  
   
  모든 FILESTREAM 데이터 컨테이너 액세스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션에서 수행해야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 동일한 트랜잭션에서 실행할 수 있습니다. 이를 통해 SQL 데이터와 FILESTREAM BLOB 데이터 간의 일관성을 유지 관리할 수 있습니다.  
   

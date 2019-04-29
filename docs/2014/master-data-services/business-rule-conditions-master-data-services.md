@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5089921156f97509e157f771dbe20e1c33cf569
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925971"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>비즈니스 규칙 조건(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 비즈니스 규칙 조건은 True일 때만 하나 이상의 동작이 수행되는 조건을 결정합니다.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916505"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
   *\<속성 이름* **에 대한 값** 대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다. 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  

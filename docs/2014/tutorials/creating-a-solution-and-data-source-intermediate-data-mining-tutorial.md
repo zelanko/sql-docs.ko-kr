@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855352"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>솔루션 및 데이터 원본 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝을 사용하려면 먼저 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Analysis Services 다차원 및 데이터 마이닝 프로젝트 **템플릿을 사용하여**에서 프로젝트를 만들어야 합니다. 템플릿을 열면 데이터 원본, 마이닝 구조 및 마이닝 모델뿐 아니라 마이닝 구조에서 다차원 데이터를 사용하는 경우 큐브도 포함하여 데이터 마이닝에 필요할 수 있는 모든 스키마가 디자이너로 로드됩니다.  

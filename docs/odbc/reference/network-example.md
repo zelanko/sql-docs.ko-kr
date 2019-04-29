@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2a3b80fd34aa93fad4735edb623a154e6fa225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045556"
 ---
 # <a name="network-example"></a>네트워크 예제
 이 그림에서는 단일 네트워크에 나타날 수 있습니다 각 이전 구성 하는 방법을 보여 줍니다.  

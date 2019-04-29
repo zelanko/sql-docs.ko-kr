@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047617"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>부울 생성자 함수 - true(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- 다음 예제에서는 쿼리가 지정은 형식화 된에 대 한 **xml** 열입니다. `if` 식은 <`ROOT`> 요소의 형식화된 부울 값을 검사하고 그에 따라 생성된 XML을 반환합니다. 이 예에서는 다음을 수행합니다.  
+ 다음 예제에서는 쿼리가 지정은 형식화 된에 대 한 **xml** 열입니다. 합니다 `if` 식의 형식화 된 부울 값을 확인 합니다 <`ROOT`> 요소 하 고 그에 따라 생성된 된 XML을 반환 합니다. 이 예에서는 다음을 수행합니다.  
   
--   xs:boolean 유형의 <`ROOT`> 요소를 정의하는 XML 스키마 컬렉션을 만듭니다.  
+-   정의 하는 XML 스키마 컬렉션을 만듭니다는 <`ROOT`> xs: boolean 형식의 요소입니다.  
   
 -   형식화 된 테이블을 만듭니다 **xml** XML 스키마 컬렉션을 사용 하는 열입니다.  
   

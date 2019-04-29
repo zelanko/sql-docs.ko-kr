@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02d1bbcb168db03571e7cd74d77468c23c7e9ad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026798"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Microsoft Excel 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  

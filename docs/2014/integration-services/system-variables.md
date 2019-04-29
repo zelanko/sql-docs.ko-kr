@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927232"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "58391261"
 |**ProgressCountHigh**|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 상위 부분입니다.|OnProgress 이벤트 처리기|  
 |`ProgressCountLow`|Int32|OnProgress 이벤트에 의해 처리된 전체 작업 개수를 나타내는 64비트 값의 하위 부분입니다.|OnProgress 이벤트 처리기|  
 |**ProgressDescription**|문자열|진행률에 대한 설명입니다.|OnProgress 이벤트 처리기|  
-|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고: 패키지의 유효성을 검사하는 동안에는 `Propagate` 변수의 값이 무시됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
+|`Propagate`|Boolean|이벤트가 상위 수준의 이벤트 처리기로 전달되는지 여부를 나타냅니다.<br /><br /> 참고: 값을 `Propagate` 변수는 패키지의 유효성을 검사 하는 동안 무시 됩니다.<br /><br /> 자식 패키지에서 `Propagate`를 `False`로 설정해도 이벤트가 부모 패키지로 전달될 수 있습니다.|모든 이벤트 처리기|  
 |`SourceDescription`|문자열|이벤트 처리기에서 이벤트를 발생시킨 실행 개체에 대한 설명입니다.|모든 이벤트 처리기|  
 |`SourceID`|문자열|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 고유 식별자입니다.|모든 이벤트 처리기|  
 |**SourceName**|문자열|이벤트 처리기에서 이벤트를 발생시킨 실행 개체의 이름입니다.|모든 이벤트 처리기|  

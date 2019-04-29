@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_9790 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 9790 (Database Engine error)
 ms.assetid: 83fd379f-5deb-4f97-8cb4-282e3d3fed94
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5747a13e60182596610f25dd4ed1243670ff5018
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912177"
 ---
 # <a name="mssqlserver9790"></a>MSSQLSERVER_9790
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>설명  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48151185"
 |메시지 텍스트|들어오는 메시지를 라우팅할 수 없습니다. 라우팅 정보를 포함하는 시스템 데이터베이스 MSDB가 단일 사용자 모드입니다.|  
   
 ## <a name="explanation"></a>설명  
- MSDB 데이터베이스가 단일 사용자 모드에 있었기 때문에 네트워크를 통해 수신한 메시지를 분류하려고 하는 동안 오류가 발생했습니다.  
+MSDB 데이터베이스가 단일 사용자 모드에 있었기 때문에 네트워크를 통해 수신한 메시지를 분류하려고 하는 동안 오류가 발생했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- ALTER DATABASE 명령을 사용하여 MSDB를 다중 사용자 모드로 변경합니다.  
-  
+ALTER DATABASE 명령을 사용하여 MSDB를 다중 사용자 모드로 변경합니다.  
   

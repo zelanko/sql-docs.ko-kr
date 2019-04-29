@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922567"
 ---
 # <a name="clr-hosted-environment"></a>CLR 호스팅 환경
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR(공용 언어 런타임)은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++와 같은 여러 최신 프로그래밍 언어를 실행하는 환경입니다. CLR에는 가비지 수집되는 메모리, 선점형 스레딩, 메타데이터 서비스(형식 리플렉션), 코드 안정성, 코드 액세스 보안 등의 기능이 있습니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
@@ -111,13 +111,13 @@ ms.locfileid: "48129164"
 ###### <a name="scalability-common-memory-management"></a>확장성: 일반적인 메모리 관리  
  CLR은 메모리를 할당하거나 할당을 취소하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 형식을 호출합니다. CLR에서 사용하는 메모리는 시스템의 총 메모리 사용량에 포함되기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 구성된 메모리 제한을 초과하지 않으면서 CLR과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 메모리를 차지하기 위해 서로 경쟁하지 않도록 할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 시스템 메모리가 제한되었을 때 CLR 메모리 요청을 거부할 수 있으며 다른 태스크에 메모리가 필요할 때 메모리 사용을 줄이도록 CLR에 요청할 수 있습니다.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성: 응용 프로그램 도메인 및 복구할 수 없는 예외  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성:  응용 프로그램 도메인 및 복구할 수 없는 예외  
  .NET Framework API의 관리 코드에서 메모리 부족 또는 스택 오버플로와 같은 중대한 예외가 발견되었을 때 이러한 오류를 복구하여 API 구현의 의미를 일관되고 올바르게 유지하지 못하는 경우도 있습니다. 이러한 API는 이와 같은 오류에 대한 응답으로 스레드 중단 예외를 발생시킵니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 호스팅되는 경우 이러한 스레드 중단은 다음과 같이 처리됩니다. 즉, CLR이 응용 프로그램 도메인 내에서 스레드 중단이 발생한 모든 공유 상태를 검색합니다. CLR은 동기화 개체가 있는지 여부를 확인하여 이 작업을 수행합니다. 응용 프로그램 도메인에 공유 상태가 있으면 응용 프로그램 도메인 자체가 언로드됩니다. 응용 프로그램 도메인이 언로드되면 해당 응용 프로그램 도메인에서 현재 실행 중인 데이터베이스 트랜잭션이 중지됩니다. 공유 상태가 있는 경우 예외를 트리거한 세션 이외의 다른 사용자 세션도 이와 같은 중대한 예외의 영향을 받을 수 있기 때문에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 CLR은 공유 상태의 가능성을 줄이기 위한 조치를 취합니다. 자세한 내용은 .NET Framework 설명서를 참조하십시오.  
   
-###### <a name="security-permission-sets"></a>보안: 사용 권한 집합  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
+###### <a name="security-permission-sets"></a>보안: 권한 집합  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한 합니다. SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
   
 |||||  
 |-|-|-|-|  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897530"
 ---
 # <a name="month-ssis-expression"></a>MONTH(SSIS 식)
   날짜의 월 부분을 나타내는 정수를 반환합니다.  
@@ -43,7 +43,7 @@ MONTH(date)
  날짜 리터럴은 다음의 날짜 데이터 형식 중 하나로 명시적 캐스팅되어야 합니다. 자세한 내용은 [Integration Services Data Types](../data-flow/integration-services-data-types.md)을 참조하세요.  
   
 > [!NOTE]  
->  날짜 리터럴이 DT_DBTIMESTAMPOFFSET 및 DT_DBTIMESTAMP2 날짜 데이터 형식 중 하나로 명시적 캐스팅되면 식의 유효성 검사가 실패합니다.  
+>  식은 리터럴 날짜 이러한 날짜 데이터 형식 중 하나로 명시적 캐스팅 되 면 유효성을 검사 하는 실패 합니다. DT_DBTIMESTAMPOFFSET 및 DT_DBTIMESTAMP2 합니다.  
   
  MONTH 함수는 DATEPART("Month", date) 함수보다 간단하지만 동일한 결과를 반환합니다.  
   

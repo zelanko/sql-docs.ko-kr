@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834569"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS 로그 구성 대화 상자
   **SSIS 로그 구성** 대화 상자를 사용하여 패키지에 대한 로깅 옵션을 정의할 수 있습니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375219"
  **Configuration**  
  목록에서 기존 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
- 관련 항목: [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md) 관리자 [파일 연결 관리자](connection-manager/file-connection-manager.md)  
+ 관련 항목: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md), [File Connection Manager](connection-manager/file-connection-manager.md)  
   
  **Delete**  
  로그 공급자를 선택한 다음 **삭제**를 클릭합니다.  

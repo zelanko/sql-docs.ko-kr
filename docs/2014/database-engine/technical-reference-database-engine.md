@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843085"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.  

@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924150"
 ---
 # <a name="install-master-data-services"></a>MDS(Master Data Services) 설치
   다음 워크플로에서는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]을 설치하고 구성하는 방법에 대한 개요를 제공합니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치는 3단계로 수행되는 프로세스입니다.  
   
--   [설치 전 태스크](#preinstall): [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 설치하기 전에 시스템 요구 사항을 확인합니다.  
+-   [설치 전 태스크](#preinstall): 설치 하기 전에 시스템 요구 사항 확인 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]합니다.  
   
--   [설치 작업](#install): [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 프로그램 또는 명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치합니다.  
+-   [설치 작업](#install): 설치할 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램 또는 명령 프롬프트입니다.  
   
--   [설치 후 태스크](#postinstall): [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 열고 사후 설치 작업을 완료합니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스, [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 웹 서비스를 만들고 구성하며, 예제 모델을 배포합니다.  
+-   [설치 후 태스크](#postinstall): 열기 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 사후 설치 작업을 완료 합니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스, [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 웹 서비스를 만들고 구성하며, 예제 모델을 배포합니다.  
   
 ##  <a name="preinstall"></a> 설치 전 태스크  
   
 |작업|설명|관련 항목|  
 |------------|-------------|--------------------|  
 |설치 요구 사항 확인|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 컴퓨터는 다음에 대한 최소 요구 사항을 충족해야 합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램<br /><br /> [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 및 웹 서비스<br /><br /> 웹 애플리케이션과 동일한 컴퓨터에서 데이터베이스를 호스팅할 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스<br /><br /> 웹 서버 컴퓨터 에서만 설치 프로그램을 실행 하 고 만들어 웹 서버 컴퓨터와 데이터베이스 서버 컴퓨터를 구분할 수 참고를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 지원 되는 버전 및 버전을 실행 하는 원격 컴퓨터에서 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|[SQL Server 2014 버전에서 지원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [웹 애플리케이션 요구 사항&amp;#40;Master Data Services&amp;#41;](web-application-requirements-master-data-services.md)<br /><br /> [데이터베이스 요구 사항&#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
-|필요한 역할, 역할 서비스 및 기능 구성|설치 프로그램을 실행하기 전에 필요한 Windows 역할, 역할 서비스 및 기능으로 컴퓨터를 구성합니다.<br /><br /> 참고: 이후의 워크플로에서 이 단계를 수행할 수 있지만 설치 직후에 웹 구성 태스크를 수행할 수 있도록 설치 프로그램이 실행되기 전에 이를 구성하는 것이 도움이 됩니다.|[웹 애플리케이션 요구 사항&amp;#40;Master Data Services&amp;#41;](web-application-requirements-master-data-services.md)|  
+|필요한 역할, 역할 서비스 및 기능 구성|설치 프로그램을 실행하기 전에 필요한 Windows 역할, 역할 서비스 및 기능으로 컴퓨터를 구성합니다.<br /><br /> 참고: 이후의 워크플로에서이 단계를 수행할 수 있습니다, 있지만 설치 직후에 웹 구성 태스크를 수행할 수 있도록 설치 프로그램이 실행 되기 전에이 구성 하는 것이 유용 합니다.|[웹 애플리케이션 요구 사항&amp;#40;Master Data Services&amp;#41;](web-application-requirements-master-data-services.md)|  
 |언어 지원 고려 사항 검토|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 를 설치 및 실행할 언어를 결정합니다.|[다국어 및 글로벌 배포&#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> 설치 작업  

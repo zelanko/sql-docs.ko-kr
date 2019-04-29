@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0c792bc2b37bbaae5161b856a7423adb4b707228
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843817"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
 
@@ -61,7 +61,7 @@ ms.locfileid: "53328664"
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</dir >  
+ \</dir>  
   
 ## <a name="see-also"></a>관련 항목  
  [XML 편집기&#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

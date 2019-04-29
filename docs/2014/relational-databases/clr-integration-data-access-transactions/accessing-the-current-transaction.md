@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920014"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행되는 CLR(공용 언어 런타임) 코드를 입력하는 시점에 트랜잭션이 활성 상태인 경우 트랜잭션은 `System.Transactions.Transaction` 클래스를 통해 표시됩니다. `Transaction.Current` 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 `Transaction.Current` 메서드를 호출할 때 `Connection.Open`를 자동으로 검사하고 연결 문자열에서 `Enlist` 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  

@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875715"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
   이 항목에서는 표시된 트랜잭션을 포함하며 전체 복구 모델 또는 대량 로그 복구 모델을 사용하는 데이터베이스와 관련된 내용을 다룹니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48187143"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 트랜잭션 로그 기록 (트랜잭션 이름) 표시 이름, 설명, 데이터베이스, 사용자 `datetime` 정보와 로그 시퀀스 번호 (LSN). `datetime` 정보는 표시 이름과 함께 표시를 고유 하 게 식별 하는 데 사용 됩니다.  
+ 트랜잭션 로그는 표시 이름(트랜잭션 이름), 설명, 데이터베이스, 사용자, `datetime` 정보, LSN(로그 시퀀스 번호) 등을 기록합니다. `datetime` 정보는 표시를 고유하게 식별하는 표시 이름과 함께 사용됩니다.  
   
  여러 데이터베이스에 걸쳐 있는 트랜잭션에 표시를 삽입하는 방법은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)을 참조하세요.  
   

@@ -16,21 +16,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889455"
 ---
 # <a name="precedence-constraint-editor"></a>선행 제약 조건 편집기
   **선행 제약 조건 편집기** 대화 상자를 사용하여 선행 제약 조건을 구성할 수 있습니다.  
   
 ## <a name="options"></a>변수  
  **평가 작업**  
- 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식을**를 **식 및 제약 조건**, 및 **식 또는 제약 조건**합니다.  
+ 선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업은 다음과 같습니다. **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
  **Value**  
- 제약 조건 값을 지정합니다. **성공**, **실패**, 또는 **완료**합니다.  
+ 제약 조건 값을 지정 합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  선행 제약 조건 줄은 **성공**인 경우 녹색으로 표시되고 **실패**인 경우 강조 표시되고 **완료**인 경우 파란색으로 표시됩니다.  

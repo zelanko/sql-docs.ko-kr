@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042529"
 ---
 # <a name="custom-applications"></a>사용자 지정 애플리케이션
 사용자 지정 응용 프로그램은 일반적으로 몇 가지 Dbms에 대 한 특정 작업을 수행 합니다. 예를 들어, 응용 프로그램 수는 단일 DBMS에서 데이터를 검색 하 고 보고서를 생성 하거나 여러 Dbms 간에 데이터를 전송할 수 있습니다. 이러한 응용 프로그램의 공통점은 이러한 Dbms 응용 프로그램 기록 되기 전에 알려진 응용 프로그램의 수명 동안 변경 될 가능성이 없는입니다.  

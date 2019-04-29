@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923153"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
   사용자의 사용 권한은 다음 요소에 따라 결정됩니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "52799265"
   
  그룹 2에 **읽기 전용** Product 엔터티에 대 한 사용 권한.  
   
- 결과: 사용자의 유효 권한은 **업데이트** Product 엔터티에 합니다.  
+ 결과: Product 엔터티에 대한 사용자의 유효 사용 권한은 **업데이트**입니다.  
   
 ## <a name="example-2"></a>예제 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799265"
   
  그룹 2는 Product 엔터티에 대한 **거부** 권한을 가지고 있습니다.  
   
- 결과: 사용자의 유효 권한은 **Deny** Product 엔터티에 합니다.  
+ 결과: Product 엔터티에 대한 사용자의 유효 사용 권한은 **거부**입니다.  
   
 ## <a name="example-3"></a>예 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,9 +76,9 @@ ms.locfileid: "52799265"
   
  그룹 2에 **읽기 전용** 계층 노드의 멤버 그룹에 대 한 사용 권한.  
   
- 결과: 사용자의 유효 권한은 **업데이트** 멤버입니다.  
+ 결과: 멤버에 대한 사용자의 유효 사용 권한은 **업데이트**입니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

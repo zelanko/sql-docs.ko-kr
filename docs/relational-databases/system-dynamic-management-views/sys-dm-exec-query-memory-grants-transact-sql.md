@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013231"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "52413417"
 |**max_used_memory_kb**|**bigint**|현재까지 사용된 최대 실제 메모리(KB)입니다.|  
 |**query_cost**|**float**|예상 쿼리 비용입니다.|  
 |**timeout_sec**|**int**|이 쿼리가 메모리 부여 요청을 포기하기까지의 제한 시간(초)입니다.|  
-|**resource_semaphore_id**|**smallint**|이 쿼리가 대기 중인 리소스 세마포의 고유하지 않은 ID입니다.<br /><br /> **참고:** 이 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전인 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 버전에서 고유합니다. 이러한 변경 내용은 쿼리 실행 문제를 해결하는 데 영향을 줄 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
+|**resource_semaphore_id**|**smallint**|이 쿼리가 대기 중인 리소스 세마포의 고유하지 않은 ID입니다.<br /><br /> **참고:** 이 ID는 버전의 고유 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]합니다. 이러한 변경 내용은 쿼리 실행 문제를 해결하는 데 영향을 줄 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "주의" 섹션을 참조하세요.|  
 |**queue_id**|**smallint**|이 쿼리가 메모리 부여를 기다리는 대기 큐의 ID입니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
-|**wait_order**|**int**|지정 된 대기 쿼리의 순서 대로 **queue_id**합니다. 다른 쿼리가 메모리 부여를 얻거나 시간 초과될 경우 지정된 쿼리에 대해 이 값이 변경될 수 있습니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
+|**wait_order**|**int**|지정 된 대기 쿼리의 순서 대로 **queue_id**합니다. 다른 쿼리가 메모리 부여 또는 시간 초과 발생이 값이 특정된 쿼리에 대해 변경할 수 있습니다. 메모리가 이미 부여 된 경우 NULL입니다.|  
 |**is_next_candidate**|**bit**|다음 메모리 부여 후보입니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요<br /><br /> NULL = 메모리가 이미 부여된 경우|  
 |**wait_time_ms**|**bigint**|대기 시간(밀리초)입니다. 메모리가 이미 부여된 경우 NULL이 됩니다.|  
 |**plan_handle**|**varbinary(64)**|이 쿼리 계획의 식별자입니다. 사용 하 여 **sys.dm_exec_query_plan** 실제 XML 계획을 추출 합니다.|  

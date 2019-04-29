@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9df56209254696a538cf8640685c5675af3b9858
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913308"
 ---
 # <a name="mssqlserver7984"></a>MSSQLSERVER_7984
     
@@ -30,7 +30,7 @@ ms.locfileid: "48161713"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|메시지 텍스트|시스템 테이블 사전 검사: 개체 ID가 O_ID입니다. 페이지 P_ID에 예기치 않은 페이지 유형 PAGETYPE이(가) 있습니다. 오류로 인해 검사 문이 종료됩니다.|  
+|메시지 텍스트|시스템 테이블 사전 검사: 개체 ID O_ID입니다. 페이지 P_ID에 예기치 않은 페이지 유형 PAGETYPE이(가) 있습니다. 오류로 인해 검사 문이 종료됩니다.|  
   
 ## <a name="explanation"></a>설명  
  지정된 개체의 데이터 수준에서 페이지 유형이 DATA_PAGE가 아닌 페이지를 발견했습니다. 이 오류는 DBCC CHECKDB 명령의 첫 번째 단계 검사 중에 발생합니다. 이 단계에서 DBCC CHECKDB는 중요 시스템 기본 테이블의 데이터 페이지에 대한 기본 검사를 수행합니다.  

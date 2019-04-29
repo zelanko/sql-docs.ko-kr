@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927164"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>SSIS 업그레이드 마법사(SSIS 패키지 업그레이드 마법사)
   [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사를 사용하여 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 및 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 에서 개발된 패키지를 현재 버전의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용하는 패키지 형식으로 마이그레이션할 수 있습니다.  

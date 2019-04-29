@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893172"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>열 변환 정보 대화 상자(SQL Server 가져오기 및 내보내기 마법사)
   사용 된 **열 변환 정보** 대화 상자를 개별 열에 대 한 보다 자세한 변환 정보를 검토 합니다. 이 변환 정보에는 원본 및 대상의 열 데이터 형식과 마법사에서 수행할 변환이 포함됩니다. 또한 이 페이지에는 필요한 데이터 형식 변환을 결정하기 위해 마법사에서 사용하는 데이터 형식 매핑 파일이 나열됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]가 설치되는 동안 이러한 데이터 형식 매핑 파일이 설치됩니다.  

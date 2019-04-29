@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3959e998111d5fa45eee45b3d7de35501f86f794
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876511"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
   이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "52531847"
   
  **사전 요구 사항:**  
   
--   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 [1 단원: Windows Azure 저장소 개체 만들기](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)합니다.  
+-   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 [1단원: Windows Azure 저장소 개체 만들기](../../tutorials/lesson-1-create-windows-azure-storage-objects.md)합니다.  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](backup-encryption.md)를 참조하십시오.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52531847"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **데이터베이스 마스터 키를 만듭니다.** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
+2.  **데이터베이스 마스터 키 만들기:** 데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다. 데이터베이스 엔진에 연결하고 새 쿼리 창을 시작한 다음 아래의 예를 복사하여 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
     -- Creates a database master key.  

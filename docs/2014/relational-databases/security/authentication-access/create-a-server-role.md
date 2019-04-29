@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011969"
 ---
 # <a name="create-a-server-role"></a>서버 역할 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 새 서버 역할을 만드는 방법에 대해 설명합니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "54133293"
   
 6.  **보안 개체**에서 서버 수준 보안 개체를 하나 이상 선택합니다. 보안 개체를 선택하면 해당 보안 개체에 대한 사용 권한을 이 서버 역할에 부여하거나 거부할 수 있습니다.  
   
-7.  **사용 권한: 명시적** 상자에서 권한을 부여, 권한 부여를 사용 하 여 권한 부여 또는이 서버 역할에 선택한 보안 개체에 대 한 사용 권한을 거부 하려면이 확인란을 선택 합니다. 선택한 보안 개체 중 일부에 대해 사용 권한을 부여하거나 거부할 수 없는 경우 해당 사용 권한은 부분적으로 선택된 것으로 표시됩니다.  
+7.  에 **권한: 명시적** 상자에서 권한을 부여, 권한 부여를 사용 하 여 권한 부여 또는이 서버 역할에 선택한 보안 개체에 대 한 사용 권한을 거부 하려면이 확인란을 선택 합니다. 선택한 보안 개체 중 일부에 대해 사용 권한을 부여하거나 거부할 수 없는 경우 해당 사용 권한은 부분적으로 선택된 것으로 표시됩니다.  
   
 8.  **멤버** 페이지에서 **추가** 단추를 사용하여 개인이나 그룹을 나타내는 로그인을 새 서버 역할에 추가합니다.  
   

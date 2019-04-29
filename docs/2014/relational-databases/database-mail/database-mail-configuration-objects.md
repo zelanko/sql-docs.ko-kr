@@ -33,14 +33,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872439"
 ---
 # <a name="database-mail-configuration-objects"></a>데이터베이스 메일 구성 개체
-  데이터베이스 메일에는 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 사용하면 데이터베이스 응용 프로그램 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 전자 메일을 보낼 때 데이터베이스 모델에서 사용할 설정을 구성할 수 있습니다.  
+  데이터베이스 메일에 두 가지 구성 개체가 있습니다. 데이터베이스 구성 개체를 데이터베이스 메일에서 데이터베이스 응용 프로그램에서 전자 메일을 보낼 때 사용할 설정을 구성 하는 방법을 제공 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트입니다.  
   
 -   데이터베이스 메일 계정  
   
@@ -58,11 +58,11 @@ ms.locfileid: "52772637"
   
  데이터베이스 메일은 SMTP 서버와 통신하는 다음 3가지 인증 방법을 지원합니다.  
   
--   Windows 인증: 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows 서비스 계정의 자격 증명을 SMTP 서버 인증에 사용합니다.  
+-   Windows 인증: 자격 증명을 사용 하는 데이터베이스 메일은 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows 서비스 SMTP 서버 인증에 대 한 계정입니다.  
   
--   기본 인증:  데이터베이스 메일은 SMTP 서버 인증에 지정된 사용자 이름과 암호를 사용합니다.  
+-   기본 인증:  데이터베이스 메일은 사용자 이름 및 SMTP 서버 인증에 지정 된 암호를 사용 합니다.  
   
--   익명 인증:  SMTP 서버에 인증이 필요하지 않습니다.  데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.  
+-   익명 인증:  SMTP 서버 인증 하지 않아도 됩니다.  데이터베이스 메일은 SMTP 서버 인증에 자격 증명을 사용하지 않습니다.  
   
  계정 정보는 **msdb** 데이터베이스에 저장됩니다. 각 계정은 다음 정보로 구성됩니다.  
   

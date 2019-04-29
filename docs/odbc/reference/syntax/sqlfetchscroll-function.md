@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982177"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 함수(SQLFetchScroll Function)
 **규칙**  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*시작 하기 전에*|1|  
-|*CurrRowsetStart + RowsetSize*[1]  *\<LastResultRow =*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*종료 후*|  
 |*종료 후*|*종료 후*|  
   
@@ -177,10 +177,10 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*시작 하기 전에*|*시작 하기 전에*|  
 |*CurrRowsetStart = 1*|*시작 하기 전에*|  
-|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart-RowsetSize* <sup>[2]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*종료 및 LastResultRow 후 < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*종료 및 LastResultRow 후 > = RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2].</sup>|  
+|*종료 및 LastResultRow 후 > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2]</sup>|  
   
  [1] **SQLFetchScroll** SQLSTATE 01S06를 반환 합니다 (결과 집합은 첫 번째 행을 반환 하기 전에 반입 하려고 함) 및 SQL_SUCCESS_WITH_INFO 합니다.  
   
@@ -192,11 +192,11 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*(및 FetchOffset 시작 전에 > 0) 또는 (종료 및 FetchOffset 후 < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart 및 FetchOffset < = 0*|*시작 하기 전에*|  
-|*CurrRowsetStart 1 AND FetchOffset = < 0*|*시작 하기 전에*|  
+|*BeforeStart AND FetchOffset <= 0*|*시작 하기 전에*|  
+|*CurrRowsetStart = 1 AND FetchOffset < 0*|*시작 하기 전에*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*시작 하기 전에*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 < = CurrRowsetStart + FetchOffset \<LastResultRow =*|*CurrRowsetStart + FetchOffset*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*종료 후*|  
 |*종료 및 FetchOffset 후 > = 0*|*종료 후*|  
   
@@ -211,11 +211,11 @@ SQLRETURN SQLFetchScroll(
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 및 &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 및 &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*시작 하기 전에*|  
-|*FetchOffset < 0 및 &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*시작 하기 전에*|  
-|*1 < = FetchOffset \<LastResultRow =*|*FetchOffset*|  
+|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*종료 후*|  
   
  [1] **SQLFetchScroll** SQLSTATE 01S06를 반환 합니다 (결과 집합은 첫 번째 행을 반환 하기 전에 반입 하려고 함) 및 SQL_SUCCESS_WITH_INFO 합니다.  
@@ -229,14 +229,14 @@ SQLRETURN SQLFetchScroll(
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*모든*|*1*|  
+|*Any*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < LastResultRow =|*LastResultRow-RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 행 집합 크기 행을 인출 이전 호출 이후 변경 된 경우 새 행 집합 크기입니다.  
@@ -247,7 +247,7 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*시작 하기 전에*|  
-|*1 < = BookmarkRow + FetchOffset \<LastResultRow =*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*종료 후*|  
   
  책갈피에 대 한 정보를 참조 하세요 [책갈피 (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md)합니다.  

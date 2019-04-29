@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bda39528b6bc04fbff6faa4c72d85a4eccd576c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046459"
 ---
 # <a name="creating-sql-server-indexes"></a>SQL Server 인덱스 만들기
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **iindexdefinition:: Createindex** 함수에서 새 인덱스를 정의 하는 소비자를 허용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.  
@@ -42,23 +42,23 @@ ms.locfileid: "48146203"
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_CLUSTERED|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 인덱스 클러스터링을 제어 합니다.<br /><br /> VARIANT_TRUE: 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 클러스터형된 인덱스를 만들려고 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 각 테이블에서 클러스터형 인덱스 한 개만 지원합니다.<br /><br /> VARIANT_FALSE: 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 비클러스터형 인덱스를 만들려고 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.|  
-|DBPROP_INDEX_FILLFACTOR|R/w: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 스토리지에 사용되는 인덱스 페이지의 백분율을 지정합니다. 자세한 내용은 [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)를 참조하세요.<br /><br /> 변형 유형은 VT_I4입니다. 값은 1 이상 100 이하여야 합니다.|  
-|DBPROP_INDEX_INITIALIZE|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_NULLCOLLATION|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_NULLS|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_PRIMARYKEY|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 무결성, PRIMARY KEY 제약 조건으로 인덱스를 만듭니다.<br /><br /> VARIANT_TRUE: 테이블의 PRIMARY KEY 제약 조건을 지원하기 위해 인덱스가 생성됩니다. 열은 Null이 아니어야 합니다.<br /><br /> VARIANT_FALSE: 인덱스가 테이블의 행 값에 대한 PRIMARY KEY 제약 조건으로 사용되지 않습니다.|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_TEMPINDEX|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_TYPE|R/w: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
-|DBPROP_INDEX_UNIQUE|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 참여하는 열의 UNIQUE 제약 조건으로 인덱스를 만듭니다.<br /><br /> VARIANT_TRUE: 인덱스를 사용하여 테이블의 행 값을 고유하게 제한합니다.<br /><br /> VARIANT_FALSE: 인덱스가 행 값을 고유하게 제한하지 않습니다.|  
+|DBPROP_INDEX_AUTOUPDATE|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_CLUSTERED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 인덱스 클러스터링을 제어 합니다.<br /><br /> VARIANT_TRUE: 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 클러스터형된 인덱스를 만들려고 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 각 테이블에서 클러스터형 인덱스 한 개만 지원합니다.<br /><br /> VARIANT_FALSE: 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에서 비클러스터형 인덱스를 만들려고 시도 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.|  
+|DBPROP_INDEX_FILLFACTOR|R/W: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 저장소에 사용 되는 인덱스 페이지의 비율을 지정 합니다. 자세한 내용은 [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)를 참조하세요.<br /><br /> 변형 유형은 VT_I4입니다. 값은 1 이상 100 이하여야 합니다.|  
+|DBPROP_INDEX_INITIALIZE|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_NULLCOLLATION|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_NULLS|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_PRIMARYKEY|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE 설명: 참조 무결성, PRIMARY KEY 제약 조건으로 인덱스를 만듭니다.<br /><br /> VARIANT_TRUE: 인덱스는 테이블의 PRIMARY KEY 제약 조건을 지원 하기 위해 만들어집니다. 열은 Null이 아니어야 합니다.<br /><br /> VARIANT_FALSE: 인덱스는 테이블의 행 값에 대 한 기본 키 제약 조건으로 사용 되지 않습니다.|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_TEMPINDEX|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_TYPE|R/W: 읽기/쓰기<br /><br /> 기본값: 없음<br /><br /> 설명: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는이 속성을 지원 하지 않습니다. **CreateIndex**에서 속성을 설정하려고 하면 DB_S_ERRORSOCCURRED 값이 반환됩니다. 속성 구조의 *dwStatus* 멤버는 DBPROPSTATUS_BADVALUE를 나타냅니다.|  
+|DBPROP_INDEX_UNIQUE|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 참여 하는 열 또는 열에 UNIQUE 제약 조건으로 인덱스를 만듭니다.<br /><br /> VARIANT_TRUE: 인덱스는 테이블의 행 값을 고유 하 게 제한 됩니다.<br /><br /> VARIANT_FALSE: 인덱스 행 값을 고유 하 게 제한 하지 않습니다.|  
   
  공급자별 속성 집합 dbpropset_sqlserverindex에 다음과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음 데이터 원본 정보 속성을 정의 합니다.  
   
 |속성 ID|Description|  
 |-----------------|-----------------|  
-|SSPROP_INDEX_XML|형식: VT_BOOL (R/W)<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: IIndexDefinition::CreateIndex에 VARIANT_TRUE 값을 사용하여 이 속성을 지정하면 인덱싱되는 열에 해당하는 기본 XML 인덱스가 생성됩니다. 이 속성이 VARIANT_TRUE이면 cIndexColumnDescs는 1이어야 합니다. 그렇지 않으면 오류가 발생합니다.|  
+|SSPROP_INDEX_XML|형식: VT_BOOL (R/W)<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: Iindexdefinition:: Createindex에 variant_true 값을 사용 하 여이 속성을 지정 하면 인덱싱되는 열에 해당 하는 데 만들어지는 기본 xml 인덱스에 발생 합니다. 이 속성이 VARIANT_TRUE이면 cIndexColumnDescs는 1이어야 합니다. 그렇지 않으면 오류가 발생합니다.|  
   
  다음 예에서는 기본 키 인덱스를 만듭니다.  
   

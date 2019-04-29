@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dc086f25ca4da2a64a5edde2422f1fe33fcc444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045468"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>다중 hstmts(Paradox 드라이버)
 둘 이상의 사용 하려는 경우, ODBC Paradox 드라이버 되 *hstmt* 테이블에서 쿼리를 실행 하려면 테이블에는 고유 인덱스 (Paradox 기본 키) 있어야 합니다.

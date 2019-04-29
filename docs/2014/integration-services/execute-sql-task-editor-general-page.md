@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 559f13c3c777931270f4bc289f890f2360361030
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898841"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>SQL 실행 태스크 편집기(일반 페이지)
   **SQL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 SQL 실행 태스크를 구성하고 해당 태스크에서 실행할 SQL 문을 제공할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "58382280"
  **ConnectionType**  
  데이터 원본에 연결할 때 사용할 연결 관리자 유형을 선택합니다. 사용 가능한 연결 형식에는 **OLE DB**, **ODBC**, **ADO**, **ADO.NET** 및 **SQLMOBILE**이 있습니다.  
   
- **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](connection-manager/odbc-connection-manager.md)를 [ADO 연결 관리자](connection-manager/ado-connection-manager.md)하십시오 [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [ODBC 연결 관리자](connection-manager/odbc-connection-manager.md), [ADO 연결 관리자](connection-manager/ado-connection-manager.md), [ADO.NET 연결 관리자](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition 연결 관리자](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **연결**  
  정의된 연결 관리자 목록에서 연결을 선택합니다. 새 연결을 설정하려면 \<**새 연결...**>을 선택합니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "58382280"
  **SourceVariable**  
  기존 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services &#40;SSIS&#41; 변수](integration-services-ssis-variables.md)하십시오 [변수를 추가 합니다.](../../2014/integration-services/add-variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md), [변수 추가](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

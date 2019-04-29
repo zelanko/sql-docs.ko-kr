@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919164"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>일반 연결 및 컨텍스트 연결에 대한 제한 사항
   이 항목의 코드 실행과 관련 된 제한 사항을 설명 합니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 컨텍스트 및 일반 연결을 통해 처리 합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "48163323"
 ## <a name="restrictions-on-regular-connections"></a>일반 연결에 대한 제한 사항  
  애플리케이션을 개발할 때는 일반 연결에 적용되는 다음과 같은 제한 사항을 고려해야 합니다.  
   
--   내부 서버에 대한 비동기 명령 실행이 지원되지 않습니다. 명령의 연결 문자열에 "async=true"를 포함한 다음, 명령을 실행하면 `System.NotSupportedException`이 throw됩니다. 그리고 " [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스 내에서 실행할 경우 비동기 처리가 지원되지 않습니다"라는 메시지가 표시됩니다.  
+-   내부 서버에 대한 비동기 명령 실행이 지원되지 않습니다. 명령의 연결 문자열에 "async=true"를 포함한 다음, 명령을 실행하면 `System.NotSupportedException`이 throw됩니다. 이 메시지가 표시 됩니다. "내부에서 실행할 경우 비동기 처리가 지원 되지 않습니다는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스입니다."  
   
 -   `SqlDependency` 개체가 지원되지 않습니다.  
   

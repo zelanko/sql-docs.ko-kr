@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1466883d27fb87aeae1e4b51f5826696abc3abb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924876"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 MDS(Master Data Services) 기능
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 더 이상 사용할 수 없는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기능에 대해 설명합니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "52761305"
 ### <a name="powershell-cmdlets"></a>PowerShell Cmdlet  
  MDS에는 PowerShell cmdlet이 더 이상 포함되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 2014에서 사용되지 않는 MDS(Master Data Services) 기능](deprecated-master-data-services-features.md)  
   
   

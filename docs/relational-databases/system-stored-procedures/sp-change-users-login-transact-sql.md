@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997081"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @Action=] '*동작*'  
+ [ @Action= ] '*action*'  
  프로시저로 수행할 동작에 대해 설명합니다. *동작* 됩니다 **varchar(10)** 합니다. *작업* 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -54,13 +54,13 @@ sp_change_users_login [ @Action = ] 'action'
 |**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*, 및 *암호* NULL 이거나 지정 되지 않았습니다.<br /><br /> 시스템 테이블을 사용 하 여 쿼리를 사용 하 여 보고서 옵션을 바꾸려면의 항목과 비교 **sys.server_prinicpals** 의 항목과 **sys.database_principals**합니다.|  
 |**Update_One**|지정 된 링크 *사용자* 현재 기존 데이터베이스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *로그인*합니다. *사용자* 하 고 *로그인* 지정 해야 합니다. *암호* NULL 이거나 지정 되지 않았습니다.|  
   
- [ @UserNamePattern=] '*사용자*'  
+ [ @UserNamePattern= ] '*user*'  
  현재 데이터베이스에 있는 사용자의 이름입니다. *사용자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
- [ @LoginName=] '*로그인*'  
+ [ @LoginName= ] '*login*'  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
- [ @Password=] '*암호*'  
+ [ @Password= ] '*password*'  
  새 할당 된 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정 하 여 만들어지는 **Auto_Fix**합니다. 사용자와 로그인이 매핑되고 있으면 일치 하는 로그인 하 고 *암호* 무시 됩니다. 일치 하는 로그인이 없으면 sp_change_users_login를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 할당 *암호* 새 로그인에 대 한 합니다. *암호* 됩니다 **sysname**, NULL이 아니어야 합니다.  
   
 > **중요!!** 항상 사용을 [강력한 암호!](../../relational-databases/security/strong-passwords.md)

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcbe13bd63284cdeeba219eb0a0cbcdc4084d4b1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835229"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>트랜잭션을 사용하도록 패키지 구성
   트랜잭션을 사용하도록 패키지를 구성할 때는 다음과 같은 두 가지 옵션을 사용할 수 있습니다.  

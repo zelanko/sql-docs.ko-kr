@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918968"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
   특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 `char`, `varchar`, `text`, `nchar`, `nvarchar` 및 `ntext` 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
@@ -87,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- 때문에 **tempdb** 기본 서버 데이터 정렬을 사용 하 고 `TestPermTab.Col1` 사용 하 여 다른 데이터 정렬을, SQL Server이이 오류를 반환 합니다. "같음 작업에서 'Latin1_General_CI_AS_KS_WS'과(와) 'Estonian_CS_AS' 간의 데이터 정렬 충돌을 해결할 수 없습니다"라는 오류를 반환합니다.  
+ 때문에 **tempdb** 기본 서버 데이터 정렬을 사용 하 고 `TestPermTab.Col1` 사용 하 여 다른 데이터 정렬을, SQL Server이이 오류를 반환 합니다. "작업 해결할 수 없습니다 'Latin1_General_CI_AS_KS_WS' 및 수와 같은 ' Estonian_CS_AS' 간의 데이터 정렬 충돌 합니다."  
   
  이 오류를 방지하는 데 사용할 수 있는 방법은 다음과 같습니다.  
   

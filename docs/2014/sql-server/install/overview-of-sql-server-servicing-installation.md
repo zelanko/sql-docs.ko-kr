@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011633"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server 서비스 설치 개요
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 업데이트를 통해 설치된 모든 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용할 수 있습니다. 기존 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소의 버전 수준이 업데이트 버전 수준보다 최신 상태이면 설치 프로그램을 통한 업데이트 작업에서 해당 구성 요소가 제외됩니다. 업데이트 서비스를 적용 하는 방법은 참조 하십시오 [SQL Server 2014 서비스 업데이트 설치](../../database-engine/install-windows/install-sql-server-servicing-updates.md)합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "53369065"
 ## <a name="requirements-and-known-issues"></a>요구 사항 및 알려진 문제  
  디스크 공간은 패키지를 설치 및 다운로드하고, 압축을 풀기 위해 패키지 크기의 약 2.5배를 확보하는 것이 좋습니다. 서비스 팩을 설치한 후 다운로드된 패키지를 제거할 수 있습니다. 임시 파일은 자동으로 제거됩니다.  
   
- **알려진된 문제를 검토 합니다.** 현재 버전의 알려진 문제에 대한 자세한 내용은 [SQL Server 릴리스](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)합니다.  
+ **알려진된 문제를 검토 합니다.** 현재 릴리스의 알려진된 문제에 대 한 자세한 내용은 여기 해당 릴리스 정보 항목을 참조 하세요. [SQL Server 릴리스](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8)합니다.  
   
 ## <a name="installation-overview"></a>설치 개요  
  이 섹션에서는 다음을 수행하는 방법을 비롯하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 누적 업데이트 및 서비스 팩 설치에 대해 설명합니다.  
@@ -88,15 +88,15 @@ ms.locfileid: "53369065"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트 시작  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업데이트를 설치하려면 자동 압축 풀기 패키지 파일을 실행합니다.  
   
- 누적 업데이트 패키지(CU): \<SQLServer2014 >-KBxxxxxx-*PPP*.exe  
+ 누적 업데이트 패키지 (CU): \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- 서비스 팩 패키지(PCU): \<SQLServer2014 >\<SPx >-KBxxxxxx-PPP-LLL.exe  
+ 서비스 팩 패키지 (PCU): \<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x는 서비스 팩 번호를 나타냅니다.  
   
 -   PPP는 특정 플랫폼을 나타냅니다.  
   
--   LLL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어의 문자 약어를 나타내며, 예를 들어 영어의 LLL은 ENU입니다.  
+-   LLL의 문자 약어를 나타내며는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예를 들어 언어: 영어의 LLL은 ENU입니다.  
   
  장애 조치(failover) 클러스터에 속하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소에 업데이트를 적용하려면 장애 조치 클러스터 설치에 대한 섹션을 참조하십시오. 무인 모드로 업데이트 설치를 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [명령 프롬프트에서 SQL Server 2014 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)합니다.  
   

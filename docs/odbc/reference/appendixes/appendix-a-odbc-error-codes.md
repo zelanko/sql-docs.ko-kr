@@ -1,5 +1,5 @@
 ---
-title: '부록 a: ODBC 오류 코드 | Microsoft Docs'
+title: '부록 A: ODBC 오류 코드 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026788"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>부록 A: ODBC 오류 코드
 이 항목에서는 ODBC 3에 대 한 SQLSTATE 값을 설명합니다. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값을 참조 하십시오 [SQLSTATE 매핑](../../../odbc/reference/develop-app/sqlstate-mappings.md)합니다.  
   
- **SQLGetDiagRec** 나 **SQLGetDiagField** Open Group에서 정의한 대로 SQLSTATE 값을 반환 *데이터 관리: 언어 SQL (구조적 쿼리), 버전 2* (1995 년 3 월). SQLSTATE 값은 5 개 문자를 포함 하는 문자열입니다. 다음 표에서 SQLSTATE 값에 대 한 드라이버를 반환할 수 있는 **SQLGetDiagRec**합니다.  
+ **SQLGetDiagRec** 나 **SQLGetDiagField** Open Group에서 정의한 대로 SQLSTATE 값을 반환 *데이터 관리: 구조적 쿼리 언어 (SQL), 버전 2* (1995 년 3 월). SQLSTATE 값은 5 개 문자를 포함 하는 문자열입니다. 다음 표에서 SQLSTATE 값에 대 한 드라이버를 반환할 수 있는 **SQLGetDiagRec**합니다.  
   
  SQLSTATE에 대해 반환 되는 문자열 값 세 문자 하위 클래스 값이 오는 두 자리 클래스 값으로 구성 됩니다. "01"의 클래스 값을 경고를 나타내며는 SQL_SUCCESS_WITH_INFO 반환 코드와 함께 제공 합니다. "IM" 클래스를 제외 하 고 "01,"이 아닌 클래스 값 오류가 발생 하 고 sql_error가 반환 값을 수반 됩니다. 클래스 "IM" 구현의 ODBC 자체에서 파생 되는 경고와 오류에 지정 됩니다. 모든 클래스에 하위 클래스 값 "000" 없습니다 서브 클래스는 SQLSTATE에 대 한 중임을 나타냅니다. 클래스 및 하위 클래스 값 할당은 SQL-92에 의해 정의 됩니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "47767741"
 |23000|무결성 제약 조건 위반|**SQLBulkOperations**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLParamData**<br /><br /> **SQLSetPos**|  
 |24000|잘못된 커서 상태|**SQLBulkOperations**<br /><br /> **SQLCloseCursor**<br /><br /> **SQLColumnPrivileges**<br /><br /> **SQLColumns**<br /><br /> **SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLForeignKeys**<br /><br /> **SQLGetData**<br /><br /> **SQLGetStmtAttr**<br /><br /> **SQLGetTypeInfo**<br /><br /> **SQLNativeSql**<br /><br /> **SQLPrepare**<br /><br /> **SQLPrimaryKeys**<br /><br /> **SQLProcedureColumns**<br /><br /> **SQLProcedures**<br /><br /> **SQLSetConnectAttr**<br /><br /> **SQLSetCursorName**<br /><br /> **SQLSetPos**<br /><br /> **SQLSetStmtAttr**<br /><br /> **SQLSpecialColumns**<br /><br /> **SQLStatistics**<br /><br /> **SQLTablePrivileges**<br /><br /> **SQLTables**|  
 |25000|잘못된 트랜잭션 상태|**SQLDisconnect**|  
-|25S01 잘림|트랜잭션 상태|**SQLEndTran**|  
+|25S01|트랜잭션 상태|**SQLEndTran**|  
 |25S02|트랜잭션이 여전히 활성 상태입니다.|**SQLEndTran**|  
 |25S03|트랜잭션이 롤백|**SQLEndTran**|  
 |28000|잘못 된 권한 부여 사양|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

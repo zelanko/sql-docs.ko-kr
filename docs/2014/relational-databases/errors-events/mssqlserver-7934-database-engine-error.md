@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1306c4463544d2aee882645a2f0a9401a8fb3a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913178"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
     
@@ -30,7 +30,7 @@ ms.locfileid: "48227873"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID에 대한 Filestream 디렉터리 ID F_ID을(를) 찾지 못했습니다.|  
+|메시지 텍스트|테이블 오류: Filestream 디렉터리 ID F_ID 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID 찾을 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
  DBCC CHECKDB를 실행하는 동안 파티션을 찾았지만 FILESTREAM 데이터 공간에서 해당 FILESTREAM 행 집합 디렉터리를 찾지 못했습니다.  

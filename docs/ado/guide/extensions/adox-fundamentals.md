@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5350fd4c4fd8fc447f3987ad502c49a2704e6762
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184779"
 ---
 # <a name="adox-fundamentals"></a>ADOX 기본 사항
 Microsoft® ActiveX® 데이터 개체 확장 데이터 정의 언어 및 보안 (ADOX)에 대 한 ADO 개체 및 프로그래밍 모델 확장을입니다. ADOX는 스키마 만들기 및 수정 뿐만 아니라 보안 개체가 포함 됩니다. 스키마 조작 하는 개체 기반 접근 방식 이기 때문에 작동 하는 다양 한 데이터에 대 한 기본 구문의의 차이 관계 없이 소스 코드를 작성할 수 있습니다.  

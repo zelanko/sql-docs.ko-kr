@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c15f4be9d452580cebd6b530f0703f249af17b36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913298"
 ---
 # <a name="persisting-records-in-xml-format"></a>XML 형식으로 레코드 유지
 ADTG 형식과 비슷한 **레코드 집합** Microsoft OLE DB 지 속성 공급자를 사용 하 여 지 속성 XML 형식으로 구현 됩니다. 이 공급자는 저장 된 XML 파일 또는 스트림에서 ADO에서 생성 된 스키마 정보를 포함 하는 읽기 전용, 정방향 전용 행 집합을 생성 합니다. 마찬가지로, ADO 되려면 **Recordset**, XML을 생성 하 고 파일 또는 COM 구현 하는 개체에 저장 **IStream** 인터페이스입니다. (실제로 파일은 지 원하는 개체의 또 다른 예제 **IStream**.) 2.5 이상 버전에서는 ADO 사용에 XML 파서가 MSXML (Microsoft)에 XML을 로드 하는 **레코드 집합**; 하면 msxml.dll 되므로 필요 합니다.  

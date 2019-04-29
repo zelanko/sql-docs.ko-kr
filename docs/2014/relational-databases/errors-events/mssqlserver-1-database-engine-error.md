@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc558a0a0f5b8bd05f2ff461cc45a73aafa6da23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916400"
 ---
 # <a name="mssqlserver-1"></a>MSSQLSERVER_-1
     
@@ -32,7 +32,7 @@ ms.locfileid: "48096953"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름||  
-|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  기본 설정 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 연결이 허용되지 않기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 이 오류가 발생할 수 있습니다. (공급자: SQL 네트워크 인터페이스, 오류: 28 - 서버가 요청한 프로토콜을 지원하지 않습니다.) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 오류: -1)|  
+|메시지 텍스트|서버에 대한 연결을 구성하는 동안 오류가 발생했습니다.  기본 설정 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 원격 연결이 허용되지 않기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 이 오류가 발생할 수 있습니다. (공급자: SQL 네트워크 인터페이스, 오류: 28-서버가 요청한 프로토콜을 지원 하지 않습니다) (Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 오류:-1)|  
   
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 서버에 연결할 수 없습니다. 이 오류는 다음과 같은 이유로 인해 발생할 수 있습니다.  

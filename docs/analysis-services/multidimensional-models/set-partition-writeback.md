@@ -1,5 +1,5 @@
 ---
-title: 파티션 쓰기 설정 | Microsoft Docs
+title: 파티션 쓰기 저장 설정 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 844aad81d49f16718cb795f443c3d8101e2ff771
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020100"
 ---
-# <a name="set-partition-writeback"></a>파티션 쓰기 저장 설정
+# <a name="set-partition-writeback"></a>파티션 쓰기 저장(writeback) 설정
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   측정값을 쓰기 가능하게 설정하면 최종 사용자가 큐브 데이터를 검색하는 동안 변경할 수 있으며, 변경 내용은 큐브 데이터 또는 원본 데이터가 아닌 쓰기 저장 테이블이라는 별도의 테이블에 저장됩니다. 쓰기 가능한 파티션을 검색하는 최종 사용자에게 해당 파티션에 대한 쓰기 저장 테이블의 모든 변경 내용에 대한 최종 결과가 표시됩니다.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34027020"
   
  쓰기 저장 데이터를 파티션으로 변환하려면 **파티션으로 변환** 대화 상자를 사용합니다. 이 대화 상자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쓰기 가능 파티션에 대한 쓰기 저장 테이블을 마우스 오른쪽 단추로 클릭하여 액세스할 수 있습니다. 대화 상자에서 파티션의 이름을 지정하고 파티션에 대한 집계를 파티션을 만들 때 디자인할지, 아니면 나중에 디자인할지를 지정합니다. 파티션을 선택할 때 집계를 만들려면 기존 파티션에서 집계 디자인을 복사하도록 선택해야 합니다. 기존 파티션은 반드시 그런 것은 아니지만 일반적으로 현재 쓰기 저장 파티션입니다. 파티션을 만들 때 해당 파티션을 처리하도록 선택할 수도 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쓰기 가능 파티션](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Excel 2010의 셀 수준에서 OLAP 큐브에 쓰기 저장 활성화](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Analysis Services 쓰기 저장으로 데이터 엔트리 활성화 및 보안](http://go.microsoft.com/fwlink/p/?LinkId=394953)  

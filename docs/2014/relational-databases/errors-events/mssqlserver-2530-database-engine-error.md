@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914574"
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
     
@@ -46,7 +46,7 @@ ms.locfileid: "48215493"
 2.  해당 DBCC 문을 다시 실행하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
- [인덱스 및 제약 조건 활성화](../indexes/enable-indexes-and-constraints.md)   
+ [인덱스 및 제약 조건 사용](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [DBCC DBREINDEX&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876613"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Windows Azure 스토리지에 연결(복원)
   대화 상자를 사용하면 Windows Azure 스토리지 계정에서 파일 스토리지를 검색하기 위해 Windows Azure 스토리지 계정 정보에 대한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결** 을 클릭하여 Windows Azure Storage에 대한 연결을 설정합니다.  

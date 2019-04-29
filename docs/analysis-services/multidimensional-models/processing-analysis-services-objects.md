@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d1cd8be08afc7ea0e8e7bf811db4e26208a2feae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62930932"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services 개체 처리
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "34026990"
   
 |Country|Sales Region|State|  
 |-------------|------------------|-----------|  
-|United States|West|California|  
-|United States|West|Oregon|  
-|United States|West|Washington|  
+|미국|West|California|  
+|미국|West|Oregon|  
+|미국|West|Washington|  
   
  처리 자체에서는 테이블 형식의 데이터를 사용 가능한 계층으로 변환합니다. 이러한 계층은 완전히 표시된 멤버 이름이며 내부적으로 고유 숫자 경로로 표시됩니다. 다음 예에서는 계층을 텍스트로 표시합니다.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "34026990"
   
  마이닝 구조 및 모델을 처리하는 방법은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [도구 및 처리 접근 방법&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [일괄 처리 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918994"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안
   보안 모델을 [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임) 관리 하 고 서로 다른 유형의 CLR 및 비-CLR 개체 내에서 실행 되는 액세스를 보호 [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] 문이나 다른 CLR 개체를 서버에서 실행 합니다. 개체 간의 호출을 링크라고 합니다. 이러한 개체에 대해 수행되는 보안 검사의 유형은 관련된 링크의 유형에 따라 다릅니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48181563"
  [부분적으로 신뢰할 수 있는 호출자 허용](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
   
- [응용 프로그램 도메인 및 CLR 통합 보안](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
+ [애플리케이션 도메인 및 CLR 통합 보안](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  응용 프로그램 도메인에 어셈블리를 로드하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900205"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
   느린 변경 차원 변환은 데이터 웨어하우스 차원 테이블의 레코드 업데이트 및 삽입을 조정합니다. 예를 들어 이 변환을 사용하면 AdventureWorks OLTP 데이터베이스의 Production.Products 테이블의 데이터로 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 데이터베이스의 DimProduct 테이블의 레코드를 삽입 및 업데이트하는 변환 출력을 구성할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "58388248"
   
 -   변경 특성 변경 내용은 기존 레코드를 덮어씁니다. 이러한 종류의 변경 내용은 Type 1 변경 내용과 동일합니다. 느린 변경 차원 변환은 이러한 행을 **변경 특성 업데이트 내용 출력**이라는 출력으로 보냅니다.  
   
--   기록 특성 변경 내용은 기존 레코드를 업데이트하는 대신 새 레코드를 만듭니다. 기존 레코드에서 허용되는 유일한 변경 내용은 레코드가 현재 상태 또는 만료된 상태인지 여부를 나타내는 열에 대한 업데이트입니다. 이러한 종류의 변경 내용은 Type 2 변경 내용과 동일합니다. 느린 변경 차원 변환은 이러한 행을 **기록 특성 삽입 내용 출력** 하 고 **새 출력**합니다.  
+-   기록 특성 변경 내용은 기존 레코드를 업데이트하는 대신 새 레코드를 만듭니다. 기존 레코드에서 허용되는 유일한 변경 내용은 레코드가 현재 상태 또는 만료된 상태인지 여부를 나타내는 열에 대한 업데이트입니다. 이러한 종류의 변경 내용은 Type 2 변경 내용과 동일합니다. 느린 변경 차원 변환은 이러한 행을 두 출력: **기록 특성 삽입 내용 출력**과 **새 출력**, 이 두 출력으로 보냅니다.  
   
 -   고정 특성 변경 내용은 열 값이 변경되지 않도록 지정합니다. 느린 변경 차원 변환은 변경 내용을 검색하고 변경 내용이 포함된 행을 **고정 특성 출력**이라는 출력으로 보낼 수 있습니다.  
   

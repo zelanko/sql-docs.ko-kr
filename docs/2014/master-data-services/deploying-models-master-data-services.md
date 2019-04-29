@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925064"
 ---
 # <a name="deploying-models-master-data-services"></a>모델 배포(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 MDS 환경에 새로운 모델을 만듭니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "52761785"
 ## <a name="tools-for-deploying-models"></a>모델 배포 도구  
  모델 패키지를 사용하려면 필요에 따라 다음 세 도구 중 하나를 사용합니다.  
   
--   **MDSModelDeploy 도구**: 모델 개체와 데이터를 만들고 배포하려면 MDSModelDeploy.exe 도구를 사용합니다. MDS 설치 시 기본 경로 선택한 경우이 도구에 위치한 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
+-   **MDSModelDeploy 도구**: 를 만들고 모델 개체 및 데이터를 배포 하려면 MDSModelDeploy.exe 도구를 사용 합니다. MDS 설치 시 기본 경로 선택한 경우이 도구에 위치한 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
   
--   **모델 배포 마법사**: 모델 구조만의 패키지를 만들고 배포하려면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 마법사를 사용합니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
+-   **모델 배포 마법사**: 를 만들고 모델 구조만의 패키지를 배포 하려면 마법사를 사용 합니다 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램입니다. 이 마법사를 사용하여 데이터를 배포할 수는 없습니다.  
   
--   **모델 패키지 편집기**: 모델 패키지를 편집하려면 모델 패키지 편집기 마법사를 실행하는 ModelPackageEditor.exe를 사용합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로 선택한 경우이 도구에 위치한 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
+-   **모델 패키지 편집기**: 모델 패키지를 편집 하려면 모델 패키지 편집기 마법사를 시작 하는 ModelPackageEditor.exe를 사용 합니다. 이 마법사를 사용하여 MDSModelDeploy 도구 또는 모델 배포 마법사로 만든 패키지를 편집합니다. MDS 설치 시 기본 경로 선택한 경우이 도구에 위치한 *드라이브*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration에 있습니다.  
   
 > [!IMPORTANT]  
 >  MDSDeployModel을 사용하여 새 모델을 만들거나 모델의 복제본을 만들거나 기존 모델 및 해당 데이터를 업데이트할 수 있습니다. MDSModelDeploy 도구를 사용하여 기존 모델 및 해당 데이터를 업데이트하고 패키지에 엔터티, 특성 또는 대상 모델에 있는 멤버를 포함하지 않는 경우 MDSModelDeploy는 모델에서 해당 엔터티, 특성 또는 멤버를 삭제하지 않습니다.  

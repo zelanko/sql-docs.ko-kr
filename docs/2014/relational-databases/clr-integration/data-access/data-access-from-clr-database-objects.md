@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874077"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
   공용 언어 런타임 (CLR) 루틴의 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 이 실행 되는 원격 인스턴스에 저장 된 데이터 뿐만 아니라에서. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. .NET Framework Data Provider for를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 되는 클라이언트 및 중간 계층 응용 프로그램에서 데이터입니다. 따라서 클라이언트 및 중간 계층 응용 프로그램에서 ADO.NET 및 `SqlClient`에 대한 지식을 활용할 수 있습니다.  

@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911252"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  합니다 **MSmerge_partition_groups** 테이블은 각 사전 계산 파티션이 지정된 된 데이터베이스에 대 한 하나의 행을 저장 합니다. 이 테이블은 나열된 열 이외에도 매개 변수가 있는 행 필터에서 사용된 각 함수당 한 개의 열 또한 포함합니다. 예를 들어, 명명 된 열 **HOST_NAME_FN** 필터를 사용 하는 경우 테이블에 추가 되는 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수입니다. 또한 해당 게시자와 동기화한 함수 값의 각 고유 집합에 대한 행이 하나씩 저장됩니다. 이 함수들에 대해 정확히 같은 값으로 동기화하는 둘 이상의 구독자는 해당 테이블 내의 같은 행을 공유하며 따라서 모두 같은 파티션 ID를 공유합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
+  합니다 **MSmerge_partition_groups** 테이블은 각 사전 계산 파티션이 지정된 된 데이터베이스에 대 한 하나의 행을 저장 합니다. 이 테이블은 나열된 열 이외에도 매개 변수가 있는 행 필터에서 사용된 각 함수당 한 개의 열 또한 포함합니다. 예를 들어, 명명 된 열 **HOST_NAME_FN** 필터를 사용 하는 경우 테이블에 추가 되는 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수입니다. 또한 해당 게시자와 동기화한 함수 값의 각 고유 집합에 대한 행이 하나씩 저장됩니다. 이러한 모든 함수에 대 한 정확히 같은 값으로 동기화 하는 두 개 이상의 구독자가 표의 동일한 행을 공유 하 고는 모든 공유 하므로 동일한 파티션 id입니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

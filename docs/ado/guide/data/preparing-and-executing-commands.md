@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911362"
 ---
 # <a name="preparing-and-executing-commands"></a>준비 및 명령 실행
 명령을 기본 데이터 원본에 대해 일부 작업을 수행 하는 공급자에 실행 하는 명령입니다. SQL 문은 예를 들어 Microsoft SQL 데이터 공급자에 명령입니다. ADO 명령 일반적으로 표시 됩니다 **명령** 개체를 통해 간단한 명령과 발급할 수도 있습니다 하지만 **연결** 하거나 **레코드 집합** 개체입니다.  

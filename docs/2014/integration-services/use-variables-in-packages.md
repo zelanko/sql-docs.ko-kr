@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926332"
 ---
 # <a name="use-variables-in-packages"></a>패키지에서 변수 사용
   변수는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지에 추가된 유용하고 융통성 있는 기능입니다. 변수는 패키지 개체 간 및 부모 패키지와 자식 패키지 간 통신을 제공합니다. 식과 스크립트에도 변수를 사용할 수 있습니다.  

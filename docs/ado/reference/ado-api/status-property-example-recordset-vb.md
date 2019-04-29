@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027576"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status 속성 예제(레코드 집합)(VB)
 이 예제에서는 합니다 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 일괄 업데이트가 발생 하기 전에 일괄 처리 작업에서 수정 된 레코드를 표시 하는 속성입니다.  

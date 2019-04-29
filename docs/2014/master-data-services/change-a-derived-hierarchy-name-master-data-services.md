@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26f744831fb551a896430f86716d96f08a4ca164
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926051"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>파생 계층 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 파생 계층의 이름을 변경할 수 있습니다.  

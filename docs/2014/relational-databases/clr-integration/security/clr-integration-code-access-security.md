@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873736"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 통합 코드 액세스 보안
   CLR(공용 언어 런타임)은 관리 코드에 대해 코드 액세스 보안이라는 보안 모델을 지원합니다. 이 모델에서는 코드 ID를 기반으로 어셈블리에 사용 권한이 부여됩니다. 자세한 내용은 .NET Framework 소프트웨어 개발 키트의 "코드 액세스 보안" 섹션을 참조하십시오.  
   
  어셈블리에 부여되는 사용 권한을 결정하는 보안 정책은 다음 세 위치에서 정의됩니다.  
   
--   컴퓨터 정책: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 설치된 컴퓨터에서 실행되는 모든 관리 코드에 적용되는 정책입니다.  
+-   컴퓨터 정책: 컴퓨터에서 실행 되는 모든 관리 코드에는 정책 적용입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 됩니다.  
   
--   사용자 정책: 프로세스에서 호스팅하는 관리 코드에 적용되는 정책입니다. 에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 실행 되 고 있습니다.  
+-   사용자 정책: 이 프로세스에 의해 호스팅되는 관리 되는 코드에 적용 되는 정책입니다. 에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 실행 되 고 있습니다.  
   
--   호스트 정책: CLR 호스트(이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])에 의해 설정되는 정책입니다. 이 정책은 해당 호스트에서 실행되는 관리 코드에 적용됩니다.  
+-   호스트 정책: CLR의 호스트를 통해 설정 하는 정책입니다 (이 예제의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) 해당 호스트에서 실행 하는 관리 코드에 적용 되는 합니다.  
   
  CLR에서 지원되는 코드 액세스 보안 메커니즘은 런타임에서 완전히 신뢰할 수 있는 코드와 부분적으로 신뢰할 수 있는 코드를 모두 호스팅할 수 있다는 가정을 기반으로 합니다. CLR 코드 액세스 보안으로 보호 되는 리소스는 일반적으로 래핑됩니다 프로그래밍 인터페이스는 관리 되는 응용 프로그램에서 리소스에 대 한 액세스를 허용 하기 전에 해당 requirethe 해당 권한은. 사용 권한을 demandfor 호출 스택의 어셈블리 수준) (에서 모든 호출자가 해당 리소스 사용 권한을 하는 경우에 충족 됩니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "48076006"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 호스트 정책 수준 권한 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 권한 집합을 가지: `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` (사용 하 여 지정 된 **PERMISSION_SET** 옵션을[CREATE ASSEMBLY &#40;Transact SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy 시스템 어셈블리 및 사용자 어셈블리에 대 한 사용자 지정 정책에 대 한 합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076006"
 |사용 권한|값/설명|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` 관리 코드를 실행하는 데 필요한 권한입니다.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: 컨텍스트 연결만 사용할 수 있으며 연결 문자열은 "context connection=true" 또는 "context connection=yes" 값만 지정할 수 있습니다.<br /><br /> **AllowBlankPassword = false:** 빈 암호는 허용 되지 않습니다.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: 컨텍스트 연결만 사용할 수 있으며 연결 문자열의 값에만 지정할 수 있습니다만 "컨텍스트 연결 = true" 또는 "컨텍스트 연결 = yes"입니다.<br /><br /> **AllowBlankPassword = false.**  빈 암호는 허용 되지 않습니다.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 어셈블리와 동일한 권한을 갖습니다 `SAFE` 어셈블리 파일, 네트워크, 환경 변수 및 레지스트리와 같은 외부 시스템 리소스에 액세스 하는 추가 기능이 있습니다.  

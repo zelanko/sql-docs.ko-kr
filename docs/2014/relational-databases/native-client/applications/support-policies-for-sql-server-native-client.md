@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046528"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client에 대한 지원 정책
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 함께 여러 데이터 액세스 구성 요소를 사용하는 방법에 대해 설명합니다.  
@@ -29,9 +29,9 @@ ms.locfileid: "48142483"
 |SQL Server Native Client 버전|지원되는 운영 체제|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client(SQL Server 2005)|Microsoft Windows 2000 서비스 팩 4 이상<br />Microsoft Windows Server 2003 이상<br />Microsoft Windows XP 서비스 팩 1 이상<br />Microsoft Windows Vista (필요 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 2 이상)<br />Microsoft Windows Server 2008 (필요 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 2 이상)|  
-|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br />Microsoft Windows XP 서비스 팩 2 이상<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br />Microsoft Windows XP 서비스 팩 2 이상<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7|  
-|SQL Server Native Client 11.0([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7<br />Microsoft Windows 8<br />Microsoft Windows Server 2012|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br />Microsoft Windows XP 서비스 팩 2 이상<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 서비스 팩 2 이상<br />Microsoft Windows XP 서비스 팩 2 이상<br />-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7|  
+|SQL Server Native Client 11.0([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 및 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|-   Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7<br />-   Microsoft Windows 8<br />-   Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO 지원 정책  
  ADO 응용 프로그램에서는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전의 기능이 필요하지 않은 경우 Windows에 포함된 SQLOLEDB OLE DB 공급자를 사용할 수 있습니다.  
