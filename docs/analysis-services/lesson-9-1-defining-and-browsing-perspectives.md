@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017368"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lesson 9-1-정의 및 찾아보기 큐브 뷰
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>단원 9-1-정의 및 큐브 뷰 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
@@ -171,7 +171,7 @@ ms.locfileid: "34018030"
   
 4.  다음 그림에 표시된 것처럼 Excel에서 분석에서 Excel에서 모델을 검색할 때 사용할 큐브 뷰를 선택하라는 메시지를 표시합니다.  
   
-    ![Internet Sales 큐브 뷰에 대 한 개체](../analysis-services/media/l9-perspectives-3.gif "인터넷 판매 큐브 뷰에 대 한 개체")  
+    ![Internet Sales 큐브 뷰에 대 한 개체](../analysis-services/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰 개체")  
   
 5.  또는 다음 그림에 표시된 것처럼 Windows 시작 메뉴에서 Excel을 시작하고 localhost의 Analysis Services 자습서 데이터베이스에 대한 연결을 정의하고 데이터 연결 마법사에서 큐브 뷰를 선택합니다.  
   

@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918135"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
   하나를 사용 합니다 **데이터 계층 응용 프로그램 등록 마법사** 또는 Windows PowerShell 및 합니다 DAC정의등록하는기존데이터베이스의개체를설명하는데이터계층응용프로그램(DAC)정의스크립팅`msdb` 시스템 데이터베이스 (**마스터** 에서 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **DAC를 업그레이드 하려면 사용 합니다.**  [데이터 계층 응용 프로그램 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **DAC를 업그레이드하려면 다음을 사용합니다.**  [데이터 계층 애플리케이션 등록 마법사](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  등록 프로세스에서는 데이터베이스의 개체를 정의하는 DAC 정의를 만듭니다. DAC 정의와 데이터베이스의 결합으로 DAC 인스턴스가 형성됩니다. DAC를 데이터베이스 엔진의 관리되는 인스턴스에 DAC로 등록할 경우 등록된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 SQL Server 유틸리티에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  

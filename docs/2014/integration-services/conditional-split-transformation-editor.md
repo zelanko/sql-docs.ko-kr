@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835189"
 ---
 # <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
   **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "58392967"
   
  이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
   
- **관련 항목:**  [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)를 [연산자 &#40;식&#41;](expressions/operators-ssis-expression.md), 및 [함수 &#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
+ **관련 항목:**  [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](expressions/functions-ssis-expression.md)  
   
  **기본 출력 이름**  
  기본 출력의 이름을 입력하거나 기본값을 사용합니다.  

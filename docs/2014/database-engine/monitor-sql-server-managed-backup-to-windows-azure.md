@@ -11,17 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7b7b6cc8127b339a45a5f651af6db4d0b595b80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844617"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 모니터링
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 프로세스 중에 문제 및 오류와 가능한 경우 수정 작업을 포함하는 해결책을 식별하는 기본 제공된 조치를 포함합니다.  그러나 사용자 개입이 필요한 특정 상황이 있습니다. 이 항목에서는 백업의 전체 상태를 확인하고 해결해야 할 오류를 식별하는 데 사용할 수 있는 도구에 대해 설명합니다.  
   
 ## <a name="overview-of-includesssmartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본 제공 디버깅 개요  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 저장소 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Windows Azure 제한 정책을 고려하고 여러 데이터베이스 백업을 관리하는 메커니즘을 제공합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 Operational 이벤트는 백업 예약, 성공적인 백업 완료 등을 포함합니다. Debug는 가장 자세한 이벤트로, 주로 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 문제를 확인하고 필요한 경우 해당 문제를 해결하는 데 내부적으로 사용됩니다.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 저장소 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Windows Azure 제한 정책을 고려하고 여러 데이터베이스 백업을 관리하는 메커니즘을 제공합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 operational 이벤트는 백업 예약, 백업 등의 성공적인 완료를 포함 합니다. 디버그는 가장 자세 하 고 내부적으로 사용 됩니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 문제 확인 및 필요한 경우 수정 합니다.  
   
 ### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 대한 모니터링 매개 변수 구성  
  합니다 **smart_admin.sp_set_parameter** 시스템 저장 프로시저를 사용 하면 모니터링 설정을 지정할 수 있습니다. 다음 섹션은 확장 이벤트를 설정하고 오류 및 경고에 대한 전자 메일 알림을 설정하는 프로세스를 안내합니다.  
@@ -125,15 +125,15 @@ GO
   
  **알림 아키텍처:**  
   
--   **정책 기반 관리:** 백업 상태를 모니터링하기 위해 설정되는 두 가지 정책으로 **스마트 관리 시스템 상태 정책은**, 및 **스마트 관리 사용자 동작 상태 정책은**합니다. 스마트 관리 시스템 상태 정책은 SQL 자격 증명 부족 또는 잘못된 SQL 자격 증명과 같은 중요한 오류, 연결 오류를 평가하거나 시스템 상태를 보고합니다. 이 경우 일반적으로 기본 문제를 해결하는 데 수동 작업이 필요합니다. 스마트 관리 사용자 작업 상태 정책은 손상된 백업과 같은 경고를 평가합니다.  이 경우 작업은 필요하지 않지만 이벤트 경고만 필요할 수 있습니다. 이러한 문제는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에 의해 자동으로 처리될 것입니다.  
+-   **정책 기반 관리:** 백업 상태를 모니터링 하는 두 개의 정책은 설정 됩니다. **스마트 관리 시스템 상태 정책은**, 및 **스마트 관리 사용자 동작 상태 정책은**합니다. 스마트 관리 시스템 상태 정책은 SQL 자격 증명 부족 또는 잘못된 SQL 자격 증명과 같은 중요한 오류, 연결 오류를 평가하거나 시스템 상태를 보고합니다. 이 경우 일반적으로 기본 문제를 해결하는 데 수동 작업이 필요합니다. 스마트 관리 사용자 작업 상태 정책은 손상된 백업과 같은 경고를 평가합니다.  이 경우 작업은 필요하지 않지만 이벤트 경고만 필요할 수 있습니다. 이러한 문제는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에 의해 자동으로 처리될 것입니다.  
   
--   **SQL Server 에이전트** 작업: 세 가지 작업 단계로 구성된 SQL Server 에이전트 작업을 사용하여 알림이 수행됩니다. 첫 번째 작업 단계에서는 데이터베이스 또는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 구성되어 있는지 여부를 검색합니다. 찾으면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 두 번째 단계는 실행 설정 되 고 구성 합니다: SQL Server 정책 기반 관리 정책을 평가 하 여 상태를 평가 하는 PowerShell cmdlet을 실행 합니다. 오류나 경고를 발견하면 실패하고 세 번째 단계를 트리거합니다. 세 번째 단계에서는 오류/경고 보고서와 함께 전자 메일 알림을 보냅니다.  그러나 이 SQL Server 에이전트 작업은 기본적으로 설정되지 않습니다. 전자 메일 알림 작업을 사용 하도록 설정 하려면 사용 합니다 **smart_admin.sp_set_backup_parameter** 시스템 저장 프로시저입니다.  다음 절차에서 이러한 단계를 자세히 설명합니다.  
+-   **SQL Server 에이전트** 작업: 알림이 세 가지 작업 단계로 SQL Server 에이전트 작업을 사용 하 여 수행 됩니다. 첫 번째 작업 단계에서는 데이터베이스 또는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 구성되어 있는지 여부를 검색합니다. 찾으면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 두 번째 단계는 실행 설정 되 고 구성 합니다: SQL Server 정책 기반 관리 정책을 평가 하 여 상태를 평가 하는 PowerShell cmdlet을 실행 합니다. 오류 또는 경고를 찾으면 실패는 다음 세 번째 단계를 트리거합니다. 세 번째 단계는 오류/경고 보고서를 사용 하 여 전자 메일 알림을 보냅니다.  그러나 이 SQL Server 에이전트 작업은 기본적으로 설정되지 않습니다. 전자 메일 알림 작업을 사용 하도록 설정 하려면 사용 합니다 **smart_admin.sp_set_backup_parameter** 시스템 저장 프로시저입니다.  다음 절차에서 이러한 단계를 자세히 설명합니다.  
   
 ##### <a name="enabling-email-notification"></a>전자 메일 알림 설정  
   
 1.  에 설명 된 단계를 사용 하 여 데이터베이스 메일은 이미 구성 되지 않은 경우 [데이터베이스 메일 구성](../relational-databases/database-mail/configure-database-mail.md)합니다.  
   
-2.  데이터베이스를 SQL Server 경고 시스템에 대한 메일 시스템으로 설정합니다. 마우스 오른쪽 단추로 클릭 **SQL Server 에이전트**를 선택 **경고 시스템**를 확인 합니다 **메일 프로필 설정** 상자를 선택 **데이터베이스 메일** 으로  **메일 시스템**, 이전에 만든된 메일 프로필을 선택 합니다.  
+2.  SQL Server 경고 시스템에 대 한 메일 시스템으로 데이터베이스를 설정 합니다. 마우스 오른쪽 단추로 클릭 **SQL Server 에이전트**를 선택 **경고 시스템**를 확인 합니다 **메일 프로필 설정** 상자를 선택 **데이터베이스 메일** 으로  **메일 시스템**, 이전에 만든된 메일 프로필을 선택 합니다.  
   
 3.  쿼리 창에서 다음 쿼리를 실행하고 알림을 보낼 전자 메일 주소를 제공합니다.  
   
@@ -252,14 +252,14 @@ smart_backup_files;
   
 -   **사용 가능한-a:** 일반 백업 파일입니다. 백업이 완료되었으며 Windows Azure 저장소에서 사용 가능한 것도 확인되었습니다.  
   
--   **복사 중-b:** 이 상태는 특히 가용성 그룹 데이터베이스에 대한 것입니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 로그 체인이 끊어진 것을 검색하는 경우 먼저 그 원인이 될 수 있는 백업을 식별하려고 시도합니다. 백업 파일을 찾으면 Windows Azure 저장소에 파일을 복사하려고 시도하며, 복사 프로세스가 진행 중일 때 이 상태를 표시합니다.  
+-   **복사 중-b:** 가용성 그룹 데이터베이스에 대 한 구체적으로이 상태가입니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 로그 체인이 끊어진 것을 검색하는 경우 먼저 그 원인이 될 수 있는 백업을 식별하려고 시도합니다. 백업 파일을 찾으면 Windows Azure 저장소에 파일을 복사하려고 시도하며, 복사 프로세스가 진행 중일 때 이 상태를 표시합니다.  
   
--   **복사 하지 못했습니다.-f:** Copy In Progress와 마찬가지로 가용성 그룹 데이터베이스에 대한 것입니다. 복사 프로세스가 실패하면 상태가 F로 표시됩니다.  
+-   **복사 하지 못했습니다.-f:** Copy In Progress와 마찬가지로, 특정 가용성 그룹 데이터베이스입니다. 복사 프로세스가 실패하면 상태가 F로 표시됩니다.  
   
--   **손상-c:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 여러 번의 시도 후에도 RESTORE HEADER_ONLY 명령을 수행하여 저장소에서 백업 파일을 확인할 수 없는 경우 이 파일을 손상된 것으로 표시합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 손상된 파일로 인해 백업 체인이 끊어지지 않도록 하기 위해 백업을 예약합니다.  
+-   **손상-c:** 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 여러 번 시도 후에 RESTORE HEADER_ONLY 명령을 수행 하 여 저장소에서 백업 파일을 확인할 수 없습니다 해당이 파일을 표시이 손상 된 것입니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 손상된 파일로 인해 백업 체인이 끊어지지 않도록 하기 위해 백업을 예약합니다.  
   
 -   **D: 삭제** Windows Azure 저장소에서 해당 파일을 찾을 수 없습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 삭제된 파일로 인해 백업 체인이 끊어지는 경우 백업을 예약합니다.  
   
--   **알 수 없음-u:** 이 상태는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 Windows Azure 저장소에서 파일 존재와 해당 속성을 아직 확인하지 못했음을 나타냅니다. 약 15분 간격으로 다음에 프로세스가 실행될 때 이 상태가 업데이트됩니다.  
+-   **알 수 없음-u:** 이 상태를 표시 하는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 아직 파일 존재와 Windows Azure 저장소에서 해당 속성을 확인할 수 있습니다. 약 15분 간격으로 다음에 프로세스가 실행될 때 이 상태가 업데이트됩니다.  
   
   

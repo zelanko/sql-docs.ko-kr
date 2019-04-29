@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043948"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
   솔루션을 삭제하면 솔루션의 파일 항목뿐만 아니라 물리적 스토리지의 파일도 영구적으로 삭제됩니다.  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856321"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>신경망 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 마이닝 모델을 만들려면 먼저 데이터 마이닝 마법사를 사용하여 새 데이터 원본 뷰를 기반으로 새 마이닝 구조를 만들어야 합니다. 이 태스크에서는 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 기반의 마이닝 구조를 만들고 이와 동시에 관련 마이닝 모델을 만듭니다.  
@@ -121,7 +121,7 @@ ms.locfileid: "56037724"
   
  ![서비스 등급 값 분포](../../2014/tutorials/media/skt-service-grade-valuesc.gif "서비스 등급 값 분포")  
   
- 따라서 모델을 처리할 때 출력이 예상과 다르게 그룹화될 수 있습니다. 예를 들어, 최적 값 그룹을 식별 하려면 클러스터링을 사용 하는 경우 알고리즘이 0.09716216215와 같은 범위로 ServiceGrade에 값을 나눕니다. 나눕니다. 이 그룹화가 수학적으로 정확하기는 하지만 비즈니스 사용자에게는 이러한 범위가 의미가 없을 수 있습니다.  
+ 따라서 모델을 처리할 때 출력이 예상과 다르게 그룹화될 수 있습니다. 예를 들어, 최적 값 그룹을 식별 하려면 클러스터링을 사용 하는 경우 알고리즘이 0.09716216215와 같은 범위로 ServiceGrade에 값을 나눕니다. 0.0748051948 - 0.09716216215. 이 그룹화가 수학적으로 정확하기는 하지만 비즈니스 사용자에게는 이러한 범위가 의미가 없을 수 있습니다.  
   
  이 단계에서는 더 직관적인 결과 확인 하려면 그룹화 숫자 값을 다르게 숫자 데이터 열의 복사본을 만들기.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "56037724"
   
  기본 모델(연속)  
   
-|값|별칭|  
+|값|SUPPORT|  
 |-----------|-------------|  
 |Missing|0|  
 |0.09875|120|  
   
  클러스터링에 의한 범주화  
   
-|값|별칭|  
+|값|SUPPORT|  
 |-----------|-------------|  
 |\< 0.0748051948|34|  
 |0.0748051948 - 0.09716216215|27|  
@@ -153,7 +153,7 @@ ms.locfileid: "56037724"
   
  Equal Areas에 의한 범주화  
   
-|값|별칭|  
+|값|SUPPORT|  
 |-----------|-------------|  
 |\< 0.07|26|  
 |0.07 - 0.00|22|  

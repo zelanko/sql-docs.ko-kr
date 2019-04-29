@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011911"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
-  *보안 주체* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 요청할 수 있는 엔터티입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한 부여 모델의 다른 구성 요소와 같이 보안 주체는 계층으로 정렬될 수 있습니다. 보안 주체의 영향 범위는 보안 주체의 정의 범위인 Windows, 서버 및 데이터베이스와 보안 주체가 분해 불가능하거나 컬렉션인지 여부에 따라 달라집니다. 분해 불가능한 보안 주체의 예로는 Windows 로그인을 들 수 있으며 Windows 그룹은 컬렉션인 보안 주체입니다. 모든 보안 주체에는 SID(보안 식별자)가 있습니다.  
+  *보안 주체* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 요청할 수 있는 엔터티입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한 부여 모델의 다른 구성 요소와 같이 보안 주체는 계층으로 정렬될 수 있습니다. 보안 주체의 영향 범위는 보안 주체의 정의의 범위에 따라 달라 집니다. Windows, 서버 및 데이터베이스 및 보안 주체를 나눌 수 없으면 여부 또는 컬렉션입니다. 분해 불가능한 보안 주체의 예로는 Windows 로그인을 들 수 있으며 Windows 그룹은 컬렉션인 보안 주체입니다. 모든 보안 주체에는 SID(보안 식별자)가 있습니다.  
   
  **Windows 수준 보안 주체**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53371215"
  모든 데이터베이스 사용자는 public 데이터베이스 역할에 속합니다. 사용자에게 보안 개체에 대한 특정 사용 권한이 부여되지 않았거나 거부된 경우 사용자는 해당 보안 개체에 대해 public으로 부여된 사용 권한을 상속 받습니다.  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA 및 sys  
- 모든 데이터베이스에는 카탈로그 뷰에 사용자로 표시되는 두 엔터티인 INFORMATION_SCHEMA 및 sys입니다. 이러한 엔터티는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 필요합니다. 엔터티는 보안 주체가 아니며 수정 또는 삭제할 수 없습니다.  
+ 모든 데이터베이스에는 카탈로그 뷰에 사용자로 표시 되는 두 개의 엔터티가 포함 됩니다. INFORMATION_SCHEMA 및 sys입니다. 이러한 엔터티는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 필요합니다. 엔터티는 보안 주체가 아니며 수정 또는 삭제할 수 없습니다.  
   
 ## <a name="certificate-based-sql-server-logins"></a>인증서 기반 SQL Server 로그인  
  이름이 이중 해시 표시(##)로 묶인 서버 보안 주체는 내부 시스템 용도로만 사용됩니다. 다음 보안 주체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치할 때 인증서에서 생성되며 삭제하면 안 됩니다.  

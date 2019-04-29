@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936521"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>2. 조건자에서 인수가 없는 로컬 이름 사용  
- 형식화 된 Instructions 열에 대해 다음 쿼리를 지정 **xml** ProductModel 테이블의 열입니다. 식은 QName의 로컬 이름 부분이 "Location"인 <`root`> 요소의 요소 자식을 모두 반환합니다. 합니다 **local-name ()** 함수는 지정 된 조건자 및 함수에 의해 컨텍스트 노드를 사용 하는 인수가 없습니다.  
+ 형식화 된 Instructions 열에 대해 다음 쿼리를 지정 **xml** ProductModel 테이블의 열입니다. 식의 모든 요소 자식을 반환 합니다 <`root`> QName의 로컬 이름 부분이 "Location" 인 요소입니다. 합니다 **local-name ()** 함수는 지정 된 조건자 및 함수에 의해 컨텍스트 노드를 사용 하는 인수가 없습니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 쿼리는 <`root`> 요소의 모든 <`Location`> 요소 자식을 반환합니다.  
+ 모든 쿼리에서 반환 된 <`Location`> 요소 자식을 <`root`> 요소.  
   
 ## <a name="see-also"></a>관련 항목  
  [노드 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

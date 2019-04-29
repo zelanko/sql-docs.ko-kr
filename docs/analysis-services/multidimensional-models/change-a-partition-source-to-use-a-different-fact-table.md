@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 53609a1c252455f8372fd43b6a1323e93f0b3024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991772"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>다른 팩트 테이블을 사용하도록 파티션 원본 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "34021720"
   
  여러 팩트 테이블을 사용하는 경우 파티션 간에 데이터가 중복되지 않도록 합니다. 예를 들어 특정 팩트 테이블에는 2012년의 트랜잭션만 포함되고 다른 팩트 테이블에는 2013년의 트랜잭션만 포함되는 경우 두 테이블의 데이터는 서로 독립적입니다. 마찬가지로 특정 제품 라인 또는 지리적인 특정 영역에 대한 팩트 테이블도 서로 독립적입니다.  
   
- 중복 데이터가 포함된 여러 개의 서로 다른 팩트 테이블을 사용할 수는 있지만 권장하지는 않습니다. 이러한 경우에는 파티션에서 필터를 사용하여 한 파티션에서 사용되는 데이터가 다른 어떤 파티션에서도 사용되지 않게 해야 합니다. 자세한 내용은 [Create and Manage a Local Partition &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)를 참조하세요.  
+ 중복 데이터가 포함된 여러 개의 서로 다른 팩트 테이블을 사용할 수는 있지만 권장하지는 않습니다. 이러한 경우에는 파티션에서 필터를 사용하여 한 파티션에서 사용되는 데이터가 다른 어떤 파티션에서도 사용되지 않게 해야 합니다. 자세한 내용은 [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
   

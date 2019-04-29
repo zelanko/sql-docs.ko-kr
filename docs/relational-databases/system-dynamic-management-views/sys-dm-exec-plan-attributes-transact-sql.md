@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013221"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. ID에 저장 하는 개체 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 데이터베이스 개체 (프로시저, 뷰, 트리거 및 등)에 대 한 합니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
 |dbid|**int**|계획이 참조하는 엔터티를 포함하는 데이터베이스의 ID입니다.<br /><br /> 임시 또는 준비된 계획의 경우 일괄 처리가 실행된 데이터베이스 ID입니다.|  
 |dbid_execute|**int**|시스템 개체에 저장 합니다 **리소스** 데이터베이스, 캐시 된 계획 실행 되는 데이터베이스 ID입니다. 다른 모든 경우에는 0입니다.|  
-|user_id|**int**|값 -2는 전송된 일괄 처리가 암시적 이름 확인에 의존하지 않으며 여러 사용자들 간에 공유될 수 있음을 의미합니다. 이것이 기본적으로 사용되는 방법입니다. 기타 값은 모두 데이터베이스에 쿼리를 전송하는 사용자의 사용자 ID를 나타냅니다.| 
+|user_id|**int**|값 -2는 전송된 일괄 처리가 암시적 이름 확인에 의존하지 않으며 여러 사용자들 간에 공유될 수 있음을 의미합니다. 이것은 기본적으로 사용되는 방법입니다. 기타 값은 모두 데이터베이스에 쿼리를 전송하는 사용자의 사용자 ID를 나타냅니다.| 
 |language_id|**smallint**|캐시 개체를 만든 연결의 언어 ID입니다. 자세한 내용은 [sys.syslanguages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)합니다.|  
 |date_format|**smallint**|캐시 개체를 만든 연결의 날짜 형식입니다. 자세한 내용은 [SET DATEFORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)을 참조하세요.|  
 |date_first|**tinyint**|날짜의 첫 번째 값입니다. 자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.|  

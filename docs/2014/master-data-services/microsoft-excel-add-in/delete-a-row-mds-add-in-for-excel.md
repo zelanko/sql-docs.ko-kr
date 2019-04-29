@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dbb7de3a1e979a7b91b5532d319ff68e1a4fe778
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923930"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>행 삭제(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 더 이상 다른 사용자에게 제공하지 않으려는 데이터 행(멤버)을 MDS 리포지토리에서 삭제할 수 있습니다.  

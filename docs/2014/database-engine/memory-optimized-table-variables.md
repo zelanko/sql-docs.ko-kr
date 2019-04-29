@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   이 형식에 적어도 한 개의 인덱스가 있어야 합니다. 메모리 최적화 테이블과 마찬가지로 해시 및 비클러스터형 인덱스를 사용할 수 있습니다.  
   
-     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md)을 참조하세요.  
+     해시 인덱스의 경우 버킷 수는 예상 고유 인덱스 키 개수의 약 1~2배 사이여야 합니다. 자세한 내용은 [해시 인덱스에 대 한 올바른 버킷 수를 결정](../relational-databases/indexes/indexes.md)합니다.  
   
 -   메모리 최적화 테이블에 대한 데이터 형식 및 제약 조건 제한은 메모리 최적화 테이블 형식에도 적용됩니다. 예를 들어, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기본 제약 조건은 지원되지만 CHECK 제약 조건은 지원되지 않습니다.  
   

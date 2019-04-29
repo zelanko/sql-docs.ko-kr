@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853326"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC 개요
 프로그래머는 ADO 또는 RDS 이상적인 환경에 게 모든 데이터 소스를 OLE DB 인터페이스를 노출 한 ADO 데이터 원본으로 직접 호출할 수 있도록 합니다. 점점 더 많은 데이터베이스 공급 업체는 OLE DB 인터페이스를 구현 하지만 일부 데이터 소스는이 이렇게를 아직 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |드라이버 이름 (KAGPROP_DRIVERNAME)|ODBC 드라이버의 파일 이름을 나타냅니다.|
 |드라이버 ODBC 버전 (KAGPROP_DRIVERODBCVER)|이 드라이버를 지 원하는 ODBC의 버전을 나타냅니다.|
 |파일 사용량 (KAGPROP_FILEUSAGE)|드라이버 파일을 데이터 원본에서 처리 하는 방법을 나타냅니다. 테이블 또는 카탈로그입니다.|
-|Like 이스케이프 절 (KAGPROP_LIKEESCAPECLAUSE)|LIKE 조건자는 WHERE 절에서 여부 드라이버 정 및 이스케이프 문자 사용에 대 한 지원 백분율 (%) 문자 및 밑줄 문자 (_)을 나타냅니다.|
+|Like 이스케이프 절 (KAGPROP_LIKEESCAPECLAUSE)|드라이버 정 및 이스케이프 문자 사용 백분율 문자 (%)에 대 한 지원 하는지 여부를 나타냅니다. 고 WHERE 절에 LIKE 조건자에서 문자 (_) 밑줄을 표시 합니다.|
 |Group By (KAGPROP_MAXCOLUMNSINGROUPBY)의 최대 열|SELECT 문의 GROUP BY 절에 나열 될 수 있는 열의 최대 수를 나타냅니다.|
 |인덱스 (KAGPROP_MAXCOLUMNSININDEX)의 최대 열|인덱스에 포함 될 수 있는 열의 최대 수를 나타냅니다.|
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY)의 최대 열|SELECT 문의 ORDER BY 절에 나열 될 수 있는 열의 최대 수를 나타냅니다.|
@@ -140,7 +140,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 "{ [ ? = ] call procedure [ ( ? [, ? [ , ... ]] ) ] }"
 ```
 
- 각 **?** 개체를 참조 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다. 첫 번째 **?** 참조 **매개 변수**(0), 다음 **?** 참조 **매개 변수**(1), 등입니다.
+ Each **?** 개체를 참조 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다. 첫 번째 **?** 참조 **매개 변수**(0), 다음 **?** 참조 **매개 변수**(1), 등입니다.
 
  매개 변수 참조는 선택 사항 및 저장된 프로시저의 구조에 따라 달라 집니다. 매개 변수를 정의 하는 저장된 프로시저를 호출 하려는 경우에 문자열에 다음과 같이 보입니다.
 
@@ -217,7 +217,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 |[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 |[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|사용자 계정 컨트롤|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|아니요|아니요|예|사용자 계정 컨트롤|
 |[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 |[Update](../../../ado/reference/ado-api/update-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|
@@ -238,7 +238,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |비동기 가능 중단|DBPROP_ASYNCTXNABORT|
 |비동기 가능 커밋|DBPROP_ASYNCTNXCOMMIT|
 |격리 수준 자동 커밋|DBPROP_SESS_AUTOCOMMITISOLEVELS|
-|카탈로그 위치|DBPROP_CATALOGLOCATION과 같습니다|
+|카탈로그 위치|DBPROP_CATALOGLOCATION|
 |카탈로그 용어|DBPROP_CATALOGTERM|
 |열 정의|DBPROP_COLUMNDEFINITION|
 |연결 제한 시간|DBPROP_INIT_TIMEOUT|
@@ -249,16 +249,16 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |DBMS 이름|DBPROP_DBMSNAME|
 |DBMS 버전|DBPROP_DBMSVER|
 |확장 속성|DBPROP_INIT_PROVIDERSTRING|
-|GROUP BY 지원|DBPROP_GROUPBY와 같습니다|
-|유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES와 같습니다|
+|GROUP BY 지원|DBPROP_GROUPBY|
+|유형이 다른 테이블 지원|DBPROP_HETEROGENEOUSTABLES|
 |식별자 대/소문자 구분|DBPROP_IDENTIFIERCASE|
 |Initial Catalog|DBPROP_INIT_CATALOG|
 |격리 수준|DBPROP_SUPPORTEDTXNISOLEVELS|
 |격리 보존|DBPROP_SUPPORTEDTXNISORETAIN|
 |로캘 ID|DBPROP_INIT_LCID|
 |위치|DBPROP_INIT_LOCATION|
-|최대 인덱스 크기|DBPROP_MAXINDEXSIZE와 같습니다|
-|최대 행 크기|DBPROP_MAXROWSIZE와 같습니다|
+|최대 인덱스 크기|DBPROP_MAXINDEXSIZE|
+|최대 행 크기|DBPROP_MAXROWSIZE|
 |BLOB 포함 최대 행 크기|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
 |모드|DBPROP_INIT_MODE|
@@ -266,7 +266,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|
 |여러 테이블 업데이트|DBPROP_MULTITABLEUPDATE|
-|NULL 정렬 순서|DBPROP_NULLCOLLATION과 같습니다|
+|NULL 정렬 순서|DBPROP_NULLCOLLATION|
 |NULL 연결 동작|DBPROP_CONCATNULLBEHAVIOR|
 |OLE DB 서비스|DBPROP_INIT_OLEDBSERVICES|
 |OLE DB 버전|DBPROP_PROVIDEROLEDBVER|
@@ -278,14 +278,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Ref 접근자로 전달|DBPROP_BYREFACCESSORS|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |영구 ID 형식|DBPROP_PERSISTENTIDTYPE|
-|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR와 같습니다|
-|커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR와 같습니다|
+|중단 동작 준비|DBPROP_PREPAREABORTBEHAVIOR|
+|커밋 동작 준비|DBPROP_PREPARECOMMITBEHAVIOR|
 |프로시저 용어|DBPROP_PROCEDURETERM|
 |프롬프트|DBPROP_INIT_PROMPT|
 |공급자 이름|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |공급자 버전|DBPROP_PROVIDERVER|
-|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY와 같습니다|
+|읽기 전용 데이터 원본|DBPROP_DATASOURCEREADONLY|
 |명령 시 행 집합 변환|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |스키마 용어|DBPROP_SCHEMATERM|
 |스키마 사용|DBPROP_SCHEMAUSAGE|
@@ -318,7 +318,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|부동 행|DBPROP_IMMOBILEROWS|
+|Immobile Rows|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -384,7 +384,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|부동 행|DBPROP_IMMOBILEROWS|
+|Immobile Rows|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|

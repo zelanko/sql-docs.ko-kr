@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013065"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|노드의 ID입니다.|  
-|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값이 4 개. 해당 설명과 함께 아래 나열 됩니다.<br /><ul><li>노드가는 온라인 상태 인지 온라인:<li>오프 라인: 노드는 오프 라인<li>유휴: 보류 중인 작업 요청이 없으면이 노드와 유휴 상태가 되었습니다.<li>IDLE_READY: 노드 이상 보류 중인 작업 요청이 있으며 유휴 상태로 진입할 준비가 되었습니다.</li></ul><br />세 가지 combinable node_state_desc 값을 설명과 함께 아래에 나열 합니다.<br /><ul><li>: DAC이이 노드에서 예약 됩니다를 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)합니다.<li>THREAD_RESOURCES_LOW: 새 스레드가 만들 수 있습니다이 노드에서 메모리 부족 상태로 인해.<li>HOT ADDED: 노드에 대 한 응답으로 추가 되었음을 나타냅니다는 hot add CPU 이벤트입니다.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|노드 상태에 대한 설명입니다. 함께 사용할 수 없는 값이 먼저 표시되고 함께 사용할 수 있는 값이 그 다음에 표시됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />상호 배타적인 node_state_desc 값이 4 개. 해당 설명과 함께 아래 나열 됩니다.<br /><ul><li>ONLINE: 노드가는 온라인 상태입니다.<li>OFFLINE: 노드가 오프 라인 상태입니다.<li>IDLE: 노드에 보류 중인 작업 요청이 없으면 있으며 유휴 상태가 되었습니다.<li>IDLE_READY: 노드와 이상 보류 중인 작업 요청에 유휴 상태로 진입할 준비가 되었습니다.</li></ul><br />세 가지 combinable node_state_desc 값을 설명과 함께 아래에 나열 합니다.<br /><ul><li>DAC: 이 노드에서 예약 됩니다 합니다 [전용 관리 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)합니다.<li>THREAD_RESOURCES_LOW: 새 스레드가 메모리 부족 상태로 인해이 노드에서 만들 수 있습니다.<li>핫 추가: 노드에 대 한 응답으로 추가 되었음을 나타냅니다는 hot add CPU 이벤트입니다.</li></ul>|  
 |memory_object_address|**varbinary(8)**|이 노드와 연관된 메모리 개체의 주소입니다. 한 일 관계가 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address 합니다.|  
 |memory_clerk_address|**varbinary(8)**|이 노드와 연관된 메모리 클럭의 주소입니다. 한 일 관계가 [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address 합니다.|  
 |io_completion_worker_address|**varbinary(8)**|이 노드에 대한 IO 완료가 할당된 작업자의 주소입니다. 한 일 관계가 [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address 합니다.|  

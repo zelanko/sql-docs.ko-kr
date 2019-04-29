@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914659"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141123"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|메시지 텍스트|테이블 오류: 페이지 머리글에는 페이지 P_ID이(가) 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형)에 할당되었다고 나타나 있지만 이 페이지는 다른 개체에 의해 할당되었습니다.|  
+|메시지 텍스트|테이블 오류: 페이지 P_ID 머리글에 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 되 고 다른 개체에 의해 할당 단위 ID A_ID (type 유형)에 할당 됩니다.|  
   
 ## <a name="explanation"></a>설명  
  페이지 머리글에는 할당 단위 ID *A_ID*가 포함되어 있지만 할당 단위의 IAM(Index Allocation Map) 페이지는 이 페이지를 할당하지 않습니다. 따라서 페이지 머리글에 잘못된 할당 단위 ID가 포함되며 해당 페이지에는 페이지가 실제로 할당된 할당 단위 ID에 대한 MSSQLServer_2533 오류가 발생합니다.  

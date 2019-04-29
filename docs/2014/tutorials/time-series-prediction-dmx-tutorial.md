@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044191"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>시계열 예측 DMX 자습서
   이 자습서에서는 시계열 마이닝 구조 및 3개의 사용자 지정 시계열 마이닝 모델을 만든 다음 이러한 모델을 사용하여 예측을 수행하는 방법에 대해 설명합니다.  

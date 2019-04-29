@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999615"
 ---
 # <a name="article-options-for-merge-replication"></a>병합 복제를 위한 아티클 옵션
   애플리케이션의 요구에 맞게 복제 동작을 사용자 지정할 수 있는 여러 가지 병합 테이블 아티클 옵션이 있습니다. 병합 복제를 사용하여 다음을 수행할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "54133323"
   
 -   복제 트리거 및 시스템 테이블에서 하나 이상의 아티클에 대한 삭제를 추적하지 않도록 지정합니다. 이 옵션은 많은 애플리케이션 시나리오에서 유용하게 사용됩니다. 복제할 필요가 없는 일괄 처리 삭제를 사용하는 시나리오도 여기에 포함됩니다. 자세한 내용은 [조건부 삭제 추적으로 병합 복제 성능 최적화](optimize-merge-replication-performance-with-conditional-delete-tracking.md)를 참조하세요.  
   
--   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 지정할 속성](../publish/specify-merge-replication-properties.md)합니다.  
+-   애플리케이션에 필요한 순서대로 아티클이 처리되도록 아티클의 처리 순서를 지정합니다. 자세한 내용은 [병합 복제 속성 지정](../publish/specify-merge-replication-properties.md)을 참조하세요.  
   
 -   관련된 레코드 집합이 하나의 단위로 처리되도록 지정합니다. 기본적으로 병합 복제는 행 단위로 테이블 변경 내용을 처리합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   

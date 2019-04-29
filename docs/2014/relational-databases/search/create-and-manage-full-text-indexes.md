@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022494"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
   전체 텍스트 인덱스의 정보는 전체 텍스트 엔진이 테이블에서 특정 단어나 단어 조합을 빠르게 검색할 수 있는 전체 텍스트 쿼리를 컴파일하는 데 사용됩니다. 전체 텍스트 인덱스는 하나 이상의 데이터베이스 테이블 열에 중요한 단어와 그 위치에 대한 정보를 저장합니다. 전체 텍스트 인덱스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 전체 텍스트 엔진이 작성하고 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 전체 텍스트 인덱스의 작성 과정은 다른 유형의 인덱스를 작성하는 것과 다릅니다. 특정 행에 저장된 값을 기준으로 B-트리 구조를 생성하는 대신 전체 텍스트 엔진은 인덱싱되는 텍스트의 개별 토큰을 기준으로 반전된 누적 압축 인덱스 구조를 작성합니다.  전체 텍스트 인덱스 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 사용 가능한 메모리 리소스에 의해서만 제한됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48054743"
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 엔진이 별도의 서비스가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에 있습니다. 전체 텍스트 엔진을 데이터베이스 엔진에 통합하면 전체 텍스트 관리 효율성, 혼합 쿼리의 최적화 및 전체 성능이 향상됩니다.  
   
- 테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. 형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있습니다 `char`, `varchar`, `nchar`, `nvarchar`, `text`를 `ntext`, `image`를 `xml`를 `varbinary`, 및 `varbinary(max)` 위해 인덱싱할 수 있는 전체 텍스트 검색 합니다. 형식은 데이터 열에 전체 텍스트 인덱스를 만들 `varbinary`, `varbinary(max)`를 `image`, 또는 `xml` 유형 열을 지정 해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
+ 테이블당 한 개의 전체 텍스트 인덱스만 허용합니다. 테이블에 대한 전체 텍스트 인덱스를 만들려면 해당 테이블에 Null이 아닌 고유한 단일 열이 있어야 합니다. `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary` 형식의 열에 대해 전체 텍스트 인덱스를 만들 수 있으며 `varbinary(max)`를 전체 텍스트 검색의 인덱스로 사용할 수도 있습니다. 데이터 형식이 `varbinary`, `varbinary(max)`, `image` 또는 `xml`인 열에 대한 전체 텍스트 인덱스를 만들려면 유형 열을 지정해야 합니다. *유형 열* 은 각 행에 있는 문서의 파일 확장명(.doc, .pdf, .xls 등)이 저장되는 테이블 열입니다.  
   
  전체 텍스트 인덱스를 만들고 유지 관리하는 과정을 *채우기* (또는 *탐색*)라고 합니다. 전체 텍스트 인덱스 채우기에는 전체 채우기, 변경 내용 추적 기반 채우기 및 증분 타임스탬프 기반 채우기의 세 가지가 있습니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](populate-full-text-indexes.md)를 참조하세요.  
   

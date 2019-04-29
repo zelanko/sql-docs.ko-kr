@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919601"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>CLR 사용자 정의 집계 함수 호출
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문에서 시스템 집계 함수에 적용되는 모든 규칙을 따르는 CLR(공용 언어 런타임) 사용자 정의 집계를 호출할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "48083733"
   
 -   사용자 정의 집계의 반환 형식이 일치 해야 합니다 *return_type* 에 `CREATE AGGREGATE` 문.  
   
-## <a name="example-1"></a>예 1  
+## <a name="example-1"></a>예제 1  
  테이블의 열에서 가져온 문자열 값 집합을 연결하는 사용자 정의 집계 함수의 예는 다음과 같습니다.  
   
  [C#]  

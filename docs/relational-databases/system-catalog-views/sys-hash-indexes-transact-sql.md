@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004694"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47729621"
 |**bucket_count**|**int**|해시 인덱스에 대한 해시 버킷 수입니다.<br /><br /> 값을 설정 하는 것에 대 한 지침을 포함 하는 bucket_count 값에 대 한 자세한 내용은 참조 하세요 [CREATE TABLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 을 참조하세요. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   

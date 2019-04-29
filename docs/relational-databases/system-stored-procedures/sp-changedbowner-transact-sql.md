@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994277"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @loginame=] '*로그인*'  
+ [ @loginame= ] '*login*'  
  현재 데이터베이스의 새 소유자의 로그인 ID입니다. *로그인* 됩니다 **sysname**, 기본값은 없습니다. *로그인* 이미 존재 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 Windows 사용자입니다. *로그인* 이미 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  합니다 *remap_alias_flag* 에서 로그인 별칭이 제거 되었으므로 매개 변수는 사용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 *remap_alias_flag* 매개 변수는 오류가 발생 하지 않습니다 하지만 아무 효과가 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

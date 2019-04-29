@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924546"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층은 지정한 방법으로 단일 엔터티의 멤버를 구성합니다. 구조는 비정형일 수 있으며 파생 계층과 달리 명시적 계층은 도메인 기반 특성 관계를 기반으로 하지 않습니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "52809275"
 |비정형 가능|항상 일관된 수의 수준 포함|  
   
 ## <a name="explicit-hierarchy-example"></a>명시적 계층 예  
- 다음 예의 Product 엔터티에는 BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650} 리프 멤버가 포함되어 있습니다.  
+ 다음 예제에서는 Product 엔터티에 이러한 리프 멤버를 포함 합니다. BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} 및 BK-R650 {Road-650}.  
   
  이러한 리프 멤버를 특정 통합 지점에서 요약하려면 Product 엔터티 내에 통합 멤버를 만들면 됩니다. 계층 트리에서 리프 멤버를 요약할 수준에 통합 멤버를 삽입합니다. 통합 멤버를 삽입할 수 있는 위치에 대한 제한은 없지만 각 멤버(리프 또는 통합)를 한 번만 사용할 수 있습니다.  
   

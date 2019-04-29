@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901109"
 ---
 # <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
@@ -37,9 +37,9 @@ ms.locfileid: "58382081"
 ## <a name="error-handling"></a>오류 처리  
  ODBC 원본에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
--   **오류 코드**: 현재 오류에 해당하는 숫자입니다. 오류 목록은 현재 사용하고 있는 ODBC 지원 데이터베이스에 대한 설명서를 참조하십시오. SSIS 오류 코드 목록은 SSIS 오류 코드 및 메시지 참조를 참조하십시오.  
+-   **오류 코드**: 현재 오류에 해당 하는 수입니다. 오류 목록은 현재 사용하고 있는 ODBC 지원 데이터베이스에 대한 설명서를 참조하십시오. SSIS 오류 코드 목록은 SSIS 오류 코드 및 메시지 참조를 참조하십시오.  
   
--   **오류 열**: 오류의 원인이 되는 원본 열입니다(변환 오류의 경우).  
+-   **오류 열**: 원본 열 (변환 오류의 경우)에 대 한 오류가 발생 합니다.  
   
 -   표준 출력 데이터 열입니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "58382081"
 ## <a name="extract-options"></a>추출 옵션  
  ODBC 원본은 **일괄 처리** 또는 **행 단위** 모드에서 작동합니다. 사용되는 모드는 **FetchMethod** 속성으로 결정됩니다. 다음 목록에서는 이러한 모드를 설명합니다.  
   
--   **일괄 처리**: 구성 요소가 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 인출 메서드를 사용하려고 합니다. 대부분의 최신 ODBC 공급자에게 이는 배열 바인딩을 사용한 SQLFetchScroll입니다(배열 크기는 **BatchSize** 속성으로 결정됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
+-   **일괄 처리**: 구성 요소가 인식된 된 ODBC 공급자 기능에 따라 가장 효율적인 인출 메서드를 사용 하려고 합니다. 대부분의 최신 ODBC 공급자에게 이는 배열 바인딩을 사용한 SQLFetchScroll입니다(배열 크기는 **BatchSize** 속성으로 결정됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
--   **행 단위**: 구성 요소가 SQLFetch를 사용하여 한 번에 하나씩 행을 검색합니다.  
+-   **행 단위**: 구성 요소가 SQLFetch를 사용 하 여 한 번에 하나씩 행을 검색.  
   
  **FetchMethod** 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](odbc-source-custom-properties.md)을 참조하십시오.  
   

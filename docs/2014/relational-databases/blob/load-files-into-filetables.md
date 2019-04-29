@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874746"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "58536031"
 |파일의 현재 위치|마이그레이션 옵션|  
 |-------------------------------|---------------------------|  
 |파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 파일에 대해 알지 못합니다.|FileTable은 Windows 파일 시스템에 폴더로 나타나므로 파일을 이동하거나 복사하는 데 사용할 수 있는 방법으로 파일을 새 FileTable로 쉽게 로드할 수 있습니다. 이러한 방법에는 Windows 탐색기, 명령줄 옵션(xcopy, robocopy 등), 사용자 지정 스크립트나 애플리케이션이 포함됩니다.<br /><br /> 기존 폴더를 FileTable로 변환할 수 없습니다.|  
-|파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 파일에 대한 포인터가 포함된 메타데이터의 테이블이 포함되어 있습니다.|첫 번째 단계는 위에서 설명한 방법 중 하나를 사용하여 파일을 이동하거나 복사하는 것입니다.<br /><br /> 두 번째 단계는 파일의 새 위치를 가리키도록 기존 메타데이터 테이블을 업데이트하는 것입니다.<br /><br /> 자세한 내용은 이 항목의 [예: 마이그레이션 파일을 FileTable로 파일 시스템에서](#HowToMigrateFiles) 이 항목의 합니다.|  
+|파일이 현재 파일 시스템에 저장되어 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 파일에 대한 포인터가 포함된 메타데이터의 테이블이 포함되어 있습니다.|첫 번째 단계는 위에서 설명한 방법 중 하나를 사용하여 파일을 이동하거나 복사하는 것입니다.<br /><br /> 두 번째 단계는 파일의 새 위치를 가리키도록 기존 메타데이터 테이블을 업데이트하는 것입니다.<br /><br /> 자세한 내용은 참조 하세요. [예제: 마이그레이션 파일을 FileTable로 파일 시스템에서](#HowToMigrateFiles) 이 항목의 합니다.|  
   
 ###  <a name="HowToLoadNew"></a> 어떻게: FileTable로 파일 로드  
  다음과 같은 방법으로 파일을 FileTable로 로드할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "58536031"
   
 -   **System.IO** 네임스페이스의 메서드를 사용하여 파일을 이동하거나 복사하는 사용자 지정 응용 프로그램을 C# 또는 Visual Basic.NET으로 작성합니다.  
   
-###  <a name="HowToMigrateFiles"></a> 예제: 파일 시스템에서 FileTable로 파일 마이그레이션  
+###  <a name="HowToMigrateFiles"></a> 예제: FileTable로 파일 시스템에서 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
  예를 들어 있다고 가정 기존 데이터베이스 테이블을 `PhotoMetadata`, 사진에 대 한 데이터가 포함 되어 있습니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 `varchar`(512) 형식의 `UNCPath` 열이 있습니다.  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  FileTable 제약 조건을 해제하는 방법은 [FileTables 관리](manage-filetables.md)를 참조하세요.  
   
-###  <a name="disabling"></a> 어떻게: 대량 로드에 대한 FileTable 제약 조건 사용 안 함  
+###  <a name="disabling"></a> 어떻게: 대량 로드에 대 한 FileTable 제약 조건 사용 안 함  
  시스템 정의 제약 조건을 적용하는 오버헤드 없이 파일을 FileTable로 대량 로드하려면 제약 조건을 일시적으로 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [FileTables 관리](manage-filetables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  

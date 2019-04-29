@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001392"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,18 @@ sp_syscollector_update_collection_item
  [ @collection_item_id = ] *collection_item_id*  
  컬렉션 항목을 식별하는 고유한 식별자입니다. *collection_item_id* 됩니다 **int** 이며 기본값은 NULL입니다. *collection_item_id* 하는 경우 값이 있어야 *이름을* NULL입니다.  
   
- [ @name =] '*이름을*'  
+ [ @name = ] '*name*'  
  컬렉션 항목의 이름입니다. *이름을* 됩니다 **sysname** 이며 기본값은 NULL입니다. *이름을* 하는 경우 값이 있어야 *collection_item_id* NULL입니다.  
   
- [ @new_name =] '*new_name*'  
+ [ @new_name = ] '*new_name*'  
  컬렉션 항목의 새 이름입니다. *new_name* 됩니다 **sysname**, 및을 사용 하는 경우에 빈 문자열일 수 없습니다.  
   
  *new_name* 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  
   
- [ @frequency =] *빈도*  
+ [ @frequency = ] *frequency*  
  이 컬렉션 항목에 의해 데이터가 수집되는 빈도(초)입니다. *빈도* 됩니다 **int**, 기본값은 5 지정할 수 있는 최소값을 사용 하 여 합니다.  
   
- [ @parameters =] '*매개 변수*'  
+ [ @parameters = ] '*parameters*'  
  컬렉션 항목의 입력 매개 변수입니다. *매개 변수* 됩니다 **xml** 이며 기본값은 NULL입니다. 합니다 *매개 변수* 스키마는 수집기 유형의 매개 변수 스키마와 일치 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

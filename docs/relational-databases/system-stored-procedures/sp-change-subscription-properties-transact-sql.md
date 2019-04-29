@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997106"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 암호입니다.|  
 |**internet_security_mode**|**1**|웹 동기화에 Windows 통합 인증을 사용합니다. 웹 동기화에는 기본 인증을 사용하는 것이 좋습니다. 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하세요.|  
-||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화를 수행하려면 웹 서버에 대한 SSL 연결이 필요합니다.|  
+||**0**|웹 동기화에 기본 인증을 사용합니다.<br /><br /> 참고: 웹 동기화에는 웹 서버에는 SSL 연결이 필요합니다.|  
 |**internet_timeout**||웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
 |**internet_url**||웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**merge_job_login**||에이전트가 실행되는 Windows 계정의 로그인입니다.|  

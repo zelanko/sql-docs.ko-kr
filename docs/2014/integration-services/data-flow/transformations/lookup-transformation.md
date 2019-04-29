@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900259"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386551"
   
 ## <a name="related-content"></a>관련 내용  
   
--   MSDN Library의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031), msdn.microsoft.com  
+-   MSDN Library의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](https://go.microsoft.com/fwlink/?LinkId=131031)  
   
 -   blogs.msdn.com의 블로그 항목 - [조회 변환 캐시 모드를 사용하는 최선의 구현 방법(Best Practices for Using the Lookup Transformation Cache Modes)](https://go.microsoft.com/fwlink/?LinkId=146623)  
   
--   블로그 항목, [조회 패턴: 대/소문자 구분](https://go.microsoft.com/fwlink/?LinkId=157782)을 보려면 blogs.msdn.com에서  
+-   blogs.msdn.com의 블로그 항목 - [조회 패턴: 대/소문자 구분 안 함](https://go.microsoft.com/fwlink/?LinkId=157782)  
   
 -   msftisprodsamples.codeplex.com의 예제 - [조회 변환](https://go.microsoft.com/fwlink/?LinkId=267528)  
   

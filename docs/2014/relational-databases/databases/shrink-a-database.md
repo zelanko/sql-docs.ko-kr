@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917010"
 ---
 # <a name="shrink-a-database"></a>데이터베이스 축소
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 과 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 개체를 사용하여 데이터베이스를 축소하는 방법에 대해 설명합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "52784027"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a> 후속편: 데이터베이스를 축소한 후  
+##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 축소 한 후  
  파일 축소를 위해 이동되는 데이터는 파일 내의 모든 사용 가능한 위치로 분산될 수 있습니다. 이로 인해 인덱스 조각화가 발생하여 인덱스 범위를 검색하는 쿼리 성능이 저하될 수 있습니다. 조각화를 방지하려면 축소 후 파일에 대한 인덱스를 다시 작성하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>관련 항목  

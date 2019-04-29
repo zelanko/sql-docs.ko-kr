@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892289"
 ---
 # <a name="integration-services-features-and-tasks"></a>Integration Services 기능 및 태스크
   해당 누구나-디자이너, 개발자, 분석가 또는 관리자 정보를 찾을-만들고 개발 하는 데 필요한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 있습니다. 그런 다음 이러한 패키지를 애플리케이션 및 웹 사이트에 통합하는 방법에 대해 설명합니다.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011473"
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
   쿼리 속성은 쿼리 및 뷰 디자이너에서 쿼리를 연 경우 속성 창에 표시됩니다. 별도로 언급하지 않는 한 속성 창에서 이러한 속성을 편집할 수 있습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "52759961"
  **With Ties**  
  뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에만 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리 매개 변수를 사용 하 여 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

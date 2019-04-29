@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912188"
 ---
 # <a name="state-property-sqlservice-class"></a>State 속성(SqlService 클래스)
   서비스의 현재 상태를 가져오거나 설정합니다.  

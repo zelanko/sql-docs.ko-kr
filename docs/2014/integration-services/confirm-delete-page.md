@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6713a6b8b7b0b91fda24298a88f92b5cbd86bb09
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834045"
 ---
 # <a name="confirm-delete-page"></a>삭제 확인 페이지
   **삭제 확인** 페이지를 사용하여 특정 구성 요소를 삭제할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 확인 메시지가 표시되는지 여부를 나타낼 수 있습니다.  

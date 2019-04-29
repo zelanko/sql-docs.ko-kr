@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183090"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>형식 매핑 편집(MySQLToSQL)
 합니다 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "47837013"
   
 ## <a name="options"></a>변수  
   
-##### <a name="source-type"></a>원본 유형  
+##### <a name="source-type"></a>소스 형식  
 SQL Server 데이터 형식에 매핑할 원본 데이터 유형을 선택 합니다.  
   
 데이터 형식은 가변 길이의 경우 다음 필드를 아래의 나타납니다 **Sourcetype**:  
@@ -41,7 +41,7 @@ SQL Server 데이터 형식에 매핑할 원본 데이터 유형을 선택 합�
 ##### <a name="to"></a>수행할 작업  
 이 매핑에 대 한 최대 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식으로이 매핑은 끝 범위를 지정 하는 20을 입력할 수 있습니다 **nchar(20) 합니다.**  
   
-##### <a name="target-type"></a>대상 유형  
+##### <a name="target-type"></a>대상 형식  
 원본 데이터 형식이 매핑되는 SQL Server 데이터 형식을 선택 합니다. SSMA는 테이블을 만들 때 또는 SQL Server에서이 데이터 형식으로 원본 데이터 형식이 변경 됩니다.  
   
 가변 길이 데이터 형식이 인 경우 아래에 다음 필드에 표시 됩니다 **대상 유형**:  

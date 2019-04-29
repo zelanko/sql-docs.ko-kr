@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911145"
 ---
 # <a name="supports-method-example-vb"></a>Supports 메서드 예제(VB)
 이 예제에서는 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) 레코드 집합에서 지 원하는 옵션을 표시 하는 메서드를 다른 커서 유형으로 열입니다. DisplaySupport 절차는이 절차를 실행 하려면 필요 합니다.  

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918927"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>관리되는 데이터베이스 개체 모니터링 및 문제 해결
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 실행 중인 관리되는 데이터베이스 개체와 어셈블리를 모니터링하고 문제를 해결하는 데 사용할 수 있는 도구에 대한 정보를 제공합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "48090653"
 |.NET CLR Exceptions|초당 예외 수를 추적합니다.|  
 |.NET CLR Loading|서버에 로드된 AppDomains 및 어셈블리에 대한 정보를 제공합니다.|  
 |.NET CLR Memory|CLR 메모리 사용량에 대한 정보를 제공합니다. 이 개체를 사용하면 메모리 사용량이 지나치게 많을 경우 알림 플래그를 지정할 수 있습니다.|  
-|.NET Data Provider for SQL Server|초당 연결 및 연결 해제 횟수를 추적합니다. 이 개체를 사용하면 데이터베이스 작업의 수준을 모니터링할 수 있습니다.|  
+|.NET data Provider for SQL Server|초당 연결 및 연결 해제 횟수를 추적합니다. 이 개체를 사용하면 데이터베이스 작업의 수준을 모니터링할 수 있습니다.|  
   
 ## <a name="catalog-views"></a>카탈로그 뷰  
  카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 엔진에서 사용하는 정보를 반환합니다. 카탈로그 뷰는 카탈로그 메타데이터에 대한 가장 일반적인 인터페이스이며 정보를 획득 및 변환하고 사용자 지정 형태로 제공하는 데 가장 효과적인 방법을 제공하므로 카탈로그 뷰를 사용하는 것이 좋습니다. 사용자가 이용할 수 있는 모든 카탈로그 메타데이터는 카탈로그 뷰를 통해 표시됩니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)를 참조하세요.  
@@ -63,7 +63,7 @@ ms.locfileid: "48090653"
 |[sys.assembly_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|데이터베이스에 등록된 어셈블리 파일에 대한 정보를 반환합니다.|  
 |[sys.assembly_types &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|어셈블리로 정의된 UDT(사용자 정의 형식)를 식별합니다.|  
 |[sys.module_assembly_usages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql)|CLR 모듈이 정의되어 있는 어셈블리를 식별합니다.|  
-|[sys.parameter_type_usages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|사용자 정의 형식인 매개 변수에 대한 정보를 반환합니다.|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|사용자 정의 형식인 매개 변수에 대한 정보를 반환합니다.|  
 |[sys.server_assembly_modules&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql)|CLR 트리거가 정의되어 있는 어셈블리를 식별합니다.|  
 |[sys.server_triggers&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)|CLR 트리거를 비롯하여 서버의 서버 수준 DDL 트리거를 식별합니다.|  
 |[sys.type_assembly_usages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql)|사용자 정의 형식이 정의되어 있는 어셈블리를 식별합니다.|  
@@ -78,10 +78,10 @@ ms.locfileid: "48090653"
 |[sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql)|서버에 등록된 각 관리되는 어셈블리를 식별합니다.|  
 |[sys.dm_clr_properties &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql)|호스팅된 CLR에 대한 정보를 반환합니다.|  
 |[sys.dm_clr_tasks &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql)|현재 실행 중인 모든 CLR 태스크를 식별합니다.|  
-|[sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)|더 빠른 쿼리 실행을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 캐시된 쿼리 실행 계획에 대한 정보를 반환합니다.|  
+|[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)|더 빠른 쿼리 실행을 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 캐시된 쿼리 실행 계획에 대한 정보를 반환합니다.|  
 |[sys.dm_exec_query_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql)|캐시된 쿼리 계획에 대한 집계 성능 통계를 반환합니다.|  
 |[sys.dm_exec_requests&#40;Transact-SQL&#41](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 실행 중인 각 요청에 대한 정보를 반환합니다.|  
-|[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)|CLR 메모리 클럭을 비롯하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 현재 활성 상태인 모든 메모리 클럭을 반환합니다.|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql)|CLR 메모리 클럭을 비롯하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 현재 활성 상태인 모든 메모리 클럭을 반환합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900351"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>병합 및 병합 조인 변환을 위한 데이터 정렬
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 병합 및 병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 입력 데이터는 물리적으로 정렬되어야 하며 출력 및 원본의 출력 열 또는 업스트림 변환에 정렬 옵션이 설정되어야 합니다. 정렬 옵션은 데이터가 정렬되었음을 나타내지만 데이터가 실제로 정렬되지 않은 경우에는 병합 또는 병합 조인 작업의 결과를 예측할 수 없습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "58384877"
 ## <a name="setting-sort-options-on-the-data"></a>데이터 정렬 옵션 설정  
  병합 및 병합 조인 변환에 데이터를 제공하는 원본이나 업스트림 변환에 두 가지 중요한 정렬 속성을 설정해야 합니다.  
   
--   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성을 `True`로 설정해야 합니다.  
+-   데이터가 정렬되었는지 여부를 나타내는 출력의 `IsSorted` 속성. 이 속성으로 설정 되어 있어야 `True`합니다.  
   
     > [!IMPORTANT]  
     >  `IsSorted` 속성의 값을 `True`로 설정해도 데이터가 정렬되지는 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다.  

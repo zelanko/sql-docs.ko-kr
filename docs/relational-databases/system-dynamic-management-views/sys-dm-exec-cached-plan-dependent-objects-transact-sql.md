@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013551"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>인수  
 *plan_handle*  
-실행된 일괄 처리에 대한 쿼리 실행 계획을 고유하게 식별하며 해당 계획은 계획 캐시에 있습니다. *plan_handle* 됩니다 **varbinary(64)** 합니다.   
+실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 및 해당 계획은 계획 캐시에 상주 합니다. *plan_handle* 됩니다 **varbinary(64)** 합니다.   
 
 합니다 *plan_handle* 다음 동적 관리 개체에서 가져올 수 있습니다.  
   
@@ -64,7 +64,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
 |**cacheobjtype**|**nvarchar(50)**|계획 캐시 개체 형식입니다. 열은 Null을 허용하지 않습니다. 가능한 값은 아래와 같습니다.<br /><br /> 실행 계획<br /><br /> CLR 컴파일 함수<br /><br /> CLR 컴파일 프로시저<br /><br /> Cursor|  
   
 ## <a name="permissions"></a>사용 권한  
- 을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
+ 서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="physical-joins"></a>물리적 조인  
  ![관계 다이어그램](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "관계 다이어그램")  

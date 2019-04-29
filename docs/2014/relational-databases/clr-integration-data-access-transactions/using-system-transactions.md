@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919535"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions 사용
   `System.Transactions` 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. `System.Transactions.TransactionScope` 클래스는 연결을 암시적으로 분산 트랜잭션에 등록함으로써 코드 블록에 트랜잭션을 적용합니다. `Complete`로 표시된 코드 블록의 끝에서 `TransactionScope` 메서드를 호출해야 합니다. `Dispose` 메서드는 프로그램 실행이 코드 블록을 종료할 때 호출되며 `Complete` 메서드가 호출되지 않으면 트랜잭션이 중단되도록 합니다. 예외가 발생하여 코드가 범위를 벗어나게 되면 트랜잭션이 중단된 것으로 볼 수 있습니다.  

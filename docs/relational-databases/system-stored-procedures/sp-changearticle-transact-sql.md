@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997947"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x1000**|열 수준 데이터 정렬을 복제합니다.|  
 ||**0x2000**|게시된 아티클 원본 개체와 연관된 확장 속성을 복제합니다.|  
 ||**0x4000**|테이블 아티클에 정의된 경우 고유 키를 복제합니다.|  
-||**0x8000**|ALTER TABLE 문을 사용하여 테이블 아티클의 기본 키 및 고유 키를 제약 조건으로 복제합니다.<br /><br /> 참고: 이 옵션은 더 이상 사용되지 않습니다. 사용 하 여 **0x80** 하 고 **0x4000** 대신 합니다.|  
+||**0x8000**|ALTER TABLE 문을 사용하여 테이블 아티클의 기본 키 및 고유 키를 제약 조건으로 복제합니다.<br /><br /> 참고: 이 옵션에 더 이상 사용 되지 않습니다. 사용 하 여 **0x80** 하 고 **0x4000** 대신 합니다.|  
 ||**0x10000**|동기화하는 동안 CHECK 조건이 강제 적용되지 않도록 해당 제약 조건을 NOT FOR REPLICATION으로 복제합니다.|  
 ||**0x20000**|동기화하는 동안 FOREIGN KEY 제약 조건이 강제 적용되지 않도록 해당 제약 조건을 NOT FOR REPLICATION으로 복제합니다.|  
 ||**0x40000**|분할된 테이블이나 인덱스와 연결된 파일 그룹을 복제합니다.|  

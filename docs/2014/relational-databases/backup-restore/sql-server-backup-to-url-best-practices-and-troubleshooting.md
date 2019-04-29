@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877095"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349997"
   
 -   [Windows Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [자습서: Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>백업 관리  
  다음은 백업 관리 시 일반적으로 권장되는 사항입니다.  
@@ -151,7 +151,7 @@ ms.locfileid: "53349997"
   
     ```  
   
-2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 SQL Server가 컴퓨터의 C 드라이브에 설치된 경우 구성 파일을 *C:\Program Files\Microsoft SQL Server\MSSQL12입니다. \<N a m e > \MSSQL\Binn*합니다.  
+2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 SQL Server가 컴퓨터의 C 드라이브에 설치된 경우 구성 파일을 *C:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Binn*.  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 문제 해결  
  SQL Server 관리되는 백업이 URL에 대한 백업을 기반으로 하므로 이전 섹션에서 설명한 문제 해결 팁이 SQL Server 관리되는 백업을 사용하는 데이터베이스나 인스턴스에 적용됩니다.  SQL Server Managed Backup to Windows Azure 문제 해결에 대 한 정보에 자세히 설명 되어 [문제 해결 SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)합니다.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7eade67861f20e744dc2ea706f4bc96304f30ae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936412"
 ---
 # <a name="object-already-exists"></a>이미 존재하는 개체
   저장하려는 개체의 이름이 데이터베이스에 이미 있는 개체의 이름과 같습니다. 다른 이름을 선택한 다음 계속하십시오.  

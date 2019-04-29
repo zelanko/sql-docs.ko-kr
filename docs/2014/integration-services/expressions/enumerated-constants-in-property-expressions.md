@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898901"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 `LoggingMode` 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "58386571"
   
 |DTSPackageType의 이름|숫자 값|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|기본값|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -69,7 +69,7 @@ ms.locfileid: "58386571"
   
 |DTSPriorityClass의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|기본값|0|  
 |AboveNormal|1|  
 |보통|2|  
 |BelowNormal|3|  

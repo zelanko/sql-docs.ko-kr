@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042743"
 ---
 # <a name="connecting-with-sqlconnect"></a>SQLConnect로 연결
 **SQLConnect** 는 가장 단순한 연결 함수입니다. 데이터 원본 이름이 필요 하 고 선택적 사용자 ID 및 암호를 허용 합니다. 하드 코드는 데이터 원본 이름 및 사용자 ID 또는 암호가 필요 하지 않은 응용 프로그램에 대 한 잘 작동 합니다. 또한 하려는 응용 프로그램 제어 "모양 및 느낌" 자체 또는 사용자 인터페이스에 대해 잘 작동 합니다. 이러한 응용 프로그램에 사용 하 여 데이터 원본 목록을 빌드할 수 있습니다 **SQLDataSources**고, 데이터 원본, 사용자 ID와 암호를 묻는 메시지를 호출 하 **SQLConnect**합니다.  

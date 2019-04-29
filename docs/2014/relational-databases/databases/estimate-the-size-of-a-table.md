@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916877"
 ---
 # <a name="estimate-the-size-of-a-table"></a>테이블 크기 예측
   다음 단계를 통해 테이블에 데이터를 저장하는 데 필요한 공간을 추정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "52748855"
   
 3.  1단계와 2단계에서 계산한 값을 더합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 크기 예측](estimate-the-size-of-a-database.md)   
  [힙 크기 예측](estimate-the-size-of-a-heap.md)   
  [클러스터형 인덱스의 크기 예측](estimate-the-size-of-a-clustered-index.md)   

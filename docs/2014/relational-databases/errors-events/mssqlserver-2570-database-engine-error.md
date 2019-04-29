@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5169e030246b8f5a834e6a2526232907a7e22526
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914432"
 ---
 # <a name="mssqlserver2570"></a>MSSQLSERVER_2570
     
@@ -38,7 +38,7 @@ ms.locfileid: "53360625"
 ## <a name="user-action"></a>사용자 동작  
  복구할 수 없는 오류입니다. 열을 해당 열 데이터 형식 범위 내의 값으로 업데이트하고 명령을 다시 실행하십시오.  자세한 내용은 기술 자료 문서 [923247](https://support.microsoft.com/kb/923247)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [UPDATE&#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 44f3f5bbfe183136ee8bf1a8d602a50e638b89b1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028416"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 속성(ServerSettings 클래스)
    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스와 연결된 일반 플래그를 가져옵니다.  

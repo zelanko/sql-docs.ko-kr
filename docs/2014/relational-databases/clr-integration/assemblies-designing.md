@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874926"
 ---
 # <a name="designing-assemblies"></a>어셈블리 디자인
   이 항목에서는 어셈블리를 디자인할 때 고려해야 할 다음 요소들에 대해 설명합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "48196243"
 -   관리 코드의 조각에 더 높은 사용 권한이 필요한 경우 해당 코드를 높은 사용 권한이 필요하지 않은 코드와 별개의 어셈블리로 구분하는 것이 좋습니다.  
   
 ## <a name="managing-assembly-security"></a>어셈블리 보안 관리  
- 관리 코드를 실행할 때 .NET Code Access Security로 보호되는 리소스를 어셈블리에서 어느 정도까지 액세스할 수 있는지를 제어할 수 있습니다. 컨트롤을 만들거나 어셈블리를 수정할 때 세 가지 권한 집합 중 하나를 지정 하 여이 작업을 수행 합니다: SAFE, EXTERNAL_ACCESS 또는 UNSAFE 합니다.  
+ 관리 코드를 실행할 때 .NET Code Access Security로 보호되는 리소스를 어셈블리에서 어느 정도까지 액세스할 수 있는지를 제어할 수 있습니다. 컨트롤을 만들거나 어셈블리를 수정할 때 세 가지 권한 집합 중 하나를 지정 하 여이 수행 합니다. SAFE, EXTERNAL_ACCESS 또는 UNSAFE 합니다.  
   
 ### <a name="safe"></a>SAFE  
  SAFE는 기본 사용 권한 집합이며 가장 제한적입니다. SAFE 권한을 사용하여 어셈블리에서 실행한 코드는 파일, 네트워크, 환경 변수 또는 레지스트리와 같은 외부 시스템 리소스에 액세스할 수 없습니다. SAFE 코드는 로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하거나 로컬 데이터베이스 외부의 리소스에 액세스하지 않는 계산 및 비즈니스 논리를 수행할 수 있습니다.  

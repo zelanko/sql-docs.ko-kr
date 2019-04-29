@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011315"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 암호화 키를 사용하여 데이터, 자격 증명 및 서버 데이터베이스에 저장된 연결 정보의 보안을 유지할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 *대칭* 과 *비대칭*등, 두 종류의 키가 있습니다. 대칭 키는 동일한 암호를 사용하여 데이터를 암호화하고 해독합니다. 비대칭 키는 한 암호를 사용하여 데이터를 암호화하고( *공개* 키라고 함) 다른 암호를 사용하여 데이터를 해독합니다( *개인* 키라고 함).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160703"
   
  데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 개인 키를 보호하는 데 사용되는 대칭 키입니다. 이 키는 데이터를 암호화하는 데에도 사용되지만 길이에 제한이 있기 때문에 대칭 키를 사용하는 것보다 유용하지 않습니다.  
   
- 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다. 마스터 키의 자동 암호 해독을 설정하려면 SMK를 사용하여 이 키의 복사본을 암호화합니다. 사용 되는 위치 및 두 데이터베이스에 저장 되는 `master` 시스템 데이터베이스입니다.  
+ 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다. 마스터 키의 자동 암호 해독을 설정하려면 SMK를 사용하여 이 키의 복사본을 암호화합니다. 이 복사본이 사용되는 데이터베이스와 `master` 시스템 데이터베이스 모두에 암호화된 복사본이 저장됩니다.  
   
- 에 저장 된 DMK의 복사본을 `master` 시스템 데이터베이스는 DMK가 변경 될 때마다 자동으로 업데이트 됩니다. 하지만이 기본값을 사용 하 여 변경할 수 있습니다 합니다 `DROP ENCRYPTION BY SERVICE MASTER KEY` 옵션을는 `ALTER MASTER KEY` 문. 서비스 마스터 키로 암호화되지 않은 DMK는 `OPEN MASTER KEY` 문과 암호를 사용하여 열어야 합니다.  
+ `master` 시스템 데이터베이스에 저장된 DMK 복사본은 DMK가 변경될 때마다 자동으로 업데이트됩니다. 그러나 `DROP ENCRYPTION BY SERVICE MASTER KEY` 문의 `ALTER MASTER KEY` 옵션을 사용하여 이 기본값을 변경할 수 있습니다. 서비스 마스터 키로 암호화되지 않은 DMK는 `OPEN MASTER KEY` 문과 암호를 사용하여 열어야 합니다.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>SQL Server 및 데이터베이스 키 관리  
  암호화 키 관리에는 새 데이터베이스 키 생성과 서버와 데이터베이스 키의 백업 생성뿐만 아니라 키 복원, 삭제 또는 변경 시기와 방법에 대한 이해가 포함됩니다.  

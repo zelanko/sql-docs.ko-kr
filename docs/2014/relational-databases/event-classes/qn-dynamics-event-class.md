@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035739"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 이벤트 클래스
   QN:Dynamics 이벤트 클래스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 쿼리 알림을 지원하기 위해 수행하는 백그라운드 작업에 대한 정보를 보고합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]내에서 백그라운드 스레드는 구독 제한 시간, 시작될 보류 중인 구독 및 매개 변수 테이블 소멸을 모니터링합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365875"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |EventClass|`int`|이벤트 유형 = 202|27|아니요|  
 |EventSequence|`int`|이 이벤트의 시퀀스 번호입니다.|51|아니요|  
-|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 클록 실행 시작: 만료된 매개 변수 테이블의 정리 일정을 지정하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 백그라운드 스레드가 시작되었음을 나타냅니다.<br /><br /> 클록 실행 완료: 만료된 매개 변수 테이블의 정리 일정을 지정하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 백그라운드 스레드가 완료되었음을 나타냅니다.<br /><br /> 마스터 정리 태스크를 시작 합니다. 만료된 쿼리 알림 구독 데이터를 제거하는 정리(가비지 수집)가 시작되었음을 나타냅니다.<br /><br /> 마스터 정리 태스크를 완료 합니다. 만료된 쿼리 알림 구독 데이터를 제거하는 정리(가비지 수집)가 완료되었음을 나타냅니다.<br /><br /> 마스터 정리 태스크를 건너뜁니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만료된 쿼리 알림 구독 데이터를 제거하기 위해 정리(가비지 수집)를 수행하지 않았음을 나타냅니다.|21|사용자 계정 컨트롤|  
+|EventSubClass|`nvarchar`|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> 클록 실행 시작: 나타내는의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정 만료 된 매개 변수 테이블의 정리를 시작 했습니다.<br /><br /> 클록 실행 완료: 나타내는의 백그라운드 스레드가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 일정 만료 된 매개 변수 테이블의 정리를 완료 합니다.<br /><br /> 마스터 정리 태스크를 시작 합니다. 만료 된 쿼리 알림 구독 데이터를 제거 하기 위해 정리 (가비지 수집)가 시작 되었음을 나타냅니다.<br /><br /> 마스터 정리 태스크를 완료 합니다. 만료 된 쿼리 알림 구독 데이터를 제거 하는 정리 (가비지 수집)가 완료를 나타냅니다.<br /><br /> 마스터 정리 태스크를 건너뜁니다. 나타내는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 만료 된 쿼리 알림 구독 데이터를 제거 하기 위해 정리 (가비지 수집)를 수행 하지 않았습니다.|21|사용자 계정 컨트롤|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다.<br /><br /> 0 = 사용자<br /><br /> 1 = 시스템|60|아니요|  

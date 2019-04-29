@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924955"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>데이터베이스 로그인, 사용자 및 역할(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스를 호스팅하는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 자동으로 설치되는 로그인, 사용자 및 역할이 포함되어 있습니다. 이러한 로그인, 사용자 및 역할은 수정하면 안 됩니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52795419"
 |사용자|Description|  
 |----------|-----------------|  
 |`mds_clr_user`|사용되지 않습니다.<br /><br /> mds_dlp_login에 매핑됩니다.|  
-|`mds_email_user`|알림에 사용됩니다.<br /><br /> mds_email_login에 매핑됩니다.<br /><br /> DatabaseMailUserRole 역할의 멤버입니다.|  
+|`mds_email_user`|알림에 사용됩니다.<br /><br /> mds_email_login에 매핑됩니다.<br /><br /> 역할의 구성원임을 확인 합니다. DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Master Data Services 데이터베이스 사용자  
   

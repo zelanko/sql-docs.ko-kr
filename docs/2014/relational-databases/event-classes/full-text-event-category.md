@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd00b1966351b5205da737a8f04912b015ec81e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023113"
 ---
 # <a name="full-text-event-category"></a>Full Text 이벤트 범주
   **Full Text** 이벤트 범주에는 일반 전체 텍스트 이벤트가 포함됩니다.  

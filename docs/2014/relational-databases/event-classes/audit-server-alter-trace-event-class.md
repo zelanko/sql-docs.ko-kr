@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012519"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace 이벤트 클래스
   **Audit Server Alter Trace** 이벤트 클래스는 ALTER TRACE 권한을 확인하는 모든 문에 대해 발생합니다. ALTER TRACE를 확인하는 문에는 추적을 만들고 구성하거나 추적에 필터를 설정하는 데 사용되는 문이 들어 있습니다.  

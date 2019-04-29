@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d3911ab34a01b2da971aa602df37c8c559ed6390
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920739"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
   이 항목에서는 Windows Azure Blob 스토리지 서비스를 백업 대상으로 사용하는 데 필요한 개념, 요구 사항 및 구성 요소를 소개합니다. 백업 및 복원 기능은 디스크나 테이프를 사용하는 경우와 동일하거나 비슷하지만 몇 가지 차이점이 있습니다. 이러한 차이점과 주목할 만한 예외 및 몇 가지 코드 예가 이 항목에서 소개됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "53359295"
  ![sql 자격 증명에 저장소 계정 매핑](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 자격 증명에 저장소 계정 매핑")  
   
 ###  <a name="Blob"></a> Windows Azure Blob Storage 서비스  
- **저장소 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Windows Azure Blob 스토리지 서비스에 액세스하려면 먼저 Windows Azure 스토리지 계정을 만듭니다. Windows Azure Blob 스토리지 서비스와 해당 구성 요소의 인증을 받으려면 **storage account name** 과 해당 **access key** 속성이 필요합니다.  
+ **스토리지 계정:** 저장소 계정은 모든 저장소 서비스의 시작 지점입니다. Windows Azure Blob 스토리지 서비스에 액세스하려면 먼저 Windows Azure 스토리지 계정을 만듭니다. Windows Azure Blob 스토리지 서비스와 해당 구성 요소의 인증을 받으려면 **storage account name** 과 해당 **access key** 속성이 필요합니다.  
   
  **컨테이너:** 컨테이너에서는 그룹화된 blob 집합을 제공하며 blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob service에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53359295"
   
 -   `RETAINDAYS`와 `EXPIREDATE` 백업 세트 옵션 지정은 지원되지 않습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 백업 장치 이름이 최대 259자로 제한됩니다. BACKUP TO URL에서 URL - ‘ https://.blob.core.windows.net//.bak’를 지정하는 데 사용되는 필수 요소에 36자가 사용되며, 계정, 컨테이너 및 blob 이름에 사용할 수 있는 문자는 223자입니다.  
   
 ###  <a name="Support"></a> Backup/Restore 문 지원  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53359295"
         >   
         >  관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](#credential) 섹션의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
-    3.  **Azure 저장소 컨테이너:** 백업 파일을 저장할 Windows Azure 저장소 컨테이너의 이름입니다.  
+    3.  **Azure 스토리지 컨테이너:** 백업 파일을 저장할 Windows Azure 저장소 컨테이너의 이름입니다.  
   
     4.  **URL 접두사:** 이전 단계에서 설명하는 필드에서 지정된 정보를 사용하여 자동으로 만들어집니다. 이 값을 수동으로 편집하는 경우 이전에 제공한 다른 정보와 일치하는지 확인해야 합니다. 예를 들어 스토리지 URL을 수정하는 경우 SQL 자격 증명이 동일한 스토리지 계정에 인증하도록 설정되었는지 확인합니다.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "53359295"
 ###  <a name="credential"></a> 자격 증명 만들기  
  다음 예에서는 Windows Azure 스토리지 인증 정보를 저장하는 자격 증명을 만듭니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -324,7 +324,7 @@ ms.locfileid: "53359295"
 ###  <a name="complete"></a> 전체 데이터베이스 백업  
  다음 예에서는 Windows Azure Blob 스토리지 서비스에 AdventureWorks2012 데이터베이스를 백업합니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -382,7 +382,7 @@ ms.locfileid: "53359295"
 ###  <a name="databaselog"></a> 데이터베이스 및 로그 백업  
  다음 예에서는 기본적으로 단순 복구 모델을 사용하는 AdventureWorks2012 예제 데이터베이스를 백업하고 로그 백업을 지원하기 위해 전체 복구 모델을 사용하도록 AdventureWorks2012 데이터베이스를 수정합니다. 마지막으로 Windows Azure Blob에 대한 전체 데이터베이스 백업을 만들고 업데이트 작업 기간이 경과된 후 로그를 백업합니다. 이 예에서는 날짜/시간 스탬프를 포함한 백업 파일 이름을 만듭니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -493,7 +493,7 @@ ms.locfileid: "53359295"
 ###  <a name="filebackup"></a> 주 파일 그룹의 전체 파일 백업 만들기  
  다음 예에서는 PRIMARY 파일 그룹의 전체 파일 백업을 만듭니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -560,7 +560,7 @@ ms.locfileid: "53359295"
 ###  <a name="differential"></a> 주 파일 그룹의 차등 파일 백업 만들기  
  다음 예에서는 PRIMARY 파일 그룹의 차등 파일 백업을 만듭니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -632,7 +632,7 @@ ms.locfileid: "53359295"
 ###  <a name="restoredbwithmove"></a> 데이터베이스를 복원 및 파일 이동  
  전체 데이터베이스 백업을 복원하고 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 디렉터리로 복원한 데이터베이스를 이동하려면 다음 단계를 수행합니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -749,7 +749,7 @@ ms.locfileid: "53359295"
 ###  <a name="PITR"></a> STOPAT를 사용하여 지정 시간으로 복원  
  다음 예에서는 지정 시간의 상태로 데이터베이스를 복원하고 복원 작업을 보여 줍니다.  
   
-1.  **tsql**  
+1.  **Tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   
@@ -877,6 +877,6 @@ ms.locfileid: "53359295"
 ## <a name="see-also"></a>관련 항목  
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
  [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
- [자습서: Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
   

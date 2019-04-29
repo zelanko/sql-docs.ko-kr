@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183475"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Parallel Data Warehouse로 데이터 로드
 로드 하거나 Integration Services를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스 (PDW)를 삽입할 수 있습니다 [bcp 유틸리티](../tools/bcp-utility.md)하십시오 **dwloader** 명령줄 로더 또는 SQL INSERT 문을 합니다.  

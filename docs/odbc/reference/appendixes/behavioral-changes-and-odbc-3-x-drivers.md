@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e386aa60489fe3edb2caac3cb49ebad263ffdfac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026618"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>동작 변경 및 ODBC 3.x 드라이버
 환경 특성 SQL_ATTR_ODBC_VERSION 나타내며 드라이버 ODBC 2 발생 해야 하는지 여부를 *x* 동작 또는 ODBC 3 *.x* 동작 합니다. SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하는 방법을 응용 프로그램에 따라 달라 집니다. ODBC 3 *.x* 응용 프로그램을 호출 해야 **SQLSetEnvAttr** 호출 후에이 특성을 설정 하려면 **SQLAllocHandle** 환경 핸들을 할당 하려면 를호출하기전에및 **SQLAllocHandle** 연결 핸들을 할당 합니다. 드라이버 관리자 SQLSTATE HY010 반환이 실패 하는 경우 (함수 시퀀스 오류)의 두 번째 호출에서 **SQLAllocHandle**합니다.  

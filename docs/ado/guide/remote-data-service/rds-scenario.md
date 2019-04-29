@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931380"
 ---
 # <a name="rds-scenario"></a>RDS 시나리오
 > [!IMPORTANT]

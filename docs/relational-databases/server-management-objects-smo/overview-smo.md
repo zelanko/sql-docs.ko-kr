@@ -13,11 +13,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943182"
 ---
 # <a name="overview-smo"></a>개요(SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47763211"
   
 -   파티션 구성표에 데이터를 스토리지하기 위한 테이블 및 인덱스 분할. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
--   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)합니다.  
+-   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)를 참조하세요.  
   
 -   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
@@ -54,21 +54,21 @@ ms.locfileid: "47763211"
   
 -   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅숏 데이터베이스  
   
--   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)합니다.  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 복수 이름에 대한 동의어 지원. 자세한 내용은 [동의어 &#40;데이터베이스 엔진&#41;](../../relational-databases/synonyms/synonyms-database-engine.md)합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 서버, 전자 메일 프로필 및 전자 메일 계정을 생성하는 데이터베이스 메일 관리 기능. 자세한 내용은 [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)을 참조하세요.  
   
--   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [서버 등록](../../tools/sql-server-management-studio/register-servers.md)합니다.  
+-   연결 정보를 등록하기 위한 등록된 서버 지원. 자세한 내용은 [Register Servers](../../tools/sql-server-management-studio/register-servers.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)를 [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)를 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), 및 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트의 추적 및 재생. 자세한 내용은 [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)및 [Extended Events](../../relational-databases/extended-events/extended-events.md)를 참조하세요.  
   
--   보안 제어를 위한 인증서와 키 지원. 자세한 내용은 [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)합니다.  
+-   보안 제어를 위한 인증서와 키 지원. 자세한 내용은 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하세요.  
   
 -   DDL 이벤트 발생 시 기능을 추가하기 위한 DDL 트리거. 자세한 내용은 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md)을(를) 참조하세요.  
   
- SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO로 구현 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리입니다. 즉,에서 공용 언어 런타임 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SMO 개체를 사용 하기 전에 버전 2.0을 설치 해야 합니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\에 배치 됩니다. 자세한 내용은 참조는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서.  
+ SMO 네임스페이스는 <xref:Microsoft.SqlServer.Management.Smo>입니다. SMO는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리로 구현됩니다. 이것은 SMO 개체를 사용하려면 먼저 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0의 공용 언어 런타임을 설치해야 한다는 의미입니다. 기본적으로 SMO 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 옵션과 함께 GAC(전역 어셈블리 캐시)에 설치됩니다. 어셈블리는 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\에 배치 됩니다. 자세한 내용은 참조는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 설명서.  
   
 ## <a name="smo-classes"></a>SMO 클래스  
  SMO 클래스에는 인스턴스 클래스 및 유틸리티 클래스라는 두 개의 범주가 포함되어 있습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "47763211"
   
  인덱스 테이블 분할을 사용하면 파일 그룹 전체의 테이블 및 인덱스에서 데이터 분포를 관리할 수 있습니다. 이 새 기능은 SMO 개체로 표현됩니다.  
   
- **끝점**  
+ **EndPoints**  
   
  SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 엔드포인트로 처리됩니다.  
   

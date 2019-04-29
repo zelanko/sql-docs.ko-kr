@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013529"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "58072337"
 |size_in_bytes|**int**|캐시 개체가 사용한 바이트 수입니다.|  
 |memory_object_address|**varbinary(8)**|캐시된 항목의 메모리 주소입니다. 이 값을 사용 하 여 사용할 수 있습니다 [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) 캐시 된 계획의 메모리 분석을 가져오려면 [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)항목 캐시 비용을 가져오려고와 함께 사용 합니다.|  
 |cacheobjtype|**nvarchar(34)**|캐시에 있는 개체의 유형입니다. 이 값은<br /><br /> Compiled Plan<br /><br /> Compiled Plan Stub<br /><br /> Parse Tree<br /><br /> Extended Proc<br /><br /> CLR Compiled Func<br /><br /> CLR Compiled Proc|  
-|objtype|**nvarchar(16)**|개체의 유형입니다. 사용 가능한 값과 해당 설명을 다음과 같습니다.<br /><br /> Proc: 저장 프로시저<br />준비: 준비된 문<br />Adhoc: 임시 쿼리 합니다. 가리키는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 언어 이벤트로 전송 된 **osql** 또는 **sqlcmd** 대신 원격 프로시저 호출으로.<br />ReplProc: 복제 필터 프로시저<br />트리거: 트리거<br />보기: 보기<br />기본값: Default<br />UsrTab: 사용자 테이블<br />SysTab: 시스템 테이블<br />확인 합니다. CHECK 제약 조건<br />규칙: 규칙|  
+|objtype|**nvarchar(16)**|개체의 유형입니다. 사용 가능한 값과 해당 설명을 다음과 같습니다.<br /><br /> 프로시저: 저장 프로시저<br />준비: 준비된 문<br />Adhoc: 임시 쿼리 합니다. 가리키는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 언어 이벤트로 전송 된 **osql** 또는 **sqlcmd** 대신 원격 프로시저 호출으로.<br />ReplProc: 복제 필터 프로시저<br />트리거: 트리거<br />보기: 보기<br />기본값: 기본값<br />UsrTab: 사용자 테이블<br />SysTab: 시스템 테이블<br />확인 합니다. CHECK 제약 조건<br />규칙: 규칙|  
 |plan_handle|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 다음 동적 관리 함수와 함께 사용할 수 있습니다.<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|이 계획 메모리 사용량이 계산된 리소스 풀의 ID입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  

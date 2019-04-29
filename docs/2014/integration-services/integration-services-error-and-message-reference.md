@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892661"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
   다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
@@ -1239,11 +1239,11 @@ ms.locfileid: "58394591"
 |0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|SSIS 오류 코드 DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: OLE DB 공급자를 사용할 수 없으므로 64비트 버전의 SSIS에서 Excel 연결 관리자를 지원하지 않습니다.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|캐시 파일이 손상되었거나 캐시 연결 관리자를 사용하여 파일을 만들지 않았습니다.  올바른 캐시 파일을 지정하십시오.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|SQL 명령이 올바르게 설정되지 않았습니다. SQLCommand 속성을 확인하십시오.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|COM 오류 개체 정보를 사용할 수 있습니다.  원본: "%1" 오류 코드: 0x%2!8.8X!  설명: "%3".|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|COM 오류 개체 정보를 사용할 수 있습니다.  원본: “%1” 오류 코드: 0x%2!8.8X!  설명: "%3".|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|설정한 연결에 액세스할 수 없습니다.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|열 수가 잘못되었습니다.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|열 "%1"을(를) 데이터 원본에서 찾을 수 없습니다.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|"OLE DB 레코드를 사용할 수 있습니다.  원본: "%1" Hresult: 0x%2!8.8X!  설명: "%3".|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|"OLE DB 레코드를 사용할 수 있습니다.  원본: “%1” Hresult: 0x%2!8.8X!  설명: "%3".|  
 |0xC0202009|-1071636471|DTS_E_OLEDBERROR|SSIS 오류 코드 DTS_E_OLEDBERROR.  OLE DB 오류가 발생했습니다. 오류 코드: 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|구성 요소가 이미 연결되었습니다. 연결을 시도하기 전에 구성 요소의 연결을 끊어야 합니다.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|속성 "%1"의 값이 잘못되었습니다.|  

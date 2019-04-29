@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875622"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>단순 복구 모델에서 데이터베이스 백업 복원(Transact-SQL)
   이 항목에서는 전체 데이터베이스 백업을 복원하는 방법에 대해 설명합니다.  

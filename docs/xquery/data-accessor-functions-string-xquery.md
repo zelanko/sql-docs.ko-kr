@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934739"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>데이터 접근자 함수 - string(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
 ### <a name="a-using-the-string-function"></a>1. 문자열 함수 사용  
- 다음 쿼리는 <`ProductDescription`> 요소의 <`Features`> 자식 요소 노드를 검색합니다.  
+ 다음 검색 쿼리는 <`Features`> 자식 요소 노드는 <`ProductDescription`> 요소입니다.  
   
 ```  
 SELECT CatalogDescription.query('  

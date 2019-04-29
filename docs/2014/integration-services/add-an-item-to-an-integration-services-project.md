@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 829683a08a1611cae4bcb9ce8dca8e2e328f83f5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837431"
 ---
 # <a name="add-an-item-to-an-integration-services-project"></a>Integration Services 프로젝트에 항목 추가
   이 절차에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트에 신규 및 기존 항목을 추가하는 방법에 대해 설명합니다.  

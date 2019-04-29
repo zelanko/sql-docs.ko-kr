@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004238"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "47607361"
 |**name**|**sysname**|인덱스의 이름입니다. **이름** 는 개체 내 에서만 고유 합니다.<br /><br /> NULL = 힙|  
 |**index_id**|**int**|인덱스의 ID입니다. **index_id** 는 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**type**|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 3 = XML<br /><br /> 4 = 공간<br /><br /> 5 = Clustered columnstore 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 6 = 비클러스터형 columnstore 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 7 = 해시 클러스터 되지 않은 인덱스. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
-|**type_desc**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터 된 COLUMNSTORE- **적용**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 비클러스터형 COLUMNSTORE- **를 적용 하 여**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 클러스터 되지 않은 해시: 해시 클러스터 되지 않은 인덱스 테이블 메모리 최적화에 대해서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [sys.hash_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)합니다. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
+|**type_desc**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터 된 COLUMNSTORE- **적용**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 비클러스터형 COLUMNSTORE- **를 적용 하 여**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 비클러스터형 해시: 비클러스터형 해시 인덱스는 메모리 최적화 테이블 에서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [sys.hash_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)합니다. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
 |**is_unique**|**bit**|1 = 인덱스가 고유합니다.<br /><br /> 0 = 인덱스가 고유하지 않습니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**data_space_id**|**int**|이 인덱스에 대한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹 또는 파티션 구성표입니다.<br /><br /> 0 = **object_id** 는 테이블 반환 함수 또는 메모리 내 인덱스입니다.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY가 ON입니다.<br /><br /> 0 = IGNORE_DUP_KEY가 OFF입니다.|  
 |**is_primary_key**|**bit**|1 = 인덱스가 PRIMARY KEY 제약 조건의 일부입니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**is_unique_constraint**|**bit**|1 = 인덱스가 UNIQUE 제약 조건의 일부입니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
-|**fill_factor**|**tinyint**|> 0 = 인덱스가 생성 또는 다시 생성될 때 사용된 FILLFACTOR 백분율입니다.<br /><br /> 0 = 기본값<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
+|**fill_factor**|**tinyint**|> 0 = FILLFACTOR 백분율 인덱스를 만들거나 다시 작성할 때 사용 합니다.<br /><br /> 0 = 기본값<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**is_padded**|**bit**|1 = PADINDEX가 ON입니다.<br /><br /> 0 = PADINDEX가 OFF입니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**is_disabled**|**bit**|1 = 인덱스가 비활성화되었습니다.<br /><br /> 0 = 인덱스가 비활성화되지 않았습니다.|  
 |**is_hypothetical**|**bit**|1 = 인덱스가 가상 인덱스이며 데이터 액세스 경로로 직접 사용할 수 없습니다. 가상 인덱스는 열 수준 통계를 보유합니다.<br /><br /> 0 = 인덱스가 가상 인덱스입니다.|  

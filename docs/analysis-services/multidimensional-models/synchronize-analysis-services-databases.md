@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020006"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145918"
  원본 서버에서 지연 집계 처리를 사용하는 경우 지연 집계 처리를 해제합니다. 백그라운드에서 처리되고 있는 집계는 데이터베이스 동기화에 방해가 될 수 있습니다. 이 서버 속성을 설정하는 방법은 [OLAP Properties](../../analysis-services/server-properties/olap-properties.md)을 참조하십시오.  
   
 > [!NOTE]  
->  데이터베이스 크기는 동기화가 적합한 방식인지 결정하는 요소입니다. 까다로운 요구 사항은 없지만 동기화가 너무 느리면 [Analysis Services 동기화 모범 사례](http://go.microsoft.com/fwlink/?LinkID=253136)문서에 설명된 대로 여러 서버를 병렬로 동기화하는 것이 좋습니다.  
+>  데이터베이스 크기는 동기화가 적합한 방식인지 결정하는 요소입니다. 까다로운 요구 사항은 없지만 동기화가 너무 느리면 [Analysis Services 동기화 모범 사례](http://go.microsoft.com/fwlink/?LinkID=253136)합니다.  
   
 ## <a name="synchronize-database-wizard"></a>데이터베이스 동기화 마법사  
  데이터베이스 동기화 마법사를 사용하여 원본 데이터베이스에서 대상 데이터베이스로 단방향 동기화를 수행하거나 데이터베이스 동기화 작업을 지정하는 스크립트를 생성할 수 있습니다. 동기화 프로세스 중에 로컬 및 원격 파티션을 둘 다 동기화하고 역할을 포함할지 여부를 선택할 수 있습니다.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876050"
 ---
 # <a name="device-contents-sql-server"></a>디바이스 내용(SQL Server)
   이 대화 상자를 사용하여 백업 정보를 확인할 수 있습니다. 이 정보에는 디바이스, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
@@ -56,8 +56,8 @@ ms.locfileid: "48101693"
 |헤더|값|  
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
-|**형식**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
-|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<비어 있음>*(트랜잭션 로그의 경우)이 될 수 있습니다.|  
+|**형식**|수행 된 백업 유형: 전체, 차등 또는 트랜잭션 로그입니다.|  
+|**구성 요소**|백업 구성 요소: 데이터베이스, 파일 또는  *\<빈 >* (트랜잭션 로그의 경우)에 대 한 합니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**데이터베이스 백업**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e39b7094b4b4543b60431f847ed792f18ace31f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040819"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
 모든 보류 중인 일괄 처리 업데이트를 디스크에 씁니다.  

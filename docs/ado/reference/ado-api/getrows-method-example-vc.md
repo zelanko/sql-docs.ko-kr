@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 254cb5e6ca4572b0a38ea5f5b6beaab1a78162d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027962"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows 메서드 예제(VC++)
 이 예제에서는 합니다 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 지정된 된 수의 행을 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 행의 수가 미만 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -229,7 +229,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- Input  
+ 입력  
   
 ```  
 2  

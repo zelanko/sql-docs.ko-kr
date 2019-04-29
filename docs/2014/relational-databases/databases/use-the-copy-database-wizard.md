@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871140"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
   데이터베이스 복사 마법사를 사용하면 서버를 중단하는 일 없이 데이터베이스 및 그 개체를 쉽게 다른 서버로 이동하거나 복사할 수 있습니다. 데이터베이스를 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 수도 있습니다. 이 마법사를 사용하여 다음을 수행할 수 있습니다.  
@@ -257,7 +257,7 @@ ms.locfileid: "52759115"
      **일정**  
      나중에 이동 또는 복사 작업을 시작합니다. 현재 설정된 일정은 설명란에 표시됩니다. 일정을 변경하려면 **변경**을 클릭합니다.  
   
-     **변경**  
+     **Change**  
      엽니다는 **새 작업 일정** 대화 상자.  
   
      **Integration Services 프록시 계정**  
@@ -278,7 +278,7 @@ ms.locfileid: "52759115"
      **메시지**  
      각 단계에서 반환된 메시지를 제공합니다.  
   
-##  <a name="FollowUp"></a> 후속편: SQL Server 데이터베이스를 업그레이드한 후  
+##  <a name="FollowUp"></a> 후속 작업: SQL Server 데이터베이스를 업그레이드한 후  
  데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전으로 데이터베이스를 업그레이드하면 데이터베이스를 바로 사용할 수 있으며 데이터베이스가 자동으로 업그레이드됩니다. 데이터베이스에 전체 텍스트 인덱스가 있는 경우 업그레이드 프로세스는 **전체 텍스트 업그레이드 옵션** 서버 속성의 설정에 따라 인덱스를 가져오거나, 다시 설정하거나, 다시 작성합니다. 업그레이드 옵션이 **가져오기** 또는 **다시 작성**으로 설정되어 있는 경우 업그레이드하는 동안 전체 텍스트 인덱스를 사용할 수 없습니다. 인덱싱되는 데이터 양에 따라 가져오기 작업은 몇 시간씩 걸릴 수 있으며 다시 작성 작업은 10배 정도 더 걸릴 수 있습니다. 업그레이드 옵션이 **가져오기**로 설정되어 있으면 전체 텍스트 카탈로그를 사용할 수 없는 경우 관련된 전체 텍스트 인덱스가 다시 작성됩니다. **전체 텍스트 업그레이드 옵션** 속성 설정을 보거나 변경하는 방법은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드한 데이터베이스의 호환성 수준이 이전에 90이었다면 업그레이드 후에는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  

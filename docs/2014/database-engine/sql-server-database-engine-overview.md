@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843797"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 애플리케이션에 대한 요구 사항을 충족하기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다.  

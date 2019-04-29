@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911190"
 ---
 # <a name="receiving-results"></a>결과 수신
 ADO에서 대부분의 명령을 호출자에 게 반환 되는 몇 가지 정보 발생 합니다. 행 집합을 반환 하는 명령에 대 한 결과에서 수신 되는 **레코드 집합** 아마도 가장 사용 되는 ADO 개체의 개체.  

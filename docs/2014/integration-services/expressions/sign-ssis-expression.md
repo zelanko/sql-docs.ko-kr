@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897309"
 ---
 # <a name="sign-ssis-expression"></a>SIGN(SSIS 식)
   숫자 식의 양수(+1), 음수(-1) 또는 영(0) 부호를 반환합니다.  

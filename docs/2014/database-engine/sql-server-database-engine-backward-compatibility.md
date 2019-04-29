@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842850"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>SQL Server 데이터베이스 엔진의 이전 버전과의 호환성
   이전 버전과의 호환성 섹션 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전 간의 동작 변경 내용에 대해 설명합니다.  

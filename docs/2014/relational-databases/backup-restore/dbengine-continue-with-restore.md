@@ -10,11 +10,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b342941c163208703d6cef932cb52cac3694d8e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876458"
 ---
 # <a name="continue-with-restore"></a>복원 계속
 참조 [복원 계속](../../database-engine/continue-with-restore.md)합니다.

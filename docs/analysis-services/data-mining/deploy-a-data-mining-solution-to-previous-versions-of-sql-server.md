@@ -1,5 +1,5 @@
 ---
-title: 이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs
+title: 이전 버전의 SQL Server 데이터 마이닝 솔루션에 배포 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011023"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "34015100"
   
  SQL Server 2005 Analysis Services에서 마이닝 구조를 열면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 오류가 발생하고 홀드아웃 파티션이 제거된 구조가 다시 생성됩니다.  
   
- 구조 다시 작성 후 홀드 아웃 파티션의 크기를 더 이상 사용할 수; 속성 창에서 그러나 값 \<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >)은 ASSL 스크립트 파일에 있는 수 있습니다.  
+ 구조를 다시 작성 후 홀드 아웃 파티션의 크기를 사용할 수 없는 속성 창의; 그러나 값 \<ddl100_100:HoldoutMaxPercent > 30\</ddl100_100:HoldoutMaxPercent >)은 ASSL 스크립트 파일에 있는 수 있습니다.  
   
 ##  <a name="bkmk_Filter"></a> 필터가 있는 모델 배포  
- 마이닝 모델에 필터를 적용 하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있습니다 하지만 필터가 적용 되지 않습니다.  
+ 마이닝 모델에 필터를 적용 하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있지만 필터는 적용 되지 않습니다.  
   
  마이닝 모델을 열면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 오류가 발생하고 필터가 제거된 모델이 다시 생성됩니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "34015100"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 동기화하려고 하면 서버에서 오류를 반환하고 데이터베이스 동기화가 실패합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Analysis Services 이전 버전과 호환성](../../analysis-services/analysis-services-backward-compatibility.md)  
+## <a name="see-also"></a>관련 항목  
+ [Analysis Services 이전 버전과의 호환성](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

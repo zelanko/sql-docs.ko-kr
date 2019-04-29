@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890759"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5단원 패키지 복사
+# <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5 단원 패키지 복사
   이 태스크에서는 5단원에서 만든 Lesson 5.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 5단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 6단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>5단원 패키지를 복사하려면  

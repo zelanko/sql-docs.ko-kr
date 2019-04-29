@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917091"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
   이 페이지를 사용하여 선택한 데이터베이스의 옵션을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대 한 자세한 내용은 참조 하세요. [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52774425"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **Bulk-logged**, 또는 **단순**합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스를 복구 하는 것에 대 한 다음 모델 중 하나를 지정 합니다. **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)**,  **SQL Server 2012(110)** 및 **SQL Server 2008(100)** 입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)을 참조하세요.  
@@ -93,7 +93,7 @@ ms.locfileid: "52774425"
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **해제**하십시오 **READ_ONLY**, 또는 **전체**합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../blob/filetables-sql-server.md)를 참조하세요.  
+ Filetable에 저장 된 FILESTREAM 데이터를 파일 시스템을 통해 비트랜잭션 액세스를 위해 다음 옵션 중 하나를 지정 합니다. **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
  **ANSI Null 기본값**  
@@ -149,7 +149,7 @@ ms.locfileid: "52774425"
   
  이 속성을 설정하려면 ALTER DATABASE 문을 사용합니다.  
   
- **VarDecimal 저장소 형식 사용**  
+ **VarDecimal 스토리지 형식 사용**  
  이 옵션은 읽기 전용부터 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 및 이상 버전에서는 모든 데이터베이스에 vardecimal 저장소 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)을 사용합니다.  
   
 ## <a name="recovery"></a>복구  
@@ -184,7 +184,7 @@ ms.locfileid: "52774425"
  **암호화 사용**  
  때 `True`, 데이터베이스 암호화에 대 한이 데이터베이스를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   

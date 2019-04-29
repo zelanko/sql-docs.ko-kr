@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913752"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
     
@@ -30,7 +30,7 @@ ms.locfileid: "48150944"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID(TYPE 유형), 페이지 PG_ID, 행 R_ID. DBCC가 온라인 인덱스 작성 작업에서 완료되지 않은 정리를 검색했습니다. anti-matter 열 값은 VALUE입니다.|  
+|메시지 텍스트|테이블 오류: 개체 ID O_ID, 인덱스 ID I_ID, 파티션 ID PN_ID, 할당 단위 ID A_ID (type 유형), 페이지 PG_ID, 행 R_ID. DBCC가 온라인 인덱스 작성 작업에서 완료되지 않은 정리를 검색했습니다. anti-matter 열 값은 VALUE입니다.|  
   
 ## <a name="explanation"></a>설명  
  개체 *O_ID*, 인덱스 *I_ID* 및 파티션 *PN_ID*에 대해 완료되지 않은 온라인 인덱스 작성이 감지되었습니다. 이는 행 *R_ID*의 anti-matter 열로 알 수 있습니다. anti-matter 열은 온라인으로 인덱스를 작성하는 동안 여러 원본의 레코드를 조정할 때 사용됩니다. 오류 메시지에는 anti-matter 열의 값도 표시됩니다.  

@@ -13,16 +13,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 255cf7d05fad66976a0196b78212af2b9a780a94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942864"
 ---
 # <a name="smo-programming---getting-started-in-visual-c-net"></a>SMO 프로그래밍 - Visual C# .NET 시작
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET 공용 언어 런타임 (CLR)에서 지 원하는 관리 되는 프로그래밍 언어 중 하나에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. C# 언어에 대 한 자세한 내용은 대부분의 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 설명서. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 응용 프로그램을 개발할 수 있습니다.  
+  [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET 공용 언어 런타임 (CLR)에서 지 원하는 관리 되는 프로그래밍 언어 중 하나에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. C# 언어에 대한 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 설명서를 참조하십시오. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 애플리케이션을 개발할 수 있습니다.  
   
 ## <a name="references-and-imports"></a>참조 및 가져오기  
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 프로젝트를 시작한 후 SMO 어셈블리에 대한 참조를 추가해야 합니다. 그런 다음 프로그램에서 SMO 형식을 인식할 수 있도록 필요한 네임스페이스를 가져옵니다.  

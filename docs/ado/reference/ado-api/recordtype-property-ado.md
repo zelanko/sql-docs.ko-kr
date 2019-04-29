@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb43252689893d875701d747dff1640eb0862651
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033425"
 ---
 # <a name="recordtype-property-ado"></a>RecordType 속성(ADO)
 유형을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다.  

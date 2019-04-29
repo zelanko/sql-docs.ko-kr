@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929882"
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 쿼리 및 데이터 원본을 업데이트 하려면 RDS 프로그래밍 모델을 사용 하 여 보여 줍니다. 먼저,이 작업을 수행 하는 데 필요한 단계에 설명 합니다. 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO에 대 한 Windows Foundation Class (ADO/WFC) 포함)에서 반복 됩니다.  
@@ -55,20 +55,20 @@ ms.locfileid: "51558630"
   
  이 자습서는 다음 항목을 포함합니다.  
   
--   [1단계: 서버 프로그램 지정(RDS 자습서)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [1단계: (RDS 자습서) 서버 프로그램 지정](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [2단계: 서버 프로그램 호출(RDS 자습서)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [2단계: (RDS 자습서) 서버 프로그램 호출](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [3단계: 서버가 레코드 집합을 가져옵니다(RDS 자습서).](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [3단계: 서버 (RDS 자습서) 레코드 집합을 가져옵니다.](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [4단계: 서버가 레코드 집합을 반환합니다(RDS 자습서).](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [4단계: 서버 (RDS 자습서) 레코드 집합을 반환합니다.](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [5단계: DataControl을 사용 가능하도록 만듭니다(RDS 자습서).](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [5단계: DataControl 유용 수행 (RDS 자습서)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [6단계: 서버에 변경 내용이 보내집니다(RDS 자습서).](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [6단계: 변경 내용 (RDS 자습서) 서버로 보내집니다.](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [1 단계: 서버 프로그램 (RDS 자습서) 지정](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [1단계: (RDS 자습서) 서버 프로그램 지정](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS 자습서(VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

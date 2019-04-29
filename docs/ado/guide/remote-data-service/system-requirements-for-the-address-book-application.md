@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10a7097292562acd60e8b83af9a48bd61aeb8557
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955743"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 애플리케이션에 대한 시스템 요구 사항
 주소록 예제 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항을 충족 해야 합니다.  

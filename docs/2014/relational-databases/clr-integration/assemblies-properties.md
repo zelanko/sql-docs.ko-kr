@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919288"
 ---
 # <a name="assembly-properties-general-page"></a>어셈블리 속성(일반 페이지)
   이 페이지를 사용하여 어셈블리 속성을 확인하거나 수정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48103273"
  소유자 이름 또는 스키마 이름을 입력하거나 목록에서 선택합니다.  
   
  **권한 집합**  
- 어셈블리에 대한 보안 수준을 설정합니다. 제공되는 세 가지 보안 수준은 **Safe**, **External access**, **Unsafe** 액세스입니다.  
+ 어셈블리에 대한 보안 수준을 설정합니다. 세 가지 보안 수준은 제공 됩니다. **안전한**, **External access**, 및 **Unsafe** 액세스 합니다.  
   
  **어셈블리에 대 한 경로**  
  어셈블리 파일의 경로를 입력합니다.  

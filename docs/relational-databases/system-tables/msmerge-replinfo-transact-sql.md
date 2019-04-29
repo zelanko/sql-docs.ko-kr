@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903339"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52775425"
 |**validation_level**|**int**|구독에서 실행할 유효성 검사의 유형입니다. 지정한 유효성 검사 수준은 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 없습니다 유효성을 검사 합니다.<br /><br /> **1** = 행 개수만 유효성을 검사 합니다.<br /><br /> **2** = 행 개수 및 체크섬 유효성 검사 합니다.<br /><br /> **3** = 행 개수 및 이진 체크섬 유효성 검사 합니다.|  
 |**resync_gen**|**bigint**|구독을 다시 동기화하는 데 사용되는 생성 번호입니다. 값이 **-1** 구독이 다시 동기화에 대 한 표시 되지 않도록 나타냅니다.|  
 |**login_name**|**sysname**|구독을 만든 사용자의 이름입니다.|  
-|**호스트 이름**|**sysname**|구독에 대한 파티션을 생성할 때 매개 변수가 있는 행 필터에서 사용되는 값입니다.|  
+|**hostname**|**sysname**|구독에 대한 파티션을 생성할 때 매개 변수가 있는 행 필터에서 사용되는 값입니다.|  
 |**merge_jobid**|**binary(16)**|이 구독에 대한 병합 작업 ID입니다.|  
 |**sync_info**|**int**|내부적으로만 사용됩니다.|  
   

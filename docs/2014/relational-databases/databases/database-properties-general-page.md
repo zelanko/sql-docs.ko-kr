@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916961"
 ---
 # <a name="database-properties-general-page"></a>데이터베이스 속성(일반 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다.  

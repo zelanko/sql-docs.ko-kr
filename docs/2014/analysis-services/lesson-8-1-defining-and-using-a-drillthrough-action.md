@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 606fe679f4cc58a627b2d2978b52d9865da741c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728468"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "52545309"
 ## <a name="next-lesson"></a>다음 단원  
  [9 단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 동작](multidimensional-models/actions-in-multidimensional-models.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

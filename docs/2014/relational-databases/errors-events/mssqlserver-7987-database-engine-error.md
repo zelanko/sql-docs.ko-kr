@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0541f066c653a233508a48d7b8f02504d36f25b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913280"
 ---
 # <a name="mssqlserver7987"></a>MSSQLSERVER_7987
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130507"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|메시지 텍스트|시스템 테이블 사전 검사: 개체 ID O_ID의 체인 연결이 일치하지 않습니다. P_ID1->next = P_ID2인데 P_ID2->prev = P_ID3입니다. 오류로 인해 검사 문이 종료됩니다.|  
+|메시지 텍스트|시스템 테이블 사전 검사: 개체 ID O_ID의 체인 연결이 일치 하지 않습니다. P_ID1->next = P_ID2인데 P_ID2->prev = P_ID3입니다. 오류로 인해 검사 문이 종료됩니다.|  
   
 ## <a name="explanation"></a>설명  
  DBCC CHECKDB의 첫 번째 단계는 중요 시스템 테이블의 데이터 페이지에 대해 기본 검사를 수행하는 것입니다. 오류가 발견되는 경우 이를 복구할 수 없으므로 DBCC CHECKDB가 즉시 종료됩니다.  

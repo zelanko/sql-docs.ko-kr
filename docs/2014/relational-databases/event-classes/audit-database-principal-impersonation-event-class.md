@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938720"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation 이벤트 클래스
   **Audit Database Principal Impersonation** 이벤트 클래스는 데이터베이스 범위 내에 EXECUTE AS \<*user*> 또는 SETUSER 등의 가장이 있는 경우에 발생합니다.  

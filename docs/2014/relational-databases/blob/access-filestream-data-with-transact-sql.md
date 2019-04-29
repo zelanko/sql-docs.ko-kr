@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88fe39b5be43082ffc9648814eccf5384585f2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920494"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL을 사용하여 FILESTREAM 데이터 액세스
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE 및 DELETE 문을 사용하여 FILESTREAM 데이터를 관리하는 방법에 대해 설명합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "48061043"
 >  이 항목의 예에서는 [FILESTREAM 사용 데이터베이스 만들기](create-a-filestream-enabled-database.md) 및 [FILESTREAM 데이터 저장용 테이블 만들기](create-a-table-for-storing-filestream-data.md)에서 만든 FILESTREAM 사용 데이터베이스 및 테이블이 필요합니다.  
   
 ##  <a name="ins"></a> FILESTREAM 데이터가 들어 있는 행 삽입  
- FILESTREAM 데이터를 지원하는 테이블에 행을 추가하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 문을 사용합니다. FILESTREAM 열에 데이터를 삽입할 때 NULL을 삽입할 수 있습니다 또는 `varbinary(max)` 값입니다.  
+ FILESTREAM 데이터를 지원하는 테이블에 행을 추가하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 문을 사용합니다. FILESTREAM 열에 데이터를 삽입할 때 NULL 또는 `varbinary(max)` 값을 삽입할 수 있습니다.  
   
 ### <a name="inserting-null"></a>NULL 삽입  
  다음 예에서는 `NULL`을 삽입하는 방법을 보여 줍니다. FILESTREAM 값이 `NULL`이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 파일 시스템에 파일을 만들지 않습니다.  

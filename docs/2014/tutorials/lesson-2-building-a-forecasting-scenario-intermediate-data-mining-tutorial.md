@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931525"
 ---
-# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>2단원: 예측 시나리오 구축(중급 데이터 마이닝 자습서)
+# <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>2단원: 예측 시나리오 (중급 데이터 마이닝 자습서) 구축
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]의 판매 분석가가 제품의 내년 판매액을 예측해 달라는 요청을 받았습니다. 특히 지역 및 제품 라인별 예측을 비교해야 합니다. 또한 시간에 따라 여러 제품의 판매 방식이 달라지는지 확인해야 합니다.  
   
- 요청된 정보를 찾기 위해 이 단원에서 월별 수준으로 회사의 판매 데이터를 요약하고 판매 수치를 유럽, 북미 및 태평양 세 지역으로 요약합니다.  
+ 요청된 된 정보를 찾기 위해이 단원에서 월별 수준에서 회사의 판매 데이터를 요약 하 고 판매 수치 세 지역으로 요약: 유럽, 북미 및 태평양  
   
  이 단원의 태스크를 완료하면 다음 질문에 대답할 수 있습니다.  
   

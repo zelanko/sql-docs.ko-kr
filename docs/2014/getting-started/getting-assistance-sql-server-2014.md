@@ -12,18 +12,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837706"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>지원 받기(SQL Server 2014)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와 함께 설치되는 설명서 및 자습서  
   
--   MSDN([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network) 및 TechNet의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사이트  
+-   MSDN( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Network) 및 TechNet의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사이트  
   
 -   다른 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 웹 사이트의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 정보  
   
@@ -34,10 +34,10 @@ ms.locfileid: "48134893"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]와 관련된 정보를 제공하는 주요 정보원에 대한 링크가 포함되어 있습니다. 이 항목에는 지원 사이트에 대한 링크도 포함되어 있습니다.  
   
  [장애가 있는 사용자를 위한 접근성](../../2014/getting-started/accessibility-for-people-with-disabilities.md)  
- 장애가 있는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 보다 편리하게 사용할 수 있도록 지원하는 제품, 기능 및 서비스에 대해 설명합니다.  
+ 장애가 있는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 보다 편리하게 사용할 수 있도록 지원하는 제품, 기능 및 서비스에 대해 설명합니다.  
   
  [SQL Server 2014에 대한 사용자 의견 제공](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
- 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보내는 방법에 대해 설명합니다.  
+ 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)] 에 보내는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014의에서 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)   

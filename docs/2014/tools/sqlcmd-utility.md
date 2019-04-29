@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035390"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
   합니다 `sqlcmd` 유틸리티를 사용 하면 입력 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트의 명령 프롬프트에서 파일 **쿼리 편집기** SQLCMD 모드에서 Windows 스크립트 파일에서 또는의 운영 체제 (Cmd.exe) 작업 단계는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 작업입니다. 이 유틸리티는 ODBC를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 일괄 처리를 실행합니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "53591927"
  워크스테이션 이름입니다. 이 옵션은 `sqlcmd` 스크립팅 변수 SQLCMDWORKSTATION을 설정합니다. 워크스테이션 이름은 **sys.processes** 카탈로그 뷰의 **hostname** 열에 나열되며 **sp_who** 저장 프로시저를 사용하여 반환할 수 있습니다. 이 옵션을 지정하지 않으면 기본적으로 현재 컴퓨터 이름이 사용됩니다. 이 이름을 사용하여 다른 `sqlcmd` 세션을 식별할 수 있습니다  
   
  **-K** _application_intent_  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K**를 지정하지 않으면 sqlcmd 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K**를 지정하지 않으면 sqlcmd 유틸리티가 AlwaysOn 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조 복제본: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요).  
   
  `-M` *multisubnet_failover*  
  `-M` 가용성 그룹 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 지정하십시오. `-M`은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. `-M`이 지정되지 않은 경우 `-M`이 해제됩니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../includes/sshadr-md.md)]를 참조 하세요 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 &#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)를 [생성 및 구성의 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)하십시오 [장애 조치 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), 및 [활성 보조: 읽기 가능한 보조 복제본](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 합니다.  
@@ -188,9 +188,9 @@ ms.locfileid: "53591927"
   
  경로 예는 다음과 같습니다.  
   
- **-i** c:\\< 파일 이름\>  
+ **-i** C:\\<filename\>  
   
- **-i** \\ \\< 서버\>\\<$ 공유 >\\< 파일 이름\>  
+ **-i** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-i** "C:\Some Folder\\<file name\>"  
   
@@ -207,7 +207,7 @@ ms.locfileid: "53591927"
   
  **-o** C:\\< filename>  
   
- **-o** \\ \\< 서버\>\\<$ 공유 >\\< 파일 이름\>  
+ **-o** \\\\<Server\>\\<Share$>\\<filename\>  
   
  **-o "** C:\Some Folder\\<file name\>"  
   
@@ -265,7 +265,7 @@ ms.locfileid: "53591927"
 > [!NOTE]  
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
- **-vvar =** _값_[ **var =** _값_...]  
+ **-vvar =** _value_[ **var =** _value_...]  
  만듭니다는 `sqlcmd`에서 사용할 수 있는 스크립팅 변수는 `sqlcmd` 스크립트입니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 개 지정할 수 있습니다  **_var_**=**"*`values`*"** 값입니다. 지정한 값에 오류가 있을 경우 `sqlcmd`는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
@@ -499,7 +499,7 @@ ms.locfileid: "53591927"
  문 캐시 내용을 출력합니다.  
   
  **변수**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **:Setvar** \<**var**> [ **"*`value`*"** ]  
  `sqlcmd` 스크립팅 변수를 정의합니다. 스크립팅 변수의 형식은 다음과 같습니다. `$(VARNAME)`.  
   
  변수 이름은 대/소문자를 구분하지 않습니다.  
@@ -531,7 +531,7 @@ ms.locfileid: "53591927"
   
  **출력 명령**  
   **:Error**   
- **_\<_** _filename_ **_>|_ STDERR | STDOUT**  
+ **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
  *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
   
  *file name*  
@@ -550,7 +550,7 @@ ms.locfileid: "53591927"
  성능 추적 정보를 만들어 *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모두 리디렉션합니다. 기본적으로 성능 추적 출력은 **stdout**으로 전송됩니다. 이 파일이 이미 있을 경우 0바이트로 잘립니다. 스크립트에서 **Perftrace** 명령이 여러 번 나타날 수 있습니다.  
   
  **실행 제어 명령**  
-  **: On Error**[ `exit`  |  `ignore`]  
+  **:On Error**[ `exit` | `ignore`]  
  스크립트나 일괄 처리를 실행하는 동안 오류가 발생할 때 수행할 동작을 설정합니다.  
   
  `exit` 옵션을 사용하면 해당 오류 값이 표시되고 `sqlcmd`가 종료됩니다.  
@@ -560,7 +560,7 @@ ms.locfileid: "53591927"
  [**:**] **QUIT**  
  `sqlcmd`를 끝냅니다.  
   
- [**:**] **끝내기**[ **(*`statement`*)** ]  
+ [**:**] **EXIT**[ **(*`statement`*)** ]  
  `sqlcmd`의 반환 값에 SELECT 문의 결과를 사용할 수 있도록 합니다. 숫자일 경우 마지막 결과 행의 첫째 열은 4바이트 정수(long)로 변환됩니다. MS-DOS는 하위 바이트를 부모 프로세스 또는 운영 체제 오류 수준에 전달합니다. Windows 200x에서는 4바이트 정수 전체를 전달합니다. 구문은 다음과 같습니다.  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "53591927"
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **: Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_ 이름을* [-P *암호*]]  
+ **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  
@@ -651,7 +651,7 @@ ms.locfileid: "53591927"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**  \< *명령*>  
+ [**:**] **!!**\< *command*>  
  운영 체제 명령을 실행합니다. 운영 체제 명령을 실행하려면 느낌표 두 개(**!!**)로 줄을 시작하고 운영 체제 명령을 입력합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
  `:!! Dir`  
@@ -672,7 +672,7 @@ ms.locfileid: "53591927"
   
 -   원격 서버에 있는 입력 파일을 로컬 컴퓨터에 있는 `sqlcmd`에서 호출할 경우 이 파일에 :out c:\OutputFile.txt와 같은 드라이브 파일 경로가 포함되어 있으면 출력 파일이 원격 서버가 아닌 로컬 컴퓨터에 생성됩니다.  
   
--   올바른 파일 경로의 예는 C:\\**<*`filename`*>** 하십시오 \\ \\< Server\>\\<$ 공유 >\\ **< *`filename`* >** 및 "C:\Some 폴더\\  **< *`file name`*>**". 경로에 공백이 있을 경우 따옴표를 사용합니다.  
+-   올바른 파일 경로 다음과 같습니다. C:\\**<*`filename`*>** 하십시오 \\ \\< Server\>\\<$ 공유 >\\ **< *`filename`* >** 및 "C:\Some 폴더\\  **< *`file name`*>**". 경로에 공백이 있을 경우 따옴표를 사용합니다.  
   
 -   각각의 새 `sqlcmd` 세션은 이름이 같은 기존 파일을 덮어씁니다.  
   
@@ -689,7 +689,7 @@ ms.locfileid: "53591927"
   
  `GO`  
   
- Enter 키를 누르면 다음 정보 메시지가 출력됩니다. "데이터베이스 컨텍스트가 'AdventureWorks2012'(으)로 변경되었습니다."  
+ ENTER를 누르면 라는 정보 메시지가 출력 됩니다. "데이터베이스 컨텍스트가 'AdventureWorks2012'."  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 쿼리의 출력 형식  
  먼저 `sqlcmd`는 SELECT 목록에서 지정한 열 이름이 포함된 열 머리글을 출력합니다. 열 이름은 SQLCMDCOLSEP 문자로 구분됩니다. 기본적으로 구분 문자는 공백입니다. 열 이름이 열 너비보다 짧은 경우 출력은 다음 열까지 공백으로 채워집니다.  

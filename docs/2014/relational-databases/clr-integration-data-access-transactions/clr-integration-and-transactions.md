@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874816"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR 통합 및 트랜잭션
   `System.Transactions` 네임스페이스는 이미 통합된 ADO.NET 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과 완전히 통합되는 트랜잭션 프레임워크를 제공합니다. `System.Transactions` 및 ADO.NET은 함께 작동하여 관리되는 응용 프로그램에서 로컬 및 분산 트랜잭션의 사용을 확장하고 단순화합니다.  

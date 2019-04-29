@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011495"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>로그인, 사용자 및 스키마 관리 방법 도움말 항목
   이 페이지에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인, 데이터베이스 사용자 및 데이터베이스 스키마를 관리하는 방법뿐만 아니라 역할을 조인하고 사용 권한을 보안 주체에 부여하는 방법을 설명하는 항목에 대한 링크를 제공합니다.  

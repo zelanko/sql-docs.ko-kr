@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007891"
 ---
 # <a name="catalog-and-schema-usage"></a>카탈로그 및 스키마 사용
-데이터 원본을 지원 하지 않을 카탈로그 및 스키마 이름이 모든 SQL 문에서 개체 이름 식별자로. 데이터 원본에서 SQL 문의 다음 클래스 중 하나 이상이 카탈로그 이름과 스키마를 지원할 수 있습니다: 데이터 조작 언어 (DML) 문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 문입니다. 카탈로그 및 스키마 이름을 사용할 수는 SQL 문 클래스를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션을 사용 하 여 합니다.
+데이터 원본을 지원 하지 않을 카탈로그 및 스키마 이름이 모든 SQL 문에서 개체 이름 식별자로. 데이터 원본은 수 SQL 문의 다음 클래스 중 하나 이상의 카탈로그 이름과 스키마를 지원 합니다. 데이터 조작 언어 (DML) 문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 문 카탈로그 및 스키마 이름을 사용할 수는 SQL 문 클래스를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션을 사용 하 여 합니다.

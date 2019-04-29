@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049486"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>쿼럼 없이 WSFC 클러스터 강제 시작
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터 노드를 쿼럼 없이 강제로 시작하는 방법에 대해 설명합니다.  이 기능은 재해 복구 및 다중 서브넷 시나리오에서 데이터를 복구하고 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 고가용성을 완전히 다시 설정하는 데 필요할 수 있습니다.  
   
--   **시작 하기 전에:**  [권장 사항](#Recommendations), [보안](#Security)  
+-   **시작하기 전에:**  [권장 사항](#Recommendations), [보안](#Security)  
   
 -   **사용 하 여 쿼럼 없이 시작 하려면 클러스터를 강제 합니다.**  [장애 조치 클러스터 관리자를 사용 하 여](#FailoverClusterManagerProcedure)하십시오 [Powershell을 사용 하 여](#PowerShellProcedure), [Net.exe 사용](#CommandPromptProcedure)  
   
--   **후속편:**  [후속 작업: 클러스터를 강제로 시작한 후 쿼럼 없이](#FollowUp)  
+-   **후속편:**  [후속편: 클러스터를 강제로 시작한 후 쿼럼 없이](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> 후속편: 쿼럼 없이 클러스터를 강제로 시작한 후의 작업  
+##  <a name="FollowUp"></a> 후속 작업: 클러스터를 강제로 시작한 후 쿼럼 없이  
   
 -   다른 노드를 다시 온라인으로 전환하려면 먼저 NodeWeight 값을 다시 계산하고 다시 구성하여 새 쿼럼을 올바르게 생성해야 합니다. 그러지 않으면 클러스터가 다시 오프라인으로 전환될 수 있습니다.  
   

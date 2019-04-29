@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889216"
 ---
 # <a name="set-package-properties"></a>패키지 속성 설정
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 가 제공하는 그래픽 인터페이스를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지를 만들 때는 속성 창에서 패키지 개체의 속성을 설정합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "58393641"
 |속성|Description|  
 |--------------|-----------------|  
 |`Configurations`|패키지에서 사용되는 구성 모음입니다. 패키지 구성을 보고 구성하려면 찾아보기 단추 **(...)** 를 클릭합니다.|  
-|`Expressions`|패키지 속성에 대한 식을 만들려면 찾아보기 단추 **(...)** 를 클릭합니다.<br /><br /> 참고: 속성 창에 나열된 속성뿐만 아니라 개체 모델에 포함되는 모든 패키지 속성에 대한 속성 식을 만들 수 있습니다.<br /><br /> 자세한 내용은 [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)을 참조하세요.<br /><br /> 기존 속성 식을 보려면 `Expressions`를 확장합니다. 식을 수정하고 계산하려면 식 입력란에 있는 찾아보기 단추 **(...)** 를 클릭합니다.|  
+|`Expressions`|패키지 속성에 대한 식을 만들려면 찾아보기 단추 **(...)** 를 클릭합니다.<br /><br /> 참고: 개체 모델에 포함, 속성 창에 나열 된 속성 뿐만 아니라 모든 패키지 속성에 대 한 속성 식을 만들 수 있습니다.<br /><br /> 자세한 내용은 [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)을 참조하세요.<br /><br /> 기존 속성 식을 보려면 `Expressions`를 확장합니다. 식을 수정하고 계산하려면 식 입력란에 있는 찾아보기 단추 **(...)** 를 클릭합니다.|  
 |`ForceExecutionResult`|패키지의 실행 결과입니다. 값은 `None`, `Success`, `Failure` 및 `Completion`입니다. 이 속성의 기본값은 `None`입니다. 자세한 내용은 T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult를 참조하세요.|  
 |`LocaleId`|Microsoft Win32 로캘입니다. 이 속성의 기본값은 로컬 컴퓨터 운영 체제의 로캘입니다.|  
 |`LoggingMode`|패키지의 로깅 동작을 지정하는 값입니다. 가능한 값은 `Disabled`, `Enabled` 및 `UseParentSetting`입니다. 이 속성의 기본값은 `UseParentSetting`입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>을 참조하세요.|  
@@ -139,7 +139,7 @@ ms.locfileid: "58393641"
   
 |속성|Description|  
 |--------------|-----------------|  
-|`IsolationLevel`|패키지 트랜잭션의 격리 수준입니다.  이 속성의 기본값은 `Serializable`입니다. 유효한 값은 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.<br /><br /> `IsolationLevel` 속성 값을 `TransactionOption`로 설정한 경우에만 `Required` 속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 `IsolationLevel` 속성 값이 무시됩니다.<br /><br /> 자식 컨테이너의 `TransactionOption` 속성 값이 `Supported`일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 `IsolationLevel` 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br /><br /> 컨테이너의 `TransactionOption` 속성 값이 `Required`일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 참고: `Snapshot` 속성의 `IsolationLevel` 값은 패키지 트랜잭션에 사용할 수 없습니다. 따라서 `IsolationLevel` 속성으로는 패키지 트랜잭션의 격리 수준을 `Shapshot`으로 설정할 수 없습니다. 패키지 트랜잭션을 `Snapshot`으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하세요.<br /><br /> `IsolationLevel` 속성에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하세요.|  
+|`IsolationLevel`|패키지 트랜잭션의 격리 수준입니다.  이 속성의 기본값은 `Serializable`입니다. 유효한 값은 <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.<br /><br /> `IsolationLevel` 속성 값을 `TransactionOption`로 설정한 경우에만 `Required` 속성이 패키지 트랜잭션에 적용됩니다.<br /><br /> 다음과 같은 경우 자식 컨테이너에서 요청하는 `IsolationLevel` 속성 값이 무시됩니다.<br /><br /> 자식 컨테이너의 `TransactionOption` 속성 값이 `Supported`일 경우<br />자식 컨테이너가 부모 컨테이너의 트랜잭션에 참여하는 경우<br /><br /> 컨테이너에서 요청하는 `IsolationLevel` 속성 값은 컨테이너가 새 트랜잭션을 시작할 때만 적용됩니다. 다음과 같은 경우 컨테이너가 새 트랜잭션을 시작합니다.<br /><br /> 컨테이너의 `TransactionOption` 속성 값이 `Required`일 경우<br />부모가 트랜잭션을 시작하지 않은 경우<br /><br /> <br /><br /> 참고: `Snapshot` 값을 `IsolationLevel` 속성이 패키지 트랜잭션에와 호환 되지 않습니다. 따라서 `IsolationLevel` 속성으로는 패키지 트랜잭션의 격리 수준을 `Shapshot`으로 설정할 수 없습니다. 패키지 트랜잭션을 `Snapshot`으로 설정하려면 SQL 쿼리를 대신 사용해야 합니다. 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)을 참조하세요.<br /><br /> `IsolationLevel` 속성에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>을 참조하세요.|  
 |`TransactionOption`|패키지의 트랜잭션 참여 옵션입니다. 가능한 값은 `NotSupported`, `Supported` 및 `Required`입니다. 이 속성의 기본값은 `Supported`입니다. 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>을 참조하세요.|  
   
 ###  <a name="Version"></a> 버전  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043338"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>데이터 원본 또는 드라이버에 연결
 응용 프로그램은 임의 개수의 드라이버 및 데이터 원본에 연결할 수 있습니다. 다양 한 드라이버 및 데이터 원본, 동일한 드라이버 및 다양 한 데이터 원본 또는 데이터 원본 및 동일한 드라이버에도 여러 연결 수 있습니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "47754611"
   
 -   [환경 핸들 할당](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)  
   
--   [응용 프로그램의 ODBC 버전 선언](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)  
+-   [애플리케이션의 ODBC 버전 선언](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md)  
   
 -   [데이터 원본 또는 드라이버 선택](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)  
   

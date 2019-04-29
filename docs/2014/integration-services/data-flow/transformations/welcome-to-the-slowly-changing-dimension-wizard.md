@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5532156a555139b8bb985621e343a3fd59031462
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899840"
 ---
 # <a name="welcome-to-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사 시작
   **느린 변경 차원 마법사** 를 사용하여 다양한 유형의 느린 변경 차원으로 데이터를 로드하도록 구성할 수 있습니다.  

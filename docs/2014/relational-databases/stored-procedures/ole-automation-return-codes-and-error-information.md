@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011266"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE Automation 반환 코드 및 오류 정보
   OLE Automation 시스템 저장 프로시저는 기본 OLE Automation 작업에 의해 반환되는 HRESULT를 `int` 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800 16 진수 형태의 OLE 오류 코드*nnnnn*,으로 반환 된 경우를 `int` 값을 저장된 프로시저 반환 코드에서 HRESULT의 형태가 214*nnnnnnn*합니다.  

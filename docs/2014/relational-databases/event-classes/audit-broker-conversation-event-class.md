@@ -1,27 +1,27 @@
 ---
 title: Audit Broker Conversation 이벤트 클래스 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
-topic_type:
-- apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912197"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 이벤트 클래스
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Conversation** 이벤트를 만들어 Service Broker 대화 보안과 관련된 감사 메시지를 보고합니다.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 이벤트 클래스 데이터 열  
@@ -48,7 +48,7 @@ ms.locfileid: "52795193"
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니요|  
-|**TextData**|**ntext**|오류에 대해 실패 원인을 설명하는 메시지가 들어 있습니다. 다음 값 중 하나입니다.<br /><br /> **인증서를 찾을 수 없습니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 없습니다.<br /><br /> **유효한 기간이 아닙니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 만료되었습니다.<br /><br /> **인증서가 메모리 할당에 비해 너무 큽니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 너무 큽니다. Service Broker에서 지원하는 최대 인증서 크기는 32,768바이트입니다.<br /><br /> **개인 키를 찾을 수 없습니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 이 인증서와 관련된 개인 키는 없습니다.<br /><br /> **인증서의 개인 키 크기가 암호화 공급자와 호환되지 않습니다**. 인증서의 개인 키 크기를 성공적으로 처리할 수 없습니다. 개인 키 크기는 64바이트의 배수여야 합니다.<br /><br /> **인증서의 공개 키 크기가 암호화 공급자와 호환되지 않습니다**. 인증서의 공개 키 크기를 성공적으로 처리할 수 없습니다. 공개 키 크기는 64바이트의 배수여야 합니다.<br /><br /> **인증서의 개인 키 크기가 암호화된 키 교환 키와 호환되지 않습니다**. 키 교환 키에 지정된 키 크기가 인증서의 개인 키 크기와 일치하지 않습니다. 이는 일반적으로 원격 컴퓨터의 인증서가 데이터베이스의 인증서와 일치하지 않음을 나타냅니다.<br /><br /> **인증서의 공개 키 크기가 보안 헤더의 서명과 호환되지 않습니다**. 보안 헤더에 인증서의 공개 키로 유효성을 검사할 수 없는 서명이 들어 있습니다. 이는 일반적으로 원격 컴퓨터의 인증서가 데이터베이스의 인증서와 일치하지 않음을 나타냅니다.|1|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|오류에 대해 실패 원인을 설명하는 메시지가 들어 있습니다. 다음 값 중 하나입니다.<br /><br /> <br /><br /> **인증서를 찾을 수 없습니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 없습니다.<br /><br /> **유효한 기간이 아닙니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 만료되었습니다.<br /><br /> **인증서가 메모리 할당에 비해 너무 큽니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 너무 큽니다. Service Broker에서 지원하는 최대 인증서 크기는 32,768바이트입니다.<br /><br /> **개인 키를 찾을 수 없습니다**. 대화 프로토콜 보안에 지정된 사용자에게 인증서가 있지만 이 인증서와 관련된 개인 키는 없습니다.<br /><br /> **인증서의 개인 키 크기가 암호화 공급자와 호환되지 않습니다**. 인증서의 개인 키 크기를 성공적으로 처리할 수 없습니다. 개인 키 크기는 64바이트의 배수여야 합니다.<br /><br /> **인증서의 공개 키 크기가 암호화 공급자와 호환되지 않습니다**. 인증서의 공개 키 크기를 성공적으로 처리할 수 없습니다. 공개 키 크기는 64바이트의 배수여야 합니다.<br /><br /> **인증서의 개인 키 크기가 암호화된 키 교환 키와 호환되지 않습니다**. 키 교환 키에 지정된 키 크기가 인증서의 개인 키 크기와 일치하지 않습니다. 이는 일반적으로 원격 컴퓨터의 인증서가 데이터베이스의 인증서와 일치하지 않음을 나타냅니다.<br /><br /> **인증서의 공개 키 크기가 보안 헤더의 서명과 호환되지 않습니다**. 보안 헤더에 인증서의 공개 키로 유효성을 검사할 수 없는 서명이 들어 있습니다. 이는 일반적으로 원격 컴퓨터의 인증서가 데이터베이스의 인증서와 일치하지 않음을 나타냅니다.|1|사용자 계정 컨트롤|  
   
  다음 표에서는 이 이벤트 클래스에 대한 하위 클래스 값을 나열합니다.  
   

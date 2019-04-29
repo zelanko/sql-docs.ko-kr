@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856510"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>저장 프로시저의 정의 보기
     
@@ -28,7 +28,7 @@ ms.locfileid: "48063853"
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **프로시저 정의를 보려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **프로시저 정의를 보려면 사용 하 여:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -36,10 +36,10 @@ ms.locfileid: "48063853"
   
 ####  <a name="Permissions"></a> Permissions  
  시스템 저장 프로시저: `sp_helptext`  
- **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여받은 사람은 사용자 개체의 정의를 볼 수 있습니다.  
+ **public** 역할의 멤버 자격이 필요합니다. 시스템 개체 정의는 공개적으로 표시됩니다. 사용자 개체의 정의 개체 소유자 또는 다음 권한 중 하나가 있는 피부 여자에 게 표시 합니다. ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION입니다.  
   
  시스템 함수: `OBJECT_DEFINITION`  
- 시스템 개체 정의는 공개적으로 표시됩니다. 개체 소유자나 ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION 권한 중 하나를 부여받은 사람은 사용자 개체의 정의를 볼 수 있습니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
+ 시스템 개체 정의는 공개적으로 표시됩니다. 사용자 개체의 정의 개체 소유자 또는 다음 권한 중 하나가 있는 피부 여자에 게 표시 합니다. ALTER, CONTROL, TAKE OWNERSHIP 또는 VIEW DEFINITION입니다. 이 권한은 **db_owner**, **db_ddladmin**및 **db_securityadmin** 고정 데이터베이스 역할의 멤버가 암시적으로 보유합니다.  
   
  개체 카탈로그 뷰: `sys.sql_modules`  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)을 참조하세요.  
@@ -58,7 +58,7 @@ ms.locfileid: "48063853"
   
 2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
   
-3.  **저장 프로시저**를 확장하고 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **저장 프로시저 스크립팅**을 클릭하고 **Create To**, **Alter To**또는 **Drop and Create To**중 하나를 클릭합니다.  
+3.  확장 **저장 프로시저**프로시저를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **저장 프로시저 스크립팅**, 다음 중 하나를 클릭 하 고: **만들**, **Alter**, 또는 **삭제 및 만들기**합니다.  
   
 4.  **새 쿼리 편집기 창**을 선택합니다. 프로시저 정의가 표시됩니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063853"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 `sp_helptext` 시스템 저장 프로시저입니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
+3.  쿼리 창에서 `sp_helptext` 시스템 저장 프로시저를 사용하는 다음 문을 입력합니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063853"
   
 2.  도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  쿼리 창에서 사용 하는 다음 문을 입력 합니다 `sys.sql_modules` 카탈로그 뷰에 있습니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
+3.  쿼리 창에서 `sys.sql_modules` 카탈로그 뷰를 사용하는 다음 문을 입력합니다. 원하는 데이터베이스와 저장 프로시저를 참조하도록 데이터베이스 이름과 저장 프로시저 이름을 변경합니다.  
   
     ```  
     USE AdventureWorks2012;  

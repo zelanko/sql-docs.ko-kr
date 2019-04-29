@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004181"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
  [ @collection_item_id = ] *collection_item_id*  
  컬렉션 항목의 고유 식별자입니다. *collection_item_id* 됩니다 **int** 이며 기본값은 NULL입니다. *collection_item_id* 하는 경우 값이 있어야 *이름을* NULL입니다.  
   
- [ @name =] '*이름을*'  
+ [ @name = ] '*name*'  
  컬렉션 항목의 이름입니다. *이름을* 됩니다 **sysname** 이며 기본값은 NULL입니다. *이름을* 하는 경우 값이 있어야 *collection_item_id* NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

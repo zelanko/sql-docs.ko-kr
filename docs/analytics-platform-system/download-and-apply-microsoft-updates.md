@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042337"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>다운로드 및 Analytics Platform System에 대 한 Microsoft 업데이트를 적용 합니다.
 이 항목에서는 Server Update Services (WSUS (Windows)는 Microsoft 업데이트 카탈로그에서 업데이트를 다운로드 및 분석 플랫폼 시스템 어플라이언스 서버 해당 업데이트를 적용 하는 방법을 설명 합니다. Microsoft Update는 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 됩니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
@@ -161,7 +161,7 @@ C:\pdwinst\media\setup.exe /action="MicrosoftUpdate" /DomainAdminPassword="<pass
 C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAdminPassword="<password>"  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [Microsoft 업데이트를 제거할 &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
 [Analytics Platform System 핫픽스 적용 &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
 [Analytics Platform System 핫픽스 제거 &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

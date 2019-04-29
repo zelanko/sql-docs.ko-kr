@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52f1bdf9e748625e1310210c98beeb4401a5dd81
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920698"
 ---
 # <a name="sql-server-backup-and-restore-with-windows-azure-blob-storage-service"></a>Windows Azure Blob Storage 서비스로 SQL Server 백업 및 복원
   이 항목에서는 소개 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원에서 합니다 [Windows Azure Blob 저장소 서비스](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)합니다. Microsoft Azure Blob service를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 저장할 경우의 이점에 대해서도 간략하게 설명합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353143"
   
  합니다 [Windows Azure 가격 계산기](https://go.microsoft.com/fwlink/?LinkId=277060) 비용 예상 하는 데 도움이 됩니다.  
   
- **저장소:** 요금은 사용 공간을 기준으로 하며 단계적 등급과 중복 수준에 따라 계산됩니다. 자세한 내용과 최선 정보는 **가격 정보** 문서의 [데이터 관리](https://go.microsoft.com/fwlink/?LinkId=277059) 섹션을 참조하세요.  
+ **스토리지:** 요금은 사용 공간을 기준으로 하며 단계적 등급과 중복 수준에 따라 계산됩니다. 자세한 내용과 최선 정보는 **가격 정보** 문서의 [데이터 관리](https://go.microsoft.com/fwlink/?LinkId=277059) 섹션을 참조하세요.  
   
  **데이터 전송:** Windows Azure로의 인바운드 데이터 전송은 무료입니다. 아웃바운드 전송의 경우 대역폭 사용 요금이 부과되며 단계적 지역별 등급을 기준으로 계산됩니다. 자세한 내용은 가격 정보 문서의 [데이터 전송](https://go.microsoft.com/fwlink/?LinkId=277061) 섹션을 참조하십시오.  
   

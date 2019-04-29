@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ab922142698101c276f59c9ca0d398f297eedee4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925831"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>버전 플래그 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전 플래그의 이름을 변경할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "52814335"
   
 6.  Enter 키를 누릅니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [버전&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [버전에 플래그 할당&#40;Master Data Services&#41;](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

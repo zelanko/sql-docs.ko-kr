@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020833"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>차트 종류 변경(보고서 작성기 및 SSRS)
   처음으로 보고서에 차트를 삽입하면 **차트 종류 선택** 대화 상자가 나타납니다. 이 대화 상자를 취소하면 세로 막대형 차트가 기본적으로 추가됩니다.  

@@ -1,6 +1,6 @@
 ---
 title: T-SQL 언어 요소-병렬 데이터 웨어하우스 | Microsoft Docs
-description: T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
+description: T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)입니다.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035004"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 대 한 T-SQL 언어 요소
-T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Parallel Data Warehouse의 T-SQL 언어 요소
+T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW)입니다.
 
 ## <a name="core-elements"></a>핵심 요소
 * [구문 표기 규칙](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [개체 명명 규칙](../relational-databases/databases/database-identifiers.md)
 * [예약 된 키워드](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [데이터 정렬](https://msdn.microsoft.com/library/ff848763.aspx)
-* [주석](../t-sql/language-elements/comment-transact-sql.md)
-* [상수](../t-sql/data-types/constants-transact-sql.md)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [데이터 형식](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
 * [expressions](../t-sql/language-elements/expressions-transact-sql.md)
@@ -58,7 +58,7 @@ T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 �
 * [=(같음)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (보다 큼)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (보다 작음)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (좋은 보다 크거나 같음)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = (보다 작거나 효율적인)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (작거나 같음)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
 * [<> (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (같지 않음)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
@@ -74,7 +74,7 @@ T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 �
 ### <a name="bitwise-operators"></a>비트 연산자
 * [&(비트 단위 AND)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [|(비트 OR)](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ (비트 배타적 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^ (비트 단독 OR)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~(비트 단위 NOT)](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^=(배타적 비트 단위 OR EQUALS)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [|=(비트 단위 OR EQUALS)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -224,7 +224,7 @@ T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 �
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>트랜잭션
+## <a name="transactions"></a>의
 * [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>진단 세션
@@ -266,9 +266,9 @@ T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 �
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [집합 IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [SET IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [집합 NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [SET NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
@@ -276,7 +276,7 @@ T-SQL 언어 요소에 대 한 분석 Platform System (APS) SQL Server 병렬 �
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>다음 단계
-자세한 참조 정보를 참조 하십시오. [T-SQL 문을](tsql-statements.md) 및 [T-SQL 시스템 뷰](tsql-system-views.md)합니다.
+자세한 참조 정보를 참조 하세요. [T-SQL 문을](tsql-statements.md) 하 고 [T-SQL 시스템 뷰](tsql-system-views.md)합니다.
 
 <!--Image references-->
 

@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939701"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "47625851"
 |scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. Null을 허용하지 않습니다.|  
 |parent_node_id|**int**|부모 노드라고도 하는 스케줄러가 속한 노드의 ID입니다. 이것은 NUMA(Non-Uniform Memory Access) 노드를 나타냅니다. Null을 허용하지 않습니다.|  
 |scheduler_id|**int**|스케줄러의 ID입니다. 일반 쿼리를 실행하는 데 사용되는 모든 스케줄러에는 1048576 미만의 ID 번호가 있습니다. 관리자 전용 연결 스케줄러와 같이 ID가 1048576보다 크거나 같은 스케줄러는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. Null을 허용하지 않습니다.|  
-|cpu_id|**smallint**|스케줄러에 할당된 CPU ID입니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> **참고:** 255 나타내지 선호도 없음에서 수행한 것 처럼 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 참조 [sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 추가 선호도 정보에 대 한 합니다.|  
-|상태|**nvarchar(60)**|스케줄러의 상태를 나타냅니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> -숨겨진 온라인<br />숨겨지지 오프 라인<br />-표시 온라인<br />-표시 오프 라인<br />-표시 온라인 (DAC)<br />-   HOT_ADDED<br /><br /> Null을 허용하지 않습니다.<br /><br /> HIDDEN 스케줄러는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 내부의 요청을 처리하는 데 사용되고 VISIBLE 스케줄러는 사용자 요청을 처리하는 데 사용됩니다.<br /><br /> OFFLINE 스케줄러는 선호도 마스크에서 오프라인 상태인 프로세서에 매핑되므로 다른 요청을 처리하는 데 사용되지 않습니다. ONLINE 스케줄러는 선호도 마스크에서 온라인 상태인 프로세서에 매핑되므로 스레드 처리에 사용할 수 있습니다.<br /><br /> DAC는 스케줄러가 관리자 전용 연결로 실행되고 있음을 나타냅니다.<br /><br /> HOT ADDED는 hot add CPU 이벤트에 대한 응답으로 스케줄러가 추가되었음을 나타냅니다.|  
+|cpu_id|**smallint**|스케줄러에 할당된 CPU ID입니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> **참고:** 수행한 것 처럼 255 선호도 없는 나타내지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]합니다. 참조 [sys.dm_os_threads &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 추가 선호도 정보에 대 한 합니다.|  
+|상태|**nvarchar(60)**|스케줄러의 상태를 나타냅니다. 다음 값 중 하나입니다.<br /><br /> -숨겨진 온라인<br />숨겨지지 오프 라인<br />-표시 온라인<br />-표시 오프 라인<br />-표시 온라인 (DAC)<br />-   HOT_ADDED<br /><br /> Null을 허용하지 않습니다.<br /><br /> HIDDEN 스케줄러는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 내부의 요청을 처리하는 데 사용되고 VISIBLE 스케줄러는 사용자 요청을 처리하는 데 사용됩니다.<br /><br /> OFFLINE 스케줄러는 선호도 마스크에서 오프라인 상태인 프로세서에 매핑되므로 다른 요청을 처리하는 데 사용되지 않습니다. ONLINE 스케줄러는 선호도 마스크에서 온라인 상태인 프로세서에 매핑되므로 스레드 처리에 사용할 수 있습니다.<br /><br /> DAC는 스케줄러가 관리자 전용 연결로 실행되고 있음을 나타냅니다.<br /><br /> HOT ADDED는 hot add CPU 이벤트에 대한 응답으로 스케줄러가 추가되었음을 나타냅니다.|  
 |is_online|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 서버에서 사용할 수 있는 프로세서 중 일부만 사용하도록 구성된 경우 이 구성은 일부 스케줄러가 선호도 마스크에 없는 프로세서에 매핑되어 있음을 의미할 수 있습니다. 이 경우 이 열은 0을 반환합니다. 이 값은 스케줄러가 쿼리나 일괄 처리를 처리하는 데 사용되고 있지 않음을 의미합니다.<br /><br /> Null을 허용하지 않습니다.|  
 |is_idle|**bit**|1 = 스케줄러가 유휴 상태입니다. 현재 실행되고 있는 작업자가 없습니다. Null을 허용하지 않습니다.|  
 |preemptive_switches_count|**int**|이 스케줄러의 작업자가 선점형 모드로 전환한 횟수입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다.|  
@@ -125,7 +125,7 @@ active_workers_count work_queue_count
   
  이 출력에서는 다음 정보를 제공합니다.  
   
--   5개의 스케줄러가 있습니다. 두 스케줄러의 ID 값은 < 1048576입니다. ID >= 1048576 인 스케줄러를 숨겨진 스케줄러라고 합니다. 스케줄러 `255`는 DAC(관리자 전용 연결)를 나타냅니다. 인스턴스당 하나의 DAC 스케줄러가 있습니다. 메모리 가중을 조정하는 리소스 모니터는 NUMA 노드당 하나씩, 스케줄러 `257`과 스케줄러 `258`을 사용합니다.  
+-   5개의 스케줄러가 있습니다. 두 스케줄러 ID가 < 1048576 값입니다. ID >= 1048576 인 스케줄러를 숨겨진 스케줄러라고 합니다. 스케줄러 `255`는 DAC(관리자 전용 연결)를 나타냅니다. 인스턴스당 하나의 DAC 스케줄러가 있습니다. 메모리 가중을 조정하는 리소스 모니터는 NUMA 노드당 하나씩, 스케줄러 `257`과 스케줄러 `258`을 사용합니다.  
   
 -   출력에는 23개의 활성 태스크가 있습니다. 이 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작한 리소스 관리 작업과 사용자 요청을 포함합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 태스크의 예로 RESOURCE MONITOR(NUMA 노드당 하나), LAZY WRITER(NUMA 노드당 하나), LOCK MONITOR, CHECKPOINT 및 LOG WRITER가 있습니다.  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028020"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 모드 속성 예제 (VB)
 이 예제에서는 합니다 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 전용 연결을 여는 속성 및 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 다른 트랜잭션의 격리 된 상태에서 수행 하는 트랜잭션을 열지 속성.  

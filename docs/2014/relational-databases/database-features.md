@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917667"
 ---
 # <a name="database-features"></a>데이터베이스 기능
   이 섹션에서는 데이터베이스, 데이터베이스 개체, 데이터 형식, 그리고 데이터 작업 및 관리에 사용되는 메커니즘과 관련된 기능 및 태스크를 다룹니다.  

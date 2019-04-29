@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b309669027da801681c1386abe604fce2f915f3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923252"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 트랜잭션은 멤버에 대해 동작이 수행될 때마다 기록됩니다. 트랜잭션은 모든 사용자가 보고 관리자가 되돌릴 수 있습니다. 트랜잭션은 동작이 수행된 날짜와 시간, 동작을 수행한 사용자를 그 외 다른 세부 정보와 함께 보여 줍니다. 사용자는 트랜잭션에 주석을 추가하여 트랜잭션이 시작된 이유를 나타낼 수 있습니다.  

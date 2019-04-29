@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017759"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**길이**|**smallint**|데이터 형식의 물리적 길이(바이트)입니다.|  
     |**prec**|**int**|전체 자릿수(총 자릿수)입니다.|  
     |**소수 자릿수**|**int**|소수점 이하 자릿수입니다.|  
-    |**Null 허용**|**varchar(** 35 **)**|NULL 값의 허용 여부를 나타냅니다. Yes 또는 No로 표시합니다.|  
+    |**Null 허용**|**varchar(** 35 **)**|NULL 값 허용 되는지 여부를 나타냅니다. 예 또는 아니요.|  
     |**Default_name**|**nvarchar(** 128 **)**|해당 형식에 바인딩된 기본값의 이름입니다.<br /><br /> NULL = 기본값이 바인딩되지 않습니다.|  
     |**Rule_name**|**nvarchar(** 128 **)**|해당 형식에 바인딩된 규칙의 이름입니다.<br /><br /> NULL = 기본값이 바인딩되지 않습니다.|  
     |**데이터 정렬**|**sysname**|데이터 형식의 데이터 정렬입니다. 문자가 아닌 데이터 형식의 경우 NULL입니다.|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|열 이름입니다.|  
         |**형식**|**nvarchar(** 128 **)**|열의 데이터 형식입니다.|  
-        |**계산**|**varchar(** 35 **)**|열의 값을 계산할지 여부를 Yes 또는 No로 표시합니다.|  
+        |**계산**|**varchar(** 35 **)**|열에 값을 계산 하는지 여부를 나타냅니다. 예 또는 아니요.|  
         |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식을 큰 값 형식인 경우 (**varchar (max)** 를 **nvarchar (max)** 합니다 **varbinary (max)**, 또는 **xml**), 값이 -1로 표시 합니다.|  
         |**prec**|**char(** 5 **)**|열의 전체 자릿수입니다.|  
         |**소수 자릿수**|**char(** 5 **)**|열의 소수 자릿수입니다.|  
-        |**Null 허용**|**varchar(** 35 **)**|열에서 NULL 값을 허용할지 여부를 Yes 또는 No로 표시합니다.|  
+        |**Null 허용**|**varchar(** 35 **)**|열에 NULL 값 허용 되는지 여부를 나타냅니다. 예 또는 아니요.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|후행 공백을 자를지 여부를 Yes 또는 No로 표시합니다.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
         |**데이터 정렬**|**sysname**|열의 데이터 정렬입니다. 문자가 아닌 데이터 형식의 경우 NULL을 반환합니다.|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|데이터가 있는 파일 그룹으로 주, 보조 또는 트랜잭션 로그입니다.|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|데이터의 위치를 가리키는 파일 그룹: 기본, 보조 또는 트랜잭션 로그입니다.|  
   
     -   인덱스에 대해 반환되는 추가 결과 집합입니다.  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|제약 조건의 유형입니다.|  
         |**constraint_name**|**nvarchar(** 128 **)**|제약 조건의 이름입니다.|  
-        |**delete_action**|**nvarchar(** 9 **)**|DELETE 동작이 NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT 또는 N/A인지 나타냅니다.<br /><br /> FOREIGN KEY 제약 조건에만 적용됩니다.|  
-        |**update_action**|**nvarchar(** 9 **)**|UPDATE 동작이 NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT 또는 N/A인지 나타냅니다.<br /><br /> FOREIGN KEY 제약 조건에만 적용됩니다.|  
-        |**status_enabled**|**varchar(** 8 **)**|제약 조건의 사용 여부를 Enabled, Disabled 또는 N/A로 나타냅니다.<br /><br /> CHECK 및 FOREIGN KEY 제약 조건에만 적용됩니다.|  
+        |**delete_action**|**nvarchar(** 9 **)**|삭제 작업 인지 여부를 나타냅니다. NO_ACTION, CASCADE, SET_NULL, 인지 나타냅니다, 또는 해당 없음.<br /><br /> FOREIGN KEY 제약 조건에만 적용됩니다.|  
+        |**update_action**|**nvarchar(** 9 **)**|업데이트 작업 인지 여부를 나타냅니다. NO_ACTION, CASCADE, SET_NULL, 인지 나타냅니다, 또는 해당 없음.<br /><br /> FOREIGN KEY 제약 조건에만 적용됩니다.|  
+        |**status_enabled**|**varchar(** 8 **)**|제약 조건이 사용 되는지 여부를 나타냅니다. Enabled, 사용 안 함, 또는 해당 없음.<br /><br /> CHECK 및 FOREIGN KEY 제약 조건에만 적용됩니다.|  
         |**status_for_replication**|**varchar(** 19 **)**|복제에 제약 조건을 적용할지 여부를 나타냅니다.<br /><br /> CHECK 및 FOREIGN KEY 제약 조건에만 적용됩니다.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|제약 조건을 구성하는 열의 이름이거나, 기본값 및 규칙의 경우에는 기본값 또는 규칙을 정의하는 텍스트입니다.|  
   

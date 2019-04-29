@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919941"
 ---
 # <a name="coding-user-defined-types"></a>사용자 정의 형식 코딩
   UDT(사용자 정의 형식) 정의를 코딩하는 경우 UDT를 클래스 또는 구조로 구현할지 여부와 선택한 형식 및 직렬화 옵션에 따라 다양한 기능을 구현해야 합니다.  
@@ -65,7 +65,7 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>특성 지정  
  특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
   
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`는 필수입니다. `Serializable` 특성은 선택 사항입니다. `Microsoft.SqlServer.Server.SqlFacetAttribute`를 지정하여 UDT의 반환 형식에 대한 정보를 제공할 수도 있습니다. 자세한 내용은 [CLR 루틴용 사용자 지정 특성](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)을 참조하세요.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 필요 합니다. `Serializable` 특성은 선택 사항이며 `Microsoft.SqlServer.Server.SqlFacetAttribute`를 지정하여 UDT의 반환 형식에 대한 정보를 제공할 수도 있습니다. 자세한 내용은 [CLR 루틴용 사용자 지정 특성](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)을 참조하세요.  
   
 ### <a name="point-udt-attributes"></a>Point UDT 특성  
  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`는 `Point` UDT의 저장소 형식을 `Native`로 설정합니다. `IsByteOrdered`는 `true`로 설정되며, 이 경우 비교 결과는 SQL Server에서 동일한 비교가 관리 코드에서 수행된 결과와 같습니다. UDT는 UDT에서 Null을 인식하도록 하는 `System.Data.SqlTypes.INullable` 인터페이스를 구현합니다.  
@@ -493,7 +493,7 @@ public Int32 Y
  UDT 메서드를 코딩하는 경우 사용된 알고리즘이 시간에 따라 변경될 수 있는지 여부를 고려합니다. 변경되는 경우 UDT에서 사용하는 메서드에 대해 별도의 클래스를 만들어야 할 수도 있습니다. 알고리즘이 변경되면 새 코드를 사용하여 클래스를 다시 컴파일하고 UDT에 영향을 주지 않고 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드할 수 있습니다. 대체로 [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY 문을 사용하여 UDT를 다시 로드할 수 있지만 이 경우 기존 데이터에서 문제가 발생할 수 있습니다. 예를 들어를 `Currency` 포함 된 UDT를 **AdventureWorks** 샘플 데이터베이스에서는 **ConvertCurrency** 별도 클래스에 구현 된 함수를 통화 값을 변환 합니다. 변환 알고리즘이 미래에 예기치 않은 방식으로 변경되거나 새 기능이 필요할 수도 있습니다. 구분 하는 **ConvertCurrency** 에서 함수는 `Currency` UDT 구현 향후 변경 사항에 대 한 계획을 수립할 때 유연성을 제공 합니다.  
   
 ### <a name="example"></a>예제  
- 합니다 `Point` 거리 계산을 위한 세 가지 간단한 메서드를 포함 하는 클래스: **거리**, **DistanceFrom** 하 고 **DistanceFromXY**합니다. 각 메서드는 `double`에서 0까지의 거리, 지정된 점에서 `Point`까지의 거리 및 지정된 X 및 Y 좌표에서 `Point`까지의 거리를 계산하는 `Point`을 반환합니다. **거리** 하 고 **DistanceFrom** 호출할 때마다 **DistanceFromXY**, 각 메서드에 다른 인수를 사용 하는 방법을 보여 줍니다.  
+ `Point` 클래스 3 개의 단순한 메서드인 거리를 계산 합니다. **거리**하십시오 **DistanceFrom** 하 고 **DistanceFromXY**합니다. 각 메서드는 `double`에서 0까지의 거리, 지정된 점에서 `Point`까지의 거리 및 지정된 X 및 Y 좌표에서 `Point`까지의 거리를 계산하는 `Point`을 반환합니다. **거리** 하 고 **DistanceFrom** 호출할 때마다 **DistanceFromXY**, 각 메서드에 다른 인수를 사용 하는 방법을 보여 줍니다.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  `Microsoft.SqlServer.Server.SqlMethodAttribute` 클래스는 Null 호출 동작에 결정성을 지정하고 메서드가 변경자(mutator)인지 여부를 지정하기 위해 메서드 정의를 표시하는 데 사용할 수 있는 사용자 지정 특성을 제공합니다. 이러한 속성에 대해서는 기본값이 사용되며, 사용자 지정 특성은 기본값이 아닌 값이 필요한 경우에만 사용됩니다.  
   
 > [!NOTE]  
->  `SqlMethodAttribute` 클래스는 `SqlFunctionAttribute` 클래스에서 상속되므로 `SqlMethodAttribute`는 `FillRowMethodName`의 `TableDefinition` 및 `SqlFunctionAttribute` 필드에서 상속됩니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리가 배포 되지만 오류에 대 한 합니다 `IEnumerable` 반환 형식을 다음 메시지를 사용 하 여 런타임에 발생: "메서드, 속성 또는 필드 '\<이름 >' 클래스에서\<클래스 >' 어셈블리에 '\<어셈블리 >' 반환 형식이 잘못 되었습니다. "  
+>  `SqlMethodAttribute` 클래스는 `SqlFunctionAttribute` 클래스에서 상속되므로 `SqlMethodAttribute`는 `FillRowMethodName`의 `TableDefinition` 및 `SqlFunctionAttribute` 필드에서 상속됩니다. 즉, 적합하지 않은 테이블 반환 메서드를 쓸 수 있음을 의미합니다. 메서드가 컴파일되고 어셈블리가 배포 되지만 오류에 대 한는 `IEnumerable` 형식 다음 메시지를 사용 하 여 런타임에 발생을 반환 합니다. "메서드, 속성 또는 필드 '\<이름 >'에서 클래스\<클래스 >' 어셈블리에서 '\<어셈블리 >' 반환 형식이 잘못 되었습니다."  
   
  다음 표에서는 UDT 메서드에 사용할 수 있는 몇 개의 관련된 `Microsoft.SqlServer.Server.SqlMethodAttribute` 속성에 대해 설명하고 해당 기본값을 표시합니다.  
   
@@ -557,7 +557,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  메서드로 인해 UDT 인스턴스의 상태가 변경되는지 여부를 나타냅니다. 기본값은 `false`입니다.  
   
  IsPrecise  
- 함수가 부동 소수점 연산과 같은 부정확한 계산을 수행하는지 여부를 나타냅니다. 기본값은 `false`입니다.  
+ 함수에 부동 소수점 연산과 같은 부정확 한 계산을 수행 하는지 여부를 나타냅니다. 기본값은 `false`입니다.  
   
  OnNullCall  
  Null 참조 입력 인수를 지정할 때 메서드가 호출되는지 여부를 나타냅니다. 기본값은 `true`입니다.  

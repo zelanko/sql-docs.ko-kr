@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d22bbe58ac04786186a4b8cca7e51a61ea5b66e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837304"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>데이터 흐름 성능 카운터에 대한 로그 추가
   이 절차에서는 데이터 엔진에서 제공하는 성능 카운터에 대한 로그를 추가하는 방법을 설명합니다.  

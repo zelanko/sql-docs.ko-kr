@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042769"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect로 연결
 **SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 런타임 시 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 응용 프로그램에서는 다음 두 가지 작업이 가능해집니다.  

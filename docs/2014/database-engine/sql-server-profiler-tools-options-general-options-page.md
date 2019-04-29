@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844930"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Tools-Options (General Options Page)
   **일반 옵션** 대화 상자를 사용하여 다음 옵션을 확인하거나 지정할 수 있습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113063"
  추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 가 롤오버 파일을 추가하기 전에 사용자에게 확인 메시지를 표시합니다.  
   
  **다음 롤오버 파일 로드 안 함**  
- 추적 파일을 열면 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에서 다음 롤오버 파일을 로드하지 않습니다.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 에서 다음 롤오버 파일을 로드하지 않습니다.  
   
 ### <a name="replay-options"></a>재생 옵션  
  **기본 재생 스레드 수**  
@@ -74,9 +74,9 @@ ms.locfileid: "48113063"
  재생 중 상태 모니터 폴링 간격(초)을 지정합니다. 기본값은 60초입니다. 이 값을 사용하면 상태 모니터에서 종료 후보에 대해 폴링하는 주기를 구성할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [서버 연결 후 자동으로 추적 시작 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [추적 표시 기본값 설정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [추적 테이블 재생 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [서버 연결 후 자동으로 추적 시작&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [추적 테이블 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [추적 파일 재생&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [추적 재생](../tools/sql-server-profiler/replay-traces.md)   
  [전역 추적 옵션 설정 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
