@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872619"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;가이드 (데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 응용 프로그램 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  

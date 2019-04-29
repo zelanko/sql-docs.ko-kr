@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877132"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure에 대한 SQL Server 관리되는 백업
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 Windows Azure BLOB 저장소 서비스에 대한 SQL Server 백업을 관리하고 자동화합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 사용하는 백업 전략은 데이터베이스의 트랜잭션 작업과 보존 기간을 기반으로 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.   
@@ -72,12 +72,12 @@ ms.locfileid: "52416397"
 |-|-|  
 |시스템 개체|Description|  
 |**MSDB**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 만든 모든 백업에 대한 메타데이터, 백업 기록을 저장합니다.|  
-|[smart_admin.set_db_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정 및 구성하기 위한 시스템 저장 프로시저입니다.|  
-|[smart_admin.set_instance_backup &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|시스템 저장 프로시저를 사용 하도록 설정 하 고 기본 설정 구성에 대 한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] SQL Server 인스턴스에 대 한 합니다.|  
+|[smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정 및 구성하기 위한 시스템 저장 프로시저입니다.|  
+|[smart_admin.set_instance_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|시스템 저장 프로시저를 사용 하도록 설정 하 고 기본 설정 구성에 대 한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] SQL Server 인스턴스에 대 한 합니다.|  
 |[smart_admin.sp_ backup_master_switch &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지 및 재개하는 시스템 저장 프로시저입니다.|  
 |[smart_admin.sp_set_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 모니터링을 설정 및 구성하는 시스템 저장 프로시저입니다. 예제: 알림을 위한 메일 설정, 확장 이벤트 설정입니다.|  
 |[smart_admin.sp_backup_on_demand &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|시스템 저장 프로시저를 사용할 수 있는 데이터베이스에 대 한 임시 백업을 수행 하는 데 사용 되는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 로그 체인을 끊지 않고 합니다.|  
-|[smart_admin.fn_backup_db_config &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|현재 반환 하는 시스템 함수 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 데이터베이스 또는 인스턴스에서 모든 데이터베이스에 대 한 상태 및 구성 값입니다.|  
+|[smart_admin.fn_backup_db_config &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-backup-db-config-transact-sql)|현재 반환 하는 시스템 함수 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 데이터베이스 또는 인스턴스에서 모든 데이터베이스에 대 한 상태 및 구성 값입니다.|  
 |[smart_admin.fn_is_master_switch_on &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-is-master-switch-on-transact-sql)|마스터 스위치의 상태를 반환하는 시스템 함수입니다.|  
 |[smart_admin.sp_get_backup_diagnostics &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-get-backup-diagnostics-transact-sql)|확장 이벤트가 기록한 이벤트를 반환하는 데 사용되는 시스템 저장 프로시저입니다.|  
 |[smart_admin.fn_get_parameter &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-functions/managed-backup-fn-get-parameter-transact-sql)|경고의 메일 설정 및 모니터링 등 백업 시스템 설정의 현재 값을 반환하는 시스템 함수입니다.|  

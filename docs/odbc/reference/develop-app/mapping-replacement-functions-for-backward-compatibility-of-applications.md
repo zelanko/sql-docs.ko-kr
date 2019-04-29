@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032831"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
 ODBC 3 *.x* ODBC 3을 통해 작업 응용 프로그램 *.x* 드라이버 관리자는 ODBC 2에 대해 작동 합니다. *x* 드라이버 없는 새 기능을 사용 하기만 합니다. 그러나 모두 중복 기능 및 변경 된 동작 방식에 영향 그렇게 하는 ODBC 3. *x* 응용 프로그램 작동에 ODBC 2. *x* 드라이버입니다. ODBC 2 작업할 때. *x* 드라이버를 드라이버 관리자 매핑됩니다 다음 ODBC 3. *x* 함수를 하나 이상의 ODBC 2를 대체 했습니다. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  
   
 |ODBC 3입니다. *x* 함수|ODBC 2입니다. *x* 함수|  
 |-------------------------|-------------------------|  
-|**SQLAllocHandle**|**SQLAllocEnv**하십시오 **SQLAllocConnect**, 또는 **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**하십시오 **SQLFreeConnect**, 또는 **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -442,7 +442,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_TABLE_NAME|""(빈 문자열)|  
 |SQL_DESC_TYPE|SQL_BINARY|  
 |SQL_DESC_TYPE_NAME|""(빈 문자열)|  
-|SQL_DESC_UNNAMED|하면|  
+|SQL_DESC_UNNAMED|SQL_UNNAMED|  
 |SQL_DESC_UNSIGNED|SQL_FALSE|  
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
@@ -452,11 +452,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |버퍼|값|  
 |------------|-----------|  
 |ColumnName|""(빈 문자열)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 에 다음 호출을 수행 하는 드라이버 **SQLGetData** 책갈피를 검색 하려면:  

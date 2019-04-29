@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184789"
 ---
 # <a name="xslt-transformations"></a>XSLT 변형
 다른 형식으로 변환할 생성 된 XML에 XSLT은 적용할 수 있습니다. ADO에 XML 형식으로 이해 하는 작업은 보다 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  

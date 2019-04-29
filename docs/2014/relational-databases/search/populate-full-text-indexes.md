@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046157"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> 전체 텍스트 채우기 (탐색) 오류 문제 해결  
  탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 이 경우 지정된 된 인스턴스에 대해 기본 크롤링 로그에서이 첫 번째 인스턴스를 %ProgramFiles%\Microsoft SQL Server\MSSQL12에에서 있습니다. MSSQLSERVER\MSSQL\LOG 폴더입니다. 탐색 로그 파일은 다음 명명 구성표를 따릅니다.  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. 로그 [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  데이터베이스의 ID입니다. <`dbid`>는 5 자리 숫자 앞에 오는 0입니다.  

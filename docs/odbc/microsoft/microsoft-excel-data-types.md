@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026782"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 데이터 형식
 다음 표에서 Microsoft Excel 드라이버 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. Microsoft Excel 드라이버는 이러한 데이터 형식 열에 데이터를 기반으로 하는 Microsoft Excel 테이블의 열에 할당 합니다.  

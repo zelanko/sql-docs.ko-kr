@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62932417"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner 이벤트 클래스
   **Audit Change Database Owner** 이벤트 클래스는 ALTER AUTHORIZATION 문을 사용하여 데이터베이스 소유자를 변경하고 이 작업에 필요한 사용 권한이 확인된 경우 발생합니다.  

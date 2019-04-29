@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917731"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
--   **데이터베이스 메일 계정을 만들려면:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [TRANSACT-SQL](#TsqlProcedure)  
+-   **데이터베이스 메일 계정을 만들려면:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **후속 작업:**  [데이터베이스 메일을 구성 하려면 다음 단계](#FollowUp)  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 후속편: 데이터베이스 메일을 구성하기 위한 다음 단계  
+##  <a name="FollowUp"></a> 후속 작업: 데이터베이스 메일을 구성 하려면 다음 단계  
   
 -   [데이터베이스 메일 프로필 만들기](create-a-database-mail-profile.md)  
   

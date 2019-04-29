@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046015"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lesson 2-3-차원에 특성 추가
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>단원 2 ~ 3-차원에 특성 추가
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 이제 차원을 정의했으므로 차원의 각 데이터 요소를 나타내는 특성으로 차원을 채울 수 있습니다. 일반적으로 특성은 데이터 원본 뷰의 필드를 기반으로 합니다. 차원에 특성을 추가할 때 데이터 원본 뷰에 있는 테이블의 필드를 포함할 수 있습니다.  
@@ -126,7 +126,7 @@ ms.locfileid: "34017470"
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
 [큐브 및 차원 속성 검토](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [차원 특성 속성 참조](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

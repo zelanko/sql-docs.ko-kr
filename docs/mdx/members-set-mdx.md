@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd4fe92c064f4665a4b397e47a45ae5bde50f39
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048453"
 ---
 # <a name="members-set-mdx"></a>Members(집합)(MDX)
 
@@ -40,7 +40,7 @@ Level_Expression.Members
  수준을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 계층 식이 지정 되는 **Members (집합)** 함수 계산된 멤버를 포함 하지 않고 지정된 된 계층 내의 모든 멤버 집합을 반환 합니다. 계산 하는 모든 멤버 집합을 구하거 나, 계층 구조를 사용 하 여 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) 함수  
+ 계층 식이 지정 하는 경우는 **Members (집합)** 함수 계산된 멤버를 포함 하지 않습니다 지정된 된 계층 내의 모든 멤버 집합을 반환 합니다. 계산 하는 모든 멤버 집합을 구하거 나 그렇지 않은 경우 계층 구조를 사용 하 여 [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) 함수  
   
  수준 식이 지정 되는 **Members (집합)** 함수는 지정 된 수준 내의 모든 멤버 집합을 반환 합니다.  
   
@@ -58,7 +58,7 @@ FROM
   
 ```  
   
- 다음 예에서는 `[Product].[Products].[Product Line]` 수준의 각 멤버에 대해 2003년 주문 수량을 반환합니다. **멤버** 함수 모든 수준의 멤버를 나타내는 집합을 반환 합니다.  
+ 다음 예에서는 `[Product].[Products].[Product Line]` 수준의 각 멤버에 대해 2003년 주문 수량을 반환합니다. 합니다 **멤버** 함수 모든 수준에서 멤버를 나타내는 집합을 반환 합니다.  
   
 ```  
 SELECT   
@@ -71,7 +71,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

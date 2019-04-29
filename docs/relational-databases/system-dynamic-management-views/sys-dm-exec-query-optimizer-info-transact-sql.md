@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013211"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47718641"
 |이름|데이터 형식|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
-|**발생**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
+|**occurrence**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
 |**value**|**float**|이벤트 발생당 평균 속성 값입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47718641"
 |elapsed time|총 최적화 수입니다.|개별 문(쿼리)의 최적화당 평균 경과 시간(초)입니다.|  
 |final cost|총 최적화 수입니다.|최적화된 계획의 평균 예상 비용(내부 비용 단위)입니다.|  
 |trivial plan|내부 전용|내부 전용|  
-|태스크|내부 전용|내부 전용|  
+|tasks|내부 전용|내부 전용|  
 |no plan|내부 전용|내부 전용|  
 |search 0|내부 전용|내부 전용|  
 |search 0 time|내부 전용|내부 전용|  
@@ -70,7 +70,7 @@ ms.locfileid: "47718641"
 |search 2 tasks|내부 전용|내부 전용|  
 |gain stage 0 to stage 1|내부 전용|내부 전용|  
 |gain stage 1 to stage 2|내부 전용|내부 전용|  
-|제한 시간|내부 전용|내부 전용|  
+|timeout|내부 전용|내부 전용|  
 |memory limit exceeded|내부 전용|내부 전용|  
 |insert stmt|INSERT 문에 대한 최적화 수입니다.|해당 사항 없음|  
 |delete stmt|DELETE 문에 대한 최적화 수입니다.|해당 사항 없음|  
@@ -78,7 +78,7 @@ ms.locfileid: "47718641"
 |contains subquery|하나 이상의 하위 쿼리를 포함하는 쿼리에 대한 최적화 수입니다.|해당 사항 없음|  
 |unnest failed|내부 전용|내부 전용|  
 |테이블|총 최적화 수입니다.|최적화된 쿼리당 참조된 평균 테이블 수입니다.|  
-|힌트|일부 힌트가 지정된 횟수입니다. 계산 하는 힌트를 포함 합니다: 조인, 그룹, UNION 및 FORCE ORDER 쿼리 힌트, FORCE PLAN 집합 옵션 및 조인 힌트입니다.|해당 사항 없음|  
+|힌트|일부 힌트가 지정된 횟수입니다. 계산 된 힌트는 다음과 같습니다. 조인, 그룹, UNION 및 FORCE ORDER 쿼리 힌트, FORCE PLAN 집합 옵션 및 조인 힌트를 제공 합니다.|해당 사항 없음|  
 |order hint|FORCE ORDER 힌트가 지정된 횟수입니다.|해당 사항 없음|  
 |join hint|조인 힌트를 통해 조인 알고리즘이 강제 적용된 횟수입니다.|해당 사항 없음|  
 |view reference|쿼리에서 뷰가 참조된 횟수입니다.|해당 사항 없음|  

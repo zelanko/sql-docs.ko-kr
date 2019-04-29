@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838006"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "53355109"
   
 |리소스|사용자|  
 |--------------|--------------|  
-|[SQL Server 개발자 센터](https://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스, 보고 시스템 및 비즈니스 인텔리전스 솔루션을 구축하고 응용 프로그램 및 웹 사이트에서 이 시스템을 사용하도록 하는 개발자|  
+|[SQL Server Developer Center](https://msdn.microsoft.com/sqlserver/)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스, 보고 시스템 및 비즈니스 인텔리전스 솔루션을 구축하고 응용 프로그램 및 웹 사이트에서 이 시스템을 사용하도록 하는 개발자|  
 |[XML 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=42458)|데이터 저장 및 조작에 XML을 사용하는 웹 사이트 및 응용 프로그램의 웹 사이트 제작자 및 응용 프로그램 개발자|  
 |[SQL Server TechNet 사이트](https://technet.microsoft.com/sqlserver/dn135309)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 사용하는 시스템을 계획, 배포, 관리 및 지원하는 관리자 및 운영자|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "53355109"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에는 각 릴리스에 대한 지원이 얼마 동안 제공되는지를 정의하는 지원 기간이 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 기술 지원 사이트에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 기간을 정의하는 페이지가 있습니다. 이 페이지에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품에 대한 지원 가능 여부를 지정하는 다른 페이지에 대한 링크가 있습니다. 자세한 내용은 [Microsoft 지원 라이프 사이클](https://go.microsoft.com/fwlink/?LinkId=98306)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 제품 설명서 사용](../2014-toc/books-online-for-sql-server-2014.md)  
   
   

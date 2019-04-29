@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011920"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버에 대한 사용 권한을 쉽게 관리할 수 있도록 서버 수준 역할을 제공합니다. 서버 역할은 다른 보안 주체를 그룹화하는 보안 주체입니다. 서버 수준 역할은 서버 측 사용 권한 범위에 속합니다. *역할* 은 Windows 운영 체제의 *그룹* 과 같습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "58531855"
  각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 서버 역할에 할당된 사용 권한의 차트는 [데이터베이스 엔진 고정 서버 및 고정 데이터베이스 역할](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(영문)을 참조하세요.  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 권한은 `sysadmin` 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. 예를 들어 `CONTROL SERVER`가 `sysadmin` 고정 서버 역할의 멤버 자격을 의미하지는 않습니다. 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 목록은 필요한 171 개의 시스템 저장 프로시저 `sysadmin` 멤버 자격 다음 블로그 게시물 목록의 경우 Andreas wolter [CONTROL SERVER 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의 사항](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)합니다.  
+>  `CONTROL SERVER` 권한은 `sysadmin` 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. 예를 들어 `CONTROL SERVER` 멤버 자격을 의미 하지는 않습니다는 `sysadmin` 고정된 서버 역할입니다.) 그러나 때로 역할과 해당 권한 간에 가장하는 것이 가능할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 목록은 필요한 171 개의 시스템 저장 프로시저 `sysadmin` 멤버 자격 다음 블로그 게시물 목록의 경우 Andreas wolter [CONTROL SERVER 및 sysadmin/sa: 사용 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의 사항](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)합니다.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012369"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats 이벤트 클래스
   **Auto Stats** 이벤트 클래스는 인덱스 및 열 통계가 자동으로 업데이트되었음을 나타냅니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52775765"
 |**오류**|**int**|지정된 이벤트의 오류 번호입니다. 종종 **sys.messages** 카탈로그 뷰에 저장된 오류 번호를 나타냅니다.|31|사용자 계정 컨트롤|  
 |**EventClass**|**int**|이벤트 유형 = 58|27|아니요|  
 |**EventSequence**|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1: 통계 생성/동기적으로 업데이트 합니다. **TextData** 열 통계 및 생성 또는 업데이트 되었는지 여부를 나타냅니다.<br /><br /> 2: 비동기 통계 업데이트입니다. 작업이 지연되었습니다.<br /><br /> 3: 비동기 통계 업데이트입니다. 작업이 시작되었습니다.<br /><br /> 4: 비동기 통계 업데이트입니다. 작업이 완료되었습니다.|21|사용자 계정 컨트롤|  
+|**EventSubClass**|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1: 통계 생성/동기적으로 업데이트 합니다. **TextData** 열 통계 및 생성 또는 업데이트 되었는지 여부를 나타냅니다.<br /><br /> 2: 비동기 통계 업데이트 작업이 대기 합니다.<br /><br /> 3: 비동기 통계 업데이트 작업을 시작 합니다.<br /><br /> 4: 비동기 통계 업데이트 작업이 완료 되었습니다.|21|사용자 계정 컨트롤|  
 |**GroupID**|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |**IndexID**|**int**|이벤트에 의해 영향 받는 개체의 인덱스/통계 항목 ID입니다. 개체의 인덱스 ID를 확인하려면 **sys.indexes** 카탈로그 뷰의 **index_id** 열을 사용합니다.|24|사용자 계정 컨트롤|  
@@ -55,7 +55,7 @@ ms.locfileid: "52775765"
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|사용자 계정 컨트롤|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
 |**성공**|**int**|0 = 오류<br /><br /> 1 = 성공,<br /><br /> 2 = 서버 스로틀로 인해 건너뜀(MSDE)|23|사용자 계정 컨트롤|  
-|**TextData**|**ntext**|이 열의 내용은 통계가 동기적으로 업데이트되는지(**EventSubClass** 1) 또는 비동기적으로 업데이트되는지(**EventSubClass** 2, 3 또는 4)에 따라 결정됩니다.<br /><br /> 1: 업데이트/생성된 통계를 나열합니다.<br /><br /> 2, 3 또는 4: NULL 인 경우 **IndexID** 업데이트 된 통계의 인덱스/통계 ID 열이 채워집니다.|1|사용자 계정 컨트롤|  
+|**TextData**|**ntext**|이 열의 내용은 통계가 동기적으로 업데이트되는지(**EventSubClass** 1) 또는 비동기적으로 업데이트되는지(**EventSubClass** 2, 3 또는 4)에 따라 결정됩니다.<br /><br /> 1: 나열 업데이트/생성 된 통계<br /><br /> 2, 3 또는 4: NULL 인 경우 **IndexID** 업데이트 된 통계의 인덱스/통계 ID 열이 채워집니다.|1|사용자 계정 컨트롤|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|사용자 계정 컨트롤|  
 |**형식**|**int**|작업 유형입니다.|57|사용자 계정 컨트롤|  
   

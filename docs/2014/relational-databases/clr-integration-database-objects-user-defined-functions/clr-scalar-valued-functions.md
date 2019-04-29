@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919597"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
-  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)]이나 다른 관리 코드에서 액세스할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../clr-integration/clr-integration-overview.md)합니다.  
+  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. 관리 코드 중에서 선택 하 고 CLR 통합의 장점에 대 한 자세한 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조 하세요 [CLR 통합의 개요](../clr-integration/clr-integration-overview.md)합니다.  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수에 대한 요구 사항  
  .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. 입력된 매개 변수와 SVF를에서 반환 되는 형식에서 지원 되는 스칼라 데이터 형식 중 하나가 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제외한 `varchar`, `char`, `rowversion`, `text`를 `ntext`, `image`, `timestamp`, `table`, 또는 `cursor`합니다. SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대 한 자세한 내용은 참조 하세요. [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.  
@@ -148,7 +148,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시된 함수 이름이 대상 public static 메서드의 이름과 일치할 필요는 없습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 표시된 함수 이름이 대상 public static 메서드의 이름과 일치할 필요는 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 매개 변수 데이터 매핑](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   

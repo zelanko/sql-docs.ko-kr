@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982373"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 함수
 **규칙**  
@@ -184,7 +184,7 @@ SQLRETURN SQLForeignKeys(
 |DELETE_RULE (ODBC 1.0)|11|Smallint|SQL 작업이 일 때 외래 키에 적용할 동작 **삭제**합니다. 다음 값 중 하나일 수 있습니다. (참조 테이블은 기본 키가 있는 테이블; 참조 테이블은 외래 키가 있는 테이블입니다.)<br /><br /> SQL_CASCADE: 참조 되는 테이블의 행이 삭제 되 면 참조 테이블에 일치 하는 모든 행도 삭제 됩니다.<br /><br /> SQL_NO_ACTION: 참조 되는 테이블의 행을 삭제 하는 참조 테이블 에서도 "현 수 참조"를 야기 하는 경우 (즉, 참조 테이블의 행은가 없는 해당 참조 되는 테이블에서) 업데이트가 거부 되었습니다. (이 작업은 ODBC 2 SQL_RESTRICT 동작 동일 *.x*.)<br /><br /> SQL_SET_NULL: 참조 된 테이블에서 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 테이블의 모든 일치 하는 행의 NULL로 설정 됩니다.<br /><br /> SQL_SET_DEFAULT: 참조 테이블에 하나 이상의 행이 삭제 되는 경우 참조 하는 테이블의 외래 키의 각 구성 요소 참조 테이블의 모든 일치 하는 행의 해당 기본값으로 설정 됩니다.<br /><br /> 데이터 원본에 해당 하지 않는 경우 NULL입니다.|  
 |FK_NAME (ODBC 2.0)|12|Varchar|외래 키 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다.|  
 |PK_NAME (ODBC 2.0)|13|Varchar|기본 키 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다.|  
-|연기 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE 합니다.|  
+|연기 (ODBC 3.0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE, SQL_NOT_DEFERRABLE.|  
   
 ## <a name="code-example"></a>코드 예  
  다음 표에서 볼 수 있듯이,이 예제에서는 세 개의 테이블, 주문, 선 및 고객에 게 명명 된를 사용 합니다.  

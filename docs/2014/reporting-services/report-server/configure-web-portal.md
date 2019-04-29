@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011424"
 ---
 # <a name="configure-report-manager-native-mode"></a>보고서 관리자 구성(기본 모드)
   보고서 관리자는 보고서를 확인하고 보고서 서버 내용을 관리하며 사용자에게 기본 모드 보고서 서버에 대한 액세스 권한을 부여하는 데 사용되는 웹 프런트 엔드 애플리케이션입니다. 보고서 관리자는 보고서 서버 웹 서비스와 동일한 보고서 서버 인스턴스 내에 설치되며 설치 시 **기본값인 기본 모드 구성으로 설치** 옵션을 선택하면 구성됩니다. 보고서 관리자를 사후 설치 태스크로 구성할 수도 있습니다. 이 항목에서는 다음과 같은 보고서 관리자 구성 시나리오에 대한 정보를 제공합니다.  

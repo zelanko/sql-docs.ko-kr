@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998306"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,13 +76,13 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication=] '*게시*'  
+ [ @publication=] '*publication*'  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ @article=] '*문서*'  
+ [ @article=] '*article*'  
  게시를 구독하는 아티클입니다. *문서* 됩니다 **sysname**, 기본값은 all을 사용 하 여 합니다. all인 경우 해당 게시의 모든 아티클에 구독이 추가됩니다. Oracle 게시자의 경우 all 또는 NULL 값만 지원됩니다.  
   
- [ @subscriber=] '*구독자*'  
+ [ @subscriber=] '*subscriber*'  
  구독자의 이름입니다. *구독자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @destination_db=] '*destination_db*'  
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고: 이 옵션은 더 이상 사용되지 않습니다. 대신 replication support only를 사용하십시오.|  
+|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고: 이 옵션에 더 이상 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
 |automatic(기본값)|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 |replication support only|필요한 경우 구독자에서 업데이트 구독을 지원하는 아티클 사용자 지정 저장 프로시저 및 트리거의 자동 생성을 제공합니다. 이 옵션은 게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있다고 가정합니다. 피어 투 피어 트랜잭션 복제 토폴로지를 구성하는 경우 토폴로지의 모든 노드에 있는 데이터가 동일해야 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.<br /><br /> *SQL Server 이외 게시에 구독에 대 한 지원 되지 않습니다.*|  
 |initialize with backup|게시된 테이블의 스키마 및 초기 데이터는 게시 데이터베이스의 백업에서 가져옵니다. 구독자에 게시 데이터베이스 백업에 대한 액세스 권한이 있다고 가정합니다. 에 지정 된 백업에 대 한 백업 및 미디어 형식의 위치 *backupdevicename* 하 고 *backupdevicetype*합니다. 이 옵션을 사용하는 경우 구성 중에 피어 투 피어 트랜잭션 복제 토폴로지를 정지할 필요가 없습니다.<br /><br /> *SQL Server 이외 게시에 구독에 대 한 지원 되지 않습니다.*|  
@@ -102,7 +102,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  시스템 테이블 및 데이터는 항상 전송됩니다.  
   
- [ @status=] '*상태*'  
+ [ @status=] '*status*'  
  동기화 상태입니다. *상태* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수를 명시적으로 설정하지 않으면 복제 시 자동으로 다음 값 중 하나로 설정됩니다.  
   
 |값|Description|  
@@ -199,7 +199,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  실행할 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
   
- [ @reserved=] '*예약 된*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -235,7 +235,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  *게시자* 에 대해 지정할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
- [ @backupdevicetype=] '*backupdevicetype*'  
+ [ @backupdevicetype= ] '*backupdevicetype*'  
  백업에서 구독자를 초기화할 때 사용되는 백업 장치의 유형을 지정합니다. *backupdevicetype* 됩니다 **nvarchar(20)**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -246,28 +246,28 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype* 때만 사용 됩니다 *sync_method*initialize_with_backup으로 설정 됩니다.  
   
- [ @backupdevicename=] '*backupdevicename*'  
+ [ @backupdevicename= ] '*backupdevicename*'  
  백업에서 구독자를 초기화할 때 사용되는 장치의 이름을 지정합니다. *backupdevicename* 됩니다 **nvarchar(1000)**, 기본값은 NULL입니다.  
   
- [ @mediapassword=] '*mediapassword*'  
+ [ @mediapassword= ] '*mediapassword*'  
  미디어를 포맷할 때 암호를 설정한 경우 미디어 세트의 암호를 지정합니다. *mediapassword* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*암호*'  
+ [ @password= ] '*password*'  
  백업을 만들 때 암호를 설정한 경우 백업의 암호를 지정합니다. *암호*됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @fileidhint= ] *fileidhint*  
  복원할 백업 세트의 서수 값을 식별합니다. *fileidhint* 됩니다 **int**, 기본값은 NULL입니다.  
   
- [ @unload=] *언로드*  
+ [ @unload= ] *unload*  
  백업으로 초기화를 완료한 후 테이프 백업 장치를 언로드할지 여부를 지정합니다. *언로드* 됩니다 **비트**, 1의 기본값입니다. 1는 테이프를 언로드하도록 지정 합니다. *언로드* 때만 사용 됩니다 *backupdevicetype* 테이프가 있습니다.  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
+ [ @subscriptionlsn= ] *subscriptionlsn*  
  구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. 사용 된 @sync_type initialize from lsn 모든 관련 트랜잭션이 새 노드에 복제 되도록의 값입니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
- [ @subscriptionstreams=] *subscriptionstreams*  
+ [ @subscriptionstreams= ] *subscriptionstreams*  
  단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. *subscriptionstreams* 됩니다 **tinyint**, 기본값은 NULL입니다. 1에서 64 사이의 값 범위가 지원됩니다. 이 매개 변수가 지원 되지 않습니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자, Oracle 게시자 또는 피어 투 피어 구독 합니다. 구독 스트림을 사용할 때마다 agent_id가 NULL로 설정된 상태로 추가 행이 msreplication_subscriptions 테이블(스트림당 1개)에 추가됩니다.  
   
 > [!NOTE]  
@@ -283,7 +283,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |3|OLE DB 공급자|  
   
- [ @memory_optimized=] *메모리 액세스에 최적화*  
+ [ @memory_optimized=] *memory_optimized*  
  구독 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 됩니다 **비트**, 1 (구독 메모리 액세스에 최적화 된 테이블에서 지원) true와 같습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -316,10 +316,10 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
- [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
+ [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

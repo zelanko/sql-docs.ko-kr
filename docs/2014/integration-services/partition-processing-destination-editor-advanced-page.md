@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3eee8a69013975f7bfe9febcfa85d8143dcef68
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889989"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>파티션 처리 대상 편집기(고급 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 방법을 구성할 수 있습니다.  

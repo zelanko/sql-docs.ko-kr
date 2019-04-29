@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870981"
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류가 발생한 경우 오류 심각도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발견된 문제의 유형을 나타냅니다.  

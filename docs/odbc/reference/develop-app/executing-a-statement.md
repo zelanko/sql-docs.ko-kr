@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032809"
 ---
 # <a name="executing-a-statement"></a>명령문 실행
 컴파일되는 경우 데이터베이스 엔진 및 정의 하는 (준비)에 따라 문을 실행 하는 방법은 네 가지 있습니다.  

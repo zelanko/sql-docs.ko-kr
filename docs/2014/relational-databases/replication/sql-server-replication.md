@@ -70,7 +70,7 @@ ms.locfileid: "62626156"
   
 -   [열 필터 정의 및 수정](publish/define-and-modify-a-column-filter.md)    
 -   [정적 행 필터 정의 및 수정](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [매개 변수가 있는 행 필터 최적화](publish/optimize-parameterized-row-filters.md)    
 -   [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   

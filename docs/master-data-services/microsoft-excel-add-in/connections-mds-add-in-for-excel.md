@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4eb84aad1f334d6fc564f07847eb5590201e2077
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002604"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>연결(Excel용 MDS 추가 기능)
 
@@ -30,12 +30,12 @@ ms.locfileid: "51696261"
   
  여러 연결을 만들 수 있습니다. 가장 최근에 액세스한 연결은 기본값으로 간주됩니다.  
   
- 여러 사용자가 동시에 연결할 수 있습니다. 하지만 여러 사용자가 동일한 데이터를 게시하려고 시도하면 충돌이 발생할 수 있습니다. 자세한 내용은 [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)를 참조하세요.  
+ 여러 사용자가 동시에 연결할 수 있습니다. 하지만 여러 사용자가 동일한 데이터를 게시하려고 시도하면 충돌이 발생할 수 있습니다. 자세한 내용은 [ 개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)을 참조하세요.  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>자동으로 연결 및 자주 사용되는 데이터 로드  
  항상 동일한 서버에 연결하고 동일한 데이터 집합을 로드하려는 경우 연결 및 필터 정보를 포함하는 바로 가기 쿼리 파일을 만들 수 있습니다. 쿼리 파일에 대한 자세한 내용은 [바로 가기 쿼리 파일&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)를 참조하세요.  
   
-## <a name="data-quality-services"></a>데이터베이스 엔진 서비스  
+## <a name="data-quality-services"></a>Data Quality Services  
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에는 데이터를 MDS 저장소에 게시하기 전에 일치하는지 확인할 수 있게 해주는 Data Quality Services 기능이 있습니다. 연결을 설정할 때는 DQS 데이터베이스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일 인스턴스에 MDS 데이터베이스로 설치된 경우 리본 메뉴에 DQS 단추를 표시할 수 있습니다. DQS_Main 데이터베이스가 인스턴스에 없으면 이러한 단추가 표시되지 않으며 데이터 품질 기능을 사용할 수 없습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  

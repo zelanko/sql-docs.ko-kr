@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890296"
 ---
 # <a name="package-and-project-password"></a>패키지 및 프로젝트 암호
   **패키지 암호** 대화 상자를 사용하여 암호로 암호화된 패키지에 패키지 암호를 제공할 수 있습니다. 패키지에서 **암호로 중요한 데이터 암호화**또는 **암호로 모든 데이터 암호화** 보호 수준을 사용하는 경우 암호를 제공해야 합니다.  

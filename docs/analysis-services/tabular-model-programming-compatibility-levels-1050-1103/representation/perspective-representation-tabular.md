@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019320"
 ---
 # <a name="perspective-representation-tabular"></a>큐브 뷰 표현(테이블 형식)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   큐브 뷰는 클라이언트 응용 프로그램을 위해 모델을 더 작은 부분으로 간소화하거나 집중시키는 메커니즘입니다.  
   
- 참조 [큐브 뷰 표현 (테이블 형식만)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) 큐브 뷰 표현을 만들고 조작 하는 방법에 대 한 자세한 내용은 대 한 합니다.  
+ 참조 [큐브 뷰 표현 (테이블 형식)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) 큐브 뷰 표현을 만들고 조작 하는 방법에 대해서는 설명에 대 한 합니다.  
   
 > [!WARNING]  
 >  큐브 뷰는 보안 메커니즘이 아니므로 다른 인터페이스를 통해 큐브 뷰 밖에 있는 개체에 계속 액세스할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "34039867"
  AMO 개체를 기준으로 큐브 뷰 표현은 <xref:Microsoft.AnalysisServices.Perspective>와 일 대 일 매핑 관계를 가지며 그 밖의 주요 AMO 개체는 필수 항목이 아닙니다.  
   
 ### <a name="perspective-in-amo"></a>AMO의 큐브 뷰  
- 다음 코드 조각에서는 테이블 형식 모델에서 큐브 뷰를 만드는 방법을 보여 줍니다. 이 코드 조각의 키 요소는 perspectiveElements입니다. 이 개체는 사용자에게 노출되는 테이블 형식 모델의 모든 개체에 대한 그래픽 표현입니다. *perspectiveElements* 4 개의 열을 포함 합니다. 1, 2 및 3 열만이 시나리오에 대 한 관련 된 것으로 합니다. 열 1은 표시되는 요소 형식인 -elementTypeValue-를 포함합니다. 열 2는 요소의 전체 이름인 --를 포함하며 큐브 뷰에 요소를 입력하려면 이 이름을 구문 분석해야 합니다. 열 3은 확인란 항목인 -checkedElement-를 포함하며 이 항목은 요소가 큐브 뷰의 일부인지 여부를 알려줍니다.  
+ 다음 코드 조각에서는 테이블 형식 모델에서 큐브 뷰를 만드는 방법을 보여 줍니다. 이 코드 조각의 키 요소는 perspectiveElements입니다. 이 개체는 사용자에게 노출되는 테이블 형식 모델의 모든 개체에 대한 그래픽 표현입니다. *perspectiveElements* 4 개의 열을 포함 하며이 시나리오에 대 한 1, 2 및 3 열만 해당 됩니다. 열 1은 표시되는 요소 형식인 -elementTypeValue-를 포함합니다. 열 2는 요소의 전체 이름인 --를 포함하며 큐브 뷰에 요소를 입력하려면 이 이름을 구문 분석해야 합니다. 열 3은 확인란 항목인 -checkedElement-를 포함하며 이 항목은 요소가 큐브 뷰의 일부인지 여부를 알려줍니다.  
   
 ```  
   

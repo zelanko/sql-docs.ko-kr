@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2989f9a017f2a864b85087d6a7fc638edf11b066
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912207"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 이벤트 클래스
   **Audit Change Audit** 이벤트 클래스는 감사 추적을 수정할 때마다 발생합니다.  

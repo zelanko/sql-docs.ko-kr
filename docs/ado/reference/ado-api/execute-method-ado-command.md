@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184801"
 ---
 # <a name="execute-method-ado-command"></a>Execute 메서드(ADO 명령)
 쿼리, SQL 문 또는 저장된 프로시저에 지정 된 실행 합니다 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 [명령 개체](../../../ado/reference/ado-api/command-object-ado.md)합니다.  
@@ -44,7 +44,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *매개 변수*  
  (선택 사항) A **Variant** 입력된 문자열에서 지정 된 스트림에와 함께 사용 하는 매개 변수 값의 배열 **CommandText** 하거나 **CommandStream**합니다. (출력 매개 변수에 올바른 값이이 인수에 전달 될 때 반환 하지 않습니다.)  
   
- *옵션*  
+ *Options*  
  (선택 사항) **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 또는 [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 하 여 비트 마스크 값일 수 있습니다 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 및/또는 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값입니다. 예를 들어 사용할 수 있습니다 **adCmdText** 하 고 **adExecuteNoRecords** 조합 ADO의 값을 평가 하려는 경우에 **CommandText** 텍스트로 속성 및 명령을 삭제 하 고 명령 텍스트를 실행 하는 경우 발생할 수 있는 레코드를 반환 하지 해야 나타냅니다.  
   
 > [!NOTE]

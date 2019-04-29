@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028380"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
   Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  
