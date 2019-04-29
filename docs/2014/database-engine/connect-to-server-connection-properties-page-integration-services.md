@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755247"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>서버에 연결(연결 속성 페이지) Integration Services
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에 연결하거나 [!INCLUDE[ssIS](../includes/ssis-md.md)]를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssIS](../includes/ssis-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에 연결하거나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 를 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssIS](../includes/ssis-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>변수  
  **포트 번호**  
@@ -39,7 +39,7 @@ ms.locfileid: "48092773"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  
