@@ -67,7 +67,7 @@ ms.locfileid: "52518095"
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|대상 복구 간격이 1분인 자동 검사점|  
 |0|>0|대상 복구 간격이 **sp_configure 복구 간격** 옵션의 사용자 정의 설정에 의해 지정되는 자동 검사점|  
-|>0|이 오류에는 이 작업을 적용할 수 없습니다.|대상 복구 간격이 TARGET_RECOVERY_TIME 설정에 의해 초 단위로 결정되는 간접 검사점|  
+|>0|해당 사항 없음|대상 복구 간격이 TARGET_RECOVERY_TIME 설정에 의해 초 단위로 결정되는 간접 검사점|  
   
 ##  <a name="AutomaticChkpt"></a> 자동 검사점  
 자동 검사점은 로그 레코드의 수가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 **복구 간격** 서버 구성 옵션에 지정된 시간 동안 처리할 수 있을 것으로 예상하는 수에 도달할 때마다 발생합니다. 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.
