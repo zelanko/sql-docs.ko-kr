@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64a4f1a51d678e70516f277c08071f5884492c1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225837"
 ---
 # <a name="query-method-rds"></a>Query 메서드(RDS)
 유효한 SQL 쿼리 문자열을 사용 하 여 반환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -35,7 +35,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *레코드 집합*  
+ *Recordset*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
  *DataFactory*  

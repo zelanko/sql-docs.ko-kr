@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226007"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>고급 다중 웹 사이트 구성(SSRS 암호 모드)
   이 대화 상자에서는 보고서 서버 또는 보고서 관리자에 액세스할 때 사용되는 URL을 만들고 관리할 수 있습니다. **고급 다중 웹 사이트 구성** 대화 상자는 호스트 헤더 이름을 포함하는 사용자 지정 URL, 추가 URL을 만들거나 IP 주소를 IPv4 또는 IPv6 형식으로 지정하는 데 사용됩니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "48185373"
   
  여러 가지 방법으로 보고서 서버에 액세스하도록 구성하려는 경우 URL을 여러 개 만드는 것이 좋습니다. 예를 들어 일반적으로 인트라넷 및 익스트라넷 연결을 통해 보고서 서버에 액세스하려면 각 유형의 연결마다 다른 URL을 사용해야 합니다.  
   
- 열려는 합니다 **고급 다중 웹 사이트 구성** 대화 상자, 클릭 **고급** 에 **웹 서비스 URL** 또는 **보고서 관리자 URL**페이지는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager입니다. **고급 다중 웹 사이트 구성** 대화 상자가 열리면 **추가** 또는 **편집** 을 클릭하여 새 URL을 정의하거나 기존 URL을 삭제할 수 있습니다.  
+ **고급 다중 웹 사이트 구성** 대화 상자를 열려면 **구성 관리자의** 웹 서비스 URL **또는** 보고서 관리자 URL **페이지에서** 고급 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. **고급 다중 웹 사이트 구성** 대화 상자가 열리면 **추가** 또는 **편집** 을 클릭하여 새 URL을 정의하거나 기존 URL을 삭제할 수 있습니다.  
   
  **확인** 을 클릭하여 변경 내용을 저장합니다. URL을 추가하거나 제거한 후 **확인**을 클릭하지 않고 대화 상자를 닫으면 변경 내용이 손실됩니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185373"
  목록에서 URL 항목을 지웁니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

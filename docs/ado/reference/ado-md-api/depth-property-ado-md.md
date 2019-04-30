@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225769"
 ---
 # <a name="depth-property-ado-md"></a>Depth 속성(ADO MD)
 사이의 수준 수가 표시 된 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 및 계층 구조의 루트입니다.  

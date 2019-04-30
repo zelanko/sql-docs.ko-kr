@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225913"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 개체(ADO MD)
 관련된 차원 집합이 포함 된 다차원 스키마에서 큐브를 나타냅니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47694067"
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CreatedOn|날짜 및 큐브를 만든 시간입니다.|  
 |CubeGUID|GUID 큐브입니다.|  
-|CubeName|큐브의 이름입니다.|  
+|CubeName|큐브 이름입니다.|  
 |CubeType|큐브의 유형입니다.|  
 |DataUpdatedBy|마지막 데이터 업데이트를 수행 하는 사용자의 사용자 ID입니다.|  
 |Description|큐브의 의미 있는 설명입니다.|  

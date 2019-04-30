@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225780"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension 개체(ADO MD)
 멤버 하나 이상의 계층 구조를 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "47639571"
 |이름|Description|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
-|CubeName|큐브의 이름입니다.|  
+|CubeName|큐브 이름입니다.|  
 |DefaultHierarchy|기본 계층의 고유한 이름입니다.|  
 |Description|큐브의 의미 있는 설명입니다.|  
 |DimensionCaption|레이블 또는 차원과 연결 된 캡션입니다.|  
