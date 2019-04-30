@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0bb761cf3402080842ae0eaff7b04a0f312a3a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267321"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>추적 파일에 최대 파일 크기 설정(SQL Server Profiler)
   추적 파일에 최대 파일 크기를 설정하려면 다음 절차를 수행하십시오.  
@@ -47,7 +47,7 @@ ms.locfileid: "52775235"
     > [!NOTE]  
     >  FAT32 파일 시스템에서 파일의 크기는 4GB 미만으로 제한됩니다. 추적 파일의 크기가 이 크기에 도달하면 추적이 실패하고 "디스크 공간이 부족합니다"라는 오류 메시지가 표시됩니다. 더 큰 파일을 만들려면 NTFS 파일 시스템을 사용하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  
   
   

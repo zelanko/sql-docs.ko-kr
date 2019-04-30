@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: 7a88d7225d574794b4dc50ae30a9205b1cac08e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287467"
 ---
 # <a name="data-migration-report--oracletosql"></a>데이터 마이그레이션 보고서(OracleToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47678909"
 **보낸 사람**  
 원본 테이블입니다.  
   
-**수행할 작업**  
+**대상**  
 대상 테이블입니다.  
   
 **총 행 수**  

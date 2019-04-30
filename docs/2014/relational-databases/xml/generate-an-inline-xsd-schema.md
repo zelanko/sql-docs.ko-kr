@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287476"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>요소 이름 충돌  
  FOR XML에서는 동일한 이름을 사용하여 두 개의 하위 요소를 나타낼 수 있습니다. 예를 들어 다음 쿼리는 제품의 ListPrice 및 DealerPrice 값을 검색하지만 두 열에 대해 Price라는 동일한 별칭을 지정합니다. 따라서 결과 행 집합에는 이름이 같은 두 열이 포함됩니다.  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열 이며 NULL 일 수 있습니다.  
  다음 쿼리에서 두 하위 요소는 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>사례 2: 유형이 같은 하나의 키 열과 하나의 키가 아닌 열  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>사례 2: 하나의 키 열과 하나의 키가 아닌 동일한 형식  
  다음 쿼리는 유형이 같은 하나의 키 열과 하나의 키가 아닌 열을 보여 줍니다.  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 Col2에 해당하는 <`Col`> 요소는 minOccurs가 0으로 설정됩니다.  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>사례 3: 유형이 다른 요소와 해당 열은 모두 NULL일 수 있습니다.  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>사례 3: 요소 다양 한 유형 및 해당 열은 모두 NULL 일 수 있습니다.  
  다음 쿼리는 사례 2에 표시된 예제 테이블에 대해 지정됩니다.  
   
 ```  

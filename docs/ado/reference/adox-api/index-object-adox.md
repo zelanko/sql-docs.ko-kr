@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b6fca30201a93b84f59e9356c5201e1070053d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311784"
 ---
 # <a name="index-object-adox"></a>인덱스 개체(ADOX)
 데이터베이스 테이블에서 인덱스를 나타냅니다.  

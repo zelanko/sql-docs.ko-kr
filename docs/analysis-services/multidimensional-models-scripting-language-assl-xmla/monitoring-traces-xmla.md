@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261626"
 ---
 # <a name="monitoring-traces-xmla"></a>추적 모니터링(XMLA)
   사용할 수는 [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) XMLA (XML for Analysis)의 인스턴스에 정의 된 기존 추적을 모니터링 하려면 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 합니다 **Subscribe** 명령 행 집합으로 추적 결과 반환 합니다.  
@@ -37,33 +37,33 @@ ms.locfileid: "50145749"
 |Duration|정수(Long)|이벤트에 소요된 경과 시간(밀리초)입니다.|  
 |CPUTime|정수(Long)|이벤트에 소요된 프로세서 시간(밀리초)입니다.|  
 |JobID|정수(Long)|프로세스에 대한 작업 식별자입니다.|  
-|SessionID|String|이벤트가 발생한 세션의 식별자입니다.|  
-|SessionType|String|이벤트가 발생한 세션의 유형입니다.|  
+|SessionID|문자열|이벤트가 발생한 세션의 식별자입니다.|  
+|SessionType|문자열|이벤트가 발생한 세션의 유형입니다.|  
 |ProgressTotal|정수(Long)|이벤트에 의해 보고된 총 진행률입니다.|  
 |IntegerData|정수(Long)|이벤트와 연결된 정수 데이터입니다. 이 열의 내용은 이벤트의 이벤트 클래스 및 하위 클래스에 따라 달라집니다.|  
-|ObjectID|String|이벤트가 발생한 개체의 식별자입니다.|  
-|ObjectType|String|ObjectName에 지정된 개체의 형식입니다.|  
-|ObjectName|String|이벤트가 발생한 개체의 이름입니다.|  
-|ObjectPath|String|이벤트가 발생한 개체의 계층 구조 경로입니다. 이 경로는 ObjectName에 지정된 개체의 부모에 대한 개체 식별자로 구성된 쉼표로 구분된 문자열로 표시됩니다.|  
-|ObjectReference|String|ObjectName에 지정된 개체에 대한 개체 참조의 XML 표현입니다.|  
+|ObjectID|문자열|이벤트가 발생한 개체의 식별자입니다.|  
+|ObjectType|문자열|ObjectName에 지정된 개체의 형식입니다.|  
+|ObjectName|문자열|이벤트가 발생한 개체의 이름입니다.|  
+|ObjectPath|문자열|이벤트가 발생한 개체의 계층 구조 경로입니다. 이 경로는 ObjectName에 지정된 개체의 부모에 대한 개체 식별자로 구성된 쉼표로 구분된 문자열로 표시됩니다.|  
+|ObjectReference|문자열|ObjectName에 지정된 개체에 대한 개체 참조의 XML 표현입니다.|  
 |NestLevel|정수|이벤트가 발생한 트랜잭션의 수준입니다.|  
 |NumSegments|정수(Long)|이벤트를 발생시킨 명령에서 영향을 받거나 액세스된 데이터 세그먼트의 수입니다.|  
-|Severity|정수|이벤트에 대한 예외의 심각도 수준입니다. 이 열 값은 다음 중 하나일 수 있습니다.<br /><br /> <br /><br /> 0: 성공<br /><br /> <br /><br /> 1: 정보<br /><br /> <br /><br /> 2: 경고<br /><br /> <br /><br /> 3: 오류|  
+|Severity|정수|이벤트에 대한 예외의 심각도 수준입니다. 이 열 값은 다음 중 하나일 수 있습니다.<br /><br /> <br /><br /> 0: 성공<br /><br /> <br /><br /> 1: 정보<br /><br /> <br /><br /> 2: 경고<br /><br /> <br /><br /> 3: Error|  
 |성공|Boolean|명령의 성공 여부를 나타냅니다.|  
 |Error|정수(Long)|이벤트의 오류 번호입니다(해당되는 경우).|  
-|ConnectionID|String|이벤트가 발생한 연결의 식별자입니다.|  
-|DatabaseName|String|이벤트가 발생한 데이터베이스의 이름입니다.|  
-|NTUserName|String|이벤트와 연결된 사용자의 Windows 사용자 이름입니다.|  
-|NTDomainName|String|이벤트와 연결된 사용자의 Windows 도메인입니다.|  
-|ClientHostName|String|클라이언트 응용 프로그램을 실행 중인 컴퓨터의 이름입니다. 이 열은 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
+|ConnectionID|문자열|이벤트가 발생한 연결의 식별자입니다.|  
+|DatabaseName|문자열|이벤트가 발생한 데이터베이스의 이름입니다.|  
+|NTUserName|문자열|이벤트와 연결된 사용자의 Windows 사용자 이름입니다.|  
+|NTDomainName|문자열|이벤트와 연결된 사용자의 Windows 도메인입니다.|  
+|ClientHostName|문자열|클라이언트 응용 프로그램을 실행 중인 컴퓨터의 이름입니다. 이 열은 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
 |ClientProcessID|정수(Long)|클라이언트 응용 프로그램의 프로세스 식별자입니다.|  
-|ApplicationName|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
-|NTCanonicalUserName|String|이벤트와 연결된 사용자의 정식 Windows 사용자 이름입니다.|  
-|SPID|String|이벤트가 발생한 세션의 SPID(서버 프로세스 ID)입니다. 이 열의 값은 이벤트가 발생한 XMLA 메시지의 SOAP 헤더에 지정된 세션 ID에 직접 해당합니다.|  
-|TextData|String|이벤트와 연결된 텍스트 데이터입니다. 이 열의 내용은 이벤트의 이벤트 클래스 및 하위 클래스에 따라 달라집니다.|  
-|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|String|이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름입니다.|  
-|RequestParameters|String|이벤트가 발생한 매개 변수가 있는 쿼리 또는 XMLA 명령의 매개 변수입니다.|  
-|RequestProperties|String|이벤트가 발생한 XMLA 메서드의 속성입니다.|  
+|ApplicationName|문자열|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
+|NTCanonicalUserName|문자열|이벤트와 연결된 사용자의 정식 Windows 사용자 이름입니다.|  
+|SPID|문자열|이벤트가 발생한 세션의 SPID(서버 프로세스 ID)입니다. 이 열의 값은 이벤트가 발생한 XMLA 메시지의 SOAP 헤더에 지정된 세션 ID에 직접 해당합니다.|  
+|TextData|문자열|이벤트와 연결된 텍스트 데이터입니다. 이 열의 내용은 이벤트의 이벤트 클래스 및 하위 클래스에 따라 달라집니다.|  
+|데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면|문자열|이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름입니다.|  
+|RequestParameters|문자열|이벤트가 발생한 매개 변수가 있는 쿼리 또는 XMLA 명령의 매개 변수입니다.|  
+|RequestProperties|문자열|이벤트가 발생한 XMLA 메서드의 속성입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services에서 XMLA를 사용하여 개발](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  

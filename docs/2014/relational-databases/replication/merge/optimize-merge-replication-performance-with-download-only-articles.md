@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250364"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>다운로드 전용 아티클로 병합 복제 성능 최적화
   병합 복제에서는 다양한 애플리케이션의 요구 사항을 해결할 수 있도록 두 가지 아티클 유형을 제공합니다. 게시에는 이러한 아티클 유형 중 해당 애플리케이션에 적합한 하나 이상의 아티클 유형이 포함될 수 있습니다.  

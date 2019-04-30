@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf21be88854837ab2dff1a8bc8bc73f44a6e20c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248825"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
-합니다 **ADOStreamConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **Stream** OLE DB 개체 **IStream** C/c + + 응용 프로그램에서 개체입니다.  
+합니다 **ADOStreamConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **Stream** OLE DB 개체 **IStream** 개체 c에서 /C++ 응용 프로그램입니다.  
   
 ## <a name="properties"></a>속성  
   

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285056"
 ---
-# <a name="mdx-data-definition---drop-action"></a>MDX 데이터 정의-DROP 동작
+# <a name="mdx-data-definition---drop-action"></a>MDX 데이터 정의 - DROP ACTION
 
 
   지정한 큐브에서 특정 동작을 삭제합니다.  

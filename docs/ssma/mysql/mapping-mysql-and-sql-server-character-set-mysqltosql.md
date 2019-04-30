@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312369"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 및 SQL Server 문자 집합 매핑(MySQLToSQL)
 MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지정할 수 있습니다.  
@@ -54,13 +54,13 @@ MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지�
 > [!NOTE]  
 > 문자 집합 매핑 편집을 위해 선택한 탭에는 다른 노드 수준에서 매핑에 관계 없이 세 가지 단추가 있습니다.  
 >   
-> 반환할 수 있습니다.  
+> 다음 창이 여기에 포함됩니다.  
 >   
 > 1.  **고려해 야 합니다.** 문자 집합 매핑을 편집 하 고 아직 저장 되지 경우에 사용자가 수행한 변경 내용을 적용 합니다.  
-> 2.  **취소:** 사용자가 수행한 변경 내용을 취소 합니다. 문자 집합 매핑 편집 되었지만 저장 되지 경우 단추를 사용할 수 있습니다.  
-> 3.  **기본값으로 다시 설정:** 모든 매핑이 기본값으로 다시 설정 합니다.  
+> 2.  **취소:** 사용자가 변경한 내용을 취소 합니다. 문자 집합 매핑 편집 되었지만 저장 되지 경우 단추를 사용할 수 있습니다.  
+> 3.  **기본값으로 다시 설정 합니다.** 모든 매핑이 기본값으로 다시 설정합니다.  
   
-1.  **루트 메타 데이터 노드 수준:** 문자 집합 매핑 그리드의 각 문자 집합에 대 한 별도 열을 사용 하 여 문자 집합 표를 포함 합니다. 그리드의 열이 됩니다.  
+1.  **루트 메타 데이터 노드 수준:**  문자 집합 매핑 그리드의 각 문자 집합에 대 한 별도 열을 사용 하 여 charset 눈금을 포함합니다. 그리드의 열이 됩니다.  
   
     1.  명명 된 그리드의 첫 번째 열 **문자 집합 이름이** 문자 집합 이름을 포함 합니다.  
   
@@ -88,7 +88,7 @@ MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지�
     |라틴어 1|cp1252 서 부 유럽|CHAR/VARCHAR (기본값)|  
     |latin2|ISO 8859-2 중앙 유럽|CHAR/VARCHAR (기본값)|  
     |swe7|7 비트 스웨덴어|CHAR/VARCHAR (기본값)|  
-    |Ascii|US ASCII|CHAR/VARCHAR (기본값)|  
+    |ascii|US ASCII|CHAR/VARCHAR (기본값)|  
     |ujis|EUC JP 일본어|NCHAR/NVARCHAR (기본값)|  
     |sjis|일본어 SHIFT-JIS|NCHAR/NVARCHAR (기본값)|  
     |히브리어|ISO 8859-8 히브리어|CHAR/VARCHAR (기본값)|  
@@ -101,14 +101,14 @@ MySQL 문자 데이터 형식, 식 및 리터럴 문자 집합 (Charset)을 지�
     |gbk|GBK 중국어 간체|NCHAR/NVARCHAR (기본값)|  
     |latin5|ISO 8859-9 터키어|CHAR/VARCHAR (기본값)|  
     |armscii8|ARMSCII 8 아르메니아어|CHAR/VARCHAR (기본값)|  
-    |utf8|Utf-8 유니코드|NCHAR/NVARCHAR (기본값)|  
-    |ucs2|Ucs-2 유니코드|NCHAR/NVARCHAR (기본값)|  
+    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (기본값)|  
+    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (기본값)|  
     |cp866|DOS 러시아어|CHAR/VARCHAR (기본값)|  
     |keybcs2|DOS Kamenicky 체코어-Slovak|CHAR/VARCHAR (기본값)|  
     |macce|Mac 중앙 유럽어|CHAR/VARCHAR (기본값)|  
     |macroman|Mac 서 부 유럽|CHAR/VARCHAR (기본값)|  
     |cp852|DOS 중앙 유럽|CHAR/VARCHAR (기본값)|  
-    |latin7|ISO 8859-13 발트어|CHAR/VARCHAR (기본값)|  
+    |latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (기본값)|  
     |cp 1251|Windows Cyrillic|CHAR/VARCHAR (기본값)|  
     |cp 1256|Windows 아랍어|CHAR/VARCHAR (기본값)|  
     |cp 1257|Windows Baltic|CHAR/VARCHAR (기본값)|  

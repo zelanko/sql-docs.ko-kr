@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283446"
 ---
 # <a name="report-parameters-methods"></a>보고서 매개 변수 메서드
   다음 메서드를 사용하여 보고서의 매개 변수를 설정하고 검색할 수 있습니다.  

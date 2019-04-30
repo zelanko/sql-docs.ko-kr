@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315791"
 ---
 # <a name="rowset-property-ado"></a>Rowset 속성(ADO)
 OLE DB를 가져오거나 설정 합니다. **행 집합** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다. 행 집합 put_Rowset를 사용 하는 경우 ADO에 활성화 됩니다 **레코드 집합** 개체입니다.  
@@ -43,7 +43,7 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  *ppRowset*  
  OLE DB에 대 한 포인터 **행 집합** 개체입니다.  
   
- *pRowset*  
+ *PRowset*  
  OLE DB **행 집합** 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  

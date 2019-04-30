@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251442"
 ---
 # <a name="working-with-empty-values"></a>빈 값 작업
 
@@ -46,16 +46,16 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  빈 값에 다음 정보가 적용됩니다.  
   
--   [IsEmpty](../mdx/isempty-mdx.md) 함수에서 반환 **TRUE** 함수에 지정 된 튜플이 식별 한 셀이 비어 하는 경우에 합니다. 그렇지 않으면 함수가 반환 **FALSE**합니다.  
+-   합니다 [IsEmpty](../mdx/isempty-mdx.md) 함수에서 반환 **TRUE** 함수에서 지정 된 튜플이 식별 한 셀이 비어 하는 경우에 합니다. 반환이 고, 그렇지 **FALSE**합니다.  
   
     > [!NOTE]  
-    >  **IsEmpty** 함수는 멤버 식에서 null 값을 반환 하는지 여부를 확인할 수 없습니다. 식에서 null 멤버가 반환 되는지 확인 하려면는 [IS](../mdx/is-mdx.md)연산자입니다.  
+    >  합니다 **IsEmpty** 함수는 멤버 식에서 null 값을 반환 하는지 여부를 확인할 수 없습니다. 식에서 null 멤버가 반환 되는지 여부를 확인 하려면 사용 합니다 [IS](../mdx/is-mdx.md)연산자입니다.  
   
 -   빈 셀 값이 숫자 연산자(+, -, *, /) 중 하나에 대한 피연산자인 경우 다른 피연산자가 비어 있지 않은 값이라면 빈 셀 값을 0으로 취급합니다. 두 피연산자 모두 빈 경우 숫자 연산자는 빈 셀 값을 반환합니다.  
   
 -   빈 셀 값이 문자열 연결 연산자(+)에 대한 피연산자인 경우 다른 피연산자가 비어 있지 않은 값이라면 빈 셀 값을 빈 문자열로 취급합니다. 두 피연산자 모두 빈 경우 문자열 연결 연산자는 빈 셀 값을 반환합니다.  
   
--   빈 셀 값이 임의의 비교 연산자(=, <>, > =, \<=, >, <), 빈 셀 값은 0으로 처리 또는 빈 문자열인 경우 다른 피연산자의 데이터 형식이 있는지 여부에 따라 숫자 또는 문자열은 각각. 두 피연산자 모두 빈 경우 두 피연산자 모두 0으로 취급합니다.  
+-   빈 셀 값이 임의의 비교 연산자(=, <>, > =, \<=, >, <), 빈 셀 값을 0으로 취급 또는 다른 피연산자의 데이터 형식이 있는지 여부에 따라 빈 문자열, 숫자 또는 문자열은 각각. 두 피연산자 모두 빈 경우 두 피연산자 모두 0으로 취급합니다.  
   
 -   숫자 값을 정렬할 때는 빈 셀 값이 0과 동일한 위치에서 정렬됩니다. 빈 셀 값과 0 사이에서는 빈 셀이 0보다 앞에 정렬됩니다.  
   
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>MDX 문과 큐브에서의 빈 값 처리  
  MDX 문에서 빈 값을 찾은 다음 유효한(즉, 비어 있지 않은) 데이터를 가진 셀에 대해 특정한 계산을 수행할 수 있습니다. 빈 셀 값이 포함되면 결과가 부정확해지는 계산(예: 평균)도 있으므로 계산을 수행할 때는 빈 값을 없애야 합니다.  
   
- 빈 값이 기본 팩트 테이블 데이터에 저장되어 있는 경우 이러한 값은 기본적으로 큐브가 처리될 때 0으로 변환됩니다. 사용할 수는 **u l l 처리** 옵션 제어 하는 측정값을 변환 하는지 여부를 null 팩트가 0으로 변환 되거나 시키는 또는 빈 값으로 오류가 처리 중입니다. 쿼리 결과에 빈 셀 값이 나타나지 않도록 하려면 빈 값을 없애거나 빈 값을 다른 값으로 바꾸는 쿼리, 계산 멤버 또는 MDX 스크립트 문을 만들어야 합니다.  
+ 빈 값이 기본 팩트 테이블 데이터에 저장되어 있는 경우 이러한 값은 기본적으로 큐브가 처리될 때 0으로 변환됩니다. 사용할 수는 **Null 처리** 옵션을 제어 하는 측정값이 null 팩트가 0으로 변환 하는지 여부를 빈 값으로 또는 변환할 시키는 오류가 처리 중입니다. 쿼리 결과에 빈 셀 값이 나타나지 않도록 하려면 빈 값을 없애거나 빈 값을 다른 값으로 바꾸는 쿼리, 계산 멤버 또는 MDX 스크립트 문을 만들어야 합니다.  
   
  쿼리에서 빈 행 또는 열을 제거하려면 축 집합 정의 앞에 NON EMPTY 문을 사용합니다. 예를 들어 다음 쿼리에서는 Calendar Year 2001에 판매된 유일한 Category가 Bikes이므로 Product Category인 Bikes만 반환합니다.  
   
@@ -114,7 +114,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- 자세한 내용은 참조 [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)합니다.  
+ 자세한 내용은 [비어 있지 않은 &#40;MDX&#41;](../mdx/nonempty-mdx.md)합니다.  
   
 ## <a name="empty-values-and-comparison-operators"></a>빈 값과 비교 연산자  
  데이터에 빈 값이 있는 경우 논리 및 비교 연산자는 단순히 TRUE 또는 FALSE가 아니라 EMPTY라는 제3의 결과가 반환할 가능성도 있습니다. 이와 같이 세 가지 결과를 가져오는 논리는 대부분 응용 프로그램에서 오류의 원인이 됩니다. 다음은 빈 값 비교 결과를 정리한 테이블입니다.  
@@ -124,7 +124,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**빈**|FALSE|EMPTY|FALSE|  
+|**EMPTY**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  이 테이블에서는 두 개의 부울 피연산자에 OR 연산자를 적용한 결과를 보여 줍니다.  
@@ -132,7 +132,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |또는|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**빈**|TRUE|TRUE|  
+|**EMPTY**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  이 테이블에서는 NOT 연산자가 부정하거나 반대로 바꾼 부울 연산자의 결과를 보여 줍니다.  
@@ -144,7 +144,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
  [MDX 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   

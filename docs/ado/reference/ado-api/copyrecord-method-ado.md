@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70dcba3d373b195950f90b6ef82c3d670844bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309213"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
 복사 나타내는 엔터티를 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치로 합니다.  
@@ -47,10 +47,10 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *암호*  
  (선택 사항) A **문자열** 필요한 경우를 확인 하는 암호가 포함 된 값 *UserName*합니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) A [메서드의 동작](../../../ado/reference/ado-api/copyrecordoptionsenum.md) 값의 기본 값을 가진 **adCopyUnspecified**합니다. 이 메서드의 동작을 지정 합니다.  
   
- *비동기*  
+ *Async*  
  (선택 사항) A **부울** 값을 때 **True**,이 작업이 비동기 되도록 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  

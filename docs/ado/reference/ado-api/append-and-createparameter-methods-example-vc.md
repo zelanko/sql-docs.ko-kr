@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248163"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>추가 및 CreateParameter 메서드 예제 (VC + +)
 이 예제에서는 합니다 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수를 사용 하 여 저장된 프로시저를 실행 하는 방법입니다.  
@@ -189,7 +189,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- Input  
+ 입력  
   
 ```  
 25  

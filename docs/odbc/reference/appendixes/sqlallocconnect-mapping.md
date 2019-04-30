@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bdb63e9610d00c0736f640b6f4c4d743f3335c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280977"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect 매핑
 응용 프로그램을 호출할 때 **SQLAllocConnect** 는 ODBC 3. *x* 드라이버, 호출 **SQLAllocConnect**(*henv*를 *phdbc*)에 매핑된 **SQLAllocHandle** 다음과 같습니다:  

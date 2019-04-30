@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fac808000fb2c1fba4993b8a9ee3639d702bb48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305676"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption(Paradox 드라이버)
 > [!NOTE]  

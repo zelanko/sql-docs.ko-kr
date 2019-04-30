@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97c0e4660c14845ddfb59ce4f5f509a0954d98f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268167"
 ---
 # <a name="supports-method"></a>Supports 메서드
 지정 된 결정 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체는 특정 종류의 기능을 지원 합니다.  

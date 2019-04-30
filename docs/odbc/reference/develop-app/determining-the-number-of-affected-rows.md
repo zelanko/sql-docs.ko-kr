@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262098"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>영향을 받는 행 수 확인
 응용 프로그램 업데이트, 삭제 또는 행을 삽입, 후 호출할 수 있습니다 **SQLRowCount** 영향을 받은 행 수를 확인 하려면. **SQLRowCount** 표시할지, 아니면 행 업데이트, 삭제 되거나, 실행 하 여 삽입 된이 값을 반환 합니다.는 **업데이트**를 **삭제**, 또는 **삽입** 문 배치를 실행 하 여 업데이트 또는 delete 문의 하거나 호출 하 여 **SQLSetPos**합니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233584"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
 합니다 **ODBC Visual FoxPro 설치** 대화 상자에서는 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52501747"
  **찾아보기**  
  사용자 시스템 및 데이터베이스 또는 데이터 원본에 연결 하려는 디렉터리에 대 한 네트워크를 검색할 수 있습니다.  
   
- **옵션**  
+ **Options**  
  Visual FoxPro ODBC 드라이버 옵션을 설정할 수 있도록 대화 상자를 확장 합니다.  
   
 ## <a name="driver"></a>드라이버  

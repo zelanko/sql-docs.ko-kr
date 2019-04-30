@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264717"
 ---
 # <a name="initializing-custom-assembly-objects"></a>사용자 지정 어셈블리 개체 초기화
   사용자 지정 어셈블리 클래스를 인스턴스화할 때 속성 및 필드 값을 초기화해야 하는 경우가 있습니다. 대개 보고서의 전역 개체 컬렉션에서 제공되는 값으로 사용자 지정 클래스를 초기화해야 합니다. 이 작업은 보고서 **Code** 개체의 **OnInit** 메서드를 다시 정의하여 수행합니다. **OnInit**에 액세스하려면 보고서 정의의 **Code** 요소를 사용합니다. 초기화 속성 또는 보고서에 사용 하려는 사용자 지정 어셈블리의 클래스의 필드 값에 대 한 두 가지 기술이 있습니다. 선언 하 고 사용 하 여 클래스의 새 인스턴스를 만들거나 **OnInit**, 또는 사용 하 여 공개적으로 사용 가능한 메서드를 호출할 수 있습니다 **OnInit**합니다.  

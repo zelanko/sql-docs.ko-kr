@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238375"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect(Paradox 드라이버)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47654761"
   
  **SQLDriverConnect** 데이터 소스 (DSN)를 만들지 않고 드라이버에 연결할 수 있습니다.  
   
- 다음 키워드는 모든 드라이버에 대 한 연결 문자열에서 지원: **DSN**를 **DBQ**, 및 **FIL**합니다.  
+ 다음 키워드는 모든 드라이버에 대 한 연결 문자열에 지원 됩니다. **DSN**하십시오 **DBQ**, 및 **FIL**합니다.  
   
  합니다 **PWD** 키워드도 지원 됩니다. PWD 키워드는 특수 문자를 포함 하지 않아야 (SQL_SPECIAL_CHARACTERS의를 참조 하세요 **SQLGetInfo** 반환 값).  
   
@@ -40,4 +40,4 @@ ms.locfileid: "47654761"
   
 |드라이버|필요한 키워드|예제|  
 |------------|-----------------------|-------------|  
-|Paradox|드라이버를 DriverID|Driver={Microsoft Paradox Driver (*.db )}; DBQ=c:\temp;DriverID=26|
+|Paradox|Driver, DriverID|Driver={Microsoft Paradox Driver (*.db )}; DBQ=c:\temp;DriverID=26|

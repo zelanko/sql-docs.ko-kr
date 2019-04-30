@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301981"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE 문 제한 사항
 DBASE 또는 Paradox 드라이버는 사용 경우 인덱스를 만든 후 새 레코드를 추가, 인덱스가 삭제 됩니다 하 고 테이블의 내용을 삭제 하지 않으면 ALTER TABLE 문에서 테이블의 구조를 변경할 수 없습니다.  

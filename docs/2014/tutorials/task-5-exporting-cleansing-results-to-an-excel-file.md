@@ -1,5 +1,5 @@
 ---
-title: '작업 5: 정리 결과 Excel 파일로 내보내기 | Microsoft Docs'
+title: '태스크 5: 정리 결과 Excel 파일로 내보내기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276781"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>작업 5: 정리 결과를 Excel 파일로 내보내기
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>태스크 5: 정리 결과를 Excel 파일로 내보내기
   이 작업에서는 정리 작업의 결과를 Excel 파일로 내보냅니다. 참조 [내보내기 단계](https://msdn.microsoft.com/library/hh213061.aspx#Export) 자세한 세부 정보에 대 한 항목입니다.  
   
 1.  오른쪽 창에서 선택 **Excel** 에 대 한 합니다 **대상 유형**합니다.  

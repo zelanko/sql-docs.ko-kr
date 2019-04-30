@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278644"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 및 DefaultDatabase 속성 예제 (VB)
 이 예제에서는 합니다 [공급자](../../../ado/reference/ado-api/provider-property-ado.md) 속성 3 개를 열어 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 다른 공급자를 사용 하 여 개체입니다. 또한를 사용 합니다 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC 공급자에 대 한 기본 데이터베이스를 설정 하는 속성입니다.  

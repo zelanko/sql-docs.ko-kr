@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287867"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>명령문 핸들 ODBC 할당
 응용 프로그램에서 문을 실행 하려면, 먼저 다음과 같이 문 핸들을 할당 해야 합니다.  

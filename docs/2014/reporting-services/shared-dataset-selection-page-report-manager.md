@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbb2e4e671bf00016071bfe53a7b3e5f53acac2f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223237"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>공유 데이터 세트 선택 페이지(보고서 관리자)
   공유 데이터 세트 선택 페이지를 사용하여 현재 보고서와 연결된 공유 데이터 세트를 검토하고 수정할 수 있습니다.  

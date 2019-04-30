@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243785"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS 전달자를 사용 하 여 분석 플랫폼 시스템에 비 어플라이언스 DNS 이름을 확인 하려면
 Active Directory Domain Services 노드에서 DNS 전달자를 구성할 수 있습니다 (**_어플라이언스\_도메인_-AD01** 하 고  **_어플라이언스\_ 도메인_-AD02**) 스크립트 및 소프트웨어 응용 프로그램을 외부 서버에 액세스를 허용 하기 위해 분석 플랫폼 시스템 어플라이언스입니다.  

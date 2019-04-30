@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314697"
 ---
 # <a name="seek-method"></a>Seek 메서드
 인덱스를 검색 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 신속 하 게 지정 된 값과 일치 하 고 행에 현재 행 위치를 변경 하는 행을 찾을 수 있습니다.  

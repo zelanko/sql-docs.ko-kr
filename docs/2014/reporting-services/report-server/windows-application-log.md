@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8557f8b838eeec837cef0966f173f94626518aa7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255315"
 ---
 # <a name="windows-application-log"></a>Windows 애플리케이션 로그
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 이벤트 메시지를 Windows 응용 프로그램 로그에 기록합니다. 애플리케이션 로그에 기록된 메시지 정보를 사용하여 로컬 시스템에서 실행되는 보고서 서버 애플리케이션에서 생성된 이벤트를 확인할 수 있습니다.  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258797"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.0 표준 준수 합니다: ISO 92  
+ 도입 된 버전: ODBC 3.0 표준 준수 합니다. ISO 92  
   
  **요약**  
  **SQLGetDescRec** 설명자 레코드의 여러 필드의 값을 현재 설정을 반환 합니다. 반환 되는 필드 이름, 데이터 형식 및 열 또는 매개 변수 데이터의 저장소를 설명 합니다.  

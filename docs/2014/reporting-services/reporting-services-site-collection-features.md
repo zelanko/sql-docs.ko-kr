@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283586"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 사이트 모음 기능
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드는 세 가지 SharePoint 사이트 모음 기능을 제공합니다. 이 기능은 일반적인 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드 보고 환경, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition용 추가 기능 및 SharePoint 중앙 관리의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 대한 관리 작업을 지원합니다.  

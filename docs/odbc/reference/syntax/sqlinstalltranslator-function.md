@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de493cc42980390fee94ca4d86efc8f5cd40646c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242311"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator 함수
 **규칙**  
- ODBC 버전에 도입 되었습니다: 2.5에서는 사용 되지 않음  
+ 도입 된 버전: ODBC 2.5에서는 사용 되지 않음  
   
  **요약**  
  ODBC 3.0에서 **SQLInstallTranslator** 바뀌었습니다 [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)합니다. 에 대 한 호출 **SQLInstallTranslator** 매핑될 **SQLInstallTranslatorEx**합니다. 자세한 내용은 **SQLInstallTranslatorEx**합니다.  

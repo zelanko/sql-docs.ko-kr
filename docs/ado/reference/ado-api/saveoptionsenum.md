@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314913"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 파일을 생성 또는 덮어쓸에서 저장 하는 경우 지정 된 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. 값이 될 수 있습니다 **adSaveCreateNotExist** 하거나 **adSaveCreateOverWrite**...  

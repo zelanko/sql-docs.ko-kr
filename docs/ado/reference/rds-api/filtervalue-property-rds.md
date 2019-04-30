@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a30e3058c86c3250942238b3cd98a0cfd6e0a6de
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273747"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue 속성(RDS)
 레코드를 필터링 할 값을 나타냅니다.  

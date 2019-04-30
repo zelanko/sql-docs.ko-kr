@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244614"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC 오류 코드(Visual FoxPro ODBC 드라이버)
 다음 표에서 ODBC 오류 코드 SQLSTATE 값에 매핑된 Visual FoxPro 오류 코드를 나열 합니다. 매핑된 SQLSTATE 값을 가져오는 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 하 고 [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)합니다. 때문에 다른 SQLSTATE 값이 없는 다른 ODBC API에서 매핑됩니다 **SQLExecDirect** 하 고 **SQLPrepare** 은 Visual FoxPro 엔진에 액세스 하는 유일한 기능입니다.  
   
- ODBC 오류 코드에 대 한 자세한 내용은 참조 하세요. [부록 a: ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)를 *ODBC 프로그래머 참조*합니다.  
+ ODBC 오류 코드에 대 한 자세한 내용은 참조 하세요. [부록 a: ODBC 오류 코드](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)에 *ODBC 프로그래머 참조*합니다.  
   
 |SQLSTATE|Visual FoxPro 오류 코드|  
 |--------------|------------------------------|  

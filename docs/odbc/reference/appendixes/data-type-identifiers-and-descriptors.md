@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241406"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>데이터 형식 식별자 및 설명자
 데이터 형식에 나열 된 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 및 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 이 부록 앞부분에서의 섹션은 "간결 하 게" 데이터 형식: 각 식별자 단일 데이터 형식을 참조 합니다. 식별자 및 데이터 형식 간의 한 일 대응이 됩니다. 그러나 설명자, 수행 되지 모든 사례 데이터 형식을 식별 하려면 단일 값을 사용 합니다. 경우에 따라 "verbose" 데이터 형식 및 형식 하위 코드를 사용합니다. 날짜/시간 및 간격 데이터 형식 제외한 모든 데이터 형식에 대 한 자세한 정보 표시 형식 식별자 간결한 형식 식별자와 동일 이며 SQL_DESC_DATETIME_INTERVAL_CODE의 값은 0과 같습니다. 그러나 날짜/시간 및 간격 데이터 형식에 대해 (SQL_DATETIME 또는 sql_interval 인) 형식을 verbose SQL_DESC_TYPE에 저장 됩니다, 간결한 형식 SQL_DESC_CONCISE_TYPE에 저장 됩니다 및 하위 코드가 각 간결한 형식에 대 한 값을 SQL_DESC_DATETIME_INTERVAL_CODE에 저장 됩니다. 이러한 필드 중 하나를 설정 다른 영향을 줍니다. 이러한 필드에 대 한 자세한 내용은 참조는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명 합니다.  

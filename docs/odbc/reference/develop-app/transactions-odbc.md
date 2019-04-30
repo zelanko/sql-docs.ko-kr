@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305809"
 ---
 # <a name="transactions-odbc"></a>트랜잭션 ODBC
 A *트랜잭션* 작업 단위는;은 단일 원자성 작업으로 수행 하는 작업의 성공 또는 전체가 실패, 합니다. 예를 들어 은행 계좌에서 간에 자금을 이체 하는 것이 좋습니다. 이 두 단계로 이루어집니다: 첫 번째 계정에서 돈을 출금 및 두 번째에서 작업입니다. 두 단계가 모두 성공; 반드시 1 단계 성공 및 실패에 대 한 허용 되지 않습니다. 트랜잭션을 지 원하는 데이터베이스는이 보장할 수 있습니다.  

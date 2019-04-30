@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9922927a9527fa3085581b547fd53ec701aed31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313117"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47793465"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  지정 된 결과 집합의 현재 레코드의 단일 필드의 값을 검색 합니다.  
   

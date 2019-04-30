@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283257"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>하드웨어 구성-Analytics Platform System
 Analytics Platform System (APS) 하드웨어는 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 단위를 사용 하 여 설계 됩니다. 어플라이언스에 대 한 SQL Server 데이터 Wareouse PDW (병렬) 테라바이트에서 6 또는 페타바이트 단위의 데이터 저장소를 확장합니다.  

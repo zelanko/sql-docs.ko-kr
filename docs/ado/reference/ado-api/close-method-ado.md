@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f43e59ed38dfde8091cb851f75a133c60874a6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302503"
 ---
 # <a name="close-method-ado"></a>Close 메서드(ADO)
 열려 있는 개체와 모든 종속 개체를 닫습니다.  

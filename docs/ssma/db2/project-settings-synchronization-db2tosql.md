@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5dce11338b2d67412df1259e48d50c0734778d0d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270078"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>프로젝트 설정 (동기화) (DB2ToSQL)
 [동기화] 페이지의 **프로젝트 설정** 대화 상자에는 어떻게 SSMA 로드 하 고 새로 고침 같은 데이터베이스 개체, 테이블 및 저장된 프로시저를 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

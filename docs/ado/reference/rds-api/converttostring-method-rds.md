@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280882"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 메서드(RDS)
 변환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 레코드 집합 데이터를 나타내는 MIME 문자열로 합니다.  
@@ -38,7 +38,7 @@ DataFactory.ConvertToString(Recordset)
  *DataFactory*  
  나타내는 개체 변수를 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다.  
   
- *레코드 집합*  
+ *Recordset*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3378dd7ada96b1885d802804a6e2e2e3dcbd0891
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283646"
 ---
 # <a name="options-designers-analysis-services-designers-general"></a>옵션 (디자이너-Analysis Services 디자이너-일반)
   **디자이너**, **유지 관리 계획**, **Analysis Services**, **일반** 페이지를 사용하여 Analysis Services 디자이너의 기본 동작을 결정할 수 있습니다.  

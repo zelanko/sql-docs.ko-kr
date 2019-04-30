@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278523"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty(MDX)
 
@@ -36,16 +36,16 @@ NONEMPTY(set_expression1 [,set_expression2])
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 함수는 지정된 첫 번째 집합의 튜플 중 두 번째 집합의 튜플에 대해 계산될 때 비어 있지 않은 튜플을 반환합니다. **NonEmpty** 계산 함수는 사용 및 중복 튜플을 유지 합니다. 두 번째 집합이 지정되지 않은 경우 이 식은 큐브의 특성 계층 멤버와 측정값의 현재 좌표 컨텍스트에서 계산됩니다.  
+ 이 함수는 지정된 첫 번째 집합의 튜플 중 두 번째 집합의 튜플에 대해 계산될 때 비어 있지 않은 튜플을 반환합니다. 합니다 **NonEmpty** 함수는 계산 및 중복 튜플을 유지 합니다. 두 번째 집합이 지정되지 않은 경우 이 식은 큐브의 특성 계층 멤버와 측정값의 현재 좌표 컨텍스트에서 계산됩니다.  
   
 > [!NOTE]  
->  대신이 함수는 사용 되지 않는 사용 하 여 [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) 함수입니다.  
+>  이 함수 대신 사용 사용 되지 않는 [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md) 함수입니다.  
   
 > [!IMPORTANT]  
 >  비어 있지 않음 특성은 튜플 자체가 아니라 튜플에서 참조하는 셀의 특성입니다.  
   
 ## <a name="examples"></a>예  
- 다음 쿼리는 간단한 예를 보여 줍니다. **NonEmpty**, null이 아닌 값이 1 일 2001 년 7 월 Internet Sales Amount에 대 한 포함 하는 모든 고객을 반환 합니다.  
+ 다음 쿼리는 간단한 예제를 보여 줍니다 **비어 있지 않은**, 모든 고객에 게 Internet Sales Amount에 대 한 null이 아닌 값이 있었습니다. 첫 번째 2001 년 7 월을 반환 합니다.  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 고객과 사용 하 여 구입 날짜가 들어 있는 튜플 집합을 반환 하는 다음 예제는 **필터** 함수 및 **NonEmpty** 마지막 날짜를 찾고 각 고객이 제품을 구매 하는 함수:  
+ 다음 예제에서는 고객과 사용 하 여 구입 날짜가 들어 있는 튜플 집합을 반환 합니다 **필터** 함수 및 **비어 있지 않은** 함수는 마지막 날짜를 찾고 각 고객 구매를:  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>관련 항목  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [필터 &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [필터&#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

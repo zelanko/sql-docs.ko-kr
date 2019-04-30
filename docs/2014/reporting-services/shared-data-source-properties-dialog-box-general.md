@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222961"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>공유 데이터 원본 속성 대화 상자, 일반
   **공유 데이터 원본 속성** 대화 상자를 사용하여 보고서의 공유 데이터 원본에 대한 연결 정보를 표시하고 수정할 수 있습니다.  

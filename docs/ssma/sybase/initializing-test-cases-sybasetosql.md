@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 376211f7d6a61712c70ea7ad7889adc15735c414
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246173"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>테스트 사례 초기화(SybaseToSQL)
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정할 수 있습니다.  

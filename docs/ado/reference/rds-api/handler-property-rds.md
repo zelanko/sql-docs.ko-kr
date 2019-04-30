@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276447"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)
 기능을 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타내는 합니다 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), 및에서 사용 하는 매개 변수를 *처리기*합니다.  

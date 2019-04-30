@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d83c2aa530fa0c0f6bff515ce4ed669fcef7dae3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253130"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>비대칭 키 암호화의 강도
   이 규칙은 비대칭 키가 1024비트 이상 강도의 암호화를 사용하여 만들어졌는지 검사합니다.  

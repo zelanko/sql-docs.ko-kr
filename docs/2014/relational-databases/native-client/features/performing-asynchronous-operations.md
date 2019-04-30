@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246145"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하면 응용 프로그램에서 비동기 데이터베이스 작업을 수행할 수 있습니다. 비동기 처리는 호출 스레드를 차단하지 않고 메서드를 즉시 반환할 수 있도록 합니다. 이를 통해 개발자는 명시적으로 스레드를 만들거나 동기화를 처리하지 않고도 보다 강력하고 유연한 다중 스레딩을 구현할 수 있습니다. 데이터베이스 연결을 초기화하거나 명령의 실행 결과를 초기화할 때 응용 프로그램에서는 비동기 처리를 요청합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "48110683"
   
  그러면 **QueryInterface**를 통해 여러 결과 인터페이스를 쿼리하여 **IDBAsynchStatus** 및 **ISSAsynchStatus** 인터페이스를 가져올 수 있습니다.  
   
- 명령 실행을 마치면 **IMultipleResults** 동기 사례에서 한 가지 예외를 사용 하 여 정상적으로 사용할 수 있습니다: DB_S_ASYNCHRONOUS을 반환할 수 있으며 이때 **IDBAsynchStatus** 또는 **ISSAsynchStatus** 작업이 완료 되 면 확인 하기 위해 사용할 수 있습니다.  
+ 명령 실행을 마치면 **IMultipleResults** 동기 사례에서 한 가지 예외를 사용 하 여 정상적으로 사용할 수 있습니다. DB_S_ASYNCHRONOUS을 반환할 수 있으며 이때 **IDBAsynchStatus** 하거나 **ISSAsynchStatus** 작업이 완료 되 면 확인 하기 위해 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 응용 프로그램에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut*으로 지정한 시간이 경과될 때까지 내부 이벤트 개체를 기다립니다.  

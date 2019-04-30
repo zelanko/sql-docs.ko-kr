@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 095f8e45c85a74bae9b15af63454846532bbc8c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311866"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 GUI 기능(MySQLToSQL)
 이 장에서 설명 SSMA 사용자 인터페이스의 새로운 기능  

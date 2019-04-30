@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278542"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>지도 뷰포트 속성 대화 상자, 최적화
   **지도 뷰포트 속성** 대화 상자의 **최적화** 를 선택하여 보고서에서 지도를 보기 위한 해상도를 제어할 수 있습니다.  

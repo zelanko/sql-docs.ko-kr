@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76e4a4efeeb8ca71b4591bdaaa3e06dcab71d144
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281145"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 메서드(RDS)
 현재 또는 새 행에 대 한 모든 변경 내용을 취소를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

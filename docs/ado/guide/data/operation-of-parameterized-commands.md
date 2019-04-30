@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302347"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수화된 명령 작업
 대규모 자식을 사용 하 여 작업 하는 경우 **레코드 집합**, 특히 부모의 크기에 비해 **레코드 집합**, 하지만 몇 가지 자식 장에서 액세스할 필요가 것이 보다 효율적으로 사용할를 매개 변수가 있는 명령입니다.  

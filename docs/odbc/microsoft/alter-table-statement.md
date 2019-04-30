@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf03b52495f572bf5dc9a82b289f15cb1c6146a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301946"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE 문
 Microsoft Access, dBASE, 또는 Paradoxdriver를 사용 하면 add 및 drop 테이블 제약 조건 정의 절을 사용 하 여 ALTER TABLE 문을 사용할 수 있습니다. (ALTER TABLE 문은 Microsoft Excel 또는 텍스트 드라이버에 대 한 지원 되지 않습니다.)  

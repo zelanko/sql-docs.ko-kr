@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298349"
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration의 Database 요소(DTA)
   데이터베이스 엔진 튜닝 관리자가 가상 구성(`Configuration` 요소에 의해 지정됨)을 평가하게 하려는 데이터베이스를 지정합니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "52747285"
 ## <a name="example"></a>예제  
  이 사용 예 `Database` 요소를 참조 합니다 [사용자 지정 구성이 포함 된 XML 입력 파일 샘플 &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

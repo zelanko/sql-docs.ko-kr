@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283517"
 ---
 # <a name="using-test-repositories-oracletosql"></a>테스트 리포지토리 사용(OracleToSQL)
 SSMA 테스트 리포지토리 저장소 SSMA 테스터가 테스트 사례와 나중에 사용할 테스트 결과입니다. 리포지토리 데이터를 SQL Server 테이블에 저장 됩니다 **TestCaseRepository** 하 고 **RunTestCaseResultRepository** 스키마에서 **ssma_oracle_utilities** 의**ssmatesterdb** 데이터베이스입니다.  

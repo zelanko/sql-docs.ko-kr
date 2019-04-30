@@ -1,5 +1,5 @@
 ---
-title: 'C: GUID로 SQL | Microsoft Docs'
+title: 'SQL에서 C로: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258822"
 ---
 # <a name="sql-to-c-guid"></a>SQL에서 C로: GUID
 GUID ODBC SQL 데이터 형식에 대 한 식별자가 있습니다.  
@@ -37,7 +37,7 @@ GUID ODBC SQL 데이터 형식에 대 한 식별자가 있습니다.
 ||*BufferLength* < 37|정의되지 않음|정의되지 않음|22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 \< =  *BufferLength*|data|데이터의 바이트 길이|n/a|  
 ||데이터의 바이트 길이 > *BufferLength*|정의되지 않음|정의되지 않음|22003|  
-|SQL_C_GUID|[A] 없음|data|16 [b]|n/a|  
+|SQL_C_GUID|[A] 없음|data|16[b]|n/a|  
   
  [a] 값 *BufferLength* 이 변환에 대해 무시 됩니다. 드라이버 가정 크기 **TargetValuePtr* C 데이터 형식의 크기입니다.  
   

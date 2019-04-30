@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 808588f20a4d94fa3be885ee79853362071f7768
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270089"
 ---
 # <a name="select-features"></a>기능 선택
   기능 선택 페이지를 사용하여 업데이트할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 기능을 선택할 수 있습니다.  

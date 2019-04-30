@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273386"
 ---
 # <a name="usage-counting"></a>사용량 계산
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.locfileid: "47664631"
 >   
 >  CurrentVersion  
 >   
->  하기 위해 SharedDlls  
+>  SharedDlls  
   
  이러한 값에 대 한 데이터를 1로 설정 하 고 파일 시스템에 복사 합니다. 구성 요소를 다시 설치 하는 경우 설치 프로그램 또는 설치 관리자 DLL 사용 횟수를 증가 시킵니다. 구성 요소가 제거 되 면 설치 프로그램 또는 설치 관리자 DLL 감소 사용량을 계산 합니다. 모든 사용 횟수가 0으로 떨어지면 설치 프로그램 또는 설치 관리자 DLL 파일에 대 한 값을 제거 및, 드라이버 또는 변환기를 해당 구성 요소가 파일을 삭제 합니다. 드라이버 관리자 파일은 삭제 되지 않습니다.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47664631"
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|*전체 경로*|REG_DWORD|*count*|  
+|*full-path*|REG_DWORD|*count*|  
   
  예를 들어, Informix 드라이버 Infrmx32.dll 및 Infrmx32.hlp 파일을 사용 한다고 가정 및이 드라이버 두 번 설치 되어 있는지 가정 합니다. Informix 드라이버용 하기 위해 SharedDlls 하위 키 아래의 값은 다음과 같을 수: 있습니다.  
   

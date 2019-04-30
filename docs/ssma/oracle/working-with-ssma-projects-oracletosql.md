@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283557"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 작업(OracleToSQL)
 Oracle 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
@@ -100,7 +100,7 @@ Oracle 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLU
   
         메타 데이터를 저장 하면 몇 분 정도 걸릴 수 있습니다. 메타 데이터를 아직 저장 하지 않을 경우 모든 확인란을 선택 하지 마십시오.  
   
-    2.  클릭 합니다 **저장할** 단추입니다.  
+    2.  **저장** 단추를 클릭합니다.  
   
         SSMA는 Oracle 스키마를 구문 분석 하 고 프로젝트 파일에 메타 데이터를 저장 합니다.  
   

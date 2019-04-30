@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287177"
 ---
 # <a name="data-migration-settings-oracletosql"></a>데이터 마이그레이션 설정(OracleToSQL)
   
@@ -48,7 +48,7 @@ ms.locfileid: "51656140"
   
 두 개의 단추가 있습니다 있는 보도.:  
   
--   **적용 합니다.** 클릭 **적용** 변경 된 설정을 적용 합니다.  
+-   **고려해 야 합니다.** 클릭 **적용** 변경 된 설정을 적용 합니다.  
   
 -   **취소:** 클릭 **취소** 전에 변경 내용이 적용 되 고 있는 설정을 복원 합니다.  
   

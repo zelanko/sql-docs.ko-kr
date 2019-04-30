@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254235"
 ---
 # <a name="driver-architecture"></a>드라이버 아키텍처
 드라이버 아키텍처는 SQL 문 소프트웨어 프로세스에 따라 두 가지 범주로 나누어 집니다.  

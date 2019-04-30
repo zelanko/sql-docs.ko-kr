@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250386"
 ---
 # <a name="replication-monitor"></a>복제 모니터
   설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전 및 복제 유형에 따라 달라집니다.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309147"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete 및 Disconnect 이벤트(ADO)
 합니다 **ConnectComplete** 이벤트 연결이 시작 된 후 호출 됩니다. 합니다 **연결 끊기** 이벤트 연결이 종료 된 후 호출 됩니다.  

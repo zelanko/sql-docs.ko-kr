@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df68b9ee1e778d0523b63d69bd010022b6f6f219
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301342"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>명령 프롬프트에서 업그레이드 관리자 설치
   설치 마법사를 사용하거나 명령 프롬프트에서 업그레이드 관리자를 설치할 수 있습니다. 명령 프롬프트를 사용하여 무인 및 자동 설치를 수행할 수 있습니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "53589867"
   
 |인수|Description|  
 |--------------|-----------------|  
-|/q [n&#124;b&#124;r&#124;f]|다음과 같이 UI(사용자 인터페이스) 수준을 설정합니다.<br /><br /> n = UI 표시 안 함<br /><br /> b = 기본 UI(진행률만 표시하고 프롬프트는 표시 안 함)<br /><br /> r = 축소된 UI(설치가 끝날 때 대화 상자 표시)<br /><br /> f = 전체 UI|  
+|/q[n&#124;b&#124;r&#124;f]|다음과 같이 UI(사용자 인터페이스) 수준을 설정합니다.<br /><br /> n = UI 표시 안 함<br /><br /> b = 기본 UI(진행률만 표시하고 프롬프트는 표시 안 함)<br /><br /> r = 축소된 UI(설치가 끝날 때 대화 상자 표시)<br /><br /> f = 전체 UI|  
 |/L|로그 파일 옵션을 지정합니다. 모든 메시지를 기록할 *log_file_name*를 사용 하 여 **-L\*v**_log_file_name_합니다. 사용 하 여 오류 메시지에만 기록할 `-Le` *log_file_name*합니다.|  
-|ADDLOCAL = ALL&AMP;#124; 제거 = ALL&AMP;#124;REINSTALL = ALL|업그레이드 관리자의 설치(ADDLOCAL), 제거(REMOVE) 또는 다시 설치(REINSTALL)를 지정합니다.|  
+|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|업그레이드 관리자의 설치(ADDLOCAL), 제거(REMOVE) 또는 다시 설치(REINSTALL)를 지정합니다.|  
 |UAINSTALLDIR=path|경로를 사용하여 지정한 위치에 업그레이드 관리자를 설치합니다.|  
   
 ## <a name="installation-examples"></a>설치 예  
@@ -68,7 +68,7 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [업그레이드 관리자 설치](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [업그레이드 관리자 필수 구성 요소](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   

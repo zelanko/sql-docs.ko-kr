@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280667"
 ---
 # <a name="use-the-toolbox"></a>도구 상자 사용
   도구 상자의 항목, 텍스트 및 컨트롤을 선택하여 양식, 페이지 및 디자이너로 끌어다 놓고 이러한 원본의 항목을 다시 도구 상자로 끌어다 놓아 나중에 다시 사용할 수 있습니다. 예를 들어 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서는 태스크를 유지 관리 계획으로 끌어다 놓을 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52812541"
 |확장된 도구 상자 탭에 있는 항목의 위치 변경|항목을 새 위치로 끌어다 놓은 다음 마우스를 해제합니다.|  
 |도구 상자 항목 이름 바꾸기|도구 상자 항목을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **항목 이름 바꾸기** 를 클릭합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [일반 사용자 인터페이스 요소](general-user-interface-elements.md)  
   
   

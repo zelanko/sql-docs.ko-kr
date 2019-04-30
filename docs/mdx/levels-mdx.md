@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269948"
 ---
 # <a name="levels-mdx"></a>Levels(MDX)
 
@@ -43,7 +43,7 @@ Hierarchy_Expression.Levels( Level_Name )
  수준 이름을 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 수준 번호를 지정 하는 경우는 **수준** 함수는 지정 된 0부터 시작 위치와 관련 된 수준을 반환 합니다.  
+ 수준 번호가 지정 된 경우는 **수준** 함수에 지정 된 0부터 시작 위치와 관련 된 수준을 반환 합니다.  
   
  수준 이름이 지정 되는 **수준** 함수는 지정 된 수준을 반환 합니다.  
   
@@ -51,7 +51,7 @@ Hierarchy_Expression.Levels( Level_Name )
 >  사용자 정의 함수에 대해서는 문자열 식 구문을 사용합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제는 설명의 각는 **수준** 함수 구문을 합니다.  
+ 다음 예제에서는 각를 설명 합니다 **수준** 함수 구문을 합니다.  
   
 ### <a name="numeric"></a>숫자  
  다음 예에서는 Country 수준을 반환합니다.  
@@ -61,7 +61,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>문자열  
  다음 예에서는 Country 수준을 반환합니다.  
   
 ```  
@@ -70,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

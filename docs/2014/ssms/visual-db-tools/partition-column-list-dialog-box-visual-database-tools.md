@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280382"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
   테이블에 관련된 분할 구성표가 있으면 이 대화 상자를 사용하여 분할 함수를 적용할 열을 선택할 수 있습니다. 함수가 작동하기 위해서는 전환한 열의 데이터 형식이 분할 함수에 정의되어 있는 열의 데이터 형식과 동일해야 합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238023"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>드라이버 관리자&#39;연결 프로세스에서 s 역할
 응용 프로그램 직접 호출 하지 않습니다 드라이버 함수를 기억 합니다. 대신, 동일한 이름의 드라이버 관리자 함수를 호출 하 고 드라이버 관리자 드라이버 함수를 호출 합니다. 일반적으로 거의 즉시 전파 됩니다. 예를 들어, 응용 프로그램 호출 **SQLExecute** 드라이버 관리자를 호출 하는 드라이버 관리자의를 몇 가지 오류 검사 한 후 **SQLExecute** 드라이버에서입니다.  

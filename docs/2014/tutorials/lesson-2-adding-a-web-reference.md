@@ -11,18 +11,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316004"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>2단원: 웹 참조 추가
   웹 서비스 검색은 클라이언트에서 웹 서비스를 찾고 해당 서비스에 대한 설명을 얻는 과정입니다. [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]의 웹 서비스 검색 과정에는 미리 결정된 알고리즘을 따르는 웹 사이트를 질의하는 과정이 포함됩니다. 이러한 과정의 목적은 WSDL(웹 서비스 설명 언어)을 사용하는 XML 문서인 서비스 설명을 찾는 것입니다.  
   
  서비스 설명은 사용할 수 있는 서비스 및 이러한 서비스와 상호 작용하는 방법을 설명합니다. 서비스 설명이 없으면 웹 서비스와 프로그래밍 방식으로 상호 작용할 수 없습니다.  
   
- 사용자의 응용 프로그램에는 웹 서비스와 통신하기 위한 방법과 실행할 때 웹 서비스를 찾을 수 있는 방법이 있어야 합니다. 웹 서비스에 대한 웹 참조를 프로젝트에 추가하면 웹 서비스와 상호 작용하고 웹 서비스의 로컬 표시를 제공하는 프록시 클래스를 생성할 수 있습니다. 자세한 내용은 SQL Server 온라인 설명서의 "방법: [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 설명서의 "방법: XML 웹 서비스 프록시 생성"을 참조하십시오.  
+ 사용자의 응용 프로그램에는 웹 서비스와 통신하기 위한 방법과 실행할 때 웹 서비스를 찾을 수 있는 방법이 있어야 합니다. 웹 서비스에 대한 웹 참조를 프로젝트에 추가하면 웹 서비스와 상호 작용하고 웹 서비스의 로컬 표시를 제공하는 프록시 클래스를 생성할 수 있습니다. 자세한 내용은 "방법: XML 웹 서비스 프록시 "에서 생성 하 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 설명서.  
   
 ### <a name="to-add-a-web-reference"></a>웹 참조를 추가하려면  
   

@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238131"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요.  
@@ -80,8 +80,8 @@ ms.locfileid: "48222993"
 |DATABASE_CHANGE_GROUP|데이터베이스가 생성, 변경 또는 삭제되면 발생하면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스가 생성, 변경 또는 삭제될 때마다 발생합니다. [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)와 동일합니다.|  
 |DATABASE_LOGOUT_GROUP|포함된 데이터베이스 사용자가 데이터베이스에서 로그아웃하면 발생하는 이벤트입니다. Audit Database Logout 이벤트 클래스와 동일합니다.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|데이터베이스 미러링 전송 보안과 연관된 감사 메시지를 보고하기 위해 발생하는 이벤트입니다. [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)와 동일합니다.|  
-|DATABASE_OBJECT_ACCESS_GROUP|메시지 유형, 어셈블리, 계약과 같은 데이터베이스 개체에 액세스할 때마다 발생하는 이벤트입니다.<br /><br /> 이 이벤트는 모든 데이터베이스의 모든 액세스에 대해 발생합니다. **참고:** 이 다량의 감사 레코드를 초래할 수 있습니다. <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)와 동일합니다.|  
-|DATABASE_OBJECT_CHANGE_GROUP|스키마와 같은 데이터베이스 개체에 대해 CREATE, ALTER 또는 DROP 문이 실행되면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스 개체가 생성, 변경 또는 삭제될 때마다 발생합니다. **참고:** 다량의 감사 레코드가이 발생할 수 있습니다. <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)와 동일합니다.|  
+|DATABASE_OBJECT_ACCESS_GROUP|메시지 유형, 어셈블리, 계약과 같은 데이터베이스 개체에 액세스할 때마다 발생하는 이벤트입니다.<br /><br /> 이 이벤트는 모든 데이터베이스의 모든 액세스에 대해 발생합니다. **참고:**  이 잠재적으로 다량의 감사 레코드가 될 수 있습니다. <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)와 동일합니다.|  
+|DATABASE_OBJECT_CHANGE_GROUP|스키마와 같은 데이터베이스 개체에 대해 CREATE, ALTER 또는 DROP 문이 실행되면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스 개체가 생성, 변경 또는 삭제될 때마다 발생합니다. **참고:**  이 다량의 감사 레코드에 발생할 수 있습니다. <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|데이터베이스 범위 내에서 개체에 대한 소유자가 변경되면 발생하는 이벤트입니다. 이 이벤트는 모든 서버 데이터베이스의 모든 개체 소유권 변경에 대해 발생합니다. [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)와 동일합니다.|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|어셈블리 및 스키마와 같은 데이터베이스 개체에 대해 GRANT, REVOKE 또는 DENY가 실행되면 발생하는 이벤트입니다. 모든 서버 데이터베이스의 모든 개체 사용 권한 변경에 대해 발생하는 이벤트입니다. [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)와 동일합니다.|  
 |DATABASE_OPERATION_GROUP|쿼리 알림 구독 또는 검사점 설정과 같은 데이터베이스 작업이 수행되면 발생하는 이벤트입니다. 이 이벤트는 모든 데이터베이스의 모든 데이터베이스 작업에 대해 발생합니다. [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)와 동일합니다.|  
@@ -177,7 +177,7 @@ ms.locfileid: "48222993"
   
 |동작 그룹 이름|Description|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|다음 명령 중 하나를 실행할 때마다 발생하는 이벤트입니다.<br /><br /> -서버 감사 만들기<br />ALTER SERVER AUDIT<br />DROP SERVER AUDIT<br />-서버 감사 사양 만들기<br />ALTER SERVER AUDIT SPECIFICATION<br />DROP SERVER AUDIT SPECIFICATION<br />-데이터베이스 감사 사양 만들기<br />-ALTER DATABASE AUDIT SPECIFICATION<br />DROP DATABASE AUDIT SPECIFICATION|  
+|AUDIT_ CHANGE_GROUP|다음 명령 중 하나를 실행할 때마다 발생하는 이벤트입니다.<br /><br /> -   CREATE SERVER AUDIT<br />ALTER SERVER AUDIT<br />DROP SERVER AUDIT<br />-서버 감사 사양 만들기<br />ALTER SERVER AUDIT SPECIFICATION<br />DROP SERVER AUDIT SPECIFICATION<br />-   CREATE DATABASE AUDIT SPECIFICATION<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>관련 내용  
  [서버 감사 및 서버 감사 사양 만들기](create-a-server-audit-and-server-audit-specification.md)  

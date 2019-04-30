@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313783"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 작업(Visual Database Tools)
   데이터베이스 디자이너를 사용하여 데이터베이스에 대한 시각적인 다이어그램을 만들 수 있습니다. 다음은 디자이너를 사용하여 데이터베이스 다이어그램 작업을 수행하는 기본적인 내용을 다루는 항목입니다.  

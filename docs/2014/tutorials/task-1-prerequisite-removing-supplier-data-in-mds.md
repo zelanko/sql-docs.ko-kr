@@ -1,5 +1,5 @@
 ---
-title: '태스크 1(필수): MDS에서 공급자 데이터 제거 | Microsoft Docs'
+title: '태스크 1(필수 구성 요소): MDS에서 공급자 데이터 제거 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222526"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수): MDS에서 공급자 데이터 제거
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수 구성 요소): MDS에서 공급자 데이터 제거
   이 작업에서는 MDS에 저장된 공급자 데이터를 제거합니다. 이전 단원에서는 **MDS Excel 추가 기능** 을 사용하여 데이터를 수동으로 업로드했습니다. 이 단원에서 만드는 SSIS 패키지는 데이터를 MDS에 자동으로 업로드합니다. 따라서 SSIS 패키지를 테스트하기 전에 MDS에서 공급자 데이터를 제거하고, 파생 계층을 제거하고, 공급자 및 상태 엔터티를 제거하고 포함된 데이터 없이 공급자 엔터티를 만들어야 합니다.  
   
 1.  시작할 **마스터 데이터 관리자** 로 이동 하 여 **http://localhost/MDS** 또는 MDS를 구성할 때 지정한 응용 프로그램 및 웹 사이트입니다. **마스터 데이터 관리자** 가 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 **홈 페이지**로 전환합니다.  

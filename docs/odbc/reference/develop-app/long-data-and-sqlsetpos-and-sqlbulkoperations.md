@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312858"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 데이터 및 SQLSetPos 및 SQLBulkOperations
 사용 하 여 행을 업데이트 하는 경우 긴 데이터를 보낼 수 SQL 문에서 매개 변수를 사용 하 여 대/소문자 그대로 **SQLBulkOperations** 하거나 **SQLSetPos** 사용 하 여 행을 삽입할 때 또는 **SQLBulkOperations**. 데이터에 대 한 여러 호출을 사용 하 여 부분으로 보내지는 **SQLPutData**합니다. 실행 시 데이터는 전송 하는 열 이라고 *실행 시 데이터 열*합니다.  
@@ -46,4 +46,4 @@ ms.locfileid: "47658431"
   
 6.  호출 **SQLParamData** 다시 가리키는 모든 열에 대 한 데이터 전송에 해당 합니다. 데이터 전송 되지 않은, 드라이버 SQL_NEED_DATA 및 다음 실행 시 데이터 열;에 대 한 고유한 값을 반환 합니다. 모든 실행 시 데이터 열이 있는 경우 응용 프로그램 5 단계를 반환합니다. 모든 실행 시 데이터 열에 대해 전송 된 데이터 행에 대 한 데이터는 데이터 원본에 전송 됩니다. **SQLParamData** SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 및 수를 반환 하면 모든 SQLSTATE는 다음 **SQLBulkOperations** 하거나 **SQLSetPos** 반환할 수 있습니다.  
   
- 이후에 **SQLBulkOperations** 또는 **SQLSetPos** SQL_NEED_DATA를 반환 합니다 이며 데이터의 마지막 실행 시 데이터 열에 대 한 완전히 전송 되기 전에 문에 필요한 데이터 상태에서입니다. 이 상태에서는 응용 프로그램 에서만 호출할 수 **SQLPutData**, **SQLParamData**, **SQLCancel**하십시오 **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수와 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문의 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.
+ 이후에 **SQLBulkOperations** 또는 **SQLSetPos** SQL_NEED_DATA를 반환 합니다 이며 데이터의 마지막 실행 시 데이터 열에 대 한 완전히 전송 되기 전에 문에 필요한 데이터 상태에서입니다. 이 상태에서는 응용 프로그램 에서만 호출할 수 **SQLPutData**, **SQLParamData**, **SQLCancel**하십시오 **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수와 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문의 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 참조 하세요. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 92745085a408503a2b435eb160daf431c7fdaa32
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272837"
 ---
 # <a name="item-member-mdx"></a>Item(멤버)(MDX)
 
@@ -36,7 +36,7 @@ Tuple_Expression.Item( Index )
  반환할 튜플 내의 위치로 특정 멤버를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **항목** 함수는 지정 된 튜플 로부터 멤버를 반환 합니다. 로 지정 된 0부터 시작 위치에서 발견 된 멤버를 반환 하는 함수 *인덱스*합니다.  
+ 합니다 **항목** 함수는 지정 된 튜플 로부터 멤버를 반환 합니다. 함수에 지정 된 0부터 시작 위치에서 발견 된 멤버를 반환 합니다. *인덱스*합니다.  
   
 ## <a name="example"></a>예제  
  다음 예는 열에서 `[2003]` 튜플의 첫 번째 항목인 `[Date].[Calendar Year].&[2003], [Measures].[Internet Sales Amount] ).` 멤버를 반환합니다.  
@@ -50,6 +50,6 @@ Tuple_Expression.Item( Index )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ca43e10edf9f3fefb27fd40487032ebd947c84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281866"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 속성(ADOX)
 열 (인덱스 열에만 해당)에 대 한 정렬 순서를 나타냅니다.  

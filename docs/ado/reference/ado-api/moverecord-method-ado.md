@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242747"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
 이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -47,10 +47,10 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *암호*  
  (선택 사항) A **문자열** 필요한 경우를 확인 하는 암호가 포함 된 *UserName*합니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값을 지정 합니다 **메서드의 동작**합니다. 이 메서드의 동작을 지정 합니다.  
   
- *비동기*  
+ *Async*  
  (선택 사항) A **부울** 값을 때 **True**, 지정이 작업은 비동기 여야 합니다.  
   
 ## <a name="return-value"></a>반환 값  

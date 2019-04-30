@@ -24,26 +24,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239148"
 ---
 # <a name="monitor-memory-usage"></a>메모리 사용량 모니터링
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 주기적으로 모니터링하여 메모리 사용이 일반적인 범위를 벗어나지 않는지 확인할 수 있습니다.  
   
  메모리 부족 상태를 모니터링하려면 다음 개체 카운터를 사용하세요.  
   
--   **Memory: 사용 가능한 바이트**  
+-   **메모리: Available Bytes**  
   
--   **Memory: Pages/sec 수**  
+-   **메모리: Pages/sec**  
   
  **Available Bytes** 카운터는 현재 프로세스에 사용할 수 있는 메모리의 바이트 수를 나타냅니다. **Pages/sec** 카운터는 하드 페이지 폴트 때문에 디스크에서 가져오거나 작업 집합 내의 디스크 여유 공간에 쓴 페이지 수를 나타냅니다.  
   
- **Available Bytes** 카운터 값이 작으면 컴퓨터 전체 메모리가 부족하거나 애플리케이션이 메모리를 해제하지 않는다는 의미입니다. **Pages/sec** 카운터의 비율이 높으면 페이징이 과도하다는 의미입니다. 디스크 작업의 원인이 페이징이 아닌지 확인하려면 **Memory: Page Faults/sec** 카운터를 페이징 하 여 디스크 작업의 원인이 되지 것을 확인 합니다.  
+ **Available Bytes** 카운터 값이 작으면 컴퓨터 전체 메모리가 부족하거나 애플리케이션이 메모리를 해제하지 않는다는 의미입니다. **Pages/sec** 카운터의 비율이 높으면 페이징이 과도하다는 의미입니다. 모니터는 **메모리: Page Faults/sec** 카운터를 모니터링하세요.  
   
- 컴퓨터에 사용 가능한 메모리가 충분하더라도 페이징 및 그로 인한 페이지 폴트 비율은 낮은 것이 일반적입니다. Microsoft Windows VMM(Virtual Memory Manager)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 프로세스의 작업 집합 크기를 줄일 때 이러한 프로세스에서 페이지를 가져옵니다. 이 VMM 작업으로 인해 페이지 폴트가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 다른 프로세스가 과도한 페이징의 원인인지 확인하려면 **Process: Page Faults/sec** 에 대 한 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 인스턴스.  
+ 컴퓨터에 사용 가능한 메모리가 충분하더라도 페이징 및 그로 인한 페이지 폴트 비율은 낮은 것이 일반적입니다. Microsoft Windows VMM(Virtual Memory Manager)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 프로세스의 작업 집합 크기를 줄일 때 이러한 프로세스에서 페이지를 가져옵니다. 이 VMM 작업으로 인해 페이지 폴트가 발생할 수 있습니다. 결정할 여부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 다른 프로세스가 과도 한 페이징의 원인 된 **프로세스: Page Faults/sec** 카운터([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 인스턴스)를 모니터링하세요.  
   
  과도한 페이징을 해결하는 방법은 Windows 운영 체제 설명서를 참조하세요.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "52801565"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 메모리의 양을 모니터링하려면 다음 성능 카운터를 검사하세요.  
   
--   **Process: 작업 집합**  
+-   **프로세스: Working Set**  
   
--   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
+-   **SQL Server: Buffer Manager: 버퍼 캐시 적중률**  
   
--   **SQL Server: Buffer Manager: 데이터베이스 페이지**  
+-   **SQL Server: Buffer Manager: Database pages**  
   
--   **SQL Server: Memory Manager: Total Server Memory (KB)**  
+-   **SQL Server: 메모리 관리자: 총 서버 메모리(KB)**  
   
  **WorkingSet** 카운터는 프로세스에서 사용하는 메모리의 양을 나타냅니다. 이 숫자가 계속 **min server memory** 및 **max server memory** 서버 옵션에 설정된 메모리의 양보다 작으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메모리를 너무 많이 사용하도록 구성된 것입니다.  
   

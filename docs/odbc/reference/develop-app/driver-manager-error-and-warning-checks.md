@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00b6907d58cda1708cf61907d3c5ff6bf56edfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238038"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>드라이버 관리자 오류 및 경고 검사
 드라이버 관리자를 완전히 또는 부분적으로 다양 한 기능을 구현 하 고 오류와 함수에는 경고의 전체 또는 일부 따라서 확인 합니다.  

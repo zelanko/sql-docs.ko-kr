@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd0bb64169f6474874405cfd88476d426a9a6ee0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266546"
 ---
 # <a name="--subtract-mdx"></a>-(빼기)(MDX)
 

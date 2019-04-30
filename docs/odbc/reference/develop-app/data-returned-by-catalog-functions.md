@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267726"
 ---
 # <a name="data-returned-by-catalog-functions"></a>카탈로그 함수에 의해 반환된 데이터
 각 카탈로그 함수는 데이터를 결과 집합으로 반환 합니다. 이 결과 집합은 다른 결과 집합에 다르지 않습니다. 일반적으로 생성 되는 여는 미리 정의 된 매개 변수가 **선택** 드라이버에 하드 코딩 또는 프로시저는 데이터 원본에 저장 된 문입니다. 결과 집합에서 데이터를 검색 하는 방법에 대 한 정보를 참조 하세요 [는 결과 집합 생성 된?](../../../odbc/reference/develop-app/was-a-result-set-created.md)합니다.  

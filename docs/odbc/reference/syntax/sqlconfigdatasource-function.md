@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258856"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 함수(SQLConfigDataSource Function)
 **규칙**  
@@ -51,14 +51,14 @@ BOOL SQLConfigDataSource(
  *hwndParent*  
  [입력] 부모 창 핸들입니다. 핸들을 null 이면 함수는 모든 대화 상자 표시 되지 않습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. 합니다 *문제점과* 인수는 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_ADD_DSN: 새 사용자 데이터 원본을 추가 합니다.  
   
  ODBC_CONFIG_DSN: 구성 (수정) 기존 사용자 데이터 원본입니다.  
   
- 하려면 ODBC_REMOVE_DSN: 기존 사용자 데이터 원본을 제거 합니다.  
+ ODBC_REMOVE_DSN: 기존 사용자 데이터 원본을 제거 합니다.  
   
  ODBC_ADD_SYS_DSN: 새 시스템 데이터 원본을 추가 합니다.  
   
@@ -84,7 +84,7 @@ BOOL SQLConfigDataSource(
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|합니다 *hwndParent* 인수가 잘못 되었거나 NULL입니다.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|합니다 *문제점과* 인수 중 하나 였습니다.<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN 하려면 ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|합니다 *문제점과* 인수 중 하나 였습니다.<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
 |ODBC_ERROR_INVALID_NAME|잘못 된 드라이버 또는 변환기 이름|합니다 *lpszDriver* 인수가 잘못 되었습니다. 레지스트리에서 찾을 수 없습니다.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|잘못 된 키워드-값 쌍|합니다 *lpszAttributes* 인수 구문 오류를 포함 합니다.|  
 |ODBC_ERROR_REQUEST_FAILED|*요청* 실패|설치 관리자에서 요청한 작업을 수행할 수 없습니다는 *문제점과* 인수입니다. 에 대 한 호출 **ConfigDSN** 실패 했습니다.|  
@@ -98,11 +98,11 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** 시스템 DSN 매핑합니다 *문제점과*사용자 DSN에 s *문제점과*(ODBC_ADD_SYS_DSN ODBC_ADD_DSN, ODBC_CONFIG_DSN, 및 ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSN s DSN을 하려면 ODBC_REMOVE_DSN)입니다. 사용자 및 시스템 Dsn을 구분 하기 위해 **SQLConfigDataSource** 설치 프로그램은 다음 표에 따라 구성 모드를 설정 합니다. 를 반환 하기 전에 **SQLConfigDataSource** BOTHDSN 구성 모드 다시 설정 합니다. **ConfigDSN** (드라이버에서 구현 됨)를 호출 해야 **SQLWriteDSNToIni** 하 고 **SQLWritePrivateProfileString** 시스템 DSN을 지원 하도록 합니다. 자세한 내용은 [ConfigDSN 함수](../../../odbc/reference/syntax/configdsn-function.md)합니다.  
   
-|*문제점과*|구성 모드|  
+|*fRequest*|구성 모드|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  
-|하려면 ODBC_REMOVE_DSN|USERDSN_ONLY|  
+|ODBC_REMOVE_DSN|USERDSN_ONLY|  
 |ODBC_ADD_SYS_DSN|SYSTEMDSN_ONLY|  
 |ODBC_CONFIG_SYS_DSN|SYSTEMDSN_ONLY|  
 |ODBC_REMOVE_SYS_DSN|SYSTEMDSN_ONLY|  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242340"
 ---
 # <a name="diagnostic-records"></a>진단 레코드
 각 환경에 연결, 연결, 문 및 설명자 핸들은 *진단 레코드*합니다. 이러한 레코드는 특정 핸들을 사용 하는 마지막 함수 호출에 대 한 진단 정보를 포함 합니다. 레코드는 해당 핸들을 사용 하 여 다른 함수를 호출할 경우에 대체 됩니다. 한 번에 저장할 수 있는 진단 레코드의 수 제한은 없습니다.  

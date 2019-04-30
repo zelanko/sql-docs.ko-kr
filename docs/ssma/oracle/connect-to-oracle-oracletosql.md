@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287735"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle에 연결(OracleToSQL)
 사용 된 **Connect to Oracle** 마이그레이션하려는 Oracle 데이터베이스에 연결 대화 상자.  

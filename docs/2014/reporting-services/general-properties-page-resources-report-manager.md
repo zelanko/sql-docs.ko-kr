@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260666"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>일반 속성 페이지, 리소스(보고서 관리자)
   리소스의 일반 속성 페이지를 사용하여 리소스의 이름을 바꾸거나 리소스를 삭제, 이동 또는 대체할 수 있습니다. 리소스를 추가하거나 속성을 수정한 사람에 대한 정보가 페이지의 맨 위에 표시됩니다.  

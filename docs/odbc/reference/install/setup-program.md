@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280776"
 ---
 # <a name="setup-program"></a>설치 프로그램
-> **참고:** Windows XP 및 Windows Server 2003 부터는 **ODBC Windows 운영 체제에 포함 되어**입니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
+> **참고:** Windows XP 및 Windows Server 2003부터 **ODBC Windows 운영 체제에 포함 되어**입니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
   
  사용자는 설치 프로세스를 시작 하려면 설치 프로그램을 실행 합니다. 설치 프로그램은 응용 프로그램 또는 드라이버 개발자가 기록 됩니다. ODBC 구성 요소를 설치 하는 것 외에도 다른 소프트웨어를 설치할 수 있습니다. 예를 들어, 응용 프로그램 개발자가 ODBC 구성 요소를 설치 하 고 응용 프로그램을 설치 하려면 동일한 설치 프로그램을 사용할 수 있습니다.  
   

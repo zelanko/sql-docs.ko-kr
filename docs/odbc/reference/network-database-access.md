@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272874"
 ---
 # <a name="network-database-access"></a>네트워크 데이터베이스 액세스
 네트워크를 통해 데이터베이스를 액세스, 구성 요소를 각각의 독립적인 프로그래밍 인터페이스를 아래에 있는 숫자에 필요 합니다. 이러한 구성 요소는 다음 그림에 표시 됩니다.  

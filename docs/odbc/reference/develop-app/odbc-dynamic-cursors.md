@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312867"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
-동적 커서는: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 두 개의 행을 인출 하는 동적 커서 및 다른 응용 프로그램에서 그런 다음 이러한 행 중 하나를 업데이트 하 고 다른를 삭제 합니다. 동적 커서 해당 행을 다시 인출 하려고 시도 삭제 된 행을 찾지 못합니다 있지만 업데이트 된 행에 대 한 새 값이 반환 됩니다.  
+동적 커서는: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 동적 커서가 두 행을 페치하고 다른 애플리케이션이 해당 행 중 하나를 업데이트하고 다른 행을 삭제한다고 가정합니다. 동적 커서 해당 행을 다시 인출 하려고 시도 삭제 된 행을 찾지 못합니다 있지만 업데이트 된 행에 대 한 새 값이 반환 됩니다.  
   
  모든 업데이트를 검색 하는 동적 커서 삭제 및 삽입, 둘 다가 자신과 다른 사람이 수행한 합니다. (이 경우 격리 될 수 있습니다 SQL_ATTR_TXN_ISOLATION 연결 특성에서 설정한 대로 트랜잭션 수준) SQL_ATTR_ROW_STATUS_PTR 문 특성에 의해 지정 된 행 상태 배열 이러한 변경 내용이 반영 하 고 SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED, 및 SQL_ROW_ADDED 포함 될 수 있습니다. 동적 커서 행 집합 외부에 있는 삭제 된 행 반환 되지 않으며 따라서 결과 집합에서 삭제 된 행 또는 행 상태 배열에 해당 하는 요소의 존재 여부를 더 이상 인식 하므로 sql_row_deleted가 반환할 수 없습니다. SQL_ROW_ADDED를 호출 하 여 행이 업데이트 하는 경우에 반환 됩니다 **SQLSetPos**다른 커서에서 업데이트 된 경우에 없습니다.  
   

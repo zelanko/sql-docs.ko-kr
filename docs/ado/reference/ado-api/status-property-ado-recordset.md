@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63275888"
 ---
 # <a name="status-property-ado-recordset"></a>Status 속성(ADO 레코드 집합)
 일괄 처리 업데이트와 관련 하 여 현재 레코드 또는 다른 대량 작업의 상태를 나타냅니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1904a77ae104576f2a9f82fc09d8728e2ec88c11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281882"
 ---
 # <a name="rightsenum"></a>RightsEnum
 개체에 권한 또는 그룹 또는 사용자에 대 한 권한을 지정합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "47760511"
 |**adRightUpdate**|1073741824 (및 H40000000)|사용자 또는 그룹에 개체를 업데이트할 수 있는 권한이 있습니다. 와 같은 개체에 대 한 **테이블**, 사용자가 테이블의 데이터를 업데이트할 수 있습니다.|  
 |**adRightWithGrant**|4096 (&H1000)|사용자 또는 그룹 개체에 사용 권한을 부여할 권한이 있습니다.|  
 |**adRightWriteDesign**|2048 (&AMP; H800)|사용자 또는 그룹에 개체에 대 한 디자인을 수정할 수 있는 권한이 있습니다.|  
-|**adRightWriteOwner**|524288 (및 H80000)|사용자 또는 그룹에 개체의 소유자를 수정할 수 있는 권한이 있습니다.|  
+|**adRightWriteOwner**|524288 (&H80000)|사용자 또는 그룹에 개체의 소유자를 수정할 수 있는 권한이 있습니다.|  
 |**adRightWritePermissions**|262144 (및 H40000)|사용자 또는 그룹을 카탈로그에 있는 개체에 대 한 특정 권한을 수정할 수 있습니다.|  
   
 ## <a name="applies-to"></a>적용 대상  

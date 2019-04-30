@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283152"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>클러스터 확인 Analytics Platform System에 대 한 노드 실패 했습니다.
 이 항목에는 클러스터 장애 조치가 발생 한 후 클러스터 장애 조치 경고를 발생 하지 못한 Analytics Platform System (APS) 노드의 이름을 확인 하는 방법을 설명 합니다. 클러스터 장애 조치가 문제 해결의 일환으로, 문제 해결을 위해 Microsoft에 문의 하기 전에 실패 한 노드의 이름을 결정 합니다.  
   
-## <a name="Background"></a>배경  
+## <a name="Background"></a>Background  
 SQL Server PDW에서 고가용성을 위해 제어 노드와 계산 노드 Windows 장애 조치 클러스터의 활성 또는 수동 구성 요소로 구성 됩니다. 중요 한 시스템 요청에 응답 하는 활성 서버가 실패 하면 수동 서버는 장애 조치 하 고 실패 한 서버 기능을 수행 합니다.  
   
 클러스터 장애 조치 후 SQL Server PDW 노드 상태를 보고 하는 경우 수동 서버에는 실패 한 상태 위로 그러나이 분명 하지 않습니다는 서버 또는 노드 실패, 실패 한 서버가 아직 온라인 상태인 경우에 특히. 클러스터 오류를 해결 하려면 장애 조치 노드의 이름을 결정 합니다.  

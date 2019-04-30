@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270598"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
   조건 창에서 스프레드시트 모양의 표 형태에 선택한 항목을 입력하여 표시할 데이터 열, 결과 정렬 방법, 선택할 행 등의 쿼리 옵션을 지정할 수 있습니다. 조건 창에서 지정할 수 있는 내용은 다음과 같습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "52797915"
 |Column|All|계산된 열의 쿼리 또는 식에 사용되는 데이터 열 이름을 표시합니다. 이 열은 가로로 스크롤할 때 항상 표시되도록 설정되어 있습니다.|  
 |별칭|SELECT, INSERT FROM, UPDATE, MAKE TABLE|열의 대체 이름 또는 계산 열에 사용할 수 있는 이름을 지정합니다.|  
 |Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|관련 데이터 열에 대한 테이블 또는 테이블 구조 개체의 이름을 지정합니다. 계산된 열의 경우에는 이 열이 비어 있습니다.|  
-|출력|SELECT, INSERT FROM, MAKE TABLE|쿼리 출력에 데이터 열을 나타낼지 여부를 지정합니다.<br /><br /> 참고: 데이터베이스에서 허용하면 결과 집합에 표시하지 않고 정렬 또는 검색 절에 데이터 열을 사용할 수 있습니다.|  
+|출력|SELECT, INSERT FROM, MAKE TABLE|쿼리 출력에 데이터 열을 나타낼지 여부를 지정합니다.<br /><br /> 참고: 데이터베이스에서 허용 하는 경우 결과 집합에 표시 하지 않고 정렬 또는 검색 절에 대 한 데이터 열을 사용할 수 있습니다.|  
 |정렬 형식|SELECT, INSERT FROM|관련 데이터 열을 쿼리 결과를 정렬하는 데 사용하고 오름차순으로 정렬할 것인지 또는 내림차순으로 정렬할 것인지 지정합니다.|  
 |정렬 순서|SELECT, INSERT FROM|결과 집합을 정렬하는 데 사용되는 데이터 열에 정렬 우선 순위를 지정합니다. 데이터 열의 정렬 순서를 변경하면 다른 모든 열의 정렬 순서도 적절히 업데이트됩니다.|  
 |그룹화 방법|SELECT, INSERT FROM, MAKE TABLE|관련 데이터 열을 사용하여 집계 쿼리를 만들도록 지정합니다. 이 표 형태 열은 **도구** 메뉴에서 **그룹화 방법** 을 선택하거나 SQL 창에 GROUP BY 절을 추가한 경우에만 나타납니다.<br /><br /> 기본적으로 이 열의 값은 **그룹화 방법**으로 설정되어 있으며 열은 GROUP BY 절의 일부가 됩니다.<br /><br /> 이 열의 한 셀로 이동하고 집계 함수를 선택하여 관련 데이터 열에 적용하면 기본적으로 결과 식이 결과 집합에 대한 출력 열로 추가됩니다.|  
@@ -69,7 +69,7 @@ ms.locfileid: "52797915"
 |추가|INSERT FROM|관련 데이터 열에 대상 데이터 열의 이름을 지정합니다. 삽입 원본 쿼리를 만들 때 쿼리 및 뷰 디자이너는 원본과 해당 대상 데이터 열을 일치시킵니다. 쿼리 및 뷰 디자이너가 일치하는 내용을 선택할 수 없는 경우 열 이름을 지정해야 합니다.|  
 |새 값|UPDATE, INSERT INTO|관련 열에 넣을 값을 지정합니다. 리터럴 값 또는 식을 입력합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [다이어그램 창 &#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
  [검색 값 입력 규칙 &#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   

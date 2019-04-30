@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242901"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context 속성(SecurityCertificate 클래스)
   보안 인증서의 컨텍스트를 가져옵니다.  

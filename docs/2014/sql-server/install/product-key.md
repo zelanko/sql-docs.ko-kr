@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f46f391e905ed8ea0bce4aaa4d692e2b79de4ac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276476"
 ---
 # <a name="product-key"></a>제품 키
   제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 유효성을 검사하거나 설치할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 무료 버전을 지정할 수 있습니다.  

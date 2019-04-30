@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253186"
 ---
 # <a name="errors-collection-ado"></a>Errors 컬렉션(ADO)
 모든 포함 된 [오류](../../../ado/reference/ado-api/error-object.md) 단일 공급자 관련 오류에 대 한 응답에서 생성 된 개체입니다.  
@@ -48,4 +48,4 @@ ms.locfileid: "47612231"
   
 ## <a name="see-also"></a>관련 항목  
  [Error 개체](../../../ado/reference/ado-api/error-object.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

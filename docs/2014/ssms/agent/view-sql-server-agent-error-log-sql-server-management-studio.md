@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245607"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 보기(SQL Server Management Studio)
   이 항목에서는  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에이전트 오류 로그를 보는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "54100778"
   
 4.  보려는 오류 로그를 마우스 오른쪽 단추로 클릭하고 **에이전트 로그 보기**를 선택합니다.  
   
-     다음 옵션을 사용할 수는 **로그 파일 뷰어-**_server_name_ 대화 상자:  
+     다음 옵션은 **로그 파일 뷰어-**_server_name_ 대화 상자에서 사용할 수 있습니다.  
   
      **로그 로드**  
      로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  

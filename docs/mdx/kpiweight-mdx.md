@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 325942d8bd0b4aa674266b2f3e40941fc401b277
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270518"
 ---
 # <a name="kpiweight-mdx"></a>KPIWeight(MDX)
 
@@ -36,6 +36,6 @@ KPIWeight(KPI_Name)
  반환된 값은 부모에 대한 KPI의 기여도입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad9be579d37cc8c75375b373ae8ecb624067ad50
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261587"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* 는 서버 id와 메서드 호출 간에 클라이언트의 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 유지 하지 않는 id와 컨텍스트를 클라이언트의 메서드 호출을 완료 하는 조건입니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "50144888"
 > [!NOTE]  
 >  세션 ID는 세션이 유효한 상태를 유지함을 보장하지는 않습니다. 세션이 만료된 경우(예를 들어, 세션의 시간이 초과되거나 연결이 끊어진 경우) 공급자는 해당 세션의 동작을 종료하고 롤백할 수 있습니다. 결과적으로 세션 ID에 대한 클라이언트의 모든 후속 메서드 호출은 세션이 유효하지 않음을 나타내는 오류가 발생하면서 실패합니다. 클라이언트는 이 조건을 처리해야 하며 세션 메서드 호출을 처음부터 다시 보낼 준비를 해야 합니다.  
   
-## <a name="legacy-code-example"></a>레거시 예제 코드  
+## <a name="legacy-code-example"></a>레거시 코드 예제  
  다음 예제에서는 세션이 지원되는 방법을 보여 줍니다.  
   
 1.  세션을 시작하기 위해 SOAP의 BeginSession 헤더를 클라이언트의 아웃바운드 XMLA 메서드 호출에 추가합니다. 처음에는 세션 ID를 알지 못하므로 값 영역이 비어 있습니다.  

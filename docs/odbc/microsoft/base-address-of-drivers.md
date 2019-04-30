@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd0f4faad24b492b1e5f216260861d0dc3c1e0b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301891"
 ---
 # <a name="base-address-of-drivers"></a>드라이버의 기본 주소
 각 ODBC 데스크톱 데이터베이스 드라이버 0x04c0000의 기본 주소를 사용 하 여 연결 되었습니다.

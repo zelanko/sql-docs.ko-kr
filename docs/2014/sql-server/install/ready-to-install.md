@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276084"
 ---
 # <a name="ready-to-install"></a>설치 준비 완료
   설치 준비 완료 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 설치하거나 변경할 기능을 요약해서 보여 줍니다.  

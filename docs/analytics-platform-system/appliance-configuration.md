@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276041"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스 구성 검사 목록
 자체 환경에 대 한 Analytics Platform System을 구성 하는 데 필요한 작업에 대 한 검사 목록을 제공 합니다. 이러한 구성 태스크는 어플라이언스에 사용 하기 전에 필요 합니다.  
@@ -77,7 +77,7 @@ SQL Server PDW**Configuration Manager** (PDWCM)는 어플라이언스 수준 작
 |백업 및 서버를 로드에 InfiniBand 네트워크 어댑터 구성<br /><br />(옵션)|백업 및 서버를 로드 InfiniBand 네트워크를 사용 하 여 SQL Server PDW에 연결을 구성 하려면 현재 활성 InfiniBand 네트워크에 InfiniBand 연결을 확인 하는 DNS 어플라이언스를 허용 하도록 네트워크 어댑터를 구성 해야 합니다.|  
 |Microsoft로 원격 분석 데이터를 보내도록 구성<br /><br />(옵션)|Microsoft로 보내도록 원격 분석 데이터 분석 플랫폼 시스템을 구성 하려면 제어 노드에서 PowerShell 스크립트를 실행 해야 합니다. 특정 지침은 [Microsoft로 원격 분석 피드백 보내기 &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [바이러스 백신 소프트웨어 &#40;Analytics Platform System&#41;](antivirus-software.md)  
 [InfiniBand 네트워크 어댑터를 구성 &#40;SQL Server PDW&#41;](configure-infiniband-network-adapters.md)  
   

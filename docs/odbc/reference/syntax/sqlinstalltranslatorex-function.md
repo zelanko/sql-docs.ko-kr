@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242321"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 함수
 **규칙**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  **Translator** 하 고 **설치** 키워드에 포함 되어야 합니다는 *lpszTranslator* 문자열입니다. 변환 DLL와 함께 나열 됩니다는 **Translator** 키워드 및 변환기 설치 DLL이 함께 나열 합니다 **설치** 키워드. 각 쌍을 NULL 바이트를 사용 하 여 종료 됩니다 하 고 전체 목록을 NULL 바이트를 사용 하 여 종료 됩니다. (즉, 두 개의 NULL 바이트의 끝을 표시 목록입니다.) 형식은 *lpszTranslator* 는 다음과 같습니다.  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*설치-DLL-filename*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [입력] 설치할 변환기 인 또는 null 포인터의 전체 경로입니다. 하는 경우 *lpszPath* 가 null 포인터인 경우 번역은 시스템 디렉터리에 설치 됩니다.  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [출력] 반환할 사용 가능한 바이트의 총 *lpszPathOut*합니다. 반환할 사용 가능한 바이트 수가 보다 크거나 같은 경우 *cbPathOutMax*, 출력 경로 *lpszPathOut* 잘립니다 *pcbPathOutMax* 빼기는 null 종료 문자입니다. 합니다 *pcbPathOut* 인수로 null 포인터를 사용할 수 있습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. *문제점과* 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_INSTALL_INQUIRY: 변환기를 설치할 수 있는지 문의 합니다.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8496eee2134d9f89163fce6b6ad3ef07ba49b1af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276798"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>필터 정보 보기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 클래스의 데이터 열에서 필터를 보는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52802155"
 > [!NOTE]  
 >  할당 값이 있는 비교 연산자는 굵게 서식이 지정되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  
   
   

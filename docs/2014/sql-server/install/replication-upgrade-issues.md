@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282232"
 ---
 # <a name="replication-upgrade-issues"></a>복제 업그레이드 문제
   다음 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 업그레이드에 영향을 줄 수 있는 복제 문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

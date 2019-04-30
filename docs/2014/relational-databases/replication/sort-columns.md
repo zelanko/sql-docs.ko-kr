@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270727"
 ---
 # <a name="sort-columns"></a>열 정렬
   **열 정렬** 대화 상자를 사용하여 복제 모니터에서 하나 이상의 열을 기준으로 표를 정렬할 수 있습니다. 복제 모니터 표의 열 머리글을 클릭하여 단일 열을 기준으로 정렬할 수도 있습니다. 예를 들어 **모든 구독** 탭에서 구독을 상태별로 정렬한 다음 연결 유형별로 정렬하려면 다음 단계를 수행합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9434c4cc81e8a94e87a3afceedc1b40d5ece2c29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309125"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 연결을 열 때 누락 된 매개 변수를 묻는 대화 상자를 표시할지 여부를 지정 합니다.  

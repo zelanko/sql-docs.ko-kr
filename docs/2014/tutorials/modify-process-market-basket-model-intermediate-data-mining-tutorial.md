@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301367"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>시장 바구니 모델 수정 및 처리(중급 데이터 마이닝 자습서)
-  만든 연결 마이닝 모델을 처리하기 전에 두 매개 변수 즉, *지원* 하 고 *확률*합니다.  
+  사용자가 만든 연결 마이닝 모델을 처리 하기 전에 두 매개 변수의 기본값을 변경 해야 합니다. *지원* 하 고 *확률*합니다.  
   
 -   *지원* 유효한 간주 되기 전에 규칙 존재 해야 하는 사례의 백분율을 정의 합니다. 적어도 총 사례 수의 1% 이상에서 규칙을 발견하도록 지정합니다.  
   

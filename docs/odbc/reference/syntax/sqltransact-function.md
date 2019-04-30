@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233343"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 1.0 표준 준수: 사용 되지 않음  
+ 도입 된 버전: ODBC 1.0 표준 준수 합니다. 사용되지 않음  
   
  **요약**  
  Odbc 3. *x*, ODBC 2 *.x* 함수 **SQLTransact** 바뀌었습니다 **SQLEndTran**합니다. 자세한 내용은 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.  

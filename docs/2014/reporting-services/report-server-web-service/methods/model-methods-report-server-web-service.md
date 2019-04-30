@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a1246d422b8ed88b0e9411dc5df5b398d0bfef6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283443"
 ---
 # <a name="model-methods"></a>모델 메서드
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  

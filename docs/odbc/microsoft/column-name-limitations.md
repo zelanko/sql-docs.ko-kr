@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301807"
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름 (예를 들어, 공백) 유효한 문자를 포함할 수 있습니다. 열 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있는 경우 백 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  

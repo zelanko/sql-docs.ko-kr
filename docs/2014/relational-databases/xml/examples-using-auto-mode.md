@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287806"
 ---
 # <a name="examples-using-auto-mode"></a>예를 들면 다음과 같습니다. AUTO 모드 사용
   다음 예에서는 AUTO 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스의 ProductModel 테이블에 있는 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예: 고객, 주문 및 주문 세부 정보 검색  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>예: 고객, 주문 및 주문 세부 정보를 검색합니다.  
  이 쿼리는 특정 고객에 대한 고객, 주문 및 주문 세부 정보를 검색합니다.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>예: AUTO 모드에서 계산 열 지정  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>예: 자동 모드에서 계산된 열 지정  
  이 쿼리는 연결된 개별 고객 이름 및 주문 정보를 반환합니다. 계산 열은 해당 시점에 발생하는 가장 안쪽 수준으로 할당됩니다(이 예에서는 <`SOH`> 요소). 연결된 고객 이름은 결과에서 <`SOH`> 요소의 특성으로 추가됩니다.  
   
 ```  

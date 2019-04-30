@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252863"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>역할 전환 후 로그인 및 작업 관리(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 고가용성 또는 재해 복구 솔루션을 배포하는 경우 **master** 또는 **msdb** 데이터베이스에 해당 데이터베이스에 대해 저장되는 관련 정보를 다시 생성해야 합니다. 대개 관련 정보에는 주 데이터베이스의 작업과 데이터베이스에 연결해야 하는 프로세스 또는 사용자의 로그인이 포함됩니다. 보조/미러 데이터베이스를 호스팅하는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 정보를 복제해야 합니다. 가능하다면 역할이 전환된 후 새 주 데이터베이스에서 프로그래밍 방식으로 해당 정보를 다시 생성하는 것이 가장 좋습니다.  

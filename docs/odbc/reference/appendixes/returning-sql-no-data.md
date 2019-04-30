@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280589"
 ---
 # <a name="returning-sqlnodata"></a>SQL_NO_DATA 반환
 경우는 ODBC 2. *x* 응용 프로그램 사용을 ODBC 3 *.x* 드라이버 호출 **SQLExecDirect**하십시오 **SQLExecute**, 또는 **SQLParamData**, 및 검색된 update 또는 delete 문이 실행 된 ODBC 3 데이터 소스의 모든 행에는 영향을 주지 않았습니다 *.x* 드라이버와 관계 없이 SQL_SUCCESS를 반환 해야 합니다. 경우는 ODBC 3 *.x* 는 ODBC 3을 사용 하는 응용 프로그램 *.x* 드라이버 호출 **SQLExecDirect**를 **SQLExecute**, 또는  **SQLParamData** ODBC 3 동일한 결과 사용 하 여 *.x* 드라이버에서 SQL_NO_DATA를 반환 해야 합니다.  

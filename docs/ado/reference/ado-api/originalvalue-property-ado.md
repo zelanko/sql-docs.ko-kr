@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240002"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 속성(ADO)
 값을 나타내는 [필드](../../../ado/reference/ado-api/field-object.md) 는 이전부터 있던 레코드에서 변경 작업을 수행 합니다.  

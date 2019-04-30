@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312877"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>대체 데이터를 사용한 시계열 예측(중급 데이터 마이닝 자습서)
   이 태스크에서는 전 세계 판매 데이터를 기준으로 새 모델을 작성합니다. 그런 다음 개별 지역 중 한 곳에 전 세계 판매 모델을 적용하는 예측 쿼리를 만듭니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "56010235"
   
     -   계열 키 및 시간 키에 대해 다음 열을 선택합니다.  
   
-         Key time: ReportingDate  
+         키 시간: ReportingDate  
   
-         Key: Region  
+         키: Region  
   
     -   `Input` 및 `Predict`에 대해 다음 열을 선택합니다.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312105"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>4단원: Market Basket 예측 실행
   이 단원에서는 사용 하 여 DMX `SELECT` 에서 만든 연결을 기반으로 예측을 만드는 문을 모델 [단원 2: Market Basket 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)합니다. 예측 쿼리는 DMX `SELECT` 문을 사용하고 `PREDICTION JOIN` 절을 추가하여 만들어집니다. 예측 조인의 구문에 대 한 자세한 내용은 참조 [선택에서 &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)합니다.  
@@ -146,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
-     쿼리가 HL Mountain Tire, Fender Set - Mountain 및 ML Mountain Tire라는 세 개의 제품을 포함하는 테이블을 반환합니다. 테이블에는 반환된 이러한 제품이 확률 순서대로 나열됩니다. 반환된 제품 중 쿼리에 지정된 세 개의 제품과 동일한 시장 바구니에 포함될 가능성이 가장 높은 제품이 테이블 맨 위에 표시됩니다. 그 다음에 오는 두 개의 제품은 시장 바구니에 포함될 가능성이 다음으로 높은 제품입니다. 이 테이블은 예측의 정확도를 설명하는 통계도 포함합니다.  
+     쿼리는 제품이 포함 된 테이블을 반환 합니다. HL Mountain Tire, Fender Set-Mountain 및 ML Mountain Tire 합니다. 테이블에는 반환된 이러한 제품이 확률 순서대로 나열됩니다. 반환된 제품 중 쿼리에 지정된 세 개의 제품과 동일한 시장 바구니에 포함될 가능성이 가장 높은 제품이 테이블 맨 위에 표시됩니다. 그 다음에 오는 두 개의 제품은 시장 바구니에 포함될 가능성이 다음으로 높은 제품입니다. 이 테이블은 예측의 정확도를 설명하는 통계도 포함합니다.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>MINIMUM_PROBABILITY가 0.01인 모델을 사용하여 예측 만들기  
   
@@ -218,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  도구 모음에서 **실행** 단추를 클릭합니다.  
   
-     쿼리가 HL Mountain Tire, Water Bottle 및 Fender Set - Mountain이라는 세 개의 제품을 포함하는 테이블을 반환합니다. 테이블에는 이러한 제품이 확률 순서대로 나열됩니다. 테이블 맨 위에 나타나는 제품은 쿼리에 지정된 세 개의 제품과 동일한 시장 바구니에 포함될 가능성이 가장 높은 제품입니다. 나머지 제품은 시장 바구니에 포함될 가능성이 다음으로 높은 제품입니다. 이 테이블은 예측의 정확도를 설명하는 통계도 포함합니다.  
+     쿼리는 제품이 포함 된 테이블을 반환 합니다. HL Mountain Tire, Water Bottle 및 Fender Set-Mountain 합니다. 테이블에는 이러한 제품이 확률 순서대로 나열됩니다. 테이블 맨 위에 나타나는 제품은 쿼리에 지정된 세 개의 제품과 동일한 시장 바구니에 포함될 가능성이 가장 높은 제품입니다. 나머지 제품은 시장 바구니에 포함될 가능성이 다음으로 높은 제품입니다. 이 테이블은 예측의 정확도를 설명하는 통계도 포함합니다.  
   
      볼 수 있듯이 결과를 쿼리 하는 값을 *MINIMUM_PROBABILITY* 매개 변수가 있는 쿼리에 의해 반환 된 결과 영향을 줍니다.  
   

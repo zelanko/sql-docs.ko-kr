@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e26030a201087f8e99126760296659a3e7f04fe8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306075"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>여러 열에 대해 테이블 조인(Visual Database Tools)
   테이블을 여러 열과 조인할 수 있습니다. 즉, 여러 조건을 만족하는 경우에만 두 테이블에서 행이 일치하는 쿼리를 만들 수 있습니다. 한 테이블에 있는 여러 외래 키 열이 다른 테이블에 있는 여러 기본 키 열과 일치하는 관계가 데이터베이스에 포함된 경우 이 관계를 사용하여 여러 열 조인을 만들 수 있습니다. 자세한 내용은 [테이블 자동 조인&#40;Visual Database Tools&#41;](visual-database-tools.md)을 참조하세요.  

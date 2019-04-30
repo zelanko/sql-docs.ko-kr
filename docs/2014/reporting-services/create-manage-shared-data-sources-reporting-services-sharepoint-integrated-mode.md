@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4920a345d3be827f369257be231654cf193fd04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265638"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>공유 데이터 원본 만들기 및 관리(SharePoint 통합 모드의 Reporting Services)
   SharePoint 라이브러리에서 보고서를 실행하는 경우 연결 정보는 보고서에 링크된 외부 파일에 또는 보고서 내에 정의될 수 있습니다. 연결 정보가 보고서 내에 포함되어 있는 경우 사용자 지정 데이터 원본이라고 하며 연결 정보가 외부 파일에 정의되어 있는 경우 공유 데이터 원본이라고 합니다. 외부 파일은 보고서 서버 데이터 원본 파일(.rsds)이나 Office 데이터 연결 파일(.odc)이 될 수 있습니다.  

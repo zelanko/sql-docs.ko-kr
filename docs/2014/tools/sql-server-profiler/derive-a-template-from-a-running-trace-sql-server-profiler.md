@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 659a6d76fabd2b01d91ae993fc818d81874350c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276308"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>실행 중인 추적으로부터 템플릿 파생(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 실행 중인 기존 추적에서 추적 템플릿을 만드는 방법에 대해 설명합니다.  

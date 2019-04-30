@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe0b12053b9ac7203253e81fa3300d2e4109a129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308894"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 동작을 지정 합니다 [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) 메서드.  
@@ -31,7 +31,7 @@ ms.locfileid: "47681569"
 |**adCopyAllowEmulation**|4|나타내는 *소스* 공급자로 인해이 방법이 실패 하면 작업을 업로드 및 다운로드를 사용 하 여 복사본을 시뮬레이션 하려고 *대상*다른 서버의 되거나 다른에서 처리 공급자 *원본*합니다. 서로 다른 공급자 기능 성능이 제한 될 수도 있고 데이터가 손실 있음을 참고 합니다.|  
 |**adCopyNonRecursive**|2|현재 디렉터리에 있지만 하위 디렉터리의 대상에 복사합니다. 복사 작업은 재귀적이 아님.|  
 |**adCopyOverWrite**|1|파일 또는 디렉터리를 덮어씁니다를 *대상* 기존 파일 또는 디렉터리를 가리킵니다.|  
-|**adCopyUnspecified**|-1|기본. 기본 복사 작업을 수행 합니다: 대상 파일이 나 디렉터리가 이미 있는 경우 작업이 실패 하 고는 작업이 반복적으로 복사 합니다.|  
+|**adCopyUnspecified**|-1|기본. 기본 복사 작업을 수행합니다. 대상 파일 또는 디렉터리가 이미 있는 경우 작업이 실패 하 고는 작업이 반복적으로 복사 합니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 해당  
  이러한 상수는 ADO/wfc 필요가 없습니다.  

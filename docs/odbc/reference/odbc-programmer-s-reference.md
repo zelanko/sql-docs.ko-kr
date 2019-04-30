@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273038"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;참조
 합니다 *ODBC 프로그래머 참조* 다음 섹션이 포함 되어 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "52520180"
   
 |형식|사용 대상|  
 |------------|--------------|  
-|선택 *에서|대문자는 SQL 문, 매크로 이름 및 운영 체제 명령 수준에서 사용 되는 용어를 나타냅니다.|  
+|SELECT * FROM|대문자는 SQL 문, 매크로 이름 및 운영 체제 명령 수준에서 사용 되는 용어를 나타냅니다.|  
 |`RETCODE SQLFetch(hdbc)`|고정 폭 글꼴 샘플 명령줄 및 프로그램 코드에 사용 됩니다.|  
 |*argument*|기울임꼴은은 프로그래밍 방식으로 인수, 사용자 또는 응용 프로그램을 제공 해야 합니다 또는 강조 단어는 정보를 나타냅니다.|  
 |**SQLEndTran**|굵은 나타냅니다 구문은 함수 이름을 포함 하 여 표시 된 대로 정확히 입력 해야 합니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "52520180"
   
 -   언어-무결성 향상 된 기능, ANSI, 1989 ANSI X3.135 1989를 사용 하 여 SQL 데이터베이스입니다.  
   
--   언어-SQL 데이터베이스: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Database Language - SQL: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group 데이터 관리: 구조적된 쿼리 언어 (SQL), 버전 2 (Open Group, 1996).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52520180"
   
 -   Johnston, Tom 및 Osborne를 표시 합니다. *ODBC 개발자 가이드* (Howard W. Sams & 1994 회사인).  
   
--   박 단은 북부: *Windows 다중 DBMS 프로그래밍: C + +, Visual Basic, ODBC, OLE 2 및 도구를 사용 하 여 DBMS 프로젝트용* (Wiley John 및 아들과, Inc., 1995).  
+-   박 단은 북부: *Windows 다중 DBMS 프로그래밍: 사용 하 여 C++, Visual Basic, ODBC, OLE 2 및 DBMS 프로젝트의 도구* (Wiley John 및 아들과, Inc., 1995).  
   
 -   Stegman, Michael O., Signore, Robert, 및 Creamer, John: *분산 환경에서 Open Database Connectivity을 ODBC 솔루션* (Mcgraw-hill, 1995).  
   

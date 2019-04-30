@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281086"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>상호 운용 가능한 SQL 문 생성
 이전 섹션에서 설명 했 듯이 상호 운용 가능한 응용 프로그램에서 ODBC SQL 문법을 사용 해야 합니다. 하지만이 문법을 사용 하 여, 초과 다양 한 추가 문제 상호 운용 가능한 응용 프로그램이 직면 합니다. 예를 들어, 응용 프로그램 무엇입니까 모든 데이터 원본에서 지원 되지 않는 외부 조인과 같은 한 기능을 사용 하려는 경우?  

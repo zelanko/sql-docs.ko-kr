@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244604"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 오류 메시지
 데이터 원본에서 발생 하는 오류에 대 한 ODBC 드라이버에 ODBC 파일 라이브러리에 의해 반환 된 오류 메시지를 반환 합니다. ODBC 드라이버 또는 드라이버 관리자에서 발생 하는 오류에 대 한 오류 메시지 텍스트에 따라 드라이버는 SQLSTATE를 사용 하 여 연결 합니다.  
@@ -36,4 +36,4 @@ ms.locfileid: "47620281"
 |오류 메시지입니다.|오류 위치|  
 |-------------------|--------------------|  
 |[Microsoft] [ODBC 드라이버 관리자] *메시지 텍스트*|드라이버 관리자 (Odbc32.dll)|  
-|[Microsoft] [ODBC *드라이버 이름*]*메시지 텍스트*|ISAM 드라이버 (드라이버 Isam 참조)|
+|[Microsoft][ODBC *driver-name*]*message-text*|ISAM 드라이버 (드라이버 Isam 참조)|

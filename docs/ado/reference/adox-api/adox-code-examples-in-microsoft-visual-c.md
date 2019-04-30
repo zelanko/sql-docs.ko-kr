@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual c + +의에서 ADOX 코드 예제 | Microsoft Docs
+title: Microsoft Visual의 ADOX 코드 예제에서는 C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e72c7714ad5aae30deace933a35f42002ecd3d26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308677"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++의 ADOX 코드 예제
-이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual c + +를 사용 하 여 기록 됩니다.  
+이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual를 사용 하 여 작성 된 C++입니다.  
   
 > [!NOTE]
 >  전체 코드 예제를부터 끝까지, 코드 편집기에 붙여 넣습니다. 예제 부분 예제를 사용 하는 경우 또는 단락 서식이 손실 된 경우 올바르게 실행 되지 않을 수 있습니다.  

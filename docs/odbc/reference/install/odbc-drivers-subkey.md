@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281133"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 드라이버 하위 키
 ODBC 드라이버 하위 키 아래에서 값을 설치 된 드라이버를 나열합니다. 이러한 값의 형식은 다음 표에 표시 됩니다.  
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|*드라이버 설명*|REG_SZ|**설치**|  
+|*driver-description*|REG_SZ|**설치**|  
   
  합니다 *드라이버 설명* 이름은 드라이버 개발자가 정의 됩니다. 일반적으로 드라이버를 사용 하 여 연결 된 dbms의 이름입니다.  
   

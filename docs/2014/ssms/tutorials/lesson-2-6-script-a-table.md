@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316403"
 ---
 # <a name="script-a-table"></a>테이블 스크립팅
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 스크립트를 만들어 테이블을 선택, 삽입, 업데이트 및 삭제하고 저장 프로시저를 작성, 변경, 삭제 또는 실행할 수 있습니다.  
@@ -28,13 +28,13 @@ ms.locfileid: "48091553"
   
 1.  개체 탐색기에서 사용 중인 서버를 확장하고 **데이터베이스**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], **테이블**을 차례로 확장한 다음 **HumanResources.Employee**를 마우스 오른쪽 단추로 클릭하고 **테이블 스크립팅**을 가리킵니다.  
   
-2.  바로 가기 메뉴에는 **CREATE**, **DROP**, **DROP 및 CREATE**, **SELECT**, **INSERT**, **UPDATE**및 **DELETE**의 일곱 개의 스크립트 옵션이 있습니다. **UPDATE**를 가리킨 다음 **새 쿼리 편집기 창**을 클릭합니다.  
+2.  바로 가기 메뉴에 일곱 개의 스크립트 옵션이 있습니다. **만들**, **DROP**, **DROP 및 CREATE**를 **선택**, **INSERT**, **업데이트**, 및 **삭제**합니다. **UPDATE**를 가리킨 다음 **새 쿼리 편집기 창**을 클릭합니다.  
   
 3.  새 쿼리 편집기 창이 열리고 연결이 설정된 다음 전체 Update 문이 표시됩니다.  
   
      이 연습에서는 스크립팅 기능으로 테이블 또는 저장 프로시저 만들기를 스크립팅하는 것 이상의 작업을 수행할 수 있는 방법을 보여 줍니다. 이 새 기능을 사용하면 프로젝트에 데이터 조작 스크립트를 빠르게 추가하고 저장 프로시저를 쉽게 실행할 수 있습니다. 테이블이나 프로시저의 필드가 많을 경우 이 새 기능으로 시간을 크게 절약할 수 있습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [요약: Transact-SQL 작성](../../tutorials/summary-writing-transact-sql.md)  
+ [요약: TRANSACT-SQL 작성](../../tutorials/summary-writing-transact-sql.md)  
   
   

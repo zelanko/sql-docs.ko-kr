@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258829"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 함수(SQLGetCursorName Function)
 **규칙**  
@@ -49,7 +49,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *cursorName*  
+ *CursorName*  
  [출력] 커서 이름을 반환 하는 버퍼에 대 한 포인터입니다.  
   
  경우 *CursorName* 가 null 인 경우 *NameLengthPtr* (문자 데이터에 대 한 null 종료 문자를 제외한) 문자의 총 수를 반환 여전히가 가리키는 버퍼에서 반환할 사용 가능한 *CursorName*합니다.  
@@ -99,6 +99,6 @@ SQLRETURN SQLGetCursorName(
 |실행할 문을 준비합니다.|[SQLPrepare 함수](../../../odbc/reference/syntax/sqlprepare-function.md)|  
 |커서 이름을 설정합니다.|[SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,5 +1,5 @@
 ---
-title: '작업 5: 용어 기반 관계 설정 | Microsoft Docs'
+title: '태스크 5: 용어 기반 관계 설정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277239"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>작업 5: 용어 기반 관계 설정
+# <a name="task-5-setting-term-based-relationships"></a>태스크 5: 용어 기반 관계 설정
   이 태스크에서는 몇 가지 용어 기반 관계에 대 한 값에 대 한 정의 **Supplier Name** 도메인입니다. 용어 기반 관계를 사용하면 도메인에서 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 **Inc.** 로 수정할 수 있습니다 **Incorporated**합니다. DQS는 기술 자료 검색, 정리 또는 일치 프로세스에서 이러한 관계를 사용합니다. 참조 [만들 용어 기반 관계](https://msdn.microsoft.com/library/hh510404.aspx) 대 한 자세한 내용은 합니다.  
   
 1.  선택 **Supplier Name** 에 **도메인 목록**합니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 143fb6409e430b8fcbda7c073b8614cd0ecfcbe2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277553"
 ---
 # <a name="name-mdx"></a>Name(MDX)
 
@@ -52,7 +52,7 @@ Member_Expression.Name
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **이름** 함수가 고유 이름이 아니라 개체의 이름을 반환 합니다.  
+ 합니다 **이름을** 고유 이름이 아니라 개체의 이름을 반환 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -82,6 +82,6 @@ from [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

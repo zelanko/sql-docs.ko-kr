@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305664"
 ---
 # <a name="type-identifiers"></a>형식 식별자
 ODBC SQL 및 C에 해당 하는 데이터의 종류를 설명 하기 위해 두 가지를 정의 *식별자*합니다. 형식 식별자는 SQL 열 또는 C 버퍼 유형을 설명합니다. 것을 **#define** 값 및 일반적으로 함수 인수로 전달 되었거나 메타 데이터에 반환 합니다.  

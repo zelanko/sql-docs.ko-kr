@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c77a06618cddddc06aae962c137433c4905cecb6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282297"
 ---
 # <a name="security-extensions-overview"></a>보안 확장 프로그램 개요
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 확장 프로그램은 사용자 또는 그룹에 대한 인증 및 권한 부여를 제공합니다. 즉, 여러 사용자들이 보고서 서버에 로그온한 다음 각자의 ID에 준하여 서로 다른 태스크나 작업을 수행할 수 있습니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 Windows 계정 프로토콜을 사용하여 시스템에 계정을 보유하고 있다고 주장하는 사용자의 신원을 확인하는 방식의 Windows 기반 인증 확장 프로그램을 사용합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 역할 기반 보안 시스템을 사용하여 사용자에게 권한을 부여합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 역할 기반 보안 모델은 다른 기술의 역할 기반 보안 모델과 비슷합니다.  

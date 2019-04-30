@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6ee8fe09f7a840d32511d3a208a4621612ee9939
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285051"
 ---
 # <a name="count-dimension-mdx"></a>Count(차원)(MDX)
 
@@ -43,8 +43,8 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>관련 항목  
  [Count &#40;튜플&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Count &#40;계층 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count &#40;설정&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;계층 구조 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

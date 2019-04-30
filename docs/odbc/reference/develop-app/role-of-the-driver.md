@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254188"
 ---
 # <a name="role-of-the-driver"></a>드라이버의 역할
 모든 오류 및 경고 드라이버 관리자에서 확인 하지 확인 하 고 생성 하는 상태 레코드를 정렬 하는 드라이버. (ODBC 2입니다. *x* 드라이버 상태 레코드 순서를 지정 하지 않습니다.) 이 오류 및 경고 데이터 잘림, 데이터 변환, 구문 및 상태 전환에 포함합니다. 드라이버는 오류 및 경고 드라이버 관리자에 의해 부분적으로 검사를 검사할 수 있습니다. 예를 들어 드라이버 관리자를 확인 하지만 여부를 값 *작업* 에 **SQLSetPos** 는 드라이버가 지원 되는지 여부를 확인 해야 합니다.  

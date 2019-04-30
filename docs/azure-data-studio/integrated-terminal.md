@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239373"
 ---
 # <a name="integrated-terminal"></a>통합된 터미널
 
@@ -96,15 +96,15 @@ ms.locfileid: "53030437"
 
 Key|Command
 ---|---
-**Ctrl +'**|통합된 터미널을 표시
-**Ctrl + Shift +'**|새 터미널 만들기
-**Ctrl + 위쪽**|위로 스크롤
-**Ctrl + 아래쪽 화살표**|아래로 스크롤하여
-**Ctrl + PageUp**|위로 페이지 스크롤
-**Ctrl + PageDown**|아래로 페이지 스크롤
-**Ctrl + Home**|맨 위로 스크롤
-**Ctrl + End**|맨 아래로 스크롤
-**Ctrl + K**|터미널을 선택 취소
+**Ctrl +'**| 통합된 터미널을 표시
+**Ctrl + Shift +'**| 새 터미널 만들기
+**Ctrl+Up**|위로 스크롤
+**Ctrl+Down**|아래로 스크롤하여
+**Ctrl+PageUp**|위로 페이지 스크롤
+**Ctrl+PageDown**|아래로 페이지 스크롤
+**Ctrl+Home**|맨 위로 스크롤
+**Ctrl+End**|맨 아래로 스크롤
+**Ctrl+K**|터미널을 선택 취소
 
 다른 터미널 명령을 제공 되며 기본 바로 가기에 바인딩할 수 있습니다.
 
@@ -129,7 +129,7 @@ Key|Command
 
 플랫폼 표준을 따라야 하는 복사 및 붙여넣기에 대 한 키 바인딩:
 
-* Linux의 경우: **Ctrl + Shift + C** 고 **Ctrl + Shift + V**
+* Linux: **Ctrl + Shift + C** 고 **Ctrl + Shift + V**
 * Mac: **Cmd + C** 고 **Cmd + V**
 * Windows: **Ctrl + C** 고 **Ctrl + V**
 

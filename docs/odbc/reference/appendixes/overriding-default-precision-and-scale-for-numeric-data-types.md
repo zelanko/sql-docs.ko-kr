@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278306"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>숫자 데이터 형식에 대한 기본 전체 자릿수 및 소수 자릿수 재정의
 호출 하 여 SQL_DESC_TYPE 필드는 카드가 SQL_C_NUMERIC로 설정 되 면 **SQLBindCol** 하거나 **SQLSetDescField**는 카드가 자릿수가 SQL_DESC_SCALE 필드는 0으로 설정 되어 및 SQL_DESC_PRECISION 필드가 설정 되 고, 에 기본 드라이버에서 정의 된 전체 자릿수입니다. 에 마찬가지는 APD의 SQL_DESC_TYPE 필드 중 하나를 호출 하 여 SQL_C_NUMERIC로 설정 된 경우 **SQLBindParameter** 하거나 **SQLSetDescField**합니다. 입력, 입/출력 또는 출력 매개 변수는 것과 마찬가지입니다.  

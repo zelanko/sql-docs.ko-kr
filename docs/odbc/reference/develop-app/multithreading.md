@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254206"
 ---
 # <a name="multithreading"></a>다중 스레딩
 다중 스레드 운영 체제에서 드라이버 스레드로부터 안전 해야 합니다. 즉, 둘 이상의 스레드에서 같은 핸들을 사용 하도록 응용 프로그램에 대 한 수 있어야 합니다. 이렇게 하는 방법을 드라이버 관련 이며 드라이버의 동시에 두 개의 다른 스레드에서 동일한 핸들을 사용 하려는 모든 시도 serialize 하는 것입니다.  

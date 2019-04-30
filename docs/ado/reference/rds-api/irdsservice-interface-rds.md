@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7341f69d500274367c5c0a853d3fadf1261b9ee4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315854"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스(RDS)
 노출 된 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 개체의 더욱 강력한 버전에서 요청된 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 메서드.  

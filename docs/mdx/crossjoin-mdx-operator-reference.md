@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249616"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin-MDX 연산자 참조
 
@@ -36,7 +36,7 @@ Set_Expression * Set_Expression
  지정된 두 매개 변수의 교차곱을 포함하는 집합입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **\* (Crossjoin)** 연산자는 기능적으로 동일는 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
+ 합니다  **\* (Crossjoin)** 연산자는 기능적으로 동일 합니다 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

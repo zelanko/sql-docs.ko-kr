@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239935"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VB)
 이 예제에서는 합니다 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 중에 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리 업데이트 합니다.  

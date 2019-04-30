@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287752"
 ---
 # <a name="arguments-in-catalog-functions"></a>카탈로그 함수의 인수
 모든 카탈로그 함수 인수는 응용 프로그램 반환 되는 데이터의 범위를 제한할 수 있습니다. 예를 들어, 첫 번째 및 두 번째 호출 **SQLTables** 다음 코드에서 세 번째 호출은 Orders 테이블에 대 한 정보를 반환 하는 동안에 모든 테이블에 대 한 정보를 포함 하는 집합 결과 반환 합니다.  
@@ -34,18 +34,18 @@ SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);
   
  카탈로그 함수 문자열 인수가 네 가지 서로 다른 형식에 속합니다: 일반 인수 (OA), 패턴 값 인수 (PV), 식별자 (ID), 인수 및 값 목록 인수 (VL). 대부분의 문자열 인수는 SQL_ATTR_METADATA_ID 문 특성 값에 따라 두 가지 형식의 중 하나일 수 있습니다. 다음 표에서 각 카탈로그 함수에 대 한 인수를 나열 하 고 SQL_ATTR_METADATA_ID는 SQL_TRUE 또는 SQL_FALSE 값에 대 한 인수의 형식에 설명 합니다.  
   
-|기능|인수|입력 하는 경우 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID SQL_FALSE =|입력 하는 경우 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID SQL_TRUE =|  
+|기능|인수|입력 하는 경우 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|입력 하는 경우 SQL_<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
 |**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID ID|  
 |**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName*  *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
-|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID가 ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID ID ID|  
+|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
 |**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
-|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID가 ID ID|  
-|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID가 ID ID|  
-|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID가 ID ID|  
-|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID가 ID ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID VL|  
+|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID ID ID|  
+|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID ID ID|  
+|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID ID ID|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID  VL|  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

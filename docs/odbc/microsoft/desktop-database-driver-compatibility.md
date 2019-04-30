@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d081d53458ec59eb2ac9f05c5c1d47d6991b5010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240356"
 ---
 # <a name="desktop-database-driver-compatibility"></a>데스크톱 데이터베이스 드라이버 호환성
 유니코드는 소프트웨어 문자 인코딩 메서드는 2 바이트의 고정된 폭으로 모든 문자를 처리 합니다. 이 메서드는 1 바이트에서 문자를 나타내므로 256 자로 제한 되는 Windows ANSI 문자 인코딩을 하는 대신 사용 됩니다. 유니코드 65,000 개 문자를 나타낼 수, 있으므로 수용 하는 것 인 문자 표현 되지 않는 다양 한 언어 ANSI 인코딩.  

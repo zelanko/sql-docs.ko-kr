@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 54a1bed6d43deb132dc4acc125e2948852bf7574
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242728"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate 속성(SecurityCertificate 클래스)
   보안 인증서의 유효 기간 끝 날짜를 가져옵니다.  

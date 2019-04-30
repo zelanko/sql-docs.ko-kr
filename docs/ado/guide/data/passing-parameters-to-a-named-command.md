@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302372"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명된 명령에 매개 변수 전달
 명령의 결과로 전달 됩니다와 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에 대 한 되었습니다로 전달 된 *에서* 명명 된 명령에는 변수.  
@@ -93,5 +93,5 @@ objConn.GetOrdersOf "12345", objRs
   
  -유효 하지만 이러한 레코드가 데이터베이스에 존재 하기 때문에 설정 하는 빈 결과 생성 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287145"
 ---
 # <a name="application-and-driver-compatibility"></a>애플리케이션 및 드라이버 호환성
 ODBC 응용 프로그램 및 드라이버는 여러 버전에 해당 하는 것 외에도 범주에 속합니다. 일부 드라이버; 호환 되지 않는 일부 응용이 프로그램 다른 경우에 응용 프로그램 또는 드라이버의 형식 간의 이전 버전과 호환성 문제에는 아무 관계가 있을 수 있습니다.  

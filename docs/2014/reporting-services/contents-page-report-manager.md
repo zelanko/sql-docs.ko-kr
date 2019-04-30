@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b88fcbd191317259c1d2d2c1facfb6e6b1ade1c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265981"
 ---
 # <a name="contents-page-report-manager"></a>내용 페이지(보고서 관리자)
   내용 페이지를 사용하여 현재 폴더의 내용을 보거나, 볼 항목을 선택하거나, 다른 폴더로 이동할 수 있습니다. 폴더를 선택하면 열리는 이 페이지는 보고서 관리자의 홈 페이지이기도 합니다.  

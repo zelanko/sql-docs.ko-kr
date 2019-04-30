@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238085"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47792721"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  일 수 있는 기존 데이터 원본에 연결 하는 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 의 디렉터리나 [테이블 무료](../../odbc/microsoft/visual-foxpro-terminology.md)합니다. UID 및 PWD ODBC 특성 키워드는 무시 됩니다. 다음 표에서 지원 되는 추가 특성 키워드를 나열합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47792721"
 |BackgroundFetch|"Yes" 또는 "No"|  
 |한 부씩 인쇄|"컴퓨터" 또는 다른 데이터 정렬 시퀀스입니다. 지원 되는 데이터 정렬 시퀀스의 목록을 참조 하세요 [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)합니다.|  
 |Description||  
-|단독|"Yes" 또는 "No"|  
+|전용|"Yes" 또는 "No"|  
 |SourceDB|정규화 된 경로 포함 하는 디렉터리 0 개 이상의 [테이블 무료](../../odbc/microsoft/visual-foxpro-terminology.md), 또는 절대 경로 및 파일 이름에 대 한를 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.|  
 |SourceType|"Dbc 입니다" 또는 "DBF"|  
 |버전||  

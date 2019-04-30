@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272939"
 ---
 # <a name="translator-specification-subkeys"></a>변환기 사양 서브 키
 ODBC 변환기 하위 키에 나열 된 각 translator 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 변환기 하위 키 아래에서 해당 값으로 동일한 이름이 있습니다. 이 하위 키 아래의 값 변환기 및 변환기 설치 Dll 사용 횟수의 전체 경로 나열합니다. 값의 형식은 다음 표에 나와 있는 것 처럼입니다.  
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|변환기|REG_SZ|*translator DLL 경로*|  
-|설치 프로그램|REG_SZ|*설치 DLL 경로*|  
+|변환기|REG_SZ|*translator-DLL-path*|  
+|설치 프로그램|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*count*|  
   
  사용 횟수에 대 한 정보를 참조 하세요 [사용량 계산](../../../odbc/reference/install/usage-counting.md) 이 섹션의에서 앞부분입니다.  

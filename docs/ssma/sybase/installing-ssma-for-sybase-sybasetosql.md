@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b859c3b9841945241ac0ec9c5238a479a5ba3343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302814"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA 설치
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)에 대 한 SAP 적응형 Server Enterprise (ASE)에 SAP ASE에서 마이그레이션을 수행 하는 데 사용 하는 클라이언트 응용 프로그램의 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database. 마이그레이션된 데이터베이스의 데이터 마이그레이션 및 ASE 시스템 함수의 사용을 지 원하는 확장 팩을 포함 합니다.  

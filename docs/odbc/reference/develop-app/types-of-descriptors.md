@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305616"
 ---
 # <a name="types-of-descriptors"></a>설명자 형식
 설명자를 다음 중 하나를 설명 하기 위해 사용 됩니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "47797291"
 |**응용 프로그램 버퍼**|응용 프로그램 행 설명자 ()|응용 프로그램 매개 변수 설명자 (APD)|  
 |**구현 버퍼**|구현 행 설명자 (IRD)|IPD (구현 매개 변수 설명자)|  
   
- 매개 변수 또는 행 버퍼에 대 한 구현 및 응용 프로그램 설명자의 해당 레코드의 다른 데이터 형식을 지정 하는 응용 프로그램 드라이버가 데이터 변환을 설명자를 사용 하 여 수행 합니다. 예를 들어, 문자열 형식으로 numeric 및 datetime 값을 변환할 수 있습니다 것입니다. (유효한 변환을 참조 하세요 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ 매개 변수 또는 행 버퍼에 대 한 구현 및 응용 프로그램 설명자의 해당 레코드의 다른 데이터 형식을 지정 하는 응용 프로그램 드라이버가 데이터 변환을 설명자를 사용 하 여 수행 합니다. 예를 들어, 문자열 형식으로 numeric 및 datetime 값을 변환할 수 있습니다 것입니다. (유효한 변환을 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
  설명자를 다양 한 역할을 수행할 수 있습니다. 다른 문을 응용 프로그램에서 명시적으로 할당 하는 모든 설명자를 공유할 수 있습니다. 하나의 문에서 행 설명자를 다른 문에서 매개 변수 설명자를 역할도 할 수 있습니다.  
   

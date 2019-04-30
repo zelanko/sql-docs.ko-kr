@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2ef6c54c8ffb426a619195430cf2cdc98f43006f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238002"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>XPath 쿼리 예제(SQLXML 4.0)
   이 섹션에서는 SQLXML 4.0용 XPath 쿼리 예제를 제공합니다. 이해를 돕기 위해 이 예제 XPath 쿼리는 ADO를 사용하여 실행한 템플릿에 지정합니다. 따라서 이 섹션에 제공되는 SampleSchema1.xml이라는 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  

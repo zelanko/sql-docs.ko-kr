@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266817"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 웹 브라우저를 사용하여 보고서를 보고 보고서 관리자를 실행합니다. 모든 브라우저에서 모든 보고서 기능을 지원하는 것은 아닙니다. 이 항목에서는 보고서 관리자 관리 기능, 보고서 보기 및 Visual Studio의 보고서 뷰어 컨트롤에 대한 지원 및 요구 사항에 대해 설명합니다. 또한 이 항목에는 지원되는 브라우저, 인증 요구 사항 및 스크립트 요구 사항에 대한 기능 가용성이 요약되어 있습니다.  

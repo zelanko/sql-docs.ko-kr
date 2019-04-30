@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20fff124f33bfeccaec665c74687753e2c0af20b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239749"
 ---
 # <a name="charset-property-ado"></a>Charset 속성(ADO)
 문자는 집합을 나타냅니다 텍스트 내용의 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 저장소의 내부 버퍼에 대 한 변환 되어야 합니다 **Stream** 개체입니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "47752341"
   
  **Charset** 텍스트에만 사용 됩니다 **Stream** 개체 ([형식](../../../ado/reference/ado-api/type-property-ado-stream.md) 됩니다 **adTypeText**). 하는 경우이 속성은 무시 됩니다 **형식** 됩니다 **adTypeBinary**합니다.  
   
- 코드 샘플을 보려면 [4 단계: 정보 텍스트 상자를 채우는](../../../ado/guide/data/step-4-populate-the-details-text-box.md)합니다.  
+ 코드 샘플을 참조 하세요. [4 단계: 정보 텍스트 상자를 채우는](../../../ado/guide/data/step-4-populate-the-details-text-box.md)합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

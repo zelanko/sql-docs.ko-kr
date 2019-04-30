@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242915"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server 커서의 데이터 업데이트
   통해 데이터 페치 및 업데이트 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 커서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 같은 고려 사항 및 클라이언트 응용 프로그램에 적용 되는 제약 조건에 의해 네이티브 클라이언트 OLE DB 공급자 소비자 응용 프로그램이 바인딩되어 있습니다.  

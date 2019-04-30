@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252956"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 하 고 사용 하 여 PostgreSQL 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작에 사용 하는 방법을 보여 줍니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres에 연결한 다음 SQL 문을 사용 하 여 데이터베이스를 만들 *tutorialdb* 하 고 쿼리 하 합니다.
@@ -50,13 +50,13 @@ ms.locfileid: "58162154"
    | **사용자 이름** | postgres | 사용 하 여 로그인 하려는 사용자 이름입니다. |
    | **암호(SQL 로그인)** | *password* | 로그인에 사용 된 계정의 암호입니다. |
    | **암호** | *확인* | 연결할 때마다 암호를 입력 하지 않으려면이 확인란을 선택 합니다. |
-   | **데이터베이스 이름** | \<기본값\> | 데이터베이스를 지정 하는 연결 하려는 경우이 입력 합니다. |
-   | **서버 그룹** | \<기본값\> | 이 옵션을 통해이 연결을 만들면 특정 서버 그룹을 할당할 수 있습니다. | 
+   | **데이터베이스 이름** | \<Default\> | 데이터베이스를 지정 하는 연결 하려는 경우이 입력 합니다. |
+   | **서버 그룹** | \<Default\> | 이 옵션을 통해이 연결을 만들면 특정 서버 그룹을 할당할 수 있습니다. | 
    | **이름 (선택 사항)** | *비워 둡니다* | 이 옵션에는 서버에 대 한 이름을 지정할 수 있습니다. | 
 
 5. **연결**을 선택합니다. 
 
-성공적으로 연결 되 면 서버에서 열립니다는 **서버** 보충 합니다.
+성공적으로 연결되면 서버가 **서버** 사이드바에 표시됩니다.
 
 
 ## <a name="create-a-database"></a>데이터베이스 만들기
@@ -79,7 +79,7 @@ ms.locfileid: "58162154"
 쿼리 완료 후 마우스 오른쪽 단추로 클릭 **데이터베이스** 선택한 **새로 고침** 보려는 **tutorialdb** 아래의 목록에는 **데이터베이스** 노드 .
 
 
-## <a name="create-a-table"></a>테이블 만들기
+## <a name="create-a-table"></a>테이블 생성하기
 
  다음 단계는 테이블을 만들 합니다 **tutorialdb**:
 

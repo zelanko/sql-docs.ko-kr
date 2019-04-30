@@ -19,20 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267688"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램을 선언&#39;s ODBC 버전
 응용 프로그램을 연결에서 할당 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 이 특성은 응용 프로그램의 ODBC 2 따르는지 상태입니다. *x* 또는 ODBC 3. *x* 사양에 다음 항목을 사용 하는 경우:  
   
--   **Sqlstate**합니다. SQLSTATE 값이 많은 ODBC 2 다릅니다. *x* 고 ODBC 3. *x*합니다.  
+-   **SQLSTATEs**. SQLSTATE 값이 많은 ODBC 2 다릅니다. *x* 고 ODBC 3. *x*합니다.  
   
 -   **날짜, 시간 및 타임 스탬프 형식 식별자**합니다. 다음 표에서 날짜, 시간 및 ODBC 2에서 타임 스탬프 데이터에 대 한 형식 식별자를 보여 줍니다. *x* 고 ODBC 3. *x*합니다.  
   
-    |ODBC 2입니다. *x*|ODBC 3입니다. *x*|  
+    |ODBC 2.*x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**SQL 유형 식별자**||  
     |SQL_DATE|SQL_TYPE_DATE|  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01ef137ef7297be5171bcfdcacd13c80e4da4624
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301727"
 ---
 # <a name="operator-properties-history-page"></a>운영자 속성(기록 페이지)
   이 페이지를 사용하여 가장 최근에 운영자에게 보낸 알림의 날짜, 시간 및 유형을 확인할 수 있습니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06695bf1770c9e362decac5702dcd924d47c23bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301769"
 ---
 # <a name="connect-options"></a>연결 옵션
 > [!IMPORTANT]  
@@ -34,8 +34,8 @@ ms.locfileid: "47750473"
 |SQL_ODBC_CURSORS|이 연결 특성은 드라이버 관리자에서 구현 됩니다.|  
 |SQL_OPT_TRACE|이 연결 특성은 드라이버 관리자에서 구현 됩니다.|  
 |SQL_OPT_TRACEFILE|이 연결 특성은 드라이버 관리자에서 구현 됩니다.|  
-|SQL_TRANSLATE_DLL|오류를 반환 합니다. "드라이버를 수행할 수 없습니다."|  
+|SQL_TRANSLATE_DLL|오류를 반환합니다. "드라이버를 수행할 수 없습니다."|  
 |SQL_TRANSLATE_OPTION|번역.dll 전달 되는 32 비트 값입니다.|  
-|SQL_TXN_ISOLATION|드라이버 SQL_TXN_READ_COMMITTED만 허용합니다.<br /><br /> 다음 vParams 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE로|  
+|SQL_TXN_ISOLATION|드라이버 SQL_TXN_READ_COMMITTED만 허용합니다.<br /><br /> 다음 vParams 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|이 ODBC 3.0 연결 특성을 사용 하면 Oracle 용 ODBC 드라이버를 사용 하 여 Microsoft 구성 요소 서비스 (또는 MTS, Windows NT를 사용 하는 경우)에 의해 조정 된 분산 트랜잭션에서 수 있습니다. 인터페이스 포인터를 제공 *pITransaction* 으로 트랜잭션에 합니다 *갖고* 인수입니다.|  
 |SQL_ATTR_CONNECTION_DEAD|이 읽기 전용 ODBC 3.5 연결 특성을 사용 하면 Oracle 서버에 연결 실패 했는지 여부를 확인할 수 있습니다. Get만 해당 합니다. 설정할 수 없습니다.|

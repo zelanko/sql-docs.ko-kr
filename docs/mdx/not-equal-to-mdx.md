@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ac3241e7d6acd8ba883cdd59f9410f4a0fd9187d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277521"
 ---
 # <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (같지 않음) (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression <> MDX_Expression
 ## <a name="return-value"></a>반환 값  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   **true 이면** 매개 변수가 모두 null이 고 두 번째 매개 변수를 첫 번째 매개 변수가 아닌 경우.  
+-   **true** 매개 변수가 모두 null이 아닌 경우이 고 두 번째 매개 변수를 첫 번째 매개가 아닌 경우.  
   
--   **false** 경우 매개 변수가 모두 null이 고 첫 번째 매개 변수 두 번째 매개 변수입니다.  
+-   **false** 매개 변수가 모두 null이 아닌 경우이 고 첫 번째 매개 변수가 두 번째 매개 변수와 같은 경우입니다.  
   
 -   매개 변수 중 하나가 Null이거나 둘 다 Null인 경우 Null입니다.  
   

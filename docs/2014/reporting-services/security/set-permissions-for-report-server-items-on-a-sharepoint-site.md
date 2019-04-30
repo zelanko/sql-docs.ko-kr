@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d55ef7730032c782997a75c2b85f402626a89ad8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306247"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정(SharePoint 통합 모드의 Reporting Services)
   기본 보안 설정으로 필요한 액세스 수준을 얻을 수 없는 경우 새 사용 권한 수준을 만들어 특정 보고서 서버 항목이나 작업에 대한 액세스 권한을 제공할 수 있습니다. 사용자 지정 보안 설정은 특정 보고서에 대한 액세스를 제한하려는 경우에 유용할 수 있습니다.  

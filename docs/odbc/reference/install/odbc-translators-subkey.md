@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280787"
 ---
 # <a name="odbc-translators-subkey"></a>ODBC 변환기 하위 키
 ODBC 변환기 하위 키 아래에서 값을 설치 하는 변환기를 나열합니다. 이러한 값의 형식은 다음 표에 표시 됩니다.  
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|*translator desc*|REG_SZ|**설치**|  
+|*translator-desc*|REG_SZ|**설치**|  
   
  합니다 *translator desc* 이름은 translator 개발자가 정의 됩니다.  
   

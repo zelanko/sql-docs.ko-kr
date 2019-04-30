@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287306"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 함수
 **규칙**  
@@ -77,7 +77,7 @@ SQLRETURN  SQLSetConnectInfo(
   
  ODBC 드라이버 개발을 위한 sqlspi.h 포함 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

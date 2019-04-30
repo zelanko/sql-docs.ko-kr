@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b98e1dcaa3a9e688c7d3661047e888752b08b47
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260768"
 ---
 # <a name="linked-reports-methods"></a>링크된 보고서 메서드
   다음 메서드를 사용하여 링크된 항목을 만들고 관리할 수 있습니다.  

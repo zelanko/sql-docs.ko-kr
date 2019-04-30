@@ -1,5 +1,5 @@
 ---
-title: '#Import Visual c + + 구문 인덱스에 대 한 ADO | Microsoft Docs'
+title: '시각적 개체에 대 한 ADO C++ #import 구문 인덱스 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,20 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75fc5d3ac1aecebca938e55c29a80bf5270bbd4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249126"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import Visual c + + 구문 인덱스에 대 한 ADO
-이 인덱스를 기준으로 Microsoft Visual c + + ADO 언어 참조에 대 한 상호 참조 및 **#import** 지시문입니다.  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>시각적 개체에 대 한 ADO C++ #import 구문 인덱스
+이 인덱스를 기준으로 Microsoft Visual ADO 언어 참조에 대 한 상호 참조는 C++ 하며 **#import** 지시문입니다.  
   
  이 특정 인덱스를 사용 하 여 프로그램을 컴파일할 때 파생 된 합니다 **#import** ADO.dll에 대 한 지시문을 다시 포맷 된 \*생성 된.tlh 파일. 메서드, 속성 및 이벤트에 대 한 정보만 유지 되었습니다. 각 속성은 해당 나열 됩니다에 대 한 대체 구문을 선언 "`__declspec(property...)`" 지시문입니다.  
   
- 읽을 수는 것이 좋습니다 [Visual c + + ADO 프로그래밍](../../../ado/guide/appendixes/visual-c-ado-programming.md) 자세한 내용은 합니다.  
+ 읽을 수는 것이 좋습니다 [시각적 C++ ADO 프로그래밍](../../../ado/guide/appendixes/visual-c-ado-programming.md) 에 대 한 자세한 내용은 합니다.  
   
- 메서드 및 속성 구문을 사용 하 여 Visual c + +에서 합니다 **#import** 지시문 다음 요소에 대해 나열 됩니다.  
+ 시각적 개체의 메서드 및 속성 구문 C++ 와 **#import** 지시문 다음 요소에 대해 나열 됩니다.  
   
 -   [ADO 컬렉션](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   

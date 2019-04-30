@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302476"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간에 COMPUTE 명령을 사용한 매개 변수화된 명령
 일반적으로 매개 변수가 있는 shape 추가 명령에 부모 만드는 절 **Recordset** 쿼리 명령 및 자식 만드는 다른 절을 사용 하 여 **레코드 집합** 매개 변수가 있는 쿼리 명령- 즉, 매개 변수 자리 표시자를 포함 하는 명령 (물음표를 "?"). 결과 셰이핑 **레코드 집합** 부모는 상위 수준 차지 두 수준 있고 자식 하위 수준을 차지 합니다.  

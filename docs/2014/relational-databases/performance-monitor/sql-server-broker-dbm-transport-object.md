@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250724"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Broker 및 DBM Transport 개체
   **Broker / DBM Transport** 성능 개체에는 Service Broker 및 데이터베이스 미러링에 대한 네트워킹 정보를 보고하는 성능 카운터가 들어 있습니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
@@ -50,13 +50,13 @@ ms.locfileid: "52748235"
 |**Receive I/O Bytes Total**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 받은 총 바이트 수를 보고합니다.|  
 |**Receive I/O bytes/sec**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 받은 초당 바이트 수를 보고합니다.|  
 |**Receive I/O Len Avg**|이 카운터는 전송 수신 작업의 평균 바이트 수를 보고합니다.|  
-|**수신 I/o 수/초**|이 카운터는 Service Broker/DBM 전송 계층에서 완료한 초당 전송 수신 I/O 작업의 수를 보고합니다. 전송 수신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
+|**Receive I/Os/second**|이 카운터는 Service Broker/DBM 전송 계층에서 완료한 초당 전송 수신 I/O 작업의 수를 보고합니다. 전송 수신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
 |**Send I/O Bytes Total**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 보내 총 바이트 수를 보고합니다.|  
 |**Send I/O bytes/sec**|이 카운터는 Service Broker 엔드포인트와 데이터베이스 미러링 엔드포인트에서 네트워크를 통해 보낸 초당 바이트 수를 보고합니다.|  
 |**Send I/O Len Avg**|이 카운터는 각 전송 송신 작업의 평균 크기를 바이트로 보고합니다. 전송 송신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
 |**Send I/Os/sec**|이 카운터는 완료된 초당 전송 송신 I/O 작업의 수를 보고합니다. 전송 송신 작업에는 둘 이상의 메시지 조각이 포함될 수 있습니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_broker_forwarded_messages&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  

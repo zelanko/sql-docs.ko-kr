@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270446"
 ---
 # <a name="leaves-mdx"></a>Leaves(MDX)
 
 
-  모든 특성 또는 특정 차원에만 속하는 특성으로 구성된 집합을 반환합니다. 반환된 집합의 각 x 특성의 경우, x가 세분성 특성이거나 세분성 특성에 직접 또는 간접적으로 관련되어 있으면 해당 세분성은 조각에 영향을 주지 않고 x 특성에 대해 설정됩니다. **둡니다** 함수는 SCOPE 문 내에 또는 대입의 왼쪽에 사용 하기 위해 설계 되었습니다.  
+  모든 특성 또는 특정 차원에만 속하는 특성으로 구성된 집합을 반환합니다. 반환된 집합의 각 x 특성의 경우, x가 세분성 특성이거나 세분성 특성에 직접 또는 간접적으로 관련되어 있으면 해당 세분성은 조각에 영향을 주지 않고 x 특성에 대해 설정됩니다. 합니다 **둡니다** 함수는 SCOPE 문 내에 또는 대입의 왼쪽에 있는 사용 하기 위해 설계 되었습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,7 +35,7 @@ Leaves( [ Dimension_expression ] )
 ## <a name="remarks"></a>Remarks  
  리프 멤버는 모든 특성 계층에 대한 가장 낮은 수준의 크로스 조인으로 형성된 튜플입니다. 계산 멤버는 제외됩니다.  
   
--   차원 이름이 지정 되는 **둡니다** 함수는 지정 된 차원에 대 한 키 특성의 리프 멤버를 포함 하는 집합을 반환 합니다.  
+-   차원 이름이 지정 된 경우는 **둡니다** 함수는 지정 된 차원에 대 한 키 특성의 리프 멤버를 포함 하는 집합을 반환 합니다.  
   
 -   차원이 여러 측정값 그룹과 연결된 경우 현재 범위의 측정값 차원이 사용됩니다.  
   
@@ -48,6 +48,6 @@ Leaves( [ Dimension_expression ] )
     >  현재 범위의 측정값 그룹에서 일부 특성의 세분성이 같지 않으면 오류가 생성됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

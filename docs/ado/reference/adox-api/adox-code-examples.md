@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d92a7d12f7ea0f60bcd6ea7f89e105962785b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308322"
 ---
 # <a name="adox-code-examples"></a>ADOX 코드 예제
 ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  

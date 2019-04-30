@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bed2868b74087cd0e4c119ada7e29f0c5db73ce5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240512"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
   기본적으로 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 실행하려면 추적 작성에 사용된 Transact-SQL 저장 프로시저와 같은 동일한 사용자 권한이 있어야 합니다. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 실행하려면 사용자에게 ALTER TRACE 권한이 있어야 합니다. 자세한 내용은 [GRANT 서버 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-permissions-transact-sql)을 참조하세요.  
@@ -64,7 +64,7 @@ ms.locfileid: "52754605"
   
  ![SQL Server Profiler 추적 재생 권한](../../database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler 추적 재생 권한")  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)   
  [추적 재생](replay-traces.md)   
  [추적 만들기&#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)   

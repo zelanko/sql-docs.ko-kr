@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66c28295b4b2678903d0fe7115b724db419edd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301937"
 ---
 # <a name="aggregate-function-limitations"></a>집계 함수 제한 사항
 집계 함수 및 비 집계 열 참조를 인수로 단일 SQL 문으로 사용할 수 없습니다.

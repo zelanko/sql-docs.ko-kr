@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73092fcd7091665f9a3dae969b7821cbf9777c9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284449"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN 함수
 **규칙**  
@@ -52,7 +52,7 @@ BOOL SQLWriteFileDSN(
  *lpszAppName*  
  [입력] 응용 프로그램의 이름에 대 한 포인터입니다. 이 "ODBC" ODBC 섹션입니다.  
   
- *lpszkeyname 만들기*  
+ *lpszKeyName*  
  [입력] 읽을 키의 이름에 대 한 포인터입니다. 예약 된 키워드 "설명"을 참조 하십시오.  
   
  *lpszString*  

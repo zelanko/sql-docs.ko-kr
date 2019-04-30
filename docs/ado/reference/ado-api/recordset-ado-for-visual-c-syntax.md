@@ -1,5 +1,5 @@
 ---
-title: 레코드 집합 (Visual c + + 구문에 대 한 ADO) | Microsoft Docs
+title: 레코드 집합 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 806780c69be45983a4021a6e62c8dab15aa61f20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240013"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>레코드 집합(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d4f819a92885cf5d173bcdda53ebf3291c958eac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270106"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>SSMA 용 DB2 구성 요소 제거 (DB2ToSQL)
 완료 했을 때를 DB2에서 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지 클라이언트 구성 요소를 제거할 수 있습니다. 확장 팩을 제거 하면 안 되는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 데이터베이스의 함수를 더 이상 사용 하지 않는 한는 **ssma_DB2** 의 스키마를 **sysdb** 데이터베이스입니다.  
@@ -34,7 +34,7 @@ SSMA를 사용 하 여 제거할 수 있습니다 **프로그램 추가 / 제거
 ## <a name="uninstalling-the-extension-pack"></a>확장 팩을 제거  
 마이그레이션된 데이터베이스의 개체를 사용 하지 마십시오 확실 합니다 **sysdb.ssma_DB2** 스키마, 스키마에서 삭제 하 여 확장 팩을 제거할 수 있습니다-이 없는 Windows 제거  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [클라이언트가 DB2 용 SSMA 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [SQL Server에 SSMA 구성 요소를 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

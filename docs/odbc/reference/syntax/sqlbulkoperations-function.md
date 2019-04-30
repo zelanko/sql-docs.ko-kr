@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237854"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 함수
 **규칙**  
@@ -236,7 +236,7 @@ SQLRETURN SQLBulkOperations(
   
 2.  때 **SQLBulkOperations** 실행 시 데이터 열, 함수는 SQL_NEED_DATA 반환 및 3 단계를 따라 진행 하는 경우 호출 됩니다. (실행 시 데이터 열이 없는 경우 프로세스 완료 되었습니다.)  
   
-3.  응용 프로그램 호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** SQL_NEED_DATA를 반환 합니다. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
+3.  응용 프로그램 호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** returns SQL_NEED_DATA. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
   
     > [!NOTE]  
     >  반환 되는 값 이지만 실행 시 데이터 매개 변수가 실행 시 데이터 열과 비슷한 **SQLParamData** 마다 다릅니다.  
@@ -461,6 +461,6 @@ int main() {
 |커서를 놓고, 행 집합에서 데이터 새로 고침, 업데이트 또는 행 집합의 데이터 삭제|[SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
 |문 특성 설정|[SQLSetStmtAttr 함수](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

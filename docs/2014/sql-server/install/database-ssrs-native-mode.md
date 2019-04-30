@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278556"
 ---
 # <a name="database-ssrs-native-mode"></a>데이터베이스(SSRS 기본 모드)
-  데이터베이스 페이지에서는 하나 이상의 보고서 서버 인스턴스에 내부 스토리지를 제공하는 보고서 서버 데이터베이스를 만들어 구성할 수 있습니다. 원격 보고서 서버 데이터베이스를 사용 하도록 보고서 서버를 구성 하는 경우 사용 해야는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 데이터베이스를 만들려고 합니다.  
+  데이터베이스 페이지에서는 하나 이상의 보고서 서버 인스턴스에 내부 스토리지를 제공하는 보고서 서버 데이터베이스를 만들어 구성할 수 있습니다. 원격 보고서 서버 데이터베이스를 사용하도록 보고서 서버를 구성하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
@@ -29,11 +29,11 @@ ms.locfileid: "48102493"
   
  보고서 서버 데이터베이스는 특정 서버 모드를 지원해야 합니다. 기본 모드는 기본 모드이지만 SharePoint 제품 또는 기술에 대한 대규모 배포에서 보고서 서버를 실행하는 경우에는 SharePoint 통합 모드용으로 보고서 서버 데이터베이스를 만들 수도 있습니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
- 이 페이지를 열려면 시작 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 및 클릭 **데이터베이스** 탐색 창에서. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+ 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작하고 탐색 창에서 **데이터베이스** 를 클릭합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
  **SQL Server 이름**  
- 현재 보고서 서버 데이터베이스에서 **SQL Server 이름** 의 이름을 지정 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 실행 하는 합니다. 로컬 컴퓨터나 원격 컴퓨터에서 기본 또는 명명된 인스턴스를 사용할 수 있습니다.  
+ 현재 보고서 서버 데이터베이스에서 **SQL Server 이름** 은 보고서 서버 데이터베이스를 실행하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 이름을 지정합니다. 로컬 컴퓨터나 원격 컴퓨터에서 기본 또는 명명된 인스턴스를 사용할 수 있습니다.  
   
  **Database Name**  
  서버 데이터를 저장하는 보고서 서버 데이터베이스의 이름을 지정합니다.  
@@ -45,10 +45,10 @@ ms.locfileid: "48102493"
  보고서 서버 데이터베이스를 만들거나 선택하는 데 필요한 모든 단계를 안내하는 마법사가 시작됩니다.  
   
  **자격 증명 유형**  
- 보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 자격 증명을 지정합니다. 서비스 계정, Windows 도메인 사용자, Windows 로컬 사용자를 포함 하는 자격 증명 형식을 지정할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인입니다. 자격 증명을 선택 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)합니다.  
+ 보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 자격 증명을 지정합니다. 지정할 수 있는 자격 증명 유형은 서비스 계정, Windows 도메인 사용자, Windows 로컬 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인입니다. 자격 증명을 선택 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)합니다.  
   
  **사용자 이름**  
- Windows 자격 증명을 사용 하는 경우 도메인 사용자 계정을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하는 경우 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명입니다. Windows 자격 증명을 사용 하는 경우이 형식으로 지정 합니다.  *\<도메인 >\\< 계정\>* 합니다.  
+ Windows 자격 증명을 사용하는 경우 도메인 사용자 계정을 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. Windows 자격 증명을 사용 하는 경우이 형식으로 지정 합니다.  *\<도메인 >\\< 계정\>* 합니다.  
   
  **암호**  
  계정의 암호를 지정합니다.  
@@ -60,6 +60,6 @@ ms.locfileid: "48102493"
  [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

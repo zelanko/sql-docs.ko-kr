@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241144"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save 및 Open 메서드 예제(VB)
 이러한 세 가지 예를 보여 줍니다 하는 방법을 [저장](../../../ado/reference/ado-api/save-method.md) 하 고 [오픈](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 함께 사용할 수 있습니다.  

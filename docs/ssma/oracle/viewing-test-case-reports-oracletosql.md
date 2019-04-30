@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283643"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>테스트 사례 보고서 보기(OracleToSQL)
 테스트 사례 보고서에는 테스트 확인 결과 정보와 일반 테스트 보여 줍니다. 테스트 실패 시 확인 된 개체에 일치 하지 않는 데이터에 대 한 내용은 표시 됩니다.  

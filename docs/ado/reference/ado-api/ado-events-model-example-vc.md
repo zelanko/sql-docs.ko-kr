@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248976"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
-Visual c + + 부분 [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 만든 환경 내에서 이벤트 모델 인스턴스화의 특정 예제는 **#import** 지시문입니다.  
+시각적 개체 C++ 의 섹션 [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md) ADO 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 만든 환경 내에서 이벤트 모델 인스턴스화의 특정 예제는 **#import** 지시문입니다.  
   
  일반적인 설명에 사용 하 여 **adoint.h** 메서드 서명에 대 한 참조로 합니다. 그러나 일반적인 설명에 몇 가지 정보가 약간 변경 사용 결과 **#import** 지시문:  
   

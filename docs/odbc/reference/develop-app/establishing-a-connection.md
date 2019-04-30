@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248352"
 ---
 # <a name="establishing-a-connection"></a>연결 설정
-환경 및 연결 핸들을 할당 하 고 모든 연결 특성을 설정, 후 응용 프로그램 데이터 원본 또는 드라이버에 연결할 준비가 되었습니다. 응용 프로그램이이 작업을 수행 하 여 다른 함수는 세 가지가: **SQLConnect** (핵심 인터페이스 적합성 수준), **SQLDriverConnect** (코어), 및 **SQLBrowseConnect**(수준 1). 각 세 가지 다른 시나리오에 사용할 설계 되었습니다. 에 연결 하기 전에 응용 프로그램으로는 이러한 함수는 확인할 수는 **ConnectFunctions** 반환한 키워드 **SQLDrivers**합니다.  
+환경 및 연결 핸들을 할당 하 고 모든 연결 특성을 설정, 후 응용 프로그램 데이터 원본 또는 드라이버에 연결할 준비가 되었습니다. 응용 프로그램이이 작업을 수행 하 여 세 가지 다른 함수는 **SQLConnect** (핵심 인터페이스 적합성 수준), **SQLDriverConnect** (코어), 및 **SQLBrowseConnect** (수준 1). 각 세 가지 다른 시나리오에 사용할 설계 되었습니다. 에 연결 하기 전에 응용 프로그램으로는 이러한 함수는 확인할 수는 **ConnectFunctions** 반환한 키워드 **SQLDrivers**합니다.  
   
 > [!NOTE]  
 >  일부 드라이버 지 활성 연결 수를 제한 합니다. 응용 프로그램 호출 **SQLGetInfo** 활성 연결 수를 확인 하려면 SQL_MAX_DRIVER_CONNECTIONS 옵션을 사용 하 여 특정 드라이버를 지원 합니다.  

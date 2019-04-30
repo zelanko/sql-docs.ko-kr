@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281935"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 합니다. 합니다 **연결** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어, 모든 경우는 **연결** 없거나 비어 있는 경우 섹션 된 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  
@@ -57,7 +57,7 @@ connectionString
 |부분|설명|  
 |----------|-----------------|  
 |**연결**|이 나타내는 리터럴 문자열은 연결 문자열 입력입니다.|  
-|**_ConnectionString_**|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
+|**_connectionString_**|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
 |**액세스 권한**|이 나타내는 리터럴 문자열에 대 한 액세스 항목입니다.|  
 |**_accessRight_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **액세스 권한 없음** -사용자 데이터 원본에 액세스할 수 없습니다.<br />-   **읽기 전용** -사용자는 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자 읽기 또는 데이터 원본에 쓸 수 있습니다.|  
   

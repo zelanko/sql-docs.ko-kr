@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273145"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
   전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "54128619"
   
  필터 데몬 호스트에서 사용되는 메모리(바이트)는 다음 수식을 사용하여 대략적으로 계산할 수 있습니다.  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  이 수식에서 변수 기본값은 다음과 같습니다.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54128619"
   
 |플랫폼|MB-fdhost.exe 메모리 요구 사항을 추정*F*<sup>1</sup>|최대 서버 메모리-계산 수식*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _탐색 범위 수가_ **&#42;** 50|_M_ **최소값 = (** _T_ **하십시오** 2000 **)-*`F`* -**  500|  
+|x86|_F_ **=** _탐색 범위 수가_ **&#42;** 50|_M_ **=minimum(** _T_ **,** 2000 **)-*`F`*-** 500|  
 |x64|_F_ **=** _탐색 범위 수가_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
  <sup>1</sup> 여러 전체 채우기가 진행에서 하는 경우에 각각 한 fdhost.exe 메모리 요구 사항을 계산 개별적으로 *F1*하십시오 *F2*등입니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248817"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업에 의해 영향을 받는 레코드를 지정 합니다.  

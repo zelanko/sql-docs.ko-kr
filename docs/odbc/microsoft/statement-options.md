@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270019"
 ---
 # <a name="statement-options"></a>명령문 옵션
 > [!IMPORTANT]  
@@ -32,7 +32,7 @@ ms.locfileid: "47829481"
 |----------------------|-----------|  
 |SQL_BIND_TYPE|사용 가능한 메모리 또는 2,147,483,647 바이트를 초과할 수 없습니다.|  
 |SQL_CONCURRENCY|허용 되는 값에 대 한 참조를 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|  
-|에서는 SQL_CURSOR_TYPE|드라이버는 SQL_CURSOR_DYNAMIC를 허용 하지 않습니다. 참조 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 자세한 내용은 합니다. 허용 되는 값에 대 한 참조를 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|  
+|SQL_CURSOR_TYPE|드라이버는 SQL_CURSOR_DYNAMIC를 허용 하지 않습니다. 참조 [SQLSetScrollOptions](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 자세한 내용은 합니다. 허용 되는 값에 대 한 참조를 [커서 유형 및 동시성 조합](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)합니다.|  
 |SQL_GET_BOOKMARK|현재 레코드 수에 대 한 책갈피는 32 비트 정수 값을 반환 합니다. Get만 해당 합니다. 설정할 수 없습니다.|  
 |SQL_KEYSET_SIZE|0에만 설정할 수 있습니다.|  
 |SQL_MAX_ROWS|집합을 결과로 반환할 행의 최대 수입니다.|  

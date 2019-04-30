@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314674"
 ---
 # <a name="sort-property"></a>Sort 속성
 하나 이상의 필드 이름을 나타냅니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 정렬 되어 각 필드를 오름차순 또는 내림차순으로 정렬 되는지 합니다.  

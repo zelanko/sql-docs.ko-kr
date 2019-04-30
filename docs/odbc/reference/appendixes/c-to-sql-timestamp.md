@@ -1,5 +1,5 @@
 ---
-title: 'C에서 SQL로: 타임 스탬프 | Microsoft Docs'
+title: 'C에서 SQL로: Timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241426"
 ---
-# <a name="c-to-sql-timestamp"></a>C에서 SQL로: 타임스탬프
+# <a name="c-to-sql-timestamp"></a>C에서 SQL로: timestamp
 Timestamp ODBC C 데이터 형식에 대 한 식별자가 있습니다.  
   
  SQL_C_TYPE_TIMESTAMP  

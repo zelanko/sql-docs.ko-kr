@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240998"
 ---
 # <a name="decimal-digits"></a>십진수
 합니다 *진수* decimal 및 numeric 데이터 형식 소수점의 오른쪽 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수의 경우에 대 한 확장 정의 되지 않습니다 소수점 오른쪽 자릿수 수가 고정 되어 있지 않으므로. 초 구성 요소를 포함 하는 datetime 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수도 정의 됩니다.  

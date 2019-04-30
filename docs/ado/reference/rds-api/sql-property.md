@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315835"
 ---
 # <a name="sql-property"></a>SQL 속성
 검색에 사용 되는 쿼리 문자열을 나타내고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

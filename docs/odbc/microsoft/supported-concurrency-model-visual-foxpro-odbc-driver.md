@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8528ecb2f34d3f0ef7120c7047865ab5f6c1a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270097"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>지원되는 동시성 모델(Visual FoxPro ODBC 드라이버)
 Visual FoxPro ODBC 드라이버 지원 *읽기 전용 동시성*합니다. 응용 프로그램에서 호출할 수 있습니다 [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY SQL_CONCURRENCY 옵션을 사용 하 여 합니다.  

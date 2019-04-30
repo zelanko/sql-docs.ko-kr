@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305205"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
   보고서 작성기에서 그룹은 데이터 영역에 바인딩된 보고서 데이터 세트의 명명된 데이터 세트입니다. 기본적으로 그룹은 보고서 데이터 세트의 뷰를 구성합니다. 데이터 영역의 모든 그룹은 같은 보고서 데이터 세트의 서로 다른 뷰를 지정합니다.  

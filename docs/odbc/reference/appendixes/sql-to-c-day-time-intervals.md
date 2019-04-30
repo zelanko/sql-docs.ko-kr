@@ -1,5 +1,5 @@
 ---
-title: 'C: SQL 날짜-시간 간격 | Microsoft Docs'
+title: 'SQL에서 C로: 날짜-시간 간격 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270427"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>C: SQL 날짜-시간 간격
+# <a name="sql-to-c-day-time-intervals"></a>SQL에서 C로: 날짜-시간 간격
 
 날짜-시간 간격 ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
 

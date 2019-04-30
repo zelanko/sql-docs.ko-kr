@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240275"
 ---
 # <a name="determining-installed-oracle-components"></a>설치된 Oracle 구성 요소 확인
 > [!IMPORTANT]  
 >  이 기능은 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신, Oracle에서 제공 하는 ODBC 드라이버를 사용 합니다.  
   
- 시스템 (및 해당 버전)에 설치 된 Oracle 구성 요소를 확인 하려면 Oracle 홈 디렉터리 아래의 \Orainst 디렉터리로 이동 합니다. 다음 텍스트 파일 중 하나를 열어: Nt.rgs, Win95.rgs, 또는 Win98.rgs 합니다.  
+ 시스템 (및 해당 버전)에 설치 된 Oracle 구성 요소를 확인 하려면 Oracle 홈 디렉터리 아래의 \Orainst 디렉터리로 이동 합니다. 다음 텍스트 파일 중 하나를 엽니다. Nt.rgs, Win95.rgs, 또는 Win98.rgs 합니다.  
   
  파일 형식은 다음과 비슷합니다.  
   

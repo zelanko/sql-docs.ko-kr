@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270501"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 최소 문법
 이 섹션에서는 ODBC 드라이버를 지원 해야 하는 최소 SQL 구문을 설명 합니다. 이 섹션에 설명 된 구문은 SQL-92의 항목 수준 구문의 하위 집합입니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47818907"
  읽기 전용 데이터 원본만 사용 하는 드라이버에서 변경 되는 데이터를 처리 하는이 섹션에 포함 된 문법의 해당 부분을 지원 하지 않습니다. 응용 프로그램의 경우 데이터 원본 읽기 전용인 지를 호출 하 여이 확인할 수 있습니다 **SQLGetInfo** SQL_DATA_SOURCE_READ_ONLY 정보 형식을 사용 하 여 합니다.  
   
 ## <a name="statement"></a>인수를 제거합니다.  
- *테이블 생성-문* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *기본 테이블 이름*  
   
@@ -38,41 +38,41 @@ ms.locfileid: "47818907"
 > [!IMPORTANT]  
 >  로 *데이터 형식* 에 *테이블 생성-문*, 응용 프로그램에서 반환 된 결과 집합의 TYPE_NAME 열에서 데이터 형식을 사용 해야 합니다 **SQLGetTypeInfo**합니다.  
   
- *delete 문은 검색* :: =  
+ *delete-statement-searched* ::=  
   
- DELETE FROM *테이블 이름* [여기서 *검색 조건을*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
- *drop-테이블-문을* :: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE *기본 테이블 이름*  
   
- *insert 문의* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *테이블 이름* [( *열 식별자* [합니다 *열 식별자*]...)]      값 (*삽입 값*[합니다 *삽입 값*]...)  
   
- *select 문에서* :: =  
+ *select-statement* ::=  
   
  선택 [모든 &#124; DISTINCT] *선택 목록*  
   
  *테이블 참조 목록*  
   
- [여기서 *검색 조건*]  
+ [WHERE *search-condition*]  
   
- [*order by 절*]  
+ [*order-by-clause*]  
   
- *문* :: = *테이블 생성-문*  
+ *statement* ::= *create-table-statement*  
   
- &#124;*delete 문은 검색*  
+ &#124; *delete-statement-searched*  
   
- &#124;*drop table 문*  
+ &#124; *drop-table-statement*  
   
- &#124;*insert 문*  
+ &#124; *insert-statement*  
   
- &#124;*선택 문*  
+ &#124; *select-statement*  
   
- &#124;*업데이트-문-검색*  
+ &#124; *update-statement-searched*  
   
- *업데이트-문-검색*  
+ *update-statement-searched*  
   
  업데이트 *테이블 이름*  
   
@@ -80,7 +80,7 @@ ms.locfileid: "47818907"
   
  [, *열 식별자* = {*식을* &#124; NULL}]...  
   
- [여기서 *검색 조건*]  
+ [WHERE *search-condition*]  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

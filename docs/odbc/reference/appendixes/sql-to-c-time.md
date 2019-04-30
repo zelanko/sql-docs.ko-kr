@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: 시간 | Microsoft Docs'
+title: 'SQL에서 C로: Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259599"
 ---
-# <a name="sql-to-c-time"></a>SQL에서 C로: 시간
+# <a name="sql-to-c-time"></a>SQL에서 C로: Time
 ODBC SQL 데이터 형식은 시간에 대 한 식별자.  
   
  SQL_TYPE_TIME  
@@ -34,8 +34,8 @@ ODBC SQL 데이터 형식은 시간에 대 한 식별자.
 |SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> *9* <= *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> *9* <= *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|없음 [b]|data|6 [d]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|없음 [b]|데이터 [c]|16 [d]|n/a|  
+|SQL_C_TYPE_TIME|없음 [b]|data|6[d]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|없음 [b]|데이터 [c]|16[d]|n/a|  
   
  [a] 시간의 소수 자릿수 초가 잘립니다.  
   

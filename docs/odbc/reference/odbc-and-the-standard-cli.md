@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273311"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 및 표준 CLI
 ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (ODBC 기능은 이러한 표준의 각 상위 집합입니다.)  
   
--   Open Group CAE 사양 "데이터 관리: SQL 호출 수준 인터페이스 (CLI)"  
+-   Open Group CAE 사양 "데이터 관리: SQL 호출 수준 인터페이스 (CLI) "  
   
 -   ISO/IEC 9075-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI)  
   

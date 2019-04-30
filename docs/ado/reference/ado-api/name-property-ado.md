@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3717aa3ec95c92500d66c968446f7711a6cd4e74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242692"
 ---
 # <a name="name-property-ado"></a>Name 속성(ADO)
 개체의 이름을 나타냅니다.  

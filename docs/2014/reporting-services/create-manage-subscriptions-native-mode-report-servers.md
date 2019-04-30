@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265439"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   이 섹션에는 구독 처리, 감독 및 제어 항목이 포함되어 있습니다. 표준 구독인지 데이터 기반 구독인지에 따라 구독 관리가 달라집니다. 표준 구독은 일반적으로 사용자가 소유하고 관리합니다. 반대로 데이터 기반 구독은 보고서 서버 관리자가 만들어 유지 관리합니다.  

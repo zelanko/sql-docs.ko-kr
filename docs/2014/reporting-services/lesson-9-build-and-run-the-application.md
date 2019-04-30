@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278963"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>9단원: 빌드 및 응용 프로그램 실행
+# <a name="lesson-9-build-and-run-the-application"></a>9단원: 애플리케이션 빌드 및 실행
   데이터 테이블에 대한 데이터 필터를 만든 후에는 웹 사이트 애플리케이션을 빌드하고 실행합니다.  
   
 ### <a name="to-build-and-run-the-application"></a>애플리케이션을 빌드하고 실행하려면  

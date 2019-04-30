@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272926"
 ---
 # <a name="odbc-overview"></a>ODBC 개요
 개방형 데이터베이스 연결 (ODBC)는 널리 사용 되는 응용 프로그램 프로그래밍 인터페이스 (API) 데이터베이스 액세스에 대 한 경우 데이터베이스 Api에 대 한 Open Group 및 ISO/IEC 호출 수준 인터페이스 (CLI) 사양을 기반으로 하 고 해당 데이터베이스 액세스 언어로 SQL 구조적 쿼리 언어 ()를 사용 합니다.  

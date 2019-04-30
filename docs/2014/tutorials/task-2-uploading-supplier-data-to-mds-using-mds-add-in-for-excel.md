@@ -1,5 +1,5 @@
 ---
-title: '작업 2: Excel 용 MDS 추가 기능에 사용 하 여 MDS에 공급자 데이터 업로드 | Microsoft Docs'
+title: '태스크 2: Excel 용 MDS 추가 기능에 사용 하 여 MDS에 공급자 데이터 업로드 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250259"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>작업 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>태스크 2: Excel용 MDS 추가 기능을 사용하여 MDS에 공급자 데이터 업로드
   이 작업에서는 정리 및 공급 업체 데이터를 게시할 **MDS** 를 사용 하는 **MDS 추가 기능에 Excel 용**. 라는 엔터티를 만들고 **공급 업체** 에 **Suppliers** 이전 단원에서 만든 모델입니다. 이 엔터티는 Excel 파일의 각 열에 대한 특성을 갖습니다. Supplier 엔터티의 Code 및 Name 특성에 해당 하는 **SupplierID** 하 고 **Supplier Name** Excel의 열입니다.  
   
 1.  오픈 **정리 및 일치 Suppliers.xls** 에 **Excel**합니다.  

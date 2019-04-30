@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc390d06ab21b295f0e5f7a2475d8c91671e843c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298289"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>다이어그램에 텍스트 주석 추가(Visual Database Tools)
   다이어그램에 메모나 설명을 만들어 텍스트 주석을 추가할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "52778935"
 > [!NOTE]  
 >  글꼴을 변경하려면 텍스트 필드를 마우스 오른쪽 단추로 클릭하고 **텍스트 주석 글꼴 설정**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

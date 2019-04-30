@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306363"
 ---
 # <a name="report-sections-dialog-box"></a>보고서 섹션 대화 상자
   보고서 디자이너는 보고서에 하나만 언어 RDL (Report Definition) 포함 되어 있는지 확인 하는 보고서를 열면  **\<구역 >** 요소입니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  

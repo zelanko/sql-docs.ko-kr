@@ -8,11 +8,11 @@ ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
 ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250179"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>태스크 3: Excel 파일에서 도메인 값 가져오기
   이 작업에서는 Excel 파일의 워크시트에서 **State** 도메인에 대한 값을 가져옵니다.  

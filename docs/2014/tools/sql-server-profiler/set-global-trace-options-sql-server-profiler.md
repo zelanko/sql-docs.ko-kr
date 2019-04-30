@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267413"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 특정 인스턴트로 생성되는 모든 추적에 적용되는 옵션을 설정하는 방법에 대해 설명합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "52775385"
         |**60**|기본 값입니다. 차단 프로세스를 _분당 하나만 폴링합니다.|  
         |**86400**|최대값. 차단 프로세스를 **86400** 초당 또는 하루에 하나만 폴링합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](sql-server-profiler.md)   
  [SQL Server 프로파일러](sql-server-profiler.md)  
   

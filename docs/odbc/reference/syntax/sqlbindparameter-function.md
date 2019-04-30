@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237880"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 

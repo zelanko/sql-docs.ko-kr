@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281695"
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
 사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  

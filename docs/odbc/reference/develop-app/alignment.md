@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287456"
 ---
 # <a name="alignment"></a>맞춤
 ODBC 응용 프로그램에서 맞춤 문제는 다른 응용 프로그램에서 보다 일반적으로 더 다릅니다. 즉, 대부분의 ODBC 응용 프로그램 문제가 없거나 거의 맞춤을 사용 합니다. 정렬 되어 있지 않기 주소에 대 한 페널티의 하드웨어 및 운영 체제를 사용 하 여 다르며 성능이 약간 저하 같은 사소한 문제로 또는 런타임 오류로으로 주요 일 수 있습니다. 따라서 ODBC 응용 프로그램 및 이식 가능한 ODBC 응용 프로그램에 특히 주의 해야 데이터를 제대로 정렬 합니다.  

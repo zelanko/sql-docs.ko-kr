@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249673"
 ---
 # <a name="current-mdx"></a>Current(MDX)
 
@@ -33,15 +33,15 @@ Set_Expression.Current
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 반복 중 각 단계에서 수행되는 튜플은 현재 튜플입니다. **현재** 함수는이 튜플을 반환 합니다. 이 함수는 집합에 대해 반복하는 동안에만 유효합니다.  
+ 반복 중 각 단계에서 수행되는 튜플은 현재 튜플입니다. 합니다 **현재** 함수는이 튜플을 반환 합니다. 이 함수는 집합에 대해 반복하는 동안에만 유효합니다.  
   
- 포함 하는 집합에서 반복 되는 MDX 함수는 [생성](../mdx/generate-mdx.md) 함수입니다.  
+ 집합에서 반복 하는 MDX 함수를 포함 합니다 [생성](../mdx/generate-mdx.md) 함수입니다.  
   
 > [!NOTE]  
 >  이 함수는 집합 별칭을 사용하거나 명명된 집합을 정의함으로써 명명된 집합에 대해서만 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 사용 하는 방법을 보여 주는 다음 예제는 **현재** 함수 내 **생성**:  
+ 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 **현재** 함수 내 **생성**:  
   
  `WITH`  
   
@@ -68,6 +68,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251601"
 ---
 # <a name="using-member-functions"></a>멤버 함수 사용
 
 
   멤버 함수는 멤버를 반환하는 MDX(Multidimensional Expressions) 함수입니다. 멤버 함수는 튜플 함수 및 집합 함수와 마찬가지로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용되는 다차원 구조를 처리하는 데 필수적입니다.  
   
- MDX의 많은 멤버 함수 중 가장 중요 한 것은 **CurrentMember** 현재 멤버는 계층 구조를 확인 하는 데 사용 되는 함수입니다. 다음 쿼리는와 함께 사용 하는 방법을 보여 줍니다는 **부모**, **상위**, 및 **Prevmember** 함수:  
+ MDX의 많은 멤버 함수 중 가장 중요 한 것은 **CurrentMember** 계층의 현재 멤버를 확인 하는 데 사용 되는 함수입니다. 다음 쿼리를 함께 사용 하는 방법을 보여 줍니다 합니다 **부모**를 **상위**, 및 **Prevmember** 함수:  
   
  `WITH`  
   

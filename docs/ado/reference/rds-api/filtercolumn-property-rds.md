@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa590c0286f437efb80ad92503e5bfefb62692ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309806"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 속성(RDS)
 필터 조건을 평가 하는 열을 나타냅니다.  

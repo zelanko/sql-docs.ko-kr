@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270743"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
-  [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)에서 제공한 저장 알고리즘을 사용하여 데이터를 저장할 수 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
+  [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)에서 제공한 스토리지 알고리즘을 사용하여 데이터를 저장할 수 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
   
 ## <a name="index-and-table-partitioning"></a>인덱스 및 테이블 분할  
  이 기능을 사용하여 인덱스 및 테이블 데이터를 파티션의 여러 파일 그룹에 분산할 수 있습니다. 파티션 함수는 분할 열이라고 하는 특정 열의 값을 기반으로 파티션 집합에 테이블이나 인덱스의 행을 매핑하는 방식을 정의합니다. 파티션 구성표는 파티션 함수로 지정된 각 파티션을 파일 그룹에 매핑합니다. 이렇게 하면 테이블을 파일 그룹과 물리적 디바이스로 확장하는 보관 전략을 개발할 수 있습니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315155"
 ---
 # <a name="sort-property-example-vc"></a>Sort 속성 예제(VC++)
 이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [정렬](../../../ado/reference/ado-api/sort-property.md) 의 행 순서를 변경 하려면 속성을 **레코드 집합** 에서 파생 된를 ***작성자*** 목차 합니다 **Pubs** 데이터베이스입니다. 보조 유틸리티 루틴을 각 행을 출력합니다.  

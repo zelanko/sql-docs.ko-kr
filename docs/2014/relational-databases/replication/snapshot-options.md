@@ -1,5 +1,5 @@
 ---
-title: SQL 복제에 대 한 스냅숏 초기화 옵션을 수정 | Microsoft Docs
+title: SQL 복제에 대한 스냅숏 초기화 옵션 수정 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270249"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대 한 스냅숏 초기화 옵션 수정
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅숏 초기화 옵션 수정
 
 이 문서에서는 설명의 번호를 수정 하는 방법 옵션 [스냅숏으로 구독 초기화](initialize-a-subscription-with-a-snapshot.md)합니다.
 
@@ -80,7 +80,7 @@ ms.locfileid: "54128214"
 2.  **이 폴더에 있는 스냅숏 파일 압축**을 선택합니다.    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>전과 스냅숏이 적용 된 후 스크립트를 실행 합니다.
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>스냅숏 적용 전후에 스크립트 실행
 
  스냅숏 적용 전후에 구독자에서 스크립트가 실행되도록 지정할 수 있습니다. 각 구독자에서 로그인과 스키마(개체 소유자)를 만드는 작업 등 다양한 작업에 스크립트를 사용할 수 있습니다.  
   

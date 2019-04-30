@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238018"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>날짜 및 시간과 스키마 행 집합
   이 항목에서는 COLUMNS 및 PROCEDURE_PARAMETERS 행 집합에 대한 정보를 제공합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 새로 추가된 향상된 OLE DB 날짜 및 시간 기능과 관련이 있습니다.  
@@ -29,8 +29,8 @@ ms.locfileid: "52774755"
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|지우기|0|  
 |Time|DBTYPE_DBTIME2|Set|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|지우기|3|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|지우기|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|지우기|3|  
 |Datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52774755"
 ## <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|형식-><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
@@ -90,7 +90,7 @@ ms.locfileid: "52774755"
   
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메타 데이터 &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

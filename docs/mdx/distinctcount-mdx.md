@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f0235f14366667dbce21af92cf0418bb6fa1e0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248204"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount(MDX)
 
@@ -33,7 +33,7 @@ DistinctCount(Set_Expression)
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **DistinctCount** 함수는 동일 `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`합니다.  
+ 합니다 **DistinctCount** 함수는 동일 `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`합니다.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 DistinctCount 함수를 사용하는 방법을 보여 줍니다.  
@@ -63,7 +63,7 @@ DistinctCount(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [Count &#40;설정&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

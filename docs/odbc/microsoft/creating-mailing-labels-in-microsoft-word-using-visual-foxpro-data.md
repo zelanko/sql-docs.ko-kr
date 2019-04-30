@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c759e530baf792de7e015eac87337f35cf9f5a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312539"
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Visual FoxPro 데이터를 사용하여 Microsoft Word에서 우편 레이블 만들기
 Windows 95 또는 Windows 98 문서에 대 한 Microsoft Word에서 Visual FoxPro 데이터를 사용할 수 있습니다. 예를 들어, 다음 Visual FoxPro 테이블에 저장 된 고객 정보에서 우편 레이블 만들기 하는 것이 좋습니다.  

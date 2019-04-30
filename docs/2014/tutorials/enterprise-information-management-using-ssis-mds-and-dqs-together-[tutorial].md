@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313858"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>SSIS, MDS 및 DQS를 함께 사용하는 엔터프라이즈 정보 관리 [자습서]
   기업의 정보 관리에는 일반적으로 기업 내부 및 외부의 데이터를 통합하고, 데이터를 정리하고, 데이터를 비교해서 중복 항목을 제거하고, 데이터를 표준화하고, 데이터를 강화하고, 데이터에 대한 법적 및 컴플라이언스 요구 사항을 준수하고, 모든 필수 보안 설정을 사용해서 데이터를 중앙 위치에 저장하는 모든 과정이 포함됩니다.  
@@ -83,6 +83,6 @@ ms.locfileid: "56035404"
 |[5단원: 정리 및 일치 하는 SSIS를 사용 하 여 자동화](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|이 단원에서는 DQS를 사용해서 입력 데이터를 정리하고, 정리된 데이터를 비교해서 중복 항목을 제거하고, MDS에서 정리 및 일치된 데이터를 자동화된 방식으로 저장하는 SSIS 솔루션을 만듭니다.|75|  
   
 ## <a name="next-steps"></a>다음 단계  
- 자습서를 시작하려면 첫 번째 단원으로 이동하십시오. [1단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)합니다.  
+ 자습서를 시작 하려면 첫 번째 단원으로 이동 합니다. [1단원: 공급자 DQS 기술 자료 만들기](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)합니다.  
   
   

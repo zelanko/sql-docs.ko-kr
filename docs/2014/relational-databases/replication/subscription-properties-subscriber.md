@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250266"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 복제 구독 속성 
 이 섹션의 정보를 제공 합니다 **구독 속성** 대화 상자. 
@@ -43,7 +43,7 @@ ms.locfileid: "54134983"
   
  각 에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조하십시오.  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>트랜잭션 구독에 대 한 게시자 옵션  
+### <a name="publisher-options-for-transactional-subscriptions"></a>트랜잭션 구독에 대한 게시자 옵션  
  **트랜잭션 루핑 방지**  
  배포 에이전트가 구독자에서 나온 트랜잭션을 다시 구독자에 전송하는지 여부를 결정합니다. 이 옵션은 양방향 트랜잭션 복제에 사용됩니다. 자세한 내용은 [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md)를 참조하세요.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54134983"
   
 ### <a name="options-for-merge-subscriptions"></a>병합 구독에 대한 옵션  
  **파티션 정의(HOST_NAME)**  
- 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **Suser_sname** 나 **host_name ()** 합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터를 사용 하는 게시에 대 한 병합 복제 중 하나를 계산 두 시스템 함수 (또는 필터가 두 함수를 참조 하는 경우 둘 다) 동기화는 구독자가 수신할 데이터를 확인 하는 동안: **SUSER_SNAME()** 또는 **HOST_NAME()** 중 하나의 시스템 함수(필터가 두 함수를 모두 참조하는 경우에는 둘 다)를 계산하여 구독자가 받아야 하는 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독 유형** 및 **우선 순위**  
  구독이 클라이언트 구독인지 서버 구독인지를 표시합니다. 구독을 만든 후에는 구독 유형을 변경할 수 없습니다. 서버 구독은 데이터를 다른 구독자에 다시 게시할 수 있으며 충돌 해결을 위한 우선 순위를 할당 받을 수 있습니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "54134983"
   
 ### <a name="options-for-merge-subscriptions"></a>병합 구독에 대한 옵션  
  **파티션 정의(HOST_NAME)**  
- 매개 변수가 있는 필터를 사용하는 게시의 경우 병합 복제는 동기화하는 동안 **Suser_sname** 나 **host_name ()** 합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터를 사용 하는 게시에 대 한 병합 복제 중 하나를 계산 두 시스템 함수 (또는 필터가 두 함수를 참조 하는 경우 둘 다) 동기화는 구독자가 수신할 데이터를 확인 하는 동안: **SUSER_SNAME()** 또는 **HOST_NAME()** 중 하나의 시스템 함수(필터가 두 함수를 모두 참조하는 경우에는 둘 다)를 계산하여 구독자가 받아야 하는 데이터를 결정합니다. 기본적으로 **HOST_NAME()** 은 병합 에이전트가 실행 중인 컴퓨터의 이름을 반환하지만 새 구독 마법사에서 이 값을 재정의할 수 있습니다. 매개 변수가 있는 필터에 대한 자세한 내용과 **HOST_NAME()** 을 재정의하는 방법은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
  **구독 유형** 및 **우선 순위**  
  구독이 클라이언트 구독인지 서버 구독인지를 표시합니다. 구독을 만든 후에는 구독 유형을 변경할 수 없습니다. 서버 구독은 데이터를 다른 구독자에 다시 게시할 수 있으며 충돌 해결을 위한 우선 순위를 할당 받을 수 있습니다.  

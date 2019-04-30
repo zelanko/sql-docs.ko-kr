@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233073"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>이전 SQL Server 버전 관련 새로운 날짜 및 시간 기능(OLE DB)
   이 항목에서는 향상 된 날짜 및 시간 기능을 사용 하는 클라이언트 응용 프로그램의 버전을 사용 하 여 통신 하는 경우 예상 되는 동작을 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 및의 버전을 사용 하 여 컴파일한 클라이언트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 이전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 날짜 및 시간 기능 향상 된 지 원하는 서버에 명령을 보냅니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- 버전을 사용 하는 클라이언트 응용 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 으로 새로운 날짜/시간 유형을 보려면 `nvarchar` 열입니다. 열의 내용은 리터럴 표현입니다. 자세한 내용은 문자열 및 리터럴"섹션 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-ole-db-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 전체 자릿수에 대한 최대 리터럴 길이입니다.  
+ 버전을 사용 하는 클라이언트 응용 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 으로 새로운 날짜/시간 유형을 보려면 `nvarchar` 열입니다. 열의 내용은 리터럴 표현입니다. 자세한 내용은 참조는 "데이터 형식: 문자열 및 리터럴"섹션 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-ole-db-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 전체 자릿수에 대한 최대 리터럴 길이입니다.  
   
  카탈로그 API는 클라이언트에 반환된 하위 수준 데이터 형식 코드(예: `nvarchar`)와 일관된 메타데이터 및 관련된 하위 수준 표현(예: 적절한 리터럴 형식)을 반환합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "52774685"
 |--------------------|-----------|-----------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |Time|DBTYPE_WSTR|8, 10..16|~0|~0|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -81,8 +81,8 @@ ms.locfileid: "52774685"
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
 |date|DBTYPE_WSTR|10|NULL|NULL|  
 |Time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |Datetime2|DBTYPE_WSTR|19,21..27|NULL|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|NULL|NULL|  
   
@@ -93,8 +93,8 @@ ms.locfileid: "52774685"
 |--------------------|-----------|------------------|----------------|------------|  
 |date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
 |Datetime2|DBTYPE_WSTR|19,21..27|~0|~0|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|~0|~0|  
   
@@ -108,8 +108,8 @@ ms.locfileid: "52774685"
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
 |date|DBTYPE_WSTR|10|20|NULL|  
 |Time|DBTYPE_WSTR|8, 10..16|16,20..32|NULL|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
+|Datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
 |Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
@@ -120,15 +120,15 @@ ms.locfileid: "52774685"
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
 |date|DBTYPE_WSTR|10|20|date|  
 |Time|DBTYPE_WSTR|8, 10..16|16,20..32|Time|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
-|DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
+|Smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|Smalldatetime|  
+|Datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|Datetime|  
 |Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|Datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
-|형식 -><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
+|형식-><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  

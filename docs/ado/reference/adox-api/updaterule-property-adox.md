@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5845f8f595ee58c0085f022eff7f7c499887a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281508"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성(ADOX)
 작업을 수행할 때 기본 나타냅니다 [키](../../../ado/reference/adox-api/key-object-adox.md) 업데이트 됩니다.  

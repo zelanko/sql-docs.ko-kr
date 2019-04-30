@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281004"
 ---
 # <a name="odbc-subkey"></a>ODBC 하위 키
 ODBC 하위 키 아래에서 값을 ODBC 추적 옵션을 지정합니다. 이러한 옵션은 표시 하 여 ODBC 데이터 원본 관리자 대화 상자의 추적 탭을 통해 설정 **SQLManageDataSources**합니다. ODBC 하위 키 자체는 선택 사항입니다. 이러한 값의 형식은 다음 표와에서 같이 합니다.  
@@ -28,7 +28,7 @@ ODBC 하위 키 아래에서 값을 ODBC 추적 옵션을 지정합니다. 이�
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*tracefile 경로*|  
+|TraceFile|REG_SZ|*tracefile-path*|  
   
  값은 다음 표에 설명 된 의미가 있습니다.  
   

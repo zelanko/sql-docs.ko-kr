@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312518"
 ---
 # <a name="using-arrays-of-parameters"></a>매개 변수 배열 사용
 응용 프로그램이 호출 매개 변수의 배열을 사용 하 **SQLSetStmtAttr** 사용 하 여는 *특성* 인수의 SQL_ATTR_PARAMSET_SIZE 매개 변수 집합의 수를 지정 합니다. 호출한 **SQLSetStmtAttr** 사용 하 여는 *특성* 드라이버 수를 처리 하는 매개 변수 집합의 수를 반환 하는 변수의 주소를 지정 하는 SQL_ATTR_PARAMS_PROCESSED_PTR 인수 포함 하 여 오류를 설정합니다. 호출한 **SQLSetStmtAttr** 사용 하 여는 *특성* 매개 변수 값의 각 행에 대 한 상태 정보를 반환 하는 배열을를 가리키도록 SQL_ATTR_PARAM_STATUS_PTR의 인수입니다. 드라이버는 이러한 주소 문에 대 한 유지 관리 구조에 저장 합니다.  

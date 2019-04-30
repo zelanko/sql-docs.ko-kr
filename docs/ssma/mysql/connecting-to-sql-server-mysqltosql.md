@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 64dd3fae9776c09f81571a721aa53753e34fbb17
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273506"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)
 SQL Server로 MySQL 데이터베이스를 마이그레이션하려면 대상 인스턴스의 SQL Server에 연결 해야 합니다. 에 연결 하면 SSMA SQL Server 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Server 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA 연결 해도 암호를 저장 하지 않으므로 SQL Server의 인스턴스 정보를 저장 합니다.  

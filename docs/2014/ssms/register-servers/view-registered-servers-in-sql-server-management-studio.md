@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7581046ac53ec6c687ce01d8bb15cf2e33feb67c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242778"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>SQL Server Management Studio에서 등록된 서버 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버를 보는 방법에 대해 설명합니다.  

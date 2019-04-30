@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db00ac11e2e3ec8cc0119dfa7f34452409689d6d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270929"
 ---
 # <a name="sql-to-c-data-conversion-examples"></a>SQL에서 C로 데이터 변환 예제
 
