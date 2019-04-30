@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748345"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>원격 파티션 - 고급 설정 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **원격 파티션 - 고급 설정** 대화 상자를 사용하여 원격 파티션을 유지 관리하는 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 나타내는 데이터 원본의 연결 문자열과 같은 고급 설정을 편집하는 동시에 **데이터베이스 복원** 대화 상자를 사용하여 원격 백업 파일에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스로 원격 파티션을 복원할 수 있습니다. **원격 파티션 - 고급 설정** 대화 상자는 **원격 파티션 복원** 옵션을 선택한 후 원격 파티션에 대한 줄임표 단추( **...** )를 클릭하여**데이터베이스 복원**대화 상자의 **파티션** 페이지에서 표시할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48074933"
 |**백업 파일**|나열된 원격 파티션에 대해 복원될 데이터가 포함된 원격 백업 파일의 이름을 표시합니다.<br /><br /> 참고: 백업 파일이 표시 되지 않습니다 원격 백업 파일에 지정 된 경우는 **백업 파일** 열에는 **파티션을** 페이지를 **Restore Database** 대화 상자.|  
 |**연결 문자열**|**데이터 원본 이름**에 표시된 데이터 원본에 대한 연결 문자열을 표시합니다.|  
 |**편집**|**데이터 연결 속성** 대화 상자를 표시하고 연결 문자열에 포함된 속성을 편집하려면 클릭합니다.|  
-|**파티션 목록**|원격 파티션을 복원할 다른 위치를 지정하려면 선택합니다. 큐브의 원격 파티션에 대해 기본 위치 이외의 위치를 지정한 경우에만 원격 파티션의 복원 폴더를 변경할 수 있습니다. 이 옵션을 선택하면 활성화되는 다음 표는 각 원격 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.<br /><br /> **큐브**: 원격 파티션이 포함 된 큐브의 이름을 표시 합니다.<br /><br /> **MeasureGroup**: 원격 파티션이 포함 된 측정값 그룹의 이름을 표시 합니다.<br /><br /> **파티션**: 원격 파티션의 이름을 표시 합니다.<br /><br /> **크기 (MB)**: (메가바이트) 원격 파티션의 크기를 표시 합니다.<br /><br /> **사용 된 원래 폴더**:는 원격 파티션이 저장 된 원래 폴더의 이름을 표시 합니다.<br /><br /> **복원 폴더**: 원격 파티션의 복원 폴더의 이름을 입력 하거나 줄임표 단추 (**...** )를 표시 합니다 **원격 폴더 찾아보기** 대화 상자를 사용 하 여 폴더의 경로 선택 합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**파티션 목록**|원격 파티션을 복원할 다른 위치를 지정하려면 선택합니다. 큐브의 원격 파티션에 대해 기본 위치 이외의 위치를 지정한 경우에만 원격 파티션의 복원 폴더를 변경할 수 있습니다. 이 옵션을 선택하면 활성화되는 다음 표는 각 원격 파티션에 대한 복원 폴더를 지정하는 데 사용됩니다.<br /><br /> **큐브**: 원격 파티션이 포함된 큐브의 이름을 표시합니다.<br /><br /> **MeasureGroup**: 원격 파티션이 포함된 측정값 그룹의 이름을 표시합니다.<br /><br /> **파티션**: 원격 파티션의 이름을 표시합니다.<br /><br /> **크기(MB)**: 원격 파티션의 크기(MB)를 표시합니다.<br /><br /> **원본 폴더**: 원격 파티션이 저장된 원본 폴더의 이름을 표시합니다.<br /><br /> **복원 폴더**: 원격 파티션에 대한 복원 폴더의 이름을 입력하거나 줄임표 단추(**...**)를 클릭하여 **원격 폴더 찾아보기** 대화 상자를 표시한 다음 사용할 폴더의 경로를 선택합니다. **원격 폴더 찾아보기** 대화 상자에 대한 자세한 내용은 [원격 폴더 찾아보기 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

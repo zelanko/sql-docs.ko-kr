@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814669"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기(SQL Server PowerShell)
   이 항목에서는 PowerShell을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 사용할 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "48157523"
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **데이터베이스 미러링 엔드포인트를 만드는 데 사용되는 도구:**[PowerShell](#PowerShellProcedure)  
+-   **데이터베이스 미러링 엔드포인트를 만들려면 다음을 사용합니다.**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
   
@@ -45,7 +45,7 @@ ms.locfileid: "48157523"
   
 1.  데이터베이스 미러링 엔드포인트를 만들 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  ph x="1" /&gt; cmdlet을 사용하여 엔드포인트를 만든 다음 `Set-SqlHadrEndpoint`를 사용하여 엔드포인트를 시작합니다.  
+2.  `New-SqlHadrEndpoint` cmdlet을 사용하여 엔드포인트를 만든 다음 `Set-SqlHadrEndpoint`를 사용하여 엔드포인트를 시작합니다.  
   
 ###  <a name="PShellExample"></a> 예제(PowerShell)  
  다음 PowerShell 명령은 SQL Server 인스턴스(*Machine*\\*Instance*)에 데이터베이스 미러링 엔드포인트를 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
@@ -67,11 +67,11 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용 #40;Transact-SQL &#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&amp;#40;Transact-SQL&amp;#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
+    -   [데이터베이스 미러링 엔드포인트의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL &#41;](../../database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   

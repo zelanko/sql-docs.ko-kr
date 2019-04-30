@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754292"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대한 전송 보안(SQL Server)
   전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 엔드포인트에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 엔드포인트에 대한 개요를 보려면 [데이터베이스 미러링 엔드포인트&amp;#40;SQL Server&amp;#41;](the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
@@ -34,19 +34,19 @@ ms.locfileid: "48075863"
 ##  <a name="Authentication"></a> 인증  
  인증은 사용자가 올바른지 여부를 확인하는 과정입니다. 데이터베이스 미러링 엔드포인트 간 연결에는 인증이 필요합니다. 파트너나 미러링 모니터 서버의 연결 요청은 반드시 인증되어야 합니다.  
   
- 서버 인스턴스에서 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 사용하는 인증 유형은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링 엔드포인트에서 사용할 수 있는 두 가지 전송 보안 유형으로는 SSPI(보안 지원 공급자 인터페이스)인 Windows 인증 및 인증서 기반 인증이 있습니다.  
+ 서버 인스턴스에서 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 사용하는 인증 유형은 데이터베이스 미러링 엔드포인트의 속성입니다. 데이터베이스 미러링 끝점에 사용할 수 있는 두 가지 전송 보안 같습니다. Windows 인증 (보안 지원 공급자 인터페이스 (SSPI)) 및 인증서 기반 인증 합니다.  
   
 ### <a name="windows-authentication"></a>Windows 인증  
  Windows 인증을 사용할 경우 각 서버 인스턴스는 프로세스가 실행되고 있는 Windows 사용자 계정의 Windows 자격 증명을 사용하여 다른 쪽에 로그인합니다. Windows 인증에는 다음과 같은 로그인 계정에 대한 수동 구성이 필요할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 계정에서 서비스로 실행될 경우 추가 구성이 필요하지 않습니다.  
   
--   ph x="1" /&gt; 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 다른 각 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 동일 도메인 또는 신뢰할 수 있는 도메인에서 다른 도메인 계정을 사용하여 서비스로 실행될 경우 각 계정의 로그인을 다른 각 서버 인스턴스에서 **마스터** 로 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어 있어야 합니다.  
   
--   ph x="1" /&gt; 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$*)의 로그인은 다른 각 서버의 **마스터**에서 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 네트워크 서비스 계정으로 실행될 경우 각 호스트 컴퓨터 계정(*DomainName***\\***ComputerName$*)의 로그인은 다른 각 서버의 **마스터**에서 만들어야 하며, 해당 로그인에는 해당 엔드포인트에 대한 CONNECT 권한이 부여되어야 합니다. 네트워크 서비스 계정을 사용하여 서버 인스턴스를 실행할 경우 호스트 컴퓨터의 도메인 계정을 사용하여 인증이 수행되기 때문입니다.  
   
 > [!NOTE]  
->  Windows 인증을 사용하여 데이터베이스 미러링 세션을 설정하는 예는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
+>  Windows 인증을 사용하여 데이터베이스 미러링 세션을 설정하는 예제는 [예제: Windows 인증을 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)을 참조하세요.  
   
 ### <a name="certificates"></a>인증서  
  서버 인스턴스가 트러스트된 도메인에 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 로컬 서비스로 실행되고 있는 경우와 같이 Windows 인증을 사용할 수 없는 경우가 있습니다. 이런 경우에는 연결 요청을 인증하는 데 사용자 자격 증명 대신 인증서가 필요합니다. 각 서버 인스턴스의 미러링 엔드포인트는 로컬에서 만든 자체 인증서를 사용하여 구성해야 합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "48075863"
   
 |ALGORITHM 값|Description|  
 |---------------------|-----------------|  
-|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> 참고: RC4 알고리즘은 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
+|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> 참고: RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
 |AES|엔드포인트가 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다.|  
 |AES RC4|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 AES 알고리즘에 우선권을 주도록 지정합니다.|  
 |RC4 AES|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 RC4 알고리즘에 우선권을 주도록 지정합니다.|  
