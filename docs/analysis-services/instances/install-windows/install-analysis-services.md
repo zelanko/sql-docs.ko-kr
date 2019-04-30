@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054551"
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  SQL Server Analysis Services가 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버입니다.  
+  SQL Server Analysis Services 테이블 형식 모델, 다차원 큐브 및 보고서, 스프레드시트 및 대시보드에서 액세스할 수 있는 데이터 마이닝 모델을 호스팅하는 분석 데이터베이스 서버는 합니다.  
   
- Analysis Services는 다중 인스턴스는 단일 컴퓨터에 복사본 여러 개 설치 하거나 신규 버전과 기존 버전-side-by-side 실행 수를 의미 합니다. 설치한 모든 인스턴스는 설치 도중 결정된 세 가지 모드(다차원 및 데이터 마이닝, 테이블 형식 또는 SharePoint) 중 하나로 실행됩니다. 다중 모드를 사용하려면 각 모드에 대한 별도의 인스턴스가 필요합니다.  
+ Analysis Services는 단일 컴퓨터에서 둘 이상의 복사본을 설치 하거나 신규 버전과 기존 버전-병렬 실행 수는 다중 인스턴스입니다. 설치한 모든 인스턴스는 설치 도중 결정 된 세 가지 모드 중 하나에서 실행 합니다. 다차원 및 데이터 마이닝, 테이블 형식 또는 SharePoint. 다중 모드를 사용하려면 각 모드에 대한 별도의 인스턴스가 필요합니다.  
   
  특정 모드에 서버를 설치한 이후에는 해당 모드를 준수하는 호스트 솔루션으로 사용할 수 있습니다. 예를 들어, 네트워크를 통해 테이블 형식 모델 데이터에 액세스하려는 경우 테이블 형식 모드 서버가 필요합니다.  
   
@@ -31,22 +31,22 @@ ms.locfileid: "34708081"
   
 -   [SSDT(SQL Server Data Tools) 다운로드](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- Analysis Services 인스턴스 및 데이터로 작업 하려면 SSMS와 SSDT 모두 필요 합니다. 도구 어디에서 든 지 설치할 수 있지만 서버에 대 한 연결을 시도 하기 전에 포트를 구성 하십시오. 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 를 참조하세요.  
+ SSMS 및 SSDT 모두 Analysis Services 인스턴스 및 데이터와 함께 작동 하도록 해야 합니다. 도구 장소에 상관 없이 설치할 수 있지만 연결을 시도 하기 전에 서버에서 포트를 구성 해야 합니다. 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 를 참조하세요.  
   
 ## <a name="install-using-a-wizard"></a>마법사를 사용한 설치  
  다음 목록에서는 Analysis Services를 설치하는 데 사용되는 SQL Server 설치 마법사의 해당 페이지를 보여 줍니다.  
   
 1.  설치 프로그램의 기능 트리에서 **Analysis Services** 를 선택합니다.  
   
-     ![Analsyis 서비스를 보여 주는 설치 기능 트리에](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Analsyis 서비스를 보여 주는 설치 기능 트리에")  
+     ![Analsyis 서비스를 보여 주는 설치 기능 트리에](../../../analysis-services/instances/install-windows/media/ssas-setupas.gif "Analsyis 서비스를 보여 주는 설치 기능 트리")  
   
-2.  Analysis Services 구성 페이지에서 모드를 선택 합니다. 기본값은 테이블 형식 모드가입니다.  
+2.  Analysis Services 구성 페이지의 모드를 선택 합니다. 테이블 형식 모드는 기본...  
   
-     ![Analysis Services 구성 옵션으로 설치 페이지](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Analysis Services 구성 옵션으로 설치 페이지")  
+     ![Analysis Services 구성 옵션을 사용 하 여 설치 페이지](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "Analysis Services 구성 옵션을 사용 하 여 설정 페이지")  
   
-  테이블 형식 모드에는 테이블 형식 모델에 대 한 기본 저장소 xVelocity 메모리 내 분석 엔진 (VertiPaq)을 사용 합니다. 서버에 테이블 형식 모델을 배포한 후에 메모리 집중형 저장소 대신에 DirectQuery 디스크 저장소를 사용 하는 테이블 형식 솔루션을 선택적으로 구성할 수 있습니다.  
+  테이블 형식 모드에는 테이블 형식 모델에 대 한 기본 저장소는 xVelocity 메모리 내 분석 엔진 (VertiPaq)을 사용 합니다. 서버에 테이블 형식 모델을 배포한 후에 메모리 집중형 저장소 대신에 DirectQuery 디스크 저장소를 사용 하는 테이블 형식 솔루션을 선택적으로 구성할 수 있습니다.  
  
- 다차원 및 데이터 마이닝 모드 MOLAP 저장소로 사용 된 기본 Analysis Services에 배포 된 모델에 대 한 합니다. 쿼리 데이터를 Analysis Services 다차원 데이터베이스에 저장하지 않고 쿼리를 관계형 데이터베이스에서 직접 실행하려면 서버에 배포한 후 솔루션이 ROLAP를 사용하도록 구성합니다.  
+ 다차원 및 데이터 마이닝 모드 사용 하 여 MOLAP 기본 저장소로 Analysis Services에 배포 된 모델에 대 한 합니다. 쿼리 데이터를 Analysis Services 다차원 데이터베이스에 저장하지 않고 쿼리를 관계형 데이터베이스에서 직접 실행하려면 서버에 배포한 후 솔루션이 ROLAP를 사용하도록 구성합니다.  
   
 
   
@@ -68,7 +68,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |값|Description|  
 |-----------|-----------------|  
-|TABULAR|이것은 기본값입니다. 설정 하지 않으면 **ASSERVERMODE**, 서버가 테이블 형식 모드에 설치 됩니다.|
+|TABULAR|이것은 기본값입니다. 설정 하지 않은 경우 **ASSERVERMODE**, 서버가 테이블 형식 모드에서 설치 됩니다.|
 |MULTIDIMENSIONAL|이 값은 선택 사항입니다.|  
 |POWERPIVOT|이 값은 선택 사항입니다. 실제로 **ROLE** 매개 변수를 설정한 경우 서버 모드는 자동으로 1로 설정되며 **ASSERVERMODE** 를 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설치에 대한 옵션으로 만듭니다. 자세한 내용은 [명령 프롬프트에서 Power Pivot 설치](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)를 참조하십시오.|  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217676"
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드(ADO 연결)
 데이터 원본에 연결을 엽니다.  
@@ -45,7 +45,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *암호*  
  (선택 사항) A **문자열** 연결을 설정할 때 사용할 암호를 포함 하는 값입니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 후이 메서드를 반환할지 여부를 결정 하는 값 (동기적으로) 비동기적으로 연결이 설정 되기 전에 합니다.  
   
 ## <a name="remarks"></a>Remarks  

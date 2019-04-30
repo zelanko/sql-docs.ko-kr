@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a7b8baf1eb666e6639e7e7f47cbf6c321dc217b
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225284"
 ---
 # <a name="find-in-files"></a>파일에서 찾기
   찾기 및 바꾸기 창의 **파일에서 찾기** 탭을 사용하여 지정한 파일에서 문자열이나 식을 검색할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
@@ -132,5 +132,5 @@ ms.locfileid: "53328643"
  **기호 찾기로 전환**  
  이 도구 모음 탭은 대화 상자를 **기호 찾기** 대화 상자로 변경합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Management Studio 바로 가기 키](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

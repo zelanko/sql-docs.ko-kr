@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062779"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>3단계: 필드 목록 상자 채우기
 필드 목록 상자를 채우려면 Click 이벤트 처리기에 다음 코드를 삽입 `lstMain`:  
@@ -57,7 +57,7 @@ End Sub
   
  코드가 없는 경우 리소스는 구조화 된 문서에 구현 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
  [2단계: 기본 목록 상자를 초기화 합니다.](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [4 단계: 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [4단계: 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

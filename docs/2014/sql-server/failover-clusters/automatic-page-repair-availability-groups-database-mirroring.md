@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137510"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>자동 페이지 복구(가용성 그룹 및 데이터베이스 미러링)
   자동 페이지 복구는 데이터베이스 미러링과 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에서 지원됩니다. 특정 유형의 오류로 인해 페이지가 손상되어 읽을 수 없게 되면 데이터베이스 미러링 파트너(주 파트너 또는 미러 파트너) 또는 가용성 복제본(주 복제본 또는 보조 복제본)이 자동으로 페이지를 복구하려고 시도합니다. 페이지를 읽을 수 없는 파트너 또는 복제본은 해당 파트너나 다른 복제본에 페이지의 새 복사본을 요청합니다. 이 요청이 성공하면 읽을 수 없는 페이지는 읽을 수 있는 복사본으로 대체되고 일반적으로 오류가 해결됩니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "48070590"
   
 -   9페이지(데이터베이스 부트 페이지)  
   
--   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+-   할당 페이지: 전역 할당 맵 (GAM) 페이지, 공유 전역 할당 맵 (SGAM) 페이지 및 페이지 여유 공간 (PFS) 페이지.  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070590"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 어떻게: 자동 페이지 복구 시도 보기  
  다음 동적 관리 뷰는 지정된 가용성 데이터베이스 또는 미러된 데이터베이스에 대한 최근 자동 페이지 복구 시도에 해당하는 행을 데이터베이스당 최대 100개까지 반환합니다.  
   
 -   **AlwaysOn 가용성 그룹:**  

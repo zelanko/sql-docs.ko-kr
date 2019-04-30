@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132701"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 함수
 **규칙**  
@@ -50,7 +50,7 @@ SQLRETURN SQLGetInfo(
  *ConnectionHandle*  
  [입력] 연결 핸들입니다.  
   
- *정보 항목*  
+ *InfoType*  
  [입력] 정보의 유형입니다.  
   
  *InfoValuePtr*  
@@ -121,7 +121,7 @@ SQLRETURN SQLGetInfo(
  0  
   
  SQLUINTEGER 비트 마스크 또는 SQLUINTEGER 이진 값  
- 0 L  
+ 0L  
   
  예를 들어, 데이터 원본 프로시저를 지원 하지 않는 경우 **SQLGetInfo** 의 값에 대해 다음 표에 나열 된 값을 반환 *정보 항목* 프로시저에 관련 된 합니다.  
   
@@ -350,23 +350,23 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-type-descriptions"></a>정보 유형 설명  
  다음 표에서 각 정보 유형, 해당 설명과 도입 된 ODBC의 버전에 사전순으로 나열 됩니다.  
   
- SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
  문자열: "Y" 사용자에서 반환 된 모든 프로시저를 실행할 수 있다면 **SQLProcedures**; 사용자를 실행할 수 없는지 반환 하는 "N" 프로시저 있을 수 있습니다.  
   
- SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  문자열: "Y" 사용자 보장 되는 경우 **선택** 반환한 모든 테이블에 대 한 권한을 **SQLTables**; 사용자에 액세스할 수 없습니다. 반환 하는 "N" 테이블이 있을 수 있습니다.  
   
- SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  활성 환경에 드라이버를 지원할 수 있는 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  집계 함수에 대 한 지원을 열거 SQLUINTEGER 비트 마스크:  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **ALTER 도메인** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다. SQL-92 Full 수준 규격 드라이버는 항상 모든 비트 마스크를 반환 합니다. 즉 "0"의 반환 값을 **ALTER 도메인** 문은 지원 되지 않습니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -387,7 +387,7 @@ SQLRETURN SQLGetInfo(
   
  (전체 수준) SQL_AD_ADD_CONSTRAINT_DEFERRABLE SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (전체 수준) (전체 수준) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (전체 수준)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **ALTER TABLE** 데이터 원본에서 지 원하는 문입니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -429,7 +429,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_ASYNC_DBC_NOT_CAPABLE = 드라이버 연결 함수를 비동기적으로 실행 되지 않습니다 수 있습니다.  
   
- SQL_ASYNC_MODE (ODBC 3.0)  
+ SQL_ASYNC_MODE(ODBC 3.0)  
  드라이버에서 비동기 지원의 수준을 지정 하는 SQLUINTEGER 값:  
   
  SQL_AM_CONNECTION = 연결 수준 비동기 실행은 지원 됩니다. 비동기 모드에 있는 지정 된 연결 핸들에 연결 된 모든 문 핸들 또는 동기 모드에서 모두. 같은 연결에서 다른 문 핸들은 동기 모드에서 이동 하 고 그 반대의 경우도 마찬가지 비동기 모드 연결에서 문 핸들 일 수 없습니다.  
@@ -467,7 +467,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BS_ROW_COUNT_PROC = 행 개수 생성 문을 포함할 수 있는 드라이버 지원 명시적 절차입니다.  
   
- SQL_BOOKMARK_PERSISTENCE (ODBC 2.0)  
+ SQL_BOOKMARK_PERSISTENCE(ODBC 2.0)  
  책갈피 유지 하는 작업을 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 책갈피 옵션 유지 결정할 플래그와 함께 사용 됩니다.  
@@ -484,7 +484,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BP_OTHER_HSTMT 하 나와 연결 된 책갈피 = 문은 다른 문을 사용 하 여 사용할 수 있습니다. SQL_BP_CLOSE 또는 SQL_BP_DROP를 지정 하지 않으면 첫 번째 문에서 커서 열려 있어야 합니다.  
   
- SQL_CATALOG_LOCATION (ODBC 2.0)  
+ SQL_CATALOG_LOCATION(ODBC 2.0)  
  정규화 된 테이블 이름에 카탈로그의 위치를 나타내는 SQLUSMALLINT 값:  
   
  SQL_CL_STARTSQL_CL_END  
@@ -495,26 +495,26 @@ SQLRETURN SQLGetInfo(
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_QUALIFIER_LOCATION 합니다.  
   
- SQL_CATALOG_NAME (ODBC 3.0)  
+ SQL_CATALOG_NAME(ODBC 3.0)  
  문자열: "Y" 서버에서 지 원하는 경우 카탈로그 이름 또는 "N" 하지 않는 경우.  
   
  SQL-92 Full 수준-와 호환 되는 드라이버는 항상 "Y"를 반환 합니다.  
   
- SQL_CATALOG_NAME_SEPARATOR (ODBC 1.0)  
+ SQL_CATALOG_NAME_SEPARATOR(ODBC 1.0)  
  문자열: 카탈로그 이름 뒤 또는 앞에 정규화 된 이름 요소 사이의 구분 기호로 데이터 원본을 정의 하는 문자입니다.  
   
  카탈로그 데이터 원본에서 지원 되지 않는 경우 빈 문자열이 반환 됩니다. 카탈로그를 지원 하는지 여부를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_NAME 정보 형식을 사용 하 여 합니다. SQL-92 Full 수준-와 호환 되는 드라이버를 항상 반환 됩니다 "."입니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_QUALIFIER_NAME_SEPARATOR 합니다.  
   
- SQL_CATALOG_TERM (ODBC 1.0)  
+ SQL_CATALOG_TERM(ODBC 1.0)  
  카탈로그; 데이터 원본 공급 업체의 이름 사용 하 여 문자열 예를 들어, "database" 또는 "directory"입니다. 이 문자열은 위쪽, 아래쪽, 또는 혼합의 경우 수 있습니다.  
   
  카탈로그 데이터 원본에서 지원 되지 않는 경우 빈 문자열이 반환 됩니다. 카탈로그를 지원 하는지 여부를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_CATALOG_NAME 정보 형식을 사용 하 여 합니다. SQL-92 Full 수준-와 호환 되는 드라이버는 항상 "catalog"을 반환 합니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_QUALIFIER_TERM 합니다.  
   
- SQL_CATALOG_USAGE (ODBC 2.0)  
+ SQL_CATALOG_USAGE(ODBC 2.0)  
  카탈로그를 사용할 수 있는 문을 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 카탈로그를 사용할 수 있는 확인 하는 데 사용 됩니다.  
@@ -533,15 +533,15 @@ SQLRETURN SQLGetInfo(
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_QUALIFIER_USAGE 합니다.  
   
- SQL_COLLATION_SEQ (ODBC 3.0)  
+ SQL_COLLATION_SEQ(ODBC 3.0)  
  데이터 정렬 시퀀스의 이름입니다. 이 기본 문자 집합을이 서버에 대 한 기본 데이터 정렬의 이름을 나타내는 문자열 (예를 들어, ' ISO 8859-1' 또는 EBCDIC). 이 알 수 없는 경우 빈 문자열이 반환 됩니다. SQL-92 Full 수준-와 호환 되는 드라이버는 항상 비어 있지 않은 문자열을 반환 합니다.  
   
- SQL_COLUMN_ALIAS (ODBC 2.0)  
+ SQL_COLUMN_ALIAS(ODBC 2.0)  
  문자열: 데이터 원본에 열 별칭;에서 지 원하는 경우 "Y" 그렇지 않으면 "N"입니다.  
   
  열 별칭은 AS 절을 사용 하면 select 목록의 열에 대해 지정할 수 있는 대체 이름. SQL-92 항목 수준-와 호환 되는 드라이버는 항상 "Y"를 반환 합니다.  
   
- SQL_CONCAT_NULL_BEHAVIOR (ODBC 1.0)  
+ SQL_CONCAT_NULL_BEHAVIOR(ODBC 1.0)  
  데이터 원본 연결 된 NULL 처리 하는 방법을 나타내는 SQLUSMALLINT 값을 NULL이 아닌 값 가진된 문자 데이터 형식 열을 사용 하 여 문자 데이터 형식 열을 반환 합니다.  
   
  SQL_CB_NULL = 결과 NULL을 반환 합니다.  
@@ -559,14 +559,14 @@ SQLRETURN SQLGetInfo(
   
  (ODBC 1.0) SQL_CVT_BIGINT SQL_CVT_BINARY (ODBC 1.0) SQL_CVT_BIT (ODBC 1.0) SQL_CVT_GUID (ODBC 3.5) SQL_CVT_CHAR (ODBC 1.0) SQL_CVT_DATE (ODBC 1.0) SQL_CVT_DECIMAL (ODBC 1.0) SQL_CVT_DOUBLE (ODBC 1.0) SQL_CVT_FLOAT (ODBC 1.0) SQL_CVT_INTEGER (ODBC 1.0) SQL (ODBC 1.0) SQL_CVT_SMALLINT SQL_CVT_TIME (ODBC 1.0) SQL_CVT_ _CVT_INTERVAL_YEAR_MONTH (ODBC 3.0) (ODBC 3.0) SQL_CVT_INTERVAL_DAY_TIME SQL_CVT_LONGVARBINARY (ODBC 1.0) SQL_CVT_LONGVARCHAR (ODBC 1.0) SQL_CVT_NUMERIC (ODBC 1.0) SQL_CVT_REAL ODBC 1.0) 타임 스탬프 (ODBC 1.0) SQL_CVT_TINYINT (ODBC 1.0) SQL_CVT_VARBINARY (ODBC 1.0) SQL_CVT_VARCHAR (ODBC 1.0)  
   
- SQL_CONVERT_FUNCTIONS (ODBC 1.0)  
+ SQL_CONVERT_FUNCTIONS(ODBC 1.0)  
  드라이버 및 연결 된 데이터 원본에서 지 원하는 스칼라 변환 함수를 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 지원 되는 변환 함수 확인에 사용 됩니다.  
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME (ODBC 1.0)  
+ SQL_CORRELATION_NAME(ODBC 1.0)  
  테이블 상관 관계 이름을 지원 되는지 여부를 나타내는 SQLUSMALLINT 값:  
   
  SQL_CN_NONE = 상관 관계 이름이 지원 되지 않습니다.  
@@ -577,7 +577,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 SQL_CN_ANY를 항상 반환 됩니다.  
   
- SQL_CREATE_ASSERTION (ODBC 3.0)  
+ SQL_CREATE_ASSERTION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **어설션을 만들** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -590,7 +590,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원. 즉 "0"의 반환 값을 **어설션을 만듭니다** 문은 지원 되지 않습니다.  
   
- SQL_CREATE_CHARACTER_SET (ODBC 3.0)  
+ SQL_CREATE_CHARACTER_SET(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **문자 집합 만들기** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -599,7 +599,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원. 즉 "0"의 반환 값을 **문자 집합 만들기** 문은 지원 되지 않습니다.  
   
- SQL_CREATE_COLLATION (ODBC 3.0)  
+ SQL_CREATE_COLLATION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **데이터 정렬을 만듭니다** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -608,7 +608,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는이 옵션을 항상 반환 됩니다. 즉 "0"의 반환 값을 **만들 데이터 정렬을** 문은 지원 되지 않습니다.  
   
- SQL_CREATE_DOMAIN (ODBC 3.0)  
+ SQL_CREATE_DOMAIN(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **도메인 만들기** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -625,7 +625,7 @@ SQLRETURN SQLGetInfo(
   
  즉 "0"의 반환 값을 **도메인 만들기** 문은 지원 되지 않습니다.  
   
- SQL_CREATE_SCHEMA (ODBC 3.0)  
+ SQL_CREATE_SCHEMA(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **CREATE SCHEMA** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -634,7 +634,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 중간 수준-와 호환 되는 드라이버를 지 원하는 대로 SQL_CS_CREATE_SCHEMA 및 SQL_CS_AUTHORIZATION 옵션을 항상 반환 됩니다. 이러한 개체도 지원 해야 하지만 SQL 문으로 반드시 SQL-92 항목 수준입니다. SQL-92 Full 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_CREATE_TABLE (ODBC 3.0)  
+ SQL_CREATE_TABLE(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **CREATE TABLE** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -659,7 +659,7 @@ SQLRETURN SQLGetInfo(
   
  (전체 수준) SQL_CT_CONSTRAINT_INITIALLY_DEFERRED SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (전체 수준) (전체 수준) SQL_CT_CONSTRAINT_DEFERRABLE SQL_CT_CONSTRAINT_NON_DEFERRABLE (전체 수준)  
   
- SQL_CREATE_TRANSLATION (ODBC 3.0)  
+ SQL_CREATE_TRANSLATION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **만드는 번역** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -668,7 +668,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는 이러한 옵션을 항상 반환 됩니다. 즉 "0"의 반환 값을 **번역 만들기** 문은 지원 되지 않습니다.  
   
- SQL_CREATE_VIEW (ODBC 3.0)  
+ SQL_CREATE_VIEW(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **CREATE VIEW** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -681,10 +681,10 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_CURSOR_COMMIT_BEHAVIOR (ODBC 1.0)  
+ SQL_CURSOR_COMMIT_BEHAVIOR(ODBC 1.0)  
  나타내는 SQLUSMALLINT 값을 어떻게를 **커밋** 커서 및 준비 된 문 (트랜잭션을 커밋할 때 데이터 원본의 동작) 데이터 원본 작업에 영향을 줍니다.  
   
- 이 특성의 값은 다음 설정의 현재 상태를 반영 합니다. SQL_COPT_SS_PRESERVE_CURSORS 합니다.  
+ 이 특성의 값은 다음 설정의 현재 상태를 반영 합니다. SQL_COPT_SS_PRESERVE_CURSORS.  
   
  SQL_CB_DELETE = 닫기 커서 및 준비 된 문을 삭제 합니다. 커서를 사용 하려면 다시 응용 프로그램 reprepare 하며 문을 다시 실행 하려고 합니다.  
   
@@ -692,7 +692,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_PRESERVE 이전과 동일한 위치에 유지 커서 = 합니다 **커밋** 작업 합니다. 데이터를 인출 하는 응용 프로그램을 계속 하거나 커서를 닫고를 다시 다시 준비 하지 않고 문을 실행 합니다.  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR (ODBC 1.0)  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR(ODBC 1.0)  
  나타내는 SQLUSMALLINT 값을 어떻게를 **롤백** 커서 및 데이터 원본에서 준비 된 문을 작업에 영향을 줍니다.  
   
  SQL_CB_DELETE = 닫기 커서 및 준비 된 문을 삭제 합니다. 커서를 사용 하려면 다시 응용 프로그램 reprepare 하며 문을 다시 실행 하려고 합니다.  
@@ -714,21 +714,21 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지 원하는 대로 SQL_INSENSITIVE 옵션을 항상 반환 됩니다.  
   
- SQL_DATA_SOURCE_NAME (ODBC 1.0)  
+ SQL_DATA_SOURCE_NAME(ODBC 1.0)  
  연결 하는 동안 사용 된 데이터 원본 이름의 문자열입니다. 응용 프로그램 호출 **SQLConnect**의 값을 *szDSN* 인수. 응용 프로그램 호출 **SQLDriverConnect** 또는 **SQLBrowseConnect**, 드라이버에 전달 된 연결 문자열에는 DSN 키워드의 값입니다. 연결 문자열에 포함 되어 있지 않으면 합니다 **DSN** 키워드 (같은 경우에 **드라이버** 키워드), 빈 문자열입니다.  
   
- SQL_DATA_SOURCE_READ_ONLY (ODBC 1.0)  
+ SQL_DATA_SOURCE_READ_ONLY(ODBC 1.0)  
  문자열입니다. "Y"이 고, 그렇지 않으면 데이터 원본 읽기 전용 모드를 "N"로 설정 된 경우.  
   
  이 특성은 자체 데이터 원본에만 적용 됩니다. 데이터 원본에 액세스할 수 있는 드라이버의 특징 아닙니다. 데이터 원본에 읽기 전용인 지 읽기/쓰기 되는 드라이버를 사용할 수 있습니다. 드라이버가 읽기 전용 이면 읽기 전용 이어야 합니다 모든 데이터 원본이 고 SQL_DATA_SOURCE_READ_ONLY 반환 해야 합니다.  
   
- SQL_DATABASE_NAME (ODBC 1.0)  
+ SQL_DATABASE_NAME(ODBC 1.0)  
  데이터 원본 "데이터베이스" 라고 명명 된 개체를 정의 하는 경우 문자를 사용 하 여, 현재 데이터베이스의 이름으로 문자열입니다.  
   
 > [!NOTE]
 >  ODBC 3에서 *.x*에 값이 반환 *정보 항목* 호출 하 여 반환 될 수 있습니다 **SQLGetConnectAttr** 사용 하 여는 *특성* SQL_ATTR_CURRENT_CATALOG의 인수입니다.  
   
- SQL_DATETIME_LITERALS (ODBC 3.0)  
+ SQL_DATETIME_LITERALS(ODBC 3.0)  
  데이터 원본에서 지 원하는 SQL-92 날짜/시간 리터럴 열거 SQLUINTEGER 비트 마스크입니다. 이러한 SQL-92 사양에 나열 된 날짜/시간 리터럴 및은 ODBC 정의 된 날짜/시간 리터럴 이스케이프 절에서 별도 참고 합니다. ODBC 날짜/시간 리터럴 이스케이프 절에 대 한 자세한 내용은 참조 하세요. [날짜, 시간 및 타임 스탬프 리터럴](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)합니다.  
   
  항상 FIPS 전환 수준-와 호환 되는 드라이버를 다음 목록에 있는 비트에 대 한 비트 마스크의 "1" 값을 반환 합니다. 값이 "0" 이면 SQL-92 datetime 리터럴이 지원 되지 않습니다.  
@@ -739,18 +739,18 @@ SQLRETURN SQLGetInfo(
   
  SQL_DL_SQL92_INTERVAL_DAY_TO_MINUTESQL_DL_SQL92_INTERVAL_DAY_TO_SECONDSQL_DL_SQL92_INTERVAL_HOUR_TO_MINUTESQL_DL_SQL92_INTERVAL_HOUR_TO_SECONDSQL_DL_SQL92_INTERVAL_MINUTE_TO_SECOND  
   
- SQL_DBMS_NAME (ODBC 1.0)  
+ SQL_DBMS_NAME(ODBC 1.0)  
  드라이버에서 액세스 하는 DBMS 제품 이름의 문자열입니다.  
   
- SQL_DBMS_VER (ODBC 1.0)  
+ SQL_DBMS_VER(ODBC 1.0)  
  드라이버에서 액세스 한 DBMS 제품의 버전을 나타내는 문자열입니다. 폼의 버전은 # #. # #. # # #, 여기서 처음 두 숫자는 주 버전, 다음 두 자리는 부 버전, 되며 마지막 4 자리 릴리스 버전입니다. 드라이버는 DBMS 제품 버전을이 형식으로 렌더링 해야 하지만 DBMS 특정 제품 버전을 추가할 수도 있습니다. 예를 들어, "04.01.0000 4.1 Rdb"입니다.  
   
- SQL_DDL_INDEX (ODBC 3.0)  
+ SQL_DDL_INDEX(ODBC 3.0)  
  SQLUINTEGER 나타내는 값을 생성 및 인덱스의 삭제에 대 한 지원:  
   
  SQL_DI_CREATE_INDEXSQL_DI_DROP_INDEX  
   
- SQL_DEFAULT_TXN_ISOLATION (ODBC 1.0)  
+ SQL_DEFAULT_TXN_ISOLATION(ODBC 1.0)  
  데이터 원본에서 드라이버 또는 데이터 원본 또는 경우에는 0에서 지 원하는 기본 트랜잭션 격리 수준을 표시 하는 SQLUINTEGER 값에는 트랜잭션을 지원 하지 않습니다. 다음 용어는 트랜잭션 격리 수준을 정의 하는 데 사용 됩니다.  
   
  **커밋되지 않은 읽기** 트랜잭션 1 행을 변경 합니다. 트랜잭션 2 트랜잭션 1 변경 내용을 커밋하기 전에 변경된 된 행을 읽습니다. 트랜잭션 1 변경 롤백되면 존재 하지로 간주 되는 행 2 트랜잭션 읽기 됩니다.  
@@ -769,12 +769,12 @@ SQLRETURN SQLGetInfo(
   
  Sql_txn_serializable로 = 트랜잭션은 serializable입니다. 더티 읽기, 반복할 수 없는 읽기 또는 팬텀 직렬화 가능 트랜잭션을 허용 하지 않습니다.  
   
- SQL_DESCRIBE_PARAMETER (ODBC 3.0)  
+ SQL_DESCRIBE_PARAMETER(ODBC 3.0)  
  문자열: "Y" 매개 변수를 설명할 수 있습니다. "N", 그렇지 않은 경우입니다.  
   
  SQL-92 Full 수준을 준수 하는 드라이버에서 지원 하기 때문에 일반적으로 "Y"를 반환 합니다 **설명 입력** 문입니다. 그러나이 지정 하지 않으므로 직접 기본 SQL 지원, 매개 변수를 설명 하는 지원 되지 않는, SQL-92 Full 수준-와 호환 되는 드라이버에도 합니다.  
   
- SQL_DM_VER (ODBC 3.0)  
+ SQL_DM_VER(ODBC 3.0)  
  드라이버 관리자의 버전 문자열입니다. 폼의 버전은 # #. # #. # # #. # # # 여기서:  
   
  첫 번째 두 자리 집합이 상수 SQL_SPEC_MAJOR에서 제공 하는 주요 ODBC 버전입니다.  
@@ -796,42 +796,42 @@ SQLRETURN SQLGetInfo(
   
  드라이버는 SQL_DRIVER_AWARE_POOLING_SUPPORTED 구현 하지 않아도 및 드라이버 관리자는 드라이버의 반환 값을 인식 하지 못합니다 됩니다.  
   
- SQL_DRIVER_HDBCSQL_DRIVER_HENV (ODBC 1.0)  
+ SQL_DRIVER_HDBCSQL_DRIVER_HENV(ODBC 1.0)  
  SQLULEN 값, 드라이버의 환경 핸들 또는 인수에 의해 결정 되는 연결 핸들 *정보 항목*합니다.  
   
  이러한 정보 유형은 드라이버 관리자에 의해 단독으로 구현 됩니다.  
   
- SQL_DRIVER_HDESC (ODBC 3.0)  
+ SQL_DRIVER_HDESC(ODBC 3.0)  
  SQLULEN 값을 입력에서 전달 되어야 하는 드라이버 관리자의 설명자 핸들에 의해 결정 하는 드라이버의 설명자 핸들 \* *InfoValuePtr* 응용 프로그램에서 합니다. 이 예에서 *InfoValuePtr* 는 입력 및 출력 인수입니다. 전달 된 입력된 설명자 핸들 \* *InfoValuePtr* 할당 되어야 합니다 명시적 또는 암시적으로 *ConnectionHandle*합니다.  
   
  응용 프로그램 처리를 호출 하기 전에 드라이버 관리자의 설명자의 복사본을 확인 해야 **SQLGetInfo** 이 정보 유형과 핸들을 출력에서 덮어쓰지 않습니다 되도록 합니다.  
   
  이 정보 유형은 드라이버 관리자에 의해 단독으로 구현 됩니다.  
   
- SQL_DRIVER_HLIB (ODBC 2.0)  
+ SQL_DRIVER_HLIB(ODBC 2.0)  
  SQLULEN 값을 *hinst* 부하 라이브러리에서 드라이버 관리자에는 Microsoft Windows 운영 체제 또는 다른 운영 체제에 해당 하는 드라이버 DLL이 로드 될 때 반환 합니다. 핸들에 대 한 호출에 지정 된 연결 핸들에 대해서만 유효 **SQLGetInfo**합니다.  
   
  이 정보 유형은 드라이버 관리자에 의해 단독으로 구현 됩니다.  
   
- SQL_DRIVER_HSTMT (ODBC 1.0)  
+ SQL_DRIVER_HSTMT(ODBC 1.0)  
  SQLULEN 값을 입력에서 전달 되어야 하는 드라이버 관리자 문 핸들에 의해 결정 하는 드라이버의 문 핸들 \* *InfoValuePtr* 응용 프로그램에서 합니다. 이 예에서 *InfoValuePtr* 는 입력 및 출력 인수입니다. 전달 된 입력된 문 핸들 \* *InfoValuePtr* 인수에 할당 합니다 *ConnectionHandle*합니다.  
   
  응용 프로그램 드라이버 관리자의 문의 복사본 호출 하기 전에 처리 해야 합니다. **SQLGetInfo** 이 정보 유형과 핸들을 출력에서 덮어쓰지 않았는지 확인 합니다.  
   
  이 정보 유형은 드라이버 관리자에 의해 단독으로 구현 됩니다.  
   
- SQL_DRIVER_NAME (ODBC 1.0)  
+ SQL_DRIVER_NAME(ODBC 1.0)  
  데이터 원본에 액세스 하는 데 사용 하는 드라이버 파일 이름의 문자열입니다.  
   
- SQL_DRIVER_ODBC_VER (ODBC 2.0)  
+ SQL_DRIVER_ODBC_VER(ODBC 2.0)  
  드라이버에서 지 원하는 ODBC의 버전을 사용 하 여 문자열입니다. 폼의 버전은 # #. # #, 여기서 때 처음 두 숫자는 주 버전 및 다음 두 자리는 부 버전. SQL_SPEC_MAJOR 및 SQL_SPEC_MINOR 주 및 부 버전 번호를 정의합니다. 이 설명서에 설명 된 odbc 버전의 경우 3과 0 이며 드라이버 "03.00"를 반환 해야 합니다.  
   
  ODBC 드라이버 관리자는 기존 응용 프로그램에 대 한 이전 버전과 호환성을 유지 하기 위해 SQLGetInfo(SQL_DRIVER_ODBC_VER)의 반환 값을 수정 하지 않습니다. 드라이버는 값이 반환 됩니다 지정 합니다. 그러나 C 데이터 형식 확장성을 지 원하는 드라이버를 3.8 (또는 이상) 경우에 반환 해야 합니다 응용 프로그램 호출 **SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION 3.8로 설정 합니다. 자세한 내용은 [odbc에서 C 데이터 형식](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)합니다.  
   
- SQL_DRIVER_VER (ODBC 1.0)  
+ SQL_DRIVER_VER(ODBC 1.0)  
  드라이버의 버전 및 드라이버에 대 한 설명을 선택적으로 사용 하 여 문자열입니다. 폼의 버전은 최소한 # #. # #. # # #, 여기서 처음 두 숫자는 주 버전, 다음 두 자리는 부 버전, 되며 마지막 4 자리 릴리스 버전입니다.  
   
- SQL_DROP_ASSERTION (ODBC 3.0)  
+ SQL_DROP_ASSERTION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **어설션을 삭제** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -840,7 +840,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는이 옵션을 항상 반환 됩니다.  
   
- SQL_DROP_CHARACTER_SET (ODBC 3.0)  
+ SQL_DROP_CHARACTER_SET(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **문자 집합 삭제** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -849,7 +849,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는이 옵션을 항상 반환 됩니다.  
   
- SQL_DROP_COLLATION (ODBC 3.0)  
+ SQL_DROP_COLLATION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **데이터 정렬 DROP** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -858,7 +858,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는이 옵션을 항상 반환 됩니다.  
   
- SQL_DROP_DOMAIN (ODBC 3.0)  
+ SQL_DROP_DOMAIN(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **DROP 도메인** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -867,7 +867,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 중간 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_DROP_SCHEMA (ODBC 3.0)  
+ SQL_DROP_SCHEMA(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **DROP SCHEMA** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -876,7 +876,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 중간 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_DROP_TABLE (ODBC 3.0)  
+ SQL_DROP_TABLE(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **DROP TABLE** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -885,7 +885,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 전환 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_DROP_TRANSLATION (ODBC 3.0)  
+ SQL_DROP_TRANSLATION(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **DROP 번역** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인에 사용 됩니다.  
@@ -894,7 +894,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 Full 수준-와 호환 되는 드라이버를 지원 되는이 옵션을 항상 반환 됩니다.  
   
- SQL_DROP_VIEW (ODBC 3.0)  
+ SQL_DROP_VIEW(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **DROP VIEW** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다.  
   
  다음 비트 마스크는 절이 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -987,10 +987,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA2_SIMULATE_UNIQUE 드라이버 = 시뮬레이션 된 배치 업데이트 또는 delete 문을 커서는 동적 커서를 가져갈 때 하나의 행만 영향이 있습니다. 드라이버는이 지정 된 문에서 보장할 수 없습니다 하는 경우 **SQLExecDirect** 하거나 **SQLPrepare** SQLSTATE 01001 (커서 작업이 충돌)를 반환 합니다. 이 동작을 호출 하 여 응용 프로그램을 설정 하려면 **SQLSetStmtAttr** 는 SQL_ATTR_SIMULATE_CURSOR를 사용 하 여 특성이 SQL_SC_UNIQUE로 설정 합니다.  
   
- SQL_EXPRESSIONS_IN_ORDERBY (ODBC 1.0)  
+ SQL_EXPRESSIONS_IN_ORDERBY(ODBC 1.0)  
  문자열: 데이터 원본 식을 지 원하는 경우 "Y"를 **ORDER BY** 목록 "N" 하지 않는 경우입니다.  
   
- SQL_FILE_USAGE (ODBC 2.0)  
+ SQL_FILE_USAGE(ODBC 2.0)  
  단일 계층 드라이버를이 파일 데이터 원본에서 직접 처리 하는 방법을 나타내는 SQLUSMALLINT 값:  
   
  SQL_FILE_NOT_SUPPORTED = 드라이버가 지원 되지 않는 단일 계층 드라이버입니다. 예를 들어, ORACLE 드라이버를는 2 계층 드라이버입니다.  
@@ -1021,7 +1021,7 @@ SQLRETURN SQLGetInfo(
   
  이러한 비트 마스크의 설명에 대 한 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 참조 (및 설명에 "동적 커서"에 대 한 "정방향 전용 커서"으로 대체).  
   
- SQL_GETDATA_EXTENSIONS (ODBC 2.0)  
+ SQL_GETDATA_EXTENSIONS(ODBC 2.0)  
  확장을 열거 하는 SQLUINTEGER 비트 마스크 **SQLGetData**합니다.  
   
  다음 비트 마스크는 플래그와 함께 드라이버 지원에 대 한 일반적인 확장 기능을 확인 하는 데 사용 됩니다 **SQLGetData**:  
@@ -1040,7 +1040,7 @@ SQLRETURN SQLGetInfo(
   
  호출 하는 드라이버 (고정 길이 또는 가변 길이) 책갈피를 지 원하는 경우 지원 해야 합니다 **SQLGetData** 0 열에 있습니다. 이 지원은에 대 한 호출에 대 한 드라이버 반환 하는 것에 관계 없이 **SQLGetInfo** SQL_GETDATA_EXTENSIONS를 사용 하 여 *정보 항목*합니다.  
   
- SQL_GROUP_BY (ODBC 2.0)  
+ SQL_GROUP_BY(ODBC 2.0)  
  열 간에 관계를 지정 하는 SQLUSMALLINT 값을 **GROUP BY** 절과 select 목록의 집계 열:  
   
  SQL_GB_COLLATE = **COLLATE** 각 그룹화 열 끝에 절을 지정할 수 있습니다. (ODBC 3.0)  
@@ -1055,7 +1055,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 지 원하는 대로 SQL_GB_GROUP_BY_EQUALS_SELECT 옵션을 항상 반환 됩니다. SQL-92 Full 수준-와 호환 되는 드라이버를 지 원하는 대로 SQL_GB_COLLATE 옵션을 항상 반환 됩니다. None 옵션은 지원 되는 경우는 **GROUP BY** 절은 데이터 원본에서 지원 되지 않습니다.  
   
- SQL_IDENTIFIER_CASE (ODBC 1.0)  
+ SQL_IDENTIFIER_CASE(ODBC 1.0)  
  SQLUSMALLINT 다음과 같이 값:  
   
  SQL_IC_UPPER = SQL에서 식별자 대/소문자 구분 하지 않으며에 저장 된 시스템 카탈로그에서 대문자입니다.  
@@ -1068,14 +1068,14 @@ SQLRETURN SQLGetInfo(
   
  SQL-92에 식별자를 대/소문자 구분 하지 않습니다 이기 때문에 지원 되는 SQL-92 (모든 수준)를 엄격 하 게 준수 하는 드라이버 sql_ic_sensitive입니다 옵션을 반환 하지 않습니다.  
   
- SQL_IDENTIFIER_QUOTE_CHAR (ODBC 1.0)  
+ SQL_IDENTIFIER_QUOTE_CHAR(ODBC 1.0)  
  따옴표 붙은의 시작 및 끝 구분 기호로 사용 되는 문자열 (구분) SQL 문에서 식별자입니다. (ODBC 함수에 인수로 전달 된 식별자 않아도 따옴표로 묶을 수 있습니다.) 데이터 원본에서 따옴표 붙은 식별자를 지원 하지 않으면, blank가 반환 됩니다.  
   
  이 문자열을 연결 특성 SQL_ATTR_METADATA_ID SQL_TRUE로 설정 된 경우 카탈로그 함수 인수를 따옴표로 사용할 수도 있습니다.  
   
  SQL-92에 식별자 따옴표 문자로 큰따옴표 (") 이기 때문에 따르는 드라이버를 엄격 하 게 SQL-92에 항상 반환 됩니다 큰따옴표 문자.  
   
- SQL_INDEX_KEYWORDS (ODBC 3.0)  
+ SQL_INDEX_KEYWORDS(ODBC 3.0)  
  드라이버에서 지원 되는 CREATE INDEX 문에서 키워드를 열거 하는 SQLUINTEGER 비트 마스크:  
   
  SQL_IK_NONE = 지원 되지 않습니다 키워드입니다.  
@@ -1088,7 +1088,7 @@ SQLRETURN SQLGetInfo(
   
  CREATE INDEX 문의 지원 되는지 여부를 보려는 응용 프로그램 호출 **SQLGetInfo** SQL_DLL_INDEX 정보 형식을 사용 하 여 합니다.  
   
- SQL_INFO_SCHEMA_VIEWS (ODBC 3.0)  
+ SQL_INFO_SCHEMA_VIEWS(ODBC 3.0)  
  드라이버에서 지원 되는 뷰는 INFORMATION_SCHEMA에 열거 SQLUINTEGER 비트 마스크입니다. 에서는 뷰와의 내용을 INFORMATION_SCHEMA SQL-92에 정의 되어 있습니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -1141,7 +1141,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_ISV_VIEWS = 지정된 된 사용자가 액세스할 수 있는이 카탈로그에 표시 된 테이블 정의 나타냅니다. (FIPS 전환 수준)  
   
- SQL_INSERT_STATEMENT (ODBC 3.0)  
+ SQL_INSERT_STATEMENT(ODBC 3.0)  
  원하는 것으로 표시 하는 SQLUINTEGER 비트 마스크 **삽입** 문:  
   
  SQL_IS_INSERT_LITERALS  
@@ -1152,7 +1152,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_INTEGRITY (ODBC 1.0)  
+ SQL_INTEGRITY(ODBC 1.0)  
  문자열: 데이터 원본에는 무결성 향상 기능이;에서 지 원하는 경우 "Y" "N" 하지 않는 경우입니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_ODBC_SQL_OPT_IEF 합니다.  
@@ -1177,131 +1177,131 @@ SQLRETURN SQLGetInfo(
   
  이러한 비트 마스크의 설명에 대 한 SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (보고 "키 집합 커서" 설명에서 "동적 커서"에 대 한 대체).  
   
- SQL_KEYWORDS (ODBC 2.0)  
+ SQL_KEYWORDS(ODBC 2.0)  
  모든 데이터 소스 특정 키워드의 쉼표로 구분 된 목록을 포함 하는 문자열입니다. 이 목록은 특정 odbc 키워드 또는 데이터 원본 및 ODBC 모두에서 사용 되는 키워드를 포함 하지 않습니다. 이 목록은 모든 예약 된 키워드입니다. 상호 운용 가능한 응용 프로그램 개체 이름에이 예약어를 사용 해야 합니다.  
   
  ODBC 키워드 목록은 참조 하세요 [예약어](../../../odbc/reference/appendixes/reserved-keywords.md) 에서 [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 합니다 **#define** 값 SQL_ODBC_KEYWORDS ODBC 키워드의 쉼표로 구분 된 목록을 포함 합니다.  
   
  부록 C: SQL 문법  
   
- SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
- 문자열: 백분율 문자 (%)에 대 한 데이터 소스에서 이스케이프 문자를 지원 하는 경우 "Y" 및 밑줄 (_)에서 문자를 **와 같은** 조건자 및 드라이버를 정의 하기 위한 ODBC 구문을 지원함을 **와 같은** 조건자 이스케이프 문자 "N"이 고 그렇지 합니다.  
+ SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
+ 문자열: 데이터 원본의 백분율 문자 (%)에 대 한 이스케이프 문자를 지 원하는 경우 "Y" 및 밑줄 (_)에 **와 같은** 조건자 및 드라이버를 정의 하기 위한 ODBC 구문을 지원함을 **같은** 조건자 이스케이프 문자 "N"이 고 그렇지 합니다.  
   
- SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
+ SQL_MAX_ASYNC_CONCURRENT_STATEMENTS(ODBC 3.0)  
  드라이버는 지정된 된 연결을 지원할 수 있는 비동기 모드에서 활성 동시 문의 최대 수를 지정 하는 SQLUINTEGER 값입니다. 특정 제한이 또는 알 수 없는 경우이 값이 0으로 설정 합니다.  
   
- SQL_MAX_BINARY_LITERAL_LEN (ODBC 2.0)  
+ SQL_MAX_BINARY_LITERAL_LEN(ODBC 2.0)  
  최대 길이 지정 하는 SQLUINTEGER 값 (16 진수 문자를 제외 된 리터럴 접두사 및 접미사 반환한 수가 **SQLGetTypeInfo**) 이진 리터럴을 SQL 문에서 합니다. 예를 들어, 이진 리터럴 0xFFAA 길이는 4에 있습니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_CATALOG_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_CATALOG_NAME_LEN(ODBC 1.0)  
  데이터 원본에서 카탈로그 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 전체 수준-와 호환 되는 드라이버를 최소한 128을 반환 됩니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_MAX_QUALIFIER_NAME_LEN 합니다.  
   
- SQL_MAX_CHAR_LITERAL_LEN (ODBC 2.0)  
+ SQL_MAX_CHAR_LITERAL_LEN(ODBC 2.0)  
  최대 길이 지정 하는 SQLUINTEGER 값 (리터럴 접두사와 접미사 반환한 제외 하 고 문자 수가 **SQLGetTypeInfo**)는 SQL 문의 리터럴 문자. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_COLUMN_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_COLUMN_NAME_LEN(ODBC 1.0)  
  데이터 원본에서 열 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 18 자 이상이 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 128을 반환 합니다.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_GROUP_BY(ODBC 2.0)  
  허용 되는 열의 최대 수를 지정 하는 SQLUSMALLINT 값을 **GROUP BY** 절. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버는 적어도 6을 반환 합니다. FIPS 중간 수준-와 호환 되는 드라이버는 적어도 15를 반환 합니다.  
   
- SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_INDEX(ODBC 2.0)  
  인덱스의 최대 열 수를 지정 하는 SQLUSMALLINT 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_ORDER_BY(ODBC 2.0)  
  허용 되는 열의 최대 수를 지정 하는 SQLUSMALLINT 값을 **ORDER BY** 절. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버는 적어도 6을 반환 합니다. FIPS 중간 수준-와 호환 되는 드라이버는 적어도 15를 반환 합니다.  
   
- SQL_MAX_COLUMNS_IN_SELECT (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_SELECT(ODBC 2.0)  
  선택 목록에서 사용할 수 있는 열의 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버는 적어도 100 개를 반환 합니다. FIPS 중간 수준-와 호환 되는 드라이버는 250 이상 반환 합니다.  
   
- SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_TABLE(ODBC 2.0)  
  테이블의 열 수의 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버는 적어도 100 개를 반환 합니다. FIPS 중간 수준-와 호환 되는 드라이버는 250 이상 반환 합니다.  
   
- SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
+ SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
  활성 문 드라이버에 대 한 연결을 지원할 수 있는 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 행이 포함 된 용어 "결과" 의미를 보류 중인 결과가 있으면 활성으로 문을 정의 **선택** 작업이 나 영향을 받는 행을 **삽입**, **업데이트**, 또는 **삭제** 작업 (예: 행 개수) NEED_DATA 상태의 인스턴스인 경우. 이 값은 드라이버 또는 데이터 원본에 따른 제한을 반영할 수 있습니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_ACTIVE_STATEMENTS 합니다.  
   
- SQL_MAX_CURSOR_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_CURSOR_NAME_LEN(ODBC 1.0)  
  데이터 원본에서 커서 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 18 자 이상이 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 128을 반환 합니다.  
   
- SQL_MAX_DRIVER_CONNECTIONS (ODBC 1.0)  
+ SQL_MAX_DRIVER_CONNECTIONS(ODBC 1.0)  
  환경에 대 한 드라이버를 지원할 수 있는 활성 연결의 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 이 값은 드라이버 또는 데이터 원본에 따른 제한을 반영할 수 있습니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_ACTIVE_CONNECTIONS 합니다.  
   
- SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
+ SQL_MAX_IDENTIFIER_LEN(ODBC 3.0)  
  사용자 정의 이름에 대 한 데이터 원본에서 지 자에서 최대 크기를 나타내는 SQLUSMALLINT 합니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 18 자 이상이 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 128을 반환 합니다.  
   
- SQL_MAX_INDEX_SIZE (ODBC 2.0)  
+ SQL_MAX_INDEX_SIZE(ODBC 2.0)  
  인덱스의 결합 된 필드에 허용 된 바이트의 최대 수를 지정 하는 SQLUINTEGER 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_PROCEDURE_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_PROCEDURE_NAME_LEN(ODBC 1.0)  
  데이터 원본에 프로시저 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_ROW_SIZE (ODBC 2.0)  
+ SQL_MAX_ROW_SIZE(ODBC 2.0)  
  테이블의 단일 행의 최대 길이 지정 하는 SQLUINTEGER 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 2,000 이상 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 8,000 개 이상 반환 합니다.  
   
- SQL_MAX_ROW_SIZE_INCLUDES_LONG (ODBC 3.0)  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG(ODBC 3.0)  
  문자열: 행에서 SQL_LONGVARBINARY 및 SQL_LONGVARCHAR를 모두 열 길이 포함 하는 "Y" SQL_MAX_ROW_SIZE 정보 유형에 대 한 최대 행 크기를 반환 하는 경우 "N"이 고 그렇지 합니다.  
   
- SQL_MAX_SCHEMA_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_SCHEMA_NAME_LEN(ODBC 1.0)  
  데이터 소스의 스키마 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 18 자 이상이 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 128을 반환 합니다.  
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_MAX_OWNER_NAME_LEN 합니다.  
   
- SQL_MAX_STATEMENT_LEN (ODBC 2.0)  
+ SQL_MAX_STATEMENT_LEN(ODBC 2.0)  
  SQL 문의 최대 길이 (문자를 포함 하 여 공백 수)를 지정 하는 SQLUINTEGER 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MAX_TABLE_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_TABLE_NAME_LEN(ODBC 1.0)  
  데이터 원본에 테이블 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버를 18 자 이상이 반환 됩니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 128을 반환 합니다.  
   
- SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
+ SQL_MAX_TABLES_IN_SELECT(ODBC 2.0)  
  허용 하는 테이블의 최대 수를 지정 하는 SQLUSMALLINT 값을 **FROM** 절을 **선택** 문입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
  FIPS 항목 수준-와 호환 되는 드라이버는 적어도 15를 반환 합니다. FIPS 중간 수준-와 호환 되는 드라이버는 최소한 50을 반환 합니다.  
   
- SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
+ SQL_MAX_USER_NAME_LEN(ODBC 2.0)  
  데이터 원본에 사용자 이름의 최대 길이 지정 하는 SQLUSMALLINT 값입니다. 최대 길이가 없는 또는 길이 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_MULT_RESULT_SETS (ODBC 1.0)  
+ SQL_MULT_RESULT_SETS(ODBC 1.0)  
  문자열: "Y" 없으면 데이터 원본에서 여러 결과 집합을 "N"를 지원 합니다.  
   
  여러 결과 집합에 대 한 자세한 내용은 참조 하세요. [여러 결과](../../../odbc/reference/develop-app/multiple-results.md)합니다.  
   
- SQL_MULTIPLE_ACTIVE_TXN (ODBC 1.0)  
+ SQL_MULTIPLE_ACTIVE_TXN(ODBC 1.0)  
  문자열: "Y" 드라이버만 언제 든 지 하나의 트랜잭션만 활성화할 수 있습니다 동시 "N"에 둘 이상의 활성 트랜잭션을 지 원하는 경우.  
   
  이 정보 유형에 대해 반환 되는 정보는 분산된 트랜잭션의 경우 적용 되지 않습니다.  
   
- SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
+ SQL_NEED_LONG_DATA_LEN(ODBC 2.0)  
  문자열: 그렇지 않은 경우 데이터 원본이 전에 해당 값 데이터 형식 이어서 SQL_LONGVARBINARY, SQL_LONGVARCHAR, long 데이터 소스 관련 데이터 형식이 long 데이터 값의 길이 해야 하는 경우 "Y"는 "N" 데이터 원본에 전송 됩니다. 자세한 내용은 [SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md) 하 고 [SQLSetPos 함수](../../../odbc/reference/syntax/sqlsetpos-function.md)합니다.  
   
- SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
+ SQL_NON_NULLABLE_COLUMNS(ODBC 1.0)  
  데이터 원본 열에 NOT NULL을 지원 하는지 여부를 지정 하는 SQLUSMALLINT 값:  
   
  SQL_NNC_NULL = 모든 열이 null을 허용 해야 합니다.  
@@ -1310,7 +1310,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 SQL_NNC_NON_NULL 반환 됩니다.  
   
- SQL_NULL_COLLATION (ODBC 2.0)  
+ SQL_NULL_COLLATION(ODBC 2.0)  
  Null 결과 집합을 정렬 되는 위치를 지정 하는 SQLUSMALLINT 값:  
   
  SQL_NC_END = Null ASC 또는 DESC 키워드에 관계 없이 결과 집합의 끝에 정렬 됩니다.  
@@ -1321,7 +1321,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_NC_START = Null ASC 또는 DESC 키워드에 관계 없이 결과 집합의 시작 부분에 정렬 됩니다.  
   
- SQL_NUMERIC_FUNCTIONS (ODBC 1.0)  
+ SQL_NUMERIC_FUNCTIONS(ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 비트 마스크는 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  드라이버 및 연결 된 데이터 원본에서 지 원하는 스칼라 숫자 함수를 열거 SQLUINTEGER 비트 마스크입니다.  
@@ -1330,7 +1330,7 @@ SQLRETURN SQLGetInfo(
   
  (ODBC 1.0) SQL_FN_NUM_ABS SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) SQL_ SQL_FN_NUM_DEGREES (ODBC 2.0) (ODBC 1.0) FN_NUM_EXP SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_RADIANS (ODBC 2.0) SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_ SQL_FN_NUM_POWER (ODBC 2.0) (ODBC 2.0) NUM_ROUND SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
- SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
+ SQL_ODBC_INTERFACE_CONFORMANCE(ODBC 3.0)  
  ODBC 3 수준을 표시 하는 SQLUINTEGER 값 *.x* 드라이버를 준수 하는 인터페이스입니다.  
   
  SQL_OIC_CORE: 모든 ODBC 드라이버는 최소 수준 준수 해야 합니다. 이 수준은 연결 함수, 준비 하 고 SQL 문을 실행 하는 함수, 기본 결과 집합 메타 데이터 함수, 기본 카탈로그 함수 등과 같은 기본 인터페이스 요소를 포함 합니다.  
@@ -1341,10 +1341,10 @@ SQLRETURN SQLGetInfo(
   
  자세한 내용은 [인터페이스 적합성 수준](../../../odbc/reference/develop-app/interface-conformance-levels.md)합니다.  
   
- SQL_ODBC_VER (ODBC 1.0)  
+ SQL_ODBC_VER(ODBC 1.0)  
  버전의 ODBC 드라이버 관리자는 준수 하는 문자열입니다. 폼의 버전은 # #. # #. 0000, 여기에서 처음 두 숫자는 주 버전 하 고 다음 두 자리는 부 버전. 드라이버 관리자에만 구현 됩니다.  
   
- SQL_OJ_CAPABILITIES (ODBC 2.01)  
+ SQL_OJ_CAPABILITIES(ODBC 2.01)  
  드라이버 및 데이터 원본에서 지 원하는 외부 조인 형식 열거 SQLUINTEGER 비트 마스크입니다. 다음 비트 마스크는 어떤 형식이 지원 되는지 확인 하는 데 사용 됩니다.  
   
  SQL_OJ_LEFT = Left outer join이 지원 됩니다.  
@@ -1365,17 +1365,17 @@ SQLRETURN SQLGetInfo(
   
  SELECT 문에서 관계형 조인 연산자는 지원에 대 한 정보에 대 한 SQL-92에 정의 된 대로 SQL_SQL92_RELATIONAL_JOIN_OPERATORS 참조 합니다.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT (ODBC 2.0)  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT(ODBC 2.0)  
  문자열: "Y" 경우의 열을 **ORDER BY** 절은 선택 목록에에 있어야 합니다.이 고, 그렇지 "N"입니다.  
   
- SQL_PARAM_ARRAY_ROW_COUNTS (ODBC 3.0)  
+ SQL_PARAM_ARRAY_ROW_COUNTS(ODBC 3.0)  
  행의 가용성에 대 한 드라이버의 속성을 열거 하는 SQLUINTEGER 매개 변수가 있는 실행 수 있습니다. 에 다음 값:  
   
  SQL_PARC_BATCH = 개인 행 개수 매개 변수의 각 집합에 대해 사용할 수 있습니다. 각 매개 변수 배열에 있는 설정에 대 한 SQL 문의 일괄 처리를 생성 하는 드라이버를 개념적으로 동일 합니다. SQL_PARAM_STATUS_PTR 설명자 필드를 사용 하 여 확장된 오류 정보를 검색할 수 있습니다.  
   
  SQL_PARC_NO_BATCH = 매개 변수의 전체 배열에 대 한 문의 실행 결과 누적 행 수에는 하나의 행 개수를 사용할 수 있습니다. 원자 단위로 완료 매개 변수 배열 함께 문을 처리 하는 방법에 개념적으로 동일 합니다. 오류는 한 문이 실행 된 것 처럼 동일한 처리 됩니다.  
   
- SQL_PARAM_ARRAY_SELECTS (ODBC 3.0)  
+ SQL_PARAM_ARRAY_SELECTS(ODBC 3.0)  
  결과의 가용성에 대 한 드라이버의 속성을 열거 하는 SQLUINTEGER 매개 변수가 있는 실행을 설정 합니다. 에 다음 값:  
   
  SQL_PAS_BATCH = 결과가 두 개 매개 변수 집합에 따라 사용할 수 있는 설정입니다. 각 매개 변수 배열에 있는 설정에 대 한 SQL 문의 일괄 처리를 생성 하는 드라이버를 개념적으로 동일 합니다.  
@@ -1384,20 +1384,20 @@ SQLRETURN SQLGetInfo(
   
  SQL_PAS_NO_SELECT = 드라이버는 결과 집합 생성 문 매개 변수 배열을 사용 하 여 실행할 수 없도록 합니다.  
   
- SQL_PROCEDURE_TERM (ODBC 1.0)  
+ SQL_PROCEDURE_TERM(ODBC 1.0)  
  프로시저; 데이터 원본 공급 업체의 이름 사용 하 여 문자열 예를 들어 "데이터베이스 프로시저", "저장된 프로시저", "procedure", "패키지" 또는 "저장된 쿼리"입니다.  
   
- SQL_PROCEDURES (ODBC 1.0)  
+ SQL_PROCEDURES(ODBC 1.0)  
  문자열: 프로시저 및 드라이버 데이터 원본에서 지 원하는 경우 "Y" ODBC 프로시저 호출 구문; 지원 "N"이 고 그렇지 합니다.  
   
- SQL_POS_OPERATIONS (ODBC 2.0)  
+ SQL_POS_OPERATIONS(ODBC 2.0)  
  지원 작업을 열거 하는 SQLINTEGER 비트 마스크 **SQLSetPos**합니다.  
   
  다음 비트 마스크는 어떤 옵션이 지원 되는지 확인 하려면 플래그와 함께 사용 됩니다.  
   
  (ODBC 2.0) SQL_POS_POSITION SQL_POS_REFRESH (ODBC 2.0) SQL_POS_UPDATE (ODBC 2.0) SQL_POS_DELETE (ODBC 2.0) SQL_POS_ADD (ODBC 2.0)  
   
- SQL_QUOTED_IDENTIFIER_CASE (ODBC 2.0)  
+ SQL_QUOTED_IDENTIFIER_CASE(ODBC 2.0)  
  SQLUSMALLINT 다음과 같이 값:  
   
  SQL_IC_UPPER 따옴표 붙은 = SQL에서 식별자 대/소문자 구분 하지 않으며에 저장 된 시스템 카탈로그에서 대문자입니다.  
@@ -1410,10 +1410,10 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 sql_ic_sensitive 입니다를 항상 반환 됩니다.  
   
- SQL_ROW_UPDATES (ODBC 1.0)  
+ SQL_ROW_UPDATES(ODBC 1.0)  
  문자열: "Y" 키 집합 커서 또는 혼합 커서 모두에 대 한 값 또는 행 버전을 유지 하는 경우 행을 인출 하 고 따라서 행이 마지막으로 인출 된 이후 모든 사용자가 행에 수행 된 모든 업데이트를 검색할 수 있습니다. (이에 적용 됩니다 업데이트, 삭제 또는 삽입 합니다.) 드라이버 행 상태로 SQL_ROW_UPDATED 플래그를 반환할 수 있습니다 때 배열 **SQLFetchScroll** 라고 합니다. 그렇지 않으면 "N"입니다.  
   
- SQL_SCHEMA_TERM (ODBC 1.0)  
+ SQL_SCHEMA_TERM(ODBC 1.0)  
  스키마에 대 한 데이터 원본 공급 업체의 이름 가진 문자열 예를 들어, "소유자", "권한 부여 ID" 또는 "Schema".  
   
  위쪽, 아래쪽, 또는 혼합의 경우 문자열을 반환할 수 있습니다.  
@@ -1422,7 +1422,7 @@ SQLRETURN SQLGetInfo(
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_OWNER_TERM 합니다.  
   
- SQL_SCHEMA_USAGE (ODBC 2.0)  
+ SQL_SCHEMA_USAGE(ODBC 2.0)  
  스키마 사용 될 수 있는 문을 열거 SQLUINTEGER 비트 마스크:  
   
  SQL_SU_DML_STATEMENTS = 스키마는 모든 데이터 조작 언어 문에서 지원 됩니다. **선택**, **삽입**, **업데이트**를 **삭제**을 지원 하 고 **업데이트에 대 한 선택** 위치 지정 업데이트 및 삭제 하 고 문입니다.  
@@ -1439,39 +1439,39 @@ SQLRETURN SQLGetInfo(
   
  이렇게 *정보 항목* ODBC 2.0에서 ODBC 3.0 바뀌었습니다 *정보 항목* SQL_OWNER_USAGE 합니다.  
   
- SQL_SCROLL_OPTIONS (ODBC 1.0)  
+ SQL_SCROLL_OPTIONS(ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 비트 마스크는 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  스크롤 가능 커서에 대 한 지원 되는 스크롤 옵션을 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 어떤 옵션이 지원 되는지 확인 하는 데 사용 됩니다.  
   
- SQL_SO_FORWARD_ONLY = 앞으로 커서만 스크롤합니다. ODBC (1.0)  
+ SQL_SO_FORWARD_ONLY = 앞으로 커서만 스크롤합니다. (ODBC 1.0)  
   
  SQL_SO_STATIC 데이터 = 결과 집합은 정적입니다. (ODBC 2.0)  
   
- SQL_SO_KEYSET_DRIVEN = 드라이버 저장 하 고 결과 집합의 모든 행에 대 한 키를 사용 합니다. ODBC (1.0)  
+ SQL_SO_KEYSET_DRIVEN = 드라이버 저장 하 고 결과 집합의 모든 행에 대 한 키를 사용 합니다. (ODBC 1.0)  
   
- SQL_SO_DYNAMIC = 드라이버 유지 (키 집합 크기는 행 집합 크기와 동일) 행 집합의 모든 행에 대 한 키입니다. ODBC (1.0)  
+ SQL_SO_DYNAMIC = 드라이버 유지 (키 집합 크기는 행 집합 크기와 동일) 행 집합의 모든 행에 대 한 키입니다. (ODBC 1.0)  
   
- SQL_SO_MIXED 드라이버 유지 키 = keyset, 키 집합 크기의 모든 행이 행 집합 크기 보다 큽니다. 키 집합 내에서 키 집합 커서와 키 집합 외부 동적 커서가 있습니다. ODBC (1.0)  
+ SQL_SO_MIXED 드라이버 유지 키 = keyset, 키 집합 크기의 모든 행이 행 집합 크기 보다 큽니다. 키 집합 내에서 키 집합 커서와 키 집합 외부 동적 커서가 있습니다. (ODBC 1.0)  
   
  스크롤 가능 커서에 대 한 정보를 참조 하세요 [스크롤 가능 커서](../../../odbc/reference/develop-app/scrollable-cursors.md)합니다.  
   
- SQL_SEARCH_PATTERN_ESCAPE (ODBC 1.0)  
- 드라이버에서 지 원하는 작업 검색 패턴에서 유효한 문자로 패턴 일치 메타 문자가 밑줄 (_) 및 백분율 기호 (%)의 사용을 허용 하는 이스케이프 문자로 지정 하는 문자열입니다. 이 이스케이프 문자는 검색 문자열을 지 원하는 해당 카탈로그 함수 인수에만 적용 됩니다. 이 문자열이 비어 있으면 드라이버는 검색 패턴 이스케이프 문자를 지원 하지 않습니다.  
+ SQL_SEARCH_PATTERN_ESCAPE(ODBC 1.0)  
+ 드라이버에서 지 원하는 작업 패턴 일치 메타 문자가 밑줄 (_) 및 백분율 기호 (%)의 사용을 허용 하는 이스케이프 문자로 지정 하는 문자열 검색 패턴에서 유효한 문자입니다. 이 이스케이프 문자는 검색 문자열을 지 원하는 해당 카탈로그 함수 인수에만 적용 됩니다. 이 문자열이 비어 있으면 드라이버는 검색 패턴 이스케이프 문자를 지원 하지 않습니다.  
   
  이 정보 유형은 일반 지원에서 이스케이프 문자를 인식 하지 못하기 때문에 합니다 **같은** 조건자 SQL-92에 없는이 문자열에 대 한 요구 사항입니다.  
   
  이렇게 *정보 항목* 카탈로그 함수로 제한 됩니다. 검색 패턴 문자열의 이스케이프 문자 사용에 대 한 참조 [패턴 값 인수](../../../odbc/reference/develop-app/pattern-value-arguments.md)합니다.  
   
- SQL_SERVER_NAME (ODBC 1.0)  
+ SQL_SERVER_NAME(ODBC 1.0)  
  문자열을 실제 데이터 소스 관련 서버 이름입니다. 데이터 원본 이름 중에 사용 되는 경우에 유용 **SQLConnect**를 **SQLDriverConnect**, 및 **SQLBrowseConnect**합니다.  
   
- SQL_SPECIAL_CHARACTERS (ODBC 2.0)  
+ SQL_SPECIAL_CHARACTERS(ODBC 2.0)  
  테이블 이름, 열 이름 또는 데이터 원본에서 인덱스 이름 등을 식별자 이름에서 사용할 수 있는 모든 특수 문자 (즉, a ~ z, A ~ Z, 0-9 및 밑줄을 제외한 모든 문자)를 포함 하는 문자열입니다. 예를 들어, "#$^"입니다. 식별자의 이러한 문자 하나 이상 있으면 식별자에 구분된 식별자 여야 합니다.  
   
- SQL_SQL_CONFORMANCE (ODBC 3.0)  
+ SQL_SQL_CONFORMANCE(ODBC 3.0)  
  드라이버에서 지 원하는 SQL-92 수준을 표시 하는 SQLUINTEGER 값:  
   
  SQL_SC_SQL92_ENTRY 항목 수준 SQL-92 규격 =.  
@@ -1573,7 +1573,7 @@ SQLRETURN SQLGetInfo(
   
  (중간 수준) SQL_SVE_CASE SQL_SVE_CAST (FIPS 전환 수준) (중간 수준) SQL_SVE_COALESCE SQL_SVE_NULLIF (중간 수준)  
   
- SQL_STANDARD_CLI_CONFORMANCE (ODBC 3.0)  
+ SQL_STANDARD_CLI_CONFORMANCE(ODBC 3.0)  
  드라이버를 준수 하는 CLI 표준 또는 표준 열거 SQLUINTEGER 비트 마스크입니다. 다음 비트 마스크는 드라이버를 준수 하는 수준을 결정 하는 데 사용 됩니다.  
   
  SQL_SCC_XOPEN_CLI_VERSION1: 드라이버에서 열린 그룹 CLI 버전 1 준수합니다.  
@@ -1600,7 +1600,7 @@ SQLRETURN SQLGetInfo(
   
  이러한 비트 마스크의 설명에 대 한 SQL_DYNAMIC_CURSOR_ATTRIBUTES2 참조 (및 설명에 "동적 커서"에 대 한 "정적 커서"으로 대체).  
   
- SQL_STRING_FUNCTIONS (ODBC 1.0)  
+ SQL_STRING_FUNCTIONS(ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 비트 마스크는 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  드라이버 및 연결 된 데이터 원본에서 지 원하는 스칼라 문자열 함수를 열거 SQLUINTEGER 비트 마스크입니다.  
@@ -1613,7 +1613,7 @@ SQLRETURN SQLGetInfo(
   
  (자세한 내용은 [문자열 함수](../../../odbc/reference/appendixes/string-functions.md) 부록 E, "스칼라 함수입니다.")  
   
- SQL_SUBQUERIES (ODBC 2.0)  
+ SQL_SUBQUERIES(ODBC 2.0)  
  하위 쿼리를 지 원하는 조건자 열거 SQLUINTEGER 비트 마스크:  
   
  SQL_SQ_CORRELATED_SUBQUERIESSQL_SQ_COMPARISONSQL_SQ_EXISTSSQL_SQ_INSQL_SQ_QUANTIFIED  
@@ -1622,21 +1622,21 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버는 항상 모든 이러한 비트가 설정 되는 비트 마스크를 반환 합니다.  
   
- SQL_SYSTEM_FUNCTIONS (ODBC 1.0)  
+ SQL_SYSTEM_FUNCTIONS(ODBC 1.0)  
  드라이버 및 연결 된 데이터 원본에서 지 원하는 스칼라 시스템 함수를 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 지원 되는 시스템 함수를 결정 하는 데 사용 됩니다.  
   
  SQL_FN_SYS_DBNAMESQL_FN_SYS_IFNULLSQL_FN_SYS_USERNAME  
   
- SQL_TABLE_TERM (ODBC 1.0)  
+ SQL_TABLE_TERM(ODBC 1.0)  
  문자열 테이블을 데이터 원본 공급 업체의 이름 예를 들어, "table" 또는 "file"입니다.  
   
  이 문자열은 위쪽, 아래쪽, 또는 혼합의 경우 수 있습니다.  
   
  SQL-92 항목 수준-와 호환 되는 드라이버는 항상 "table"을 반환 합니다.  
   
- SQL_TIMEDATE_ADD_INTERVALS (ODBC 2.0)  
+ SQL_TIMEDATE_ADD_INTERVALS(ODBC 2.0)  
  드라이버 및 TIMESTAMPADD 스칼라 함수에 대 한 연결 된 데이터 원본에서 지 원하는 타임 스탬프 간격 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 간격 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -1645,7 +1645,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 전환 수준-와 호환 되는 드라이버는 항상 모든 이러한 비트가 설정 되는 비트 마스크를 반환 합니다.  
   
- SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
+ SQL_TIMEDATE_DIFF_INTERVALS(ODBC 2.0)  
  드라이버 및 TIMESTAMPDIFF 스칼라 함수에 대 한 연결 된 데이터 원본에서 지 원하는 타임 스탬프 간격 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 간격 지원 되는지 확인 하는 데 사용 됩니다.  
@@ -1654,7 +1654,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 전환 수준-와 호환 되는 드라이버는 항상 모든 이러한 비트가 설정 되는 비트 마스크를 반환 합니다.  
   
- SQL_TIMEDATE_FUNCTIONS (ODBC 1.0)  
+ SQL_TIMEDATE_FUNCTIONS(ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 비트 마스크는 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  스칼라 날짜 및 시간 함수 드라이버 및 연결 된 데이터 원본에서 지 원하는 열거 SQLUINTEGER 비트 마스크입니다.  
@@ -1663,24 +1663,24 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TD_CURRENT_DATE ODBC 3.0) (ODBC 3.0) SQL_FN_TD_CURRENT_TIME SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0) (ODBC 1.0) SQL_FN_TD_CURDATE SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 2.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0) SQL_FN_TD_DAYOFWEEK ( 1.0 ODBC) (ODBC 1.0) SQL_FN_TD_DAYOFYEAR SQL_FN_TD_EXTRACT (ODBC 3.0) SQL_FN_TD_HOUR (ODBC 1.0) SQL_FN_TD_MINUTE (ODBC 1.0) SQL_FN_TD_MONTH (ODBC 1.0) SQL_FN_TD_MONTHNAME (ODBC 2.0) SQL_FN_TD_NOW (ODBC 1.0) SQL_FN_TD_QUARTER (ODBC 1.0) SQL_FN_TD_ 두 번째 (ODBC 1.0) SQL_FN_TD_TIMESTAMPADD (ODBC 2.0) SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0) SQL_FN_TD_WEEK (ODBC 1.0) SQL_FN_TD_YEAR (ODBC 1.0)  
   
- SQL_TXN_CAPABLE (ODBC 1.0)  
+ SQL_TXN_CAPABLE(ODBC 1.0)  
  참고: 정보 유형 ODBC 1.0;에 도입 합니다. 각 반환 값은 이전에 도입 된 버전을 사용 하 여 레이블이 지정 됩니다.  
   
  드라이버 또는 데이터 원본에 트랜잭션 지원을 설명 하는 SQLUSMALLINT 값:  
   
- SQL_TC_NONE = 트랜잭션이 지원 되지 않습니다. ODBC (1.0)  
+ SQL_TC_NONE = 트랜잭션이 지원 되지 않습니다. (ODBC 1.0)  
   
- SQL_TC_DML = 트랜잭션 데이터 조작 언어 (DML) 문만 포함 될 수 있습니다 (**선택**, **삽입**, **업데이트**하십시오 **삭제** ). 트랜잭션 원인에서 오류가 발생 하는 DDL (데이터 정의 언어) 문이 있습니다. ODBC (1.0)  
+ SQL_TC_DML = 트랜잭션 데이터 조작 언어 (DML) 문만 포함 될 수 있습니다 (**선택**, **삽입**, **업데이트**하십시오 **삭제** ). 트랜잭션 원인에서 오류가 발생 하는 DDL (데이터 정의 언어) 문이 있습니다. (ODBC 1.0)  
   
  SQL_TC_DDL_COMMIT = 트랜잭션을 DML 문만 포함 될 수 있습니다. DDL 문 (**CREATE TABLE**를 **DROP INDEX**등) 트랜잭션이 발생 하는 트랜잭션이 커밋된 것으로 발생 합니다. (ODBC 2.0)  
   
  SQL_TC_DDL_IGNORE = 트랜잭션을 DML 문만 포함 될 수 있습니다. 트랜잭션에서 발생 하는 DDL 문이 무시 됩니다. (ODBC 2.0)  
   
- SQL_TC_ALL = DDL 문 및 DML 문을 순서에 관계 없이 트랜잭션을 포함할 수 있습니다. ODBC (1.0)  
+ SQL_TC_ALL = DDL 문 및 DML 문을 순서에 관계 없이 트랜잭션을 포함할 수 있습니다. (ODBC 1.0)  
   
  (트랜잭션 지원 SQL-92에 필수 이기 때문에 [수준] SQL-92와 호환 되는 드라이버를 반환 하지 않습니다 SQL_TC_NONE.)  
   
- SQL_TXN_ISOLATION_OPTION (ODBC 1.0)  
+ SQL_TXN_ISOLATION_OPTION(ODBC 1.0)  
  드라이버 또는 데이터 원본에서 사용할 수 있는 트랜잭션 격리 수준을 열거 SQLUINTEGER 비트 마스크입니다.  
   
  다음 비트 마스크는 어떤 옵션이 지원 되는지 확인 하는 데 플래그와 함께 사용 됩니다.  
@@ -1693,7 +1693,7 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 지 원하는 대로 항상 sql_txn_serializable로 반환 됩니다. FIPS 전환 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_UNION (ODBC 2.0)  
+ SQL_UNION(ODBC 2.0)  
  에 대 한 지원 열거 하는 SQLUINTEGER 비트 마스크를 **UNION** 절:  
   
  SQL_U_UNION 데이터 원본에서 지 원하는 = 합니다 **UNION** 절.  
@@ -1702,29 +1702,29 @@ SQLRETURN SQLGetInfo(
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 항상 반환 됩니다 두이 옵션 모두 지원.  
   
- SQL_USER_NAME (ODBC 1.0)  
+ SQL_USER_NAME(ODBC 1.0)  
  로그인 이름과 다를 수 있는 특정 데이터베이스에 사용 되는 이름의 문자열입니다.  
   
- SQL_XOPEN_CLI_YEAR (ODBC 3.0)  
+ SQL_XOPEN_CLI_YEAR(ODBC 3.0)  
  게시 된 버전의 ODBC 드라이버 관리자 완전히 준수 Open Group 사양의 연도 나타내는 문자열입니다.  
   
- SQL_ACCESSIBLE_PROCEDURES (ODBC 1.0)  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
  문자열: "Y" 사용자에서 반환 된 모든 프로시저를 실행할 수 있다면 **SQLProcedures**; 사용자를 실행할 수 없는지 반환 하는 "N" 프로시저 있을 수 있습니다.  
   
- SQL_ACCESSIBLE_TABLES (ODBC 1.0)  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  문자열: "Y" 사용자 보장 되는 경우 **선택** 반환한 모든 테이블에 대 한 권한을 **SQLTables**; 사용자에 액세스할 수 없습니다. 반환 하는 "N" 테이블이 있을 수 있습니다.  
   
- SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  활성 환경에 드라이버를 지원할 수 있는 최대 수를 지정 하는 SQLUSMALLINT 값입니다. 지정 된 제한이 또는 알 수 없는 경우이 값은 0으로 설정 됩니다.  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  집계 함수에 대 한 지원을 열거 SQLUINTEGER 비트 마스크:  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  SQL-92 항목 수준-와 호환 되는 드라이버를 항상 반환 됩니다이 옵션을 모두 지원.  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **ALTER 도메인** 문, 데이터 원본에서 지 원하는 SQL-92에 정의 된 대로 합니다. SQL-92 Full 수준 규격 드라이버는 비트 마스크의 모든 항상 반환 됩니다. 즉 "0"의 반환 값을 **ALTER 도메인** 문은 지원 되지 않습니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -1745,7 +1745,7 @@ SQLRETURN SQLGetInfo(
   
  (전체 수준) SQL_AD_ADD_CONSTRAINT_DEFERRABLE SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (전체 수준) (전체 수준) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (전체 수준)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  절을 열거 하는 SQLUINTEGER 비트 마스크를 **ALTER TABLE** 데이터 원본에서 지 원하는 문입니다.  
   
  이 기능을 지원 해야 하는 SQL-92 또는 FIPS 규칙 수준은 각 비트 마스크 옆 괄호 안에 표시 됩니다.  
@@ -1780,7 +1780,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AT_CONSTRAINT_INITIALLY_DEFERRED (전체 수준) (ODBC 3.0) SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (전체 수준) (ODBC 3.0) SQL_AT_CONSTRAINT_DEFERRABLE (전체 수준) (ODBC 3.0) SQL_AT_CONSTRAINT_NON_DEFERRABLE (전체 수준) (ODBC 3.0)  
   
- SQL_ASYNC_MODE (ODBC 3.0)  
+ SQL_ASYNC_MODE(ODBC 3.0)  
  드라이버에서 비동기 지원의 수준을 표시 하는 SQLUINTEGER 값:  
   
  SQL_AM_CONNECTION = 연결 수준 비동기 실행은 지원 됩니다. 비동기 모드에 있는 지정 된 연결 핸들에 연결 된 모든 문 핸들 또는 동기 모드에서 모두. 같은 연결에서 다른 문 핸들은 동기 모드에서 이동 하 고 그 반대의 경우도 마찬가지 비동기 모드 연결에서 문 핸들 일 수 없습니다.  

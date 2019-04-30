@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e134b2870c4506e725f2900b83d1118e42b55d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219117"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47829001"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  매개 변수에서 지정한 테이블 이름 목록을 반환 합니다 **SQLTables** 문입니다. 없는 매개 변수를 지정 하는 경우에 현재 데이터 원본에 저장 된 테이블 이름을 반환 합니다. 드라이버 정보 결과 집합으로 반환 합니다.  
   

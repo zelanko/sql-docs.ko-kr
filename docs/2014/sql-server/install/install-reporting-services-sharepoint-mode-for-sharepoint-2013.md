@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298813"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Install Reporting Services SharePoint Mode for SharePoint 2013
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 단일 서버 설치 과정을 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만드는 등 기존 설치를 업데이트하는 개별 절차에 이 항목을 사용할 수도 있습니다.  
@@ -39,13 +39,13 @@ ms.locfileid: "53359845"
   
 -   [설치 계정](#bkmk_setupaccounts)  
   
--   [1 단계: SharePoint 모드의 Reporting Services 보고서 서버 설치](#bkmk_install_SSRS)  
+-   [1단계: SharePoint 모드의 Reporting Services 보고서 서버 설치](#bkmk_install_SSRS)  
   
 -   [2단계: 등록 및 Reporting Services SharePoint 서비스를 시작 합니다.](#bkmk_install_SSRS_sharedservice)  
   
--   [3 단계: Reporting Services 서비스 응용 프로그램 만들기](#bkmk_create_serrviceapplication)  
+-   [3단계: Reporting Services 서비스 응용 프로그램 만들기](#bkmk_create_serrviceapplication)  
   
--   [4 단계: Power View 사이트 모음 기능을 활성화 합니다.](#bkmk_powerview)  
+-   [4단계: Power View 사이트 모음 기능을 활성화 합니다.](#bkmk_powerview)  
   
 -   [1 ~ 4 단계에 대 한 Windows PowerShell 스크립트](#bkmk_full_script)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53359845"
   
      SharePoint 팜 관리자 계정이 또한 로컬 운영 체제 관리자 계정이 아닌 것이 가장 좋은 보안 방법입니다. 설치 프로세스의 일부로 로컬 관리자 그룹에 팜 관리자 계정을 추가하는 경우 설치가 완료된 후 로컬 관리자 그룹에서 계정을 제거하는 것이 좋습니다.  
   
-##  <a name="bkmk_install_SSRS"></a> 1 단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치  
+##  <a name="bkmk_install_SSRS"></a> 1단계: SharePoint 모드에서 Reporting Services 보고서 서버 설치  
  이 단계는 SharePoint 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치합니다. 컴퓨터에 이미 설치된 기능에 따라 다음 단계에 설명된 설치 페이지 중 일부가 표시되지 않을 수 있습니다.  
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
@@ -161,7 +161,7 @@ ms.locfileid: "53359845"
   
 20. 설치하는 데 몇 분 정도 걸립니다. 기능 목록 및 각 기능의 상태가 표시된 **완료** 페이지가 나타납니다. 컴퓨터를 다시 시작해야 함을 나타내는 정보 대화 상자가 표시될 수 있습니다.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> 2 단계: Reporting Services SharePoint 서비스 등록 및 시작  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> 2단계: 등록 및 Reporting Services SharePoint 서비스를 시작 합니다.  
  ![PowerShell 관련 콘텐츠](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
 > [!NOTE]  
@@ -192,7 +192,7 @@ ms.locfileid: "53359845"
     > [!IMPORTANT]  
     >  다음과 유사한 오류 메시지가 표시되는 경우  
     >   
-    >  Install-SPRSService : ' Install-sprsservice ' 용어 **인식 되지 않습니다** 으로  
+    >  Install-sprsservice: ' Install-sprsservice ' 용어 **인식 되지 않습니다** 으로  
     > cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 인식되지 않습니다. 이름의 철자, 경로 포함 여부와  
     > 경로가 올바른지 확인한 다음  
     > 다시 시도하세요.  
@@ -222,7 +222,7 @@ ms.locfileid: "53359845"
     > [!NOTE]  
     >  Reporting Services 서비스가 **시작 중** 상태를 유지하고 **시작됨**으로 변경되지 않을 경우 'SharePoint 2013 관리' 서비스가 Windows Server Manager에서 시작되었는지 확인합니다.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> 3 단계: Reporting Services 서비스 애플리케이션 만들기  
+##  <a name="bkmk_create_serrviceapplication"></a> 3단계: Reporting Services 서비스 애플리케이션 만들기  
  이 섹션에서는 서비스 애플리케이션을 만드는 단계와 속성에 대한 설명(기존 서비스 애플리케이션을 검토하려는 경우)을 제공합니다.  
   
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  

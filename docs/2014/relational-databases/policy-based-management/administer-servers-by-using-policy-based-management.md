@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157117"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
   정책 기반 관리는 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 관리하는 시스템입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정책 관리자는 정책 기반 관리를 사용할 때 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통해 정책을 만들어 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체와 같은 엔터티를 관리합니다.  

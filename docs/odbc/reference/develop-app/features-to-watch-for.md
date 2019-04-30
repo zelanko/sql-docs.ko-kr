@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061611"
 ---
 # <a name="features-to-watch-for"></a>주목할 기능
 이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여에 대 한 사용 하는 기능을 설명 합니다. 사실 이러한 기능에 따라 크게 다릅니다 지원과 방식으로 Dbms; 지원 오류 코드를 상호 운용 가능한 응용 프로그램에서 문제가 발생할 가능성이 있습니다.  
   
- 이 섹션에서는 응용 프로그램 개발자가 고려해 야 하는 모든 기능을 나열 하지 않습니다. 해당 정보를 참조 하세요. 합니다 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), 및 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 설명 함수 [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 및 각 기능을 설명 하는이 설명서의 섹션입니다.  
+ 이 섹션에서는 응용 프로그램 개발자가 고려해 야 하는 모든 기능을 나열 하지 않습니다. 해당 정보를 참조 하세요. 합니다 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), 및 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 설명 함수 [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), 및 각 기능을 설명 하는이 설명서의 섹션입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

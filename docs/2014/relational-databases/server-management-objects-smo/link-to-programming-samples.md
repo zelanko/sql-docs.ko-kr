@@ -15,11 +15,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131786"
 ---
 # <a name="link-to-programming-samples"></a>프로그래밍 예제 링크
   다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 디렉터리에서 사용할 수 있는 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] Management Objects(SMO) 프로그래밍 예제를 나열합니다. 이러한 샘플은 모두에서 사용 가능한 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 고 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  

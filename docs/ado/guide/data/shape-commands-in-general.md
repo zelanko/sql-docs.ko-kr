@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062849"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 모양의 열의 정의 데이터 셰이핑 **Recordset**, 열 및는 방식을 나타내는 엔터티 간의 관계를 **레코드 집합** 데이터로 채워집니다.  
   
  모양의 **레코드 집합** 열에는 다음과 같은 유형의 구성 될 수 있습니다.  
   
-|열 유형|설명|  
+|열 유형|Description|  
 |-----------------|-----------------|  
-|data|필드를 **레코드 집합** 테이블을 데이터 공급자는 쿼리 명령에서 반환 된, 또는 이전에 모양 **레코드 집합**합니다.|  
+|데이터|필드를 **레코드 집합** 테이블을 데이터 공급자는 쿼리 명령에서 반환 된, 또는 이전에 모양 **레코드 집합**합니다.|  
 |장|다른에 대 한 참조가 **레코드 집합**라는 *장*합니다. 장 열 수 있도록 정의 *부모-자식* 관계 위치를 *부모* 은 합니다 **레코드 집합** 장 열을 포함 하는 는*자식* 은 합니다 **레코드 집합** 장 나타내는입니다.|  
 |집계(aggregate)|실행 하 여 파생 된 열의 값을 *집계 함수* 모든 행 또는 자식의 모든 행의 열에 **레코드 집합**합니다. (다음 항목에서는 집계 함수를 참조 하세요 [집계 함수, CALC 함수 및 NEW 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |계산된 식|응용 프로그램의 같은 행의 열에는 식에 대 한 Visual Basic을 계산 하 여 열 값 파생 된 **레코드 집합**합니다. 식에는 계산 함수에 인수입니다. (다음 항목에서는 식 계산을 참조 하세요 [집계 함수, CALC 함수 및 NEW 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) 고 [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

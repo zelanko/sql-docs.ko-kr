@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 37ea46f7cae616e39b4d2b459c2d0768a03117b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297566"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 선택한 테이블 크기 자동 조정(Visual Database Tools)
   다이어그램에서 모든 필드를 표시하는 데 필요한 가장 작은 크기로 테이블 크기를 신속하게 조정할 수 있습니다.  

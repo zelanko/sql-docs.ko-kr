@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067679"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   사용할 수 있습니다 `SQLColAttribute` 준비 되거나 실행 ODBC 문에 대 한 결과 집합 열의 특성을 검색 하려면. 호출 `SQLColAttribute` 에서 준비 된 문을 원인에 대 한 왕복 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 문 실행을 호출 하므로의 일부로 결과 집합 열 데이터를 받는 `SQLColAttribute` 완료 되 면 **SQLExecute** 하거나 **SQLExecDirect** 않습니다 서버 왕복은 포함 되지 않습니다.  

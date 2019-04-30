@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208472"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol 사용
 응용 프로그램 호출 하 여 열을 바인딩합니다 **SQLBindCol**합니다. 이 함수는 한 번에 하나의 열을 바인딩합니다. 사용 하 여 응용 프로그램이 다음을 지정합니다.  
   
 -   열 번호입니다. Column 0은 책갈피 열; 일부 결과 집합의이 열이 포함 되지 않습니다. 다른 모든 열을 숫자 1부터 매겨집니다. 결과 집합에 열이 보다 높은 번호 열을 바인딩할 오류가 발생 이 오류 발견할 수 있는 결과 집합을 만들지 않으므로에서 반환 됩니다 **SQLFetch**가 아닌 **SQLBindCol**합니다.  
   
--   변수의 C 데이터 유형, 주소 및 바이트 길이 열에 바인딩됩니다. 오류는 SQL 데이터 형식의 열을 변환할 수 없습니다; C 데이터 형식을 지정 하는 것 이 오류 수 검색 되지 않습니다 생성 된 결과 집합으로 반환 됩니다 **SQLFetch**가 아닌 **SQLBindCol**합니다. 지원 되는 변환의 목록을 참조 하세요 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다. 바이트 길이 대 한 정보를 참조 하세요 [데이터 버퍼 길이](../../../odbc/reference/develop-app/data-buffer-length.md)입니다.  
+-   변수의 C 데이터 유형, 주소 및 바이트 길이 열에 바인딩됩니다. 오류는 SQL 데이터 형식의 열을 변환할 수 없습니다; C 데이터 형식을 지정 하는 것 이 오류 수 검색 되지 않습니다 생성 된 결과 집합으로 반환 됩니다 **SQLFetch**가 아닌 **SQLBindCol**합니다. 지원 되는 변환의 목록을 참조 하세요 [SQL에서 C 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식입니다. 바이트 길이 대 한 정보를 참조 하세요 [데이터 버퍼 길이](../../../odbc/reference/develop-app/data-buffer-length.md)입니다.  
   
 -   길이/표시기 버퍼의 주소입니다. 길이/표시기 버퍼 선택 사항입니다. 데이터가 NULL 인 경우 반환 SQL_NULL_DATA 이진 또는 문자 데이터의 바이트 길이 반환 하는 것이 됩니다. 자세한 내용은 [길이/표시기 값을 사용 하 여](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)입니다.  
   

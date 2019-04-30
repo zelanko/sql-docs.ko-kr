@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf0f9c907a77df2508a8c38d47509dc25778169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127910"
 ---
 # <a name="select-distinct-limitations"></a>SELECT DISTINCT 제한 사항
 DISTINCT 키워드 이진 데이터에 적용 되지 않습니다.

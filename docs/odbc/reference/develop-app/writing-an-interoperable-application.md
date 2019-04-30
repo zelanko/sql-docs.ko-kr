@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208571"
 ---
 # <a name="writing-an-interoperable-application"></a>상호 운용 가능한 애플리케이션 작성
 응용 프로그램에 둘 이상의 드라이버에 대해 동일한 코드를 사용 하는 때마다 코드 드라이버만 간에 상호 운용 가능한 이어야 합니다. 대부분의 경우에는 쉽게 작업입니다. 예를 들어, 정방향 전용 커서를 사용 하 여 행을 인출 하는 코드는 모든 드라이버에 대 한 동일 합니다. 경우에 따라이 더 어려울 수 있습니다. 예를 들어 SQL 문에서 사용에 대 한 식별자를 생성 하는 코드 식별자 대/소문자, 인용 부호를 및 한 부분, 두 부분, 및 세 부분으로 이루어진 명명 규칙을 고려해 야 합니다.  

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057591"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  
@@ -39,10 +39,10 @@ ms.locfileid: "48209793"
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  보고서 서버 웹 서비스 및 보고서 관리자에 액세스하는 데 사용되는 URL을 구성하는 방법을 설명합니다.  
   
- [보고서 서버 데이터베이스 만들기 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  서버 메타데이터 및 개체를 저장하는 데 필요한 보고서 서버 데이터베이스를 만드는 방법을 설명합니다.  
   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  보고서 서버에서 보고서 서버 데이터베이스에 연결하는 데 사용하는 연결 문자열을 수정하는 방법을 설명합니다.  
   
  [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "48209793"
  일반 태스크에 대한 단계별 지침을 제공합니다.  
   
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- 페이지에 대 한 도움말 항목을 제공 합니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구입니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구의 페이지에 대한 도움말 항목을 제공합니다.  
   
  **항목 내용**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48209793"
   
 -   보고서 서버 서비스 계정 구성. 이 계정은 설치 중에 처음 구성되지만 암호를 업데이트하거나 다른 계정을 사용하려는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 수정할 수 있습니다.  
   
--   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 Url을 통해 액세스 합니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 애플리케이션에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
+-   URL 만들기 및 구성. 보고서 서버와 보고서 관리자는 URL을 통해 액세스되는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션입니다. 보고서 서버 URL을 사용하면 보고서 서버의 SOAP 엔드포인트에 액세스할 수 있으며 보고서 관리자 URL을 사용하면 보고서 관리자를 열 수 있습니다. 각 애플리케이션에 대해 URL을 한 개 또는 여러 개 구성할 수 있습니다.  
   
 -   보고서 서버 데이터베이스 만들기 및 구성. 보고서 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 내부 스토리지로 사용하는 상태 비저장 서버입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 데이터베이스에 대한 연결을 만들고 구성할 수 있습니다. 사용하려는 내용이 이미 포함되어 있는 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48209793"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 완전한 배포를 위해서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 추가 기능을 활성화하거나 기본값을 수정하고 보고서 관리자가 서버에 대한 액세스 권한을 사용자에게 부여할 수 있도록 해야 합니다.  
   
 ##  <a name="bkmk_requirements"></a> 요구 사항  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager는 버전 별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 버전별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하려면 다음 사항을 충족해야 합니다.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48209793"
   
     -   Windows 시작 화면에서 **Reporting** 을 입력하고 검색 결과에서 **Reporting Services 구성 관리자** 를 선택합니다.  
   
-    -   클릭 **시작**, 가리킨 **모든 프로그램**를 가리킵니다 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 가리킨 다음 **구성 도구**합니다.  
+    -   **시작**을 클릭하고 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킵니다.  
   
-         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이전 버전의 보고서 서버 인스턴스를 구성하려면 해당 버전의 프로그램 폴더를 엽니다. 예를 들어, 가리킨 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] of [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 요소용 구성 도구를 열려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 서버 구성 요소입니다.  
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이전 버전의 보고서 서버 인스턴스를 구성하려면 해당 버전의 프로그램 폴더를 엽니다. 예를 들어 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 대신 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 을 가리켜서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 서버 구성 요소에 대한 구성 도구를 엽니다.  
   
          **Reporting Services 구성 관리자**를 클릭합니다.  
   
@@ -130,9 +130,9 @@ ms.locfileid: "48209793"
 6.  **연결**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [보고서 관리자 &#40;SSRS 기본 모드&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
- [보고서 서버 데이터베이스 연결 구성 &#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)   
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

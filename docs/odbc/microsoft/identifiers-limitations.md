@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208521"
 ---
 # <a name="identifiers-limitations"></a>식별자 제한 사항
 식별자는 공백이 나 특수 기호가 있으면 식별자 백 따옴표로 묶어야 합니다. 유효한 이름은는 첫 번째 문자 공백이 되지 않아야 하는 64 개 이상 문자의 문자열을 보여 줍니다. 유효한 이름은 제어 문자나 특수 문자를 포함할 수 없습니다. ' &#124; # *? [ ] . ! $ .  

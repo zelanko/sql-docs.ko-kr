@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48530cfd233aa8ca2fd8d5af4bba075952b13678
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065201"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic의 ADO 코드 예제
 ADO 메서드, 속성 및 Visual Basic에서 작성 하는 경우 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  
@@ -158,5 +158,5 @@ ADO 메서드, 속성 및 Visual Basic에서 작성 하는 경우 이벤트를 �
   
 ## <a name="see-also"></a>관련 항목  
  [ADO 코드 예제 VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Visual c + +의 ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [부록 D: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [시각적 개체의 ADO 코드 예제C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
+ [부록 d: ADO 샘플](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

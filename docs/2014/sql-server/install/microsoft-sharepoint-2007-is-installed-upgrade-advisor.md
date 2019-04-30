@@ -12,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0c5036763ba4cbc48a00e604c4498b8dc277e155
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217858"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007이 설치됨(업그레이드 관리자)
   업그레이드 관리자가 지원되지 않는 버전의 SharePoint 제품 또는 기술을 발견했습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드입니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -36,7 +36,7 @@ ms.locfileid: "52417384"
   
  SharePoint 2007에서 SharePoint 2013으로 직접 업그레이드할 수는 없습니다. 하지만 참조 되는 요소는 "이중 홉" 데이터베이스로 연결할 SharePoint Server 2010으로 Office SharePoint Server 2007에서 그 다음 SharePoint Server 2013 SharePoint Server 2010에서 업그레이드를 수행할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Reporting Services 업그레이드 문제 &#40;업그레이드 관리자&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

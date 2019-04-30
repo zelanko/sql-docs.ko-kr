@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 639071b9526c70477fd081bd94d61380a79beb2d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060242"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
   다른 데이터베이스 업데이트 메커니즘과 마찬가지로 updategram에서도 다중 사용자 환경에서 데이터의 동시 업데이트를 처리해야 합니다. Updategram은 선택한 필드 데이터의 스냅숏을 비교하는 방법으로 업데이트 대상 데이터를 데이터베이스에서 마지막으로 읽은 이후 다른 사용자 응용 프로그램에서 해당 데이터를 변경했는지 여부를 확인하는 낙관적 동시성 제어를 사용합니다. 이러한 스냅숏 값을 포함 하는 Updategrams는  **\<전에 >** 는 updategrams의 블록. 데이터베이스를 업데이트 하기 전에 updategram에 지정 된 값을 검사 하면  **\<전에 >** 업데이트가 유효한 지 확인 하기 위해 데이터베이스의 현재 값에 대 한 블록.  
@@ -55,7 +55,7 @@ ms.locfileid: "52797015"
   
  업데이트 된 열 기본 키 열을 지정 하 여 이러한 수준의 보호를 얻을 수 있는  **\<전에 >** 블록.  
   
- 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다.  **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
+ 예를 들어 다음 updategram은 ContactID가 1인 연락처의 Person.Contact 테이블의 Phone 열 값을 변경합니다. **\<전에 >** 블록 지정 된 **전화** 특성을 특성 값이 값이 업데이트를 적용 하기 전에 데이터베이스의 해당 열에 있는 값을 일치 하는지 확인 합니다. .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

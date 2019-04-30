@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061233"
 ---
 # <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed 이벤트 클래스
-  TM: Begin Tran Completed 이벤트 클래스는 BEGIN TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다.  
+  TM: Begin Tran Completed 이벤트 클래스는 BEGIN TRANSACTION 요청이 완료 되었음을 나타내는 것을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다.  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran Completed 이벤트 클래스 데이터 열  
   

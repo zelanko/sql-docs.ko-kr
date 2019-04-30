@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e904d341513047b3940cf5b3fc2ba9538cdb5c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127841"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 명령
 메모 필드의 저장소에 대 한 디스크 공간이 할당 되는 방식을 지정 합니다.  

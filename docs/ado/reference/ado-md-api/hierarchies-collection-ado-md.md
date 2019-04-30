@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41f639dce72e0d424f0c8f61593cca870aa82ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295406"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 컬렉션(ADO MD)
 집합을 포함 [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 차원에서 개체입니다.  

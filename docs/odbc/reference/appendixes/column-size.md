@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224464"
 ---
 # <a name="column-size"></a>열 크기
 숫자 데이터 형식의 열 (또는 매개 변수) 크기는 데이터 형식의 열 또는 매개 변수 또는 데이터의 전체 자릿수에 사용 되는 숫자의 최대 수로 정의 됩니다. 이 데이터의 문자에서 길이 문자 형식에 대 한 이진 데이터 형식에 대 한 열 크기는 데이터의 길이 (바이트)에서으로 정의 됩니다. 시간, 타임 스탬프 및 모든 간격 데이터 형식의 경우이 데이터의 문자 표현에 있는 문자의 수입니다. 각 간결한 SQL 데이터 형식에 대해 정의 된 열 크기는 다음 표에 표시 됩니다.  
@@ -30,17 +30,17 @@ ms.locfileid: "47665543"
 |-------------------------|-----------------|  
 |모든 문자 형식 [a], [b]입니다.|문자 열 또는 매개 변수의 (SQL_DESC_LENGTH 설명자 필드에 포함)의 정의 또는 최대 열 크기입니다. 예를 들어, char (10)로 정의 된 싱글바이트 문자 열의 열 크기는 10입니다.|  
 |SQL_DECIMAL SQL_NUMERIC|정의 된 자릿수입니다. 예를 들어 NUMERIC(10,3)로 정의 된 열 전체 자릿수는 10입니다.|  
-|SQL_BIT [c]|1|  
-|SQL_TINYINT [c]|3|  
-|SQL_SMALLINT [c]|5|  
-|SQL_INTEGER [c]|10|  
-|SQL_BIGINT [c]|19 (부호 있음) 하는 경우 또는 20 (부호 없음) 하는 경우|  
-|SQL_REAL [c]|7|  
-|SQL_FLOAT [c]|15|  
-|SQL_DOUBLE [c]|15|  
+|SQL_BIT[c]|1|  
+|SQL_TINYINT[c]|3|  
+|SQL_SMALLINT[c]|5|  
+|SQL_INTEGER[c]|10|  
+|SQL_BIGINT[c]|19 (부호 있음) 하는 경우 또는 20 (부호 없음) 하는 경우|  
+|SQL_REAL[c]|7|  
+|SQL_FLOAT[c]|15|  
+|SQL_DOUBLE[c]|15|  
 |모든 이진 형식 [a], [b]입니다.|정의 또는 최대 길이 (바이트)에서의 열 또는 매개 변수입니다. 예를 들어 binary(10)로 표현으로 정의 된 열의 길이 10입니다.|  
-|SQL_TYPE_DATE [c]|10 (문자 수를 *yyyy-월-일* 형식).|  
-|SQL_TYPE_TIME [c]|8 (에 있는 문자의 수를 *hh-mm-ss* 형식), 또는 9 + *s* (의 문자 수가 합니다 *hh: mm:*[.fff...] 형식으로 여기서 *의*초 전체 자릿수)입니다.|  
+|SQL_TYPE_DATE[c]|10 (문자 수를 *yyyy-월-일* 형식).|  
+|SQL_TYPE_TIME[c]|8 (에 있는 문자의 수를 *hh-mm-ss* 형식), 또는 9 + *s* (의 문자 수가 합니다 *hh: mm:*[.fff...] 형식으로 여기서 *의*초 전체 자릿수)입니다.|  
 |SQL_TYPE_TIMESTAMP|16 (문자 수를 *mm: yyyy hh: mm* 형식)<br /><br /> 19 (문자 수를 *yyyy-월-일* *hh: mm:* 형식)<br /><br /> 로 구분하거나 여러<br /><br /> 20 + *s* (의 문자 수가 합니다 *h:mm: ss yyyy-월-일*[.fff...] 형식으로 여기서 *s* 초 전체 자릿수)입니다.|  
 |SQL_INTERVAL_SECOND|여기서 *p* 선행 정밀도 간격 및 *s* 초 전체 자릿수 *p* (경우 *s*= 0) 또는 *p* + *s*+ 1 (경우 *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|여기서 *p* 선행 정밀도 간격 및 *s* 초 전체 자릿수, 9 +*p* (경우 *s*= 0) 또는 10 +*p* + *s* (경우 *s*> 0). [ d]|  

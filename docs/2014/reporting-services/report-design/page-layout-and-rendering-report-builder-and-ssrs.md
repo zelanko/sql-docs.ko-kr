@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209099"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
   보고서를 작성할 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더러의 동작을 이해하여 렌더링된 보고서가 페이지 레이아웃 및 페이지 나누기를 비롯하여 원하는 식으로 표시되도록 해야 합니다. 렌더링된 보고서가 사용자나 조직이 흔히 사용하는 용지 크기에 맞게 표시되도록 설정해야 할 수도 있습니다.  

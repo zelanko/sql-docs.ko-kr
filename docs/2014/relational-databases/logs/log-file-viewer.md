@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144643"
 ---
 # <a name="log-file-viewer"></a>로그 파일 뷰어
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 로그 파일 뷰어를 사용하여 로그 파일에 기록되는 오류 및 이벤트에 대한 정보에 액세스할 수 있습니다.  

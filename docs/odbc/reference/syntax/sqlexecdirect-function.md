@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061511"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 함수
 **규칙**  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecDirect(
 |01004|문자열 데이터 오른쪽 잘림|공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 한 출력 매개 변수 또는 입력/출력에 대 한 문자열 또는 이진 데이터 반환. 문자열 값이 오른쪽 잘림 이었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01006|권한이 취소 되지 않았습니다|\**StatementText* 포함 된를 **해지** 문 및 사용자 지정된 권한을 있지 않았습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01007|권한이 부여 되지 않았습니다|*\*StatementText* 된를 **부여** 문과 사용자 부여할 수 없습니다 지정 된 권한입니다.|  
-|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 시점에서 문 특성 값으로 되돌리는 경우 해당 이전 합니다. 변경할 수 있는 문 특성은 다음과 같습니다.<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S02|옵션 값이 변경 됨|지정 된 문 특성을 일시적으로 유사한 값에 대체 되므로 구현 작업 조건으로 인해 잘못 되었습니다. (**SQLGetStmtAttr** 일시적으로 대체 값 결정 호출할 수 있습니다.) 대체 값이 적합 합니다 *StatementHandle* 커서를 닫을 때까지 시점에서 문 특성 값으로 되돌리는 경우 해당 이전 합니다. 변경할 수 있는 문 특성은 다음과 같습니다.<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S07|소수 잘림|입/출력에 대 한 데이터를 반환 하거나 출력 매개 변수는 숫자 데이터 형식의 소수 부분이 잘린 또는 시간 구성 요소는 시간, 타임 스탬프 또는 간격 데이터 형식의 소수 부분이 잘린 잘렸습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07002|COUNT 필드가 잘못 되었습니다|지정 된 매개 변수 수가 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 작다고 \* *StatementText*합니다.<br /><br /> **SQLBindParameter** 사용 하 여 호출한 *ParameterValuePtr* null 포인터로 설정 *StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC로 설정 되지 않은 및 *InputOutputType*  에 지정 된 매개 변수의 수 있도록 SQL_PARAM_OUTPUT로 설정 되지 않습니다 **SQLBindParameter** 에 포함 된 SQL 문의 매개 변수 개수 보다 **StatementText* .|  
 |07006|제한 된 데이터 형식 특성을 위반 했습니다.|로 식별 된 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter** 바인딩된 매개 변수에서 식별 되는 데이터 형식 변환 하지 못했습니다에 대 한는 *ParameterType*에 인수 **SQLBindParameter**합니다.<br /><br /> SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT 수 변환할 없습니다으로 식별 되는 데이터 형식으로 바인딩된 매개 변수에 대해 반환 되는 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter**합니다.<br /><br /> (하나 이상의 행에 대 한 데이터 값을 변환할 수 없습니다. 하나 이상의 행이 성공적으로 반환 하지만이 함수 SQL_SUCCESS_WITH_INFO를 반환 합니다.)|  

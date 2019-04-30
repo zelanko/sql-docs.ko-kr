@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215652"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>단위 설정 및 구성(보고서 작성기 및 SSRS)
   표시기는 백분율과 숫자라는 두 가지 측정 단위를 제공합니다. 표시기는 기본적으로 백분율을 단위로 사용하도록 구성됩니다. 즉, 표시기 집합에서 각 아이콘에 할당되는 표시기 값은 백분율 범위로 결정됩니다. 백분율 범위는 표시기 집합의 아이콘에 대해 균등하게 분할됩니다. 각 아이콘은 표시기 상태를 나타냅니다. 다른 시작 백분율 및 끝 백분율을 지정하여 표시기 집합의 각 아이콘에 대한 백분율을 변경할 수 있습니다 또한 표시기는 데이터의 최소값 및 최대값을 자동으로 검색합니다.  

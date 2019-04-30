@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140241"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure(MDX)
 
@@ -33,13 +33,13 @@ ValidMeasure(Tuple_Expression)
  튜플을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **ValidMeasure** 튜플의 값을 반환 하는 함수, 튜플을 반환 값을 갖는 측정값의 측정값 그룹과 관계 없는 특성을 무시 합니다. 특성은 다음 두 가지 이유로 측정값과 무관할 수 있습니다.  
+ 합니다 **ValidMeasure** 튜플의 값을 반환 하는 함수, 튜플을 반환 값을 갖는 측정값의 측정값 그룹과 아무 관계도 없는 특성을 무시 합니다. 특성은 다음 두 가지 이유로 측정값과 무관할 수 있습니다.  
   
 -   특성의 차원이 튜플에서 측정값의 측정값 그룹과 관계가 없습니다.  
   
 -   특성의 차원이 측정값의 측정값 그룹과 관계가 없지만 세분성 특성이 키 특성이 아니며 세분성 특성이 튜플에 있는 특성과 직접적인 관계가 없습니다.  
   
- 이 함수로 지정 된 동작은 기본 서버 쪽 동작와 의해 제어 되는 **IgnoreUnrelatedDimensions** 측정값 그룹 개체의 속성입니다.  
+ 이 함수에 의해 지정 된 동작은 기본 서버 쪽 동작이 며에 의해 제어 되는 **IgnoreUnrelatedDimensions** 측정값 그룹 개체의 속성입니다.  
   
  튜플의 멤버가 All 멤버가 아니며 세분성이 있는 지정한 튜플의 각 특성에 대해 각 해당 특성의 현재 좌표는 다음과 같이 이동됩니다.  
   
@@ -70,6 +70,6 @@ FROM [Adventure Works]
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

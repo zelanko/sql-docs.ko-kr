@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209720"
 ---
 # <a name="disable-resource-governor"></a>리소스 관리자 사용 안 함
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자를 사용하지 않도록 설정할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [사용 권한](#Permissions)  
   
--   **리소스 관리자를 사용 하지 않도록 설정 하려면 사용 합니다.**  [개체 탐색기](#RGOffObjEx)하십시오 [Resource Governor 속성](#RGOffProp), [TRANSACT-SQL](#RGOffTSQL)  
+-   **Resource Governor를 사용하지 않도록 설정하려면 다음을 사용합니다.**  [개체 탐색기](#RGOffObjEx), [Resource Governor 속성](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  리소스 관리자를 사용하지 않도록 설정하면 다음과 같은 결과가 나타납니다.  

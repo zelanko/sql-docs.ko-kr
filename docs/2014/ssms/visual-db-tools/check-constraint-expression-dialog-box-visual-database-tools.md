@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067889"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
   CHECK 제약 조건을 테이블이나 열에 연결하려면 SQL 식을 포함해야 합니다. 제공된 입력란에 CHECK 제약 조건 식을 입력합니다.  
@@ -66,7 +66,7 @@ NOT (payment_method = 'credit card') OR
 |또는|여러 조건을 연결하기 위해 부울 식에 사용됩니다. 한 조건이라도 참이면 결과를 반환합니다.<br /><br /> 문 하나에 AND와 OR를 모두 사용하는 경우 OR는 AND보다 늦게 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
 |NOT|모든 부울 식을 부정합니다. 여기에는 LIKE, NULL, BETWEEN, IN 및 EXISTS 등과 같은 키워드가 포함될 수 있습니다.<br /><br /> 문 하나에 논리 연산자를 두 개 이상 사용하는 경우 NOT은 제일 먼저 처리됩니다. 계산 순서를 변경하려면 괄호를 사용합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Unique 제약 조건 및 Check 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)  
   

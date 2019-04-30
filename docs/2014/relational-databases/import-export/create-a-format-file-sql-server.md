@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140599"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 대량 가져오기를 수행하거나 테이블에서 데이터를 대량 내보내기를 수행할 때는 서식 파일을 사용하여 다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어 프로그램에서 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML 서식 파일을 지정합니다.|  
 |**-t**|문자 데이터를 지정합니다.|  
-|**-t** `,`|쉼표(**,**)를 필드 종결자로 지정합니다.<br /><br /> 참고: 데이터 파일이 기본 필드 종결자를 사용 하는 경우 (`\t`), **-t** 스위치는 불필요 합니다.|  
+|**-t** `,`|쉼표(**,**)를 필드 종결자로 지정합니다.<br /><br /> 참고: 데이터 파일이 기본 필드 종결자(`\t`)를 사용하면 **-t** 스위치는 불필요합니다.|  
 |**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
   
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129829"
 ---
 # <a name="union---mdx-operator-reference"></a>공용 구조체-MDX 연산자 참조
 
@@ -36,7 +36,7 @@ Set_Expression + Set_Expression
  지정된 두 집합의 멤버가 포함된 집합입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **+ (Union)** 연산자는 기능적으로 동일는 [Union &#40;MDX&#41; ](../mdx/union-mdx.md) 함수입니다.  
+ 합니다 **+ (Union)** 연산자는 기능적으로 동일 합니다 [Union &#40;MDX&#41; ](../mdx/union-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

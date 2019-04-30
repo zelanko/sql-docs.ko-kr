@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223543"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias 클래스
   [SqlServerAlias 클래스](sqlserveralias-class.md) 는 서버 연결 별칭을 나타냅니다.  

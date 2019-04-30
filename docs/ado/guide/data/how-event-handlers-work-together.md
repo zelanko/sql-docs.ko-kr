@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a575e4df609430d5dc71517032f4c3da739bba24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161368"
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기가 함께 작동하는 방법
 Visual Basic의 경우에 대 한 모든 이벤트 처리기에서 프로그래밍 하는 경우가 아니면 **연결** 하 고 **Recordset** 여부 실제로 처리의 모든 이벤트에 관계 없이 이벤트에 구현, 되어야 합니다. 구현 작업을 수행 해야 하는 프로그래밍 언어에 따라 다릅니다. 자세한 내용은 [언어별 ADO 이벤트 인스턴스](../../../ado/guide/data/ado-event-instantiation-by-language.md)합니다.  

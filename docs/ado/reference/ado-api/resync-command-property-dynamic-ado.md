@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5567bf3cc460aac6abfc2979a14e124bfd9d4cac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061940"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
 사용자가 제공한 명령 문자열을 지정 합니다 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 에 지정 된 테이블에서 데이터를 새로 고치려면 메서드 문제를 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성입니다.  

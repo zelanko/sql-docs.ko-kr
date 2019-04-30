@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213340"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls 속성 예제(VB)
 이 예제에서는 합니다 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 의 속성을 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)합니다. 코드는 새 인덱스를 만들고 값을 설정 **IndexNulls** (list1 목록 상자)에서 사용자 입력을 기반으로 합니다. 그런 다음, **인덱스** 에 추가 됩니다 합니다 **직원** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)합니다. 새 **인덱스** 에 적용 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 기반으로 **직원** 테이블 및 **레코드 집합** 열려 합니다. 새 레코드에 추가 됩니다는 **직원** 테이블을 사용 하 여를 **Null** 인덱싱된 필드의 값입니다. 설정에 따라 새 레코드가 표시 되는지 여부를 **IndexNulls** 속성입니다.  

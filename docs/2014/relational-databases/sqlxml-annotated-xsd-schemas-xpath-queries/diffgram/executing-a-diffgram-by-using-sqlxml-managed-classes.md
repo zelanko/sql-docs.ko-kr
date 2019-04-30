@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 42bde038458e817ad572e8b5049e13acb60a49af
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127794"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>SQLXML 관리되는 클래스를 사용하여 DiffGram 실행
   DiffGram 파일을 실행 하는 방법을 보여 주는이 예제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경의 데이터에 적용할 업데이트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLXML Managed Classes (Microsoft.Data.SqlXml)를 사용 하 여 테이블입니다.  

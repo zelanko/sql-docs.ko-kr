@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067639"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense 구성(SQL Server Management Studio)
   대부분의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 기본적으로 설정되어 있습니다. IntelliSense 옵션을 해제하고 대신에 메뉴 명령이나 키 입력 조합을 통해 호출할 수 있습니다.  

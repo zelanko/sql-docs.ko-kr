@@ -10,13 +10,13 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057821"
 ---
-# <a name="what-is-polybase"></a>PolyBase는 무엇입니까?
+# <a name="what-is-polybase"></a>PolyBase란?
 PolyBase에 Analytics Platform System (APS)에서 데이터를 읽고 외부 데이터 원본에 데이터를 쓸 수 있는 TRANSACT-SQL 쿼리를 처리할 수 있습니다. 외부 데이터에 액세스 하는 동일한 쿼리에 AP에서 관계 테이블을 포함할 수도 있습니다. 이 통해 높은 가치의 AP 데이터베이스에서 관계형 데이터를 사용 하 여 외부 원본의 데이터를 결합할 수 있습니다.
 
 ![PolyBase 논리](media/polybase/polybase-logical.png)

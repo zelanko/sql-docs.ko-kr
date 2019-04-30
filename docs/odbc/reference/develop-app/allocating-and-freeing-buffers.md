@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288080"
 ---
 # <a name="allocating-and-freeing-buffers"></a>버퍼 할당 및 해제
 모든 버퍼가 할당 되 고 응용 프로그램에서 해제 합니다. 버퍼 연기 되지 않고, 하는 경우 함수에 대 한 호출 중에 존재 해야 합니다. 예를 들어 **SQLGetInfo** 가리키는 버퍼의 특정 옵션을 사용 하 여 연결 된 값을 반환 합니다 *InfoValuePtr* 인수입니다. 이 버퍼를 호출한 후 즉시 해제할 수 있습니다 **SQLGetInfo**다음 코드 예제 에서처럼:  

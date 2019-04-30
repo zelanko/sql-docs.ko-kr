@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 421420089526540929bfc4ade32799634a823391
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215643"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>추적 플래그의 동작에 대한 변경입니다.
   한 세션에서 설정한 전역 추적 플래그가 다른 세션에 즉시 적용됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 일부 추적 플래그는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 없습니다.  

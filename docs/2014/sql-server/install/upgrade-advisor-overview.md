@@ -22,11 +22,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fba325ab05844388ceceb1e53b6d4a8cf618468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058059"
 ---
 # <a name="upgrade-advisor-overview"></a>업그레이드 관리자 개요
   업그레이드 관리자는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 구성 요소를 분석하고 분석 결과에 대한 정보가 포함된 보고서를 볼 수 있는 중앙 콘솔을 제공합니다.  

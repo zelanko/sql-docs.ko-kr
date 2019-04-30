@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060332"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
   Updategram은 레코드 인스턴스가 표시 되는 경우 삽입 작업을 나타냅니다 합니다  **\<후 >** 블록 아니라 해당  **\<전에 >** 블록입니다. Updategram은 레코드를 삽입 하는 경우에  **\<후 >** 데이터베이스로 블록입니다.  

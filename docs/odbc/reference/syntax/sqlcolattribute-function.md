@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226416"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
@@ -154,11 +154,11 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|열 데이터 정렬 및 비교에 대 한 대/소문자 구분으로 처리 되 면 SQL_TRUE 합니다.<br /><br /> 열 데이터 정렬 및 비교에 대 한 대/소문자 구분으로 처리 되지 않습니다 이거나 문자가 아닌 경우 SQL_FALSE입니다.|  
 |SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|열이 포함 된 테이블의 카탈로그입니다. 반환된 된 값 또는 열이 뷰의 일부 열이 식이면 구현 시 정의 됩니다. 데이터 소스는 카탈로그를 지원 하지 않습니다 또는 카탈로그 이름을 확인할 수 없는 경우 빈 문자열이 반환 됩니다. 이 VARCHAR 레코드 필드 128 자로 제한 됩니다.|  
 |SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|간결한 데이터 형식입니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 간결한 데이터 형식으로를 반환 합니다. 예를 들어, SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR 합니다. (자세한 내용은 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식입니다.)<br /><br /> 이 정보는 IRD의 SQL_DESC_CONCISE_TYPE 레코드 필드에서 반환 됩니다.|  
-|SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|결과 집합에서 사용할 수 있는 열의 수입니다. 이 결과 집합의 열이 없는 경우 0을 반환 합니다. 값을 *ColumnNumber* 인수는 무시 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_COUNT 헤더 필드에서 반환 됩니다.|  
+|SQL_DESC_COUNT  (ODBC 1.0)|*NumericAttributePtr*|결과 집합에서 사용할 수 있는 열의 수입니다. 이 결과 집합의 열이 없는 경우 0을 반환 합니다. 값을 *ColumnNumber* 인수는 무시 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_COUNT 헤더 필드에서 반환 됩니다.|  
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|열의 데이터를에서 표시 하는 데 필요한 문자의 최대 수입니다. 디스플레이 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|Sql_true는 해당 열에 데이터 소스 관련 된 고정된 전체 자릿수 및 0이 아닌 확장 합니다.<br /><br /> 고정 전체 자릿수 및 0이 아닌 확장 데이터 원본 관련 된 열에 없는 경우 SQL_FALSE입니다.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|열 레이블 또는 제목입니다. 예를 들어 EmpName 라는 열 직원 이름 레이블을 지정할 수 있습니다 또는 별칭으로 레이블을 지정할 수 있습니다.<br /><br /> 열에는 레이블이 없는 경우 열 이름이 반환 됩니다. 레이블 열은 명명 되지 않은 경우, 빈 문자열이 반환 됩니다.|  
-|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접두사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는 리터럴 접두사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접미사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는에 대 한 리터럴 접미사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는 데이터 형식의 일반 이름과 다를 수 있는 데이터 형식에 대 한 모든 지역화 된 (native language) 이름을 포함 합니다. 지역화 된 이름이 없는 경우 빈 문자열이 반환 됩니다. 이 필드는 표시 용도로 됩니다. 문자열의 문자 집합을 로캘별 이며 일반적으로 서버의 기본 문자 집합입니다.|  

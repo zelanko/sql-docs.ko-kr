@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298863"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>DB2 용 SSMA 시작 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) DB2 사용 하면 신속 하 게에 대 한 DB2 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마의 경우 결과 스키마를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 DB2에서 데이터를 마이그레이션하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -60,7 +60,7 @@ DB2 메타 데이터 탐색기는 DB2 스키마에 대 한 정보를 표시합�
 사용할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환 된 DB2 데이터베이스 개체를 선택한 다음 해당 개체의 인스턴스를 사용 하 여 동기화 메타 데이터 탐색기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 DB2 메타 데이터 탐색기에서 테이블을 선택 하면 6 개의 탭 표시 됩니다: **테이블**, **SQL**하십시오 **형식 매핑, 보고서**, **속성**, 및 **데이터**입니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시 됩니다. **테이블**, **SQL**, 및 **데이터**.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 DB2 메타 데이터 탐색기에서 테이블을 선택 하면 6 개의 탭이 표시 됩니다. **테이블**, **SQL**합니다 **형식 매핑, 보고서**를 **속성**, 및 **데이터**합니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기, 세 개의 탭 표시 됩니다. **테이블**하십시오 **SQL**, 및 **데이터**입니다.  
   
 대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   

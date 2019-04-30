@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138705"
 ---
 # <a name="testserver-element-dta"></a>TestServer 요소(DTA)
   프로덕션 서버를 튜닝할 때 사용할 테스트 서버를 지정합니다.  

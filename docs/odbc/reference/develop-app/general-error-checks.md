@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5645e00d9e3f93b2479c88ba37ec4ccf6fc5d295
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049769"
 ---
 # <a name="general-error-checks"></a>일반 오류 검사
-드라이버 관리자는 하나의 일반 오류를 확인합니다. 다음 오류가 발생할 경우 SQL_ERROR 항상 반환: 함수 드라이버에서 지원 되어야 합니다.
+드라이버 관리자는 하나의 일반 오류를 확인합니다. 항상 다음 오류가 발생할 경우 SQL_ERROR를 반환 합니다. 함수는 드라이버에서 지원 되어야 합니다.

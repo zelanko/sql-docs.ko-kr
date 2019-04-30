@@ -1,5 +1,5 @@
 ---
-title: 컬렉션 (Visual c + + 구문에 대 한 ADO) | Microsoft Docs
+title: 컬렉션 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126705"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>컬렉션(Visual C++ 구문에 대한 ADO)
 ## <a name="parameters"></a>매개 변수  

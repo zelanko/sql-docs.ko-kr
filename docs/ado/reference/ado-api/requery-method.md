@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 433f5d279e638e3ccdf7ba3a7bb2590f80b04a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062371"
 ---
 # <a name="requery-method"></a>Requery 메서드
 데이터를 업데이트 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 다시 개체의 기반이 되는 쿼리를 실행 하 여 개체입니다.  
@@ -35,7 +35,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *옵션*  
+ *Options*  
  (선택 사항) 포함 하는 비트 마스크 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 하 고 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 이 작업에 영향을 주는 값입니다.  
   
 > [!NOTE]

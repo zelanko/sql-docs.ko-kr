@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065468"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 및 DefinedSize 속성 예제 (VC + +)
 이 예제에서는 합니다 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 크기와 필드의 실제 크기를 표시 합니다.  
@@ -132,7 +132,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
  **저장소 이름: Eric 읽기 책**  
 **정의 된 크기: 40**  
 **실제 크기: 19**  
-**저장소 이름: Barnum**  
+**저장소 이름: Barnum의**  
 **정의 된 크기: 40**  
 **실제 크기: 8**  
 **저장소 이름: 뉴스 및 맥주**  

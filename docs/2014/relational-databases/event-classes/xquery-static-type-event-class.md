@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e40c50f93973b7c3c80cdf5dbca831d531a68d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062221"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type 이벤트 클래스
   XQuery Static Type 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 XQuery 식을 실행할 때 발생합니다. 이 이벤트 클래스는 XQuery 식의 정적 유형을 제공합니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208388"
 ---
 # <a name="when-to-use-procedures"></a>프로시저 사용 시기
 모든 프로시저를 사용 하 여 있다는 사실에 따라 이동 SQL 문을 응용 프로그램 데이터 원본으로,의 절차를 사용 하는 이점이 있습니다. 응용 프로그램에 그대로 새로운 상호 운용 가능한 프로시저 호출입니다. 이러한 장점은 다음과 같습니다.  

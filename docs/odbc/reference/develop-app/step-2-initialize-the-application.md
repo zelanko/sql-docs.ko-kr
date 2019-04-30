@@ -1,5 +1,5 @@
 ---
-title: '2 단계: 응용 프로그램을 초기화 | Microsoft Docs'
+title: '2단계: 응용 프로그램을 초기화 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149186"
 ---
 # <a name="step-2-initialize-the-application"></a>2단계: 애플리케이션 초기화
 다음 그림에 나와 있는 것 처럼 응용 프로그램을 초기화 하는 두 번째 단계가입니다. 정확 하 게 수행 되는 다음 응용 프로그램을 사용 하 여 달라 집니다.  

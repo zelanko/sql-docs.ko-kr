@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179826"
 ---
 # <a name="level-2-interface-conformance"></a>수준 2 인터페이스 적합성
 수준 2 인터페이스 적합성 수준 수준 1 인터페이스 적합성 수준 기능 및 다음 기능을 포함 합니다.  

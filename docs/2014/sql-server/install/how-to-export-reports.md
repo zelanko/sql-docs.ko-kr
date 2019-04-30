@@ -19,13 +19,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bef2324110534811770a1ea7d433cf5f779d4d63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294767"
 ---
-# <a name="how-to-export-reports"></a>방법: 보고서 내보내기
+# <a name="how-to-export-reports"></a>방법: Export Reports
   업그레이드 관리자 보고서 뷰어를 사용하여 보고서의 플랫 파일 버전을 내보낼 수 있습니다. 이렇게 하면 스프레드시트나 워드 프로세싱 문서에서 정보를 처리하거나 전자 메일로 정보를 다른 사용자에게 보낼 수 있습니다.  
   
 ### <a name="to-export-a-report"></a>보고서를 내보내려면  

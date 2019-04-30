@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130469"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005와 SQL Server 2008에서는 전체 텍스트 Search 단어 분리기와 필터가 크게 향상되었습니다.
   단어 분리기와 필터가 대폭 변경되었습니다. 언어 범위와 안정성을 포함하여 단어 분리기의 기능이 추가로 개선되었습니다.  

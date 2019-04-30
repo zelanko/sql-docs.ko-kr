@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063099"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정은 다음 함수를 지원 합니다. 작업을 수행할 열이 포함 된 장 할당 이름은 합니다 *장-별칭*합니다.  
@@ -35,16 +35,16 @@ ms.locfileid: "47625931"
 |최대 (*장-별칭*. *열 이름*)|지정 된 열의 최대값을 계산합니다.|  
 |MIN (*장-별칭*. *열 이름*)|지정 된 열의 최소값을 계산합니다.|  
 |COUNT(*chapter-alias*[.*column-name*])|지정된 된 별칭의 행 수를 셉니다. 에 지정 된 개수에는 해당 열이 Null이 아닌 행만 포함 됩니다.|  
-|STDEV (*장-별칭*. *열 이름*)|지정 된 열의 표준 편차를 계산 합니다.|  
+|STDEV(*chapter-alias*.*column-name*)|지정 된 열의 표준 편차를 계산 합니다.|  
 |모든 (*장-별칭*. *열 이름*)|지정 된 열의 값입니다. 모든 열의 값이 챕터의 모든 행에 대해 동일 하 게 하는 경우에 예측 가능한 값이 있습니다.<br /><br /> **참고** 열 챕터에 행에 대해 동일한 값이 없는 경우 SHAPE 명령 하나를 임의로 반환 값과 모든 함수의 값입니다.|  
   
 |계산된 식|Description|  
 |---------------------------|-----------------|  
-|계산 (*식*)|행에만 임의의 식을 계산 합니다 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
+|CALC(*expression*)|행에만 임의의 식을 계산 합니다 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
   
 |새 키워드|Description|  
 |-----------------|-----------------|  
-|새 *필드 형식* [(*너비* &#124; *배율* &#124; *정밀도* &#124; *오류*[, *크기 조정* &#124; *오류*])]|지정 된 형식의 빈 열을 추가 합니다 **레코드 집합**합니다.|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|지정 된 형식의 빈 열을 추가 합니다 **레코드 집합**합니다.|  
   
  합니다 *필드 형식* NEW 키워드를 사용 하 여 전달 된 다음 데이터 형식 중 하나가 될 수 있습니다.  
   

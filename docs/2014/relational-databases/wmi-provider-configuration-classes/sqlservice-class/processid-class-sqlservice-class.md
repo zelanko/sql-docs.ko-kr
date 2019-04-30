@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9e6c04a0ae0000284f3550d39e47c973adbe8ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061921"
 ---
 # <a name="processid-class-sqlservice-class"></a>ProcessId 클래스(SqlService 클래스)
   서비스를 고유하게 식별하는 시스템 프로세스 ID를 가져옵니다.  

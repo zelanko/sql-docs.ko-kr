@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0c13eda55eb5b0a3d6d0a7764df2def4972d3bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209641"
 ---
 # <a name="bookmarks-f1-help"></a>책갈피 F1 도움말
   이 섹션에서는 **의** 책갈피 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]페이지에 대한 F1 도움말을 제공합니다.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149462"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>재생 옵션(Distributed Replay Administration Tool)
   합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인 `DReplay.exe`, distributed replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **replay** 명령줄 옵션과 해당 구문에 대해 설명합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "53375105"
   
 -   **-d** 매개 변수는 컨트롤러에서 중간 파일의 위치( `c:\WorkingDir`)를 지정합니다.  
   
--   **-o** 매개 변수는 지정된 각 클라이언트가 재생 작업을 캡처하여 결과 추적 파일에 저장하도록 지정합니다. 참고: 구성 파일의 `<ResultTrace>` 요소를 사용하면 행 개수 및 결과 집합을 기록할지 여부를 지정할 수 있습니다.  
+-   **-o** 매개 변수는 지정된 각 클라이언트가 재생 작업을 캡처하여 결과 추적 파일에 저장하도록 지정합니다. 참고: `<ResultTrace>` 행 개수 및 결과 집합을 기록할지 여부를 지정 하는 구성 파일에 요소를 사용할 수 있습니다.  
   
 -   **-w** 매개 변수는 `client1` 부터 `client4` 까지의 컴퓨터가 분산 재생에 클라이언트로 참여하도록 지정합니다.  
   
@@ -154,7 +154,7 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
  자세한 내용은 [Distributed Replay Security](distributed-replay-security.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [추적 데이터 재생](replay-trace-data.md)   
  [재생 결과 검토](review-the-replay-results.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   

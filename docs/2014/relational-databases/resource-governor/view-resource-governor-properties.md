@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209689"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
   
-1.  **시작하기 전 주의 사항:**  [Permissions](#Permissions)  
+1.  **시작하기 전 주의 사항:**  [사용 권한](#Permissions)  
   
 2.  **리소스 관리자 속성을 보려면:**  [Resource Governor 속성 페이지](#ViewRGProp)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "54100798"
  확인란을 선택하거나 선택 취소하여 리소스 관리자를 사용하거나 사용하지 않습니다.  
   
  **리소스 풀**  
- 제공된 표를 사용하여 리소스 풀 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 풀 및 기본 풀에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 풀을 선택합니다. 새 리소스 풀을 만들려면 접두사로 별표는 행을 클릭 합니다 (**&#42;**).  
+ 제공된 표를 사용하여 리소스 풀 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 풀 및 기본 풀에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 풀을 선택합니다. 새 리소스 풀을 만들려면 접두사로 별표(**&#42;**)가 붙은 행을 클릭합니다.  
   
  **이름**  
  리소스 풀의 이름을 지정합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "54100798"
  자세한 내용은 [CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)합니다.  
   
  **리소스 풀의 작업 그룹**  
- 제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표는 행을 클릭 합니다 (**&#42;**).  
+ 제공된 표를 사용하여 작업 그룹 구성을 만들거나 변경합니다. 이 표는 미리 정의된 내부 그룹 및 기본 그룹에 대한 정보로 채워집니다. 풀의 행에 있는 첫 번째 열을 클릭하여 작업할 그룹을 선택합니다. 새 작업 그룹을 만들려면 접두사로 별표(**&#42;**)가 붙은 행을 클릭합니다.  
   
  **이름**  
  작업 그룹의 이름을 지정합니다.  

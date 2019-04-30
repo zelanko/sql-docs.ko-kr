@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d28e1a7a69404d76b0d6cecaca08f3e91455ae5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126261"
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>전역 설정 (출력 창) (SybaseToSQL)
 사용 된 **전역 설정** SSMA에 대 한 설정을 지정 하려면 대화 상자.  

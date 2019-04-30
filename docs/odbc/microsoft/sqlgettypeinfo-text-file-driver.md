@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c1c38b66e9b8a3c1cbed4a3712f7af866935089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63210223"
 ---
 # <a name="sqlgettypeinfo-text-file-driver"></a>SQLGetTypeInfo(텍스트 파일 드라이버)
 > [!NOTE]  

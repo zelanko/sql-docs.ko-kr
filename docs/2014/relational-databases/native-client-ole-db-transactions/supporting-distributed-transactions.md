@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213504"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자가 사용할 수는 **itransactionjoin:: Jointransaction** 분산 트랜잭션에 참여 하는 방법은 Microsoft Distributed Transaction Coordinator (MS DTC)에 의해 조정 됩니다.  
@@ -139,6 +139,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [의](transactions.md)  
+ [트랜잭션](transactions.md)  
   
   

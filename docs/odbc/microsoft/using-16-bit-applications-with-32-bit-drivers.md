@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209990"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 16비트 애플리케이션 사용
 > [!IMPORTANT]  
@@ -62,5 +62,5 @@ ms.locfileid: "47752931"
 | 파일 이름 |Description|  
 |---------------|-----------------|  
 |Odbc.dll|16 비트 드라이버 관리자입니다.|  
-|경우|16 비트 설치 관리자 DLL|  
+|Odbcinst.dll|16 비트 설치 관리자 DLL|  
 |Odbcadm.exe|16 비트 ODBC 관리자 프로그램|

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130523"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo 함수
   인스턴스가 존재하는지 여부, 인스턴스가 사용하는 LocalDB 버전, 인스턴스가 실행되는지 여부 등과 같이 지정한 SQL Server Express LocalDB 인스턴스에 대한 정보를 반환합니다.  

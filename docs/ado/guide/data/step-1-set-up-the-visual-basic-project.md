@@ -1,5 +1,5 @@
 ---
-title: '1 단계: Visual Basic 프로젝트 설정 | Microsoft Docs'
+title: '1단계: Visual Basic 프로젝트 설정 | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062809"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>1단계: Visual Basic 프로젝트 설정
 이 시나리오에서는 Microsoft Visual Basic 6.0, 2.5 이상 ADO 및 Microsoft OLE DB Provider for Internet Publishing 시스템에 설치 되어 있는 가정 합니다. 먼저 새 프로젝트를 만들고 일부 컨트롤은 프로젝트의 기본 폼을 추가 합니다.  
@@ -39,4 +39,4 @@ ms.locfileid: "47798801"
   
 ## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
- [2단계: 기본 목록 상자 초기화](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [2단계: 기본 목록 상자를 초기화 합니다.](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

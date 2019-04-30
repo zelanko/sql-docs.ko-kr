@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061841"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService 메서드(SqlService 클래스)
   서비스를 일지 중지된 상태로 지정합니다.  

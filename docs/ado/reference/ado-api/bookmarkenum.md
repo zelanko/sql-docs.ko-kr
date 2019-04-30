@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8cb55701446d9a532cf57cccbba0aa1f11be416a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050494"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 작업을 시작할 위치를 나타내는 책갈피를 지정 합니다.  

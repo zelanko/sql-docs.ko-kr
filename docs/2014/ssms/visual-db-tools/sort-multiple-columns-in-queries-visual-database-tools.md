@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070910"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>쿼리에서 여러 열 정렬(Visual Database Tools)
   **조건 창** 에서 [정렬 순서](visual-database-tools.md)열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  

@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065191"
 ---
 # <a name="ado-api-reference"></a>ADO API 참조
-ADO 설명서의이 섹션에서는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목을 포함합니다. 또한, Microsoft Visual c + + 및 Windows Foundation 클래스 (WFC)를 사용 하 여 사용할 ADO 구문 인덱스의 목록을 포함 합니다.  
+ADO 설명서의이 섹션에서는 각 ADO 개체, 컬렉션, 속성, 동적 속성, 메서드, 이벤트 및 열거형에 대 한 항목을 포함합니다. 또한, Microsoft Visual을 사용 하 여 사용할 ADO 구문 인덱스의 목록을 포함 C++ 및 Windows Foundation 클래스 (WFC).  
   
  자세한 내용은 인덱스에서 특정 항목에 대 한 검색 하거나 다음 항목을 참조 하세요.  
   
@@ -50,4 +50,4 @@ ADO 설명서의이 섹션에서는 각 ADO 개체, 컬렉션, 속성, 동적 �
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)   
- [ADO 기록](../../../ado/guide/ado-history.md)
+ [ADO 버전 이력](../../../ado/guide/ado-history.md)

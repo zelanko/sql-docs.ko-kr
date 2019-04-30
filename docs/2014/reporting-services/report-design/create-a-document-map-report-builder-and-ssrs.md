@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135467"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>문서 구조 만들기(보고서 작성기 및 SSRS)
   문서 구조는 렌더링된 보고서의 보고서 항목에 대한 탐색 링크 집합을 제공합니다. 문서 구조가 포함된 보고서를 열면 보고서 옆에 별도의 창이 나타납니다. 사용자는 문서 구조의 링크를 클릭하여 해당 항목을 표시하는 보고서 페이지로 이동할 수 있습니다. 보고서 섹션 및 그룹은 링크 계층에 정렬되어 있습니다. 이 문서 구조에서 항목을 클릭하면 보고서가 새로 고쳐진 다음 항목에 해당하는 보고서 영역을 표시합니다.  

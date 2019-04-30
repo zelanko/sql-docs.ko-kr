@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224518"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 함수
 **규칙**  
- ODBC 3.8 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.8  
   
- 표준 준수: 없음  
+ 표준 준수 합니다. 없음  
   
  **요약**  
  **SQLAsyncNotificationCallback** 드라이버 SQL_STILL_EXECUTING을 반환 된 후 현재 비동기 작업의 진행률이 어느 정도 있을 때 드라이버 관리자를 다시 호출 하는 드라이버를 허용 합니다. **SQLAsyncNotificationCallback** 드라이버에서 호출할 수 있습니다.  

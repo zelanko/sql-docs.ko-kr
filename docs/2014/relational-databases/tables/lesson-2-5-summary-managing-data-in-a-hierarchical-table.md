@@ -1,5 +1,5 @@
 ---
-title: '요약: 계층적 테이블의 데이터 관리 | Microsoft 문서'
+title: '요약: 계층적 테이블의 데이터 관리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26fefad9fa8b2a20e03a8a87e873556427db1646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223315"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>요약: 계층적 테이블의 데이터 관리
   `hierarchyid` 데이터 형식을 사용하면 계층적 데이터를 반영하는 테이블을 쉽게 만든 다음 깊이 우선 및 너비 우선 인덱스를 만들어 테이블에 효율적으로 액세스할 수 있습니다. 계층 메서드를 사용하여 데이터를 쿼리하고 조작합니다.  

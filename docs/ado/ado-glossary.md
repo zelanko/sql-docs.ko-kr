@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298135"
 ---
 # <a name="ado-glossary-terms"></a>ADO 용어
 이 항목에서는 ADO와 관련 된 용어를 정의합니다.
 
-## <a name="a"></a>A
+## <a name="a"></a>변수를 잠그기 위한
  절대 URL는 정규화 된 URL 인터넷 또는 인트라넷에 있는 리소스의 위치를 지정 하는입니다. 참고 항목 *URL* 하 고 *상대 URL*합니다.
 
  ActiveX 컨트롤이 디자인 타임 또는 런타임 시각적 요소를 종종 있는 자동 등록, in process COM 구성 요소입니다. ActiveX 컨트롤에는 또한 Microsoft Internet Explorer와 같은 액티브 문서 컨테이너를 통신할 수가 있습니다.
@@ -39,9 +39,9 @@ ms.locfileid: "52528025"
  작업이 완료 될 때까지 기다리지 않고 호출 프로그램에 제어를 반환 하는 작업을 비동기 작업입니다. 작업이 완료 되 면 전에 코드 실행이 계속 됩니다. 참고 항목 *동기 작업*합니다.
 
 ## <a name="b"></a>B
- 항목 A 매핑 테이블의 필드와 변수 간의 바인딩입니다. ADO의 Visual c + + 확장을 **레코드 집합** 필드 C/c + + 변수 매핑됩니다.
+ 항목 A 매핑 테이블의 필드와 변수 간의 바인딩입니다. ADO Visual에서 C++ 확장 **Recordset** C에 대 한 필드 매핑 /C++ 변수.
 
- 비트 마스크는 숫자 값은 다른 플래그 매개 변수 옵션에 일반적으로 숫자 값 또는 반환 값을 사용 하 여 비트 단위로 값 비교를 위한 것입니다. 일반적으로이 비교가 수행 비트 논리 연산자와 같은 **하 고** 및 **또는** Visual basic에서는 **&** 하 고 **&#124;** c + +에서입니다.
+ 비트 마스크는 숫자 값은 다른 플래그 매개 변수 옵션에 일반적으로 숫자 값 또는 반환 값을 사용 하 여 비트 단위로 값 비교를 위한 것입니다. 일반적으로이 비교가 수행 비트 논리 연산자와 같은 **하 고** 및 **또는** Visual basic에서는 **&** 하 고 **&#124;** 에서 C++합니다.
 
  예를 들어 ADO **파생** 값 필드의 특성을 확인 하려면 비트 마스크를 사용할 수 있습니다. 필드를 업데이트할 수 있는지 확인 하려고 한다고 가정 합니다. Visual Basic의 다음 식을 사용 하 여이 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`
 

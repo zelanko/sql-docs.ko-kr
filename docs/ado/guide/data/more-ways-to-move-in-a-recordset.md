@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161526"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동하는 추가 방법
 다음 네 가지 방법, 이동 하거나에서 스크롤 되는 **레코드 집합**: [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)합니다. (이러한 메서드 중 일부를 사용할 수 없는 정방향 전용 커서의 경우)  

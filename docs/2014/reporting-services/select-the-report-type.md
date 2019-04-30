@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f504928105f10b2b56bfa6989ff090f9f848bdd2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223206"
 ---
 # <a name="select-the-report-type"></a>보고서 유형 선택
   보고서 마법사의 보고서 유형 선택 페이지를 사용하여 테이블 형식 보고서 또는 행렬 보고서를 선택할 수 있습니다.  

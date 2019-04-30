@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209893"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>메뉴 명령 및 기타 바로 가기 키(Oracle To SQL)
 다음 섹션에서는 메뉴 명령 및 기타 바로 가기 키 SSMA의 다양 한 대화 상자에서 사용 하는 Oracle 응용 프로그램에 대 한 액세스를 바로 가기 키를 설명 합니다.  

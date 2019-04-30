@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9e18bd902635a8016234ec714d9929bb48ffbfbc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127662"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>XSL 변환 적용(SQLXML 관리되는 클래스)
   이 예에서는 AdventureWorks 데이터베이스를 대상으로 SQL 쿼리를 실행합니다. 그리고 쿼리 결과에 XSL 변환을 적용하여 직원의 이름과 성의 두 개 열로 이루어진 테이블을 생성합니다.  

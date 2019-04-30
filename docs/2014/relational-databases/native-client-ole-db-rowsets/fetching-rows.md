@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140476"
 ---
 # <a name="fetching-rows"></a>행 인출
   **IRowset** 인터페이스는 기본 행 집합 인터페이스입니다. **IRowset** 인터페이스는 순차적으로 행을 인출하고, 해당 행에서 데이터를 가져오고, 행을 관리하기 위한 메서드를 제공합니다. 소비자는 모든 기본 행 집합 작업에 **IRowset**의 메서드를 사용합니다. 여기에는 행 인출 및 해제, 열 값 가져오기 등이 포함됩니다.  

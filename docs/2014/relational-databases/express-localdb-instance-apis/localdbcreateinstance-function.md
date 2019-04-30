@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128793"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 함수
   새 SQL Server Express LocalDB 인스턴스를 만듭니다.  

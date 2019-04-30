@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224669"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>데이터를 C에서 SQL 데이터 형식으로 변환
 응용 프로그램을 호출할 때 **SQLExecute** 하거나 **SQLExecDirect**, 드라이버를 사용 하 여 바인딩된 매개 변수 데이터를 검색 합니다 **SQLBindParameter** 의 저장소 위치에서 응용 프로그램입니다. 응용 프로그램을 호출할 때 **SQLSetPos**, 드라이버 업데이트에 대 한 데이터를 검색 하거나 추가 작업을 사용 하 여 바인딩된 열에서 **SQLBindCol**합니다. 응용 프로그램 실행 시 데이터 매개 변수를 사용 하 여 매개 변수 데이터를 보냅니다 **SQLPutData**합니다. 필요한 드라이버 변환 데이터에 지정 된 데이터 형식에서 합니다 *ValueType* 에서 인수 **SQLBindParameter** 에서 지정한 데이터 형식으로는 *ParameterType*에 인수 **SQLBindParameter**, 한 다음 데이터 원본에 데이터를 보냅니다.  
@@ -58,11 +58,11 @@ ms.locfileid: "52509404"
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [C에서 SQL로: 문자](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C에서 SQL로: Character](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C에서 SQL로: 숫자](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C에서 SQL로: Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C에서 SQL로: 비트](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C에서 SQL로: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
 -   [C에서 SQL로: 이진 파일](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065110"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Visual FoxPro ODBC 드라이버 원시 오류 메시지
 다음 표에서 네이티브 Visual FoxPro ODBC 드라이버에 오류 메시지를 보여 줍니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "47677241"
 |115|커서에 대 한 연산이 잘못 되었습니다.|  
 |118|인덱스 파일 테이블을 일치 하지 않습니다.|  
 |119|테이블이 없으면 열려 있습니다.|  
-|120|파일이 존재 하지 않습니다.|  
+|120|파일이 없습니다.|  
 |121|파일이 이미 있습니다.|  
 |122|테이블에 없는 인덱스 순서를 설정 합니다.|  
 |123|테이블이 아닙니다.|  
@@ -167,7 +167,7 @@ ms.locfileid: "47677241"
 |492|키 열이 없으면 업데이트 테이블에 대해 지정 된 \\ *값*\\합니다. 커서의 KeyFieldList 속성을 사용 합니다.|  
 |493|SQL 매개 변수가 없습니다.|  
 |494|뷰 정의가 변경 되었습니다.|  
-|495|경고: 키 테이블에 대 한 KeyField 속성에 의해 정의 *값* 고유 하지 않습니다.|  
+|495|경고: 테이블에 대 한 KeyField 속성으로 정의 된 키 *값* 고유 하지 않습니다.|  
 |498|SQL SELECT 문이 잘못 되었습니다.|  
 |499|SQL 매개 변수 *값* 올바르지 않습니다.|  
   
@@ -297,7 +297,7 @@ ms.locfileid: "47677241"
 |902|식 계산기에 실패 했습니다.|  
 |903|문자열이 너무 길어 맞지 않습니다.|  
 |904|* * 또는 ^ 도메인 오류가 발생 합니다.|  
-|905|Log (): 0 또는 음수 인수로 사용 합니다.|  
+|905|LOG(): 0 또는 음수 인수로 사용 합니다.|  
 |906|붙이지 인수는 음수일 수 없습니다.|  
 |912|작업 일반 필드에 대해 올바르지 않습니다.|  
 |914|코드 페이지 번호가 올바르지 않습니다.|  

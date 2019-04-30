@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217751"
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어로 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립트를 통해 데이터를 노출할 수 있습니다. 이 시나리오, ADO, OLE DB 공급자를 사용 하는 기본 및 지정 된 데이터를 참조 하는 데 필요한 기타 구성 요소 저장소는 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 됩니다. ASP Active Server Pages ()를 사용 하 여 ADO는 예를 들어 HTML을 생성할 수 있는 스크립트에서 참조 구성 요소입니다. 이 HTML 콘텐츠를 클라이언트 웹 브라우저에 HTTP를 통해 전달할 수 있습니다. 스크립트를 사용 하 여 웹 페이지를 업데이트, 트래버스 또는 특정 데이터를 볼 수 있도록 서버 쪽 스크립트를 다시 작업을 보낼 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "47600391"
 ## <a name="odbc-data-sources"></a>ODBC 데이터 원본  
  스크립팅 및 비-스크립팅 ADO 코드 간의 주요 차이점 중 하나는 ODBC 데이터 원본을 경우 사용 합니다. 비 스크립팅 응용 프로그램에 대 한 ODBC 데이터 원본 관리자에서 사용자 DSN을 만들 수 있습니다. IIS에서 실행 되는 스크립트를 만들어야 합니다 시스템 DSN입니다. 그렇지 않은 경우 스크립트는 만든 데이터 소스를 인식 하지 못합니다. Microsoft OLE DB Provider를 사용 하 여 Microsoft IIS를 통해 ODBC에 대 한 ADO 스크립팅 응용 프로그램에 적용 됩니다.  
   
-## <a name="referencing-the-ado-library"></a>ADO 라이브러리 참조  
+## <a name="referencing-the-ado-library"></a>ADO 라이브러리 참조하기  
  스크립팅 언어를 사용 하 여 적용 되지 않습니다.  
   
 ## <a name="handling-events"></a>이벤트 처리  

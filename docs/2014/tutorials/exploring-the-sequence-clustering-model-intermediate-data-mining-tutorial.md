@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164059"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델 탐색(중급 데이터 마이닝 자습서)
-  만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에는 **클러스터 다이어그램**, **클러스터 프로필**, **클러스터 특징**하십시오 **ClusterDiscrimination**, 및 **상태 전환**. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  
+  만든 했으므로 합니다 **Sequence Clustering with Region** 모델을 탐색할 수 있습니다 사용 하 여는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 뷰어를를 **마이닝 모델 뷰어** 데이터 마이닝 디자이너의 탭 합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터 뷰어 5 개 탭이 있습니다. **클러스터 다이어그램**, **클러스터 프로필**, **클러스터 특징**하십시오 **ClusterDiscrimination**, 및 **상태 전환**. 이 뷰어를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)합니다.  
   
 -   [클러스터 다이어그램 탭](#bkmk_CDiagram)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "56025002"
   
 4.  전환 행을 포함 텍스트 전환에는 **변수** 열 및 시퀀스 특성 값의 조합 합니다 **값** 열. 시퀀스는 시작 지점 및 누락 값도 포함할 수 있습니다.  
   
-     예를 들어 전환 값이 [시작] -> Road Tire Tube인 경우 이 클러스터의 고객이 시장 바구니에 Road Tire Tube를 먼저 담는 경우가 많음을 의미합니다. 이는 해당 제품이 고객이 먼저 찾는 인기 항목임을 나타내거나 단지 구매처에서 찾기 쉬운 항목임을 나타낼 수 있습니다.  
+     예를 들어, 전환에 값이 [시작] Road Tire Tube-> 합니다. 이 클러스터의 고객이 시장 바구니에 Road Tire Tube를 먼저 담는 경우가 많음을 의미합니다. 이는 해당 제품이 고객이 먼저 찾는 인기 항목임을 나타내거나 단지 구매처에서 찾기 쉬운 항목임을 나타낼 수 있습니다.  
   
 5.  표시 되지 않은 첫 번째 전환 될 때까지 목록 스크롤합니다 **[시작]** 또는 **누락** 에 있습니다.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "56025002"
  [맨 위로 이동](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> 클러스터 판별 탭  
- 합니다 **클러스터 판별** 탭 다른 클러스터에서 특정 클러스터를 구별 하는 특성을 확인 하려면 두 클러스터를 비교 하면 확인할 수 있습니다. 이 탭에는 **변수**, **값**합니다 **클러스터 1**, 및 **Cluster 2**합니다.  모든 클러스터로 사용할 수 있습니다 **클러스터 1** 하 고 **Cluster 2**합니다.  
+ 합니다 **클러스터 판별** 탭 다른 클러스터에서 특정 클러스터를 구별 하는 특성을 확인 하려면 두 클러스터를 비교 하면 확인할 수 있습니다. 탭 네 개의 열을 있습니다. **변수**, **값**합니다 **클러스터 1**, 및 **Cluster 2**합니다.  모든 클러스터로 사용할 수 있습니다 **클러스터 1** 하 고 **Cluster 2**합니다.  
   
  합니다 **변수** 열은 열 이름 이거나 열 이름 및 단어의 조합 수 있는 특성의 이름을 **전환**합니다. 합니다 **값** 열 특성 또는 전환의 정확한 값을 표시 합니다. 에 대 한 열에 있는 음영 처리 된 막대 **클러스터 1** 하 고 **Cluster 2** 비교 하는 클러스터의 특성의 강도 나타냅니다. 막대가 길수록 클러스터가 해당 특성이 지정된 사례를 포함할 가능성이 높아집니다.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56025002"
   
 8.  Touring Tire에 대한 노드를 클릭하면 슬라이더 컨트롤이 다시 가운데 위치로 내려갑니다.  
   
-     처음에는 Touring Tire를 다른 제품에 연결하는 전환 선이 많지만 확률 임계값을 올리면 가능성이 낮은 전환이 그래프에서 제거되어 Touring Tire > Touring Tire Tube 전환만 남게 됩니다. 이 전환은 한 고객이 Touring Tire를 시장 바구니에 담을 경우 해당 고객이 다음에 Touring Tire Tube를 시장 바구니에 담을 확률이 매우 높음을 의미합니다.  
+     처음에 Touring Tire를 다른 제품에 연결 하는 전환 줄 수 있고 확률 임계값을 올리면 가능성이 낮은 전환이 Touring Tire 전환만 남게 그래프에서 제거 > Touring Tire Tube 합니다. 이 전환은 한 고객이 Touring Tire를 시장 바구니에 담을 경우 해당 고객이 다음에 Touring Tire Tube를 시장 바구니에 담을 확률이 매우 높음을 의미합니다.  
   
  [맨 위로 이동](#bkmk_CDiagram)  
   

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071824"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
   고유하게 컴파일된 저장 프로시저는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍 기능 및 쿼리 노출 영역을 구현하지 않습니다. 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 고유하게 컴파일된 저장 프로시저 내에서 사용할 수 없습니다. 자세한 내용은 [Natively Compiled Stored Procedures에서 지원 되는 구문](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)합니다.  
@@ -59,7 +59,7 @@ go
 |`EXECUTE AS`|고유하게 컴파일된 저장 프로시저는 기본 실행 컨텍스트인 `EXECUTE AS CALLER`를 지원하지 않습니다. 따라서 실행 컨텍스트를 지정해야 합니다. 옵션 `EXECUTE AS OWNER`하십시오 `EXECUTE AS` *사용자*, 및 `EXECUTE AS SELF` 지원 됩니다.|  
 |`BEGIN ATOMIC`|고유하게 컴파일된 저장 프로시저의 본문은 단 하나의 ATOMIC 블록으로 구성되어야 합니다. ATOMIC 블록은 저장 프로시저의 원자성 실행을 보장합니다. 프로시저가 활성 트랜잭션의 컨텍스트 외부에서 호출되면 새 트랜잭션을 시작하며 ATOMIC 블록의 끝에서 커밋합니다. 고유하게 컴파일된 저장 프로시저의 ATOMIC 블록에는 다음과 같은 두 가지 필수 옵션이 있습니다.<br /><br /> `TRANSACTION ISOLATION LEVEL`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 참조 [트랜잭션 격리 수준](../../database-engine/transaction-isolation-levels.md) 격리 수준을 지원 합니다.<br /><br /> `LANGUAGE`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 저장 프로시저의 언어는 사용 가능한 언어 또는 언어 별칭 중 하나로 설정되어야 합니다.|  
   
- `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 완전 신뢰 관계가 없는 경우 고유하게 컴파일된 저장 프로시저를 만들 때 메시지 15404, Windows NT 그룹/사용자 'username', 오류 코드 0x5에 대 한 정보를 가져올 수 없습니다.  
+ `EXECUTE AS` 및 Windows 로그인과 관련하여 `EXECUTE AS`를 통해 수행된 가장 때문에 오류가 발생할 수 있습니다. 사용자 계정이 Windows 인증을 사용하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 서비스 계정과 Windows 로그인의 도메인 간에는 완전 신뢰 관계가 있어야 합니다. 완전 신뢰 없으면 저장 프로시저를 고유 하 게 컴파일된 만들 때 다음 오류 메시지가 반환 됩니다. 메시지 15404, Windows NT 그룹/사용자 'username', 오류 코드 0x5에 대 한 정보를 가져올 수 없습니다.  
   
  이 오류를 해결하려면 다음 중 하나를 사용합니다.  
   

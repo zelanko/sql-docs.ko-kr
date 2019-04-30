@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03678023990fc15d03c73501f331ecc302f6b892
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208442"
 ---
 # <a name="version-number"></a>버전 번호
 다양 한 기능을 사용 하 여 각 ODBC의 여러 버전이 있습니다. 응용 프로그램이 ODBC 드라이버 관리자는 특정 드라이버 지원 호출 하 여 결정 **SQLGetInfo** SQL_ODBC_VER 및 SQL_DRIVER_ODBC_VER 옵션을 사용 하 여 합니다.

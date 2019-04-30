@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649ab6329c0bdc2f059b8be0e282e0e68f33e2d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061361"
 ---
 # <a name="tm-begin-tran-starting-event-class"></a>TM: Begin Tran Starting 이벤트 클래스
-  TM: Begin Tran Starting 이벤트 클래스는 BEGIN TRANSACTION 요청이 시작되고 있음을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
+  TM: Begin Tran Starting 이벤트 클래스는 BEGIN TRANSACTION 요청이 시작 중임을 나타냅니다. 이 요청은 트랜잭션 관리 인터페이스를 통해 클라이언트에서 보냅니다.  
   
 ## <a name="tm-begin-tran-starting-event-class-data-columns"></a>TM: Begin Tran Starting 이벤트 클래스 데이터 열  
   

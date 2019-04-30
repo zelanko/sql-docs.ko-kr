@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149037"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공합니다. 이 설명서에서 Sqlstate에 기반한 ISO/IEF CLI 사양에 있는 ODBC IM로 시작 하는 이러한 SQLSTATEs 관련이 있지만.  

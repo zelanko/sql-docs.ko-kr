@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dbfff2a8db4405e19eb448e7bd7db5c8ac236f8
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138619"
 ---
 # <a name="parameters-collection-ado"></a>Parameters 컬렉션(ADO)
 모두 포함 합니다 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 의 개체를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  

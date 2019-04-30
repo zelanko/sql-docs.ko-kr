@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067529"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>결과 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 INSERT RESULTS 쿼리의 결과로 데이터 행을 추가할 테이블을 지정할 수 있습니다. 이 대화 상자는 INSERT RESULTS 쿼리를 시작할 때 나타납니다.  

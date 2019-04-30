@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215576"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System에 대 한 SQL Server Operations Manager (SCOM) 관리 팩을 설치 합니다.
 다운로드 하 여 SQL Server PDW 용 System Center Operations Manager (SCOM) 관리 팩을 설치 하려면 다음이 단계를 따릅니다. 관리 팩은 SQL Server PDW SCOM에서 모니터링 해야 합니다.  
@@ -76,7 +76,7 @@ AP 없이 PDW의 이전 버전을 다운로드 합니다[Microsoft SQL Server 20
     ![설치 완료](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>다음 단계  
-관리 팩을 설치 했으므로 다음 단계를 계속 합니다. [PDW 용 SCOM 관리 팩을 가져오기 &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)합니다.  
+관리 팩을 설치 했으므로 다음 단계를 계속 합니다. [PDW 용 SCOM 관리 팩 가져오기 &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)합니다.  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

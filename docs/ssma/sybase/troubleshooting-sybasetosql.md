@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069652"
 ---
 # <a name="troubleshooting-sybasetosql"></a>문제 해결(SybaseToSQL)
 콘솔 스크립트 또는 명령을 실행 하는 마이그레이션 문제 중간 흔하게 것입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "47664361"
   
 1.  기능  
   
-2.  프로시저  
+2.  절차  
   
 3.  보기  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214837"
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램이 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 응용 프로그램의 HTML 클라이언트 페이지에서 데이터를 SQL Server 데이터베이스에서 시각적 개체 (이 경우 DHTML 테이블)에 바인딩되는 개체입니다. 이벤트 구동 VBScript 프로그램 논리를 사용 하 여 [rds. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 에:  
@@ -61,7 +61,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[서버](../../../ado/reference/rds-api/server-property-rds.md)|값 앞에 서버 컴퓨터의 이름인 HTTP를 사용 하는 경우 `https://`합니다.|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|값 앞에 서버 컴퓨터의 이름인 HTTP를 사용 하는 경우 `https://`합니다.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|필요한 연결 정보를 제공 합니다 **rds. DataControl** SQL Server에 연결 합니다.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|설정 하거나 검색 하는 데 사용 하는 쿼리 문자열을 반환 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.|  
   

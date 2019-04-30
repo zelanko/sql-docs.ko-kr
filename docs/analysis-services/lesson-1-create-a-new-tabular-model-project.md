@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63052916"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>1단원: 새 테이블 형식 모델 프로젝트 만들기
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 이 단원에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 새로운 빈 테이블 형식 모델 프로젝트를 만듭니다. 새 프로젝트를 만든 후 테이블 가져오기 마법사를 사용하여 데이터를 추가할 수 있습니다. 이 단원에서는 제작 환경 SSDT에서 테이블 형식 모델에 대 한 간략 한 소개를 제공 합니다.  
   
-이 단원에 소요되는 예상 시간: **10 분**  
+예상이 단원을 완료 시간: **10 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 항목은 테이블 형식 모델 제작 자습서의 첫 번째 단원입니다. 이 단원을 완료 하려면 AdventureWorksDW 예제 데이터베이스를 SQL Server 인스턴스에 설치 되어 있어야 합니다. 자세한 내용은 참조 하세요 [테이블 형식 모델링 &#40;Adventure Works 자습서&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md)합니다.  

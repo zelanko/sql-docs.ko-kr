@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3aad13a60182b4fe040d21ce132763e55f412f3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215448"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 함수(보고서 작성기 및 SSRS)
   지정된 식의 지정된 범위에서 첫 번째 값을 반환합니다.  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126306"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 실행(SybaseToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -42,7 +42,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
   
 -   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
--   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어쓸지 여부를 나타냅니다. {부울}  
+-   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어쓸지 여부를 나타냅니다. {boolean}  
   
 -   `project-type:`선택적 특성입니다. "Sql server 2005" 또는 "sql server 2008" 프로젝트 또는 프로젝트 "sql server 2012" 또는 "sql server 2014" 프로젝트 프로젝트나 "sql azure" 프로젝트는 프로젝트 유형을 나타냅니다. 기본값은 "sql-서버-2008"입니다.  
   
@@ -85,7 +85,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 > [!NOTE]  
 > SSMA SAP ASE에 대 한 콘솔 응용 프로그램에 대 한 이전 버전과 호환성을 지원합니다. SSMA의 이전 버전에서 만든 프로젝트를 열에 사용할 수 있습니다.  
   
-### <a name="save-project"></a>프로젝트 저장  
+### <a name="save-project"></a>save-project  
 이 명령은 마이그레이션 프로젝트를 저장합니다.  
   
 **구문 예제:**  
@@ -94,7 +94,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>프로젝트 닫기  
+### <a name="close-project"></a>close-project  
 이 명령은 마이그레이션 프로젝트를 닫습니다.  
   
 **구문 예제:**  
@@ -154,7 +154,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>대상 연결-데이터베이스  
+### <a name="connect-target-database"></a>connect-target-database  
 이 명령은 대상 SQL Server 데이터베이스에 연결 하 고 대상 데이터베이스의 높은 수준의 메타 데이터 하지만 메타 데이터가 아니라 완전히 로드 합니다.  
   
 대상에 대 한 연결을 설정할 수 없는 경우 오류가 생성 되 고 콘솔 응용 프로그램 실행이 중지 되 더 합니다.  
@@ -167,7 +167,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>대상에 다시 연결-데이터베이스  
+### <a name="reconnect-target-database"></a>reconnect-target-database  
   
 이 명령은 대상 데이터베이스에 다시 연결 하지만 연결 대상 데이터베이스 명령과 달리 메타 데이터를 로드 하지 않습니다.  
   
@@ -182,7 +182,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
 ## <a name="report-commands"></a>보고서 명령  
 SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보고서 명령입니다.  
   
-### <a name="generate-assessment-report"></a>-평가-보고서 생성  
+### <a name="generate-assessment-report"></a>generate-assessment-report  
   
 이 명령은 원본 데이터베이스에서 평가 보고서를 생성합니다.  
   
@@ -312,7 +312,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>데이터 마이그레이션  
+### <a name="migrate-data"></a>migrate-data  
 이 명령은 대상에 원본 데이터를 마이그레이션합니다.  
   
 -   `object-name:` 마이그레이션에 대 한 것으로 간주 하는 원본 개체를 지정 합니다. 데이터 (지원 개별 개체 이름 또는 그룹 개체 이름).  
@@ -393,7 +393,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
-### <a name="synchronize-target"></a>동기화 대상  
+### <a name="synchronize-target"></a>synchronize-target  
 이 명령은 대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
  
 이 명령은 원본 데이터베이스에 대해 실행 될 경우 오류가 발생 합니다.  
@@ -454,7 +454,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>데이터베이스에서 새로 고침  
+### <a name="refresh-from-database"></a>refresh-from-database  
 이 명령은 원본 데이터베이스에서 개체를 새로 고칩니다.  
   
 이 명령은 대상 데이터베이스에 대해 실행 될 경우 오류가 생성 됩니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062681"
 ---
 # <a name="catalog-example-vb"></a>Catalog 예제(VB)
 이 Visual Basic 프로젝트 MDX를 사용 하 여 새 큐브를 만듭니다. 그런 다음 Microsoft Word 문서에서 큐브의 구조를 설명합니다.  

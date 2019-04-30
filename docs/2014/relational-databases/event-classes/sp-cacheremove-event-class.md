@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058091"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove 이벤트 클래스
   SP:CacheRemove 이벤트 클래스는 저장 프로시저가 계획 캐시에서 제거되었음을 나타냅니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "52818325"
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|사용자 계정 컨트롤|  
 |EventClass|`int`|이벤트 유형 = 36|27|아니요|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 1=compplan 제거 합니다. 캐시에서 컴파일된 쿼리 계획이 제거되었습니다.<br /><br /> 2 = 프로시저 캐시 플러시 합니다. 프로시저 캐시에서 모든 항목이 제거되었습니다.|21|사용자 계정 컨트롤|  
+|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1 = 1=compplan 제거 합니다. 캐시에서 컴파일된 쿼리 계획이 제거되었습니다.<br /><br /> 2=Proc Cache Flush. 프로시저 캐시에서 모든 항목이 제거되었습니다.|21|사용자 계정 컨트롤|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|사용자 계정 컨트롤|  

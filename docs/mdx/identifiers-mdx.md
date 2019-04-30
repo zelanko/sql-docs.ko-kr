@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224951"
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
 
 
-  식별자에는 Analysis Services 개체의 이름입니다. 모든 개체 수와 식별자가 있어야 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
+  식별자에는 Analysis Services 개체의 이름입니다. 모든 개체 하는 식별자가 있어야 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
   
  개체의 이름을 어떻게 지정하느냐에 따라 개체 식별자는 일반 식별자 또는 구분 식별자가 됩니다.  
   
@@ -33,19 +33,19 @@ ms.locfileid: "34740812"
   
 1.  첫 문자는 다음 중 하나여야 합니다.  
   
-    -   문자는 Unicode Standard 2.0에 정의 된 대로. 다른 언어의 문자 외에도 문자의 유니코드 정의에는 a에서 z까지 그리고 A에서 Z까지의 라틴 문자가 포함됩니다.  
+    -   문자는 Unicode Standard 2.0에서 정의 합니다. 다른 언어의 문자 외에도 문자의 유니코드 정의에는 a에서 z까지 그리고 A에서 Z까지의 라틴 문자가 포함됩니다.  
   
     -   밑줄(_)  
   
 2.  그 다음 문자에는 다음과 같은 문자를 사용할 수 있습니다.  
   
-    -   유니코드 표준 2.0에서 정의한 문자입니다.  
+    -   Unicode Standard 2.0에서 정의한 문자입니다.  
   
     -   기본 라틴 또는 기타 국가 스크립트의 10진수  
   
     -   밑줄(_)  
   
-3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 참조 [예약 된 키워드 &#40;MDX 구문을&#41;](../mdx/reserved-keywords-mdx-syntax.md)합니다.  
+3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [예약 된 키워드 &#40;MDX 구문&#41;](../mdx/reserved-keywords-mdx-syntax.md)합니다.  
   
 4.  포함된 공백이나 특수 문자는 사용할 수 없습니다.  
   
@@ -124,8 +124,8 @@ ms.locfileid: "34740812"
  또한 둘 이상의 식별자를 구분하는 것을 보여 주기 위해 이전 예에서는 Measures 식별자를 구분했습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

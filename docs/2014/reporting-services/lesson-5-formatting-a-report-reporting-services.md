@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37e5ff9cd40dd8c79efcde8c7cb072493a2ff95a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064520"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>5단원: (Reporting Services) 보고서 서식 지정
   이제 Sales Orders 보고서에 데이터 영역과 일부 필드를 추가했으므로 날짜 및 통화 필드와 열 머리글의 서식을 지정할 수 있습니다.  

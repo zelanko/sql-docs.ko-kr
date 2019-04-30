@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298923"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 빈 만듭니다 연결 끊김 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

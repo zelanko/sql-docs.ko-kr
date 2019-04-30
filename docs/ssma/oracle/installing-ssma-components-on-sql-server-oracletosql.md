@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63055673"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server에 SSMA 구성 요소 설치(OracleToSQL)
 SSMA를 설치 하는 것 외에도 설치 해야 구성 요소가 실행 되는 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이러한 구성 요소에는 데이터 마이그레이션 및 서버-투-서버 연결을 사용 하도록 Oracle 공급자를 지 원하는 SSMA 확장 팩을 포함 합니다.  

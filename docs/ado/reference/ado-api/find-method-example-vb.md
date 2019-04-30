@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219149"
 ---
 # <a name="find-method-example-vb"></a>Find 메서드 예제(VB)
 이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아에서 직함의 수를 계산 하는 메서드를 ***Pubs*** 데이터베이스. 기본 공급자와 유사한 기능을 지원 하지 않습니다 하는 것을 전제로 합니다.  

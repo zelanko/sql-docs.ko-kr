@@ -12,11 +12,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 57a745385de80a3040897310ddc5b43b1301ea86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138761"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
 마이그레이션하려는 SQL Azure 데이터베이스에 연결할 SQL Azure 대화 상자에 연결을 사용 합니다.  

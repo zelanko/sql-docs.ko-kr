@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162475"
 ---
 # <a name="database-engine-upgrade-issues"></a>데이터베이스 엔진 업그레이드 문제
   이 섹션의 항목에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 로의 업그레이드에 영향을 줄 수 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

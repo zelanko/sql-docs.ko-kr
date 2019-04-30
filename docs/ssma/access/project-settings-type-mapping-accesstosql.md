@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299128"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>프로젝트 설정 (형식 매핑) (AccessToSQL)
 형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다. 또한 개별 데이터베이스 개체에 대 한 형식 매핑을 지정할 수 있습니다. 자세한 내용은 [매핑 원본 및 대상 데이터 형식](mapping-source-and-target-data-types-accesstosql.md)합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "51681251"
   
 |Access 데이터 형식|SQL Server 데이터 형식|  
 |--------------------|------------------------|  
-|**이진 [\*... \*]**|**varbinary[\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**currency**|**money**|  
@@ -53,7 +53,7 @@ ms.locfileid: "51681251"
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**Long**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**메모** -Access 97|**varchar(max)**|  

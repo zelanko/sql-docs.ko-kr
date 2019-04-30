@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067770"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   실행된 된 문의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 결과 집합의 열을 설명할 때 서버에 쿼리할 필요가 없습니다. 이 경우 `SQLDescribeCol` 서버 왕복은 발생 하지 않습니다. 와 같은 [SQLColAttribute](sqlnumresultcols.md)호출, `SQLDescribeCol` 준비 되었지만 실행된 되지 않은 문에 서버 왕복이 생성 합니다.  
@@ -37,8 +37,8 @@ ms.locfileid: "53369845"
   
 ||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|---------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
-|smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
+|Datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|Smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |Time|SQL_SS_TIME2|8, 10..16|0..7|  
 |Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
@@ -49,7 +49,7 @@ ms.locfileid: "53369845"
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeCol 지원  
  `SQLDescribeCol`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLDescribeCol 함수](https://go.microsoft.com/fwlink/?LinkID=59338)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

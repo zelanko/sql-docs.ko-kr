@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049875"
 ---
 # <a name="deferred-fields"></a>지연 필드
 값 *필드를 지연* 시간을 설정 하지만 드라이버 지연된 효과 대 한 변수의 주소를 저장 하는 경우에 사용 되지 않습니다. 응용 프로그램 매개 변수 설명자를 드라이버를 사용 하 여 변수의 내용을 호출 시 **SQLExecDirect** 하거나 **SQLExecute**합니다. 응용 프로그램 행 설명자를 드라이버 인출 시 변수의 내용을 사용합니다.  

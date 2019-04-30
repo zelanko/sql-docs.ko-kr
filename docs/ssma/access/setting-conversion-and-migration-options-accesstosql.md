@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299102"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>변환 및 마이그레이션 옵션 (AccessToSQL) 설정
 각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, 구성 옵션을 프로젝트에 적절 한지 확인 합니다.  
   
 ## <a name="configuration-options-and-modes"></a>구성 옵션 및 모드  
-SSMA는 4 개의 집합이 구성 설정과 이러한 설정을 구성 하기 위한 4 가지 모드: 기본, Optimistic, 전체 및 사용자 지정 합니다. 대부분의 사용자에 대 한 기본 모드를 사용 하는 것이 좋습니다. 간단한 변환에 대 한 최적 모드를 사용 합니다. 모든 메시지를 확인 하려는 경우 전체 모드를 사용 합니다. 사용자 지정 모드 옵션을 설정합니다.  
+SSMA는 4 개의 집합이 구성 설정과 이러한 설정을 구성 하기 위한 4 가지 모드에 있습니다. 기본적으로 낙관적, 전체 및 사용자 지정 합니다. 대부분의 사용자에 대 한 기본 모드를 사용 하는 것이 좋습니다. 간단한 변환에 대 한 최적 모드를 사용 합니다. 모든 메시지를 확인 하려는 경우 전체 모드를 사용 합니다. 사용자 지정 모드 옵션을 설정합니다.  
   
 설정은이 설명서의 "사용자 인터페이스 참조" 섹션에 설명 되어 있습니다. 설정 및 각 모드에는 설정 적용 방법에 대 한 자세한 내용은 다음 항목을 참조 합니다.  
   

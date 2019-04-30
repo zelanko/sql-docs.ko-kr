@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208514"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube(MDX)
 
@@ -45,14 +45,14 @@ LookupCube(Cube_Name, String_Expression )
 ## <a name="remarks"></a>Remarks  
  숫자 식이 지정 되는 **LookupCube** 함수는 지정 된 큐브의 특정된 숫자 식을 계산 하 고 결과 숫자 값을 반환 합니다.  
   
- 문자열 식이 지정 되는 **LookupCube** 함수는 지정 된 큐브의 특정된 문자열 식을 계산 하 고 결과 문자열 값을 반환 합니다.  
+ 문자열 식이 지정 하는 경우는 **LookupCube** 함수는 지정 된 큐브의 지정 된 문자열 식을 계산 하 고 결과 문자열 값을 반환 합니다.  
   
- **LookupCube** 기반이 MDX를 쿼리 하는 원본 큐브에 포함 되어 있는 동일한 데이터베이스 내의 큐브에서 작동 하는 함수는 **LookupCube** 함수가 실행 되 고 있습니다.  
+ **LookupCube** 함수는 MDX를 쿼리 하는 원본 큐브에 포함 되어 동일한 데이터베이스 내의 큐브에서 작동 합니다 **LookupCube** 함수가 실행 되 고 있습니다.  
   
 > [!IMPORTANT]  
 >  현재 쿼리의 컨텍스트는 쿼리되는 큐브에는 적용되지 않으므로 숫자 또는 문자열 식에 필요한 현재 멤버를 모두 지정해야 합니다.  
   
- 사용 하 여 모든 계산의 **LookupCube** 함수는 성능이 저하 될 가능성이 있습니다. 이 함수를 사용하는 대신 필요한 모든 데이터가 하나의 큐브에 있도록 솔루션을 다시 설계하는 것이 좋습니다.  
+ 사용 하 여 모든 계산 된 **LookupCube** 함수는 성능이 낮아질 수 있습니다. 이 함수를 사용하는 대신 필요한 모든 데이터가 하나의 큐브에 있도록 솔루션을 다시 설계하는 것이 좋습니다.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 LookupCube를 사용하는 방법을 보여 줍니다.  
@@ -66,6 +66,6 @@ LookupCube(Cube_Name, String_Expression )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

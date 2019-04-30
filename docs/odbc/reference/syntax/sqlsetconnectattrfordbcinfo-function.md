@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125536"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.81 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.81 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLSetConnectAttrForDbcInfo** 같습니다 **SQLSetConnectAttr**, 하지만 연결 핸들에 연결 정보 토큰 대신에 특성을 설정 하는 것입니다.  
@@ -41,7 +41,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  [입력] 토큰 핸들입니다.  
   
- *Attribute*  
+ *특성*  
  [입력] 설정할 특성입니다. 유효한 특성 목록에는 특정 드라이버 및과 동일 하 게 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)합니다.  
   
  *ValuePtr*  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f0881341cc899ac010de68b873e3fe7628a664b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295933"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>SQL Server 장애 조치(Failover) 클러스터 노드 제거
   장애 조치(Failover) 클러스터 노드 제거 페이지를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 장애 조치 클러스터 노드에서 제거할 컴퓨터를 식별할 수 있습니다.  

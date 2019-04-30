@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 057a39fd393be6cce9232d787b0d110a4be2035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060996"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Azure SQL DB에 연결(SybaseToSQL)
 마이그레이션하려는 Azure SQL DB 데이터베이스에 연결할 Azure SQL DB 대화 상자로 연결을 사용 합니다.  

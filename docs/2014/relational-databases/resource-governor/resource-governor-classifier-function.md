@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 32962186ac6fdf7b0cc18801d635e9b5ef9f5d22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209733"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "52807875"
 |----------------------|-----------|  
 |분류자 사용자 정의 함수를 만들고 테스트하는 방법에 대해 설명합니다.|[분류자 사용자 정의 함수 만들기 및 테스트](create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리소스 관리자](resource-governor.md)   
  [리소스 관리자 사용](enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   

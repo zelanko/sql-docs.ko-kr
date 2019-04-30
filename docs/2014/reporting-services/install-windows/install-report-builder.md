@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063487"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
   보고서 작성기를 설치할 수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 기능 팩에는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=168472) 또는 보고서 작성기는 Windows Installer 패키지인 ReportBuilder3_x86.msi를가지고 있는 공용 폴더와 같은 위치 다운로드 되었습니다.  

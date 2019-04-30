@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062799"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자를 초기화 합니다.
+# <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화
 전역 레코드 및 레코드 집합 개체를 선언 하려면 (일반) (선언) form1에 다음 코드를 삽입 합니다.  
   
 ```  
@@ -50,7 +50,7 @@ End Sub
   
  레코드 집합 개체 `grs`, 레코드의 자식에 대해 열려 `grec`합니다. 그런 다음 `lstMain` URL에 게시 된 리소스 파일 이름으로 채워집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
- [1 단계: Visual Basic 프로젝트 설정](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [3 단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [1단계: Visual Basic 프로젝트 설정](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
+ [3단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

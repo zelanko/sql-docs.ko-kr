@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33b2d2f33cf0ed85524dba50c936f4a2ea774d29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164683"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>데이터 원본 자격 증명 입력 대화 상자
   **데이터 원본 자격 증명 입력** 대화 상자를 사용하여 데이터 원본에서 데이터를 가져오기 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 자격 증명을 제공할 수 있습니다.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067499"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   문 특성 SQL_SOPT_SS_PARAM_FOCUS를 0으로 SQLExecute 설정 되지 않은 SQL_ERROR가 반환 되며 sqlstate 진단 레코드를 생성 하는 경우 = HY024 및 "잘못 된 특성 값 SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)". SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  
@@ -25,7 +25,7 @@ ms.locfileid: "53377425"
 ## <a name="remarks"></a>Remarks  
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=80708)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

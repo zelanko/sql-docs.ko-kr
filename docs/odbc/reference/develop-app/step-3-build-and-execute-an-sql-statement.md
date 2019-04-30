@@ -1,5 +1,5 @@
 ---
-title: '3 단계: 빌드 및 SQL 문을 실행할 | Microsoft Docs'
+title: '3단계: 작성 하 고 SQL 문을 실행 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148960"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>3단계: SQL 문 작성 및 실행
 다음 그림에 나와 있는 것 처럼 빌드는 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 사용 방법이 크게 달라 집니다. 응용 프로그램 사용자 입력을 기반으로 하는 SQL 문을 작성, SQL 문을 입력 하 라는 메시지가 수도 하드 코딩 된 SQL 문을 사용 합니다. 자세한 내용은 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  
@@ -36,6 +36,6 @@ ms.locfileid: "47801371"
   
 |SQL 문 유형|이동|  
 |---------------------------|----------------|  
-|**선택** 또는 카탈로그 함수|[4a단계: 결과 페치](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**업데이트**하십시오 **삭제할**, 또는 **삽입**|[4b단계: 행 수 페치](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|다른 모든 SQL 문|3 단계: 빌드 및 SQL 문 (이 항목)를 실행 하거나 [5 단계: 트랜잭션 커밋](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**선택** 또는 카탈로그 함수|[4a 단계: 결과 페치](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**업데이트**하십시오 **삭제할**, 또는 **삽입**|[4b 단계: 행 수 페치](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|다른 모든 SQL 문|3단계: 작성 하 고 SQL 문 (이 항목)를 실행 하거나 [5 단계: 트랜잭션 커밋](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

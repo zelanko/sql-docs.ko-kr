@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062859"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 열 또는 열을 추가 하는 셰이프 명령은 APPEND 절을 **레코드 집합**합니다. 이러한 열은 자식 참조 하는 장 열을 자주 **레코드 집합**합니다.  

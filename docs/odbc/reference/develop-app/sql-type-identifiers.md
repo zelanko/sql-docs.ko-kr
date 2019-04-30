@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150026"
 ---
 # <a name="sql-type-identifiers"></a>SQL 형식 식별자
 각 데이터 원본에는 자체 SQL 데이터 형식을 정의합니다. ODBC 형식 식별자를 정의 하 고 각 형식 식별자에 매핑될 수 있는 SQL 데이터 형식의 일반 특징을 설명 합니다. 드라이버 관련 ODBC SQL 형식 식별자에 내부 데이터 소스의 각 데이터 유형에 매핑되는 방법을 것입니다.  
@@ -31,4 +31,4 @@ ms.locfileid: "47740151"
   
  ODBC는 SQL 유형 식별자의 다양 한을 정의합니다. 그러나 드라이버는 이러한 식별자의 모든 사용할 필요가 없습니다. 대신, 기본 데이터 원본에서 지 원하는 SQL 데이터 형식을 노출 해야 하는 식별자에만 사용 합니다. 데이터 원본에서 SQL 데이터 형식을 지 원하는 경우 해당 하는 식별자가 없는 형식, 드라이버는 추가 형식 식별자를 정의할 수 있습니다. 자세한 내용은 [드라이버별 데이터 형식, 설명자 유형, 정보 유형, 진단 유형 및 특성](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)합니다.  
   
- 에 대 한 전체 설명은 SQL 유형 식별자를 참조 하세요 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.
+ 에 대 한 전체 설명은 SQL 유형 식별자를 참조 하세요 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식입니다.

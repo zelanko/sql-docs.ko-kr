@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dc6ab85f562aa4a2149e6471b13422e97d7fc7c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063329"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "53353420"
   
  SharePoint용 PowerPivot을 팜에 추가하려면 팜 관리자여야 합니다. 팜에 서버 및 애플리케이션을 추가하려면 암호를 알아야 합니다.  
   
-##  <a name="deploywsp"></a> 1 단계: PowerPivot 솔루션 배포  
+##  <a name="deploywsp"></a> 1단계: PowerPivot 솔루션 배포  
  설치 및 배포해야 하는 솔루션은 팜 솔루션과 웹 애플리케이션 솔루션 등 두 가지입니다.  
   
  **설치 하 고 팜 솔루션 배포**  
@@ -80,7 +80,7 @@ ms.locfileid: "53353420"
   
 7.  PowerPivot 데이터 액세스를 지원할 다른 SharePoint 웹 애플리케이션에 대해서도 반복합니다.  
   
-##  <a name="Geneva"></a> 2 단계: 서버에서 서비스 시작  
+##  <a name="Geneva"></a> 2단계: 서버에서 서비스 시작  
  SharePoint용 PowerPivot을 배포하려면 팜에 Excel 계산 서비스, 보안 저장소 서비스 및 Windows 토큰 서비스에 대한 클레임이 포함되어야 합니다.  
   
  Excel 서비스와 SharePoint용 PowerPivot에는 Windows 토큰 서비스에 대한 클레임이 필요합니다. 이것은 현재 SharePoint 사용자의 Windows ID를 사용하여 외부 데이터 원본에 대한 연결을 설정하는 데 사용됩니다. 이 서비스는 Excel 서비스 또는 SharePoint용 PowerPivot이 사용되도록 설정되어 있는 모든 SharePoint 서버에서 실행되어야 합니다. 서비스가 아직 시작되지 않았으면 지금 시작하여 Excel 서비스에서 인증된 요청을 PowerPivot 시스템 서비스로 전달할 수 있도록 합니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "53353420"
   
 5.  SQL Server Analysis Services 및 SQL Server PowerPivot 시스템 서비스가 모두 시작되었는지 확인합니다.  
   
-##  <a name="createapp"></a> 3 단계: PowerPivot 서비스 응용 프로그램 만들기  
+##  <a name="createapp"></a> 3단계: PowerPivot 서비스 응용 프로그램 만들기  
  다음으로는 PowerPivot 서비스 애플리케이션을 만듭니다.  
   
 1.  중앙 관리의 애플리케이션 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  

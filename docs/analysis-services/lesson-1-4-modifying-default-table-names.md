@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053133"
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>단원 1-4-기본 테이블 이름 수정
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "34015671"
 7.  **파일** 메뉴 또는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 도구 모음에서 **모두 저장** 을 클릭하여 지금까지의 변경 내용을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트에 저장합니다. 원할 경우 여기에서 자습서를 중지했다가 나중에 계속 진행할 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[2 단원: 정의 및 큐브를 배포 합니다.](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[2단원: 정의 및 큐브를 배포 합니다.](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [데이터 원본 뷰에서 속성 변경&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

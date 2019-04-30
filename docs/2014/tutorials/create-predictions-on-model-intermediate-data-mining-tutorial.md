@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217738"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 모델에서 예측 만들기(중급 데이터 마이닝 자습서)
   시퀀스 뷰어에서 이동 하 여 클러스터링 되는 더 나은 모델을 이해 한 이후에 예측 쿼리 작성기를 사용 하 여 예측 쿼리를 만들 수 있습니다 합니다 **마이닝 모델 예측** 데이터 마이닝 디자이너의 탭 합니다. 예측을 만들려면 먼저 시퀀스 클러스터링 모델을 선택한 다음 입력 데이터를 선택합니다. 입력의 경우 외부 데이터 원본을 사용하거나 단일 쿼리를 작성하고 대화 상자에 값을 제공할 수 있습니다.  

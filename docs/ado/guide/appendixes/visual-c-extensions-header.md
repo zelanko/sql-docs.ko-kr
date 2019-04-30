@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 확장 헤더 | Microsoft Docs
+title: Visual C++ 확장 헤더 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217667"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ 확장 헤더
 다음 헤더를 **icrsint.h**, 클라이언트가에서 필드를 검색 하도록 허용 하는 인터페이스에 자세히 설명 된 **레코드 집합** 에서 파생 된 클래스에 정의 된 변수로 **CADORecordBinding**. 액세스 하려는 각 필드에 대 한 ADO 바인딩을 매크로 지정 해야 합니다.  
@@ -209,5 +209,5 @@ public:
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+ [Visual C++ 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)

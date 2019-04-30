@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63210143"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 ODBC API 지원
   다음 ODBC API는 향상된 날짜 및 시간 기능을 지원합니다.  

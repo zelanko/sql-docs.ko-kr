@@ -44,11 +44,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225432"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
   **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
@@ -173,7 +173,7 @@ ms.locfileid: "53373615"
   
 -   **스크립트 바인딩** - 기본 및 규칙 개체 바인딩을 위한 스크립트를 생성합니다. 기본값은 **False**입니다. 자세한 내용은 [CREATE DEFAULT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) 및 [CREATE RULE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql)을 참조하세요.  
   
--   **데이터 정렬 스크립팅** - 스크립트에 데이터 정렬 정보를 포함합니다. 기본값은 **False**입니다. 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을(를) 참조하세요.  
+-   **데이터 정렬 스크립팅** - 스크립트에 데이터 정렬 정보를 포함합니다. 기본값은 **False**입니다. 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을 참조하세요.  
   
 -   **기본값 스크립팅** - 테이블 열에서 기본값을 설정하는 데 사용되는 기본 개체를 포함합니다. 기본값은 **True**입니다. 자세한 내용은 [CREATE DEFAULT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql)를 참조하세요.  
   

@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223251"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>암호화 키(SSRS 기본 모드)
   암호화 키 페이지를 사용하여 보고서 서버의 데이터를 암호화 및 암호 해독하는 데 사용되는 대칭 키를 관리할 수 있습니다. 암호화 키 관리는 보고서 서버 구성에 있어 매우 중요합니다. 대칭 키는 보고서 서버 데이터베이스를 만들 때 자동으로 만들어지고 적용됩니다. 일상적인 유지 관리 작업을 수행할 수 있도록 대칭 키의 백업 복사본을 만드십시오. 다음 유지 관리 태스크를 수행하려면 올바른 대칭 키 복사본이 있어야 합니다.  
@@ -43,10 +43,10 @@ ms.locfileid: "48144233"
 > [!IMPORTANT]  
 >  대칭 키 삭제 및 다시 만들기 동작은 되돌리거나 실행 취소할 수 없습니다. 키를 삭제 또는 다시 만들기는 현재 설치에 중요한 결과를 가져올 수 있습니다. 키를 삭제하면 대칭 키로 암호화된 모든 기존 데이터도 삭제됩니다. 삭제된 데이터에는 외부 보고서 데이터 원본에 대한 연결 문자열, 저장된 연결 문자열 및 일부 구독 정보가 포함되어 있습니다.  
   
- 이 페이지를 열려면 시작을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager 및 탐색 창에서 링크를 클릭 합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
+ 이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 탐색 창에서 링크를 클릭합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>변수  
- **백업**  
+ **Backup**  
  대칭 키를 지정한 파일에 복사합니다. 대칭 키는 일반 텍스트로 저장되지 않습니다. 해당 파일을 보호하려면 암호를 입력해야 합니다.  
   
  **복원**  
@@ -54,7 +54,7 @@ ms.locfileid: "48144233"
   
  현재 연결된 보고서 서버 인스턴스에 대한 대칭 키의 이전 복사본은 복원된 버전으로 덮어쓰여집니다. 대칭 키를 복원한 다음에는 해당 보고서 서버 데이터베이스를 사용하는 모든 보고서 서버를 초기화해야 합니다. 보고서 서버를 초기화 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 서버 초기화 &#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)합니다.  
   
- **변경**  
+ **Change**  
  대칭 키를 다시 만들고 보고서 서버 데이터베이스에 암호화된 모든 값을 다시 암호화합니다. 대칭 키를 다시 만들기 전에 보고서 서버 서비스를 중지해야 합니다.  
   
  스케일 아웃 배포의 경우 대칭 키의 모든 복사본은 새 버전으로 바뀝니다. 대칭 키를 변경하기 전에 스케일 아웃 배포에 참가한 서버 목록을 검토하여 올바른 보고서 서버 인스턴스에만 새 키에 대한 액세스 권한이 부여되도록 합니다. 스케일 아웃 배포에 포함되는 서버는 **스케일 아웃 배포** 페이지에 나열되어 있습니다. 키를 다시 만들기 전에 배포의 각 보고서 서버에서 서비스를 중지하십시오.  

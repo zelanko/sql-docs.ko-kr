@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127828"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 명령
 삭제 표시 된 레코드를 처리 하는 여부 및 다른 명령에서 사용할 수 있는지 여부를 지정 합니다.  

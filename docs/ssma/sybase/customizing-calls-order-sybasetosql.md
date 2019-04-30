@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298516"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>호출 순서 사용자 지정(SybaseToSQL)
 이 단계에서 테스트 하려면 개체는 호출 순서를 선택할 수 있습니다.  

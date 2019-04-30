@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065046"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
 
@@ -40,19 +40,19 @@ Hierarchy_Expression.UnknownMember
  계층을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- Analysis Services는 계층 구조를 알 수 없는 경우 팩트 테이블 데이터는 계층 구조와 연결할 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
+ Analysis Services 계층 구조를 알 수 없는 경우 팩트 테이블 데이터를 계층과 연결을 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
   
 -   집계되지 않는 특성 계층의 최상위 수준  
   
--   아래의 첫 번째 수준에서 **모든** 자연 계층에 대 한 수준.  
+-   아래의 첫 번째 수준 합니다 **모든** 자연 계층에 대 한 수준입니다.  
   
 -   비자연 계층에 대한 임의의 수준  
   
- 멤버 식이 지정 되는 **UnknownMember** 함수는 지정 된 멤버의 알 수 없는 멤버 자식을 반환 합니다. 지정한 멤버가 존재하지 않는 경우 함수는 Null을 반환합니다.  
+ 멤버 식이 지정 하는 경우는 **UnknownMember** 함수에 지정된 된 멤버의 알 수 없는 멤버 자식을 반환 합니다. 지정한 멤버가 존재하지 않는 경우 함수는 Null을 반환합니다.  
   
- 계층 식이 지정 되는 **UnknownMember** 있는 경우 함수는 최상위 수준의 알 수 없는 멤버를 반환 합니다.  
+ 계층 식이 지정 하는 경우는 **UnknownMember** 함수 있을 경우 최상위 수준에서 알 수 없는 멤버를 반환 합니다.  
   
- 알 수 없는 멤버 수준이 나 멤버에 존재 하지 않는 경우는 **UnknownMember** 함수는 null 멤버를 만듭니다.  
+ 알 수 없는 멤버 수준 또는 멤버에 없는 경우는 **UnknownMember** 함수는 null 멤버를 만듭니다.  
   
 > [!NOTE]  
 >  계층이나 멤버에 알 수 없는 멤버가 존재하지 않으면 오류가 생성됩니다.  
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

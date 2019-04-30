@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2a9b4eced3cb4e02e2053a90edd701bda3139358
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209632"
 ---
 # <a name="schema-caching-sqlxml-40"></a>스키마 캐싱(SQLXML 4.0)
   Microsoft SQL Server 2000 웹 릴리스 1, Microsoft SQLXML 2.0 및 SQLXML 3.0에 대 한 xml에서 병렬 설치를 모든 버전에서 다음 레지스트리 키를 사용 하 여 캐시 스키마를 명시적으로 제어할 수 있습니다.  

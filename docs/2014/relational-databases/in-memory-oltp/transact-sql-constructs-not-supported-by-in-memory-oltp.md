@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155305"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
   메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 디스크 기반 테이블과 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 지원되는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 노출 영역을 지원하지 않습니다. 지원되지 않는 기능 중 하나를 사용하려고 하면 서버에서 오류가 반환됩니다.  

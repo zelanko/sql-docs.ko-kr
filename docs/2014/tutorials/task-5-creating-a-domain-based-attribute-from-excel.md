@@ -1,5 +1,5 @@
 ---
-title: '작업 5: Excel에서 도메인 기반 특성 만들기 | Microsoft Docs'
+title: '태스크 5: Excel에서 도메인 기반 특성 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143086"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>작업 5: Excel에서 도메인 기반 특성 만들기
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>태스크 5: Excel에서 도메인 기반 특성 만들기
   변환 하면이 태스크에서는 **상태** 특성을 **공급 업체** 엔터티를 **도메인 기반 특성**. State 특성 도메인 기반 단일 하 라는 새로운 엔터티가 MDS에 게시를 구성 하 고 나면 **상태** 열의 모든 값을 사용 하 여 MDS 서버에 만들어집니다 하며 **상태** 특성을 **공급 업체** 엔터티를 값으로 채워집니다 합니다 **상태** 엔터티. 이제는 **공급 업체** 모델에는 두 개의 엔터티가 있어야 합니다. **공급 업체** 및 **상태** 여기서는 **상태** 특성을 **공급 업체** 엔터티가 종속 된 도메인 기반 특성을 **상태** 엔터티.  
   
 1.  전환할 **Excel** 포함 된 창을 **Cleansed and Matched Suppliers.xlsx** 엽니다.  

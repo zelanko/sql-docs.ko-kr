@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299433"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스에 대 한 합니다.  

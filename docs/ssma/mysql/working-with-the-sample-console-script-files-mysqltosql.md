@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288566"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>작업 샘플 콘솔 스크립트 파일 (MySQLToSQL)
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품와 함께 제공 되었습니다. 이 섹션에서는 최종 사용자 요구에 맞게 이러한 스크립트를 쉽게 사용자 지정 하는 방법은 설명 합니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "52411050"
   
     `object-name:` 원본 데이터베이스 지정/마이그레이션해야 하는 데 필요한 이름 테이블입니다. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [변수 값 파일 만들기 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [서버 연결 파일 만들기 &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [보고서 생성 &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  

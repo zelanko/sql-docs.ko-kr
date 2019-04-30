@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061006"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase에 연결(SybaseToSQL)
 사용 된 **Sybase에 연결** 마이그레이션하려는 Sybase 적응형 Server Enterprise (ASE) 인스턴스에 연결 대화 상자.  
@@ -54,7 +54,7 @@ ASE에는 연결에 대 한 전체 연결 문자열을 입력 합니다.
     |-----------|-------------------------|-----------------------|  
     |서버 이름|서버 이름|서버|  
     |포트|서버 포트 주소|포트|  
-    |사용자 이름|사용자 ID|사용자 ID|  
+    |사용자 이름|User ID|User ID|  
     |암호|암호|암호|  
     |공급자|공급자|공급자|  
   

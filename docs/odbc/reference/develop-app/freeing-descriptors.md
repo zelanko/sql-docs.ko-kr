@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061491"
 ---
 # <a name="freeing-descriptors"></a>설명자 해제
 명시적으로 할당 된 설명자 수 중 하나를 명시적으로 호출 하 여 해제할 **SQLFreeHandle** 사용 하 여 *HandleType* SQL_HANDLE_DESC, 또는 암시적으로 때 연결 핸들을 해제 됩니다. 명시적으로 할당 된 설명자를 해제 하는 경우, 모든 문 핸들을 자동으로 적용 해제 된 설명자에 암시적으로 할당 된 설명자를 되돌립니다.  

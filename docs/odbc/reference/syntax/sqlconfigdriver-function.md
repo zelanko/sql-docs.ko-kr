@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062361"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 함수
 **규칙**  
@@ -54,7 +54,7 @@ BOOL SQLConfigDriver(
  *hwndParent*  
  [입력] 부모 창 핸들입니다. 핸들을 null 이면 함수는 모든 대화 상자 표시 되지 않습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. *문제점과* 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_CONFIG_DRIVER: 연결 풀링 드라이버에서 사용 되는 제한 시간을 변경 합니다.  

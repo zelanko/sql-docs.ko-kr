@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156307"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage, PageCount, PageSize 속성 예제 (JScript)
 이 예제에서는 AbsolutePage, PageCount, PageSize 속성을 보여 줍니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **AbsolutePageJS.asp**합니다.  
@@ -110,7 +110,7 @@ BODY {
                     if (iRecord == 1)  
                         strMessage += "<td>Page " + i + " of " + rsEmployee.PageCount + "</td>"  
                     else  
-                        strMessage += "<td> </td>";  
+                        strMessage += "<td> </td>";  
   
                     // First and last name are in first column.  
                     strMessage += "<TD>" + rsEmployee.Fields("FirstName") + " ";  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217623"
 ---
 # <a name="catalog-functions-in-odbc"></a>ODBC의 카탈로그 함수
 ODBC는 다음 카탈로그 함수를 포함 합니다.  

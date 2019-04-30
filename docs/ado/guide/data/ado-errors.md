@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063039"
 ---
 # <a name="ado-run-time-errors"></a>ADO에서 런타임 오류
-ADO 오류는 런타임 오류로 프로그램에 보고 됩니다. 트래핑 하 고 처리할 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어, Visual Basic의 경우를 사용 합니다 **오류 발생 시** 문입니다. Visual c + +에서 ADO 라이브러리에 액세스 하는 방법에 따라 다릅니다. #Import, 사용 된 **try / catch** 블록. C + + 프로그래머를 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 고, 그렇지 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
+ADO 오류는 런타임 오류로 프로그램에 보고 됩니다. 트래핑 하 고 처리할 프로그래밍 언어의 오류 트래핑 메커니즘을 사용할 수 있습니다. 예를 들어, Visual Basic의 경우를 사용 합니다 **오류 발생 시** 문입니다. 시각적 개체의 C++, ADO 라이브러리에 액세스 하는 방법에 따라 다릅니다. #Import, 사용 된 **try / catch** 블록. 그렇지 않으면 C++ 명시적으로 호출 하 여 오류 개체를 검색 해야 하는 프로그래머 **GetErrorInfo**합니다. 다음 Visual Basic sub 프로시저는 ADO 오류를 트래핑 하는 방법을 보여 줍니다.
 
 ```
 ' BeginErrorHandlingVB01

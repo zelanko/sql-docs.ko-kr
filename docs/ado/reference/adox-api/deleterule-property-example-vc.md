@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b980b698bd8a6abb9c49fb669e821be07a5aab36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298083"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 속성 예제(VC++)
 이 예제에서는 합니다 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 의 속성을 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체입니다. 새 코드를 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 설정 하는 새 기본 키를 다음 정의 **DeleteRule** 하 **adRICascade**합니다.  

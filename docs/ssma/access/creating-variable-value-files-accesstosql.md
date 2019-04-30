@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138836"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 (AccessToSQL) 만들기
 변수 값 파일을 XML 파일 (예: 소스 또는 대상 서버 이름)에 서버 마이그레이션 간에 자주 변경 되는 명령의 매개 변수 값을 비교 됩니다. 원본 서버의 각 값을 저장 하는 것에 대 한 여러 변수 파일을 만들고 사용 하 여 마스터 스크립트 파일에서 참조 된 많은 수의 데이터베이스 마이그레이션 발생 합니다 **-v** 명령줄에서 전환 합니다. 이 동작은 여러 변수 파일에서 변수 값을 사용 하 여 몇 가지 스크립트 파일에 정적 값을 유지 관리에 도움이 됩니다.  

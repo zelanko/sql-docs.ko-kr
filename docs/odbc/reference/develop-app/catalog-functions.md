@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125587"
 ---
 # <a name="catalog-functions"></a>카탈로그 함수
 모든 데이터베이스에는 데이터베이스에 데이터를 저장 하는 방법에 대해 간략하게 설명 하는 구조체입니다. 예를 들어, 간단한 판매 주문 데이터베이스 테이블에 연결할 사용 되는 ID 열, 다음 그림에 표시 되는 구조가 있을 수 있습니다.  

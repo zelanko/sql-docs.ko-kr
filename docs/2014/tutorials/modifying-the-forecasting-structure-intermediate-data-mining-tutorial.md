@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301294"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>예측 구조 수정(중급 데이터 마이닝 자습서)
   이전 태스크에서 만든 마이닝 구조에는 단일 예측 모델이 포함되어 있습니다. 모델을 처리하고 탐색하기 전에 해당 구조를 약간 변경하고 속성 중 하나를 수정해야 합니다.  
   
 ## <a name="modifying-the-mining-structure"></a>마이닝 구조 수정  
- 사용 하 여 마이닝 구조를 변경할 수 있습니다 합니다 **마이닝 구조** 데이터 마이닝 디자이너의 탭 합니다. 데이터 마이닝 마법사로 모델을 만들 때에는 ReportingDate, ModelRegion 및 Quantity를 선택 합니다. 그러나 합니다 **Forecasting** 테이블 판매 금액을 예측 하는 데 사용할 수 있는 Amount 열도 포함 합니다. 사용 하 여 합니다 **마이닝 구조** 탭에서 마이닝 구조에 데이터 원본 뷰에서이 열을 추가할 수 있습니다.  
+ 사용 하 여 마이닝 구조를 변경할 수 있습니다 합니다 **마이닝 구조** 데이터 마이닝 디자이너의 탭 합니다. 데이터 마이닝 마법사를 사용 하 여 모델을 만든 경우 3 개의 열을 사용 했습니다. ReportingDate, ModelRegion 및 Quantity를 선택 합니다. 그러나 합니다 **Forecasting** 테이블 판매 금액을 예측 하는 데 사용할 수 있는 Amount 열도 포함 합니다. 사용 하 여 합니다 **마이닝 구조** 탭에서 마이닝 구조에 데이터 원본 뷰에서이 열을 추가할 수 있습니다.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Forecasting 마이닝 구조에 Amount 열을 추가하려면  
   

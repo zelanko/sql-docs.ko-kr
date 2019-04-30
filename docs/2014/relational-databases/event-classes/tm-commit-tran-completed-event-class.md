@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061309"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed 이벤트 클래스
-  TM: Commit Tran Completed 이벤트 클래스는 COMMIT TRANSACTION 요청이 완료되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다. EventSubClass 열은 현재 트랜잭션이 커밋된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  
+  TM: Commit Tran Completed 이벤트 클래스는 COMMIT TRANSACTION 요청이 완료 되었음을 나타냅니다. 요청은 클라이언트에서 트랜잭션 관리 인터페이스를 통해 전송됩니다. EventSubClass 열은 현재 트랜잭션이 커밋된 후 새로운 트랜잭션이 시작되는지 여부를 나타냅니다.  
   
 ## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Commit Tran Completed 이벤트 클래스 데이터 열  
   

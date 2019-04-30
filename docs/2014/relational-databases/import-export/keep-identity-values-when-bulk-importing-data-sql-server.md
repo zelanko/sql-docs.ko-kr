@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064588"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 ID 값이 들어 있는 데이터 파일을 대량으로 가져옵니다. 기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다. 고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  서식 파일을 만드는 방법은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>1. bcp 사용 및 ID 값 유지  
- 다음 예에서는 `bcp`를 사용하여 데이터를 대량으로 가져올 때 ID 값을 유지하는 방법을 보여 줍니다. 합니다 `bcp` 명령은 서식 파일인 `myDepartment-f-n-x.Xml`, 하며 다음 스위치를 포함 합니다.  
+ 다음 예에서는 `bcp`를 사용하여 데이터를 대량으로 가져올 때 ID 값을 유지하는 방법을 보여 줍니다. `bcp` 명령은 서식 파일인 `myDepartment-f-n-x.Xml`을 사용하며 다음 스위치를 포함합니다.  
   
 |한정자|Description|  
 |----------------|-----------------|  

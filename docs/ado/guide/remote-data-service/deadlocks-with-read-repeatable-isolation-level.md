@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214874"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>읽기 반복 가능 격리 수준으로 인한 교착 상태
 사용자 지정 비즈니스 개체를 격리 수준을 반복 읽기를 사용 하 여 SQL Server에 액세스 하 고 비즈니스 개체는 쿼리를 보내고 동일한 트랜잭션에서 업데이트 하는 두 명의 클라이언트에서 동시에 호출 됩니다, 경우에 교착 상태가 발생 가능성이 있습니다. 원격 데이터 서비스는 교착 상태를 해제 하려면 시간 초과 프로세스 중 하나를 허용 하도록 만들어졌지만 해당 클라이언트에 대 한 업데이트가 실패 합니다.  

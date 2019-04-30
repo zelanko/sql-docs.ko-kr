@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049501"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
   HealthCheckTimeout 설정은 SQL Server 리소스 DLL에서 반환 된 정보에 대 한 대기 해야 하는 밀리초 단위로 시간 길이 지정 하는 합니다 [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 보고 하기 전에 저장 프로시저를 AlwaysOn 장애 조치 클러스터 인스턴스 (FCI)으로 응답 하지 않습니다. 제한 시간 설정에 대한 변경 내용은 즉시 적용되며 SQL Server 리소스를 다시 시작하지 않아도 됩니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항 및 제한 사항](#Limits), [보안](#Security)  
+-   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  
   
 -   **사용 하 여 HeathCheckTimeout 설정을 구성 합니다.**  [PowerShell](#PowerShellProcedure)하십시오 [장애 조치 클러스터 관리자](#WSFC), [TRANSACT-SQL](#TsqlProcedure)  
   

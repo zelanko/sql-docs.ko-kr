@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637d06160afba1fc1f93bea0da3aae0a09f954ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050940"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 이벤트 클래스
   Sort Warnings 이벤트 클래스는 정렬 작업이 메모리에 맞지 않음을 나타냅니다. 여기에는 인덱스 만들기와 관련된 정렬 작업이 포함되지 않으며 SELECT 문에 사용된 ORDER BY 절과 같은 쿼리 내의 정렬 작업만 포함됩니다.  

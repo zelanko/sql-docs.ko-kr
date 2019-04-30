@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96e28a50e58693bbb297bd1e80335482cdd9e82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213275"
 ---
 # <a name="executing-statements-odbc"></a>명령문 ODBC 실행
 ODBC 응용 프로그램은 SQL 문을 실행 하 여 거의 모든 데이터베이스 액세스를 수행 합니다. 이벤트의 일반적인 순서 문 핸들을 할당, 모든 문 특성을 설정, 문을 실행 하 여, 모든 결과 검색 및 문 핸들입니다.  

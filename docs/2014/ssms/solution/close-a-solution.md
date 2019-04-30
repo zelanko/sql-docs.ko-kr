@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f14fea5c448a4b3cd3dbb0a34ce86b40d1db7835
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128542"
 ---
 # <a name="close-a-solution"></a>솔루션 닫기
   솔루션을 닫고 솔루션 탐색기에서 제거할 수 있습니다. 솔루션을 닫으면 솔루션 탐색기에서 해당 솔루션을 사용할 수 없게 됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52763055"
   
 1.  **파일** 메뉴에서 **솔루션 닫기**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [솔루션 탐색기](solution-explorer.md)  
   
   

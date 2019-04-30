@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148877"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE 매핑(SQLSTATE Mappings)
-이 항목에서는 ODBC 2에 대 한 SQLSTATE 값을 설명합니다. *x* 고 ODBC 3. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값을 참조 하십시오 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.  
+이 항목에서는 ODBC 2에 대 한 SQLSTATE 값을 설명합니다. *x* 고 ODBC 3. *x*합니다. 대 한 자세한 내용은 ODBC 3. *x* SQLSTATE 값 참조 [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다.  
   
  Odbc 3. *x*HYxxx SQLSTATEs S1xxx를 대신 반환 되 고 42Sxx SQLSTATEs S00XX 대신 반환 됩니다. 이 작업은 Open Group 및 ISO 표준에 맞게 수행 되었습니다. 대부분의 경우에서 매핑을 아니므로 일대일 표준을 여러 SQLSTATEs의 해석은 다시 정의 했습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "47855021"
   
  SQL_OV_ODBC2를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 하면 드라이버는 ODBC 2를 게시 합니다. *x* SQLSTATEs 대신 ODBC 3. *x* SQLSTATEs 때 **SQLGetDiagField** 하거나 **SQLGetDiagRec** 라고 합니다. ODBC 2를 확인 하 여 특정 매핑을 확인할 수 있습니다 *.x* ODBC 3에 해당 하는 다음 테이블의 열 1의에서 SQLSTATE입니다. *x* 열 2의에서 SQLSTATE입니다.  
   
-|ODBC 2입니다. *x* SQLSTATE|ODBC 3입니다. *x* SQLSTATE|주석|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|주석|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  

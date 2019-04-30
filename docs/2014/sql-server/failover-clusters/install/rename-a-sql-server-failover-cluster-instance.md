@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126027"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "53362626"
   
  **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** 네트워크 이름을 변경한 후는 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치 이후 업그레이드 Windows 클러스터 관리자 도구를 사용 하 여 인스턴스 클러스터 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제가 업데이트를 확인 하는 **ClusterName** 레지스트리 항목의 해결 방법 섹션의 지침에 따라 [이](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002)합니다.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent Service:** 확인 및 수행 된 아래의 추가 작업에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스:  
   
 -   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53362626"
   
 -   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061871"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -86,7 +86,7 @@ SQLRETURN SQLDescribeCol(
  *NullablePtr*  
  [출력] 열의 NULL 값을 허용 하는지 여부를 나타내는 값을 반환 하는 버퍼에 대 한 포인터입니다. IRD의 SQL_DESC_NULLABLE 필드에서이 값을 읽습니다. 값은 다음 중 하나입니다.  
   
- SQL_NO_NULLS: 이 열은 NULL 값을 허용하지 않습니다.  
+ SQL_NO_NULLS: 열에서 NULL 값을 허용 하지 않습니다.  
   
  SQL_NULLABLE: 열은 NULL 값을 허용 합니다.  
   

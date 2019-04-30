@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 131e889847625dea825ca48ca30bf801046d229c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062999"
 ---
 # <a name="ado-event-instantiation-by-language"></a>언어별 ADO 이벤트 인스턴스
 각 프로그래밍 언어는 다르게 ADO 이벤트 인스턴스를 만듭니다. 다음 예제에서는 모든 작성 하는 **ConnectComplete** 이벤트 처리기입니다.  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual Studio의 Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
 -   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   

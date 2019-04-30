@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63080674"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "51671682"
   
 |||  
 |-|-|  
-|항목|설명|  
+|항목|Description|  
 |[고급 개체 선택 &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|평가 보고서를 사용 하 여 DB2 개체의 변환 결과 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 및 예측 시간 및 복잡성에 마이그레이션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |[DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|사용 된 **DB2에 연결** 마이그레이션하려는 DB2 데이터베이스에 연결 대화 상자.|  

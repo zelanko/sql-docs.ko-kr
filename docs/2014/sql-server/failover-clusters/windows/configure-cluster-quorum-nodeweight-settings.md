@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049526"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>클러스터 쿼럼 NodeWeight 설정 구성
   이 항목에서는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 멤버 노드에 대한 NodeWeight 설정을 구성하는 방법에 대해 설명합니다. NodeWeight 설정은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 재해 복구 및 다중 서브넷 시나리오를 지원하기 위한 쿼럼 투표 동안 사용됩니다.  
   
--   **시작 하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **시작하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **쿼럼 NodeWeight 설정을 보려면:** [Powershell을 사용 하 여](#PowerShellProcedure), [Cluster.exe 사용](#CommandPromptProcedure)  
+-   **쿼럼 NodeWeight 설정을 보려면 다음을 사용합니다.** [Powershell을 사용 하 여](#PowerShellProcedure), [Cluster.exe 사용](#CommandPromptProcedure)  
   
 -   [관련 내용](#RelatedContent)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53349879"
 > [!IMPORTANT]  
 >  NodeWeight 설정을 사용하려면 WSFC 클러스터의 모든 서버에 다음 핫픽스를 적용해야 합니다.  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]에서 쿼럼 투표가 없는 클러스터 노드를 구성하는 데 사용할 수 있는 핫픽스  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): 핫픽스는에서 쿼럼 투표가 없는 클러스터 노드를 구성 하는 데 사용할 수 있는 [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] 및 [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  이 핫픽스가 설치되어 있지 않은 경우 이 항목의 예는 NodeWeight에 대해 빈 값이나 NULL 값을 반환합니다.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127057"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
   복제는 다음 유지 관리 작업을 사용합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "54128393"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 에이전트 관리](../agents/replication-agent-administration.md)  
   
   

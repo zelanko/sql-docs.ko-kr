@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217880"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>콜 센터 모델에 대한 예측 만들기(중급 데이터 마이닝 자습서)
   교대조, 전화 상담원 수, 호출 및 서비스 등급에 대한 몇 가지 사항을 배웠으므로 이제 비즈니스 분석 및 계획에 사용할 수 있는 일부 예측 쿼리를 만들 준비가 되었습니다. 먼저 탐구 모델에서 일부 예측을 만들어 몇 가지 가정을 테스트합니다. 다음으로 로지스틱 회귀 모델을 사용하여 대량 예측을 만듭니다.  
@@ -185,7 +185,7 @@ ms.locfileid: "56025414"
   
 -   [SQL Server 2005 데이터 마이닝 추가 기능 Office 2007 용](https://www.microsoft.com/sql/technologies/dm/addins.mspx): 목표 검색 및 가상 시나리오 분석  
   
--   [SQL Server 2008 데이터 마이닝 추가 기능 Office 2007 용](https://go.microsoft.com/fwlink/?LinkID=117790): 목표 검색 시나리오 분석, 가상 시나리오 분석 및 예측 계산기  
+-   [SQL Server 2008 데이터 마이닝 추가 기능 Office 2007 용](https://go.microsoft.com/fwlink/?LinkID=117790): 목표 검색 시나리오 분석 가상 시나리오 분석 및 예측 계산기  
   
 ## <a name="conclusion"></a>결론  
  이 단원에서는 Microsoft 신경망 알고리즘 및 Microsoft 로지스틱 회귀 알고리즘을 기반으로 하는 마이닝 모델을 생성, 사용자 지정 및 해석하는 방법을 배웠습니다. 이러한 모델 유형은 복잡하고 거의 제한 없이 다양하게 분석될 수 있으므로 복잡하고 마스터하기가 어렵습니다.  

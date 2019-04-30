@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecb91bd2a4b570a1e625a013270e59a121e6430a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215447"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 함수(보고서 작성기 및 SSRS)
   항목의 현재 인스턴스가 지정한 범위 내에 있는지 여부를 나타냅니다.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062261"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 함수(SQLEndTran Function)
 **규칙**  
@@ -70,7 +70,7 @@ SQLRETURN SQLEndTran(
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다.|(DM)는 *HandleType* SQL_HANDLE_DBC, 된 하며 *처리* 가 연결 된 상태가 아닙니다.|  
 |08007|트랜잭션 중 연결 오류|*HandleType* SQL_HANDLE_DBC, 되었으며 연결 된 합니다 *처리* 함수를 실행 하는 동안 실패 했으며 일 수 없습니다 되었는지를 확인할 요청한  **커밋** 나 **롤백** 실패 하기 전에 발생 합니다.|  
-|25S01 잘림|트랜잭션 상태를 알 수 없음된|에 연결 중 하나 이상이 *처리* 지정 하면 결과 사용 하 여 트랜잭션을 완료 하지 못했습니다 및 결과 알 수 없습니다.|  
+|25S01|트랜잭션 상태를 알 수 없음된|에 연결 중 하나 이상이 *처리* 지정 하면 결과 사용 하 여 트랜잭션을 완료 하지 못했습니다 및 결과 알 수 없습니다.|  
 |25S02|트랜잭션이 여전히 활성 상태입니다.|드라이버는 전역 트랜잭션의 모든 작업을 완료할 수를 개별적으로 및 트랜잭션이 여전히 활성 상태인 보증할 수 없습니다.|  
 |25S03|트랜잭션이 롤백|드라이버는 전역 트랜잭션의 모든 작업을 완료할 수를 개별적으로 및에서 활성화 된 트랜잭션을 모든 작업을 보장 하기 위해 없었습니다 *처리* 롤백 되었습니다.|  
 |40001|Serialization 오류|트랜잭션은 다른 트랜잭션과 리소스 교착 상태로 인해 롤백 되었습니다.|  

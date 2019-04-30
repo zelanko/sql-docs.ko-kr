@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064054"
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 *비 XML 서식 파일* 및 *XML 서식 파일*의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "48080483"
   
 |서식 파일 필드|Description|  
 |------------------------|-----------------|  
-|버전|버전 번호는 **bcp**를 위한 것이며 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 인식하지 않습니다. **bcp** 유틸리티의 버전 번호:<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 참고: 서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**에서 생성된 버전 12.0 서식 파일을 읽을 수 없습니다.|  
+|버전|버전 번호는 **bcp**를 위한 것이며 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 인식하지 않습니다. **bcp** 유틸리티의 버전 번호:<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 참고: 버전을 **bcp** 유틸리티 (Bcp.exe)는 서식 파일을 읽는 데 동일 또는 서식 파일을 만드는 데 사용 된 것 보다 이후 버전 이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**에서 생성된 버전 12.0 서식 파일을 읽을 수 없습니다.|  
 |열 개수|데이터 파일의 필드 개수. 이 개수는 모든 행에서 같아야 합니다.|  
   
  다른 서식 파일 필드에서는 대량으로 가져오거나 내보낸 데이터 필드에 대해 설명합니다. 각 데이터 필드를 사용하려면 서식 파일에 있는 별도의 행이 필요합니다. 모든 서식 파일 행에는 다음 표에 설명되어 있는 서식 파일 필드에 대한 값이 포함되어 있습니다.  

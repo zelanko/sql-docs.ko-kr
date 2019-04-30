@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214843"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>안전 또는 무제한 모드에 대한 DataFactory 구성
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559915"
   
  안전 하 게 구성에 대 한 처리기 레지스트리 항목을 설정 하는 레지스트리 파일 handsafe.reg 제공 되었습니다. 안전 모드에서 실행 하려면 handsafe.reg를 실행 합니다.  
   
- Handsafe.reg를 실행 한 후 중지 하 고 명령 프롬프트 창에서 다음 명령을 입력 하 여 웹 서버에서 World Wide Web Publishing 서비스를 다시 시작: "NET 중지 W3SVC" 및 "NET START W3SVC"입니다.  
+ Handsafe.reg를 실행 한 후 중지 하 고 명령 프롬프트 창에서 다음 명령을 입력 하 여 웹 서버에서 World Wide Web Publishing 서비스를 다시 시작 해야 합니다. "NET STOP W3SVC" 및 "NET START W3SVC"입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DataFactory 사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)   

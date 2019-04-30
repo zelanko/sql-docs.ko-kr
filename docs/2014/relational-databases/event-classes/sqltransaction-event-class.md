@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de5a49853f08541cd617afb20273820f956ee660
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061326"
 ---
 # <a name="sqltransaction-event-class"></a>SQLTransaction 이벤트 클래스
   SQLTransaction 이벤트 클래스를 사용하여 트랜잭션이 시작되고 완료되는 시기와 특히 애플리케이션, 트리거 또는 저장 프로시저를 테스트하는 시기를 모니터링할 수 있습니다.  

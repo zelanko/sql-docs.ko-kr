@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157622"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader 병렬 데이터 웨어하우스에 대 한 명령줄 로더
 **dwloader** 는 기존 테이블에 테이블 행을 대량 로드 하는 병렬 데이터 웨어하우스 (PDW) 명령줄 도구입니다. 행을 로드할 때 모든 행을 테이블의 끝에 추가할 수 있습니다 (*추가 모드* 하거나 *fastappend 모드*) 새 행을 추가 하 고 기존 행을 업데이트 (*upsert 모드*), 모든 또는 삭제 행 로드 하기 전에 기존 및 빈 테이블에 모든 행을 삽입 한 다음 (*모드를 다시 로드*).  
@@ -137,7 +137,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 매개 변수 파일을 포함 한 매개 변수 없이 합니다 **-** 줄의 접두사입니다.  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 `rt=percentage`  
   
@@ -192,7 +192,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   모든 파일 연결 되어 하나의 파일 되며 거부 된 행을 단일 거부 파일로 이동 처럼 로드 됩니다.  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 -   -i \\\loadserver\loads\daily\\*.gz  
   
@@ -233,7 +233,7 @@ ASCII 파일에 대 한 Null 구분 기호를 연속적으로 배치 하 여 표
   
 명령줄에서 파이프 문자를 지정 하려면 큰따옴표를 사용 하 여 묶습니다 "|"입니다. 명령줄 구문 분석기에서 잘못 해석을 피해 야 합니다. 다른 문자는 작은따옴표를 사용 하 여로 묶습니다.  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 -t "|"  
   
@@ -243,7 +243,7 @@ ASCII 파일에 대 한 Null 구분 기호를 연속적으로 배치 하 여 표
   
 -t \t  
   
--t ' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 원본 데이터 파일의 각 행에 대 한 구분 기호입니다. 하나 이상의 ASCII 값이 행 구분 기호가입니다.  
@@ -273,13 +273,13 @@ LF가 Unix 필요 합니다. CR을 Windows에 필요 합니다.
 **-s** *string_delimiter*  
 문자열 데이터의 구분 기호로 분리 된 텍스트 입력된 파일의 필드를 입력 합니다. 하나 이상의 ASCII 값이 문자열 구분 기호가입니다.  문자로 지정할 수 있습니다 (예:-s *) 또는 16 진수 값 (예:-s 0x22 큰따옴표에 대 한).  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 -s *  
   
 -s 0x22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 고정 길이 열이 있는 원본 데이터 파일에 대 한 옵션입니다. 기본적으로 *source_data_file_name* 가변 길이 열에 ASCII 문자가 포함 되어 있습니다.  
   
 -E UTF8 인지 확인 하는 경우에 고정된 폭 열 지원 되지 않습니다.  
@@ -362,10 +362,10 @@ Mdy 1975 년 1 월 1 년에 대 한 입력된 데이터의 예:
 -   01011975  
   
 myd  
-3 월에 대 한 파일 예제 입력 04,2010: 03-2010-04, 4/3/2010  
+3 월에 대 한 파일 예제 입력 04,2010: 03-2010-04, 3/2010/4  
   
 dym  
-2010 년 3 월 4 일에 대 한 입력된 파일 예제: 04-2010-03, 3/4/2010  
+2010 년 3 월 4 일에 대 한 입력된 파일 예제: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* 은 사용자 지정 날짜 형식 (예를 들어, MM/dd/yyyy) 이전 버전과 호환성만 포함 합니다. dwloader는 사용자 지정 날짜 형식을 enfoce 하지를 않습니다. 대신를 사용자 지정 날짜 형식으로 지정 하면 **dwloader** ymd, ydm, mdy, myd, dym, 나 dmy의 해당 설정으로 변환 됩니다.  
@@ -379,7 +379,7 @@ dym
   
 각 줄에는 대상 테이블에 날짜/시간 형식으로 열의 이름을 포함합니다.  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 `LastReceiptDate=ymd`  
   
@@ -444,10 +444,10 @@ SQL Server 2012 PDW 부터는 제어 노드에 동적으로 계산 각 부하에
 **-rs** *reject_sample_size*  
 사용 된 `-rt percentage` 증분 백분율 검사를 지정 하는 옵션입니다. 예를 들어 reject_sample_size 1000 인 경우 행 1000 개의 로드를 시도한 후 로더 실패 한 행의 백분율이 계산 됩니다. 다시 각 추가로 행 1000 개의 로드를 시도한 후 실패 한 행의 비율을 계산 합니다.  
   
-**-c**  
+**-t**  
 Char, nchar, varchar 및 nvarchar 필드의 왼쪽 및 오른쪽에서 공백 문자를 제거합니다. 빈 문자열에 공백 문자만 포함 하는 각 필드를 변환 합니다.  
   
-예:  
+예를 들면 다음과 같습니다.  
   
 ' '를 잘린 '  
   

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224476"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>데이터를 SQL에서 C 데이터 형식으로 변환
 응용 프로그램을 호출할 때 **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLGetData**, 드라이버는 데이터 원본에서 데이터를 검색 합니다. 하는 경우 필요한 데이터를 변환할 드라이버를 검색 하는 것으로 지정 된 데이터 형식으로 데이터 형식에서의 *TargetType* 에서 인수 **SQLBindCol** 또는 **SQLGetData 합니다.** 마지막으로 데이터를 가리키는 위치에 저장 합니다 *TargetValuePtr* 에서 인수 **SQLBindCol** 또는 **SQLGetData** (및는 카드가의 SQL_DESC_DATA_PTR 필드가).  
@@ -49,28 +49,28 @@ ms.locfileid: "47680841"
   
 -   **문자 바이트 길이** 문자 형식에서 데이터를 표시 하는 데 필요한 바이트의 총 수입니다. 섹션에서 각 C 데이터 형식에 대해 정의 된 대로 이것이 [표시 크기](../../../odbc/reference/appendixes/display-size.md)표시 크기 문자에서는 문자 바이트 길이 (바이트)는, 합니다.  
   
--   에 단어 *기울임꼴* 함수 인수 또는 SQL 문법 요소를 나타냅니다. 문법 요소의 구문에 대 한 참조 [부록 c: SQL 문법](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  
+-   에 단어 *기울임꼴* 함수 인수 또는 SQL 문법 요소를 나타냅니다. 문법 요소의 구문에 대 한 참조 [부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
--   [SQL에서 C로: 문자](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [C: SQL Character](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL에서 C로: 숫자](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [C: SQL Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL에서 C로: 비트](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [C: SQL Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL에서 C로: 이진](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [C: SQL 이진 파일](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL에서 C로: 날짜](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [C: SQL 날짜](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL에서 C로: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [C: SQL GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL에서 C로: 시간](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [C: SQL 시간](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL에서 C로: 타임스탬프](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [C: SQL 타임 스탬프](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL에서 C로: 연-월 간격](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [C: SQL 연도-월 간격](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL에서 C로: 날짜-시간 간격](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [C: SQL 날짜-시간 간격](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL에서 C로 데이터 변환 예제](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

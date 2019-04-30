@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 079988eb037ebeffbbbe6cae053e241518e41c81
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52420792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054606"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>파워 피벗 구성 및 솔루션 배포(SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "52420792"
  SharePoint 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하는 방법은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
 ##  <a name="bkmk_run_configuration_tool"></a> SharePoint 2013용 파워 피벗 구성 실행  
- **참고:** [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사는 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]에 대한 2개의 구성 파일을 설치합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
+ **참고:** 합니다 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 설치 마법사에 대 한 두 가지 구성 도구를 설치 [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]합니다. 구성 파일은 각각 SharePoint의 다른 버전을 지원합니다.  
   
 |속성|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구|SharePoint 2010 SP1(서비스 팩 1)|  
   
- **참고:** 다음 단계를 완료하려면 팜 관리자여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  
+ **참고:** 다음 단계를 완료 하려면 팜 관리자 여야 합니다. 다음과 유사한 오류 메시지가 표시되는 경우  
   
 -   "사용자가 팜 관리자가 없습니다. 유효성 검사 오류를 처리하고 다시 시도하십시오."  
   
@@ -50,15 +50,15 @@ ms.locfileid: "52420792"
   
 4.  **매개 변수** 탭에서  
   
-    1.  **기본 계정 사용자 이름**: 기본 계정의 도메인 사용자 계정을 입력합니다. 이 계정은 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 애플리케이션 풀을 포함한 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
+    1.  **기본 계정 사용자 이름**: 기본 계정의 도메인 사용자 계정을 입력 합니다. 이 계정은 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 애플리케이션 풀을 포함한 서비스를 프로비전하는 데 사용됩니다. 네트워크 서비스, 로컬 시스템 등의 기본 제공 계정을 지정하지 마세요. 이 도구는 기본 제공 계정을 지정하는 구성을 차단합니다.  
   
-    2.  **데이터베이스 서버**: SharePoint 팜에 대해 지원되는 SQL Server 데이터베이스 엔진을 사용할 수 있습니다.  
+    2.  **데이터베이스 서버**: SharePoint 팜에 대해 지원 되는 SQL Server 데이터베이스 엔진을 사용할 수 있습니다.  
   
-    3.  **암호**: 암호를 입력합니다. 새 SharePoint 팜을 만드는 경우 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 이미 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
+    3.  **Passphrase**: 암호를 입력 합니다. 새 SharePoint 팜을 만드는 경우 서버 또는 애플리케이션을 SharePoint 팜에 추가할 때마다 암호가 사용됩니다. 팜이 이미 있는 경우 서버 애플리케이션을 팜에 추가할 수 있는 암호를 입력합니다.  
   
-    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel Services 용 서버**: [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버의 이름을 입력합니다. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
+    4.  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel Services 용 서버**: 이름을 입력 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드 서버. 단일 서버 배포에서 이는 데이터베이스 서버와 같습니다. `[ServerName]\powerpivot`  
   
-    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 왼쪽 창에서 **기본 웹 응용 프로그램 만들기** 고 **웹 응용 프로그램 솔루션 배포**  
+    5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값 수정 왼쪽된 창에서 다음 페이지를 검토 합니다. **기본 웹 응용 프로그램 만들기** 고 **웹 응용 프로그램 솔루션 배포**  
   
 5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 동작에 대 한 자세한 내용은 섹션을 참조 하세요. "서버를 구성 하는 데 사용 되는 값 입력 [구성 또는 복구 (파워 피벗 구성 도구) SharePoint 2010 용 Powerpivot](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 이 항목의 합니다.  
   

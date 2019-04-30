@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208465"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x 애플리케이션 작성
 경우는 ODBC 2. *x* 응용 프로그램은 ODBC 3으로 업그레이드 됩니다. *x*, 두 ODBC 2를 사용 하 여 작동 되도록 작성 해야 합니다. *x* 3. *x* 드라이버입니다. 응용 프로그램이 ODBC 3을 최대한 활용 하는 조건부 코드를 통합 해야 합니다. *x* 기능입니다.  

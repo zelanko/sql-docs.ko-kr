@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298943"
 ---
 # <a name="data-migration-report-db2tosql"></a>데이터 마이그레이션 보고서 (DB2ToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47827051"
 **보낸 사람**  
 원본 테이블입니다.  
   
-**수행할 작업**  
+**대상**  
 대상 테이블입니다.  
   
 **총 행 수**  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061971"
 ---
 # <a name="executing-procedures"></a>프로시저 실행
 ODBC에는 프로시저 실행에 대 한 표준 이스케이프 시퀀스를 정의 합니다. 이 시퀀스 및 사용 하는 코드 예제에서는 구문에 대 한 참조 [프로시저 호출](../../../odbc/reference/develop-app/procedure-calls.md)합니다.  

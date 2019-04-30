@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297495"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner 및 SetObjectOwner 메서드 예제(VC++)
 이 예제에서는 합니다 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) 하 고 [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) 메서드. 이 코드 그룹의 가정 계정 (참조를 [그룹과 사용자 Append, ChangePassword 메서드 예제 (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) 시스템에이 그룹에 추가 하는 방법을 보려면). Categories 테이블의 소유자는 계정으로 설정 됩니다.  

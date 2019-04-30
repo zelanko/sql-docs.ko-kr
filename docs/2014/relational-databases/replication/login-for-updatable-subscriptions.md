@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058099"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
   이 마법사의 **업데이트할 수 있는 구독** 페이지에서 **복제** 를 선택한 경우 즉시 업데이트 구독을 위해 게시자에 연결할 때 사용할 계정을 구독자에 지정해야 합니다. 이 연결은 구독자에서 발생되는 트리거에 사용되고 게시자로 변경 내용을 전파합니다. 기본적으로 새 구독 마법사는 필요에 따라 즉시 업데이트로 전환할 수 있는 기능을 사용하여 지연 업데이트를 구성하기 때문에 이 계정은 **업데이트할 수 있는 구독** 페이지에서 **변경 내용 대기 및 가능 시 커밋** 을 선택한 경우에도 필요합니다.  

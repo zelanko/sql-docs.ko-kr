@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 09329a12d62532ed27eabef0bff33d100737bf25
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63077858"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>DB2 용 SSMA의 새로운 기능 (DB2ToSQL)
 이 문서에서는 DB2 각 릴리스의 변경 내용에 대 한 SQL Server Migration Assistant (SSMA)를 나열 합니다.

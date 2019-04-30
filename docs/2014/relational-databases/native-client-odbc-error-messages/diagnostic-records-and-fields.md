@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 173d0287ba1b63e8811e2d340448d03c3bbf961d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213909"
 ---
 # <a name="diagnostic-records-and-fields"></a>진단 레코드 및 필드
   진단 레코드는 ODBC 환경, 연결, 문 또는 설명자 핸들과 연결되어 있습니다. ODBC 함수가 SQL_SUCCESS 또는 SQL_INVALID_HANDLE이 아닌 반환 코드를 생성하는 경우 해당 함수에서 호출된 핸들에 정보 또는 오류 메시지가 포함된 진단 레코드가 연결되어 있습니다. 이러한 레코드는 해당 핸들을 사용하여 다른 함수를 호출할 때까지 유지되며, 이때 레코드가 삭제됩니다. 한 번에 핸들에 연결할 수 있는 진단 레코드 수에는 제한이 없습니다.  

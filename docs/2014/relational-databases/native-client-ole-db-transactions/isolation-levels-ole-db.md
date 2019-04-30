@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a18986af71f652a833f413ee1fa62ca2fd44ba06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215989"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. 트랜잭션 격리 수준을 제어 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는:  
@@ -39,6 +39,6 @@ ms.locfileid: "48188633"
 >  스냅숏 격리 수준은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입되었습니다. 자세한 내용은 [스냅숏 격리 사용](../native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [의](transactions.md)  
+ [트랜잭션](transactions.md)  
   
   

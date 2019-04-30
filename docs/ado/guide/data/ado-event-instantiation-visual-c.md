@@ -1,5 +1,5 @@
 ---
-title: 'ADO 이벤트 인스턴스: Visual c + + | Microsoft Docs'
+title: 'ADO 이벤트 인스턴스: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062949"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO 이벤트 인스턴스: Visual C++
 Microsoft® C++®에서 ADO 이벤트를 인스턴스화하는 방법에 도식 설명입니다. 참조 [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) 설명은 합니다.  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- 이벤트 클래스에서 상속 **IUnknown**이므로 구현 해야 합니다 **QueryInterface**를 **AddRef**, 및 **릴리스** 메서드. 또한 클래스 생성자와 소멸자를 구현 합니다. 작업의이 부분을 간소화 하기 위해 가장 편안한 Visual c + + 도구를 선택 합니다.  
+ 이벤트 클래스에서 상속 **IUnknown**이므로 구현 해야 합니다 **QueryInterface**를 **AddRef**, 및 **릴리스** 메서드. 또한 클래스 생성자와 소멸자를 구현 합니다. 시각적 개체 선택 C++ 도구는 가장 편리한 작업의이 부분을 간소화 합니다.  
   
  확인 하는 알려진 해당 이벤트 처리기를 사용할 수 있습니다 실행 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 하 고 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는  **IConnectionPointContainer** 하 고 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
   

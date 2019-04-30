@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6ab4f714182a7433c6a8fdea2ee68d17673b710
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066431"
 ---
 # <a name="failover-cluster-report"></a>장애 조치(Failover) 클러스터 보고서
   장애 조치(Failover) 클러스터 보고서 페이지를 사용하여 이 작업에 대한 설치 프로그램의 시스템 검사 결과 보고서를 확인할 수 있습니다.  

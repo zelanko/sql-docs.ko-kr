@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223433"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>태스크 12: 지식 검색(기술 자료 검색)
   수행한이 태스크에서는 합니다 **기술 자료 검색** 활동을 **Supplier ID** 하 고 **Supplier Name** 도메인. 이 시나리오에서 기술 자료 검색 프로세스는 주로 이러한 두 도메인의 값을 가져옵니다.  

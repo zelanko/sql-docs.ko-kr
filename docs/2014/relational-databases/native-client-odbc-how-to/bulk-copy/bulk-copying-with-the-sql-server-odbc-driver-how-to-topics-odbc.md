@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c2cca868cbbdeddc98264160e646dde3676c585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126116"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC 드라이버를 사용한 대량 복사 방법 도움말 항목(ODBC)
   Microsoft?? 사용 하는 경우 SQL Server??? 2005, SQL Server ODBC 드라이버는 Db-library API에서 지 원하는 동일한 대량 복사 함수를 지원 합니다.  

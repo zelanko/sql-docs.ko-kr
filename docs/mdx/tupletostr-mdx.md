@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208456"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr(MDX)
 
@@ -36,7 +36,7 @@ TupleToStr(Tuple_Expression)
  이 함수를 사용하여 튜플의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 {} , 튜플에 명시적으로 정의 된 둘 이상의 경우 각 멤버는 쉼표로 구분 하 고 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 문자열 ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States])를 반환합니다.  
+ 다음 예제에서는 문자열을 반환 합니다. ([Date]. [ Calendar Year]. [2001] 및 [Geography]. [Geography]입니다. [Country]. & [United States]).  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   

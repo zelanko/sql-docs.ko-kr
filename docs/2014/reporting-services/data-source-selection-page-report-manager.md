@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165016"
 ---
 # <a name="data-source-selection-page-report-manager"></a>데이터 원본 선택 페이지(보고서 관리자)
   데이터 원본 선택 페이지를 사용하여 보고서나 보고서 모델에서 사용할 기존의 공유 데이터 원본 항목을 선택할 수 있습니다. 다른 데이터 원본을 선택할 수도 있습니다. 데이터 원본 유형 또는 연결 문자열을 보려면 공유 데이터 원본을 탐색하고 속성 페이지를 열어야 합니다.  

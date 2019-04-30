@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062185"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>경고 속성-새 경고 (응답 페이지)
   이 페이지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 응답으로 실행할 작업을 지정하거나 알림을 받을 운영자 목록을 가져올 수 있습니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52773795"
  **운영자 보기**  
  현재 선택된 운영자에 대한 **속성** 대화 상자를 표시합니다. **운영자 속성** 대화 상자에서 운영자 속성을 확인 및 수정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Alerts](alerts.md)   
  [심각도 사용 하 여 경고 수준 만들기](create-an-alert-using-severity-level.md)   
  [Alerts](alerts.md)   

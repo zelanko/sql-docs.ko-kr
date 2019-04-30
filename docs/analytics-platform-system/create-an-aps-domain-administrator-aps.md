@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134392"
 ---
 # <a name="create-an-aps-domain-administrator"></a>APS 도메인 관리자 만들기
 일부 작업에는 분석 플랫폼 시스템 도메인 관리자 권한이 필요합니다. 추가 어플라이언스 도메인 관리자를 만드는 방법을 설명 합니다.  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63221992"
 ---
 # <a name="determine-polling-frequency"></a>폴링 빈도 결정 합니다.
 이 문서에는 분석 플랫폼 시스템 어플라이언스 경고에 대 한 폴링 빈도 결정 하는 방법을 설명 합니다.  

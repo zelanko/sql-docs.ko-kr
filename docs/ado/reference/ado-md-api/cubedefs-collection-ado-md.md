@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab6e6e79f155ec5c88a093c5b379b7132dbbb5a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226116"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs 컬렉션(ADO MD)
 포함 된 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 다차원 카탈로그에서 큐브를 나타내는 개체입니다.  

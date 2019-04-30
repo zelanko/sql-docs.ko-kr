@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 44b5a7950517990f7e2b1ef2afb2d17b5c4340dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164592"
 ---
 # <a name="design-the-table-report-wizard"></a>테이블 디자인(보고서 마법사)
   보고서 마법사의 테이블 디자인 페이지를 사용하여 보고서에 만들 필드를 선택할 수 있습니다.  

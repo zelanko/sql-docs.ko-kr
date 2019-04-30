@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159376"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS 명령
 잠금 시도가 실패 한 파일이 나 레코드일 잠기도록 방법 또는 시간에 얼마나 많은 시간을 지정 합니다.  
@@ -31,7 +31,7 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
 ```  
   
 ## <a name="arguments"></a>인수  
- 하 *nAttempts*[초]  
+ TO *nAttempts*[SECONDS]  
  횟수 또는 실패 한 초기 시도 후 레코드나 파일 잠금을 시도 시간 (초)을 지정 합니다. 기본값은 0입니다. 최대값은 32,000 합니다.  
   
  시간 (초) 지정 Visual FoxPro 파일을 잠그거나에 대 한 레코드를 시도 한다고 *nAttempts* 시간 (초)입니다. 인 경우에만 사용할 수 있습니다 *nAttempts* 0 보다 큽니다.  

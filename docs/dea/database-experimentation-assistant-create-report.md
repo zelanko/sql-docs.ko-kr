@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 901d410fc7aa954dcd39a852f240168f2a690e3c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294521"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 분석 보고서 만들기
 

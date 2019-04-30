@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154726"
 ---
 # <a name="working-with-upgrade-advisor"></a>업그레이드 관리자 작업
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로의 성공적인 업그레이드를 위해 업그레이드 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 설치에서 해결해야 하는 문제를 식별하는 중앙 콘솔을 제공합니다.  

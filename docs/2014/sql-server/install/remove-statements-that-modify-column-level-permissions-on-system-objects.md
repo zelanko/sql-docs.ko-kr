@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f61990ae0eb35a399a1efca4a5a2cf754892e3d0
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294835"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>시스템 개체에 대한 열 수준 사용 권한을 수정하는 문을 제거합니다.
   업그레이드 관리자가 시스템 개체에 대한 비표준 열 수준 사용 권한을 검색했습니다. 이러한 권한 변경 내용은 업그레이드 시 유지되지 않습니다. 또한 시스템 개체에 대한 열 수준 사용 권한은 더 이상 지원되지 않습니다. 애플리케이션에서 시스템 개체에 대한 열 수준 사용 권한을 설정하는 문을 제거합니다.  

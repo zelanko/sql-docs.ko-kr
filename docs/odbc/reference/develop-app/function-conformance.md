@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061581"
 ---
 # <a name="function-conformance"></a>함수 적합성
 다음 표에서이 방법이 잘 정의 된 규칙 수준은 각 ODBC 함수를 나타냅니다.  

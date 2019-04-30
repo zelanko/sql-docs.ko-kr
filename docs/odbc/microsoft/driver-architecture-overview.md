@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128085"
 ---
 # <a name="driver-architecture-overview"></a>드라이버 아키텍처 개요
 Microsoft Visual FoxPro ODBC 드라이버는 32 비트 드라이버를 열고 Microsoft Visual FoxPro 데이터베이스 또는 데이터베이스 연결 열기 (ODBC) 인터페이스를 통해 FoxPro 테이블을 쿼리할 수 있도록. FoxPro 데이터 응용 프로그램의 다음 형식을 사용 하 여 액세스할 수 있습니다.  
   
 -   Microsoft Excel 또는 Microsoft Word와 같은 Microsoft Office 응용 프로그램을 사용 하 여 Microsoft 쿼리 ODBC를 사용 하 여 통신 합니다.  
   
--   Microsoft Visual c + + 또는 ODBC SDK API를 사용 하는 C로 작성 된 응용 프로그램.  
+-   Microsoft Visual 작성 된 응용 프로그램 C++ 또는 ODBC SDK API를 사용 하는 C입니다.  
   
 -   Microsoft Visual Basic 또는 Microsoft Visual Basic for Applications로 작성 된 응용 프로그램.  
   

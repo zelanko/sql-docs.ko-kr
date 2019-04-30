@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83964bf1e76eef5c7c4ba4121b0c581e8d8a406b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288322"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>연결 핸들 ODBC 할당
 응용 프로그램에 연결할 수는 데이터 원본이 나 드라이버 전에 다음과 같이 연결 핸들을 할당 해야 합니다.  

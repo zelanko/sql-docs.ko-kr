@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127070"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>전체 텍스트 검색이 SQL Server 2008부터 변경되었습니다.
   업그레이드 관리자가 전체 텍스트 검색이 업그레이드되려고 하는 것을 발견했습니다. 많은 전체 텍스트 검색 옵션 및 설정이 변경되었으므로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 전체 텍스트 검색으로 업그레이드할 경우 일부 설정을 수정해야 할 수 있습니다.  

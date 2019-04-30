@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc8bf49f6d25c4e00c2d5693ff6a9cf48d5450ee
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208752"
 ---
-# <a name="comment---mdx-operator-reference"></a>메모-MDX 연산자 참조
+# <a name="comment---mdx-operator-reference"></a>주석-MDX 연산자 참조
 
 
   사용자가 제공한 주석 텍스트를 나타냅니다.  
