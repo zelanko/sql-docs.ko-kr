@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232844"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>조인 연산자 수정(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md) 는 기본적으로 두 조인 열의 값을 일치시키는 등호(동등 조인)를 사용하여 테이블을 조인합니다. 필요한 경우 조인 열의 값을 비교하는 데 사용되는 연산자를 변경할 수 있습니다.  

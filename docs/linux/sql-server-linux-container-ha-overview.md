@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 4684ee669f739e358b7c70c0bfd93ec0fca62362
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231356"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 고가용성
 
@@ -73,14 +73,14 @@ SQL Server 2019 Kubernetes에서 컨테이너에 대 한 가용성 그룹을 지
 
 | |가용성 그룹을 사용 하 여 | 독립 실행형 컨테이너 인스턴스<br/> 가용성 그룹 없음
 |:------|:------|:------
-|노드 실패에서 자동으로 복구 | 예 | 예
-|자동으로 pod 오류 로부터 복구 | 예 | 예
-|보다 빠르게 장애 조치할 |예 |
-|자동으로 SQL Server 인스턴스 오류 복구 | 예 | 
-|데이터베이스 상태 확인 실패에서 자동으로 복구 | 예 | 
-|읽기 전용 복제본을 제공 합니다. | 예 |
-|보조 복제본에 백업 | 예 | 
-|StatefulSet으로 실행 | 예 | 
+|노드 실패에서 자동으로 복구 | 사용자 계정 컨트롤 | 사용자 계정 컨트롤
+|자동으로 pod 오류 로부터 복구 | 사용자 계정 컨트롤 | 사용자 계정 컨트롤
+|보다 빠르게 장애 조치할 |사용자 계정 컨트롤 |
+|자동으로 SQL Server 인스턴스 오류 복구 | 사용자 계정 컨트롤 | 
+|데이터베이스 상태 확인 실패에서 자동으로 복구 | 사용자 계정 컨트롤 | 
+|읽기 전용 복제본을 제공 합니다. | 사용자 계정 컨트롤 |
+|보조 복제본에 백업 | 사용자 계정 컨트롤 | 
+|StatefulSet으로 실행 | 사용자 계정 컨트롤 | 
 
 하나 주요 차이점은 복구 (또는 장애 조치)에 컨테이너에서 SQL Server의 단일 인스턴스를 사용 하 여 가용성 그룹이 보다 빠릅니다. SQL Server 가용성 그룹 보조 복제본을 클러스터의 다른 노드에서 유지 되므로이 개선 합니다. 장애 조치를 보조 복제본 선택 되 고 기본으로 승격 합니다. 서비스에 연결 하는 응용 프로그램은 새로운 주 복제본으로 리디렉션됩니다.
 

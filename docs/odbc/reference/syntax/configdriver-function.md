@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232078"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 함수
 **규칙**  
- ODBC 2.5 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 2.5  
   
  **요약**  
  **ConfigDriver** 설치를 수행 하 고 프로그램 호출을 요구 하지 않고 함수를 제거 하는 설치 프로그램을 사용 하면 **ConfigDSN**합니다. 이 함수는 드라이버별 함수 드라이버 관련 시스템 정보 만들기 및 설치 하는 동안 DSN 변환을 수행와 같은 시스템 정보 수정을 제거 하는 동안 정리를 수행 합니다. 이 함수는 별도 설치 DLL 또는 드라이버 설치 DLL에서 노출 됩니다.  
@@ -52,7 +52,7 @@ BOOL ConfigDriver(
  *hwndParent*  
  [입력] 부모 창 핸들입니다. 핸들을 null 이면 함수는 모든 대화 상자 표시 되지 않습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. 합니다 *문제점과* 인수는 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_INSTALL_DRIVER: 새 드라이버를 설치 합니다.  

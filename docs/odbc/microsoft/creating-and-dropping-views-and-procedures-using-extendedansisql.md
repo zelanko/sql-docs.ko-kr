@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d664b5f66b742b02404dc35952d02b03b8c7103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232237"
 ---
 # <a name="creating-and-dropping-views-and-procedures-using-extendedansisql"></a>ExtendedAnsiSQL을 사용하여 보기 및 프로시저 만들기 및 삭제
 Extendedansisql을 플래그를 설정 하는 경우 Jet 4.0 만들고 뷰와 SQL 통해 프로시저를 삭제 하는 기능을 지원 합니다. 이러한 뷰 및 프로시저 액세스를 통해 표시 되지 않습니다.

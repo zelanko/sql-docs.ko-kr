@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232401"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
   합니다 `xml` 데이터 형식 및 [FOR XML 쿼리의 TYPE 지시어](type-directive-in-for-xml-queries.md) 클라이언트와 서버에서 처리할 FOR XML 쿼리에 의해 반환 된 XML을 사용 하도록 설정 합니다.  

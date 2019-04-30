@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a031a71fd482eadb9d27861d436b7245017ee8e9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232229"
 ---
 # <a name="sample-odbc-program"></a>샘플 ODBC 프로그램
 합니다 [ODBC 코드 샘플](https://go.microsoft.com/fwlink/?LinkId=244831) ODBC 데이터 원본 이름에 대 한 라는 메시지가 표시 됩니다.  다음 메시지가 표시 됩니다는 쿼리를 입력 하 고 샘플 쿼리 결과 표시 합니다.

@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ad4f310ce6c0e200d5e658b3d5814131000d0004
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231113"
 ---
 # <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server 가용성 그룹 Kubernetes Always On 관리
 

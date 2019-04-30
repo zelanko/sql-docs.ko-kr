@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231825"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정(형식 매핑)(MySQLToSQL)
 형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  
@@ -58,14 +58,14 @@ ms.locfileid: "47713251"
 |이진 [0..1]|binary[1]|  
 |이진 [2..255]|binary[*]|  
 |bit|binary[1]|  
-|비트 [0..8]|binary[1]|  
+|bit[0..8]|binary[1]|  
 |bit[17..24]|이진 파일 [3]|  
-|비트 [25..32]|binary[4]|  
+|bit[25..32]|binary[4]|  
 |bit[33..40]|binary[5]|  
 |bit[41..48]|binary[6]|  
 |bit[49..56]|binary[7]|  
 |bit[57..64]|binary[8]|  
-|비트 [9..16]|binary[2]|  
+|bit[9..16]|binary[2]|  
 |blob|varbinary(max)|  
 |blob [0..1]|varbinary[1]|  
 |blob [2..8000]|varbinary[*]|  
@@ -76,30 +76,30 @@ ms.locfileid: "47713251"
 |char 바이트|binary[1]|  
 |바이트 [0..1] char|binary[1]|  
 |바이트 [2..255] char|binary[*]|  
-|char [0..1]|nchar[1]|  
+|char[0..1]|nchar[1]|  
 |char[2..255]|nchar[*]|  
 |character|nchar[1]|  
 |[0..1] 다양 한 문자|nvarchar[1]|  
 |다양 한 [2..255] 문자|NVARCHAR|  
-|문자 [0..1]|nchar[1]|  
-|문자 [2..255]|nchar[*]|  
-|날짜|날짜|  
-|DATETIME|datetime2[0]|  
+|character[0..1]|nchar[1]|  
+|character[2..255]|nchar[*]|  
+|date|date|  
+|Datetime|datetime2[0]|  
 |dec|Decimal|  
-|dec [*... 65]|decimal[*][0]|  
+|dec[*..65]|decimal[*][0]|  
 |dec[*..65][\*..30]|decimal[*][\*]|  
 |Decimal|Decimal|  
-|decimal [*... 65]|decimal[*][0]|  
+|decimal[*..65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
 |double|float[53]|  
 |배정밀도|float[53]|  
 |배정밀도 [*... 255] [\*... 30]|numeric[*][\*]|  
-|double [*... 255] [\*... 30]|numeric[*][\*]|  
+|double[*..255][\*..30]|numeric[*][\*]|  
 |고정|NUMERIC|  
-|고정 [*... 65] [\*... 30]|numeric[*][\*]|  
+|fixed[*..65][\*..30]|numeric[*][\*]|  
 |FLOAT|float[24]|  
 |float [*... 255] [\*... 30]|numeric[*][\*]|  
-|float [*... 53]|float[53]|  
+|float[*..53]|float[53]|  
 |ssNoversion|ssNoversion|  
 |int[*..255]|ssNoversion|  
 |integer|ssNoversion|  
@@ -108,7 +108,7 @@ ms.locfileid: "47713251"
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|ssNoversion|  
-|mediumint [*... 255]|ssNoversion|  
+|mediumint[*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar[1]|  
 |national char [0..1]|nchar[1]|  
@@ -128,27 +128,27 @@ ms.locfileid: "47713251"
 |nchar varchar|nvarchar[1]|  
 |nchar varchar [0..1]|nvarchar[1]|  
 |nchar varchar [2..4000]|nvarchar[*]|  
-|nchar varchar [4001.. *]|nvarchar(max)|  
-|nchar [0..1]|nchar[1]|  
+|nchar varchar[4001..*]|nvarchar(max)|  
+|nchar[0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
-|숫자 [*... 65]|numeric[*][0]|  
-|숫자 [*... 65] [\*... 30]|numeric[*][\*]|  
+|numeric[*..65]|numeric[*][0]|  
+|numeric[*..65][\*..30]|numeric[*][\*]|  
 |NVARCHAR|nvarchar[1]|  
-|nvarchar [0..1]|nvarchar[1]|  
+|nvarchar[0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
 |REAL|float[53]|  
-|실제 [*... 255] [\*... 30]|numeric[*][\*]|  
+|real[*..255][\*..30]|numeric[*][\*]|  
 |직렬|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint[*..255]|SMALLINT|  
 |text|nvarchar(max)|  
-|텍스트 [0..1]|nvarchar[1]|  
+|text[0..1]|nvarchar[1]|  
 |텍스트 [2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |Time|Time|  
-|TIMESTAMP|DATETIME|  
+|TIMESTAMP|Datetime|  
 |tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint[*..255]|SMALLINT|  
@@ -166,7 +166,7 @@ ms.locfileid: "47713251"
 |배정밀도 서명 되지 않은 [*... 255] [\*... 30]|numeric[*][\*]|  
 |double 서명 되지 않은 [*... 255] [\*... 30]|numeric[*][\*]|  
 |서명 되지 않은 고정|NUMERIC|  
-|서명 되지 않은 고정 [*... 65] [\*... 30]|numeric[*][\*]|  
+|unsigned fixed[*..65][\*..30]|numeric[*][\*]|  
 |부호 없는 float|float[24]|  
 |부호 없는 float [*... 255] [\*... 30]|numeric[*][\*]|  
 |부호 없는 float [*... 53]|float[53]|  
@@ -188,11 +188,11 @@ ms.locfileid: "47713251"
 |varbinary [0..1]|varbinary[1]|  
 |varbinary [2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar [0..1]|nvarchar[1]|  
+|varchar[0..1]|nvarchar[1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  
-|연도 [2..2]|SMALLINT|  
+|year[2..2]|SMALLINT|  
 |연도 [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>추가  

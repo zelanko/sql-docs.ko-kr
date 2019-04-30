@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1a0fa49a1dac16ed366c66c72f7d800ccc4aed8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232711"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
   부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 지원 XML을 사용 하 여 데이터를 `xml` 데이터 형식입니다. 이 항목에서는 SQLXML 4.0에서 `xml` 데이터 형식의 인스턴스를 인식하고 이러한 인스턴스에 대한 지원을 구현하는 방법에 대해 설명합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "52750623"
   
 -   SQLXML 4.0은 보존 하지 않습니다 XML 선언 처리 명령 (예:)의 동작에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 대신 XML 선언은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서에 대한 지시어로 처리되며 해당 특성(version, encoding 및 standalone)은 데이터가 `xml` 데이터 형식으로 변환된 다음 삭제됩니다. XML 데이터는 내부적으로 UCS-2로 저장됩니다. 다른 모든 XML 인스턴스 처리 명령은 보존됩니다. 따라서 이러한 처리 명령은 `xml` 열에서 허용되고 SQLXML에서 지원될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 데이터&#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

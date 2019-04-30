@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232042"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 함수
 **규칙**  
@@ -49,14 +49,14 @@ BOOL ConfigDSN(
  *hwndParent*  
  [입력] 부모 창 핸들입니다. 핸들을 null 이면 함수는 모든 대화 상자 표시 되지 않습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. 합니다 *문제점과* 인수는 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_ADD_DSN: 새 데이터 원본을 추가 합니다.  
   
  ODBC_CONFIG_DSN: 구성 (수정) 기존 데이터 원본입니다.  
   
- 하려면 ODBC_REMOVE_DSN: 기존 데이터 원본을 제거 합니다.  
+ ODBC_REMOVE_DSN: 기존 데이터 원본을 제거 합니다.  
   
  *lpszDriver*  
  [입력] 드라이버 설명 (일반적으로 연결된 되는 DBMS의 이름) 실제 드라이버 이름 대신 사용자에 게 표시 합니다.  
@@ -75,7 +75,7 @@ BOOL ConfigDSN(
 |ODBC_ERROR_INVALID_HWND|잘못 된 창 핸들|합니다 *hwndParent* 인수가 잘못 되었습니다.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|잘못 된 키워드-값 쌍|합니다 *lpszAttributes* 인수 구문 오류를 포함 합니다.|  
 |ODBC_ERROR_INVALID_NAME|잘못 된 드라이버 또는 변환기 이름|합니다 *lpszDriver* 인수가 잘못 되었습니다. 레지스트리에서 찾을 수 없습니다.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|합니다 *문제점과* 인수 중 하나 였습니다.<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN 하려면 ODBC_REMOVE_DSN|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|요청의 형식이 잘못 되었습니다|합니다 *문제점과* 인수 중 하나 였습니다.<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN|  
 |ODBC_ERROR_REQUEST_FAILED|*요청* 실패|요청한 작업을 수행할 수 없습니다는 *문제점과* 인수입니다.|  
 |ODBC_ERROR_DRIVER_SPECIFIC|드라이버 또는 translator 관련 오류|정의 된 ODBC 설치 관리자 오류가 없는 드라이버 관련 오류가 발생 했습니다. 합니다 *SzError* 호출에서 인수를 **SQLPostInstallerError** 함수 드라이버 관련 오류 메시지를 포함 해야 합니다.|  
   

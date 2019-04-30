@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232290"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 명령
 지정 된 필드가 있는 테이블을 만듭니다.  
@@ -47,7 +47,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>인수  
- 테이블 만들기 &#124; DBF *TableName1*  
+ CREATE TABLE &#124; DBF *TableName1*  
  만들 테이블의 이름을 지정 합니다. 테이블 및 DBF 옵션은 동일 합니다.  
   
  이름 *LongTableName*  
@@ -58,7 +58,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  열려 있는 데이터베이스에 추가 되지 않습니다 지정 합니다. 무료는 데이터베이스는 열려 있지 않은 경우 필요 하지 않습니다.  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [합니다 *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  필드 이름, 필드 형식, 필드 너비 및 필드 전체 자릿수 (소수 자릿수의 수)를 각각 지정합니다.  
   
  *FieldType* 은 필드를 나타내는 단일 문자 [데이터 형식](../../odbc/microsoft/visual-foxpro-field-data-types.md)합니다. 필드 데이터 형식도 지정 해야 *nFieldWidth* 하거나 *nPrecision* 또는 둘 다.  
@@ -73,13 +73,13 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  NULL을 생략 하 고이 정보를 NOT NULL, SET NULL의 현재 설정을 필드에 null 값 허용 되는지 여부를 결정 합니다. 그러나 생략 NULL 및 NOT NULL 기본 키 또는 고유 절 포함 NULL 설정의 현재 설정을 무시 되 고 필드 기본값은 NOT NULL입니다.  
   
- 확인 *lExpression1*  
+ CHECK *lExpression1*  
  필드에 대 한 유효성 검사 규칙을 지정합니다. *lExpression1* 사용자 정의 함수 일 수 있습니다. 빈 레코드가 추가 될 때마다 유효성 검사 규칙을 확인 합니다. 추가 된 레코드의 빈 필드 값에 대 한 유효성 검사 규칙을 허용 하지 않으면 오류가 생성 됩니다.  
   
- 오류 *cMessageText1*  
+ ERROR *cMessageText1*  
  Visual FoxPro 필드 규칙이 생성 오류가 표시 됩니다. 오류 메시지를 지정 합니다. 메시지는 찾아보기 창 또는 편집 창 내에서 데이터가 변경 되는 경우에 표시 됩니다.  
   
- 기본 *eExpression1*  
+ DEFAULT *eExpression1*  
  필드에 대 한 기본값을 지정 합니다. 데이터 형식이 *eExpression1* 필드의 데이터 형식과 동일 해야 합니다.  
   
  PRIMARY KEY  
@@ -93,7 +93,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  기본 또는 후보 인덱스에 사용 되는 필드에 null 값과 중복 레코드가 허용 되지 않습니다. 그러나 Visual FoxPro null 값을 지 원하는 필드에 대 한 기본 또는 후보 인덱스를 만드는 경우 오류를 생성 하지 않습니다. Visual FoxPro 주 또는 후보 인덱스에 사용 되는 필드에 null 또는 중복 값을 입력 하려고 하면 오류가 발생 합니다.  
   
- 참조 *TableName2*[태그 *TagName1*]  
+ REFERENCES *TableName2*[TAG *TagName1*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그를 생략 *TagName1*, 부모 테이블의 기본 인덱스 키를 사용 하 여 관계가 성립 합니다. Visual FoxPro 부모 테이블에 기본 인덱스를 찾을 수 없는 경우 오류가 발생 합니다.  
   
  태그가 *TagName1* 부모 테이블에 대 한 기존 인덱스 태그에 따라 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
@@ -115,7 +115,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  테이블에서 하나의 기본 인덱스를 가질 수 있으므로 필드에 대 한 기본 인덱스를 이미 만든 경우이 절을 포함할 수 없습니다. Visual FoxPro CREATE TABLE에서 둘 이상의 기본 키 절을 포함 하는 경우에 오류가 발생 합니다.  
   
- 고유한 *eExpression3*태그 *TagName3*  
+ UNIQUE *eExpression3*TAG *TagName3*  
  후보 인덱스를 만듭니다. *eExpression3* 테이블의 모든 필드 또는 필드의 조합은 지정 합니다. 그러나 키 옵션 중 하나를 사용 하 여 기본 인덱스를 만든 경우 기본 인덱스에 대해 지정 된 필드를 포함할 수 없습니다. 태그 *TagName3* 만든 후보 인덱스 태그의 태그 이름을 지정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
   
  테이블에는 여러 후보 인덱스가 있을 수 있습니다.  
@@ -125,10 +125,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  테이블에 대 한 여러 외부 인덱스를 만들 수 있지만 외래 인덱스 식을 테이블의 다른 필드를 지정 해야 합니다.  
   
- 참조 *TableName3*[태그 *TagName5*]  
+ REFERENCES *TableName3*[TAG *TagName5*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그가 *TagName5* 부모 테이블에는 인덱스 태그를 기반으로 하는 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 태그를 생략 하면 기본적으로 *TagName5,* 부모 테이블의 기본 인덱스 키를 사용 하 여 관계가 성립 합니다.  
   
- 확인할 *eExpression2*[오류 *cMessageText2*]  
+ CHECK *eExpression2*[ERROR *cMessageText2*]  
  테이블 유효성 검사 규칙을 지정합니다. 오류 *cMessageText2* Visual FoxPro 테이블 유효성 검사 규칙이 실행 될 때 표시 됩니다. 오류 메시지를 지정 합니다. 경우에 데이터 찾아보기 창에서 변경 된 편집 창에는 메시지가 표시 됩니다.  
   
  배열에서 *ArrayName*  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 구문|Visual FoxPro 구문|  
 |-----------------|--------------------------|  
-|CREATE TABLE *기본 테이블 이름*<br /><br /> (*식별자 열 데이터 형식*<br /><br /> [NOT NULL]<br /><br /> [,*식별자 열 데이터 형식*<br /><br /> [NOT NULL]...)|테이블을 만듭니다 *TableName1* [이름 *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [합니다 *nPrecision*])]<br /><br /> [NOT NULL])|  
+|CREATE TABLE *기본 테이블 이름*<br /><br /> (*식별자 열 데이터 형식*<br /><br /> [NOT NULL]<br /><br /> [,*식별자 열 데이터 형식*<br /><br /> [NOT NULL] ...)|테이블을 만듭니다 *TableName1* [이름 *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
  드라이버를 사용 하 여 테이블을 만들 때 드라이버는 다른 사용자가 테이블에 액세스할 수 있도록 만든 직후에 테이블을 닫습니다. 이 테이블을 만들 때만 열기 상태로 유지 하는 Visual FoxPro에서 서로 다릅니다. 그러나 CREATE TABLE 문이 포함 된 데이터 원본에서 저장된 프로시저를 실행 하는 경우 테이블은 열려 있게 됩니다.  
   
@@ -166,7 +166,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  예를 들어, 임시 테이블을 만들려는 트랜잭션이 필요한 문의 시작 하기 전에 테이블을 만들어야 합니다. CREATE TABLE 문 일괄 처리 트랜잭션이 필요로 하는 SQL 문 포함 하는 경우 드라이버는 오류 메시지를 반환 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ALTER TABLE-SQL 명령](../../odbc/microsoft/alter-table-sql-command.md)   
  [지원 되는 데이터 형식 (Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [INSERT-SQL 명령](../../odbc/microsoft/insert-sql-command.md)   
