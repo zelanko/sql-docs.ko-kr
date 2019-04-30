@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 782403569476d4eb7b25f0a19e70e0dad156da95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131042"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>웹 길잡이 저장 프로시저가 제거되었습니다.
   업그레이드 관리자가 웹 길잡이 저장 프로시저 사용을 발견했습니다.  

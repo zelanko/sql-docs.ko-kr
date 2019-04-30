@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194441"
 ---
 # <a name="connection-attributes"></a>연결 특성
 연결 특성은 연결의 특성입니다. 예를 들어 트랜잭션이 연결 수준에서 발생하기 때문에 트랜잭션 격리 수준은 연결 특성입니다. 마찬가지로, 초과 되기 전에 연결 하는 동안 대기할 시간 (초)을 로그인 제한 시간에는 연결 특성입니다.  

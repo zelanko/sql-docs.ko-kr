@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181234"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 커서 라이브러리 오류 코드
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "47691131"
 |S1000|일반 오류: 파일 버퍼를 만들 수 없습니다.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
 |S1000|일반 오류: 파일 버퍼에서 읽을 수 없습니다.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
 |S1000|일반 오류: 파일 버퍼에 쓸 수 없습니다.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|일반 오류: 닫습니다 하거나 파일 버퍼를 제거할 수 없습니다.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|일반 오류: 닫거나 파일 버퍼를 제거할 수 없습니다.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|검색 가능한 열이 없는 바인딩되므로 위치 지정된 요청을 수행할 수 없습니다.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|조인 조건에 따라 결과 집합 생성 되었기 때문에 위치 지정된 요청을 수행할 수 없습니다.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|바인딩된 버퍼는 최대 세그먼트 크기를 초과합니다.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128024"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 명령
 데이터 소스를 사용 하 여 지정 된 데이터베이스에서 테이블을 제거 하 고 디스크에서 삭제 합니다.  
@@ -51,4 +51,4 @@ DROP TABLE TableName | FileName | ?
 |ODBC 구문|데이터 원본|Visual FoxPro 구문|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *기본 테이블 이름*|데이터베이스 (.dbc 파일)|테이블 제거 *TableName* 삭제|  
-||사용 가능한 테이블 (.dbf 파일)의 디렉터리|지울 *dbfName*<br /><br /> 지울 *cdxName*<br /><br /> 지울 *fptName*|
+||사용 가능한 테이블 (.dbf 파일)의 디렉터리|지울 *dbfName*<br /><br /> 지울 *cdxName*<br /><br /> ERASE *fptName*|

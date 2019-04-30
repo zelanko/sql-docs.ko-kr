@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18a88e4c6029705e5587dffce1803208186dfcd0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137615"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 업그레이드 관리자
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소의 구성을 분석한 다음 업그레이드를 성공적으로 수행하기 위해 해결해야 하는 문제에 대한 보고서를 생성합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "53361315"
 |[업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)|업그레이드 관리자 기능에 대한 개요를 제공하고 업그레이드 관리자를 설치 및 사용하는 방법과 업그레이드 관리자 보고서를 사용하는 방법에 대해 설명합니다.|  
 |[업그레이드 문제 해결](../../../2014/sql-server/install/resolving-upgrade-issues.md)|업그레이드와 관련된 검색 가능한 문제와 검색 불가능한 문제 모두에 대한 설명과 수정 동작을 제공합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [업그레이드 하려면 SQL Server 2014 설치 마법사를 사용 하 여 &#40;설치&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

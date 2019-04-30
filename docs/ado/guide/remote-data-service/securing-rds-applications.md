@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191770"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 rds.에 대 한 보안 정보를 제공합니다.  
@@ -42,6 +42,6 @@ ms.locfileid: "51559980"
  결과적으로 IIS Windows NT Challenge/Response 인증 모드에는 HTML 페이지를를 사용자에 게 데이터베이스에 로그온 하는 데 필요한 사용자 ID와 암호 정보에 대 한 명시적으로 묻지 않고 만들 수 있습니다. IIS 기본 인증에 사용 된 경우 다음이 수 있습니다.  
   
 ## <a name="password-authentication"></a>암호 인증  
- RDS는 세 가지 암호 인증 모드 중 하나로 실행 되는 IIS 웹 서버와 통신할 수: 익명, 기본, 또는 NT Challenge/Response 인증 (Windows 2000에서 Windows 통합 인증 이라고 함). 이러한 설정은 웹 서버는 클라이언트 컴퓨터 NT 웹 서버에 대 한 명시적 액세스 권한이 있는지를 요구 하는 등을 통해 액세스를 제어 하는 방식을 정의 합니다.
+ RDS는 세 가지 암호 인증 모드 중 하나로 실행 되는 IIS 웹 서버를 사용 하 여 통신할 수 있습니다. Anonymous, Basic 또는 NT Challenge/Response 인증 (Windows 2000에서 Windows 통합 인증 이라고 함). 이러한 설정은 웹 서버는 클라이언트 컴퓨터 NT 웹 서버에 대 한 명시적 액세스 권한이 있는지를 요구 하는 등을 통해 액세스를 제어 하는 방식을 정의 합니다.
 
 

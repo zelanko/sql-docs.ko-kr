@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151234"
 ---
 # <a name="record-count"></a>Record Count
 설명자의 SQL_DESC_COUNT 헤더 필드는 데이터를 포함 하는 번호가 가장 큰 레코드의 1부터 시작 인덱스입니다. 이 필드는 모든 열 또는 바인딩되는 매개 변수 수가 없습니다. 설명자 할당 되 면 SQL_DESC_COUNT의 초기 값은 0입니다.  

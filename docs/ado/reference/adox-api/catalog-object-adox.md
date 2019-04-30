@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184207"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체(ADOX)
 컬렉션을 포함 ([테이블](../../../ado/reference/adox-api/tables-collection-adox.md), [뷰](../../../ado/reference/adox-api/views-collection-adox.md)를 [사용자가](../../../ado/reference/adox-api/users-collection-adox.md)를 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md))는 스키마 카탈로그는 데이터 원본에 대해 설명 합니다.  

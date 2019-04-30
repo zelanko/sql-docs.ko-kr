@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125479"
 ---
 # <a name="iif-mdx"></a>IIf(MDX)
 
@@ -34,10 +34,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  평가 하는 조건을 **true** (1) 또는 **false** (0). 유효한 MDX(Multidimensional Expressions) 논리식이어야 합니다.  
   
- *Expression1 힌트 [즉시 | 엄격한 | 지연]]*  
+ *Expression1 Hint [Eager|Strict|Lazy]]*  
  논리 식으로 평가 되 면 사용할 **true**합니다. Expression1은 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
- *Expression2 힌트 [즉시 | 엄격한 | 지연]]*  
+ *Expression2 Hint [Eager|Strict|Lazy]]*  
  논리 식으로 평가 되 면 사용할 **false**합니다. Expression2는 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
 ## <a name="remarks"></a>Remarks  

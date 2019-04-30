@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159252"
 ---
 # <a name="set-path-command"></a>SET PATH 명령
 파일 검색에 대 한 경로 지정합니다. 드라이버 관련 정보에 대 한 설명을 참조 하세요.  
@@ -31,7 +31,7 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>인수  
- 에 [ *경로*]  
+ TO [ *Path*]  
  Visual FoxPro 검색 하려는 디렉터리를 지정 합니다. 디렉터리를 구분 하려면 쉼표 또는 세미콜론을 사용 합니다.  
   
 ## <a name="remarks"></a>Remarks  

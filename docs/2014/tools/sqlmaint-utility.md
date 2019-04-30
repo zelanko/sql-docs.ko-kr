@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2e15dbb5b7cb21d29936fce5c9b0d1f215d244ac
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186997"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 유틸리티
   **sqlmaint** 유틸리티는 하나 이상의 데이터베이스에서 지정한 유지 관리 작업을 수행합니다. **sqlmaint** 를 사용하여 DBCC 검사를 실행하고 데이터베이스 및 트랜잭션 로그를 백업하고 통계를 업데이트하고 인덱스를 다시 만들 수 있습니다. 모든 데이터베이스 유지 관리 작업은 지정된 텍스트 파일, HTML 파일 또는 전자 메일 계정으로 보낼 수 있는 보고서를 만듭니다. **sqlmaint** 는 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 만든 데이터베이스 유지 관리 계획을 실행합니다. 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유지 관리 계획을 실행하려면 [dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)를 사용합니다.  
@@ -120,7 +120,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
   
  *sqlmaint* 에서 원격 서버에 액세스할 때 **text_file** 에는 전체 UNC(범용 명명 규칙) 파일 이름이 필요합니다.  
   
- **-에** _operator_name_  
+ **-To** _operator_name_  
  SQL 메일을 통해 생성된 보고서를 받는 운영자를 지정합니다.  
   
  **-HtmlRpt** _html_file_  

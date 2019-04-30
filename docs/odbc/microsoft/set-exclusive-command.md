@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fccbc9b258cbff1e14ccc76e10af9d26efc4b70b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159267"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE 명령
 네트워크에서 배타적으로 또는 공유 사용에 대 한 테이블 파일을 열지 여부를 지정 합니다.  

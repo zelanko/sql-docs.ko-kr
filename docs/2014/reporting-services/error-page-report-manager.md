@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164673"
 ---
 # <a name="error-page-report-manager"></a>오류 페이지(보고서 관리자)
   오류 페이지를 사용하여 오류 상태에 대한 정보를 볼 수 있습니다. 서버 기반 또는 세션 기반 오류가이 페이지에 나타납니다. 특정 페이지 컨트롤과 관련된 유효성 검사 오류는 컨트롤 옆에 인라인으로 표시됩니다.  

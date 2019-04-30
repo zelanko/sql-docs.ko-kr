@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295117"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>방법: 업그레이드 관리자 시작
   업그레이드 관리자는 업그레이드 관리자 분석 마법사와 업그레이드 관리자 보고서 뷰어를 시작하는 데 사용할 수 있는 중앙 콘솔을 제공합니다. 이 항목에서는 업그레이드 관리자를 시작하는 방법에 대해 설명합니다.  

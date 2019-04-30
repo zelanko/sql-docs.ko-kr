@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157955"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
   작성 하는 경우 새 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 충분 한 사용 하 여 서버를 프로 비전 할 수 있도록 각 테이블의 메모리 요구 사항을 적절히 추정 하는 것이 중요은 메모리 액세스에 최적화 된 테이블 또는 메모리 최적화 테이블에 기존 디스크 기반 테이블 마이그레이션 메모리입니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 최적화 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](../../database-engine/hash-indexes.md)를 참조하세요.  
   
- **참고:** 즉석에서 해시 인덱스 배열 크기를 변경할 수는 없습니다. 해시 인덱스 배열 크기를 변경하려면 테이블을 삭제하고 bucket_count 값을 변경한 다음 테이블을 다시 만들어야 합니다.  
+ **참고:** 즉석에서 해시 인덱스 배열 크기를 변경할 수 없습니다. 해시 인덱스 배열 크기를 변경하려면 테이블을 삭제하고 bucket_count 값을 변경한 다음 테이블을 다시 만들어야 합니다.  
   
  **해시 인덱스 배열 크기를 설정합니다.**  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061561"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>드라이버 관리자의 함수 매핑
 드라이버 관리자는 문자열 인수를 사용 하는 함수에 대 한 두 진입점을 지원 합니다. 데코 레이트 되지 않은 함수 (**SQLDriverConnect**) 함수의 ANSI 형식입니다. 유니코드 형식으로 데코 레이트 된를 *W* (**: SQLDriverConnectW**.)  

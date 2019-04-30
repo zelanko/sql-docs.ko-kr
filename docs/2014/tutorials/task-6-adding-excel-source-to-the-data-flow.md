@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156687"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>태스크 6: 데이터 흐름에 Excel 원본 추가
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>태스크 6: Data Flow에 Excel 원본 추가
   이 작업에서는 데이터 흐름에 Excel 원본을 추가하여 원본 Excel 파일에서 공급자 데이터를 읽습니다. Excel 원본은 Microsoft Excel 통합 문서의 워크시트 또는 범위에서 데이터를 추출합니다. 자세한 내용은 [Excel 원본](../integration-services/data-flow/excel-source.md) 항목을 참조하십시오.  
   
 1.  **SSIS 도구 상자** 의 **기타 원본** 에서 **데이터 흐름** 탭으로 **Excel 원본** 을 끌어 놓습니다.  

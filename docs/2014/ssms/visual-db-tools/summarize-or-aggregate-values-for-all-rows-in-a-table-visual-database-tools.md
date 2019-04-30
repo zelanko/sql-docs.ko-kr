@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204613"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>테이블에 있는 모든 행의 값 요약 또는 집계(Visual Database Tools)
   집계 함수를 사용하면 테이블의 모든 값을 요약할 수 있습니다. 예를 들어, `titles` 테이블의 책 전체에 대한 가격 합계를 표시하는 다음과 같은 쿼리를 만들 수 있습니다.  
@@ -57,7 +57,7 @@ FROM titles
   
      쿼리 및 뷰 디자이너에서 요약 대상 열에 대한 열 별칭이 자동으로 할당됩니다. 이 별칭을 좀 더 의미 있는 별칭으로 바꿀 수 있습니다. 자세한 내용은 [열 별칭 만들기&#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)를 참조하세요.  
   
-4.  에 **Group By** 표 형태 열에서와 같은 적절 한 집계 함수: **합계**, **Avg**, **Min**를 **최대**를 **개수**합니다. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
+4.  에 **Group By** 표 형태 열에서와 같은 적절 한 집계 함수: **Sum**, **Avg**, **Min**, **Max**, **Count**. 결과 집합에서 고유 행만 집계하려면 집계 함수를 선택할 때 DISTINCT 옵션을 사용합니다(예: **Min Distinct**). **Group By**, **Expression**또는 **Where**는 선택하지 말아야 합니다. 모든 행을 집계할 때는 이러한 옵션이 적용되지 않습니다.  
   
      쿼리 및 뷰 디자이너에서 [SQL 창](sql-pane-visual-database-tools.md) 에 있는 문의 열 이름이 사용자가 지정한 집계 함수로 바뀝니다. 예를 들어, SQL 문은 다음과 같은 형식입니다.  
   
@@ -77,7 +77,7 @@ FROM titles
 > [!NOTE]  
 >  그룹화 방법 모드를 명시적으로 종료하지 않는 한 쿼리 및 뷰 디자이너의 SQL 창에서 집계 함수가 SQL 문의 일부로 계속 유지됩니다. 따라서, 다이어그램 창에 표시되는 테이블이나 테이블 반환 개체를 변경하거나 쿼리 형식을 변경하여 쿼리를 수정하면 결과 쿼리에 잘못된 집계 함수가 포함될 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [쿼리 결과 요약&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   

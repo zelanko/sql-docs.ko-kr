@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192029"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps 속성(ClientNetworkProtocol 클래스)
   클라이언트의 속성 수에 지정 된 프로토콜에 네트워크 가져옵니다 합니다 [SetOrderValue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md)합니다.  

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185399"
 ---
-# <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>6단원: 예측 만들기 및 작업(기본 데이터 마이닝 자습서)
+# <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>6단원: 만들기 및 작업 예측 (기본 데이터 마이닝 자습서)
   만든 데이터 마이닝 모델을 학습, 테스트 및 탐색했습니다. 이제 모델을 사용하여 새로운 타겟 메일링 캠페인에 응답할 가능성이 가장 높은 사람을 식별할 준비가 되었습니다.  
   
  이 단원에서는 자전거를 구매할 가능성이 가장 높은 고객을 예측하는 쿼리를 만듭니다. 또한 마케팅 부서에서 예측을 사용할지 여부를 결정할 수 있도록 예측의 정확성에 대한 *확률* 을 검색합니다.  

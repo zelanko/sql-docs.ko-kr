@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156642"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Reporting Services 로그인 대화 상자(보고서 작성기)
   **Reporting Services 로그인** 대화 상자를 사용하여 보고서 서버에 보고서를 게시하는 데 사용할 자격 증명을 제공할 수 있습니다. 이러한 자격 증명과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  

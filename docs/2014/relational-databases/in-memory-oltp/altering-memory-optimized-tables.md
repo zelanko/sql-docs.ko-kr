@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065621"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
   메모리 최적화 테이블에 대한 ALTER 작업 수행은 지원되지 않습니다. 여기에는 bucket_count 변경, 인덱스 추가 또는 제거, 열 추가 또는 제거 등의 작업이 포함됩니다. 이 항목에서는 메모리 최적화 테이블을 업데이트하는 방법에 대한 지침을 제공합니다.  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156718"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>마스터 서버를 업그레이드하기 전에 모든 대상 서버를 업그레이드합니다.
   마스터 서버를 업그레이드하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있고 대상 서버로 구성된 모든 컴퓨터를 업그레이드합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "48061956"
 ## <a name="corrective-action"></a>수정 동작  
  마스터 서버를 업그레이드하기 전에 모든 대상 서버를 업그레이드할 수 없는 경우 대상 서버를 모두 제거하고 업그레이드한 후 대상 서버를 모두 다시 등록해야 합니다.  
   
- 자세한 내용은 "서버 하는 방법:: 결함을 대상 서버에서는 Master," 및 "방법:: 인 리스트 먼 트를 대상 서버에는 마스터에"에서 항목 "자동화 기업 내 관리,"을 참조 하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
+ 자세한 내용은 "자동화 기업 내 관리," 항목을 참조 하세요. "방법: 마스터 서버에서 대상 서버 제거"및" 방법: 참여를 마스터 대상 서버" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 업그레이드 문제](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

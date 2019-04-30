@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181807"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>편집기 구성(SQL Server Management Studio)
   각 편집기에 대한 옵션을 구성하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 작업을 사용자 지정할 수 있습니다.  

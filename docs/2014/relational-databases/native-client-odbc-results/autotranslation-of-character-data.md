@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5182ab1a72caac4181e50df2199f3e0457d3aaac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200217"
 ---
 # <a name="autotranslation-of-character-data"></a>문자 데이터 자동 변환
   ANSI 같은 문자 데이터를 SQL_C_CHAR로 선언 된 변수 또는 저장 된 데이터 문자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여는 **char**를 **varchar**, 또는 **텍스트** 데이터 형식 수 제한 된 수를의 문자를 나타냅니다. 즉, 문자당 1바이트를 사용하여 저장된 문자 데이터는 246자만 나타낼 수 있습니다. SQL_C_CHAR 변수에 저장된 값은 클라이언트 컴퓨터의 ACP(ANSI 코드 페이지)를 사용하여 해석되고, 사용 하 여 저장 된 값 **문자**, **varchar**, 또는 **텍스트** 데이터 형식은 서버에서 서버의 ACP를 사용 하 여 계산 됩니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "52806595"
   
  데이터를 문자에서 유니코드로 이동할 때는 항상 변환해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [결과 처리 &#40;ODBC&#41;](processing-results-odbc.md)   
  [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)  
   

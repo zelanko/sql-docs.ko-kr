@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127704"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
   XPath(XML Path Language) 쿼리는 URL의 일부로 지정하거나 템플릿 내에 지정할 수 있습니다. 매핑 스키마에 따라 이 결과 조각의 구조가 결정되고 값은 데이터베이스에서 검색됩니다. 이 프로세스는 CREATE VIEW 문을 사용하여 뷰를 만들고 이러한 뷰에 대한 SQL 쿼리를 작성하는 것과 개념적으로 유사합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753375"
   
  템플릿에 XPath 쿼리를 지정할 때는 다음 동작에 유의하십시오.  
   
--   XPath에는 XML(템플릿은 XML 문서임)에서 특수한 의미를 가지는 < 또는 &와 같은 문자가 포함될 수 있습니다. 이러한 문자를 XML & 인코딩을 사용하여 이스케이프 처리하거나 XPath를 URL에 지정해야 합니다.  
+-   XPath는와 같은 문자를 포함할 수 있습니다 < 또는 XML에서 특별 한 의미가 있는 (및 서식 파일은 XML 문서). XML을 사용 하 여 이러한 문자를 이스케이프 처리 해야 &-인코딩 또는 URL에 XPath를 지정 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQLXML 4.0의 XPath 쿼리 사용](using-xpath-queries-in-sqlxml-4-0.md)  

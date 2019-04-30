@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189022"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>위치 지정 업데이트 및 삭제 문 실행
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "47772051"
   
 2.  위치 지정된 update 또는 delete 문을 다음 구문 사용 하 여 생성합니다.  
   
-     **업데이트** *테이블 이름*  
+     **UPDATE** *table-name*  
   
      **설정할** *열 식별자* **=** {*식* &#124; **NULL**}  
   

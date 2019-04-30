@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192163"
 ---
 # <a name="calling-methods"></a>메서드 호출
   개체와 관련 된를 실행 하는 등 특정 작업을 수행 하는 메서드를 `Checkpoint` 데이터베이스 또는 인스턴스에 대해 로그온 열거 목록을 요청 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  

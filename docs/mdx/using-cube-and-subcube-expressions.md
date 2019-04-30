@@ -1,5 +1,5 @@
 ---
-title: 큐브 및 하위 큐브 식을 사용 하 여 | Microsoft Docs
+title: 큐브 및 하위 큐브 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f13d92c114783646bbeab9451c3d212ff01b8f8c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125429"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
 
@@ -24,7 +24,7 @@ ms.locfileid: "34743382"
 ## <a name="cube-expressions"></a>큐브 식  
  큐브 식은 큐브 식별자 또는 CURRENTCUBE 키워드를 포함하므로 간단한 식이어야 합니다. 많은 MDX 문에서 현재의 큐브 컨텍스트를 식별하기 위해 큐브 식별자를 요청하는 대신 CURRENTCUBE 키워드를 사용합니다.  
   
- 큐브 식별자로 표시 *Cube_Name* 는 MDX 문의 BNF 표기법 설명 합니다.  
+ 큐브 식별자가 요소로 *Cube_Name* MDX 문의 BNF 표기법 설명 합니다.  
   
  큐브 식은 여러 위치에 나타날 수 있습니다. MDX SELECT 문에서 데이터를 검색할 큐브를 지정합니다. 다음 예제 쿼리에서 [Adventure Works] 식은 해당 이름의 큐브를 참조합니다.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "34743382"
   
  `END SCOPE;`  
   
- 하위 큐브 식별자로 표시 *Subcube_Name*합니다. 나타납니다.  
+ 하위 큐브 식별자 *Subcube_Name*합니다. 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 MDX 쿼리 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [MDX로 하위 큐브 작성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
+ [기본 MDX 쿼리&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
+ [MDX로 하위 큐브를 구축 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [CREATE SUBCUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [SCOPE 문 &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
+ [SCOPE 문&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

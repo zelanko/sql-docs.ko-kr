@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139026"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 (AccessToSQL) 변환
 Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure, SSMA 액세스에 대 한 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다. 이제 Access 데이터베이스 개체를 선택 하 고 다음 스키마를 변환할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마입니다.  
@@ -60,7 +60,7 @@ Access 데이터베이스를 추가 하 고 연결한 후 [!INCLUDE[ssNoVersion]
 |column|column|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
-|Query|뷰<br /><br />가장 선택 쿼리 보기로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />크로스탭 쿼리 매개 변수를 사용 하는 SELECT 쿼리가 없으며 변환 되지 않습니다.|  
+|쿼리|뷰<br /><br />가장 선택 쿼리 보기로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />크로스탭 쿼리 매개 변수를 사용 하는 SELECT 쿼리가 없으며 변환 되지 않습니다.|  
 |보고서|변환 되지 않음|  
 |폼|변환 되지 않음|  
 |매크로|변환 되지 않음|  

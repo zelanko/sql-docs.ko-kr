@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127838"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업에서 문자 필드에 대 한 데이터 정렬 순서를 지정합니다.  

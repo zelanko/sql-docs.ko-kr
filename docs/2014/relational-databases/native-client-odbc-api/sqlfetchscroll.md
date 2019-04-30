@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c9614a71c0015d17178a57d33c5fd0d9b62433c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154694"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   **SQLFetchScroll** 응용 프로그램에 하나의 데이터 행 집합을 반환 합니다. 행 집합의 크기를 사용 하 여 설정 됩니다 [SQLSetStmtAttr](sqlsetstmtattr.md)합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음 제한 사항이 있는 모든 정의 된 인출 명령 (예: SQL_FETCH_RELATIVE)을 지원 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "53358855"
 ## <a name="sqlfetchscroll-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLFetchScroll 지원  
  **SQLFetchScroll** 큰 CLR 사용자 정의 형식 (Udt)를 지원 합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLFetchScroll 함수](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [ODBC API 구현 정보](odbc-api-implementation-details.md)  
   

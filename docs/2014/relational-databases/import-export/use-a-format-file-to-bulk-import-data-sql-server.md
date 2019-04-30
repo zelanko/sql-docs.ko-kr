@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155870"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
   이 항목에서는 대량 가져오기 작업에서 서식 파일을 사용하는 방법에 대해 설명합니다. 서식 파일은 데이터 파일의 필드를 테이블 열에 매핑합니다.  **bcp** 명령이나 BULK INSERT 또는 INSERT ...를 사용할 때 비 XML 서식 파일 또는 XML 서식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다. SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 사용하는 경우 비 XML 또는 XML 형식 파일을 사용하여 데이터를 대량으로 가져올 수 있습니다.  
@@ -181,7 +181,7 @@ DROP TABLE myTestFormatFiles
 ```  
   
 > [!NOTE]  
->  OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 사용해 표시할 수 있습니다.  
+>  OPENROWSET BULK 절에 대한 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 ## <a name="additional-examples"></a>추가 예  
  [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  

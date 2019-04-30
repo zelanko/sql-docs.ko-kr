@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183892"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close 메서드, Table Type 속성 예제(VB)
 설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 **Nothing** 카탈로그에 대 한 연결을 닫아야 합니다. 연결 된 컬렉션은 비어 있게 됩니다. 카탈로그에서 스키마 개체에서 만들어진 모든 개체가 분리 됩니다. 캐시 된 해당 개체에 속성을 사용할 수 있지만 공급자를 호출 하는 속성을 읽는 시도 실패 합니다.  

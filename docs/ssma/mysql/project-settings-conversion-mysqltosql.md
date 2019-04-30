@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12e2e61c6b55bf3c549c08f2b090059d674ed83d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162020"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>프로젝트 설정(변환)(MySQLToSQL)
 변환 페이지의 **프로젝트 설정** 대화 상자에 SSMA MySQL 구문을 SQL Server 또는 SQL Azure 구문으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "52411270"
 |-|-|  
 |**용어**|**정의**|  
 |**경계 상자 기본 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 공간 인덱스에 대 한**|정의 대 한 기본값 {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} 경계 상자 공간 인덱스에 사용 되는 매개 변수입니다.<br /><br />**기본 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**낙관적 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**전체 모드**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**공간 인덱스에 대 한 기본 표 밀도**|LEVEL_1, LEVEL_2, LEVEL_3, 및 공간 인덱스에서 사용 되는 표 밀도의 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**낙관적 모드**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**전체 모드**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: Default<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
+|**공간 인덱스에 대 한 기본 표 밀도**|LEVEL_1, LEVEL_2, LEVEL_3, 및 공간 인덱스에서 사용 되는 표 밀도의 LEVEL_4에 대 한 기본값을 정의 합니다.<br /><br />**기본 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**낙관적 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값<br /><br />**전체 모드**<br /><br />LEVEL_1: 기본값<br /><br />LEVEL_2: 기본값<br /><br />LEVEL_3: 기본값<br /><br />LEVEL_4: 기본값|  
   
 ### <a name="transactions"></a>의  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52411270"
 |-|-|  
 |**용어**|**정의**|  
 |**비트랜잭션 테이블**|경고 변환 메시지를 사용 하 여 트랜잭션을 지원 하지 않는 테이블에 모든 참조를 표시 합니다 있는지 여부를 지정 합니다.<br /><br />**기본 모드**: 아니요<br /><br />**낙관적 모드**: 아니요<br /><br />**전체 모드**: 사용자 계정 컨트롤|  
-|**트랜잭션 격리 수준**|새 트랜잭션에 사용할 트랜잭션 격리 수준을 지정 합니다.<br /><br />**기본 모드**:   Default<br /><br />**낙관적 모드**:  Default<br /><br />**전체 모드**:   반복 읽기|  
+|**트랜잭션 격리 수준**|새 트랜잭션에 사용할 트랜잭션 격리 수준을 지정 합니다.<br /><br />**기본 모드**:   기본값<br /><br />**낙관적 모드**:  기본값<br /><br />**전체 모드**:   반복 읽기|  
   
 ### <a name="value-control"></a>값 컨트롤  
   
@@ -111,6 +111,6 @@ ms.locfileid: "52411270"
 |**숫자 리터럴은 전체 자릿수가 38 초과**|숫자 리터럴은 전체 자릿수가 38 초과 변환 하는 방법을 지정 합니다.<br /><br />**기본 모드**:   가능한 경우 반올림<br /><br />**낙관적 모드**:  가능한 경우 반올림<br /><br />**전체 모드**:   가능한 경우 반올림|  
 |**0-NOT NULL 열 날짜**|지정 NOT NULL 열 0-날짜의 날짜에 0 또는 잘못 된 날짜/시간 값에 대 한 할당을 처리 하는 방법입니다.<br /><br />**기본 모드**:   GETDATE)<br /><br />**낙관적 모드**:  GETDATE)<br /><br />**전체 모드**:   GETDATE)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [사용자 인터페이스 참조 &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

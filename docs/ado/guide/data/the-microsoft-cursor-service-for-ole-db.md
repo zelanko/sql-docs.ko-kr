@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e85d6f482b9d206b2ec705a8d890a4e34e5f2252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142932"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB용 Microsoft 커서 서비스
 클라이언트 쪽 커서를 선택 하거나 설정 합니다 **CursorLocation** 속성을 **adUseClient**, Microsoft 커서 서비스를 호출 하는 OLE DB에 대 한 합니다. 또한 "클라이언트 커서 엔진"을 동일한 작업 ADO의 컨텍스트에서에 대 한 참조를 볼 수 있습니다. 이 서비스는 데이터 공급자의 커서 지원 기능을 보완합니다. 결과적으로, 모든 데이터 공급자에서 상대적으로 균일 한 기능을 인식할 수 있습니다.  

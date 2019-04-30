@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d793720638ee4a98d99e6a915457d8657a1c325
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215290"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>string-length 및 substring의 동작에 대한 변경 사항
   합니다 [string-length 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) 하 고 [substring 함수 &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) 함수를 포함 하는 XML 데이터베이스와 함께 사용할 때 다른 결과 반환할 수 있습니다 서로게이트 문자입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "53369085"
   
  서로게이트 문자에 대한 자세한 내용은 [서로게이트 및 보조 문자(Surrogates and Supplementary Characters)](https://go.microsoft.com/fwlink/?LinkId=178317)를 참조하십시오.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [SQL Server 2014 업그레이드 관리자 &#91;새로 만들기&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149888"
 ---
 # <a name="replay-trace-data"></a>추적 데이터 재생
   입력 추적 데이터를 준비한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작할 수 있습니다. 자세한 내용은 [입력 추적 데이터 준비](prepare-the-input-trace-data.md)를 참조하세요.  
@@ -65,7 +65,7 @@ ms.locfileid: "52819355"
   
 3.  분산 재생이 완료되면 관리 도구에서 요약 정보가 반환됩니다. **-o** 옵션을 지정한 경우 재생 활동이 각 클라이언트의 결과 추적 파일에 저장됩니다. 결과 추적 파일에 대한 자세한 내용은 [재생 결과 검토](review-the-replay-results.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Distributed Replay Requirements](distributed-replay-requirements.md)   
  [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](configure-distributed-replay.md)  

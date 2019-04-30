@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131740"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>2단원: Bike Buyer 마이닝 구조에 마이닝 모델 추가
   이 단원에서는 사용자가 만든 Bike Buyer 마이닝 구조에 두 개의 마이닝 모델 추가 [1 단원: Bike Buyer 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)합니다. 이러한 마이닝 모델을 추가하면 한 모델을 사용하여 데이터를 탐색하고 다른 모델을 사용하여 예측을 만들 수 있습니다.  

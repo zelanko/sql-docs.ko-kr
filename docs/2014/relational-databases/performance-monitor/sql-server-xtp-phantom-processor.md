@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150981"
 ---
 # <a name="xtp-phantom-processor"></a>XTP 가상 프로세서
   XTP 가상 프로세서 성능 개체에는 XTP 엔진의 가상 처리 하위 시스템과 관련된 카운터가 포함됩니다. 이 구성 요소는 SERIALIZABLE 격리 수준에서 실행되는 트랜잭션에서 가상 행을 검색합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "52759595"
 |**Phantom rows touched/sec**|가상 검사에 의해 처리된 초당 행 수입니다(평균).|  
 |**Phantom scans started/sec**|초당 시작된 가상 검사 수입니다(평균).|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XTP &#40;메모리 내 OLTP&#41; 성능 카운터](../../integration-services/performance/performance-counters.md)  
   
   

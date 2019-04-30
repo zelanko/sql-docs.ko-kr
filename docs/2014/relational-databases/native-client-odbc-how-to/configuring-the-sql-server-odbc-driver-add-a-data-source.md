@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126077"
 ---
 # <a name="add-a-data-source-odbc"></a>데이터 원본 추가(ODBC)
   ODBC 관리자를 프로그래밍 방식으로 사용 하 여 데이터 소스를 추가할 수 있습니다 (사용 하 여 [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), 또는 파일을 만듭니다.  

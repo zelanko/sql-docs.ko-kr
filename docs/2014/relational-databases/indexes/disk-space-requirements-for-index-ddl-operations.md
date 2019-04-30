@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161798"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
   디스크 공간은 인덱스를 생성, 다시 작성 또는 삭제할 때 고려해야 할 주요 사항입니다. 디스크 공간이 부족하면 성능이 저하되거나 인덱스 작업이 실패할 수도 있습니다. 이 항목에서는 인덱스 DDL(데이터 정의 언어) 작업에 필요한 디스크 공간을 결정하는 데 도움이 되는 일반 정보를 제공합니다.  

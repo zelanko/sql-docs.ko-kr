@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b00f15f6a660025930ac401278a571f5cb617697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128025"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX 문
 DROP INDEX 문의 구문은 "DROP INDEX on a b"는 "a"가 인덱스의 이름 및 "b"가 테이블의 이름을 Microsoft Access, dBASE, 또는 Paradox 드라이버를 사용 하는 경우 (없습니다 DROP INDEX *인덱스 이름*).  

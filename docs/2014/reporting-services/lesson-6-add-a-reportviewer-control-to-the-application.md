@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86a68dfd8a84892ba3706250dfdde612a429c765
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182832"
 ---
-# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 응용 프로그램에 ReportViewer 컨트롤 추가
+# <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>6단원: 애플리케이션에 ReportViewer 컨트롤 추가
   보고서 마법사를 사용하여 자식 보고서를 디자인한 후에는 웹 사이트 애플리케이션에 ReportViewer 컨트롤을 추가합니다.  
   
 ### <a name="to-add-a-reportviewer-control-to-the-application"></a>애플리케이션에 ReportViewer 컨트롤을 추가하려면  

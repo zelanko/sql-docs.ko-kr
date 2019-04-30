@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161895"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
   이 항목의 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 이용할 수 있는 다양한 인덱스 속성을 참조합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48084705"
   
  [(인덱스) 열 선택 대화 상자](#Columns)  
   
- [인덱스 속성 저장소 페이지](#Storage)  
+ [인덱스 속성 스토리지 페이지](#Storage)  
   
  [인덱스 속성 공간 페이지](#Spatial)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48084705"
  인덱스 이름을 표시합니다. 기존 인덱스의 경우 이 필드는 읽기 전용입니다. 새 인덱스를 만드는 중이면 인덱스 이름을 입력합니다.  
   
  **인덱스 유형**  
- 인덱스의 유형을 나타냅니다. 새 인덱스의 경우 대화 상자를 열 때 선택한 인덱스의 유형을 나타냅니다. 인덱스는 **클러스터형**, **비클러스터형**, **기본 XML**, **보조 XML**, **공간**, **클러스터형 Columnstore**또는 **비클러스터형 Columnstore**일 수 있습니다.  
+ 인덱스의 유형을 나타냅니다. 새 인덱스의 경우 대화 상자를 열 때 선택한 인덱스의 유형을 나타냅니다. 인덱스를 사용할 수 있습니다. **클러스터형**, **비클러스터형**를 **기본 XML**를 **보조 XML**를 **공간**, **클러스터 columnstore**, 또는 **비클러스터형 Columnstore**합니다.  
   
  **참고** 각 테이블에 대해 클러스터형 인덱스는 하나만 허용됩니다. 각 테이블에 대해 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스는 하나만 허용됩니다.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48084705"
  **Allow Nulls**  
  테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
   
-##  <a name="Storage"></a> 저장소 페이지 옵션  
+##  <a name="Storage"></a> 스토리지 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
   
  **파일 그룹**  
@@ -199,7 +199,7 @@ ms.locfileid: "48084705"
  인덱스의 공간 분할(tessellation) 구성표를 나타냅니다. 지원되는 공간 분할(tessellation) 구성표는 다음과 같습니다.  
   
  **기하 도형 표**  
- 열에 적용 되는 기 하 도형 표 공간 분할 구성표를 지정 합니다 `geometry` 데이터 형식입니다.  
+ `geometry` 데이터 형식의 열에 적용되는 기하 도형 표 공간 분할(tessellation) 구성표를 지정합니다.  
   
  **기하 도형 자동 표**  
  이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  

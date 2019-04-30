@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187671"
 ---
-# <a name="mdx-data-manipulation---clear-calculations"></a>CLEAR CALCULATIONS-MDX 데이터 조작
+# <a name="mdx-data-manipulation---clear-calculations"></a>MDX 데이터 조작 - CLEAR CALCULATIONS
 
 
   큐브에서 모든 계산을 제거하고 큐브를 계산 패스 0으로 되돌립니다.  
@@ -33,7 +33,7 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  유효한 MDX 큐브 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **FROM** 큐브의 컨텍스트가 알려진 등에서 MDX 스크립트 경우 절을 생략할 수 있습니다.  
+ 합니다 **FROM** 큐브의 컨텍스트가 알려진, MDX 스크립트와 같이 이러한 경우 절을 생략할 수 있습니다.  
   
 > [!NOTE]  
 >  이 문은 서버 또는 데이터베이스 관리자나 큐브의 원본 데이터에 액세스할 수 있는 역할(즉, ReadSourceData=true인 역할)의 멤버만 실행할 수 있습니다.  

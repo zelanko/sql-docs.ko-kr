@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065756"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 바람직합니다.  
@@ -60,13 +60,13 @@ ms.locfileid: "48124303"
      각 부분 `char` 나 `varchar` 필드 **bcp** 접두사 길이 추가 합니다.  
   
     > [!IMPORTANT]  
-    >  기본적으로 네이티브 모드를 사용 하는 경우는 **bcp** 유틸리티가 문자에서 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에 복사 하기 전에 OEM 문자로 합니다. 합니다 **bcp** 유틸리티가 문자 데이터 파일에서를 ANSI 문자로 변환 대량 가져오기 전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
+    >  기본 모드를 사용하면 기본적으로 **bcp** 유틸리티가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 문자를 데이터 파일에 복사하기 전에 OEM 문자로 변환합니다. 반대로 데이터 파일의 문자를 **테이블에 대량으로 가져올 때는** bcp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티가 문자를 ANSI 문자로 변환합니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
 -   `sql_variant` 데이터  
   
-     경우 `sql_variant` 데이터 네이티브 형식 데이터 파일에 SQLVARIANT로 저장 되므로, 해당 특성을 모두 유지 합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타 데이터는 다시 대상에 동일한 데이터 형식 가진 데이터 값을 만드는 데 `sql_variant` 열입니다.  
+     `sql_variant` 데이터가 네이티브 형식 데이터 파일에 SQLVARIANT로 저장되면 해당 데이터는 그 특성을 모두 유지합니다. 각 데이터 값의 데이터 형식을 기록하는 메타데이터는 데이터 값과 함께 저장됩니다. 이 메타데이터는 대상 `sql_variant` 열에 동일한 데이터 형식을 가진 데이터 값을 다시 만드는 데 사용됩니다.  
   
-     대상 열의 데이터 형식이 없으면 `sql_variant`, 각 데이터 값은 암시적 데이터 변환 규칙에 따라 대상 열의 데이터 형식으로 변환 됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
+     대상 열의 데이터 형식이 `sql_variant`가 아닌 경우 기본적인 암시적 데이터 변환 규칙에 따라 각 데이터 값이 대상 열의 데이터 형식으로 변환됩니다. 데이터 변환 중에 오류가 발생하면 현재 일괄 처리가 롤백됩니다. `char` 열 간에 전송되는 모든 `varchar` 및 `sql_variant` 값에는 코드 페이지 변환 문제가 있을 수 있습니다.  
   
      데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)을 참조하세요.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "48124303"
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 > [!NOTE]  
->  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
+>  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **bcp** 를 사용하여 네이티브 데이터의 대량 내보내기를 수행하고 내보낸 데이터에 BULK INSERT를 사용하여 대량 가져오기를 수행하는 방법을 보여 줍니다.  

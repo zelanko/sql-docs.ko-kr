@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162357"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 고유 인덱스를 만드는 방법에 대해 설명합니다. 고유 인덱스는 인덱스 키에 중복 값을 포함할 수 없으므로 테이블의 모든 행이 고유합니다. UNIQUE 제약 조건을 만드는 것과 제약 조건의 영향을 받지 않는 고유 인덱스를 만드는 것에는 큰 차이가 없습니다. 데이터 유효성 검사는 이와 동일한 방식으로 수행됩니다. 쿼리 최적화 프로그램에서는 제약 조건에 따라 생성된 고유 인덱스와 수동으로 만든 고유 인덱스를 동일하게 취급합니다. 하지만 열에 UNIQUE 제약 조건을 만들면 인덱스의 목표가 명확해집니다. UNIQUE 제약 조건에 대한 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  

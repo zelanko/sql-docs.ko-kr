@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188500"
 ---
 # <a name="procedure-call-escape-sequence"></a>프로시저 호출 이스케이프 시퀀스
 ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 한 합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
   
- **{**[? =]**호출** *프로시저 이름*[**(**[*매개 변수*] [, [*매개 변수*]]... **)**]**}**  
+ **{**[?=]**call** *procedure-name*[**(**[*parameter*][,[*parameter*]]...**)**]**}**  
   
  BNF 표기법의 구문은 다음과 같습니다.  
   
- *ODBC 프로시저 이스케이프* :: =  
+ *ODBC-procedure-escape* ::=  
   
  &#124;*ODBC esc 시작자* [? =] 호출 *프로시저 ODBC esc 종결자*  
   
  *프로시저* :: = *프로시저 이름* &#124; *프로시저 이름* (*프로시저 매개 변수 목록을*)  
   
- *프로시저 식별자* :: = *사용자 정의 이름*  
+ *procedure-identifier* ::= *user-defined-name*  
   
  *프로시저 이름을* :: = *프로시저 식별자*  
   
@@ -47,23 +47,23 @@ ODBC는 이스케이프 시퀀스를 사용 하 여 프로시저 호출에 대 �
   
  (세 번째 구문은 데이터 원본 소유자를 지원 하지 않는 경우에 유효 합니다.)  
   
- *소유자 이름을* :: = *사용자 정의 이름*  
+ *owner-name* ::= *user-defined-name*  
   
- *카탈로그 이름이* :: = *사용자 정의 이름*  
+ *catalog-name* ::= *user-defined-name*  
   
  *카탈로그 구분 기호* :: = {*구현에서 정의 된*}  
   
  (통해 반환 되는 카탈로그 구분 **SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR 정보 옵션을 사용 하 여.)  
   
- *프로시저 매개 변수 목록을* :: = *프로시저 매개 변수*  
+ *procedure-parameter-list* ::= *procedure-parameter*  
   
- &#124;*프로시저 매개 변수가*, *프로시저 매개 변수 목록*  
+ &#124; *procedure-parameter*, *procedure-parameter-list*  
   
  *프로시저 매개 변수가* :: = *동적 매개 변수* &#124; *리터럴* &#124; *빈 문자열*  
   
- *빈 문자열* :: =  
+ *empty-string* ::=  
   
- *ODBC esc 시작자* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC esc 종결자* :: =}  
   

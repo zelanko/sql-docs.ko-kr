@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a07ec878b1198fbf23bfb251460d83869313c83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062131"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 속성-동적(ADO)
 이름을 지정 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

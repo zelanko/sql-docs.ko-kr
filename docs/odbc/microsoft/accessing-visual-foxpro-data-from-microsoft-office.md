@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee21b5c88649c02d4a78f2336c616261ce54744d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198586"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Microsoft Office에서 Visual FoxPro 데이터에 액세스
 Windows 95 또는 Windows 98 응용 프로그램에 대 한 Microsoft Office에서 Visual FoxPro 데이터에 액세스 하려면 Microsoft Visual FoxPro ODBC 드라이버를 사용할 수 있습니다.  

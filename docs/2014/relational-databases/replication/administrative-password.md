@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186946"
 ---
 # <a name="administrative-password"></a>관리 암호
   이 마법사의 **배포자** 페이지에서 이 게시자에 대한 원격 배포자를 선택한 경우 복제에서 **distributor_admin** 로그인을 사용하여 게시자와 배포자 간에 설정한 연결에 대한 암호를 입력해야 합니다. 입력하는 암호는 배포 구성 마법사의 **배포자 암호** 페이지 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 지정한 암호와 일치해야 합니다.  

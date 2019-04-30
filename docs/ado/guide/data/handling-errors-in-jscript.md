@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161431"
 ---
 # <a name="handling-errors-in-jscript"></a>JScript로 오류 처리
 Microsoft® JScript® 코드를 확인 해야 합니다는 **개수** 의 속성을 **연결** 개체의 **오류** 컬렉션. 값이 0 보다 크면 컬렉션을 반복 하 고 다른 언어에서 마찬가지로 값을 인쇄 합니다.  

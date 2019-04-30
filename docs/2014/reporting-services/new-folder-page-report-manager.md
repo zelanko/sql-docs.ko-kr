@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188392"
 ---
 # <a name="new-folder-page-report-manager"></a>새 폴더 페이지(보고서 관리자)
   새 폴더 페이지를 사용하여 보고서 서버 폴더 계층에 새 폴더를 만들 수 있습니다. 이 페이지에서 만드는 폴더는 보고서 서버 데이터베이스에 저장되는 가상 폴더입니다. 컴퓨터의 파일 시스템에서는 폴더가 생성되지 않습니다.  

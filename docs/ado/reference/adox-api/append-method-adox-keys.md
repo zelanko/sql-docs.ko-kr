@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c0bc0e9b9c565c0c6d72fab4f87ab0a9fd0091a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206249"
 ---
 # <a name="append-method-adox-keys"></a>Append 메서드(ADOX 키)
 새로 추가 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체를 [키](../../../ado/reference/adox-api/keys-collection-adox.md) 컬렉션입니다.  
@@ -35,7 +35,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *키*  
+ *Key*  
  합니다 **키** 만들고 추가 하는 키의 이름 또는 추가할 개체입니다.  
   
  *KeyType*  

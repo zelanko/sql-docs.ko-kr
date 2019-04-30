@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198244"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG 명령
 복합 인덱스 (.cdx) 파일에서 태그 또는 태그를 제거합니다.  
@@ -34,7 +34,7 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>인수  
- *TagName1*OF *CDXFileName1*[합니다 *TagName2*[OF *CDXFileName2*]]...  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
  복합 인덱스 파일에서 제거할 태그를 지정 합니다. 쉼표로 구분 된 태그 이름 목록을 포함 하 여 삭제할 태그 하나를 사용 하 여 여러 태그를 삭제할 수 있습니다. 같은 이름의 두 개 이상의 태그 열린 인덱스 파일에 있는 경우에서 제거할 수 있습니다 태그는 특정 인덱스 파일의 포함 하 여 *CDXFileName*합니다.  
   
  모든 [OF *CDXFileName*]  

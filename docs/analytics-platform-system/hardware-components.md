@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8cf7fd100f72e14b09ea086a1ebff5140a9068a4
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157421"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Analytics Platform System에 대 한 하드웨어 구성 요소
 

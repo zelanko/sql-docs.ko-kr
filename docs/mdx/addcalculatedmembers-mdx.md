@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201619"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers(MDX)
 
@@ -33,7 +33,7 @@ AddCalculatedMembers(Set_Expression)
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 기본적으로 MDX는 집합 함수를 확인할 때 계산 멤버를 제외시킵니다. **AddCalculatedMembers** 함수에 지정 된 집합 식을 검사 하 여 *Set_Expression,* 계산된 멤버는 범위 내에 포함 된 멤버의 형제를 포함 하 고 집합 식의 합니다.  
+ 기본적으로 MDX는 집합 함수를 확인할 때 계산 멤버를 제외시킵니다. 합니다 **AddCalculatedMembers** 함수에 지정 된 집합 식을 검사 *Set_Expression,* 하 고 해당 집합의 범위 내에 포함 된 멤버의 형제인 계산된 멤버를 포함 합니다. 식입니다.  
   
 > [!NOTE]  
 >  이 함수는 1차원 집합 식에서만 사용될 수 있습니다.  
@@ -51,7 +51,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- 다음 예제에서는 반환는 `Measures.[Unit Price]` 에 있는 모든 계산된 멤버 뿐만 아니라 멤버는 **측정값** 차원에서는 **Adventure Works** 큐브.  
+ 다음 예제에서는 반환 합니다 `Measures.[Unit Price]` 에 있는 모든 계산된 멤버 외에도 멤버를 **측정값** 차원에서를 **Adventure Works** 큐브.  
   
 ```  
 SELECT  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

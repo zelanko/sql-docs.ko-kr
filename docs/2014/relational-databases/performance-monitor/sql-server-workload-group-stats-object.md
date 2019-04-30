@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151096"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
   SQLServer:Workload Group Stats 개체는 리소스 관리자 작업 그룹 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52747595"
 |Suboptimal plans/sec|현재 작업 그룹에서 초당 생성되는 만족스럽지 못한 계획의 수입니다.|  
 |Active parallel threads|병렬 스레드 사용량의 현재 개수입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
  [SQLServer, Resource Pool Stats 개체](sql-server-resource-pool-stats-object.md)   
  [리소스 관리자](../resource-governor/resource-governor.md)  

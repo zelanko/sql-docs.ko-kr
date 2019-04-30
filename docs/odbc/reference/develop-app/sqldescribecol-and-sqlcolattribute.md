@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149033"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol 및 SQLColAttribute
 **SQLDescribeCol** 하 고 **SQLColAttribute** 결과 집합 메타 데이터를 검색 하는 데 사용 됩니다. 이 두 함수 간의 차이점은 **SQLDescribeCol** 같은 다섯 가지 하는 동안 정보 (열 이름, 데이터 형식, 전체 자릿수, 배율 및 null 허용 여부)은 항상 반환 **SQLColAttribute** 단일 응용 프로그램에서 요청 된 정보를 반환 합니다. 그러나 **SQLColAttribute** 보다 다양 한 다양 한 열의 대/소문자 구분을 포함 하 여 메타 데이터를 반환할 수, 크기, 업데이트 가능성 및 검색 가능성을 표시 합니다.  

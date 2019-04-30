@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23c66eb3ca786df27f856539e8bba026d2b1ea71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140197"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 메서드(ADO)
 가 나타내는 엔터티를 삭제 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -38,7 +38,7 @@ Record.DeleteRecord Source, Async
  *원본*  
  (선택 사항) A **문자열** 삭제할 엔터티 (예: 파일 또는 디렉터리)를 식별 하는 URL을 포함 하는 값입니다. 하는 경우 *소스* 생략 되거나 빈 문자열인 경우 현재 표시 된 엔터티를 지정 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 삭제 됩니다. 레코드 컬렉션 레코드인 경우 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) 의 **adCollectionRecord**, 디렉터리와 같은) 모든 자식 (예를 들어, 하위 디렉터리)도 삭제 됩니다.  
   
- *비동기*  
+ *Async*  
  (선택 사항) A **부울** 값을 때 **True**, 비동기 삭제 작업 임을 지정 합니다.  
   
 ## <a name="remarks"></a>Remarks  

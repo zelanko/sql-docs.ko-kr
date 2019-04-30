@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191924"
 ---
 # <a name="handling-smo-events"></a>SMO 이벤트 처리
   이벤트 처리기 및 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 구독할 수 있는 서버 이벤트 유형이 있습니다.  

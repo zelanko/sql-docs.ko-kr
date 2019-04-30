@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f7d21a1166868603f9389ab4ef5c5b3448b0312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199524"
 ---
 # <a name="bound-descriptor-records"></a>바인딩된 설명자 레코드
 Null 값을 더 이상 포함 되도록 설명자 레코드의 SQL_DESC_DATA_PTR 필드가 설정 하는 응용 프로그램, 레코드 라고 *바인딩된*합니다.  

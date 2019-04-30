@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128692"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
   SQL Server Express LocalDB 인스턴스 API에 대한 별도의 헤더 파일이 없습니다. LocalDB 함수 서명 및 오류 코드는 SQL Server Native Client 헤더 파일(sqlncli.h)에 정의됩니다. LocalDB 인스턴스 API를 사용하려면 프로젝트에 sqlncli.h 헤더 파일을 포함해야 합니다.  
@@ -25,9 +25,9 @@ ms.locfileid: "52795355"
 ## <a name="localdb-versioning"></a>LocalDB 버전 관리  
  LocalDB 설치에서는 SQL Server 주 버전당 단일 이진 파일 집합을 사용합니다. 이러한 LocalDB 버전은 독립적으로 유지되고 패치됩니다. 따라서 사용자가 사용할 LocalDB 기준선 릴리스(주 SQL Server 버전)를 직접 지정해야 합니다. .NET Framework에서 정의 된 표준 버전 형식에는 버전이 지정 된 **System.Version** 클래스:  
   
- *[.build [.revision]]*  
+ *major.minor[.build[.revision]]*  
   
- 버전 문자열의 처음 두 번호 (*주요* 하 고 *부*)은 필수입니다. 버전 문자열의 마지막 두 번호 (*빌드* 하 고 *수정*)는 선택 사항이 며 사용자 퇴사 하는 경우 기본적으로 0으로 합니다. 즉, 사용자가 LocalDB 버전 번호로 "12.2"만 지정한 경우 "12.2.0.0"으로 지정한 것으로 처리됩니다.  
+ 버전 문자열의 처음 두 번호 (*주요* 하 고 *부*)은 필수입니다. 버전 문자열의 마지막 두 번호 (*빌드* 하 고 *수정*)는 선택 사항이 며 사용자 퇴사 하는 경우 기본적으로 0으로 합니다. 이 사용자 LocalDB 버전 번호로 "12.2"만 지정 하는 경우 처리 됩니다 것 처럼 사용자 지정 "12.2.0.0"을 의미 합니다.  
   
  LocalDB 설치에 대한 버전은 SQL Server 인스턴스 레지스트리 키 아래의 MSSQLServer\CurrentVersion 레지스트리 키에 정의됩니다. 예를 들면 다음과 같습니다.  
   

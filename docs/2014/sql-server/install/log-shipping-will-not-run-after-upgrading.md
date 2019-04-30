@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e56eff5064cf797e4acdfff10f346a43ee4210de
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195090"
 ---
 # <a name="log-shipping-will-not-run-after-upgrading"></a>업그레이드한 후에 로그 전달이 실행되지 않습니다.
   업그레이드 관리자가 로그 전달을 사용하고 있음을 발견했습니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 로그 전달은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 로그 전달과 호환되지 않으므로 직접 업그레이드할 수 없습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 저장 프로시저를 사용하여 로그 전달을 다시 구성합니다.  

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062699"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 개체 모델
 이 항목에서는 개체를 표시 하 고 ADO MD. 관련 하는 방법을 설명 합니다.  
   
- ![ADO MD 개체 모델](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
+ ![ADO MD Object Model](../../../ado/reference/ado-md-api/media/ado_md_object_model.gif "ADO_MD_object_model")  
   
  [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 하 고 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 각 개체에는 [위치](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) 컬렉션입니다.  
   

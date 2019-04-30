@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155154"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
   다음은 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에서 **지원되는** 데이터 형식입니다.  
@@ -40,24 +40,24 @@ ms.locfileid: "48075303"
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
 |char(n)|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar (n) <sup>1</sup>|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char 및 varchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar (n) <sup>1</sup>|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar 및 nvarchar&#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup> 제한은 가변 길이 형식의 (n) 계산 행 합계 당 8060 바이트입니다.  
   
- 지원 되는 데이터 정렬에 대 한 자세한 내용은 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)합니다.  
+ 지원되는 데이터 정렬에 대한 자세한 내용은 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)를 참조하세요.  
   
  **날짜 및 시간 데이터 형식**  
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
-|날짜|[날짜 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|date|[date&#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |Time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
-|Datetime2|[datetime2 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
-|smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
+|Datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|Datetime2|[datetime2&#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|Smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **이진 데이터 형식**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48075303"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary (n) <sup>1</sup>|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary(n) <sup>1</sup>|[binary 및 varbinary&#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
  <sup>1</sup> 제한은 가변 길이 형식의 (n) 계산 행 합계 당 8060 바이트입니다.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48075303"
   
 |데이터 형식|참조 항목|  
 |---------------|--------------------------|  
-|UNIQUEIDENTIFIER|[uniqueidentifier &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|uniqueidentifier|[uniqueidentifier &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
  **지원 되지 않는 데이터 형식**  
   

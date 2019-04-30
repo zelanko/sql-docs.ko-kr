@@ -1,5 +1,5 @@
 ---
-title: '컬렉션 (Visual c + + 구문 인덱스 #import) | Microsoft Docs'
+title: '컬렉션 (Visual C++ #import 구문 인덱스) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,13 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155220"
 ---
-# <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual c + + 구문 인덱스 #import)
+# <a name="collections-visual-c-syntax-index-with-import"></a>컬렉션 (Visual C++ #import 구문 인덱스)
 컬렉션 특정 공용 메서드와 속성을 상속 되도록 알고는 것이 유용 합니다.  
   
  모든 컬렉션 상속를 **수** 속성 및 **새로 고침** 메서드 및 모든 컬렉션에 추가 합니다 **항목** 속성. **오류** 컬렉션에 추가 합니다 **지우기** 메서드. **매개 변수** 컬렉션 상속 합니다 **추가** 및 **삭제** 메서드를 하는 동안 합니다 **필드** 컬렉션 추가 합니다 **Append**, **삭제할**, 및 **업데이트** 메서드.  

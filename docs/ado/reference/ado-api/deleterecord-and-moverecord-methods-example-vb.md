@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140288"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 및 MoveRecord 메서드 예제 (VB)
 이 예제에는 복사, 이동, 편집 및 웹 폴더에 게시 된 텍스트 파일의 내용을 삭제 하는 방법을 보여 줍니다. 다른 속성 및 사용 되는 메서드를 포함 [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)합니다 [원본](../../../ado/reference/ado-api/source-property-ado-record.md), 및 [플러시](../../../ado/reference/ado-api/flush-method-ado.md)합니다.  

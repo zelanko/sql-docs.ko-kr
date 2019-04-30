@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e352a6c4d548b382d700c54cf0167fadcec8bf7b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126885"
 ---
 # <a name="namespaces"></a>네임스페이스
 ADO의 XML 지 속성 형식으로 다음 네 가지 네임 스페이스를 사용합니다.  

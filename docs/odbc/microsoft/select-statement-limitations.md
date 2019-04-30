@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bf17596dbd3279498df2edcee7636db95ae139
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127859"
 ---
 # <a name="select-statement-limitations"></a>SELECT 문 제한 사항
 SELECT 문에서 비 집계 열이 있는 열을 집계 함수를 혼합할 수 없습니다.  

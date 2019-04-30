@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 744690e12569a46c184ec712eec48498e080e99b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131330"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
   XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  
@@ -113,7 +113,7 @@ ms.locfileid: "52807075"
  주석이 추가된 이 XSD 스키마는 관계형 데이터에 대한 XML 뷰를 제공합니다. 이 XML 뷰는 XPath 언어를 사용하여 쿼리할 수 있습니다. SQL 쿼리에서 행 집합을 반환하는 것과는 달리 XPath 쿼리에서는 XML 문서를 결과로 반환합니다.  
   
 > [!NOTE]  
->  매핑 스키마에서 지정된 관계형 값(예: 테이블 이름 및 열 이름)의 대/소문자 구분은 SQL Server에서 대/소문자 구분 데이터 정렬 설정을 사용하고 있는지 여부에 따라 결정됩니다. 자세한 내용은 [Collation and Unicode Support](../../collations/collation-and-unicode-support.md)을(를) 참조하세요.  
+>  매핑 스키마에서 지정된 관계형 값(예: 테이블 이름 및 열 이름)의 대/소문자 구분은 SQL Server에서 대/소문자 구분 데이터 정렬 설정을 사용하고 있는지 여부에 따라 결정됩니다. 자세한 내용은 [Collation and Unicode Support](../../collations/collation-and-unicode-support.md)을 참조하세요.  
   
 ## <a name="other-resources"></a>기타 리소스  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186285"
 ---
 # <a name="data-sources"></a>솔루션 탐색기
 A *데이터 원본* 는 단순히 원본 데이터입니다. DBMS 또는 라이브 데이터 피드의 특정 데이터베이스 파일을 수 있습니다. 데이터는 프로그램과 동일한 컴퓨터 또는 네트워크에서 다른 컴퓨터에 있을 수 있습니다. 예를 들어, 데이터 원본 액세스® Novell Netware; OS/2® 운영 체제를 실행 하는 Oracle DBMS 수 있습니다. 게이트웨이;를 통해 액세스 하는 IBM DB2 DBMS 서버 디렉터리;의 Xbase 파일의 컬렉션 또는 로컬 Microsoft® Access 데이터베이스 파일을 추가 합니다.  

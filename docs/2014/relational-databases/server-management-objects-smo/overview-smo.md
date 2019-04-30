@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131802"
 ---
 # <a name="overview-smo"></a>개요(SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)는 개체의 프로그래밍 방식으로 관리 하기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SMO를 사용하면 사용자 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 애플리케이션을 빌드할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 관리할 수 있는 강력하고 확장성 있는 응용 프로그램이지만 SMO 응용 프로그램을 사용할 때 더 나은 결과를 얻을 수 있는 경우도 있습니다.  
@@ -141,7 +141,7 @@ ms.locfileid: "52788165"
   
  인덱스 테이블 분할을 사용하면 파일 그룹 전체의 테이블 및 인덱스에서 데이터 분포를 관리할 수 있습니다. 이 새 기능은 SMO 개체로 표현됩니다.  
   
- **끝점**  
+ **EndPoints**  
   
  SOAP 및 데이터베이스 미러링 요청은 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 엔드포인트로 처리됩니다.  
   

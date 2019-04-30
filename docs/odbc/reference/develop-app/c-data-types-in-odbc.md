@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199215"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC의 C 데이터 형식
-ODBC 응용 프로그램 변수 및 해당 형식 식별자에서 사용 되는 C 데이터 형식을 정의 합니다. 이러한 문 매개 변수 및 결과 집합 열에 바인딩된 버퍼에 사용 됩니다. 예를 들어, 응용 프로그램에서 문자 형식으로 결과 집합 열에서 데이터를 검색 하려고 합니다. SQLCHAR 사용 하 여 변수 선언 * 데이터 형식으로이 변수를 SQL_C_CHAR의 형식 식별자를 사용 하 여 결과 집합 열에 바인딩합니다. C 데이터 형식 및 형식 식별자의 전체 목록은 참조 하세요 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
+ODBC 응용 프로그램 변수 및 해당 형식 식별자에서 사용 되는 C 데이터 형식을 정의 합니다. 이러한 문 매개 변수 및 결과 집합 열에 바인딩된 버퍼에 사용 됩니다. 예를 들어, 응용 프로그램에서 문자 형식으로 결과 집합 열에서 데이터를 검색 하려고 합니다. SQLCHAR 사용 하 여 변수 선언 * 데이터 형식으로이 변수를 SQL_C_CHAR의 형식 식별자를 사용 하 여 결과 집합 열에 바인딩합니다. C 데이터 형식 및 형식 식별자의 전체 목록은 참조 하세요. [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.  
   
  ODBC C 데이터 형식으로 각 SQL 데이터 형식에서 기본 매핑을 정의합니다. 예를 들어, 데이터 원본에는 2 바이트 정수는 2 바이트 정수 응용 프로그램에 매핑됩니다. 기본 매핑을 사용 하려면 응용 프로그램의 SQL_C_DEFAULT 형식 식별자를 지정 합니다. 그러나이 식별자의 사용은 상호 운용성의 이유로 권장 되지 않습니다.  
   

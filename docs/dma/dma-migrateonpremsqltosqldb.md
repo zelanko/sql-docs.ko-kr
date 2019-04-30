@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: d807396f7c8bd334de38cdc1744f6bee90d619e0
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63152615"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>온-프레미스 SQL Server 또는 Azure Vm에서 SQL Server Data Migration Assistant를 사용 하 여 Azure SQL Database로 마이그레이션
 

@@ -10,11 +10,11 @@ ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200964"
 ---
 # <a name="backup-and-restore"></a>Backup 및 Restore 메서드
 
@@ -120,7 +120,7 @@ PDW는 어플라이언스 데이터베이스 백업 및 복원 하려면 SQL Ser
   
 5.  각 계산 노드에 사용자 데이터베이스의 해당 부분을 복원합니다. 모든 복원이 성공적으로 완료 되지 않으면, 경우 모든 데이터베이스를 제거 하 고 복원 성공적으로 완료 합니다.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>많은 수의 계산 노드를 사용 하 여 어플라이언스에 복원  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>컴퓨팅 노드 수가 더 많은 어플라이언스에 복원  
   
 컴퓨팅 노드 수가 많은 어플라이언스로 백업을 복원하면 컴퓨팅 노드 수에 비례하여 할당된 데이터베이스 크기가 커집니다.  
   

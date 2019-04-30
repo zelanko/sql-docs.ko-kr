@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161771"
 ---
 # <a name="editing-data"></a>데이터 편집
 가 설명한 어떻게 ADO를 사용 하 여 데이터 원본에 연결 명령을 실행, 결과 얻을를 **레코드 집합** 개체를 탐색할 합니다 **레코드 집합**합니다. 이 섹션에서는 다음 기본 ADO 작업에 중점을 둡니다: 데이터를 편집 합니다.  
@@ -92,4 +92,4 @@ End Function
   
 -   [삭제 메서드를 사용하여 레코드 삭제](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [대안: SQL 문 사용](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [대안: SQL 문을 사용 하 여](../../../ado/guide/data/alternatives-using-sql-statements.md)

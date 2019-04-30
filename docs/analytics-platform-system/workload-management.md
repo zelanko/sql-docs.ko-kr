@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157466"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System의 워크 로드 관리
 
@@ -140,7 +140,7 @@ SQL 문 및 리소스 클래스에 의해 제어 되는 작업:
 ## <a name="Limits"></a>제한 사항  
 리소스 클래스 할당 메모리 및 동시성을 제어합니다.  입/출력 작업을 제어 하지 않는다는 점에서 합니다.  
   
-## <a name="Metadata"></a>메타 데이터  
+## <a name="Metadata"></a>Metadata  
 리소스 클래스 및 리소스 클래스 멤버에 대 한 정보를 포함 하는 Dmv 합니다.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

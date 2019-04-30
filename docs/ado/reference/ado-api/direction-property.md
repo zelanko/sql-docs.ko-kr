@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df2f7cc5eadce7d4f8f61674f4915ec3b1561e02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180965"
 ---
 # <a name="direction-property"></a>Direction 속성
 나타냅니다 여부를 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 입력된 매개 변수, 출력 매개 변수, 입력 및 출력 매개 변수를 나타내는 매개 변수는 저장된 프로시저에서 반환 하는 경우.  

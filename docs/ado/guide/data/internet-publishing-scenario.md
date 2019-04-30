@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161490"
 ---
 # <a name="internet-publishing-scenario"></a>인터넷 게시 시나리오
 이 코드 예제에는 Microsoft OLE DB provider for Internet Publishing ADO를 사용 하는 방법을 보여 줍니다. 이 시나리오를 사용 하는 Visual Basic 응용 프로그램을 만듭니다 **Recordset**를 **레코드**, 및 **Stream** 사용 하 여 게시 된 리소스의 내용을 표시 하는 개체 인터넷 공급자를 게시 합니다.  
@@ -29,11 +29,11 @@ ms.locfileid: "47603001"
   
 -   [1단계: Visual Basic 프로젝트 설정](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [2단계: 기본 목록 상자 초기화](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [2단계: 기본 목록 상자를 초기화 합니다.](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
 -   [3단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [4단계: 세부 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [4단계: 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [인터넷 게시용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

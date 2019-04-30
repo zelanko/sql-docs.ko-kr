@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d9317b63b01a4d1e78f5c8d4818c63d9974be4f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187193"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL용 SSMA 클라이언트 설치(MySQLToSQL)
 SSMA MySQL 클라이언트에 대 한 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  
@@ -34,7 +34,7 @@ SSMA MySQL 클라이언트에 대 한 다음 작업을 수행 하는 프로그�
   
 이 항목에서는 설치 필수 구성 요소 및 용 SSMA MySQL 클라이언트 설치에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 MySQL 용 SSMA MySQL 4.1 또는 이후 버전 및 모든 버전의 SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017 및 Azure SQL DB를 사용 하 여 작동 하도록 설계 되었습니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -53,7 +53,7 @@ SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는�
   
 -   4GB RAM이 권장 됩니다.  
   
-## <a name="installing-ssma-for-mysql-client"></a>용 SSMA MySQL 클라이언트 설치  
+## <a name="installing-ssma-for-mysql-client"></a>MySQL용 SSMA 클라이언트 설치  
 SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 참조는 [SQL Server Migration Assistant 다운로드 페이지](https://aka.ms/ssmaformysql)합니다.  
   
 최신 버전을 다운로드 한 후 SSMA를 설치 하기 전에 설치 파일을 추출 해야 합니다.  

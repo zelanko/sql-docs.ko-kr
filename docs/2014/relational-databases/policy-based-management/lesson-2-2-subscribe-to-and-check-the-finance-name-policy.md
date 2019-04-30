@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f1b91c1d46bc4a396a8b0358a1a3bf3aa8acbcd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135703"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Finance Name 정책 구독 및 확인
   이 태스크에서는 Finance 데이터베이스에서 Finance 정책 범주를 구독하도록 구성한 다음 Finance Name 정책을 테스트합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "48137083"
  이 자습서에서는 정책 기반 관리 조건, 정책 및 정책 그룹을 만드는 방법과 필터를 적용하고 정책 기반 관리 대상의 조건 준수 여부를 검사하는 방법을 살펴보았습니다.  
   
 ## <a name="next"></a>다음  
- 이 자습서를 마칩니다. 시작 부분으로 돌아가려면 [자습서: 정책 기반 관리를 사용하여 서버 관리](tutorial-administering-servers-by-using-policy-based-management.md)를 참조하세요.  
+ 이 자습서를 마칩니다. 시작으로 돌아가려면 클릭 [자습서: 정책 기반 관리를 사용 하 여 서버 관리](tutorial-administering-servers-by-using-policy-based-management.md)합니다.  
   
  자습서 목록을 보려면 참조 [SQL Server 2014에 대 한 자습서](../../tutorials/tutorials-for-sql-server-2014.md)합니다.  
   

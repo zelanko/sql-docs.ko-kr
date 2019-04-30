@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181598"
 ---
 # <a name="case-statement-mdx"></a>CASE 문(MDX)
 
@@ -49,7 +49,7 @@ END
  스칼라 값으로 확인되는 MDX 식입니다.  
   
  *when_expression*  
- 특정 스칼라 값입니다는 *input_expression* 계산 된 시기의 스칼라 값 true를 반환 하도록 평가 *else_result_expression*합니다.  
+ 스칼라 값을 지정 합니다 *input_expression* 계산의 스칼라 값 true를 반환 하는 경우 평가 *else_result_expression*.  
   
  *when_true_result_expression*  
  WHEN 절이 true일 때 반환되는 스칼라 값입니다.  
@@ -64,9 +64,9 @@ END
  ELSE 절이 없고 WHEN 절이 모두 false를 반환한 경우 결과는 빈 셀이 됩니다.  
   
 ## <a name="simple-case-expression"></a>단순 CASE 식  
- MDX를 확인 하 여 단순 case 식을 계산는 *input_expression* 을 스칼라 값입니다. 이 스칼라 값은 다음의 스칼라 값과 비교는 *when_expression*합니다. 두 스칼라 값이 일치 하는 경우 해당 CASE 문은 값을 반환 된 *when_true_expression*합니다. 두 스칼라 값이 일치하지 않으면 다음 WHEN 절이 실행됩니다. 모든 WHEN 절 값을 false로 평가 하는 경우 *else_result_expression* ELSE 절의 있는 경우 반환 됩니다.  
+ MDX를 확인 하 여 단순 case 식을 계산 합니다 *input_expression* 스칼라 값입니다. 스칼라 값이 다음의 스칼라 값과 비교할 합니다 *when_expression*합니다. 두 스칼라 값이 일치 하면 CASE 문은 값을 반환 합니다 *when_true_expression*합니다. 두 스칼라 값이 일치하지 않으면 다음 WHEN 절이 실행됩니다. 값을 false로 평가 하는 경우 모든 WHEN 절 *else_result_expression* ELSE 절에 있는 경우 반환 됩니다.  
   
- 다음 예에서는 여러 WHEN 절에 대해 Reseller Order Count 측정값을 확인하고 각 연도의 Reseller Order Count 측정값에 따라 결과를 반환합니다. Reseller Order Count 값에 지정 된 스칼라 값과 일치 하지 않는 한 *when_expression* 의 스칼라 값 WHEN 절에는 *else_result_expression* 반환 됩니다.  
+ 다음 예에서는 여러 WHEN 절에 대해 Reseller Order Count 측정값을 확인하고 각 연도의 Reseller Order Count 측정값에 따라 결과를 반환합니다. 에 지정 된 스칼라 값을 일치 하지 않는 Reseller Order Count 값을 *when_expression* WHEN 절에 스칼라 값에는 *else_result_expression* 반환 됩니다.  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -89,7 +89,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>검색된 CASE 식  
  CASE 식을 사용하여 보다 복잡한 평가를 수행하려면 검색된 CASE 식을 사용합니다. 이 검색 식의 변형을 사용하면 입력 식이 값 범위 내에 있는지 여부를 확인할 수 있습니다. MDX는 WHEN 절이 CASE 문에 나타나는 순서대로 WHEN 절을 반환합니다.  
   
- 다음 예에서는 Reseller Order Count 측정값을 확인에 대해 지정 된 *Boolean_expression* 여러 개의 각 WHEN 절에 대 한 합니다. 각 연도의 Reseller Order Count 측정값에 따라 결과를 반환합니다. WHEN 절은 나타나는 순서대로 확인되므로 6보다 큰 모든 값에 대해 각 값을 명시적으로 지정하지 않고 "VERY LARGE"라는 값을 쉽게 할당할 수 있습니다. 스칼라 값 WHEN 절에 지정 되지 않은 Reseller Order Count 값의 *else_result_expression* 반환 됩니다.  
+ 다음 예제에서는 Reseller Order Count 측정값을 확인 된 항목에 대 한 *Boolean_expression* 여러 개의 각 WHEN 절에 대 한 합니다. 각 연도의 Reseller Order Count 측정값에 따라 결과를 반환합니다. WHEN 절은 나타나는 순서대로 확인되므로 6보다 큰 모든 값에 대해 각 값을 명시적으로 지정하지 않고 "VERY LARGE"라는 값을 쉽게 할당할 수 있습니다. WHEN 절에 스칼라 값에 지정 되지 않은 Reseller Order Count 값을 *else_result_expression* 반환 됩니다.  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -107,6 +107,6 @@ WHERE [Measures].x
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX 스크립팅 문&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

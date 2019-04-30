@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204989"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>행 집합으로부터 XML을 생성하기 위해 FOR XML 사용
   생성할 수 있습니다는 `xml` 새 FOR XML을 사용 하 여 행 집합에서 데이터 형식 인스턴스에 **형식** 지시문입니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529065"
   
  새로운 **FOR XML TYPE** 지시어를 사용하여 SQL 구문에서 관계형 데이터에 대해 읽기 전용 XML 뷰를 정의할 수 있습니다. 이 뷰는 다음 예에서와 같이 SQL 문과 포함된 XQuery에서 쿼리할 수 있습니다. 또한 저장 프로시저에서 이러한 SQL 뷰를 참조할 수도 있습니다.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>예: 생성된 xml 데이터 형식을 반환하는 SQL 뷰  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>예: SQL 보기 생성 된 xml 반환 데이터 형식  
  다음 SQL 뷰 정의는 XML 열로부터 검색된 관계형 열, pk 및 책 저자에 대해 XML 뷰를 만듭니다.  
   
 ```  

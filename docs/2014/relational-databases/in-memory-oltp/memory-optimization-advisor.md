@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157995"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
   트랜잭션 성능 보고서 도구( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  

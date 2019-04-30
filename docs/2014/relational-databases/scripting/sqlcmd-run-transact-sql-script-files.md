@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136248"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행
-  `sqlcmd`를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행할 수 있습니다. A [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일이 조합을 포함할 수 있는 텍스트 파일로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 `sqlcmd` 명령 및 스크립팅 변수입니다.  
+  `sqlcmd`를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, `sqlcmd` 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
   
  메모장을 사용하여 간단한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 만들려면 다음 단계를 따르십시오.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48085375"
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트 창에서 다음을 입력 합니다. `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  명령 프롬프트 창에서 `sqlcmd -S myServer\instanceName -i C:\myScript.sql`을 입력합니다.  
   
 3.  Enter 키를 누릅니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085375"
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트 창에서 다음을 입력 합니다. `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  명령 프롬프트 창에서 `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`을 입력합니다.  
   
 3.  Enter 키를 누릅니다.  
   

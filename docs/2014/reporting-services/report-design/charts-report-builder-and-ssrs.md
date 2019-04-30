@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185773"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>차트(보고서 작성기 및 SSRS)
   시각적 형식으로 데이터를 요약하려면 차트 데이터 영역을 사용합니다. 차트를 사용하면 대량의 집계된 정보를 한 눈에 보이도록 표시할 수 있습니다. 차트를 신속하고 효과적으로 디자인하려면 차트를 만들기 전에 신중하게 데이터를 준비하고 이해해야 합니다. 자세한 내용은 [보고서에 차트 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)를 참조하세요. 차트 사용을 즉시를 시작 하려면 막대, 열, 스파크 라인 및 원형 차트 자습서를 참조 하세요 [자습서 &#40;보고서 작성기&#41; ](../report-builder-tutorials.md) 또는 가로 막대형 및 원형 차트 자습서 [Reporting Services 자습서 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)합니다.  

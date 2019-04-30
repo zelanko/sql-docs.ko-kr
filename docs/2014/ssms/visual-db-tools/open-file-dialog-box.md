@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138898"
 ---
 # <a name="open-file-dialog-box"></a>파일 열기 대화 상자
   **파일 열기** 대화 상자를 사용하여 디스크에 있는 기존 파일을 열 수 있습니다. 또한 이 대화 상자를 사용하여 다양한 언어 인코딩 옵션을 통해 이미 열린 파일을 열 수 있습니다.  

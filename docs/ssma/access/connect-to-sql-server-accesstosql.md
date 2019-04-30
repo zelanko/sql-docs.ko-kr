@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7a3e6b18377f01d93dfb4bdda840bc6abc0dafee
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139053"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL)에 연결
 사용 된 **SQL Server에 연결** 의 인스턴스에 연결 하려면 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마이그레이션하려는 합니다. 액세스는 **SQL Server에 연결** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **SQL Server에 연결**합니다.  

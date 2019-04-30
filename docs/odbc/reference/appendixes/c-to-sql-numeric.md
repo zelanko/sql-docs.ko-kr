@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191742"
 ---
 # <a name="c-to-sql-numeric"></a>C에서 SQL로: 숫자
 숫자 ODBC C 데이터 형식에 대 한 식별자 다음과 같습니다.  
@@ -59,10 +59,10 @@ ms.locfileid: "47786671"
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|자릿수 < = 바이트 길이 열<br /><br /> 자릿수 > 열의 바이트 길이|n/a<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|문자 수가 < 열 문자 길이 =<br /><br /> 문자 수가 > 문자 길이로 된 열|n/a<br /><br /> 22001|  
-|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|데이터 잘림 없이 변환 또는 사용 하 여 소수 자릿수 잘립니다.<br /><br /> 잘림 전체 자릿수를 사용 하 여 데이터 변환|n/a<br /><br /> 22003|  
+|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|데이터 잘림 없이 변환 또는 사용 하 여 소수 자릿수 잘립니다.<br /><br /> 잘림 전체 자릿수를 사용 하 여 데이터 변환|n/a<br /><br /> 22003|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|데이터가 숫자를 변환 하는 데이터 형식의 범위 내에서<br /><br /> 데이터 숫자를 변환 하는 데이터 형식의 범위를 벗어났습니다.|n/a<br /><br /> 22003|  
 |SQL_BIT|데이터는 0 또는 1<br /><br /> 데이터 0, 2, 보다 작음 및 같지 않음 1 보다 큽니다.<br /><br /> 데이터가 0 미만 또는 2 보다 크거나|n/a<br /><br /> 22001<br /><br /> 22003|  
-|[A] SQL_INTERVAL_YEAR<br /><br /> [A] SQL_INTERVAL_MONTH<br /><br /> [A] SQL_INTERVAL_DAY<br /><br /> [A] SQL_INTERVAL_HOUR<br /><br /> [A] SQL_INTERVAL_MINUTE<br /><br /> [A] SQL_INTERVAL_SECOND|데이터가 잘리지 않습니다.<br /><br /> 데이터가 잘렸습니다.|n/a<br /><br /> 22015|  
+|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|데이터가 잘리지 않습니다.<br /><br /> 데이터가 잘렸습니다.|n/a<br /><br /> 22015|  
   
  [a] (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG, 또는 SQL_C_NUMERIC) 정확한 숫자 데이터 형식에만 이러한 변환이 지원 됩니다. 근사 숫자 데이터 형식 (SQL_C_FLOAT 또는 SQL_C_DOUBLE)에 대 한 지원 되지 않습니다. 정확한 숫자 C 데이터 형식 간격 간격 자릿수가 단일 필드가 아닙니다. SQL 형식으로 변환할 수 없습니다.  
   

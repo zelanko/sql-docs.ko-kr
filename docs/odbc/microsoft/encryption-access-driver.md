@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca88e38062ddd996c29aedc883ed4e024ba48163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127975"
 ---
 # <a name="encryption-access-driver"></a>Encryption(Access 드라이버)
 (이 컨트롤은 경우에만 사용할 수 있는 버전 4입니다. *x* 형식을 선택 합니다.)  

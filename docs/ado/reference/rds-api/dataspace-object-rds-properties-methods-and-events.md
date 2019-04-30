@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb74f32ba6eb464707721b5529cb0478d1b4ceb2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134337"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>DataSpace 개체(RDS) 속성, 메서드 및 이벤트
 > [!IMPORTANT]

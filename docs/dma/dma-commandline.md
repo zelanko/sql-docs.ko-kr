@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154670"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 Data Migration Assistant 설치 버전 2.1 이상에서 시기, dmacmd.exe에도 설치 됩니다 *% ProgramFiles %\\Microsoft Data Migration Assistant\\*합니다. Dmacmd.exe를 사용 하 여 무인된 모드에서 데이터베이스를 평가 및 JSON 또는 CSV 파일로 결과 출력 합니다. 이 메서드는 여러 데이터베이스 또는 대규모 데이터베이스를 평가할 때 특히 유용 합니다. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름   | Y
 |`/AssessmentDatabases`     | 연결 문자열의 공백으로 구분 된 목록입니다. 데이터베이스 이름 (초기 카탈로그)은 대/소문자 구분 합니다. | Y
-|`/AssessmentSourcePlatform`     | 평가 지원 되는 값에 대 한 원본 플랫폼: SqlOnPrem, RdsSqlServer. 대상 준비 상태 평가 Cassandra 소스 플랫폼으로 지원 합니다. 기본값은 SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | 평가 지원 되는 값에 대 한 대상 플랫폼: AzureSqlDatabase ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 및 SqlServerWindows2017 합니다. 대상 준비 평가 대상 플랫폼으로 CosmosDB도 지원 합니다. 기본값은 SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | 평가 위해 원본 플랫폼: <br>평가 대 한 지원 되는 값: SqlOnPrem, RdsSqlServer (기본값) <br>대상 준비 상태 평가 대 한 지원 되는 값: SqlOnPrem, (기본값) 이면 RdsSqlServer Cassandra (미리 보기)   | N
+|`/AssessmentTargetPlatform`     | 평가 위해 대상 플랫폼:  <br> 평가 대 한 지원 되는 값: AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 및 SqlServerWindows2017 (기본값)  <br> 대상 준비 상태 평가 대 한 지원 되는 값: (기본값) 이면 ManagedSqlServer CosmosDB (미리 보기)   | N
 |`/AssessmentEvaluateFeatureParity`  | 기능 패리티 규칙을 실행 합니다. 기능 패리티 평가 대상 플랫폼 AzureSqlDatabase RdsSqlServer 소스 플랫폼을 사용 하는 경우 지원 되지 않습니다.  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | 호환성 규칙을 실행  | Y <br> AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendations 이어서 필요 합니다.
 |`/AssessmentEvaluateRecommendations`     | 기능 권장 사항 실행        | Y <br> (AssessmentEvaluateCompatibilityIssues 또는 AssessmentEvaluateRecommendationsis 필요)

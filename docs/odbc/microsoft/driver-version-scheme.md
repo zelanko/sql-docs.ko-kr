@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128042"
 ---
 # <a name="driver-version-scheme"></a>드라이버 버전 구성표
 > [!IMPORTANT]  
@@ -28,7 +28,7 @@ ms.locfileid: "47806531"
   
 |드라이버 버전|빌드 번호|가용성 기록|  
 |--------------------|------------------|--------------------------|  
-|1.0|2.00.6235|Visual c + + 4.2 및 Visual Basic 5.0, Enterprise Edition|  
+|1.0|2.00.6235|Visual C++ 4.2 및 Visual Basic 5.0, Enterprise Edition|  
 |2.0|2.73.7269|Visual Studio 97 및 MDAC 1.5 a|  
 |업데이트 2.0|2.73.7283.01|IIS 4.0|  
 |업데이트 2.0|2.73.7283.03|MDAC 1.5b 및 1.5 c|  

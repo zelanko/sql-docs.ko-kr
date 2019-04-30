@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128515"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에 개체를 나중에 복원 하는 **레코드 집합** 파일에서 개체입니다. 스키마 정보, 데이터, 보류 중인 변경 내용이 유지 됩니다.
@@ -37,7 +37,7 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 
 ## <a name="errors"></a>오류
  응용 프로그램에서이 공급자에서 발급 한 다음 오류를 검색할 수 있습니다.
 
-|상수|설명|
+|상수|Description|
 |--------------|-----------------|
 |E_BADSTREAM|열려 있는 파일에 올바른 형식이 없습니다 (즉, 형식이 ADTG 또는 XML).|
 |E_CANTPERSISTROWSET|합니다 **레코드 집합** 저장 하는 개체에 저장 되는 것을 방지 하는 특징이 있습니다.|

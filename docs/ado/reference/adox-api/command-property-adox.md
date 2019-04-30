@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1474eeb0ac4df68b72406379f5edaada5cc83dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183901"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
 ADO 지정 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들거나 프로시저를 실행 하는 데 사용할 수 있습니다.  

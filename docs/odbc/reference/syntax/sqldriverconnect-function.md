@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062411"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 함수(SQLDriverConnect Function)
 **규칙**  
@@ -147,7 +147,7 @@ SQLRETURN SQLDriverConnect(
   
  *연결 문자열* :: = *빈 문자열*[;] &#124; *특성*[;] &#124; *특성*; *연결 문자열*  
   
- *빈 문자열* :: =*특성* :: = *특성 키워드*=*특성-값* &#124; 드라이버 = [{}] *특성-값*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
  *특성-키워드* :: DSN = &#124; UID &#124; PWD &#124; *드라이버-정의-특성-키워드*  
   
@@ -367,6 +367,6 @@ int main() {
 |핸들 해제|[SQLFreeHandle 함수](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |연결 특성을 설정합니다.|[SQLSetConnectAttr 함수](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

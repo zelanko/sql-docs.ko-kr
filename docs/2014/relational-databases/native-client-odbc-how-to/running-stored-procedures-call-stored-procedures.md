@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200267"
 ---
 # <a name="call-stored-procedures-odbc"></a>저장 프로시저 호출(ODBC)
   SQL 문이 ODBC CALL 이스케이프 절을 Microsoft를 사용 하 여 저장된 프로시저를 호출 하는 경우?? SQL Server??? 드라이버가 보냅니다 원격 저장된 프로시저 호출 (RPC) 메커니즘을 사용 하 여 SQL server 절차. RPC 요청은 SQL Server의 문 구문 분석과 매개 변수 처리를 대부분 무시하므로 Transact-SQL EXECUTE 문을 사용할 때보다 속도가 향상됩니다.  

@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204651"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>지원되는 쿼리 형식(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md)의 다이어그램 창과 조건 창(그래픽 창)에서 다음과 같은 쿼리 형식을 만들 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52792775"
   
  그래픽 창에 나타낼 수 없는 SQL 문을 사용하여 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 해당 창을 흐리게 표시하여 현재 만들고 있는 쿼리를 반영하지 않음을 표시합니다. 그러나 흐리게 표시된 창은 여전히 활성 상태이며 대부분 이 창에서도 쿼리를 변경할 수 있습니다. 그래픽 창에 나타낼 수 있는 쿼리에 변경 내용이 반영되면 해당 그래픽 창은 더 이상 흐리게 표시되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [방법 도움말 항목을 쿼리 및 뷰 디자인 &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [쿼리 형식&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)  
   

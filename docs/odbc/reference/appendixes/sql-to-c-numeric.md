@@ -1,5 +1,5 @@
 ---
-title: 'C: SQL 숫자 | Microsoft Docs'
+title: 'SQL에서 C로: 숫자 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151285"
 ---
-# <a name="sql-to-c-numeric"></a>C: SQL 숫자
+# <a name="sql-to-c-numeric"></a>SQL에서 C로: 숫자
 
 숫자 ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
 

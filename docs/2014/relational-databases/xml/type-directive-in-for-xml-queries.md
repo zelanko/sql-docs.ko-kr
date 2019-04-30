@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193289"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 지원 합니다 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) 선택적으로 FOR XML 쿼리 결과가 반환 되도록 요청할 수 있습니다 `xml` TYPE 지시어를 지정 하 여 데이터 형식입니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 에 대해 XQuery를 지정 결과를 할당을 예는 `xml` 변수를 입력 하거나 작성 [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)합니다.  

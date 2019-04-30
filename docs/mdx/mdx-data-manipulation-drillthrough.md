@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187661"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 드릴스루
+# <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 - DRILLTHROUGH
 
 
   큐브에서 지정된 셀을 만드는 데 사용된 기본 테이블 행을 검색합니다.  
@@ -48,11 +48,11 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
 > [!IMPORTANT]  
 >  드릴스루 보안은 큐브에 정의된 일반 보안 옵션을 기반으로 합니다. 사용자가 MDX를 사용하여 일부 데이터를 가져올 수 없는 경우 드릴스루도 동일한 방식으로 사용자를 제한합니다.  
   
- MDX 문은 제목 셀을 지정합니다. 에 지정 된 값은 **MAXROWS** 인수는 결과 행 집합에서 반환 해야 하는 행의 최대 수를 나타냅니다.  
+ MDX 문은 제목 셀을 지정합니다. 지정 된 값을 **MAXROWS** 인수 결과 행 집합으로 반환 되어야 하는 행의 최대 수를 나타냅니다.  
   
- 기본적으로 반환되는 최대 행 수는 10,000개입니다. 즉, 두면 **MAXROWS** 지정 하지 않으면 받아볼 수 10, 000 행이 있습니다. 이 값이 너무 작으면 시나리오에 대해 설정할 수 있습니다 **MAXROWS** 을 더 높은 숫자와 같은 `MAXROWS 20000`합니다. 변경 하 여 기본값을 늘릴 수 인 경우 너무 낮은 overall는 **OLAP\Query\DefaultDrillthroughMaxRows** 서버 속성입니다. 이 속성을 변경 하는 방법에 대 한 자세한 내용은 참조 [Analysis Services에서 서버 속성](../analysis-services/server-properties/server-properties-in-analysis-services.md)합니다.  
+ 기본적으로 반환되는 최대 행 수는 10,000개입니다. 즉 두면 **MAXROWS** 지정 하지 않으면 하면 10,000 개의 행이 있습니다. 이 값이 너무 작으면 시나리오에 대 한 경우 설정할 수 있습니다 **MAXROWS** 을 더 높은 숫자와 같은 `MAXROWS 20000`합니다. 이 경우 너무 낮은 전체 변경 하 여 기본값을 늘릴 수 있습니다 합니다 **OLAP\Query\DefaultDrillthroughMaxRows** 서버 속성입니다. 이 속성을 변경 하는 방법에 대 한 자세한 내용은 참조 하십시오 [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)합니다.  
   
- 달리 지정되지 않은 경우 반환되는 열에는 다 대 다 차원 이외에 지정된 측정값의 측정값 그룹과 관련된 모든 차원 세분성 특성이 모두 포함됩니다. 차원과 측정값 그룹을 구별할 수 있도록 큐브 차원은 $로 시작됩니다. **반환** 절을 사용 하 여 드릴스루 쿼리에서 반환 된 열을 지정 합니다. 다음 함수는 단일 특성에 적용할 수 있습니다 또는에서 측정값은 **반환** 절.  
+ 달리 지정되지 않은 경우 반환되는 열에는 다 대 다 차원 이외에 지정된 측정값의 측정값 그룹과 관련된 모든 차원 세분성 특성이 모두 포함됩니다. 차원과 측정값 그룹을 구별할 수 있도록 큐브 차원은 $로 시작됩니다. 합니다 **반환** 절을 사용 하는 드릴스루 쿼리에서 반환 된 열을 지정 합니다. 다음 함수는 단일 특성을 적용할 수 있습니다 또는 측정값을 **반환** 절.  
   
  Name(attribute_name)  
  지정된 특성 멤버의 이름을 반환합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125469"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>데이터 원본 또는 드라이버 선택
 데이터 원본 또는 드라이버는 응용 프로그램에서 사용 하는 응용 프로그램에 하드 코드는 경우가 있습니다. 예를 들어, 사용자 지정 작성 응용 프로그램을 전송할 MIS 부서에서 다른 데이터 원본에서 데이터에는 이름이 포함 됩니다 해당 데이터 소스는 응용 프로그램 동작 하지 기타 데이터 원본입니다. 또 다른 예는 주문 항목에 사용 되는 것과 같은 수직적 응용 프로그램. 이러한 응용 프로그램 항상 알려진 응용 프로그램에서 미리 정의 된 스키마가 있는 동일한 데이터 소스를 사용 합니다.  

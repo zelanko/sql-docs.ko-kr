@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151507"
 ---
 # <a name="summary-basic-navigation"></a>요약: 기본 탐색
   개인적인 취향과 작업 요구 사항에 맞게 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 디자인 화면을 사용자 지정할 수 있습니다.  
@@ -31,6 +31,6 @@ ms.locfileid: "48086483"
 -   기본 레이아웃을 사용자 지정하려면 **시작 시** 옵션을 설정합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [2단원: Transact-SQL 작성](lesson-2-writing-transact-sql.md)  
+ [2단원: TRANSACT-SQL 작성](lesson-2-writing-transact-sql.md)  
   
   

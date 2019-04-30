@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a131d7607c798faed2e99a6e03713095bb6bb60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150074"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.  
@@ -47,13 +47,13 @@ ms.locfileid: "53358465"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 개념  
  Distributed Replay 환경을 구성하는 요소는 다음과 같습니다.  
   
--   **Distributed Replay 관리 도구**: Distributed Replay Controller와 통신하는 데 사용되는 콘솔 응용 프로그램 `DReplay.exe`. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
+-   **Distributed Replay 관리 도구**: 콘솔 응용 프로그램을 `DReplay.exe`distributed replay controller와 통신 하는 데 사용 합니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.  
   
--   **Distributed Replay controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller라는 Windows 서비스를 실행하는 컴퓨터. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.  
+-   **Distributed Replay controller**: 라는 Windows 서비스를 실행 하는 컴퓨터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 컨트롤러입니다. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.  
   
--   **Distributed Replay client**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Client라는 Windows 서비스를 실행하는 하나 이상의 컴퓨터(실제 또는 가상). 여러 Distributed Replay Client가 함께 작동하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대해 작업을 시뮬레이션합니다. 각 Distributed Replay 환경에 하나 이상의 클라이언트가 있을 수 있습니다.  
+-   **Distributed Replay client**: 하나 이상의 컴퓨터 (물리적 또는 가상) Windows 라는 서비스를 실행 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay client. 여러 Distributed Replay Client가 함께 작동하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 대해 작업을 시뮬레이션합니다. 각 Distributed Replay 환경에 하나 이상의 클라이언트가 있을 수 있습니다.  
   
--   **대상 서버**: Distributed Replay Client가 추적 데이터를 재생하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스. 테스트 환경에 대상 서버를 배치하는 것이 좋습니다.  
+-   **대상 서버**: 인스턴스의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 클라이언트가 추적 데이터를 재생 하는 데 사용할 수 있는 합니다. 테스트 환경에 대상 서버를 배치하는 것이 좋습니다.  
   
  Distributed Replay 관리 도구, Controller 및 Client를 서로 다른 컴퓨터에 설치하거나 동일한 컴퓨터에 설치할 수 있습니다. Distributed Replay Controller 또는 Client 서비스 인스턴스는 동일한 컴퓨터에서 하나만 실행할 수 있습니다.  
   

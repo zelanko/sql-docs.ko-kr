@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 999ff54caedd1eab946f46c8d89e539324c93c27
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199857"
 ---
 # <a name="modify-indexes-that-depend-on-the-return-type-of-hostid"></a>HOST_ID의 반환 형식에 따라 달라지는 인덱스를 수정합니다.
   HOST_ID 함수는 이제 `char(10)`을 반환합니다.  

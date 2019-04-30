@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159369"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL 설정
 Extendedansisql을 특성을 추가 하 여 연결 문자열에서 특성을 제어할 수 있습니다.  
@@ -26,7 +26,7 @@ Extendedansisql을 특성을 추가 하 여 연결 문자열에서 특성을 제
 |값|Description|  
 |-----------|-----------------|  
 |Extendedansisql을 = 0 (기본값)|이 설정은 새 기능을 사용 하지 않습니다.|  
-|Extendedansisql을 = 1|이 설정은 새 기능을 제공 합니다.|  
+|ExtendedAnsiSQL=1|이 설정은 새 기능을 제공 합니다.|  
   
  특성을 통해 DSN에 설정할 수도 있습니다는 **고급 옵션** 제어판을 통해 DSN을 구성 하는 경우 대화 상자.  
   

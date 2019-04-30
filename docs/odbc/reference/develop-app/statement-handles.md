@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148999"
 ---
 # <a name="statement-handles"></a>명령문 핸들
 A *문* 은 가장 쉽게 생각할 SQL 문 처럼 같은 **선택 \* 에서 직원**합니다. 그러나 문에 SQL 문 이상의-의 모든 문에 의해 만들어진 결과 집합 및 문 실행에 사용 되는 매개 변수와 같은 해당 SQL 문과 사용 하 여 연결 정보를 모두 구성 됩니다. 문을 필요가 없습니다 SQL 문이 응용 프로그램 정의 합니다. 예를 들어 경우 카탈로그 함수가 같은 **SQLTables** 실행 되는 문의 테이블 이름 목록을 반환 하는 미리 정의 된 SQL 문을 실행 합니다.  

@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187138"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL 사용 하 여 신속 하 게 MySQL 데이터베이스 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환, SQL Server 또는 Azure SQL DB에 결과 스키마를 업로드 및 MySQL에서 SQL Server 또는 Azure SQL DB에 데이터를 마이그레이션할 수 있습니다.  
@@ -76,7 +76,7 @@ SQL Server 또는 Azure SQL DB 메타 데이터 탐색기의 SQL Server 또는 A
 자세한 내용은 참조 하세요. [동기화 (SQL Server에는 MySQL / Azure SQL DB)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 MySQL 메타 데이터 탐색기에서 테이블을 선택 하면 9 개의 탭 표시 됩니다. **테이블**, **SQL**를 **형식 매핑**를 **데이터**,  **설정을**, **문자 집합 매핑**를 **SQL 모드**를 **속성**, 및 **보고서**합니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. SQL Server 메타 데이터 탐색기에서 테이블을 선택 하는 경우에 세 개의 탭 표시 됩니다. **테이블**, **SQL** 하 고 **데이터**입니다.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어 MySQL 메타 데이터 탐색기에서 테이블을 선택 하면 9 개의 탭이 표시 됩니다. **테이블**, **SQL**를 **형식 매핑**를 **데이터**를 **설정**를 **문자 집합 매핑**, **SQL 모드**하십시오 **속성**, 및 **보고서**합니다. 합니다 **보고서** 선택한 개체에 포함 된 보고서를 만든 후에 탭 정보를 포함 합니다. SQL Server 메타 데이터 탐색기에서 테이블을 선택 하면 세 개의 탭이 표시 됩니다. **테이블**하십시오 **SQL** 하 고 **데이터**입니다.  
   
 대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   
@@ -97,7 +97,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 |||  
 |-|-|  
-|**단추**|**함수**|  
+|**Button**|**함수**|  
 |**보고서 만들기**|SQL Server 또는 Azure SQL DB 개체를 선택한 MySQL 개체를 변환 하 고 변환 얼마나 성공적인 성과 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 MySQL 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
 |**스키마 변환**|SQL Server 또는 Azure SQL DB 개체를 선택한 MySQL 개체를 변환합니다.<br /><br />이 명령은 MySQL 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  
 |**데이터 마이그레이션**|MySQL 데이터베이스에서 SQL Server 또는 Azure SQL DB로 데이터를 마이그레이션합니다. 이 명령을 실행 하기 전에 MySQL 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환 하 고 SQL Server 또는 Azure SQL DB에 개체를 로드 합니다.<br /><br />이 명령은 MySQL 메타 데이터 탐색기에서 개체를 선택한 경우가 아니면 비활성화 됩니다.|  

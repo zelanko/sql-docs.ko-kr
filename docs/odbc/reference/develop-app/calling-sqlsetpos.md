@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70d574f867934af87ac7b5071b7f30bc9e89bccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199440"
 ---
 # <a name="calling-sqlsetpos"></a>SQLSetPos 호출
 Odbc 2. *x*, 행 상태 배열에 대 한 포인터를 인수로 **SQLExtendedFetch**합니다. 호출 하 여 나중에 수정한 행 상태 배열이 **SQLSetPos**합니다. 일부 드라이버는이 배열 간에 변경 되지 않으므로 의존 **SQLExtendedFetch** 하 고 **SQLSetPos**합니다. Odbc 3. *x*상태 배열에 대 한 포인터는 설명자 필드 이며 따라서 응용 프로그램 쉽게 변경할 수 있습니다 다른 배열로 가리키도록 합니다. 이 경우 ODBC 3는 문제를 수 있습니다. *x* 는 ODBC 2를 사용 하 여 응용 프로그램이 작동 합니다. *x* 드라이버 호출 하지만 **SQLSetStmtAttr** 배열 상태 포인터가 설정 하며 호출 **SQLFetchScroll** 데이터를 인출 합니다. 드라이버 관리자에 대 한 호출 시퀀스로 매핑합니다 **SQLExtendedFetch**합니다. 다음 코드에서는 일반적으로 될 때 오류가 발생 하 드라이버 관리자를 두 번째 매핑합니다 **SQLSetStmtAttr** 는 ODBC 2를 사용 하 여 작업 시 호출할 *.x* 드라이버:  

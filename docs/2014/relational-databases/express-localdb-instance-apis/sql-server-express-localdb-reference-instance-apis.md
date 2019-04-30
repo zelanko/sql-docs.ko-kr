@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128633"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>SQL Server Express LocalDB 인스턴스 API 참조
   기존 서비스 기반 SQL Server 환경에서는 단일 컴퓨터에 설치되는 개별 SQL Server 인스턴스가 실제로 분리됩니다. 즉, 각 인스턴스가 개별적으로 설치 및 제거되고, 별도의 이진 파일 집합을 사용하며, 별도의 서비스 프로세스에 따라 실행됩니다. SQL Server 인스턴스 이름을 사용하여 연결할 SQL Server 인스턴스를 지정합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "52776175"
 ### <a name="named-instance-naming-rules"></a>명명된 인스턴스 명명 규칙  
  LocalDB 인스턴스 이름은 최대 128자까지 지정할 수 있으며, `sysname` 데이터 형식에 따라 제한됩니다. 이는 NetBIOS 이름이 16자의 ASCII 문자로 제한되는 기존 SQL Server 인스턴스 이름과 비교할 때 중요한 차이점입니다. 이러한 차이 대 한 이유가 있는 LocalDB 데이터베이스 파일로 취급 하 고 따라서 인스턴스 이름을 선택에서 보다 자유롭게 사용자 이므로 파일 기반 의미 체계를 의미 합니다.  
   
- LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 일반적으로 으로 1-31, 따옴표 ("), / 유니코드 문자 보다 작은 (\<), 보다 큼 (>), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*), 물음표 (?), 백슬래시 (\\), 슬래시 (/) 및 합니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
+ LocalDB 인스턴스 이름은 파일 이름 구성 요소에 적합한 모든 유니코드 문자를 포함할 수 있습니다. 일반적으로 파일 이름 구성 요소에 잘못 된 문자가 문자를 포함 합니다. 으로 1-31, 따옴표 ("), / 유니코드 문자 보다 작은 (\<), 보다 큼 (>), 파이프 (|), 백스페이스 (\b), 탭 (\t), 콜론 (:), 별표 (*), 물음표 (?), 백슬래시 (\\), 슬래시 (/) 및 합니다. null 문자(\0)는 문자열 종료를 나타내는 데 사용되므로 허용됩니다. 첫 번째 null 문자 뒤의 모든 문자가 무시됩니다.  
   
 > [!NOTE]  
 >  부적합한 문자 목록은 운영 체제에 따라 다르며 이후 릴리스에서 변경될 수 있습니다.  

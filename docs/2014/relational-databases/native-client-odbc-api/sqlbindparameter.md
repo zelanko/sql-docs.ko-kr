@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067823"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter` 데이터 변환에 대 한 데이터를 제공 하는 데 사용 하는 경우의 부담을 제거할 수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 응용 프로그램의 클라이언트 및 서버 구성 요소에 대 한 성능이 크게 향상 합니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  

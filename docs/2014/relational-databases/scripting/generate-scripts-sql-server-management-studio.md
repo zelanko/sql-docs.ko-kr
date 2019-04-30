@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144666"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용하여 여러 개체에 대한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
   
-1.  **방법 선택:**  [스크립트 생성 및 게시 마법사](#GenPubScriptWiz), [개체 탐색기 스크립팅 메뉴](#OEScriptAsMenu)  
+1.  **메서드를 선택 합니다.**  [생성 및 게시 스크립트 마법사](#GenPubScriptWiz), [개체 탐색기 스크립팅 메뉴](#OEScriptAsMenu)  
   
-2.  **스크립트를 메뉴로 사용:**  [단일 개체 스크립팅](#ScriptSingleObject), [개체 탐색기를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOE), [개체 탐색기 정보를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOED)  
+2.  **스크립트를 메뉴로 사용:**  [단일 개체 스크립팅](#ScriptSingleObject)하십시오 [개체 탐색기를 사용 하 여 두 개체 스크립팅](#ScriptTwoObjectsOE), [개체 탐색기 정보를 사용 하 여 두 개체 스크립팅](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  

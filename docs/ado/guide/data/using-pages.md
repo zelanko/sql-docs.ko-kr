@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1eced0fae443a67c85cc1f3f8ec9b44867ce464
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184919"
 ---
 # <a name="using-pages"></a>페이지 사용
 사용 합니다 **PageCount** 속성에서 데이터 페이지 수를 결정 합니다 **레코드 집합** 개체입니다. *페이지* 레코드 같은 크기의 그룹이 합니다 **PageSize** 속성을 설정 합니다. 보다 적은 레코드가 있기 때문에 마지막 페이지 완료 되지 않더라도 **PageSize** 에서 추가 페이지로 계산 값을 **PageCount** 값입니다. 경우는 **레코드 집합** 개체는이 속성을 지원 하지 **PageCount** 나타내는-1이 됩니다는 **PageCount** 확인할 아닙니다.  

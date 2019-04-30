@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127861"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
 길이가 다른 문자열을 비교 하는 방법을 사용 하 여 결정 됩니다는 = Visual FoxPro SQL 명령에는 연산자입니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062421"
 ---
 # <a name="gateways-diagnostic-example"></a>게이트웨이 진단 예제
 게이트웨이 아키텍처를 드라이버는 ODBC를 지 원하는 게이트웨이에 요청을 보냅니다. 게이트웨이 DBMS에 요청을 보냅니다. 드라이버 형식 및에 대 한 인수를 반환 합니다. 드라이버 관리자와 인터페이스 하는 구성 요소 이므로 **SQLGetDiagRec**합니다.  

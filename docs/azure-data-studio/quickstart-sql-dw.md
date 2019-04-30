@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 72e7e0e83757b52ba7fba6a24cc91499ca4863b1
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143911"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>빠른 시작: 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 하 고 Azure SQL Data Warehouse에서 데이터를 쿼리 합니다.
 
@@ -36,7 +36,7 @@ SQL data warehouse에 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 
 사용 하 여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Azure SQL Data Warehouse 서버에 연결 합니다.
 
-1. 처음 실행 하면 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 는 **연결** 페이지가 열려야 합니다. 표시 되지 않는 경우는 **연결** 페이지에서 **연결 추가**, 또는 **새 연결** 아이콘에는 **서버** 사이드바:
+1. [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 처음 실행하면 **연결** 페이지가 열립니다. 표시 되지 않는 경우는 **연결** 페이지에서 **연결 추가**, 또는 **새 연결** 아이콘에는 **서버** 사이드바:
    
    ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-icon.png)
 
@@ -54,7 +54,7 @@ SQL data warehouse에 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 
    ![새 연결 아이콘](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 서버에 연결 하려면 Azure Data Studio 허용 하는 방화벽 규칙이 없는 경우는 **새 방화벽 규칙 만들기** 양식이 열립니다. 양식을 새 방화벽 규칙을 만들려고 합니다. 자세한 내용은 참조 하세요 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)합니다.
+3. 서버에 Azure Data Studio가 연결할 수 있게 허용하는 방화벽 규칙이 없는 경우, **새 방화벽 규칙 만들기** 양식이 열립니다. 새 방화벽 규칙을 생성하는 양식을 작성합니다. 자세한 내용은 [방화벽 규칙](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)을 참조합니다.
 
    ![새 방화벽 규칙](media/quickstart-sql-dw/firewall.png)  
 
@@ -126,7 +126,7 @@ SQL data warehouse에 아직 없는 경우 [SQL Data Warehouse 만들기](https:
    ```
 
 
-## <a name="view-the-result"></a>결과 보려면
+## <a name="view-the-result"></a>결과 확인하기
 1. 다음 코드 조각을 쿼리 편집기에 붙여넣고 클릭 **실행**:
 
    ```sql
@@ -142,7 +142,7 @@ SQL data warehouse에 아직 없는 경우 [SQL Data Warehouse 만들기](https:
 ## <a name="clean-up-resources"></a>리소스 정리
 
 이 빠른 시작을 기반으로이 컬렉션의 다른 문서입니다. 후속 빠른 시작을 사용 하 여 작업을 계속 하려는 경우 정리 하지 마세요이 빠른 시작에서 만든 리소스입니다. 계속 하지 않으려는 경우 다음 단계를 사용 하 여 Azure portal에서이 빠른 시작에서 만든 리소스를 삭제 합니다.
-필요 없는 리소스 그룹을 삭제 하 여 리소스를 정리 합니다. 자세한 내용은 참조 하세요 [리소스를 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)합니다.
+필요 없는 리소스 그룹을 삭제 하 여 리소스를 정리 합니다. 자세한 내용은 [리소스를 정리](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources) 참조합니다.
 
 
 ## <a name="next-steps"></a>다음 단계

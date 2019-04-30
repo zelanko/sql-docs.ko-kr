@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 072373adbca54132b3f1f34284d12c31f721e7c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127921"
 ---
 # <a name="scalar-functions"></a>스칼라 함수
 Microsoft ODBC 데스크톱 데이터베이스 드라이버 다음 스칼라 함수를 지원합니다.  
@@ -32,7 +32,7 @@ Microsoft ODBC 데스크톱 데이터베이스 드라이버 다음 스칼라 함
 |CONVERT|LEFT|RTRIM|  
 |CURDATE|LENGTH|SUBSTRING|  
 |CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|User|  
+|DATABASE|LTRIM|USER|  
 |DAYOFMONTH|MOD|YEAR|  
 |DAYOFWEEK|MONTH||  
   

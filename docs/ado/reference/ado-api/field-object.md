@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 002e0f570aa2143ddba4a5b55f3cba1537389e77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138685"
 ---
 # <a name="field-object"></a>Field 개체
 일반적인 데이터 형식 사용 하 여 데이터의 열을 나타냅니다.  

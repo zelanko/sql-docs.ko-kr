@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 25972bd46bbf28a56a8a44bd5f8a49132eb93acf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155713"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 구성 파일
   ReportingServicesService.exe.config 파일에는 추적을 구성하는 설정이 들어 있습니다.  

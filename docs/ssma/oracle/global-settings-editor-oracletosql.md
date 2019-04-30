@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: bb07c2ca671fccbfdb737004ea0786359873a179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138855"
 ---
 # <a name="global-settings-editor-oracletosql"></a>전역 설정(편집기)(OracleToSQL)
 편집기 페이지를 사용 합니다 **전역 설정** 대화 상자에서 코드 편집기 창에 대 한 설정을 지정 합니다.  
