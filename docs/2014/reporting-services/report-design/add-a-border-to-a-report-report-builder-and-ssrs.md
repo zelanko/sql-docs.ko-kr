@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1bb9deac03a2ba3683922a8c7e361cb908c787c0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206910"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>보고서에 테두리 추가(보고서 작성기 및 SSRS)
   선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다.  

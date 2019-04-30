@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134955"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에 Windows Server Update Services (WSUS) 구성
 이러한 지침은 Windows Server Update Services (WSUS) 구성 마법사를 사용 하 여 Analytics Platform System에 대 한 WSUS를 구성 하는 단계를 안내 합니다. 어플라이언스로 소프트웨어 업데이트를 적용 하려면 먼저 WSUS를 구성 해야 합니다. WSUS는 이미 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  
@@ -107,7 +107,7 @@ WSUS를 구성 하려면:
   
     이 서버에서 Microsoft Update를 액세스 하기 위해 프록시 서버 또는 다른 업스트림 서버에 필요한 경우 여기서; 프록시 서버 설정을 구성할 수 있습니다. 그렇지 않은 경우 클릭 **다음**합니다.  
   
-    ![WSUS 프록시](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
+    ![WSUS Proxy](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
     #### <a name="to-configure-proxy-server-settings"></a>프록시 서버 설정을 구성 하려면  
   

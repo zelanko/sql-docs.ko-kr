@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192967"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
   다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
@@ -35,10 +35,10 @@ ms.locfileid: "52795620"
 ## <a name="considerations-for-multiserver-environments"></a>다중 서버 환경 고려 사항  
  지원되는 MSX/TSX 구성은 다음 표를 참조하십시오.  
   
-||**TSX = 7.0**|**TSX = 8.0 &LT; SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX = 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 이상**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
-|**MSX = 8.0 &LT; SP3**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
+|**MSX = 8.0 < SP3**|사용자 계정 컨트롤|예|아니오|아니요|아니요|아니요|아니요|  
 |**MSX = 8.0 SP3 이상**|아니요|아니요|예|예|예|예|사용자 계정 컨트롤|  
 |**MSX = 9.0**|아니요|아니요|아니요|예|예|예|사용자 계정 컨트롤|  
 |**MSX = 10.0**|아니요|아니요|아니요|아니요|예|예|사용자 계정 컨트롤|  
@@ -67,7 +67,7 @@ ms.locfileid: "52795620"
 |마스터 서버에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다.|[마스터 서버에서 여러 대상 서버 제거](defect-multiple-target-servers-from-a-master-server.md)|  
 |대상 서버의 상태를 확인하는 방법에 대해 설명합니다.|[sp_help_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [프록시를 사용하는 다중 서버 작업 문제 해결](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

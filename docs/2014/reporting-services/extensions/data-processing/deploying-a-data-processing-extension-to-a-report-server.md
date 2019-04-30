@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164073"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>방법: 보고서 서버에 데이터 처리 확장 프로그램 배포
   보고서 서버는 렌더링된 보고서의 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 서버에 전용 어셈블리로 배포해야 합니다. 또한 보고서 서버 구성 파일 RSReportServer.config에서 항목을 만들어야 합니다.  

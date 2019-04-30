@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0444399eb056b733bf0c9f9e7506b434e06b84db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223284"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 속성(SqlService 클래스)
   서비스의 이진 경로를 가져옵니다.  

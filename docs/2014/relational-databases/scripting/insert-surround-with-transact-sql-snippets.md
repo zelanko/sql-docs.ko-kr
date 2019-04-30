@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143667"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>코드 감싸기 Transact-SQL 조각 삽입
   코드 감싸기 조각은 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 BEGIN, IF 또는 WHILE 블록으로 묶을 때 시작 지점으로 사용할 수 있는 템플릿입니다.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205709"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>이전 버전에서 데이터베이스 다이어그램 업그레이드(Visual Database Tools)
   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 기반으로 만든 데이터베이스 다이어그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 다이어그램으로 설정하면 자동으로 업그레이드됩니다. 참조 다이어그램 설정에 대 한 자세한 단계 [데이터베이스 다이어그램 디자이너 설정 &#40;Visual Database Tools&#41;](visual-database-tools.md)합니다.  

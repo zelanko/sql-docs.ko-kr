@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a14a3eb7a7b80c5af04ba86e75f80fd20329558f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205024"
 ---
 # <a name="cluster-node-configuration"></a>클러스터 노드 구성
   클러스터 노드 구성 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스에 노드를 추가하거나 제거할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치(Failover) 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다.  

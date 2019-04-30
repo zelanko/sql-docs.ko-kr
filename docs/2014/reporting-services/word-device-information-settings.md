@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 628b9775ecd7fa23a7f63f0738b5c39c5cca2d5b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206273"
 ---
 # <a name="word-device-information-settings"></a>Word 디바이스 정보 설정
   다음 표는 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

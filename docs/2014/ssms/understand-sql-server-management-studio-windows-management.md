@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188661"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio의 창 관리 이해
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 도구 창은 많은 기능을 가진 유연하고 효율적인 시스템입니다. 이 시스템을 사용하여 다음을 수행할 수 있습니다.  

@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142424"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: 연결 및 SQL Server를 사용 하 여 쿼리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 이 빠른 시작은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]을 사용하여 SQL Server에 연결한 다음 TRANSACT-SQL (T-SQL) 문을 사용하여 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자습서에 있는 *TutorialDB*를 생성하는 방법을 보여줍니다.

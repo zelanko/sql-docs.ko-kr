@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 985cb58b860c594e8cfc3e405934fafd9cfb245a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184959"
 ---
 # <a name="using-a-recordset-object"></a>레코드 집합 개체 사용
 사용할 수 있습니다 **Recordset.Open** 를 암시적으로 연결을 설정 하 고 단일 작업에서 해당 연결을 통해 명령을 실행 합니다. Visual Basic의 예를 들어:  

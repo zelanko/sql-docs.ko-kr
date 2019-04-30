@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192447"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults 메서드(CInstance 클래스)
   기존 데이터 덮어쓰기 옵션을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스에 대한 모든 기본값을 설정합니다.  

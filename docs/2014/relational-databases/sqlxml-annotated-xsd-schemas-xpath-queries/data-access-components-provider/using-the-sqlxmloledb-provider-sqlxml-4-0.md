@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: abf009296c72c298b77e563f5de5482d298ac2df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127758"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
   이 섹션의 항목에서는 SQLXMLOLEDB 공급자 고유 속성의 사용 방법을 보여 주는 ADO 예제 응용 프로그램에 대해 설명합니다.  

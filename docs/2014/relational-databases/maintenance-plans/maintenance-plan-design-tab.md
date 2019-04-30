@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184549"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
   **유지 관리 계획(디자인 탭)** 을 사용하여 유지 관리 계획 및 해당 하위 계획의 속성을 지정할 수 있습니다. 도구 상자에서 계획 디자이너로 태스크를 끌어다 놓은 다음 태스크 그룹을 마우스 오른쪽 단추로 클릭하여 분기 실행 경로를 만듭니다. 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지로 저장됩니다.  

@@ -19,11 +19,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1cf23a076f7e4d7e873f48988364c51b1daa03b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138810"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>프로젝트 (AccessToSQL) 만들기 및 관리
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 있습니다 SSMA 프로젝트를 먼저 만들어야 합니다. 마이그레이션하려는 Access 데이터베이스에 대 한 메타 데이터가 포함 된 파일이 프로젝트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받을 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보 및 프로젝트 설정 합니다.  

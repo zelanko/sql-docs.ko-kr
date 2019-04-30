@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213325"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,13 +26,13 @@ ms.locfileid: "47855421"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  Visual FoxPro ODBC 드라이버 및 연결 핸들을 사용 하 여 연결 된 데이터 원본에 대 한 일반 정보를 반환 합니다 *hdbc*합니다. 다음 목록은 각 Visual FoxPro ODBC 드라이버에서 반환 된 값 *fInfoType* 인수 및 반환된 값에 대 한 주석입니다.  
   
  자세한 내용은 [SQLGetInfo](../../odbc/reference/syntax/sqlgetinfo-function.md) 에 *ODBC 프로그래머 참조*합니다.  
   
-## <a name="a"></a>A  
+## <a name="a"></a>변수를 잠그기 위한  
  SQL_ACCESSIBLE_PROCEDURES 반환 ' N '입니다.  
   
  SQL_ACCESSIBLE_TABLES 'Y'를 반환합니다.  
@@ -142,7 +142,7 @@ ms.locfileid: "47855421"
   
 -   SQL_FD_FETCH_RELATIVE  
   
--   SQL_FD_FETCH_BOOKMARK 합니다.  
+-   SQL_FD_FETCH_BOOKMARK.  
   
  SQL_FILE_USAGE는 데이터베이스 (.dbc 파일)에 대 한 SQL_FILE_QUALIFIER 모두를 반환 하 고 무료로 (.dbf 파일) 데이터 원본 테이블.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "47855421"
   
  SQL_MAX_TABLE_NAME_LEN 128을 반환합니다.  
   
- SQL_MAX_TABLES_IN_SELECT 16을 반환합니다.  
+ SQL_MAX_TABLES_IN_SELECT returns 16.  
   
  SQL_MAX_USER_NAME_LEN 0을 반환합니다.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "47855421"
   
 -   SQL_FN_STR_UCASE  
   
--   SQL_FN_STR_SPACE 합니다.  
+-   SQL_FN_STR_SPACE.  
   
  SQL_SUBQUERIES 반환합니다.  
   
@@ -367,7 +367,7 @@ ms.locfileid: "47855421"
   
 -   SQL_SQ_IN  
   
--   SQL_SQ_QUANTIFIED 합니다.  
+-   SQL_SQ_QUANTIFIED.  
   
  SQL_SYSTEM_FUNCTIONS 반환합니다.  
   
@@ -384,7 +384,7 @@ ms.locfileid: "47855421"
   
  SQL_TIMEDATE_ADD_INTERVALS 반환합니다.  
   
--   SQL_FN_TSI_ 초  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855421"
   
  SQL_TIMEDATE_DIFF_INTERVALS 반환합니다.  
   
--   SQL_FN_TSI_ 초  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   

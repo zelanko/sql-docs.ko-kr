@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157943"
 ---
 # <a name="implementing-a-case-statement"></a>CASE 문 구현
   CASE 문은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 문의 기능을 구현하는 방법을 보여 줍니다.  

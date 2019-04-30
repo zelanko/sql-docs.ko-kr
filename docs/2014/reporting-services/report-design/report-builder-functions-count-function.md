@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1aaede74e9c9aa693a80149eebdc5aabb069ce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216210"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 정해진 범위의 컨텍스트에서 계산되는 Null이 아닌 값의 개수를 반환합니다.  

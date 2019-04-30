@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7ad878072f8139cc95d6dc34c01f5f48835774a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067598"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
   sp_helptrigger 시스템에서 반환 된 결과 집합의 마지막 열 trigger_schemaias 저장 프로시저입니다.  

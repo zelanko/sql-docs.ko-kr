@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142942"
 ---
 # <a name="types-of-events"></a>이벤트 형식
 기본적인 두 가지 이벤트가 있습니다. "이벤트는" 작업이 시작 되기 전에 호출 됩니다, 일반적으로 "은"-이름에 예를 들어 포함 **WillChangeRecordset** 하거나 **WillConnect**합니다. 이벤트는 일반적으로 완료 된 후 호출 되는 이벤트 이름-에 예를 들어, "완료 됨"을 포함 **RecordChangeComplete** 하거나 **ConnectComplete**합니다. -같이 예외 존재 **InfoMessage** -연결된 된 작업이 완료 된 후 이러한 현상이 발생 하지만 합니다.  

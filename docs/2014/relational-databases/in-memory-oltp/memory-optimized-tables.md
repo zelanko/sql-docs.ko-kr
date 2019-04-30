@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158757"
 ---
 # <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP는 효율적이고 메모리 최적화 데이터 액세스, 비즈니스 논리의 고유 컴파일, 잠금 및 래치 없는 알고리즘을 통해 OLTP 응용 프로그램의 성능을 향상하는 데 도움이 됩니다. 메모리 내 OLTP 기능에는 메모리 최적화 테이블 및 테이블 형식뿐 아니라 이 테이블에 효율적으로 액세스하기 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 고유 컴파일도 포함됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP는 효율적이고 메모리 최적화 데이터 액세스, 비즈니스 논리의 고유 컴파일, 잠금 및 래치 없는 알고리즘을 통해 OLTP 애플리케이션의 성능을 향상하는 데 도움이 됩니다. 메모리 내 OLTP 기능에는 메모리 최적화 테이블 및 테이블 형식뿐 아니라 이 테이블에 효율적으로 액세스하기 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 고유 컴파일도 포함됩니다.  
   
  메모리 최적화 테이블에 대한 자세한 내용은 다음을 참조하세요.  
   

@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156260"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
-ADO는 SQL Server에 연결 하려면 c + + 프로그램에서 사용 됩니다. 물론, 또한 작동 클라우드에서 Azure SQL Database에 연결 합니다.
+ADO는 C++ SQL Server에 연결 하는 프로그램입니다. 물론, 또한 작동 클라우드에서 Azure SQL Database에 연결 합니다.
 
 이 문서의 각 섹션에는 ADO의 구성 요소를 설명합니다.
 
@@ -34,7 +34,7 @@ ADO는 SQL Server에 연결 하려면 c + + 프로그램에서 사용 됩니다.
  Microsoft ActiveX Data Objects (ADO) 다양 한 OLE DB 공급자를 통해 원본에서에서 데이터 액세스 및 조작 하도록 클라이언트 응용 프로그램을 사용 하도록 설정 합니다. 기본 이점은 해당 사용 하기 쉽고, 높은 속도, 메모리 오버 헤드를 작은 디스크 공간을 보여 줍니다. ADO는 클라이언트/서버 및 웹 기반 응용 프로그램을 구축 하기 위한 주요 기능을 지원 합니다.  
   
 ## <a name="ado-md"></a>ADO MD  
- Microsoft ActiveX Data Objects (다차원) (ADO MD)는 Microsoft Visual Basic 및 Microsoft Visual c + +과 같은 언어의 다차원 데이터에 쉽게 액세스를 제공합니다. ADO MD Microsoft ActiveX 데이터 개체 (ADO) CubeDef 및 셀 집합 개체와 같은 다차원 데이터에 특정 개체를 포함 하도록 확장 합니다. ADO MD를 사용 하 여 다차원 스키마 찾아보기는 큐브를 쿼리 및 결과 검색할 수 있습니다.  
+ Microsoft ActiveX Data Objects (다차원) (ADO MD) Microsoft Visual Basic 및 Microsoft Visual과 같은 언어의 다차원 데이터에 쉽게 액세스를 제공 C++입니다. ADO MD Microsoft ActiveX 데이터 개체 (ADO) CubeDef 및 셀 집합 개체와 같은 다차원 데이터에 특정 개체를 포함 하도록 확장 합니다. ADO MD를 사용 하 여 다차원 스키마 찾아보기는 큐브를 쿼리 및 결과 검색할 수 있습니다.  
   
  ADO, 마찬가지로 ADO MD 데이터에 액세스 하는 기본 OLE DB 공급자를 사용 합니다. ADO MD를 사용 하려면 OLE DB OLAP 사양에 정의 된 대로 공급자는 다차원 데이터 (MDP 공급자) 여야 합니다. 와 달리 테이블 형식 데이터 공급자 (Tdp) 다차원 뷰에서 데이터 있는 데이터 테이블 형식 뷰에 제공합니다. 공급자에서 지원 되는 동작과 특정 구문에 대 한 자세한 정보에 대 한 OLAP OLE DB 공급자에 대 한 설명서를 참조 하십시오.  
   

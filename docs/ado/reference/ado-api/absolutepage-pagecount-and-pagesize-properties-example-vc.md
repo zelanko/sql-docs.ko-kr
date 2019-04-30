@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155201"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount, PageSize 속성 예제 (VC + +)
 이 예제에서는 합니다 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)를 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성 이름을 표시에서 날짜를 고용 하는 ***직원*** 테이블, 한 번에 5 개 레코드입니다.  

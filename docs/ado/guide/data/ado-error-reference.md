@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063079"
 ---
 # <a name="ado-errors"></a>ADO 오류
-합니다 **ErrorValueEnum** 상수 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 된 상수의 전체 목록은 참조 하세요 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션에서는 몇 가지 흥미로운 오류 검사를 하면 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 일부 특정 한 상황에 설명 합니다. 모두를 **ErrorValueEnum** 상수 및 짧은 양의 10 진수 나열 됩니다.
+합니다 **ErrorValueEnum** 상수 ADO 오류 값을 설명 합니다. 이러한 값을 포함 하 여 열거 된 상수의 전체 목록은 참조 [부록 b: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)합니다. 이 섹션에서는 몇 가지 흥미로운 오류 검사를 하면 또는 문제를 해결 하려면 솔루션을 발생 시킬 수 있는 일부 특정 한 상황에 설명 합니다. 모두를 **ErrorValueEnum** 상수 및 짧은 양의 10 진수 나열 됩니다.
 
 |Number|ErrorValueEnum 상수|설명/가능한 원인|
 |------------|-----------------------------|----------------------------------|
@@ -54,8 +54,8 @@ ms.locfileid: "51600923"
 |**3714**|**adErrInvalidTransaction**|트랜잭션 조정 유효 하지 않거나 시작 되지 않았습니다.|
 |**3715**|**adErrNotExecuting**|실행 하지 않는 동안 작업을 수행할 수 없습니다.|
 |**3716**|**adErrUnsafeOperation**|이 컴퓨터의 보안 설정이 다른 도메인에 있는 데이터 원본을 액세스할 수 없습니다.|
-|**3717**|**adWrnSecurityDialog**|내부용으로만 사용할 수 있습니다. 사용 하지 마세요. (항목 이해를 돕기 위해 포함 되었습니다. 이 오류에에서 표시 되지 코드입니다.)|
-|**3718**|**adWrnSecurityDialogHeader**|내부용으로만 사용할 수 있습니다. 사용 하지 마세요. (이해를 돕기 위해 포함 된 항목입니다. 이 오류에에서 표시 되지 코드입니다.)|
+|**3717**|**adWrnSecurityDialog**|내부 전용입니다. 사용 하지 마세요. (항목 이해를 돕기 위해 포함 되었습니다. 이 오류에에서 표시 되지 코드입니다.)|
+|**3718**|**adWrnSecurityDialogHeader**|내부 전용입니다. 사용 하지 마세요. (이해를 돕기 위해 포함 된 항목입니다. 이 오류에에서 표시 되지 코드입니다.)|
 |**3719**|**adErrIntegrityViolation**|데이터 값 필드의 무결성 제약 조건과 충돌 합니다. 에 대 한 새 값을 **필드** 중복 키를 누르면 됩니다. 두 레코드 간의 관계의 한쪽을 형성 하는 값은 업데이트할 수 없습니다.|
 |**3720**|**adErrPermissionDenied**|권한 부족 필드에 쓸 수 없습니다. 연결 문자열에 명명 된 사용자를 쓸 수 있는 적절 한 권한이 없는 **필드**합니다.|
 |**3721**|**adErrDataOverflow**|데이터 값 필드 데이터 형식으로 나타낼 수 너무 큽니다. 대상된 필드에 너무 큰 숫자 값이 할당 되었습니다. 예를 들어 정수 (long) 값은 정수 (short) 필드에 할당 되었습니다.|

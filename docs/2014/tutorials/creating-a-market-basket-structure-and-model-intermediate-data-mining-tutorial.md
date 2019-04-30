@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190837"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>시장 바구니 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   데이터 원본 뷰를 만들었으므로 이제 데이터 마이닝 마법사를 사용하여 새 마이닝 구조를 만듭니다. 이 태스크에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 기반으로 하는 마이닝 구조 및 마이닝 모델을 만듭니다.  

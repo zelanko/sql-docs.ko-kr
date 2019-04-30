@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184176"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 속성 예제(VC++)
 설정 된 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성 유효 하 고 열린 연결을 "열립니다" 카탈로그입니다. 열린 카탈로그에서 해당 카탈로그에 포함 된 스키마 개체를 액세스할 수 있습니다.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e2b5fc47b6823a91dd4bb7f74d3ea65fca13bce9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222556"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>태스크 11: 조건부 분할 변환을 추가하여 중복 항목 필터링
   이 작업에서는 조건부 분할 변환을 데이터 흐름에 추가합니다. 이 변환은 들어오는 레코드 집합에서 중복 항목을 필터링하는 데 도움이 됩니다. 유사 항목 그룹 변환은 일치하는 것으로 발견된 레코드를 그룹화하고 레코드 중 하나를 피벗 레코드로 선택합니다. 그룹의 모든 레코드는 동일한 _key_out 값을 갖습니다. 그룹의 피벗 레코드는 _key_in 값이 _key_out 값과 동일합니다. 그룹의 다른 레코드는 _key_in 및 _key_out 값이 서로 다릅니다. 따라서 _key_in==_key_out 조건을 사용해서 필터링하면 그룹의 피벗 행만 표시됩니다.  

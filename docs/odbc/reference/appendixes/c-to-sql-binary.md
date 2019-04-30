@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76c2e4673d9b561aeb5af3e61e1e4dc8532195d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201602"
 ---
 # <a name="c-to-sql-binary"></a>C에서 SQL로: 이진
 이진 ODBC C 데이터 형식에 대 한 식별자가 있습니다.  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f28c72a291c145171f7084524fe5dd5cce7c12a0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223266"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 속성(SqlService 클래스)
   서비스를 일시 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  

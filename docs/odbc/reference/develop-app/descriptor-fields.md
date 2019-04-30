@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049779"
 ---
 # <a name="descriptor-fields"></a>설명자 필드
 설명자 포함 *머리글* 하 고 *레코드* 완전히 열 또는 매개 변수를 설명 하는 필드.  
@@ -43,7 +43,7 @@ ms.locfileid: "47696582"
 |SQL_DESC_BASE_TABLE_NAME|SQL_DESC_NULLABLE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_DESC_OCTET_LENGTH|  
 |SQL_DESC_CATALOG_NAME|SQL_DESC_OCTET_LENGTH_PTR|  
-|SQL_DESC_CONCISE_TYPE|DESC_PARAMETER_TYPE|  
+|SQL_DESC_CONCISE_TYPE|SQL_DESC_PARAMETER_TYPE|  
 |SQL_DESC_DATA_PTR|SQL_DESC_PRECISION|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|SQL_DESC_SCALE|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|SQL_DESC_SCHEMA_NAME|  

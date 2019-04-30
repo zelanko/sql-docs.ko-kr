@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185818"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>데이터 세트 필드 컬렉션 참조(보고서 작성기 및 SSRS)
   보고서의 각 데이터 세트에는 Fields 컬렉션이 하나씩 있습니다. Fields 컬렉션은 데이터 세트 쿼리에서 지정하는 필드와 사용자가 만드는 모든 추가 계산 필드의 집합입니다. 데이터 세트를 만든 후 필드 컬렉션이 **보고서 데이터** 창에 표시됩니다.  

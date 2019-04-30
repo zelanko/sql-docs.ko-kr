@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b490a0f4876f911923ed0429f33d332b96768792
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131341"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath 데이터 형식(SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 및 XSD(XML 스키마)의 데이터 형식은 각각 다릅니다. 예를 들어 XPath에는 정수나 날짜 데이터 형식이 없지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 XSD에는 이러한 데이터 형식이 많습니다. XSD는 시간 값에 나노초 정밀도를 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 최대 1/300초의 정밀도를 사용합니다. 따라서 한 데이터 형식을 다른 데이터 형식에 매핑할 수 없는 경우도 있습니다. 매핑에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD 데이터 형식에 데이터 형식을 참조 하십시오. [데이터 형식 강제 변환 및 주석 sql:datatype &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "52796421"
 |둘 모두 노드 집합이 아닙니다.|두 피연산자를 모두 `number`로 변환한 다음 비교합니다.|두 피연산자를 모두 일반 형식으로 변환한 다음 비교합니다. 둘 중 하나가 `boolean`이면 `boolean`으로 변환하고 둘 중 하나가 `number`이면 `number`로 변환하며 그 외의 경우에는 `string`으로 변환합니다.|  
   
 > [!NOTE]  
->  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함하기 위해 SQL Server 2000에서는 XPath 사양에 대한 다음과 같은 변형을 제공합니다. 관계형 연산자가 `string`을 `string`과 비교하거나 노드 집합을 `string`과 비교하거나 문자열 값 노드 집합을 문자열 값 노드 집합과 비교하면 `string` 비교가 아닌 `number` 비교가 수행됩니다.  
+>  XPath 관계형 연산자는 항상 해당 피연산자를 `number`로 변환하므로 `string` 비교는 가능하지 않습니다. 날짜 비교를 포함 하려면 SQL Server 2000에서는 XPath 사양에이 변형을 제공 합니다. 관계형 연산자를 비교 하는 경우를 `string` 에 `string`, 노드 집합이 `string`, 또는 문자열 값 노드 집합을 문자열 값 노드 집합에는 `string` 비교 (하지를 `number` 비교) 수행 됩니다.  
   
 ## <a name="node-set-conversions"></a>노드 집합 변환  
  노드 집합 변환이 항상 직관적이지는 않습니다. 노드 집합은 집합에 있는 첫 번째 노드의 문자열 값만 사용하여 `string`으로 변환됩니다. 노드 집합은 노드 집합이 `number`으로 변환된 다음 이 `string`이 다시 `string`로 변환되는 방법으로 `number`로 변환됩니다. 노드 집합은 해당 노드 집합의 존재 여부가 테스트되는 방식을 통해 `boolean`으로 변환됩니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "52796421"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 노드 집합에 대해 위치 선택을 수행하지 않습니다. 예를 들어 XPath 쿼리 `Customer[3]`는 세 번째 고객을 의미하는데 이러한 종류의 위치 선택이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 지원되지 않습니다. 따라서 XPath 사양에서 설명하는 노드 집합에서 `string`으로의 변환이나 노드 집합에서 `number`로의 변환이 구현되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 XPath 사양에 "첫 번째" 의미 체계가 지정된 경우 항상 "임의" 의미 체계를 사용합니다. 예를 들어, XPath 쿼리는 W3C XPath 사양에 따라 `Order[OrderDetail/@UnitPrice > 10.0]` 해당 주문을 선택 하는 첫 번째 **OrderDetail** 가 **단가** 10.0 보다 큰. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath 쿼리를 사용 하 여 해당 주문 선택 **OrderDetail** 에 **단가** 10.0 보다 큰.  
   
- `boolean`으로 변환될 때는 존재 테스트가 수행됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]`는 SQL 식 "Products.Discontinued = 1"이 아니라 SQL 식 "Products.Discontinued is not null"과 같습니다. 이 XPath 쿼리를 "Products.Discontinued = 1"과 같게 만들려면 먼저 노드 집합을 `boolean`와 같은 `number`이 아닌 형식으로 변환합니다.  `Products[number(@Discontinued) = true()]`) 을 입력합니다.  
+ `boolean`으로 변환될 때는 존재 테스트가 수행됩니다. 따라서 XPath 쿼리 `Products[@Discontinued=true()]`는 SQL 식 "Products.Discontinued = 1"이 아니라 SQL 식 "Products.Discontinued is not null"과 같습니다. 이 XPath 쿼리를 "Products.Discontinued = 1"과 같게 만들려면 먼저 노드 집합을 `boolean`와 같은 `number`이 아닌 형식으로 변환합니다. `Products[number(@Discontinued) = true()]`) 을 입력합니다.  
   
  대부분의 연산자는 노드 집합의 임의 노드 또는 특정 노드에 대해 TRUE이면 TRUE가 되도록 정의되어 있으므로 노드 집합이 비어 있으면 이러한 연산의 결과가 항상 FALSE입니다. 따라서 A가 비어 있으면 `A = B`와 `A != B`는 모두 FALSE이고 `not(A=B)`와 `not(A!=B)`는 TRUE입니다.  
   
@@ -128,7 +128,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X는 알 수 없는 형식입니다.|X는 `string`입니다.|X는 `number`입니다.|X는 `boolean`입니다.|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN (X) &GT; 0|X != 0|-|  
   
 ## <a name="examples"></a>예  
   

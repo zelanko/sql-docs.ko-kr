@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228051"
 ---
 # <a name="topcount-mdx"></a>TopCount(MDX)
 
@@ -39,12 +39,12 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 숫자 식이 지정 되는 **TopCount** 내림차순으로 지정된 된 집합에 대해 계산 된 숫자 식으로 지정 된 값에 따라 지정 된 집합으로 지정 된 집합의 튜플을 정렬 작동 합니다. 집합을 정렬 한 후의 **TopCount** 함수는 가장 높은 값을 갖는 튜플에의 지정 된 수를 반환 합니다.  
+ 숫자 식이 지정 되는 **TopCount** 순서 지정에 대해 계산 된 숫자 식으로 지정 된 값에 따라 지정 된 집합에서 지정 된 집합의 튜플을 내림차순 정렬 함수 이 옵션을 설정 합니다. 집합을 정렬 합니다 **TopCount** 함수는 튜플 가장 높은 값을 사용 하 여 지정 된 수를 반환 합니다.  
   
 > [!IMPORTANT]  
->  마찬가지로 [BottomCount](../mdx/bottomcount-mdx.md) 함수는 **TopCount** 함수 계층을 항상 무시 합니다.  
+>  같은 합니다 [BottomCount](../mdx/bottomcount-mdx.md) 함수는 **TopCount** 함수 계층을 항상 중단 합니다.  
   
- 숫자 식이 지정 하지 않으면 함수는 멤버 집합 일반적인 순서로 정렬 하지 않고 반환, 처럼 동작 하는 [Head (MDX)](../mdx/head-mdx.md) 함수입니다.  
+ 숫자 식이 지정 하지 않으면 함수 멤버 집합 일반적인 순서로 정렬 하지 않고 반환, 처럼 동작 합니다 [Head (MDX)](../mdx/head-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 Internet Sales Amount를 기준으로 상위 10개 날짜를 반환합니다.  
@@ -72,6 +72,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

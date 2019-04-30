@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188180"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>기업 내 작업 관리
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 외부에서 다중 서버 작업 정의를 변경하면 변경 사항을 다운로드 목록에 게시해야 대상 서버에서 업데이트된 작업을 다시 다운로드할 수 있습니다. 대상 서버가 최근의 작업 정의를 갖도록 하려면 다중 서버 작업을 업데이트한 후 다음과 같이 INSERT 명령을 게시하십시오.  

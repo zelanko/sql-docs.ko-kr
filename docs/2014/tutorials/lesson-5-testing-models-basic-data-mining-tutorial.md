@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185432"
 ---
-# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>5단원: 모델 테스트(기본 데이터 마이닝 자습서)
+# <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>5단원: 모델 테스트 (기본 데이터 마이닝 자습서)
   타겟 메일링 시나리오 학습 집합을 사용하여 모델을 처리했으므로 이제 학습 집합에 대해 모델을 테스트합니다. 유효성 검사는 데이터 마이닝 프로세스에서 중요한 단계입니다. 타겟 메일링 마이닝 모델을 프로덕션 환경에 배포하기 전에 실제 데이터에 대한 타겟 메일링 마이닝 모델의 성능을 아는 것이 중요합니다.  
   
  테스트 집합의 데이터에는 자전거 구매에 대한 알려진 값이 이미 포함되어 있으므로 모델의 예측이 올바른지 여부를 쉽게 확인할 수 있습니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 마케팅 부서에서는 최상의 성능을 제공하는 모델을 사용하여 타겟 메일링 캠페인을 받을 고객을 식별합니다.  

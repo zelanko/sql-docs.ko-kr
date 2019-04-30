@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11fe5ef40e06772c38390096363903113a28bd46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071813"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>실행, requery, Clear 메서드 예제 (VB)
 이 예제에서는 합니다 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 의 현재 데이터를 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [선택을 취소](../../../ado/reference/ado-api/clear-method-ado.md) 내용의 선택을 취소 하는 방법은 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. (는 **오류** 을 통해 컬렉션에 액세스를 **연결** 의 개체를 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand 및 PrintOutput 절차는이 프로시저를 실행 하도록 필요 합니다.  

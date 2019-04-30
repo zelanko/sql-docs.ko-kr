@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff145e7e3c6e429ca0877c81c5188b02e428809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207169"
 ---
 # <a name="cursor-rowset-size"></a>커서 행 집합 크기
   ODBC 커서는 한 번에 한 행씩만 인출하도록 제한되지 않습니다. 호출할 때마다 여러 행을 검색할 수 있습니다 **SQLFetch** 또는 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md). Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 같은 클라이언트/서버 데이터베이스 작업을 할 때는 한 번에 여러 행을 인출하는 것이 효율적입니다. 인출 시 반환 된 행 수가 행 집합 크기 라고 하며의 SQL_ATTR_ROW_ARRAY_SIZE를 사용 하 여 지정 된 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)합니다.  

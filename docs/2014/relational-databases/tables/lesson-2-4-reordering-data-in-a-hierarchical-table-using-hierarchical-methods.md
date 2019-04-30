@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298963"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>계층 메서드를 사용하여 계층적 테이블의 데이터 다시 정렬
   계층을 다시 구성하는 것은 일반적인 유지 관리 태스크입니다. 이 태스크에서는 UPDATE 문을 [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) 메서드와 함께 사용하여 먼저 단일 행을 계층의 새 위치로 이동합니다. 그런 다음 전체 하위 트리를 새 위치로 이동합니다.  

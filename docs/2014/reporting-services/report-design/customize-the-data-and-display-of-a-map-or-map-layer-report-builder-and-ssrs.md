@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185479"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  

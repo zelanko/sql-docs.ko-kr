@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fe0ade0d5011bfcbf6a2969f8e342ab20670a24
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206967"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>페이지 나누기 추가(보고서 작성기 및 SSRS)
   사각형, 데이터 영역 또는 데이터 영역 내의 그룹에 페이지 나누기를 추가하여 각 페이지의 정보 양을 제어할 수 있습니다. 페이지 나누기를 추가하면 보고서를 볼 때 각 페이지에 있는 항목만 처리하면 되기 때문에 게시된 보고서의 성능이 향상될 수 있습니다. 전체 보고서가 단일 페이지로 이뤄진 경우에는 모든 항목이 처리된 후에 보고서를 볼 수 있습니다.  

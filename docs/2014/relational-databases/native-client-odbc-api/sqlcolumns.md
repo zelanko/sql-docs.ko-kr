@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft 문서
+title: SQLColumns | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067731"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 합니다 *CatalogName*, *TableName*, 또는 *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "53360955"
   
  `SQLColumns`는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는(동적 또는 키 집합) 커서에 대해 `SQLColumns`를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
   
- 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*합니다.  
+ 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에 대 한 두 부분으로 된 이름을 그대로 사용 하 여 연결 된 서버의 테이블에 대 한 보고 정보를 지원 합니다 *CatalogName* 매개 변수: *Linked_Server_Name.Catalog_Name*.  
   
  Odbc 2. *x* 응용 프로그램에서 와일드 카드를 사용 하지 *TableName*합니다 `SQLColumns` 에 대 한 정보가 테이블 이름이 일치를 반환 *TableName* 가 현재 소유 하 고 사용자입니다. 현재 사용자와 이름이 같은 없는 테이블을 소유 하는 경우는 *TableName* 매개 변수를 `SQLColumns` 일치 하는 테이블 이름이 다른 사용자가 소유한 모든 테이블에 대 한 정보를 반환 합니다 *TableName* 매개 변수입니다. Odbc 2. *x* 와일드 카드를 사용 하 여 응용 프로그램 `SQLColumns` 이름을 일치 하는 모든 테이블을 반환 *TableName*합니다. Odbc 3. *x* 응용 프로그램 `SQLColumns` 이름을 일치 하는 모든 테이블을 반환 *TableName* 소유자 또는 와일드 카드 사용 여부에 관계 없이 합니다.  
   

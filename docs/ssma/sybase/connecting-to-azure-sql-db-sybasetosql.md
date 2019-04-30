@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ac8b97e36338a280b6f78a0e6bb73eeab882655d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297478"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB에 연결(SybaseToSQL)
 Sybase 데이터베이스를 Azure SQL DB를 마이그레이션하려면 대상 Azure SQL DB 인스턴스에 연결 해야 합니다. 에 연결 하면 SSMA Azure SQL DB 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 Azure SQL DB 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 Azure SQL DB에 연결 되어 있지만 암호를 저장 하지 않습니다의 인스턴스 정보를 저장 합니다.  

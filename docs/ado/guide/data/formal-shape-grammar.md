@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161407"
 ---
 # <a name="formal-shape-grammar"></a>공식적인 셰이프 문법
 다음은 모든 shape 명령 만들기에 대 한 정식 문법입니다.  
@@ -42,23 +42,23 @@ ms.locfileid: "47789271"
   
 |용어|정의|  
 |----------|----------------|  
-|\<shape-command>|셰이프 [\<exp 테이블 > [[AS] \<별칭 >]] [\<셰이프 작업 >]|  
+|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
 |\<table-exp>|{\<공급자 명령 텍스트 >}&#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> 테이블 \<따옴표 붙은 이름 >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|추가 \<별칭이 지정 된 필드 목록 >&#124;<br /><br /> COMPUTE \<별칭이 지정 된 필드 목록 > [BY \<필드 목록 >]|  
+|\<shape-action>|추가 \<별칭이 지정 된 필드 목록 >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
 |\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<exp 필드 > [[AS] \<별칭 >]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<계산 exp >&#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<테이블-exp > [[AS] \<별칭 >]<br /><br /> RELATE \<relation-cond-list>|  
-|\<relation-cond-list>|\<관계 조건 > [, \<관계 조건 >...]|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
 |\<relation-cond>|\<field-name> TO \<child-ref>|  
 |\<child-ref>|\<필드 이름 >&#124;<br /><br /> 매개 변수 \<ref 매개 변수 >|  
 |\<param-ref>|\<number>|  
 |\<field-list>|\<field-name> [, \<field-name>]|  
 |\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
-|\<calculated-exp>|계산 (\<식 >)|  
+|\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<quoted-name>|  
-|\<field-name>|\<따옴표 붙은 이름 > [[AS] \<별칭 >]|  
+|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
 |\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
 |\<qualified-name>|별칭 [.alias...]|  
 |\<name>|알파 [알파 &#124; 숫자 &#124; _ &#124; # &#124; : &#124; ...]|  

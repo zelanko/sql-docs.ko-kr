@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199602"
 ---
 # <a name="binding-parameters-odbc"></a>바인딩 매개 변수 ODBC
 SQL 문의 각 매개 변수에 연결 해야 합니다. 또는 *바인딩된* 문이 실행 되기 전에 응용 프로그램의 변수에 합니다. 응용 프로그램 변수에 매개 변수를 바인딩할 때 해당 변수를-주소, C 데이터 형식 등과-드라이버를 설명 합니다. 또한 매개 변수 자체 SQL 데이터 형식, 전체 자릿수 및 등을 설명합니다. 드라이버는 해당 문에 대 한 유지 관리 하 고 문이 실행 될 때 변수에서 값을 검색 하는 정보를 사용 하 여 구조에이 정보를 저장 합니다.  

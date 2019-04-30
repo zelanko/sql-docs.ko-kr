@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164322"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>방법: 보고서 디자이너에 데이터 처리 확장 프로그램 배포
   보고서 디자이너에서는 보고서를 디자인하는 동안 데이터 검색 및 처리를 위해 데이터 처리 확장 프로그램을 사용합니다. 데이터 처리 확장 프로그램 어셈블리를 보고서 디자이너에 전용 어셈블리로 배포해야 합니다. 또한 보고서 디자이너 구성 파일인 RSReportDesigner.config에서 항목을 만들어야 합니다.  

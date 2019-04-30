@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186200"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 함수(SQLProcedureColumns Function)
 **규칙**  
@@ -54,7 +54,7 @@ SQLRETURN SQLProcedureColumns(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *카탈로그 이름*  
+ *CatalogName*  
  [입력] 프로시저 카탈로그 이름입니다. 드라이버 카탈로그에서 지 원하는 일부 프로시저의 아니라 드라이버가 다른 Dbms를 빈 문자열에서 데이터를 검색 하는 경우 등의 다른 경우 ("")는 카탈로그에 있지 않은 해당 프로시저를 나타냅니다. *CatalogName* 문자열 검색 패턴을 포함할 수 없습니다.  
   
  SQL_ATTR_METADATA_ID 문 특성을 SQL_TRUE로 설정 된 경우 *CatalogName* 식별자로 처리 됩니다 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 있으면 *CatalogName* 은 일반 인수로 리터럴로 처리 됩니다 하 고 해당 대/소문자는 중요 합니다. 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  
@@ -161,7 +161,7 @@ SQLRETURN SQLProcedureColumns(
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|프로시저 스키마 이름입니다. 데이터 원본에 해당 하지 않는 경우 NULL입니다. 드라이버에서 지 원하는 경우 스키마 일부 프로시저의 아니라 다른 다양 한 Dbms에서 데이터를 검색 하는 드라이버, 빈 문자열을 반환 하는 등 ("") 스키마에 있지 않은 해당 프로시저에 대 한 합니다.|  
 |PROCEDURE_NAME (ODBC 2.0)|3|NULL이 아닌 Varchar|프로시저 이름입니다. 프로시저의 경우 이름 없는 빈 문자열이 반환 됩니다.|  
 |COLUMN_NAME (ODBC 2.0)|4|NULL이 아닌 Varchar|프로시저 열 이름입니다. 드라이버 이름 없는 프로시저 열에 대해 빈 문자열을 반환 합니다.|  
-|COLUMN_TYPE (ODBC 2.0)|5|NULL이 아닌 Smallint|매개 변수로 프로시저 열 또는 결과 집합 열을 정의합니다.<br /><br /> SQL_PARAM_TYPE_UNKNOWN: 프로시저 열에 형식이 알려지지 않은 매개 변수가.입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT: 프로시저 열에 입력된 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: 프로시저 열에는 입/출력 매개 변수입니다. ODBC (1.0)<br /><br /> SQL_PARAM_OUTPUT: 프로시저 열 출력 매개 변수입니다. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: 프로시저 열에는 프로시저의 반환 값입니다. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: 프로시저 열에는 결과 집합 열이 있습니다. ODBC (1.0)|  
+|COLUMN_TYPE (ODBC 2.0)|5|NULL이 아닌 Smallint|매개 변수로 프로시저 열 또는 결과 집합 열을 정의합니다.<br /><br /> SQL_PARAM_TYPE_UNKNOWN: 프로시저 열에 형식이 알려지지 않은 매개 변수가.입니다. (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT: 프로시저 열에 입력된 매개 변수입니다. (ODBC 1.0)<br /><br /> SQL_PARAM_INPUT_OUTPUT: 프로시저 열에는 입/출력 매개 변수입니다. (ODBC 1.0)<br /><br /> SQL_PARAM_OUTPUT: 프로시저 열 출력 매개 변수입니다. (ODBC 2.0)<br /><br /> SQL_RETURN_VALUE: 프로시저 열에는 프로시저의 반환 값입니다. (ODBC 2.0)<br /><br /> SQL_RESULT_COL: 프로시저 열에는 결과 집합 열이 있습니다. (ODBC 1.0)|  
 |DATA_TYPE (ODBC 2.0)|6|NULL이 아닌 Smallint|SQL 데이터 형식입니다. 이 ODBC SQL 데이터 형식 또는 드라이버별 SQL 데이터 형식 수 있습니다. 날짜/시간 및 간격 데이터 형식에 대해이 열에는 간결한 데이터 형식 (예: SQL_TYPE_TIME 또는 SQL_INTERVAL_YEAR_TO_MONTH) 반환합니다. 유효한 ODBC SQL 데이터 형식의 목록을 참조 하세요 [SQL 데이터 형식](../../../odbc/reference/appendixes/sql-data-types.md) 부록 d: 데이터 형식입니다. 드라이버별 SQL 데이터 형식에 대 한 내용은 드라이버의 설명서를 참조 하십시오.|  
 |TYPE_NAME (ODBC 2.0)|7|NULL이 아닌 Varchar|데이터 원본에 종속적인 데이터 형식 이름입니다. 예를 들어, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.|  
 |COLUMN_SIZE (ODBC 2.0)|8|정수|데이터 원본에 프로시저 열의 열 크기를 지정 합니다. NULL 열 크기 적용할 수 없는 데이터 형식에 대해 반환 됩니다. 전체 자릿수와 관련 된 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  

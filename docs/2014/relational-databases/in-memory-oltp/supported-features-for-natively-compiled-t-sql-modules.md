@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155722"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 지원되는 구문
   이 항목에서는 고유 하 게 컴파일된 저장된 프로시저에 대 한 지원 되는 기능의 목록이 포함 되어 있습니다 ([CREATE PROCEDURE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,15 +81,15 @@ ms.locfileid: "58527145"
 ##  <a name="bfncsp"></a> 고유 하 게 컴파일된 저장된 프로시저의 기본 제공 함수  
  다음 함수는 메모리 최적화 테이블에 대한 기본 제약 조건과 고유하게 컴파일된 저장 프로시저에서 지원됩니다.  
   
--   수치 연산 함수: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE 및 TAN  
+-   수치 연산 함수: ACOS, ASIN, ATAN, ATN2, COS, COT, 각도, EXP, 로그, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE 및 TAN  
   
--   날짜 함수: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 및 YEAR.  
+-   날짜 함수: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, 월, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 및 연도입니다.  
   
 -   문자열 함수: LEN, LTRIM, RTRIM 및 SUBSTRING  
   
--   IDENTITY 함수: SCOPE_IDENTITY  
+-   Identity 함수: SCOPE_IDENTITY  
   
--   NULL 함수 ISNULL  
+-   NULL 함수: ISNULL  
   
 -   Uniqueidentifier 함수: NEWID 및 NEWSEQUENTIALID  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527145"
 ##  <a name="los"></a> 정렬의 제한 사항  
  [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 및 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 사용하는 쿼리에서는 8,000개 이상의 행을 정렬할 수 있습니다. 하지만 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)이 없을 경우, [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql)은 최대 8,000개까지만 행을 정렬할 수 있습니다. 조인이 있으면 이러한 행 수가 더 줄어듭니다.  
   
- 쿼리에서 [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192행보다 더 많이 지정하면 오류 메시지가 나타납니다. **메시지 41398, Level 16, State 1, 프로시저  *\<procedureName >*, 줄  *\<lineNumber >* TOP 연산자는 최대 8192 행을 반환할 수 있습니다  *\<번호 >* 요청 되었습니다.**  
+ 쿼리에서 [TOP&#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) 연산자와 [ORDER BY 절&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql)을 모두 사용하는 경우 TOP 연산자에 대해 최대 8192행을 지정할 수 있습니다. 8192 행 보다 더 많이 지정 하면 오류 메시지가 표시: **메시지 41398, Level 16, State 1, 프로시저  *\<procedureName >*, 줄  *\<lineNumber >* TOP 연산자는 최대 8192 행을 반환할 수 있습니다  *\<번호 >* 요청 되었습니다.**  
   
  TOP 절을 사용하지 않는 경우 ORDER BY를 사용하여 몇 행이든 정렬할 수 있습니다.  
   
  ORDER BY 절을 사용하지 않는 경우 TOP 연산자와 함께 어떤 정수 값이든 사용할 수 있습니다.  
   
- TOP N = 8192의 예: 컴파일  
+ 예제 TOP n = 8192: 컴파일  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- TOP N > 8192의 예: 컴파일이 실패합니다.  
+ 예제 TOP n > 8192: 컴파일이 실패 합니다.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **반환 된 행에 대 한 제한 사항:** 다음 두 경우에는 TOP 연산자가 반환할 수 있는 행 수를 잠재적으로 줄일 수 있습니다.  
+ **반환 된 행에 대 한 제한 사항:** TOP 연산자에서 반환 될 수 있는 행의 수를 잠재적으로 줄일 수 있는 두 가지 경우가 있습니다.  
   
 -   쿼리에서 JOIN 사용.  JOIN이 제한에 미치는 영향은 쿼리 계획에 따라 다릅니다.  
   

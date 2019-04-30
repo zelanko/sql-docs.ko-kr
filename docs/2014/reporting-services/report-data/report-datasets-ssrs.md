@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d45da9b4611fc67cf022efa148bcec2f43c3d04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218405"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>보고서에 데이터 추가(보고서 작성기 및 SSRS)
   보고서에 데이터를 추가하려면 데이터 세트를 만듭니다. 각 데이터 세트는 데이터 원본에 대해 쿼리 명령을 실행하여 얻은 결과 집합을 나타냅니다. 결과 집합의 열은 필드 컬렉션이고, 결과 집합의 행은 데이터입니다. 데이터 세트에는 실제 데이터가 포함되는 것이 아니라 데이터 원본에서 특정 데이터의 세트를 검색하는 데 필요한 정보가 포함됩니다.  

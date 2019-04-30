@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7db7aa857e695e35dee5125cdfed1effe3dd1852
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164739"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>데이터 원본 속성 대화 상자, 일반
   **데이터 원본 속성** 대화 상자의 **일반** 을 선택하여 보고서의 데이터 원본에 대한 연결 정보를 표시하고 수정할 수 있습니다.  

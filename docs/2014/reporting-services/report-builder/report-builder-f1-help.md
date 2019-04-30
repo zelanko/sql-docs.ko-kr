@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2ee42f145440c553422c2fac7f90a441ea00d9cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155196"
 ---
 # <a name="report-builder-f1-help"></a>보고서 작성기 F1 도움말
   이 섹션에서는 보고서 작성기 마법사, 뷰, 창 및 대화 상자에 대 한 도움말을 포함합니다. 또한 대화 상자에서 도움말 단추를 클릭 하거나 F1 키를 누르거나 도움말을 열 수 있습니다.  

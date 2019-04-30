@@ -1,5 +1,5 @@
 ---
-title: 예를 들면 다음과 같습니다. OPENXML을 사용 하 여 | Microsoft Docs
+title: 예를 들면 다음과 같습니다. OPENXML 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205109"
 ---
 # <a name="examples-using-openxml"></a>예를 들면 다음과 같습니다. OPENXML 사용
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](specify-metaproperties-in-openxml.md)을 참조하세요.  

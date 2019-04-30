@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162103"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 간단한 ADO 애플리케이션
 각각 4 개의 주요 ADO 작업을 통해이 간단한 응용 프로그램 단계: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 이러한 작업은 Microsoft® SQL Server에 포함 된 Northwind 샘플 데이터베이스에 대해 수행 됩니다. ADO의 기본 사항에 집중 하 고 코드 혼란을 방지 하기 위해이 예제에서 오류 처리는 최소화 됩니다.  

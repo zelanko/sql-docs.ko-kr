@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6cfea7ec9e19a97c94b636f3233bdf73238668
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067569"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>파일 또는 보고서 업로드(보고서 관리자)
   보고서 관리자에서는 업로드 기능을 제공하므로 클라이언트 애플리케이션에서 보고서, 모델 및 기타 파일을 게시하지 않고도 이러한 항목을 보고서 서버에 추가할 수 있습니다. 파일 시스템에서 업로드한 파일은 보고서 서버에 항목으로 저장됩니다. 업로드한 파일 형식은 저장되는 방식에 따라 결정됩니다.  

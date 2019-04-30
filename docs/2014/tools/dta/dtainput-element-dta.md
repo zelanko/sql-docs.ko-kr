@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1861b6ef4ab3617b5f12e7711fa2b895edaa55a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188120"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 요소(DTA)
   데이터베이스 엔진 튜닝 관리자에 대한 XML 입력의 정의를 포함합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "52764365"
 ## <a name="example"></a>예제  
  **DTAInput** 요소의 사용 예를 보려면 [단순 XML 입력 파일 샘플&#40;DTA&#41;](simple-xml-input-file-sample-dta.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

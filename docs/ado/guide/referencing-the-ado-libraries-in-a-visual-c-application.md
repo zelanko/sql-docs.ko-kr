@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 응용 프로그램에서 ADO 라이브러리 참조 | Microsoft Docs
+title: 시각적 개체에서 ADO 라이브러리 참조 C++ 응용 프로그램 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 772dbc55fdeb3b038399a3740be472497666e4da
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222029"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ 애플리케이션에서 ADO 라이브러리 참조
-Visual c + + 응용 프로그램에서 ADO의 최신 버전을 사용 하려면 다음을 사용 하 여 `#import` 지시문:  
+시각적 개체에서 최신 버전의 ADO 사용 하려면 C++ 응용 프로그램에 다음 사용 하 여 `#import` 지시문:  
   
 ```cpp
 #import "msado15.dll" \  

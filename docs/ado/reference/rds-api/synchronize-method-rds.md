@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134347"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize 메서드(RDS)
 ADO 2.5 이상에서 사용할 연결 문자열에서 지정 된 데이터베이스를 사용 하 여 지정 된 레코드 집합을 동기화 합니다.  
@@ -56,7 +56,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  동기화 할 레코드 집합에 대 한 포인터입니다.  
   
  *pStatusArray*  
- 행 상태에 영향을 받는 행의 안전 배열을 반환 하는 데 사용 하는 variant를 동기화 합니다. 다음 동기화 옵션 설정이 설정 되지 않습니다: *RefreshWithUpdate*, *새로 고침* 및 *RefreshConflicts*합니다.  
+ 행 상태에 영향을 받는 행의 안전 배열을 반환 하는 데 사용 하는 variant를 동기화 합니다. 다음 동기화 옵션을 설정 하 고 설정할 수 없음: *RefreshWithUpdate*하십시오 *새로 고침* 하 고 *RefreshConflicts*합니다.  
   
  *lcid*  
  LCID는 빌드에 반환 되는 모든 오류 데 *pInformation*합니다.  

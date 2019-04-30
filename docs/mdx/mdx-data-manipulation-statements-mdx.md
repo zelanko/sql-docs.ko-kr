@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27db322b7031b7040c3d78536552db257d41cff3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187652"
 ---
 # <a name="mdx-data-manipulation-statements-mdx"></a>MDX 데이터 조작 문(MDX)
 
@@ -28,12 +28,12 @@ ms.locfileid: "34742492"
 |[CALL 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-call.md)|현재 범위 또는 지정된 큐브에서 void를 반환하는 저장 프로시저를 실행합니다.|  
 |[CLEAR CALCULATIONS 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-clear-calculations.md)|큐브에서 모든 계산을 제거하고 큐브를 계산 패스 0으로 되돌립니다.|  
 |[DRILLTHROUGH 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-drillthrough.md)|큐브에서 지정된 셀을 만드는 데 사용된 행 집합을 검색합니다.|  
-|[SELECT 문의 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)|지정한 큐브에서 데이터를 검색합니다.|  
+|[SELECT 문 & #40; Mdx& #41;](../mdx/mdx-data-manipulation-select.md)|지정한 큐브에서 데이터를 검색합니다.|  
 |[UPDATE CUBE 문을 &#40;MDX&#41;](../mdx/mdx-data-manipulation-update-cube.md)|큐브의 지정된 리프 또는 리프가 아닌 셀의 값을 업데이트합니다. 지정된 리프가 아닌 셀 값을 종속되는 여러 리프 셀에 할당할 수도 있습니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 문 참조 &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [MDX 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [MDX 스크립팅 문&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

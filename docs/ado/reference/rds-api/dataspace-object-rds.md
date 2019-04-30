@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134487"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace 개체(RDS)
 > [!IMPORTANT]
@@ -29,7 +29,7 @@ ms.locfileid: "51600563"
   
  원격 데이터 서비스 클라이언트 쪽 구성 요소는 중간 계층에 있는 비즈니스 개체를 사용 하 여 통신할 수 있도록 비즈니스 개체 프록시가 필요 합니다. 패키징, 패키징하고 및 전송 (마샬링) 응용 프로그램의 프록시 용이 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 프로세스 또는 컴퓨터 경계를 넘어 데이터입니다.  
   
- 원격 데이터 서비스에서 사용 하 여 **rds. DataSpace** 개체의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 비즈니스 개체 프록시를 만드는 방법. 중간 계층 비즈니스 개체의 인스턴스를 만들 때마다 해당 비즈니스 개체 프록시 동적으로 만들어집니다. 원격 데이터 서비스는 다음 프로토콜을 지원 합니다: HTTP, HTTPS (HTTP Secure Sockets), DCOM 및 in-process (클라이언트 구성 요소와 동일한 컴퓨터에 있는 비즈니스 개체).  
+ 원격 데이터 서비스에서 사용 하 여 **rds. DataSpace** 개체의 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 비즈니스 개체 프록시를 만드는 방법. 중간 계층 비즈니스 개체의 인스턴스를 만들 때마다 해당 비즈니스 개체 프록시 동적으로 만들어집니다. 원격 데이터 서비스는 다음 프로토콜을 지원합니다. HTTP, HTTPS (HTTP Secure Sockets), DCOM 및 in-process (클라이언트 구성 요소와 동일한 컴퓨터에 있는 비즈니스 개체)를 선택 합니다.  
   
 > [!NOTE]
 >  RDS "상태 비저장" 방식으로 동작 하는 경우를 **rds. DataSpace** 개체는 HTTP 또는 HTTPS 프로토콜을 사용 합니다. 즉, 클라이언트 요청에 대 한 내부 정보는 서버 응답을 반환 된 후 삭제 됩니다.  

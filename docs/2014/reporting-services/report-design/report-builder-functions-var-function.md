@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 920fc72443036328e4ac5c9181c479b2900d84fc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215286"
 ---
 # <a name="var-function-report-builder-and-ssrs"></a>Var 함수(보고서 작성기 및 SSRS)
   식으로 지정되어 지정된 범위에서 계산되는 Null이 아닌 모든 숫자 값의 분산을 반환합니다.  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184391"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 데이터베이스 속성
   TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`)을 입력합니다.  

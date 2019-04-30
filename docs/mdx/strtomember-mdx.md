@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c5878a553895dccc3350ddbae9397d5a48c6349
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149271"
 ---
 # <a name="strtomember-mdx"></a>StrToMember(MDX)
 
@@ -35,7 +35,7 @@ StrToMember(Member_Name [,CONSTRAINED] )
 ## <a name="remarks"></a>Remarks  
  합니다 **StrToMember** 함수는 문자열 식에 지정 된 멤버를 반환 합니다. 합니다 **StrToMember** 함수는 대개 다시 MDX 문으로 경우, 또는 MDX 쿼리에 매개 변수가 외부 함수의 멤버 사양을 반환 사용자 정의 함수와 함께 사용 됩니다.  
   
--   CONSTRAINED 플래그를 사용할 경우 멤버 이름은 정규화되거나 정규화되지 않은 멤버 이름으로 직접 확인될 수 있어야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 정규화되거나 정규화되지 않은 멤버 이름으로 직접 확인할 수 없는 문자열을 지정하면 "STRTOMEMBER 함수에서 CONSTRAINED 플래그로 설정한 제한을 위반했습니다."라는 오류가 나타납니다.  
+-   CONSTRAINED 플래그를 사용할 경우 멤버 이름은 정규화되거나 정규화되지 않은 멤버 이름으로 직접 확인될 수 있어야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 문자열로 제공 정규화 되거나 정규화 되지 않은 멤버 이름으로 직접 확인할 수 없는 경우 다음 오류가 표시 됩니다. "CONSTRAINED 설정한 제한을 위반 했습니다 STRTOMEMBER 함수에서 플래그."  
   
 -   CONSTRAINED 플래그를 사용하지 않을 경우 지정된 멤버는 멤버 이름으로 직접 확인되거나 이름으로 확인되는 MDX 식으로 확인될 수 있습니다.  
   

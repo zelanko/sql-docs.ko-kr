@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3cd117a9f873de13938d8a6946faf4f1c00d522d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064435"
 ---
 # <a name="cluster-network-configuration"></a>클러스터 네트워크 구성
   **클러스터 네트워크 선택** 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스에 대한 네트워크 리소스를 지정할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "48163038"
   
     -   추가 네트워크 서브넷은 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터의 기존 노드에서 지원하는 서브넷은 지원하지 않는 노드를 추가하는 경우 IP 주소를 추가해야 합니다. 지정된 모든 IP 주소가 모든 클러스터 노드에서 유효하지 않음을 나타내려면 IP 주소 리소스 종속성을 OR로 설정합니다.  
   
--   고급 설치: 설치 완료 단계 중에 장애 조치(Failover) 클러스터 인스턴스의 모든 모드와 서브넷에 대한 IP 주소를 지정합니다. 다중 서브넷 장애 조치(Failover) 클러스터에 대해 여러 IP 주소를 지정할 수 있지만 IP 주소는 서브넷별로 하나씩만 지원됩니다. 모든 준비된 노드는 하나 이상의 IP 주소에 대한 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 여러 서브넷이 있는 경우 IP 주소 리소스 종속성을 OR로 설정하라는 메시지가 표시됩니다. 노드 제거:  
+-   고급 설치: 설치 완료 단계 중 모든 노드에 대 한 IP 주소 및 장애 조치 클러스터 인스턴스에 대 한 서브넷을 지정 합니다. 다중 서브넷 장애 조치(Failover) 클러스터에 대해 여러 IP 주소를 지정할 수 있지만 IP 주소는 서브넷별로 하나씩만 지원됩니다. 모든 준비된 노드는 하나 이상의 IP 주소에 대한 소유자여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 여러 서브넷이 있는 경우 IP 주소 리소스 종속성을 OR로 설정하라는 메시지가 표시됩니다. 노드 제거:  
   
     -   나머지 IP 주소가 모든 나머지 노드에서 지원되는 경우 IP 주소 리소스 종속성을 AND로 설정하라는 메시지가 표시됩니다.  
   

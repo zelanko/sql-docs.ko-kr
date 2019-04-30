@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214800"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000에서 RDS 구성
 Windows 2000으로 업그레이드 한 후 제대로 작동 하려면 RDS를 시작 하는 문제를 발생 하면 문제를 해결 하려면 다음이 단계를 수행 합니다.  
@@ -29,7 +29,7 @@ Windows 2000으로 업그레이드 한 후 제대로 작동 하려면 RDS를 시
   
 3.  "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"로 이동 하 고 있는지 확인 RegEdit 유틸리티를 사용 하 **HandlerRequired** 은 0으로 설정 하 고 **DefaultHandler** 은 "" (Null 문자열).  
   
-     **참고** 이 섹션에서는 레지스트리를 변경한 경우 중지 하 고 명령 프롬프트에서 다음 명령을 입력 하 여 World Wide Web Publishing 서비스를 다시 시작 해야 합니다. "NET 중지 W3SVC" 및 "NET START W3SVC"입니다.  
+     **참고** 이 섹션에서는 레지스트리를 변경한 경우 중지 하 고 명령 프롬프트에서 다음 명령을 입력 하 여 World Wide Web Publishing 서비스를 다시 시작 해야 합니다. "NET STOP W3SVC" 및 "NET START W3SVC"입니다.  
   
 4.  "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" 레지스트리의 이동한 라는 키 임을 확인 RegEdit 유틸리티를 사용 하 **업데이트할**합니다. 그렇지 않은 경우 만듭니다.  
   

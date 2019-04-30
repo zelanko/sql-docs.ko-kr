@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2823ad2eefd8855ba5e6ebd706e99271d30da0a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223304"
 ---
 # <a name="select-the-data-source"></a>데이터 원본 선택
   보고서 마법사의 데이터 원본 선택 페이지를 사용하여 보고서의 데이터 원본을 정의할 수 있습니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bfb6ff3ba39400278db23931b4c9420e506c973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127943"
 ---
 # <a name="scalar-function-limitations"></a>스칼라 함수 제한 사항
 스칼라 함수는 ODBC 정식 형식을 사용해 서만 지원 됩니다.

@@ -12,11 +12,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: f01bec92621022c875ff43c479356df1a35b8157
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215130"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 구성 - 데이터 디렉터리
   다음 표의 기본 디렉터리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 사용자가 구성할 수 있습니다. 이러한 파일에 대한 액세스 권한은 설치 중에 만들어져 프로비전되는 SQLServerMSASUser$\<instance> 보안 그룹의 멤버와 로컬 관리자에게 부여됩니다.  

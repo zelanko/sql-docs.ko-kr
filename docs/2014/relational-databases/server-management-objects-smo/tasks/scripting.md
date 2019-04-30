@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158785"
 ---
 # <a name="scripting"></a>스크립팅
   SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체, 또는 개별 개체의 `Script` 메서드로 제어합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체의 인스턴스에서 개체에 대 한 종속성 관계의 매핑을 제어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  

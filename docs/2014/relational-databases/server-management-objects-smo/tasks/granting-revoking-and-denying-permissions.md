@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226151"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체는 일련의 권한 또는 개별 서버 권한을 <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> 개체에 할당하는 데 사용됩니다. 서버 수준 권한의 경우 피부여자가 로그온을 참조합니다. Windows에 의해 인증된 로그온이 Windows 사용자 이름으로 나열됩니다. 이 코드 예제를 실행하면 피부여자로부터 권한이 취소되고 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> 메서드로 권한이 제거되었는지 확인합니다.  

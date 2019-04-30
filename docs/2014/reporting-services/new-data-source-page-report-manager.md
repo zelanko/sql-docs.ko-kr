@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188512"
 ---
 # <a name="new-data-source-page-report-manager"></a>새 데이터 원본 페이지(보고서 관리자)
   새 데이터 원본 페이지를 사용하여 공유 데이터 원본 항목을 만들 수 있습니다. 공유 데이터 원본은 외부 데이터 원본과의 연결을 정의합니다. 공유 데이터 원본을 사용하면 해당 데이터 원본을 사용하는 보고서, 모델 및 데이터 기반 구독과는 별도로 데이터 원본 연결에 대한 설정을 만들고 관리할 수 있습니다.  

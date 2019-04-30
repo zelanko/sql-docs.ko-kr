@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188923"
 ---
 # <a name="interval-data-type-length"></a>간격 데이터 형식 길이
 다음 규칙은 문자에서 간격 데이터 형식의 길이 확인 하는 데 사용 됩니다. 길이 문자의 수로 표시 됩니다. 문자 집합을 따라 바이트 수가 달라 집니다. 길이 함께 추가 하는 다음과를 같습니다.  

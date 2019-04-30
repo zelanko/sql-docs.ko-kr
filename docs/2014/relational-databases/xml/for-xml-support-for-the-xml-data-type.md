@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205005"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
   FOR XML 쿼리가 SELECT 절에서 `xml` 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. `xml` 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  

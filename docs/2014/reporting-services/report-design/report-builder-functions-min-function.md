@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89fc6d86437583503b2fd962bf86c1c9ff6d75f5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216201"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 함수(보고서 작성기 및 SSRS)
   지정된 범위의 컨텍스트에서 식으로 지정되는 Null이 아닌 모든 숫자 값의 최소값을 반환합니다.  

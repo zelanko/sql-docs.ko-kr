@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56689bb045a6540bfdfbb9c7147dc34db110bde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207009"
 ---
 # <a name="date-and-time-improvements-odbc"></a>날짜 및 시간 기능 향상(ODBC)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. 에 대 한 개요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 날짜 및 시간 데이터 형식에 대 한 네이티브 클라이언트 지원을 참조 하십시오. [날짜와 시간 향상](../native-client/features/date-and-time-improvements.md). ODBC 날짜/시간 지원을 보여 주는 샘플을 참조 하십시오. [사용 하 여 날짜 및 시간 형식](../native-client-odbc-how-to/use-date-and-time-types.md).  

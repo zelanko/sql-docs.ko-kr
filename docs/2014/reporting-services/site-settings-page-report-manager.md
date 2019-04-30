@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223125"
 ---
 # <a name="site-settings-page-report-manager"></a>사이트 설정 페이지(보고서 관리자)
   사이트 설정 페이지를 사용하여 애플리케이션 제목을 변경하고 보고서 기록 제한 및 보고서 처리 시간 제한 값에 대한 서버 차원 기본값을 설정하고 시스템 수준 역할 할당을 관리하고 공유 일정을 관리할 수 있습니다. 이 페이지를 보려면 내용 관리자 및 시스템 관리자 권한이 있어야 합니다.  

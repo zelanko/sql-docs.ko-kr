@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f87ea4b801e9f7c60364e235877f84db810384c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217982"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품군의 모든 서버에 연결하고 해당 내용을 그래픽 방식으로 찾아볼 수 있는 개체 탐색기를 제공합니다. Reporting Services의 경우 개체 탐색기를 사용하여 다음을 수행할 수 있습니다.  

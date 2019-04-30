@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137461"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>4단원: 프로그래밍 방식으로 보고서 정의 업데이트
   이제 보고서 서버에서 보고서 정의가 로드되었고 보고서 필드를 사용하여 해당 정의를 참조했으므로 보고서 정의를 업데이트해야 합니다. 이 예에서는 보고서의 `Description` 속성을 업데이트합니다.  
@@ -88,7 +88,7 @@ ms.locfileid: "56012704"
     ```  
   
 ## <a name="next-lesson"></a>다음 단원  
- 다음 단원에서는 업데이트된 보고서 정의를 다시 보고서 서버에 저장합니다. 참조 [5 단원: 보고서 서버에 보고서 정의 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)합니다.  
+ 다음 단원에서는 업데이트된 보고서 정의를 다시 보고서 서버에 저장합니다. [5단원: 보고서 서버에 보고서 정의 게시](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RDL 스키마에서 생성 된 클래스를 사용 하 여 보고서를 업데이트 하는 중 &#40;SSRS 자습서&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  

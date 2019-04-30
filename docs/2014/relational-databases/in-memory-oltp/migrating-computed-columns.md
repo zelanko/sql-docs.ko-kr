@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165041"
 ---
 # <a name="migrating-computed-columns"></a>계산 열 마이그레이션
   계산 열은 메모리 최적화 테이블에서 지원되지 않습니다. 그러나 계산 열을 시뮬레이션할 수 있습니다.  

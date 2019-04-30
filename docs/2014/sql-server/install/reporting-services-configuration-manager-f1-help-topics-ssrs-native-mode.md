@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057561"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Reporting Services 구성 관리자 F1 도움말 항목(SSRS 기본 모드)
   이 섹션에서는 Reporting Services 구성 관리자에 대한 F1 도움말을 제공합니다.  

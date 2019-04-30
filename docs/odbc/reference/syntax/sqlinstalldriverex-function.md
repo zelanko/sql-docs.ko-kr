@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132722"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 함수
 **규칙**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [출력] 총 바이트 (null 종결 문자가 제외)에서 반환할 사용 가능한 *lpszPathOut*합니다. 반환할 사용 가능한 바이트 수가 보다 크거나 같은 경우 *cbPathOutMax*, 출력 경로 *lpszPathOut* 잘립니다 *cbPathOutMax* 빼기는 null 종료 문자입니다. 합니다 *pcbPathOut* 인수로 null 포인터를 사용할 수 있습니다.  
   
- *문제점과*  
+ *fRequest*  
  [입력] 요청 유형입니다. 합니다 *문제점과* 인수는 다음 값 중 하나를 포함 해야 합니다.  
   
  ODBC_INSTALL_INQUIRY: 드라이버를 설치할 수 있는지 문의 합니다.  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>주석  
  합니다 *lpszDriver* 인수는 키워드 / 값 쌍의 형태로 특성 목록입니다. 각 쌍을 null 바이트를 사용 하 여 종료 됩니다 하 고 전체 목록을 null 바이트를 사용 하 여 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 이 목록의 형식은 아래와 같습니다.  
   
- _드라이버 desc_ **\\**0Driver**=**_드라이버-DLL-filename_ **\\**0 [설치**=**_설치-DLL-filename_<b>\\</b>0]  
+ _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
   
- [_드라이버-attr-keyword1_**=**_value1_<b>\\</b>0] [_드라이버-attr-keyword2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  \0 null 바이트를 인지 하는 위치 및 *드라이버-attr-keywordn* 모든 드라이버 특성 키워드입니다. 키워드는 지정된 된 순서 대로 나타나야 합니다. 예를 들어, 가정 서식 있는 텍스트 파일에 대 한 드라이버를 별도 드라이버 설치 Dll 및.csv 및.txt 확장명을 가진 파일을 사용할 수 있습니다. 합니다 *lpszDriver* 이 드라이버에 대 한 인수는 다음과 같을 수 있습니다.  
   

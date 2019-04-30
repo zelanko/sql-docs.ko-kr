@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213420"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C에서 SQL로: 날짜-시간 간격
 날짜-시간 간격 ODBC C 데이터 형식에 대 한 식별자를 다음과 같습니다.  
@@ -50,9 +50,9 @@ ms.locfileid: "47757661"
   
 |SQL 유형 식별자|테스트|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> [A] SQL_VARCHAR<br /><br /> [A] SQL_LONGVARCHAR|열의 바이트 길이 > = 문자 바이트 길이<br /><br /> 열의 바이트 길이 < 문자 바이트 길이 [a]<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
-|[A] SQL_WCHAR<br /><br /> SQL_WVARCHAR [a]<br /><br /> [A] SQL_WLONGVARCHAR|열의 문자 길이 > 데이터의 문자 길이 =<br /><br /> 열의 문자 길이 < [a] 데이터의 길이 문자<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|변환 된 단일 필드 간격의 전체 자릿수는 잘림이 발생 하지<br /><br /> 변환 결과 전체 자릿수는 잘림이 발생 했습니다.|n/a<br /><br /> 22003|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|열의 바이트 길이 > = 문자 바이트 길이<br /><br /> 열의 바이트 길이 < 문자 바이트 길이 [a]<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|열의 문자 길이 > 데이터의 문자 길이 =<br /><br /> 열의 문자 길이 < [a] 데이터의 길이 문자<br /><br /> 데이터 값은 리터럴 유효한 간격이 아닙니다.|n/a<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b] SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|변환 된 단일 필드 간격의 전체 자릿수는 잘림이 발생 하지<br /><br /> 변환 결과 전체 자릿수는 잘림이 발생 했습니다.|n/a<br /><br /> 22003|  
 |SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|필드의 잘림 없이 데이터 값이 변환 된<br /><br /> 변환 중 데이터 값의 하나 이상의 필드를 잘렸습니다.|n/a<br /><br /> 22015|  
   
  [a] 모든 C는 interval 데이터 형식은 문자 데이터 형식으로 변환할 수 있습니다.  

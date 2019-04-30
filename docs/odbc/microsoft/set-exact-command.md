@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159346"
 ---
 # <a name="set-exact-command"></a>SET EXACT 명령
 서로 다른 길이의 두 문자열을 비교 하는 것에 대 한 규칙을 지정 합니다.  
@@ -35,7 +35,7 @@ SET EXACT ON | OFF
  식은 동등한 것으로 문자에 대 한 문자 일치 하도록 지정 합니다. 비교 식의 후행 공백이 무시 됩니다. 비교에 대 한 긴 식의 길이 맞게 공백 오른쪽의 두 식 중 더 짧은 채워지고 채워집니다.  
   
  OFF  
- (기본값)입니다. 해당 일에 식 일치 해야 한다는 문자에 대 한 문자 오른쪽에 있는 식의 끝에 도달할 때까지 지정 합니다.  
+ (기본값) 해당 일에 식 일치 해야 한다는 문자에 대 한 문자 오른쪽에 있는 식의 끝에 도달할 때까지 지정 합니다.  
   
 ## <a name="remarks"></a>Remarks  
  두 문자열 길이가 같은 경우에 설정을 정확 하 게 설정 효과가 없습니다.  
@@ -59,12 +59,12 @@ SET EXACT ON | OFF
 |"abc" = "ab_"|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|  
 |"ab" = "ab_"|일치 하는 항목이 없습니다|일치|일치 하는 항목이 없습니다|  
 |"ab_" = "ab"|일치|일치|일치 하는 항목이 없습니다|  
-|"" "ab" =|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|  
+|"" = "ab"|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|  
 |"ab" = ""|일치|일치 하는 항목이 없습니다|일치 하는 항목이 없습니다|  
 |"__" = ""|일치|일치|일치 하는 항목이 없습니다|  
 |"" = "___"|일치 하는 항목이 없습니다|일치|일치 하는 항목이 없습니다|  
 |TRIM("___") = ""|일치|일치|일치|  
-|"" TRIM("___") =|일치|일치|일치|  
+|"" = TRIM("___")|일치|일치|일치|  
   
 ## <a name="see-also"></a>관련 항목  
  [SET ANSI 명령](../../odbc/microsoft/set-ansi-command.md)

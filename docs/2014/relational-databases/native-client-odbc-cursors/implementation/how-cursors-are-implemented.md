@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c92391b1d8874da3a8901ccc5c6245e48334241
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188523"
 ---
 # <a name="how-cursors-are-implemented"></a>커서 구현 방법
   ODBC 응용 프로그램은 SQL 문을 실행하기 전에 문 특성을 하나 이상 설정하여 커서의 동작을 제어합니다. ODBC에는 커서의 특징을 지정하는 다음 두 가지 방법이 있습니다.  

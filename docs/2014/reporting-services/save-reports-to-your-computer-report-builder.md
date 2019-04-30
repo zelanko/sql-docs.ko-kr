@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190221"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>컴퓨터에 보고서 저장(보고서 작성기)
   보고서 작성기에서 컴퓨터에 보고서 정의를 저장할 수 있습니다. 그러나 보고서 정의가 컴퓨터에 저장되는 경우 다른 사용자는 해당 보고서를 볼 수 없으며 공유 데이터 원본을 참조하거나 이미지, 하위 보고서 등의 보고서 항목을 외부에 저장하는 보고서가 실행되지 않을 수 있습니다. 보고서 서버나 SharePoint 사이트에 보고서를 저장하는 것이 좋습니다.  

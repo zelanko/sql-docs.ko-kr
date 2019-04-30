@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127012"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
   복제 로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 트랜잭션 로그에서 복제 대상으로 표시된 트랜잭션을 배포 데이터베이스에 복사하는 실행 파일입니다.  

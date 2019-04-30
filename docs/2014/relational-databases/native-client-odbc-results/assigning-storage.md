@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200035"
 ---
 # <a name="assigning-storage"></a>스토리지 할당
   응용 프로그램에서 SQL 문 실행 전이나 후에 결과의 저장소를 할당할 수 있습니다. 응용 프로그램에서 먼저 SQL 문을 준비하거나 실행하는 경우 결과의 저장소를 할당하기 전에 결과 집합을 조회할 수 있습니다. 예를 들어 결과 집합을 알 수 없는 경우 응용 프로그램에서는 결과의 저장소를 할당하기 전에 열의 수를 검색해야 합니다.  

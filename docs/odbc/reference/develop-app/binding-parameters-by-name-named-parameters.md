@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199371"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>이름으로 매개 변수 바인딩(명명된 매개 변수)
 특정 Dbms 프로시저 호출에서 위치에 따라 대신 이름으로 저장된 프로시저에 매개 변수를 지정 하는 응용 프로그램을 허용 합니다. 이러한 매개 변수 라고 *명명 된 매개 변수*합니다. ODBC는 명명 된 매개 변수 사용을 지원합니다. Odbc에서 명명 된 매개 변수는 저장된 프로시저에 대 한 호출 에서만 사용 되며 및 다른 SQL 문에서 사용할 수 없습니다.  

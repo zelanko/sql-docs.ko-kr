@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb9678f56bc261edbe8450dbcc03840f8d18fc8b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182905"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>4단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의
   부모 보고서를 디자인 한 후에는 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2008 데이터베이스에 대한 연결입니다. AdventureWorks2012 데이터베이스에 연결할 수도 있습니다.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>DataSet을 추가하여 자식 보고서에 대한 데이터 연결 및 DataTable을 정의하려면  

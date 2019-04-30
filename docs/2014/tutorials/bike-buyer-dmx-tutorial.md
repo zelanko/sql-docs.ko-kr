@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140535"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX 자습서
   이 자습서에서는 DMX(Data Mining Extensions) 쿼리 언어를 사용하여 마이닝 모델을 만들고 학습하며 탐색하는 방법을 설명합니다. 이러한 마이닝 모델을 사용하여 고객이 자전거를 구입할 것인지 여부를 결정하는 예측을 만들 수 있습니다.  

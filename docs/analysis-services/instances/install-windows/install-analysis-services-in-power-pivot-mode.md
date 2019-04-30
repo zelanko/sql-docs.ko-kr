@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054813"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,9 +23,9 @@ ms.locfileid: "52527748"
 ##  <a name="bkmk_background"></a> 배경  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] (SharePoint용)은 SharePoint 2016 또는 SharePoint 2013 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  
   
--   **백 엔드 서비스:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for Excel을 사용하여 분석 데이터가 포함된 통합 문서를 만드는 경우 서버 환경에서 이러한 데이터에 액세스하려면 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]이 있어야 합니다. SharePoint Server가 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은(는) SharePoint에 대한 종속성이 없습니다.  
+-   **백 엔드 서비스:** 사용 하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 분석 데이터가 포함 된 통합 문서를 만들려면 Excel 용 있어야 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 환경에서 데이터에에서 액세스 하려면 SharePoint에 대 한 합니다. SharePoint Server가 설치된 컴퓨터 또는 SharePoint 소프트웨어가 설치되지 않은 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은(는) SharePoint에 대한 종속성이 없습니다.  
   
-     **참고:** 이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스의 설치에 대해 설명합니다.  
+     **참고:** 설치에 설명 합니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버와 백 엔드 서비스입니다.  
   
 -   **중간 계층:** 향상 된 기능을 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 포함 한 SharePoint 환경을 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자입니다. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52527748"
 ###  <a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
  비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 세부 정보를 참조 하세요 [Analysis Services에서 지 원하는 기능을 SQL Server 2016 버전](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 하 고 [버전 및 SQL Server 2016 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
   
-##  <a name="InstallSQL"></a> 1 단계: SharePoint 용 Power Pivot 설치  
+##  <a name="InstallSQL"></a> 1단계: SharePoint 용 Power Pivot 설치  
  이 단계에서는 SQL Server 설치 프로그램을 실행하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치합니다. 이후 단계에서는 통합 문서 데이터 모델에 이 서버를 사용하도록 Excel Services를 구성합니다.  
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "52527748"
   
 9. 다른 **설치 지원 규칙**이 표시되면 경고를 검토하고 **다음**을 선택합니다.  
   
-     **참고:** Windows 방화벽이 설정되었기 때문에 원격 액세스를 사용할 수 있도록 포트를 열라는 경고가 표시됩니다.  
+     **참고:** Windows 방화벽이 설정 되었기 때문에 원격 액세스를 활성화 하는 포트를 열라는 경고가 표시 됩니다.  
   
 10. **설치 역할** 페이지에서 **SQL Server 기능 설치**를 선택합니다.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527748"
   
 3.  Analysis Services 인스턴스(예: **[서버 이름]\POWERPIVOT**)에 연결합니다. 인스턴스에 연결할 수 있는 경우 서비스가 실행 중인 것입니다.  
   
-##  <a name="bkmk_config"></a> 2 단계: Basic Analysis Services SharePoint 통합 구성  
+##  <a name="bkmk_config"></a> 2단계: Basic Analysis Services SharePoint 통합 구성  
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527748"
   
     ```  
   
-##  <a name="bkmk_verify"></a> 3 단계: 통합 확인  
+##  <a name="bkmk_verify"></a> 3단계: 통합 확인  
  다음 단계에서는 새 통합 문서를 만들고 업로드하여 Analysis Services 통합을 확인하는 방법을 단계별로 설명합니다. 이들 단계를 완료하려면 SQL Server 데이터베이스가 필요합니다.  
   
-1.  **참고:** 슬라이서 또는 필터가 포함된 고급 통합 문서가 이미 있는 경우 이 통합 문서를 SharePoint 문서 라이브러리에 업로드하고 문서 라이브러리 뷰에서 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다.  
+1.  **참고:** SharePoint 문서 라이브러리에 업로드 하 고 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다 슬라이서 또는 필터가 포함 된 고급 통합 문서를 이미 있는 경우 문서 라이브러리 보기에서 사용 합니다.  
   
 2.  Excel에서 새 통합 문서를 시작합니다.  
   

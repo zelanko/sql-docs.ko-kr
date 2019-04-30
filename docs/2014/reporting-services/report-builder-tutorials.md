@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195104"
 ---
 # <a name="tutorials-report-builder"></a>자습서(보고서 작성기)
   이 항목에 나오는 보고서 작성기 자습서를 사용하여 기본 보고서를 만드는 방법을 배울 수 있습니다.  

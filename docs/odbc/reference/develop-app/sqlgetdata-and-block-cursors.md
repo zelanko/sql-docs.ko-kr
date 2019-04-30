@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a14c98f045fd974b404209cc998496dc5fa7193e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149080"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData 및 블록 커서
 **SQLGetData** 단일 행의 단일 열에서 작동 하 고 여러 행의 데이터를 포함 하는 배열을 가져올 수 없습니다. 주 사용 하기 때문에 이것이 **SQLGetData** 부분에서 긴 데이터를 인출 하는 것 이며 한 번에 둘 이상의 행에 대해 이렇게 하는 거의 또는 전혀 이유입니다.  

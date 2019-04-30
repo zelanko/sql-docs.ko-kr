@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158749"
 ---
 # <a name="implementing-endpoints"></a>엔드포인트 구현
   엔드포인트는 기본적으로 요청을 수신할 수 있는 서비스입니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체를 사용하여 다양한 유형의 엔드포인트를 지원합니다. <xref:Microsoft.SqlServer.Management.Smo.Endpoint> 개체 인스턴스를 만들고 해당 속성을 설정하여 특정 프로토콜을 사용하는 특정 유형의 페이로드를 처리하는 엔드포인트 서비스를 만들 수 있습니다.  

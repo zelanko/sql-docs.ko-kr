@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: a616686649ae6c373d3537d397fe56d709f08712
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "56987809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200779"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미에서 추적 캡처
 

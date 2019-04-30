@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c64bf641a6519c42ad0d3a8cdfd578458f84439
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150934"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>계획 지침 사용 또는 사용 안 함
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다. 데이터베이스에 있는 단일 계획 지침 또는 모든 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다.  

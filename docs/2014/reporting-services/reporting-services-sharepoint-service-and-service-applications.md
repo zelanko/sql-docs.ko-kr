@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40bfd5e68aa8c27ee0024147eeadc99f0da91ce2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182881"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 애플리케이션
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축되었으며 SharePoint 서비스와 일대다 서비스 애플리케이션을 활용합니다. 서비스 애플리케이션을 만들면 서비스를 사용할 수 있게 되며 서비스 애플리케이션 데이터베이스가 생성됩니다. Reporting Services 서비스 애플리케이션은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 애플리케이션은 하나면 충분합니다.  

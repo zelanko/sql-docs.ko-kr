@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298106"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>등록된 서버 정보 내보내기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 등록된 서버 정보를 저장하여 내보내고 그 정보를 다른 사용자나 서버로 배포하는 방법에 대해 설명합니다. 이러한 내보내기 기능을 사용하면 여러 대의 컴퓨터에서 일관된 사용자 인터페이스를 사용할 수 있습니다.  

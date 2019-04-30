@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206999"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "48052703"
   
  현재 드라이버는 문장 부호 문자 앞뒤에 추가 공백을 허용하며, 시간과 시간대 오프셋 사이의 공백은 선택 사항입니다. 그러나 이 부분은 향후 릴리스에서 변경될 수 있으므로 현재 동작에 의존하도록 응용 프로그램을 작성하면 안 됩니다.  
   
-## <a name="data-formats-data-structures"></a>데이터 구조 데이터 형식:  
+## <a name="data-formats-data-structures"></a>데이터 형식: 데이터 구조  
  아래 설명된 구조에서 ODBC는 일반 달력에서 비롯된 다음과 같은 제약 사항을 지정합니다.  
   
 -   월 범위는 1에서 12까지입니다.  

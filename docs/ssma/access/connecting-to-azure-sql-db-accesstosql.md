@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8924ffbbbbbedccdc3bb99469c92667efb822a4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138929"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL)에 연결
 Access 데이터베이스를 SQL Azure 마이그레이션하려면 SQL Azure 대상 인스턴스에 연결 해야 합니다. 에 연결 하면 SSMA는 SQL Azure 인스턴스에서 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에서 데이터베이스 메타 데이터를 표시 합니다. SSMA는 인스턴스의 SQL Azure 대 한 연결 해도 암호를 저장 하지 않는 정보를 저장 합니다.  

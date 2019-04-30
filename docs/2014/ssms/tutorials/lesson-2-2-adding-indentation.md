@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222945"
 ---
 # <a name="adding-indentation"></a>들여쓰기 추가
   쿼리 편집기를 사용하여 한 단계로 여러 코드 섹션을 들여쓸 수 있으며 들여쓰기 크기도 변경할 수 있습니다.  

@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158011"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]의 새로운 기능인 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 로 OLTP 데이터베이스 애플리케이션 성능이 상당히 개선될 수 있습니다. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 엔진에 통합된 메모리 최적화 데이터베이스 엔진으로 OLTP에 최적화되어 있습니다.  
   
 |||  
 |-|-|  
-|![Azure 가상 머신](../../master-data-services/media/azure-virtual-machine.png "Azure 가상 머신")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료 되 면 가상 컴퓨터를 삭제할 수 있습니다.|  
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료 되 면 가상 컴퓨터를 삭제할 수 있습니다.|  
   
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]를 사용하려면 자주 액세스하는 테이블을 메모리 액세스에 최적화된 상태로 정의합니다. 메모리 액세스에 최적화된 테이블은 내구성 있는 완전 트랜잭션이며 디스크 기반 테이블과 같은 방법으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 액세스됩니다. 쿼리는 메모리 최적화 테이블 및 디스크 기반 테이블을 모두 참조할 수 있습니다. 트랜잭션은 메모리 최적화 테이블 및 디스크 기반 테이블에서 데이터를 업데이트할 수 있습니다. 메모리 최적화 테이블만 참조하는 저장 프로시저는 성능 향상을 위해 기계어 코드에 고유하게 컴파일될 수 있습니다. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 고도로 확장된 중간 계층에서 파생되는 OLTP 유형의 트랜잭션을 위한 매우 높은 수준의 세션 동시성을 지원하도록 설계되었습니다. 이를 위해서 래치가 설정되지 않은 데이터 구조와 낙관적인 여러 버전의 동시성 제어를 사용합니다. 따라서 결과는 예측 가능하며, 지연 시간은 밀리초 미만으로 짧고, 처리량은 많으며 데이터베이스 트랜잭션을 위해 직선형으로 확장됩니다. 실제 성능 향상은 많은 요인에 따라 달라지지만 일반적으로 성능이 5 - 20배 향상됩니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "53359535"
 |[메모리 액세스에 최적화된 테이블의 인덱스](../../database-engine/indexes-on-memory-optimized-tables.md)|메모리 최적화 인덱스를 소개합니다.|  
 |[고유하게 컴파일된 저장 프로시저](natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|  
 |[메모리 내 OLTP의 메모리 관리](../../database-engine/managing-memory-for-in-memory-oltp.md)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
-|[메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 최적화 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
+|[메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 최적화 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
 |[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](restore-and-recovery-of-memory-optimized-tables.md)|메모리 최적화 테이블의 백업, 복원 및 복구를 논의합니다.|  
 |[메모리 내 OLTP에 대한 Transact-SQL 지원](transact-sql-support-for-in-memory-oltp.md)|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 대한 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]지원을 논의합니다.|  
 |[메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]의 가용성 그룹 및 장애 조치(failover) 클러스터링을 논의합니다.|  

@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d827a48f76639b15cc63e295e7f40190b60a4694
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132278"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>서버 연결 파일 만들기(MySQLToSQL)
 스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
   
-**예:**  
+**예제:**  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -91,6 +91,6 @@ ms.locfileid: "52399826"
 ## <a name="next-step"></a>다음 단계  
 운영 콘솔에서 다음 단계 [SSMA 콘솔 실행 &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SSMA 콘솔 (MySQL)를 실행합니다.](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

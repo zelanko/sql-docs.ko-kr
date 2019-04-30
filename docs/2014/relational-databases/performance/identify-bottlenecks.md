@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150905"
 ---
 # <a name="identify-bottlenecks"></a>병목 상태 식별
   공유 리소스를 동시에 액세스하는 경우 병목 상태가 발생합니다. 일반적으로 병목 상태는 모든 소프트웨어 시스템에서 필연적으로 나타나지만 공유 리소스에 대한 과도한 요구는 응답 시간을 현저히 늦추는 원인이므로 반드시 확인하고 적절하게 튜닝해야 합니다.  

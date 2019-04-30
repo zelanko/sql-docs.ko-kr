@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150453"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP-IP 속성 (프로토콜 탭)
   **TCP/IP 속성** 대화 상자를 사용하여 TCP/IP 프로토콜 옵션을 구성합니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP**를 클릭합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "52781685"
  **No Delay**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 속성에 대한 변경 내용을 구현하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [네트워크 프로토콜 선택](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [TCP/IP를 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   

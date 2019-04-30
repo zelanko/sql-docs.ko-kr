@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132307"
 ---
 # <a name="managing-backups-sybasetosql"></a>백업 관리(SybaseToSQL)
 백업 및 복원 하기 전에 또는 테스트를 실행 한 후 데이터를 테이블 Sybase 백업 관리는 수 있습니다. 또한 백업 내용을 관리 대화 상자를 사용 하 여 백업 콘텐츠를 관리할 수 있습니다.  

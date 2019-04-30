@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204815"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>예측 구조 및 모델 만들기(중급 데이터 마이닝 자습서)
   다음으로 데이터 마이닝 마법사를 사용하여 방금 만든 데이터 원본 뷰를 기반으로 하는 새 마이닝 구조와 마이닝 모델을 만듭니다. 이 태스크에서는 마이닝 모델에 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용하도록 지정합니다.  

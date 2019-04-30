@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5895a106c389afe2d1979cf8d9c16e92f570538a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049946"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations로 책갈피별로 행 삭제
 책갈피에서 행을 삭제할 때 **SQLBulkOperations** 데이터 원본에서 테이블의 하나 이상의 선택한 행을 삭제 합니다. 행 바인딩된 책갈피 열에 책갈피를 통해 식별 됩니다.  

@@ -1,5 +1,5 @@
 ---
-title: SQLExecDirect | Microsoft 문서
+title: SQLExecDirect | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067514"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   문 특성 SQL_SOPT_SS_PARAM_FOCUS가 0, SQLExecDirect 되지 경우 SQL_ERROR가 반환 되며 sqlstate 진단 레코드가 생성 = HY024 및 "잘못 된 특성 값 SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)". SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  

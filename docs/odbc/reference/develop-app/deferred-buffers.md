@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049889"
 ---
 # <a name="deferred-buffers"></a>지연 버퍼
 A *지연 된 버퍼* 값인 언젠가 하나인 *후* 함수 호출에 지정 된 합니다. 예를 들어 **SQLBindParameter** 에 연결 하는 데 사용 됩니다 또는 *바인딩* SQL 문에서 매개 변수를 사용 하 여 데이터 버퍼입니다. 응용 프로그램 매개 변수 개수를 지정 하 고 주소, 바이트 길이 및 버퍼 유형의 전달 합니다. 드라이버는이 정보를 저장 했지만 버퍼의 내용을 검사 하지 않습니다. 나중에 문을 실행 하는 응용 프로그램, 드라이버 정보를 검색 한 데이터 원본에 보내는 매개 변수 데이터를 검색 하는 데 사용 합니다. 따라서 버퍼의 데이터 입력 지연 됩니다. 지연 된 버퍼는 하나의 함수에 지정 되 고 다른 사용, 이므로 응용 프로그램 프로그래밍 오류 드라이버 여전히 존재 하는 동안 지연 된 버퍼를 해제 하려면 자세한 내용은 [Allocating 및 버퍼 해제](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)이 섹션의 뒷부분에 나오는.  

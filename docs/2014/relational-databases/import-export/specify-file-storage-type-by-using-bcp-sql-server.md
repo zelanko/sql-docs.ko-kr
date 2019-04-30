@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155831"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
-  *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터 또는 내보낼 수 데이터 파일에는 데이터베이스 테이블 형식 (네이티브 형식)로 문자 표시 (문자 형식), 암시적 변환이 지원 되는 데이터 형식으로 예를 들어 복사를 `smallint` 으로 `int`합니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  
+  *파일 저장 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>파일 스토리지 유형에 대한 bcp 프롬프트  
  대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w**또는 **-N**)가 없으면 각 데이터 필드의 파일 스토리지 유형을 다음과 같이 입력해야 합니다.  
@@ -35,9 +35,9 @@ ms.locfileid: "48048443"
   
 -    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 스토리지 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 스토리지 유형"을 참조하십시오.  
   
--   데이터를 대량 내보내기의 인스턴스로부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 형식에서 데이터 파일에 지정 `char` 테이블의 모든 열에 대 한 파일 저장 유형으로 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터를 문자 형식으로 데이터 파일에 대량으로 내보내려면 `char`를 테이블의 모든 열에 대한 파일 저장 유형으로 지정합니다.  
   
--   대량 데이터의 인스턴스를 가져오려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에서 파일 저장 유형으로 지정 `char` 문자에 저장 된 형식의 서식을 지정 하 고, 네이티브 데이터 형식으로 저장 된 데이터에 대 한 중 하나를 지정 파일 저장소 형식에 적절 하 게 합니다.  
+-   데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스로 데이터를 대량으로 가져오려면 문자 형식으로 저장된 유형에 대해 `char`를 파일 저장 유형으로 지정하고 네이티브 데이터 형식으로 저장된 데이터의 경우 적절한 파일 저장 유형을 지정합니다.  
   
     |파일 스토리지 유형|명령 프롬프트에 입력할 내용|  
     |-----------------------|-----------------------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "48048443"
   
      <sup>1</sup> 로 내보낸 비문자 데이터에 대 한 데이터 파일에 할당 되는 저장소 공간의 크기를 결정 하는 필드 길이, 접두사 길이 및 종결자의 상호 작용을 `char` 파일 저장 유형입니다.  
   
-     <sup>2</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 사용 하 여 `nvarchar(max)`하십시오 `varchar(max)`, 및 `varbinary(max)` 대신 합니다.  
+     <sup>2</sup> 는 `ntext`를 `text`, 및 `image` 데이터 형식의 이후 버전에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 대신 `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)`를 사용해야 합니다.  
   
 ## <a name="native-file-storage-types"></a>네이티브 파일 스토리지 유형  
  각 네이티브 파일 스토리지 유형은 해당 호스트 파일 데이터 형식으로 서식 파일에 기록됩니다.  
@@ -120,7 +120,7 @@ ms.locfileid: "48048443"
   
 -   잘못 된 암시적 변환을 나타내는 파일 저장 유형을 입력 하면 **bcp** 실패; 예를 들어 지정할 수 있지만 `int` 에 대 한 `smallint` 데이터를 지정 하는 경우 `smallint` 에 대 한 `int` 데이터 오버플로 오류가 발생 합니다.  
   
--   문자가 아닌 데이터 형식이 같은 경우 `float`, `money`, `datetime`, 또는 `int` 저장 된 데이터베이스 형식으로 데이터를 데이터 파일에 기록 됩니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 형식입니다.  
+-   `float`, `money`, `datetime` 또는 `int`와 같이 문자가 아닌 데이터 형식이 데이터베이스 형식으로 저장되면 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 형식으로 데이터 파일에 기록됩니다.  
   
     > [!NOTE]  
     >  **bcp** 명령의 모든 필드를 대화형으로 지정하면 명령에서 비 XML 서식 파일의 각 필드에 대한 응답을 저장하라는 메시지를 표시합니다. 비 XML 서식 파일에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)을 참조하세요.  

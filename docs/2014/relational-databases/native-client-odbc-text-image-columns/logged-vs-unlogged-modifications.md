@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195139"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>기록되는 수정 및 기록되지 않는 수정
   응용 프로그램에서 요청 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 로그 아님 **텍스트**를 **ntext**, 및 **이미지** 수정 합니다. 하지만 이 옵션을 사용할 때는 주의해야 합니다. 경우에만 사용 해야 여기서 합니다 **텍스트**를 **ntext**, 또는 **이미지** 데이터가 중요 하지 않으며 데이터 소유자가 데이터를 복구 하는 기능 기꺼이 성능 향상  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205845"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  

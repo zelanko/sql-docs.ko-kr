@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2046dc87627aded9415d537c37c6cf21880c8e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164691"
 ---
 # <a name="design-the-matrix"></a>행렬 디자인
   보고서 마법사의 행렬 디자인 페이지를 사용하여 보고서에 대한 필드를 선택할 수 있습니다.  

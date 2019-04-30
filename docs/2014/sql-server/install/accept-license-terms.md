@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224833"
 ---
 # <a name="accept-license-terms"></a>사용 조건 동의
   **설치 마법사의** 사용 조건 동의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 사용 조건에 동의할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48141565"
 ## <a name="customer-experience-improvement-program-ceip"></a>CEIP(Customer Experience Improvement Program)  
  CEIP 보고를 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 보고서를 주기적으로 보내도록 구성됩니다. 보고서에는 하드웨어 구성 정보와 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 구성 요소를 사용하는 방식이 포함됩니다. 기능 사용 데이터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 개선하는 데 사용됩니다. 이 기능을 통해 모니터링되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 다음과 같습니다.  
   
--   는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48141565"
   
  다른 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에 대한 정보는 설정된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 대해 하루에 한 번씩 수집됩니다. 수집 시간은 서버 로드를 최소화하기 위해 기본적으로 자정으로 설정됩니다. 수집 시간을 변경하려는 경우 수집 시간을 제어하는 레지스트리 키를 수동으로 편집할 수 있습니다. 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 다음과 같은 자체 레지스트리 키가 있습니다.  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< INSTANCEID > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\<INSTANCEID>\CPE\TimeofReporting  
   
  이 레지스트리 키 값에는 수집 실행 시간이 00:00(자정)부터 경과된 분 수로 포함되어 있습니다. 예를 들어 값 60은 오전1시에 수집이 실행되었음을 나타내고 값 1200은 오후 8시에 수집이 실행되었음을 나타냅니다.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48141565"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 해당 구성 요소의 기능 사용 데이터 컬렉션 및 오류 보고 기능은 기본적으로 해제되어 있습니다.  
   
  오류 보고  
- 오류 보고 기능을 설정하면 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 중 하나에서 오류가 발생할 경우 자동으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 보고서를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 구성됩니다.  
+ 오류 보고 기능을 설정하면 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 중 하나에서 오류가 발생할 경우 자동으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 보고서를 보내도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 구성됩니다.  
   
--   는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트  
   
@@ -78,7 +78,7 @@ ms.locfileid: "48141565"
   
 -   복제  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 오류 보고서를 사용 하 여 향상을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 하며 모든 정보는 기밀로 처리 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 오류 보고서를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능의 향상을 위해 사용하며 모든 정보는 기밀로 처리합니다.  
   
  오류 정보는 보안 연결(HTTPS)을 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보내며 액세스가 제한된 곳에 보관됩니다. 또는 사용자의 회사 오류 보고 서버 서버로 오류 보고서를 보낼 수 있습니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48141565"
   
 -   오류가 발생한 프로세스의 메모리 또는 파일 정보  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고의로 수집 하지 않습니다 파일, 이름, 주소, 전자 메일 주소 또는 기타 형태의 개인 정보입니다. 그러나 오류 보고서에는 오류를 발생시킨 프로세스의 메모리나 파일에 있는 개인 정보가 포함될 수 있습니다. 이런 정보는 사용자의 신분을 확인하는 데 사용될 가능성은 있지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 의도적으로 사용하지는 않습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 사용자의 파일, 이름, 주소, 전자 메일 주소 또는 기타 형태의 개인 정보를 의도적으로 수집하지 않습니다. 그러나 오류 보고서에는 오류를 발생시킨 프로세스의 메모리나 파일에 있는 개인 정보가 포함될 수 있습니다. 이런 정보는 사용자의 신분을 확인하는 데 사용될 가능성은 있지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서 의도적으로 사용하지는 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개인 정보 보호 및 데이터 수집 정책에 대한 자세한 내용은 [Microsoft SQL Server 개인 정보 취급 방침](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)을 참조하세요.  
   

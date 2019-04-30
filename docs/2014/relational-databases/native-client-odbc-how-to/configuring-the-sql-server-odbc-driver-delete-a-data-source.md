@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126106"
 ---
 # <a name="delete-a-data-source-odbc"></a>데이터 원본 삭제(ODBC)
   ODBC 관리자를 프로그래밍 방식으로 사용 하 여 데이터 원본을 삭제할 수 있습니다 (사용 하 여 [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)), 또는 (경우 파일 데이터 원본 이름) 파일을 삭제 하 여 합니다.  

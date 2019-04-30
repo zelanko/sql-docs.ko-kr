@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200415"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다.  

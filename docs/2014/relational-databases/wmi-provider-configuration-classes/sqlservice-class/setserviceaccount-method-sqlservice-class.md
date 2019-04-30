@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 65f9c926a75ae4d64e54d6f600aba2a70f0482cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218103"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount 메서드(SqlService 클래스)
   서비스 인스턴스가 실행되는 사용자 이름과 암호를 변경합니다.  

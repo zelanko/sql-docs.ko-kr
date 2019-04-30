@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204623"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>쿼리 및 뷰 디자이너에 국가별 데이터 사용(Visual Database Tools)
   [쿼리 및 뷰 디자이너](visual-database-tools.md)는 모든 언어 및 모든 Windows 운영 체제 버전에서 사용할 수 있습니다. 다음 지침은 이러한 상황에서 나타나는 차이점을 요약한 것이며, 국가별 애플리케이션에서 데이터를 관리하는 방법에 대해 설명합니다.  

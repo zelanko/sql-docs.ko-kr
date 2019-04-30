@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143712"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 

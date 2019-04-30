@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195044"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
   쿼리 및 뷰 디자이너는 뷰의 정의를 열거나, 쿼리 또는 뷰의 결과를 표시하거나, 쿼리를 만들거나 열 때 나타납니다. 이 디자이너는 네 개의 개별 창으로 구성되어 있습니다.  

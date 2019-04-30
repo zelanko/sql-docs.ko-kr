@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224585"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 날짜, 시간, 타임스탬프 리터럴
 최대 상호 운용성을 위해 응용 프로그램 이스케이프 절 구문을 사용 하 여 ODBC 정식 형식으로 날짜 리터럴을 전달 해야:  

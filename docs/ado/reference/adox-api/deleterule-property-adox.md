@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5aefd37b70df88ada887e173dc1cc1f7d8ec4d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297994"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule 속성(ADOX)
 기본 키 삭제 될 때 수행 되는 작업을 나타냅니다.  

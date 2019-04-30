@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127044"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 바로 가기 키
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에는 두 개의 키보드 구성표가 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 구성표가 사용됩니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 에서는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]의 표준 구성표와 유사한 키보드 구성표도 제공합니다. 키보드 구성표를 변경하거나 다른 바로 가기 키를 추가하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **환경**, **키보드** 페이지에서 원하는 키보드 구성표를 선택합니다.  
@@ -459,7 +459,7 @@ ms.locfileid: "52794735"
 |페이지의 이전 컨트롤로 이동|Shift+Tab|해당 키 없음|  
 |디자인 화면에 표 표시|Enter|해당 키 없음|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [메뉴 및 바로 가기 키 사용자 지정](customize-menus-and-shortcut-keys.md)  
   
   

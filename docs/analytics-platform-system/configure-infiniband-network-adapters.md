@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057206"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System에 대 한 InfiniBand 네트워크 어댑터를 구성 합니다.
 병렬 데이터 웨어하우스 (PDW)에서 제어 노드에 연결 하려면 클라이언트 비 어플라이언스 서버의 InfiniBand 네트워크 어댑터를 구성 하는 방법을 설명 합니다. 자동으로 활성 InfiniBand 네트워크 로드, 백업 및 다른 프로세스에 연결할 수 있도록 기본 연결을 고가용성을 위해 다음이 지침을 따르세요.  

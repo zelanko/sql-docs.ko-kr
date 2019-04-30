@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6db15f08718ef1636dcb617c95994d644582d45f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165064"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 정보 근로자를 위한 데이터 경고 관리자가 제공됩니다. SharePoint 정보 근로자는 자신이 만든 경고에 대한 정보를 보고, 경고를 삭제하고, 경고 정의를 열어서 편집하고, 요청 시 경고를 실행할 수 있습니다. 또한 단일 보고서에 대한 경고만 보거나 모든 보고서에 대한 경고를 보도록 선택할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 정보 근로자에게 제공되는 기능들을 보여 줍니다.  

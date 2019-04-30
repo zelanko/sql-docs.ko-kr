@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065551"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>명명된 파이프를 사용하여 유효한 연결 문자열 만들기
   사용자가 변경하지 않으면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 인스턴스는 `\\.\pipe\sql\query` 를 파이프 이름으로 사용하는 명명된 파이프 프로토콜에서 수신합니다. 마침표는 컴퓨터가 로컬 컴퓨터임을 나타내고 `pipe` 는 연결이 명명된 파이프임을 나타내며 `sql\query` 는 파이프의 이름입니다. 기본 파이프에 연결하려면 별칭의 파이프 이름으로 `\\<computer_name>\pipe\sql\query` 를 지정해야 합니다. 다른 파이프에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 파이프 이름으로 해당 파이프를 사용해야 합니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 `\\.\pipe\unit\app` 를 파이프로 사용하는 경우 별칭의 파이프 이름은 `\\<computer_name>\pipe\unit\app` 여야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "56407593"
  연결 시 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 구성 요소 읽기 서버, 프로토콜 및 파이프 이름에서 지정 된 별칭 이름에 대 한 레지스트리 값 형식으로 파이프 이름을 만듭니다 `np:\\<computer_name>\pipe\<pipename>` 또는 `np:\\<IPAddress>\pipe\<pipename>`합니다. 명명 된 인스턴스의 경우 기본 파이프 이름은 `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 방화벽에서는 포트 445가 기본적으로 닫힙니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 포트 445에서 통신하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 명명된 파이프를 사용하여 들어오는 클라이언트 연결을 수신하도록 구성된 경우 이 포트를 다시 열어야 합니다. 방화벽을 구성하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: SQL Server 액세스를 허용하도록 방화벽 구성"을 참조하거나 해당 방화벽 설명서를 검토하십시오.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 방화벽에서는 포트 445가 기본적으로 닫힙니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 포트 445에서 통신하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 명명된 파이프를 사용하여 들어오는 클라이언트 연결을 수신하도록 구성된 경우 이 포트를 다시 열어야 합니다. 방화벽 구성에 대 한 자세한 내용은 "방법: Configure a Firewall for SQL Server 액세스"에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 하거나 해당 방화벽 설명서를 검토 합니다.  
   
 ## <a name="connecting-to-the-local-server"></a>로컬 서버에 연결  
  클라이언트와 동일한 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결할 때는 서버 이름으로 `(local)`을 사용할 수 있습니다. `(local)` 을 사용하면 모호해질 수 있으므로 권장되지는 않지만 클라이언트가 어떤 컴퓨터에서 실행될지 알고 있는 경우에는 유용할 수 있습니다. 예를 들어 영업 사원과 같이 네트워크에 연결되지 않은 모바일 사용자를 위해 애플리케이션을 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 랩톱 컴퓨터에서 실행되고 프로젝트 데이터를 저장하는 경우 (local)에 연결하는 클라이언트는 항상 랩톱에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결됩니다. `localhost`라는 단어나 마침표(.)를 `(local)` 대신 사용할 수 있습니다.  
@@ -116,7 +116,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  네트워크 프로토콜을 지정 하는 **sqlcmd** 매개 변수를 참조 하세요 "방법: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: sqlcmd.exe를 사용하여 데이터베이스 엔진에 연결"을 참조하십시오.  
+>  네트워크 프로토콜을 지정 하는 **sqlcmd** 매개 변수를 참조 하세요 "방법: Sqlcmd.exe를 사용 하 여 데이터베이스 엔진의 "연결" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [공유 메모리 프로토콜을 사용하여 유효한 연결 문자열 만들기](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

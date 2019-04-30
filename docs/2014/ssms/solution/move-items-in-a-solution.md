@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c6711b736f0313508f74b6c30253e7b2e2a3f93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154717"
 ---
 # <a name="move-items-in-a-solution"></a>솔루션에서 항목 이동
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트의 프로젝트 항목은 쿼리, 연결 및 기타 파일입니다. 솔루션 탐색기에서 쿼리와 기타 파일을 프로젝트 간에 이동할 수 있지만 연결은 이동할 수 없습니다.  

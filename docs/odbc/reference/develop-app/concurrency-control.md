@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191754"
 ---
 # <a name="concurrency-control"></a>동시성 제어
 *동시성* 는 동시에 동일한 데이터를 사용 하는 두 개의 트랜잭션이의 기능 및 향상 된 트랜잭션 격리 일반적으로 추가 되어 동시성이 줄어들된 합니다. 잠금 행에서 트랜잭션 격리는 일반적으로 구현 하는 트랜잭션을 더 적게 잠긴된 행으로 적어도 일시적으로 차단 되지 않고 수행할 행이 더 잠겨, 때문입니다. 동시성이 줄어들된는 일반적으로 데이터베이스 무결성을 유지 하는 데 필요한 더 높은 트랜잭션 격리 수준에 대 한 절충안으로 허용 되지만, 커서를 사용 하는 높은 읽기/쓰기 작업을 사용 하 여 대화형 응용 프로그램에서 문제가 될 수 있습니다.  

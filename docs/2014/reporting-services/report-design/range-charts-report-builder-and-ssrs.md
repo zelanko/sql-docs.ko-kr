@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70c597e7dd98d0eac435ae18423d296785369fa2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215494"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>범위형 차트(보고서 작성기 및 SSRS)
   범위형 차트에서는 각각 동일한 범주의 여러 값으로 정의된 일련의 데이터 요소를 표시합니다. 값은 값 축을 기준으로 측정되는 표식의 높이로 표시됩니다. 범주 레이블은 범주 축에 표시됩니다. 일반 범위형 차트는 각 데이터 요소의 상위 값과 하위 값 사이 영역을 채웁니다.  

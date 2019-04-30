@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224594"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>의사 결정 트리 모델 탐색(기본 데이터 마이닝 자습서)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 학습 집합의 나머지 열을 기준으로 자전거 구매 결정에 영향을 주는 열을 예측합니다.  

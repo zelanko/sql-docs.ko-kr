@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062144"
 ---
 # <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
   실행 하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용 하 여 결과 처리 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 알고 있어야 합니다 하는 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 맵 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 바인딩하는 경우 OLE DB 데이터 형식으로 데이터 형식 매개 변수 또는 열 행 집합을 사용 하는 경우는 **ITableDefinition** 인터페이스에는 테이블을 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [행 집합 및 매개 변수의 데이터 형식 매핑](data-type-mapping-in-rowsets-and-parameters.md)  
+-   [행 집합 및 매개 변수 데이터 형식 매핑](data-type-mapping-in-rowsets-and-parameters.md)  
   
 -   [ITableDefinition의 데이터 형식 매핑](data-type-mapping-in-itabledefinition.md)  
   

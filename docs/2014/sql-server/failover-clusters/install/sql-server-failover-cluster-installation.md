@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067649"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server 장애 조치(Failover) 클러스터 설치
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 장애 조치(Failover) 클러스터 인스턴스를 만들고 구성해야 합니다.  

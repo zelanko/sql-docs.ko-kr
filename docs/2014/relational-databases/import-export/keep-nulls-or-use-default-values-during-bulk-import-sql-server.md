@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064014"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
   기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
@@ -108,7 +108,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |------------|-----------------|  
 |`-f`|해당 명령에서 서식 파일을 사용하도록 지정합니다.|  
 |`-k`|작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다.|  
-|`-T`|bcp 유틸리티가 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 연결되도록 지정합니다.|  
+|`-T`|bcp 유틸리티가 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다.|  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
   
@@ -134,12 +134,12 @@ GO
   
 ```  
   
-## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ... 로 기본 값 사용  
+## <a name="keeping-default-values-with-insert--select--from-openrowsetbulk"></a>INSERT ... SELECT * FROM OPENROWSET(BULK...)  
  기본적으로 대량 로드 작업에 지정되어 있지 않은 열은 INSERT ... SELECT * FROM OPENROWSET(BULK...)을 사용하여 네이티브 형식 데이터를 테이블로 가져올 수 있습니다. 그러나 데이터 파일의 빈 필드의 경우 해당 테이블 열에서 기본값(있는 경우)을 사용하도록 지정할 수 있습니다. 기본값을 사용하려면 다음 테이블 힌트를 지정하십시오.  
   
 |Command|한정자|한정자 유형|  
 |-------------|---------------|--------------------|  
-|INSERT ... 로 기본 값 사용|WITH(KEEPDEFAULTS)|테이블 힌트|  
+|INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|테이블 힌트|  
   
 > [!NOTE]  
 >  자세한 내용은 [INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 및 [테이블 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)를 참조하세요.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 778da1b08aedd6c39db97351c6de799c883b6954
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207024"
 ---
 # <a name="using-linked-servers-in-smo"></a>SMO에서 연결된 서버 사용
   연결된 서버는 원격 서버의 OLE DB 데이터 원본을 나타냅니다. 원격 OLE DB 데이터 원본은 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 590cbab5e2b4091c4d0112914631f57d6f7bc8ea
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137289"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
   데이터 영역은 보고서 데이터 세트에 있는 데이터를 표시하는 보고서의 개체입니다. 보고서 데이터는 테이블, 행렬 또는 목록에 숫자 및 텍스트로 표시되거나, 차트 또는 계기에 그래픽으로 표시되거나, 지도에 지리적 배경을 바탕으로 표시될 수 있습니다. 테이블, 행렬 및 목록은 모두 데이터 세트의 모든 데이터를 표시하기 위해 필요에 따라 확장되는 *테이블릭스* 데이터 영역을 기반으로 합니다. 테이블릭스 데이터 영역은 정적 행과 열 및 동적 행과 열이 모두 포함된 여러 행 및 열 그룹을 지원합니다. 차트는 여러 계열 및 범주 그룹을 다양한 차트 형식으로 표시하고, 계기는 데이터 세트의 단일 값 또는 집계 값을 표시합니다. 또한 지도는 공간 데이터를 데이터 세트에서 집계한 데이터를 기반으로 모양이 변하는 지도 요소로 표시합니다.  

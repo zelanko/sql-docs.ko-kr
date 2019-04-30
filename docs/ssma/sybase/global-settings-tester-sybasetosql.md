@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126356"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>전역 설정(테스터)(SybaseToSQL)
 테스터 페이지를 사용 합니다 **전역 설정** SSMA 테스터를 위한 설정을 지정 하려면 대화 상자.  
@@ -43,7 +43,7 @@ ms.locfileid: "47607194"
   
 4.  테이블 비교에 실패 한 경우 사용자에 게 요청  
   
-기본 옵션 집합은: **언제 든 지 삭제할**합니다.  
+기본 옵션이 설정이 됩니다. **언제 든 지 삭제할**합니다.  
   
 **데이터 롤백 수행**  
 이 설정은 각 테스트 사례를 실행 한 후에 롤백 작업을 수행할지 여부를 지정 합니다. 기본 옵션 집합이 **No**합니다.  

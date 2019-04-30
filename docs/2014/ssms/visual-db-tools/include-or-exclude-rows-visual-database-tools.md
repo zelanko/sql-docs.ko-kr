@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3785a777571ef7659b1ae21a693e6754659a80e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298586"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>행 포함 또는 제외(Visual Database Tools)
   선택 쿼리가 반환할 행 수를 제한하려면 검색 조건 또는 필터링 기준을 만듭니다. SQL에서 검색 조건은 문의 WHERE 절에 나타나거나 집계 쿼리를 만들 경우 HAVING 절에 나타납니다.  

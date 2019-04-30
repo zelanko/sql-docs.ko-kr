@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc9b19a2693f28ccbfd3811ba81f8fb7b90de61b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206889"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>보고서에 계기 추가(보고서 작성기 및 SSRS)
   시각적 형식으로 데이터를 요약하려는 경우 계기 데이터 영역을 사용할 수 있습니다. 디자인 화면에 계기 데이터 영역을 추가한 후에는 보고서 데이터 세트 필드를 계기의 데이터 창으로 끌 수 있습니다.  

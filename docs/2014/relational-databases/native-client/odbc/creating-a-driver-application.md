@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205270"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC 드라이버 애플리케이션 만들기
   ODBC 아키텍처에는 다음과 같은 기능을 수행하는 네 가지 구성 요소가 있습니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "53362175"
   
 -   연결된 서버와 해당 카탈로그의 목록을 위해 분산 쿼리 메타데이터 API 함수 호출  
   
- 대량 복사 기능을 사용 하 여 C 또는 c + + ODBC 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlncli11.lib 파일을 사용 하 여 네이티브 클라이언트 ODBC 드라이버를 연결 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 응용 프로그램도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli.h 및 sqlncli11.lib 파일의 일부로 배포 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
+ 모든 C 또는 C++ 의 대량 복사 기능을 사용 하는 ODBC 응용 프로그램을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는은 sqlncli11.lib 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 응용 프로그램도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli.h 및 sqlncli11.lib 파일의 일부로 배포 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

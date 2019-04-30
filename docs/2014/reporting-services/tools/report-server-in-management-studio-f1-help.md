@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200989"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Management Studio의 보고서 서버 F1 도움말
   이 섹션에서는 보고서 서버를 관리하는 데 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 대화 상자에 대한 항목을 제공합니다.  

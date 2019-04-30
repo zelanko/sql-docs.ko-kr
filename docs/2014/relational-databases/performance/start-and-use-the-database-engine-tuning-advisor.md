@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150638"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 데이터베이스 엔진 튜닝 관리자를 시작 및 사용하는 방법에 대해 설명합니다. 데이터베이스 튜닝 후 결과를 보고 작업하는 방법은 [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](database-engine-tuning-advisor.md)을 참조하세요.  
@@ -50,7 +50,7 @@ ms.locfileid: "53356380"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
-1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **도구** 메뉴에서 **데이터베이스 엔진 튜닝 관리자**를 클릭합니다.  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>SQL Server Management Studio 쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자를 시작하려면  
   
@@ -94,7 +94,7 @@ ms.locfileid: "53356380"
   
     -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **도구** 메뉴를 클릭한 다음 **SQL Server Profiler**를 클릭합니다.  
   
-2.   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** 템플릿을 사용하는 다음 절차에 따라 추적 파일 또는 테이블을 만듭니다.  
+2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tuning** 템플릿을 사용하는 다음 절차에 따라 추적 파일 또는 테이블을 만듭니다.  
   
     -   [추적 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
   
@@ -298,7 +298,7 @@ ms.locfileid: "53356380"
 ##  <a name="XMLInput"></a> XML 입력 파일 만들기  
  숙련된 XML 개발자인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 작업을 튜닝할 때 사용하는 XML 형식의 파일을 만들 수 있습니다. 이러한 XML 파일을 만들려면 선호하는 XML 도구를 사용하여 예제 파일을 편집하거나 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마에서 인스턴스를 생성합니다.  
   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 저장됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 스키마는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 다음 위치에 저장됩니다.  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  인덱싱된 뷰 추가에 대한 권장 구성만 포함됩니다. 클러스터형 인덱스와 비클러스터형 인덱스에 대한 권장 구성은 생성되지 않습니다.  
   
  **필터링된 인덱스 포함**  
- 필터링된 인덱스 추가에 대한 권장 구성을 포함합니다. 인덱스와 인덱싱된 뷰, 인덱스, 비클러스터형 인덱스 중 하나를 선택한 경우 **인덱스 및 인덱싱된 뷰**하십시오 **인덱스**, 또는 **비클러스터형 인덱스**합니다.  
+ 필터링된 인덱스 추가에 대한 권장 구성을 포함합니다. 이 옵션은 이러한 물리적 디자인 구조 중 하나를 선택 하는 경우 사용할 수 있습니다. **인덱스 및 인덱싱된 보기**, **인덱스** 또는 **비클러스터형 인덱스** 옵션을 사용할 수 있습니다.  
   
  **인덱스**  
  클러스터형 인덱스 및 비클러스터형 인덱스 추가에 대한 권장 구성만 포함됩니다. 인덱싱된 뷰에 대한 권장 구성은 생성되지 않습니다.  
@@ -505,7 +505,7 @@ database_name.owner_name.table_name
  **튜닝 로그**  
  이 튜닝 세션에 관한 정보가 포함되어 있습니다. 이 로그를 인쇄하려면 로그를 마우스 오른쪽 단추로 클릭한 다음 **인쇄**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

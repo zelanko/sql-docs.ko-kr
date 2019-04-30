@@ -1,5 +1,5 @@
 ---
-title: '6 단계: 데이터 원본에서 연결 끊기 | Microsoft Docs'
+title: '6단계: 데이터 원본에서 연결 끊기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149230"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>6단계: 데이터 원본 연결 끊기
 다음 그림에 나와 있는 것 처럼 데이터 원본에서 연결을 끊습니다는 최종 단계가입니다. 응용 프로그램 호출 하 여 모든 문 핸들을 해제 하는 먼저 **SQLFreeHandle**합니다. 자세한 내용은 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  

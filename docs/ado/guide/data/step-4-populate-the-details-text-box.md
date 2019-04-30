@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 060de551afa266dae4d5384fe765e16b997bcccd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062651"
 ---
-# <a name="step-4-populate-the-details-text-box"></a>4단계: 정보 텍스트 상자 채우기
+# <a name="step-4-populate-the-details-text-box"></a>4단계: 세부 정보 텍스트 상자 채우기
 정보 텍스트 상자를 채우려면 라는 새 서브루틴을 만들려면 **recFields** 다음 코드를 삽입 합니다.  
   
 ```  
@@ -47,6 +47,6 @@ End Sub
   
  이 코드 채웁니다 `lstDetails` 전달할 간단한 레코드의 값 필드와 `recFields`합니다. 리소스를 텍스트 파일에서 텍스트 Stream 리소스 레코드에서 열립니다. 코드와 문자 집합은 ASCII Stream 콘텐츠를 복사 하는지 여부를 결정 `txtDetails`합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
- [3 단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [3단계: 필드 목록 상자 채우기](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

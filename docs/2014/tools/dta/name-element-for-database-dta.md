@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f0f192dbf931d5ad80c594b376973ee2db3f31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297504"
 ---
 # <a name="name-element-for-database-dta"></a>Database의 Name 요소(DTA)
   튜닝할 데이터베이스의 이름을 지정합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52763195"
 ## <a name="example"></a>예제  
  이 요소의 사용 예는 [Server 요소&#40;DTA&#41;](server-element-dta.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

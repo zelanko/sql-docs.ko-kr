@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf72b40a6a1e4caf5f630298dd57cc4055fe41f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217697"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append 메서드 예제(VC++)
 다음 코드에는 새 인덱스를 만드는 방법을 보여 줍니다. 인덱스는 테이블의 두 열 켜져 있습니다.  

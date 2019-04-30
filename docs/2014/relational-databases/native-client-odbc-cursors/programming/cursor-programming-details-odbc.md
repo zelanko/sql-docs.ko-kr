@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9138b9abc8b75107061e794f44341f628e58ac67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207263"
 ---
 # <a name="cursor-programming-details-odbc"></a>커서 프로그래밍 정보(ODBC)
   올바른 커서 유형을 선택하면 응용 프로그램 성능을 개선할 수 있습니다. 특정 조건에서는 사용자가 요청한 커서 유형이 지원되지 않는 SQL 문을 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 암시적으로 커서 유형을 변환할 수 있습니다.  

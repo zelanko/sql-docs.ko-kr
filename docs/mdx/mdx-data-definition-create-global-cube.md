@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181446"
 ---
-# <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의-글로벌 큐브 만들기
+# <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의 - CREATE GLOBAL CUBE
 
 
-  논리적 지속형 큐브를 서버에 있는 큐브의 하위 큐브에 따라 만들고 채웁니다. 논리적 지속형 큐브에 대한 연결 시에는 서버 연결이 필요하지 않습니다. 로컬 큐브에 대 한 자세한 내용은 참조 [로컬 큐브 &#40;Analysis Services-다차원 데이터&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)합니다.  
+  논리적 지속형 큐브를 서버에 있는 큐브의 하위 큐브에 따라 만들고 채웁니다. 논리적 지속형 큐브에 대한 연결 시에는 서버 연결이 필요하지 않습니다. 로컬 큐브에 대 한 자세한 내용은 참조 하세요. [로컬 큐브 &#40;Analysis Services-Multidimensional Data&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -111,11 +111,11 @@ FROM source_cube_name (<param list>)
  NOT_RELATED_TO_FACTS  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
- \<수준 유형 >  
+ \<유형 수준 >  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 로컬 큐브 definedin 약관 정의 하는 정의와 측정값입니다. 다음과 같은 두 가지 유형의 차원이 있습니다.  
+ 로컬 큐브는 definedin 조건을 정의 하는 정의와 측정값입니다. 다음과 같은 두 가지 유형의 차원이 있습니다.  
   
 -   원본 차원 - 하나 이상 원본 큐브의 일부인 차원입니다.  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  CREATE GLOBAL CUBE 문은 다음 규칙을 따릅니다.  
   
--   CREATE GLOBAL CUBE 문은 계산 측정값 또는 동작과 같은 모든 명령을 로컬 큐브로 자동으로 복사합니다. 명령에 부모 큐브를 명시적으로 참조하는 MDX(Multidimensional Expressions) 식이 포함된 경우 로컬 큐브는 해당 명령을 실행할 수 없습니다. 이 문제를 방지 하려면 사용 된 **CURRENTCUBE** 명령에 대 한 MDX 식을 정의할 때 키워드입니다. **CURRENTCUBE** 키워드는 MDX 식 내의 큐브를 참조할 때 현재 큐브 컨텍스트를 사용 합니다.  
+-   CREATE GLOBAL CUBE 문은 계산 측정값 또는 동작과 같은 모든 명령을 로컬 큐브로 자동으로 복사합니다. 명령에 부모 큐브를 명시적으로 참조하는 MDX(Multidimensional Expressions) 식이 포함된 경우 로컬 큐브는 해당 명령을 실행할 수 없습니다. 이 문제를 방지 하려면 사용 합니다 **CURRENTCUBE** 명령에 대 한 MDX 식을 정의할 때 키워드입니다. 합니다 **CURRENTCUBE** 키워드는 MDX 식 내의 큐브를 참조할 때 현재 큐브 컨텍스트를 사용 합니다.  
   
 -   로컬 큐브 파일에 있는 기존 글로벌 큐브로부터 만든 글로벌 큐브는 동일한 로컬 큐브 파일에 저장할 수 없습니다. 예를 들어 SalesLocal1이라는 글로벌 큐브를 만들고 이 큐브를 C:\SalesLocal.cub 파일에 저장한다고 가정하십시오. 그런 다음 C:\SalesLocal.cub 파일에 연결하여 SalesLocal2라는 두 번째 글로벌 큐브를 만듭니다. 이제 SalesLocal2 글로벌 큐브를 C:\SalesLocal.cub 파일에 저장하려고 하면 오류가 발생합니다. 하지만 SalesLocal2 글로벌 큐브를 다른 로컬 큐브 파일에 저장할 수는 있습니다.  
   

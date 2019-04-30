@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214803"
 ---
 # <a name="basic-rds-programming-model"></a>기본 RDS 프로그래밍 모델
 > [!IMPORTANT]
 >  Windows 8 및 Windows Server 2012 부터는 RDS 서버 구성 요소는 더 이상 포함 된 Windows 운영 체제에서 (Windows 8을 참조 하 고 [Windows Server 2012 호환성 설명서](https://www.microsoft.com/download/details.aspx?id=27416) 자세한). RDS 클라이언트 구성 요소는 Windows의 이후 버전에서 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. RDS를 사용 하는 응용 프로그램을 마이그레이션해야 [WCF 데이터 서비스](https://go.microsoft.com/fwlink/?LinkId=199565)합니다.  
   
- RDS 주소는 다음과 같은 환경에 존재 하는 응용 프로그램: 클라이언트 응용 프로그램 서버와 원하는 정보를 반환 하는 데 필요한 매개 변수를 실행 하는 프로그램을 지정 합니다. 지정 된 데이터 원본에 대 한 서버 향상 액세스에서 호출 프로그램 정보를 검색 하 고, 필요에 따라 데이터를 처리, 쉽게 사용할 수 있는 형태로 클라이언트 응용 프로그램에 결과 정보를 반환 합니다. RDS는 다음과 같은 일련의 작업을 수행 하는 방법을 제공 합니다.  
+ RDS 환경에 존재 하는 응용 프로그램을 해결 합니다. 클라이언트 응용 프로그램 서버와 원하는 정보를 반환 하는 데 필요한 매개 변수를 실행 하는 프로그램을 지정 합니다. 지정 된 데이터 원본에 대 한 서버 향상 액세스에서 호출 프로그램 정보를 검색 하 고, 필요에 따라 데이터를 처리, 쉽게 사용할 수 있는 형태로 클라이언트 응용 프로그램에 결과 정보를 반환 합니다. RDS는 다음과 같은 일련의 작업을 수행 하는 방법을 제공 합니다.  
   
 -   서버에서 호출 프로그램을 지정 하 고 클라이언트에서 참조 하는 방법을 제공 합니다. (이 참조 라고 한 *프록시*합니다. 원격 서버 프로그램을 나타냅니다. 클라이언트 응용 프로그램은 "call"과 프록시 로컬 프로그램인 있었지만 실제로 원격 서버 프로그램 호출 처럼.)  
   

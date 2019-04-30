@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188547"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>내 구독 페이지(보고서 관리자)
   내 구독 페이지를 사용하여 모든 구독을 한 곳에서 확인할 수 있습니다. 이 페이지에서는 소유한 모든 구독을 액세스하고 수정 또는 삭제할 수 있습니다. 사용자는 자신이 만든 구독만 소유합니다. 다른 사용자가 정의한 구독에는 액세스할 수 없을 뿐 아니라 사용하지만 소유하지 않는 구독(예: 다른 사용자가 정의한 기존 구독에 자신의 이름이 추가된 경우)에도 액세스할 수 없습니다. 이 페이지에서 구독을 만들 수는 없습니다. 구독을 만드는 방법에 대 한 자세한 내용은 참조는 [새 구독 또는 구독 편집 페이지 &#40;보고서 관리자&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)합니다.  

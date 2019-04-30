@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150724"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>프로덕션 서버 튜닝 로드 줄이기
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 튜닝 관리자는 쿼리 최적화 프로그램을 사용하여 작업을 분석하고 튜닝 권장 사항을 작성합니다. 프로덕션 서버에서 이러한 분석을 수행하면 서버 부하가 가중되어 튜닝 세션 중에 서버 성능이 저하될 수 있습니다. 프로덕션 서버 외에 추가로 테스트 서버를 사용하면 튜닝 세션 중에 서버 부하에 미치는 영향을 줄일 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "53373925"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테스트 서버 사용 시 고려 사항](considerations-for-using-test-servers.md)   
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](database-engine-tuning-advisor.md)  
   

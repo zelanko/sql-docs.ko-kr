@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f52194bca9b91e387f49e4fa082feb9fad2c68c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144559"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 URL은 보고서 서버 웹 서비스 및 보고서 관리자에 액세스하는 데 사용됩니다. 애플리케이션을 사용하려면 먼저 웹 서비스와 보고서 관리자마다 적어도 한 개의 URL을 구성해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 다른 웹 서비스와 응용 프로그램을 함께 배포하는 경우를 비롯한 대부분의 배포 시나리오에서 잘 작동하는 두 응용 프로그램 URL에 대한 기본값을 제공합니다.  

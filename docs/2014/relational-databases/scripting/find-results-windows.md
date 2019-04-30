@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e5dfa6bd2ca34fe24433333bc20c99bcf25a66
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225242"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
   두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  

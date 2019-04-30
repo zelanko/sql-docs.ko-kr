@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218658"
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
   이 예제에서는 BLOB 데이터를 설정하고 테이블을 만들어 예제 레코드를 추가한 다음 행 집합에서 해당 레코드를 인출하고 BLOB 필드의 값을 설정하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  

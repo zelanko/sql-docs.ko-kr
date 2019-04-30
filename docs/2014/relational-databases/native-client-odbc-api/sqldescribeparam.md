@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067737"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   SQL 문의 매개 변수를 설명 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 작성 하 고 실행을 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam 준비 된 ODBC 문 핸들에서 호출 되 면 SELECT 문의 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam은 SQLExecute 또는 SQLExecDirect를 반환할 수 있는 오류 코드를 반환할 수 있습니다.  
@@ -75,8 +75,8 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
   
 ||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
-|smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
+|Datetime|SQL_TYPE_TIMESTAMP|23|3|  
+|Smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |Time|SQL_SS_TIME2|8, 10..16|0..7|  
 |Datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
@@ -87,7 +87,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
 ## <a name="sqldescribeparam-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLDescribeParam 지원  
  `SQLDescribeParam`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [Large CLR User-Defined 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQLDescribeParam 함수](https://go.microsoft.com/fwlink/?LinkId=59339)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

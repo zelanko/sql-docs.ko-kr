@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194908"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -32,12 +32,12 @@ ms.locfileid: "51350417"
   
  A *멤버* 차원 데이터 항목입니다. 일반적으로 캡션을 만들거나 멤버를 사용 하 여 데이터베이스의 측정값에 설명 합니다.  
   
- 큐브에 표시 됩니다 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD.의 개체 차원, 계층, 수준 및 멤버의 해당 ADO MD 개체도 표시 됩니다. [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)를 [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)를 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md), 및 [ 멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  
+ 큐브에 표시 됩니다 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD.의 개체 차원, 계층, 수준 및 멤버의 해당 ADO MD 개체도 표시 됩니다. [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)합니다 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md), 및 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)합니다.  
   
 ### <a name="dimensions"></a>차원  
  큐브 차원의 비즈니스 엔터티 및 데이터베이스에서 모델링 하는 데이터 형식에 따라 달라 집니다. 일반적으로 각 차원에는 독립적인 진입점 또는 데이터를 선택 하는 메커니즘입니다.  
   
- 예를 들어 판매 데이터를 포함 하는 큐브에 다음과 같은 5 개의 차원을: 영업, Geography, 시간, 제품 및 측정값입니다. Measures 차원의 다른 차원과 분류 하 고 판매 데이터 값을 그룹화 하는 방법을 나타내는 동안 실제 판매 데이터 값을 포함 합니다.  
+ 예를 들어, 판매 데이터를 포함 하는 큐브에 다음과 같은 5 개의 차원을 있습니다. 영업 사원, Geography, 시간, 제품 및 측정값입니다. Measures 차원의 다른 차원과 분류 하 고 판매 데이터 값을 그룹화 하는 방법을 나타내는 동안 실제 판매 데이터 값을 포함 합니다.  
   
  Geography 차원에는 다음 멤버 집합에 있습니다.  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  차원당 여러 계층 구조에 따라 멤버를 통합할 수 있습니다. 시간 차원 고려 일 수준에서 Year 수준으로 롤업 하는 방법은 두 가지 경우:  
   
- 이 예제에서는 또한 다른 특징을 보여 줍니다: 주 수준의 년 주 계층의 일부 구성원이 연도 분기 계층 구조의 모든 수준에 표시 되지 않습니다. 따라서 계층을 차원의 모든 멤버 포함할 필요는 없습니다.  
+ 이 예제에는 또 다른 특성을 보여 줍니다. 년 주 계층의 주 수준의 일부 멤버는 연도 분기 계층 구조의 모든 수준에서 표시 되지 않습니다. 따라서 계층을 차원의 모든 멤버 포함할 필요는 없습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

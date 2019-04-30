@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98bd56051c724186d7308eff669263d29b82ecd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198173"
 ---
 # <a name="delete-statement-limitations"></a>DELETE 문 제한 사항
 Microsoft Excel 또는 텍스트 드라이버에 대 한 DELETE 문은 지원 되지 않습니다. INSERT 문의 텍스트 드라이버에 대 한 지원 되는 참고 합니다.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40ab945f5eadbf1e1e876e37e921626719755a8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209385"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>행 삽입 또는 삭제(보고서 작성기 및 SSRS)
   테이블릭스 데이터 영역의 행을 추가하거나 삭제할 수 있습니다. 테이블릭스 데이터 영역은 테이블, 행렬 또는 목록일 수 있습니다. 차트 및 계기 데이터 영역에는 다음 절차가 적용되지 않습니다.  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063123"
 ---
 # <a name="deleting-database-objects"></a>데이터베이스 개체 삭제
   이 자습서의 모든 추적 내용을 제거하려면 데이터베이스를 삭제하기만 하면 됩니다. 그러나 이 항목에서는 자습서에서 수행한 모든 동작을 되돌리는 단계를 진행합니다.  

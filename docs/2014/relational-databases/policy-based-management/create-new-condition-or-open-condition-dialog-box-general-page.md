@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057764"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 일반 페이지
   이 대화 상자를 사용하여 정책 기반 관리 조건을 만들거나 변경할 수 있습니다. 조건은 패싯과 관련하여 정책 기반 관리로 관리되는 대상의 허용되는 상태 집합을 지정하는 부울 식입니다. **식/필드** 상자에서 선택할 수 있는 속성은 사용되는 패싯에 따라 달라집니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)를 참조하세요.  
@@ -39,7 +39,7 @@ ms.locfileid: "52798295"
  이 식에 대한 비교 연산자를 선택합니다. 연산자는 =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN과 같습니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
  **Value**  
- 이 식에 대한 값 설정입니다. 허용되는 값은 패싯에 따라 달라집니다. 값은 TRUE/FALSE, 문자열 또는 숫자일 수 있습니다. 문자열 값은 **'AdventureWorks'** 합니다. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
+ 이 식에 대한 값 설정입니다. 허용되는 값은 패싯에 따라 달라집니다. 값은 TRUE/FALSE, 문자열 또는 숫자일 수 있습니다. 예를 들어 문자열 값 단일 따옴표 안에 묶어야 합니다. **'AdventureWorks'**. 일부 속성에서는 모든 연산자를 사용하지 못할 수 있습니다.  
   
 ## <a name="group-clauses"></a>절 그룹화  
  절을 그룹화하여 나머지 쿼리와 분리된 하나의 단위로 해당 절을 실행할 수 있습니다. 이는 수식이나 논리 문에서 식을 괄호로 묶는 것과 같습니다. 절 그룹화는 복잡한 쿼리를 작성할 때 유용합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "52798295"
   
 -   Shift 또는 Ctrl 키를 누른 다음 두 개 이상의 절을 클릭하여 범위를 선택합니다. 선택한 영역을 마우스 오른쪽 단추로 클릭한 다음 **절 그룹화**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
   
   

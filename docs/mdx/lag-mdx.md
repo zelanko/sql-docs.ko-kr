@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c5479aa3ce855b554f34f72c5c86aa86eb04b9f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205830"
 ---
 # <a name="lag-mdx"></a>Lag(MDX)
 
@@ -38,13 +38,13 @@ Member_Expression.Lag(Index)
 ## <a name="remarks"></a>Remarks  
  수준 내의 멤버 위치는 특성 계층의 일반적인 순서에 따라 결정됩니다. 위치를 나타내는 번호는 0부터 시작합니다.  
   
- 지정한 간격이 0 바이트인 경우는 **지연** 함수는 지정 된 멤버를 반환 합니다.  
+ 지정한 간격이 0 이면 합니다 **지연** 함수는 지정한 멤버를 반환 합니다.  
   
- 지정한 간격이 음수 이면이 **지연** 함수는 이후 멤버를 반환 합니다.  
+ 지정한 간격이 음수 이면 합니다 **지연** 함수는 이후 멤버를 반환 합니다.  
   
  `Lag(1)` 해당 하는 [PrevMember](../mdx/prevmember-mdx.md) 함수입니다. `Lag(-1)` 해당 하는 [NextMember](../mdx/nextmember-mdx.md) 함수입니다.  
   
- **지연** 함수는 비슷합니다는 [발생할](../mdx/lead-mdx.md) 함수와 **발생할** 반대 방향으로 함수를 찾습니다는 **지연** 함수입니다. 즉, `Lag(n)`은 `Lead(-n)`과 동일합니다.  
+ **지연** 함수는를 [발생할](../mdx/lead-mdx.md) 함수와 합니다 **발생할** 함수와 검색 방향이 반대 합니다 **지연** 함수입니다. 즉, `Lag(n)`은 `Lead(-n)`과 동일합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 2001년 12월의 값을 반환합니다.  
@@ -64,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
