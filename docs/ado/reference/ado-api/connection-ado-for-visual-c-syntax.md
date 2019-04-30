@@ -1,5 +1,5 @@
 ---
-title: (Visual c + + 구문에 대 한 ADO) 연결 | Microsoft Docs
+title: 연결 (시각적 개체에 대 한 ADO C++ 구문) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 356713d24cd4e37014884cf39aa903267d5378b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315896"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>연결(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02f6990698603efdf813e244d11e57c3bd6bb7eb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311897"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (작거나 같음) (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression <= MDX_Expression
 ## <a name="return-value"></a>반환 값  
  다음 조건을 기반으로 하는 부울 값입니다.  
   
--   t**rue** 매개 변수가 모두 null이 아닌 아니고 첫 번째 매개 변수는 값으로 포함 하는 경우 두 번째 매개 변수 값 보다 작습니다.  
+-   t**rue** 두 매개 변수가 null이 아닌 첫 번째 매개 변수는 값이 경우 두 번째 매개 변수의 값 보다 작거나 합니다.  
   
--   f**alse** 매개 변수가 모두 null이 아니고 첫 번째 매개 변수 값이 경우는 두 번째 매개 변수 값 보다 큽니다.  
+-   f**alse** 두 매개 변수가 null이 아닌 첫 번째 매개 변수 값이 경우는 두 번째 매개 변수의 값 보다 큽니다.  
   
 -   매개 변수 중 하나가 Null이거나 둘 다 Null인 경우 Null입니다.  
   

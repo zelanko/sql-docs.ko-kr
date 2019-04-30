@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239801"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 메서드 예제(VB)
 이 예제에서는 합니다 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 에서 명령 실행을 취소 하는 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 연결이 사용 중인 경우 개체.  
@@ -103,6 +103,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Cancel 메서드 (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

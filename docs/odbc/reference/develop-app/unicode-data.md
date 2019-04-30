@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305767"
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 유니코드에서 DBMS에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 유니코드 버퍼에 데이터 바인딩 응용 프로그램을 허용 하도록 제공 됩니다. 드라이버 관리자 (SQL_C_WCHAR) 있도록 유니코드 C 형식에서 데이터를 변환할 수는 ANSI 드라이버를 사용 하 여 함수입니다.  
