@@ -5,16 +5,16 @@ description: 설치 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 �
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c35971c0c0acf69065734cdcdbe670710ef5e4
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 0d260ae91a5890938949525f34dfae20a81a8fea
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582387"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473506"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 관리 하는 mssqlctl 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "59582387"
 **mssqlctl** 하면 클러스터 관리자가 부트스트랩 REST Api를 통해 빅 데이터 클러스터를 관리 하는 Python으로 작성 된 명령줄 유틸리티입니다. 필요한 최소 Python 버전 v3.5 됩니다. 또한 있어야 `pip` 다운로드 및 설치 하는 데 사용 되는 **mssqlctl** 도구입니다. 아래 지침에 따라 Windows 및 Ubuntu에 대 한 예제를 제공합니다. 다른 플랫폼에서 Python을 설치 하는 것에 대 한 참조를 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)합니다.
 
 > [!IMPORTANT]
-> 빅 데이터 클러스터의 최신 버전을 설치 하는 경우 데이터를 백업 하 고 이전 클러스터를 삭제 해야 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+> 빅 데이터 클러스터의 최신 버전을 설치 하는 경우 데이터를 백업 하 고 이전 클러스터를 삭제 해야 *하기 전에* 업그레이드 **mssqlctl** 및 새 릴리스를 설치 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 ## <a id="windows"></a> Windows mssqlctl 설치
 
@@ -38,13 +38,13 @@ ms.locfileid: "59582387"
 
 1. 모든 이전 버전의 경우 **mssqlctl** 설치를 반드시 제거할 **mssqlctl** 최신 버전을 설치 하기 전에 첫 번째입니다.
 
-   CTP 2.2 또는 더 낮은 버전에 해당 하는 unisntalling mssqlctl 있다면 다음을 실행 합니다.
+   제거 하는 경우 **mssqlctl** 해당 CTP 2.2 또는 더 낮은 버전을 실행 합니다.
 
    ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 또는 더 높은 실행 (대체 `ctp-2.3` mssqlctl 제거 하는 버전을 사용 하 여 명령에서):
+   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.3` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
 
    ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
@@ -53,7 +53,7 @@ ms.locfileid: "59582387"
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Linux mssqlctl 설치
@@ -76,22 +76,22 @@ Linux에서 Python 3.5를 설치 하 고 그런 다음 pip를 업그레이드 �
 
 1. 모든 이전 버전의 경우 **mssqlctl** 설치를 반드시 제거할 **mssqlctl** 최신 버전을 설치 하기 전에 첫 번째입니다.
 
-   CTP 2.2 또는 더 낮은 버전에 해당 하는 unisntalling mssqlctl 있다면 다음을 실행 합니다.
+   제거 하는 경우 **mssqlctl** 해당 CTP 2.2 또는 더 낮은 버전을 실행 합니다.
 
-   ```bash
+   ```powershell
    pip3 uninstall mssqlctl
    ```
 
-   CTP2.3 또는 더 높은 실행 (대체 `ctp-2.3` mssqlctl 제거 하는 버전을 사용 하 여 명령에서):
+   CTP 2.3 이상에서 다음 명령을 실행 합니다. 대체 `ctp-2.3` 의 버전을 사용 하 여 명령에 **mssqlctl** 제거 됩니다.
 
-   ```bash
+   ```powershell
    pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 1. 설치할 **mssqlctl** 다음 명령을 사용 하 여:
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

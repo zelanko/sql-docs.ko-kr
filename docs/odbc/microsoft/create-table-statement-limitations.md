@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232215"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 문 제한 사항
 Microsoft Access, Microsoft Excel 또는 Paradoxdriver를 사용 하면 지정 되지 않은 (또는 0으로 지정 된) 텍스트 또는 이진 열의 길이, 열 길이 255로 설정 됩니다.  

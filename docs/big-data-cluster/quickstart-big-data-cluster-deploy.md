@@ -5,17 +5,17 @@ description: Azure Kubernetes Service (AKS)에서 SQL Server 2019 빅 데이터 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582917"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473473"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>빠른 시작: Azure Kubernetes Service (AKS)에서 SQL Server 빅 데이터 클러스터를 배포 합니다.
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>배포 스크립트를 실행 합니다.
 
-배포 스크립트를 실행 하려면 다음 단계를 사용 합니다. 이 스크립트를 Azure에서 AKS 서비스를 만들고 AKS에 SQL Server 2019 빅 데이터 클러스터를 배포 합니다. 또한 다른 스크립트를 수정할 수 있습니다 [환경 변수](deployment-guidance.md#env) 사용자 지정 배포를 만듭니다.
+배포 스크립트를 실행 하려면 다음 단계를 사용 합니다. 이 스크립트를 Azure에서 AKS 서비스를 만들고 AKS에 SQL Server 2019 빅 데이터 클러스터를 배포 합니다. 또한 다른 스크립트를 수정할 수 있습니다 [환경 변수](deployment-guidance.md#configfile) 사용자 지정 배포를 만듭니다.
 
 1. 다음 명령을 사용 하 여 스크립트를 실행 합니다.
 
@@ -114,7 +114,7 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
 ```
 
 > [!IMPORTANT]
-> 전체 배포는 빅 데이터 클러스터의 구성 요소에 대 한 컨테이너 이미지를 다운로드 하는 데 필요한 시간 때문에 시간이 걸릴 수 있습니다. 그러나 하지 몇 시간이 걸립니다. 배포 문제가 발생 하는 경우 참조를 [배포 문제 해결](deployment-guidance.md#troubleshoot) 배포 지침 문서의 섹션입니다.
+> 전체 배포는 빅 데이터 클러스터의 구성 요소에 대 한 컨테이너 이미지를 다운로드 하는 데 필요한 시간 때문에 시간이 걸릴 수 있습니다. 그러나 하지 몇 시간이 걸립니다. 배포 문제가 발생 하는 경우 참조 [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결](cluster-troubleshooting-commands.md)합니다.
 
 ## <a name="inspect-the-cluster"></a>클러스터를 검사 합니다.
 
@@ -149,20 +149,20 @@ AKS 클러스터에서 스크립트를 만든 후 이전에 지정한 설정 사
    ```
 
 > [!TIP]
-> 모니터링 및 배포 문제를 해결 하는 방법에 대 한 자세한 내용은 참조는 [배포 문제 해결](deployment-guidance.md#troubleshoot) 배포 지침 문서의 섹션입니다.
+> 모니터링 및 배포 문제를 해결 하는 방법에 대 한 자세한 내용은 참조 하세요. [모니터링 및 SQL Server 빅 데이터 클러스터 문제 해결](cluster-troubleshooting-commands.md)합니다.
 
 ### <a name="use-the-cluster-administration-portal"></a>클러스터 관리 포털 사용
 
-컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `endpoint-service-proxy` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
+컨트롤러 pod가 실행 되 면 배포를 모니터링 하려면 클러스터 관리 포털을 사용할 수도 있습니다. 외부 IP 주소 및 포트 번호를 사용 하 여 포털에 액세스할 수 있습니다 합니다 `mgmtproxy-svc-external` (예: **https://\<ip 주소\>: 30777/포털**). 포털에 로그인 하는 데 자격 증명에 대 한 값과 일치 **컨트롤러 사용자** 하 고 **암호** 배포 스크립트에 지정 합니다.
 
-IP 주소를 가져올 수는 **끝점 서비스 프록시** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
+IP 주소를 가져올 수는 **mgmtproxy svc 외부** bash 또는 cmd 창에서이 명령을 실행 하 여 서비스:
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> CTP 2.4 나타납니다 보안 경고가 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문입니다.
+> CTP 2.5에서는 경고가 표시 됩니다는 보안 웹 페이지에 액세스할 때 빅 데이터 클러스터는 자동으로 생성 된 SSL 인증서를 사용 하 여 현재 때문에 합니다.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 

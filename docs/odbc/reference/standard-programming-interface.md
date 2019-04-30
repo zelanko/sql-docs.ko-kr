@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232058"
 ---
 # <a name="standard-programming-interface"></a>표준 프로그래밍 인터페이스
 프로그래밍 인터페이스는 아마도 표준화에 대 한 가장 확실 한 후보입니다. 사실, ODBC 개발 중인 경우 ANSI 및 ISO 이미 제공 표준을 포함 된 SQL 및 SQL 모듈입니다. SQL 액세스 그룹-데이터베이스 공급 업체의 업계 컨소시엄-; 만들 것인지 고려 된 없는 표준 CLI 데이터베이스에 대 한 존재 하지만 ODBC의 일부를 나중에 회사의 기반이 되었습니다.  

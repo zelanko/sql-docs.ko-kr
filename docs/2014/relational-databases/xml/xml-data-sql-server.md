@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232364"
 ---
 # <a name="xml-data-sql-server"></a>XML 데이터(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 반구조화된 데이터 관리를 위한 다양한 애플리케이션을 개발할 수 있는 강력한 플랫폼을 제공합니다. XML에 대한 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 모든 구성 요소에 통합되어 있고 해당되는 지원은 다음과 같습니다.  

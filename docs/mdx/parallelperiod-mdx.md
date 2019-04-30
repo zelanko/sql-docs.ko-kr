@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742372"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473079"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -39,19 +39,19 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 유사 하지만 [사촌](../mdx/cousin-mdx.md) 함수는 **ParallelPeriod** 함수는 시계열 더욱 긴밀 하 게 관련이 있습니다. **ParallelPeriod** 함수는 지정된 된 수준에서 지정된 된 멤버의 상위 항목, 지정 된 시간 간격의 상위 항목의 형제나 찾아서 마지막 형제의 하위 항목 중 지정된 된 멤버의 병렬 기간을 반환 합니다.  
+ 유사 하지만 [사촌](../mdx/cousin-mdx.md) 함수는 **ParallelPeriod** 함수 시계열에 보다 밀접 한 관련이 있습니다. 합니다 **ParallelPeriod** 함수 지정된 된 수준에서 지정된 된 멤버의 상위 항목을 사용 하는 지정한 간격이 상위의 형제로 찾아서 마지막 간에 지정된 된 멤버의 병렬 기간을 반환 합니다.는 형제의 하위 항목입니다.  
   
- **ParallelPeriod** 함수는 다음 기본값을 가집니다.  
+ 합니다 **ParallelPeriod** 함수에는 기본값을 지정 합니다.  
   
--   기본 멤버 값의 형식 가진 첫 번째 차원에 있는 첫 번째 계층의 현재 구성원은 수준 식과 멤버 식이 모두 지정 하는 경우 *시간* 측정값 그룹에 있습니다.  
+-   기본 멤버 값의 형식 사용 하 여 첫 번째 차원에 첫 번째 계층의 현재 멤버는 수준 식과 멤버 식이 모두를 지정 하는 경우 *시간* 측정값 그룹에 있습니다.  
   
--   수준 식이 지정 된 경우 표시 되지만 멤버 식이 지정 되지 않은 경우 기본 멤버 값은 *Level_Expression*. **Hierarchy.CurrentMember**합니다.  
+-   수준 식이 지정 된 경우 하지만 멤버 식이 지정 되지 않은 경우 기본 멤버 값은 *Level_Expression*. **Hierarchy.CurrentMember**합니다.  
   
 -   기본 인덱스 값은 1입니다.  
   
 -   기본 수준은 지정된 멤버의 부모 수준입니다.  
   
- **ParallelPeriod** 함수는 다음과 같은 MDX 문과 동일 합니다.  
+ 합니다 **ParallelPeriod** 함수는 다음 MDX 문과 동일 합니다.  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -77,6 +77,6 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

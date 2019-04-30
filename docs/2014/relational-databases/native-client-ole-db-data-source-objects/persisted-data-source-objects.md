@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231447"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지속형된 데이터 원본 개체를 지원 합니다 **IPersistFile** 인터페이스입니다.  

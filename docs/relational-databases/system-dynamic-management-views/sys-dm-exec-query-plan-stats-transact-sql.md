@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582100"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474282"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 이전에 캐시 된 쿼리 계획에 마지막으로 알려진된 실제 실행 계획에 해당 하는을 반환합니다. 
 
@@ -64,7 +64,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>Remarks
 이 시스템 함수는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다.   
+이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다. 부터는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]을 데이터베이스 수준에서이 작업을 수행 합니다 LAST_QUERY_PLAN_STATS 옵션을 참조 하십시오 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 이 시스템 함수에서 작동 합니다 **경량** 쿼리 실행 통계 인프라를 프로 파일링 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
 
@@ -80,7 +80,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **AND**    
 -   쿼리는 일반적으로 OLTP 워크 로드의 일부로 분류 충분히 간단 합니다.
 
-<sup>1</sup> 만 루트 노드가 연산자 (선택)를 포함 하는 실행 계획을 나타냅니다. 에 대 한 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 sys.dm_exec_cached_plans를 통해 사용 가능한 캐시 된 계획에만이 참조 합니다.
+<sup>1</sup> 부터 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5만 루트 노드가 연산자 (선택)를 포함 하는 실행 계획을 나타냅니다. 에 대 한 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4를 통해 사용 가능한 캐시 된 계획을 나타냅니다 `sys.dm_exec_cached_plans`합니다.
 
 다음 조건을 **출력이 반환 됩니다** 에서 **sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>4. 트리거에 대 한 캐시 된 이벤트
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>관련 항목
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

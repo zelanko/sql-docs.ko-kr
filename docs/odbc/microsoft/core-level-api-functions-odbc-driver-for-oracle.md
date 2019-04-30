@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232644"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>핵심 수준 API 함수(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

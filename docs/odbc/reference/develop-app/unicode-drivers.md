@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745861"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473034"
 ---
 # <a name="unicode-drivers"></a>유니코드 드라이버
 유니코드 드라이버 또는 ANSI 드라이버를 드라이버에 해야 하는지 여부를 하는 작업은 데이터 소스의 특성에 따라 완전히 달라 집니다. 데이터 원본에서 유니코드 데이터를 지 원하는 경우 드라이버는 유니코드 드라이버 이어야 합니다. 데이터 원본에서만 ANSI 데이터를 지 원하는 경우 ANSI 드라이버를 드라이버에 유지 되어야 합니다.  

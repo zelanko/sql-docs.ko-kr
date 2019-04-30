@@ -1,26 +1,26 @@
 ---
-title: SQL Server 2019-SQL Server Machine Learning Services에서에서 Java 언어 확장
+title: SQL Server 2019-SQL Server 언어 확장에에서 Java 언어 확장
 description: 설치, 구성 및 Linux와 Windows 시스템에 대 한 SQL Server 2019에 Java 언어 확장의 유효성을 검사 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: db57689227445b0f50d6ff59fbf81e1d84ecacdb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582092"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473403"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>SQL Server 2019에 Java 언어 확장 
 
-Windows와 Linux 모두에서 SQL Server 2019 preview부터 하면 사용자 지정 Java 코드를 실행할 수는 [확장성 프레임 워크](../concepts/extensibility-framework.md) 데이터베이스 엔진 인스턴스를 추가 합니다. 
+Windows와 Linux 모두에서 SQL Server 2019 preview부터 실행할 수 있습니다 사용 하 여 사용자 지정 Java 코드를 [확장성 프레임 워크](../concepts/extensibility-framework.md) 데이터베이스 엔진 인스턴스를 추가 합니다.
 
-확장성 프레임 워크는 외부 코드를 실행 하는 것에 대 한 아키텍처: Java (SQL Server 2019에서 시작) [Python (SQL Server 2017부터)](../concepts/extension-python.md), 및 [(SQL Server 2016부터) R](../concepts/extension-r.md)합니다. 코드 실행 핵심 엔진 프로세스에서 분리 되었지만 SQL Server 쿼리 실행을 사용 하 여 완벽 하 게 통합 됩니다. 즉, 수를 외부 런타임에 모든 SQL Server 쿼리에서 데이터를 푸시 및 사용 하거나 SQL Server에 다시 결과 유지 합니다.
+확장성 프레임 워크는 외부 코드를 실행 하는 것에 대 한 아키텍처: Java (SQL Server 2019에서 시작) [Python (SQL Server 2017부터)](../concepts/extension-python.md), 및 [(SQL Server 2016부터) R](../concepts/extension-r.md)합니다. 코드 실행 핵심 엔진 프로세스에서 분리 되었지만 SQL Server 쿼리 실행을 사용 하 여 완벽 하 게 통합 됩니다. 이 의미는 외부 런타임 (Java)를 모든 SQL Server 쿼리에서 데이터를 푸시 및 사용 하거나 SQL Server에 다시 결과 유지 합니다.
 
 모든 프로그래밍 언어 확장을 마찬가지로 시스템 저장 프로시저 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 미리 컴파일된 Java 코드를 실행 하기 위한 인터페이스입니다.
 
@@ -28,9 +28,9 @@ Windows와 Linux 모두에서 SQL Server 2019 preview부터 하면 사용자 지
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-SQL Server 2019 미리 보기 인스턴스가 필요한 경우 이전 버전 Java 통합이 필요는 없습니다.
+SQL Server 2019 미리 보기 인스턴스가 필요한 경우 이전 버전의 Java 통합이 필요는 없습니다.
 
-Java 8이 지원 됩니다. Java Runtime Environment (JRE)의 최소 요구 사항 이지만 Jdk는 Java 컴파일러 또는 개발 패키지를 해야 하는 경우에 유용 합니다. JDK 포괄적 이며 JDK를 설치 하는 경우 이므로 JRE 필요 하지 않습니다.
+Java 8이 현재 지원 되는 버전입니다. 11, Java 등의 최신 버전에서 언어 확장을 사용 하 여 되어야 하지만 현재 지원 되지 않습니다. Java Runtime Environment (JRE)의 최소 요구 사항 이지만 JDK는 Java 컴파일러 및 개발 패키지 해야 하는 경우에 유용 합니다. JDK 포괄적 이며 JDK를 설치 하는 경우 이므로 JRE 필요 하지 않습니다.
 
 기본 Java 8 배포를 사용할 수 있습니다. 두 개의 제안 된 배포는 다음과 같습니다.
 
@@ -39,7 +39,7 @@ Java 8이 지원 됩니다. Java Runtime Environment (JRE)의 최소 요구 사�
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows 및 Linux | 사용자 계정 컨트롤 | 사용자 계정 컨트롤 |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows 및 Linux | 사용자 계정 컨트롤 | 아니요 |
 
-Linux에서 **mssql server-확장성 java** 이미 설치 되어 있지 않으면 패키지 JRE 8을 자동으로 설치 합니다. 설치 스크립트는 또한 JRE_HOME 이라는 환경 변수를 JVM 경로 추가 합니다.
+Linux에서 현재 합니다 **mssql server-확장성 java** 이미 설치 되어 있지 않으면 패키지 JRE 8을 자동으로 설치 합니다. 설치 스크립트는 또한 JRE_HOME 이라는 환경 변수를 JVM 경로 추가 합니다.
 
 Windows, 좋습니다 기본 JDK 설치 `/Program Files/` 폴더 가능한 경우. 그렇지 않은 경우 실행 파일에 권한을 부여 하려면 추가 구성 필요 합니다. 자세한 내용은 참조는 [(Windows) 권한을 부여](#perms-nonwindows) 이 문서의 섹션입니다.
 
@@ -63,7 +63,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-설치 하는 경우 **mssql server-확장성 java**를 이미 설치 되어 있지 않으면 패키지가 JRE 8을 자동으로 설치 합니다. 또한 JVM 경로 JAVA_HOME 라는 환경 변수에 추가 됩니다.
+설치 하는 경우 **mssql server-확장성 java**를 이미 설치 되어 있지 않으면 패키지가 JRE 8을 자동으로 설치 합니다. 또한 JVM 경로 JRE_HOME 라는 환경 변수에 추가 됩니다.
 
 설치를 완료 한 후에 다음 단계로 [외부 스크립트 실행 구성](#configure-script-execution)합니다.
 
@@ -81,9 +81,8 @@ sudo zypper install mssql-server-extensibility-java
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 Jar 파일을 읽기/실행 mssql_satellite 권한을 부여 해야 합니다.
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -105,12 +104,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="add-the-jrehome-variable"></a>JRE_HOME 변수 추가
 
-JRE_HOME 환경 변수가 Java 인터프리터의 위치를 지정 하 합니다. 이 단계에서는 Windows에서에 대 한 시스템 환경 변수를 만듭니다.
+JRE_HOME는 Java 인터프리터의 위치를 지정 하는 시스템 환경 변수입니다. 이 단계에서는 Windows에서에 대 한 시스템 환경 변수를 만듭니다.
 
 1. 찾기 및 JRE 홈 경로 복사 (예를 들어 `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    기본 Java 배포에 따라 JDK를 JRE의 위치는 위의 예를 들어 경로 보다 달라질 수 있습니다. 
-    설치 된 JDK가 있는 경우에 종종 시간 하면 설치의 일부로 JRE 하위 폴더. 
+    기본 Java 배포에 따라 JDK를 JRE의 위치는 위의 예를 들어 경로 보다 달라질 수 있습니다.
+    설치 된 JDK가 있는 경우에 종종 시간 JRE 하위 폴더는 설치의 일부로 받은 하는 경우 jre 폴더를 가리키고 있으므로.
     Java 확장 된 jvm.dll JRE_HOME%\bin\server % 경로에서 로드 하려고 합니다.
 
 2. 제어판에서 엽니다 **시스템 및 보안**오픈 **시스템**, 클릭 **고급 시스템 속성**합니다.
@@ -129,7 +128,7 @@ JRE_HOME 환경 변수가 Java 인터프리터의 위치를 지정 하 합니다
 
 ### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>기본이 아닌 JRE 폴더 (Windows만 해당)에 액세스 권한 부여
 
-실행 합니다 **icacls** 에서 명령을 *관리자 권한* 액세스 권한을 부여 하는 줄을 **SQLRUsergroup** 및 SQL Server 서비스 계정 (에서 **ALL_APPLICATION_ 패키지**) JRE에 액세스 합니다. 명령에는 모든 파일 및 지정 된 디렉터리 경로 아래에 폴더를 재귀적으로 액세스를 하는 권한 부여 됩니다.
+Program files 아래 JDK를 JRE를 설치 하지 않은 경우 다음 단계를 수행 해야 합니다. 실행 합니다 **icacls** 에서 명령을 *관리자 권한* 액세스 권한을 부여 하는 줄을 **SQLRUsergroup** 및 SQL Server 서비스 계정 (에서 **ALL_APPLICATION_ 패키지**) JRE에 액세스 합니다. 명령에는 모든 파일 및 지정 된 디렉터리 경로 아래에 폴더를 재귀적으로 액세스를 하는 권한 부여 됩니다.
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup 권한
 
@@ -151,7 +150,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="configure-script-execution"></a>스크립트 실행 구성
 
-이 시점에서 거의 Linux 또는 Windows에서 Java 코드를 실행할 수 있습니다. 마지막 단계에서는 SQL Server Management Studio 또는 외부 스크립트 실행을 사용 하도록 설정 하는 TRANSACT-SQL 스크립트를 실행 하는 다른 도구를 전환 합니다.
+이 시점에서 거의 Linux 또는 Windows에서 Java 코드를 실행할 수 있습니다. 마지막 단계에서는 SQL Server Management Studio, Azure data studio, SQL CMD 또는 외부 스크립트 실행을 사용 하도록 설정 하는 TRANSACT-SQL 스크립트를 실행할 수 있는 다른 도구를 전환 합니다.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -161,13 +160,13 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="verify-installation"></a>설치 확인
 
-설치가 작동 확인, 만들기 및 실행을 [샘플 응용 프로그램](java-first-sample.md) 방금 설치한, 이전에 구성한 클래스 경로에서 파일을 배치 하는 JDK를 사용 하 여 합니다.
+설치가 작동 확인, 만들기 및 실행을 [샘플 응용 프로그램](java-first-sample.md) 방금 설치 및 JRE_HOME 추가할 Java 런타임 사용 합니다.
 
-## <a name="differences-in-ctp-24"></a>CTP 2.4의 차이점
+## <a name="differences-in-ctp-25"></a>CTP 2.5의 차이점
 
 Machine Learning Services에 익숙한 경우 확장에 대 한 권한 부여 및 격리 모델은이 릴리스에서 변경 되었습니다. 자세한 내용은 [SQL Server Machine Learning Services 2019 설치에서 차이점](../install/sql-machine-learning-services-ver15.md)합니다.
 
-## <a name="limitations-in-ctp-24"></a>CTP 2.4의에서 제한 사항
+## <a name="limitations-in-ctp-25"></a>CTP 2.5의에서 제한 사항
 
 * 입력 및 출력 버퍼에 있는 값의 수를 초과할 수 없습니다 `MAX_INT (2^31-1)` Java 배열에서 할당 될 수 있는 요소의 최대 개수 이기 때문입니다.
 
@@ -194,4 +193,5 @@ jar -cf <MyJar.jar> *.class
 
 + [SQL Server에서 Java를 호출 하는 방법](howto-call-java-from-sql.md)
 + [SQL Server에서 Java 샘플](java-first-sample.md)
++ [Microsoft 확장성 Microsoft SQL Server에 대 한 Java 용 SDK](java-sdk.md)
 + [Java와 SQL Server 데이터 형식](java-sql-datatypes.md)

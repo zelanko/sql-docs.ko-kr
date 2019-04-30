@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947657"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473749"
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,17 +38,16 @@ ms.locfileid: "51947657"
 |**value**|**sqlvariant**|주 복제본이 구성 옵션에 대 한 설정 값입니다.|  
 |**value_for_secondary**|**sqlvariant**|보조 복제본에 대 한이 구성 옵션에 대 한 설정 값입니다.|  
 |**is_value_default**|**bit** |값 집합이 기본 값인지 여부를 지정 합니다.|
-|**elevate_resumable**|nvarchar(60)|Db 범위 인덱스 작업에 대 한 다시 시작 가능한 옵션에 대 한 기본 설정| 
   
 ##  <a name="Permissions"></a> Permissions  
- **public** 역할의 멤버 자격이 필요합니다.  
+**public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="remarks"></a>Remarks  
- NULL 값으로 반환 될 때 **value_for_secondary**, 즉, 주 지역에 보조 복제본 설정 되어 있는지 합니다.  
+NULL 값으로 반환 될 때 **value_for_secondary**, 즉, 주 지역에 보조 복제본 설정 되어 있는지 합니다.  
  
- 데이터베이스 범위 구성 설정은 데이터베이스와 함께 전달됩니다. 즉, 지정된 데이터베이스가 복원 또는 연결되는 경우 기존 구성 설정이 유지됩니다.
+데이터베이스 범위 구성 설정은 데이터베이스와 함께 전달됩니다. 즉, 지정된 데이터베이스가 복원 또는 연결되는 경우 기존 구성 설정이 유지됩니다.
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 범위 구성 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

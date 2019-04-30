@@ -3,224 +3,237 @@ title: Java 샘플 및 SQL Server 2019-SQL Server Machine Learning Services에 �
 description: SQL Server 데이터를 사용 하 여 Java 언어 확장을 사용 하는 단계를 알아보려면 SQL Server 2019에서 Java 샘플 코드를 실행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: nelgson
+ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25deba880827cc7396082dac9a2c86cc4dd66cd8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 000318716b07f58e94bd5c482d9c349e5d4e5481
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582576"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473756"
 ---
-# <a name="sql-server-java-sample-walkthrough"></a>SQL Server Java 샘플 연습
+# <a name="sql-server-regex-java-sample"></a>SQL Server Regex Java 샘플
 
-이 예제에서는 SQL Server에서 두 개의 열 (ID 및 텍스트)를 수신 하 고 두 개의 열 (ID 및 ngram) SQL Server로 다시 반환 하는 Java 클래스를 보여 줍니다. 이 코드는 지정 된 ID 및 문자열 조합에 대해 원래 ID와 함께 해당 순열 반환 ngrams (부분) 순열을 생성 합니다. ngram의 길이 Java 클래스에 보낸 매개 변수에 의해 정의 됩니다.
+이 예제에서는 SQL Server에서 두 개의 열 (ID 및 텍스트)를 수신 하 고도 입력된 매개 변수로 정규식을 사용 하는 Java 클래스를 보여 줍니다. 클래스는 SQL Server (ID 및 텍스트)를 다시 두 개의 열을 반환합니다.
+
+Java 클래스 보낼 텍스트 열에 지정된 된 텍스트에 대 한 코드를 확인 하는 경우 지정된 된 정규식 수행 되 고이 원래 ID와 함께 해당 텍스트를 반환 하는 
+
+이 특정 예제의 텍스트는 "Java" 또는 "java" 단어를 포함 하는 경우를 확인 하는 정규식을 사용 합니다.
+
+## <a name="microsoft-extensibility-sdk-for-java-for-microsoft-sql-server"></a>Microsoft 확장성 Microsoft SQL Server에 대 한 Java 용 SDK
+
+ CTP 2.5에서는 SQL Server를 사용 하 여 통신 하도록 Java 언어 확장을 사용 하는 Java 코드를 구현 하는 방법은 변경 하 고 있습니다. 이렇게 하면 Java에서 SQL Server와 상호 작용할 때 더 나은 개발자 환경을 제공 됩니다.
+
+SDK는 쉽게 수 있도록 SQL Server에 대해 실행 되는 Java 코드를 구현 하는 도우미 인터페이스로 고려해 야 합니다.
+
+> [!NOTE]
+> SDK의 소개는 이전 Ctp의 큰 변화입니다. 작업 했던 이전 샘플은 SDK를 사용 하도록 업데이트 해야 합니다.
+
+자세한 내용은 참조는 [SDK 설명서](java-sdk.md)합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 + 확장성 프레임 워크 및 확장을 프로그래밍 하는 Java를 사용 하 여 SQL Server 2019 데이터베이스 엔진 인스턴스 [Windows에](../install/sql-machine-learning-services-windows-install.md) 하거나 [linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup)합니다. 시스템 구성에 대 한 자세한 내용은 참조 하세요. [SQL Server 2019에 Java 언어 확장](extension-java.md)합니다. 코딩 요구 사항에 대 한 자세한 내용은 참조 하세요. [SQL Server에서 Java를 호출 하는 방법을](howto-call-java-from-sql.md)합니다.
 
-+ SQL Server Management Studio 또는 T-SQL을 실행 하기 위한 다른 도구입니다.
++ SQL Server Management Studio 또는 T-SQL을 실행 하기 위한 Azure 데이터 Studio.
 
-+ JDK (Java SE Development Kit) 8에서 Windows 또는 Linux입니다.
++ JDK (Java SE Development Kit) 8 또는 JRE 8에서 Windows 또는 Linux입니다.
 
-명령줄 컴파일에서 사용 하 여 **javac** 이 자습서에 충분 합니다. 
++ [Microsoft SQL Server 용 Microsoft Java 확장성 SDK](http://aka.ms/mssql-java-lang-extension) java 언어 extension.jar mssql.
 
-## <a name="1---load-sample-data"></a>1-샘플 데이터를 로드 합니다.
+명령줄 컴파일에서 사용 하 여 **javac** 이 자습서에 충분 합니다.
 
-먼저 만들고 채우는 *검토* 사용 하 여 테이블 **ID** 하 고 **텍스트** 열. SQL Server에 연결 하 고 테이블을 만들려면 다음 스크립트를 실행 합니다.
+## <a name="1---create-sample-data-in-a-sql-server-table"></a>1-SQL Server 테이블에서 예제 데이터 만들기
+
+먼저 만들고 채우는 *testdata* 사용 하 여 테이블 **ID** 하 고 **텍스트** 열. SQL Server에 연결 하 고 테이블을 만들려면 다음 스크립트를 실행 합니다.
 
 ```sql
-DROP TABLE IF exists reviews;
+CREATE DATABASE javatest
 GO
-CREATE TABLE reviews(
-    id int NOT NULL,
-    "text" nvarchar(30) NOT NULL)
+USE javatest
+GO
 
-INSERT INTO reviews(id, "text") VALUES (1, 'AAA BBB CCC DDD EEE FFF')
-INSERT INTO reviews(id, "text") VALUES (2, 'GGG HHH III JJJ KKK LLL')
-INSERT INTO reviews(id, "text") VALUES (3, 'MMM NNN OOO PPP QQQ RRR')
+-- Create table for test data
+DROP TABLE IF exists testdata;
 GO
+
+CREATE TABLE testdata(
+id int NOT NULL,
+"text" nvarchar(100) NOT NULL)
+GO
+
+TRUNCATE TABLE testdata
+GO
+
+-- Insert data into test table
+INSERT INTO testdata(id, "text") VALUES (1, 'This sentence contains java')
+INSERT INTO testdata(id, "text") VALUES (2, 'This sentence does not')
+INSERT INTO testdata(id, "text") VALUES (3, 'I love Java!')
+GO
+Select * FROM testdata
 ```
 
-## <a name="2---class-ngramjava"></a>2-Ngram.java 클래스
+## <a name="2---class-regexsamplejava"></a>2-RegexSample.java 클래스
 
-기본 클래스를 만들어 시작 합니다. 이 세 가지 클래스의 첫 번째입니다.
+기본 클래스를 만들어 시작 합니다.
 
-이 단계에서는 라는 클래스를 만듭니다 **Ngram.java** 해당 파일에 다음 Java 코드를 복사 합니다. 
+이 단계에서는 라는 클래스를 만듭니다 **RegexSample.java** 해당 파일에 다음 Java 코드를 복사 합니다.
 
+이 기본 클래스는이 클래스에서 사용 가능 해야 하는 1 단계에서 다운로드 한 jar 파일 즉 SDK를 가져오는 중입니다.
+
+> [!NOTE]
+> 이 클래스는 Java 확장 SDK 패키지를 가져옵니다는 note 합니다.
+에 대 한 문서를 참조 합니다 [Microsoft SQL Server에 대 한 Java에 대 한 Microsoft 확장 SDK](java-sdk.md) 대 한 자세한 내용은 합니다.
 
 ```java
-//We will package our classes in a package called pkg
-//Packages are option in Java-SQL, but required for this sample.
 package pkg;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import com.microsoft.sqlserver.javalangextension.PrimitiveDataset;
+import com.microsoft.sqlserver.javalangextension.AbstractSqlServerExtensionExecutor;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.regex.*;
 
-public class Ngram {
+public class RegexSample extends AbstractSqlServerExtensionExecutor {
+    private Pattern expr;
 
-    //Required: This is only required if you are passing data in @input_data_1
-    //from SQL Server in sp_execute_external_script
-    public static int[] inputDataCol1 = new int[1];
-    public static String[] inputDataCol2 = new String[1];
+    public RegexSample() {
+        // Setup the expected extension version, and class to use for input and output dataset
+        executorExtensionVersion = SQLSERVER_JAVA_LANG_EXTENSION_V1;
+        executorInputDatasetClassName = PrimitiveDataset.class.getName();
+        executorOutputDatasetClassName = PrimitiveDataset.class.getName();
+    }
+    
+    public PrimitiveDataset execute(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Validate the input parameters and input column schema
+        validateInput(input, params);
 
-    //Required: Input null map. Size just needs to be set to "1"
-    public static boolean[][] inputNullMap = new boolean[1][1];
+        int[] inIds = input.getIntColumn(0);
+        String[] inValues = input.getStringColumn(1);
+        int rowCount = inValues.length;
 
-    //Required: Output data columns returned back to SQL Server
-    public static int[] outputDataCol1;
-    public static String[] outputDataCol2;
+        String regexExpr = (String)params.get("regexExpr");
+        expr = Pattern.compile(regexExpr);
 
-    //Required: Output null map. Is populated with true or false values 
-    //to indicate nulls
-    public static boolean[][] outputNullMap;
+        System.out.println("regex expression: " + regexExpr);
 
-    //Optional: This is only required if parameters are passed with @params
-    // from SQL Server in sp_execute_external_script
-    // n is giving us the size of ngram substrings
-    public static int param1;
+        // Lists to store the output data
+        LinkedList<Integer> outIds = new LinkedList<Integer>();
+        LinkedList<String> outValues = new LinkedList<String>();
 
-    //Optional: The number of rows we will be returning
-    public static int numberOfRows;
-
-    //Required: Number of output columns returned
-    public static short numberOfOutputCols;
-
-    /*Java main method - Only for testing purposes outside of SQL Server
-    public static void main(String... args) {
-        //getNGrams();
-    }*/
-
-    //This is the method we will be calling from SQL Server
-    public static void getNGrams() {
-
-        System.out.println("inputDataCol1.length= "+ inputDataCol1.length);
-        if (inputDataCol1.length == 0 ) {
-            // TODO: Set empty return
-            return;
+        // Evaluate each row
+        for(int i = 0; i < rowCount; i++) {
+            if (check(inValues[i])) {
+                outIds.add(inIds[i]);
+                outValues.add(inValues[i]);
+            }
         }
-        //Using a stream to "loop" over the input data inputDataCol1.length. You can also use a for loop for this.
-        final List<InputRow> inputDataSet = IntStream.range(0, inputDataCol1.length)
-                .mapToObj(i -> new InputRow(inputDataCol1[i], inputDataCol2[i]))
-                .collect(Collectors.toList());
 
+        int outputRowCount = outValues.size();
 
-        //Again, we are using a stream to loop over data
-        final List<OutputRow> outputDataSet = inputDataSet.stream()
-                // Generate ngrams of size n for each incoming string
-                // Each invocation of ngrams returns a list. flatMap flattens
-                // the resulting list-of-lists to a flat list.
-                .flatMap(inputRow -> ngrams(param1, inputRow.text).stream().map(s -> new OutputRow(inputRow.id, s)))
-                .collect(Collectors.toList());
+        int[] idOutputCol = new int[outputRowCount];
+        String[] valueOutputCol = new String[outputRowCount];
 
-        //Print the outputDataSet
-        System.out.println(outputDataSet);
+        // Convert the list of output columns to arrays
+        outValues.toArray(valueOutputCol);
 
-        //Set the number of rows and columns we will be returning
-        numberOfOutputCols = 2;
-        numberOfRows = outputDataSet.size();
-        outputDataCol1 = new int[numberOfRows]; // ID column
-        outputDataCol2 = new String[numberOfRows]; //The ngram column
-        outputNullMap = new boolean[2][numberOfRows];// output null map
+        ListIterator<Integer> it = outIds.listIterator(0);
+        int rowId = 0;
 
-        //Since we don't have any null values, we will populate all values in the outputNullMap to false
-        IntStream.range(0, numberOfRows).forEach(i -> {
-            final OutputRow outputRow = outputDataSet.get(i);
-            outputDataCol1[i] = outputRow.id;
-            outputDataCol2[i] = outputRow.ngram;
-            outputNullMap[0][i] = false;
-            outputNullMap[1][i] = false;
-        });
+        System.out.println("Output data:");
+        while (it.hasNext()) {
+            idOutputCol[rowId] = it.next().intValue();
+
+            System.out.println("ID: " + idOutputCol[rowId] + " Value: " + valueOutputCol[rowId]);
+            rowId++;
+        }
+
+        // Construct the output dataset
+        PrimitiveDataset output = new PrimitiveDataset();
+
+        output.addColumnMetadata(0, "ID", java.sql.Types.INTEGER, 0, 0);
+        output.addColumnMetadata(1, "Text", java.sql.Types.NVARCHAR, 0, 0);
+
+        output.addIntColumn(0, idOutputCol, null);
+        output.addStringColumn(1, valueOutputCol);
+
+        return output;
     }
 
-    // Example: ngrams(3, "abcde") = ["abc", "bcd", "cde"].
-    private static List<String> ngrams(int n, String text) {
-        return IntStream.range(0, text.length() - n + 1)
-                .mapToObj(i -> text.substring(i, i + n))
-                .collect(Collectors.toList());
+    private void validateInput(PrimitiveDataset input, LinkedHashMap<String, Object> params) {
+        // Check for the regex expression input parameter
+        if (params.get("regexExpr") == null) {
+            throw new IllegalArgumentException("Input parameter 'regexExpr' is not found");
+        }
+
+        // The expected input schema should be at least 2 columns, (INTEGER, STRING)
+        if (input.getColumnCount() < 2) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
+
+        // Check that the input column types are expected
+        if (input.getColumnType(0) != java.sql.Types.INTEGER &&
+                (input.getColumnType(1) != java.sql.Types.VARCHAR && input.getColumnType(1) == java.sql.Types.NVARCHAR )) {
+            throw new IllegalArgumentException("Unexpected input schema, schema should be an (INTEGER, NVARCHAR or VARCHAR)");
+        }
     }
-}
-```
 
-## <a name="3---class-inputrowjava"></a>3-InputRow.java 클래스
+    private boolean check(String text) {
+        Matcher m = expr.matcher(text);
 
-두 번째 클래스를 만듭니다 **InputRow.java**, 다음 코드에서는 구성 및 동일한 위치에 저장 **Ngram.java**합니다.
-
-```java
-package pkg;
-
-//This object represents one input row
-public class InputRow {
-    public final int id;
-    public final String text;
-
-    public InputRow(final int id, final String text) {
-        this.id = id;
-        this.text = text;
+        return m.find();
     }
 }
 ```
 
-## <a name="4---class-outputrowjava"></a>4-OutputRow.java 클래스
+## <a name="3-compile-and-create-jar-file"></a>3 컴파일하고.jar 파일 만들기
 
-세 번째이자 마지막 클래스 라고 **OutputRow.java**합니다. 코드 복사 하 고 다른 동일한 위치에 OutputRow.java로 저장 합니다.
+클래스 및 종속성.jar 파일을 패키지 하는 것이 좋습니다. Eclipse 또는 IntelliJ 지원 생성과 같은 대부분의 Java Ide jar 때 있습니다 빌드/컴파일 프로젝트 파일. 이 샘플에서 jar 파일 명명 **regex.jar**합니다.
 
-```java
-package pkg;
+.Jar 파일을 수동으로 만드는 경우에 단계에 따라, 참조 수 있습니다 [jar 파일을 만드는 방법](extension-java.md#create-jar)합니다.
 
-//This object represents one output row
-public class OutputRow {
-    public final int id;
-    public final String ngram;
+> [!NOTE]
+> 이 샘플은 사용 패키지, 즉,는 pkg"패키지" 클래스의 맨 위에 있는 제공 하면 컴파일된 코드는 "패키지" 라는 하위 폴더에 저장 됩니다. 이 자동으로 처리 되는 IDE를 사용 하는 경우 하지만 클래스를 사용 하 여 수동으로 컴파일하는 경우 **javac**을 수동으로 패키지 하위 폴더에 컴파일된 코드를 배치 해야 합니다.
 
-    public OutputRow(final int id, final String ngram) {
-        this.id = id;
-        this.ngram = ngram;
-    }
+## <a name="4---create-external-libraries"></a>4-외부 라이브러리 만들기
 
-    @Override
-    public String toString() { return id + ":" + ngram; }
-}
-```
+외부 라이브러리를 만들어 SQL Server jar 파일에 대 한 액세스를 자동으로 포함 됩니다 하 고 클래스 경로에 모든 특수 사용 권한을 설정할 필요가 없습니다.
 
-## <a name="5---compile"></a>5-컴파일
+이 샘플에서는 두 외부 라이브러리를 만드는 해야 합니다. SDK에 대 한 하나 및 Regex Java 샘플에 대 한 합니다.
 
-준비가 되 면 수업을 설정 하는 ".class" 파일로 컴파일하는 javac 실행이 만든 후 (`javac Ngram.java InputRow.java OutputRow.java`). (Ngram.class, InputRow.class, 및 OutputRow.class)이이 샘플에 대 한 세 가지.class 파일을 가져와야 합니다.
+1.  다운로드 [Microsoft SQL Server에 대 한 Java에 대 한 Microsoft 확장 SDK](http://aka.ms/mssql-java-lang-extension) java 언어 extension.jar mssql.
 
-클래스 경로 위치에 "패키지" 라는 하위 폴더에 컴파일된 코드를 배치 합니다. 개발 워크스테이션에서 작업 하는 경우이 단계는 SQL Server 컴퓨터에 파일을 복사한 것입니다.
+1. Sdk에 대 한 외부 라이브러리 만들기
 
-Classpath는 컴파일된 코드의 위치입니다. Classpath 경우 Linux에서 예를 들어, '/ home/myclasspath /' 다음에 '/ home/myclasspath/pkg'.class 파일 이어야 합니다. 7 단계에서 예제 스크립트에서는 sp_execute_external_script에 제공 된 경로 ' / home/myclasspath ' (Linux 가정). 
-
-Windows, 좋습니다 비교적 단순 폴더를 사용 하 여 구조를 하나 또는 두 개의 수준, 권한 간소화 합니다. 예를 들어 프로그램 클래스 경로 'C:\myJavaCode' 같은 '\pkg' 컴파일된 클래스가 포함 된 라는 하위 폴더를 사용 하 여 보일 수 있습니다. 
-
-클래스 경로 대 한 자세한 내용은 참조 하세요. [CLASSPATH 설정](howto-call-java-from-sql.md#set-classpath)합니다. 
-
-### <a name="using-jar-files"></a>.Jar 파일을 사용 하 여
-
-클래스 및 종속성.jar 파일을 패키지 하려면 sp_execute_external_script 클래스 경로 매개 변수에서.jar 파일의 전체 경로 제공 합니다. 예를 들어, jar 파일을 'ngram.jar'를 호출 하면 CLASSPATH 됩니다 ' / home/myclasspath/ngram.jar' linux.
-
-## <a name="6---create-external-library"></a>6-외부 라이브러리 만들기
-
-외부 라이브러리를 만들어 SQL Server jar에 대 한 액세스를 자동으로 포함 됩니다 하 고 클래스 경로에 모든 특수 사용 권한을 설정할 필요가 없습니다.
-
-```sql 
-CREATE EXTERNAL LIBRARY ngram
-FROM (CONTENT = '<path>/ngram.jar') 
-WITH (LANGUAGE = 'Java'); 
+```sql
+-- Create external library for the SDK
+CREATE EXTERNAL LIBRARY sdk
+FROM (CONTENT = '<path>/mssql-java-lang-extension.jar')
+WITH (LANGUAGE = 'Java');
 GO
 ```
 
-## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7-사용 권한 (6 단계를 수행한 경우에 생략)를 설정 합니다.
+3. Regex 샘플에 대 한 외부 라이브러리 만들기
 
-외부 라이브러리를 사용 하는 경우에이 단계가 필요 하지 않습니다. 작업 하는 권장된 방법을 있습니다 jar에서 외부 라이브러리를 만드는 것입니다. 
+```sql
+-- Create external library for the regex sample
+CREATE EXTERNAL LIBRARY regex
+FROM (CONTENT = '<path>/regex.jar')
+WITH (LANGUAGE = 'Java');
+GO
+```
 
-외부 라이브러리를 사용 하지 않으려는 경우에 필요한 사용 권한을 설정 해야 합니다. 스크립트 실행 프로세스 id가 코드에 액세스 하는 경우에 성공 합니다. 
+## <a name="5---set-permissions-skip-if-you-performed-step-4"></a>5-사용 권한 (4 단계를 수행한 경우에 생략)를 설정 합니다.
+
+외부 라이브러리를 사용 하는 경우에이 단계가 필요 하지 않습니다. 작업 하는 권장된 방법을 있습니다 jar에서 외부 라이브러리를 만드는 것입니다.
+
+외부 라이브러리를 사용 하지 않으려는 경우에 필요한 사용 권한을 설정 해야 합니다. 스크립트 실행 프로세스 id가 코드에 액세스 하는 경우에 성공 합니다. 사용 권한을 설정 하는 방법에 대 한 자세한 정보를 찾을 수 있습니다 [여기](extension-java.md)합니다.
 
 ### <a name="on-linux"></a>On Linux
 
@@ -230,7 +243,7 @@ GO
 
 에 '읽기 및 실행' 권한 부여 **SQLRUserGroup** 하며 **모든 응용 프로그램 패키지** SID 컴파일된 Java 코드를 포함 하는 폴더에 있습니다. 
 
-전체 트리는 권한이, 루트에서 부모 마지막 하위 해야 합니다. 
+전체 트리는 권한이, 루트에서 부모 마지막 하위 폴더 해야 합니다. 
  
 1. 폴더 (예: ' C:\myJavaCode')를 마우스 오른쪽 단추로 차례로 **속성** > **보안**합니다.
 2. **편집**을 클릭합니다.
@@ -245,36 +258,41 @@ GO
 
 <a name="call-method"></a>
 
-## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
+## <a name="2---call-the-java-class"></a>2-Java 클래스를 호출 합니다.
 
-SQL Server에서 코드를 호출 하려면 Java 메서드를 지정 **getNgrams()** sp_execute_external_script "script" 매개 변수에서입니다. 이 메서드 호출 "패키지" 라는 클래스 파일을 패키지에 속하는 **Ngram.java**합니다.
+SQL Server에서 Java 코드를 호출 하려면 sp_execute_external_script를 호출 하는 저장된 프로시저를 만듭니다. "Script" 매개 변수에 [패키지] 정의 하겠습니다. [class]를 호출 하려고 합니다. 이 샘플에서는 클래스 라는 패키지에 속해 **pkg** 클래스 파일을 호출 하 고 **RegexSample.java**합니다.
 
-이 예제에서는 Java 파일의 경로를 제공 하기 클래스 경로 매개 변수를 전달 합니다. 또한 "매개 변수"를 사용 하 여 Java 클래스에 매개 변수를 전달 합니다. classpath 30 자를 초과 하지 않도록 확인 합니다. 이 경우 아래 스크립트에서 값을 늘립니다.
-
-+ Linux에서 SQL Server Management Studio 또는 TRANSACT-SQL을 실행 하는 데 사용 되는 다른 도구에서 다음 코드를 실행 합니다. 
-
-+ Windows를 변경 @myClassPath N'C:\myJavaCode를\' (가정 \pkg의 부모 폴더) SQL Server Management Studio 또는 다른 도구에서 쿼리를 실행 하기 전에 합니다.
+> [!NOTE]
+>호출할 메서드를 정의 하지 않습니다. 기본적으로 **실행** 메서드가 호출 됩니다. 이 SQL Server에서 클래스를 호출 하는 일을 할 수 있도록 하려는 경우 SDK 인터페이스를 따르고 Java 클래스의 execute 메서드를 구현 해야 하는 것을 의미 합니다.
 
 ```sql
-DECLARE @myClassPath nvarchar(50)
-DECLARE @n int 
---This is where you store your classes or jars.
---This is the size of the ngram
-SET @n = 3
+/*
+This stored procedure takes an input query (input dataset) and a regular expression and returns the rows that fulfilled the given regular expression. This sample uses a regular expression that checks if a text contains the word "Java" or "java" ([Jj]ava) 
+*/
+
+CREATE OR ALTER PROCEDURE [dbo].[java_regex] @expr nvarchar(200), @query nvarchar(400)
+AS
+BEGIN
+--Call the Java program by giving the package.className in @script
+--The method invoked in the Java code is always the "execute" method
 EXEC sp_execute_external_script
   @language = N'Java'
-, @script = N'pkg.Ngram.getNGrams'
-, @input_data_1 = N'SELECT id, text FROM reviews'
-, @parallel = 0
-, @params = N'@param1 INT'
-, @param1 = @n
-with result sets ((ID int, ngram varchar(20)))
+, @script = N'pkg.RegexSample'
+, @input_data_1 = @query
+, @params = N'@regexExpr nvarchar(200)'
+, @regexExpr = @expr
+with result sets ((ID int, text nvarchar(100)));
+END
+GO
+
+--Now execute the above stored procedure and provide the regular expression and an input query
+EXECUTE [dbo].[java_regex] N'[Jj]ava', N'SELECT id, text FROM testdata'
 GO
 ```
 
 ### <a name="results"></a>결과
 
-호출을 실행 한 후을 보여 주는 결과를 집합이 두 개의 열을 받습니다.
+호출을 실행 한 후 결과 행의 두 개의 집합을 가져와야 합니다.
 
 ![Java 샘플에서 결과](../media/java/java-sample-results.png "샘플 결과")
 
@@ -282,12 +300,11 @@ GO
 
 + 클래스를 컴파일할 때 "패키지" 하위 폴더에는 세 클래스 모두에 대 한 컴파일된 코드를 포함 해야 합니다.
 
-+ 클래스 경로 길이 선언 된 값을 초과할 수 없습니다 (`DECLARE @myClassPath nvarchar(50)`). 이 경우 처음 50 개 문자를 경로 잘리고 컴파일된 코드가 로드 되지 않습니다. 수행할 수 있습니다는 `SELECT @myClassPath` 값을 확인 합니다. 50 자 충분 하지 않은 경우에 길이 늘립니다. 
++ 마지막으로, 외부 라이브러리를 사용 하지 않는 경우 사용 권한을 확인 온 *각* 외부 프로세스를 실행 하는 보안 id를 읽고 코드를 실행할 수 있는 권한이 있는지 확인 하려면 "패키지" 하위 폴더로 루트 폴더입니다.
 
-+ 마지막으로, 사용 권한 확인 *각* 외부 프로세스를 실행 하는 보안 id를 읽고 코드를 실행할 수 있는 권한이 있는지 확인 하려면 "패키지" 하위 폴더에 루트 폴더입니다.
+## <a name="next-steps"></a>다음 단계
 
-## <a name="see-also"></a>참고자료
-
++ [Microsoft 확장성 Microsoft SQL Server에 대 한 Java 용 SDK](java-sdk.md)
 + [SQL Server에서 Java를 호출 하는 방법](howto-call-java-from-sql.md)
 + [SQL Server에서 Java 확장](extension-java.md)
 + [Java와 SQL Server 데이터 형식](java-sql-datatypes.md)

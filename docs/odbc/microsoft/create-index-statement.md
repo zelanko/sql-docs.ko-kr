@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233002"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX 문
 CREATE INDEX 문의 구문은 다음과 같습니다.  
   
  [UNIQUE] 인덱스 만들기 *인덱스 이름* ON *테이블 이름* (*열 식별자* [ASC] [DESC] [, *열 식별자* [ASC][DESC]...]) 사용 하 여 \< *인덱스 옵션 목록*>  
   
- 여기서 \< *인덱스 옵션 목록을*> 일 수 있습니다: 기본 &#124; NULL 허용 안 함 &#124; NULL 무시  
+ 여기서 \< *인덱스 옵션 목록을*> 일 수 있습니다. 기본 &AMP;#124; NULL 허용 안 함 &AMP;#124; 무시 NULL  
   
  Microsoft Access 드라이버에만 NULL 허용 안 함 및 NULL 무시 인덱스 옵션을 사용 합니다. DBASE 및 Paradox 드라이버 구문을 허용 하지만 두 옵션의 존재를 무시 합니다.  
   

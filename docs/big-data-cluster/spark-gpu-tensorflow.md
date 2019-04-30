@@ -2,20 +2,20 @@
 title: GPU 지원 및 TensorFlow
 titleSuffix: SQL Server big data clusters
 description: GPU 지원이 포함 된 빅 데이터 클러스터를 배포 하 고 Azure 데이터 Studio 노트북에서 TensorFlow를 사용 합니다.
-author: lgongmsft
-ms.author: shivprashant
+author: inchiosa
+ms.author: marinch
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 682e68ede0646b9455bd9b4b759b4e3d760223d9
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: MT
+ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59670888"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473310"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>GPU 지원이 포함 된 빅 데이터 클러스터를 배포 및 TensorFlow를 실행 합니다.
 

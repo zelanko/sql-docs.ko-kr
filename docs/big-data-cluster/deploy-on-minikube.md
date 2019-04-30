@@ -5,17 +5,17 @@ description: 단일 컴퓨터에서 SQL Server 2019 빅 데이터 클러스터 (
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860694"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473499"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포용 minikube를 구성 합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "58860694"
 
 - 32GB의 메모리가 (권장된 64GB).
 
-- 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#env) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
+- 컴퓨터에 최소 메모리를 권장 하는 경우에 계산 풀 인스턴스를 하나만, 1 데이터 풀 인스턴스 및 1 저장소 풀 인스턴스에 있는 클러스터를 배포를 구성 합니다. 이 구성만 사용할 평가 환경에 대 한 내구성 및 가용성 데이터는 중요 하지 않습니다. 참조를 [배포 설명서](deployment-guidance.md#configfile) 데이터 풀에 대 한 복제본의 수를 구성 하려면 설정 환경 변수에 대 한 자세한 내용은 풀 및 저장소 풀을 계산 합니다.
 
 - 컴퓨터의 BIOS에서 VT x 또는 amd-v 가상화를 활성화 되어야 합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "58860694"
 
 ## <a name="install-minikube"></a>Minikube를 설치 합니다.
 
-에 대 한 지침에 따라 Minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 빅 데이터 클러스터 (미리 보기) 버전 v0.24.1와 등록에 작동합니다.
+에 대 한 지침에 따라 minikube를 설치 합니다 [v0.28.2 릴리스](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)합니다. SQL Server 2019 빅 데이터 클러스터 (미리 보기) 버전 v0.24.1와 등록에 작동합니다.
 
 ## <a name="create-a-minikube-cluster"></a>Minikube 클러스터 만들기
 
@@ -58,7 +58,7 @@ ms.locfileid: "58860694"
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-VirtualBox를 사용 하 여 Minikube를 사용 하는 경우 명령은 다음과 같이 보입니다.
+VirtualBox를 사용 하 여 minikube를 사용 하는 경우 명령은 다음과 같이 보입니다.
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서의 단계 Minikube 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
+이 문서의 단계 minikube 클러스터를 구성 합니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포 하는 것입니다. 자세한 내용은 다음 문서를 참조 합니다.
 
 [Kubernetes에서 SQL Server 2019 빅 데이터 클러스터를 배포 합니다.](deployment-guidance.md#deploy)

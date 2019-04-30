@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b8a253f9d252beb42080d2085adb962206ebd94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232315"
 ---
 # <a name="correlation-names"></a>상관 관계 이름
 상관 관계 이름은 완전히 지원 테이블 목록에 포함 합니다. 예를 들어 다음 문자열에 E1 되 Emp 라는 테이블에 대 한 상관 관계 이름입니다.  

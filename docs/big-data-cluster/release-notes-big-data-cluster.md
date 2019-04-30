@@ -5,17 +5,17 @@ description: 이 문서에서는 최신 업데이트 및 SQL Server 2019 빅 데
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860532"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473534"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server에서 빅 데이터 클러스터에 대 한 릴리스 정보
 
@@ -24,6 +24,99 @@ ms.locfileid: "58860532"
 이 문서에서는 업데이트를 나열 및 빅 데이터 클러스터 SQL Server의 최신 릴리스에 대 한 문제 인지 알고 있어야 합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp25"></a> CTP 2.5 (월)
+
+다음 섹션에서는 새로운 기능 및 SQL Server 2019 CTP 2.5에서 빅 데이터 클러스터에 대해 알려진된 문제를 설명합니다.
+
+### <a name="whats-new"></a>What's New
+
+| 새로운 기능 또는 업데이트 | 설명 |
+|:---|:---|
+| 배포 프로필 | 기본값을 사용 하 고 사용자 지정할 [배포 구성 JSON 파일](deployment-guidance.md#configfile) 환경 변수 대신 빅 데이터 클러스터 배포에 대 한 합니다. |
+| 배포 확인된 | `mssqlctl cluster create` 이제 기본 배포에 필요한 모든 설정에 대 한 라는 메시지가 나타납니다. |
+| 서비스 끝점 및 pod 이름 변경 | 다음 외부 끝점 이름이 변경 되었습니다.<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** 개선 사항 | 사용 하 여 **mssqlctl** 하 [외부 끝점을 나열](deployment-guidance.md#endpoints) 의 버전을 확인 하 고 **mssqlctl** 사용 하 여는 `--version` 매개 변수입니다. |
+| 오프라인 설치 | 오프 라인 빅 데이터 클러스터 배포에 대 한 지침입니다. |
+| HDFS 계층화 개선 사항 | S3 계층, 탑재 캐싱 및 OAuth Gen2 ADLS에 대 한 지원. |
+| 새 `mssql` Spark-SQL Server 커넥터 | |
+
+### <a name="known-issues"></a>알려진 문제
+
+다음 섹션의 알려진된 문제 및 제한 사항이이 릴리스를 사용 하 여 설명합니다.
+
+#### <a name="deployment"></a>배포
+
+- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다.
+
+   > [!IMPORTANT]
+   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
+
+- AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- 빅 데이터 클러스터 배포에 실패 하면 연결된 된 네임 스페이스 제거 되지 않습니다. 이 클러스터에서 분리 된 네임 스페이스를 발생할 수 있습니다. 동일한 이름 사용 하 여 클러스터를 배포 하기 전에 네임 스페이스를 수동으로 삭제 됩니다.
+
+
+
+#### <a id="externaltablesctp24"></a> 외부 테이블
+
+- 빅 데이터 클러스터 배포에서는 더 이상 합니다 **SqlDataPool** 하 고 **SqlStoragePool** 외부 데이터 원본입니다. 이러한 데이터 원본은 데이터 풀 및 저장소 풀 데이터 가상화를 지원 하도록 수동으로 만들 수 있습니다.
+
+   ```sql
+   -- Create the SqlDataPool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   -- Create the SqlStoragePool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+   END
+   ```
+
+- 지원 되지 않는 열 형식에는 테이블에 대 한 데이터 풀 외부 테이블을 만들 가능성이 있습니다. 외부 테이블을 쿼리 하는 경우 메시지가 다음과 비슷합니다.
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- 저장소 풀 외부 테이블을 쿼리 하는 경우 오류가 발생할 수 있습니다는 동시에 기본 파일은 HDFS에 복사 되는 경우.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- 문자 데이터 형식을 사용 하는 Oracle에는 외부 테이블을 만들면 Azure Data Studio virtualization 마법사는 외부 테이블 정의에서 이러한 열 VARCHAR로 해석 합니다. 외부 테이블 DDL에에서 실패를 하면 합니다. 하거나 NVARCHAR2 유형을 사용 하 여 또는 EXTERNAL TABLE 문을 수동으로 만들고, 마법사를 사용 하는 대신 NVARCHAR를 지정 하는 Oracle 스키마를 수정 합니다.
+
+#### <a name="application-deployment"></a>응용 프로그램 개발
+
+- R, Python 또는 MLeap 응용 프로그램에서 RESTful API를 호출할 때 호출에에서 시간 초과 5 분입니다.
+
+#### <a name="spark-and-notebooks"></a>Spark 및 notebook
+
+- POD IP 주소는 Pod 다시 시작으로 Kubernetes 환경에서 변경 될 수 있습니다. 마스터 pod를 다시 시작 되는 시나리오에서 Spark 세션을 사용 하 여 못할 `NoRoteToHostException`합니다. 이 새 IP를 사용 하 여 새로 고쳐지는 가져오기 하지 JVM 캐시 주소입니다.
+
+- Windows에 이미 설치 된 Jupyter 및 별도 Python을 있다면 Spark 노트북 실패할 수 있습니다. 이 문제를 해결 하려면 Jupyter를 최신 버전으로 업그레이드 합니다.
+
+- 노트북을 클릭할 경우에 **텍스트 추가** 명령, 텍스트 셀이 편집 모드 보다는 미리 보기 모드에서 추가 됩니다. 편집 모드에 있고 셀을 편집 하 여 전환한 다음 미리 보기 아이콘을 클릭할 수 있습니다.
+
+#### <a name="hdfs"></a>HDFS
+
+- 미리 HDFS의 파일을 마우스 오른쪽 단추로 클릭 하는 경우 다음 오류가 표시 될 수 있습니다.
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   현재는 Azure Data Studio에서 30 MB 보다 큰 파일을 미리 볼 수 없습니다.
+
+- 구성 변경 내용은 hdfs-site.xml 변경 내용을 포함 하는 HDFS에 지원 되지 않습니다.
+
+#### <a name="security"></a>보안
+
+- SA_PASSWORD는 (예: 코드 덤프 파일)의 일부 환경의 및 검색할 수입니다. 배포 후 마스터 인스턴스에서 SA_PASSWORD 다시 설정 해야 합니다. 이 변경은 버그 아니라 보안 단계입니다. Linux 컨테이너에서 SA_PASSWORD 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [SA 암호 변경](../linux/quickstart-install-connect-docker.md#sapassword)합니다.
+
+- AKS 로그는 빅 데이터 클러스터 배포에 대 한 SA 암호를 포함할 수 있습니다.
 
 ## <a id="ctp24"></a> CTP 2.4 (3 월)
 
@@ -49,7 +142,7 @@ ms.locfileid: "58860532"
 - 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다.
 
    > [!IMPORTANT]
-   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 - AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
 
@@ -193,7 +286,7 @@ make: *** [deploy-clean] Error 2
 - 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다.
 
    > [!IMPORTANT]
-   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+   > 데이터를 백업 하 고 다음 기존 빅 데이터 클러스터를 삭제 해야 합니다 (이전 버전의를 사용 하 여 **mssqlctl**) 최신 릴리스를 배포 하기 전에 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 - 합니다 **ACCEPT_EULA** EULA에 동의 하려면 "예"는 "yes" 또는 환경 변수 여야 합니다. 이전 릴리스에서 "y" 및 "Y" 사용할 수 있지만 및 배포가 실패 하면 더 이상 허용 됩니다.
 
@@ -243,7 +336,7 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- 빅 데이터 클러스터의 최신 버전으로 업그레이드 하는 방법에 대 한 중요 한 정보에 대 한 및 **mssqlctl**를 참조 하십시오 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+- 빅 데이터 클러스터의 최신 버전으로 업그레이드 하는 방법에 대 한 중요 한 정보에 대 한 및 **mssqlctl**를 참조 하십시오 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 #### <a name="external-tables"></a>외부 테이블
 
@@ -302,7 +395,7 @@ Kubeadm를 사용 하 여 여러 컴퓨터에서 Kubernetes를 배포 하려면 
 
 #### <a name="deployment"></a>배포
 
-- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다. 백업 하 고 최신 릴리스를 배포 하기 전에 모든 기존 빅 데이터 클러스터를 삭제 해야 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다. 백업 하 고 최신 릴리스를 배포 하기 전에 모든 기존 빅 데이터 클러스터를 삭제 해야 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 - AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
 
@@ -370,7 +463,7 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 
 #### <a name="deployment"></a>배포
 
-- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다. 백업 하 고 최신 릴리스를 배포 하기 전에 모든 기존 빅 데이터 클러스터를 삭제 해야 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-guidance.md#upgrade)합니다.
+- 이전 릴리스에서 빅 데이터 데이터 클러스터를 업그레이드 하는 것은 지원 되지 않습니다. 백업 하 고 최신 릴리스를 배포 하기 전에 모든 기존 빅 데이터 클러스터를 삭제 해야 합니다. 자세한 내용은 [새 릴리스로 업그레이드](deployment-upgrade.md)합니다.
 
 - AKS를 배포한 후 배포에서 다음 두 경고 이벤트를 볼 수 있습니다. 이러한 이벤트는 알려진 문제, 있지만 AKS에서 빅 데이터 클러스터를 성공적으로 배포를 방지 하지 않습니다.
 

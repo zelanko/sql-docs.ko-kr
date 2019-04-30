@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669301"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473104"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
