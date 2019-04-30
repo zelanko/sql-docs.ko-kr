@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192358"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 조건자 제한 사항
 데이터 열에 255 자 보다 긴 경우에서는 처음 255 자만 에서만 LIKE 비교에 따라 달라 집니다.  

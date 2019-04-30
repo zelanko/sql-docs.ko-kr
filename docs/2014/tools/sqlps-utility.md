@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187071"
 ---
 # <a name="sqlps-utility"></a>sqlps 유틸리티
   `sqlps` 유틸리티는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자와 cmdlet이 로드 및 등록된 Windows PowerShell 2.0 세션을 시작합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 구성 요소를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 및 해당 개체와 함께 작동하는 PowerShell 명령 또는 스크립트를 입력할 수 있습니다.  

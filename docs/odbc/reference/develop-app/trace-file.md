@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e0ca79b64cafcd2ac34c14af120f29781a7ae22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148918"
 ---
 # <a name="trace-file"></a>추적 파일
 응용 프로그램 추적 파일을 지정 하거나 설정 합니다 **TraceFile** Odbc.ini 레지스트리 항목 또는 호출 하 여 키워드 **SQLSetConnectAttr** SQL_ATTR_TRACEFILE 연결 특성을 사용 하 여 합니다. 추적을 사용 하는 경우 파일이 없으면, 드라이버 관리자는 파일을 만듭니다. 각 응용 프로그램에는 경합을 방지 하는 자체 전용된 추적 파일이 있어야 합니다. 응용 프로그램이 둘 이상의 추적 파일을 사용할 수 있습니다. 응용 프로그램의 설치 프로그램을 다양 한 추적 파일을 사용 하 여 사용자를 제공할 수 있습니다. 추적을 동적으로 사용 하는 경우 응용 프로그램이 표시할 수도 있습니다 로그온 하지 않고 추적 결과 추적 파일에.  

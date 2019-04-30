@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188591"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
   합니다 [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 에서 참조 되는 서비스의 고급 속성을 나타내는 합니다 [SqlService 클래스](../sqlservice-class/sqlservice-class.md) 개체입니다.  

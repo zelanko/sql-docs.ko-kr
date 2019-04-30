@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2e83f23870d355394241550ffab24838a6b43f1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206419"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>단계별 보고서 만들기(보고서 작성기 및 SSRS)
   단계별 보고서에는 아래 예에서와 같이 동일한 열의 부모 그룹 아래에 들여쓴 정보 행 또는 자식 그룹이 표시됩니다.  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204950"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>여러 열에 여러 검색 조건 지정(Visual Database Tools)
   여러 개의 데이터 열을 검색 조건의 일부로 포함하여 쿼리의 범위를 확장하거나 축소할 수 있습니다. 예를 들면 다음과 같습니다.  

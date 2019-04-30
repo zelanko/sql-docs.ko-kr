@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr | Microsoft 문서
+title: SQLSetStmtAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188690"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
@@ -122,7 +122,7 @@ ms.locfileid: "53361292"
   
  SQL_SOPT_SS_PARAM_FOCUS의 형식은 SQLULEN입니다.  
   
- 기본값은 0이며 이는 이러한 호출이 SQL 문의 매개 변수 표식에 해당하는 매개 변수의 주소를 지정한다는 의미입니다. 테이블 반환 매개 변수의 매개 변수 번호로 설정하면 이러한 호출이 해당 테이블 반환 매개 변수 열의 주소를 지정합니다. 테이블 반환 매개 변수의 매개 변수 번호가 아닌 값으로 설정하면 해당 호출에서 IM020 오류 "매개 변수 포커스가 테이블 반환 매개 변수를 참조하지 않습니다"를 반환합니다.  
+ 기본값은 0이며 이는 이러한 호출이 SQL 문의 매개 변수 표식에 해당하는 매개 변수의 주소를 지정한다는 의미입니다. 테이블 반환 매개 변수의 매개 변수 번호로 설정하면 이러한 호출이 해당 테이블 반환 매개 변수 열의 주소를 지정합니다. 테이블 반환 매개 변수의 매개 변수 번호가 아닌 값으로 설정 하면 이러한 호출이 오류 IM020를 반환 합니다. "매개 변수 포커스가 테이블 반환 매개 변수는 참조 하지 않습니다".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 특성은 후속 카탈로그 함수 호출의 이름 범위를 지정합니다. SQLColumns 반환한 결과 집합은 SQL_SOPT_SS_NAME_SCOPE의 설정에 따라 달라 집니다.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72fe76d566a5b4a92899b0a8a30804201ab13109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061571"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>설명자 필드 가져오기 및 설정
 이 섹션에서는 응용 프로그램 검색 또는 설명자 필드 값을 설정 하 여 메서드를 설명 합니다.  

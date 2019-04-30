@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0cf2c598b358c5c43e9dc9717b012bc5c5f873d0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191126"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Size 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리의 크기(KB)를 가져옵니다.  

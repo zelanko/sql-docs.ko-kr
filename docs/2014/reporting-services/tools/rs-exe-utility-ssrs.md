@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e75c56597a351f7c76ff509e3347d37dc40e41b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201391"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  

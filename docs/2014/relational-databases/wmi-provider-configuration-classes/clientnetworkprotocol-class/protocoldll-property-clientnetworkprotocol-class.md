@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8558fde82245a02e04c34008eb124219354c4352
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192095"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>ProtocolDLL 속성(ClientNetworkProtocol 클래스)
   지정한 네트워크 프로토콜에 필요한.dll 파일의 이름을 가져옵니다 합니다 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)합니다.  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [클라이언트 네트워크 프로토콜 및 네트워크 라이브러리 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

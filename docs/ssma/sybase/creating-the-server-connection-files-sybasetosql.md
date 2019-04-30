@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d42e8166198cbf97b2589b55f77d40514e56dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297593"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>서버 연결 파일 만들기(SybaseToSQL)
 스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
   
-**예:**  
+**예제:**  
   
 ```  
 1.<!--Sample of server connection file commands -->  

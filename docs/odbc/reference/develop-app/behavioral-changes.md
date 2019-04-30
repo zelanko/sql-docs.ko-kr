@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181765"
 ---
 # <a name="behavioral-changes"></a>동작 변경
 동작 변경 내용이 있는 변경 내용이 반영 합니다 *구문* 인터페이스의 동일 하지만 *의미 체계* 변경 되었습니다. 이러한 변경 내용을 ODBC 2에서 사용 되는 기능입니다. *x* ODBC 3에서 동일한 기능을 다르게 동작 합니다. *x*합니다.  
   
  여부는 응용 프로그램은 ODBC 2를 나타냅니다. *x* 동작 또는 ODBC 3. *x* 동작은 SQL_ATTR_ODBC_VERSION 환경 특성에 의해 결정 됩니다. 이 32 비트 값은 ODBC 2 보이게 SQL_OV_ODBC2에 설정 됩니다. *x* 동작과 SQL_OV_ODBC3 보이게 ODBC 3. *x* 동작 합니다.  
   
- 호출 하 여 SQL_ATTR_ODBC_VERSION 환경 특성이 설정 되어 **SQLSetEnvAttr**합니다. 응용 프로그램 호출 **SQLAllocHandle** 호출 해야 환경 핸들을 할당할**SQLSetEnvAttr** 필요 동작을 설정 하는 즉시 합니다. (결과적으로, 상태가 새 환경 versionless에 할당 되지만 환경 핸들을 설명 하기 위해 상태입니다.) 자세한 내용은 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
+ 호출 하 여 SQL_ATTR_ODBC_VERSION 환경 특성이 설정 되어 **SQLSetEnvAttr**합니다. 응용 프로그램 호출 **SQLAllocHandle** 호출 해야 환경 핸들을 할당할**SQLSetEnvAttr** 필요 동작을 설정 하는 즉시 합니다. (결과적으로, 상태가 새 환경 versionless에 할당 되지만 환경 핸들을 설명 하기 위해 상태입니다.) 자세한 내용은 참조 하세요. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  응용 프로그램 동작 SQL_ATTR_ODBC_VERSION 환경 특성 있지만 특성을 사용 하 여 필요는 ODBC 2를 사용 하 여 응용 프로그램의 연결에 영향을 주지 알려 줍니다. *x* 또는 ODBC 3. *x* 드라이버입니다. ODBC 3입니다. *x* 는 ODBC 2 응용 프로그램에 연결할 수 있습니다. *x* 또는 3. *x* 환경 특성의 설정에 관계 없이 드라이버입니다.  
   

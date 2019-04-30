@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192326"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>키 집합 커서 사용 제한 사항
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668111"
  또한 테이블 별칭을 사용 하 여 응용 프로그램에는 키 집합 커서 작동 하지 않습니다. 앞 으로만 이동 가능한 또는 정적 커서 유형은 필수입니다. 키 집합을 사용 하 여 테이블 별칭을 사용 하 여 커서 유형을 하면 다음 오류: "[Microsoft] [ODBC driver for Oracle] 키 집합 커서를 사용할 수 없습니다 조인 공용 구조체를 사용 하 여 교차 또는 빼기 또는 읽기 전용 결과 집합입니다."  
   
 > [!NOTE]  
->  드라이버가 Oracle 서버에 전송 되는 SQL 문을 처리 하는 방식 때문에 Oracle 내부적으로 다음 오류 메시지를 반환 합니다. "ORA-00964: 테이블 목록에 없는 이름을."
+>  드라이버가 Oracle 서버에 전송 되는 SQL 문을 처리 하는 방식 때문에 내부적으로 Oracle에는 다음과 같은 오류 메시지가 반환 합니다. "ORA-00964: 테이블 목록에 없는 이름입니다."

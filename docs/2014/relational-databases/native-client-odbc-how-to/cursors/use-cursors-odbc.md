@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200490"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
     
@@ -71,7 +71,7 @@ ms.locfileid: "53360095"
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [커서 방법 도움말 항목을 사용 하 여 &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

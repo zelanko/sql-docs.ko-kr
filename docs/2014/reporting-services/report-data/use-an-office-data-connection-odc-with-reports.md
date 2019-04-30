@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e51660f2b357b0ae1101b47f73ec0f66c7555265
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207047"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>보고서에 Office 데이터 연결(.odc) 사용(SharePoint 통합 모드의 Reporting Services)
   제한된 시나리오에서 기존 Office 데이터 연결 파일(.odc)을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서에 연결 정보를 제공할 수 있습니다. 공유 데이터 원본을 만들 때 .rsds 파일 대신 .odc 파일을 사용할 수 있습니다. 보고서 서버는 .rsds 파일과 같은 방식으로 .odc 파일을 사용합니다. 즉, 이 파일을 읽어 데이터 원본 유형, 연결 문자열 및 자격 증명 정보를 확인합니다.  

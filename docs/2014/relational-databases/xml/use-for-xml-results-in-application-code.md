@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193336"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
@@ -163,11 +163,11 @@ ms.locfileid: "58532837"
   
 -   **YearOpened:** 1974  
   
--   **미미 합니다.** Road  
+-   **Specialty:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **브랜드:** 3  
+-   **Brands:** 3  
   
 -   **인터넷:** DSL  
   

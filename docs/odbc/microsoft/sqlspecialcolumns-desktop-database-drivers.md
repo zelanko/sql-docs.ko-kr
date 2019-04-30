@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200502"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns(데스크톱 데이터베이스 드라이버)
 고유 인덱스를 반환 됩니다 (있는 경우)에서 SQL_BEST_ROWID 플래그 *fColType*합니다. SQL_ROWVER 플래그에 대 한 결과 집합이 반환 됩니다.  

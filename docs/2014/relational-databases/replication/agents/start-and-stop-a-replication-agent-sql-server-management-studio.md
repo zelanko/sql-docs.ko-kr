@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192467"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 복제 모니터에 있는 **작업** 폴더 및 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  

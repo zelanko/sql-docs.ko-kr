@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224902"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize(MDX)
 
@@ -33,14 +33,14 @@ Hierarchize(Set_Expression [ , POST ] )
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **Hierarchize** 함수는 지정 된 집합의 멤버를 계층적 순서로 구성 합니다. 함수는 항상 중복 요소를 포함합니다.  
+ 합니다 **Hierarchize** 함수는 지정 된 집합의 멤버를 계층적 순서로 구성 합니다. 함수는 항상 중복 요소를 포함합니다.  
   
--   경우 **POST** 을 지정 하지 않으면 함수는 일반적인 방향의 순서로 수준의 멤버를 정렬 합니다. 일반적인 방향의 순서는 다른 정렬 조건이 지정되지 않은 경우 계층에서 멤버가 정렬되는 기본 순서입니다. 자식 멤버는 해당 부모 멤버 바로 다음에 옵니다.  
+-   하는 경우 **POST** 지정 하지 않으면 함수는 일반적인 방향의 순서로 수준의 멤버를 정렬 합니다. 일반적인 방향의 순서는 다른 정렬 조건이 지정되지 않은 경우 계층에서 멤버가 정렬되는 기본 순서입니다. 자식 멤버는 해당 부모 멤버 바로 다음에 옵니다.  
   
--   경우 **POST** 지정는 **Hierarchize** 함수는 반대 방향의 순서를 사용 하 여 수준의 멤버를 정렬 합니다. 즉, 자식 멤버가 해당 부모보다 앞에 옵니다.  
+-   경우 **게시물** 를 지정 합니다 **Hierarchize** 반대 방향의 순서를 사용 하 여 수준의 멤버를 정렬 하는 함수입니다. 즉, 자식 멤버가 해당 부모보다 앞에 옵니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 Canada 멤버를 드릴업합니다. **Hierarchize** 함수를 사용 하 여는 데 필요한 계층적 순서로 지정 된 집합 멤버를 구성 하는 **DrillUpMember** 함수입니다.  
+ 다음 예에서는 Canada 멤버를 드릴업합니다. 합니다 **Hierarchize** 함수를 사용 하 여 지정된 된 집합 멤버를 계층적 순서로 구성 합니다 **DrillUpMember** 함수입니다.  
   
 ```  
 SELECT DrillUpMember   
@@ -59,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 합계를 반환 하는 다음 예제에서는 `Measures.[Order Quantity]` 멤버에 포함 된 2003의 첫 9 개월 동안 집계는 `Date` 차원에서의 **Adventure Works** 큐브. **PeriodsToDate** 함수는 Aggregate 함수가 실행 된 집합의 튜플을 정의 합니다. **Hierarchize** 함수 계층적 순서로 Product 차원에서 멤버의 지정된 된 집합의 멤버를 구성 합니다.  
+ 합계를 반환 하는 다음 예제에서는 합니다 `Measures.[Order Quantity]` 에 포함 된 2003 년의 첫 9 개월 동안 집계 된 멤버를 `Date` 차원에서는 **Adventure Works** 큐브. 합니다 **PeriodsToDate** 집계 함수가 작동 하는 집합의 튜플을 정의 합니다. 합니다 **Hierarchize** 함수는 지정된 된 집합을 계층적 순서로 Product 차원에서 멤버의 멤버를 구성 합니다.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -87,6 +87,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

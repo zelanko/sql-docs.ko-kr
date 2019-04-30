@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162439"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
   합니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client ODBC 드라이버 (sqlncli11.dll) SQL_WCHAR *의 수행 하는 방법을 변경 (NCHAR/NVARCHAR/NVARCHAR(MAX)) 및 SQL_CHAR\* (CHAR/VARCHAR/NARCHAR(MAX)) 변환 합니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  

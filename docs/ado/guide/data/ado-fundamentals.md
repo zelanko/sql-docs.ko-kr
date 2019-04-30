@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062929"
 ---
 # <a name="ado-fundamentals"></a>ADO 기본 사항
 ADO는 프로그래밍 방식으로 액세스, 편집 및 다양 한 OLE DB 시스템 인터페이스를 통해 데이터 원본에서 데이터 업데이트에 대 한 개발자에 게 강력 하 고 논리 개체 모델을 제공 합니다. ADO의 가장 일반적인 사용법은 테이블 또는 테이블에서 관계형 데이터베이스를 쿼리, 검색, 응용 프로그램에서 결과 표시 및 아마도 수 하 고 데이터 변경 내용을 저장 하는 것입니다. 다른 작업은 다음과 같습니다.  
@@ -59,7 +59,7 @@ ADO는 프로그래밍 방식으로 액세스, 편집 및 다양 한 OLE DB 시�
   
 -   [ADO 개체 및 컬렉션](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: 간단한 ADO 응용 프로그램](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: 간단한 ADO 응용 프로그램을](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB 공급자](../../../ado/guide/data/ole-db-providers-ado.md)  
   

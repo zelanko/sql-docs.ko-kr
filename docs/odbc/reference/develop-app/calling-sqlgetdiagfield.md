@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27584a0892bc468b50286b79edbe92d7c968a0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199150"
 ---
 # <a name="calling-sqlgetdiagfield"></a>SQLGetDiagField 호출
 때 ODBC 3. *x* 응용 프로그램 호출 **SQLGetDiagField** 는 ODBC 2 *.x* 드라이버를 드라이버에서 반환의 적절 한 정보와 관계 없이 SQL_SUCCESS  *\*DiagInfoPtr* 경우는 *DiagIdentifier* 인수가 SQL_DIAG_CLASS_ORIGIN SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ 숫자, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME, 또는 SQL_DIAG_SQLSTATE 합니다. 다른 모든 진단 필드에서 SQL_ERROR를 반환 합니다.

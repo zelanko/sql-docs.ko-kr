@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195022"
 ---
 # <a name="page-setup-dialog-box"></a>페이지 설정 대화 상자
   **페이지 설정** 대화 상자에서 옵션을 선택하여 페이지 디자인을 사용자 지정할 수 있습니다. 일부 옵션의 사용 가능성은 편집하기 위해 설치 및 설정된 언어에 따라 달라집니다.  

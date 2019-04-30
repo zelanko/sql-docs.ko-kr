@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a67d093576076e9822427773afb710c57f801827
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205049"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)
   지정하는 보고서 매개 변수 또는 기타 식에 따라 항목을 숨기려면 보고서 항목의 표시 유형을 설정합니다.  

@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205682"
 ---
 # <a name="disconnecting-from-a-data-source"></a>데이터 원본에서 연결 끊기
   호출 응용 프로그램 데이터 원본을 사용 하 여 완료 되 면 **SQLDisconnect**합니다. **SQLDisconnect** 연결에 할당 되는 모든 문을 해제 하 고 데이터 원본에서 드라이버 연결을 끊습니다. 연결을 끊은 후 응용 프로그램이 호출할 수 있습니다 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) 를 연결 핸들을 해제 합니다. 를 종료 하기 전에 응용 프로그램 호출 **SQLFreeHandle** 를 환경 핸들을 해제 합니다.  

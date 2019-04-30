@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194920"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
   SQL 편집기를 사용하면 기존의 저장 프로시저, 함수, 트리거 및 SQL 스크립트를 편집할 수 있습니다. 이러한 개체 중 하나를 열면 이 창이 나타납니다. 데이터 원본에 대해 실행할 새 SQL 문을 만들려면 쿼리 디자이너의 [SQL 창](visual-database-tools.md) 을 사용합니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "52768955"
   
  SQL 문을 편집할 때 특정 Transact-SQL 문은 얇은 선으로 둘러싸인 상자 안에 들어갑니다. 이로 인해 SQL 코드를 명령 섹션으로 분할하고, 쿼리 디자이너를 사용하여 그래픽으로 디자인할 수 있는 SQL 문 블록을 식별할 수 있습니다. 쿼리 디자이너 사용에 대한 자세한 내용은 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

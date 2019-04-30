@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 138fd2b43b214e16d960bec9daabb84b0f820c6d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298595"
 ---
 # <a name="deploying-a-rendering-extension"></a>렌더링 확장 프로그램 배포
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 렌더링 확장 프로그램을 작성하고 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 라이브러리에 컴파일한 후에는 보고서 서버 및 보고서 디자이너에서 이를 찾을 수 있도록 해야 합니다. 이 작업을 수행하려면 확장 프로그램을 적절한 디렉터리에 복사하고 해당하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에 항목을 추가합니다.  

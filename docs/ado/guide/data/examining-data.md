@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161599"
 ---
 # <a name="examining-data"></a>데이터 검사
 합니다 [데이터 가져오기](../../../ado/guide/data/getting-data.md) 섹션에는 하나 이상의 데이터 원본에서 데이터를 검색 하는 방법을 설명 했습니다 **Recordset** 개체입니다. 이 섹션에서는 설명 **레코드 집합** 자세히 탐색 하는 방법 등을 **레코드 집합** 해당 데이터를 봅니다.  

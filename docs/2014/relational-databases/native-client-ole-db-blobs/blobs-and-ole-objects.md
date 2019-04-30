@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195221"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)**, 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  

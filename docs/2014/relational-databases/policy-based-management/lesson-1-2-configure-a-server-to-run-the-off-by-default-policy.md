@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057547"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Off By Default 정책을 실행하도록 서버 구성
   이제 Off By Default라는 정책이 만들어졌습니다. 이 태스크에서는 서버가 이 정책의 요구 사항을 준수하는지 여부를 확인합니다.  

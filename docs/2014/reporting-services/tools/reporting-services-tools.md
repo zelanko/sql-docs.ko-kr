@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201748"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services 도구
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 관리 환경에서 다양한 보고서의 개발 및 사용을 지원하는 그래픽 및 스크립팅 도구 집합이 포함되어 있습니다. 이 도구 집합에는 개발 도구, 구성 및 관리 도구, 보고서 보기 도구가 포함되어 있습니다. 이 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 개별 툴 및 툴 액세스 방법에 대한 간략한 개요를 제공합니다.  

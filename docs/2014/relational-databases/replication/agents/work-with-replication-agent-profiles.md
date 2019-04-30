@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157119"
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 복제 에이전트 프로필로 작업하는 방법에 대해 설명합니다. 각 복제 에이전트의 동작은 에이전트 프로필을 통해 설정할 수 있는 매개 변수 집합으로 제어할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 일부 에이전트에는 미리 정의된 프로필이 추가되어 있습니다. 이러한 프로필은 에이전트에 대해 한 번에 하나만 활성화됩니다.  
@@ -284,10 +284,10 @@ ms.locfileid: "52772205"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 메서드를 호출하여 이 개체가 나타내는 사용자 정의 프로필을 서버에서 제거합니다.  
   
-##  <a name="FollowUp"></a> 후속편: 에이전트 매개 변수 변경 후  
+##  <a name="FollowUp"></a> 후속 작업: 에이전트 매개 변수 변경 후  
  에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필](replication-agent-profiles.md)   
  [Replication Snapshot Agent](replication-snapshot-agent.md)   
  [Replication Log Reader Agent](replication-log-reader-agent.md)   

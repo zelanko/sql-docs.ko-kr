@@ -1,5 +1,5 @@
 ---
-title: '작업 2: Excel 열을 DQS 도메인 매핑 | Microsoft Docs'
+title: '태스크 2: Excel 열을 DQS 도메인 매핑 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198863"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>작업 2: Excel 열을 DQS 도메인으로 매핑
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>태스크 2: Excel 열을 DQS 도메인으로 매핑
     
 1.  **맵** 페이지에서 **데이터 원본** 에 대해 **Excel 파일**을 선택합니다.  
   

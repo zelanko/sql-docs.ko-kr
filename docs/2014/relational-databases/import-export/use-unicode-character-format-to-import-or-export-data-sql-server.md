@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065769"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
   확장/DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴스 간에 대량 데이터 전송을 수행하는 경우에는 유니코드 문자 형식을 사용하는 것이 좋습니다. 유니코드 문자 데이터 형식을 사용하면 작업을 수행 중인 클라이언트에서 사용되는 코드 페이지와 다른 코드 페이지를 사용하여 서버에서 데이터를 내보낼 수 있습니다. 이런 경우 유니코드 문자 형식을 사용하면 다음과 같은 이점이 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "48191773"
 > [!IMPORTANT]  
 >  유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.  
   
- 합니다 `sql_variant` 으로 데이터가 저장 되는 점을 제외 하 고 유니코드 문자 형식 데이터 파일에 저장 된 데이터를 문자 형식 데이터 파일에서 작동 하는 동일한 방식으로 작동 `nchar` 대신 `char` 데이터입니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을 참조하십시오.  
+ 유니코드 문자 형식 데이터 파일에 저장되어 있는 `sql_variant` 데이터는 데이터가 `nchar` 데이터 대신 `char`로 저장된다는 것을 제외하면 문자 형식 데이터 파일과 같은 방식으로 작동합니다. 문자 형식에 대한 자세한 내용은 [Collation and Unicode Support](../collations/collation-and-unicode-support.md)을 참조하십시오.  
   
  유니코드 문자 형식으로 제공되는 기본값과 다른 필드 또는 행 종결자를 사용하려면 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48191773"
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 또는 [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)를 참조하세요.  
   
 > [!NOTE]  
->  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.  
+>  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **bcp** 를 사용하여 유니코드 문자 데이터를 대량으로 내보내는 방법과 BULK INSERT를 사용하여 동일한 데이터를 대량으로 가져오는 방법을 보여 줍니다.  
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |한정자|Description|  
 |----------------|-----------------|  
 |**-w**|유니코드 문자 형식을 지정합니다.|  
-|**-t** `,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 유니코드 문자 (\t). 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
+|**-t** `,`|쉼표(`,`)를 필드 종결자로 지정합니다.<br /><br /> 참고: 기본 필드 종결자는 탭 유니코드 문자 (\t)입니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)을 참조하세요.|  
 |**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
   
  다음 예에서는 `myTestUniCharData` 테이블의 유니코드 문자 형식 데이터를 필드 종결자로 쉼표(`myTestUniCharData-w.Dat`)를 사용하는 새 데이터 파일인 `,`로 대량으로 내보냅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
@@ -121,13 +121,13 @@ GO
   
 -   [원시 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [데이터를 가져오거나 내보내기 위해 유니코드 원시 형식 사용&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET&#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [데이터 정렬 및 유니코드 지원](../collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../collations/collation-and-unicode-support.md)  
   
   

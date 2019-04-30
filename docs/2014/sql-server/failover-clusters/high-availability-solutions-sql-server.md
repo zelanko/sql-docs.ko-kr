@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193050"
 ---
 # <a name="high-availability-solutions-sql-server"></a>고가용성 솔루션(SQL Server)
   이 항목에서는 서버나 데이터베이스의 가용성을 개선하는 여러 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고가용성 솔루션을 소개합니다. 고가용성 솔루션은 하드웨어 또는 소프트웨어 오류의 영향을 차단하고 애플리케이션의 가용성을 유지하여 사용자가 인지하는 작동 중단을 최소화합니다.  

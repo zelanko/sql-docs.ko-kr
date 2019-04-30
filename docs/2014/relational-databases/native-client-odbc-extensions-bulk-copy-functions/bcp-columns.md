@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225535"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 대량 복사에 사용하기 위해 사용자 파일에서 찾는 총 열 수를 설정합니다. [bcp_setbulkmode](bcp-setbulkmode.md) bcp_columns 대신 사용할 수 있습니다 하 고 [bcp_colfmt](bcp-colfmt.md)합니다.  

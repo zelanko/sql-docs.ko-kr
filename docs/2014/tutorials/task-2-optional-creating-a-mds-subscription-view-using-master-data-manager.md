@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198834"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기
   이 태스크에서는 노출 구독 뷰를 만든 합니다 **공급 업체** 에서 엔터티를 **공급 업체** 다른 응용 프로그램에 모델. 현재 버전의 자습서에서는 이 뷰를 사용하지 않습니다.  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155375"
 ---
 # <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 클러스터형 인덱스를 만들 수 있습니다. 몇 가지 경우를 제외하고 모든 테이블에는 클러스터형 인덱스가 있어야 합니다. 쿼리 성능을 향상시키는 것 외에도 요청 시 클러스터형 인덱스를 다시 작성하거나 다시 구성하여 테이블 조각화를 제어할 수 있습니다. 뷰에서 클러스터형 인덱스를 만들 수도 있습니다. 클러스터형된 인덱스는 [클러스터형 및 비클러스터형 인덱스 소개](clustered-and-nonclustered-indexes-described.md)항목에 정의되어 있습니다.  

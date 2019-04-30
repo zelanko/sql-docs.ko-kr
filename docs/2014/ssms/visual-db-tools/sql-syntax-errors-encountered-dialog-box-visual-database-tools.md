@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77b858cdee3940bb797ab2bfa3929ae09ed807e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204570"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>SQL 구문 오류 발생 대화 상자(Visual Database Tools)
   디자이너의 SQL 창에서 SQL 문을 구문 분석할 수 없는 경우 이 대화 상자에 오류 메시지가 나타납니다.  

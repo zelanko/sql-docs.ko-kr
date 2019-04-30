@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184412"
 ---
 # <a name="sequence-numbers"></a>시퀀스 번호
   시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 애플리케이션은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  

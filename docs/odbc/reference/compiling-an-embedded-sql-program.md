@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186333"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Embedded SQL 프로그램 컴파일
 Embedded SQL 프로그램 SQL 및 호스트 언어 문 조합에 포함 되어 있으므로 호스트 언어에 대 한 컴파일러를 직접 제출할 수 없습니다. 대신, 다단계 프로세스를 통해 컴파일됩니다. 하지만 다른 제품으로이 프로세스 단계는 거의 모든 제품에 대해 동일 합니다.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242420"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 지웁니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 다음을 반환 **레코드 집합** 일련의 명령을 통해 이동 하 여 합니다.  
@@ -40,7 +40,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>매개 변수  
  *RecordsAffected*  
- 선택 사항입니다. A **긴** 하려는 변수 공급자를 현재 작업을 받는 레코드 수를 반환 합니다.  
+ (선택 사항) A **긴** 하려는 변수 공급자를 현재 작업을 받는 레코드 수를 반환 합니다.  
   
 > [!NOTE]
 >  이 매개 변수는 작업에서 영향을 받는 레코드 수를 반환 합니다만 생성 하는 데 사용 되는 select 문에서 레코드 수를 반환 하지 않는 합니다 **레코드 집합**합니다.  

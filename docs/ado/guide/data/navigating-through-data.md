@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8af8b499430c7048588a32f0f580a641e4aa72b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126859"
 ---
 # <a name="navigating-through-data"></a>데이터 탐색
 **레코드 집합** 결과 데이터 집합을 탐색 하려면 다양 한 속성과 메서드를 지원 합니다. 샘플을 사용 하 여 몇 가지 시나리오를 안내 하 여이 기능을 살펴봅니다 **레코드 집합** 개체입니다.  

@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 135a736f6d0cf0cd5c51cf40b05c95a33d5c435b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128619"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>보고서 서버에 보고서 게시
   보고서 또는 보고서 집합을 디자인 및 테스트한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 기본 제공 배포 기능을 사용하여 보고서를 보고서 서버에 게시할 수 있습니다. 개별 보고서 또는 보고서 서버 프로젝트를 게시할 수 있습니다. 보고서 서버 프로젝트를 게시하는 것은 여러 보고서를 게시하는 가장 쉬운 방법입니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 용어를 사용 하 여 *배포할*, 라는 용어 대신 *게시*합니다. 두 용어는 같은 의미로 사용할 수 있습니다.  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155811"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
   데이터 파일은 테이블의 해당 열에서 서로 다른 순서로 정렬된 필드를 포함할 수 있습니다. 이 항목에서는 테이블 열과 서로 다른 순서로 필드가 정렬된 데이터 파일에 맞게 수정된 비 XML 및 XML 서식 파일에 대해 설명합니다. 수정된 서식 파일은 데이터 필드를 해당 테이블 열로 매핑합니다.  
@@ -138,7 +138,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [서식 파일을 사용하여 테이블 열 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   

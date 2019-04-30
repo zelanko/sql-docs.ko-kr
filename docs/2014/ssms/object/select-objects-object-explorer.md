@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182895"
 ---
 # <a name="select-objects-object-explorer"></a>개체 선택(개체 탐색기)
   **개체 선택** 대화 상자를 사용하여 다른 대화 상자에 있는 목록에 개체를 추가할 수 있습니다. 대화 상자 제목과 대화 상자에서 사용할 수 있는 옵션은 대화 상자를 연 방법에 따라 다릅니다. 사용 가능한 옵션만 나타납니다. 예를 들어 새 개체의 소유자를 선택하는 경우에는 로그인만 사용할 수 있습니다.  

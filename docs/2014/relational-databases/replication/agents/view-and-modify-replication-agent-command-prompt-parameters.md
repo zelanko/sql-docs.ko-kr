@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192891"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정(SQL Server Management Studio)
   복제 에이전트는 명령줄 매개 변수를 받는 실행 파일입니다. 기본적으로 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행되므로 **작업 속성 - \<Job>** 대화 상자를 사용하여 이러한 매개 변수를 확인한 다음 수정할 수 있습니다. 이 대화 상자는 **의** 작업 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 폴더 및 복제 모니터의 **에이전트** 탭에서 사용할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
@@ -93,7 +93,7 @@ ms.locfileid: "52758345"
   
 6.  두 대화 상자에서 **확인** 을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 에이전트 관리](replication-agent-administration.md)   
  [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  

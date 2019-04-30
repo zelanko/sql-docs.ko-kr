@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126908"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성
   정책 기반 관리 정책이 세 가지 자동 평가 모드 중 하나로 실행된 경우 정책 위반이 발생하면 이벤트 로그에 메시지가 기록됩니다. 이 메시지가 이벤트 로그에 기록되는 경우 알림을 받으려면 메시지를 검색하고 동작을 수행하도록 경고를 만듭니다. 경고는 다음 표에서와 같이 메시지를 검색해야 합니다.  

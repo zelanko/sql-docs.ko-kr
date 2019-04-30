@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161410"
 ---
 # <a name="filtering-for-updated-records"></a>업데이트된 레코드 필터링
 UpdateBatch을 호출 하기 전에 레코드 집합을 연 후 변경 된 레코드만 표시할 레코드 집합 필터 속성 또는 UpdateBatch 마지막 호출을 사용할 수 있습니다. 이렇게 하려면 필터를 그 다음 섹션의 코드 예제에 표시 된 대로 업데이트할 레코드 수를 확인 하려면 같음 설정 합니다.  

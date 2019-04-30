@@ -12,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d2639f783f862e27041985ac27ff16740b47cbb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294617"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>호환되지 않는 데이터베이스 엔진 서버 데이터 정렬(업그레이드 관리자)
   업그레이드 관리자 검색 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 사용 하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 는 호환 되지 않는 서버 데이터 정렬을 사용 하도록 구성 된 합니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드입니다.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode.|  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "53356761"
   
 -   **대/소문자 구분**  
   
--   **이진 코드 포인트**  
+-   **Binary-codepoint**  
   
  현재 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서버 데이터 정렬은 호환되지 않으므로 업그레이드가 차단됩니다.  
   

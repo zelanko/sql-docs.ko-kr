@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149984"
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하여 분산 재생을 시작하려면 Distributed Replay Administration Tool에서 전처리 단계를 시작하여 입력 추적 데이터를 준비해야 합니다. 전처리 단계에서는 Distributed Replay Controller가 추적 데이터를 전처리하고 중간 파일을 생성합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52792785"
   
 ### <a name="to-prepare-the-input-trace-data"></a>입력 추적 데이터를 준비하려면  
   
-1.  **(선택 사항) 수정 전처리 구성 설정**: 시스템 세션 필터링 여부 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정하려면 XML 기반 전처리 구성 파일인 `<PreprocessModifiers>`의 `DReplay.exe.preprocess.config` 요소를 수정해야 합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
+1.  **(선택 사항) 수정 전처리 구성 설정**: 시스템 세션 필터링 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정 하려는 경우 수정 해야 합니다 `<PreprocessModifiers>` XML 기반 전처리 구성 파일의 요소 `DReplay.exe.preprocess.config`합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
   
     1.  기본 전처리 구성 파일인 `DReplay.exe.preprocess.config`를 복사한 후 복사한 파일의 이름을 바꿉니다. 기본 전처리 구성 파일은 관리 도구 설치 폴더에 있습니다.  
   

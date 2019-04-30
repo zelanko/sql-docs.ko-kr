@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9dcd637feae0160636de6ec1430a232a91c67b3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190658"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 세트 처리에 대한 시간 제한 값 설정(SSRS)
   제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다. 보고서 서버는 다음 두 가지 제한 시간 값을 지원합니다.  

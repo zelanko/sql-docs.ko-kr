@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199946"
 ---
 # <a name="web-server-information"></a>웹 서버 정보
   병합 복제에 대해 웹 동기화 옵션을 사용하려면 웹 서버 정보가 필요합니다. 웹 동기화를 구성하는 방법은 [웹 동기화 구성](configure-web-synchronization.md)을 참조하세요.  
@@ -30,10 +30,10 @@ ms.locfileid: "52805845"
  웹 서버에 연결할 때 사용할 인증 유형을 지정합니다. IIS 서버에 연결할 때는 SSL(Secure Sockets Layer)과 함께 기본 인증을 사용하는 것이 좋습니다. 기본 인증을 선택하는 경우 구독자에서 IIS 서버로 연결할 때 사용할 로그인 및 암호를 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [끌어오기 구독 만들기](create-a-pull-subscription.md)   
  [끌어오기 구독 속성 보기 및 수정](view-and-modify-pull-subscription-properties.md)   
  [SQL Server 이외 구독자](non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [게시 구독](subscribe-to-publications.md)   
  [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)  
   
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155007"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 SQL Server 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]는 SQL Server 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 또한 데이터 계층 구성 요소(예: 애플리케이션에 사용되는 데이터 웨어하우스 및 데이터베이스)를 배포, 모니터링 및 업그레이드하는 도구와 쿼리 및 스크립트를 작성하는 도구를 제공합니다.  
@@ -37,6 +37,6 @@ ms.locfileid: "52812355"
   
 ## <a name="see-also"></a>관련 항목  
  [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

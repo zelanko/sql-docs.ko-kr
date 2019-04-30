@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132336"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Oracle용 SSMA 콘솔 작업(OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 릴리스가 Oracle에 대 한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하는 것에 대 한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램의 경우 SSMA 스크립트 수준 인터페이스를 사용 하도록 설정, 마이그레이션 주기를 줄이고 마이그레이션 작업의 크기를 조정 합니다.  

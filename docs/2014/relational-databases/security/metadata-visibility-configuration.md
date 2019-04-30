@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187933"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
   사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체에 대해서만 메타데이터를 볼 수 있도록 제한됩니다. 예를 들어 다음 쿼리는 사용자에게 `myTable`테이블에 대한 SELECT 또는 INSERT와 같은 권한을 부여한 경우에 행을 반환합니다.  
@@ -57,13 +57,13 @@ GO
   
  제한된 메타데이터 액세스란 다음을 의미합니다.  
   
--   **public** 메타데이터 액세스가 사용되는 응용 프로그램이 차단됩니다.  
+-   **public** 메타데이터 액세스가 사용되는 애플리케이션이 차단됩니다.  
   
 -   시스템 뷰에 대한 쿼리는 행의 하위 집합이나 일부 경우에는 빈 결과 집합을 반환합니다.  
   
 -   OBJECTPROPERTYEX와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저가 행의 하위 집합이나 NULL을 반환합니다.  
+-    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 저장 프로시저가 행의 하위 집합이나 NULL을 반환합니다.  
   
  저장 프로시저 및 트리거와 같은 SQL 모듈은 호출자의 보안 컨텍스트에서 실행되므로 메타데이터 액세스가 제한됩니다. 예를 들어 다음 코드에서 저장 프로시저가 호출자에게 권한이 없는 `myTable` 테이블에 액세스하려고 시도하면 빈 결과 집합이 반환됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행이 반환됩니다.  
   

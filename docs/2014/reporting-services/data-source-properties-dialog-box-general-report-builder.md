@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164995"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>데이터 원본 속성 대화 상자, 일반(보고서 작성기)
   **데이터 원본 속성** 대화 상자에서 **일반** 을 선택하여 보고서 서버의 공유 데이터 원본을 선택하거나 보고서에 포함된 데이터 원본에 대한 연결 정보를 수정할 수 있습니다.  

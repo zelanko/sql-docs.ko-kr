@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204966"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>쿼리 중지(Visual Database Tools)
   쿼리에 시간이 너무 오래 걸리거나 예상한 결과를 반환하지 않은 경우 아직 완료되지 않았으면 쿼리를 중지할 수 있습니다.  

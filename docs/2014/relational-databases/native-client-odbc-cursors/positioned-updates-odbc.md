@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2336944b583b6077d75bd5155bb4b52c66d9a852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200528"
 ---
 # <a name="positioned-updates-odbc"></a>위치 지정 업데이트(ODBC)
   ODBC는 커서에서 위치 지정 업데이트를 수행하는 두 가지 방법을 지원합니다.  

@@ -13,18 +13,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218093"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>의미 체계 검색을 사용하여 유사하거나 관련된 문서 찾기
   통계적 의미 체계 인덱싱을 위해 구성된 열에서 유사하거나 관련된 문서 또는 텍스트 값을 찾고 유사하거나 연관된 정도에 관한 정보를 찾는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsQuerySimilar"></a> 유사 하거나 관련 된 문서 찾기  
   
-###  <a name="HowToQuerySimilar"></a> 어떻게: SEMANTICSIMILARITYTABLE을 사용하여 유사하거나 관련된 문서 찾기  
+###  <a name="HowToQuerySimilar"></a> 어떻게: SEMANTICSIMILARITYTABLE 사용 하 여 유사 하거나 관련 된 문서 찾기  
  특정 열에서 유사하거나 관련된 문서를 식별하려면 [semanticsimilaritytable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) 함수를 쿼리합니다.  
   
  **SEMANTICSIMILARITYTABLE** 은 지정된 열의 내용이 지정된 문서와 의미상 유사한 0개 이상의 행으로 구성된 테이블을 반환합니다. SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름처럼 참조할 수 있습니다.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> 문서가 유사 하거나 관련 된 방법에 대 한 정보 찾기  
   
-###  <a name="HowToQuerySimilarity"></a> 어떻게: SEMANTICSIMILARITYDETAILSTABLE을 사용하여 문서가 유사하거나 연관된 정도에 대한 정보 찾기  
+###  <a name="HowToQuerySimilarity"></a> 어떻게: 문서가 유사 하거나 관련 SEMANTICSIMILARITYDETAILSTABLE을 사용 하 여 하는 방법에 대 한 정보 찾기  
  문서 유사성 또는 연관성을 확인하는 키 구에 대한 정보를 가져오려면 [semanticsimilaritydetailstable&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 함수를 쿼리합니다.  
   
  **SEMANTICSIMILARITYDETAILSTABLE**은 의미상 유사한 내용의 두 문서(원본 문서 및 대응 문서) 간에 공통적인 키 구가 있는 0개 이상의 행으로 구성된 테이블을 반환합니다. SELECT 문의 FROM 절에서 이 행 집합 함수를 일반 테이블 이름처럼 참조할 수 있습니다.  

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6314eb5a81d2384763b69dbc44296913f1ba49d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225307"
 ---
 # <a name="feature-reference-reporting-services"></a>기능 참조(Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 보고서를 생성, 관리 및 확인하는 데 사용할 수 있는 여러 가지 도구와 응용 프로그램이 포함되어 있습니다. 이 섹션에서는 이러한 도구와 애플리케이션의 대화 상자, 웹 페이지 및 마법사와 관련된 항목에 대해 설명합니다.  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191934"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 서버를 등록하는 방법에 대해 설명합니다. 서버를 등록하면 자주 액세스하는 서버에 대한 연결 정보를 저장할 수 있습니다. 개체 탐색기에서 연결하기 전이나 연결할 때 서버를 등록할 수 있습니다.  

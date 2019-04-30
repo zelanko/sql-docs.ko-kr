@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144599"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 대상 인스턴스가 오프라인이거나 시작할 수 없는 경우 로컬 또는 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일을 볼 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "52818272"
   
 -   오류 로그 파일을 포함하는 폴더에 대한 읽기 권한. 기본적으로 오류 로그 파일은 다음 경로에 있습니다. 여기서 \<*드라이브>* 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 드라이브를 나타내고 \<*InstanceName*>은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스 이름을 나타냅니다.  
   
-     **\<드라이브 >: \Program Files\Microsoft SQL Server\MSSQL12. \<N a m e > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Log**  
   
  WMI 네임스페이스 보안 설정을 확인하려면 WMI 컨트롤 스냅인을 사용합니다.  
   

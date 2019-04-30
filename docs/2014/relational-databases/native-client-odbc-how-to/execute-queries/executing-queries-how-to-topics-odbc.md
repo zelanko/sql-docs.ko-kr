@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200381"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>쿼리 실행 방법 도움말 항목(ODBC)
   ODBC 애플리케이션에서 SQL 문을 실행하려면 문 핸들 할당, 문 특성 설정, SQL 문 준비 및 실행 작업을 수행해야 합니다.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3343823399b0500e0a329e160e5545d4dd372a54
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165020"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>데이터 처리 확장 프로그램 구현 준비
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현하기 전에 먼저 구현할 인터페이스를 정의해야 합니다. 전체 인터페이스 집합의 확장 프로그램별 구현을 제공해야 할 수도 있습니다. 또는 클라이언트가 **DataReader** 개체 형태인 결과 집합과 주로 상호 작용하고 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 데이터 처리 확장 프로그램을 결과 집합과 데이터 원본 사이의 연결 고리로 사용하는 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 인터페이스와 같은 하위 집합에 대한 구현에 초점을 맞추어야 할 수도 있습니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161741"
 ---
 # <a name="error-handling"></a>오류 처리
 ADO 오류 발생 하는 응용 프로그램에 알리기 위해 여러 가지 방법을 사용 합니다. 이 섹션에서는 ADO 응용 프로그램은 알림을 보내는 방법 및 사용할 때 발생할 수 있는 오류의 유형을 설명 합니다. 이러한 오류를 처리 하는 방법에 대 한 제안이 끝납니다.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c55292aff126d1955c438c9417ce0651cc6afc94
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162243"
 ---
 # <a name="log-reader-agent-security"></a>로그 판독기 에이전트 보안
   **로그 판독기 에이전트 보안** 대화 상자에서 다음을 지정할 수 있습니다.  

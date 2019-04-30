@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150484"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
   계획 지침을 만들 때는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 *sp_create_plan_guide* 저장 프로시저의 **statement_text** 인수에서 사용할 정확한 쿼리 텍스트를 캡처할 수 있습니다. 이렇게 하면 컴파일 시 계획 지침이 쿼리와 일치하도록 보장할 수 있습니다. 계획 지침을 만든 다음 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 실제로 계획 지침이 쿼리와 일치하는지 여부를 테스트할 수도 있습니다. 일반적으로 쿼리가 계획 지침과 일치하는지 확인하기 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 계획 지침을 테스트해야 합니다.  

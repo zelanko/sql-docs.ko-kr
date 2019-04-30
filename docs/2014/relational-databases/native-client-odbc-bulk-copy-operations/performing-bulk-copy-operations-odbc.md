@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200820"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
   ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 응용 프로그램에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  

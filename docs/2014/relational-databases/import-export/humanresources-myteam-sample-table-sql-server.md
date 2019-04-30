@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5628df909bc5d28706ab6c9032f6dc62a13489c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151081"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam 예제 테이블(SQL Server)
   [대량 데이터 가져오기 및 내보내기](bulk-import-and-export-of-data-sql-server.md) 의 코드 예제에는 **myTeam**이라는 특별한 용도의 테스트 테이블이 필요한 경우가 많습니다. 예제를 실행하기 전에 **데이터베이스의** HumanResources **스키마에서** myTeam [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 만들어야 합니다.  

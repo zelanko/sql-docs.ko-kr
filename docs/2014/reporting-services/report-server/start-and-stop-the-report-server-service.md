@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4bd22faaa9d0f3b6ce213c37e20615492b1e95d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190810"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>보고서 서버 서비스 시작 및 중지
   보고서 서버는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리 애플리케이션을 포함하는 Windows 서비스로 구현됩니다. 보고서 서버 기능을 사용하려면 서비스를 실행해야 합니다. 서비스를 중지하면 모든 보고서 서버 작업이 중지됩니다.  

@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132704"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 함수
 **규칙**  
- 버전에 도입 되었습니다: ODBC 3.81 표준 준수: ODBC  
+ 도입 된 버전: ODBC 3.81 표준 준수 합니다. ODBC  
   
  **요약**  
  **SQLGetPoolID** 풀 ID를 검색 합니다.  

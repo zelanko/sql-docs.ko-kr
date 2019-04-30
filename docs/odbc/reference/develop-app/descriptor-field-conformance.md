@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049854"
 ---
 # <a name="descriptor-field-conformance"></a>설명자 필드 적합성
 다음 표에서이 방법이 잘 정의 된 각 ODBC 설명자 헤더 필드의 규칙 수준은 보여 줍니다.  
@@ -47,8 +47,8 @@ ms.locfileid: "47642311"
 |SQL_DESC_CATALOG_NAME|수준 2|  
 |SQL_DESC_CONCISE_TYPE|핵심|  
 |SQL_DESC_DATA_PTR|핵심|  
-|SQL_DESC_DATETIME_INTERVAL_ 코드|Core [1]|  
-|SQL_DESC_DATETIME_INTERVAL_ 전체 자릿수|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ CODE|Core [1]|  
+|SQL_DESC_DATETIME_INTERVAL_ PRECISION|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|핵심|  
 |SQL_DESC_FIXED_PREC_SCALE|핵심|  
 |SQL_DESC_INDICATOR_PTR|핵심|  
@@ -61,7 +61,7 @@ ms.locfileid: "47642311"
 |SQL_DESC_NULLABLE|핵심|  
 |SQL_DESC_OCTET_LENGTH|핵심|  
 |SQL_DESC_OCTET_LENGTH_PTR|핵심|  
-|DESC_PARAMETER_TYPE|코어/수준 2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|코어/수준 2 [2]|  
 |SQL_DESC_PRECISION|핵심|  
 |SQL_DESC_ROWVER|수준 1|  
 |SQL_DESC_SCALE|핵심|  

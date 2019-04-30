@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: db6467b21f84a80bb14a5e6ccad30e16d7cfb584
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180396"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Notification 클래스 사용
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스에 있으며 배달 확장 프로그램에서 보고서 배달을 위해 사용하는 구독 정보를 나타냅니다. <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 배달용 보고서 렌더링, 알림 상태 결정 및 사용자 데이터 설정 작업을 수행하는 데 사용할 수 있는 다수의 속성을 제공합니다.  

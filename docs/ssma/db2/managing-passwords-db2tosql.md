@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299023"
 ---
 # <a name="managing-passwords-db2tosql"></a>암호 (DB2ToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  

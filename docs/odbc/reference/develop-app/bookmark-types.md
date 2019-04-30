@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f5c5a126ea220f055349ad00dc950281606ed4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199247"
 ---
 # <a name="bookmark-types"></a>책갈피 형식
 ODBC 3에서 모든 책갈피 *.x* 가변 길이 책갈피 됩니다. 이 기본 키 또는 책갈피로 사용할 테이블과 연결 된 고유 인덱스를 허용 합니다. 책갈피를 32 비트 값일 수 있습니다도 ODBC 2에서 사용 되었습니다. *x*합니다. 커서를 ODBC 3는 책갈피 사용 되도록 지정 하려면 *.x* SQL_UB_VARIABLE를 SQL_ATTR_USE_BOOKMARK 문 특성을 설정 하는 응용 프로그램입니다. 가변 길이 책갈피 자동으로 사용 됩니다.  

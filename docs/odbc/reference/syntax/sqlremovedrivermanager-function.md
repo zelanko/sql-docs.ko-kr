@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186031"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 함수
 **규칙**  
@@ -81,13 +81,13 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32 합니다. DLL|  
-|ODBCCR32 합니다. DLL|ODBC16GT 합니다. DLL|  
-|ODBCCU32 합니다. DLL|ODBC32GT 합니다. DLL|  
-|ODBCINT 합니다. DLL|DS16GT 합니다. DLL|  
-|ODBCTRAC 합니다. DLL|DS32GT 합니다. DLL|  
-|MSVCRT40 합니다. DLL|ODBCAD32 합니다. EXE|  
-|ODBCCP32 합니다. CPL||  
+|ODBC32DLL|ODBCCP32.DLL|  
+|ODBCCR32.DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT.DLL|  
+|ODBCTRAC.DLL|DS32GT.DLL|  
+|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager** 업그레이드 프로세스의 일부로 라고 합니다. 응용 프로그램에서 업그레이드를 수행 하는 것을 이전에 설치 하 고 드라이버를 발견 하면 드라이버를 제거 하 고 다시 설치 해야 합니다.  
   

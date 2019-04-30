@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195231"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
   일반적으로 소비자를 만드는 코드를 격리 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 저장소 개체를 통해 참조 되지 않는 데이터를 처리 하는 다른 코드를 **ISequentialStream** 인터페이스 포인터입니다.  

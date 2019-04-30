@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199293"
 ---
 # <a name="block-cursors"></a>블록 커서
 대부분의 응용 프로그램 네트워크를 통해 데이터를 가져오는 시간을 투입 합니다. 이 시간 부분 실제로 네트워크를 통해 데이터를 가져오는 데 소요 된 하 고 데이터 행을 요청 하려면 드라이버에 의해 수행 된 호출 등의 일부 네트워크 오버 헤드를 소비 됩니다. 응용 프로그램은 효율적으로 사용 하는 경우 두 번째 시간을 줄일 수 있습니다 *블록* 하거나 *fat* *커서* 한 번에 둘 이상의 행을 반환할 수 있는 합니다.  

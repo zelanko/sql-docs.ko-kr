@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188895"
 ---
 # <a name="interval-data-types"></a>간격 데이터 형식
 간격 두 날짜 및 시간 간의 차이 따라 정의 됩니다. 간격으로 두 가지 방법 중 하나로 표현 됩니다. 하나는 *연-월* 간격 연도 및 월의 정수가 측면에서 표현 하는 간격입니다. 다른 하나는 한 *날짜-시간* 간격 (일), 분 및 초를 기준으로 표현 하는 간격입니다. 이러한 두 가지 유형의 간격 명확 하 고 월 일의 다양 한 숫자를 포함할 수 있으므로 혼합할 수 없습니다.  

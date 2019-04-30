@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee8a14763479d48dfa2ea1c572222134693efaa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206259"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD 코드 예제
 ADO MD 개체, 메서드 및 속성을 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다. 이러한 예로 SQL Server 7.0에 대 한 Microsoft SQL Server OLAP Services와 함께 설치 하는 샘플 응용 프로그램의 하위 집합으로 구성 되어 있습니다.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f9e53c4ae42f981b1b579294954a965ef8c376
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140688"
 ---
 # <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업에 대한 일정 정보 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 작업 정의에 대한 일정 정보를 변경하는 방법에 대해 설명합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192315"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion(OLE DB)
   비동기적으로 실행 중인 작업이 완료되거나 제한 시간이 초과될 때까지 대기합니다.  

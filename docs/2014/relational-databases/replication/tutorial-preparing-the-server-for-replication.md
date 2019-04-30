@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199079"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>자습서: 복제용 서버 준비
   복제 토폴로지를 구성하려면 보안을 계획해야 합니다. 이 자습서에서는 데이터 복제의 첫 단계인 배포를 구성하는 방법과 복제 토폴로지의 보안을 강화하는 방법을 보여 줍니다. 다른 자습서를 사용하기 전에 먼저 이 자습서를 완료해야 합니다.  
@@ -35,15 +35,15 @@ ms.locfileid: "54125383"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스가 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . 보안을 위해 예제 데이터베이스는 기본적으로 설치되지 않습니다.  
   
- **이 자습서에 소요되는 예상 시간: 30 분입니다.**  
+ **이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.**  
   
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
   
--   [1 단원: 복제에 대 한 계정 Windows 만들기](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [1단원: 복제에 대 한 계정 Windows 만들기](lesson-1-creating-windows-accounts-for-replication.md)  
   
 -   [2단원: 스냅숏 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [3 단원: 배포 구성](lesson-3-configuring-distribution.md)  
+-   [3단원: 배포 구성](lesson-3-configuring-distribution.md)  
   
  [자습서 시작](lesson-1-creating-windows-accounts-for-replication.md)  
   

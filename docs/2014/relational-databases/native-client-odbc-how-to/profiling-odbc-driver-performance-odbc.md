@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200287"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>ODBC 드라이버 성능 프로파일링 방법 도움말 항목(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에는 드라이버의 성능을 프로파일링하기 위한 두 개의 드라이버 관련 옵션이 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 성능 통계를 파일에 기록할 수 있습니다. 이 로그 파일은 탭으로 구분된 파일이며, Microsoft Excel과 같은 탭으로 구분된 파일을 지원하는 스프레드시트에서 분석할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에서는 성능 통계를 파일에 기록할 수 있습니다. 이 로그 파일은 탭으로 구분된 파일이며, Microsoft Excel과 같은 탭으로 구분된 파일을 지원하는 스프레드시트에서 분석할 수 있습니다.  
   
  또한 드라이버에서는 장기 실행 쿼리(지정된 시간 내에 서버로부터 응답을 받지 못한 쿼리)도 기록할 수 있습니다. 이러한 쿼리는 나중에 프로그래머와 데이터베이스 관리자가 분석할 수 있습니다.  
   

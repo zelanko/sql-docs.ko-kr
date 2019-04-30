@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137310"
 ---
 # <a name="serversettings-class"></a>ServerSettings 클래스
   [ServerSettings 클래스] serversettings-class.md) 인스턴스의 서버 설정을 나타내는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  

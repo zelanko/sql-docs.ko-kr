@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130727"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Visual C# .NET 시작
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET 공용 언어 런타임 (CLR)에서 지 원하는 관리 되는 프로그래밍 언어 중 하나에 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. C# 언어에 대한 자세한 내용은 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET 설명서를 참조하십시오. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 애플리케이션을 개발할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "52797370"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 SMO 어셈블리는 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 폴더에 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [만들고 Visual C&#35; Visual Studio.NET에서에서 SMO 프로젝트](how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
   
   

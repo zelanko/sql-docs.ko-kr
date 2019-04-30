@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299158"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2에 연결 (DB2ToSQL)
 사용 된 **DB2에 연결** 마이그레이션하려는 DB2 데이터베이스에 연결 대화 상자.  

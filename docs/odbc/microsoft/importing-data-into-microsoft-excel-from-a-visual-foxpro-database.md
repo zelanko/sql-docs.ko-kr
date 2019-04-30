@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de81b606d31514cf6e7a518deeb68794d1011132
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127281"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기
 데이터 원본에 대 한 정의 하는 경우 Microsoft Excel 워크시트로 Visual FoxPro 데이터를 가져올 수 있습니다. Visual FoxPro 데이터 원본 만들기에 대 한 자세한 내용은 [Microsoft Excel에서 Visual FoxPro 데이터 원본 액세스](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)합니다.  

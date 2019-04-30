@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188425"
 ---
 # <a name="model-item-security-page-report-manager"></a>모델 항목 보안 페이지(보고서 관리자)
   이 페이지를 사용하여 특정 항목에 대한 읽기 전용 권한을 부여 또는 취소하는 방법으로 모델의 부분에 보안을 설정할 수 있습니다. 모델 항목 보안은 런타임에 임시 데이터 탐색에 영향을 미치며 보고서 작성기에서 보고서를 만들 때 게시된 모델의 부분을 사용하는 기능에도 영향을 미칩니다. 이 기능을 사용하려면 내용 관리자 권한이 있어야 합니다.  

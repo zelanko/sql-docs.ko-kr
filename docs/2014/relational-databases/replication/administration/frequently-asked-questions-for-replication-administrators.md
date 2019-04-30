@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207056"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
   다음 질문과 대답은 복제 데이터베이스 관리자의 다양한 태스크에 대한 지침을 제공합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "54125863"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>언제 구독을 사용할 수 있습니까? 구독 데이터베이스는 언제 사용할 수 있습니까?  
  스냅숏이 구독 데이터베이스에 적용된 다음에 구독을 사용할 수 있습니다. 그 전에도 구독 데이터베이스에 액세스할 수 있지만 스냅숏이 적용될 때까지 데이터베이스를 사용하면 안 됩니다. 다음과 같이 복제 모니터를 사용하여 스냅숏 생성 및 적용 상태를 확인합니다.  
   
--   스냅숏 에이전트에서 스냅숏을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅숏 생성 상태를 봅니다. 자세한 내용은 [정보 보기 및 태스크 수행 복제 모니터를 사용 하 여](../monitor/view-information-and-perform-tasks-replication-monitor.md)입니다.  
+-   스냅숏 에이전트에서 스냅숏을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅숏 생성 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 -   배포 에이전트 또는 병합 에이전트에서 스냅숏을 적용한 다음 복제 모니터의 **배포 에이전트** 또는 **병합 에이전트** 페이지에서 스냅숏 적용 상태를 봅니다. 
   
@@ -117,11 +117,11 @@ ms.locfileid: "54125863"
  아니요. DTS 패키지를 만들어 한 게시자에서 하나 이상의 구독자로 로그인과 암호를 전송할 수 있습니다.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>스키마란 무엇이며 어떻게 복제됩니까?  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *스키마* 는 다음 두 가지 의미를 갖습니다.  
   
 -   CREATE TABLE 문과 같은 개체의 정의입니다. 기본적으로 복제는 복제된 모든 개체의 정의를 구독자로 복사합니다.  
   
--   개체가 만들어진 다음과 같은 네임스페이스입니다. \<데이터베이스 >. \<스키마 >. \<개체 >입니다. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
+-   개체가 만들어진 네임 스페이스: \<데이터베이스>.\<스키마>.\<개체>. 스키마는 CREATE SCHEMA 문을 사용하여 정의됩니다.  
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   

@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145473"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]을 설치할 때 설치되는 도구는 버전 및 설치 선택 사항에 따라 달라집니다. 이 단원에서는 주 도구를 검토하고 이러한 도구에 연결하는 방법을 보여 주며 보다 많은 사용자에게 권한을 부여하는 기본 기능을 수행하는 방법을 보여 줍니다.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063069"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>출력 열 다시 정렬(Visual Database Tools)
   출력 열이 결과에 표시되는 순서는 선택 쿼리에 데이터 열을 추가하는 순서에 따라 결정됩니다. 쿼리에 추가하는 첫 번째 열은 결과의 가장 왼쪽에 나타나고 두 번째 열은 그 다음에 나타나는 방식입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "52767625"
 > [!TIP]  
 >  조건 창에 빈 행을 삽입한 다음 삽입할 데이터 열을 지정하여 조건 창의 특정 위치에 데이터 행을 추가할 수 있습니다. 자세한 내용은 [쿼리에 열 추가&#40;Visual Database Tools&#41;](add-columns-to-queries-visual-database-tools.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리 결과 정렬 및 그룹화 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [쿼리 결과 요약 &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  

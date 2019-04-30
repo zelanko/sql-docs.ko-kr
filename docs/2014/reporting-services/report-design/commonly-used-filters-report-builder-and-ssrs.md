@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185541"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>일반적으로 사용되는 필터(보고서 작성기 및 SSRS)
   필터를 만들려면 하나 이상의 필터 수식을 지정해야 합니다. 필터 수식에는 식, 데이터 형식, 연산자 및 값이 포함됩니다. 이 항목에서는 일반적으로 사용되는 필터의 예를 제공합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070933"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO에서 런타임 오류 유형을 지정합니다.  
@@ -32,7 +32,7 @@ ADO에서 런타임 오류 유형을 지정합니다.
   
 -   전체 오류 수의 10 진수의 10 진수 변환을 음수입니다.  
   
--   전체 오류 번호의 16 진수는 16 진수 표현입니다. Windows 기능 코드는 네 번째 숫자입니다. ADO 오류 번호에 대 한 기능 코드 *는*합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 0x800***는***0e7b 같은 형식입니다.  
+-   전체 오류 번호의 16 진수는 16 진수 표현입니다. Windows 기능 코드는 네 번째 숫자입니다. ADO 오류 번호에 대 한 기능 코드 *는*합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 0x800***A***0E7B.  
   
 > [!NOTE]
 >  OLE DB 오류 ADO 응용 프로그램에 전달할 수 있습니다. 일반적으로 Windows 기능 코드의로 식별할 수 있습니다 *4*합니다. 예를 들어, 0x800***4***합니다.  
@@ -46,7 +46,7 @@ ADO에서 런타임 오류 유형을 지정합니다.
 |**adErrCantConvertvalue**|3724 -2146824564 0x800A0E8C|부호 불일치 또는 데이터 오버플로가 아닌 다른 이유로 데이터 값을 변환할 수 없습니다. 예를 들어, 변환 시 데이터가 잘렸습니다.|  
 |**adErrCantCreate**|3725 -2146824563 0x800A0E8D|데이터 값을 설정 하거나 필드 데이터 형식을 알 되었거나 공급자가 작업을 수행 하려면 리소스 부족 하기 때문에 검색 될 수 없습니다.|  
 |**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|작업을 수행 하려면 올바른 **ParentCatalog**합니다.|  
-|**adErrColumnNotOnThisRow**|3726-2146824562 0x800A0E8E|레코드에이 필드가 없습니다.|  
+|**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|레코드에이 필드가 없습니다.|  
 |**adErrDataConversion**|3421 -2146824867 0x800A0D5D|응용 프로그램이 현재 작업에 대 한 잘못 된 형식의 값을 사용합니다.|  
 |**adErrDataOverflow**|3721 -2146824567 0x800A0E89|데이터 값 필드 데이터 형식으로 나타낼 수 너무 큽니다.|  
 |**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|삭제할 개체의 URL은 현재 레코드의 범위를 벗어납니다.|  

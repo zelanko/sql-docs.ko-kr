@@ -15,16 +15,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 70f595643870548c8952070338cd5318eed1045b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145305"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터를 대량으로 가져오거나 테이블의 데이터를 대량으로 내보내는 경우 *서식 파일* 을 사용하여 데이터를 대량으로 내보내거나 가져오는 데 필요한 모든 서식 정보를 저장할 수 있습니다. 여기에는 해당 테이블을 기준으로 하는 데이터 파일의 각 필드에 대한 서식 정보가 포함됩니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 XML 서식 및 비 XML 서식 파일을 지원합니다. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 두 유형의 서식 파일을 지원합니다. XML 서식 및 비 XML 서식 파일입니다. 비 XML 서식 파일과 XML 서식 파일은 모두 데이터 파일의 각 필드에 대한 설명을 포함하며, XML 서식 파일의 경우에는 해당하는 테이블 열에 대한 설명도 포함합니다. 일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
  
   
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

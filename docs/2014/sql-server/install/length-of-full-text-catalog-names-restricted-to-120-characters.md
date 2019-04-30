@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1ca564fd81a1363f9866a0a8eaf067fc67a1f1f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195184"
 ---
 # <a name="length-of-full-text-catalog-names-restricted-to-120-characters"></a>전체 텍스트 카탈로그 이름의 길이는 120자로 제한됩니다.
   이전 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 128자였던 전체 텍스트 카탈로그 이름 길이가 모두 120자로 제한됩니다.  

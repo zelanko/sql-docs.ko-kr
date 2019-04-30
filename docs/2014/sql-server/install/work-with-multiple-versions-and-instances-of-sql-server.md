@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205321"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 같은 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 여러 인스턴스를 지원합니다. 또한 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드하거나 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 이미 설치되어 있는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 수도 있습니다. 지원되는 업그레이드 시나리오에 대한 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
@@ -48,7 +48,7 @@ ms.locfileid: "52762736"
 ### <a name="components-shared-by-all-versions-of-includessnoversionincludesssnoversion-mdmd"></a>모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  특정 구성 요소는 설치된 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 모든 인스턴스에서 공유합니다. 이러한 구성 요소는 버전이 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 같은 컴퓨터에 함께 설치하면 자동으로 최신 버전으로 업그레이드됩니다. 일반적으로 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 마지막 인스턴스가 제거되면 자동으로 제거됩니다.  
   
- 예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer  
+ 예를 들면 다음과 같습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS 기록기입니다.  
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-includessnoversionincludesssnoversion-mdmd"></a>주 버전이 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 모든 인스턴스는 일부 구성 요소를 공유합니다. 업그레이드 중에 공유 구성 요소가 선택되면 기존 구성 요소가 최신 버전으로 업그레이드됩니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "52762736"
 ### <a name="components-that-are-independent-of-the-includessnoversionincludesssnoversion-mdmd-versions"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 독립적인 구성 요소  
  특정 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 설치되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전과 관계가 없습니다. 이러한 구성 요소는 주 버전 간에 공유될 수도 있고 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 공유될 수도 있습니다.  
   
- 예: Microsoft Sync Framework, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact  
+ 예를 들면 다음과 같습니다. Microsoft Sync Framework [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 압축 합니다.  
   
  에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 설치를 참조 하십시오 [설치 마법사에서 SQL Server 2014 설치 &#40;설치&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact를 제거하는 방법은 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   

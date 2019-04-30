@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069704"
 ---
 # <a name="odbc-core-subkey"></a>ODBC 핵심 하위 키
 ODBC 핵심 하위 키 아래에 값을 핵심 구성 요소 (드라이버 관리자, 커서 라이브러리, 설치 관리자 DLL 및 등)에 대 한 사용 횟수를 제공합니다. 이 값의 형식이 다음 표에 표시 됩니다.  

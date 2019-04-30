@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164877"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL 샌드박싱 설정 및 해제
   RDL(Report Definition Language) 샌드박싱 기능을 사용하면 보고서 서버의 단일 웹 팜을 여러 명이 사용하는 환경에서 각 개인에 대해 특정 유형의 리소스 사용을 검색하고 제한할 수 있습니다. 여러 명 그리고 경우에 따라 서로 다른 회사에서 사용할 수 있는 보고서 서버의 단일 웹 팜을 유지 관리하는 호스팅 서비스 시나리오를 예로 들 수 있습니다. 보고서 서버 관리자는 이 기능을 설정하여 다음과 같이 할 수 있습니다.  

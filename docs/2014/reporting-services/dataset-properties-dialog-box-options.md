@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165007"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>데이터 세트 속성 대화 상자, 옵션
   선택 **옵션** 에 **집합 속성** 데이터 정렬 옵션 및 쿼리에 대 한 부분합 같은 데이터 옵션을 변경 하려면 대화 상자. 자세한 내용은 [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)을(를) 참조하세요.  

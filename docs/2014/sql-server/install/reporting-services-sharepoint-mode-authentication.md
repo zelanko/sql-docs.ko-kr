@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 583f68004ef6633c7bd2a87817968c66ec13bd40
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058079"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Reporting Services SharePoint 모드 인증
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 **Reporting Services SharePoint 모드 인증** 페이지를 사용하여 현재 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 사용되는 서비스 계정의 자격 증명을 지정할 수 있습니다. 자격 증명은 새 SharePoint 애플리케이션 풀을 만드는 데 사용됩니다. 또한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스 애플리케이션이 새로 만들어집니다. 서비스 애플리케이션 이름에는 이전 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 이름이 포함됩니다.  

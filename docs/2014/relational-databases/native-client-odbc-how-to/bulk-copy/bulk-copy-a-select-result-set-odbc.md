@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a90937eafc531612968ac4248b329ba7a0a47d83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225516"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>SELECT 결과 집합 대량 복사(ODBC)
   이 예제에서는 대량 복사 함수를 사용하여 SELECT 문의 결과 집합을 대량 복사하는 방법을 보여 줍니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "53357010"
   
     -   대량 복사 오류 메시지를 받을 데이터 파일의 이름입니다. 메시지 파일이 필요하지 않으면 NULL을 지정합니다.  
   
-    -   복사 방향을 지정합니다. DB_OUT  
+    -   복사본의 방향: DB_OUT.  
   
 5.  호출 [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), eOption을 BCPHINTS로 설정 하 고 SELECT 문이 포함 된 SQLTCHAR 배열에 대 한 포인터를 iValue에 배치 합니다.  
   

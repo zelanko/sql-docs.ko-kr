@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162457"
 ---
 # <a name="indexes-on-computed-columns"></a>계산 열의 인덱스
   다음 요구 사항을 충족하면 계산 열에 인덱스를 정의할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "48049574"
   
 -   `float` 또는 `real` 데이터 형식의 식이 아닙니다.  
   
--   사용 하지 않는 한 `float` 또는 `real` 해당 정의의 데이터 형식. 예를 들어 다음 문에서 열 `y` 는 `int` 고 결정적 이지만 정확 하지는 않습니다.  
+-   정의에 `float` 또는 `real` 데이터 형식을 사용하지 않습니다. 예를 들어 다음 문에서 열 `y`는 `int`이고 결정적이지만 정확하지는 않습니다.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049574"
     ```  
   
 > [!NOTE]  
->  모든 `float` 나 `real` 식은 정확 하지 않은 것으로 간주 됩니다 및 인덱스의 키 일 수 없습니다는 `float` 또는 `real` 식은 인덱싱된 뷰에서 아니지만 키를 사용할 수 있습니다. 계산 열의 경우에도 마찬가지입니다. 모든 함수, 식 또는 사용자 정의 함수가 포함 되어 있으면 정확 하지 않은 비율은 `float` 또는 `real` 식입니다. 논리 식(비교)이 여기에 포함됩니다.  
+>  `float` 또는 `real` 식은 정확하지 않은 것으로 간주되므로 인덱스의 키가 될 수 없습니다. `float` 또는 `real` 식은 인덱싱된 뷰에서 사용할 수 있지만 키로는 사용할 수 없습니다. 계산 열의 경우에도 마찬가지입니다. 함수, 식 또는 사용자 정의 함수에 `float` 또는 `real` 식이 포함되어 있으면 정확하지 않은 것으로 간주됩니다. 논리 식(비교)이 여기에 포함됩니다.  
   
  COLUMNPROPERTY 함수의 **IsPrecise** 속성은 *computed_column_expression* 이 정확한지 여부를 보고합니다.  
   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2664d71243d98e9b8152c5c5c7ce241a4f3669f8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164357"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 ISubscriptionBaseUIUserControl 인터페이스 구현
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 배달 확장 프로그램에는 보고서 관리자에서 확장 프로그램 관련 정보를 수집하기 위한 구독 UI(사용자 인터페이스) 구현이 포함될 수 있습니다. 이 UI는 사용자가 새 구독을 만들거나 기존 구독을 수정할 때 호출됩니다. 새 구독을 만드는 경우 UI에 적절한 기본값이 표시되고 이를 통해 사용자가 배달 공급자와 상호 작용할 수 있습니다. 구독을 수정하는 경우에는 UI에 현재 구독 정보가 미리 채워집니다.  

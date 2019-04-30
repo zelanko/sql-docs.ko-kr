@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190765"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 ORDER BY 절의 열 별칭에 접두사로 테이블 별칭을 붙일 수 없습니다.  

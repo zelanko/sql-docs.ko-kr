@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157238"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
@@ -59,15 +59,15 @@ ms.locfileid: "53375035"
   
 -   제한 사항이 있는 Service Broker. 고유하게 컴파일된 저장 프로시저에서 큐에 액세스할 수 없습니다. 메모리 최적화 테이블에 액세스하는 트랜잭션에서 원격 데이터베이스에 있는 큐에 액세스할 수 없습니다.  
   
--   장애 조치(Failover) 클러스터링: 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치 클러스터 인스턴스는 서버 인스턴스 수준에 장애 조치 클러스터에서 중복성을 통해 로컬 고가용성을 제공 하는 Windows Server 장애 조치 클러스터링 (WSFC) 기능 활용 인스턴스 (FCI)입니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+-   장애 조치 클러스터링: 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 제공을 위해 AlwaysOn 장애 조치 클러스터 인스턴스는 서버 인스턴스 수준에 장애 조치 클러스터에서 중복성을 통해 로컬 고가용성을 제공 하는 Windows Server 장애 조치 클러스터링 (WSFC) 기능 활용 인스턴스 (FCI)입니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   AlwaysOn과 통합: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 AlwaysOn을 비롯하여 서버 또는 데이터베이스의 고가용성 유지를 위한 여러 가지 옵션을 제공합니다. 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.  
   
--   로그 전달: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 주 서버 인스턴스의 주 데이터베이스에서 별도의 보조 서버 인스턴스에 있는 하나 이상의 보조 데이터베이스로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 자세한 내용은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
+-   로그 전달: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용 하면 별도 보조 서버 인스턴스에서 하나 이상의 보조 데이터베이스를 주 서버 인스턴스에서 주 데이터베이스에서 트랜잭션 로그 백업의 자동으로 보낼 수 있습니다. 자세한 내용은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
 -   구독자에서 메모리 최적화 테이블에 대한 트랜잭션 복제가 지원되지만 몇 가지 제한 사항이 있습니다. 자세한 내용은 [Replication to Memory-Optimized Table Subscribers](../replication/replication-to-memory-optimized-table-subscribers.md)를 참조하세요.  
   
--   리소스 관리자: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 자세한 내용은 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 및 [Resource Governor](../resource-governor/resource-governor.md)를 참조하세요.  
+-   리소스 관리자: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 관리 하는 데 사용할 수 있는 기능 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 워크 로드 및 시스템 리소스 소비량. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 자세한 내용은 [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) 및 [Resource Governor](../resource-governor/resource-governor.md)를 참조하세요.  
   
 -   메모리 내 OLTP는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다. 자세한 내용은 [Collations and Code Pages](../../database-engine/collations-and-code-pages.md)를 참조하세요.  
   

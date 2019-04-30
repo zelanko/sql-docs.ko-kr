@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a76281eead6430ca0dafae8671c7990f3c6c2de3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201082"
 ---
 # <a name="project-property-pages-dialog-box"></a>프로젝트 속성 페이지 대화 상자
   프로젝트 속성 페이지를 사용하여 보고서 서버 프로젝트의 배포 속성을 구성할 수 있습니다. 이 대화 상자를 열려면 **프로젝트** 메뉴에서 _\<Report Project Name>_**속성**을 클릭합니다.  

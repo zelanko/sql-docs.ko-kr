@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205643"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>1단원: 테이블을 계층 구조로 변환
   자체 조인을 사용하여 계층 관계를 나타내는 테이블을 보유하고 있는 경우 이 단원의 내용을 참조하여 해당 테이블을 계층 구조로 변환할 수 있습니다. 이 표현을 `hierarchyid`를 사용하는 표현으로 마이그레이션하는 작업은 비교적 쉽습니다. 마이그레이션하면 간단하고 이해하기 쉬운 계층적 표현이 완성되며 효율적인 쿼리를 위해 여러 가지 방법으로 인덱싱할 수 있습니다.  

@@ -15,31 +15,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201585"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C에서 SQL로 데이터 변환 예제
 다음 예제에서는 드라이버 C 데이터 SQL 데이터를 변환 하는 방법을 보여 줍니다.  
   
 |C 형식 식별자|C 데이터 값|SQL 유형<br /><br /> 식별자(identifier)|Column<br /><br /> length|SQL data<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/a|  
-|SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|8 [b]|1234.56|n/a|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|7 [b]|1234.5|22001|  
-|SQL_C_CHAR|[a] 1234.56\0|SQL_DECIMAL|4|----|22003|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|6|abcdef|n/a|  
+|SQL_C_CHAR|abcdef\0[a]|SQL_CHAR|5|abcde|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|8[b]|1234.56|n/a|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|7[b]|1234.5|22001|  
+|SQL_C_CHAR|1234.56\0[a]|SQL_DECIMAL|4|----|22003|  
 |SQL_C_FLOAT|1234.56|SQL_FLOAT|n/a|1234.56|n/a|  
 |SQL_C_FLOAT|1234.56|SQL_INTEGER|n/a|1234|22001|  
 |SQL_C_FLOAT|1234.56|SQL_TINYINT|n/a|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_CHAR|10|1992-12-31|n/a|  
-|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_CHAR|9|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_TIMESTAMP|n/a|1992-12-31 00:00:00.0|n/a|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55 120000000 [d]|SQL_CHAR|22|1992-12-31 23:45:55.12|n/a|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55 120000000 [d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
-|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55 120000000 [d]|SQL_CHAR|18|----|22003|  
+|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|10|1992-12-31|n/a|  
+|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|9|----|22003|  
+|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_TIMESTAMP|n/a|1992-12-31 00:00:00.0|n/a|  
+|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|22|1992-12-31 23:45:55.12|n/a|  
+|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
+|SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|18|----|22003|  
   
  [a] "\0" null 종료 바이트를 나타냅니다. Null 종료 바이트는 데이터의 길이 SQL_NTS 하는 경우에 필요 합니다.  
   

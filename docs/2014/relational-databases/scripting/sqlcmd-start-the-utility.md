@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135360"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd 유틸리티 시작
   `sqlcmd` 사용을 시작하려면 먼저 유틸리티를 시작한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결해야 합니다. 기본 인스턴스나 명명된 인스턴스에 연결할 수 있습니다. 첫 번째 단계는 `sqlcmd` 유틸리티를 시작하는 것입니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "48228353"
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에 **cmd**를 입력한 다음 **확인** 을 클릭하여 명령 프롬프트 창을 엽니다.  
   
-2.  명령 프롬프트에서 입력 `sqlcmd`합니다.  
+2.  명령 프롬프트에서 `sqlcmd`를 입력합니다.  
   
 3.  Enter 키를 누릅니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48228353"
   
 2.  Enter 키를 누릅니다.  
   
-     `sqlcmd` 프롬프트(1>)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지정된 인스턴스에 연결되었다고 표시됩니다.  
+     합니다 `sqlcmd` 프롬프트 (1 >)의 지정 된 인스턴스에 연결 되어 있는지 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
     > [!NOTE]  
     >  입력한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 버퍼에 저장되며 GO 명령이 발견되면 일괄 처리로 실행됩니다.  

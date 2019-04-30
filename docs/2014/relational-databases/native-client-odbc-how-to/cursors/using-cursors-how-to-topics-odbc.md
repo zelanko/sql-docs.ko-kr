@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200422"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>커서 사용 방법 도움말 항목(ODBC)
   커서를 사용하려면 먼저 ODBC 커서 동작을 제어하는 연결 및 문 특성을 설정해야 합니다. 커서를 사용하면 응용 프로그램에서 각 인출 시 여러 행을 검색하고 커서의 현재 위치에서 UPDATE, INSERT 또는 DELETE 문을 실행할 수 있습니다.  

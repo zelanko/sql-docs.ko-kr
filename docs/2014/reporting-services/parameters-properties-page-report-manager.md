@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f83e66d238aa67b28bf547540c5a6b5dfcc9c92d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188293"
 ---
 # <a name="parameters-properties-page-report-manager"></a>매개 변수 속성 페이지(보고서 관리자)
   매개 변수 속성 페이지를 사용하여 매개 변수가 있는 보고서의 매개 변수 설정을 보거나 수정할 수 있습니다.  

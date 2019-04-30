@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198345"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  

@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 797f572a6a9d847422981483c4bfe7938cd47e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057834"
 ---
 # <a name="odbc-test"></a>ODBC 테스트
 Microsoft® ODBC 테스트는 ODBC 드라이버 및 ODBC 드라이버 관리자를 테스트 하는 데 사용할 수 있는 ODBC 사용 응용 프로그램입니다. ODBC 3.51 ANSI 및 유니코드 지원 버전 ODBC 테스트를 포함합니다. 해당 파일은 다음과 같습니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07f87bf0f231419e4f1345369211ba6ceebf1d12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199176"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>대량 복사 일괄 처리 크기 관리
   대량 복사 작업에서 일괄 처리의 주요 목적은 트랜잭션의 범위를 정의하는 것입니다. 일괄 처리 크기를 설정하지 않으면 대량 복사 함수에서 전체 대량 복사를 하나의 트랜잭션으로 간주합니다. 일괄 처리 크기를 설정하면 각 일괄 처리에서 일괄 처리가 완료될 때 커밋되는 하나의 트랜잭션이 구성됩니다.  

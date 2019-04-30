@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce901e6a8639c8a2caea6e55cbaa18fedb56f4a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132726"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>테이블 만들기 및 열기(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하면 Odbcinst.ini에 지정 된 형식을 사용 하 여 새 테이블이 만들어집니다. 지정 하지 않으면 테이블이 CSVDELIMITED 형식으로 만들어집니다. 기본적으로 정수 열을 11 자로 기본 및 FLOAT 열 기본값 22 자입니다. 날짜 열 YYYY-월-일 형식을 사용 합니다. CHAR 및 LONGCHAR 열은 CREATE 문에서 지정 된 너비입니다.

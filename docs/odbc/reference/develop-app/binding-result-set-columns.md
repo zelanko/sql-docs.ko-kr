@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199279"
 ---
 # <a name="binding-result-set-columns"></a>바인딩 결과 집합 열
 응용 프로그램은 결과 집합 선택한 모든 열이 없는 바인딩 등의 많거나 적은 열으로 바인딩할 수 있습니다. 데이터 행을 인출할 때 드라이버 응용 프로그램에 바인딩된 열에 대 한 데이터를 반환 합니다. 응용 프로그램 결과 집합의 모든 열으로 바인딩합니다 되는 여부는 응용 프로그램에 따라 달라 집니다. 예를 들어, 일반적으로 보고서를 생성 하는 응용 프로그램 형식이 고정; 이러한 응용 프로그램의 모든 보고서에 사용 되는 열을 포함 하는 결과 집합을 바인딩하고 만들고 이러한 열의 모든 데이터를 검색 합니다. 경우에 따라 데이터의 전체 화면을 표시 하는 응용 프로그램에는 사용자가; 표시할 열을 결정 하도록 허용 이러한 응용 프로그램 결과 사용자 수를 하지만 바인딩 및 사용자가 선택한 열에 대해서만 데이터를 검색 하는 모든 열이 포함 된 집합을 만듭니다.  

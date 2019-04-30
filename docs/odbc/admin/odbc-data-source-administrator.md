@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: adbc90288789838199a0eee866eb36896a360009
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198546"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자
 Microsoft® ODBC 데이터 원본 관리자 데이터베이스 드라이버 및 데이터 소스를 관리합니다. 이 응용 프로그램에서 Windows 제어판에 위치한 **관리 도구**합니다. Windows 8 부터는 아이콘 라고 **ODBC 데이터 원본**, 64 비트 운영 체제는 32 비트 및 64 비트 버전 및 합니다.  

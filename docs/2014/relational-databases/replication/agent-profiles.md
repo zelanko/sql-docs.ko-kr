@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140458"
 ---
 # <a name="agent-profiles"></a>에이전트 프로필
   **에이전트 프로필** 대화 상자를 사용하여 에이전트 프로필을 관리할 수 있습니다. 에이전트 프로필을 사용하면 각 에이전트의 런타임 매개 변수를 편리하게 관리할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 미리 정의된 프로필이 추가된 에이전트도 있습니다. 예를 들어 병합 에이전트에는 느린 대역폭 연결을 위한 "느린 연결" 프로필이 있습니다. 대부분의 애플리케이션은 미리 정의된 프로필만으로 충분하지만 사용자 정의 프로필을 만들어 에이전트 동작을 사용자 지정할 수도 있습니다.  

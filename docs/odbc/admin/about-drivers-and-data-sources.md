@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294448"
 ---
 # <a name="about-drivers-and-data-sources"></a>드라이버 및 데이터 원본 정보
 *드라이버* ODBC 요청을 처리 하 고 응용 프로그램에 데이터를 반환 되는 구성 요소입니다. 필요한 경우 드라이버는 데이터 원본에서 인식할 수 있는 폼에는 응용 프로그램의 요청을 수정 합니다. 드라이버의 설치 프로그램을 사용 하 여를 추가 하 여 컴퓨터에서 드라이버를 삭제 해야 합니다.  

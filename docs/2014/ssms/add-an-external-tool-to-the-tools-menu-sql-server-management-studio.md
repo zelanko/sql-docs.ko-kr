@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226170"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 응용 프로그램을 시작할 수 있습니다. 외부 애플리케이션은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  

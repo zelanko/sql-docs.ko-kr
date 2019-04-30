@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e72adbe0fe4ee33c6354db975cd917050d6ff392
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164692"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>데이터 세트 속성 대화 상자, 필터(보고서 작성기)
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  

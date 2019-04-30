@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206499"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>페이지 머리글/바닥글 추가 또는 제거(보고서 작성기 및 SSRS)
   페이지 머리글 또는 바닥글에 정적 텍스트, 이미지, 선, 사각형 및 테두리를 추가할 수 있습니다. 머리글 또는 바닥글에 변수나 계산된 데이터를 포함하려면 입력란에 식 및 데이터 바인딩된 이미지를 배치합니다.  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4096d6fed3d73faffdc8798c475954bdb031dd68
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165081"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 경고 담당자를 위한 데이터 경고 관리자가 제공됩니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.  

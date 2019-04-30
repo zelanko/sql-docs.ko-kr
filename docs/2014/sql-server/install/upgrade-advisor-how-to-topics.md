@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bffee33dd49dcae44f8bd2e9d6b5350bc7253f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185444"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>업그레이드 관리자 방법 도움말 항목
   이 섹션에는 업그레이드 관리자를 사용하는 일반적인 절차가 포함되어 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "48166573"
   
  [방법: 업그레이드 관리자 분석 마법사 실행](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
- [방법: 업그레이드 관리자 보고서 보기](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+ [방법: 업그레이드 관리자 보고서를 보려면](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
  [방법: 보고서 필터링](../../../2014/sql-server/install/how-to-filter-reports.md)  
   

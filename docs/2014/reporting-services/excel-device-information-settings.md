@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5d1ec9b650592be41c8ae2f7043649c91ea78442
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164571"
 ---
 # <a name="excel-device-information-settings"></a>Excel 디바이스 정보 설정
   다음 표는 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

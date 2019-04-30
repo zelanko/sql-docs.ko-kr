@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199059"
 ---
 # <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
   공간 데이터는 기하학적 개체의 물리적 위치와 모양에 대한 정보를 표시합니다. 이러한 개체는 위치나 지역, 도로 또는 호수와 같은 좀 더 복잡한 개체를 가리킬 수 있습니다.  

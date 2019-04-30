@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f07b9beb798b1cd33ec2fee6af890a09a516b2f5
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163986"
 ---
 # <a name="implementing-a-command-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 Command 클래스 구현
   **Command** 개체는 요청을 작성하고 이를 데이터 원본에 전달합니다. 명령 텍스트는 텍스트 및 XML을 비롯하여 다양한 구문 형식을 취할 수 있습니다. 결과가 반환될 경우 **Command** 개체는 **DataReader** 개체 형태로 결과를 반환합니다.  

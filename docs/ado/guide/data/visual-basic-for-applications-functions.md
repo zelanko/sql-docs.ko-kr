@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184887"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
 다음 Visual Basic for Applications 기능 데이터 셰이핑 계산 식에서에서 사용할 수 있습니다.  
@@ -35,15 +35,15 @@ ms.locfileid: "47611601"
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Error|Error$|Exp|Fix|형식|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|정수|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|왼쪽|  
 |LeftB|Left$|LeftB$|Len|Log|LTrim|  
 |LTrim$|Mid|Mid$|Minute|MIRR|Month|  
 |지금|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|오른쪽|  
 |RightB|Right$|RightB$|Rnd|RTrim|RTrim$|  
-|둘째|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
+|Second|Sgn|Sin|SLN|공백|Space$|  
+|Sqr|Str|Str$|StrComp|StrConv|문자열|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  

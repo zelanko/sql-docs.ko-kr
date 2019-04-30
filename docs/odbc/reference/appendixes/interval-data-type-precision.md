@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188912"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 형식 전체 자릿수
 전체 자릿수는 간격 데이터 형식에 대 한 전체 자릿수, 전체 자릿수 간격 및 초 전체 자릿수를 유도 하는 간격을 포함 합니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127959"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>저장 프로시저를 사용할 때 권한 취소 및 권한 부여
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47792231"
   
  Microsoft ODBC Driver for Oracle 사용자 권한을 부여 하 고 다음 저장된 프로시저에서 액세스 하는 테이블에 취소할 때 다음 오류 메시지를 반환 합니다.  
   
- SQL_ERROR = 1  
+ SQL_ERROR=-1  
   
  szErrorMsg = "[Microsoft] [ODBC driver for Oracle] 잘못 된 매개 변수  
   

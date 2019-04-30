@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1d479c8f7de1c9d7463e57f37f9e8588c9bc68b6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299046"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>DB2 클라이언트 (DB2ToSQL) 용 SSMA 설치
 SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 구성 됩니다.  
@@ -32,7 +32,7 @@ SSMA 클라이언트는 다음 작업을 수행 하는 프로그램 파일로 �
   
 이 항목에서는 설치 필수 구성 요소 및 SSMA 설치에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
 SSMA는 DB2 버전 9.0 / 10.0 z/os 또는 LUW 버전 9.8 및 10.1 이상 버전에서 DB2를 사용 하 여 작동 하도록 설계 되었습니다 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014입니다.  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  

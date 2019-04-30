@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155567"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>보고서 섹션 대화 상자(보고서 작성기)
   보고서를 열 때 보고서 작성기는 보고서에 RDL(Report Definition Language) **\<Section>** 요소 하나만 포함되어 있는지 확인합니다. **\<Section>** 요소가 여러 개 포함된 보고서는 열 수 없습니다.  

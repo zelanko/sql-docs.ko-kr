@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151207"
 ---
 # <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  

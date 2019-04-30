@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1445f89200a876b5ac945ea1a577d6cc3f7445a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149261"
 ---
 # <a name="sql-statements"></a>SQL 문
 ODBC 응용 프로그램은 SQL 문을 실행 하 여 거의 모든 데이터베이스 액세스를 수행 합니다. 이러한 문-하드 코드 된 또는 상호 운용 가능한 실행된 시간 또는 데이터 원본 관련 등에-에서 생성 된 형식의 응용 프로그램의 요구에 따라 달라 집니다.  

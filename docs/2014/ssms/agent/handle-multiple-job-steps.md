@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63074060"
 ---
 # <a name="handle-multiple-job-steps"></a>다중 작업 단계 처리
   작업에 둘 이상의 작업 단계가 있는 경우에는 작업 단계가 실행되는 순서를 지정해야 합니다. 이를 *흐름 제어**라고 합니다.* 언제든지 새 작업 단계를 추가하고 작업 단계의 흐름을 다시 정렬할 수 있습니다. 변경 내용은 다음에 작업이 실행될 때 적용됩니다. 다음 그림에서는 데이터베이스 백업 작업에 대한 흐름 제어를 보여 줍니다.  

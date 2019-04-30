@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180221"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 확장성 Api
 

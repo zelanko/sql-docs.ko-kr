@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199616"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System에 대 한 바이러스 백신 소프트웨어
 데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "52524475"
   
 -   C:\ProgramData\Microsoft\Windows\Hyper-V-가상 컴퓨터 구성 디렉터리  
   
--   기본 가상 하드 디스크 드라이브 디렉터리 C:\Users\Public\Documents\Hyper-V\Virtual 하드 디스크  
+-   C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory  
   
 -   C:\clusterStorage-가상 하드 디스크 드라이브 디렉터리  
   
@@ -62,7 +62,7 @@ Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록�
   
 -   G:\  
   
-**_appliance_domain_VMM**  
+**_appliance_domain_-VMM**  
   
 -   제한 없음  
   

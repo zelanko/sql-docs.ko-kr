@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188762"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField 및 SQLGetDescRec(커서 라이브러리)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47765021"
   
  커서 라이브러리를 실행 **SQLGetDescRec** 책갈피 열에 대 한 메타 데이터를 반환 합니다. 커서 라이브러리를 실행 **SQLGetDescField** 반환한 동일한 필드를 반환 하려면 **SQLGetDescRec**은 SQL_DESC_NAME SQL_DESC_TYPE, 값을 SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ 길이, SQL_DESC_PRECISION, 자릿수가 SQL_DESC_SCALE, 및 SQL_DESC_NULLABLE 합니다. 일관성을 위해 **SQLGetDescField** 도 SQL_DESC_UNNAMED를 반환 합니다.  
   
- 커서 라이브러리를 실행 **SQLGetDescField** 바인딩 책갈피 열에 대해 설정 된 다음의 값 필드는 반환할 호출 되는 경우: SQL_DESC_OCTET_LENGTH_PTR을 SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_LENGTH 합니다.  
+ 커서 라이브러리를 실행 **SQLGetDescField** 바인딩 책갈피 열에 대해 설정 된 다음의 값 필드는 반환할 호출 되는 경우: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR을 및 SQL_DESC_LENGTH 합니다.  
   
  커서 라이브러리를 실행 **SQLGetDescField** SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE, 또는 SQL_DESC_ROW_STATUS_PTR 필드의 값을 반환 하도록 호출 되는 경우. 이러한 필드는 책갈피 행 뿐 아니라 모든 행에 대해 반환할 수 있습니다.  
   

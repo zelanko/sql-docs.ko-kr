@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 7b37e2cd0b3342d6ecb520add0bbe4fd533e786a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192868"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 메서드(ClientNetworkProtocol 클래스)
   지정 된 클라이언트 네트워크 프로토콜을 사용 하지 않도록 설정 합니다 [Configure Client Protocols](https://technet.microsoft.com/library/ms181035.aspx)합니다.  

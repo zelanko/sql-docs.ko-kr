@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209345"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>동일한 데이터 세트에 여러 데이터 영역 연결(보고서 작성기 및 SSRS)
   여러 데이터 영역을 보고서에 추가하면 동일한 보고서 데이터 세트의 데이터를 여러 가지 방식으로 표시할 수 있습니다. 예를 들어 데이터를 테이블에 표시하고 차트로도 표시하려는 경우 해당 필터 식, 정렬 식 및 그룹 식에 동일한 식과 범위를 사용해야 합니다.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200354"
 ---
 # <a name="log-long-running-queries-odbc"></a>장기 실행 쿼리 기록(ODBC)
   이 예제에서는 장기 실행 쿼리를 로깅하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 이 예제를 실행할 경우 응용 프로그램에서 설정한 간격을 초과하여 실행되는 쿼리 목록이 포함된 Odbcqry.log가 만들어집니다. 이 예제는 IA64에서 지원되지 않습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  

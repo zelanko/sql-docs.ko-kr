@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182931"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>조건 열기 대화 상자, 종속 정책 페이지
   이 대화 상자를 사용하여 이 정책 기반 관리 조건을 현재 참조하는 정책 목록을 표시할 수 있습니다. 조건과 패싯 및 정책 간의 관계는 [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)를 참조하세요.  

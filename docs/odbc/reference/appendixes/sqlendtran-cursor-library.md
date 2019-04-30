@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2e218035473d1ebb980aa5f44da8cc7b8ef843d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199492"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran(커서 라이브러리)
 > [!IMPORTANT]  

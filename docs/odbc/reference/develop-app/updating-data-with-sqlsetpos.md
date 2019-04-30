@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194420"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos를 사용하여 데이터 업데이트
 응용 프로그램을 업데이트 하거나 사용 하 여 행 집합의 모든 행을 삭제 **SQLSetPos**합니다. 호출 **SQLSetPos** 작성 하 고 SQL 문을 실행 하는 편리한 대체 방법입니다. 데이터 원본 위치 지정된 된 SQL 문을 지원 하지 않는 하는 경우에 위치 지정된 업데이트를 지 원하는 ODBC 드라이버를 수 있습니다. 함수 호출을 사용 하 여 전체 데이터베이스 액세스를 달성 하는 패러다임의 일부입니다.  

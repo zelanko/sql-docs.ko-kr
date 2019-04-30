@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63d2dff214ed1125450ec319dff4ad7f7dc36990
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190901"
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 설치 중에 파일 시스템으로 복사되는 구성 파일과 레지스트리에 구성 요소 정보를 저장합니다. 구성 파일에는 내부 전용 값과 사용자 정의 값의 조합이 들어 있습니다. 사용자 정의 값은 설치 프로그램, 구성 도구, 명령줄 유틸리티를 통해 지정하거나 구성 파일을 수동으로 편집하여 지정합니다.  

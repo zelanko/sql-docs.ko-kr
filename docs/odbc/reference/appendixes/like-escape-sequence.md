@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188797"
 ---
 # <a name="like-escape-sequence"></a>LIKE 이스케이프 시퀀스
 ODBC는 LIKE 절에 대 한 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -32,13 +32,13 @@ ODBC는 LIKE 절에 대 한 이스케이프 시퀀스를 사용합니다. 이 �
 ## <a name="remarks"></a>Remarks  
  BNF 표기법의 구문은 다음과 같습니다.  
   
- *ODBC like 이스케이프* :: =  
+ *ODBC-like-escape* ::=  
   
  *ODBC esc 시작자* 이스케이프 '*이스케이프 문자*' *ODBC esc 종결자*  
   
- *문자 이스케이프* :: = *문자*  
+ *escape-character* ::= *character*  
   
- *ODBC esc 시작자* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC esc 종결자* :: =}  
   

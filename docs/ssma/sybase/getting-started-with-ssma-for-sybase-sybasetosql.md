@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126641"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)의 SAP ASE 사용 하면 신속 하 게 하려면 SAP 적응형 Server Enterprise (ASE) 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database 스키마 결과 스키마를 업로드 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database에서 데이터를 마이그레이션하고 SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database.  
@@ -64,7 +64,7 @@ Sybase 메타 데이터 탐색기를 사용 하 여 다음 작업을 수행할 �
 자세한 내용은 [SQL Server로 변환 된 데이터베이스 개체 로드 &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)합니다.  
   
 ### <a name="metadata"></a>메타데이터  
-각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어, Sybase 메타 데이터 탐색기에서 테이블을 선택 하면 6 개의 탭이 표시: **테이블**, **SQL**, **형식 매핑**하십시오 **데이터**,  **속성**, 및 **보고서**합니다. 합니다 **보고서** 탭 선택된 된 개체를 포함 하는 보고서를 만든 후에 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기, 세 개의 탭 표시: **테이블**합니다 **SQL**, 및 **데이터**입니다.  
+각 메타 데이터 탐색기의 오른쪽에는 선택한 개체를 설명 하는 탭 합니다. 예를 들어, Sybase 메타 데이터 탐색기에서 테이블을 선택 하는 경우 6 개의 탭 표시 됩니다. **테이블**, **SQL**를 **형식 매핑**를 **데이터**를 **속성**, 및 **보고서**합니다. 합니다 **보고서** 탭 선택된 된 개체를 포함 하는 보고서를 만든 후에 정보를 포함 합니다. 테이블을 선택 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기, 세 개의 탭이 나타납니다. **테이블**하십시오 **SQL**, 및 **데이터**입니다.  
   
 대부분의 메타 데이터 설정에는 읽기 전용입니다. 그러나 다음과 같은 메타 데이터를 변경할 수 있습니다.  
   

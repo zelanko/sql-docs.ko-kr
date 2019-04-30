@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070857"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 발생할 이벤트를 발생 시킨 이유를 지정 합니다.  

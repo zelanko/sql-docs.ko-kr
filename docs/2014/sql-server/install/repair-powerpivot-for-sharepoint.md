@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 408d6a3bfdd2618931ceefa5d6d82ad6ab581485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198954"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint 복구
   PowerPivot 구성 도구를 사용하여 PowerPivot for SharePoint의 기존 설치를 복구할 수 있습니다. 이 도구는 로컬 PowerPivot for SharePoint 인스턴스의 구성 설정을 읽어 PowerPivot for SharePoint 설치와 일치하지 않는 설정을 다시 구성할 수 있는 동작을 제공합니다. 예를 들어 서비스를 중지하거나 솔루션을 취소하면 이 도구는 서비스를 시작하고 솔루션을 배포하는 동작을 제공합니다.  

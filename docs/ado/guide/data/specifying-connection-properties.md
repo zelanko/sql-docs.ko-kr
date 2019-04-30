@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 885d201736adb3cd16efbea4f3907cd0aa324128
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062829"
 ---
 # <a name="specifying-connection-properties"></a>연결 속성 지정
 대부분의 지정 된 정보를 제공할 수 있습니다는 [연결 문자열](../../../ado/guide/data/creating-a-connection-string.md) 의 속성을 설정 하 여 합니다 **연결** 연결을 열기 전에 개체입니다. 예를 들어 연결 문자열에 설명 된 대로 동일한 효과 얻을 수 있습니다 [연결 문자열 만들기](../../../ado/guide/data/creating-a-connection-string.md) 다음 코드를 사용 하 여 합니다.  

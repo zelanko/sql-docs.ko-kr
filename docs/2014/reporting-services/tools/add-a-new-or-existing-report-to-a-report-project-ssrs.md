@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b150c7e42cf5389783706138c055c4a7fdea9b05
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63219173"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>보고서 프로젝트에 새 보고서 또는 기존 보고서 추가(SSRS)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 마법사를 사용하거나 프로젝트에 새 보고서를 추가하여 새 보고서를 추가할 수 있습니다. 기본 보고서를 추가할 수도 있습니다. 보고서를 추가한 후 프로젝트의 **보고서** 폴더 아래에 나열된 보고서 이름을 볼 수 있습니다.  

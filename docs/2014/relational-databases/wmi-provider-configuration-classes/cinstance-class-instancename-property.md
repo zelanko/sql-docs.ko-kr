@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 309991d7dd187ca40d3eba40d43c0e58692b24bc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191377"
 ---
 # <a name="instancename-property-cinstance-class"></a>InstanceName 속성(CInstance 클래스)
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 인스턴스의 이름을 가져옵니다.  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

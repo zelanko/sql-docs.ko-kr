@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200572"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>추가 테이블 반환 매개 변수 메타데이터
   테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하려면 응용 프로그램 SQLProcedureColumns를 호출 합니다. 테이블 반환 매개 변수에 대 한 SQLProcedureColumns 단일 행을 반환 합니다. 두 개의 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-특정 열인 SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 테이블 반환 매개 변수와 연결 된 테이블 형식에 대 한 스키마 및 카탈로그 정보를 제공에 추가 되었습니다. ODBC 사양에 따라 SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 추가된 모든 드라이버별 열 앞에, 그리고 ODBC 자체에서 지정한 모든 열 뒤에 표시됩니다.  

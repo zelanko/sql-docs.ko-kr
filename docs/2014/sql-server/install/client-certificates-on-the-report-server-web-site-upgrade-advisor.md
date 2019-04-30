@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 808bb63a527e8c08063d934fd6a378e1955b7617
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205085"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>보고서 서버 웹 사이트의 클라이언트 인증서(업그레이드 관리자)
   업그레이드 관리자가 보고서 서버 또는 보고서 관리자 가상 디렉터리를 호스팅하는 IIS 웹 사이트에서 하나 이상의 클라이언트 인증서를 검색했습니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fefcec96100a9848810bc37a7b02760a3005cc3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188101"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>사용자 지정 구성이 포함된 XML 입력 파일 예제(DTA)
   **Configuration** 요소를 사용하여 사용자 지정 구성을 지정하는 이 XML 입력 파일 예제를 복사하여 좋아하는 XML 편집기나 텍스트 편집기에 붙여넣습니다. 이렇게 하면 "가정(what-if)" 분석을 수행할 수 있습니다. "가정(what-if)" 분석에는 **Configuration** 요소를 사용하여 튜닝할 데이터베이스에 대한 가상 실제 디자인 구조 집합을 지정하는 것이 포함됩니다. 그런 다음 데이터베이스 엔진 튜닝 관리자를 사용하여 이 가상 구성에 대해 작업을 실행하는 것의 효과를 분석하여 쿼리 처리 성능을 향상시키는지 여부를 확인합니다. 이 분석 유형은 실제 구현 시 오버헤드를 발생시키지 않고 새 구성을 평가하는 이점이 있습니다. 가상 구성이 원하는 성능 향상을 제공하지 않을 경우 필요한 결과를 달성하는 구성에 도달할 때까지 가상 구성을 쉽게 변경하여 다시 분석할 수 있습니다.  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298130"
 ---
 # <a name="instant-file-initialization-configuration"></a>즉시 파일 초기화 구성
 즉시 파일 초기화는 더 빠르게 실행 하기 위해 데이터 파일 작업을 허용 하는 SQL Server 기능입니다. 즉시 파일 초기화를 켜려면 확인란을 선택 하면 SQL Server PDW의 성능이 향상 됩니다. 그러나이 보안 위험이 제기 하기 비즈니스를 하는 경우 다음 확인란의 선택을 취소 합니다.  

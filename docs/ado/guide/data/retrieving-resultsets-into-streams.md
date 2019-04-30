@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188112"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합 검색
 기존에 결과 수신 하는 대신 **레코드 집합** 개체, ADO 스트림으로 대신 쿼리 결과 검색할 수 있습니다. ADO **Stream** 개체 (또는 COM을 지 원하는 다른 개체 **IStream** ASP 같은 인터페이스 **요청** 고 **응답** 개체 ) 이러한 결과 포함 하기 위해 사용할 수 있습니다. XML 형식으로 결과 검색 하는 데이 기능에 대 한 하나의 사용이 됩니다. SQL Server를 사용 하 여 예를 들어, XML 결과 반환할 수 있습니다 SQL SELECT 쿼리를 사용 하 여 FOR XML 절을 사용 하 여 XPath 쿼리를 사용 하 여 등 여러 가지 방법으로.  

@@ -1,5 +1,5 @@
 ---
-title: Visual c + + ADO 프로그래밍 | Microsoft Docs
+title: Visual C++ ADO 프로그래밍 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142972"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
-ADO API 참조는 ADO API (응용 프로그래밍 인터페이스)을 Microsoft Visual Basic과 유사한 구문을 사용 하 여의 기능을 설명 합니다. 독자는 모든 사용자, ADO 프로그래머에 게 Visual Basic, Visual c + +와 같은 다양 한 언어를 사용 하는 (하거나 사용 하지 않고 합니다 **#import** 지시문), 및 Visual J++ (사용 하 여 ADO/WFC 클래스 패키지).  
+ADO API 참조는 ADO API (응용 프로그래밍 인터페이스)을 Microsoft Visual Basic과 유사한 구문을 사용 하 여의 기능을 설명 합니다. 독자는 모든 사용자, ADO 프로그래머에 게 Visual Basic의 경우 시각적 개체와 같은 다양 한 언어를 사용 하는 C++ (하거나 사용 하지 않고 합니다 **#import** 지시문), 및 Visual J++ (사용 하 여 ADO/WFC 클래스 패키지).  
 
 > [!NOTE]
 > 2004 년에 Microsoft에 지원을 Visual J++에 대 한 종료 되었습니다.
 
- 이 다양성 수용 하기 위해 합니다 [Visual c + + 구문 인덱스에 대 한 ADO](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 기능, 매개 변수, 예외 동작 및 API에서 일반적인 설명에 대 한 링크를 사용 하 여 Visual c + + 언어 관련 구문을 제공 참조입니다.  
+ 이 다양성 수용 하기 위해 합니다 [시각적 개체에 대 한 ADO C++ 구문 인덱스](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) 시각적 개체를 제공 합니다. C++ 사용 하 여 언어별 구문에서 기능, 매개 변수, 예외 동작 및 등의 일반적인 설명에 대 한 링크 API 참조입니다.  
   
- ADO는 COM (구성 요소 개체 모델) 인터페이스를 사용 하 여 구현 됩니다. 그러나 다른 항목 보다 특정 프로그래밍 언어로 COM을 사용 하는 프로그래머를 위한 쉽습니다. 예를 들어, COM을 사용 하 여 거의 모든 세부 정보는 암시적으로 처리 Visual Basic 프로그래머를 위한 Visual c + + 프로그래머에 게 해당 정보 자체에 참석 해야 하는 반면.  
+ ADO는 COM (구성 요소 개체 모델) 인터페이스를 사용 하 여 구현 됩니다. 그러나 다른 항목 보다 특정 프로그래밍 언어로 COM을 사용 하는 프로그래머를 위한 쉽습니다. 예를 들어, COM을 사용 하 여 거의 모든 세부 정보는 암시적으로 처리 Visual Basic 프로그래머를 위한 반면 Visual C++ 프로그래머에 게 해당 정보 자체에 참석 해야 합니다.  
   
- 다음 섹션에서는 ADO를 사용 하는 C 및 c + + 프로그래머에 대 한 세부 정보를 요약 및 **#import** 지시문입니다. COM에 특정 데이터 형식에 중점을 둡니다 (**Variant**를 **BSTR**, 및 **SafeArray**), 및 오류 처리 (_com_error).  
+ 다음 섹션에서는 C에 대 한 세부 정보를 요약 하 고 C++ ADO를 사용 하는 프로그래머와 **#import** 지시문입니다. COM에 특정 데이터 형식에 중점을 둡니다 (**Variant**를 **BSTR**, 및 **SafeArray**), 및 오류 처리 (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>#Import 컴파일러 지시문을 사용 하 여  
- 합니다 **#import** Visual c + + 컴파일러 지시문 ADO 메서드 및 속성을 사용 하 여 작업을 간소화 합니다. 지시문 (Msado15.dll) ADO.dll 등 형식 라이브러리를 포함 하는 파일의 이름을 사용 하 고 typedef 선언, 인터페이스 및 열거 상수에 대 한 스마트 포인터를 포함 하는 헤더 파일을 생성 합니다. 각 인터페이스 캡슐화 되었거나 클래스에서 래핑되어 있습니다.  
+ 합니다 **#import** Visual C++ 컴파일러 지시문 ADO 메서드 및 속성을 사용 하 여 작업을 간소화 합니다. 지시문 (Msado15.dll) ADO.dll 등 형식 라이브러리를 포함 하는 파일의 이름을 사용 하 고 typedef 선언, 인터페이스 및 열거 상수에 대 한 스마트 포인터를 포함 하는 헤더 파일을 생성 합니다. 각 인터페이스 캡슐화 되었거나 클래스에서 래핑되어 있습니다.  
   
  클래스 (즉, 메서드 또는 속성이 호출) 내에서 각 작업에는 해당 작업을 직접 (즉, "원시" 형식으로 작업)를 호출 하는 선언 및 원시 작업을 호출 하 고 작업 succ를 실행 하지 못한 경우 COM 오류를 throw 하는 선언 essfully 합니다. 작업 속성 인 경우 일반적으로 Visual Basic과 같은 구문이 있는 작업에 대 한 대체 구문을 만드는 컴파일러 지시문을 합니다.  
   
@@ -75,7 +75,7 @@ variable = objectPtr->GetProperty;  // get property value
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>컬렉션, GetItem 메서드 및 항목 속성  
 
- ADO 여러 컬렉션을 포함 하 여 정의 **필드**, **매개 변수**합니다 **속성**, 및 **오류**합니다. Visual c + +에서는 합니다 **GetItem (_인덱스_)** 메서드 컬렉션의 멤버를 반환 합니다. *인덱스* 은 **Variant**, 값은 컬렉션에서 멤버의 숫자 인덱스 또는 멤버의 이름을 포함 하는 문자열입니다.  
+ ADO 여러 컬렉션을 포함 하 여 정의 **필드**, **매개 변수**합니다 **속성**, 및 **오류**합니다. 시각적 개체의 C++의 **GetItem (_인덱스_)** 메서드는 컬렉션의 멤버를 반환 합니다. *인덱스* 은 **Variant**, 값은 컬렉션에서 멤버의 숫자 인덱스 또는 멤버의 이름을 포함 하는 문자열입니다.  
   
  **__declspec**  컴파일러 지시문을 선언 합니다 **항목** 각 컬렉션에는 대체 구문으로 속성의 기본적인 **GetItem()** 메서드. 대체 구문 대괄호를 사용 하 고 배열 참조와 비슷합니다. 일반적으로 두 가지 형태는 다음과 같습니다.  
   
@@ -96,7 +96,7 @@ rs(2) = "value"
 rs!au_fname = "value"  
 ```
   
- 위의 처음 두 형식이 Visual c + +에서와 동등한 다음과 같습니다.  
+ 시각적 개체에 해당 하는 C++ 위의 처음 두 가지 형태는:  
   
 ```cpp
 rs->Fields->GetItem(long(2))->PutValue("value");   
@@ -113,7 +113,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  에서 컬렉션을 반복 하는 예 "ADO 참조"의 "ADO 컬렉션" 섹션을 참조 합니다.  
   
 ## <a name="com-specific-data-types"></a>COM 별 데이터 형식  
- 일반적으로 모든 Visual Basic 데이터 ADO API 참조에서 찾기 형식은 Visual c + +와 동일 합니다. 와 같은 표준 데이터 형식을 사용 다음과 **unsigned char** Visual basic **바이트**에 **짧은** 에 대 한 **정수**, 및  **긴** 에 대 한 **긴**합니다. 구문 Indexesto 찾는 위치 기능을 보러 정확 하 게 지정 된 메서드 또는 속성의 피연산자가 필요 합니다.  
+ 일반적으로 모든 Visual Basic 데이터 형식이 ADO API 참조에서 찾기는 시각적 개체 C++ 와 동일 합니다. 와 같은 표준 데이터 형식을 사용 다음과 **unsigned char** Visual basic **바이트**에 **짧은** 에 대 한 **정수**, 및  **긴** 에 대 한 **긴**합니다. 구문 Indexesto 찾는 위치 기능을 보러 정확 하 게 지정 된 메서드 또는 속성의 피연산자가 필요 합니다.  
   
  이 규칙의 예외는 다음과 같습니다. COM에 특정 데이터 형식 **Variant**하십시오 **BSTR**, 및 **SafeArray**합니다.  
   
@@ -165,7 +165,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ### <a name="safearray"></a>SafeArray  
  A **SafeArray** 다른 데이터 형식의 배열을 포함 하는 구조화 된 데이터 형식입니다. A **SafeArray** 이라고 *안전 하 게* 각 배열 차원의 하 한 범위에 대 한 정보를 포함 하며 해당 범위 내에서 배열 요소에 대 한 액세스를 제한 하기 때문에 있습니다.  
   
- 경우 ADO API 참조 라는 메서드 또는 속성은 배열을 반환 합니다, 즉, 메서드 또는 속성을 사용 하거나 반환 된 **SafeArray**, 네이티브 C/c + + 배열이 아닌 합니다.  
+ 경우 ADO API 참조 라는 메서드 또는 속성은 배열을 반환 합니다, 즉, 메서드 또는 속성을 사용 하거나 반환 된 **SafeArray**, 아님 네이티브 C /C++ 배열.  
   
  예를 들어, 두 번째 매개 변수를 **연결** 개체 **OpenSchema** 메서드를 사용 하려면 배열을 **Variant** 값입니다. 이러한 **Variant** 값의 요소로 전달 되어야 합니다는 **SafeArray**, 및 **SafeArray** 다른 값으로 설정 해야 합니다 **Variant** . 다른 **Variant** 의 두 번째 인수로 전달 되는 **OpenSchema**합니다.  
   
@@ -174,7 +174,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
 ## <a name="missing-and-default-parameters"></a>누락 및 기본 매개 변수  
  Visual Basic에서는 메서드에 매개 변수가 없습니다. 예를 들어 합니다 **레코드 집합** 개체 **오픈** 메서드에 5 개의 매개 변수가 있지만 중간 매개 변수를 건너뛰고 후행 매개 변수를 생략할 수 있습니다. 기본값 **BSTR** 하거나 **Variant** 누락 피연산자의 데이터 형식에 따라 대체 됩니다.  
   
- C/c + +에서는 모든 피연산자를 지정 해야 합니다. 데이터 형식이 문자열인 누락 된 매개 변수를 지정 하려는 경우, 지정 된 **_bstr_t** null 문자열을 포함 하 합니다. 데이터 형식은 해당 누락 된 매개 변수를 지정 하려는 경우는 **Variant**, 지정는 **_variant_t** DISP_E_PARAMNOTFOUND 및 VT_ERROR 유형의 값을 사용 하 여 합니다. 또는 해당을 지정할 **_variant_t** 상수를 **vtMissing**에서 제공 하는 합니다 **#import** 지시문입니다.  
+ C에서 /C++에서 모든 피연산자를 지정 해야 합니다. 데이터 형식이 문자열인 누락 된 매개 변수를 지정 하려는 경우, 지정 된 **_bstr_t** null 문자열을 포함 하 합니다. 데이터 형식은 해당 누락 된 매개 변수를 지정 하려는 경우는 **Variant**, 지정는 **_variant_t** DISP_E_PARAMNOTFOUND 및 VT_ERROR 유형의 값을 사용 하 여 합니다. 또는 해당을 지정할 **_variant_t** 상수를 **vtMissing**에서 제공 하는 합니다 **#import** 지시문입니다.  
   
  세 가지 메서드는 예외를 사용 하는 일반적인 **vtMissing**합니다. 이들은 합니다 **Execute** 의 메서드는 **연결** 및 **명령** 개체 및 **NextRecordset** 메서드의 합니다 **레코드 집합** 개체입니다. 다음은 해당 서명이입니다.  
   
@@ -205,10 +205,10 @@ pRecordset->NextRecordset(NULL);
   
  ADO 오류입니다: ADO 작업이 실패에서 하 여 발생 합니다. 기본 공급자에서 반환한 오류를 표시 **오류** 개체를 **연결** 개체 **오류** 컬렉션입니다.  
   
- 합니다 **#import** 지시문 처리 루틴 메서드와 ADO.dll에 선언 된 속성에 대 한 오류만을 만듭니다. 그러나이 동일한 오류 처리 메커니즘 매크로 또는 인라인 함수를 검사 하 여 고유한 오류를 작성 하 여 활용을 걸릴 수 있습니다. 항목을 참조 하세요 [Visual c + + 확장](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md), 또는 예제를 보려면 다음 섹션의 코드입니다.  
+ 합니다 **#import** 지시문 처리 루틴 메서드와 ADO.dll에 선언 된 속성에 대 한 오류만을 만듭니다. 그러나이 동일한 오류 처리 메커니즘 매크로 또는 인라인 함수를 검사 하 여 고유한 오류를 작성 하 여 활용을 걸릴 수 있습니다. 항목을 참조 [시각적 C++ 확장](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md), 또는 예제를 보려면 다음 섹션의 코드입니다.  
   
-## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual c + + 해당 하는 Visual Basic 규칙  
- 다음은 ADO 설명서에서 해당 하는 Visual c + +에서를 비롯 하 여 Visual Basic의 경우에 코딩 된 여러 규칙을 요약 합니다.  
+## <a name="visual-c-equivalents-of-visual-basic-conventions"></a>Visual C++ 항목을 Visual Basic 규칙  
+ 다음은 요약 ADO 설명서에서 해당 하는 시각적 개체에서를 비롯 하 여 Visual Basic의 경우에 코딩 된 여러 규칙을 C++입니다.  
   
 ### <a name="declaring-an-ado-object"></a>ADO 개체를 선언합니다.  
  Visual basic에서 ADO 개체 변수 (이 경우에 **레코드 집합** 개체) 다음과 같이 선언 됩니다.  
@@ -230,7 +230,7 @@ Dim rst As ADODB.Recordset
 Set rst = New ADODB.Recordset  
 ```
   
- Visual c + +에서는 합니다 **#import** 지시문 모든 ADO 개체에 대 한 스마트 포인터 형식 선언을 생성 합니다. 예를 들어 가리키는 변수를 **_Recordset** 형식의 개체가 **_RecordsetPtr**를 다음과 같이 선언 되 고:  
+ 시각적 개체의 C++의 **#import** 지시어 모든 ADO 개체에 대 한 스마트 포인터 형식 선언을 생성 합니다. 예를 들어 가리키는 변수를 **_Recordset** 형식의 개체가 **_RecordsetPtr**를 다음과 같이 선언 되 고:  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -267,14 +267,14 @@ rs->Open(...);
  하나의 변수 때문에 두 가지 방법으로 사용할 수 있습니다는 "`->`" 인터페이스에 대 한 포인터 처럼 동작 하는 클래스의 인스턴스를 허용 하도록 연산자가 오버 로드 합니다. 인스턴스 변수 private 클래스 멤버에 대 한 포인터를 포함 합니다 **_Recordset** ; 인터페이스는 "`->`" 연산자의 멤버에 액세스 하는 포인터와 반환된 된 포인터를 반환 합니다는 **_Recordset**  개체입니다.  
   
 ### <a name="coding-a-missing-parameter---string"></a>누락 된 매개 변수-문자열 코딩  
- 누락 된 코드 해야 할 때 **문자열** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. Visual c + +에서는 피연산자를 지정 해야 합니다. 코드를 **_bstr_t** 빈 문자열 값으로 포함 합니다.  
+ 누락 된 코드 해야 할 때 **문자열** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. 시각적 개체의 피연산자를 지정 해야 합니다 C++입니다. 코드를 **_bstr_t** 빈 문자열 값으로 포함 합니다.  
   
 ```cpp
 _bstr_t strMissing(L"");  
 ```
   
 ### <a name="coding-a-missing-parameter---variant"></a>누락 된 매개 변수는 Variant를 코딩  
- 누락 된 코드 해야 할 때 **Variant** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. Visual c + +의 모든 피연산자를 지정 해야 합니다. 누락 된 코드 **Variant** 매개 변수를 **_variant_t** 특수 값, DISP_E_PARAMNOTFOUND, 및 형식, VT_ERROR로 설정 합니다. 또는 지정할 **vtMissing**에서 제공 하는 해당 하는 미리 정의 된 상수를 **#import** 지시문입니다.  
+ 누락 된 코드 해야 할 때 **Variant** 피연산자 Visual basic의 경우 단순히 피연산자가 생략 합니다. 시각적 개체의 모든 피연산자를 지정 해야 합니다 C++입니다. 누락 된 코드 **Variant** 매개 변수를 **_variant_t** 특수 값, DISP_E_PARAMNOTFOUND, 및 형식, VT_ERROR로 설정 합니다. 또는 지정할 **vtMissing**에서 제공 하는 해당 하는 미리 정의 된 상수를 **#import** 지시문입니다.  
   
 ```cpp
 _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
@@ -293,7 +293,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- Visual c + +에서 형식으로 변수를 선언 **_variant_t**합니다. 구성도 몇 **_variant_t** 선언 아래에 표시 됩니다.  
+ 시각적 개체의 C++, 형식으로 변수를 선언 **_variant_t**합니다. 구성도 몇 **_variant_t** 선언 아래에 표시 됩니다.  
   
 > [!NOTE]
 >  이러한 선언에는 단순히을 대략적으로 자신의 프로그램에서 코드는 제공 합니다. 자세한 내용은 아래 예제 및 Visual C++ 설명서를 참조 하세요.  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- 다음 Visual c + + 예제는 **SafeArray** 사용을 **_variant_t**합니다.  
+ 다음 시각적 개체 C++ 예제는 **SafeArray** 사용을 **_variant_t**합니다.  
   
 #### <a name="notes"></a>참고  
  다음 정보는 코드 예제에서 주석 처리 된 섹션에 해당합니다.  
@@ -434,7 +434,7 @@ cn.Close
 End Sub  
 ```
   
- 이 Visual c + + 예제는 **가져오기**/**배치**/**PutRef**_속성_합니다.  
+ 이 시각적 개체 C++ 예제는 **가져올**/**배치**/**PutRef**_속성_.  
   
 #### <a name="notes"></a>참고  
  다음 정보는 코드 예제에서 주석 처리 된 섹션에 해당합니다.  
@@ -504,7 +504,7 @@ rs.Close
 End Sub  
 ```
   
- Visual c + + 예제를 보여 줍니다 **항목**합니다.  
+ 이 시각적 개체 C++ 예제를 보여 줍니다 **항목**합니다.  
   
 > [!NOTE]
 >  다음 코드 예제에서 섹션을 주석으로 처리에 해당 됩니다.  컬렉션을 사용 하 여 액세스할 때 **항목**, 인덱스 **2**, 캐스팅 되어야 합니다 **긴** 는 적절 한 생성자를 호출 합니다.  
@@ -553,7 +553,7 @@ void main() {
 ```
   
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>사용 하 여 ADO 개체 포인터 캐스팅 (IDispatch *)  
- 다음 Visual c + + 예제를 사용 하 여 하는 방법을 보여 줍니다 (IDispatch *) 캐스트 ADO 개체 포인터에 대 한 합니다.  
+ 다음 시각적 개체 C++ 예제에서는 (IDispatch *) 캐스트 ADO 개체 포인터에 대 한 합니다.  
   
 #### <a name="notes"></a>참고  
  다음 정보는 코드 예제에서 주석 처리 된 섹션에 해당합니다.  

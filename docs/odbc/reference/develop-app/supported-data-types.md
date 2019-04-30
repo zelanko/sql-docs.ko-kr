@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a8848bad9d27dfd9318b725b77203706d3dfd5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149096"
 ---
 # <a name="supported-data-types"></a>지원되는 데이터 형식
 Dbms에서 지 원하는 데이터 형식 상당히 다릅니다. 응용 프로그램에 호출 하 여 이름 및 지원 되는 데이터 형식의 특성을 확인할 수 있습니다 **SQLGetTypeInfo**합니다. 데이터 형식 이름에 와이드 변형으로 인해 응용 프로그램에서 반환 된 데이터 형식 이름을 사용 해야 합니다 **SQLGetTypeInfo** 에 **CREATE TABLE** 문입니다. 자세한 내용은 [ODBC의 데이터 형식](../../../odbc/reference/develop-app/data-types-in-odbc.md)합니다.

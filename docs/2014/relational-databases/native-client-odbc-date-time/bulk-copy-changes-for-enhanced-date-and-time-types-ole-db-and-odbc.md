@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207108"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
   이 항목에서는 대량 복사 기능을 지원하기 위한 날짜/시간 개선 사항에 대해 설명합니다. 이 항목의 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 및 ODBC 둘 모두에 적용됩니다.  

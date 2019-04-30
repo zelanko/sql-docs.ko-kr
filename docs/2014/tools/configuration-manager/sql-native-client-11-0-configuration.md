@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137553"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 구성
   이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 **SQL Server Native Client 구성** 대화 상자에 대한 F1 도움말 항목을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 클라이언트 컴퓨터가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 시작하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하는 데 사용하는 네트워크 라이브러리입니다.  

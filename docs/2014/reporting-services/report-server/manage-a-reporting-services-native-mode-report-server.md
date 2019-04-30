@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3147829241ee3b964eb584746f7f7082aec40b7a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191076"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 관리
   이 섹션에서는 Reporting Services 구성 관리자를 사용하여 기본 모드 보고서 서버 인스턴스를 구성하는 절차를 제공합니다.  

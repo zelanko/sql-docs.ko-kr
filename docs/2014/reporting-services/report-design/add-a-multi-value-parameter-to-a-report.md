@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e974ab95f2e4ad5543a33f37af168a5f3b870eb4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206821"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
   사용자가 매개 변수에 둘 이상의 값을 선택할 수 있는 보고서에 매개 변수를 추가할 수 있습니다.  

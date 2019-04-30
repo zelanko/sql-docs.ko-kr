@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164394"
 ---
 # <a name="expression-dialog-box-report-builder"></a>식 대화 상자(보고서 작성기)
   사용 된 **식** 쓸 대화 상자 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 식이 보고서 항목 속성입니다. 식을 사용하여 색, 글꼴 및 테두리를 비롯한 여러 속성을 설정할 수 있습니다. 런타임에 보고서 처리기는 식을 계산하고 그 결과로 속성의 값을 대체합니다.  

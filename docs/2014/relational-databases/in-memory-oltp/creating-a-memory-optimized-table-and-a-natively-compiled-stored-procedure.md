@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157980"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기
   이 항목에는 메모리 내 OLTP의 구문을 소개하는 예제가 포함되어 있습니다.  

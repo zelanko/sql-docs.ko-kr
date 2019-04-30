@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191097"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version 속성(ClientNetLibInfo 클래스)
   클라이언트 네트워크 라이브러리 파일의 버전을 가져옵니다.  

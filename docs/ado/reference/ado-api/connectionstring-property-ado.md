@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140361"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 연결 하는 데 사용 하는 정보를 나타냅니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "47828915"
 |*Provider=*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름 =*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예를 들어 지속형된 데이터 원본 개체)의 이름을 지정 합니다.|  
 |*원격 공급자 =*|클라이언트 쪽 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
-|*원격 서버 =*|클라이언트 쪽 연결을 열 때 사용할 서버를의 경로 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
+|*Remote Server=*|클라이언트 쪽 연결을 열 때 사용할 서버를의 경로 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
 |*URL=*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
   
  설정한 후는 **ConnectionString** 속성 및 open 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 공급자 내용을 변경할 수 속성의 예를 들어 ADO 정의한 인수 이름에 매핑하여 해당 특정 공급자에 해당 합니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "47828915"
 |기본 ADO 공급자|Windows 운영 체제|  
 |--------------------------|------------------------------|  
 |MSDASQL<br /><br /> (소스 코드의 가독성을 높이기 이름을 명시적으로 지정 된 공급자 연결 문자열에.)|Windows 2000 (32 비트)<br /><br /> Windows XP (32 비트)<br /><br /> Windows Server 2003 (32 비트)<br /><br /> Windows Vista (32 비트)<br /><br /> Windows Vista 서비스 팩 1 또는 이후 (32 비트 및 64 비트)<br /><br /> Windows Vista (32 비트 및 64 비트) 이후 Windows 버전|  
-|기본값은 없습니다.<br /><br /> ADO 다음 오류가 반환 ADO 응용 프로그램은 다음 운영 체제에서 실행을 공급자를 명시적으로 지정 하지 않습니다: "ADODB 합니다. 연결: 공급자를 지정 하지 않으면 이며 지정 된 기본 공급자가 없습니다 "|Windows 2000 (64 비트)<br /><br /> Windows XP (64 비트)<br /><br /> Windows Server 2003 (64 비트)<br /><br /> Windows Vista (64 비트)|  
+|기본값은 없습니다.<br /><br /> ADO 응용 프로그램은 다음 운영 체제에서 실행 되며 공급자를 명시적으로 지정 하지 않습니다, ADO 다음 오류를 반환 합니다. "ADODB 합니다. 연결: 공급자를 지정 하지 않으면 이며 지정 된 기본 공급자가 없습니다 "|Windows 2000 (64 비트)<br /><br /> Windows XP (64 비트)<br /><br /> Windows Server 2003 (64 비트)<br /><br /> Windows Vista (64 비트)|  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -68,4 +68,4 @@ ms.locfileid: "47828915"
 ## <a name="see-also"></a>관련 항목  
  [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout, 및 State 속성 예제 (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

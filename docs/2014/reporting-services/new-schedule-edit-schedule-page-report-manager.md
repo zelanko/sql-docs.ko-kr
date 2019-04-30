@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188360"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>새 일정: 일정 편집 페이지 (보고서 관리자)
   새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅숏을 만들기 위해 구독에서 사용됩니다.  

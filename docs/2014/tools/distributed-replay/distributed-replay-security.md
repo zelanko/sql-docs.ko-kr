@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150346"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "53350821"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|도메인 사용자 계정 또는 로컬 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 컨트롤러, 클라이언트 및 대상 SQL Server가 모두 동일한 컴퓨터에서 실행되고 있어야 합니다.<br /><br /> **\*\* 보안 정보 \*\*** Windows의 로컬 관리자 그룹 멤버가 아닌 계정을 사용하는 것이 좋습니다.|  
 |Distributed Replay Administration Tool을 실행하는 데 사용되는 대화형 사용자 계정|로컬 사용자 계정 또는 도메인 사용자 계정일 수 있습니다. 로컬 사용자 계정을 사용하려면 관리 도구와 컨트롤러가 동일한 컴퓨터에서 실행되고 있어야 합니다.|  
   
- **중요 한**: Distributed Replay Controller를 구성할 때 Distributed Replay Client 서비스를 실행하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
+ **중요 한**: Distributed Replay controller를 구성할 때 Distributed Replay client 서비스를 실행 하는 데 사용할 사용자 계정을 하나 이상 지정할 수 있습니다. 다음은 지원되는 계정 목록입니다.  
   
 -   도메인 사용자 계정  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53350821"
   
  컨트롤러 DCOM 권한을 구성하려면 다음 단계에 따르십시오.  
   
-1.  **열기, 구성 요소 서비스 스냅인 dcomcnfg.exe**: 이 스냅인은 DCOM 권한을 구성하는 데 사용되는 도구입니다.  
+1.  **열기, 구성 요소 서비스 스냅인 dcomcnfg.exe**: DCOM 권한 구성에 사용 되는 도구입니다.  
   
     1.  컨트롤러 컴퓨터에서 **시작**을 클릭합니다.  
   
@@ -78,9 +78,9 @@ ms.locfileid: "53350821"
   
     3.  Enter 키를 누릅니다.  
   
-2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당 컴퓨터 차원 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
+2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열 된 각 계정에 대 한 해당 컴퓨터 차원 DCOM 권한을 부여 합니다. 컴퓨터 전체 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
   
-3.  **응용 프로그램별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당 응용 프로그램별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 응용 프로그램별 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
+3.  **응용 프로그램별 DCOM 권한 구성**: 다음 표에 나열 된 각 계정에 대 한 해당 응용 프로그램별 DCOM 권한을 부여 합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 응용 프로그램별 권한을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [검사 목록: DCOM 응용 프로그램 관리](https://go.microsoft.com/fwlink/?LinkId=185842)합니다.  
   
  다음 표에서는 관리 도구를 실행하는 데 사용되는 대화형 사용자 계정과 클라이언트 서비스 계정에 필요한 DCOM 권한에 대해 설명합니다.  
   

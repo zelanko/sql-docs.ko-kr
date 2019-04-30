@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062819"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 셰이프 COMPUTE 절 생성 부모 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어진 **레코드 집합**; 내용이 새 장에서 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **Recordset** 이전 가공 **레코드 집합**; 및 자식에서 모든 열 **레코드 집합** 에 나열 된 절에서 선택 사항입니다.  

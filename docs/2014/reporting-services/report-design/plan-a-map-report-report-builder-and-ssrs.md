@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84a55d4f18b52d103997fdafee2fc2c84d9495f6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215925"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
   훌륭한 보고서는 조치를 취하거나 상황을 깊이 있게 파악할 수 있는 정보를 제공합니다. 지리적 배경에 대한 인구 통계 또는 판매량 합계와 같은 분석 데이터를 제공하기 위해 보고서에 지도를 추가할 수 있습니다. 지도에는 여러 계층이 포함될 수 있으며, 각 계층에는 위치를 나타내는 점, 길을 나타내는 선, 영역을 나타내는 다각형 등의 특정 공간 데이터 유형으로 정의되는 지도 요소가 표시됩니다. 각 계층에서 분석 데이터와 지도 요소를 연결할 수 있습니다.  

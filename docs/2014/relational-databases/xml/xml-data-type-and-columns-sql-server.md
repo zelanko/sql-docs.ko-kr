@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193070"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
   이 항목에 장점 및 제한 사항에 설명 합니다 `xml` 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XML 데이터를 저장 하는 방법을 선택할 수 있습니다.  

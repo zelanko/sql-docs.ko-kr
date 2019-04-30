@@ -1,5 +1,5 @@
 ---
-title: 'Stream (Visual c + + 구문 인덱스 #import) | Microsoft Docs'
+title: 'Stream (Visual C++ #import 구문 인덱스) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b66a3549fde85f7806443a0cf5fa1299739e6f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180709"
 ---
-# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual c + + 구문 인덱스 #import)
+# <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C++ #import 구문 인덱스)
 ## <a name="methods"></a>메서드  
   
 ```  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144344"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 디자인 화면을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 기본 유지 관리 계획을 만들 때는 **유지 관리 계획 마법사** 가 적합한 반면 디자인 화면을 사용하여 계획을 만들면 워크플로의 향상된 기능을 활용할 수 있습니다.  
@@ -160,10 +160,10 @@ ms.locfileid: "54132788"
          두 태스크 사이에서 제약 조건이 작동하는 방식을 정의합니다.  
   
          **평가 작업**  목록  
-         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 사용할 수 있는 작업에는 **제약 조건**, **식을**를 **식 및 제약 조건**, 및 **식 또는 제약 조건**합니다.  
+         선행 제약 조건에서 사용하는 평가 작업을 지정합니다. 작업은 다음과 같습니다. **제약 조건**, **식**, **식 및 제약 조건**, **식 또는 제약 조건**이 있습니다.  
   
          **값** 목록  
-         제약 조건 값을 지정합니다. **성공**, **실패**, 또는 **완료**합니다. 기본값은**성공** 입니다.  
+         제약 조건 값을 지정 합니다. **성공**, **실패** 또는 **완료**와 같은 값을 사용할 수 있습니다. 기본값은**성공** 입니다.  
   
         > [!NOTE]  
         >  선행 제약 조건 줄은 **성공**인 경우 녹색, **실패**인 경우 빨간색, **완료**인 경우 파란색으로 표시됩니다.  

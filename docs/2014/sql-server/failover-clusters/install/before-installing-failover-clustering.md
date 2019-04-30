@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190347"
 ---
 # <a name="before-installing-failover-clustering"></a>장애 조치(Failover) 클러스터링을 설치하기 전에
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행할 하드웨어와 운영 체제를 선택해야 합니다. 또한 WSFC(Windows Server 장애 조치(Failover) 클러스터링)를 구성하고 네트워크, 보안 및 기타 장애 조치(Failover) 클러스터에서 실행할 소프트웨어에 대한 고려 사항을 검토해야 합니다.  

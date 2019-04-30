@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95117c82c213851d2e0600e65d8061ce532d9933
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200460"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos(데스크톱 데이터베이스 드라이버)
 에 대 한 대량 모델 의미 체계 **SQLSetPos** 사용 하 여 호출 합니다 *irow* 0 인수 지원 됩니다.  

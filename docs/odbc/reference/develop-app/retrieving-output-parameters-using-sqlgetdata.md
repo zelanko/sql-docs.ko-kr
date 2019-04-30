@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199088"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용하여 출력 매개 변수 검색
 ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사용 하 여 쿼리 출력 매개 변수를 검색할 수 있습니다. 그러나 매개 변수 값의 크기 (예: 큰 이미지) 매우 큰 경우 매우 큰 버퍼를 할당 하기 어렵습니다. ODBC 3.8 부분에서 출력 매개 변수를 검색 하는 새로운 방법을 소개 합니다. 이제 응용 프로그램이 호출할 수 있습니다 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 큰 열 데이터를 검색 하는 것과 비슷합니다.  
@@ -112,7 +112,7 @@ ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사�
   
  응용 프로그램을 계속 사용할 수 **SQLSetDescField** 하거나 **SQLSetDescRec** 바인딩 정보를 설정 합니다. 필드 매핑 변경 되지 않습니다. 그러나 설명자 필드는 새 값을 반환할 수 있습니다. 예를 들어 SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM으로 반환할 수 있습니다.  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>결과 집합에서 부분에서 이미지를 검색 하는 사용 시나리오:  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>사용 시나리오: 결과 집합에서 부분에서 이미지를 검색 합니다.  
  **SQLGetData** 저장된 프로시저는 이미지에 대 한 메타 데이터의 한 행을 포함 하는 결과 집합을 반환 하 고 이미지를 큰 출력 매개 변수에 반환 된 부분에서 데이터를 가져오는 데 사용할 수 있습니다.  
   
 ```  
@@ -194,7 +194,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>사용 시나리오: 큰 개체 스트리밍된 입/출력 매개 변수로 송수신  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>사용 시나리오: 송신 및 수신 스트리밍된 입/출력 매개 변수로 큰 개체  
  **SQLGetData** 가져오고 저장된 프로시저를 데이터베이스에서 값을 스트리밍 입/출력 매개 변수로 사용 하는 큰 개체를 전달 하는 경우 부분에서 데이터를 보내는 데 사용할 수 있습니다. 모든 데이터를 메모리에 저장할 수 없습니다.  
   
 ```  

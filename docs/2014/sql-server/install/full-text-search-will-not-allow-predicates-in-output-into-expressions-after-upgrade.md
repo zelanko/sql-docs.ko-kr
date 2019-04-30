@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297553"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>업그레이드 후에는 전체 텍스트 검색 OUTPUT INTO 식의 조건자를 허용하지 않습니다.
   데이터베이스 호환성 수준이 100 이상으로 설정된 경우에는 OUTPUT 절에 전체 텍스트 조건자가 허용되지 않습니다.  

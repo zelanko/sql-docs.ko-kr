@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192426"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>SQL Server Native Client(OLE DB) 참조
   합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 실행 하는 하나 이상의 컴퓨터에서 데이터에 액세스 하려는 소비자에 게 인터페이스를 노출 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  

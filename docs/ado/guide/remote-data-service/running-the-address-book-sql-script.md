@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c77bece1b2ab67cc361f7445240e1a2b1190587
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191778"
 ---
 # <a name="running-the-address-book-sql-script"></a>주소록 SQL 스크립트 실행
 > [!IMPORTANT]

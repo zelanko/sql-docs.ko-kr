@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204586"
 ---
 # <a name="verify-queries-visual-database-tools"></a>쿼리 확인(Visual Database Tools)
   문제를 방지하기 위해 작성된 쿼리를 검사하고 구문이 올바른지 확인할 수 있습니다. 이 옵션은 [SQL 창](visual-database-tools.md)에 문을 입력할 때 특히 유용합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "52803345"
   
 -   **SQL 창**을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **SQL 구문 검증** 을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [쿼리 실행 &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   

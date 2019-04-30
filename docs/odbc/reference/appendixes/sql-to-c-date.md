@@ -1,5 +1,5 @@
 ---
-title: 'C: 누계 SQL | Microsoft Docs'
+title: 'SQL에서 C로: 날짜 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151269"
 ---
-# <a name="sql-to-c-date"></a>SQL에서 C로: 날짜
+# <a name="sql-to-c-date"></a>SQL에서 C로: Date
 ODBC SQL 데이터 형식은 날짜에 대 한 식별자:  
   
  SQL_TYPE_DATE  
@@ -34,8 +34,8 @@ ODBC SQL 데이터 형식은 날짜에 대 한 식별자:
 |SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> 11 < = *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 11|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|10<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> 11 < = *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 11|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|10<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|[A] 없음|data|6 [c]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|[A] 없음|데이터 [b]|16 [c]|n/a|  
+|SQL_C_TYPE_DATE|[A] 없음|data|6[c]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|[A] 없음|데이터 [b]|16[c]|n/a|  
   
  [a] 값 *BufferLength* 이 변환에 대해 무시 됩니다. 드라이버 가정 크기 **TargetValuePtr* C 데이터 형식의 크기입니다.  
   

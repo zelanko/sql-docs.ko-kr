@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288408"
 ---
 # <a name="arrays-of-parameter-values"></a>매개 변수 값 배열
 응용 프로그램 매개 변수 배열을 전달 하는 것이 유용 합니다. 예를 들어, 매개 변수 및 매개 변수가 있는 배열을 사용 하 여 **삽입** 문을 응용 프로그램은 행 개수를 한 번에 삽입할 수 있습니다. 배열을 사용 하면 여러 이점이 있습니다. 먼저 (데이터 원본에 매개 변수 배열 고유 하 게 지 원하는) 경우 많은 문에 대 한 데이터를 단일 패킷으로 전송 되기 때문에 네트워크 트래픽이 감소 됩니다. 둘째, 일부 데이터 원본은 동일한 수의 별도 SQL 문 실행할 때 보다 더 빠르게 배열을 사용 하 여 SQL 문을 실행할 수 있습니다. 마지막으로 데이터를 저장할 경우 배열에 있는 경우가 화면 데이터용으로, 응용 프로그램을에서 바인딩할 수의 모든 행에 대 한 단일 호출을 사용 하 여 특정 열 **SQLBindParameter** 단일 문을 실행 하 여 업데이트 합니다.  

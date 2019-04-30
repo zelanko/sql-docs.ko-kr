@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223490"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>인덱스 생성, 변경 및 제거
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO) 계층 구조에서 인덱스는 <xref:Microsoft.SqlServer.Management.Smo.Index> 개체로 표시됩니다. 인덱싱된 열은 <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> 속성으로 표현된 <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> 개체 모음으로 표시됩니다.  

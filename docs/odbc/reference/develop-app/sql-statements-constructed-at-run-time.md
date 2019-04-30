@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149128"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>런타임 시 생성된 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 런타임 시 SQL 문을 작성 합니다. 예를 들어, 스프레드시트 사용자 데이터를 검색할 열을 선택할 수 있습니다.  

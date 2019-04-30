@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186162"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층 추가, 변경 또는 삭제(보고서 작성기 및 SSRS)
   지도는 계층의 모음입니다. 보고서에 지도를 추가할 때 첫 번째 계층을 정의합니다. 지도 계층 마법사를 사용하여 추가 계층을 만들 수 있습니다.  

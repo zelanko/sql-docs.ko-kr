@@ -1,5 +1,5 @@
 ---
-title: '1 단계: 데이터 원본에 연결 | Microsoft Docs'
+title: '1단계: 데이터 원본에 연결 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 154fdd7368835ba2a578d3ec641705c4064859ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149015"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>1단계: 데이터 원본에 연결
 첫 번째 단계는 모든 응용 프로그램 데이터 원본에 연결 하는 것입니다. 필요한 함수를 포함 하 여이 단계는 다음 그림에 표시 됩니다.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199200"
 ---
 # <a name="bookmarks-odbc"></a>책갈피(ODBC)
 책갈피는 데이터의 행을 식별하는 데 사용되는 값입니다. 책갈피 값의 의미는 드라이버나 데이터 원본에만 알려집니다. 예를 들어 책갈피 값은 행 번호처럼 간단하거나 디스크 주소처럼 복잡할 수 있습니다. ODBC에서 책갈피 실제 책의 책갈피와에서 약간 다릅니다. 실제 책에서 판독기가 특정 페이지에 책갈피를 배치 하 고 페이지로 반환 하는 책갈피를 찾습니다. ODBC 응용 프로그램에서는 특정 행에 대해 책갈피를 요청하고 이를 저장한 다음 다시 커서에 전달하여 원래 행으로 돌아갑니다. 따라서 ODBC에서 책갈피를 기억 하 고 다음 페이지를 다시 조회 된 페이지 번호를 적어 판독기 비슷합니다.  

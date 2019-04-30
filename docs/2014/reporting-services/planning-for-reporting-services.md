@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d6784f2b0bd6c54241558c72933e296e7546337
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188352"
 ---
 # <a name="planning"></a>계획
   다음 항목을 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 더 잘 이해할 수 있습니다. 사용자의 요구에 가장 적합한 방식으로 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 환경을 설치 및 구성하는 방법을 자세히 알아보십시오.  

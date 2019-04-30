@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2bcb706eda464730d978d0098281c2ebcd2336ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192179"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지
   이 항목에서는 SharePoint 2010 및 SharePoint 2013 환경에 SQL Server Business Intelligence 기능 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]을 설치하기 위한 일반적인 토폴로지에 대해 설명합니다. 예를 들어 단일 서버와 3계층 설치에 대해 설명합니다.  
@@ -169,7 +169,7 @@ ms.locfileid: "53365765"
 ##  <a name="bkmk_sharepoint2010_scaleserver"></a> 3 계층 스케일 아웃 배포  
  이 토폴로지에서는 여러 서버에서 동일한 공유 서비스를 실행하는 스케일 아웃 배포에 대해 설명하며, 대용량 요청을 처리하고 PowerPivot 데이터 또는 Reporting Services 보고서를 위한 뛰어난 처리 성능을 제공합니다. 아래 다이어그램에는 세 개의 애플리케이션 서버 클러스터가 있으며 각 클러스터마다 다른 공유 서비스 조합을 실행합니다. SharePoint 환경에서, 서비스 검색 및 가용성이 팜에 내장됩니다. 동일한 공유 서비스 애플리케이션을 실행하는 여러 물리적 서버에 걸쳐 부하 분산은 공유 서비스 아키텍처의 일부입니다.  
   
- 여러 서버 팜을 배포하는 경우 다음 SharePoint 문서의 지침을 준수해야 합니다. [(SharePoint Server 2010)는 3 계층 팜용 여러 서버](https://go.microsoft.com/fwlink/?linkID=219834)합니다.  
+ 다중 서버 팜을 배포 하는 경우에 다음 SharePoint 문서의 지침을 준수 해야 합니다. [(SharePoint Server 2010)는 3 계층 팜용 여러 서버](https://go.microsoft.com/fwlink/?linkID=219834)합니다.  
   
  ![5 서버 토폴로지](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5 서버 토폴로지")  
   

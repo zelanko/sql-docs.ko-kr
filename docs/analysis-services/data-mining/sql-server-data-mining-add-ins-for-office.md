@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89986d3c8de4a1cbefbccf285a92a2dc19c6c7aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151399"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
 
@@ -74,7 +74,7 @@ ms.locfileid: "52504742"
   
 -   Business Intelligence  
   
--   표준  
+-   Standard  
   
  연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   

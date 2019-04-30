@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188220"
 ---
 # <a name="manage-events"></a>이벤트 관리
   특정 오류 심각도에 도달하거나 넘어선 모든 이벤트 메시지를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 전달할 수 있습니다. 이를 *이벤트 전달*이라고 합니다. 전달 서버는 마스터 서버의 역할도 할 수 있는 전용 서버입니다. 이벤트 전달을 사용하면 서버 그룹에 대한 경고 관리를 중앙 집중화함으로써 많이 사용되는 서버의 작업을 줄일 수 있습니다.  

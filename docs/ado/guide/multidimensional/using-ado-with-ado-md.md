@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194895"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD에서 ADO 사용
 ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이터 원본에 연결, 명령을 실행 하 고, 테이블 형식 데이터와 스키마 메타 데이터를 테이블 형식으로 검색 하 고 공급자 오류 정보 보기에 대 한 개체를 제공 합니다. ADO MD 다차원 데이터를 검색 하 고 다차원 스키마 메타 데이터 보기에 대 한 개체를 제공 합니다.  

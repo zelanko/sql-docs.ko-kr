@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226222"
 ---
 # <a name="about-dialog-box"></a>정보 대화 상자
   **정보** 대화 상자에는 제품 정보가 제공되며 이 대화 상자에서 제품을 실행 중인 시스템에 대한 정보를 액세스할 수 있습니다. 평가본의 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 항목은 설치가 만료되기 전까지 남은 일 수를 나열합니다. 이 대화 상자는 **도움말** 메뉴에서 사용할 수 있습니다.  

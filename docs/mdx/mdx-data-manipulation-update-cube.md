@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187616"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX 데이터 조작 - UPDATE CUBE
 
 
-  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제에 대 한이 블로그 게시물의 "할당 이해"를 참조 하세요. [Analysis Services (블로그)를 사용 하 여 쓰기 저장 응용 프로그램 빌드](https://go.microsoft.com/fwlink/?LinkId=394977)합니다.  
+  UPDATE CUBE 문은 SUM 집계를 사용하여 부모에 집계하는 큐브의 셀에 데이터를 쓰기 저장하는 데 사용됩니다. 자세한 설명 및 예제에 대 한이 블로그 게시물 "할당 이해"를 참조 하세요. [Analysis Services (블로그)를 사용 하 여 쓰기 저장 응용 프로그램 빌드](https://go.microsoft.com/fwlink/?LinkId=394977)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
   
  다음은 할당의 메서드를 설명 합니다.  
   
- **USE_EQUAL_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 따라 같은 값이 할당 됩니다.  
+ **USE_EQUAL_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 따른 동일 값이 할당 됩니다.  
   
 ```  
 <leaf cell value> =   
@@ -75,7 +75,7 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 기반 하는 같은 값이 할당 됩니다.  
+ **USE_WEIGHTED_ALLOCATION:** 업데이트 된 셀에 영향을 주는 모든 리프 셀에 다음 식에 기반 하는 동일 값이 할당 됩니다.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  

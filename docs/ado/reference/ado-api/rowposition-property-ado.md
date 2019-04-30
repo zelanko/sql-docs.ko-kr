@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e2e8bab73bfe93e8a78e013572a376b608ca9a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180617"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 속성(ADO)
 OLE DB를 가져오거나 설정 합니다. **RowPosition** 간에에서 개체를 **ADORecordsetConstruction** 개체입니다. 사용 하는 경우 **put_RowPosition** 설정 하는 **RowPosition** 개체를 결과 **레코드 집합** 개체에서 사용 하는 **RowPosition** 개체 현재 행을 결정 합니다.  

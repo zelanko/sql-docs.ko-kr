@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c11f414bded0c0b927579eb5dbec4664584a055e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204960"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>반사 관계 그리기(Visual Database Tools)
   반사 관계를 만들면 테이블에 있는 하나 이상의 열을 동일한 테이블에 있는 하나 이상의 다른 열에 연결할 수 있습니다. 예를 들어, `employee` 테이블에 `emp_id` 열과 `mgr_id` 열이 있다고 가정합니다. 각 관리자는 회사의 직원이기도 하므로 테이블 내에서 관계 선을 그려 이러한 두 열을 연결합니다. 이와 같이 관계를 설정하면 테이블에 추가되는 각 관리자 ID가 기존의 직원 ID와 일치하도록 만들 수 있습니다.  

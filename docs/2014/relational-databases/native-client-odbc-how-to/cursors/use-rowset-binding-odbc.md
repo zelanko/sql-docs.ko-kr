@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200434"
 ---
 # <a name="use-rowset-binding-odbc"></a>행 집합 바인딩 사용(ODBC)
     

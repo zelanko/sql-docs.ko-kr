@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184448"
 ---
 # <a name="sequence-properties-general-page"></a>시퀀스 속성(일반 페이지)
   시퀀스 개체를 만들고 해당 속성을 지정합니다. 시퀀스는 시퀀스를 만들 때 사용된 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바운드 개체입니다. 숫자 값의 시퀀스는 정의된 간격에 따라 오름차순이나 내림차순으로 생성되며, 시퀀스가 모두 사용되면 다시 시작(순환)되도록 구성할 수 있습니다. ID 열과 달리 시퀀스는 특정 테이블과 연결되지 않습니다. 애플리케이션에서는 시퀀스 개체를 참조하여 다음 값을 검색합니다. 시퀀스와 테이블 간의 관계는 애플리케이션에서 제어합니다. 사용자 애플리케이션에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에서 값을 조정합니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 088c9b60861266bf99649343aec2e763097bf155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198196"
 ---
 # <a name="driver-setup-dll"></a>드라이버 설정 DLL
 > [!NOTE]  
@@ -30,14 +30,14 @@ ms.locfileid: "47786331"
   
  **ConfigDSN** DLL 레지스트리에서 데이터 원본 정보를 유지 하기 위해 설치 관리자에서 다음 함수를 호출 합니다.  
   
--   **SQLWriteDSNToIni**합니다. 데이터 소스를 추가 합니다.  
+-   **SQLWriteDSNToIni**. 데이터 소스를 추가 합니다.  
   
--   **SQLRemoveDSNFromIni**합니다. 데이터 원본을 삭제 합니다.  
+-   **SQLRemoveDSNFromIni**. 데이터 원본을 삭제 합니다.  
   
--   **SQLWritePrivateProfileString**합니다. 데이터 소스 사양 하위 키 아래에 있는 드라이버 관련 값을 작성 합니다.  
+-   **SQLWritePrivateProfileString**. 데이터 소스 사양 하위 키 아래에 있는 드라이버 관련 값을 작성 합니다.  
   
--   **SQLGetPrivateProfileString**합니다. 데이터 소스 사양 하위 키에서 드라이버 관련 값을 읽습니다.  
+-   **SQLGetPrivateProfileString**. 데이터 소스 사양 하위 키에서 드라이버 관련 값을 읽습니다.  
   
--   **SQLGetTranslator**합니다. Translator 이름과 옵션에 대 한 사용자에 게 합니다. 이 함수 호출 **ConfigTranslator** 변환기에 DLL을 설치 합니다.  
+-   **SQLGetTranslator**. Translator 이름과 옵션에 대 한 사용자에 게 합니다. 이 함수 호출 **ConfigTranslator** 변환기에 DLL을 설치 합니다.  
   
  드라이버 설치 DLL 드라이버 개발자가 기록 됩니다. 드라이버의 일부일 수 있습니다 DLL 또는 별도 DLL입니다.

@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195234"
 ---
 # <a name="ole-automation-result-sets"></a>OLE 자동화 결과 집합
   OLE 자동화 속성 또는 메서드에서 1차원 또는 2차원 배열로 데이터를 반환하면 해당 배열은 클라이언트에 결과 집합으로 반환됩니다.  

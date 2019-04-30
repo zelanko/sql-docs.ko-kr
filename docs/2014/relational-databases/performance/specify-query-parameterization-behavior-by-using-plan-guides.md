@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150605"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정
   PARAMETERIZATION 데이터베이스 옵션이 SIMPLE로 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리를 매개 변수화하도록 선택할 수 있습니다. 즉, 쿼리에 포함된 모든 리터럴 값은 매개 변수로 대체됩니다. 이 프로세스를 단순 매개 변수화라고 합니다. SIMPLE 매개 변수화가 적용되면 매개 변수화할 쿼리와 매개 변수화하지 않을 쿼리를 제어할 수 없습니다. 그러나 PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정하여 데이터베이스의 모든 쿼리가 매개 변수화되도록 지정할 수 있습니다. 이 프로세스를 강제 매개 변수화라고 합니다.  

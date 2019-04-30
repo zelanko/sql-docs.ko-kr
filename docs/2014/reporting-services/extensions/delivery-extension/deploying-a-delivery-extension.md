@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164418"
 ---
 # <a name="deploying-a-delivery-extension"></a>배달 확장 프로그램 배포
   배달 확장 프로그램은 XML 구성 파일 형식으로 구성 정보를 제공합니다. XML 파일은 배달 확장 프로그램에 대해 정의된 XML 스키마를 따릅니다. 배달 확장 프로그램은 구성 파일을 설정하고 수정하기 위한 인프라를 제공합니다.  

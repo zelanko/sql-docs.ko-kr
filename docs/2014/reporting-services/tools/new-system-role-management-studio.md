@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33cf72fa9f82b4bf6fdbd8b1b5b2b73757706206
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201139"
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
   이 페이지를 사용하여 시스템 수준의 역할 정의를 만들 수 있습니다. 시스템 역할 정의는 보고서 서버 전체에 적용되는 시스템 수준 태스크 집합을 지정합니다.  

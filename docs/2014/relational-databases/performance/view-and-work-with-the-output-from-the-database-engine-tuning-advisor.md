@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151452"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  

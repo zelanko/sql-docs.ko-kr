@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e561742406c173b69bfb5040c2f2f51efdf5ed64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201219"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
   사용 하 여 테이블을 만들 때를 **itabledefinition:: Createtable** 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자 지정할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 *pwszTypeName* 전달 되는 DBCOLUMNDESC 배열의 멤버입니다. 소비자가 열의 데이터 형식을 이름으로 지정하면 DBCOLUMNDESC 구조의 *wType* 멤버로 표시되는 OLE DB 데이터 형식 매핑이 무시됩니다.  

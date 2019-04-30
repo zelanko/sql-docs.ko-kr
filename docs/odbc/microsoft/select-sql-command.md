@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127872"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 명령
 하나 이상의 테이블에서 데이터를 검색합니다.  
@@ -48,7 +48,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A *하위*, 다음 인수에서 참조 하는 SELECT 내에서 선택 및 괄호로 묶어야 합니다. 동일한 수준에서 최대 2 개의 하위를 할 수 있습니다 (중첩 되지 않음) WHERE 절에 있습니다. (인수 섹션 참조). 하위 쿼리는 조인 조건이 여러 개 포함할 수 있습니다.  
   
- [모든 &#124; DISTINCT]   [*별칭*.] *Select_Item* [AS *Column_Name*] [, [*별칭*.] *Select_Item* [AS *Column_Name*]...]  
+ [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
  SELECT 절에는 필드, 상수 및 쿼리 결과에 표시 되는 식을 지정 합니다.  
   
  기본적으로 쿼리 결과에 모든 행을 표시 모든 합니다.  
@@ -97,7 +97,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  쿼리 출력에서 열 머리글을 지정합니다. 이 경우에 유용 *Select_Item* 식 또는 필드가 포함 함수 하려는 열에 의미 있는 이름을 지정 합니다. *Column_Name* 식일 수 있지만 테이블 필드 이름에 허용 되지 않는 문자 (예를 들어, 공백)를 포함할 수 없습니다.  
   
- [*DatabaseName*!] *테이블* [*Local_Alias*] [, [*DatabaseName*!] *테이블* [*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  쿼리를 검색 하는 데이터가 포함 된 테이블을 나열 합니다. 테이블이 없으면가 열려 있으면 Visual FoxPro 표시 합니다 **엽니다** 대화 상자의 파일 위치를 지정할 수 있도록 합니다. 이 열린 후에 쿼리가 완료 된 후 테이블 열린 상태로 유지 됩니다.  
   
  *DatabaseName*! 데이터 소스를 사용 하 여 지정 된 것과 다른 데이터베이스의 이름을 지정 합니다. 데이터 소스를 사용 하 여 데이터베이스를 지정 하지 않으면 테이블이 포함 된 데이터베이스의 이름을 포함 해야 합니다. 데이터베이스 이름 뒤에 오는 및 테이블 이름 앞에 느낌표 (!) 구분 기호를 포함 합니다.  
@@ -126,7 +126,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |--------------|----------------|  
 |=|같음|  
 |==|정확 하 게 일치|  
-|Like|같은 SQL|  
+|LIKE|SQL LIKE|  
 |<>, !=, #|같지 않음|  
 |>|두 개|  
 |>=|보다 크거나 같음|  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- 이 필터 조건과 일치 하는 각 필드에 대 한 검색 *cExpression*합니다. 일부로 백분율 기호 (%) 및 밑줄 (_) 와일드 카드 문자를 사용할 수 있습니다 *cExpression*합니다. 밑줄은 문자열에서 알 수 없는 단일 문자를 나타냅니다.  
+ 이 필터 조건과 일치 하는 각 필드에 대 한 검색 *cExpression*합니다. 백분율 기호 (%)을 사용할 수 있습니다. 및의 일부로 밑줄 (_) 와일드 카드 문자 *cExpression*합니다. 밑줄은 문자열에서 알 수 없는 단일 문자를 나타냅니다.  
   
  GROUP BY *GroupColumn* [합니다 *GroupColumn* ...]  
  하나 이상의 열 값에 따라 쿼리에서 행을 그룹화 합니다. *GroupColumn* 다음 중 하나일 수 있습니다.  
@@ -259,7 +259,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  자리 표시자를 나타내는 필드와 동일한 형식 이어야 합니다. 필드가 날짜 형식인 경우에 자리 표시자 여야 합니다 {/ /}. 필드의 문자 필드 이면 자리 표시자는 빈 문자열일 ("").  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
  하나 이상의 열에 있는 데이터를 기반으로 쿼리 결과 정렬 합니다. 각 *Order_Item* 쿼리 결과에서 열과 일치 해야 하 고 다음 중 하나일 수 있습니다.  
   
 -   (하위 쿼리)에 없는 기본 SELECT 절에서 선택 항목 이기도 FROM 테이블의 필드입니다.  

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705b1a8438e4d8d4d193c30d0237467ea977abda
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049506"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
   FailureConditionLevel 속성을 사용하여 AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스)가 장애 조치(Failover)되거나 다시 시작되는 조건을 설정할 수 있습니다. 이 속성에 대한 변경 내용은 WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 또는 FCI 리소스를 다시 시작할 필요 없이 즉시 적용됩니다.  

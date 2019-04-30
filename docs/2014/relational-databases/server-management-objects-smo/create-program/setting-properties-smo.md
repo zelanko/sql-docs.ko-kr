@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192134"
 ---
 # <a name="setting-properties"></a>속성 설정
   속성은 개체에 대한 설명 정보를 저장하는 값입니다. 예를 들어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 옵션으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> 개체의 속성입니다. 속성 컬렉션을 사용하여 직접 또는 간접적으로 속성에 액세스할 수 있습니다. 속성에 직접 액세스하는 경우 다음 구문을 사용합니다.  

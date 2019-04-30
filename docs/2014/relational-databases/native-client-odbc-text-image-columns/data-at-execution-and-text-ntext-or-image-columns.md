@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7c57cf6444e5833b6deee0dcae36d71b7a6430
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195131"
 ---
 # <a name="data-at-execution-and-text-ntext-or-image-columns"></a>실행 시 데이터 및 text, ntext 또는 image 열
   ODBC 실행 시 데이터는 응용 프로그램에서 바인딩된 열 또는 매개 변수에 있는 대량의 데이터를 사용할 수 있도록 하는 기능입니다. 매우 큰를 검색할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, 버퍼로 열 바인딩 및 인출 행입니다. 매우 큰 업데이트할 때 **텍스트**를 **ntext**, 또는 **이미지** 열 응용 프로그램 못할 단순히 큰 버퍼를 할당, SQL에서 매개 변수 표식에 바인딩하지 문을 다음 문을 실행 합니다. 이러한 경우 응용 프로그램 사용 해야 합니다 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 하거나 [SQLPutData](../native-client-odbc-api/sqlputdata.md) 해당 실행 시 데이터 옵션을 사용 하 여 합니다.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46724389392221aa1f759ee68675e9436dee752f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185617"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)
   입력란, 선 또는 이미지와 같은 비컨테이너 항목만 새 보고서 항목으로 대체할 수 있습니다. 예를 들어 테이블을 입력란으로 끌어 테이블로 입력란을 대체할 수 있습니다.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186264"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>유지 관리 계획(보고 및 로깅 페이지)
   **보고 및 로깅** 대화 상자를 사용하여 유지 관리 계획이 실행될 때 생성되는 보고서와 로그를 구성할 수 있습니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "52762835"
  **원격 서버에 기록**  
  원격 서버에 유지 관리 계획 기록을 작성합니다.  
   
- **대량 삽입 태스크 편집기**  
+ **연결**  
  원격 서버에 기록할 때 사용할 연결 정보를 지정합니다.  
   
  **새로 만들기**  

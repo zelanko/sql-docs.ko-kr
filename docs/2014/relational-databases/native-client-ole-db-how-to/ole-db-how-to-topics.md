@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e1e195cf27e6d961bc7d53dac6439554022761d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209883"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
   사용 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 서버에 연결 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  

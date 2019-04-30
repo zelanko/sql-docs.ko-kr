@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190242"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>전자 메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)
 
@@ -180,15 +180,15 @@ ms.locfileid: "56802449"
   
 2.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
   
-3.  <`UrlRoot`>가 보고서 서버 URL 주소로 설정되어 있는지 확인합니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
+3.  확인 <`UrlRoot`> 보고서 서버 URL 주소로 설정 됩니다. 이 값은 보고서 서버를 구성할 때 설정되므로 이미 채워져 있을 것입니다. 그렇지 않으면 보고서 서버 URL 주소를 입력합니다.  
   
-4.  배달 섹션에서 <`ReportServerEmail`>을 찾습니다.  
+4.  배달 섹션에서 찾을 <`ReportServerEmail`>.  
   
-5.  <`SMTPServer`>에서 SMTP 서버의 이름을 입력합니다. 이 값은 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.  
+5.  <`SMTPServer`>에 SMTP 서버의 이름을 입력 합니다. 이 값은 IP 주소, 회사 인트라넷에 있는 컴퓨터의 UNC 이름 또는 정규화된 도메인 이름일 수 있습니다.  
   
-6.  <`SendUsing`>이 2로 설정되어 있는지 확인합니다. 다른 값으로 설정되어 있으면 보고서 서버에서 원격 SMTP 서비스를 사용하도록 구성되지 않은 것입니다.  
+6.  확인 <`SendUsing`>이 2로 설정 합니다. 다른 값으로 설정되어 있으면 보고서 서버에서 원격 SMTP 서비스를 사용하도록 구성되지 않은 것입니다.  
   
-7.   <`From`>에 SMTP 서버에서 전자 메일을 보낼 수 있는 권한이 있는 계정의 이름을 입력합니다.   
+7.  <`From`>을 SMTP 서버에서 전자 메일을 보낼 수 있는 권한이 있는 계정의 이름을 입력 합니다.  
   
 8.  파일을 저장합니다.  
   

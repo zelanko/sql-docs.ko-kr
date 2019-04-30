@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3f750c2383253636db255cbe9f1ce0ee676a9d9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63163967"
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Report 클래스 사용
   <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스는 보고서 서버 데이터베이스의 보고서를 나타냅니다. 구독은 특정 보고서와 연결됩니다. 보고서는 알림에 포함됩니다. 배달 확장 프로그램에서는 알림의 일부인 <xref:Microsoft.ReportingServices.Interfaces.Report> 개체를 사용하여 보고서를 렌더링합니다. <xref:Microsoft.ReportingServices.Interfaces.Report> 개체에는 보고서 이름 및 보고서 서버의 보고서 URL과 같은 보고서별 속성도 포함됩니다. 이러한 속성은 모두 배달 공급자의 일부로 사용됩니다.  

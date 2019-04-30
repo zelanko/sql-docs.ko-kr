@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191328"
 ---
 # <a name="clientnetlibinfo-class"></a>ClientNetLibInfo 클래스
   [ClientNetLibInfo 클래스](clientnetlibinfo-class.md) 는 클라이언트 네트워크 라이브러리에 대한 정보를 나타냅니다.  

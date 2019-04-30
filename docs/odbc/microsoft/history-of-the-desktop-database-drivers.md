@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127263"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버의 기록
 다음 표에서 데스크톱 데이터베이스 드라이버 버전 기록을 보여 줍니다.  

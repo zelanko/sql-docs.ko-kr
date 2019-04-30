@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4267776593637a01aef38a218f7272261fd1d448
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140169"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
 데이터 용량을 나타냅니다는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061446"
 ---
 # <a name="handles"></a>핸들
 핸들은 특정 항목을 식별 하는 불투명 한 32 비트 값 odbc에서이 항목에는 환경, 연결, 문 또는 설명자 수 있습니다. 응용 프로그램을 호출할 때 **SQLAllocHandle**, 드라이버 관리자 또는 드라이버 지정 된 형식의 새 항목을 만들고 응용 프로그램에 해당 핸들을 반환 합니다. 나중에 응용 프로그램 ODBC 함수를 호출할 때 해당 항목을 식별 하는 핸들을 사용 합니다. 드라이버 관리자와 드라이버 핸들을 사용 하 여 항목에 대 한 정보를 찾을 수 있습니다.  
@@ -78,7 +78,7 @@ SQLCloseCursor(hstmtOrder);
   
  나중에 응용 프로그램 호출 **SQLExecute** 줄 번호는 특정 판매 주문에 대 한 결과 집합을 생성 하려면 동일한 핸들을 전달 합니다. 드라이버 구조에서 액세스 계획 식별자를 검색 하는 핸들을 사용 합니다. 계획을 실행 하도록 지시 하려면 데이터 원본 식별자를 보냅니다.  
   
- ODBC에는 두 가지 수준의 핸들: 드라이버 관리자 핸들 및 드라이버입니다. 응용 프로그램 드라이버 관리자에서 해당 함수를 호출 하므로 ODBC 함수를 호출할 때 드라이버 관리자 핸들을 사용 합니다. 드라이버 관리자가이 핸들을 사용 하 여 해당 드라이버 핸들을 검색 하 고 드라이버에서 함수를 호출할 때 드라이버 핸들을 사용 합니다. 드라이버 및 드라이버 관리자 핸들 사용 하는 방법의 예제를 참조 하세요 [연결 프로세스에서 드라이버 관리자의 역할](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)입니다.  
+ ODBC에는 두 가지 수준의 핸들에 있습니다. 드라이버 관리자 핸들 및 드라이버입니다. 응용 프로그램 드라이버 관리자에서 해당 함수를 호출 하므로 ODBC 함수를 호출할 때 드라이버 관리자 핸들을 사용 합니다. 드라이버 관리자가이 핸들을 사용 하 여 해당 드라이버 핸들을 검색 하 고 드라이버에서 함수를 호출할 때 드라이버 핸들을 사용 합니다. 드라이버 및 드라이버 관리자 핸들 사용 하는 방법의 예제를 참조 하세요 [연결 프로세스에서 드라이버 관리자의 역할](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)입니다.  
   
  ODBC 아키텍처;에 대 한 아티팩트는 두 가지 수준의 처리는 대부분의 경우에는 응용 프로그램 또는 드라이버 관련이 없습니다. 가 일반적으로 작업을 수행 하지 않아도 이지만 응용 프로그램을 호출 하 여 드라이버 핸들 수를 확인할 수 **SQLGetInfo**합니다.  
   

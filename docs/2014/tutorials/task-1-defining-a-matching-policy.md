@@ -1,5 +1,5 @@
 ---
-title: '작업 1: 일치 정책 정의 | Microsoft Docs'
+title: '태스크 1: 일치 정책 정의 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222764"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>작업 1: 일치 정책 정의
-  이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 이 규칙에는 **Supplier ID**, 규칙의 다른 도메인을 사용 하려면 먼저 Supplier Id와 일치 해야 함을 의미 합니다. 이 규칙에는 **Supplier Name** 사용 하 여 **유사성** 값으로 설정 **70%** 하 고 **Contact Email** 사용 하 여 **유사성** 값설정**30%** 합니다.  
+# <a name="task-1-defining-a-matching-policy"></a>태스크 1: 일치 정책 정의
+  이 작업에서는 규칙이 포함된 일치 정책을 만듭니다. 규칙 하나의 필요 조건이 포함 됩니다. **Supplier ID**, 규칙의 다른 도메인을 사용 하려면 먼저 Supplier Id와 일치 해야 함을 의미 합니다. 다른 두 도메인을 사용 하는 규칙: **Supplier Name** 사용 하 여 **유사성** 값으로 설정 **70%** 하 고 **Contact Email** 사용 하 여 **유사성** 값설정**30%** 합니다.  
   
 1.  기본 페이지에서 **DQS 클라이언트**, 클릭 **오른쪽 화살표** 옆에 **Suppliers** 지식 베이스를 선택한 **일치 정책**합니다.  
   

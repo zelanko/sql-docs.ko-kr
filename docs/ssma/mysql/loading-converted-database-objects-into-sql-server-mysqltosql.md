@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b2e58eb534088482493e6f36c3841f36644183af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187232"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(MySQLToSQL)
 MySQL 데이터베이스를 변환한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 결과 데이터베이스 개체를 로드할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. 개체를 만드는 SSMA를 포함할 수 있습니다 또는 개체를 스크립팅 합니다 하 고 직접 스크립트를 실행할 수 있습니다. SSMA의 실제 콘텐츠를 사용 하 여 대상 메타 데이터를 업데이트할 수 있습니다 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스.  

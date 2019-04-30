@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192826"
 ---
 # <a name="row-property-ado"></a>Row 속성(ADO)
 OLE DB를 가져오거나 설정 합니다. **행** 에서 개체를 [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md) 개체입니다. 사용 하는 경우 **put_Row** 설정 하는 **행** 개체를 행 ADO로 바뀝니다 **레코드** 개체입니다.  
   
-## <a name="readwritesyntax"></a>읽기/쓰기입니다. 구문  
+## <a name="readwritesyntax"></a>Read/write.Syntax  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -41,7 +41,7 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  OLE DB에 대 한 포인터 **행** 개체입니다.  
   
- *pRow*  
+ *PRow*  
  OLE DB **행** 개체입니다.  
   
 ## <a name="return-values"></a>반환 값  

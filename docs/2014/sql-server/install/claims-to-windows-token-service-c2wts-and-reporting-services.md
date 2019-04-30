@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206450"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
   The SharePoint Claims to Windows Token Service (c2WTS) is required with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 SharePoint C2WTS(Windows 토큰 서비스에 대한 클레임)가 필요합니다. 특히 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스할 경우라도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint C2WTS가 필요합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "53354350"
 ## <a name="prerequisites"></a>사전 요구 사항  
   
 > [!NOTE]  
->  참고: 일부 구성 단계는 특정 팜 토폴로지에 따라 변경될 수 있으며, 작동하지 않을 수도 있습니다. 예를 들어 단일 서버 설치에는 Windows Identity Foundation C2WTS 서비스가 지원되지 않으므로 이 팜 구성에서는 Windows 토큰 위임에 대한 클레임 시나리오가 가능하지 않습니다.  
+>  참고: 구성 단계를 일부 변경 되거나 특정 팜 토폴로지에 작동 하지 않을 수 있습니다. 예를 들어 단일 서버 설치에는 Windows Identity Foundation C2WTS 서비스가 지원되지 않으므로 이 팜 구성에서는 Windows 토큰 위임에 대한 클레임 시나리오가 가능하지 않습니다.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>c2WTS를 구성하기 위해 필요한 기본 단계  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53354350"
   
      c2WTS '호출자' id가 명시적으로 필요한 구성 파일에 나열 **c2wtshost.exe.config**. c2WTS 요청 수락 하지 않습니다 모든 인증 된 사용자의 시스템에서 이렇게 하려면 구성 되지 않으면. 이 경우 ‘caller’는 WSS_WPG Windows 그룹입니다. c2wtshost.exe.confi 파일은 다음 위치에 저장됩니다.  
   
-     **Files\windows identity Foundation\v3.5\c2wtshost.exe.config**  
+     **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      다음은 구성 파일의 예입니다.  
   

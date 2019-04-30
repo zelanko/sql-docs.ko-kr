@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204585"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>쿼리 형식(Visual Database Tools)
   쿼리 및 뷰 디자이너에서는 선택, 결과 삽입, 값 삽입, 업데이트, 삭제 및 테이블 만들기 쿼리 형식에 대한 기본적인 기능을 제공하고 UNION 쿼리, 전체 텍스트 검색 쿼리 및 CASE 식 쿼리도 지원합니다.  

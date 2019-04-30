@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156995"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 어플라이언스 경고 추적
 이 항목에서는 SQL Server PDW 어플라이언스에에서 경고를 추적 하는 관리 콘솔과 시스템 뷰를 사용 하는 방법을 설명 합니다.  

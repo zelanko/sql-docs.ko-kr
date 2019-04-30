@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065279"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 사용 하 여 데이터 소스 행의 낙관적 업데이트 하는 동안 충돌을 검색 하는 필드를 사용할 수 있습니다 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체.  

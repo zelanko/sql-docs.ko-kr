@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193302"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** 는 열 값을 바인딩하지 않고 결과 집합 데이터를 검색하는 데 사용됩니다. 동일한 열에서**SQLGetData** 를 연속해서 호출하여 **text**, **ntext**또는 **image** 데이터 형식 열에서 많은 양의 데이터를 검색할 수 있습니다.  

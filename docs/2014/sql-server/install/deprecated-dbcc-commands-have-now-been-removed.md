@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80fb8505cfd98f4ee60ea809928a8a632d102bac
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187903"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>사용되지 않는 DBCC 명령이 제거되었습니다.
   다음 표에는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]에서 더 이상 사용되지 않는다고 발표된 DBCC 명령이 나와 있습니다. 이러한 명령은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제거되었습니다. 더 이상 사용되지 않는 이러한 명령에 대한 참조를 제거하려면 애플리케이션과 스크립트를 업데이트해야 합니다.  

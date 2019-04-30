@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126244"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Windows 애플리케이션에서 URL 액세스 사용
   보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에 포함시킬 수도 있습니다. 하지만 Windows Forms와 관련된 URL 액세스의 경우에는 웹 브라우저 기술을 사용해야 합니다. URL 액세스 및 Windows Forms에서 다음과 같은 통합 시나리오를 사용할 수 있습니다.  

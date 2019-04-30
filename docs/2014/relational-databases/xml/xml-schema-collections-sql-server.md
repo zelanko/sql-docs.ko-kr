@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193033"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
   항목에 설명 된 대로 [xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)를 통해 XML 데이터의 기본 저장소를 제공 하는 SQL Server는 `xml` 데이터 형식입니다. 열 또는 변수와 XSD 스키마를 필요에 따라 연결할 수 있습니다 `xml` XML 스키마 컬렉션을 통해 형식입니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  

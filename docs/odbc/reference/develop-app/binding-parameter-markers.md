@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199397"
 ---
 # <a name="binding-parameter-markers"></a>바인딩 매개 변수 표식
 응용 프로그램 매개 변수를 호출 하 여 바인딩합니다 **SQLBindParameter**합니다. **SQLBindParameter** 한 번에 하나의 매개 변수를 바인딩합니다. 사용 하 여 응용 프로그램이 다음을 지정합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "47645991"
   
 -   매개 변수 형식 (입력, 입/출력 또는 출력)입니다. 프로시저 호출에 매개 변수를 제외 하 고 모든 매개 변수는 입력된 매개 변수를 사용 합니다. 자세한 내용은 [프로시저 매개 변수](../../../odbc/reference/develop-app/procedure-parameters.md)이 섹션의 뒷부분에 나오는.  
   
--   변수의 C 데이터 유형, 주소 및 바이트 길이 매개 변수에 바인딩됩니다. 드라이버는 SQL 데이터 형식으로 C 데이터 형식에서 데이터를 변환할 수 있어야 합니다. 또는 오류가 반환 됩니다. 지원 되는 변환의 목록을 참조 하세요 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 부록 d: 데이터 형식에서입니다.  
+-   변수의 C 데이터 유형, 주소 및 바이트 길이 매개 변수에 바인딩됩니다. 드라이버는 SQL 데이터 형식으로 C 데이터 형식에서 데이터를 변환할 수 있어야 합니다. 또는 오류가 반환 됩니다. 지원 되는 변환의 목록을 참조 하세요 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 부록 d: 데이터 형식입니다.  
   
 -   SQL 데이터 형식, 정밀도 및 매개 변수 자체의 확장입니다.  
   

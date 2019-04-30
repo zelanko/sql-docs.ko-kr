@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057959"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>보고서 서버 상태(SSRS 기본 모드)
   이 페이지를 사용하여 현재 연결된 보고서 서버 인스턴스에 대한 정보를 볼 수 있습니다. 이 페이지는 보고서 서버 구성의 시작 페이지입니다. 추가 페이지에서는 URL, 서비스 계정, 보고서 서버 데이터베이스, 보고서 서버 전자 메일 배달, 스케일 아웃 배포 및 암호화 키를 구성할 수 있습니다.  

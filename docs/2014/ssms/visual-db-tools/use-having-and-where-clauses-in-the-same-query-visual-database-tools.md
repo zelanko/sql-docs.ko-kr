@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204633"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)
   경우에 따라서는 HAVING 절을 사용하여 그룹 전체에 조건을 적용하기 전에 WHERE 절을 사용하여 그룹에서 개별 행을 제외해야 할 수도 있습니다.  

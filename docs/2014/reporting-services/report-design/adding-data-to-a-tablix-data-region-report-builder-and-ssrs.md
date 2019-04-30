@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207208"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>테이블릭스 데이터 영역에 데이터 추가(보고서 작성기 및 SSRS)
   보고서 데이터 세트의 데이터를 테이블 또는 행렬에 표시하려면 각 데이터 셀에서 표시할 데이터 세트 필드의 이름을 지정합니다. 세부 데이터 또는 그룹화된 데이터를 표시할 수 있습니다. 테이블 또는 행렬에 그룹을 추가하면 그룹 값 및 그룹 데이터를 위한 행과 열이 자동으로 추가됩니다. 그런 다음 데이터의 부분합과 합계를 추가할 수 있습니다.  

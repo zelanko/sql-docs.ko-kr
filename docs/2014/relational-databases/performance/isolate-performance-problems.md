@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e700f5178a3520fe83f4d896662a8741aa166b9a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150916"
 ---
 # <a name="isolate-performance-problems"></a>성능 문제 격리
   도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  

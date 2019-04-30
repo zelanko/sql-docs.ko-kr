@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157463"
 ---
 # <a name="start-report-builder-report-builder"></a>보고서 작성기 시작(보고서 작성기)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 독립 실행형 포함 및 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전의 보고서 작성기. [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 버전은 기본 모드 또는 SharePoint 통합 모드로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용할 수 있습니다.  

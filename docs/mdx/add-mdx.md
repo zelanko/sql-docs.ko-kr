@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59031a14dd4c844aa8b0540d640e683c9d2f0894
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201677"
 ---
 # <a name="-add-mdx"></a>+ (더하기)(MDX)
 

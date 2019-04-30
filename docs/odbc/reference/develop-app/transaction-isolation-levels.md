@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149093"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 *트랜잭션 격리 수준* 격리는 트랜잭션에 성공 하는 정도 측정 됩니다. 특히 트랜잭션 격리 수준은 다음 현상의 현재 상태에 따라 정의 됩니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186291"
 ---
 # <a name="dbms-based-drivers"></a>DBMS 기반 드라이버
 DBMS 기반 드라이버는 드라이버 사용에 대 한 독립 실행형 데이터베이스 엔진을 제공 하는 Oracle 또는 SQL Server와 같은 데이터 원본 사용 됩니다. 이러한 드라이버는 독립 실행형 엔진이; 통해 실제 데이터에 액세스 즉, SQL 문을 제출 하며 엔진에서 결과 검색 합니다.  

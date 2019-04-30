@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 162be037a4ae458fdc609b76d8cad1ee21c27e0b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206977"
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>데이터 바인딩된 이미지 추가(보고서 작성기 및 SSRS)
   데이터베이스에 저장된 이미지에 대한 참조를 보고서에 포함할 수 있습니다. 이러한 이미지를 *데이터 바인딩된 이미지*라고 합니다. 제품 목록에서 제품 이름과 함께 표시되는 그림을 예로 들 수 있습니다.  

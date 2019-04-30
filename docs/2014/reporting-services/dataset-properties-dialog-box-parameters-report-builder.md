@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164989"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>데이터 집합 속성 대화 상자, 매개 변수(보고서 작성기)
   선택 **매개 변수** 에 **데이터 집합 속성** 대화 상자를 추가, 변경 및 쿼리 매개 변수를 삭제 합니다.  

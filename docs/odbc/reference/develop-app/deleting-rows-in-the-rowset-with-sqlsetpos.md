@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049833"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos를 사용하여 행 집합에서 행 삭제
 삭제 연산의 **SQLSetPos** 데이터 원본에서 테이블의 하나 이상의 선택한 행을 삭제 합니다. 사용 하 여 행을 삭제 하 **SQLSetPos**, 응용 프로그램이 호출 **SQLSetPos** 사용 하 여 *작업* SQL_DELETE로 설정 하 고 *RowNumber* 로 삭제할 행의 수입니다. 하는 경우 *RowNumber* 가 0 이면 행 집합의 모든 행이 삭제 됩니다.  

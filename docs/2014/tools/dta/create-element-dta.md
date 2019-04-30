@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149485"
 ---
 # <a name="create-element-dta"></a>Create 요소(DTA)
   인덱스, 통계 또는 힙 구조에 대한 정보를 사용자 지정 구성에 포함합니다.  

@@ -17,13 +17,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: daf554338a50a81f46d86a77bf04e770fcc2512e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137457"
 ---
-# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>5단원: 신경망 및 로지스틱 회귀 모델 작성(중급 데이터 마이닝 자습서)
+# <a name="lesson-5-building-neural-network-and-logistic-regression-models-intermediate-data-mining-tutorial"></a>5단원: 신경망 및 로지스틱 회귀 모델 (중급 데이터 마이닝 자습서) 작성
   
   
  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 의 운영 부서가 콜 센터에서 고객 만족도를 향상시키는 프로젝트를 수행하고 있습니다. 이 부서에서는 콜 센터를 관리하고 콜 센터 효율성에 대한 메트릭을 보고할 한 업체를 선정하고 여러분에게 이 업체가 제공한 일부 예비 정보를 분석하는 업무를 요청합니다. 이 부서에서는 업체가 보고한 정보에 관심이 갈 만한 내용이 있는지 알고 싶습니다. 특히 이 데이터에서 직원 배치의 문제점 또는 고객 만족도를 개선하는 방법을 제안하는지 알고 싶습니다.  

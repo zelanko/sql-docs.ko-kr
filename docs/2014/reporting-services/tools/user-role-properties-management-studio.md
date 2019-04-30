@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4409e62761018263b9ce78471661ae70afda1887
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190805"
 ---
 # <a name="user-role-properties-management-studio"></a>사용자 역할 속성(Management Studio)
   이 페이지를 사용하여 항목 수준의 역할 정의에 포함된 태스크를 볼 수 있으며 태스크 목록을 변경하거나 역할 설명을 수정할 수 있습니다.  

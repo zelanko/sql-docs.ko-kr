@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198762"
 ---
 # <a name="managing-data-sources"></a>데이터 원본 관리
 드라이버의 설치 프로그램에서 ODBC 드라이버를 설치한 후에 대 한 하나 이상의 데이터 원본을 정의할 수 있습니다. 데이터 원본 이름 (DSN)에 데이터의 고유한 설명을 제공 해야 예를 들어 *급여* 하거나 *Accounts Payable*합니다. 현재 설치 된 모든 드라이버에 대해 정의 된 사용자 및 시스템 데이터 원본에 나열 됩니다는 **사용자 DSN** 또는 **시스템 DSN** 탭을 **ODBC 데이터 원본 관리자**대화 상자. 지정된 된 디렉터리의 파일 데이터 원본에 나열 됩니다는 **파일 DSN** 탭을 표시할 디렉터리에 입력를 **찾는 위치** 상자에 **파일 DSN** 탭 합니다.  

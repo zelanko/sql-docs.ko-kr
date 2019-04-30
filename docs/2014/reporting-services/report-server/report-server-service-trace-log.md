@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190956"
 ---
 # <a name="report-server-service-trace-log"></a>보고서 서버 서비스 추적 로그
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 추적 로그는 보고서 서버 웹 서비스, 보고서 관리자 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있는 ASCII 텍스트 파일입니다. 추적 로그 파일에는 다른 로그 파일에 기록되는 중복된 정보와 다른 방법으로는 사용할 수 없는 추가 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 애플리케이션을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다.  

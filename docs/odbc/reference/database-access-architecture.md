@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186269"
 ---
 # <a name="database-access-architecture"></a>데이터베이스 액세스 아키텍처
 ODBC의 개발에서 질문 중 하나를 표준화 하는 데이터베이스 액세스 아키텍처의 어느 부분 이었습니다. SQL 모듈 및 Cli-이 아키텍처의 일부에 지나지는 embedded SQL 이전 섹션에 설명 된 SQL 프로그래밍 인터페이스입니다. 사실, 않았기 때문에 미니 컴퓨터 및 메인프레임 Dbms 개인용 컴퓨터 기반 응용 프로그램에 연결할 ODBC 주로 의도도 다양 한 네트워크 구성 요소 중 일부는으로 표준화 될 수 있습니다.  

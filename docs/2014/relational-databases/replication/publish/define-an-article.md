@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21ae1c8019617005bd87e426ec314f6237fdab38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128718"
 ---
 # <a name="define-an-article"></a>아티클 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클을 정의하는 방법에 대해 설명합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "53355971"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. ', \, /, \< , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
+-   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ' , \ , / , \< , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
   
 ##  <a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  

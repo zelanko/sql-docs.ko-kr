@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161505"
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드에 적용 되는 경우는 **LockType** 속성이 **adLockOptimistic** 또는 **adLockPessimistic**합니다. 직접 실행 모드에서 레코드를 변경할은 데이터 원본에 즉시 전파를 호출 하 여 행에 대 한 작업 완료를 선언 합니다 **업데이트** 메서드.  

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201578"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>이전 버전과의 호환성 및 표준 준수
-이전 버전과 호환성은 이전 ODBC 구성 요소를 사용 하는 기능 최신 ODBC 구성 요소입니다. 다음 섹션에서는 이러한 구성 요소에 주는 영향 ODBC 3의 변경 내용을 논의 *.x*합니다. 기본적으로 포함 된 정보는 ODBC 3을 작성 하는 주소 *.x* 응용 프로그램 및 ODBC 드라이버에서 호환성 문제는 처리 하는 뒤로 하는 방법입니다. 문제는 ODBC 3을 작성 하는 영향을 어떻게 이전 버전과 호환성에 대 한 특정 지침은 *.x* 드라이버를 참조 하십시오 [이전 버전과 호환성에 대 한 부록 g: 드라이버 지침](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)합니다.  
+이전 버전과 호환성은 이전 ODBC 구성 요소를 사용 하는 기능 최신 ODBC 구성 요소입니다. 다음 섹션에서는 이러한 구성 요소에 주는 영향 ODBC 3의 변경 내용을 논의 *.x*합니다. 기본적으로 포함 된 정보는 ODBC 3을 작성 하는 주소 *.x* 응용 프로그램 및 ODBC 드라이버에서 호환성 문제는 처리 하는 뒤로 하는 방법입니다. 문제는 ODBC 3을 작성 하는 영향을 어떻게 이전 버전과 호환성에 대 한 특정 지침은 *.x* 드라이버 참조 [부록 g: 이전 버전과 호환성에 대 한 드라이버 지침](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "47772141"
   
 -   [동작 변경](../../../odbc/reference/develop-app/behavioral-changes.md)  
   
--   [ODBC 3.x 응용 프로그램 작성](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
+-   [ODBC 3.x 애플리케이션 작성](../../../odbc/reference/develop-app/writing-odbc-3-x-applications.md)  
   
 -   [ODBC 3.x 드라이버 작성](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)

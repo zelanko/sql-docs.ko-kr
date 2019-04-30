@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20ea97f50592c6d8abc51e64acb4a164ad0b95b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192972"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 시스템 저장 프로시저
   SQL Server는 OPENXML과 함께 사용되는 다음 시스템 저장 프로시저를 제공합니다.  

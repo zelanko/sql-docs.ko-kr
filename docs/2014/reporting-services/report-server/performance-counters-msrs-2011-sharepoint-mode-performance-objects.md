@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191195"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>MSRS 2014 웹 서비스 SharePoint 모드 및 MSRS 2014 Windows 서비스 SharePoint 모드 성능 개체에 대한 성능 카운터(SharePoint 모드)
   이 항목에서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 모드 배포 중에 포함되는 `MSRS 2014 Web Service SharePoint Mode` 및 `MSRS 2014 Windows Service SharePoint Mode` 성능 개체의 성능 카운터에 대해 설명합니다.  

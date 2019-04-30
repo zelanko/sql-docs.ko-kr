@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298017"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions 및 SetPermissions 메서드 예제(VB)
 이 예제에서는 합니다 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) 하 고 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 메서드. 다음 코드를 관리자로 Orders 테이블에 대 한 전체 액세스를 제공합니다.  

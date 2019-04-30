@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba96d6312710f16f70b296dcb17bc3d5f226ff19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200209"
 ---
 # <a name="determining-the-characteristics-of-a-result-set-odbc"></a>결과 집합의 특징 확인(ODBC)
   메타데이터는 다른 데이터를 설명하는 데이터입니다. 예를 들어 결과 집합 메타데이터는 결과 집합에 있는 열 수, 이러한 열의 데이터 형식, 이름, 전체 자릿수, Null 허용 여부 등과 같은 결과 집합의 특징을 설명합니다.  

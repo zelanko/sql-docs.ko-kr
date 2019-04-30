@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198310"
 ---
 # <a name="default-driver-subkey"></a>기본 드라이버 하위 키
 기본 하위 키에는 기본 데이터 원본에서 사용 되는 드라이버를 설명 하는 단일 값을 포함 합니다. 이 값의 형식이 다음 표에 표시 됩니다.  
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|**드라이버**|REG_SZ|*기본-드라이버-설명*|  
+|**드라이버**|REG_SZ|*default-driver-description*|  
   
  합니다 *기본 드라이버 설명* 이름은 드라이버를 설명 하는 ODBC 드라이버 하위 키 아래 값의 이름과 동일 합니다.  
   

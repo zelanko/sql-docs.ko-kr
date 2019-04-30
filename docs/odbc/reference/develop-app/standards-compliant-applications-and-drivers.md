@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148911"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>표준 준수 애플리케이션 및 드라이버
-표준 호환 응용 프로그램 또는 드라이버 하나인 Open 그룹 CAE 사양 "데이터 관리:: SQL 호출 수준 인터페이스 (CLI)," 및 ISO/IEC 9075 따르는-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  
+표준 호환 응용 프로그램 또는 드라이버 하나인 Open 그룹 CAE 사양을 준수 하는 "데이터 관리: SQL 호출 수준 인터페이스 (CLI)"및 9075 ISO/IEC-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  
   
  ODBC 3 *.x* 다음과 같은 기능을 보장 합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47811341"
   
 -   표준 호환 응용 프로그램을 호출 하는 경우 **SQLAllocEnv** (때문에 발생할 수 있는 **SQLAllocEnv** 는 Open Group 및 ISO CLI에서 올바른 함수), 호출에 매핑된  **SQLAllocHandleStd** 컴파일 타임에 있습니다. 결과적으로, 런타임 시 응용 프로그램 호출 **SQLAllocHandleStd**합니다. 이 호출을 처리 하는 동안 드라이버 관리자 SQL_OV_ODBC3를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 에 대 한 호출 **SQLAllocHandleStd** 를 호출 하는 것과 같습니다 **SQLAllocHandle** 사용 하 여는 *HandleType* SQL_HANDLE_ENV 및에 대 한 호출의 **SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3으로 설정 합니다.  
   
--   표준 호환 응용 프로그램을 호출 하는 경우 **SQLBindParam** (때문에 발생할 수 있는 **SQLBindParam** 는 Open Group 및 ISO CLI에서 올바른 함수), ODBC 3 *.x* 드라이버 관리자에서 해당 호출에 대 한 호출을 매핑합니다 **SQLBindParameter**합니다. (참조 [SQLBindParam 매핑](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침입니다.)  
+-   표준 호환 응용 프로그램을 호출 하는 경우 **SQLBindParam** (때문에 발생할 수 있는 **SQLBindParam** 는 Open Group 및 ISO CLI에서 올바른 함수), ODBC 3 *.x* 드라이버 관리자에서 해당 호출에 대 한 호출을 매핑합니다 **SQLBindParameter**합니다. (참조 [SQLBindParam 매핑](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) 부록 g: 드라이버 지침 이전 버전과 호환성에 대 한 합니다.)  
   
 -   ODBC 3 ISO CLI를 사용 하 여 맞게 *.x* 헤더 파일에 대 한 호출에 사용 되는 정보 유형에 대 한 별칭을 포함 **SQLGetInfo**합니다. 표준 호환 응용 프로그램을 ODBC 3 대신 이러한 별칭을 사용할 수 *.x* 정보 유형입니다. 자세한 내용은 다음 항목을 참조 하세요 [헤더 파일](../../../odbc/reference/develop-app/header-files.md)합니다.  
   

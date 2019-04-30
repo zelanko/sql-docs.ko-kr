@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225560"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 WDAC(Windows Data Access Component)(이전의 MDAC(Microsoft Data Access Component))의 기능을 제공할 뿐만 아니라 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 제공하는 다른 여러 기능도 구현합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "48074923"
  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 도입된 동작 변경 사항에 대해 설명합니다. 열 결과 또는 출력 매개 변수를 바인딩할 때 고정 길이 버퍼를 제공하는 경우, 종결 문자 이전에 버퍼에 작성된 `wchar` 문자가 서로게이트 쌍의 상위 서로게이트 코드 포인트인 경우 및 다음 `wchar` 문자가 하위 서로게이트 코드 포인트인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 상위 서로게이트 코드 포인트를 버퍼에 추가하지 않습니다.  
   
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 응용 프로그램을 구성할 수 있는 방법을 설명합니다.  
+ [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 애플리케이션을 구성할 수 있는 방법을 설명합니다.  
   
  [확장 이벤트 로그의 진단 정보 액세스](accessing-diagnostic-information-in-the-extended-events-log.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 향상된 기능과, 링 버퍼 및 XEvents 로그의 진단 정보에 액세스하는 데 사용되는 데이터 추적 기능에 대해 설명합니다.  

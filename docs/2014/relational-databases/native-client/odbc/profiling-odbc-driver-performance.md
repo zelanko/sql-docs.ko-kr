@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143590"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  

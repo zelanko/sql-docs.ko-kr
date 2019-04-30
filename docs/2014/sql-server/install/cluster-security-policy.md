@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b392222b8b55cc846dca66d20f70355d6778195
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064560"
 ---
 # <a name="cluster-security-policy"></a>클러스터 보안 정책
   클러스터 보안 정책 페이지를 사용하여 장애 조치(Failover) 클러스터 인스턴스의 보안 정책을 구성할 수 있습니다.  

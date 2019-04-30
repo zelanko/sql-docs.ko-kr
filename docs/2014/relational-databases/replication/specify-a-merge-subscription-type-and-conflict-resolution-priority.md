@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ef72b3c36e1cfc7d59792056e080d1cbf2d5c55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156354"
 ---
 # <a name="specify-a-merge-subscription-type-and-conflict-resolution-priority-sql-server-management-studio"></a>병합 구독 유형 및 충돌 해결 우선 순위 지정(SQL Server Management Studio)
   새 구독 마법사의 **구독 유형** 페이지에서 병합 구독 유형 및 충돌 해결 우선 순위를 지정합니다. 이 마법사의 사용 방법은 [Create a Pull Subscription](create-a-pull-subscription.md) 및 [Create a Push Subscription](create-a-push-subscription.md)를 참조하십시오.  

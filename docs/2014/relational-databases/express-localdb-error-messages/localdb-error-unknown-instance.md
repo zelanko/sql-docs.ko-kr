@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5939ace6c8f09bdf4ab2025dc4858c0236fd4920
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071681"
 ---
 # <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
     

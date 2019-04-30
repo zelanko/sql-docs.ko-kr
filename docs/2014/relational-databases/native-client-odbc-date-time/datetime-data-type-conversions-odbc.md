@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206989"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
   다음 변환은 OLE DB에서 이미 정의되었거나 OLE DB의 지속적인 확장에 포함됩니다. 각 공급자가 제공하는 변환은 공급자가 제공하는 커뮤니티에 의해 결정되며, 그 결과 공급자 간에 일치하지 않는 경우가 많습니다. 대괄호 안에 있는 값은 선택적 요소입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "48220673"
   
 -   날짜 문자열의 형식은 'yyyy-mm-dd'입니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하세요 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 참조는 "데이터 형식: 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md)합니다.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   

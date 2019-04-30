@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188413"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>새 시스템 역할 할당: 시스템 역할 할당 편집 페이지 (보고서 관리자)
   새 시스템 역할 할당 또는 시스템 역할 할당 편집 페이지를 사용하여 보고서 서버의 보안을 정의할 수 있습니다. 모든 보안은 특정 사용자나 그룹을 각기 수행 가능한 태스크에 매핑하는 역할 할당을 통해 정의됩니다. 태스크 목록은 역할 할당을 만들 때 선택하는 역할 정의로 표시됩니다.  

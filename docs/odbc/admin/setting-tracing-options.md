@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198530"
 ---
 # <a name="setting-tracing-options"></a>추적 옵션 설정
 합니다 **추적** 탭의 **ODBC 데이터 원본 관리자** 대화 상자를 사용 하면 odbc 함수를 추적 하는 방법을 구성할 수 있습니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161470"
 ---
 # <a name="intervening-shape-compute-clauses"></a>중간에 셰이프 COMPUTE 절
 다음 예제와 같이 매개 변수가 있는 모양 명령에서 부모와 자식 간에 하나 이상의 COMPUTE 절을 포함 하는 것이 유효 합니다.  
