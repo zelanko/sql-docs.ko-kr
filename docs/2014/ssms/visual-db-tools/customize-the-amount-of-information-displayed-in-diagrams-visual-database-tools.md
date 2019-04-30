@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270556"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
   데이터베이스 다이어그램에 테이블을 추가하면 일정한 수의 속성이 표시됩니다. 표시할 정보의 양을 메뉴에서 각기 다르게 선택하거나 사용자 지정 속성 집합을 만들 수 있습니다.  
   
  선택 사항은 다음과 같습니다.  
   
--   표준  
+-   Standard  
   
 -   열 이름  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52790395"
   
 3.  **테이블 뷰** 메뉴에서 **사용자 지정** 을 선택한 경우 표시할 속성을 **열 선택** 대화 상자에서 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

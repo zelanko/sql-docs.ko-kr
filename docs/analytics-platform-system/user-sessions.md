@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316354"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System에서 사용자 세션
 적절 한 권한이 있는 로그인에는 이러한 작업을 수행 하는 포함 하 여 SQL Server PDW 어플라이언스에 대 한 모든 로그인의 세션을 관리할 수 있습니다.  

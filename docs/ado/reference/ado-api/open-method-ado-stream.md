@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0df165514a10bc667c8bd2cc6d2a8569faa79d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239712"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드(ADO 스트림)
 열립니다는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 이진 또는 텍스트 데이터의 스트림을 조작 하는 개체입니다.  

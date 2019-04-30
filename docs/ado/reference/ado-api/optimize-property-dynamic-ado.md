@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240040"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
 인덱스를 만들어야 하는지 여부를 지정 된 [필드](../../../ado/reference/ado-api/field-object.md)합니다.  

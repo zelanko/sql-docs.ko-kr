@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269856"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>규칙, 트리거, 기본값 및 저장 프로시저 지원(Visual FoxPro ODBC 드라이버)
 Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이버를 사용 하 여 저장된 프로시저를 만들 수 없습니다. 그러나 응용 프로그램은 기존 규칙, 트리거, 기본값 또는 저장된 프로시저 상호 작용할 수 있는 삽입, 업데이트 또는 삭제 Visual FoxPro 데이터를 데이터베이스에 저장 된 것 처럼 합니다.  
@@ -53,7 +53,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
 |$ 연산자|% 연산자|& 명령|  
 |& & 명령|* 명령|= 명령|  
   
-## <a name="a"></a>A  
+## <a name="a"></a>변수를 잠그기 위한  
   
 ||||  
 |-|-|-|  
@@ -66,7 +66,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
 |명령에서 추가|일반 명령 추가|ASCAN () 함수|  
 |프로시저 명령 추가|ASC () 함수|ASUBSCRIPT () 함수|  
 |ASIN () 함수|ASORT () 함수|ATAN () 함수|  
-|() 함수|AT_C () 함수|ATCLINE () 함수|  
+|() 함수|AT_C( ) Function|ATCLINE () 함수|  
 |ATC () 함수|ATCC () 함수|AUSED () 함수|  
 |ATLINE () 함수|ATN2 함수||  
 |평균 명령|ACOS () 함수||  
@@ -140,7 +140,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
   
 |||  
 |-|-|  
-|헤더 () 함수|시간 () 함수|  
+|HEADER( ) Function|시간 () 함수|  
   
 ## <a name="i"></a>I  
   
@@ -163,7 +163,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
   
 ||||  
 |-|-|-|  
-|왼쪽된 () 함수|LEFTC () 함수|LIKEC () 함수|  
+|왼쪽된 () 함수|LEFTC( ) Function|LIKEC () 함수|  
 |LENC () 함수|() 함수|LOCK () 함수|  
 |로컬 명령|명령 찾기|LOOKUP () 함수|  
 |LOG () 함수|LOG10 함수|LTRIM () 함수|  

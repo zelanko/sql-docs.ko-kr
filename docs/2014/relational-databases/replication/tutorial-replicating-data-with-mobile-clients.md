@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255410"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>자습서: 모바일 클라이언트와의 데이터 복제
   복제는 가끔 연결되는 중앙 서버와 모바일 클라이언트간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "52750975"
  이 자습서에서는 각 사용자가 고유하게 필터링된 데이터의 하위 집합을 얻을 수 있도록 병합 복제를 사용하여 중앙 데이터베이스의 데이터를 여러 모바일 사용자에게 게시합니다. 첫 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 게시를 만드는 방법을 보여 줍니다. 이후의 단원에서는 구독을 만들고 이를 동기화하는 방법을 보여 줍니다.  
   
 ## <a name="requirements"></a>요구 사항  
- 이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작 하기 전에 완료 해야 [자습서: 복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)합니다.  
+ 이 자습서는 기본적인 데이터베이스 작업에는 익숙하지만 복제에 대한 경험은 풍부하지 않은 사용자를 위한 것입니다. 이 자습서를 시작하려면 먼저 [자습서: 복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)합니다.  
   
  이 자습서를 사용하려면 시스템에 다음 구성 요소가 설치되어 있어야 합니다.  
   
@@ -46,17 +46,17 @@ ms.locfileid: "52750975"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 sysadmin 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다.  
   
- **이 자습서에 소요되는 예상 시간: 30 분입니다.**  
+ **이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.**  
   
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원  
   
--   [1 단원: 병합 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)  
+-   [1단원: 병합 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)  
   
 -   [2단원: 병합 게시에 대 한 구독 만들기](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   
  [자습서 시작](merge/merge-replication.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 프로그래밍 개념](concepts/replication-programming-concepts.md)  
   
   

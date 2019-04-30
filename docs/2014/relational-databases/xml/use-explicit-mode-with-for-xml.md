@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231286"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
   [FOR XML을 사용하는 XML 생성](../xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
@@ -153,7 +153,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [예: ELEMENTXSINIL 지시어 지정](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [예: EXPLICIT 모드를 사용 하 여 형제 생성](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [예: EXPLICIT 모드를 사용하여 형제 구성](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
 -   [예: ID 및 IDREF 지시어 지정](../xml/example-specifying-the-id-and-idref-directives.md)  
   

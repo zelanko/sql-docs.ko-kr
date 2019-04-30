@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241096"
 ---
 # <a name="open-method-ado-recordset"></a>Open 메서드(ADO 레코드 집합)
 커서를 엽니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -47,7 +47,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *LockType*  
  (선택 사항) A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 사용할지 결정 하는 어떤 유형의 잠금 (동시성) 공급자를 열 때 값을 **Recordset**합니다. 기본값은 **adLockReadOnly**합니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) **긴** 공급자를 평가 해야 하는 방법을 나타내는 값을 *원본* 것 이외의 다른 나타내는 경우 인수는 **명령** 개체 또는 합니다 **레코드 집합** 이전에 저장 된 파일에서 복원 해야 합니다. 하나 이상의 수 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 하거나 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) 값을 비트 OR 연산자를 함께 사용할 수 있습니다.  
   
 > [!NOTE]
@@ -105,7 +105,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Open 및 Close 메서드 예제 (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Open 및 Close 메서드 예제 (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Open 및 Close 메서드 예제 (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

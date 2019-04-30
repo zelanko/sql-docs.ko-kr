@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280414"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 응용 프로그램을 다시 사용할 때마다 설정할 필요가 없는 연결 풀에서 연결을 사용 합니다. 연결 생성 되었으며 풀에 배치 되 면 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "53590937"
   
  드라이버 관리자에 전달 된 인수에 따라 풀의 특정 연결을 사용할 것인지 여부를 결정 **SQLConnect** 하거나 **SQLDriverConnect**, 및 연결 특성에 따라 연결 할당 된 후 설정 합니다.  
   
- 드라이버 관리자 연결 풀링는, 하는 경우 연결 전달 하기 전에 연결을 여전히 작동 하는지 확인할 수 해야 합니다. 이 고, 그렇지 일시적인 네트워크 오류가 발생할 때마다 드라이버 관리자 응용 프로그램에 데드 연결 제한 처리에 유지 합니다. ODBC 3에서 새로운 연결 특성을 정의한 *.x*: SQL_ATTR_CONNECTION_DEAD 합니다. SQL_CD_TRUE 또는 SQL_CD_FALSE를 반환 하는 읽기 전용 연결 특성입니다. 값 SQL_CD_TRUE SQL_CD_FALSE 값 연결이 여전히 활성 상태 인지를 의미 하는 동안 연결에 손실 된 것을 의미 합니다. (이전 버전의 ODBC에 맞는 드라이버가이 특성 지원할 수도 수 있습니다.)  
+ 드라이버 관리자 연결 풀링는, 하는 경우 연결 전달 하기 전에 연결을 여전히 작동 하는지 확인할 수 해야 합니다. 이 고, 그렇지 일시적인 네트워크 오류가 발생할 때마다 드라이버 관리자 응용 프로그램에 데드 연결 제한 처리에 유지 합니다. ODBC 3에서 새로운 연결 특성을 정의한 *.x*: SQL_ATTR_CONNECTION_DEAD. SQL_CD_TRUE 또는 SQL_CD_FALSE를 반환 하는 읽기 전용 연결 특성입니다. 값 SQL_CD_TRUE SQL_CD_FALSE 값 연결이 여전히 활성 상태 인지를 의미 하는 동안 연결에 손실 된 것을 의미 합니다. (이전 버전의 ODBC에 맞는 드라이버가이 특성 지원할 수도 수 있습니다.)  
   
  드라이버는이 옵션을 효율적으로 구현 해야 합니다 또는 성능 풀링 연결을 약화 됩니다. 특히,이 연결 특성을 가져오기 위한 호출 하면 서버에 왕복 합니다. 대신, 드라이버 연결의 마지막으로 알려진된 상태를 바로 반환 해야 합니다. 연결이 마지막 여정 서버로 실패 한 경우 중지 및 마지막 여정에 성공한 경우 소멸 됩니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53590937"
 ## <a name="driver-aware-connection-pooling"></a>드라이버 인식 연결 풀링  
  Windows 8부터 ODBC 드라이버에서에서 사용할 수 연결 풀을 보다 효율적으로. 자세한 내용은 [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [연결에 대 한 데이터 원본 또는 드라이버](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md)   
  [ODBC 드라이버 개발](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Microsoft Data Access Components의 풀링](https://go.microsoft.com/fwlink/?LinkId=120776)

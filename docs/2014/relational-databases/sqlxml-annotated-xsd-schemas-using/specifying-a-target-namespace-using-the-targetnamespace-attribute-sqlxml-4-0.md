@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d297b8516cb09db317ba835b49fe41b3e13be9e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228557"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
   XSD 스키마를 작성할에서 XSD를 사용할 수 있습니다 **targetNamespace** 대상 네임 스페이스를 지정 하는 특성입니다. 이 항목에 설명 하는 방법을 XSD **targetNamespace**를 **elementFormDefault**, 및 **attributeFormDefault** 특성 작동 되는 XML 인스턴스에 미치는 영향 생성 및 네임 스페이스를 사용 하 여 XPath 쿼리를 지정 하는 방법입니다.  

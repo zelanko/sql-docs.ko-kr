@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313884"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>시계열 예측 만들기(중급 데이터 마이닝 자습서)
   이 단원의 이전 태스크에서는 시계열 모델을 만들고 결과를 살펴보았습니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 항상 시계열 모델에 대한 5개의 예측으로 구성된 집합을 만들고 예측 값을 예측 차트의 일부분으로 표시합니다. 그러나 DMX(Data Mining Extensions) 예측 쿼리를 작성하여 예측을 만들 수도 있습니다.  

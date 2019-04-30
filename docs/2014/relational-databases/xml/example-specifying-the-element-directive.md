@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287165"
 ---
 # <a name="example-specifying-the-element-directive"></a>예: ELEMENT 지시어 지정
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  

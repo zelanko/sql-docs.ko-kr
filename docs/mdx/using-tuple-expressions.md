@@ -1,5 +1,5 @@
 ---
-title: 튜플 식을 사용 하 여 | Microsoft Docs
+title: 튜플 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251498"
 ---
 # <a name="using-tuple-expressions"></a>튜플 식 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "34743692"
   
  튜플 식별자를 완전히 표현한 식은 다음과 같이 괄호로 둘러싸인 하나 이상의 명시적으로 지정된 멤버로 구성됩니다.  
   
- (*Member_expression* [,*Member_expression* ...])  
+ (*Member_expression* [합니다*Member_expression* ...])  
   
  튜플은 완전히 정규화하거나 암시적인 멤버를 포함하거나 단일 멤버를 포함할 수 있습니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34743692"
   
 -   암시적으로 참조하는 계층에 기본 멤버가 있는 경우 해당 기본 멤버를 튜플에 추가합니다.  
   
--   암시적으로 참조 하는 계층에 기본 멤버가 없는 경우는 **(All)** 기본 계층의 멤버는 사용할 수 있습니다.  
+-   암시적으로 참조 하는 계층에 기본 멤버가 없는 경우는 **(All)** 기본 계층의 멤버를 사용 합니다.  
   
 -   암시적으로 참조하는 계층에 기본 멤버가 없는 경우 계층의 최상위 수준에 있는 첫 번째 멤버를 사용합니다.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "34743692"
   
 ## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

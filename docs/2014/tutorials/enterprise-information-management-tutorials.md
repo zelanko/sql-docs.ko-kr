@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313847"
 ---
 # <a name="enterprise-information-management-tutorials"></a>엔터프라이즈 정보 관리 자습서
   이 단원에는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 포함된 EIM(엔터프라이즈 정보 관리) 기술을 사용해서 기업에서 정보를 관리하기 위한 자습서가 포함되어 있습니다. EIM(엔터프라이즈 통합 관리)은 조직이 중요한 비즈니스 의사 결정을 내릴 수 있도록 데이터의 진실성 및 일관성을 신뢰할 수 있게 해주는 솔루션 포트폴리오를 제공합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에는 기업 환경에 EIM 솔루션을 구현할 수 있도록 도와주는 다음과 같은 기술이 포함되어 있습니다.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250159"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>태스크 3: 공급자 기술 자료에 대한 데이터 정리
   이 작업에서는 컴퓨터 기반 정리 프로세스를 실행합니다. DQS에서는 지정된 임계값을 기반으로 고급 알고리즘 및 신뢰도 수준을 사용하여 선택한 기술 자료에 대해 데이터를 분석한 다음 데이터를 정리합니다. 자세한 내용은 [DQS(내부) 기술 자료를 사용하여 데이터 정리](https://msdn.microsoft.com/library/hh213061.aspx) 를 참조하십시오.  

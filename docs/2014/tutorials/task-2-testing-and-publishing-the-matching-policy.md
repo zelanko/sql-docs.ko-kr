@@ -1,5 +1,5 @@
 ---
-title: '작업 2: 일치 정책 테스트 및 게시 | Microsoft Docs'
+title: '태스크 2: 일치 정책 테스트 및 게시 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250287"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>작업 2: 일치 정책 테스트 및 게시
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>태스크 2: 일치 정책 테스트 및 게시
   이 태스크에서는 테스트 하 고이 게시 합니다 **Remove Duplicate Suppliers** 일치 정책입니다.  
   
 1.  에 **일치 결과** 페이지에서 클릭 **시작** 전체 정책을 테스트 하려면. 여기에서는 정책에 규칙이 하나만 있으므로 규칙 및 정책을 테스트한 결과가 동일합니다.  
   
 2.  모든 일치 레코드 및 일치 점수를 목록 상자에서 검토합니다. 가 있는 레코드를 **녹색** 아이콘이 연결 된 피벗 레코드 앞에 있는 중복 됩니다. 이에 대한 몇 가지 예는 다음과 같습니다.  
   
-    1.  **레코드 ID: 1000005** 레코드와 일치 하는 항목이 **레코드 Id: 1000004** 사용 하 여 **점수: 100%** 두 레코드 값이 같은 있으므로 **SupplierID (필수)** 합니다 **Supplier Name**, 및 **ContactEmailAddress 열**합니다. DQS는 클러스터의 피벗 레코드로 아무 레코드나 선택합니다.  
+    1.  사용 하 여 레코드 **레코드 ID: 1000005** 레코드와 일치 하는 항목이 **레코드 Id: 1000004** 사용 하 여 **점수: 100%** 두 레코드 값이 같은 있으므로 **SupplierID (필수)** 합니다 **Supplier Name**, 및 **ContactEmailAddress 열**합니다. DQS는 클러스터의 피벗 레코드로 아무 레코드나 선택합니다.  
   
     2.  레코드 **1000023** 레코드의 일치 하는 항목이 **1000022** 일치 점수를 사용 하 여: 93% 있으므로 두 레코드 값이 같은 **SupplierID (필수)** 및 **Supplier Name** 열, 하지만 다른 값을 **ContactEmailAddress** 열입니다.  
   
-    3.  목록 아래쪽으로 스크롤해서 레코드 ID: **1000051** 하 고 **1000052**합니다. 레코드 **1000052** 일치 점수와 일치 하는 것으로 간주 됩니다 **91%** 두 레코드가 동일한 값이 있으므로 합니다 **SupplierID** 고  **ContactEmailAddress** 열에 있지만 다른 값을 **Supplier Name** 열입니다.  
+    3.  레코드 Id 확인 하려면 목록 아래쪽으로 스크롤하십시오. **1000051** 하 고 **1000052**합니다. 레코드 **1000052** 일치 점수와 일치 하는 것으로 간주 됩니다 **91%** 두 레코드가 동일한 값이 있으므로 합니다 **SupplierID** 고  **ContactEmailAddress** 열에 있지만 다른 값을 **Supplier Name** 열입니다.  
   
      ![정책 정의-정책 결과](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "정책 정의-정책 결과")  
   

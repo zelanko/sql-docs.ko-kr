@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 173b8b5de6dd1a370073338ad13fb7eb065680c8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242923"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 SSL 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  

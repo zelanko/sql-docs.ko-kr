@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266456"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>프로젝트 설정 (시스템 개체 로드) (DB2ToSQL)
 시스템 개체 로드 페이지는 **프로젝트 설정** 대화 상자를 사용 하면 DB2 시스템 개체 SSMA 변환 및 로드 지정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "47761741"
   
 -   SYS.DBMS_SQL  
   
--   SYS입니다. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 DB2 개체 추가 시스템 개체를 참조 하는 경우 해당 개체를 선택 해야 합니다. DB2 데이터베이스 개체에 의해 참조 되는 시스템 개체를 선택 하지 않으면 SSMA 변환 오류를 보고 합니다. 누락 된 시스템 개체 인해 변환 오류가 발생할 경우이 대화 상자에서 누락 된 개체를 선택 합니다. 그런 다음 필요에 따라 변환을 반복할 수 있습니다.  
   

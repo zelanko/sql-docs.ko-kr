@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255746"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 INSERT VALUES 쿼리를 사용하여 업데이트할 테이블을 지정할 수 있습니다. 이 대화 상자는 **다이어그램** 창에 두 개 이상의 테이블이 표시되어 있는 상태에서 쿼리 형식을 INSERT VALUES 쿼리로 변경하는 경우에 나타납니다.  

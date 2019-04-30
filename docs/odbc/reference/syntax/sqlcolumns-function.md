@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259346"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 함수
 **규칙**  
@@ -54,7 +54,7 @@ SQLRETURN SQLColumns(
  *StatementHandle*  
  [입력] 문 핸들입니다.  
   
- *카탈로그 이름*  
+ *CatalogName*  
  [입력] 카탈로그 이름입니다. 드라이버 카탈로그에서 지 원하는 일부 테이블에 대 한 아니라 드라이버가 다른 Dbms를 빈 문자열에서 데이터를 검색 하는 경우 등의 다른 경우 ("")는 카탈로그에 있지 않은 테이블을 나타냅니다. *CatalogName* 문자열 검색 패턴을 포함할 수 없습니다.  
   
 > [!NOTE]  
@@ -298,6 +298,6 @@ int main() {
 |데이터 원본에서 테이블의 목록 반환|[SQLTables 함수](../../../odbc/reference/syntax/sqltables-function.md)|  
 |테이블 또는 테이블에 대 한 권한을 반환합니다.|[SQLTablePrivileges 함수](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)

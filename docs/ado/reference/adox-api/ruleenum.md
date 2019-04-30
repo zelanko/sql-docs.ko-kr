@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281887"
 ---
 # <a name="ruleenum"></a>RuleEnum
 시 따라야 하는 규칙 지정 된 [키](../../../ado/reference/adox-api/key-object-adox.md) 삭제 됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "47787051"
 |상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|변경 내용을 연계할 수 있습니다.|  
-|**adRINone**|0|기본. 아무 동작도 수행되지 않습니다.|  
+|**adRINone**|0|기본. 아무 작업도 수행 합니다.|  
 |**adRISetDefault**|3|외래 키 값을 기본값으로 설정 됩니다.|  
 |**adRISetNull**|2|외래 키 값을 설정 하려면 null입니다.|  
   

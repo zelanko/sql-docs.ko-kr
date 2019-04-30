@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239997"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  
@@ -42,7 +42,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  모든 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) 실행 하려면 스키마 쿼리의 형식을 나타내는 값입니다.  
   
  *조건*  
- 선택 사항입니다. 각각에 대 한 쿼리 제약 조건의 배열을 *QueryType* 에 나열 된 옵션 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)합니다.  
+ (선택 사항) 각각에 대 한 쿼리 제약 조건의 배열을 *QueryType* 에 나열 된 옵션 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md)합니다.  
   
  *SchemaID*  
  OLE DB 사양에 정의 되지 않은 공급자 스키마 쿼리에 대 한 GUID입니다. 이 매개 변수는 필요한 경우 *QueryType* 로 설정 된 **adSchemaProviderSpecific**고, 그렇지 않으면 사용 되지 않습니다.  
@@ -62,10 +62,10 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **원격 데이터 서비스 사용** 는 **OpenSchema** 메서드는 클라이언트 쪽에서 사용할 수 없는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다.  
   
 > [!NOTE]
->  Visual Basic의 경우에 4 바이트 부호 없는 정수 (DBTYPE UI4)이 있는 열에는 **레코드 집합** 에서 반환 된 합니다 **OpenSchema** 메서드를 **연결** 개체 수 없습니다 다른 변수를 비교 합니다. OLE DB 데이터 형식에 대 한 자세한 내용은 참조 하세요. [OLE DB (OLE DB)의 데이터 형식](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) 하 고 [부록 a: 데이터 형식](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) Microsoft OLE DB 프로그래머 참조에서입니다.  
+>  Visual Basic의 경우에 4 바이트 부호 없는 정수 (DBTYPE UI4)이 있는 열에는 **레코드 집합** 에서 반환 된 합니다 **OpenSchema** 메서드를 **연결** 개체 수 없습니다 다른 변수를 비교 합니다. OLE DB 데이터 형식에 대 한 자세한 내용은 참조 하세요. [OLE DB (OLE DB)의 데이터 형식](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) 고 [부록 a: 데이터 형식](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) Microsoft OLE DB 프로그래머 참조에서입니다.  
   
 > [!NOTE]
->  **Visual C + + 사용자** 클라이언트 쪽 커서를 사용 하지 않을 경우 MDAC 2.7, MDAC 2.8 및 유형은 MDAC에 사용 하는 동안 Windows Data Access Components (Windows DAC) 6.0 VT_R8 형식의 variant를 반환 ADO에서 열 스키마의 "ORDINAL_POSITION"를 검색 합니다. 2.6 VT_I4 했습니다. 변형만 검색 하는 MDAC 2.6 용으로 작성 된 프로그램 VT_I4 수정 하지 않고 MDAC 2.7, MDAC 2.8 및 Windows DAC 6.0에서 실행 하는 경우 모든 서 수에 대 한 0 얻게 형식의 반환 합니다. OLE DB 반환 하는 데이터 형식, DBTYPE_UI4 이므로 내용을이 변경할 있으며 서명 된 VT_I4 형식에서 발생 하 고 데이터의 손실을 초래할 수 있는 잘림 없이 사용 가능한 모든 값을 포함할 만큼 충분 한 공간이 합니다.  
+>  **Visual C /C++ 사용자가** 클라이언트 쪽 커서를 사용 하지 않을 경우 MDAC 2.7, MDAC 2.8 및 형식 사용 하는 동안 Windows Data Access Components (Windows DAC) 6.0 VT_R8 형식의 variant를 반환 ADO에서 열 스키마의 "ORDINAL_POSITION"를 검색 합니다. MDAC 2.6 VT_I4 있었습니다. 변형만 검색 하는 MDAC 2.6 용으로 작성 된 프로그램 VT_I4 수정 하지 않고 MDAC 2.7, MDAC 2.8 및 Windows DAC 6.0에서 실행 하는 경우 모든 서 수에 대 한 0 얻게 형식의 반환 합니다. OLE DB 반환 하는 데이터 형식, DBTYPE_UI4 이므로 내용을이 변경할 있으며 서명 된 VT_I4 형식에서 발생 하 고 데이터의 손실을 초래할 수 있는 잘림 없이 사용 가능한 모든 값을 포함할 만큼 충분 한 공간이 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [연결 개체(ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Open 메서드 (ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open 메서드 (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)

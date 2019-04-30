@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261982"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>SQL Server 복제 게시자 속성
   이 섹션에서는 배포자 및 게시자에 사용 가능한 게시자 속성에 대 한 정보를 포함합니다. 

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267752"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>데이터 길이, 버퍼 길이 및 잘라내기
 합니다 *데이터 길이* 이 데이터의 바이트 길이 응용 프로그램의 데이터 버퍼에 저장 됩니다 하는 대로 아닙니다. 데이터 원본에 저장 됩니다. 데이터는 흔히 데이터 원본에 보다 데이터 버퍼에서 다른 형식에 저장 되므로 이러한 구분은 중요 합니다. 따라서 데이터 원본에 전송 되는 데이터를 데이터 소스의 형식으로 변환 하기 전에 데이터의 바이트 길이 이것이입니다. 데이터 원본에서 검색 되는 데이터에 대 한 데이터 버퍼의 형식으로 또는 그 잘림을 모두 수행 하기 전에 변환 된 데이터의 바이트 길이입니다.  

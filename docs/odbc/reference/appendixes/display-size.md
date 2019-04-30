@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241246"
 ---
 # <a name="display-size"></a>표시 크기
 열 표시 크기가 문자 형식에서 데이터를 표시 하는 데 필요한 문자의 최대 수입니다. 다음 표에서 각 ODBC SQL 데이터 형식에 대 한 표시 크기를 정의합니다.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305731"
 ---
 # <a name="types-of-applications"></a>애플리케이션 형식
 ODBC 응용 프로그램은 다음과 같이 분류할 수 있습니다.  

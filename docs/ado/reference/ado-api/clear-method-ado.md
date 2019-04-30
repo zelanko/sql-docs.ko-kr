@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e69e7d2d2a66ccb9df0e03f6f77849c502f3bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239753"
 ---
 # <a name="clear-method-ado"></a>Clear 메서드(ADO)
 모두 제거 합니다 [오류](../../../ado/reference/ado-api/error-object.md) 에서 개체를 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션입니다.  

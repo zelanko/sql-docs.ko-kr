@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: afc9955920784af966ef5d793d76ce251df1bc1d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242671"
 ---
 # <a name="number-property-ado"></a>Number 속성(ADO)
 고유 하 게 식별 하는 숫자를 나타냅니다는 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다.  

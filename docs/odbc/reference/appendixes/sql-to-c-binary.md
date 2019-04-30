@@ -1,5 +1,5 @@
 ---
-title: 'C: 이진 SQL | Microsoft Docs'
+title: 'SQL에서 C로: 이진 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270956"
 ---
 # <a name="sql-to-c-binary"></a>SQL에서 C로: 이진
 이진 ODBC SQL 데이터 형식에 대 한 식별자 다음과 같습니다.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276957"
 ---
 # <a name="add-objects"></a>개체 추가
   원하는 개체 유형만 개체 선택 대화 상자에 표시되도록 제한합니다.  

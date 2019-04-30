@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266464"
 ---
 # <a name="cache-refresh-options-report-manager"></a>캐시 새로 고침 옵션(보고서 관리자)
   캐시 새로 고침 옵션 페이지를 사용하여 보고서 또는 공유 데이터 세트의 임시 데이터 복사본과 함께 캐시를 사전 로드하는 일정을 계획할 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 공유 데이터 세트의 경우 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 옵션 페이지에서는 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  

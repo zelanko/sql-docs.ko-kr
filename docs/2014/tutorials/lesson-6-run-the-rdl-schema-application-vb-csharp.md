@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254496"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>6단원: RDL Schema 응용 프로그램 실행 (VB-C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE(통합 개발 환경)에서 콘솔 응용 프로그램을 작성하고 실행하는 두 가지 방법을 제공합니다.  

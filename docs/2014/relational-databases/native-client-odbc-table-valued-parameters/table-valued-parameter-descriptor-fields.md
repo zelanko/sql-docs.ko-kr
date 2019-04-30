@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228962"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>테이블 반환 매개 변수 설명자 필드
   테이블 반환 매개 변수 지원에는 ODBC APD(응용 프로그램 매개 변수 설명자) 및 IPD(구현 매개 변수 설명자)의 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 필드가 포함되어 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "48138240"
   
 |이름|위치|형식|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> APD의 SQL_DESC_ARRAY_SIZE와 같습니다.|APD|SQLUINTEGER|테이블 반환 매개 변수에 대한 버퍼 배열의 배열 크기입니다. 이 값은 버퍼에 포함될 최대 행 수이거나 행의 버퍼 크기입니다. 테이블 반환 매개 변수 값 자체는 버퍼에 포함될 수 있는 것보다 많거나 적은 행을 포함할 수 있습니다. 기본값은 1입니다. **참고:** SQL_SOPT_SS_PARAM_FOCUS가 기본값인 0으로 설정 하는 경우 SQL_ATTR_PARAMSET_SIZE는 문을 참조 하 고 매개 변수 집합 수를 지정 합니다. SQL_SOPT_SS_PARAM_FOCUS가 테이블 반환 매개 변수의 서수로 설정된 경우 테이블 반환 매개 변수를 참조하며 테이블 반환 매개 변수에 대해 매개 변수 집합당 행 수를 지정합니다.|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> APD의 SQL_DESC_ARRAY_SIZE와 같습니다.|APD|SQLUINTEGER|테이블 반환 매개 변수에 대한 버퍼 배열의 배열 크기입니다. 이 값은 버퍼에 포함될 최대 행 수이거나 행의 버퍼 크기입니다. 테이블 반환 매개 변수 값 자체는 버퍼에 포함될 수 있는 것보다 많거나 적은 행을 포함할 수 있습니다. 기본값은 1입니다. **참고:**  SQL_SOPT_SS_PARAM_FOCUS가 기본값인 0으로 설정 하는 경우 SQL_ATTR_PARAMSET_SIZE는 문을 참조 하 고 매개 변수 집합 수를 지정 합니다. SQL_SOPT_SS_PARAM_FOCUS가 테이블 반환 매개 변수의 서수로 설정된 경우 테이블 반환 매개 변수를 참조하며 테이블 반환 매개 변수에 대해 매개 변수 집합당 행 수를 지정합니다.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|기본값은 SQL_PARAM_BIND_BY_COLUMN입니다.<br /><br /> 행 단위 바인딩을 선택하려면 이 필드를 테이블 반환 매개 변수 행 집합에 바인딩될 버퍼 인스턴스나 구조의 길이로 설정합니다. 이 길이에는 바인딩된 모든 열과 구조 또는 버퍼의 패딩에 대한 공간이 포함되어야 합니다. 이렇게 하면 바인딩된 열의 주소가 지정된 길이로 증가할 때 결과가 다음 행에 있는 동일한 열의 시작 부분을 가리킵니다. ANSI C의 `sizeof` 연산자를 사용하는 경우 이 동작이 유지됩니다.|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|기본값은 Null 포인터입니다.<br /><br /> 이 필드가 Null이 아니면 드라이버에서 포인터를 역참조하고, 설명자 레코드(SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR)의 각 지연된 필드에 역참조된 값을 추가하며, 새 포인터 값을 사용하여 데이터 값에 액세스합니다.|  
   

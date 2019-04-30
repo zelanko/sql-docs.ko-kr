@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241194"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>잘못된 문자 및 이스케이프 규칙
   이 항목에서는 FOR XML 절에서 잘못된 XML 문자를 처리하는 방법에 대해 설명하고 XML 이름의 잘못된 문자에 대한 이스케이프 규칙을 나열합니다.  

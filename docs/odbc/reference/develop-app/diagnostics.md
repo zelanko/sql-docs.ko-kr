@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242294"
 ---
 # <a name="diagnostics"></a>진단
 Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. 반환 코드에 진단 레코드는 함수에 대 한 자세한 정보를 제공 하는 동안 전반적인 성공 또는 실패 함수를 나타냅니다. 하나 이상의 진단 레코드는 헤더 레코드-함수가 성공 하는 경우에 반환 됩니다.  

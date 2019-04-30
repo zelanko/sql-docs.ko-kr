@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248190"
 ---
 # <a name="divide---mdx-operator-reference"></a>나누기-MDX 연산자 참조
 
@@ -32,16 +32,16 @@ Dividend / Divisor
  *피제수*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
- *제 수*  
+ *Divisor*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 반환 되는 실제 값은 **/ (나누기)** 연산자의은 첫째 식 둘째 식으로 나누어 나온 몫을 나타냅니다.  
+ 실제 값을 반환 합니다 **/ (나누기)** 연산자 첫째 식 둘째 식으로 나누어 나온 몫을 나타냅니다.  
   
- 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 경우 *Divisor* 는 오류가 발생 된 null 값을 계산 합니다. 두 *Divisor* 및 *피제수* 평가 연산자를 null 값으로 null 값을 반환 합니다.  
+ 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. 경우 *Divisor* null 값이 오류는 발생을 계산 합니다. 둘 다 *Divisor* 및 *피제수* 평가 연산자를 null 값으로 null 값을 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 이 연산자의 사용 방법을 보여 줍니다.  

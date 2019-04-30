@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5db9c929c736029c3731443af56d15f3615e45f1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260862"
 ---
 # <a name="image-device-information-settings"></a>이미지 디바이스 정보 설정
   다음 표는 IMAGE 형식으로 렌더링하기 위한 디바이스 정보 설정을 나열합니다.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254469"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 열기(Visual Database Tools)
   데이터베이스 다이어그램을 열어서 다이어그램의 구조를 보거나 편집할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "52750835"
 > [!NOTE]  
 >  다이어그램의 소유자나 데이터베이스에 대한 db_owner 역할이 부여된 멤버만 다이어그램을 열 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 다이어그램 작업 &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   

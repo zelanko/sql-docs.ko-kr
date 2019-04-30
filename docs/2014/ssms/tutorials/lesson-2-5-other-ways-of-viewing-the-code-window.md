@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252683"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>코드 창을 표시하는 다른 방법
   다양한 방법으로 여러 코드 창을 표시하도록 코드 창을 구성할 수 있습니다.  

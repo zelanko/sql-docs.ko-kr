@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238093"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect(Excel 드라이버)
 > [!NOTE]  
@@ -27,7 +27,7 @@ ms.locfileid: "47775351"
   
  **SQLDriverConnect** 데이터 소스 (DSN)를 만들지 않고 드라이버에 연결할 수 있습니다.  
   
- 다음 키워드는 모든 드라이버에 대 한 연결 문자열에서 지원: **DSN**를 **DBQ**, 및 **FIL**합니다.  
+ 다음 키워드는 모든 드라이버에 대 한 연결 문자열에 지원 됩니다. **DSN**하십시오 **DBQ**, 및 **FIL**합니다.  
   
  다음 표에서 각 드라이버에 연결 하는 데 필요한 최소 키워드를 보여 줍니다 하 고 사용 하는 키워드/값 쌍의 예가 **SQLDriverConnect**합니다. DRIVERID 값의 전체 목록을 참조 하세요 [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)합니다.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "47775351"
   
 |드라이버|필요한 키워드|예|  
 |------------|-----------------------|--------------|  
-|3.0 또는 4.0 Microsoft Excel|드라이버를 DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
+|3.0 또는 4.0 Microsoft Excel|Driver, DriverID|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp; DriverID=278|  
 |Microsoft Excel 5.0/7.0|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=22|  
 |Microsoft Excel 97 이상|Driver, DriverID,  DBQ|Driver={Microsoft Excel Driver (*.xls)}; DBQ=c:\temp\sample.xls; DriverID=790|

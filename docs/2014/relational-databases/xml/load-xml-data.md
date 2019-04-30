@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241309"
 ---
 # <a name="load-xml-data"></a>XML 데이터 로드
   XML 데이터를 여러 가지 방법으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 으로 전송할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "58526435"
 ## <a name="bulk-loading-xml-data"></a>XML 데이터 대량 로드  
  bcp와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 대량 로드 기능을 사용하여 XML 데이터를 서버에 대량 로드할 수 있습니다. OPENROWSET을 사용하면 데이터를 파일에서 XML 열로 로드할 수 있습니다. 다음 예에서는 이러한 점을 보여 줍니다.  
   
-##### <a name="example-loading-xml-from-files"></a>예: 파일로부터 XML 로드  
+##### <a name="example-loading-xml-from-files"></a>예: 파일에서 XML 로드  
  이 예에서는 테이블 T에 행을 삽입하는 방법을 보여 줍니다. XML 열의 값은 C:\MyFile\xmlfile.xml 파일로부터 CLOB으로 로드되고 정수 열에는 값 10이 제공됩니다.  
   
 ```  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313399"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 호환성
 ODBC 데스크톱 데이터베이스 드라이버 및 기본 Microsoft Jet 엔진이 SQL-92 호환 되지 않습니다. SQL-92에 정의 된 많은 기능을 지원 합니다. SQL-92에 드라이버에서 지원 되는 일부 기능을 사용할 수 없습니다. 자세한 내용은 참조는 *Microsoft Jet 데이터베이스 엔진 Programmer's Guide*합니다. 다음은 둘 사이의 주요 차이점:  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0200ce01bd8c2218272d56635b15fcf7a41e744e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242697"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 속성(ClientSettingsGeneralFlag 클래스)
   플래그의 인덱스 값을 가져옵니다.  

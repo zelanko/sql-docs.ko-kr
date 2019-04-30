@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6c451d13016915c9218efb2963429f8f5a7709e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261644"
 ---
 # <a name="performing-batch-operations-xmla"></a>일괄 작업 수행(XMLA)
   사용할 수는 [일괄 처리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) XMLA (XML for Analysis) 단일 XMLA를 사용 하는 여러 XMLA 명령을 실행할 명령을 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) 메서드. 에 포함 된 여러 명령을 실행할 수 있습니다 합니다 **일괄 처리** 명령을 단일 트랜잭션으로 또는 각 명령에 대 한 개별 트랜잭션을, 직렬에서 또는 병렬입니다. 아웃오브 라인 바인딩 및 기타 속성을 지정할 수도 있습니다는 **일괄 처리** 여러 처리 명령을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체입니다.  

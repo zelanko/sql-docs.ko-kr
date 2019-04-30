@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280845"
 ---
 # <a name="connection-handles"></a>연결 핸들
 A *연결* 드라이버 및 데이터 원본으로 구성 됩니다. 연결 핸들을 각 연결을 식별합니다. 연결 핸들을 사용 하는 드라이버 뿐만 아니라 해당 드라이버를 사용 하는 데이터 원본을 정의 합니다. ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드의 세그먼트를 내 연결 핸들을 다음과 같은 연결 정보를 포함 하는 구조를 식별 합니다.  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78d5d27853922d7e7524d93ae2b8157e57166968
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248294"
 ---
-# <a name="mdx-data-definition---drop-member"></a>MDX 데이터 정의-멤버 삭제
+# <a name="mdx-data-definition---drop-member"></a>MDX 데이터 정의 - DROP MEMBER
 
 
   계산 멤버를 제거합니다.  
@@ -39,7 +39,7 @@ DROP MEMBER
  멤버 이름이나 멤버 키를 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CREATE MEMBER 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
+ [MEMBER 문 & #40; 만들기 Mdx& #41;](../mdx/mdx-data-definition-create-member.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

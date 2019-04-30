@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308904"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드(ADO)
 지정한 개수의 문자 또는 바이트 복사 (에 따라 [형식](../../../ado/reference/ado-api/type-property-ado-stream.md))에 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 간 **Stream** 개체입니다.  

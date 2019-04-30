@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242361"
 ---
 # <a name="direct-execution-odbc"></a>직접 실행 ODBC
 직접 실행은 문을 실행에 대 한 가장 간단한 방법입니다. 문 실행에 대 한 전송 되 면 데이터 원본 액세스 계획으로 컴파일합니다 하 고 그런 다음 해당 액세스 계획을 실행 합니다.  

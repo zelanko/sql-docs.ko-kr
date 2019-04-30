@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240975"
 ---
 # <a name="descriptor-transitions"></a>설명자 전환
 ODBC 설명자는 다음 세 가지 상태입니다.  
@@ -35,10 +35,10 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
-|D1i [1]|--|--|  
-|D1e [2]|--|--|  
+|D1i[1]|--|--|  
+|D1e[2]|--|--|  
   
  [1]이이 행 표시 전환 때 *HandleType* 호출 되었습니다.  
   
@@ -46,16 +46,16 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
-|(구매자)|--|--|  
+|(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(구매자) [2]|(HY017)|D0|  
+|(IH)[2]|(HY017)|D0|  
   
  [1]이이 행 표시 전환 때 *HandleType* 호출 되었습니다.  
   
@@ -63,20 +63,20 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField 및 SQLGetDescRec  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
-|(구매자)|--|--|  
+|(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField 및 SQLSetDescRec  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
-|(구매자) [1]|--|--|  
+|(IH)[1]|--|--|  
   
  [1]이이 행은 전환을 보여 줍니다. 때 *DescriptorHandle* 된 카드가, APD, 또는 IPD, 핸들 또는 (에 대 한 **SQLSetDescField**) 때 *DescriptorHandle* IRD의 핸들을 되었습니다 및 *FieldIdentifier* SQL_DESC_ARRAY_STATUS_PTR 되었거나 SQL_DESC_ROWS_PROCESSED_PTR 합니다.  
   
 ## <a name="all-other-odbc-functions"></a>다른 모든 ODBC 함수  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> Implicit|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f226cc3db3d9f10292624c363d3f0cc04b13010
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266026"
 ---
 # <a name="complete-the-report-wizard"></a>보고서 마법사 완료
   보고서 마법사 완료 페이지를 사용하여 보고서에 이름을 지정하거나 보고서에 적용할 옵션을 검토할 수 있습니다.  

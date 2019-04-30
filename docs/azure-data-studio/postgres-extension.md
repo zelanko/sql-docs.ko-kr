@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL 확장 (미리 보기)
+title: PostgreSQL 확장(미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 용 PostgreSQL 확장 (미리 보기)
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252827"
 ---
-# <a name="postgresql-extension-preview"></a>PostgreSQL 확장 (미리 보기)
+# <a name="postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기)
 
 PostgreSQL 확장 (미리 보기)에 연결, 쿼리 및 postgres Azure 데이터 스튜디오의 기능을 사용 하 여 개발할 수 있습니다. 
 

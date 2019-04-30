@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260653"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 크기(보고서 작성기 및 SSRS)
   **이미지 속성** 대화 상자에서 **크기** 를 선택하여 필드나 디자인 영역에 표시되는 이미지의 크기를 지정할 수 있고, 셀이나 입력란의 가장자리와 셀이나 입력란 안에 포함되는 그림 또는 값 사이의 추가 공백 크기를 변경할 수 있습니다.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273474"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>시퀀스 클러스터링 마이닝 모델 구조 만들기(중급 데이터 마이닝 자습서)
   시퀀스 클러스터링 마이닝 모델을 만드는 첫 번째 단계는 데이터 마이닝 마법사를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 기반으로 하는 새 마이닝 구조 및 마이닝 모델을 만드는 것입니다.  

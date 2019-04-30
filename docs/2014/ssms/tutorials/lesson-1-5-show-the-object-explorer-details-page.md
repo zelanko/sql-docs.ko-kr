@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282028"
 ---
 # <a name="show-the-object-explorer-details-page"></a>개체 탐색기 정보 페이지 표시
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 개체 탐색기에서 선택한 개체마다 보고서를 표시할 수 있습니다. 개체 탐색기 정보 페이지라고 하는 이 보고서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 생성되며 문서 창으로 열립니다.  

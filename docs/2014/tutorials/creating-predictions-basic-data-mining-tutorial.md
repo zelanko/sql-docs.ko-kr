@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285684"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>예측 만들기(기본 데이터 마이닝 자습서)
   예측 쿼리 작성기를 사용 하 여 예측을 생성 한 다음 수 마이닝 모델의 정확도 테스트 하 고 결과 만족 했으면, 후 합니다 **마이닝 모델 예측** 데이터 마이닝에서 탭 디자이너입니다.  

@@ -1,5 +1,5 @@
 ---
-title: 'C: SQL Timestamp | Microsoft Docs'
+title: 'SQL에서 C로: Timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259254"
 ---
-# <a name="sql-to-c-timestamp"></a>C: SQL timestamp
+# <a name="sql-to-c-timestamp"></a>SQL에서 C로: timestamp
 
 Timestamp ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
 

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273422"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64비트 정보
 Windows Server 2003 부터는 Microsoft 운영 체제 지원 되는 64 비트 ODBC 라이브러리입니다. ODBC 헤더 및 라이브러리 MDAC 2.7 SDK를 사용 하 여 처음 출시 프로그래머에 게 새 64 비트 플랫폼에 대 한 코드를 쉽게 작성할 수 있도록 변경 내용을 포함 합니다. 코드는 아래에 나열 된 정의 하는 ODBC 형식 함으로써 64 비트 및 32 비트 플랫폼 모두를 기반으로 동일한 소스 코드를 컴파일할 수 있습니다 합니다 **_WIN64** 하거나 **WIN32** 매크로입니다.  
@@ -317,7 +317,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_FETCH_BOOKMARK_PTR  
   
- SQL_ATTR_ROWS_FETCHED_PTR을 설정  
+ SQL_ATTR_ROWS_FETCHED_PTR  
   
  SQL_ATTR_IMP_PARAM_DESC  
   
@@ -479,7 +479,7 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ATTR_ROW_STATUS_PTR  
   
- SQL_ATTR_ROWS_FETCHED_PTR을 설정  
+ SQL_ATTR_ROWS_FETCHED_PTR  
   
  SQL_ATTR_SIMULATE_CURSOR  
   

@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265989"
 ---
 # <a name="control-report-distribution"></a>보고서 배포 제어
   전자 메일 및 파일 공유 배포와 관련된 보안 위험을 줄이도록 보고서 서버를 구성할 수 있습니다.  

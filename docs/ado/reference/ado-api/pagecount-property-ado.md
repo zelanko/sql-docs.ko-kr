@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d7785ad6c1ad97af1517a01888816c76ade42e0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239571"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 속성(ADO)
 데이터 페이지 수를 나타냅니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 포함 합니다.  

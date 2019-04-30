@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2a5ab00cc6e01b97639ae3f7d353fa2462ef3fd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309165"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 데이터 수정에 사용할 수 있는 권한을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)연를 [레코드](../../../ado/reference/ado-api/record-object-ado.md)에 대 한 값을 지정 하거나를 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 속성을  **레코드** 하 고 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  

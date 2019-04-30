@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265946"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>데이터 기반 구독 만들기 페이지(보고서 관리자)
   데이터 기반 구독 만들기 페이지를 사용하여 구독이 실행될 때마다 구독 정보에 대한 구독자 데이터베이스를 쿼리하는 구독을 작성하거나 수정할 수 있습니다. 데이터 기반 구독은 쿼리 결과를 사용하여 구독을 받는 사람, 배달 설정 및 보고서 매개 변수 값을 확인합니다. 실행할 때 보고서 서버는 쿼리를 실행하여 구독 설정에 사용된 값을 가져옵니다. 데이터 기반 구독 만들기 페이지를 사용하여 쿼리를 정의하고 구독 설정에 쿼리 값을 할당할 수 있습니다. 데이터 기반 구독에 지정하는 값과 옵션은 마법사처럼 여러 페이지(총 7페이지)로 나뉩니다.  

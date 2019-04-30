@@ -13,18 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268498"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
   사용자가 데이터 원본 개체에 액세스하는 데 필요한 사용 권한은 Visual Database Tools가 아니라 데이터 원본에 부여됩니다. 데이터 원본 개체에 부여된 액세스 권한은 설치 환경의 보안 정책을 통해 제어됩니다. 특정 데이터베이스 개체에 액세스할 수 있는 권한이 없는 경우 데이터베이스 관리자에게 문의하십시오.  
   
  데이터베이스 권한으로 데이터베이스 구조를 볼 수는 있지만 수정할 수 없는 경우 변경 스크립트를 사용하여 수정 내용을 데이터베이스에 전송하지 않고 디자인할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다중 사용자 환경&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

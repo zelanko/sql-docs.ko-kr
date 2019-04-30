@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240384"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>설명자 및 데스크톱 데이터베이스 드라이버
 설명자에는 동적 매개 변수 또는 열 데이터에 대 한 정보를 포함 하는 데이터 구조입니다. **SQLGetDescField** 아래에 나열 된 지원 되는 설명자를 검색할 수 있습니다. 구현 매개 변수 설명자 (IPD) 자동으로 채워지지 않습니다 때문 **SQLDescribeParam** 지원 되지 않습니다. Jet (예: SQL_DESC_BASE_TABLE_NAME)를 통해 사용할 수 있는 설명자 필드도 지원 되지 않습니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "47817471"
 |SQL_DESC_NUM_PREC_RADIX|지원됨|  
 |SQL_DESC_OCTET_LENGTH|지원됨|  
 |SQL_DESC_OCTET_LENGTH_PTR|지원됨|  
-|DESC_PARAMETER_TYPE|입력된 매개 변수만|  
+|SQL_DESC_PARAMETER_TYPE|입력된 매개 변수만|  
 |SQL_DESC_PRECISION|지원됨|  
 |SQL_DESC_SCALE|지원됨|  
 |SQL_DESC_SCHEMA_NAME|지원되지 않음|  

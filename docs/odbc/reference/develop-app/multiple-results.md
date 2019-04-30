@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254173"
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 항목이 반환 됩니다 데이터 원본에서 문을 실행 한 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합 및 행. *행* 업데이트에 의해 영향을 받는 행 수가 삭제 또는 삽입 됩니다. 일괄 처리에서 설명한 [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 결과 생성할 수 있습니다.  
@@ -31,8 +31,8 @@ A *결과* 항목이 반환 됩니다 데이터 원본에서 문을 실행 한 �
   
 |일괄 처리 유형|행 개수|결과 집합|  
 |----------------|----------------|-----------------|  
-|명시적 일괄 처리|[A] SQL_BATCH_ROW_COUNT|-[b|  
-|프로시저|[A] SQL_BATCH_ROW_COUNT|-[b|  
+|명시적 일괄 처리|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|절차|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |매개 변수 배열|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] 행 수가 생성 문 일괄 처리에서 지원 될 수 있습니다, 아직 행 개수 반환 되는 지원 되지 않습니다. 옵션을 SQL_BATCH_SUPPORT **SQLGetInfo** 나타냅니다 행 수가 생성 문 일괄 처리에서 허용 됩니다 여부; SQL_BATCH_ROW_COUNTS 옵션은 응용 프로그램에 이러한 행 개수를 반환할지 여부를 나타냅니다.  

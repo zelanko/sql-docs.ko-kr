@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c49ff9295904d8149f6050c0cb25de4d68cfe24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240551"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>추적 파일 열기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 파일을 여는 방법에 대해 설명합니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "52795735"
   
 2.  **파일 열기** 대화 상자에서 열려는 추적 데이터 파일을 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  
   
   

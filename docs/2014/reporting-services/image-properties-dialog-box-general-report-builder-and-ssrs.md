@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ceed76c33537178d259c78c0ae1acb7cd77e8b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260654"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>이미지 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **이미지 속성** 대화 상자에서 **일반** 을 선택하여 그림을 추가하고, 이미지의 기본 이름을 변경하고, 도구 설명 텍스트를 추가할 수 있습니다.  

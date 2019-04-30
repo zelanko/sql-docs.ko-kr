@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253332"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
 SQL Server 또는 SQL Azure MySQL 데이터베이스를 마이그레이션하려면, 마이그레이션할는 MySQL 데이터베이스에 연결 해야 합니다. 에 연결 하면 SSMA 모든 MySQL 스키마에 대 한 메타 데이터를 가져오고 MySQL 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지 않습니다.  
@@ -114,6 +114,6 @@ MySQL 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고�
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계 [SQL Server에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
 [SQL Server-Azure SQL DB로 마이그레이션 MySQL 데이터베이스 &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

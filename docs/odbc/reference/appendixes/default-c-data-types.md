@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240966"
 ---
 # <a name="default-c-data-types"></a>기본 C 데이터 형식
 응용 프로그램에서 SQL_C_DEFAULT를 지정 하는 경우 **SQLBindCol**를 **SQLGetData**, 또는 **SQLBindParameter**, 드라이버 가정 출력 또는 입력된 버퍼의 C 데이터 형식 열 또는 버퍼 바인딩되는 매개 변수의 SQL 데이터 형식에 해당 합니다.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312086"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>4단원: DMX를 사용하여 시계열 예측 만들기
   이 단원과 다음 단원에서는 사용 하 여 확장 DMX (Data Mining) 다양 한 유형의에서 만든 시계열 모델 기반의 예측을 만들려면 [1 단원: 시계열 마이닝 모델 및 마이닝 구조 만들기](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) 고 [2 단원: 시계열 마이닝 구조에 마이닝 모델 추가](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)합니다.  

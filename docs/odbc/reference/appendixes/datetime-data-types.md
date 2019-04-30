@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241012"
 ---
 # <a name="datetime-data-types"></a>날짜/시간 데이터 형식
 ODBC 3에서 *.x*에 대 한 식별자를 날짜, 시간 및 타임 스탬프 SQL 데이터 형식 SQL_TIMESTAMP SQL_DATE, SQL_TIME에서 변경 되었습니다. (인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서) SQL_를 TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (인스턴스와 **#define** 91, 92, 및 93 헤더 파일에), 각각. 식별자에서 변경 SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP를 각각 해당 C 형식 및 인스턴스 **#define** 변경 적절 하 게 합니다.  
   
- ODBC 3에서 SQL 날짜/시간 데이터 형식에 대해 반환 된 열 크기 및 소수 자릿수 *.x* 는 ODBC 2에서에 반환 되는 자릿수와 소수 자릿수와 동일 합니다. *x*합니다. 이러한 값 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 설명자 필드의 값과 다릅니다. (자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에서입니다.)  
+ ODBC 3에서 SQL 날짜/시간 데이터 형식에 대해 반환 된 열 크기 및 소수 자릿수 *.x* 는 ODBC 2에서에 반환 되는 자릿수와 소수 자릿수와 동일 합니다. *x*합니다. 이러한 값 SQL_DESC_PRECISION 및 자릿수가 SQL_DESC_SCALE 설명자 필드의 값과 다릅니다. (자세한 내용은 [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.)  
   
  이러한 변경에 영향을 줍니다 **SQLDescribeCol**하십시오 **SQLDescribeParam**, 및 **SQLColAttributes**; **SQLBindCol**하십시오 **SQLBindParameter**, 및 **SQLGetData**; 및 **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**합니다 **SQLStatistics**, 및 **SQLSpecialColumns**합니다.  
   

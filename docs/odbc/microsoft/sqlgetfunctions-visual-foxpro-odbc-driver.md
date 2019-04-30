@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313064"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "47628611"
   
  지원: 전체  
   
- 수준 1 ODBC API 규칙:  
+ ODBC API 규칙: 수준 1  
   
  모든 지원 되는 함수에 대해 TRUE를 반환.  
   

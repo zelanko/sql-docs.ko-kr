@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: a2c1bd3fea167a784d86f7e323566f73c3a01f86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287715"
 ---
 # <a name="creating-test-cases-oracletosql"></a>테스트 사례 만들기(OracleToSQL)
 테스트를 만드는 테스트 사례 마법사를 사용 합니다. 이 마법사를 사용 하면 테스트 매개 변수를 지정 하 고 테스트 하 고 개체를 확인을 선택 하 여 테스트 사례를 만들 수 있습니다.  

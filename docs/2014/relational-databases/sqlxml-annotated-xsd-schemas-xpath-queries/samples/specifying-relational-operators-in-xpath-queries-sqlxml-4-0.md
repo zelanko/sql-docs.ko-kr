@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268608"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 관계형 연산자 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 관계형 연산자를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 예제 스키마에 대 한 정보를 참조 하세요 [샘플 주석이 추가 된 XSD 스키마 XPath 예제에 대 한 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)합니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "52804448"
 ```  
   
 > [!NOTE]  
->  이 쿼리를 템플릿에 지정하는 경우 < 문자는 XML 문서에서 특별한 의미를 가지므로 엔터티 인코딩해야 합니다. 템플릿에서는 `<`를 사용하여 < 문자를 지정합니다.  
+>  템플릿에서이 쿼리를 지정 합니다 < 문자 므로 엔터티 인코딩해야 여야 합니다.는 < 문자는 XML 문서에서 특별 한 의미 합니다. 템플릿에서 사용 하 여 `<` 지정 하 여 < 문자.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

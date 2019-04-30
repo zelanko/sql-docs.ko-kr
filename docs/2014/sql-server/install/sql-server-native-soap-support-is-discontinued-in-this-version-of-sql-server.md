@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9c3af432ac614a11bb6321af87e28f9675f806a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267550"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>SQL Server 기본 SOAP 지원 기능은 이 SQL Server 버전에서 더 이상 제공되지 않습니다.
   업그레이드 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 XML 웹 서비스 사용을 발견했습니다.  

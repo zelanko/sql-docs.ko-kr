@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa841b0fc86fd7c6525187d08b1fbe143b8e3ee4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260716"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>이미지, 입력란, 사각형, 선 F1 도움말
   이 섹션의 항목에서는 보고서 디자이너의 대화 상자에서 이미지, 입력란, 사각형 및 선에 설정할 수 있는 옵션에 대해 설명합니다.  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266368"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>계산된 계열 속성 대화 상자, 일반(보고서 작성기 및 SSRS)
   **계산된 계열 속성** 대화 상자에서 **수식**을 선택하여 기존 계열 데이터를 입력으로 사용하는 기본 제공 수식을 기반으로 계산할 계열을 추가하거나 수정할 수 있습니다.  

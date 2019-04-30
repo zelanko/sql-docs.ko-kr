@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248929"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
-합니다 **ADORecordsetConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드 집합** OLE DB 개체 **행 집합** C/c + + 응용 프로그램에서 개체입니다.  
+합니다 **ADORecordsetConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드 집합** OLE DB 개체 **행 집합** 개체 c에서 /C++ 응용 프로그램입니다.  
   
  이 인터페이스는 다음 속성을 지원합니다.  
   

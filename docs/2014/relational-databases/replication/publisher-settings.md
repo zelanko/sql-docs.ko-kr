@@ -1,5 +1,5 @@
 ---
-title: SQL Server 복제 게시자 설정 대화 상자 | Microsoft Docs
+title: SQL Server 복제 '게시자 설정' 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262313"
 ---
-# <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 복제 게시자 설정 대화 상자
+# <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server 복제 '게시자 설정' 대화 상자
   **게시자 설정** 대화 상자에서 복제 모니터의 왼쪽 창에 추가된 게시자에 대한 설정을 변경할 수 있습니다.  
   
 ## <a name="options"></a>변수  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309192"
 ---
 # <a name="adox-objects"></a>ADOX 개체
 ## <a name="adox-object-summary"></a>ADOX 개체 요약  
@@ -30,7 +30,7 @@ ms.locfileid: "47772301"
 |[열](../../../ado/reference/adox-api/column-object-adox.md)|테이블, 인덱스 또는 키에서 열을 나타냅니다.|  
 |[그룹](../../../ado/reference/adox-api/group-object-adox.md)|보안된 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|데이터베이스 테이블에서 인덱스를 나타냅니다.|  
-|[키](../../../ado/reference/adox-api/key-object-adox.md)|데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.|  
+|[Key](../../../ado/reference/adox-api/key-object-adox.md)|데이터베이스 테이블에서 기본, 외래, 또는 고유 키 필드를 나타냅니다.|  
 |[프로시저](../../../ado/reference/adox-api/procedure-object-adox.md)|저장된 프로시저를 나타냅니다.|  
 |[테이블](../../../ado/reference/adox-api/table-object-adox.md)|열, 인덱스 및 키를 포함 하 여 데이터베이스 테이블을 나타냅니다.|  
 |[사용자](../../../ado/reference/adox-api/user-object-adox.md)|보안된 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.|  

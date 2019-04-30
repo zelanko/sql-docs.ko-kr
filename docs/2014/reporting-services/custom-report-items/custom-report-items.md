@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264779"
 ---
 # <a name="custom-report-items"></a>사용자 지정 보고서 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 엔터프라이즈 보고서 작성 및 게시, 보안 및 구독 관리, 포괄적 API를 통한 보고 기능 확장 등을 위한 풍부한 도구 집합을 제공합니다. 보고서는 RDL(Report Definition Language)이라는 XML 기반 언어를 사용하여 정의됩니다. RDL은 보고서의 레이아웃, 쿼리 정보 및 항목 형식을 설명하는 지침을 제공합니다. 사용자 지정 보고서 항목을 작성하여 RDL을 확장할 수 있습니다. 사용자 지정 보고서 항목은 런타임에 보고서 처리기에서 호출하는 런타임 구성 요소와 사용자 지정 보고서 항목을 보고서 디자이너에서 사용할 수 있도록 하는 디자인 타임 구성 요소로 구성됩니다.  

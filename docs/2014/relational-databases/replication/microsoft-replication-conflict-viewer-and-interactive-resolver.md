@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250339"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 복제 충돌 뷰어 및 대화형 해결 프로그램
   이 섹션에는 병합 복제 및 트랜잭션 복제에 대한 복제 충돌 뷰어의 정보와 병합 복제에 대한 대화형 해결 프로그램의 정보가 포함되어 있습니다.  

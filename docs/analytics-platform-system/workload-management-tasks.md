@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243795"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>분석 플랫폼 시스템에 워크 로드 관리 작업
 Analytics Platform System의 워크 로드 관리 작업입니다.

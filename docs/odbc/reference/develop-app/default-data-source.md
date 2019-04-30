@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267646"
 ---
 # <a name="default-data-source"></a>기본 데이터 원본
 드라이버는 기본 데이터 원본 특정 응용 프로그램 않습니다 하지 명시적으로 지정 하는 경우 하나에서 데이터 원본을 선택할 수 있습니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277479"
 ---
 # <a name="predict-mdx"></a>Predict(MDX)
 
@@ -42,7 +42,7 @@ Predict(Mining_Model_Name,String_Expression)
  지정한 마이닝 모델에 대해 유효한 DMX 식으로 계산되는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>Remarks  
- **Predict** 함수 지정된 된 마이닝 모델의 컨텍스트 내에서 지정 된 문자열 식을 계산 합니다.  
+ 합니다 **Predict** 함수는 지정한 마이닝 모델의 컨텍스트 내에서 지정 된 문자열 식을 계산 합니다.  
   
  데이터 마이닝 구문과 함수는 DMX(Data Mining Expression) 참조에 설명되어 있습니다.  
   
@@ -60,6 +60,6 @@ WHERE([Customer].[Customer Geography].[Customer].&[12012])
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

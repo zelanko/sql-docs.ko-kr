@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258959"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 함수(SQLGetData Function)
 **규칙**  
@@ -139,13 +139,13 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_OUTPUT_PARAMS = **SQLGetData** 출력 매개 변수 값을 반환 하도록 호출 될 수 있습니다. 자세한 내용은 [SQLGetData를 사용 하 여 출력 매개 변수 검색](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)합니다.  
   
--   SQL_GD_ANY_COLUMN 합니다. 이 옵션은 반환 되 면 **SQLGetData** 바인딩된 마지막 열 전에 포함 하 여 모든 바인딩되지 않은 열에 대해 호출할 수 있습니다.  
+-   SQL_GD_ANY_COLUMN. 이 옵션은 반환 되 면 **SQLGetData** 바인딩된 마지막 열 전에 포함 하 여 모든 바인딩되지 않은 열에 대해 호출할 수 있습니다.  
   
--   SQL_GD_ANY_ORDER 합니다. 이 옵션은 반환 되 면 **SQLGetData** 순서에 관계 없이 바인딩되지 않은 열에 대해 호출할 수 있습니다.  
+-   SQL_GD_ANY_ORDER. 이 옵션은 반환 되 면 **SQLGetData** 순서에 관계 없이 바인딩되지 않은 열에 대해 호출할 수 있습니다.  
   
--   SQL_GD_BLOCK 합니다. 이 옵션에서 반환 되 면 **SQLGetInfo** SQL_GETDATA_EXTENSIONS 정보 항목을 드라이버 지원에 대 한 호출 **SQLGetData** 행 집합 크기가 1 보다 큰 응용 프로그램 호출할수시점과**SQLSetPos** SQL_POSITION 옵션을 호출 하기 전에 올바른 행에 커서를 놓고 **SQLGetData 합니다.**  
+-   SQL_GD_BLOCK. 이 옵션에서 반환 되 면 **SQLGetInfo** SQL_GETDATA_EXTENSIONS 정보 항목을 드라이버 지원에 대 한 호출 **SQLGetData** 행 집합 크기가 1 보다 큰 응용 프로그램 호출할수시점과**SQLSetPos** SQL_POSITION 옵션을 호출 하기 전에 올바른 행에 커서를 놓고 **SQLGetData 합니다.**  
   
--   SQL_GD_BOUND 합니다. 이 옵션은 반환 되 면 **SQLGetData** 바인딩되지 않은 열 뿐만 아니라 바인딩된 열에 대해 호출할 수 있습니다.  
+-   SQL_GD_BOUND. 이 옵션은 반환 되 면 **SQLGetData** 바인딩되지 않은 열 뿐만 아니라 바인딩된 열에 대해 호출할 수 있습니다.  
   
  이러한 제한을 완화 하는 드라이버의 기능을 두 가지 예외가 있습니다. 먼저 **SQLGetData** 호출 되 면 안 정방향 전용 커서에 대 한 행 집합 크기가 1 보다 큰 경우. 둘째, 드라이버 책갈피를 지 원하는 경우 지원 해야 합니다 항상 호출 하는 기능도 **SQLGetData** 0, 응용 프로그램이 호출할 수 없도록 하는 경우에 열에 대 한 **SQLGetData** 지난 기간 이전에 다른 열에 대 한 바인딩된 열입니다. (경우 응용 프로그램이 사용 되는 ODBC 2 *.x* 드라이버 **SQLGetData** 호출 된 경우 책갈피를 성공적으로 반환 됩니다 *Col_or_Param_Num* 을 호출한 후에 0 **SQLFetch**이므로 **SQLFetch** ODBC 3으로 매핑되어 *.x* 드라이버 관리자를 **SQLExtendedFetch** 를사용하여 *FetchOrientation* sql_fetch_next, 및 **SQLGetData** 사용 하 여를 *Col_or_Param_Num* ODBC 3으로 매핑된 0 *.x* 드라이버 관리자 **SQLGetStmtOption** 사용 하 여는 *fOption* SQL_GET_BOOKMARK입니다.)  
   

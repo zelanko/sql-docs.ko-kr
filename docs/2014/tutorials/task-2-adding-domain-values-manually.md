@@ -1,5 +1,5 @@
 ---
-title: '작업 2: 도메인 값을 수동으로 추가 | Microsoft Docs'
+title: '태스크 2: 도메인 값을 수동으로 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244680"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>작업 2: 도메인 값을 수동으로 추가
+# <a name="task-2-adding-domain-values-manually"></a>태스크 2: 도메인 값을 수동으로 추가
   이 작업에 대 한 값을 추가 합니다 **국가** 도메인 수동으로. 참조 [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) 이 페이지의 필드에 대 한 자세한 내용은 항목입니다.  
   
 1.  클릭 **국가** 도메인에는 **도메인 목록**합니다.  

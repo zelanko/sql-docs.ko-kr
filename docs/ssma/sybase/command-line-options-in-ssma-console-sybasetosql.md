@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240162"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 콘솔의 명령줄 옵션(SybaseToSQL)
 Microsoft는 강력한 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵션 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  

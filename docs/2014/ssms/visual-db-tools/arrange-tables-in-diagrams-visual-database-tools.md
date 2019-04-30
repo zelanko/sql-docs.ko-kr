@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297865"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 테이블 정렬(Visual Database Tools)
   데이터베이스 다이어그램에서 테이블을 빠르게 정렬하여 각 테이블과 관계를 명확하게 파악할 수 있습니다.  

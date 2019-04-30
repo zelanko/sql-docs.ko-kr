@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238290"
 ---
-# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] 자주 묻는 질문(FAQ)
+# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
 ## <a name="what-is-azure-data-studio"></a>Azure Data Studio 란?
 
@@ -83,7 +83,7 @@ Azure Data Studio 및 해당 데이터 공급자에 대 한 소스 코드는 Git
 
 |기능|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Azure 로그인|사용자 계정 컨트롤|사용자 계정 컨트롤|
+|Azure Sign-In|사용자 계정 컨트롤|사용자 계정 컨트롤|
 |대시보드|사용자 계정 컨트롤| |
 |확장 프로그램|사용자 계정 컨트롤| |
 |통합된 터미널|사용자 계정 컨트롤||

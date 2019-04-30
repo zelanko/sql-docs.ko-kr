@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9094fcbbede4c9bb6bac283129ed20ea4e3e910b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261758"
 ---
 # <a name="publisher-information-agents"></a>게시자 정보, 에이전트
   **에이전트** 탭에는 게시자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
@@ -47,13 +47,13 @@ ms.locfileid: "54127324"
 ## <a name="options"></a>변수  
  에이전트 또는 작업에 대한 정보를 표시하려면 **Agent and Job Types** 드롭다운 메뉴에서 해당 정보를 선택합니다. 자세한 내용 및 에이전트 또는 작업과 관련된 태스크를 보려면 해당 에이전트 또는 작업에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
--   **정렬**: 하나 이상의 열에 정렬 된 **정렬 열** 대화 상자.  
+-   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
   
--   **표시할 열 선택**: 열을 표시 및 표시 되는 순서를 선택 합니다 **열 선택** 대화 상자.  
+-   **표시할 열 선택**: **열 선택** 대화 상자에서 표시할 열 및 해당 열이 표시되는 순서를 선택합니다.  
   
--   **필터**: 열 값에 따라 표의 행을 필터링 합니다 **필터 설정** 대화 상자.  
+-   **필터**: **필터 설정** 대화 상자의 열 값에 따라 표의 행을 필터링합니다.  
   
--   **필터 지우기**: 표에 대한 모든 필터 설정을 지웁니다.  
+-   **필터 지우기**: 표에 대 한 모든 필터 설정을 지웁니다.  
   
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "54127324"
   
 ## <a name="see-also"></a>관련 항목  
  [복제 모니터 시작](monitor/start-the-replication-monitor.md)   
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [복제 모니터링](monitoring-replication.md)  
   
   

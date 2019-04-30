@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9bdf5e50e994454db0793aacdd4a3f60f1b07f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309253"
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0(SQL Server 구성 관리자)
   [!INCLUDE[ssIS](../../includes/ssis-md.md)]를 지원하는 서비스입니다. 이 서비스의 속성을 보려면 세부 정보 창에서 해당 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  

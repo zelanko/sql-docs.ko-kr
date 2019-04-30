@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b73bd104663f8a6f79551e9ed2f0494703fd3c39
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266194"
 ---
 # <a name="choose-the-deployment-location"></a>배포 위치 선택
   보고서 마법사의 배포 위치 선택 페이지를 사용하여 보고서 서버 프로젝트의 배포 서버 및 배포 폴더를 설정할 수 있습니다.  

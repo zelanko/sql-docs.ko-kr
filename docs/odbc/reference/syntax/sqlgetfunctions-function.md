@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240235"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
@@ -85,7 +85,7 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* ISO 92 표준을 준수 수준을를 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId 값|FunctionId 값|  
+|FunctionId Value|FunctionId Value|  
 |----------|----------|  
 |SQL_API_SQLALLOCHANDLE|SQL_API_SQLGETDESCFIELD|  
 |SQL_API_SQLBINDCOL|SQL_API_SQLGETDESCREC|  
@@ -111,18 +111,18 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* Open Group 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId 값|FunctionId 값|  
+|FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
  다음은 유효한 값 목록을 *FunctionId* ODBC 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId 값|FunctionId 값|  
+|FunctionId Value|FunctionId Value|  
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
-|SQL_API_SQLBULKOPERATIONS [1]|SQL_API_SQLPRIMARYKEYS|  
+|SQL_API_SQLBULKOPERATIONS[1]|SQL_API_SQLPRIMARYKEYS|  
 |SQL_API_SQLCOLUMNPRIVILEGES|SQL_API_SQLPROCEDURECOLUMNS|  
 |SQL_API_SQLDESCRIBEPARAM|SQL_API_SQLPROCEDURES|  
 |SQL_API_SQLDRIVERCONNECT|SQL_API_SQLSETPOS|  
@@ -133,13 +133,13 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* ODBC 3.8 이상 도입 된 함수에 대 한 합니다.  
   
-|FunctionId 값|  
+|FunctionId Value|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
  [2] **SQLCancelHandle** 반환할만 지원 드라이버가 둘 다를 지 원하는 **SQLCancel** 하 고 **SQLCancelHandle**합니다. 하는 경우 **SQLCancel** 은 지원 하지만 **SQLCancelHandle** 응용 프로그램 수 호출 되지 않습니다 **SQLCancelHandle** 문 핸들에 대해 에매핑될때문에 **SQLCancel**합니다.  
   
-## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 매크로  
+## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS Macro  
  SQL_FUNC_EXISTS (*SupportedPtr*를 *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다 *.x* 함수나 이전 후 **SQLGetFunctions**  가 사용 하 여 호출 된를 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. SQL_FUNC_EXISTS 사용 하 여 호출 하는 응용 프로그램을 *SupportedPtr* 인수와 함께 사용 합니다 *SupportedPtr* 전달 *SQLGetFunctions*와  *FunctionID* 인수와 함께 사용 합니다 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않은 경우 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
   
 > [!NOTE]

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c8f0268a91b66f6f26eec1d87502355a1c9795a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239785"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 메서드(ADO)
 보류 중인 일괄 처리 업데이트를 취소합니다.  

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267476"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>마이닝 모델의 중첩 테이블 필터링(중급 데이터 마이닝 자습서)
   모델을 만들고 탐색한 후 고객 데이터의 하위 집합에 초점을 맞추기로 결정합니다. 예를 들어 특정 항목을 포함하는 바구니만 분석하거나 특정 기간 동안 아무 것도 구매하지 않은 고객에 대한 인구 통계를 분석할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 마이닝 모델에 사용되는 데이터를 필터링하는 기능을 제공합니다. 이 기능은 새 데이터 원본 뷰를 다른 데이터를 사용 하도록 설정 해야 하기 때문에 유용 합니다. 기본 데이터 마이닝 자습서에서는 사례 테이블에 조건을 적용하여 플랫 테이블의 데이터를 필터링하는 방법을 배웠습니다. 이 태스크에서는 중첩 테이블에 적용되는 필터를 만듭니다.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>중첩 테이블 및 사례 테이블에 대한 필터  
+## <a name="filters-on-nested-vs-case-tables"></a>중첩 테이블 및 필터입니다. 사례 테이블  
  Association 모델에 사용되는 데이터 원본 뷰와 같이 데이터 원본 뷰에 사례 테이블 및 중첩 테이블이 포함되어 있는 경우 사례 테이블의 값, 중첩 테이블에서의 값 존재 여부 또는 이 둘을 조합한 조건을 기준으로 필터링할 수 있습니다.  
   
  이 태스크에서는 먼저 Association 모델의 복사본을 만든 다음 사례 테이블에서 IncomeGroup 및 Region 특성을 기준으로 필터링할 수 있도록 해당 특성을 새 관련 모델에 추가합니다.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4eabc3e0c354e02ad8df790d896dc43ae49c9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313006"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>리터럴 접두사 및 접미사
 SQL 문에서 *리터럴* 실제 데이터 값의 문자 표시 됩니다. 예를 들어 다음 문에서 ABC, FFFF 및 10에 리터럴:  

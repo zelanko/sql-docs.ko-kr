@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245663"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>WMI를 구성하여 SQL Server 도구에 서버 상태 표시
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 SQL Server 도구에 서버 상태를 표시하기 위해 WMI를 구성하는 방법에 대해 설명합니다. 서버에 연결할 때 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]구성 관리자와 함께 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 등록된 서버와 개체 탐색기 구성 요소는 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (MSSQLSERVER) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트 서비스의 상태를 확인할 수 있습니다. 서비스의 상태를 표시하려면 사용자가 WMI 개체에 원격으로 액세스할 수 있는 권한이 있어야 합니다. 서버에는 이 사용 권한을 구성할 수 있도록 WMI가 설치되어 있어야 합니다.  

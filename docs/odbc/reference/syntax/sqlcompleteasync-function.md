@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91046e19e77d3074a8ecef2163e8d46ab528bec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259362"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 함수
 **규칙**  
- ODBC 3.8 버전에 도입 되었습니다.  
+ 도입 된 버전: ODBC 3.8  
   
- 표준 준수: 없음  
+ 표준 준수 합니다. 없음  
   
  **요약**  
  **SQLCompleteAsync** 비동기 함수는 두 알림 또는 폴링 기반 처리를 사용 하 여 완료 되 면 확인 하기 위해 사용할 수 있습니다. 비동기 작업에 대 한 자세한 내용은 참조 하세요. [비동기 실행](../../../odbc/reference/develop-app/asynchronous-execution.md)합니다.  
@@ -69,7 +69,7 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_INVALID_HANDLE: 핸들에 나타난 *HandleType* 하 고 *처리* 는 유효한 핸들이 아닙니다.  
   
--   : SQL_ERROR *AsyncRetCodePtr* null 않거나 핸들에서 비동기 처리를 지원 하지 않습니다.  
+-   SQL_ERROR: *AsyncRetCodePtr* null 않거나 핸들에서 비동기 처리를 지원 하지 않습니다.  
   
 -   SQL_NO_DATA: 알림 모드에서 비동기 작업이 진행에서 중이지 또는 드라이버 관리자가 응용 프로그램에 알려지지 않은 합니다. 폴링 모드에서 비동기 작업을 하지 진행 중입니다.  
   

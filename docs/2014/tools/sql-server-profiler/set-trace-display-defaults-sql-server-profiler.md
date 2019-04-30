@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267377"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>추적 표시 기본값 설정(SQL Server Profiler)
   이 항목에서는 도구 옵션을 설정하는 방법에 대해 설명합니다. 도구 옵션은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적 창에 추적을 표시하는 데 사용하는 글꼴 종류, 크기 및 스타일을 지정합니다. 또한 운영 체제에서 구성된 국가별 설정에 따라 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 모든 날짜 및 시간을 표시하도록 지정할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "52822837"
   
 6.  **확인** 을 클릭하여 **일반 옵션** 대화 상자를 닫습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server 프로파일러](sql-server-profiler.md)  
   
   

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a87118acbfa2b4dc38fc8ba50fecc56e8c22b656
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240175"
 ---
 # <a name="ready-to-repair"></a>복구 준비
   복구 준비 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 실행되는 복구 프로세스에 대한 요약 정보를 제공합니다.  

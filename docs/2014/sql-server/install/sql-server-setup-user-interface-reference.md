@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf1e05808de1735b8a263387143a00044d4a6ce9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267877"
 ---
 # <a name="sql-server-setup-user-interface-reference"></a>SQL Server 설치 사용자 인터페이스 참조
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사에서 제공되는 설치 옵션에 대해 설명합니다.  

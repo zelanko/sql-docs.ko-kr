@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231141"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>SQL Server Always On 가용성 그룹에 대 한 배포 스크립트 만들기
 
@@ -64,13 +64,13 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 다음 예제에서는 실행 하는 방법을 보여 줍니다 `deploy-ag.py`합니다.
 
-### <a name="help"></a>도움말
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help
 ```
 
-* **사용 현황**: `deploy-ag.py [-h] {deploy | failover} ...`
+* **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
 * **선택적 인수**:
   * `-h, --help` 이 도움말 메시지 및 종료를 표시 합니다.
 * **하위**:
@@ -90,7 +90,7 @@ python ./deploy-ag.py --help
 python ./deploy-ag.py deploy --help
 ```
 
-* **사용 현황**:
+* **usage**:
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -113,7 +113,7 @@ python ./deploy-ag.py deploy --help
   
   `--ag AG`
   
-  가용성 그룹의 이름입니다. 기본 ag1 =
+  가용성 그룹의 이름입니다. Default=ag1
   
   `-n NAMESPACE, --namespace NAMESPACE`
   
@@ -129,7 +129,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA 암호입니다. 기본 'SAPassword2018' =
+  SA 암호입니다. Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -142,7 +142,7 @@ python ./deploy-ag.py deploy --help
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **사용 현황**: 
+* **usage**: 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]
@@ -168,7 +168,7 @@ python ./deploy-ag.py failover --help
 
   `--ag AG`
   
-  가용성 그룹의 이름입니다. 기본 ag1 =
+  가용성 그룹의 이름입니다. Default=ag1
 
   `--namespace NAMESPACE`
 

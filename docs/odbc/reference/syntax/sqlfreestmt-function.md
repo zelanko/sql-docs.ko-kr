@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt 함수 | Microsoft Docs
+title: SQLFreeStmt Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259314"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 함수
 **규칙**  
@@ -50,7 +50,7 @@ SQLRETURN SQLFreeStmt(
  *옵션*  
  [입력] 다음 옵션 중 하나입니다.  
   
- SQL_ 닫기: 연관 된 커서를 닫고 *StatementHandle* (정의 된) 경우 모든 보류 중인 결과 무시 하 고 있습니다. 응용 프로그램을 다시 열 수이 커서 나중에 실행 하 여는 **선택** 동일 하거나 다른 매개 변수 값을 사용 하 여 다시 문입니다. 없음 커서를 연 경우이 옵션은 응용 프로그램에 대 한 영향을 주지 않습니다. **SQLCloseCursor** 커서 닫기 호출할 수도 있습니다. 자세한 내용은 [커서 닫기](../../../odbc/reference/develop-app/closing-the-cursor.md)합니다.  
+ SQL_ CLOSE: 연관 된 커서를 닫고 *StatementHandle* (정의 된) 경우 모든 보류 중인 결과 무시 하 고 있습니다. 응용 프로그램을 다시 열 수이 커서 나중에 실행 하 여는 **선택** 동일 하거나 다른 매개 변수 값을 사용 하 여 다시 문입니다. 없음 커서를 연 경우이 옵션은 응용 프로그램에 대 한 영향을 주지 않습니다. **SQLCloseCursor** 커서 닫기 호출할 수도 있습니다. 자세한 내용은 [커서 닫기](../../../odbc/reference/develop-app/closing-the-cursor.md)합니다.  
   
  SQL_DROP: 이 옵션은 더 이상 사용되지 않습니다. 에 대 한 호출 **SQLFreeStmt** 사용 하 여는 *옵션* SQL_DROP의 드라이버 관리자에 매핑되어 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   

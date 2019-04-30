@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250593"
 ---
 # <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
   복제 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "54132283"
  **-70Subscribers**  
  구독자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 7.0을 실행하는 경우에 사용해야 합니다.  
   
- **-BcpBatchSize** _bcp_ \_ *batch* \_ *크기*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  대량 복사 작업에서 보낼 행 수입니다. **bcp in** 작업을 수행하는 경우 일괄 처리 크기는 한 번의 트랜잭션으로 서버에 보낼 행 수이며 배포 에이전트가 **bcp** 진행 메시지를 기록하기 전에 보내야 하는 행 수이기도 합니다. **bcp out** 작업을 수행하는 경우 고정 일괄 처리 크기로 1000이 사용됩니다. 값 0은 메시지 로깅을 사용하지 않음을 나타냅니다.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132283"
 |**2**|모든 오류 메시지 및 진행률 보고 메시지가 출력되며, 디버깅에 유용합니다.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- 테이블 개체가 프리페치되고 캐시되는지를 지정하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용하여 특정 테이블 속성을 프리페치하는 것입니다.  이 매개 변수를 실행 하는 SMO 프리페치 상당한 작업은 더 이상 시나리오에서 유용할 수 있습니다. 이 매개 변수를 사용하지 않으면 게시에 아티클로 추가되는 테이블의 비율을 기준으로 런타임 시 동작이 결정됩니다.  
+ 테이블 개체가 프리페치되고 캐시되는지를 지정하는 선택적 매개 변수입니다.  기본 동작은 내부 계산을 기반으로 하는 SMO 구성 요소를 사용하여 특정 테이블 속성을 프리페치하는 것입니다.  이 매개 변수는 SMO 프리페치 작업이 실행하는 데 상당히 오래 걸리는 시나리오에 유용할 수 있습니다. 이 매개 변수를 사용하지 않으면 게시에 아티클로 추가되는 테이블의 비율을 기준으로 런타임 시 동작이 결정됩니다.  
   
 |OutputVerboseLevel 값|Description|  
 |------------------------------|-----------------|  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315981"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 메서드(ADO)
 두 개의 책갈피를 비교 하 여 상대 값 표시를 반환 합니다.  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  ADO로 노출 하는 각 공급자에 게 특정 책갈피의 데이터 형식 이므로 **Variant**합니다. SQL Server 책갈피 DBTYPE_R8 형식의 예는 (**이중**). ADO이이 형식으로 노출 된 **Variant** 의 하위 형식을 사용 하 여 **Double**합니다.  
   
- 책갈피를 비교 하는 경우 ADO는 모든 형식의 강제 변환 하지 않습니다. 값은 공급자에 전달 하기만 하면 됩니다 비교가 발생 합니다. 책갈피에 전달 되는 **CompareBookmarks** 메서드는 서로 다른 형식의 변수에 저장 된, 다음 유형 불일치 오류를 생성할 수 있습니다: "인수는 잘못 된 형식의 적절 한 범위를 벗어난 또는 충돌 서로. "  
+ 책갈피를 비교 하는 경우 ADO는 모든 형식의 강제 변환 하지 않습니다. 값은 공급자에 전달 하기만 하면 됩니다 비교가 발생 합니다. 책갈피에 전달 하는 경우는 **CompareBookmarks** 메서드는 서로 다른 형식의 변수에 저장 된, 다음 유형 불일치 오류를 생성할 수 있습니다. "인수는 잘못 된 형식의 적절 한 범위를 벗어난 또는 서로 충돌 합니다."  
   
  잘못 되었거나 형식이 잘못 된 책갈피를 사용 하면 오류가 발생 합니다.  
   

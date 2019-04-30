@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266576"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
   분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 관리 및 액세스하는 동시에 데이터 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 보다 편리하게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)을 참조하세요. 복제는 분할된 테이블 및 인덱스를 처리하는 방법을 지정하는 속성 집합을 제공하여 분할을 지원합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "52793625"
   
  복제는 초기 동기화 중에 개체를 구독자에 복사합니다. 파티션 구성표에서 PRIMARY 파일 그룹 이외의 파일 그룹을 사용하는 경우 초기 동기화 전에 이러한 파일 그룹이 구독자에 있어야 합니다.  
   
- 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원하지 않습니다. ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 명령을 지원하지 않습니다.  연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
+ 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원 하지 않습니다. ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 ALTER INDEX REBUILD WITH PARTITION 설명 합니다.  연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
   
 ## <a name="replication-support-for-partition-switching"></a>파티션 전환을 위한 복제 지원  
  테이블 분할의 주요 이점 중 하나는 파티션 간에 데이터의 하위 집합을 빠르고 효율적으로 이동할 수 있다는 것입니다. 데이터는 SWITCH PARTITION 문을 사용하여 이동합니다. 기본적으로 복제를 사용할 수 있도록 테이블을 설정하면 다음과 같은 이유로 SWITCH PARTITION 작업이 차단됩니다.  

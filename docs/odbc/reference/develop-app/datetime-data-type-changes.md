@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5a87a1cbfbdff5eb428e73d74cdd1199955d673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267702"
 ---
 # <a name="datetime-data-type-changes"></a>날짜/시간 데이터 형식 변경
 Odbc 3. *x*식별자 날짜, 시간 및 타임 스탬프 SQL 데이터 형식 SQL_TIMESTAMP SQL_DATE, SQL_TIME에서 변경 되었습니다. (인스턴스와 **#define** 9, 10 및 11의 헤더 파일에서) SQL_TYPE_DATE을를 SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP (인스턴스와 **#define** 91, 92, 및 93 헤더 파일에), 각각. 해당 C 형식 식별자는 각각 SQL_C_TYPE_DATE, SQL_C_TYPE_TIME, 및 SQL_C_TYPE_TIMESTAMP를 SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP에서 변경 되었습니다.  

@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 437018bc1cc83e1ea8a2a52a8ed9f37aa2a9121e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285006"
 ---
-# <a name="mdx-data-definition---drop-subcube"></a>MDX 데이터 정의-DROP SUBCUBE
+# <a name="mdx-data-definition---drop-subcube"></a>MDX 데이터 정의 - DROP SUBCUBE
 
 
   지정한 하위 큐브를 삭제하고 이전에 정의한 큐브나 지정한 이름의 하위 큐브 정의로 돌아갑니다.  

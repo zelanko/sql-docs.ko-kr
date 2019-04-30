@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2142b11c477db480d2a1b905d83e118317dfb391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239904"
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO(다차원)(ADO MD)
 이 섹션에서는 다음 항목을 포함합니다.  

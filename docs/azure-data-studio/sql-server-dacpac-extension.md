@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309243"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 확장 (미리 보기)
+# <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 확장(미리 보기)
 
 **데이터 계층 응용 프로그램 마법사** 배포 및.dacpac 파일을 추출 하 고 가져올.bacpac 파일 내보내기에 사용 하기 쉬운 환경을 제공 합니다.
 

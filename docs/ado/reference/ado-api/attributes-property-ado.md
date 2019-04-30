@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db3cb8276a4acda4c5d383252c2d92f51b57c684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248361"
 ---
 # <a name="attributes-property-ado"></a>Attributes 속성(ADO)
 개체의 하나 이상의 특성을 나타냅니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "47752781"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **긴** 값입니다.  
   
- 에 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 **특성** 속성은 읽기/쓰기가 가능 하 고 해당 값에는 하나 이상의 합 될 수 있습니다 [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) 값. 기본값은 영 (0).  
+ 에 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 **특성** 속성은 읽기/쓰기가 가능 하 고 해당 값에는 하나 이상의 합 될 수 있습니다 [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) 값. 기본값은 0입니다.  
   
  에 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 **특성** 속성은 읽기/쓰기가 가능 하 고 해당 값에는 하나 이상의의 합 될 수 있습니다 [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) 값. 기본값은 **adParamSigned**합니다.  
   

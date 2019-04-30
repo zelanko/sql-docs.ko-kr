@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284973"
 ---
-# <a name="mdx-data-definition---drop-set"></a>MDX 데이터 정의-DROP 집합
+# <a name="mdx-data-definition---drop-set"></a>MDX 데이터 정의 - DROP SET
 
 
   명명된 집합을 제거합니다.  

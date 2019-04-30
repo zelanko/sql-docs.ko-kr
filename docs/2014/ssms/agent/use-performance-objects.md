@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245845"
 ---
 # <a name="use-performance-objects"></a>성능 개체 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에는 서비스 수행 방법을 모니터링하는 성능 개체와 카운터가 포함됩니다. 이러한 성능 개체를 사용하면 Windows 도구인 성능 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 백그라운드에서 수행하는 작업을 식별할 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 현재 실행 중인 활성 작업 수를 확인하여 차단된 작업을 식별할 수 있습니다.  
@@ -36,8 +36,8 @@ ms.locfileid: "52787085"
   
 |인스턴스 유형|개체 이름|  
 |-------------------|-----------------|  
-|Default|**SQLAgent:** *개체*:*카운터*|  
-|명명된 형식|**SQLAgent$**<br /> ***instance_name* :** *개체*:*카운터*|  
+|기본값|**SQLAgent:** *object*:*counter*|  
+|명명된 형식|**SQLAgent$**<br /> ***instance_name* :** *object*:*counter*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 성능 개체가 포함됩니다.  
   

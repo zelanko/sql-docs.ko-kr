@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250625"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, Memory Manager 개체
   Microsoft **의** Memory Manager [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 서버 메모리의 전반적인 사용량을 모니터링하는 카운터를 제공합니다. 서버 메모리의 전반적인 사용량을 모니터링하여 사용자 작업 및 리소스 사용량을 측정하면 성능 병목 상태가 발생하는지 확인할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 사용하는 메모리를 모니터링하면 다음 사항을 확인할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "52752995"
 |**Target Server Memory (KB)**|서버가 사용할 이상적인 메모리 양을 나타냅니다.|  
 |**Total Server Memory(KB)**|서버가 메모리 관리자를 사용하여 커밋한 메모리 양을 지정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, Buffer Manager 개체](sql-server-buffer-manager-object.md)   
  [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  

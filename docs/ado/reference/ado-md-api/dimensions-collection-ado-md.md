@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 860c51ecc5d282f1c2ab957b190c8cb8f66e2b9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280365"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions 컬렉션(ADO MD)
 포함 된 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 큐브를 구성 하는 개체입니다.  

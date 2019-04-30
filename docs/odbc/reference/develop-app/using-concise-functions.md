@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312477"
 ---
 # <a name="using-concise-functions"></a>간결한 함수 사용
 일부 ODBC 함수에는 암시적 설명자 액세스할을 수 있습니다. 응용 프로그램 작성자 더 편리할 수 고 호출 보다 **SQLSetDescField** 하거나 **SQLGetDescField**합니다. 이러한 함수가 호출 될 *간결한* 여러 기능을 설정 하거나 가져오기 설명자 필드를 포함 하 여 수행 하기 때문에 작동 합니다. 일부 간결한 함수를 사용 하는 응용 프로그램 설정 또는 단일 함수 호출의 몇 가지 관련된 설명자 필드를 검색 합니다.  

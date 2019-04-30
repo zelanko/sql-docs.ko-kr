@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a97f50030d123181b1b3c0d2a5fda59a0005188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312848"
 ---
 # <a name="full-text-search-upgrade-issues"></a>전체 텍스트 Search 업그레이드 문제
   이 섹션의 항목에서는 업그레이드에 영향을 줄 수 있는 전체 텍스트 검색 문제에 대해 설명하고 이러한 변화가 환경에 미치는 영향을 완화하기 위해 취할 수 있는 조치에 대해 설명합니다.  

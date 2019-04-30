@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237935"
 ---
 # <a name="catalog-position"></a>카탈로그 위치
 데이터 원본에 데이터 원본의 식별자 및 식별자의 나머지 부분에서 분리 하는 방식을 카탈로그 이름의 위치가 달라 집니다. 예를 들어, Xbase 데이터 소스의 카탈로그 이름을 디렉터리 이며, Microsoft® Windows®에서 구분 된 테이블 이름 (즉, 파일 이름)에서 백슬래시 (\\). 다음 그림에서는이 문제를 보여 줍니다.  

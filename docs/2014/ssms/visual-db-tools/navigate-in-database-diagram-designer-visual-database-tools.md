@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a15d10bc267e6613d24ff934daf4561831c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254455"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
   데이터베이스 다이어그램 디자이너에서 작업할 때 마우스와 키보드를 모두 사용할 수 있습니다. 데이터베이스 다이어그램 디자이너에 사용되는 특정 작업 방법에 대한 내용은 아래 표를 참조하십시오.  
@@ -37,7 +37,7 @@ ms.locfileid: "52816925"
 |테이블에 표시되는 정보량 변경|Ctrl+T|  
 |확대/축소|Ctrl+더하기 키(+) 또는 빼기 키(-)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터베이스 다이어그램 디자인&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

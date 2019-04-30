@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306556"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>보고서 속성 대화 상자, 페이지 설정(보고서 작성기)
   선택 **페이지 설정** 에 **보고서 속성**, 대화 상자는 전체 보고서 페이지 옵션을 설정 합니다.  

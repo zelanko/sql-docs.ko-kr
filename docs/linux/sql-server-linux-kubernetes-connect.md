@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6352fc7be129f485175b1144d14aa380b2d99e1f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231176"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>SQL Server Always On 가용성 그룹에서 kubernetes에 연결
 

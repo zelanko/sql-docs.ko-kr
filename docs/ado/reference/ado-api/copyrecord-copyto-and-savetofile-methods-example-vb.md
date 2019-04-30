@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc7a22d72e282bfe84d9a63dac8382a380eebe7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309116"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo 및 SaveToFile 메서드 예제 (VB)
 이 예제를 사용 하 여 파일의 복사본을 만드는 방법을 보여 줍니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 하거나 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 인터넷 게시용 웹 폴더에 하나의 복사본이 만들어집니다. 다른 속성 및 표시 된 메서드를 포함 [Stream 형식](../../../ado/reference/ado-api/type-property-ado-stream.md)를 **열려**를 [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), 및 [레코드 열기](../../../ado/reference/ado-api/open-method-ado-record.md)합니다.  

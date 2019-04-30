@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb98b145eafb8d8955702938e314812501006cf5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265402"
 ---
 # <a name="cube-selection-dialog-box"></a>큐브 선택 대화 상자
   **큐브 선택** 대화 상자를 사용하여 보고서의 데이터 원본으로 다른 큐브를 선택할 수 있습니다. 다른 큐브를 선택하면 사용자 쿼리는 더 이상 유효하지 않을 수 있습니다.  

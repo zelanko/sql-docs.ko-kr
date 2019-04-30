@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 509717221a51ac790b92969ff052d0a8a5d0143d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248247"
 ---
-# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX 데이터 정의-DROP CELL CALCULATION
+# <a name="mdx-data-definition---drop-cell-calculation"></a>MDX 데이터 정의 - DROP CELL CALCULATION
 
 
   지정한 셀 계산을 제거합니다.  
@@ -36,7 +36,7 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  삭제할 셀 계산의 이름을 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [CREATE CELL CALCULATION 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

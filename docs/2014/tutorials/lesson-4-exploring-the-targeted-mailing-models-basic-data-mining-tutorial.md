@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312145"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>4단원: 타겟 메일링 모델 탐색(기본 데이터 마이닝 자습서)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>4단원: (기본 데이터 마이닝 자습서) 타겟된 메일링 모델 탐색
   프로젝트의 모델이 처리되면 이러한 모델을 탐색하여 관심 있는 추세를 찾아볼 수 있습니다. 숫자만 보는 경우 패턴이 복잡하고 어려울 수 있기 때문에 SQL Server 데이터 마이닝은 데이터를 조사하고 알고리즘이 데이터 내에서 발견한 규칙과 관계를 이해하는 데 도움을 주는 몇 가지 시각적 도구를 제공합니다. 또한 다양한 정확도 테스트를 사용하여 데이터 세트의 유효성을 검사하거나 모델을 배포하기 전에 성능이 가장 뛰어난 모델을 찾을 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 를 사용하여 모델을 탐색하는 경우 만들어진 각 모델은 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 나열됩니다. 뷰어를 사용하여 모델을 탐색할 수 있습니다. 이러한 뷰는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서도 사용할 수 있습니다.  

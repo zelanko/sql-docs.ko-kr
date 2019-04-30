@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250484"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
   이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제의 버전 간에 기능 변경 내용을 설명합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  

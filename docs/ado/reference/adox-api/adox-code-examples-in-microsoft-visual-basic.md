@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308780"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic의 ADOX 코드 예제
 이러한 항목 ADOX를 사용 하는 방법을 이해할 수 있도록 하는 샘플 코드를 제공 합니다. 모든 코드 예제는 Microsoft Visual Basic을 사용 하 여 기록 됩니다.  

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 174691a92836a2548e1fa5776872801cd1225afc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266485"
 ---
 # <a name="protocoldisplayname-property-servernetworkprotocol-class"></a>ProtocolDisplayName 속성(ServerNetworkProtocol 클래스)
   서버 네트워크 프로토콜의 표시 이름을 가져옵니다.  

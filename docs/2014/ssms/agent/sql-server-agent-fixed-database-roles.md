@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245989"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>SQL Server 에이전트 고정 데이터베이스 역할
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 **에이전트에 대한 보다 세부적인 액세스 제어 기능을 제공하는 다음과 같은** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 고정 데이터베이스 역할을 제공합니다. 다음 역할은 액세스 권한이 적은 것부터 순서대로 나열되어 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "52773775"
 |속성 보기|아니요|예|예|아니요|  
 |실행/중지/시작|해당 사항 없음|사용자 계정 컨트롤|해당 사항 없음|해당 사항 없음|  
 |작업 기록 보기|해당 사항 없음|사용자 계정 컨트롤|해당 사항 없음|해당 사항 없음|  
-|작업 기록 삭제|해당 사항 없음|이상 <sup>4</sup>|해당 사항 없음|해당 사항 없음|  
+|작업 기록 삭제|해당 사항 없음|아니요 <sup>4</sup>|해당 사항 없음|해당 사항 없음|  
 |연결/분리|해당 사항 없음|해당 사항 없음|사용자 계정 컨트롤|해당 사항 없음|  
   
  <sup>1</sup> 작업 소유권을 변경할 수 없습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "52773775"
 |속성 편집|아니요|예(소유한 작업만 해당)|아니요|예(소유한 작업만 해당)|아니요|  
 |실행/중지/시작|해당 사항 없음|예(소유한 작업만 해당)|아니요|해당 사항 없음|해당 사항 없음|  
 |작업 기록 보기|해당 사항 없음|사용자 계정 컨트롤|사용자 계정 컨트롤|해당 사항 없음|해당 사항 없음|  
-|작업 기록 삭제|해당 사항 없음|이상 <sup>4</sup>|아니요|해당 사항 없음|해당 사항 없음|  
+|작업 기록 삭제|해당 사항 없음|아니요 <sup>4</sup>|아니요|해당 사항 없음|해당 사항 없음|  
 |연결/분리|해당 사항 없음|해당 사항 없음|해당 사항 없음|예(소유한 작업만 해당)|해당 사항 없음|  
   
  <sup>1</sup> 작업 소유권을 변경할 수 없습니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "52773775"
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)   
- [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
+ [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
  [sp_update_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
  [sp_notify_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
  [sp_purge_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239942"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VC + +)
 이 예제에서는 합니다 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 중에 변경 된 레코드를 데이터 원본으로 사용 하는 경우 메시지를 표시 하 여 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리 업데이트 합니다.  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **데이터가 변경 되었습니다.**  
-**ID 제목: PS1372**  
+**제목 ID: PS1372**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
 **데이터가 변경 되었습니다.**  
-**ID 제목: PS2091**  
+**제목 ID: PS2091**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
 **데이터가 변경 되었습니다.**  
-**ID 제목: PS2106**  
+**제목 ID: PS2106**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
 **데이터가 변경 되었습니다.**  
-**ID 제목: PS3333**  
+**제목 ID: PS3333**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**   
 **데이터가 변경 되었습니다.**  
-**ID 제목: PS7777**  
+**제목 ID: PS7777**  
 **현재 값: self_help**   
 **원래 값: 심리학**   
 **내부 값: 사회학**    

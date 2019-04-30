@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309139"
 ---
-# <a name="mdx-data-definition---create-cell-calculation"></a>MDX 데이터 정의-셀 계산 만들기
+# <a name="mdx-data-definition---create-cell-calculation"></a>MDX 데이터 정의 - CREATE CELL CALCULATION
 
 
   큐브 내의 지정된 튜플 집합에서 MDX 식을 계산하는 계산 식을 만듭니다.  
@@ -50,7 +50,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *문자열*  
+ *String*  
  유효한 문자열 값입니다.  
   
  *MDX_Expression*  
@@ -59,7 +59,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Logical_Expression*  
  유효한 MDX 논리 식입니다.  
   
- *정수*  
+ *Integer*  
  유효한 정수 값입니다.  
   
  *Calculation_Name*  
@@ -76,10 +76,10 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
   
 ## <a name="see-also"></a>관련 항목  
  [세션 범위 계산된 셀 만들기](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [쿼리 범위 셀 계산 만들기 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [쿼리 범위 셀 계산 만들기&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [MDX로 셀 계산 작성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [셀 속성을 사용 하 여 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [FORMAT_STRING 내용 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [셀 속성 & #40;를 사용 하 여 Mdx& #41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [FORMAT_STRING 내용&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
  [FORE_COLOR 및 BACK_COLOR 내용 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
  [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   

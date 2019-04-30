@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248836"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
-합니다 **ADORecordConstruction**인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드** OLE DB 개체 **행** C/c + + 응용 프로그램에서 개체입니다.  
+합니다 **ADORecordConstruction**인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드** OLE DB 개체 **행** 개체 c에서 /C++ 응용 프로그램입니다.  
   
  이 인터페이스는 다음 속성을 지원합니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47686871"
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|쓰기 전용입니다.<br />OLE DB의 컨테이너를 설정 **행** 개체의이 ADO **레코드** 개체입니다.|  
-|[행](../../../ado/reference/ado-api/row-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **행** 개체에서 /이 ADO **레코드** 개체입니다.|  
+|[Row](../../../ado/reference/ado-api/row-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **행** 개체에서 /이 ADO **레코드** 개체입니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  

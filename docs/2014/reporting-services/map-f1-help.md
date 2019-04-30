@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eb6bf852e021c050f218abdae0ebff1943fe7e0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278995"
 ---
 # <a name="map-f1-help"></a>지도 F1 도움말
   이 절의 항목에서는 지도 보고서 항목에 설정할 수 있는 옵션에 대해 설명합니다.  

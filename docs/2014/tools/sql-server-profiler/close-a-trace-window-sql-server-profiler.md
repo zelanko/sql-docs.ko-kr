@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316197"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>추적 창 닫기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 실행 중이거나 보고 있는 저장된 추적의 추적 창을 닫는 방법에 대해 설명합니다.  

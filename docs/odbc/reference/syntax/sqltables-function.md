@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233359"
 ---
 # <a name="sqltables-function"></a>SQLTables 함수
 **규칙**  
@@ -54,7 +54,7 @@ SQLRETURN SQLTables(
  *StatementHandle*  
  [입력] 문 핸들에 대 한 결과 검색 합니다.  
   
- *카탈로그 이름*  
+ *CatalogName*  
  [입력] 카탈로그 이름입니다. 합니다 *CatalogName* SQL_ODBC_VERSION 환경 특성 SQL_OV_ODBC3 이면 인수 검색 패턴을 허용 않으면 SQL_OV_ODBC2 설정 된 경우 검색 패턴 허용 되지 않습니다. 드라이버 카탈로그에서 지 원하는 일부 테이블에 대 한 아니라 드라이버 다른 Dbms를 빈 문자열에서 데이터를 검색 하는 경우 등의 다른 경우 ("")는 카탈로그에 있지 않은 테이블을 나타냅니다.  
   
  SQL_ATTR_METADATA_ID 문 특성을 SQL_TRUE로 설정 된 경우 *CatalogName* 식별자로 처리 됩니다 및 대 소문자는 중요 하지 않습니다. SQL_FALSE, 있으면 *CatalogName* 패턴 값 인수를 사용 하는 리터럴로 처리 됩니다 하 고 해당 대/소문자는 중요 합니다. 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.  

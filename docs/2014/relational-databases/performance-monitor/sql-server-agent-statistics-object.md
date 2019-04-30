@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250846"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server 에이전트, Statistics 개체
   SQL Server 에이전트 **Statistics** 성능 개체에는 SQL Server 에이전트에 관한 정보를 보고하는 성능 카운터가 포함되어 있습니다.  

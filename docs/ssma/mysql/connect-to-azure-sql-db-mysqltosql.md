@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253151"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB에 연결(MySQLToSQL)
 마이그레이션하려는 SQL Azure 데이터베이스에 연결할 SQL Azure 대화 상자에 연결을 사용 합니다.  

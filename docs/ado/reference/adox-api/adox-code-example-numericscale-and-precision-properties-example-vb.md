@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4fece6307ff005031e7ab770b14bd5fbca541d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308796"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX 코드 예제: NumericScale 및 Precision 속성 예제(VB)
 이 예제에서는 합니다 [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) 및 [정밀도](../../../ado/reference/adox-api/precision-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체. 이 코드에 대 한 해당 값을 표시 합니다 **Order Details** 목차를 *Northwind* 데이터베이스.  

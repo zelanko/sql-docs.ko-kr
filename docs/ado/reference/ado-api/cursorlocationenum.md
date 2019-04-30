@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 832372ee3f8e80a9da4a758c759d9b5399a20a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309715"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 커서 서비스의 위치를 지정 합니다.  

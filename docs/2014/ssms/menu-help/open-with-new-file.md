@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240148"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
   **파일** 메뉴에서 **열기**를 클릭한 다음 **파일**을 클릭하여 하나 이상의 편집기로 문서를 열 수 있습니다. **파일 열기** 대화 상자에서 파일을 선택하고 **열기** 화살표를 클릭한 다음 **연결 프로그램**을 클릭합니다. **연결 프로그램** 대화 상자의 **열려는 프로그램을 선택하십시오.** 목록에서 원하는 프로그램을 클릭한 다음 **열기**를 클릭합니다.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f05af48f2edcdcf2c6adc6e3617860fdad38bde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314744"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 내에서 레코드 검색 방향을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

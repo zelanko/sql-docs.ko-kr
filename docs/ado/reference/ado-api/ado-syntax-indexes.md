@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404c84cd5e8b737552163082d78b5e8fcc3b1ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249036"
 ---
 # <a name="ado-syntax-indexes"></a>ADO 구문 인덱스
 ADO 메서드 및 속성을 호출 하는 구문은 개발 환경에 따라 달라 집니다. ADO 언어 참조의 나머지 부분에서는 프로그래밍 언어 ADO 메서드 및 속성 구문을 보여 주기 위해 Microsoft Visual Basic을 사용 합니다. 그러나 프로그래밍 언어 및 방법론에 따라 구체적인 구문 예는 다음 섹션을 참조 하세요.  
   
--   합니다 [COM에 대 한 Visual c + + 구문 인덱스용 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) ADO 속성 및 메서드를 사용 하지 않고 설명 합니다 **#import** Microsoft Visual c + + 컴파일러 지시문입니다.  
+-   [시각적 개체에 대 한 ADO C++ COM에 대 한 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) ADO 속성 및 메서드를 사용 하지 않고 설명 된 **#import** 컴파일러 지시문을 사용 하 여 Microsoft Visual C++.  
   
--   [#import Visual c + + 구문 인덱스에 대 한 ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) 사용 하는 경우 ADO 속성 및 메서드를 설명 합니다 **#import** Microsoft Visual c + + 컴파일러 지시문입니다.  
+-   합니다 [시각적 개체에 대 한 ADO C++ #import 구문 인덱스](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md) 사용 하는 경우 ADO 속성 및 메서드를 설명 합니다 **#import** 컴파일러 지시문을 사용 하 여 Microsoft Visual C++.  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft Visual Basic로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Microsoft Visual c + +와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Microsoft Visual와 함께 ADO 사용C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [스크립트 언어로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

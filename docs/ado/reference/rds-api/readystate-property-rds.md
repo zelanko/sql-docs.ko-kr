@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255725"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 속성(RDS)
 진행률을 나타냅니다를 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체에 데이터를 검색 하는 대로 해당 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  

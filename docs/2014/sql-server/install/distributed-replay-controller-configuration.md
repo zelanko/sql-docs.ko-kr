@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 186ae568a21c39f35389100d55d5395687f20755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253515"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Distributed Replay Controller 구성
   **설치 마법사의** Distributed Replay Controller 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 Distributed Replay Controller 서비스에 대한 관리 권한을 부여할 사용자를 지정합니다.  

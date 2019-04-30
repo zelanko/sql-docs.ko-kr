@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237703"
 ---
 # <a name="search-page-report-manager"></a>검색 페이지(보고서 관리자)
   검색 결과 페이지를 사용하여 보고서, 링크된 보고서, 보고서 모델, 공유 데이터 원본, 폴더 또는 리소스에 대해 지정한 검색 작업의 결과를 볼 수 있습니다. 검색 결과는 사전순으로 나열됩니다. 유형, 이름 또는 설명을 기준으로 정렬할 수 있습니다.  

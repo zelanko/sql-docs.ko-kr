@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281207"
 ---
 # <a name="views-delete-method-example-vb"></a>Views Delete 메서드 예제(VB)
 다음 코드를 사용 하는 방법을 보여 줍니다 합니다 [삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md) 카탈로그에서 뷰를 삭제 하는 방법입니다.  

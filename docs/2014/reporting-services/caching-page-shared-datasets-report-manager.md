@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266342"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>캐싱 페이지, 공유 데이터 세트(보고서 관리자)
   캐싱 속성 페이지를 사용하여 공유 데이터 세트의 캐시 옵션을 설정할 수 있습니다.  

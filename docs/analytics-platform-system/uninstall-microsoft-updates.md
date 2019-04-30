@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4739d05b1878c8b7fc9f66f2e0b8145ff1044e54
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243832"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Analytics Platform System의 Microsoft 업데이트를 제거 합니다.
 이 문서에서는 Analytics Platform System appliance에서 이전에 설치 된 Microsoft 업데이트를 제거 하는 방법을 설명 합니다.  

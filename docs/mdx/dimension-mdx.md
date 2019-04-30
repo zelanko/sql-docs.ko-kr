@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248216"
 ---
 # <a name="dimension-mdx"></a>Dimension(MDX)
 
@@ -47,7 +47,7 @@ Member_Expression.Dimension
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ### <a name="examples"></a>예  
- 다음 예제에서는 **차원** 와 함께에서 함수는 **이름** 함수를 지정된 된 멤버의 계층 이름을 반환 합니다.  
+ 다음 예제에서는 합니다 **차원** 함수를 함께 사용 하 여를 **이름** 함수를 지정된 된 멤버의 계층 이름을 반환 합니다.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- 다음 예제에서는 **차원** 와 함께에서 함수는 **멤버** 및 **Count** 지정 된 멤버가 들어 있는 계층의 멤버 수를 반환 하는 함수, 합니다.  
+ 다음 예제에서는 합니다 **차원** 함수를 함께 사용 하 여는 **멤버** 및 **개수** 계층에서 멤버의 개수를 반환 하려면 함수 지정된 된 멤버를 포함 합니다.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -72,10 +72,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Count &#40;계층 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count &#40;설정&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Count &#40;계층 구조 수준&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [수준 &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [멤버 &#40;설정&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

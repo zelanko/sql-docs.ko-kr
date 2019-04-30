@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 983097de95e41914bb4d577cb071d790a795f96d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254683"
 ---
 # <a name="obtaining-descriptor-handles"></a>설명자 핸들 얻기
 응용 프로그램에 대 한 호출의 출력 인수로 명시적으로 할당 된 설명자 핸들을 가져옵니다 **SQLAllocHandle**합니다. 암시적으로 할당 된 설명자 핸들을 호출 하 여 가져온 **SQLGetStmtAttr**합니다.

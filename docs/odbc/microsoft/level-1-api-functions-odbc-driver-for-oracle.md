@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262225"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>수준 1 API 함수(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829421"
 |**SQLGetTypeInfo**|데이터 원본에서 지 원하는 데이터 형식에 대 한 정보를 반환 합니다. 드라이버는 SQL 결과 집합의 정보를 반환합니다.|  
 |**SQLParamData**|와 함께 사용할 **SQLPutData** 문 실행 시 데이터 매개 변수를 지정 합니다.|  
 |**SQLPutData**|문 실행 시 드라이버에 매개 변수 또는 열에 대 한 데이터를 보내도록 응용을 프로그램을 수 있습니다.|  
-|**SQLSetConnectOption**|연결의 측면을 제어 하는 옵션에 대 한 액세스를 제공 합니다. 이 함수는 부분적으로 지원: 드라이버에 대 한 모든 값을 지원 합니다 *fOption* 인수 하지만 일부 지원 하지 않습니다 *갖고* 에 대 한 값을 *fOption* 인수 [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)합니다. 자세한 내용은 [연결 옵션](../../odbc/microsoft/connect-options.md)합니다.|  
+|**SQLSetConnectOption**|연결의 측면을 제어 하는 옵션에 대 한 액세스를 제공 합니다. 이 함수는 부분적으로 지원 합니다. 드라이버에 대 한 모든 값을 지원 합니다 *fOption* 인수 하지만 일부 지원 하지 않습니다 *갖고* 에 대 한 값을 *fOption* 인수 [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). 자세한 내용은 [연결 옵션](../../odbc/microsoft/connect-options.md)합니다.|  
 |**SQLSetStmtOption**|문 핸들을 관련 된 옵션을 설정 합니다 *hstmt*합니다. 자세한 내용은 [문 옵션](../../odbc/microsoft/statement-options.md)합니다.|  
 |**SQLSpecialColumns**|테이블의 행을 고유 하 게 식별 하는 최적의 열 집합을 검색 합니다.|  
 |**SQLStatistics**|단일 테이블 및 인덱스 또는 테이블에 연결 된 태그 이름에 대 한 통계의 목록을 검색 합니다. 드라이버 정보 결과 집합으로 반환 합니다.|  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efeb2de880834723f37755a47618ece97d31af65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270752"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>파일 그룹 및 파일을 사용하여 데이터 저장
   데이터 파일은 데이터베이스 파일을 저장하는 데 사용됩니다. 데이터 파일은 파일 그룹으로 다시 세분됩니다. <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 속성이 있습니다. 해당 컬렉션의 각 <xref:Microsoft.SqlServer.Management.Smo.FileGroup> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A> 속성이 있습니다. 이 속성은 데이터베이스에 속하는 모든 데이터 파일을 포함하는 <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> 컬렉션을 참조합니다. 파일 그룹은 주로 데이터베이스 개체 저장에 사용되는 파일을 그룹화하는 데 사용됩니다. 데이터베이스 개체를 여러 파일에 분산시키는 한 가지 이유는 성능을 높일 수 있다는 점입니다. 특히 파일이 서로 다른 디스크 드라이브에 저장된 경우 매우 유용합니다.  

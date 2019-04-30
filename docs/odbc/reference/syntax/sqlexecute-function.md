@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259238"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 함수
 **규칙**  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0c4b1dbdaa7a2b4a15dd8e28586b182d93374a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241162"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
   이 대화 상자는 테이블 디자이너에서 다른 테이블에도 영향을 주는 작업 내용을 저장할 때 나타납니다. 이 대화 상자를 사용하면 저장되는 테이블을 확인할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "52800225"
  **텍스트 파일 저장**  
  **다른 이름으로 저장** 대화 상자를 표시합니다. 이 대화 상자에서는 테이블이 나열된 텍스트 파일의 저장 위치를 지정할 수 있습니다. 이 파일에는 변경 내용의 영향을 받는 테이블 목록이 기록됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [테이블 디자인&#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

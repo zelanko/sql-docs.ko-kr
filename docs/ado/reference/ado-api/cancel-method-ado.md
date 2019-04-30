@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9723b28ff56f4fe8eced52cecc43d58921d101e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239810"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드(ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  
@@ -47,8 +47,8 @@ object.Cancel
 |[Command](../../../ado/reference/ado-api/command-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|[실행할](../../../ado/reference/ado-api/execute-method-ado-connection.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)하십시오 [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md), 또는 [열기](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[파일](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>적용 대상  
   

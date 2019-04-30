@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259332"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 함수
 **규칙**  
@@ -61,7 +61,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_ENV  
   
--   호출 하 여  
+-   SQL_HANDLE_STMT  
   
  드라이버 관리자 및 드라이버에 의해서만 SQL_HANDLE_DBC_INFO_TOKEN 핸들을 사용 합니다. 응용 프로그램에는이 핸들 형식은 사용 하지 마십시오. SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 참조 하세요. [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)합니다.  
   
@@ -94,7 +94,7 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="diagnostics"></a>진단  
  **SQLGetDiagRec** 자체에 대 한 진단 레코드를 게시 하지 않습니다. 자체 실행의 결과 보고 하는 다음 반환 값을 사용 합니다.  
   
--   관계 없이 SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
+-   SQL_SUCCESS: 함수는 진단 정보를 반환 했습니다.  
   
 -   SQL_SUCCESS_WITH_INFO: 합니다 \* *MessageText* 버퍼가 너무 작아서 요청 된 진단 메시지를 저장할 수 있습니다. 진단 레코드가 생성 되었습니다. 잘림이 발생을 응용 프로그램을 비교 해야 결정할 *BufferLength* 에 기록 되는 사용 가능한 바이트의 실제 수 **StringLengthPtr*합니다.  
   

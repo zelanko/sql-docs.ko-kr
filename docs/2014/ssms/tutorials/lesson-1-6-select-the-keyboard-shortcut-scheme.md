@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312560"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>바로 가기 키 구성표 선택
   표준 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 키보드 구성표 대신 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 구성하여 [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]과 호환되는 키보드 구성표를 사용할 수 있습니다.  

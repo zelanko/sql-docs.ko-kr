@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240271"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
   프로그램 변수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 간의 바인딩을 만듭니다.  
@@ -64,18 +64,18 @@ DBORDINALidxServerCol);
  **BCPColFmt** 에 대한 각 호출에서는 사용자 파일의 한 필드에 대한 서식을 지정합니다. 예를 들어 다섯 개의 필드로 구성된 사용자 데이터 파일에서 세 필드의 기본 설정을 변경하려면 먼저 `BCPColumns(5)`를 호출한 다음 **BCPColFmt** 를 다섯 번 호출합니다. 이 중 세 번의 호출에서 사용자 지정 형식을 설정합니다. 나머지 두 번의 호출에서는 *eUserDataType* 을 BCP_TYPE_DEFAULT로 설정하고 *cbIndicator*, *cbUserData*및 *cbUserDataTerm* 을 각각 0, BCP_VARIABLE_LENGTH 및 0으로 설정합니다. 이 프로시저는 다섯 개의 열을 모두 복사하는데 이 중 세 개는 사용자 지정된 형식으로, 두 개는 기본 형식으로 복사합니다.  
   
 > [!NOTE]  
->  [BCPColFmt](ibcpsession-bcpcolumns-ole-db.md)가 호출되기 전에 **IBCPSession::BCPColumns** 메서드를 호출해야 합니다. 사용자 파일에 있는 각 열에 대해 **BCPColFmt** 를 한 번씩 호출해야 합니다. 사용자 파일의 열에 대해 **BCPColFmt** 를 두 번 이상 호출하면 오류가 발생합니다.  
+>  [BCPColFmt](ibcpsession-bcpcolumns-ole-db.md) 가 호출되기 전에 **IBCPSession::BCPColumns**메서드를 호출해야 합니다. 사용자 파일에 있는 각 열에 대해 **BCPColFmt** 를 한 번씩 호출해야 합니다. 사용자 파일의 열에 대해 **BCPColFmt** 를 두 번 이상 호출하면 오류가 발생합니다.  
   
  사용자 파일의 모든 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 복사할 필요는 없습니다. 열을 건너뛰려면 idxServerCol 매개 변수를 0으로 설정하여 해당 열의 데이터 형식을 지정합니다. 필드를 건너뛰려는 경우에도 메서드가 제대로 작동하려면 모든 정보가 필요합니다.  
   
- **참고** [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 함수를 사용하여 **BCPColFmt**를 통해 제공된 형식 지정을 저장할 수 있습니다.  
+ **참고**   [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 함수를 사용하여 **BCPColFmt**를 통해 제공된 형식 지정을 저장할 수 있습니다.  
   
 ## <a name="arguments"></a>인수  
  *idxUserDataCol*[in]  
  사용자 데이터 파일에 포함된 필드의 인덱스입니다.  
   
  *eUserDataType*[in]  
- 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 같거나는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일 (sqlncli.h) bcp_type_xxx 형식으로 예를 들어 BCP_TYPE_SQLINT4 합니다. BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. 대량 복사 작업에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일로 때는 `eUserDataType` 인수는 인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC:  
+ 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일(sqlncli.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. 대량 복사 작업에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일로 때는 `eUserDataType` 인수는 인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC:  
   
 -   원본 열이 decimal 또는 numeric이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   
@@ -115,7 +115,7 @@ DBORDINALidxServerCol);
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스를 사용하세요.  
+ 공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) 인터페이스를 사용하십시오.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  

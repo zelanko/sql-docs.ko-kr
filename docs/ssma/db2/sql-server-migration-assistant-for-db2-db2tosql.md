@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267897"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 용 SQL Server Migration Assistant (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2는 DB2 데이터베이스 마이그레이션 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 및 Linux (2017 미리 보기) 또는 Azure SQL DB입니다. DB2 용 SSMA DB2 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체에서 이러한 개체를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 DB2에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "51663892"
   
 ## <a name="contents"></a>내용  
   
-|섹션|설명|  
+|섹션|Description|  
 |-----------|---------------|  
 |[DB2용 SSMA의 새로운 기능](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|이 버전의 DB2 용 SSMA의 새로운 기능|  
 |[클라이언트가 DB2 용 SSMA 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|필수 구성 요소 및 실행 하는 컴퓨터의 DB2 클라이언트 및 필수 구성 요소에 대 한 SSMA를 설치 하기 위한 지침을 제공 하는 항목이 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

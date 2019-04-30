@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f6bd73a1bd7a9f41b20300e4abf47688a6c78794
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241015"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>날짜, 시간 및 타임스탬프 이스케이프 시퀀스
 ODBC 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스를 정의합니다. 이러한 이스케이프 시퀀스 구문은 다음과 같습니다.  

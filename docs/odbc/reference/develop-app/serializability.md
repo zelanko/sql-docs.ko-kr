@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251484"
 ---
 # <a name="serializability"></a>직렬화 가능성
 트랜잭션 것 이상적 *serializable*합니다. 트랜잭션 같으면 트랜잭션이 동시에 실행 결과-순차적으로 실행의 결과로 직렬화 할 수 있다고 합니다. 즉, 다른 하나입니다. 중요 하지 않습니다 하는 트랜잭션 결과 트랜잭션의 모든 혼합을 반영 하지 않는 먼저 실행 합니다.  

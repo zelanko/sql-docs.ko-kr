@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c63fb598630a30fd2616722146bb6737f17b82b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242409"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters 속성(ADO)
 매개 변수 이름 공급자에 전달할지 여부를 나타냅니다.  

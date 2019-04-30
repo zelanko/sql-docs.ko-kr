@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8aaa92f02d1b26e23aad3c9ccffe52cd886ac2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240110"
 ---
 # <a name="view-project-properties"></a>프로젝트 속성 보기
   프로젝트와 연관된 속성을 속성 창에서 볼 수 있습니다.  

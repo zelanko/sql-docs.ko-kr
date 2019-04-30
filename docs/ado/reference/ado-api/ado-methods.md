@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 494de627d6e76ba59f1bfb0684c31afe4bf07e68
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248888"
 ---
 # <a name="ado-methods"></a>ADO 메서드
 
