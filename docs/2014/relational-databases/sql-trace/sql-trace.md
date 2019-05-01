@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286524"
 ---
 # <a name="sql-trace"></a>SQL 추적
   SQL 추적에서는 이벤트가 추적 정의에 나열된 이벤트 클래스의 인스턴스인 경우 수집됩니다. 이러한 이벤트는 추적 외부로 필터링하고 대상에 대해 쿼리할 수 있습니다. 대상은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 관리하는 애플리케이션의 추적 정보를 사용할 수 있는 파일 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 개체)일 수 있습니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "52823487"
 |**GUID**|54|추적에 지정된 이벤트 클래스에 따라 달라지는 GUID 값입니다.|  
 |**FileName**|36|수정한 파일의 논리적 이름입니다.|  
 |**Handle**|33|ODBC, OLE DB, DB-Library가 서버와의 공동 실행을 위해 사용하는 정수입니다.|  
-|**호스트 이름** <sup>1</sup>|8|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|  
+|**HostName** <sup>1</sup>|8|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|  
 |**IndexID**|24|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다. 개체의 인덱스 ID를 확인하려면 **sysindexes** 시스템 테이블의 **indid** 열을 사용하십시오.|  
 |**IntegerData**|25|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  
 |**IntegerData2**|55|추적에서 캡처된 이벤트 클래스에 따라 달라지는 정수 값입니다.|  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316324"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 교착 상태의 원인을 확인할 수 있습니다. 둘 이상의 스레드 또는 프로세스 간에 SQL Server 내의 일부 리소스에 대한 순환 종속성이 있는 경우 교착 상태가 발생합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 이벤트를 기록하고 재생하고 표시하는 추적을 만들어 분석할 수 있습니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "52780685"
 |소유자 ID|트랜잭션을 사용 중이고 잠금에 대해 현재 대기 중인 프로세스의 트랜잭션 ID입니다.|  
 |트랜잭션 설명자|트랜잭션 상태를 설명하는 트랜잭션 설명자에 대한 포인터입니다.|  
 |입력 버퍼|현재 프로세스의 입력 버퍼. 이벤트의 유형과 실행 중인 문을 정의합니다. 가능한 값은 다음과 같습니다.<br /><br /> **언어**<br /><br /> **RPC**<br /><br /> **없음**|  
-|문|문 유형. 가능한 값은<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|인수를 제거합니다.|문 유형. 가능한 값은<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>교착 상태 리소스 노드  
  두 프로세스가 각각 다른 프로세스에서 소유하고 있는 리소스를 대기하고 있는 상태가 교착 상태입니다. 교착 상태 그래프에서 리소스는 리소스 노드로 표시됩니다.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2e939e27263f52dc3a6ac607bc59cd8db6c1806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250706"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR 개체
    **SQLServer:CLR** 개체는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임)을 모니터링하는 카운터를 제공합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "52768602"
 |------------------|-----------------|  
 |**CLR Execution**|CLR에서 총 실행 시간(마이크로초)|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](monitor-resource-usage-system-monitor.md)  
   
   
